@@ -262,7 +262,7 @@
         Zb: () => A,
         _D: () => M,
         _J: () => k,
-        ck: () => j,
+        ck: () => O,
         j$: () => T,
       });
       var i = r(33645),
@@ -523,7 +523,7 @@
             "olist",
             { Constructor: k, autocloses: !1, skipInternalNewline: !0 },
           ],
-          ["*", { Constructor: j, autocloses: !0, skipInternalNewline: !0 }],
+          ["*", { Constructor: O, autocloses: !0, skipInternalNewline: !0 }],
           [
             "table",
             {
@@ -580,7 +580,7 @@
             "th",
             {
               Constructor: function (e) {
-                return O("th", e);
+                return j("th", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -591,7 +591,7 @@
             "td",
             {
               Constructor: function (e) {
-                return O("td", e);
+                return j("td", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -969,7 +969,7 @@
           e.children,
         );
       }
-      function j(e) {
+      function O(e) {
         let t = T(e.args, "id");
         return (
           t &&
@@ -984,7 +984,7 @@
           )
         );
       }
-      function O(e, t) {
+      function j(e, t) {
         const r = T(t.args, "width"),
           i = T(t.args, "colspan"),
           a = T(t.args, "rowspan"),
@@ -1503,14 +1503,14 @@
         j3: () => Be,
         Yw: () => H,
         zK: () => U,
-        WN: () => O,
+        WN: () => j,
         Pd: () => pe,
         p$: () => ge,
         dm: () => _e,
         DU: () => A,
         qF: () => G,
         mW: () => k,
-        wv: () => j,
+        wv: () => O,
         GU: () => z,
         bv: () => F,
         Kd: () => D,
@@ -1533,7 +1533,7 @@
         p = r(13952),
         g = r(44332),
         h = r(61859),
-        y = r(61732),
+        y = r(25489),
         b = r(27543),
         v = r(10472),
         f = r(41338),
@@ -1580,8 +1580,8 @@
         F = 41316928,
         D = 4,
         k = 20,
-        j = 45559995,
-        O = [4145017, 35143931, z, D, F],
+        O = 45559995,
+        j = [4145017, 35143931, z, D, F],
         L = 9e4,
         x = [12, 34];
       function P(e) {
@@ -4817,17 +4817,20 @@
     },
     30193: (e, t, r) => {
       "use strict";
-      r.d(t, { p: () => o });
+      r.d(t, { pN: () => l });
       var i = r(34629),
         n = r(78327),
         a = r(14947);
-      const s = 604800;
-      class o {
+      r(90626);
+      const s = "ː",
+        o = 604800;
+      class l {
         constructor() {
           (this.m_bEmoticonListRequested = !1),
             (this.m_bInitialized = !1),
             (this.m_rtMostRecentEmoticon = void 0),
             (this.m_rgEmoticons = []),
+            (this.m_setEmoticonOwned = new Set()),
             (this.m_rgFlairs = []),
             (this.m_rgStickers = []),
             (this.m_rgEffects = []),
@@ -4842,7 +4845,10 @@
             : n.TS.COMMUNITY_CDN_URL + "economy/emoticon/" + e;
         }
         static GetEmoticonReplaceRegex() {
-          return o.sm_EmoticonRegex;
+          return l.sm_EmoticonRegex;
+        }
+        static GetUnvalidatedEmoticonReplaceRegex() {
+          return l.sm_UnvalidatedEmoticonRegex;
         }
         static BEmoticonFilterMatch(e, t) {
           return (
@@ -4851,14 +4857,14 @@
         }
         static FilterEmoticons(e, t) {
           return t && ":" !== t
-            ? e.filter((e) => o.BEmoticonFilterMatch(e, t))
+            ? e.filter((e) => l.BEmoticonFilterMatch(e, t))
             : e;
         }
         static BStickerFilterMatch(e, t) {
           return e.name.toLowerCase().indexOf(t.toLowerCase()) > -1;
         }
         static FilterStickers(e, t) {
-          return t ? e.filter((e) => o.BStickerFilterMatch(e, t)) : e;
+          return t ? e.filter((e) => l.BStickerFilterMatch(e, t)) : e;
         }
         SearchEmoticons(e, t = 25, r = !0) {
           function i(e) {
@@ -4895,6 +4901,14 @@
         get is_initialized() {
           return this.m_bInitialized;
         }
+        async BAwaitInitialized() {
+          return (
+            this.m_bInitialized ||
+              (this.UpdateEmoticonList(),
+              await (0, a.z7)(() => this.m_bInitialized)),
+            this.m_bInitialized
+          );
+        }
         GetTimeReceivedNewestEmoticon() {
           return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
         }
@@ -4906,6 +4920,9 @@
         }
         get emoticon_list() {
           return this.UpdateEmoticonList(), this.m_rgEmoticons;
+        }
+        BHasEmoticon(e) {
+          return this.m_setEmoticonOwned.has(e);
         }
         get flair_list() {
           return this.UpdateEmoticonList(), this.m_rgFlairs;
@@ -4990,7 +5007,7 @@
         }
         RequestEmoticonList() {
           !this.m_bEmoticonListRequested &&
-            this.BInitialized() &&
+            this.BTransportReady() &&
             ((this.m_bEmoticonListRequested = !0),
             this.RequestEmoticonListInternal());
         }
@@ -5001,7 +5018,7 @@
           this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
         }
         BuildRecentList(e) {
-          const t = this.GetServerTime() - s,
+          const t = this.GetServerTime() - o,
             r = e.filter(
               ({ last_used: e, time_received: r }) => e || (r && r > t),
             );
@@ -5019,7 +5036,7 @@
             (this.m_rgEmoticons = []),
             (this.m_rgRecentEmoticons = void 0),
             (this.m_rtMostRecentEmoticon = void 0);
-          let t = this.GetServerTime() - s;
+          let t = this.GetServerTime() - o;
           for (let r of e) {
             let e = r.name;
             e.startsWith("^")
@@ -5034,14 +5051,22 @@
                   : delete r.time_received,
                 this.m_rgEmoticons.push(r));
           }
-          (this.m_bInitialized = !0), (this.m_bEmoticonListRequested = !1);
+          (this.m_setEmoticonOwned = new Set(
+            this.m_rgEmoticons.map((e) => e.name_normalized || e.name),
+          )),
+            (this.m_bInitialized = !0),
+            (this.m_bEmoticonListRequested = !1);
         }
       }
-      (o.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
-        (0, i.Cg)([a.sH], o.prototype, "m_bInitialized", void 0),
-        (0, i.Cg)([a.sH], o.prototype, "m_rtMostRecentEmoticon", void 0),
-        (0, i.Cg)([a.sH], o.prototype, "m_rtLastStickerOrEffect", void 0),
-        (0, i.Cg)([a.XI], o.prototype, "TrackEmoticonUsage", null);
+      (l.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
+        (l.sm_UnvalidatedEmoticonRegex = new RegExp(
+          `(?:${s}|:)([a-zA-Z0-9_\\-]+)(?:${s}|:)`,
+          "g",
+        )),
+        (0, i.Cg)([a.sH], l.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([a.sH], l.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, i.Cg)([a.sH], l.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, i.Cg)([a.XI], l.prototype, "TrackEmoticonUsage", null);
     },
     81477: (e, t, r) => {
       "use strict";
@@ -6983,11 +7008,11 @@
         n = r(78327),
         a = r(41735),
         s = r.n(a);
-      class o extends i.p {
+      class o extends i.pN {
         constructor() {
           super();
         }
-        BInitialized() {
+        BTransportReady() {
           return !0;
         }
         GetServerTime() {
@@ -8597,66 +8622,12 @@
           return "CPlaytimeStats";
         }
       }
-      class j extends g.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.appid || y.Sg(j.M()),
-            g.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
-                fields: {
-                  appid: { n: 1, br: y.qM.readUint32, bw: y.gp.writeUint32 },
-                },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = y.w0(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.BT(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.Uq(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (h().BinaryReader)(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.zj(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (h().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.i0(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (h().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeStreakGame";
-        }
-      }
       class O extends g.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.longest_consecutive_days || y.Sg(O.M()),
-            g.Message.initialize(this, e, 0, -1, [3], null);
+            O.prototype.appid || y.Sg(O.M()),
+            g.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -8664,17 +8635,7 @@
               (O.sm_m = {
                 proto: O,
                 fields: {
-                  longest_consecutive_days: {
-                    n: 1,
-                    br: y.qM.readUint32,
-                    bw: y.gp.writeUint32,
-                  },
-                  rtime_start: {
-                    n: 2,
-                    br: y.qM.readUint32,
-                    bw: y.gp.writeUint32,
-                  },
-                  streak_games: { n: 3, c: j, r: !0, q: !0 },
+                  appid: { n: 1, br: y.qM.readUint32, bw: y.gp.writeUint32 },
                 },
               }),
             O.sm_m
@@ -8710,6 +8671,70 @@
         serializeBase64String() {
           var e = new (h().BinaryWriter)();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlaytimeStreakGame";
+        }
+      }
+      class j extends g.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.longest_consecutive_days || y.Sg(j.M()),
+            g.Message.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: {
+                  longest_consecutive_days: {
+                    n: 1,
+                    br: y.qM.readUint32,
+                    bw: y.gp.writeUint32,
+                  },
+                  rtime_start: {
+                    n: 2,
+                    br: y.qM.readUint32,
+                    bw: y.gp.writeUint32,
+                  },
+                  streak_games: { n: 3, c: O, r: !0, q: !0 },
+                },
+              }),
+            j.sm_m
+          );
+        }
+        static MBF() {
+          return j.sm_mbf || (j.sm_mbf = y.w0(j.M())), j.sm_mbf;
+        }
+        toObject(e = !1) {
+          return j.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return y.BT(j.M(), e, t);
+        }
+        static fromObject(e) {
+          return y.Uq(j.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (h().BinaryReader)(e),
+            r = new j();
+          return j.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return y.zj(j.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (h().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          y.i0(j.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (h().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPlaytimeStreak";
@@ -8810,7 +8835,7 @@
                 fields: {
                   appid: { n: 1, br: y.qM.readUint32, bw: y.gp.writeUint32 },
                   stats: { n: 2, c: k },
-                  playtime_streak: { n: 3, c: O },
+                  playtime_streak: { n: 3, c: j },
                   playtime_ranks: { n: 4, c: L },
                   rtime_first_played: {
                     n: 5,
@@ -9544,7 +9569,7 @@
                 fields: {
                   total_stats: { n: 1, c: k },
                   games: { n: 2, c: x, r: !0, q: !0 },
-                  playtime_streak: { n: 3, c: O },
+                  playtime_streak: { n: 3, c: j },
                   months: { n: 5, c: J, r: !0, q: !0 },
                   game_summary: { n: 6, c: P, r: !0, q: !0 },
                   demos_played: {
@@ -12025,7 +12050,7 @@
         De = r(14771);
       function ke(e, t, r) {
         return (0, Fe.I)({
-          queryKey: je(t, r),
+          queryKey: Oe(t, r),
           queryFn: async () => {
             const t = p.w.Init(f);
             t.Body().set_clan_event_gid(r);
@@ -12041,8 +12066,8 @@
           staleTime: 10 * De.Kp.PerMinute,
         });
       }
-      const je = (e, t) => ["useMeetSteamGetAvailability", e, t];
-      function Oe(e, t, r, i) {
+      const Oe = (e, t) => ["useMeetSteamGetAvailability", e, t];
+      function je(e, t, r, i) {
         return (0, Fe.I)({
           queryKey: Le(t, r),
           queryFn: async () => {
@@ -12089,7 +12114,7 @@
             },
             [h],
           ),
-          w = Oe(
+          w = je(
             0,
             l.clanSteamID.GetAccountID(),
             l.GID,
@@ -12562,7 +12587,7 @@
                 ),
           ),
           _ = new Ke.b(c.iA.steamid ? c.iA.steamid : null),
-          p = Oe(0, r.clanSteamID.GetAccountID(), r.GID, _),
+          p = je(0, r.clanSteamID.GetAccountID(), r.GID, _),
           g = p.isSuccess && !!p.data.allow_registration_if_full;
         if (!s.isSuccess || (n && c.iA.accountid))
           return m.createElement(Pe.t, {
@@ -13147,7 +13172,7 @@
     },
     42951: (e, t, r) => {
       "use strict";
-      r.d(t, { j: () => O, y: () => L });
+      r.d(t, { j: () => j, y: () => L });
       var i = r(34629),
         n = r(75844),
         a = r(19367),
@@ -13182,8 +13207,8 @@
         F = r(1078),
         D = r(95695),
         k = r(82477),
-        j = r(39256);
-      let O = class extends s.Component {
+        O = r(39256);
+      let j = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.m_elDropDownRef = s.createRef()),
@@ -13340,20 +13365,20 @@
           return t
             ? s.createElement(
                 "div",
-                { className: j.ErrorDiv },
+                { className: O.ErrorDiv },
                 (0, M.we)("#EventDidplay_Reminder_EventNotVisible", r),
               )
             : null;
         const a = (0, o.sf)(A.TS.LANGUAGE);
-        return s.createElement(O, { lang: a, ...i, eventModel: n });
+        return s.createElement(j, { lang: a, ...i, eventModel: n });
       }
       function x(e) {
         return a.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, i.Cg)([T.oI], O.prototype, "ToggleMenu", null),
-        (0, i.Cg)([T.oI], O.prototype, "ShowMenu", null),
-        (0, i.Cg)([T.oI], O.prototype, "HideMenu", null),
-        (O = (0, i.Cg)([n.PA], O));
+      (0, i.Cg)([T.oI], j.prototype, "ToggleMenu", null),
+        (0, i.Cg)([T.oI], j.prototype, "ShowMenu", null),
+        (0, i.Cg)([T.oI], j.prototype, "HideMenu", null),
+        (j = (0, i.Cg)([n.PA], j));
       let P = class extends s.Component {
         constructor() {
           super(...arguments), (this.state = { bIsRequestInFlight: !1 });

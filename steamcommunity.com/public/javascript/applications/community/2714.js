@@ -47,8 +47,8 @@
         d = a.n(c),
         u = a(90626),
         m = a(81047),
-        E = a(28954),
-        p = a(27666),
+        p = a(28954),
+        E = a(27666),
         g = a(71138),
         _ = a(33737),
         v = a(2805),
@@ -75,7 +75,7 @@
             focusView: c,
             removeNode: m,
           } = e,
-          [E, p, g] = (0, S.uD)(),
+          [p, E, g] = (0, S.uD)(),
           [_, v] = (0, S.OP)();
         let f;
         const { type: h, attrs: I } = t;
@@ -101,7 +101,7 @@
         return u.createElement(
           u.Fragment,
           null,
-          E &&
+          p &&
             u.createElement(A, {
               bIsEdit: !0,
               nodeAttrs: t,
@@ -121,7 +121,7 @@
               u.createElement(
                 w.ff,
                 {
-                  onClick: p,
+                  onClick: E,
                   tooltip: (0, C.we)("#EventEditor_ReplaceImage_Title"),
                 },
                 u.createElement(b.ffu, null),
@@ -149,7 +149,7 @@
             videoNodeType: s,
           } = e,
           { type: c, attrs: m } = a,
-          E = u.useMemo(() => {
+          p = u.useMemo(() => {
             let e;
             if (
               ("image" == c
@@ -157,11 +157,11 @@
                 : "video" == c && (e = m.mp4 || m.webm),
               e)
             ) {
-              const [t] = (0, p.s9)(e);
+              const [t] = (0, E.s9)(e);
               return t && g.pU.GetClanImageByImageHash(l, t);
             }
           }, [l, c, m]),
-          [v, f] = u.useState(E ? "uploaded" : "hotlink"),
+          [v, f] = u.useState(p ? "uploaded" : "hotlink"),
           b = u.useCallback(
             (e) => {
               o({ src: e }, r), n();
@@ -219,7 +219,7 @@
               onImageSelected: b,
               onVideoSelected: s && I,
               clanSteamID: l,
-              selectedImage: E,
+              selectedImage: p,
             }),
           ),
           u.createElement(
@@ -281,7 +281,7 @@
           [r, s] = u.useState(l.mp4),
           [i, c] = u.useState(l.webm),
           [d, m] = u.useState(l.poster),
-          [E, p] = u.useState(!!l.autoplay),
+          [p, E] = u.useState(!!l.autoplay),
           [g, v] = u.useState(!!l.controls),
           f = u.useRef();
         u.useEffect(() => {
@@ -296,7 +296,7 @@
                 mp4: r || void 0,
                 webm: i || void 0,
                 poster: d || void 0,
-                autoplay: E,
+                autoplay: p,
                 controls: g,
               }),
                 n();
@@ -322,8 +322,8 @@
               label: (0, C.we)("#EventEditor_InsertVideo_InputPoster"),
             }),
             u.createElement(_.Yh, {
-              checked: E,
-              onChange: p,
+              checked: p,
+              onChange: E,
               label: (0, C.we)("#EventEditor_InsertVideo_InputAutoplay"),
             }),
             u.createElement(_.Yh, {
@@ -352,7 +352,7 @@
           d = t
             ? (0, C.we)("#EventEditor_ReplaceImage_Title")
             : (0, C.we)("#EventEditor_InsertImage_Title"),
-          E = u.useCallback(
+          p = u.useCallback(
             (e) => {
               switch (e.file_type) {
                 case 4:
@@ -367,23 +367,23 @@
             },
             [n, l],
           ),
-          p = u.useCallback(
+          E = u.useCallback(
             (e, t) => {
-              c(e), t && E(e);
+              c(e), t && p(e);
             },
-            [E],
+            [p],
           );
         return u.createElement(
           u.Fragment,
           null,
           u.createElement(
             _.lV,
-            { onSubmit: () => i && E(i) },
+            { onSubmit: () => i && p(i) },
             u.createElement(f.g, { fnSetImageSearch: s }),
             u.createElement(v.ge, {
               clanAccountID: o.GetAccountID(),
               fileNameSearch: r,
-              onImageSelected: p,
+              onImageSelected: E,
               selectedItem: i,
             }),
             u.createElement(_.CB, {
@@ -399,7 +399,7 @@
           o = u.useCallback(
             async (e) => {
               const l = t.GetClanSteamID(),
-                o = new E.V(l);
+                o = new p.V(l);
               if (!(await o.AddImage(e, t.GetCurEditLanguage(), null)))
                 throw "Error processing image upload";
               const r = await o.UploadAllImages(
@@ -412,7 +412,7 @@
               if (!s.success) throw s.message;
               const i = x(g.pU.GetClanImageByImageHash(l, s.image_hash), a, n);
               return (
-                i.type == a && (await (0, M.DB)((0, p.v6)(i.attrs.src))), i
+                i.type == a && (await (0, M.DB)((0, E.v6)(i.attrs.src))), i
               );
             },
             [t, a, n],
@@ -454,7 +454,7 @@
           },
           quote: {
             parseDOM: [{ tag: "blockquote" }],
-            content: "block+",
+            content: "paragraph block*",
             group: "block",
             defining: !0,
             toDOM: (0, z.BM)("blockquote", U().BlockQuote),
@@ -602,15 +602,15 @@
           [r, s] = u.useState(!1),
           [i, c, d] = (0, S.uD)(),
           m = u.useCallback(() => s(!0), []),
-          E = u.useCallback(() => s(!1), []),
-          p = u.useCallback(() => {
+          p = u.useCallback(() => s(!1), []),
+          E = u.useCallback(() => {
             d(), o();
           }, [d, o]),
           g = u.useCallback(
             (e, t) => {
-              l({ videoID: e, align: t }), p();
+              l({ videoID: e, align: t }), E();
             },
-            [l, p],
+            [l, E],
           ),
           { sizeStr: _, alignStr: v } = (0, ee.i1)(a);
         return u.createElement(
@@ -621,7 +621,7 @@
               videoID: t,
               align: a,
               bEditing: !0,
-              hideModal: p,
+              hideModal: E,
               onSave: g,
             }),
           u.createElement(
@@ -635,7 +635,7 @@
                 n && L.Selected,
               ),
               onMouseEnter: m,
-              onMouseLeave: E,
+              onMouseLeave: p,
             },
             r &&
               u.createElement(
@@ -661,13 +661,13 @@
           [r, s] = u.useState(a || ee.V2.left),
           [i, c] = u.useState(t ? `https://www.youtube.com/watch?v=${t}` : ""),
           [d, m] = u.useState(void 0),
-          E = u.useCallback(() => {
+          p = u.useCallback(() => {
             const { strVideoID: e } = (0, J.XU)(i);
             return (
               e ? o(e, r) : m((0, C.we)("#EventEditor_InsertYouTube_NoURL")), !1
             );
           }, [i, r, o]),
-          p = u.useCallback((e) => {
+          E = u.useCallback((e) => {
             e && (e.element.focus(), e.element.select());
           }, []);
         return u.createElement(
@@ -681,14 +681,14 @@
               strOKText: n
                 ? (0, C.we)("#Button_Save")
                 : (0, C.we)("#EventEditor_InsertYouTube"),
-              onOK: E,
+              onOK: p,
             },
             d && u.createElement("div", { className: L.Error }, d),
             u.createElement(_.pd, {
               label: (0, C.we)("#EventEditor_InsertYouTube_URL"),
               placeholder: (0, C.we)("#EventEditor_InsertYouTube_Placholder"),
               value: i,
-              ref: p,
+              ref: E,
               onChange: (e) => c(e.currentTarget.value),
             }),
             u.createElement(
@@ -725,8 +725,8 @@
         de = a(19675),
         ue = a(78395),
         me = a(21869),
-        Ee = a(1397),
-        pe = a.n(Ee),
+        pe = a(1397),
+        Ee = a.n(pe),
         ge = a(63556),
         _e = a(44165),
         ve = a(95695),
@@ -760,7 +760,7 @@
             },
             u.createElement(
               "div",
-              { className: pe().DialogCtn },
+              { className: Ee().DialogCtn },
               u.createElement(Ge, { group: n, fnSetGroup: l }),
               u.createElement(Ne, { session: o, fnSetSession: r }),
             ),
@@ -786,7 +786,7 @@
             },
             u.createElement(
               "div",
-              { className: pe().DialogCtn },
+              { className: Ee().DialogCtn },
               u.createElement(Ge, { group: l, fnSetGroup: o }),
             ),
           ),
@@ -820,7 +820,7 @@
             },
             u.createElement(
               "div",
-              { className: pe().DialogCtn },
+              { className: Ee().DialogCtn },
               u.createElement(Ne, { session: o, fnSetSession: r }),
             ),
           ),
@@ -854,7 +854,7 @@
           u.createElement("textarea", {
             className: (0, R.A)(
               "DialogTextInputBase",
-              pe().EventDescriptionField,
+              Ee().EventDescriptionField,
             ),
             value: C.NT.Get(t.localized_session_description, n),
             rows: 5,
@@ -884,13 +884,13 @@
         for (let e = 0; e < 4; ++e) c.push({ data: e, label: e });
         const d = Math.max(0, Math.floor((l - n) / 60)),
           m = "America/Los_Angeles",
-          E = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          p = "in_person" === s ? (null != i ? i : m) : E,
+          p = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          E = "in_person" === s ? (null != i ? i : m) : p,
           g = we.unix(t.rtime_start).tz(m),
-          v = we.unix(t.rtime_start).tz(p),
+          v = we.unix(t.rtime_start).tz(E),
           f = v.utcOffset() - g.utcOffset(),
           b = we.unix(t.rtime_end).tz(m),
-          h = we.unix(t.rtime_end).tz(p),
+          h = we.unix(t.rtime_end).tz(E),
           I = h.utcOffset() - b.utcOffset(),
           w = (function () {
             const e = (0, Me.I)({
@@ -998,7 +998,7 @@
           u.createElement("br", null),
           u.createElement(
             "div",
-            { className: pe().ParticipantRow },
+            { className: Ee().ParticipantRow },
             u.createElement(_.pd, {
               type: "number",
               value: o,
@@ -1117,18 +1117,18 @@
           c = u.useCallback(() => {
             t(), i();
           }, [t, i]),
-          [d, m, E] = (0, S.uD)(),
-          p = u.useCallback(() => {
-            t(), E();
-          }, [t, E]);
+          [d, m, p] = (0, S.uD)(),
+          E = u.useCallback(() => {
+            t(), p();
+          }, [t, p]);
         return o && l.GetClanAccountID() == (0, de.H7)()
           ? u.createElement(
               "div",
-              { className: pe().EditorCtn },
+              { className: Ee().EditorCtn },
               u.createElement(ze, { groupData: o, focusView: t }),
               u.createElement(
                 "div",
-                { className: pe().controls },
+                { className: Ee().controls },
                 u.createElement(
                   w.ff,
                   { onClick: s, tooltip: (0, C.we)("#Button_Edit") },
@@ -1167,7 +1167,7 @@
                         t.SetDirty(ie.IQ.description),
                         a();
                     },
-                    closeModal: p,
+                    closeModal: E,
                   }),
                 ),
             )
@@ -1199,7 +1199,7 @@
               u.createElement(
                 w.ff,
                 {
-                  className: pe().AddNew,
+                  className: Ee().AddNew,
                   onClick: o,
                   tooltip: (0, C.we)("#MeetSteam_add"),
                 },
@@ -1232,21 +1232,21 @@
           d = u.useCallback(() => {
             n(), c();
           }, [n, c]),
-          [m, E, p] = (0, S.uD)(),
+          [m, p, E] = (0, S.uD)(),
           g = u.useCallback(() => {
-            n(), p();
-          }, [n, p]);
+            n(), E();
+          }, [n, E]);
         return u.createElement(
           u.Fragment,
           null,
           u.createElement(
             "div",
-            { className: pe().Column, ...o },
+            { className: Ee().Column, ...o },
             u.createElement(de.Tn, { sessionData: r }),
             Boolean(l) &&
               u.createElement(
                 "div",
-                { className: pe().controls },
+                { className: Ee().controls },
                 u.createElement(
                   w.ff,
                   { onClick: i, tooltip: (0, C.we)("#Button_Edit") },
@@ -1254,7 +1254,7 @@
                 ),
                 u.createElement(
                   w.ff,
-                  { onClick: E, tooltip: (0, C.we)("#Button_Delete") },
+                  { onClick: p, tooltip: (0, C.we)("#Button_Delete") },
                   u.createElement(b.sED, null),
                 ),
               ),
@@ -1370,7 +1370,7 @@
           m = u.useCallback(() => {
             c({ type: "image", attrs: { src: "" } });
           }, []),
-          E = u.useCallback(() => {
+          p = u.useCallback(() => {
             c({
               type: "video",
               attrs: {
@@ -1382,7 +1382,7 @@
               },
             });
           }, []),
-          p = u.useCallback(
+          E = u.useCallback(
             (e, t) => {
               l.dispatch(l.state.tr.insert(l.state.selection.to, t.create(e)));
             },
@@ -1395,7 +1395,7 @@
             u.createElement(A, {
               nodeAttrs: i,
               hideModal: d,
-              setAttrs: p,
+              setAttrs: E,
               imageNodeType: o,
               videoNodeType: r,
               clanSteamID: a,
@@ -1415,7 +1415,7 @@
               w.ff,
               {
                 tooltip: "#EventEditor_EditVideo_Title",
-                onClick: E,
+                onClick: p,
                 toggled: "video" == (null == i ? void 0 : i.type),
               },
               u.createElement(b.CeX, null),
@@ -1515,17 +1515,17 @@
               eCurrentEditLanguage: r,
             } = e,
             [c, d] = u.useState(),
-            E = u.useMemo(() => {
+            p = u.useMemo(() => {
               return (e = o), new P.W($, e);
               var e;
             }, [o]),
-            [p, _] = u.useState();
+            [E, _] = u.useState();
           u.useEffect(() => {
-            _(new n.n(E, t.GetDescription(r), (e) => t.SetDescription(r, e)));
-          }, [E, t, r]);
+            _(new n.n(p, t.GetDescription(r), (e) => t.SetDescription(r, e)));
+          }, [p, t, r]);
           const v = u.useRef(void 0);
-          (0, l.i)(p, { msAutosaveTimeout: 1e3 });
-          const { nodes: f, marks: b } = E.pm_schema,
+          (0, l.i)(E, { msAutosaveTimeout: 1e3 });
+          const { nodes: f, marks: b } = p.pm_schema,
             h = (function (e, t, a) {
               const n = u.useCallback(
                 (n) => {
@@ -1590,10 +1590,10 @@
               { editModel: t, imageNode: f.image, videoNode: f.video },
               u.createElement(
                 "div",
-                { className: $e().EventDetailsBody },
+                { className: "" },
                 u.createElement(je, {
                   view: c,
-                  schema: E.pm_schema,
+                  schema: p.pm_schema,
                   refUpdateToolbar: v,
                   className: $e().ToolBar,
                   clanSteamID: t.GetClanSteamID(),
@@ -1604,20 +1604,23 @@
                   u.createElement(
                     Xe.l,
                     {
-                      pmState: p,
-                      className: $e().EventDescriptionRichField,
+                      pmState: E,
+                      className: (0, R.A)(
+                        $e().EventDescriptionRichField,
+                        $e().EventDetailsBody,
+                      ),
                       refOnUpdate: v,
                       refView: d,
-                      panelProps: { onBlur: () => p.CommitChanges() },
+                      panelProps: { onBlur: () => E.CommitChanges() },
                     },
                     u.createElement(s.W, {
                       linkMarkType: b.link,
                       onURLPasted: h,
-                      schema: E.pm_schema,
+                      schema: p.pm_schema,
                     }),
                     f.image && u.createElement(I.pw, { nodeType: f.image }),
                     u.createElement(Je, {
-                      schemaConfig: E,
+                      schemaConfig: p,
                       editModel: t,
                       clanSteamID: t.GetClanSteamID(),
                     }),

@@ -1715,6 +1715,7 @@ ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}tags/${}/${}
+${STORE_BASE_URL}twofactor/emergency_codes
 ${STORE_BASE_URL}twofactor/manage
 ${STORE_BASE_URL}twofactor/manage_action
 ${STORE_BASE_URL}twofactor/remove?step=promptdevice

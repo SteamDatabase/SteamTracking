@@ -5226,10 +5226,13 @@
             });
             return e && e > Date.now() / 1e3;
           })();
-        return (function () {
+        return i.useMemo(() => {
           const e = (0, s.VY)("forceallages");
-          return !!e && "0" !== e;
-        })() ||
+          return (
+            !(!e || "0" === e) ||
+            !(!a.TS.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
+          );
+        }, []) ||
           ("masked" == e &&
             (a.iA.excluded_content_descriptors.includes(4) ||
               a.iA.excluded_content_descriptors.includes(3)))
@@ -9034,7 +9037,7 @@
       }
       var u = r(36064),
         p = r(47831),
-        g = r(61732),
+        g = r(25489),
         _ = r(78327),
         B = r(6419),
         h = r(34374),

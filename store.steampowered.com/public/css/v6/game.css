@@ -6636,203 +6636,6 @@ a.open_in_steam_body:hover {
 	max-width: 344px;
 }
 
-/* @media screen and (max-width: 910px) {
-	html.responsive.widestore .rightcol.game_meta_data .block {
-		background: rgba( 0, 0, 0, 0.2 );
-		filter: none;
-	}
-
-	html.responsive.widestore #responsive_apppage_details_left_ctn {
-		float: left;
-		width: calc( 50% - 8px );
-		margin-right: 8px;
-	}
-
-	html.responsive.widestore #responsive_apppage_details_right_ctn {
-		overflow: hidden;
-	}
-
-	html.responsive.widestore img.package_header {
-		height: auto;
-	}
-
-	html.responsive.widestore .notice_box_content {
-		width: auto;
-	}
-
-	html.responsive.widestore .item_def_icon {
-		max-width: 100%;
-		height: auto;
-	}
-
-	html.responsive.widestore .glance_mid_ctn {
-		display: block;
-	}
-
-	html.responsive.widestore .game_header_ctn {
-		display: block;
-	}
-
-	.widestore .game_area_description {
-		width: auto;
-	}
-
-	.widestore .franchise_notice, .franchise_notice .franchise_name, .franchise_notice .franchise_highlight, .franchise_notice .background_image {
-		height: unset;
-	}
-
-	.widestore .franchise_notice .franchise_name {
-		position: unset;
-		padding: 12px;
-	}
-
-	.widestore .franchise_notice .background_image {
-		z-index: -1;
-	}
-
-	html.responsive.widestore .queue_ctn {
-		width: auto;
-		max-width: 1200px;
-        margin: 0 2%;
-	}
-	html.responsive.widestore .next_in_queue_area {
-		max-width: 40%;
-	}
-	html.responsive.widestore .btn_next_in_queue {
-		max-width: 100%;
-		margin-right: -26px;
-	}
-
-	.widestore img.agegate_img_app, img.agegate_img_package {
-		height: auto;
-		max-width: 100%;
-	}
-
-	.widestore .page_content_ctn.agegate_content {
-		min-height: 100vh;
-	}
-
-	html.responsive.widestore body.agecheck .responsive_page_template_content {
-		padding-bottom: 0;
-	}
-
-	html.responsive.widestore .game_area_play_stats {
-		max-width: calc(940px - 32px);
-		width: auto;
-		margin: 0 2%;
-	}
-
-	html.responsive.widestore #game_highlights a:not(.app_tag) {
-		height: 100%;
-		position: relative;
-	}
-
-	html.responsive.widestore .highlight_overflow {
-		margin-right: 0;
-	}
-
-	html.responsive.widestore .glance_ctn {
-		display: block;
-		padding: 4px 2%;
-		flex-direction: row;
-	}
-
-	html.responsive.widestore .game_header_image_ctn
-	{
-		float: left;
-		width: 50%;
-		margin-right: 12px;
-	}
-
-	html.responsive.widestore .game_header_image_ctn img.game_header_image_full {
-		width: 100%;
-		height: auto;
-	}
-
-	html.responsive.widestore .glance_ctn_responsive_left {
-		overflow: hidden;
-	}
-
-	html.responsive.widestore .glance_ctn_responsive_right {
-		clear: left;
-		padding-top: 10px;
-	}
-
-	html.responsive.widestore .glance_tags_ctn {
-		overflow: hidden;
-		margin-top: 0;
-
-	}
-
-	html.responsive.widestore .glance_ctn_responsive_right .glance_tags_ctn:first-child {
-		float: left;
-		width: 50%;
-		margin-right: 8px;
-	}
-
-	html.responsive.widestore #package_header_container {
-		padding: 2%;
-	}
-
-	html.responsive.widestore .early_access_banner {
-		height: 80px;
-	}
-
-	html.responsive.widestore .early_access_banner p {
-		width: auto;
-	}
-
-	html.responsive.widestore .series_episode .episode_image_col {
-		width: 30%;
-		height: auto;
-	}
-
-	html.responsive.widestore .series_episode .episode_image {
-		height: auto;
-	}
-
-	html.responsive.widestore .series_episode .episode_details_col {
-		width: 65%;
-		padding: 5px 5px 5px 8px;
-	}
-
-	html.responsive.widestore .series_episode.nosub .episode_action_col {
-		display: none;
-	}
-
-	.widestore .banner_open_in_steam {
-		display: none;
-	}
-
-	html.responsive.widestore .rightcol.game_meta_data .block {
-		background: rgba( 0, 0, 0, 0.2 );
-		filter: none;
-	}
-
-	html.responsive.widestore #responsive_apppage_details_left_ctn {
-		float: left;
-		width: calc( 50% - 8px );
-		margin-right: 8px;
-	}
-
-	html.responsive.widestore #responsive_apppage_details_right_ctn {
-		overflow: hidden;
-	}
-
-	html.responsive.widestore img.package_header {
-		height: auto;
-	}
-
-	html.responsive.widestore .notice_box_content {
-		width: auto;
-	}
-
-	html.responsive.widestore .item_def_icon {
-		max-width: 100%;
-		height: auto;
-	}
-} */
-
 .widestore .queue_ctn {
     max-width: 1200px;
 	width: 100%;
@@ -6841,7 +6644,7 @@ a.open_in_steam_body:hover {
 	margin-bottom: 16px;
 }
 
-.widestore body.v6 .game_area_already_owned.page_content {
+body.v6.widestore .game_area_already_owned.page_content {
 	height: 40px;
 	padding: 0px;
 	position: relative;
@@ -6861,6 +6664,11 @@ a.open_in_steam_body:hover {
     margin-bottom: 1px;
 	max-width: 1200px;
 	width: 100%;
+}
+
+body.v6.widestore .game_area_already_owned.master_sub {
+	background: rgb( 56, 112, 150 );
+	color: white;
 }
 
 .widestore .game_area_play_stats {
@@ -6899,7 +6707,7 @@ a.open_in_steam_body:hover {
 }
 
 @media screen and (max-width: 1200px) {
-	.widestore body.v6 .game_area_already_owned.page_content {
+	body.v6.widestore .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;
 	}
@@ -6908,24 +6716,24 @@ a.open_in_steam_body:hover {
 @media screen and (max-width: 910px)
 {
 
-	html.responsive.widestore .game_description_snippet {
+	html.responsive .widestore .game_description_snippet {
 		overflow: hidden;
 		padding-right: 0;
 		margin-bottom: 10px;
 	}
 
-	html.responsive.widestore #game_highlights,
-	html.responsive.widestore #game_highlights .rightcol {
+	html.responsive .widestore #game_highlights,
+	html.responsive .widestore #game_highlights .rightcol {
 		width: auto;
 		height: auto;
 		flex-direction: column;
 	}
 
-	html.responsive.widestore #game_highlights .leftcol {
+	html.responsive .widestore #game_highlights .leftcol {
 		width: auto;
 	}
 
-    html.responsive.widestore .discoveryqueue_appwidget {
+    html.responsive .widestore .discoveryqueue_appwidget {
         height: 50px;
         margin-bottom: 10px;
     }
@@ -6933,24 +6741,24 @@ a.open_in_steam_body:hover {
 
 }
 
-	html.responsive.tablet.widestore .game_description_snippet {
+	html.responsive.tablet .widestore .game_description_snippet {
 		overflow: hidden;
 		padding-right: 0;
 		margin-bottom: 10px;
 	}
 
-	html.responsive.tablet.widestore #game_highlights,
-	html.responsive.tablet.widestore #game_highlights .rightcol {
+	html.responsive.tablet .widestore #game_highlights,
+	html.responsive.tablet .widestore #game_highlights .rightcol {
 		width: auto;
 		height: auto;
 		flex-direction: column;
 	}
 
-	html.responsive.tablet.widestore #game_highlights .leftcol {
+	html.responsive.tablet .widestore #game_highlights .leftcol {
 		width: auto;
 	}
 
-    html.responsive.tablet.widestore .discoveryqueue_appwidget {
+    html.responsive.tablet .widestore .discoveryqueue_appwidget {
         height: 50px;
         margin-bottom: 10px;
     }

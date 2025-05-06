@@ -2088,6 +2088,8 @@
     "SteamLearn_Config_Node_Tooltip_ExternalModel": "Creates an embedding and applies a transformer to an input token list",
     "SteamLearn_Config_Node_Title_RowExtract": "Row Extract",
     "SteamLearn_Config_Node_Tooltip_RowExtract": "Extracts a single row out of the incoming tensor",
+    "SteamLearn_Config_Node_Title_Bert": "BERT",
+    "SteamLearn_Config_Node_Tooltip_Bert": "Outputs a classification of the input text using classic BERT",
     "SteamLearn_Config_Node_Comment": "Comment",
     "SteamLearn_Config_Node_CommentDesc": "An optional comment that describes what this node is for.",
     "SteamLearn_Config_Node_Input_InferenceIterate": "Inference Iterate",

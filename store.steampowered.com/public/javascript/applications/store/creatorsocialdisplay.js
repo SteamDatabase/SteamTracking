@@ -244,6 +244,8 @@
             return 6;
           case "qqlink":
             return 18;
+          case "qqchannel":
+            return 23;
           case "bilibili":
             return 8;
           case "weibo":
@@ -410,6 +412,7 @@
             return r.createElement(s.Bki, { ...n });
           case 6:
           case 18:
+          case 23:
             return r.createElement(s.$vK, { ...n });
           case 7:
             return r.createElement(s.OSJ, { ...n });
@@ -441,7 +444,7 @@
             return r.createElement(s.MbF, { ...n });
           case 22:
             return r.createElement(s.emH, { ...n });
-          case 23:
+          case 24:
           case 0:
             return "invalid social media type";
         }

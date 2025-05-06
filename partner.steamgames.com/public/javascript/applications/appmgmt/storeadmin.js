@@ -1217,7 +1217,8 @@
             },
             [n, a],
           ),
-          S = l.useCallback((e, t) => (t ? h(e) : p(e)), [h]);
+          S = l.useCallback((e, t) => (t ? h(e) : p(e)), [h]),
+          k = (0, o.xx)();
         return l.createElement(
           d.E,
           { active: !0 },
@@ -1233,6 +1234,13 @@
                 null,
                 (0, C.we)("#StoreAdmin_GameDescription_SelectImage"),
               ),
+              k &&
+                f.iA.is_support &&
+                l.createElement(
+                  "span",
+                  { style: { color: "orange" } },
+                  "**Using Extra Assets V2**",
+                ),
               l.createElement(
                 "div",
                 { className: b.ExtraAssetsDialogDescription },
@@ -1440,8 +1448,7 @@
                 const n = new FormData();
                 n.append("sessionid", f.TS.SESSIONID),
                   n.append("action", "delete"),
-                  n.append("name", (0, r.K7)(t)),
-                  n.append("language", t.language);
+                  n.append("name", (0, r.K7)(t));
                 const a = await fetch(e, { method: "post", body: n }),
                   o = await a.json();
                 if (!a.ok) throw o.errors?.join(" ") || "Error deleting asset";
@@ -1639,7 +1646,7 @@
     },
     83142: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { StoreAppPageHeader: () => Ie, default: () => De });
+      n.r(t), n.d(t, { StoreAppPageHeader: () => Be, default: () => Te });
       var a = n(91986),
         r = n(64753),
         o = n(98724),
@@ -3045,19 +3052,21 @@
           link: Ae,
           strike: ve,
         } = K.marks;
-      var we = n(30600),
-        Pe = n(80968);
-      function De(e) {
+      var we = n(6144),
+        Pe = n(30600),
+        De = n(80968);
+      const Ne = new we.lu();
+      function Te(e) {
         const {
             language: t,
             rctToolbarControls: n,
             value: a,
-            editorType: r,
-            rctAboveEditor: o,
+            editorType: o,
+            rctAboveEditor: l,
           } = e,
-          [l, s] = S.useState(),
-          i = S.useRef(void 0),
-          c = (function () {
+          [s, i] = S.useState(),
+          c = S.useRef(void 0),
+          d = (function () {
             const e = (0, P.FD)(),
               t = S.useRef(e);
             t.current = e;
@@ -3139,53 +3148,55 @@
             var a;
             return n.current;
           })(),
-          [d] = S.useState(() => new Map()),
-          [u, m] = S.useState();
+          [u] = S.useState(() => new Map()),
+          [m, p] = S.useState();
         return (
           S.useEffect(() => {
-            d.has(a) || d.set(a, new h(c, a.Value, (e) => a.Set(e))),
-              m(d.get(a));
-          }, [c, d, a]),
-          f(u, { msAutosaveTimeout: 5e3 }),
+            u.has(a) || u.set(a, new h(d, a.Value, (e) => a.Set(e))),
+              p(u.get(a));
+          }, [d, u, a]),
+          f(m, { msAutosaveTimeout: 5e3 }),
           S.useEffect(() => {
             window.DisableTooltipMutationObserver &&
-              window.DisableTooltipMutationObserver();
+              window.DisableTooltipMutationObserver(),
+              (window.PHPReactPreSubmitCallbacks = Ne);
           }, []),
+          (0, r.hL)(Ne, () => m?.CommitChanges()),
           S.useEffect(() => {
-            i.current && i.current();
-          }, [l, a]),
+            c.current && c.current();
+          }, [s, a]),
           S.createElement(
-            Ne,
-            { imageNodeType: c.pm_schema.nodes.image },
+            Ie,
+            { imageNodeType: d.pm_schema.nodes.image },
             S.createElement(
-              Te,
+              Re,
               {
-                editorType: r,
-                view: l,
-                refUpdateToolbar: i,
+                editorType: o,
+                view: s,
+                refUpdateToolbar: c,
                 rctToolbarControls: n,
-                schema: c.pm_schema,
-                rctAboveEditor: o,
+                schema: d.pm_schema,
+                rctAboveEditor: l,
               },
               S.createElement(
                 Z,
                 {
                   panelProps: {
                     lang: (0, X.d$)(t),
-                    onBlur: () => u?.CommitChanges(),
+                    onBlur: () => m?.CommitChanges(),
                   },
-                  className: Pe.EditorPanel,
-                  pmState: u,
-                  refOnUpdate: i,
-                  refView: s,
+                  className: De.EditorPanel,
+                  pmState: m,
+                  refOnUpdate: c,
+                  refView: i,
                 },
-                S.createElement(Be, { schema: c }),
+                S.createElement(xe, { schema: d }),
               ),
             ),
           )
         );
       }
-      function Ne(e) {
+      function Ie(e) {
         const { imageNodeType: t, children: n } = e,
           a = (0, P.cz)(),
           r = S.useCallback(
@@ -3217,7 +3228,7 @@
           S.createElement("div", null, "\t", n),
         );
       }
-      function Te(e) {
+      function Re(e) {
         const {
             editorType: t,
             view: n,
@@ -3234,11 +3245,11 @@
               c(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          u = (0, we.wY)(d);
+          u = (0, Pe.wY)(d);
         return S.createElement(
           S.Fragment,
           null,
-          S.createElement(Re, {
+          S.createElement(Le, {
             view: n,
             refUpdateToolbar: a,
             sticky: i,
@@ -3249,8 +3260,8 @@
             "div",
             {
               className: (0, U.A)(
-                Pe.AboutTheGameArea,
-                "awards" == t && Pe.Awards,
+                De.AboutTheGameArea,
+                "awards" == t && De.Awards,
               ),
               ref: u,
             },
@@ -3259,15 +3270,15 @@
           ),
         );
       }
-      function Ie(e) {
+      function Be(e) {
         return S.createElement(
           "h2",
-          { className: Pe.StoreAppPageHeader },
+          { className: De.StoreAppPageHeader },
           e.children,
-          S.createElement("div", { className: Pe.GradientRule }),
+          S.createElement("div", { className: De.GradientRule }),
         );
       }
-      function Re(e) {
+      function Le(e) {
         const {
           view: t,
           refUpdateToolbar: n,
@@ -3282,8 +3293,8 @@
             le.Ez,
             {
               className: (0, U.A)(
-                Pe.GameDescriptionEditorToolbar,
-                o && Pe.Sticky,
+                De.GameDescriptionEditorToolbar,
+                o && De.Sticky,
               ),
             },
             S.createElement(ie, null),
@@ -3306,7 +3317,7 @@
           ),
         );
       }
-      function Be(e) {
+      function xe(e) {
         const { schema: t } = e,
           n = S.useMemo(
             () => [
@@ -3335,6 +3346,7 @@
         _M: () => N,
         FD: () => I,
         L4: () => R,
+        xx: () => U,
         a1: () => L,
         Z3: () => B,
         cz: () => x,
@@ -3678,7 +3690,7 @@
           T,
           { queueExtraAssetUpload: o },
           l.createElement(
-            H,
+            K,
             null,
             l.createElement(P.j, null, l.createElement(f, { rgUploads: n }), t),
           ),
@@ -3730,41 +3742,45 @@
               onExtraAssetsUpdated: i,
               storeItemID: r?.nStoreItemID,
               eStoreItemType: r?.eStoreItemType,
+              bExtraAssetsV2: r?.bExtraAssetsV2,
             }),
             [r, s, c, n],
           );
-        return r ? l.createElement(U.Provider, { value: d }, t) : null;
+        return r ? l.createElement(G.Provider, { value: d }, t) : null;
       }
       function I() {
-        return l.useContext(U).rgExtraAssetsData.rgExtraAssets;
+        return l.useContext(G).rgExtraAssetsData.rgExtraAssets;
       }
       function R() {
-        return l.useContext(U).rgExtraAssetsData;
+        return l.useContext(G).rgExtraAssetsData;
       }
       function B(e) {
         return l
-          .useContext(U)
+          .useContext(G)
           .strGameControllerURLFormat.replace(":method:", e);
       }
       function L() {
-        const e = l.useContext(U);
+        const e = l.useContext(G);
         return { type: e.eStoreItemType, id: e.storeItemID };
       }
       function x() {
-        return l.useContext(U).queueExtraAssetUpload;
+        return l.useContext(G).queueExtraAssetUpload;
       }
       function M() {
-        return l.useContext(U).onExtraAssetsUpdated;
+        return l.useContext(G).onExtraAssetsUpdated;
       }
       function O() {
-        return l.useContext(G).bUseRichEditor;
+        return l.useContext(H).bUseRichEditor;
       }
       function F() {
-        return l.useContext(G).setUseRichEditor;
+        return l.useContext(H).setUseRichEditor;
       }
-      const U = l.createContext(void 0),
-        G = l.createContext(void 0);
-      function H(e) {
+      function U() {
+        return l.useContext(G).bExtraAssetsV2;
+      }
+      const G = l.createContext(void 0),
+        H = l.createContext(void 0);
+      function K(e) {
         const t = "storeEditorDisableRichEditor",
           [n, a] = l.useState(() => !localStorage.getItem(t)),
           r = l.useCallback((e) => {
@@ -3774,7 +3790,7 @@
             () => ({ bUseRichEditor: n, setUseRichEditor: r }),
             [n, r],
           );
-        return l.createElement(G.Provider, { value: o }, e.children);
+        return l.createElement(H.Provider, { value: o }, e.children);
       }
     },
     60691: (e, t, n) => {
@@ -14493,26 +14509,31 @@
                     r,
                   ),
                   bOKDisabled: !Boolean(i),
-                  onOK: () => {
+                  onOK: async () => {
                     _.fnSetLoading(!0);
                     const e = {
                       clanAccountID: i,
                       bReuseExistingClan: p.has(i),
                     };
-                    l.mutateAsync(e)
-                      .then(() => (e) => {
+                    await l
+                      .mutateAsync(e)
+                      .then((e) => {
                         e
-                          ? _.fnSetStrSuccess(
+                          ? (_.fnSetStrSuccess(
                               (0, s.we)("#EventDisplay_Share_Success"),
-                            )
-                          : _.fnSetStrError(
+                            ),
+                            _.fnSetSuccess(!0))
+                          : (_.fnSetStrError(
                               (0, s.we)("#Error_ErrorCommunicatingWithNetwork"),
-                            );
+                            ),
+                            _.fnSetError(!0));
                       })
                       .catch((e) => {
-                        _.fnSetStrError(
-                          (0, s.we)("#Error_ErrorCommunicatingWithNetwork"),
-                        ),
+                        console.log("adil catch"),
+                          _.fnSetStrError(
+                            (0, s.we)("#Error_ErrorCommunicatingWithNetwork"),
+                          ),
+                          _.fnSetError(!0),
                           console.error(
                             `unlinking failed appid ${t} with error ${((0, ra.H))(e).strErrorMsg} `,
                           );

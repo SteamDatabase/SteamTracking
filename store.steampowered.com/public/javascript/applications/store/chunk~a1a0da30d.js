@@ -173,9 +173,9 @@
         EventDetailTitle: "TqEPC9bhvVpZ1rb3Z8Mbd",
         EventDetailTitleContainer: "_3z2NYCkFizMu4fMvWTIBUG",
         EventDetailsSubTitle: "_20f2sKS2M7PlPSnPCinT26",
-        EventDescriptionArea: "_3UMJE2bBtqZcj2w_S-n8o4",
         EventDescriptionRichField: "_1dV0eemBulIeNuwlrxbJA_",
         ToolBar: "zMpwi4v_VKAJy80GriVLg",
+        EventDescriptionArea: "_3UMJE2bBtqZcj2w_S-n8o4",
         LibraryEventBodyContainer: "_32mHvRSmD7AVK9OIOPlaFu",
         "lang_zh-cn": "_2oAxPvOHyVkOcOFbH-ROOn",
         lang_ko: "_36n2d0WrYP7qNfJaBDPBzE",
@@ -3356,7 +3356,7 @@
         A = n(56011),
         v = n(61859),
         T = n(82227),
-        D = n(61732),
+        D = n(25489),
         C = n(73745),
         N = n(61336),
         f = n(51706),
@@ -4987,6 +4987,8 @@
             return 6;
           case "qqlink":
             return 18;
+          case "qqchannel":
+            return 23;
           case "bilibili":
             return 8;
           case "weibo":
@@ -5153,6 +5155,7 @@
             return r.createElement(o.Bki, { ...n });
           case 6:
           case 18:
+          case 23:
             return r.createElement(o.$vK, { ...n });
           case 7:
             return r.createElement(o.OSJ, { ...n });
@@ -5184,7 +5187,7 @@
             return r.createElement(o.MbF, { ...n });
           case 22:
             return r.createElement(o.emH, { ...n });
-          case 23:
+          case 24:
           case 0:
             return "invalid social media type";
         }

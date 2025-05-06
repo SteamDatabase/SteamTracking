@@ -3275,12 +3275,12 @@ body.v6 h2.morelike_section_divider
 
 @media screen and (max-width: 1210px) and (min-width: 500px)
 {
-	html.responsive.widestore .recommendation_highlightv2 .header_image
+	body.v6.widestore .recommendation_highlightv2 .header_image
 	{
 		height: auto;
 	}
 
-	html.responsive.widestore .similar_grid_flex .similar_grid_item
+	body.v6.widestore .similar_grid_flex .similar_grid_item
 	{
 		box-sizing: border-box;
 		min-width: 213px;
@@ -3289,61 +3289,62 @@ body.v6 h2.morelike_section_divider
 		flex: 1;
 	}
 
-	html.responsive.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule
+	body.v6.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule
 	{
 		width: 100%;
 		height: auto;
 	}
 
-	html.responsive.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule img
+	body.v6.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule img
 	{
 		display: block;
 		width: 100%;
 		height: auto;
 	}
 
-	html.responsive.widestore #review_create .content {
+	body.v6.widestore #review_create .content {
 		width: auto;
 		float: none;
 		overflow: hidden;
 	}
 
-	html.responsive.widestore #review_create .input_box {
+	body.v6.widestore #review_create .input_box {
 		width: calc( 100% - 24px );
 	}
 
-	html.responsive.widestore .review_box .leftcol {
+	body.v6.widestore .review_box .leftcol {
 		float: left;
 		width: 184px;
-        margin-top: 0px;
+		margin-top: 0px;
 	}
 
-    html.responsive.widestore .friend_reviews .review_box .leftcol {
-        width: auto;
-    }
-    .friend_reviews.widestore .review_box a.vote_header {
-        margin-left: unset;
-        width: 100%;
-    }
-
-	html.responsive.widestore .review_box .leftcol .review_box .persona_name {
+	body.v6.widestore .friend_reviews .review_box .leftcol {
 		width: auto;
 	}
 
-	html.responsive.widestore .review_box .rightcol {
+	.friend_reviews.widestore .review_box a.vote_header {
+		margin-left: unset;
+		width: 100%;
+	}
+
+	body.v6.widestore .review_box .leftcol .review_box .persona_name {
+		width: auto;
+	}
+
+	body.v6.widestore .review_box .rightcol {
 		padding: 8px;
 	}
 
-	html.responsive.widestore .review_box .rightcol .vote_header {
+	body.v6.widestore .review_box .rightcol .vote_header {
 		overflow: hidden;
 	}
 
-	html.responsive.widestore #review_graph_canvas {
+	body.v6.widestore #review_graph_canvas {
 		display: none;
 	}
 
-	html.responsive.widestore #review_histogram_rollup_section,
-	html.responsive.widestore #review_histogram_recent_section
+	body.v6.widestore #review_histogram_rollup_section,
+	body.v6.widestore #review_histogram_recent_section
 	{
 		width: 100%;
 	}

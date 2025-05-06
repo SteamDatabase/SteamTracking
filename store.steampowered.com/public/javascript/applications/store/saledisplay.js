@@ -943,7 +943,7 @@
         M = n(7193),
         U = n(39199),
         x = n(96971),
-        R = n(89766),
+        R = n(87884),
         P = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -4921,7 +4921,7 @@
       }
       var nn = n(84603),
         an = n(40353),
-        rn = n(89766),
+        rn = n(87884),
         on = n(59313),
         ln = n.n(on),
         sn = n(51272);

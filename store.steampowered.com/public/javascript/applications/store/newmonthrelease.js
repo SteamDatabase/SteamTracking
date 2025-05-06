@@ -102,7 +102,7 @@
       }
       const N = "socialcontent_";
       var I = a(40353),
-        G = a(89766),
+        G = a(87884),
         L = a(99487),
         k = a(30470);
       const P = [

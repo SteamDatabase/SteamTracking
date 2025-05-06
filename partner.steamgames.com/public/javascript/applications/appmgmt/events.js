@@ -203,9 +203,9 @@
         EventDetailTitle: "TqEPC9bhvVpZ1rb3Z8Mbd",
         EventDetailTitleContainer: "_3z2NYCkFizMu4fMvWTIBUG",
         EventDetailsSubTitle: "_20f2sKS2M7PlPSnPCinT26",
-        EventDescriptionArea: "_3UMJE2bBtqZcj2w_S-n8o4",
         EventDescriptionRichField: "_1dV0eemBulIeNuwlrxbJA_",
         ToolBar: "zMpwi4v_VKAJy80GriVLg",
+        EventDescriptionArea: "_3UMJE2bBtqZcj2w_S-n8o4",
         LibraryEventBodyContainer: "_32mHvRSmD7AVK9OIOPlaFu",
         "lang_zh-cn": "_2oAxPvOHyVkOcOFbH-ROOn",
         lang_ko: "_36n2d0WrYP7qNfJaBDPBzE",
@@ -1160,7 +1160,7 @@
       var Ne = n(738),
         Ce = n(56011),
         we = n(82227),
-        Te = n(61732),
+        Te = n(25489),
         Ie = n(86090);
       const Me = (0, S.PA)((e) => {
         const { eventModel: t } = e,
@@ -2462,6 +2462,7 @@
             return r.createElement(B.Bki, { ...n });
           case 6:
           case 18:
+          case 23:
             return r.createElement(B.$vK, { ...n });
           case 7:
             return r.createElement(B.OSJ, { ...n });
@@ -2493,7 +2494,7 @@
             return r.createElement(B.MbF, { ...n });
           case 22:
             return r.createElement(B.emH, { ...n });
-          case 23:
+          case 24:
           case 0:
             return "invalid social media type";
         }

@@ -1283,7 +1283,6 @@ td.rdtYear:hover {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-  transition: all .3s ease;
   cursor: pointer;
 }
 ._17o_wRtaDyujn3Bx4gGiu5::after {

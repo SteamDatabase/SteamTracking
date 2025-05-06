@@ -9809,7 +9809,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   color: #4297f8;
   text-decoration: none;
 }
-.emoticon_NewEmoticonIndicator_3O2gR {
+.emoticon_NewEmoticonIndicator_5BtHM {
   background: radial-gradient(
     ellipse farthest-corner at 50% 50%,
     rgba(255, 153, 0, 0.8) 0%,
@@ -9824,7 +9824,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   align-items: center;
 }
-.emoticon_NewEmoticonIndicator_3O2gR .emoticon_NewEmoticonCircle_JRMFr {
+.emoticon_NewEmoticonIndicator_5BtHM .emoticon_NewEmoticonCircle_u5Kx6 {
   width: 5px;
   height: 5px;
   background-color: #ff0;
@@ -9832,40 +9832,40 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   overflow: hidden;
   margin: auto;
 }
-.emoticon_EmoticonSelector_1_1QI {
+.emoticon_EmoticonSelector_21dGP {
   max-height: 50vh;
   display: flex;
   flex-direction: column;
   max-width: 302px;
 }
-.emoticon_EmoticonSelector_1_1QI
-  img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
+.emoticon_EmoticonSelector_21dGP
+  img.emoticon_emoticon_1ZQW1.emoticon_large_20l1z {
   width: 27px;
   height: 27px;
 }
-.emoticon_EmoticonSelector_Emoticons_XWWY6 {
+.emoticon_EmoticonSelector_Emoticons_1zMG_ {
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
   flex: 1;
 }
-.emoticon_EmoticonSelector_Separator_2rvMU {
+.emoticon_EmoticonSelector_Separator_2ETbI {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
 }
-.emoticon_EmoticonSelector_Separator_2rvMU
-  .emoticon_EmoticonSelector_SeparatorBackground_3_kYc {
+.emoticon_EmoticonSelector_Separator_2ETbI
+  .emoticon_EmoticonSelector_SeparatorBackground_3vIdb {
   height: 2px;
   background: #8492a4;
 }
-.emoticon_EmoticonSelector_Controls_2cdkF {
+.emoticon_EmoticonSelector_Controls_2ncH4 {
   display: flex;
   align-content: flex-start;
   padding: 5px;
   flex-shrink: 0;
 }
-.emoticon_EmoticonSelector_Item_2C8r7 {
+.emoticon_EmoticonSelector_Item_iSEjD {
   margin: 2px;
   width: 28px;
   height: 28px;
@@ -9873,15 +9873,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   cursor: pointer;
   text-align: center;
 }
-.emoticon_EmoticonSelector_Item_2C8r7:hover
-  .emoticon_emoticon_AB86v.emoticon_large_4xBaT {
+.emoticon_EmoticonSelector_Item_iSEjD:hover
+  .emoticon_emoticon_1ZQW1.emoticon_large_20l1z {
   transform: scale(1.25);
   filter: brightness(1.25);
 }
-.emoticon_EmoticonSelector_Item_New_1vWJH {
+.emoticon_EmoticonSelector_Item_New_1C2S6 {
   position: relative;
 }
-img.emoticon_emoticon_AB86v {
+img.emoticon_emoticon_1ZQW1 {
   vertical-align: middle;
   width: 20px;
   height: 20px;
@@ -9889,14 +9889,14 @@ img.emoticon_emoticon_AB86v {
   transition-duration: .1s;
   transition-timing-function: ease-in-out;
 }
-img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
+img.emoticon_emoticon_1ZQW1.emoticon_large_20l1z {
   width: 32px;
   height: 32px;
   margin-top: -14px;
   margin-bottom: -14px;
 }
-.emoticon_EffectHeading_2-uNY,
-.emoticon_StickerHeading_3-4KS {
+.emoticon_EffectHeading_1G4cT,
+.emoticon_StickerHeading_2o2L- {
   text-transform: uppercase;
   color: gray;
   font-size: 10px;
@@ -9904,14 +9904,14 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   letter-spacing: 1.5px;
   width: 100%;
 }
-.emoticon_GetFestive_1tX6q {
+.emoticon_GetFestive_EOLia {
   padding: 5px;
 }
-.emoticon_GetFestive_1tX6q > a {
+.emoticon_GetFestive_EOLia > a {
   color: #fff;
   text-decoration: none;
 }
-.emoticon_TopDivider_2A8Fl {
+.emoticon_TopDivider_xf7hA {
   height: 2px;
   width: 90%;
   background-color: #2b2c2f;
@@ -9920,7 +9920,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   justify-content: center;
   margin: 4px;
 }
-.emoticon_BottomDivider_2IZ1K {
+.emoticon_BottomDivider_1gjpU {
   height: 2px;
   width: 90%;
   background-color: #2b2c2f;
@@ -9930,11 +9930,11 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   margin: 4px;
   margin-top: 5px;
 }
-.emoticon_StickerButton_3Wc3j {
+.emoticon_StickerButton_2fYj8 {
   width: 40px;
   height: 40px;
 }
-.emoticon_EffectButton_nnnSn {
+.emoticon_EffectButton_22MJp {
   width: 64px;
   height: 64px;
 }
@@ -9989,7 +9989,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
 .emoticon_hover_desc {
   color: #686868;
 }
-.emoticon_EmoticonHover_36iQ4 {
+.emoticon_EmoticonHover_W_hPU {
   margin: 0 4px;
   padding: 8px;
   min-width: 160px;
@@ -10001,7 +10001,7 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   border-radius: 4px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
-.emoticon_EmoticonHover_36iQ4 .emoticon_Info_1EGMu {
+.emoticon_EmoticonHover_W_hPU .emoticon_Info_29D_0 {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -10009,19 +10009,19 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   text-align: left;
   padding-left: 8px;
 }
-.emoticon_EmoticonHover_36iQ4 .emoticon_Info_1EGMu .emoticon_Name_1Ancw {
+.emoticon_EmoticonHover_W_hPU .emoticon_Info_29D_0 .emoticon_Name_3zUR2 {
   font-size: 14px;
   padding-bottom: 2px;
 }
-.emoticon_EmoticonHover_36iQ4 .emoticon_Info_1EGMu .emoticon_AppName_335w0 {
+.emoticon_EmoticonHover_W_hPU .emoticon_Info_29D_0 .emoticon_AppName_2JWWO {
   font-size: 12px;
 }
-.emoticon_StickerHoverSticker_2VN79,
-.emoticon_EffectHoverEffect_3ngRv {
+.emoticon_StickerHoverSticker_1HdRq,
+.emoticon_EffectHoverEffect_1GZ-E {
   max-width: 80px;
   max-height: 80px;
 }
-.emoticon_PickerTab_3JpKJ {
+.emoticon_PickerTab_VrrpB {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10029,14 +10029,14 @@ img.emoticon_emoticon_AB86v.emoticon_large_4xBaT {
   width: 100%;
   height: 100%;
 }
-.emoticon_PickerTab_3JpKJ svg {
+.emoticon_PickerTab_VrrpB svg {
   width: 100%;
   height: 100%;
 }
-.emoticon_PickerTab_3JpKJ.emoticon_Clock_2osi8 {
+.emoticon_PickerTab_VrrpB.emoticon_Clock_16xcL {
   padding: 2px;
 }
-.emoticon_EmoticonItem_gZL64 {
+.emoticon_EmoticonItem_P1aWu {
   width: 28px;
   height: 28px;
   display: flex;
@@ -11576,6 +11576,12 @@ p.bbcodes_Paragraph_3lnqG {
   margin: 8px;
   font-size: 92%;
 }
+.bbcodes_BlockQuote_3MQ0C > p:first-child {
+  margin-top: 0;
+}
+.bbcodes_BlockQuote_3MQ0C > p:last-child {
+  margin-bottom: 0;
+}
 .bbcodes_QuoteAuthor_1Mzma {
   display: block;
   font-style: italic;
@@ -11651,16 +11657,16 @@ p.bbcodes_Paragraph_3lnqG {
   table-layout: fixed;
 }
 .bbcodes_Table_2CAsi .bbcodes_TableRow_3FJk0 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(226, 229, 233, 0.3);
 }
 .bbcodes_Table_2CAsi .bbcodes_TableRow_3FJk0:first-of-type {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(226, 229, 233, 0.3);
 }
 .bbcodes_Table_2CAsi .bbcodes_TableCell_3rLIt {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
 }
 .bbcodes_Table_2CAsi .bbcodes_TableCell_3rLIt:first-of-type {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
 }
 .bbcodes_TableCell_3rLIt {
   display: table-cell;
@@ -11671,10 +11677,12 @@ th.bbcodes_TableCell_3rLIt {
   display: table-cell;
   font-weight: bold;
   padding: 4px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f0f2f4;
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
+  background: rgba(198, 202, 210, 0.2);
 }
 th.bbcodes_TableCell_3rLIt:first-of-type {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
 }
 .bbcodes_TableRow_3FJk0 {
   display: table-row;

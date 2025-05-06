@@ -825,7 +825,7 @@
         F = n(7193),
         H = n(39199),
         M = n(96971),
-        R = n(89766),
+        R = n(87884),
         x = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,

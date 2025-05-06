@@ -1749,7 +1749,7 @@
           ]).then(r.bind(r, 63554)),
         ),
         de = u.lazy(() =>
-          Promise.all([r.e(6542), r.e(5193), r.e(5933)]).then(r.bind(r, 84758)),
+          Promise.all([r.e(6542), r.e(5193), r.e(5933)]).then(r.bind(r, 36380)),
         ),
         pe = u.lazy(() =>
           Promise.all([
@@ -4322,7 +4322,7 @@
           distance: s,
         };
       }
-      var f = r(61732),
+      var f = r(25489),
         b = r(94104);
       class w {
         m_options;
@@ -5919,7 +5919,7 @@
         }
       }
     },
-    61732: (e, t, r) => {
+    25489: (e, t, r) => {
       "use strict";
       function n(e, t) {
         return (
@@ -17000,7 +17000,7 @@
           });
       })(p || (p = {}));
       var C = r(30470),
-        M = r(61732);
+        M = r(25489);
       class S {
         m_socket = null;
         m_sName;
@@ -22907,7 +22907,7 @@
       var Q = r(14947),
         J = r(49771),
         $ = r(62490),
-        ee = r(61732);
+        ee = r(25489);
       const te = new (r(60778).wd)("DragDrop").Debug;
       class re extends s.Component {
         m_coordinator = new ie();
@@ -26946,7 +26946,7 @@
           ),
         );
       }
-      function k() {
+      function k(e) {
         return n.createElement(
           "svg",
           {
@@ -26955,6 +26955,7 @@
             className: "SVGIcon_Button SVGIcon_TextBullets",
             viewBox: "0 0 36 36",
             fill: "none",
+            ...e,
           },
           n.createElement(
             "g",
@@ -34595,7 +34596,7 @@
         XJ: () => u,
         bd: () => p,
       });
-      var n = r(61732),
+      var n = r(25489),
         i = r(2627),
         s = r(30470);
       const a = "webui_config";

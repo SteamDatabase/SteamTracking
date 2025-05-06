@@ -989,10 +989,13 @@ function MovieUploadComplete( itemid, movieContainer )
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	$J( status ).text( 'Processing' );
 
+	var bReplaced = group.attr( 'replaced' ) == 1 ? true : false;
+
 	// make begin upload call
 	var fd = new FormData();
 	fd.append( 'sessionid', g_sessionID );
 	fd.append( 'cloud_upload_id', cloud_upload_id );
+	fd.append( 'replaced', bReplaced );
 
 	jQuery.ajax( {
 		url: 'https://partner.steamgames.com/admin/game/converttrailer/' + itemid,
@@ -1007,7 +1010,8 @@ function MovieUploadComplete( itemid, movieContainer )
 		if ( data.success )
 		{
 			// check progress
-			CheckMovieConvertStatus( movieContainer );
+      group.attr( 'replaced', 0 );
+			CheckMovieConvertStatus( movieContainer );      
 		}
 		else
 		{
@@ -1355,6 +1359,15 @@ function ClearMovieErrorTryAgain( target )
 	HideMovieError( group );
 	SetMovieConvertState( group, 'noassociation' );
 	SetMovieProcessing( group, false );
+
+	return false;
+}
+
+function ReplaceMovie( target )
+{
+	var group = $J( target ).closest( '.movie_group' );
+	SetMovieConvertState( group, 'noassociation' );
+	group.attr( 'replaced', 1 );
 
 	return false;
 }

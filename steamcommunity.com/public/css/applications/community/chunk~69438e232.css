@@ -3083,9 +3083,6 @@ html.tablet ._20f2sKS2M7PlPSnPCinT26 {
   word-break: break-word;
   max-width: 688px;
 }
-.A_A2B6fTn_MPLlGCmsLtd ._3UMJE2bBtqZcj2w_S-n8o4 {
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
-}
 .A_A2B6fTn_MPLlGCmsLtd ._1dV0eemBulIeNuwlrxbJA_ .ProseMirror {
   min-height: 566px;
   outline: none;
@@ -3101,6 +3098,10 @@ html.tablet ._20f2sKS2M7PlPSnPCinT26 {
 .A_A2B6fTn_MPLlGCmsLtd._2DmRfvoCf1m6HLz3w6uKPl img {
   filter: blur(30px);
   clip-path: inset(0);
+}
+._3UMJE2bBtqZcj2w_S-n8o4 {
+  padding: 24px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
 }
 @media screen and (max-width: 700px) {
   .A_A2B6fTn_MPLlGCmsLtd {

@@ -296,9 +296,10 @@
             const s = o.useRef(null),
               i = o.useRef(!0),
               [a, l] = o.useState("idle"),
-              [c, d] = o.useState({});
+              [c, d] = o.useState({}),
+              [u, m] = o.useState(e);
             o.useLayoutEffect(() => {
-              i.current || l("start");
+              i.current || l("start"), e && m(e);
             }, [e]),
               o.useLayoutEffect(
                 () => (
@@ -314,7 +315,7 @@
                   o = "height" == t ? "scrollHeight" : "scrollWidth",
                   i = () => {
                     r.unstable_batchedUpdates(() => {
-                      d({}), l("idle");
+                      d({}), l("idle"), m(e);
                     });
                   };
                 if ("start" == a) {
@@ -339,8 +340,8 @@
                   );
                 }
               }, [a, e]);
-            const u = { ...c, transition: `${t} ${n}ms` };
-            return { style: u, active: "idle" != a, refDiv: s };
+            const h = { ...c, transition: `${t} ${n}ms` };
+            return { style: h, active: u, refDiv: s };
           })(t, i, a);
         return t || d || s
           ? o.createElement("div", { className: n, ref: u, style: c }, l)
@@ -353,7 +354,7 @@
       var o = n(81393),
         r = n(22145),
         s = n(52893),
-        i = n(29287),
+        i = n(51668),
         a = n(90626);
       var l = n(72739),
         c = n(78395),

@@ -1176,6 +1176,9 @@ p.deprecated.star::before {
 }
 
 .footer_content_right li {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
 	font-size: 11px;
 	line-height: 1.7em;
 }
@@ -1198,6 +1201,8 @@ p.deprecated.star::before {
 }
 
 .footer_content_right a {
+	display: flex;
+	align-items: center;
     text-decoration: none;
     color: #ffffff;
     font-size: 13px;

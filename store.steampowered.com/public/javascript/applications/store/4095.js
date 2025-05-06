@@ -5457,7 +5457,7 @@
         l = r(44332),
         m = r(6144),
         c = r(61859),
-        d = r(61732),
+        d = r(25489),
         u = r(6419),
         p = r(14771),
         _ = r(78327),
@@ -9005,7 +9005,7 @@
         _ = r(82097),
         h = r(44332),
         g = r(61859),
-        f = r(61732),
+        f = r(25489),
         S = r(27543),
         y = (r(41735), r(90626), r(68797), r(78327));
       var b = r(41338),
@@ -9437,7 +9437,7 @@
             for (let r of t.jsondata.email_setting.sections)
               r.unique_id || ((r.unique_id = `email_section_${e}`), e++);
           }
-          return (t.jsondata.sale_header_offset = 530), t;
+          return t;
         }
         GetLastReferencedSaleDayFromCapsules(e, t) {
           let r = t;
@@ -11447,7 +11447,7 @@
       }
       var u = r(36064),
         p = r(47831),
-        _ = r(61732),
+        _ = r(25489),
         h = r(78327),
         g = r(6419),
         f = r(34374),
@@ -14266,12 +14266,14 @@
     },
     30193: (e, t, r) => {
       "use strict";
-      r.d(t, { p: () => o });
+      r.d(t, { pN: () => l });
       var i = r(34629),
         a = r(78327),
         n = r(14947);
-      const s = 604800;
-      class o {
+      r(90626);
+      const s = "ː",
+        o = 604800;
+      class l {
         constructor() {
           (0, n.Gn)(this);
         }
@@ -14279,7 +14281,12 @@
         m_bInitialized = !1;
         m_rtMostRecentEmoticon = void 0;
         static sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g");
+        static sm_UnvalidatedEmoticonRegex = new RegExp(
+          `(?:${s}|:)([a-zA-Z0-9_\\-]+)(?:${s}|:)`,
+          "g",
+        );
         m_rgEmoticons = [];
+        m_setEmoticonOwned = new Set();
         m_rgFlairs = [];
         m_rgRecentEmoticons;
         m_rgStickers = [];
@@ -14294,7 +14301,10 @@
             : a.TS.COMMUNITY_CDN_URL + "economy/emoticon/" + e;
         }
         static GetEmoticonReplaceRegex() {
-          return o.sm_EmoticonRegex;
+          return l.sm_EmoticonRegex;
+        }
+        static GetUnvalidatedEmoticonReplaceRegex() {
+          return l.sm_UnvalidatedEmoticonRegex;
         }
         static BEmoticonFilterMatch(e, t) {
           return (
@@ -14303,14 +14313,14 @@
         }
         static FilterEmoticons(e, t) {
           return t && ":" !== t
-            ? e.filter((e) => o.BEmoticonFilterMatch(e, t))
+            ? e.filter((e) => l.BEmoticonFilterMatch(e, t))
             : e;
         }
         static BStickerFilterMatch(e, t) {
           return e.name.toLowerCase().indexOf(t.toLowerCase()) > -1;
         }
         static FilterStickers(e, t) {
-          return t ? e.filter((e) => o.BStickerFilterMatch(e, t)) : e;
+          return t ? e.filter((e) => l.BStickerFilterMatch(e, t)) : e;
         }
         SearchEmoticons(e, t = 25, r = !0) {
           function i(e) {
@@ -14347,6 +14357,14 @@
         get is_initialized() {
           return this.m_bInitialized;
         }
+        async BAwaitInitialized() {
+          return (
+            this.m_bInitialized ||
+              (this.UpdateEmoticonList(),
+              await (0, n.z7)(() => this.m_bInitialized)),
+            this.m_bInitialized
+          );
+        }
         GetTimeReceivedNewestEmoticon() {
           return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
         }
@@ -14358,6 +14376,9 @@
         }
         get emoticon_list() {
           return this.UpdateEmoticonList(), this.m_rgEmoticons;
+        }
+        BHasEmoticon(e) {
+          return this.m_setEmoticonOwned.has(e);
         }
         get flair_list() {
           return this.UpdateEmoticonList(), this.m_rgFlairs;
@@ -14442,7 +14463,7 @@
         }
         RequestEmoticonList() {
           !this.m_bEmoticonListRequested &&
-            this.BInitialized() &&
+            this.BTransportReady() &&
             ((this.m_bEmoticonListRequested = !0),
             this.RequestEmoticonListInternal());
         }
@@ -14453,7 +14474,7 @@
           this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
         }
         BuildRecentList(e) {
-          const t = this.GetServerTime() - s,
+          const t = this.GetServerTime() - o,
             r = e.filter(
               ({ last_used: e, time_received: r }) => e || (r && r > t),
             );
@@ -14471,7 +14492,7 @@
             (this.m_rgEmoticons = []),
             (this.m_rgRecentEmoticons = void 0),
             (this.m_rtMostRecentEmoticon = void 0);
-          let t = this.GetServerTime() - s;
+          let t = this.GetServerTime() - o;
           for (let r of e) {
             let e = r.name;
             e.startsWith("^")
@@ -14486,13 +14507,17 @@
                   : delete r.time_received,
                 this.m_rgEmoticons.push(r));
           }
-          (this.m_bInitialized = !0), (this.m_bEmoticonListRequested = !1);
+          (this.m_setEmoticonOwned = new Set(
+            this.m_rgEmoticons.map((e) => e.name_normalized || e.name),
+          )),
+            (this.m_bInitialized = !0),
+            (this.m_bEmoticonListRequested = !1);
         }
       }
-      (0, i.Cg)([n.sH], o.prototype, "m_bInitialized", void 0),
-        (0, i.Cg)([n.sH], o.prototype, "m_rtMostRecentEmoticon", void 0),
-        (0, i.Cg)([n.sH], o.prototype, "m_rtLastStickerOrEffect", void 0),
-        (0, i.Cg)([n.XI], o.prototype, "TrackEmoticonUsage", null);
+      (0, i.Cg)([n.sH], l.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([n.sH], l.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, i.Cg)([n.sH], l.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, i.Cg)([n.XI], l.prototype, "TrackEmoticonUsage", null);
     },
     95886: (e, t, r) => {
       "use strict";
@@ -17646,11 +17671,11 @@
         a = r(78327),
         n = r(41735),
         s = r.n(n);
-      class o extends i.p {
+      class o extends i.pN {
         constructor() {
           super();
         }
-        BInitialized() {
+        BTransportReady() {
           return !0;
         }
         GetServerTime() {

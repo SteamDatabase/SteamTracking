@@ -13,6 +13,7 @@
         "Variant-inverted": "SU8R3bPkBrXMMviUeRV4h",
         "Variant-outline": "_2LFuBuGcuX3UacjkjYrmqQ",
         "Variant-ghost": "_1xMDQOty4SbpGVgteEScKt",
+        "Variant-vibrant": "_2nogTuAElArk4_ZwguHrj9",
       };
     },
     21895: (e) => {
@@ -459,27 +460,67 @@
       }
       var v = n(88122);
       const C = [
-          { prop: "m", responsive: !0, className: (e) => v[`m-${e}`] },
-          { prop: "mx", responsive: !0, className: (e) => v[`mx-${e}`] },
-          { prop: "my", responsive: !0, className: (e) => v[`my-${e}`] },
-          { prop: "mt", responsive: !0, className: (e) => v[`mt-${e}`] },
-          { prop: "mr", responsive: !0, className: (e) => v[`mr-${e}`] },
-          { prop: "mb", responsive: !0, className: (e) => v[`mb-${e}`] },
-          { prop: "ml", responsive: !0, className: (e) => v[`ml-${e}`] },
-          { prop: "ms", responsive: !0, className: (e) => v[`ms-${e}`] },
-          { prop: "me", responsive: !0, className: (e) => v[`me-${e}`] },
+          { prop: "margin", responsive: !0, className: (e) => v[`m-${e}`] },
+          { prop: "marginX", responsive: !0, className: (e) => v[`mx-${e}`] },
+          { prop: "marginY", responsive: !0, className: (e) => v[`my-${e}`] },
+          { prop: "marginTop", responsive: !0, className: (e) => v[`mt-${e}`] },
+          {
+            prop: "marginRight",
+            responsive: !0,
+            className: (e) => v[`mr-${e}`],
+          },
+          {
+            prop: "marginBottom",
+            responsive: !0,
+            className: (e) => v[`mb-${e}`],
+          },
+          {
+            prop: "marginLeft",
+            responsive: !0,
+            className: (e) => v[`ml-${e}`],
+          },
+          {
+            prop: "marginStart",
+            responsive: !0,
+            className: (e) => v[`ms-${e}`],
+          },
+          { prop: "marginEnd", responsive: !0, className: (e) => v[`me-${e}`] },
         ],
         w = [
           ...C,
-          { prop: "p", responsive: !0, className: (e) => v[`p-${e}`] },
-          { prop: "px", responsive: !0, className: (e) => v[`px-${e}`] },
-          { prop: "py", responsive: !0, className: (e) => v[`py-${e}`] },
-          { prop: "pt", responsive: !0, className: (e) => v[`pt-${e}`] },
-          { prop: "pr", responsive: !0, className: (e) => v[`pr-${e}`] },
-          { prop: "pb", responsive: !0, className: (e) => v[`pb-${e}`] },
-          { prop: "pl", responsive: !0, className: (e) => v[`pl-${e}`] },
-          { prop: "ps", responsive: !0, className: (e) => v[`ps-${e}`] },
-          { prop: "pe", responsive: !0, className: (e) => v[`pe-${e}`] },
+          { prop: "padding", responsive: !0, className: (e) => v[`p-${e}`] },
+          { prop: "paddingX", responsive: !0, className: (e) => v[`px-${e}`] },
+          { prop: "paddingY", responsive: !0, className: (e) => v[`py-${e}`] },
+          {
+            prop: "paddingTop",
+            responsive: !0,
+            className: (e) => v[`pt-${e}`],
+          },
+          {
+            prop: "paddingRight",
+            responsive: !0,
+            className: (e) => v[`pr-${e}`],
+          },
+          {
+            prop: "paddingBottom",
+            responsive: !0,
+            className: (e) => v[`pb-${e}`],
+          },
+          {
+            prop: "paddingLeft",
+            responsive: !0,
+            className: (e) => v[`pl-${e}`],
+          },
+          {
+            prop: "paddingStart",
+            responsive: !0,
+            className: (e) => v[`ps-${e}`],
+          },
+          {
+            prop: "paddingEnd",
+            responsive: !0,
+            className: (e) => v[`pe-${e}`],
+          },
           {
             prop: "width",
             responsive: !0,
@@ -601,12 +642,12 @@
             cssProperty: (e) => ["--background", `var(--color-${e})`],
           },
         ];
-      var x = n(44041);
-      const y = r.forwardRef(function (e, t) {
-          const n = _({ ...e, className: c()(x.Box, e.className) }, E);
+      var E = n(44041);
+      const x = r.forwardRef(function (e, t) {
+          const n = _({ ...e, className: c()(E.Box, e.className) }, y);
           return r.createElement("div", { ref: t, ...n });
         }),
-        E = w;
+        y = w;
       var S = n(65274);
       const b = r.forwardRef(function (e, t) {
           const { as: n = "span", ...a } = e,
@@ -726,9 +767,9 @@
         });
       }
       const M = [...C, { prop: "size", className: (e) => H[`Size-${e}`] }];
-      var G = n(91239);
-      var V = n(38878);
-      const D = (0, r.forwardRef)(function (e, t) {
+      var T = n(91239);
+      var G = n(38878);
+      const V = (0, r.forwardRef)(function (e, t) {
         const {
             variant: n = "default",
             size: a = "2",
@@ -750,29 +791,29 @@
             ...f,
             radius: g,
             className: c()(
-              V.ControlBox,
-              s && V.Focusable,
-              i && V.Hoverable,
-              l && V.Clickable,
-              V[`Variant-${n}`],
-              V[`Size-${a}`],
+              G.ControlBox,
+              s && G.Focusable,
+              i && G.Hoverable,
+              l && G.Clickable,
+              G[`Variant-${n}`],
+              G[`Size-${a}`],
               p,
             ),
             align: "center",
           },
-          u && r.createElement(A, { pr: "2" }, u),
-          r.createElement(y, { flexGrow: "1" }, m),
-          d && r.createElement(A, { pl: "2" }, d),
+          u && r.createElement(A, { paddingRight: "2" }, u),
+          r.createElement(x, { flexGrow: "1" }, m),
+          d && r.createElement(A, { paddingLeft: "2" }, d),
         );
       });
-      var T = n(88411);
+      var D = n(88411);
       function F(e) {
         const { extracted: t, remaining: n } = (function (e) {
             return h(e, w);
           })(e),
           { variant: a, size: o, beforeContent: s, afterContent: i, ...l } = n;
         return r.createElement(
-          D,
+          V,
           { ...t, variant: a, size: o },
           r.createElement(U, { ...l }),
         );
@@ -783,7 +824,7 @@
           ref: t,
           type: "text",
           ...s,
-          className: c()(G.Reset, T.TextInput),
+          className: c()(T.Reset, D.TextInput),
           value: n || "",
           onChange: (e) => {
             a(e.target.value), o && o(e);
@@ -805,7 +846,7 @@
         ];
       var K = n(53011);
       const W = (0, r.createContext)(null);
-      function q(e) {
+      function Y(e) {
         const {
           variant: t,
           radius: n,
@@ -814,7 +855,7 @@
           onValueChange: s,
         } = e;
         return r.createElement(
-          D,
+          V,
           { variant: t, radius: n, className: K.SegmentedControlBox },
           r.createElement(
             W.Provider,
@@ -823,15 +864,15 @@
               "div",
               { className: K.SegmentedControl },
               a,
-              r.createElement(Y, { radius: n }),
+              r.createElement(q, { radius: n }),
             ),
           ),
         );
       }
-      function Y(e) {
-        return r.createElement(y, { className: K.Indicator, radius: e.radius });
+      function q(e) {
+        return r.createElement(x, { className: K.Indicator, radius: e.radius });
       }
-      q.Item = function (e) {
+      Y.Item = function (e) {
         const { value: t, children: n } = e,
           a = (0, r.useContext)(W);
         if (!a) return null;
@@ -930,7 +971,7 @@
         ];
       var $ = n(81122);
       function ee(e) {
-        return r.createElement(y, { ...e, className: $.Skeleton });
+        return r.createElement(x, { ...e, className: $.Skeleton });
       }
       var te = n(43407),
         ne = n(38889),
@@ -1021,9 +1062,9 @@
       var ie = n(48093);
       const le = Object.assign(
         function (e) {
-          return r.createElement(y, {
+          return r.createElement(x, {
             role: "listbox",
-            p: "2",
+            padding: "2",
             radius: "sm",
             ...e,
           });
@@ -1033,13 +1074,13 @@
             const { selected: t, focused: n, ...a } = e,
               o = t ? "true" : "false",
               s = n ? "true" : void 0;
-            return r.createElement(y, {
+            return r.createElement(x, {
               role: "option",
               "aria-selected": o,
               "data-focused": s,
               className: ie.ListBoxOption,
               radius: "sm",
-              p: "2",
+              padding: "2",
               ...a,
             });
           },
@@ -1195,7 +1236,7 @@
               se.Anchor,
               null,
               r.createElement(
-                D,
+                V,
                 {
                   clickable: !0,
                   focusable: !0,
@@ -1208,7 +1249,7 @@
                   radius: "sm",
                 },
                 r.createElement(
-                  y,
+                  x,
                   { position: "relative" },
                   r.createElement(U, {
                     ref: _,
@@ -1321,7 +1362,7 @@
       const we = (0, r.forwardRef)(function (e, t) {
         const { checked: n, onChange: a, disabled: o, children: s, ...i } = e,
           l = "indeterminate" === n,
-          c = l ? ye : Ee,
+          c = l ? xe : ye,
           p = () => a(!!l || !n);
         return r.createElement(
           A,
@@ -1329,7 +1370,7 @@
             ref: t,
             role: "checkbox",
             "aria-checked": l ? "mixed" : n,
-            "data-state": xe(n),
+            "data-state": Ee(n),
             className: Ce.Root,
             onClick: p,
             tabIndex: 0,
@@ -1346,10 +1387,10 @@
           s,
         );
       });
-      function xe(e) {
+      function Ee(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function ye(e) {
+      function xe(e) {
         return r.createElement(
           "svg",
           {
@@ -1363,7 +1404,7 @@
           }),
         );
       }
-      function Ee(e) {
+      function ye(e) {
         return r.createElement(
           "svg",
           {
@@ -1437,7 +1478,7 @@
         const { size: t = "3", loading: n = !0, children: a, ...o } = e;
         return a || !n
           ? r.createElement(
-              y,
+              x,
               { position: "relative", ...o, width: "fit-content" },
               r.createElement(
                 "div",
@@ -1564,7 +1605,7 @@
       }
       const Me = {};
       Me.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
-      const Ge = (function (e) {
+      const Te = (function (e) {
         const t = new Map(),
           n = (async function () {
             await (0, s.Ki)();
@@ -1641,10 +1682,10 @@
       })(async function (e) {
         if (Me[e]) return Me[e]();
       });
-      var Ve = n(44688);
-      const De = 753,
-        Te = `${De}_Game`,
-        Fe = `${De}_item_class`,
+      var Ge = n(44688);
+      const Ve = 753,
+        De = `${Ve}_Game`,
+        Fe = `${Ve}_item_class`,
         Ue = ["item_class_10", "item_class_6"],
         Ze = "4";
       function je(e) {
@@ -1665,7 +1706,7 @@
               } = e;
               "number" == typeof a &&
                 s[a] &&
-                (a === De
+                (a === Ve
                   ? ((t.bSteamItems = !0), (n = t.filterSteam))
                   : (n.app = s[a]));
               "string" == typeof r && (t.strSearch = r);
@@ -1686,9 +1727,9 @@
                 return t;
               })(o);
               i && (n.facets = i);
-              if (t.bSteamItems && o && o[Te] && n.facets.Game) {
+              if (t.bSteamItems && o && o[De] && n.facets.Game) {
                 const e = Object.keys(n.facets.Game)[0],
-                  t = o[Te].tags;
+                  t = o[De].tags;
                 if (t && e) {
                   const r = t[e];
                   if (r) {
@@ -1709,30 +1750,30 @@
           ),
           a = t.bSteamItems;
         return r.createElement(
-          y,
+          x,
           { minWidth: "min( 75vw, 800px )" },
           r.createElement(
             P,
             { size: "6", weight: "heavy" },
-            Ge.Localize("#AdvancedSearch_Heading"),
+            Te.Localize("#AdvancedSearch_Heading"),
           ),
           r.createElement(
             A,
-            { gap: Ze, align: "center", my: Ze },
+            { gap: Ze, align: "center", marginY: Ze },
             r.createElement(Be, {
               showSteamItems: a,
               onShowSteamItemsChange: (e) => n({ ...t, bSteamItems: e }),
             }),
             r.createElement(O, { size: "1", orientation: "vertical" }),
             r.createElement(
-              y,
+              x,
               { flexGrow: "1" },
               r.createElement(F, {
                 radius: "full",
                 variant: "inset",
                 value: t.strSearch || "",
                 onTextChange: (e) => n({ ...t, strSearch: e }),
-                placeholder: Ge.Localize(
+                placeholder: Te.Localize(
                   "#AdvancedSearch_TextSearch_Placeholder",
                 ),
               }),
@@ -1756,7 +1797,7 @@
           ),
           r.createElement(
             A,
-            { mt: Ze, justify: "end", gap: Ze },
+            { marginTop: Ze, justify: "end", gap: Ze },
             r.createElement(
               j,
               {
@@ -1773,7 +1814,7 @@
                   );
                 },
               },
-              Ge.Localize("#AdvancedSearch_Reset"),
+              Te.Localize("#AdvancedSearch_Reset"),
             ),
             r.createElement(
               j,
@@ -1790,7 +1831,7 @@
                     n &&
                       ((o = { ...a, facets: { ...a.facets } }),
                       a.app && (o.facets.Game = { [`app_${a.app.appid}`]: !0 }),
-                      (o.app = { appid: De, name: "", icon: "", link: "" }));
+                      (o.app = { appid: Ve, name: "", icon: "", link: "" }));
                     const { app: i, facets: l } = o,
                       c = new FormData();
                     i && c.set("appid", i.appid.toString());
@@ -1804,7 +1845,7 @@
                   })(t);
                 },
               },
-              Ge.Localize("#AdvancedSearch_Search"),
+              Te.Localize("#AdvancedSearch_Search"),
             ),
           ),
         );
@@ -1812,10 +1853,10 @@
       function Be(e) {
         const { showSteamItems: t, onShowSteamItemsChange: n } = e;
         return r.createElement(
-          y,
+          x,
           { flexGrow: "0" },
           r.createElement(
-            q,
+            Y,
             {
               value: t ? "on" : "off",
               onValueChange: (e) => n("on" === e),
@@ -1823,14 +1864,14 @@
               radius: "full",
             },
             r.createElement(
-              q.Item,
+              Y.Item,
               { value: "off" },
-              Ge.Localize("#AdvancedSearch_TypeSwitch_InGame"),
+              Te.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             ),
             r.createElement(
-              q.Item,
+              Y.Item,
               { value: "on" },
-              Ge.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
+              Te.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             ),
           ),
         );
@@ -1872,11 +1913,11 @@
         const { filter: n, onFilterChange: a } = e,
           o = st(),
           s = (0, i.I)({
-            queryKey: ["marketfilters", De],
+            queryKey: ["marketfilters", Ve],
             queryFn: async () => {
-              const e = await ot(De),
-                t = e[Te];
-              if ((delete e[Te], !t.tags))
+              const e = await ot(Ve),
+                t = e[De];
+              if ((delete e[De], !t.tags))
                 return { rgApps: [], facets: {}, mapAppIDs: {} };
               const n = {},
                 r = [];
@@ -1909,7 +1950,7 @@
           return r.createElement(
             tt,
             null,
-            Ge.Localize("#AdvancedSearch_FacetLoadError"),
+            Te.Localize("#AdvancedSearch_FacetLoadError"),
           );
         return r.createElement(
           r.Fragment,
@@ -1932,11 +1973,11 @@
                   facets: {},
                 }),
             }),
-          r.createElement(Ye, { facet: u, state: n, onStateChange: a }),
+          r.createElement(qe, { facet: u, state: n, onStateChange: a }),
           r.createElement(et, { facets: d, state: n, onStateChange: a }),
         );
       }
-      const qe = {
+      const Ye = {
         item_class_2: function (e) {
           return r.createElement(
             "svg",
@@ -2029,7 +2070,7 @@
           );
         },
       };
-      function Ye(e) {
+      function qe(e) {
         const {
             facet: { localized_name: t, name: n, tags: a = {} },
             state: o,
@@ -2042,8 +2083,8 @@
           l = Object.keys(a).filter((e) => Ue.indexOf(e) < 1),
           c = o.facets[n] || {};
         return r.createElement(
-          y,
-          { mt: Ze },
+          x,
+          { marginTop: Ze },
           r.createElement(b, { weight: "medium" }, t),
           r.createElement(
             J,
@@ -2061,7 +2102,7 @@
                     } else i((n) => ({ ...n, [e]: t }));
                   })(e, t),
                 label: a[e].localized_name,
-                icon: qe[e],
+                icon: Ye[e],
               }),
             ),
           ),
@@ -2087,13 +2128,13 @@
           {
             gap: "2",
             radius: "sm",
-            px: "5",
-            py: "4",
+            paddingX: "5",
+            paddingY: "4",
             align: "center",
-            className: Ve.TagButton,
+            className: Ge.TagButton,
             ...s,
           },
-          n && r.createElement(n, { className: Ve.Icon }),
+          n && r.createElement(n, { className: Ge.Icon }),
           r.createElement(b, { weight: "medium" }, t),
         );
       }
@@ -2119,7 +2160,7 @@
           !o &&
             i.map((e) =>
               r.createElement(
-                y,
+                x,
                 {
                   key: e.appid,
                   onClick: () => a(e.appid),
@@ -2149,13 +2190,13 @@
       function Xe(e) {
         return r.createElement(
           "div",
-          { className: Ve.TruncatingPortraitRow },
+          { className: Ge.TruncatingPortraitRow },
           e.children,
         );
       }
       function $e(e) {
         return r.createElement(
-          y,
+          x,
           { minHeight: "min(400px, 30vh)" },
           e.children,
         );
@@ -2176,7 +2217,7 @@
           J,
           {
             gap: Ze,
-            mt: Ze,
+            marginTop: Ze,
             columns: "repeat( auto-fit, minmax( 260px, 1fr ) )",
           },
           t.rgDropdowns.map((e) =>
@@ -2201,7 +2242,13 @@
       function tt(e) {
         return r.createElement(
           b,
-          { align: "center", secondary: !0, as: "div", mt: Ze, size: "4" },
+          {
+            align: "center",
+            secondary: !0,
+            as: "div",
+            marginTop: Ze,
+            size: "4",
+          },
           e.children,
         );
       }
@@ -2220,10 +2267,10 @@
           return r.createElement(
             tt,
             null,
-            Ge.Localize("#AdvancedSearch_FacetLoadError"),
+            Te.Localize("#AdvancedSearch_FacetLoadError"),
           );
         return 0 === s.rgCheckboxes.length + s.rgDropdowns.length
-          ? r.createElement(tt, null, Ge.Localize("#AdvancedSearch_NoFacets"))
+          ? r.createElement(tt, null, Te.Localize("#AdvancedSearch_NoFacets"))
           : r.createElement(et, { facets: s, state: n, onStateChange: a });
       }
       function rt(e) {
@@ -2312,7 +2359,7 @@
             rgOptions: n,
             selectedValue: t || null,
             onSelectionChange: a,
-            placeholder: Ge.Localize("#AdvancedSearch_AppSelect_Placeholder"),
+            placeholder: Te.Localize("#AdvancedSearch_AppSelect_Placeholder"),
             filter: (e, t) =>
               t.name.toLocaleLowerCase().includes(e.toLocaleLowerCase()),
           }),
@@ -2332,7 +2379,7 @@
               r.createElement(
                 he.Option,
                 { value: null },
-                Ge.Localize("#AdvancedSearch_AppSelect_Clear"),
+                Te.Localize("#AdvancedSearch_AppSelect_Clear"),
               ),
             o.rgFilteredOptions.map((e) =>
               r.createElement(
@@ -2363,7 +2410,7 @@
       function mt() {
         return r.createElement(
           A,
-          { justify: "center", align: "center", mt: "6" },
+          { justify: "center", align: "center", marginTop: "6" },
           r.createElement(Ne, { size: "4" }),
         );
       }

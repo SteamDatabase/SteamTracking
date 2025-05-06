@@ -688,6 +688,11 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
   margin-top: 1px;
 }
 button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBullets {
+  width: 25px;
+  height: 25px;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
   .SVGIcon_Button.SVGIcon_TextUnderline {
   padding-bottom: 5px;
 }
@@ -2012,7 +2017,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   width: 285px;
 }
 .widestore ._2qz5D65VkY796Xw-al9f_a {
-  width: auto;
+  width: 100%;
 }
 ._1UhmxrINvvaNnHzhCPoill {
   margin-bottom: 8px;

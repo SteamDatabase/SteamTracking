@@ -135,7 +135,7 @@
         B = r.n(u),
         g = r(60155),
         _ = r(33737),
-        b = r(31698),
+        b = r(81962),
         M = r(283),
         y = r(82477),
         w = r(48079),
@@ -324,7 +324,7 @@
           for (let e = 0; e < i.length; e += 1)
             e % 2 == 1
               ? a.push(
-                  o.createElement(b.nl, {
+                  o.createElement(b.n, {
                     emoticonHoverStore: d.s,
                     key: e,
                     emoticon: i[e],

@@ -3133,6 +3133,7 @@
     "StoreAdmin_SocialMedia_Type_twitch": "Twitch",
     "StoreAdmin_SocialMedia_Type_qq": "QQ number",
     "StoreAdmin_SocialMedia_Type_qqlink": "QQ link",
+    "StoreAdmin_SocialMedia_Type_qqchannel": "QQ channel",
     "StoreAdmin_SocialMedia_Type_vk": "VK",
     "StoreAdmin_SocialMedia_Type_bilibili": "Bilibili",
     "StoreAdmin_SocialMedia_Type_weibo": "Weibo",

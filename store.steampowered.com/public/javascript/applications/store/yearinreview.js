@@ -1802,7 +1802,7 @@
           ? (0, g.we)("#YIR_Percent", "<1")
           : (0, g.we)("#YIR_Percent", Math.round(e / 100).toFixed(0));
       }
-      var A = a(61732);
+      var A = a(25489);
       function I(e, t, a, n) {
         const { rgRankings: r, nTotalResultCount: s } = C(e, t, a),
           l = r.map((a) => {
