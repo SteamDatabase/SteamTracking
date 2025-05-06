@@ -1,0 +1,1 @@
+const CLSTAMP = 9715040;
