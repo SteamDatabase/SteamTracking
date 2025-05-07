@@ -87,17 +87,26 @@ ProcessClientFolder()
 	do
 		if [[ "$file" == *.js ]]
 		then
-			php "$DIR/extract_json_from_webpack.php" "$(pwd)/$file"
-			if [ $? -eq 200 ]
+			php "$DIR/extract_json_from_webpack.php" "$DIR/ClientExtracted/$file"
+			if [[ $? -eq 200 ]]
 			then
 				echo "Extracted json from $file"
 				continue
+			fi
+
+			filename=$(basename "$file")
+			if [[ "$filename" != "manifest.js" && "$filename" != "licenses.js" ]]
+			then
+				cleandir=$(dirname "$file")
+				cleanfile="$cleandir/c.$filename"
+
+				node "$DIR/generate_clean_js.mjs" "$DIR/ClientExtracted/$file" "$DIR/ClientExtracted/$cleanfile" && npm run prettier "$DIR/ClientExtracted/$cleanfile"
 			fi
 		fi
 
 		echo "Prettifying $file"
 
-		npm run prettier "$(pwd)/$file"
+		npm run prettier "$DIR/ClientExtracted/$file"
 	done <   <(find steamui/ clientui/ siteserverui/ \( -name '*.js' -o -name '*.css' \) -print0)
 
 	#
@@ -110,7 +119,7 @@ ProcessClientFolder()
 	do
 		encoding=$(file -bi "$file" | sed -e 's/.*[ ]charset=//');
 
-		if [ "$encoding" != "utf-8" ] && [ "$encoding" != "binary" ];
+		if [[ "$encoding" != "utf-8" ]] && [[ "$encoding" != "binary" ]];
 		then
 			iconv -f "$encoding" -t UTF-8 "$file" -o "$file.tmp" && mv "$file.tmp" "$file"
 		fi

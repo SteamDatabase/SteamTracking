@@ -2,12 +2,12 @@
 
 LOCKFILE=.support/update.lock
 
-if [ -f "$LOCKFILE" ] && kill -0 "$(cat $LOCKFILE)" 2>/dev/null; then
+if [[ -f "$LOCKFILE" ]] && kill -0 "$(cat "$LOCKFILE")" 2>/dev/null; then
 	echo Still running
 	exit 1
 fi
 
-echo $$ > $LOCKFILE
+echo $$ > "$LOCKFILE"
 
 git_commit_message() {
 	local all_changed_files
@@ -33,4 +33,4 @@ git add -A
 git commit -S -a -m "$(git_commit_message)"
 git push
 
-rm $LOCKFILE
+rm "$LOCKFILE"
