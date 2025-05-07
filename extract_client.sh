@@ -15,6 +15,7 @@ echo Deleting existing files
 # Scary!
 rm -rf linux_bins/*
 rm -rf "$DIR"/ClientExtracted/*
+rm -rf "$DIR"/c/ClientExtracted/*
 rm -f "$DIR"/BuildbotPaths/*
 rm -rf "$DIR"/Protobufs/*
 
@@ -85,9 +86,11 @@ ProcessClientFolder()
 
 	while IFS= read -r -d '' file
 	do
+		fullpath="$DIR/ClientExtracted/$file"
+
 		if [[ "$file" == *.js ]]
 		then
-			php "$DIR/extract_json_from_webpack.php" "$DIR/ClientExtracted/$file"
+			php "$DIR/extract_json_from_webpack.php" "$fullpath"
 			if [[ $? -eq 200 ]]
 			then
 				echo "Extracted json from $file"
@@ -97,16 +100,17 @@ ProcessClientFolder()
 			filename=$(basename "$file")
 			if [[ "$filename" != "manifest.js" && "$filename" != "licenses.js" ]]
 			then
-				cleandir=$(dirname "$file")
-				cleanfile="$cleandir/c.$filename"
+				cleandir="$DIR/c/ClientExtracted/$(dirname "$file")"
+				cleanfile="$DIR/c/ClientExtracted/$file"
+				mkdir -p "$cleandir"
 
-				node "$DIR/generate_clean_js.mjs" "$DIR/ClientExtracted/$file" "$DIR/ClientExtracted/$cleanfile" && npm run prettier "$DIR/ClientExtracted/$cleanfile"
+				node "$DIR/generate_clean_js.mjs" "$fullpath" "$cleanfile" && npm run prettier "$cleanfile"
 			fi
 		fi
 
 		echo "Prettifying $file"
 
-		npm run prettier "$DIR/ClientExtracted/$file"
+		npm run prettier "$fullpath"
 	done <   <(find steamui/ clientui/ siteserverui/ \( -name '*.js' -o -name '*.css' \) -print0)
 
 	#
