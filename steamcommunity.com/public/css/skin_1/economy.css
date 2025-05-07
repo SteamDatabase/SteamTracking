@@ -366,6 +366,8 @@ a.item_action:hover {
 
 .item_desc_game_info .item_desc_game_icon > img {
 	border-radius: 3px;
+	width: 32px;
+	height: 32px;
 }
 
 

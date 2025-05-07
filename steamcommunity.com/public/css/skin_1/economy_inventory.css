@@ -167,6 +167,8 @@
 .games_list_tab_icon img {
 	vertical-align: middle;
 	border-radius: 3px;
+	width: 32px;
+	height: 32px;
 }
 
 .games_list_tab_name {
