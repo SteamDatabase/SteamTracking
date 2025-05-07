@@ -581,6 +581,23 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					{
 						$this->UpdateManifestUrls = true;
 					}
+					else if( !$IsSSR && !str_contains( $OriginalFile, '/localization/' ) )
+					{
+						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+						$CleanFolder = dirname( $CleanFile );
+
+						if( !is_dir( $CleanFolder ) )
+						{
+							$this->Log( '{lightblue}Creating ' . $CleanFolder );
+
+							mkdir( $CleanFolder, 0755, true );
+						}
+
+						system(
+							'node generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
+							' && npm run prettier ' . escapeshellarg( $CleanFile )
+						);
+					}
 
 					$this->DumpJavascriptFiles = true;
 				}
@@ -911,7 +928,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				if( $IsChunkFile( $Filename ) )
 				{
-					$Folder = __DIR__ . '/' . dirname( $Filepath ) . '/';
+					$Folder = dirname( $Filepath );
 
 					if( !isset( $Folders[ $Folder ] ) )
 					{
@@ -924,7 +941,9 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			foreach( $Folders as $Folder => $NewChunks )
 			{
-				foreach( new DirectoryIterator( $Folder ) as $FileInfo )
+				$FullFolderPath = __DIR__ . '/' . $Folder . '/';
+				
+				foreach( new DirectoryIterator( $FullFolderPath ) as $FileInfo )
 				{
 					if( $FileInfo->isDot() )
 					{
@@ -940,6 +959,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
 
 						unlink( $FilepathOnDisk );
+						
+						// Also delete the corresponding file in the clean directory if it exists
+						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
+
+						if( file_exists( $CleanFilepath ) )
+						{
+							$this->Log( 'Deleting clean file ' . $CleanFilepath );
+							unlink( $CleanFilepath );
+						}
 					}
 				}
 			}

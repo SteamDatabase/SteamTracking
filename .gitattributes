@@ -11,3 +11,13 @@
 *.wav binary
 
 ClientManifest/* linguist-generated=true
+help.steampowered.com/public/javascript/applications/help/**/*.js linguist-generated=true
+partner.steamgames.com/public/javascript/applications/**/*.js linguist-generated=true
+partner.steamgames.com/public/javascript/webui/**/*.js linguist-generated=true
+steamcommunity.com/public/javascript/applications/**/*.js linguist-generated=true
+steamcommunity.com/public/javascript/webui/**/*.js linguist-generated=true
+store.steampowered.com/public/javascript/applications/**/*.js linguist-generated=true
+store.steampowered.com/public/shared/javascript/legacy_web/**/*.js linguist-generated=true
+www.counter-strike.net/**/*.js linguist-generated=true
+www.dota2.com/**/*.js linguist-generated=true
+www.underlords.com/**/*.js linguist-generated=true
