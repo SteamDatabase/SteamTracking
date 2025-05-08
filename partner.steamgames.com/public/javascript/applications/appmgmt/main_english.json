@@ -1884,6 +1884,7 @@
     "SteamLearn_SnapshotFilter_SnapshotType_DataSource": "Data Source",
     "SteamLearn_SnapshotFilter_SnapshotType_MarketingMessage": "Marketing Message",
     "SteamLearn_SnapshotFilter_SnapshotType_ForumThread": "Forum Thread",
+    "SteamLearn_SnapshotFilter_SnapshotType_ReviewsByApp": "Bot Reviews",
     "SteamLearn_SnapshotFilter_SnapshotAccountIDFilter": "AccountFilter",
     "SteamLearn_SnapshotFilter_SnapshotDataSource_DataSource": "Data Source",
     "SteamLearn_SnapshotFilter_AccountIDFilter_None": "None",

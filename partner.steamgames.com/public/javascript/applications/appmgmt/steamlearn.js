@@ -1927,8 +1927,8 @@
                   },
                   config_account_ids: { n: 2, c: O },
                   config_app_ids: { n: 3, c: k },
-                  config_other_project: { n: 4, c: W },
-                  config_data_source: { n: 12, c: F },
+                  config_other_project: { n: 4, c: F },
+                  config_data_source: { n: 12, c: W },
                 },
               }),
             I.sm_m
@@ -2092,76 +2092,11 @@
           return "CMsgSteamLearnProjectSnapshotConfigAppIDs";
         }
       }
-      class W extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            W.prototype.project_id || u.Sg(W.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
-                fields: {
-                  project_id: {
-                    n: 1,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  published_version: {
-                    n: 2,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = u.w0(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(W.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new W();
-          return W.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(W.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(W.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnProjectSnapshotConfigOtherProject";
-        }
-      }
       class F extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            F.prototype.data_source_id || u.Sg(F.M()),
+            F.prototype.project_id || u.Sg(F.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -2172,8 +2107,13 @@
               (F.sm_m = {
                 proto: F,
                 fields: {
-                  data_source_id: {
+                  project_id: {
                     n: 1,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
                     br: u.qM.readUint32,
                     bw: u.gp.writeUint32,
                   },
@@ -2212,6 +2152,66 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnProjectSnapshotConfigOtherProject";
+        }
+      }
+      class W extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.data_source_id || u.Sg(W.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  data_source_id: {
+                    n: 1,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = u.w0(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new W();
+          return W.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnProjectSnapshotConfigDataSource";
@@ -5555,72 +5555,12 @@
           return "CMsgSteamLearn_SnapshotProject_Request";
         }
       }
-      class We extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            We.prototype.snapshot_result || u.Sg(We.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            We.sm_m ||
-              (We.sm_m = {
-                proto: We,
-                fields: {
-                  snapshot_result: {
-                    n: 1,
-                    br: u.qM.readEnum,
-                    bw: u.gp.writeEnum,
-                  },
-                },
-              }),
-            We.sm_m
-          );
-        }
-        static MBF() {
-          return We.sm_mbf || (We.sm_mbf = u.w0(We.M())), We.sm_mbf;
-        }
-        toObject(e = !1) {
-          return We.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(We.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(We.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new We();
-          return We.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(We.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(We.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Response";
-        }
-      }
       class Fe extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Fe.prototype.beam_length || u.Sg(Fe.M()),
-            d.Message.initialize(this, e, 0, -1, [5], null);
+            Fe.prototype.snapshot_result || u.Sg(Fe.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -5630,27 +5570,10 @@
               (Fe.sm_m = {
                 proto: Fe,
                 fields: {
-                  beam_length: {
+                  snapshot_result: {
                     n: 1,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  beam_width: {
-                    n: 2,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  item_decay: { n: 3, br: u.qM.readFloat, bw: u.gp.writeFloat },
-                  next_item_count: {
-                    n: 4,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  item_scalars: { n: 5, c: Pe, r: !0, q: !0 },
-                  next_item_threshold: {
-                    n: 6,
-                    br: u.qM.readFloat,
-                    bw: u.gp.writeFloat,
+                    br: u.qM.readEnum,
+                    bw: u.gp.writeEnum,
                   },
                 },
               }),
@@ -5687,6 +5610,83 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return Fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_SnapshotProject_Response";
+        }
+      }
+      class We extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            We.prototype.beam_length || u.Sg(We.M()),
+            d.Message.initialize(this, e, 0, -1, [5], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            We.sm_m ||
+              (We.sm_m = {
+                proto: We,
+                fields: {
+                  beam_length: {
+                    n: 1,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  beam_width: {
+                    n: 2,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  item_decay: { n: 3, br: u.qM.readFloat, bw: u.gp.writeFloat },
+                  next_item_count: {
+                    n: 4,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  item_scalars: { n: 5, c: Pe, r: !0, q: !0 },
+                  next_item_threshold: {
+                    n: 6,
+                    br: u.qM.readFloat,
+                    bw: u.gp.writeFloat,
+                  },
+                },
+              }),
+            We.sm_m
+          );
+        }
+        static MBF() {
+          return We.sm_mbf || (We.sm_mbf = u.w0(We.M())), We.sm_mbf;
+        }
+        toObject(e = !1) {
+          return We.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(We.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(We.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new We();
+          return We.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(We.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(We.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgInferenceIterateBeamSearch";
@@ -5806,7 +5806,7 @@
                     br: u.qM.readString,
                     bw: u.gp.writeString,
                   },
-                  iterate_beam_search: { n: 13, c: Fe },
+                  iterate_beam_search: { n: 13, c: We },
                 },
               }),
             xe.sm_m
@@ -7138,7 +7138,7 @@
                 proto: st,
                 fields: {
                   cache_data_responses: { n: 1, c: Oe, r: !0, q: !0 },
-                  snapshot_responses: { n: 2, c: We, r: !0, q: !0 },
+                  snapshot_responses: { n: 2, c: Fe, r: !0, q: !0 },
                   inference_responses: { n: 3, c: Ve, r: !0, q: !0 },
                 },
               }),
@@ -8748,7 +8748,7 @@
                 fields: {
                   project_config: { n: 1, c: T },
                   fetch: { n: 2, c: kt },
-                  train: { n: 3, c: Wt },
+                  train: { n: 3, c: Ft },
                 },
               }),
             Ot.sm_m
@@ -8850,20 +8850,20 @@
           return "CMsgSteamLearn_Train_Request_Fetch";
         }
       }
-      class Wt extends d.Message {
+      class Ft extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Wt.prototype.train_id || u.Sg(Wt.M()),
+            Ft.prototype.train_id || u.Sg(Ft.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Wt.sm_m ||
-              (Wt.sm_m = {
-                proto: Wt,
+            Ft.sm_m ||
+              (Ft.sm_m = {
+                proto: Ft,
                 fields: {
                   train_id: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
                   request_cancel: {
@@ -8876,62 +8876,6 @@
                     br: u.qM.readBool,
                     bw: u.gp.writeBool,
                   },
-                },
-              }),
-            Wt.sm_m
-          );
-        }
-        static MBF() {
-          return Wt.sm_mbf || (Wt.sm_mbf = u.w0(Wt.M())), Wt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Wt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(Wt.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(Wt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new Wt();
-          return Wt.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(Wt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return Wt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(Wt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return Wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_Train_Request_Train";
-        }
-      }
-      class Ft extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ft.prototype.result || u.Sg(Ft.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ft.sm_m ||
-              (Ft.sm_m = {
-                proto: Ft,
-                fields: {
-                  result: { n: 1, br: u.qM.readEnum, bw: u.gp.writeEnum },
                 },
               }),
             Ft.sm_m
@@ -8967,6 +8911,62 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return Ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_Train_Request_Train";
+        }
+      }
+      class Wt extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Wt.prototype.result || u.Sg(Wt.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Wt.sm_m ||
+              (Wt.sm_m = {
+                proto: Wt,
+                fields: {
+                  result: { n: 1, br: u.qM.readEnum, bw: u.gp.writeEnum },
+                },
+              }),
+            Wt.sm_m
+          );
+        }
+        static MBF() {
+          return Wt.sm_mbf || (Wt.sm_mbf = u.w0(Wt.M())), Wt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Wt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(Wt.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(Wt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new Wt();
+          return Wt.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(Wt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return Wt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(Wt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return Wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_Train_Response";
@@ -10538,7 +10538,7 @@
                     br: u.qM.readString,
                     bw: u.gp.writeString,
                   },
-                  iterate_beam_search: { n: 13, c: Fe },
+                  iterate_beam_search: { n: 13, c: We },
                 },
               }),
             ia.sm_m
@@ -11999,7 +11999,7 @@
             return e.SendMsg(
               "SteamLearn.SnapshotProject#1",
               (0, m.I8)(ke, t),
-              We,
+              Fe,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -12042,7 +12042,7 @@
             );
           }),
           (e.Train = function (e, t) {
-            return e.SendMsg("SteamLearn.Train#1", (0, m.I8)(Ot, t), Ft, {
+            return e.SendMsg("SteamLearn.Train#1", (0, m.I8)(Ot, t), Wt, {
               ePrivilege: 1,
             });
           }),
@@ -12162,13 +12162,13 @@
       var Ia = a(78327),
         Oa = a(96059),
         ka = a(44332);
-      class Wa {
+      class Fa {
         static s_SteamLearnStore;
         static Get() {
           return (
-            Wa.s_SteamLearnStore ||
-              ((Wa.s_SteamLearnStore = new Wa()), Wa.s_SteamLearnStore.Init()),
-            Wa.s_SteamLearnStore
+            Fa.s_SteamLearnStore ||
+              ((Fa.s_SteamLearnStore = new Fa()), Fa.s_SteamLearnStore.Init()),
+            Fa.s_SteamLearnStore
           );
         }
         Init() {
@@ -12186,7 +12186,7 @@
         }
         m_SteamInterface = null;
       }
-      var Fa = a(7860);
+      var Wa = a(7860);
       const Pa = "SteamLearnDB",
         xa = 1,
         Va = "SteamLearnProjects";
@@ -12222,7 +12222,7 @@
             (async function () {
               let e = m.w.Init(Nt);
               const t = await r.ListDataSources(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 e,
               );
               if (t.BIsValid() && 1 == t.GetEResult())
@@ -12231,7 +12231,7 @@
                     .Body()
                     .data_sources()
                     .forEach((e) => {
-                      Fa.L.setQueryData([Ha, e.id()], e);
+                      Wa.L.setQueryData([Ha, e.id()], e);
                     }),
                   t.Body().data_sources()
                 );
@@ -12248,7 +12248,7 @@
               let t = m.w.Init(wt);
               t.Body().set_data_source_id(e);
               const a = await r.GetDataSource(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 t,
               );
               if (a.BIsValid() && 1 == a.GetEResult())
@@ -12278,7 +12278,7 @@
         const t = await (async function (e) {
             let t = m.w.Init(gt);
             t.Body().set_project_id(e);
-            const a = await r.GetProject(Wa.Get().GetServiceTransport(), t);
+            const a = await r.GetProject(Fa.Get().GetServiceTransport(), t);
             if (a.BIsValid() && 1 == a.GetEResult()) return a.Body().project();
             throw `Failed FetchProject ${e}`;
           })(e),
@@ -12300,7 +12300,7 @@
           queryFn: () =>
             (async function () {
               let e = m.w.Init(lt);
-              const t = await r.ListProjects(Wa.Get().GetServiceTransport(), e);
+              const t = await r.ListProjects(Fa.Get().GetServiceTransport(), e);
               if (t.BIsValid() && 1 == t.GetEResult())
                 return t.Body().projects();
               throw "Failed FetchProjectList";
@@ -12344,7 +12344,7 @@
               let e = m.w.Init(Dt);
               e.Body().set_appid(570);
               const t = await r.GetAccessTokensWeb(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 e,
               );
               if (t.BIsValid() && 1 == t.GetEResult()) return t.Body();
@@ -12361,7 +12361,7 @@
               let a = m.w.Init(Pt);
               a.Body().set_project_id(e), a.Body().set_published_version(t);
               const n = await r.GetFetchStatusVersions(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 a,
               );
               if (n.BIsValid() && 1 == n.GetEResult()) return n.Body();
@@ -12378,7 +12378,7 @@
               let a = m.w.Init(Vt);
               a.Body().set_project_id(e), a.Body().set_published_version(t);
               const n = await r.GetTrainStatusVersions(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 a,
               );
               if (n.BIsValid() && 1 == n.GetEResult()) return n.Body();
@@ -12395,7 +12395,7 @@
               let a = m.w.Init(Gt);
               a.Body().set_project_id(e), a.Body().set_fetch_id(t);
               const n = await r.GetFetchStatus(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 a,
               );
               if (n.BIsValid() && 1 == n.GetEResult()) return n.Body();
@@ -12412,7 +12412,7 @@
               let a = m.w.Init($t);
               a.Body().set_project_id(e), a.Body().set_train_id(t);
               const n = await r.GetTrainStatus(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 a,
               );
               if (n.BIsValid() && 1 == n.GetEResult()) return n.Body();
@@ -12430,7 +12430,7 @@
               n.Body().set_project_id(e),
                 n.Body().set_fetch_id(t),
                 n.Body().set_train_id(a);
-              const i = await r.GetTrainLogs(Wa.Get().GetServiceTransport(), n);
+              const i = await r.GetTrainLogs(Fa.Get().GetServiceTransport(), n);
               if (i.BIsValid() && 1 == i.GetEResult()) return i.Body();
               throw `Failed FetchLogs: Project ${e}, Train ${a}, Fetch ${t}`;
             })(e, t, a),
@@ -12447,7 +12447,7 @@
                 i.Body().set_end_timestamp(t),
                 i.Body().set_project_id(a),
                 i.Body().set_published_version(n);
-              const s = await r.GetLogEvents(Wa.Get().GetServiceTransport(), i);
+              const s = await r.GetLogEvents(Fa.Get().GetServiceTransport(), i);
               if (s.BIsValid() && 1 == s.GetEResult()) return s.Body();
               throw `Failed FetchLogEvents: ${e} to ${t} `;
             })(e, t, a, n),
@@ -12464,7 +12464,7 @@
                 n.Body().set_published_version(t),
                 n.Body().set_snapshot_example_count(a);
               const i = await r.GetSnapshotStatus(
-                Wa.Get().GetServiceTransport(),
+                Fa.Get().GetServiceTransport(),
                 n,
               );
               if (i.BIsValid() && 1 == i.GetEResult()) return i.Body();
@@ -12474,10 +12474,10 @@
         });
       }
       function Sr(e, t) {
-        Fa.L.invalidateQueries({ queryKey: [Za, e, t] });
+        Wa.L.invalidateQueries({ queryKey: [Za, e, t] });
       }
       function Nr(e, t) {
-        Fa.L.invalidateQueries({ queryKey: [Ja, e, t] });
+        Wa.L.invalidateQueries({ queryKey: [Ja, e, t] });
       }
       async function br(e, t, a) {
         let n = m.w.Init(qt);
@@ -12493,42 +12493,42 @@
             a.set_train_id(t),
             n.Body().add_train_requests(a);
         }
-        const i = await r.GetBatchedStatus(Wa.Get().GetServiceTransport(), n);
+        const i = await r.GetBatchedStatus(Fa.Get().GetServiceTransport(), n);
         if (i.BIsValid() && 1 == i.GetEResult()) return i.Body();
         throw `Failed FetchBatchStatus: Project ${e}, Fetch IDs: ${t}, Train IDs: ${a}`;
       }
       async function wr(e, t) {
         let a = m.w.Init(ot);
         a.Body().set_project_name(e), a.Body().set_project_description(t);
-        const n = await r.CreateProject(Wa.Get().GetServiceTransport(), a);
+        const n = await r.CreateProject(Fa.Get().GetServiceTransport(), a);
         return (
           n &&
             1 == n.GetEResult() &&
-            (Fa.L.setQueryData(
+            (Wa.L.setQueryData(
               [$a, n.Body().project().project_id()],
               [n.Body().project(), n.Body().project()],
             ),
-            Fa.L.invalidateQueries({ queryKey: [Ka] })),
+            Wa.L.invalidateQueries({ queryKey: [Ka] })),
           [n.Body().result(), n.Body().project().project_id()]
         );
       }
       async function vr(e, t) {
         let a = m.w.Init(Et);
         a.Body().set_project(e), a.Body().set_published_version(t);
-        const n = await r.EditProject(Wa.Get().GetServiceTransport(), a);
+        const n = await r.EditProject(Fa.Get().GetServiceTransport(), a);
         return (
           n &&
             1 == n.GetEResult() &&
             (await Da(Pa, xa, Va, Ya(e.project_id())),
-            Fa.L.invalidateQueries({ queryKey: [$a, e.project_id()] })),
+            Wa.L.invalidateQueries({ queryKey: [$a, e.project_id()] })),
           n.Body().result()
         );
       }
       async function Er(e) {
         await Da(Pa, xa, Va, Ya(e)),
-          await Fa.L.removeQueries({ queryKey: [$a, e] }),
-          Fa.L.removeQueries({ queryKey: [Xa, e] }),
-          Fa.L.removeQueries({ queryKey: [Qa, e] });
+          await Wa.L.removeQueries({ queryKey: [$a, e] }),
+          Wa.L.removeQueries({ queryKey: [Xa, e] }),
+          Wa.L.removeQueries({ queryKey: [Qa, e] });
       }
       function Br(e, t) {
         let a;
@@ -13118,11 +13118,11 @@
         Dr(e.unpublished_config());
         for (const t of e.published_configs()) Dr(t);
         za(Pa, xa, Va, Ya(e.project_id()), e.serializeBase64String()),
-          Fa.L.invalidateQueries({ queryKey: [$a, e.project_id()] });
+          Wa.L.invalidateQueries({ queryKey: [$a, e.project_id()] });
       }
       function Or(e, t) {
         const a = (function (e) {
-          return Fa.L.getQueryData([Ha, e]);
+          return Wa.L.getQueryData([Ha, e]);
         })(t);
         if (!a) return !1;
         for (const r of a.structure().elements())
@@ -13150,7 +13150,7 @@
           }
         }
       }
-      function Wr(e, t) {
+      function Fr(e, t) {
         const a = e.unpublished_config().data_source_ids().indexOf(t);
         if (-1 == t) return !1;
         let r = e
@@ -13167,7 +13167,7 @@
           !0
         );
       }
-      function Fr(e, t, a) {
+      function Wr(e, t, a) {
         return (
           e.length > 0 &&
           /^-?[\d]*$/.test(e) &&
@@ -13721,7 +13721,7 @@
                         let t = m.w.Init(Mt);
                         t.Body().set_project_id(e);
                         const a = await r.PublishProject(
-                          Wa.Get().GetServiceTransport(),
+                          Fa.Get().GetServiceTransport(),
                           t,
                         );
                         return a.BIsValid() && 1 == a.GetEResult()
@@ -14424,7 +14424,7 @@
             o = er(),
             c = 0 == r,
             m = (t) => {
-              Wr(e, t), Ir(e);
+              Fr(e, t), Ir(e);
             },
             d = (a) => {
               if (o.isSuccess) {
@@ -14460,7 +14460,7 @@
                           n.set_sequence_table(r.sequence_table()),
                           n.set_sequence_table_count(r.sequence_table_count()));
                   })(t, a, s),
-                  Wr(e, a),
+                  Fr(e, a),
                   Ir(e));
               }
             };
@@ -14682,8 +14682,8 @@
             [L, z] = i.useState(_?.compact_table()),
             [j, D] = i.useState(_?.compact_table_count()?.toFixed(0) || "0"),
             [I, O] = i.useState(!0),
-            [k, W] = i.useState(_?.sequence_table()),
-            [F, P] = i.useState(_?.sort_sequence() || !1),
+            [k, F] = i.useState(_?.sequence_table()),
+            [W, P] = i.useState(_?.sort_sequence() || !1),
             [x, V] = i.useState(_?.sequence_min_length()?.toFixed(0) || "0"),
             [R, q] = i.useState(!0),
             [U, G] = i.useState(
@@ -14737,7 +14737,7 @@
                   ie(k, n.sequence_table(), () => n.set_sequence_table(k)) ||
                   r),
                 (r =
-                  ie(F, n.sort_sequence(), () => n.set_sort_sequence(F)) || r),
+                  ie(W, n.sort_sequence(), () => n.set_sort_sequence(W)) || r),
                 (r =
                   ie(x, n.sequence_min_length()?.toString() || "0", () =>
                     n.set_sequence_min_length(parseInt(x)),
@@ -14764,7 +14764,7 @@
                   ) || r));
             }),
               r && Ir(t);
-          }, [u, p, S, v, y, L, j, k, F, x, U, K, Z, te, re, t, a, e]);
+          }, [u, p, S, v, y, L, j, k, W, x, U, K, Z, te, re, t, a, e]);
           const se = 0 == r,
             oe = (e, t, a) => {
               t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? a(!0) : a(!1);
@@ -15096,7 +15096,7 @@
                       className: En.ValueInput,
                       disabled: !1,
                       value: k,
-                      onChange: (e) => W(e.target.value),
+                      onChange: (e) => F(e.target.value),
                     }),
                   ),
                 we &&
@@ -15154,8 +15154,8 @@
                     i.createElement("input", {
                       type: "checkbox",
                       id: "editsort",
-                      checked: F,
-                      onChange: () => P(!F),
+                      checked: W,
+                      onChange: () => P(!W),
                     }),
                   ),
                 we &&
@@ -15803,7 +15803,7 @@
                           }
                         }
                         const c = await r.InferenceBackend(
-                          Wa.Get().GetServiceTransport(),
+                          Fa.Get().GetServiceTransport(),
                           a,
                         );
                         if (
@@ -15918,8 +15918,8 @@
               ),
             );
       };
-      var Wn = a(47316),
-        Fn = a(32754),
+      var Fn = a(47316),
+        Wn = a(32754),
         Pn = a(81451),
         xn = a(78395),
         Vn = a(16282),
@@ -15956,7 +15956,7 @@
             { className: Rn.InputOption },
             e.label &&
               i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   toolTipContent: e.labelTooltip,
                   direction: "top",
@@ -16066,7 +16066,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -16100,7 +16100,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -16166,7 +16166,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -16253,7 +16253,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => o,
-                  fnValidateValue: (e) => Fr(e, 1, 9),
+                  fnValidateValue: (e) => Wr(e, 1, 9),
                   fnSetValue: (e) => c(e),
                 }),
               ),
@@ -16320,7 +16320,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -16348,7 +16348,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -16428,7 +16428,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -16521,7 +16521,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => o,
-                    fnValidateValue: (e) => Fr(e, 1, 8),
+                    fnValidateValue: (e) => Wr(e, 1, 8),
                     fnSetValue: (e) => c(e),
                   }),
                 ),
@@ -16541,7 +16541,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => m,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => d(e),
                   }),
                 ),
@@ -16612,7 +16612,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = o.connectors().filter((e) => e.is_input_connector()),
             _ = o.connectors().filter((e) => !e.is_input_connector()),
             u = _.filter((e, t) => t % 2 == 0),
@@ -16669,7 +16669,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -16867,7 +16867,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -16886,7 +16886,7 @@
               const a = Math.floor(((t + 1) / (g.length + 1)) * (p - 24)),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -17111,7 +17111,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => o,
-                  fnValidateValue: (e) => Fr(e, 1, 5),
+                  fnValidateValue: (e) => Wr(e, 1, 5),
                   fnSetValue: (e) => c(e),
                 }),
               ),
@@ -17150,7 +17150,7 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => g,
-                    fnValidateValue: (e) => Fr(e, 0, 360),
+                    fnValidateValue: (e) => Wr(e, 0, 360),
                     fnSetValue: (e) => p(e),
                   }),
               ),
@@ -17206,7 +17206,7 @@
                       dontUpdateProject: !0,
                       fnGetInitialValue: () => N,
                       fnValidateValue: (t) =>
-                        Fr(
+                        Wr(
                           t,
                           1,
                           e.msgNode
@@ -17394,7 +17394,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -17410,7 +17410,7 @@
               );
             }),
             i.createElement(
-              Wn.h7,
+              Fn.h7,
               {
                 type: "target",
                 position: Pn.yX.Left,
@@ -17474,7 +17474,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -17604,7 +17604,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -17719,7 +17719,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -17854,7 +17854,7 @@
                   className: (0, c.A)(Vn.OptionInput, !s && Vn.Invalid),
                   value: r,
                   onChange: (e) => {
-                    return (t = e.target.value), o(Fr(t, 1, 8096)), void n(t);
+                    return (t = e.target.value), o(Wr(t, 1, 8096)), void n(t);
                     var t;
                   },
                 }),
@@ -17988,7 +17988,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -18118,7 +18118,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -18265,7 +18265,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 6),
+                  fnValidateValue: (e) => Wr(e, 1, 6),
                   fnSetValue: (e) =>
                     ((e) => {
                       o(e);
@@ -18298,7 +18298,7 @@
                     key: e,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => c[e],
-                    fnValidateValue: (e) => Fr(e, 1, 8196),
+                    fnValidateValue: (e) => Wr(e, 1, 8196),
                     fnSetValue: (t) =>
                       ((e, t) => {
                         if (e < 0 || e >= c.length) return;
@@ -18327,7 +18327,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 0, 99),
+                  fnValidateValue: (e) => Wr(e, 0, 99),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -18441,7 +18441,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -18521,7 +18521,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -18607,7 +18607,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 0, 99),
+                  fnValidateValue: (e) => Wr(e, 0, 99),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -18661,7 +18661,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -18788,7 +18788,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -18911,7 +18911,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1) || xr(a, e),
+                  fnValidateValue: (e) => Wr(e, 1) || xr(a, e),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -18932,7 +18932,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -18997,7 +18997,7 @@
                 Qr.jn,
                 {
                   onClick: () => {
-                    const n = Fr(s, 1),
+                    const n = Wr(s, 1),
                       i = xr(a, s);
                     n
                       ? (e.msgNode
@@ -19034,7 +19034,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)();
+            m = (0, Fn.PF)();
           i.useEffect(() => {
             const e = o
               .connectors()
@@ -19115,7 +19115,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -19181,7 +19181,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -19305,7 +19305,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -19388,7 +19388,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -19517,7 +19517,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -19551,7 +19551,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -19646,7 +19646,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -19783,7 +19783,7 @@
                     ),
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => s,
-                    fnValidateValue: (e) => Fr(e, 1, 1e4),
+                    fnValidateValue: (e) => Wr(e, 1, 1e4),
                     fnSetValue: (e) => o(e),
                   }),
               ),
@@ -19841,7 +19841,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -19937,7 +19937,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -20032,7 +20032,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 8096) || xr(a, e),
+                  fnValidateValue: (e) => Wr(e, 1, 8096) || xr(a, e),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -20075,7 +20075,7 @@
                 Qr.jn,
                 {
                   onClick: () => {
-                    const n = Fr(s, 1, 8096),
+                    const n = Wr(s, 1, 8096),
                       i = xr(a, s);
                     n
                       ? (e.msgNode.onehot().set_width(parseInt(s)),
@@ -20129,7 +20129,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -20211,7 +20211,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -20339,7 +20339,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)();
+            m = (0, Fn.PF)();
           i.useEffect(() => {
             setTimeout(() => {
               for (const e of a.project_nodes())
@@ -20368,7 +20368,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -20450,7 +20450,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -20539,7 +20539,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => o,
-                  fnValidateValue: (e) => Fr(e, 1, 10),
+                  fnValidateValue: (e) => Wr(e, 1, 10),
                   fnSetValue: (e) => c(e),
                 }),
               ),
@@ -20657,7 +20657,7 @@
             [a, r] = i.useState(!1),
             n = e.data.msgNode,
             s = n.connectors().filter((e) => e.is_input_connector()),
-            o = (0, Wn.PF)();
+            o = (0, Fn.PF)();
           i.useEffect(() => {
             setTimeout(() => {
               for (const e of t.project_nodes())
@@ -20685,7 +20685,7 @@
                 d = Math.floor(((c + 1) / (l + 1)) * (m - 24)),
                 _ = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: _,
                   type: "target",
@@ -20940,7 +20940,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => r,
-                  fnValidateValue: (e) => Fr(e, 1, 9),
+                  fnValidateValue: (e) => Wr(e, 1, 9),
                   fnSetValue: (e) => n(e),
                 }),
               ),
@@ -21249,7 +21249,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -21472,7 +21472,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -21671,7 +21671,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 1e6),
+                  fnValidateValue: (e) => Wr(e, 1, 1e6),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -21807,7 +21807,7 @@
                     dontUpdateProject: !0,
                     isText: !0,
                     fnGetInitialValue: () => u,
-                    fnValidateValue: (e) => Fr(e, 1, 1e4),
+                    fnValidateValue: (e) => Wr(e, 1, 1e4),
                     fnSetValue: (e) => g(e),
                   }),
                 ),
@@ -21886,7 +21886,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => p,
-                  fnValidateValue: (e) => Fr(e, 0),
+                  fnValidateValue: (e) => Wr(e, 0),
                   fnSetValue: (e) => f(e),
                 }),
                 i.createElement(
@@ -21900,7 +21900,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => S,
-                  fnValidateValue: (e) => Fr(e, 0),
+                  fnValidateValue: (e) => Wr(e, 0),
                   fnSetValue: (e) => N(e),
                 }),
               ),
@@ -21923,7 +21923,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => v,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => E(e),
                 }),
               ),
@@ -21998,7 +21998,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -22064,7 +22064,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -22180,7 +22180,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -22246,7 +22246,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -22358,7 +22358,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -22438,7 +22438,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -22568,7 +22568,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -22650,7 +22650,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -22779,7 +22779,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = 1 == o.extract().mode(),
             _ = o.connectors().filter((e) => e.is_input_connector()),
             u = o.connectors().filter((e) => !e.is_input_connector()),
@@ -22802,7 +22802,7 @@
                 Vn.Preprocessing,
               ),
             },
-            i.createElement(Wi, {
+            i.createElement(Fi, {
               bVisible: n,
               fnSetPopupVisible: s,
               msgNode: o,
@@ -22813,10 +22813,10 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 { key: r, toolTipContent: `Input ${t}`, direction: "top" },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -23058,14 +23058,14 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: `Filtered Output ${t}`,
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     type: "source",
                     position: Pn.yX.Bottom,
@@ -23084,14 +23084,14 @@
               const a = Math.floor(((t + 1) * S) / (f.length + 1)),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: `Pos/Neg (1 or -1) ${t}`,
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -23111,14 +23111,14 @@
               const a = Math.floor(((t + 1) * S) / (p.length + 1)),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: `Extracted Output ${t}`,
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -23136,7 +23136,7 @@
             }),
           );
         },
-        Wi = (e) => {
+        Fi = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = Ar(),
             r = e.msgNode
               .connectors()
@@ -23181,7 +23181,7 @@
               I(e.msgNode.extract().compact_table()),
               k(e.msgNode.extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, r]);
-          let W = [
+          let F = [
               {
                 label: (0, l.we)(
                   "#SteamLearn_Config_Node_Extract_InputType_Misc",
@@ -23195,7 +23195,7 @@
                 value: 1,
               },
             ],
-            F = [
+            W = [
               {
                 label: (0, l.we)(
                   "#SteamLearn_Config_Node_Extract_Mode_Extract",
@@ -23329,7 +23329,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => o,
-                  fnValidateValue: (e) => Fr(e, 1, 5),
+                  fnValidateValue: (e) => Wr(e, 1, 5),
                   fnSetValue: (e) => c(e),
                 }),
               ),
@@ -23351,7 +23351,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => m,
                   fnSetValue: (e) => d(parseInt(e)),
-                  options: W,
+                  options: F,
                 }),
               ),
               i.createElement("div", { className: Vn.Separator }),
@@ -23372,7 +23372,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => _,
                   fnSetValue: (e) => u(parseInt(e)),
-                  options: F,
+                  options: W,
                 }),
                 i.createElement(qn, {
                   label: (0, l.we)(
@@ -23385,7 +23385,7 @@
                   hidden: !R,
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => z,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => j(e),
                 }),
               ),
@@ -23421,7 +23421,7 @@
                     hidden: 1 != g,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => N,
-                    fnValidateValue: (e) => Fr(e, 0, 600),
+                    fnValidateValue: (e) => Wr(e, 0, 600),
                     fnSetValue: (e) => b(e),
                   }),
                   i.createElement(qn, {
@@ -23497,7 +23497,7 @@
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => M,
                   fnValidateValue: (t) =>
-                    Fr(
+                    Wr(
                       t,
                       1,
                       e.msgNode
@@ -23644,7 +23644,7 @@
             ),
           );
         },
-        Fi = (e) => {
+        Wi = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = Ar(),
             [r, n] = i.useState(!1),
             s = e.data.msgNode,
@@ -23664,7 +23664,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -23786,7 +23786,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -23941,7 +23941,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 1, void 0),
+                  fnValidateValue: (e) => Wr(e, 1, void 0),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -24023,7 +24023,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -24117,7 +24117,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -24228,7 +24228,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 1, void 0),
+                  fnValidateValue: (e) => Wr(e, 1, void 0),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -24282,7 +24282,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -24348,7 +24348,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -24461,7 +24461,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -24527,7 +24527,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -24640,7 +24640,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -24706,7 +24706,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -24813,7 +24813,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -24956,7 +24956,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -25080,7 +25080,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 20),
+                  fnValidateValue: (e) => Wr(e, 1, 20),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -25104,7 +25104,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 16, 10240),
+                  fnValidateValue: (e) => Wr(e, 16, 10240),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -25126,7 +25126,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 1, 99),
+                  fnValidateValue: (e) => Wr(e, 1, 99),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -25150,7 +25150,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => u,
-                  fnValidateValue: (e) => Fr(e, 1, 16),
+                  fnValidateValue: (e) => Wr(e, 1, 16),
                   fnSetValue: (e) => g(e),
                 }),
               ),
@@ -25244,7 +25244,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -25338,7 +25338,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -25456,7 +25456,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 10240),
+                  fnValidateValue: (e) => Wr(e, 1, 10240),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -25569,7 +25569,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -25717,7 +25717,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -25825,7 +25825,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -25851,7 +25851,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -25877,7 +25877,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -25999,7 +25999,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -26079,7 +26079,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -26166,7 +26166,7 @@
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 0, void 0),
+                  fnValidateValue: (e) => Wr(e, 0, void 0),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -26261,7 +26261,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -26383,7 +26383,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: (0, l.we)(
@@ -26392,7 +26392,7 @@
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -26493,7 +26493,7 @@
                   dontUpdateProject: !0,
                   width: 100,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, 100),
+                  fnValidateValue: (e) => Wr(e, 1, 100),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -26515,7 +26515,7 @@
                   dontUpdateProject: !0,
                   width: 100,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -26537,7 +26537,7 @@
                   dontUpdateProject: !0,
                   width: 100,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -26559,7 +26559,7 @@
                   dontUpdateProject: !0,
                   width: 100,
                   fnGetInitialValue: () => u,
-                  fnValidateValue: (e) => Fr(e, 0, 100),
+                  fnValidateValue: (e) => Wr(e, 0, 100),
                   fnSetValue: (e) => g(e),
                 }),
               ),
@@ -26621,7 +26621,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: (0, l.we)(
@@ -26630,7 +26630,7 @@
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -26829,7 +26829,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -26966,7 +26966,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1) || xr(a, e),
+                  fnValidateValue: (e) => Wr(e, 1) || xr(a, e),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -26992,7 +26992,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => c,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => m(e),
                 }),
               ),
@@ -27018,7 +27018,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => d,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => _(e),
                 }),
               ),
@@ -27044,7 +27044,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => u,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => g(e),
                 }),
               ),
@@ -27070,7 +27070,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => p,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => f(e),
                 }),
               ),
@@ -27096,7 +27096,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => S,
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (e) => N(e),
                 }),
               ),
@@ -27122,7 +27122,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => b,
-                  fnValidateValue: (e) => Fr(e, 1, 99),
+                  fnValidateValue: (e) => Wr(e, 1, 99),
                   fnSetValue: (e) => w(e),
                 }),
               ),
@@ -27169,7 +27169,7 @@
                 Qr.jn,
                 {
                   onClick: () => {
-                    const n = Fr(s, 1),
+                    const n = Wr(s, 1),
                       i = xr(a, s);
                     n
                       ? (e.msgNode
@@ -27239,7 +27239,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Fn.he,
+                Wn.he,
                 {
                   key: r,
                   toolTipContent: (0, l.we)(
@@ -27248,7 +27248,7 @@
                   direction: "top",
                 },
                 i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -27315,7 +27315,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -27410,7 +27410,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = or(e.data.msgNode.external_model().project_id()),
             _ = e.data.msgNode
               .connectors()
@@ -27445,7 +27445,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -27603,7 +27603,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -27721,7 +27721,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => c,
-                    fnValidateValue: (e) => Fr(e, 1, 8),
+                    fnValidateValue: (e) => Wr(e, 1, 8),
                     fnSetValue: (e) => m(e),
                   }),
                 ),
@@ -27745,7 +27745,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => d,
-                    fnValidateValue: (e) => Fr(e, 1, 8),
+                    fnValidateValue: (e) => Wr(e, 1, 8),
                     fnSetValue: (e) => _(e),
                   }),
                 ),
@@ -27770,7 +27770,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => u,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => g(e),
                   }),
                 ),
@@ -27792,7 +27792,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => p,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => f(e),
                   }),
                 ),
@@ -27868,7 +27868,7 @@
                     width: 200,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => v,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => E(e),
                   }),
                 ),
@@ -27979,7 +27979,7 @@
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
             m =
-              ((0, Wn.PF)(),
+              ((0, Fn.PF)(),
               e.data.msgNode
                 .connectors()
                 .filter((e) => e.is_input_connector())),
@@ -28006,7 +28006,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -28168,7 +28168,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -28285,7 +28285,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => s,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => o(e),
                   }),
                 ),
@@ -28309,7 +28309,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => c,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => m(e),
                   }),
                 ),
@@ -28333,7 +28333,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => d,
-                    fnValidateValue: (e) => Fr(e, 0, void 0),
+                    fnValidateValue: (e) => Wr(e, 0, void 0),
                     fnSetValue: (e) => _(e),
                   }),
                 ),
@@ -28481,7 +28481,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -28561,7 +28561,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -28647,7 +28647,7 @@
                 i.createElement(qn, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => Fr(e, 1, void 0),
+                  fnValidateValue: (e) => Wr(e, 1, void 0),
                   fnSetValue: (e) => o(e),
                 }),
               ),
@@ -28684,7 +28684,7 @@
             } = Ar(),
             [n, s] = i.useState(!1),
             o = e.data.msgNode,
-            m = (0, Wn.PF)(),
+            m = (0, Fn.PF)(),
             d = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -28712,7 +28712,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "target",
@@ -28792,7 +28792,7 @@
                   ),
                   r = Ra(e.connector_id());
                 return i.createElement(
-                  Wn.h7,
+                  Fn.h7,
                   {
                     key: r,
                     type: "source",
@@ -28886,7 +28886,7 @@
                   i.createElement(qn, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => c,
-                    fnValidateValue: (e) => Fr(e),
+                    fnValidateValue: (e) => Wr(e),
                     fnSetValue: (e) => m(e),
                   }),
                 ),
@@ -28940,7 +28940,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "target",
@@ -29006,7 +29006,7 @@
                 ),
                 r = Ra(e.connector_id());
               return i.createElement(
-                Wn.h7,
+                Fn.h7,
                 {
                   key: r,
                   type: "source",
@@ -29107,7 +29107,7 @@
         },
         Ns = (e) =>
           i.createElement(
-            Fn.he,
+            Wn.he,
             {
               toolTipContent: e.strTooltip,
               direction: "top",
@@ -29132,8 +29132,8 @@
               nPublishedVersion: s,
             } = Ar(),
             [o, m] = vs(n),
-            [d, _, u] = (0, Wn.ck)(o),
-            [g, p, f] = (0, Wn.fM)(m),
+            [d, _, u] = (0, Fn.ck)(o),
+            [g, p, f] = (0, Fn.fM)(m),
             [S, N] = i.useState(null),
             [b, w] = i.useState(!1),
             v = i.useMemo(
@@ -29159,7 +29159,7 @@
                 nodeNamedInference: ji,
                 nodeDot: Ii,
                 nodeExtract: ki,
-                nodeConv1D: Fi,
+                nodeConv1D: Wi,
                 nodeMaxPooling1D: xi,
                 nodeFlatten: Ri,
                 nodeGlobalMaxPooling1D: Ui,
@@ -29590,7 +29590,7 @@
             "div",
             { className: Mi.ProjectModelReactFlow },
             i.createElement(
-              Wn.Ln,
+              Fn.Ln,
               null,
               i.createElement(
                 "div",
@@ -30001,7 +30001,7 @@
                     ),
                   ),
                 ),
-                i.createElement(Wn.Gc, {
+                i.createElement(Fn.Gc, {
                   nodeTypes: v,
                   nodes: d,
                   edges: g,
@@ -30246,6 +30246,13 @@
                 value: 10,
                 hidden: 8 != d,
               },
+              {
+                label: (0, l.we)(
+                  "#SteamLearn_SnapshotFilter_SnapshotType_ReviewsByApp",
+                ),
+                value: 11,
+                hidden: 10 != d,
+              },
             ],
             u = [
               {
@@ -30414,7 +30421,7 @@
                   fnGetInitialValue: () =>
                     e.snapshot_filter().sample_reduce_percent().toString() ||
                     "100",
-                  fnValidateValue: (e) => Fr(e, 0, 1e3),
+                  fnValidateValue: (e) => Wr(e, 0, 1e3),
                   fnSetValue: (t) =>
                     e.snapshot_filter().set_sample_reduce_percent(parseInt(t)),
                 }),
@@ -30479,7 +30486,7 @@
                   fnGetInitialValue: () =>
                     e.snapshot_filter().histogram().num_buckets().toString() ||
                     "0",
-                  fnValidateValue: (e) => Fr(e, 2, void 0),
+                  fnValidateValue: (e) => Wr(e, 2, void 0),
                   fnSetValue: (t) =>
                     e
                       .snapshot_filter()
@@ -30567,7 +30574,7 @@
                       .data_retention_config()
                       .snapshot_keep_duration_days()
                       ?.toString() || "0",
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (t) =>
                     e
                       .data_retention_config()
@@ -30595,7 +30602,7 @@
                   fnGetInitialValue: () =>
                     e.data_retention_config().fetch_keep_count()?.toString() ||
                     "0",
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (t) =>
                     e.data_retention_config().set_fetch_keep_count(parseInt(t)),
                 }),
@@ -30682,7 +30689,7 @@
                       .config_account_ids()
                       ?.percent()
                       ?.toString() || "100",
-                  fnValidateValue: (e) => Fr(e, 1, 100),
+                  fnValidateValue: (e) => Wr(e, 1, 100),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30700,7 +30707,7 @@
                       .config_account_ids()
                       ?.activity_recency_days()
                       ?.toString() || "180",
-                  fnValidateValue: (e) => Fr(e, 1, void 0),
+                  fnValidateValue: (e) => Wr(e, 1, void 0),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30718,7 +30725,7 @@
                       .config_app_ids()
                       ?.percent()
                       ?.toString() || "100",
-                  fnValidateValue: (e) => Fr(e, 1, 100),
+                  fnValidateValue: (e) => Wr(e, 1, 100),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30736,7 +30743,7 @@
                       .config_app_ids()
                       ?.release_recency_days()
                       ?.toString() || "240",
-                  fnValidateValue: (e) => Fr(e, 1, void 0),
+                  fnValidateValue: (e) => Wr(e, 1, void 0),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30754,7 +30761,7 @@
                       .config_other_project()
                       ?.project_id()
                       ?.toString() || "0",
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30772,7 +30779,7 @@
                       .config_other_project()
                       ?.published_version()
                       ?.toString() || "0",
-                  fnValidateValue: (e) => Fr(e, 1),
+                  fnValidateValue: (e) => Wr(e, 1),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
@@ -30829,7 +30836,7 @@
                         .snapshot_config()
                         .snapshot_schedule_hour_of_day()
                         .toString() || "12",
-                    fnValidateValue: (e) => Fr(e, 0, 24),
+                    fnValidateValue: (e) => Wr(e, 0, 24),
                     fnSetValue: (t) =>
                       e
                         .snapshot_config()
@@ -30843,7 +30850,7 @@
                         .snapshot_config()
                         .snapshot_schedule_day_of_month()
                         .toString() || "1",
-                    fnValidateValue: (e) => Fr(e, 1, 31),
+                    fnValidateValue: (e) => Wr(e, 1, 31),
                     fnSetValue: (t) =>
                       e
                         .snapshot_config()
@@ -30875,7 +30882,7 @@
                     label: (0, l.we)("#SteamLearn_SnapshotFilter_SnapshotJobs"),
                     fnGetInitialValue: () =>
                       e.snapshot_config().job_count()?.toString() || "200",
-                    fnValidateValue: (e) => Fr(e, 1, 600),
+                    fnValidateValue: (e) => Wr(e, 1, 600),
                     fnSetValue: (t) =>
                       e.snapshot_config().set_job_count(parseInt(t)),
                   }),
@@ -31184,7 +31191,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_FetchWorkersInput"),
               fnGetInitialValue: () =>
                 t.train_config().fetch_workers().toString() || "16",
-              fnValidateValue: (e) => Fr(e, 0, 1024),
+              fnValidateValue: (e) => Wr(e, 0, 1024),
               fnSetValue: (e) =>
                 t.train_config().set_fetch_workers(parseInt(e)),
             }),
@@ -31217,7 +31224,7 @@
               label: (0, l.we)("#SteamLearn_Config_Node_Train_GPUCount"),
               fnGetInitialValue: () =>
                 t.train_config().gpu_count()?.toString() || "1",
-              fnValidateValue: (e) => Fr(e, 1, 4),
+              fnValidateValue: (e) => Wr(e, 1, 4),
               fnSetValue: (e) => t.train_config().set_gpu_count(parseInt(e)),
             }),
             i.createElement(
@@ -31259,7 +31266,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_FetchChunkSizeInput"),
               fnGetInitialValue: () =>
                 t.train_config().fetch_chunk_size()?.toString() || "10000",
-              fnValidateValue: (e) => Fr(e, 100, 1e5),
+              fnValidateValue: (e) => Wr(e, 100, 1e5),
               fnSetValue: (e) =>
                 t.train_config().set_fetch_chunk_size(parseInt(e)),
             }),
@@ -31282,7 +31289,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_TrainBatchSizeInput"),
               fnGetInitialValue: () =>
                 t.train_config().train_batch_size()?.toString() || "1000",
-              fnValidateValue: (e) => Fr(e, 10, 5e3),
+              fnValidateValue: (e) => Wr(e, 10, 5e3),
               fnSetValue: (e) =>
                 t.train_config().set_train_batch_size(parseInt(e)),
             }),
@@ -31346,7 +31353,7 @@
               ),
               fnGetInitialValue: () =>
                 t.train_config().train_warmup_steps()?.toString() || "0",
-              fnValidateValue: (e) => Fr(e, 0, void 0),
+              fnValidateValue: (e) => Wr(e, 0, void 0),
               fnSetValue: (e) =>
                 t.train_config().set_train_warmup_steps(parseInt(e)),
             }),
@@ -31367,7 +31374,7 @@
               ),
               fnGetInitialValue: () =>
                 t.train_config().train_decay_steps()?.toString() || "0",
-              fnValidateValue: (e) => Fr(e, 0, void 0),
+              fnValidateValue: (e) => Wr(e, 0, void 0),
               fnSetValue: (e) =>
                 t.train_config().set_train_decay_steps(parseInt(e)),
             }),
@@ -31500,7 +31507,7 @@
               ),
               fnGetInitialValue: () =>
                 t.train_config().train_epoch_count()?.toString() || "10",
-              fnValidateValue: (e) => Fr(e, 1, 1e3),
+              fnValidateValue: (e) => Wr(e, 1, 1e3),
               fnSetValue: (e) =>
                 t.train_config().set_train_epoch_count(parseInt(e)),
             }),
@@ -31569,7 +31576,7 @@
                   .train_config()
                   .train_no_loss_improvement_epoch_limit()
                   ?.toString() || "2",
-              fnValidateValue: (e) => Fr(e, 0, 100),
+              fnValidateValue: (e) => Wr(e, 0, 100),
               fnSetValue: (e) =>
                 t
                   .train_config()
@@ -31595,7 +31602,7 @@
               fnGetInitialValue: () =>
                 t.train_config().profile_epoch()?.toString() || "0",
               fnValidateValue: (e) =>
-                Fr(e, 0, t.train_config().train_epoch_count()),
+                Wr(e, 0, t.train_config().train_epoch_count()),
               fnSetValue: (e) =>
                 t.train_config().set_profile_epoch(parseInt(e)),
             }),
@@ -31603,7 +31610,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_ProfileBatchStart"),
               fnGetInitialValue: () =>
                 t.train_config().profile_start_batch()?.toString() || "0",
-              fnValidateValue: (e) => Fr(e, 0),
+              fnValidateValue: (e) => Wr(e, 0),
               fnSetValue: (e) =>
                 t.train_config().set_profile_start_batch(parseInt(e)),
             }),
@@ -31611,7 +31618,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_ProfileBatchEnd"),
               fnGetInitialValue: () =>
                 t.train_config().profile_end_batch()?.toString() || "0",
-              fnValidateValue: (e) => Fr(e, 0),
+              fnValidateValue: (e) => Wr(e, 0),
               fnSetValue: (e) =>
                 t.train_config().set_profile_end_batch(parseInt(e)),
             }),
@@ -31794,7 +31801,7 @@
                             n.Body().set_project_config(a),
                               n.Body().fetch().set_fetch_id(t),
                               n.Body().fetch().set_request_cancel(!0),
-                              await r.Train(Wa.Get().GetServiceTransport(), n),
+                              await r.Train(Fa.Get().GetServiceTransport(), n),
                               Sr(e.nProjectID, e.nFetchID);
                           })(e.nFetchID),
                       },
@@ -32130,7 +32137,7 @@
             )
           );
         };
-      function Ws(e) {
+      function Fs(e) {
         if (null != e)
           return Array.isArray(e) && e.length > 0
             ? e.reduce((e, t) => e + t) / e.length
@@ -32138,7 +32145,7 @@
               ? e
               : 0;
       }
-      const Fs = (e) => {
+      const Ws = (e) => {
           const {
               nPublishedVersion: t,
               msgProject: a,
@@ -32180,12 +32187,12 @@
                   i.Body().set_from_scheduled(!1),
                   i.Body().set_deactivate(n);
                 const s = await r.SetTrainLive(
-                  Wa.Get().GetServiceTransport(),
+                  Fa.Get().GetServiceTransport(),
                   i,
                 );
                 s &&
                   1 == s.GetEResult() &&
-                  Fa.L.invalidateQueries({ queryKey: [Ja, e] }),
+                  Wa.L.invalidateQueries({ queryKey: [Ja, e] }),
                   s.Body().result();
               })(n.project_id(), t, e, a);
             },
@@ -32324,11 +32331,11 @@
                   },
                 ];
                 const o = Is(
-                    e.train_batches().map((e) => Ws(e.accuracy())),
+                    e.train_batches().map((e) => Fs(e.accuracy())),
                     C,
                   ).map((e, t) => ({ index: t, Train: e })),
                   c = Is(
-                    e.validate_batches().map((e) => Ws(e.accuracy())),
+                    e.validate_batches().map((e) => Fs(e.accuracy())),
                     C,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 b = [
@@ -32338,7 +32345,7 @@
                     data: o,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: Ws(i?.accuracy()),
+                    nFinalValue: Fs(i?.accuracy()),
                   },
                   {
                     strDataLabel: "Validate",
@@ -32349,15 +32356,15 @@
                     data: c,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: Ws(s?.accuracy()),
+                    nFinalValue: Fs(s?.accuracy()),
                   },
                 ];
                 const m = Is(
-                    e.train_batches().map((e) => Ws(e.f1_score())),
+                    e.train_batches().map((e) => Fs(e.f1_score())),
                     C,
                   ).map((e, t) => ({ index: t, Train: e })),
                   d = Is(
-                    e.validate_batches().map((e) => Ws(e.f1_score())),
+                    e.validate_batches().map((e) => Fs(e.f1_score())),
                     C,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 w = [
@@ -32367,7 +32374,7 @@
                     data: m,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: Ws(i?.f1_score()),
+                    nFinalValue: Fs(i?.f1_score()),
                   },
                   {
                     strDataLabel: "Validate",
@@ -32378,7 +32385,7 @@
                     data: d,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: Ws(s?.f1_score()),
+                    nFinalValue: Fs(s?.f1_score()),
                   },
                 ];
               }
@@ -32407,7 +32414,7 @@
                           e.validate_batches()[
                             e.validate_batches().length - 1
                           ]),
-                      { index: t + 1, Value: Ws(a?.accuracy()) }
+                      { index: t + 1, Value: Fs(a?.accuracy()) }
                     );
                   })
                   .filter((e) => null != e.Value),
@@ -32421,7 +32428,7 @@
                           e.validate_batches()[
                             e.validate_batches().length - 1
                           ]),
-                      { index: t + 1, Value: Ws(a?.f1_score()) }
+                      { index: t + 1, Value: Fs(a?.f1_score()) }
                     );
                   })
                   .filter((e) => null != e.Value);
@@ -32478,20 +32485,20 @@
                 label: (0, l.we)("#SteamLearn_Status_Train_EpochOption", e + 1),
                 value: e + 1,
               });
-          const W = (0, l.we)(
+          const F = (0, l.we)(
               "#SteamLearn_Status_Train_Duration",
               Ds(u?.end_time() - u?.start_time()),
             ),
-            F = new Date(1e3 * u?.end_time()),
+            W = new Date(1e3 * u?.end_time()),
             P = (0, l.we)(
               "#SteamLearn_Status_Train_Completed",
-              F.getHours() +
+              W.getHours() +
                 ":" +
-                F.getMinutes().toString().padStart(2, "0") +
+                W.getMinutes().toString().padStart(2, "0") +
                 ":" +
-                F.getSeconds().toString().padStart(2, "0") +
+                W.getSeconds().toString().padStart(2, "0") +
                 ", " +
-                F.toDateString(),
+                W.toDateString(),
             );
           let x,
             V,
@@ -32500,8 +32507,8 @@
             for (const e of u.epochs())
               e.epoch_validate_loss() < R &&
                 ((R = e.epoch_validate_loss()),
-                (x = Ws(e.epoch_validate_accuracy())),
-                (V = Ws(e.epoch_validate_f1_score())));
+                (x = Fs(e.epoch_validate_accuracy())),
+                (V = Fs(e.epoch_validate_f1_score())));
           return i.createElement(
             "div",
             { className: js.TrainStatusPanel },
@@ -32528,7 +32535,7 @@
                     i.createElement(
                       "div",
                       { className: js.Timinginfo },
-                      i.createElement("div", { className: js.Timing }, W),
+                      i.createElement("div", { className: js.Timing }, F),
                       i.createElement("div", { className: js.Timing }, P),
                     ),
                   !O &&
@@ -32559,7 +32566,7 @@
                             t.Body().set_project_config(n),
                               t.Body().train().set_train_id(e),
                               t.Body().train().set_request_cancel(!0),
-                              await r.Train(Wa.Get().GetServiceTransport(), t);
+                              await r.Train(Fa.Get().GetServiceTransport(), t);
                           })(e.nTrainID),
                       },
                       (0, l.we)("#SteamLearn_Status_Train_EndEarly"),
@@ -32996,7 +33003,7 @@
                         },
                       }),
                     i.createElement("div", { className: js.Separator }),
-                    i.createElement(Fs, {
+                    i.createElement(Ws, {
                       nProjectID: e,
                       nTrainID: s,
                       arrAllTrainIDs: d.versions(),
@@ -33196,7 +33203,7 @@
                       s.Body().fetch().set_request_cancel(!1),
                       s.Body().train().set_train_id(i),
                       s.Body().train().set_request_cancel(!1);
-                    const o = await r.Train(Wa.Get().GetServiceTransport(), s);
+                    const o = await r.Train(Fa.Get().GetServiceTransport(), s);
                     Sr(n, e),
                       Nr(n, i),
                       o.BIsValid() &&
@@ -33248,7 +33255,7 @@
                   .scheduled_train_config()
                   .scheduled_day_of_month()
                   ?.toString() || "1",
-              fnValidateValue: (e) => Fr(e, 1, 31),
+              fnValidateValue: (e) => Wr(e, 1, 31),
               fnSetValue: (e) =>
                 a
                   .scheduled_train_config()
@@ -33270,7 +33277,7 @@
               hidden: !y,
               fnGetInitialValue: () =>
                 a.scheduled_train_config().scheduled_hour()?.toString() || "0",
-              fnValidateValue: (e) => Fr(e, 0, 23),
+              fnValidateValue: (e) => Wr(e, 0, 23),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_hour(parseInt(e)),
             }),
@@ -33280,7 +33287,7 @@
               fnGetInitialValue: () =>
                 a.scheduled_train_config().scheduled_minute()?.toString() ||
                 "0",
-              fnValidateValue: (e) => Fr(e, 0, 59),
+              fnValidateValue: (e) => Wr(e, 0, 59),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_minute(parseInt(e)),
             }),

@@ -35264,6 +35264,13 @@
                 value: 10,
                 hidden: 8 != _,
               },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_SnapshotFilter_SnapshotType_ReviewsByApp",
+                ),
+                value: 11,
+                hidden: 10 != _,
+              },
             ],
             _ = [
               {
