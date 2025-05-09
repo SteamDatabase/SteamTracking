@@ -1131,8 +1131,8 @@ Cela devrait prendre moins d'une minute."
 
 "SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\nMerci d'avoir accepté de participer à cette enquête. Celle-ci va se faire en deux temps.\n\nNous allons tout d'abord rassembler des informations à propos de votre ordinateur. Ces données ne sont pas anonymes et seront partagées avec l'auteur de cette enquête.\n\nPour l'étape 2, nous vous redirigerons vers un site internet pour obtenir des données démographiques complémentaires.\n\nCliquez sur « Suivant » pour commencer."
 "SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nMerci d'avoir accepté de participer à cette enquête. \n\nCette enquête recueille des informations sur votre machine. Ces données ne sont pas anonymes et seront partagées avec l'auteur de cette enquête.\n\nPour commencer cliquez sur « Suivant »."
-"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nMerci d'avoir accepté de participer à cette enquête.\n\nApparemment, vous avez déjà commencé cette enquête ; nous n'avons donc pas besoin de rassembler d'informations à propos de votre ordinateur. Cliquez sur « Terminer » pour ouvrir une page web sur laquelle vous pourrez répondre à la suite de l'enquête."
-"SteamUI_SpecialSurvey_ForwardToWeb"	"L'étape 1 (récupération d'informations sur votre matériel) est maintenant terminée.\n\nCliquez sur « Terminer » pour ouvrir une page web et commencer l'étape 2. Cette enquête ne sera pas terminée tant que vous n'aurez pas terminé l'étape 2."
+"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nMerci d'avoir accepté de participer à cette enquête.\n\nApparemment, vous avez l'aviez déjà commencée par le passé ; il n'est donc pas nécessaire de collecter une nouvelle fois des informations sur votre ordinateur. Cliquez sur « Terminer » pour ouvrir une page Web sur laquelle vous pourrez répondre à la suite de l'enquête."
+"SteamUI_SpecialSurvey_ForwardToWeb"	"L'étape 1 (récupération d'informations sur votre matériel) est maintenant terminée.\n\nCliquez sur « Terminer » pour ouvrir une page Web et commencer l'étape 2. Cette enquête ne sera terminée qu'une fois cette étape achevée."
 "SteamUI_SpecialSurvey_Complete"		"Merci d'avoir répondu à cette enquête. Votre réponse a été enregistrée."
 "SteamUI_SpecialSurvey_Sending_Data"	"Envoi des données récupérées..."
 "SteamUI_SpecialSurvey_Cancel"			"Annuler"
@@ -1277,7 +1277,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Ce compte Steam a déjà fait l'acquisition du ou des produits couverts par\ncette offre. Pour y accéder, consultez votre bibliothèque de jeux."
 
 
-"Steam_PurchaseError_HardwarePromoNeedDirectX" "Désolé ! DirectX 9 ou une version ultérieure est nécessaire pour vérifier si vous pouvez bénéficier de l'offre %subscription%."
+"Steam_PurchaseError_HardwarePromoNeedDirectX" "DirectX 9 ou une version ultérieure est nécessaire pour vérifier si vous pouvez bénéficier de l'offre %subscription%."
 "Steam_HardwarePromoInstallDirextX_Link" "Site de téléchargement Microsoft DirectX®"
 "Steam_HardwarePromoInstallDirextX_URL" "http://www.microsoft.com/windows/directx/"
 
@@ -4053,7 +4053,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_screenshots_deselect_all" "Désélectionner tout"
 "steam_view_screenshots" "Afficher mes captures d'écran..."
 "steam_screenshot_not_loaded" "La capture d'écran n'a pas pu être chargée :\n%file_not_loaded_filename%"
-"steam_screenshots_no_selection_title" "Partager les captures d'écran de vos jeux préférés sur le web"
+"steam_screenshots_no_selection_title" "Partager les captures d'écran de vos jeux préférés sur le Web"
 "steam_screenshots_no_selection_instructions" "Appuyez sur %screenshot_hotkey% tout en étant dans un jeu pour prendre une capture d'écran.\n\nSélectionnez les captures d'écran que vous voulez charger dans votre bibliothèque en ligne.\n\nSélectionnez plusieurs captures d'écran en maintenant la touche Shift ou Ctrl enfoncée.\n\nParamétrez la visibilité de vos captures d'écran sur Publique pour les partager sur Internet."
 
 
@@ -4782,7 +4782,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_WindowsCompat_Continue" "Continuer"
 
 "Steam_WindowsCompat_BigPicture" "Steam est actuellement en cours d'exécution via le mode Compatibilité de Windows. Cela peut empêcher le lancement de Big Picture ou bien signifier que Steam est en cours d'exécution sur Windows XP ou sur une version antérieure."
-"Steam_WindowsCompat_Webhelper" "Le navigateur Internet Steam est actuellement en cours d'exécution via le mode Compatibilité de Windows. Ce paramètre peut provoquer des problèmes d'affichage de contenus web.\n\nSteam va corriger ce problème et redémarrer. \n\nSi le problème persiste, veuillez suivre les instructions ci-dessous pour supprimer le mode de comptabilité."
+"Steam_WindowsCompat_Webhelper" "Le navigateur Internet Steam est actuellement en cours d'exécution via le mode Compatibilité de Windows. Ce paramètre peut provoquer des problèmes d'affichage de contenus Web.\n\nSteam va corriger ce problème et redémarrer. \n\nSi le problème persiste, veuillez suivre les instructions ci-dessous pour désactiver le mode de comptabilité."
 
 "Steam_InstallIssue_FolderReadOnly"	"Le dossier d'installation de Steam n'est actuellement pas accessible en écriture, ce qui peut provoquer des problèmes lors de l'utilisation de certaines fonctionnalités Steam ou lors du lancement de jeux. \n\nSteam doit réparer ce problème puis redémarrer."
 "Steam_InstallIssue_WindowsRegistry" 	"Le chemin du registre de Steam n'est actuellement pas accessible en écriture, ce qui peut provoquer des problèmes lors de l'utilisation de certaines fonctionnalités Steam ou lors du lancement de jeux. \n\nSteam doit réparer ce problème puis redémarrer."
@@ -4830,7 +4830,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_NeedToRestart"		"Redémarrage requis"
 "Steam_NeedToRestartDifferentClientLauncher" "Une autre version de Steam essaie de démarrer sur cet ordinateur.\n\nPour la lancer, vous devez d'abord quitter cette version de Steam."
 
-"Steam_ClientBrowserAuth_AllowBrowserAuth" "Permet aux navigateurs web de se connecter automatiquement aux sites Steam\n (nécessite un redémarrage)"
+"Steam_ClientBrowserAuth_AllowBrowserAuth" "Permet aux navigateurs Web de se connecter automatiquement aux sites Steam\n (nécessite un redémarrage)"
 
 "SteamUI_RunningConflictingSoftware" "Logiciel conflictuel détecté"
 "SteamUI_RunningIncompatibleTcpService" "Une version incompatible de %incompatdll% (associée au programme %incompatname%)\na été détectée dans le processus Steam.\n\nIl est recommandé de mettre à jour ou de désinstaller ce programme si vous constatez des crashs\nou un ralentissement sur le réseau lorsque vous utilisez Steam ou des jeux Steam."

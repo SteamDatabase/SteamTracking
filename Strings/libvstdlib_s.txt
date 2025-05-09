@@ -114,9 +114,10 @@ CUniformRandomStream::RandomFloat(float, float)
 CUniformRandomStream::RandomInt(int, int)
 CUniformRandomStream::SetSeed(int)
 CVProfile_ExitScope
-CValidator::ClaimArrayMemory(void const*)
-CValidator::ClaimMemory(void const*)
-CValidator::IsClaimed(void const*) const
+CValidator::ClaimArrayMemory(void const*, bool)
+CValidator::ClaimMemory(void const*, bool)
+CValidator::DumpDoubleClaim(char const*) const
+CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CanBeginLine
@@ -326,6 +327,7 @@ ThreadSleep
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VStdLib_GetICVarFactory
+V_AggressiveStripAllMeanWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
 V_AppendParamToURL

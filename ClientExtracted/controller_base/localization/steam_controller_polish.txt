@@ -97,4 +97,6 @@
 	"origin_horipad_m1"							"Przycisk M1"
 	"origin_horipad_m2"							"Przycisk M2"
 
-	}
+	"origin_legion_go_y1"							"Przycisk Y1"
+	"origin_legion_go_y2"							"Przycisk Y2"
+}

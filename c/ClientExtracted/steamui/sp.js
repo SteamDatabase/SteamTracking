@@ -15,33 +15,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { msDelayBatch: _, children: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          _ = _.useMemo(
-            () => ({
-              country: _._.COUNTRY,
-              language: _._.LANGUAGE,
-              realm: _._.EREALM,
-            }),
-            [],
-          );
-        return (
-          _.useEffect(() => _._.Initialize(_), [_]),
-          _.createElement(
-            _._,
-            {
-              context: _,
-              msDelayBatch: _,
-              legacyCacheStoreItemData: _._.Get().ReadItem,
-            },
-            __webpack_require__,
-          )
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
@@ -51,6 +24,13 @@
           _.createElement(_._, null),
           _.createElement(_._, null),
         );
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function () {
+        return (0, _._)()
+          ? _.createElement(_._, null, _.createElement(_._, null))
+          : null;
       });
       (0, __webpack_require__("chunkid")._)({
         enforceActions: "never",
@@ -84,11 +64,12 @@
                   controller: _._.NavigationManager,
                 },
                 _.createElement(
-                  _,
+                  _._,
                   null,
                   _.createElement(_._, {
                     _: _._,
                   }),
+                  _.createElement(_, null),
                 ),
               ),
           ),

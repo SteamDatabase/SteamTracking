@@ -3184,7 +3184,7 @@
 "Steam_GameProperties_LanguageTab" "Язык"
 
 "Steam_GameProperties_BetasTab" "Бета-версии"
-"Steam_ChooseGameBeta"	"Выберите бета-версию, в которой вы хотите принять участие:"
+"Steam_ChooseGameBeta"	"Выберите бета-тест, в котором хотите принять участие:"
 "Steam_ContentBetaUnlockPrivate" "Введите код бета-доступа, чтобы получить доступ к закрытым бета-версиям:"
 "Steam_ContentBetaCheckPassword"	"Проверить код"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Код доступа корректный. Теперь закрытая бета-версия «%betaname%» доступна."

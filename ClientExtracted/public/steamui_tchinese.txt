@@ -123,7 +123,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_ForgottenPassword_EnterSmsDescription"	"我們已經傳送簡訊代碼至您的手機，請在底下輸入。"
 
 "Steam_ForgottenPassword_EmailCodeDescription" "一封含有驗證碼的信件已經傳送至您的電子信箱。\n\n請在底下輸入該驗證碼。"
-"Steam_ForgottenPassword_EmailCode" "電子信箱代碼"
+"Steam_ForgottenPassword_EmailCode" "電子郵件代碼"
 "Steam_ForgottenPassword_EmailCode_Incorrect" "您輸入的電子郵件代碼不正確。"
 
 "Steam_Login_Title"		"Steam 登入狀態"
@@ -689,7 +689,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_RecoverAuthenticator_Password"				"密碼"
 
 "SteamUI_RecoverAuthenticatorEmailOrSmsChoice"		"我們需要一封額外的簡訊代碼以移除您手機上的 Steam Guard 驗證器，或是當您加入驗證器至您的帳戶時所顯示的代碼（該代碼為 R 開頭的一串數字）。"
-"SteamUI_RecoverAuthenticatorUseEmail"				"傳送一封驗證碼信件"
+"SteamUI_RecoverAuthenticatorUseEmail"				"傳送電子郵件代碼"
 "SteamUI_RecoverAuthenticatorUseSms"				"傳送簡訊代碼到我的電話"
 "Steam_RecoverAuthenticator_EnterSmsDescription"	"我們已傳送一封簡訊到您的帳戶上登記的手機號碼。請在下方輸入簡訊驗證碼。"
 "Steam_RecoverAuthenticator_Authorization"			"一封含有驗證碼的電子郵件已經傳送到您的電子信箱。代碼的開頭為英文字母「D」，後接一串數字。請在下方輸入代碼。"

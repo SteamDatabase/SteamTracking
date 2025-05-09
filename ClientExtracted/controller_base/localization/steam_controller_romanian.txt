@@ -97,4 +97,6 @@
 	"origin_horipad_m1"							"Butonul M1"
 	"origin_horipad_m2"							"Butonul M2"
 
-	}
+	"origin_legion_go_y1"							"Butonul Y1"
+	"origin_legion_go_y2"							"Butonul Y2"
+}

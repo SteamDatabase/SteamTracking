@@ -459,7 +459,7 @@
 
 "Friends_ViewGroupMembersLink"			"모든 회원 보기"
 "Friends_GroupCollapsedTooManyMembers"	"(표시할 회원이 너무 많음)"
-"Friends_GroupCollapsedNoOtherMembers"	"(더이상 표시할 회원 없음)"
+"Friends_GroupCollapsedNoOtherMembers"	"(더 이상 표시할 회원 없음)"
 
 "Friends_ControlPanelLink"		"커뮤니티 홈"
 
@@ -739,7 +739,7 @@
 "Steam_Settings_Broadcast_EnableHardwareSupport" "하드웨어 지원 활성화 *"
 "Steam_Settings_Broadcast_ShowDebugInfo" "업로드 통계 보기"
 "Steam_Settings_Broadcast_ShowReminderBanner" "항상 실황 보기"
-"Steam_Settings_Broadcast_ShowChat" "게임 내에서 관전자 채팅 보기:"
+"Steam_Settings_Broadcast_ShowChat" "게임 내에서 관전자 채팅 표시:"
 "Steam_Settings_Broadcast_StatusHeader" "방송 상태:"
 "Steam_Settings_Broadcast_HelpHeader" "도움말"
 "Steam_Settings_Broadcast_HelpURL_Desc" "방송 지원 페이지 보기"

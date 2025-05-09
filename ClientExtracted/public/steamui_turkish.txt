@@ -1301,7 +1301,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "Girmiş olduğunuz ürün kodunun sahibine bir e-posta gönderildi."
 
-"Steam_Receipt_AlreadyPurchased" "Bu Steam hesabı bu aktivasyon kodu ile ilişkilendirilmiş ürün(ler)e halihazırda sahip. Yükleme işlemine geçmek için İleri'ye tıklayın."
+"Steam_Receipt_AlreadyPurchased" "Bu Steam hesabı bu aktivasyon koduyla ilişkilendirilmiş ürün veya ürünlere zaten sahip. Yükleme işlemine geçmek için İleri'ye tıklayın."
 "Steam_Receipt_AlreadyPurchased_Headline" "Ürün Zaten Alınmış"
 
 "Steam_InstallAppWizard_Title"	"%game% - Yükleme"

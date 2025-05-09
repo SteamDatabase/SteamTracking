@@ -3794,11 +3794,20 @@
           return this.BLooksLikeToken(_) ? this.LocalizeString(_, _) : _;
         }
         LocalizeString(_, _) {
-          if (!this.BLooksLikeToken(_)) return;
+          const _ = 0 == this.m_mapTokens.size;
+          if (
+            (_(
+              !_,
+              `Attempting to localize token '${_}' with no tokens in our map.`,
+            ),
+            !this.BLooksLikeToken(_))
+          )
+            return;
           let _ = this.m_mapTokens.get(_.substring(1));
           if (void 0 !== _) return _;
-          !_ &&
-            _.sm_ErrorReportingStore &&
+          _ ||
+            !_.sm_ErrorReportingStore ||
+            _ ||
             _.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -6529,7 +6538,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 524), _((_._ = _));
+      return (_ = 4749), _((_._ = _));
       var _;
     });
     _._();

@@ -91,7 +91,8 @@ enum EStoreLinkType {
 	k_EStoreLinkType_Bluesky = 20;
 	k_EStoreLinkType_Mastodon = 21;
 	k_EStoreLinkType_Threads = 22;
-	k_EStoreLinkType_MAX = 23;
+	k_EStoreLinkType_QQChannel = 23;
+	k_EStoreLinkType_MAX = 24;
 }
 
 enum EStoreCategoryType {
@@ -310,6 +311,7 @@ message StoreItem {
 			optional string screenshot_medium = 10;
 			optional string screenshot_full = 11;
 			optional int32 trailer_base_id = 12;
+			optional bool all_ages = 14;
 		}
 
 		repeated .StoreItem.Trailers.Trailer highlights = 1;

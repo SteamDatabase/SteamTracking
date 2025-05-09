@@ -328,7 +328,7 @@
 "SteamUI_GamePropertiesContent_Launching"	"启动中..."
 "SteamUI_GamePropertiesContent_CacheAcquired"	"%cache_usage%%%"
 "SteamUI_GamePropertiesContent_DiskUsageLabel"	"磁盘使用量："
-"SteamUI_GamePropertiesContent_DeveloperLabel"	"开发商："
+"SteamUI_GamePropertiesContent_DeveloperLabel"	"开发者："
 
 "SteamUI_GamePropertiesVersion_GameVersionLabel" "游戏版本信息"
 
@@ -1696,7 +1696,7 @@
 "Steam_ToolsColumn"		"名称"
 "Steam_StatusColumn"		"状态"
 "Steam_UpdateColumn"		"更新"
-"Steam_DeveloperColumn"		"开发商"
+"Steam_DeveloperColumn"		"开发者"
 "Steam_CloudColumn"		"Steam 云"
 
 "Steam_MyGames_TabTitle"	"我的游戏"
@@ -1909,7 +1909,7 @@
 "Steam_GameProperties_DLCTab"		"DLC"
 
 "Steam_Game_Homepage"			"主页"
-"Steam_Game_Developer"			"开发商"
+"Steam_Game_Developer"			"开发者"
 "Steam_Game_Manual"				"手册"
 "Steam_Game_NoManual"			"[ 无适用项 ]"
 "Steam_Game_DefaultManual" 		"%game% 手册"
@@ -2453,13 +2453,13 @@
 "Steam_SystemRebootRequired_Info"		"由于最新更新中的更改，您需要重新启动您的系统才能启动此游戏。"
 "Steam_SystemRebootRequired_Button"	"立即重新启动"
 
-"Steam_Game_Developer$appType=application"  "开发商"
-"Steam_Game_Developer$appType=game"         "开发商"
-"Steam_Game_Developer$appType=demo"         "开发商"
+"Steam_Game_Developer$appType=application"  "开发者"
+"Steam_Game_Developer$appType=game"         "开发者"
+"Steam_Game_Developer$appType=demo"         "开发者"
 "Steam_Game_Developer$appType=media"        "制作者"
 "Steam_Game_Developer$appType=music"        "制作者"
-"Steam_Game_Developer$appType=tool"         "开发商"
-"Steam_Game_Developer$appType"              "内容创建者"
+"Steam_Game_Developer$appType=tool"         "开发者"
+"Steam_Game_Developer$appType"              "内容创作者"
 
 "Steam_Forums"				"讨论"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3777,7 +3777,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_details_sharedinuseheader" "正在使用库的用户"
 "steam_details_sharedbyname" "%share_user%"
 "steam_details_sharedbyinuse" "%share_user%，共享库已在使用中"
-"steam_details_streamfromheader" "流式传输来自于"
+"steam_details_streamfromheader" "流式传输来源："
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "您已观看了"
 "steam_details_lastplayedheader_video" "最后观看日期"
@@ -4362,7 +4362,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "SteamUI_StreamingSource_ThisMachine_Installed"     "在此机器上运行"
 "SteamUI_StreamingSource_ThisMachine_NotInstalled"  "在此机器上安装"
-"SteamUI_StreamingSource_Installed"    				"从 %ClientName% 获取流式传输"
+"SteamUI_StreamingSource_Installed"    				"流式传输来源：%ClientName%"
 "SteamUI_StreamingSource_NotInstalled" 				"在 %ClientName% 上安装"
 
 "SteamUI_StreamClient_Failed_Title"	"流式传输客户端失败"

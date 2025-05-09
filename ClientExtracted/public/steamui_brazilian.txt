@@ -1034,7 +1034,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_ValveSurvey_Summary_XServerVendorName"				"Consórcio do Servidor X: %s1"
 "SteamUI_ValveSurvey_Summary_XServerVendorRelease"			"Versão do Servidor X: %s1"
 "SteamUI_ValveSurvey_Summary_XWindowManagerName"			"Gerenciador de janelas X: %s1"
-"SteamUI_ValveSurvey_Summary_SteamRuntimeVersion"			"Versão do componente de tempo de execução do Steam: %s1"
+"SteamUI_ValveSurvey_Summary_SteamRuntimeVersion"			"Versão do ambiente de execução do Steam: %s1"
 
 "SteamUI_ValveSurvey_Summary_SoundCard"						"Dispositivo de áudio: %s1"
 "SteamUI_ValveSurvey_Summary_GameController"			"Controle para jogos: %s1 detectado"
@@ -1297,7 +1297,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "Uma mensagem de e-mail foi enviada para o dono do código de produto inserido."
 
-"Steam_Receipt_AlreadyPurchased" "Esta conta Steam já possui os produtos associados a esse código de produto. Clique em \"concluir\" para continuar com a instalação."
+"Steam_Receipt_AlreadyPurchased" "Esta conta Steam já possui os produtos associados ao código de produto informado. Clique em \"concluir\" para continuar com a instalação."
 "Steam_Receipt_AlreadyPurchased_Headline" "Produto já adquirido"
 
 "Steam_InstallAppWizard_Title"	"Instalar — %game%"
@@ -2941,7 +2941,7 @@ Faça um agora enviando um presente por e-mail para alguém que você conheça."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Sem receptor sem fio."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Cabo e base do Controle Steam: %s1"
 
-"SteamUI_ValveSurvey_Linux_Runtime_Info" "Dados do componente de tempo de execução do Steam para Linux:"
+"SteamUI_ValveSurvey_Linux_Runtime_Info" "Dados do ambiente de execução do Steam para Linux:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Servidor Steam indisponível"
 "Steam_SubscriptionFailure_ServiceUnavailable" "O seu computador pode estar com problemas de conexão aos servidores Steam ou o serviço pode estar temporariamente desativado. Tente novamente mais tarde."

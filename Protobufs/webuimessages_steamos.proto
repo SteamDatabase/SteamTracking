@@ -29,6 +29,13 @@ message CSteamOSManagerState {
 	optional bool is_manual_gpu_clock_available = 14;
 	optional int32 manual_gpu_clock_min = 15;
 	optional int32 manual_gpu_clock_max = 16;
+	repeated string platform_performance_profiles_available = 17;
+	optional string platform_performance_profile_default = 18;
+	optional string platform_performance_profile = 19;
+	optional bool is_charge_limit_available = 20;
+	optional int32 charge_limit_min = 21;
+	optional int32 charge_limit_max = 22;
+	optional int32 charge_limit_default = 23;
 }
 
 message CSteamOSManager_GetState_Request {

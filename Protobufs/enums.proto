@@ -1,8 +1,4 @@
-import "steammessages_base.proto";
-
 option optimize_for = SPEED;
-option cc_generic_services = true;
-option (force_php_generation) = true;
 
 enum EPublishedFileQueryType {
 	k_PublishedFileQueryType_RankedByVote = 0;
@@ -253,6 +249,7 @@ enum ESLSHelper {
 	k_ESLSHelper_Journal = 3;
 	k_ESLSHelper_Gpu = 4;
 	k_ESLSHelper_SystemInfo = 5;
+	k_ESLSHelper_Devcoredump = 6;
 }
 
 enum EHDRVisualization {
@@ -325,6 +322,19 @@ enum ESystemDisplayCompatibilityMode {
 	k_ESystemDisplayCompatibilityMode_Invalid = 0;
 	k_ESystemDisplayCompatibilityMode_None = 1;
 	k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2;
+}
+
+enum ESteamOSCompatibilityCategory {
+	k_ESteamOSCompatibilityCategory_Unknown = 0;
+	k_ESteamOSCompatibilityCategory_Unsupported = 1;
+	k_ESteamOSCompatibilityCategory_Compatible = 2;
+}
+
+enum ESteamOSCompatibilityResultDisplayType {
+	k_ESteamOSCompatibilityResultDisplayType_Invisible = 0;
+	k_ESteamOSCompatibilityResultDisplayType_Informational = 1;
+	k_ESteamOSCompatibilityResultDisplayType_Unsupported = 2;
+	k_ESteamOSCompatibilityResultDisplayType_Compatible = 3;
 }
 
 enum ESteamDeckCompatibilityCategory {
@@ -645,4 +655,14 @@ enum EExternalSaleEventType {
 	k_EExternalSaleEventType_Region = 3;
 	k_EExternalSaleEventType_Theme = 4;
 	k_EExternalSaleEventType_Franchise = 5;
+}
+
+enum EContentReportReason {
+	k_EContentReportReason_Invalid = 0;
+	k_EContentReportReason_Abusive = 1;
+	k_EContentReportReason_Commercial = 2;
+	k_EContentReportReason_OffTopic = 3;
+	k_EContentReportReason_Prohibited = 4;
+	k_EContentReportReason_Other = 5;
+	k_EContentReportReason_MAX = 6;
 }

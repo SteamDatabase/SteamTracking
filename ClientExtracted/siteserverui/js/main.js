@@ -93,7 +93,7 @@
       }
       (n.keys = () => Object.keys(a)), (n.id = 8042), (e.exports = n);
     },
-    524: (e, t, r) => {
+    4749: (e, t, r) => {
       "use strict";
       var a = r(626),
         n = r(4844);
@@ -3414,11 +3414,20 @@
           return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
         }
         LocalizeString(e, t) {
-          if (!this.BLooksLikeToken(e)) return;
-          let r = this.m_mapTokens.get(e.substring(1));
-          if (void 0 !== r) return r;
-          !t &&
-            Ke.sm_ErrorReportingStore &&
+          const r = 0 == this.m_mapTokens.size;
+          if (
+            (s(
+              !r,
+              `Attempting to localize token '${e}' with no tokens in our map.`,
+            ),
+            !this.BLooksLikeToken(e))
+          )
+            return;
+          let a = this.m_mapTokens.get(e.substring(1));
+          if (void 0 !== a) return a;
+          t ||
+            !Ke.sm_ErrorReportingStore ||
+            r ||
             Ke.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${e}' for language '${E.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -5610,7 +5619,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 524), e((e.s = t));
+      return (t = 4749), e((e.s = t));
       var t;
     });
     e.O();

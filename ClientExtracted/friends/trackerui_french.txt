@@ -472,7 +472,7 @@
 "Friends_ChatURLWarning_Title"		"Attention : ceci n'est pas un site Steam"
 "Friends_ChatURLWarning_Info"			"Remarque : l'URL sur laquelle vous avez cliqué n'est pas celle d'un site Web Steam officiel."
 "Friends_ChatURLWarning_Info2"		"Si ce site vous demande votre nom et votre mot de passe, veuillez ne pas donner ces informations. Vous pouvez perdre votre compte et vos jeux !"
-"Friends_ChatURLWarning_Continue"		"Ok, continuez vers la page web"
+"Friends_ChatURLWarning_Continue"		"Ok, continuez vers la page Web"
 "Friends_ChatURLWarning_DontAskAgainCheck"	"Ne plus afficher ce message."
 
 "Friends_ChatPasswordWarning_Title"		"Alerte : risque pour la sécurité du compte"

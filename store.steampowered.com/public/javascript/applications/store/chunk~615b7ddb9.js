@@ -709,7 +709,7 @@
             A || (A = performance.now());
             const t = () => {
               const r =
-                (((performance.now() - A) / 10) %
+                (((performance.now() - A) / 40) %
                   (i.offsetWidth - 3 * a - 16)) +
                 a;
               (i.style.transform = `translateX( -${r}px )`),

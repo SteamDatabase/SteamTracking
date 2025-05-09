@@ -3,6 +3,18 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum ETwoFactorStatusFieldFlag {
+	k_ETwoFactorStatusFieldFlag_None = 0;
+	k_ETwoFactorStatusFieldFlag_LastUsage = 1;
+}
+
+enum ETwoFactorUsageType {
+	k_ETwoFactorUsageType_Unknown = 0;
+	k_ETwoFactorUsageType_None = 1;
+	k_ETwoFactorUsageType_MobileConfirmation = 2;
+	k_ETwoFactorUsageType_Login = 3;
+}
+
 message CTwoFactor_Time_Request {
 	optional uint64 sender_time = 1;
 }
@@ -21,6 +33,14 @@ message CTwoFactor_Time_Response {
 
 message CTwoFactor_Status_Request {
 	optional fixed64 steamid = 1;
+	optional .ETwoFactorStatusFieldFlag include = 2 [default = k_ETwoFactorStatusFieldFlag_None];
+}
+
+message CTwoFactor_UsageEvent {
+	optional uint32 time = 1;
+	optional .ETwoFactorUsageType usage_type = 2 [default = k_ETwoFactorUsageType_Unknown];
+	optional int32 confirmation_type = 3;
+	optional int32 confirmation_action = 4;
 }
 
 message CTwoFactor_Status_Response {
@@ -38,6 +58,8 @@ message CTwoFactor_Status_Response {
 	optional bool allow_external_authenticator = 12;
 	optional uint32 time_transferred = 13;
 	optional uint32 version = 14;
+	optional fixed64 last_seen_auth_token_id = 15;
+	repeated .CTwoFactor_UsageEvent usages = 16;
 }
 
 message CTwoFactor_AddAuthenticator_Request {
@@ -63,15 +85,6 @@ message CTwoFactor_AddAuthenticator_Response {
 	optional int32 status = 10;
 	optional string phone_number_hint = 11;
 	optional int32 confirm_type = 12;
-}
-
-message CTwoFactor_SendEmail_Request {
-	optional fixed64 steamid = 1;
-	optional uint32 email_type = 2;
-	optional bool include_activation_code = 3;
-}
-
-message CTwoFactor_SendEmail_Response {
 }
 
 message CTwoFactor_FinalizeAddAuthenticator_Request {
@@ -148,7 +161,6 @@ service TwoFactor {
 	rpc QueryTime (.CTwoFactor_Time_Request) returns (.CTwoFactor_Time_Response);
 	rpc QueryStatus (.CTwoFactor_Status_Request) returns (.CTwoFactor_Status_Response);
 	rpc AddAuthenticator (.CTwoFactor_AddAuthenticator_Request) returns (.CTwoFactor_AddAuthenticator_Response);
-	rpc SendEmail (.CTwoFactor_SendEmail_Request) returns (.CTwoFactor_SendEmail_Response);
 	rpc FinalizeAddAuthenticator (.CTwoFactor_FinalizeAddAuthenticator_Request) returns (.CTwoFactor_FinalizeAddAuthenticator_Response);
 	rpc UpdateTokenVersion (.CTwoFactor_UpdateTokenVersion_Request) returns (.CTwoFactor_UpdateTokenVersion_Response);
 	rpc RemoveAuthenticator (.CTwoFactor_RemoveAuthenticator_Request) returns (.CTwoFactor_RemoveAuthenticator_Response);

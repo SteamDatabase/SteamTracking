@@ -32,18 +32,19 @@ CVProfile_ExitScope
 CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
 CValidator::BExcludeAllocationFromTracking(char const*, int)
 CValidator::CValidator(int, bool, IMemBlockClaimedList*)
-CValidator::ClaimArrayMemory(void const*)
+CValidator::ClaimArrayMemory(void const*, bool)
 CValidator::ClaimConnection(unsigned int)
-CValidator::ClaimMemory(void const*)
+CValidator::ClaimMemory(void const*, bool)
 CValidator::ClaimMemory_Aligned(void const*)
 CValidator::ClaimOsFile(int)
 CValidator::ClaimSocket(int)
 CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
 CValidator::ClaimUntrackedMemory(unsigned int)
 CValidator::DiffAgainst(CValidator*)
+CValidator::DumpDoubleClaim(char const*) const
 CValidator::Finalize()
 CValidator::FindObject(void*)
-CValidator::IsClaimed(void const*) const
+CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CValidator::RenderLeaks(unsigned int)

@@ -360,8 +360,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_2Grips = 499975;
 	k_EControllerTypeFlags_4Grips = 106758;
 	k_EControllerTypeFlags_Gyro = 520759;
-	k_EControllerTypeFlags_Trackpad = 49207;
-	k_EControllerTypeFlags_CenterTrackpad = 180272;
+	k_EControllerTypeFlags_LeftTrackpad = 49207;
+	k_EControllerTypeFlags_RightTrackpad = 180279;
+	k_EControllerTypeFlags_CenterTrackpad = 49200;
 	k_EControllerTypeFlags_RightJoystick = -4100;
 	k_EControllerTypeFlags_DPad = -4100;
 	k_EControllerTypeFlags_Triggers = -4097;

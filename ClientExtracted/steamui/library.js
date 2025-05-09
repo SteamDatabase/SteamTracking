@@ -1,4 +1,4 @@
-var CLSTAMP = "9711799";
+var CLSTAMP = "9730302";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -3110,7 +3110,7 @@ var CLSTAMP = "9711799";
         "use strict";
         n.d(t, { QE: () => w, ZQ: () => _, Pl: () => E });
         var r = n(34629),
-          i = n(55619),
+          i = n(49412),
           s = n(93960),
           o = n(13099);
         class a {
@@ -3873,7 +3873,7 @@ var CLSTAMP = "9711799";
           }
         }
       },
-      55619: (e, t, n) => {
+      49412: (e, t, n) => {
         "use strict";
         function r(e, t) {
           return (
@@ -4819,7 +4819,7 @@ var CLSTAMP = "9711799";
           constructor(e = null) {
             super(),
               m.prototype.appid || s.Sg(m.M()),
-              r.Message.initialize(this, e, 0, -1, [17], null);
+              r.Message.initialize(this, e, 0, -1, [17, 18], null);
           }
           static sm_m;
           static sm_mbf;
@@ -4877,6 +4877,14 @@ var CLSTAMP = "9711799";
                     },
                     content_descriptorids: {
                       n: 17,
+                      r: !0,
+                      q: !0,
+                      br: s.qM.readUint32,
+                      pbr: s.qM.readPackedUint32,
+                      bw: s.gp.writeRepeatedUint32,
+                    },
+                    content_descriptorids_including_dlc: {
+                      n: 18,
                       r: !0,
                       q: !0,
                       br: s.qM.readUint32,
@@ -9589,15 +9597,15 @@ var CLSTAMP = "9711799";
       },
       14628: (e, t, n) => {
         "use strict";
-        n.d(t, { YJ: () => s, TS: () => o, iA: () => a });
+        n.d(t, { YJ: () => s, TS: () => o, iA: () => a, Ki: () => c });
         var r = n(43691),
           i = n(9731);
         function s(e) {
           return e;
         }
         const o = window.Config ?? r.TS,
-          a = window.UserConfig ?? r.iA;
-        window.Config || i.bd;
+          a = window.UserConfig ?? r.iA,
+          c = window.Config ? () => Promise.resolve() : i.bd;
         window.Config && Object.assign(r.TS, window.Config),
           window.UserConfig && Object.assign(r.iA, window.UserConfig);
       },
@@ -9953,7 +9961,7 @@ var CLSTAMP = "9711799";
         n.d(t, { A: () => s });
         var r = n(17372);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750}',
         );
         class s {
           static InstrumentLink(e, t, n = null) {
@@ -11067,9 +11075,9 @@ var CLSTAMP = "9711799";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 2 2025 : 11:26:26",
-                BUILD_TIME_UTC: "May 2 2025 : 18:26:26",
-                BUILD_RTIME_UTC: 1746210386,
+                BUILD_TIME_LOCAL: "May 8 2025 : 13:42:42",
+                BUILD_TIME_UTC: "May 8 2025 : 20:42:42",
+                BUILD_RTIME_UTC: 1746736962,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -11976,24 +11984,26 @@ var CLSTAMP = "9711799";
       45328: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Ay: () => g,
-          Dn: () => h,
-          L3: () => d,
-          OZ: () => u,
-          f2: () => p,
-          k2: () => l,
-          wJ: () => m,
+          Ay: () => _,
+          Dn: () => g,
+          It: () => h,
+          L3: () => p,
+          OZ: () => m,
+          f2: () => f,
+          k2: () => u,
+          wJ: () => d,
         });
         var r = n(92059),
           i = n(49810),
           s = n(49455),
           o = n(53807),
           a = n(43691),
-          c = n(63696);
-        function l(e, t = "", n = null) {
-          return g.InstrumentLink(e, t, n);
+          c = n(63696),
+          l = n(17372);
+        function u(e, t = "", n = null) {
+          return _.InstrumentLink(e, t, n);
         }
-        function u(e, t, n) {
+        function m(e, t, n) {
           const i = (0, r.n9)();
           return c.useMemo(() => {
             const s = (0, o.wm)(e).toLowerCase(),
@@ -12002,42 +12012,60 @@ var CLSTAMP = "9711799";
             return s === c || s === l ? (0, r.bV)(i, e, t, n) : e;
           }, [i, e, t, n]);
         }
-        function m(e, t, n = null) {
-          const r = d(t, n);
+        function d(e, t, n = null) {
+          const r = p(t, n);
           return i.A.AddNavParamToURL(e, r);
         }
-        function d(e, t = null) {
-          return e?.domain ? g.GetLinkParam(e, t) : a.TS.SNR;
+        function h(e, t, n, r = null) {
+          const i = d(e, t, r);
+          if (n && Object.keys(n).length > 0)
+            try {
+              const e = new URL((0, l.S)(i)),
+                t = new URLSearchParams(e.search);
+              return (
+                Object.entries(n).forEach(([e, n]) => {
+                  t.set(e, encodeURIComponent(n ?? ""));
+                }),
+                e.origin + e.pathname + "?" + t.toString() + e.hash
+              );
+            } catch (e) {
+              "dev" == a.TS.WEB_UNIVERSE &&
+                console.error("UTM parameter parsing failed:", n, e);
+            }
+          return i;
         }
-        function h(e, t = "", n = null) {
-          return l(`${a.TS.STORE_BASE_URL}app/${e}`, t, n);
+        function p(e, t = null) {
+          return e?.domain ? _.GetLinkParam(e, t) : a.TS.SNR;
         }
-        function p(e, t = "") {
-          return l(`${a.TS.STORE_BASE_URL}dlc/${e}`, t);
+        function g(e, t = "", n = null) {
+          return u(`${a.TS.STORE_BASE_URL}app/${e}`, t, n);
         }
-        class g {
+        function f(e, t = "") {
+          return u(`${a.TS.STORE_BASE_URL}dlc/${e}`, t);
+        }
+        class _ {
           static sm_strDomain;
           static sm_strController;
           static sm_strMethod;
           static sm_strSubmethod;
           static sm_strComputedLinkPrefix;
           static SetNavEventParams(e, t, n = null, r = null) {
-            (g.sm_strDomain = e),
-              (g.sm_strController = t),
-              (g.sm_strMethod = n),
-              (g.sm_strSubmethod = r),
-              (g.sm_strComputedLinkPrefix = null);
+            (_.sm_strDomain = e),
+              (_.sm_strController = t),
+              (_.sm_strMethod = n),
+              (_.sm_strSubmethod = r),
+              (_.sm_strComputedLinkPrefix = null);
           }
           static GetDefaultParams() {
-            let e = { domain: g.sm_strDomain, controller: g.sm_strController };
+            let e = { domain: _.sm_strDomain, controller: _.sm_strController };
             return (
-              g.sm_strMethod && (e.method = g.sm_strMethod),
-              g.sm_strSubmethod && (e.submethod = g.sm_strSubmethod),
+              _.sm_strMethod && (e.method = _.sm_strMethod),
+              _.sm_strSubmethod && (e.submethod = _.sm_strSubmethod),
               e
             );
           }
           static InstrumentLink(e, t, n = null) {
-            const r = g.GetLinkParam(t, n);
+            const r = _.GetLinkParam(t, n);
             return i.A.AddNavParamToURL(e, r);
           }
           static GetLinkParam(e, t = null) {
@@ -12046,19 +12074,19 @@ var CLSTAMP = "9711799";
               if (e.domain) return i.A.GetLinkParam(e, t);
               n = e.feature || "";
             }
-            if (!g.sm_strComputedLinkPrefix && !g.ComputeStaticLinkPrefix())
+            if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
               return null;
-            r = g.sm_strComputedLinkPrefix;
+            r = _.sm_strComputedLinkPrefix;
             let s = i.A.EncodeEventComponent(n);
             return s && ((r += "_" + s), t && (r += "_" + t)), r;
           }
           static ComputeStaticLinkPrefix() {
-            return g.sm_strDomain
-              ? ((g.sm_strComputedLinkPrefix = i.A.ComputeLinkPrefix(
-                  g.sm_strDomain,
-                  g.sm_strController,
-                  g.sm_strMethod,
-                  g.sm_strSubmethod,
+            return _.sm_strDomain
+              ? ((_.sm_strComputedLinkPrefix = i.A.ComputeLinkPrefix(
+                  _.sm_strDomain,
+                  _.sm_strController,
+                  _.sm_strMethod,
+                  _.sm_strSubmethod,
                 )),
                 !0)
               : ((0, s.w)(
@@ -15632,7 +15660,7 @@ var CLSTAMP = "9711799";
         });
         var r = n(63696),
           i = n(90765),
-          s = n(55619),
+          s = n(49412),
           o = n(64664),
           a = n.n(o),
           c = n(72476),
@@ -21163,10 +21191,11 @@ var CLSTAMP = "9711799";
       },
       72905: (e, t, n) => {
         "use strict";
-        n.d(t, { A: () => o });
+        n.d(t, { Ay: () => o });
         var r = n(63696),
           i = n(45328),
           s = (n(72476), n(92059));
+        n(49246);
         function o(e) {
           const { children: t, ...n } = e,
             o = (0, s.n9)(),
@@ -21183,6 +21212,15 @@ var CLSTAMP = "9711799";
               ],
             );
           return r.createElement(s.nn, { ...a }, t);
+        }
+      },
+      49246: (e, t, n) => {
+        "use strict";
+        n.d(t, { w: () => s });
+        var r = n(63696);
+        const i = r.createContext({});
+        function s() {
+          return r.useContext(i);
         }
       },
       47742: (e, t, n) => {
@@ -22487,41 +22525,42 @@ var CLSTAMP = "9711799";
       46108: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $w: () => l.$w,
-          $z: () => l.$z,
-          A0: () => u,
-          Hq: () => l.Hq,
-          NT: () => C,
-          Nm: () => l.Nm,
-          PP: () => h,
-          TG: () => p,
-          TW: () => l.TW,
-          Yp: () => w,
-          _l: () => l._l,
-          bi: () => M,
-          c9: () => m,
-          cc: () => l.cc,
-          gR: () => l.gR,
-          l4: () => S,
-          lQ: () => l.lQ,
-          oW: () => g,
-          pN: () => y,
-          pf: () => E,
-          um: () => f,
-          vl: () => l.vl,
-          we: () => d,
+          $w: () => u.$w,
+          $z: () => u.$z,
+          A0: () => m,
+          Hq: () => u.Hq,
+          NT: () => v,
+          Nm: () => u.Nm,
+          PP: () => p,
+          TG: () => g,
+          TW: () => u.TW,
+          Yp: () => b,
+          _l: () => u._l,
+          bi: () => S,
+          c9: () => d,
+          cc: () => u.cc,
+          gR: () => u.gR,
+          l4: () => y,
+          lQ: () => u.lQ,
+          oW: () => f,
+          pN: () => E,
+          pf: () => B,
+          um: () => _,
+          vl: () => u.vl,
+          we: () => h,
         });
         var r = n(63696),
           i = n(44846),
           s = n(28987),
           o = n(72476),
           a = n(53833),
-          c = n(79769),
-          l = n(11010);
-        class u {
+          c = n(49455),
+          l = n(79769),
+          u = n(11010);
+        class m {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
-          m_cbkTokensChanged = new c.lu();
+          m_cbkTokensChanged = new l.lu();
           m_rgLocalesToUse;
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(e) {
@@ -22590,7 +22629,7 @@ var CLSTAMP = "9711799";
               }),
               e)
             ) {
-              u.GetLanguageListForRealms(e).forEach((e) => {
+              m.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -22606,12 +22645,21 @@ var CLSTAMP = "9711799";
             return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
           }
           LocalizeString(e, t) {
-            if (!this.BLooksLikeToken(e)) return;
-            let n = this.m_mapTokens.get(e.substring(1));
-            if (void 0 !== n) return n;
-            !t &&
-              u.sm_ErrorReportingStore &&
-              u.sm_ErrorReportingStore.ReportError(
+            const n = 0 == this.m_mapTokens.size;
+            if (
+              ((0, c.w)(
+                !n,
+                `Attempting to localize token '${e}' with no tokens in our map.`,
+              ),
+              !this.BLooksLikeToken(e))
+            )
+              return;
+            let r = this.m_mapTokens.get(e.substring(1));
+            if (void 0 !== r) return r;
+            t ||
+              !m.sm_ErrorReportingStore ||
+              n ||
+              m.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${e}' for language '${o.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
@@ -22628,7 +22676,7 @@ var CLSTAMP = "9711799";
             const t = (0, i.sf)(o.TS.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
-            const r = u.GetELanguageFallback(t),
+            const r = m.GetELanguageFallback(t),
               s = e.find((e) => e.language == r);
             return s?.localized_string ?? "";
           }
@@ -22636,15 +22684,15 @@ var CLSTAMP = "9711799";
             return Boolean(t.find((t) => t.language == e));
           }
         }
-        function m(e) {
-          return null != E.LocalizeString(e, !0);
-        }
-        function d(e, ...t) {
-          let n = E.LocalizeString(e);
-          return void 0 === n ? e : b(n, ...t);
+        function d(e) {
+          return null != B.LocalizeString(e, !0);
         }
         function h(e, ...t) {
-          let n = E.LocalizeString(e);
+          let n = B.LocalizeString(e);
+          return void 0 === n ? e : C(n, ...t);
+        }
+        function p(e, ...t) {
+          let n = B.LocalizeString(e);
           if (void 0 === n) return e;
           let i,
             s = [],
@@ -22657,23 +22705,23 @@ var CLSTAMP = "9711799";
           }
           return s.push(n.substr(a)), r.createElement(r.Fragment, null, ...s);
         }
-        function p(e, t, ...n) {
+        function g(e, t, ...n) {
           return 1 === t || "1" === t
-            ? h(e, t, ...n)
-            : h(e + "_Plural", t.toLocaleString(), ...n);
+            ? p(e, t, ...n)
+            : p(e + "_Plural", t.toLocaleString(), ...n);
         }
-        function g(e, ...t) {
-          let n = E.LocalizeIfToken(e);
-          return void 0 === n ? e : _(n, ...t);
+        function f(e, ...t) {
+          let n = B.LocalizeIfToken(e);
+          return void 0 === n ? e : w(n, ...t);
         }
-        function f(e, t, ...n) {
+        function _(e, t, ...n) {
           let r;
           return (
-            (r = d(1 === t || "1" === t ? e : e + "_Plural", t)),
-            void 0 === r ? e : _(r, ...n)
+            (r = h(1 === t || "1" === t ? e : e + "_Plural", t)),
+            void 0 === r ? e : w(r, ...n)
           );
         }
-        function _(e, ...t) {
+        function w(e, ...t) {
           let n,
             i = [],
             s = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
@@ -22682,7 +22730,7 @@ var CLSTAMP = "9711799";
             (o += n[0].length), i.push(n[1]);
             let e = parseInt(n[2]),
               s = n[3] || "",
-              a = _(s, ...t),
+              a = w(s, ...t),
               c = (e >= 1 && e <= t.length ? t[e - 1] : null)
                 ? r.cloneElement(t[e - 1], {}, s ? a : null)
                 : s;
@@ -22690,12 +22738,12 @@ var CLSTAMP = "9711799";
           }
           return i.push(e.substr(o)), r.createElement(r.Fragment, null, ...i);
         }
-        function w(e, t, ...n) {
+        function b(e, t, ...n) {
           return 1 === t || "1" === t
-            ? d(e, t, ...n)
-            : d(e + "_Plural", t, ...n);
+            ? h(e, t, ...n)
+            : h(e + "_Plural", t, ...n);
         }
-        function b(e, ...t) {
+        function C(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -22706,7 +22754,7 @@ var CLSTAMP = "9711799";
                 return e;
               }));
         }
-        class C {
+        class v {
           static Set(e, t, n) {
             if (e.length <= t) {
               if (t >= 31) return e;
@@ -22719,12 +22767,12 @@ var CLSTAMP = "9711799";
           }
           static GetWithFallback(e, t) {
             if (e) {
-              return C.Get(e, t) || C.Get(e, u.GetELanguageFallback(t));
+              return v.Get(e, t) || v.Get(e, m.GetELanguageFallback(t));
             }
             return null;
           }
         }
-        const v = {
+        const M = {
             english: "en",
             german: "de",
             french: "fr",
@@ -22758,7 +22806,7 @@ var CLSTAMP = "9711799";
             sc_schinese: "zh-cn",
             koreana: "ko",
           },
-          M = {
+          S = {
             "en-US": 0,
             "de-DE": 1,
             "fr-FR": 2,
@@ -22790,10 +22838,10 @@ var CLSTAMP = "9711799";
             "vi-VN": 28,
             "id-ID": 30,
           };
-        function S() {
-          return v[o.TS.LANGUAGE] || null;
+        function y() {
+          return M[o.TS.LANGUAGE] || null;
         }
-        function y(e) {
+        function E(e) {
           let t,
             n = new Promise((e) => (t = e)),
             r = Array(e.length),
@@ -22814,8 +22862,8 @@ var CLSTAMP = "9711799";
             n
           );
         }
-        const E = new u();
-        window.LocalizationManager = E;
+        const B = new m();
+        window.LocalizationManager = B;
       },
       11010: (e, t, n) => {
         "use strict";
@@ -24122,6 +24170,7 @@ var CLSTAMP = "9711799";
           r.useEffect(
             () =>
               t &&
+              e &&
               (0, i.Fj)(e, "Window.SetModal") &&
               (0, i.Fj)(e, "Window.BringToFront")
                 ? (e.SteamClient.Window.SetModal(!0),
@@ -24406,7 +24455,7 @@ var CLSTAMP = "9711799";
           bd: () => d,
           bf: () => l,
         });
-        var r = n(55619),
+        var r = n(49412),
           i = n(9626),
           s = n(43691);
         const o = "webui_config";
@@ -24447,9 +24496,9 @@ var CLSTAMP = "9711799";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 2 2025 : 11:26:26",
-                    BUILD_TIME_UTC: "May 2 2025 : 18:26:26",
-                    BUILD_RTIME_UTC: 1746210386,
+                    BUILD_TIME_LOCAL: "May 8 2025 : 13:42:42",
+                    BUILD_TIME_UTC: "May 8 2025 : 20:42:42",
+                    BUILD_RTIME_UTC: 1746736962,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24652,7 +24701,7 @@ var CLSTAMP = "9711799";
           ),
           k = r.lazy(() =>
             Promise.all([n.e(8732), n.e(9858), n.e(3714)]).then(
-              n.bind(n, 26965),
+              n.bind(n, 81143),
             ),
           ),
           R = "is-first-client-load";
@@ -24691,7 +24740,7 @@ var CLSTAMP = "9711799";
                     C.tH,
                     null,
                     r.createElement(
-                      x.A,
+                      x.Ay,
                       { domain: "steamclient" },
                       r.createElement(
                         u.ss,
@@ -24770,7 +24819,8 @@ var CLSTAMP = "9711799";
               u.TS.EREALM == p.TU.k_ESteamRealmUnknown &&
                 (u.TS.EREALM = (0, h.ID)(u.TS.LAUNCHER_TYPE)
                   ? p.TU.k_ESteamRealmChina
-                  : p.TU.k_ESteamRealmGlobal);
+                  : p.TU.k_ESteamRealmGlobal),
+                u.iA.country_code || (u.iA.country_code = u.TS.COUNTRY);
             })(),
             (u.TS.IN_STEAMUI = !0),
             (function () {
@@ -24985,136 +25035,136 @@ var CLSTAMP = "9711799";
       {
         48: "22f42df535835ac04289",
         89: "89503179abc434a195bb",
-        106: "df1cb039250a3f242d4d",
-        129: "80844bfd3589b79cf798",
-        139: "7fb891765eb23c1ee601",
-        297: "35436434beb371afd2de",
-        740: "e189a8a0cf0d629accf3",
+        106: "e39e99bd9dd27e8e16f6",
+        129: "7b325e56cc61fe29e42e",
+        139: "2b372475eca130dd830d",
+        297: "238fffaabd086047736f",
+        740: "08be05696f19d35fe749",
         786: "5ce4f975a0902d0be830",
-        823: "779218ee185508774183",
-        901: "423a2deb7af4c27805d5",
-        1005: "53bb43f09495c6f48ee3",
+        823: "edbce3dab0aeb7a5e33d",
+        901: "be035bdfd798d5299916",
+        1005: "98a80dadf82a8cc5166b",
         1012: "cded7344104308eb77a6",
         1093: "57220ffa981bd47b4160",
         1220: "2fe7ac88a45ebc982931",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "fa6d9324470903e5ed12",
-        1423: "d7b4817d1d07cbad7960",
-        1463: "5b26d493610f0d64ff54",
-        1478: "448b92eb396f6d5153d7",
+        1389: "d08342ef6e5c1fa855d0",
+        1423: "61660a5b711b757572ff",
+        1463: "40f654088908f41e25c1",
+        1478: "b5d53c9a8af635952919",
         1511: "cbcb46a6e7fcd38e0538",
         1573: "a09e80800c18d1d4bee8",
         1648: "fc7ef3b27067f6f9bb05",
-        1822: "64356ce78a947ad3a0d0",
+        1822: "bd392e66329f4d0adb16",
         1879: "62d6403013b08cb655c3",
-        2021: "8237c1661e7d1fe2eca1",
+        2021: "965a92d3643921c0d121",
         2056: "f4dcc5665cdbfb652536",
-        2199: "712d9ba6c80231499f5b",
+        2199: "3736414e9a48a712baf9",
         2225: "dc3d09d21b6992daad2e",
-        2263: "7edbe9f0e731cb4b6336",
-        2266: "933269ab93f86b6f1f90",
+        2263: "52c09a51da49a8cce9ec",
+        2266: "666bc382f36572c32123",
         2320: "ef013e6daf1cc7a24bc5",
-        2438: "48791d8495a0993385ed",
+        2438: "c4e211b5a0dbe5f5e82a",
         2448: "c1f0b015f00cac957233",
-        2481: "056d02131f87b044a682",
+        2481: "18f9598d339e36e994aa",
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "fd382fdfb719b150c43e",
-        2646: "19aef366c3fde5825344",
-        2664: "71f87557b0e04cc76aae",
-        2761: "d433f891ecac92078e9c",
+        2646: "2f45fbc39c6726d4a369",
+        2664: "bdc903b761ee57ba2716",
+        2761: "906b79a1c37052305264",
         2783: "0ed1918019cfea503c09",
         2862: "6d6dfd8b8af302f8846e",
         2867: "bd9afc9559bf52d6c7c7",
-        2880: "81050d4f2235ec583d5a",
+        2880: "37f421534443cba03ac3",
         2889: "b9abff4f1a3a1f07e514",
         2952: "5cc53fdb04ed91186e12",
-        2959: "ab289efc676bdff7fcc9",
+        2959: "451980dbc79b5ad2ccb1",
         2984: "cdb6f5e43526a559784c",
-        3087: "a6d05c3055c4af5eb0c6",
+        3087: "10ca8bc0b93197ff8da7",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "409c20bebe1d3af6f3d0",
+        3569: "184c208b197de8e7ffbf",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "8458843d459da1ea502b",
-        3714: "b35345102061aec185c1",
-        3869: "c13fc295ea8c94bd2750",
+        3594: "38393f357888b21f8a7b",
+        3714: "662e71cc4e41c701f22d",
+        3869: "bbefb20bdcebd0bc3123",
         4026: "20103f7b73c270b46c32",
         4102: "f43aeb08951dc8b6d64b",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "9cb9c890998cc573881e",
-        4321: "af42dc8e7cddb1ce5a01",
-        4481: "f73c15e4383304bcd51e",
+        4224: "7d48da785ff02d191f6a",
+        4321: "75db495d256a5f3ea544",
+        4481: "0da565ed627abe8c7ca5",
         4839: "b1ca14b72a083777a78d",
-        4842: "cc85fbab6b48721bff85",
-        4952: "bc07aa0dd65ce7eb5469",
+        4842: "d228e6e6dbaca52c5c71",
+        4952: "4a439fe441edb3ee22e0",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "932c6af5512d4cc4eb8a",
-        5592: "641e15732949afe309f1",
+        5553: "29f1ce5cb1c9a2ec7b3e",
+        5592: "656e5bb698e246f77311",
         5704: "379467b643925dea1061",
-        5716: "93f4cadc8ab3cc2d0ea5",
-        5803: "dc3afb75af6f2c7257df",
-        5864: "c9776b2ddb27f226ec13",
-        6120: "f6b74cd3352132e7cd70",
+        5716: "4afa70ab9472b6ef1e00",
+        5803: "5d254e4ba7fa8b96d60b",
+        5864: "4018e6ecc9f8f440a3f1",
+        6120: "6a9617f7f6297a7064b9",
         6197: "8796e8718676fc7161ee",
         6345: "67b0d2ad16a7a9495c4d",
         6409: "e1e2584f3933f8d87561",
-        6430: "0f9807afb41e3a4014dd",
-        6472: "943a0097044718c70e5b",
-        6577: "2526711ce75386748a42",
-        6752: "32c9db8bf8143ef82a3c",
+        6430: "2987b2674c30f2920953",
+        6472: "1c47eb32160a2a38b2d9",
+        6577: "c401634787db152b8953",
+        6752: "fe9c9923c101f2afa94d",
         6785: "69a9f0b91f21affb7342",
-        6888: "4d7e77503f2e5ae8352f",
-        6890: "c481cef438738d8731ed",
+        6888: "0140c4286a8181c0818f",
+        6890: "15600e16f841fed7f5b4",
         6896: "7461983b766373845376",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "eb3929ae5f1f9f597f69",
+        7155: "ba02063b19c7e9e75f57",
         7314: "9d22ec4b2863256357ce",
         7316: "18e5e6b118a1b52fddc2",
         7376: "d565c2b610194d0cc673",
-        7442: "8cb10187232a418200d6",
+        7442: "2b0c7d4d54a99ba4f19e",
         7462: "52ace9199689821be1eb",
-        7533: "eeeddedb95c46f886a81",
+        7533: "e6be3989c98fd88d679f",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "bec3cb5d72e0bb654f20",
-        7696: "865669384f80ed4ea733",
+        7653: "2bfc68bdfef58fbed093",
+        7696: "b34f04daf750a3584d09",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "84e83434410ef20aa78a",
+        7836: "dd3e12418f29e5edc684",
         7993: "333c1c9181fa4c46f5a7",
         8054: "cffb972d0ae14c9266f8",
         8159: "4b562953e10580591689",
         8263: "2ca1b24e13d28d33c24a",
         8280: "ff687559f14132ff5a83",
         8286: "1f5be36130bf4017cada",
-        8291: "bfb738440e502d9b0b47",
+        8291: "51998aa8ee0e0a08a0d3",
         8396: "4293254175d2186d7318",
         8443: "14576c5b8a2b6ac79ecd",
         8445: "a6014afae28fa3af5766",
         8478: "6a43580d5abdab6866bc",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "319623947007a4fb49b5",
-        8534: "46cea6600879366e7f62",
+        8522: "17290529f37350cac282",
+        8534: "dffa3608a2c989490080",
         8545: "1aa2273a0a3161924d55",
-        8674: "e748b00fa2390184cf96",
+        8674: "c78427706f5599fc0a93",
         8699: "ef4ce5a4d1521e2331a9",
         8732: "718e037a5490ae486048",
-        8830: "7e4d9d3fd66f4ba63ab9",
-        8872: "399f661597d7e6f29bc3",
-        9053: "44e50d5f0cb13cc23eee",
+        8830: "48828c1d9866c50dcc33",
+        8872: "bffa69ef9b370fb676ed",
+        9053: "e43dc1856f72f786130a",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "9e034f41b6341c8dff0a",
-        9298: "9b88c5e321a49151c850",
-        9368: "ee0914eb32e42ba78643",
+        9171: "7289a5f241da7fa5580c",
+        9298: "752a9840ec80b510d031",
+        9368: "cb14291ba9dcf5305fc0",
         9418: "29e9fa15a9fc8e62a893",
         9462: "89227ab1a3d278d803ec",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "9d6e3906b2fb9618537b",
-        9869: "c5205fbbb5efed09862c",
-        9887: "4632385ea4f0e39fe968",
+        9858: "270d53fbdd5bdad5b690",
+        9869: "1d6909b12ee210eccdf8",
+        9887: "1886bec7e4bc503260fc",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +

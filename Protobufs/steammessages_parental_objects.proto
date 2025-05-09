@@ -1,9 +1,6 @@
-import "steammessages_base.proto";
 import "enums.proto";
 
 option optimize_for = SPEED;
-option cc_generic_services = true;
-option (force_php_generation) = true;
 
 message ParentalApp {
 	optional uint32 appid = 1;

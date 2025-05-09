@@ -606,7 +606,7 @@
     "bbcode_econ_ViewInMarket": "ดูในตลาดชุมชน",
     "bbcode_disable_embed_inlining_parenthetical": "%1$s (%2$s)",
     "bbcode_disable_embed_inlining_tweet": "%1$s เมื่อ %2$s: ",
-    "bbcode_disable_embed_inlining_steam_workshop": "%1$s (เวิร์กชอปบน Steam)",
+    "bbcode_disable_embed_inlining_steam_workshop": "%1$s (เวิร์กชอป Steam)",
     "bbcode_steam_store_embed_FreeToPlay": "เล่นฟรี",
     "bbcode_steam_store_embed_From": "จาก ",
     "bbcode_steam_store_embed_ReleaseDate": "วันวางจำหน่าย:  ",

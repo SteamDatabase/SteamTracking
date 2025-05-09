@@ -1301,7 +1301,7 @@ Dette burde vare mindre end et minut."
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "En e-mail er blevet sendt til ejeren af den produktkode, du indtastede."
 
-"Steam_Receipt_AlreadyPurchased" "Denne Steam-konto ejer allerede produktet/produkterne knyttet til denne aktiveringskode. Tryk på næste for at fortsætte til installationen."
+"Steam_Receipt_AlreadyPurchased" "Denne Steam-konto ejer allerede produktet/produkterne, som er knyttet til denne aktiveringskode. Tryk på næste for at fortsætte til installationen."
 "Steam_Receipt_AlreadyPurchased_Headline" "Produkt ejes allerede"
 
 "Steam_InstallAppWizard_Title"	"Installer – %game%"

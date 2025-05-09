@@ -1,12 +1,12 @@
  !"#$%&'()*+,-./0123
  \n\vinitial_top
- google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
 !1AQaq
 !AxU
 !\n\finitial_left
 " \n\rCMsgSetUIMode
 "#\n\tCMsgClose
+"&\n\fCMsgStopLoad
 "'\n\rCMsgShowPopup
 "(\n&CClientNotificationOverlaySplashScreen"L\n,CClientNotificationBroadcastAvailableToWatch
 "*\n(CClientNotificationClaimSteamDeckRewards"6\n
@@ -18,13 +18,13 @@
 "????'????????????????????????????????????????????????????\????
 "A\n%CClientNotificationFriendInviteRollup
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
-"C\n\rCMsgAddHeader
 "N\n"CClientNotificationPlaytimeWarning
 "P\n*CClientNotificationRemoteClientStartStream
 "\n\fapplist_base
 "\n\farray_values
 "^\n\fOneofOptions
 "_\n$CClientNotificationGameRecordingStop
+"_\n\rCMsgAddHeader
 "f\n+CClientNotificationGameRecordingInstantClip
 "p\n+CClientNotificationFamilySharingStopPlaying
 #3CScs
@@ -38,7 +38,6 @@ $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
 $\n k_EAsyncGameSessionUserStateDone
 $\n k_EBrowserFeatureStatus_NotFound
-$\n k_EClanInGameContentReleaseEvent
 $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
@@ -79,8 +78,6 @@ $\nY8O
 %Y-%m-%dT%H:%M:%SZ
 %\n k_EPersonaStateFlag_ClientTypeVR
 %\n k_EStreamControlStartNeptuneData
-%\n!k_EBanContentCheckResult_Possible
-%\n!k_EBanContentCheckResult_Unlikely
 %\n!k_EBroadcastPermissionSubscribers
 %\n!k_EBrowserFeatureStatus_EnabledOn
 %\n!k_EClientNotificationType_Comment
@@ -89,6 +86,8 @@ $\nY8O
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
 %\n!k_ECompromiseDetectionType_Manual
+%\n!k_EContentReportReason_Commercial
+%\n!k_EContentReportReason_Prohibited
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
@@ -108,8 +107,6 @@ $\nY8O
 &\n!k_EStreamControlEnableNeptuneData
 &\n!k_EStreamControlVRConnectionReady
 &\n"k_EBroadcastEncoderBestPerformance
-&\n"k_EClanESportTournamentStreamEvent
-&\n"k_EClanPreAnnounceMajorUpdateEvent
 &\n"k_EClientNotificationType_Wishlist
 &\n"k_ECloudStoragePersistStateDeleted
 &\n"k_ECommentThreadTypeClanCuratedApp
@@ -145,8 +142,6 @@ $\nY8O
 '\n"k_EStreamControlDisableNeptuneData
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
-'\n#k_EBanContentCheckResult_NotScanned
-'\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
@@ -164,7 +159,6 @@ $\nY8O
 '\n#k_EStreamControlStartMicrophoneData
 '\n#k_EStreamControlToggleMagnification
 '\n#k_EStreamControl_LAST_SETUP_MESSAGE
-'\n\tmessageid
 (8HXhx
 (\n disable_nvidia_hardware_encoding
 (\n#k_EStreamControlControllerConfigMsg
@@ -195,7 +189,6 @@ $\nY8O
 (\n$k_EUpdaterState_ClientRestartPending
 (\n$k_EUpdaterState_SystemRestartPending
 (\n$k_PublishedFileQueryType_NotYetRated
-(\n\nevent_type
 (\r"#\n\tCMsgPaste
 (\r"$\n\nCMsgGoBack
 (\r"$\n\nCMsgReload
@@ -224,13 +217,11 @@ $\nY8O
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
 (\r"z\n\vCMsgMouseUp
 (\t"#\n\rCDebugDumpMsg
-(\t"&\n\fCMsgStopLoad
 (\t")\n\vCHTMLHeader
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
-(\t"8\n\tCMsgMulti
 (\t":\n\rCLogUploadMsg
 (\t"H\n$CClientNotificationDownloadCompleted
 (\t"N\n2CClientNotificationCannotReadControllerGuideButton
@@ -239,7 +230,6 @@ $\nY8O
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"d\n,CClientNotificationStreamingClientConnection
 (\t"k\n\vCMsgPostURL
-(\v2 .CCommunity_ClanAnnouncementInfo
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2".CTransportSignalMsg.WebRTCMessage
@@ -252,7 +242,7 @@ $\nY8O
 (\v2%.google.protobuf.FieldDescriptorProto
 (\v2%.google.protobuf.OneofDescriptorProto
 (\v2&.ParentalTemporaryPlaytimeRestrictions
-(\v2&.ParentalTemporaryPlaytimeRestrictionsB\tH
+(\v2&.ParentalTemporaryPlaytimeRestrictionsB
 (\v2&.google.protobuf.ExtensionRangeOptions
 (\v2&.google.protobuf.MethodDescriptorProto
 (\v2'.google.protobuf.ServiceDescriptorProto
@@ -269,7 +259,6 @@ $\nY8O
 (\v2/.CControllerConfigMsg.ControllerActiveConfigMsg
 (\v2/.CMsgSetLocalFileRequestMapping.AdditionalRoute
 (\v2/.google.protobuf.DescriptorProto.ExtensionRange
-(\v23.UserContentDescriptorPreferences.ContentDescriptor
 (\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
 (\v27.CControllerConfigMsg.ControllerPersonalizationResponse
 (\v2\f.CFrameEvent
@@ -284,7 +273,6 @@ $\nY8O
 )\n$k_EPersonaStateFlag_ClientTypeMobile
 )\n$k_EStreamControlPauseControllerInput
 )\n$k_EStreamControlShowOnScreenKeyboard
-)\n%k_EBanContentCheckResult_VeryUnlikely
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
 )\n%k_EBrowserGPUStatus_DisabledJSRequest
@@ -330,7 +318,6 @@ $\nY8O
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
 *\n%k_EStreamControlResumeControllerInput
-*\n&k_EBanContentCheckResult_NeedsChecking
 *\n&k_EBrowserFeatureStatus_EnabledForceOn
 *\n&k_EBrowserFeatureStatus_UnavailableOff
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
@@ -356,8 +343,6 @@ $\nY8O
 *\n&k_EStreamFrameResultDroppedNetworkSlow
 *\n&k_ESystemDisplayCompatibilityMode_None
 *\n&k_PublishedFileQueryType_RankedByTrend
-*\n\fjobid_source
-*\n\fjobid_target
 *\n\frestrictions
 *^\n\fELogFileType
 *d\n\fEAudioFormat
@@ -377,6 +362,7 @@ $\nY8O
 +\n'k_EProfileCustomizationTypeWorkshopItem
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
++\n'k_ESteamOSCompatibilityCategory_Unknown
 +\n'k_ESystemUpdateNotificationType_Invalid
 +\n\rReservedRange
 +\n\rplaytime_days
@@ -422,7 +408,6 @@ $\nY8O
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
-.CClanEventUserNewsTuple"
 .CCookie"
 .CFrameStatAccumulatedValue
 .CHTMLPageSecurityInfo"n\n
@@ -438,11 +423,7 @@ $\nY8O
 .CInputTouchFingerMotionMsgH
 .CInputTouchFingerUpMsgH
 .CMsgFileLoadDialog.Filter
-.CMsgGCRoutingProtoBufHeader
-.CMsgIPAddress
 .CMsgJSValue.JSObjectProperty
-.CMsgKeyValuePair"
-.CMsgKubeRPCPacket.Hdr
 .CNegotiatedConfig
 .CRecordedInput"9\n
 .CRemoteHIDMsgH
@@ -455,14 +436,12 @@ $\nY8O
 .CStreamingKeymap"
 .CStreamingKeymapEntry"2\n\rCSetKeymapMsg
 .CStreamingServerHandshakeInfo"]\n
-.EBanContentCheckResult
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
 .EFrameAccumulatedStat
 .EGameRecordingErrorType"8\n%CClientNotificationGameRecordingStart
 .EJSRegisterMethodType"
-.EProtoClanEventType
 .EStreamActivity
 .EStreamAudioCodec
 .EStreamColorspace
@@ -499,6 +478,7 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
+.\n*k_ESteamOSCompatibilityCategory_Compatible
 .\n*k_EStreamControlInputGamepadEvent_OBSOLETE
 .\n\tdirection
 .google.protobuf.EnumOptions
@@ -525,6 +505,7 @@ $\nY8O
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
+/\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
 /\n+k_EStreamControllerConfigMsg_ConfigResponse
 /\n+k_PublishedFileQueryType_RankedByTextSearch
@@ -550,7 +531,6 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0\n,k_ESystemUpdateNotificationType_NeedsRestart
-0\n\nrouting_gc
 0\n\vfinger_down
 10BlankImage
 10CHintLabel
@@ -804,11 +784,9 @@ $\nY8O
 13CKeepAliveMsg
 13CLogUploadMsg
 13CMsgAddHeader
-13CMsgAppRights
 13CMsgDisableF5
 13CMsgGoForward
 13CMsgHidePopup
-13CMsgIPAddress
 13CMsgJSConfirm
 13CMsgLoadError
 13CMsgMouseDown
@@ -824,13 +802,11 @@ $\nY8O
 13CSetCursorMsg
 13CSetKeymapMsg
 13IUIController
-14CClanEventData
 14CColorProperty
 14CFloatProperty
 14CHFontProperty
 14CHideCursorMsg
 14CInputKeyUpMsg
-14CMsgAuthTicket
 14CMsgHideWindow
 14CMsgMouseLeave
 14CMsgMouseWheel
@@ -865,13 +841,11 @@ $\nY8O
 15CMsgBrowserSize
 15CMsgFullRepaint
 15CMsgHideToolTip
-15CMsgKeyValueSet
 15CMsgShowToolTip
 15CSetActivityMsg
 15CSetCapslockMsg
 15CStringProperty
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
-16CBilling_Address
 16CDeleteCursorMsg
 16CFriendsUIModule
 16CHTMLProtoBufMsgI10CMsgGoBackE
@@ -934,7 +908,6 @@ $\nY8O
 16CMsgBrowserReady
 16CMsgClearHistory
 16CMsgJSMethodCall
-16CMsgKeyValuePair
 16CMsgNodeHasFocus
 16CMsgOpenDevTools
 16CMsgOpenSteamURL
@@ -956,7 +929,6 @@ $\nY8O
 17CMsgBrowserRemove
 17CMsgCloseDevTools
 17CMsgImeCommitText
-17CMsgKubeRPCPacket
 17CMsgLoadedRequest
 17CMsgMouseDblClick
 17CMsgSearchResults
@@ -970,12 +942,10 @@ $\nY8O
 17CStreamVideoLimit
 17CSystemSuspendMsg
 17DirectoryTreeView
-18446744073709551615
 18CFrameStatsListMsg
 18CGetCursorImageMsg
 18CInputMouseDownMsg
 18CJSCallbackPromise
-18CLocalizationToken
 18CMsgBlockedRequest
 18CMsgBrowserResized
 18CMsgBrowserSetName
@@ -985,7 +955,6 @@ $\nY8O
 18CMsgInspectElement
 18CMsgLinkAtPosition
 18CMsgMinimizeWindow
-18CMsgProtoBufHeader
 18CMsgSavePageToJPEG
 18COverlayEnabledMsg
 18CSetCaptureSizeMsg
@@ -998,7 +967,6 @@ $\nY8O
 18CUtlCharConversion
 18CVRConnectionReady
 19CClientHandshakeMsg
-19CCuratorPreferences
 19CDirContentsWatcher
 19CInputMouseWheelMsg
 19CMsgBrowserPosition
@@ -1007,10 +975,8 @@ $\nY8O
 19CMsgFinishedRequest
 19CMsgFocusedNodeText
 19CMsgGetZoomResponse
-19CMsgIPAddressBucket
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
-19CMsgProtobufWrapped
 19CMsgSteamAuthNeeded
 19CNegotiationInitMsg
 19CServerHandshakeMsg
@@ -1034,14 +1000,12 @@ $\nY8O
 1wsHp
 2#.google.protobuf.FieldOptions.CType:
 2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
-2'.CMsgProtoBufHeader.ESessionDisposition:
 2).google.protobuf.FileOptions.OptimizeMode:
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20.CAuthenticationResponseMsg.AuthenticationResult
 20CBroadcastController
-20CCDDBAppDetailCommon
 20CControllerConfigMsg
 20CGetTouchIconDataMsg
 20CHTMLBaseProtoBufMsg
@@ -1134,7 +1098,6 @@ $\nY8O
 21CMsgImeSetComposition
 21CMsgJSExecuteCallback
 21CMsgJSReleaseCallback
-21CMsgKubeRPCPacket_Hdr
 21CMsgRequestFullScreen
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
@@ -1144,7 +1107,6 @@ $\nY8O
 21CTouchConfigActiveMsg
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22CClanMatchEventByRange
 22CDisableNeptuneDataMsg
 22CDiscoveryPingResponse
 22CFrameEventPerfTracker
@@ -1166,7 +1128,6 @@ $\nY8O
 22CStreamingSessionStats
 22CVirtualHereRequestMsg
 22ParentalFeatureRequest
-23CClanEventUserNewsTuple
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1203,7 +1164,6 @@ $\nY8O
 25CMsgMaximizeRestoreWindow
 25CMsgSetSharedPaintBuffers
 25CMsgVerticalScrollBarSize
-25CPackageReservationStatus
 25CPanelAnimationDictionary
 25CResumeControllerInputMsg
 25CSaveTouchConfigLayoutMsg
@@ -1224,7 +1184,6 @@ $\nY8O
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
 27CMsgForcePopupsToDirectHWND
-27CMsgGCRoutingProtoBufHeader
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
@@ -1275,12 +1234,9 @@ $\nY8O
 31CClientNotificationLowDiskSpace
 31CClientNotificationSystemUpdate
 31CClientNotificationTimerExpired
-31CCommunity_ClanAnnouncementInfo
 31CMsgDisableBackgroundThrottling
 31CSetInputTemporarilyDisabledMsg
-32:B\n
 32CClientNotificationFriendMessage
-32UserContentDescriptorPreferences
 3333
 3333UUUU
 33CMsgVerticalScrollBarSizeResponse
@@ -1303,7 +1259,6 @@ $\nY8O
 37CClientNotificationGameRecordingError
 37CClientNotificationGameRecordingStart
 37ParentalTemporaryPlaytimeRestrictions
-384:C\n
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
@@ -1351,7 +1306,6 @@ $\nY8O
 4\n\rfinger_motion
 4i5U6B738%9
 50CClientNotificationCannotReadControllerGuideButton
-50UserContentDescriptorPreferences_ContentDescriptor
 52F*
 54CControllerConfigMsg_ControllerPersonalizationResponse
 57CControllerConfigMsg_ControllerActiveConfigChangeResponse
@@ -1375,6 +1329,7 @@ $\nY8O
 6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
+6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
 7CCookie
 7CLogMsg
@@ -1402,6 +1357,7 @@ $\nY8O
 7\n3k_EClientNotificationType_StreamingClientConnection
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
+7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
 7\n3k_EStreamControlSetControllerPairingResult_OBSOLETE
 7\n\tenum_type
 7~8A
@@ -1414,6 +1370,7 @@ $\nY8O
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
+8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
 8\n4k_EStreamControlSetControllerPairingEnabled_OBSOLETE
 8\n4k_EStreamControlTriggerControllerDisconnect_OBSOLETE
 8\n4k_EStreamControllerConfigMsg_PersonalizationResponse
@@ -1436,7 +1393,6 @@ $\nY8O
 9CJSObject
 9CMsgClose
 9CMsgKeyUp
-9CMsgMulti
 9CMsgPaste
 9CPauseMsg
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
@@ -1448,6 +1404,7 @@ $\nY8O
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
+:\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -1483,11 +1440,6 @@ CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAuthenticationRequestMsg
 CAuthenticationResponseMsg
-CBilling_Address
-CCDDBAppDetailCommon
-CClanEventData
-CClanEventUserNewsTuple
-CClanMatchEventByRange
 CClientHandshakeMsg
 CClientNotificationAchievement
 CClientNotificationFriendInGame
@@ -1500,10 +1452,8 @@ CClientNotificationLowDiskSpace
 CClientNotificationScreenshot
 CClientNotificationSystemUpdate
 CClientNotificationTimerExpired"b\n-CClientNotificationSteamInputActionSetChanged
-CCommunity_ClanAnnouncementInfo
 CControllerConfigMsg
 CCookie
-CCuratorPreferences
 CDeleteCursorMsg
 CDisableHighResCaptureMsg"
 CDisableNeptuneDataMsg"
@@ -1529,12 +1479,10 @@ CInputMouseWheelMsg
 CInputTouchFingerDownMsg
 CInputTouchFingerMotionMsg
 CInputTouchFingerUpMsg
-CLocalizationToken
 CLogMsg
 CMsgAckPIDShuttingDown
 CMsgAckScreenDPI
 CMsgAckSharedPaintBuffers
-CMsgAuthTicket
 CMsgAuthedSteamDomains
 CMsgBlockedRequest
 CMsgBringWindowToFront
@@ -1569,7 +1517,6 @@ CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
 CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
-CMsgGCRoutingProtoBufHeader
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
 CMsgGetZoomResponse
@@ -1578,7 +1525,6 @@ CMsgHideToolTip
 CMsgHideWindow
 CMsgHistoryChanged
 CMsgHorizontalScrollBarSize
-CMsgIPAddressBucket
 CMsgImeCancelComposition
 CMsgImeCommitText
 CMsgImeCompositionRangeChanged
@@ -1591,9 +1537,6 @@ CMsgJSMethodCall
 CMsgJSRaiseException
 CMsgJSRegisterMethod
 CMsgJSReleaseCallback
-CMsgKeyValuePair
-CMsgKeyValueSet
-CMsgKubeRPCPacket
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
 CMsgLoadLocalization
@@ -1617,8 +1560,6 @@ CMsgPopupCreated
 CMsgPopupHTMLWindow
 CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
-CMsgProtoBufHeader
-CMsgProtobufWrapped
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
@@ -1671,7 +1612,6 @@ CNegotiationInitMsg
 CNegotiationSetConfigMsg
 CORD
 COverlayEnabledMsg
-CPackageReservationStatus
 CPauseControllerInputMsg"
 CRYPTO_memcmp
 CRecordedInput
@@ -1725,9 +1665,10 @@ CTransportSignalMsg
 CType
 CVProfile_ExitScope
 CVRConnectionReady
-CValidator::ClaimArrayMemory(void const*)
-CValidator::ClaimMemory(void const*)
-CValidator::IsClaimed(void const*) const
+CValidator::ClaimArrayMemory(void const*, bool)
+CValidator::ClaimMemory(void const*, bool)
+CValidator::DumpDoubleClaim(char const*) const
+CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CVideoDecoderInfoMsg
@@ -1737,7 +1678,6 @@ CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
 C\n#direct_rendering_display_compositor
 CanBreakBetween
-ContentDescriptor
 ContextCommand
 ControllerActiveConfigMsg
 ControllerConfigResponse
@@ -1752,7 +1692,6 @@ E=FZGrH
 EACState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
-EBanContentCheckResult
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
@@ -1768,6 +1707,7 @@ ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
 EContentCheckProvider
+EContentReportReason
 EExternalSaleEventType
 EFrameAccumulatedStat
 EGPUPerformanceLevel
@@ -1781,18 +1721,17 @@ EJSRegisterMethodType
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EProfileCustomizationType
-EProtoClanEventType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
 ESDCardFormatStage
-ESessionDisposition
 ESessionPersistence
 ESplitScalingFilter
 ESplitScalingScaler
 EStartupMovieVariant
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
+ESteamOSCompatibilityCategory
 EStorageBlockContentType
 EStorageBlockFileSystemType
 EStorageDriveMediaType
@@ -2183,7 +2122,6 @@ ParentalPlaytimeDay
 ParentalPlaytimeRequest
 ParentalPlaytimeRestrictions
 ParentalSettings
-PartnerEventNotificationType
 Pe6^
 Plat_CommandLineParamExists
 Plat_FloatTime
@@ -2424,7 +2362,6 @@ Zjz\v
 [h1R
 \n CClientNotificationFriendMessage
 \n EWindowsUpdateInstallationImpact
-\n UserContentDescriptorPreferences
 \n google/protobuf/descriptor.proto
 \n!CMsgVerticalScrollBarSizeResponse
 \n!CRemotePlayTogetherGroupUpdateMsg
@@ -2436,6 +2373,7 @@ Zjz\v
 \n$ControllerActiveConfigChangeResponse
 \n$steammessages_parental_objects.proto
 \n&CClientNotificationTimedTrialRemaining
+\n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \n+steammessages_clientnotificationtypes.proto"4\n#CClientNotificationCloudSyncFailure
 \nYg:a
@@ -2457,41 +2395,28 @@ Zjz\v
 \n\fbIsMainFrame
 \n\fbitrate_kbps
 \n\fbrowser_type
-\n\fbuild_branch
-\n\fclan_steamid
-\n\fcommentcount
-\n\fcountry_code
-\n\fdebug_source
 \n\fdirect_input
 \n\fdisplay_name
 \n\fdouble_value
 \n\fdpi_vertical
 \n\ffolder_index
-\n\fh_steam_pipe
 \n\fhwnd_browser
-\n\fignore_count
 \n\fis_extension
 \n\fis_off_panel
 \n\fjava_package
 \n\fmax_progress
-\n\fmessage_body
 \n\fmin_progress
-\n\fmonitor_left
 \n\fmouse_button
 \n\fnetwork_test
 \n\fpasswordhash
-\n\fplatform_mac
 \n\fplayer_index
 \n\frefresh_rate
 \n\frelative_url
-\n\frtime_before
 \n\fruby_package
 \n\fshare_handle
 \n\fstring_value
 \n\fswift_prefix
 \n\ftime_expires
-\n\ftoken_source
-\n\fusable_right
 \n\fx_normalized
 \n\fy_normalized
 \n\nCSetQoSMsg
@@ -2515,8 +2440,6 @@ Zjz\v
 \n\ndependency
 \n\ndeprecated
 \n\nerror_code
-\n\nevent_name
-\n\nfirst_name
 \n\nframe_size
 \n\ngamma_ramp
 \n\ngo_package
@@ -2525,10 +2448,8 @@ Zjz\v
 \n\nis_allowed
 \n\nis_default
 \n\nis_enabled
-\n\nis_valveds
 \n\nissuerName
 \n\nlocal_path
-\n\nmanage_ceg
 \n\nmax_height
 \n\nmin_height
 \n\npageserial
@@ -2536,16 +2457,11 @@ Zjz\v
 \n\nscreenshot
 \n\nscroll_max
 \n\nsource_pid
-\n\nticket_crc
 \n\ntimeout_ms
 \n\ntype_flags
 \n\nuint_value
-\n\nupdatetime
-\n\nusable_top
-\n\nvr_content
 \n\rCHistoryEntry
 \n\rCKeepAliveMsg"
-\n\rCMsgAppRights
 \n\rCMsgSetCookie
 \n\rCMsgSetCursor
 \n\rEBatteryState
@@ -2562,43 +2478,25 @@ Zjz\v
 \n\rchat_group_id
 \n\rcombobox_tall
 \n\rcombobox_wide
-\n\rcomment_count
 \n\rdefault_value
 \n\rduration_secs
-\n\rerror_message
-\n\rfriendly_name
 \n\rinitial_width
 \n\ris_system_key
 \n\rk_EAppTypeDLC
-\n\rk_EEventStart
-\n\rlauncher_type
 \n\rlong_frame_ms
-\n\rmanage_cdkeys
-\n\rmonitor_right
 \n\rmouse_enabled
 \n\rnativeKeyCode
-\n\rnews_post_gid
 \n\rpct_remaining
 \n\rphp_namespace
 \n\rproxy_problem
 \n\rreject_reason
 \n\rreliable_data
 \n\rreplace_entry
-\n\rreply_address
 \n\rreserved_name
-\n\rrouting_appid
 \n\rrtime_expires
-\n\rserver_secret
 \n\rshift_keycode
-\n\rsize_unzipped
 \n\rsource_handle
-\n\rtime_reserved
-\n\rupload_cdkeys
-\n\rusable_bottom
-\n\rvotedowncount
 \n\rvroverlay_key
-\n\rwebapi_key_id
-\n\rwebsite_title
 \n\tEOSBranch
 \n\taccountid
 \n\targuments
@@ -2612,8 +2510,6 @@ Zjz\v
 \n\tdlc_appid
 \n\tdpi_scale
 \n\tdraggable
-\n\tedit_info
-\n\tevent_gid
 \n\texception
 \n\tframerate
 \n\tfrequency
@@ -2622,7 +2518,6 @@ Zjz\v
 \n\tint_value
 \n\tis_object
 \n\tjson_name
-\n\tlast_name
 \n\tlocal_url
 \n\tmap_entry
 \n\tmax_width
@@ -2631,25 +2526,19 @@ Zjz\v
 \n\tnCertBits
 \n\tname_part
 \n\toffscreen
-\n\tpackageid
 \n\tpageTitle
 \n\tpage_size
 \n\tpagescale
 \n\tpagetitle
 \n\tpeer_name
 \n\tping_time
-\n\tpublished
-\n\tqualified
 \n\trequestid
-\n\trtime_end
 \n\ttap_count
 \n\ttest_data
 \n\ttext_utf8
 \n\ttimestamp
-\n\ttrace_tag
 \n\ttype_name
 \n\tuseragent
-\n\tzip_plus4
 \n\vCFrameStats
 \n\vCMsgBuildID
 \n\vCMsgJSValue
@@ -2671,33 +2560,24 @@ Zjz\v
 \n\vcustom_data
 \n\vdescription
 \n\vdpi_scaling
-\n\venums.proto
-\n\vevent_notes
+\n\venums.proto*
 \n\vform_factor
 \n\vhwnd_parent
 \n\vinitialFile
 \n\vinitial_url
-\n\vmonitor_top
 \n\voneof_index
 \n\voutput_type
 \n\vpacket_loss
 \n\vpinch_scale
 \n\vpopup_index
-\n\vpropagation
 \n\vrequest_url
-\n\vrtime_after
-\n\vrtime_start
 \n\vsender_name
 \n\vsource_file
 \n\vsystem_info
 \n\vtemperature
-\n\vticket_type
 \n\vtransparent
 \n\vunlock_code
 \n\vurl_rewrite
-\n\vusable_left
-\n\vvoteupcount
-\n\vwebsite_url
 \n\vwindow_icon
 \r8STs\ne
 \rRoOs
@@ -2825,7 +2705,6 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
-_xP4U
 `tun%
 a\rxg[
 abort
@@ -2838,12 +2717,6 @@ action_set_name
 activeConfigChangeMsg
 activity
 additional_includes
-address1
-address2
-admin_request_spoofing_steamid
-admin_spoofing_user
-adult_content_sex
-adult_content_violence
 aesni_cbc_encrypt
 aesni_ccm64_decrypt_blocks
 aesni_ccm64_encrypt_blocks
@@ -2858,7 +2731,6 @@ aesni_set_encrypt_key
 aesni_xts_decrypt
 aesni_xts_encrypt
 aggregate_value
-allow_field_named_steam_id
 allowed_daily_minutes
 allowed_extensions
 allowed_seconds
@@ -2868,11 +2740,8 @@ altgr_capslock_keycode
 altgr_shift_capslock_keycode
 altgr_shift_keycode
 amount
-announcement_body
-announcement_gid
 anonymous
 answer
-app_type
 appid
 applist_base_description
 applist_base_id
@@ -2882,7 +2751,6 @@ approved
 args
 argument
 audio_channels
-auth_account_flags
 available_video_modes_OBSOLETE
 avatar_location
 average
@@ -2894,9 +2762,7 @@ bInput
 bKGD
 bNewNavigation
 bad_url
-ban_check_result
 bandwidth_test
-banned
 baseline
 begin
 bgoback
@@ -2905,13 +2771,10 @@ bindtextdomain
 binput
 bitrate
 body
-broadcast_live
 broadcast_permission
-broadcaster_accountid
 browser_handle
 bsuccess
 btowc
-bucket
 build_id
 burst_bitrate_kbps
 button
@@ -2933,28 +2796,19 @@ chmod
 choose_directory
 chown
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
-city
-clamp_range_slot
-clanid
 client_bitrate
-client_sessionid
 client_streaming
 clip_id
 clock_gettime
 close
 closedir
-cm_sysid
 codec
 color
 com.google.protobufB
-community_visible_stats
 config
 configResponse
 connect_params
 connection_problem
-content_descriptorid
-content_descriptorids
-content_descriptors_to_exclude
 controllerData
 controllerPath
 controllerType
@@ -2971,7 +2825,6 @@ coord_y
 count
 creation_flags
 creator
-creator_steamid
 csharp_namespace
 ctype
 current_playtime_restrictions
@@ -2981,11 +2834,9 @@ custom_commands
 dQy/
 data
 data"8\n
-debug_source_string_index
 default_local_path
 deltax
 deltay
-demo
 desired_bitrate_kbps
 desired_framerate_denominator
 desired_framerate_numerator
@@ -2999,7 +2850,6 @@ disable_client_cursor
 disable_intel_hardware_encoding
 disable_steam_store
 disabled
-discussion_url
 dl_iterate_phdr
 dlclose
 dlerror
@@ -3008,17 +2858,10 @@ dlopen
 dlsym
 domain
 domains
-download
 dpi_horizontal
-dst_gc_dir_index
-dst_gcid_queue
 duration
 eXIf
-economy_support
-economy_support_supervisor
-edit_marketing
 edit_state_flags
-edit_store_display_content
 elementtagname
 enable_audio_streaming
 enable_audio_uncompressed
@@ -3040,16 +2883,12 @@ enabled
 enabled_features
 endmntent
 entries
-eresult
 error_description
 estackingorder
-estate
 event_id
 events
 ewh/?y
-exclude_client_sessionids
 exit
-expired
 expires
 extendee
 extension_range
@@ -3061,15 +2900,11 @@ false
 false"
 false"&\n\fCMsgStopFind
 false"M\n
-false:H\n
-false:J\n
-falseB\tH
 family_groupid
 fclose
 fcntl
 fdatasync
 fdopen
-featured_app_tagid
 features
 feof
 ferror
@@ -3091,14 +2926,10 @@ fmodf
 fnmatch
 focus
 focused
-follower_count
 fopen
 fopen64
 force_direct_hwnd_popups
-force_php_generation
 format
-forum_topic_id
-forward_to_sysid
 fprintf
 fputc
 fputs
@@ -3130,7 +2961,6 @@ g_VProfProfilesRunningCount
 g_pMemAllocSteam
 game_id
 gameid
-generate_cdkeys
 gesture
 gestures
 getaddrinfo
@@ -3153,13 +2983,9 @@ guestid
 hIST
 hPU3
 handle
-has_adult_content
-has_adult_content_sex
-has_adult_content_violence
 has_on_screen_keyboard
 header
 headers
-headline
 height
 hidden
 host
@@ -3188,14 +3014,9 @@ infind
 info
 initial_height
 ioctl
-ip"R\n
-ip_addr"
-ip_v6
 is_array
-is_from_external_source
 is_save
 is_site_license_lock
-is_visible_in_steam_china
 isalnum
 isalpha
 isspace
@@ -3206,7 +3027,6 @@ java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
-jsondata
 jstype
 k2U\v
 k_BluetoothDeviceType_Computer
@@ -3246,8 +3066,6 @@ k_EAppTypeVideo
 k_EAudioFormat16BitLittleEndian
 k_EAudioFormatFloat
 k_EAudioFormatNone
-k_EBanContentCheckResult_Likely
-k_EBanContentCheckResult_Reset
 k_EBatteryState_Charging
 k_EBatteryState_Discharging
 k_EBatteryState_Full
@@ -3265,38 +3083,6 @@ k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
 k_EChildProcessQueryCommand_Max
-k_EClanBetaReleaseEvent
-k_EClanBroadcastEvent
-k_EClanChatEvent
-k_EClanCrosspostEvent
-k_EClanDLCReleaseEvent
-k_EClanDevStreamEvent
-k_EClanFamousStreamEvent
-k_EClanFreeTrial
-k_EClanFutureReleaseEvent
-k_EClanGameEvent
-k_EClanGameItemSalesEvent
-k_EClanGameReleaseEvent
-k_EClanGameSalesEvent
-k_EClanIRLEvent
-k_EClanInGameBonusXPEvent
-k_EClanInGameChallengeEvent
-k_EClanInGameContestEvent
-k_EClanInGameEventGeneral
-k_EClanInGameLootEvent
-k_EClanInGamePerksEvent
-k_EClanMajorUpdateEvent
-k_EClanMeetingEvent
-k_EClanMusicAndArtsEvent
-k_EClanNewsEvent
-k_EClanOtherEvent
-k_EClanPartyEvent
-k_EClanSeasonRelease
-k_EClanSeasonUpdate
-k_EClanSmallUpdateEvent
-k_EClanSpecialCauseEvent
-k_EClanSportsEvent
-k_EClanTripEvent
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
@@ -3319,9 +3105,11 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
-k_EEventBroadcastStart
-k_EEventMatchStart
-k_EEventPartnerMaxType
+k_EContentReportReason_Abusive
+k_EContentReportReason_Invalid
+k_EContentReportReason_MAX
+k_EContentReportReason_OffTopic
+k_EContentReportReason_Other
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -3405,14 +3193,13 @@ k_ESDCardFormatStage_Invalid
 k_ESDCardFormatStage_Rescuing
 k_ESDCardFormatStage_Starting
 k_ESDCardFormatStage_Testing
+k_ESLSHelper_Devcoredump
 k_ESLSHelper_Gpu
 k_ESLSHelper_Invalid
 k_ESLSHelper_Journal
 k_ESLSHelper_Kdump
 k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
-k_ESessionDispositionDisconnect
-k_ESessionDispositionNormal
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESplitScalingFilter_Invalid
@@ -3638,7 +3425,6 @@ lDa>
 lEd/
 label
 language
-last_update_steamid
 latest_frame_id
 layout
 lazy
@@ -3661,22 +3447,18 @@ list
 local
 localeconv
 localization_path
-localized_string
 location
 longjmp
 lseek
 lseek64
 machine
 malloc
-manage_pricing
-manage_signing
 maximum_burst_bitrate_kbps
 maximum_decode_bitrate_kbps
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
 md5_block_asm_data_order
-media
 memchr
 memcmp
 memcpy
@@ -3696,12 +3478,9 @@ mmap64
 mode
 modf
 mold 1.10.1 (compatible with GNU ld)
-monitor_bottom
 mount
 mouse_up
 msg"
-msgpool_hard_limit
-msgpool_soft_limit
 msync
 multiple_raster_threads
 munmap
@@ -3717,7 +3496,6 @@ no_standard_descriptor_accessor
 normal_keycode
 notification_type
 notificationid
-notificaton_token
 number
 oFFs
 objc_class_prefix
@@ -3725,12 +3503,12 @@ object_properties
 offer
 offline
 only_allow_trusted_popups
+only_send_to_steam
 open
 open64
 opendir
 opengl
 options
-original_ip_address
 override_height
 override_width
 owning_browser_handle
@@ -3743,22 +3521,16 @@ packet_size_received
 packet_size_requested
 packets
 page_url
-pairs
 parent_popup_index
 passwordhashtype
 path
 patterns
-payload
 pclose
 personalizationData
 personalizationResponse
-phone
 php_class_prefix
 php_generic_services
 php_metadata_namespace
-php_output_always_number
-platform_linux
-platform_windows
 played_seconds
 players
 playtime_remaining
@@ -3770,12 +3542,8 @@ positive_int_value
 posix_fadvise
 post
 postData
-postcode
-posterid
-posttime
 pread64
 pressed
-priority_score
 promise_handle
 proto3_optional
 pthread_mutex_lock
@@ -3783,8 +3551,6 @@ pthread_mutex_unlock
 pthread_once
 public
 public_dependency
-publish
-publisher_group_id
 putc
 putwc
 pwrite64
@@ -3792,28 +3558,23 @@ py_generic_services
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 quality
-queue_position
 raw_draw
 rawbody
 read
 readdir64
 readlink
 realloc
-realm
 realpath
 reasons
 received
 recovery_email
 rects
-referenced_appids
 referrer
 refresh_rate_denominator
 refresh_rate_numerator
 remove
 rename
 requesting_url
-reservation_country_code
-reservation_state
 reserved_range
 response_steamurl
 restrictions_approved
@@ -3827,13 +3588,6 @@ rmdir
 round
 roundf
 routes
-rtime32_end_time
-rtime32_last_modified
-rtime32_start_time
-rtime32_visibility_end
-rtime32_visibility_start
-rtime_estimated_notification
-rtime_mod_reviewed
 rtime_unlocked
 ru&o
 sBIT
@@ -3863,14 +3617,10 @@ selected_video_codec
 selectionOrder
 selection_text
 sendfile64
-seq_num
 sequence
-server_address
 server_bitrate
-server_password
 server_streaming
 service
-session_disposition
 setlocale
 setmntent
 setvbuf
@@ -3882,7 +3632,6 @@ shared_memory_size
 shift_capslock_keycode
 shm_open
 shm_unlink
-show_broadcast
 software_encoding_threads
 source_code_info
 span
@@ -3908,8 +3657,6 @@ steamdeck_stable
 steamid
 steamid_responder
 steamid_sender
-steammessages_base.proto
-steammessages_base.proto*
 steammessages_remoteplay.proto"H\n
 strcasecmp
 strcasestr
@@ -3939,7 +3686,6 @@ strtoull
 success
 supported_audio_codecs
 supported_colorspaces
-supported_languages
 supported_video_codecs
 supports_remote_hid
 supports_touch_input
@@ -3948,37 +3694,25 @@ svcK71b.
 symlink
 syntax
 syscall
-sysid
 system
 system_can_suspend
 tEXt
 tIME
-tagids_curated
-tagids_filtered
-tags
 tall
 target
-target_job_name
 temporary_enabled_features
 temporary_playtime_restrictions
 text
 threads
-ticket
 time
 time_requested
 time_responded
-timestamp_added
-timestamp_updated
 title
 token
-token_id
 tolower
-tool
-total_queue_size
 trailing_comments
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
-transport_error
 true
 trusted_creator
 type
@@ -4003,9 +3737,7 @@ unichar
 uninterpreted_option
 unknown
 unlink
-unlisted
 urls
-us_state
 use_qos
 user_css
 usleep
@@ -4016,9 +3748,6 @@ vQO+t
 vRQ>
 value
 version
-view_error_data
-view_financials
-view_marketing_traffic
 visible
 void google::protobuf::internal::byteswap<1>(void*)
 void google::protobuf::internal::byteswap<4>(void*)
@@ -4056,8 +3785,6 @@ webgl2
 webgpu
 webnn
 webrtc
-webui_auth_key
-wg_token
 wide
 width
 wmemchr

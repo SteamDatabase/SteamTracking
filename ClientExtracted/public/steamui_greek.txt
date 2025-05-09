@@ -3186,7 +3186,7 @@
 "Steam_GameProperties_LanguageTab" "ΓΛΩΣΣΑ"
 
 "Steam_GameProperties_BetasTab" "ΕΚΔΟΣΕΙΣ ΒΗΤΑ"
-"Steam_ChooseGameBeta"	"Επιλέξτε την έκδοση βήτα που θα θέλατε να συμμετάσχετε:"
+"Steam_ChooseGameBeta"	"Επιλέξτε την έκδοση βήτα στην οποία θα θέλατε να συμμετάσχετε:"
 "Steam_ContentBetaUnlockPrivate" "Εισαγωγή κωδικού πρόσβασης σε κλειστό beta:"
 "Steam_ContentBetaCheckPassword"	"ΥΠΟΒΟΛΗ"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Ο κωδικός πρόσβασης είναι σωστός. Το «%betaname%» είναι πλέον διαθέσιμο."

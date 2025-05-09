@@ -2,54 +2,34 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [3714],
   {
-    26965: (e, t, n) => {
-      n.r(t), n.d(t, { default: () => v });
-      var a = n(89748),
-        l = n(35560),
-        c = n(46422),
-        r = n(10501),
-        o = n(63696),
-        u = n(4855),
-        m = n(46382),
-        i = n(5859),
-        s = n(43691);
-      function w(e) {
-        const { msDelayBatch: t, children: n } = e,
-          a = (0, m.rW)(),
-          l = o.useMemo(
-            () => ({
-              country: s.TS.COUNTRY,
-              language: s.TS.LANGUAGE,
-              realm: s.TS.EREALM,
-            }),
-            [],
-          );
-        return (
-          o.useEffect(() => i.A.Initialize(a), [a]),
-          o.createElement(
-            u.V3,
-            {
-              context: l,
-              msDelayBatch: t,
-              legacyCacheStoreItemData: i.A.Get().ReadItem,
-            },
-            n,
-          )
-        );
-      }
-      var E = n(91435),
-        d = n(50341),
-        f = n(83857),
-        g = n(42318);
-      const k = o.memo(function (e) {
-        return o.createElement(
-          g.wC,
+    81143: (e, n, t) => {
+      t.r(n), t.d(n, { default: () => k });
+      var l = t(89748),
+        r = t(35560),
+        a = t(46422),
+        c = t(10501),
+        u = t(63696),
+        o = t(98606),
+        m = t(91435),
+        i = t(50341),
+        s = t(83857),
+        w = t(42318);
+      const E = u.memo(function (e) {
+        return u.createElement(
+          w.wC,
           null,
-          o.createElement(f.L, null),
-          o.createElement(d.BV, null),
+          u.createElement(s.L, null),
+          u.createElement(i.BV, null),
         );
       });
-      (0, n(89193).jK)({ enforceActions: "never" }),
+      var d = t(29971),
+        f = t(87913);
+      const g = u.memo(function () {
+        return (0, f.u$)()
+          ? u.createElement(w.tH, null, u.createElement(d._V, null))
+          : null;
+      });
+      (0, t(89193).jK)({ enforceActions: "never" }),
         (async function () {
           !(function () {
             let e = window;
@@ -58,23 +38,28 @@
               (e.SetBackgroundInterval = window.setInterval),
               (e.SetBackgroundTimeout = window.setTimeout);
           })();
-          let e = (0, a.KC)();
+          let e = (0, l.KC)();
           await e.Init(window.cm);
         })();
-      const v = function (e) {
-        const t = (0, a.gK)();
-        return o.createElement(
-          o.Fragment,
+      const k = function (e) {
+        const n = (0, l.gK)();
+        return u.createElement(
+          u.Fragment,
           null,
-          o.createElement(
-            E.EO,
+          u.createElement(
+            m.EO,
             { bOnlyPopups: !0 },
-            o.createElement(k, null),
-            t &&
-              o.createElement(
-                l.VQ,
-                { controller: c.oy.NavigationManager },
-                o.createElement(w, null, o.createElement(r.u, { cm: e.cm })),
+            u.createElement(E, null),
+            n &&
+              u.createElement(
+                r.VQ,
+                { controller: a.oy.NavigationManager },
+                u.createElement(
+                  o.p,
+                  null,
+                  u.createElement(c.u, { cm: e.cm }),
+                  u.createElement(g, null),
+                ),
               ),
           ),
         );

@@ -2259,7 +2259,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_NoLongerOwnsGame_Title"	"Steam - %game%"
 "Steam_NoLongerOwnsGame_Info"		"Acest joc nu mai este disponibil gratuit."
 
-"steam_menu_systemreport"		"Raportul de sistem"
+"steam_menu_systemreport"		"Raport de sistem"
 "steam_menu_systeminfo"			"Informații privind sistemul"
 "steam_systeminfo_title"			"Steam - Informații privind sistemul"
 "steam_systeminfo_surveylink"	"Compară sistemul tău cu cel al altor utilizatori Steam"

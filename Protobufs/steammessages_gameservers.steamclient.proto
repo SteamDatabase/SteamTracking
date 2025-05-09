@@ -3,36 +3,6 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
-message CGameServers_GetServerList_Request {
-	optional string filter = 1;
-	optional uint32 limit = 2 [default = 100];
-}
-
-message CGameServers_GetServerList_Response {
-	message Server {
-		optional string addr = 1;
-		optional uint32 gameport = 2;
-		optional uint32 specport = 3;
-		optional fixed64 steamid = 4;
-		optional string name = 5;
-		optional uint32 appid = 6;
-		optional string gamedir = 7;
-		optional string version = 8;
-		optional string product = 9;
-		optional int32 region = 10;
-		optional int32 players = 11;
-		optional int32 max_players = 12;
-		optional int32 bots = 13;
-		optional string map = 14;
-		optional bool secure = 15;
-		optional bool dedicated = 16;
-		optional string os = 17;
-		optional string gametype = 18;
-	}
-
-	repeated .CGameServers_GetServerList_Response.Server servers = 1;
-}
-
 message CGameServers_GetServerSteamIDsByIP_Request {
 	repeated string server_ips = 1;
 }
@@ -129,7 +99,6 @@ message GameServerClient_QueryServerData_Response {
 }
 
 service GameServers {
-	rpc GetServerList (.CGameServers_GetServerList_Request) returns (.CGameServers_GetServerList_Response);
 	rpc GetServerSteamIDsByIP (.CGameServers_GetServerSteamIDsByIP_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
 	rpc GetServerIPsBySteamID (.CGameServers_GetServerIPsBySteamID_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
 	rpc QueryByFakeIP (.CGameServers_QueryByFakeIP_Request) returns (.CGameServers_GameServerQuery_Response);

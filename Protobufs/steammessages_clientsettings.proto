@@ -241,7 +241,7 @@ message CMsgClientSettings {
 	optional int32 gamescope_display_refresh_rate = 21005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/RefreshRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_use_game_refresh_rate_in_steam = 21006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DynamicRefreshRateInSteam", (setting_default_bool) = true];
 	optional bool gamescope_disable_mura_correction = 21007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/MuraCorrectionDisabled", (setting_default_bool) = false];
-	optional bool gamescope_include_steamui_in_screenshots = 21008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/IncludeSteamUIInScreenshots", (setting_default_bool) = true];
+	optional bool gamescope_include_steamui_in_screenshots = 21008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/IncludeSteamUIInScreenshots", (setting_default_bool) = false];
 	optional bool gamescope_allow_tearing = 21009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AllowTearing", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool gamescope_composite_debug = 21010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/CompositeDebug", (setting_default_bool) = false];
 	optional bool gamescope_force_composite = 21011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/ForceComposite", (setting_default_bool) = false];
@@ -260,6 +260,10 @@ message CMsgClientSettings {
 	optional int32 steamos_magnifier_scale = 22007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/MagnifierScale", (setting_default_int) = 150];
 	optional bool steamos_manual_gpu_clock_enabled = 22008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ManualGPUClockEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_manual_gpu_clock_hz = 22009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ManualGPUClockHz", (setting_default_int) = 1000, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
+	optional string steamos_platform_performance_profile = 22010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/PerformanceProfile", (setting_profile_mode) = k_ESettingProfileMode_PerGame];
+	optional bool steamos_charge_limit_enabled = 22011 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimitEnabled", (setting_default_bool) = false];
+	optional int32 steamos_charge_limit = 22012 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimit", (setting_default_int) = 80];
+	optional bool steamos_charge_limit_devmode = 22013 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimitDevMode", (setting_default_bool) = false];
 	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
 	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
 	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];

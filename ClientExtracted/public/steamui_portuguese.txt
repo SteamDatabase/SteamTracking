@@ -1936,7 +1936,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 
 
 
-"Steam_Game_FreeWeekend"			"Fim de semana grátis"
+"Steam_Game_FreeWeekend"			"Fim de Semana Grátis"
 "Steam_Game_Retail"						"Revendedor"
 "Steam_Game_AuthorizeDevice"		"Dispositivo Autorizado"
 "Steam_Game_Complimentary"		"Grátis"
@@ -2248,12 +2248,12 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 
 "Steam_PreloadCountdown_UnlockTime"	"%game% será desbloqueado daqui a:"
 
-"Steam_DoDFreeWeekend_BeginsIn"	"O Fim de Semana Gratuito do Day of Defeat começa dentro de:"
+"Steam_DoDFreeWeekend_BeginsIn"	"O Fim de Semana Grátis do Day of Defeat começa dentro de:"
 "Steam_DoDFreeWeekend_Info"		"Quando o relógio chegar a zero, terão início 72 horas de jogo gratuito."
-"Steam_DoDFreeWeekend_URL"		"Fica a saber mais sobre o Fim de Semana Gratuito do Day of Defeat"
-"Steam_FreeWeekend_BeginsIn"		"O Fim de Semana Gratuito de %game% começa daqui a:"
+"Steam_DoDFreeWeekend_URL"		"Fica a saber mais sobre o Fim de Semana Grátis do Day of Defeat"
+"Steam_FreeWeekend_BeginsIn"		"O Fim de Semana Grátis do %game% começa daqui a:"
 "Steam_FreeWeekend_Info"			"Quando o relógio chegar a zero, terão início %time% de jogo gratuito."
-"Steam_FreeWeekend_URL"			"Fica a saber mais sobre o Fim de Semana Gratuito de %game%"
+"Steam_FreeWeekend_URL"			"Fica a saber mais sobre o Fim de Semana Grátis do %game%"
 "Steam_FreeWeekend_48H"			"48 horas"
 "Steam_FreeWeekend_72H"			"72 horas"
 "Steam_FreeWeekend_1W"			"1 semana"

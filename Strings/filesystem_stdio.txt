@@ -59,9 +59,10 @@ $ORIGIN
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 CVProfile_ExitScope
-CValidator::ClaimArrayMemory(void const*)
-CValidator::ClaimMemory(void const*)
-CValidator::IsClaimed(void const*) const
+CValidator::ClaimArrayMemory(void const*, bool)
+CValidator::ClaimMemory(void const*, bool)
+CValidator::DumpDoubleClaim(char const*) const
+CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CreateInterface

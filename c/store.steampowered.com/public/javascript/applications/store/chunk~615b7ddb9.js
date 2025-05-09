@@ -735,7 +735,7 @@
             _ || (_ = performance.now());
             const _ = () => {
               const _ =
-                (((performance.now() - _) / 10) %
+                (((performance.now() - _) / 40) %
                   (_.offsetWidth - 3 * _ - 16)) +
                 _;
               (_.style.transform = `translateX( -${_}px )`),

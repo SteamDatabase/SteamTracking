@@ -664,7 +664,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "Steam_ChangeCred_IncorrectVerificationCode"			"Das Passwort konnte nicht geändert werden.\nÜberprüfen Sie, ob Sie den Verifizierungscode richtig eingegeben haben."
 
 "Steam_ChangeEmail_IncorrectVerificationCode"		"Die Kontakt-E-Mail-Adresse konnte nicht geändert werden.\nÜberprüfen Sie, ob Sie den Verifizierungscode richtig eingegeben haben."
-"Steam_ChangeEmail_IncorrectTwoFactorCode"		"Die Kontakt-E-Mail-Adresse konnte nicht geändert werden.\nÜberprüfen Sie, ob Sie den Steam-Mobile-Authentifikatorcode richtig eingegeben haben."
+"Steam_ChangeEmail_IncorrectTwoFactorCode"		"Die Kontakt-E-Mail-Adresse konnte nicht geändert werden.\nÜberprüfen Sie, ob Sie den Steam-Mobile-Authentifikator-Code richtig eingegeben haben."
 "Steam_ChangeEmail_EnterSMSCode"	"Zur Sicherheit haben wir eine SMS an die mit Ihrem Account verknüpfte Telefonnummer gesendet. Bitte geben Sie den Code hier ein:"
 
 "Steam_ChangeContactEmailError_Title"			"Fehler bei E-Mail-Bestätigung"
@@ -3516,7 +3516,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "SteamUI_Settings_Security_Status_State_4" "Steam Guard nicht aktiviert"
 "SteamUI_Settings_Security_Status_State_1_WithTime" "Seit %s1 durch Steam Guard geschützt"
 
-"SteamUI_Settings_Security_Status_TwoFactor" "Durch Steam-Mobile-Authentifikator geschützt"
+"SteamUI_Settings_Security_Status_TwoFactor" "Durch einen Steam-Mobile-Authentifikator geschützt"
 "SteamUI_Settings_Security_ManageTwoFactor_Title" "Steam-Mobile-Authentifikator verwalten"
 "SteamUI_Settings_Security_ManageTwoFactor" "Sie verwenden einen Steam-Mobile-Authentifikator. Um Ihre Steam-Guard-Einstellungen zu verwalten, öffnen Sie bitte die Steam-Anwendung auf Ihrem Smartphone."
 "SteamUI_Settings_Security_ManageTwoFactor_2" "Falls Ihr Smartphone dauerhaft nicht erreichbar ist, kontaktieren Sie den Steam-Support, um Hilfe zu erhalten."

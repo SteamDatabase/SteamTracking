@@ -96,7 +96,6 @@ $ffn
 %\n k_EMsgClientDeregisterWithServer
 %\n k_EMsgClientGameConnect_obsolete
 %\n k_EMsgClientGamesPlayed_obsolete
-%\n k_EMsgClientGetAuthorizedDevices
 %\n k_EMsgClientGetLobbyListResponse
 %\n k_EMsgClientGetUserStatsResponse
 %\n k_EMsgClientMMSJoinLobbyResponse
@@ -195,8 +194,6 @@ $ffn
 &\n!k_EMsgGCHAppCheersGetAllowedTypes
 &\n!k_EMsgGSAssociateWithClanResponse
 &\n!k_EMsgMDSGetDepotManifestResponse
-&\n!k_EMsgSLCRequestUserSessionStatus
-&\n!k_EMsgSLCSharedLicensesLockStatus
 &\n!k_EMsgServiceMethodCallFromClient
 &\n!k_EMsgTestFlushDelayedSQLResponse
 &\n!k_EMsgUCMPublishedFileChildRemove
@@ -325,7 +322,6 @@ $ffn
 (\n#k_EMsgClientServerTimestampResponse
 (\n#k_EMsgClientSetClientAppUpdateState
 (\n#k_EMsgClientSetIgnoreFriendResponse
-(\n#k_EMsgClientSharedLibraryLockStatus
 (\n#k_EMsgClientUCMPublishedFileUpdated
 (\n#k_EMsgContentDescriptionDeltaUpdate
 (\n#k_EMsgFBSBootstrapperPackageRequest
@@ -395,7 +391,6 @@ $ffn
 )\n$k_EMsgBSStoreBankInformationResponse
 )\n$k_EMsgCREUpdateUserPublishedItemVote
 )\n$k_EMsgClientAnonUserLogOn_Deprecated
-)\n$k_EMsgClientDeauthorizeDeviceRequest
 )\n$k_EMsgClientEnableOrDisableDownloads
 )\n$k_EMsgClientFSEnumerateFollowingList
 )\n$k_EMsgClientFSGetIsFollowingResponse
@@ -455,7 +450,6 @@ $ffn
 *\n%k_EMsgAMGetSteamIDForMicroTxnResponse
 *\n%k_EMsgAMGetUserLicenseHistoryResponse
 *\n%k_EMsgAMIsAccountInCaptchaGracePeriod
-*\n%k_EMsgAMNotifySessionDeviceAuthorized
 *\n%k_EMsgAMSetClanPermissionBitsResponse
 *\n%k_EMsgBSGetProPackOrderStatusResponse
 *\n%k_EMsgBSResetPackagePurchaseRateLimit
@@ -492,6 +486,7 @@ $ffn
 +2Hp
 +HpXhE
 +QQ 3K%
++\n#content_descriptorids_including_dlc
 +\n&k_EMsgAMClientAddFriendToGroupResponse
 +\n&k_EMsgAMClientPublishRemovalFromSource
 +\n&k_EMsgAMGameServerAccountDeleteAccount
@@ -536,7 +531,6 @@ $ffn
 ,\n'k_EMsgBSBoaCompraConfirmProductDelivery
 ,\n'k_EMsgBSValidateXsollaSignatureResponse
 ,\n'k_EMsgCEGVersionSetEnableDisableRequest
-,\n'k_EMsgClientAuthorizeLocalDeviceRequest
 ,\n'k_EMsgClientChatGetFriendMessageHistory
 ,\n'k_EMsgClientDPSendSpecialSurveyResponse
 ,\n'k_EMsgClientGetNumberOfCurrentPlayersDP
@@ -572,13 +566,10 @@ $ffn
 -\n(k_EMsgBSRemoveExpiredPaymentDataResponse
 -\n(k_EMsgCEGVersionSetEnableDisableResponse
 -\n(k_EMsgCREGetUserPublishedItemVoteDetails
--\n(k_EMsgClientAuthorizeLocalDeviceResponse
 -\n(k_EMsgClientCheckAppBetaPasswordResponse
 -\n(k_EMsgClientDPCheckSpecialSurveyResponse
--\n(k_EMsgClientGetAuthorizedDevicesResponse
 -\n(k_EMsgClientSiteLicenseGetAvailableSeats
 -\n(k_EMsgClientUFSGetSingleFileInfoResponse
--\n(k_EMsgClientUseLocalDeviceAuthorizations
 -\n(k_EMsgClientVanityURLChangedNotification
 -\n(k_EMsgDRMWorkerProcessAnalyzeFileRequest
 -\n(k_EMsgDRMWorkerProcessDRMAndSignResponse
@@ -1082,7 +1073,7 @@ $ffn
 17CStreamReaderBase
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
-17CUtlPriorityQueueIN7CJobMgr13JobSleeping_tE8CDefLess32CDefUtlPriorityQueueSetIndexFuncIS1_EE
+17CUtlPriorityQueueIN7CJobMgr13JobSleeping_tEPFbRKS1_S3_ENS0_16SleepingSetIndexEE
 17CUtlPriorityQueueIP12CVideoPlayerPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CVideoEncoderX264
 17CWorkItemPipeline
@@ -1133,7 +1124,6 @@ $ffn
 1\n,k_EMsgAMResolveNegativeWalletCreditsResponse
 1\n,k_EMsgAMTwoFactorRecoverAuthenticatorRequest
 1\n,k_EMsgCREUpdateUserPublishedItemVoteResponse
-1\n,k_EMsgClientAuthorizeLocalDeviceNotification
 1\n,k_EMsgClientDPSendSpecialSurveyResponseReply
 1\n,k_EMsgClientEnableOrDisableDownloadsResponse
 1\n,k_EMsgClientFSEnumerateFollowingListResponse
@@ -1254,7 +1244,7 @@ $ffn
 34CWorkItemThreadedGetCachedResponse
 36CWorkItemThreadedWriteResponseToDisk
 37CNetConnectionAsyncDisconnectWorkItem
-384:C\n
+384:H\n
 38CWorkItemNetEncryptionHandshakeEncrypt
 3Cn(
 3HLhx 
@@ -1397,7 +1387,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9Hdd
 9IGv
 9IMemAlloc
 9PE,$
@@ -3701,9 +3690,8 @@ faccessat
 fallocate64
 false
 false"
-false:H\n
 false:J\n
-falseB\tH
+falseB
 fclose
 fcntl
 fdatasync
@@ -3726,7 +3714,6 @@ fnmatch
 follower_count
 fopen
 fopen64
-force_php_generation
 fork
 forum_topic_id
 forward_to_sysid
@@ -3787,7 +3774,7 @@ gettext
 gettimeofday
 getuid
 getwc
-ggen"
+ggen
 gmtime_r
 gnu_get_libc_version
 google.protobuf"G\n
@@ -4347,7 +4334,6 @@ k_EMsgClientDRMDownloadRequest
 k_EMsgClientDRMDownloadResponse
 k_EMsgClientDRMFinalResult
 k_EMsgClientDRMProblemReport
-k_EMsgClientDeauthorizeDevice
 k_EMsgClientDisableTestLicense
 k_EMsgClientEmailAddrInfo
 k_EMsgClientEmailChange3
@@ -4547,7 +4533,6 @@ k_EMsgDRMVariabilityReport
 k_EMsgDRMWorkerProcess
 k_EMsgDRMWorkerProcessSignFile
 k_EMsgDestJobFailed
-k_EMsgDeviceAuthorizationBase
 k_EMsgDirRequest
 k_EMsgDirResponse
 k_EMsgEconBase
@@ -4744,8 +4729,6 @@ k_EMsgReqChallengeTest
 k_EMsgRequestFullStatsBlock
 k_EMsgSCIDRequest
 k_EMsgSCIDResponse
-k_EMsgSLCSharedLibraryChanged
-k_EMsgSLCUserSessionStatus
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
 k_EMsgSMMonitorSpace

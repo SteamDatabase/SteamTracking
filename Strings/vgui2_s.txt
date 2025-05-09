@@ -264,9 +264,10 @@ B#C0D?EQFeG|H
 Bx\r9
 C-Yn
 CVProfile_ExitScope
-CValidator::ClaimArrayMemory(void const*)
-CValidator::ClaimMemory(void const*)
-CValidator::IsClaimed(void const*) const
+CValidator::ClaimArrayMemory(void const*, bool)
+CValidator::ClaimMemory(void const*, bool)
+CValidator::DumpDoubleClaim(char const*) const
+CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CreateInterface

@@ -3,6 +3,7 @@ ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
+${BASE_URL_SHARED_CDN}store_item_assets/
 ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
@@ -981,6 +982,7 @@ ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
+${MEDIA_CDN_URL}store/
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
@@ -1426,7 +1428,6 @@ ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/appdetails
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
-${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors&client=${IN_CLIENT}&origin=${}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/

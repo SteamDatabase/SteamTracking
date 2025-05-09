@@ -175,6 +175,7 @@ message CMsgAddHeader {
 	optional uint32 browser_handle = 1;
 	optional string key = 2;
 	optional string value = 3;
+	optional bool only_send_to_steam = 4;
 }
 
 message CMsgStopLoad {
@@ -755,16 +756,8 @@ message CMsgUnlockH264 {
 
 message CMsgScreenInformationChanged {
 	optional uint32 browser_handle = 1;
-	optional uint32 override_width = 2;
-	optional uint32 override_height = 3;
-	optional uint32 monitor_left = 4;
-	optional uint32 monitor_top = 5;
-	optional uint32 monitor_right = 6;
-	optional uint32 monitor_bottom = 7;
-	optional uint32 usable_left = 8;
-	optional uint32 usable_top = 9;
-	optional uint32 usable_right = 10;
-	optional uint32 usable_bottom = 11;
+	optional double override_width = 2;
+	optional double override_height = 3;
 }
 
 message CMsgClearAllCookies {

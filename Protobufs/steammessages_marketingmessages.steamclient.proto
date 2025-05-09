@@ -57,6 +57,8 @@ enum EMarketingMessageClickLocation {
 	k_EMarketingMessageClickLocation_Button = 2;
 	k_EMarketingMessageClickLocation_DlcCapsule = 3;
 	k_EMarketingMessageClickLocation_HeaderArea = 4;
+	k_EMarketingMessageClickLocation_GameCapsule = 5;
+	k_EMarketingMessageClickLocation_PartnerEvent = 6;
 }
 
 enum EMarketingMessageLookupType {

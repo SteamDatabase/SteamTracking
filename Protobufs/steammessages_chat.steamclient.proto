@@ -541,10 +541,6 @@ message CChatRoom_GetChatRoomGroupState_Response {
 	optional .CChatRoomGroupState state = 1;
 }
 
-message CChatRoom_GetChatRoomGroupSummary_Request {
-	optional uint64 chat_group_id = 1;
-}
-
 message CChatRoom_SetAppChatRoomGroupForceActive_Request {
 	optional uint64 chat_group_id = 1;
 	optional uint32 requesting_app_id = 2;
@@ -1019,7 +1015,6 @@ service ChatRoom {
 	rpc GetMessageHistory (.CChatRoom_GetMessageHistory_Request) returns (.CChatRoom_GetMessageHistory_Response);
 	rpc GetMyChatRoomGroups (.CChatRoom_GetMyChatRoomGroups_Request) returns (.CChatRoom_GetMyChatRoomGroups_Response);
 	rpc GetChatRoomGroupState (.CChatRoom_GetChatRoomGroupState_Request) returns (.CChatRoom_GetChatRoomGroupState_Response);
-	rpc GetChatRoomGroupSummary (.CChatRoom_GetChatRoomGroupSummary_Request) returns (.CChatRoom_GetChatRoomGroupSummary_Response);
 	rpc SetAppChatRoomGroupForceActive (.CChatRoom_SetAppChatRoomGroupForceActive_Request) returns (.CChatRoom_SetAppChatRoomGroupForceActive_Response);
 	rpc SetAppChatRoomGroupStopForceActive (.CChatRoom_SetAppChatRoomGroupStopForceActive_Notification) returns (.NoResponse);
 	rpc AckChatMessage (.CChatRoom_AckChatMessage_Notification) returns (.NoResponse);

@@ -641,6 +641,7 @@ fi
 PLATFORM=ubuntu12_32
 PLATFORM32=ubuntu12_32
 PLATFORM64=ubuntu12_64
+STEAMRT64=steamrt64
 STEAMEXEPATH=$PLATFORM/$STEAMEXE
 
 # common variables for later
@@ -679,14 +680,6 @@ fi
 if [ "$INITIAL_LAUNCH" ]; then
 	if [ -z "${STEAMSCRIPT:-}" ]; then
 		STEAMSCRIPT="/usr/bin/`detect_package`"
-	fi
-
-	# Install any additional dependencies
-	if [ -z "$STEAMOS" ] && [ -z "${WSL_DISTRO_NAME:-}" ]; then
-		STEAMDEPS="`dirname $STEAMSCRIPT`/`detect_package`deps"
-		if [ -f "$STEAMDEPS" -a -f "$STEAMROOT/steamdeps.txt" ]; then
-			"$STEAMDEPS" $STEAMROOT/steamdeps.txt
-		fi
 	fi
 
 	# Create symbolic links for the Steam API
@@ -835,7 +828,7 @@ if [ -x "$supervisor" ]; then
         --terminate-timeout=5 \
         --lock-create \
         --lock-verbose \
-        --lock-file "$STEAMROOT/$PLATFORM64/steam-runtime-sniper.lock" \
+        --lock-file "$STEAMROOT/$PLATFORM64/steam-runtime-steamrt.lock" \
     )
 
 	# Because options are parsed in order, --lock-exclusive needs to be
@@ -847,30 +840,23 @@ else
 	exit 255
 fi
 
-function is_sniper_runtime_valid()
+function is_steamrt_override_up_to_date()
 {
-	local pvverify="$STEAMROOT/$PLATFORM64/steam-runtime-sniper/pressure-vessel/bin/pv-verify"
-	if [ ! -x "$pvverify" ]; then
-		log "Steam runtime not present: forcing unpack"
-		false
-		return
-	fi
-
-	"${exclusive_lock[@]}" "$pvverify"
+	cmp "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.version.txt" "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt/VERSIONS.txt"
 }
 
-function setup_sniper()
+function setup_steamrt_override()
 {
 	# Force the setup script to re-unpack the runtime
-	# There isn't a flag to do this in steam-runtime-sniper.sh as far
+	# There isn't a flag to do this in steam-runtime-steamrt.sh as far
 	# as I could tell
-	rm -fr "$STEAMROOT/$PLATFORM64/steam-runtime-sniper"
+	rm -fr "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt"
 
 	status=0
 	"${exclusive_lock[@]}" \
-	"$STEAMROOT/$PLATFORM64/steam-runtime-sniper.sh" \
-	--unpack-dir="$STEAMROOT/$PLATFORM64" \
-	--runtime=steam-runtime-sniper > /dev/null || status="$?"
+	"$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.sh" \
+	--unpack-dir="$STEAMROOT/$STEAMRT64" \
+	--runtime=steam-runtime-steamrt > /dev/null || status="$?"
 	case "$status" in
 		(0)
 			# Unpacked successfully
@@ -879,25 +865,21 @@ function setup_sniper()
 			log "Could not acquire lock - steam may be running already, continue."
 			;;
 		(*)
-			log "Encountered a problem expanding the sniper runtime, forcing extended file verification."
+			log "Encountered a problem expanding the steamrt runtime, forcing extended file verification."
 			set -- "$@" "-verifyfiles"
 			;;
 	esac
 }
 
-# Check if the sniper runtime correctly unpacked before attempting to use it
-# If the files are in a bad state, steam will fail to start, so lets be aggresive
-# about making sure things are in order before starting steam
-# Note: This should instead be part of the bootstrapper payload instead, that way
-# it will follow the correct validation strategies as the rest of steam
-for i in {1..2}; do
-	if is_sniper_runtime_valid; then
-		break
+# In dev environments we allow overriding the steam runtime with a local payload
+# To use an override runtime:
+#  * Place the runtime files in the relevant platform folder
+#  * Inhibit the bootstrapper via Steam.cfg (otherwise the bootstrapper will overwrite it)
+if [[ -f "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.tar.xz" ]]; then
+	if ! is_steamrt_override_up_to_date; then
+		setup_steamrt_override
 	fi
-
-	log "Unpacking steam runtime: attempt $i"
-	setup_sniper
-done
+fi
 
 # prepend our lib path to LD_LIBRARY_PATH
 export LD_LIBRARY_PATH="$STEAMROOT/$PLATFORM:$STEAMROOT/$PLATFORM/panorama:${LD_LIBRARY_PATH-}"

@@ -208,7 +208,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "SteamUI_JoinDialog_OverrideThrottle"	"Ignora l'attuale limite sulla larghezza di banda"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Salta l'aggiornamento e gioca adesso"
 
-"SteamUI_JoinDialog_ProcessingShaderCache" "Elaborazione in corso degli shader Vulkan..."
+"SteamUI_JoinDialog_ProcessingShaderCache" "Elaborazione degli shader Vulkan in corso..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "Salta"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"Aggiornamento disponibile"
@@ -4555,7 +4555,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_ShaderCache_Enable"		"Abilita il pre-caricamento degli shader (%shaderdiskusagemb% MB pre-caricati)
 	"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Consenti l'elaborazione in background degli shader Vulkan"
-"Steam_Settings_ShaderCache_CurrentlyProcessing"		"Elaborazione in corso di %shaderapp%... (%shaderpercent%%)"
+"Steam_Settings_ShaderCache_CurrentlyProcessing"		"Elaborazione di %shaderapp% in corso... (%shaderpercent%%)"
 
 "Steam_Settings_Compat"				        "Steam Play"
 "Steam_Settings_Compat_Title"			    "Impostazioni di Steam Play"

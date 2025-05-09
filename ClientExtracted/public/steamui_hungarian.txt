@@ -1294,7 +1294,7 @@
 
 "Steam_Rejected_Cdkey_Recover_Feedback" "E-mail került kiküldésre az általad megadott termékkód tulajdonosának."
 
-"Steam_Receipt_AlreadyPurchased" "Ez a Steam fiók már rendelkezik az aktivációs kódhoz tartozó termék(ek)kel. A telepítéshez kattints a „Befejezés”, majd a „Következő” gombra."
+"Steam_Receipt_AlreadyPurchased" "Ez a Steam fiók már rendelkezik az aktiváló kódhoz tartozó termék(ek)kel. A telepítéshez kattints a „Befejezés”, majd a „Következő” gombra."
 "Steam_Receipt_AlreadyPurchased_Headline" "Már rendelkezel a termékkel"
 
 "Steam_InstallAppWizard_Title"	"Telepítés - %game%"

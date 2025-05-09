@@ -1905,7 +1905,7 @@
 					}
 				}
 			}
-						"button_back_left"
+			"button_back_left"
 			{
 				"activators"
 				{
@@ -1913,7 +1913,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default RearLeftLower"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -1926,7 +1926,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default RearRightLower"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -1939,7 +1939,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default RearLeftUpper"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -1952,7 +1952,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Default RearRightUpper"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -2025,7 +2025,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserBack, Navigate Back"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -2038,7 +2038,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserForward, Navigate Forward"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}
@@ -2158,7 +2158,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard LBACK, Shift"
+							"binding"		"controller_action empty_sub_command"
 						}
 					}
 				}

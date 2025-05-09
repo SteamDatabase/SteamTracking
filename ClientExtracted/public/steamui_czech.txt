@@ -1570,7 +1570,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_HardwarePromo_Intro" "Blahopřejeme! Váš počítač splňuje podmínky nabídky. Nabídku můžete uplatnit pomocí registrace na jednom (a nikoli více) účtu služby Steam. Po přihlášení k účtu služby Steam budete mít přístup ke všem hrám z této nabídky, a to nezávisle na použitém počítači."
 "Steam_Legal_HardwarePromo_Unreleased" "Některé produkty obsažené v tomto balíčku nebyly zatím vydány a nejsou v současné době dostupné. Tyto produkty se stanou automaticky dostupnými po svém vydání ve službě Steam. Datum vydání těchto produktů je zatím nejisté a kupující by neměli spoléhat na odhadované datum vydání. Další ustanovení a podmínky se zobrazí po kliknutí na tlačítko „Další“."
 "Steam_Working_HardwarePromo" "Registrování nabídky..."
-"SteamUI_OEMTicketWizard_Title" "Registrovat licenci OEM"
+"SteamUI_OEMTicketWizard_Title" "Registrovat OEM licenci"
 
 "SteamUI_GamesDialog_RightClick_BackupGame" "Zálohovat soubory hry..."
 "SteamUI_GamesDialog_RightClick_BackupApplication" "Zálohovat soubory aplikace..."

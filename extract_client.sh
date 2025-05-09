@@ -27,7 +27,7 @@ echo Extracting archives
 
 for z in linux_archives/*.zip;
 do
-	if [[ "$z" == *"bins"* ]];
+	if [[ "$z" == *"bins"* ]] || [[ "$z" == *"runtime_"* ]];
 	then
 		unzip -q -n "$z" -d linux_bins/
 	else

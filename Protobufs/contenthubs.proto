@@ -1,8 +1,4 @@
-import "steammessages_base.proto";
-
 option optimize_for = SPEED;
-option cc_generic_services = true;
-option (force_php_generation) = true;
 
 enum EContentHubDiscountFilterType {
 	k_EContentHubDiscountFilterType_None = 0;
