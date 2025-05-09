@@ -25,15 +25,15 @@
         const {
             linkMarkType: t,
             onURLPasted: n,
-            schema: a,
-            onClickURL: d = h,
+            schema: o,
+            onClickURL: a = p,
           } = e,
-          u = i.useRef(d);
-        u.current = d;
-        const [p, f] = i.useState(),
+          d = i.useRef(a);
+        d.current = a;
+        const [u, f] = i.useState(),
           [g, v] = i.useState(),
           [w, E] = i.useState(),
-          [P, _] = (0, l.E)(a),
+          [P, _] = (0, l.E)(o),
           y = i.useMemo(
             () =>
               new s.k_({
@@ -46,7 +46,7 @@
                         .find((e) => e.type == t);
                       if (e)
                         return (
-                          u.current(e.attrs.href, s.view),
+                          d.current(e.attrs.href, s.view),
                           s.preventDefault(),
                           !0
                         );
@@ -60,21 +60,36 @@
                       t.shiftKey ||
                       t.altKey
                     ) && (P(e), !0),
-                  clipboardTextParser(e, s, i, l) {
-                    let c,
-                      d = [];
-                    for (; (c = e.match(o.O)); ) {
-                      c.index > 0 && d.push(a.text(e.substring(0, c.index)));
-                      const r = (0, o.S)(c[0]),
-                        s = n && n(r);
-                      s && "default" !== s
-                        ? "remove" !== s && d.push(s)
-                        : d.push(a.text(c[0], [t.create({ href: r })])),
-                        (e = e.substring(c.index + c[0].length));
+                  clipboardTextParser(e, s, i, a) {
+                    const l = m(o, e, t, n);
+                    return l && new r.Ji(r.FK.from(l), s.start(), s.end());
+                  },
+                  handlePaste(e, s, i) {
+                    let a = [];
+                    if (
+                      (i.content.descendants((e, r) => {
+                        if (e.isText) {
+                          const s = m(o, e.text, t, n);
+                          s && a.push({ node: e, pos: r, rgNodes: s });
+                        }
+                      }),
+                      !a.length)
+                    )
+                      return !1;
+                    let l = e.state.tr;
+                    l.selection.empty || l.deleteSelection();
+                    let c = l.selection.from,
+                      d = 0;
+                    for (const e of a) {
+                      const { node: t, pos: n, rgNodes: o } = e,
+                        s = i.content.cut(d, n).append(r.FK.from(o));
+                      l.insert(c, s), (c += s.size + 2), (d = n + t.nodeSize);
                     }
                     return (
-                      e.length && d.push(a.text(e)),
-                      new r.Ji(r.FK.from(d), s.start(), s.end())
+                      l.insert(c, i.content.cut(d)),
+                      l.scrollIntoView(),
+                      e.dispatch(l),
+                      !0
                     );
                   },
                   handleDOMEvents: {
@@ -96,23 +111,37 @@
                   },
                 },
               }),
-            [t, P, n, a],
+            [t, P, n, o],
           );
         (0, c.c$)(y);
         let k = null;
         return (
           w &&
-            p &&
+            u &&
             g &&
-            (k = i.createElement(m, {
+            (k = i.createElement(h, {
               top: g,
-              left: p,
+              left: u,
               href: w.getAttribute("href"),
             })),
           i.createElement(i.Fragment, null, k, _)
         );
       });
-      function m(e) {
+      function m(e, t, n, r) {
+        let s,
+          i = [];
+        for (; (s = t.match(o.O)); ) {
+          s.index > 0 && i.push(e.text(t.substring(0, s.index)));
+          const a = (0, o.S)(s[0]),
+            l = r && r(a);
+          l && "default" !== l
+            ? "remove" !== l && i.push(l)
+            : i.push(e.text(s[0], [n.create({ href: a })])),
+            (t = t.substring(s.index + s[0].length));
+        }
+        if (0 != i.length) return t.length && i.push(e.text(t)), i;
+      }
+      function h(e) {
         const { top: t, left: n, href: o } = e,
           [r, s] = i.useState(0),
           l = i.useRef(null);
@@ -131,7 +160,7 @@
           ),
         );
       }
-      function h(e, t) {
+      function p(e, t) {
         t.open(e);
       }
     },

@@ -60,26 +60,48 @@
                       _.altKey
                     ) && (_(_), !0),
                   clipboardTextParser(_, _, _, _) {
-                    let _,
-                      _ = [];
-                    for (; (_ = _.match(_._)); ) {
-                      _.index > 0 && _.push(_.text(_.substring(0, _.index)));
-                      const _ = (0, _._)(_[0]),
-                        _ = __webpack_require__ && __webpack_require__(_);
-                      _ && "default" !== _
-                        ? "remove" !== _ && _.push(_)
-                        : _.push(
-                            _.text(_[0], [
-                              _.create({
-                                href: _,
-                              }),
-                            ]),
-                          ),
-                        (_ = _.substring(_.index + _[0].length));
+                    const _ = _(_, _, _, __webpack_require__);
+                    return _ && new _._(_._.from(_), _.start(), _.end());
+                  },
+                  handlePaste(_, _, _) {
+                    let _ = [];
+                    if (
+                      (_.content.descendants((_, _) => {
+                        if (_.isText) {
+                          const _ = _(_, _.text, _, __webpack_require__);
+                          _ &&
+                            _.push({
+                              node: _,
+                              pos: _,
+                              rgNodes: _,
+                            });
+                        }
+                      }),
+                      !_.length)
+                    )
+                      return !1;
+                    let _ = _.state._;
+                    _.selection.empty || _.deleteSelection();
+                    let _ = _.selection.from,
+                      _ = 0;
+                    for (const _ of _) {
+                      const {
+                          node: _,
+                          pos: __webpack_require__,
+                          rgNodes: _,
+                        } = _,
+                        _ = _.content
+                          .cut(_, __webpack_require__)
+                          .append(_._.from(_));
+                      _.insert(_, _),
+                        (_ += _.size + 2),
+                        (_ = __webpack_require__ + _.nodeSize);
                     }
                     return (
-                      _.length && _.push(_.text(_)),
-                      new _._(_._.from(_), _.start(), _.end())
+                      _.insert(_, _.content.cut(_)),
+                      _.scrollIntoView(),
+                      _.dispatch(_),
+                      !0
                     );
                   },
                   handleDOMEvents: {
@@ -117,6 +139,26 @@
           _.createElement(_.Fragment, null, _, _)
         );
       });
+      function _(_, _, _, _) {
+        let _,
+          _ = [];
+        for (; (_ = _.match(_._)); ) {
+          _.index > 0 && _.push(_.text(_.substring(0, _.index)));
+          const _ = (0, _._)(_[0]),
+            _ = _ && _(_);
+          _ && "default" !== _
+            ? "remove" !== _ && _.push(_)
+            : _.push(
+                _.text(_[0], [
+                  __webpack_require__.create({
+                    href: _,
+                  }),
+                ]),
+              ),
+            (_ = _.substring(_.index + _[0].length));
+        }
+        if (0 != _.length) return _.length && _.push(_.text(_)), _;
+      }
       function _(_) {
         const { top: _, left: __webpack_require__, href: _ } = _,
           [_, _] = _.useState(0),

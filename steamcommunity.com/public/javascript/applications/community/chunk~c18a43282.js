@@ -4817,14 +4817,14 @@
     },
     30193: (e, t, r) => {
       "use strict";
-      r.d(t, { pN: () => l });
+      r.d(t, { k3: () => d, pN: () => c });
       var i = r(34629),
         n = r(78327),
-        a = r(14947);
-      r(90626);
-      const s = "ː",
-        o = 604800;
-      class l {
+        a = r(14947),
+        s = r(90626);
+      const o = "ː",
+        l = 604800;
+      class c {
         constructor() {
           (this.m_bEmoticonListRequested = !1),
             (this.m_bInitialized = !1),
@@ -4845,10 +4845,10 @@
             : n.TS.COMMUNITY_CDN_URL + "economy/emoticon/" + e;
         }
         static GetEmoticonReplaceRegex() {
-          return l.sm_EmoticonRegex;
+          return c.sm_EmoticonRegex;
         }
         static GetUnvalidatedEmoticonReplaceRegex() {
-          return l.sm_UnvalidatedEmoticonRegex;
+          return c.sm_UnvalidatedEmoticonRegex;
         }
         static BEmoticonFilterMatch(e, t) {
           return (
@@ -4857,14 +4857,14 @@
         }
         static FilterEmoticons(e, t) {
           return t && ":" !== t
-            ? e.filter((e) => l.BEmoticonFilterMatch(e, t))
+            ? e.filter((e) => c.BEmoticonFilterMatch(e, t))
             : e;
         }
         static BStickerFilterMatch(e, t) {
           return e.name.toLowerCase().indexOf(t.toLowerCase()) > -1;
         }
         static FilterStickers(e, t) {
-          return t ? e.filter((e) => l.BStickerFilterMatch(e, t)) : e;
+          return t ? e.filter((e) => c.BStickerFilterMatch(e, t)) : e;
         }
         SearchEmoticons(e, t = 25, r = !0) {
           function i(e) {
@@ -5018,7 +5018,7 @@
           this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
         }
         BuildRecentList(e) {
-          const t = this.GetServerTime() - o,
+          const t = this.GetServerTime() - l,
             r = e.filter(
               ({ last_used: e, time_received: r }) => e || (r && r > t),
             );
@@ -5036,7 +5036,7 @@
             (this.m_rgEmoticons = []),
             (this.m_rgRecentEmoticons = void 0),
             (this.m_rtMostRecentEmoticon = void 0);
-          let t = this.GetServerTime() - o;
+          let t = this.GetServerTime() - l;
           for (let r of e) {
             let e = r.name;
             e.startsWith("^")
@@ -5058,15 +5058,24 @@
             (this.m_bEmoticonListRequested = !1);
         }
       }
-      (l.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
-        (l.sm_UnvalidatedEmoticonRegex = new RegExp(
-          `(?:${s}|:)([a-zA-Z0-9_\\-]+)(?:${s}|:)`,
+      function d(e) {
+        const [t, r] = s.useState(() => e.is_initialized);
+        return (
+          s.useEffect(() => {
+            t || e.BAwaitInitialized().then((e) => r(e));
+          }, [t, e]),
+          t
+        );
+      }
+      (c.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
+        (c.sm_UnvalidatedEmoticonRegex = new RegExp(
+          `(?:${o}|:)([a-zA-Z0-9_\\-]+)(?:${o}|:)`,
           "g",
         )),
-        (0, i.Cg)([a.sH], l.prototype, "m_bInitialized", void 0),
-        (0, i.Cg)([a.sH], l.prototype, "m_rtMostRecentEmoticon", void 0),
-        (0, i.Cg)([a.sH], l.prototype, "m_rtLastStickerOrEffect", void 0),
-        (0, i.Cg)([a.XI], l.prototype, "TrackEmoticonUsage", null);
+        (0, i.Cg)([a.sH], c.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([a.sH], c.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, i.Cg)([a.sH], c.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, i.Cg)([a.XI], c.prototype, "TrackEmoticonUsage", null);
     },
     81477: (e, t, r) => {
       "use strict";
@@ -7129,13 +7138,7 @@
     },
     74410: (e, t, r) => {
       "use strict";
-      r.d(t, {
-        Eo: () => _,
-        V2: () => i,
-        gH: () => m,
-        i1: () => d,
-        j6: () => u,
-      });
+      r.d(t, { Eo: () => _, V2: () => i, gH: () => m, j6: () => u });
       var i,
         n = r(90626),
         a = r(59952),

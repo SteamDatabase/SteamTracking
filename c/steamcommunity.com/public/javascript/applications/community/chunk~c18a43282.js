@@ -5201,11 +5201,12 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       const _ = "ː",
         _ = 604800;
       class _ {
@@ -5448,6 +5449,15 @@
             (this.m_bInitialized = !0),
             (this.m_bEmoticonListRequested = !1);
         }
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(() => _.is_initialized);
+        return (
+          _.useEffect(() => {
+            _ || _.BAwaitInitialized().then((_) => __webpack_require__(_));
+          }, [_, _]),
+          _
+        );
       }
       (_.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
         (_.sm_UnvalidatedEmoticonRegex = new RegExp(
@@ -7613,7 +7623,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

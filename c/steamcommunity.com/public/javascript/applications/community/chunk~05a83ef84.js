@@ -307,10 +307,13 @@
                           _.childCount + _.attrs.order == parseInt(_[1]),
                       ),
                       (0, _._)(/^\s*([-+*])\s$/, _.bullet_list),
-                      (0, _._)(/\*([^*]+)\*/, __webpack_require__.strong),
-                      (0, _._)(/_([^_]+)_/, __webpack_require__.italic),
-                      (0, _._)(/~([^~]+)~/, __webpack_require__.strike),
-                      (0, _._)(/`([^`]+)`/, __webpack_require__.code),
+                      (0, _._)(
+                        /(?<!\w)\*([^*]+)\*/,
+                        __webpack_require__.strong,
+                      ),
+                      (0, _._)(/(?<!\w)_([^_]+)_/, __webpack_require__.italic),
+                      (0, _._)(/(?<!\w)~([^~]+)~/, __webpack_require__.strike),
+                      (0, _._)(/(?<!\w)`([^`]+)`/, __webpack_require__.code),
                       (0, _._)(/^```$/, _.code_block),
                       (0, _._)(/^(#{1,5})\s$/, _.heading, (_) => ({
                         level: _[1].length,
@@ -967,7 +970,7 @@
             };
           })(_, _);
         return (
-          _ && (_ += (0, _._)(_, _)),
+          "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_, _)),
           _.content.forEach((_) => {
             ([_, _] = _(_, _, _.marks, _)),
               ([_, _] = (function (_, _, _, _) {
@@ -991,7 +994,7 @@
                   : (_ += _(_, _, _, _));
           }),
           ([_] = _(_, _, _, _)),
-          _ && (_ += (0, _._)(_)),
+          "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_)),
           _
         );
       }
@@ -1099,7 +1102,9 @@
               ((this.m_state = __webpack_require__.reconfigure({
                 plugins: [..._.plugins, _],
               })),
-              null === (_ = this.m_view) || void 0 === _ || _.updateState(_)),
+              null === (_ = this.m_view) ||
+                void 0 === _ ||
+                _.updateState(this.m_state)),
             () => {
               var _;
               const _ = this.m_view ? this.m_view.state : this.m_state;
@@ -2291,7 +2296,7 @@
                 _,
               ),
               onMouseDown: (_) => {
-                _.preventDefault(), _();
+                0 === _.button && (_.preventDefault(), _());
               },
               disabled: !0 === _,
             },

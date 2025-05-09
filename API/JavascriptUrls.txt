@@ -381,6 +381,7 @@ ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/snowball/
 ${COMMUNITY_CDN_URL}economy/boosterpack/${}?l=${LANGUAGE}
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
+${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}

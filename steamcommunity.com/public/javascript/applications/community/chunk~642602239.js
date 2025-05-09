@@ -431,7 +431,7 @@
         $P: () => y,
         Fw: () => c,
         cU: () => u,
-        fp: () => f,
+        fp: () => h,
         nS: () => w,
         uy: () => n,
       });
@@ -778,7 +778,7 @@
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
-                fields: { item_definitions: { n: 1, c: h, r: !0, q: !0 } },
+                fields: { item_definitions: { n: 1, c: f, r: !0, q: !0 } },
               }),
             g.sm_m
           );
@@ -818,18 +818,18 @@
           return "CQuest_GetCommunityItemDefinitions_Response";
         }
       }
-      class h extends i.Message {
+      class f extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.item_type || a.Sg(h.M()),
+            f.prototype.item_type || a.Sg(f.M()),
             i.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
                 fields: {
                   item_type: {
                     n: 1,
@@ -931,66 +931,6 @@
                   },
                 },
               }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = a.w0(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
-        }
-      }
-      class f extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.appid || a.Sg(f.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  communityitemid: {
-                    n: 2,
-                    br: a.qM.readUint64String,
-                    bw: a.gp.writeUint64String,
-                  },
-                  activate: { n: 3, br: a.qM.readBool, bw: a.gp.writeBool },
-                },
-              }),
             f.sm_m
           );
         }
@@ -1024,6 +964,66 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
+        }
+      }
+      class h extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            h.prototype.appid || a.Sg(h.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  communityitemid: {
+                    n: 2,
+                    br: a.qM.readUint64String,
+                    bw: a.gp.writeUint64String,
+                  },
+                  activate: { n: 3, br: a.qM.readBool, bw: a.gp.writeBool },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = a.w0(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CQuest_ActivateProfileModifierItem_Request";
@@ -1526,7 +1526,7 @@
           (e.ActivateProfileModifierItem = function (e, t) {
             return e.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, o.I8)(f, t),
+              (0, o.I8)(h, t),
               _,
               { ePrivilege: 1 },
             );
@@ -1559,47 +1559,9 @@
     },
     65739: (e, t, r) => {
       "use strict";
-      r.d(t, { h: () => o, s: () => c });
-      var n = r(78327),
-        i = r(14947),
-        s = r(41735),
-        a = r.n(s);
-      class o {
-        constructor() {
-          (this.m_mapEmoticonHovers = i.sH.map()),
-            (this.m_inflightRequests = {});
-        }
-        Get(e) {
-          return this.m_mapEmoticonHovers.has(e) || this.m_inflightRequests[e]
-            ? this.m_mapEmoticonHovers.get(e)
-            : (this.Load(e), null);
-        }
-        BLoaded(e) {
-          return !!this.m_mapEmoticonHovers.get(e);
-        }
-        async Load(e) {
-          const t = `${n.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(n.TS.LANGUAGE)}&origin=${(0, n.xv)()}`;
-          this.m_inflightRequests[e] = !0;
-          try {
-            const { data: r } = await a().get(t);
-            !(function (e) {
-              return (
-                e &&
-                "object" == typeof e &&
-                "number" == typeof e.appid &&
-                "string" == typeof e.app_name
-              );
-            })(r)
-              ? this.m_mapEmoticonHovers.set(e, null)
-              : this.m_mapEmoticonHovers.set(e, r);
-          } catch (t) {
-            this.m_mapEmoticonHovers.set(e, null);
-          } finally {
-            this.m_inflightRequests[e] = !1;
-          }
-        }
-      }
-      const c = new o();
+      r.d(t, { h: () => n, s: () => i });
+      class n {}
+      const i = new n();
     },
     23649: (e, t, r) => {
       "use strict";
@@ -1634,8 +1596,8 @@
         d = r(52038),
         p = r(90024),
         g = r.n(p),
-        h = r(97232),
-        f = r(32754);
+        f = r(97232),
+        h = r(32754);
       const _ = 1576780700;
       let E = class extends i.Component {
         OnEmoticonClick(e) {
@@ -1723,7 +1685,7 @@
                     focusable: !0,
                   },
                   i.createElement(
-                    f.he,
+                    h.he,
                     { toolTipContent: r },
                     i.createElement("img", {
                       src: this.props.useImg,
@@ -1750,9 +1712,9 @@
                     disabled: e,
                   },
                   i.createElement(
-                    f.he,
+                    h.he,
                     { toolTipContent: r },
-                    this.props.buttonIcon || i.createElement(h.nl, null),
+                    this.props.buttonIcon || i.createElement(f.nl, null),
                     a && i.createElement(m.iD, null),
                   ),
                 ))
@@ -1780,8 +1742,8 @@
       }
       var p = r(78327),
         g = r(33737),
-        h = r(76217),
-        f = r(88006),
+        f = r(76217),
+        h = r(88006),
         _ = r(19418);
       class E extends a.Component {
         constructor(e) {
@@ -1794,11 +1756,11 @@
             n = e.length > 1,
             i = n
               ? ({ detail: { button: t } }) => {
-                  t === f.pR.BUMPER_LEFT
+                  t === h.pR.BUMPER_LEFT
                     ? this.setState({
                         activeIndex: Math.max(0, this.state.activeIndex - 1),
                       })
-                    : t === f.pR.BUMPER_RIGHT &&
+                    : t === h.pR.BUMPER_RIGHT &&
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
@@ -1808,7 +1770,7 @@
                 }
               : void 0;
           return a.createElement(
-            h.Z,
+            f.Z,
             { className: _.Picker, onButtonDown: i },
             n && a.createElement(S, null, this.RenderTabs()),
             r,
@@ -1831,7 +1793,7 @@
       }
       function S(e) {
         return a.createElement(
-          h.Z,
+          f.Z,
           { className: _.Tabs, "flow-children": "row" },
           e.children,
         );
@@ -1842,7 +1804,7 @@
       function b(e) {
         const { active: t, children: r, onClick: n } = e;
         return a.createElement(
-          h.Z,
+          f.Z,
           {
             className: (0, m.A)(_.Tab, t && _.Active),
             focusClassName: _.Focus,
@@ -1865,7 +1827,7 @@
         } = e;
         let o = t.map((e, s) =>
           a.createElement(
-            h.Z,
+            f.Z,
             {
               key: i(e),
               className: _.Item,
@@ -1879,7 +1841,7 @@
         return (
           0 === t.length && s && (o = s()),
           a.createElement(
-            h.Z,
+            f.Z,
             { "flow-children": "grid", className: _.ItemList },
             o,
           )
@@ -1893,9 +1855,9 @@
           a.createElement(
             w,
             null,
-            a.createElement(v, { title: t }, a.createElement(B, { ...s })),
+            a.createElement(C, { title: t }, a.createElement(B, { ...s })),
           ),
-          a.createElement(C, { value: n, onChange: r, onSubmit: i }),
+          a.createElement(v, { value: n, onChange: r, onSubmit: i }),
         );
       }
       function M(e) {
@@ -1909,16 +1871,16 @@
             i && a.createElement("div", { className: _.SectionedPageTitle }, i),
             n.map(({ title: e, ...t }) =>
               a.createElement(
-                v,
+                C,
                 { title: e, key: e },
                 a.createElement(B, { ...t }),
               ),
             ),
           ),
-          a.createElement(C, { value: r, onChange: t }),
+          a.createElement(v, { value: r, onChange: t }),
         );
       }
-      function v(e) {
+      function C(e) {
         return a.createElement(
           "div",
           { className: _.Section },
@@ -1926,7 +1888,7 @@
           a.createElement("div", { className: _.SectionContent }, e.children),
         );
       }
-      function C(e) {
+      function v(e) {
         const { value: t, onChange: r, onSubmit: n } = e;
         return a.createElement(
           "div",
@@ -1950,8 +1912,8 @@
       }
       var z = r(42060),
         A = r.n(z),
-        R = r(51272),
-        T = r(81962);
+        T = r(51272),
+        R = r(81962);
       function k(e) {
         return e.recent_emoticons;
       }
@@ -2046,7 +2008,7 @@
                       a.createElement(Y, null),
                     ),
                   renderContent: () =>
-                    a.createElement(j, {
+                    a.createElement(L, {
                       store: t,
                       onItemSelect: (e) => d(e.name),
                     }),
@@ -2162,7 +2124,7 @@
                         a.createElement(Y, null),
                       ),
                     renderContent: () =>
-                      a.createElement(j, {
+                      a.createElement(L, {
                         store: e,
                         onItemSelect: (e) => n(e.name),
                       }),
@@ -2348,11 +2310,11 @@
             renderEmpty: () =>
               i
                 ? a.createElement(I, null, (0, u.we)("#AddonPicker_NoResults"))
-                : a.createElement(L, null),
+                : a.createElement(j, null),
           });
         }
       }
-      function L() {
+      function j() {
         return a.createElement(
           a.Fragment,
           null,
@@ -2370,12 +2332,12 @@
             (0, u.PP)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               a.createElement(
-                R.uU,
+                T.uU,
                 { href: `${p.TS.STORE_BASE_URL}points/shop/c/emoticons` },
                 (0, u.we)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               a.createElement(
-                R.uU,
+                T.uU,
                 { href: `${p.TS.COMMUNITY_BASE_URL}market` },
                 (0, u.we)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
               ),
@@ -2383,7 +2345,7 @@
           ),
         );
       }
-      class j extends a.Component {
+      class L extends a.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -2420,7 +2382,7 @@
                       (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.createElement(
-                          R.uU,
+                          T.uU,
                           {
                             href: `${p.TS.STORE_BASE_URL}points/shop/c/stickers`,
                           },
@@ -2470,7 +2432,7 @@
                       (0, u.PP)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.createElement(
-                          R.uU,
+                          T.uU,
                           {
                             href: `${p.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
@@ -2535,7 +2497,7 @@
                           null,
                           (0, u.we)("#AddonPicker_NoResults"),
                         )
-                      : a.createElement(L, null),
+                      : a.createElement(j, null),
                 },
               ],
             })
@@ -2573,7 +2535,7 @@
                         null,
                         (0, u.we)("#AddonPicker_NoResults"),
                       )
-                    : a.createElement(L, null),
+                    : a.createElement(j, null),
               },
             ],
           });
@@ -2586,7 +2548,7 @@
         return a.createElement(
           "div",
           { className: A().EmoticonItem },
-          a.createElement(T.n, {
+          a.createElement(R.n, {
             emoticon: t.name,
             emoticonHoverStore: r,
             large: n,
@@ -2627,7 +2589,7 @@
           } = e,
           [i] = (0, c.t7)(n, {});
         return a.createElement(
-          T.c,
+          R.c,
           { target: t, title: r, subtitle: null == i ? void 0 : i.GetName() },
           a.createElement("img", {
             src: d(p.TS.COMMUNITY_CDN_URL, r),
@@ -2679,7 +2641,7 @@
           s = i[r],
           [o] = (0, c.t7)(n, {});
         return a.createElement(
-          T.c,
+          R.c,
           { target: t, title: r, subtitle: null == o ? void 0 : o.GetName() },
           a.createElement(
             "div",
@@ -2804,124 +2766,108 @@
     },
     81962: (e, t, r) => {
       "use strict";
-      r.d(t, { n: () => p, c: () => h });
-      var n = r(34629),
-        i = r(75844),
-        s = r(90626),
-        a = r(6336),
-        o = r(30193);
-      function c(e) {
-        const { text: t = "", style: r, children: n } = e;
-        if (null == t) return s.createElement(s.Fragment, null, n);
-        let i;
+      r.d(t, { n: () => p, c: () => f });
+      var n = r(90626),
+        i = r(6336),
+        s = r(30193);
+      function a(e) {
+        const { text: t = "", style: r, children: i } = e;
+        if (null == t) return n.createElement(n.Fragment, null, i);
+        let s;
         if (
-          ((i =
+          ((s =
             t instanceof Array
               ? t
                   .map((e) => (e ? e.toString() : ""))
                   .filter((e) => e.length > 0)
                   .join("\n")
               : t.toString()),
-          1 == s.Children.count(n))
+          1 == n.Children.count(i))
         ) {
-          let e = s.Children.only(n);
-          return s.cloneElement(e, { "data-copystyle": r, "data-copytext": i });
+          let e = n.Children.only(i);
+          return n.cloneElement(e, { "data-copystyle": r, "data-copytext": s });
         }
         return (
           console.log(
-            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${r} copytext=${i}`,
+            `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${r} copytext=${s}`,
           ),
-          s.createElement(s.Fragment, null, n)
+          n.createElement(n.Fragment, null, i)
         );
       }
-      var l = r(52038),
-        m = r(73745),
-        u = r(42060),
-        d = r.n(u);
-      class p extends s.PureComponent {
-        constructor() {
-          super(...arguments),
-            (this.state = { showHover: !1 }),
-            (this.m_ref = s.createRef());
-        }
-        OnMouseEnter(e) {
-          this.setState({ showHover: !0 });
-        }
-        OnMouseLeave(e) {
-          this.setState({ showHover: !1 });
-        }
-        render() {
-          const { emoticon: e, large: t, emoticonHoverStore: r } = this.props,
-            n = `:${e}:`,
-            i = t && r.BLoaded(e) ? r.Get(e).url : o.pN.GetEmoticonURL(e, t);
-          return s.createElement(
-            s.Fragment,
-            null,
-            s.createElement(
-              c,
-              { text: n, style: "merge-adjacent" },
-              s.createElement("img", {
-                src: i,
-                className: (0, l.A)(d().emoticon, t ? d().large : void 0),
-                "data-emoticon": e,
-                alt: e,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-                ref: this.m_ref,
-              }),
-            ),
-            this.state.showHover &&
-              s.createElement(g, {
-                target: this.m_ref.current,
-                store: r,
-                emoticon: e,
-              }),
-          );
-        }
-      }
-      (0, n.Cg)([m.oI], p.prototype, "OnMouseEnter", null),
-        (0, n.Cg)([m.oI], p.prototype, "OnMouseLeave", null);
-      const g = (0, i.PA)((e) => {
-          const { target: t, store: r, emoticon: n } = e,
-            i = r.Get(n);
-          return s.createElement(
-            h,
-            {
-              target: t,
-              title: `:${n}:`,
-              subtitle: i && i.app_name ? i.app_name : void 0,
-            },
-            s.createElement(p, {
-              emoticon: n,
-              emoticonHoverStore: r,
-              large: !0,
+      var o = r(52038),
+        c = r(42060),
+        l = r.n(c),
+        m = r(64753),
+        u = r(88942),
+        d = r(30470);
+      function p(e) {
+        const { emoticon: t, large: r } = e,
+          [i, c] = (0, m.OP)(),
+          [u, d] = n.useState(),
+          p = `:${t}:`,
+          f = s.pN.GetEmoticonURL(t, r);
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(
+            a,
+            { text: p, style: "merge-adjacent" },
+            n.createElement("img", {
+              ...c,
+              src: f,
+              className: (0, o.A)(l().emoticon, r ? l().large : void 0),
+              "data-emoticon": t,
+              alt: t,
+              ref: d,
             }),
-          );
-        }),
-        h = ({ target: e, title: t, subtitle: r, children: n }) =>
-          s.createElement(
-            a.g,
-            {
-              target: e,
-              style: { zIndex: 1700 },
-              className: d().EmoticonHover,
-            },
-            n,
-            s.createElement(
+          ),
+          i && n.createElement(g, { target: u, emoticon: t }),
+        );
+      }
+      function g(e) {
+        const { target: t, emoticon: r } = e,
+          { data: i } = (function (e) {
+            return (0, u.I)({
+              queryKey: ["EmoticonHover", e],
+              queryFn: async () => {
+                const t = `${d.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(d.TS.LANGUAGE)}&origin=${self.origin}`,
+                  r = await fetch(t);
+                if (200 != r.status)
+                  throw `Error fetching emoticon: ${r.status} ${r.statusText}`;
+                return await r.json();
+              },
+            });
+          })(r);
+        return n.createElement(
+          f,
+          {
+            target: t,
+            title: `:${r}:`,
+            subtitle: i && i.app_name ? i.app_name : void 0,
+          },
+          n.createElement(p, { emoticon: r, large: !0 }),
+        );
+      }
+      const f = ({ target: e, title: t, subtitle: r, children: s }) =>
+        n.createElement(
+          i.g,
+          { target: e, style: { zIndex: 1700 }, className: l().EmoticonHover },
+          s,
+          n.createElement(
+            "div",
+            { className: l().Info },
+            n.createElement(
               "div",
-              { className: d().Info },
-              s.createElement(
-                "div",
-                { className: d().Name },
-                t || s.createElement("span", null, " "),
-              ),
-              s.createElement(
-                "div",
-                { className: d().AppName },
-                r || s.createElement("span", null, " "),
-              ),
+              { className: l().Name },
+              t || n.createElement("span", null, " "),
             ),
-          );
+            n.createElement(
+              "div",
+              { className: l().AppName },
+              r || n.createElement("span", null, " "),
+            ),
+          ),
+        );
     },
     97232: (e, t, r) => {
       "use strict";

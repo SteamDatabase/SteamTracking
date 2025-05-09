@@ -1708,45 +1708,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {
-        constructor() {
-          (this.m_mapEmoticonHovers = _._.map()),
-            (this.m_inflightRequests = {});
-        }
-        Get(_) {
-          return this.m_mapEmoticonHovers.has(_) || this.m_inflightRequests[_]
-            ? this.m_mapEmoticonHovers.get(_)
-            : (this.Load(_), null);
-        }
-        BLoaded(_) {
-          return !!this.m_mapEmoticonHovers.get(_);
-        }
-        async Load(_) {
-          const _ = `${_._.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(_)}?l=${encodeURIComponent(_._.LANGUAGE)}&origin=${(0, _._)()}`;
-          this.m_inflightRequests[_] = !0;
-          try {
-            const { data: __webpack_require__ } = await _().get(_);
-            !(function (_) {
-              return (
-                _ &&
-                "object" == typeof _ &&
-                "number" == typeof _.appid &&
-                "string" == typeof _.app_name
-              );
-            })(__webpack_require__)
-              ? this.m_mapEmoticonHovers.set(_, null)
-              : this.m_mapEmoticonHovers.set(_, __webpack_require__);
-          } catch (_) {
-            this.m_mapEmoticonHovers.set(_, null);
-          } finally {
-            this.m_inflightRequests[_] = !1;
-          }
-        }
-      }
+      class _ {}
       const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3195,8 +3157,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { text: _ = "", style: __webpack_require__, children: _ } = _;
@@ -3226,121 +3186,108 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ extends _.PureComponent {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              showHover: !1,
-            }),
-            (this.m_ref = _.createRef());
-        }
-        OnMouseEnter(_) {
-          this.setState({
-            showHover: !0,
-          });
-        }
-        OnMouseLeave(_) {
-          this.setState({
-            showHover: !1,
-          });
-        }
-        render() {
-          const {
-              emoticon: _,
-              large: _,
-              emoticonHoverStore: __webpack_require__,
-            } = this.props,
-            _ = `:${_}:`,
-            _ =
-              _ && __webpack_require__.BLoaded(_)
-                ? __webpack_require__.Get(_).url
-                : _._.GetEmoticonURL(_, _);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
-                text: _,
-                style: "merge-adjacent",
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_().emoticon, _ ? _().large : void 0),
-                "data-emoticon": _,
-                alt: _,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-                ref: this.m_ref,
-              }),
-            ),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                store: __webpack_require__,
-                emoticon: _,
-              }),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMouseEnter", null),
-        (0, _._)([_._], _.prototype, "OnMouseLeave", null);
-      const _ = (0, _._)((_) => {
-          const { target: _, store: __webpack_require__, emoticon: _ } = _,
-            _ = __webpack_require__.Get(_);
-          return _.createElement(
-            _,
-            {
-              target: _,
-              title: `:${_}:`,
-              subtitle: _ && _.app_name ? _.app_name : void 0,
-            },
-            _.createElement(_, {
-              emoticon: _,
-              emoticonHoverStore: __webpack_require__,
-              large: !0,
-            }),
-          );
-        }),
-        _ = ({
-          target: _,
-          title: _,
-          subtitle: __webpack_require__,
-          children: _,
-        }) =>
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { emoticon: _, large: __webpack_require__ } = _,
+          [_, _] = (0, _._)(),
+          [_, _] = _.useState(),
+          _ = `:${_}:`,
+          _ = _._.GetEmoticonURL(_, __webpack_require__);
+        return _.createElement(
+          _.Fragment,
+          null,
           _.createElement(
-            _._,
-            {
-              target: _,
-              style: {
-                zIndex: 1700,
-              },
-              className: _().EmoticonHover,
-            },
             _,
+            {
+              text: _,
+              style: "merge-adjacent",
+            },
+            _.createElement("img", {
+              ..._,
+              src: _,
+              className: (0, _._)(
+                _().emoticon,
+                __webpack_require__ ? _().large : void 0,
+              ),
+              "data-emoticon": _,
+              alt: _,
+              ref: _,
+            }),
+          ),
+          _ &&
+            _.createElement(_, {
+              target: _,
+              emoticon: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { target: _, emoticon: __webpack_require__ } = _,
+          { data: _ } = (function (_) {
+            return (0, _._)({
+              queryKey: ["EmoticonHover", _],
+              queryFn: async () => {
+                const _ = `${_._.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(_)}?l=${encodeURIComponent(_._.LANGUAGE)}&origin=${self.origin}`,
+                  _ = await fetch(_);
+                if (200 != _.status)
+                  throw `Error fetching emoticon: ${_.status} ${_.statusText}`;
+                return await __webpack_require__.json();
+              },
+            });
+          })(__webpack_require__);
+        return _.createElement(
+          _,
+          {
+            target: _,
+            title: `:${__webpack_require__}:`,
+            subtitle: _ && _.app_name ? _.app_name : void 0,
+          },
+          _.createElement(_, {
+            emoticon: __webpack_require__,
+            large: !0,
+          }),
+        );
+      }
+      const _ = ({
+        target: _,
+        title: _,
+        subtitle: __webpack_require__,
+        children: _,
+      }) =>
+        _.createElement(
+          _._,
+          {
+            target: _,
+            style: {
+              zIndex: 1700,
+            },
+            className: _().EmoticonHover,
+          },
+          _,
+          _.createElement(
+            "div",
+            {
+              className: _().Info,
+            },
             _.createElement(
               "div",
               {
-                className: _().Info,
+                className: _().Name,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _().Name,
-                },
-                _ || _.createElement("span", null, " "),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().AppName,
-                },
-                __webpack_require__ || _.createElement("span", null, " "),
-              ),
+              _ || _.createElement("span", null, " "),
             ),
-          );
+            _.createElement(
+              "div",
+              {
+                className: _().AppName,
+              },
+              __webpack_require__ || _.createElement("span", null, " "),
+            ),
+          ),
+        );
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

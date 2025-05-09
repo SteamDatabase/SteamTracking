@@ -12588,7 +12588,7 @@
         Promise.all([
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 83748)),
+        ]).then(__webpack_require__.bind(__webpack_require__, 65247)),
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
@@ -12598,7 +12598,7 @@
                 40893422,
                 2 == _._.EUNIVERSE ? 2581 : 45267781,
               ].includes(_.GetClanAccountID()),
-              _ = _,
+              _ = 1 != _._.EUNIVERSE || _._.is_support || _,
               _ = "partnerEventsRichEditorOptIn",
               _ = _ ? "1" : "0",
               [_, _] = _.useState(() => {
@@ -19454,6 +19454,91 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        const _ = _.createRef(),
+          [__webpack_require__, _] = _.useState(""),
+          _ = _.createRef();
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().FlexRowContainer, _().linkField),
+              onClick: (_) => {
+                _.current &&
+                  _.current.ownerDocument.defaultView.navigator.clipboard
+                    .writeText(_.current.value)
+                    .then((_) => {
+                      _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
+                    })
+                    .catch((_) => {
+                      _(
+                        (0, _._)("#EventDisplay_Share_FailedToCopyToClipboard"),
+                      ),
+                        console.error("Failed to copy link to clipboard:", _);
+                    });
+              },
+            },
+            _.createElement(
+              "span",
+              {
+                className: _().LinkInputLabel,
+              },
+              (0, _._)(
+                _.labelOverride ? _.labelOverride : "#EventDisplay_Share_Link",
+              ),
+            ),
+            _.createElement("textarea", {
+              className: _().LinkInput,
+              ref: _,
+              value: _.eventLink,
+              readOnly: !0,
+            }),
+            document.queryCommandSupported("copy") &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().Button, _().Icon, _().LinkButton),
+                  title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                  },
+                  _.createElement("img", {
+                    className: _().ClipboardIcon,
+                    src: _._,
+                  }),
+                ),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: _().ClipboardText,
+            },
+            __webpack_require__,
+          ),
+        );
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -20097,6 +20182,14 @@
           onPositionChange: _,
         });
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDE4MDEuNSAxNDAwIDE0MDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAxODAxLjUgMTQwMCAxNDA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggaWQ9Imljb25tb25zdHItbGluay0xXzFfIiBmaWxsPSIjRkZGRkZGIiBkPSJNMzYyLjM1MywyMzEwLjU4OGMxNDguMjM1LTE0OC4yMzUsMzg3LjA2LTE0OC4yMzUsNTI3LjA2LDAKCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NAoJYy00MS4xNzcsOC4yMzUtNzQuMTE4LDI0LjcwNi05OC44MjMsNDkuNDExbC0yNDcuMDU5LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy03NC4xMTgsMTk3LjY0NiwwLDI4MAoJYzc0LjExOCw3NC4xMTcsMTk3LjY0Nyw3NC4xMTcsMjgwLDBsMCwwbDc0LjExOC03NC4xMThjNzQuMTE3LDI0LjcwNiwxNDguMjM1LDQxLjE3NywyMjIuMzUzLDMyLjk0MWwtMTcyLjk0LDE3Mi45NDEKCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4egoJIE03NTcuNjQ2LDE5MDcuMDU5TDU5Mi45NDEsMjA4MGM3NC4xMTctOC4yMzUsMTQ4LjIzNSw4LjIzNSwyMTQuMTE3LDMyLjk0MWw3NC4xMTgtNzQuMTE4Yzc0LjExNy03NC4xMTcsMTk3LjY0Ni03NC4xMTcsMjgwLDAKCWM4Mi4zNTMsNzQuMTE4LDc0LjExNywxOTcuNjQ3LDAsMjgwbC0yNTUuMjk0LDI0Ny4wNmMtNzQuMTE4LDc0LjExNy0xOTcuNjQ3LDc0LjExNy0yODAsMAoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0NwoJYzE0OC4yMzUsMTQ4LjIzNSwzODcuMDU5LDE0OC4yMzUsNTI3LjA2LDBsMCwwbDI0Ny4wNTktMjQ3LjA2YzE0OC4yMzUtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5CglTOTA1Ljg4MywxNzY3LjA1OSw3NTcuNjQ2LDE5MDcuMDU5TDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OXoiLz4KPC9zdmc+Cg==";
     },
   },
 ]);
