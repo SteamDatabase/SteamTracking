@@ -64,6 +64,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+IAX5
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -166,6 +167,7 @@ St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
 SteamRealPath
+XxE-
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
