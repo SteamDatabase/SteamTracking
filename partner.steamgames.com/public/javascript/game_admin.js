@@ -1011,7 +1011,7 @@ function MovieUploadComplete( itemid, movieContainer )
 		{
 			// check progress
       group.attr( 'replaced', 0 );
-			CheckMovieConvertStatus( movieContainer );      
+			CheckMovieConvertStatus( movieContainer );
 		}
 		else
 		{
@@ -1031,8 +1031,9 @@ function CheckMovieConvertStatus( movieContainer )
 	var group = movieContainer;
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	var itemid = movieContainer.attr( 'itemid' );
+	var baseitemid = movieContainer.attr( 'baseitemid' );
 	jQuery.ajax( {
-		url: 'https://partner.steamgames.com/admin/game/gettrailerstate/' + itemid,
+		url: 'https://partner.steamgames.com/admin/game/gettrailerstate/' + baseitemid + '/' + itemid,
 		type: 'GET',
 		cache: false
 	} )
