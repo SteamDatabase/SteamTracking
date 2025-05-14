@@ -2591,6 +2591,7 @@ https://confluence.valve.org/display/etc...
 https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
+https://confluence.valve.org/pages/viewpage.action?pageId=386859931
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/

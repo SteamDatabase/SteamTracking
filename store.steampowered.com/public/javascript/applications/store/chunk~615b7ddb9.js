@@ -339,12 +339,17 @@
     },
     60779: (e, t, r) => {
       "use strict";
-      r.d(t, { K: () => i });
+      r.d(t, { K: () => s, r: () => o });
       var a = r(39020),
-        n = r(30470);
-      function i(e) {
+        n = r(30470),
+        i = r(96762);
+      function s(e) {
         const { tagid: t, language: r = n.TS.LANGUAGE } = e;
         return (0, a.MB)(t, r) || String(t);
+      }
+      function o(e, t = n.TS.LANGUAGE) {
+        const r = (0, a.MB)(e, t);
+        return `${n.TS.STORE_BASE_URL}tags/${(0, i.ut)(t)}/${r}`;
       }
     },
     79359: (e, t, r) => {
@@ -1044,9 +1049,9 @@
         G = r(44986),
         q = r(32754),
         F = r(20713),
-        Q = r(30786),
-        W = r(20194),
-        L = r(1035),
+        L = r(30786),
+        Q = r(20194),
+        W = r(1035),
         U = r(34181),
         x = r(17720),
         O = r(4796),
@@ -1883,14 +1888,14 @@
           o = (0, me.Nd)(t),
           l = (function (e) {
             const t = (0, se.KV)();
-            return (0, W.I)({
+            return (0, Q.I)({
               queryKey: ["AppRelevanceStore", "FriendsRecommended", e],
               queryFn: () => le.LoadFriendsRecommendedApp(t, e),
               enabled: E.iA.logged_in,
             });
           })(t),
           u = (function (e) {
-            return (0, W.I)({
+            return (0, Q.I)({
               queryKey: ["AppRelevanceStore", "StoreRelevance", e],
               queryFn: () => le.LoadStoreRelevanceData(e),
               enabled: E.iA.logged_in,
@@ -1904,7 +1909,7 @@
             });
             return e;
           })(),
-          g = (0, W.I)({
+          g = (0, Q.I)({
             queryKey: ["SimilarPlayedAppsLoad", t],
             queryFn: () =>
               p.A.Get().QueueMultipleAppRequests(
@@ -1918,7 +1923,7 @@
               () => d.Fm.Get().GetRecommendingCuratorsForApp(e) || [],
               [e],
             );
-            return (0, W.I)({
+            return (0, Q.I)({
               queryKey: ["RecommendingCurators", e],
               queryFn: () =>
                 Promise.all(
@@ -1952,7 +1957,7 @@
               e
             );
           }, [a]),
-          f = (0, W.I)({
+          f = (0, Q.I)({
             queryKey: ["FollowedCreators", t],
             queryFn: () =>
               O.ac
@@ -1960,7 +1965,7 @@
                 .then((e) => ({ clanInfo: e, type: y[0].type })),
             enabled: !!s && y && y.length > 0,
           }),
-          b = (0, W.I)({
+          b = (0, Q.I)({
             queryKey: ["PlayerSummaries", t, r],
             queryFn: async () => {
               let e = [],
@@ -2259,7 +2264,7 @@
           r.map(
             ({ data: e }) =>
               e &&
-              c.createElement(L.i8, {
+              c.createElement(W.i8, {
                 key: e.m_steamid.ConvertTo64BitString(),
                 "data-miniprofile": "s" + e.m_steamid.ConvertTo64BitString(),
                 persona: e,
@@ -2276,7 +2281,7 @@
           ? c.createElement(
               n.Z,
               { className: ue().FriendBlockCtn, "data-miniprofile": "s" + t },
-              c.createElement(L.i8, {
+              c.createElement(W.i8, {
                 persona: r,
                 size: "Small",
                 statusPosition: "right",
@@ -2485,7 +2490,7 @@
                   "div",
                   { className: ue().ButtonsRowWrap },
                   o.BHasDemo() &&
-                    c.createElement(Q.j, {
+                    c.createElement(L.j, {
                       info: {
                         id: o.GetAppID(),
                         type: (0, N._4)(o.GetStoreItemType(), o.GetAppType()),
@@ -2621,15 +2626,15 @@
           k = P?.ownerWindow || window,
           G = (0, l.ru)(ke),
           [q, F] = c.useState(0),
-          Q = (0, o.b)();
+          L = (0, o.b)();
         (0, C.E)("ArrowLeft", () => x(!1), !0, !0),
           (0, C.E)("Left", () => x(!1), !0, !0),
           (0, C.E)("ArrowRight", () => x(!0), !0, !0),
           (0, C.E)("Right", () => x(!0), !0, !0),
           (0, C.E)("Escape", () => i?.(), !0, !0),
           (0, C.E)("Esc", () => i?.(), !0, !0);
-        const W = c.useMemo(() => Boolean(k.innerWidth < Pe), [k]),
-          { fnGetDiscoveryQueue: L, rgAppIDs: U } = (function (e, t, r) {
+        const Q = c.useMemo(() => Boolean(k.innerWidth < Pe), [k]),
+          { fnGetDiscoveryQueue: W, rgAppIDs: U } = (function (e, t, r) {
             const [a, n] = c.useState([]),
               i = (0, b.m)("DiscoveryQueueWizard"),
               s = async (s) => {
@@ -2647,12 +2652,12 @@
             return { fnGetDiscoveryQueue: s, rgAppIDs: a };
           })(t, p, m);
         c.useEffect(() => {
-          L(!0), d.Fm.Get().HintLoad();
+          W(!0), d.Fm.Get().HintLoad();
         }, []),
           c.useEffect(() => {
             const e = U[B];
-            e != T && (e && e != Ne && Q.AddImpression(e, G), D(e));
-          }, [Q, B, T, U, G]);
+            e != T && (e && e != Ne && L.AddImpression(e, G), D(e));
+          }, [L, B, T, U, G]);
         const x = (e) => {
           const t = v.OQ(B + (e ? 1 : -1), 0, U.length - 1);
           t != B &&
@@ -2847,17 +2852,17 @@
                         style: { "--dragOffsetX": `${Y}px` },
                       },
                       ee(e) &&
-                        c.createElement(Qe, {
+                        c.createElement(Le, {
                           eStoreDiscoveryQueueType: t,
                           storePageFilter: p,
                           rgAppIDs: U,
                           index: B + e,
-                          bShowMinimizedDisplay: W,
+                          bShowMinimizedDisplay: Q,
                           selectedIndex: B,
                           bPreferDemoStorePage: g,
                           mapViewedAppCount: O,
                           fnCloseModal: i,
-                          fnLoadNextQueue: () => L(!1),
+                          fnLoadNextQueue: () => W(!1),
                           fnAdvance: x,
                           bSkipAppRequestPending: Boolean(0 != q),
                           showAOAutoPlayWarning: S,
@@ -2876,7 +2881,7 @@
           ),
         );
       }
-      function Qe(e) {
+      function Le(e) {
         const {
             eStoreDiscoveryQueueType: t,
             storePageFilter: r,
@@ -2918,7 +2923,7 @@
           return (
             l.has(i) ||
               l.set(i, A.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, r)),
-            c.createElement(We, {
+            c.createElement(Qe, {
               ...e,
               key: s,
               selected: b,
@@ -2956,7 +2961,7 @@
           }),
         });
       }
-      function We(e) {
+      function Qe(e) {
         const {
             eStoreDiscoveryQueueType: t,
             fnCloseModal: r,
@@ -3014,7 +3019,7 @@
             i ? R || (N(!0), await o(), k?.token?.reason || N(!1)) : y();
           };
         return c.createElement(
-          Le,
+          We,
           { selected: s, fnFocused: _, fnOnContinue: G, fnCloseModal: r },
           c.createElement(
             "div",
@@ -3137,7 +3142,7 @@
             c.createElement(c.Fragment, null, Boolean(p) && p(a + 1)),
         );
       }
-      function Le(e) {
+      function We(e) {
         const {
             children: t,
             selected: r,
@@ -3297,10 +3302,10 @@
     43188: (e, t, r) => {
       "use strict";
       r.d(t, {
-        y3: () => Q,
+        y3: () => L,
         Gy: () => F,
         W3: () => x,
-        TK: () => W,
+        TK: () => Q,
         u4: () => U,
       });
       var a = r(90626),
@@ -3315,7 +3320,7 @@
         m = r.n(d),
         p = r(12155),
         g = r(2627),
-        _ = r(33737),
+        _ = r(10981),
         y = r(79359),
         f = r(78327),
         b = r(60778),
@@ -3366,14 +3371,14 @@
               );
             })(t, n);
           })(n, r, f),
-          Q = F;
+          L = F;
         a.useEffect(() => {
-          r && Q && (y || i) && !A && w(!0);
-        }, [y, Q, r, i, A]),
+          r && L && (y || i) && !A && w(!0);
+        }, [y, L, r, i, A]),
           a.useEffect(() => {
             A && b && y && B();
           }, [b, A, y, B]);
-        const W = (function (e, t, r, n, i) {
+        const Q = (function (e, t, r, n, i) {
           return a.useCallback(() => {
             0 == e
               ? t(!0)
@@ -3389,10 +3394,10 @@
           }, [i, e, n, r, t]);
         })(R, w, P, k, G);
         a.useEffect(() => {
-          d && (d.current = W);
-        }, [W, d]);
-        const L = t.GetScreenshots("allowed" != h),
-          U = c && L.length > 0 ? L[0] : t.GetAssets().GetMainCapsuleURL();
+          d && (d.current = Q);
+        }, [Q, d]);
+        const W = t.GetScreenshots("allowed" != h),
+          U = c && W.length > 0 ? W[0] : t.GetAssets().GetMainCapsuleURL();
         return a.createElement(
           l.Z,
           {
@@ -3403,7 +3408,7 @@
           a.createElement("img", {
             className: (0, s.A)(m().AppMainCap, 0 != R && m().Hidden),
             src: U,
-            onClick: W,
+            onClick: Q,
           }),
           !i &&
             a.createElement(M, {
@@ -3426,13 +3431,13 @@
             featuredTrailer: C,
             refMicroTrailer: P,
             refMainTrailer: k,
-            loadedAndActive: Q && r,
+            loadedAndActive: L && r,
             setVideoShouldStart: w,
             bMouseOverVideo: T,
             storeItem: t,
             broadcastVideo: G,
             fnSetBroadcastVideo: q,
-            fnTogglePlayPause: W,
+            fnTogglePlayPause: Q,
             bAutoplayVideos: y,
             bVideoShouldStart: b,
             bPlayWithBroadcastPlayer: i,
@@ -3481,8 +3486,8 @@
             bVideoShouldStart: G,
           } = e,
           [q, F] = a.useState(!1),
-          [Q, W] = a.useState(!1),
-          [L, U] = a.useState(!1),
+          [L, Q] = a.useState(!1),
+          [W, U] = a.useState(!1),
           [x, O] = (0, y.M)(A),
           [z, H] = a.useState(!1),
           [V, j] = a.useState(!1),
@@ -3499,10 +3504,10 @@
           X = !!J || !!r;
         a.useEffect(() => {
           let e = !1;
-          B && L && X && (e = 0 === _ || (1 === _ && !V) || (2 === _ && !Z)),
+          B && W && X && (e = 0 === _ || (1 === _ && !V) || (2 === _ && !Z)),
             F(e),
             o?.(k && e);
-        }, [o, _, Z, V, B, k, L, X]),
+        }, [o, _, Z, V, B, k, W, X]),
           R(E, j),
           R(S, Y),
           a.useEffect(() => {
@@ -3559,7 +3564,7 @@
           }, [B, I]),
           a.useEffect(() => {
             const e = (0, h.fm)(() => {
-              W(M?.GetUserInputNeeded()), Y(!M?.IsPaused());
+              Q(M?.GetUserInputNeeded()), Y(!M?.IsPaused());
             });
             return () => e();
           }, [M]);
@@ -3593,7 +3598,7 @@
             a.Fragment,
             null,
             q &&
-              !Q &&
+              !L &&
               a.createElement(
                 l.Z,
                 { focusable: !0, onClick: P, className: m().PlayButton },
@@ -3745,7 +3750,7 @@
         include_platforms: !0,
         include_screenshots: !0,
       };
-      function Q(e) {
+      function L(e) {
         const {
             appID: t,
             focused: r,
@@ -3763,7 +3768,7 @@
             defaultVolume: h,
           } = e,
           [S] = (0, P.t7)(t, F),
-          { bIsIgnored: v } = W(t),
+          { bIsIgnored: v } = Q(t),
           { bIsWishlisted: C } = U(t),
           [E, A] = (0, u.FD)();
         return a.createElement(
@@ -3783,7 +3788,7 @@
           a.createElement(
             "div",
             { className: i().VideoArea },
-            a.createElement(L, { appID: t }),
+            a.createElement(W, { appID: t }),
             a.createElement(B, {
               key: t,
               storeItem: S,
@@ -3805,7 +3810,7 @@
           ),
         );
       }
-      function W(e) {
+      function Q(e) {
         const t = (0, c.q3)(() => N.Fm.Get().BIsGameIgnored(e)),
           r = (0, q.ru)(),
           n = a.useCallback(() => {
@@ -3813,10 +3818,10 @@
           }, [e, r, t]);
         return { bIsIgnored: t, fnUpdateIgnored: n };
       }
-      function L(e) {
+      function W(e) {
         const { appID: t } = e,
           r = (0, f.Qn)(),
-          { bIsIgnored: n, fnUpdateIgnored: c } = W(t);
+          { bIsIgnored: n, fnUpdateIgnored: c } = Q(t);
         return a.createElement(
           "div",
           { className: (0, s.A)(i().IgnoredCtn, n && i().Active) },

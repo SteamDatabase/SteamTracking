@@ -351,12 +351,18 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
         return (0, _._)(_, __webpack_require__) || String(_);
+      }
+      function _(_, _ = _._.LANGUAGE) {
+        const _ = (0, _._)(_, _);
+        return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
