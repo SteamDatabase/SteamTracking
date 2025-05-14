@@ -1178,8 +1178,9 @@
       }
       class _ extends _ {
         bCropped = !1;
+        m_bExtraAssetsV2;
         media;
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
           const _ = (function (_) {
             const _ = _.split(".").pop().toLocaleLowerCase();
             return "webm" == _ || "mp4" == _;
@@ -1193,6 +1194,7 @@
             _ ? _.videoHeight : _.height,
           ),
             (0, _._)(this),
+            (this.m_bExtraAssetsV2 = _),
             (this.media = _);
         }
         ResetImage() {
@@ -1208,6 +1210,9 @@
         }
         BIsVideo() {
           return _._.includes(this.fileType);
+        }
+        BSupportsLanguages() {
+          return this.m_bExtraAssetsV2;
         }
         GetResizeDimension() {
           return null;
@@ -1261,7 +1266,7 @@
                 (_.onload = () => {
                   const _ = new Image();
                   (_.onload = () => {
-                    const _ = new _(_, _, _);
+                    const _ = new _(this.m_bExtraAssetsV2, _, _, _);
                     (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                       (_ = !0),
                       __webpack_require__();

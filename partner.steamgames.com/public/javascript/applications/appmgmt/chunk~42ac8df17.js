@@ -12938,6 +12938,9 @@
             { error: h, needsCrop: y, match: this.type }
           );
         }
+        BSupportsLanguages() {
+          return !0;
+        }
       }
       class d extends m {
         video;

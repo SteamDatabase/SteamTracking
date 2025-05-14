@@ -2069,25 +2069,28 @@
             uploading: (0, _._)("#ImageUpload_Uploading"),
             success: (0, _._)("#ImageUpload_SuccessCard"),
             failed: (0, _._)("#ImageUpload_Failed"),
-          },
-          _ = new Array(),
-          _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
-        for (const _ of _) {
-          if (25 == _) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
-          _.push({
-            label: _,
-            data: _,
-          });
+          };
+        let _ = null;
+        if (_.BSupportsLanguages()) {
+          _ = [];
+          const _ = new Array(),
+            _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
+          for (const _ of _) {
+            if (25 == _) continue;
+            const _ = (0, _._)("#Language_" + (0, _._)(_));
+            _.push({
+              label: _,
+              data: _,
+            });
+          }
+          _.sort((_, _) => _.label.localeCompare(_.label)),
+            _.forEach((_) =>
+              _.push({
+                label: _.label,
+                data: _.data,
+              }),
+            );
         }
-        _.sort((_, _) => _.label.localeCompare(_.label));
-        const _ = [];
-        _.forEach((_) =>
-          _.push({
-            label: _.label,
-            data: _.data,
-          }),
-        );
         const _ = _.IsValidAssetType(
             _.supported,
             _.forceResolution,
@@ -2114,12 +2117,13 @@
           _.createElement(_, {
             asset: _,
           }),
-          _.createElement(_._, {
-            strDropDownClassName: _().DropDownScroll,
-            rgOptions: _,
-            selectedOption: _.language,
-            onChange: (_) => (_.language = _.data),
-          }),
+          _ &&
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _.language,
+              onChange: (_) => (_.language = _.data),
+            }),
           Boolean(_?.length > 1) &&
             _.createElement(_._, {
               rgOptions: _,

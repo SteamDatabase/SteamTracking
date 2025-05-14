@@ -1844,25 +1844,28 @@
             uploading: (0, p.we)("#ImageUpload_Uploading"),
             success: (0, p.we)("#ImageUpload_SuccessCard"),
             failed: (0, p.we)("#ImageUpload_Failed"),
-          },
-          g = new Array(),
-          f = p.A0.GetLanguageListForRealms(r || [l.TU.k_ESteamRealmGlobal]);
-        for (const e of f) {
-          if (25 == e) continue;
-          const t = (0, p.we)("#Language_" + (0, s.Lg)(e));
-          g.push({ label: t, data: e });
+          };
+        let g = null;
+        if (t.BSupportsLanguages()) {
+          g = [];
+          const e = new Array(),
+            t = p.A0.GetLanguageListForRealms(r || [l.TU.k_ESteamRealmGlobal]);
+          for (const n of t) {
+            if (25 == n) continue;
+            const t = (0, p.we)("#Language_" + (0, s.Lg)(n));
+            e.push({ label: t, data: n });
+          }
+          e.sort((e, t) => e.label.localeCompare(t.label)),
+            e.forEach((e) => g.push({ label: e.label, data: e.data }));
         }
-        g.sort((e, t) => e.label.localeCompare(t.label));
-        const h = [];
-        g.forEach((e) => h.push({ label: e.label, data: e.data }));
-        const _ = t.IsValidAssetType(
+        const f = t.IsValidAssetType(
             e.supported,
             e.forceResolution,
             e.forceFileType,
           ),
-          E = _.needsCrop
+          h = f.needsCrop
             ? (0, p.we)("#ImageUpload_NeedsCrop")
-            : _.error
+            : f.error
               ? (0, p.we)("#ImageUpload_Invalid")
               : m[t.status];
         return o.createElement(
@@ -1874,12 +1877,13 @@
             o.createElement(y.sED, null),
           ),
           o.createElement(F, { asset: t }),
-          o.createElement(u.m, {
-            strDropDownClassName: A().DropDownScroll,
-            rgOptions: h,
-            selectedOption: t.language,
-            onChange: (e) => (t.language = e.data),
-          }),
+          g &&
+            o.createElement(u.m, {
+              strDropDownClassName: A().DropDownScroll,
+              rgOptions: g,
+              selectedOption: t.language,
+              onChange: (e) => (t.language = e.data),
+            }),
           Boolean(c?.length > 1) &&
             o.createElement(u.m, {
               rgOptions: c,
@@ -1892,8 +1896,8 @@
           o.createElement(
             "div",
             { className: (0, d.A)(A().FlexColumnContainer) },
-            E,
-            Boolean("uploading" == E) &&
+            h,
+            Boolean("uploading" == h) &&
               o.createElement(
                 "div",
                 { className: v().FlexCenter },
@@ -1905,13 +1909,13 @@
             { className: k().UploadPreviewError },
             t.message,
           ),
-          _.error &&
+          f.error &&
             o.createElement(
               "div",
               { className: k().UploadPreviewError },
-              _.error,
+              f.error,
             ),
-          _.needsCrop &&
+          f.needsCrop &&
             o.createElement(
               o.Fragment,
               null,

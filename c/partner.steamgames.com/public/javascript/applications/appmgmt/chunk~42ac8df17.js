@@ -14036,6 +14036,9 @@
             }
           );
         }
+        BSupportsLanguages() {
+          return !0;
+        }
       }
       class _ extends _ {
         video;
