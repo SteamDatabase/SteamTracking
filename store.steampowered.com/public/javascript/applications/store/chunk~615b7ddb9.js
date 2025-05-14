@@ -3765,7 +3765,7 @@
           [S] = (0, P.t7)(t, F),
           { bIsIgnored: v } = W(t),
           { bIsWishlisted: C } = U(t),
-          E = (0, u.er)();
+          [E, A] = (0, u.FD)();
         return a.createElement(
           l.Z,
           { className: (0, s.A)(i().AppVideoCtn, "AppVideoCtn") },
@@ -3775,9 +3775,10 @@
             (0, o.we)("#Sale_OnWishlist"),
           ),
           E &&
-            a.createElement(u.$o, {
+            a.createElement(u.Ff, {
+              eDisplay: A,
               className: i().DeckVerifiedLogo,
-              category: S.GetPlatforms().steam_deck_compat_category,
+              storeItem: S,
             }),
           a.createElement(
             "div",

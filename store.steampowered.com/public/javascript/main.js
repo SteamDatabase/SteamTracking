@@ -2596,11 +2596,9 @@ function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur )
 	{
 		this.$elThumbs.removeClass( 'focus' );
 		this.$elItems.removeClass( 'focus' );
-		this.$elItems.attr( 'aria-hidden', true );
 
 		$J( this.$elThumbs[nIndex] ).addClass('focus');
 		$J( this.$elItems[nIndex] ).addClass('focus');
-		$J( this.$elItems[nIndex] ).attr( 'aria-hidden', false );
 		if ( typeof GDynamicStore != 'undefined' && GDynamicStore.m_bLoadComplete ) {
 			GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible(this.$elItems[nIndex]);
 		}

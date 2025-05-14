@@ -35,6 +35,7 @@
         StatusItemRow: "_3YILl4NAgWEBENeTALTmag",
         StatusContainer: "_320wsExrFkK8JCKq34EPB4",
         StatusText: "_3j7xEYXhDVTYD9KZdi1pe8",
+        Complete: "_24ZiusCfsjchtN07ukXmeQ",
         Incomplete: "_3fh36YRxdJwX9pjhykK0Hs",
         IncompleteUrgent: "_14JsBkqWndayJN4RREWF45",
         StatusTodoContainer: "_2a4m-BvtYILAvxLV2JlbiP",
@@ -1388,28 +1389,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ArtworkDimensionTooSmall: "_1m0PpUctuGTw-Jma50hi2v",
-        UploadPreviewCtn: "_34UWtR_ugfBbP2GT9UNyZB",
-        UploadPreviewButtonsCtn: "_3rKybFjcU5JGIfziRxbuNt",
-        UploadPreviewDelete: "_260mOfOKtRiiYz6UiaZS_w",
-        UploadPreviewButton: "_19Fl6VCN7JZgGShsQY_p95",
-        UploadPreviewError: "_14nIWrGmXJICEe4YEEcdWS",
-        UploadPreviewWarning: "_13jPeHck1h76bmmxJ-csvw",
-        UploadPreview: "mOxVUSRnTr3nIwMW_T0fY",
-        PreviewImgCtn: "_1gWyQDmPFiSh-p1BD5TC1k",
-        PreviewImgInfo: "_15NFxbc1Jv0dEJJpjDrtri",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
-        DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
-        ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
-        SelectImageButton: "_3Cd9cpywFS-01PilCrgOQo",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Ctn: "_2L6sVk9vOgKcXO6DgZHpJ9",
       };
     },
@@ -1564,38 +1543,6 @@
         Success: "zNkywkFbUJio86FBwBWwx",
         FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
-        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
-        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
-        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
-        TopLeft: "Clgi---P85XXv25yLZwB0",
-        Top: "_2Z9VyBAzofV3JvK__dECbX",
-        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
-        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
-        Middle: "_1HecozzoSZfUZSci9dLkxN",
-        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
-        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
-        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
-        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
-        Bottom: "sIHlK9sN2255-irERXD_V",
-        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
-        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
-        top: "_1iRW1Msfh60zHqD-xe4EAk",
-        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
-        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
-        right: "_15t6A4l27DY4KRL1aAUTTS",
-        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
-        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
-        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
-        middle: "_1CS75ZrrDXna6xatw5ZvPR",
-        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
-        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
-        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
-        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
     chunkid: (module) => {
@@ -1794,13 +1741,6 @@
         selected: "boNOGnexLhWO9Nd0e6-0A",
         nickname: "_2dKJqMZUnKQIInZReBkcRI",
         mentionSearchMatch: "_2_0t_pDYqkDefMC0gDZV8G",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
-        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
-        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2371,6 +2311,14 @@
           )),
             (this.m_storeItemID = (0, _._)(this.m_storeItemKey));
         }
+        bHasAssociatedItem() {
+          return (
+            (1 == this.m_oMessage.association_type ||
+              2 == this.m_oMessage.association_type ||
+              5 == this.m_oMessage.association_type) &&
+            this.m_oMessage.associated_id > 0
+          );
+        }
         BIsDirty() {
           return this.m_bDirty;
         }
@@ -2627,6 +2575,15 @@
         }
         GetUserMessageFilterCount() {
           return _(this.m_oAdditionalRestrictions);
+        }
+        FlattenUserMessageFilterToFlattened() {
+          return (
+            (_ = this.m_oAdditionalRestrictions),
+            _?.user_filters?.children?.length > 0
+              ? _.user_filters.children.map((_) => _.children).flat()
+              : []
+          );
+          var _;
         }
         GetCustomLegalText() {
           return this.m_oTemplateVars.custom_legal_text || "";
@@ -15287,58 +15244,64 @@
       }
       function _(_) {
         const {
-          complete: _,
-          urgent: __webpack_require__,
-          overrideLabel: _,
-          overrideText: _,
-        } = _;
-        let _ = _;
-        return (
-          !_ && _
-            ? (_ = (0, _._)("#Dashboard_UpcomingEvents_Status_Complete"))
-            : _ ||
-              _ ||
-              (_ = (0, _._)("#Dashboard_UpcomingEvents_Status_Incomplete")),
-          _.createElement(
-            "div",
-            {
-              className: _.StatusContainer,
-            },
-            !_ && (0, _._)("#Dashboard_UpcomingEvents_Status_Text"),
-            !!_ && _,
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _.StatusText,
-                },
-                _,
-              ),
-            !_ &&
-              _.createElement(
-                "span",
-                {
-                  className: (0, _._)(
-                    _.StatusText,
-                    __webpack_require__ && _.IncompleteUrgent,
-                    !__webpack_require__ && _.Incomplete,
-                  ),
-                },
-                _,
-              ),
-          )
+            complete: _,
+            urgent: __webpack_require__,
+            overrideLabel: _,
+            overrideText: _,
+          } = _,
+          _ = ("boolean" == typeof _ && _) || 1 == _,
+          _ = ("boolean" == typeof _ && !_) || 0 == _,
+          _ = "boolean" != typeof _ && 2 == _;
+        return _.createElement(
+          "div",
+          {
+            className: _.StatusContainer,
+          },
+          !_ && (0, _._)("#Dashboard_UpcomingEvents_Status_Text"),
+          !!_ && _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: (0, _._)(_.StatusText, _.Complete),
+              },
+              _ ?? (0, _._)("#Dashboard_UpcomingEvents_Status_Complete"),
+            ),
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: (0, _._)(
+                  _.StatusText,
+                  __webpack_require__ && _.IncompleteUrgent,
+                  !__webpack_require__ && _.Incomplete,
+                ),
+              },
+              _ ?? (0, _._)("#Dashboard_UpcomingEvents_Status_Incomplete"),
+            ),
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.StatusText,
+              },
+              _ ?? (0, _._)("#Dashboard_UpcomingEvents_Status_Incomplete"),
+            ),
         );
       }
       function _(_) {
         const {
-          complete: _,
-          urgent: __webpack_require__,
-          label: _,
-          status: _,
-          tooltip: _,
-          actionStatus: _,
-          actionUrl: _,
-        } = _;
+            complete: _,
+            urgent: __webpack_require__,
+            label: _,
+            status: _,
+            tooltip: _,
+            actionStatus: _,
+            actionUrl: _,
+          } = _,
+          _ = ("boolean" == typeof _ && _) || 1 == _,
+          _ = ("boolean" == typeof _ && !_) || 0 == _,
+          _ = "boolean" != typeof _ && 2 == _;
         return _.createElement(
           "div",
           {
@@ -15358,11 +15321,11 @@
                 _.createElement(
                   "span",
                   {
-                    className: _.StatusTodoLabelCheck,
+                    className: (0, _._)(_.StatusTodoLabelCheck, _.Complete),
                   },
                   (0, _._)("#Dashboard_UpcomingEvents_Checked"),
                 ),
-              !_ &&
+              _ &&
                 _.createElement(
                   "span",
                   {
@@ -15373,6 +15336,14 @@
                     ),
                   },
                   (0, _._)("#Dashboard_UpcomingEvents_Unchecked"),
+                ),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.StatusTodoLabelCheck,
+                  },
+                  (0, _._)("#Dashboard_UpcomingEvents_Info"),
                 ),
               _.createElement(
                 "span",
@@ -55470,7 +55441,7 @@
       }
       function _(_) {
         const { oEditableSpotlight: _ } = _,
-          _ = (0, _.useMemo)(() => ["spotlight_art", "old_spotlight_art"], []),
+          _ = (0, _.useMemo)(() => ["spotlight_art"], []),
           _ = (0, _.useMemo)(() => [_._.k_ESteamRealmGlobal], []),
           _ = (0, _.useCallback)(
             (_, _, _, _, _, _, _) => {
@@ -60209,7 +60180,11 @@
         const { oEditableMessage: _ } = _,
           _ = _.GetUserMessageFilters();
         (0, _._)("and" == _.clause, "Unexpected usefilter structure");
-        const _ = (0, _._)(() => _.BIsNoFilterRequired());
+        const [_, _, _] = (0, _._)(() => [
+          _.BIsNoFilterRequired(),
+          _(_),
+          _.bHasAssociatedItem(),
+        ]);
         return _.createElement(
           "div",
           {
@@ -60227,6 +60202,14 @@
               "Required",
             ),
           ),
+          Boolean(_ && _) &&
+            _.createElement(
+              "div",
+              {
+                className: _.InfoStylesWithIcon,
+              },
+              "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
+            ),
           Boolean(!_) &&
             _.createElement(_, {
               andFilter: _,
@@ -60244,6 +60227,13 @@
             },
           }),
         );
+      }
+      function _(_) {
+        if (1 == _.GetUserMessageFilterCount()) {
+          const _ = _.FlattenUserMessageFilterToFlattened()[0].filter_type;
+          return 2 == _ || 4 == _;
+        }
+        return !1;
       }
       function _(_) {
         const { andFilter: _, oEditableMessage: __webpack_require__ } = _;
@@ -64254,78 +64244,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapAppToMMStats = new Map();
-        m_mapAppToMMStatsPromises = new Map();
-        GetKey(_, _, _) {
-          return `${_}_${_}_${_}`;
-        }
-        async LoadAppMarketingMessageStats(_, _, _) {
-          const _ = this.GetKey(_, _, _);
-          return (
-            this.m_mapAppToMMStatsPromises.has(_) ||
-              this.m_mapAppToMMStatsPromises.set(
-                _,
-                this.InternalLoadAppMarketingMessageStats(_, _, _),
-              ),
-            this.m_mapAppToMMStatsPromises.get(_)
-          );
-        }
-        async InternalLoadAppMarketingMessageStats(_, _, _) {
-          let _ = null;
-          try {
-            const _ = this.GetKey(_, _, _),
-              _ =
-                _._.PARTNER_BASE_URL +
-                "promotion/marketingmessages/ajaxgetsnrmetrics",
-              _ = {
-                sessionid: _._.SESSIONID,
-                appid: _,
-                rtStartDate: _,
-                rtEndDate: _,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (
-              200 == _?.status &&
-              1 == _?.data?.success &&
-              _?.data?.marketing_message_total
-            )
-              return (
-                this.m_mapAppToMMStats.set(_, _.data.marketing_message_total),
-                _.data.marketing_message_total
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CFeaturingStatsStore.InternalLoadAppMarketingMessageStats failed: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_FeaturingStatsStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-      }
       function _(_) {
         const { marketingMessageID: _ } = _,
           _ = (0, _._)(),
@@ -64432,9 +64351,6 @@
                   className: _.LiveStatsCtn,
                 },
                 _.createElement(_, {
-                  oMarketingMessage: _,
-                }),
-                _.createElement(_, {
                   gid: _.gid,
                 }),
               ),
@@ -64512,15 +64428,6 @@
             );
       }
       function _(_) {
-        const { oMarketingMessage: _ } = _;
-        return 1 == _.association_type && _.start_date && _.end_date
-          ? _.createElement(_, {
-              appid: _.associated_id,
-              oMarketingMessage: _,
-            })
-          : null;
-      }
-      function _(_) {
         let { label: _, count: __webpack_require__, color: _ } = _,
           _ = `${Math.min((__webpack_require__ / 2e7) * 100, 100)}%`;
         return _.createElement(
@@ -64567,44 +64474,6 @@
             _,
           )
         );
-      }
-      function _(_) {
-        const { appid: _, oMarketingMessage: __webpack_require__ } = _,
-          _ = (function (_, _, _) {
-            const [_, _] = _.useState(null);
-            return (
-              _.useEffect(() => {
-                _ ||
-                  _.Get()
-                    .LoadAppMarketingMessageStats(_, _, _)
-                    .then((_) => _(_));
-              }, [_, _, _, _]),
-              _
-            );
-          })(_, __webpack_require__.start_date, __webpack_require__.end_date);
-        return _ && 0 != _.impression
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.ViewsCtn, _.ViewsCol),
-              },
-              _.createElement(_, {
-                text: "SNR click-through rate",
-                clicks: _.views,
-                impressions: _.impression,
-              }),
-              _.createElement(_, {
-                label: "SNR Impressions",
-                count: _.impression,
-                color: "#70c3ff",
-              }),
-              _.createElement(_, {
-                label: "SNR Page Visits",
-                count: _.views,
-                color: "white",
-              }),
-            )
-          : null;
       }
       function _(_) {
         const { flags: _ } = _;
@@ -68178,6 +68047,8 @@
       let _;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapPartnerToContactInfo = new Map();
@@ -68265,6 +68136,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -92410,67 +92282,6 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.stats || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  stats: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.rt_time_hour || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -92545,6 +92356,73 @@
         }
         getClassName() {
           return "CMarketingMessageClickedHourlyStats";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.stats || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  stats: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  clicked_stats: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
         }
       }
       class _ extends _.Message {
@@ -102841,43 +102719,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = new (class {
-        m_mapEmoticonHovers = _._.map();
-        m_inflightRequests = {};
-        Get(_) {
-          return this.m_mapEmoticonHovers.has(_) || this.m_inflightRequests[_]
-            ? this.m_mapEmoticonHovers.get(_)
-            : (this.Load(_), null);
-        }
-        BLoaded(_) {
-          return !!this.m_mapEmoticonHovers.get(_);
-        }
-        async Load(_) {
-          const _ = `${_._.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(_)}?l=${encodeURIComponent(_._.LANGUAGE)}&origin=${(0, _._)()}`;
-          this.m_inflightRequests[_] = !0;
-          try {
-            const { data: __webpack_require__ } = await _().get(_);
-            !(function (_) {
-              return (
-                _ &&
-                "object" == typeof _ &&
-                "number" == typeof _.appid &&
-                "string" == typeof _.app_name
-              );
-            })(__webpack_require__)
-              ? this.m_mapEmoticonHovers.set(_, null)
-              : this.m_mapEmoticonHovers.set(_, __webpack_require__);
-          } catch (_) {
-            this.m_mapEmoticonHovers.set(_, null);
-          } finally {
-            this.m_inflightRequests[_] = !1;
-          }
-        }
-      })();
+      const _ = new (class {})();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -109006,6 +108848,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -109015,7 +108858,19 @@
             nHeight: _,
             setImage: _,
           } = _,
-          _ = _.useMemo(() => ["sale_header"], []),
+          _ = _.useMemo(
+            () => [
+              {
+                sKey: "dummy",
+                fnGetLabelText: () => "unknown",
+                nWidth: _,
+                nHeight: _,
+                bEnforceDimensions: !1,
+                artworkType: "sale_header",
+              },
+            ],
+            [_, _],
+          ),
           _ = _.useMemo(
             () => ({
               width: _,
@@ -109137,9 +108992,7 @@
                           ) {
                             const _ = _[0],
                               _ = (0, _._)() + _.GetAccountID() + "/",
-                              _ = _._.GetExtensionStringForFileType(
-                                _.file_type,
-                              ),
+                              _ = (0, _._)(_.file_type),
                               _ = _ + _.image_hash + _,
                               _ = _ + _.thumbnail_hash + _,
                               _ = {
@@ -110823,79 +110676,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            onDropFiles: _,
-            renderDesciption: __webpack_require__,
-            elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
-          } = _,
-          [_, _] = (0, _._)(_),
-          [_, _] = (0, _._)(_, {
-            accept: "image/png, image/jpeg, image/gif, image/webp",
-            multiple: !0,
-          });
-        return _.createElement(
-          "div",
-          {
-            ..._,
-            className: (0, _._)(
-              _ ? _().DragAndDropContainerDragging : _().DragAndDropContainer,
-              "DragAndDropContainer",
-            ),
-          },
-          Boolean(__webpack_require__) && __webpack_require__(),
-          _.createElement(
-            "div",
-            null,
-            _ || (0, _._)("#ImagePicker_DragAndDrop"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().ImageUploadBar,
-            },
-            _,
-            _.createElement(
-              "label",
-              {
-                onClick: _,
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#ImagePicker_OrBrowse"),
-                " ",
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().SelectImageButton,
-                },
-                (0, _._)("#selectimage_select_file"),
-              ),
-            ),
-          ),
-          _,
-          _.children,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -110903,404 +110683,246 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            imageUploader: _,
-            rgSupportArtwork: __webpack_require__,
-            strOverrideDragAndDropText: _,
-            forceResolution: _,
-            localizedPrimaryImage: _,
-            elAdditonalButtons: _,
-            rgRealmList: _,
-          } = _,
-          [_, _] = (0, _._)(() => [
-            _.GetUploadImages(),
-            _._.Get().GetCurEditLanguage(),
-          ]),
-          _ = _.useCallback(
-            async (_) => {
-              let _ = Array.from(_),
-                _ = !0;
-              for (let _ = 0; _ < _.length; _++) {
-                const _ = _[_],
-                  _ = (0, _._)(_?.name, _);
-                try {
-                  const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(
-                    _,
-                    _,
-                    __webpack_require__,
-                    _,
-                  )),
-                    _ ||
-                      (console.error(
-                        "ArtworkUploader.OnDropFiles: failed on i=" +
-                          _ +
-                          " file=" +
-                          _.name,
-                      ),
-                      (0, _._)(
-                        _.createElement(_._, {
-                          strDescription: (0, _._)(
-                            "#ImagePicker_Error",
-                            _.name,
-                          ),
-                        }),
-                        window,
-                      ));
-                } catch (_) {
-                  let _ = (0, _._)(_);
-                  console.error(
-                    "ArtworkUploader.OnDropFiles: " + _.strErrorMsg,
-                    _,
-                  ),
-                    (0, _._)(
-                      _.createElement(_._, {
-                        strDescription: (0, _._)(
-                          "#EventError_Code",
-                          _.strErrorMsg,
-                        ),
-                      }),
-                      window,
-                    );
-                }
-              }
-              return _;
-            },
-            [_, _, _, _, __webpack_require__],
-          );
-        return _.createElement(
-          _,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
-          },
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewCtn,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.file + "_" + _.uploadTime,
-                  asset: _,
-                  supported: __webpack_require__,
-                  forceResolution: _,
-                  forceFileType: _ && _.file_type,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              await _.UploadAllImages(
-                _,
-                _,
-                __webpack_require__,
-                _,
-                _ && _.file_type,
-              );
-            },
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            imageUploader: _,
-            fnOnUploadImageRequested: __webpack_require__,
-          } = _,
-          [_] = (0, _._)(() => [_.GetUploadImages()]);
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-            },
-            className: _().UploadPreviewButtonsCtn,
-          },
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
-                style: {
-                  margin: "8px",
-                },
-                onClick: __webpack_require__,
-              },
-              (0, _._)("#ImageUpload_Upload"),
-            ),
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
-                style: {
-                  margin: "8px",
-                },
-                onClick: _.ClearImages,
-              },
-              (0, _._)("#ImageUpload_Clear"),
-            ),
-        );
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            asset: _,
-            fnOnRemove: __webpack_require__,
-            supported: _,
-            languageRealms: _,
-          } = _,
-          _ = _.map((_) => {
-            let _ = (0, _._)("#EventEditor_ArtworkType_" + _);
-            "spotlight" == _ &&
-              (_ = (0, _._)("#EventEditor_ArtworkType_store_spotlight"));
-            const _ = _._[_];
-            let _;
-            _ &&
-              !_.bDisableEnforceDimensions &&
-              (_ += ` - ${_.width}x${_.height}`),
-              (_.BIsOriginalMinimumDimensions(_) && (0, _._)(_.fileType, _)) ||
-                (_ = _().ArtworkDimensionTooSmall);
-            return {
-              label: _,
-              data: _,
-              strOptionClass: _,
-            };
-          }),
-          _ = {
-            pending: (0, _._)("#ImageUpload_Pending"),
-            uploading: (0, _._)("#ImageUpload_Uploading"),
-            success: (0, _._)("#ImageUpload_SuccessCard"),
-            failed: (0, _._)("#ImageUpload_Failed"),
-          },
-          _ = new Array(),
-          _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
-        for (const _ of _) {
-          if (25 == _) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
-          _.push({
-            label: _,
-            data: _,
-          });
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_filesToUpload = _._.array();
+        m_strUploadPath = null;
+        m_fnUploadSuccessCallback = null;
+        m_bSynchronousUpload = !1;
+        constructor(_, _, _) {
+          (0, _._)(this),
+            (this.m_strUploadPath = _),
+            (this.m_fnUploadSuccessCallback = _),
+            (this.m_bSynchronousUpload = _);
         }
-        _.sort((_, _) => _.label.localeCompare(_.label));
-        const _ = [];
-        _.forEach((_) =>
-          _.push({
-            label: _.label,
-            data: _.data,
-          }),
-        );
-        const _ = _.IsValidAssetType(
-            _.supported,
-            _.forceResolution,
-            _.forceFileType,
-          ),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status];
-        return _.createElement(
-          "div",
-          {
-            className: _().UploadPreview,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().UploadPreviewDelete,
-              onClick: () => __webpack_require__(_),
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(_, {
-            asset: _,
-          }),
-          _.createElement(_._, {
-            strDropDownClassName: _().DropDownScroll,
-            rgOptions: _,
-            selectedOption: _.language,
-            onChange: (_) => (_.language = _.data),
-          }),
-          Boolean(_.length > 1) &&
-            _.createElement(_._, {
-              rgOptions: _.filter((_) => "hero" !== _.data),
-              selectedOption: _.type || _[0].data,
-              onChange: (_) => (_.type = _.data),
-            }),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FlexColumnContainer),
-            },
-            _,
-            Boolean("uploading" == _) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexCenter,
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().UploadPreviewError,
-            },
-            _.message,
-          ),
-          _.error &&
-            _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewError,
-              },
-              _.error,
-            ),
-          _.needsCrop &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
-                        });
-                      }
-                      console.log(
-                        "ArtworkUploadEmbeddedDialog trying to crop non image",
-                        _.fileType,
-                        _.type,
-                      );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
-            ),
-        );
-      });
-      function _(_) {
-        const { asset: _ } = _;
-        return _._.includes(_.fileType)
-          ? _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      asset: _,
+        GetFnOnUploadSuccess() {
+          return this.m_fnUploadSuccessCallback;
+        }
+        SetFnOnUploadSuccess(_) {
+          this.m_fnUploadSuccessCallback = _;
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(_) {
+          this.m_strUploadPath = _;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        isImageFile(_) {
+          return _.type.startsWith("image/");
+        }
+        isVideoFile(_) {
+          return _.type.startsWith("video/");
+        }
+        isSubtitleTextFile(_) {
+          return (
+            _.type.startsWith("text/") ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
+          );
+        }
+        async AddImageForLanguage(_, _, _, _) {
+          let _ = !1;
+          return (
+            await new Promise((_) => {
+              if (this.isImageFile(_)) {
+                const _ = new FileReader();
+                (_.onload = () => {
+                  const _ = new Image();
+                  (_.onload = () => {
+                    const _ = new _._(_, _, _, (0, _._)(_), _);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
+                      (_ = !0),
+                      _();
+                  }),
+                    (_.onerror = (_) => {
+                      console.error(
+                        "CCloudImageUploader failed to load the image, details",
+                        _,
+                      ),
+                        (_ = !1),
+                        _();
                     }),
-                    (0, _._)(_),
-                  ),
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-              _.createElement(
-                "video",
-                {
-                  height: 120,
-                  controls: !1,
-                  autoPlay: !0,
-                  loop: !0,
-                  muted: !0,
-                },
-                _.createElement("source", {
-                  src: _.dataUrl,
+                    (_.src = _.result.toString());
                 }),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                style: {
-                  backgroundImage: `url(${_.dataUrl})`,
-                },
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-            );
-      }
-      function _(_) {
-        const { asset: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            closeModal: __webpack_require__,
-          },
-          _.createElement(
-            "video",
-            {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
-              src: _.dataUrl,
+                  _.readAsDataURL(_);
+              } else if (this.isVideoFile(_)) {
+                const _ = document.createElement("video");
+                (_.preload = "metadata"),
+                  _.addEventListener("loadedmetadata", () => {
+                    const _ = new _._(_, _, _, (0, _._)(_));
+                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
+                      (_ = !0),
+                      _();
+                  }),
+                  (_.onerror = (_) => {
+                    console.error(
+                      "CCloudImageUploader failed to load the video, details",
+                      _,
+                    ),
+                      (_ = !1),
+                      _();
+                  }),
+                  (_.src = URL.createObjectURL(_));
+              } else
+                this.isSubtitleTextFile(_)
+                  ? ((this.m_filesToUpload = [
+                      ...this.m_filesToUpload,
+                      new _._(_, _, (0, _._)(_)),
+                    ]),
+                    (_ = !0),
+                    _())
+                  : (console.error(
+                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                      _,
+                      _.type,
+                    ),
+                    (_ = !1));
             }),
-          ),
-        );
+            _
+          );
+        }
+        async UploadAllImages(_, _, _, _, _) {
+          const _ = {};
+          let _ = {};
+          for (const _ of this.m_filesToUpload)
+            if ("pending" === _.status) {
+              const _ = _.IsValidAssetType(_, _, _);
+              if (!_.error && !_.needsCrop) {
+                _.status = "uploading";
+                const _ = `${_.uploadTime}/${_.file.name}`;
+                (_[_] = this.UploadFile(
+                  _.file,
+                  _.file.name,
+                  _.language,
+                  _.match,
+                )),
+                  this.m_bSynchronousUpload && (_[_] = await _[_]);
+              }
+            }
+          return (
+            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
+            Object.keys(_).forEach((_) => {
+              const _ = _[_],
+                _ = this.m_filesToUpload.find(
+                  (_) => `${_.uploadTime}/${_.file.name}` === _,
+                );
+              if (_)
+                if (_ && 1 === _.success) {
+                  _.status = "success";
+                  const _ = (0, _._)(_.language, _, _);
+                  this.m_fnUploadSuccessCallback(
+                    _.image_hash,
+                    _.file_name,
+                    _,
+                    (function (_) {
+                      switch (_) {
+                        case 2:
+                          return "image/gif";
+                        case 1:
+                          return "image/jpeg";
+                        case 3:
+                          return "image/png";
+                        case 4:
+                          return "video/mp4";
+                        case 5:
+                          return "video/webm";
+                        case 6:
+                          return "text/vtt";
+                        case 7:
+                          return "text/srt";
+                        case 10:
+                          return "image/webp";
+                      }
+                      return null;
+                    })(_.file_type),
+                    _.type.artworkType,
+                    _.width,
+                    _.height,
+                  );
+                } else (_.status = "failed"), (_.message = _.message);
+            }),
+            _
+          );
+        }
+        async UploadFile(_, _, _, _, _, _) {
+          let _ = null;
+          const _ = new FormData();
+          _.append("assetfile", _, _),
+            _.append("sessionid", _._.SESSIONID),
+            _.append("elangauge", "" + _),
+            _.append("originalname", _),
+            _?.length > 0 &&
+              _.append(
+                "resize",
+                _.map((_) => _.width + "x" + _.height).join(","),
+              ),
+            _?.artworkType && _.append("arttype", _.artworkType);
+          const _ = (0, _._)(_);
+          if (!_)
+            return {
+              success: 8,
+              message: "Invalid file extension, cannot determine mimetype",
+            };
+          _.append("mimetype", _);
+          try {
+            _ = await _().post(this.m_strUploadPath, _, {
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            });
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.log("CCloudImageUploader.UploadFile failed ", _, _),
+              (_ = _.response);
+          }
+          return _?.data;
+        }
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             strUploadAjaxURL: _,
             fnOnUploadSuccess: __webpack_require__,
             bSynchronousUpload: _,
+            rgSupportArtwork: _,
           } = _,
-          [_] = (0, _.useState)(new _._(_, __webpack_require__, _ ?? !1));
+          [_] = (0, _.useState)(new _(_, __webpack_require__, _ ?? !1)),
+          _ = (0, _._)(_);
         return (
           (0, _.useEffect)(() => {
             _.GetFnOnUploadSuccess() != __webpack_require__ &&
               _.SetFnOnUploadSuccess(__webpack_require__),
               _.GetUploadPath() != _ && _.SetUploadPath(_);
           }, [_, __webpack_require__, _]),
-          _.createElement(_, {
+          _.createElement(_._, {
             ..._,
             imageUploader: _,
+            rgImageOptions: _,
           })
         );
       }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
+        (0, _._)([_._], _.prototype, "UploadAllImages", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -112896,8 +112518,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { text: _ = "", style: __webpack_require__, children: _ } = _;
@@ -112927,118 +112547,108 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ extends _.PureComponent {
-        state = {
-          showHover: !1,
-        };
-        m_ref = _.createRef();
-        OnMouseEnter(_) {
-          this.setState({
-            showHover: !0,
-          });
-        }
-        OnMouseLeave(_) {
-          this.setState({
-            showHover: !1,
-          });
-        }
-        render() {
-          const {
-              emoticon: _,
-              large: _,
-              emoticonHoverStore: __webpack_require__,
-            } = this.props,
-            _ = `:${_}:`,
-            _ =
-              _ && __webpack_require__.BLoaded(_)
-                ? __webpack_require__.Get(_).url
-                : _._.GetEmoticonURL(_, _);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              {
-                text: _,
-                style: "merge-adjacent",
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_().emoticon, _ ? _().large : void 0),
-                "data-emoticon": _,
-                alt: _,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-                ref: this.m_ref,
-              }),
-            ),
-            this.state.showHover &&
-              _.createElement(_, {
-                target: this.m_ref.current,
-                store: __webpack_require__,
-                emoticon: _,
-              }),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMouseEnter", null),
-        (0, _._)([_._], _.prototype, "OnMouseLeave", null);
-      const _ = (0, _._)((_) => {
-          const { target: _, store: __webpack_require__, emoticon: _ } = _,
-            _ = __webpack_require__.Get(_);
-          return _.createElement(
-            _,
-            {
-              target: _,
-              title: `:${_}:`,
-              subtitle: _ && _.app_name ? _.app_name : void 0,
-            },
-            _.createElement(_, {
-              emoticon: _,
-              emoticonHoverStore: __webpack_require__,
-              large: !0,
-            }),
-          );
-        }),
-        _ = ({
-          target: _,
-          title: _,
-          subtitle: __webpack_require__,
-          children: _,
-        }) =>
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { emoticon: _, large: __webpack_require__ } = _,
+          [_, _] = (0, _._)(),
+          [_, _] = _.useState(),
+          _ = `:${_}:`,
+          _ = _._.GetEmoticonURL(_, __webpack_require__);
+        return _.createElement(
+          _.Fragment,
+          null,
           _.createElement(
-            _._,
-            {
-              target: _,
-              style: {
-                zIndex: 1700,
-              },
-              className: _().EmoticonHover,
-            },
             _,
+            {
+              text: _,
+              style: "merge-adjacent",
+            },
+            _.createElement("img", {
+              ..._,
+              src: _,
+              className: (0, _._)(
+                _().emoticon,
+                __webpack_require__ ? _().large : void 0,
+              ),
+              "data-emoticon": _,
+              alt: _,
+              ref: _,
+            }),
+          ),
+          _ &&
+            _.createElement(_, {
+              target: _,
+              emoticon: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { target: _, emoticon: __webpack_require__ } = _,
+          { data: _ } = (function (_) {
+            return (0, _._)({
+              queryKey: ["EmoticonHover", _],
+              queryFn: async () => {
+                const _ = `${_._.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(_)}?l=${encodeURIComponent(_._.LANGUAGE)}&origin=${self.origin}`,
+                  _ = await fetch(_);
+                if (200 != _.status)
+                  throw `Error fetching emoticon: ${_.status} ${_.statusText}`;
+                return await __webpack_require__.json();
+              },
+            });
+          })(__webpack_require__);
+        return _.createElement(
+          _,
+          {
+            target: _,
+            title: `:${__webpack_require__}:`,
+            subtitle: _ && _.app_name ? _.app_name : void 0,
+          },
+          _.createElement(_, {
+            emoticon: __webpack_require__,
+            large: !0,
+          }),
+        );
+      }
+      const _ = ({
+        target: _,
+        title: _,
+        subtitle: __webpack_require__,
+        children: _,
+      }) =>
+        _.createElement(
+          _._,
+          {
+            target: _,
+            style: {
+              zIndex: 1700,
+            },
+            className: _().EmoticonHover,
+          },
+          _,
+          _.createElement(
+            "div",
+            {
+              className: _().Info,
+            },
             _.createElement(
               "div",
               {
-                className: _().Info,
+                className: _().Name,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _().Name,
-                },
-                _ || _.createElement("span", null, " "),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().AppName,
-                },
-                __webpack_require__ || _.createElement("span", null, " "),
-              ),
+              _ || _.createElement("span", null, " "),
             ),
-          );
+            _.createElement(
+              "div",
+              {
+                className: _().AppName,
+              },
+              __webpack_require__ || _.createElement("span", null, " "),
+            ),
+          ),
+        );
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -113636,7 +113246,963 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = (_) => /^\d+$/.test(_);
+      function _(_) {
+        const { sharedFileID: _ } = _,
+          _ = (0, _._)("SharedFileSnippet"),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(() => ({
+            sharedfileid: _,
+            title: (0, _._)("#Loading"),
+            description: "",
+            type: "",
+            previewurl: "",
+            appid: 0,
+            url: _._.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _,
+          }));
+        (0, _.useEffect)(() => {
+          (async () => {
+            try {
+              const _ = await _._.LoadSharedFileDynamicData([_], _);
+              if (!_.token.reason && _.length > 0) {
+                const _ = _[0];
+                _(_.url) &&
+                  (_.url =
+                    _._.COMMUNITY_BASE_URL +
+                    "sharedfiles/filedetails/?id=" +
+                    _.url),
+                  _(_),
+                  console.log(_[0]),
+                  _(!0);
+              }
+            } catch (_) {
+              const _ = (0, _._)(_);
+              console.error("SharedFileSnippet: " + _.strErrorMsg, _);
+            }
+          })();
+        }, [_, _]);
+        let _ = void 0 !== _.personnaname && _.personnaname.length > 0;
+        return _.createElement(
+          "a",
+          {
+            href: _.url,
+            className: _().DynamicLinkBox,
+            "data-modal-content-sizetofit": !!_.bSizeToFit,
+            "data-appid": _.appid,
+            "data-publishedfileid": _,
+          },
+          _.createElement("img", {
+            className: _().DynamicLink_Preview,
+            src: _.previewurl,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().DynamicLink_Content,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().DynamicLink_Name,
+              },
+              _.title,
+            ),
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "span",
+                {
+                  className: _().DynamicLink_Type,
+                },
+                _.type,
+              ),
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_Author,
+                },
+                (0, _._)(
+                  "#EventEditor_Author",
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().DynamicLink_AuthorName,
+                    },
+                    _.personnaname,
+                  ),
+                ),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _().DynamicLink_Description,
+              },
+              _.description,
+            ),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = class extends _.Component {
+        state = {
+          bLoading: this.props.announcementGID
+            ? !_._.BHasClanAnnouncementGID(this.props.announcementGID)
+            : !_._.BHasClanAnnouncementGID(this.props.eventGID),
+          bFailedLoad: !1,
+        };
+        m_cancelSignal = _().CancelToken.source();
+        componentDidMount() {
+          this.HandleLoadEventInfo();
+        }
+        async HandleLoadEventInfo() {
+          const {
+            appid: _,
+            strVanity: _,
+            announcementGID: __webpack_require__,
+            eventGID: _,
+            strGroupVanity: _,
+          } = this.props;
+          let _ = this.props.clanSteamID;
+          try {
+            if (this.state.bLoading) {
+              if (void 0 !== _) {
+                _ = (await _._.LoadOGGClanInfoForIdentifier(_)).clanSteamID;
+              } else if (void 0 !== _) {
+                _ = (await _._.LoadOGGClanInfoForGroupVanity(_)).clanSteamID;
+              }
+              const _ = _._.LoadPartnerEventGeneric(
+                _,
+                _,
+                _,
+                __webpack_require__,
+                0,
+              );
+              let _ = await _;
+              await Promise.all([
+                _._.Get().QueueAppRequest(_.appid, {
+                  include_assets: !0,
+                  include_basic_info: !0,
+                  include_release: !0,
+                }),
+              ]),
+                this.setState({
+                  bFailedLoad: !1,
+                  bLoading: !1,
+                });
+            }
+          } catch (_) {
+            this.HandleError(_);
+          }
+        }
+        HandleError(_) {
+          let _ = (0, _._)(_);
+          const {
+            eventGID: __webpack_require__,
+            announcementGID: _,
+            strGroupVanity: _,
+            strVanity: _,
+          } = this.props;
+          console.error(
+            "EventSnippet hit error on announceGID " +
+              _ +
+              " eventGID " +
+              __webpack_require__ +
+              " strVanity " +
+              _ +
+              " strGroupVanity " +
+              _ +
+              " error: " +
+              _.strErrorMsg,
+          ),
+            this.setState({
+              bFailedLoad: !0,
+            });
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("component unmounted");
+        }
+        render() {
+          const {
+            appid: _,
+            announcementGID: _,
+            eventGID: __webpack_require__,
+            strURL: _,
+            fnFilterImageURLsForKnownFailures: _,
+            fnImageFailureCallback: _,
+          } = this.props;
+          if (this.state.bFailedLoad) return (0, _._)(_);
+          if (this.state.bLoading) return _.createElement(_._, null);
+          let _ =
+            void 0 !== _
+              ? _._.GetClanEventFromAnnouncementGID(_)
+              : _._.GetClanEventModel(__webpack_require__);
+          if (null == _) return (0, _._)(_);
+          let _ = (0, _._)(_._.LANGUAGE),
+            _ = _.GetImageForSizeAsArrayWithFallback(
+              "capsule",
+              _,
+              _._.capsule_main,
+            );
+          _ && (_ = _(_));
+          let _ = _.GetNameWithFallback(_),
+            _ = _.GetSubTitleWithSummaryFallback(_),
+            _ = _._.Get().GetApp(_)?.GetName(),
+            _ = (0, _._)(_.GetStartTimeAndDateUnixSeconds());
+          return _.createElement(
+            _._,
+            {
+              eventModel: _,
+              route: _._.k_eView,
+              className: _().DynamicLinkBox,
+              "data-modal-content-sizetofit": !0,
+              "data-appid": _,
+            },
+            _.createElement(_._, {
+              className: _().DynamicLink_Preview,
+              rgSources: _,
+              onIncrementalError: (_, _, _) => _ && _(_),
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().DynamicLink_Content,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_Author,
+                },
+                (0, _._)(
+                  28 == _.type
+                    ? "#EventDisplay_Share_Announcement"
+                    : "#EventDisplay_Share_Event",
+                  _,
+                ),
+                _.createElement(
+                  "span",
+                  {
+                    className: _().DynamicLink_Date,
+                  },
+                  _,
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_Name,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DynamicLink_Type,
+                  },
+                  _,
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().DynamicLink_Description,
+                },
+                _,
+              ),
+            ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      let _ = class extends _.Component {
+        state = {
+          bSummaryMode: !0,
+          bLoadedMetaData: !1,
+        };
+        async componentDidMount() {
+          let _ =
+            "https://sketchfab.com/oembed?url=https://sketchfab.com/models/" +
+            this.props.modelID;
+          try {
+            let _ = await _().get(_);
+            this.setState({
+              bLoadedMetaData: !0,
+              data: _.data,
+            });
+          } catch (_) {
+            this.setState({
+              bError: !0,
+            }),
+              console.error(
+                "SketchFabEmbed failed to load: " + (0, _._)(_).strErrorMsg,
+              );
+          }
+        }
+        OnSketchFabClick() {
+          this.state.bLoadedMetaData &&
+            this.setState({
+              bSummaryMode: !1,
+            });
+        }
+        render() {
+          const { modelID: _ } = this.props;
+          return this.state.bError
+            ? _.createElement(
+                "div",
+                {
+                  className: _().dynamiclink_box,
+                  onClick: this.OnSketchFabClick,
+                },
+                _.createElement("span", null, _),
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#EventDisplay_SketchFab_Error_Network"),
+                ),
+              )
+            : this.state.bSummaryMode
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().dynamiclink_box,
+                    onClick: this.OnSketchFabClick,
+                  },
+                  Boolean(this.state.bLoadedMetaData)
+                    ? _.createElement(
+                        _.Fragment,
+                        null,
+                        _.createElement("img", {
+                          className: _().dynamiclink_preview,
+                          src: this.state.data.thumbnail_url,
+                        }),
+                        _.createElement("img", {
+                          className: _().sketchfab_play_overlay_image,
+                        }),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().dynamiclink_content,
+                          },
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().dynamiclink_name,
+                            },
+                            _.createElement(
+                              "span",
+                              {
+                                className: _().dynamiclink_type,
+                              },
+                              (0, _._)("#EventDisplay_Sketchfab"),
+                            ),
+                            _.createElement(
+                              "div",
+                              null,
+                              this.state.data.title,
+                              " ",
+                            ),
+                          ),
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().dynamiclink_author,
+                            },
+                            this.state.data.author_name,
+                          ),
+                        ),
+                      )
+                    : _.createElement(_._, {
+                        size: "medium",
+                      }),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().sketchfabmodelembedded,
+                  },
+                  _.createElement("iframe", {
+                    className: _().sketchfabmodelembedded,
+                    src:
+                      "https://sketchfab.com/models/" +
+                      this.props.modelID +
+                      "/embed?autostart=1",
+                    frameBorder: 0,
+                    allowFullScreen: !0,
+                  }),
+                );
+        }
+      };
+      (0, _._)([_._], _.prototype, "OnSketchFabClick", null),
+        (_ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapDefIDtoDefinition = new Map();
+        m_mapDefIDToPromise = new Map();
+        m_defChangeCallback = new Map();
+        m_mapCategoryAndClassToItems = new Map();
+        m_mapCategoryAndClassToPromise = new Map();
+        m_defCategoryAndClassToChangeCallback = new Map();
+        m_SteamInterface = null;
+        GetItem(_) {
+          return this.m_mapDefIDtoDefinition.get(_);
+        }
+        GetItemChangeCallback(_) {
+          return (
+            this.m_defChangeCallback.has(_) ||
+              this.m_defChangeCallback.set(_, new _._()),
+            this.m_defChangeCallback.get(_)
+          );
+        }
+        GetKeyCategoryAndClass(_, _) {
+          return _ + "_" + _;
+        }
+        GetItemsByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return this.m_mapCategoryAndClassToItems.get(_);
+        }
+        GetItemsByCategoryAndClassCallback(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return (
+            this.m_defCategoryAndClassToChangeCallback.has(_) ||
+              this.m_defCategoryAndClassToChangeCallback.set(_, new _._()),
+            this.m_defCategoryAndClassToChangeCallback.get(_)
+          );
+        }
+        async LoadRewardDefinition(_) {
+          return (
+            this.m_mapDefIDToPromise.has(_) ||
+              this.m_mapDefIDToPromise.set(
+                _,
+                this.InternalLoadRewardDefinition(_),
+              ),
+            this.m_mapDefIDToPromise.get(_)
+          );
+        }
+        async InternalLoadRewardDefinition(_) {
+          if (this.m_mapDefIDtoDefinition.has(_))
+            return this.m_mapDefIDtoDefinition.get(_);
+          const _ = _._.Init(_._);
+          _.Body().set_definitionids([_]);
+          let _ = null;
+          try {
+            const _ = await _._.QueryRewardItems(
+              this.m_SteamInterface.GetServiceTransport(),
+              _,
+            );
+            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
+              (0, _._)(
+                1 == _.Body().definitions()?.length,
+                `Requested definition ID ${_} and receive # ${_.Body().definitions()?.length}, expecting exactly one.`,
+              );
+              const _ = _.Body().definitions()[0].toObject();
+              return (
+                this.m_mapDefIDtoDefinition.set(_, _),
+                this.GetItemChangeCallback(_).Dispatch(_),
+                _
+              );
+            }
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            null
+          );
+        }
+        async LoadRewardDefinitionByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return (
+            this.m_mapCategoryAndClassToPromise.has(_) ||
+              this.m_mapCategoryAndClassToPromise.set(
+                _,
+                this.InternalLoadRewardDefinitionByCategoryAndClass(_, _),
+              ),
+            this.m_mapCategoryAndClassToPromise.get(_)
+          );
+        }
+        async InternalLoadRewardDefinitionByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          if (this.m_mapCategoryAndClassToItems.has(_))
+            return this.m_mapCategoryAndClassToItems.get(_);
+          const _ = _._.Init(_._);
+          _.Body().set_community_item_classes([_]),
+            _.Body().set_filter_match_any_category_tags([_]);
+          let _ = null;
+          try {
+            const _ = await _._.QueryRewardItems(
+              this.m_SteamInterface.GetServiceTransport(),
+              _,
+            );
+            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
+              const _ = _.Body()
+                .definitions()
+                .map((_) => _.toObject());
+              return (
+                _.forEach((_) => {
+                  this.m_mapDefIDtoDefinition.has(_.defid) ||
+                    (this.m_mapDefIDtoDefinition.set(_.defid, _),
+                    this.GetItemChangeCallback(_.defid).Dispatch(_));
+                }),
+                this.m_mapCategoryAndClassToItems.set(_, _),
+                this.GetItemsByCategoryAndClassCallback(_, _).Dispatch(_),
+                ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                  console.log(
+                    "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
+                      _.length,
+                  ),
+                _
+              );
+            }
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            null
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_LoyaltyRewardDefinitionStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {
+          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL);
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { defid: _, url: __webpack_require__ } = _,
+          _ = (function (_) {
+            const [_, __webpack_require__] = (0, _.useState)(
+              _.Get().GetItem(_),
+            );
+            return (
+              (0, _.useEffect)(() => {
+                _ || _.Get().LoadRewardDefinition(_);
+              }, [_, _]),
+              (0, _._)(_.Get().GetItemChangeCallback(_), __webpack_require__),
+              _
+            );
+          })(_);
+        if (!_ || !_.community_item_data) return null;
+        const _ = _.appid,
+          _ = _.community_item_data.item_image_large,
+          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
+        return (
+          "dev" == _._.WEB_UNIVERSE &&
+            console.log("reward itemdef", (0, _._)(_)),
+          _.createElement(
+            "div",
+            {
+              className: _().Ctn,
+            },
+            _.createElement(
+              _._,
+              {
+                toolTipContent: _.community_item_data.item_description,
+              },
+              _.createElement("img", {
+                src: _,
+                alt: _.community_item_data.item_title,
+              }),
+            ),
+          )
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { inputType: _, _: __webpack_require__ } = _,
+          [_] = (0, _._)(__webpack_require__, (0, _._)(_), {});
+        let _ = "bundle" == _ ? "bundle" : "sub" == _ ? "sub" : "game";
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.AppSummaryWidgetCtn, "AppSummaryWidgetCtn"),
+          },
+          _.createElement(_._, {
+            _: __webpack_require__,
+            type: _,
+            bShowDemoButton: 1 == _?.GetAppType(),
+            bAllowTwoLinesForHeader: !0,
+          }),
+        );
+      }
+      const _ =
+          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
+        _ =
+          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
+        _ =
+          /(?:steamcommunity\.com|valve\.org\/community|community\.\S+\.steam\.dev|steam\.dev\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
+        _ =
+          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
+        _ = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
+        _ = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
+        _ = /twitter\.com\/(\w+)(\/?)$/i,
+        _ = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
+        _ = /twitch\.tv\/(\w+)(\/?)$/i,
+        _ =
+          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
+        _ =
+          /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.steamchina\.com)\/points\/shop\/.*reward\/(\d+)$/i;
+      let _ = null;
+      function _() {
+        return (
+          null == _ &&
+            (_ = (0, _._)()
+              ? [
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                ]
+              : [
+                  {
+                    urlRegExp: new RegExp(/youtu.be|youtube.com/i),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(
+                      /community.+sharedfiles\/filedetails\/\?id=\d+/i,
+                    ),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                  {
+                    urlRegExp: new RegExp(_),
+                    fnBBComponent: _,
+                  },
+                ]),
+          _
+        );
+      }
+      function _(_) {
+        return _.useMemo(
+          () =>
+            (function (_) {
+              return _().find((_) => !!_.urlRegExp.exec(_));
+            })(_),
+          [_],
+        );
+      }
+      function _(_, _) {
+        if ((0, _._)()) return null;
+        const _ = (0, _._)(_);
+        return void 0 !== _?.strVideoID
+          ? _.createElement(_._, {
+              videoID: _.strVideoID,
+              nStartSeconds: _.nStartSeconds,
+              classNameAlign: "",
+              classNameSize: _().sizeFull,
+              bShowVideoImmediately: !1,
+            })
+          : (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        if ((0, _._)()) return null;
+        const _ = new RegExp(_).exec(_);
+        if (_ && _.length > 1) {
+          const _ = _[1];
+          if (_?.length > 0) {
+            let _ =
+              "https://medal.tv/clip/" +
+              _ +
+              "/?autoplay=0&donate=0" +
+              (_ && _.event ? "&steamappid=" + _.event.appid : "");
+            return _.createElement("iframe", {
+              className: _.MedalTVWidget,
+              src: _,
+              frameBorder: 0,
+              allow: "autoplay",
+            });
+          }
+        }
+        return (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        let _ = new RegExp(_).exec(_);
+        if (_ && _.length > 1) {
+          let _ = _[1];
+          if (_ && _.length > 1)
+            return _.createElement(_, {
+              modelID: _,
+            });
+        }
+        return (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        const _ = _.split("?");
+        let _;
+        if (2 == _.length) {
+          const _ = new URLSearchParams(_[1]);
+          _.has("id") && (_ = _.get("id"));
+        }
+        return void 0 !== _
+          ? _.createElement(_, {
+              sharedFileID: _,
+            })
+          : (0, _._)(_, _?.event);
+      }
+      function _(_) {
+        let _ = (0, _._)(_).toLocaleLowerCase(),
+          _ = (0, _._)(_._.STORE_BASE_URL),
+          _ = (0, _._)(_._.COMMUNITY_BASE_URL);
+        const _ =
+          "dev" === _._.WEB_UNIVERSE ||
+          (0, _._)(_._.STORE_BASE_URL).endsWith(".steam.dev");
+        return (
+          _ == _ ||
+          _ == _ ||
+          (_ &&
+            (_.includes("steampowered.com") ||
+              _.includes("steamcommunity.com") ||
+              _.includes("steamchina.com")))
+        );
+      }
+      function _(_, _) {
+        if (_(_)) {
+          let _ = new RegExp(_).exec(_);
+          if (_ && _.length > 2) {
+            let _ = _[1],
+              _ = Number(_[2]);
+            if (_ > 0)
+              return _.createElement(_, {
+                _: _,
+                inputType: _,
+              });
+          }
+        }
+        return (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        if (_(_)) {
+          const _ = new RegExp(_).exec(_);
+          if (_ && _.length > 1) {
+            const _ = Number(_[1]);
+            if (_ > 0)
+              return _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.LoyaltyRewardCtn),
+                },
+                _.createElement(_, {
+                  defid: _,
+                  url: _,
+                }),
+              );
+          }
+        }
+        return (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        if (_(_)) {
+          let _ = new RegExp(_).exec(_);
+          if (_ && _.length > 2) {
+            let _, _, _, _;
+            "gid" == _[1]
+              ? (_ = new _._(_[2]))
+              : "groups" == _[1]
+                ? (_ = _[2])
+                : isNaN(+_[2])
+                  ? (_ = _[2])
+                  : (_ = Number(_[2]));
+            let _ = _[3];
+            if (
+              ((void 0 !== _ && _ > 0) ||
+                void 0 !== _ ||
+                void 0 !== _ ||
+                void 0 !== _) &&
+              null != _ &&
+              _.length > 0
+            )
+              return _.createElement(_, {
+                appid: _,
+                clanSteamID: _,
+                strVanity: _,
+                strGroupVanity: _,
+                announcementGID: _,
+                strURL: _,
+              });
+          }
+        }
+        return (0, _._)(_, _?.event);
+      }
+      function _(_, _) {
+        return _(_, _, _);
+      }
+      function _(_, _) {
+        return _(_, _, _);
+      }
+      function _(_, _) {
+        return (0, _._)() ? null : _(_, _.createElement(_.KKS, null), "@", _);
+      }
+      function _(_, _) {
+        return (0, _._)() ? null : _(_, _.createElement(_.KKS, null), "#", _);
+      }
+      function _(_, _) {
+        return (0, _._)()
+          ? null
+          : _(_, _.createElement(_.qcc, null), void 0, _);
+      }
+      function _(_, _) {
+        return _(_, _.createElement(_.Qte, null), void 0, _);
+      }
+      function _(_, _, _, _) {
+        let _;
+        const _ = _.endsWith("/") ? _.length - 1 : _.length,
+          _ = _.lastIndexOf("/", _ - 1);
+        -1 != _ && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
+          _ && _ && (_ = _ + _);
+        const _ = (0, _._)(_, _?.event, _ ?? _);
+        return _.createElement(
+          "div",
+          {
+            className: _.SocialLink,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.SocialIcon,
+            },
+            _,
+          ),
+          _,
+        );
+      }
+      function _(_, _, _) {
+        if (_(_)) {
+          let _ = new RegExp(_).exec(_);
+          if (_ && _.length > 2) {
+            let _, _, _, _;
+            "gid" == _[1]
+              ? (_ = new _._(_[2]))
+              : "group" == _[1]
+                ? (_ = _._.InitFromClanID(Number.parseInt(_[2])))
+                : "groups" == _[1]
+                  ? (_ = _[2])
+                  : isNaN(+_[2])
+                    ? (_ = _[2])
+                    : (_ = Number(_[2]));
+            const _ = _[3];
+            if (
+              ((void 0 !== _ && _ > 0) ||
+                void 0 !== _ ||
+                void 0 !== _ ||
+                void 0 !== _) &&
+              null != _ &&
+              _.length > 0
+            )
+              return _.createElement(_, {
+                appid: _,
+                clanSteamID: _,
+                strVanity: _,
+                strGroupVanity: _,
+                eventGID: _,
+                strURL: _,
+              });
+          }
+        }
+        return (0, _._)(_, _?.event);
+      }
       function _(_) {
         let _ = (0, _._)(_.args) || (0, _._)(_.args, "href");
         const _ = (0, _._)(_.args, "style"),
@@ -113690,11 +114256,22 @@
                 )
         );
       }
+      function _(_) {
+        const _ = (0, _._)(_.args, "href"),
+          _ = _(_);
+        return _
+          ? __webpack_require__.fnBBComponent(_, {
+              event: _.context.event,
+              partnerEventStore: _._,
+            })
+          : _.createElement(_, {
+              ..._,
+            });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       const _ = (_) => {
         const [_, __webpack_require__] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(null);
@@ -113851,8 +114428,6 @@
           );
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -114075,11 +114650,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapInventoryByApp = new Map();
@@ -114627,6 +115197,13 @@
                 },
               ],
               [
+                "dynamiclink",
+                {
+                  Constructor: _,
+                  autocloses: !1,
+                },
+              ],
+              [
                 "h1",
                 {
                   Constructor: _._(_._, _.Header1),
@@ -115123,860 +115700,6 @@
             ? _.createElement("div", null, (0, _._)("#CloudUpload_NotSupport"))
             : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => /^\d+$/.test(_);
-      function _(_) {
-        const { sharedFileID: _ } = _,
-          _ = (0, _._)("SharedFileSnippet"),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(() => ({
-            sharedfileid: _,
-            title: (0, _._)("#Loading"),
-            description: "",
-            type: "",
-            previewurl: "",
-            appid: 0,
-            url: _._.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _,
-          }));
-        (0, _.useEffect)(() => {
-          (async () => {
-            try {
-              const _ = await _._.LoadSharedFileDynamicData([_], _);
-              if (!_.token.reason && _.length > 0) {
-                const _ = _[0];
-                _(_.url) &&
-                  (_.url =
-                    _._.COMMUNITY_BASE_URL +
-                    "sharedfiles/filedetails/?id=" +
-                    _.url),
-                  _(_),
-                  console.log(_[0]),
-                  _(!0);
-              }
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("SharedFileSnippet: " + _.strErrorMsg, _);
-            }
-          })();
-        }, [_, _]);
-        let _ = void 0 !== _.personnaname && _.personnaname.length > 0;
-        return _.createElement(
-          "a",
-          {
-            href: _.url,
-            className: _().DynamicLinkBox,
-            "data-modal-content-sizetofit": !!_.bSizeToFit,
-            "data-appid": _.appid,
-            "data-publishedfileid": _,
-          },
-          _.createElement("img", {
-            className: _().DynamicLink_Preview,
-            src: _.previewurl,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().DynamicLink_Content,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().DynamicLink_Name,
-              },
-              _.title,
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
-                  className: _().DynamicLink_Type,
-                },
-                _.type,
-              ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Author,
-                },
-                (0, _._)(
-                  "#EventEditor_Author",
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().DynamicLink_AuthorName,
-                    },
-                    _.personnaname,
-                  ),
-                ),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _().DynamicLink_Description,
-              },
-              _.description,
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        state = {
-          bLoading: this.props.announcementGID
-            ? !_._.BHasClanAnnouncementGID(this.props.announcementGID)
-            : !_._.BHasClanAnnouncementGID(this.props.eventGID),
-          bFailedLoad: !1,
-        };
-        m_cancelSignal = _().CancelToken.source();
-        componentDidMount() {
-          this.HandleLoadEventInfo();
-        }
-        async HandleLoadEventInfo() {
-          const {
-            appid: _,
-            strVanity: _,
-            announcementGID: __webpack_require__,
-            eventGID: _,
-            strGroupVanity: _,
-          } = this.props;
-          let _ = this.props.clanSteamID;
-          try {
-            if (this.state.bLoading) {
-              if (void 0 !== _) {
-                _ = (await _._.LoadOGGClanInfoForIdentifier(_)).clanSteamID;
-              } else if (void 0 !== _) {
-                _ = (await _._.LoadOGGClanInfoForGroupVanity(_)).clanSteamID;
-              }
-              const _ = _._.LoadPartnerEventGeneric(
-                _,
-                _,
-                _,
-                __webpack_require__,
-                0,
-              );
-              let _ = await _;
-              await Promise.all([
-                _._.Get().QueueAppRequest(_.appid, {
-                  include_assets: !0,
-                  include_basic_info: !0,
-                  include_release: !0,
-                }),
-              ]),
-                this.setState({
-                  bFailedLoad: !1,
-                  bLoading: !1,
-                });
-            }
-          } catch (_) {
-            this.HandleError(_);
-          }
-        }
-        HandleError(_) {
-          let _ = (0, _._)(_);
-          const {
-            eventGID: __webpack_require__,
-            announcementGID: _,
-            strGroupVanity: _,
-            strVanity: _,
-          } = this.props;
-          console.error(
-            "EventSnippet hit error on announceGID " +
-              _ +
-              " eventGID " +
-              __webpack_require__ +
-              " strVanity " +
-              _ +
-              " strGroupVanity " +
-              _ +
-              " error: " +
-              _.strErrorMsg,
-          ),
-            this.setState({
-              bFailedLoad: !0,
-            });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("component unmounted");
-        }
-        render() {
-          const {
-            appid: _,
-            announcementGID: _,
-            eventGID: __webpack_require__,
-            strURL: _,
-            fnFilterImageURLsForKnownFailures: _,
-            fnImageFailureCallback: _,
-          } = this.props;
-          if (this.state.bFailedLoad) return (0, _._)(_);
-          if (this.state.bLoading) return _.createElement(_._, null);
-          let _ =
-            void 0 !== _
-              ? _._.GetClanEventFromAnnouncementGID(_)
-              : _._.GetClanEventModel(__webpack_require__);
-          if (null == _) return (0, _._)(_);
-          let _ = (0, _._)(_._.LANGUAGE),
-            _ = _.GetImageForSizeAsArrayWithFallback(
-              "capsule",
-              _,
-              _._.capsule_main,
-            );
-          _ && (_ = _(_));
-          let _ = _.GetNameWithFallback(_),
-            _ = _.GetSubTitleWithSummaryFallback(_),
-            _ = _._.Get().GetApp(_)?.GetName(),
-            _ = (0, _._)(_.GetStartTimeAndDateUnixSeconds());
-          return _.createElement(
-            _._,
-            {
-              eventModel: _,
-              route: _._.k_eView,
-              className: _().DynamicLinkBox,
-              "data-modal-content-sizetofit": !0,
-              "data-appid": _,
-            },
-            _.createElement(_._, {
-              className: _().DynamicLink_Preview,
-              rgSources: _,
-              onIncrementalError: (_, _, _) => _ && _(_),
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().DynamicLink_Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Author,
-                },
-                (0, _._)(
-                  28 == _.type
-                    ? "#EventDisplay_Share_Announcement"
-                    : "#EventDisplay_Share_Event",
-                  _,
-                ),
-                _.createElement(
-                  "span",
-                  {
-                    className: _().DynamicLink_Date,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Name,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DynamicLink_Type,
-                  },
-                  _,
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DynamicLink_Description,
-                },
-                _,
-              ),
-            ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        state = {
-          bSummaryMode: !0,
-          bLoadedMetaData: !1,
-        };
-        async componentDidMount() {
-          let _ =
-            "https://sketchfab.com/oembed?url=https://sketchfab.com/models/" +
-            this.props.modelID;
-          try {
-            let _ = await _().get(_);
-            this.setState({
-              bLoadedMetaData: !0,
-              data: _.data,
-            });
-          } catch (_) {
-            this.setState({
-              bError: !0,
-            }),
-              console.error(
-                "SketchFabEmbed failed to load: " + (0, _._)(_).strErrorMsg,
-              );
-          }
-        }
-        OnSketchFabClick() {
-          this.state.bLoadedMetaData &&
-            this.setState({
-              bSummaryMode: !1,
-            });
-        }
-        render() {
-          const { modelID: _ } = this.props;
-          return this.state.bError
-            ? _.createElement(
-                "div",
-                {
-                  className: _().dynamiclink_box,
-                  onClick: this.OnSketchFabClick,
-                },
-                _.createElement("span", null, _),
-                _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#EventDisplay_SketchFab_Error_Network"),
-                ),
-              )
-            : this.state.bSummaryMode
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _().dynamiclink_box,
-                    onClick: this.OnSketchFabClick,
-                  },
-                  Boolean(this.state.bLoadedMetaData)
-                    ? _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement("img", {
-                          className: _().dynamiclink_preview,
-                          src: this.state.data.thumbnail_url,
-                        }),
-                        _.createElement("img", {
-                          className: _().sketchfab_play_overlay_image,
-                        }),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().dynamiclink_content,
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().dynamiclink_name,
-                            },
-                            _.createElement(
-                              "span",
-                              {
-                                className: _().dynamiclink_type,
-                              },
-                              (0, _._)("#EventDisplay_Sketchfab"),
-                            ),
-                            _.createElement(
-                              "div",
-                              null,
-                              this.state.data.title,
-                              " ",
-                            ),
-                          ),
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().dynamiclink_author,
-                            },
-                            this.state.data.author_name,
-                          ),
-                        ),
-                      )
-                    : _.createElement(_._, {
-                        size: "medium",
-                      }),
-                )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _().sketchfabmodelembedded,
-                  },
-                  _.createElement("iframe", {
-                    className: _().sketchfabmodelembedded,
-                    src:
-                      "https://sketchfab.com/models/" +
-                      this.props.modelID +
-                      "/embed?autostart=1",
-                    frameBorder: 0,
-                    allowFullScreen: !0,
-                  }),
-                );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnSketchFabClick", null),
-        (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapDefIDtoDefinition = new Map();
-        m_mapDefIDToPromise = new Map();
-        m_defChangeCallback = new Map();
-        m_mapCategoryAndClassToItems = new Map();
-        m_mapCategoryAndClassToPromise = new Map();
-        m_defCategoryAndClassToChangeCallback = new Map();
-        m_SteamInterface = null;
-        GetItem(_) {
-          return this.m_mapDefIDtoDefinition.get(_);
-        }
-        GetItemChangeCallback(_) {
-          return (
-            this.m_defChangeCallback.has(_) ||
-              this.m_defChangeCallback.set(_, new _._()),
-            this.m_defChangeCallback.get(_)
-          );
-        }
-        GetKeyCategoryAndClass(_, _) {
-          return _ + "_" + _;
-        }
-        GetItemsByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return this.m_mapCategoryAndClassToItems.get(_);
-        }
-        GetItemsByCategoryAndClassCallback(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_defCategoryAndClassToChangeCallback.has(_) ||
-              this.m_defCategoryAndClassToChangeCallback.set(_, new _._()),
-            this.m_defCategoryAndClassToChangeCallback.get(_)
-          );
-        }
-        async LoadRewardDefinition(_) {
-          return (
-            this.m_mapDefIDToPromise.has(_) ||
-              this.m_mapDefIDToPromise.set(
-                _,
-                this.InternalLoadRewardDefinition(_),
-              ),
-            this.m_mapDefIDToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinition(_) {
-          if (this.m_mapDefIDtoDefinition.has(_))
-            return this.m_mapDefIDtoDefinition.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_definitionids([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
-              (0, _._)(
-                1 == _.Body().definitions()?.length,
-                `Requested definition ID ${_} and receive # ${_.Body().definitions()?.length}, expecting exactly one.`,
-              );
-              const _ = _.Body().definitions()[0].toObject();
-              return (
-                this.m_mapDefIDtoDefinition.set(_, _),
-                this.GetItemChangeCallback(_).Dispatch(_),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        async LoadRewardDefinitionByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_mapCategoryAndClassToPromise.has(_) ||
-              this.m_mapCategoryAndClassToPromise.set(
-                _,
-                this.InternalLoadRewardDefinitionByCategoryAndClass(_, _),
-              ),
-            this.m_mapCategoryAndClassToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinitionByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          if (this.m_mapCategoryAndClassToItems.has(_))
-            return this.m_mapCategoryAndClassToItems.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_community_item_classes([_]),
-            _.Body().set_filter_match_any_category_tags([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
-              const _ = _.Body()
-                .definitions()
-                .map((_) => _.toObject());
-              return (
-                _.forEach((_) => {
-                  this.m_mapDefIDtoDefinition.has(_.defid) ||
-                    (this.m_mapDefIDtoDefinition.set(_.defid, _),
-                    this.GetItemChangeCallback(_.defid).Dispatch(_));
-                }),
-                this.m_mapCategoryAndClassToItems.set(_, _),
-                this.GetItemsByCategoryAndClassCallback(_, _).Dispatch(_),
-                ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                  console.log(
-                    "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
-                      _.length,
-                  ),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_LoyaltyRewardDefinitionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL);
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { defid: _, url: __webpack_require__ } = _,
-          _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(
-              _.Get().GetItem(_),
-            );
-            return (
-              (0, _.useEffect)(() => {
-                _ || _.Get().LoadRewardDefinition(_);
-              }, [_, _]),
-              (0, _._)(_.Get().GetItemChangeCallback(_), __webpack_require__),
-              _
-            );
-          })(_);
-        if (!_ || !_.community_item_data) return null;
-        const _ = _.appid,
-          _ = _.community_item_data.item_image_large,
-          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log("reward itemdef", (0, _._)(_)),
-          _.createElement(
-            "div",
-            {
-              className: _().Ctn,
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: _.community_item_data.item_description,
-              },
-              _.createElement("img", {
-                src: _,
-                alt: _.community_item_data.item_title,
-              }),
-            ),
-          )
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { inputType: _, _: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, (0, _._)(_), {});
-        let _ = "bundle" == _ ? "bundle" : "sub" == _ ? "sub" : "game";
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.AppSummaryWidgetCtn, "AppSummaryWidgetCtn"),
-          },
-          _.createElement(_._, {
-            _: __webpack_require__,
-            type: _,
-            bShowDemoButton: 1 == _?.GetAppType(),
-            bAllowTwoLinesForHeader: !0,
-          }),
-        );
-      }
-      const _ =
-          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
-        _ =
-          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
-        _ =
-          /(?:steamcommunity\.com|valve\.org\/community|community\.\S+\.steam\.dev|steam\.dev\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
-        _ =
-          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-        _ = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
-        _ = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
-        _ = /twitter\.com\/(\w+)(\/?)$/i,
-        _ = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
-        _ = /twitch\.tv\/(\w+)(\/?)$/i,
-        _ =
-          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
-        _ =
-          /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.steamchina\.com)\/points\/shop\/.*reward\/(\d+)$/i;
-      let _ = null;
-      function _(_, _) {
-        if ((0, _._)()) return null;
-        const _ = (0, _._)(_);
-        return void 0 !== _?.strVideoID
-          ? _.createElement(_._, {
-              videoID: _.strVideoID,
-              nStartSeconds: _.nStartSeconds,
-              classNameAlign: "",
-              classNameSize: _().sizeFull,
-              bShowVideoImmediately: !1,
-            })
-          : (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        if ((0, _._)()) return null;
-        const _ = new RegExp(_).exec(_);
-        if (_ && _.length > 1) {
-          const _ = _[1];
-          if (_?.length > 0) {
-            let _ =
-              "https://medal.tv/clip/" +
-              _ +
-              "/?autoplay=0&donate=0" +
-              (_ && _.event ? "&steamappid=" + _.event.appid : "");
-            return _.createElement("iframe", {
-              className: _.MedalTVWidget,
-              src: _,
-              frameBorder: 0,
-              allow: "autoplay",
-            });
-          }
-        }
-        return (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        let _ = new RegExp(_).exec(_);
-        if (_ && _.length > 1) {
-          let _ = _[1];
-          if (_ && _.length > 1)
-            return _.createElement(_, {
-              modelID: _,
-            });
-        }
-        return (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        const _ = _.split("?");
-        let _;
-        if (2 == _.length) {
-          const _ = new URLSearchParams(_[1]);
-          _.has("id") && (_ = _.get("id"));
-        }
-        return void 0 !== _
-          ? _.createElement(_, {
-              sharedFileID: _,
-            })
-          : (0, _._)(_, _?.event);
-      }
-      function _(_) {
-        let _ = (0, _._)(_).toLocaleLowerCase(),
-          _ = (0, _._)(_._.STORE_BASE_URL),
-          _ = (0, _._)(_._.COMMUNITY_BASE_URL);
-        const _ =
-          "dev" === _._.WEB_UNIVERSE ||
-          (0, _._)(_._.STORE_BASE_URL).endsWith(".steam.dev");
-        return (
-          _ == _ ||
-          _ == _ ||
-          (_ &&
-            (_.includes("steampowered.com") ||
-              _.includes("steamcommunity.com") ||
-              _.includes("steamchina.com")))
-        );
-      }
-      function _(_, _) {
-        if (_(_)) {
-          let _ = new RegExp(_).exec(_);
-          if (_ && _.length > 2) {
-            let _ = _[1],
-              _ = Number(_[2]);
-            if (_ > 0)
-              return _.createElement(_, {
-                _: _,
-                inputType: _,
-              });
-          }
-        }
-        return (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        if (_(_)) {
-          const _ = new RegExp(_).exec(_);
-          if (_ && _.length > 1) {
-            const _ = Number(_[1]);
-            if (_ > 0)
-              return _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.LoyaltyRewardCtn),
-                },
-                _.createElement(_, {
-                  defid: _,
-                  url: _,
-                }),
-              );
-          }
-        }
-        return (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        if (_(_)) {
-          let _ = new RegExp(_).exec(_);
-          if (_ && _.length > 2) {
-            let _, _, _, _;
-            "gid" == _[1]
-              ? (_ = new _._(_[2]))
-              : "groups" == _[1]
-                ? (_ = _[2])
-                : isNaN(+_[2])
-                  ? (_ = _[2])
-                  : (_ = Number(_[2]));
-            let _ = _[3];
-            if (
-              ((void 0 !== _ && _ > 0) ||
-                void 0 !== _ ||
-                void 0 !== _ ||
-                void 0 !== _) &&
-              null != _ &&
-              _.length > 0
-            )
-              return _.createElement(_, {
-                appid: _,
-                clanSteamID: _,
-                strVanity: _,
-                strGroupVanity: _,
-                announcementGID: _,
-                strURL: _,
-              });
-          }
-        }
-        return (0, _._)(_, _?.event);
-      }
-      function _(_, _) {
-        return _(_, _, _);
-      }
-      function _(_, _) {
-        return _(_, _, _);
-      }
-      function _(_, _) {
-        return (0, _._)() ? null : _(_, _.createElement(_.KKS, null), "@", _);
-      }
-      function _(_, _) {
-        return (0, _._)() ? null : _(_, _.createElement(_.KKS, null), "#", _);
-      }
-      function _(_, _) {
-        return (0, _._)()
-          ? null
-          : _(_, _.createElement(_.qcc, null), void 0, _);
-      }
-      function _(_, _) {
-        return _(_, _.createElement(_.Qte, null), void 0, _);
-      }
-      function _(_, _, _, _) {
-        let _;
-        const _ = _.endsWith("/") ? _.length - 1 : _.length,
-          _ = _.lastIndexOf("/", _ - 1);
-        -1 != _ && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
-          _ && _ && (_ = _ + _);
-        const _ = (0, _._)(_, _?.event, _ ?? _);
-        return _.createElement(
-          "div",
-          {
-            className: _.SocialLink,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.SocialIcon,
-            },
-            _,
-          ),
-          _,
-        );
-      }
-      function _(_, _, _) {
-        if (_(_)) {
-          let _ = new RegExp(_).exec(_);
-          if (_ && _.length > 2) {
-            let _, _, _, _;
-            "gid" == _[1]
-              ? (_ = new _._(_[2]))
-              : "group" == _[1]
-                ? (_ = _._.InitFromClanID(Number.parseInt(_[2])))
-                : "groups" == _[1]
-                  ? (_ = _[2])
-                  : isNaN(+_[2])
-                    ? (_ = _[2])
-                    : (_ = Number(_[2]));
-            const _ = _[3];
-            if (
-              ((void 0 !== _ && _ > 0) ||
-                void 0 !== _ ||
-                void 0 !== _ ||
-                void 0 !== _) &&
-              null != _ &&
-              _.length > 0
-            )
-              return _.createElement(_, {
-                appid: _,
-                clanSteamID: _,
-                strVanity: _,
-                strGroupVanity: _,
-                eventGID: _,
-                strURL: _,
-              });
-          }
-        }
-        return (0, _._)(_, _?.event);
-      }
       class _ extends _.Component {
         m_parser;
         constructor(_) {
@@ -115990,95 +115713,10 @@
         ElementAccumulator(_) {
           return new _(
             new _(
-              new _(
-                new _._(new _._(), 0),
-                _,
-                (null == _ &&
-                  (_ = (0, _._)()
-                    ? [
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                      ]
-                    : [
-                        {
-                          urlRegExp: new RegExp(/youtu.be|youtube.com/i),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(
-                            /community.+sharedfiles\/filedetails\/\?id=\d+/i,
-                          ),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                        {
-                          urlRegExp: new RegExp(_),
-                          fnBBComponent: _,
-                        },
-                      ]),
-                _),
-                {
-                  partnerEventStore: this.props.partnerEventStore,
-                  event: this.props.event,
-                },
-              ),
+              new _(new _._(new _._(), 0), _, _(), {
+                partnerEventStore: this.props.partnerEventStore,
+                event: this.props.event,
+              }),
             ),
             _,
           );
@@ -118917,512 +118555,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.topleft = "topleft"),
-          (_.top = "top"),
-          (_.topright = "topright"),
-          (_.left = "left"),
-          (_.middle = "middle"),
-          (_.right = "right"),
-          (_.bottomleft = "bottomleft"),
-          (_.bottom = "bottom"),
-          (_.bottomright = "bottomright");
-      })(_ || (_ = {}));
-      let _ = class extends _.Component {
-        m_rectLinkRegion;
-        m_elLinkRegionBox;
-        m_nLocalOffsetXPct;
-        m_nLocalOffsetYPct;
-        m_fnMouseUp = null;
-        m_fnMouseMove = null;
-        m_listeners = new _._();
-        m_strDescription = "";
-        m_aspectRatio = 1;
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
-        }
-        constructor(_) {
-          super(_),
-            (this.state = {
-              curLeftPosPct: this.props.xPosPct,
-              curTopPosPct: this.props.yPosPct,
-              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
-              curBottomPosPct:
-                100 - (this.props.yPosPct + this.props.heightPct),
-              curWidthPct: this.props.widthPct,
-              curHeightPct: this.props.heightPct,
-              EdgeDown: null,
-              text_link_url: this.props.link_url,
-              text_link_description: this.props.link_description,
-              bEditingLink: !1,
-              valid_link: this.validateUrl(this.props.link_url),
-            }),
-            (this.m_strDescription = this.props.link_description),
-            (this.m_aspectRatio =
-              this.props.heightPct > 0 && this.props.widthPct > 0
-                ? this.props.widthPct / this.props.heightPct
-                : 1);
-        }
-        LinkRegionBoxRef(_) {
-          this.m_elLinkRegionBox = _;
-        }
-        OnMouseDown(_, _) {
-          (this.m_fnMouseUp = (_) => {
-            this.OnMouseUp(_, _);
-          }),
-            (this.m_fnMouseMove = (_) => {
-              this.OnMouseMove(_, _);
-            }),
-            this.setState({
-              EdgeDown: _,
-            }),
-            (this.m_rectLinkRegion =
-              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
-            (this.m_nLocalOffsetXPct =
-              ((_.clientX - this.m_rectLinkRegion.left) /
-                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-                100 -
-              this.state.curLeftPosPct),
-            (this.m_nLocalOffsetYPct =
-              ((_.clientY - this.m_rectLinkRegion.top) /
-                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-                100 -
-              this.state.curTopPosPct),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mousemove",
-              this.m_fnMouseMove,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mouseup",
-              this.m_fnMouseUp,
-            ),
-            _.preventDefault(),
-            _.stopPropagation();
-        }
-        OnMouseMove(_, _) {
-          if (void 0 !== this.state.EdgeDown) {
-            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
-              case _.left:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.right:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.top:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                });
-                break;
-              case _.bottom:
-                this.UpdateState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.topleft:
-                this.UpdateState({
-                  curTopPosPct: this.CalcBottomEdge(_.clientY),
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.topright:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.bottomleft:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.bottomright:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.middle: {
-                const _ = (0, _._)(
-                    this.CalcLeftEdge(_.clientX),
-                    0,
-                    100 - this.state.curWidthPct,
-                  ),
-                  _ = 100 - (_ + this.state.curWidthPct),
-                  _ = (0, _._)(
-                    this.CalcTopEdge(_.clientY),
-                    0,
-                    100 - this.state.curHeightPct,
-                  ),
-                  _ = {
-                    curLeftPosPct: _,
-                    curRightPosPct: _,
-                    curTopPosPct: _,
-                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
-                  };
-                this.setState(_);
-                break;
-              }
-            }
-            _.preventDefault(), _.stopPropagation();
-          }
-        }
-        IsValidPct(_) {
-          return _ >= 0 && _ <= 100;
-        }
-        UpdateState(_) {
-          let _ =
-              void 0 !== _.curTopPosPct
-                ? _.curTopPosPct
-                : this.state.curTopPosPct,
-            _ =
-              void 0 !== _.curBottomPosPct
-                ? _.curBottomPosPct
-                : this.state.curBottomPosPct,
-            _ =
-              void 0 !== _.curLeftPosPct
-                ? _.curLeftPosPct
-                : this.state.curLeftPosPct,
-            _ =
-              void 0 !== _.curRightPosPct
-                ? _.curRightPosPct
-                : this.state.curRightPosPct,
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100,
-            ),
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100,
-            );
-          this.props.bLockAspectRatio &&
-            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
-              ? (_ = _ / this.m_aspectRatio)
-              : (_ = _ * this.m_aspectRatio)),
-            void 0 !== _.curLeftPosPct
-              ? (_ = 100 - _ - _)
-              : (_ = 100 - (_ + _)),
-            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
-          const _ = 100 - _ - _,
-            _ = 100 - _ - _;
-          this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.setState({
-              curLeftPosPct: _,
-              curRightPosPct: _,
-              curTopPosPct: _,
-              curBottomPosPct: _,
-            });
-        }
-        GetXPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.left) /
-              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-              100 -
-            this.m_nLocalOffsetXPct
-          );
-        }
-        GetYPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.top) /
-              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-              100 -
-            this.m_nLocalOffsetYPct
-          );
-        }
-        CalcLeftEdge(_) {
-          return (0, _._)(this.GetXPercent(_), 0, 100);
-        }
-        CalcRightEdge(_) {
-          return (0, _._)(
-            100 - (this.GetXPercent(_) + this.state.curWidthPct),
-            0,
-            100,
-          );
-        }
-        CalcTopEdge(_) {
-          return (0, _._)(this.GetYPercent(_), 0, 100);
-        }
-        CalcBottomEdge(_) {
-          return (0, _._)(
-            100 - (this.GetYPercent(_) + this.state.curHeightPct),
-            0,
-            100,
-          );
-        }
-        OnMouseUp(_, _) {
-          this.setState({
-            curWidthPct:
-              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
-          }),
-            this.setState({
-              curHeightPct:
-                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
-            }),
-            this.setState({
-              EdgeDown: void 0,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            }),
-            this.m_listeners.Unregister();
-        }
-        async HandleDelete() {
-          this.props.deleteFn && this.props.deleteFn(this.props.index);
-        }
-        OnSetLinkURLChange(_) {
-          this.setState({
-            text_link_url: _.target.value,
-            valid_link: this.validateUrl(_.target.value),
-          });
-        }
-        OnSetLinkDescriptionChange(_) {
-          this.setState({
-            text_link_description: _.target.value,
-          });
-        }
-        validateUrl(_) {
-          return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-            _,
-          );
-        }
-        OnSaveLink() {
-          (this.m_strDescription = this.state.text_link_description),
-            this.setState({
-              bEditingLink: !this.state.bEditingLink,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            });
-        }
-        OnEditLink() {
-          this.setState({
-            bEditingLink: !this.state.bEditingLink,
-          });
-        }
-        render() {
-          let _ = {
-              left: this.state.curLeftPosPct + "%",
-              top: this.state.curTopPosPct + "%",
-              right: this.state.curRightPosPct + "%",
-              bottom: this.state.curBottomPosPct + "%",
-            },
-            _ = _().LinkRegionDragBox;
-          return (
-            null !== this.state.EdgeDown &&
-              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                style: _,
-                ref: this.LinkRegionBoxRef,
-                draggable: !1,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().LinkRegionGridBox,
-                },
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Top}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.top);
-                  },
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topright);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Left}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.left);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: `${_().LinkRegionEdge} ${_().Middle}`,
-                    onMouseDown: (_) => {
-                      this.OnMouseDown(_, _.middle);
-                    },
-                    draggable: !1,
-                  },
-                  this.props.deleteFn &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionDelete,
-                        onClick: this.HandleDelete,
-                      },
-                      _.createElement(_.sED, null),
-                    ),
-                  !this.props.bDisableLink &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionSettings,
-                        onClick: this.OnEditLink,
-                      },
-                      _.createElement(_.xv8, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkText,
-                    },
-                    " ",
-                    this.m_strDescription,
-                    " ",
-                  ),
-                ),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Right}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.right);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottom);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomright);
-                  },
-                  draggable: !1,
-                }),
-              ),
-              this.state.bEditingLink &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LinkRegionInfo,
-                  },
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_url",
-                    value: this.state.text_link_url,
-                    label: (0, _._)("#SteamTV_LinkURL"),
-                    placeholder: "https://www.example.com",
-                    onChange: this.OnSetLinkURLChange,
-                    mustBeURL: !0,
-                  }),
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_description",
-                    value: this.state.text_link_description,
-                    label: (0, _._)("#SteamTV_LinkDescription"),
-                    placeholder: (0, _._)(
-                      "#SteamTV_LinkDescription_Placeholder",
-                    ),
-                    onChange: this.OnSetLinkDescriptionChange,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkRegionButtonContainer,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        disabled: !this.state.valid_link,
-                        onClick: this.OnSaveLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_OK"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: this.OnEditLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_Cancel"),
-                    ),
-                  ),
-                ),
-            )
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "HandleDelete", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
-        (0, _._)([_._], _.prototype, "OnSaveLink", null),
-        (0, _._)([_._], _.prototype, "OnEditLink", null),
-        (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -119880,185 +119012,6 @@
         _: () => _,
         _: () => _,
       });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          region: {
-            xPosPct: 0,
-            yPosPct: 0,
-            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            heightPct:
-              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-          },
-        };
-        async OnCrop() {
-          await this.props.uploadFile.CropImage(
-            (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
-            (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
-            (this.state.region.widthPct / 100) * this.props.uploadFile.width,
-            (this.state.region.heightPct / 100) * this.props.uploadFile.height,
-            this.GetDestWidth(),
-            this.GetDestHeight(),
-            this.props.fileType,
-          ),
-            this.props.closeModal();
-        }
-        UpdateCrop(_, _) {
-          this.setState({
-            region: _,
-          });
-        }
-        GetDestWidth() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.width : _._[_.type].width;
-        }
-        GetDestHeight() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.height : _._[_.type].height;
-        }
-        GetLargestBoxThatFits(_, _, _, _) {
-          let _ = _,
-            _ = (_ * _) / Math.max(_, 1);
-          return (
-            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
-        GetPreviewWindowStyle() {
-          const { region: _ } = this.state,
-            _ = this.GetLargestBoxThatFits(
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              500,
-              150,
-            ),
-            _ = _.width,
-            _ = _.height,
-            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
-            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
-            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
-            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
-          return {
-            width: _,
-            height: _,
-            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * _}% ${100 * _}%`,
-            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
-          };
-        }
-        render() {
-          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-            _ = this.GetLargestBoxThatFits(
-              this.props.uploadFile.width,
-              this.props.uploadFile.height,
-              800,
-              500,
-            );
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropImage,
-                  style: {
-                    width: _.width,
-                    height: _.height,
-                  },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
-                }),
-                _.createElement(_._, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnCrop", null),
-        (0, _._)([_._], _.prototype, "UpdateCrop", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

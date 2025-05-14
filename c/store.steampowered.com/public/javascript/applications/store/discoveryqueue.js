@@ -1295,6 +1295,79 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          bRenderChildren: !1,
+          nPrevRenderWidth: 0,
+          nPrevRenderHeight: 0,
+        };
+        m_refContainer = _.createRef();
+        BLoadAndUnload() {
+          return "LoadAndUnload" == (this.props.mode || "JustLoad");
+        }
+        OnVisibilityChange(_) {
+          let _ = this.state.bRenderChildren;
+          if (_ == _) return;
+          if (_ && !this.BLoadAndUnload()) return;
+          let _ = 0,
+            _ = 0;
+          if (this.m_refContainer.current) {
+            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            _ && ((_ = _.width), (_ = _.height));
+          }
+          this.setState({
+            bRenderChildren: _,
+            nPrevRenderWidth: _,
+            nPrevRenderHeight: _,
+          }),
+            _ && this.props.onRender && this.props.onRender();
+        }
+        render() {
+          const {
+              placeholderWidth: _,
+              placeholderHeight: _,
+              onRender: __webpack_require__,
+              style: _,
+              mode: _,
+              ..._
+            } = this.props,
+            _ = this.state.bRenderChildren;
+          let _ = _;
+          if (!_) {
+            const _ = this.state.nPrevRenderWidth || _,
+              _ = this.state.nPrevRenderHeight || _;
+            (void 0 === _ && void 0 === _) ||
+              (_ = {
+                ..._,
+                minHeight: _,
+                minWidth: _,
+              });
+          }
+          const _ = this.BLoadAndUnload() ? "repeated" : "once";
+          return _.createElement(
+            _._,
+            {
+              ref: this.m_refContainer,
+              style: _,
+              ..._,
+              onVisibilityChange: this.OnVisibilityChange,
+              trigger: _,
+            },
+            _ && this.props.children,
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -1518,22 +1591,22 @@
           #t;
           #a;
           #i;
-          #s;
           #n;
           #r;
+          #s;
           #o;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
               (this.#i = _),
               (this.#a = []),
-              (this.#s = []),
+              (this.#n = []),
               (this.#t = []),
               this.setQueries(_);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#s.forEach((_) => {
+              this.#n.forEach((_) => {
                 _.subscribe((_) => {
                   this.#l(_, _);
                 });
@@ -1544,7 +1617,7 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#s.forEach((_) => {
+              this.#n.forEach((_) => {
                 _.destroy();
               });
           }
@@ -1552,7 +1625,7 @@
             (this.#a = _),
               (this.#i = _),
               _._.batch(() => {
-                const _ = this.#s,
+                const _ = this.#n,
                   _ = this.#m(this.#a);
                 _.forEach((_) =>
                   _.observer.setOptions(_.defaultedQueryOptions, _),
@@ -1561,7 +1634,7 @@
                   _ = _.map((_) => _.getCurrentResult()),
                   _ = _.some((_, _) => _ !== _[_]);
                 (_.length !== _.length || _) &&
-                  ((this.#s = _),
+                  ((this.#n = _),
                   (this.#t = _),
                   this.hasListeners() &&
                     (_(_, _).forEach((_) => {
@@ -1579,10 +1652,10 @@
             return this.#t;
           }
           getQueries() {
-            return this.#s.map((_) => _.getCurrentQuery());
+            return this.#n.map((_) => _.getCurrentQuery());
           }
           getObservers() {
-            return this.#s;
+            return this.#n;
           }
           getOptimisticResult(_, _) {
             const _ = this.#m(_).map((_) =>
@@ -1605,15 +1678,15 @@
           }
           #u(_, _) {
             return _
-              ? ((this.#n && this.#t === this.#o && _ === this.#r) ||
-                  ((this.#r = _),
+              ? ((this.#r && this.#t === this.#o && _ === this.#s) ||
+                  ((this.#s = _),
                   (this.#o = this.#t),
-                  (this.#n = (0, _._)(this.#n, _(_)))),
-                this.#n)
+                  (this.#r = (0, _._)(this.#r, _(_)))),
+                this.#r)
               : _;
           }
           #m(_) {
-            const _ = new Map(this.#s.map((_) => [_.options.queryHash, _])),
+            const _ = new Map(this.#n.map((_) => [_.options.queryHash, _])),
               _ = [];
             return (
               _.forEach((_) => {
@@ -1625,7 +1698,7 @@
                     observer: _,
                   });
                 else {
-                  const _ = this.#s.find(
+                  const _ = this.#n.find(
                     (_) => _.options.queryHash === _.queryHash,
                   );
                   __webpack_require__.push({
@@ -1646,7 +1719,7 @@
             );
           }
           #l(_, _) {
-            const _ = this.#s.indexOf(_);
+            const _ = this.#n.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {
                 const _ = _.slice(0);
@@ -1656,7 +1729,7 @@
           }
           #c() {
             if (this.hasListeners()) {
-              this.#n !==
+              this.#r !==
                 this.#u(this.#d(this.#t, this.#a), this.#i?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {

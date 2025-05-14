@@ -94,7 +94,7 @@ function testUTMLink( linktotest )
 	for ( const utm_param of k_utm_params )
 	{
 		if ( searchParams.has( utm_param ) )
-			utm_results += utm_param + ' = ' + searchParams.get( utm_param ) + '<br>';
+			utm_results += utm_param + ' = ' + encodeURIComponent( searchParams.get( utm_param ) ) + '<br>';
 	}
 	utm_results += '</span>';
 

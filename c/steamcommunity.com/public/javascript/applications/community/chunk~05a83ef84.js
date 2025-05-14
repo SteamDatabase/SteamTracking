@@ -27,6 +27,55 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._({
+          props: {
+            handlePaste(_, _, _) {
+              var _;
+              const _ =
+                null === (_ = _.clipboardData) || void 0 === _
+                  ? void 0
+                  : _.getData("text/plain").replace(/\n/g, " ");
+              if (_) {
+                const _ = _.state._.insertText(_);
+                _.dispatch(_);
+              }
+              return !0;
+            },
+          },
+        }),
+        _ = {
+          Enter: () => !0,
+          "Shift-Enter": () => !0,
+          "Mod-Enter": () => !0,
+        };
+      function _(_) {
+        const { nMaxChars: _ } = _;
+        return (
+          (0, _._)(
+            (0, _.useMemo)(() => {
+              return (
+                (_ = _),
+                new _._({
+                  filterTransaction: (_, _) => _.doc.textContent.length <= _,
+                })
+              );
+              var _;
+            }, [_]),
+          ),
+          _.createElement(_.Fragment, null)
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -176,6 +225,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = _.createContext(void 0);
       function _(_) {
         const { view: _, pmState: __webpack_require__, children: _ } = _,
@@ -195,7 +245,11 @@
         );
       }
       const _ = _.memo(function (_) {
-        const { schema: _, refOnUpdate: __webpack_require__ } = _;
+        const {
+          schema: _,
+          refOnUpdate: __webpack_require__,
+          bSingleLine: _,
+        } = _;
         return (
           _(
             _.useMemo(
@@ -211,6 +265,8 @@
               [__webpack_require__],
             ),
           ),
+          _(_.useMemo(() => (0, _._)(_ ? _._ : {}), [_])),
+          _(_ ? _._ : void 0),
           _(_.useMemo(() => (0, _._)(), [])),
           _(
             _.useMemo(
@@ -351,6 +407,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -375,385 +432,423 @@
         ];
       }
       const _ = {
-        nodes: {
-          paragraph: {
-            content: "inline*",
-            group: "block",
-            parseDOM: [
-              {
+          nodes: {
+            paragraph: {
+              content: "inline*",
+              group: "block",
+              parseDOM: [
+                {
+                  tag: "p",
+                },
+              ],
+              toDOM: _("p", (0, _._)("pm_paragraph", _().Paragraph)),
+              bbCode: {
                 tag: "p",
-              },
-            ],
-            toDOM: _("p", (0, _._)("pm_paragraph", _().Paragraph)),
-            bbCode: {
-              tag: "p",
-              autocloses: !0,
-            },
-          },
-          heading: {
-            attrs: {
-              level: {
-                default: 1,
+                autocloses: !0,
               },
             },
-            content: "inline*",
-            group: "block",
-            defining: !0,
-            parseDOM: [1, 2, 3, 4, 5].map((_) => ({
-              tag: `h${_}`,
+            heading: {
               attrs: {
-                level: _,
+                level: {
+                  default: 1,
+                },
               },
-            })),
-            toDOM: (_) => [
-              "h" + _.attrs.level,
-              {
-                class:
-                  `BB_Header${_.attrs.level} ` + _()[`Header${_.attrs.level}`],
-              },
-              0,
-            ],
-            bbCode: [1, 2, 3, 4, 5].map((_) => ({
-              tag: `h${_}`,
-              BBArgsToAttrs: () => ({
-                level: _,
-              }),
-              AttrsToBBArgs: (_) => ({
-                tag: `h${_.level}`,
-              }),
-            })),
-          },
-          image: {
-            inline: !0,
-            attrs: {
-              src: {},
-              alt: {
-                default: null,
-              },
-              title: {
-                default: null,
-              },
-            },
-            group: "inline",
-            draggable: !0,
-            parseDOM: [
-              {
-                tag: "img[src]",
-                getAttrs: (_) => ({
-                  src: _.getAttribute("src"),
-                  title: _.getAttribute("title"),
-                  alt: _.getAttribute("alt"),
-                }),
-              },
-            ],
-            toDOM(_) {
-              const { src: _, alt: __webpack_require__, title: _ } = _.attrs;
-              return [
-                "img",
+              content: "inline*",
+              group: "block",
+              defining: !0,
+              parseDOM: [1, 2, 3, 4, 5].map((_) => ({
+                tag: `h${_}`,
+                attrs: {
+                  level: _,
+                },
+              })),
+              toDOM: (_) => [
+                "h" + _.attrs.level,
                 {
-                  src: _,
-                  alt: __webpack_require__,
-                  title: _,
-                  class: _().Image,
-                },
-              ];
-            },
-            bbCode: {
-              tag: "img",
-              BBArgsToAttrs: (_) => ({
-                src: _.src,
-              }),
-              AttrsToBBArgs: (_) => ({
-                args: {
-                  src: _.src,
-                },
-              }),
-              convertContentToAttr: "src",
-            },
-          },
-          video: {
-            inline: !0,
-            attrs: {
-              webm: {
-                default: "",
-              },
-              mp4: {
-                default: "",
-              },
-              poster: {
-                default: "",
-              },
-              autoplay: {
-                default: !0,
-              },
-              controls: {
-                default: !1,
-              },
-            },
-            group: "inline",
-            draggable: !0,
-            parseDOM: [
-              {
-                tag: "video",
-                getAttrs(_) {
-                  if ("video" !== _.tagName) return;
-                  const _ = _;
-                  let _ = "",
-                    _ = "";
-                  for (const _ of _.querySelectorAll("source"))
-                    "video/mp4" == _.type
-                      ? (_ = _.src)
-                      : "video/webm" == _.type && (_ = _.src);
-                  return {
-                    mp4: _,
-                    webm: _,
-                    poster: _.poster || "",
-                    autoplay: !!_.autoplay,
-                    controls: !!_.controls,
-                  };
-                },
-              },
-            ],
-            toDOM(_) {
-              const {
-                  webm: _,
-                  mp4: __webpack_require__,
-                  poster: _,
-                  autoplay: _,
-                  controls: _,
-                } = _.attrs,
-                _ = [];
-              return (
-                _ &&
-                  _.push([
-                    "source",
-                    {
-                      src: _,
-                      type: "video/webm",
-                    },
-                  ]),
-                __webpack_require__ &&
-                  _.push([
-                    "source",
-                    {
-                      src: __webpack_require__,
-                      type: "video/mp4",
-                    },
-                  ]),
-                [
-                  "video",
-                  {
-                    poster: _,
-                    autoPlay: !!_,
-                    controls: !!_,
-                    loop: !_ && !!_,
-                  },
-                  _,
-                ]
-              );
-            },
-            bbCode: {
-              tag: "video",
-              BBArgsToAttrs: (_) => ({
-                webm: _.webm,
-                mp4: _.mp4,
-                poster: _.poster,
-                autoplay: "true" == _.autoplay,
-                controls: "true" == _.controls,
-              }),
-              AttrsToBBArgs: (_) => ({
-                args: {
-                  webm: _.webm || "",
-                  mp4: _.mp4 || "",
-                  poster: _.poster || "",
-                  autoplay: _.autoplay ? "true" : "false",
-                  controls: _.controls ? "true" : "false",
-                },
-              }),
-            },
-          },
-          bullet_list: {
-            ..._._,
-            content: "list_item+",
-            group: "block",
-            toDOM: _("ul", _().List),
-            bbCode: {
-              tag: "list",
-            },
-          },
-          ordered_list: {
-            ..._._,
-            content: "list_item+",
-            group: "block",
-            toDOM: _("ol", _().OrderedList),
-            bbCode: {
-              tag: "olist",
-            },
-          },
-          list_item: {
-            ..._._,
-            content: "paragraph block*",
-            toDOM: _("li", _().ListItem),
-            bbCode: {
-              tag: "*",
-              autocloses: !0,
-            },
-          },
-          code_block: {
-            content: "inline*",
-            marks: "",
-            group: "block",
-            code: !0,
-            defining: !0,
-            parseDOM: [
-              {
-                tag: "pre",
-                preserveWhitespace: "full",
-              },
-            ],
-            toDOM: () => [
-              "pre",
-              {
-                class: _().CodeBlock,
-              },
-              [
-                "code",
-                {
-                  class: _().Code,
+                  class:
+                    `BB_Header${_.attrs.level} ` +
+                    _()[`Header${_.attrs.level}`],
                 },
                 0,
               ],
-            ],
-            bbCode: {
-              tag: "code",
+              bbCode: [1, 2, 3, 4, 5].map((_) => ({
+                tag: `h${_}`,
+                BBArgsToAttrs: () => ({
+                  level: _,
+                }),
+                AttrsToBBArgs: (_) => ({
+                  tag: `h${_.level}`,
+                }),
+              })),
             },
-          },
-        },
-        marks: {
-          strong: {
-            parseDOM: [
-              {
-                tag: "strong",
+            image: {
+              inline: !0,
+              attrs: {
+                src: {},
+                alt: {
+                  default: null,
+                },
+                title: {
+                  default: null,
+                },
               },
-              {
-                tag: "b",
-                getAttrs: (_) => "normal" != _.style.fontWeight && null,
+              group: "inline",
+              draggable: !0,
+              parseDOM: [
+                {
+                  tag: "img[src]",
+                  getAttrs: (_) => ({
+                    src: _.getAttribute("src"),
+                    title: _.getAttribute("title"),
+                    alt: _.getAttribute("alt"),
+                  }),
+                },
+              ],
+              toDOM(_) {
+                const { src: _, alt: __webpack_require__, title: _ } = _.attrs;
+                return [
+                  "img",
+                  {
+                    src: _,
+                    alt: __webpack_require__,
+                    title: _,
+                    class: _().Image,
+                  },
+                ];
               },
-              {
-                style: "font-weight=400",
-                clearMark: (_) => "strong" == _.type.name,
-              },
-              {
-                style: "font-weight",
-                getAttrs: (_) => /^(bold(er)?|[5-9]\d{2,})$/.test(_) && null,
-              },
-            ],
-            toDOM: _("b", (0, _._)("BB_Bold", _().Bold)),
-            bbCode: {
-              tag: "b",
-            },
-          },
-          italic: {
-            parseDOM: [
-              {
-                tag: "i",
-              },
-              {
-                tag: "em",
-              },
-              {
-                style: "font-style=italic",
-              },
-              {
-                style: "font-style=normal",
-                clearMark: (_) => "em" == _.type.name,
-              },
-            ],
-            toDOM: _("i", (0, _._)("BB_Italic", _().Italic)),
-            bbCode: {
-              tag: "i",
-            },
-          },
-          underline: {
-            parseDOM: [
-              {
-                tag: "u",
-              },
-              {
-                style: "text-decoration=underline",
-              },
-            ],
-            toDOM: _("u", (0, _._)("BB_Underline", _().Underline)),
-            bbCode: {
-              tag: "u",
-            },
-          },
-          strike: {
-            parseDOM: [
-              {
-                style: "text-decoration=line-through",
-              },
-            ],
-            toDOM: _("span", (0, _._)("BB_Strike", _().Strike)),
-            bbCode: {
-              tag: "strike",
-            },
-          },
-          code: {
-            parseDOM: [
-              {
-                tag: "code",
-              },
-            ],
-            toDOM: _("code", (0, _._)("BB_Code", _().Code)),
-            bbCode: {
-              tag: "c",
-            },
-          },
-          link: {
-            attrs: {
-              href: {},
-              title: {
-                default: null,
+              bbCode: {
+                tag: "img",
+                BBArgsToAttrs: (_) => ({
+                  src: _.src,
+                }),
+                AttrsToBBArgs: (_) => ({
+                  args: {
+                    src: _.src,
+                  },
+                }),
+                convertContentToAttr: "src",
               },
             },
-            inclusive: !1,
-            parseDOM: [
-              {
-                tag: "a[href]",
-                getAttrs: (_) => ({
-                  href: _.getAttribute("href"),
-                  title: _.getAttribute("title"),
+            video: {
+              inline: !0,
+              attrs: {
+                webm: {
+                  default: "",
+                },
+                mp4: {
+                  default: "",
+                },
+                poster: {
+                  default: "",
+                },
+                autoplay: {
+                  default: !0,
+                },
+                controls: {
+                  default: !1,
+                },
+              },
+              group: "inline",
+              draggable: !0,
+              parseDOM: [
+                {
+                  tag: "video",
+                  getAttrs(_) {
+                    if ("video" !== _.tagName) return;
+                    const _ = _;
+                    let _ = "",
+                      _ = "";
+                    for (const _ of _.querySelectorAll("source"))
+                      "video/mp4" == _.type
+                        ? (_ = _.src)
+                        : "video/webm" == _.type && (_ = _.src);
+                    return {
+                      mp4: _,
+                      webm: _,
+                      poster: _.poster || "",
+                      autoplay: !!_.autoplay,
+                      controls: !!_.controls,
+                    };
+                  },
+                },
+              ],
+              toDOM(_) {
+                const {
+                    webm: _,
+                    mp4: __webpack_require__,
+                    poster: _,
+                    autoplay: _,
+                    controls: _,
+                  } = _.attrs,
+                  _ = [];
+                return (
+                  _ &&
+                    _.push([
+                      "source",
+                      {
+                        src: _,
+                        type: "video/webm",
+                      },
+                    ]),
+                  __webpack_require__ &&
+                    _.push([
+                      "source",
+                      {
+                        src: __webpack_require__,
+                        type: "video/mp4",
+                      },
+                    ]),
+                  [
+                    "video",
+                    {
+                      poster: _,
+                      autoPlay: !!_,
+                      controls: !!_,
+                      loop: !_ && !!_,
+                    },
+                    _,
+                  ]
+                );
+              },
+              bbCode: {
+                tag: "video",
+                BBArgsToAttrs: (_) => ({
+                  webm: _.webm,
+                  mp4: _.mp4,
+                  poster: _.poster,
+                  autoplay: "true" == _.autoplay,
+                  controls: "true" == _.controls,
+                }),
+                AttrsToBBArgs: (_) => ({
+                  args: {
+                    webm: _.webm || "",
+                    mp4: _.mp4 || "",
+                    poster: _.poster || "",
+                    autoplay: _.autoplay ? "true" : "false",
+                    controls: _.controls ? "true" : "false",
+                  },
                 }),
               },
-            ],
-            toDOM(_) {
-              const { href: _, title: __webpack_require__ } = _.attrs;
-              return [
-                "a",
-                {
-                  href: _,
-                  title: __webpack_require__,
-                  class: "BB_Link",
-                },
-                0,
-              ];
             },
-            bbCode: {
-              tag: "url",
-              BBArgsToAttrs: (_) => ({
-                href: _[""],
-              }),
-              AttrsToBBArgs: (_) => ({
-                args: {
-                  "": _.href,
+            bullet_list: {
+              ..._._,
+              content: "list_item+",
+              group: "block",
+              toDOM: _("ul", _().List),
+              bbCode: {
+                tag: "list",
+              },
+            },
+            ordered_list: {
+              ..._._,
+              content: "list_item+",
+              group: "block",
+              toDOM: _("ol", _().OrderedList),
+              bbCode: {
+                tag: "olist",
+              },
+            },
+            list_item: {
+              ..._._,
+              content: "paragraph block*",
+              toDOM: _("li", _().ListItem),
+              bbCode: {
+                tag: "*",
+                autocloses: !0,
+              },
+            },
+            code_block: {
+              content: "inline*",
+              marks: "",
+              group: "block",
+              code: !0,
+              defining: !0,
+              parseDOM: [
+                {
+                  tag: "pre",
+                  preserveWhitespace: "full",
                 },
-              }),
-              convertContentToAttr: "href",
+              ],
+              toDOM: () => [
+                "pre",
+                {
+                  class: _().CodeBlock,
+                },
+                [
+                  "code",
+                  {
+                    class: _().Code,
+                  },
+                  0,
+                ],
+              ],
+              bbCode: {
+                tag: "code",
+              },
+            },
+          },
+          marks: {
+            strong: {
+              parseDOM: [
+                {
+                  tag: "strong",
+                },
+                {
+                  tag: "b",
+                  getAttrs: (_) => "normal" != _.style.fontWeight && null,
+                },
+                {
+                  style: "font-weight=400",
+                  clearMark: (_) => "strong" == _.type.name,
+                },
+                {
+                  style: "font-weight",
+                  getAttrs: (_) => /^(bold(er)?|[5-9]\d{2,})$/.test(_) && null,
+                },
+              ],
+              toDOM: _("b", (0, _._)("BB_Bold", _().Bold)),
+              bbCode: {
+                tag: "b",
+              },
+            },
+            italic: {
+              parseDOM: [
+                {
+                  tag: "i",
+                },
+                {
+                  tag: "em",
+                },
+                {
+                  style: "font-style=italic",
+                },
+                {
+                  style: "font-style=normal",
+                  clearMark: (_) => "em" == _.type.name,
+                },
+              ],
+              toDOM: _("i", (0, _._)("BB_Italic", _().Italic)),
+              bbCode: {
+                tag: "i",
+              },
+            },
+            underline: {
+              parseDOM: [
+                {
+                  tag: "u",
+                },
+                {
+                  style: "text-decoration=underline",
+                },
+              ],
+              toDOM: _("u", (0, _._)("BB_Underline", _().Underline)),
+              bbCode: {
+                tag: "u",
+              },
+            },
+            strike: {
+              parseDOM: [
+                {
+                  style: "text-decoration=line-through",
+                },
+              ],
+              toDOM: _("span", (0, _._)("BB_Strike", _().Strike)),
+              bbCode: {
+                tag: "strike",
+              },
+            },
+            code: {
+              parseDOM: [
+                {
+                  tag: "code",
+                },
+              ],
+              toDOM: _("code", (0, _._)("BB_Code", _().Code)),
+              bbCode: {
+                tag: "c",
+              },
+            },
+            link: {
+              attrs: {
+                href: {},
+                title: {
+                  default: null,
+                },
+              },
+              inclusive: !1,
+              parseDOM: [
+                {
+                  tag: "a[href]",
+                  getAttrs: (_) => ({
+                    href: _.getAttribute("href"),
+                    title: _.getAttribute("title"),
+                  }),
+                },
+              ],
+              toDOM(_) {
+                const { href: _, title: __webpack_require__ } = _.attrs;
+                return [
+                  "a",
+                  {
+                    href: _,
+                    title: __webpack_require__,
+                    class: "BB_Link",
+                  },
+                  0,
+                ];
+              },
+              bbCode: {
+                tag: "url",
+                BBArgsToAttrs: (_) => ({
+                  href: _[""],
+                }),
+                AttrsToBBArgs: (_) => ({
+                  args: {
+                    "": _.href,
+                  },
+                }),
+                convertContentToAttr: "href",
+              },
             },
           },
         },
-      };
+        _ = {
+          node: {},
+          marks: {
+            color: {
+              attrs: {
+                color: {},
+              },
+              parseDOM: [
+                {
+                  style: "color",
+                  getAttrs: (_) => ({
+                    color: _,
+                  }),
+                },
+              ],
+              toDOM: (_) => [
+                "span",
+                {
+                  style: `color: ${_.attrs.color}`,
+                  class: (0, _._)("BB_Color", _().Color),
+                },
+                0,
+              ],
+              bbCode: {
+                tag: "color",
+                BBArgsToAttrs: (_) => ({
+                  color: _[""],
+                }),
+                AttrsToBBArgs: (_) => ({
+                  args: {
+                    "": _.color,
+                  },
+                }),
+              },
+            },
+          },
+        };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1413,6 +1508,157 @@
               let _ = "",
                 _ = "",
                 { from: _, _: _ } = _;
+              const _ = (0, _._)(_.state, _.marks.color, _.$from),
+                _ = !!_;
+              _
+                ? ((_ = _.mark.attrs.color),
+                  _.empty
+                    ? ((_ = _.slice.content.textBetween(
+                        0,
+                        _.slice.content.size,
+                      )),
+                      (_ = _.from),
+                      (_ = _._))
+                    : ((_ = Math.max(_.from, _.from)),
+                      (_ = Math.min(_._, _._)),
+                      (_ = _.slice.content.textBetween(
+                        _ - _.from,
+                        _ - _.from,
+                      ))))
+                : _.state.selection.empty ||
+                  (_ = _.state.doc.cut(
+                    _.state.selection.from,
+                    _.state.selection._,
+                  ).textContent);
+              let _ = {};
+              if (_)
+                for (const _ in _) {
+                  const _ = _[_],
+                    _ = _
+                      ? __webpack_require__.fnReadValue(_.mark)
+                      : _.defaultValue;
+                  _[_] = _;
+                }
+              _({
+                view: _,
+                strColor: _,
+                strTargetText: _,
+                bIsUpdate: _,
+                addtlAttrs: _,
+                addtlAttrsValues: _,
+                from: _,
+                _: _,
+              });
+            },
+            [_, _.marks.color],
+          ),
+          _ = null == __webpack_require__ ? void 0 : __webpack_require__.view,
+          _ = _.useCallback(() => {
+            window.setTimeout(() => _.focus(), 1), _(void 0);
+          }, [_]);
+        return [
+          _,
+          __webpack_require__ &&
+            _.createElement(
+              _._,
+              {
+                active: !0,
+              },
+              _.createElement(_, {
+                schema: _,
+                closeModal: _,
+                ...__webpack_require__,
+              }),
+            ),
+        ];
+      }
+      const _ = _.memo(function (_) {
+        const {
+            schema: _,
+            strColor: __webpack_require__,
+            bIsUpdate: _,
+            strTargetText: _,
+            addtlAttrs: _,
+            addtlAttrsValues: _,
+            closeModal: _,
+            view: _,
+            from: _,
+            _: _,
+          } = _,
+          [_, _] = _.useState(__webpack_require__),
+          _ = _.useRef(null),
+          [_, _] = _.useState(_);
+        _.useLayoutEffect(() => {
+          var _, _, _;
+          (
+            null ===
+              (_ =
+                null === (_ = _.current) || void 0 === _ ? void 0 : _.value) ||
+            void 0 === _
+              ? void 0
+              : _.length
+          )
+            ? _.current.focus()
+            : null === (_ = _.current) ||
+              void 0 === _ ||
+              __webpack_require__.focus();
+        }, []);
+        const _ = (0, _._)("#FormattingToolbar_Color"),
+          _ = _
+            ? (0, _._)("#Button_Save")
+            : (0, _._)("#FormattingToolbar_Color");
+        return _.createElement(
+          _._,
+          {
+            onOK: () => {
+              let _ = _.state._;
+              const _ = {
+                color: _,
+              };
+              for (const _ in _) _[_] = _[_];
+              const _ = _.text(_, [_.marks.color.create(_)]);
+              (_ = _.replaceRangeWith(_, _, _)),
+                (_ = _.setSelection(
+                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
+                )),
+                _.dispatch(_),
+                _();
+            },
+            closeModal: _,
+            strTitle: _,
+            strOKText: _,
+            bOKDisabled: 0 == _.length,
+          },
+          _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
+          _.createElement("input", {
+            type: "color",
+            ref: _,
+            value: _,
+            onChange: (_) => _(_.currentTarget.value),
+          }),
+        );
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const [__webpack_require__, _] = _.useState(void 0),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _.state.selection;
+              let _ = "",
+                _ = "",
+                { from: _, _: _ } = _;
               const _ = (0, _._)(_.state, _.marks.link, _.$from),
                 _ = !!_;
               _
@@ -1666,6 +1912,7 @@
             refOnUpdate: _,
             refView: _,
             bSpellcheckEnabled: _ = !0,
+            bSingleLine: _,
             panelProps: _,
             children: _,
           } = _,
@@ -1738,6 +1985,7 @@
           _.createElement(_._, {
             refOnUpdate: _,
             schema: _.pm_schema,
+            bSingleLine: _,
           }),
           _.createElement(_, {
             parser: _,
@@ -1821,7 +2069,30 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
+          { callbacks: _, view: _ } = (0, _._)(),
+          [_, _] = _.useState(() => (0, _._)(_.state, _.marks.link)),
+          _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
+        (0, _._)(_, _);
+        const [_, _] = (0, _._)(_, __webpack_require__);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _,
+          _.createElement(
+            _._,
+            {
+              onClick: () => _(_),
+              toggled: _,
+              tooltip: "#FormattingToolbar_Color",
+            },
+            _,
+          ),
+        );
+      }
       function _() {
         return _.createElement(
           _.Fragment,
@@ -1898,6 +2169,14 @@
                 mark: _.marks.code,
               },
               _.createElement(_.bmT, null),
+            ),
+          "color" in _.marks &&
+            _.createElement(
+              _,
+              {
+                schema: _,
+              },
+              _.createElement(_.r7n, null),
             ),
         );
       }

@@ -2952,6 +2952,13 @@ img.package_header {
 	}
 }
 
+@media screen and (max-width: 910px )
+{
+	html.responsive .mature_content_notice {
+		margin: 0px auto;
+	}
+}
+
 .agegate_text_container .btn_next_in_queue {
 	margin-bottom: 0px;
 	margin-right: 0px;

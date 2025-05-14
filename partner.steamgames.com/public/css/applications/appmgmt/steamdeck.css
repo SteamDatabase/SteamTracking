@@ -172,6 +172,10 @@
   font-weight: bold;
   color: #7c8ea3;
 }
+.mJGYScROtrnXBuQ-LU507 ._2XeA02URQukjyKp0fh__XL {
+  font-weight: bold;
+  color: #199fff;
+}
 ._3456EX4aC94XtIz6d_Qhsl {
   vertical-align: middle;
   font-size: 14px;
@@ -184,6 +188,9 @@
 }
 ._3456EX4aC94XtIz6d_Qhsl ._2Q0ld2nJ3334gwZJ4LVzPW {
   color: #7c8ea3;
+}
+._3456EX4aC94XtIz6d_Qhsl ._2XeA02URQukjyKp0fh__XL {
+  color: #199fff;
 }
 ._2mwbdnqm9Lk1-Bzs8FIdCU {
   height: 1px;
@@ -257,6 +264,35 @@
   font-size: 14px;
   line-height: 20px;
 }
+._1ALZVqWCl2J8DJg4XxemH1 {
+  justify-content: center;
+  border-bottom: unset !important;
+}
+._1ALZVqWCl2J8DJg4XxemH1 > div {
+  border-bottom: unset;
+  color: #a9a9a9;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #17202c;
+  font-weight: 700;
+  border-radius: 80px;
+}
+._1ALZVqWCl2J8DJg4XxemH1 ._1M5TZawv5Y4CRNXAISchG2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 50%;
+  gap: 5px;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+._1ALZVqWCl2J8DJg4XxemH1 .ActiveTab {
+  background-color: #fff;
+  color: #0e141b;
+}
+._1ALZVqWCl2J8DJg4XxemH1 .ActiveTab ._1M5TZawv5Y4CRNXAISchG2 {
+  opacity: 100%;
+}
 ._2UAf_T9P3-2l5Rr-IlNksx .yjs9mmsKYDARPUPSoBFw3 {
   color: #0e141b;
 }
@@ -286,4 +322,55 @@
 }
 ._2NB_hM-9uJkdXPKC3tdS7-._1Zc5j2ll9yRxA_ZKHEYhw2 {
   margin-right: 20px;
+}
+._3oSHTIvUhbK90D9Uvj438V {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #67c1f5;
+  align-items: flex-end;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+._3lJb_YN8uykqLcm4eG1jRF {
+  padding: 4px 12px;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+  transition-property: border-bottom-color;
+  transition-duration: .25s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
+  font-size: 12px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) ._3lJb_YN8uykqLcm4eG1jRF {
+    font-size: 12px;
+  }
+}
+._3lJb_YN8uykqLcm4eG1jRF._8XjrTFzaSA8ubHvHCu44L,
+._3lJb_YN8uykqLcm4eG1jRF:hover {
+  border-bottom-color: #67c1f5;
+  cursor: default;
+  cursor: pointer;
+}
+._25U4FBOpeZQAX-v-f9Yosb {
+  text-transform: uppercase;
+  font-size: 9px;
+}
+._3LaJynPDFfccGWUEtdltlt {
+  font-size: 9px;
+  color: #b22222;
+}
+._1iIRVlPDTEUMMEFuHgLGlq {
+  color: #a4d007;
+}
+.UxdQKun4GcZ-B1NJwHevX {
+  color: #e24044;
+}
+.E9t9jUT0k_0xGdy7HbJfd {
+  color: #e76e34;
 }

@@ -883,7 +883,6 @@ $\nY8O
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
-:ixHx0
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
 <\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational

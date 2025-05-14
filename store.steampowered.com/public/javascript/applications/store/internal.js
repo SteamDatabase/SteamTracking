@@ -2105,6 +2105,11 @@
                     br: F.qM.readInt64String,
                     bw: F.gp.writeInt64String,
                   },
+                  played_since: {
+                    n: 23,
+                    br: F.qM.readUint32,
+                    bw: F.gp.writeUint32,
+                  },
                 },
               }),
             U.sm_m

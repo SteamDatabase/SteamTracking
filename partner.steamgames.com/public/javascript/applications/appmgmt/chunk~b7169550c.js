@@ -4,38 +4,25 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4440],
   {
-    1990: (t) => {
-      t.exports = {
-        narrowWidth: "500px",
-        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
-        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
-        Active: "_8XjrTFzaSA8ubHvHCu44L",
-        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
-        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
-        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
-        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
-      };
-    },
     64734: (t) => {
       t.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
-    98019: (t, e, a) => {
+    98019: (t, e, n) => {
       "use strict";
-      a.d(e, { p: () => c, q: () => i });
-      var n = a(20194),
-        s = a(41735),
-        r = a.n(s),
-        o = a(78327);
+      n.d(e, { p: () => u, q: () => i });
+      var a = n(20194),
+        r = n(41735),
+        o = n.n(r),
+        s = n(78327);
       function i() {
-        const t = (0, n.I)({
+        const t = (0, a.I)({
           queryKey: ["useValveAccounts"],
           queryFn: async () => {
-            const t = `${o.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
-              e = await r().get(t);
+            const t = `${s.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
+              e = await o().get(t);
             return 200 == e?.status && 1 == e.data?.success
               ? e.data.admins
               : (console.error("ValveAccounts:", e?.status), []);
@@ -43,32 +30,32 @@
         });
         return t.isLoading ? null : t.data;
       }
-      function c(t) {
+      function u(t) {
         const e = i();
         return e?.find((e) => e.id == t);
       }
     },
-    32179: (t, e, a) => {
+    32179: (t, e, n) => {
       "use strict";
-      a.d(e, {
-        MY: () => u,
-        UA: () => m,
-        Yd: () => h,
-        qG: () => f,
-        rN: () => d,
-        vh: () => g,
+      n.d(e, {
+        MY: () => l,
+        UA: () => d,
+        Yd: () => f,
+        qG: () => _,
+        rN: () => m,
+        vh: () => p,
       });
-      var n = a(34629),
-        s = a(41735),
-        r = a.n(s),
-        o = a(90626),
-        i = a(68797),
-        c = a(78327),
-        l = a(6419);
-      function u() {
-        return 2 == c.TS.EUNIVERSE ? 12 : 1;
+      var a = n(34629),
+        r = n(41735),
+        o = n.n(r),
+        s = n(90626),
+        i = n(68797),
+        u = n(78327),
+        c = n(6419);
+      function l() {
+        return 2 == u.TS.EUNIVERSE ? 12 : 1;
       }
-      class p {
+      class g {
         m_mapOptInToPartners = new Map();
         m_mapPromises = new Map();
         GetPartnerInfo(t) {
@@ -87,26 +74,26 @@
         async InternalFindPartnerByName(t) {
           const e = new Array();
           try {
-            const a = c.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-              n = {
-                sessionid: c.TS.SESSIONID,
+            const n = u.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+              a = {
+                sessionid: u.TS.SESSIONID,
                 searchtext: t,
                 origin: self.origin,
               },
-              s = await r().get(a, { params: n });
-            200 == s?.status && 1 == s?.data?.success
-              ? s.data.publishers.forEach((t) => {
-                  const a = {
+              r = await o().get(n, { params: a });
+            200 == r?.status && 1 == r?.data?.success
+              ? r.data.publishers.forEach((t) => {
+                  const n = {
                     partnerid: t.publisherid,
                     name: t.publishername,
                     partner_url:
-                      c.TS.PARTNER_BASE_URL + `pub/publisher/${t.publisherid}/`,
+                      u.TS.PARTNER_BASE_URL + `pub/publisher/${t.publisherid}/`,
                     contacts: t.contacts,
                   };
-                  this.m_mapOptInToPartners.set(t.publisherid, a), e.push(a);
+                  this.m_mapOptInToPartners.set(t.publisherid, n), e.push(n);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${s?.status} eresult ${s?.data?.success} and msg ${s?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
                 );
           } catch (t) {
             const e = (0, i.H)(t);
@@ -139,20 +126,20 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = p.s_Singleton)),
-            p.s_Singleton
+            g.s_Singleton ||
+              ((g.s_Singleton = new g()),
+              ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
+                (window.g_PartnerInfoStore = g.s_Singleton)),
+            g.s_Singleton
           );
         }
         constructor() {
           let t = JSON.parse(
-            JSON.stringify((0, c.Tc)("partner_info", "application_config")),
+            JSON.stringify((0, u.Tc)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(t) &&
             (t.forEach((t) => this.m_mapOptInToPartners.set(t.partnerid, t)),
-            "dev" == c.TS.WEB_UNIVERSE &&
+            "dev" == u.TS.WEB_UNIVERSE &&
               console.log("DEV_DEUBG: CPartnerInfoStore::constructor", t));
         }
         ValidateStoreDefault(t) {
@@ -169,63 +156,63 @@
           );
         }
       }
-      function g(t) {
-        const [e, a] = (0, o.useState)(!1);
+      function p(t) {
+        const [e, n] = (0, s.useState)(!1);
         return (
-          (0, o.useEffect)(() => {
+          (0, s.useEffect)(() => {
             !e &&
               t?.length > 0 &&
-              p
+              g
                 .Get()
                 .LoadMultiplePartnerInfo(t)
-                .then(() => a(!0));
+                .then(() => n(!0));
           }, [t, e]),
           e
         );
       }
-      function m(t) {
-        const [e, a] = o.useState(() => p.Get().GetPartnerInfo(t));
+      function d(t) {
+        const [e, n] = s.useState(() => g.Get().GetPartnerInfo(t));
         return (
-          o.useEffect(() => {
-            !p.Get().BHasPartnerInfoLoad(t) && t > 0
-              ? p
+          s.useEffect(() => {
+            !g.Get().BHasPartnerInfoLoad(t) && t > 0
+              ? g
                   .Get()
                   .LoadPartnerInfo(t)
-                  .then((t) => a(t))
-              : p.Get().BHasPartnerInfoLoad(t) &&
+                  .then((t) => n(t))
+              : g.Get().BHasPartnerInfoLoad(t) &&
                 e?.partnerid != t &&
-                a(p.Get().GetPartnerInfo(t));
+                n(g.Get().GetPartnerInfo(t));
           }, [t, e]),
           [e]
         );
       }
-      function d() {
-        return { fnFindPartnerByName: p.Get().FindPartnerByName };
-      }
-      function h(t) {
-        return p.Get().GetPartnerInfo(t);
+      function m() {
+        return { fnFindPartnerByName: g.Get().FindPartnerByName };
       }
       function f(t) {
-        return p.Get().LoadPartnerInfo(t);
+        return g.Get().GetPartnerInfo(t);
       }
-      (0, n.Cg)([l.o], p.prototype, "FindPartnerByName", null);
+      function _(t) {
+        return g.Get().LoadPartnerInfo(t);
+      }
+      (0, a.Cg)([c.o], g.prototype, "FindPartnerByName", null);
     },
-    63556: (t, e, a) => {
+    63556: (t, e, n) => {
       "use strict";
-      a.d(e, { E: () => g, O: () => p });
-      var n = a(34629),
-        s = a(14947),
-        r = a(65946),
-        o = a(22837),
-        i = a(62490),
-        c = a(6419),
-        l = a(78327),
-        u = a(91986);
-      class p {
-        m_eCurLang = (0, o.sf)(l.TS.LANGUAGE);
+      n.d(e, { E: () => p, O: () => g });
+      var a = n(34629),
+        r = n(14947),
+        o = n(65946),
+        s = n(22837),
+        i = n(62490),
+        u = n(6419),
+        c = n(78327),
+        l = n(91986);
+      class g {
+        m_eCurLang = (0, s.sf)(c.TS.LANGUAGE);
         m_rgHasData = (0, i.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
-        m_callback = new u.l();
+        m_callback = new l.l();
         GetCallback() {
           return this.m_callback;
         }
@@ -256,35 +243,35 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            p.s_globalSingletonStore ||
-              ((p.s_globalSingletonStore = new p()),
-              "dev" == l.TS.WEB_UNIVERSE &&
-                (window.DUS = p.s_globalSingletonStore)),
-            p.s_globalSingletonStore
+            g.s_globalSingletonStore ||
+              ((g.s_globalSingletonStore = new g()),
+              "dev" == c.TS.WEB_UNIVERSE &&
+                (window.DUS = g.s_globalSingletonStore)),
+            g.s_globalSingletonStore
           );
         }
         constructor() {
-          (0, s.Gn)(this);
+          (0, r.Gn)(this);
         }
       }
-      function g() {
-        return (0, r.q3)(() => p.Get().GetCurEditLanguage());
+      function p() {
+        return (0, o.q3)(() => g.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([s.sH], p.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([s.sH], p.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([s.sH], p.prototype, "m_bHasLocalizationContext", void 0),
-        (0, n.Cg)([c.o], p.prototype, "GetCurEditLanguage", null),
-        (0, n.Cg)([c.o], p.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([s.XI.bound], p.prototype, "SetHasLanguage", null),
-        (0, n.Cg)([c.o], p.prototype, "BHasLanguageData", null);
+      (0, a.Cg)([r.sH], g.prototype, "m_eCurLang", void 0),
+        (0, a.Cg)([r.sH], g.prototype, "m_rgHasData", void 0),
+        (0, a.Cg)([r.sH], g.prototype, "m_bHasLocalizationContext", void 0),
+        (0, a.Cg)([u.o], g.prototype, "GetCurEditLanguage", null),
+        (0, a.Cg)([u.o], g.prototype, "SetCurEditLanguage", null),
+        (0, a.Cg)([r.XI.bound], g.prototype, "SetHasLanguage", null),
+        (0, a.Cg)([u.o], g.prototype, "BHasLanguageData", null);
     },
-    96001: (t, e, a) => {
+    96001: (t, e, n) => {
       "use strict";
-      a.d(e, { a: () => c, z: () => i });
-      var n = a(81393),
-        s = a(96059),
-        r = a(30470),
-        o = a(24484);
+      n.d(e, { a: () => u, z: () => i });
+      var a = n(81393),
+        r = n(96059),
+        o = n(30470),
+        s = n(24484);
       class i {
         m_steamInterface;
         GetPromotionTransport() {
@@ -298,230 +285,230 @@
           );
         }
         Init() {
-          const t = (0, o.Tc)(
+          const t = (0, s.Tc)(
             "promotion_operation_token",
             "application_config",
           );
-          (0, n.w)(Boolean(t), "require promotion_operation_token"),
-            (this.m_steamInterface = new s.D(r.TS.WEBAPI_BASE_URL, t));
+          (0, a.w)(Boolean(t), "require promotion_operation_token"),
+            (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, t));
         }
       }
-      function c() {
+      function u() {
         return i.Get().GetPromotionTransport().GetServiceTransport();
       }
     },
-    27144: (t, e, a) => {
+    27144: (t, e, n) => {
       "use strict";
-      a.d(e, { B3: () => T, CF: () => y, KM: () => S, KT: () => E });
-      var n = a(41735),
-        s = a.n(n),
-        r = a(58632),
-        o = a.n(r),
-        i = a(90626),
-        c = a(20194),
-        l = a(75233),
-        u = a(17720),
-        p = a(68797),
-        g = a(78327),
-        m = a(56545),
-        d = a(37735),
-        h = a(23809),
-        f = a(7860);
-      const _ = "nicknames";
-      function S(t) {
-        const e = (0, h.KV)(),
-          { data: a, isLoading: n } = (0, c.I)({
-            queryKey: [_],
+      n.d(e, { B3: () => b, CF: () => I, KM: () => L, KT: () => y });
+      var a = n(41735),
+        r = n.n(a),
+        o = n(58632),
+        s = n.n(o),
+        i = n(90626),
+        u = n(20194),
+        c = n(75233),
+        l = n(17720),
+        g = n(68797),
+        p = n(78327),
+        d = n(56545),
+        m = n(37735),
+        f = n(23809),
+        _ = n(7860);
+      const h = "nicknames";
+      function L(t) {
+        const e = (0, f.KV)(),
+          { data: n, isLoading: a } = (0, u.I)({
+            queryKey: [h],
             queryFn: async () => {
               const t = new Map();
-              if (g.iA.logged_in) {
-                const a = m.w.Init(d.dN),
-                  n = (await d.xt.GetNicknameList(e, a)).Body().toObject();
-                n?.nicknames &&
-                  n.nicknames.length > 0 &&
-                  n.nicknames.forEach((e) => {
+              if (p.iA.logged_in) {
+                const n = d.w.Init(m.dN),
+                  a = (await m.xt.GetNicknameList(e, n)).Body().toObject();
+                a?.nicknames &&
+                  a.nicknames.length > 0 &&
+                  a.nicknames.forEach((e) => {
                     t.set(e.accountid, e.nickname);
                   });
               }
               return t;
             },
           });
-        return a ? a.get(t) : null;
+        return n ? n.get(t) : null;
       }
-      const b = new (o())(
+      const S = new (s())(
           (t) =>
             (async function (t) {
               if (!t || 0 == t.length) return [];
               const e =
-                "community" == (0, g.yK)()
-                  ? g.TS.COMMUNITY_BASE_URL
-                  : g.TS.STORE_BASE_URL;
+                "community" == (0, p.yK)()
+                  ? p.TS.COMMUNITY_BASE_URL
+                  : p.TS.STORE_BASE_URL;
               if (1 == t.length) {
-                const a = { accountid: t[0], origin: self.origin },
-                  n = await s().get(`${e}actions/ajaxgetavatarpersona`, {
-                    params: a,
+                const n = { accountid: t[0], origin: self.origin },
+                  a = await r().get(`${e}actions/ajaxgetavatarpersona`, {
+                    params: n,
                   });
                 if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfo
+                  !a ||
+                  200 != a.status ||
+                  1 != a.data?.success ||
+                  !a.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, p.H))(n).strErrorMsg}`;
-                return [n.data.userinfo];
+                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
+                return [a.data.userinfo];
               }
               {
-                const a = { accountids: t.join(","), origin: self.origin },
-                  n = await s().get(`${e}actions/ajaxgetmultiavatarpersona`, {
-                    params: a,
+                const n = { accountids: t.join(","), origin: self.origin },
+                  a = await r().get(`${e}actions/ajaxgetmultiavatarpersona`, {
+                    params: n,
                   });
                 if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfos
+                  !a ||
+                  200 != a.status ||
+                  1 != a.data?.success ||
+                  !a.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, p.H))(n).strErrorMsg}`;
-                const r = new Map();
+                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
+                const o = new Map();
                 return (
-                  n.data.userinfos.forEach((t) =>
-                    r.set(new u.b(t.steamid).GetAccountID(), t),
+                  a.data.userinfos.forEach((t) =>
+                    o.set(new l.b(t.steamid).GetAccountID(), t),
                   ),
-                  t.map((t) => r.get(t))
+                  t.map((t) => o.get(t))
                 );
               }
             })(t),
           { cache: !1 },
         ),
-        L = "avatarandpersonas";
-      function E(t) {
-        const { data: e, isLoading: a } = (0, c.I)({
-          queryKey: [L, t],
-          queryFn: () => b.load(t),
+        E = "avatarandpersonas";
+      function y(t) {
+        const { data: e, isLoading: n } = (0, u.I)({
+          queryKey: [E, t],
+          queryFn: () => S.load(t),
         });
-        return [e, a];
+        return [e, n];
       }
-      function T(t) {
-        const e = (0, l.jE)(),
-          { data: a, isLoading: n } = (0, c.I)({
-            queryKey: [L, t],
+      function b(t) {
+        const e = (0, c.jE)(),
+          { data: n, isLoading: a } = (0, u.I)({
+            queryKey: [E, t],
             queryFn: async () => {
-              const a = await b.loadMany(t);
+              const n = await S.loadMany(t);
               return (
-                a.forEach((t) => {
-                  const a = [L, new u.b(t.steamid).GetAccountID()];
-                  e.setQueryData(a, t);
+                n.forEach((t) => {
+                  const n = [E, new l.b(t.steamid).GetAccountID()];
+                  e.setQueryData(n, t);
                 }),
-                a
+                n
               );
             },
             enabled: t?.length > 0,
           }),
-          s = (0, i.useMemo)(() => {
+          r = (0, i.useMemo)(() => {
             const t = new Array();
             return (
-              a?.forEach((e) => {
+              n?.forEach((e) => {
                 e instanceof Error || t.push(e);
               }),
               t
             );
-          }, [a]);
-        return n ? null : s;
+          }, [n]);
+        return a ? null : r;
       }
-      function y(t) {
-        return f.L.getQueryData([L, t]);
+      function I(t) {
+        return _.L.getQueryData([E, t]);
       }
     },
-    1909: (t, e, a) => {
+    1909: (t, e, n) => {
       "use strict";
-      a.d(e, { Ng: () => _, iN: () => S, yk: () => b });
-      var n = a(34629),
-        s = a(75844),
-        r = a(65946),
-        o = a(90626),
-        i = a(22837),
-        c = a(2160),
-        l = a(63556),
-        u = a(95695),
-        p = a.n(u),
-        g = a(52038),
-        m = a(61859),
-        d = a(91675),
-        h = a(73745),
-        f = a(32754);
-      let _ = class extends o.Component {
+      n.d(e, { Ng: () => h, iN: () => L, yk: () => S });
+      var a = n(34629),
+        r = n(75844),
+        o = n(65946),
+        s = n(90626),
+        i = n(22837),
+        u = n(2160),
+        c = n(63556),
+        l = n(95695),
+        g = n.n(l),
+        p = n(52038),
+        d = n(61859),
+        m = n(91675),
+        f = n(73745),
+        _ = n(32754);
+      let h = class extends s.Component {
         GenerateLanguageOptions() {
           let t = [];
           const {
             fnFilterLanguage: e,
-            fnLangHasData: a,
-            fnLastUpdateRTime: n,
-            fnIsLangSupported: s,
+            fnLangHasData: n,
+            fnLastUpdateRTime: a,
+            fnIsLangSupported: r,
           } = this.props;
           this.props.bAllowUnsetOption &&
             t.push(
-              o.createElement(
+              s.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
-                (0, m.we)("#language_selection_none"),
+                (0, d.we)("#language_selection_none"),
               ),
             );
-          let r = new Array();
-          const l = this.props.realms || [c.TU.k_ESteamRealmGlobal];
-          for (const t of m.A0.GetLanguageListForRealms(l)) {
+          let o = new Array();
+          const c = this.props.realms || [u.TU.k_ESteamRealmGlobal];
+          for (const t of d.A0.GetLanguageListForRealms(c)) {
             if (e && !e(t)) continue;
-            const a = (0, i.Lg)(t),
-              n = (0, m.we)("#Language_" + a),
-              o = Boolean(s) && s(t);
-            r.push({ eLang: t, sLocName: n, bSupported: o });
+            const n = (0, i.Lg)(t),
+              a = (0, d.we)("#Language_" + n),
+              s = Boolean(r) && r(t);
+            o.push({ eLang: t, sLocName: a, bSupported: s });
           }
-          r.sort((t, e) =>
+          o.sort((t, e) =>
             t.bSupported != e.bSupported
               ? t.bSupported
                 ? -1
                 : 1
               : t.sLocName.localeCompare(e.sLocName),
           );
-          let u = !1;
-          for (const e of r) {
-            e.bSupported != u &&
+          let l = !1;
+          for (const e of o) {
+            e.bSupported != l &&
               (t.push(
-                o.createElement(
+                s.createElement(
                   "option",
                   {
                     key: e.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                    className: p().SupportedGroupLabel,
+                    className: g().SupportedGroupLabel,
                     disabled: !0,
                   },
-                  (0, m.we)(
+                  (0, d.we)(
                     e.bSupported
                       ? "#LanguageGroup_Supported"
                       : "#LanguageGroup_Unsupported",
                   ),
                 ),
               ),
-              (u = e.bSupported));
-            const s = a && a(e.eLang),
-              r = n && n(e.eLang);
+              (l = e.bSupported));
+            const r = n && n(e.eLang),
+              o = a && a(e.eLang);
             let i = e.sLocName;
-            r &&
-              0 !== r &&
+            o &&
+              0 !== o &&
               ((i += " "),
-              (i += (0, m.we)(
+              (i += (0, d.we)(
                 "#Language_Last_Update",
-                (0, m.$z)(r) + " @ " + (0, d.KC)(r, { bForce24HourClock: !1 }),
+                (0, d.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
               ))),
               t.push(
-                o.createElement(
+                s.createElement(
                   "option",
                   {
-                    key: "langpicker" + e.eLang + (s ? "_hasdata" : ""),
+                    key: "langpicker" + e.eLang + (r ? "_hasdata" : ""),
                     value: e.eLang,
-                    className: (0, g.A)(
-                      { [p().LanguageWithContent]: s },
+                    className: (0, p.A)(
+                      { [g().LanguageWithContent]: r },
                       e.bSupported
-                        ? p().SupportedLanguage
-                        : p().UnsupportedLanguage,
+                        ? g().SupportedLanguage
+                        : g().UnsupportedLanguage,
                     ),
                   },
                   i,
@@ -531,261 +518,128 @@
           return t;
         }
         OnLanguageChange(t) {
-          const { fnOnLanguageChanged: e, selectedLang: a } = this.props;
-          let n = Number.parseInt(t.currentTarget.value);
-          n != a && e && e(n);
+          const { fnOnLanguageChanged: e, selectedLang: n } = this.props;
+          let a = Number.parseInt(t.currentTarget.value);
+          a != n && e && e(a);
         }
         render() {
-          const { selectedLang: t, bDisabled: e, strTooltip: a } = this.props;
-          let n = this.GenerateLanguageOptions();
-          return o.createElement(
-            f.he,
-            { toolTipContent: a },
-            o.createElement(
+          const { selectedLang: t, bDisabled: e, strTooltip: n } = this.props;
+          let a = this.GenerateLanguageOptions();
+          return s.createElement(
+            _.he,
+            { toolTipContent: n },
+            s.createElement(
               "select",
               { value: t, onChange: this.OnLanguageChange, disabled: e },
-              n,
+              a,
             ),
           );
         }
       };
-      function S(t) {
-        const [e, a] = (0, r.q3)(() => [
-          l.O.Get().GetHasLocalizationContext(),
-          l.O.Get().GetCurEditLanguage(),
+      function L(t) {
+        const [e, n] = (0, o.q3)(() => [
+          c.O.Get().GetHasLocalizationContext(),
+          c.O.Get().GetCurEditLanguage(),
         ]);
-        return o.createElement(_, {
-          selectedLang: a,
-          fnLangHasData: l.O.Get().BHasLanguageData,
-          fnOnLanguageChanged: l.O.Get().SetCurEditLanguage,
+        return s.createElement(h, {
+          selectedLang: n,
+          fnLangHasData: c.O.Get().BHasLanguageData,
+          fnOnLanguageChanged: c.O.Get().SetCurEditLanguage,
           bDisabled: !e,
-          strTooltip: e ? void 0 : (0, m.we)("#Localization_EditorNotInFocus"),
+          strTooltip: e ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function b(t) {
+      function S(t) {
         const { fnLangHasData: e } = t;
-        o.useEffect(
+        s.useEffect(
           () => (
-            l.O.Get().SetHasLocalizationContext(!0),
-            () => l.O.Get().SetHasLocalizationContext(!1)
+            c.O.Get().SetHasLocalizationContext(!0),
+            () => c.O.Get().SetHasLocalizationContext(!1)
           ),
           [],
         );
-        const a = (0, r.q3)(() => {
+        const n = (0, o.q3)(() => {
           const t = [];
-          for (let a = 0; a < 31; ++a) t[a] = e && e(a);
+          for (let n = 0; n < 31; ++n) t[n] = e && e(n);
           return t;
         });
         return (
-          o.useEffect(() => l.O.Get().SetHasLanguage(a), [a]),
-          o.createElement(o.Fragment, null)
+          s.useEffect(() => c.O.Get().SetHasLanguage(n), [n]),
+          s.createElement(s.Fragment, null)
         );
       }
-      (0, n.Cg)([h.oI], _.prototype, "OnLanguageChange", null),
-        (_ = (0, n.Cg)([s.PA], _));
+      (0, a.Cg)([f.oI], h.prototype, "OnLanguageChange", null),
+        (h = (0, a.Cg)([r.PA], h));
     },
-    38135: (t, e, a) => {
+    48479: (t, e, n) => {
       "use strict";
-      a.d(e, { V: () => b, a: () => _ });
-      var n = a(34629),
-        s = a(90626),
-        r = a(75844),
-        o = a(92757),
-        i = a(52038),
-        c = a(61859),
-        l = a(95034),
-        u = a(1990),
-        p = a.n(u),
-        g = a(32754),
-        m = a(51272),
-        d = a(76217),
-        h = a(6419);
-      class f extends s.Component {
-        state = { activeTab: "" };
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({ activeTab: this.props.startingTab })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, l.f3)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(t) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== t.location.key &&
-            this.setState({ activeTab: (0, l.f3)(this.props.location, "tab") });
-        }
-        OnTabClick(t) {
-          this.setState({ activeTab: t.key }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, l.Bm)(this.props.history, "tab", t.key),
-            t.onClick && t.onClick(t);
-        }
-        render() {
-          const t =
-            this.props.tabs.find((t) => t.key === this.state.activeTab) ||
-            this.props.tabs[0];
-          return s.createElement(
-            s.Fragment,
-            null,
-            s.createElement(
-              d.Z,
-              {
-                className: (0, i.A)(
-                  p().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
-                ),
-              },
-              this.props.tabs.map((e) =>
-                s.createElement(S, {
-                  key: e.key,
-                  tab: e,
-                  OnTabClick: this.OnTabClick,
-                  classNameTab: this.props.classNameTab,
-                  active: e.key === t.key,
-                }),
-              ),
-            ),
-            s.createElement(
-              d.Z,
-              null,
-              t && s.createElement(d.Z, null, t.contents),
-            ),
-          );
-        }
-      }
-      function _(t) {
-        const { statusType: e = "success", children: a } = t;
-        let n = "";
-        return (
-          "success" === e
-            ? (n = p().StatusSuccess)
-            : "danger" === e
-              ? (n = p().StatusDanger)
-              : "caution" === e && (n = p().StatusCaution),
-          s.createElement(
-            "div",
-            { className: (0, i.A)(p().GraphicalAssetStatus, n) },
-            a,
-          )
-        );
-      }
-      (0, n.Cg)([h.o], f.prototype, "OnTabClick", null);
-      const S = (0, r.PA)(function (t) {
-          const { tab: e, OnTabClick: a, classNameTab: n, active: r } = t;
-          return e.hidden
-            ? null
-            : s.createElement(
-                m.e7,
-                {
-                  condition: Boolean(e.statusToolTip || e.tooltip),
-                  wrap: (t) =>
-                    s.createElement(
-                      g.he,
-                      { toolTipContent: e.statusToolTip || e.tooltip },
-                      t,
-                    ),
-                },
-                s.createElement(
-                  d.Z,
-                  {
-                    className: (0, i.A)(
-                      p().GraphicalAssetsTab,
-                      r && p().Active,
-                      r && "ActiveTab",
-                      n,
-                    ),
-                    onActivate: () => a(e),
-                  },
-                  Boolean(e.vo_warning) &&
-                    s.createElement(
-                      g.he,
-                      { toolTipContent: e.vo_warning },
-                      s.createElement(
-                        "div",
-                        { className: p().VOWarning },
-                        (0, c.we)("#EventEditor_VOWarning"),
-                      ),
-                    ),
-                  e.status,
-                  e.name,
-                ),
-              );
-        }),
-        b = (0, o.y)(f);
-    },
-    48479: (t, e, a) => {
-      "use strict";
-      a.d(e, { AQ: () => m, qx: () => d });
-      var n = a(16676),
-        s = a(61859),
-        r = a(12155),
-        o = a(90626),
-        i = a(52038),
-        c = a(95695),
-        l = a(84811),
-        u = a(64734),
-        p = a(65946),
-        g = a(26408);
-      function m(t) {
+      n.d(e, { AQ: () => d, qx: () => m });
+      var a = n(16676),
+        r = n(61859),
+        o = n(12155),
+        s = n(90626),
+        i = n(52038),
+        u = n(95695),
+        c = n(84811),
+        l = n(64734),
+        g = n(65946),
+        p = n(26408);
+      function d(t) {
         const {
             title: e,
-            tooltip: a,
-            getMinimized: n,
-            toggleMinimized: s,
-            className: r,
-            children: m,
+            tooltip: n,
+            getMinimized: a,
+            toggleMinimized: r,
+            className: o,
+            children: d,
           } = t,
-          d = (0, p.q3)(() => n());
-        return o.createElement(
-          o.Fragment,
+          m = (0, g.q3)(() => a());
+        return s.createElement(
+          s.Fragment,
           null,
-          o.createElement(
+          s.createElement(
             "div",
             {
               className: (0, i.A)(
-                r,
-                u.SectionTitleHeader,
-                u.required_title,
+                o,
+                l.SectionTitleHeader,
+                l.required_title,
                 "SectionTitleHeader",
               ),
             },
-            o.createElement(
+            s.createElement(
               "div",
               {
                 className: (0, i.A)(
-                  c.CollapsableSectionTitle,
+                  u.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               e,
-              Boolean(a) && o.createElement(g.o, { tooltip: a }),
+              Boolean(n) && s.createElement(p.o, { tooltip: n }),
             ),
-            o.createElement(h, { bIsMinimized: d, fnToggleMinimize: s }),
+            s.createElement(f, { bIsMinimized: m, fnToggleMinimize: r }),
           ),
-          !d && o.createElement(l.tH, null, m),
+          !m && s.createElement(c.tH, null, d),
         );
       }
-      function d(t) {
-        const [e, a] = o.useState(Boolean(t.bStartMinimized));
-        return o.createElement(
-          m,
-          { ...t, getMinimized: () => e, toggleMinimized: () => a(!e) },
+      function m(t) {
+        const [e, n] = s.useState(Boolean(t.bStartMinimized));
+        return s.createElement(
+          d,
+          { ...t, getMinimized: () => e, toggleMinimized: () => n(!e) },
           t.children,
         );
       }
-      function h(t) {
-        const { bIsMinimized: e, fnToggleMinimize: a } = t,
+      function f(t) {
+        const { bIsMinimized: e, fnToggleMinimize: n } = t,
           i = e ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return o.createElement(
-          n.$n,
-          { "data-tooltip-text": (0, s.we)(i), onClick: a },
+        return s.createElement(
+          a.$n,
+          { "data-tooltip-text": (0, r.we)(i), onClick: n },
           t.bIsMinimized
-            ? o.createElement(r.hz4, null)
-            : o.createElement(r.Xjb, null),
+            ? s.createElement(o.hz4, null)
+            : s.createElement(o.Xjb, null),
         );
       }
     },

@@ -614,6 +614,8 @@
         SteamDeckCompatPlayable: "mPD42Bwx3VAs0qw9wubf2",
         SteamDeckCompatUnsupported: "_2LAaxz6RtHXrJJj9NzCNL4",
         SteamDeckCompatUnknown: "xBqU_GerRwzHIs8N9ratU",
+        SteamOSCompatInformation: "_1Gr-Q9sFTdr7XhK5-j_qux",
+        SteamOSCompatCompatible: "_1IeRz_QzfsACNiXS4gXHIT",
       };
     },
     chunkid: (module) => {
@@ -2699,7 +2701,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 57663)),
+          ]).then(__webpack_require__.bind(__webpack_require__, 14496)),
         ),
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
@@ -23494,6 +23496,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  steam_os_compat_category: {
+                    _: 12,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -28782,6 +28789,8 @@
               "k_EAccountFlagLimitedUserForce"),
             (_[(_.k_EAccountFlagEmailValidated = 16384)] =
               "k_EAccountFlagEmailValidated"),
+            (_[(_.k_EAccountFlagValveEmail = 32768)] =
+              "k_EAccountFlagValveEmail"),
             (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
               "k_EAccountFlagForcePasswordChange"),
             (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
@@ -32586,9 +32595,9 @@
         return !_.isSuccess || 1 !== _.data;
       }
       function _(_, _, _) {
+        if (_ == _._ || null == _) return !1;
         if (!_) return !0;
         if (!_.is_enabled) return !1;
-        if (_ == _._ || null == _) return !1;
         if (!_) return !1;
         if (_ == _._) return !0;
         const _ = _.enabled_features;
@@ -40103,30 +40112,18 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_, _) {
+        var _;
+        return null !== (_ = _()[_]) && void 0 !== _ ? _ : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
@@ -40159,44 +40156,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_, _) {
-        var _;
-        return null !== (_ = _()[_]) && void 0 !== _ ? _ : _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = _("ToggleControl", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Toggle, _ && _().Disabled),
-            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: (0, _._)(
-              _().ToggleRail,
-              _().Highlight,
-              _ ? _()._ : _().Off,
-            ),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
-          }),
-        );
-      }
       function _(_) {
         return _.forwardRef(function (_, _) {
           return _.createElement(_._, {
@@ -40222,7 +40184,7 @@
       _("DialogTwoThirdColLayout _DialogColLayout"),
         (0, _._)("DialogColumn _DialogLayout");
       function _(_) {
-        const _ = _("Content", _);
+        const _ = (0, _._)("Content", _);
         return _.createElement(_, {
           ..._,
         });
@@ -40340,7 +40302,7 @@
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null);
       const _ = _.forwardRef(function (_, _) {
-          const _ = _(),
+          const _ = (0, _._)(),
             { svgicon: _, ..._ } = _,
             _ = (0, _._)(
               _.className,
@@ -40701,7 +40663,7 @@
         }
       }
       const _ = _.forwardRef(function (_, _) {
-        const _ = _("ToggleField", _);
+        const _ = (0, _._)("ToggleField", _);
         return _.createElement(_, {
           ref: _,
           ..._,
@@ -40762,7 +40724,7 @@
                     {
                       className: "DialogToggleField_NewUIContainer",
                     },
-                    _.createElement(_, {
+                    _.createElement(_._, {
                       onChange: this.OnNewUIToggle,
                       value: this.checked,
                     }),
@@ -40805,7 +40767,69 @@
       }
       (0, _._)([_._], _.prototype, "OnOffKeyDown", null),
         (0, _._)([_._], _.prototype, "OnNewUIToggle", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -40845,8 +40869,10 @@
               this.m_component.setState(this.m_setStateOnComplete);
         }
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const _ = _("InputElement", _._);
+        const _ = (0, _._)("InputElement", _._);
         return _.createElement(_, {
           ..._,
           ref: _,
@@ -41071,7 +41097,7 @@
                     className: "displayRow",
                   },
                   _.createElement(
-                    _,
+                    _._,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -41322,7 +41348,7 @@
           (null != _ ? Number.parseFloat(_.toFixed(3)) : null) +
           (null != _ ? _ : ""),
         _ = (_) => {
-          const _ = _("SliderField", _);
+          const _ = (0, _._)("SliderField", _);
           return _.createElement(_, {
             ..._,
           });
@@ -41528,6 +41554,7 @@
         (0, _._)([_._], _.prototype, "OnTouchMove", null),
         (0, _._)([_._], _.prototype, "OnTouchEnd", null),
         (0, _._)([_._], _.prototype, "OnKeyDown", null);
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext({
@@ -41631,7 +41658,7 @@
           }
       }
       function _(_) {
-        const _ = _("DropDownField", _);
+        const _ = (0, _._)("DropDownField", _);
         return _.createElement(_, {
           ..._,
         });
@@ -41645,7 +41672,7 @@
           ..._
         } = _;
         return _.createElement(
-          _,
+          _._,
           {
             label: _,
             tooltip: __webpack_require__,
@@ -41892,7 +41919,7 @@
           );
         }
       }
-      (_.contextType = _),
+      (_.contextType = _._),
         (0, _._)([_._], _.prototype, "OnInputRef", null),
         (0, _._)([_._], _.prototype, "ToggleMenu", null),
         (0, _._)([_._], _.prototype, "OnValueSelected", null),
@@ -41901,7 +41928,7 @@
         (0, _._)([_._], _.prototype, "OnKeyDown", null);
       const _ = _.createContext(null);
       function _(_) {
-        const _ = _("DropDownMenu", _);
+        const _ = (0, _._)("DropDownMenu", _);
         return _.createElement(
           _.Provider,
           {
@@ -42784,18 +42811,20 @@
       }
       function _(_) {
         const {
-          stylesheet: _,
-          pages: __webpack_require__,
-          iActivePage: _,
-          onPageSelected: _,
-          PageListItemComponent: _ = _,
-          PageListSeparatorComponent: _ = _,
-        } = _;
+            stylesheet: _,
+            pages: __webpack_require__,
+            iActivePage: _,
+            onPageSelected: _,
+            PageListItemComponent: _ = _,
+            PageListSeparatorComponent: _ = _,
+          } = _,
+          _ = _.useContext(_);
         return __webpack_require__.map((_, _) => {
           const _ = _ === _;
           if ("separator" === _) {
             const _ = _ === _ + 1 || _ === _ - 1;
             return _.createElement(_, {
+              role: "separator",
               key: _,
               bTransparent: _,
             });
@@ -42818,6 +42847,10 @@
               title: _.title,
               icon: _.icon,
               active: _,
+              _: _ + _.identifier,
+              role: "tab",
+              "aria-selected": _,
+              "aria-controls": _ + _.identifier + "_Content",
             });
           }
         });
@@ -42836,6 +42869,7 @@
           {
             className: _,
             onClick: _,
+            ..._,
           },
           __webpack_require__
             ? _.createElement(
@@ -42860,12 +42894,13 @@
       const _ = _.forwardRef(function (_, _) {
         var _;
         const { activePage: _, style: _, stylesheet: _ } = _,
+          _ = _.useContext(_),
           _ =
             null !== (_ = null == _ ? void 0 : _.padding) && void 0 !== _
               ? _
               : "standard";
         return _.createElement(
-          _,
+          _._,
           {
             style: _,
             className: (0, _._)(
@@ -42874,210 +42909,226 @@
               "none" == _ && (null == _ ? void 0 : _.NoPadding),
             ),
             refElem: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + (null == _ ? void 0 : _.identifier),
+            _: _ + (null == _ ? void 0 : _.identifier) + "_Content",
           },
           null == _ ? void 0 : _.header,
           !(null == _ ? void 0 : _.hideTitle) &&
-            _.createElement(_, null, null == _ ? void 0 : _.title),
+            _.createElement(_._, null, null == _ ? void 0 : _.title),
           _.createElement(_._, null, null == _ ? void 0 : _.content),
         );
       });
       function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
         return _.createElement("div", {
-          className: (0, _._)(_().PageListSeparator, {
-            [_().Transparent]: _.bTransparent,
+          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+            [_().Transparent]: _,
           }),
+          ..._,
         });
       }
       function _(_) {
-        const _ = _("PagedSettings", _);
+        const _ = (0, _._)("PagedSettings", _);
         return _.createElement(_, {
           ..._,
         });
       }
-      const _ = _.forwardRef(function (_, _) {
-        var _;
-        const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
-          _ = null == _.page,
-          [_, _] = _.useState(() =>
-            void 0 === _.startingPage
-              ? -1
-              : _.findIndex(
-                  (_) =>
-                    "object" == typeof _ && _.identifier === _.startingPage,
-                ),
-          );
-        let _ = _;
-        _ ||
-          (_ = _.findIndex(
-            (_) => "object" == typeof _ && _.identifier === _.page,
-          )),
-          (_ < 0 || _ >= _.length) && (_ = 0);
-        let _ = null;
-        "object" == typeof _[_] && (_ = _[_]);
-        const _ = _.useRef(null),
-          _ = _.useCallback(() => {
-            var _;
-            return (
-              (null === (_ = _.current) || void 0 === _
-                ? void 0
-                : _.TakeFocus()) || !1
-            );
-          }, [_]),
-          [_, _] = _.useState(!1),
-          _ = _ ? _ : void 0,
-          _ = _.useCallback((_) => {
-            _ && _(!0);
-          }, []),
-          _ = _.useCallback(
-            (_, _) => {
-              _(!0),
-                _._.PlayNavSound(_._.PagedNavigation),
-                _ && _(_.identifier),
-                _.click ? _.click() : _ && _(_);
-            },
-            [_, _],
-          ),
-          _ = _.useRef(null),
-          _ = null === (_ = _.showTitle) || void 0 === _ || _,
-          _ = (0, _._)(
-            "DialogContentTransition",
-            _.PagedSettingDialog_ContentColumn,
-          );
-        _.useEffect(() => {
+      const _ = _.createContext(void 0),
+        _ = _.forwardRef(function (_, _) {
           var _;
-          _.bAutoFocusPageContent &&
-            (null === (_ = _.current) || void 0 === _ || _.TakeFocus());
-        }, []);
-        const { refForPageList: _, refForPage: _ } = (function () {
-          const _ = _.useMemo(() => new _(), []);
-          _.useEffect(
-            () => (
-              _.Get().m_setPagedSettingsInstances.add(_),
-              () => {
-                _.Get().m_setPagedSettingsInstances.delete(_);
-              }
-            ),
-            [_],
-          );
-          const _ = _.useCallback(
-              (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-              [_],
-            ),
+          const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+            _ = _.useId(),
+            _ = null == _.page,
+            [_, _] = _.useState(() =>
+              void 0 === _.startingPage
+                ? -1
+                : _.findIndex(
+                    (_) =>
+                      "object" == typeof _ && _.identifier === _.startingPage,
+                  ),
+            );
+          let _ = _;
+          _ ||
+            (_ = _.findIndex(
+              (_) => "object" == typeof _ && _.identifier === _.page,
+            )),
+            (_ < 0 || _ >= _.length) && (_ = 0);
+          let _ = null;
+          "object" == typeof _[_] && (_ = _[_]);
+          const _ = _.useRef(null),
+            _ = _.useCallback(() => {
+              var _;
+              return (
+                (null === (_ = _.current) || void 0 === _
+                  ? void 0
+                  : _.TakeFocus()) || !1
+              );
+            }, [_]),
+            [_, _] = _.useState(!1),
+            _ = _ ? _ : void 0,
+            _ = _.useCallback((_) => {
+              _ && _(!0);
+            }, []),
             _ = _.useCallback(
-              (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-              [_],
-            ),
-            _ = (0, _._)("scroll", _),
-            _ = (0, _._)("scroll", _),
-            _ = _.useCallback(
-              (_) => {
-                var _;
-                return (_.m_flPageListScrollTop =
-                  null !== (_ = null == _ ? void 0 : _.scrollTop) &&
-                  void 0 !== _
-                    ? _
-                    : 0);
+              (_, _) => {
+                _(!0),
+                  _._.PlayNavSound(_._.PagedNavigation),
+                  _ && _(_.identifier),
+                  _.click ? _.click() : _ && _(_);
               },
-              [_],
+              [_, _],
             ),
-            _ = _.useCallback(
-              (_) => {
-                var _;
-                return (_.m_flPageScrollTop =
-                  null !== (_ = null == _ ? void 0 : _.scrollTop) &&
-                  void 0 !== _
-                    ? _
-                    : 0);
-              },
-              [_],
-            ),
-            _ = (0, _._)(_, _),
-            _ = (0, _._)(_, _);
-          return {
-            refForPageList: _,
-            refForPage: _,
-          };
-        })();
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.PagedSettingsDialog, _.className),
-            ref: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.PagedSettingsDialog_PageListColumn,
-                _.hideList && _().Hidden,
-                "PageListColumn",
+            _ = _.useRef(null),
+            _ = null === (_ = _.showTitle) || void 0 === _ || _,
+            _ = (0, _._)(
+              "DialogContentTransition",
+              _.PagedSettingDialog_ContentColumn,
+            );
+          _.useEffect(() => {
+            var _;
+            _.bAutoFocusPageContent &&
+              (null === (_ = _.current) || void 0 === _ || _.TakeFocus());
+          }, []);
+          const { refForPageList: _, refForPage: _ } = (function () {
+            const _ = _.useMemo(() => new _(), []);
+            _.useEffect(
+              () => (
+                _.Get().m_setPagedSettingsInstances.add(_),
+                () => {
+                  _.Get().m_setPagedSettingsInstances.delete(_);
+                }
               ),
-              navRef: _,
-              onButtonDown: (_) => {
-                var _;
-                _.detail.button == _._._ &&
-                  (null === (_ = _.current) ||
-                    void 0 === _ ||
-                    _.TakeFocus(_.detail.button));
-              },
-              onFocusWithin: _,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.PagedSettingsDialog_Title,
+              [_],
+            );
+            const _ = _.useCallback(
+                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = (0, _._)("scroll", _),
+              _ = (0, _._)("scroll", _),
+              _ = _.useCallback(
+                (_) => {
+                  var _;
+                  return (_.m_flPageListScrollTop =
+                    null !== (_ = null == _ ? void 0 : _.scrollTop) &&
+                    void 0 !== _
+                      ? _
+                      : 0);
                 },
-                _.title,
+                [_],
               ),
-            _.topControls && _.createElement("div", null, _.topControls),
+              _ = _.useCallback(
+                (_) => {
+                  var _;
+                  return (_.m_flPageScrollTop =
+                    null !== (_ = null == _ ? void 0 : _.scrollTop) &&
+                    void 0 !== _
+                      ? _
+                      : 0);
+                },
+                [_],
+              ),
+              _ = (0, _._)(_, _),
+              _ = (0, _._)(_, _);
+            return {
+              refForPageList: _,
+              refForPage: _,
+            };
+          })();
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
             _.createElement(
               _._,
               {
-                className: (0, _._)(
-                  _.PagedSettingsDialog_PageList,
-                  _.disablePageListScrolling &&
-                    _.PagedSettingsDialog_PageList_DisableScrolling,
-                  _ && _.PagedSettingsDialog_PageList_ShowTitle,
-                  _.bNoHeaderPadding &&
-                    _.PageSettingsDialog_PageList_NoHeaderPadding,
-                ),
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                className: (0, _._)(_.PagedSettingsDialog, _.className),
                 ref: _,
               },
-              _.createElement(_, {
-                stylesheet: _,
-                pages: _,
-                iActivePage: _,
-                onPageSelected: _,
-                PageListItemComponent: _.PageListItemComponent,
-                PageListSeparatorComponent: _.PageListSeparatorComponent,
-              }),
+              _.createElement(
+                _._,
+                {
+                  className: (0, _._)(
+                    _.PagedSettingsDialog_PageListColumn,
+                    _.hideList && _().Hidden,
+                    "PageListColumn",
+                  ),
+                  navRef: _,
+                  onButtonDown: (_) => {
+                    var _;
+                    _.detail.button == _._._ &&
+                      (null === (_ = _.current) ||
+                        void 0 === _ ||
+                        _.TakeFocus(_.detail.button));
+                  },
+                  onFocusWithin: _,
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.PagedSettingsDialog_Title,
+                    },
+                    _.title,
+                  ),
+                _.topControls && _.createElement("div", null, _.topControls),
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(
+                      _.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        _.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ && _.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        _.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                  },
+                  _.createElement(_, {
+                    stylesheet: _,
+                    pages: _,
+                    iActivePage: _,
+                    onPageSelected: _,
+                    PageListItemComponent: _.PageListItemComponent,
+                    PageListSeparatorComponent: _.PageListSeparatorComponent,
+                  }),
+                ),
+                _.bottomControls &&
+                  _.createElement("div", null, _.bottomControls),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _,
+                  onCancelButton: _,
+                  navRef: _,
+                },
+                _.toggleHideList &&
+                  _.createElement(_, {
+                    hideList: _.hideList,
+                    toggleHideList: _.toggleHideList,
+                  }),
+                _.renderPageContent
+                  ? _.renderPageContent(_, _, _)
+                  : _.createElement(_, {
+                      ref: _,
+                      activePage: _,
+                      stylesheet: _,
+                    }),
+              ),
             ),
-            _.bottomControls && _.createElement("div", null, _.bottomControls),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _,
-              onCancelButton: _,
-              navRef: _,
-            },
-            _.toggleHideList &&
-              _.createElement(_, {
-                hideList: _.hideList,
-                toggleHideList: _.toggleHideList,
-              }),
-            _.renderPageContent
-              ? _.renderPageContent(_, _, _)
-              : _.createElement(_, {
-                  ref: _,
-                  activePage: _,
-                  stylesheet: _,
-                }),
-          ),
-        );
-      });
+          );
+        });
       function _(_) {
         return "PageList" == _
           ? _().ResponsivePageList
@@ -43129,6 +43180,7 @@
             PageComponent: _,
             stylesheet: _,
           } = _,
+          _ = _.useContext(_),
           _ = _.useRef(!1);
         if (!_ && !_.current) return null;
         _.current = !0;
@@ -43147,6 +43199,9 @@
             style: _,
             activePage: _,
             stylesheet: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + _.identifier,
+            _: _ + _.identifier + "_Content",
           }),
         );
       });
@@ -43359,12 +43414,14 @@
             focusable: _,
             noFocusRing: !0,
             scrollIntoViewWhenChildFocused: !0,
-            onActivate: (_) => {
-              var _;
-              return null === (_ = _.onClick) || void 0 === _
-                ? void 0
-                : _.call(_, _);
-            },
+            onActivate: _.onClick
+              ? (_) => {
+                  var _;
+                  return null === (_ = _.onClick) || void 0 === _
+                    ? void 0
+                    : _.call(_, _);
+                }
+              : void 0,
             ref: _,
             onMouseDown: _ ? void 0 : _,
             ..._,
@@ -43515,7 +43572,7 @@
             disabled: _,
             onActivate: _ ? _ : void 0,
           },
-          _.createElement(_, {
+          _.createElement(_._, {
             ..._,
             disabled: _,
             ref: _,
@@ -43743,8 +43800,10 @@
         );
       }
       function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
         return _.createElement("div", {
-          className: _().Separator,
+          className: (0, _._)(__webpack_require__, _().Separator),
+          ..._,
         });
       }
       const _ = _.forwardRef(function (_, _) {
@@ -43885,7 +43944,7 @@
           });
       function _(_) {
         return _.createElement(
-          _.Provider,
+          _._.Provider,
           {
             value: {
               PagedSettings: _,
@@ -44005,7 +44064,7 @@
       }
       const _ = _.forwardRef(function (_, _) {
         return _.createElement(
-          _,
+          _._,
           {
             className: (0, _._)(_().DropDownControlButton, _.className),
             focusable: _.focusable,
@@ -44060,7 +44119,7 @@
             autoComplete: "off",
             ref: _,
             inlineControls: _.createElement(
-              _,
+              _._,
               {
                 className: _.TogglePasswordVisibilityBtn,
                 onPointerDown: _,
@@ -44111,6 +44170,7 @@
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
@@ -45627,6 +45687,8 @@
             ref: _,
             navRef: _,
             focusable: _,
+            role: "checkbox",
+            "aria-checked": !!__webpack_require__,
           },
           _.createElement("div", {
             className: _().ToggleRail,
@@ -45637,7 +45699,7 @@
           _,
         );
       });
-      class _ extends _ {
+      class _ extends _._ {
         OnToggleChange(_) {
           this.props.disabled || _ === this.checked || this.Toggle();
         }
@@ -45709,6 +45771,46 @@
             },
             _,
           ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = (0, _._)("ToggleControl", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().Toggle, _ && _().Disabled),
+            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          },
+          _.createElement("div", {
+            className: _().ToggleRail,
+          }),
+          _.createElement("div", {
+            className: (0, _._)(
+              _().ToggleRail,
+              _().Highlight,
+              _ ? _()._ : _().Off,
+            ),
+          }),
+          _.createElement("div", {
+            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
+          }),
         );
       }
     },
@@ -46231,18 +46333,24 @@
         Bal: () => _,
         CeX: () => _,
         DEV: () => _,
+        EZL: () => _,
         Epp: () => _,
+        Er9: () => _,
         Gj3: () => _,
+        J67: () => _,
         JPq: () => _,
         LSz: () => _,
         OMN: () => _,
         UKJ: () => _,
+        VBK: () => _,
         VnB: () => _,
         YNO: () => _,
         YqK: () => _,
         ZyV: () => _,
         _V3: () => _,
+        _Xk: () => _,
         b8_: () => _,
+        bb4: () => _,
         bmT: () => _,
         cLJ: () => _,
         ffu: () => _,
@@ -46253,20 +46361,28 @@
         jvG: () => _,
         kNE: () => _,
         l4n: () => _,
+        lGP: () => _,
         lMJ: () => _,
+        nhL: () => _,
         _: () => _,
         nvX: () => _,
+        o5t: () => _,
+        p71: () => _,
         pcV: () => _,
         qOW: () => _,
         qY3: () => _,
         qzO: () => _,
+        r7n: () => _,
         rxV: () => _,
         sED: () => _,
         tI4: () => _,
         u49: () => _,
+        vbm: () => _,
         vji: () => _,
+        vsW: () => _,
         x7X: () => _,
         y$y: () => _,
+        yUV: () => _,
         ycU: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -46864,6 +46980,21 @@
         return _.createElement(
           "svg",
           {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M29.1508 15.7785L25.3039 13.5566V16.6796H19.3204V10.6961H22.4434L20.2218 6.84804L18 2.99994L15.7784 6.84804L13.5566 10.6961H16.6796V16.6796H10.6961V13.5566L6.84798 15.7785L2.99988 18L6.84798 20.2219L10.6961 22.4434V19.3204H16.6796V25.3039H13.5566L15.7784 29.1508L18 33.0001L20.2218 29.1508L22.4434 25.3039H19.3204V19.3204H25.3039V22.4434L29.1508 20.2219L33.0001 18L29.1508 15.7785Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
             fill: "none",
@@ -46957,13 +47088,27 @@
         return _.createElement(
           "svg",
           {
-            xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
             fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
             ..._,
           },
+          _.createElement("rect", {
+            _: "5",
+            _: "8",
+            width: "26",
+            height: "4",
+            fill: "currentColor",
+          }),
+          _.createElement("rect", {
+            _: "13",
+            _: "3",
+            width: "10",
+            height: "3",
+            fill: "currentColor",
+          }),
           _.createElement("path", {
-            _: "M7 14H29L27 32H9L7 14ZM24 6L22 2H14L12 6H4V10H32V6H24Z",
+            _: "M27 32.2952H9L7 14.2952H29L27 32.2952ZM12 29.2952H14V17.2952H12V29.2952ZM17 17.2952V29.2952H19V17.2952H17ZM22 29.2952H24V17.2952H22V29.2952Z",
             fill: "currentColor",
           }),
         );
@@ -47468,6 +47613,30 @@
         );
       }
       function _() {
+        return _.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            className: "SVGIcon_Button SVGIcon_TextH5",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
+            fill: "currentColor",
+          }),
+          _.createElement("rect", {
+            _: "4",
+            _: "19",
+            width: "16",
+            height: "2",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _() {
         const [_, _] = (0, _._)();
         return _.createElement(
           "svg",
@@ -47548,6 +47717,410 @@
               _: "M14.232 31.152a8.408 8.408 0 0 1-7.767-5.193 8.427 8.427 0 0 1 1.81-9.172l1.632-1.623a1.784 1.784 0 0 1 2.518 2.527l-1.62 1.618a4.854 4.854 0 0 0 3.427 8.282 4.845 4.845 0 0 0 3.427-1.42l1.622-1.624a1.782 1.782 0 0 1 2.525 2.515l-1.627 1.64a8.376 8.376 0 0 1-5.947 2.45Zm15.41-11.923a8.428 8.428 0 0 0 0-11.914 8.413 8.413 0 0 0-11.903 0L16.116 8.95a1.784 1.784 0 0 0 2.53 2.516l1.613-1.62a4.845 4.845 0 0 1 8.275 3.43 4.855 4.855 0 0 1-1.42 3.431l-1.62 1.618a1.784 1.784 0 0 0 2.518 2.527l1.63-1.623Zm-6.813-2.563a1.782 1.782 0 0 0-2.522-2.52l-5.493 5.498a1.782 1.782 0 0 0 2.522 2.52l5.493-5.498Z",
             }),
           ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "8",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "4",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "12",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "5",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "3",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "7",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "4",
+            _: "6",
+            width: "16",
+            height: "3",
+            fill: "black",
+          }),
+          _.createElement("rect", {
+            _: "6",
+            _: "11",
+            width: "12",
+            height: "2",
+            fill: "black",
+          }),
+          _.createElement("rect", {
+            _: "1",
+            _: "3",
+            width: "22",
+            height: "18",
+            stroke: "black",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "10",
+            height: "16",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "0.5",
+            _: "3",
+            width: "23",
+            height: "18",
+            stroke: "currentcolor",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "7",
+            _: "4",
+            width: "10",
+            height: "16",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "0.5",
+            _: "3",
+            width: "23",
+            height: "18",
+            stroke: "currentcolor",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "12",
+            _: "4",
+            width: "10",
+            height: "16",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "0.5",
+            _: "3",
+            width: "23",
+            height: "18",
+            stroke: "currentcolor",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "4",
+            _: "2",
+            width: "16",
+            height: "10",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "3",
+            _: "0.5",
+            width: "18",
+            height: "23",
+            stroke: "currentcolor",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "4",
+            _: "7",
+            width: "16",
+            height: "10",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "3",
+            _: "0.5",
+            width: "18",
+            height: "23",
+            stroke: "black",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "4",
+            _: "12",
+            width: "16",
+            height: "10",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "3",
+            _: "0.5",
+            width: "18",
+            height: "23",
+            stroke: "currentcolor",
+            "stroke-width": "1",
+            fill: "none",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "16",
+            stroke: "black",
+            strokeWidth: "2",
+            fill: "none",
+          }),
+          _.createElement("circle", {
+            _: "7",
+            _: "8",
+            _: "2",
+            fill: "black",
+          }),
+          _.createElement("path", {
+            _: "M4 18L10 12L14 16L20 10V20H4Z",
+            fill: "black",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "16",
+            _: "2",
+            stroke: "black",
+            strokeWidth: "2",
+            fill: "none",
+          }),
+          _.createElement("polygon", {
+            points: "10,8 16,12 10,16",
+            fill: "black",
+          }),
         );
       }
       function _() {
@@ -49811,18 +50384,19 @@
         YNO: () => _,
         ZPc: () => _,
         ZWw: () => _,
+        ZjT: () => _,
         ZnA: () => _,
         Zo0: () => _,
         _EF: () => _,
         _VW: () => _,
         _bA: () => _,
         _h6: () => _,
-        _r0: () => _,
         aVR: () => _,
         agV: () => _,
         apU: () => _,
         bKN: () => _,
         bPr: () => _,
+        bcZ: () => _,
         bfp: () => _,
         ccb: () => _,
         dJT: () => _,
@@ -50532,7 +51106,8 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
+        let _ = _.color || "#ffffff";
         return _.createElement(
           "svg",
           {
@@ -50540,22 +51115,22 @@
             width: "25",
             height: "24",
             viewBox: "0 0 25 24",
-            fill: "none",
+            fill: _,
             xmlns: "http://www.w3.org/2000/svg",
           },
           _.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M1.97014 2.77093H4.44345V3.97865C4.44345 5.04817 5.31099 5.91572 6.38052 5.91572C7.45004 5.91572 8.31699 5.04817 8.31699 3.97865V2.77093H16.6836V3.97865C16.6836 5.04817 17.5511 5.91572 18.6207 5.91572C19.6902 5.91572 20.5571 5.04817 20.5571 3.97865V2.77093H23.0293C24.1136 2.77093 25 3.65738 25 4.74167V21.4991C25 22.5834 24.1136 23.4698 23.0293 23.4698H1.97073C0.886445 23.4698 0 22.5834 0 21.4991V4.74167C0 3.65738 0.886445 2.77093 1.97073 2.77093H1.97014ZM23.5005 8.23961V21.4991C23.5005 21.7578 23.2879 21.9704 23.0293 21.9704H1.97073C1.71206 21.9704 1.49946 21.7583 1.49946 21.4991V8.23961H23.5005V8.23961Z",
-            fill: "#717A81",
+            fill: _,
           }),
           _.createElement("path", {
             _: "M5.29335 1.08724C5.29335 0.486629 5.77998 0 6.38059 0C6.98061 0 7.46724 0.486629 7.46724 1.08724V3.97867C7.46724 4.57928 6.98061 5.06591 6.38059 5.06591C5.77998 5.06591 5.29335 4.57928 5.29335 3.97867V1.08724V1.08724Z",
-            fill: "#717A81",
+            fill: _,
           }),
           _.createElement("path", {
             _: "M17.5329 1.08724C17.5329 0.486629 18.0195 0 18.6201 0C19.2201 0 19.7068 0.486629 19.7068 1.08724V3.97867C19.7068 4.57928 19.2201 5.06591 18.6201 5.06591C18.0195 5.06591 17.5329 4.57928 17.5329 3.97867V1.08724V1.08724Z",
-            fill: "#717A81",
+            fill: _,
           }),
         );
       }
@@ -52386,25 +52961,6 @@
             viewBox: "0 0 409.6 409.6",
           },
           _.createElement("path", {
-            _: "M275.1,153c-4.3-0.2-8,3.9-8.2,9.1l-5.8,136.5c-0.1,3.3-2.5,6.1-5.3,6.1H155.1c-2.7,0-5.1-2.8-5.3-6.1\n\t\t\t\t\t\tl-5.8-136.5c-0.2-5.2-3.9-9.3-8.2-9.1c-4.3,0.2-7.7,4.6-7.5,9.9l5.8,136.5c0.5,13.4,9.8,24.2,21,24.2h100.8\n\t\t\t\t\t\tc11.2,0,20.5-10.8,21-24.2l5.8-136.5C282.9,157.6,279.5,153.2,275.1,153z M211.8,276.1v-98.4c0-4.2-2.8-7.6-6.3-7.6\n\t\t\t\t\t\tc-3.5,0-6.3,3.4-6.3,7.6v98.4c0,4.2,2.8,7.6,6.3,7.6C209,283.7,211.8,280.3,211.8,276.1z M174.2,283.7c3.5-0.1,6.2-3.6,6.1-7.8\n\t\t\t\t\t\tl-3.1-98.4c-0.1-4.2-3-7.5-6.5-7.4c-3.5,0.1-6.2,3.6-6.1,7.8l3.1,98.4C167.8,280.5,170.7,283.8,174.2,283.7z M243.3,276.3l3.2-98.4\n\t\t\t\t\t\tc0.1-4.2-2.6-7.7-6.1-7.8c-3.5-0.1-6.4,3.2-6.5,7.4l-3.2,98.4c-0.1,4.2,2.6,7.7,6.1,7.8C240.3,283.8,243.2,280.5,243.3,276.3z\n\t\t\t\t\t\tM284.3,120.7h-40l-3-12.6c-2.6-11.1-12-19.6-21.6-19.6h-28.4c-9.6,0-19,8.5-21.6,19.6l-3,12.6h-40c-4.3,0-7.9,4.3-7.9,9.5\n\t\t\t\t\t\ts3.5,9.5,7.9,9.5h157.5c4.3,0,7.9-4.2,7.9-9.5S288.6,120.7,284.3,120.7z M183.1,120.7l1.8-7.4c0.7-3,3.9-5.9,6.4-5.9h28.4\n\t\t\t\t\t\tc2.6,0,5.7,2.9,6.4,5.9l1.8,7.4H183.1z",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            version: "1.1",
-            _: "Layer_2",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: _.className,
-            _: "0px",
-            _: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 409.6 409.6",
-          },
-          _.createElement("path", {
             _: "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z",
           }),
         );
@@ -52911,6 +53467,52 @@
             clipRule: "evenodd",
             _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
             fill: "white",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            className: (0, _._)(
+              _().SteamDeckCompatIcon,
+              _().SteamOSCompatCompatible,
+              _,
+            ),
+            ...__webpack_require__,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            className: (0, _._)(
+              _().SteamDeckCompatIcon,
+              _().SteamOSCompatInformation,
+              _,
+            ),
+            ...__webpack_require__,
+            viewBox: "0 0 48 48",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd",
+            _: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
+            fill: "currentColor",
           }),
         );
       }

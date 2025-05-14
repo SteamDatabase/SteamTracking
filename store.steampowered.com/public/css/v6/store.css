@@ -438,6 +438,12 @@ div.store_header_btn {
 	float: left;
 }
 
+@media (forced-colors: active) {
+	div.store_header_btn {
+		background: ButtonFace;
+	}
+}
+
 a.store_header_btn_content {
 	display: inline-block;
 
@@ -2303,6 +2309,11 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 .home_area_spotlight {
 	position: relative;
 	height: 395px;
+}
+@media (forced-colors:active) {
+	.home_area_spotlight {
+		border: 1px solid ButtonBorder;
+	}
 }
 
 .spotlight_scroll_ctn {
@@ -4345,7 +4356,7 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-	background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.15) 0%, rgba(116, 133, 140, 0.15) 100%);
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, #3D4856 0%, #283645 100%);
 }
 
 .store_capsule:not(:last-child) {
@@ -4353,7 +4364,7 @@ a.cluster_capsule:hover {
 }
 
 .store_capsule:hover {
-	background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.35) 0%, rgba(116, 133, 140, 0.35) 100%);
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, #6B737D 0%, #3B4955 100%);
 	text-decoration: none;
 }
 
@@ -4780,6 +4791,13 @@ div.store_header_btn {
 	box-shadow: 0 0 3px rgba( 0, 0, 0, 0.4);
 }
 
+@media (forced-colors: active) {
+	#store_nav_area .store_nav_bg,
+	.home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {
+		background: ButtonFace;
+	}
+}
+
 
 
 
@@ -4959,6 +4977,11 @@ body.v6 .sale_capsule:hover .broadcast_live_stream_icon {
 body.v6 .store_nav .popup_block_new .popup_body {
     background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
 	padding: 8px 5px 8px 5px;
+}
+@media (forced-colors: active) {
+	body.v6 .store_nav .popup_block_new .popup_body {
+		background: ButtonFace;
+	}
 }
 
 .store_nav .popup_menu {
@@ -6289,8 +6312,7 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 }
 
 .StoreMenuLoadingPlaceholder {
-	border-top: 1px solid #353C48;
-	background: #191D25;
+	background: #20252F;
 	height: 46px;
 }
 

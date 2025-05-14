@@ -66,6 +66,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
           bAccessibilityDifficultyLevels:
@@ -343,51 +344,571 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = [
-          () =>
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
             _.createElement(
-              "div",
+              "p",
+              null,
+              (0, _._)("#App_Landing_AccessibilityFeatures_WizardPrompt_Desc"),
+            ),
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#gameplay`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty_Desc",
+            ),
+            _: "bAccessibilityDifficultyLevels",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime_Desc",
+            ),
+            _: "bAccessibilitySaveAnytime",
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Instructions",
+                _.createElement("a", {
+                  href: "https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32",
+                  target: "_blank",
+                }),
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#narrated_menus`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Question",
+            ),
+          ),
+          _.createElement(_, {
+            options: [
               {
-                className: _.WizardContainer,
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Yes",
+                ),
               },
-              _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_No",
                 ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_WizardPrompt_Desc",
-                  ),
-                ),
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Instructions",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#gameplay`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityNarratedMenus
+                ? "yes"
+                : !1 === _.bAccessibilityNarratedMenus
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ && _("bAccessibilityNarratedMenus", !0),
+                "no" === _ && _("bAccessibilityNarratedMenus", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#volume_controls`,
+                  target: "_blank",
+                }),
               ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Question",
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Question",
+            ),
+          ),
+          _.createElement(_, {
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Yes",
                 ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityBackgroundVolumeControls
+                ? "yes"
+                : !1 === _.bAccessibilityBackgroundVolumeControls
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ && _("bAccessibilityBackgroundVolumeControls", !0),
+                "no" === _ && _("bAccessibilityBackgroundVolumeControls", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Instructions",
               ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Question",
+            ),
+          ),
+          _.createElement(_, {
+            options: [
+              {
+                _: "surround",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_SurroundSound",
+                ),
+              },
+              {
+                _: "stereo",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_StereoSound",
+                ),
+              },
+              {
+                _: "none",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_None",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilitySurroundSound
+                ? "surround"
+                : _.bAccessibilityStereoSound
+                  ? "stereo"
+                  : "none",
+            fnSetValues: (_) => {
+              "surround" === _ &&
+                (_("bAccessibilitySurroundSound", !0),
+                _("bAccessibilityStereoSound", !0)),
+                "stereo" === _ &&
+                  (_("bAccessibilitySurroundSound", !1),
+                  _("bAccessibilityStereoSound", !0)),
+                "none" === _ &&
+                  (_("bAccessibilitySurroundSound", !1),
+                  _("bAccessibilityStereoSound", !1));
+            },
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Visual",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Visual_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Visual_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize_Desc",
+            ),
+            _: "bAccessibilityResizableUI",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions_Desc",
+            ),
+            _: "bAccessibilitySubtitles",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives_Desc",
+            ),
+            _: "bAccessibilityColorAlternatives",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort_Desc",
+            ),
+            _: "bAccessibilityCameraComfort",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Input",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Input_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#input_recommendations`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Input_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption_Desc",
+            ),
+            _: "bAccessibilityKeyboardOnlyOption",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption_Desc",
+            ),
+            _: "bAccessibilityMouseOnlyOption",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption_Desc",
+            ),
+            _: "bAccessibilityTouchOnlyOption",
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Question",
+            ),
+          ),
+          _.createElement(_, {
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Yes",
+                ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityPlayableWithoutQuicktimeEvents
+                ? "yes"
+                : !1 === _.bAccessibilityPlayableWithoutQuicktimeEvents
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ &&
+                _("bAccessibilityPlayableWithoutQuicktimeEvents", !0),
+                "no" === _ &&
+                  _("bAccessibilityPlayableWithoutQuicktimeEvents", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#tts`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech_Desc",
+            ),
+            _: "bAccessibilityChatTexttoSpeech",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText_Desc",
+            ),
+            _: "bAccessibilityChatSpeechtoText",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Summary",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Summary_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              null,
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
@@ -406,257 +927,42 @@
                 ),
                 _: "bAccessibilitySaveAnytime",
               }),
-            ),
-          () => {
-            const { currentValues: _, fnSetValue: _ } = _();
-            return _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
               _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Instructions",
-                    _.createElement("a", {
-                      href: "https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32",
-                      target: "_blank",
-                    }),
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#narrated_menus`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Question",
-                ),
-              ),
-              _.createElement(_, {
-                options: [
-                  {
-                    _: "yes",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Yes",
-                    ),
-                  },
-                  {
-                    _: "no",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_No",
-                    ),
-                  },
-                ],
-                fnCalculateSelectedOption: () =>
-                  _.bAccessibilityNarratedMenus
-                    ? "yes"
-                    : !1 === _.bAccessibilityNarratedMenus
-                      ? "no"
-                      : void 0,
-                fnSetValues: (_) => {
-                  "yes" === _ && _("bAccessibilityNarratedMenus", !0),
-                    "no" === _ && _("bAccessibilityNarratedMenus", !1);
-                },
-              }),
-            );
-          },
-          () => {
-            const { currentValues: _, fnSetValue: _ } = _();
-            return _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
-              _.createElement(_, {
-                subtitle: (0, _._)(
+                name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
                 ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls_Desc",
+                ),
+                _: "bAccessibilityBackgroundVolumeControls",
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Instructions",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#volume_controls`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Question",
-                ),
-              ),
               _.createElement(_, {
-                options: [
-                  {
-                    _: "yes",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Yes",
-                    ),
-                  },
-                  {
-                    _: "no",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_No",
-                    ),
-                  },
-                ],
-                fnCalculateSelectedOption: () =>
-                  _.bAccessibilityBackgroundVolumeControls
-                    ? "yes"
-                    : !1 === _.bAccessibilityBackgroundVolumeControls
-                      ? "no"
-                      : void 0,
-                fnSetValues: (_) => {
-                  "yes" === _ &&
-                    _("bAccessibilityBackgroundVolumeControls", !0),
-                    "no" === _ &&
-                      _("bAccessibilityBackgroundVolumeControls", !1);
-                },
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus_Desc",
+                ),
+                _: "bAccessibilityNarratedMenus",
               }),
-            );
-          },
-          () => {
-            const { currentValues: _, fnSetValue: _ } = _();
-            return _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
               _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound",
                 ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound_Desc",
+                ),
+                _: "bAccessibilityStereoSound",
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Instructions",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Question",
-                ),
-              ),
               _.createElement(_, {
-                options: [
-                  {
-                    _: "surround",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_SurroundSound",
-                    ),
-                  },
-                  {
-                    _: "stereo",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_StereoSound",
-                    ),
-                  },
-                  {
-                    _: "none",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_None",
-                    ),
-                  },
-                ],
-                fnCalculateSelectedOption: () =>
-                  _.bAccessibilitySurroundSound
-                    ? "surround"
-                    : _.bAccessibilityStereoSound
-                      ? "stereo"
-                      : "none",
-                fnSetValues: (_) => {
-                  "surround" === _ &&
-                    (_("bAccessibilitySurroundSound", !0),
-                    _("bAccessibilityStereoSound", !0)),
-                    "stereo" === _ &&
-                      (_("bAccessibilitySurroundSound", !1),
-                      _("bAccessibilityStereoSound", !0)),
-                    "none" === _ &&
-                      (_("bAccessibilitySurroundSound", !1),
-                      _("bAccessibilityStereoSound", !1));
-                },
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound_Desc",
+                ),
+                _: "bAccessibilitySurroundSound",
               }),
-            );
-          },
-          () =>
-            _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
-              _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Visual",
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_Visual_Instructions",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Visual_Question",
-                ),
-              ),
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
@@ -675,6 +981,10 @@
                 ),
                 _: "bAccessibilitySubtitles",
               }),
+            ),
+            _.createElement(
+              _._,
+              null,
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
@@ -693,44 +1003,6 @@
                 ),
                 _: "bAccessibilityCameraComfort",
               }),
-            ),
-          () =>
-            _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
-              _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Input",
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_Input_Instructions",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#input_recommendations`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Input_Question",
-                ),
-              ),
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
@@ -758,108 +1030,15 @@
                 ),
                 _: "bAccessibilityTouchOnlyOption",
               }),
-            ),
-          () => {
-            const { currentValues: _, fnSetValue: _ } = _();
-            return _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
               _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents",
                 ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents_Desc",
+                ),
+                _: "bAccessibilityPlayableWithoutQuicktimeEvents",
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Instructions",
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Question",
-                ),
-              ),
-              _.createElement(_, {
-                options: [
-                  {
-                    _: "yes",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Yes",
-                    ),
-                  },
-                  {
-                    _: "no",
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_No",
-                    ),
-                  },
-                ],
-                fnCalculateSelectedOption: () =>
-                  _.bAccessibilityPlayableWithoutQuicktimeEvents
-                    ? "yes"
-                    : !1 === _.bAccessibilityPlayableWithoutQuicktimeEvents
-                      ? "no"
-                      : void 0,
-                fnSetValues: (_) => {
-                  "yes" === _ &&
-                    _("bAccessibilityPlayableWithoutQuicktimeEvents", !0),
-                    "no" === _ &&
-                      _("bAccessibilityPlayableWithoutQuicktimeEvents", !1);
-                },
-              }),
-            );
-          },
-          () =>
-            _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
-              _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Instructions",
-                    _.createElement("a", {
-                      href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#tts`,
-                      target: "_blank",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Question,
-                },
-                (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Question",
-                ),
-              ),
               _.createElement(_, {
                 name: (0, _._)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
@@ -879,189 +1058,10 @@
                 _: "bAccessibilityChatSpeechtoText",
               }),
             ),
-          () =>
-            _.createElement(
-              "div",
-              {
-                className: _.WizardContainer,
-              },
-              _.createElement(_, {
-                subtitle: (0, _._)(
-                  "#App_Landing_AccessibilityFeatures_Wizard_Summary",
-                ),
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Instructions,
-                },
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#App_Landing_AccessibilityFeatures_Wizard_Summary_Instructions",
-                  ),
-                ),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty_Desc",
-                    ),
-                    _: "bAccessibilityDifficultyLevels",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime_Desc",
-                    ),
-                    _: "bAccessibilitySaveAnytime",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls_Desc",
-                    ),
-                    _: "bAccessibilityBackgroundVolumeControls",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus_Desc",
-                    ),
-                    _: "bAccessibilityNarratedMenus",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound_Desc",
-                    ),
-                    _: "bAccessibilityStereoSound",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound_Desc",
-                    ),
-                    _: "bAccessibilitySurroundSound",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize_Desc",
-                    ),
-                    _: "bAccessibilityResizableUI",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions_Desc",
-                    ),
-                    _: "bAccessibilitySubtitles",
-                  }),
-                ),
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives_Desc",
-                    ),
-                    _: "bAccessibilityColorAlternatives",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort_Desc",
-                    ),
-                    _: "bAccessibilityCameraComfort",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption_Desc",
-                    ),
-                    _: "bAccessibilityKeyboardOnlyOption",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption_Desc",
-                    ),
-                    _: "bAccessibilityMouseOnlyOption",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption_Desc",
-                    ),
-                    _: "bAccessibilityTouchOnlyOption",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents_Desc",
-                    ),
-                    _: "bAccessibilityPlayableWithoutQuicktimeEvents",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech_Desc",
-                    ),
-                    _: "bAccessibilityChatTexttoSpeech",
-                  }),
-                  _.createElement(_, {
-                    name: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
-                    ),
-                    description: (0, _._)(
-                      "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText_Desc",
-                    ),
-                    _: "bAccessibilityChatSpeechtoText",
-                  }),
-                ),
-              ),
-            ),
-        ],
-        _ = _.createContext(void 0);
+          ),
+        );
+      }
+      const _ = _.createContext(void 0);
       function _() {
         return _.useContext(_);
       }
@@ -1084,9 +1084,22 @@
         );
       }
       function _(_) {
-        const { close: _, features: __webpack_require__, editMode: _ } = _,
+        const {
+            close: _,
+            features: __webpack_require__,
+            editMode: _,
+            isMultiplayer: _,
+          } = _,
           [_, _] = (0, _.useState)(0),
-          _ = _ ? [_[_.length - 1]] : _,
+          _ = (function (_, _) {
+            return (0, _.useMemo)(
+              () =>
+                _
+                  ? [_]
+                  : [_, _, _, _, _, _, _, _ ? _ : void 0, _].filter((_) => !!_),
+              [_, _],
+            );
+          })(_, _),
           [_, _] = _.useState(__webpack_require__);
         let _ = () => _((_) => _ - 1);
         0 === _ && (_ = _);
@@ -1277,21 +1290,22 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
-        const _ = Object.entries(_).some(
+        const { isMultiplayer: _, ...__webpack_require__ } = _,
+          _ = Object.entries(__webpack_require__).some(
             ([_, _]) => _.startsWith("bAccessibility") && _,
           ),
-          [__webpack_require__, _] = _.useState(0);
+          [_, _] = _.useState(0);
         return _.createElement(
           _.Fragment,
           null,
-          0 !== __webpack_require__ &&
+          0 !== _ &&
             _.createElement(_, {
-              editMode: 2 === __webpack_require__,
+              editMode: 2 === _,
               close: () => _(0),
-              features: _,
+              features: __webpack_require__,
+              isMultiplayer: _,
             }),
           _.createElement(_, {
             bHasAnyAccessibilityFeatures: _,

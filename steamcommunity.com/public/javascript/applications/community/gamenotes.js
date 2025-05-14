@@ -8,6 +8,7 @@
         Bold: "_3cln317VYhwhE1fSeMCG48",
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -69,7 +70,7 @@
     },
     47004: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Xt });
+      r.r(t), r.d(t, { default: () => Yt });
       var i = r(22837),
         n = r(90626),
         a = r(92757),
@@ -2398,70 +2399,6 @@
           return "CCloud_BeginAppUploadBatch_Response";
         }
       }
-      class Y extends p.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Y.prototype.appid || B.Sg(Y.M()),
-            p.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
-                fields: {
-                  appid: { n: 1, br: B.qM.readUint32, bw: B.gp.writeUint32 },
-                  batch_id: {
-                    n: 2,
-                    br: B.qM.readUint64String,
-                    bw: B.gp.writeUint64String,
-                  },
-                  batch_eresult: {
-                    n: 3,
-                    br: B.qM.readUint32,
-                    bw: B.gp.writeUint32,
-                  },
-                },
-              }),
-            Y.sm_m
-          );
-        }
-        static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = B.w0(Y.M())), Y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(Y.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(Y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (g().BinaryReader)(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(Y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (g().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(Y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (g().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_CompleteAppUploadBatch_Notification";
-        }
-      }
       class X extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -2521,6 +2458,70 @@
         serializeBase64String() {
           var e = new (g().BinaryWriter)();
           return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloud_CompleteAppUploadBatch_Notification";
+        }
+      }
+      class Y extends p.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Y.prototype.appid || B.Sg(Y.M()),
+            p.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
+                fields: {
+                  appid: { n: 1, br: B.qM.readUint32, bw: B.gp.writeUint32 },
+                  batch_id: {
+                    n: 2,
+                    br: B.qM.readUint64String,
+                    bw: B.gp.writeUint64String,
+                  },
+                  batch_eresult: {
+                    n: 3,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                },
+              }),
+            Y.sm_m
+          );
+        }
+        static MBF() {
+          return Y.sm_mbf || (Y.sm_mbf = B.w0(Y.M())), Y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(Y.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(Y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (g().BinaryReader)(e),
+            r = new Y();
+          return Y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(Y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (g().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(Y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (g().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_CompleteAppUploadBatch_Request";
@@ -3700,14 +3701,14 @@
           (e.CompleteAppUploadBatch = function (e, t) {
             return e.SendNotification(
               "Cloud.CompleteAppUploadBatch#1",
-              (0, m.I8)(Y, t),
+              (0, m.I8)(X, t),
               { ePrivilege: 1 },
             );
           }),
           (e.CompleteAppUploadBatchBlocking = function (e, t) {
             return e.SendMsg(
               "Cloud.CompleteAppUploadBatchBlocking#1",
-              (0, m.I8)(X, t),
+              (0, m.I8)(Y, t),
               Z,
               { ePrivilege: 1 },
             );
@@ -4145,8 +4146,8 @@
         },
         Ve = new $e.W(Ke);
       var Qe = r(33645),
-        Ye = r.n(Qe),
-        Xe = r(69956),
+        Xe = r.n(Qe),
+        Ye = r(69956),
         Ze = r(28106),
         Je = r(64238),
         et = r.n(Je),
@@ -4156,7 +4157,7 @@
         nt = r(86807),
         at = r(4869),
         st = r(73309),
-        ot = r(79570),
+        ot = r(36969),
         lt = r(30175),
         ct = r(52038),
         ut = r(76011);
@@ -4301,7 +4302,7 @@
             schema: t,
             onClickURL: r,
           }),
-          n.createElement(Xe.U, { specs: i }),
+          n.createElement(Ye.U, { specs: i }),
         );
       });
       function Mt(e) {
@@ -4322,14 +4323,14 @@
           }, [s, t]),
           i
             ? n.createElement("img", {
-                className: et()(Ye().Image, r && "ProseMirror-selectednode"),
+                className: et()(Xe().Image, r && "ProseMirror-selectednode"),
                 src: i,
               })
             : null
         );
       }
       var wt = r(61788),
-        _t = r(33737),
+        _t = r(68255),
         yt = r(9154),
         ft = r(32754),
         ht = r(73745),
@@ -4840,7 +4841,7 @@
           r = Pt(t);
         return null == r ? void 0 : r.name;
       }
-      function Yt(e, t, r = {}) {
+      function Xt(e, t, r = {}) {
         const { bIsPublic: i = !0 } = r,
           n = { unAppID: e, strMachineName: t, bIsPublic: i },
           a = (0, s.KV)();
@@ -4863,7 +4864,7 @@
                 a = await i(n);
               } finally {
                 !(function (e, t, r, i) {
-                  const n = m.w.Init(X);
+                  const n = m.w.Init(Y);
                   n.Body().set_appid(t.unAppID),
                     n.Body().set_batch_id(r),
                     n.Body().set_batch_eresult(i ? 1 : 2),
@@ -4935,10 +4936,10 @@
           },
         });
       }
-      function Xt(e) {
+      function Yt(e) {
         const t = (function () {
           const e = (0, s.TR)(),
-            { mutateAsync: t } = Yt(i.oe, "Steam Community Web Interface", {
+            { mutateAsync: t } = Xt(i.oe, "Steam Community Web Interface", {
               bIsPublic: !0,
             }),
             r = n.useCallback(

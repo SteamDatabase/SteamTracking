@@ -4194,7 +4194,7 @@
         Q = n(73744),
         Y = n(75113),
         K = n(28954),
-        X = n(64953);
+        X = n(40521);
       let $ = class extends u.Component {
         m_cancelSignal = o().CancelToken.source();
         m_nImageID = 0;
@@ -4282,7 +4282,13 @@
                     let e = q.i6.GetHashFromHashAndExt(i),
                       t = q.i6.GetExtensionStringFromHashAndExt(i),
                       r = (0, X.K_)(a);
-                    await K.V.SendResizeRequest(this.m_cancelSignal, c, e, t, r)
+                    await K.VE.SendResizeRequest(
+                      this.m_cancelSignal,
+                      c,
+                      e,
+                      t,
+                      r,
+                    )
                       .then((e) => {
                         console.log("success on the resize request"),
                           e == r.length

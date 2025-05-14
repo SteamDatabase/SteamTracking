@@ -996,6 +996,7 @@
             imageURLOverride: __webpack_require__,
             onClick: _,
           } = _,
+          _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _] = (0, _._)(() =>
             _
@@ -1025,7 +1026,10 @@
                 _.createElement(
                   "div",
                   {
-                    className: _().OtherEvents_MainImageCtn,
+                    className: (0, _._)(
+                      _().OtherEvents_MainImageCtn,
+                      _ && _().MaskImages,
+                    ),
                   },
                   _.createElement("img", {
                     src: _,

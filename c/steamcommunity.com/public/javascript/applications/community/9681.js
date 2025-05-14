@@ -2266,7 +2266,7 @@
               _.createElement(
                 "div",
                 {
-                  className: "",
+                  className: _().EventDescriptionContainer,
                 },
                 _.createElement(_, {
                   view: _,

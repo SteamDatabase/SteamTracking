@@ -6,6 +6,7 @@
         Bold: "_3cln317VYhwhE1fSeMCG48",
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -113,6 +114,7 @@
         Verified: "ewmg-iZH8r2ghippaDEbq",
         Playable: "_1n8vatQzJB_Xptbs8lnm9n",
         Unsupported: "_2Q0ld2nJ3334gwZJ4LVzPW",
+        Compatible: "_2XeA02URQukjyKp0fh__XL",
         CompatibilityDetailRatingDescription: "_3456EX4aC94XtIz6d_Qhsl",
         CompatibilityDetailsSeparator: "_2mwbdnqm9Lk1-Bzs8FIdCU",
         CompatibilityDetailsResultIcon: "-L3Xub7NtXchyErJuHnKk",
@@ -125,6 +127,8 @@
         DeveloperComments_Icon: "_2R6eCuptMWK0ZkTe0GeqEi",
         DeveloperComments_LinkNoIcon: "_1zjwW1q8ccnB76k2rPv9oM",
         DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
+        CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
+        pillContent: "_1M5TZawv5Y4CRNXAISchG2",
       };
     },
     chunkid: (module) => {
@@ -536,6 +540,38 @@
     },
     chunkid: (module) => {
       module.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Loading: "_24C5lxFpKz_kHyuT-8GJKK",
         LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
         Small: "_2FPxEVbkMdVDAw1TLfl_B5",
@@ -554,6 +590,26 @@
         DateToolTip: "_2E5LHvnVEF3dSVV3wrDflm",
         ShortDateAndTime: "MBkkhT4wei3tWetnWbiqn",
         ShortDateRange: "_3CN6I3krBRNzD7kCuKQ_w7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
+        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
+        Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
+        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
+        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
+        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11423,6 +11479,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11430,13 +11488,18 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ = _.createContext({
-          bShowCompatInfo: !1,
+          bForceShowCompatInfo: !1,
+          bSteamDeck: !1,
         }),
         _ = () => _.useContext(_);
       function _() {
-        const { bShowCompatInfo: _ } = _(),
+        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _(),
           _ = (0, _._)();
-        return _ || (_._.ON_DECK && _);
+        return _._.ON_STEAMOS && _ && !_
+          ? [!0, 2]
+          : _ || (_._.ON_DECK && _)
+            ? [!0, 1]
+            : [!1, 0];
       }
       const _ = (_) => {
           const _ = _(_.category);
@@ -11451,12 +11514,52 @@
             }),
           );
         },
+        _ = (_) => {
+          const _ = _(_.category);
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
+            },
+            _.createElement(_, {
+              className: _.SteamDeckCompatIcon,
+            }),
+          );
+        },
+        _ = (_) => {
+          const {
+            eDisplay: _,
+            storeItem: __webpack_require__,
+            className: _,
+          } = _;
+          return 1 == _
+            ? _.createElement(_, {
+                category:
+                  __webpack_require__.GetPlatforms().steam_deck_compat_category,
+                className: _,
+              })
+            : 2 == _
+              ? _.createElement(_, {
+                  category:
+                    __webpack_require__.GetPlatforms().steam_os_compat_category,
+                  className: _,
+                })
+              : null;
+        },
         _ = {
           1: _.jIP,
           2: _.aVR,
           3: _.o5Q,
           0: _.WX$,
+        },
+        _ = {
+          0: _.WX$,
+          1: _.jIP,
+          2: _.ZjT,
         };
+      function _(_) {
+        return _[_] || _.WX$;
+      }
       function _(_) {
         return _[_] || _.WX$;
       }
@@ -13838,6 +13941,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13853,7 +13958,41 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.map((_) => {
+          const _ = _._[_];
+          return {
+            sKey: _,
+            nWidth: _.width,
+            nHeight: _.height,
+            bEnforceDimensions: !_.bDisableEnforceDimensions,
+            artworkType: _,
+            bHiddenFromDropdown: "hero" === _,
+            fnGetLabelText() {
+              return "spotlight" == this.artworkType
+                ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
+                : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
+            },
+          };
+        });
+      }
+      function _(_) {
+        return (_, _, _) => {
+          if (!_ || 0 == _.length) return;
+          const _ = (0, _._)(
+            _,
+            _?.map((_) => _.artworkType),
+          );
+          let _ = (0, _._)(_, _, _, !1);
+          if ((void 0 === _ && (_ = (0, _._)(_, _, _, !0)), _)) {
+            const _ = _.find((_) => _.artworkType == _);
+            if (_) return _;
+          }
+          return _[0];
+        };
+      }
       class _ {
         m_filesToUpload = _._.array();
         m_filesCompleted = [];
@@ -13885,14 +14024,14 @@
                 !_._.is_support || ("webm" != _ && "mp4" != _)
                   ? ((_ = new Image()),
                     (_.onload = () => {
-                      const _ = new _._(_, _, _, _, _);
+                      const _ = new _._(_, _, _, _(_), _);
                       (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                         (_ = !0),
                         _();
                     }))
                   : ((_ = document.createElement("video")),
                     (_.onloadeddata = () => {
-                      const _ = new _._(_, _, _, _, _);
+                      const _ = new _._(_, _, _, _(_), _);
                       (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                         (_ = !0),
                         _();
@@ -13986,7 +14125,7 @@
                 _[`${_.uploadTime}/${_.file.name}`] = this.UploadFile({
                   uploadFile: _.file,
                   filename: _.file.name,
-                  artworkType: _.match,
+                  imageOption: _.match,
                   resizeRequests: _.GetResizeDimension(),
                   primaryLocalizeImage: _.localizedImageGroupPrimaryImage,
                   lang: _.language,
@@ -14016,7 +14155,7 @@
                     );
                     if (_) {
                       const _ = (0, _._)(_.language, _, _);
-                      this.m_fnSetImageURL(_.type, _, _);
+                      this.m_fnSetImageURL(_.type.artworkType, _, _);
                     }
                   }
             }),
@@ -14039,7 +14178,7 @@
           const {
             uploadFile: _,
             filename: __webpack_require__,
-            artworkType: _,
+            imageOption: _,
             resizeRequests: _,
             primaryLocalizeImage: _,
             lang: _,
@@ -14050,7 +14189,7 @@
           const _ = new FormData();
           _.append("clanimage", _, __webpack_require__),
             _.append("sessionid", _._.SESSIONID),
-            _ && _.append("arttype", _),
+            _?.artworkType && _.append("arttype", _.artworkType),
             _ &&
               _.length > 0 &&
               _.append(
@@ -14140,12 +14279,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 960,
-        _ = 311,
-        _ = 480,
-        _ = 156;
       class _ {
         dataUrl = void 0;
         width = void 0;
@@ -14158,30 +14292,43 @@
         uploadTime;
         fileType = 0;
         constructor(_, _, _, _, _, _) {
-          if (
-            ((0, _._)(this),
+          (0, _._)(this),
             (this.file = _),
             (this.fileType = _._.GetExtensionTypeFromURL(_.name)),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            _)
-          ) {
-            const _ = (0, _._)(this.fileType, _);
-            let _ = (0, _._)(_, _, _, !1);
-            void 0 === _ && (_ = (0, _._)(_, _, _, !0)),
-              (this.type = _ || _[0]);
-          }
-          (this.height = _), (this.width = _), (this.dataUrl = _);
+            (this.type = __webpack_require__?.(this.fileType, _, _)),
+            (this.height = _),
+            (this.width = _),
+            (this.dataUrl = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "dataUrl", void 0),
+        (0, _._)([_._], _.prototype, "width", void 0),
+        (0, _._)([_._], _.prototype, "height", void 0),
+        (0, _._)([_._], _.prototype, "type", void 0),
+        (0, _._)([_._], _.prototype, "status", void 0),
+        (0, _._)([_._], _.prototype, "message", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 960,
+        _ = 311,
+        _ = 480,
+        _ = 156;
+      class _ extends _ {
+        constructor(_, _, _, _, _, _) {
+          super(_, _, _, _, _, _);
         }
         IsValidAssetType(_, _, _) {
           let _ = 0,
             _ = 0,
             _ = !1,
-            _ = !_ || 0 === _.length || _.includes(this.type);
+            _ =
+              !_ || 0 === _.length || _.some((_) => _.sKey == this.type?.sKey);
           if (_) (_ = _.width), (_ = _.height), (_ = !0);
           else if (this.type) {
-            const _ = _._[this.type];
+            const _ = _._[this.type.artworkType];
             _ &&
               ((_ = _.width),
               (_ = _.height),
@@ -14192,8 +14339,10 @@
             _ = _ && _ != this.fileType,
             _ =
               !!(_ && _.length > 0) &&
-              0 == (0, _._)(this.fileType, _ || []).length,
-            _ = Boolean(_(this.fileType));
+              0 ==
+                (0, _._)(this.fileType, _?.map((_) => _.artworkType) || [])
+                  .length,
+            _ = Boolean((0, _._)(this.fileType));
           let _ = "",
             _ = !1;
           return (
@@ -14201,10 +14350,7 @@
               ? _
                 ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
                 : _
-                  ? (_ = (0, _._)(
-                      "#ImageUpload_InvalidFormat",
-                      _._.GetExtensionStringForFileType(_),
-                    ))
+                  ? (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
                   : _ || _
                     ? _
                       ? !_ &&
@@ -14222,19 +14368,23 @@
           );
         }
       }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "type", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0);
       class _ extends _ {
         video;
         constructor(_, _, _, _) {
           super(_, _, _, _.src, _.videoWidth, _.videoHeight), (this.video = _);
         }
         BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(this.video.videoWidth, this.video.videoHeight, _);
+          return (0, _._)(
+            this.video.videoWidth,
+            this.video.videoHeight,
+            _.artworkType,
+          );
+        }
+        FileTypeMatchesImageTypes(_) {
+          return (0, _._)(this.fileType, _.artworkType);
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
         }
         GetResizeDimension() {}
       }
@@ -14243,7 +14393,13 @@
           super(_, _, _, URL.createObjectURL(_), 0, 0);
         }
         BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(_);
+          return (0, _._)(_.artworkType);
+        }
+        FileTypeMatchesImageTypes(_) {
+          return (0, _._)(this.fileType, _.artworkType);
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
         }
         GetResizeDimension() {}
       }
@@ -14273,40 +14429,20 @@
             (this.width = this.media.width),
             (this.dataUrl = this.media.src);
         }
-        async CropImage(_, _, _, _, _, _, _) {
-          return new Promise((_, _) => {
-            const _ = _(_);
-            if (!_) return void _("Invalid format provided");
-            const _ = document.createElement("canvas");
-            (_.width = _), (_.height = _);
-            _.getContext("2d").drawImage(this.media, _, _, _, _, 0, 0, _, _),
-              _.toBlob((_) => {
-                const _ = _.toDataURL(_);
-                3 !== _ && _.startsWith("data:image/png")
-                  ? _("Unable to encode into the requested file format")
-                  : ((this.file = (0, _._)(_, this.file.name)),
-                    (this.width = _),
-                    (this.height = _),
-                    (this.dataUrl = _),
-                    (this.uploadTime = Date.now()),
-                    (this.bCropped = !0),
-                    _());
-              });
-          });
+        GetCanvasImageSource() {
+          return this.media;
         }
         BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(this.media.width, this.media.height, _);
+          return (0, _._)(this.media.width, this.media.height, _.artworkType);
+        }
+        FileTypeMatchesImageTypes(_) {
+          return (0, _._)(this.fileType, _.artworkType);
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
         }
         GetResizeDimension() {
-          return _(this.type);
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case 3:
-            return "image/png";
-          case 1:
-            return "image/jpeg";
+          return _(this.type?.artworkType);
         }
       }
       function _(_) {
@@ -14446,28 +14582,8 @@
             this.m_imageListChangeCallback.get(_)
           );
         }
-        static GetExtensionStringForFileType(_) {
-          switch (_) {
-            case 1:
-              return ".jpg";
-            case 2:
-              return ".gif";
-            case 3:
-              return ".png";
-            case 5:
-              return ".webm";
-            case 4:
-              return ".mp4";
-            case 7:
-              return ".srt";
-            case 6:
-              return ".vtt";
-            case 10:
-              return ".webp";
-          }
-        }
         static GetExtensionString(_) {
-          return _.GetExtensionStringForFileType(_.file_type) || ".jpg";
+          return (0, _._)(_.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(_) {
           return (function (_) {
@@ -14939,268 +15055,6 @@
           _
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)([] || 0, 31, null);
-        for (const _ in _) {
-          const _ = (0, _._)(_);
-          -1 != _ && (_[_] = _[_]);
-        }
-        return _;
-      }
-      class _ {
-        m_filesToUpload = _._.array();
-        m_strUploadPath = null;
-        m_fnUploadSuccessCallback = null;
-        m_bSynchronousUpload = !1;
-        constructor(_, _, _) {
-          (0, _._)(this),
-            (this.m_strUploadPath = _),
-            (this.m_fnUploadSuccessCallback = _),
-            (this.m_bSynchronousUpload = _);
-        }
-        GetFnOnUploadSuccess() {
-          return this.m_fnUploadSuccessCallback;
-        }
-        SetFnOnUploadSuccess(_) {
-          this.m_fnUploadSuccessCallback = _;
-        }
-        GetUploadPath() {
-          return this.m_strUploadPath;
-        }
-        SetUploadPath(_) {
-          this.m_strUploadPath = _;
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        isSubtitleTextFile(_) {
-          return (
-            _.type.startsWith("text/") ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
-          );
-        }
-        async AddImageForLanguage(_, _, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _._(_, _, _, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        _();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else if (this.isVideoFile(_)) {
-                const _ = document.createElement("video");
-                (_.preload = "metadata"),
-                  _.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CCloudImageUploader failed to load the video, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = URL.createObjectURL(_));
-              } else
-                this.isSubtitleTextFile(_)
-                  ? ((this.m_filesToUpload = [
-                      ...this.m_filesToUpload,
-                      new _._(_, _, _),
-                    ]),
-                    (_ = !0),
-                    _())
-                  : (console.error(
-                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                      _,
-                      _.type,
-                    ),
-                    (_ = !1));
-            }),
-            _
-          );
-        }
-        async UploadAllImages(_, _, _, _, _) {
-          const _ = {};
-          let _ = {};
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = `${_.uploadTime}/${_.file.name}`;
-                (_[_] = this.UploadFile(
-                  _.file,
-                  _.file.name,
-                  _.language,
-                  _.match,
-                )),
-                  this.m_bSynchronousUpload && (_[_] = await _[_]);
-              }
-            }
-          return (
-            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
-              if (_)
-                if (_ && 1 === _.success) {
-                  _.status = "success";
-                  const _ = (0, _._)(_.language, _, _);
-                  this.m_fnUploadSuccessCallback(
-                    _.image_hash,
-                    _.file_name,
-                    _,
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "image/gif";
-                        case 1:
-                          return "image/jpeg";
-                        case 3:
-                          return "image/png";
-                        case 4:
-                          return "video/mp4";
-                        case 5:
-                          return "video/webm";
-                        case 6:
-                          return "text/vtt";
-                        case 7:
-                          return "text/srt";
-                        case 10:
-                          return "image/webp";
-                      }
-                      return null;
-                    })(_.file_type),
-                    _.type,
-                    _.width,
-                    _.height,
-                  );
-                } else (_.status = "failed"), (_.message = _.message);
-            }),
-            _
-          );
-        }
-        async UploadFile(_, _, _, _, _, _) {
-          let _ = null;
-          const _ = new FormData();
-          _.append("assetfile", _, _),
-            _.append("sessionid", _._.SESSIONID),
-            _.append("elangauge", "" + _),
-            _.append("originalname", _),
-            _?.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              ),
-            _ && _.append("arttype", _);
-          const _ = _(_);
-          if (!_)
-            return {
-              success: 8,
-              message: "Invalid file extension, cannot determine mimetype",
-            };
-          _.append("mimetype", _);
-          try {
-            _ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _),
-              (_ = _.response);
-          }
-          return _?.data;
-        }
-      }
-      function _(_) {
-        const _ = _.toLowerCase();
-        return _.endsWith(".jpg")
-          ? "image/jpeg"
-          : _.endsWith(".png")
-            ? "image/png"
-            : _.endsWith(".gif")
-              ? "image/gif"
-              : _.endsWith(".mp4")
-                ? "video/mp4"
-                : _.endsWith(".webm")
-                  ? "video/webm"
-                  : _.endsWith(".srt")
-                    ? "text/srt"
-                    : _.endsWith(".vtt")
-                      ? "text/vtt"
-                      : _.endsWith(".webp")
-                        ? "image/webp"
-                        : null;
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17062,6 +16916,9 @@
               "dev" == _._.WEB_UNIVERSE && (window.g_EventUserStore = _);
           }
         }
+        static BIsInited() {
+          return Boolean(_.s_EventUserStore);
+        }
         async Init(_) {
           (this.m_cm = _), (this.m_tracker = new _(_));
           const _ = (0, _._)("partnereventpermissions", "application_config");
@@ -18826,6 +18683,53 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        const _ = _.toLowerCase();
+        return _.endsWith(".jpg")
+          ? "image/jpeg"
+          : _.endsWith(".png")
+            ? "image/png"
+            : _.endsWith(".gif")
+              ? "image/gif"
+              : _.endsWith(".mp4")
+                ? "video/mp4"
+                : _.endsWith(".webm")
+                  ? "video/webm"
+                  : _.endsWith(".srt")
+                    ? "text/srt"
+                    : _.endsWith(".vtt")
+                      ? "text/vtt"
+                      : _.endsWith(".webp")
+                        ? "image/webp"
+                        : null;
+      }
+      function _(_) {
+        switch (_) {
+          case 1:
+            return ".jpg";
+          case 2:
+            return ".gif";
+          case 3:
+            return ".png";
+          case 5:
+            return ".webm";
+          case 4:
+            return ".mp4";
+          case 7:
+            return ".srt";
+          case 6:
+            return ".vtt";
+          case 10:
+            return ".webp";
+        }
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -20095,6 +19999,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20212,30 +20118,25 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-            results: _,
-            appName: __webpack_require__,
-            buttonProps: _,
-            autoFocus: _,
-            onOpenBlogPost: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(),
-          _ = (0, _._)();
-        if (
-          (_.useEffect(() => {
-            _(_?.current?.scrollHeight > _?.current?.clientHeight);
-          }, []),
-          !_)
-        )
-          return null;
+          results: _,
+          appName: __webpack_require__,
+          buttonProps: _,
+          autoFocus: _,
+          onOpenBlogPost: _,
+          eStartingTab: _,
+          bIncludeSteamOS: _,
+        } = _;
+        if (!_) return null;
         const _ = () => {
           _ ? _() : (window.location.href = _.steam_deck_blog_url);
         };
         let _ = _ ?? {},
+          _ = null,
           _ = null;
         _.steam_deck_blog_url &&
           ((_.onOptionsActionDescription = (0, _._)(
@@ -20244,194 +20145,389 @@
           (_.onOptionsButton = _),
           (_ = _.createElement(_, {
             blogURL: _.steam_deck_blog_url,
+            eHWCompatibiltyDisplay: 1,
+          })),
+          (_ = _.createElement(_, {
+            blogURL: _.steam_deck_blog_url,
+            eHWCompatibiltyDisplay: 2,
           })));
-        const _ =
-          -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type);
-        return _.resolved_items?.length
-          ? _.createElement(
-              _._,
-              {
-                className: _
-                  ? _().CompatibilityDetailsContainer
-                  : _().CompatibilityDetailsContainerDesktop,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DialogHeader,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DialogTitle,
-                    },
-                    (0, _._)(
-                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().AppTitleCategory,
-                    },
-                    _.createElement(_, {
-                      category: _.resolved_category,
-                    }),
-                  ),
+        const _ = 2 == _;
+        if (!_.resolved_items?.length) {
+          const _ = _
+              ? (0, _._)(
+                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )
+              : (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                 ),
-                _.createElement(_, {
+            _ = _
+              ? _.createElement(_, {
+                  category: _.steamos_resolved_category,
+                  appName: __webpack_require__,
+                })
+              : _.createElement(_, {
                   category: _.resolved_category,
                   appName: __webpack_require__,
                 }),
+            _ = _ ? _ : _;
+          return _.createElement(
+            _._,
+            {
+              autoFocus: _,
+              focusableIfNoChildren: _,
+              noFocusRing: !0,
+              className: _().CompatibilityDetailsContainer,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().DialogHeader,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DialogTitle,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().AppTitleCategory,
+                  },
+                  _.createElement(_, {
+                    category: _.resolved_category,
+                  }),
+                ),
               ),
               _,
-              _.createElement("div", {
-                className: _().CompatibilityDetailsSeparator,
-              }),
+              _,
+            ),
+          );
+        }
+        if (_ || _) {
+          const _ = (0, _._)(_.resolved_category),
+            _ = (0, _._)(_.steamos_resolved_category),
+            _ = (_) =>
+              window.sessionStorage.setItem(
+                "steamdeckcompatibility",
+                `?tab=${_.key}`,
+              ),
+            _ = [
+              {
+                name: _.createElement(
+                  "div",
+                  {
+                    className: _().pillContent,
+                  },
+                  "Steam Deck",
+                  _.createElement(_, null),
+                ),
+                key: "steamdeck",
+                contents: _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                    deckBlogContent: _,
+                  }),
+                ),
+                onClick: _,
+              },
+              {
+                name: _.createElement(
+                  "div",
+                  {
+                    className: _().pillContent,
+                  },
+                  "SteamOS",
+                  _.createElement(_, null),
+                ),
+                key: "steamos",
+                contents: _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                    deckBlogContent: _,
+                  }),
+                ),
+                onClick: _,
+              },
+            ];
+          return _.createElement(_._, {
+            tabs: _,
+            classNameCtn: _().CompatibilityTabs,
+            startingTab: _ ? "steamos" : "steamdeck",
+          });
+        }
+        return _.createElement(_, {
+          ..._,
+          deckBlogContent: _,
+        });
+      }
+      function _(_) {
+        const {
+            title: _,
+            autoFocus: __webpack_require__,
+            buttonProps: _,
+            ratingIcon: _,
+            ratingSummary: _,
+            deckBlogContent: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(() => _, [_]),
+          _ = _.useRef(),
+          _ = (0, _._)();
+        let _ = _ ?? {};
+        return (
+          _.useEffect(() => {
+            _(_?.current?.scrollHeight > _?.current?.clientHeight);
+          }, []),
+          _.createElement(
+            _._,
+            {
+              className: _
+                ? _().CompatibilityDetailsContainer
+                : _().CompatibilityDetailsContainerDesktop,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().DialogHeader,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DialogTitle,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().AppTitleCategory,
+                  },
+                  _,
+                ),
+              ),
+              _,
+            ),
+            _,
+            _.createElement(
+              _._,
+              {
+                ref: _,
+                className: _()
+                  ? _().CompatibilityDetailsInterior_Scroll
+                  : _().CompatibilityDetailsInterior_NoScroll,
+              },
               _.createElement(
                 _._,
                 {
-                  ref: _,
-                  className: _()
-                    ? _().CompatibilityDetailsInterior_Scroll
-                    : _().CompatibilityDetailsInterior_NoScroll,
+                  autoFocus: __webpack_require__,
+                  focusableIfNoChildren: __webpack_require__ || _(),
+                  noFocusRing: !0,
                 },
-                _.createElement(
-                  _._,
-                  {
-                    autoFocus: _,
-                    focusableIfNoChildren: _ || _(),
-                    noFocusRing: !0,
-                  },
-                  _.resolved_items
-                    .filter((_) => 1 !== _.display_type)
-                    .map((_) =>
-                      _.createElement(
-                        "div",
-                        {
-                          key: _.loc_token + _.display_type,
-                          className: _().CompatibilityDetailsRow,
-                        },
-                        _.createElement(_, {
-                          displaytype: _.display_type,
-                        }),
-                        _.createElement("span", null, (0, _._)(_.loc_token)),
-                      ),
-                    ),
-                  _ &&
+                _,
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { results: _, appName: __webpack_require__ } = _,
+          _ =
+            -1 !==
+            _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = _.createElement(_, {
+            category: _.steamos_resolved_category ?? 0,
+            appName: __webpack_require__,
+          }),
+          _ = _.createElement(_, {
+            category: _.steamos_resolved_category ?? 0,
+          }),
+          _ = _.steamos_resolved_items?.length > 0;
+        return _.createElement(
+          _,
+          {
+            title: (0, _._)(
+              "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ),
+            ratingIcon: _,
+            ratingSummary: _,
+            ..._,
+          },
+          _.createElement(
+            _.Fragment,
+            null,
+            _ &&
+              _.createElement("div", {
+                className: _().CompatibilityDetailsSeparator,
+              }),
+            _.steamos_resolved_items &&
+              _.steamos_resolved_items
+                .filter((_) => 1 != _.display_type)
+                .map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _.loc_token + _.display_type,
+                      className: _().CompatibilityDetailsRow,
+                    },
+                    _.createElement(_, {
+                      displaytype: _.display_type,
+                    }),
+                    _.createElement("span", null, (0, _._)(_.loc_token)),
+                  ),
+                ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().CompatibilityNotes,
+                },
+                _.steamos_resolved_items
+                  ?.filter((_) => 1 == _.display_type)
+                  .map((_) =>
                     _.createElement(
                       "div",
                       {
-                        className: _().CompatibilityNotes,
+                        key: _.loc_token + _.display_type,
+                        className: _().CompatibilityDetailsRow,
                       },
-                      _.resolved_items
-                        .filter((_) => 1 == _.display_type)
-                        .map((_) =>
-                          _.createElement(
-                            "div",
-                            {
-                              key: _.loc_token + _.display_type,
-                              className: _().CompatibilityDetailsNoteRow,
-                            },
-                            _.createElement(
-                              "span",
-                              null,
-                              (0, _._)(_.loc_token),
-                            ),
-                          ),
-                        ),
-                    ),
-                ),
-              ),
-            )
-          : _.createElement(
-              _._,
-              {
-                autoFocus: _,
-                focusableIfNoChildren: _,
-                noFocusRing: !0,
-                className: _().CompatibilityDetailsContainer,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DialogHeader,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DialogTitle,
-                    },
-                    (0, _._)(
-                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                      _.createElement(_, {
+                        displaytype: _.display_type,
+                      }),
+                      _.createElement("span", null, (0, _._)(_.loc_token)),
                     ),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().AppTitleCategory,
-                    },
-                    _.createElement(_, {
-                      category: _.resolved_category,
-                    }),
-                  ),
-                ),
-                _.createElement(_, {
-                  category: _.resolved_category,
-                  appName: __webpack_require__,
-                }),
-                _,
               ),
-            );
+          ),
+        );
       }
       function _(_) {
-        const { blogURL: _ } = _,
-          _ = (0, _._)();
-        return _
-          ? _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().CompatibilityDetailRatingSummary,
-                },
-                (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog"),
+        const { results: _, appName: __webpack_require__ } = _,
+          _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = _.createElement(_, {
+            category: _.resolved_category,
+            appName: __webpack_require__,
+          }),
+          _ = _.createElement(_, {
+            category: _.resolved_category,
+          }),
+          _ = _.resolved_items?.length > 0;
+        return _.createElement(
+          _,
+          {
+            title: (0, _._)(
+              "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+            ),
+            ratingIcon: _,
+            ratingSummary: _,
+            ..._,
+          },
+          _.createElement(
+            _.Fragment,
+            null,
+            _ &&
+              _.createElement("div", {
+                className: _().CompatibilityDetailsSeparator,
+              }),
+            _.resolved_items
+              .filter((_) => 1 !== _.display_type)
+              .map((_) =>
                 _.createElement(
                   "div",
                   {
-                    className: _().DeveloperBlogYButton,
+                    key: _.loc_token + _.display_type,
+                    className: _().CompatibilityDetailsRow,
                   },
-                  _.createElement(_._, {
-                    button: _._._,
-                    type: _._.Knockout,
+                  _.createElement(_, {
+                    displaytype: _.display_type,
                   }),
+                  _.createElement("span", null, (0, _._)(_.loc_token)),
                 ),
-              )
-            : _.createElement(
+              ),
+            _ &&
+              _.createElement(
                 "div",
                 {
-                  className: _().CompatibilityDetailRatingSummary,
+                  className: _().CompatibilityNotes,
                 },
-                (0, _._)(
-                  "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                    className: _().DeveloperBlockLinkDesktop,
-                  },
-                  (0, _._)("#SteamDeckVerified_ViewDeveloperPost"),
-                ),
-              )
-          : null;
+                _.resolved_items
+                  .filter((_) => 1 == _.display_type)
+                  .map((_) =>
+                    _.createElement(
+                      "div",
+                      {
+                        key: _.loc_token + _.display_type,
+                        className: _().CompatibilityDetailsNoteRow,
+                      },
+                      _.createElement("span", null, (0, _._)(_.loc_token)),
+                    ),
+                  ),
+              ),
+          ),
+        );
+      }
+      function _(_) {
+        const { blogURL: _, eHWCompatibiltyDisplay: __webpack_require__ } = _,
+          _ = (0, _._)();
+        if (!_) return null;
+        if (_) {
+          const _ =
+            2 == __webpack_require__
+              ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
+              : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
+          return _.createElement(
+            "div",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            _,
+            _.createElement(
+              "div",
+              {
+                className: _().DeveloperBlogYButton,
+              },
+              _.createElement(_._, {
+                button: _._._,
+                type: _._.Knockout,
+              }),
+            ),
+          );
+        }
+        const _ =
+          2 == __webpack_require__
+            ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
+            : (0, _._)(
+                "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
+              );
+        return _.createElement(
+          "div",
+          {
+            className: _().CompatibilityDetailRatingSummary,
+          },
+          _,
+          _.createElement(
+            "a",
+            {
+              href: _,
+              className: _().DeveloperBlockLinkDesktop,
+            },
+            (0, _._)("#SteamDeckVerified_ViewDeveloperPost"),
+          ),
+        );
       }
       function _(_) {
         const { displaytype: _ } = _;
@@ -20460,6 +20556,21 @@
                 ),
               null
             );
+        }
+      }
+      function _(_) {
+        const { displaytype: _ } = _;
+        switch (_) {
+          case 3:
+            return _.createElement(_.ZjT, {
+              className: _().CompatibilityDetailsResultIcon,
+            });
+          case 1:
+            return _.createElement(_.bcZ, {
+              className: _().CompatibilityDetailsResultIcon,
+            });
+          default:
+            return null;
         }
       }
       var _ = __webpack_require__("chunkid"),
@@ -20512,7 +20623,7 @@
           _ = _
             ? (0, _._)("#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI")
             : (0, _._)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
-          _ = __webpack_require__.steam_deck_blog_url,
+          _ = __webpack_require__?.steam_deck_blog_url,
           _ = _.useId();
         return __webpack_require__
           ? _.createElement(
@@ -20730,6 +20841,23 @@
         }
       }
       function _(_) {
+        const { category: _ } = _;
+        switch (_) {
+          case 2:
+            return _.createElement(_.ZjT, {
+              className: _().CategoryIcon,
+            });
+          case 1:
+            return _.createElement(_.jIP, {
+              className: _().CategoryIcon,
+            });
+          case 0:
+            return _.createElement(_.WX$, {
+              className: _().CategoryIcon,
+            });
+        }
+      }
+      function _(_) {
         const {
           category: _,
           appName: __webpack_require__,
@@ -20785,6 +20913,77 @@
                 _,
               )
             : (0, _._)("#SteamDeckVerified_DescriptionHeader", _, _);
+        return _.createElement(
+          "div",
+          {
+            className: _().CompatibilityDetailRatingSummary,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const {
+          category: _,
+          appName: __webpack_require__,
+          descriptionToken: _,
+        } = _;
+        if (0 == _)
+          return _.createElement(
+            "div",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            __webpack_require__
+              ? (0, _._)(
+                  "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
+                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                )
+              : (0, _._)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
+          );
+        let _ = "",
+          _ = null;
+        switch (_) {
+          case 2:
+            (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
+              (_ = _().Compatible);
+            break;
+          case 1:
+            (_ = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
+              (_ = _().Unsupported);
+        }
+        const _ = _.createElement(
+            "span",
+            {
+              className: _,
+            },
+            (0, _._)(
+              (function (_) {
+                switch (_) {
+                  case 2:
+                    return "#SteamOSCompatibility_Category_Compatible";
+                  case 1:
+                    return "#SteamOSCompatibility_Category_Unsupported";
+                  default:
+                    return "#SteamOSCompatibility_Category_Unknown";
+                }
+              })(_),
+            ),
+          ),
+          _ = _.createElement(
+            "span",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            (0, _._)(_ || _),
+          ),
+          _ = __webpack_require__
+            ? (0, _._)(
+                "#SteamOSCompatibility_DescriptionHeader_WithAppName",
+                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _,
+                _,
+              )
+            : (0, _._)("#SteamOSCompatibility_DescriptionHeader", _, _);
         return _.createElement(
           "div",
           {
@@ -28174,6 +28373,7 @@
             bControls: _,
             bLoop: _,
             bMuted: _,
+            className: _,
           } = _,
           _ = (0, _.useMemo)(
             () =>
@@ -28234,6 +28434,7 @@
                 }
             },
             ref: _,
+            className: _,
           },
           _.createElement(_, {
             rgVideoSources: __webpack_require__.rgVideoSources,
@@ -29834,6 +30035,512 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new _._();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          super(_),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: null,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          (this.m_fnMouseUp = (_) => {
+            this.OnMouseUp(_, _);
+          }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            ),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          return (
+            ((_ - this.m_rectLinkRegion.left) /
+              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+              100 -
+            this.m_nLocalOffsetXPct
+          );
+        }
+        GetYPercent(_) {
+          return (
+            ((_ - this.m_rectLinkRegion.top) /
+              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+              100 -
+            this.m_nLocalOffsetYPct
+          );
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+            _,
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null !== this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            _.createElement(
+              "div",
+              {
+                className: _,
+                style: _,
+                ref: this.LinkRegionBoxRef,
+                draggable: !1,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().LinkRegionGridBox,
+                },
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Top}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.top);
+                  },
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topright);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Left}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.left);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: `${_().LinkRegionEdge} ${_().Middle}`,
+                    onMouseDown: (_) => {
+                      this.OnMouseDown(_, _.middle);
+                    },
+                    draggable: !1,
+                  },
+                  this.props.deleteFn &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionDelete,
+                        onClick: this.HandleDelete,
+                      },
+                      _.createElement(_.sED, null),
+                    ),
+                  !this.props.bDisableLink &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionSettings,
+                        onClick: this.OnEditLink,
+                      },
+                      _.createElement(_.xv8, null),
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkText,
+                    },
+                    " ",
+                    this.m_strDescription,
+                    " ",
+                  ),
+                ),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Right}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.right);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottom);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomright);
+                  },
+                  draggable: !1,
+                }),
+              ),
+              this.state.bEditingLink &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LinkRegionInfo,
+                  },
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_url",
+                    value: this.state.text_link_url,
+                    label: (0, _._)("#SteamTV_LinkURL"),
+                    placeholder: "https://www.example.com",
+                    onChange: this.OnSetLinkURLChange,
+                    mustBeURL: !0,
+                  }),
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_description",
+                    value: this.state.text_link_description,
+                    label: (0, _._)("#SteamTV_LinkDescription"),
+                    placeholder: (0, _._)(
+                      "#SteamTV_LinkDescription_Placeholder",
+                    ),
+                    onChange: this.OnSetLinkDescriptionChange,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkRegionButtonContainer,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        disabled: !this.state.valid_link,
+                        onClick: this.OnSaveLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_OK"),
+                      " ",
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: this.OnEditLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
+            )
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
+        (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -30309,6 +31016,144 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          activeTab: "",
+        };
+        componentDidMount() {
+          this.props.startingTab
+            ? this.setState({
+                activeTab: this.props.startingTab,
+              })
+            : !this.props.bDisableRouting &&
+              this.props.location &&
+              this.setState({
+                activeTab: (0, _._)(this.props.location, "tab"),
+              });
+        }
+        componentDidUpdate(_) {
+          !this.props.bDisableRouting &&
+            this.props.location &&
+            this.props.location.key !== _.location.key &&
+            this.setState({
+              activeTab: (0, _._)(this.props.location, "tab"),
+            });
+        }
+        OnTabClick(_) {
+          this.setState({
+            activeTab: _.key,
+          }),
+            !this.props.bDisableRouting &&
+              this.props.history &&
+              (0, _._)(this.props.history, "tab", _.key),
+            _.onClick && _.onClick(_);
+        }
+        render() {
+          const _ =
+            this.props.tabs.find((_) => _.key === this.state.activeTab) ||
+            this.props.tabs[0];
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _().GraphicalAssetsTabs,
+                  this.props.classNameCtn,
+                ),
+              },
+              this.props.tabs.map((_) =>
+                _.createElement(_, {
+                  key: _.key,
+                  tab: _,
+                  OnTabClick: this.OnTabClick,
+                  classNameTab: this.props.classNameTab,
+                  active: _.key === _.key,
+                }),
+              ),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _ && _.createElement(_._, null, _.contents),
+            ),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnTabClick", null);
+      const _ = (0, _._)(function (_) {
+          const {
+            tab: _,
+            OnTabClick: __webpack_require__,
+            classNameTab: _,
+            active: _,
+          } = _;
+          return _.hidden
+            ? null
+            : _.createElement(
+                _._,
+                {
+                  condition: Boolean(_.statusToolTip || _.tooltip),
+                  wrap: (_) =>
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: _.statusToolTip || _.tooltip,
+                      },
+                      _,
+                    ),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(
+                      _().GraphicalAssetsTab,
+                      _ && _().Active,
+                      _ && "ActiveTab",
+                      _,
+                    ),
+                    onActivate: () => __webpack_require__(_),
+                  },
+                  Boolean(_.vo_warning) &&
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: _.vo_warning,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().VOWarning,
+                        },
+                        (0, _._)("#EventEditor_VOWarning"),
+                      ),
+                    ),
+                  _.status,
+                  _.name,
+                ),
+              );
+        }),
+        _ = (0, _._)(_);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _,
@@ -30512,6 +31357,219 @@
         (0, _._)([_._], _.prototype, "OnError", null),
         (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
         (0, _._)([_._], _.prototype, "PlayVideo", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          region: {
+            xPosPct: 0,
+            yPosPct: 0,
+            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            heightPct:
+              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+          },
+        };
+        async OnCrop() {
+          await (async function (_, _, _, _, _, _, _, _, _) {
+            return new Promise((_, _) => {
+              const _ = _(_);
+              if (!_) return void _("Invalid format provided");
+              const _ = document.createElement("canvas");
+              (_.width = _), (_.height = _);
+              const _ = 0,
+                _ = 0;
+              _.getContext("2d").drawImage(_, _, _, _, _, _, _, _, _),
+                _.toBlob((_) => {
+                  const _ = _.toDataURL(_);
+                  3 !== _ && __webpack_require__.startsWith("data:image/png")
+                    ? _("Unable to encode into the requested file format")
+                    : ((_.file = (0, _._)(_, _.file.name)),
+                      (_.width = _),
+                      (_.height = _),
+                      (_.dataUrl = _),
+                      (_.uploadTime = Date.now()),
+                      (_.bCropped = !0),
+                      _());
+                });
+            });
+          })(
+            this.props.uploadFile,
+            this.props.uploadFile.GetCanvasImageSource(),
+            (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
+            (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
+            (this.state.region.widthPct / 100) * this.props.uploadFile.width,
+            (this.state.region.heightPct / 100) * this.props.uploadFile.height,
+            this.GetDestWidth(),
+            this.GetDestHeight(),
+            this.props.fileType,
+          ),
+            this.props.closeModal();
+        }
+        UpdateCrop(_, _) {
+          this.setState({
+            region: _,
+          });
+        }
+        GetDestWidth() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          return _ ? _.width : _._[_.type.artworkType].width;
+        }
+        GetDestHeight() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          return _ ? _.height : _._[_.type.artworkType].height;
+        }
+        GetLargestBoxThatFits(_, _, _, _) {
+          let _ = _,
+            _ = (_ * _) / Math.max(_, 1);
+          return (
+            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
+            {
+              width: _,
+              height: _,
+            }
+          );
+        }
+        GetPreviewWindowStyle() {
+          const { region: _ } = this.state,
+            _ = this.GetLargestBoxThatFits(
+              this.GetDestWidth(),
+              this.GetDestHeight(),
+              500,
+              150,
+            ),
+            _ = _.width,
+            _ = _.height,
+            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
+            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
+            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
+            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
+          return {
+            width: _,
+            height: _,
+            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
+            backgroundSize: `${100 * _}% ${100 * _}%`,
+            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
+          };
+        }
+        render() {
+          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+            _ = this.GetLargestBoxThatFits(
+              this.props.uploadFile.width,
+              this.props.uploadFile.height,
+              800,
+              500,
+            );
+          return _.createElement(
+            _._,
+            {
+              onEscKeypress: this.props.closeModal,
+              bDisableBackgroundDismiss: !0,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
+              },
+              _.createElement(
+                _._,
+                null,
+                (0, _._)(
+                  "#ImageUpload_CropModalTitleDims",
+                  this.GetDestWidth(),
+                  this.GetDestHeight(),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)("DialogBodyText"),
+                },
+                (0, _._)("#ImageUpload_CropModalDescription"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropImage,
+                  style: {
+                    width: _.width,
+                    height: _.height,
+                  },
+                },
+                _.createElement("img", {
+                  style: {
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                  },
+                  src: this.props.uploadFile.dataUrl,
+                }),
+                _.createElement(_._, {
+                  bLockAspectRatio: !0,
+                  bDisableLink: !0,
+                  index: 0,
+                  updateFn: this.UpdateCrop,
+                  xPosPct: 0,
+                  yPosPct: 0,
+                  widthMinPct: _,
+                  heightMinPct: _,
+                  widthPct: _,
+                  heightPct: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropPreviewGroup,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CropPreviewLabel,
+                  },
+                  (0, _._)("#ImageUpload_CropPreview"),
+                ),
+                _.createElement("div", {
+                  style: this.GetPreviewWindowStyle(),
+                }),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: this.OnCrop,
+                },
+                (0, _._)("#ImageUpload_CropAndContinue"),
+              ),
+            ),
+          );
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case 3:
+            return "image/png";
+          case 1:
+            return "image/jpeg";
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnCrop", null),
+        (0, _._)([_._], _.prototype, "UpdateCrop", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

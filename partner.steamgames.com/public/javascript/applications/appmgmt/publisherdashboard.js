@@ -1267,20 +1267,20 @@
           return "CPartnerDismiss_CreateDismiss_Response";
         }
       }
-      class W extends S.Message {
+      class O extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            W.prototype.partnerid || A.Sg(W.M()),
+            O.prototype.partnerid || A.Sg(O.M()),
             S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   partnerid: {
                     n: 1,
@@ -1298,60 +1298,6 @@
                     bw: A.gp.writeUint32,
                   },
                 },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = A.w0(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return A.BT(W.M(), e, t);
-        }
-        static fromObject(e) {
-          return A.Uq(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (M().BinaryReader)(e),
-            a = new W();
-          return W.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return A.zj(W.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (M().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          A.i0(W.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (M().BinaryWriter)();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerDismiss_GetDismissTimeRange_Request";
-        }
-      }
-      class O extends S.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.dismiss_list || A.Sg(O.M()),
-            S.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: { dismiss_list: { n: 1, c: k, r: !0, q: !0 } },
               }),
             O.sm_m
           );
@@ -1386,6 +1332,60 @@
         serializeBase64String() {
           var e = new (M().BinaryWriter)();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerDismiss_GetDismissTimeRange_Request";
+        }
+      }
+      class W extends S.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.dismiss_list || A.Sg(W.M()),
+            S.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: { dismiss_list: { n: 1, c: k, r: !0, q: !0 } },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = A.w0(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return A.BT(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return A.Uq(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (M().BinaryReader)(e),
+            a = new W();
+          return W.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return A.zj(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (M().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          A.i0(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (M().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerDismiss_GetDismissTimeRange_Response";
@@ -1516,8 +1516,8 @@
             (e.GetDismissTimeRange = function (e, t) {
               return e.SendMsg(
                 "PartnerDismiss.GetDismissTimeRange#1",
-                (0, B.I8)(W, t),
-                O,
+                (0, B.I8)(O, t),
+                W,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
             }),
@@ -1557,7 +1557,7 @@
               .Get()
               .GetPromotionTransport()
               .GetServiceTransport());
-          const a = B.w.Init(W);
+          const a = B.w.Init(O);
           a.Body().set_accountid(this.m_accountId),
             a.Body().set_partnerid(this.m_partnerId),
             a
@@ -2348,7 +2348,7 @@
             inlineDate: !0,
           }),
           i &&
-            n.createElement(We, {
+            n.createElement(Oe, {
               eventData: t,
               eventUrl: l,
               optIn: i,
@@ -2929,7 +2929,7 @@
               }),
           );
       }
-      function We(e) {
+      function Oe(e) {
         const {
             eventData: t,
             eventUrl: a,
@@ -3005,14 +3005,14 @@
             n.createElement(
               ne.FV,
               null,
-              n.createElement(Oe, {
+              n.createElement(We, {
                 text: (0, o.we)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_EligibleGames",
                 ),
                 count: i.length,
                 tooltip: n.createElement(je, { apps: i }),
               }),
-              n.createElement(Oe, {
+              n.createElement(We, {
                 text: (0, o.we)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_RegisteredGames",
                 ),
@@ -3024,7 +3024,7 @@
                     h?.map((e) => ({ details: e, bRegistered: w })) ?? []),
                 }),
               }),
-              n.createElement(Oe, {
+              n.createElement(We, {
                 text: (0, o.we)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Discounted",
                 ),
@@ -3069,7 +3069,7 @@
         );
         var h, w;
       }
-      function Oe(e) {
+      function We(e) {
         const { text: t, count: a, tooltip: r, hidden: s } = e;
         return n.createElement(
           u.m9,
@@ -4135,7 +4135,11 @@
             ? me.Hm.GetMarketingMesssageEditURL(t.gid)
             : void 0,
           E = Xt();
-        let D, h, w, y;
+        let D,
+          h,
+          w,
+          y,
+          f = 0;
         s && t.start_date > E.getTime() / 1e3
           ? ((h = (0, o.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusVisibleOn",
@@ -4143,14 +4147,16 @@
             )),
             (y = (0, o.we)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
-            )))
+            )),
+            (f = 1))
           : s
             ? ((h = (0, o.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic",
               )),
               (y = (0, o.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
-              )))
+              )),
+              (f = 1))
             : i
               ? ((D = (0, o.we)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusReadyToPublish",
@@ -4162,54 +4168,59 @@
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_PreviewPublishButton",
                 )))
               : u || g
-                ? ((h = (0, o.we)(
+                ? ((D = (0, o.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview_Overall",
+                  )),
+                  (h = (0, o.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview",
                   )),
                   (w = (0, o.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview_ttip",
-                  )))
+                  )),
+                  (f = 2))
                 : ((h = (0, o.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady",
                   )),
                   (w = (0, o.we)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady_ttip",
                   )));
-        const f = (function (e) {
-          const t =
-              e.template_vars_json?.length > 0
-                ? JSON.parse(e.template_vars_json)
-                : void 0,
-            a = "partner_event" == t?.custom_display && t?.update_event_gid,
-            { eventModel: r } = (0, ue.B9)(
-              t.update_event_clan_accountid,
-              t.update_event_gid,
-              !0,
-            ),
-            s = r?.visibility_state == It.zv.k_EEventStateVisible,
-            i = r
-              ? (0, Ut.qT)(r, Ut.PH.k_eCommunityEdit, "allowRelative")
-              : void 0;
-          if (!a) return;
-          let l =
-            r && r.BIsVisibleEvent()
-              ? (0, o.we)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusPublic",
-                )
-              : (0, o.we)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive",
-                );
-          return n.createElement(ne.Pj, {
-            complete: s,
-            label: (0, o.we)(
-              "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
-            ),
-            status: l,
-            actionStatus: (0, o.we)(
-              "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
-            ),
-            actionUrl: i,
-          });
-        })(t);
+        const b = 2 === f ? 1 : f,
+          T = (function (e) {
+            const t =
+                e.template_vars_json?.length > 0
+                  ? JSON.parse(e.template_vars_json)
+                  : void 0,
+              a = "partner_event" == t?.custom_display && t?.update_event_gid,
+              { eventModel: r } = (0, ue.B9)(
+                t.update_event_clan_accountid,
+                t.update_event_gid,
+                !0,
+              ),
+              s = r?.visibility_state == It.zv.k_EEventStateVisible,
+              i = r
+                ? (0, Ut.qT)(r, Ut.PH.k_eCommunityEdit, "allowRelative")
+                : void 0;
+            if (!a) return;
+            let l =
+              r && r.BIsVisibleEvent()
+                ? (0, o.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusPublic",
+                  )
+                : (0, o.we)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive",
+                  );
+            return n.createElement(ne.Pj, {
+              complete: s,
+              label: (0, o.we)(
+                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
+              ),
+              status: l,
+              actionStatus: (0, o.we)(
+                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
+              ),
+              actionUrl: i,
+            });
+          })(t);
         return n.createElement(
           ne.b1,
           { hasImage: !!d, buttonPosition: "top" },
@@ -4234,9 +4245,9 @@
           n.createElement(
             ne.FV,
             null,
-            n.createElement(ne.hq, { complete: s, overrideText: D }),
+            n.createElement(ne.hq, { complete: b, overrideText: D }),
             n.createElement(ne.Pj, {
-              complete: s,
+              complete: f,
               label: (0, o.we)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_Status",
               ),
@@ -4245,7 +4256,7 @@
               actionStatus: y,
               actionUrl: _,
             }),
-            f,
+            T,
           ),
           v &&
             n.createElement(
@@ -4354,8 +4365,8 @@
         );
       }
       var Ht = a(46406),
-        Wt = a(12155),
-        Ot = a(30163),
+        Ot = a(12155),
+        Wt = a(30163),
         jt = a(44736),
         qt = a(17720);
       function Vt() {
@@ -4368,7 +4379,7 @@
               for (const a in e.rgEvents)
                 try {
                   const n = qt.b.InitFromAccountID((0, jt.H7)()),
-                    r = (0, Ot.oE)(n, e.rgEvents[a]);
+                    r = (0, Wt.oE)(n, e.rgEvents[a]);
                   t.set(a, r);
                 } catch {}
               return {
@@ -4436,7 +4447,7 @@
                 n.createElement(
                   "div",
                   { className: Ht.YoureRegistered },
-                  n.createElement(Wt.Jlk, null),
+                  n.createElement(Ot.Jlk, null),
                   (0, o.we)(
                     "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_YoureRegistered",
                   ),

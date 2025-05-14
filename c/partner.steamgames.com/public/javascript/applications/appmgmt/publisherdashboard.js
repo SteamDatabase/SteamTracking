@@ -4754,7 +4754,11 @@
           { bReady: _, bReadyExceptLiveEvent: _ } = (0, _._)(null, _, !0),
           _ = _.bShowWarnings ? _._.GetMarketingMesssageEditURL(_.gid) : void 0,
           _ = _();
-        let _, _, _, _;
+        let _,
+          _,
+          _,
+          _,
+          _ = 0;
         _ && _.start_date > _.getTime() / 1e3
           ? ((_ = (0, _._)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusVisibleOn",
@@ -4762,14 +4766,16 @@
             )),
             (_ = (0, _._)(
               "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
-            )))
+            )),
+            (_ = 1))
           : _
             ? ((_ = (0, _._)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic",
               )),
               (_ = (0, _._)(
                 "#Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton",
-              )))
+              )),
+              (_ = 1))
             : _
               ? ((_ = (0, _._)(
                   "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusReadyToPublish",
@@ -4782,51 +4788,58 @@
                 )))
               : _ || _
                 ? ((_ = (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview_Overall",
+                  )),
+                  (_ = (0, _._)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview",
                   )),
                   (_ = (0, _._)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview_ttip",
-                  )))
+                  )),
+                  (_ = 2))
                 : ((_ = (0, _._)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady",
                   )),
                   (_ = (0, _._)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady_ttip",
                   )));
-        const _ = (function (_) {
-          const _ =
-              _.template_vars_json?.length > 0
-                ? JSON.parse(_.template_vars_json)
-                : void 0,
-            _ = "partner_event" == _?.custom_display && _?.update_event_gid,
-            { eventModel: _ } = (0, _._)(
-              _.update_event_clan_accountid,
-              _.update_event_gid,
-              !0,
-            ),
-            _ = _?.visibility_state == _._.k_EEventStateVisible,
-            _ = _ ? (0, _._)(_, _._.k_eCommunityEdit, "allowRelative") : void 0;
-          if (!_) return;
-          let _ =
-            _ && _.BIsVisibleEvent()
-              ? (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusPublic",
-                )
-              : (0, _._)(
-                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive",
-                );
-          return _.createElement(_._, {
-            complete: _,
-            label: (0, _._)(
-              "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
-            ),
-            status: _,
-            actionStatus: (0, _._)(
-              "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
-            ),
-            actionUrl: _,
-          });
-        })(_);
+        const _ = 2 === _ ? 1 : _,
+          _ = (function (_) {
+            const _ =
+                _.template_vars_json?.length > 0
+                  ? JSON.parse(_.template_vars_json)
+                  : void 0,
+              _ = "partner_event" == _?.custom_display && _?.update_event_gid,
+              { eventModel: _ } = (0, _._)(
+                _.update_event_clan_accountid,
+                _.update_event_gid,
+                !0,
+              ),
+              _ = _?.visibility_state == _._.k_EEventStateVisible,
+              _ = _
+                ? (0, _._)(_, _._.k_eCommunityEdit, "allowRelative")
+                : void 0;
+            if (!_) return;
+            let _ =
+              _ && _.BIsVisibleEvent()
+                ? (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusPublic",
+                  )
+                : (0, _._)(
+                    "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive",
+                  );
+            return _.createElement(_._, {
+              complete: _,
+              label: (0, _._)(
+                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
+              ),
+              status: _,
+              actionStatus: (0, _._)(
+                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
+              ),
+              actionUrl: _,
+            });
+          })(_);
         return _.createElement(
           _._,
           {

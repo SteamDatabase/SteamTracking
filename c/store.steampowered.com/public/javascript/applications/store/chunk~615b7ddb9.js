@@ -4248,7 +4248,7 @@
           [_] = (0, _._)(_, _),
           { bIsIgnored: _ } = _(_),
           { bIsWishlisted: _ } = _(_),
-          _ = (0, _._)();
+          [_, _] = (0, _._)();
         return _.createElement(
           _._,
           {
@@ -4263,8 +4263,9 @@
           ),
           _ &&
             _.createElement(_._, {
+              eDisplay: _,
               className: _().DeckVerifiedLogo,
-              category: _.GetPlatforms().steam_deck_compat_category,
+              storeItem: _,
             }),
           _.createElement(
             "div",

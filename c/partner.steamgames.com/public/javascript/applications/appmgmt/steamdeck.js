@@ -28,6 +28,7 @@
         return _
           ? _.createElement(_.default, {
               results: _,
+              bIncludeSteamOS: !0,
             })
           : null;
       }

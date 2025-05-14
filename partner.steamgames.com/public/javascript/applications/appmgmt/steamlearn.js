@@ -5647,8 +5647,13 @@
                     bw: u.gp.writeUint32,
                   },
                   item_scalars: { n: 5, c: Pe, r: !0, q: !0 },
-                  next_item_threshold: {
-                    n: 6,
+                  item_sequence_end: {
+                    n: 7,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  item_sequence_end_threshold: {
+                    n: 8,
                     br: u.qM.readFloat,
                     bw: u.gp.writeFloat,
                   },

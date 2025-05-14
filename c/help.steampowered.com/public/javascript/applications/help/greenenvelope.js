@@ -3183,9 +3183,9 @@
         return !_.isSuccess || 1 !== _.data;
       }
       function _(_, _, _) {
+        if (_ == _ || null == _) return !1;
         if (!_) return !0;
         if (!_.is_enabled) return !1;
-        if (_ == _ || null == _) return !1;
         if (!_) return !1;
         if (_ == _) return !0;
         const _ = _.enabled_features;

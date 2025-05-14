@@ -1741,7 +1741,7 @@
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var p = r(78327),
-        g = r(33737),
+        g = r(68255),
         f = r(76217),
         h = r(88006),
         _ = r(19418);

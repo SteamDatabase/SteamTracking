@@ -6250,8 +6250,13 @@
                     _: !0,
                     _: !0,
                   },
-                  next_item_threshold: {
-                    _: 6,
+                  item_sequence_end: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  item_sequence_end_threshold: {
+                    _: 8,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },

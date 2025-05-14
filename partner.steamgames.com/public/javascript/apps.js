@@ -3471,6 +3471,18 @@ function VerifyReleasePrepurchase( appid, data )
 		"Start Pre-Purchase"	);
 }
 
+function VerifyReleasePreload( appid, data )
+{
+	VerifyReleaseCommon(
+		appid,
+		data,
+		ReleaseGamePreload,
+		"Confirm Preload",
+		"If you are ready to start a preload, please type the phrase \"%1$s\" into the box below.",
+		"Start my preload",
+		"Start Preload"	);
+}
+
 function VerifyReleaseGame( appid, data )
 {
 	VerifyReleaseCommon(
@@ -3573,6 +3585,11 @@ function ReleaseGamePrepurchase( appid, data )
 	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseappprepurchase/' + appid, data );
 }
 
+function ReleaseGamePreload( appid, data )
+{
+	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseapppreload/' + appid, data );
+}
+
 function ReleaseGame( appid, data )
 {
 	ReleaseGameCommon( 'https://partner.steamgames.com/apps/releaseapp/' + appid, data );
@@ -3604,7 +3621,15 @@ function ReleaseGameCommon( url, data )
 			} else {
 				$J('#publish_status').hide();
 				$J('#release_details_container').hide();
-				$J('#publish_success').show();
+
+				if ( data['release_action'] && data['release_action'] == 'preload' )
+				{
+					$J('#publish_success_preload').show();
+				}
+				else
+				{
+					$J('#publish_success').show();
+				}
 			}
 
 			// refresh the send demo wishlist emails button

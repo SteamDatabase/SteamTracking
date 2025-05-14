@@ -292,11 +292,11 @@
         _ = a(39606),
         A = a(72224),
         S = a(53120),
-        h = a.n(S),
-        g = a(34010),
+        g = a.n(S),
+        h = a(34010),
         B = a(4796),
         C = a(91254),
-        f = a(33737),
+        f = a(68255),
         I = a(84811),
         b = a(35685),
         w = a(95034),
@@ -1175,26 +1175,26 @@
                 { className: (0, y.A)(L.BroadcastPage) },
                 n.createElement(
                   "div",
-                  { className: (0, y.A)(h().BroadcastAndChat) },
+                  { className: (0, y.A)(g().BroadcastAndChat) },
                   Boolean(!p.Get().BShowOnlyChat()) &&
                     n.createElement(
                       I.tH,
                       null,
                       n.createElement(
                         "div",
-                        { className: (0, y.A)(h().wrapper) },
+                        { className: (0, y.A)(g().wrapper) },
                         n.createElement(
                           "div",
                           {
                             className: (0, y.A)({
-                              [h().video_placeholder]: !0,
+                              [g().video_placeholder]: !0,
                               video_placeholder_trgt: !0,
-                              [h().NoChat]: p.Get().BShowOnlyVideo(),
+                              [g().NoChat]: p.Get().BShowOnlyVideo(),
                             }),
                           },
                           n.createElement(
                             "div",
-                            { className: h().BroadcastPlayerContainer },
+                            { className: g().BroadcastPlayerContainer },
                             n.createElement(
                               I.tH,
                               null,
@@ -1211,15 +1211,15 @@
                   Boolean(!p.Get().BShowOnlyVideo()) &&
                     n.createElement(
                       "div",
-                      { className: h().detail_chat_ctn },
+                      { className: g().detail_chat_ctn },
                       n.createElement(
                         "div",
-                        { className: h().ChatContainer },
+                        { className: g().ChatContainer },
                         n.createElement(
                           I.tH,
                           null,
                           n.createElement(_.I, {
-                            emoticonStore: g.MX,
+                            emoticonStore: h.MX,
                             watchLocation: 6,
                             steamID: a,
                             broadcastID: s ? s.m_ulBroadcastID : void 0,
@@ -1690,8 +1690,8 @@
         _ = a(46067),
         A = a(60746),
         S = a(55263),
-        h = a(8107),
-        g = a(3919),
+        g = a(8107),
+        h = a(3919),
         B = a(95695),
         C = a.n(B),
         f = a(72860),
@@ -1828,10 +1828,10 @@
                       (0, N.we)("#EventBrowse_MoreEventsBtn"),
                     )
                   : i.createElement(
-                      g.tj,
+                      h.tj,
                       {
                         eventModel: u[0],
-                        route: g.PH.k_eViewWebSiteHub,
+                        route: h.PH.k_eViewWebSiteHub,
                         className: C().EventSectionMoreBtn,
                       },
                       (0, N.we)("#EventBrowse_MoreEventsBtn"),
@@ -1849,7 +1849,7 @@
                 ),
               ),
               Boolean(B) &&
-                i.createElement(h.N, {
+                i.createElement(g.N, {
                   appid: u[0].appid,
                   clanSteamID: s,
                   announcementGID: u[0].AnnouncementGID,
@@ -1871,7 +1871,7 @@
             bHidePrices: m,
           } = e,
           d = (0, P.Zj)(t.appid),
-          [E, v, A, S, h, B] = (0, s.q3)(() => {
+          [E, v, A, S, g, B] = (0, s.q3)(() => {
             const e = l || (0, n.sf)(k.TS.LANGUAGE),
               r = Boolean(void 0 !== a)
                 ? a
@@ -1890,8 +1890,8 @@
           }),
           [C, f] = (0, i.useState)(void 0),
           b =
-            !C || (E !== C && h !== C)
-              ? { src: E, onLoad: () => f(E), onError: () => f(h) }
+            !C || (E !== C && g !== C)
+              ? { src: E, onLoad: () => f(E), onError: () => f(g) }
               : { src: C };
         if (!t)
           return i.createElement("div", {
@@ -1906,7 +1906,7 @@
             i.Fragment,
             null,
             i.createElement(
-              g.tj,
+              h.tj,
               {
                 className: (0, T.A)(
                   O().OtherEvents_EventCtn,
@@ -1914,7 +1914,7 @@
                   O().HoversEnabled,
                 ),
                 eventModel: t,
-                route: c || g.PH.k_eView,
+                route: c || h.PH.k_eView,
                 onClick: o,
                 preferredFocus: !0,
               },
@@ -2049,29 +2049,30 @@
       }
       function V(e) {
         const { event: t, imageURLOverride: a, onClick: r } = e,
-          l = (0, n.sf)(k.TS.LANGUAGE),
-          [o, c, m] = (0, s.q3)(() =>
+          l = (0, P.Zj)(t.appid),
+          o = (0, n.sf)(k.TS.LANGUAGE),
+          [c, m, d] = (0, s.q3)(() =>
             t
               ? [
                   void 0 !== a
                     ? a
                     : t.GetImageURLWithFallback(
                         "capsule",
-                        l,
+                        o,
                         p.wI.capsule_main,
                       ),
-                  t.GetNameWithFallback(l),
+                  t.GetNameWithFallback(o),
                   t.GetCategoryAsString(),
                 ]
               : [void 0, void 0, void 0],
           );
         return t
           ? i.createElement(
-              g.tj,
+              h.tj,
               {
                 className: O().OtherEvents_EventCtn + " " + O().HorizontalEvent,
                 eventModel: t,
-                route: g.PH.k_eView,
+                route: h.PH.k_eView,
                 onClick: r,
               },
               i.createElement(
@@ -2079,9 +2080,14 @@
                 { className: O().OtherEvents_ContentCtn },
                 i.createElement(
                   "div",
-                  { className: O().OtherEvents_MainImageCtn },
+                  {
+                    className: (0, T.A)(
+                      O().OtherEvents_MainImageCtn,
+                      l && O().MaskImages,
+                    ),
+                  },
                   i.createElement("img", {
-                    src: o,
+                    src: c,
                     className: O().OtherEvents_MainImage,
                   }),
                 ),
@@ -2095,14 +2101,14 @@
                   i.createElement(
                     "div",
                     { className: O().HorizontalDescription },
-                    m,
+                    d,
                   ),
                   i.createElement(I.K4, {
                     bSingleLine: !0,
                     dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                   }),
                 ),
-                i.createElement("div", { className: O().HorizontalTitle }, c),
+                i.createElement("div", { className: O().HorizontalTitle }, m),
               ),
             )
           : i.createElement("div", { className: O().OtherEvents_EventCtn });

@@ -55,20 +55,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ArtworkDimensionTooSmall: "_1m0PpUctuGTw-Jma50hi2v",
-        UploadPreviewCtn: "_34UWtR_ugfBbP2GT9UNyZB",
-        UploadPreviewButtonsCtn: "_3rKybFjcU5JGIfziRxbuNt",
-        UploadPreviewDelete: "_260mOfOKtRiiYz6UiaZS_w",
-        UploadPreviewButton: "_19Fl6VCN7JZgGShsQY_p95",
-        UploadPreviewError: "_14nIWrGmXJICEe4YEEcdWS",
-        UploadPreviewWarning: "_13jPeHck1h76bmmxJ-csvw",
-        UploadPreview: "mOxVUSRnTr3nIwMW_T0fY",
-        PreviewImgCtn: "_1gWyQDmPFiSh-p1BD5TC1k",
-        PreviewImgInfo: "_15NFxbc1Jv0dEJJpjDrtri",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ImageWrapperContainer: "_2or51Nzh1oEwvdNjKQ1XsS",
         ImageWrapper: "_34WcpEIVKr8Z72GaesGoR4",
         VideoBackground: "_3IizOeZqT1lZaoPEmdVxG",
@@ -124,6 +110,20 @@
       module.exports = {
         SearchInput: "z7qI4Gjuleb-g6osRQpw2",
         PickerTitle: "_1yPqhNpX8e1HgnrarYmsZg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ImageDimensionTooSmall: "_1A6oRywbsuzGxawqTexX6G",
+        UploadPreviewCtn: "_1x7wvgGW08t0c2auyfWyAs",
+        UploadPreviewButtonsCtn: "_2Vsz0Teq375iSLvbdoaCw0",
+        UploadPreviewDelete: "_1898rmbQKDsZukkFbEda-H",
+        UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
+        UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
+        UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
+        PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
+        PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
       };
     },
     chunkid: (module) => {
@@ -254,6 +254,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
@@ -323,7 +324,7 @@
             { bPrefetchingLanguages: _, imageSize: _ } = this.state,
             _ = !_ && _,
             _ = _ ? ` - ${_.width}x${_.height}` : "",
-            _ = _._.GetExtensionStringForFileType(_.file_type).slice(1),
+            _ = (0, _._)(_.file_type).slice(1),
             _ = _ && {
               width: _.width,
               height: _.height,
@@ -1387,6 +1388,7 @@
             imageURLOverride: __webpack_require__,
             onClick: _,
           } = _,
+          _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _] = (0, _._)(() =>
             _
@@ -1416,7 +1418,10 @@
                 _.createElement(
                   "div",
                   {
-                    className: _().OtherEvents_MainImageCtn,
+                    className: (0, _._)(
+                      _().OtherEvents_MainImageCtn,
+                      _ && _().MaskImages,
+                    ),
                   },
                   _.createElement("img", {
                     src: _,
@@ -1464,436 +1469,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            imageUploader: _,
-            rgSupportArtwork: __webpack_require__,
-            strOverrideDragAndDropText: _,
-            forceResolution: _,
-            localizedPrimaryImage: _,
-            elAdditonalButtons: _,
-            rgRealmList: _,
-          } = _,
-          [_, _] = (0, _._)(() => [
-            _.GetUploadImages(),
-            _._.Get().GetCurEditLanguage(),
-          ]),
-          _ = _.useCallback(
-            async (_) => {
-              let _ = Array.from(_),
-                _ = !0;
-              for (let _ = 0; _ < _.length; _++) {
-                const _ = _[_],
-                  _ = (0, _._)(null == _ ? void 0 : _.name, _);
-                try {
-                  const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(
-                    _,
-                    _,
-                    __webpack_require__,
-                    _,
-                  )),
-                    _ ||
-                      (console.error(
-                        "ArtworkUploader.OnDropFiles: failed on i=" +
-                          _ +
-                          " file=" +
-                          _.name,
-                      ),
-                      (0, _._)(
-                        _.createElement(_._, {
-                          strDescription: (0, _._)(
-                            "#ImagePicker_Error",
-                            _.name,
-                          ),
-                        }),
-                        window,
-                      ));
-                } catch (_) {
-                  let _ = (0, _._)(_);
-                  console.error(
-                    "ArtworkUploader.OnDropFiles: " + _.strErrorMsg,
-                    _,
-                  ),
-                    (0, _._)(
-                      _.createElement(_._, {
-                        strDescription: (0, _._)(
-                          "#EventError_Code",
-                          _.strErrorMsg,
-                        ),
-                      }),
-                      window,
-                    );
-                }
-              }
-              return _;
-            },
-            [_, _, _, _, __webpack_require__],
-          );
-        return _.createElement(
-          _._,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
-          },
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewCtn,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.file + "_" + _.uploadTime,
-                  asset: _,
-                  supported: __webpack_require__,
-                  forceResolution: _,
-                  forceFileType: _ && _.file_type,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              await _.UploadAllImages(
-                _,
-                _,
-                __webpack_require__,
-                _,
-                _ && _.file_type,
-              );
-            },
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            imageUploader: _,
-            fnOnUploadImageRequested: __webpack_require__,
-          } = _,
-          [_] = (0, _._)(() => [_.GetUploadImages()]);
-        return _.createElement(
-          "div",
-          {
-            style: {
-              display: "flex",
-            },
-            className: _().UploadPreviewButtonsCtn,
-          },
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
-                style: {
-                  margin: "8px",
-                },
-                onClick: __webpack_require__,
-              },
-              (0, _._)("#ImageUpload_Upload"),
-            ),
-          Boolean(_.length) &&
-            _.createElement(
-              _._,
-              {
-                style: {
-                  margin: "8px",
-                },
-                onClick: _.ClearImages,
-              },
-              (0, _._)("#ImageUpload_Clear"),
-            ),
-        );
-      }
-      function _(_, _, _, _, _, _) {
-        let _ = new Array();
-        return (
-          _.GetUploadImages().map((_) => {
-            _.push(
-              _.createElement(_, {
-                key: _ + _.file + "_" + _.uploadTime,
-                asset: _,
-                supported: _,
-                forceResolution: _,
-                forceFileType: _,
-                fnOnRemove: () => _.DeleteUploadImage(_),
-                languageRealms: _,
-              }),
-            );
-          }),
-          _
-        );
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            asset: _,
-            fnOnRemove: __webpack_require__,
-            supported: _,
-            languageRealms: _,
-          } = _,
-          _ = _.map((_) => {
-            let _ = (0, _._)("#EventEditor_ArtworkType_" + _);
-            "spotlight" == _ &&
-              (_ = (0, _._)("#EventEditor_ArtworkType_store_spotlight"));
-            const _ = _._[_];
-            let _;
-            _ &&
-              !_.bDisableEnforceDimensions &&
-              (_ += ` - ${_.width}x${_.height}`),
-              (_.BIsOriginalMinimumDimensions(_) && (0, _._)(_.fileType, _)) ||
-                (_ = _().ArtworkDimensionTooSmall);
-            return {
-              label: _,
-              data: _,
-              strOptionClass: _,
-            };
-          }),
-          _ = {
-            pending: (0, _._)("#ImageUpload_Pending"),
-            uploading: (0, _._)("#ImageUpload_Uploading"),
-            success: (0, _._)("#ImageUpload_SuccessCard"),
-            failed: (0, _._)("#ImageUpload_Failed"),
-          },
-          _ = new Array(),
-          _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
-        for (const _ of _) {
-          if (25 == _) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
-          _.push({
-            label: _,
-            data: _,
-          });
-        }
-        _.sort((_, _) => _.label.localeCompare(_.label));
-        const _ = [];
-        _.forEach((_) =>
-          _.push({
-            label: _.label,
-            data: _.data,
-          }),
-        );
-        const _ = _.IsValidAssetType(
-            _.supported,
-            _.forceResolution,
-            _.forceFileType,
-          ),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status];
-        return _.createElement(
-          "div",
-          {
-            className: _().UploadPreview,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().UploadPreviewDelete,
-              onClick: () => __webpack_require__(_),
-            },
-            _.createElement(_.sED, null),
-          ),
-          _.createElement(_, {
-            asset: _,
-          }),
-          _.createElement(_._, {
-            strDropDownClassName: _().DropDownScroll,
-            rgOptions: _,
-            selectedOption: _.language,
-            onChange: (_) => (_.language = _.data),
-          }),
-          Boolean(_.length > 1) &&
-            _.createElement(_._, {
-              rgOptions: _.filter((_) => "hero" !== _.data),
-              selectedOption: _.type || _[0].data,
-              onChange: (_) => (_.type = _.data),
-            }),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FlexColumnContainer),
-            },
-            _,
-            Boolean("uploading" == _) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().FlexCenter,
-                },
-                _.createElement(_._, {
-                  size: "small",
-                }),
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().UploadPreviewError,
-            },
-            _.message,
-          ),
-          _.error &&
-            _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewError,
-              },
-              _.error,
-            ),
-          _.needsCrop &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
-                        });
-                      }
-                      console.log(
-                        "ArtworkUploadEmbeddedDialog trying to crop non image",
-                        _.fileType,
-                        _.type,
-                      );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
-            ),
-        );
-      });
-      function _(_) {
-        const { asset: _ } = _;
-        return _._.includes(_.fileType)
-          ? _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      asset: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-              _.createElement(
-                "video",
-                {
-                  height: 120,
-                  controls: !1,
-                  autoPlay: !0,
-                  loop: !0,
-                  muted: !0,
-                },
-                _.createElement("source", {
-                  src: _.dataUrl,
-                }),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().PreviewImgCtn,
-                style: {
-                  backgroundImage: `url(${_.dataUrl})`,
-                },
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().PreviewImgInfo,
-                },
-                _.width,
-                " x ",
-                _.height,
-              ),
-            );
-      }
-      function _(_) {
-        const { asset: _, closeModal: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            bAlertDialog: !0,
-            closeModal: __webpack_require__,
-          },
-          _.createElement(
-            "video",
-            {
-              controls: !0,
-              autoPlay: !0,
-              loop: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
-              src: _.dataUrl,
-            }),
-          ),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1916,6 +1491,7 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
+          _ = (0, _._)(__webpack_require__),
           _ = _.useMemo(
             () => _.uploaderOverride || new _._(_),
             [_.ConvertTo64BitString(), _.uploaderOverride],
@@ -1932,7 +1508,7 @@
                 try {
                   const _ = (0, _._)(_.file_name, _),
                     _ = (0, _._)(_, _, _);
-                  await _.AddExistingClanImage(_, _, __webpack_require__, _);
+                  await _.AddExistingClanImage(_, _, _, _);
                 } catch (_) {
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
@@ -1949,7 +1525,7 @@
                 _(!1);
               }
             },
-            [_, _, _, _, _, __webpack_require__],
+            [_, _, _, _, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -1971,6 +1547,7 @@
         return _.createElement(_._, {
           ..._,
           imageUploader: _,
+          rgImageOptions: _,
           elAdditonalButtons: _
             ? [
                 _.createElement(_._, {
@@ -2617,6 +2194,442 @@
               "Escape" == _.key && (_(""), _.current && (_.current.value = ""));
             },
           }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            imageUploader: _,
+            rgImageOptions: __webpack_require__,
+            strOverrideDragAndDropText: _,
+            forceResolution: _,
+            localizedPrimaryImage: _,
+            elAdditonalButtons: _,
+            rgRealmList: _,
+          } = _,
+          [_, _] = (0, _._)(() => [
+            _.GetUploadImages(),
+            _._.Get().GetCurEditLanguage(),
+          ]),
+          _ = _.useCallback(
+            async (_) => {
+              let _ = Array.from(_),
+                _ = !0;
+              for (let _ = 0; _ < _.length; _++) {
+                const _ = _[_],
+                  _ = (0, _._)(null == _ ? void 0 : _.name, _);
+                try {
+                  const _ = (0, _._)(_, _, _);
+                  (_ = await _.AddImageForLanguage(
+                    _,
+                    _,
+                    __webpack_require__,
+                    _,
+                  )),
+                    _ ||
+                      (console.error(
+                        "ImageUploaderPanel.OnDropFiles: failed on i=" +
+                          _ +
+                          " file=" +
+                          _.name,
+                      ),
+                      (0, _._)(
+                        _.createElement(_._, {
+                          strDescription: (0, _._)(
+                            "#ImagePicker_Error",
+                            _.name,
+                          ),
+                        }),
+                        window,
+                      ));
+                } catch (_) {
+                  let _ = (0, _._)(_);
+                  console.error(
+                    "ImageUploaderPanel.OnDropFiles: " + _.strErrorMsg,
+                    _,
+                  ),
+                    (0, _._)(
+                      _.createElement(_._, {
+                        strDescription: (0, _._)(
+                          "#EventError_Code",
+                          _.strErrorMsg,
+                        ),
+                      }),
+                      window,
+                    );
+                }
+              }
+              return _;
+            },
+            [_, _, _, _, __webpack_require__],
+          ),
+          _ = _.useMemo(() => (_ instanceof Array ? _ : [_]), [_]);
+        return _.createElement(
+          _._,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.file + "_" + _.uploadTime,
+                  asset: _,
+                  supported: __webpack_require__,
+                  forceResolution: _,
+                  forceFileType: _ && _.file_type,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
+              ),
+            ),
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              await _.UploadAllImages(
+                _,
+                _,
+                __webpack_require__,
+                _,
+                _ && _.file_type,
+              );
+            },
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            imageUploader: _,
+            fnOnUploadImageRequested: __webpack_require__,
+          } = _,
+          [_] = (0, _._)(() => [_.GetUploadImages()]);
+        return _.createElement(
+          "div",
+          {
+            style: {
+              display: "flex",
+            },
+            className: _().UploadPreviewButtonsCtn,
+          },
+          Boolean(_.length) &&
+            _.createElement(
+              _._,
+              {
+                style: {
+                  margin: "8px",
+                },
+                onClick: __webpack_require__,
+              },
+              (0, _._)("#ImageUpload_Upload"),
+            ),
+          Boolean(_.length) &&
+            _.createElement(
+              _._,
+              {
+                style: {
+                  margin: "8px",
+                },
+                onClick: _.ClearImages,
+              },
+              (0, _._)("#ImageUpload_Clear"),
+            ),
+        );
+      }
+      function _(_, _, _, _, _, _) {
+        let _ = new Array();
+        return (
+          _.GetUploadImages().forEach((_) => {
+            _.push(
+              _.createElement(_, {
+                key: _ + _.file + "_" + _.uploadTime,
+                asset: _,
+                supported: _,
+                forceResolution: _,
+                forceFileType: _,
+                fnOnRemove: () => _.DeleteUploadImage(_),
+                languageRealms: _,
+              }),
+            );
+          }),
+          _
+        );
+      }
+      const _ = (0, _._)(function (_) {
+        var _, _;
+        const { asset: _, fnOnRemove: _, supported: _, languageRealms: _ } = _,
+          _ =
+            null == _
+              ? void 0
+              : _.map((_) => {
+                  let _,
+                    _ = null == _ ? void 0 : _.fnGetLabelText();
+                  _.bEnforceDimensions && (_ += ` - ${_.nWidth}x${_.nHeight}`),
+                    (_.BIsOriginalMinimumDimensions(_) &&
+                      _.FileTypeMatchesImageTypes(_)) ||
+                      (_ = _().ImageDimensionTooSmall);
+                  return {
+                    label: _,
+                    data: _,
+                    strOptionClass: _,
+                  };
+                }).filter((_) => !_.data.bHiddenFromDropdown),
+          _ = {
+            pending: (0, _._)("#ImageUpload_Pending"),
+            uploading: (0, _._)("#ImageUpload_Uploading"),
+            success: (0, _._)("#ImageUpload_SuccessCard"),
+            failed: (0, _._)("#ImageUpload_Failed"),
+          },
+          _ = new Array(),
+          _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
+        for (const _ of _) {
+          if (25 == _) continue;
+          const _ = (0, _._)("#Language_" + (0, _._)(_));
+          _.push({
+            label: _,
+            data: _,
+          });
+        }
+        _.sort((_, _) => _.label.localeCompare(_.label));
+        const _ = [];
+        _.forEach((_) =>
+          _.push({
+            label: _.label,
+            data: _.data,
+          }),
+        );
+        const _ = _.IsValidAssetType(
+            _.supported,
+            _.forceResolution,
+            _.forceFileType,
+          ),
+          _ = _.needsCrop
+            ? (0, _._)("#ImageUpload_NeedsCrop")
+            : _.error
+              ? (0, _._)("#ImageUpload_Invalid")
+              : _[_.status];
+        return _.createElement(
+          "div",
+          {
+            className: _().UploadPreview,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().UploadPreviewDelete,
+              onClick: () => _(_),
+            },
+            _.createElement(_.sED, null),
+          ),
+          _.createElement(_, {
+            asset: _,
+          }),
+          _.createElement(_._, {
+            strDropDownClassName: _().DropDownScroll,
+            rgOptions: _,
+            selectedOption: _.language,
+            onChange: (_) => (_.language = _.data),
+          }),
+          Boolean((null == _ ? void 0 : _.length) > 1) &&
+            _.createElement(_._, {
+              rgOptions: _,
+              selectedOption:
+                null !==
+                  (_ = _.type
+                    ? null ===
+                        (_ = _.find((_) => _.data.sKey == _.type.sKey)) ||
+                      void 0 === _
+                      ? void 0
+                      : _.data
+                    : void 0) && void 0 !== _
+                  ? _
+                  : _[0].data,
+              onChange: (_) => (_.type = _.data),
+            }),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().FlexColumnContainer),
+            },
+            _,
+            Boolean("uploading" == _) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().FlexCenter,
+                },
+                _.createElement(_._, {
+                  size: "small",
+                }),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().UploadPreviewError,
+            },
+            _.message,
+          ),
+          _.error &&
+            _.createElement(
+              "div",
+              {
+                className: _().UploadPreviewError,
+              },
+              _.error,
+            ),
+          _.needsCrop &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                _._,
+                {
+                  onClick: () =>
+                    ((_) => {
+                      if (_ instanceof _._) {
+                        _.ResetImage();
+                        const _ = window,
+                          _ = _.createElement(_._, {
+                            ownerWin: _,
+                            uploadFile: _,
+                            forceResolution: _.forceResolution,
+                            fileType: _.forceFileType || 3,
+                          });
+                        (0, _._)(_, _, "CropModal", {
+                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                        });
+                      } else
+                        console.log(
+                          "ImageUploadEmbeddedDialog trying to crop non image",
+                          _.fileType,
+                          JSON.stringify(_.type),
+                        );
+                    })(_),
+                },
+                (0, _._)("#ImageUpload_OpenEditor"),
+              ),
+            ),
+        );
+      });
+      function _(_) {
+        const { asset: _ } = _;
+        return _.BIsVideo()
+          ? _.createElement(
+              "div",
+              {
+                className: _().PreviewImgCtn,
+                onClick: (_) => {
+                  (0, _._)(
+                    _.createElement(_, {
+                      asset: _,
+                    }),
+                    (0, _._)(_),
+                  );
+                },
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _().PreviewImgInfo,
+                },
+                _.width,
+                " x ",
+                _.height,
+              ),
+              _.createElement(
+                "video",
+                {
+                  height: 120,
+                  controls: !1,
+                  autoPlay: !0,
+                  loop: !0,
+                  muted: !0,
+                },
+                _.createElement("source", {
+                  src: _.dataUrl,
+                }),
+              ),
+            )
+          : _.createElement(
+              "div",
+              {
+                className: _().PreviewImgCtn,
+                style: {
+                  backgroundImage: `url(${_.dataUrl})`,
+                },
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _().PreviewImgInfo,
+                },
+                _.width,
+                " x ",
+                _.height,
+              ),
+            );
+      }
+      function _(_) {
+        const { asset: _, closeModal: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            bAlertDialog: !0,
+            closeModal: __webpack_require__,
+          },
+          _.createElement(
+            "video",
+            {
+              controls: !0,
+              autoPlay: !0,
+              loop: !0,
+              muted: !0,
+            },
+            _.createElement("source", {
+              src: _.dataUrl,
+            }),
+          ),
         );
       }
     },

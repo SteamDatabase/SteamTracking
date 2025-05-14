@@ -2510,7 +2510,7 @@ GSteamCurators = {
 
         var $StatusAndDate = $J('<div/>', {'class': 'date_row'} );
 
-        var $Thumb = $J('<img/>', {'class': 'recommendation_thumb', src: 'https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png'});
+        var $Thumb = $J('<img/>', {'class': 'recommendation_thumb', src: 'https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png', 'alt': ''});
         var $Status = $J('<div/>', {'class': 'recommendation_status recommended'}).text( "Recommended" );
         var $Date = $J('<div/>', {'class': 'recommendation_date'}).text( new Date( rgRecommendation.time_recommended * 1000 ).toLocaleDateString( undefined, { month: 'long', day: 'numeric' } ) );
         $StatusAndDate.append( $Thumb );
@@ -2521,7 +2521,7 @@ GSteamCurators = {
 
         // Curator ID
 		var $CuratorIdentifier = $J('<div/>', {'class': 'curator_identifier'} );
-		$CuratorIdentifier.append( $J( '<img/>', {'class': 'curator_img', src: GetAvatarURL( curator.strAvatarHash, '_full' ) } ) );
+		$CuratorIdentifier.append( $J( '<img/>', {'class': 'curator_img', src: GetAvatarURL( curator.strAvatarHash, '_full' ), 'alt': '' } ) );
 		$CuratorIdentifier.append( $J( '<div/>', {'class': 'curator_name' } ).text( curator.name ) );
         $ItemContent.append( $CuratorIdentifier );
 

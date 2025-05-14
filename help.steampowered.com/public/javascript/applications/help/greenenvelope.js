@@ -2958,9 +2958,9 @@
         return !d.isSuccess || 1 !== d.data;
       }
       function ye(e, t, r) {
+        if (t == oe || null == t) return !1;
         if (!e) return !0;
         if (!e.is_enabled) return !1;
-        if (t == oe || null == t) return !1;
         if (!r) return !1;
         if (t == se) return !0;
         const i = e.enabled_features;

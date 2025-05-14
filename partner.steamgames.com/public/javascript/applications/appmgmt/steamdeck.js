@@ -24,7 +24,9 @@
             n = -1 != r ? e[r] : null;
           }
         }
-        return n ? o.createElement(t.default, { results: n }) : null;
+        return n
+          ? o.createElement(t.default, { results: n, bIncludeSteamOS: !0 })
+          : null;
       }
     },
     68797: (r, s, e) => {

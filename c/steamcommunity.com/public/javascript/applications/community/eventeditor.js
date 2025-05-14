@@ -415,6 +415,7 @@
         _ = "disclaimer_name_",
         _ = "medialayout_item_",
         _ = "mediacontent_title_",
+        _ = "mediacontent_sutitle_",
         _ = "mediacontent_desc_",
         _ = "meetsteam_",
         _ = _ + "title_",
@@ -866,6 +867,14 @@
                                 _,
                                 _[_],
                               ),
+                              (_ = _.localized_media_subtitle),
+                              _ &&
+                                Boolean(_._.Get(_, _)) &&
+                                _.SetLocalization(
+                                  _ + _.unique_id + "_" + _.unique_id,
+                                  _,
+                                  _[_],
+                                ),
                               (_ = _.localized_media_description),
                               _ &&
                                 Boolean(_._.Get(_, _)) &&
@@ -1651,6 +1660,19 @@
                                             _,
                                             _,
                                           )),
+                                          _.SetDirty(_._.jsondata_sales),
+                                          (_ = !0));
+                                      }
+                                    }
+                                    if (
+                                      _ ===
+                                      _ + _.unique_id + "_" + _.unique_id
+                                    ) {
+                                      const _ = _.localized_media_subtitle;
+                                      if (_ || (_ && Boolean(_._.Get(_, _)))) {
+                                        _._.Get(_, _) !== _ &&
+                                          ((_.localized_media_subtitle =
+                                            _._.Set(_ || [], _, _)),
                                           _.SetDirty(_._.jsondata_sales),
                                           (_ = !0));
                                       }
@@ -13313,7 +13335,7 @@
         async DoUpload() {
           const { section: _, lang: _ } = this.props;
           try {
-            const _ = [this.props.artworkType],
+            const _ = (0, _._)([this.props.artworkType]),
               _ = await this.m_clanImageUploader.UploadAllImages(
                 [_._.k_ESteamRealmGlobal],
                 _,
@@ -13340,7 +13362,7 @@
         async OnDropFiles(_) {
           if (_ && _.length > 0) {
             const { lang: _ } = this.props,
-              _ = [this.props.artworkType];
+              _ = (0, _._)([this.props.artworkType]);
             let _ = !0,
               _ = Array.from(_);
             for (let _ = 0; _ && _ < _.length; _++) {
@@ -13392,7 +13414,7 @@
               },
               async () => {
                 const { lang: _ } = this.props,
-                  _ = [this.props.artworkType];
+                  _ = (0, _._)([this.props.artworkType]);
                 try {
                   await this.m_clanImageUploader.AddExistingClanImage(_, _, _);
                 } catch (_) {
@@ -13429,7 +13451,7 @@
               }),
             );
           const { clanSteamID: _ } = this.props,
-            _ = [this.props.artworkType];
+            _ = (0, _._)([this.props.artworkType]);
           let _ = (0, _._)(this.m_clanImageUploader, "emailartupload_", _);
           return _.createElement(
             "div",

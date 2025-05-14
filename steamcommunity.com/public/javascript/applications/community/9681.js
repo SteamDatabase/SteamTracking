@@ -62,7 +62,7 @@
         p = n(28954),
         E = n(27666),
         g = n(71138),
-        _ = n(33737),
+        _ = n(68255),
         f = n(2805),
         v = n(36509),
         h = n(4869),
@@ -413,7 +413,7 @@
           l = m.useCallback(
             async (e) => {
               const o = t.GetClanSteamID(),
-                l = new p.V(o);
+                l = new p.VE(o);
               if (!(await l.AddImage(e, t.GetCurEditLanguage(), null)))
                 throw "Error processing image upload";
               const r = await l.UploadAllImages(
@@ -1444,7 +1444,7 @@
           n && m.createElement(_e.w3, null),
         );
       }
-      var Le = n(79570);
+      var Le = n(36969);
       n(86807);
       var qe = n(44483);
       const $e = m.memo(function (e) {
@@ -1810,7 +1810,7 @@
               { editModel: t, imageNode: _.image, videoNode: _.video },
               m.createElement(
                 "div",
-                { className: "" },
+                { className: tt().EventDescriptionContainer },
                 m.createElement($e, {
                   view: s,
                   schema: d.pm_schema,

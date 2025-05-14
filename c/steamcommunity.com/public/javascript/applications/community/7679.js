@@ -89,13 +89,6 @@
         mentionSearchMatch: "_2_0t_pDYqkDefMC0gDZV8G",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
-        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
-        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -1622,6 +1615,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -1631,7 +1625,19 @@
             nHeight: _,
             setImage: _,
           } = _,
-          _ = _.useMemo(() => ["sale_header"], []),
+          _ = _.useMemo(
+            () => [
+              {
+                sKey: "dummy",
+                fnGetLabelText: () => "unknown",
+                nWidth: _,
+                nHeight: _,
+                bEnforceDimensions: !1,
+                artworkType: "sale_header",
+              },
+            ],
+            [_, _],
+          ),
           _ = _.useMemo(
             () => ({
               width: _,
@@ -1753,9 +1759,7 @@
                           ) {
                             const _ = _[0],
                               _ = (0, _._)() + _.GetAccountID() + "/",
-                              _ = _._.GetExtensionStringForFileType(
-                                _.file_type,
-                              ),
+                              _ = (0, _._)(_.file_type),
                               _ = _ + _.image_hash + _,
                               _ = _ + _.thumbnail_hash + _,
                               _ = {
@@ -3694,189 +3698,6 @@
       };
       (0, _._)([_._], _.prototype, "OnLanguageChange", null),
         (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              region: {
-                xPosPct: 0,
-                yPosPct: 0,
-                widthPct:
-                  (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-                heightPct:
-                  (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-              },
-            });
-        }
-        async OnCrop() {
-          await this.props.uploadFile.CropImage(
-            (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
-            (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
-            (this.state.region.widthPct / 100) * this.props.uploadFile.width,
-            (this.state.region.heightPct / 100) * this.props.uploadFile.height,
-            this.GetDestWidth(),
-            this.GetDestHeight(),
-            this.props.fileType,
-          ),
-            this.props.closeModal();
-        }
-        UpdateCrop(_, _) {
-          this.setState({
-            region: _,
-          });
-        }
-        GetDestWidth() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.width : _._[_.type].width;
-        }
-        GetDestHeight() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.height : _._[_.type].height;
-        }
-        GetLargestBoxThatFits(_, _, _, _) {
-          let _ = _,
-            _ = (_ * _) / Math.max(_, 1);
-          return (
-            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
-        GetPreviewWindowStyle() {
-          const { region: _ } = this.state,
-            _ = this.GetLargestBoxThatFits(
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              500,
-              150,
-            ),
-            _ = _.width,
-            _ = _.height,
-            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
-            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
-            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
-            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
-          return {
-            width: _,
-            height: _,
-            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * _}% ${100 * _}%`,
-            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
-          };
-        }
-        render() {
-          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-            _ = this.GetLargestBoxThatFits(
-              this.props.uploadFile.width,
-              this.props.uploadFile.height,
-              800,
-              500,
-            );
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropImage,
-                  style: {
-                    width: _.width,
-                    height: _.height,
-                  },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
-                }),
-                _.createElement(_._, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnCrop", null),
-        (0, _._)([_._], _.prototype, "UpdateCrop", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

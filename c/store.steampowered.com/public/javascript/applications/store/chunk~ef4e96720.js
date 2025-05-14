@@ -591,14 +591,33 @@
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
         container: "_3efSO1GodU-7Xw80LAUHBa",
+        Media: "_2NeNe0b0Hfv84zxtiUPGOj",
         HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
         HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
         VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
         VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
+        Title: "PzQp3t3y61lCOWbGACZqy",
+        _: "_2XQ2s4PGGXTf-33SoML_Nn",
+        _: "_2BZyC-dmzrlUCPfHClu51J",
+        _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
       };
     },
-    chunkid: () => {},
+    chunkid: (module) => {
+      module.exports = {
+        TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
+        TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
+        TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
+        LeftCenter: "rPnDdGasAukKhy7-xBgcI",
+        Center: "_2zwc1G-Lg4dnBphmxeygHe",
+        RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
+        BottomLeft: "_1OQT1WvY7DQoN1F93TIInl",
+        BottomCenter: "_2157ASOvqcVmPZ7QZk_SDy",
+        BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+      };
+    },
     chunkid: () => {},
     chunkid: () => {},
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3957,6 +3976,7 @@
             imageURLOverride: __webpack_require__,
             onClick: _,
           } = _,
+          _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _] = (0, _._)(() =>
             _
@@ -3986,7 +4006,10 @@
                 _.createElement(
                   "div",
                   {
-                    className: _().OtherEvents_MainImageCtn,
+                    className: (0, _._)(
+                      _().OtherEvents_MainImageCtn,
+                      _ && _().MaskImages,
+                    ),
                   },
                   _.createElement("img", {
                     src: _,
@@ -18607,6 +18630,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = _.lazy(() =>
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, 20482)),
+      );
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)(),
@@ -18781,10 +18811,10 @@
       }
       function _(_) {
         const { eventModel: _, titleOverride: __webpack_require__ } = _,
-          [_, _] = (0, _._)(() => [_.GID, _.jsondata.sale_social_media_items]);
+          [_, _] = (0, _._)(() => [_.GID, _.jsondata.sale_social_media_items]),
+          [_, _, _] = (0, _._)();
         if (_.BHasTag("contenthub")) return null;
-        const _ = (0, _._)(_),
-          _ = (_) => (0, _._)(_, _);
+        const _ = (0, _._)(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -18806,21 +18836,7 @@
                 _().ShareButton,
                 "SocialShareButton",
               ),
-              onActivate: (_) => {
-                (0, _._)(
-                  _.createElement(_._, {
-                    eventLink: _,
-                    fnGetSharePageUrl: _,
-                    appid: _.appid,
-                    emoticonStore: _._,
-                    partnerEventStore: _._,
-                  }),
-                  (0, _._)(_),
-                  {
-                    strTitle: (0, _._)("#Button_Share"),
-                  },
-                );
-              },
+              onActivate: _,
             },
             _.createElement(_.SYj, {
               className: (0, _._)(_().ShareIcon, "SocialShareIcon"),
@@ -18844,6 +18860,27 @@
                 rgSocial: _,
               }),
           ),
+          _ &&
+            _.createElement(
+              _.Suspense,
+              {
+                fallback: null,
+              },
+              _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_, {
+                  closeModal: _,
+                  eventLink: _,
+                  fnGetSharePageUrl: (_) => (0, _._)(_, _),
+                  appid: _.appid,
+                  emoticonStore: _._,
+                  partnerEventStore: _._,
+                }),
+              ),
+            ),
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -23011,7 +23048,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      var _, _, _, _;
+      var _, _, _, _, _, _;
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)();
@@ -23191,6 +23228,16 @@
             (_[(_.k_TitleDescMedia = 3)] = "k_TitleDescMedia"),
             (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
             (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_Header1 = "h1"), (_.k_Header2 = "h2"), (_.k_Header3 = "h3");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_Left = "left"),
+            (_.k_Center = "center"),
+            (_.k_Right = "right"),
+            (_.k_Top = "top"),
+            (_.k_Bottom = "bottom");
         })(_ || (_ = {})),
         (function (_) {
           (_.k_TopLeft = "top_left"),
@@ -23538,18 +23585,12 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0;
+          _ = (0, _._)();
         return _.createElement(
           _._,
           {
@@ -23572,20 +23613,6 @@
               event: _,
               language: _,
             }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
             __webpack_require__?.media_container?.media_rows?.map((_, _) =>
               _.createElement(_, {
                 key: "templategrid_" + __webpack_require__.unique_id + "_" + _,
@@ -23619,7 +23646,7 @@
       }
       function _(_) {
         const { event: _, language: __webpack_require__, content: _ } = _,
-          [_, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             const _ = _._.GetELanguageFallback(__webpack_require__);
             return [
               _.display_order || _.k_HorizontalMediaFirst,
@@ -23634,10 +23661,35 @@
                   _.localized_media_title[_] ||
                   ""
                 : void 0,
+              _.localized_media_subtitle?.length > 0
+                ? _.localized_media_subtitle[__webpack_require__] ||
+                  _.localized_media_subtitle[_] ||
+                  ""
+                : void 0,
               _.localized_media_description?.length > 0
                 ? _.localized_media_description[__webpack_require__] ||
                   _.localized_media_description[_] ||
                   ""
+                : void 0,
+              _.eTitleDisplaySize,
+              _.title_alignment,
+              _.subtitle_alignment,
+              _.description_alignment,
+              _.media_horizontal_alignment,
+              _.media_vertical_alignment,
+              _.is_title_as_image && _.title_media?.localized_media.length > 0
+                ? _.title_media.localized_media[__webpack_require__] ||
+                  _.title_media.localized_media[_] ||
+                  {}
+                : void 0,
+              _.is_title_as_image && _.title_media?.localized_media.length > 0
+                ? _.title_media.media_type
+                : void 0,
+              _.is_title_as_image && _.title_media?.localized_media.length > 0
+                ? _.title_media.media_vertical_alignment
+                : void 0,
+              _.is_title_as_image && _.title_media?.localized_media.length > 0
+                ? _.title_media.media_horizontal_alignment
                 : void 0,
             ];
           });
@@ -23645,14 +23697,27 @@
           displayOrder: _,
           event: _,
           title: _,
+          subtitle: _,
           description: _,
           media: _,
           mediaType: _,
           language: __webpack_require__,
+          content: _,
+          eTitleDisplaySize: _,
+          titleAlign: _,
+          subtitleAlign: _,
+          descAlign: _,
+          mediaHAlign: _,
+          mediaVAlign: _,
+          titleMedia: _,
+          titleMediaType: _,
+          titleVAlign: _,
+          titleHAlign: _,
         });
       }
       function _(_) {
-        const { displayOrder: _ } = _;
+        const { displayOrder: _, content: __webpack_require__ } = _,
+          _ = (0, _._)();
         return _.createElement(
           "div",
           {
@@ -23663,6 +23728,7 @@
               [_().VerticalMediaFirst]: _ == _.k_MediaTitleDesc,
               [_().VerticalTextFirst]: _ == _.k_TitleDescMedia,
             }),
+            style: (0, _._)(__webpack_require__, _),
           },
           Boolean(
             !_ || _ == _.k_HorizontalMediaFirst || _ == _.k_MediaTitleDesc,
@@ -23680,139 +23746,334 @@
         const {
           media: _,
           mediaType: __webpack_require__,
-          title: _,
-          description: _,
-          event: _,
-          language: _,
+          mediaHAlign: _,
+          mediaVAlign: _,
         } = _;
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, {
-            media: _,
-            mediaType: __webpack_require__,
-          }),
           _.createElement(
             "div",
             {
-              className: _().Text,
+              className: _().Media,
             },
             _.createElement(_, {
-              title: _,
-            }),
-            _.createElement(_, {
-              event: _,
-              description: _,
-              language: _,
+              media: _,
+              mediaType: __webpack_require__,
+              mediaHAlign: _,
+              mediaVAlign: _,
             }),
           ),
+          _.createElement(_, {
+            ..._,
+          }),
         );
       }
       function _(_) {
         const {
           media: _,
           mediaType: __webpack_require__,
-          title: _,
-          description: _,
-          event: _,
-          language: _,
+          mediaHAlign: _,
+          mediaVAlign: _,
         } = _;
         return _.createElement(
           _.Fragment,
           null,
+          _.createElement(_, {
+            ..._,
+          }),
           _.createElement(
             "div",
             {
-              className: _().Text,
+              className: _().Media,
             },
             _.createElement(_, {
-              title: _,
-            }),
-            _.createElement(_, {
-              event: _,
-              description: _,
-              language: _,
+              media: _,
+              mediaType: __webpack_require__,
+              mediaHAlign: _,
+              mediaVAlign: _,
             }),
           ),
+        );
+      }
+      function _(_) {
+        const {
+          title: _,
+          subtitle: __webpack_require__,
+          description: _,
+          event: _,
+          language: _,
+          eTitleDisplaySize: _,
+          titleAlign: _,
+          subtitleAlign: _,
+          descAlign: _,
+          titleMedia: _,
+          titleMediaType: _,
+          titleHAlign: _,
+          titleVAlign: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().Text,
+          },
+          Boolean(_)
+            ? _.createElement(_, {
+                media: _,
+                mediaType: _,
+                mediaHAlign: _,
+                mediaVAlign: _,
+              })
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  event: _,
+                  className: _().TextFirstTitle,
+                  title: _,
+                  eTitleDisplaySize: _,
+                  eTextAlign: _,
+                  language: _,
+                }),
+                _.createElement(_, {
+                  event: _,
+                  className: _().TextFirstTitle,
+                  subtitle: __webpack_require__,
+                  eTextAlign: _,
+                  language: _,
+                }),
+              ),
           _.createElement(_, {
-            media: _,
-            mediaType: __webpack_require__,
+            event: _,
+            description: _,
+            eTextAlign: _,
+            language: _,
           }),
         );
       }
       function _(_) {
-        const { media: _, mediaType: __webpack_require__ } = _;
+        const {
+          media: _,
+          mediaType: __webpack_require__,
+          mediaHAlign: _,
+          mediaVAlign: _,
+        } = _;
         if (__webpack_require__ == _.k_MediaImage)
-          return _.createElement("img", {
-            src: _.image,
-          });
+          return _.image && 0 != _.image.trim().length
+            ? _.createElement("img", {
+                className: (0, _._)({
+                  [_().HorizLeft]: _ == _.k_Left,
+                  [_().HorizCenter]: !_ || _ == _.k_Center,
+                  [_().HorizRight]: _ == _.k_Right,
+                  [_().VertTop]: _ == _.k_Top,
+                  [_().VertCenter]: !_ || _ == _.k_Center,
+                  [_().VertBottom]: _ == _.k_Bottom,
+                }),
+                src: _.image,
+              })
+            : null;
         {
           const _ = [];
-          return (
-            _.video_webm_src &&
-              _.push({
-                sURL: _.video_webm_src,
-                sFormat: "video/webm",
-              }),
-            _.video_mp4_src &&
-              _.push({
-                sURL: _.video_mp4_src,
-                sFormat: "video/mp4",
-              }),
-            _.createElement(_._, {
-              video: {
-                sPoster: _.image,
-                rgVideoSources: _,
-              },
-              bAutoPlay: !0,
-              bControls: !1,
-              bLoop: !0,
-              bMuted: !0,
-            })
-          );
+          return (!_.video_webm_src && !_.video_mp4_src) ||
+            (0 == _.video_webm_src.trim().length &&
+              0 == _.video_mp4_src.trim().length)
+            ? null
+            : (_.video_webm_src &&
+                _.push({
+                  sURL: _.video_webm_src,
+                  sFormat: "video/webm",
+                }),
+              _.video_mp4_src &&
+                _.push({
+                  sURL: _.video_mp4_src,
+                  sFormat: "video/mp4",
+                }),
+              _.createElement(_._, {
+                video: {
+                  sPoster: _.image,
+                  rgVideoSources: _,
+                },
+                className: (0, _._)({
+                  [_().HorizLeft]: _ == _.k_Left,
+                  [_().HorizCenter]: !_ || _ == _.k_Center,
+                  [_().HorizRight]: _ == _.k_Right,
+                  [_().VertTop]: _ == _.k_Top,
+                  [_().VertCenter]: !_ || _ == _.k_Center,
+                  [_().VertBottom]: _ == _.k_Bottom,
+                }),
+                bAutoPlay: !0,
+                bControls: !1,
+                bLoop: !0,
+                bMuted: !0,
+              }));
         }
       }
       function _(_) {
-        const { title: _ } = _;
-        return _.createElement("div", null, _);
+        const {
+            event: _,
+            subtitle: __webpack_require__,
+            className: _,
+            language: _,
+            eTextAlign: _,
+          } = _,
+          _ = (0, _._)();
+        return __webpack_require__ && 0 != __webpack_require__.trim().length
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().Subtitle]: !0,
+                  [_]: !0,
+                  [_().Left]: !_ || _ == _.k_Left,
+                  [_().Center]: _ == _.k_Center,
+                  [_().Right]: _ == _.k_Right,
+                }),
+              },
+              _.createElement(_._, {
+                text: __webpack_require__,
+                partnerEventStore: _._,
+                showErrorInfo: _,
+                event: _,
+                languageOverride: _,
+              }),
+            )
+          : null;
       }
       function _(_) {
-        const { event: _, description: __webpack_require__, language: _ } = _,
+        const {
+            event: _,
+            title: __webpack_require__,
+            className: _,
+            eTitleDisplaySize: _,
+            language: _,
+            eTextAlign: _,
+          } = _,
           _ = (0, _._)();
-        return _.createElement(_._, {
-          text: __webpack_require__,
-          partnerEventStore: _._,
-          showErrorInfo: _,
-          event: _,
-          languageOverride: _,
-        });
+        return __webpack_require__ && 0 != __webpack_require__.trim().length
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().Title]: !0,
+                  [_]: !0,
+                  [_()._]: !_ || _ == _.k_Header1,
+                  [_()._]: _ == _.k_Header2,
+                  [_()._]: _ == _.k_Header3,
+                  [_().Left]: !_ || _ == _.k_Left,
+                  [_().Center]: _ == _.k_Center,
+                  [_().Right]: _ == _.k_Right,
+                  [_().TemplateMediaTitle]: !0,
+                }),
+              },
+              _.createElement(_._, {
+                text: __webpack_require__,
+                partnerEventStore: _._,
+                showErrorInfo: _,
+                event: _,
+                languageOverride: _,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            event: _,
+            description: __webpack_require__,
+            language: _,
+            eTextAlign: _,
+          } = _,
+          _ = (0, _._)();
+        return __webpack_require__ && 0 != __webpack_require__.trim().length
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().Left]: !_ || _ == _.k_Left,
+                  [_().Center]: _ == _.k_Center,
+                  [_().Right]: _ == _.k_Right,
+                }),
+              },
+              _.createElement(_._, {
+                text: __webpack_require__,
+                partnerEventStore: _._,
+                showErrorInfo: _,
+                event: _,
+                languageOverride: _,
+              }),
+            )
+          : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _, _, _, _] = (0, _._)(() => {
+          _ = ((0, _._)(), (0, _._)()),
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             const _ = _._.GetELanguageFallback(_);
             return [
-              __webpack_require__.localized_title?.length > 0
-                ? __webpack_require__.localized_title[_] ||
-                  __webpack_require__.localized_title[_] ||
-                  ""
-                : void 0,
-              __webpack_require__.localized_description?.length > 0
-                ? __webpack_require__.localized_description[_] ||
-                  __webpack_require__.localized_description[_] ||
-                  ""
-                : void 0,
+              __webpack_require__.media_overlay?.text_placement || _.k_TopLeft,
               __webpack_require__.media_overlay?.media_type,
               __webpack_require__.media_overlay?.localized_media?.length > 0
-                ? __webpack_require__.media_overlay.localized_media[_] ||
-                  __webpack_require__.media_overlay.localized_media[_] ||
+                ? __webpack_require__.media_overlay?.localized_media[_] ||
+                  __webpack_require__.media_overlay?.localized_media[_] ||
                   {}
                 : void 0,
-              __webpack_require__.media_overlay?.text_placement,
+              __webpack_require__.media_overlay?.localized_media_title?.length >
+              0
+                ? __webpack_require__.media_overlay?.localized_media_title[_] ||
+                  __webpack_require__.media_overlay?.localized_media_title[_] ||
+                  ""
+                : void 0,
+              __webpack_require__.media_overlay?.localized_media_subtitle
+                ?.length > 0
+                ? __webpack_require__.media_overlay?.localized_media_subtitle[
+                    _
+                  ] ||
+                  __webpack_require__.media_overlay?.localized_media_subtitle[
+                    _
+                  ] ||
+                  ""
+                : void 0,
+              __webpack_require__.media_overlay?.localized_media_description
+                ?.length > 0
+                ? __webpack_require__.media_overlay
+                    ?.localized_media_description[_] ||
+                  __webpack_require__.media_overlay
+                    ?.localized_media_description[_] ||
+                  ""
+                : void 0,
+              __webpack_require__.media_overlay?.eTitleDisplaySize,
+              __webpack_require__.media_overlay?.title_alignment,
+              __webpack_require__.media_overlay?.subtitle_alignment,
+              __webpack_require__.media_overlay?.description_alignment,
+              __webpack_require__.media_overlay?.media_horizontal_alignment,
+              __webpack_require__.media_overlay?.media_vertical_alignment,
+              __webpack_require__.media_overlay?.is_title_as_image &&
+              __webpack_require__.media_overlay?.title_media?.localized_media
+                .length > 0
+                ? __webpack_require__.media_overlay?.title_media
+                    .localized_media[_] ||
+                  __webpack_require__.media_overlay?.title_media
+                    .localized_media[_] ||
+                  {}
+                : void 0,
+              __webpack_require__.media_overlay?.is_title_as_image &&
+              __webpack_require__.media_overlay?.title_media?.localized_media
+                .length > 0
+                ? __webpack_require__.media_overlay?.title_media.media_type
+                : void 0,
+              __webpack_require__.media_overlay?.is_title_as_image &&
+              __webpack_require__.media_overlay?.title_media?.localized_media
+                .length > 0
+                ? __webpack_require__.media_overlay?.title_media
+                    .media_vertical_alignment
+                : void 0,
+              __webpack_require__.media_overlay?.is_title_as_image &&
+              __webpack_require__.media_overlay?.title_media?.localized_media
+                .length > 0
+                ? __webpack_require__.media_overlay?.title_media
+                    .media_horizontal_alignment
+                : void 0,
             ];
           });
         return _.createElement(
@@ -23837,25 +24098,47 @@
               event: _,
               language: _,
             }),
-            Boolean(_) && _.createElement("div", null, _),
-            Boolean(_) &&
+            _.createElement(
+              "div",
+              null,
               _.createElement(
                 "div",
                 {
-                  className: _().description,
+                  className: (0, _._)({
+                    [_().TopLeft]: !_ || _ == _.k_TopLeft,
+                    [_().TopCenter]: _ == _.k_TopCenter,
+                    [_().TopRight]: _ == _.k_TopRight,
+                    [_().LeftCenter]: _ == _.k_LeftCenter,
+                    [_().Center]: _ == _.k_Center,
+                    [_().RightCenter]: _ == _.k_RightCenter,
+                    [_().BottomLeft]: _ == _.k_BottomLeft,
+                    [_().BottomCenter]: _ == _.k_BottomCenter,
+                    [_().BottomRight]: _ == _.k_BottomRight,
+                  }),
                 },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
+                _.createElement(_, {
+                  title: _,
+                  titleAlign: _,
+                  subtitle: _,
+                  subtitleAlign: _,
+                  description: _,
+                  descAlign: _,
+                  eTitleDisplaySize: _,
+                  titleMedia: _,
+                  titleMediaType: _,
+                  titleVAlign: _,
+                  titleHAlign: _,
                   event: _,
-                  languageOverride: _,
+                  language: _,
                 }),
               ),
-            _.createElement(_, {
-              media: _,
-              mediaType: _,
-            }),
+              _.createElement(_, {
+                media: _,
+                mediaType: _,
+                mediaHAlign: _,
+                mediaVAlign: _,
+              }),
+            ),
           ),
         );
       }
@@ -24165,6 +24448,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -24192,6 +24476,29 @@
               outlineColor: _.border_color,
               outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
             }
+          : {};
+      }
+      function _(_, _) {
+        return _
+          ? _.disable_background && !_
+            ? {
+                paddingLeft: 0,
+                paddingRight: 0,
+              }
+            : _.background_gradient_bottom ||
+                _.background_gradient_top ||
+                _.background_repeat ||
+                _.border_color ||
+                _.border_width
+              ? {
+                  background: `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)`,
+                  backgroundRepeat: _.background_repeat,
+                  outlineStyle:
+                    _.border_color && _.border_width ? "solid" : void 0,
+                  outlineColor: _.border_color,
+                  outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+                }
+              : {}
           : {};
       }
     },
@@ -24375,6 +24682,22 @@
           }, [_]);
         (0, _._)(window, "blur", _), (0, _._)(window, "focus", _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
     },
   },
 ]);

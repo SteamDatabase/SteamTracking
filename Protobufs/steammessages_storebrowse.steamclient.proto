@@ -243,6 +243,7 @@ message StoreItem {
 		optional bool steamos_linux = 3;
 		optional .StoreItem.Platforms.VRSupport vr_support = 10;
 		optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 11 [default = k_ESteamDeckCompatibilityCategory_Unknown];
+		optional .ESteamOSCompatibilityCategory steam_os_compat_category = 12 [default = k_ESteamOSCompatibilityCategory_Unknown];
 	}
 
 	message PurchaseOption {

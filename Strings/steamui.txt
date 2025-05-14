@@ -3848,7 +3848,6 @@ ${LANGUAGE}
 +\n\nmedia_type
 +\n\rReservedRange
 +\n\rplaytime_days
-+\n\tStoreItem
 +\n\tlocations
 +\n\vDeviceWrite
 +\n\vmethod_type
@@ -4018,6 +4017,7 @@ ${LANGUAGE}
 ,\n\fvideo_encode
 ,\n\nerror_type
 ,\n\rreaction_type
+,\n\tStoreItem
 ,\n\t\t"functions": {\n\t\t\t"vkGetInstanceProcAddr": "%sGetInstanceProcAddr",\n\t\t\t"vkGetDeviceProcAddr": "%sGetDeviceProcAddr"\n\t\t}
 ,\n\tbroadcast
 ,\n\tfinger_up
@@ -4833,6 +4833,7 @@ ${LANGUAGE}
 .ESplitScalingScaler"w\n
 .EStartupMovieVariant
 .ESteamNotificationType
+.ESteamOSCompatibilityCategory
 .ESteamPipeOperationType
 .ESteamPipeWorkType
 .ESteamTVContentTemplate
@@ -5637,6 +5638,7 @@ ${LANGUAGE}
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI23ControllerBindingInfo_tE
+10CUtlMemoryI23SteamOSCompatTestResultE
 10CUtlMemoryI25SteamDeckCompatTestResultE
 10CUtlMemoryI26RemotePlayControllerSlot_tE
 10CUtlMemoryI28IdentifiedControllerConfig_tE
@@ -6085,6 +6087,7 @@ ${LANGUAGE}
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI23ControllerBindingInfo_t10CUtlMemoryIS0_EE
+10CUtlVectorI23SteamOSCompatTestResult10CUtlMemoryIS0_EE
 10CUtlVectorI25SteamDeckCompatTestResult10CUtlMemoryIS0_EE
 10CUtlVectorI26RemotePlayControllerSlot_t10CUtlMemoryIS0_EE
 10CUtlVectorI28IdentifiedControllerConfig_t10CUtlMemoryIS0_EE
@@ -15881,7 +15884,7 @@ MarkTokenCompromised
 MarketingMessageForUser
 MarketingMessages
 Maximum capture: %dx%d %.2f FPS
-May  9 2025 23:26:58
+May 13 2025 22:34:22
 Meetei_Mayek
 MemberListViewEntry
 MergeAR64Plane
@@ -19599,6 +19602,7 @@ V\n\rJoinVoiceChat
 V\n\rSearchMembers
 V\n\rSetBlurParams
 V\n\vCreateNonce
+V\nbg\f&Cex
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AppendParamToURL
 V_AppendSlash
@@ -28061,6 +28065,7 @@ m_vecShowControllerLayoutPreviewCallbacks
 m_vecShowMessageDialogCallbacks
 m_vecStartupErrorCallbacks
 m_vecSteamDeckCompatTestResults
+m_vecSteamOSCompatTestResults
 m_vecStoreCategories
 m_vecStoreTags
 m_vecStreamingSessions
@@ -30221,6 +30226,7 @@ steam_id
 steam_id_added
 steam_master_ipc_name_override
 steam_networking_share_ip
+steam_os_compat_category
 steam_os_underscan_enabled
 steam_os_underscan_level
 steam_oslog_submitter_helper_proxy_get_property
@@ -30316,6 +30322,7 @@ steamos_cec_wake_on_resume
 steamos_charge_limit
 steamos_charge_limit_devmode
 steamos_charge_limit_enabled
+steamos_compatibility
 steamos_magnifier_scale
 steamos_manual_gpu_clock_enabled
 steamos_manual_gpu_clock_hz
@@ -30323,6 +30330,7 @@ steamos_platform_performance_profile
 steamos_status_led_brightness
 steamos_tdp_limit
 steamos_tdp_limit_enabled
+steamos_tests
 steamos_wifi_debug
 steamos_wifi_force_wpa_supplicant
 steamosctl --version
@@ -31426,6 +31434,7 @@ vecOfficialTitles
 vecPlatforms
 vecRequested
 vecScreenShots
+vecSteamOSCompatTestResults
 vecUnachieved
 vecValidAutoUpdateRestrictHours
 vecValidDownloadRegions

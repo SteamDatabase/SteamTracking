@@ -213,6 +213,7 @@ html.tablet .dev_row {
 html.tablet .game_page_background,
 html.tablet .game_background_glow {
 	background-image: unset !important; /* Needed to override inline style */
+	min-width: unset !important; /* Needed to fix SteamOS game details page alignment */
 }
 
 /* move the 'read more' links to the center, use larger font, and hide the down arrow */
@@ -768,7 +769,7 @@ html.tablet #view_wishlist_btn.btnv6_blue_hoverfade {
 
 /* button row below wishlist */
 html.tablet .queue_actions_ctn {
-	padding: 0px 24px !important;
+	padding: 15px 24px 0px !important;
 }
 html.tablet .queue_actions_ctn p {
 	margin-bottom: 10px;

@@ -808,6 +808,11 @@ textarea.comment_input
 	background-position-y: 50px;
 	box-shadow: 0 0 5px #000;
 }
+@media (forced-colors: active) {
+	.friendplaytime_game {
+		background: Canvas;
+	}
+}
 
 .friendplaytime_game .friendplaytime_buttons {
 	visibility: hidden;

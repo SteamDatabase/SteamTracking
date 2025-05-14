@@ -10,6 +10,7 @@
         ChartPage: "_1A7NagdRz58_o8HPHMa3eE",
         Placeholder: "_3XI-CAps_XOBY4D5L-KYLK",
         GhostShine: "_1NHk0m80j5yOZhsPNvNh2t",
+        NoticeBox: "Wz_vOPow_bEtEb4cgCPEi",
         ChartTable: "_37mz_pxwuHG8BN4GUhxjz_",
         ColumnHeaders: "WgKS9JzWbUHUdUaxAkVyq",
         HoverCell: "_2-85msRUZlh9lpwsunR7GZ",
@@ -149,6 +150,7 @@
         ChartPage: "_2txZN03Rksb3SHqYeOt75B",
         Placeholder: "_13Wagx1HQxyCivWU2ZGU5o",
         GhostShine: "_3n0N_c3fIHBhVJ2Cye5zs9",
+        NoticeBox: "_14G9est1e3x547GzVNbIpr",
         ChartTable: "_3arZn0BMPzyhcYNADe193m",
         ColumnHeaders: "_3eKiI5Uhn6pLBSBqg3LbBz",
         HoverCell: "_3JiuzqNZfzcK2EB06XAMv8",
@@ -2111,7 +2113,7 @@
         let m = T.useMemo(() => ({ content_descriptors_excluded: c }), [c]);
         return T.createElement(
           "div",
-          { className: Me().SteamChartsShell },
+          { className: (0, me.A)(Me().SteamChartsShell, "SteamChartsShell") },
           je.createPortal(
             T.createElement(
               "div",
@@ -2250,7 +2252,7 @@
               T.createElement(
                 "span",
                 { className: (0, me.A)(Me().MenuItemIcon) },
-                T.createElement(Ze.VvS, null),
+                T.createElement(Ze.VvS, { color: "#C3D3D8" }),
               ),
               (0, Y.$z)(t, { timeZone: "UTC" }),
             ),
@@ -2285,7 +2287,7 @@
             T.createElement(
               "span",
               { className: (0, me.A)(Me().MenuItemIcon) },
-              T.createElement(Ze.VvS, null),
+              T.createElement(Ze.VvS, { color: "#C3D3D8" }),
             ),
             (0, te.CC)(t),
           );
@@ -2315,7 +2317,7 @@
             T.createElement(
               "span",
               { className: (0, me.A)(Me().MenuItemIcon) },
-              T.createElement(Ze.VvS, null),
+              T.createElement(Ze.VvS, { color: "#C3D3D8" }),
             ),
             (0, te.oX)(t),
           );
@@ -3414,7 +3416,7 @@
           a.e(4539),
           a.e(1307),
           a.e(7276),
-          a.e(6525),
+          a.e(6456),
           a.e(2797),
           a.e(7436),
           a.e(7403),
@@ -3429,7 +3431,6 @@
           a.e(7576),
           a.e(5630),
           a.e(7368),
-          a.e(7198),
           a.e(5053),
           a.e(6956),
           a.e(3093),
@@ -3440,9 +3441,9 @@
           a.e(5329),
           a.e(5090),
           a.e(7854),
-          a.e(3191),
+          a.e(6288),
           a.e(6855),
-        ]).then(a.bind(a, 44587)),
+        ]).then(a.bind(a, 84428)),
       );
       function qt(e) {
         const { salePagename: t } = e;
@@ -4059,7 +4060,7 @@
             id: a.GetAppID() || a.GetID(),
             type: (0, ct._4)(a?.GetStoreItemType(), a?.GetAppType()),
           },
-          s = (0, ia.Wm)(a.GetPlatforms().steam_deck_compat_category);
+          s = (0, ia.z5)(a.GetPlatforms().steam_deck_compat_category);
         return T.createElement(
           T.Fragment,
           null,
@@ -4117,12 +4118,12 @@
         Promise.all([
           a.e(1307),
           a.e(2298),
+          a.e(6456),
           a.e(1006),
           a.e(4336),
           a.e(7576),
           a.e(5630),
           a.e(7368),
-          a.e(7198),
           a.e(5053),
           a.e(6956),
           a.e(3093),
@@ -4132,6 +4133,7 @@
           a.e(970),
           a.e(5329),
           a.e(5090),
+          a.e(6288),
           a.e(7278),
         ]).then(a.bind(a, 578)),
       );

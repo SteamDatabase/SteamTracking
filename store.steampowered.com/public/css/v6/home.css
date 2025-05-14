@@ -1489,6 +1489,15 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	margin-bottom: 10px;
 }
 
+
+@media (forced-colors: active) {
+	.home_content_item {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+		box-sizing: border-box;
+	}
+}
+
 .home_content a.home_content_item img,
 .home_content .item img  {
 	width: 100%;
@@ -2804,6 +2813,11 @@ body.v6 {
 	background: url( '/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
 	/* background: #1b2838; */
 }
+@media (forced-colors: active) {
+	body.v6 {
+		background: Canvas;
+	}
+}
 
 .friends_recently_purchased .home_smallcaps a.home_smallcap .friends_container img {
 	width: 32px;
@@ -2822,6 +2836,13 @@ body.v6 {
 
 .store_capsule {
 	box-shadow: 0 0 5px #000;
+}
+
+@media (forced-colors: active) {
+	.store_capsule {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
 }
 
 .recently_updated .store_capsule.ds_flagged:not(.ds_wishlist) .capsule > img {
@@ -3093,6 +3114,12 @@ background: -webkit-linear-gradient( -65deg, #304761 5%,#30739f 95%);
 	width: 228px;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 }
+@media (forced-colors: active) {
+	.friends_recently_purchased .store_capsule {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
+}
 
 .friends_recently_purchased .store_capsule .capsule_header {
 	height: 107px;
@@ -3156,6 +3183,12 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	background-position-y: 98px;
 
+}
+@media (forced-colors: active) {
+	.recently_updated .store_capsule {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
 }
 
 .recently_updated .recently_updated_desc, .recently_updated .recently_updated_announcement_link {
@@ -4021,6 +4054,12 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 	box-shadow: 0 0 4px #000;
 }
 
+@media (forced-colors:active) {
+	.big_button {
+		border: 1px solid ButtonBorder;
+	}
+}
+
 .big_button:hover {
 	background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
 	color: #FFFFFF;
@@ -4770,6 +4809,12 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 	box-shadow: 0 0 5px #000000;
 	background-size: cover;
 }
+@media (forced-colors: active) {
+	.carousel_container.spotlight .carousel_items > * .store_capsule {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
+}
 
 .carousel_container.spotlight .carousel_items > * .store_capsule.daily_deal {
 background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);
@@ -4907,6 +4952,12 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	background-size: cover;
 }
+@media (forced-colors: active) {
+	.spotlight_scroll_ctn {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
+}
 
 body.v6 h2 .header_inline {
 	text-transform: none;
@@ -4920,6 +4971,12 @@ body.v6 h2 .header_inline {
 	min-height: 130px;
     box-sizing: border-box;
 	background-size: cover;
+}
+@media (forced-colors: active) {
+	.spotlight_content {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
 }
 
 .spotlight_block .spotlight_content>h2, .spotlight_body {
@@ -5135,6 +5192,12 @@ body.v6 .discovery_queue_ctn h2 {
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	height: 390px;
 	box-shadow: 0 0 5px #000000;
+}
+@media (forced-colors: active) {
+	.home_area_spotlight {
+		background: Canvas;
+		border: 1px solid ButtonBorder;
+	}
 }
 
 /* Daily deal */
@@ -5604,21 +5667,21 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
     box-sizing: border-box;
     padding-top: 27px;
     text-align: center;
-    background: linear-gradient(45deg, hsl(199deg 89% 41% / 44%), hsl(208deg 81% 18% / 83%), hsl(199deg 89% 28% / 45%) );
-    border-radius: 2px;
+	background: linear-gradient(45deg, hsl(194.37deg 12% 70% / 44%), hsl(194.37deg 12% 40% / 83%), hsl(208.21deg 12% 94% / 45%));
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	backdrop-filter: blur(6px);
 }
 .top_new_releases_banner_ctn a:hover {
-    background: linear-gradient(45deg, rgba(36, 130, 174, 0.54), rgba(24, 89, 119, 0.85) );
+	background: linear-gradient(45deg, hsl(194.37deg 12% 90% / 44%), hsl(194.37deg 12% 60% / 83%), hsl(208.21deg 12% 94% / 45%));
 }
 
 .top_new_releases_banner_ctn .title {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
-    text-shadow: 3px 4px 0px black;
+    text-shadow: 3px 4px 0px #00000038;
 }
 
 .top_new_releases_banner_ctn .dateline {
@@ -5626,7 +5689,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #3cc3f1;
+    color: #fff;
 }
 
 .top_new_releases_banner_click

@@ -3999,7 +3999,6 @@ $steammessages_parental_objects.proto"
 +\n\nmedia_type
 +\n\rReservedRange
 +\n\rplaytime_days
-+\n\tStoreItem
 +\n\tlocations
 +\n\vDeviceWrite
 +\n\vmethod_type
@@ -4154,6 +4153,7 @@ $steammessages_parental_objects.proto"
 ,\n\fvideo_decode
 ,\n\fvideo_encode
 ,\n\rreaction_type
+,\n\tStoreItem
 ,\n\tbroadcast
 ,\n\tfinger_up
 ,\n\tin_queues
@@ -4955,6 +4955,7 @@ $steammessages_parental_objects.proto"
 .EStartupMovieVariant
 .ESteamNetworkingSocketsCipher"'\n
 .ESteamNotificationType
+.ESteamOSCompatibilityCategory
 .ESteamPipeOperationType
 .ESteamPipeWorkType
 .ESteamTVContentTemplate
@@ -14565,6 +14566,7 @@ BLoggedOn()
 BMicroTxnRefundable
 BMicroTxnRequiresCachedPmtMethod
 BMountLibraryFolder
+BNeedsProtonVoiceFiles
 BNeedsSSANextSteamLogon
 BNeedsUnlockH264
 BNetInMainThread()
@@ -31552,7 +31554,7 @@ gettimeofday
 getting staging path
 getuid
 getwc
-ggenv
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -34369,8 +34371,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2524
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3934
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2530
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3940
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
@@ -37675,6 +37677,7 @@ requires_h264
 requires_reservation
 requires_shipping
 requires_system_restart
+requires_voice_files
 rereport_time_threshold
 res binder
 res master
@@ -38373,6 +38376,7 @@ steam_id_target
 steam_id_user_invited
 steam_marker
 steam_master_ipc_name_override
+steam_os_compat_category
 steam_pipeline_cache_whitelist.*
 steam_pipeline_cache_whitelist.foz
 steam_play_debug

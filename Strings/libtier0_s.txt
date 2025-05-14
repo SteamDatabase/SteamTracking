@@ -434,7 +434,6 @@ VProfInternalGetProfileForCurrentThread
 ValidateSpew
 Warning
 WriteMiniDump
-\tLT\vVPvP
 _DMsg
 _ITM_RU1
 _ITM_RU4

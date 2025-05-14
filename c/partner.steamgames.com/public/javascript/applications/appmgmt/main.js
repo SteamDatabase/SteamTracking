@@ -678,6 +678,8 @@
         SteamDeckCompatPlayable: "mPD42Bwx3VAs0qw9wubf2",
         SteamDeckCompatUnsupported: "_2LAaxz6RtHXrJJj9NzCNL4",
         SteamDeckCompatUnknown: "xBqU_GerRwzHIs8N9ratU",
+        SteamOSCompatInformation: "_1Gr-Q9sFTdr7XhK5-j_qux",
+        SteamOSCompatCompatible: "_1IeRz_QzfsACNiXS4gXHIT",
       };
     },
     chunkid: (module) => {
@@ -1757,7 +1759,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 11435)),
+          ]).then(__webpack_require__.bind(__webpack_require__, 39682)),
         ),
         _ = _.lazy(() =>
           Promise.all([
@@ -1788,7 +1790,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 45568)),
+          ]).then(__webpack_require__.bind(__webpack_require__, 16590)),
         ),
         _ = _.lazy(() =>
           Promise.all([
@@ -2303,6 +2305,7 @@
                                       "deckcompatibility",
                                       "application_config",
                                     ),
+                                    bIncludeSteamOS: !0,
                                   }),
                               },
                             }),
@@ -12470,6 +12473,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  steam_os_compat_category: {
+                    _: 12,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -17615,6 +17623,8 @@
               "k_EAccountFlagLimitedUserForce"),
             (_[(_.k_EAccountFlagEmailValidated = 16384)] =
               "k_EAccountFlagEmailValidated"),
+            (_[(_.k_EAccountFlagValveEmail = 32768)] =
+              "k_EAccountFlagValveEmail"),
             (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
               "k_EAccountFlagForcePasswordChange"),
             (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
@@ -25931,18 +25941,20 @@
       }
       function _(_) {
         const {
-          stylesheet: _,
-          pages: __webpack_require__,
-          iActivePage: _,
-          onPageSelected: _,
-          PageListItemComponent: _ = _,
-          PageListSeparatorComponent: _ = _,
-        } = _;
+            stylesheet: _,
+            pages: __webpack_require__,
+            iActivePage: _,
+            onPageSelected: _,
+            PageListItemComponent: _ = _,
+            PageListSeparatorComponent: _ = _,
+          } = _,
+          _ = _.useContext(_);
         return __webpack_require__.map((_, _) => {
           const _ = _ === _;
           if ("separator" === _) {
             const _ = _ === _ + 1 || _ === _ - 1;
             return _.createElement(_, {
+              role: "separator",
               key: _,
               bTransparent: _,
             });
@@ -25965,6 +25977,10 @@
               title: _.title,
               icon: _.icon,
               active: _,
+              _: _ + _.identifier,
+              role: "tab",
+              "aria-selected": _,
+              "aria-controls": _ + _.identifier + "_Content",
             });
           }
         });
@@ -25983,6 +25999,7 @@
           {
             className: _,
             onClick: _,
+            ..._,
           },
           __webpack_require__
             ? _.createElement(
@@ -26006,6 +26023,7 @@
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
         const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
+          _ = _.useContext(_),
           _ = __webpack_require__?.padding ?? "standard";
         return _.createElement(
           _._,
@@ -26017,6 +26035,9 @@
               "none" == _ && _?.NoPadding,
             ),
             refElem: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + __webpack_require__?.identifier,
+            _: _ + __webpack_require__?.identifier + "_Content",
           },
           __webpack_require__?.header,
           !__webpack_require__?.hideTitle &&
@@ -26025,177 +26046,190 @@
         );
       });
       function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
         return _.createElement("div", {
-          className: (0, _._)(_().PageListSeparator, {
-            [_().Transparent]: _.bTransparent,
+          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+            [_().Transparent]: _,
           }),
+          ..._,
         });
       }
-      const _ = _.forwardRef(function (_, _) {
-        const {
-            stylesheet: __webpack_require__ = _(),
-            pages: _,
-            onPageRequested: _,
-          } = _,
-          _ = null == _.page,
-          [_, _] = _.useState(() =>
-            void 0 === _.startingPage
-              ? -1
-              : _.findIndex(
-                  (_) =>
-                    "object" == typeof _ && _.identifier === _.startingPage,
-                ),
-          );
-        let _ = _;
-        _ ||
-          (_ = _.findIndex(
-            (_) => "object" == typeof _ && _.identifier === _.page,
-          )),
-          (_ < 0 || _ >= _.length) && (_ = 0);
-        let _ = null;
-        "object" == typeof _[_] && (_ = _[_]);
-        const _ = _.useRef(null),
-          _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
-          [_, _] = _.useState(!1),
-          _ = _ ? _ : void 0,
-          _ = _.useCallback((_) => {
-            _ && _(!0);
-          }, []),
-          _ = _.useCallback(
-            (_, _) => {
-              _(!0),
-                _._.PlayNavSound(_._.PagedNavigation),
-                _ && _(_.identifier),
-                _.click ? _.click() : _ && _(_);
-            },
-            [_, _],
-          ),
-          _ = _.useRef(null),
-          _ = _.showTitle ?? !0,
-          _ = (0, _._)(
-            "DialogContentTransition",
-            __webpack_require__.PagedSettingDialog_ContentColumn,
-          );
-        _.useEffect(() => {
-          _.bAutoFocusPageContent && _.current?.TakeFocus();
-        }, []);
-        const { refForPageList: _, refForPage: _ } = (function () {
-          const _ = _.useMemo(() => new _(), []);
-          _.useEffect(
-            () => (
-              _.Get().m_setPagedSettingsInstances.add(_),
-              () => {
-                _.Get().m_setPagedSettingsInstances.delete(_);
-              }
-            ),
-            [_],
-          );
-          const _ = _.useCallback(
-              (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-              [_],
-            ),
+      const _ = _.createContext(void 0),
+        _ = _.forwardRef(function (_, _) {
+          const {
+              stylesheet: __webpack_require__ = _(),
+              pages: _,
+              onPageRequested: _,
+            } = _,
+            _ = _.useId(),
+            _ = null == _.page,
+            [_, _] = _.useState(() =>
+              void 0 === _.startingPage
+                ? -1
+                : _.findIndex(
+                    (_) =>
+                      "object" == typeof _ && _.identifier === _.startingPage,
+                  ),
+            );
+          let _ = _;
+          _ ||
+            (_ = _.findIndex(
+              (_) => "object" == typeof _ && _.identifier === _.page,
+            )),
+            (_ < 0 || _ >= _.length) && (_ = 0);
+          let _ = null;
+          "object" == typeof _[_] && (_ = _[_]);
+          const _ = _.useRef(null),
+            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
+            [_, _] = _.useState(!1),
+            _ = _ ? _ : void 0,
+            _ = _.useCallback((_) => {
+              _ && _(!0);
+            }, []),
             _ = _.useCallback(
-              (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-              [_],
-            ),
-            _ = (0, _._)("scroll", _),
-            _ = (0, _._)("scroll", _),
-            _ = _.useCallback(
-              (_) => (_.m_flPageListScrollTop = _?.scrollTop ?? 0),
-              [_],
-            ),
-            _ = _.useCallback(
-              (_) => (_.m_flPageScrollTop = _?.scrollTop ?? 0),
-              [_],
-            ),
-            _ = (0, _._)(_, _),
-            _ = (0, _._)(_, _);
-          return {
-            refForPageList: _,
-            refForPage: _,
-          };
-        })();
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              __webpack_require__.PagedSettingsDialog,
-              _.className,
-            ),
-            ref: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                __webpack_require__.PagedSettingsDialog_PageListColumn,
-                _.hideList && _().Hidden,
-                "PageListColumn",
-              ),
-              navRef: _,
-              onButtonDown: (_) => {
-                _.detail.button == _._._ &&
-                  _.current?.TakeFocus(_.detail.button);
+              (_, _) => {
+                _(!0),
+                  _._.PlayNavSound(_._.PagedNavigation),
+                  _ && _(_.identifier),
+                  _.click ? _.click() : _ && _(_);
               },
-              onFocusWithin: _,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: __webpack_require__.PagedSettingsDialog_Title,
-                },
-                _.title,
+              [_, _],
+            ),
+            _ = _.useRef(null),
+            _ = _.showTitle ?? !0,
+            _ = (0, _._)(
+              "DialogContentTransition",
+              __webpack_require__.PagedSettingDialog_ContentColumn,
+            );
+          _.useEffect(() => {
+            _.bAutoFocusPageContent && _.current?.TakeFocus();
+          }, []);
+          const { refForPageList: _, refForPage: _ } = (function () {
+            const _ = _.useMemo(() => new _(), []);
+            _.useEffect(
+              () => (
+                _.Get().m_setPagedSettingsInstances.add(_),
+                () => {
+                  _.Get().m_setPagedSettingsInstances.delete(_);
+                }
               ),
-            _.topControls && _.createElement("div", null, _.topControls),
+              [_],
+            );
+            const _ = _.useCallback(
+                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = (0, _._)("scroll", _),
+              _ = (0, _._)("scroll", _),
+              _ = _.useCallback(
+                (_) => (_.m_flPageListScrollTop = _?.scrollTop ?? 0),
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => (_.m_flPageScrollTop = _?.scrollTop ?? 0),
+                [_],
+              ),
+              _ = (0, _._)(_, _),
+              _ = (0, _._)(_, _);
+            return {
+              refForPageList: _,
+              refForPage: _,
+            };
+          })();
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
             _.createElement(
               _._,
               {
                 className: (0, _._)(
-                  __webpack_require__.PagedSettingsDialog_PageList,
-                  _.disablePageListScrolling &&
-                    __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                  _ &&
-                    __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                  _.bNoHeaderPadding &&
-                    __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                  __webpack_require__.PagedSettingsDialog,
+                  _.className,
                 ),
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
                 ref: _,
               },
-              _.createElement(_, {
-                stylesheet: __webpack_require__,
-                pages: _,
-                iActivePage: _,
-                onPageSelected: _,
-                PageListItemComponent: _.PageListItemComponent,
-                PageListSeparatorComponent: _.PageListSeparatorComponent,
-              }),
+              _.createElement(
+                _._,
+                {
+                  className: (0, _._)(
+                    __webpack_require__.PagedSettingsDialog_PageListColumn,
+                    _.hideList && _().Hidden,
+                    "PageListColumn",
+                  ),
+                  navRef: _,
+                  onButtonDown: (_) => {
+                    _.detail.button == _._._ &&
+                      _.current?.TakeFocus(_.detail.button);
+                  },
+                  onFocusWithin: _,
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: __webpack_require__.PagedSettingsDialog_Title,
+                    },
+                    _.title,
+                  ),
+                _.topControls && _.createElement("div", null, _.topControls),
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(
+                      __webpack_require__.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ &&
+                        __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                  },
+                  _.createElement(_, {
+                    stylesheet: __webpack_require__,
+                    pages: _,
+                    iActivePage: _,
+                    onPageSelected: _,
+                    PageListItemComponent: _.PageListItemComponent,
+                    PageListSeparatorComponent: _.PageListSeparatorComponent,
+                  }),
+                ),
+                _.bottomControls &&
+                  _.createElement("div", null, _.bottomControls),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _,
+                  onCancelButton: _,
+                  navRef: _,
+                },
+                _.toggleHideList &&
+                  _.createElement(_, {
+                    hideList: _.hideList,
+                    toggleHideList: _.toggleHideList,
+                  }),
+                _.renderPageContent
+                  ? _.renderPageContent(_, _, _)
+                  : _.createElement(_, {
+                      ref: _,
+                      activePage: _,
+                      stylesheet: __webpack_require__,
+                    }),
+              ),
             ),
-            _.bottomControls && _.createElement("div", null, _.bottomControls),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _,
-              onCancelButton: _,
-              navRef: _,
-            },
-            _.toggleHideList &&
-              _.createElement(_, {
-                hideList: _.hideList,
-                toggleHideList: _.toggleHideList,
-              }),
-            _.renderPageContent
-              ? _.renderPageContent(_, _, _)
-              : _.createElement(_, {
-                  ref: _,
-                  activePage: _,
-                  stylesheet: __webpack_require__,
-                }),
-          ),
-        );
-      });
+          );
+        });
       const _ = _.createContext(!1);
       _.memo(function (_) {
         const {
@@ -26205,6 +26239,7 @@
             PageComponent: _,
             stylesheet: _,
           } = _,
+          _ = _.useContext(_),
           _ = _.useRef(!1);
         if (!_ && !_.current) return null;
         _.current = !0;
@@ -26223,6 +26258,9 @@
             style: _,
             activePage: _,
             stylesheet: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + _.identifier,
+            _: _ + _.identifier + "_Content",
           }),
         );
       });
@@ -26417,7 +26455,7 @@
             focusable: _,
             noFocusRing: !0,
             scrollIntoViewWhenChildFocused: !0,
-            onActivate: (_) => _.onClick?.(_),
+            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
             ref: _,
             onMouseDown: _ ? void 0 : _,
             ..._,
@@ -26786,8 +26824,10 @@
         );
       }
       function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
         return _.createElement("div", {
-          className: _().Separator,
+          className: (0, _._)(__webpack_require__, _().Separator),
+          ..._,
         });
       }
       _.forwardRef(function (_, _) {
@@ -28218,6 +28258,8 @@
             ref: _,
             navRef: _,
             focusable: _,
+            role: "checkbox",
+            "aria-checked": !!__webpack_require__,
           },
           _.createElement("div", {
             className: _().ToggleRail,
@@ -28702,6 +28744,7 @@
         pcV: () => _,
         qOW: () => _,
         qzO: () => _,
+        r7n: () => _,
         rxV: () => _,
         sED: () => _,
         tI4: () => _,
@@ -29383,13 +29426,27 @@
         return _.createElement(
           "svg",
           {
-            xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
             fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
             ..._,
           },
+          _.createElement("rect", {
+            _: "5",
+            _: "8",
+            width: "26",
+            height: "4",
+            fill: "currentColor",
+          }),
+          _.createElement("rect", {
+            _: "13",
+            _: "3",
+            width: "10",
+            height: "3",
+            fill: "currentColor",
+          }),
           _.createElement("path", {
-            _: "M7 14H29L27 32H9L7 14ZM24 6L22 2H14L12 6H4V10H32V6H24Z",
+            _: "M27 32.2952H9L7 14.2952H29L27 32.2952ZM12 29.2952H14V17.2952H12V29.2952ZM17 17.2952V29.2952H19V17.2952H17ZM22 29.2952H24V17.2952H22V29.2952Z",
             fill: "currentColor",
           }),
         );
@@ -29771,6 +29828,30 @@
               _: "M13.948 16.215V9h3.67v17.598h-3.67v-7.215H5.953v7.215H2.258V9h3.695v7.215h7.995ZM33.198 9v3.143h-7.692v4.122a5.22 5.22 0 0 1 1.634-.653c.62-.151 1.24-.226 1.86-.226 1.575 0 2.832.452 3.77 1.357.956.888 1.434 2.187 1.434 3.897 0 1.273-.302 2.388-.905 3.343-.587.956-1.45 1.701-2.59 2.238-1.122.52-2.455.779-3.997.779-1.14 0-2.204-.15-3.192-.453-.99-.301-1.81-.729-2.464-1.282l1.307-2.815a7.513 7.513 0 0 0 4.299 1.307c1.19 0 2.112-.26 2.765-.78.654-.519.98-1.265.98-2.237 0-.854-.25-1.508-.753-1.96-.486-.453-1.157-.68-2.012-.68-.636 0-1.223.11-1.76.327a5.755 5.755 0 0 0-1.583.93l-2.338-1.282V9h11.237Z",
             }),
           ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            className: "SVGIcon_Button SVGIcon_TextH5",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
+            fill: "currentColor",
+          }),
+          _.createElement("rect", {
+            _: "4",
+            _: "19",
+            width: "16",
+            height: "2",
+            fill: "currentColor",
+          }),
         );
       }
       function _() {
@@ -31955,6 +32036,7 @@
         YNO: () => _,
         ZPc: () => _,
         ZWw: () => _,
+        ZjT: () => _,
         ZnA: () => _,
         _VW: () => _,
         aVR: () => _,
@@ -31962,6 +32044,7 @@
         apU: () => _,
         bKN: () => _,
         bPr: () => _,
+        bcZ: () => _,
         bfp: () => _,
         ccb: () => _,
         dJT: () => _,
@@ -33940,6 +34023,52 @@
             clipRule: "evenodd",
             _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
             fill: "white",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            className: (0, _._)(
+              _().SteamDeckCompatIcon,
+              _().SteamOSCompatCompatible,
+              _,
+            ),
+            ...__webpack_require__,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            className: (0, _._)(
+              _().SteamDeckCompatIcon,
+              _().SteamOSCompatInformation,
+              _,
+            ),
+            ...__webpack_require__,
+            viewBox: "0 0 48 48",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd",
+            _: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
+            fill: "currentColor",
           }),
         );
       }

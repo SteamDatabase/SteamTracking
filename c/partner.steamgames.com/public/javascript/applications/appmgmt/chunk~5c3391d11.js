@@ -27,6 +27,7 @@
         Verified: "ewmg-iZH8r2ghippaDEbq",
         Playable: "_1n8vatQzJB_Xptbs8lnm9n",
         Unsupported: "_2Q0ld2nJ3334gwZJ4LVzPW",
+        Compatible: "_2XeA02URQukjyKp0fh__XL",
         CompatibilityDetailRatingDescription: "_3456EX4aC94XtIz6d_Qhsl",
         CompatibilityDetailsSeparator: "_2mwbdnqm9Lk1-Bzs8FIdCU",
         CompatibilityDetailsResultIcon: "-L3Xub7NtXchyErJuHnKk",
@@ -39,6 +40,8 @@
         DeveloperComments_Icon: "_2R6eCuptMWK0ZkTe0GeqEi",
         DeveloperComments_LinkNoIcon: "_1zjwW1q8ccnB76k2rPv9oM",
         DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
+        CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
+        pillContent: "_1M5TZawv5Y4CRNXAISchG2",
       };
     },
     chunkid: (module) => {
@@ -54,9 +57,24 @@
         ChordSummary: "_2NB_hM-9uJkdXPKC3tdS7-",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
+        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
+        Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
+        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -65,13 +83,11 @@
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       _.createContext({
-        bShowCompatInfo: !1,
+        bForceShowCompatInfo: !1,
+        bSteamDeck: !1,
       });
       const _ = (_) => {
-          const _ =
-            ((__webpack_require__ = _.category),
-            _[__webpack_require__] || _.WX$);
-          var _;
+          const _ = _(_.category);
           return _.createElement(
             "div",
             {
@@ -88,7 +104,18 @@
           2: _.aVR,
           3: _.o5Q,
           0: _.WX$,
+        },
+        _ = {
+          0: _.WX$,
+          1: _.jIP,
+          2: _.ZjT,
         };
+      function _(_) {
+        return _[_] || _.WX$;
+      }
+      function _(_) {
+        return _[_] || _.WX$;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -291,6 +318,8 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -524,6 +553,23 @@
         }
       }
       function _(_) {
+        const { category: _ } = _;
+        switch (_) {
+          case 2:
+            return _.createElement(_.ZjT, {
+              className: _().CategoryIcon,
+            });
+          case 1:
+            return _.createElement(_.jIP, {
+              className: _().CategoryIcon,
+            });
+          case 0:
+            return _.createElement(_.WX$, {
+              className: _().CategoryIcon,
+            });
+        }
+      }
+      function _(_) {
         const {
           category: _,
           appName: __webpack_require__,
@@ -579,6 +625,77 @@
                 _,
               )
             : (0, _._)("#SteamDeckVerified_DescriptionHeader", _, _);
+        return _.createElement(
+          "div",
+          {
+            className: _().CompatibilityDetailRatingSummary,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const {
+          category: _,
+          appName: __webpack_require__,
+          descriptionToken: _,
+        } = _;
+        if (0 == _)
+          return _.createElement(
+            "div",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            __webpack_require__
+              ? (0, _._)(
+                  "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
+                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                )
+              : (0, _._)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
+          );
+        let _ = "",
+          _ = null;
+        switch (_) {
+          case 2:
+            (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
+              (_ = _().Compatible);
+            break;
+          case 1:
+            (_ = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
+              (_ = _().Unsupported);
+        }
+        const _ = _.createElement(
+            "span",
+            {
+              className: _,
+            },
+            (0, _._)(
+              (function (_) {
+                switch (_) {
+                  case 2:
+                    return "#SteamOSCompatibility_Category_Compatible";
+                  case 1:
+                    return "#SteamOSCompatibility_Category_Unsupported";
+                  default:
+                    return "#SteamOSCompatibility_Category_Unknown";
+                }
+              })(_),
+            ),
+          ),
+          _ = _.createElement(
+            "span",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            (0, _._)(_ || _),
+          ),
+          _ = __webpack_require__
+            ? (0, _._)(
+                "#SteamOSCompatibility_DescriptionHeader_WithAppName",
+                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _,
+                _,
+              )
+            : (0, _._)("#SteamOSCompatibility_DescriptionHeader", _, _);
         return _.createElement(
           "div",
           {
@@ -2108,30 +2225,26 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-            results: _,
-            appName: __webpack_require__,
-            buttonProps: _,
-            autoFocus: _,
-            onOpenBlogPost: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(),
-          _ = (0, _._)();
-        if (
-          (_.useEffect(() => {
-            _(_?.current?.scrollHeight > _?.current?.clientHeight);
-          }, []),
-          !_)
-        )
-          return null;
+          results: _,
+          appName: __webpack_require__,
+          buttonProps: _,
+          autoFocus: _,
+          onOpenBlogPost: _,
+          eStartingTab: _,
+          bIncludeSteamOS: _,
+        } = _;
+        if (!_) return null;
         const _ = () => {
           _ ? _() : (window.location.href = _.steam_deck_blog_url);
         };
         let _ = _ ?? {},
+          _ = null,
           _ = null;
         _.steam_deck_blog_url &&
           ((_.onOptionsActionDescription = (0, _._)(
@@ -2140,194 +2253,389 @@
           (_.onOptionsButton = _),
           (_ = _.createElement(_, {
             blogURL: _.steam_deck_blog_url,
+            eHWCompatibiltyDisplay: 1,
+          })),
+          (_ = _.createElement(_, {
+            blogURL: _.steam_deck_blog_url,
+            eHWCompatibiltyDisplay: 2,
           })));
-        const _ =
-          -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type);
-        return _.resolved_items?.length
-          ? _.createElement(
-              _._,
-              {
-                className: _
-                  ? _().CompatibilityDetailsContainer
-                  : _().CompatibilityDetailsContainerDesktop,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DialogHeader,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DialogTitle,
-                    },
-                    (0, _._)(
-                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().AppTitleCategory,
-                    },
-                    _.createElement(_._, {
-                      category: _.resolved_category,
-                    }),
-                  ),
+        const _ = 2 == _;
+        if (!_.resolved_items?.length) {
+          const _ = _
+              ? (0, _._)(
+                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )
+              : (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                 ),
-                _.createElement(_._, {
+            _ = _
+              ? _.createElement(_._, {
+                  category: _.steamos_resolved_category,
+                  appName: __webpack_require__,
+                })
+              : _.createElement(_._, {
                   category: _.resolved_category,
                   appName: __webpack_require__,
                 }),
+            _ = _ ? _ : _;
+          return _.createElement(
+            _._,
+            {
+              autoFocus: _,
+              focusableIfNoChildren: _,
+              noFocusRing: !0,
+              className: _().CompatibilityDetailsContainer,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().DialogHeader,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DialogTitle,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().AppTitleCategory,
+                  },
+                  _.createElement(_._, {
+                    category: _.resolved_category,
+                  }),
+                ),
               ),
               _,
-              _.createElement("div", {
-                className: _().CompatibilityDetailsSeparator,
-              }),
+              _,
+            ),
+          );
+        }
+        if (_ || _) {
+          const _ = (0, _._)(_.resolved_category),
+            _ = (0, _._)(_.steamos_resolved_category),
+            _ = (_) =>
+              window.sessionStorage.setItem(
+                "steamdeckcompatibility",
+                `?tab=${_.key}`,
+              ),
+            _ = [
+              {
+                name: _.createElement(
+                  "div",
+                  {
+                    className: _().pillContent,
+                  },
+                  "Steam Deck",
+                  _.createElement(_, null),
+                ),
+                key: "steamdeck",
+                contents: _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                    deckBlogContent: _,
+                  }),
+                ),
+                onClick: _,
+              },
+              {
+                name: _.createElement(
+                  "div",
+                  {
+                    className: _().pillContent,
+                  },
+                  "SteamOS",
+                  _.createElement(_, null),
+                ),
+                key: "steamos",
+                contents: _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                    deckBlogContent: _,
+                  }),
+                ),
+                onClick: _,
+              },
+            ];
+          return _.createElement(_._, {
+            tabs: _,
+            classNameCtn: _().CompatibilityTabs,
+            startingTab: _ ? "steamos" : "steamdeck",
+          });
+        }
+        return _.createElement(_, {
+          ..._,
+          deckBlogContent: _,
+        });
+      }
+      function _(_) {
+        const {
+            title: _,
+            autoFocus: __webpack_require__,
+            buttonProps: _,
+            ratingIcon: _,
+            ratingSummary: _,
+            deckBlogContent: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(() => _, [_]),
+          _ = _.useRef(),
+          _ = (0, _._)();
+        let _ = _ ?? {};
+        return (
+          _.useEffect(() => {
+            _(_?.current?.scrollHeight > _?.current?.clientHeight);
+          }, []),
+          _.createElement(
+            _._,
+            {
+              className: _
+                ? _().CompatibilityDetailsContainer
+                : _().CompatibilityDetailsContainerDesktop,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().DialogHeader,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DialogTitle,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().AppTitleCategory,
+                  },
+                  _,
+                ),
+              ),
+              _,
+            ),
+            _,
+            _.createElement(
+              _._,
+              {
+                ref: _,
+                className: _()
+                  ? _().CompatibilityDetailsInterior_Scroll
+                  : _().CompatibilityDetailsInterior_NoScroll,
+              },
               _.createElement(
                 _._,
                 {
-                  ref: _,
-                  className: _()
-                    ? _().CompatibilityDetailsInterior_Scroll
-                    : _().CompatibilityDetailsInterior_NoScroll,
+                  autoFocus: __webpack_require__,
+                  focusableIfNoChildren: __webpack_require__ || _(),
+                  noFocusRing: !0,
                 },
-                _.createElement(
-                  _._,
-                  {
-                    autoFocus: _,
-                    focusableIfNoChildren: _ || _(),
-                    noFocusRing: !0,
-                  },
-                  _.resolved_items
-                    .filter((_) => 1 !== _.display_type)
-                    .map((_) =>
-                      _.createElement(
-                        "div",
-                        {
-                          key: _.loc_token + _.display_type,
-                          className: _().CompatibilityDetailsRow,
-                        },
-                        _.createElement(_, {
-                          displaytype: _.display_type,
-                        }),
-                        _.createElement("span", null, (0, _._)(_.loc_token)),
-                      ),
-                    ),
-                  _ &&
+                _,
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { results: _, appName: __webpack_require__ } = _,
+          _ =
+            -1 !==
+            _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = _.createElement(_._, {
+            category: _.steamos_resolved_category ?? 0,
+            appName: __webpack_require__,
+          }),
+          _ = _.createElement(_._, {
+            category: _.steamos_resolved_category ?? 0,
+          }),
+          _ = _.steamos_resolved_items?.length > 0;
+        return _.createElement(
+          _,
+          {
+            title: (0, _._)(
+              "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+            ),
+            ratingIcon: _,
+            ratingSummary: _,
+            ..._,
+          },
+          _.createElement(
+            _.Fragment,
+            null,
+            _ &&
+              _.createElement("div", {
+                className: _().CompatibilityDetailsSeparator,
+              }),
+            _.steamos_resolved_items &&
+              _.steamos_resolved_items
+                .filter((_) => 1 != _.display_type)
+                .map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _.loc_token + _.display_type,
+                      className: _().CompatibilityDetailsRow,
+                    },
+                    _.createElement(_, {
+                      displaytype: _.display_type,
+                    }),
+                    _.createElement("span", null, (0, _._)(_.loc_token)),
+                  ),
+                ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().CompatibilityNotes,
+                },
+                _.steamos_resolved_items
+                  ?.filter((_) => 1 == _.display_type)
+                  .map((_) =>
                     _.createElement(
                       "div",
                       {
-                        className: _().CompatibilityNotes,
+                        key: _.loc_token + _.display_type,
+                        className: _().CompatibilityDetailsRow,
                       },
-                      _.resolved_items
-                        .filter((_) => 1 == _.display_type)
-                        .map((_) =>
-                          _.createElement(
-                            "div",
-                            {
-                              key: _.loc_token + _.display_type,
-                              className: _().CompatibilityDetailsNoteRow,
-                            },
-                            _.createElement(
-                              "span",
-                              null,
-                              (0, _._)(_.loc_token),
-                            ),
-                          ),
-                        ),
-                    ),
-                ),
-              ),
-            )
-          : _.createElement(
-              _._,
-              {
-                autoFocus: _,
-                focusableIfNoChildren: _,
-                noFocusRing: !0,
-                className: _().CompatibilityDetailsContainer,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DialogHeader,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DialogTitle,
-                    },
-                    (0, _._)(
-                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                      _.createElement(_, {
+                        displaytype: _.display_type,
+                      }),
+                      _.createElement("span", null, (0, _._)(_.loc_token)),
                     ),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().AppTitleCategory,
-                    },
-                    _.createElement(_._, {
-                      category: _.resolved_category,
-                    }),
-                  ),
-                ),
-                _.createElement(_._, {
-                  category: _.resolved_category,
-                  appName: __webpack_require__,
-                }),
-                _,
               ),
-            );
+          ),
+        );
       }
       function _(_) {
-        const { blogURL: _ } = _,
-          _ = (0, _._)();
-        return _
-          ? _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().CompatibilityDetailRatingSummary,
-                },
-                (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog"),
+        const { results: _, appName: __webpack_require__ } = _,
+          _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = _.createElement(_._, {
+            category: _.resolved_category,
+            appName: __webpack_require__,
+          }),
+          _ = _.createElement(_._, {
+            category: _.resolved_category,
+          }),
+          _ = _.resolved_items?.length > 0;
+        return _.createElement(
+          _,
+          {
+            title: (0, _._)(
+              "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+            ),
+            ratingIcon: _,
+            ratingSummary: _,
+            ..._,
+          },
+          _.createElement(
+            _.Fragment,
+            null,
+            _ &&
+              _.createElement("div", {
+                className: _().CompatibilityDetailsSeparator,
+              }),
+            _.resolved_items
+              .filter((_) => 1 !== _.display_type)
+              .map((_) =>
                 _.createElement(
                   "div",
                   {
-                    className: _().DeveloperBlogYButton,
+                    key: _.loc_token + _.display_type,
+                    className: _().CompatibilityDetailsRow,
                   },
-                  _.createElement(_._, {
-                    button: _._._,
-                    type: _._.Knockout,
+                  _.createElement(_, {
+                    displaytype: _.display_type,
                   }),
+                  _.createElement("span", null, (0, _._)(_.loc_token)),
                 ),
-              )
-            : _.createElement(
+              ),
+            _ &&
+              _.createElement(
                 "div",
                 {
-                  className: _().CompatibilityDetailRatingSummary,
+                  className: _().CompatibilityNotes,
                 },
-                (0, _._)(
-                  "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                    className: _().DeveloperBlockLinkDesktop,
-                  },
-                  (0, _._)("#SteamDeckVerified_ViewDeveloperPost"),
-                ),
-              )
-          : null;
+                _.resolved_items
+                  .filter((_) => 1 == _.display_type)
+                  .map((_) =>
+                    _.createElement(
+                      "div",
+                      {
+                        key: _.loc_token + _.display_type,
+                        className: _().CompatibilityDetailsNoteRow,
+                      },
+                      _.createElement("span", null, (0, _._)(_.loc_token)),
+                    ),
+                  ),
+              ),
+          ),
+        );
+      }
+      function _(_) {
+        const { blogURL: _, eHWCompatibiltyDisplay: __webpack_require__ } = _,
+          _ = (0, _._)();
+        if (!_) return null;
+        if (_) {
+          const _ =
+            2 == __webpack_require__
+              ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
+              : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
+          return _.createElement(
+            "div",
+            {
+              className: _().CompatibilityDetailRatingSummary,
+            },
+            _,
+            _.createElement(
+              "div",
+              {
+                className: _().DeveloperBlogYButton,
+              },
+              _.createElement(_._, {
+                button: _._._,
+                type: _._.Knockout,
+              }),
+            ),
+          );
+        }
+        const _ =
+          2 == __webpack_require__
+            ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
+            : (0, _._)(
+                "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
+              );
+        return _.createElement(
+          "div",
+          {
+            className: _().CompatibilityDetailRatingSummary,
+          },
+          _,
+          _.createElement(
+            "a",
+            {
+              href: _,
+              className: _().DeveloperBlockLinkDesktop,
+            },
+            (0, _._)("#SteamDeckVerified_ViewDeveloperPost"),
+          ),
+        );
       }
       function _(_) {
         const { displaytype: _ } = _;
@@ -2358,6 +2666,178 @@
             );
         }
       }
+      function _(_) {
+        const { displaytype: _ } = _;
+        switch (_) {
+          case 3:
+            return _.createElement(_.ZjT, {
+              className: _().CompatibilityDetailsResultIcon,
+            });
+          case 1:
+            return _.createElement(_.bcZ, {
+              className: _().CompatibilityDetailsResultIcon,
+            });
+          default:
+            return null;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          activeTab: "",
+        };
+        componentDidMount() {
+          this.props.startingTab
+            ? this.setState({
+                activeTab: this.props.startingTab,
+              })
+            : !this.props.bDisableRouting &&
+              this.props.location &&
+              this.setState({
+                activeTab: (0, _._)(this.props.location, "tab"),
+              });
+        }
+        componentDidUpdate(_) {
+          !this.props.bDisableRouting &&
+            this.props.location &&
+            this.props.location.key !== _.location.key &&
+            this.setState({
+              activeTab: (0, _._)(this.props.location, "tab"),
+            });
+        }
+        OnTabClick(_) {
+          this.setState({
+            activeTab: _.key,
+          }),
+            !this.props.bDisableRouting &&
+              this.props.history &&
+              (0, _._)(this.props.history, "tab", _.key),
+            _.onClick && _.onClick(_);
+        }
+        render() {
+          const _ =
+            this.props.tabs.find((_) => _.key === this.state.activeTab) ||
+            this.props.tabs[0];
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _().GraphicalAssetsTabs,
+                  this.props.classNameCtn,
+                ),
+              },
+              this.props.tabs.map((_) =>
+                _.createElement(_, {
+                  key: _.key,
+                  tab: _,
+                  OnTabClick: this.OnTabClick,
+                  classNameTab: this.props.classNameTab,
+                  active: _.key === _.key,
+                }),
+              ),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _ && _.createElement(_._, null, _.contents),
+            ),
+          );
+        }
+      }
+      function _(_) {
+        const { statusType: _ = "success", children: __webpack_require__ } = _;
+        let _ = "";
+        return (
+          "success" === _
+            ? (_ = _().StatusSuccess)
+            : "danger" === _
+              ? (_ = _().StatusDanger)
+              : "caution" === _ && (_ = _().StatusCaution),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().GraphicalAssetStatus, _),
+            },
+            __webpack_require__,
+          )
+        );
+      }
+      (0, _._)([_._], _.prototype, "OnTabClick", null);
+      const _ = (0, _._)(function (_) {
+          const {
+            tab: _,
+            OnTabClick: __webpack_require__,
+            classNameTab: _,
+            active: _,
+          } = _;
+          return _.hidden
+            ? null
+            : _.createElement(
+                _._,
+                {
+                  condition: Boolean(_.statusToolTip || _.tooltip),
+                  wrap: (_) =>
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: _.statusToolTip || _.tooltip,
+                      },
+                      _,
+                    ),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(
+                      _().GraphicalAssetsTab,
+                      _ && _().Active,
+                      _ && "ActiveTab",
+                      _,
+                    ),
+                    onActivate: () => __webpack_require__(_),
+                  },
+                  Boolean(_.vo_warning) &&
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: _.vo_warning,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().VOWarning,
+                        },
+                        (0, _._)("#EventEditor_VOWarning"),
+                      ),
+                    ),
+                  _.status,
+                  _.name,
+                ),
+              );
+        }),
+        _ = (0, _._)(_);
     },
   },
 ]);

@@ -504,7 +504,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => U, rN: () => M, uY: () => x, zA: () => W });
+      a.d(t, { kH: () => U, rN: () => H, uY: () => x, zA: () => W });
       var n = a(22837),
         r = a(41735),
         s = a.n(r),
@@ -541,8 +541,8 @@
         O = a(18654),
         L = a.n(O),
         G = a(84518),
-        H = a(38535);
-      const M = (0, i.PA)((e) => {
+        M = a(38535);
+      const H = (0, i.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -701,7 +701,7 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          d = (0, H.Zj)(t.appid),
+          d = (0, M.Zj)(t.appid),
           [_, p, v, S, A, h] = (0, o.q3)(() => {
             const e = s || (0, n.sf)(T.TS.LANGUAGE),
               r = Boolean(void 0 !== a)
@@ -878,18 +878,19 @@
       }
       function U(e) {
         const { event: t, imageURLOverride: a, onClick: r } = e,
-          s = (0, n.sf)(T.TS.LANGUAGE),
-          [i, c, m] = (0, o.q3)(() =>
+          s = (0, M.Zj)(t.appid),
+          i = (0, n.sf)(T.TS.LANGUAGE),
+          [c, m, d] = (0, o.q3)(() =>
             t
               ? [
                   void 0 !== a
                     ? a
                     : t.GetImageURLWithFallback(
                         "capsule",
-                        s,
+                        i,
                         E.wI.capsule_main,
                       ),
-                  t.GetNameWithFallback(s),
+                  t.GetNameWithFallback(i),
                   t.GetCategoryAsString(),
                 ]
               : [void 0, void 0, void 0],
@@ -908,9 +909,14 @@
                 { className: R().OtherEvents_ContentCtn },
                 l.createElement(
                   "div",
-                  { className: R().OtherEvents_MainImageCtn },
+                  {
+                    className: (0, I.A)(
+                      R().OtherEvents_MainImageCtn,
+                      s && R().MaskImages,
+                    ),
+                  },
                   l.createElement("img", {
-                    src: i,
+                    src: c,
                     className: R().OtherEvents_MainImage,
                   }),
                 ),
@@ -924,14 +930,14 @@
                   l.createElement(
                     "div",
                     { className: R().HorizontalDescription },
-                    m,
+                    d,
                   ),
                   l.createElement(f.K4, {
                     bSingleLine: !0,
                     dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                   }),
                 ),
-                l.createElement("div", { className: R().HorizontalTitle }, c),
+                l.createElement("div", { className: R().HorizontalTitle }, m),
               ),
             )
           : l.createElement("div", { className: R().OtherEvents_EventCtn });
@@ -1021,7 +1027,7 @@
                   category: t,
                   rgPrevLaborOfLoveWinners: n,
                 })
-              : r.createElement(H, { category: t }),
+              : r.createElement(M, { category: t }),
             r.createElement(
               "div",
               { className: o().BottomRow },
@@ -1034,7 +1040,7 @@
           )
         );
       }
-      function H(e) {
+      function M(e) {
         const { category: t } = e,
           a = (0, d.jT)(t.voteid),
           n = (0, d.cO)(),
@@ -1069,7 +1075,7 @@
                   rgGameCarouselItems: i,
                 }),
               )
-            : r.createElement(M, { eSteamAwardCategoryID: t.voteid }),
+            : r.createElement(H, { eSteamAwardCategoryID: t.voteid }),
           Boolean(!s) &&
             a.data?.suggested_events?.length > 0 &&
             r.createElement(
@@ -1080,7 +1086,7 @@
                 { className: o().RecommendationRowTitle },
                 (0, S.we)("#Steamawards_Nominate_Events"),
               ),
-              r.createElement(Y, { rgEvents: a.data.suggested_events }),
+              r.createElement(j, { rgEvents: a.data.suggested_events }),
             ),
           r.createElement(
             "div",
@@ -1101,7 +1107,7 @@
           ),
         );
       }
-      function M(e) {
+      function H(e) {
         const { eSteamAwardCategoryID: t } = e;
         return r.createElement(
           "div",
@@ -1343,7 +1349,7 @@
           )
         );
       }
-      function Y(e) {
+      function j(e) {
         const { rgEvents: t } = e,
           [a, n] = r.useState(!1),
           s = (0, R.R7)(),
@@ -1404,7 +1410,7 @@
                         screenIsWide: (0, y.rp)(),
                       },
                       t.map((e) =>
-                        r.createElement(j, {
+                        r.createElement(Y, {
                           gidEvent: e.event_gid,
                           key: e.event_gid,
                         }),
@@ -1420,7 +1426,7 @@
             : null
         );
       }
-      function j(e) {
+      function Y(e) {
         const { gidEvent: t } = e,
           a = b.O3.GetClanEventModel(t);
         if (!a) return null;
@@ -2443,8 +2449,8 @@
           G = r.useCallback((e) => {
             B(e.contentRect.height);
           }, []),
-          H = (0, D.wY)(G),
-          M = r.useCallback(() => {
+          M = (0, D.wY)(G),
+          H = r.useCallback(() => {
             let e = "-20% 0px -50% 0px";
             if (L.innerHeight <= Q) e = "0px 0px 0px 0px";
             else {
@@ -2457,8 +2463,8 @@
           }, [L.innerHeight, Q]);
         r.useEffect(
           () => (
-            window.addEventListener("resize", M),
-            () => window.removeEventListener("resize", M)
+            window.addEventListener("resize", H),
+            () => window.removeEventListener("resize", H)
           ),
         ),
           r.useEffect(() => {
@@ -2476,9 +2482,9 @@
                   a.sort((e, t) => (e.hash > t.hash ? 1 : -1)),
                     (e = a.map((e) => e.appid));
                 } else e = t.app_discounts.map((e) => e.appid);
-                v(e), h(e[l.current]), M();
+                v(e), h(e[l.current]), H();
               })();
-          }, [t.app_discounts, M, E]);
+          }, [t.app_discounts, H, E]);
         const V = r.useCallback(() => {
             if (!y) {
               let e = l.current + 1;
@@ -2523,11 +2529,11 @@
               fnOnVideoEnd: V,
             }),
           );
-        let Y = r.createElement(r.Fragment, null, z);
+        let j = r.createElement(r.Fragment, null, z);
         return (
           t.winner_appid && s
-            ? (Y = r.createElement(Qe, { unAppID: t.winner_appid }))
-            : o && (Y = r.createElement(Te, { unAppID: o })),
+            ? (j = r.createElement(Qe, { unAppID: t.winner_appid }))
+            : o && (j = r.createElement(Te, { unAppID: o })),
           r.createElement(
             Ae.tH,
             null,
@@ -2542,7 +2548,7 @@
               r.createElement(
                 c.Z,
                 {
-                  ref: H,
+                  ref: M,
                   className: (0, A.A)(
                     ge().SteamAwardCategory,
                     o && ge().CategoryVoted,
@@ -2604,7 +2610,7 @@
                     r.createElement(
                       "div",
                       { className: ge().CapsuleContainer },
-                      Y,
+                      j,
                       r.createElement("img", { src: O }),
                     ),
                   ),
@@ -2896,8 +2902,8 @@
       }
       var Le = a(26019),
         Ge = a.n(Le),
-        He = a(79870),
-        Me = a.n(He);
+        Me = a(79870),
+        He = a.n(Me);
       function Ve(e) {
         const { nYear: t } = e,
           a = (0, $.f1)(),
@@ -2938,7 +2944,7 @@
             )
           : null;
       }
-      const xe = { 2023: Ge(), 2024: Me() },
+      const xe = { 2023: Ge(), 2024: He() },
         We = Object.values(xe).reduce((e, t) => ({ ...e, ...t }), {}),
         Ue = 2023;
       const qe = () =>

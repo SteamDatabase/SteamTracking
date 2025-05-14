@@ -22,6 +22,15 @@
 	background: linear-gradient( to bottom, #799905 5%, #536904 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_green_white_innerfade {
+		background: ButtonFace;
+	}
+	.btn_green_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -61,6 +70,15 @@
 	background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_blue_white_innerfade {
+		background: ButtonFace;
+	}
+	.btn_blue_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_blue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -100,6 +118,15 @@
 	background: linear-gradient( to bottom, rgba(33,101,138,1) 5%, rgba(23,67,92,1) 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_darkblue_white_innerfade {
+		background: ButtonFace;
+	}
+	.btn_darkblue_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -148,6 +175,15 @@
 	background: linear-gradient( to bottom, rgba(138,51,33,1) 5%, rgba(92,37,23,1) 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_darkred_white_innerfade {
+		background: ButtonFace;
+	}
+	.btn_darkred_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_darkred_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -196,6 +232,15 @@
 	background: linear-gradient( to bottom, #778088 5%, #414a52 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_grey_white_innerfade {
+		background: ButtonFace;
+	}
+	.btn_grey_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_grey_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -229,6 +274,15 @@
 
 		background: transparent;			}
 
+@media (forced-colors:active) {
+	.btn_grey_grey {
+		background: ButtonFace;
+	}
+	.btn_grey_grey > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_grey_grey:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #000 !important;
@@ -259,6 +313,15 @@
 	background: linear-gradient( to bottom, #2B2B2B 5%, #202020 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_grey_grey_outer_bevel {
+		background: ButtonFace;
+	}
+	.btn_grey_grey_outer_bevel > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_grey_grey_outer_bevel:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ebebeb !important;
@@ -296,6 +359,15 @@
 
 		background: transparent;			}
 
+@media (forced-colors:active) {
+	.btn_grey_black {
+		background: ButtonFace;
+	}
+	.btn_grey_black > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -332,6 +404,15 @@
 
 		background: transparent;			}
 
+@media (forced-colors:active) {
+	.btn_black {
+		background: ButtonFace;
+	}
+	.btn_black > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #000 !important;
@@ -359,6 +440,15 @@
 
 		background: transparent;			}
 
+@media (forced-colors:active) {
+	.btnv6_blue_hoverfade {
+		background: ButtonFace;
+	}
+	.btnv6_blue_hoverfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -401,6 +491,15 @@
 
 		background: transparent;		text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1 );	}
 
+@media (forced-colors:active) {
+	.btnv6_lightblue_blue {
+		background: ButtonFace;
+	}
+	.btnv6_lightblue_blue > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -434,6 +533,15 @@
 
 		background: transparent;		text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );	}
 
+@media (forced-colors:active) {
+	.btnv6_blue_blue_innerfade {
+		background: ButtonFace;
+	}
+	.btnv6_blue_blue_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -467,6 +575,15 @@
 
 		background: transparent;		text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );	}
 
+@media (forced-colors:active) {
+	.btnv6_green_white_innerfade {
+		background: ButtonFace;
+	}
+	.btnv6_green_white_innerfade > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -497,6 +614,15 @@
 
 		background: transparent;			}
 
+@media (forced-colors:active) {
+	.btnv6_grey_black {
+		background: ButtonFace;
+	}
+	.btnv6_grey_black > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -534,6 +660,15 @@
 		background: transparent;		border: 1px solid rgba(255,255,255,0.4);
 border-radius: 2px;	}
 
+@media (forced-colors:active) {
+	.btnv6_white_transparent {
+		background: ButtonFace;
+	}
+	.btnv6_white_transparent > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff !important;
@@ -568,6 +703,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, rgba(33,101,138,1) 5%, rgba(23,67,92,1) 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_teal {
+		background: ButtonFace;
+	}
+	.btn_teal > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_teal:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -616,6 +760,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, rgba(33,101,138,1) 5%, rgba(23,67,92,1) 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_royal_blue {
+		background: ButtonFace;
+	}
+	.btn_royal_blue > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_royal_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -664,6 +817,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, rgba(33,101,138,1) 5%, rgba(23,67,92,1) 95%);
 			}
 
+@media (forced-colors:active) {
+	.btn_plum {
+		background: ButtonFace;
+	}
+	.btn_plum > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_plum:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #ffffff !important;
@@ -709,6 +871,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, #6fa720 5%, #588a1b 95%);
 		background: linear-gradient( to right, #75b022 5%, #588a1b 95%);	}
 
+@media (forced-colors:active) {
+	.btn_green_steamui {
+		background: ButtonFace;
+	}
+	.btn_green_steamui > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff; !important;
@@ -754,6 +925,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, #75b022 5%, #588a1b 95%);
 		background: linear-gradient( to right, #32363f 5%, #32363f 95%); box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.2s ease-out;	}
 
+@media (forced-colors:active) {
+	.btn_grey_steamui {
+		background: ButtonFace;
+	}
+	.btn_grey_steamui > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff; !important;
@@ -787,6 +967,15 @@ border-radius: 2px;	}
 	background: linear-gradient( to bottom, #75b022 5%, #588a1b 95%);
 		background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%); box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); background-position: 25%; background-size: 330% 100%;	}
 
+@media (forced-colors:active) {
+	.btn_blue_steamui {
+		background: ButtonFace;
+	}
+	.btn_blue_steamui > span {
+		background: ButtonFace;
+		border: 1px solid ButtonBorder;
+	}
+}
 .btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
 	text-decoration: none !important;
 	color: #fff; !important;

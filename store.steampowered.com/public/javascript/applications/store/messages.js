@@ -2068,8 +2068,8 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.stats || u.Sg(x.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
+            x.prototype.rt_time_hour || u.Sg(x.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2078,7 +2078,33 @@
             x.sm_m ||
               (x.sm_m = {
                 proto: x,
-                fields: { stats: { n: 1, c: A, r: !0, q: !0 } },
+                fields: {
+                  rt_time_hour: {
+                    n: 1,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  clicked_count: {
+                    n: 2,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  display_index: {
+                    n: 3,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  template_type: {
+                    n: 4,
+                    br: u.qM.readEnum,
+                    bw: u.gp.writeEnum,
+                  },
+                  click_location: {
+                    n: 5,
+                    br: u.qM.readEnum,
+                    bw: u.gp.writeEnum,
+                  },
+                },
               }),
             x.sm_m
           );
@@ -2115,15 +2141,15 @@
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
+          return "CMarketingMessageClickedHourlyStats";
         }
       }
       class L extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            L.prototype.rt_time_hour || u.Sg(L.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            L.prototype.stats || u.Sg(L.M()),
+            c.Message.initialize(this, e, 0, -1, [1, 2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2133,31 +2159,8 @@
               (L.sm_m = {
                 proto: L,
                 fields: {
-                  rt_time_hour: {
-                    n: 1,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  clicked_count: {
-                    n: 2,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  display_index: {
-                    n: 3,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                  template_type: {
-                    n: 4,
-                    br: u.qM.readEnum,
-                    bw: u.gp.writeEnum,
-                  },
-                  click_location: {
-                    n: 5,
-                    br: u.qM.readEnum,
-                    bw: u.gp.writeEnum,
-                  },
+                  stats: { n: 1, c: A, r: !0, q: !0 },
+                  clicked_stats: { n: 2, c: x, r: !0, q: !0 },
                 },
               }),
             L.sm_m
@@ -2195,7 +2198,7 @@
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessageClickedHourlyStats";
+          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
         }
       }
       class D extends c.Message {
@@ -2272,7 +2275,7 @@
             V.sm_m ||
               (V.sm_m = {
                 proto: V,
-                fields: { stats: { n: 1, c: L, r: !0, q: !0 } },
+                fields: { stats: { n: 1, c: x, r: !0, q: !0 } },
               }),
             V.sm_m
           );
@@ -2996,7 +2999,7 @@
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
               (0, o.I8)(U, t),
-              x,
+              L,
               { ePrivilege: 4 },
             );
           }),

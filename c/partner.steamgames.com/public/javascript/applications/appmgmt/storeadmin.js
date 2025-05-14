@@ -231,6 +231,7 @@
         ExtraAssetName: "_1v6uTQuGLshmZKWXULJOSr",
         UploadFileButton: "_2YSrxqs6du4D01NI5Gpt9g",
         UploadFilePlus: "_2MZ0u0Cj28i6cN4E1OZKCv",
+        EnableExtraAssetsV2Ctn: "eeKg-l7aZaopjLwnTg0pT",
       };
     },
     chunkid: (module) => {
@@ -241,6 +242,8 @@
         ImgPreviewContainer: "_15tW0aE5WXrWrGgguKGlWn",
         ImgPreview: "xUnBDVbIvtL7vyAS4rn2t",
         DuplicatePreview: "_14-dbrekvOWYS09OPByyHh",
+        EnableExtraAssetsV2Ctn: "_20VH0unQDu2_N7XNfRnqm_",
+        EnableExtraAssetsV2: "t_bWl0P39cVyepTUbLxKp",
       };
     },
     chunkid: (module) => {
@@ -1137,12 +1140,217 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ extends _._ {
+        constructor(_, _, _, _, _, _) {
+          super(_, _, _, _, _, _);
+        }
+        IsValidAssetType(_, _, _) {
+          const _ = _ && _ != this.fileType;
+          let _ = "";
+          return (
+            (function (_) {
+              switch (_) {
+                case 1:
+                case 3:
+                case 10:
+                  return !0;
+                default:
+                  return !1;
+              }
+            })(this.fileType)
+              ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
+              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: _,
+              needsCrop: !1,
+              match: this.type,
+            }
+          );
+        }
+      }
+      class _ extends _ {
+        bCropped = !1;
+        media;
+        constructor(_, _, _) {
+          const _ = (function (_) {
+            const _ = _.split(".").pop().toLocaleLowerCase();
+            return "webm" == _ || "mp4" == _;
+          })(_.name);
+          super(
+            _,
+            _,
+            null,
+            _.src,
+            _ ? _.videoWidth : _.width,
+            _ ? _.videoHeight : _.height,
+          ),
+            (0, _._)(this),
+            (this.media = _);
+        }
+        ResetImage() {
+          (this.height = this.media.height),
+            (this.width = this.media.width),
+            (this.dataUrl = this.media.src);
+        }
+        BIsOriginalMinimumDimensions(_) {
+          return !0;
+        }
+        FileTypeMatchesImageTypes(_) {
+          return !0;
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
+        }
+        GetResizeDimension() {
+          return null;
+        }
+      }
+      (0, _._)([_._], _.prototype, "bCropped", void 0);
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        m_filesToUpload = _._.array();
+        m_strUploadPath;
+        m_bExtraAssetsV2;
+        m_fnExtraAssetsUpdated;
+        constructor(_, _, _) {
+          (0, _._)(this),
+            (this.m_strUploadPath = _),
+            (this.m_bExtraAssetsV2 = _),
+            (this.m_fnExtraAssetsUpdated = _);
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(_) {
+          this.m_strUploadPath = _;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        isImageFile(_) {
+          return _.type.startsWith("image/");
+        }
+        isVideoFile(_) {
+          return _.type.startsWith("video/");
+        }
+        async AddImageForLanguage(_, _, _, _) {
+          let _ = !1;
+          return (
+            await new Promise((_) => {
+              if (this.isImageFile(_)) {
+                const _ = new FileReader();
+                (_.onload = () => {
+                  const _ = new Image();
+                  (_.onload = () => {
+                    const _ = new _(_, _, _);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
+                      (_ = !0),
+                      __webpack_require__();
+                  }),
+                    (_.onerror = (_) => {
+                      console.error(
+                        "CExtraAssetImageUploader failed to load the image, details",
+                        _,
+                      ),
+                        (_ = !1),
+                        __webpack_require__();
+                    }),
+                    (_.src = _.result.toString());
+                }),
+                  _.readAsDataURL(_);
+              } else
+                this.isVideoFile(_) ||
+                  (console.error(
+                    "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
+                    _,
+                    _.type,
+                  ),
+                  (_ = !1));
+            }),
+            _
+          );
+        }
+        async UploadAllImages(_, _, _, _, _) {
+          const _ = {
+            rgUpdatedExtraAssets: [],
+          };
+          for (const _ of this.m_filesToUpload)
+            if ("pending" === _.status) {
+              const _ = _.IsValidAssetType(_, _, _);
+              if (!_.error && !_.needsCrop) {
+                _.status = "uploading";
+                const _ = await this.UploadFile(
+                  _.file,
+                  _.file.name,
+                  _.language,
+                );
+                "errors" in _
+                  ? ((_.status = "failed"), (_.message = _.errors.join("\n")))
+                  : "rgExtraAssets" in _ &&
+                    ((_.status = "success"),
+                    (_.rgUpdatedExtraAssets = _.rgExtraAssets));
+              }
+            }
+          return this.m_fnExtraAssetsUpdated(_.rgUpdatedExtraAssets), _;
+        }
+        async UploadFile(_, _, _) {
+          const _ = new FormData(),
+            _ = new File([_], _, {
+              type: _.type,
+            });
+          _.append("sessionid", _._.SESSIONID),
+            _.append("action", "upload"),
+            _.append(
+              this.m_bExtraAssetsV2 ? "extra_asset_v2" : "extra_asset",
+              _,
+            );
+          const _ = await fetch(this.m_strUploadPath, {
+              method: "post",
+              body: _,
+            }),
+            _ = await _.json();
+          if (!_._) {
+            const _ = _;
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.UploadFile failed ",
+                _.errors,
+              ),
+              _
+            );
+          }
+          return _;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
+        (0, _._)([_._], _.prototype, "UploadAllImages", null);
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             src: _,
             inLink: __webpack_require__,
-            selected: _,
             setAttrs: _,
             focusView: _,
             removeNode: _,
@@ -1153,78 +1361,79 @@
           _ = _.useCallback(() => {
             _(), _();
           }, [_, _]),
-          _ = _.useMemo(() => _.find((_) => _.name === _), [_, _]);
+          _ = _.useMemo(() => _.find((_) => (0, _._)(_) === _), [_, _]),
+          { type: _, _: _ } = (0, _._)();
+        if (0 != _) return null;
+        const _ = _ ? (0, _._)(_) : null;
         let _;
-        return (
-          (_ = _
-            ? _.createElement("img", {
-                key: _.name,
-                className: _.ExtraAssetImg,
-                src: _.url,
-                alt: _.name,
-                title: _.name,
-              })
-            : _.createElement(
-                "span",
-                {
-                  className: _.ExtraAssetError,
-                },
-                (0, _._)("#StoreAdmin_GameDescription_MissingImage", _),
-              )),
-          _.createElement(
-            _.Fragment,
-            null,
+        if (_) {
+          const _ = (0, _._)(_, _),
+            _ = (0, _._)(_);
+          _ = _.createElement("img", {
+            key: _,
+            className: _.ExtraAssetImg,
+            src: _,
+            alt: _,
+            title: _,
+          });
+        } else
+          _ = _.createElement(
+            "span",
+            {
+              className: _.ExtraAssetError,
+            },
+            (0, _._)("#StoreAdmin_GameDescription_MissingImage", _),
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
             _ &&
-              _.createElement(_, {
-                editAsset: _?.name,
-                onAssetSelected: (_) =>
-                  _({
-                    src: _,
-                  }),
-                hideModal: _,
-              }),
+            _.createElement(_, {
+              editAsset: _,
+              onAssetSelected: (_) =>
+                _({
+                  src: _,
+                }),
+              hideModal: _,
+            }),
+          _.createElement(
+            "span",
+            {
+              className: (0, _._)(
+                _.ExtraAssetImgTag,
+                _.ExtraAssetControlsContainer,
+                _ && _.Hovered,
+                __webpack_require__ && _.InDeprecatedLink,
+              ),
+              ..._,
+              title: "",
+            },
+            __webpack_require__ && _.createElement(_, null),
             _.createElement(
               "span",
               {
-                className: (0, _._)(
-                  _.ExtraAssetImgTag,
-                  _.ExtraAssetControlsContainer,
-                  _ && _.Hovered,
-                  __webpack_require__ && _.InDeprecatedLink,
-                ),
-                ..._,
-                title: "",
+                className: _.ExtraAssetControls,
               },
-              __webpack_require__ && _.createElement(_, null),
               _.createElement(
-                "span",
+                _._,
                 {
-                  className: _.ExtraAssetControls,
+                  onClick: _,
+                  tooltip: (0, _._)("#StoreAdmin_GameDescription_ReplaceImage"),
                 },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)(
-                      "#StoreAdmin_GameDescription_ReplaceImage",
-                    ),
-                  },
-                  _.createElement(_.ffu, null),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)(
-                      "#StoreAdmin_GameDescription_RemoveImage",
-                    ),
-                  },
-                  _.createElement(_.sED, null),
-                ),
+                _.createElement(_.ffu, null),
               ),
-              _,
+              _.createElement(
+                _._,
+                {
+                  onClick: _,
+                  tooltip: (0, _._)("#StoreAdmin_GameDescription_RemoveImage"),
+                },
+                _.createElement(_.sED, null),
+              ),
             ),
-          )
+            _,
+          ),
         );
       }
       function _() {
@@ -1258,16 +1467,16 @@
       }
       function _(_) {
         const { nodeType: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { view: __webpack_require__ } = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
-            _(), _.focus();
-          }, [_, _]),
+            _(), __webpack_require__.focus();
+          }, [_, __webpack_require__]),
           _ = _.useCallback(
             (_) => {
-              _.dispatch(
-                _.state._.insert(
-                  _.state.selection._,
+              __webpack_require__.dispatch(
+                __webpack_require__.state._.insert(
+                  __webpack_require__.state.selection._,
                   _.createChecked({
                     src: _,
                   }),
@@ -1275,7 +1484,7 @@
               ),
                 _();
             },
-            [_, _, _],
+            [__webpack_require__, _, _],
           );
         return _.createElement(
           _.Fragment,
@@ -1311,8 +1520,7 @@
             },
             [__webpack_require__, _],
           ),
-          _ = _.useCallback((_, _) => (_ ? _(_) : _(_)), [_]),
-          _ = (0, _._)();
+          _ = _.useCallback((_, _) => (_ ? _(_) : _(_)), [_]);
         return _.createElement(
           _._,
           {
@@ -1334,17 +1542,6 @@
                 null,
                 (0, _._)("#StoreAdmin_GameDescription_SelectImage"),
               ),
-              _ &&
-                _._.is_support &&
-                _.createElement(
-                  "span",
-                  {
-                    style: {
-                      color: "orange",
-                    },
-                  },
-                  "**Using Extra Assets V2**",
-                ),
               _.createElement(
                 "div",
                 {
@@ -1390,10 +1587,10 @@
                   },
                   _.map((_) =>
                     _.createElement(_, {
-                      key: _.name,
+                      key: (0, _._)(_),
                       extra_asset: _,
                       onAssetClick: _,
-                      selected: _.name == _,
+                      selected: (0, _._)(_) == _,
                     }),
                   ),
                 ),
@@ -1418,17 +1615,21 @@
       }
       function _(_) {
         const {
-          extra_asset: _,
-          onAssetClick: __webpack_require__,
-          selected: _,
-        } = _;
+            extra_asset: _,
+            onAssetClick: __webpack_require__,
+            selected: _,
+          } = _,
+          { type: _, _: _ } = (0, _._)();
+        if (0 != _) return null;
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _);
         return _.createElement(
           "div",
           {
             className: (0, _._)(_.ExtraAssetChoice, _ && _.Selected),
-            onClick: () => __webpack_require__(_.name, !1),
-            onDoubleClick: () => __webpack_require__(_.name, !0),
-            title: _.name,
+            onClick: () => __webpack_require__(_, !1),
+            onDoubleClick: () => __webpack_require__(_, !0),
+            title: _,
           },
           _.createElement(
             "div",
@@ -1436,7 +1637,7 @@
               className: _.ImgCtn,
             },
             _.createElement("img", {
-              src: _.url,
+              src: _,
             }),
           ),
           _.createElement(
@@ -1449,28 +1650,13 @@
         );
       }
       function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.useCallback(
-            (_) => {
-              for (const _ of _) {
-                let _ = __webpack_require__({
-                  file: _,
-                  onComplete: () => _(),
-                  onCancel: () => _(),
-                });
-              }
-            },
-            [_],
-          ),
-          [_] = (0, _._)(_);
+        const _ = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             "div",
             {
-              ..._,
               className: _.ExtraAssetsPageList,
             },
             _.createElement(
@@ -1480,54 +1666,47 @@
               },
               _.map((_) =>
                 _.createElement(_, {
-                  key: _.name,
+                  key: (0, _._)(_),
                   extra_asset: _,
                 }),
               ),
             ),
           ),
-          _.createElement(_, {
-            onFilesSelected: _,
-          }),
+          _.createElement(_, null),
         );
       }
-      function _(_) {
-        const { onFilesSelected: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_, {
-            multiple: !0,
-            accept: _._,
-          });
+      function _() {
+        const _ = (0, _._)(),
+          { bExtraAssetsV2: _ } = (0, _._)(),
+          _ = (0, _._)("ajaxmodifyextraassets"),
+          _ = _.useMemo(() => new _(_, _, _), [_, _, _]);
         return _.createElement(
-          _.Fragment,
+          "div",
           null,
-          __webpack_require__,
-          _.createElement(
-            "div",
-            {
-              className: _.StandaloneUploadButton,
-            },
-            _.createElement(
+          _.createElement(_._, {
+            imageUploader: _,
+            rgImageOptions: null,
+            rgRealmList: null,
+            elAdditonalButtons: _.createElement(
               "div",
-              null,
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
-            ),
-            _.createElement(
-              _._,
               {
-                className: _.UploadButton,
-                onClick: _,
+                className: _.EnableExtraAssetsV2Ctn,
               },
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_BrowseForFile"),
+              _.createElement(_._, null),
             ),
-          ),
+          }),
         );
       }
       function _(_) {
         const { extra_asset: _ } = _,
           [__webpack_require__, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
+          { type: _, _: _ } = (0, _._)();
+        if (0 != _) return null;
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _),
           _ = () => {
-            window.open(_.url);
+            window.open(_);
           };
         return _.createElement(
           "div",
@@ -1538,7 +1717,7 @@
               __webpack_require__ && _.Hovered,
             ),
             ..._,
-            title: _.name,
+            title: _,
           },
           _ &&
             _.createElement(_, {
@@ -1564,7 +1743,7 @@
             _.createElement(
               _._,
               {
-                onClick: () => (0, _._)(_.name),
+                onClick: () => (0, _._)(_),
                 tooltip: (0, _._)(
                   "#StoreAdmin_GameDescription_CopyNameToClipboard",
                 ),
@@ -1586,7 +1765,7 @@
               className: _.ImgCtn,
             },
             _.createElement("img", {
-              src: _.url,
+              src: _,
               onDoubleClick: _,
             }),
           ),
@@ -1666,13 +1845,410 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.name.replace(/^\{STEAM_APP_IMAGE\}\/extras\//, "");
+        const { rgUploads: _ } = _,
+          _ = _.useMemo(() => new Set(), []),
+          _ = _.findIndex(({ _: _ }) => !__webpack_require__.has(_)),
+          _ = (0, _._)();
+        return _.map(({ _: _, upload: _ }, _) =>
+          _.createElement(_, {
+            key: _,
+            active: _ == _,
+            upload: _,
+            anyUploadsInProgress: _.size > 0,
+            fnUploadPrepared: () =>
+              ((_) => {
+                __webpack_require__.add(_), _();
+              })(_),
+            fnUploadComplete: () =>
+              ((_) => {
+                __webpack_require__.delete(_), _();
+              })(_),
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            upload: _,
+            active: __webpack_require__,
+            anyUploadsInProgress: _,
+            fnUploadPrepared: _,
+            fnUploadComplete: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0);
+        _.useEffect(() => {
+          __webpack_require__ &&
+            (_(_.file) ||
+              _(
+                (0, _._)(
+                  "#StoreAdmin_UploadError_UnsupportedFileType",
+                  _.file.name,
+                ),
+              )),
+            _(__webpack_require__);
+        }, [__webpack_require__, _]);
+        const { bExtraAssetsV2: _ } = (0, _._)(),
+          { mutate: _, isPending: _ } = (function (_, _, _, _) {
+            const _ = (0, _._)("ajaxmodifyextraassets"),
+              { _: _, type: _ } = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                if (0 != _) throw "Only support uploading into apps";
+                const _ = new FormData(),
+                  _ = new File([_.file], _, {
+                    type: _.file.type,
+                  });
+                __webpack_require__.append("sessionid", _._.SESSIONID),
+                  __webpack_require__.append("action", "upload"),
+                  __webpack_require__.append(
+                    _ ? "extra_asset_v2" : "extra_asset",
+                    _,
+                  );
+                const _ = await fetch(_, {
+                    method: "post",
+                    body: _,
+                  }),
+                  _ = await _.json();
+                if (!_._) throw _.errors?.join("\n") || new Error();
+                return _;
+              },
+              onSuccess: (_, _) => {
+                const _ = _.rgExtraAssets;
+                (0, _._)(
+                  _ && _.length,
+                  "Did not get back updated list of extra assets after uploading a new one",
+                ),
+                  _ && _.length && _(_),
+                  _.onComplete((0, _._)(_));
+              },
+              onError: (_) => {
+                __webpack_require__(
+                  "string" == typeof _
+                    ? _
+                    : (0, _._)("#StoreAdmin_UploadError_Generic", _.message),
+                );
+              },
+              onSettled: () => {
+                _();
+              },
+            });
+          })(_, _, _, _);
+        return _
+          ? _
+            ? _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_._, {
+                  bAlertDialog: !0,
+                  strTitle: (0, _._)("#Error_Generic"),
+                  strDescription: _,
+                  strOKButtonText: (0, _._)("#Button_OK"),
+                  closeModal: () => _.onCancel(),
+                }),
+              )
+            : _.createElement(_, {
+                upload: _,
+                isUploading: _,
+                doUpload: (_) => {
+                  _(), _(_);
+                },
+                anyUploadsInProgress: _,
+              })
+          : null;
+      }
+      function _(_) {
+        const {
+            upload: _,
+            isUploading: __webpack_require__,
+            doUpload: _,
+            anyUploadsInProgress: _,
+          } = _,
+          { file: _, onCancel: _ } = _,
+          { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = (0, _._)(),
+          _ = _.useCallback(
+            (_) => {
+              if (!_) return "";
+              const _ = _(_);
+              return _.replace(_, "_").replace(
+                /(?:\.[a-zA-Z]{3,4})?$/,
+                `.${_}`,
+              );
+            },
+            [_, _],
+          ),
+          [_, _] = _.useState(() => _(_.name)),
+          _ = _.useMemo(() => _(_), [_, _]),
+          [_, _] = _.useState(void 0);
+        _.useEffect(() => {
+          _(() => {
+            if (!_) return;
+            const _ = (0, _._)(_);
+            return _.find((_) => (0, _._)(_) == _);
+          });
+        }, [_, _]);
+        let _ =
+          (function (_) {
+            return _ && _.length > 0;
+          })(_) && !__webpack_require__
+            ? () => _(_)
+            : void 0;
+        const _ = _.useCallback(() => {
+          _.onComplete((0, _._)(_));
+        }, [_, _]);
+        let _ = _
+          ? (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
+          : (0, _._)("#Button_Upload");
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+            onDismiss: _,
+            className: _.UploadModal,
+          },
+          _.createElement(
+            _._,
+            {
+              onSubmit: (_) => {
+                _.preventDefault(), _ && _();
+              },
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                file: _,
+                duplicate: _,
+                bShowThrobber: __webpack_require__,
+                onUseDuplicate: _,
+              }),
+              _.createElement(_, {
+                name: _,
+                validatedName: _,
+                setName: _,
+                disabled: __webpack_require__,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.EnableExtraAssetsV2Ctn,
+                },
+                _.createElement(_, null),
+              ),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_._, {
+                onOK: _,
+                strOKText: _,
+                bOKDisabled: !_,
+                onCancel: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          bExtraAssetsV2: _,
+          bExtraAssetsV2Allowed: __webpack_require__,
+          setExtraAssetsV2: _,
+        } = (0, _._)();
+        return _._.is_support
+          ? __webpack_require__ &&
+              _.createElement(_._, {
+                className: _.EnableExtraAssetsV2,
+                label: "New media conversion",
+                checked: _,
+                onChange: (_) => _(_),
+              })
+          : null;
+      }
+      function _(_) {
+        const {
+            file: _,
+            duplicate: __webpack_require__,
+            bShowThrobber: _,
+            onUseDuplicate: _,
+          } = _,
+          _ = _.useMemo(() => URL.createObjectURL(_), [_]),
+          { type: _, _: _ } = (0, _._)();
+        return 0 != _
+          ? null
+          : _.createElement(
+              _.Fragment,
+              null,
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.DuplicateMessage,
+                  },
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_FileNameInuse"),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.SideBySideComparison, _ && _.Loading),
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ThrobberContainer,
+                    },
+                    _.createElement(_._, {
+                      position: "center",
+                      size: "xlarge",
+                    }),
+                  ),
+                __webpack_require__ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _.ImgPreviewContainer,
+                        _.DuplicatePreview,
+                      ),
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ImageLabel,
+                      },
+                      (0, _._)("#StoreAdmin_ExtraAssetUpload_Original"),
+                    ),
+                    _.createElement("img", {
+                      src: (0, _._)(__webpack_require__, _),
+                      className: _.ImgPreview,
+                    }),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ImgPreviewContainer,
+                  },
+                  __webpack_require__ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ImageLabel,
+                      },
+                      (0, _._)("#StoreAdmin_ExtraAssetUpload_Replacement"),
+                    ),
+                  _.createElement("img", {
+                    src: _,
+                    className: _.ImgPreview,
+                  }),
+                ),
+              ),
+            );
+      }
+      function _(_) {
+        const {
+            name: _,
+            setName: __webpack_require__,
+            validatedName: _,
+            disabled: _,
+          } = _,
+          _ = _.useCallback((_) => _ && _.element.select(), []);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, {
+            value: _,
+            onChange: (_) => __webpack_require__(_.currentTarget.value),
+            label: (0, _._)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
+            ref: _,
+            disabled: _,
+            description: (0, _._)(
+              "#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename",
+              _.createElement("b", null, _),
+            ),
+          }),
+        );
+      }
+      function _(_) {
+        switch (_.type) {
+          case "image/jpeg":
+            return "jpg";
+          case "image/png":
+            return "png";
+          case "image/gif":
+            return "gif";
+          default:
+            return;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return (
+          _ &&
+          !(function (_) {
+            return _ && "extra_asset_name" in _;
+          })(_)
+        );
+      }
+      function _(_) {
+        return _(_) ? _.name : _.extra_asset_name;
+      }
+      function _(_, _, __webpack_require__ = "english") {
+        if (_(_)) return _.url;
+        const _ =
+          _.languages.find((_) => _.language == __webpack_require__) ||
+          _.languages._(0);
+        if (!_) return null;
+        const _ = _.encodings?.[0];
+        return null == _ ? null : _.url;
+      }
+      function _(_, _ = "english") {
+        if (_(_)) return _.name;
+        const _ = _.languages.find((_) => _.language == _) || _.languages._(0);
+        return _ ? _.alt_text : null;
+      }
+      function _(_) {
+        return (_(_) ? _.name : _.extra_asset_name).replace(
+          /^\{STEAM_APP_IMAGE\}\/extras\//,
+          "",
+        );
       }
       function _(_) {
         return `{STEAM_APP_IMAGE}/extras/${_}`;
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2072,7 +2648,7 @@
             };
           })(_, _);
         return (
-          _ && (_ += (0, _._)(_, _)),
+          "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_, _)),
           _.content.forEach((_) => {
             ([_, _] = _(_, _, _.marks, _)),
               ([_, _] = (function (_, _, _, _) {
@@ -2096,7 +2672,7 @@
                   : (_ += _(_, _, _, _));
           }),
           ([_] = _(_, _, _, _)),
-          _ && (_ += (0, _._)(_)),
+          "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_)),
           _
         );
       }
@@ -2206,7 +2782,7 @@
               ((this.m_state = _.reconfigure({
                 plugins: [..._.plugins, _],
               })),
-              this.m_view?.updateState(_)),
+              this.m_view?.updateState(this.m_state)),
             () => {
               const _ = this.m_view ? this.m_view.state : this.m_state;
               (this.m_state = _.reconfigure({
@@ -2384,6 +2960,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2896,6 +3473,7 @@
             refOnUpdate: _,
             refView: _,
             bSpellcheckEnabled: _ = !0,
+            bSingleLine: _,
             panelProps: _,
             children: _,
           } = _,
@@ -2967,6 +3545,7 @@
           _.createElement(_._, {
             refOnUpdate: _,
             schema: _.pm_schema,
+            bSingleLine: _,
           }),
           _.createElement(_, {
             parser: _,
@@ -3009,7 +3588,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             closeModal: _,
@@ -3164,6 +3744,153 @@
       });
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            schema: _,
+            strColor: __webpack_require__,
+            bIsUpdate: _,
+            strTargetText: _,
+            addtlAttrs: _,
+            addtlAttrsValues: _,
+            closeModal: _,
+            view: _,
+            from: _,
+            _: _,
+          } = _,
+          [_, _] = _.useState(__webpack_require__),
+          _ = _.useRef(null),
+          [_, _] = _.useState(_);
+        _.useLayoutEffect(() => {
+          _.current, _.current.focus();
+        }, []);
+        const _ = (0, _._)("#FormattingToolbar_Color"),
+          _ = _
+            ? (0, _._)("#Button_Save")
+            : (0, _._)("#FormattingToolbar_Color");
+        return _.createElement(
+          _,
+          {
+            onOK: () => {
+              let _ = _.state._;
+              const _ = {
+                color: _,
+              };
+              for (const _ in _) _[_] = _[_];
+              const _ = _.text(_, [_.marks.color.create(_)]);
+              (_ = _.replaceRangeWith(_, _, _)),
+                (_ = _.setSelection(
+                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
+                )),
+                _.dispatch(_),
+                _();
+            },
+            closeModal: _,
+            strTitle: _,
+            strOKText: _,
+            bOKDisabled: 0 == _.length,
+          },
+          _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
+          _.createElement("input", {
+            type: "color",
+            ref: _,
+            value: _,
+            onChange: (_) => _(_.currentTarget.value),
+          }),
+        );
+      });
+      function _(_) {
+        const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
+          { callbacks: _, view: _ } = (0, _._)(),
+          [_, _] = _.useState(() => (0, _._)(_.state, _.marks.link)),
+          _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
+        (0, _._)(_, _);
+        const [_, _] = (function (_, _) {
+          const [__webpack_require__, _] = _.useState(void 0),
+            _ = _.useCallback(
+              (_) => {
+                const _ = _.state.selection;
+                let _ = "",
+                  _ = "",
+                  { from: _, _: _ } = _;
+                const _ = (0, _._)(_.state, _.marks.color, _.$from),
+                  _ = !!_;
+                _
+                  ? ((_ = _.mark.attrs.color),
+                    _.empty
+                      ? ((_ = _.slice.content.textBetween(
+                          0,
+                          _.slice.content.size,
+                        )),
+                        (_ = _.from),
+                        (_ = _._))
+                      : ((_ = Math.max(_.from, _.from)),
+                        (_ = Math.min(_._, _._)),
+                        (_ = _.slice.content.textBetween(
+                          _ - _.from,
+                          _ - _.from,
+                        ))))
+                  : _.state.selection.empty ||
+                    (_ = _.state.doc.cut(
+                      _.state.selection.from,
+                      _.state.selection._,
+                    ).textContent);
+                let _ = {};
+                if (_)
+                  for (const _ in _) {
+                    const _ = _[_],
+                      _ = _
+                        ? __webpack_require__.fnReadValue(_.mark)
+                        : _.defaultValue;
+                    _[_] = _;
+                  }
+                _({
+                  view: _,
+                  strColor: _,
+                  strTargetText: _,
+                  bIsUpdate: _,
+                  addtlAttrs: _,
+                  addtlAttrsValues: _,
+                  from: _,
+                  _: _,
+                });
+              },
+              [_, _.marks.color],
+            ),
+            _ = __webpack_require__?.view,
+            _ = _.useCallback(() => {
+              window.setTimeout(() => _.focus(), 1), _(void 0);
+            }, [_]);
+          return [
+            _,
+            __webpack_require__ &&
+              _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_, {
+                  schema: _,
+                  closeModal: _,
+                  ...__webpack_require__,
+                }),
+              ),
+          ];
+        })(_, __webpack_require__);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _,
+          _.createElement(
+            _._,
+            {
+              onClick: () => _(_),
+              toggled: _,
+              tooltip: "#FormattingToolbar_Color",
+            },
+            _,
+          ),
+        );
+      }
       function _() {
         return _.createElement(
           _.Fragment,
@@ -3240,6 +3967,14 @@
                 mark: _.marks.code,
               },
               _.createElement(_.bmT, null),
+            ),
+          "color" in _.marks &&
+            _.createElement(
+              _,
+              {
+                schema: _,
+              },
+              _.createElement(_.r7n, null),
             ),
         );
       }
@@ -3576,9 +4311,14 @@
             const _ = (0, _._)(),
               _ = _.useRef(_);
             _.current = _;
-            const _ = _.useRef(void 0);
+            const { type: __webpack_require__, _: _ } = (0, _._)(),
+              _ = _.useRef(void 0);
             if (!_.current) {
-              const _ = (_) => _.current.find((_) => _.name === _)?.url;
+              const _ = (_) => {
+                if (0 != __webpack_require__) return null;
+                const _ = _.current.find((_) => (0, _._)(_) === _);
+                return (0, _._)(_, _);
+              };
               _.current =
                 ((_ = _),
                 new _({
@@ -3932,366 +4672,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { rgUploads: _ } = _,
-          _ = _.useMemo(() => new Set(), []),
-          _ = _.findIndex(({ _: _ }) => !__webpack_require__.has(_)),
-          _ = (0, _._)();
-        return _.map(({ _: _, upload: _ }, _) =>
-          _.createElement(_, {
-            key: _,
-            active: _ == _,
-            upload: _,
-            anyUploadsInProgress: _.size > 0,
-            fnUploadPrepared: () =>
-              ((_) => {
-                __webpack_require__.add(_), _();
-              })(_),
-            fnUploadComplete: () =>
-              ((_) => {
-                __webpack_require__.delete(_), _();
-              })(_),
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            upload: _,
-            active: __webpack_require__,
-            anyUploadsInProgress: _,
-            fnUploadPrepared: _,
-            fnUploadComplete: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
-        _.useEffect(() => {
-          __webpack_require__ &&
-            (_(_.file) ||
-              _(
-                (0, _._)(
-                  "#StoreAdmin_UploadError_UnsupportedFileType",
-                  _.file.name,
-                ),
-              )),
-            _(__webpack_require__);
-        }, [__webpack_require__, _]);
-        const [_, _] = _.useState(
-            () => "dev" == _._.WEB_UNIVERSE && 2 == _._.EUNIVERSE,
-          ),
-          { mutate: _, isPending: _ } = (function (_, _, _, _) {
-            const _ = _("ajaxmodifyextraassets"),
-              { _: _, type: _ } = _(),
-              _ = _();
-            return (0, _._)({
-              mutationFn: async (_) => {
-                const _ = new FormData(),
-                  _ = new File([_.file], _, {
-                    type: _.file.type,
-                  });
-                __webpack_require__.append("sessionid", _._.SESSIONID),
-                  __webpack_require__.append("action", "upload"),
-                  __webpack_require__.append("extra_asset", _);
-                let _ = _;
-                _ &&
-                  (__webpack_require__.append("ownertype", (0, _._)(_)),
-                  __webpack_require__.append("ownerid", "" + _),
-                  (_ = `${_._.PARTNER_BASE_URL}mediaconvert/ajaxconvertmedia`));
-                const _ = await fetch(_, {
-                    method: "post",
-                    body: _,
-                  }),
-                  _ = await _.json();
-                if (!_._) throw _.errors?.join("\n") || new Error();
-                return _;
-              },
-              onSuccess: (_, _) => {
-                const _ = _.rgExtraAssets;
-                (0, _._)(
-                  _ && _.length,
-                  "Did not get back updated list of extra assets after uploading a new one",
-                ),
-                  _ && _.length && _(_),
-                  _.onComplete((0, _._)(_));
-              },
-              onError: (_) => {
-                __webpack_require__(
-                  "string" == typeof _
-                    ? _
-                    : (0, _._)("#StoreAdmin_UploadError_Generic", _.message),
-                );
-              },
-              onSettled: () => {
-                _();
-              },
-            });
-          })(_, _, _, _);
-        return _
-          ? _
-            ? _.createElement(
-                _._,
-                {
-                  active: !0,
-                },
-                _.createElement(_._, {
-                  bAlertDialog: !0,
-                  strTitle: (0, _._)("#Error_Generic"),
-                  strDescription: _,
-                  strOKButtonText: (0, _._)("#Button_OK"),
-                  closeModal: () => _.onCancel(),
-                }),
-              )
-            : _.createElement(_, {
-                upload: _,
-                isUploading: _,
-                doUpload: (_) => {
-                  _(), _(_);
-                },
-                bUseMediaConvertPipeline: _,
-                setUseMediaConvertPipeline: _,
-                anyUploadsInProgress: _,
-              })
-          : null;
-      }
-      function _(_) {
-        const {
-            upload: _,
-            isUploading: __webpack_require__,
-            doUpload: _,
-            bUseMediaConvertPipeline: _,
-            setUseMediaConvertPipeline: _,
-            anyUploadsInProgress: _,
-          } = _,
-          { file: _, onCancel: _ } = _,
-          { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
-          _ = _.useCallback(
-            (_) => {
-              if (!_) return "";
-              const _ = _(_);
-              return _.replace(_, "_").replace(
-                /(?:\.[a-zA-Z]{3,4})?$/,
-                `.${_}`,
-              );
-            },
-            [_, _],
-          ),
-          [_, _] = _.useState(() => _(_.name)),
-          _ = _.useMemo(() => _(_), [_, _]),
-          [_, _] = _.useState(void 0);
-        _.useEffect(() => {
-          _(() => {
-            if (!_) return;
-            const _ = (0, _._)(_);
-            return _.find((_) => _.name == _);
-          });
-        }, [_, _]);
-        let _ =
-          (function (_) {
-            return _ && _.length > 0;
-          })(_) && !__webpack_require__
-            ? () => _(_)
-            : void 0;
-        const _ = _.useCallback(() => {
-          _.onComplete((0, _._)(_));
-        }, [_, _]);
-        let _ = _
-          ? (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
-          : (0, _._)("#Button_Upload");
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-            onDismiss: _,
-            className: _.UploadModal,
-          },
-          _.createElement(
-            _._,
-            {
-              onSubmit: (_) => {
-                _.preventDefault(), _ && _();
-              },
-            },
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                file: _,
-                duplicate: _,
-                bShowThrobber: __webpack_require__,
-                onUseDuplicate: _,
-              }),
-              _.createElement(_, {
-                name: _,
-                validatedName: _,
-                setName: _,
-                disabled: __webpack_require__,
-              }),
-              _.createElement(_, {
-                bEnabled: _,
-                setEnabled: _,
-              }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                onOK: _,
-                strOKText: _,
-                bOKDisabled: !_,
-                onCancel: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { bEnabled: _, setEnabled: __webpack_require__ } = _;
-        return _._.is_support
-          ? _.createElement(
-              "div",
-              {
-                className: _().ValveOnlyBackground,
-              },
-              _.createElement(_._, {
-                label: "Testing new Media Conversion Pipeline",
-                checked: _,
-                onChange: (_) => __webpack_require__(_),
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const {
-            file: _,
-            duplicate: __webpack_require__,
-            bShowThrobber: _,
-            onUseDuplicate: _,
-          } = _,
-          _ = _.useMemo(() => URL.createObjectURL(_), [_]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ &&
-            _.createElement(
-              "div",
-              {
-                className: _.DuplicateMessage,
-              },
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_FileNameInuse"),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.SideBySideComparison, _ && _.Loading),
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ThrobberContainer,
-                },
-                _.createElement(_._, {
-                  position: "center",
-                  size: "xlarge",
-                }),
-              ),
-            __webpack_require__ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.ImgPreviewContainer,
-                    _.DuplicatePreview,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ImageLabel,
-                  },
-                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Original"),
-                ),
-                _.createElement("img", {
-                  src: __webpack_require__.url,
-                  className: _.ImgPreview,
-                }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ImgPreviewContainer,
-              },
-              __webpack_require__ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ImageLabel,
-                  },
-                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Replacement"),
-                ),
-              _.createElement("img", {
-                src: _,
-                className: _.ImgPreview,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            name: _,
-            setName: __webpack_require__,
-            validatedName: _,
-            disabled: _,
-          } = _,
-          _ = _.useCallback((_) => _ && _.element.select(), []);
-        return _.createElement(
-          "div",
-          {
-            className: _.NameEntry,
-          },
-          _.createElement(_._, {
-            value: _,
-            onChange: (_) => __webpack_require__(_.currentTarget.value),
-            label: (0, _._)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
-            ref: _,
-            disabled: _,
-            description: (0, _._)(
-              "#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename",
-              _.createElement("b", null, _),
-            ),
-          }),
-        );
-      }
-      function _(_) {
-        switch (_.type) {
-          case "image/jpeg":
-            return "jpg";
-          case "image/png":
-            return "png";
-          case "image/gif":
-            return "gif";
-          default:
-            return;
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
@@ -4321,7 +4701,7 @@
             _.createElement(
               _._,
               null,
-              _.createElement(_, {
+              _.createElement(_._, {
                 rgUploads: __webpack_require__,
               }),
               _,
@@ -4364,6 +4744,20 @@
                 )
               );
           }, [_]),
+          { bExtraAssetsV2: _, setExtraAssetsV2: _ } = (function () {
+            const _ = "storeUseExtraAssetsV2",
+              [_, __webpack_require__] = _.useState(
+                () => !!localStorage.getItem(_),
+              ),
+              _ = _.useCallback((_) => {
+                _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
+                  __webpack_require__(_);
+              }, []);
+            return {
+              bExtraAssetsV2: _,
+              setExtraAssetsV2: _,
+            };
+          })(),
           _ = _.useMemo(
             () => ({
               rgExtraAssetsData: {
@@ -4375,9 +4769,10 @@
               onExtraAssetsUpdated: _,
               storeItemID: _?.nStoreItemID,
               eStoreItemType: _?.eStoreItemType,
-              bExtraAssetsV2: _?.bExtraAssetsV2,
+              bExtraAssetsV2: _,
+              setExtraAssetsV2: _,
             }),
-            [_, _, _, __webpack_require__],
+            [_, _, _, __webpack_require__, _, _],
           );
         return _
           ? _.createElement(
@@ -4415,13 +4810,19 @@
         return _.useContext(_).onExtraAssetsUpdated;
       }
       function _() {
+        const _ = _.useContext(_),
+          _ = "dev" == _._.WEB_UNIVERSE && 2 == _._.EUNIVERSE;
+        return {
+          bExtraAssetsV2: _.bExtraAssetsV2 && _,
+          bExtraAssetsV2Allowed: _,
+          setExtraAssetsV2: _.setExtraAssetsV2,
+        };
+      }
+      function _() {
         return _.useContext(_).bUseRichEditor;
       }
       function _() {
         return _.useContext(_).setUseRichEditor;
-      }
-      function _() {
-        return _.useContext(_).bExtraAssetsV2;
       }
       const _ = _.createContext(void 0),
         _ = _.createContext(void 0);
@@ -5952,7 +6353,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.resolve().then(
-          __webpack_require__.bind(__webpack_require__, 83142),
+          __webpack_require__.bind(__webpack_require__, 47693),
         ),
       );
       function _(_) {
@@ -17205,48 +17606,52 @@
           {
             className: _().CreatorNameCtn,
           },
-          _.createElement(_, {
-            pageLink: _,
-            clanInfo: _,
-          }),
-          (0, _._)(
-            "#AppLanding_CreatorLinked",
-            _.createElement(
-              "div",
-              {
-                className: _().CreatorCtn,
-              },
+          _.createElement(
+            "div",
+            {
+              className: _().CreatorCtn,
+            },
+            (0, _._)(
+              "#AppLanding_CreatorLinked",
               _.createElement(
-                _._,
-                {
-                  href: _,
-                  target: "_blank",
-                },
-                _?.group_name,
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().HoverCtn,
-                  hoverProps: _,
-                  hoverContent: _.createElement(_._, {
-                    clanInfo: _,
-                  }),
-                },
+                _.Fragment,
+                null,
                 _.createElement(
                   _._,
                   {
                     href: _,
                     target: "_blank",
                   },
-                  _.createElement("img", {
-                    className: _().Avatar,
-                    src: _?.avatar_full_url,
-                  }),
+                  _?.group_name,
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _().HoverCtn,
+                    hoverProps: _,
+                    hoverContent: _.createElement(_._, {
+                      clanInfo: _,
+                    }),
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      href: _,
+                      target: "_blank",
+                    },
+                    _.createElement("img", {
+                      className: _().Avatar,
+                      src: _?.avatar_full_url,
+                    }),
+                  ),
                 ),
               ),
             ),
           ),
+          _.createElement(_, {
+            pageLink: _,
+            clanInfo: _,
+          }),
         );
       }
       const _ = _.lazy(async () => ({
@@ -17450,6 +17855,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      const _ = new _._({
+          props: {
+            handlePaste(_, _, _) {
+              const _ = _.clipboardData
+                ?.getData("text/plain")
+                .replace(/\n/g, " ");
+              if (_) {
+                const _ = _.state._.insertText(_);
+                _.dispatch(_);
+              }
+              return !0;
+            },
+          },
+        }),
+        _ = {
+          Enter: () => !0,
+          "Shift-Enter": () => !0,
+          "Mod-Enter": () => !0,
+        };
       const _ = _.createContext(void 0);
       function _(_) {
         const { view: _, pmState: __webpack_require__, children: _ } = _,
@@ -17469,7 +17893,11 @@
         );
       }
       const _ = _.memo(function (_) {
-        const { schema: _, refOnUpdate: __webpack_require__ } = _;
+        const {
+          schema: _,
+          refOnUpdate: __webpack_require__,
+          bSingleLine: _,
+        } = _;
         return (
           _(
             _.useMemo(
@@ -17485,6 +17913,8 @@
               [__webpack_require__],
             ),
           ),
+          _(_.useMemo(() => (0, _._)(_ ? _ : {}), [_])),
+          _(_ ? _ : void 0),
           _(_.useMemo(() => (0, _._)(), [])),
           _(
             _.useMemo(
@@ -17581,10 +18011,13 @@
                           _.childCount + _.attrs.order == parseInt(_[1]),
                       ),
                       (0, _._)(/^\s*([-+*])\s$/, _.bullet_list),
-                      (0, _._)(/\*([^*]+)\*/, __webpack_require__.strong),
-                      (0, _._)(/_([^_]+)_/, __webpack_require__.italic),
-                      (0, _._)(/~([^~]+)~/, __webpack_require__.strike),
-                      (0, _._)(/`([^`]+)`/, __webpack_require__.code),
+                      (0, _._)(
+                        /(?<!\w)\*([^*]+)\*/,
+                        __webpack_require__.strong,
+                      ),
+                      (0, _._)(/(?<!\w)_([^_]+)_/, __webpack_require__.italic),
+                      (0, _._)(/(?<!\w)~([^~]+)~/, __webpack_require__.strike),
+                      (0, _._)(/(?<!\w)`([^`]+)`/, __webpack_require__.code),
                       (0, _._)(/^```$/, _.code_block),
                       (0, _._)(/^(#{1,5})\s$/, _.heading, (_) => ({
                         level: _[1].length,
@@ -17623,6 +18056,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17636,6 +18070,26 @@
         return _
           ? !!_.isInSet(_.storedMarks || _.marks())
           : _.doc.rangeHasMark(__webpack_require__, _, _);
+      }
+      function _(_, _, _) {
+        const { parent: _ } = _,
+          _ = _.childAfter(_.parentOffset),
+          _ = _.node?.marks.find((_) => _.type == _);
+        if (!_) return;
+        let _ = __webpack_require__.index() - 1,
+          _ = __webpack_require__.start() + _.offset;
+        for (; _ >= 0 && _.isInSet(_.child(_).marks); )
+          (_ -= _.child(_).nodeSize), (_ -= 1);
+        let _ = __webpack_require__.index() + 1,
+          _ = __webpack_require__.start() + _.offset + _.node.nodeSize;
+        for (; _ < _.childCount && _.isInSet(_.child(_).marks); )
+          (_ += _.child(_).nodeSize), (_ += 1);
+        return {
+          from: _,
+          _: _,
+          slice: _.doc.slice(_, _),
+          mark: _,
+        };
       }
       function _(_, _, _) {
         let { $from: _, _: _, node: _ } = _.selection;
@@ -18349,7 +18803,7 @@
                 _,
               ),
               onMouseDown: (_) => {
-                _.preventDefault(), _();
+                0 === _.button && (_.preventDefault(), _());
               },
               disabled: !0 === _,
             },

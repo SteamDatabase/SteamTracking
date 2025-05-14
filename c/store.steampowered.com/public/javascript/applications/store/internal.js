@@ -2407,6 +2407,11 @@
                     _: _._.readInt64String,
                     _: _._.writeInt64String,
                   },
+                  played_since: {
+                    _: 23,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
