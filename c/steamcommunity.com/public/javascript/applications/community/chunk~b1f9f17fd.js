@@ -18,6 +18,7 @@
         GridRow: "_1R9RAGwHaeg9PikX-1YGf0",
         GridBoxWrapper: "kDK8ylezM-FNeb2p15WPz",
         GridBox: "UC6fFaIO4-KZ8gQWNhwBX",
+        LivePreview: "_1Tjic2C_SLGyIDAwHtwxA",
         hovered: "_3WTwxmpSsiwXq-PVzUEZjd",
         dragging: "_21mLYnzNyJLPo9LhjQlxq",
         selected: "yA0DJuY9LyL4Vlm0RfG0R",
@@ -29,6 +30,7 @@
         HoverCtn: "_2DgaFcFdPbMXcKT-znYCwZ",
         ButtonRow: "_1hsSXI1sMHoUCAQSzBn7J4",
         Icon: "_1wV63RZbqVCR6k5P6_yZJd",
+        JumpToButton: "_2AtD8HE2zXFC7DgOA06Pmi",
         ValveOnlyBackground: "_37cDFwlFgXa9-uyD9RGg25",
         DebugButton: "_1QGR35GOY0fxdUGyh4HQwW",
         InternalTitleCtn: "_35hmWHGmhgEaHZCtZS_s_N",
@@ -1348,6 +1350,9 @@
       module.exports = {
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
+        LivePreview: "_2WX2HLoszD567aFrCJKkYG",
+        JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
+        JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
         container: "_3efSO1GodU-7Xw80LAUHBa",
         Media: "_2NeNe0b0Hfv84zxtiUPGOj",
         HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
@@ -25091,6 +25096,7 @@
           ),
           _.createElement(_, {
             rgMediaRows: _,
+            sectionID: _.unique_id,
             fnSelect: _,
             selectedMedia: _,
             fnUpdateColumnsOfMediaRow: (_, _) => {
@@ -25192,7 +25198,11 @@
         );
       }
       function _(_) {
-        const { rgMediaRows: _, fnUpdateMediaRows: __webpack_require__ } = _,
+        const {
+            sectionID: _,
+            rgMediaRows: __webpack_require__,
+            fnUpdateMediaRows: _,
+          } = _,
           [_, _] = (0, _.useState)(null),
           _ = (0, _.useCallback)((_) => {
             const [_, __webpack_require__] = _.split("-").map(Number);
@@ -25223,17 +25233,17 @@
                 (console.log("adil", "drag end"),
                 _ && _ && _.droppableId != _.droppableId)
               ) {
-                const _ = [..._],
+                const _ = [...__webpack_require__],
                   { row: _, col: _ } = _(_.droppableId),
                   { row: _, col: _ } = _(_.droppableId),
-                  _ = _[_].media_columns[_];
+                  _ = __webpack_require__[_].media_columns[_];
                 (_[_].media_columns[_] = _[_].media_columns[_]),
                   (_[_].media_columns[_] = _),
-                  __webpack_require__(_);
+                  _(_);
               }
               _(null);
             },
-            [_, __webpack_require__, _],
+            [_, _, __webpack_require__],
           );
         let _ = 0;
         return _.createElement(
@@ -25247,13 +25257,14 @@
             {
               className: _().GridContainer,
             },
-            _.map((_, _) => {
+            __webpack_require__.map((_, _) => {
               const _ = _;
               return (
                 (_ += _),
                 _.createElement(_, {
                   key: "boxcol_" + _,
                   ..._,
+                  sectionID: _,
                   rowIndex: _,
                   mediaRow: _,
                   hovered: _,
@@ -25266,15 +25277,16 @@
       }
       function _(_) {
         const {
-            mediaRow: _,
-            rowIndex: __webpack_require__,
+            sectionID: _,
+            mediaRow: __webpack_require__,
+            rowIndex: _,
             fnSelect: _,
             fnUpdateColumnsOfMediaRow: _,
             selectedMedia: _,
             hovered: _,
             globalIndex: _,
           } = _,
-          _ = (0, _._)(() => _.media_columns);
+          _ = (0, _._)(() => __webpack_require__.media_columns);
         let _ = _;
         return _.createElement(
           "div",
@@ -25282,10 +25294,10 @@
             className: _().GridRow,
           },
           _.map((_, _) => {
-            const _ = `${__webpack_require__}-${_}`,
+            const _ = `${_}-${_}`,
               _ = _++,
               _ =
-                (null == _ ? void 0 : _.row) === __webpack_require__ &&
+                (null == _ ? void 0 : _.row) === _ &&
                 (null == _ ? void 0 : _.col) === _;
             return _.createElement(
               _._,
@@ -25309,37 +25321,19 @@
                       key: _,
                     },
                     (_, _) =>
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)({
-                            [_().GridBox]: !0,
-                            [_().hovered]: _,
-                            [_().dragging]: _.isDragging,
-                            [_().selected]:
-                              _ && _.row == __webpack_require__ && _.col == _,
-                            [_().HoverCtn]: !0,
-                          }),
-                          ref: _.innerRef,
-                          ..._.draggableProps,
-                          style: {
-                            ..._.draggableProps.style,
-                          },
-                          onClick: () =>
-                            _({
-                              row: __webpack_require__,
-                              col: _,
-                            }),
-                          onDoubleClick: () => _(null),
-                        },
-                        _.createElement(_, {
-                          mediaRow: _,
-                          nRowIndex: __webpack_require__,
-                          nColumnIndex: _,
-                          fnUpdateColumnsOfMediaRow: _,
-                          draggableProps: _.dragHandleProps,
-                        }),
-                      ),
+                      _.createElement(_, {
+                        sectionID: _,
+                        subSectionID: _.unique_id,
+                        isHovered: _,
+                        provided: _,
+                        snapshot: _,
+                        rowIndex: _,
+                        colIndex: _,
+                        selectedMedia: _,
+                        fnSelect: _,
+                        mediaRow: __webpack_require__,
+                        fnUpdateColumnsOfMediaRow: _,
+                      }),
                   ),
                   _.createElement(
                     "div",
@@ -25350,6 +25344,70 @@
                   ),
                 ),
             );
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            sectionID: _,
+            subSectionID: __webpack_require__,
+            provided: _,
+            snapshot: _,
+            isHovered: _,
+            rowIndex: _,
+            colIndex: _,
+            selectedMedia: _,
+            fnSelect: _,
+            mediaRow: _,
+            fnUpdateColumnsOfMediaRow: _,
+          } = _,
+          _ = _.useRef(),
+          _ = (0, _._)(_),
+          { bHighlighted: _, fnJumpTo: _ } = (function (_, _, _) {
+            _.useEffect(() => {
+              _._.Get().SetMouseOverSubsection(_, _);
+            }, [_, _]);
+            const [_, _] = (0, _._)(() => [
+                _._.Get().GetMouseOverSectionID(),
+                _._.Get().GetMouseOverSubsectionID(),
+              ]),
+              _ = () => _._.Get().JumpToSubsection(_, _);
+            return {
+              bHighlighted: _ == _ && _ == _,
+              fnJumpTo: _,
+            };
+          })(_, __webpack_require__, _),
+          _ = (0, _._)(_.innerRef, _);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().GridBox]: !0,
+              [_().LivePreview]: _,
+              [_().hovered]: _,
+              [_().dragging]: _.isDragging,
+              [_().selected]: _ && _.row == _ && _.col == _,
+              [_().HoverCtn]: !0,
+            }),
+            ref: _,
+            ..._.draggableProps,
+            style: {
+              ..._.draggableProps.style,
+            },
+            onClick: () =>
+              _({
+                row: _,
+                col: _,
+              }),
+            onDoubleClick: () => _(null),
+          },
+          _.createElement(_, {
+            mediaRow: _,
+            nRowIndex: _,
+            nColumnIndex: _,
+            fnUpdateColumnsOfMediaRow: _,
+            draggableProps: _.dragHandleProps,
+            fnJumpToSubsection: _,
           }),
         );
       }
@@ -25367,11 +25425,13 @@
             fnUpdateColumnsOfMediaRow: _,
             nRowIndex: _,
             draggableProps: _,
+            fnJumpToSubsection: _,
           } = _,
           [_, _] = (0, _._)(() => [
             __webpack_require__.media_columns.length < _,
             _(__webpack_require__.media_columns[_], _, _),
-          ]);
+          ]),
+          _ = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
@@ -25411,6 +25471,21 @@
             _.createElement(_, {
               ..._,
             }),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_Debug_LivePreview_GoTo_ttip"),
+                },
+                _.createElement(
+                  "button",
+                  {
+                    className: _().JumpToButton,
+                    onClick: _,
+                  },
+                  (0, _._)("#Sale_Debug_LivePreview_GoTo"),
+                ),
+              ),
             _.createElement(
               _._,
               {
@@ -28588,6 +28663,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return _.disable_background
           ? {
@@ -28650,43 +28726,19 @@
           _ = ((_ = !0), (0, _._)((0, _._)(__webpack_require__), _));
         var _;
         const _ = _.useRef(),
-          _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(!1);
-            return (
-              _.useEffect(() => {
-                const _ = (_) => {
-                  var _;
-                  const _ =
-                    null === (_ = _.current) || void 0 === _
-                      ? void 0
-                      : _.contains(_.target);
-                  __webpack_require__(_);
-                };
-                return (
-                  window.addEventListener("pointermove", _),
-                  () => window.removeEventListener("pointermove", _)
-                );
-              }, [_]),
-              _
-            );
-          })(_),
+          _ = (0, _._)(_),
           [_, _] = _.useState(!1),
-          {
-            bLivePreviewConnected: _,
-            nActiveLivePreviewSection: _,
-            fnJumpTo: _,
-          } = (function (_, _, _) {
-            const _ = (0, _._)();
+          _ = (0, _._)(),
+          { bHighlighted: _, fnJumpTo: _ } = (function (_, _, _) {
             _.useEffect(() => {
-              _._.Get().SetMouseOverSection(_ ? _ : void 0);
+              _._.Get().SetMouseOverSection(_, _);
             }, [_, _]);
             const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
               _ = () => _._.Get().JumpToSection(_);
             return (
               (0, _._)((_) => _ == _ && (__webpack_require__(), !0)),
               {
-                bLivePreviewConnected: _,
-                nActiveLivePreviewSection: _,
+                bHighlighted: _ == _,
                 fnJumpTo: _,
               }
             );
@@ -29051,7 +29103,7 @@
                 className: (0, _._)({
                   [_.SaleSection]: !0,
                   [_.InEditor]: !0,
-                  [_.LivePreview]: __webpack_require__.unique_id == _,
+                  [_.LivePreview]: _,
                   [_.JumpedTo]: _,
                   [_.Expanded]: !_,
                 }),
@@ -52035,7 +52087,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         _.useEffect(() => {
-          _._.Get().SetMouseOverSection(_ ? _ : void 0);
+          _._.Get().SetMouseOverSection(_, _);
         }, [_, _]);
         const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
           _ = _ && _ == _,
@@ -52091,6 +52143,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -52111,8 +52164,10 @@
         }
         constructor() {
           (this.m_eventModelJson = void 0),
-            (this.m_nMouseOverSectionID = void 0),
+            (this.m_setMouseOverSectionID = _._.set()),
+            (this.m_setMouseOverSubsectionID = _._.set()),
             (this.m_jumpToSection = void 0),
+            (this.m_jumpToSubsection = void 0),
             (0, _._)(this),
             window.opener &&
               ((this.m_sParentOrigin = (0, _._)(
@@ -52142,25 +52197,47 @@
           return this.m_eventModelJson;
         }
         GetMouseOverSectionID() {
-          return this.m_nMouseOverSectionID;
+          return this.m_setMouseOverSectionID.size > 0
+            ? this.m_setMouseOverSectionID.values().next().value
+            : void 0;
+        }
+        GetMouseOverSubsectionID() {
+          return this.m_setMouseOverSubsectionID.size > 0
+            ? this.m_setMouseOverSubsectionID.values().next().value
+            : void 0;
         }
         GetJumpToSectionID() {
           return this.m_jumpToSection;
         }
+        GetJumpToSubsectionIDs() {
+          return this.m_jumpToSubsection;
+        }
         ClearJumpToSectionID() {
           (0, _._)(() => (this.m_jumpToSection = void 0));
+        }
+        ClearJumpToSubectionID() {
+          (0, _._)(() => (this.m_jumpToSubsection = void 0));
         }
         PostMessage(_) {
           window.opener &&
             this.m_sParentOrigin &&
             window.opener.postMessage(_, this.m_sParentOrigin);
         }
-        SetMouseOverSection(_) {
+        SetMouseOverSection(_, _) {
           if (!this.BIsConnected()) return;
-          this.m_nLastMouseOverSection = _;
           const _ = {
             message: "PartnerEventEditor_MouseOverViewSection",
-            nSectionID: this.m_nLastMouseOverSection,
+            nSectionID: _,
+            bMouseOver: _,
+          };
+          this.PostMessage(_);
+        }
+        SetMouseOverSubsection(_, _) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_MouseOverViewSubsection",
+            strSubsectionID: _,
+            bMouseOver: _,
           };
           this.PostMessage(_);
         }
@@ -52186,13 +52263,41 @@
               case "PartnerEventEditor_MouseOverEditorSection":
                 if ("nSectionID" in _) {
                   const _ = _;
-                  (0, _._)(() => (this.m_nMouseOverSectionID = _.nSectionID));
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSectionID.add(_.nSectionID)
+                      : this.m_setMouseOverSectionID.delete(_.nSectionID);
+                  });
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSubsection":
+                if ("strSubsectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSubsectionID.add(_.strSubsectionID)
+                      : this.m_setMouseOverSubsectionID.delete(
+                          _.strSubsectionID,
+                        );
+                  });
                 }
                 break;
               case "PartnerEventEditor_JumpToEditorSection":
                 if ("nSectionID" in _) {
                   const _ = _;
                   (0, _._)(() => (this.m_jumpToSection = _.nSectionID));
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSubection":
+                if ("strSubsectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    (this.m_jumpToSection = _.nSectionID),
+                      (this.m_jumpToSubsection = {
+                        nSectionID: _.nSectionID,
+                        strSubsectionID: _.strSubsectionID,
+                      });
+                  });
                 }
             }
         }
@@ -52204,9 +52309,19 @@
           _(_) && _.Get().ClearJumpToSectionID();
         }, [_, _]);
       }
+      function _(_) {
+        const _ = (0, _._)(() => _.Get().GetJumpToSubsectionIDs());
+        _.useEffect(() => {
+          if (!_.Get().BIsConnected() || !_) return;
+          _(_.nSectionID, _.strSubsectionID) &&
+            _.Get().ClearJumpToSubectionID();
+        }, [_, _]);
+      }
       (0, _._)([_._], _.prototype, "m_eventModelJson", void 0),
-        (0, _._)([_._], _.prototype, "m_nMouseOverSectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSubsectionID", void 0),
         (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
+        (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
         (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -52236,7 +52351,8 @@
         constructor() {
           (this.m_bReceivedClientReady = !1),
             (this.m_bIsConnected = !1),
-            (this.m_nMouseOverSectionID = void 0),
+            (this.m_setMouseOverSectionID = _._.set()),
+            (this.m_setMouseOverSubsectionID = _._.set()),
             (this.m_jumpToSection = void 0),
             (0, _._)(this),
             window.addEventListener("message", this.HandleMessage),
@@ -52274,7 +52390,14 @@
             (this.m_sPreviewWindowOrigin = _.origin);
         }
         GetMouseOverSectionID() {
-          return this.m_nMouseOverSectionID;
+          return this.m_setMouseOverSectionID.size > 0
+            ? this.m_setMouseOverSectionID.values().next().value
+            : void 0;
+        }
+        GetMouseOverSubsectionID() {
+          return this.m_setMouseOverSubsectionID.size > 0
+            ? this.m_setMouseOverSubsectionID.values().next().value
+            : void 0;
         }
         GetJumpToSectionID() {
           return this.m_jumpToSection;
@@ -52301,12 +52424,21 @@
           };
           this.PostMessage(_);
         }
-        SetMouseOverSection(_) {
+        SetMouseOverSection(_, _) {
           if (!this.BIsConnected()) return;
-          this.m_nLastMouseOverSection = _;
           const _ = {
             message: "PartnerEventEditor_MouseOverEditorSection",
-            nSectionID: this.m_nLastMouseOverSection,
+            nSectionID: _,
+            bMouseOver: _,
+          };
+          this.PostMessage(_);
+        }
+        SetMouseOverSubsection(_, _) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_MouseOverEditorSubsection",
+            strSubsectionID: _,
+            bMouseOver: _,
           };
           this.PostMessage(_);
         }
@@ -52315,6 +52447,15 @@
           const _ = {
             message: "PartnerEventEditor_JumpToEditorSection",
             nSectionID: _,
+          };
+          this.PostMessage(_);
+        }
+        JumpToSubsection(_, _) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_JumpToEditorSubection",
+            nSectionID: _,
+            strSubsectionID: _,
           };
           this.PostMessage(_);
         }
@@ -52337,7 +52478,23 @@
               case "PartnerEventEditor_MouseOverViewSection":
                 if ("nSectionID" in _) {
                   const _ = _;
-                  (0, _._)(() => (this.m_nMouseOverSectionID = _.nSectionID));
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSectionID.add(_.nSectionID)
+                      : this.m_setMouseOverSectionID.delete(_.nSectionID);
+                  });
+                }
+                break;
+              case "PartnerEventEditor_MouseOverViewSubsection":
+                if ("strSubsectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSubsectionID.add(_.strSubsectionID)
+                      : this.m_setMouseOverSubsectionID.delete(
+                          _.strSubsectionID,
+                        );
+                  });
                 }
                 break;
               case "PartnerEventEditor_JumpToViewSection":
@@ -52359,7 +52516,8 @@
         }, [_, _]);
       }
       (0, _._)([_._], _.prototype, "m_bIsConnected", void 0),
-        (0, _._)([_._], _.prototype, "m_nMouseOverSectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSubsectionID", void 0),
         (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
         (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
@@ -77050,38 +77208,39 @@
         );
       }
       function _(_) {
-        const { event: _, language: __webpack_require__, content: _ } = _,
+        const {
+            event: _,
+            section: __webpack_require__,
+            language: _,
+            content: _,
+          } = _,
           [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             var _, _, _, _, _, _, _, _;
-            const _ = _._.GetELanguageFallback(__webpack_require__);
+            const _ = _._.GetELanguageFallback(_);
             return [
               _.display_order || _._.k_HorizontalMediaFirst,
               _.media_type,
               (null === (_ = _.localized_media) || void 0 === _
                 ? void 0
                 : _.length) > 0
-                ? _.localized_media[__webpack_require__] ||
-                  _.localized_media[_] ||
-                  {}
+                ? _.localized_media[_] || _.localized_media[_] || {}
                 : void 0,
               (null === (_ = _.localized_media_title) || void 0 === _
                 ? void 0
                 : _.length) > 0
-                ? _.localized_media_title[__webpack_require__] ||
-                  _.localized_media_title[_] ||
-                  ""
+                ? _.localized_media_title[_] || _.localized_media_title[_] || ""
                 : void 0,
               (null === (_ = _.localized_media_subtitle) || void 0 === _
                 ? void 0
                 : _.length) > 0
-                ? _.localized_media_subtitle[__webpack_require__] ||
+                ? _.localized_media_subtitle[_] ||
                   _.localized_media_subtitle[_] ||
                   ""
                 : void 0,
               (null === (_ = _.localized_media_description) || void 0 === _
                 ? void 0
                 : _.length) > 0
-                ? _.localized_media_description[__webpack_require__] ||
+                ? _.localized_media_description[_] ||
                   _.localized_media_description[_] ||
                   ""
                 : void 0,
@@ -77095,7 +77254,7 @@
               (null === (_ = _.title_media) || void 0 === _
                 ? void 0
                 : _.localized_media.length) > 0
-                ? _.title_media.localized_media[__webpack_require__] ||
+                ? _.title_media.localized_media[_] ||
                   _.title_media.localized_media[_] ||
                   {}
                 : void 0,
@@ -77122,12 +77281,13 @@
         return _.createElement(_, {
           displayOrder: _,
           event: _,
+          section: __webpack_require__,
           title: _,
           subtitle: _,
           description: _,
           media: _,
           mediaType: _,
-          language: __webpack_require__,
+          language: _,
           content: _,
           eTitleDisplaySize: _,
           titleAlign: _,
@@ -77142,32 +77302,65 @@
         });
       }
       function _(_) {
-        const { displayOrder: _, content: __webpack_require__ } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().MediaCtn]: !0,
-              [_().HorizontalMediaFirst]: !_ || _ == _._.k_HorizontalMediaFirst,
-              [_().HorizontalTextFirst]: _ == _._.k_HorizontalTextFirst,
-              [_().VerticalMediaFirst]: _ == _._.k_MediaTitleDesc,
-              [_().VerticalTextFirst]: _ == _._.k_TitleDescMedia,
-            }),
-            style: (0, _._)(__webpack_require__, _),
-          },
-          Boolean(
-            !_ || _ == _._.k_HorizontalMediaFirst || _ == _._.k_MediaTitleDesc,
-          ) &&
-            _.createElement(_, {
-              ..._,
-            }),
-          Boolean(
-            _ == _._.k_HorizontalTextFirst || _ == _._.k_TitleDescMedia,
-          ) &&
-            _.createElement(_, {
-              ..._,
-            }),
+        const { displayOrder: _, content: __webpack_require__, section: _ } = _,
+          _ = (0, _._)(),
+          _ = _.useRef(),
+          _ = (0, _._)(_),
+          { bHighlighted: _ } = (function (_, _, _) {
+            _.useEffect(() => {
+              _._.Get().SetMouseOverSubsection(_, _);
+            }, [_, _]);
+            const [_, _] = (0, _._)(() => [
+              _._.Get().GetMouseOverSectionID(),
+              _._.Get().GetMouseOverSubsectionID(),
+            ]);
+            return {
+              bHighlighted: _ == _ && _ == _,
+            };
+          })(_.unique_id, __webpack_require__.unique_id, _),
+          [_, _] = _.useState(!1);
+        return (
+          (0, _._)((_, _) => {
+            var _;
+            return (
+              _.unique_id == _ &&
+              __webpack_require__.unique_id == _ &&
+              (null === (_ = _.current) || void 0 === _ || _.scrollIntoView(),
+              _(!0),
+              !0)
+            );
+          }),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: (0, _._)({
+                [_().MediaCtn]: !0,
+                [_().LivePreview]: _,
+                [_().JumpedTo]: _,
+                [_().HorizontalMediaFirst]:
+                  !_ || _ == _._.k_HorizontalMediaFirst,
+                [_().HorizontalTextFirst]: _ == _._.k_HorizontalTextFirst,
+                [_().VerticalMediaFirst]: _ == _._.k_MediaTitleDesc,
+                [_().VerticalTextFirst]: _ == _._.k_TitleDescMedia,
+              }),
+              style: (0, _._)(__webpack_require__, _),
+            },
+            Boolean(
+              !_ ||
+                _ == _._.k_HorizontalMediaFirst ||
+                _ == _._.k_MediaTitleDesc,
+            ) &&
+              _.createElement(_, {
+                ..._,
+              }),
+            Boolean(
+              _ == _._.k_HorizontalTextFirst || _ == _._.k_TitleDescMedia,
+            ) &&
+              _.createElement(_, {
+                ..._,
+              }),
+          )
         );
       }
       function _(_) {
@@ -77700,6 +77893,7 @@
                   titleVAlign: _,
                   titleHAlign: _,
                   event: _,
+                  section: __webpack_require__,
                   language: _,
                 }),
               ),

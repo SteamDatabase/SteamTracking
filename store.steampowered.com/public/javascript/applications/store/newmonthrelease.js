@@ -4694,7 +4694,7 @@
                 setControllerCategory: C,
               }));
           }
-          pa.T.Get().BIsConnected() &&
+          pa.TU.Get().BIsConnected() &&
             (g = r.createElement(Ia, { nSectionID: n.unique_id }, g));
           let _ = r.createElement(
             ba,
@@ -4851,13 +4851,13 @@
           [l, o] = r.useState(!1),
           [s, i] = r.useState(!1);
         r.useEffect(() => {
-          pa.T.Get().SetMouseOverSection(l ? t : void 0);
+          pa.TU.Get().SetMouseOverSection(t, l);
         }, [t, l]);
-        const c = (0, n.q3)(() => pa.T.Get().GetMouseOverSectionID()),
+        const c = (0, n.q3)(() => pa.TU.Get().GetMouseOverSectionID()),
           m = t && t == c,
           g = r.useRef();
         return (
-          (0, pa.l)((e) => t == e && (g.current?.scrollIntoView(), i(!0), !0)),
+          (0, pa.lM)((e) => t == e && (g.current?.scrollIntoView(), i(!0), !0)),
           r.createElement(
             "div",
             {
@@ -4882,7 +4882,7 @@
                   "button",
                   {
                     className: k().JumpToButton,
-                    onClick: () => pa.T.Get().JumpToSection(t),
+                    onClick: () => pa.TU.Get().JumpToSection(t),
                   },
                   r.createElement(C.ffu, null),
                 ),

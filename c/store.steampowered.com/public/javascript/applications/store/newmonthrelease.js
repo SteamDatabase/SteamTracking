@@ -5528,7 +5528,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         _.useEffect(() => {
-          _._.Get().SetMouseOverSection(_ ? _ : void 0);
+          _._.Get().SetMouseOverSection(_, _);
         }, [_, _]);
         const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
           _ = _ && _ == _,

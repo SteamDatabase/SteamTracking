@@ -1089,6 +1089,7 @@
                 case 1:
                 case 3:
                 case 10:
+                case 2:
                   return !0;
                 default:
                   return !1;
@@ -2016,7 +2017,7 @@
         );
       }
       function r(e) {
-        return a(e) ? e.name : e.extra_asset_name;
+        if (e) return a(e) ? e.name : e.extra_asset_name;
       }
       function o(e, t, n = "english") {
         if (a(e)) return e.url;
@@ -2031,6 +2032,7 @@
         return n ? n.alt_text : null;
       }
       function s(e) {
+        if (!e) return;
         return (a(e) ? e.name : e.extra_asset_name).replace(
           /^\{STEAM_APP_IMAGE\}\/extras\//,
           "",

@@ -1756,7 +1756,19 @@
             },
             [g, t, l, u, n],
           ),
-          h = o.useMemo(() => (i instanceof Array ? i : [i]), [i]);
+          h = o.useMemo(
+            () =>
+              i instanceof Array
+                ? i
+                : [
+                    o.createElement(
+                      o.Fragment,
+                      { key: "elAdditonalButtons" },
+                      i,
+                    ),
+                  ],
+            [i],
+          );
         return o.createElement(
           _,
           {
@@ -1772,7 +1784,7 @@
               { className: k().UploadPreviewCtn },
               d.map((e) =>
                 o.createElement(x, {
-                  key: "arttabupload_" + e.file + "_" + e.uploadTime,
+                  key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
                   asset: e,
                   supported: n,
                   forceResolution: s,

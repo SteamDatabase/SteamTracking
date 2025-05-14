@@ -2890,7 +2890,8 @@
         return _._.LANGUAGE != _ && _.push(_ + _ + _), _;
       }
       function _(_) {
-        const _ = _.Get();
+        const _ = _.Get(),
+          _ = _._.IN_MOBILE || _._.IN_MOBILE_WEBVIEW;
         return _.createElement(
           "div",
           {
@@ -2909,6 +2910,7 @@
             href:
               _._.HELP_BASE_URL +
               "wizard/HelpChangePassword?redir=store/account/",
+            target: _ ? "_blank" : void 0,
           }),
         );
       }
@@ -2916,7 +2918,8 @@
         const { msgTwoFactorStatus: _ } = _,
           _ = _.Get(),
           _ = _.email_validated,
-          _ = _.steamguard_scheme == _.k_ETwoFactorTokenSteamguardScheme_Email;
+          _ = _.steamguard_scheme == _.k_ETwoFactorTokenSteamguardScheme_Email,
+          _ = _._.IN_MOBILE || _._.IN_MOBILE_WEBVIEW;
         return _.createElement(
           "div",
           {
@@ -2955,6 +2958,7 @@
               href:
                 _._.HELP_BASE_URL +
                 "wizard/HelpChangeEmail?redir=store/account/",
+              target: _ ? "_blank" : void 0,
             }),
             _ &&
               _.createElement(_, {
@@ -3029,7 +3033,7 @@
         );
       }
       function _(_) {
-        const { strLabel: _, href: __webpack_require__ } = _;
+        const { strLabel: _, href: __webpack_require__, target: _ } = _;
         return _.createElement(
           "div",
           null,
@@ -3038,6 +3042,7 @@
             {
               className: _.AccountActionButton,
               href: __webpack_require__,
+              target: _,
             },
             _,
           ),

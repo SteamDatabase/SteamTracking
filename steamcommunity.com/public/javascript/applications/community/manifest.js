@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9743614";
+var CLSTAMP = "9745725";
 (() => {
   "use strict";
   var a,
@@ -364,7 +364,7 @@ var CLSTAMP = "9743614";
         8724: "f81d0b40bbad6f837705",
         8732: "d91d5d41490a3efd5220",
         8749: "01556b38573f3cec0068",
-        8780: "b3e1969af6c893830dd7",
+        8780: "2d8e32187b354cbeeb37",
         8872: "4dc1b61cdc12589ff167",
         8889: "0519d7d321b21a926c50",
         9053: "6944f99be4ce741bac8d",
@@ -456,7 +456,7 @@ var CLSTAMP = "9743614";
         8138: "f13e0aca0599c6553ab2",
         8396: "e53dd7f5e3feba02531b",
         8521: "663ab836630c0f460577",
-        8780: "8281ff275543f3089cc5",
+        8780: "778d9b2c50d3d2975d59",
         9118: "16148154beaf28569e5e",
         9129: "e0ae5f099a75f693e3de",
         9505: "315e2a92e1f1edc406bb",
@@ -485,12 +485,12 @@ var CLSTAMP = "9743614";
             t < l.length;
             t++
           ) {
-            var b = l[t];
+            var r = l[t];
             if (
-              b.getAttribute("src") == a ||
-              b.getAttribute("data-webpack") == o + n
+              r.getAttribute("src") == a ||
+              r.getAttribute("data-webpack") == o + n
             ) {
-              d = b;
+              d = r;
               break;
             }
           }
@@ -502,7 +502,7 @@ var CLSTAMP = "9743614";
           d.setAttribute("data-webpack", o + n),
           (d.src = a)),
           (c[a] = [e]);
-        var r = (e, n) => {
+        var b = (e, n) => {
             (d.onerror = d.onload = null), clearTimeout(h);
             var o = c[a];
             if (
@@ -514,11 +514,11 @@ var CLSTAMP = "9743614";
               return e(n);
           },
           h = setTimeout(
-            r.bind(null, void 0, { type: "timeout", target: d }),
+            b.bind(null, void 0, { type: "timeout", target: d }),
             12e4,
           );
-        (d.onerror = r.bind(null, d.onerror)),
-          (d.onload = r.bind(null, d.onload)),
+        (d.onerror = b.bind(null, d.onerror)),
+          (d.onload = b.bind(null, d.onload)),
           s && document.head.appendChild(d);
       }
     }),

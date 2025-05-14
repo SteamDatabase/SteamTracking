@@ -1160,6 +1160,7 @@
                 case 1:
                 case 3:
                 case 10:
+                case 2:
                   return !0;
                 default:
                   return !1;
@@ -2220,7 +2221,7 @@
         );
       }
       function _(_) {
-        return _(_) ? _.name : _.extra_asset_name;
+        if (_) return _(_) ? _.name : _.extra_asset_name;
       }
       function _(_, _, __webpack_require__ = "english") {
         if (_(_)) return _.url;
@@ -2237,6 +2238,7 @@
         return _ ? _.alt_text : null;
       }
       function _(_) {
+        if (!_) return;
         return (_(_) ? _.name : _.extra_asset_name).replace(
           /^\{STEAM_APP_IMAGE\}\/extras\//,
           "",

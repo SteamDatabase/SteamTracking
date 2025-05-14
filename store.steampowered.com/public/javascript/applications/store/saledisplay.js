@@ -5047,7 +5047,7 @@
                 setControllerCategory: S,
               }));
           }
-          _n.T.Get().BIsConnected() &&
+          _n.TU.Get().BIsConnected() &&
             (u = r.createElement(wn, { nSectionID: a.unique_id }, u));
           let _ = r.createElement(
             bn,
@@ -5204,13 +5204,13 @@
           [o, l] = r.useState(!1),
           [i, s] = r.useState(!1);
         r.useEffect(() => {
-          _n.T.Get().SetMouseOverSection(o ? t : void 0);
+          _n.TU.Get().SetMouseOverSection(t, o);
         }, [t, o]);
-        const c = (0, a.q3)(() => _n.T.Get().GetMouseOverSectionID()),
+        const c = (0, a.q3)(() => _n.TU.Get().GetMouseOverSectionID()),
           m = t && t == c,
           u = r.useRef();
         return (
-          (0, _n.l)((e) => t == e && (u.current?.scrollIntoView(), s(!0), !0)),
+          (0, _n.lM)((e) => t == e && (u.current?.scrollIntoView(), s(!0), !0)),
           r.createElement(
             "div",
             {
@@ -5235,7 +5235,7 @@
                   "button",
                   {
                     className: k().JumpToButton,
-                    onClick: () => _n.T.Get().JumpToSection(t),
+                    onClick: () => _n.TU.Get().JumpToSection(t),
                   },
                   r.createElement(S.ffu, null),
                 ),
@@ -6054,7 +6054,7 @@
             }
           }, [m]),
           (function (e, t) {
-            const n = (0, E.q3)(() => v.T.Get().GetEventModel()),
+            const n = (0, E.q3)(() => v.TU.Get().GetEventModel()),
               [r, o] = a.useState();
             a.useEffect(() => {
               if (!n || n == r) return;

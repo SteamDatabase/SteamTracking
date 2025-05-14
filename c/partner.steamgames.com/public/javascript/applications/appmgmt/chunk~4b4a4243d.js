@@ -1949,7 +1949,21 @@
             },
             [_, _, _, _, __webpack_require__],
           ),
-          _ = _.useMemo(() => (_ instanceof Array ? _ : [_]), [_]);
+          _ = _.useMemo(
+            () =>
+              _ instanceof Array
+                ? _
+                : [
+                    _.createElement(
+                      _.Fragment,
+                      {
+                        key: "elAdditonalButtons",
+                      },
+                      _,
+                    ),
+                  ],
+            [_],
+          );
         return _.createElement(
           _,
           {
@@ -1967,7 +1981,7 @@
               },
               _.map((_) =>
                 _.createElement(_, {
-                  key: "arttabupload_" + _.file + "_" + _.uploadTime,
+                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
                   asset: _,
                   supported: __webpack_require__,
                   forceResolution: _,

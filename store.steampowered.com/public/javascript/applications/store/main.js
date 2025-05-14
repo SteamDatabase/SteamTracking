@@ -26302,6 +26302,7 @@
       "use strict";
       r.d(t, {
         $$: () => s,
+        BZ: () => b,
         CH: () => a,
         DF: () => g,
         ML: () => l,
@@ -26468,6 +26469,22 @@
             onMouseLeave: i.useCallback(() => t(!1), []),
           },
         ];
+      }
+      function b(e) {
+        const [t, r] = i.useState(!1);
+        return (
+          i.useEffect(() => {
+            const t = (t) => {
+              const i = e.current?.contains(t.target);
+              r(!!i);
+            };
+            return (
+              window.addEventListener("pointermove", t),
+              () => window.removeEventListener("pointermove", t)
+            );
+          }, [e]),
+          t
+        );
       }
     },
     8871: (e, t, r) => {

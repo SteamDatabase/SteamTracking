@@ -4914,6 +4914,20 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   width: fit-content;
   height: fit-content;
 }
+.-BNnqulztTaTeP1QNeSBu._2WX2HLoszD567aFrCJKkYG {
+  outline: 4px solid #00f811bb;
+}
+.-BNnqulztTaTeP1QNeSBu.vhRymhbQwtCHWZXUp5bP3 {
+  animation: _3sa-ldAw4XUh68OJIpPdgi 2s ease-out;
+}
+@keyframes _3sa-ldAw4XUh68OJIpPdgi {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #ffff0000;
+  }
+}
 ._3efSO1GodU-7Xw80LAUHBa {
   display: flex;
 }
