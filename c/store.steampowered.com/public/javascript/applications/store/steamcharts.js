@@ -668,13 +668,6 @@
         }
       }
       const _ = "TopReleases";
-      function _(_) {
-        const { data: _ } = (0, _._)({
-          queryKey: [_],
-          queryFn: () => _.LoadTopReleases(),
-        });
-        return _;
-      }
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2258,7 +2251,13 @@
       }
       function _(_) {
         const { TopReleaseStore: _ } = _,
-          _ = _(_),
+          _ = (function (_) {
+            const { data: _ } = (0, _._)({
+              queryKey: [_],
+              queryFn: () => _.LoadTopReleases(),
+            });
+            return _;
+          })(_),
           _ = (function (_) {
             let _ = [];
             const _ = _?.rgPages[0] ? _.rgPages[0].rgItems.slice(0, 9) : [];
@@ -2422,8 +2421,9 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       function _(_) {
         const {
             TopSellersStore: _,
@@ -2510,15 +2510,7 @@
                       TopSellersStore: _,
                     }),
                   ),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_, {
-                      TopReleaseStore: __webpack_require__,
-                      TopMonthlyReleasesStore: _,
-                    }),
-                  ),
-                  !1,
+                  _.createElement(_._, null, _.createElement(_, null)),
                   _.createElement(
                     _._,
                     null,
@@ -2656,35 +2648,9 @@
         );
       }
       function _(_) {
-        const {
-            TopReleaseStore: _,
-            TopMonthlyReleasesStore: __webpack_require__,
-          } = _,
-          _ = _(_);
-        if (!_) return null;
-        const _ = _.rgPages.map((_) => {
-          const _ = _.rtMonthStart + 86400 + 1,
-            _ = _.TopNewReleases(_?.strUrlPath),
-            _ = window.location.pathname === _;
-          return _.createElement(
-            "a",
-            {
-              className: _ ? _().ActiveLink : "",
-              href: _,
-              key: _.rtMonthStart,
-            },
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().MenuItemIcon),
-              },
-              _.createElement(_.VvS, {
-                color: "#C3D3D8",
-              }),
-            ),
-            (0, _._)(_),
-          );
-        });
+        const _ = (0, _._)(),
+          _ = (0, _._)(_),
+          _ = [_, _ - 2592e3, _ - 5184e3];
         return _.createElement(
           "div",
           {
@@ -2702,7 +2668,30 @@
             {
               className: _().MenuLinks,
             },
-            _,
+            _.map((_) => {
+              const _ = new Date(1e3 * _),
+                _ = (0, _._)(_.getFullYear(), _.getMonth()),
+                _ = _.TopNewReleases(_),
+                _ = Boolean(window.location.pathname === _);
+              return _.createElement(
+                _._,
+                {
+                  className: _ ? _().ActiveLink : "",
+                  _: _,
+                  key: "month_" + _,
+                },
+                _.createElement(
+                  "span",
+                  {
+                    className: (0, _._)(_().MenuItemIcon),
+                  },
+                  _.createElement(_.VvS, {
+                    color: "#C3D3D8",
+                  }),
+                ),
+                (0, _._)(_),
+              );
+            }),
           ),
         );
       }
@@ -5013,43 +5002,41 @@
           ),
         );
       }
-      _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 578)),
-      );
-      const _ = {
-        Overview: () => `${_._.SteamCharts()}`,
-        MostPlayed: () => `${_._.SteamCharts()}mostplayed`,
-        MostPlayedOnSteamDeck: (_) =>
-          `${_._.SteamCharts()}steamdecktopplayed${_ ? "/" + _ : ""}`,
-        TopSelling: (_) => `${_._.SteamCharts()}topselling/${_}`,
-        TopSellers: (_, _) =>
-          `${_._.SteamCharts()}topsellers/${_}${_ ? "/" + _ : ""}`,
-        TopNewReleases: (_) => `${_._.SteamCharts()}topnewreleases/${_}`,
-        TopNewReleasesNew: (_) =>
-          `${_._.SteamCharts()}topnewreleases_newversion/${_}`,
-        BestOfYear: (_) => `${_._.SteamCharts()}bestofyear/${_}`,
-        SupportStats: () => `${_._.SteamCharts()}support/`,
-      };
+      const _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, 5998)),
+        ),
+        _ = {
+          Overview: () => `${_._.SteamCharts()}`,
+          MostPlayed: () => `${_._.SteamCharts()}mostplayed`,
+          MostPlayedOnSteamDeck: (_) =>
+            `${_._.SteamCharts()}steamdecktopplayed${_ ? "/" + _ : ""}`,
+          TopSelling: (_) => `${_._.SteamCharts()}topselling/${_}`,
+          TopSellers: (_, _) =>
+            `${_._.SteamCharts()}topsellers/${_}${_ ? "/" + _ : ""}`,
+          TopNewReleases: (_) => `${_._.SteamCharts()}topnewreleases/${_}`,
+          BestOfYear: (_) => `${_._.SteamCharts()}bestofyear/${_}`,
+          SupportStats: () => `${_._.SteamCharts()}support/`,
+        };
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(void 0),
           _ = (0, _._)(),
@@ -5191,28 +5178,8 @@
                 ),
                 _.createElement(_._, {
                   path: `${_.TopNewReleases(":salePagename")}`,
-                  render: (_) => {
-                    const {
-                      match: {
-                        params: { salePagename: _ },
-                      },
-                    } = _;
-                    return _.createElement(
-                      _._,
-                      {
-                        method: "topnewreleases",
-                      },
-                      _.createElement(
-                        _._,
-                        null,
-                        _.createElement(_, {
-                          salePagename: _,
-                        }),
-                      ),
-                    );
-                  },
+                  component: _,
                 }),
-                !1,
                 _.createElement(_._, {
                   path: `${_.BestOfYear(":salePagename")}`,
                   render: (_) => {
@@ -5283,6 +5250,78 @@
           null
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        const _ = new Date(_ > 1e12 ? _ : 1e3 * _),
+          _ =
+            (new Intl.DateTimeFormat("en-US", {
+              timeZone: "America/Los_Angeles",
+              year: "numeric",
+              month: "numeric",
+              day: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+            }).format(_),
+            new Date(
+              _.toLocaleString("en-US", {
+                timeZone: "America/Los_Angeles",
+              }),
+            )),
+          _ = __webpack_require__.getMonth(),
+          _ = __webpack_require__.getFullYear(),
+          _ = __webpack_require__.getDate(),
+          _ = __webpack_require__.getHours();
+        let _, _;
+        for (_ = _ > 15 || (15 === _ && _ >= 10) ? _ - 1 : _ - 2; _ < 0; )
+          (_ += 12), (_ = (_ ?? _) - 1);
+        _ = _ ?? _;
+        const _ = new Date(Date.UTC(_, _, 15, 17, 0));
+        return Math.floor(_.getTime() / 1e3);
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.split("_");
+        let _ = parseInt(__webpack_require__, 10);
+        let _ = {
+          january: 0,
+          february: 1,
+          march: 2,
+          april: 3,
+          may: 4,
+          june: 5,
+          july: 6,
+          august: 7,
+          september: 8,
+          october: 9,
+          november: 10,
+          december: 11,
+        }[_.toLowerCase()];
+        if (void 0 === _)
+          return {
+            dtMidMonth: null,
+            dtTestMonth: null,
+          };
+        let _ = _,
+          _ = _;
+        return (
+          11 == _ ? ((_ = 0), (_ += 1)) : (_ += 1),
+          {
+            dtMidMonth: new Date(_, _, 15),
+            dtTestMonth: new Date(_, _, 15),
+          }
+        );
+      }
+      function _(_, _) {
+        if (_ < 0 || _ > 11)
+          throw new Error("Invalid month index. Must be between 0 and 11.");
+        return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][_]}_${_}`;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
     },
   },
 ]);

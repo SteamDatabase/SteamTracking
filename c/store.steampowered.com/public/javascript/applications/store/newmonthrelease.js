@@ -6688,75 +6688,13 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = new Date(_ > 1e12 ? _ : 1e3 * _),
-          _ =
-            (new Intl.DateTimeFormat("en-US", {
-              timeZone: "America/Los_Angeles",
-              year: "numeric",
-              month: "numeric",
-              day: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-            }).format(_),
-            new Date(
-              _.toLocaleString("en-US", {
-                timeZone: "America/Los_Angeles",
-              }),
-            )),
-          _ = __webpack_require__.getMonth(),
-          _ = __webpack_require__.getFullYear(),
-          _ = __webpack_require__.getDate(),
-          _ = __webpack_require__.getHours();
-        let _, _;
-        for (_ = _ > 15 || (15 === _ && _ >= 10) ? _ - 1 : _ - 2; _ < 0; )
-          (_ += 12), (_ = (_ ?? _) - 1);
-        _ = _ ?? _;
-        const _ = new Date(Date.UTC(_, _, 15, 17, 0));
-        return Math.floor(_.getTime() / 1e3);
-      }
-      function _(_, _) {
-        if (_ < 0 || _ > 11)
-          throw new Error("Invalid month index. Must be between 0 and 11.");
-        return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][_]}_${_}`;
-      }
       function _(_) {
         const _ = _._.Get(),
           { salePagename: __webpack_require__ } = (0, _._)(),
           _ = (0, _._)(),
-          { dtMidMonth: _, dtTestMonth: _ } = (function (_) {
-            const [_, __webpack_require__] = _.split("_");
-            let _ = parseInt(__webpack_require__, 10),
-              _ = {
-                january: 0,
-                february: 1,
-                march: 2,
-                april: 3,
-                may: 4,
-                june: 5,
-                july: 6,
-                august: 7,
-                september: 8,
-                october: 9,
-                november: 10,
-                december: 11,
-              }[_.toLowerCase()];
-            if (void 0 === _)
-              return {
-                dtMidMonth: null,
-                dtTestMonth: null,
-              };
-            let _ = _,
-              _ = _;
-            return (
-              11 == _ ? ((_ = 0), (_ += 1)) : (_ += 1),
-              {
-                dtMidMonth: new Date(_, _, 15),
-                dtTestMonth: new Date(_, _, 15),
-              }
-            );
-          })(__webpack_require__);
+          { dtMidMonth: _, dtTestMonth: _ } = (0, _._)(__webpack_require__);
         return !_ ||
           Math.floor(_.getTime() / 1e3) > _ ||
           _.getFullYear() < _ ||
@@ -6955,11 +6893,11 @@
           _ = (0, _._)(),
           _ = _ > 0 ? __webpack_require__ : __webpack_require__ - 1,
           _ = _ > 0 ? _ - 1 : 11,
-          _ = _(_, _),
+          _ = (0, _._)(_, _),
           _ = __webpack_require__ > _ || _ > _,
           _ = _ < 11 ? __webpack_require__ : __webpack_require__ + 1,
           _ = _ < 11 ? _ + 1 : 0,
-          _ = _(_, _),
+          _ = (0, _._)(_, _),
           _ = new Date(
             11 == _ ? __webpack_require__ + 1 : __webpack_require__,
             11 == _ ? 0 : _ + 1,
@@ -6970,10 +6908,8 @@
             (_) => {
               _.active_modal ||
                 (_ && _
-                  ? _.push(_.SteamChartsRoutes.TopNewReleasesNew(_))
-                  : !_ &&
-                    _ &&
-                    _.push(_.SteamChartsRoutes.TopNewReleasesNew(_)));
+                  ? _.push(_.SteamChartsRoutes.TopNewReleases(_))
+                  : !_ && _ && _.push(_.SteamChartsRoutes.TopNewReleases(_)));
             },
             [_.active_modal, _, _, _, _, _],
           );
@@ -7029,7 +6965,7 @@
                   _.createElement(
                     _._,
                     {
-                      _: _ ? _.SteamChartsRoutes.TopNewReleasesNew(_) : void 0,
+                      _: _ ? _.SteamChartsRoutes.TopNewReleases(_) : void 0,
                     },
                     _.createElement(
                       "div",
@@ -7057,7 +6993,7 @@
                   _.createElement(
                     _._,
                     {
-                      _: _ ? _.SteamChartsRoutes.TopNewReleasesNew(_) : null,
+                      _: _ ? _.SteamChartsRoutes.TopNewReleases(_) : null,
                     },
                     _.createElement(
                       "div",
@@ -7072,15 +7008,15 @@
               _.createElement(_, {
                 toolTipContent: (0, _._)("#SteamCharts_Monthly_Calendar"),
                 minDate: _,
-                maxDate: _(_),
+                maxDate: (0, _._)(_),
                 value: Math.floor(
                   new Date(__webpack_require__, _, 15, 12, 0, 0).getTime() /
                     1e3,
                 ),
                 fnOnUpdate: (_) => {
                   const _ = new Date(1e3 * _),
-                    _ = _(_.getFullYear(), _.getMonth());
-                  _.push(_.SteamChartsRoutes.TopNewReleasesNew(_));
+                    _ = (0, _._)(_.getFullYear(), _.getMonth());
+                  _.push(_.SteamChartsRoutes.TopNewReleases(_));
                 },
               }),
             ),
