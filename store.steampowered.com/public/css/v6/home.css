@@ -130,6 +130,10 @@ html.responsive .fullscreen-bg__video_mobile {
 	margin-bottom: 20px;
 }
 
+body.no_home_gutter .home_page_gutter_block {
+	display: none;
+}
+
 .home_page_gutter_movies {
 	border-top: solid #223141 1px;
 	padding-top: 3px;

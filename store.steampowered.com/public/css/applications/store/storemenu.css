@@ -62,7 +62,7 @@ button._175B12uOwmeGBNcSaQFe-Z:hover {
 }
 a._175B12uOwmeGBNcSaQFe-Z svg,
 button._175B12uOwmeGBNcSaQFe-Z svg {
-  width: 15px;
+  width: 14px;
 }
 a._175B12uOwmeGBNcSaQFe-Z._9igpad2T8Z7IfebQ2WnbC,
 button._175B12uOwmeGBNcSaQFe-Z._9igpad2T8Z7IfebQ2WnbC {
@@ -146,10 +146,10 @@ button._175B12uOwmeGBNcSaQFe-Z:first-of-type svg {
   border: none;
   color: #fff;
   cursor: pointer;
+  display: flex;
 }
 .WFyPwmwIjPaI784fImRbi ._1Yo-ZsBr-KbVMyAMXEYszd svg {
-  width: 19px;
-  margin-top: 2px;
+  width: 18px;
 }
 .HWDmfh8Td_a8zxJu6tP0h {
   position: absolute;
@@ -193,6 +193,9 @@ button._175B12uOwmeGBNcSaQFe-Z:first-of-type svg {
   ._1XK1v4pD2FgxJn9Nxovpup._2saiNsl5yBtsoFzf_fhdET
   ._2sDMndQPjmHj3RULTIKGfm {
   flex-direction: row;
+}
+._2GxMhpm7OC2WWXN_wjgA78 ._1XK1v4pD2FgxJn9Nxovpup ._3DOcONbchITbAuaF30dduG {
+  color: #7f7f7f;
 }
 ._2GxMhpm7OC2WWXN_wjgA78
   ._1XK1v4pD2FgxJn9Nxovpup
