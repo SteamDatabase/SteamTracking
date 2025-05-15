@@ -5598,6 +5598,11 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
     width: calc(100% - 140px);
   }
 }
+@media screen and (max-width: 851px) {
+  .SteamChartsShell ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+    width: calc(100% - 14px);
+  }
+}
 .ContentHubSalePage
   ._1cOoCFwafBlSkwllIMf3XM.mntHD0WiARnsfz_kMYssq:not(._1FPIVJTLsw1nvAN24BGGKg) {
   max-width: 1100px;
