@@ -1862,7 +1862,7 @@
     },
     85585: (e, t, r) => {
       "use strict";
-      r.d(t, { B2: () => m, qR: () => _ });
+      r.d(t, { B2: () => m, D6: () => d, qR: () => _ });
       var i = r(64753),
         n = r(8871),
         s = r(90626),
@@ -4675,6 +4675,24 @@
           default:
             return i.xj.NONE;
         }
+      }
+    },
+    72148: (e, t, r) => {
+      "use strict";
+      r.d(t, { Nw: () => o, _k: () => s });
+      var i = r(45730),
+        n = r(23310);
+      const s = Object.seal({ onMoveUp: a, onMoveDown: a });
+      Object.seal({ onMoveRight: a, onMoveLeft: a });
+      function a(e, t) {
+        if (e.is_repeat) return !1;
+        const r = t.GetRelativeDirection(e.button);
+        return r == n.$C.FORWARD
+          ? t.BFocusFirstChild(i.D$.GAMEPAD)
+          : r == n.$C.BACKWARD && t.BFocusLastChild(i.D$.GAMEPAD);
+      }
+      function o(e) {
+        return e.Element.checkVisibility();
       }
     },
     63512: (e, t, r) => {
@@ -32575,7 +32593,7 @@
       var i = r(34629),
         n = r(14947),
         s = r(56011),
-        a = (r(68451), r(22837));
+        a = (r(60155), r(22837));
       class o {
         static s_nNextKeyValue = 1;
         m_nKey = null;
@@ -40245,59 +40263,50 @@
         }
       }
     },
-    68451: (e, t, r) => {
+    60155: (e, t, r) => {
       "use strict";
       r.d(t, {
-        IK: () => z,
-        tz: () => v,
-        P: () => S,
-        kt: () => R,
-        Vs: () => T,
-        il: () => O,
-        ai: () => F,
-        K5: () => I,
-        aE: () => W,
+        IK: () => v,
+        K5: () => R,
+        P: () => M,
+        Vs: () => z,
+        aE: () => F,
+        ai: () => T,
+        il: () => E,
+        kt: () => S,
+        tz: () => C,
       });
       var i = r(34629),
         n = r(45699),
         s = r(76217),
         a = r(23310),
-        o = r(45730);
-      const l = Object.seal({ onMoveUp: c, onMoveDown: c });
-      Object.seal({ onMoveRight: c, onMoveLeft: c });
-      function c(e, t) {
-        if (e.is_repeat) return !1;
-        const r = t.GetRelativeDirection(e.button);
-        return r == a.$C.FORWARD
-          ? t.BFocusFirstChild(o.D$.GAMEPAD)
-          : r == a.$C.BACKWARD && t.BFocusLastChild(o.D$.GAMEPAD);
-      }
-      var u = r(75844),
-        m = r(90626),
-        d = r(88997),
-        p = r(66703),
-        g = r(74872),
-        _ = r(12155),
-        h = r(52038),
-        f = r(79516),
-        b = r(56011),
-        B = r(61859),
-        w = r(73745),
-        y = r(78327),
-        M = r(40650),
-        C = r.n(M);
-      const S = m.createContext(null);
-      let v = class extends m.Component {
-        static contextType = S;
+        o = r(72148),
+        l = r(75844),
+        c = r(90626),
+        u = r(88997),
+        m = r(66703),
+        d = r(74872),
+        p = r(12155),
+        g = r(52038),
+        _ = r(79516),
+        h = r(56011),
+        f = r(61859),
+        b = r(73745),
+        B = r(78327),
+        w = r(40650),
+        y = r.n(w);
+      const M = c.createContext(null);
+      let C = class extends c.Component {
+        static contextType = M;
         m_navRef = (0, n.b$)();
-        m_divRef = m.createRef();
+        m_divRef = c.createRef();
         get instance() {
           return this.context.instance;
         }
         componentDidMount() {
           this.instance.SetLabel(this.props.label),
             this.m_navRef.current?.TakeFocus(),
-            (0, w.cZ)(this.props.refInstance, this.instance);
+            (0, b.cZ)(this.props.refInstance, this.instance);
         }
         componentDidUpdate(e) {
           e.label !== this.props.label &&
@@ -40322,24 +40331,24 @@
             label: r,
             onCancel: i,
             cancelText: n,
-            refInstance: o,
-            bForceDesktopPresentation: c,
-            footer: u,
+            refInstance: l,
+            bForceDesktopPresentation: u,
+            footer: m,
             ...d
           } = this.props;
-          const p = this.context.styles ?? C();
-          let g = n ?? "#Button_Cancel";
-          if (1 != this.context.presentation || c)
-            return m.createElement(
+          const p = this.context.styles ?? y();
+          let _ = n ?? "#Button_Cancel";
+          if (1 != this.context.presentation || u)
+            return c.createElement(
               "div",
               {
                 ...d,
                 ref: this.m_divRef,
-                className: (0, h.A)(
+                className: (0, g.A)(
                   {
                     [p.contextMenuContents]: !0,
                     [p.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [p.ForceDesktop]: c,
+                    [p.ForceDesktop]: u,
                   },
                   t,
                 ),
@@ -40350,11 +40359,11 @@
             const r = () => {
               i && i(), this.instance.Hide();
             };
-            return m.createElement(
+            return c.createElement(
               s.Z,
               {
                 ...d,
-                className: (0, h.A)(
+                className: (0, g.A)(
                   p.contextMenuContents,
                   { [p.hasSubMenu]: this.instance.BIsSubMenuVisible() },
                   t,
@@ -40370,23 +40379,23 @@
                 navEntryPreferPosition: a.iU.PREFERRED_CHILD,
                 navRef: this.m_navRef,
                 ref: this.m_divRef,
-                ...l,
+                ...o._k,
               },
               e,
               !this.instance.BIsSubMenu() &&
-                m.createElement(
-                  m.Fragment,
+                c.createElement(
+                  c.Fragment,
                   null,
-                  m.createElement(I, null),
-                  m.createElement(
-                    R,
+                  c.createElement(R, null),
+                  c.createElement(
+                    S,
                     { className: p.Cancel, onSelected: r },
-                    (0, B.we)(g),
+                    (0, f.we)(_),
                   ),
-                  u,
+                  m,
                 ),
               this.instance.BIsSubMenuVisible() &&
-                m.createElement("div", {
+                c.createElement("div", {
                   className: p.contextMenuFade,
                   onClick: () => this.instance.HideSubMenu(),
                 }),
@@ -40394,13 +40403,13 @@
           }
         }
       };
-      (0, i.Cg)([w.oI], v.prototype, "HideIfSubmenu", null),
-        (0, i.Cg)([w.oI], v.prototype, "HideMenu", null),
-        (v = (0, i.Cg)([u.PA], v));
-      class R extends m.PureComponent {
-        static contextType = S;
-        m_ref = m.createRef();
-        m_refDiv = m.createRef();
+      (0, i.Cg)([b.oI], C.prototype, "HideIfSubmenu", null),
+        (0, i.Cg)([b.oI], C.prototype, "HideMenu", null),
+        (C = (0, i.Cg)([l.PA], C));
+      class S extends c.PureComponent {
+        static contextType = M;
+        m_ref = c.createRef();
+        m_refDiv = c.createRef();
         get element() {
           return this.m_refDiv.current;
         }
@@ -40434,9 +40443,9 @@
               onMoveRight: r,
               ...i
             } = this.props,
-            n = this.context?.styles ?? C();
+            n = this.context?.styles ?? y();
           return 1 == this.context.presentation
-            ? m.createElement(
+            ? c.createElement(
                 s.Z,
                 {
                   noFocusRing: !0,
@@ -40445,7 +40454,7 @@
                   navRef: this.m_ref,
                   onMouseEnter: this.OnMouseEnter,
                   ...i,
-                  className: (0, h.A)(
+                  className: (0, g.A)(
                     this.props.className,
                     n.contextMenuItem,
                     "contextMenuItem",
@@ -40466,8 +40475,8 @@
                 },
                 this.props.children,
               )
-            : m.createElement(
-                g.D,
+            : c.createElement(
+                d.D,
                 {
                   ref: this.m_refDiv,
                   onMouseEnter: this.OnMouseEnter,
@@ -40482,33 +40491,33 @@
               );
         }
       }
-      (0, i.Cg)([w.oI], R.prototype, "OnClick", null),
-        (0, i.Cg)([w.oI], R.prototype, "OnOKButton", null),
-        (0, i.Cg)([w.oI], R.prototype, "OnMouseEnter", null),
-        (0, i.Cg)([w.oI], R.prototype, "Focus", null);
-      class z extends m.PureComponent {
+      (0, i.Cg)([b.oI], S.prototype, "OnClick", null),
+        (0, i.Cg)([b.oI], S.prototype, "OnOKButton", null),
+        (0, i.Cg)([b.oI], S.prototype, "OnMouseEnter", null),
+        (0, i.Cg)([b.oI], S.prototype, "Focus", null);
+      class v extends c.PureComponent {
         render() {
           const { bChecked: e, children: t, className: r, ...i } = this.props;
-          return m.createElement(
-            R,
-            { ...i, className: (0, h.A)(r, e && "menuChecked") },
-            m.createElement("div", { className: "contextMenuCheckMark" }),
+          return c.createElement(
+            S,
+            { ...i, className: (0, g.A)(r, e && "menuChecked") },
+            c.createElement("div", { className: "contextMenuCheckMark" }),
             t,
           );
         }
       }
-      m.PureComponent;
-      function I(e) {
-        const t = m.useContext(S).styles ?? C();
-        return m.createElement("div", { className: t.ContextMenuSeparator });
+      c.PureComponent;
+      function R(e) {
+        const t = c.useContext(M).styles ?? y();
+        return c.createElement("div", { className: t.ContextMenuSeparator });
       }
-      const T = (e) => {
-        const t = (0, y.Qn)();
-        return m.createElement(E, { ...e, bInGamepadUI: t });
+      const z = (e) => {
+        const t = (0, B.Qn)();
+        return c.createElement(I, { ...e, bInGamepadUI: t });
       };
-      class E extends m.PureComponent {
-        static contextType = S;
-        m_refItem = m.createRef();
+      class I extends c.PureComponent {
+        static contextType = M;
+        m_refItem = c.createRef();
         constructor(e) {
           super(e), (this.state = { bActive: !1 });
         }
@@ -40536,8 +40545,8 @@
           );
         }
         RenderSubMenu() {
-          return m.createElement(
-            v,
+          return c.createElement(
+            C,
             { onMouseEnter: this.OnSubMenuMouseEnter, label: this.props.label },
             this.props.children,
           );
@@ -40561,35 +40570,35 @@
             bInGamepadUI: n,
             ...s
           } = this.props;
-          const a = this.context.styles ?? C();
-          return m.createElement(
-            R,
+          const a = this.context.styles ?? y();
+          return c.createElement(
+            S,
             {
               ...s,
               ref: this.m_refItem,
               onClick: this.OnClick,
               selected: t && !this.state.bActive,
-              className: (0, h.A)(i, a.SubMenu, this.state.bActive && a.active),
+              className: (0, g.A)(i, a.SubMenu, this.state.bActive && a.active),
               onMouseEnter: this.OnMouseEnter,
               bInteractableItem: !0,
               onMoveRight: () => this.ShowSubMenu(),
             },
-            m.createElement("div", { className: a.Label }, e),
-            m.createElement(
+            c.createElement("div", { className: a.Label }, e),
+            c.createElement(
               "div",
               { className: a.Arrow },
-              m.createElement(_.GB9, null),
+              c.createElement(p.GB9, null),
             ),
           );
         }
       }
-      (0, i.Cg)([w.oI], E.prototype, "OnSubMenuMouseEnter", null),
-        (0, i.Cg)([w.oI], E.prototype, "OnSubMenuHidden", null),
-        (0, i.Cg)([w.oI], E.prototype, "ShowSubMenu", null),
-        (0, i.Cg)([w.oI], E.prototype, "RenderSubMenu", null),
-        (0, i.Cg)([w.oI], E.prototype, "OnMouseEnter", null),
-        (0, i.Cg)([w.oI], E.prototype, "OnClick", null);
-      let F = class extends m.Component {
+      (0, i.Cg)([b.oI], I.prototype, "OnSubMenuMouseEnter", null),
+        (0, i.Cg)([b.oI], I.prototype, "OnSubMenuHidden", null),
+        (0, i.Cg)([b.oI], I.prototype, "ShowSubMenu", null),
+        (0, i.Cg)([b.oI], I.prototype, "RenderSubMenu", null),
+        (0, i.Cg)([b.oI], I.prototype, "OnMouseEnter", null),
+        (0, i.Cg)([b.oI], I.prototype, "OnClick", null);
+      let T = class extends c.Component {
         m_elMenu = void 0;
         m_cReenteranceGuard = 1;
         m_mutationObserver;
@@ -40635,7 +40644,7 @@
                   this.OnWindowResize,
                 )),
             (this.m_elMenu = e || void 0),
-            y.TS.IN_CLIENT && this.props.popup && this.m_elMenu
+            B.TS.IN_CLIENT && this.props.popup && this.m_elMenu
               ? this.m_elMenu.ownerDocument.fonts.ready.then(() => {
                   this.PositionMenu();
                 })
@@ -40654,7 +40663,7 @@
         }
         OnBlur(e) {
           if (
-            (!e.relatedTarget || !b.id(e.currentTarget, e.relatedTarget)) &&
+            (!e.relatedTarget || !h.id(e.currentTarget, e.relatedTarget)) &&
             (!e.relatedTarget ||
               !this.props.instance.BIsElementInMenuHierarchy(
                 e.relatedTarget,
@@ -40663,7 +40672,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = k() ? 150 : 0;
+            const e = W() ? 150 : 0;
             this.props.instance.OnCancel(e);
           }
         }
@@ -40685,7 +40694,7 @@
             this.state.ready &&
             this.props.instance.visible &&
             (this.props.popup ||
-              !b.id(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+              !h.id(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
           ) {
             let e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
             e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -40713,7 +40722,7 @@
                 void 0 === a ||
                 void 0 === o ||
                 ((a += s.screenLeft), (o += s.screenTop)),
-              p && (p = b.pd(s, p)),
+              p && (p = h.pd(s, p)),
               t.targetMonitor)
             )
               (d = t.targetMonitor.flMonitorScale),
@@ -40747,14 +40756,14 @@
               menuHeight: void 0,
               menuMinWidth: void 0,
             },
-            h = a ?? p.left,
-            f = a ?? p.right,
+            f = a ?? p.left,
+            b = a ?? p.right,
             B = g.width;
-          t.bMatchWidth && ((B = f - h), (_.menuWidth = B)),
-            t.bGrowToElementWidth && (_.menuMinWidth = Math.max(B, f - h));
-          let w = (t.bOverlapHorizontal ? f : h) - l - B,
+          t.bMatchWidth && ((B = b - f), (_.menuWidth = B)),
+            t.bGrowToElementWidth && (_.menuMinWidth = Math.max(B, b - f));
+          let w = (t.bOverlapHorizontal ? b : f) - l - B,
             y = w > 0,
-            M = l + u - (t.bOverlapHorizontal ? h : f) - B,
+            M = l + u - (t.bOverlapHorizontal ? f : b) - B,
             C = M > 0,
             S = (t.bPreferPopLeft || !C) && y;
           y ||
@@ -40762,8 +40771,8 @@
             ((S = y > C),
             t.bFitToWindow && ((B += (S ? w : M) - 8), (_.menuWidth = B))),
             S
-              ? (_.menuRight = u - (t.bOverlapHorizontal ? f : h))
-              : (_.menuLeft = t.bOverlapHorizontal ? h : f);
+              ? (_.menuRight = u - (t.bOverlapHorizontal ? b : f))
+              : (_.menuLeft = t.bOverlapHorizontal ? f : b);
           let v = o ?? p.top,
             R = o ?? p.bottom,
             z = r.scrollHeight;
@@ -40902,13 +40911,13 @@
                 (e.width = this.state.menuWidth),
               void 0 !== this.state.menuMinWidth &&
                 (e.minWidth = this.state.menuMinWidth));
-          let t = this.props.options.strClassName || C().contextMenu;
+          let t = this.props.options.strClassName || y().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
               (this.props.instance.visible && this.state.ready)) &&
               (t += " visible"),
-            (t += " " + C().ContextMenuPosition),
-            m.createElement(
+            (t += " " + y().ContextMenuPosition),
+            c.createElement(
               "div",
               {
                 className: t,
@@ -40923,14 +40932,14 @@
           );
         }
       };
-      function O(e) {
-        return m.createElement("div", {
-          className: C().ContextMenuMouseOverlay,
+      function E(e) {
+        return c.createElement("div", {
+          className: y().ContextMenuMouseOverlay,
         });
       }
-      function W(e) {
+      function F(e) {
         let t = [],
-          r = b.uX(e),
+          r = h.uX(e),
           i = r.getSelection(),
           n = i && i.rangeCount > 0 && i.toString().length > 0,
           s = e.target,
@@ -40941,7 +40950,7 @@
           (s &&
             "tagName" in s &&
             (("INPUT" != s.tagName && "TEXTAREA" != s.tagName) || (a = !0)),
-          y.TS.IN_CLIENT && a && (0, p.Fj)(r, "Browser.GetSpellingSuggestions"))
+          B.TS.IN_CLIENT && a && (0, m.Fj)(r, "Browser.GetSpellingSuggestions"))
         ) {
           let [e, ...i] = r.SteamClient.Browser.GetSpellingSuggestions(),
             n = s;
@@ -40949,8 +40958,8 @@
             (n &&
               i.forEach((e, i) => {
                 t.push(
-                  m.createElement(
-                    R,
+                  c.createElement(
+                    S,
                     {
                       key: `spelling_${i}_${e}`,
                       onSelected: () => {
@@ -40962,25 +40971,25 @@
                           n.setSelectionRange(n.selectionEnd, n.selectionEnd),
                           s.focus();
                       },
-                      className: C().NoSeparation,
+                      className: y().NoSeparation,
                     },
                     e,
                   ),
                 );
               }),
-            e && (0, p.Fj)(r, "Browser.AddWordToDictionary"))
+            e && (0, m.Fj)(r, "Browser.AddWordToDictionary"))
           ) {
             const i = 30;
             (e = e.trim()),
               t.push(
-                m.createElement(
-                  R,
+                c.createElement(
+                  S,
                   {
                     key: `addtodictionary_${e}`,
                     onSelected: () =>
                       r.SteamClient.Browser.AddWordToDictionary(e),
                   },
-                  (0, B.we)(
+                  (0, f.we)(
                     "#ContextMenu_AddToDictionary",
                     e.length < i ? e : e.substring(0, i) + "...",
                   ),
@@ -40991,54 +41000,54 @@
         if (
           ((r.document.queryCommandEnabled("cut") || (n && a)) &&
             t.push(
-              m.createElement(
-                R,
+              c.createElement(
+                S,
                 {
                   key: "cut",
                   onSelected: () => {
                     r.document.execCommand("cut");
                   },
                 },
-                (0, B.we)("#ContextMenu_Cut"),
+                (0, f.we)("#ContextMenu_Cut"),
               ),
             ),
           (r.document.queryCommandEnabled("copy") || n) &&
             t.push(
-              m.createElement(
-                R,
+              c.createElement(
+                S,
                 {
                   key: "copy",
                   onSelected: () => {
                     r.document.execCommand("copy");
                   },
-                  className: C().NoSeparation,
+                  className: y().NoSeparation,
                 },
-                (0, B.we)("#ContextMenu_Copy"),
+                (0, f.we)("#ContextMenu_Copy"),
               ),
             ),
-          y.TS.IN_CLIENT &&
+          B.TS.IN_CLIENT &&
             a &&
-            (0, p.Fj)(r, "Browser.Paste") &&
+            (0, m.Fj)(r, "Browser.Paste") &&
             t.push(
-              m.createElement(
-                R,
+              c.createElement(
+                S,
                 {
                   key: "paste",
                   onSelected: () => {
                     s.focus(), r.SteamClient.Browser.Paste();
                   },
-                  className: C().NoSeparation,
+                  className: y().NoSeparation,
                 },
-                (0, B.we)("#ContextMenu_Paste"),
+                (0, f.we)("#ContextMenu_Paste"),
               ),
             ),
-          y.TS.IN_CLIENT && y.TS.DEV_MODE)
+          B.TS.IN_CLIENT && B.TS.DEV_MODE)
         ) {
           const e = [];
-          (0, p.Fj)(r, "Browser.OpenDevTools") &&
+          (0, m.Fj)(r, "Browser.OpenDevTools") &&
             e.push(
-              m.createElement(
-                R,
+              c.createElement(
+                S,
                 {
                   key: "opendevtools",
                   onSelected: () => {
@@ -41048,41 +41057,41 @@
                 "Open Dev Tools",
               ),
             ),
-            (0, p.Fj)(r, "Browser.InspectElement") &&
+            (0, m.Fj)(r, "Browser.InspectElement") &&
               e.push(
-                m.createElement(
-                  R,
+                c.createElement(
+                  S,
                   {
                     key: "inspectelement",
                     onSelected: () => {
                       s.focus(), r.SteamClient.Browser.InspectElement(o, l);
                     },
-                    className: C().NoSeparation,
+                    className: y().NoSeparation,
                   },
                   "Inspect Element",
                 ),
               ),
             e.length > 0 &&
-              (t.push(m.createElement(I, { key: "devtools-separator" })),
+              (t.push(c.createElement(R, { key: "devtools-separator" })),
               t.push(...e));
         }
         if (t.length)
-          (0, d.lX)(m.createElement(v, null, t), e, { bRootContextMenu: !0 });
+          (0, u.lX)(c.createElement(C, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, i.Cg)([w.oI], F.prototype, "BindMenuElement", null),
-        (0, i.Cg)([w.oI, (0, f.s)(100)], F.prototype, "OnMenuMutation", null),
-        (0, i.Cg)([w.oI], F.prototype, "OnWindowResize", null),
-        (0, i.Cg)([w.oI], F.prototype, "OnBlur", null),
-        (0, i.Cg)([w.oI], F.prototype, "OnKeyDown", null),
-        (F = (0, i.Cg)([u.PA], F));
-      const L = "EnableContextMenuBlurDelay3";
-      function k() {
+      (0, i.Cg)([b.oI], T.prototype, "BindMenuElement", null),
+        (0, i.Cg)([b.oI, (0, _.s)(100)], T.prototype, "OnMenuMutation", null),
+        (0, i.Cg)([b.oI], T.prototype, "OnWindowResize", null),
+        (0, i.Cg)([b.oI], T.prototype, "OnBlur", null),
+        (0, i.Cg)([b.oI], T.prototype, "OnKeyDown", null),
+        (T = (0, i.Cg)([l.PA], T));
+      const O = "EnableContextMenuBlurDelay3";
+      function W() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(L))
+          "true" === (window.localStorage && window.localStorage.getItem(O))
         );
       }
     },
@@ -44158,7 +44167,7 @@
       });
       var Ct = r(43670),
         St = r.n(Ct),
-        vt = r(68451),
+        vt = r(60155),
         Rt = r(90665);
       function zt(e) {
         const {
@@ -46927,7 +46936,7 @@
         a = r(84811),
         o = r(72739),
         l = r(48902),
-        c = r(68451),
+        c = r(60155),
         u = r(52745),
         m = r(25118),
         d = r(78327);
@@ -47306,7 +47315,7 @@
       var i = r(34629),
         n = r(75844),
         s = r(90626),
-        a = (r(68451), r(10981)),
+        a = (r(60155), r(10981)),
         o = r(738),
         l = r(61859),
         c = r(10411);
@@ -47539,7 +47548,7 @@
         o = r(22837),
         l = r(13871),
         c = r(48902),
-        u = r(68451),
+        u = r(60155),
         m = r(40650),
         d = r.n(m),
         p = r(84811),
@@ -52684,7 +52693,7 @@
         c = r(52038),
         u = r(56011),
         m = r(61859),
-        d = r(68451);
+        d = r(60155);
       function p(e, t) {
         let r;
         (r =
@@ -55977,7 +55986,7 @@
         D = r(65946),
         x = r(76217),
         P = r(11002),
-        j = r(68451),
+        j = r(60155),
         A = r(2654),
         U = r(21869),
         q = r(52038),

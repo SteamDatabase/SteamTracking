@@ -20619,12 +20619,39 @@
         );
       }
       function _(_) {
-        const { appID: _, results: __webpack_require__, appName: _ } = _,
+        const {
+            appID: _,
+            results: __webpack_require__,
+            appName: _,
+            tab: _,
+          } = _,
           _ = (0, _._)(),
-          _ = _
-            ? (0, _._)("#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI")
-            : (0, _._)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
-          _ = __webpack_require__?.steam_deck_blog_url,
+          _ = "steamos" == _ ? 2 : 1;
+        let _, _, _;
+        2 == _
+          ? ((_ = (0, _._)(
+              "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+            )),
+            (_ = _.createElement(_, {
+              category: __webpack_require__.steamos_resolved_category,
+            })),
+            (_ = _.createElement(_, {
+              category: __webpack_require__.steamos_resolved_category,
+            })))
+          : ((_ = _
+              ? (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                )
+              : (0, _._)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+                )),
+            (_ = _.createElement(_, {
+              category: __webpack_require__.resolved_category,
+            })),
+            (_ = _.createElement(_, {
+              category: __webpack_require__.resolved_category,
+            })));
+        const _ = __webpack_require__?.steam_deck_blog_url,
           _ = _.useId();
         return __webpack_require__
           ? _.createElement(
@@ -20647,22 +20674,14 @@
                 {
                   className: _ ? _().BannerContent : _().BannerContentDesktop,
                 },
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_, {
-                    category: __webpack_require__.resolved_category,
-                  }),
-                  _.createElement(_, {
-                    category: __webpack_require__.resolved_category,
-                  }),
-                ),
+                _.createElement("div", null, _, _),
                 _.createElement(_, {
                   results: __webpack_require__,
                   learnMore: (0, _._)(
                     "#SteamDeckVerified_Store_CompatSection_LearnMore",
                   ),
                   appName: _,
+                  eStartingTab: _,
                 }),
                 _ &&
                   _.createElement("div", {
@@ -20765,7 +20784,12 @@
         );
       }
       function _(_) {
-        const { results: _, learnMore: __webpack_require__, appName: _ } = _,
+        const {
+            results: _,
+            learnMore: __webpack_require__,
+            appName: _,
+            eStartingTab: _,
+          } = _,
           [_, _] = (0, _.useState)(!1);
         let _ = _.useCallback(
           (_) => {
@@ -20813,6 +20837,7 @@
                   results: _,
                   buttonProps: _,
                   appName: _,
+                  eStartingTab: _,
                   autoFocus: !0,
                 }),
               ),
@@ -20957,18 +20982,7 @@
             {
               className: _,
             },
-            (0, _._)(
-              (function (_) {
-                switch (_) {
-                  case 2:
-                    return "#SteamOSCompatibility_Category_Compatible";
-                  case 1:
-                    return "#SteamOSCompatibility_Category_Unsupported";
-                  default:
-                    return "#SteamOSCompatibility_Category_Unknown";
-                }
-              })(_),
-            ),
+            (0, _._)(_(_)),
           ),
           _ = _.createElement(
             "span",
@@ -21004,6 +21018,16 @@
         );
       }
       function _(_) {
+        const { category: _ } = _;
+        return _.createElement(
+          "span",
+          {
+            className: _().CompatibilityDetailRatingDescription,
+          },
+          (0, _._)(_(_)),
+        );
+      }
+      function _(_) {
         switch (_) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -21013,6 +21037,16 @@
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case 2:
+            return "#SteamOSCompatibility_Category_Compatible";
+          case 1:
+            return "#SteamOSCompatibility_Category_Unsupported";
+          default:
+            return "#SteamOSCompatibility_Category_Unknown";
         }
       }
     },

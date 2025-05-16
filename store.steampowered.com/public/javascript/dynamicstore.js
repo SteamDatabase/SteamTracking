@@ -629,27 +629,47 @@ GDynamicStore = {
 			var unPackageID = $El.data('dsPackageid');
 			var strAppIDs = $El.data('dsAppid');
 			var eSteamDeckCompatCategory = $El.data('dsSteamDeckCompatCategory');
+			var eSteamOSCompatCategory = $El.data('dsSteamOsCompatCategory');
 
-			if ( eSteamDeckCompatCategory !== undefined && !$El.data( 'dsSteamDeckCompatHandled' ) )
+			if ( ( eSteamDeckCompatCategory !== undefined || eSteamOSCompatCategory !== undefined ) && !$El.data( 'dsSteamDeckCompatHandled' ) )
 			{
 				$El.data('dsSteamDeckCompatHandled', true);
 
 				var strClasses = 'ds_steam_deck_compat ';
-				switch( eSteamDeckCompatCategory )
+				if ( eSteamOSCompatCategory !== undefined )
 				{
-					case 3:
-						strClasses += 'verified';
-						break;
-					case 2:
-						strClasses += 'playable';
-						break;
-					case 1:
-						strClasses += 'unsupported';
-						break;
-					case 0:
-					default:
-						strClasses += 'unknown';
-						break;
+					switch( eSteamOSCompatCategory )
+					{
+						case 2:
+							strClasses += 'steamoscompatible';
+							break;
+						case 1:
+							strClasses += 'steamosunsupported';
+							break;
+						case 0:
+						default:
+							strClasses += 'steamosunknown';
+							break;
+					}
+				}
+				else
+				{
+					switch( eSteamDeckCompatCategory )
+					{
+						case 3:
+							strClasses += 'verified';
+							break;
+						case 2:
+							strClasses += 'playable';
+							break;
+						case 1:
+							strClasses += 'unsupported';
+							break;
+						case 0:
+						default:
+							strClasses += 'unknown';
+							break;
+					}
 				}
 				var elSteamDeckCompatCategory = $J( '<div/>', { class: strClasses } );
 				$El.append( elSteamDeckCompatCategory );
@@ -1792,6 +1812,11 @@ GStoreItemData = {
 		if ( rgItemData['steam_deck_compat_category'] !== undefined )
 		{
 			params['data-ds-steam-deck-compat-category'] = rgItemData['steam_deck_compat_category'];
+		}
+
+		if ( rgItemData['steam_os_compat_category'] !== undefined )
+		{
+			params['data-ds-steam-os-compat-category'] = rgItemData['steam_os_compat_category'];
 		}
 
 		if ( unAppID )

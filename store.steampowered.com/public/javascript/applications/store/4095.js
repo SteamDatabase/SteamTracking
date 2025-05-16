@@ -19344,42 +19344,50 @@
         );
       }
       function O(e) {
-        const { appID: t, results: r, appName: a } = e,
-          n = (0, h.Qn)(),
-          s = n
-            ? (0, b.we)(
-                "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-              )
-            : (0, b.we)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
-          o = r?.steam_deck_blog_url,
-          l = i.useId();
+        const { appID: t, results: r, appName: a, tab: n } = e,
+          s = (0, h.Qn)(),
+          o = "steamos" == n ? 2 : 1;
+        let l, m, c;
+        2 == o
+          ? ((l = (0, b.we)(
+              "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+            )),
+            (m = i.createElement(q, { category: r.steamos_resolved_category })),
+            (c = i.createElement($, { category: r.steamos_resolved_category })))
+          : ((l = s
+              ? (0, b.we)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                )
+              : (0, b.we)(
+                  "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+                )),
+            (m = i.createElement(j, { category: r.resolved_category })),
+            (c = i.createElement(Y, { category: r.resolved_category })));
+        const d = r?.steam_deck_blog_url,
+          u = i.useId();
         return r
           ? i.createElement(
               "div",
               {
                 className: C().BannerContainer,
                 role: "group",
-                "aria-labelledby": l,
+                "aria-labelledby": u,
               },
-              i.createElement("div", { className: C().BannerHeader, id: l }, s),
+              i.createElement("div", { className: C().BannerHeader, id: u }, l),
               i.createElement(
                 "div",
-                { className: n ? C().BannerContent : C().BannerContentDesktop },
-                i.createElement(
-                  "div",
-                  null,
-                  i.createElement(j, { category: r.resolved_category }),
-                  i.createElement(Y, { category: r.resolved_category }),
-                ),
+                { className: s ? C().BannerContent : C().BannerContentDesktop },
+                i.createElement("div", null, m, c),
                 i.createElement(W, {
                   results: r,
                   learnMore: (0, b.we)(
                     "#SteamDeckVerified_Store_CompatSection_LearnMore",
                   ),
                   appName: a,
+                  eStartingTab: o,
                 }),
-                o && i.createElement("div", { className: C().Divider }),
-                o &&
+                d && i.createElement("div", { className: C().Divider }),
+                d &&
                   i.createElement(z, {
                     url: r.steam_deck_blog_url,
                     containerClass: C().DeveloperComments_Anchor,
@@ -19464,30 +19472,30 @@
         );
       }
       function W(e) {
-        const { results: t, learnMore: r, appName: o } = e,
-          [m, c] = (0, i.useState)(!1);
-        let d = i.useCallback(
+        const { results: t, learnMore: r, appName: o, eStartingTab: m } = e,
+          [c, d] = (0, i.useState)(!1);
+        let u = i.useCallback(
           (e) => {
-            (0, l.D)() && (0, l.D)().AddEvent(1003), c(!0);
+            (0, l.D)() && (0, l.D)().AddEvent(1003), d(!0);
           },
-          [c],
+          [d],
         );
-        let u = {
+        let p = {
           onOKButton: null,
           onOKActionDescription: null,
           onCancelActionDescription: (0, b.we)("#Button_Close"),
-          onCancelButton: () => c(!1),
+          onCancelButton: () => d(!1),
         };
         return i.createElement(
           "div",
           null,
-          i.createElement(a.Ii, { className: C().LearnMore, onClick: d }, r),
+          i.createElement(a.Ii, { className: C().LearnMore, onClick: u }, r),
           i.createElement(
             S.mt,
             {
-              active: m,
+              active: c,
               onDismiss: () => {
-                c(!1);
+                d(!1);
               },
               modalClassName: "DeckVerifiedModalDialog",
             },
@@ -19503,8 +19511,9 @@
                 },
                 i.createElement(D, {
                   results: t,
-                  buttonProps: u,
+                  buttonProps: p,
                   appName: o,
+                  eStartingTab: m,
                   autoFocus: !0,
                 }),
               ),
@@ -19564,7 +19573,7 @@
             (n = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (s = C().Unsupported);
         }
-        const o = i.createElement("span", { className: s }, (0, b.we)($(t))),
+        const o = i.createElement("span", { className: s }, (0, b.we)(Q(t))),
           l = i.createElement(
             "span",
             { className: C().CompatibilityDetailRatingSummary },
@@ -19608,22 +19617,7 @@
             (n = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
               (s = C().Unsupported);
         }
-        const o = i.createElement(
-            "span",
-            { className: s },
-            (0, b.we)(
-              (function (e) {
-                switch (e) {
-                  case 2:
-                    return "#SteamOSCompatibility_Category_Compatible";
-                  case 1:
-                    return "#SteamOSCompatibility_Category_Unsupported";
-                  default:
-                    return "#SteamOSCompatibility_Category_Unknown";
-                }
-              })(t),
-            ),
-          ),
+        const o = i.createElement("span", { className: s }, (0, b.we)(X(t))),
           l = i.createElement(
             "span",
             { className: C().CompatibilityDetailRatingSummary },
@@ -19648,10 +19642,18 @@
         return i.createElement(
           "span",
           { className: C().CompatibilityDetailRatingDescription },
-          (0, b.we)($(t)),
+          (0, b.we)(Q(t)),
         );
       }
       function $(e) {
+        const { category: t } = e;
+        return i.createElement(
+          "span",
+          { className: C().CompatibilityDetailRatingDescription },
+          (0, b.we)(X(t)),
+        );
+      }
+      function Q(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -19661,6 +19663,16 @@
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
+        }
+      }
+      function X(e) {
+        switch (e) {
+          case 2:
+            return "#SteamOSCompatibility_Category_Compatible";
+          case 1:
+            return "#SteamOSCompatibility_Category_Unsupported";
+          default:
+            return "#SteamOSCompatibility_Category_Unknown";
         }
       }
     },
@@ -22062,7 +22074,7 @@
         A = r(79908),
         R = r(30894),
         k = r(88997),
-        G = r(68451),
+        G = r(60155),
         L = r(58579),
         F = r.n(L);
       const P = {

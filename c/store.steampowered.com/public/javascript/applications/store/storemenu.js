@@ -114,7 +114,9 @@
     chunkid: (module) => {
       module.exports = {
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
+        GamepadUI: "_2cz9ufAQLjlNOwbp2JCJST",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
+        NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
@@ -1455,6 +1457,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1475,7 +1478,7 @@
           })(_);
         if (!_) return _;
         const _ = _.createElement(
-          "a",
+          _._,
           {
             ..._,
             href: _,
@@ -1494,12 +1497,16 @@
             )
           : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgItemIDs: _ } = _;
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
             className: _.CapsuleList,
           },
           _.map((_) =>
@@ -1586,7 +1593,6 @@
             _.createElement("img", {
               src: _,
               alt: "",
-              className: _.Capsule,
             }),
         );
       }
@@ -2254,8 +2260,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -2318,6 +2322,7 @@
           _._,
           {
             "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
             className: _.LinkColumn,
           },
           _.children,
@@ -2326,7 +2331,7 @@
       function _(_) {
         const _ = (0, _._)(_.href);
         return _.createElement(
-          "a",
+          _._,
           {
             href: _,
             className: _.Link,
@@ -2375,8 +2380,10 @@
       }
       function _(_) {
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
             className: _()(_.SectionContent, _.GridSection),
           },
           _.children,
@@ -2384,8 +2391,10 @@
       }
       function _(_) {
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "row",
+            navEntryPreferPosition: _._.MAINTAIN_X,
             className: _.Row,
           },
           _.children,
@@ -2405,7 +2414,7 @@
       function _(_) {
         const _ = (0, _._)(_.href);
         return _.createElement(
-          "a",
+          _._,
           {
             href: _,
             className: _()(_.Button, _.icon && _.WithIcon),
@@ -2643,7 +2652,7 @@
               _("#Menu_Section_Recommendations_DiscoveryQueue_Description"),
             ),
             _.createElement(
-              "a",
+              _._,
               {
                 className: _.ActionButton,
                 href: `${_._.STORE_BASE_URL}explore/next/0`,
@@ -2687,7 +2696,7 @@
               ),
             ),
             _.createElement(
-              "a",
+              _._,
               {
                 className: _.ActionButton,
                 href: `${_._.STORE_BASE_URL}recommender/`,
@@ -2725,6 +2734,7 @@
           staleTime: 864e5,
         };
       }
+      var _ = __webpack_require__("chunkid");
       function _() {
         return _.createElement(
           _,
@@ -2824,8 +2834,9 @@
                 _.Fragment,
                 null,
                 _.createElement(
-                  "div",
+                  _._,
                   {
+                    "flow-children": "row",
                     className: _.TopCategories,
                   },
                   _.map((_) =>
@@ -2841,13 +2852,15 @@
                   ),
                 ),
                 _.createElement(
-                  "div",
+                  _._,
                   {
+                    "flow-children": "row",
                     className: _.TagLinksContainer,
                   },
                   _.createElement(
-                    "div",
+                    _._,
                     {
+                      "flow-children": "row",
                       className: _.TagLinks,
                     },
                     _.map((_) =>
@@ -2863,7 +2876,7 @@
                     ),
                   ),
                   _.createElement(
-                    "a",
+                    _._,
                     {
                       className: _.ViewAllTags,
                       href: `${_._.STORE_BASE_URL}tag/browse/`,
@@ -2911,7 +2924,7 @@
       function _(_) {
         const { children: _, title: __webpack_require__, href: _ } = _;
         return _.createElement(
-          "a",
+          _._,
           {
             className: _.CategoryLink,
             href: _,
@@ -2939,10 +2952,11 @@
         const { featuredLink: _ } = _,
           _ = (0, _._)(_.unTagID);
         return _.createElement(
-          "a",
+          _._,
           {
             className: _.TagLink,
             href: _,
+            fnCanTakeFocus: _._,
           },
           _.createElement(_._, {
             tagid: _.unTagID,
@@ -2952,10 +2966,11 @@
       function _(_) {
         const { featuredLink: _ } = _;
         return _.createElement(
-          "a",
+          _._,
           {
             className: _.TagLink,
             href: `${_._.STORE_BASE_URL}${_.strURLPath}`,
+            fnCanTakeFocus: _._,
           },
           _.strName,
         );
@@ -3271,7 +3286,7 @@
         return _.createElement(
           _,
           null,
-          _.createElement(_, null, _("#Menu_Section_WaysToPlay")),
+          _.createElement(_, null, _("#Menu_Section_SpecialSections")),
           _.createElement(
             _,
             null,
@@ -3452,13 +3467,16 @@
           };
         })(_, __webpack_require__);
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "row",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
             className: _.DynamicMenu,
           },
           _.createElement(
-            "div",
+            _._,
             {
+              "flow-children": "column",
               className: _.MenuOptions,
               onMouseLeave: _,
             },
@@ -3571,6 +3589,7 @@
             className: _()(_.MenuItem, _ && _.Active),
             onClick: _,
             onMouseMove: _,
+            onGamepadFocus: _,
           },
           _,
           " ",
@@ -3601,6 +3620,9 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { visible: _, closePopover: __webpack_require__ } = _;
         return _.createElement(
@@ -3614,14 +3636,17 @@
               msAnimationDuration: 100,
             },
             _.createElement(
-              "div",
+              _,
               {
-                className: _.Popover,
+                visible: _,
+                closePopover: __webpack_require__,
               },
               _.createElement(
-                "div",
+                _._,
                 {
+                  "flow-children": "row",
                   className: _.PopoverContent,
+                  onCancelButton: __webpack_require__,
                 },
                 _.createElement(_, null),
                 _.createElement(_, null),
@@ -3630,10 +3655,47 @@
           ),
         );
       }
+      function _(_) {
+        const {
+            visible: _,
+            closePopover: __webpack_require__,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _.useRef();
+        return (
+          (0, _._)(_, _, !0),
+          _
+            ? _.createElement(
+                _._,
+                {
+                  navID: "StoreMenuPopover",
+                  onDeactivated: __webpack_require__,
+                  navTreeRef: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Popover,
+                  },
+                  _.createElement(_._, null, _),
+                ),
+              )
+            : _.createElement(
+                "div",
+                {
+                  className: _.Popover,
+                },
+                _,
+              )
+        );
+      }
       function _() {
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
             className: _.StaticMenu,
           },
           _.createElement(
@@ -3691,7 +3753,7 @@
         const { href: _, children: __webpack_require__ } = _,
           _ = (0, _._)(_);
         return _.createElement(
-          "a",
+          _._,
           {
             href: _,
             className: _.MenuItem,
@@ -3703,11 +3765,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
-        const { refPage: _ } = _;
+        const { refPage: _ } = _,
+          _ = (0, _._)();
         return _.createElement(
           "div",
           {
-            className: _.StoreMenu,
+            className: _()(_.StoreMenu, _ && _.GamepadUI),
           },
           _.createElement(_, {
             refPage: _,
@@ -3719,6 +3782,7 @@
           _ = _.useRef(null),
           [_, _, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
+          _ = (0, _._)(),
           _ = _.useCallback(() => {
             _ ? _() : _(), _();
           }, [_, _, _, _]),
@@ -3728,25 +3792,24 @@
         return (
           (0, _.useEffect)(() => {
             const _ = _.current,
-              _ = _.current;
+              _ = _.current,
+              _ = _ ? 0 : _.clientHeight;
             return (
-              _.style.setProperty(
-                "--store-menu-floating-height",
-                `${_.clientHeight}px`,
-              ),
+              _.style.setProperty("--store-menu-floating-height", `${_}px`),
               () => {
                 _?.style.removeProperty("--store-menu-floating-height");
               }
             );
-          }, [_]),
+          }, [_, _]),
           _.createElement(
             _._,
             {
               feature: "storemenuv7",
             },
             _.createElement(
-              "div",
+              _._,
               {
+                "flow-children": "row",
                 className: _.Content,
                 ref: _,
               },
@@ -3777,11 +3840,16 @@
                 },
                 _.Localize("#Menu_OnSale"),
               ),
-              _.createElement(_, {
-                bSearchVisible: _,
-                openSearch: _,
-                closeSearch: _,
-              }),
+              !_ &&
+                _.createElement(_, {
+                  bSearchVisible: _,
+                  openSearch: _,
+                  closeSearch: _,
+                }),
+              _ &&
+                _.createElement("div", {
+                  className: _.NoSearchBarSpacer,
+                }),
               _.createElement(_, null),
               _.createElement(_, null),
               _.createElement(_, null),
@@ -3813,11 +3881,17 @@
       function _() {
         const _ = _(_),
           _ = _.useRef(null),
-          [__webpack_require__, _] = _.useState(null);
+          [__webpack_require__, _] = _.useState(null),
+          _ = (0, _._)();
         _.current = __webpack_require__;
-        const _ = _.useCallback((_) => {
-          _ && _.parentElement && (_.parentElement.className = _.StoreMenu);
-        }, []);
+        const _ = _.useCallback(
+          (_) => {
+            _ &&
+              _.parentElement &&
+              (_.parentElement.className = _()(_.StoreMenu, _ && _.GamepadUI));
+          },
+          [_],
+        );
         return (
           (0, _.useEffect)(
             () => (
@@ -3869,9 +3943,10 @@
         );
       }
       function _(_) {
-        const { strURL: _, children: __webpack_require__ } = _;
+        const { strURL: _, children: __webpack_require__ } = _,
+          _ = (0, _._)(_);
         return _.createElement(
-          "a",
+          _._,
           {
             className: _()(_.MenuButton, _.FlyoutMenuButton),
             href: _,
@@ -3881,13 +3956,14 @@
       }
       function _() {
         const _ = (0, _._)(),
-          { data: _ } = (0, _._)(_);
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}wishlist/`);
         return _
           ? _.createElement(
-              "a",
+              _._,
               {
                 className: _.MenuButton,
-                href: `${_._.STORE_BASE_URL}wishlist/`,
+                href: _,
               },
               _.createElement(_, null),
               _.Localize("#Menu_Wishlist"),
@@ -3905,12 +3981,13 @@
         );
       }
       function _() {
-        const { data: _ } = (0, _._)();
+        const { data: _ } = (0, _._)(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}cart/`);
         return _.createElement(
-          "a",
+          _._,
           {
             className: _.MenuButton,
-            href: `${_._.STORE_BASE_URL}cart/`,
+            href: _,
           },
           _.createElement(_, null),
           _.Localize("#Menu_Cart"),

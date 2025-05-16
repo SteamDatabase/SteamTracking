@@ -5419,11 +5419,12 @@
                     appID: _,
                   }),
                 ),
-              "deck-verified-results": () =>
+              "deck-verified-results": (_) =>
                 _.createElement(_._, {
                   appID: _,
                   results: (0, _._)("deckcompatibility", "application_config"),
                   appName: (0, _._)("appname", "application_config"),
+                  ..._,
                 }),
               "gamehighlight-trailer": (_) =>
                 _.createElement(_, {

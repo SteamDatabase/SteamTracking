@@ -4495,7 +4495,7 @@
                 a.createElement(wn, { ...e, appid: t.appid }),
               "demo-and-quick-pitch": () =>
                 a.createElement(mn.d, null, a.createElement(H, { appID: t })),
-              "deck-verified-results": () =>
+              "deck-verified-results": (e) =>
                 a.createElement(Ct.q6, {
                   appID: t,
                   results: (0, Et.Tc)(
@@ -4503,6 +4503,7 @@
                     "application_config",
                   ),
                   appName: (0, Et.Tc)("appname", "application_config"),
+                  ...e,
                 }),
               "gamehighlight-trailer": (e) => a.createElement(ht, { ...e }),
               "discovery-queue-app-widget": () =>

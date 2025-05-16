@@ -1995,6 +1995,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5093,6 +5094,33 @@
           default:
             return _._.NONE;
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.seal({
+        onMoveUp: _,
+        onMoveDown: _,
+      });
+      Object.seal({
+        onMoveRight: _,
+        onMoveLeft: _,
+      });
+      function _(_, _) {
+        if (_.is_repeat) return !1;
+        const _ = _.GetRelativeDirection(_.button);
+        return _ == _._.FORWARD
+          ? _.BFocusFirstChild(_._.GAMEPAD)
+          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
+      }
+      function _(_) {
+        return _.Element.checkVisibility();
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -44095,23 +44123,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = Object.seal({
-        onMoveUp: _,
-        onMoveDown: _,
-      });
-      Object.seal({
-        onMoveRight: _,
-        onMoveLeft: _,
-      });
-      function _(_, _) {
-        if (_.is_repeat) return !1;
-        const _ = _.GetRelativeDirection(_.button);
-        return _ == _._.FORWARD
-          ? _.BFocusFirstChild(_._.GAMEPAD)
-          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -44211,7 +44224,7 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 navRef: this.m_navRef,
                 ref: this.m_divRef,
-                ..._,
+                ..._._,
               },
               _,
               !this.instance.BIsSubMenu() &&

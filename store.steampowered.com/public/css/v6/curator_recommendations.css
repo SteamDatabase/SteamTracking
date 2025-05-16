@@ -1567,6 +1567,8 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);
 	position: relative;
 	z-index: 3;
 }
+body.v7menu .curator_header_area_ctn {
+	margin-top: 45px;	}
 .curator_header_area_ctn_hideme {
 	display:none;
 }
