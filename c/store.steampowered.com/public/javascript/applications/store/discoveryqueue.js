@@ -1122,124 +1122,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        let { defaultOptions: _, children: __webpack_require__ } = _,
-          _ = _.useMemo(
-            () => ({
-              defaultOptions: _ || {},
-            }),
-            [_],
-          );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          __webpack_require__,
-        );
-      }
-      const _ = "StoreQueryStore";
-      function _(_, _, _, _) {
-        let _ = _();
-        const _ = (0, _._)();
-        _ || (0, _._)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
-        let _ = _.defaultOptions;
-        const _ = _.useMemo(() => {
-          let _ = [];
-          return (
-            _?.content_descriptors_excluded
-              ? (_ = _.content_descriptors_excluded)
-              : _?.content_descriptors_excluded &&
-                (_ = _.content_descriptors_excluded),
-            {
-              ..._,
-              filters: {
-                content_descriptors_excluded: _,
-                ..._.filters,
-              },
-            }
-          );
-        }, [_, _, _]);
-        let _;
-        void 0 !== _?.override_country_code
-          ? (_ = _.override_country_code)
-          : void 0 !== _?.override_country_code &&
-            (_ = _.override_country_code);
-        let _ = {
-          staleTime: 36e5,
-        };
-        _?.reactQuery &&
-          (_ = {
-            ..._,
-            ..._.reactQuery,
-          });
-        const _ = [_, _, _, _];
-        return (0, _._)({
-          queryKey: _,
-          queryFn: () =>
-            (async function (_, _, _, _, _) {
-              const _ = _._.Init(_._);
-              (0, _._)(_), _ && (0, _._)(_, _);
-              _ && _.Body().set_override_country_code(_);
-              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
-              const _ = await _._.Query(_, _);
-              if (1 != _.GetEResult())
-                throw `Error executing StoreQuery "${_}", EResult: ${_.GetEResult()}`;
-              return new _(_, _);
-            })(_, _, _, _, _),
-          ..._,
-        });
-      }
-      class _ {
-        m_Items;
-        m_rgItemIDs;
-        m_metadata;
-        constructor(_, _) {
-          this.ReadResults(_, _);
-        }
-        GetItems() {
-          return this.m_Items;
-        }
-        GetItemIDs() {
-          return this.m_rgItemIDs;
-        }
-        GetMetadata() {
-          return this.m_metadata;
-        }
-        ReadResults(_, _) {
-          this.m_Items ||
-            ((0, _._)(
-              0 == _.Body().metadata().start(),
-              "Empty item list - expected to start at 0",
-            ),
-            (this.m_Items = []));
-          const _ = _.Body().ids() || [];
-          if (
-            ((this.m_rgItemIDs = __webpack_require__.map((_) => _.toObject())),
-            _.Body().store_items())
-          )
-            for (const _ of _.Body().store_items())
-              this.m_Items.push(_._.Get().ReadItem(_, _));
-          this.m_metadata = _.Body().metadata().toObject();
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1592,9 +1474,9 @@
           #a;
           #i;
           #n;
-          #r;
           #s;
-          #o;
+          #r;
+          #l;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
@@ -1608,7 +1490,7 @@
             1 === this.listeners.size &&
               this.#n.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#l(_, _);
+                  this.#o(_, _);
                 });
               });
           }
@@ -1642,7 +1524,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#l(_, _);
+                        this.#o(_, _);
                       });
                     }),
                     this.#c()));
@@ -1678,11 +1560,11 @@
           }
           #u(_, _) {
             return _
-              ? ((this.#r && this.#t === this.#o && _ === this.#s) ||
-                  ((this.#s = _),
-                  (this.#o = this.#t),
-                  (this.#r = (0, _._)(this.#r, _(_)))),
-                this.#r)
+              ? ((this.#s && this.#t === this.#l && _ === this.#r) ||
+                  ((this.#r = _),
+                  (this.#l = this.#t),
+                  (this.#s = (0, _._)(this.#s, _(_)))),
+                this.#s)
               : _;
           }
           #m(_) {
@@ -1718,7 +1600,7 @@
               )
             );
           }
-          #l(_, _) {
+          #o(_, _) {
             const _ = this.#n.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {
@@ -1729,7 +1611,7 @@
           }
           #c() {
             if (this.hasListeners()) {
-              this.#r !==
+              this.#s !==
                 this.#u(this.#d(this.#t, this.#a), this.#i?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {

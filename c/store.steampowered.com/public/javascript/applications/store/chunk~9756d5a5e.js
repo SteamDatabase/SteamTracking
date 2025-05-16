@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [6539],
+  [7911],
   {
     chunkid: (module) => {
       module.exports = {
@@ -2346,7 +2346,6 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
