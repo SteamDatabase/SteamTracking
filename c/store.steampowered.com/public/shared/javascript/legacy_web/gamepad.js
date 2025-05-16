@@ -17,17 +17,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, ...__webpack_require__) {
-        try {
-          console.assert
-            ? 0 == __webpack_require__.length
-              ? console.assert(!!_, _)
-              : console.assert(!!_, _, ...__webpack_require__)
-            : _ || console.warn(_, ...__webpack_require__);
-        } catch (_) {}
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         let _ = 0;
@@ -215,8 +206,6 @@
       const _ = new _._();
       let _,
         _ = !1,
-        _ = null,
-        _ = null,
         _ = null;
       function _(_) {
         _ ||
@@ -346,7 +335,7 @@
             _.get(this)?.forEach((_) => _()),
               _.delete(this),
               _.delete(this),
-              _()(this).attr("data-nav-modal") && _();
+              _()(this).attr("data-nav-modal") && _(this);
           });
       }
       function _(_, _ = !1) {
@@ -364,13 +353,18 @@
           (function () {
             for (let _ = _.length - 1; _ >= 0; _--)
               if (_[_])
-                for (let [_, _] of _[_])
+                for (let [_, _] of _[_]) {
                   _(_, _.Tree.RegisterNavigationItem(_, _));
+                  const _ = _()(_).data("navTreeModal");
+                  _ &&
+                    (_()(_).data(
+                      "unregisterNavTree",
+                      _.RegisterGamepadNavigationTree(_, window),
+                    ),
+                    _.Activate(!0));
+                }
             _ = [];
           })();
-      }
-      function _(_) {
-        _(_()(_)), _(_()(_));
       }
       function _(_) {
         const _ = _()(_.Element);
@@ -388,32 +382,31 @@
         if (_ instanceof _._ || _ == _.InReactTree)
           return _(_, _.InReactTree), _.InReactTree;
         const _ = _.Tree;
-        let _ = _.data("reactNavRoot")
-            ? new _._(_.data("reactNavRoot"), _)
-            : _.CreateNode(_, _.m_FocusRing),
+        let _,
           _ = _.data("panel") || {};
         if (
-          (_()(_).attr("data-nav-modal") &&
-            (function (_) {
-              _ &&
-                (_(
-                  !1,
-                  "Creating a new modal nav tree while one already exists. A modal opening another modal is not currently supported.",
-                ),
-                _());
-              _ = _.NewGamepadNavigationTree(
-                _.GetDefaultContext(),
-                "modal_dialog",
-                void 0,
-              );
-              const _ = _(_()("body"));
-              (_.Root.m_FocusRing = _),
-                _.Root.SetProperties({}),
-                _(_, _.Root),
-                _(_),
-                (0, _._)(_.Root.m_element, (_) => !0),
-                (_ = _.RegisterGamepadNavigationTree(_, window));
-            })(_),
+          ((_ = _.attr("data-nav-modal")
+            ? (function (_, _) {
+                const _ = _.NewGamepadNavigationTree(
+                    _.GetDefaultContext(),
+                    "modal_dialog",
+                    _,
+                  ),
+                  _ = _(_()(_));
+                return (
+                  (_.Root.m_FocusRing = _),
+                  _.Root.SetProperties({
+                    focusableIfNoChildren: !0,
+                  }),
+                  __webpack_require__.SetModal(!0),
+                  _()(_).data("navTreeModal", _),
+                  _(_, _.Root),
+                  _.Root
+                );
+              })(_, _)
+            : _.data("reactNavRoot")
+              ? new _._(_.data("reactNavRoot"), _)
+              : _.CreateNode(_, _.m_FocusRing)),
           "A" == _.tagName || "BUTTON" == _.tagName || "LABEL" == _.tagName)
         )
           (_.focusable = _.focusable ?? !0),
@@ -590,12 +583,18 @@
         return _ instanceof _._ ? _ : _(_);
       }
       function _(_) {
-        _ && (_(), (_ = null), (_ = null)),
-          _ && _()(_).removeAttr("data-nav-modal");
+        const _ = _()(_).data("unregisterNavTree");
+        console.assert(_, "missing unregister binding"),
+          _(),
+          _()(_).removeAttr("data-nav-modal"),
+          _()(_).removeData("unregisterNavTree"),
+          _()(_).removeClass("navTreeModal");
       }
       const _ = {
         InstrumentFocusElements: _,
-        ForceUpdateFocusElements: _,
+        ForceUpdateFocusElements: function (_) {
+          _(_()(_)), _(_()(_));
+        },
         GPNavFocusChild: function (_) {
           let _ = _(_[0]);
           return (
@@ -606,7 +605,7 @@
         },
         GPOnShowingModalWindow: function (_) {
           const _ = _;
-          return _()(_).attr("data-nav-modal", "true"), _(_), () => _(_);
+          return _()(_).attr("data-nav-modal", "true"), () => _(_);
         },
         GPShowVirtualKeyboard: function (_ = !0) {
           _ ? _.ShowVirtualKeyboard() : _.HideVirtualKeyboard();

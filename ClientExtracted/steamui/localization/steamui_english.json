@@ -3335,6 +3335,7 @@
     "Settings_Internet_Connected_To_Internet_But_Not_Steam_KnownHardware": "%1$s can't reach the Steam servers.",
     "Settings_Internet_Connected_To_Internet_But_Not_Steam_UnknownHardware": "This device can't reach the Steam servers.",
     "Settings_Internet_Connected_To_Internet_But_Not_Steam_Throttled_KnownHardware": "%1$s is working on reconnecting to the Steam servers. Trying again in %2$s.",
+    "Settings_Internet_Connected_To_Internet_But_Not_Steam_Throttled_UnknownHardware": "This device is working on reconnecting to the Steam servers. Trying again in %1$s.",
     "Settings_Internet_In_Offline_Mode_KnownHardware": "%1$s is in Offline Mode.",
     "Settings_Internet_In_Offline_Mode_UnknownHardware": "This device is in Offline Mode.",
     "Settings_Internet_Connected_To_Network_But_Not_Internet": "Steam Deck can't reach the Internet.",
