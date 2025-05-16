@@ -6810,12 +6810,14 @@
       }
       function At(e) {
         const { nAppId: t, nParentAppId: n, strAppType: r } = e,
-          o = (0, nt.V)();
+          o = (0, nt.V)(),
+          l = "Game" == r || "Application" == r || "DLC" == r || "Music" == r,
+          s = "Demo" == r;
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(pt, { nPartnerID: o, nAppID: t }),
-          "Demo" == r && a.createElement(Je, { demoAppID: t, parentAppId: n }),
+          l && a.createElement(pt, { nPartnerID: o, nAppID: t }),
+          s && a.createElement(Je, { demoAppID: t, parentAppId: n }),
         );
       }
       var wt,

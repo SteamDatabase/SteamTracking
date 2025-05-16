@@ -7988,15 +7988,18 @@
             nParentAppId: __webpack_require__,
             strAppType: _,
           } = _,
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = "Game" == _ || "Application" == _ || "DLC" == _ || "Music" == _,
+          _ = "Demo" == _;
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, {
-            nPartnerID: _,
-            nAppID: _,
-          }),
-          "Demo" == _ &&
+          _ &&
+            _.createElement(_, {
+              nPartnerID: _,
+              nAppID: _,
+            }),
+          _ &&
             _.createElement(_, {
               demoAppID: _,
               parentAppId: __webpack_require__,
