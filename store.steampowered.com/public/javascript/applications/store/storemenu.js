@@ -121,6 +121,7 @@
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
+        CartButton: "qqQDu9j0LIoK-w06-JxB5",
         FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
         Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
         PopoverBackdrop: "Or55qOb8IXp60HwNN8KKQ",
@@ -464,66 +465,12 @@
         H = n.n(z),
         F = n(89068),
         V = n(15161);
-      class Z extends z.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Z.prototype.recent_apps || F.Sg(Z.M()),
-            z.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
-                fields: { recent_apps: { n: 1, c: q, r: !0, q: !0 } },
-              }),
-            Z.sm_m
-          );
-        }
-        static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = F.w0(Z.M())), Z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return F.BT(Z.M(), e, t);
-        }
-        static fromObject(e) {
-          return F.Uq(Z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (H().BinaryReader)(e),
-            n = new Z();
-          return Z.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return F.zj(Z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (H().BinaryWriter)();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          F.i0(Z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (H().BinaryWriter)();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserStoreVisitData";
-        }
-      }
       class q extends z.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            q.prototype.item_id || F.Sg(q.M()),
-            z.Message.initialize(this, e, 0, -1, void 0, null);
+            q.prototype.recent_apps || F.Sg(q.M()),
+            z.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -532,14 +479,7 @@
             q.sm_m ||
               (q.sm_m = {
                 proto: q,
-                fields: {
-                  item_id: { n: 1, c: V.O4 },
-                  time_visit: {
-                    n: 2,
-                    br: F.qM.readFixed32,
-                    bw: F.gp.writeFixed32,
-                  },
-                },
+                fields: { recent_apps: { n: 1, c: Z, r: !0, q: !0 } },
               }),
             q.sm_m
           );
@@ -574,6 +514,67 @@
         serializeBase64String() {
           var e = new (H().BinaryWriter)();
           return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserStoreVisitData";
+        }
+      }
+      class Z extends z.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Z.prototype.item_id || F.Sg(Z.M()),
+            z.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Z.sm_m ||
+              (Z.sm_m = {
+                proto: Z,
+                fields: {
+                  item_id: { n: 1, c: V.O4 },
+                  time_visit: {
+                    n: 2,
+                    br: F.qM.readFixed32,
+                    bw: F.gp.writeFixed32,
+                  },
+                },
+              }),
+            Z.sm_m
+          );
+        }
+        static MBF() {
+          return Z.sm_mbf || (Z.sm_mbf = F.w0(Z.M())), Z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return F.BT(Z.M(), e, t);
+        }
+        static fromObject(e) {
+          return F.Uq(Z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (H().BinaryReader)(e),
+            n = new Z();
+          return Z.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return F.zj(Z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (H().BinaryWriter)();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          F.i0(Z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (H().BinaryWriter)();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserStoreVisitData_RecentApps";
@@ -629,7 +630,7 @@
               ($.sm_m = {
                 proto: $,
                 fields: {
-                  visit_data: { n: 1, c: Z },
+                  visit_data: { n: 1, c: q },
                   frequent_hubs: { n: 2, c: j, r: !0, q: !0 },
                 },
               }),
@@ -1685,7 +1686,7 @@
             { onKeyDown: d, ..._ } = xe(a, o),
             g = i.useCallback(() => l(!0), []);
           return i.createElement(
-            Ze,
+            qe,
             { openSearch: n, closeSearch: r, onActive: g },
             i.createElement("input", {
               className: s.SearchInput,
@@ -1708,13 +1709,13 @@
               i.createElement(We, null),
             ),
             i.createElement(
-              qe,
+              Ze,
               { visible: t, id: u },
               i.createElement(ke, { ..._ }),
             ),
           );
         }),
-        Ze = i.memo(function (e) {
+        qe = i.memo(function (e) {
           const { openSearch: t, closeSearch: n, onActive: r, children: a } = e,
             o = i.useCallback(
               (e) => {
@@ -1738,7 +1739,7 @@
             a,
           );
         });
-      function qe(e) {
+      function Ze(e) {
         const { id: t, visible: n, children: r } = e;
         return i.createElement(
           "div",
@@ -2159,7 +2160,7 @@
                 href: `${c.TS.STORE_BASE_URL}sitemap/#genres`,
               },
               m("#Menu_Section_Categories_ViewAll"),
-              i.createElement(Zt, null),
+              i.createElement(qt, null),
             ),
           ),
           i.createElement(tt, null, i.createElement(At, null)),
@@ -2272,7 +2273,7 @@
                       href: `${c.TS.STORE_BASE_URL}tag/browse/`,
                     },
                     m("#Menu_Section_Categories_ViewAllTags"),
-                    i.createElement(Zt, null),
+                    i.createElement(qt, null),
                   ),
                 ),
               );
@@ -2352,7 +2353,7 @@
           src: `${c.TS.STORE_CDN_URL}categories/image/tags/${t}?cc=${c.TS.COUNTRY}&l=${c.TS.LANGUAGE}`,
         });
       }
-      function Zt() {
+      function qt() {
         return i.createElement(
           "svg",
           {
@@ -2368,7 +2369,7 @@
           }),
         );
       }
-      var qt = n(22068);
+      var Zt = n(22068);
       const Wt =
           n.p +
           "images/applications/store/steam_deck.png?v=valveisgoodatcaching",
@@ -2408,7 +2409,7 @@
             .slice(0, 2);
         return i.createElement(
           tt,
-          { className: qt.FeaturedHardwareRow },
+          { className: Zt.FeaturedHardwareRow },
           r.length >= 1 && i.createElement(Jt, { ...r[0] }),
           r.length >= 2 && i.createElement(Jt, { ...r[1] }),
         );
@@ -2417,12 +2418,12 @@
         const { storeItem: t, image: n, name: r = t.name } = e;
         return i.createElement(
           ve,
-          { className: qt.FeaturedHardware, storeItem: t },
-          n && i.createElement("img", { className: qt.Image, src: n, alt: r }),
+          { className: Zt.FeaturedHardware, storeItem: t },
+          n && i.createElement("img", { className: Zt.Image, src: n, alt: r }),
           i.createElement(
             "div",
-            { className: qt.TitleContainer },
-            i.createElement("div", { className: qt.Title }, r),
+            { className: Zt.TitleContainer },
+            i.createElement("div", { className: Zt.Title }, r),
           ),
         );
       }
@@ -3038,7 +3039,6 @@
                 }),
               _ && i.createElement("div", { className: r.NoSearchBarSpacer }),
               i.createElement(Dn, null),
-              i.createElement(xn, null),
               i.createElement(Hn, null),
             ),
             i.createElement(Tn, { visible: a, closePopover: o }),
@@ -3145,13 +3145,15 @@
       function Hn() {
         const { data: e } = (0, Bn.aU)(),
           t = (0, T.aL)(`${c.TS.STORE_BASE_URL}cart/`);
-        return i.createElement(
-          ye.Ii,
-          { className: r.MenuButton, href: t },
-          i.createElement(Zn, null),
-          u.Localize("#Menu_Cart"),
-          e > 0 && i.createElement(zn, null, e),
-        );
+        return e
+          ? i.createElement(
+              ye.Ii,
+              { className: M()(r.MenuButton, r.CartButton), href: t },
+              i.createElement(qn, null),
+              u.Localize("#Menu_Cart"),
+              e > 0 && i.createElement(zn, null, e),
+            )
+          : null;
       }
       function Fn(e) {
         return i.createElement(
@@ -3214,7 +3216,7 @@
           ),
         );
       }
-      function Zn(e) {
+      function qn(e) {
         return i.createElement(
           "svg",
           {

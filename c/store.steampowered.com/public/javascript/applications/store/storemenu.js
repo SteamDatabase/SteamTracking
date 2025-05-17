@@ -119,6 +119,7 @@
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
+        CartButton: "qqQDu9j0LIoK-w06-JxB5",
         FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
         Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
         PopoverBackdrop: "Or55qOb8IXp60HwNN8KKQ",
@@ -3852,7 +3853,6 @@
                 }),
               _.createElement(_, null),
               _.createElement(_, null),
-              _.createElement(_, null),
             ),
             _.createElement(_, {
               visible: _,
@@ -3983,16 +3983,18 @@
       function _() {
         const { data: _ } = (0, _._)(),
           _ = (0, _._)(`${_._.STORE_BASE_URL}cart/`);
-        return _.createElement(
-          _._,
-          {
-            className: _.MenuButton,
-            href: _,
-          },
-          _.createElement(_, null),
-          _.Localize("#Menu_Cart"),
-          _ > 0 && _.createElement(_, null, _),
-        );
+        return _
+          ? _.createElement(
+              _._,
+              {
+                className: _()(_.MenuButton, _.CartButton),
+                href: _,
+              },
+              _.createElement(_, null),
+              _.Localize("#Menu_Cart"),
+              _ > 0 && _.createElement(_, null, _),
+            )
+          : null;
       }
       function _(_) {
         return _.createElement(
