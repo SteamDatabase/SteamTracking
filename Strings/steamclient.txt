@@ -10780,6 +10780,7 @@ $steammessages_parental_objects.proto"
 30StoreItem_Trailers_VideoSource
 30TransportValidationClient_Stub
 30VanityURLChangedNotification_t
+31500
 31AppProofOfPurchaseKeyResponse_t
 31CAPIJobRequestFriendProfileInfo
 31CAPIJobUnsubscribePublishedFile
@@ -34212,6 +34213,7 @@ lender_steamid
 length
 length_milliseconds
 lengthinmilliseconds
+lenovo_hook_filter
 level
 lgs_
 libGL.so.1
