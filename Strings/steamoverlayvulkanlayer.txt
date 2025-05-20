@@ -261,6 +261,7 @@ strcmp
 strdup
 strlen
 strncmp
+strtol
 strtold_l
 syscall
 transaction clone for operator delete(void*)
