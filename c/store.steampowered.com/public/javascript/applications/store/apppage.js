@@ -277,6 +277,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        GamepadCarousel: "_3ADDqqKx55ugBLEOJm6pqJ",
+        Fullscreen: "_1ZiAH8gp-JZJAodTjQipQP",
+        CarouselItem: "_2jIJye_-HmWo1Thf6yuIpF",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TopPlayedBannerCtn: "_28-JzhtXHYEcY9I5iFk3YP",
         DeckLogo: "E-ox_4OryQdke1181LNoB",
         BannerTitle: "s1wKhoJ4gbSLtf27P3_EZ",
@@ -304,6 +311,40 @@
         Woodsman: "urO4erFoFvnP14FJ41NMD",
         Zombies: "_3OCIBFe-fNBm1tXmL490m4",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            children: _,
+            navTreeRef: __webpack_require__,
+            NavigationManager: _,
+            ..._
+          } = _,
+          _ = _.useRef(),
+          _ = (0, _._)(_, __webpack_require__);
+        if ((0, _._)()) {
+          const _ = window.__nav_tree_root;
+          return _.createElement(
+            _._,
+            {
+              ..._,
+              navTreeRef: _,
+              parentEmbeddedNavTree: _,
+            },
+            _.createElement(_._, null, _),
+          );
+        }
+        return _.createElement(_.Fragment, null, _);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5596,6 +5637,239 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        let { trailers: _, screenshots: __webpack_require__ } = _,
+          [_, _, _] = (function () {
+            let [_, _] = (0, _.useState)(!1),
+              _ = (0, _.useCallback)(() => _(!0), [_]),
+              _ = (0, _.useCallback)(() => !!_ && (_(!1), !0), [_, _]);
+            return [_, _, _];
+          })(),
+          _ = [],
+          _ = new Map();
+        for (let _ of _)
+          if (
+            (_.featured &&
+              (_.push(
+                _.createElement(_, {
+                  key: _._,
+                  trailer: _,
+                }),
+              ),
+              _.set(_._, !0)),
+            _.length >= 2)
+          )
+            break;
+        let _ = __webpack_require__.map((_) =>
+            _.createElement(_, {
+              key: _.name,
+              screenshot: _,
+            }),
+          ),
+          _ = [];
+        for (let _ of _)
+          _.has(_._) ||
+            _.push(
+              _.createElement(_, {
+                key: _._,
+                trailer: _,
+              }),
+            );
+        let _ = [..._, ..._, ..._],
+          _ = _ ? "" : "#TrailerPlayer_FullScreen_Tooltip",
+          _ = (0, _._)(_.GamepadCarousel, _ && _.Fullscreen);
+        return _.createElement(
+          _._,
+          {
+            navID: "GameHighlightGamepadCarousel",
+          },
+          _.createElement(
+            _._,
+            {
+              className: _,
+              "flow-children": "row",
+              navEntryPreferPosition: _._.MAINTAIN_X,
+              onOptionsActionDescription: (0, _._)(_),
+              onOptionsButton: _,
+              onCancelButton: _,
+            },
+            _.createElement(
+              _._,
+              {
+                disableFocusRing: _,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        let { screenshot: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.CarouselItem,
+            focusable: !0,
+            onOKActionDescription: "",
+          },
+          _.createElement("img", {
+            src: _.url,
+          }),
+        );
+      }
+      function _(_) {
+        let { trailer: _ } = _;
+        return _.dashManifest
+          ? null
+          : _.createElement(_, {
+              trailer: _,
+            });
+      }
+      function _(_) {
+        let { trailer: _ } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (function () {
+            let [_, _] = (0, _.useState)({
+                bPaused: !0,
+                bMuted: !0,
+              }),
+              _ = (0, _._)(
+                (_) => {
+                  let _ = () => {
+                      _((_) => ({
+                        ..._,
+                        bMuted: _.muted,
+                      }));
+                    },
+                    _ = () => {
+                      _((_) => ({
+                        ..._,
+                        bPaused: !1,
+                      }));
+                    },
+                    _ = () => {
+                      _((_) => ({
+                        ..._,
+                        bPaused: !0,
+                      }));
+                    };
+                  return (
+                    _.addEventListener("volumechange", _),
+                    _.addEventListener("play", _),
+                    _.addEventListener("pause", _),
+                    () => {
+                      _.removeEventListener("volumechange", _),
+                        _.removeEventListener("play", _),
+                        _.removeEventListener("pause", _);
+                    }
+                  );
+                },
+                [_],
+              );
+            return [_, _];
+          })(),
+          _ = (0, _._)(_, _),
+          [_, _] = (function (_) {
+            let _ = (0, _.useRef)(!1),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  let _ = _.current;
+                  _ &&
+                    ((_.current = _),
+                    _.current ||
+                      (_
+                        ? ((_.current = _.play()),
+                          _.current
+                            .then(() => {
+                              !_.current && _.current && _.current.pause(),
+                                (_.current = null);
+                            })
+                            .catch(() => {
+                              _.current = null;
+                            }))
+                        : _.paused || _.pause()));
+                },
+                [_],
+              ),
+              _ = (0, _.useCallback)(() => {
+                let _ = _.current;
+                _ && _(_.paused);
+              }, [_, _]);
+            return [_, _];
+          })(_),
+          _ = (function (_) {
+            let _ = (0, _.useCallback)(() => _(!0), [_]),
+              _ = (0, _.useCallback)(() => _(!1), [_]);
+            return {
+              onGamepadFocus: _,
+              onGamepadBlur: _,
+            };
+          })(_),
+          _ = (function (_) {
+            let _ = (0, _.useCallback)(() => {
+              let _ = _.current;
+              _ && (_.muted = !_.muted);
+            }, [_]);
+            return _;
+          })(_),
+          _ = (0, _.useCallback)(
+            (_) => {
+              let _ = _.current;
+              return _.detail.button == _._.TRIGGER_LEFT && _
+                ? ((_.currentTime = Math.max(0, _.currentTime - 10)),
+                  _.preventDefault(),
+                  void _.stopPropagation())
+                : _.detail.button == _._.TRIGGER_RIGHT && _
+                  ? ((_.currentTime = Math.min(_.duration, _.currentTime + 10)),
+                    _.preventDefault(),
+                    void _.stopPropagation())
+                  : void 0;
+            },
+            [_],
+          );
+        if (!_.webmMax) return null;
+        let _ = _.poster || "",
+          _ = _.bMuted
+            ? "#TrailerPlayer_Unmute_Tooltip"
+            : "#TrailerPlayer_Mute_Tooltip",
+          _ = _.bPaused
+            ? "#TrailerPlayer_Play_Tooltip"
+            : "#TrailerPlayer_Pause_Tooltip";
+        return _.createElement(
+          _._,
+          {
+            className: _.CarouselItem,
+            onActivate: _,
+            onOKActionDescription: (0, _._)(_),
+            ..._,
+            onSecondaryButton: _,
+            onSecondaryActionDescription: (0, _._)(_),
+            onButtonDown: _,
+          },
+          _.createElement(
+            "video",
+            {
+              ref: _,
+              controls: !0,
+              muted: !0,
+              disablePictureInPicture: !0,
+              controlsList: "nodownload",
+              playsInline: !0,
+              preload: "none",
+              poster: _,
+            },
+            _.createElement("source", {
+              src: _.webmMax,
+              type: "video/webm",
+            }),
+          ),
+        );
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -5722,6 +5996,10 @@
                   ..._,
                 }),
               "gamehighlight-trailer": (_) =>
+                _.createElement(_, {
+                  ..._,
+                }),
+              "gamehighlight-gamepadcarousel": (_) =>
                 _.createElement(_, {
                   ..._,
                 }),

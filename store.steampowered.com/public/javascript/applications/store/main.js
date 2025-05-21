@@ -2366,35 +2366,35 @@
         g = r(85585);
       const _ = new a.wd("FocusNavigation").Debug;
       function h(e) {
-        const { children: t, ...r } = e,
-          [n, s] = i.useState({
+        const { children: t, disableFocusRing: r, ...n } = e,
+          [s, a] = i.useState({
             bFocusWithin: !1,
             navTarget: null,
             prevTarget: null,
           }),
-          a = i.useRef(null),
-          o = i.useMemo(
+          o = i.useRef(null),
+          l = i.useMemo(
             () => ({
               OnBlur: (e, t, r) => {
-                s({ bFocusWithin: !1, navTarget: null, prevTarget: null });
+                a({ bFocusWithin: !1, navTarget: null, prevTarget: null });
               },
               OnFocus: (e, t, r) => {
-                s({ bFocusWithin: !0, navTarget: t, prevTarget: null });
+                a({ bFocusWithin: !0, navTarget: t, prevTarget: null });
               },
               OnFocusChange: (e, t, r) => {
-                s({ bFocusWithin: !0, navTarget: r, prevTarget: t });
+                a({ bFocusWithin: !0, navTarget: r, prevTarget: t });
               },
               OnForceMeasureFocusRing: () => {
-                a.current?.MeasureElementAndUpdate();
+                o.current?.MeasureElementAndUpdate();
               },
             }),
-            [s],
+            [a],
           );
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(f, { ...r, ...n, refMeasure: a }),
-          i.createElement(u.sQ.Provider, { value: o }, t),
+          !r && i.createElement(f, { ...n, ...s, refMeasure: o }),
+          i.createElement(u.sQ.Provider, { value: l }, t),
         );
       }
       function f(e) {
@@ -56714,7 +56714,7 @@
             r.e(7854),
             r.e(8310),
             r.e(7333),
-          ]).then(r.bind(r, 4959)),
+          ]).then(r.bind(r, 51830)),
         ),
         Ne = n.lazy(() =>
           Promise.all([

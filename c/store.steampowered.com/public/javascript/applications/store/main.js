@@ -2561,7 +2561,7 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug;
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
           [_, _] = _.useState({
             bFocusWithin: !1,
             navTarget: null,
@@ -2600,11 +2600,12 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, {
-            ...__webpack_require__,
-            ..._,
-            refMeasure: _,
-          }),
+          !__webpack_require__ &&
+            _.createElement(_, {
+              ..._,
+              ..._,
+              refMeasure: _,
+            }),
           _.createElement(
             _._.Provider,
             {
@@ -62052,7 +62053,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 4959)),
+          ]).then(__webpack_require__.bind(__webpack_require__, 51830)),
         ),
         _ = _.lazy(() =>
           Promise.all([
