@@ -846,8 +846,9 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
   padding-bottom: 5px;
 }
 button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
-  background: #626c7f;
   color: #fff;
+  outline: 2px solid #1a9fff;
+  outline-offset: -2px;
 }
 ._2P-FBc3tZWGeeBFplDSb9g {
   position: relative;

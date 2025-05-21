@@ -3361,6 +3361,7 @@ https://www.valvesoftware.com/
 https://www.valvesoftware.com/about
 https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
+https://www.youtube-nocookie.com
 https://www.youtube.com/
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct

@@ -586,24 +586,38 @@
     },
     94960: (e) => {
       e.exports = {
+        Container: "_2DwHnbQk_PGfGThmz17qKu",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
+        RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
+        RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
+        RowSize4: "_3Q6EKKVEKVFpC_BW0FHOB_",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
+        RowSize1: "_1O__hioeAf860tvMTF75fa",
+        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
+        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
+        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
         JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
         JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
-        container: "_3efSO1GodU-7Xw80LAUHBa",
         Media: "_2NeNe0b0Hfv84zxtiUPGOj",
-        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        HorizLeft: "_15yPdrODYckz6GdaJ9rSiB",
+        HorizRight: "_1NoPEFucA8Mn6QzdYU91dn",
+        HorizCenter: "_3ENovdddxiOpk6sHE5gc2R",
+        VertTop: "_1trckYA9kgtzVQCTezl1tk",
+        VertBottom: "_2idpsiFkYKLWO5a-EmxJvt",
+        VertCenter: "_3dmfdJa7A-xJX4OZroWSTk",
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
-        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
-        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
-        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
         H1: "_2XQ2s4PGGXTf-33SoML_Nn",
         H2: "_2BZyC-dmzrlUCPfHClu51J",
         H3: "_3TKdKvs7o8kbqWUcJyPuyo",
+        Left: "_3Bz6jMGpR_Vr3p7g3paBao",
+        Right: "_3KumxdhZbtSA8tvxSUkIoq",
+        Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
+        Description: "r3oaGi8Z4_MjYvdW_zsl5",
       };
     },
     67634: (e) => {
@@ -6758,7 +6772,7 @@
                 m().SaleSectionCtn,
                 "SaleSectionForCustomCSS",
               ),
-              style: (0, h.V)(s, t, l),
+              style: (0, h.Vb)(s, t, l),
             },
             n.createElement(
               "div",
@@ -7185,7 +7199,7 @@
               l().SaleSectionCtn,
               "DiscoveryQueueCSS",
             ),
-            style: (0, c.V)(a, t, g),
+            style: (0, c.Vb)(a, t, g),
           },
           Boolean(w) &&
             n.createElement(
@@ -7265,7 +7279,7 @@
           i = (0, p.Qn)();
         return n.createElement(
           r.Z,
-          { className: c().SaleSection, style: (0, u.V)(t, a, i) },
+          { className: c().SaleSection, style: (0, u.Vb)(t, a, i) },
           n.createElement(m.jR, { ...e }),
           n.createElement(
             r.Z,
@@ -8415,7 +8429,7 @@
                 c().SaleSectionCtn,
                 "SaleSectionForCustomCSS",
               ),
-              style: (0, d.V)(n, t, l),
+              style: (0, d.Vb)(n, t, l),
             },
             r.createElement(
               "div",
@@ -8503,7 +8517,7 @@
               [s().SaleSectionCtn]: !0,
               SaleSectionForCustomCSS: !0,
             }),
-            style: (0, u.V)(t, a, i),
+            style: (0, u.Vb)(t, a, i),
           },
           n.createElement(l.jR, { ...e }),
           n.createElement("div", null, r || (0, m.we)("#Sale_SectionDisabled")),
@@ -8514,7 +8528,7 @@
           s = (0, d.Qn)();
         return n.createElement(
           _.Z,
-          { className: o().SaleSection, style: (0, u.V)(t, a, s) },
+          { className: o().SaleSection, style: (0, u.Vb)(t, a, s) },
           n.createElement(l.jR, { ...e }),
           n.createElement(
             _.Z,
@@ -8526,7 +8540,7 @@
     },
     42326: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Ko });
+      a.d(t, { H: () => Jo });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -9540,7 +9554,7 @@
                 o.SaleSectionCtn,
                 "SaleSectionForCustomCSS",
               ),
-              style: (0, c.V)(a, t, P),
+              style: (0, c.Vb)(a, t, P),
             },
             n.createElement(
               "div",
@@ -9594,7 +9608,7 @@
                   o.SaleSectionCtn,
                   "SaleSectionForCustomCSS",
                 ),
-                style: (0, c.V)(a, t, P),
+                style: (0, c.Vb)(a, t, P),
               },
               n.createElement(
                 "div",
@@ -9977,7 +9991,7 @@
                 [o.SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
               }),
-              style: (0, c.V)(l, i, B),
+              style: (0, c.Vb)(l, i, B),
             },
             n.createElement(
               "div",
@@ -10026,7 +10040,7 @@
                   [o.SaleSectionCtn]: !0,
                   SaleSectionForCustomCSS: !0,
                 }),
-                style: (0, c.V)(l, i, B),
+                style: (0, c.Vb)(l, i, B),
               },
               n.createElement(
                 "div",
@@ -11127,7 +11141,7 @@
             t.highlighted_facet_color,
           ]),
           o = (0, v.Qn)(),
-          l = (0, c.V)(t, a, o).background;
+          l = (0, c.Vb)(t, a, o).background;
         return n.createElement(Ne, {
           labelColor: r,
           headingColor: s,
@@ -13081,23 +13095,17 @@
         var A;
         const [I, T] = n.useState(b && C ? 1 : 0),
           [B, D] = n.useState(!0),
-          { nCurrentAppID: G, nAppIDCount: k } = (function (
-            e,
-            t,
-            a,
-            r,
-            s,
-            i,
-            o,
-            l,
-            c,
-            m,
-          ) {
+          {
+            nCurrentAppID: G,
+            nAppIDCount: k,
+            bInitialLoad: P,
+          } = (function (e, t, a, r, s, i, o, l, c, m) {
             const u = (0, v.Qn)(),
-              [d, _] = n.useState([]),
-              p = (0, dt.MU)(),
-              g = (0, Sa.dy)(),
-              h = (function (e, t, a) {
+              [d, _] = n.useState(!0),
+              [p, g] = n.useState([]),
+              h = (0, dt.MU)(),
+              S = (0, Sa.dy)(),
+              f = (function (e, t, a) {
                 return (
                   "apps_seen_" +
                   a +
@@ -13108,10 +13116,10 @@
                   ).toString()
                 );
               })(e, t, "trailercarousel"),
-              S = n.useMemo(() => new Map(), []),
-              f = n.useMemo(() => new Map(), []);
-            Ba(h, S),
-              Ba(h, f),
+              y = n.useMemo(() => new Map(), []),
+              b = n.useMemo(() => new Map(), []);
+            Ba(f, y),
+              Ba(f, b),
               n.useEffect(() => {
                 if (t.enable_faceted_browsing) return;
                 const n = async () => {
@@ -13126,11 +13134,11 @@
                           })
                           .map((e) => e.capsule);
                         return a;
-                      })(e, S),
+                      })(e, y),
                     { rgCapsules: d } = await _a(
                       e,
-                      Mt(e, t, p),
-                      p,
+                      Mt(e, t, h),
+                      h,
                       a,
                       r,
                       void 0,
@@ -13142,15 +13150,15 @@
                       l,
                       n,
                     ),
-                    h = t.trailer_carousel_allow_apps_without_trailers
+                    p = t.trailer_carousel_allow_apps_without_trailers
                       ? d
                       : d.filter((e) =>
-                          w.A.Get().GetApp(e.id)?.BHasTrailers(g),
+                          w.A.Get().GetApp(e.id)?.BHasTrailers(S),
                         );
                   fa.Debug(
-                    h.length != d.length
-                      ? `Loaded ${h.length} items, ${d.length - h.length} items filtered out`
-                      : `Loaded ${h.length} items`,
+                    p.length != d.length
+                      ? `Loaded ${p.length} items, ${d.length - p.length} items filtered out`
+                      : `Loaded ${p.length} items`,
                   );
                   const f = d.slice(c, c + ba).map((e) => e.id);
                   if (
@@ -13161,14 +13169,14 @@
                     );
                     await w.A.Get().QueueMultipleAppRequests(e, st.Gy);
                   }
-                  _((m ?? []).concat(h));
+                  g((m ?? []).concat(p)), _(!1);
                 };
                 n();
               }, [
                 a,
                 i,
                 u,
-                p,
+                h,
                 o,
                 e,
                 r,
@@ -13178,58 +13186,59 @@
                 t.enable_faceted_browsing,
                 c,
                 m,
+                y,
                 S,
-                g,
               ]);
-            const y = ot.OQ(c, 0, d.length - 1),
-              b = d[y]?.id;
+            const E = ot.OQ(c, 0, p.length - 1),
+              C = p[E]?.id;
             if (
-              (fa.Debug("Displaying appid", b),
+              (fa.Debug("Displaying appid", C),
               n.useEffect(() => {
-                b &&
-                  !m.find((e) => e.id == b) &&
-                  (f.set(b, (f.get(b) ?? 0) + 1),
+                C &&
+                  !m.find((e) => e.id == C) &&
+                  (b.set(C, (b.get(C) ?? 0) + 1),
                   (function (e, t) {
                     const a = [];
                     t.forEach((e, t) => a.push({ appid: t, count: e })),
                       window.localStorage.setItem(e, JSON.stringify(a));
-                  })(h, f));
-              }, [f, b, m, h]),
+                  })(f, b));
+              }, [b, C, m, f]),
               fa.IsDebugEnabled())
             ) {
               const e = Array.from(
-                { length: Math.min(d.length, 10) },
+                { length: Math.min(p.length, 10) },
                 (e, t) => {
-                  const a = y - 2 + t;
-                  if (a < 0 || a >= d.length) return;
-                  const n = d[a]?.id,
+                  const a = E - 2 + t;
+                  if (a < 0 || a >= p.length) return;
+                  const n = p[a]?.id,
                     r = (m.find((e) => e.id == n) ? "*" : "") + String(n);
-                  return n == b ? `[${r}]` : r;
+                  return n == C ? `[${r}]` : r;
                 },
               )
                 .filter((e) => !!e)
                 .join(", ");
               fa.Debug(
-                `useLoadItems: index ${y}, count ${d.length}, items: ${e}`,
+                `useLoadItems: index ${E}, count ${p.length}, items: ${e}`,
               );
             }
-            return { nCurrentAppID: b, nAppIDCount: d.length };
+            return { nCurrentAppID: C, nAppIDCount: p.length, bInitialLoad: d };
           })(t, r, s, o, m, a, d, g, I, E),
-          P = b && G === b,
-          N = n.useCallback(
+          N = b && G === b,
+          L = n.useCallback(
             (e) => {
-              if (P) {
+              if (N) {
                 const e = Ta();
                 e.includes(G) ||
                   (e.push(G), localStorage.setItem(ya, JSON.stringify(e)));
               }
               T(((e % k) + k) % k), D(!1);
             },
-            [P, G, k],
+            [N, G, k],
           ),
-          L = n.useCallback((e) => N(I + (e ? 1 : -1)), [N, I]);
+          R = n.useCallback((e) => L(I + (e ? 1 : -1)), [L, I]);
         if (r.enable_faceted_browsing) return;
-        const R = ot.OQ(I, 0, k - 1);
+        if (!P && 0 == k) return;
+        const F = ot.OQ(I, 0, k - 1);
         return n.createElement(
           h.Ay,
           { feature: "trailercarousel" },
@@ -13243,7 +13252,7 @@
                 l().SaleSectionCtn,
                 ga().TrailerCarouselCtn,
               ),
-              style: (0, c.V)(r, t, S),
+              style: (0, c.Vb)(r, t, S),
             },
             n.createElement(W.jR, { section: r, event: t, language: _ }),
             n.createElement(Ca, {
@@ -13251,9 +13260,9 @@
               autoAdvanceMsec: r.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: r.prefer_demo_store_page,
               bStartVideoWhenHidden: !B,
-              fnNavigate: L,
-              introVideo: P,
-              appIndex: R,
+              fnNavigate: R,
+              introVideo: N,
+              appIndex: F,
               appCount: k,
               arrowFill: t.jsondata?.sale_carousel_arrow_color,
             }),
@@ -13344,7 +13353,7 @@
         n.useEffect(() => {
           J || Z || !C || (w(!1), $());
         }, [C, J, Z, $]);
-        const ee = !o && a > 0;
+        const ee = !o && m > 1 && (null == a || a > 0);
         let te;
         b
           ? (te = 4)
@@ -13362,7 +13371,8 @@
             ? P.GetAppID()
             : t,
           ne = u ? m > 1 : c > 0,
-          re = u ? m > 1 : c < m - 1;
+          re = u ? m > 1 : c < m - 1,
+          se = d && (ne || re);
         return D && 1 != G && 1 != N
           ? n.createElement(
               h.Ay,
@@ -13397,13 +13407,13 @@
                 n.createElement(
                   "div",
                   { className: (0, f.A)(ga().VideoRow, "VideoRow") },
-                  d &&
-                    ne &&
+                  se &&
                     n.createElement(
                       "button",
                       {
                         className: (0, f.A)(ga().NavButton, ga().Left),
                         onClick: () => s(!1),
+                        disabled: !ne,
                       },
                       n.createElement(g.uMb, { fill: _ }),
                     ),
@@ -13443,13 +13453,13 @@
                       introVideo: o,
                     }),
                   ),
-                  d &&
-                    re &&
+                  se &&
                     n.createElement(
                       "button",
                       {
                         className: (0, f.A)(ga().NavButton, ga().Right),
                         onClick: () => s(!0),
+                        disabled: !re,
                       },
                       n.createElement(g.uMb, { fill: _ }),
                     ),
@@ -13953,12 +13963,12 @@
                   {
                     placeholderHeight: "100vh",
                     rootMargin: y.$m,
-                    className: (0, f.A)(
-                      m.SaleSection,
-                      l().SaleSectionCtn,
-                      "ReservationCustomCSS",
-                    ),
-                    style: (0, c.V)(t, r, b),
+                    className: (0, f.A)({
+                      [m.SaleSection]: !0,
+                      [l().SaleSectionCtn]: !0,
+                      ReservationCustomCSS: !0,
+                    }),
+                    style: (0, c.Vb)(t, r, b),
                   },
                   n.createElement(W.jR, { section: t, event: r, language: a }),
                   n.createElement(He.EP, {
@@ -14744,7 +14754,7 @@
                     BadgeProgressCSS: !0,
                     [Tn.DiscoveryQueueBelow]: i && v.iA.logged_in,
                   }),
-                  style: (0, c.V)(a, t, s),
+                  style: (0, c.Vb)(a, t, s),
                 },
                 n.createElement(W.jR, { section: a, event: t, language: r }),
                 v.iA.logged_in
@@ -15091,7 +15101,7 @@
                 l().SaleSectionCtn,
                 "SaleQuestCSS",
               ),
-              style: (0, c.V)(a, t, i),
+              style: (0, c.Vb)(a, t, i),
             },
             n.createElement(W.jR, { section: a, event: t, language: r }),
             Boolean(_) &&
@@ -15298,7 +15308,7 @@
                 l().SaleSectionCtn,
                 "SaleQuizCSS",
               ),
-              style: (0, c.V)(a, t, o),
+              style: (0, c.Vb)(a, t, o),
             },
             n.createElement(W.jR, { section: a, event: t, language: r }),
             Boolean(I) &&
@@ -15811,7 +15821,7 @@
                     l().SaleSectionCtn,
                     "SaleRewardShelfCSS",
                   ),
-                  style: (0, c.V)(a, t, s),
+                  style: (0, c.Vb)(a, t, s),
                 },
                 n.createElement(W.jR, { section: a, event: t, language: r }),
                 n.createElement("div", { className: ar.RewardContainer }, d),
@@ -16257,7 +16267,7 @@
                 SaleSectionForCustomCSS: !0,
               }),
               rootMargin: y.$m,
-              style: (0, c.V)(j, t, _),
+              style: (0, c.Vb)(j, t, _),
               onRender: () => or.I.Get().AddInteraction(j.unique_id, 0),
             },
             n.createElement(
@@ -17281,7 +17291,7 @@
               l().SaleSectionCtn,
               "SaleSectionForCustomCSS",
             ),
-            style: (0, c.V)(t, a, s),
+            style: (0, c.Vb)(t, a, s),
             onRender: () => or.I.Get().AddInteraction(t.unique_id, 0),
           },
           n.createElement(Ar, {
@@ -17337,7 +17347,7 @@
           r = (0, v.Qn)();
         return n.createElement(
           "div",
-          { className: (0, f.A)(Nr().SaleSection), style: (0, c.V)(t, a, r) },
+          { className: (0, f.A)(Nr().SaleSection), style: (0, c.Vb)(t, a, r) },
           n.createElement(W.jR, { ...e }),
           n.createElement(
             "div",
@@ -17483,7 +17493,7 @@
         )
           return null;
         const b = (0, f.A)(Nr().SaleSectionTabsTab),
-          E = (0, c.V)(t, a, _);
+          E = (0, c.Vb)(t, a, _);
         if (s?.tab_bar_bg_image?.length > 0) {
           const e = kr.i6.GenerateArtworkURLFromHashAndExtensions(
             a.clanSteamID,
@@ -17572,7 +17582,7 @@
         });
         return n.createElement(
           "div",
-          { className: Nr().SaleSection, style: (0, c.V)(t, s, m) },
+          { className: Nr().SaleSection, style: (0, c.Vb)(t, s, m) },
           n.createElement(W.jR, { ...e }),
           n.createElement("div", { className: Nr().TabButtonsCtn }, h),
         );
@@ -17687,7 +17697,7 @@
               l().SaleSectionCtn,
               "SaleSectionForCustomCSS",
             ),
-            style: (0, c.V)(t, a, s),
+            style: (0, c.Vb)(t, a, s),
           },
           n.createElement(W.jR, { ...e }),
           n.createElement(
@@ -17728,7 +17738,7 @@
                     l().SaleSectionCtn,
                     "SaleSectionForCustomCSS",
                   ),
-                  style: (0, c.V)(t, a, s),
+                  style: (0, c.Vb)(t, a, s),
                 },
                 n.createElement(W.jR, { ...e }),
               )
@@ -17742,7 +17752,7 @@
               l().SaleSectionCtn,
               "SaleSectionForCustomCSS",
             ),
-            style: (0, c.V)(t, a, s),
+            style: (0, c.Vb)(t, a, s),
           },
           n.createElement(W.jR, { ...e }),
           n.createElement(
@@ -17815,7 +17825,7 @@
               placeholderHeight: "100vh",
               rootMargin: y.$m,
               className: (0, f.A)(m.SaleSection, l().SaleSectionCtn),
-              style: (0, c.V)(a, t, s),
+              style: (0, c.Vb)(a, t, s),
             },
             o,
           ),
@@ -20114,7 +20124,7 @@
               o.SaleSectionCtn,
               "SaleSectionForCustomCSS",
             ),
-            style: (0, c.V)(e.section, e.event, r),
+            style: (0, c.Vb)(e.section, e.event, r),
           },
           n.createElement(
             "div",
@@ -20801,7 +20811,7 @@
                 "div",
                 {
                   className: (0, f.A)(m.SaleSection),
-                  style: (0, c.V)(a, t, h),
+                  style: (0, c.Vb)(a, t, h),
                 },
                 a.dlc_for_you_data?.hide_dlc_grouping
                   ? n.createElement(
@@ -20846,7 +20856,7 @@
                 "div",
                 {
                   className: (0, f.A)(m.SaleSection),
-                  style: (0, c.V)(a, t, h),
+                  style: (0, c.Vb)(a, t, h),
                 },
                 !Boolean(a.dlc_for_you_data?.hide_dlc_stats) &&
                   n.createElement(xi, { ...e }),
@@ -20865,7 +20875,7 @@
                   o.SaleSectionCtn,
                   "SaleSectionForCustomCSS",
                 ),
-                style: { ...(0, c.V)(a, t, h) },
+                style: { ...(0, c.Vb)(a, t, h) },
               },
               n.createElement(q.h, { capsules_per_row: (0, d.vB)(a, h) }),
             );
@@ -20909,7 +20919,7 @@
                 o.SaleSectionCtn,
                 "SaleSectionForCustomCSS",
               ),
-              style: { ...(0, c.V)(a, s, S) },
+              style: { ...(0, c.Vb)(a, s, S) },
             },
             n.createElement(q.h, { capsules_per_row: (0, d.vB)(a, S) }),
           );
@@ -21183,7 +21193,7 @@
                   [o.SaleSectionCtn]: !0,
                   SaleSectionForCustomCSS: !0,
                 }),
-                style: (0, c.V)(a, t, h),
+                style: (0, c.Vb)(a, t, h),
               },
               n.createElement(
                 "div",
@@ -21214,7 +21224,7 @@
               o.SaleSectionCtn,
               "SaleSectionForCustomCSS",
             ),
-            style: { ...(0, c.V)(a, t, i) },
+            style: { ...(0, c.Vb)(a, t, i) },
           },
           n.createElement(
             "div",
@@ -21345,7 +21355,7 @@
                   Yi.ClaimSaleSection,
                   "SaleClaimItemCSS",
                 ),
-                style: (0, c.V)(a, t, s),
+                style: (0, c.Vb)(a, t, s),
               },
               n.createElement(W.jR, { section: a, event: t, language: r }),
               n.createElement(
@@ -21550,7 +21560,7 @@
                 l().SaleSectionCtn,
                 "ReservationCustomCSS",
               ),
-              style: (0, c.V)(t, r, g),
+              style: (0, c.Vb)(t, r, g),
             },
             n.createElement(W.jR, { section: t, event: r, language: a }),
             Boolean(d) &&
@@ -21690,7 +21700,7 @@
                     placeholderHeight: "100vh",
                     rootMargin: y.$m,
                     className: (0, f.A)(m.SaleSection, l().SaleSectionCtn),
-                    style: (0, c.V)(a, t, s),
+                    style: (0, c.Vb)(a, t, s),
                   },
                   n.createElement(uo, {
                     event: t,
@@ -21939,7 +21949,7 @@
                 [vo().ColumnFormatCtn]: d == On.nx.TemplateFAQDisplayColumn,
                 [vo().SimpleRowCtn]: d == On.nx.TemplateFAQDisplaySimpleRow,
               }),
-              style: (0, c.V)(a, t, i),
+              style: (0, c.Vb)(a, t, i),
             },
             n.createElement(Eo, { section: a, event: t, language: r }),
             Boolean(l) &&
@@ -22045,7 +22055,7 @@
                 l().SaleSectionCtn,
                 "SaleQuizCSS",
               ),
-              style: (0, c.V)(a, t, i),
+              style: (0, c.Vb)(a, t, i),
             },
             n.createElement(Eo, { section: a, event: t, language: r }),
             Boolean(u) &&
@@ -22141,7 +22151,7 @@
                 l().SaleSectionCtn,
                 No().Container,
               ),
-              style: (0, c.V)(a, t, s),
+              style: (0, c.Vb)(a, t, s),
             },
             n.createElement(Eo, { section: a, event: t, language: r }),
             a?.media_container?.media_rows?.map((t, r) =>
@@ -22155,10 +22165,19 @@
         );
       }
       function Ro(e) {
-        const { event: t, section: a, language: r, row: s } = e;
+        const { event: t, section: a, language: r, row: s } = e,
+          i = (0, he.q3)(() => s.media_columns?.length || 0);
         return n.createElement(
           "div",
-          { className: No().MediaRow },
+          {
+            className: (0, f.A)({
+              [No().MediaRow]: !0,
+              [No().RowSize1]: 1 == i,
+              [No().RowSize2]: 2 == i,
+              [No().RowSize3]: 3 == i,
+              [No().RowSize4]: 4 == i,
+            }),
+          },
           s.media_columns?.map((t) =>
             n.createElement(Fo, {
               key: "mc_" + a.unique_id + "_" + t.unique_id,
@@ -22273,7 +22292,7 @@
                 [No().VerticalMediaFirst]: t == so.k_MediaTitleDesc,
                 [No().VerticalTextFirst]: t == so.k_TitleDescMedia,
               }),
-              style: (0, c.v)(a, s),
+              style: (0, c.vU)(a, s),
             },
             Boolean(
               !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
@@ -22291,7 +22310,17 @@
           null,
           n.createElement(
             "div",
-            { className: No().Media },
+            {
+              className: (0, f.A)({
+                [No().Media]: !0,
+                [No().HorizLeft]: r == oo.k_Left,
+                [No().HorizCenter]: !r || r == oo.k_Center,
+                [No().HorizRight]: r == oo.k_Right,
+                [No().VertTop]: s == oo.k_Top,
+                [No().VertCenter]: !s || s == oo.k_Center,
+                [No().VertBottom]: s == oo.k_Bottom,
+              }),
+            },
             n.createElement(Uo, {
               media: t,
               mediaType: a,
@@ -22310,7 +22339,17 @@
           n.createElement(Ho, { ...e }),
           n.createElement(
             "div",
-            { className: No().Media },
+            {
+              className: (0, f.A)({
+                [No().Media]: !0,
+                [No().HorizLeft]: r == oo.k_Left,
+                [No().HorizCenter]: !r || r == oo.k_Center,
+                [No().HorizRight]: r == oo.k_Right,
+                [No().VertTop]: s == oo.k_Top,
+                [No().VertCenter]: !s || s == oo.k_Center,
+                [No().VertBottom]: s == oo.k_Bottom,
+              }),
+            },
             n.createElement(Uo, {
               media: t,
               mediaType: a,
@@ -22349,7 +22388,7 @@
             : n.createElement(
                 n.Fragment,
                 null,
-                n.createElement(Wo, {
+                n.createElement(Vo, {
                   event: s,
                   className: No().TextFirstTitle,
                   title: t,
@@ -22365,7 +22404,7 @@
                   language: i,
                 }),
               ),
-          n.createElement(qo, {
+          n.createElement(jo, {
             event: s,
             description: r,
             eTextAlign: m,
@@ -22376,24 +22415,14 @@
       function Uo(e) {
         const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
         if (a == ro.k_MediaImage)
-          return t.image && 0 != t.image.trim().length
-            ? n.createElement("img", {
-                className: (0, f.A)({
-                  [No().HorizLeft]: r == oo.k_Left,
-                  [No().HorizCenter]: !r || r == oo.k_Center,
-                  [No().HorizRight]: r == oo.k_Right,
-                  [No().VertTop]: s == oo.k_Top,
-                  [No().VertCenter]: !s || s == oo.k_Center,
-                  [No().VertBottom]: s == oo.k_Bottom,
-                }),
-                src: t.image,
-              })
+          return t.image && 0 != t.image?.trim().length
+            ? n.createElement("img", { src: t.image })
             : null;
         {
           const e = [];
           return (!t.video_webm_src && !t.video_mp4_src) ||
-            (0 == t.video_webm_src.trim().length &&
-              0 == t.video_mp4_src.trim().length)
+            (0 == t.video_webm_src?.trim().length &&
+              0 == t.video_mp4_src?.trim().length)
             ? null
             : (t.video_webm_src &&
                 e.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
@@ -22401,14 +22430,6 @@
                 e.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
               n.createElement(Yt.L, {
                 video: { sPoster: t.image, rgVideoSources: e },
-                className: (0, f.A)({
-                  [No().HorizLeft]: r == oo.k_Left,
-                  [No().HorizCenter]: !r || r == oo.k_Center,
-                  [No().HorizRight]: r == oo.k_Right,
-                  [No().VertTop]: s == oo.k_Top,
-                  [No().VertCenter]: !s || s == oo.k_Center,
-                  [No().VertBottom]: s == oo.k_Bottom,
-                }),
                 bAutoPlay: !0,
                 bControls: !1,
                 bLoop: !0,
@@ -22425,8 +22446,9 @@
             eTextAlign: i,
           } = e,
           o = (0, dt.MU)();
-        return a && 0 != a.trim().length
-          ? n.createElement(
+        return qo(a)
+          ? null
+          : n.createElement(
               "div",
               {
                 className: (0, f.A)({
@@ -22435,6 +22457,7 @@
                   [No().Left]: !i || i == oo.k_Left,
                   [No().Center]: i == oo.k_Center,
                   [No().Right]: i == oo.k_Right,
+                  [ko().TemplateMediaTitle]: !0,
                 }),
               },
               n.createElement(za.f, {
@@ -22444,10 +22467,13 @@
                 event: t,
                 languageOverride: s,
               }),
-            )
-          : null;
+            );
       }
-      function Wo(e) {
+      const Wo = "[p][/p]";
+      function qo(e) {
+        return !e || 0 == e.length || (e.length == Wo.length && e == Wo);
+      }
+      function Vo(e) {
         const {
             event: t,
             title: a,
@@ -22457,8 +22483,9 @@
             eTextAlign: o,
           } = e,
           l = (0, dt.MU)();
-        return a && 0 != a.trim().length
-          ? n.createElement(
+        return qo(a)
+          ? null
+          : n.createElement(
               "div",
               {
                 className: (0, f.A)({
@@ -22480,20 +22507,22 @@
                 event: t,
                 languageOverride: i,
               }),
-            )
-          : null;
+            );
       }
-      function qo(e) {
+      function jo(e) {
         const { event: t, description: a, language: r, eTextAlign: s } = e,
           i = (0, dt.MU)();
-        return a && 0 != a.trim().length
-          ? n.createElement(
+        return qo(a)
+          ? null
+          : n.createElement(
               "div",
               {
                 className: (0, f.A)({
+                  [No().Description]: !0,
                   [No().Left]: !s || s == oo.k_Left,
                   [No().Center]: s == oo.k_Center,
                   [No().Right]: s == oo.k_Right,
+                  [ko().TemplateMediaDescription]: !0,
                 }),
               },
               n.createElement(za.f, {
@@ -22503,12 +22532,11 @@
                 event: t,
                 languageOverride: r,
               }),
-            )
-          : null;
+            );
       }
-      var Vo = a(67634),
-        jo = a.n(Vo);
-      function Qo(e) {
+      var Qo = a(67634),
+        Ko = a.n(Qo);
+      function Yo(e) {
         const { event: t, section: a, language: r } = e,
           s = ((0, dt.MU)(), (0, v.Qn)()),
           [i, o, u, d, _, g, S, b, E, C, w, A, I, B, D, G] = (0, he.q3)(() => {
@@ -22573,9 +22601,9 @@
               className: (0, f.A)(
                 m.SaleSection,
                 l().SaleSectionCtn,
-                jo().Container,
+                Ko().Container,
               ),
-              style: (0, c.V)(a, t, s),
+              style: (0, c.Vb)(a, t, s),
             },
             n.createElement(Eo, { section: a, event: t, language: r }),
             n.createElement(
@@ -22585,15 +22613,15 @@
                 "div",
                 {
                   className: (0, f.A)({
-                    [jo().TopLeft]: !i || i == lo.k_TopLeft,
-                    [jo().TopCenter]: i == lo.k_TopCenter,
-                    [jo().TopRight]: i == lo.k_TopRight,
-                    [jo().LeftCenter]: i == lo.k_LeftCenter,
-                    [jo().Center]: i == lo.k_Center,
-                    [jo().RightCenter]: i == lo.k_RightCenter,
-                    [jo().BottomLeft]: i == lo.k_BottomLeft,
-                    [jo().BottomCenter]: i == lo.k_BottomCenter,
-                    [jo().BottomRight]: i == lo.k_BottomRight,
+                    [Ko().TopLeft]: !i || i == lo.k_TopLeft,
+                    [Ko().TopCenter]: i == lo.k_TopCenter,
+                    [Ko().TopRight]: i == lo.k_TopRight,
+                    [Ko().LeftCenter]: i == lo.k_LeftCenter,
+                    [Ko().Center]: i == lo.k_Center,
+                    [Ko().RightCenter]: i == lo.k_RightCenter,
+                    [Ko().BottomLeft]: i == lo.k_BottomLeft,
+                    [Ko().BottomCenter]: i == lo.k_BottomCenter,
+                    [Ko().BottomRight]: i == lo.k_BottomRight,
                   }),
                 },
                 n.createElement(Ho, {
@@ -22623,7 +22651,7 @@
           ),
         );
       }
-      function Ko(e) {
+      function Jo(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           i = (0, v.Qn)();
         switch (a.section_type) {
@@ -22821,7 +22849,7 @@
           case "template_media_content":
             return n.createElement(Lo, { ...e });
           case "template_media_overlay":
-            return n.createElement(Qo, { ...e });
+            return n.createElement(Yo, { ...e });
           case "media_layout":
             return n.createElement(mo, { ...e });
           case "contenthubsections":
@@ -22852,25 +22880,27 @@
     },
     1276: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => r, v: () => s });
+      a.d(t, { Vb: () => s, vU: () => i });
       var n = a(71138);
-      function r(e, t, a) {
+      function r(e, t) {
+        return `linear-gradient(0deg, ${e || "transparent"} 0%, ${t || "transparent"} 100%)`;
+      }
+      function s(e, t, a) {
         if (e.disable_background && !a)
           return { paddingLeft: 0, paddingRight: 0 };
-        let r = "";
+        let s = "";
         if (e.background_image) {
-          r += `,url(${n.i6.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
+          s += `,url(${n.i6.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
         }
         return e.background_gradient_bottom ||
           e.background_gradient_top ||
-          r.length > 0 ||
+          s.length > 0 ||
           e.background_repeat ||
           e.border_color ||
           e.border_width
           ? {
               background:
-                `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
-                r,
+                r(e.background_gradient_bottom, e.background_gradient_top) + s,
               backgroundRepeat: e.background_repeat,
               outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
               outlineColor: e.border_color,
@@ -22878,7 +22908,7 @@
             }
           : {};
       }
-      function s(e, t) {
+      function i(e, t) {
         return e
           ? e.disable_background && !t
             ? { paddingLeft: 0, paddingRight: 0 }
@@ -22888,7 +22918,10 @@
                 e.border_color ||
                 e.border_width
               ? {
-                  background: `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)`,
+                  background: r(
+                    e.background_gradient_bottom,
+                    e.background_gradient_top,
+                  ),
                   backgroundRepeat: e.background_repeat,
                   outlineStyle:
                     e.border_color && e.border_width ? "solid" : void 0,

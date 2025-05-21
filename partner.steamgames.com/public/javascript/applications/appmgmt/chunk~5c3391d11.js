@@ -576,22 +576,7 @@
             (n = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
               (o = _().Unsupported);
         }
-        const c = r.createElement(
-            "span",
-            { className: o },
-            (0, L.we)(
-              (function (e) {
-                switch (e) {
-                  case 2:
-                    return "#SteamOSCompatibility_Category_Compatible";
-                  case 1:
-                    return "#SteamOSCompatibility_Category_Unsupported";
-                  default:
-                    return "#SteamOSCompatibility_Category_Unknown";
-                }
-              })(t),
-            ),
-          ),
+        const c = r.createElement("span", { className: o }, (0, L.we)(x(t))),
           i = r.createElement(
             "span",
             { className: _().CompatibilityDetailRatingSummary },
@@ -621,6 +606,16 @@
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
+        }
+      }
+      function x(e) {
+        switch (e) {
+          case 2:
+            return "#SteamOSCompatibility_Category_Compatible";
+          case 1:
+            return "#SteamOSCompatibility_Category_Unsupported";
+          default:
+            return "#SteamOSCompatibility_Category_Unknown";
         }
       }
     },

@@ -24,8 +24,8 @@
     25228: (e, t, a) => {
       "use strict";
       a.d(t, { Yg: () => w, t3: () => C });
-      var o = a(94649),
-        n = a.n(o),
+      var n = a(94649),
+        o = a.n(n),
         l = a(90626),
         i = a(22837),
         r = a(2160),
@@ -45,12 +45,12 @@
           const t = (t, a) => {
             t.preventDefault();
             const {
-                fnGetLocData: o,
-                closeModal: n,
+                fnGetLocData: n,
+                closeModal: o,
                 strFileNamePrefix: l,
                 lang: r,
               } = e,
-              s = o(),
+              s = n(),
               c = new h.s();
             let g = l ? l + "_localization" : "localization";
             switch (a) {
@@ -73,7 +73,7 @@
                   g + "_" + (0, i.x6)((0, i.Lg)(r)) + ".xml",
                 );
             }
-            n && n();
+            o && o();
           };
           return l.createElement(
             l.Fragment,
@@ -108,7 +108,7 @@
         },
         C = (e) => {
           const [t, a] = (0, l.useState)(!1),
-            o = (e, t) => {
+            n = (e, t) => {
               a(!1),
                 console.log(
                   "ImportLocalizationAction: On Handle Parse error: " +
@@ -169,29 +169,29 @@
                 for (let a = 0; a < l.length; ++a)
                   if (l[a]) {
                     if (l[a].name.toLocaleLowerCase().endsWith(".csv"))
-                      return void n().parse(l[0], {
+                      return void o().parse(l[0], {
                         header: !0,
                         complete: (t) => {
                           let a = new h.s().DetectAndFormatCSV(t);
                           if (!a)
-                            return void o({
+                            return void n({
                               code: "",
                               message: "",
                               row: 0,
                               type: "filenameerror",
                             });
-                          const n = A.A0.GetLanguageListForRealms([
+                          const o = A.A0.GetLanguageListForRealms([
                               r.TU.k_ESteamRealmGlobal,
                             ]),
-                            l = e.fnOnImportLocData(a, n);
+                            l = e.fnOnImportLocData(a, o);
                           c(l);
                         },
-                        error: o,
+                        error: n,
                       });
                     if (l[a].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let n = (0, s.j)(l[a].name, -1);
-                      if (null == n || -1 == n)
-                        return void o({
+                      let { language: o } = (0, s.j)(l[a].name, -1);
+                      if (null == o || -1 == o)
+                        return void n({
                           code: "",
                           message: (0, A.we)(
                             "#Localization_Error_FileLangauage",
@@ -201,17 +201,17 @@
                           type: "filenameerror",
                         });
                       try {
-                        const o =
+                        const n =
                           await i.ReadLocalizationData_XML_SingleLanguage(
                             l[a],
-                            n,
+                            o,
                           );
-                        e.fnOnImportLocData(o, [n]).forEach((e) => {
+                        e.fnOnImportLocData(n, [o]).forEach((e) => {
                           -1 == t.indexOf(e) && t.push(e);
                         });
                       } catch (e) {
                         let t = (0, d.H)(e);
-                        return void o({
+                        return void n({
                           code: "",
                           message: (0, A.we)(
                             "#Localization_Error_XMLParseError",
@@ -222,7 +222,7 @@
                         });
                       }
                     } else
-                      o({
+                      n({
                         code: "",
                         message: (0, A.we)(
                           "#Localization_Error_FileExtention",
@@ -268,8 +268,8 @@
     87669: (e, t, a) => {
       "use strict";
       a.d(t, { G: () => s, s: () => c });
-      var o = a(22837),
-        n = a(2160),
+      var n = a(22837),
+        o = a(2160),
         l = a(62490),
         i = a(9161),
         r = a(61859);
@@ -282,9 +282,9 @@
           if (a && a[t]) return a[t];
         }
         SetLocalization(e, t, a) {
-          let o = this.m_mapTokens.get(e);
-          o || ((o = (0, l.$Y)([], 31, null)), this.m_mapTokens.set(e, o)),
-            (o[t] = a);
+          let n = this.m_mapTokens.get(e);
+          n || ((n = (0, l.$Y)([], 31, null)), this.m_mapTokens.set(e, n)),
+            (n[t] = a);
         }
         GetSortedTokenList() {
           let e = [];
@@ -329,7 +329,7 @@
       }
       class c {
         DetectAndFormatCSV(e) {
-          var t, a, n, l, i, r;
+          var t, a, o, l, i, r;
           let s = null;
           return (
             (null ===
@@ -345,13 +345,13 @@
               ? (s = this.ReadLocalizationData_CSV_TokenLanguageList(e))
               : (null ===
                     (l =
-                      null === (n = null == e ? void 0 : e.meta) || void 0 === n
+                      null === (o = null == e ? void 0 : e.meta) || void 0 === o
                         ? void 0
-                        : n.fields) || void 0 === l
+                        : o.fields) || void 0 === l
                     ? void 0
                     : l.length) >= 2 &&
                   "field" === e.meta.fields[0] &&
-                  -1 != (0, o.sf)(e.meta.fields[1], -1)
+                  -1 != (0, n.sf)(e.meta.fields[1], -1)
                 ? (s = this.ReadLocalizationData_CSV_LanguageColumns(e))
                 : (null ===
                     (r =
@@ -367,14 +367,14 @@
         }
         async ReadLocalizationData_XML_SingleLanguage(e, t) {
           let a = new s(),
-            o = new DOMParser(),
-            n = await i.g.ReadFile(e),
-            l = o.parseFromString(n.toString(), "application/xml");
+            n = new DOMParser(),
+            o = await i.g.ReadFile(e),
+            l = n.parseFromString(o.toString(), "application/xml");
           for (let e = 0; e < l.documentElement.children.length; ++e) {
-            const o = l.documentElement.children.item(e),
-              n = o.getAttribute("id").toLocaleLowerCase(),
-              i = o.textContent;
-            a.SetLocalization(n, t, i);
+            const n = l.documentElement.children.item(e),
+              o = n.getAttribute("id").toLocaleLowerCase(),
+              i = n.textContent;
+            a.SetLocalization(o, t, i);
           }
           return a;
         }
@@ -383,8 +383,8 @@
           return (
             e.data.forEach((e) => {
               const a = e.field,
-                n = (0, o.sf)(e.language);
-              t.SetLocalization(a, n, e.value);
+                o = (0, n.sf)(e.language);
+              t.SetLocalization(a, o, e.value);
             }),
             t
           );
@@ -394,9 +394,9 @@
           return (
             e.data.forEach((e) => {
               const a = e.field;
-              for (let n = 0; n < 31; ++n) {
-                const l = (0, o.x6)((0, o.Lg)(n));
-                t.SetLocalization(a, n, e[l]);
+              for (let o = 0; o < 31; ++o) {
+                const l = (0, n.x6)((0, n.Lg)(o));
+                t.SetLocalization(a, o, e[l]);
               }
             }),
             t
@@ -406,26 +406,26 @@
           const t = new s();
           return (
             e.data.forEach((e) => {
-              const a = (0, o.sf)(e.language, 31);
+              const a = (0, n.sf)(e.language, 31);
               if (31 !== a)
-                for (const [o, n] of Object.entries(e))
-                  "language" !== o &&
-                    "string" == typeof n &&
-                    t.SetLocalization(o, a, n);
+                for (const [n, o] of Object.entries(e))
+                  "language" !== n &&
+                    "string" == typeof o &&
+                    t.SetLocalization(n, a, o);
             }),
             t
           );
         }
         GetExportLanguages() {
-          return r.A0.GetLanguageListForRealms([n.TU.k_ESteamRealmGlobal]);
+          return r.A0.GetLanguageListForRealms([o.TU.k_ESteamRealmGlobal]);
         }
         WriteLocalizationData_CSV_TokenAndLanguageColumns(e, t) {
           let a = new Array();
           e.GetSortedTokenList().forEach((t) => {
-            for (const n of this.GetExportLanguages()) {
+            for (const o of this.GetExportLanguages()) {
               let l = { field: t };
-              (l.language = (0, o.x6)((0, o.Lg)(n))),
-                (l.value = e.GetLocalization(t, n)),
+              (l.language = (0, n.x6)((0, n.Lg)(o))),
+                (l.value = e.GetLocalization(t, o)),
                 a.push(l);
             }
           }),
@@ -434,10 +434,10 @@
         WriteLocalizationData_CSV_LanguageColumns(e, t) {
           let a = new Array();
           e.GetSortedTokenList().forEach((t) => {
-            let n = { field: t };
+            let o = { field: t };
             for (const a of this.GetExportLanguages())
-              n[(0, o.x6)((0, o.Lg)(a))] = e.GetLocalization(t, a);
-            a.push(n);
+              o[(0, n.x6)((0, n.Lg)(a))] = e.GetLocalization(t, a);
+            a.push(o);
           }),
             i.g.WriteCSVToFile(a, t);
         }
@@ -445,31 +445,31 @@
           let a = new Array();
           for (const e of this.GetExportLanguages())
             a.length <= e - 1 && a.push({ language: "" }),
-              a.push({ language: (0, o.x6)((0, o.Lg)(e)) });
+              a.push({ language: (0, n.x6)((0, n.Lg)(e)) });
           e.GetSortedTokenList().forEach((t) => {
-            for (const o of this.GetExportLanguages()) {
-              const n = e.GetLocalization(t, o);
-              a[o][t] = n;
+            for (const n of this.GetExportLanguages()) {
+              const o = e.GetLocalization(t, n);
+              a[n][t] = o;
             }
           }),
             i.g.WriteCSVToFile(a, t);
         }
         WriteLocalizationData_XML_SingleLanguage(e, t, a) {
-          let o = document.implementation.createDocument(null, "content", null);
+          let n = document.implementation.createDocument(null, "content", null);
           e.GetSortedTokenList().forEach((a) => {
-            let n = o.createElement("string");
-            n.setAttribute("id", a),
-              n.appendChild(o.createTextNode(e.GetLocalization(a, t) || "")),
-              o.documentElement.append(n);
+            let o = n.createElement("string");
+            o.setAttribute("id", a),
+              o.appendChild(n.createTextNode(e.GetLocalization(a, t) || "")),
+              n.documentElement.append(o);
           }),
-            i.g.WriteXMLToFile(o, a);
+            i.g.WriteXMLToFile(n, a);
         }
       }
     },
     26759: (e, t, a) => {
       "use strict";
-      a.d(t, { A: () => o });
-      const o =
+      a.d(t, { A: () => n });
+      const n =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
     },
   },

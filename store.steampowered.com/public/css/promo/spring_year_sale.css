@@ -2486,6 +2486,8 @@ p.home_subtitle_ctn a {
     opacity: .7;
     display: inline-block;
     cursor: pointer;
+	background: transparent;
+	border: none;
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 

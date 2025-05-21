@@ -2634,7 +2634,7 @@
               _.createElement(_, {
                 msgTwoFactorStatus: __webpack_require__.GetTwoFactorStatus(),
               }),
-              _.createElement(_, null),
+              _ && _.createElement(_, null),
             ),
           ),
         );

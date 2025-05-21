@@ -1626,19 +1626,6 @@
             setImage: _,
           } = _,
           _ = _.useMemo(
-            () => [
-              {
-                sKey: "dummy",
-                fnGetLabelText: () => "unknown",
-                nWidth: _,
-                nHeight: _,
-                bEnforceDimensions: !1,
-                artworkType: "sale_header",
-              },
-            ],
-            [_, _],
-          ),
-          _ = _.useMemo(
             () => ({
               width: _,
               height: _,
@@ -1649,15 +1636,15 @@
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0, _)))
+                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
               ) {
                 _(_);
-                const _ = _.GetUploadImages()[0].IsValidAssetType(_, _);
+                const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
                   (__webpack_require__ &&
@@ -1666,7 +1653,7 @@
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _, _],
+            [_, __webpack_require__, _, _],
           );
         _.useEffect(() => {
           _(__webpack_require__);
@@ -1676,7 +1663,7 @@
           _ = !1;
         if (_ && _.GetFilesToUpload().length > 0) {
           _ = _.GetUploadImages()[0];
-          const _ = _.IsValidAssetType(_, _);
+          const _ = _.IsValidAssetType(_);
           (_ = _.error), (_ = _.needsCrop);
         }
         return _.createElement(
@@ -1742,7 +1729,6 @@
                         try {
                           const _ = await _.UploadAllImages(
                               [_._.k_ESteamRealmGlobal],
-                              _,
                               _,
                               _,
                             ),

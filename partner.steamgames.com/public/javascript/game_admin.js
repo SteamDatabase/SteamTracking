@@ -188,24 +188,24 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, confirmation_required: true },
-		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, confirmation_required: true },
-		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true },
-		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true },
-		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true },
-		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
+		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store' },
+		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false, tab: 'store' },
 
-		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
-		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
+		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },
+		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
 
-		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true },
-		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true },
-		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true },
+		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true, tab: 'library' },
 
 		// Keep last for list priority ordering
-		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true },
-		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true, enforce_min: true },
+		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true, tab: 'screenshot' },
+		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true, enforce_min: true, tab: 'screenshot' },
 	];
 }
 
@@ -484,6 +484,15 @@ function OnImageSelectTypeChanged( target )
 	else
 		sectionAllAgesAppropriate.hide();
 
+	let elOverrideWarning = $J( target ).parent().find( 'div.overridden_asset_warning' )[0];
+	if ( elOverrideWarning )
+	{
+		if ( imageType.overrideable )
+			elOverrideWarning.show();
+		else
+			elOverrideWarning.hide();
+	}
+
 	return false;
 }
 
@@ -513,14 +522,17 @@ function OnImagesLoadComplete( images )
 		screenshotDiv.appendTo( targetDiv );
 
 		// add type select
-		var bIsAssetOverride = $J( '#alternative_asset_override_name' ).length;
+		const bIsAssetOverride = $J( '#alternative_asset_override_name' ).length;
+		const bPreventStoreAssetUploads = $J( '#drag_and_drop_store_warning' ).length;
 		var localizedType = false;
+		let bShowAssetOverrideWarning = false;
+		let bShowStoreAssetPreventionWarning = false;
 		var imageType = DetermineImageType( image );
 		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this );"></select>');
 		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 		{
-			if( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden  &&
-				( !bIsAssetOverride || g_ImageTypes[iImageType].overrideable ) )
+			const bPreventStoreTypeImages = bPreventStoreAssetUploads && IsImageTypeValid( image, g_ImageTypes[iImageType] ) && g_ImageTypes[iImageType].tab === 'store';
+			if ( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden && !bPreventStoreTypeImages )
 			{
 				var option = $J ( '<option value="' + g_ImageTypes[ iImageType ].name + '">' + g_ImageTypes[ iImageType ].name + '</option>' );
 				option.appendTo ( selectType );
@@ -528,11 +540,29 @@ function OnImagesLoadComplete( images )
 				{
 					option.prop ( 'selected', true );
 					localizedType = g_ImageTypes[ iImageType ].localized;
+
+					bShowAssetOverrideWarning = false;
+					if ( g_ImageTypes[ iImageType ].overrideable && bIsAssetOverride )
+					{
+						bShowAssetOverrideWarning = true;
+					}
 				}
 			}
+
+			if ( bPreventStoreTypeImages )
+				bShowStoreAssetPreventionWarning = true;
 		}
 
-		if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
+		if ( bShowAssetOverrideWarning )
+		{
+			targetDiv.append( $J( '<div/>', { class: 'overridden_asset_warning' } ).text( 'Store Override Image' ) );
+		}
+
+		if ( bShowStoreAssetPreventionWarning )
+		{
+			targetDiv.append( $J( '<div/>', { class: 'store_asset_warning' } ).text( 'Must select an asset set before uploading store assets' ) );
+		}
+		else if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{
 			targetDiv.append( $J( '<div/>', { style: 'color:orange'  } ).text( "Dimensions provided do not match any known assets. This image will not be saved." ) );
 		}
@@ -719,7 +749,7 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		    if ( imageType.localized )
 		        strKey = strKey + '|' + strSelectedLanguage;
 
-		    if( replaceAssetKeyPostfix !== "" && altAssetIndex !== "" )
+		    if ( imageType.overrideable && replaceAssetKeyPostfix !== "" && altAssetIndex !== "" )
 		    {
 		        // Updates the end of the filename and the key for the key-value
 		        strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
@@ -771,13 +801,20 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 	{
 		strPostURL = 'https://partner.steamgames.com/admin/game/save/' + itemID + '?activetab=tab_graphicalassets&json=1';
 		strRedirectURL = 'https://partner.steamgames.com/admin/game/edit/' + itemID + '?activetab=tab_graphicalassets';
-	}
 
-	// Add the alt_asset_index
-	if( altAssetIndex !== "" )
-	{
-		strPostURL += '&alt_asset_index=' + altAssetIndex;
-		strRedirectURL += '&alt_asset_index=' + altAssetIndex;
+		let url = new URL( window.location );
+
+		// Add the alt_asset_index
+		if( altAssetIndex !== "" )
+		{
+			strPostURL += '&alt_asset_index=' + altAssetIndex;
+			strRedirectURL += '&alt_asset_index=' + altAssetIndex;
+		}
+		else if ( url.searchParams.has( 'base_assets' ) )
+		{
+			strPostURL += '&base_assets=1';
+			strRedirectURL += '&base_assets=1';
+		}
 	}
 
 	$J('#AdminLoading').show();
@@ -1500,10 +1537,10 @@ function DeleteAssetOverride( nAltAssetIndex, nItemID )
 	ShowConfirmDialog( 'Delete Artwork Override',
 		'Are you sure you want to delete the Artwork Override? This cannot be undone.').done( function()
 	{
-		$J( "#deleting_throbber").show();
+		const $dialogWait = ShowBlockingWaitDialog( 'Deleting...' );
 		var onComplete = function( bSuccess )
 		{
-			$J( "#deleting_throbber").hide();
+			$dialogWait.Dismiss();
 			if ( !bSuccess )
 			{
 				alert( 'Failed to delete artwork override. Try again later.' );
@@ -1737,5 +1774,11 @@ function ProcessRatingQuestionaire( itemid )
 	.always( function() {
 		waitingDialog.Dismiss();
 	} );
+}
+
+function AgreeToBaseAssetsUpload()
+{
+	$J( '.graphical_assets_base_assets_drop_warning' ).hide();
+	$J( '.drag_and_drop_contents' ).show();
 }
 

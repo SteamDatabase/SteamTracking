@@ -1413,8 +1413,8 @@
         Y = r(18573),
         X = r.n(Y),
         Q = r(84811),
-        J = r(95034),
-        $ = r(91675);
+        $ = r(95034),
+        J = r(91675);
       function ee(e) {
         const t = (function () {
             const [e] = (0, u.useState)(() =>
@@ -1422,7 +1422,7 @@
             );
             return e;
           })(),
-          [r] = (0, J.QD)("year", new Date().getFullYear());
+          [r] = (0, $.QD)("year", new Date().getFullYear());
         new Date().getMonth();
         return u.createElement(
           Q.tH,
@@ -1598,7 +1598,7 @@
           null,
           (0, h.TW)(t),
           " as ",
-          (0, $.KC)(t),
+          (0, J.KC)(t),
         );
       }
       const ne = u.lazy(() =>
@@ -4475,13 +4475,15 @@
         let [i, s, a] = E(e, n),
           [o, l, c] = E(t, n),
           [u, m] = E(r, n);
-        return i < o && s > l
-          ? 0
-          : (i < o && a <= c) || (s > l && a > c)
-            ? i - o - u
-            : (i < o && a > c) || (s > l && a <= c)
-              ? s - l + m
-              : 0;
+        if (i < o && s > l) return 0;
+        const d = i - u,
+          p = s + m,
+          h = a > c;
+        return (d < o && !h) || (p > l && h)
+          ? d - o
+          : (d < o && h) || (p > l && !h)
+            ? p - l
+            : 0;
       }
       function I(e) {
         return "auto" == e
@@ -5303,12 +5305,20 @@
                 const i =
                     ("y" == r ? e.innerHeight : e.innerWidth) /
                     (t ? 4.5 : 3.33),
-                  s = B(n.Element);
+                  a = B(n.Element);
+                let o = !1;
                 if (
-                  (s.top > e.innerHeight && s.bottom > e.innerHeight + i) ||
-                  (s.bottom < 0 && s.top < -i) ||
-                  (s.left > e.innerWidth && s.right > e.innerWidth + i) ||
-                  (s.right < 0 && s.left < -i)
+                  ("y" == r
+                    ? s == U.FORWARD
+                      ? (o =
+                          a.top > e.innerHeight && a.bottom > e.innerHeight + i)
+                      : s == U.BACKWARD && (o = a.bottom < 0 && a.top < -i)
+                    : "x" == r &&
+                      (s == U.FORWARD
+                        ? (o =
+                            a.left > e.innerWidth && a.right > e.innerWidth + i)
+                        : s == U.BACKWARD && (o = a.right < 0 && a.left < -i)),
+                  o)
                 )
                   return (
                     z(`Element too far away, scrolling ${i} on ${r} axis `),
@@ -5520,46 +5530,64 @@
             (function (e, t) {
               const r = e.Element;
               if (!r) return;
-              let n = [e];
+              let n = [
+                { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+              ];
               for (let t = e.Parent; t; t = t.Parent) {
-                const e = t.m_Properties?.scrollIntoViewWhenChildFocused;
-                "force" === e ? (n = [t]) : e && n.push(t);
+                const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+                  r = t.m_Properties?.scrollIntoViewType;
+                if (e) {
+                  const i = { node: t, eScrollType: r };
+                  "force" === e ? (n = [i]) : n.push(i);
+                }
+                if (void 0 !== r)
+                  for (
+                    let e = n.length - 1;
+                    e >= 0 && void 0 === n[e].eScrollType;
+                    e--
+                  )
+                    n[e].eScrollType = r;
               }
               for (; n.length; ) {
-                let r = n.pop(),
-                  i = 0 == n.length,
-                  s = r?.m_Properties?.scrollIntoViewType;
+                let { node: r, eScrollType: i } = n.pop(),
+                  s = 0 == n.length;
                 if (
-                  (void 0 === s && (s = v ? W.NoTransform : W.Standard),
+                  (void 0 === i && (i = v ? W.NoTransform : W.Standard),
                   r?.m_Properties?.fnScrollIntoViewHandler &&
                     !1 !== r.m_Properties.fnScrollIntoViewHandler(e, t, r))
                 )
                   continue;
                 const a = r.m_element,
                   o =
-                    s == W.NoTransform || s == W.NoTransformSparseContent || !i;
+                    i == W.NoTransform || i == W.NoTransformSparseContent || !s;
                 if (t) {
                   const t = o ? B(a) : a.getBoundingClientRect();
                   let r = !1;
-                  const n = Math.max(1.4 * (t.bottom - t.top), 40);
-                  ((y && performance.now() - y < 500) ||
+                  const n = Math.max(1.4 * (t.bottom - t.top), 40),
+                    i = y && performance.now() - y < 500;
+                  (i ||
                     t.bottom < -n ||
-                    t.top > window.innerHeight + n) &&
-                    (r = !0);
-                  let i = r ? "auto" : "smooth";
+                    t.top > a.ownerDocument.defaultView.innerHeight + n) &&
+                    ((r = !0),
+                    i ||
+                      S(
+                        `Disabling smooth scrolling, ${t.bottom} < ${-n}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${n} `,
+                      ));
+                  let s = r ? "auto" : "smooth";
                   r && (y = performance.now()),
-                    e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
+                    e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
                     o
-                      ? O(0, a, i)
-                      : a.scrollIntoView({ behavior: i, block: "nearest" });
+                      ? O(0, a, s)
+                      : a.scrollIntoView({ behavior: s, block: "nearest" });
                 } else
-                  o
-                    ? O(0, a, "auto")
-                    : a?.scrollIntoView({
-                        behavior: "auto",
-                        block: "nearest",
-                        inline: "nearest",
-                      });
+                  S("No previous element for scrolling, will jump"),
+                    o
+                      ? O(0, a, "auto")
+                      : a?.scrollIntoView({
+                          behavior: "auto",
+                          block: "nearest",
+                          inline: "nearest",
+                        });
               }
             })(this, t),
             this.m_Tree.OnChildActivated(e);
@@ -10289,7 +10317,7 @@
       r.d(t, {
         $4: () => n,
         O4: () => z,
-        Qv: () => $,
+        Qv: () => J,
         TS: () => A,
         eE: () => N,
         gn: () => x,
@@ -13310,7 +13338,7 @@
                 proto: X,
                 fields: {
                   dlc_data: { n: 1, c: Q, r: !0, q: !0 },
-                  playtime: { n: 2, c: J, r: !0, q: !0 },
+                  playtime: { n: 2, c: $, r: !0, q: !0 },
                 },
               }),
             X.sm_m
@@ -13425,74 +13453,12 @@
           return "CStoreBrowse_GetDLCForApps_Response_DLCData";
         }
       }
-      class J extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            J.prototype.appid || a.Sg(J.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            J.sm_m ||
-              (J.sm_m = {
-                proto: J,
-                fields: {
-                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  playtime: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  last_played: {
-                    n: 3,
-                    br: a.qM.readUint32,
-                    bw: a.gp.writeUint32,
-                  },
-                },
-              }),
-            J.sm_m
-          );
-        }
-        static MBF() {
-          return J.sm_mbf || (J.sm_mbf = a.w0(J.M())), J.sm_mbf;
-        }
-        toObject(e = !1) {
-          return J.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(J.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(J.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new J();
-          return J.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(J.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(J.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
-        }
-      }
       class $ extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $.prototype.context || a.Sg($.M()),
-            i.Message.initialize(this, e, 0, -1, [2], null);
+            $.prototype.appid || a.Sg($.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -13502,18 +13468,13 @@
               ($.sm_m = {
                 proto: $,
                 fields: {
-                  context: { n: 1, c: A },
-                  appids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
+                  appid: { n: 1, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  playtime: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  last_played: {
+                    n: 3,
                     br: a.qM.readUint32,
-                    pbr: a.qM.readPackedUint32,
-                    bw: a.gp.writeRepeatedUint32,
+                    bw: a.gp.writeUint32,
                   },
-                  flavor: { n: 3, br: a.qM.readString, bw: a.gp.writeString },
-                  count: { n: 4, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  store_page_filter: { n: 5, c: l.S7 },
                 },
               }),
             $.sm_m
@@ -13549,6 +13510,73 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
+        }
+      }
+      class J extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            J.prototype.context || a.Sg(J.M()),
+            i.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            J.sm_m ||
+              (J.sm_m = {
+                proto: J,
+                fields: {
+                  context: { n: 1, c: A },
+                  appids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  flavor: { n: 3, br: a.qM.readString, bw: a.gp.writeString },
+                  count: { n: 4, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  store_page_filter: { n: 5, c: l.S7 },
+                },
+              }),
+            J.sm_m
+          );
+        }
+        static MBF() {
+          return J.sm_mbf || (J.sm_mbf = a.w0(J.M())), J.sm_mbf;
+        }
+        toObject(e = !1) {
+          return J.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(J.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(J.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new J();
+          return J.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(J.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(J.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetDLCForAppsSolr_Request";
@@ -14077,7 +14105,7 @@
           (e.GetDLCForAppsSolr = function (e, t) {
             return e.SendMsg(
               "StoreBrowse.GetDLCForAppsSolr#1",
-              (0, o.I8)($, t),
+              (0, o.I8)(J, t),
               ee,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -22915,8 +22943,8 @@
       (0, i.Cg)([d.oI], X.prototype, "OnMenuOpened", null);
       r(57245);
       var Q = r(14947),
-        J = r(49771),
-        $ = r(62490),
+        $ = r(49771),
+        J = r(62490),
         ee = r(25489);
       const te = new (r(60778).wd)("DragDrop").Debug;
       class re extends s.Component {
@@ -22965,7 +22993,7 @@
       }
       (0, i.Cg)([d.oI], re.prototype, "OnDrop", null);
       class ie {
-        m_embeddedElement = new J.MX("DragGhosts");
+        m_embeddedElement = new $.MX("DragGhosts");
         m_rgDropRegions = [];
         m_activeDraggable;
         m_rgActiveDropRegions = [];
@@ -22981,8 +23009,8 @@
               this.m_rgActiveDropRegions.push(e));
         }
         UnregisterDropRegion(e) {
-          $.x9(this.m_rgDropRegions, e),
-            $.x9(this.m_rgActiveDropRegions, e),
+          J.x9(this.m_rgDropRegions, e),
+            J.x9(this.m_rgActiveDropRegions, e),
             this.m_activeDropRegion == e &&
               ((this.m_activeDropRegion = void 0),
               this.m_activeDraggable && this.ShowDragGhost());
@@ -24418,7 +24446,7 @@
       });
       var Xe = r(43670),
         Qe = r.n(Xe),
-        Je = r(68451);
+        $e = r(68451);
       s.forwardRef(function (e, t) {
         return s.createElement(
           n.$n,
@@ -24442,7 +24470,7 @@
           ),
         );
       });
-      var $e = r(4437);
+      var Je = r(4437);
       s.forwardRef(function (e, t) {
         const { className: r, ...i } = e;
         let a = s.useRef(),
@@ -24466,7 +24494,7 @@
             inlineControls: s.createElement(
               n.$n,
               {
-                className: $e.TogglePasswordVisibilityBtn,
+                className: Je.TogglePasswordVisibilityBtn,
                 onPointerDown: p,
                 onOKButton: p,
               },
@@ -25351,10 +25379,10 @@
         OnContextMenu(e) {
           if (null != this.props.resetValue) {
             const t = s.createElement(
-              Je.tz,
+              $e.tz,
               null,
               s.createElement(
-                Je.kt,
+                $e.kt,
                 {
                   disabled: !this.CanResetToDefault,
                   onSelected: this.ResetToDefault,
@@ -29023,100 +29051,101 @@
     12155: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $$j: () => ie,
-        $4X: () => _e,
-        $vK: () => Ne,
+        $$j: () => se,
+        $4X: () => fe,
+        $vK: () => Pe,
         Aj0: () => z,
-        BQz: () => ze,
-        Bki: () => Le,
+        BQz: () => Ne,
+        Bki: () => xe,
         CeX: () => R,
         DK4: () => p,
-        DQe: () => Oe,
-        Dp6: () => q,
-        FEq: () => ee,
+        DQe: () => Fe,
+        Dp6: () => V,
+        FEq: () => te,
         GB9: () => d,
-        Gkr: () => be,
-        GrD: () => le,
+        Gkr: () => we,
+        GrD: () => ce,
         IrQ: () => I,
         Jlk: () => y,
-        KKS: () => Y,
-        KQV: () => De,
-        MUh: () => K,
+        KKS: () => X,
+        KQV: () => ke,
+        MUh: () => Y,
         MbF: () => Je,
         MvQ: () => x,
         N8C: () => J,
-        NCC: () => fe,
-        OSJ: () => Ge,
-        P7r: () => Q,
+        NCC: () => be,
+        OSJ: () => Ze,
+        P7r: () => $,
         Q38: () => u,
         Qte: () => P,
         ROZ: () => U,
-        SYj: () => Me,
-        T4m: () => ge,
+        SYj: () => Se,
+        T4m: () => _e,
         V5W: () => A,
-        VR: () => Z,
-        VSd: () => je,
-        Vgk: () => Ae,
+        VR: () => K,
+        VSd: () => qe,
+        Vgk: () => ze,
         VnB: () => L,
-        Vt2: () => Pe,
-        WX$: () => Ie,
+        Vt2: () => We,
+        WX$: () => Te,
         X: () => b,
         X4B: () => B,
-        XH_: () => ke,
+        XH_: () => Oe,
         XTb: () => _,
         Xjb: () => O,
-        Xz0: () => ae,
+        Xz0: () => oe,
         YNO: () => f,
-        ZPc: () => pe,
+        ZPc: () => he,
         ZWw: () => F,
-        ZjT: () => ve,
-        ZnA: () => xe,
-        _VW: () => ce,
-        aVR: () => Ee,
-        agV: () => Ye,
-        apU: () => j,
-        bKN: () => Xe,
-        bPr: () => V,
-        bcZ: () => ye,
-        bfp: () => ue,
-        ccb: () => Ue,
-        dJT: () => re,
+        ZjT: () => ye,
+        ZnA: () => Ae,
+        _VW: () => ue,
+        aVR: () => Re,
+        agV: () => Xe,
+        apU: () => q,
+        bKN: () => Qe,
+        bPr: () => G,
+        bcZ: () => Be,
+        bfp: () => me,
+        ccb: () => He,
+        dJT: () => ne,
         eSy: () => h,
         eTF: () => E,
-        emH: () => $e,
-        f5X: () => te,
+        emH: () => et,
+        f5X: () => re,
         fSs: () => M,
-        faJ: () => oe,
-        ffu: () => ne,
-        g$j: () => We,
+        faJ: () => le,
+        ffu: () => ie,
+        g$j: () => Ue,
         hz4: () => k,
         i3G: () => T,
-        i6V: () => H,
+        i6V: () => j,
         jGG: () => S,
-        jIP: () => Re,
-        jZW: () => de,
-        jZl: () => $,
-        jdP: () => Ze,
-        kPc: () => se,
-        lRD: () => Se,
-        nm_: () => Fe,
-        o5Q: () => Be,
-        ofN: () => qe,
-        oy: () => Ve,
-        qcc: () => X,
-        qnF: () => he,
-        rNt: () => He,
-        rfv: () => G,
-        sDU: () => Qe,
+        jIP: () => Ie,
+        jZW: () => pe,
+        jZl: () => ee,
+        jdP: () => Ke,
+        kPc: () => ae,
+        lRD: () => ve,
+        nm_: () => Le,
+        o5Q: () => Ee,
+        ofN: () => Ve,
+        oy: () => Ge,
+        qcc: () => Q,
+        qnF: () => ge,
+        qzq: () => H,
+        rNt: () => je,
+        rfv: () => Z,
+        sDU: () => $e,
         sED: () => w,
         tID: () => N,
-        tIO: () => Ke,
+        tIO: () => Ye,
         uMb: () => D,
         vRz: () => v,
         wB_: () => m,
-        wVV: () => me,
+        wVV: () => de,
         xv8: () => C,
-        yCC: () => Te,
+        yCC: () => De,
         y_e: () => W,
         zD7: () => g,
       });
@@ -30098,6 +30127,27 @@
           {
             version: "1.1",
             id: "Layer_5",
+            className: "SVGIcon_Button SVGIcon_Globe",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 64 64",
+          },
+          n.createElement(
+            "g",
+            null,
+            n.createElement("path", {
+              d: "M32.5,5C17.9,5,6,16.9,6,31.5C6,46.1,17.9,58,32.5,58S59,46.1,59,31.5C59,16.9,47.1,5,32.5,5 M32.5,54.7c-1.2,0-2.5-0.1-3.7-0.3c-1.1-1.1-2.1-2.8-3-4.8c-0.8-1.8-1.4-3.8-2-6c2.7-0.3,5.6-0.5,8.6-0.5c3,0,5.9,0.2,8.6,0.5c-0.5,2.2-1.2,4.2-2,6c-0.9,2-1.9,3.7-3,4.8C35,54.6,33.7,54.7,32.5,54.7 M32.5,41.4c-3.2,0-6.2,0.2-9,0.5c-0.6-3-0.9-6.2-1-9.6h19.9c0,3.4-0.4,6.6-1,9.6C38.7,41.6,35.7,41.4,32.5,41.4 M32.5,8.3c1.2,0,2.5,0.1,3.7,0.3c1.1,1.1,2.1,2.8,3,4.8c0.8,1.8,1.4,3.8,2,6c-2.7,0.3-5.6,0.5-8.6,0.5c-3,0-5.9-0.2-8.6-0.5c0.5-2.2,1.2-4.2,2-6c0.9-2,1.9-3.7,3-4.8C30,8.4,31.3,8.3,32.5,8.3 M32.5,21.6c3.2,0,6.2-0.2,9-0.5c0.6,3,0.9,6.2,1,9.6H22.6c0-3.4,0.4-6.6,1-9.6C26.3,21.4,29.3,21.6,32.5,21.6 M44.1,30.7c0-3.5-0.4-6.8-1-9.8c3.4-0.5,6.4-1.1,8.8-2c2.3,3.5,3.6,7.5,3.7,11.8H44.1z M20.9,30.7H9.3c0.1-4.2,1.4-8.3,3.7-11.8c2.5,0.8,5.5,1.5,8.8,2C21.3,23.9,21,27.2,20.9,30.7 M20.9,32.3c0,3.5,0.4,6.8,1,9.8c-3.4,0.5-6.4,1.1-8.8,2c-2.3-3.5-3.6-7.5-3.7-11.8H20.9z M44.1,32.3h11.6c-0.1,4.2-1.4,8.3-3.7,11.8c-2.5-0.8-5.5-1.5-8.8-2C43.7,39.1,44,35.8,44.1,32.3 M51,17.5c-0.1,0-0.2,0.1-0.3,0.1c-2.3,0.7-5,1.3-7.9,1.7c-0.9-4.1-2.3-7.6-4-10.1c3.8,1.1,7.3,3.1,10.2,5.9C49.6,15.9,50.3,16.6,51,17.5 M26.3,9.2c-1.7,2.5-3.1,6-4,10.1c-2.9-0.4-5.6-1-7.9-1.7c-0.1,0-0.2-0.1-0.3-0.1c0.6-0.8,1.3-1.6,2.1-2.4C19,12.2,22.5,10.2,26.3,9.2 M14,45.5c0.1,0,0.2-0.1,0.3-0.1c2.3-0.7,5-1.3,7.9-1.7c0.9,4.1,2.3,7.6,4,10.1c-3.8-1.1-7.3-3.1-10.2-5.9C15.4,47.1,14.7,46.4,14,45.5 M38.7,53.8c1.7-2.5,3.1-6,4-10.1c2.9,0.4,5.6,1,7.9,1.7c0.1,0,0.2,0.1,0.3,0.1c-0.6,0.8-1.3,1.6-2.1,2.4C46,50.8,42.5,52.8,38.7,53.8",
+            }),
+          ),
+        );
+      }
+      function j() {
+        return n.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_5",
             xmlns: "http://www.w3.org/2000/svg",
             x: "0px",
             y: "0px",
@@ -30112,7 +30162,7 @@
           ),
         );
       }
-      function j() {
+      function q() {
         return n.createElement(
           "svg",
           {
@@ -30149,7 +30199,7 @@
           ),
         );
       }
-      function q() {
+      function V() {
         return n.createElement(
           "svg",
           {
@@ -30177,7 +30227,7 @@
           }),
         );
       }
-      function V() {
+      function G() {
         return n.createElement(
           "svg",
           {
@@ -30197,7 +30247,7 @@
           }),
         );
       }
-      function G(e) {
+      function Z(e) {
         const { className: t } = e;
         return n.createElement(
           "svg",
@@ -30217,7 +30267,7 @@
           }),
         );
       }
-      function Z(e) {
+      function K(e) {
         return n.createElement(
           "svg",
           {
@@ -30239,7 +30289,7 @@
           }),
         );
       }
-      function K(e) {
+      function Y(e) {
         const [t, r] = (0, l.l)();
         return n.createElement(
           "svg",
@@ -30278,7 +30328,7 @@
           ),
         );
       }
-      function Y() {
+      function X() {
         return n.createElement(
           "svg",
           {
@@ -30297,7 +30347,7 @@
           }),
         );
       }
-      function X() {
+      function Q() {
         return n.createElement(
           "svg",
           {
@@ -30316,7 +30366,7 @@
           }),
         );
       }
-      function Q() {
+      function $() {
         return n.createElement(
           "svg",
           {
@@ -30368,7 +30418,7 @@
           }),
         );
       }
-      function $() {
+      function ee() {
         return n.createElement(
           "svg",
           {
@@ -30434,7 +30484,7 @@
           }),
         );
       }
-      function ee(e) {
+      function te(e) {
         const t = (0, i.A)(
           e.className,
           "SVGIcon_Button",
@@ -30461,7 +30511,7 @@
           }),
         );
       }
-      function te() {
+      function re() {
         return n.createElement(
           "svg",
           {
@@ -30487,7 +30537,7 @@
           ),
         );
       }
-      function re() {
+      function ne() {
         return n.createElement(
           "svg",
           {
@@ -30506,7 +30556,7 @@
           }),
         );
       }
-      function ne() {
+      function ie() {
         return n.createElement(
           "svg",
           {
@@ -30544,7 +30594,7 @@
           }),
         );
       }
-      function ie() {
+      function se() {
         return n.createElement(
           "svg",
           {
@@ -30580,7 +30630,7 @@
           }),
         );
       }
-      function se(e) {
+      function ae(e) {
         return n.createElement(
           "svg",
           {
@@ -30603,7 +30653,7 @@
           }),
         );
       }
-      function ae() {
+      function oe() {
         return n.createElement(
           "svg",
           {
@@ -30643,7 +30693,7 @@
           }),
         );
       }
-      function oe() {
+      function le() {
         return n.createElement(
           "svg",
           {
@@ -30659,7 +30709,7 @@
           n.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
         );
       }
-      function le() {
+      function ce() {
         return n.createElement(
           "svg",
           {
@@ -30678,7 +30728,7 @@
           }),
         );
       }
-      function ce() {
+      function ue() {
         return n.createElement(
           "svg",
           {
@@ -30701,7 +30751,7 @@
           }),
         );
       }
-      function ue(e) {
+      function me(e) {
         return n.createElement(
           "svg",
           {
@@ -30720,7 +30770,7 @@
           }),
         );
       }
-      function me(e) {
+      function de(e) {
         return n.createElement(
           "svg",
           { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -30747,7 +30797,7 @@
           }),
         );
       }
-      function de(e) {
+      function pe(e) {
         return n.createElement(
           "svg",
           {
@@ -30764,7 +30814,7 @@
           }),
         );
       }
-      function pe() {
+      function he() {
         return n.createElement(
           "svg",
           {
@@ -30795,7 +30845,7 @@
           ),
         );
       }
-      function he(e) {
+      function ge(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30809,7 +30859,7 @@
           }),
         );
       }
-      function ge(e) {
+      function _e(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30823,7 +30873,7 @@
           }),
         );
       }
-      function _e() {
+      function fe() {
         return n.createElement(
           "svg",
           {
@@ -30841,7 +30891,7 @@
           }),
         );
       }
-      function fe() {
+      function be() {
         return n.createElement(
           "svg",
           {
@@ -30863,7 +30913,7 @@
           ),
         );
       }
-      function be() {
+      function we() {
         return n.createElement(
           "svg",
           {
@@ -30901,7 +30951,7 @@
           ),
         );
       }
-      function we(e) {
+      function Ce(e) {
         return n.createElement(
           "svg",
           {
@@ -30920,7 +30970,7 @@
           }),
         );
       }
-      function Ce(e) {
+      function Me(e) {
         return n.createElement(
           "svg",
           {
@@ -30940,12 +30990,12 @@
           }),
         );
       }
-      function Me(e) {
-        return (0, c.Ae)()
-          ? n.createElement(Ce, { ...e })
-          : n.createElement(we, { ...e });
-      }
       function Se(e) {
+        return (0, c.Ae)()
+          ? n.createElement(Me, { ...e })
+          : n.createElement(Ce, { ...e });
+      }
+      function ve(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30965,7 +31015,7 @@
           }),
         );
       }
-      function ve(e) {
+      function ye(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -30988,7 +31038,7 @@
           }),
         );
       }
-      function ye(e) {
+      function Be(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31011,7 +31061,7 @@
           }),
         );
       }
-      function Be(e) {
+      function Ee(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31034,7 +31084,7 @@
           }),
         );
       }
-      function Ee(e) {
+      function Re(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31057,7 +31107,7 @@
           }),
         );
       }
-      function Re(e) {
+      function Ie(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31080,7 +31130,7 @@
           }),
         );
       }
-      function Ie(e) {
+      function Te(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31103,7 +31153,7 @@
           }),
         );
       }
-      function Te(e) {
+      function De(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31132,7 +31182,7 @@
           }),
         );
       }
-      function De(e) {
+      function ke(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31165,7 +31215,7 @@
           }),
         );
       }
-      function ke(e) {
+      function Oe(e) {
         return n.createElement(
           "svg",
           {
@@ -31184,7 +31234,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function Fe(e) {
         const { className: t } = e;
         return n.createElement(
           "svg",
@@ -31202,7 +31252,7 @@
           }),
         );
       }
-      function Fe(e) {
+      function Le(e) {
         return n.createElement(
           "svg",
           {
@@ -31216,7 +31266,7 @@
           }),
         );
       }
-      function Le(e) {
+      function xe(e) {
         return n.createElement(
           "svg",
           {
@@ -31230,7 +31280,7 @@
           }),
         );
       }
-      function xe(e) {
+      function Ae(e) {
         return n.createElement(
           "svg",
           {
@@ -31244,7 +31294,7 @@
           }),
         );
       }
-      function Ae(e) {
+      function ze(e) {
         return n.createElement(
           "svg",
           {
@@ -31258,7 +31308,7 @@
           }),
         );
       }
-      function ze(e) {
+      function Ne(e) {
         return n.createElement(
           "svg",
           {
@@ -31272,7 +31322,7 @@
           }),
         );
       }
-      function Ne(e) {
+      function Pe(e) {
         return n.createElement(
           "svg",
           {
@@ -31286,7 +31336,7 @@
           }),
         );
       }
-      function Pe(e) {
+      function We(e) {
         return n.createElement(
           "svg",
           {
@@ -31300,7 +31350,7 @@
           }),
         );
       }
-      function We(e) {
+      function Ue(e) {
         return n.createElement(
           "svg",
           {
@@ -31314,7 +31364,7 @@
           }),
         );
       }
-      function Ue(e) {
+      function He(e) {
         return n.createElement(
           "svg",
           {
@@ -31334,7 +31384,7 @@
           }),
         );
       }
-      function He(e) {
+      function je(e) {
         return n.createElement(
           "svg",
           {
@@ -31348,7 +31398,7 @@
           }),
         );
       }
-      function je(e) {
+      function qe(e) {
         return n.createElement(
           "svg",
           {
@@ -31362,7 +31412,7 @@
           }),
         );
       }
-      function qe(e) {
+      function Ve(e) {
         return n.createElement(
           "svg",
           {
@@ -31388,7 +31438,7 @@
           }),
         );
       }
-      function Ve(e) {
+      function Ge(e) {
         return n.createElement(
           "svg",
           {
@@ -31402,7 +31452,7 @@
           }),
         );
       }
-      function Ge(e) {
+      function Ze(e) {
         return n.createElement(
           "svg",
           {
@@ -31416,7 +31466,7 @@
           }),
         );
       }
-      function Ze(e) {
+      function Ke(e) {
         return n.createElement(
           "svg",
           {
@@ -31433,7 +31483,7 @@
           }),
         );
       }
-      function Ke(e) {
+      function Ye(e) {
         return n.createElement(
           "svg",
           {
@@ -31447,7 +31497,7 @@
           }),
         );
       }
-      function Ye(e) {
+      function Xe(e) {
         return n.createElement(
           "svg",
           {
@@ -31461,7 +31511,7 @@
           }),
         );
       }
-      function Xe(e) {
+      function Qe(e) {
         return n.createElement(
           "svg",
           {
@@ -31475,7 +31525,7 @@
           }),
         );
       }
-      function Qe(e) {
+      function $e(e) {
         return n.createElement(
           "svg",
           {
@@ -31503,7 +31553,7 @@
           }),
         );
       }
-      function $e(e) {
+      function et(e) {
         return n.createElement(
           "svg",
           {
@@ -32105,9 +32155,13 @@
           },
           [b, w] = n.useState(!1),
           [C, M] = n.useState(),
-          S = n.useCallback((e) => {
-            w(!0), M(e.currentTarget);
-          }, []),
+          S = n.useCallback(
+            (e) => {
+              (p && "pointerType" in e && "mouse" != e.pointerType) ||
+                (w(!0), M(e.currentTarget));
+            },
+            [p],
+          ),
           v = n.useCallback(() => {
             w(!1);
           }, []),

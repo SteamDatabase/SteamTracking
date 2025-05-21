@@ -994,7 +994,12 @@
                   : [W, z, v, L, C, w, h, t ? N : void 0, T].filter((e) => !!e),
               [e, t],
             );
-          })(n, r),
+          })(
+            n,
+            r ||
+              i.bAccessibilityChatSpeechtoText ||
+              i.bAccessibilityChatTexttoSpeech,
+          ),
           [_, d] = a.useState(i);
         let b = () => u((e) => e - 1);
         0 === l && (b = t);

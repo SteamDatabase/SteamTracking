@@ -2824,16 +2824,38 @@
       class W extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), a.Message.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            W.prototype.include_revoked || l.Sg(W.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  include_revoked: {
+                    n: 1,
+                    d: !1,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = l.w0(W.M())), W.sm_mbf;
         }
         toObject(e = !1) {
           return W.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return l.BT(W.M(), e, t);
         }
         static fromObject(e) {
-          return new W();
+          return l.Uq(W.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
@@ -2841,13 +2863,15 @@
           return W.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return l.zj(W.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (o().BinaryWriter)();
           return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          l.i0(W.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (o().BinaryWriter)();
           return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -3028,6 +3052,11 @@
                   os_type: { n: 11, br: l.qM.readInt32, bw: l.gp.writeInt32 },
                   authentication_type: {
                     n: 12,
+                    br: l.qM.readEnum,
+                    bw: l.gp.writeEnum,
+                  },
+                  effective_token_state: {
+                    n: 13,
                     br: l.qM.readEnum,
                     bw: l.gp.writeEnum,
                   },
@@ -4512,7 +4541,7 @@
               "Authentication.GenerateAccessTokenForApp#1",
               (0, c.I8)(k, t),
               q,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.EnumerateTokens = function (e, t) {

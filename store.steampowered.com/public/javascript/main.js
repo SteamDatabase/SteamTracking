@@ -115,7 +115,15 @@ function TabSelect( elem, target )
 	$J('#last_tab').val(target);
 	var $Elem = $JFromIDOrElement( elem );
 	$Elem.siblings().removeClass( 'active' );
+	$Elem.siblings().attr( 'aria-selected', 'false' );
 	$Elem.addClass( 'active' );
+	$Elem.attr( 'aria-selected', 'true' );
+
+	var $controlsTarget = $JFromIDOrElement( $Elem.attr( 'aria-controls' ) );
+	if ( $controlsTarget.length )
+	{
+		$controlsTarget.attr( 'aria-labelledby', $Elem.attr( 'id' ) );
+	}
 
 	if( target == "tab_1_content" )
 		target = GetDefaultTabSelection();
@@ -2286,16 +2294,28 @@ function InitHorizontalAutoSliders()
 
 function PreloadImages( elElement )
 {
-	$J(elElement).find("*[data-background-image-url]").each(function(i, j){
-		var $elTarget = $J(j);
-		$elTarget.css({'background-image': 'url(' + $elTarget.data('background-image-url') + ')' });
-	});
+	var $Element = $J(elElement);
+	if ( !$Element.data('createdOffsetWatcher') )
+	{
+		new CScrollOffsetWatcher( elElement, function ()
+		{
+			$Element.find("*[data-background-image-url]").each(function(i, j){
+				var $elTarget = $J(j);
+				$elTarget.css({'background-image': 'url(' + $elTarget.data('background-image-url') + ')' });
+			});
 
-	$J(elElement).find("img[data-image-url]").each(function(i, j){
-		var $elTarget = $J(j);
-		$elTarget.attr('src', $elTarget.data('image-url') );
-	});
+			$Element.find("img[data-image-url]").each(function(i, j){
+				var $elTarget = $J(j);
+				$elTarget.attr('src', $elTarget.data('image-url') );
+			});
+		})
 
+		$Element.data( 'createdOffsetWatcher', true );
+	}
+	else
+	{
+		CScrollOffsetWatcher.ForceRecalc();
+	}
 }
 
 

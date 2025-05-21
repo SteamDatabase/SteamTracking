@@ -19,6 +19,10 @@
     chunkid: (module) => {
       module.exports = {
         SavedImage: "_1y3QVgsz4daj3E3S5wzwt-",
+        SaveButton: "_2hloqzkRkAWkw50l4XPN-N",
+        HaventSavedInAShortTime: "_3xoBR2gVk2F0Bmejh20Yhl",
+        HaventSavedInALongTime: "_1bg505mDp3agK0eHP0NoxI",
+        Pulse: "_3oWE-wt1PQ7Rv2IJ0vCmO",
       };
     },
     chunkid: (module) => {
@@ -595,7 +599,7 @@
         }
         async OnDropFiles(_) {
           if (_ && _.length > 0) {
-            this.m_clanImageUploader = new _._(this.props.clanSteamID);
+            this.m_clanImageUploader = new _._(this.props.clanSteamID, null);
             let _ = !0,
               _ = Array.from(_);
             for (let _ = 0; _ && _ < _.length; _++) {
@@ -1491,9 +1495,8 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
-          _ = (0, _._)(__webpack_require__),
           _ = _.useMemo(
-            () => _.uploaderOverride || new _._(_),
+            () => _.uploaderOverride || new _._(_, __webpack_require__),
             [_.ConvertTo64BitString(), _.uploaderOverride],
           ),
           [_, _] = _.useState(!1),
@@ -1506,9 +1509,9 @@
               if (!_) {
                 _(!0);
                 try {
-                  const _ = (0, _._)(_.file_name, _),
+                  const { language: _ } = (0, _._)(_.file_name, _),
                     _ = (0, _._)(_, _, _);
-                  await _.AddExistingClanImage(_, _, _, _);
+                  await _.AddExistingClanImage(_, _, _);
                 } catch (_) {
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
@@ -1525,7 +1528,7 @@
                 _(!1);
               }
             },
-            [_, _, _, _, _, _],
+            [_, _, _, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -1547,7 +1550,7 @@
         return _.createElement(_._, {
           ..._,
           imageUploader: _,
-          rgImageOptions: _,
+          rgRealmList: _,
           elAdditonalButtons: _
             ? [
                 _.createElement(_._, {
@@ -2232,8 +2235,7 @@
       function _(_) {
         const {
             imageUploader: _,
-            rgImageOptions: __webpack_require__,
-            strOverrideDragAndDropText: _,
+            strOverrideDragAndDropText: __webpack_require__,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -2249,15 +2251,10 @@
                 _ = !0;
               for (let _ = 0; _ < _.length; _++) {
                 const _ = _[_],
-                  _ = (0, _._)(null == _ ? void 0 : _.name, _);
+                  { language: _ } = (0, _._)(null == _ ? void 0 : _.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(
-                    _,
-                    _,
-                    __webpack_require__,
-                    _,
-                  )),
+                  (_ = await _.AddImageForLanguage(_, _, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -2293,49 +2290,64 @@
               }
               return _;
             },
-            [_, _, _, _, __webpack_require__],
+            [_, _, _, _],
           ),
-          _ = _.useMemo(() => (_ instanceof Array ? _ : [_]), [_]);
-        return _.createElement(
-          _._,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
-          },
+          _ = _.useMemo(
+            () =>
+              _ instanceof Array
+                ? _
+                : [
+                    _.createElement(
+                      _.Fragment,
+                      {
+                        key: "elAdditonalButtons",
+                      },
+                      _,
+                    ),
+                  ],
+            [_],
+          );
+        return (
+          (0, _._)(() =>
+            _.map((_) => ({
+              _: _.GetCurrentImageOption(),
+              _: _.language,
+            })),
+          ),
           _.createElement(
-            _.Fragment,
-            null,
+            _._,
+            {
+              onDropFiles: _,
+              elAdditonalButtons: _,
+              strOverrideDragAndDropText: __webpack_require__,
+            },
             _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewCtn,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.file + "_" + _.uploadTime,
-                  asset: _,
-                  supported: __webpack_require__,
-                  forceResolution: _,
-                  forceFileType: _ && _.file_type,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().UploadPreviewCtn,
+                },
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                    asset: _,
+                    forceResolution: _,
+                    forceFileType: _ && _.file_type,
+                    fnOnRemove: () => _.DeleteUploadImage(_),
+                    languageRealms: _,
+                  }),
+                ),
               ),
             ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              await _.UploadAllImages(
-                _,
-                _,
-                __webpack_require__,
-                _,
-                _ && _.file_type,
-              );
-            },
-          }),
+            _.createElement(_, {
+              imageUploader: _,
+              fnOnUploadImageRequested: async () => {
+                await _.UploadAllImages(_, _, _, _ && _.file_type);
+              },
+            }),
+          )
         );
       }
       function _(_) {
@@ -2376,7 +2388,7 @@
             ),
         );
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _) {
         let _ = new Array();
         return (
           _.GetUploadImages().forEach((_) => {
@@ -2384,7 +2396,6 @@
               _.createElement(_, {
                 key: _ + _.file + "_" + _.uploadTime,
                 asset: _,
-                supported: _,
                 forceResolution: _,
                 forceFileType: _,
                 fnOnRemove: () => _.DeleteUploadImage(_),
@@ -2396,15 +2407,15 @@
         );
       }
       const _ = (0, _._)(function (_) {
-        var _, _;
-        const { asset: _, fnOnRemove: _, supported: _, languageRealms: _ } = _,
+        var _, _, _;
+        const { asset: _, fnOnRemove: _, languageRealms: _ } = _,
           _ =
-            null == _
+            null === (_ = _.ImageOptions) || void 0 === _
               ? void 0
               : _.map((_) => {
                   let _,
                     _ = null == _ ? void 0 : _.fnGetLabelText();
-                  _.bEnforceDimensions && (_ += ` - ${_.nWidth}x${_.nHeight}`),
+                  _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
                     (_.BIsOriginalMinimumDimensions(_) &&
                       _.FileTypeMatchesImageTypes(_)) ||
                       (_ = _().ImageDimensionTooSmall);
@@ -2420,34 +2431,55 @@
             success: (0, _._)("#ImageUpload_SuccessCard"),
             failed: (0, _._)("#ImageUpload_Failed"),
           },
-          _ = new Array(),
-          _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
-        for (const _ of _) {
-          if (25 == _) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
-          _.push({
-            label: _,
-            data: _,
-          });
-        }
-        _.sort((_, _) => _.label.localeCompare(_.label));
-        const _ = [];
-        _.forEach((_) =>
-          _.push({
-            label: _.label,
-            data: _.data,
-          }),
-        );
-        const _ = _.IsValidAssetType(
-            _.supported,
-            _.forceResolution,
-            _.forceFileType,
-          ),
+          _ = _.BSupportsLanguages()
+            ? (function (_) {
+                const _ = [],
+                  _ = new Array();
+                for (const _ of _) {
+                  if (25 == _) continue;
+                  const _ = (0, _._)("#Language_" + (0, _._)(_));
+                  __webpack_require__.push({
+                    label: _,
+                    data: _,
+                  });
+                }
+                return (
+                  __webpack_require__.sort((_, _) =>
+                    _.label.localeCompare(_.label),
+                  ),
+                  __webpack_require__.forEach((_) =>
+                    _.push({
+                      label: _.label,
+                      data: _.data,
+                    }),
+                  ),
+                  _
+                );
+              })(
+                _._.GetLanguageListForRealms(
+                  null != _ ? _ : [_._.k_ESteamRealmGlobal],
+                ),
+              )
+            : null,
+          _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
           _ = _.needsCrop
             ? (0, _._)("#ImageUpload_NeedsCrop")
             : _.error
               ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status];
+              : _[_.status],
+          _ = "pending" == _.status;
+        let _ = null;
+        const _ = _.GetCurrentImageOption();
+        _ &&
+          (_ =
+            null === (_ = _.find((_) => _.data.sKey == _.sKey)) || void 0 === _
+              ? void 0
+              : _.data);
+        _ ||
+          (_ =
+            null === (_ = null == _ ? void 0 : _[0]) || void 0 === _
+              ? void 0
+              : _.data);
         return _.createElement(
           "div",
           {
@@ -2464,27 +2496,20 @@
           _.createElement(_, {
             asset: _,
           }),
-          _.createElement(_._, {
-            strDropDownClassName: _().DropDownScroll,
-            rgOptions: _,
-            selectedOption: _.language,
-            onChange: (_) => (_.language = _.data),
-          }),
+          _ &&
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _.language,
+              onChange: (_) => (_.language = _.data),
+              disabled: !_,
+            }),
           Boolean((null == _ ? void 0 : _.length) > 1) &&
             _.createElement(_._, {
               rgOptions: _,
-              selectedOption:
-                null !==
-                  (_ = _.type
-                    ? null ===
-                        (_ = _.find((_) => _.data.sKey == _.type.sKey)) ||
-                      void 0 === _
-                      ? void 0
-                      : _.data
-                    : void 0) && void 0 !== _
-                  ? _
-                  : _[0].data,
-              onChange: (_) => (_.type = _.data),
+              selectedOption: _,
+              onChange: (_) => _.SetCurrentImageOption(_.data),
+              disabled: !_,
             }),
           _.createElement(
             "div",
@@ -2492,7 +2517,7 @@
               className: (0, _._)(_().FlexColumnContainer),
             },
             _,
-            Boolean("uploading" == _) &&
+            Boolean("uploading" == _.status) &&
               _.createElement(
                 "div",
                 {
@@ -2543,7 +2568,7 @@
                         console.log(
                           "ImageUploadEmbeddedDialog trying to crop non image",
                           _.fileType,
-                          JSON.stringify(_.type),
+                          JSON.stringify(_.GetCurrentImageOption()),
                         );
                     })(_),
                 },
@@ -4522,7 +4547,9 @@
                 (null === (_ = _.dataTransfer.files) || void 0 === _
                   ? void 0
                   : _.length) &&
-                  (_(_.dataTransfer.files, _), _.preventDefault()),
+                  (_(_.dataTransfer.files, _),
+                  _.preventDefault(),
+                  _.stopPropagation()),
                   __webpack_require__(!1);
               },
               [_],

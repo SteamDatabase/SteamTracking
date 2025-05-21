@@ -9,7 +9,9 @@
     chunkid: (module) => {
       module.exports = {
         DiffTableContainer: "_1T21rDXKcolUe7tHkC54OL",
+        DiffButtonCtn: "_2iajX7nR6xNLkLocPzfuKe",
         DiffButton: "_3KPMmnZcO_XZ44Mxw1lqtg",
+        DiffButtonTextVO: "_1DEeWecmFNeGBB2VJahh2k",
       };
     },
     chunkid: (module) => {
@@ -1348,24 +1350,38 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Container: "_2DwHnbQk_PGfGThmz17qKu",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
+        RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
+        RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
+        RowSize4: "_3Q6EKKVEKVFpC_BW0FHOB_",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
+        RowSize1: "_1O__hioeAf860tvMTF75fa",
+        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
+        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
+        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
         JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
         JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
-        container: "_3efSO1GodU-7Xw80LAUHBa",
         Media: "_2NeNe0b0Hfv84zxtiUPGOj",
-        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        HorizLeft: "_15yPdrODYckz6GdaJ9rSiB",
+        HorizRight: "_1NoPEFucA8Mn6QzdYU91dn",
+        HorizCenter: "_3ENovdddxiOpk6sHE5gc2R",
+        VertTop: "_1trckYA9kgtzVQCTezl1tk",
+        VertBottom: "_2idpsiFkYKLWO5a-EmxJvt",
+        VertCenter: "_3dmfdJa7A-xJX4OZroWSTk",
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
-        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
-        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
-        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
         _: "_2XQ2s4PGGXTf-33SoML_Nn",
         _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        Left: "_3Bz6jMGpR_Vr3p7g3paBao",
+        Right: "_3KumxdhZbtSA8tvxSUkIoq",
+        Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
+        Description: "r3oaGi8Z4_MjYvdW_zsl5",
       };
     },
     chunkid: (module) => {
@@ -6581,8 +6597,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6605,7 +6619,7 @@
           ? _.createElement(
               "div",
               {
-                className: _().ValveOnlyBackground,
+                className: _().DiffButtonCtn,
               },
               _.createElement(
                 _._,
@@ -6616,6 +6630,13 @@
                   },
                 },
                 (0, _._)("#EventEditor_ShowDiff"),
+                _.createElement(
+                  "span",
+                  {
+                    className: _().DiffButtonTextVO,
+                  },
+                  (0, _._)("#EventEditor_ShowDiff_VO"),
+                ),
               ),
               _.createElement(
                 _._,
@@ -10752,7 +10773,7 @@
       const _ = (0, _._)((_) => {
         const { tab: _, editModel: __webpack_require__ } = _,
           _ = __webpack_require__.GetClanSteamID(),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, ["tab_bar_background"]),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]);
         return _.createElement(
@@ -10788,12 +10809,10 @@
             onDropFiles: async (_) => {
               if (_ && _.length > 0) {
                 _(!0);
-                const _ = (0, _._)(["tab_bar_background"]);
                 try {
-                  if (await _.AddImage(_[0], 0, _)) {
+                  if (await _.AddImage(_[0], 0)) {
                     const _ = await _.UploadAllImages(
                         __webpack_require__.GetIncludedRealmList(),
-                        _,
                         _,
                       ),
                       _ = _[Object.keys(_)[0]],
@@ -15003,6 +15022,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15061,7 +15081,7 @@
                             __webpack_require__(void 0);
                         })(_, __webpack_require__, (_) => _(_)),
                     },
-                    "C",
+                    _.createElement(_.cKB, null),
                     "copied" == _ &&
                       _.createElement(
                         "div",
@@ -15111,7 +15131,7 @@
                           }
                         })(_, __webpack_require__, (_) => _(_)),
                     },
-                    "P",
+                    _.createElement(_.iDD, null),
                     "pasted" == _ &&
                       _.createElement(
                         "div",
@@ -18542,7 +18562,7 @@
             _.GetAppID(),
             _.GetIncludedRealmList(),
           ]),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, ["sale_section_background"]),
           _ = (_) => {
             (0, _._)(
               _.createElement(_._, {
@@ -18657,11 +18677,9 @@
                 ],
                 onDropFiles: async (_) => {
                   if (_ && _.length > 0) {
-                    const _ = (0, _._)(["sale_section_background"]);
-                    if (await _.AddImage(_[0], 0, _)) {
+                    if (await _.AddImage(_[0], 0)) {
                       const _ = await _.UploadAllImages(
                           _.GetIncludedRealmList(),
-                          _,
                           _,
                         ),
                         _ = _[Object.keys(_)[0]];
@@ -18792,10 +18810,11 @@
             strSectionTitleOverrideToken: _,
             fnOnSetDirty: _,
           } = _,
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.label_color,
             _.background_gradient_bottom,
             _.background_gradient_top,
+            _.collapse_header_space,
           ]),
           _ = (0, _.useCallback)(
             (_, _, _) => {
@@ -18860,11 +18879,12 @@
                 (_.border_width = void 0),
                 (_.disable_background = void 0),
                 (_.label_color = void 0),
+                (_.collapse_header_space = void 0),
                 _();
             },
             [_, _],
           ),
-          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+          _ = (0, _._)(_, _);
         return _.createElement(
           _.Fragment,
           null,
@@ -18938,6 +18958,15 @@
                 ),
               ),
             ),
+          !_ &&
+            _.createElement(_._, {
+              checked: _,
+              onChange: (_) => {
+                _.collapse_header_space != _ &&
+                  ((_.collapse_header_space = _), _());
+              },
+              label: (0, _._)("#Sale_Section_TopPadding"),
+            }),
         );
       }
       const _ = 5;
@@ -24022,53 +24051,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const { strPlaceholder: _ } = _;
-        return (
-          (0, _._)(
-            _.useMemo(
-              () =>
-                _
-                  ? (function (_) {
-                      return new _._({
-                        props: {
-                          decorations(_) {
-                            var _;
-                            const _ = _.doc;
-                            if (
-                              1 === _.childCount &&
-                              (null === (_ = _.firstChild) || void 0 === _
-                                ? void 0
-                                : _.isTextblock) &&
-                              0 === _.firstChild.content.size
-                            ) {
-                              const _ = _._.node(0, _.content.size, {
-                                "data-placeholder": _,
-                                class: _.EmptyTextPlaceholder,
-                              });
-                              return _._.create(_, [_]);
-                            }
-                            return _._.empty;
-                          },
-                        },
-                      });
-                    })(_)
-                  : void 0,
-              [_],
-            ),
-          ),
-          null
-        );
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
@@ -24170,6 +24152,53 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const { strPlaceholder: _ } = _;
+        return (
+          (0, _._)(
+            _.useMemo(
+              () =>
+                _
+                  ? (function (_) {
+                      return new _._({
+                        props: {
+                          decorations(_) {
+                            var _;
+                            const _ = _.doc;
+                            if (
+                              1 === _.childCount &&
+                              (null === (_ = _.firstChild) || void 0 === _
+                                ? void 0
+                                : _.isTextblock) &&
+                              0 === _.firstChild.content.size
+                            ) {
+                              const _ = _._.node(0, _.content.size, {
+                                "data-placeholder": _,
+                                class: _.EmptyTextPlaceholder,
+                              });
+                              return _._.create(_, [_]);
+                            }
+                            return _._.empty;
+                          },
+                        },
+                      });
+                    })(_)
+                  : void 0,
+              [_],
+            ),
+          ),
+          null
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -24181,6 +24210,7 @@
             strPlaceholder: _,
             bSingleLine: _,
             nTitleCharLimit: _,
+            strOverrideBackgroundColor: _,
             rctToolbarControls: _,
             eTitleDisplaySize: _,
             eTextAlignment: _,
@@ -24278,6 +24308,9 @@
                 [_().Right]: _ == _._.k_Right,
               }),
               ref: _,
+              style: {
+                backgroundImage: _,
+              },
             },
             _.createElement(
               _._,
@@ -24454,7 +24487,12 @@
             fnOnDirty: _,
           } = _,
           _ = _.quiz.questions.findIndex((_) => _ == __webpack_require__) + 1,
-          [_, _] = (0, _._)(_ + __webpack_require__.unique_id, !1);
+          [_, _] = (0, _._)(_ + __webpack_require__.unique_id, !1),
+          [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = (0, _._)(_, _);
         (0, _.useEffect)(() => {
           var _;
           (null === (_ = __webpack_require__.answers) || void 0 === _
@@ -24485,12 +24523,14 @@
               ),
               language: _,
               content: _,
+              strOverrideBackgroundColor: _,
               fnUpdateContent: (_) => _(__webpack_require__, _, _, _),
             }),
             _.createElement(_, {
               strPlaceholder: (0, _._)("#Sale_Section_Quiz_AnswerPlaceholder"),
               language: _,
               content: _,
+              strOverrideBackgroundColor: _,
               fnUpdateContent: (_) =>
                 _(__webpack_require__.answers[0], _, _, _),
             }),
@@ -24498,7 +24538,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24557,8 +24596,12 @@
                   _._,
                   {
                     key: "title_" + _ + "_" + _,
-                    onClick: () => {
-                      _(_);
+                    onClick: (_) => {
+                      var _;
+                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _ ||
+                        __webpack_require__.focus(),
+                        _(_);
                     },
                     toggled: _ == __webpack_require__,
                   },
@@ -24579,6 +24622,7 @@
           bVertical: _,
           bText: _,
         } = _;
+        (0, _.useRef)(null);
         return __webpack_require__
           ? _.createElement(
               _.Fragment,
@@ -24588,8 +24632,12 @@
                   _._,
                   {
                     key: _ + _,
-                    onClick: () => {
-                      _(_);
+                    onClick: (_) => {
+                      var _;
+                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _ ||
+                        __webpack_require__.focus(),
+                        _(_);
                     },
                     toggled: _ == __webpack_require__,
                   },
@@ -24916,6 +24964,7 @@
             titleSubDesc: __webpack_require__,
             language: _,
             fnOnDirty: _,
+            strOverrideBackgroundColor: _,
           } = _,
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.localized_media_title[_] || "",
@@ -24934,6 +24983,10 @@
             content: _,
             eTextAlignment: _,
             eTitleDisplaySize: _,
+            strOverrideBackgroundColor: _,
+            strPlaceholder: (0, _._)(
+              "#Template_Seciton_MediaContent_Option_Title",
+            ),
             fnUpdateContent: (_) => {
               _ != _ &&
                 ((__webpack_require__.localized_media_title[_] = _), _());
@@ -24969,6 +25022,7 @@
             language: __webpack_require__,
             fnOnDirty: _,
             uniqueID: _,
+            strOverrideBackgroundColor: _,
           } = _,
           [_, _] = (0, _._)(() => {
             var _;
@@ -24989,6 +25043,10 @@
             language: __webpack_require__,
             content: _,
             eTextAlignment: _,
+            strOverrideBackgroundColor: _,
+            strPlaceholder: (0, _._)(
+              "#Template_Seciton_MediaContent_Option_Subtitle",
+            ),
             fnUpdateContent: (_) => {
               _.localized_media_subtitle ||
                 (_.localized_media_subtitle = (0, _._)([], 31, null)),
@@ -25067,15 +25125,31 @@
             });
         }, [_]);
         const _ = (0, _._)(() => {
-          var _, _;
-          return null !==
-            (_ =
-              null === (_ = _.media_container) || void 0 === _
-                ? void 0
-                : _.media_rows) && void 0 !== _
-            ? _
-            : [];
-        });
+            var _, _;
+            return null !==
+              (_ =
+                null === (_ = _.media_container) || void 0 === _
+                  ? void 0
+                  : _.media_rows) && void 0 !== _
+              ? _
+              : [];
+          }),
+          [_, _, _, _] = (0, _._)(() => {
+            const _ = _
+              ? _.media_container.media_rows[_.row].media_columns[_.col]
+              : null;
+            return [
+              _.background_gradient_bottom,
+              _.background_gradient_top,
+              null == _ ? void 0 : _.background_gradient_bottom,
+              null == _ ? void 0 : _.background_gradient_top,
+            ];
+          }),
+          _ = _ || _ ? (0, _._)(_, _) : (0, _._)(_, _),
+          _ =
+            _ && _.row < _.length && _.col < _[_.row].media_columns.length
+              ? _[_.row].media_columns[_.col]
+              : null;
         return _.createElement(
           "div",
           null,
@@ -25123,12 +25197,13 @@
           }),
           Boolean(_) &&
             _.createElement(_, {
-              mediaContent: _[_.row].media_columns[_.col],
-              uniqueID: _[_.row].media_columns[_.col].unique_id,
+              mediaContent: _,
+              uniqueID: _.unique_id,
               language: _,
               fnOnDirty: _,
               position: _,
               totalColumns: _[_.row].media_columns.length,
+              strOverrideBackgroundColor: _,
             }),
           _.createElement(_, {
             saleSection: _,
@@ -25502,6 +25577,21 @@
                 _.createElement(_.yUV, null),
               ),
             ),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_Debug_LivePreview_GoTo_ttip"),
+                },
+                _.createElement(
+                  "button",
+                  {
+                    className: _().JumpToButton,
+                    onClick: _,
+                  },
+                  (0, _._)("#Sale_Debug_LivePreview_GoTo"),
+                ),
+              ),
             _.createElement(_, {
               ..._,
             }),
@@ -25605,7 +25695,7 @@
                     _.preventDefault(), _.stopPropagation(), _();
                   },
                 },
-                "DEBUG",
+                _.createElement(_.QPu, null),
               ),
             ),
             _.createElement(
@@ -25794,6 +25884,7 @@
             language: __webpack_require__,
             fnOnDirty: _,
             uniqueID: _,
+            strOverrideBackgroundColor: _,
           } = _,
           [_, _] = (0, _._)(() => [
             _.localized_media_description[__webpack_require__] || "",
@@ -25803,6 +25894,7 @@
           language: __webpack_require__,
           content: _,
           eTextAlignment: _,
+          strOverrideBackgroundColor: _,
           fnUpdateContent: (_) => {
             _ != _ &&
               ((_.localized_media_description[__webpack_require__] = _), _());
@@ -25840,7 +25932,12 @@
               text_placement: _._.k_Center,
             });
         }, [_]);
-        const _ = (0, _.useMemo)(
+        const [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = (0, _._)(_, _),
+          _ = (0, _.useMemo)(
             () => [
               {
                 data: _._.k_TopLeft,
@@ -25927,6 +26024,7 @@
               fnOnDirty: _,
               position: _,
               totalColumns: 1,
+              strOverrideBackgroundColor: _,
             }),
         );
       }
@@ -34137,14 +34235,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _,
-          [__webpack_require__] = (0, _._)();
-        let _ = _.GetEventModel().bOldAnnouncement;
-        const [_, _] = _.useState(!1);
+          [__webpack_require__] = (0, _._)(),
+          _ = _.GetEventModel().bOldAnnouncement,
+          [_, _] = _.useState(!1),
+          _ = _.BIsDirty() || __webpack_require__(_.GetGID()),
+          _ = _(0.5 * _._.PerMinute * 1e3, _),
+          _ = _(5 * _._.PerMinute * 1e3, _);
         if (_) {
-          let _ = _.GetStrVanityOrAppID();
+          const _ = _.GetStrVanityOrAppID();
           return _.createElement(_._, {
             push: !0,
             _: _
@@ -34152,9 +34256,8 @@
               : _._.Edit(_, _.BHasGid() ? _.GetGID() : ""),
           });
         }
-        let _ = _.BHidden(),
-          _ = _.BPublished() && !_.BHidden(),
-          _ = _.BIsDirty() || __webpack_require__(_.GetGID());
+        const _ = _.BHidden(),
+          _ = _.BPublished() && !_.BHidden();
         return _.createElement(
           _.Fragment,
           null,
@@ -34162,7 +34265,7 @@
             "button",
             {
               onClick: (_) => {
-                let _ = _._.GetEditModel(),
+                const _ = _._.GetEditModel(),
                   _ = _.BHasGid();
                 (0, _._)(
                   _.createElement(_._, {
@@ -34175,7 +34278,11 @@
                   (0, _._)(_),
                 );
               },
-              className: "btn_green_steamui btn_medium",
+              className: (0, _._)({
+                [_.SaveButton]: !0,
+                [_.HaventSavedInAShortTime]: _,
+                [_.HaventSavedInALongTime]: _,
+              }),
             },
             _.createElement(
               "span",
@@ -34203,6 +34310,16 @@
             }),
         );
       });
+      function _(_, _) {
+        const [__webpack_require__, _] = _.useState(!1);
+        return (
+          (0, _._)(() => _(_), _, [_]),
+          _.useEffect(() => {
+            _ || _(!1);
+          }, [_]),
+          __webpack_require__
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -40425,7 +40542,7 @@
             bSmallFormat: _,
             bHideFollowButton: _,
             bAddLinkToMemberList: _,
-            bVerticalDisplay: _,
+            bMinimalDisplay: _,
           } = _,
           _ = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
@@ -40464,6 +40581,7 @@
                 className: (0, _._)(
                   _.DevSummaryCtn,
                   _ ? _.SmallFormat : _.LargeFormat,
+                  _ ? _.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },
@@ -47550,7 +47668,7 @@
             partnerEventStore: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, [_]),
           _ = _.GetAccountID(),
           [_] = (0, _._)(() => [
             _.GetFilesToUpload().length - _.GetCompletedFiles(),
@@ -50482,13 +50600,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
           (this.m_filesToUpload = _._.array()),
             (this.m_strUploadPath = null),
             (this.m_fnUploadSuccessCallback = null),
             (this.m_bSynchronousUpload = !1),
             (0, _._)(this),
             (this.m_strUploadPath = _),
+            (this.m_rgImageOptions = (0, _._)(_)),
             (this.m_fnUploadSuccessCallback = _),
             (this.m_bSynchronousUpload = _);
         }
@@ -50531,7 +50650,7 @@
             ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
           );
         }
-        async AddImageForLanguage(_, _, _, _) {
+        async AddImageForLanguage(_, _, _) {
           let _ = !1;
           return (
             await new Promise((_) => {
@@ -50540,7 +50659,7 @@
                 (_.onload = () => {
                   const _ = new Image();
                   (_.onload = () => {
-                    const _ = new _._(_, _, _, (0, _._)(_), _);
+                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
                     (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                       (_ = !0),
                       _();
@@ -50559,8 +50678,8 @@
               } else if (this.isVideoFile(_)) {
                 const _ = document.createElement("video");
                 (_.preload = "metadata"),
-                  _.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, _, (0, _._)(_));
+                  __webpack_require__.addEventListener("loadedmetadata", () => {
+                    const _ = new _._(_, _, this.m_rgImageOptions, _);
                     (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                       (_ = !0),
                       _();
@@ -50578,7 +50697,7 @@
                 this.isSubtitleTextFile(_)
                   ? ((this.m_filesToUpload = [
                       ...this.m_filesToUpload,
-                      new _._(_, _, (0, _._)(_)),
+                      new _._(_, _, this.m_rgImageOptions),
                     ]),
                     (_ = !0),
                     _())
@@ -50592,12 +50711,12 @@
             _
           );
         }
-        async UploadAllImages(_, _, _, _, _) {
+        async UploadAllImages(_, _, _, _) {
           const _ = {};
           let _ = {};
           for (const _ of this.m_filesToUpload)
             if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _, _);
+              const _ = _.IsValidAssetType(_, _);
               if (!_.error && !_.needsCrop) {
                 _.status = "uploading";
                 const _ = `${_.uploadTime}/${_.file.name}`;
@@ -50646,7 +50765,7 @@
                       }
                       return null;
                     })(_.file_type),
-                    _.type.artworkType,
+                    _.GetCurrentImageOption().artworkType,
                     _.width,
                     _.height,
                   );
@@ -52046,6 +52165,8 @@
                       [__webpack_require__.single_item_style || ""]: !0,
                       [_().SaleSectionBackgroundImageGroupEdit]:
                         _ == _._.EPreviewMode_EditBackground,
+                      [_().NoTopPadding]:
+                        __webpack_require__.collapse_header_space,
                     }),
                   },
                   _,
@@ -52065,10 +52186,12 @@
                         "div",
                         {
                           _: _,
-                          className: (0, _._)(
-                            _().SaleSectionCtn,
-                            _().SaleSectionBackgroundImageGroupEdit,
-                          ),
+                          className: (0, _._)({
+                            [_().SaleSectionCtn]: !0,
+                            [_().SaleSectionBackgroundImageGroupEdit]: !0,
+                            [_().NoTopPadding]:
+                              __webpack_require__.collapse_header_space,
+                          }),
                         },
                         _,
                         _.createElement(_, {
@@ -65936,20 +66059,14 @@
         var _;
         const [_, _] = _.useState(_ && _ ? 1 : 0),
           [_, _] = _.useState(!0),
-          { nCurrentAppID: _, nAppIDCount: _ } = (function (
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ) {
+          {
+            nCurrentAppID: _,
+            nAppIDCount: _,
+            bInitialLoad: _,
+          } = (function (_, _, _, _, _, _, _, _, _, _) {
             var _;
             const _ = (0, _._)(),
+              [_, _] = _.useState(!0),
               [_, _] = _.useState([]),
               _ = (0, _._)(),
               _ = (0, _._)(),
@@ -66030,7 +66147,7 @@
                     );
                     await _._.Get().QueueMultipleAppRequests(_, _._);
                   }
-                  _((null != _ ? _ : []).concat(_));
+                  _((null != _ ? _ : []).concat(_)), _(!1);
                 };
                 _();
               }, [
@@ -66097,6 +66214,7 @@
             return {
               nCurrentAppID: _,
               nAppIDCount: _.length,
+              bInitialLoad: _,
             };
           })(__webpack_require__, _, _, _, _, _, _, _, _, _),
           _ = _ && _ === _,
@@ -66113,6 +66231,7 @@
           ),
           _ = _.useCallback((_) => _(_ + (_ ? 1 : -1)), [_, _]);
         if (_.enable_faceted_browsing) return;
+        if (!_ && 0 == _) return;
         const _ = _._(_, 0, _ - 1);
         return _.createElement(
           _._,
@@ -66246,7 +66365,10 @@
         _.useEffect(() => {
           _ || _ || !_ || (_(!1), _());
         }, [_, _, _, _]);
-        const _ = !_ && __webpack_require__ > 0;
+        const _ =
+          !_ &&
+          _ > 1 &&
+          (null == __webpack_require__ || __webpack_require__ > 0);
         let _;
         _
           ? (_ = 4)
@@ -66268,7 +66390,8 @@
             ? _.GetAppID()
             : _,
           _ = _ ? _ > 1 : _ > 0,
-          _ = _ ? _ > 1 : _ < _ - 1;
+          _ = _ ? _ > 1 : _ < _ - 1,
+          _ = _ && (_ || _);
         return _ && 1 != _ && 1 != _
           ? _.createElement(
               _._,
@@ -66313,12 +66436,12 @@
                     className: (0, _._)(_().VideoRow, "VideoRow"),
                   },
                   _ &&
-                    _ &&
                     _.createElement(
                       "button",
                       {
                         className: (0, _._)(_().NavButton, _().Left),
                         onClick: () => _(!1),
+                        disabled: !_,
                       },
                       _.createElement(_.uMb, {
                         fill: _,
@@ -66363,12 +66486,12 @@
                     }),
                   ),
                   _ &&
-                    _ &&
                     _.createElement(
                       "button",
                       {
                         className: (0, _._)(_().NavButton, _().Right),
                         onClick: () => _(!0),
+                        disabled: !_,
                       },
                       _.createElement(_.uMb, {
                         fill: _,
@@ -66979,11 +67102,11 @@
                   {
                     placeholderHeight: "100vh",
                     rootMargin: _._,
-                    className: (0, _._)(
-                      _.SaleSection,
-                      _().SaleSectionCtn,
-                      "ReservationCustomCSS",
-                    ),
+                    className: (0, _._)({
+                      [_.SaleSection]: !0,
+                      [_().SaleSectionCtn]: !0,
+                      ReservationCustomCSS: !0,
+                    }),
                     style: (0, _._)(_, _, _),
                   },
                   _.createElement(_._, {
@@ -77186,15 +77309,29 @@
       function _(_) {
         var _;
         const {
-          event: __webpack_require__,
-          section: _,
-          language: _,
-          row: _,
-        } = _;
+            event: __webpack_require__,
+            section: _,
+            language: _,
+            row: _,
+          } = _,
+          _ = (0, _._)(() => {
+            var _;
+            return (
+              (null === (_ = _.media_columns) || void 0 === _
+                ? void 0
+                : _.length) || 0
+            );
+          });
         return _.createElement(
           "div",
           {
-            className: _().MediaRow,
+            className: (0, _._)({
+              [_().MediaRow]: !0,
+              [_().RowSize1]: 1 == _,
+              [_().RowSize2]: 2 == _,
+              [_().RowSize3]: 3 == _,
+              [_().RowSize4]: 4 == _,
+            }),
           },
           null === (_ = _.media_columns) || void 0 === _
             ? void 0
@@ -77376,7 +77513,15 @@
           _.createElement(
             "div",
             {
-              className: _().Media,
+              className: (0, _._)({
+                [_().Media]: !0,
+                [_().HorizLeft]: _ == _._.k_Left,
+                [_().HorizCenter]: !_ || _ == _._.k_Center,
+                [_().HorizRight]: _ == _._.k_Right,
+                [_().VertTop]: _ == _._.k_Top,
+                [_().VertCenter]: !_ || _ == _._.k_Center,
+                [_().VertBottom]: _ == _._.k_Bottom,
+              }),
             },
             _.createElement(_, {
               media: _,
@@ -77406,7 +77551,15 @@
           _.createElement(
             "div",
             {
-              className: _().Media,
+              className: (0, _._)({
+                [_().Media]: !0,
+                [_().HorizLeft]: _ == _._.k_Left,
+                [_().HorizCenter]: !_ || _ == _._.k_Center,
+                [_().HorizRight]: _ == _._.k_Right,
+                [_().VertTop]: _ == _._.k_Top,
+                [_().VertCenter]: !_ || _ == _._.k_Center,
+                [_().VertBottom]: _ == _._.k_Bottom,
+              }),
             },
             _.createElement(_, {
               media: _,
@@ -77473,31 +77626,29 @@
         );
       }
       function _(_) {
-        const {
-          media: _,
-          mediaType: __webpack_require__,
-          mediaHAlign: _,
-          mediaVAlign: _,
-        } = _;
-        if (__webpack_require__ == _._.k_MediaImage)
-          return _.image && 0 != _.image.trim().length
+        var _, _, _;
+        const { media: _, mediaType: _, mediaHAlign: _, mediaVAlign: _ } = _;
+        if (_ == _._.k_MediaImage)
+          return _.image &&
+            0 !=
+              (null === (_ = _.image) || void 0 === _
+                ? void 0
+                : _.trim().length)
             ? _.createElement("img", {
-                className: (0, _._)({
-                  [_().HorizLeft]: _ == _._.k_Left,
-                  [_().HorizCenter]: !_ || _ == _._.k_Center,
-                  [_().HorizRight]: _ == _._.k_Right,
-                  [_().VertTop]: _ == _._.k_Top,
-                  [_().VertCenter]: !_ || _ == _._.k_Center,
-                  [_().VertBottom]: _ == _._.k_Bottom,
-                }),
                 src: _.image,
               })
             : null;
         {
           const _ = [];
           return (!_.video_webm_src && !_.video_mp4_src) ||
-            (0 == _.video_webm_src.trim().length &&
-              0 == _.video_mp4_src.trim().length)
+            (0 ==
+              (null === (_ = _.video_webm_src) || void 0 === _
+                ? void 0
+                : __webpack_require__.trim().length) &&
+              0 ==
+                (null === (_ = _.video_mp4_src) || void 0 === _
+                  ? void 0
+                  : _.trim().length))
             ? null
             : (_.video_webm_src &&
                 _.push({
@@ -77514,14 +77665,6 @@
                   sPoster: _.image,
                   rgVideoSources: _,
                 },
-                className: (0, _._)({
-                  [_().HorizLeft]: _ == _._.k_Left,
-                  [_().HorizCenter]: !_ || _ == _._.k_Center,
-                  [_().HorizRight]: _ == _._.k_Right,
-                  [_().VertTop]: _ == _._.k_Top,
-                  [_().VertCenter]: !_ || _ == _._.k_Center,
-                  [_().VertBottom]: _ == _._.k_Bottom,
-                }),
                 bAutoPlay: !0,
                 bControls: !1,
                 bLoop: !0,
@@ -77538,8 +77681,9 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
@@ -77548,6 +77692,7 @@
                   [_().Left]: !_ || _ == _._.k_Left,
                   [_().Center]: _ == _._.k_Center,
                   [_().Right]: _ == _._.k_Right,
+                  [_().TemplateMediaTitle]: !0,
                 }),
               },
               _.createElement(_._, {
@@ -77557,8 +77702,11 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
+      }
+      const _ = "[p][/p]";
+      function _(_) {
+        return !_ || 0 == _.length || (_.length == _.length && _ == _);
       }
       function _(_) {
         const {
@@ -77570,8 +77718,9 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
@@ -77593,8 +77742,7 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
       }
       function _(_) {
         const {
@@ -77604,14 +77752,17 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
+                  [_().Description]: !0,
                   [_().Left]: !_ || _ == _._.k_Left,
                   [_().Center]: _ == _._.k_Center,
                   [_().Right]: _ == _._.k_Right,
+                  [_().TemplateMediaDescription]: !0,
                 }),
               },
               _.createElement(_._, {
@@ -77621,8 +77772,7 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -78214,8 +78364,12 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      }
       function _(_, _, _) {
         if (_.disable_background && !_)
           return {
@@ -78234,8 +78388,7 @@
           _.border_width
           ? {
               background:
-                `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)` +
-                _,
+                _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
@@ -78256,7 +78409,10 @@
                 _.border_color ||
                 _.border_width
               ? {
-                  background: `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)`,
+                  background: _(
+                    _.background_gradient_bottom,
+                    _.background_gradient_top,
+                  ),
                   backgroundRepeat: _.background_repeat,
                   outlineStyle:
                     _.border_color && _.border_width ? "solid" : void 0,

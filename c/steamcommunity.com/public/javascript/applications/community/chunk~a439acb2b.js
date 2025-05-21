@@ -198,7 +198,7 @@
                         error: _,
                       });
                     if (_[_].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let _ = (0, _._)(_[_].name, -1);
+                      let { language: _ } = (0, _._)(_[_].name, -1);
                       if (null == _ || -1 == _)
                         return void _({
                           code: "",

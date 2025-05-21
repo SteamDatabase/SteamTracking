@@ -5357,7 +5357,9 @@
                 (null === (i = t.dataTransfer.files) || void 0 === i
                   ? void 0
                   : i.length) &&
-                  (e(t.dataTransfer.files, t), t.preventDefault()),
+                  (e(t.dataTransfer.files, t),
+                  t.preventDefault(),
+                  t.stopPropagation()),
                   r(!1);
               },
               [e],

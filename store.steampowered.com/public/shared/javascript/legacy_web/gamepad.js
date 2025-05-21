@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    515: (e, t, n) => {
+    906: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => P });
       var o = n(669),
         a = n.n(o),
-        s = n(311),
-        i = n(421),
-        r = n(356),
-        c = n(617),
-        l = n(728),
-        u = n(492),
-        d = n(961),
-        g = n(248),
-        b = n(544),
-        h = n(995),
+        s = n(895),
+        i = n(93),
+        r = n(884),
+        c = n(825),
+        l = n(121),
+        u = n(476),
+        d = n(692),
+        g = n(544),
+        b = n(217),
+        h = n(299),
         m = n(382),
         _ = n.n(m);
       function f(e) {
@@ -96,9 +96,9 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var p = n(464),
-        S = n(180),
-        E = n(359);
+      var p = n(355),
+        S = n(852),
+        E = n(255);
       function w(e) {
         return e ? Function("event", e) : null;
       }
@@ -125,7 +125,7 @@
       }
       function C(e) {
         const t = e.currentTarget;
-        if (!S.kD(t)) return !1;
+        if (e.defaultPrevented || !S.kD(t)) return !1;
         const n = e.detail.is_repeat ? 4.5 : 3.33,
           o = "smooth",
           a = t.ownerDocument,
@@ -149,15 +149,15 @@
         }
         return !1;
       }
-      var T = n(500);
-      const D = !1;
-      function A(e) {
+      var T = n(348);
+      const A = !1;
+      function D(e) {
         const { name: t, root: n, navState: o } = e;
         o
-          ? (D && console.log(`Restore ${t} history snapshot ${(0, T.Ij)(o)}`),
+          ? (A && console.log(`Restore ${t} history snapshot ${(0, T.Ij)(o)}`),
             (0, T.LU)(n, o),
             n.Tree.DeferredFocus.Reset())
-          : (D && console.log(`No focus state in history for ${t}`),
+          : (A && console.log(`No focus state in history for ${t}`),
             n.Tree.DeferredFocus.ExecuteQueuedFocus());
       }
       function y(e, t) {
@@ -224,26 +224,26 @@
               (function (e, t) {
                 if (
                   (t.Tree.DeferredFocus.SuppressFocus(),
-                  window.addEventListener("popstate", () => A(y(e, t))),
+                  window.addEventListener("popstate", () => D(y(e, t))),
                   window.history.state?.notify_focus_restore_ready)
                 ) {
-                  D &&
+                  A &&
                     console.log(
                       "waiting to restore focus until focus_restore_ready is sent",
                     );
                   var n = y(e, t);
                   window.addEventListener("focus_restore_ready", function (e) {
-                    D && console.log("focus_restore_ready received"),
+                    A && console.log("focus_restore_ready received"),
                       window.setTimeout(function () {
-                        A(n);
+                        D(n);
                       }, 100);
                   });
                 } else
-                  D && console.log("immediately restoring focus from history"),
-                    A(y(e, t));
+                  A && console.log("immediately restoring focus from history"),
+                    D(y(e, t));
                 !(function (e, t) {
                   t.Tree.WindowContext.FocusChangedCallbacks.Register(() => {
-                    D &&
+                    A &&
                       console.log(
                         `Recording nav state for ${e}: ${(0, T.Ij)((0, T.Ze)(t))}`,
                       ),
@@ -398,8 +398,8 @@
             onOptionsActionDescription: I,
             onMenuActionDescription: C,
             actionDescriptionMap: T,
-            onOKButton: D,
-            onCancelButton: A,
+            onOKButton: A,
+            onCancelButton: D,
             onSecondaryButton: y,
             onOptionsButton: M,
             onMenuButton: U,
@@ -412,8 +412,8 @@
             type: j,
             ...Y
           } = r,
-          X = w(D),
-          q = w(A),
+          X = w(A),
+          q = w(D),
           z = w(y),
           Z = w(M),
           Q = w(U),
@@ -477,6 +477,8 @@
           u &&
             (!1 !== Y.focusable && (Y.focusable = !0),
             t.on("vgp_onok", "firstChild" === u ? N : v),
+            t.attr("role") ||
+              ("A" !== t.prop("tagName") && t.attr("role", "button")),
             x(e, () => {
               t.off("vgp_onok");
             })),
@@ -575,11 +577,11 @@
         },
       };
     },
-    791: (e, t, n) => {
+    23: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(878),
-        s = n(193);
+        a = n(478),
+        s = n(305);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -646,11 +648,11 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    862: (e, t, n) => {
+    878: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    17: (e, t, n) => {
+    593: (e, t, n) => {
       n.d(t, {
         Jc: () => c,
         LU: () => d,
@@ -659,9 +661,9 @@
         lu: () => i.l,
       });
       var o = n(629),
-        a = n(223),
-        s = n(878),
-        i = n(461);
+        a = n(399),
+        s = n(478),
+        i = n(141);
       class r {
         m_callbacks;
         m_currentValue;
@@ -761,7 +763,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    180: (e, t, n) => {
+    852: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -831,10 +833,10 @@
         }
       }
     },
-    203: (e, t, n) => {
+    140: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(878);
+        a = n(478);
       class s {
         async GetObject(e, t) {
           try {
@@ -860,7 +862,7 @@
         }
       }
       var r,
-        c = n(17);
+        c = n(593);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1093,7 +1095,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    645: (e, t, n) => {
+    269: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1104,9 +1106,9 @@
       }
       n.d(t, { e: () => o });
     },
-    369: (e, t, n) => {
+    706: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(258);
+      var o = n(434);
       function a() {
         return !!window.document;
       }

@@ -5806,6 +5806,7 @@ button.TextButton.gpfocus {
 }
 .DialogDropDown_Arrow {
   height: 1em;
+  width: 1em;
   top: 14px;
   right: 10px;
 }

@@ -619,7 +619,7 @@
     },
     90286: (e, t, o) => {
       "use strict";
-      o.d(t, { n: () => b, u: () => C });
+      o.d(t, { n: () => b, u: () => v });
       var r = o(91986),
         n = o(64753),
         a = o(98724),
@@ -971,7 +971,7 @@
               ));
         }
       }
-      function C(e, t) {
+      function v(e, t) {
         (0, n.hL)(null == e ? void 0 : e.OnStateChangedCallbacks, t);
       }
     },
@@ -1272,20 +1272,20 @@
             to: g,
           } = e,
           [f, b] = a.useState(o),
-          C = a.useRef(null),
-          [_, v] = a.useState(u);
+          v = a.useRef(null),
+          [_, C] = a.useState(u);
         a.useLayoutEffect(() => {
           var e, t, o;
           (
             null ===
               (t =
-                null === (e = C.current) || void 0 === e ? void 0 : e.value) ||
+                null === (e = v.current) || void 0 === e ? void 0 : e.value) ||
             void 0 === t
               ? void 0
               : t.length
           )
-            ? C.current.focus()
-            : null === (o = C.current) || void 0 === o || o.focus();
+            ? v.current.focus()
+            : null === (o = v.current) || void 0 === o || o.focus();
         }, []);
         const k = (0, i.we)("#FormattingToolbar_Color"),
           T = r
@@ -1314,7 +1314,7 @@
           a.createElement(s.JU, null, (0, i.we)("#FormattingToolbar_Color")),
           a.createElement("input", {
             type: "color",
-            ref: C,
+            ref: v,
             value: f,
             onChange: (e) => b(e.currentTarget.value),
           }),
@@ -1323,15 +1323,16 @@
     },
     17558: (e, t, o) => {
       "use strict";
-      o.d(t, { E: () => d });
+      o.d(t, { E: () => u });
       var r = o(37834),
         n = o(52893),
         a = o(90626),
         s = o(68255),
         l = o(9154),
         c = o(72421),
-        i = o(61859);
-      function d(e, t) {
+        i = o(61859),
+        d = o(30470);
+      function u(e, t) {
         const [o, n] = a.useState(void 0),
           s = a.useCallback(
             (o) => {
@@ -1392,34 +1393,34 @@
             a.createElement(
               l.EN,
               { active: !0 },
-              a.createElement(u, { schema: e, closeModal: i, ...o }),
+              a.createElement(m, { schema: e, closeModal: i, ...o }),
             ),
         ];
       }
-      const u = a.memo(function (e) {
+      const m = a.memo(function (e) {
         const {
             schema: t,
             strLinkText: o,
             strLinkHref: r,
             bIsUpdate: l,
-            addtlAttrs: d,
-            addtlAttrsValues: u,
-            closeModal: h,
-            view: p,
-            from: g,
-            to: f,
+            addtlAttrs: u,
+            addtlAttrsValues: m,
+            closeModal: p,
+            view: g,
+            from: f,
+            to: b,
           } = e,
-          [b, C] = a.useState(o),
-          [_, v] = a.useState(r),
-          k = a.useRef(null),
+          [v, _] = a.useState(o),
+          [C, k] = a.useState(r || "https://"),
           T = a.useRef(null),
-          [w, B] = a.useState(u);
+          w = a.useRef(null),
+          [B, E] = a.useState(m);
         a.useLayoutEffect(() => {
           var e, t, o, r, n;
           (
             null ===
               (t =
-                null === (e = k.current) || void 0 === e ? void 0 : e.value) ||
+                null === (e = T.current) || void 0 === e ? void 0 : e.value) ||
             void 0 === t
               ? void 0
               : t.length
@@ -1427,17 +1428,17 @@
             ? (
                 null ===
                   (r =
-                    null === (o = T.current) || void 0 === o
+                    null === (o = w.current) || void 0 === o
                       ? void 0
                       : o.value) || void 0 === r
                   ? void 0
                   : r.length
               )
-              ? (k.current.Focus(), k.current.element.select())
-              : T.current.Focus()
-            : null === (n = k.current) || void 0 === n || n.Focus();
+              ? (T.current.Focus(), T.current.element.select())
+              : w.current.Focus()
+            : null === (n = T.current) || void 0 === n || n.Focus();
         }, []);
-        const E = l
+        const S = l
             ? (0, i.we)("#FormattingToolbar_EditLink")
             : (0, i.we)("#FormattingToolbar_InsertLink"),
           y = l
@@ -1447,44 +1448,93 @@
           c._,
           {
             onOK: () => {
-              let e = p.state.tr;
-              const o = { href: _ };
-              for (const e in w) o[e] = w[e];
-              const r = t.text(b || _, [t.marks.link.create(o)]);
-              (e = e.replaceRangeWith(g, f, r)),
-                (e = e.setSelection(
-                  n.U3.create(e.doc, g + r.nodeSize, g + r.nodeSize),
-                )),
-                p.dispatch(e),
-                h();
+              var e, o, r, a, s;
+              let l = g.state.tr;
+              if (
+                !(
+                  "dev" != d.TS.WEB_UNIVERSE ||
+                  (g &&
+                    null != f &&
+                    null != b &&
+                    (null === (e = null == t ? void 0 : t.marks) || void 0 === e
+                      ? void 0
+                      : e.link))
+                )
+              )
+                return void console.warn(
+                  "Missing required data in insertLink",
+                  { view: g, from: f, to: b, schema: t },
+                );
+              const c = { href: C };
+              for (const e in B) c[e] = B[e];
+              const i =
+                null === (o = t.marks.link) || void 0 === o
+                  ? void 0
+                  : o.create(c);
+              if ("dev" == d.TS.WEB_UNIVERSE && !i)
+                return void console.error(
+                  "Failed to create link mark with attrs",
+                  c,
+                );
+              const u = t.text(v || C, [i]);
+              "dev" == d.TS.WEB_UNIVERSE &&
+                (console.log(
+                  "Replacement node:",
+                  (null === (r = u.toJSON) || void 0 === r
+                    ? void 0
+                    : r.call(u)) || u,
+                ),
+                console.log("Transaction range from-to:", { from: f, to: b }),
+                console.log(
+                  "Document slice at range:",
+                  (null ===
+                    (s =
+                      null === (a = g.state.doc.slice(f, b).content) ||
+                      void 0 === a
+                        ? void 0
+                        : a.toJSON) || void 0 === s
+                    ? void 0
+                    : s.call(a)) || g.state.doc.slice(f, b),
+                ));
+              try {
+                (l = l.replaceRangeWith(f, b, u)),
+                  (l = l.setSelection(
+                    n.U3.create(l.doc, f + u.nodeSize, f + u.nodeSize),
+                  )),
+                  g.dispatch(l);
+              } catch (e) {
+                console.error("Error during link insertion", e);
+              }
+              p();
             },
-            closeModal: h,
-            strTitle: E,
+            closeModal: p,
+            strTitle: S,
             strOKText: y,
-            bOKDisabled: 0 == _.length,
+            bOKDisabled: 0 == C.length,
           },
           a.createElement(s.pd, {
-            ref: k,
-            value: b,
-            onChange: (e) => C(e.currentTarget.value),
+            ref: T,
+            value: v,
+            onChange: (e) => _(e.currentTarget.value),
             label: (0, i.we)("#FormattingToolbar_LinkText"),
           }),
           a.createElement(s.pd, {
-            ref: T,
-            value: _,
-            onChange: (e) => v(e.currentTarget.value),
+            ref: w,
+            value: C,
+            onChange: (e) => k(e.currentTarget.value),
             label: (0, i.we)("#FormattingToolbar_LinkAddress"),
+            mustBeURL: !0,
           }),
-          d && a.createElement(m, { addtlAttrs: d, values: w, setValues: B }),
+          u && a.createElement(h, { addtlAttrs: u, values: B, setValues: E }),
         );
       });
-      function m(e) {
+      function h(e) {
         const { addtlAttrs: t, values: o, setValues: r } = e;
         return a.createElement(
           a.Fragment,
           null,
           Object.keys(t).map((e) =>
-            a.createElement(h, {
+            a.createElement(p, {
               key: e,
               attrName: e,
               fnRender: t[e].fnRenderEditor,
@@ -1494,7 +1544,7 @@
           ),
         );
       }
-      const h = a.memo(function (e) {
+      const p = a.memo(function (e) {
         const { attrName: t, fnRender: o, value: r, setValues: n } = e;
         return o(
           r,
@@ -1520,7 +1570,7 @@
         g = o(38539),
         f = o(9024),
         b = o(52038);
-      const C = u.memo(function (e) {
+      const v = u.memo(function (e) {
         const { schema: t } = e,
           o = !(!("table" in t.nodes) || !t.nodes.table.spec.tableRole);
         return (
@@ -1544,7 +1594,7 @@
           );
         }
       }
-      var v = o(61859),
+      var C = o(61859),
         k = o(73745),
         T = o(73309);
       const w = (0, m.Nr)(function (e) {
@@ -1566,8 +1616,8 @@
           u.useEffect(() => () => (null == w ? void 0 : w.destroy()), [w]),
           (0, k.D5)(d, w);
         const {
-            refDiv: y,
-            onActivate: S,
+            refDiv: S,
+            onActivate: y,
             onGamepadDirection: A,
           } = (function (e) {
             const t = u.useRef(),
@@ -1594,7 +1644,7 @@
               l = (0, n.ak)(t, null, null, s);
             return { refDiv: t, onActivate: r, onGamepadDirection: l };
           })(w),
-          M = (0, k.Ue)(y, _);
+          M = (0, k.Ue)(S, _);
         if (!t) return null;
         const { schemaConfig: O, bbcodeParser: D } = t;
         return u.createElement(
@@ -1606,8 +1656,8 @@
             ref: M,
             spellCheck: m,
             focusable: !0,
-            onActivate: S,
-            onOKActionDescription: (0, v.we)("#UserGameNotes_Edit"),
+            onActivate: y,
+            onOKActionDescription: (0, C.we)("#UserGameNotes_Edit"),
             onGamepadDirection: A,
             ...p,
           }),
@@ -1617,7 +1667,7 @@
             bSingleLine: h,
           }),
           u.createElement(B, { parser: D, schema: O.pm_schema }),
-          u.createElement(C, { schema: O.pm_schema }),
+          u.createElement(v, { schema: O.pm_schema }),
           g,
         );
       });
@@ -1655,7 +1705,7 @@
       "use strict";
       o.d(t, {
         Km: () => f,
-        WJ: () => C,
+        WJ: () => v,
         z9: () => k,
         C$: () => _,
         Hz: () => b,
@@ -1810,7 +1860,7 @@
           s.createElement(l.iYj, null),
         );
       }
-      function C(e) {
+      function v(e) {
         const { schema: t, maxLevel: o = 1, levels: r } = e,
           n = o + r - 1;
         return s.createElement(
@@ -1898,7 +1948,7 @@
             s.Fragment,
             null,
             s.createElement(
-              v,
+              C,
               {
                 tooltip: "#FormattingToolbar_BulletedList",
                 keyboardShortcut: "Ctrl-Shift-8",
@@ -1934,7 +1984,7 @@
           )
         );
       }
-      function v(e) {
+      function C(e) {
         const { list_type: t, list_item: o, children: r, ...l } = e,
           { callbacks: c, view: u } = (0, i.wU)(),
           m = s.useCallback((e) => void 0 !== (0, a.wt)(e.state, t), [t]),
@@ -1980,9 +2030,9 @@
     30175: (e, t, o) => {
       "use strict";
       o.d(t, {
-        Ez: () => v,
+        Ez: () => C,
         GY: () => T,
-        XQ: () => C,
+        XQ: () => v,
         bI: () => f,
         cQ: () => w,
         ff: () => B,
@@ -2018,13 +2068,13 @@
         return t ? s.createElement(b.Provider, { value: a }, r) : null;
       }
       const b = s.createContext(void 0);
-      function C() {
+      function v() {
         return s.createElement("div", { className: p.Gap });
       }
       function _() {
         return s.createElement("div", { className: p.Spacer });
       }
-      function v(e) {
+      function C(e) {
         return s.createElement(
           "div",
           { className: (0, d.A)(e.className, p.ToolbarRowOverflowContainer) },
@@ -2107,7 +2157,7 @@
             {
               className: (0, d.A)(p.CommandButton, o && p.Toggled, a),
               onMouseDown: (e) => {
-                0 === e.button && (e.preventDefault(), t());
+                0 === e.button && (e.preventDefault(), t(e));
               },
               disabled: !0 === r,
             },
@@ -2119,7 +2169,7 @@
         const { tooltip: t, keyboardShortcut: o, children: r } = e;
         if (!t) return r;
         const n = o
-          ? s.createElement(y, { tooltip: t, keyboardShortcut: o })
+          ? s.createElement(S, { tooltip: t, keyboardShortcut: o })
           : t;
         return s.createElement(
           c.Gq,
@@ -2127,7 +2177,7 @@
           r,
         );
       }
-      function y(e) {
+      function S(e) {
         const { tooltip: t, keyboardShortcut: o } = e;
         return s.createElement(
           "div",
@@ -2136,11 +2186,11 @@
           s.createElement(
             "div",
             null,
-            s.createElement(S, { keyboardShortcut: o }),
+            s.createElement(y, { keyboardShortcut: o }),
           ),
         );
       }
-      function S(e) {
+      function y(e) {
         const { keyboardShortcut: t } = e,
           o = t.split("-"),
           r = o.pop();

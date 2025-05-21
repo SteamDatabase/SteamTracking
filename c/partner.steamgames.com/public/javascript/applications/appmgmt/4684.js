@@ -1099,7 +1099,12 @@
                   : [_, _, _, _, _, _, _, _ ? _ : void 0, _].filter((_) => !!_),
               [_, _],
             );
-          })(_, _),
+          })(
+            _,
+            _ ||
+              __webpack_require__.bAccessibilityChatSpeechtoText ||
+              __webpack_require__.bAccessibilityChatTexttoSpeech,
+          ),
           [_, _] = _.useState(__webpack_require__);
         let _ = () => _((_) => _ - 1);
         0 === _ && (_ = _);

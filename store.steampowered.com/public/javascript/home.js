@@ -750,7 +750,7 @@ GHomepage = {
 			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 );
 
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('curator').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", V_EscapeHTML( curator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar != '0000000000000000000000000000000000000000' ? curator.avatar : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar != '0000000000000000000000000000000000000000' ? curator.avatar : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ).attr( 'alt', curator.name ) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -1436,7 +1436,8 @@ GHomepage = {
 				var $Target = $J( '<div/>', {'class': 'specials_target' });
 				$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 					'discount_class': 'daily_deal_discount discount_block_large',
-					'capsule_size': 'header'
+					'capsule_size': 'header',
+					lazy: true
 				}, iPage + 1 ) );
 				rgItemsShown.push( oItem );
 
@@ -1948,7 +1949,7 @@ GHomepage = {
 		var $ImageCapsule = $J ( '<div/>' );
 		$ImageCapsule.addClass('capsule');
 
-		var $Image = $J('<img/>', { src: rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
+		var $Image = $J('<img/>', { src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
 		if ( !rgItemData.main_capsule )
 		{
 			$Image.css({'height': '288px' });
@@ -1995,7 +1996,7 @@ GHomepage = {
 				}
 			);
 
-			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
+			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
 			$ItemLink.append( $TinyCap );
 		}
 
@@ -2063,7 +2064,7 @@ GHomepage = {
 			if ( reviewer )
 			{
 				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
-				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
 				$AuthorBlock.append( $AvatarCap );
 
 				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
@@ -2455,8 +2456,8 @@ GSteamCurators = {
 
 
 		// Add the image
-		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-text": curator.name, 'aria-label': curator.name } );
-		var $CuratorImg = $J('<img/>', {'class': '', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ) });
+		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-text": curator.name } );
+		var $CuratorImg = $J('<img/>', {'class': '', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ), 'alt': curator.name });
 		$Curator.append( $CuratorImg );
 
 		// Now the text blurb
@@ -3200,6 +3201,7 @@ function InitTopSellersControls( $Controls, RangeInitData )
 	var $TabItems = $Controls.parents( '.tab_content' ).children('.tab_content_items');
 	var TopSellersCache = {};
 	var bAJAXInFlight = false;
+	var bFirstRender = true;
 	var fnTopSellersKey = function ( time, bHideF2P ) { return parseInt( time ) + '_' + ( bHideF2P ? 'hidef2p' : '' ); }
 	var fnLoadTopGrossing = function( time, bHideF2P )
 	{
@@ -3259,6 +3261,12 @@ function InitTopSellersControls( $Controls, RangeInitData )
 			var strTargetSeeMore = bHideF2P ? 'hidef2p' : 'default';
 			var $SeeMoreLinks = $J('#tab_topsellers_content').children('.tab_see_more').children('.topsellers_see_more');
 			$SeeMoreLinks.hide().filter('[data-searchid=' + strTargetSeeMore + ']').show();
+
+			// lazy load images when switching back
+			if ( !bFirstRender )
+				LoadDelayedImages( 'home_tabs', true );
+			else
+				bFirstRender = false;
 		}
 	};
 

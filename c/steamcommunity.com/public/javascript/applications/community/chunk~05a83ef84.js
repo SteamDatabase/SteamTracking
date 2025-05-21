@@ -1650,6 +1650,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const [__webpack_require__, _] = _.useState(void 0),
@@ -1738,7 +1739,7 @@
             _: _,
           } = _,
           [_, _] = _.useState(__webpack_require__),
-          [_, _] = _.useState(_),
+          [_, _] = _.useState(_ || "https://"),
           _ = _.useRef(null),
           _ = _.useRef(null),
           [_, _] = _.useState(_);
@@ -1775,18 +1776,74 @@
           _._,
           {
             onOK: () => {
+              var _, _, _, _, _;
               let _ = _.state._;
+              if (
+                !(
+                  "dev" != _._.WEB_UNIVERSE ||
+                  (_ &&
+                    null != _ &&
+                    null != _ &&
+                    (null === (_ = null == _ ? void 0 : _.marks) || void 0 === _
+                      ? void 0
+                      : _.link))
+                )
+              )
+                return void console.warn(
+                  "Missing required data in insertLink",
+                  {
+                    view: _,
+                    from: _,
+                    _: _,
+                    schema: _,
+                  },
+                );
               const _ = {
                 href: _,
               };
               for (const _ in _) _[_] = _[_];
-              const _ = _.text(_ || _, [_.marks.link.create(_)]);
-              (_ = _.replaceRangeWith(_, _, _)),
-                (_ = _.setSelection(
-                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
-                )),
-                _.dispatch(_),
-                _();
+              const _ =
+                null === (_ = _.marks.link) || void 0 === _
+                  ? void 0
+                  : __webpack_require__.create(_);
+              if ("dev" == _._.WEB_UNIVERSE && !_)
+                return void console.error(
+                  "Failed to create link mark with attrs",
+                  _,
+                );
+              const _ = _.text(_ || _, [_]);
+              "dev" == _._.WEB_UNIVERSE &&
+                (console.log(
+                  "Replacement node:",
+                  (null === (_ = _.toJSON) || void 0 === _
+                    ? void 0
+                    : _.call(_)) || _,
+                ),
+                console.log("Transaction range from-to:", {
+                  from: _,
+                  _: _,
+                }),
+                console.log(
+                  "Document slice at range:",
+                  (null ===
+                    (_ =
+                      null === (_ = _.state.doc.slice(_, _).content) ||
+                      void 0 === _
+                        ? void 0
+                        : _.toJSON) || void 0 === _
+                    ? void 0
+                    : _.call(_)) || _.state.doc.slice(_, _),
+                ));
+              try {
+                (_ = _.replaceRangeWith(_, _, _)),
+                  (_ = _.setSelection(
+                    _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
+                  )),
+                  _.dispatch(_);
+              } catch (_) {
+                console.error("Error during link insertion", _);
+              }
+              _();
             },
             closeModal: _,
             strTitle: _,
@@ -1804,6 +1861,7 @@
             value: _,
             onChange: (_) => _(_.currentTarget.value),
             label: (0, _._)("#FormattingToolbar_LinkAddress"),
+            mustBeURL: !0,
           }),
           _ &&
             _.createElement(_, {
@@ -2575,7 +2633,7 @@
                 _,
               ),
               onMouseDown: (_) => {
-                0 === _.button && (_.preventDefault(), _());
+                0 === _.button && (_.preventDefault(), _(_));
               },
               disabled: !0 === _,
             },

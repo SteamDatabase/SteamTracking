@@ -78,6 +78,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CartCreatorCtn: "_2HG7VOroS8aHSg-W3fPyTt",
         Title: "_307GrwtjhKkXh5dUC5KjUv",
       };
     },
@@ -2628,7 +2629,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bVerticalDisplay: _ } = _,
+        const { bMinimalDisplay: _ } = _,
           _ = (function () {
             const _ = (0, _._)();
             return (
@@ -2649,7 +2650,7 @@
             });
       }
       function _(_) {
-        const { cart: _, bVerticalDisplay: __webpack_require__ } = _,
+        const { cart: _, bMinimalDisplay: __webpack_require__ } = _,
           _ = (function (_) {
             const [_, __webpack_require__] = (0, _.useState)(null),
               _ = (0, _.useMemo)(
@@ -2722,8 +2723,8 @@
                     type: "developer",
                   },
                   bHideCreatorType: !0,
-                  bSmallFormat: !1,
-                  bVerticalDisplay: __webpack_require__,
+                  bSmallFormat: !0,
+                  bMinimalDisplay: __webpack_require__,
                 }),
               ),
             );
@@ -2817,7 +2818,7 @@
           }),
           _.createElement(_, {
             cart: _,
-            bVerticalDisplay: !1,
+            bMinimalDisplay: !1,
           }),
         );
       }
@@ -4287,7 +4288,7 @@
                 _.createElement(_, null),
                 _.createElement(_, {
                   cart: _.data,
-                  bVerticalDisplay: !0,
+                  bMinimalDisplay: !0,
                 }),
               ),
             ),

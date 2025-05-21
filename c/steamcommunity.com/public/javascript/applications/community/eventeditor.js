@@ -13325,22 +13325,29 @@
             (this.state = {
               bDownloadFromClanImageStore: !1,
             }),
-            (this.m_clanImageUploader = new _._(this.props.clanSteamID));
+            (this.m_clanImageUploader = void 0);
+        }
+        componentDidMount() {
+          this.RefreshUploader();
         }
         componentDidUpdate(_) {
-          _.clanSteamID.GetAccountID() !=
+          (_.clanSteamID.GetAccountID() ==
             this.props.clanSteamID.GetAccountID() &&
-            (this.m_clanImageUploader = new _._(this.props.clanSteamID));
+            _.artworkType == this.props.artworkType) ||
+            this.RefreshUploader();
+        }
+        RefreshUploader() {
+          this.m_clanImageUploader = new _._(this.props.clanSteamID, [
+            this.props.artworkType,
+          ]);
         }
         async DoUpload() {
           const { section: _, lang: _ } = this.props;
           try {
-            const _ = (0, _._)([this.props.artworkType]),
-              _ = await this.m_clanImageUploader.UploadAllImages(
-                [_._.k_ESteamRealmGlobal],
-                _,
-                _,
-              );
+            const _ = await this.m_clanImageUploader.UploadAllImages(
+              [_._.k_ESteamRealmGlobal],
+              _,
+            );
             Object.keys(_).forEach((_) => {
               const _ = _[_],
                 _ = this.m_clanImageUploader.m_filesToUpload.find(
@@ -13361,13 +13368,12 @@
         }
         async OnDropFiles(_) {
           if (_ && _.length > 0) {
-            const { lang: _ } = this.props,
-              _ = (0, _._)([this.props.artworkType]);
+            const { lang: _ } = this.props;
             let _ = !0,
               _ = Array.from(_);
             for (let _ = 0; _ && _ < _.length; _++) {
               let _ = _[_];
-              (_ = await this.m_clanImageUploader.AddImage(_, _, _)),
+              (_ = await this.m_clanImageUploader.AddImage(_, _)),
                 _ ||
                   (console.error(
                     "ClanImagePicker.OnDropFiles: failed on i=" +
@@ -13413,10 +13419,9 @@
                 bDownloadFromClanImageStore: !0,
               },
               async () => {
-                const { lang: _ } = this.props,
-                  _ = (0, _._)([this.props.artworkType]);
+                const { lang: _ } = this.props;
                 try {
-                  await this.m_clanImageUploader.AddExistingClanImage(_, _, _);
+                  await this.m_clanImageUploader.AddExistingClanImage(_, _);
                 } catch (_) {
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
@@ -13450,9 +13455,8 @@
                 string: (0, _._)("#Loading"),
               }),
             );
-          const { clanSteamID: _ } = this.props,
-            _ = (0, _._)([this.props.artworkType]);
-          let _ = (0, _._)(this.m_clanImageUploader, "emailartupload_", _);
+          const { clanSteamID: _ } = this.props;
+          let _ = (0, _._)(this.m_clanImageUploader, "emailartupload_");
           return _.createElement(
             "div",
             {

@@ -224,6 +224,7 @@
     "SteamCharts_SteamDeckPromo_Desc": "Your Games, Everywhere",
     "SteamCharts_Monthly_Title": "Top New Releases",
     "SteamCharts_Monthly_Title_wMonth": "Top Releases of %1$s",
+    "SteamCharts_Monthly_Title_wMonthAndYear": "Top Releases of %1$s, %2$s",
     "SteamCharts_Monthly_SubTitle": "Top %1$s products released this month, by revenue",
     "SteamCharts_Monthly_PublishSchedule": "Published on the 15th of each month at 10am Pacific Time",
     "SteamCharts_Monthly_ForMonth": "For %1$s",

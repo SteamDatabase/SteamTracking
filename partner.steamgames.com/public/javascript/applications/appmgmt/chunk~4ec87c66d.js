@@ -330,6 +330,7 @@
     },
     17904: (e) => {
       e.exports = {
+        ResultsTableCtn: "_12k23qNHa3tLLWS8EJiD7y",
         ResultsTable: "_3Slb68JYoGIPgg8618iXCJ",
         Img: "_2phzB7HNCsXkPPJkHwvf2u",
       };
@@ -1249,12 +1250,6 @@
         FileUploadProgressContainer: "_1UobbffXVmx8rwsOHYeNb5",
         FileUploadProgressBarContainer: "tFbvGbecHSHr8P3EdINV-",
         FileUploadProgressName: "_288RbRaiLR6h9q5sWoD2eC",
-      };
-    },
-    8743: (e) => {
-      e.exports = {
-        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
-        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
     },
     42060: (e) => {
@@ -10785,16 +10780,21 @@
                 const t = i.w.Init(s.hd);
                 t.Body().set_rt_start_time(e - 604800),
                   t.Body().set_rt_end_time(e);
-                const a = (0, o.kE)();
-                return (
-                  await s.EO.GetMarketingMessagesViewerRangeStats(
+                const a = (0, o.kE)(),
+                  n = await s.EO.GetMarketingMessagesViewerRangeStats(
                     a.GetServiceTransport(),
                     t,
-                  )
-                )
-                  .Body()
-                  .stats()
-                  .map((e) => e.toObject());
+                  );
+                return {
+                  rgSeens: n
+                    .Body()
+                    .stats()
+                    .map((e) => e.toObject()),
+                  rgClicks: n
+                    .Body()
+                    .clicked_stats()
+                    .map((e) => e.toObject()),
+                };
               })(e),
           });
         return a ? null : t;
@@ -39877,7 +39877,7 @@
             () => [
               mo.accessor("appid", {
                 header: "App",
-                size: 200,
+                size: 250,
                 cell: _o,
                 id: "appinfo",
               }),
@@ -39897,10 +39897,10 @@
                 size: 50,
                 cell: io.iS,
               }),
-              mo.accessor("accountid", { header: "AccountID", size: 50 }),
+              mo.accessor("accountid", { header: "AccountID", size: 60 }),
               mo.accessor("satisfaction", {
                 header: "Communication",
-                size: 50,
+                size: 70,
                 meta: {
                   strHeaderTooltip:
                     "How satisfied were you with the communication from Valve about Next Fest?",
@@ -39921,7 +39921,7 @@
               }),
               mo.accessor("meet_expectations", {
                 header: "Expectations",
-                size: 30,
+                size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did your participation in Next Fest meet your expectations?",
@@ -39930,12 +39930,12 @@
               }),
               mo.accessor("expectation_explanation", {
                 header: "Expectation Notes",
-                size: 150,
+                size: 350,
                 cell: go,
               }),
               mo.accessor("change_release_plans", {
                 header: "Release Plans",
-                size: 30,
+                size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did you change your release plans as a result of participating in Next Fest?",
@@ -39944,12 +39944,12 @@
               }),
               mo.accessor("change_release_description", {
                 header: "Release Plan Notes",
-                size: 150,
+                size: 350,
                 cell: go,
               }),
               mo.accessor("suggestions", {
                 header: "Suggestions",
-                size: 150,
+                size: 750,
                 cell: go,
                 meta: {
                   strHeaderTooltip:
@@ -39990,6 +39990,7 @@
             n.createElement(Oa.k, {
               columns: p,
               data: u,
+              className: (0, y.A)(oo.ResultsTableCtn),
               stickyHeader: !0,
               nItemHeight: 28,
               overscan: u.length,
@@ -55007,11 +55008,12 @@
     52614: (e, t, a) => {
       "use strict";
       a.d(t, {
-        S0: () => B,
-        bl: () => I,
+        S0: () => T,
+        bl: () => B,
         h1: () => v,
-        h6: () => C,
+        h6: () => I,
         jE: () => f,
+        uZ: () => w,
       });
       var n = a(79905),
         r = a(90626),
@@ -55032,7 +55034,7 @@
         y = a(19976);
       function v(e) {
         const { templateType: t } = e,
-          a = (0, n.ZM)(),
+          a = (0, n.ZM)()?.rgSeens,
           [i, s, l] = (0, r.useMemo)(() => {
             if (!a) return [0, 0, []];
             const e = b(a, t);
@@ -55055,7 +55057,11 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(w, { Data: l, nPeak: i }),
+                  r.createElement(D, {
+                    Data: l,
+                    nPeak: i,
+                    field: "seen_count",
+                  }),
                 ),
               ),
               r.createElement(
@@ -55130,7 +55136,11 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(w, { Data: o, nPeak: s }),
+                  r.createElement(D, {
+                    Data: o,
+                    nPeak: s,
+                    field: "seen_count",
+                  }),
                 ),
               ),
               r.createElement(
@@ -55188,8 +55198,105 @@
           Array.from(a).map((e) => ({ rt_time_hour: e[0], seen_count: e[1] }))
         );
       }
-      const w = r.memo((e) => {
-        const { Data: t, nPeak: a } = e;
+      function w(e) {
+        const { templateType: t } = e,
+          a = (0, n.ZM)()?.rgClicks,
+          [i, s, l] = (0, r.useMemo)(() => {
+            if (!a) return [0, 0, []];
+            const e = (function (e, t) {
+              const a = new Map();
+              return (
+                e.forEach((e) => {
+                  (t && e.template_type != t) ||
+                    (a.has(e.rt_time_hour)
+                      ? a.set(
+                          e.rt_time_hour,
+                          a.get(e.rt_time_hour) + e.clicked_count,
+                        )
+                      : a.set(e.rt_time_hour, e.clicked_count));
+                }),
+                Array.from(a).map((e) => ({
+                  rt_time_hour: e[0],
+                  clicked_count: e[1],
+                }))
+              );
+            })(a, t);
+            let n = 0,
+              r = 0;
+            return (
+              e.forEach((e) => {
+                e.clicked_count > n && (n = e.clicked_count),
+                  (r += e.clicked_count);
+              }),
+              [n, r, e.sort((e, t) => e.rt_time_hour - t.rt_time_hour)]
+            );
+          }, [a, t]);
+        return a
+          ? r.createElement(
+              "div",
+              { className: y.DashStatsContainer },
+              r.createElement(
+                "div",
+                { className: y.Chart },
+                r.createElement(
+                  p.tH,
+                  null,
+                  r.createElement(D, {
+                    Data: l,
+                    nPeak: i,
+                    field: "clicked_count",
+                  }),
+                ),
+              ),
+              r.createElement(
+                "div",
+                { className: y.Stats },
+                r.createElement(
+                  "div",
+                  { className: y.CurrentStats },
+                  r.createElement(
+                    "div",
+                    { className: y.StatsTitle },
+                    (0, S.Dq)(s),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: y.StatSubtitle },
+                    r.createElement(
+                      "span",
+                      { className: y.Now },
+                      "Total Clicks over last 7 days",
+                    ),
+                  ),
+                ),
+                r.createElement(
+                  "div",
+                  { className: y.PeakStats },
+                  r.createElement(
+                    "div",
+                    { className: y.StatsTitle },
+                    (0, S.Dq)(i),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: y.StatSubtitle },
+                    r.createElement(
+                      "span",
+                      { className: y.Concurrent },
+                      "Peak Hourly Clicks",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : r.createElement(_.t, {
+              string: "Loading Stats",
+              size: "medium",
+              position: "center",
+            });
+      }
+      const D = r.memo((e) => {
+        const { Data: t, nPeak: a, field: n } = e;
         return r.createElement(
           i.u,
           { width: "100%", height: "100%" },
@@ -55229,9 +55336,9 @@
               tick: { fill: "white" },
               axisLine: !1,
             }),
-            r.createElement(c.m, { content: r.createElement(D, null) }),
+            r.createElement(c.m, { content: r.createElement(C, null) }),
             r.createElement(m.y, {
-              dataKey: "seen_count",
+              dataKey: n,
               barSize: 2,
               fill: "url( #bar_linear )",
             }),
@@ -55243,7 +55350,7 @@
           ),
         );
       });
-      function D({ active: e, payload: t }) {
+      function C({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return r.createElement(
@@ -55258,12 +55365,12 @@
         }
         return null;
       }
-      function C(e) {
+      function I(e) {
         const { gid: t, templateType: a } = e,
           i = (0, n.lS)(t),
           [s, l] = (0, r.useMemo)(() => {
             if (!i) return [0, []];
-            const e = I(i, a);
+            const e = B(i, a);
             let t = 0,
               n = 0;
             e.forEach((e) => {
@@ -55286,7 +55393,7 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(B, { Data: l, nPeak: s }),
+                  r.createElement(T, { Data: l, nPeak: s }),
                 ),
               ),
             )
@@ -55296,7 +55403,7 @@
               position: "center",
             });
       }
-      function I(e, t) {
+      function B(e, t) {
         const a = new Map();
         return (
           e.forEach((e) => {
@@ -55308,7 +55415,7 @@
           Array.from(a).map((e) => ({ display_index: e[0], seen_count: e[1] }))
         );
       }
-      const B = r.memo((e) => {
+      const T = r.memo((e) => {
         const { Data: t, nPeak: a } = e;
         return r.createElement(
           i.u,
@@ -55349,7 +55456,7 @@
               tick: { fill: "white" },
               axisLine: !1,
             }),
-            r.createElement(c.m, { content: r.createElement(T, null) }),
+            r.createElement(c.m, { content: r.createElement(M, null) }),
             r.createElement(m.y, {
               dataKey: "seen_count",
               barSize: 2,
@@ -55364,7 +55471,7 @@
           ),
         );
       });
-      function T({ active: e, payload: t }) {
+      function M({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return r.createElement(
@@ -57283,7 +57390,7 @@
         Ae = a(52614),
         ke = a(19976);
       function Re(e) {
-        const t = (0, Be.ZM)();
+        const t = (0, Be.ZM)()?.rgSeens;
         return t
           ? c.createElement(
               "div",
@@ -57291,7 +57398,7 @@
               c.createElement(
                 "div",
                 null,
-                "To see live stats, go to the",
+                "To see live stats, go to the &nbps;",
                 c.createElement(
                   "a",
                   {
@@ -57303,6 +57410,8 @@
               ),
               c.createElement("br", null),
               c.createElement("br", null),
+              c.createElement(I.JU, null, "Clicks Overtime"),
+              c.createElement(Ae.uZ, null),
               c.createElement(Pe, { rgStats: t }),
               c.createElement(
                 I.JU,
@@ -57318,6 +57427,7 @@
                 ),
               ),
               c.createElement(Ae.h1, { templateType: 4 }),
+              c.createElement(Ae.uZ, { templateType: 4 }),
             )
           : c.createElement(F.t, { string: "loading" });
       }
@@ -73930,7 +74040,7 @@
             t.highlighted_facet_color,
           ]),
           l = (0, _.Qn)(),
-          o = (0, ge.V)(t, a, l).background;
+          o = (0, ge.Vb)(t, a, l).background;
         return i.createElement(Ce, {
           labelColor: n,
           headingColor: r,
@@ -97176,78 +97286,65 @@
             nHeight: r,
             setImage: i,
           } = e,
-          s = l.useMemo(
-            () => [
-              {
-                sKey: "dummy",
-                fnGetLabelText: () => "unknown",
-                nWidth: n,
-                nHeight: r,
-                bEnforceDimensions: !1,
-                artworkType: "sale_header",
-              },
-            ],
-            [r, n],
-          ),
-          o = l.useMemo(() => ({ width: n, height: r }), [n, r]),
-          [c, m] = l.useState(void 0),
-          [p, _] = l.useState(Boolean(a)),
-          [g, h] = l.useState(!1),
-          [E] = (0, X.q3)(() => [se.O.Get().GetCurEditLanguage()]),
-          S = (0, ie.zO)(t),
-          y = l.useCallback(
+          s = l.useMemo(() => ({ width: n, height: r }), [n, r]),
+          [o, c] = l.useState(void 0),
+          [m, p] = l.useState(Boolean(a)),
+          [_, g] = l.useState(!1),
+          [h] = (0, X.q3)(() => [se.O.Get().GetCurEditLanguage()]),
+          E = (0, ie.zO)(t, "dummy"),
+          S = l.useCallback(
             async (e) => {
               if (
-                (S.ClearImages(),
-                e && (_(!0), await S.AddExistingClanImage(e, 0, s)))
+                (E.ClearImages(),
+                e && (p(!0), await E.AddExistingClanImage(e, 0)))
               ) {
-                m(e);
-                const t = S.GetUploadImages()[0].IsValidAssetType(s, o);
+                c(e);
+                const t = E.GetUploadImages()[0].IsValidAssetType(s);
                 0 != t.error.length ||
                   t.needsCrop ||
                   (a && a.image_hash == e.image_hash) ||
                   i(e);
               }
-              _(!1);
+              p(!1);
             },
-            [S, a, i, s, o],
+            [E, a, i, s],
           );
         l.useEffect(() => {
-          y(a);
-        }, [y, a]);
-        let v,
-          f = "",
-          b = !1;
-        if (S && S.GetFilesToUpload().length > 0) {
-          v = S.GetUploadImages()[0];
-          const e = v.IsValidAssetType(s, o);
-          (f = e.error), (b = e.needsCrop);
+          S(a);
+        }, [S, a]);
+        let y,
+          v = "",
+          f = !1;
+        if (E && E.GetFilesToUpload().length > 0) {
+          y = E.GetUploadImages()[0];
+          const e = y.IsValidAssetType(s);
+          (v = e.error), (f = e.needsCrop);
         }
         return l.createElement(
           l.Fragment,
           null,
-          p
+          m
             ? l.createElement(K.t, {
                 size: "medium",
                 string: (0, A.we)("#Loading"),
               })
-            : Boolean(c) &&
+            : Boolean(o) &&
                 l.createElement("div", {
                   className: re.Image,
                   style: {
-                    backgroundImage: `url( '${v ? v.dataUrl : c.url}' )`,
+                    backgroundImage: `url( '${y ? y.dataUrl : o.url}' )`,
                     height: `${r}px`,
                     width: `${n}px`,
                   },
                 }),
-          Boolean(f) && l.createElement("p", null, f),
-          b &&
+          Boolean(v) && l.createElement("p", null, v),
+          f &&
             l.createElement(
               P.$n,
               {
                 onClick: (e) => {
                   const t = (0, x.uX)(e);
-                  let a = S.GetUploadImages()[0];
+                  let a = E.GetUploadImages()[0];
                   (0, L.pg)(
                     l.createElement(Z.q, {
                       ownerWin: t,
@@ -97261,16 +97358,16 @@
               },
               (0, A.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(v && v.bCropped) &&
+          Boolean(y && y.bCropped) &&
             l.createElement(
               l.Fragment,
               null,
               l.createElement(
                 "div",
                 null,
-                (0, A.we)("#ClanImagePickAndResize_UploadStatus", v.status),
+                (0, A.we)("#ClanImagePickAndResize_UploadStatus", y.status),
               ),
-              g
+              _
                 ? l.createElement(K.t, {
                     string: (0, A.we)("#Uploading"),
                     size: "small",
@@ -97279,13 +97376,12 @@
                     P.$n,
                     {
                       onClick: async () => {
-                        h(!0);
+                        g(!0);
                         try {
-                          const e = await S.UploadAllImages(
+                          const e = await E.UploadAllImages(
                               [le.TU.k_ESteamRealmGlobal],
-                              E,
+                              h,
                               s,
-                              o,
                             ),
                             a = Object.values(e);
                           if (
@@ -97316,10 +97412,10 @@
                                 loc_languages: void 0,
                                 is_loc_group: !1,
                               };
-                            m(o), i(o);
+                            c(o), i(o);
                           }
                         } finally {
-                          h(!1);
+                          g(!1);
                         }
                       },
                     },
@@ -97334,7 +97430,7 @@
                 (0, L.pg)(
                   l.createElement(ae, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => y(e),
+                    fnImageSelectCallBack: (e) => S(e),
                   }),
                   (0, x.uX)(e),
                 );
@@ -98804,13 +98900,15 @@
       class E {
         m_filesToUpload = o.sH.array();
         m_strUploadPath = null;
+        m_rgImageOptions;
         m_fnUploadSuccessCallback = null;
         m_bSynchronousUpload = !1;
-        constructor(e, t, a) {
+        constructor(e, t, a, n) {
           (0, o.Gn)(this),
             (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t),
-            (this.m_bSynchronousUpload = a);
+            (this.m_rgImageOptions = (0, p.M0)(t)),
+            (this.m_fnUploadSuccessCallback = a),
+            (this.m_bSynchronousUpload = n);
         }
         GetFnOnUploadSuccess() {
           return this.m_fnUploadSuccessCallback;
@@ -98851,89 +98949,89 @@
             ("" == e.type && e.name.split("?")[0].endsWith(".srt"))
           );
         }
-        async AddImageForLanguage(e, t, a, n) {
-          let r = !1;
+        async AddImageForLanguage(e, t, a) {
+          let n = !1;
           return (
-            await new Promise((i) => {
+            await new Promise((r) => {
               if (this.isImageFile(e)) {
-                const s = new FileReader();
-                (s.onload = () => {
-                  const l = new Image();
-                  (l.onload = () => {
-                    const s = new _.A_(e, t, l, (0, p.AU)(a), n);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, s]),
-                      (r = !0),
-                      i();
+                const i = new FileReader();
+                (i.onload = () => {
+                  const s = new Image();
+                  (s.onload = () => {
+                    const i = new _.A_(e, t, this.m_rgImageOptions, s, a);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, i]),
+                      (n = !0),
+                      r();
                   }),
-                    (l.onerror = (e) => {
+                    (s.onerror = (e) => {
                       console.error(
                         "CCloudImageUploader failed to load the image, details",
                         e,
                       ),
-                        (r = !1),
-                        i();
+                        (n = !1),
+                        r();
                     }),
-                    (l.src = s.result.toString());
+                    (s.src = i.result.toString());
                 }),
-                  s.readAsDataURL(e);
+                  i.readAsDataURL(e);
               } else if (this.isVideoFile(e)) {
-                const n = document.createElement("video");
-                (n.preload = "metadata"),
-                  n.addEventListener("loadedmetadata", () => {
-                    const s = new _.cB(e, t, n, (0, p.AU)(a));
-                    (this.m_filesToUpload = [...this.m_filesToUpload, s]),
-                      (r = !0),
-                      i();
+                const a = document.createElement("video");
+                (a.preload = "metadata"),
+                  a.addEventListener("loadedmetadata", () => {
+                    const i = new _.cB(e, t, this.m_rgImageOptions, a);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, i]),
+                      (n = !0),
+                      r();
                   }),
-                  (n.onerror = (e) => {
+                  (a.onerror = (e) => {
                     console.error(
                       "CCloudImageUploader failed to load the video, details",
                       e,
                     ),
-                      (r = !1),
-                      i();
+                      (n = !1),
+                      r();
                   }),
-                  (n.src = URL.createObjectURL(e));
+                  (a.src = URL.createObjectURL(e));
               } else
                 this.isSubtitleTextFile(e)
                   ? ((this.m_filesToUpload = [
                       ...this.m_filesToUpload,
-                      new _.T2(e, t, (0, p.AU)(a)),
+                      new _.T2(e, t, this.m_rgImageOptions),
                     ]),
-                    (r = !0),
-                    i())
+                    (n = !0),
+                    r())
                   : (console.error(
                       "CCloudImageUploader failed to determine file type, not image, video or subtitle",
                       e,
                       e.type,
                     ),
-                    (r = !1));
+                    (n = !1));
             }),
-            r
+            n
           );
         }
-        async UploadAllImages(e, t, a, n, r) {
-          const i = {};
-          let s = {};
+        async UploadAllImages(e, t, a, n) {
+          const r = {};
+          let i = {};
           for (const e of this.m_filesToUpload)
             if ("pending" === e.status) {
-              const t = e.IsValidAssetType(a, n, r);
+              const t = e.IsValidAssetType(a, n);
               if (!t.error && !t.needsCrop) {
                 e.status = "uploading";
                 const a = `${e.uploadTime}/${e.file.name}`;
-                (i[a] = this.UploadFile(
+                (r[a] = this.UploadFile(
                   e.file,
                   e.file.name,
                   e.language,
                   t.match,
                 )),
-                  this.m_bSynchronousUpload && (s[a] = await i[a]);
+                  this.m_bSynchronousUpload && (i[a] = await r[a]);
               }
             }
           return (
-            this.m_bSynchronousUpload || (s = await (0, d.RR)(i)),
-            Object.keys(s).forEach((a) => {
-              const n = s[a],
+            this.m_bSynchronousUpload || (i = await (0, d.RR)(r)),
+            Object.keys(i).forEach((a) => {
+              const n = i[a],
                 r = this.m_filesToUpload.find(
                   (e) => `${e.uploadTime}/${e.file.name}` === a,
                 );
@@ -98966,13 +99064,13 @@
                       }
                       return null;
                     })(n.file_type),
-                    r.type.artworkType,
+                    r.GetCurrentImageOption().artworkType,
                     r.width,
                     r.height,
                   );
                 } else (r.status = "failed"), (r.message = n.message);
             }),
-            s
+            i
           );
         }
         async UploadFile(e, t, a, n, r, i) {
@@ -99015,14 +99113,13 @@
             bSynchronousUpload: i,
             rgSupportArtwork: s,
           } = e,
-          [l] = (0, n.useState)(new E(t, a, i ?? !1)),
-          o = (0, p.M0)(s);
+          [l] = (0, n.useState)(new E(t, s, a, i ?? !1));
         return (
           (0, n.useEffect)(() => {
             l.GetFnOnUploadSuccess() != a && l.SetFnOnUploadSuccess(a),
               l.GetUploadPath() != t && l.SetUploadPath(t);
           }, [l, a, t]),
-          n.createElement(r.O9, { ...e, imageUploader: l, rgImageOptions: o })
+          n.createElement(r.O9, { ...e, imageUploader: l })
         );
       }
       (0, i.Cg)([o.sH], E.prototype, "m_filesToUpload", void 0),
@@ -99031,176 +99128,6 @@
         (0, i.Cg)([m.o], E.prototype, "DeleteUploadImage", null),
         (0, i.Cg)([m.o], E.prototype, "AddImageForLanguage", null),
         (0, i.Cg)([m.o], E.prototype, "UploadAllImages", null);
-    },
-    42508: (e, t, a) => {
-      "use strict";
-      a.d(t, { z: () => h });
-      var n = a(41735),
-        r = a.n(n),
-        i = a(90626),
-        s = a(22837),
-        l = a(73744),
-        o = a(82705),
-        c = a(63556),
-        m = a(45737),
-        d = a.n(m),
-        u = a(12155),
-        p = a(61859),
-        _ = a(8743),
-        g = a.n(_);
-      function h(e) {
-        const {
-            rgAssetLangs: t,
-            fnGetAssetUrl: a,
-            fnDeletAssetLang: n,
-            imageClassname: r,
-            fnDeleteAllAssets: l,
-          } = e,
-          [o, m] = (0, i.useState)(c.O.Get().GetCurEditLanguage()),
-          [_, g] = (0, i.useState)(a(o));
-        return (
-          (0, i.useEffect)(() => {
-            const e = a(o);
-            e ? g(e) : t.length > 0 ? m(t[0]) : g(null);
-          }, [o, a, t]),
-          i.createElement(
-            "div",
-            { className: d().UploadedImageDisplayCtn },
-            i.createElement(
-              "div",
-              { className: d().UploaderLeftCol },
-              i.createElement(E, { curAssetURL: _, imageClassname: r }),
-            ),
-            i.createElement(
-              "div",
-              { className: d().UploaderRightCol },
-              i.createElement(
-                "div",
-                { className: d().SectionCtn },
-                i.createElement(
-                  "div",
-                  { className: d().LangCountTitle },
-                  t.length,
-                  " Localized Assets",
-                ),
-                i.createElement(
-                  "div",
-                  { className: d().LangSelectCtn },
-                  t.map((e) => {
-                    const t = (0, s.Lg)(e);
-                    return i.createElement(
-                      "div",
-                      { className: d().UploaderImgLang, key: "image" + t },
-                      i.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (t) => {
-                            t.preventDefault(), m(e), g(a(e));
-                          },
-                        },
-                        Boolean(e === o)
-                          ? i.createElement(
-                              "span",
-                              { className: d().LangSelected },
-                              "" + t,
-                            )
-                          : i.createElement("span", null, "" + t),
-                      ),
-                      i.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (t) => {
-                            t.preventDefault(), n(e);
-                          },
-                        },
-                        i.createElement(u.X, null),
-                      ),
-                    );
-                  }),
-                ),
-                Boolean(t.length) &&
-                  i.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: d().DeleteAll,
-                      onClick: (e) => {
-                        l ? l() : t.forEach((e) => n(e));
-                      },
-                    },
-                    (0, p.we)("#Button_DeleteAll"),
-                  ),
-              ),
-            ),
-          )
-        );
-      }
-      function E(e) {
-        const { curAssetURL: t, imageClassname: a } = e;
-        if (!t)
-          return i.createElement(
-            "div",
-            { className: g().ArtNoArt },
-            (0, p.we)("#ImageDisplay_NoAssetUploaded"),
-          );
-        const n = (0, o.yh)(t);
-        return l.Ho.includes(n)
-          ? i.createElement(S, { ...e })
-          : l.x.includes(n)
-            ? i.createElement(y, {
-                className: a || g().ArtPreview,
-                strTextURL: t,
-              })
-            : i.createElement("img", {
-                className: a || g().ArtPreview,
-                src: t,
-              });
-      }
-      function S(e) {
-        const { curAssetURL: t, imageClassname: a } = e,
-          n = (0, i.useRef)();
-        return (
-          (0, i.useEffect)(() => {
-            n.current && (n.current.load(), n.current.play());
-          }, [t]),
-          i.createElement(
-            "video",
-            {
-              ref: n,
-              className: a || g().ArtPreview,
-              autoPlay: !0,
-              loop: !0,
-              controls: !0,
-              muted: !0,
-            },
-            i.createElement("source", { src: t }),
-          )
-        );
-      }
-      function y(e) {
-        const { strTextURL: t, className: a } = e,
-          [n, s] = (0, i.useState)("");
-        return (
-          (0, i.useEffect)(() => {
-            r()
-              .get(t)
-              .then((e) => {
-                s(e.data);
-              })
-              .catch((e) => {
-                console.error(e);
-              });
-          }, [t]),
-          i.createElement("textarea", {
-            className: a,
-            value: n,
-            readOnly: !0,
-            rows: 20,
-          })
-        );
-      }
     },
     283: (e, t, a) => {
       "use strict";
@@ -105522,25 +105449,27 @@
     },
     1276: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => r });
+      a.d(t, { Vb: () => i });
       var n = a(86355);
-      function r(e, t, a) {
+      function r(e, t) {
+        return `linear-gradient(0deg, ${e || "transparent"} 0%, ${t || "transparent"} 100%)`;
+      }
+      function i(e, t, a) {
         if (e.disable_background && !a)
           return { paddingLeft: 0, paddingRight: 0 };
-        let r = "";
+        let i = "";
         if (e.background_image) {
-          r += `,url(${n.i6.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
+          i += `,url(${n.i6.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
         }
         return e.background_gradient_bottom ||
           e.background_gradient_top ||
-          r.length > 0 ||
+          i.length > 0 ||
           e.background_repeat ||
           e.border_color ||
           e.border_width
           ? {
               background:
-                `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
-                r,
+                r(e.background_gradient_bottom, e.background_gradient_top) + i,
               backgroundRepeat: e.background_repeat,
               outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
               outlineColor: e.border_color,
@@ -105745,7 +105674,7 @@
                         error: n,
                       });
                     if (i[a].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let r = (0, o.j)(i[a].name, -1);
+                      let { language: r } = (0, o.j)(i[a].name, -1);
                       if (null == r || -1 == r)
                         return void n({
                           code: "",

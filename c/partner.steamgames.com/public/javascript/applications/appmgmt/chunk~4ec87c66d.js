@@ -334,6 +334,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ResultsTableCtn: "_12k23qNHa3tLLWS8EJiD7y",
         ResultsTable: "_3Slb68JYoGIPgg8618iXCJ",
         Img: "_2phzB7HNCsXkPPJkHwvf2u",
       };
@@ -1271,12 +1272,6 @@
         FileUploadProgressContainer: "_1UobbffXVmx8rwsOHYeNb5",
         FileUploadProgressBarContainer: "tFbvGbecHSHr8P3EdINV-",
         FileUploadProgressName: "_288RbRaiLR6h9q5sWoD2eC",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
-        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
     },
     chunkid: (module) => {
@@ -11051,16 +11046,19 @@
                 const _ = _._.Init(_._);
                 _.Body().set_rt_start_time(_ - 604800),
                   _.Body().set_rt_end_time(_);
-                const _ = (0, _._)();
-                return (
-                  await _._.GetMarketingMessagesViewerRangeStats(
+                const _ = (0, _._)(),
+                  _ = await _._.GetMarketingMessagesViewerRangeStats(
                     __webpack_require__.GetServiceTransport(),
                     _,
-                  )
-                )
-                  .Body()
-                  .stats()
-                  .map((_) => _.toObject());
+                  );
+                return {
+                  rgSeens: _.Body()
+                    .stats()
+                    .map((_) => _.toObject()),
+                  rgClicks: _.Body()
+                    .clicked_stats()
+                    .map((_) => _.toObject()),
+                };
               })(_),
           });
         return __webpack_require__ ? null : _;
@@ -43833,7 +43831,7 @@
             () => [
               _.accessor("appid", {
                 header: "App",
-                size: 200,
+                size: 250,
                 cell: _,
                 _: "appinfo",
               }),
@@ -43858,11 +43856,11 @@
               }),
               _.accessor("accountid", {
                 header: "AccountID",
-                size: 50,
+                size: 60,
               }),
               _.accessor("satisfaction", {
                 header: "Communication",
-                size: 50,
+                size: 70,
                 meta: {
                   strHeaderTooltip:
                     "How satisfied were you with the communication from Valve about Next Fest?",
@@ -43883,7 +43881,7 @@
               }),
               _.accessor("meet_expectations", {
                 header: "Expectations",
-                size: 30,
+                size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did your participation in Next Fest meet your expectations?",
@@ -43892,12 +43890,12 @@
               }),
               _.accessor("expectation_explanation", {
                 header: "Expectation Notes",
-                size: 150,
+                size: 350,
                 cell: _,
               }),
               _.accessor("change_release_plans", {
                 header: "Release Plans",
-                size: 30,
+                size: 40,
                 meta: {
                   strHeaderTooltip:
                     "Did you change your release plans as a result of participating in Next Fest?",
@@ -43906,12 +43904,12 @@
               }),
               _.accessor("change_release_description", {
                 header: "Release Plan Notes",
-                size: 150,
+                size: 350,
                 cell: _,
               }),
               _.accessor("suggestions", {
                 header: "Suggestions",
-                size: 150,
+                size: 750,
                 cell: _,
                 meta: {
                   strHeaderTooltip:
@@ -43952,6 +43950,7 @@
             _.createElement(_._, {
               columns: _,
               data: _,
+              className: (0, _._)(_.ResultsTableCtn),
               stickyHeader: !0,
               nItemHeight: 28,
               overscan: _.length,
@@ -61424,6 +61423,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -61444,7 +61444,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { templateType: _ } = _,
-          _ = (0, _._)(),
+          _ = (0, _._)()?.rgSeens,
           [_, _, _] = (0, _.useMemo)(() => {
             if (!_) return [0, 0, []];
             const _ = _(_, _);
@@ -61474,6 +61474,7 @@
                   _.createElement(_, {
                     Data: _,
                     nPeak: _,
+                    field: "seen_count",
                   }),
                 ),
               ),
@@ -61574,6 +61575,7 @@
                   _.createElement(_, {
                     Data: _,
                     nPeak: _,
+                    field: "seen_count",
                   }),
                 ),
               ),
@@ -61660,8 +61662,131 @@
           }))
         );
       }
+      function _(_) {
+        const { templateType: _ } = _,
+          _ = (0, _._)()?.rgClicks,
+          [_, _, _] = (0, _.useMemo)(() => {
+            if (!_) return [0, 0, []];
+            const _ = (function (_, _) {
+              const _ = new Map();
+              return (
+                _.forEach((_) => {
+                  (_ && _.template_type != _) ||
+                    (__webpack_require__.has(_.rt_time_hour)
+                      ? __webpack_require__.set(
+                          _.rt_time_hour,
+                          __webpack_require__.get(_.rt_time_hour) +
+                            _.clicked_count,
+                        )
+                      : __webpack_require__.set(
+                          _.rt_time_hour,
+                          _.clicked_count,
+                        ));
+                }),
+                Array.from(_).map((_) => ({
+                  rt_time_hour: _[0],
+                  clicked_count: _[1],
+                }))
+              );
+            })(_, _);
+            let _ = 0,
+              _ = 0;
+            return (
+              _.forEach((_) => {
+                _.clicked_count > _ && (_ = _.clicked_count),
+                  (_ += _.clicked_count);
+              }),
+              [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
+            );
+          }, [_, _]);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _.DashStatsContainer,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.Chart,
+                },
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    Data: _,
+                    nPeak: _,
+                    field: "clicked_count",
+                  }),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Stats,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CurrentStats,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatsTitle,
+                    },
+                    (0, _._)(_),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatSubtitle,
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: _.Now,
+                      },
+                      "Total Clicks over last 7 days",
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PeakStats,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatsTitle,
+                    },
+                    (0, _._)(_),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatSubtitle,
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: _.Concurrent,
+                      },
+                      "Peak Hourly Clicks",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : _.createElement(_._, {
+              string: "Loading Stats",
+              size: "medium",
+              position: "center",
+            });
+      }
       const _ = _.memo((_) => {
-        const { Data: _, nPeak: __webpack_require__ } = _;
+        const { Data: _, nPeak: __webpack_require__, field: _ } = _;
         return _.createElement(
           _._,
           {
@@ -61726,7 +61851,7 @@
               content: _.createElement(_, null),
             }),
             _.createElement(_._, {
-              dataKey: "seen_count",
+              dataKey: _,
               barSize: 2,
               fill: "url( #bar_linear )",
             }),
@@ -64058,7 +64183,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)();
+        const _ = (0, _._)()?.rgSeens;
         return _
           ? _.createElement(
               "div",
@@ -64066,7 +64191,7 @@
               _.createElement(
                 "div",
                 null,
-                "To see live stats, go to the",
+                "To see live stats, go to the &nbps;",
                 _.createElement(
                   "a",
                   {
@@ -64078,6 +64203,8 @@
               ),
               _.createElement("br", null),
               _.createElement("br", null),
+              _.createElement(_._, null, "Clicks Overtime"),
+              _.createElement(_._, null),
               _.createElement(_, {
                 rgStats: _,
               }),
@@ -64100,6 +64227,9 @@
                   ),
                 ),
               ),
+              _.createElement(_._, {
+                templateType: 4,
+              }),
               _.createElement(_._, {
                 templateType: 4,
               }),
@@ -108859,19 +108989,6 @@
             setImage: _,
           } = _,
           _ = _.useMemo(
-            () => [
-              {
-                sKey: "dummy",
-                fnGetLabelText: () => "unknown",
-                nWidth: _,
-                nHeight: _,
-                bEnforceDimensions: !1,
-                artworkType: "sale_header",
-              },
-            ],
-            [_, _],
-          ),
-          _ = _.useMemo(
             () => ({
               width: _,
               height: _,
@@ -108882,15 +108999,15 @@
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0, _)))
+                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
               ) {
                 _(_);
-                const _ = _.GetUploadImages()[0].IsValidAssetType(_, _);
+                const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
                   (__webpack_require__ &&
@@ -108899,7 +109016,7 @@
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _, _],
+            [_, __webpack_require__, _, _],
           );
         _.useEffect(() => {
           _(__webpack_require__);
@@ -108909,7 +109026,7 @@
           _ = !1;
         if (_ && _.GetFilesToUpload().length > 0) {
           _ = _.GetUploadImages()[0];
-          const _ = _.IsValidAssetType(_, _);
+          const _ = _.IsValidAssetType(_);
           (_ = _.error), (_ = _.needsCrop);
         }
         return _.createElement(
@@ -108975,7 +109092,6 @@
                         try {
                           const _ = await _.UploadAllImages(
                               [_._.k_ESteamRealmGlobal],
-                              _,
                               _,
                               _,
                             ),
@@ -110689,11 +110805,13 @@
       class _ {
         m_filesToUpload = _._.array();
         m_strUploadPath = null;
+        m_rgImageOptions;
         m_fnUploadSuccessCallback = null;
         m_bSynchronousUpload = !1;
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
           (0, _._)(this),
             (this.m_strUploadPath = _),
+            (this.m_rgImageOptions = (0, _._)(_)),
             (this.m_fnUploadSuccessCallback = _),
             (this.m_bSynchronousUpload = _);
         }
@@ -110736,7 +110854,7 @@
             ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
           );
         }
-        async AddImageForLanguage(_, _, _, _) {
+        async AddImageForLanguage(_, _, _) {
           let _ = !1;
           return (
             await new Promise((_) => {
@@ -110745,7 +110863,7 @@
                 (_.onload = () => {
                   const _ = new Image();
                   (_.onload = () => {
-                    const _ = new _._(_, _, _, (0, _._)(_), _);
+                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
                     (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                       (_ = !0),
                       _();
@@ -110764,8 +110882,8 @@
               } else if (this.isVideoFile(_)) {
                 const _ = document.createElement("video");
                 (_.preload = "metadata"),
-                  _.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, _, (0, _._)(_));
+                  __webpack_require__.addEventListener("loadedmetadata", () => {
+                    const _ = new _._(_, _, this.m_rgImageOptions, _);
                     (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                       (_ = !0),
                       _();
@@ -110783,7 +110901,7 @@
                 this.isSubtitleTextFile(_)
                   ? ((this.m_filesToUpload = [
                       ...this.m_filesToUpload,
-                      new _._(_, _, (0, _._)(_)),
+                      new _._(_, _, this.m_rgImageOptions),
                     ]),
                     (_ = !0),
                     _())
@@ -110797,12 +110915,12 @@
             _
           );
         }
-        async UploadAllImages(_, _, _, _, _) {
+        async UploadAllImages(_, _, _, _) {
           const _ = {};
           let _ = {};
           for (const _ of this.m_filesToUpload)
             if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _, _);
+              const _ = _.IsValidAssetType(_, _);
               if (!_.error && !_.needsCrop) {
                 _.status = "uploading";
                 const _ = `${_.uploadTime}/${_.file.name}`;
@@ -110851,7 +110969,7 @@
                       }
                       return null;
                     })(_.file_type),
-                    _.type.artworkType,
+                    _.GetCurrentImageOption().artworkType,
                     _.width,
                     _.height,
                   );
@@ -110902,8 +111020,7 @@
             bSynchronousUpload: _,
             rgSupportArtwork: _,
           } = _,
-          [_] = (0, _.useState)(new _(_, __webpack_require__, _ ?? !1)),
-          _ = (0, _._)(_);
+          [_] = (0, _.useState)(new _(_, _, __webpack_require__, _ ?? !1));
         return (
           (0, _.useEffect)(() => {
             _.GetFnOnUploadSuccess() != __webpack_require__ &&
@@ -110913,7 +111030,6 @@
           _.createElement(_._, {
             ..._,
             imageUploader: _,
-            rgImageOptions: _,
           })
         );
       }
@@ -110923,204 +111039,6 @@
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
         (0, _._)([_._], _.prototype, "UploadAllImages", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            rgAssetLangs: _,
-            fnGetAssetUrl: __webpack_require__,
-            fnDeletAssetLang: _,
-            imageClassname: _,
-            fnDeleteAllAssets: _,
-          } = _,
-          [_, _] = (0, _.useState)(_._.Get().GetCurEditLanguage()),
-          [_, _] = (0, _.useState)(__webpack_require__(_));
-        return (
-          (0, _.useEffect)(() => {
-            const _ = __webpack_require__(_);
-            _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
-          }, [_, __webpack_require__, _]),
-          _.createElement(
-            "div",
-            {
-              className: _().UploadedImageDisplayCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().UploaderLeftCol,
-              },
-              _.createElement(_, {
-                curAssetURL: _,
-                imageClassname: _,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().UploaderRightCol,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SectionCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LangCountTitle,
-                  },
-                  _.length,
-                  " Localized Assets",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LangSelectCtn,
-                  },
-                  _.map((_) => {
-                    const _ = (0, _._)(_);
-                    return _.createElement(
-                      "div",
-                      {
-                        className: _().UploaderImgLang,
-                        key: "image" + _,
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (_) => {
-                            _.preventDefault(), _(_), _(__webpack_require__(_));
-                          },
-                        },
-                        Boolean(_ === _)
-                          ? _.createElement(
-                              "span",
-                              {
-                                className: _().LangSelected,
-                              },
-                              "" + _,
-                            )
-                          : _.createElement("span", null, "" + _),
-                      ),
-                      _.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (_) => {
-                            _.preventDefault(), _(_);
-                          },
-                        },
-                        _.createElement(_._, null),
-                      ),
-                    );
-                  }),
-                ),
-                Boolean(_.length) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: _().DeleteAll,
-                      onClick: (_) => {
-                        _ ? _() : _.forEach((_) => _(_));
-                      },
-                    },
-                    (0, _._)("#Button_DeleteAll"),
-                  ),
-              ),
-            ),
-          )
-        );
-      }
-      function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
-        if (!_)
-          return _.createElement(
-            "div",
-            {
-              className: _().ArtNoArt,
-            },
-            (0, _._)("#ImageDisplay_NoAssetUploaded"),
-          );
-        const _ = (0, _._)(_);
-        return _._.includes(_)
-          ? _.createElement(_, {
-              ..._,
-            })
-          : _._.includes(_)
-            ? _.createElement(_, {
-                className: __webpack_require__ || _().ArtPreview,
-                strTextURL: _,
-              })
-            : _.createElement("img", {
-                className: __webpack_require__ || _().ArtPreview,
-                src: _,
-              });
-      }
-      function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
-          _ = (0, _.useRef)();
-        return (
-          (0, _.useEffect)(() => {
-            _.current && (_.current.load(), _.current.play());
-          }, [_]),
-          _.createElement(
-            "video",
-            {
-              ref: _,
-              className: __webpack_require__ || _().ArtPreview,
-              autoPlay: !0,
-              loop: !0,
-              controls: !0,
-              muted: !0,
-            },
-            _.createElement("source", {
-              src: _,
-            }),
-          )
-        );
-      }
-      function _(_) {
-        const { strTextURL: _, className: __webpack_require__ } = _,
-          [_, _] = (0, _.useState)("");
-        return (
-          (0, _.useEffect)(() => {
-            _()
-              .get(_)
-              .then((_) => {
-                _(_.data);
-              })
-              .catch((_) => {
-                console.error(_);
-              });
-          }, [_]),
-          _.createElement("textarea", {
-            className: __webpack_require__,
-            value: _,
-            readOnly: !0,
-            rows: 20,
-          })
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -118490,6 +118408,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      }
       function _(_, _, _) {
         if (_.disable_background && !_)
           return {
@@ -118508,8 +118429,7 @@
           _.border_width
           ? {
               background:
-                `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)` +
-                _,
+                _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
@@ -118731,7 +118651,7 @@
                         error: _,
                       });
                     if (_[_].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let _ = (0, _._)(_[_].name, -1);
+                      let { language: _ } = (0, _._)(_[_].name, -1);
                       if (null == _ || -1 == _)
                         return void _({
                           code: "",

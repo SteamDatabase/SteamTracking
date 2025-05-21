@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [4496],
+  [9390],
   {
     chunkid: (module) => {
       module.exports = {
@@ -22,16 +22,12 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Popover: "-MPE4GBxGFpMI7R_-POZX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
         Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
@@ -42,6 +38,11 @@
     chunkid: (module) => {
       module.exports = {
         ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PopoverBox: "GDWWHFNXwLB_iVFCZoJLs",
       };
     },
     chunkid: (module) => {
@@ -948,6 +949,10 @@
           prop: "size",
           className: (_) => _[`Size-${_}`],
         },
+        {
+          prop: "color",
+          cssProperty: (_) => ["--separator-color", `var(--color-${_})`],
+        },
       ];
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -963,6 +968,7 @@
             children: _,
             beforeContent: _,
             afterContent: _,
+            hasValue: _,
             ..._
           } = _,
           _ = "underline" === __webpack_require__ ? "none" : _;
@@ -982,6 +988,7 @@
               _,
             ),
             align: "center",
+            "data-has-value": !!_,
           },
           _ &&
             _.createElement(
@@ -995,6 +1002,7 @@
             _,
             {
               flexGrow: "1",
+              minWidth: "0",
             },
             _,
           ),
@@ -1342,7 +1350,6 @@
         function (_) {
           return _.createElement(_, {
             role: "listbox",
-            padding: "2",
             radius: "sm",
             ..._,
           });
@@ -1357,8 +1364,8 @@
               "aria-selected": _,
               "data-focused": _,
               className: _.ListBoxOption,
-              radius: "sm",
-              padding: "2",
+              paddingY: "2",
+              paddingX: "3",
               ..._,
             });
           },
@@ -1404,7 +1411,6 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
           _,
@@ -1418,6 +1424,396 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.forwardRef)(function (_, _) {
+        return _.createElement(
+          _.Positioner,
+          {
+            ref: _,
+            className: _.PopoverBox,
+          },
+          _.children,
+        );
+      });
+      function _(_) {
+        const { value: _, children: __webpack_require__ } = _,
+          {
+            focusedValue: _,
+            onFocusChange: _,
+            selectedValue: _,
+            onSelectionChange: _,
+          } = _("<SelectTrigger>"),
+          _ = _ === _,
+          _ = _ === _;
+        return _.createElement(
+          _.Option,
+          {
+            selected: _,
+            focused: _,
+            onClick: () => _(_),
+            onMouseOver: () => _(_),
+          },
+          __webpack_require__,
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            weight: "medium",
+            truncate: !0,
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            secondary: !0,
+            truncate: !0,
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        const { onSelectionChange: _, ...__webpack_require__ } = _,
+          [_, _] = (0, _.useState)(!1);
+        return {
+          onSelectionChange: (_) => {
+            _(_), _(!1);
+          },
+          bOpen: _,
+          setOpen: _,
+          ...__webpack_require__,
+        };
+      }
+      const _ = {
+        Root: function (_) {
+          const { children: _, state: __webpack_require__, ..._ } = _,
+            [_, _] = (0, _.useState)(null),
+            _ = (0, _.useRef)(null),
+            _ = {
+              ...__webpack_require__,
+              ..._,
+              focusedValue: _,
+              onFocusChange: _,
+              refPopover: _,
+              setOpen: (_) => {
+                _ && _(__webpack_require__.selectedValue),
+                  __webpack_require__.setOpen(_);
+              },
+            };
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(
+              _.Root,
+              {
+                open: __webpack_require__.bOpen,
+                onOpenChange: __webpack_require__.setOpen,
+                width: "target",
+              },
+              _,
+            ),
+          );
+        },
+        Option: _,
+        Options: function (_) {
+          const { refPopover: _ } = _("<Select.Options>");
+          return _.createElement(
+            _,
+            {
+              ref: _,
+            },
+            _.createElement(_, null, _.children),
+          );
+        },
+        Trigger: function (_) {
+          const { children: _, beforeContent: __webpack_require__ } = _,
+            {
+              bOpen: _,
+              setOpen: _,
+              placeholder: _,
+              selectedValue: _,
+              variant: _,
+              size: _,
+              radius: _,
+              rgOptions: _,
+              focusedValue: _,
+              onFocusChange: _,
+              onSelectionChange: _,
+              refPopover: _,
+              clearable: _,
+            } = _("<SelectTrigger>");
+          let _ = "";
+          !_ &&
+            _ &&
+            (("string" != typeof _ && "number" != typeof _) ||
+              (_ = _.toString()),
+            console.error(
+              "Select cannot form renderable representation of selectedValue!",
+              _,
+            ));
+          const _ =
+            _ && _
+              ? _.createElement(_, {
+                  onClick: (_) => {
+                    _(null), _.stopPropagation(), _.preventDefault();
+                  },
+                })
+              : _.createElement(_, null);
+          return _.createElement(
+            _.Anchor,
+            null,
+            _.createElement(
+              _,
+              {
+                clickable: !0,
+                focusable: !0,
+                onClick: _ ? void 0 : () => _(!0),
+                beforeContent: __webpack_require__,
+                afterContent: _,
+                variant: _,
+                size: _,
+                radius: _,
+                onKeyDown: (_) => {
+                  switch (_.key) {
+                    case "Escape":
+                      return void _(!1);
+                    case "Enter":
+                      if (0 === _.length) return void _(null);
+                      return -1 === _.findIndex((_) => _ === _)
+                        ? void _(_[0])
+                        : void _(_);
+                    case "ArrowDown": {
+                      if ((_.preventDefault(), 0 === _.length)) return;
+                      if (null === _) return void _(_[0]);
+                      const _ = _.findIndex((_) => _ === _);
+                      return -1 === _
+                        ? void _(_[0])
+                        : void (_ + 1 < _.length && _(_[_ + 1]));
+                    }
+                    case "ArrowUp": {
+                      if ((_.preventDefault(), 0 === _.length)) return;
+                      if (null === _) return void _(_[_.length - 1]);
+                      const _ = _.findIndex((_) => _ === _);
+                      return -1 === _
+                        ? void _(_[_.length - 1])
+                        : void (_ - 1 >= 0 && _(_[_ - 1]));
+                    }
+                  }
+                },
+                tabIndex: 0,
+                role: "combobox",
+                hasValue: !!_,
+              },
+              _,
+            ),
+          );
+        },
+        Value: _,
+        Placeholder: _,
+      };
+      function _(_) {
+        return _
+          ? "string" == typeof _
+            ? _
+            : "number" == typeof _
+              ? _.toString()
+              : (console.error(
+                  "Could not use default option labeler on Select option value. Custom labeler requried",
+                  _,
+                ),
+                "")
+          : "";
+      }
+      const _ = Object.assign(function (_) {
+          const {
+              selectedValue: _,
+              onSelectionChange: __webpack_require__,
+              options: _,
+              placeholder: _,
+              getOptionLabel: _ = _,
+              ..._
+            } = _,
+            _ = _({
+              onSelectionChange: __webpack_require__,
+              selectedValue: _,
+              rgOptions: _,
+              placeholder: _,
+            }),
+            _ = null != _;
+          return _.createElement(
+            _.Root,
+            {
+              state: _,
+              ..._,
+            },
+            _.createElement(
+              _.Trigger,
+              null,
+              _ && _.createElement(_, null, _(_)),
+              !_ && _.createElement(_, null, _),
+            ),
+            _.createElement(
+              _.Options,
+              null,
+              _.rgOptions.map((_) =>
+                _.createElement(
+                  _,
+                  {
+                    value: _,
+                    key: _(_),
+                  },
+                  _(_),
+                ),
+              ),
+            ),
+          );
+        }, _),
+        _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = (0, _.useContext)(_);
+        return _ || console.error(`${_} must be used within a <Select>!`), _;
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            checked: __webpack_require__,
+            onChange: _,
+            disabled: _,
+            children: _,
+            ..._
+          } = _,
+          _ = "indeterminate" === __webpack_require__,
+          _ = _ ? _ : _,
+          _ = () => _(!!_ || !__webpack_require__);
+        return _.createElement(
+          _,
+          {
+            ref: _,
+            role: "checkbox",
+            "aria-checked": _ ? "mixed" : __webpack_require__,
+            "data-state": _(__webpack_require__),
+            className: _.Root,
+            onClick: _,
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            },
+            ..._,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Checkbox,
+            },
+            __webpack_require__ && _.createElement(_, null),
+          ),
+          _,
+        );
+      });
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      const _ = (0, _.createContext)(null),
+        _ = Object.assign(
+          function (_) {
+            const {
+                selected: _,
+                onSelectedChange: __webpack_require__ = () => {},
+                onItemChange: _ = () => {},
+                disabled: _,
+                direction: _ = "column",
+                ..._
+              } = _,
+              _ = {
+                selected: _.reduce(
+                  (_, _) => ({
+                    ..._,
+                    [_]: !0,
+                  }),
+                  {},
+                ),
+                onChange: (_, _) => {
+                  if ((_(_, _), _)) __webpack_require__(_.concat(_));
+                  else {
+                    const _ = _.indexOf(_);
+                    __webpack_require__(_.slice(0, _).concat(_.slice(_ + 1)));
+                  }
+                },
+                disabled: _,
+              },
+              _ = "row" === _;
+            return _.createElement(
+              _.Provider,
+              {
+                value: _,
+              },
+              _.createElement(_, {
+                direction: _,
+                wrap: _ ? "wrap" : void 0,
+                gap: "column" === _ ? "1" : "2",
+                role: "group",
+                ..._,
+              }),
+            );
+          },
+          {
+            Item: function (_) {
+              const { value: _, children: __webpack_require__ } = _,
+                _ = (0, _.useContext)(_);
+              if (!_)
+                return (
+                  console.error(
+                    "<CheckboxGroup.Item> must be used within a <CheckboxGroup>",
+                  ),
+                  null
+                );
+              const { selected: _, onChange: _, disabled: _ } = _;
+              return _.createElement(
+                _,
+                {
+                  checked: !!_[_],
+                  disabled: _,
+                  onChange: (_) => _(_, _),
+                },
+                __webpack_require__,
+              );
+            },
+          },
+        );
       function _(_) {
         const { value: _, children: __webpack_require__ } = _,
           {
@@ -1526,10 +1922,9 @@
         Options: function (_) {
           const { refPopover: _ } = _("<Combobox.Options>");
           return _.createElement(
-            _.Positioner,
+            _,
             {
               ref: _,
-              className: _.Popover,
             },
             _.createElement(_, null, _.children),
           );
@@ -1723,141 +2118,6 @@
         const _ = (0, _.useContext)(_);
         return _ || console.error(`${_} must be used within a <Combobox>!`), _;
       }
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-            checked: __webpack_require__,
-            onChange: _,
-            disabled: _,
-            children: _,
-            ..._
-          } = _,
-          _ = "indeterminate" === __webpack_require__,
-          _ = _ ? _ : _,
-          _ = () => _(!!_ || !__webpack_require__);
-        return _.createElement(
-          _,
-          {
-            ref: _,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : __webpack_require__,
-            "data-state": _(__webpack_require__),
-            className: _.Root,
-            onClick: _,
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
-            },
-            ..._,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Checkbox,
-            },
-            __webpack_require__ && _.createElement(_, null),
-          ),
-          _,
-        );
-      });
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      const _ = (0, _.createContext)(null),
-        _ = Object.assign(
-          function (_) {
-            const {
-                selected: _,
-                onSelectedChange: __webpack_require__ = () => {},
-                onItemChange: _ = () => {},
-                disabled: _,
-                direction: _ = "column",
-                ..._
-              } = _,
-              _ = {
-                selected: _.reduce(
-                  (_, _) => ({
-                    ..._,
-                    [_]: !0,
-                  }),
-                  {},
-                ),
-                onChange: (_, _) => {
-                  if ((_(_, _), _)) __webpack_require__(_.concat(_));
-                  else {
-                    const _ = _.indexOf(_);
-                    __webpack_require__(_.slice(0, _).concat(_.slice(_ + 1)));
-                  }
-                },
-                disabled: _,
-              },
-              _ = "row" === _;
-            return _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              _.createElement(_, {
-                direction: _,
-                wrap: _ ? "wrap" : void 0,
-                gap: "column" === _ ? "1" : "2",
-                role: "group",
-                ..._,
-              }),
-            );
-          },
-          {
-            Item: function (_) {
-              const { value: _, children: __webpack_require__ } = _,
-                _ = (0, _.useContext)(_);
-              if (!_)
-                return (
-                  console.error(
-                    "<CheckboxGroup.Item> must be used within a <CheckboxGroup>",
-                  ),
-                  null
-                );
-              const { selected: _, onChange: _, disabled: _ } = _;
-              return _.createElement(
-                _,
-                {
-                  checked: !!_[_],
-                  disabled: _,
-                  onChange: (_) => _(_, _),
-                },
-                __webpack_require__,
-              );
-            },
-          },
-        );
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2096,7 +2356,8 @@
       })(async function (_) {
         if (_[_]) return _[_]();
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 753,
         _ = `${_}_Game`,
         _ = `${_}_item_class`,
@@ -2397,7 +2658,7 @@
           },
           _ = _[_];
         delete _[_];
-        const _ = _(_, 3);
+        const _ = _(_, _);
         if (_.isLoading) return _.createElement(_, null);
         if (_.isError || !_.data || !_ || !_)
           return _.createElement(
@@ -2804,59 +3065,94 @@
         return _;
       }
       function _(_) {
-        const { facets: _, state: __webpack_require__, onStateChange: _ } = _,
-          _ = (_, _) => {
-            const _ = _
-              ? {
-                  [_]: !0,
-                }
-              : {};
-            _({
-              ...__webpack_require__,
-              facets: {
-                ...__webpack_require__.facets,
-                [_]: _,
-              },
-            });
-          },
-          _ = (_, _, _) => {
-            _({
-              ...__webpack_require__,
-              facets: {
-                ...__webpack_require__.facets,
-                [_]: {
-                  ...__webpack_require__.facets[_],
-                  [_]: _,
-                },
-              },
-            });
-          },
-          _ = _.rgDropdowns.length % 2 == 1 && _.rgCheckboxes.length > 0;
+        const { facets: _, state: __webpack_require__, onStateChange: _ } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.flatMap((_, _) => [
+            _.createElement(_, {
+              key: `facets_${_}`,
+              facets: _,
+              state: __webpack_require__,
+              onStateChange: _,
+            }),
+            _ < _.length - 1
+              ? _.createElement(_, {
+                  color: "dull-6",
+                  key: `sep_${_}`,
+                  size: "4",
+                  marginTop: _,
+                })
+              : null,
+          ]),
+        );
+      }
+      function _(_) {
+        const { facets: _, state: __webpack_require__, onStateChange: _ } = _;
         return _.createElement(
           _,
           {
-            gap: _,
+            gapY: "1",
+            gapX: _,
             marginTop: _,
-            columns: "repeat( auto-fit, minmax( 260px, 1fr ) )",
+            columns: "repeat( auto-fit, minmax( 300px, 1fr ) )",
           },
-          _.rgDropdowns.map((_) =>
+          _.map((_) =>
             _.createElement(_, {
               key: _._,
-              ..._,
-              value: __webpack_require__.facets[_._],
-              onChange: _,
-            }),
-          ),
-          _ && _.createElement("div", null),
-          _.rgCheckboxes.map((_) =>
-            _.createElement(_, {
-              key: _._,
-              ..._,
-              value: __webpack_require__.facets[_._],
-              onChange: _,
+              facet: _,
+              state: __webpack_require__,
+              onStateChange: _,
             }),
           ),
         );
+      }
+      function _(_) {
+        const { facet: _, state: __webpack_require__, onStateChange: _ } = _;
+        switch (_.fieldType) {
+          case "checkbox": {
+            const _ = (_, _, _) => {
+              _({
+                ...__webpack_require__,
+                facets: {
+                  ...__webpack_require__.facets,
+                  [_]: {
+                    ...__webpack_require__.facets[_],
+                    [_]: _,
+                  },
+                },
+              });
+            };
+            return _.createElement(_, {
+              ..._,
+              value: __webpack_require__.facets[_._],
+              onChange: _,
+            });
+          }
+          case "select": {
+            const _ = (_, _) => {
+              const _ = _
+                ? {
+                    [_]: !0,
+                  }
+                : {};
+              _({
+                ...__webpack_require__,
+                facets: {
+                  ...__webpack_require__.facets,
+                  [_]: _,
+                },
+              });
+            };
+            return _.createElement(_, {
+              ..._,
+              value: __webpack_require__.facets[_._],
+              onChange: _,
+            });
+          }
+          default:
+            return (0, _._)(_.fieldType, "Unhandled facet field type!"), null;
+        }
       }
       function _(_) {
         return _.createElement(
@@ -2880,21 +3176,22 @@
               enabled: !!_,
             });
           })(_),
-          _ = _(_.data);
-        if (_.isLoading) return _.createElement(_, null);
-        if (_.isError)
-          return _.createElement(
-            _,
-            null,
-            _.Localize("#AdvancedSearch_FacetLoadError"),
-          );
-        return 0 === _.rgCheckboxes.length + _.rgDropdowns.length
-          ? _.createElement(_, null, _.Localize("#AdvancedSearch_NoFacets"))
-          : _.createElement(_, {
-              facets: _,
-              state: __webpack_require__,
-              onStateChange: _,
-            });
+          _ = _(_, _.data);
+        return _.isLoading
+          ? _.createElement(_, null)
+          : _.isError
+            ? _.createElement(
+                _,
+                null,
+                _.Localize("#AdvancedSearch_FacetLoadError"),
+              )
+            : 0 === _.length
+              ? _.createElement(_, null, _.Localize("#AdvancedSearch_NoFacets"))
+              : _.createElement(_, {
+                  facets: _,
+                  state: __webpack_require__,
+                  onStateChange: _,
+                });
       }
       function _(_) {
         const {
@@ -2905,16 +3202,70 @@
             onChange: _,
           } = _,
           _ = Object.keys(_).find((_) => _[_]),
-          _ = __webpack_require__.find(({ _: _ }) => _ === _);
-        return _.createElement(_, {
-          variant: "underline",
-          onSelectionChange: (_) => _(_, null == _ ? void 0 : _._),
-          options: __webpack_require__,
-          placeholder: _,
-          selectedValue: _ || null,
-          getOptionLabel: (_) => _.strLabel,
-          filter: (_, _) => _.DefaultOptionFilter(_, _.strLabel),
-        });
+          _ = __webpack_require__.find(({ _: _ }) => _ === _),
+          _ = _({
+            rgOptions: __webpack_require__,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, null == _ ? void 0 : _._),
+          });
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            variant: "highlight",
+            radius: "sm",
+          },
+          _.createElement(
+            _.Trigger,
+            null,
+            !_ && _.createElement(_.Value, null, _),
+            !!_ &&
+              _.createElement(
+                _.Value,
+                null,
+                _,
+                ": ",
+                _.createElement(
+                  _,
+                  {
+                    color: "accent",
+                    secondary: !0,
+                  },
+                  _.strLabel,
+                ),
+              ),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            !!_ &&
+              _.createElement(
+                _.Option,
+                {
+                  value: null,
+                },
+                _.createElement(
+                  _,
+                  {
+                    align: "center",
+                    gap: "1",
+                  },
+                  _.createElement(_, null),
+                  _.Localize("#AdvancedSearch_AppSelect_Clear"),
+                ),
+              ),
+            __webpack_require__.map((_) =>
+              _.createElement(
+                _.Option,
+                {
+                  value: _,
+                  key: _.strLabel,
+                },
+                _.strLabel,
+              ),
+            ),
+          ),
+        );
       }
       function _(_) {
         const {
@@ -2926,12 +3277,22 @@
           } = _,
           _ = __webpack_require__.map(({ _: _ }) => _).filter((_) => _[_]);
         return _.createElement(
-          "div",
-          null,
-          _.createElement("b", null, _),
+          _,
+          {
+            paddingLeft: "2",
+            marginBottom: _,
+          },
           _.createElement(
             _,
             {
+              weight: "medium",
+            },
+            _,
+          ),
+          _.createElement(
+            _,
+            {
+              marginTop: "2",
               selected: _,
               onItemChange: (_, _) => _(_, _, _),
               direction: "row",
@@ -2943,7 +3304,14 @@
                   key: _._,
                   value: _._,
                 },
-                _.strLabel,
+                _.createElement(
+                  _,
+                  {
+                    secondary: !0,
+                    color: _[_._] ? "accent" : void 0,
+                  },
+                  _.strLabel,
+                ),
               ),
             ),
           ),
@@ -2977,30 +3345,88 @@
       const _ = 5;
       function _(_, _) {
         return (0, _.useMemo)(() => {
-          const _ = "number" == typeof _ ? _ : _,
-            _ = {
-              rgDropdowns: [],
-              rgCheckboxes: [],
-            };
-          if (!_) return _;
-          const _ = new Intl.Collator();
-          for (const _ of Object.keys(_)) {
-            const _ = _[_];
-            if (!_.tags) continue;
-            const _ = Object.keys(_.tags).map((_) => ({
-              _: _,
-              strLabel: _.tags[_].localized_name,
-            }));
-            _.sort((_, _) => _.compare(_.strLabel, _.strLabel));
-            const _ = {
-              _: _.name,
-              strLabel: _.localized_name,
-              rgTags: _,
-            };
-            _.length < _ ? _.rgCheckboxes.push(_) : _.rgDropdowns.push(_);
-          }
-          return _;
+          if (!_) return [];
+          const _ = _[_];
+          return _ ? __webpack_require__(_) : _(_);
         }, [_, _]);
+      }
+      const _ = {
+        [_]: (_) => _(_, 3),
+        chunkid: function (module) {
+          const _ = [
+              [
+                "Weapon",
+                "ItemSet",
+                "Exterior",
+                "Tournament",
+                "Rarity",
+                "TournamentTeam",
+                "Quality",
+                "ProPlayer",
+                "Type",
+              ],
+              [
+                "PatchCapsule",
+                "SprayCapsule",
+                "PatchCategory",
+                "SprayColorCategory",
+                "StickerCapsule",
+                "SprayCategory",
+                "StickerCategory",
+                "KeychainCapsule",
+              ],
+            ],
+            _ = _.map((_) => _.map(() => null));
+          for (const _ of Object.keys(module)) {
+            const _ = module[_];
+            if (!_.tags) continue;
+            const _ = _(
+              _,
+              Object.keys(_.tags).length < _ ? "checkbox" : "select",
+            );
+            let _ = null;
+            for (let _ = 0; _ < _.length && !_; _++)
+              for (let _ = 0; _ < _[_].length; _++)
+                if (_._ === _[_][_]) {
+                  _ = [_, _];
+                  break;
+                }
+            _
+              ? (_[_[0]][_[1]] = _)
+              : ((0, _._)(!1, `Found ungrouped CS2 facet "${_._}"`),
+                _[_.length - 1].push(_));
+          }
+          return __webpack_require__.map((_) => _.filter((_) => !!_));
+        },
+      };
+      function _(_, _) {
+        const _ = "number" == typeof _ ? _ : _,
+          _ = [],
+          _ = [];
+        if (!_) return [];
+        new Intl.Collator();
+        for (const _ of Object.keys(_)) {
+          const _ = _[_];
+          if (!_.tags) continue;
+          const _ = Object.keys(_.tags).length < _,
+            _ = _(_, _ ? "checkbox" : "select");
+          _ ? _.push(_) : _.push(_);
+        }
+        return [_, _].filter((_) => _.length > 0);
+      }
+      function _(_, _) {
+        const _ = new Intl.Collator(),
+          _ = Object.keys(_.tags || {}).map((_) => ({
+            _: _,
+            strLabel: _.tags[_].localized_name,
+          }));
+        _.sort((_, _) => __webpack_require__.compare(_.strLabel, _.strLabel));
+        return {
+          _: _.name,
+          strLabel: _.localized_name,
+          rgTags: _,
+          fieldType: _,
+        };
       }
       function _(_) {
         const {

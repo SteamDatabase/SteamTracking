@@ -181,8 +181,8 @@
             [m, u] = (0, a.useState)(""),
             d = (0, r.mr)(e.clanSteamID.GetAccountID()),
             g = () => e.closeModal && e.closeModal(),
-            E = r.pU.GetFilteredClanImages(t, m),
-            S = (e) => {
+            S = r.pU.GetFilteredClanImages(t, m),
+            E = (e) => {
               n(e), g();
             };
           return a.createElement(
@@ -223,13 +223,13 @@
                             size: "medium",
                             string: (0, l.we)("#Loading"),
                           })
-                        : Boolean(E.length > 0)
-                          ? E.map((e) =>
+                        : Boolean(S.length > 0)
+                          ? S.map((e) =>
                               a.createElement(h, {
                                 key: "ci" + e.image_hash,
                                 clanImage: e,
                                 searchStringHilight: m,
-                                fnImageClick: S,
+                                fnImageClick: E,
                               }),
                             )
                           : Boolean(0 == m.trim().length)
@@ -447,8 +447,8 @@
         u = n(88997),
         d = n(70995),
         g = n(27666),
-        E = n(71138),
-        S = n(65739),
+        S = n(71138),
+        E = n(65739),
         C = n(73745),
         I = n(81962),
         v = n(10820),
@@ -920,7 +920,7 @@
             case "Emoticon":
               e = s.createElement(y, {
                 emoticonStore: t,
-                emoticonHoverStore: S.s,
+                emoticonHoverStore: E.s,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -996,78 +996,65 @@
             nHeight: r,
             setImage: o,
           } = e,
-          i = s.useMemo(
-            () => [
-              {
-                sKey: "dummy",
-                fnGetLabelText: () => "unknown",
-                nWidth: a,
-                nHeight: r,
-                bEnforceDimensions: !1,
-                artworkType: "sale_header",
-              },
-            ],
-            [r, a],
-          ),
-          l = s.useMemo(() => ({ width: a, height: r }), [a, r]),
-          [c, m] = s.useState(void 0),
-          [h, u] = s.useState(Boolean(n)),
-          [d, E] = s.useState(!1),
+          i = s.useMemo(() => ({ width: a, height: r }), [a, r]),
+          [l, c] = s.useState(void 0),
+          [m, h] = s.useState(Boolean(n)),
+          [u, d] = s.useState(!1),
           [S] = (0, ee.q3)(() => [se.O.Get().GetCurEditLanguage()]),
-          C = (0, oe.zO)(t),
-          I = s.useCallback(
+          E = (0, oe.zO)(t, "dummy"),
+          C = s.useCallback(
             async (e) => {
               if (
-                (C.ClearImages(),
-                e && (u(!0), await C.AddExistingClanImage(e, 0, i)))
+                (E.ClearImages(),
+                e && (h(!0), await E.AddExistingClanImage(e, 0)))
               ) {
-                m(e);
-                const t = C.GetUploadImages()[0].IsValidAssetType(i, l);
+                c(e);
+                const t = E.GetUploadImages()[0].IsValidAssetType(i);
                 0 != t.error.length ||
                   t.needsCrop ||
                   (n && n.image_hash == e.image_hash) ||
                   o(e);
               }
-              u(!1);
+              h(!1);
             },
-            [C, n, o, i, l],
+            [E, n, o, i],
           );
         s.useEffect(() => {
-          I(n);
-        }, [I, n]);
-        let v,
-          _ = "",
-          T = !1;
-        if (C && C.GetFilesToUpload().length > 0) {
-          v = C.GetUploadImages()[0];
-          const e = v.IsValidAssetType(i, l);
-          (_ = e.error), (T = e.needsCrop);
+          C(n);
+        }, [C, n]);
+        let I,
+          v = "",
+          _ = !1;
+        if (E && E.GetFilesToUpload().length > 0) {
+          I = E.GetUploadImages()[0];
+          const e = I.IsValidAssetType(i);
+          (v = e.error), (_ = e.needsCrop);
         }
         return s.createElement(
           s.Fragment,
           null,
-          h
+          m
             ? s.createElement(J.t, {
                 size: "medium",
                 string: (0, B.we)("#Loading"),
               })
-            : Boolean(c) &&
+            : Boolean(l) &&
                 s.createElement("div", {
                   className: re.Image,
                   style: {
-                    backgroundImage: `url( '${v ? v.dataUrl : c.url}' )`,
+                    backgroundImage: `url( '${I ? I.dataUrl : l.url}' )`,
                     height: `${r}px`,
                     width: `${a}px`,
                   },
                 }),
-          Boolean(_) && s.createElement("p", null, _),
-          T &&
+          Boolean(v) && s.createElement("p", null, v),
+          _ &&
             s.createElement(
               H.$n,
               {
                 onClick: (e) => {
                   const t = (0, V.uX)(e);
-                  let n = C.GetUploadImages()[0];
+                  let n = E.GetUploadImages()[0];
                   (0, P.pg)(
                     s.createElement(ne.q, {
                       ownerWin: t,
@@ -1081,16 +1068,16 @@
               },
               (0, B.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(v && v.bCropped) &&
+          Boolean(I && I.bCropped) &&
             s.createElement(
               s.Fragment,
               null,
               s.createElement(
                 "div",
                 null,
-                (0, B.we)("#ClanImagePickAndResize_UploadStatus", v.status),
+                (0, B.we)("#ClanImagePickAndResize_UploadStatus", I.status),
               ),
-              d
+              u
                 ? s.createElement(J.t, {
                     string: (0, B.we)("#Uploading"),
                     size: "small",
@@ -1099,13 +1086,12 @@
                     H.$n,
                     {
                       onClick: async () => {
-                        E(!0);
+                        d(!0);
                         try {
-                          const e = await C.UploadAllImages(
+                          const e = await E.UploadAllImages(
                               [ie.TU.k_ESteamRealmGlobal],
                               S,
                               i,
-                              l,
                             ),
                             n = Object.values(e);
                           if (
@@ -1136,10 +1122,10 @@
                                 loc_languages: void 0,
                                 is_loc_group: !1,
                               };
-                            m(l), o(l);
+                            c(l), o(l);
                           }
                         } finally {
-                          E(!1);
+                          d(!1);
                         }
                       },
                     },
@@ -1154,7 +1140,7 @@
                 (0, P.pg)(
                   s.createElement(ae.z, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => I(e),
+                    fnImageSelectCallBack: (e) => C(e),
                   }),
                   (0, V.uX)(e),
                 );
@@ -1247,17 +1233,17 @@
       var ue,
         de = n(12611),
         ge = n(74410),
-        Ee = n(26408);
-      let Se = class extends s.Component {
+        Se = n(26408);
+      let Ee = class extends s.Component {
         descAutoTextAreaRef = s.createRef();
         constructor(e) {
           super(e), (this.state = { bShowDragTarget: !1 });
         }
         componentDidMount() {
-          E.pU.AddClanImageDragListener(this.ClanImageDragListener);
+          S.pU.AddClanImageDragListener(this.ClanImageDragListener);
         }
         componentWillUnmount() {
-          E.pU.RemoveClanImageDragListener(this.ClanImageDragListener);
+          S.pU.RemoveClanImageDragListener(this.ClanImageDragListener);
         }
         ClanImageDragListener(e, t) {
           this.state.bShowDragTarget != t &&
@@ -1342,11 +1328,11 @@
           );
         }
       };
-      (0, h.Cg)([C.oI], Se.prototype, "ClanImageDragListener", null),
-        (0, h.Cg)([C.oI], Se.prototype, "onFocus", null),
-        (0, h.Cg)([C.oI], Se.prototype, "OnTextAreaDropListener", null),
-        (0, h.Cg)([C.oI], Se.prototype, "GetTextAreaRef", null),
-        (Se = (0, h.Cg)([o.PA], Se));
+      (0, h.Cg)([C.oI], Ee.prototype, "ClanImageDragListener", null),
+        (0, h.Cg)([C.oI], Ee.prototype, "onFocus", null),
+        (0, h.Cg)([C.oI], Ee.prototype, "OnTextAreaDropListener", null),
+        (0, h.Cg)([C.oI], Ee.prototype, "GetTextAreaRef", null),
+        (Ee = (0, h.Cg)([o.PA], Ee));
       class Ce {
         static BIsFireFox() {
           return Boolean(
@@ -1656,7 +1642,7 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: S.s,
+                      emoticonHoverStore: E.s,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,
@@ -2140,7 +2126,7 @@
           [l, c] = s.useState(""),
           [m, h] = s.useState(void 0),
           [d, g] = s.useState(void 0),
-          { data: S } = (0, W.Dv)(),
+          { data: E } = (0, W.Dv)(),
           { isLoading: C, data: I } = (0, j.js)(d?.GetAccountID()),
           v = 0 != t.trim().length && 0 != l.trim().length;
         return s.createElement(
@@ -2158,7 +2144,7 @@
                 o.trim().length > 0 && (n += ` company="${o}"`),
                 m)
               ) {
-                n += ` photo="${de.lw + "/" + m.clanAccountID + "/" + E.i6.GetHashAndExt(m)}"`;
+                n += ` photo="${de.lw + "/" + m.clanAccountID + "/" + S.i6.GetHashAndExt(m)}"`;
               }
               d && (n += ` steamid="${d.ConvertTo64BitString()}"`),
                 (n += `]${l}[/speaker]`),
@@ -2245,7 +2231,7 @@
                   {
                     onClick: (e) =>
                       (0, u.lX)(
-                        s.createElement(be, { friends: S, setSteamID: g }),
+                        s.createElement(be, { friends: E, setSteamID: g }),
                         e,
                       ),
                   },
@@ -2504,7 +2490,7 @@
                             (0, B.we)(
                               "#EventEditor_ImportFromHTML_PreserveNewlines",
                             ),
-                            s.createElement(Ee.o, {
+                            s.createElement(Se.o, {
                               tooltip: (0, B.we)(
                                 "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
                               ),
@@ -2548,7 +2534,7 @@
           { data: o } = (0, j.js)(K.iA.steamid),
           [h, u] = s.useState(""),
           [d, g] = s.useState(!1),
-          [E, S] = s.useState(""),
+          [S, E] = s.useState(""),
           [C, I] = s.useState(!1);
         s.useEffect(
           () => () =>
@@ -2585,7 +2571,7 @@
                     a.GetEResult();
                   return (
                     console.error(t, !e.token.reason),
-                    void (e.token.reason || S(t))
+                    void (e.token.reason || E(t))
                   );
                 }
               } else {
@@ -2599,18 +2585,18 @@
                     (0, B.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     a?.data?.message;
-                  return console.error(t), void (e.token.reason || S(t));
+                  return console.error(t), void (e.token.reason || E(t));
                 }
               }
               e.token.reason ||
-                (I(!0), S((0, B.we)("#EventDisplay_Share_Success")));
+                (I(!0), E((0, B.we)("#EventDisplay_Share_Success")));
             } catch (t) {
               const n = (0, me.H)(t),
                 a =
                   (0, B.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
                   n.strErrorMsg;
-              e.token.reason || S(a), console.error(a);
+              e.token.reason || E(a), console.error(a);
             }
           };
         return d
@@ -2634,9 +2620,9 @@
                 s.createElement(
                   "div",
                   { className: ye().Container },
-                  0 == E?.length
+                  0 == S?.length
                     ? s.createElement(J.t, { position: "center" })
-                    : s.createElement("div", null, E),
+                    : s.createElement("div", null, S),
                   Boolean(C) &&
                     s.createElement(
                       "a",
@@ -2689,7 +2675,7 @@
                     s.createElement(
                       "div",
                       { className: (0, L.A)(G().FlexColumnContainer) },
-                      s.createElement(Se, {
+                      s.createElement(Ee, {
                         strPlaceholder: (0, B.we)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",
                         ),

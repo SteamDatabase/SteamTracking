@@ -588,24 +588,38 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Container: "_2DwHnbQk_PGfGThmz17qKu",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
+        RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
+        RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
+        RowSize4: "_3Q6EKKVEKVFpC_BW0FHOB_",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
+        RowSize1: "_1O__hioeAf860tvMTF75fa",
+        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
+        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
+        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
         JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
         JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
-        container: "_3efSO1GodU-7Xw80LAUHBa",
         Media: "_2NeNe0b0Hfv84zxtiUPGOj",
-        HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
+        HorizLeft: "_15yPdrODYckz6GdaJ9rSiB",
+        HorizRight: "_1NoPEFucA8Mn6QzdYU91dn",
+        HorizCenter: "_3ENovdddxiOpk6sHE5gc2R",
+        VertTop: "_1trckYA9kgtzVQCTezl1tk",
+        VertBottom: "_2idpsiFkYKLWO5a-EmxJvt",
+        VertCenter: "_3dmfdJa7A-xJX4OZroWSTk",
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
-        HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
-        VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
-        VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
         _: "_2XQ2s4PGGXTf-33SoML_Nn",
         _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        Left: "_3Bz6jMGpR_Vr3p7g3paBao",
+        Right: "_3KumxdhZbtSA8tvxSUkIoq",
+        Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
+        Description: "r3oaGi8Z4_MjYvdW_zsl5",
       };
     },
     chunkid: (module) => {
@@ -14653,19 +14667,13 @@
         var _;
         const [_, _] = _.useState(_ && _ ? 1 : 0),
           [_, _] = _.useState(!0),
-          { nCurrentAppID: _, nAppIDCount: _ } = (function (
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ) {
+          {
+            nCurrentAppID: _,
+            nAppIDCount: _,
+            bInitialLoad: _,
+          } = (function (_, _, _, _, _, _, _, _, _, _) {
             const _ = (0, _._)(),
+              [_, _] = _.useState(!0),
               [_, _] = _.useState([]),
               _ = (0, _._)(),
               _ = (0, _._)(),
@@ -14731,7 +14739,7 @@
                     );
                     await _._.Get().QueueMultipleAppRequests(_, _._);
                   }
-                  _((_ ?? []).concat(_));
+                  _((_ ?? []).concat(_)), _(!1);
                 };
                 _();
               }, [
@@ -14793,6 +14801,7 @@
             return {
               nCurrentAppID: _,
               nAppIDCount: _.length,
+              bInitialLoad: _,
             };
           })(_, _, _, _, _, __webpack_require__, _, _, _, _),
           _ = _ && _ === _,
@@ -14809,6 +14818,7 @@
           ),
           _ = _.useCallback((_) => _(_ + (_ ? 1 : -1)), [_, _]);
         if (_.enable_faceted_browsing) return;
+        if (!_ && 0 == _) return;
         const _ = _._(_, 0, _ - 1);
         return _.createElement(
           _._,
@@ -14939,7 +14949,10 @@
         _.useEffect(() => {
           _ || _ || !_ || (_(!1), _());
         }, [_, _, _, _]);
-        const _ = !_ && __webpack_require__ > 0;
+        const _ =
+          !_ &&
+          _ > 1 &&
+          (null == __webpack_require__ || __webpack_require__ > 0);
         let _;
         _
           ? (_ = 4)
@@ -14957,7 +14970,8 @@
             ? _.GetAppID()
             : _,
           _ = _ ? _ > 1 : _ > 0,
-          _ = _ ? _ > 1 : _ < _ - 1;
+          _ = _ ? _ > 1 : _ < _ - 1,
+          _ = _ && (_ || _);
         return _ && 1 != _ && 1 != _
           ? _.createElement(
               _._,
@@ -14997,12 +15011,12 @@
                     className: (0, _._)(_().VideoRow, "VideoRow"),
                   },
                   _ &&
-                    _ &&
                     _.createElement(
                       "button",
                       {
                         className: (0, _._)(_().NavButton, _().Left),
                         onClick: () => _(!1),
+                        disabled: !_,
                       },
                       _.createElement(_.uMb, {
                         fill: _,
@@ -15047,12 +15061,12 @@
                     }),
                   ),
                   _ &&
-                    _ &&
                     _.createElement(
                       "button",
                       {
                         className: (0, _._)(_().NavButton, _().Right),
                         onClick: () => _(!0),
+                        disabled: !_,
                       },
                       _.createElement(_.uMb, {
                         fill: _,
@@ -15626,11 +15640,11 @@
                   {
                     placeholderHeight: "100vh",
                     rootMargin: _._,
-                    className: (0, _._)(
-                      _.SaleSection,
-                      _().SaleSectionCtn,
-                      "ReservationCustomCSS",
-                    ),
+                    className: (0, _._)({
+                      [_.SaleSection]: !0,
+                      [_().SaleSectionCtn]: !0,
+                      ReservationCustomCSS: !0,
+                    }),
                     style: (0, _._)(_, _, _),
                   },
                   _.createElement(_._, {
@@ -24989,15 +25003,22 @@
       }
       function _(_) {
         const {
-          event: _,
-          section: __webpack_require__,
-          language: _,
-          row: _,
-        } = _;
+            event: _,
+            section: __webpack_require__,
+            language: _,
+            row: _,
+          } = _,
+          _ = (0, _._)(() => _.media_columns?.length || 0);
         return _.createElement(
           "div",
           {
-            className: _().MediaRow,
+            className: (0, _._)({
+              [_().MediaRow]: !0,
+              [_().RowSize1]: 1 == _,
+              [_().RowSize2]: 2 == _,
+              [_().RowSize3]: 3 == _,
+              [_().RowSize4]: 4 == _,
+            }),
           },
           _.media_columns?.map((_) =>
             _.createElement(_, {
@@ -25147,7 +25168,15 @@
           _.createElement(
             "div",
             {
-              className: _().Media,
+              className: (0, _._)({
+                [_().Media]: !0,
+                [_().HorizLeft]: _ == _.k_Left,
+                [_().HorizCenter]: !_ || _ == _.k_Center,
+                [_().HorizRight]: _ == _.k_Right,
+                [_().VertTop]: _ == _.k_Top,
+                [_().VertCenter]: !_ || _ == _.k_Center,
+                [_().VertBottom]: _ == _.k_Bottom,
+              }),
             },
             _.createElement(_, {
               media: _,
@@ -25177,7 +25206,15 @@
           _.createElement(
             "div",
             {
-              className: _().Media,
+              className: (0, _._)({
+                [_().Media]: !0,
+                [_().HorizLeft]: _ == _.k_Left,
+                [_().HorizCenter]: !_ || _ == _.k_Center,
+                [_().HorizRight]: _ == _.k_Right,
+                [_().VertTop]: _ == _.k_Top,
+                [_().VertCenter]: !_ || _ == _.k_Center,
+                [_().VertBottom]: _ == _.k_Bottom,
+              }),
             },
             _.createElement(_, {
               media: _,
@@ -25251,24 +25288,16 @@
           mediaVAlign: _,
         } = _;
         if (__webpack_require__ == _.k_MediaImage)
-          return _.image && 0 != _.image.trim().length
+          return _.image && 0 != _.image?.trim().length
             ? _.createElement("img", {
-                className: (0, _._)({
-                  [_().HorizLeft]: _ == _.k_Left,
-                  [_().HorizCenter]: !_ || _ == _.k_Center,
-                  [_().HorizRight]: _ == _.k_Right,
-                  [_().VertTop]: _ == _.k_Top,
-                  [_().VertCenter]: !_ || _ == _.k_Center,
-                  [_().VertBottom]: _ == _.k_Bottom,
-                }),
                 src: _.image,
               })
             : null;
         {
           const _ = [];
           return (!_.video_webm_src && !_.video_mp4_src) ||
-            (0 == _.video_webm_src.trim().length &&
-              0 == _.video_mp4_src.trim().length)
+            (0 == _.video_webm_src?.trim().length &&
+              0 == _.video_mp4_src?.trim().length)
             ? null
             : (_.video_webm_src &&
                 _.push({
@@ -25285,14 +25314,6 @@
                   sPoster: _.image,
                   rgVideoSources: _,
                 },
-                className: (0, _._)({
-                  [_().HorizLeft]: _ == _.k_Left,
-                  [_().HorizCenter]: !_ || _ == _.k_Center,
-                  [_().HorizRight]: _ == _.k_Right,
-                  [_().VertTop]: _ == _.k_Top,
-                  [_().VertCenter]: !_ || _ == _.k_Center,
-                  [_().VertBottom]: _ == _.k_Bottom,
-                }),
                 bAutoPlay: !0,
                 bControls: !1,
                 bLoop: !0,
@@ -25309,8 +25330,9 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
@@ -25319,6 +25341,7 @@
                   [_().Left]: !_ || _ == _.k_Left,
                   [_().Center]: _ == _.k_Center,
                   [_().Right]: _ == _.k_Right,
+                  [_().TemplateMediaTitle]: !0,
                 }),
               },
               _.createElement(_._, {
@@ -25328,8 +25351,11 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
+      }
+      const _ = "[p][/p]";
+      function _(_) {
+        return !_ || 0 == _.length || (_.length == _.length && _ == _);
       }
       function _(_) {
         const {
@@ -25341,8 +25367,9 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
@@ -25364,8 +25391,7 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
       }
       function _(_) {
         const {
@@ -25375,14 +25401,17 @@
             eTextAlign: _,
           } = _,
           _ = (0, _._)();
-        return __webpack_require__ && 0 != __webpack_require__.trim().length
-          ? _.createElement(
+        return _(__webpack_require__)
+          ? null
+          : _.createElement(
               "div",
               {
                 className: (0, _._)({
+                  [_().Description]: !0,
                   [_().Left]: !_ || _ == _.k_Left,
                   [_().Center]: _ == _.k_Center,
                   [_().Right]: _ == _.k_Right,
+                  [_().TemplateMediaDescription]: !0,
                 }),
               },
               _.createElement(_._, {
@@ -25392,8 +25421,7 @@
                 event: _,
                 languageOverride: _,
               }),
-            )
-          : null;
+            );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -25844,6 +25872,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      }
       function _(_, _, _) {
         if (_.disable_background && !_)
           return {
@@ -25862,8 +25893,7 @@
           _.border_width
           ? {
               background:
-                `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)` +
-                _,
+                _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
@@ -25884,7 +25914,10 @@
                 _.border_color ||
                 _.border_width
               ? {
-                  background: `linear-gradient(0deg, ${_.background_gradient_bottom || "transparent"} 0%, ${_.background_gradient_top || "transparent"} 100%)`,
+                  background: _(
+                    _.background_gradient_bottom,
+                    _.background_gradient_top,
+                  ),
                   backgroundRepeat: _.background_repeat,
                   outlineStyle:
                     _.border_color && _.border_width ? "solid" : void 0,

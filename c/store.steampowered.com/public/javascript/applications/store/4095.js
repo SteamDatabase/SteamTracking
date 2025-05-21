@@ -171,9 +171,10 @@
         LargeFormat: "_1090TwnnSh07Rya_5ss37E",
         CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
         SmallFormat: "_18tLexJfL4tGNabZ9Ywvlm",
+        MinimalDisplay: "ROZPQ29NfT-_S-vY5rMJp",
         DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
-        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
+        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
         CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
@@ -304,6 +305,7 @@
         SaleSection: "_1cOoCFwafBlSkwllIMf3XM",
         CarouselDisplay: "mntHD0WiARnsfz_kMYssq",
         SaleSectionCtn: "i2PTzRNXOK1OXvXb9-wzd",
+        NoTopPadding: "_28qZDRJ1HAArkoQZjlLJ09",
         SaleHeaderContainer: "W4mvnnQ0uYKKoCfVm8QgX",
         SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
@@ -11536,13 +11538,15 @@
           return 1 == _
             ? _.createElement(_, {
                 category:
-                  __webpack_require__.GetPlatforms().steam_deck_compat_category,
+                  __webpack_require__.GetPlatforms()
+                    ?.steam_deck_compat_category ?? 0,
                 className: _,
               })
             : 2 == _
               ? _.createElement(_, {
                   category:
-                    __webpack_require__.GetPlatforms().steam_os_compat_category,
+                    __webpack_require__.GetPlatforms()
+                      ?.steam_os_compat_category ?? 0,
                   className: _,
                 })
               : null;
@@ -13943,7 +13947,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13962,12 +13965,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _.map((_) => {
+        return _?.map((_) => {
           const _ = _._[_];
           return {
             sKey: _,
-            nWidth: _.width,
-            nHeight: _.height,
+            width: _.width,
+            height: _.height,
             bEnforceDimensions: !_.bDisableEnforceDimensions,
             artworkType: _,
             bHiddenFromDropdown: "hero" === _,
@@ -13979,30 +13982,18 @@
           };
         });
       }
-      function _(_) {
-        return (_, _, _) => {
-          if (!_ || 0 == _.length) return;
-          const _ = (0, _._)(
-            _,
-            _?.map((_) => _.artworkType),
-          );
-          let _ = (0, _._)(_, _, _, !1);
-          if ((void 0 === _ && (_ = (0, _._)(_, _, _, !0)), _)) {
-            const _ = _.find((_) => _.artworkType == _);
-            if (_) return _;
-          }
-          return _[0];
-        };
-      }
       class _ {
         m_filesToUpload = _._.array();
         m_filesCompleted = [];
         m_clanSteamID;
+        m_rgImageOptions;
         m_allCancelTokens = new Array();
         m_lastError = void 0;
         m_fnSetImageURL = null;
-        constructor(_) {
-          (0, _._)(this), (this.m_clanSteamID = _);
+        constructor(_, _) {
+          (0, _._)(this),
+            (this.m_clanSteamID = _),
+            (this.m_rgImageOptions = _(_));
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -14010,11 +14001,11 @@
         SetImageAllUrlFunction(_) {
           this.m_fnSetImageURL = _;
         }
-        async AddImage(_, _ = 0, _, _) {
-          const _ = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, _, _, _);
+        async AddImage(_, _ = 0, _) {
+          const { language: _ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, _, _);
         }
-        async AddImageForLanguage(_, _, _, _) {
+        async AddImageForLanguage(_, _, _) {
           let _ = !1;
           return (
             await new Promise((_) => {
@@ -14025,14 +14016,14 @@
                 !_._.is_support || ("webm" != _ && "mp4" != _)
                   ? ((_ = new Image()),
                     (_.onload = () => {
-                      const _ = new _._(_, _, _, _(_), _);
+                      const _ = new _._(_, _, this.m_rgImageOptions, _, _);
                       (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                         (_ = !0),
                         _();
                     }))
                   : ((_ = document.createElement("video")),
                     (_.onloadeddata = () => {
-                      const _ = new _._(_, _, _, _(_), _);
+                      const _ = new _._(_, _, this.m_rgImageOptions, _, _);
                       (this.m_filesToUpload = [...this.m_filesToUpload, _]),
                         (_ = !0),
                         _();
@@ -14052,7 +14043,7 @@
             _
           );
         }
-        async AddExistingClanImage(_, _ = 0, _, _) {
+        async AddExistingClanImage(_, _ = 0, _) {
           let _ = _._.GetHashAndExt(_),
             _ = _._.GenerateEditableArtworkURLFromHashAndExtension(
               this.m_clanSteamID,
@@ -14064,7 +14055,7 @@
               responseType: "blob",
             }),
             _ = (0, _._)(_.data, _.file_name);
-          return await this.AddImage(_, _, _, _);
+          return await this.AddImage(_, _, _);
         }
         DeleteUploadImageByIndex(_) {
           this.m_filesToUpload.splice(_, 1),
@@ -14109,11 +14100,11 @@
         BIsFileCompleted(_) {
           return -1 != this.m_filesCompleted.indexOf(_);
         }
-        async UploadAllImages(_, _, _, _, _) {
+        async UploadAllImages(_, _, _, _) {
           const _ = {};
           for (let _ of this.m_filesToUpload)
             if (!this.BIsFileCompleted(_.file)) {
-              const _ = _.IsValidAssetType(_, _, _);
+              const _ = _.IsValidAssetType(_, _);
               if (_.error || _.needsCrop)
                 _.error &&
                   (this.m_lastError = {
@@ -14156,7 +14147,11 @@
                     );
                     if (_) {
                       const _ = (0, _._)(_.language, _, _);
-                      this.m_fnSetImageURL(_.type.artworkType, _, _);
+                      this.m_fnSetImageURL(
+                        _.GetCurrentImageOption().artworkType,
+                        _,
+                        _,
+                      );
                     }
                   }
             }),
@@ -14256,8 +14251,16 @@
           );
         }
       }
-      function _(_) {
-        return _.useMemo(() => new _(_), [_.ConvertTo64BitString()]);
+      function _(_, _) {
+        const _ = (function (_) {
+            const _ = _.useRef(_);
+            (_.current.length !== _.length ||
+              _.current.some((_, _) => _ !== _[_])) &&
+              (_.current = _);
+            return _.current;
+          })(_ instanceof Array ? _ : [_]),
+          _ = _.ConvertTo64BitString();
+        return _.useMemo(() => new _(_, _), [_, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
@@ -14285,21 +14288,19 @@
         dataUrl = void 0;
         width = void 0;
         height = void 0;
-        type = void 0;
         status = void 0;
         message = void 0;
-        language;
+        language = void 0;
         file;
         uploadTime;
         fileType = 0;
-        constructor(_, _, _, _, _, _) {
+        constructor(_, _, _, _, _) {
           (0, _._)(this),
             (this.file = _),
             (this.fileType = _._.GetExtensionTypeFromURL(_.name)),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            (this.type = __webpack_require__?.(this.fileType, _, _)),
             (this.height = _),
             (this.width = _),
             (this.dataUrl = _);
@@ -14308,9 +14309,9 @@
       (0, _._)([_._], _.prototype, "dataUrl", void 0),
         (0, _._)([_._], _.prototype, "width", void 0),
         (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "type", void 0),
         (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0);
+        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._], _.prototype, "language", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 960,
@@ -14318,18 +14319,24 @@
         _ = 480,
         _ = 156;
       class _ extends _ {
+        m_rgImageOptions;
+        m_currentType = void 0;
         constructor(_, _, _, _, _, _) {
-          super(_, _, _, _, _, _);
+          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
         }
-        IsValidAssetType(_, _, _) {
+        IsValidAssetType(_, _) {
           let _ = 0,
             _ = 0,
             _ = !1,
             _ =
-              !_ || 0 === _.length || _.some((_) => _.sKey == this.type?.sKey);
+              !this.m_rgImageOptions ||
+              0 === this.m_rgImageOptions.length ||
+              this.m_rgImageOptions.some(
+                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
+              );
           if (_) (_ = _.width), (_ = _.height), (_ = !0);
-          else if (this.type) {
-            const _ = _._[this.type.artworkType];
+          else if (this.GetCurrentImageOption()) {
+            const _ = _._[this.GetCurrentImageOption().artworkType];
             _ &&
               ((_ = _.width),
               (_ = _.height),
@@ -14339,10 +14346,12 @@
             _ = _ ? this.width === _ && this.height === _ : _,
             _ = _ && _ != this.fileType,
             _ =
-              !!(_ && _.length > 0) &&
+              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
               0 ==
-                (0, _._)(this.fileType, _?.map((_) => _.artworkType) || [])
-                  .length,
+                (0, _._)(
+                  this.fileType,
+                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
+                ).length,
             _ = Boolean((0, _._)(this.fileType));
           let _ = "",
             _ = !1;
@@ -14364,11 +14373,40 @@
             {
               error: _,
               needsCrop: _,
-              match: this.type,
+              match: this.GetCurrentImageOption(),
             }
           );
         }
+        BSupportsLanguages() {
+          return !0;
+        }
+        ComputeDefaultImageOption() {
+          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
+            return;
+          const _ = (0, _._)(
+            this.fileType,
+            this.m_rgImageOptions?.map((_) => _.artworkType),
+          );
+          let _ = (0, _._)(this.width, this.height, _, !1);
+          if (
+            (void 0 === _ && (_ = (0, _._)(this.width, this.height, _, !0)), _)
+          ) {
+            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
+            if (_) return _;
+          }
+          return this.m_rgImageOptions[0];
+        }
+        get ImageOptions() {
+          return this.m_rgImageOptions;
+        }
+        GetCurrentImageOption() {
+          return this.m_currentType ?? this.ComputeDefaultImageOption();
+        }
+        SetCurrentImageOption(_) {
+          this.m_currentType = _;
+        }
       }
+      (0, _._)([_._], _.prototype, "m_currentType", void 0);
       class _ extends _ {
         video;
         constructor(_, _, _, _) {
@@ -14443,7 +14481,7 @@
           return _._.includes(this.fileType);
         }
         GetResizeDimension() {
-          return _(this.type?.artworkType);
+          return _(this.GetCurrentImageOption()?.artworkType);
         }
       }
       function _(_) {
@@ -14485,7 +14523,7 @@
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function _(_, _ = 0) {
+      function _(_, _ = 0, __webpack_require__ = !0) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
@@ -14494,11 +14532,21 @@
         for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           if (_.length <= _) continue;
-          _.endsWith(_) && ((_ = _), (_ = _.length));
+          if (_.endsWith(_)) {
+            let _ = !__webpack_require__;
+            if (__webpack_require__ && _.length > _.length + 2) {
+              const _ = _[_.length - _.length - 1];
+              _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
+            }
+            _ && ((_ = _), (_ = _.length));
+          }
           const _ = (0, _._)(_);
           _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
         }
-        return _ || _;
+        return {
+          language: _ ?? _,
+          baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
+        };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -14899,7 +14947,7 @@
                 err_msg: _,
               })
             );
-          let _ = new _._(_),
+          let _ = new _._(_, null),
             _ = await _.UploadFile({
               uploadFile: _,
               filename: _,
@@ -31289,6 +31337,7 @@
               width: void 0 !== _.width ? String(_.width) : void 0,
               height: void 0 !== _.height ? String(_.height) : void 0,
               videoId: _.video,
+              host: "https://www.youtube-nocookie.com",
               playerVars: {
                 autoplay: _,
                 showinfo: _,
@@ -31463,11 +31512,13 @@
         }
         GetDestWidth() {
           const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.width : _._[_.type.artworkType].width;
+          return _ ? _.width : _._[_.GetCurrentImageOption().artworkType].width;
         }
         GetDestHeight() {
           const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.height : _._[_.type.artworkType].height;
+          return _
+            ? _.height
+            : _._[_.GetCurrentImageOption().artworkType].height;
         }
         GetLargestBoxThatFits(_, _, _, _) {
           let _ = _,

@@ -6015,7 +6015,9 @@
                 (null === (_ = _.dataTransfer.files) || void 0 === _
                   ? void 0
                   : _.length) &&
-                  (_(_.dataTransfer.files, _), _.preventDefault()),
+                  (_(_.dataTransfer.files, _),
+                  _.preventDefault(),
+                  _.stopPropagation()),
                   __webpack_require__(!1);
               },
               [_],

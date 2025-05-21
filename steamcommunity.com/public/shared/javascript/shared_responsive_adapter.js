@@ -211,7 +211,7 @@ jQuery( function($) {
 		g_fnActivateLocalMenu = LocalMenuEvents.fnActivateMenu;
 
 		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
-			var bShouldUseResponsiveMenu = UseSmallScreenMode();
+			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseTabletScreenMode(); 
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
 			{
 				if ( bShouldUseResponsiveMenu )

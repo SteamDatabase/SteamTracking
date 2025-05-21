@@ -444,6 +444,7 @@
           ? a.createElement(
               a.Fragment,
               null,
+              a.createElement("br", null),
               a.createElement(
                 "h4",
                 null,

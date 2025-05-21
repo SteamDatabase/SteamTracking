@@ -15457,7 +15457,10 @@
                 a,
               ),
             },
-            o.createElement(zi.$0s, { className: Ti().SVGNotifications }),
+            o.createElement(zi.$0s, {
+              className: Ti().SVGNotifications,
+              "aria-label": (0, yr.we)("#NotificationsMenu_Title"),
+            }),
           ),
         );
       }

@@ -31,32 +31,52 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
-// Apply verified and playable totals to the filter checkbox text
-function PopulateDeckCompatFacetData( rgCompatFacetData, bIncludeParens )
+// Apply verified and playable totals to the filter checkbox text.  If bSteamOS is true show SteamOS compatibility instead.
+function PopulateHWCompatFacetData( rgCompatFacetData, rgSteamOSFacetData, bIncludeParens, bSteamOS )
 {
 	let $Container = $J('#deck_compatibility_search_filter');
-	let $Verified = $Container.find( '.tab_filter_control_row[data-value=' + 3 + ']');
-	let $Playable = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']');
-	let nVerified = -1;
-	let nPlayable = -1;
 
-	for ( var i = 0; i < rgCompatFacetData.length; i++ )
+	if ( bSteamOS )
 	{
-		if ( rgCompatFacetData[i][0] == 3 )
-			nVerified = rgCompatFacetData[i][1];
-		else if ( rgCompatFacetData[i][0] == 2 )
-			nPlayable = rgCompatFacetData[i][1];
+		let $Compatible = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']'); 
+		let nCompatible = -1;
+
+		for ( var i = 0; i < rgSteamOSFacetData.length; i++ )
+		{
+			if ( rgSteamOSFacetData[i][0] == 2 )
+				nCompatible = rgSteamOSFacetData[i][1];
+		}
+
+		if ( nCompatible == -1 )
+			$Compatible.find('.tab_filter_control_count').css( {display: 'none' } );
+		else 
+			$Compatible.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nCompatible ) + ")" : v_numberformat( nCompatible ) ).css( {display: '' } ); 
 	}
+	else // Show Deck Verified
+	{
+		let $Verified = $Container.find( '.tab_filter_control_row[data-value=' + 3 + ']');
+		let $Playable = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']');
+		let nVerified = -1;
+		let nPlayable = -1;
 
-	if ( nVerified == -1 )
-		$Verified.find('.tab_filter_control_count').css( {display: 'none' } );
-	else 
-		$Verified.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nVerified ) + ")" : v_numberformat( nVerified ) ).css( {display: '' } ); 
+		for ( var i = 0; i < rgCompatFacetData.length; i++ )
+		{
+			if ( rgCompatFacetData[i][0] == 3 )
+				nVerified = rgCompatFacetData[i][1];
+			else if ( rgCompatFacetData[i][0] == 2 )
+				nPlayable = rgCompatFacetData[i][1];
+		}
 
-	if ( nPlayable == -1 )
-		$Playable.find('.tab_filter_control_count').css( {display: 'none' } );
-	else 
-		$Playable.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nPlayable ) + ")" : v_numberformat( nPlayable ) ).css( {display: '' } ); 
+		if ( nVerified == -1 )
+			$Verified.find('.tab_filter_control_count').css( {display: 'none' } );
+		else 
+			$Verified.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nVerified ) + ")" : v_numberformat( nVerified ) ).css( {display: '' } ); 
+
+		if ( nPlayable == -1 )
+			$Playable.find('.tab_filter_control_count').css( {display: 'none' } );
+		else 
+			$Playable.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nPlayable ) + ")" : v_numberformat( nPlayable ) ).css( {display: '' } ); 
+	}
 }
 
 // This sorts our tags by frequency (tag facet) or explicitly (forced top)

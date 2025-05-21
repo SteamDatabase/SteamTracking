@@ -93,7 +93,12 @@
 ._1A7NagdRz58_o8HPHMa3eE {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2%;
+  padding: 0 58px;
+}
+@media screen and (max-width: 851px) {
+  ._1A7NagdRz58_o8HPHMa3eE {
+    padding: 0 2%;
+  }
 }
 ._3XI-CAps_XOBY4D5L-KYLK {
   background: linear-gradient(
@@ -707,7 +712,6 @@ div#global_header .content {
   top: 0;
   left: 0;
   width: 200px;
-  height: 100vh;
   margin-right: 30px;
   padding-top: 94px;
   overflow: hidden;
@@ -2773,7 +2777,12 @@ td.rdtYear:hover {
 ._2txZN03Rksb3SHqYeOt75B {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2%;
+  padding: 0 58px;
+}
+@media screen and (max-width: 851px) {
+  ._2txZN03Rksb3SHqYeOt75B {
+    padding: 0 2%;
+  }
 }
 ._13Wagx1HQxyCivWU2ZGU5o {
   background: linear-gradient(

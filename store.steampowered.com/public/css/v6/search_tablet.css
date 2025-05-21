@@ -537,7 +537,8 @@ html.tablet #deck_compatibility_search_filter .block_header {
 	transition: unset;
 }
 
-html.tablet #narrow_deck_compatibility {
+html.tablet #narrow_deck_compatibility,
+html.tablet #narrow_steamos_compatibility {
 	display: inline-flex;
 	align-items: center;
 	column-gap: 8px;
@@ -565,32 +566,39 @@ html.tablet #deck_compat_learn_more_btn.gpfocus {
 	border-radius: 0px;
 }
 
-/* Deck check controlls */
-html.tablet #narrow_deck_compatibility .tab_filter_control {
+/* Deck and SteamOS check controlls */
+html.tablet #narrow_deck_compatibility .tab_filter_control,
+html.tablet #narrow_steamos_compatibility .tab_filter_control {
 	padding: 6px 8px;
 }
 
-html.tablet #narrow_deck_compatibility .tab_filter_control_row {
+html.tablet #narrow_deck_compatibility .tab_filter_control_row,
+html.tablet #narrow_steamos_compatibility .tab_filter_control_row {
 	border-radius: var(--gpCorner-Medium);
 	transition: background-color 0.2s ease;
 }
 
-html.tablet #narrow_deck_compatibility .tab_filter_control_row.checked {
+html.tablet #narrow_deck_compatibility .tab_filter_control_row.checked,
+html.tablet #narrow_steamos_compatibility .tab_filter_control_row.checked {
 	background-color: var(--gpBackground-LightMedium);
 }
 
 html.tablet #narrow_deck_compatibility .tab_filter_control_row:hover,
-html.tablet #narrow_deck_compatibility .tab_filter_control.gpfocus {
+html.tablet #narrow_deck_compatibility .tab_filter_control.gpfocus,
+html.tablet #narrow_steamos_compatibility .tab_filter_control_row:hover,
+html.tablet #narrow_steamos_compatibility .tab_filter_control.gpfocus {
 	background-color: var(--gpBackground-LightSoft);
 }
 
-html.tablet #narrow_deck_compatibility .tab_filter_control span {
+html.tablet #narrow_deck_compatibility .tab_filter_control span,
+html.tablet #narrow_steamos_compatibility .tab_filter_control span {
 	display: flex;
 	align-items: center;
 }
 
-/* Explicitly assign background image icon for Verified and Payable */
-html.tablet #narrow_deck_compatibility .tab_filter_control_label {
+/* Explicitly assign background image icon for Verified, Payable, and SteamOS Compatible */
+html.tablet #narrow_deck_compatibility .tab_filter_control_label,
+html.tablet #narrow_steamos_compatibility .tab_filter_control_label {
 	background-repeat: no-repeat;
 	padding-right: 26px;
 	display: flex;
@@ -604,6 +612,10 @@ html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(2) .tab
 
 html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(3) .tab_filter_control_label {
 	background-image: url('/public/shared/images/ico/ico-deck-playable.svg');
+}
+
+html.tablet #narrow_steamos_compatibility .tab_filter_control_row:nth-child(2) .tab_filter_control_label {
+	background-image: url('/public/shared/images/ico/ico-steamos-compatible.svg');
 }
 
 

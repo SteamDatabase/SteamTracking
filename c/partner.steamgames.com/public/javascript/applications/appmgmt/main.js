@@ -4882,13 +4882,15 @@
         let [_, _, _] = _(_, _),
           [_, _, _] = _(_, _),
           [_, _] = _(_, _);
-        return _ < _ && _ > _
-          ? 0
-          : (_ < _ && _ <= _) || (_ > _ && _ > _)
-            ? _ - _ - _
-            : (_ < _ && _ > _) || (_ > _ && _ <= _)
-              ? _ - _ + _
-              : 0;
+        if (_ < _ && _ > _) return 0;
+        const _ = _ - _,
+          _ = _ + _,
+          _ = _ > _;
+        return (_ < _ && !_) || (_ > _ && _)
+          ? _ - _
+          : (_ < _ && _) || (_ > _ && !_)
+            ? _ - _
+            : 0;
       }
       function _(_) {
         return "auto" == _
@@ -5740,11 +5742,19 @@
                     ("y" == _ ? _.innerHeight : _.innerWidth) /
                     (_ ? 4.5 : 3.33),
                   _ = _(_.Element);
+                let _ = !1;
                 if (
-                  (_.top > _.innerHeight && _.bottom > _.innerHeight + _) ||
-                  (_.bottom < 0 && _.top < -_) ||
-                  (_.left > _.innerWidth && _.right > _.innerWidth + _) ||
-                  (_.right < 0 && _.left < -_)
+                  ("y" == _
+                    ? _ == _.FORWARD
+                      ? (_ =
+                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                    : "x" == _ &&
+                      (_ == _.FORWARD
+                        ? (_ =
+                            _.left > _.innerWidth && _.right > _.innerWidth + _)
+                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                  _)
                 )
                   return (
                     _(`Element too far away, scrolling ${_} on ${_} axis `),
@@ -5958,15 +5968,33 @@
             (function (_, _) {
               const _ = _.Element;
               if (!_) return;
-              let _ = [_];
+              let _ = [
+                {
+                  node: _,
+                  eScrollType: _.m_Properties?.scrollIntoViewType,
+                },
+              ];
               for (let _ = _.Parent; _; _ = _.Parent) {
-                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused;
-                "force" === _ ? (_ = [_]) : _ && _.push(_);
+                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+                  _ = _.m_Properties?.scrollIntoViewType;
+                if (_) {
+                  const _ = {
+                    node: _,
+                    eScrollType: _,
+                  };
+                  "force" === _ ? (_ = [_]) : _.push(_);
+                }
+                if (void 0 !== _)
+                  for (
+                    let _ = _.length - 1;
+                    _ >= 0 && void 0 === _[_].eScrollType;
+                    _--
+                  )
+                    _[_].eScrollType = _;
               }
               for (; _.length; ) {
-                let _ = _.pop(),
-                  _ = 0 == _.length,
-                  _ = _?.m_Properties?.scrollIntoViewType;
+                let { node: _, eScrollType: _ } = _.pop(),
+                  _ = 0 == _.length;
                 if (
                   (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
                   _?.m_Properties?.fnScrollIntoViewHandler &&
@@ -5979,11 +6007,16 @@
                 if (_) {
                   const _ = _ ? _(_) : _.getBoundingClientRect();
                   let _ = !1;
-                  const _ = Math.max(1.4 * (_.bottom - _.top), 40);
-                  ((_ && performance.now() - _ < 500) ||
+                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                    _ = _ && performance.now() - _ < 500;
+                  (_ ||
                     _.bottom < -_ ||
-                    _.top > window.innerHeight + _) &&
-                    (_ = !0);
+                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                    ((_ = !0),
+                    _ ||
+                      _(
+                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                      ));
                   let _ = _ ? "auto" : "smooth";
                   _ && (_ = performance.now()),
                     _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
@@ -5994,13 +6027,14 @@
                           block: "nearest",
                         });
                 } else
-                  _
-                    ? _(0, _, "auto")
-                    : _?.scrollIntoView({
-                        behavior: "auto",
-                        block: "nearest",
-                        inline: "nearest",
-                      });
+                  _("No previous element for scrolling, will jump"),
+                    _
+                      ? _(0, _, "auto")
+                      : _?.scrollIntoView({
+                          behavior: "auto",
+                          block: "nearest",
+                          inline: "nearest",
+                        });
               }
             })(this, _),
             this.m_Tree.OnChildActivated(_);
@@ -32072,6 +32106,7 @@
         _: () => _,
         qcc: () => _,
         qnF: () => _,
+        qzq: () => _,
         rNt: () => _,
         rfv: () => _,
         sDU: () => _,
@@ -33104,6 +33139,27 @@
             null,
             _.createElement("path", {
               _: "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
+            }),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            _: "Layer_5",
+            className: "SVGIcon_Button SVGIcon_Globe",
+            xmlns: "http://www.w3.org/2000/svg",
+            _: "0px",
+            _: "0px",
+            viewBox: "0 0 64 64",
+          },
+          _.createElement(
+            "g",
+            null,
+            _.createElement("path", {
+              _: "M32.5,5C17.9,5,6,16.9,6,31.5C6,46.1,17.9,58,32.5,58S59,46.1,59,31.5C59,16.9,47.1,5,32.5,5 M32.5,54.7c-1.2,0-2.5-0.1-3.7-0.3c-1.1-1.1-2.1-2.8-3-4.8c-0.8-1.8-1.4-3.8-2-6c2.7-0.3,5.6-0.5,8.6-0.5c3,0,5.9,0.2,8.6,0.5c-0.5,2.2-1.2,4.2-2,6c-0.9,2-1.9,3.7-3,4.8C35,54.6,33.7,54.7,32.5,54.7 M32.5,41.4c-3.2,0-6.2,0.2-9,0.5c-0.6-3-0.9-6.2-1-9.6h19.9c0,3.4-0.4,6.6-1,9.6C38.7,41.6,35.7,41.4,32.5,41.4 M32.5,8.3c1.2,0,2.5,0.1,3.7,0.3c1.1,1.1,2.1,2.8,3,4.8c0.8,1.8,1.4,3.8,2,6c-2.7,0.3-5.6,0.5-8.6,0.5c-3,0-5.9-0.2-8.6-0.5c0.5-2.2,1.2-4.2,2-6c0.9-2,1.9-3.7,3-4.8C30,8.4,31.3,8.3,32.5,8.3 M32.5,21.6c3.2,0,6.2-0.2,9-0.5c0.6,3,0.9,6.2,1,9.6H22.6c0-3.4,0.4-6.6,1-9.6C26.3,21.4,29.3,21.6,32.5,21.6 M44.1,30.7c0-3.5-0.4-6.8-1-9.8c3.4-0.5,6.4-1.1,8.8-2c2.3,3.5,3.6,7.5,3.7,11.8H44.1z M20.9,30.7H9.3c0.1-4.2,1.4-8.3,3.7-11.8c2.5,0.8,5.5,1.5,8.8,2C21.3,23.9,21,27.2,20.9,30.7 M20.9,32.3c0,3.5,0.4,6.8,1,9.8c-3.4,0.5-6.4,1.1-8.8,2c-2.3-3.5-3.6-7.5-3.7-11.8H20.9z M44.1,32.3h11.6c-0.1,4.2-1.4,8.3-3.7,11.8c-2.5-0.8-5.5-1.5-8.8-2C43.7,39.1,44,35.8,44.1,32.3 M51,17.5c-0.1,0-0.2,0.1-0.3,0.1c-2.3,0.7-5,1.3-7.9,1.7c-0.9-4.1-2.3-7.6-4-10.1c3.8,1.1,7.3,3.1,10.2,5.9C49.6,15.9,50.3,16.6,51,17.5 M26.3,9.2c-1.7,2.5-3.1,6-4,10.1c-2.9-0.4-5.6-1-7.9-1.7c-0.1,0-0.2-0.1-0.3-0.1c0.6-0.8,1.3-1.6,2.1-2.4C19,12.2,22.5,10.2,26.3,9.2 M14,45.5c0.1,0,0.2-0.1,0.3-0.1c2.3-0.7,5-1.3,7.9-1.7c0.9,4.1,2.3,7.6,4,10.1c-3.8-1.1-7.3-3.1-10.2-5.9C15.4,47.1,14.7,46.4,14,45.5 M38.7,53.8c1.7-2.5,3.1-6,4-10.1c2.9,0.4,5.6,1,7.9,1.7c0.1,0,0.2,0.1,0.3,0.1c-0.6,0.8-1.3,1.6-2.1,2.4C46,50.8,42.5,52.8,38.7,53.8",
             }),
           ),
         );
@@ -35275,9 +35331,13 @@
           },
           [_, _] = _.useState(!1),
           [_, _] = _.useState(),
-          _ = _.useCallback((_) => {
-            _(!0), _(_.currentTarget);
-          }, []),
+          _ = _.useCallback(
+            (_) => {
+              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
+                (_(!0), _(_.currentTarget));
+            },
+            [_],
+          ),
           _ = _.useCallback(() => {
             _(!1);
           }, []),

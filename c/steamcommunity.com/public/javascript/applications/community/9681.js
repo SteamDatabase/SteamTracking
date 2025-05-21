@@ -468,7 +468,7 @@
           _ = _.useCallback(
             async (_) => {
               const _ = _.GetClanSteamID(),
-                _ = new _._(_);
+                _ = new _._(_, null);
               if (!(await _.AddImage(_, _.GetCurEditLanguage(), null)))
                 throw "Error processing image upload";
               const _ = await _.UploadAllImages(

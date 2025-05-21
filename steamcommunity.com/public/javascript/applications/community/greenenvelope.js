@@ -39,8 +39,8 @@
         r = i(90626),
         s = i(68950),
         l = i(60011),
-        c = i(23809),
-        a = i(88997),
+        a = i(23809),
+        c = i(88997),
         m = i(23854),
         u = i(4869),
         d = i(12155),
@@ -58,7 +58,7 @@
           r.useEffect(() => {
             i && !b.m_bLoaded && b.ProcessNewNotificationPayload(i);
           }, [i]);
-          const o = (0, c.KV)();
+          const o = (0, a.KV)();
           (0, r.useEffect)(() => {
             b.setTransport(o),
               (window.RefreshSteamNotifications = () =>
@@ -112,7 +112,7 @@
           [o, s] = r.useState(N().AnimateBell);
         r.useEffect(() => {
           i.current ||
-            ((i.current = (0, a.lX)(
+            ((i.current = (0, c.lX)(
               r.createElement(w, { popupRef: i }),
               document.getElementById("green_envelope_menu_root"),
               {
@@ -160,7 +160,10 @@
                 o,
               ),
             },
-            r.createElement(u.$0s, { className: N().SVGNotifications }),
+            r.createElement(u.$0s, {
+              className: N().SVGNotifications,
+              "aria-label": (0, _.we)("#NotificationsMenu_Title"),
+            }),
           ),
         );
       }

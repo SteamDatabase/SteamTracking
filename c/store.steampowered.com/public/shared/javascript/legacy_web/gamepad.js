@@ -130,7 +130,7 @@
       }
       function _(_) {
         const _ = _.currentTarget;
-        if (!_._(_)) return !1;
+        if (_.defaultPrevented || !_._(_)) return !1;
         const _ = _.detail.is_repeat ? 4.5 : 3.33,
           _ = "smooth",
           _ = _.ownerDocument,
@@ -522,6 +522,8 @@
           _ &&
             (!1 !== _.focusable && (_.focusable = !0),
             _._("vgp_onok", "firstChild" === _ ? _ : _),
+            _.attr("role") ||
+              ("A" !== _.prop("tagName") && _.attr("role", "button")),
             _(_, () => {
               _.off("vgp_onok");
             })),

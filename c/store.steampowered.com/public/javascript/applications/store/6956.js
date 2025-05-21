@@ -73,7 +73,7 @@
             bSmallFormat: _,
             bHideFollowButton: _,
             bAddLinkToMemberList: _,
-            bVerticalDisplay: _,
+            bMinimalDisplay: _,
           } = _,
           _ = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
@@ -112,6 +112,7 @@
                 className: (0, _._)(
                   _.DevSummaryCtn,
                   _ ? _.SmallFormat : _.LargeFormat,
+                  _ ? _.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },

@@ -497,12 +497,12 @@ a.contentsLink.updated::after {
 
 /* Do not use :not() on this selector, It will end up more specific than other selectors. */
 input, select , textarea, button, .likeButton {
-	background-color:#565658;
+	background-color:#33383d;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 			color:#e1e1e1;
-	font-size:13px;
+	font-size:14px;
 	border: 1px #262627 solid;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #39393a;

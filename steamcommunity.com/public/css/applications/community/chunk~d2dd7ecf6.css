@@ -2140,3 +2140,28 @@ strong {
   padding-top: 3px;
   padding-right: 5px;
 }
+._2hloqzkRkAWkw50l4XPN-N {
+  display: block;
+  background: linear-gradient(to right, #6ea720 5%, #598b1c 95%);
+  color: #fff;
+  border-radius: 2px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px;
+}
+._2hloqzkRkAWkw50l4XPN-N._3xoBR2gVk2F0Bmejh20Yhl {
+  background: linear-gradient(to right, #6ea720 5%, #ded70e 95%);
+}
+._2hloqzkRkAWkw50l4XPN-N._1bg505mDp3agK0eHP0NoxI {
+  background: linear-gradient(to right, #6ea720 5%, #b41414 95%);
+  animation: _3oWE-wt1PQ7Rv2IJ0vCmO 1.2s infinite ease-in-out;
+}
+@keyframes _3oWE-wt1PQ7Rv2IJ0vCmO {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+}

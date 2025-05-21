@@ -271,9 +271,9 @@
         k = n(14336),
         M = n(76217),
         U = n(91675),
-        H = n(14771),
-        b = n(93761),
-        B = n.n(b);
+        b = n(14771),
+        H = n(93761),
+        B = n.n(H);
       const D = !0;
       function P(e) {
         let { onActivate: t, icon: n, body: i, eUIMode: o, classNames: l } = e,
@@ -466,7 +466,7 @@
           n = new Date(1e3 * e.timestamp),
           i = (0, U.KC)(e.timestamp);
         return (
-          (0, H.JD)(t, n) || (i = (0, U._l)(e.timestamp, !1, !1, !1) + " " + i),
+          (0, b.JD)(t, n) || (i = (0, U._l)(e.timestamp, !1, !1, !1) + " " + i),
           a.createElement("div", { className: B().Timestamp }, i)
         );
       }
@@ -474,7 +474,7 @@
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           n = new Date(1e3 * e.timestamp),
-          i = (0, H.JD)(t, n)
+          i = (0, b.JD)(t, n)
             ? (0, U.KC)(e.timestamp)
             : (0, U._l)(e.timestamp, !1, !1, !1);
         return a.createElement("div", { className: B().Timestamp }, i);
@@ -1028,23 +1028,23 @@
               )
             : a.createElement(Y, null, '"', y, '"');
         let U = (0, p.we)("#SteamNotifications_Comment"),
-          H = null;
+          b = null;
         if (void 0 !== f && f > 1) {
           const e = "+" + (f - 1);
           4 == c
-            ? (H = a.createElement(
+            ? (b = a.createElement(
                 "div",
                 { className: $().AllNotificationsCommentPlus },
                 e,
               ))
             : (U = U + " " + e);
         }
-        let b = n;
+        let H = n;
         if (!A) {
           const e = T ? $().ShortLogoDimensions : $().StandardLogoDimensions;
           if (o && (0, s.n8)(r)) {
             const t = r.bhas_friend && 1 != c;
-            b = a.createElement(
+            H = a.createElement(
               "div",
               { style: { position: "relative" } },
               t && a.createElement(u.GSe, { className: $().FriendIndicator }),
@@ -1052,7 +1052,7 @@
             );
           } else
             L?.avatar_medium_url &&
-              (b = a.createElement("img", {
+              (H = a.createElement("img", {
                 className: e,
                 src: L.avatar_medium_url,
                 onError: w,
@@ -1061,7 +1061,7 @@
         return T
           ? a.createElement(V, {
               ...e,
-              logo: b,
+              logo: H,
               icon: e.icon,
               title: U,
               body: S,
@@ -1071,7 +1071,7 @@
               null,
               a.createElement(
                 R,
-                { logo: b, ...e },
+                { logo: H, ...e },
                 a.createElement(O, {
                   icon: m,
                   title: U,
@@ -1081,7 +1081,7 @@
                 }),
                 a.createElement(q, null, S),
                 M,
-                H,
+                b,
                 g ? a.createElement(ue, { onHide: g }) : null,
               ),
             );
@@ -1760,7 +1760,7 @@
                 a.Fragment,
                 null,
                 a.createElement(Ce, null),
-                a.createElement(be, null),
+                a.createElement(He, null),
               )
             : a.createElement(Me, { nTotalUnviewed: l.nUnviewed });
         });
@@ -1829,7 +1829,10 @@
                 o,
               ),
             },
-            a.createElement(d.$0s, { className: E().SVGNotifications }),
+            a.createElement(d.$0s, {
+              className: E().SVGNotifications,
+              "aria-label": (0, p.we)("#NotificationsMenu_Title"),
+            }),
           ),
         );
       }
@@ -1850,7 +1853,7 @@
               className: E().NotificationsMenu,
               onClick: () => t?.current?.Hide(),
             },
-            a.createElement(He, null),
+            a.createElement(be, null),
             a.createElement(
               "div",
               {
@@ -1863,7 +1866,7 @@
             ),
           );
         },
-        He = () => {
+        be = () => {
           const e = `${f.TS.COMMUNITY_BASE_URL}profiles/${f.iA.steamid}/notifications`;
           return a.createElement(
             "div",
@@ -1884,7 +1887,7 @@
             ),
           );
         },
-        be = () => {
+        He = () => {
           const e = `${f.TS.COMMUNITY_BASE_URL}profiles/${f.iA.steamid}/notifications`;
           return a.createElement(
             "div",

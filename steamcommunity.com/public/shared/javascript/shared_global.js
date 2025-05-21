@@ -1818,17 +1818,16 @@ function LoadImageGroupOnScroll( elTarget, strGroup )
 		new CScrollOffsetWatcher( $Element, function() { LoadDelayedImages(strGroup); } );
 }
 
-function LoadDelayedImages( group )
+function LoadDelayedImages( group, bForce )
 {
-	if ( typeof g_rgDelayedLoadImages != 'undefined' && g_rgDelayedLoadImages[group] )
+	if ( ( typeof g_rgDelayedLoadImages != 'undefined' && g_rgDelayedLoadImages[group] ) || bForce )
 	{
-		var rgURLs = g_rgDelayedLoadImages[group];
-		for ( var i=0; i < rgURLs.length; i++ )
+		$J('[data-delayed-image-group=' + group + ']').each( function()
 		{
-			$J('#delayedimage_' + group + '_' + i).attr( 'src', rgURLs[i] );
-		}
+			$J(this).attr('src', $J(this).attr('data-delayed-image') );
+		});
 
-		g_rgDelayedLoadImages[group] = false;
+		delete g_rgDelayedLoadImages[group];
 	}
 }
 

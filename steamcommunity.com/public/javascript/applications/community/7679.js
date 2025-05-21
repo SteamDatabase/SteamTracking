@@ -589,58 +589,6 @@
           return "CFriendsList_GetFavorites_Request";
         }
       }
-      class f extends u.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.favorites || p.Sg(f.M()),
-            u.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: { favorites: { n: 1, c: E, r: !0, q: !0 } },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = p.w0(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return p.BT(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return p.Uq(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            r = new f();
-          return f.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return p.zj(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          p.i0(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFavorites_Response";
-        }
-      }
       class B extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -688,6 +636,58 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFavorites_Response";
+        }
+      }
+      class f extends u.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            f.prototype.favorites || p.Sg(f.M()),
+            u.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: { favorites: { n: 1, c: E, r: !0, q: !0 } },
+              }),
+            f.sm_m
+          );
+        }
+        static MBF() {
+          return f.sm_mbf || (f.sm_mbf = p.w0(f.M())), f.sm_mbf;
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return p.BT(f.M(), e, t);
+        }
+        static fromObject(e) {
+          return p.Uq(f.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            r = new f();
+          return f.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return p.zj(f.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          p.i0(f.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFriendsList_SetFavorites_Request";
@@ -880,13 +880,13 @@
             );
           }),
           (e.GetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.GetFavorites#1", (0, l.I8)(_, t), f, {
+            return e.SendMsg("FriendsList.GetFavorites#1", (0, l.I8)(_, t), B, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
           (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", (0, l.I8)(B, t), I, {
+            return e.SendMsg("FriendsList.SetFavorites#1", (0, l.I8)(f, t), I, {
               ePrivilege: 1,
             });
           });
@@ -971,8 +971,8 @@
         C = r(10820),
         E = r(14947),
         _ = r(77700),
-        f = r.n(_),
-        B = r(52038);
+        B = r.n(_),
+        f = r(52038);
       class I extends o.Component {
         constructor(e) {
           super(e),
@@ -1152,11 +1152,11 @@
           }
           return o.createElement(
             "div",
-            { className: f().mentionDialogPosition, ref: this.containerRef },
+            { className: B().mentionDialogPosition, ref: this.containerRef },
             o.createElement(
               "div",
               {
-                className: f().mentionDialog,
+                className: B().mentionDialog,
                 tabIndex: 0,
                 onKeyDown: this.OnKeyDown,
               },
@@ -1184,10 +1184,10 @@
           return o.createElement(
             "div",
             {
-              className: (0, B.A)(
-                f().suggestOption,
-                f().mentionSearchOption,
-                this.props.bIsSelected ? f().selected : "",
+              className: (0, f.A)(
+                B().suggestOption,
+                B().mentionSearchOption,
+                this.props.bIsSelected ? B().selected : "",
               ),
               onMouseEnter: this.OnMouseOver,
               onClick: this.OnClick,
@@ -1216,7 +1216,7 @@
           return o.createElement(
             "div",
             {
-              className: (0, B.A)(
+              className: (0, f.A)(
                 b().EmoticonSuggestion,
                 e.recent ? "Recent" : "",
               ),
@@ -1270,7 +1270,7 @@
         renderMatch(e) {
           return o.createElement(
             "div",
-            { key: e.name, className: (0, B.A)(L().BBCodeSuggestion) },
+            { key: e.name, className: (0, f.A)(L().BBCodeSuggestion) },
             o.createElement("div", { className: L().BBCode }, e.name),
             "[",
             e.name,
@@ -1284,7 +1284,7 @@
             "div",
             {
               key: "nomatches",
-              className: (0, B.A)(f().mentionSearchOption, f().noMatches),
+              className: (0, f.A)(B().mentionSearchOption, B().noMatches),
             },
             (0, O.we)("#Bbcode_No_Match"),
           );
@@ -1511,78 +1511,65 @@
             nHeight: a,
             setImage: s,
           } = e,
-          i = o.useMemo(
-            () => [
-              {
-                sKey: "dummy",
-                fnGetLabelText: () => "unknown",
-                nWidth: n,
-                nHeight: a,
-                bEnforceDimensions: !1,
-                artworkType: "sale_header",
-              },
-            ],
-            [a, n],
-          ),
-          l = o.useMemo(() => ({ width: n, height: a }), [n, a]),
-          [c, u] = o.useState(void 0),
-          [d, g] = o.useState(Boolean(r)),
-          [h, S] = o.useState(!1),
-          [C] = (0, J.q3)(() => [ae.O.Get().GetCurEditLanguage()]),
-          E = (0, ne.zO)(t),
-          _ = o.useCallback(
+          i = o.useMemo(() => ({ width: n, height: a }), [n, a]),
+          [l, c] = o.useState(void 0),
+          [u, d] = o.useState(Boolean(r)),
+          [g, h] = o.useState(!1),
+          [S] = (0, J.q3)(() => [ae.O.Get().GetCurEditLanguage()]),
+          C = (0, ne.zO)(t, "dummy"),
+          E = o.useCallback(
             async (e) => {
               if (
-                (E.ClearImages(),
-                e && (g(!0), await E.AddExistingClanImage(e, 0, i)))
+                (C.ClearImages(),
+                e && (d(!0), await C.AddExistingClanImage(e, 0)))
               ) {
-                u(e);
-                const t = E.GetUploadImages()[0].IsValidAssetType(i, l);
+                c(e);
+                const t = C.GetUploadImages()[0].IsValidAssetType(i);
                 0 != t.error.length ||
                   t.needsCrop ||
                   (r && r.image_hash == e.image_hash) ||
                   s(e);
               }
-              g(!1);
+              d(!1);
             },
-            [E, r, s, i, l],
+            [C, r, s, i],
           );
         o.useEffect(() => {
-          _(r);
-        }, [_, r]);
-        let f,
+          E(r);
+        }, [E, r]);
+        let _,
           B = "",
-          I = !1;
-        if (E && E.GetFilesToUpload().length > 0) {
-          f = E.GetUploadImages()[0];
-          const e = f.IsValidAssetType(i, l);
-          (B = e.error), (I = e.needsCrop);
+          f = !1;
+        if (C && C.GetFilesToUpload().length > 0) {
+          _ = C.GetUploadImages()[0];
+          const e = _.IsValidAssetType(i);
+          (B = e.error), (f = e.needsCrop);
         }
         return o.createElement(
           o.Fragment,
           null,
-          d
+          u
             ? o.createElement(q.t, {
                 size: "medium",
                 string: (0, O.we)("#Loading"),
               })
-            : Boolean(c) &&
+            : Boolean(l) &&
                 o.createElement("div", {
                   className: re.Image,
                   style: {
-                    backgroundImage: `url( '${f ? f.dataUrl : c.url}' )`,
+                    backgroundImage: `url( '${_ ? _.dataUrl : l.url}' )`,
                     height: `${a}px`,
                     width: `${n}px`,
                   },
                 }),
           Boolean(B) && o.createElement("p", null, B),
-          I &&
+          f &&
             o.createElement(
               D.$n,
               {
                 onClick: (e) => {
                   const t = (0, G.uX)(e);
-                  let r = E.GetUploadImages()[0];
+                  let r = C.GetUploadImages()[0];
                   (0, H.pg)(
                     o.createElement(ee.q, {
                       ownerWin: t,
@@ -1596,16 +1583,16 @@
               },
               (0, O.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(f && f.bCropped) &&
+          Boolean(_ && _.bCropped) &&
             o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
                 null,
-                (0, O.we)("#ClanImagePickAndResize_UploadStatus", f.status),
+                (0, O.we)("#ClanImagePickAndResize_UploadStatus", _.status),
               ),
-              h
+              g
                 ? o.createElement(q.t, {
                     string: (0, O.we)("#Uploading"),
                     size: "small",
@@ -1614,13 +1601,12 @@
                     D.$n,
                     {
                       onClick: async () => {
-                        S(!0);
+                        h(!0);
                         try {
-                          const e = await E.UploadAllImages(
+                          const e = await C.UploadAllImages(
                               [se.TU.k_ESteamRealmGlobal],
-                              C,
+                              S,
                               i,
-                              l,
                             ),
                             r = Object.values(e);
                           if (
@@ -1651,10 +1637,10 @@
                                 loc_languages: void 0,
                                 is_loc_group: !1,
                               };
-                            u(l), s(l);
+                            c(l), s(l);
                           }
                         } finally {
-                          S(!1);
+                          h(!1);
                         }
                       },
                     },
@@ -1669,7 +1655,7 @@
                 (0, H.pg)(
                   o.createElement(te.z, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => _(e),
+                    fnImageSelectCallBack: (e) => E(e),
                   }),
                   (0, G.uX)(e),
                 );
@@ -1822,7 +1808,7 @@
             o.createElement(
               "div",
               {
-                className: (0, B.A)(
+                className: (0, f.A)(
                   Q().DescriptionCtn,
                   Q().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? Q().DragTarget : "",
@@ -1833,7 +1819,7 @@
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
                 maxLength: 64e3,
-                className: (0, B.A)(
+                className: (0, f.A)(
                   Q().DefaultEditor,
                   this.props.classNameForTextArea
                     ? this.props.classNameForTextArea
@@ -1981,7 +1967,7 @@
         }
         OnAddLink(e) {
           (0, H.HT)(
-            o.createElement(fe, { textareaRef: this.props.fnTextareaRef() }),
+            o.createElement(Be, { textareaRef: this.props.fnTextareaRef() }),
             (0, G.uX)(e),
           );
         }
@@ -2014,7 +2000,7 @@
         }
         OnOpenImageDialog(e) {
           (0, H.HT)(
-            o.createElement(Be, { textareaRef: this.props.fnTextareaRef() }),
+            o.createElement(fe, { textareaRef: this.props.fnTextareaRef() }),
             (0, G.uX)(e),
           );
         }
@@ -2048,7 +2034,7 @@
               (a = t
                 ? o.createElement(
                     "span",
-                    { className: (0, B.A)("ttip", Q().ActionGetHelp) },
+                    { className: (0, f.A)("ttip", Q().ActionGetHelp) },
                     o.createElement(
                       X.he,
                       {
@@ -2072,7 +2058,7 @@
                     "span",
                     {
                       onClick: this.ShowHelpDialog,
-                      className: (0, B.A)("ttip", Q().ActionGetHelp),
+                      className: (0, f.A)("ttip", Q().ActionGetHelp),
                     },
                     o.createElement(
                       X.he,
@@ -2164,7 +2150,7 @@
                     { toolTipContent: (0, O.we)("#Editor_Emoticon") },
                     o.createElement(A.A, {
                       title: " ",
-                      className: (0, B.A)(Q().EmoteOuter),
+                      className: (0, f.A)(Q().EmoteOuter),
                       disabled: !1,
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -2445,7 +2431,7 @@
         (0, n.Cg)([h.oI], _e.prototype, "OnSummarySelected", null),
         (0, n.Cg)([h.oI], _e.prototype, "OnOuterDivClickPassDown", null),
         (_e = (0, n.Cg)([i.PA], _e));
-      let fe = (me = class extends o.Component {
+      let Be = (me = class extends o.Component {
         constructor() {
           super(...arguments), (this.state = { textToDisplay: "", strURL: "" });
         }
@@ -2538,12 +2524,12 @@
           );
         }
       });
-      (fe.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
-        (0, n.Cg)([h.oI], fe.prototype, "onLinkTitleUpdate", null),
-        (0, n.Cg)([h.oI], fe.prototype, "onLinkURLUpdate", null),
-        (0, n.Cg)([h.oI], fe.prototype, "onInsertLink", null),
-        (fe = me = (0, n.Cg)([i.PA], fe));
-      let Be = class extends o.Component {
+      (Be.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+        (0, n.Cg)([h.oI], Be.prototype, "onLinkTitleUpdate", null),
+        (0, n.Cg)([h.oI], Be.prototype, "onLinkURLUpdate", null),
+        (0, n.Cg)([h.oI], Be.prototype, "onInsertLink", null),
+        (Be = me = (0, n.Cg)([i.PA], Be));
+      let fe = class extends o.Component {
         constructor() {
           super(...arguments), (this.state = { imgURL: "", anchorURL: "" });
         }
@@ -2645,10 +2631,10 @@
           );
         }
       };
-      (0, n.Cg)([h.oI], Be.prototype, "OnImageInsert", null),
-        (0, n.Cg)([h.oI], Be.prototype, "OnImageURLChange", null),
-        (0, n.Cg)([h.oI], Be.prototype, "OnAnchorURLChange", null),
-        (Be = (0, n.Cg)([i.PA], Be));
+      (0, n.Cg)([h.oI], fe.prototype, "OnImageInsert", null),
+        (0, n.Cg)([h.oI], fe.prototype, "OnImageURLChange", null),
+        (0, n.Cg)([h.oI], fe.prototype, "OnAnchorURLChange", null),
+        (fe = (0, n.Cg)([i.PA], fe));
       const Ie = (e) => {
         const [t, r] = o.useState(""),
           [n, a] = o.useState(""),
@@ -2660,7 +2646,7 @@
           { isLoading: E, data: _ } = (0, Y.js)(
             null == h ? void 0 : h.GetAccountID(),
           ),
-          f = 0 != t.trim().length && 0 != l.trim().length;
+          B = 0 != t.trim().length && 0 != l.trim().length;
         return o.createElement(
           F.o0,
           {
@@ -2668,7 +2654,7 @@
             strDescription: (0, O.we)("#EventEditor_AddSpeaker_Desc"),
             closeModal: e.closeModal,
             onCancel: e.closeModal,
-            bOKDisabled: !f,
+            bOKDisabled: !B,
             onOK: () => {
               let r = `[speaker name="${t.trim()}"`;
               if (
@@ -2977,7 +2963,7 @@
                       o.createElement(
                         "div",
                         {
-                          className: (0, B.A)(
+                          className: (0, f.A)(
                             z().FlexColumnContainer,
                             Q().ImportHTMLCtn,
                           ),

@@ -44,6 +44,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
+        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
         DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
         ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
@@ -1501,6 +1507,207 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            rgAssetLangs: _,
+            initialLang: __webpack_require__,
+            fnGetAssetUrl: _,
+            fnDeletAssetLang: _,
+            imageClassname: _,
+            fnDeleteAllAssets: _,
+          } = _,
+          [_, _] = (0, _.useState)(
+            __webpack_require__ ?? _._.Get().GetCurEditLanguage(),
+          ),
+          [_, _] = (0, _.useState)(_(_));
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _(_);
+            _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
+          }, [_, _, _]),
+          _.createElement(
+            "div",
+            {
+              className: _().UploadedImageDisplayCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().UploaderLeftCol,
+              },
+              _.createElement(_, {
+                curAssetURL: _,
+                imageClassname: _,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().UploaderRightCol,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SectionCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LangCountTitle,
+                  },
+                  _.length,
+                  " Localized Assets",
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LangSelectCtn,
+                  },
+                  _.map((_) => {
+                    const _ = (0, _._)(_);
+                    return _.createElement(
+                      "div",
+                      {
+                        className: _().UploaderImgLang,
+                        key: "image" + _,
+                      },
+                      _.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          onClick: (_) => {
+                            _.preventDefault(), _(_), _(_(_));
+                          },
+                        },
+                        Boolean(_ === _)
+                          ? _.createElement(
+                              "span",
+                              {
+                                className: _().LangSelected,
+                              },
+                              "" + _,
+                            )
+                          : _.createElement("span", null, "" + _),
+                      ),
+                      _.createElement(
+                        "a",
+                        {
+                          href: "#",
+                          onClick: (_) => {
+                            _.preventDefault(), _(_);
+                          },
+                        },
+                        _.createElement(_._, null),
+                      ),
+                    );
+                  }),
+                ),
+                Boolean(_.length) &&
+                  _.createElement(
+                    "a",
+                    {
+                      href: "#",
+                      className: _().DeleteAll,
+                      onClick: (_) => {
+                        _ ? _() : _.forEach((_) => _(_));
+                      },
+                    },
+                    (0, _._)("#Button_DeleteAll"),
+                  ),
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
+        if (!_)
+          return _.createElement(
+            "div",
+            {
+              className: _().ArtNoArt,
+            },
+            (0, _._)("#ImageDisplay_NoAssetUploaded"),
+          );
+        const _ = (0, _._)(_);
+        return _._.includes(_)
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _._.includes(_)
+            ? _.createElement(_, {
+                className: __webpack_require__ || _().ArtPreview,
+                strTextURL: _,
+              })
+            : _.createElement("img", {
+                className: __webpack_require__ || _().ArtPreview,
+                src: _,
+              });
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
+          _ = (0, _.useRef)();
+        return (
+          (0, _.useEffect)(() => {
+            _.current && (_.current.load(), _.current.play());
+          }, [_]),
+          _.createElement(
+            "video",
+            {
+              ref: _,
+              className: __webpack_require__ || _().ArtPreview,
+              autoPlay: !0,
+              loop: !0,
+              controls: !0,
+              muted: !0,
+            },
+            _.createElement("source", {
+              src: _,
+            }),
+          )
+        );
+      }
+      function _(_) {
+        const { strTextURL: _, className: __webpack_require__ } = _,
+          [_, _] = (0, _.useState)("");
+        return (
+          (0, _.useEffect)(() => {
+            _()
+              .get(_)
+              .then((_) => {
+                _(_.data);
+              })
+              .catch((_) => {
+                console.error(_);
+              });
+          }, [_]),
+          _.createElement("textarea", {
+            className: __webpack_require__,
+            value: _,
+            readOnly: !0,
+            rows: 20,
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1591,7 +1798,7 @@
             bSmallFormat: _,
             bHideFollowButton: _,
             bAddLinkToMemberList: _,
-            bVerticalDisplay: _,
+            bMinimalDisplay: _,
           } = _,
           _ = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
@@ -1630,6 +1837,7 @@
                 className: (0, _._)(
                   _.DevSummaryCtn,
                   _ ? _.SmallFormat : _.LargeFormat,
+                  _ ? _.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },
@@ -1798,6 +2006,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1886,8 +2095,7 @@
       function _(_) {
         const {
             imageUploader: _,
-            rgImageOptions: __webpack_require__,
-            strOverrideDragAndDropText: _,
+            strOverrideDragAndDropText: __webpack_require__,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -1903,15 +2111,10 @@
                 _ = !0;
               for (let _ = 0; _ < _.length; _++) {
                 const _ = _[_],
-                  _ = (0, _._)(_?.name, _);
+                  { language: _ } = (0, _._)(_?.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(
-                    _,
-                    _,
-                    __webpack_require__,
-                    _,
-                  )),
+                  (_ = await _.AddImageForLanguage(_, _, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -1947,7 +2150,7 @@
               }
               return _;
             },
-            [_, _, _, _, __webpack_require__],
+            [_, _, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -1964,46 +2167,47 @@
                   ],
             [_],
           );
-        return _.createElement(
-          _,
-          {
-            onDropFiles: _,
-            elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
-          },
+        return (
+          (0, _._)(() =>
+            _.map((_) => ({
+              _: _.GetCurrentImageOption(),
+              _: _.language,
+            })),
+          ),
           _.createElement(
-            _.Fragment,
-            null,
+            _,
+            {
+              onDropFiles: _,
+              elAdditonalButtons: _,
+              strOverrideDragAndDropText: __webpack_require__,
+            },
             _.createElement(
-              "div",
-              {
-                className: _().UploadPreviewCtn,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                  asset: _,
-                  supported: __webpack_require__,
-                  forceResolution: _,
-                  forceFileType: _ && _.file_type,
-                  fnOnRemove: () => _.DeleteUploadImage(_),
-                  languageRealms: _,
-                }),
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().UploadPreviewCtn,
+                },
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                    asset: _,
+                    forceResolution: _,
+                    forceFileType: _ && _.file_type,
+                    fnOnRemove: () => _.DeleteUploadImage(_),
+                    languageRealms: _,
+                  }),
+                ),
               ),
             ),
-          ),
-          _.createElement(_, {
-            imageUploader: _,
-            fnOnUploadImageRequested: async () => {
-              await _.UploadAllImages(
-                _,
-                _,
-                __webpack_require__,
-                _,
-                _ && _.file_type,
-              );
-            },
-          }),
+            _.createElement(_, {
+              imageUploader: _,
+              fnOnUploadImageRequested: async () => {
+                await _.UploadAllImages(_, _, _, _ && _.file_type);
+              },
+            }),
+          )
         );
       }
       function _(_) {
@@ -2048,13 +2252,12 @@
         const {
             asset: _,
             fnOnRemove: __webpack_require__,
-            supported: _,
             languageRealms: _,
           } = _,
-          _ = _?.map((_) => {
+          _ = _.ImageOptions?.map((_) => {
             let _,
               _ = _?.fnGetLabelText();
-            _.bEnforceDimensions && (_ += ` - ${_.nWidth}x${_.nHeight}`),
+            _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
               (_.BIsOriginalMinimumDimensions(_) &&
                 _.FileTypeMatchesImageTypes(_)) ||
                 (_ = _().ImageDimensionTooSmall);
@@ -2069,38 +2272,21 @@
             uploading: (0, _._)("#ImageUpload_Uploading"),
             success: (0, _._)("#ImageUpload_SuccessCard"),
             failed: (0, _._)("#ImageUpload_Failed"),
-          };
-        let _ = null;
-        if (_.BSupportsLanguages()) {
-          _ = [];
-          const _ = new Array(),
-            _ = _._.GetLanguageListForRealms(_ || [_._.k_ESteamRealmGlobal]);
-          for (const _ of _) {
-            if (25 == _) continue;
-            const _ = (0, _._)("#Language_" + (0, _._)(_));
-            _.push({
-              label: _,
-              data: _,
-            });
-          }
-          _.sort((_, _) => _.label.localeCompare(_.label)),
-            _.forEach((_) =>
-              _.push({
-                label: _.label,
-                data: _.data,
-              }),
-            );
-        }
-        const _ = _.IsValidAssetType(
-            _.supported,
-            _.forceResolution,
-            _.forceFileType,
-          ),
+          },
+          _ = _.BSupportsLanguages()
+            ? _(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
+            : null,
+          _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
           _ = _.needsCrop
             ? (0, _._)("#ImageUpload_NeedsCrop")
             : _.error
               ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status];
+              : _[_.status],
+          _ = "pending" == _.status;
+        let _ = null;
+        const _ = _.GetCurrentImageOption();
+        _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
+        _ || (_ = _?.[0]?.data);
         return _.createElement(
           "div",
           {
@@ -2123,15 +2309,14 @@
               rgOptions: _,
               selectedOption: _.language,
               onChange: (_) => (_.language = _.data),
+              disabled: !_,
             }),
           Boolean(_?.length > 1) &&
             _.createElement(_._, {
               rgOptions: _,
-              selectedOption:
-                (_.type
-                  ? _.find((_) => _.data.sKey == _.type.sKey)?.data
-                  : void 0) ?? _[0].data,
-              onChange: (_) => (_.type = _.data),
+              selectedOption: _,
+              onChange: (_) => _.SetCurrentImageOption(_.data),
+              disabled: !_,
             }),
           _.createElement(
             "div",
@@ -2139,7 +2324,7 @@
               className: (0, _._)(_().FlexColumnContainer),
             },
             _,
-            Boolean("uploading" == _) &&
+            Boolean("uploading" == _.status) &&
               _.createElement(
                 "div",
                 {
@@ -2190,7 +2375,7 @@
                         console.log(
                           "ImageUploadEmbeddedDialog trying to crop non image",
                           _.fileType,
-                          JSON.stringify(_.type),
+                          JSON.stringify(_.GetCurrentImageOption()),
                         );
                     })(_),
                 },
@@ -2277,6 +2462,28 @@
               src: _.dataUrl,
             }),
           ),
+        );
+      }
+      function _(_) {
+        const _ = [],
+          _ = new Array();
+        for (const _ of _) {
+          if (25 == _) continue;
+          const _ = (0, _._)("#Language_" + (0, _._)(_));
+          __webpack_require__.push({
+            label: _,
+            data: _,
+          });
+        }
+        return (
+          __webpack_require__.sort((_, _) => _.label.localeCompare(_.label)),
+          __webpack_require__.forEach((_) =>
+            _.push({
+              label: _.label,
+              data: _.data,
+            }),
+          ),
+          _
         );
       }
     },
@@ -3028,7 +3235,9 @@
             onDrop: _.useCallback(
               (_) => {
                 _.dataTransfer.files?.length &&
-                  (_(_.dataTransfer.files, _), _.preventDefault()),
+                  (_(_.dataTransfer.files, _),
+                  _.preventDefault(),
+                  _.stopPropagation()),
                   __webpack_require__(!1);
               },
               [_],

@@ -173,9 +173,10 @@
         LargeFormat: "_1090TwnnSh07Rya_5ss37E",
         CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
         SmallFormat: "_18tLexJfL4tGNabZ9Ywvlm",
+        MinimalDisplay: "ROZPQ29NfT-_S-vY5rMJp",
         DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
-        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
+        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
         CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
@@ -306,6 +307,7 @@
         SaleSection: "_1cOoCFwafBlSkwllIMf3XM",
         CarouselDisplay: "mntHD0WiARnsfz_kMYssq",
         SaleSectionCtn: "i2PTzRNXOK1OXvXb9-wzd",
+        NoTopPadding: "_28qZDRJ1HAArkoQZjlLJ09",
         SaleHeaderContainer: "W4mvnnQ0uYKKoCfVm8QgX",
         SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
@@ -10700,12 +10702,12 @@
           const { eDisplay: t, storeItem: r, className: a } = e;
           return 1 == t
             ? i.createElement(d, {
-                category: r.GetPlatforms().steam_deck_compat_category,
+                category: r.GetPlatforms()?.steam_deck_compat_category ?? 0,
                 className: a,
               })
             : 2 == t
               ? i.createElement(u, {
-                  category: r.GetPlatforms().steam_os_compat_category,
+                  category: r.GetPlatforms()?.steam_os_compat_category ?? 0,
                   className: a,
                 })
               : null;
@@ -13014,7 +13016,7 @@
     },
     28954: (e, t, r) => {
       "use strict";
-      r.d(t, { AU: () => b, M0: () => y, VE: () => w, zO: () => C });
+      r.d(t, { M0: () => y, VE: () => b, zO: () => w });
       var i = r(34629),
         a = r(90626),
         n = r(2160),
@@ -13032,12 +13034,12 @@
         f = r(40521),
         S = r(69343);
       function y(e) {
-        return e.map((e) => {
+        return e?.map((e) => {
           const t = m.Fj[e];
           return {
             sKey: e,
-            nWidth: t.width,
-            nHeight: t.height,
+            width: t.width,
+            height: t.height,
             bEnforceDimensions: !t.bDisableEnforceDimensions,
             artworkType: e,
             bHiddenFromDropdown: "hero" === e,
@@ -13049,30 +13051,18 @@
           };
         });
       }
-      function b(e) {
-        return (t, r, i) => {
-          if (!e || 0 == e.length) return;
-          const a = (0, m.vz)(
-            t,
-            e?.map((e) => e.artworkType),
-          );
-          let n = (0, g.AS)(r, i, a, !1);
-          if ((void 0 === n && (n = (0, g.AS)(r, i, a, !0)), n)) {
-            const t = e.find((e) => e.artworkType == n);
-            if (t) return t;
-          }
-          return e[0];
-        };
-      }
-      class w {
+      class b {
         m_filesToUpload = l.sH.array();
         m_filesCompleted = [];
         m_clanSteamID;
+        m_rgImageOptions;
         m_allCancelTokens = new Array();
         m_lastError = void 0;
         m_fnSetImageURL = null;
-        constructor(e) {
-          (0, l.Gn)(this), (this.m_clanSteamID = e);
+        constructor(e, t) {
+          (0, l.Gn)(this),
+            (this.m_clanSteamID = e),
+            (this.m_rgImageOptions = y(t));
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -13080,57 +13070,57 @@
         SetImageAllUrlFunction(e) {
           this.m_fnSetImageURL = e;
         }
-        async AddImage(e, t = 0, r, i) {
-          const a = (0, S.j)(e.name, t);
-          return this.AddImageForLanguage(e, a, r, i);
+        async AddImage(e, t = 0, r) {
+          const { language: i } = (0, S.j)(e.name, t);
+          return this.AddImageForLanguage(e, i, r);
         }
-        async AddImageForLanguage(e, t, r, i) {
-          let a = !1;
+        async AddImageForLanguage(e, t, r) {
+          let i = !1;
           return (
-            await new Promise((n) => {
-              const s = new FileReader();
-              (s.onload = () => {
-                const o = e.name.split(".").pop().toLowerCase();
-                let l = null;
-                !h.iA.is_support || ("webm" != o && "mp4" != o)
-                  ? ((l = new Image()),
-                    (l.onload = () => {
-                      const s = new f.A_(e, t, l, b(r), i);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, s]),
-                        (a = !0),
-                        n();
+            await new Promise((a) => {
+              const n = new FileReader();
+              (n.onload = () => {
+                const s = e.name.split(".").pop().toLowerCase();
+                let o = null;
+                !h.iA.is_support || ("webm" != s && "mp4" != s)
+                  ? ((o = new Image()),
+                    (o.onload = () => {
+                      const n = new f.A_(e, t, this.m_rgImageOptions, o, r);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, n]),
+                        (i = !0),
+                        a();
                     }))
-                  : ((l = document.createElement("video")),
-                    (l.onloadeddata = () => {
-                      const s = new f.A_(e, t, l, b(r), i);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, s]),
-                        (a = !0),
-                        n();
+                  : ((o = document.createElement("video")),
+                    (o.onloadeddata = () => {
+                      const n = new f.A_(e, t, this.m_rgImageOptions, o, r);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, n]),
+                        (i = !0),
+                        a();
                     })),
-                  (l.onerror = (e) => {
+                  (o.onerror = (e) => {
                     console.error(
                       "CClanImageUploader failed to load the image, details",
                       e,
                     ),
-                      (a = !1),
-                      n();
+                      (i = !1),
+                      a();
                   }),
-                  (l.src = s.result.toString());
+                  (o.src = n.result.toString());
               }),
-                s.readAsDataURL(e);
+                n.readAsDataURL(e);
             }),
-            a
+            i
           );
         }
-        async AddExistingClanImage(e, t = 0, r, i) {
-          let a = g.i6.GetHashAndExt(e),
-            n = g.i6.GenerateEditableArtworkURLFromHashAndExtension(
+        async AddExistingClanImage(e, t = 0, r) {
+          let i = g.i6.GetHashAndExt(e),
+            a = g.i6.GenerateEditableArtworkURLFromHashAndExtension(
               this.m_clanSteamID,
-              a,
+              i,
             ),
-            s = await o()({ url: n, method: "GET", responseType: "blob" }),
-            l = (0, p.pE)(s.data, e.file_name);
-          return await this.AddImage(l, t, r, i);
+            n = await o()({ url: a, method: "GET", responseType: "blob" }),
+            s = (0, p.pE)(n.data, e.file_name);
+          return await this.AddImage(s, t, r);
         }
         DeleteUploadImageByIndex(e) {
           this.m_filesToUpload.splice(e, 1),
@@ -13175,11 +13165,11 @@
         BIsFileCompleted(e) {
           return -1 != this.m_filesCompleted.indexOf(e);
         }
-        async UploadAllImages(e, t, r, i, a) {
-          const n = {};
+        async UploadAllImages(e, t, r, i) {
+          const a = {};
           for (let e of this.m_filesToUpload)
             if (!this.BIsFileCompleted(e.file)) {
-              const t = e.IsValidAssetType(r, i, a);
+              const t = e.IsValidAssetType(r, i);
               if (t.error || t.needsCrop)
                 t.error &&
                   (this.m_lastError = {
@@ -13189,7 +13179,7 @@
                   });
               else {
                 e.status = "uploading";
-                n[`${e.uploadTime}/${e.file.name}`] = this.UploadFile({
+                a[`${e.uploadTime}/${e.file.name}`] = this.UploadFile({
                   uploadFile: e.file,
                   filename: e.file.name,
                   imageOption: t.match,
@@ -13201,10 +13191,10 @@
                 });
               }
             }
-          const s = await (0, u.RR)(n);
+          const n = await (0, u.RR)(a);
           return (
-            Object.keys(s).forEach((r) => {
-              const i = s[r],
+            Object.keys(n).forEach((r) => {
+              const i = n[r],
                 a = this.m_filesToUpload.find(
                   (e) => `${e.uploadTime}/${e.file.name}` === r,
                 );
@@ -13222,11 +13212,15 @@
                     );
                     if (r) {
                       const i = (0, S.P)(a.language, t, e);
-                      this.m_fnSetImageURL(a.type.artworkType, r, i);
+                      this.m_fnSetImageURL(
+                        a.GetCurrentImageOption().artworkType,
+                        r,
+                        i,
+                      );
                     }
                   }
             }),
-            s
+            n
           );
         }
         CancelAllUploads() {
@@ -13316,17 +13310,25 @@
           );
         }
       }
-      function C(e) {
-        return a.useMemo(() => new w(e), [e.ConvertTo64BitString()]);
+      function w(e, t) {
+        const r = (function (e) {
+            const t = a.useRef(e);
+            (t.current.length !== e.length ||
+              t.current.some((t, r) => t !== e[r])) &&
+              (t.current = e);
+            return t.current;
+          })(t instanceof Array ? t : [t]),
+          i = e.ConvertTo64BitString();
+        return a.useMemo(() => new b(e, r), [i, r]);
       }
-      (0, i.Cg)([l.sH], w.prototype, "m_filesToUpload", void 0),
-        (0, i.Cg)([l.sH], w.prototype, "m_filesCompleted", void 0),
-        (0, i.Cg)([l.sH], w.prototype, "m_lastError", void 0),
-        (0, i.Cg)([d.o], w.prototype, "AddImage", null),
-        (0, i.Cg)([d.o], w.prototype, "AddExistingClanImage", null),
-        (0, i.Cg)([d.o], w.prototype, "DeleteUploadImageByIndex", null),
-        (0, i.Cg)([d.o], w.prototype, "DeleteUploadImage", null),
-        (0, i.Cg)([d.o], w.prototype, "ClearImages", null);
+      (0, i.Cg)([l.sH], b.prototype, "m_filesToUpload", void 0),
+        (0, i.Cg)([l.sH], b.prototype, "m_filesCompleted", void 0),
+        (0, i.Cg)([l.sH], b.prototype, "m_lastError", void 0),
+        (0, i.Cg)([d.o], b.prototype, "AddImage", null),
+        (0, i.Cg)([d.o], b.prototype, "AddExistingClanImage", null),
+        (0, i.Cg)([d.o], b.prototype, "DeleteUploadImageByIndex", null),
+        (0, i.Cg)([d.o], b.prototype, "DeleteUploadImage", null),
+        (0, i.Cg)([d.o], b.prototype, "ClearImages", null);
     },
     40521: (e, t, r) => {
       "use strict";
@@ -13340,32 +13342,30 @@
         dataUrl = void 0;
         width = void 0;
         height = void 0;
-        type = void 0;
         status = void 0;
         message = void 0;
-        language;
+        language = void 0;
         file;
         uploadTime;
         fileType = 0;
-        constructor(e, t, r, i, n, s) {
+        constructor(e, t, r, i, n) {
           (0, a.Gn)(this),
             (this.file = e),
             (this.fileType = o.i6.GetExtensionTypeFromURL(e.name)),
             (this.language = t),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            (this.type = r?.(this.fileType, n, s)),
-            (this.height = s),
-            (this.width = n),
-            (this.dataUrl = i);
+            (this.height = n),
+            (this.width = i),
+            (this.dataUrl = r);
         }
       }
       (0, i.Cg)([a.sH], l.prototype, "dataUrl", void 0),
         (0, i.Cg)([a.sH], l.prototype, "width", void 0),
         (0, i.Cg)([a.sH], l.prototype, "height", void 0),
-        (0, i.Cg)([a.sH], l.prototype, "type", void 0),
         (0, i.Cg)([a.sH], l.prototype, "status", void 0),
-        (0, i.Cg)([a.sH], l.prototype, "message", void 0);
+        (0, i.Cg)([a.sH], l.prototype, "message", void 0),
+        (0, i.Cg)([a.sH], l.prototype, "language", void 0);
       var m = r(66331),
         c = r(82817);
       const d = 960,
@@ -13373,61 +13373,98 @@
         p = 480,
         _ = 156;
       class h extends l {
-        constructor(e, t, r, i, a, n) {
-          super(e, t, r, i, a, n);
+        m_rgImageOptions;
+        m_currentType = void 0;
+        constructor(e, t, r, i, n, s) {
+          super(e, t, i, n, s), (0, a.Gn)(this), (this.m_rgImageOptions = r);
         }
-        IsValidAssetType(e, t, r) {
-          let i = 0,
-            a = 0,
-            o = !1,
-            l =
-              !e || 0 === e.length || e.some((e) => e.sKey == this.type?.sKey);
-          if (t) (i = t.width), (a = t.height), (o = !0);
-          else if (this.type) {
-            const e = n.Fj[this.type.artworkType];
+        IsValidAssetType(e, t) {
+          let r = 0,
+            i = 0,
+            a = !1,
+            o =
+              !this.m_rgImageOptions ||
+              0 === this.m_rgImageOptions.length ||
+              this.m_rgImageOptions.some(
+                (e) => e.sKey == this.GetCurrentImageOption()?.sKey,
+              );
+          if (e) (r = e.width), (i = e.height), (a = !0);
+          else if (this.GetCurrentImageOption()) {
+            const e = n.Fj[this.GetCurrentImageOption().artworkType];
             e &&
-              ((i = e.width),
-              (a = e.height),
-              (o = !e.bDisableEnforceDimensions));
+              ((r = e.width),
+              (i = e.height),
+              (a = !e.bDisableEnforceDimensions));
           }
-          const d = this.width >= i && this.height >= a,
-            u = o ? this.width === i && this.height === a : d,
-            p = r && r != this.fileType,
-            _ =
-              !!(e && e.length > 0) &&
+          const l = this.width >= r && this.height >= i,
+            d = a ? this.width === r && this.height === i : l,
+            u = t && t != this.fileType,
+            p =
+              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
               0 ==
-                (0, n.vz)(this.fileType, e?.map((e) => e.artworkType) || [])
-                  .length,
-            h = Boolean((0, m.t)(this.fileType));
-          let g = "",
-            f = !1;
+                (0, n.vz)(
+                  this.fileType,
+                  this.m_rgImageOptions?.map((e) => e.artworkType) || [],
+                ).length,
+            _ = Boolean((0, m.t)(this.fileType));
+          let h = "",
+            g = !1;
           return (
-            l
-              ? _
-                ? (g = (0, s.we)("#ImageUpload_InvalidFileType"))
-                : p
-                  ? (g = (0, s.we)("#ImageUpload_InvalidFormat", (0, c.EG)(r)))
-                  : u || h
-                    ? d
-                      ? !u &&
-                        h &&
-                        ((g = (0, s.we)(
+            o
+              ? p
+                ? (h = (0, s.we)("#ImageUpload_InvalidFileType"))
+                : u
+                  ? (h = (0, s.we)("#ImageUpload_InvalidFormat", (0, c.EG)(t)))
+                  : d || _
+                    ? l
+                      ? !d &&
+                        _ &&
+                        ((h = (0, s.we)(
                           "#ImageUpload_InvalidDimensions",
+                          r,
                           i,
-                          a,
                         )),
-                        (f = !0))
-                      : (g = (0, s.we)("#ImageUpload_TooSmall", i, a))
-                    : (g = (0, s.we)("#ImageUpload_InvalidResolution", i, a))
-              : (g = (0, s.we)("#ImageUpload_InvalidFormatSelected")),
-            { error: g, needsCrop: f, match: this.type }
+                        (g = !0))
+                      : (h = (0, s.we)("#ImageUpload_TooSmall", r, i))
+                    : (h = (0, s.we)("#ImageUpload_InvalidResolution", r, i))
+              : (h = (0, s.we)("#ImageUpload_InvalidFormatSelected")),
+            { error: h, needsCrop: g, match: this.GetCurrentImageOption() }
           );
         }
+        BSupportsLanguages() {
+          return !0;
+        }
+        ComputeDefaultImageOption() {
+          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
+            return;
+          const e = (0, n.vz)(
+            this.fileType,
+            this.m_rgImageOptions?.map((e) => e.artworkType),
+          );
+          let t = (0, o.AS)(this.width, this.height, e, !1);
+          if (
+            (void 0 === t && (t = (0, o.AS)(this.width, this.height, e, !0)), t)
+          ) {
+            const e = this.m_rgImageOptions.find((e) => e.artworkType == t);
+            if (e) return e;
+          }
+          return this.m_rgImageOptions[0];
+        }
+        get ImageOptions() {
+          return this.m_rgImageOptions;
+        }
+        GetCurrentImageOption() {
+          return this.m_currentType ?? this.ComputeDefaultImageOption();
+        }
+        SetCurrentImageOption(e) {
+          this.m_currentType = e;
+        }
       }
+      (0, i.Cg)([a.sH], h.prototype, "m_currentType", void 0);
       class g extends h {
         video;
         constructor(e, t, r, i) {
-          super(e, t, i, r.src, r.videoWidth, r.videoHeight), (this.video = r);
+          super(e, t, r, i.src, i.videoWidth, i.videoHeight), (this.video = i);
         }
         BIsOriginalMinimumDimensions(e) {
           return (0, n.s4)(
@@ -13471,13 +13508,13 @@
           super(
             e,
             t,
-            i,
-            r.src,
-            S(e.name) ? r.videoWidth : r.width,
-            S(e.name) ? r.videoHeight : r.height,
+            r,
+            i.src,
+            S(e.name) ? i.videoWidth : i.width,
+            S(e.name) ? i.videoHeight : i.height,
           ),
             (0, a.Gn)(this),
-            (this.media = r),
+            (this.media = i),
             (this.localizedImageGroupPrimaryImage = n);
         }
         ResetImage() {
@@ -13498,7 +13535,7 @@
           return n.Ho.includes(this.fileType);
         }
         GetResizeDimension() {
-          return b(this.type?.artworkType);
+          return b(this.GetCurrentImageOption()?.artworkType);
         }
       }
       function b(e) {
@@ -13526,20 +13563,30 @@
         for (const e of r) if (n.A0.IsELanguageValidInRealm(t, e)) return t;
         return r.includes(i.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function o(e, t = 0) {
-        let r = e.lastIndexOf(".");
-        -1 != r && (e = e.slice(0, r).toLowerCase());
-        let i = null,
-          n = 0;
-        e.endsWith("korean") && ((i = 4), (n = 6));
+      function o(e, t = 0, r = !0) {
+        let i = e.lastIndexOf(".");
+        -1 != i && (e = e.slice(0, i).toLowerCase());
+        let n = null,
+          s = 0;
+        e.endsWith("korean") && ((n = 4), (s = 6));
         for (let t = 0; t < 31; ++t) {
-          const r = (0, a.ww)(t);
-          if (r.length <= n) continue;
-          e.endsWith(r) && ((i = t), (n = r.length));
-          const s = (0, a.Lg)(t);
-          s.length <= n || (e.endsWith(s) && ((i = t), (n = s.length)));
+          const i = (0, a.ww)(t);
+          if (i.length <= s) continue;
+          if (e.endsWith(i)) {
+            let a = !r;
+            if (r && e.length > i.length + 2) {
+              const t = e[e.length - i.length - 1];
+              a = !/\p{Alphabetic}|\p{Number}/u.test(t);
+            }
+            a && ((n = t), (s = i.length));
+          }
+          const o = (0, a.Lg)(t);
+          o.length <= s || (e.endsWith(o) && ((n = t), (s = o.length)));
         }
-        return i || t;
+        return {
+          language: n ?? t,
+          baseFilename: s > 0 ? e.substring(0, e.length - s - 1) : e,
+        };
       }
     },
     71138: (e, t, r) => {
@@ -13908,7 +13955,7 @@
             s)
           )
             throw (console.log(s), { success: 2, err_msg: s });
-          let c = new d.VE(e),
+          let c = new d.VE(e, null),
             u = await c.UploadFile({
               uploadFile: o,
               filename: i,
@@ -28810,6 +28857,7 @@
               width: void 0 !== e.width ? String(e.width) : void 0,
               height: void 0 !== e.height ? String(e.height) : void 0,
               videoId: e.video,
+              host: "https://www.youtube-nocookie.com",
               playerVars: {
                 autoplay: t,
                 showinfo: r,
@@ -28967,11 +29015,15 @@
         }
         GetDestWidth() {
           const { uploadFile: e, forceResolution: t } = this.props;
-          return t ? t.width : n.Fj[e.type.artworkType].width;
+          return t
+            ? t.width
+            : n.Fj[e.GetCurrentImageOption().artworkType].width;
         }
         GetDestHeight() {
           const { uploadFile: e, forceResolution: t } = this.props;
-          return t ? t.height : n.Fj[e.type.artworkType].height;
+          return t
+            ? t.height
+            : n.Fj[e.GetCurrentImageOption().artworkType].height;
         }
         GetLargestBoxThatFits(e, t, r, i) {
           let a = r,

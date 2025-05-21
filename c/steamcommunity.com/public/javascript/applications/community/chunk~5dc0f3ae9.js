@@ -77,9 +77,10 @@
         LargeFormat: "_1090TwnnSh07Rya_5ss37E",
         CreatorDescCtn: "_3nKoQbWM1xYxsCfDoImGQ-",
         SmallFormat: "_18tLexJfL4tGNabZ9Ywvlm",
+        MinimalDisplay: "ROZPQ29NfT-_S-vY5rMJp",
         DevSummaryWidgetCtn: "A2B2VZqisd8LEU7zknWqk",
-        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         DevSummaryContent: "_23xa4AVp7kYtbslOOB8xly",
+        DevSummaryBackground: "_1TsqAyLSPMv7JrgVI6Jpnv",
         AvatarLink: "_1N0rYLgFmHTfQng24QRoEh",
         Avatar: "_3JepbxeEa0I4l8TnG9DeT5",
         CreatorTitleCtn: "_2T8Ub04W0G2L6_3692y23L",
@@ -160,6 +161,7 @@
         SaleSection: "_1cOoCFwafBlSkwllIMf3XM",
         CarouselDisplay: "mntHD0WiARnsfz_kMYssq",
         SaleSectionCtn: "i2PTzRNXOK1OXvXb9-wzd",
+        NoTopPadding: "_28qZDRJ1HAArkoQZjlLJ09",
         SaleHeaderContainer: "W4mvnnQ0uYKKoCfVm8QgX",
         SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
@@ -9127,21 +9129,30 @@
           );
         },
         _ = (_) => {
-          const {
-            eDisplay: _,
-            storeItem: __webpack_require__,
-            className: _,
-          } = _;
+          var _, _, _, _;
+          const { eDisplay: _, storeItem: _, className: _ } = _;
           return 1 == _
             ? _.createElement(_, {
                 category:
-                  __webpack_require__.GetPlatforms().steam_deck_compat_category,
+                  null !==
+                    (_ =
+                      null === (_ = _.GetPlatforms()) || void 0 === _
+                        ? void 0
+                        : _.steam_deck_compat_category) && void 0 !== _
+                    ? _
+                    : 0,
                 className: _,
               })
             : 2 == _
               ? _.createElement(_, {
                   category:
-                    __webpack_require__.GetPlatforms().steam_os_compat_category,
+                    null !==
+                      (_ =
+                        null === (_ = _.GetPlatforms()) || void 0 === _
+                          ? void 0
+                          : _.steam_os_compat_category) && void 0 !== _
+                      ? _
+                      : 0,
                   className: _,
                 })
               : null;
@@ -14915,18 +14926,7 @@
             {
               className: _,
             },
-            (0, _._)(
-              (function (_) {
-                switch (_) {
-                  case 2:
-                    return "#SteamOSCompatibility_Category_Compatible";
-                  case 1:
-                    return "#SteamOSCompatibility_Category_Unsupported";
-                  default:
-                    return "#SteamOSCompatibility_Category_Unknown";
-                }
-              })(_),
-            ),
+            (0, _._)(_(_)),
           ),
           _ = _.createElement(
             "span",
@@ -14961,6 +14961,16 @@
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case 2:
+            return "#SteamOSCompatibility_Category_Compatible";
+          case 1:
+            return "#SteamOSCompatibility_Category_Unsupported";
+          default:
+            return "#SteamOSCompatibility_Category_Unknown";
         }
       }
     },

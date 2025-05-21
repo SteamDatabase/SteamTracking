@@ -3143,6 +3143,23 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') 22px no-repeat;
 }
 
+.ds_steam_deck_compat.steamoscompatible {
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-steamos-compatible.svg') no-repeat;
+}
+.ds_steam_deck_compat.steamosunsupported {
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unsupported.svg') no-repeat;
+}
+.ds_steam_deck_compat.steamosunknown {
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') no-repeat;
+}
+.ds_steam_deck_compat.steamoscompatible,
+.ds_steam_deck_compat.steamosunsupported,
+.ds_steam_deck_compat.steamosunknown {
+	background-position: center;
+	width: 24px !important;
+}
+
+
 /* global inline */
 .steam_deck_compat {
 	display: none;
@@ -3167,6 +3184,24 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 .steam_deck_compat.unknown {
 	display: inline-block;
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') left no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') right no-repeat;
+}
+.steam_deck_compat.steamoscompatible {
+	display: inline-block;
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-steamos-compatible.svg') no-repeat;
+}
+.steam_deck_compat.steamosunsupported {
+	display: inline-block;
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unsupported.svg') no-repeat;
+}
+.steam_deck_compat.steamosunknown {
+	display: inline-block;
+	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') no-repeat;
+}
+.steam_deck_compat.steamoscompatible,
+.steam_deck_compat.steamosunsupported,
+.steam_deck_compat.steamosunknown {
+	background-position: center;
+	width: 20px !important;
 }
 
 .private_app_indicator {

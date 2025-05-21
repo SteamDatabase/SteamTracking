@@ -208,46 +208,71 @@
     },
     chunkid: (module) => {
       module.exports = {
-        nTimelineHoverEdgePadding: "4",
-        nContextMenuVerticalGap: "12px",
         TrailerPlayer: "ByTa3bBdyJMzBnwuLJ64v",
-        BackgroundClick: "_121ySsqDaEEhYcP22dfnB9",
-        Enabled: "_3qVDrUviVTnLeyWUJaIwaO",
-        Icon: "_1nmF4OTLNxzkcLI2qZRSeE",
-        BackgroundClickAnimation: "Bbgb61VVyAwF1y4cJpuir",
-        PlayerControls: "_3ctvhK1fv-G9LZPEnmodRj",
-        UpperControls: "_1zVxtLInNhxx7HMYgmrn-5",
-        LowerControls: "_3CxtA6mQJh7s40yW_2w6bk",
-        ShowControls: "_33uHzJmOWPKQs0YxmefW7B",
-        ButtonRow: "_1MlYikwq27FyUmYYu2OW8F",
-        LeftGroup: "Sm4LFMdEiRv64kmuMZDvI",
-        RightGroup: "_30RJKIL_4C90JCk_qwJqcv",
-        PlaybackButton: "_3Pldgt012zOYr53M7CSCLv",
-        PlaybackTime: "_2ak8WQFc7eGeyi8r16M9xk",
-        TimeDash: "RBT8X2pOd5efTP81CR2xo",
-        VolumeControls: "_2gpHIcwa0MWzCuGleO5z7K",
-        VolumeSlider: "qb4tAR051zcPzv-wYzv3I",
-        Timeline: "_1w6rw85n2zgSeGYvNfigET",
-        Hovered: "NhlB11fjq4pLeSryzYZsc",
-        TimelineBar: "_3M15KPyqV1WukB7LaC6Bnd",
-        Bar: "_2hUBQscPnh3JEJgpoMCC7N",
-        Buffered: "_3-HcdLD5UnC8E5t2UC67t9",
-        Played: "_276_EALPEi2727T80CH5rb",
-        HoverTick: "_1n3_ZNBqtYp9hKYb5sSO41",
-        Hover: "_1iuE6UjqkvJH6ewj7WHM8D",
-        HoverImage: "_3azIFUQZwfDGUYdj0EtLNO",
-        HoverTime: "_1xg03_YqqhrMNLZXKALB91",
-        AutoplayVideos: "_1qnnw-TfQP3VzIqAhkUaoS",
-        Label: "_1PnqbrpVm8rbIRd1xqFceF",
-        Checkbox: "zg9xxCoELjiuucvqfxc30",
         UserInputNeeded: "_1Y1AAYPHLnSZog32foUuw",
         Animate: "_9eb3EIMlhnYG8YdJci9e",
-        SettingsButton: "_1mec0oka7Zz6UA2T1gyRdv",
-        Rotated: "cOJrRErGxeQ8IZUEcS-N1",
-        SettingsMenu: "_1SIhQWnpOUlhEVu39OCTJn",
-        MenuItem: "_3yD4IilvW96W542-Bd5HSU",
-        Checked: "_2yu9Ma9rOdJMDxvJUlyh4q",
-        MenuLayer: "_1a5ymL01jZFA-K7gF0EGAG",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BackgroundClick: "vXKdKnTS2vXaw2YxC0Yc1",
+        Enabled: "pG-0I5m26k9ZDt1IjexxK",
+        Icon: "_2U9kjREHwWCzFv6jHeN7en",
+        BackgroundClickAnimation: "_2XYeZn3KijB2PUnLY0II7_",
+        PlayerControls: "-qTM6xbWp6f2qNHBAuaxc",
+        UpperControls: "_3kSXQEoQMr_lWPTqJoSG1I",
+        LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
+        BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
+        ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
+        ButtonRow: "_2gDbG9frVoBgp4J9N1vA7I",
+        LeftGroup: "ppGte6hTuxkoYS4d0ffwc",
+        RightGroup: "_2iPvkLeM34oiIhYNFbtIaL",
+        VolumeControls: "_1j6rW_OLdrZ-Erj3ayEBt5",
+        VolumeSlider: "mowMYhLYBK1wWoarutOvd",
+        AutoplayVideos: "_2c_UJEbgUpffRJKe0P6DIi",
+        Label: "trYH1VYj_SMBV9GHepK7j",
+        Checkbox: "Lk-_bLcrHp-e-nHnscuEU",
+        MenuLayer: "_3eOkjP_BsIDVjKSn4xGkHW",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        nContextMenuEdgePadding: "4",
+        nContextMenuVerticalGap: "12px",
+        nTimelineHoverEdgePadding: "4px",
+        PlaybackButton: "_3XkD6Vq8YzOkmEr9odYcX4",
+        PlaybackTime: "Ul_JQ5e-7WyVgJwFfykCb",
+        TimeDash: "d5YtApFVuFkhQUYKjq2_0",
+        SettingsButton: "DpzfSpwcCrmcxUf4Hb6nM",
+        Rotated: "KQCO7547RMDooQhKTvbmV",
+        SettingsMenu: "fXwjI_9jYSPc7xMajGzGb",
+        MenuItem: "_1-NP1PnZ92z74rDyvBaNbu",
+        Checked: "_2BiCJYRxhSB_zncLEq9uuM",
+        Timeline: "_2eh4iDod50HkFNh5C0fVW6",
+        Hovered: "_1p3RPu0yCTtqWEwIZT6FNV",
+        TimelineBar: "_3ezjd4FAgey-Olcl2qvfD4",
+        Bar: "_1CCfDkqskHEeuJ51BM6vMI",
+        Buffered: "_3f4Y1kM_nEtTF4DINVZ_rx",
+        Played: "_3ezyMaw8mNCokAmQuZDbj1",
+        HoverTick: "_1DhQ7PX8QrMx7WGkO0uxy8",
+        Hover: "_2Zd3311XV6d_wOGB8C9H4D",
+        HoverImage: "_2ZYpYXOs7Rs6UqKCGlQffu",
+        HoverTime: "qSkn0N2OLSYYw4IxDl6LF",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PlayerControls: "_2vG-2gXab6W-z35SIH9R3e",
+        GlassBackground: "_3Gg0KvfCct51O3L9T5Y7Zb",
+        ShowControls: "_1-uJmZae5aIz-hnJFoGEAM",
+        SeekThumbnail: "Ngi4I8hsTuASK1ZqGU7QU",
+        CenterControls: "e9VoqX_mFdhBgMsntP0NR",
+        Hide: "_2WyZa1F8jTCVpsx7hED5nU",
+        CenteredPlayToggle: "_1-CqXG-KggjG0ABX36Nq2M",
+        LowerControls: "_2zXAYR_cNqhjyohUNk0JWm",
+        ButtonRow: "_2nDASWOFwDdhUur1he9VwG",
+        LeftGroup: "_2BJQLVbj-HFcit8hPPGlG_",
+        RightGroup: "_2DMfXT39PNuEz5MAKitZ4m",
       };
     },
     chunkid: (module) => {
@@ -2156,8 +2181,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -2215,7 +2238,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2249,9 +2271,6 @@
           },
           _,
         );
-      }
-      function _() {
-        return (0, _.useContext)(_);
       }
       var _;
       !(function (_) {
@@ -2451,6 +2470,26 @@
           this.IsInitialized() && this.m_player.SetVideoRepresentation(_);
         }
       }
+      function _(_, _, _) {
+        let _ = (0, _.useContext)(_),
+          _ = _.useRef();
+        _.current || (_.current = new _(_));
+        let _ = (0, _._)(
+          (_) => {
+            if (_) return _.current.Start(_, _, _), () => _.current.Stop();
+          },
+          [_, _, _],
+        );
+        return (
+          (0, _.useEffect)(() => {
+            _.current.UpdatePersistState(_);
+          }, [_]),
+          (0, _.useEffect)(() => {
+            _.current.SetPlaybackEndCallback(_);
+          }, [_]),
+          [_, _.current]
+        );
+      }
       (0, _._)([_._], _.prototype, "m_bPaused", void 0),
         (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
         (0, _._)([_._], _.prototype, "m_bMuted", void 0),
@@ -2470,6 +2509,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
           let { children: __webpack_require__, ..._ } = _,
@@ -2509,35 +2549,22 @@
       function _() {
         return (0, _.useContext)(_);
       }
+      function _(_, _, _) {
+        return (0, _.useMemo)(
+          () => ({
+            m_bMenuVisible: _,
+            m_fnSetMenuVisible: _,
+            m_refMenuLayer: _,
+          }),
+          [_, _, _],
+        );
+      }
       function _() {
         return _().m_bMenuVisible;
       }
       function _(_, _) {
         let [__webpack_require__, _] = (function () {
-          let [_, _] = (function () {
-              let [_, _] = (0, _.useState)(!1),
-                _ = (0, _.useRef)(void 0),
-                _ = (0, _.useCallback)(
-                  (_, _) => {
-                    _.current &&
-                      (window.clearTimeout(_.current), (_.current = void 0)),
-                      _(_),
-                      _ &&
-                        0 != _ &&
-                        (_.current = window.setTimeout(() => _(!1), _));
-                  },
-                  [_],
-                );
-              return (
-                (0, _.useEffect)(
-                  () => () => {
-                    _.current && window.clearTimeout(_.current);
-                  },
-                  [],
-                ),
-                [_, _]
-              );
-            })(),
+          let [_, _] = _(),
             _ = (0, _.useRef)(void 0),
             _ = (0, _.useRef)(0),
             _ = (0, _.useCallback)(
@@ -2606,567 +2633,120 @@
         }
         return !1;
       }
-      const _ = parseInt(_().nTimelineHoverEdgePadding),
-        _ = parseInt(_().nContextMenuVerticalGap),
-        _ = 500,
-        _ = 130,
-        _ = !1;
       function _(_) {
-        let {
-            dashManifest: _,
-            hlsManifest: __webpack_require__,
-            screenshot: _,
-            forcePause: _,
-            onPlaybackEnd: _,
-          } = _,
-          [_, _] = (0, _._)(!0),
-          [_, _] = (function (_, _, _) {
-            let _ = _(),
-              _ = _.useRef();
-            _.current || (_.current = new _(_));
-            let _ = (0, _._)(
-              (_) => {
-                if (_) return _.current.Start(_, _, _), () => _.current.Stop();
-              },
-              [_, _, _],
-            );
-            return (
-              (0, _.useEffect)(() => {
-                _.current.UpdatePersistState(_);
-              }, [_]),
-              (0, _.useEffect)(() => {
-                _.current.SetPlaybackEndCallback(_);
-              }, [_]),
-              [_, _.current]
-            );
-          })(_, __webpack_require__, _);
-        return (
-          (function (_, _) {
-            let _ = _.useRef(!1),
-              _ = _.useRef(!1);
-            (0, _.useEffect)(() => {
-              _.current != _ &&
-                (_
-                  ? ((_.current = _.IsPaused()), _.Pause())
-                  : _.current || _.Play(),
-                (_.current = _));
-            }, [_, _, _, _]);
-          })(_, _),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _().TrailerPlayer,
-            },
-            _.createElement("video", {
-              ref: _,
-              controls: !1,
-              playsInline: !0,
-            }),
-            _.createElement(_, {
-              player: _,
-              fullscreen: _,
-            }),
-            _.createElement(_, {
-              player: _,
-              screenshot: _,
-            }),
-          )
-        );
-      }
-      function _(_) {
-        let { player: _, fullscreen: __webpack_require__ } = _,
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(),
-          [_, _] = _(0, _),
-          [_, _] = (0, _.useState)(!1);
-        _ = _ || _;
-        let _ = (0, _._)(_().PlayerControls, _ && _().ShowControls),
-          _ = (function (_, _, _) {
-            return (0, _.useMemo)(
-              () => ({
-                m_bMenuVisible: _,
-                m_fnSetMenuVisible: _,
-                m_refMenuLayer: _,
-              }),
-              [_, _, _],
-            );
-          })(_, _, _);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            ..._,
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(_, {
-              player: _,
-              enabled: _ && !_,
-            }),
-            _.createElement(
-              _,
-              {
-                className: _().UpperControls,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              {
-                ref: _,
-                className: _().LowerControls,
-              },
-              _.createElement(_, {
-                player: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ButtonRow,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LeftGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                    refControlsHover: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().RightGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    fullscreen: __webpack_require__,
-                  }),
-                ),
-              ),
-            ),
-            _.createElement("div", {
-              ref: _,
-              className: _().MenuLayer,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        let _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(1),
-          [_, _] = (0, _.useState)([]),
-          _ = (0, _.useCallback)(
+        let _ = (0, _.useRef)(null);
+        return {
+          onPointerDown: (0, _.useCallback)(
             (_) => {
-              if (_.target != _.current) return;
-              let _ = _.TogglePlayPause(),
-                _ = _.current++;
-              _((_) => [
-                {
-                  nID: _,
-                  eState: _,
-                },
-                ..._,
-              ]);
-            },
-            [_, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _((_) => _.filter((_) => _.nID != _));
+              ("mouse" === _.pointerType && 0 != _.button) ||
+                (_.currentTarget.setPointerCapture(_.pointerId),
+                (_.current = _.pointerId));
             },
             [_],
           ),
-          _ = (function (_) {
-            let _ = (0, _.useRef)(null);
-            return {
-              onPointerDown: (0, _.useCallback)(
-                (_) => {
-                  ("mouse" === _.pointerType && 0 != _.button) ||
-                    (_.currentTarget.setPointerCapture(_.pointerId),
-                    (_.current = _.pointerId));
-                },
-                [_],
-              ),
-              onPointerCancel: (0, _.useCallback)(
-                (_) => {
-                  _.current == _.pointerId && (_.current = null);
-                },
-                [_],
-              ),
-              onPointerUp: (0, _.useCallback)(
-                (_) => {
-                  if (_.current != _.pointerId) return;
-                  _.currentTarget.releasePointerCapture(_.pointerId),
-                    (_.current = null);
-                  let _ = _.currentTarget.getBoundingClientRect(),
-                    { clientX: _, clientY: _ } = _;
-                  _ >= _.left &&
-                    _ <= _.right &&
-                    _ >= _.top &&
-                    _ <= _.bottom &&
-                    _(_);
-                },
-                [_, _],
-              ),
-            };
-          })(_);
-        return {
-          refBackground: _,
-          inputEvents: _,
-          clickEvents: _,
-          fnRemoveEvent: _,
+          onPointerCancel: (0, _.useCallback)(
+            (_) => {
+              _.current == _.pointerId && (_.current = null);
+            },
+            [_],
+          ),
+          onPointerUp: (0, _.useCallback)(
+            (_) => {
+              if (_.current != _.pointerId) return;
+              _.currentTarget.releasePointerCapture(_.pointerId),
+                (_.current = null);
+              let _ = _.currentTarget.getBoundingClientRect(),
+                { clientX: _, clientY: _ } = _;
+              _ >= _.left &&
+                _ <= _.right &&
+                _ >= _.top &&
+                _ <= _.bottom &&
+                _(_);
+            },
+            [_, _],
+          ),
         };
       }
-      function _(_) {
-        let { player: _, enabled: __webpack_require__ } = _,
-          {
-            refBackground: _,
-            inputEvents: _,
-            clickEvents: _,
-            fnRemoveEvent: _,
-          } = _(_),
-          _ = (0, _._)(_().BackgroundClick, __webpack_require__ && _().Enabled);
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _,
-            ..._,
-          },
-          _.map((_) =>
-            _.createElement(_, {
-              key: `icon_${_.nID}`,
-              event: _,
-              removeEvent: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        let { event: _, removeEvent: __webpack_require__ } = _,
-          _ = _.nID,
-          _ = (0, _.useCallback)(() => {
-            __webpack_require__(_);
-          }, [_, __webpack_require__]),
-          _ = null;
-        return (
-          _.eState == _.Play
-            ? (_ = _.createElement(_, null))
-            : _.eState == _.Pause && (_ = _.createElement(_, null)),
-          _.createElement(
-            "div",
-            {
-              className: _().Icon,
-              onAnimationEnd: _,
-            },
-            _,
-          )
-        );
-      }
-      function _(_) {
-        let { player: _ } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = _(_),
-          [_, _] = (function (_) {
-            let [_, _] = _.useState(null),
-              _ = (0, _.useRef)(null),
-              _ = _.useCallback(
-                (_) => {
-                  _.current = _.currentTarget;
-                  let _ = _.current.getBoundingClientRect(),
-                    _ = _(_, _, _.clientX);
-                  __webpack_require__(_);
-                },
-                [_, _, _],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  if (!_.current) return;
-                  let _ = _.current.getBoundingClientRect(),
-                    _ = _(_, _, _.clientX);
-                  __webpack_require__(_);
-                },
-                [_, _, _],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  (_.current = null),
-                    __webpack_require__((_) => (_ ? _ : null));
-                },
-                [_],
-              ),
-              _ = {
-                onMouseEnter: _,
-                onMouseMove: _,
-                onMouseLeave: _,
-              };
-            return [_, _];
-          })(_);
-        _() && (_ = null);
-        let _ = (function (_) {
-          return _.useCallback(
-            (_) => {
-              let _ = _.currentTarget.getBoundingClientRect(),
-                _ = (_.pageX - _.left) / (_.right - _.left);
-              _.Seek(_ * _.GetTimelineDuration()),
-                _.preventDefault(),
-                _.stopPropagation();
+      function _() {
+        let [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useCallback)(
+            (_, _) => {
+              _.current &&
+                (window.clearTimeout(_.current), (_.current = void 0)),
+                _(_),
+                _ && 0 != _ && (_.current = window.setTimeout(() => _(!1), _));
             },
             [_],
           );
-        })(_);
-        _ || (_ = void 0);
-        let _ = {
-          display: "none",
-        };
-        _ && ((_.left = _.nTickOffset), (_.display = "block"));
-        let _ = {
-            width: `${_._(_, 0, _, 0, 100).toFixed(1)}%`,
-          },
-          _ = (0, _._)(_().Timeline, _ && _().Hovered);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-            onMouseMove: _.onMouseMove,
-            onMouseLeave: _.onMouseLeave,
-            "data-keepcontrols": !!_,
-          },
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _().TimelineBar,
-              onMouseEnter: _.onMouseEnter,
+        return (
+          (0, _.useEffect)(
+            () => () => {
+              _.current && window.clearTimeout(_.current);
             },
-            _.createElement("div", {
-              className: (0, _._)(_().Bar, _().Buffered),
-            }),
-            _.createElement("div", {
-              className: (0, _._)(_().Bar, _().Played),
-              style: _,
-            }),
-            _.createElement("div", {
-              className: (0, _._)(_().HoverTick),
-              style: _,
-            }),
+            [],
           ),
-          _.createElement(_, {
-            refTimeline: _,
-            hoverState: _,
-          }),
+          [_, _]
         );
       }
       function _(_) {
-        let { refTimeline: _, hoverState: __webpack_require__ } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(0);
-        if (
-          (_.useLayoutEffect(() => {
-            if (!__webpack_require__ || !_.current || !_.current) return;
-            let _ = _.current.getBoundingClientRect(),
-              _ = _.current.getBoundingClientRect(),
-              _ = _.right - _.left,
-              _ = _.right - _.left,
-              _ = _._(
-                __webpack_require__.nTickOffset - _ / 2,
-                0 + _,
-                _ - _ - _,
-              );
-            _(_);
-          }, [__webpack_require__, _, _, _]),
-          !__webpack_require__)
-        )
-          return null;
-        let _ = {
-            left: _,
-          },
-          _ = null,
-          _ = __webpack_require__.thumbnail;
-        if (_) {
-          let _ = _ / _.nThumbnailHeight;
-          _ = {
-            width: _.nThumbnailWidth * _ + "px",
-            height: _.nThumbnailHeight * _ + "px",
-            backgroundImage: `url(${_.strTileURL})`,
-            backgroundPosition: `-${_._ * _}px -${_._ * _}px`,
-            backgroundSize: `${_.nImageWidth * _}px ${_.nImageHeight * _}px`,
-            backgroundRepeat: "no-repeat",
-          };
-        }
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            style: _,
-            className: _().Hover,
-          },
-          Boolean(_) &&
-            _.createElement("div", {
-              style: _,
-              className: _().HoverImage,
-            }),
-          _.createElement(
-            "span",
-            {
-              className: _().HoverTime,
+        let [_, __webpack_require__] = (0, _._)(() => [
+            _.GetMuted(),
+            _.GetVolume(),
+          ]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.SetMute(!1), _.SetVolume(_);
             },
-            (0, _._)(__webpack_require__.nPlaybackSeconds, !0),
+            [_],
           ),
-        );
+          _ = (0, _.useCallback)((_) => _.SetMute(!_), [_, _]);
+        return [_, __webpack_require__, _, _];
       }
       function _(_) {
         return (0, _._)(() => [_.GetPlaybackTime(), _.GetTimelineDuration()]);
       }
-      function _(_, _, _) {
-        let _ = _ - _.left,
-          _ = _ / (_.right - _.left),
-          _ = Math.floor(_.GetTimelineDuration() * _);
-        return {
-          nTickOffset: _,
-          nPlaybackSeconds: _,
-          thumbnail: _.GetThumbnail(_),
-        };
-      }
-      const _ = _.forwardRef(function (_, _) {
-        let {
-            tooltip: __webpack_require__,
-            onActivate: _,
-            size: _,
-            style: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _();
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: __webpack_require__,
-            direction: "top",
-            usePointerEvents: !0,
-            bDisabled: _,
-          },
-          _.createElement(
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = parseInt(_().nContextMenuEdgePadding),
+        _ = parseInt(_().nContextMenuVerticalGap),
+        _ = parseInt(_().nTimelineHoverEdgePadding),
+        _ = 130,
+        _ = !1,
+        _ = _.forwardRef(function (_, _) {
+          let {
+              tooltip: __webpack_require__,
+              onActivate: _,
+              size: _,
+              children: _,
+            } = _,
+            _ = _(),
+            _ = _(_);
+          return _.createElement(
             _._,
             {
-              ref: _,
-              className: _().PlaybackButton,
-              onActivate: _,
-              noFocusRing: !0,
-              ..._,
-              "data-keepcontrols": !0,
+              toolTipContent: __webpack_require__,
+              direction: "top",
+              usePointerEvents: !0,
+              bDisabled: _,
             },
-            _,
-          ),
-        );
-      });
-      function _(_) {
-        let { player: _ } = _,
-          _ = (0, _._)(() => _.IsPaused()),
-          _ = _ ? _.createElement(_, null) : _.createElement(_, null),
-          _ = (0, _._)(
-            _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
-          ),
-          _ = _.useCallback(() => {
-            _.TogglePlayPause();
-          }, [_]);
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
-      }
-      function _(_) {
-        let _,
-          { player: __webpack_require__, refControlsHover: _ } = _,
-          [_, _, _, _] = (function (_) {
-            let [_, __webpack_require__] = (0, _._)(() => [
-                _.GetMuted(),
-                _.GetVolume(),
-              ]),
-              _ = (0, _.useCallback)(
-                (_) => {
-                  _.SetMute(!1), _.SetVolume(_);
-                },
-                [_],
-              ),
-              _ = (0, _.useCallback)(() => _.SetMute(!_), [_, _]);
-            return [_, __webpack_require__, _, _];
-          })(__webpack_require__),
-          [_, _] = (function (_) {
-            let [_, __webpack_require__] = (0, _.useState)(!1),
-              _ = (0, _.useCallback)(
-                () => __webpack_require__(!0),
-                [__webpack_require__],
-              );
-            return (
-              (0, _._)(_, "mouseleave", (_) => {
-                _.target == _.currentTarget && __webpack_require__(!1);
-              }),
-              [_, _]
-            );
-          })(_);
-        _ =
-          _ || 0 === _
-            ? _.createElement(_.K9I, null)
-            : _ < 0.3
-              ? _.createElement(_.a_4, null)
-              : _ < 0.6
-                ? _.createElement(_.TPi, null)
-                : _.createElement(_._3Z, null);
-        let _ = (0, _._)(
-          _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
-        );
-        return _.createElement(
-          "div",
-          {
-            className: _().VolumeControls,
-            onMouseEnter: _,
-            "data-keepcontrols": !0,
-          },
-          _.createElement(
-            _,
-            {
-              onActivate: _,
-              tooltip: _,
-            },
-            _,
-          ),
-          _ &&
             _.createElement(
               "div",
               {
-                className: _().VolumeSlider,
+                ref: _,
+                className: _().PlaybackButton,
+                ..._,
+                "data-keepcontrols": !0,
               },
-              _.createElement(_._, {
-                min: 0,
-                max: 1,
-                value: _ ? 0 : _,
-                step: 0.01,
-                onChange: _,
-                dpadStep: 0.1,
-              }),
+              _,
             ),
-        );
-      }
+          );
+        });
       function _(_) {
         let { player: _ } = _,
           [__webpack_require__, _] = _(_),
@@ -3189,16 +2769,32 @@
         );
       }
       function _(_) {
+        let { fullscreen: _ } = _,
+          _ = _.bFullscreen
+            ? _.createElement(_.JaO, null)
+            : _.createElement(_, null),
+          _ = (0, _._)(
+            _.bFullscreen
+              ? "#TrailerPlayer_ExitFullScreen_Tooltip"
+              : "#TrailerPlayer_FullScreen_Tooltip",
+          );
+        return _.createElement(
+          _,
+          {
+            onActivate: _.fnToggleFullscreen,
+            tooltip: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
         let { player: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(() => _(!1), [_]),
           _ = (0, _.useRef)(void 0),
-          _ = _.useCallback(
-            (_) => {
-              _((_) => !_);
-            },
-            [_],
-          ),
+          _ = _.useCallback(() => {
+            _((_) => !_);
+          }, [_]),
           _ = (0, _._)(_().SettingsButton, __webpack_require__ && _().Rotated);
         return _.createElement(
           _.Fragment,
@@ -3207,7 +2803,7 @@
             _,
             {
               ref: _,
-              onClick: _,
+              onActivate: _,
               tooltip: (0, _._)("#TrailerPlayer_Settings_Tooltip"),
             },
             _.createElement(_.wB_, {
@@ -3319,58 +2915,759 @@
         );
       }
       function _(_) {
-        let { fullscreen: _ } = _,
-          _ = _.bFullscreen
-            ? _.createElement(_.JaO, null)
-            : _.createElement(_, null),
-          _ = (0, _._)(
-            _.bFullscreen
-              ? "#TrailerPlayer_ExitFullScreen_Tooltip"
-              : "#TrailerPlayer_FullScreen_Tooltip",
+        let {
+            player: _,
+            showHoverThumb: __webpack_require__,
+            onTouchSeek: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = _(_),
+          [_, _] = (function (_, _) {
+            let [__webpack_require__, _] = _.useState(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = _.useCallback(
+                (_) => {
+                  if ("mouse" != _.pointerType) return;
+                  _.current = _.currentTarget;
+                  let _ = _.current.getBoundingClientRect(),
+                    _ = _(_, _, _.clientX);
+                  _(_);
+                },
+                [_, _, _],
+              ),
+              _ = _.useCallback(
+                (_) => {
+                  let _ = _.current;
+                  if ((_ || (_ = _.current), !_)) return;
+                  let _ = _.getBoundingClientRect(),
+                    _ = _(_, _, _.clientX);
+                  _(_),
+                    _.current &&
+                      _ &&
+                      _({
+                        thumbnail: _.thumbnail,
+                        nPlaybackSeconds: _.nPlaybackSeconds,
+                      });
+                },
+                [_, _, _, _, _],
+              ),
+              _ = _.useCallback(
+                (_) => {
+                  _.current && ((_.current = null), _((_) => (_ ? _ : null)));
+                },
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => {
+                  (_.current = _.currentTarget),
+                    _.current.setPointerCapture(_.pointerId);
+                  let _ = _.current.getBoundingClientRect(),
+                    _ = _(_, _, _.clientX);
+                  _(_),
+                    _ &&
+                      _({
+                        thumbnail: _.thumbnail,
+                        nPlaybackSeconds: _.nPlaybackSeconds,
+                      });
+                },
+                [_, _, _],
+              ),
+              _ = _.useCallback(
+                (_) => {
+                  _.current &&
+                    (_.current.releasePointerCapture(_.pointerId),
+                    (_.current = null),
+                    _.current || _(null),
+                    _ && _(null));
+                },
+                [_, _, _, _],
+              ),
+              _ = _.useCallback(
+                (_) => {
+                  _.current &&
+                    ((_.current = null), _.current || _(null), _ && _(null));
+                },
+                [_, _, _, _],
+              );
+            return [
+              {
+                onPointerEnter: _,
+                onPointerMove: _,
+                onPointerLeave: _,
+                onPointerDown: _,
+                onPointerUp: _,
+                onLostPointerCapture: _,
+              },
+              __webpack_require__,
+            ];
+          })(_, _);
+        _() && (_ = null);
+        let _ = (function (_) {
+          return _.useCallback(
+            (_) => {
+              let _ = _.currentTarget.getBoundingClientRect(),
+                _ = (_.pageX - _.left) / (_.right - _.left);
+              _.Seek(_ * _.GetTimelineDuration()),
+                _.preventDefault(),
+                _.stopPropagation();
+            },
+            [_],
           );
+        })(_);
+        _ || (_ = void 0);
+        let _ = {
+          display: "none",
+        };
+        _ && ((_.left = _.nTickOffset), (_.display = "block"));
+        let _ = {
+            width: `${_._(_, 0, _, 0, 100).toFixed(1)}%`,
+          },
+          _ = (0, _._)(_().Timeline, _ && _().Hovered);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+            "data-keepcontrols": !!_,
+            onClick: _,
+            onPointerMove: _.onPointerMove,
+            onPointerLeave: _.onPointerLeave,
+            onPointerDown: _.onPointerDown,
+            onPointerUp: _.onPointerUp,
+            onLostPointerCapture: _.onLostPointerCapture,
+          },
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: _().TimelineBar,
+              onPointerEnter: _.onPointerEnter,
+            },
+            _.createElement("div", {
+              className: (0, _._)(_().Bar, _().Buffered),
+            }),
+            _.createElement("div", {
+              className: (0, _._)(_().Bar, _().Played),
+              style: _,
+            }),
+            _.createElement("div", {
+              className: (0, _._)(_().HoverTick),
+              style: _,
+            }),
+          ),
+          _.createElement(_, {
+            refTimeline: _,
+            hoverState: _,
+            showHoverThumb: __webpack_require__,
+          }),
+        );
+      }
+      function _(_) {
+        let {
+            refTimeline: _,
+            hoverState: __webpack_require__,
+            showHoverThumb: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0);
+        if (
+          (_.useLayoutEffect(() => {
+            if (!__webpack_require__ || !_.current || !_.current) return;
+            let _ = _.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect(),
+              _ = _.right - _.left,
+              _ = _.right - _.left,
+              _ = _._(
+                __webpack_require__.nTickOffset - _ / 2,
+                0 + _,
+                _ - _ - _,
+              );
+            _(_);
+          }, [__webpack_require__, _, _, _]),
+          !__webpack_require__)
+        )
+          return null;
+        let _ = {
+            left: _,
+          },
+          _ = null,
+          _ = _ ? __webpack_require__.thumbnail : null;
+        if (_) {
+          let _ = _ / _.nThumbnailHeight;
+          _ = {
+            width: _.nThumbnailWidth * _ + "px",
+            height: _.nThumbnailHeight * _ + "px",
+            backgroundImage: `url(${_.strTileURL})`,
+            backgroundPosition: `-${_._ * _}px -${_._ * _}px`,
+            backgroundSize: `${_.nImageWidth * _}px ${_.nImageHeight * _}px`,
+            backgroundRepeat: "no-repeat",
+          };
+        }
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            style: _,
+            className: _().Hover,
+          },
+          Boolean(_) &&
+            _.createElement("div", {
+              style: _,
+              className: _().HoverImage,
+            }),
+          _.createElement(
+            "span",
+            {
+              className: _().HoverTime,
+            },
+            (0, _._)(__webpack_require__.nPlaybackSeconds, !0),
+          ),
+        );
+      }
+      function _(_, _, _) {
+        let _ = _ - _.left,
+          _ = _.right - _.left;
+        _ = _._(_, 0, _);
+        let _ = _ / _,
+          _ = Math.floor(_.GetTimelineDuration() * _);
+        return {
+          nTickOffset: _,
+          nPlaybackSeconds: _,
+          thumbnail: _.GetThumbnail(_),
+        };
+      }
+      function _(_) {
+        let { player: _, fullscreen: __webpack_require__ } = _,
+          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(),
+          [_, _] = _(0, _),
+          [_, _] = (0, _.useState)(!1),
+          _ = _(_, _, _);
+        _ = _ || _;
+        let _ = (0, _._)(_().PlayerControls, _ && _().ShowControls);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+            ..._,
+          },
+          _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(_, {
+              player: _,
+              enabled: _ && !_,
+            }),
+            _.createElement(_, {
+              className: _().UpperControls,
+            }),
+            _.createElement(_, null),
+            _.createElement(
+              _,
+              {
+                ref: _,
+                className: _().LowerControls,
+              },
+              _.createElement(_, {
+                player: _,
+                showHoverThumb: !0,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().ButtonRow,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LeftGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                  _.createElement(_, {
+                    player: _,
+                    refControlsHover: _,
+                  }),
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().RightGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                  _.createElement(_, {
+                    fullscreen: __webpack_require__,
+                  }),
+                ),
+              ),
+            ),
+            _.createElement("div", {
+              ref: _,
+              className: _().MenuLayer,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let { player: _, enabled: __webpack_require__ } = _,
+          {
+            refBackground: _,
+            inputEvents: _,
+            clickEvents: _,
+            fnRemoveEvent: _,
+          } = (function (_) {
+            let _ = (0, _.useRef)(),
+              _ = (0, _.useRef)(1),
+              [_, _] = (0, _.useState)([]),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  if (_.target != _.current) return;
+                  let _ = _.TogglePlayPause(),
+                    _ = _.current++;
+                  _((_) => [
+                    {
+                      nID: _,
+                      eState: _,
+                    },
+                    ..._,
+                  ]);
+                },
+                [_, _, _],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _((_) => _.filter((_) => _.nID != _));
+                },
+                [_],
+              ),
+              _ = _(_);
+            return {
+              refBackground: _,
+              inputEvents: _,
+              clickEvents: _,
+              fnRemoveEvent: _,
+            };
+          })(_),
+          _ = (0, _._)(_().BackgroundClick, __webpack_require__ && _().Enabled);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            ..._,
+          },
+          _.map((_) =>
+            _.createElement(_, {
+              key: `icon_${_.nID}`,
+              event: _,
+              removeEvent: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let { event: _, removeEvent: __webpack_require__ } = _,
+          _ = _.nID,
+          _ = (0, _.useCallback)(() => {
+            __webpack_require__(_);
+          }, [_, __webpack_require__]),
+          _ = null;
+        return (
+          _.eState == _.Play
+            ? (_ = _.createElement(_, null))
+            : _.eState == _.Pause && (_ = _.createElement(_, null)),
+          _.createElement(
+            "div",
+            {
+              className: _().Icon,
+              onAnimationEnd: _,
+            },
+            _,
+          )
+        );
+      }
+      function _(_) {
+        return _.createElement("div", {
+          className: _().BehindControlsFade,
+        });
+      }
+      function _(_) {
+        let { player: _ } = _,
+          _ = (0, _._)(() => _.IsPaused()),
+          _ = _ ? _.createElement(_, null) : _.createElement(_, null),
+          _ = (0, _._)(
+            _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
+          ),
+          _ = _.useCallback(() => {
+            _.TogglePlayPause();
+          }, [_]);
         return _.createElement(
           _,
           {
-            onActivate: _.fnToggleFullscreen,
+            onActivate: _,
             tooltip: _,
           },
           _,
         );
       }
       function _(_) {
-        let _ = _(),
-          _ = 1 == _.m_bAutoplayEnabled,
-          _ = (0, _.useCallback)(() => {
-            _.m_fnSetAutoplayEnabled && _.m_fnSetAutoplayEnabled(!_);
-          }, [_, _]);
-        if (!_.m_fnSetAutoplayEnabled) return null;
+        let _,
+          { player: __webpack_require__, refControlsHover: _ } = _,
+          [_, _, _, _] = _(__webpack_require__),
+          [_, _] = (function (_) {
+            let [_, __webpack_require__] = (0, _.useState)(!1),
+              _ = (0, _.useCallback)(
+                () => __webpack_require__(!0),
+                [__webpack_require__],
+              );
+            return (
+              (0, _._)(_, "mouseleave", (_) => {
+                _.target == _.currentTarget && __webpack_require__(!1);
+              }),
+              [_, _]
+            );
+          })(_);
+        _ =
+          _ || 0 === _
+            ? _.createElement(_.K9I, null)
+            : _ < 0.3
+              ? _.createElement(_.a_4, null)
+              : _ < 0.6
+                ? _.createElement(_.TPi, null)
+                : _.createElement(_._3Z, null);
         let _ = (0, _._)(
-          "DialogCheckbox_Container _DialogLayout DialogCheckbox",
-          _().Checkbox,
-          _ && "Active",
+          _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
         );
         return _.createElement(
-          _._,
+          "div",
           {
-            className: _().AutoplayVideos,
-            onActivate: _,
+            className: _().VolumeControls,
+            onMouseEnter: _,
             "data-keepcontrols": !0,
           },
           _.createElement(
-            "span",
+            _,
             {
-              className: _().Label,
+              onActivate: _,
+              tooltip: _,
             },
-            (0, _._)("#StoreTrailer_AutoPlayVideos"),
+            _,
           ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().VolumeSlider,
+              },
+              _.createElement(_._, {
+                min: 0,
+                max: 1,
+                value: _ ? 0 : _,
+                step: 0.01,
+                onChange: _,
+                dpadStep: 0.1,
+              }),
+            ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = 3e3,
+        _ = 1e3;
+      function _(_) {
+        let { player: _, fullscreen: __webpack_require__ } = _,
+          _ = (0, _.useRef)(),
+          [_, _] = (function (_, _, _) {
+            let [_, _] = (function (_, _) {
+              let [_, _] = _(),
+                _ = (0, _.useRef)(void 0),
+                _ = (0, _.useRef)(!0),
+                _ = (0, _._)(() => _.IsPaused());
+              (0, _.useEffect)(() => {
+                let _ = _.current;
+                (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+              }, [_, _, _]);
+              let _ = (0, _.useCallback)(
+                  (_) => {
+                    _.current = _.target;
+                  },
+                  [_],
+                ),
+                _ = (0, _.useCallback)(
+                  (_) => {
+                    _.current = void 0;
+                  },
+                  [_],
+                ),
+                _ = (0, _.useCallback)(
+                  (_) => {
+                    let _ = _.current;
+                    if (((_.current = void 0), null == _)) return;
+                    let _ = _ ? 0 : _;
+                    _.target == _ && _.current == _ ? _(!_, _) : _(!0, _);
+                  },
+                  [_, _, _, _],
+                );
+              return [
+                _,
+                {
+                  onPointerDown: _,
+                  onPointerCancel: _,
+                  onPointerUp: _,
+                },
+              ];
+            })(_, _);
+            return (_ = _ || _), [_, _];
+          })(_, _, _),
+          _ = (0, _.useRef)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = _(_, _, _);
+        _ = _ || _;
+        let [_, _] = (function (_) {
+            let [_, __webpack_require__] = (0, _.useState)(null),
+              _ = (0, _.useRef)(!1),
+              _ = (0, _.useRef)(null),
+              _ = _.useCallback(
+                (_) => {
+                  let _ = _ ? _.thumbnail : null;
+                  !_.IsPaused() && _ && ((_.current = !0), _.Pause()),
+                    !_ && _.current && (_.Play(), (_.current = !1)),
+                    _.current && !_ && _.Seek(_.current.nPlaybackSeconds),
+                    (_.current = _),
+                    __webpack_require__(_);
+                },
+                [_, __webpack_require__, _],
+              );
+            return [_, _];
+          })(_),
+          _ = _.useCallback((_) => {
+            _.stopPropagation();
+          }, []),
+          _ = (0, _._)(_().PlayerControls, _ && _().ShowControls),
+          _ = (0, _._)(_().CenterControls, !!_ && _().Hide);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            ..._,
+            onTouchStart: _,
+          },
+          _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(_, {
+              thumbnail: _,
+            }),
+            _.createElement(_, null),
+            _.createElement(
+              "div",
+              {
+                className: _,
+              },
+              _.createElement(_, {
+                player: _,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().LowerControls,
+              },
+              _.createElement(_, {
+                player: _,
+                onTouchSeek: _,
+                showHoverThumb: !1,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().ButtonRow,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LeftGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().RightGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                  _.createElement(_, {
+                    fullscreen: __webpack_require__,
+                  }),
+                ),
+              ),
+            ),
+            _.createElement("div", {
+              ref: _,
+              className: _().MenuLayer,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement("div", {
+          className: _().GlassBackground,
+        });
+      }
+      function _(_) {
+        let { thumbnail: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(null),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (!_) return void _(null);
+              let _ = _.getBoundingClientRect(),
+                _ = _.right - _.left,
+                _ = _.bottom - _.top;
+              _({
+                width: _,
+                height: _,
+              });
+            },
+            [_],
+          );
+        if (!_) return null;
+        let _ = {
+          display: "none",
+        };
+        if (__webpack_require__) {
+          let _ = __webpack_require__.width / _.nThumbnailWidth,
+            _ = __webpack_require__.height / _.nThumbnailHeight,
+            _ = Math.min(_, _);
+          _ = {
+            width: _.nThumbnailWidth * _ + "px",
+            height: _.nThumbnailHeight * _ + "px",
+            backgroundImage: `url(${_.strTileURL})`,
+            backgroundPosition: `-${_._ * _}px -${_._ * _}px`,
+            backgroundSize: `${_.nImageWidth * _}px ${_.nImageHeight * _}px`,
+            backgroundRepeat: "no-repeat",
+          };
+        }
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _().SeekThumbnail,
+          },
+          _.createElement("div", {
+            style: _,
+            className: _().ThumbnailImage,
+          }),
+        );
+      }
+      function _(_) {
+        let { player: _ } = _,
+          _ = (0, _._)(() => _.IsPaused()),
+          _ = _(
+            _.useCallback(() => {
+              _.TogglePlayPause();
+            }, [_]),
+          ),
+          _ = _ ? _.createElement(_, null) : _.createElement(_, null);
+        return _.createElement(
+          "div",
+          {
+            className: _().CenteredPlayToggle,
+            ..._,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        let _,
+          { player: __webpack_require__ } = _,
+          [_, _, _, _] = _(__webpack_require__);
+        _ = _ ? _.createElement(_.K9I, null) : _.createElement(_._3Z, null);
+        let _ = (0, _._)(
+          _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
+        );
+        return _.createElement(
+          _,
+          {
+            onActivate: _,
+            tooltip: _,
+          },
+          _,
+        );
+      }
+      const _ = 500;
+      function _(_) {
+        let {
+            dashManifest: _,
+            hlsManifest: __webpack_require__,
+            screenshot: _,
+            forcePause: _,
+            onPlaybackEnd: _,
+          } = _,
+          [_, _] = (0, _._)(!0),
+          [_, _] = _(_, __webpack_require__, _);
+        return (
+          (function (_, _) {
+            let _ = _.useRef(!1),
+              _ = _.useRef(!1);
+            (0, _.useEffect)(() => {
+              _.current != _ &&
+                (_
+                  ? ((_.current = _.IsPaused()), _.Pause())
+                  : _.current || _.Play(),
+                (_.current = _));
+            }, [_, _, _, _]);
+          })(_, _),
           _.createElement(
             "div",
             {
-              className: _,
+              ref: _,
+              className: _().TrailerPlayer,
             },
-            _.createElement(_.X4B, null),
-          ),
+            _.createElement("video", {
+              ref: _,
+              controls: !1,
+              playsInline: !0,
+            }),
+            _.createElement(_, {
+              player: _,
+              fullscreen: _,
+            }),
+            _.createElement(_, {
+              player: _,
+              screenshot: _,
+            }),
+          )
         );
+      }
+      function _(_) {
+        let { player: _, fullscreen: __webpack_require__ } = _;
+        return (0, _._)()
+          ? _.createElement(_, {
+              player: _,
+              fullscreen: __webpack_require__,
+            })
+          : _.createElement(_, {
+              player: _,
+              fullscreen: __webpack_require__,
+            });
       }
       function _(_) {
         let { player: _, screenshot: __webpack_require__ } = _,

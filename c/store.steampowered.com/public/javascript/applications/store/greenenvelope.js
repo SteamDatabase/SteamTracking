@@ -2196,6 +2196,7 @@
             },
             _.createElement(_.$0s, {
               className: _().SVGNotifications,
+              "aria-label": (0, _._)("#NotificationsMenu_Title"),
             }),
           ),
         );

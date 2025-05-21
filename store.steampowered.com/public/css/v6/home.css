@@ -5021,6 +5021,7 @@ body.v6 h2 .header_inline {
 	border: none;
 	background: transparent;
 	box-shadow: none;
+	font-family: inherit;
 }
 
 .home_tab .tab_content {

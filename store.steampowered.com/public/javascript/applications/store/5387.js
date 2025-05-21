@@ -79,7 +79,10 @@
       };
     },
     45803: (e) => {
-      e.exports = { Title: "_307GrwtjhKkXh5dUC5KjUv" };
+      e.exports = {
+        CartCreatorCtn: "_2HG7VOroS8aHSg-W3fPyTt",
+        Title: "_307GrwtjhKkXh5dUC5KjUv",
+      };
     },
     98972: (e) => {
       e.exports = {
@@ -536,10 +539,10 @@
             );
           })(M, B, D, A, l),
           W = !l && U;
-        let V, Z;
+        let Z, V;
         if (t && n && t == n && n > s.HD.GetTimeNowWithOverride()) {
           const e = g().unix(n);
-          (V = {
+          (Z = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
@@ -547,7 +550,7 @@
           }),
             (k = C);
         }
-        P || !n || h || (Z = g().unix(n));
+        P || !n || h || (V = g().unix(n));
         const j = g().tz.guess(),
           z = g().unix(P).tz(j),
           H = !!p && j != p && g().unix(P).tz(p),
@@ -640,7 +643,7 @@
                       ((0 != a.weekday() && 6 != a.weekday()) || (i = !1));
                     return i;
                   })(n, t, T, e),
-                initialValue: Z,
+                initialValue: V,
                 inputProps: {
                   placeholder: (0, u.we)("#DateTimePicker_Enter_Date"),
                   className: (0, m.A)(
@@ -667,7 +670,7 @@
                 onChange: X,
                 dateFormat: !1,
                 timeFormat: k,
-                timeConstraints: V,
+                timeConstraints: Z,
                 value: null != M ? M : F,
                 inputProps: {
                   placeholder: (0, u.we)("#DateTimePicker_Enter_Time"),
@@ -705,7 +708,7 @@
                   ),
               ),
           ),
-          Boolean(V) &&
+          Boolean(Z) &&
             a.createElement(
               "div",
               null,
@@ -1167,13 +1170,13 @@
             s = (i && !i.BIsVisible()) || 2 === o || 2 === r,
             l = a?.GetSelfPurchaseOption();
           return s || (a && !l)
-            ? h.createElement(V, {
+            ? h.createElement(Z, {
                 lineItemID: t.line_item_id,
                 validatedItem: n,
                 storeItem: i,
               })
             : i && a
-              ? h.createElement(Z, {
+              ? h.createElement(V, {
                   ...e,
                   storeItem: a,
                   displayItem: i,
@@ -1186,14 +1189,14 @@
           const { item: t, validatedItem: n } = e,
             [a, r] = (0, L.G6)(t.bundleid, 2, E.xz);
           if ((a && !a.BIsVisible()) || 2 === r)
-            return h.createElement(V, {
+            return h.createElement(Z, {
               lineItemID: t.line_item_id,
               validatedItem: n,
               storeItem: a,
             });
           if (!a) return h.createElement(g.vF, null);
           const i = a.GetSelfPurchaseOption();
-          return h.createElement(Z, {
+          return h.createElement(V, {
             ...e,
             storeItem: a,
             displayItem: a,
@@ -1252,7 +1255,7 @@
           ),
         );
       }
-      function V(e) {
+      function Z(e) {
         const { lineItemID: t, validatedItem: n, storeItem: r } = e,
           i = Y(r),
           o = (0, a.t)(t),
@@ -1307,7 +1310,7 @@
           ),
         );
       }
-      function Z(e) {
+      function V(e) {
         const {
             storeItem: t,
             displayItem: n,
@@ -2268,12 +2271,12 @@
         O = n(45803),
         U = n.n(O),
         W = n(39777),
-        V = n(32541),
-        Z = n(73745);
+        Z = n(32541),
+        V = n(73745);
       function j(e) {
-        const { bVerticalDisplay: t } = e,
+        const { bMinimalDisplay: t } = e,
           n = (function () {
-            const e = (0, Z.CH)();
+            const e = (0, V.CH)();
             return (
               i.useEffect(
                 () => (
@@ -2288,7 +2291,7 @@
         return (n && t) || (!n && !t) ? null : i.createElement(z, { ...e });
       }
       function z(e) {
-        const { cart: t, bVerticalDisplay: n } = e,
+        const { cart: t, bMinimalDisplay: n } = e,
           a = (function (e) {
             const [t, n] = (0, i.useState)(null),
               a = (0, i.useMemo)(
@@ -2341,7 +2344,7 @@
               ),
               i.createElement("br", null),
               r.map((e) =>
-                i.createElement(V.hA, {
+                i.createElement(Z.hA, {
                   key: "creat" + e,
                   creatorID: {
                     name: "",
@@ -2349,8 +2352,8 @@
                     type: "developer",
                   },
                   bHideCreatorType: !0,
-                  bSmallFormat: !1,
-                  bVerticalDisplay: n,
+                  bSmallFormat: !0,
+                  bMinimalDisplay: n,
                 }),
               ),
             );
@@ -2423,7 +2426,7 @@
               }),
           i.createElement(Q, { data: u, isLoaded: !s.isLoading }),
           i.createElement(J, { data: d, isLoaded: !s.isLoading }),
-          i.createElement(j, { cart: t, bVerticalDisplay: !1 }),
+          i.createElement(j, { cart: t, bMinimalDisplay: !1 }),
         );
       }
       function Y(e) {
@@ -2517,7 +2520,7 @@
           [a, r] = i.useState(null),
           o = t > 0;
         return i.createElement(
-          Ze,
+          Ve,
           null,
           i.createElement(He, null, (0, S.we)("#Cart_GiftDelivery_Label")),
           i.createElement(
@@ -2984,7 +2987,7 @@
           a = (0, _e.js)(t.accountid_giftee);
         return a.data
           ? i.createElement(
-              Ve,
+              Ze,
               null,
               i.createElement(
                 je,
@@ -3009,7 +3012,7 @@
         const { lineItem: t } = e,
           n = t.gift_info?.accountid_giftee;
         return i.createElement(
-          Ve,
+          Ze,
           null,
           !n && i.createElement(Me, { ...e }),
           n && i.createElement(xe, { ...e }),
@@ -3024,7 +3027,7 @@
         const { lineItem: t, storeItem: n } = e,
           [a, r] = i.useState(!1);
         return i.createElement(
-          Ze,
+          Ve,
           null,
           i.createElement(
             C.jn,
@@ -3046,7 +3049,7 @@
           o = (0, _e.js)(t.gift_info.accountid_giftee);
         return o.data
           ? i.createElement(
-              Ze,
+              Ve,
               null,
               i.createElement("div", { className: ae().GiftFormDivider }),
               i.createElement(
@@ -3093,7 +3096,7 @@
           c = i.useRef(s),
           [m, u] = i.useState(t.gift_info?.gift_message?.signature || ""),
           d = i.useRef(m),
-          p = (0, Z._g)(3e3),
+          p = (0, V._g)(3e3),
           { mutate: _ } = (0, r.CM)(),
           f = i.useCallback(
             (e) => {
@@ -3163,7 +3166,7 @@
           i.Fragment,
           null,
           i.createElement(
-            Ze,
+            Ve,
             null,
             i.createElement(
               He,
@@ -3186,7 +3189,7 @@
             }),
           ),
           i.createElement(
-            Ze,
+            Ve,
             null,
             i.createElement(
               "div",
@@ -3211,7 +3214,7 @@
           ),
           u &&
             i.createElement(
-              Ze,
+              Ve,
               null,
               i.createElement(
                 He,
@@ -3229,14 +3232,14 @@
           i.createElement(re, { scheduledTime: s, onScheduledTimeChange: l }),
         );
       }
-      function Ve(e) {
+      function Ze(e) {
         return i.createElement(
           "div",
           { className: ae().GiftFormCtn },
           e.children,
         );
       }
-      function Ze(e) {
+      function Ve(e) {
         return i.createElement(
           "div",
           { className: ae().GiftFormSection },
@@ -3629,7 +3632,7 @@
                     p?.estimated_totals?.subtotal.formatted_amount,
                 }),
                 i.createElement(Lt, null),
-                i.createElement(j, { cart: n.data, bVerticalDisplay: !0 }),
+                i.createElement(j, { cart: n.data, bMinimalDisplay: !0 }),
               ),
             ),
           ),
