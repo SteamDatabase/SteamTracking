@@ -36605,7 +36605,7 @@
                       },
                       s.createElement("source", {
                         type: "video/webm",
-                        src: `${r.r.VIDEO_URL}shortfilmcontest2024/clapper_2024.webm`,
+                        src: `${r.r.VIDEO_URL}shortfilmcontest2025/clapper_2025.webm`,
                       }),
                     ),
                     s.createElement(
@@ -36681,7 +36681,7 @@
                   s.createElement(
                     "div",
                     { className: Os().Introduction },
-                    (0, N.Wn)("#filmcontest24_intro"),
+                    (0, N.Wn)("#filmcontest25_intro"),
                   ),
                   s.createElement(
                     "div",
@@ -36760,7 +36760,7 @@
                     className: Os().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/ELyf2AYq8Zg",
+                    src: "https://www.youtube.com/embed/p0qKpJXOJsY",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -36771,7 +36771,7 @@
                     className: Os().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/qtVOAtCAkPU",
+                    src: "https://www.youtube.com/embed/d8N2A8KePP4",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -36782,7 +36782,7 @@
                     className: Os().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/7GxMmEMSjTg",
+                    src: "https://www.youtube.com/embed/LJ6CoMgr2U8",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -36861,42 +36861,42 @@
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_5"),
+                        (0, N.Wn)("#filmcontest25_guidelines_5"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_6"),
+                        (0, N.Wn)("#filmcontest25_guidelines_6"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_7"),
+                        (0, N.Wn)("#filmcontest25_guidelines_7"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_8"),
+                        (0, N.Wn)("#filmcontest25_guidelines_8"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_9"),
+                        (0, N.Wn)("#filmcontest25_guidelines_9"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_10"),
+                        (0, N.Wn)("#filmcontest25_guidelines_10"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_11"),
+                        (0, N.Wn)("#filmcontest25_guidelines_11"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_guidelines_12"),
+                        (0, N.Wn)("#filmcontest25_guidelines_12"),
                       ),
                     ),
                   ),
@@ -36952,7 +36952,7 @@
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_winners_desc"),
+                        (0, N.Wn)("#filmcontest25_winners_desc"),
                       ),
                     ),
                   ),
@@ -36970,12 +36970,12 @@
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_prizes_desc_1"),
+                        (0, N.Wn)("#filmcontest25_prizes_desc_1"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, N.Wn)("#filmcontest24_prizes_desc_2"),
+                        (0, N.Wn)("#filmcontest25_prizes_desc_2"),
                       ),
                     ),
                   ),
@@ -37028,7 +37028,7 @@
                 s.createElement(
                   "div",
                   { className: Os().EndRowText },
-                  (0, N.Wn)("#filmcontest24_intro"),
+                  (0, N.Wn)("#filmcontest25_intro"),
                   0 == r.r.ACCOUNT_ID &&
                     s.createElement(
                       "a",
@@ -37068,7 +37068,7 @@
                 ),
                 s.createElement("img", {
                   className: Os().EndRowImage,
-                  src: `${r.r.IMG_URL}shortfilmcontest2024/clapper_2024.png`,
+                  src: `${r.r.IMG_URL}shortfilmcontest2025/clapper_2025.png`,
                 }),
               ),
               s.createElement(P.K, null),
