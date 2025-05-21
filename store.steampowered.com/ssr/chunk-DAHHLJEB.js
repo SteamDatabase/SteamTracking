@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 import { b as O } from "./chunk-BN3YFZCE.js";
 import { b as v, e as F, f as C } from "./chunk-IXKE5IC3.js";
 import { f as I, t as E, v as N } from "./chunk-KKWZLKK5.js";

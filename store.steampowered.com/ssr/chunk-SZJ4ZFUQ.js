@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 function s(e, n, ...o) {
   try {
     console.assert

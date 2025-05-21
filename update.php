@@ -222,6 +222,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 		private function HandleResponse( string $File, string $Data, string $URL ) : bool
 		{
+			$IsSSR = str_starts_with( $File, 'store.steampowered.com/ssr/' );
+
 			if( $File === 'API/SupportedAPIList.json' )
 			{
 				$Data = json_decode( $Data, true );
@@ -410,6 +412,10 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				return true;
 			}
+			else if( $IsSSR )
+			{
+				$Data = preg_replace( '/^\s*const CLSTAMP = [0-9]+;\s*/', '', $Data );
+			}
 			else if( $File === '.support/archives/steam-android.apk' )
 			{
 				$this->Log( 'Dumping mobile app' );
@@ -531,9 +537,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				mkdir( $Folder, 0755, true );
 			}
 
-			$IsSSR =
-				str_starts_with( $OriginalFile, 'store.steampowered.com/ssr' );
-
 			if(
 				$IsSSR ||
 				str_ends_with( $File, 'english-json.js' ) ||
@@ -650,6 +653,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					$Code  = curl_getinfo( $Handle, CURLINFO_HTTP_CODE );
 
 					$Request = $this->Requests[ (int)$Handle ];
+					$IsSSR = $Request === 'SSR';
+
+					if( $Code === 429 && $IsSSR )
+					{
+						$this->Log( '{yellow}Error ' . $Code . '{normal}    - ' . $URL . ' (but continuing)' );
+						$Code = 200;
+					}
 
 					if( isset( $Done[ 'error' ] ) )
 					{
@@ -680,10 +690,10 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					}
 					else
 					{
-						$LengthExpected = curl_getinfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
-						$LengthDownload = curl_getinfo( $Handle, CURLINFO_SIZE_DOWNLOAD );
+						$LengthExpected = curl_getinfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD_T );
+						$LengthDownload = curl_getinfo( $Handle, CURLINFO_SIZE_DOWNLOAD_T );
 
-						if( $LengthExpected !== $LengthDownload )
+						if( $LengthExpected !== $LengthDownload && !$IsSSR )
 						{
 							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 

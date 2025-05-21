@@ -16725,12 +16725,12 @@
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, 6959)),
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, 91855)),
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         );
       let _ = class extends _.Component {
         render() {

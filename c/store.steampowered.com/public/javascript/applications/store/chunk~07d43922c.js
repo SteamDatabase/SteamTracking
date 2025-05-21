@@ -5500,7 +5500,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 70834)),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = "broadcast-preroll-",
         _ = "viewed";
@@ -20013,7 +20013,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 20482)),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,

@@ -940,7 +940,7 @@
       const _ = _.lazy(() =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, 36757)),
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         let _;
@@ -2329,7 +2329,7 @@
       const _ = _.lazy(() =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, 22862)),
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const [_, __webpack_require__] = (0, _._)(_.appid, {

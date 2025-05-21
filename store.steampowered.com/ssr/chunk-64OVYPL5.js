@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 function n(_) {
   return _ == 3 || _ == 6;
 }

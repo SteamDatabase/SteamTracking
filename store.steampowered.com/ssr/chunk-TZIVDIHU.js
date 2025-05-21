@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 var k = Object.create;
 var f = Object.defineProperty;
 var i = Object.getOwnPropertyDescriptor;

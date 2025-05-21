@@ -352,35 +352,64 @@ function normalizeAst(ast) {
 					) {
 						node.arguments[0] = createChunkIdLiteral();
 					}
+
+					// Bind calls
+					if (node.callee.property.type === Syntax.Identifier && node.callee.property.name === "bind") {
+						// Normalize require function in first argument
+						if (
+							node.arguments.length >= 1 &&
+							node.arguments[0].type === Syntax.Identifier &&
+							webpackRequires.has(node.arguments[0].name)
+						) {
+							node.arguments[0].name = "__webpack_require__";
+						}
+
+						// Normalize chunk ID in second argument
+						if (
+							node.arguments.length >= 2 &&
+							node.arguments[1].type === Syntax.Literal &&
+							typeof node.arguments[1].value === "number"
+						) {
+							node.arguments[1] = createChunkIdLiteral();
+						}
+					}
 				}
-				// Bind calls
-				else if (
-					node.callee.type === Syntax.MemberExpression &&
-					node.callee.property.type === Syntax.Identifier &&
-					node.callee.property.name === "bind" &&
-					node.callee.object.type === Syntax.Identifier &&
-					webpackRequires.has(node.callee.object.name)
-				) {
-					// Normalize object name
-					node.callee.object.name = "__webpack_require__";
+			}
 
-					// Normalize require function in first argument
-					if (
-						node.arguments.length >= 1 &&
-						node.arguments[0].type === Syntax.Identifier &&
-						webpackRequires.has(node.arguments[0].name)
-					) {
-						node.arguments[0].name = "__webpack_require__";
-					}
-
-					// Normalize chunk ID in second argument
-					if (
-						node.arguments.length >= 2 &&
-						node.arguments[1].type === Syntax.Literal &&
-						typeof node.arguments[1].value === "number"
-					) {
-						node.arguments[1] = createChunkIdLiteral();
-					}
+			// Handle JSON.parse calls with string literals
+			if (
+				node.type === Syntax.CallExpression &&
+				node.callee.type === Syntax.MemberExpression &&
+				node.callee.object.type === Syntax.Identifier &&
+				node.callee.object.name === "JSON" &&
+				node.callee.property.type === Syntax.Identifier &&
+				node.callee.property.name === "parse" &&
+				node.arguments.length === 1 &&
+				node.arguments[0].type === Syntax.Literal &&
+				typeof node.arguments[0].value === "string"
+			) {
+				try {
+					// Parse the JSON string
+					const jsonObj = JSON.parse(node.arguments[0].value);
+					// Pretty-print the JSON with tab indentation
+					const prettyJson = JSON.stringify(jsonObj, null, "\t");
+					node.arguments[0] = {
+						type: Syntax.TemplateLiteral,
+						quasis: [
+							{
+								type: Syntax.TemplateElement,
+								value: {
+									raw: prettyJson,
+									cooked: prettyJson,
+								},
+								tail: false,
+							},
+						],
+						expressions: [],
+					};
+				} catch (err) {
+					// Leave invalid JSON unchanged
+					console.warn(`Warning: Failed to parse JSON in JSON.parse call: ${err.message}`);
 				}
 			}
 		},
@@ -403,7 +432,7 @@ function normalizeAst(ast) {
 // Normalize the AST and generate the output code
 const normalizedAst = normalizeAst(ast);
 const normalizedCode = generate(normalizedAst, {
-	indent: "\t",
+	indent: "  ",
 });
 
 if (outputFile) {

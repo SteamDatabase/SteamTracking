@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 import {
   a as mt,
   b as a,

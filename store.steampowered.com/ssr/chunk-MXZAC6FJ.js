@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 function n(...r) {
   return r.reduce(
     (i, e) =>

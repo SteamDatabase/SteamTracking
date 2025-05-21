@@ -2364,7 +2364,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 70834)),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const [_, __webpack_require__] = (0, _._)(_.appid, {
@@ -3865,7 +3865,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 20482)),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_, _) {
         if (!_.BIsUserLoggedIn())

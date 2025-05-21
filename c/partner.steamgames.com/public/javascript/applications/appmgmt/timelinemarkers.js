@@ -11215,9 +11215,175 @@
         const _ = _().GetRenderGlyph();
         return _ ? _(_._.TRIGGER_RIGHT, !1, !1, _.PositionRight) : null;
       }
-      const _ = JSON.parse(
-        '{"daterecorded":1713552945,"starttime":0,"entries":[{"id":"1","time":"1000","type":"gamemode","mode":3},{"id":"2","time":"7000","type":"event","title":"bolt","description":"steam_bolt","icon":"steam_bolt","priority":2,"duration":"0","possible_clip":2},{"id":"3","time":"8500","type":"event","title":"gem","description":"steam_gem","icon":"steam_gem","priority":1,"duration":"0","possible_clip":2},{"id":"4","time":"11000","type":"event","title":"star","description":"steam_star","icon":"steam_star","priority":4,"duration":"0","possible_clip":2},{"id":"6","time":"13000","type":"event","title":"heart","description":"steam_heart","icon":"steam_heart","priority":2,"duration":"0","possible_clip":2},{"id":"7","time":"15500","type":"event","title":"checkmark","description":"steam_checkmark","icon":"steam_checkmark","priority":3,"duration":"0","possible_clip":2},{"id":"8","time":"18000","type":"gamemode","mode":1},{"id":"9","time":"25000","type":"event","title":"crown","description":"steam_crown","icon":"steam_crown","priority":10,"duration":"0","possible_clip":2},{"id":"10","time":"27000","type":"event","title":"ribbon","description":"steam_ribbon","icon":"steam_ribbon","priority":9,"duration":"0","possible_clip":2},{"id":"11","time":"32000","type":"event","title":"chest","description":"steam_chest","icon":"steam_chest","priority":8,"duration":"0","possible_clip":2},{"id":"13","time":"34500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":8,"duration":"0","possible_clip":2},{"id":"14","time":"36000","type":"event","title":"timer","description":"steam_timer","icon":"steam_timer","priority":10,"duration":"0","possible_clip":2},{"id":"15","time":"46000","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"17","time":"50000","type":"usermarker","icon":"steam_marker","priority":0},{"id":"18","time":"51500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"19","time":"52500","type":"event","title":"explosion","description":"steam_explosion","icon":"steam_explosion","priority":10,"duration":"0","possible_clip":2}],"endtime":60000}',
-      );
+      const _ = JSON.parse(`{
+	"daterecorded": 1713552945,
+	"starttime": 0,
+	"entries": [
+		{
+			"id": "1",
+			"time": "1000",
+			"type": "gamemode",
+			"mode": 3
+		},
+		{
+			"id": "2",
+			"time": "7000",
+			"type": "event",
+			"title": "bolt",
+			"description": "steam_bolt",
+			"icon": "steam_bolt",
+			"priority": 2,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "3",
+			"time": "8500",
+			"type": "event",
+			"title": "gem",
+			"description": "steam_gem",
+			"icon": "steam_gem",
+			"priority": 1,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "4",
+			"time": "11000",
+			"type": "event",
+			"title": "star",
+			"description": "steam_star",
+			"icon": "steam_star",
+			"priority": 4,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "6",
+			"time": "13000",
+			"type": "event",
+			"title": "heart",
+			"description": "steam_heart",
+			"icon": "steam_heart",
+			"priority": 2,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "7",
+			"time": "15500",
+			"type": "event",
+			"title": "checkmark",
+			"description": "steam_checkmark",
+			"icon": "steam_checkmark",
+			"priority": 3,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "8",
+			"time": "18000",
+			"type": "gamemode",
+			"mode": 1
+		},
+		{
+			"id": "9",
+			"time": "25000",
+			"type": "event",
+			"title": "crown",
+			"description": "steam_crown",
+			"icon": "steam_crown",
+			"priority": 10,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "10",
+			"time": "27000",
+			"type": "event",
+			"title": "ribbon",
+			"description": "steam_ribbon",
+			"icon": "steam_ribbon",
+			"priority": 9,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "11",
+			"time": "32000",
+			"type": "event",
+			"title": "chest",
+			"description": "steam_chest",
+			"icon": "steam_chest",
+			"priority": 8,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "13",
+			"time": "34500",
+			"type": "event",
+			"title": "defend",
+			"description": "steam_defend",
+			"icon": "steam_defend",
+			"priority": 8,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "14",
+			"time": "36000",
+			"type": "event",
+			"title": "timer",
+			"description": "steam_timer",
+			"icon": "steam_timer",
+			"priority": 10,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "15",
+			"time": "46000",
+			"type": "event",
+			"title": "defend",
+			"description": "steam_defend",
+			"icon": "steam_defend",
+			"priority": 10,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "17",
+			"time": "50000",
+			"type": "usermarker",
+			"icon": "steam_marker",
+			"priority": 0
+		},
+		{
+			"id": "18",
+			"time": "51500",
+			"type": "event",
+			"title": "defend",
+			"description": "steam_defend",
+			"icon": "steam_defend",
+			"priority": 10,
+			"duration": "0",
+			"possible_clip": 2
+		},
+		{
+			"id": "19",
+			"time": "52500",
+			"type": "event",
+			"title": "explosion",
+			"description": "steam_explosion",
+			"icon": "steam_explosion",
+			"priority": 10,
+			"duration": "0",
+			"possible_clip": 2
+		}
+	],
+	"endtime": 60000
+}`);
       function _(_) {
         const { appid: _, markerID: __webpack_require__ } = _,
           _ = (function (_) {

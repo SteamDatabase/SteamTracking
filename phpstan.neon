@@ -2,7 +2,6 @@ parameters:
 	level: max
 	checkExplicitMixed: false
 	checkFunctionNameCase: true
-	checkMissingIterableValueType: true
 	checkUnionTypes: false
 	reportMaybes: true
 	paths:

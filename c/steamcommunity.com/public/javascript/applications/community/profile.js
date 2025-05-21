@@ -3590,7 +3590,7 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, 66884)),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = !0;
       let _ = class extends _.Component {

@@ -2240,7 +2240,7 @@
           const [{ CGameRecordingStore: _ }] = await Promise.all([
             __webpack_require__
               ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, 76209)),
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ]);
           _ &&
             ((_ = _),

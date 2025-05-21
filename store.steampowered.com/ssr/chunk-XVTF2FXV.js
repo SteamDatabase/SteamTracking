@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 import { r as u } from "./chunk-DAHHLJEB.js";
 function a(o, ...r) {
   let s = o.match(/(?:^|\/)(:[^/]+)/g);

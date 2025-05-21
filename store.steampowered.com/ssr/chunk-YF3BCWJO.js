@@ -1,5 +1,3 @@
-const CLSTAMP = 9764165;
-
 import { c as u } from "./chunk-TZIVDIHU.js";
 var c = u((p, i) => {
   "use strict";

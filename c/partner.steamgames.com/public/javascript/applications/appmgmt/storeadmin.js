@@ -6912,7 +6912,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.resolve().then(
-          __webpack_require__.bind(__webpack_require__, 47693),
+          __webpack_require__.bind(__webpack_require__, "chunkid"),
         ),
       );
       function _(_) {
@@ -18223,7 +18223,7 @@
         default: (
           await __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, 64684))
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
         ).AccessibilityFeaturesInfo,
       }));
       function _(_) {

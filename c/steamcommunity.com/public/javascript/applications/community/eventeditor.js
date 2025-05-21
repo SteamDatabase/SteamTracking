@@ -8916,7 +8916,7 @@
         Promise.all([
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 17065)),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { editModel: _ } = _,
@@ -12610,7 +12610,7 @@
         Promise.all([
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, 65247)),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
