@@ -6920,51 +6920,49 @@
               }
               const d = e.GetClanSteamID().ConvertTo64BitString();
               return l.createElement(f.X0, { clanSteamId: d }, (t) => {
-                let a = !1;
-                return (
-                  t.isSuccess && (a = !!t.data.crowdin_project_id),
+                if (!t.isSuccess) return null;
+                const a = !!t.data.crowdin_project_id;
+                return l.createElement(
+                  _.o0,
+                  {
+                    strTitle: (0, v.we)("#Button_Publish"),
+                    strDescription: "",
+                    onOK: () => this.OnPublish(!!a && t.data.push_by_default),
+                    onCancel: this.props.closeModal,
+                    strOKButtonText: (0, v.we)("#Button_Publish"),
+                  },
                   l.createElement(
-                    _.o0,
-                    {
-                      strTitle: (0, v.we)("#Button_Publish"),
-                      strDescription: "",
-                      onOK: () => this.OnPublish(a),
-                      onCancel: this.props.closeModal,
-                      strOKButtonText: (0, v.we)("#Button_Publish"),
-                    },
-                    l.createElement(
-                      l.Fragment,
-                      null,
-                      (0, v.we)("#EventEditor_Publish_Notice"),
-                      l.createElement("br", null),
-                      l.createElement("br", null),
-                      c
-                        ? (0, v.we)("#EventEditor_Publish_Immediate")
-                        : (0, v.PP)(
-                            "#EventEditor_Publish_Staged",
-                            l.createElement(m.K4, {
-                              dateAndTime: n,
-                              bSingleLine: !0,
-                            }),
-                          ),
-                      (0, v.we)("#EventEditor_Publish_ContinueEdits"),
-                      l.createElement("br", null),
-                      l.createElement("br", null),
-                      (0, v.we)("#EventEditor_Publish_Notice_Note"),
-                      a &&
-                        l.createElement(
-                          l.Fragment,
-                          null,
-                          l.createElement(
-                            b.E,
-                            { clanSteamID: e.GetClanSteamID() },
-                            l.createElement("br", null),
-                            l.createElement("br", null),
-                            (0, v.we)("#EventEditor_Publish_CrowdInEnabled"),
-                          ),
+                    l.Fragment,
+                    null,
+                    (0, v.we)("#EventEditor_Publish_Notice"),
+                    l.createElement("br", null),
+                    l.createElement("br", null),
+                    c
+                      ? (0, v.we)("#EventEditor_Publish_Immediate")
+                      : (0, v.PP)(
+                          "#EventEditor_Publish_Staged",
+                          l.createElement(m.K4, {
+                            dateAndTime: n,
+                            bSingleLine: !0,
+                          }),
                         ),
-                    ),
-                  )
+                    (0, v.we)("#EventEditor_Publish_ContinueEdits"),
+                    l.createElement("br", null),
+                    l.createElement("br", null),
+                    (0, v.we)("#EventEditor_Publish_Notice_Note"),
+                    a &&
+                      l.createElement(
+                        l.Fragment,
+                        null,
+                        l.createElement(
+                          b.E,
+                          { clanSteamID: e.GetClanSteamID() },
+                          l.createElement("br", null),
+                          l.createElement("br", null),
+                          (0, v.we)("#EventEditor_Publish_CrowdInEnabled"),
+                        ),
+                      ),
+                  ),
                 );
               });
             default:

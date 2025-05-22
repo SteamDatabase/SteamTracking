@@ -5401,6 +5401,13 @@
         }
         return _;
       }
+      function _(_, _, __webpack_require__ = Math.random) {
+        const _ = [];
+        let _ = _;
+        for (let _ = 0; _ < _.length && _ > 0; _++)
+          __webpack_require__() <= _ / (_.length - _) && (_.push(_[_]), _--);
+        return _;
+      }
       function _(_, _, _) {
         _ < 0 ||
           _ < 0 ||
@@ -5439,6 +5446,7 @@
         );
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -31629,6 +31637,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -32912,6 +32921,29 @@
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return {
+          queryKey: ["wishlist", _],
+          queryFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_);
+              __webpack_require__.Body().set_steamid(_);
+              const _ = await _.GetWishlist(_, _);
+              if (!_.BSuccess())
+                throw `Error loading wishlist: ${_.GetErrorMessage()}`;
+              return {
+                steamid: _,
+                items: _.Body().toObject().items || [],
+              };
+            })(_, _),
+          staleTime: 6e5,
+          enabled: !!_ && "0" != _,
+        };
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
       function _(_) {
         return ["wishlistitemcount", _];
       }

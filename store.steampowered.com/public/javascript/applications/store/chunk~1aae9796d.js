@@ -283,57 +283,63 @@
     },
     83561: (e, t, r) => {
       "use strict";
-      r.d(t, { Jy: () => l, cw: () => o });
+      r.d(t, { Jy: () => d, cw: () => u, jZ: () => c });
       var n = r(75487),
-        s = r(30470),
-        a = r(56545),
-        i = r(8114);
-      function o(e, t, r = !1, i = void 0) {
+        s = r(20194),
+        a = r(30470),
+        i = r(56545),
+        o = r(8114),
+        l = r(23809);
+      function c(e = 0, t = void 0) {
+        const r = (0, l.KV)();
+        return (0, s.I)(u(r, e, !1, t));
+      }
+      function u(e, t, r = !1, s = void 0) {
         return {
-          queryKey: ["DiscoveryQueue", t, i],
+          queryKey: ["DiscoveryQueue", t, s],
           queryFn: () =>
-            (async function (e, t, r = !1, i) {
-              const o = a.w.Init(n.BL);
+            (async function (e, t, r = !1, s) {
+              const o = i.w.Init(n.BL);
               o.Body().set_queue_type(t),
-                o.Body().set_country_code(s.TS.COUNTRY),
+                o.Body().set_country_code(a.TS.COUNTRY),
                 o.Body().set_rebuild_queue(r),
                 o.Body().set_rebuild_queue_if_stale(!0),
-                (i?.nSaleTagID || i?.strContentHubType) &&
-                  o.Body().set_store_page_filter(l(i));
-              const c = await n.nd.GetDiscoveryQueue(e, o);
-              if (!c.BSuccess())
-                throw `Error loading discovery queue: ${c.GetErrorMessage()}`;
-              return c.Body().toObject();
-            })(e, t, r, i),
-          enabled: s.iA.logged_in,
+                (s?.nSaleTagID || s?.strContentHubType) &&
+                  o.Body().set_store_page_filter(d(s));
+              const l = await n.nd.GetDiscoveryQueue(e, o);
+              if (!l.BSuccess())
+                throw `Error loading discovery queue: ${l.GetErrorMessage()}`;
+              return l.Body().toObject();
+            })(e, t, r, s),
+          enabled: a.iA.logged_in,
         };
       }
-      function l(e) {
+      function d(e) {
         const t = e?.nSaleTagID,
           r = e?.strContentHubType,
           n = e?.strContentHubCategory,
           s = e?.nContentHubTagID,
           a = e?.bDiscountsOnly,
-          o = e?.bPrioritizeDiscounts,
+          i = e?.bPrioritizeDiscounts,
           l = e?.strOptInName,
           c = e?.nOptInTagID,
           u = e?.nPruneTagID,
           d = e?.bOptInOnly,
-          m = new i.S7();
+          m = new o.S7();
         if (t) {
-          const e = new i.hw();
+          const e = new o.hw();
           e.set_sale_tagid(t), m.set_sale_filter(e);
         } else if (r) {
-          const e = new i.rd();
+          const e = new o.rd();
           if (
             (e.set_hub_type(r),
             "category" === r
               ? e.set_hub_category(n)
               : "tags" === r && e.set_hub_tagid(s),
-            a ? e.set_discount_filter(1) : o && e.set_discount_filter(2),
+            a ? e.set_discount_filter(1) : i && e.set_discount_filter(2),
             l)
           ) {
-            const t = new i.Q7();
+            const t = new o.Q7();
             t.set_name(l),
               t.set_optin_tagid(c),
               t.set_prune_tagid(u),

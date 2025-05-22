@@ -232,6 +232,80 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_ = 0, _ = void 0) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _, !1, _));
+      }
+      function _(_, _, __webpack_require__ = !1, _ = void 0) {
+        return {
+          queryKey: ["DiscoveryQueue", _, _],
+          queryFn: () =>
+            (async function (_, _, __webpack_require__ = !1, _) {
+              const _ = _._.Init(_._);
+              _.Body().set_queue_type(_),
+                _.Body().set_country_code(_._.COUNTRY),
+                _.Body().set_rebuild_queue(__webpack_require__),
+                _.Body().set_rebuild_queue_if_stale(!0),
+                (_?.nSaleTagID || _?.strContentHubType) &&
+                  _.Body().set_store_page_filter(_(_));
+              const _ = await _._.GetDiscoveryQueue(_, _);
+              if (!_.BSuccess())
+                throw `Error loading discovery queue: ${_.GetErrorMessage()}`;
+              return _.Body().toObject();
+            })(_, _, __webpack_require__, _),
+          enabled: _._.logged_in,
+        };
+      }
+      function _(_) {
+        const _ = _?.nSaleTagID,
+          _ = _?.strContentHubType,
+          _ = _?.strContentHubCategory,
+          _ = _?.nContentHubTagID,
+          _ = _?.bDiscountsOnly,
+          _ = _?.bPrioritizeDiscounts,
+          _ = _?.strOptInName,
+          _ = _?.nOptInTagID,
+          _ = _?.nPruneTagID,
+          _ = _?.bOptInOnly,
+          _ = new _._();
+        if (_) {
+          const _ = new _._();
+          _.set_sale_tagid(_), _.set_sale_filter(_);
+        } else if (_) {
+          const _ = new _._();
+          if (
+            (_.set_hub_type(_),
+            "category" === _
+              ? _.set_hub_category(_)
+              : "tags" === _ && _.set_hub_tagid(_),
+            _ ? _.set_discount_filter(1) : _ && _.set_discount_filter(2),
+            _)
+          ) {
+            const _ = new _._();
+            _.set_name(_),
+              _.set_optin_tagid(_),
+              _.set_prune_tagid(_),
+              _.set_optin_only(_),
+              _.set_optin(_);
+          }
+          _.set_content_hub_filter(_);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           StoreMenu: () => _,
@@ -1712,6 +1786,17 @@
           ),
         );
       }
+      function _(_) {
+        return _.createElement(
+          _._,
+          {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
+            className: _.CapsuleList,
+          },
+          _.children,
+        );
+      }
       const _ = _.memo(function (_) {
         const {
             itemid: _,
@@ -2633,16 +2718,50 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
+        const { data: _, isFetching: _ } = _(),
+          { data: __webpack_require__ } = _(
+            !_._.logged_in || (_ && 0 == _.length && !_),
+          ),
+          { title: _, rgApps: _ } = _.useMemo(
+            () =>
+              _ && _.length
+                ? {
+                    title: _("#Menu_Section_Browse_PickUpWhereYouLeftOff"),
+                    rgApps: _.slice(0, 3),
+                  }
+                : __webpack_require__
+                  ? {
+                      title: _("#Menu_SearchBar_PopularItems"),
+                      rgApps: __webpack_require__.slice(0, 3),
+                    }
+                  : {
+                      title: "",
+                      rgApps: void 0,
+                    },
+            [_, __webpack_require__],
+          );
         return _.createElement(
           _,
           null,
           _.createElement(
             _,
             null,
-            _.createElement(_, null, _.createElement(_, null)),
-            _.createElement(_, null),
+            _.createElement(
+              _,
+              null,
+              _.createElement(_, null, _),
+              _ &&
+                _.createElement(_, {
+                  rgItemIDs: _,
+                }),
+            ),
+            _.createElement(_, {
+              rgRecentApps: _,
+            }),
           ),
         );
       }
@@ -2656,62 +2775,97 @@
         ];
         return _ && _.push(_.prefetchQuery(_(_, _))), Promise.all(_);
       }
-      function _() {
-        const { data: _, isFetching: _ } = _(),
-          { data: __webpack_require__ } = _(
-            !_._.logged_in || (_ && 0 == _.length && !_),
-          );
-        return _ && _.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _,
-                null,
-                _("#Menu_Section_Browse_PickUpWhereYouLeftOff"),
-              ),
-              _.createElement(_, {
-                rgItemIDs: _.slice(0, 3),
-              }),
-            )
-          : __webpack_require__
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, null, _("#Menu_SearchBar_PopularItems")),
-                _.createElement(_, {
-                  rgItemIDs: __webpack_require__.slice(0, 3),
-                }),
-              )
-            : null;
-      }
       const _ = _._();
-      function _() {
+      function _(_) {
+        const { rgRecentApps: _ } = _,
+          _ = _.useMemo(() => new Set(_?.map((_) => (0, _._)(_)) || []), [_]);
         return _.createElement(
           _,
           null,
-          _.createElement(_, null),
+          _.createElement(_, {
+            setRecentApps: _,
+          }),
           _.createElement(_, null),
         );
       }
-      function _() {
-        const { data: _ } = (0, _._)({
-            include_assets: !0,
-          }),
-          _ = _.useMemo(
-            () => (_ ? _._(_.slice(0, 10), 0, _._(_)).slice(0, 2) : []),
-            [_],
-          );
-        return _ && _.length
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, null, _("#Menu_Section_Browse_Recommended")),
-              _.createElement(_, {
-                rgItemIDs: _,
-              }),
-            )
-          : null;
+      function _(_) {
+        const { setRecentApps: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(6),
+          { data: _ } = (0, _._)(7),
+          { data: _ } = (0, _._)(
+            __webpack_require__?.exhausted ? _._.steamid : void 0,
+          ),
+          _ = _.useMemo(() => {
+            let _ = [];
+            __webpack_require__ && __webpack_require__.appids?.length
+              ? (_ = __webpack_require__.appids)
+              : _ && _.items.length && (_ = _.items.map(({ appid: _ }) => _));
+            const _ = _.filter(
+              (_) =>
+                !_.has(
+                  (0, _._)({
+                    appid: _,
+                  }),
+                ),
+            );
+            if (!_.length) return [];
+            const _ = _._(_);
+            return _._(_, 3, _);
+          }, [_, __webpack_require__, _]),
+          _ = _.useMemo(() => {
+            if (!_ || !_.appids?.length) return [];
+            const _ = _.appids.filter(
+              (_) =>
+                !_.has(
+                  (0, _._)({
+                    appid: _,
+                  }),
+                ) && !_.includes(_),
+            );
+            if (!_.length) return [];
+            const _ = _._(_);
+            return _._(_, 3, _);
+          }, [_, _, _]);
+        if (!_.length && !_.length) return null;
+        const _ = _.slice(0, _.length > 0 ? 1 : 2),
+          _ = _.slice(0, 2 - _.length);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, null, _("#Menu_Section_Browse_ForYou")),
+          _.createElement(
+            _,
+            null,
+            _.map((_) =>
+              _.createElement(
+                _._,
+                {
+                  key: _,
+                  toolTipContent: _("#Menu_Section_Browse_FromYourWishlist"),
+                },
+                _.createElement(_, {
+                  itemid: {
+                    appid: _,
+                  },
+                }),
+              ),
+            ),
+            _.map((_) =>
+              _.createElement(
+                _._,
+                {
+                  key: _,
+                  toolTipContent: _("#Menu_Section_Browse_DLCForYou"),
+                },
+                _.createElement(_, {
+                  itemid: {
+                    appid: _,
+                  },
+                }),
+              ),
+            ),
+          ),
+        );
       }
       function _() {
         return _.createElement(
@@ -3957,7 +4111,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const { refPage: _ } = _,

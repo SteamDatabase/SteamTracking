@@ -24,6 +24,10 @@
 	background-position: center top;
 }
 
+body.v7menu .page_background_holder {
+	top: -66px;
+}
+
 .page_background_holder_mobile {
     position: absolute;
     top: 0;

@@ -4944,19 +4944,26 @@
         }
         return e;
       }
-      function n(e, t, r) {
+      function n(e, t, r = Math.random) {
+        const i = [];
+        let n = t;
+        for (let t = 0; t < e.length && n > 0; t++)
+          r() <= n / (e.length - t) && (i.push(e[t]), n--);
+        return i;
+      }
+      function s(e, t, r) {
         t < 0 ||
           r < 0 ||
           (r >= e.length && (e[r] = void 0), e.splice(r, 0, e.splice(t, 1)[0]));
       }
-      function s(e, t) {
+      function a(e, t) {
         if (!e && !t) return !0;
         if (!e || !t) return !1;
         if (e.length != t.length) return !1;
         for (let r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
         return !0;
       }
-      function a(e, t, r) {
+      function o(e, t, r) {
         if (!e && !t) return !0;
         if (!e || !t) return !1;
         if (e.length !== t.length) return !1;
@@ -4965,14 +4972,14 @@
         for (let e = 0; e < i.length; e++) if (i[e] !== n[e]) return !1;
         return !0;
       }
-      function o(e, t) {
-        return l(e, (e) => t == e);
-      }
       function l(e, t) {
+        return c(e, (e) => t == e);
+      }
+      function c(e, t) {
         const r = e.findIndex(t);
         return r >= 0 && (e.splice(r, 1), !0);
       }
-      function c(e, t, r) {
+      function u(e, t, r) {
         return (
           e ||
             console.error(
@@ -4982,13 +4989,14 @@
         );
       }
       r.d(t, {
-        $Y: () => c,
-        R5: () => s,
-        Wp: () => l,
+        $Y: () => u,
+        R5: () => a,
+        Wp: () => c,
         fW: () => i,
-        x9: () => o,
-        yY: () => n,
-        zl: () => a,
+        tQ: () => n,
+        x9: () => l,
+        yY: () => s,
+        zl: () => o,
       });
     },
     81393: (e, t, r) => {
@@ -28057,7 +28065,7 @@
     },
     6375: (e, t, r) => {
       "use strict";
-      r.d(t, { Zz: () => W, hR: () => O });
+      r.d(t, { Zz: () => k, nU: () => F, hR: () => L });
       var i,
         n = r(56545),
         s = r(80613),
@@ -29228,12 +29236,32 @@
       })(i || (i = {}));
       var I = r(23809),
         T = r(20194);
-      function E(e) {
+      function E(e, t) {
+        return {
+          queryKey: ["wishlist", t],
+          queryFn: () =>
+            (async function (e, t) {
+              const r = n.w.Init(u);
+              r.Body().set_steamid(t);
+              const s = await i.GetWishlist(e, r);
+              if (!s.BSuccess())
+                throw `Error loading wishlist: ${s.GetErrorMessage()}`;
+              return { steamid: t, items: s.Body().toObject().items || [] };
+            })(e, t),
+          staleTime: 6e5,
+          enabled: !!t && "0" != t,
+        };
+      }
+      function F(e) {
+        const t = (0, I.KV)();
+        return (0, T.I)(E(t, e));
+      }
+      function O(e) {
         return ["wishlistitemcount", e];
       }
-      function F(e, t) {
+      function W(e, t) {
         return {
-          queryKey: E(t),
+          queryKey: O(t),
           queryFn: () =>
             (async function (e, t) {
               const r = await i.GetWishlistItemCount(e, { steamid: t });
@@ -29245,12 +29273,12 @@
           enabled: !!t && "0" != t,
         };
       }
-      function O(e) {
+      function L(e) {
         const t = (0, I.KV)();
-        return (0, T.I)(F(t, e));
+        return (0, T.I)(W(t, e));
       }
-      function W(e, t, r) {
-        e.setQueryData(E(t), () => r);
+      function k(e, t, r) {
+        e.setQueryData(O(t), () => r);
       }
     },
     12611: (e, t, r) => {

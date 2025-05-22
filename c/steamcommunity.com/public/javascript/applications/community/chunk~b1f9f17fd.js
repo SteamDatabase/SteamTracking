@@ -7268,53 +7268,51 @@
                   clanSteamId: _,
                 },
                 (_) => {
-                  let _ = !1;
-                  return (
-                    _.isSuccess && (_ = !!_.data.crowdin_project_id),
+                  if (!_.isSuccess) return null;
+                  const _ = !!_.data.crowdin_project_id;
+                  return _.createElement(
+                    _._,
+                    {
+                      strTitle: (0, _._)("#Button_Publish"),
+                      strDescription: "",
+                      onOK: () => this.OnPublish(!!_ && _.data.push_by_default),
+                      onCancel: this.props.closeModal,
+                      strOKButtonText: (0, _._)("#Button_Publish"),
+                    },
                     _.createElement(
-                      _._,
-                      {
-                        strTitle: (0, _._)("#Button_Publish"),
-                        strDescription: "",
-                        onOK: () => this.OnPublish(_),
-                        onCancel: this.props.closeModal,
-                        strOKButtonText: (0, _._)("#Button_Publish"),
-                      },
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        (0, _._)("#EventEditor_Publish_Notice"),
-                        _.createElement("br", null),
-                        _.createElement("br", null),
-                        _
-                          ? (0, _._)("#EventEditor_Publish_Immediate")
-                          : (0, _._)(
-                              "#EventEditor_Publish_Staged",
-                              _.createElement(_._, {
-                                dateAndTime: _,
-                                bSingleLine: !0,
-                              }),
-                            ),
-                        (0, _._)("#EventEditor_Publish_ContinueEdits"),
-                        _.createElement("br", null),
-                        _.createElement("br", null),
-                        (0, _._)("#EventEditor_Publish_Notice_Note"),
-                        _ &&
-                          _.createElement(
-                            _.Fragment,
-                            null,
-                            _.createElement(
-                              _._,
-                              {
-                                clanSteamID: _.GetClanSteamID(),
-                              },
-                              _.createElement("br", null),
-                              _.createElement("br", null),
-                              (0, _._)("#EventEditor_Publish_CrowdInEnabled"),
-                            ),
+                      _.Fragment,
+                      null,
+                      (0, _._)("#EventEditor_Publish_Notice"),
+                      _.createElement("br", null),
+                      _.createElement("br", null),
+                      _
+                        ? (0, _._)("#EventEditor_Publish_Immediate")
+                        : (0, _._)(
+                            "#EventEditor_Publish_Staged",
+                            _.createElement(_._, {
+                              dateAndTime: _,
+                              bSingleLine: !0,
+                            }),
                           ),
-                      ),
-                    )
+                      (0, _._)("#EventEditor_Publish_ContinueEdits"),
+                      _.createElement("br", null),
+                      _.createElement("br", null),
+                      (0, _._)("#EventEditor_Publish_Notice_Note"),
+                      _ &&
+                        _.createElement(
+                          _.Fragment,
+                          null,
+                          _.createElement(
+                            _._,
+                            {
+                              clanSteamID: _.GetClanSteamID(),
+                            },
+                            _.createElement("br", null),
+                            _.createElement("br", null),
+                            (0, _._)("#EventEditor_Publish_CrowdInEnabled"),
+                          ),
+                        ),
+                    ),
                   );
                 },
               );
