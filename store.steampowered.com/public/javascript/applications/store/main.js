@@ -55774,6 +55774,7 @@
         RemotePlayTogether: () => "/together/",
         SteamDeck: () => "/steamdeck/",
         SteamDeckDock: () => "/steamdeckdock/",
+        SteamOS: () => "/steamos/:catchAll*",
         GameRecording: () => "/gamerecording/",
         CreatorSaleLandingPage: () =>
           "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/(sale|unlisted)/:salePageName?",
@@ -57522,6 +57523,7 @@
                             _.B.VRHardware(),
                             _.B.SteamDeck(),
                             _.B.SteamDeckDock(),
+                            _.B.SteamOS(),
                             _.B.SubscriptionPlanLandingPage(),
                             _.B.GameRecording(),
                           ],
