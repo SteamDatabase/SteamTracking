@@ -501,15 +501,15 @@
                 _.filter(
                   (_) =>
                     _.eItemFilter == _.ITEM_OPTIONS_ALL ||
-                    !!(
-                      (_.is_lategame_suggested &&
-                        _.eItemFilter == _.ITEM_OPTIONS_LATE) ||
-                      _.ITEM_OPTIONS_EARLY_LATE
+                    !(
+                      !_.is_lategame_suggested ||
+                      (_.eItemFilter != _.ITEM_OPTIONS_LATE &&
+                        !_.ITEM_OPTIONS_EARLY_LATE)
                     ) ||
-                      !!(
-                        (_.is_earlygame_suggested &&
-                          _.eItemFilter == _.ITEM_OPTIONS_EARLY) ||
-                        _.ITEM_OPTIONS_EARLY_LATE
+                      !(
+                        !_.is_earlygame_suggested ||
+                        (_.eItemFilter != _.ITEM_OPTIONS_EARLY &&
+                          !_.ITEM_OPTIONS_EARLY_LATE)
                       ) ||
                     (!_.is_earlygame_suggested &&
                       !_.is_lategame_suggested &&
@@ -3143,7 +3143,7 @@
           let _ = new Map(),
             _ = [],
             _ = [];
-          for (const _ of _) _.set(_, 300);
+          for (const _ of _) _.set(_, 200);
           for (const _ of _) _.set(_, -1e6);
           const _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, _, _, _).data;
           if (

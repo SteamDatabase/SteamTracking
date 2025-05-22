@@ -211,7 +211,7 @@
         i = a(92225),
         d = a(72674),
         u = a(21384),
-        p = a(40349),
+        p = a(33743),
         E = a(27866),
         y = a(47202),
         f = a(2466),
@@ -450,15 +450,15 @@
                   .filter(
                     (t) =>
                       e.eItemFilter == h.ITEM_OPTIONS_ALL ||
-                      !!(
-                        (t.is_lategame_suggested &&
-                          e.eItemFilter == h.ITEM_OPTIONS_LATE) ||
-                        h.ITEM_OPTIONS_EARLY_LATE
+                      !(
+                        !t.is_lategame_suggested ||
+                        (e.eItemFilter != h.ITEM_OPTIONS_LATE &&
+                          !h.ITEM_OPTIONS_EARLY_LATE)
                       ) ||
-                        !!(
-                          (t.is_earlygame_suggested &&
-                            e.eItemFilter == h.ITEM_OPTIONS_EARLY) ||
-                          h.ITEM_OPTIONS_EARLY_LATE
+                        !(
+                          !t.is_earlygame_suggested ||
+                          (e.eItemFilter != h.ITEM_OPTIONS_EARLY &&
+                            !h.ITEM_OPTIONS_EARLY_LATE)
                         ) ||
                       (!t.is_earlygame_suggested &&
                         !t.is_lategame_suggested &&
@@ -2662,7 +2662,7 @@
           let M = new Map(),
             L = [],
             C = [];
-          for (const e of T) M.set(e, 300);
+          for (const e of T) M.set(e, 200);
           for (const e of b) M.set(e, -1e6);
           const H = (0, r.nK)(
             n,

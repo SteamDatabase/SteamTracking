@@ -3362,6 +3362,9 @@ https://www.valvesoftware.com/about
 https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
 https://www.youtube-nocookie.com
+https://www.youtube-nocookie.com/embed/LJ6CoMgr2U8
+https://www.youtube-nocookie.com/embed/d8N2A8KePP4
+https://www.youtube-nocookie.com/embed/p0qKpJXOJsY
 https://www.youtube.com/
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
@@ -3370,9 +3373,6 @@ https://www.youtube.com/embed/${}${m_strYouTubeOptions}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}${bAutoPlay ? "&autoplay=1" : ""}${nStartSeconds ? _ : ""}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}${nStartSeconds ? _ : ""}
 https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24
-https://www.youtube.com/embed/LJ6CoMgr2U8
-https://www.youtube.com/embed/d8N2A8KePP4
-https://www.youtube.com/embed/p0qKpJXOJsY
 https://www.youtube.com/iframe_api
 https://www.youtube.com/user/dota2
 https://www.youtube.com/watch?v=
