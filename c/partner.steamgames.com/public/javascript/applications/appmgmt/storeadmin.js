@@ -17761,7 +17761,12 @@
         );
       }
       function _(_) {
-        const { pageLink: _, clanInfo: __webpack_require__, closeModal: _ } = _,
+        const {
+            pageLink: _,
+            clanAccountID: __webpack_require__,
+            clanName: _,
+            closeModal: _,
+          } = _,
           _ = (function (_, _, _) {
             const _ = _();
             return (0, _._)({
@@ -17782,7 +17787,7 @@
                 return await _.mutateAsync(_);
               },
             });
-          })(_.appid, __webpack_require__.clanAccountID, _.linkname),
+          })(_.appid, __webpack_require__, _.linkname),
           _ = (0, _._)();
         return _.bLoading
           ? _.createElement(_._, {
@@ -17797,7 +17802,7 @@
                 strTitle: (0, _._)("#Button_Unlink"),
                 strDescription: (0, _._)(
                   "#AppLanding_Creator_UnlinkDesc",
-                  __webpack_require__?.group_name,
+                  _ || __webpack_require__,
                   _.linkname,
                 ),
                 onOK: () => {
@@ -18095,7 +18100,9 @@
               });
             return _.isLoading ? null : _.data;
           })(_),
-          _ = _?.find((_) => _.linkname === _);
+          _ = _?.find(
+            (_) => _.linkname.toLocaleLowerCase() === _.toLocaleLowerCase(),
+          );
         return _.createElement(
           "div",
           {
@@ -18121,7 +18128,7 @@
             value: _,
             onChange: () => {},
           }),
-          Boolean(_ && _ === _) &&
+          Boolean(_ && _?.toLocaleLowerCase() === _?.toLocaleLowerCase()) &&
             _.createElement(_, {
               pageLink: _,
               strKvTargetName: _,
@@ -18132,7 +18139,7 @@
               nAppID: _,
               linkname: _.trim(),
             }),
-          Boolean(_ !== _) &&
+          Boolean(_?.toLocaleLowerCase() !== _?.toLocaleLowerCase()) &&
             _.createElement(
               "span",
               null,
@@ -18187,7 +18194,7 @@
                     href: _,
                     target: "_blank",
                   },
-                  _?.group_name,
+                  _?.group_name || _,
                 ),
                 _.createElement(
                   _._,
@@ -18215,7 +18222,8 @@
           ),
           _.createElement(_, {
             pageLink: _,
-            clanInfo: _,
+            clanAccountID: _,
+            clanName: _?.group_name || "" + _,
           }),
         );
       }

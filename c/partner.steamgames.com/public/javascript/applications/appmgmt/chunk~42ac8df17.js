@@ -15720,9 +15720,13 @@
                 const _ = _._.InitFromClanID(
                   "string" == typeof _ ? Number.parseInt(_) : _,
                 );
-                _.LoadClanInfoForClanSteamID(_).then((_) => {
-                  __webpack_require__(_ ?? void 0), _(!1);
-                });
+                _.LoadClanInfoForClanSteamID(_)
+                  .then((_) => {
+                    __webpack_require__(_ ?? void 0), _(!1);
+                  })
+                  .catch((_) =>
+                    console.error(`Failed to load clan info ${_}`, _),
+                  );
               }
             else __webpack_require__(void 0), _(!1);
           }, [_]),
