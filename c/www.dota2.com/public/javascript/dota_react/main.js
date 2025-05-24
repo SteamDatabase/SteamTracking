@@ -47770,6 +47770,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48967,6 +48968,11 @@
             }),
           ),
         _ = new Map([["marci_pickmeup", "marci_companion_run_secondary"]]),
+        _ = [
+          "abilities/necrolyte_sadist",
+          "abilities/nevermore_necromastery",
+          "abilities/zuus_static_field",
+        ],
         _ = ({
           ability: _,
           facet: _,
@@ -50336,7 +50342,7 @@
         ),
         _ = 20;
       let _ = 0;
-      const _ = (0, _._)(({ infoText: _ }) =>
+      const _ = (0, _._)(({ infoText: _, bPlaceLeft: _ = !1 }) =>
           _.createElement(
             "div",
             {
@@ -50352,7 +50358,7 @@
               {
                 class: "PatchnotesTooltip",
                 _: "infoTip" + _++,
-                place: "top",
+                place: _ ? "left" : "top",
                 effect: "solid",
               },
               _.createElement("div", {
@@ -50808,32 +50814,67 @@
                           _.abilities?.length > 0
                             ? _.abilities[0].ability_id
                             : 0,
-                        _ = _.itemabilities.find((_) => _._ == _),
-                        _ = _ ? `abilities/${_.name}` : "icons/innate_icon";
-                      return _.createElement(
-                        "div",
-                        {
-                          key: `hero${_.hero_id}_innate_${_}`,
-                          className: _().Innate,
-                        },
-                        _.createElement("img", {
-                          className: _().InnateIcon,
-                          onError: (_) =>
-                            (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
-                          src: `${_._.IMG_URL}${_}.png `,
-                        }),
+                        _ = _.itemabilities.find((_) => _._ == _);
+                      let _ = _ ? `abilities/${_.name}` : "icons/innate_icon";
+                      return (
+                        _._.includes(_) && (_ = "icons/innate_icon"),
                         _.createElement(
                           "div",
                           {
-                            className: _().RightSide,
+                            key: `hero${_.hero_id}_innate_${_}`,
+                            className: _().Innate,
                           },
-                          _.general_notes?.length > 0 &&
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().InnateNotes,
-                              },
-                              _.general_notes.map((_, _) =>
+                          _.createElement("img", {
+                            className: _().InnateIcon,
+                            onError: (_) =>
+                              (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
+                            src: `${_._.IMG_URL}${_}.png `,
+                          }),
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().RightSide,
+                            },
+                            _.general_notes?.length > 0 &&
+                              _.createElement(
+                                "div",
+                                {
+                                  className: _().InnateNotes,
+                                },
+                                _.general_notes.map((_, _) =>
+                                  _.createElement(
+                                    "div",
+                                    {
+                                      key: `hero_${_.hero_id}_${_}`,
+                                      className: _().InnateNote,
+                                    },
+                                    _.createElement("div", {
+                                      className: _().Indent,
+                                      style: {
+                                        width: _ * (_.indent_level - 1),
+                                        minWidth: _ * (_.indent_level - 1),
+                                      },
+                                    }),
+                                    _.createElement("div", {
+                                      className: (0, _._)(
+                                        _().Dot,
+                                        _.hide_dot && _().IsHidden,
+                                      ),
+                                    }),
+                                    (0, _._)(_.note),
+                                  ),
+                                ),
+                              ),
+                            _ &&
+                              _.createElement(
+                                "div",
+                                {
+                                  className: _().AbilityName,
+                                },
+                                _.name_loc,
+                              ),
+                            _.abilities?.length > 0 &&
+                              _.abilities[0].ability_notes.map((_, _) =>
                                 _.createElement(
                                   "div",
                                   {
@@ -50856,40 +50897,8 @@
                                   (0, _._)(_.note),
                                 ),
                               ),
-                            ),
-                          _ &&
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().AbilityName,
-                              },
-                              _.name_loc,
-                            ),
-                          _.abilities?.length > 0 &&
-                            _.abilities[0].ability_notes.map((_, _) =>
-                              _.createElement(
-                                "div",
-                                {
-                                  key: `hero_${_.hero_id}_${_}`,
-                                  className: _().InnateNote,
-                                },
-                                _.createElement("div", {
-                                  className: _().Indent,
-                                  style: {
-                                    width: _ * (_.indent_level - 1),
-                                    minWidth: _ * (_.indent_level - 1),
-                                  },
-                                }),
-                                _.createElement("div", {
-                                  className: (0, _._)(
-                                    _().Dot,
-                                    _.hide_dot && _().IsHidden,
-                                  ),
-                                }),
-                                (0, _._)(_.note),
-                              ),
-                            ),
-                        ),
+                          ),
+                        )
                       );
                     }),
                   ),
@@ -51022,63 +51031,67 @@
                             },
                             _.abilities?.map((_, _) => {
                               const _ = _.ability_id,
-                                _ = _.itemabilities.find((_) => _._ == _),
-                                _ = _
-                                  ? `abilities/${_._.has(_.facet) ? _._.get(_.facet) : _.name}`
-                                  : "icons/innate_icon";
-                              return _.createElement(
-                                "div",
-                                {
-                                  key: `hero_${_.hero_id}_facet_${_}_ability_${_}`,
-                                  className: _().FacetAbility,
-                                },
-                                _.createElement("img", {
-                                  className: _().AbilityIcon,
-                                  onError: (_) =>
-                                    (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
-                                  src: `${_._.IMG_URL}${_}.png`,
-                                }),
+                                _ = _.itemabilities.find((_) => _._ == _);
+                              let _ = _
+                                ? `abilities/${_._.has(_.facet) ? _._.get(_.facet) : _.name}`
+                                : "icons/innate_icon";
+                              return (
+                                _._.includes(_) && (_ = "icons/innate_icon"),
                                 _.createElement(
                                   "div",
                                   {
-                                    className: _().RightSide,
+                                    key: `hero_${_.hero_id}_facet_${_}_ability_${_}`,
+                                    className: _().FacetAbility,
                                   },
-                                  _ &&
-                                    _.createElement(
-                                      "div",
-                                      {
-                                        className: _().AbilityName,
-                                      },
-                                      _.name_loc,
-                                    ),
-                                  _.ability_notes.map((_, _) =>
-                                    _.createElement(
-                                      "div",
-                                      {
-                                        key: `hero_${_.hero_id}_${_}`,
-                                        className: _().AbilityNote,
-                                      },
-                                      _.createElement("div", {
-                                        className: _().Indent,
-                                        style: {
-                                          width: _ * (_.indent_level - 1),
-                                          minWidth: _ * (_.indent_level - 1),
+                                  _.createElement("img", {
+                                    className: _().AbilityIcon,
+                                    onError: (_) =>
+                                      (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
+                                    src: `${_._.IMG_URL}${_}.png`,
+                                  }),
+                                  _.createElement(
+                                    "div",
+                                    {
+                                      className: _().RightSide,
+                                    },
+                                    _ &&
+                                      _.createElement(
+                                        "div",
+                                        {
+                                          className: _().AbilityName,
                                         },
-                                      }),
-                                      _.createElement("div", {
-                                        className: (0, _._)(
-                                          _().Dot,
-                                          _.hide_dot && _().IsHidden,
-                                        ),
-                                      }),
-                                      (0, _._)(_.note),
-                                      _.info &&
-                                        _.createElement(_, {
-                                          infoText: _.info,
+                                        _.name_loc,
+                                      ),
+                                    _.ability_notes.map((_, _) =>
+                                      _.createElement(
+                                        "div",
+                                        {
+                                          key: `hero_${_.hero_id}_${_}`,
+                                          className: _().AbilityNote,
+                                        },
+                                        _.createElement("div", {
+                                          className: _().Indent,
+                                          style: {
+                                            width: _ * (_.indent_level - 1),
+                                            minWidth: _ * (_.indent_level - 1),
+                                          },
                                         }),
+                                        _.createElement("div", {
+                                          className: (0, _._)(
+                                            _().Dot,
+                                            _.hide_dot && _().IsHidden,
+                                          ),
+                                        }),
+                                        (0, _._)(_.note),
+                                        _.info &&
+                                          _.createElement(_, {
+                                            infoText: _.info,
+                                            bPlaceLeft: _.length > 1 && 0 == _,
+                                          }),
+                                      ),
                                     ),
                                   ),
-                                ),
+                                )
                               );
                             }),
                           ),
@@ -51157,67 +51170,70 @@
                 },
                 _.abilities.map((_) => {
                   const _ = _.itemabilities.find((_) => _._ == _.ability_id);
-                  return _
-                    ? _.createElement(
+                  if (!_) return null;
+                  let _ = `abilities/${_.name}`;
+                  return (
+                    _._.includes(_) && (_ = "icons/innate_icon"),
+                    _.createElement(
+                      "div",
+                      {
+                        key: "ability_" + _.ability_id,
+                        className: _().AbilityNote,
+                      },
+                      _.createElement("img", {
+                        className: _().AbilityIcon,
+                        onError: (_) =>
+                          (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
+                        src: `${_._.IMG_URL}${_}.png`,
+                      }),
+                      _.createElement(
                         "div",
                         {
-                          key: "ability_" + _.ability_id,
-                          className: _().AbilityNote,
+                          className: _().RightSection,
                         },
-                        _.createElement("img", {
-                          className: _().AbilityIcon,
-                          onError: (_) =>
-                            (_.target.src = `${_._.IMG_URL}icons/innate_icon.png`),
-                          src: `${_._.IMG_URL}abilities/${_.name}.png`,
-                        }),
                         _.createElement(
                           "div",
                           {
-                            className: _().RightSection,
+                            className: _().AbilityName,
                           },
+                          _.name_loc,
+                        ),
+                        _.ability_notes.map((_) =>
                           _.createElement(
                             "div",
                             {
-                              className: _().AbilityName,
+                              key: _.note,
+                              className: _().NoteElement,
                             },
-                            _.name_loc,
-                          ),
-                          _.ability_notes.map((_) =>
+                            _.createElement("div", {
+                              className: _().Indent,
+                              style: {
+                                width: _ * _.indent_level,
+                                minWidth: _ * _.indent_level,
+                              },
+                            }),
+                            _.createElement("div", {
+                              className: (0, _._)(
+                                _().Dot,
+                                _.hide_dot && _().IsHidden,
+                              ),
+                            }),
                             _.createElement(
                               "div",
                               {
-                                key: _.note,
-                                className: _().NoteElement,
+                                className: _().Note,
                               },
-                              _.createElement("div", {
-                                className: _().Indent,
-                                style: {
-                                  width: _ * _.indent_level,
-                                  minWidth: _ * _.indent_level,
-                                },
-                              }),
-                              _.createElement("div", {
-                                className: (0, _._)(
-                                  _().Dot,
-                                  _.hide_dot && _().IsHidden,
-                                ),
-                              }),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().Note,
-                                },
-                                (0, _._)(_.note),
-                              ),
-                              _.info &&
-                                _.createElement(_, {
-                                  infoText: _.info,
-                                }),
+                              (0, _._)(_.note),
                             ),
+                            _.info &&
+                              _.createElement(_, {
+                                infoText: _.info,
+                              }),
                           ),
                         ),
-                      )
-                    : null;
+                      ),
+                    )
+                  );
                 }),
               ),
             _.talent_notes?.length > 0 &&
