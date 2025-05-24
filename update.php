@@ -30,6 +30,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private bool $ExtractClientArchives = false;
 		private bool $SyncProtobufs = false;
 		private bool $DumpJavascriptFiles = false;
+		private bool $FixCssFiles = false;
 		private bool $UpdateManifestUrls = false;
 		private bool $UpdateSSRUrls = false;
 
@@ -181,6 +182,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$this->Log( '{lightblue}Extracting client archives' );
 				$this->DumpJavascriptFiles = true;
+				$this->FixCssFiles = true;
 				$this->SyncProtobufs = true;
 
 				system( 'bash extract_client.sh' );
@@ -194,6 +196,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				system( 'node dump_javascript_protobufs.mjs' );
 				system( 'node dump_javascript_urls.mjs' );
+			}
+
+			if( $this->FixCssFiles )
+			{
+				$this->Log( '{lightblue}Fixing CSS files' );
+
+				system( 'node generate_readable_css.mjs' );
 			}
 
 			if( $this->SyncProtobufs )
@@ -606,6 +615,11 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
+
+				if( str_ends_with( $File, '.css' ) || str_ends_with( $File, '.js' ) )
+				{
+					$this->FixCssFiles = true;
+				}
 
 				return true;
 			}
