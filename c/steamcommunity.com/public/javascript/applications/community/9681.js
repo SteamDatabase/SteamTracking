@@ -206,7 +206,8 @@
                 _();
             },
             [_, _, _, _],
-          );
+          ),
+          _ = _.useId();
         let _,
           _ = null;
         if ("image" == _)
@@ -238,10 +239,17 @@
             onDismiss: _,
             className: _.ClanImageModalContent,
           },
-          _.createElement(_._, null, _),
           _.createElement(
             _._,
             {
+              _: _,
+            },
+            _,
+          ),
+          _.createElement(
+            _._,
+            {
+              labelId: _,
               value: _,
               onChange: (_) => _(_),
             },
@@ -1304,13 +1312,16 @@
           _ = (_) => {
             var _;
             return null !== (_ = _.get(_)) && void 0 !== _ ? _ : _;
-          };
+          },
+          _ = _.useId(),
+          _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             "div",
             {
+              _: _,
               className: _.EventEditorTextTitle,
             },
             (0, _._)("#MeetSteam_edit_date_display_title"),
@@ -1318,6 +1329,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.EventEditorTextSubTitle,
             },
             (0, _._)("#MeetSteam_edit_date_display_desc"),
@@ -1325,6 +1337,8 @@
           _.createElement(
             _._,
             {
+              labelId: _,
+              descriptionId: _,
               value: _,
               onChange: (_) => {
                 __webpack_require__({

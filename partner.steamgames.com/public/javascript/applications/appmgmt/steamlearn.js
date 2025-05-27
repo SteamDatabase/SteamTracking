@@ -31173,6 +31173,10 @@
               label: (0, l.we)("#SteamLearn_Config_Node_Train_GPU_H100_SXM"),
               value: 3,
             },
+            {
+              label: (0, l.we)("#SteamLearn_Config_Node_Train_GPU_H200"),
+              value: 4,
+            },
           ];
         (0, l.we)("#SteamLearn_SnapshotFilter_SnapshotLocation_0"),
           (0, l.we)("#SteamLearn_SnapshotFilter_SnapshotLocation_1");

@@ -12145,20 +12145,24 @@
       }
       function _(_) {
         const {
-          createVisibilityState: _,
-          setCreateVisibilityState: __webpack_require__,
-        } = _;
+            createVisibilityState: _,
+            setCreateVisibilityState: __webpack_require__,
+          } = _,
+          _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             "h3",
-            null,
+            {
+              _: _,
+            },
             (0, _._)("#TimelineMarkers_Dialog_Visibility"),
           ),
           _.createElement(
             _._,
             {
+              labelId: _,
               value: _,
               onChange: (_) => {
                 __webpack_require__(_);

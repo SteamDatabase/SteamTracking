@@ -107,6 +107,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -2014,9 +2015,8 @@
             ),
             _.createElement(_, {
               imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
+              fnOnUploadImageRequested: async () =>
+                await _.UploadAllImages(_, _, _, _ && _.file_type),
             }),
           )
         );
@@ -2111,12 +2111,12 @@
               })(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
         let _ = null;
         const _ = _.GetCurrentImageOption();
         _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
@@ -2147,11 +2147,34 @@
             }),
           Boolean(_?.length > 1) &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            _.warnings?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewWarning,
+                },
+                _,
+              ),
+            ),
+          _ &&
+            _.messages?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewMessage,
+                },
+                _,
+              ),
+            ),
           _.createElement(
             "div",
             {
@@ -2176,7 +2199,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2184,37 +2208,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });
@@ -5604,6 +5625,9 @@
                       bIsPreview: _,
                     },
                     _ && _.createElement(_._, null),
+                    _.createElement(_, {
+                      eventModel: __webpack_require__,
+                    }),
                     Boolean(_) &&
                       _.createElement(_, {
                         backgroundImageEditModel: _,
@@ -5981,6 +6005,63 @@
           )
         );
       }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = (0, _._)(_.clanSteamID.GetAccountID());
+        if (!_ || (!_.can_edit && !_.support_user)) return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            _.support_user &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_Mod")),
+          _.includes("contenthub") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : _.createElement(
+                "div",
+                {
+                  className: _().SalePageHiddenWarning,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  !_.BIsVisibleEvent() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden"),
+                    ),
+                  _.length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.map((_) =>
+                          _.createElement(
+                            "li",
+                            {
+                              key: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      ),
+                    ),
+                ),
+              )
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6066,6 +6147,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -6095,6 +6177,7 @@
                   tooltip: __webpack_require__,
                 }),
             ),
+            _,
             _.createElement(_, {
               bIsMinimized: _,
               fnToggleMinimize: _,
@@ -7589,6 +7672,8 @@
             return (
               (_.clanSteamID = _._.InitFromClanID(_)),
               (_.GID = "fakeevent_" + _++),
+              (_.visibility_state = _._.k_EEventStateUnlisted),
+              (_.visibilityStartTime = (0, _._)() - 1),
               (_.jsondata.bSaleEnabled = !0),
               (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
               (_.jsondata.sale_vanity_id = _),
@@ -8393,7 +8478,7 @@
           _.createElement(
             "div",
             {
-              className: _().CalendarBtn,
+              className: (0, _._)(_().CalendarBtn),
               onClick: (_) =>
                 __webpack_require__(_, {
                   bDisableMouseOverlay: !0,
@@ -8414,9 +8499,8 @@
             maxDate: _,
           } = _,
           _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(null);
-        console.log(_().unix(_).format(), _);
-        const _ = (0, _.useCallback)(
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useCallback)(
             (_) => {
               const _ = _().unix(_),
                 _ = _().unix(_);
@@ -8431,7 +8515,28 @@
               __webpack_require__(_.unix()), _.current.Hide();
             },
             [__webpack_require__],
-          );
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_().locales().includes("YearMonthPickerContextMenu")) {
+              const _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                ),
+                _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                );
+              _().defineLocale("YearMonthPickerContextMenu", {
+                months: _,
+                monthsShort: _,
+              });
+            }
+            return _()().clone().locale("YearMonthPickerContextMenu");
+          }, []);
         return _.createElement(
           _._,
           {
@@ -8452,13 +8557,14 @@
               },
               _.createElement(_(), {
                 ref: _,
-                value: _().unix(_),
+                value: _,
                 onChange: _,
                 dateFormat: "YYYY-MM",
                 timeFormat: !1,
                 closeOnSelect: !0,
                 isValidDate: _,
                 input: !1,
+                locale: "YearMonthPickerContextMenu",
               }),
             ),
           ),

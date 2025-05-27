@@ -2003,8 +2003,8 @@
         at = ["item_class_10", "item_class_6"],
         ot = "4";
       function st(e) {
-        const { filter: t, onFilterChange: n, ...a } = e,
-          s = t.bSteamItems;
+        const { filter: t, onFilterChange: n, searchPath: a, ...s } = e,
+          i = t.bSteamItems;
         return r.createElement(
           y,
           { minWidth: "min( 75vw, 800px )" },
@@ -2024,7 +2024,7 @@
               O,
               { gap: ot, align: "center", marginY: ot },
               r.createElement(it, {
-                showSteamItems: s,
+                showSteamItems: i,
                 onShowSteamItemsChange: (e) => n({ ...t, bSteamItems: e }),
               }),
               r.createElement(V, { size: "1", orientation: "vertical" }),
@@ -2045,15 +2045,15 @@
             r.createElement(
               gt,
               null,
-              !s &&
+              !i &&
                 r.createElement(lt, {
-                  ...a,
+                  ...s,
                   filter: t.filterInGame,
                   onFilterChange: (e) => n({ ...t, filterInGame: e }),
                 }),
-              s &&
+              i &&
                 r.createElement(ct, {
-                  ...a,
+                  ...s,
                   filter: t.filterSteam,
                   onFilterChange: (e) => n({ ...t, filterSteam: e }),
                 }),
@@ -2068,7 +2068,7 @@
                   variant: "ghost",
                   onClick: () => {
                     n(
-                      s
+                      i
                         ? {
                             ...t,
                             filterSteam: { ...t.filterSteam, facets: {} },
@@ -2087,33 +2087,33 @@
                 {
                   type: "submit",
                   onClick: () => {
-                    window.location.href = (function (e) {
+                    window.location.href = (function (e, t = "market/search") {
                       const {
-                        strSearch: t,
-                        bSteamItems: n,
-                        filterInGame: r,
-                        filterSteam: a,
+                        strSearch: n,
+                        bSteamItems: r,
+                        filterInGame: a,
+                        filterSteam: s,
                       } = e;
-                      let s = r;
-                      n &&
-                        ((s = { ...a, facets: { ...a.facets } }),
-                        a.app &&
-                          (s.facets.Game = { [`app_${a.app.appid}`]: !0 }),
-                        (s.app = { appid: tt, name: "", icon: "", link: "" }));
-                      const { app: i, facets: l } = s,
-                        c = new FormData();
-                      i && c.set("appid", i.appid.toString());
-                      t && c.set("q", t);
-                      for (const e of Object.keys(l))
-                        if (l[e])
-                          for (const t of Object.keys(l[e]))
-                            l[e][t] &&
-                              c.append(
-                                `category_${i.appid}_${e}[]`,
+                      let i = a;
+                      r &&
+                        ((i = { ...s, facets: { ...s.facets } }),
+                        s.app &&
+                          (i.facets.Game = { [`app_${s.app.appid}`]: !0 }),
+                        (i.app = { appid: tt, name: "", icon: "", link: "" }));
+                      const { app: l, facets: c } = i,
+                        p = new FormData();
+                      l && p.set("appid", l.appid.toString());
+                      n && p.set("q", n);
+                      for (const e of Object.keys(c))
+                        if (c[e])
+                          for (const t of Object.keys(c[e]))
+                            c[e][t] &&
+                              p.append(
+                                `category_${l.appid}_${e}[]`,
                                 `tag_${t}`,
                               );
-                      return `${o.TS.COMMUNITY_BASE_URL}market/search?${new URLSearchParams(c).toString()}`;
-                    })(t);
+                      return `${o.TS.COMMUNITY_BASE_URL}${t}?${new URLSearchParams(p).toString()}`;
+                    })(t, a);
                   },
                 },
                 Xe.Localize("#AdvancedSearch_Search"),

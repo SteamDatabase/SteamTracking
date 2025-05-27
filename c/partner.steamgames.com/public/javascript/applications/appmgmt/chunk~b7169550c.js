@@ -644,6 +644,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -673,6 +674,7 @@
                   tooltip: __webpack_require__,
                 }),
             ),
+            _,
             _.createElement(_, {
               bIsMinimized: _,
               fnToggleMinimize: _,

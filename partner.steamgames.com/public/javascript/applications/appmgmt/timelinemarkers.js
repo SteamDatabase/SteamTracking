@@ -11057,18 +11057,20 @@
         );
       }
       function ts(e) {
-        const { createVisibilityState: t, setCreateVisibilityState: r } = e;
+        const { createVisibilityState: t, setCreateVisibilityState: r } = e,
+          i = n.useId();
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "h3",
-            null,
+            { id: i },
             (0, g.we)("#TimelineMarkers_Dialog_Visibility"),
           ),
           n.createElement(
             o.zW,
             {
+              labelId: i,
               value: t,
               onChange: (e) => {
                 r(e);

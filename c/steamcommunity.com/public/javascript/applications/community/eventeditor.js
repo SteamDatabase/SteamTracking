@@ -3180,7 +3180,7 @@
           }, [_, _]);
           const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
             _ = _(_._.k_EEventStateStaged),
-            _ = _(_._.k_EEventStatsUnlisted),
+            _ = _(_._.k_EEventStateUnlisted),
             _ = _(_._.k_EEventStateVisible),
             _ = _.useMemo(() => {
               if (!_) return;
@@ -3562,7 +3562,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           let _ = null;
@@ -3882,6 +3881,7 @@
             : null;
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13320,15 +13320,13 @@
       (0, _._)([_._], _.prototype, "OnArtworkLangChange", null),
         (_ = (0, _._)([_._], _));
       let _ = class extends _.Component {
-        constructor() {
-          super(...arguments),
+        constructor(_) {
+          super(_),
             (this.state = {
               bDownloadFromClanImageStore: !1,
             }),
-            (this.m_clanImageUploader = void 0);
-        }
-        componentDidMount() {
-          this.RefreshUploader();
+            (this.m_clanImageUploader = void 0),
+            this.RefreshUploader();
         }
         componentDidUpdate(_) {
           (_.clanSteamID.GetAccountID() ==
@@ -17596,6 +17594,7 @@
         );
       }
       _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
           super(...arguments), (this.m_cancelSignal = _().CancelToken.source());
@@ -17928,7 +17927,7 @@
         return _.createElement(
           _._,
           {
-            location: 1,
+            editModel: _,
           },
           _.createElement(
             "div",

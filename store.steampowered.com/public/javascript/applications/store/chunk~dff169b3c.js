@@ -1243,6 +1243,16 @@
                     bw: l.gp.writeString,
                   },
                   sealed: { n: 32, br: l.qM.readBool, bw: l.gp.writeBool },
+                  contextid: {
+                    n: 33,
+                    br: l.qM.readUint64String,
+                    bw: l.gp.writeUint64String,
+                  },
+                  assetid: {
+                    n: 34,
+                    br: l.qM.readUint64String,
+                    bw: l.gp.writeUint64String,
+                  },
                 },
               }),
             _.sm_m

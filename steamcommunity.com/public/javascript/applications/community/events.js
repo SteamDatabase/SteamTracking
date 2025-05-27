@@ -365,7 +365,7 @@
           o.createElement(
             "div",
             { className: B.LatestUpdateIcon },
-            o.createElement(k.UTF, null),
+            o.createElement(k.UTF, { role: "presentation" }),
           ),
           o.createElement(
             b.ml,

@@ -107,6 +107,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -575,12 +576,12 @@
                 .join(" ");
             })(A, d)),
             (N = (0, s.A)({}, N, g)));
-          var B = (0, s.A)(
+          var M = (0, s.A)(
             { "aria-current": (G && r) || null, className: A, style: N, to: o },
             w,
           );
           return (
-            E !== h ? (B.ref = t || I) : (B.innerRef = I), l.createElement(_, B)
+            E !== h ? (M.ref = t || I) : (M.innerRef = I), l.createElement(_, M)
           );
         });
       });
@@ -1182,8 +1183,8 @@
         G = a(77516),
         A = a(91382),
         N = a(30756),
-        B = a(21529),
-        M = a(52038),
+        M = a(21529),
+        B = a(52038),
         L = a(78327);
       function P(e) {
         const { event: t, broadcastEmbedContext: a } = e,
@@ -1196,7 +1197,7 @@
             t.BEventCanShowBroadcastWidget() &&
               t.BSaleShowBroadcastAtTopOfPage(),
           ) &&
-            r.createElement(B.B, {
+            r.createElement(M.B, {
               event: t,
               broadcastEmbedContext: a,
               bWideBroadcastDisplay: n,
@@ -1232,7 +1233,7 @@
                     muted: !0,
                     autoPlay: !0,
                     playsInline: !0,
-                    className: (0, M.A)(
+                    className: (0, B.A)(
                       I().SaleBackground,
                       I()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                       "SaleBackground",
@@ -1282,7 +1283,7 @@
         return r.createElement(
           "div",
           {
-            className: (0, M.A)({
+            className: (0, B.A)({
               SaleBackgroundCtn: !0,
               ContentHubSalePage: d,
             }),
@@ -1293,7 +1294,7 @@
           r.createElement(
             "div",
             {
-              className: (0, M.A)(
+              className: (0, B.A)(
                 I()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                 "SaleCustomCSS",
                 I().SaleBackground,
@@ -1337,7 +1338,7 @@
               )
             : r.createElement(
                 "div",
-                { className: (0, M.A)(W().SalePageLogoCtn, "SalePageLogoCtn") },
+                { className: (0, B.A)(W().SalePageLogoCtn, "SalePageLogoCtn") },
                 r.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", a),
                 }),
@@ -1738,7 +1739,7 @@
           "div",
           {
             ...o,
-            className: (0, M.A)(
+            className: (0, B.A)(
               s ? Ge().DragAndDropContainerDragging : Ge().DragAndDropContainer,
               "DragAndDropContainer",
             ),
@@ -1774,8 +1775,8 @@
         );
       }
       var Ne = a(66331),
-        Be = a(27344),
-        Me = a.n(Be);
+        Me = a(27344),
+        Be = a.n(Me);
       function Le(e) {
         const {
             imageUploader: t,
@@ -1865,7 +1866,7 @@
               null,
               r.createElement(
                 "div",
-                { className: Me().UploadPreviewCtn },
+                { className: Be().UploadPreviewCtn },
                 c.map((e) =>
                   r.createElement(Re, {
                     key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
@@ -1880,9 +1881,8 @@
             ),
             r.createElement(Pe, {
               imageUploader: t,
-              fnOnUploadImageRequested: async () => {
-                await t.UploadAllImages(i, m, l, o && o.file_type);
-              },
+              fnOnUploadImageRequested: async () =>
+                await t.UploadAllImages(i, m, l, o && o.file_type),
             }),
           )
         );
@@ -1894,7 +1894,7 @@
           "div",
           {
             style: { display: "flex" },
-            className: Me().UploadPreviewButtonsCtn,
+            className: Be().UploadPreviewButtonsCtn,
           },
           Boolean(l.length) &&
             r.createElement(
@@ -1918,7 +1918,7 @@
             e.bEnforceDimensions && (n += ` - ${e.width}x${e.height}`),
               (t.BIsOriginalMinimumDimensions(e) &&
                 t.FileTypeMatchesImageTypes(e)) ||
-                (a = Me().ImageDimensionTooSmall);
+                (a = Be().ImageDimensionTooSmall);
             return { label: n, data: e, strOptionClass: a };
           }).filter((e) => !e.data.bHiddenFromDropdown),
           o = {
@@ -1946,22 +1946,22 @@
               )
             : null,
           i = t.IsValidAssetType(e.forceResolution, e.forceFileType),
-          c = i.needsCrop
-            ? (0, _.we)("#ImageUpload_NeedsCrop")
-            : i.error
-              ? (0, _.we)("#ImageUpload_Invalid")
-              : o[t.status],
-          m = "pending" == t.status;
+          c = "pending" == t.status;
+        let m = o[t.status];
+        "pending" == t.status &&
+          (i.needsCrop
+            ? (m = (0, _.we)("#ImageUpload_NeedsCrop"))
+            : i.error && (m = (0, _.we)("#ImageUpload_Invalid")));
         let u = null;
         const g = t.GetCurrentImageOption();
         g && (u = l.find((e) => e.data.sKey == g.sKey)?.data);
         u || (u = l?.[0]?.data);
         return r.createElement(
           "div",
-          { className: Me().UploadPreview },
+          { className: Be().UploadPreview },
           r.createElement(
             "div",
-            { className: Me().UploadPreviewDelete, onClick: () => a(t) },
+            { className: Be().UploadPreviewDelete, onClick: () => a(t) },
             r.createElement(v.sED, null),
           ),
           r.createElement(Ue, { asset: t }),
@@ -1971,19 +1971,36 @@
               rgOptions: s,
               selectedOption: t.language,
               onChange: (e) => (t.language = e.data),
-              disabled: !m,
+              disabled: !c,
             }),
           Boolean(l?.length > 1) &&
             r.createElement(Q.m, {
+              label: t.GetImageOptionLabel(),
               rgOptions: l,
               selectedOption: u,
               onChange: (e) => t.SetCurrentImageOption(e.data),
-              disabled: !m,
+              disabled: !c,
             }),
+          c &&
+            i.warnings?.map((e) =>
+              r.createElement(
+                "div",
+                { key: e, className: Be().UploadPreviewWarning },
+                e,
+              ),
+            ),
+          c &&
+            i.messages?.map((e) =>
+              r.createElement(
+                "div",
+                { key: e, className: Be().UploadPreviewMessage },
+                e,
+              ),
+            ),
           r.createElement(
             "div",
-            { className: (0, M.A)(Se().FlexColumnContainer) },
-            c,
+            { className: (0, B.A)(Se().FlexColumnContainer) },
+            m,
             Boolean("uploading" == t.status) &&
               r.createElement(
                 "div",
@@ -1993,46 +2010,44 @@
           ),
           r.createElement(
             "div",
-            { className: Me().UploadPreviewError },
+            { className: Be().UploadPreviewError },
             t.message,
           ),
-          i.error &&
+          c &&
+            i.error &&
             r.createElement(
               "div",
-              { className: Me().UploadPreviewError },
+              { className: Be().UploadPreviewError },
               i.error,
             ),
-          i.needsCrop &&
+          c &&
+            i.needsCrop &&
             r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                Q.jn,
-                {
-                  onClick: () =>
-                    ((t) => {
-                      if (t instanceof me.A_) {
-                        t.ResetImage();
-                        const a = window,
-                          n = r.createElement(Ne.q, {
-                            ownerWin: a,
-                            uploadFile: t,
-                            forceResolution: e.forceResolution,
-                            fileType: e.forceFileType || 3,
-                          });
-                        (0, J.HT)(n, a, "CropModal", {
-                          strTitle: (0, _.we)("#ImageUpload_CropModalTitle"),
+              Q.jn,
+              {
+                onClick: () =>
+                  ((t) => {
+                    if (t instanceof me.A_) {
+                      t.ResetImage();
+                      const a = window,
+                        n = r.createElement(Ne.q, {
+                          ownerWin: a,
+                          uploadFile: t,
+                          forceResolution: e.forceResolution,
+                          fileType: e.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          t.fileType,
-                          JSON.stringify(t.GetCurrentImageOption()),
-                        );
-                    })(t),
-                },
-                (0, _.we)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, J.HT)(n, a, "CropModal", {
+                        strTitle: (0, _.we)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        t.fileType,
+                        JSON.stringify(t.GetCurrentImageOption()),
+                      );
+                  })(t),
+              },
+              (0, _.we)("#ImageUpload_OpenEditor"),
             ),
         );
       });
@@ -2042,14 +2057,14 @@
           ? r.createElement(
               "div",
               {
-                className: Me().PreviewImgCtn,
+                className: Be().PreviewImgCtn,
                 onClick: (e) => {
                   (0, J.pg)(r.createElement(Oe, { asset: t }), (0, $.uX)(e));
                 },
               },
               r.createElement(
                 "span",
-                { className: Me().PreviewImgInfo },
+                { className: Be().PreviewImgInfo },
                 t.width,
                 " x ",
                 t.height,
@@ -2069,12 +2084,12 @@
           : r.createElement(
               "div",
               {
-                className: Me().PreviewImgCtn,
+                className: Be().PreviewImgCtn,
                 style: { backgroundImage: `url(${t.dataUrl})` },
               },
               r.createElement(
                 "span",
-                { className: Me().PreviewImgInfo },
+                { className: Be().PreviewImgInfo },
                 t.width,
                 " x ",
                 t.height,
@@ -2404,7 +2419,7 @@
           : r.createElement(
               "span",
               {
-                className: (0, M.A)(je().Localized, Se().ValveOnlyBackground),
+                className: (0, B.A)(je().Localized, Se().ValveOnlyBackground),
                 onClick: () => a(t),
               },
               "(VO) " + (0, _.we)("#ImagePicker_Localized"),
@@ -2621,7 +2636,7 @@
           },
           r.createElement(
             "div",
-            { className: (0, M.A)(Se().FlexColumnContainer, mt().ReassignCtn) },
+            { className: (0, B.A)(Se().FlexColumnContainer, mt().ReassignCtn) },
             r.createElement(
               "div",
               { className: mt().ImagePreviewContainer },
@@ -2890,7 +2905,7 @@
             r.createElement(
               o.Z,
               {
-                className: (0, M.A)(
+                className: (0, B.A)(
                   wt().AppDetailsSpotlightContainer,
                   wt().MajorEventContainer,
                 ),
@@ -3370,7 +3385,7 @@
           !e.bIsMinimized &&
             r.createElement(
               "div",
-              { className: (0, M.A)(mt().SelectImageBlock, mt().Tips) },
+              { className: (0, B.A)(mt().SelectImageBlock, mt().Tips) },
               p,
               Boolean(E && h) &&
                 r.createElement(
@@ -3415,7 +3430,7 @@
                 ),
             ),
           !e.bIsMinimized &&
-            r.createElement(Mt, {
+            r.createElement(Bt, {
               clanSteamID: e.clanSteamID,
               title: e.title,
               imageWidth: E,
@@ -3442,12 +3457,12 @@
           onCancel: a,
         });
       }
-      function Bt(e) {
+      function Mt(e) {
         if (!e) return e;
         const t = e.lastIndexOf(".");
         return -1 === t ? e : e.substring(0, t);
       }
-      function Mt(e) {
+      function Bt(e) {
         const {
             artworkType: t,
             realms: a,
@@ -3479,7 +3494,7 @@
           C = r.useCallback(
             (e, a, n) => {
               (0, re.h5)(() => {
-                Bt(o(t, a)) == e.image_hash && s(t, null, a),
+                Mt(o(t, a)) == e.image_hash && s(t, null, a),
                   s(t, e, n),
                   S(e, n, !1);
               });
@@ -3517,7 +3532,7 @@
                 r.createElement(
                   "div",
                   {
-                    className: (0, M.A)(
+                    className: (0, B.A)(
                       mt().SelectImageBlock,
                       mt().MainPreviewBlock,
                     ),
@@ -3644,7 +3659,7 @@
           r.createElement(
             "div",
             {
-              className: (0, M.A)(mt().DetailPageExample, "DetailPageExample"),
+              className: (0, B.A)(mt().DetailPageExample, "DetailPageExample"),
             },
             r.createElement(
               "div",
@@ -3688,7 +3703,7 @@
               r.createElement(
                 "div",
                 {
-                  className: (0, M.A)(
+                  className: (0, B.A)(
                     mt().DetailPageExample,
                     "DetailPageExample",
                   ),
@@ -3882,7 +3897,7 @@
                 fnOnArtworkLangChange: m,
                 realms: u,
                 fnLangHasData: d,
-                fnGetImageHash: (e) => Bt(p(a, e)),
+                fnGetImageHash: (e) => Mt(p(a, e)),
               }),
             );
       }
@@ -3943,7 +3958,7 @@
             closeModal: m,
             bDisableBackgroundDismiss: !0,
             bAllowFullSize: !0,
-            className: (0, M.A)(bt.NotTooWideModal, bt.ImageManageDialog),
+            className: (0, B.A)(bt.NotTooWideModal, bt.ImageManageDialog),
             strTitle: e.strLocalizedTitle || (0, _.we)("#ImagePickerLoc_Title"),
             strDescription: e.strLocalizedDescription,
             bOKDisabled: C > 0,
@@ -3955,7 +3970,7 @@
                   u(
                     i,
                     {
-                      image_hash: Bt(n),
+                      image_hash: Mt(n),
                       clanAccountID: S,
                       file_type: g.i6.GetExtensionTypeFromURL(e),
                       imageid: void 0,
@@ -4724,7 +4739,7 @@
           m = (0, E.w6)(c);
         return r.createElement(
           "div",
-          { className: (0, M.A)(fe().CtnEditor, na().TabCtn), ref: m },
+          { className: (0, B.A)(fe().CtnEditor, na().TabCtn), ref: m },
           Boolean(o && s && s > o) &&
             r.createElement(
               Q.$n,
@@ -4792,7 +4807,7 @@
           ? r.createElement(
               "div",
               {
-                className: (0, M.A)(
+                className: (0, B.A)(
                   ma().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4805,7 +4820,7 @@
           : r.createElement(
               "div",
               {
-                className: (0, M.A)(
+                className: (0, B.A)(
                   ma().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4959,6 +4974,7 @@
                     O,
                     { event: a, language: l, bIsPreview: n },
                     S && r.createElement(oa.Sn, null),
+                    r.createElement(ya, { eventModel: a }),
                     Boolean(o) &&
                       r.createElement(Jt, {
                         backgroundImageEditModel: o,
@@ -4968,7 +4984,7 @@
                     r.createElement(
                       "div",
                       {
-                        className: (0, M.A)({
+                        className: (0, B.A)({
                           [I().SaleOuterContainer]: !0,
                           [I().SaleNewSizing]: E,
                           [I()[`CustomStyle_${a.jsondata.sale_vanity_id}`]]: !0,
@@ -5139,7 +5155,7 @@
             "div",
             {
               key: "TabSection_" + t,
-              className: (0, M.A)(
+              className: (0, B.A)(
                 I().SaleSectionTabListContainer,
                 "SaleSectionTabListContainer",
               ),
@@ -5207,7 +5223,7 @@
                   {
                     navKey: g,
                     id: g,
-                    className: (0, M.A)({
+                    className: (0, B.A)({
                       [I().SaleSectionCtn]: !0,
                       SaleSectionCtn: !0,
                       [t.section_type]: !0,
@@ -5236,7 +5252,7 @@
                         "div",
                         {
                           id: g,
-                          className: (0, M.A)({
+                          className: (0, B.A)({
                             [I().SaleSectionCtn]: !0,
                             [I().SaleSectionBackgroundImageGroupEdit]: !0,
                             [I().NoTopPadding]: t.collapse_header_space,
@@ -5270,7 +5286,7 @@
             "div",
             {
               ref: u,
-              className: (0, M.A)(
+              className: (0, B.A)(
                 I().SaleSectionLivePreview,
                 m && I().Hover,
                 s && I().JumpedTo,
@@ -5297,6 +5313,49 @@
               ),
             a,
           )
+        );
+      }
+      function ya(e) {
+        const { eventModel: t } = e,
+          a = (0, xe.Ec)(t.clanSteamID.GetAccountID());
+        if (!a || (!a.can_edit && !a.support_user)) return;
+        const n = t.GetAllTags(),
+          l = [];
+        return (
+          n.includes("hide_store") &&
+            l.push((0, _.we)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          n.includes("mod_hide_store") &&
+            a.support_user &&
+            l.push((0, _.we)("#Sale_SaleEventIsHidden_Reason_Mod")),
+          n.includes("contenthub") &&
+            l.push((0, _.we)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          t.BIsVisibleEvent() && 0 == l.length
+            ? void 0
+            : r.createElement(
+                "div",
+                { className: I().SalePageHiddenWarning },
+                r.createElement(
+                  "div",
+                  null,
+                  !t.BIsVisibleEvent() &&
+                    r.createElement(
+                      "div",
+                      { className: I().WarningText },
+                      (0, _.we)("#Sale_SaleEventIsHidden"),
+                    ),
+                  l.length > 0 &&
+                    r.createElement(
+                      "div",
+                      { className: I().WarningText },
+                      (0, _.Yp)("#Sale_SaleEventIsHidden_Reason", l.length),
+                      r.createElement(
+                        "ul",
+                        null,
+                        l.map((e) => r.createElement("li", { key: e }, e)),
+                      ),
+                    ),
+                ),
+              )
         );
       }
     },
@@ -5358,8 +5417,9 @@
             toggleMinimized: r,
             className: l,
             children: g,
+            elAdditionalButtons: p,
           } = e,
-          p = (0, u.q3)(() => n());
+          E = (0, u.q3)(() => n());
         return o.createElement(
           o.Fragment,
           null,
@@ -5384,9 +5444,10 @@
               t,
               Boolean(a) && o.createElement(d.o, { tooltip: a }),
             ),
-            o.createElement(_, { bIsMinimized: p, fnToggleMinimize: r }),
+            p,
+            o.createElement(_, { bIsMinimized: E, fnToggleMinimize: r }),
           ),
-          !p && o.createElement(c.tH, null, g),
+          !E && o.createElement(c.tH, null, g),
         );
       }
       function p(e) {
@@ -5936,8 +5997,8 @@
       })(E || (E = {}));
       var A = a(44332),
         N = a(78327);
-      const B = 20;
-      class M {
+      const M = 20;
+      class B {
         m_WebAPI;
         m_Storage;
         m_promiseInitialize;
@@ -5957,7 +6018,7 @@
                   (n = 1539068400),
                   this.LoadCountryList()
                     .then((a) =>
-                      this.LoadTopSellersForWeek(n, e, B).then((e) => {
+                      this.LoadTopSellersForWeek(n, e, M).then((e) => {
                         (this.m_rtCurrentWeek = e.rtWeekStart), t(e);
                       }),
                     )
@@ -5975,7 +6036,7 @@
               ((this.m_rgCountryList = await this.m_Storage.GetObject(e)),
               !this.m_rgCountryList ||
                 this.m_rgCountryList.dtTimeStored +
-                  M.k_nCountryListMaxCacheTime <
+                  B.k_nCountryListMaxCacheTime <
                   Date.now())
             ) {
               const t = i.w.Init(T);
@@ -6077,7 +6138,7 @@
                 const n = {
                   rtWeekStart: t.rtWeekStart,
                   strCountryCode: t.strCountryCode,
-                  cListSize: B,
+                  cListSize: M,
                 };
                 return (
                   a.setQueryData([L, "Weekly", n], t),
@@ -6094,7 +6155,7 @@
       function R(e, t, a = !1) {
         return t ? "error" : e || a ? "loading" : "loaded";
       }
-      function U(e, t, a, n, r = B, l = !0) {
+      function U(e, t, a, n, r = M, l = !0) {
         const o = {
             rtWeekStart: a,
             strCountryCode: e.BIsCountryListLoaded()
@@ -6127,7 +6188,7 @@
           { TopSellers: l ? p : null, status: R(u, g, d) }
         );
       }
-      function O(e, t, a, n = B, r = !0) {
+      function O(e, t, a, n = M, r = !0) {
         const { rtCurrentWeek: l } = P(e, a);
         return U(e, l, t, a, n, r);
       }
@@ -6257,7 +6318,7 @@
         m_WebAPI;
         async Initialize(e, t) {
           (this.m_WebAPI = e),
-            (this.m_TopSellersStore = new M(this.m_WebAPI, t)),
+            (this.m_TopSellersStore = new B(this.m_WebAPI, t)),
             (this.m_MostPlayedStore = new d(this.m_WebAPI)),
             (this.m_BestOfYearStore = new W(this.m_WebAPI)),
             (this.m_MostPlayedOnSteamDeckStore = new j(this.m_WebAPI)),
@@ -6566,8 +6627,8 @@
         Ge = a(74812),
         Ae = a.n(Ge),
         Ne = a(36909),
-        Be = a.n(Ne),
-        Me = a(32630),
+        Me = a.n(Ne),
+        Be = a(32630),
         Le = a(27666),
         Pe = a(44165);
       function Re(e) {
@@ -6719,6 +6780,8 @@
             return (
               (a.clanSteamID = Ve.b.InitFromClanID(e)),
               (a.GID = "fakeevent_" + Ze++),
+              (a.visibility_state = qe.zv.k_EEventStateUnlisted),
+              (a.visibilityStartTime = (0, Pe.sB)() - 1),
               (a.jsondata.bSaleEnabled = !0),
               (a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
               (a.jsondata.sale_vanity_id = t),
@@ -7464,7 +7527,7 @@
           h.createElement(
             "div",
             {
-              className: bt().CalendarBtn,
+              className: (0, ie.A)(bt().CalendarBtn),
               onClick: (e) =>
                 a(e, { bDisableMouseOverlay: !0, bAlwaysOnTop: !0 }),
             },
@@ -7475,9 +7538,8 @@
       function kt(e) {
         const { value: t, fnOnUpdate: a, minDate: n, maxDate: r } = e,
           l = (0, h.useRef)(),
-          o = (0, h.useRef)(null);
-        console.log(St().unix(t).format(), t);
-        const s = (0, h.useCallback)(
+          o = (0, h.useRef)(null),
+          s = (0, h.useCallback)(
             (e) => {
               const t = St().unix(n),
                 a = St().unix(r);
@@ -7492,7 +7554,22 @@
               a(e.unix()), l.current.Hide();
             },
             [a],
-          );
+          ),
+          c = (0, h.useMemo)(() => {
+            if (!St().locales().includes("YearMonthPickerContextMenu")) {
+              const e = Array.from({ length: 12 }, (e, t) =>
+                  (0, x.Gj)(new Date(2020, t, 1)),
+                ),
+                t = Array.from({ length: 12 }, (e, t) =>
+                  (0, $.oL)(new Date(2020, t, 1)),
+                );
+              St().defineLocale("YearMonthPickerContextMenu", {
+                months: e,
+                monthsShort: t,
+              });
+            }
+            return St()().clone().locale("YearMonthPickerContextMenu");
+          }, []);
         return h.createElement(
           ft.tz,
           { refInstance: l },
@@ -7508,13 +7585,14 @@
               },
               h.createElement(Et(), {
                 ref: o,
-                value: St().unix(t),
+                value: c,
                 onChange: i,
                 dateFormat: "YYYY-MM",
                 timeFormat: !1,
                 closeOnSelect: !0,
                 isValidDate: s,
                 input: !1,
+                locale: "YearMonthPickerContextMenu",
               }),
             ),
           ),
@@ -7556,8 +7634,8 @@
           })(t);
         return !r ||
           Math.floor(l.getTime() / 1e3) > n ||
-          r.getFullYear() < Mt ||
-          (r.getFullYear() == Mt && r.getMonth() < Lt)
+          r.getFullYear() < Bt ||
+          (r.getFullYear() == Bt && r.getMonth() < Lt)
           ? h.createElement(
               "div",
               null,
@@ -7721,14 +7799,14 @@
               )
         );
       }
-      function Bt(e, t) {
+      function Mt(e, t) {
         return (0, x.we)(
           "#SteamCharts_Monthly_Title_wMonthAndYear",
           (0, x.we)("#Sale_Reservation_MonthNoun_" + (e + 1)),
           t,
         );
       }
-      const Mt = 2003,
+      const Bt = 2003,
         Lt = 8,
         Pt = 1063584e3;
       function Rt(e) {
@@ -7739,7 +7817,7 @@
           o = t > 0 ? a : a - 1,
           s = t > 0 ? t - 1 : 11,
           i = Ue(o, s),
-          c = a > Mt || t > Lt,
+          c = a > Bt || t > Lt,
           m = t < 11 ? a : a + 1,
           u = t < 11 ? t + 1 : 0,
           d = Ue(m, u),
@@ -7765,7 +7843,7 @@
             h.createElement(
               "div",
               { className: (0, ie.A)(Ae().HeaderCtn, Ae().WithSubtitle) },
-              h.createElement("h1", null, Bt(t, a)),
+              h.createElement("h1", null, Mt(t, a)),
             ),
             h.createElement(
               "div",
@@ -7783,7 +7861,7 @@
               { className: (0, ie.A)(Ae().ChartRangeCtn) },
               h.createElement(
                 Ce.Gq,
-                { toolTipContent: Bt(s, o) },
+                { toolTipContent: Mt(s, o) },
                 h.createElement(
                   "div",
                   {
@@ -7805,7 +7883,7 @@
               ),
               h.createElement(
                 Ce.Gq,
-                { toolTipContent: Bt(u, m) },
+                { toolTipContent: Mt(u, m) },
                 h.createElement(
                   "div",
                   {
@@ -7852,7 +7930,7 @@
           },
           h.createElement(
             "div",
-            { className: Be().PageContainer },
+            { className: Me().PageContainer },
             h.createElement(
               "div",
               { className: (0, ie.A)(Ae().HeaderCtn, Ae().WithSubtitle) },
@@ -7879,15 +7957,15 @@
             ),
             h.createElement(
               "div",
-              { className: (0, ie.A)(be().PageSection, Be().SideBySideCharts) },
+              { className: (0, ie.A)(be().PageSection, Me().SideBySideCharts) },
               h.createElement(
                 "div",
-                { className: Be().Chart },
+                { className: Me().Chart },
                 h.createElement(
                   fe.tH,
                   null,
                   h.createElement(
-                    Me.Ay,
+                    Be.Ay,
                     { feature: "topsellers" },
                     h.createElement(
                       Ot,
@@ -7903,7 +7981,7 @@
                       h.createElement(
                         we.k2,
                         {
-                          className: Be().ChartMoreBtn,
+                          className: Me().ChartMoreBtn,
                           to: pn.TopSelling(N.TS.COUNTRY),
                         },
                         (0, x.we)(
@@ -7916,12 +7994,12 @@
               ),
               h.createElement(
                 "div",
-                { className: Be().Chart },
+                { className: Me().Chart },
                 h.createElement(
                   fe.tH,
                   null,
                   h.createElement(
-                    Me.Ay,
+                    Be.Ay,
                     { feature: "mostplayed" },
                     h.createElement(
                       Ft,
@@ -7936,7 +8014,7 @@
                       },
                       h.createElement(
                         we.k2,
-                        { className: Be().ChartMoreBtn, to: pn.MostPlayed() },
+                        { className: Me().ChartMoreBtn, to: pn.MostPlayed() },
                         (0, x.we)(
                           "#SteamCharts_OverviewGraph_Button_MostPlayed",
                         ),
@@ -7948,10 +8026,10 @@
             ),
             h.createElement(
               "div",
-              { className: (0, ie.A)(be().PageSection, Be().SideBySideCharts) },
+              { className: (0, ie.A)(be().PageSection, Me().SideBySideCharts) },
               h.createElement(
                 "div",
-                { className: Be().Chart },
+                { className: Me().Chart },
                 h.createElement(
                   fe.tH,
                   null,
@@ -7960,7 +8038,7 @@
               ),
               h.createElement(
                 "div",
-                { className: (0, ie.A)(Be().Chart, Be().Monthly) },
+                { className: (0, ie.A)(Me().Chart, Me().Monthly) },
                 h.createElement(
                   fe.tH,
                   null,
@@ -7993,7 +8071,7 @@
               ),
               h.createElement(
                 "div",
-                { className: Be().MoreLinksCtn },
+                { className: Me().MoreLinksCtn },
                 h.createElement(
                   "a",
                   { href: `${N.TS.STORE_BASE_URL}hwsurvey/` },
@@ -8020,7 +8098,7 @@
         if (!l || !l.GetItems().length)
           return h.createElement("div", {
             className: (0, ie.A)(
-              Be().OverviewChartPlaceholder,
+              Me().OverviewChartPlaceholder,
               be().Placeholder,
             ),
           });
@@ -8031,15 +8109,15 @@
           h.createElement("div", { className: be().SectionTitle }, " ", a),
           h.createElement(
             "div",
-            { className: Be().ChartItemsCtn },
+            { className: Me().ChartItemsCtn },
             h.createElement(
               "div",
-              { className: Be().TopItem },
+              { className: Me().TopItem },
               h.createElement(
                 Te.p,
                 { item: o },
                 h.createElement("img", {
-                  className: Be().Capsule,
+                  className: Me().Capsule,
                   src: o.GetAssets().GetHeaderURL(),
                 }),
               ),
@@ -8064,7 +8142,7 @@
         if (!l || l.isLoading)
           return h.createElement("div", {
             className: (0, ie.A)(
-              Be().OverviewChartPlaceholder,
+              Me().OverviewChartPlaceholder,
               be().Placeholder,
             ),
           });
@@ -8075,15 +8153,15 @@
           h.createElement("div", { className: be().SectionTitle }, " ", a),
           h.createElement(
             "div",
-            { className: Be().ChartItemsCtn },
+            { className: Me().ChartItemsCtn },
             h.createElement(
               "div",
-              { className: Be().TopItem },
+              { className: Me().TopItem },
               h.createElement(
                 Te.p,
                 { item: o.Item },
                 h.createElement("img", {
-                  className: Be().Capsule,
+                  className: Me().Capsule,
                   src: o.Item.GetAssets().GetHeaderURL(),
                 }),
               ),
@@ -8115,25 +8193,25 @@
         const { rank: t, item: a, itemDesc: n, addData: r, addDataDesc: l } = e;
         return h.createElement(
           Te.p,
-          { key: a.GetUniqueID(), className: Be().ItemRow, item: a, depth: t },
-          h.createElement("div", { className: Be().Rank }, t),
+          { key: a.GetUniqueID(), className: Me().ItemRow, item: a, depth: t },
+          h.createElement("div", { className: Me().Rank }, t),
           h.createElement(
             "div",
-            { className: Be().ItemNameCtn },
-            h.createElement("div", { className: Be().ItemName }, a.GetName()),
-            n && h.createElement("div", { className: Be().ItemDesc }, n),
+            { className: Me().ItemNameCtn },
+            h.createElement("div", { className: Me().ItemName }, a.GetName()),
+            n && h.createElement("div", { className: Me().ItemDesc }, n),
           ),
           h.createElement(
             "div",
-            { className: Be().TopReason },
-            r && h.createElement("div", { className: Be().AddData }, r),
-            l && h.createElement("div", { className: Be().AddDataDesc }, l),
+            { className: Me().TopReason },
+            r && h.createElement("div", { className: Me().AddData }, r),
+            l && h.createElement("div", { className: Me().AddDataDesc }, l),
           ),
         );
       }
       function Wt(e) {
         const { TopSellersStore: t } = e,
-          { TopSellers: a } = (function (e, t, a = B) {
+          { TopSellers: a } = (function (e, t, a = M) {
             const { rtCurrentWeek: n } = P(e, t);
             return U(e, n, n, t, a);
           })(t, N.TS.COUNTRY);
@@ -8145,7 +8223,7 @@
             h.createElement(
               we.k2,
               {
-                className: Be().ImageButtonLink,
+                className: Me().ImageButtonLink,
                 to: pn.TopSellers(ne(N.TS.COUNTRY), ae(t.GetCurrentWeek())),
               },
               (0, x.we)("#SteamCharts_TopSellers_PageTitle"),
@@ -8174,7 +8252,7 @@
           renderLink: () =>
             h.createElement(
               we.k2,
-              { className: Be().ImageButtonLink, to: l },
+              { className: Me().ImageButtonLink, to: l },
               (0, x.we)("#SteamCharts_Overview_Title_MonthlyTop"),
             ),
         });
@@ -8212,10 +8290,10 @@
           ),
           h.createElement(
             "div",
-            { className: Be().ImageButtonCtn },
+            { className: Me().ImageButtonCtn },
             h.createElement(
               "div",
-              { className: Be().ImageGridCtn },
+              { className: Me().ImageGridCtn },
               l.map(
                 (e, t) =>
                   e &&
@@ -8245,8 +8323,8 @@
           c = (0, $.oX)(i);
         let m = h.createElement(
           "div",
-          { className: Be().BestOfYearButton },
-          h.createElement("span", { className: Be().BackupBestOfYearText }, o),
+          { className: Me().BestOfYearButton },
+          h.createElement("span", { className: Me().BackupBestOfYearText }, o),
         );
         if (r && l) {
           const e = `${(0, Le.mJ)()}${r}`,
@@ -8256,11 +8334,11 @@
             null,
             h.createElement("img", {
               src: e,
-              className: (0, ie.A)(Be().BestOfYearBanner, Be().Big),
+              className: (0, ie.A)(Me().BestOfYearBanner, Me().Big),
             }),
             h.createElement("img", {
               src: t,
-              className: (0, ie.A)(Be().BestOfYearBanner, Be().Mobile),
+              className: (0, ie.A)(Me().BestOfYearBanner, Me().Mobile),
             }),
           );
         }
@@ -9398,7 +9476,7 @@
                     h.createElement(
                       fe.tH,
                       null,
-                      h.createElement(Ma, {
+                      h.createElement(Ba, {
                         TopSellersStore: t,
                         rtWeekStart: r,
                         strCountryCode: l,
@@ -9454,12 +9532,12 @@
             "div",
             { className: Ae().ChartRangeCtn },
             h.createElement(
-              Ba,
+              Ma,
               { strLink: l },
               h.createElement("div", { className: Ae().ChartNavPrev }, " "),
             ),
             h.createElement(
-              Ba,
+              Ma,
               { strLink: o },
               h.createElement("div", { className: Ae().ChartNavNext }, " "),
             ),
@@ -9481,7 +9559,7 @@
           )
         );
       }
-      function Ba(e) {
+      function Ma(e) {
         const { strLink: t, children: a } = e;
         return h.createElement(
           "div",
@@ -9496,7 +9574,7 @@
           ),
         );
       }
-      function Ma(e) {
+      function Ba(e) {
         const { TopSellersStore: t, strCountryCode: a, rtWeekStart: n } = e,
           r = t.GetCountryList(),
           l = (0, K.W6)(),
@@ -10352,7 +10430,7 @@
           },
           h.createElement(En, null),
           h.createElement(
-            Me.Ay,
+            Be.Ay,
             { domain: "store.steampowered.com", controller: "steamcharts" },
             h.createElement(
               h.Suspense,
@@ -10364,7 +10442,7 @@
                   K.qh,
                   { path: `${l.MostPlayed()}` },
                   h.createElement(
-                    Me.Ay,
+                    Be.Ay,
                     { method: "mostplayed" },
                     h.createElement(
                       fe.tH,
@@ -10377,7 +10455,7 @@
                   path: `${l.TopSelling(":country?")}`,
                   render: (e) =>
                     h.createElement(
-                      Me.Ay,
+                      Be.Ay,
                       { method: "topselling" },
                       h.createElement(
                         fe.tH,
@@ -10393,7 +10471,7 @@
                   path: `${l.TopSellers(":country?", ":week?")}`,
                   render: (e) =>
                     h.createElement(
-                      Me.Ay,
+                      Be.Ay,
                       { method: "weeklytopsellers" },
                       h.createElement(
                         fe.tH,
@@ -10410,7 +10488,7 @@
                   K.qh,
                   { path: `${l.Overview()}`, exact: !0 },
                   h.createElement(
-                    Me.Ay,
+                    Be.Ay,
                     { method: "overview" },
                     h.createElement(
                       fe.tH,
@@ -10423,7 +10501,7 @@
                   K.qh,
                   { path: `${l.SupportStats()}` },
                   h.createElement(
-                    Me.Ay,
+                    Be.Ay,
                     { method: "supportstats" },
                     h.createElement(fe.tH, null, h.createElement(Qa, null)),
                   ),
@@ -10437,7 +10515,7 @@
                       },
                     } = e;
                     return h.createElement(
-                      Me.Ay,
+                      Be.Ay,
                       { method: "topnewreleases" },
                       h.createElement(
                         fe.tH,
@@ -10459,7 +10537,7 @@
                       },
                     } = e;
                     return h.createElement(
-                      Me.Ay,
+                      Be.Ay,
                       { method: "bestofyear" },
                       h.createElement(
                         fe.tH,
@@ -10478,7 +10556,7 @@
                       },
                     } = e;
                     return h.createElement(
-                      Me.Ay,
+                      Be.Ay,
                       { method: "mostplayedondeck" },
                       h.createElement(
                         fe.tH,

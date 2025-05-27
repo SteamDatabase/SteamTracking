@@ -10764,7 +10764,13 @@
     },
     79905: (e, t, a) => {
       "use strict";
-      a.d(t, { C6: () => p, ZM: () => c, lS: () => m, tl: () => u });
+      a.d(t, {
+        C6: () => p,
+        ZM: () => c,
+        fU: () => d,
+        lS: () => m,
+        tl: () => u,
+      });
       var n = a(90626),
         r = a(20194),
         i = a(56545),
@@ -29229,7 +29235,7 @@
                   null,
                   "If you’d like to offer a discount on your title throughout the ",
                   s.Mt.Get().GetCurEventTitle(),
-                  " event, you'll need to enter your discounts before the event begins on ",
+                  " event, you'll need to enter your offer before the event begins on ",
                   n.createElement(
                     "span",
                     null,
@@ -29250,16 +29256,16 @@
                     },
                     n.createElement("span", null, "discount dashboard"),
                   ),
-                  " to check your eligible games and enter your discounts.",
+                  " to check your eligible games and enter your desired amount.",
                   n.createElement("br", null),
                   n.createElement("br", null),
-                  "Remember, all discounts are subject to the same cooldown between discounts, with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
+                  "Remember, all discounts are subject to the same cooldown period with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
                   n.createElement(
                     "a",
                     { href: f.TS.PARTNER_BASE_URL + "doc/marketing/discounts" },
                     n.createElement("span", null, "Discounting documentation"),
                   ),
-                  ". If you wish, you may delete conflicting custom discounts you had planned. It's up to you to choose which discount events you participate in.",
+                  ". If you wish, you may delete conflicting custom offers you had planned. It's up to you to choose which events you participate in.",
                 ));
               break;
             case U.Dj.k_EnterDiscountReminder:
@@ -29285,7 +29291,7 @@
                     },
                     n.createElement("span", null, "discount dashboard"),
                   ),
-                  " to check your eligible games and enter your discounts.",
+                  " to check your eligible games and enter your desired amounts.",
                 ));
               break;
             case U.Dj.k_LearnMore:
@@ -29331,7 +29337,11 @@
                     { className: Nn().SectionBody },
                     (0, R.PP)(
                       "#OptIn_EmailSection_Register_Body_2",
-                      n.createElement("a", { href: u }, u),
+                      n.createElement(
+                        "a",
+                        { href: u },
+                        (0, R.PP)("#OptIn_EmailSection_Register_Body_2_var1"),
+                      ),
                     ),
                   ),
                 ));
@@ -29601,14 +29611,34 @@
                 ));
               break;
             case U.Dj.k_NextFestMediaUsageIntendedTrailer:
-              (i = "WE NEED TO KNOW IF YOU ARE STILL IN"),
+              (i = "We need to know if you won’t be able to participate"),
                 (l = n.createElement(
                   n.Fragment,
                   null,
                   n.createElement(
                     "div",
                     { className: Nn().SectionBody },
-                    "Your game is on our shortlist for the official event trailer, so we need to know ASAP If your plans have changed and you won't be able to participate.",
+                    "Your game’s trailer is among the finalists that we are selecting from to build the official Steam Next Fest June Edition trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: Nn().SectionBody },
+                    "Before we make the final cut of the trailer, we need to make sure we know that you’ll still be participating in this edition of Next Fest.",
+                    n.createElement("br", null),
+                    n.createElement(
+                      "ul",
+                      null,
+                      n.createElement(
+                        "li",
+                        null,
+                        "If you are still planning to participate, then no action is necessary",
+                      ),
+                      n.createElement(
+                        "li",
+                        null,
+                        "If your plans have changed and you won’t be able to participate, please see 'Need to opt out or cancel?' below.",
+                      ),
+                    ),
                   ),
                   n.createElement(
                     "div",
@@ -29631,7 +29661,16 @@
                   n.createElement(
                     "div",
                     { className: Nn().SectionBody },
-                    "Of course, participation in this edition of Steam Next Fest with a playable demo is required in order to be featured. If you can no longer participate for any reason please follow the instructions below.",
+                    "Of course, participation in this edition of Steam Next Fest with a playable demo is required in order to be featured. Please see ",
+                    n.createElement(
+                      "a",
+                      {
+                        href: "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer",
+                        target: "_blank",
+                      },
+                      "full elegibility critera",
+                    ),
+                    " to make sure you've got everything covered. If you can no longer participate for any reason please follow the instructions below.",
                   ),
                   n.createElement(
                     "div",
@@ -35586,14 +35625,19 @@
                   }),
               ),
             );
+          const d = n.useId();
           return n.createElement(
             "div",
             null,
             Boolean(l) &&
-              n.createElement("div", { className: ts.ListTitle }, l),
+              n.createElement("div", { id: d, className: ts.ListTitle }, l),
             n.createElement(
               m.zW,
-              { value: r.length > 0 ? r[0] : null, onChange: (e) => i([e]) },
+              {
+                labelId: d,
+                value: r.length > 0 ? r[0] : null,
+                onChange: (e) => i([e]),
+              },
               o,
             ),
             n.createElement(os, { ...e, item_unique_ids: r }),
@@ -44308,7 +44352,9 @@
       }
       function k(e) {
         const { nAppID: t, oFeaturedItem: a, fnSetFeaturedItem: n } = e,
-          [r, m] = (0, o.t7)(t, { include_all_purchase_options: !0 });
+          [r, m] = (0, o.t7)(t, { include_all_purchase_options: !0 }),
+          d = s.useId(),
+          p = s.useId();
         if (2 === m) return null;
         if (!r)
           return s.createElement(u.t, {
@@ -44316,10 +44362,10 @@
             position: "center",
             string: (0, _.we)("#Loading"),
           });
-        const d = r
+        const g = r
           ?.GetAllPurchaseOptions()
           .filter((e) => Boolean(e.packageid || e.bundleid));
-        if (d?.length > 1) {
+        if (g?.length > 1) {
           const e = new Array(),
             o = (0, l.wD)({ appid: t });
           return (
@@ -44342,7 +44388,7 @@
                 ),
               ),
             ),
-            d
+            g
               .filter((e) => !e.is_commercial_license)
               .forEach((t) => {
                 e.push(
@@ -44357,17 +44403,22 @@
               { className: E.FeatureSelectCtn },
               s.createElement(
                 "div",
-                { className: "DialogLabel" },
+                { id: d, className: "DialogLabel" },
                 (0, _.we)("#DailyDeals_Featured_title"),
               ),
               s.createElement(
                 "div",
-                null,
+                { id: p },
                 (0, _.we)("#DailyDeals_Featured_Desc"),
               ),
               s.createElement(
                 c.zW,
-                { value: (0, l.wD)(a), onChange: (e) => n((0, l.cW)(e)) },
+                {
+                  labelId: d,
+                  descriptionId: p,
+                  value: (0, l.wD)(a),
+                  onChange: (e) => n((0, l.cW)(e)),
+                },
                 e,
               ),
             )
@@ -53862,21 +53913,6 @@
               ),
               l.createElement(A.jE, { gid: a }),
               l.createElement(
-                d.JU,
-                null,
-                "Carousel index seen at by users:",
-                l.createElement(
-                  y.he,
-                  {
-                    toolTipContent:
-                      "Shows where in the carousel the user saw this message.",
-                  },
-                  l.createElement("span", { className: _().tooltip_Ctn }, "?"),
-                ),
-              ),
-              l.createElement(A.h6, { gid: a }),
-              l.createElement(j, { oEditableMessage: t }),
-              l.createElement(
                 d.$n,
                 {
                   onClick: (e) => {
@@ -53894,6 +53930,58 @@
                             },
                           },
                           l.createElement(A.jE, { gid: a }),
+                        ),
+                      ),
+                      (0, b.uX)(e),
+                    );
+                  },
+                },
+                "Expand",
+              ),
+              l.createElement(
+                d.JU,
+                null,
+                "Carousel index seen at by users:",
+                l.createElement(
+                  y.he,
+                  {
+                    toolTipContent:
+                      "Shows where in the carousel the user saw this message.",
+                  },
+                  l.createElement("span", { className: _().tooltip_Ctn }, "?"),
+                ),
+              ),
+              l.createElement(A.h6, { gid: a }),
+              l.createElement(j, { oEditableMessage: t }),
+              l.createElement(
+                d.JU,
+                null,
+                "Clicked by users:",
+                l.createElement(
+                  y.he,
+                  { toolTipContent: "Stats computed hourly" },
+                  l.createElement("span", { className: _().tooltip_Ctn }, "?"),
+                ),
+              ),
+              l.createElement(A.hy, { gid: a }),
+              l.createElement(
+                d.$n,
+                {
+                  onClick: (e) => {
+                    (0, E.pg)(
+                      l.createElement(
+                        h.eV,
+                        { bAllowFullSize: !0 },
+                        l.createElement(
+                          "div",
+                          {
+                            style: {
+                              width: "90vw",
+                              maxWidth: "90%",
+                              margin: "0 auto",
+                            },
+                          },
+                          l.createElement(A.hy, { gid: a }),
                         ),
                       ),
                       (0, b.uX)(e),
@@ -55008,12 +55096,13 @@
     52614: (e, t, a) => {
       "use strict";
       a.d(t, {
-        S0: () => T,
-        bl: () => B,
+        S0: () => A,
+        bl: () => M,
         h1: () => v,
-        h6: () => I,
+        h6: () => T,
+        hy: () => b,
         jE: () => f,
-        uZ: () => w,
+        uZ: () => D,
       });
       var n = a(79905),
         r = a(90626),
@@ -55037,7 +55126,7 @@
           a = (0, n.ZM)()?.rgSeens,
           [i, s, l] = (0, r.useMemo)(() => {
             if (!a) return [0, 0, []];
-            const e = b(a, t);
+            const e = w(a, t);
             let n = 0,
               r = 0;
             return (
@@ -55057,7 +55146,7 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(D, {
+                  r.createElement(I, {
                     Data: l,
                     nPeak: i,
                     field: "seen_count",
@@ -55116,7 +55205,7 @@
           i = (0, n.lS)(t),
           [s, l, o] = (0, r.useMemo)(() => {
             if (!i) return [0, 0, []];
-            const e = b(i, a);
+            const e = w(i, a);
             let t = 0,
               n = 0;
             return (
@@ -55136,7 +55225,7 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(D, {
+                  r.createElement(I, {
                     Data: o,
                     nPeak: s,
                     field: "seen_count",
@@ -55186,7 +55275,87 @@
               position: "center",
             });
       }
-      function b(e, t) {
+      function b(e) {
+        const { gid: t, templateType: a } = e,
+          i = (0, n.fU)(t),
+          [s, l, o] = (0, r.useMemo)(() => {
+            if (!i) return [0, 0, []];
+            const e = C(i, a);
+            let t = 0,
+              n = 0;
+            return (
+              e.forEach((e) => {
+                e.clicked_count > t && (t = e.clicked_count),
+                  (n += e.clicked_count);
+              }),
+              [t, n, e.sort((e, t) => e.rt_time_hour - t.rt_time_hour)]
+            );
+          }, [i, a]);
+        return i
+          ? r.createElement(
+              "div",
+              { className: y.DashStatsContainer },
+              r.createElement(
+                "div",
+                { className: y.Chart },
+                r.createElement(
+                  p.tH,
+                  null,
+                  r.createElement(I, {
+                    Data: o,
+                    nPeak: s,
+                    field: "clicked_count",
+                  }),
+                ),
+              ),
+              r.createElement(
+                "div",
+                { className: y.Stats },
+                r.createElement(
+                  "div",
+                  { className: y.CurrentStats },
+                  r.createElement(
+                    "div",
+                    { className: y.StatsTitle },
+                    (0, S.Dq)(l),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: y.StatSubtitle },
+                    r.createElement(
+                      "span",
+                      { className: y.Now },
+                      "Total Clicks",
+                    ),
+                  ),
+                ),
+                r.createElement(
+                  "div",
+                  { className: y.PeakStats },
+                  r.createElement(
+                    "div",
+                    { className: y.StatsTitle },
+                    (0, S.Dq)(s),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: y.StatSubtitle },
+                    r.createElement(
+                      "span",
+                      { className: y.Concurrent },
+                      "Peak Hourly Clicks",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : r.createElement(_.t, {
+              string: "Loading Stats",
+              size: "medium",
+              position: "center",
+            });
+      }
+      function w(e, t) {
         const a = new Map();
         return (
           e.forEach((e) => {
@@ -55198,29 +55367,12 @@
           Array.from(a).map((e) => ({ rt_time_hour: e[0], seen_count: e[1] }))
         );
       }
-      function w(e) {
+      function D(e) {
         const { templateType: t } = e,
           a = (0, n.ZM)()?.rgClicks,
           [i, s, l] = (0, r.useMemo)(() => {
             if (!a) return [0, 0, []];
-            const e = (function (e, t) {
-              const a = new Map();
-              return (
-                e.forEach((e) => {
-                  (t && e.template_type != t) ||
-                    (a.has(e.rt_time_hour)
-                      ? a.set(
-                          e.rt_time_hour,
-                          a.get(e.rt_time_hour) + e.clicked_count,
-                        )
-                      : a.set(e.rt_time_hour, e.clicked_count));
-                }),
-                Array.from(a).map((e) => ({
-                  rt_time_hour: e[0],
-                  clicked_count: e[1],
-                }))
-              );
-            })(a, t);
+            const e = C(a, t);
             let n = 0,
               r = 0;
             return (
@@ -55241,7 +55393,7 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(D, {
+                  r.createElement(I, {
                     Data: l,
                     nPeak: i,
                     field: "clicked_count",
@@ -55295,7 +55447,22 @@
               position: "center",
             });
       }
-      const D = r.memo((e) => {
+      function C(e, t) {
+        const a = new Map();
+        return (
+          e.forEach((e) => {
+            (t && e.template_type != t) ||
+              (a.has(e.rt_time_hour)
+                ? a.set(e.rt_time_hour, a.get(e.rt_time_hour) + e.clicked_count)
+                : a.set(e.rt_time_hour, e.clicked_count));
+          }),
+          Array.from(a).map((e) => ({
+            rt_time_hour: e[0],
+            clicked_count: e[1],
+          }))
+        );
+      }
+      const I = r.memo((e) => {
         const { Data: t, nPeak: a, field: n } = e;
         return r.createElement(
           i.u,
@@ -55336,7 +55503,7 @@
               tick: { fill: "white" },
               axisLine: !1,
             }),
-            r.createElement(c.m, { content: r.createElement(C, null) }),
+            r.createElement(c.m, { content: r.createElement(B, null) }),
             r.createElement(m.y, {
               dataKey: n,
               barSize: 2,
@@ -55350,7 +55517,7 @@
           ),
         );
       });
-      function C({ active: e, payload: t }) {
+      function B({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return r.createElement(
@@ -55365,12 +55532,12 @@
         }
         return null;
       }
-      function I(e) {
+      function T(e) {
         const { gid: t, templateType: a } = e,
           i = (0, n.lS)(t),
           [s, l] = (0, r.useMemo)(() => {
             if (!i) return [0, []];
-            const e = B(i, a);
+            const e = M(i, a);
             let t = 0,
               n = 0;
             e.forEach((e) => {
@@ -55393,7 +55560,7 @@
                 r.createElement(
                   p.tH,
                   null,
-                  r.createElement(T, { Data: l, nPeak: s }),
+                  r.createElement(A, { Data: l, nPeak: s }),
                 ),
               ),
             )
@@ -55403,7 +55570,7 @@
               position: "center",
             });
       }
-      function B(e, t) {
+      function M(e, t) {
         const a = new Map();
         return (
           e.forEach((e) => {
@@ -55415,7 +55582,7 @@
           Array.from(a).map((e) => ({ display_index: e[0], seen_count: e[1] }))
         );
       }
-      const T = r.memo((e) => {
+      const A = r.memo((e) => {
         const { Data: t, nPeak: a } = e;
         return r.createElement(
           i.u,
@@ -55456,7 +55623,7 @@
               tick: { fill: "white" },
               axisLine: !1,
             }),
-            r.createElement(c.m, { content: r.createElement(M, null) }),
+            r.createElement(c.m, { content: r.createElement(k, null) }),
             r.createElement(m.y, {
               dataKey: "seen_count",
               barSize: 2,
@@ -55471,7 +55638,7 @@
           ),
         );
       });
-      function M({ active: e, payload: t }) {
+      function k({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return r.createElement(
@@ -62266,14 +62433,16 @@
                 : "weekenddeal"
             );
             var e;
-          });
+          }),
+          o = c.useId();
         return c.createElement(
           "div",
           { className: Dn().CuratedPromoFinderCtn },
-          c.createElement(I.JU, null, "Upcoming Featuring Finder"),
+          c.createElement(I.JU, { id: o }, "Upcoming Featuring Finder"),
           c.createElement(
             I.zW,
             {
+              labelId: o,
               value: s,
               onChange: (e) => {
                 l(e);
@@ -64739,7 +64908,8 @@
             setPartnerID: p,
           } = e,
           _ = (0, n.Dn)(t, a),
-          [g] = (0, d.G6)(t, a, {});
+          [g] = (0, d.G6)(t, a, {}),
+          h = r.useId();
         if (
           (r.useEffect(() => {
             0 == u && _?.length > 0 && p(_[0].partner_id);
@@ -64763,12 +64933,12 @@
             position: "center",
             string: (0, o.we)("#Loading"),
           });
-        const h = new Map();
+        const E = new Map();
         return (
           _.forEach((e) => {
-            h.has(e.partner_id) || h.set(e.partner_id, e);
+            E.has(e.partner_id) || E.set(e.partner_id, e);
           }),
-          0 == h.size
+          0 == E.size
             ? r.createElement(
                 "div",
                 null,
@@ -64777,7 +64947,7 @@
                 " type ",
                 a,
               )
-            : 1 == h.size
+            : 1 == E.size
               ? r.createElement(
                   "div",
                   { className: m.AssociatedPartnerCtn },
@@ -64806,13 +64976,13 @@
                   null,
                   r.createElement(
                     "div",
-                    null,
+                    { id: h },
                     "Choose Partner for Discount Event:",
                   ),
                   r.createElement(
                     i.zW,
-                    { value: u, onChange: (e) => p(e) },
-                    Array.from(h.values()).map((e) =>
+                    { labelId: h, value: u, onChange: (e) => p(e) },
+                    Array.from(E.values()).map((e) =>
                       r.createElement(
                         i.a,
                         {

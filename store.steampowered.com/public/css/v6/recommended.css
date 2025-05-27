@@ -2882,6 +2882,7 @@ body.recommendgame #review_create h1  {
 
 #review_show_graph_button {
 	display: none;
+	font-family: inherit;
 }
 #review_hide_graph_button {
 }
@@ -2930,10 +2931,14 @@ div.graph_toggle_icon.down {
 	float: left;
 	padding-right: 10px;
 }
-.user_reviews_filter_menu:hover {
+.user_reviews_filter_menu:hover,
+.user_reviews_filter_menu:has(button[aria-expanded=true]) {
 	background-color: #c6d4df;
 }
 .user_reviews_filter_menu .title {
+	background: unset;
+	text-align: inherit;
+	border: none;
 	text-transform: uppercase;
 	font-size: 10px;
 	color: #4582a5;
@@ -2946,6 +2951,7 @@ div.graph_toggle_icon.down {
 	background-position-x: right;
 }
 .user_reviews_filter_menu:hover .title,
+.title[aria-expanded=true],
 .user_reviews_filter_menu_flyout:hover .user_reviews_filter_menu .title {
 	background-image: url(/public/images/v6/btn_arrow_down_padded_black.png);
 }
@@ -2969,7 +2975,8 @@ div.graph_toggle_icon.down {
 	z-index: 10;
 }
 .user_reviews_filter_menu:hover .user_reviews_filter_menu_flyout,
-.user_reviews_filter_menu_flyout:hover {
+.user_reviews_filter_menu_flyout:hover,
+[aria-expanded=true] ~ .user_reviews_filter_menu_flyout {
 	display: block;
 	background-color: #c6d4df;
 }
@@ -3046,6 +3053,9 @@ div.graph_toggle_icon.down {
 }
 #app_reviews_playtime_slider .ui-slider-handle.ui-state-hover {
 	background: #fff;
+}
+#app_reviews_playtime_slider .ui-slider-handle.ui-state-focus {
+	border: 1px solid black;
 }
 
 #app_reviews_playtime_slider .ui-widget-header {

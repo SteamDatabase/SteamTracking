@@ -47,6 +47,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "_2Bi8Ve5Kz41SxQcNHEzuVX",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         EditorPanel: "ByGenr3ssO3oe0dFraX__",
         AboutTheGameArea: "EjZS0mIh8uiLmypHlmXKE",
         Awards: "_2Oe6MhA_wFOxkyvdWn7Wou",
@@ -333,6 +338,7 @@
         SectionSummaryCtn: "_1Dwr3-biecaiVOwPgQFmd2",
         Expanded: "_3PUeyWAi1aqMlqKycahmne",
         TabContents: "_23WNqXb_8WsGkX2fRjOoDw",
+        HeaderCtn: "DYYGp1K00m20-BkbVblaz",
         HeaderTitle: "_6erSL-Cistlp7anVYn0qe",
         DefaultTitlePicker: "_1RgupBe41JHovPu8hL1aLU",
         CrossTabWarning: "_2iLl5xFrLWESiz5a2z7snn",
@@ -603,7 +609,66 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
+        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
+        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
+        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
+        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
+        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
+        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
+        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
+        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        Blue: "J7iYYml2Jf_PcaACW1hEr",
+        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
+        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
+        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
+        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
+        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
+        RightCol: "_3kaQhRnhNh_awrnNX90rui",
+        NoSticky: "JQNb8bHftBTAYpCXTx52v",
+        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
+        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
+        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
+        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
+        Indent: "_7PV326-4cpZdmTCEdgC2l",
+        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
+        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
+        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
+        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
+        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
+        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
+        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
+        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
+        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
+        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
+        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
+        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
+        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
+        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
+        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
+        DeleteAll: "rYuknI3K1VFknv90GNUTc",
+        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
+        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
+        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
+        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
+        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
+        BigStat: "lYYwDDss378Sm0FKPBxPh",
+        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
+        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
     },
     chunkid: (module) => {
@@ -1343,6 +1408,8 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
+        SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
@@ -1374,9 +1441,9 @@
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
-        _: "_2XQ2s4PGGXTf-33SoML_Nn",
-        _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        _: "_2BZyC-dmzrlUCPfHClu51J",
+        _: "_2XQ2s4PGGXTf-33SoML_Nn",
         Left: "_3Bz6jMGpR_Vr3p7g3paBao",
         Right: "_3KumxdhZbtSA8tvxSUkIoq",
         Center: "woD-PhBCDg6E0eRDR9JaP",
@@ -1386,6 +1453,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Container: "_1OfOnnPi_1tjY-hFpLV1x7",
         TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
         TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
@@ -2482,14 +2550,14 @@
           return (
             this.m_curModel.visibility_state == _._.k_EEventStateStaged ||
             this.m_curModel.visibility_state == _._.k_EEventStateVisible ||
-            this.m_curModel.visibility_state == _._.k_EEventStatsUnlisted
+            this.m_curModel.visibility_state == _._.k_EEventStateUnlisted
           );
         }
         BVisible() {
           return this.m_curModel.visibility_state == _._.k_EEventStateVisible;
         }
         BUnlisted() {
-          return this.m_curModel.visibility_state == _._.k_EEventStatsUnlisted;
+          return this.m_curModel.visibility_state == _._.k_EEventStateUnlisted;
         }
         GetVisibilityState() {
           return this.m_curModel.visibility_state;
@@ -2848,7 +2916,7 @@
         UpdateVisibilityState(_, _, _) {
           this.m_curModel.visibility_state = _
             ? _
-              ? _._.k_EEventStatsUnlisted
+              ? _._.k_EEventStateUnlisted
               : _
                 ? _._.k_EEventStateStaged
                 : _._.k_EEventStateVisible
@@ -4189,6 +4257,41 @@
           null,
         ),
         (0, _._)([_._], _, "SetSaleSectionType", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+          editModel: null,
+        },
+        _ = _.createContext(_);
+      function _(_) {
+        const { children: _, editModel: __webpack_require__ } = _;
+        return _.createElement(
+          _.Provider,
+          {
+            value: {
+              ..._,
+              editModel: __webpack_require__,
+            },
+          },
+          _.createElement(
+            _._,
+            {
+              location: 1,
+            },
+            _,
+          ),
+        );
+      }
+      function _() {
+        return _.useContext(_).editModel;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19175,7 +19278,8 @@
                 Boolean,
               ).length,
           ),
-          [_, _] = (0, _.useState)(!0);
+          [_, _] = (0, _.useState)(!0),
+          _ = _.useId();
         return 31 !=
           (null === (_ = __webpack_require__.video_info.timedtext_url) ||
           void 0 === _
@@ -19192,12 +19296,15 @@
               },
               _.createElement(
                 _._,
-                null,
+                {
+                  _: _,
+                },
                 (0, _._)("#EventEditor_VideoTimedText_type"),
               ),
               _.createElement(
                 _._,
                 {
+                  labelId: _,
                   value: _,
                   onChange: (_) => _(_),
                 },
@@ -24197,7 +24304,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             content: _,
@@ -24250,7 +24358,8 @@
                 });
               })());
             return _.current;
-          })();
+          })(),
+          _ = (0, _._)();
         _.useEffect(() => {
           _(new _._(_, _, (_) => _(_)));
         }, [_, _, _]);
@@ -24295,49 +24404,61 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)({
-                [_().AboutTheGameArea]: !0,
-                [_().Container]: !0,
-                [_()._]: _ == _._.k_Header1,
-                [_()._]: _ == _._.k_Header2,
-                [_()._]: _ == _._.k_Header3,
-                [_().Left]: _ == _._.k_Left,
-                [_().Center]: _ == _._.k_Center,
-                [_().Right]: _ == _._.k_Right,
-              }),
-              ref: _,
               style: {
-                backgroundImage: _,
+                backgroundColor:
+                  _.GetEventModel().jsondata.sale_background_color,
+                backgroundRepeat:
+                  _.GetEventModel().jsondata.sale_background_repeat,
               },
             },
+            " ",
             _.createElement(
-              _._,
+              "div",
               {
-                panelProps: {
-                  lang: (0, _._)((0, _._)(__webpack_require__)),
-                  onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
-                },
                 className: (0, _._)({
-                  [_().EditorPanel]: !0,
-                  [_().SingleLineProseMirror]: Boolean(_),
+                  [_().AboutTheGameArea]: !0,
+                  [_().Container]: !0,
+                  [_()._]: _ == _._.k_Header1,
+                  [_()._]: _ == _._.k_Header2,
+                  [_()._]: _ == _._.k_Header3,
+                  [_().Left]: _ == _._.k_Left,
+                  [_().Center]: _ == _._.k_Center,
+                  [_().Right]: _ == _._.k_Right,
                 }),
-                pmState: _,
-                refOnUpdate: _,
-                refView: _,
-                bSingleLine: _,
+                ref: _,
+                style: {
+                  backgroundImage: _,
+                },
               },
-              "color" in _.pm_schema.marks &&
+              _.createElement(
+                _._,
+                {
+                  panelProps: {
+                    lang: (0, _._)((0, _._)(__webpack_require__)),
+                    onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
+                  },
+                  className: (0, _._)({
+                    [_().EditorPanel]: !0,
+                    [_().SingleLineProseMirror]: Boolean(_),
+                  }),
+                  pmState: _,
+                  refOnUpdate: _,
+                  refView: _,
+                  bSingleLine: _,
+                },
+                "color" in _.pm_schema.marks &&
+                  _.createElement(_, {
+                    colorMarkType: _.pm_schema.marks.color,
+                    schema: _.pm_schema,
+                  }),
+                Boolean(_) &&
+                  _.createElement(_._, {
+                    nMaxChars: _,
+                  }),
                 _.createElement(_, {
-                  colorMarkType: _.pm_schema.marks.color,
-                  schema: _.pm_schema,
+                  strPlaceholder: _,
                 }),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  nMaxChars: _,
-                }),
-              _.createElement(_, {
-                strPlaceholder: _,
-              }),
+              ),
             ),
           ),
         );
@@ -24383,200 +24504,6 @@
             _,
           ),
         );
-      }
-      function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          _ = (0, _.useCallback)(
-            () => __webpack_require__.SetDirty(_._.jsondata_sales),
-            [__webpack_require__],
-          ),
-          [_, _] = (0, _._)(() => {
-            var _, _, _;
-            return [
-              null !==
-                (_ =
-                  null === (_ = _.quiz) || void 0 === _
-                    ? void 0
-                    : _.questions) && void 0 !== _
-                ? _
-                : [],
-              (null === (_ = _.quiz) || void 0 === _
-                ? void 0
-                : _.template_faq_display) || _._.TemplateFAQDisplaySimpleRow,
-            ];
-          });
-        (0, _.useEffect)(() => {
-          _.quiz ||
-            (_.quiz = {
-              quiz_type: "question_answer",
-              questions: [],
-            });
-        }, [_]);
-        const _ = [
-          {
-            label: (0, _._)("#Template_Section_FAQ_Display_Column"),
-            data: _._.TemplateFAQDisplayColumn,
-            tooltip: (0, _._)("#Template_Section_FAQ_Display_Column_ttip"),
-          },
-          {
-            label: (0, _._)("#Template_Section_FAQ_Display_SimpleRow"),
-            data: _._.TemplateFAQDisplaySimpleRow,
-          },
-        ];
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("h1", null, (0, _._)("#Template_Section_FAQ")),
-          _.createElement("p", null, (0, _._)("#Template_Section_FAQ_desc")),
-          _.createElement(_._, {
-            label: (0, _._)("#Template_Section_FAQ_DisplayFormat"),
-            strDropDownClassName: (0, _._)(_().DropDownScroll),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => {
-              _.quiz.template_faq_display != _.data &&
-                ((_.quiz.template_faq_display = _.data), _());
-            },
-          }),
-          _.createElement(
-            _,
-            {
-              saleSection: _,
-              fnOnDirty: _,
-              language: _,
-              bHidePostSection: !0,
-            },
-            _.createElement(
-              "h2",
-              null,
-              (0, _._)("#Sale_Section_Quiz_QuestionTitle"),
-            ),
-            _.createElement(_._, {
-              items: _,
-              onDelete: (_) => _(_, _, _),
-              onReorder: _,
-              render: (_) =>
-                _.createElement(_, {
-                  key: "question_" + _.unique_id,
-                  saleSection: _,
-                  question: _,
-                  language: _,
-                  fnOnDirty: _,
-                }),
-            }),
-            _.createElement(
-              _._,
-              {
-                onClick: () => _(_, _),
-              },
-              (0, _._)("#Sale_Section_Quiz_AddQuestion"),
-            ),
-            _.createElement("br", null),
-          ),
-        );
-      }
-      const _ = "TemplateFAQEditorCollapse_";
-      function _(_) {
-        const {
-            saleSection: _,
-            question: __webpack_require__,
-            language: _,
-            fnOnDirty: _,
-          } = _,
-          _ = _.quiz.questions.findIndex((_) => _ == __webpack_require__) + 1,
-          [_, _] = (0, _._)(_ + __webpack_require__.unique_id, !1),
-          [_, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
-          ]),
-          _ = (0, _._)(_, _);
-        (0, _.useEffect)(() => {
-          var _;
-          (null === (_ = __webpack_require__.answers) || void 0 === _
-            ? void 0
-            : _.length) || _(_, __webpack_require__, () => {});
-        });
-        const [_, _] = (0, _._)(() => [
-          _(__webpack_require__, _),
-          _(__webpack_require__.answers[0], _),
-        ]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            _._,
-            {
-              title: (0, _._)("#SalePage_Question", _),
-              getMinimized: () => _,
-              toggleMinimized: () => _(!_),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              fnOnSetDirty: _,
-            }),
-            _.createElement(_, {
-              strPlaceholder: (0, _._)(
-                "#Sale_Section_Quiz_QuestionPlaceholder",
-              ),
-              language: _,
-              content: _,
-              strOverrideBackgroundColor: _,
-              fnUpdateContent: (_) => _(__webpack_require__, _, _, _),
-            }),
-            _.createElement(_, {
-              strPlaceholder: (0, _._)("#Sale_Section_Quiz_AnswerPlaceholder"),
-              language: _,
-              content: _,
-              strOverrideBackgroundColor: _,
-              fnUpdateContent: (_) =>
-                _(__webpack_require__.answers[0], _, _, _),
-            }),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return _.some(
-          (_) =>
-            _.media_columns.findIndex(
-              (_) => (null == _ ? void 0 : _.unique_id) == _,
-            ) >= 0,
-        );
-      }
-      function _(_, _ = _._.k_HorizontalMediaFirst) {
-        let _ = _._ + Math.floor(1e6 * Math.random());
-        const _ = _.media_container.media_rows;
-        for (; _(_, _); ) _ = _._ + Math.floor(1e6 * Math.random());
-        return {
-          unique_id: _,
-          media_type: _._.k_MediaImage,
-          display_order: _,
-          localized_media: (0, _._)([], 31, null),
-          localized_media_title: (0, _._)([], 31, null),
-          localized_media_subtitle: (0, _._)([], 31, null),
-          localized_media_description: (0, _._)([], 31, null),
-        };
-      }
-      function _(_, _, __webpack_require__ = 1) {
-        const _ = {
-          media_columns: [],
-        };
-        for (let _ = 0; _ < __webpack_require__; ++_) {
-          const _ = _(
-            _,
-            __webpack_require__ > 1
-              ? _._.k_MediaTitleDesc
-              : _._.k_HorizontalMediaFirst,
-          );
-          _.media_columns.push(_);
-        }
-        (_.media_container.media_rows = [..._.media_container.media_rows, _]),
-          _();
       }
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
@@ -24681,7 +24608,276 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            strUploadAjaxURL: _,
+            fnOnUploadSuccess: __webpack_require__,
+            bSynchronousUpload: _,
+            rgSupportArtwork: _,
+          } = _,
+          [_] = (0, _.useState)(
+            new _._(_, _, __webpack_require__, null != _ && _),
+          );
+        return (
+          (0, _.useEffect)(() => {
+            _.GetFnOnUploadSuccess() != __webpack_require__ &&
+              _.SetFnOnUploadSuccess(__webpack_require__),
+              _.GetUploadPath() != _ && _.SetUploadPath(_);
+          }, [_, __webpack_require__, _]),
+          _.createElement(_._, {
+            ..._,
+            imageUploader: _,
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_) {
+        var _;
+        const {
+            rgAssetLangs: __webpack_require__,
+            initialLang: _,
+            fnGetAssetUrl: _,
+            fnDeletAssetLang: _,
+            imageClassname: _,
+            fnDeleteAllAssets: _,
+            showDeleteAll: _ = !0,
+          } = _,
+          [_, _] = _.useState(
+            null !== (_ = null != _ ? _ : _._.Get().GetCurEditLanguage()) &&
+              void 0 !== _
+              ? _
+              : __webpack_require__[0],
+          ),
+          [_, _] = _.useState(_(_)),
+          _ = _.useMemo(
+            () => [...__webpack_require__].sort(),
+            [__webpack_require__],
+          );
+        _.useEffect(() => {
+          const _ = _(_);
+          _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
+        }, [_, _, _]);
+        return _.createElement(
+          "div",
+          {
+            className: _().UploadedImageDisplayCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().UploaderLeftCol,
+            },
+            _.createElement(_, {
+              curAssetURL: _,
+              imageClassname: _,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().UploaderRightCol,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().SectionCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().LangCountTitle,
+                },
+                (0, _._)("#ImageUpload_LocalizedAssets"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().LangSelectCtn,
+                },
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: _,
+                    language: _,
+                    selectedLanguage: _,
+                    setSelectedLanguage: _,
+                    deleteLanguage: _,
+                  }),
+                ),
+              ),
+              _ &&
+                Boolean(_.length) &&
+                _.createElement(
+                  "a",
+                  {
+                    href: "#",
+                    className: _().DeleteAll,
+                    onClick: (_) => {
+                      _ ? _() : _.forEach((_) => _(_)), _.preventDefault();
+                    },
+                  },
+                  (0, _._)("#Button_DeleteAll"),
+                ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            language: _,
+            selectedLanguage: __webpack_require__,
+            setSelectedLanguage: _,
+            deleteLanguage: _,
+          } = _,
+          _ = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().UploaderImgLang,
+            key: "image" + _,
+          },
+          _.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (_) => {
+                _.preventDefault(), _(_);
+              },
+            },
+            _ === __webpack_require__
+              ? _.createElement(
+                  "span",
+                  {
+                    className: _().LangSelected,
+                  },
+                  "" + _,
+                )
+              : _.createElement("span", null, "" + _),
+          ),
+          _.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (_) => {
+                _.preventDefault(), _(_);
+              },
+            },
+            _.createElement(_._, null),
+          ),
+        );
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
+        if (!_)
+          return _.createElement(
+            "div",
+            {
+              className: _().ArtNoArt,
+            },
+            (0, _._)("#ImageDisplay_NoAssetUploaded"),
+          );
+        const _ = (0, _._)(_);
+        return _._.includes(_)
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _._.includes(_)
+            ? _.createElement(_, {
+                className: __webpack_require__ || _().ArtPreview,
+                strTextURL: _,
+              })
+            : _.createElement("img", {
+                className: __webpack_require__ || _().ArtPreview,
+                src: _,
+              });
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
+          _ = _.useRef();
+        return (
+          _.useEffect(() => {
+            _.current && (_.current.load(), _.current.play());
+          }, [_]),
+          _.createElement(
+            "video",
+            {
+              ref: _,
+              className: __webpack_require__ || _().ArtPreview,
+              autoPlay: !0,
+              loop: !0,
+              controls: !0,
+              muted: !0,
+            },
+            _.createElement("source", {
+              src: _,
+            }),
+          )
+        );
+      }
+      function _(_) {
+        const { strTextURL: _, className: __webpack_require__ } = _,
+          [_, _] = _.useState("");
+        return (
+          _.useEffect(() => {
+            _()
+              .get(_)
+              .then((_) => {
+                _(_.data);
+              })
+              .catch((_) => {
+                console.error(_);
+              });
+          }, [_]),
+          _.createElement("textarea", {
+            className: __webpack_require__,
+            value: _,
+            readOnly: !0,
+            rows: 20,
+          })
+        );
+      }
+      const _ = ["template_asset"];
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _.useCallback)((_, _, _, _, _) => {
+            (0, _._)(
+              null != _ && _ >= 0 && _ < 31,
+              "Unexpected value for elang: " + _,
+            ),
+              (0, _._)("template_asset" === _, "Unexpected artwork type " + _),
+              console.log("adil", _, _, _, _, _);
+          }, []),
+          _ = `${_._.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${_.GetClanSteamID().ConvertTo64BitString()}`;
+        return _.createElement(
+          "div",
+          {
+            className: _().Ctn,
+          },
+          _.createElement(_, {
+            rgRealmList: _.GetIncludedRealmList(),
+            rgSupportArtwork: _,
+            strUploadAjaxURL: _,
+            fnOnUploadSuccess: _,
+            strOverrideDragAndDropText: (0, _._)(
+              "#Template_Section_MediaUpdate_DnD",
+            ),
+          }),
+          _.createElement(_, {
+            rgAssetLangs: [],
+            fnDeletAssetLang: () => {},
+            fnGetAssetUrl: (_) => null,
+          }),
+        );
+      }
       function _(_) {
         const {
             localizedMedia: _,
@@ -24755,6 +24951,7 @@
               _(_, __webpack_require__, _, "image", _.currentTarget.value),
             value: _,
           }),
+          _.createElement(_, null),
         );
       }
       function _(_) {
@@ -25063,7 +25260,279 @@
           }),
         );
       }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          _ = (0, _.useCallback)(
+            () => __webpack_require__.SetDirty(_._.jsondata_sales),
+            [__webpack_require__],
+          ),
+          [_, _, _, _] = (0, _._)(() => {
+            var _, _, _, _, _;
+            return [
+              null !==
+                (_ =
+                  null === (_ = _.quiz) || void 0 === _
+                    ? void 0
+                    : _.questions) && void 0 !== _
+                ? _
+                : [],
+              (null === (_ = _.quiz) || void 0 === _
+                ? void 0
+                : _.template_faq_display) || _._.TemplateFAQDisplaySimpleRow,
+              Boolean(
+                null === (_ = _.quiz) || void 0 === _
+                  ? void 0
+                  : _.display_border,
+              ),
+              null === (_ = _.quiz) || void 0 === _ ? void 0 : _.border_color,
+            ];
+          });
+        (0, _.useEffect)(() => {
+          _.quiz ||
+            (_.quiz = {
+              quiz_type: "question_answer",
+              questions: [],
+              titleSubDesc: {
+                localized_media_title: (0, _._)([], 31, null),
+                localized_media_subtitle: (0, _._)([], 31, null),
+              },
+            });
+        }, [_]);
+        const _ = [
+            {
+              label: (0, _._)("#Template_Section_FAQ_Display_Column"),
+              data: _._.TemplateFAQDisplayColumn,
+              tooltip: (0, _._)("#Template_Section_FAQ_Display_Column_ttip"),
+            },
+            {
+              label: (0, _._)("#Template_Section_FAQ_Display_SimpleRow"),
+              data: _._.TemplateFAQDisplaySimpleRow,
+            },
+          ],
+          _ = (0, _.useCallback)(
+            (_) => {
+              (0, _._)(
+                _.createElement(_._, {
+                  onChange: (_) => {
+                    _.quiz.border_color != _ &&
+                      ((_.quiz.border_color = _), _());
+                  },
+                  color: _,
+                }),
+                _,
+                {
+                  bDisablePopTop: !0,
+                },
+              );
+            },
+            [_, _, _.quiz],
+          );
+        return _.quiz
+          ? _.createElement(
+              "div",
+              null,
+              _.createElement("h1", null, (0, _._)("#Template_Section_FAQ")),
+              _.createElement(
+                "p",
+                null,
+                (0, _._)("#Template_Section_FAQ_desc"),
+              ),
+              _.createElement(_._, {
+                label: (0, _._)("#Template_Section_FAQ_DisplayFormat"),
+                strDropDownClassName: (0, _._)(_().DropDownScroll),
+                rgOptions: _,
+                selectedOption: _,
+                onChange: (_) => {
+                  _.quiz.template_faq_display != _.data &&
+                    ((_.quiz.template_faq_display = _.data), _());
+                },
+              }),
+              _.createElement(_._, {
+                label: (0, _._)("#Tempalte_Section_FAQ_Border"),
+                checked: _,
+                onChange: (_) => {
+                  _.quiz.display_border != _ &&
+                    ((_.quiz.display_border = _), _());
+                },
+              }),
+              Boolean(_) &&
+                _.createElement(
+                  _._,
+                  {
+                    onClick: _,
+                    className: _().EventEditorTextTitle,
+                    style: {
+                      background: _,
+                    },
+                  },
+                  (0, _._)("#Template_Section_FAQ_BorderColor"),
+                ),
+              _.createElement(_, {
+                uniqueID: "" + _.unique_id,
+                language: _,
+                fnOnDirty: _,
+                position: null,
+                totalColumns: null,
+                titleSubDesc: _.quiz.titleSubDesc,
+              }),
+              _.createElement(
+                "h2",
+                null,
+                (0, _._)("#Sale_Section_Quiz_QuestionTitle"),
+              ),
+              _.createElement(_._, {
+                items: _,
+                onReorder: _,
+                render: (_, _) =>
+                  _.createElement(_, {
+                    key: "question_" + _.unique_id,
+                    saleSection: _,
+                    question: _,
+                    language: _,
+                    fnOnDirty: _,
+                    index: _,
+                  }),
+              }),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(_, _),
+                },
+                (0, _._)("#Sale_Section_Quiz_AddQuestion"),
+              ),
+              _.createElement("br", null),
+            )
+          : _.createElement(_._, null);
+      }
+      const _ = "TemplateFAQEditorCollapse_";
+      function _(_) {
+        const {
+            saleSection: _,
+            question: __webpack_require__,
+            language: _,
+            fnOnDirty: _,
+            index: _,
+          } = _,
+          _ = _.quiz.questions.findIndex((_) => _ == __webpack_require__) + 1,
+          [_, _] = (0, _._)(_ + __webpack_require__.unique_id, !1),
+          [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = (0, _._)(_, _);
+        (0, _.useEffect)(() => {
+          var _;
+          (null === (_ = __webpack_require__.answers) || void 0 === _
+            ? void 0
+            : _.length) || _(_, __webpack_require__, () => {});
+        });
+        const [_, _] = (0, _._)(() => [
+          _(__webpack_require__, _),
+          _(__webpack_require__.answers[0], _),
+        ]);
+        return _.createElement(
+          "div",
+          {
+            className: _().QACtn,
+          },
+          _.createElement(
+            _._,
+            {
+              title: (0, _._)("#SalePage_Question", _),
+              getMinimized: () => _,
+              toggleMinimized: () => _(!_),
+              elAdditionalButtons: _.createElement(_, {
+                ..._,
+              }),
+            },
+            _.createElement(_, {
+              strPlaceholder: (0, _._)(
+                "#Sale_Section_Quiz_QuestionPlaceholder",
+              ),
+              language: _,
+              content: _,
+              strOverrideBackgroundColor: _,
+              fnUpdateContent: (_) => _(__webpack_require__, _, _, _),
+            }),
+            _.createElement(_, {
+              strPlaceholder: (0, _._)("#Sale_Section_Quiz_AnswerPlaceholder"),
+              language: _,
+              content: _,
+              strOverrideBackgroundColor: _,
+              fnUpdateContent: (_) =>
+                _(__webpack_require__.answers[0], _, _, _),
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, index: __webpack_require__, fnOnDirty: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            onClick: (_) => {
+              (0, _._)(
+                _.createElement(_._, {
+                  bDestructiveWarning: !0,
+                  strTitle: (0, _._)("#Dialog_AreYouSure"),
+                  strDescription: (0, _._)(
+                    "#MediaManager_DeleteDialog_Explainer",
+                  ),
+                  onOK: () => _(_, __webpack_require__, _),
+                }),
+                (0, _._)(_),
+              );
+            },
+          },
+          "X",
+        );
+      }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.some(
+          (_) =>
+            _.media_columns.findIndex(
+              (_) => (null == _ ? void 0 : _.unique_id) == _,
+            ) >= 0,
+        );
+      }
+      function _(_, _ = _._.k_HorizontalMediaFirst) {
+        let _ = _._ + Math.floor(1e6 * Math.random());
+        const _ = _.media_container.media_rows;
+        for (; _(_, _); ) _ = _._ + Math.floor(1e6 * Math.random());
+        return {
+          unique_id: _,
+          media_type: _._.k_MediaImage,
+          display_order: _,
+          localized_media: (0, _._)([], 31, null),
+          localized_media_title: (0, _._)([], 31, null),
+          localized_media_subtitle: (0, _._)([], 31, null),
+          localized_media_description: (0, _._)([], 31, null),
+        };
+      }
+      function _(_, _, __webpack_require__ = 1) {
+        const _ = {
+          media_columns: [],
+        };
+        for (let _ = 0; _ < __webpack_require__; ++_) {
+          const _ = _(
+            _,
+            __webpack_require__ > 1
+              ? _._.k_MediaTitleDesc
+              : _._.k_HorizontalMediaFirst,
+          );
+          _.media_columns.push(_);
+        }
+        (_.media_container.media_rows = [..._.media_container.media_rows, _]),
+          _();
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { strTitle: _, fnSetTitle: __webpack_require__ } = _,
@@ -29225,19 +29694,25 @@
                 _.createElement(
                   "div",
                   {
-                    className: _.HeaderTitle,
+                    className: _.HeaderCtn,
                   },
-                  _.createElement(_._, {
-                    saleSection: __webpack_require__,
-                    editLanguage: _,
-                    eventModel: _.GetEventModel(),
-                    index: _,
-                  }),
-                  _.createElement(_, {
-                    saleSection: __webpack_require__,
-                    editModel: _,
-                    visible: !_,
-                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.HeaderTitle,
+                    },
+                    _.createElement(_._, {
+                      saleSection: __webpack_require__,
+                      editLanguage: _,
+                      eventModel: _.GetEventModel(),
+                      index: _,
+                    }),
+                    _.createElement(_, {
+                      saleSection: __webpack_require__,
+                      editModel: _,
+                      visible: !_,
+                    }),
+                  ),
                   _ &&
                     _ &&
                     !__webpack_require__.hide_section &&
@@ -34462,7 +34937,7 @@
                 }),
             ),
           );
-        if (__webpack_require__ == _._.k_EEventStatsUnlisted)
+        if (__webpack_require__ == _._.k_EEventStateUnlisted)
           return _.createElement(
             "div",
             {
@@ -35791,6 +36266,252 @@
         }
       };
       _ = (0, _._)([_._], _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)([] || 0, 31, null);
+        for (const _ in _) {
+          const _ = (0, _._)(_);
+          -1 != _ && (_[_] = _[_]);
+        }
+        return _;
+      }
+      class _ {
+        constructor(_, _, _, _) {
+          (this.m_filesToUpload = _._.array()),
+            (this.m_strUploadPath = null),
+            (this.m_fnUploadSuccessCallback = null),
+            (this.m_bSynchronousUpload = !1),
+            (0, _._)(this),
+            (this.m_strUploadPath = _),
+            (this.m_rgImageOptions = (0, _._)(_)),
+            (this.m_fnUploadSuccessCallback = _),
+            (this.m_bSynchronousUpload = _);
+        }
+        GetFnOnUploadSuccess() {
+          return this.m_fnUploadSuccessCallback;
+        }
+        SetFnOnUploadSuccess(_) {
+          this.m_fnUploadSuccessCallback = _;
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(_) {
+          this.m_strUploadPath = _;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        isImageFile(_) {
+          return _.type.startsWith("image/");
+        }
+        isVideoFile(_) {
+          return _.type.startsWith("video/");
+        }
+        isSubtitleTextFile(_) {
+          return (
+            _.type.startsWith("text/") ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
+          );
+        }
+        async AddImageForLanguage(_, _, _) {
+          let _ = !1;
+          return (
+            await new Promise((_) => {
+              if (this.isImageFile(_)) {
+                const _ = new FileReader();
+                (_.onload = () => {
+                  const _ = new Image();
+                  (_.onload = () => {
+                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
+                      (_ = !0),
+                      _();
+                  }),
+                    (_.onerror = (_) => {
+                      console.error(
+                        "CCloudImageUploader failed to load the image, details",
+                        _,
+                      ),
+                        (_ = !1),
+                        _();
+                    }),
+                    (_.src = _.result.toString());
+                }),
+                  _.readAsDataURL(_);
+              } else if (this.isVideoFile(_)) {
+                const _ = document.createElement("video");
+                (_.preload = "metadata"),
+                  __webpack_require__.addEventListener("loadedmetadata", () => {
+                    const _ = new _._(_, _, this.m_rgImageOptions, _);
+                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
+                      (_ = !0),
+                      _();
+                  }),
+                  (_.onerror = (_) => {
+                    console.error(
+                      "CCloudImageUploader failed to load the video, details",
+                      _,
+                    ),
+                      (_ = !1),
+                      _();
+                  }),
+                  (_.src = URL.createObjectURL(_));
+              } else
+                this.isSubtitleTextFile(_)
+                  ? ((this.m_filesToUpload = [
+                      ...this.m_filesToUpload,
+                      new _._(_, _, this.m_rgImageOptions),
+                    ]),
+                    (_ = !0),
+                    _())
+                  : (console.error(
+                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                      _,
+                      _.type,
+                    ),
+                    (_ = !1));
+            }),
+            _
+          );
+        }
+        async UploadAllImages(_, _, _, _) {
+          const _ = {};
+          let _ = {};
+          for (const _ of this.m_filesToUpload)
+            if ("pending" === _.status) {
+              const _ = _.IsValidAssetType(_, _);
+              if (!_.error && !_.needsCrop) {
+                _.status = "uploading";
+                const _ = `${_.uploadTime}/${_.file.name}`;
+                (_[_] = this.UploadFile(
+                  _.file,
+                  _.file.name,
+                  _.language,
+                  _.match,
+                )),
+                  this.m_bSynchronousUpload && (_[_] = await _[_]);
+              }
+            }
+          return (
+            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
+            Object.keys(_).forEach((_) => {
+              const _ = _[_],
+                _ = this.m_filesToUpload.find(
+                  (_) => `${_.uploadTime}/${_.file.name}` === _,
+                );
+              if (_)
+                if (_ && 1 === _.success) {
+                  _.status = "success";
+                  const _ = (0, _._)(_.language, _, _);
+                  this.m_fnUploadSuccessCallback(
+                    _.image_hash,
+                    _.file_name,
+                    _,
+                    (function (_) {
+                      switch (_) {
+                        case 2:
+                          return "image/gif";
+                        case 1:
+                          return "image/jpeg";
+                        case 3:
+                          return "image/png";
+                        case 4:
+                          return "video/mp4";
+                        case 5:
+                          return "video/webm";
+                        case 6:
+                          return "text/vtt";
+                        case 7:
+                          return "text/srt";
+                        case 10:
+                          return "image/webp";
+                      }
+                      return null;
+                    })(_.file_type),
+                    _.GetCurrentImageOption().artworkType,
+                    _.width,
+                    _.height,
+                  );
+                } else (_.status = "failed"), (_.message = _.message);
+            }),
+            _
+          );
+        }
+        async UploadFile(_, _, _, _, _, _) {
+          let _ = null;
+          const _ = new FormData();
+          _.append("assetfile", _, _),
+            _.append("sessionid", _._.SESSIONID),
+            _.append("elangauge", "" + _),
+            _.append("originalname", _),
+            (null == _ ? void 0 : _.length) > 0 &&
+              _.append(
+                "resize",
+                _.map((_) => _.width + "x" + _.height).join(","),
+              ),
+            (null == _ ? void 0 : _.artworkType) &&
+              _.append("arttype", _.artworkType);
+          const _ = (0, _._)(_);
+          if (!_)
+            return {
+              success: 8,
+              message: "Invalid file extension, cannot determine mimetype",
+            };
+          _.append("mimetype", _);
+          try {
+            _ = await _().post(this.m_strUploadPath, _, {
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            });
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.log("CCloudImageUploader.UploadFile failed ", _, _),
+              (_ = _.response);
+          }
+          return null == _ ? void 0 : _.data;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
+        (0, _._)([_._], _.prototype, "UploadAllImages", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -50587,234 +51308,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor(_, _, _, _) {
-          (this.m_filesToUpload = _._.array()),
-            (this.m_strUploadPath = null),
-            (this.m_fnUploadSuccessCallback = null),
-            (this.m_bSynchronousUpload = !1),
-            (0, _._)(this),
-            (this.m_strUploadPath = _),
-            (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_fnUploadSuccessCallback = _),
-            (this.m_bSynchronousUpload = _);
-        }
-        GetFnOnUploadSuccess() {
-          return this.m_fnUploadSuccessCallback;
-        }
-        SetFnOnUploadSuccess(_) {
-          this.m_fnUploadSuccessCallback = _;
-        }
-        GetUploadPath() {
-          return this.m_strUploadPath;
-        }
-        SetUploadPath(_) {
-          this.m_strUploadPath = _;
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        isSubtitleTextFile(_) {
-          return (
-            _.type.startsWith("text/") ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
-          );
-        }
-        async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        _();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else if (this.isVideoFile(_)) {
-                const _ = document.createElement("video");
-                (_.preload = "metadata"),
-                  __webpack_require__.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CCloudImageUploader failed to load the video, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = URL.createObjectURL(_));
-              } else
-                this.isSubtitleTextFile(_)
-                  ? ((this.m_filesToUpload = [
-                      ...this.m_filesToUpload,
-                      new _._(_, _, this.m_rgImageOptions),
-                    ]),
-                    (_ = !0),
-                    _())
-                  : (console.error(
-                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                      _,
-                      _.type,
-                    ),
-                    (_ = !1));
-            }),
-            _
-          );
-        }
-        async UploadAllImages(_, _, _, _) {
-          const _ = {};
-          let _ = {};
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = `${_.uploadTime}/${_.file.name}`;
-                (_[_] = this.UploadFile(
-                  _.file,
-                  _.file.name,
-                  _.language,
-                  _.match,
-                )),
-                  this.m_bSynchronousUpload && (_[_] = await _[_]);
-              }
-            }
-          return (
-            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
-              if (_)
-                if (_ && 1 === _.success) {
-                  _.status = "success";
-                  const _ = (0, _._)(_.language, _, _);
-                  this.m_fnUploadSuccessCallback(
-                    _.image_hash,
-                    _.file_name,
-                    _,
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "image/gif";
-                        case 1:
-                          return "image/jpeg";
-                        case 3:
-                          return "image/png";
-                        case 4:
-                          return "video/mp4";
-                        case 5:
-                          return "video/webm";
-                        case 6:
-                          return "text/vtt";
-                        case 7:
-                          return "text/srt";
-                        case 10:
-                          return "image/webp";
-                      }
-                      return null;
-                    })(_.file_type),
-                    _.GetCurrentImageOption().artworkType,
-                    _.width,
-                    _.height,
-                  );
-                } else (_.status = "failed"), (_.message = _.message);
-            }),
-            _
-          );
-        }
-        async UploadFile(_, _, _, _, _, _) {
-          let _ = null;
-          const _ = new FormData();
-          _.append("assetfile", _, _),
-            _.append("sessionid", _._.SESSIONID),
-            _.append("elangauge", "" + _),
-            _.append("originalname", _),
-            (null == _ ? void 0 : _.length) > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              ),
-            (null == _ ? void 0 : _.artworkType) &&
-              _.append("arttype", _.artworkType);
-          const _ = (0, _._)(_);
-          if (!_)
-            return {
-              success: 8,
-              message: "Invalid file extension, cannot determine mimetype",
-            };
-          _.append("mimetype", _);
-          try {
-            _ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _),
-              (_ = _.response);
-          }
-          return null == _ ? void 0 : _.data;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -50840,16 +51333,7 @@
             _.position_setting,
             _.GetIncludedRealmList(),
           ]),
-          [_] = (0, _.useState)(() =>
-            (function (_) {
-              const _ = (0, _._)([] || 0, 31, null);
-              for (const _ in _) {
-                const _ = (0, _._)(_);
-                -1 != _ && (_[_] = _[_]);
-              }
-              return _;
-            })(_.localized_background_art),
-          );
+          [_] = (0, _.useState)(() => (0, _._)(_.localized_background_art));
         return _.createElement(
           _._,
           {
@@ -51709,6 +52193,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -51857,6 +52342,9 @@
                       bIsPreview: _,
                     },
                     _ && _.createElement(_._, null),
+                    _.createElement(_, {
+                      eventModel: _,
+                    }),
                     Boolean(_) &&
                       _.createElement(_, {
                         backgroundImageEditModel: _,
@@ -52256,6 +52744,63 @@
               ),
             __webpack_require__,
           )
+        );
+      }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = (0, _._)(_.clanSteamID.GetAccountID());
+        if (!_ || (!_.can_edit && !_.support_user)) return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            _.support_user &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_Mod")),
+          _.includes("contenthub") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : _.createElement(
+                "div",
+                {
+                  className: _().SalePageHiddenWarning,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  !_.BIsVisibleEvent() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden"),
+                    ),
+                  _.length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.map((_) =>
+                          _.createElement(
+                            "li",
+                            {
+                              key: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      ),
+                    ),
+                ),
+              )
         );
       }
     },
@@ -76477,97 +77022,97 @@
           _ = (0, _._)(),
           { fnSetClaimState: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(_.k_ClaimState_None);
-        return (
-          (0, _.useEffect)(() => {
-            _.bLoading ||
-              (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
-                ? _.bCanClaimNewItem
-                  ? _(_.k_ClaimState_Now)
-                  : _.rtNextClaimTime
-                    ? _(_.k_ClaimState_Next)
-                    : !_.bCanClaimNewItem &&
-                      _.bAlreadyClaimedCurrentItem &&
-                      _(_.k_ClaimState_NoMoreClaimsLeft)
-                : _(_.k_ClaimState_None));
-          }, [
-            _.bAlreadyClaimedCurrentItem,
-            _.bCanClaimNewItem,
-            _.bLoading,
-            _.rtNextClaimTime,
-          ]),
+        (0, _.useEffect)(() => {
+          _.bLoading ||
+            (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
+              ? _.bCanClaimNewItem
+                ? _(_.k_ClaimState_Now)
+                : _.rtNextClaimTime
+                  ? _(_.k_ClaimState_Next)
+                  : !_.bCanClaimNewItem &&
+                    _.bAlreadyClaimedCurrentItem &&
+                    _(_.k_ClaimState_NoMoreClaimsLeft)
+              : _(_.k_ClaimState_None));
+        }, [
+          _.bAlreadyClaimedCurrentItem,
+          _.bCanClaimNewItem,
+          _.bLoading,
+          _.rtNextClaimTime,
+        ]);
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            strTitle: "Test Claim Item",
+            closeModal: _,
+            onOK: () => {
+              switch (_) {
+                case _.k_ClaimState_None:
+                  _({
+                    bAlreadyClaimedCurrentItem: !1,
+                    bCanClaimNewItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Now:
+                  _({
+                    bCanClaimNewItem: !0,
+                    bAlreadyClaimedCurrentItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Next:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                    rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
+                  });
+                  break;
+                case _.k_ClaimState_NoMoreClaimsLeft:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                  });
+              }
+              _ && _();
+            },
+          },
           _.createElement(
             _._,
             {
-              strTitle: "Test Claim Item",
-              closeModal: _,
-              onOK: () => {
-                switch (_) {
-                  case _.k_ClaimState_None:
-                    _({
-                      bAlreadyClaimedCurrentItem: !1,
-                      bCanClaimNewItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Now:
-                    _({
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Next:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
-                    });
-                    break;
-                  case _.k_ClaimState_NoMoreClaimsLeft:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                    });
-                }
-                _ && _();
+              labelId: _,
+              value: _,
+              onChange: (_) => {
+                _(_);
               },
             },
             _.createElement(
               _._,
               {
-                value: _,
-                onChange: (_) => {
-                  _(_);
-                },
+                value: _.k_ClaimState_None,
               },
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_None,
-                },
-                "No Claimable item",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Now,
-                },
-                "Claim Now",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Next,
-                },
-                "Claimed, Next Available...",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_NoMoreClaimsLeft,
-                },
-                "Claimed, No more Claimable item",
-              ),
+              "No Claimable item",
             ),
-          )
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Now,
+              },
+              "Claim Now",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Next,
+              },
+              "Claimed, Next Available...",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_NoMoreClaimsLeft,
+              },
+              "Claimed, No more Claimable item",
+            ),
+          ),
         );
       }
       !(function (_) {
@@ -76922,6 +77467,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -76974,292 +77521,7 @@
           ),
         );
       }
-      function _(_) {
-        var _;
-        const { event: __webpack_require__, section: _, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            (null === (_ = _.localized_description) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.localized_description[_] || _.localized_description[_] || ""
-              : void 0,
-          _ = (0, _._)(() => _.quiz.questions),
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              (null === (_ = _.quiz) || void 0 === _
-                ? void 0
-                : _.template_faq_display) || _._.TemplateFAQDisplaySimpleRow,
-            ];
-          });
-        return _.createElement(
-          _._,
-          {
-            feature: "templatefaq",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)({
-                [_.SaleSection]: !0,
-                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
-                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
-              }),
-              style: (0, _._)(_, __webpack_require__, _),
-            },
-            _.createElement(_, {
-              section: _,
-              event: __webpack_require__,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: __webpack_require__,
-                  languageOverride: _,
-                }),
-              ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: _.unique_id,
-                iQuestionIndex: _,
-                question: _,
-                language: _,
-                bIsPreview: _,
-                event: __webpack_require__,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        var _, _, _, _;
-        const {
-            question: _,
-            language: _,
-            bIsPreview: _,
-            iQuestionIndex: _,
-            event: _,
-          } = _,
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            (null === (_ = _.localized_question) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.localized_question[_] || _.localized_question[_] || ""
-              : void 0,
-          _ =
-            (null ===
-              (_ =
-                null ===
-                  (_ =
-                    null === (_ = _.answers) || void 0 === _ ? void 0 : _[0]) ||
-                void 0 === _
-                  ? void 0
-                  : _.localized_answer) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.answers[0].localized_answer[_] ||
-                _.answers[0].localized_answer[_] ||
-                ""
-              : void 0,
-          [_, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
-          ]),
-          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().questionCtn, "questionCtn"),
-            style: {
-              background: _,
-            },
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("questions"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: _,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("answere"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: _,
-            }),
-          ),
-        );
-      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        var _, _, _;
-        const { event: _, section: _, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            (null === (_ = _.localized_description) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.localized_description[_] || _.localized_description[_] || ""
-              : void 0;
-        return _.createElement(
-          _._,
-          {
-            feature: "templatetechspec",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)(
-                _.SaleSection,
-                _().SaleSectionCtn,
-                "SaleQuizCSS",
-              ),
-              style: (0, _._)(_, _, _),
-            },
-            _.createElement(_, {
-              section: _,
-              event: _,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
-            null ===
-              (_ =
-                null === (_ = _.tech_specs) || void 0 === _
-                  ? void 0
-                  : _.tech_spec_block_list) || void 0 === _
-              ? void 0
-              : _.map((_) =>
-                  _.createElement(_, {
-                    key: "tsblock_" + _.unique_id,
-                    block: _,
-                    language: _,
-                    fallbackLanguage: _,
-                  }),
-                ),
-          ),
-        );
-      }
-      function _(_) {
-        var _;
-        const {
-            block: __webpack_require__,
-            language: _,
-            fallbackLanguage: _,
-          } = _,
-          _ =
-            (null === (_ = __webpack_require__.localized_block_title) ||
-            void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? __webpack_require__.localized_block_title[_] ||
-                __webpack_require__.localized_block_title[_] ||
-                ""
-              : void 0;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().BlockTitle,
-            },
-            _,
-          ),
-          __webpack_require__.spec_list.map((_) =>
-            _.createElement(_, {
-              key:
-                "tsitem_" + _.unique_id + "_" + __webpack_require__.unique_id,
-              item: _,
-              language: _,
-              fallbackLanguage: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        var _, _;
-        const { item: _, language: _, fallbackLanguage: _ } = _,
-          _ =
-            (null === (_ = _.localized_spec_name) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.localized_spec_name[_] || _.localized_spec_name[_] || ""
-              : void 0,
-          _ =
-            (null === (_ = _.localized_spec_description) || void 0 === _
-              ? void 0
-              : _.length) > 0
-              ? _.localized_spec_description[_] ||
-                _.localized_spec_description[_] ||
-                ""
-              : void 0,
-          _ = (null == _ ? void 0 : _.split("\n")) || [""];
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, _),
-          _.createElement(
-            "div",
-            null,
-            _.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: "specline_" + _.unique_id + "_" + _,
-                },
-                _,
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         var _, _;
@@ -77572,51 +77834,60 @@
         const {
           title: _,
           subtitle: __webpack_require__,
-          description: _,
-          event: _,
-          language: _,
           eTitleDisplaySize: _,
           titleAlign: _,
+          event: _,
+          language: _,
           subtitleAlign: _,
-          descAlign: _,
           titleMedia: _,
           titleMediaType: _,
           titleHAlign: _,
           titleVAlign: _,
+        } = _;
+        return _
+          ? _.createElement(_, {
+              media: _,
+              mediaType: _,
+              mediaHAlign: _,
+              mediaVAlign: _,
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                title: _,
+                eTitleDisplaySize: _,
+                eTextAlign: _,
+                language: _,
+              }),
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                subtitle: __webpack_require__,
+                eTextAlign: _,
+                language: _,
+              }),
+            );
+      }
+      function _(_) {
+        const {
+          description: _,
+          event: __webpack_require__,
+          language: _,
+          descAlign: _,
         } = _;
         return _.createElement(
           "div",
           {
             className: _().Text,
           },
-          Boolean(_)
-            ? _.createElement(_, {
-                media: _,
-                mediaType: _,
-                mediaHAlign: _,
-                mediaVAlign: _,
-              })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  title: _,
-                  eTitleDisplaySize: _,
-                  eTextAlign: _,
-                  language: _,
-                }),
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  subtitle: __webpack_require__,
-                  eTextAlign: _,
-                  language: _,
-                }),
-              ),
           _.createElement(_, {
-            event: _,
+            ..._,
+          }),
+          _.createElement(_, {
+            event: __webpack_require__,
             description: _,
             eTextAlign: _,
             language: _,
@@ -77771,6 +78042,371 @@
                 languageOverride: _,
               }),
             );
+      }
+      function _(_) {
+        var _;
+        const { event: __webpack_require__, section: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _._.GetELanguageFallback(_),
+          [_, _, _] = (0, _._)(() => {
+            var _, _, _;
+            return [
+              (null === (_ = _.localized_description) || void 0 === _
+                ? void 0
+                : _.length) > 0
+                ? _.localized_description[_] || _.localized_description[_] || ""
+                : void 0,
+              Boolean(
+                null === (_ = _.quiz) || void 0 === _
+                  ? void 0
+                  : _.display_border,
+              ),
+              null === (_ = _.quiz) || void 0 === _ ? void 0 : _.border_color,
+            ];
+          }),
+          _ = (0, _._)(() => _.quiz.questions),
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.quiz) || void 0 === _
+                ? void 0
+                : _.template_faq_display) || _._.TemplateFAQDisplaySimpleRow,
+            ];
+          });
+        return _.createElement(
+          _._,
+          {
+            feature: "templatefaq",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)({
+                [_.SaleSection]: !0,
+                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
+                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
+              }),
+              style: (0, _._)(_, __webpack_require__, _),
+            },
+            _.createElement(_, {
+              section: _,
+              event: __webpack_require__,
+              language: _,
+            }),
+            Boolean(
+              null === (_ = _.quiz) || void 0 === _ ? void 0 : _.titleSubDesc,
+            ) &&
+              _.createElement(_, {
+                titleSubDesc: _.quiz.titleSubDesc,
+                event: __webpack_require__,
+                language: _,
+              }),
+            _.map((_, _) =>
+              _.createElement(_, {
+                key: _.unique_id,
+                iQuestionIndex: _,
+                question: _,
+                language: _,
+                bIsPreview: _,
+                event: __webpack_require__,
+                bDisplayBorder: _,
+                strBorderColor: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { event: _, language: __webpack_require__, titleSubDesc: _ } = _,
+          _ = _._.GetELanguageFallback(__webpack_require__),
+          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+            var _, _, _, _, _, _;
+            return [
+              (null === (_ = _.localized_media_title) || void 0 === _
+                ? void 0
+                : _.length) > 0
+                ? _.localized_media_title[__webpack_require__] ||
+                  _.localized_media_title[_] ||
+                  ""
+                : void 0,
+              (null === (_ = _.localized_media_subtitle) || void 0 === _
+                ? void 0
+                : _.length) > 0
+                ? _.localized_media_subtitle[__webpack_require__] ||
+                  _.localized_media_subtitle[_] ||
+                  ""
+                : void 0,
+              _.eTitleDisplaySize,
+              _.title_alignment,
+              _.subtitle_alignment,
+              _.is_title_as_image &&
+              (null === (_ = _.title_media) || void 0 === _
+                ? void 0
+                : _.localized_media.length) > 0
+                ? _.title_media.localized_media[__webpack_require__] ||
+                  _.title_media.localized_media[_] ||
+                  {}
+                : void 0,
+              _.is_title_as_image &&
+              (null === (_ = _.title_media) || void 0 === _
+                ? void 0
+                : _.localized_media.length) > 0
+                ? _.title_media.media_type
+                : void 0,
+              _.is_title_as_image &&
+              (null === (_ = _.title_media) || void 0 === _
+                ? void 0
+                : _.localized_media.length) > 0
+                ? _.title_media.media_vertical_alignment
+                : void 0,
+              _.is_title_as_image &&
+              (null === (_ = _.title_media) || void 0 === _
+                ? void 0
+                : _.localized_media.length) > 0
+                ? _.title_media.media_horizontal_alignment
+                : void 0,
+            ];
+          });
+        return _.createElement(_, {
+          event: _,
+          language: __webpack_require__,
+          title: _,
+          subtitle: _,
+          eTitleDisplaySize: _,
+          titleAlign: _,
+          subtitleAlign: _,
+          titleMedia: _,
+          titleMediaType: _,
+          titleVAlign: _,
+          titleHAlign: _,
+        });
+      }
+      function _(_) {
+        var _, _, _, _;
+        const {
+            question: _,
+            language: _,
+            bIsPreview: _,
+            iQuestionIndex: _,
+            event: _,
+            bDisplayBorder: _,
+          } = _,
+          _ = _._.GetELanguageFallback(_),
+          _ =
+            (null === (_ = _.localized_question) || void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? _.localized_question[_] || _.localized_question[_] || ""
+              : void 0,
+          _ =
+            (null ===
+              (_ =
+                null ===
+                  (_ =
+                    null === (_ = _.answers) || void 0 === _ ? void 0 : _[0]) ||
+                void 0 === _
+                  ? void 0
+                  : _.localized_answer) || void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? _.answers[0].localized_answer[_] ||
+                _.answers[0].localized_answer[_] ||
+                ""
+              : void 0,
+          [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().QuestionCtn]: !0,
+              QuestionCtn: !0,
+              [_().DisplayBorder]: _,
+            }),
+            style: {
+              background: _,
+            },
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Question]: !0,
+                [_().Question]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: _,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Answer]: !0,
+                [_().Answer]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: _,
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        var _, _, _;
+        const { event: _, section: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _._.GetELanguageFallback(_),
+          _ =
+            (null === (_ = _.localized_description) || void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? _.localized_description[_] || _.localized_description[_] || ""
+              : void 0;
+        return _.createElement(
+          _._,
+          {
+            feature: "templatetechspec",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)(
+                _.SaleSection,
+                _().SaleSectionCtn,
+                "SaleQuizCSS",
+              ),
+              style: (0, _._)(_, _, _),
+            },
+            _.createElement(_, {
+              section: _,
+              event: _,
+              language: _,
+            }),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().description,
+                },
+                _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: _,
+                }),
+              ),
+            null ===
+              (_ =
+                null === (_ = _.tech_specs) || void 0 === _
+                  ? void 0
+                  : _.tech_spec_block_list) || void 0 === _
+              ? void 0
+              : _.map((_) =>
+                  _.createElement(_, {
+                    key: "tsblock_" + _.unique_id,
+                    block: _,
+                    language: _,
+                    fallbackLanguage: _,
+                  }),
+                ),
+          ),
+        );
+      }
+      function _(_) {
+        var _;
+        const {
+            block: __webpack_require__,
+            language: _,
+            fallbackLanguage: _,
+          } = _,
+          _ =
+            (null === (_ = __webpack_require__.localized_block_title) ||
+            void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? __webpack_require__.localized_block_title[_] ||
+                __webpack_require__.localized_block_title[_] ||
+                ""
+              : void 0;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().BlockTitle,
+            },
+            _,
+          ),
+          __webpack_require__.spec_list.map((_) =>
+            _.createElement(_, {
+              key:
+                "tsitem_" + _.unique_id + "_" + __webpack_require__.unique_id,
+              item: _,
+              language: _,
+              fallbackLanguage: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        var _, _;
+        const { item: _, language: _, fallbackLanguage: _ } = _,
+          _ =
+            (null === (_ = _.localized_spec_name) || void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? _.localized_spec_name[_] || _.localized_spec_name[_] || ""
+              : void 0,
+          _ =
+            (null === (_ = _.localized_spec_description) || void 0 === _
+              ? void 0
+              : _.length) > 0
+              ? _.localized_spec_description[_] ||
+                _.localized_spec_description[_] ||
+                ""
+              : void 0,
+          _ = (null == _ ? void 0 : _.split("\n")) || [""];
+        return _.createElement(
+          "div",
+          null,
+          _.createElement("div", null, _),
+          _.createElement(
+            "div",
+            null,
+            _.map((_, _) =>
+              _.createElement(
+                "div",
+                {
+                  key: "specline_" + _.unique_id + "_" + _,
+                },
+                _,
+              ),
+            ),
+          ),
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -80091,6 +80727,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -80120,6 +80757,7 @@
                   tooltip: __webpack_require__,
                 }),
             ),
+            _,
             _.createElement(_, {
               bIsMinimized: _,
               fnToggleMinimize: _,

@@ -17,6 +17,9 @@
         AuthorizedDeviceGroup: "_20iEFcT5JyJPhTjbaJ0ajE",
         DeviceGroup: "_2mir-ym1kKS06jV0W7mtUx",
         AuthorizedDevicesRecentHeader: "_35lIIoiD4gnKLmNL3H9zAo",
+        RememberedDevice: "_2gQ1ywJDhv3qFFjvjtt39w",
+        RevokedDevice: "_22EU1rJVczbjFuV39qprXh",
+        DeviceLogo: "_3u6D3tBNr6Pd8scEAu0WHh",
         DeviceContainer: "_173r5KvavKBUk01FwZftvC",
         ActiveDevice: "_2eItHkwsCAtMw7E-EF_YG_",
         ThisDevice: "_3o3paJd8GOTYKXh7Rd3Br8",
@@ -36,8 +39,8 @@
         ActiveNowDot: "_2sNYH7uxn-CGdZCk4lGMAg",
         DeviceLogoBoundingBox: "_25S2w41EbEIy3v97Dc0nl8",
         DeviceSteamGuardLogo: "_3BA92JhNM9ztpJY4hnWagy",
-        DeviceLogo: "_3u6D3tBNr6Pd8scEAu0WHh",
         RemoveDevicesRow: "_3EYcq6Ow2WM7bGuzWyQRMN",
+        RemoveDevicesButton: "_37dMp7l0gWnMweQxR4Qj7Z",
       };
     },
     chunkid: (module) => {
@@ -1821,8 +1824,8 @@
         );
       }
       class _ {
-        m_rgDevices = [];
-        m_rgRecentDevices = [];
+        m_rgActiveDevices = [];
+        m_rgRevokedDevices = [];
         m_strAccountName;
         m_strPhoneHint;
         m_strEmail;
@@ -1841,9 +1844,12 @@
           );
         }
         Init() {
-          (this.m_rgDevices = (0, _._)("devices", "application_config")),
-            (this.m_rgRecentDevices = (0, _._)(
-              "recent_devices",
+          (this.m_rgActiveDevices = (0, _._)(
+            "active_devices",
+            "application_config",
+          )),
+            (this.m_rgRevokedDevices = (0, _._)(
+              "revoked_devices",
               "application_config",
             )),
             (this.m_strAccountName = (0, _._)(
@@ -1864,11 +1870,11 @@
               "application_config",
             ));
         }
-        GetDevices() {
-          return this.m_rgDevices;
+        GetActiveDevices() {
+          return this.m_rgActiveDevices;
         }
-        GetRecentDevices() {
-          return this.m_rgRecentDevices;
+        GetRevokedDevices() {
+          return this.m_rgRevokedDevices;
         }
         GetAccountName() {
           return this.m_strAccountName;
@@ -1886,8 +1892,8 @@
           return this.m_strLatestAndroidAppVersion;
         }
       }
-      (0, _._)([_._], _.prototype, "m_rgDevices", void 0),
-        (0, _._)([_._], _.prototype, "m_rgRecentDevices", void 0);
+      (0, _._)([_._], _.prototype, "m_rgActiveDevices", void 0),
+        (0, _._)([_._], _.prototype, "m_rgRevokedDevices", void 0);
       var _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
@@ -1916,9 +1922,14 @@
           _ = _.GetTwoFactorStatus();
         let _ = [],
           _ = [];
-        for (const _ of _.GetRecentDevices()) {
+        for (const _ of _.GetActiveDevices()) {
           const _ = _.logged_in && _.last_seen?.time > _ - 900,
+            _ =
+              5 == _.effective_token_state
+                ? _.RememberedDevice
+                : _.CurrentlyAuthorizedDevice,
             _ = _.createElement(_, {
+              className: _,
               device: _,
               key: _.token_id,
               bActiveNow: _,
@@ -1928,16 +1939,15 @@
             });
           _ ? _.push(_) : _.push(_);
         }
-        let _ = [];
-        for (const _ of _.GetDevices())
-          _.push(
-            _.createElement(_, {
-              device: _,
-              key: _.token_id,
-              strActiveCountry: _,
-              msgTwoFactorStatus: _,
-            }),
-          );
+        const _ = _.GetRevokedDevices().map((_) =>
+          _.createElement(_, {
+            className: _.RevokedDevice,
+            device: _,
+            key: _.token_id,
+            strActiveCountry: _,
+            msgTwoFactorStatus: _,
+          }),
+        );
         return _.createElement(
           _.Fragment,
           null,
@@ -1975,12 +1985,8 @@
               {
                 className: _.AuthorizedDeviceGroup,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.DeviceGroup,
-                },
-                _.createElement(
+              _.createElement(_, {
+                elHeader: _.createElement(
                   "div",
                   {
                     className: _.ActiveNow,
@@ -1990,42 +1996,14 @@
                   }),
                   (0, _._)("#accountpreferences_authorized_device_active_now"),
                 ),
-                _,
-              ),
-              Boolean(_.length) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DeviceGroup,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AuthorizedDevicesRecentHeader,
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_recent_heading",
-                    ),
-                  ),
-                  _,
+                rgDevices: _,
+              }),
+              _.createElement(_, {
+                elHeader: (0, _._)(
+                  "#accountpreferences_authorized_devices_recentseen_heading",
                 ),
-              Boolean(_.length) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DeviceGroup,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AuthorizedDevicesRecentHeader,
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_other_heading",
-                    ),
-                  ),
-                  _,
-                ),
+                rgDevices: _,
+              }),
               _.createElement(
                 "div",
                 {
@@ -2034,27 +2012,12 @@
                 _.createElement(
                   "div",
                   {
-                    className: _.AuthorizedDevicesRecentHeader,
-                  },
-                  (0, _._)(
-                    "#accountpreferences_authorized_devices_remove_header",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
                     className: _.RemoveDevicesRow,
                   },
                   _.createElement(
-                    "div",
-                    null,
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_remove_desc",
-                    ),
-                  ),
-                  _.createElement(
                     _._,
                     {
+                      className: _.RemoveDevicesButton,
                       onClick: (_) => {
                         (0, _._)(_.createElement(_, null), (0, _._)(_));
                       },
@@ -2067,14 +2030,66 @@
               ),
             ),
           ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.AuthorizedDeviceHeader,
+                "account_header_line noicon",
+              ),
+            },
+            _.createElement(
+              "div",
+              null,
+              (0, _._)("#accountpreferences_revoked_devices_revoked_header"),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: "account_settings_container",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.SectionDescription,
+              },
+              (0, _._)(
+                "#accountpreferences_revoked_devices_revoked_description",
+                _.createElement("p", null),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.AuthorizedDeviceGroup,
+              },
+              _.createElement(_, {
+                rgDevices: _,
+              }),
+            ),
+          ),
         );
       });
       function _(_) {
+        const { rgDevices: _, elHeader: __webpack_require__ } = _;
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              "div",
+              {
+                className: _.DeviceGroup,
+              },
+              __webpack_require__ && __webpack_require__,
+              _,
+            );
+      }
+      function _(_) {
         const _ = Date.now() / 1e3;
         return _(
-          _.GetRecentDevices().find(
+          _.GetActiveDevices().find(
             (_) => _.logged_in && _.last_seen?.time > _ - 900,
-          ) ?? _.GetRecentDevices()[0],
+          ) ?? _.GetActiveDevices()[0],
         ).country;
       }
       function _() {
@@ -2351,7 +2366,8 @@
         const { device: _ } = _,
           _ =
             _.first_seen?.time &&
-            _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3;
+            _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3,
+          _ = 5 == _.effective_token_state;
         return _.createElement(
           "div",
           {
@@ -2371,6 +2387,17 @@
                 ),
               ),
               (0, _._)(_.last_seen.time),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.LastActive,
+                  },
+                  " - ",
+                  (0, _._)(
+                    "#accountpreferences_authorized_devices_state_signedout",
+                  ),
+                ),
             ),
           _ &&
             _.createElement(
@@ -2398,8 +2425,12 @@
             className: _.AuthorizedDeviceDetails,
           },
           (0, _._)(
-            (function (_, _) {
+            (function (_) {
+              const _ = _.authentication_type,
+                _ = _.auth_type;
               if (2 == _) return "#authorized_devices_default_qr";
+              if (5 == _.effective_token_state)
+                return "#authorized_devices_remembered_machine";
               switch (_) {
                 case 2:
                   return "#authorized_devices_emailcode_password";
@@ -2413,33 +2444,46 @@
                 default:
                   return "#authorized_devices_default_password";
               }
-            })(_.authentication_type, _.auth_type),
+            })(_),
             (0, _._)(_.first_seen.time) + " @ " + (0, _._)(_.first_seen.time),
           ),
         );
       }
       function _(_) {
-        const { device: _, bHasAuthenticator: __webpack_require__ } = _;
+        const { device: _, bHasAuthenticator: __webpack_require__ } = _,
+          _ = 5 == _.effective_token_state;
         let _ = null;
         if (2 == _.platform_type)
-          _ = _.createElement(_.FH7, {
-            className: _.DeviceLogo,
-          });
+          _ = _
+            ? _.createElement(_.SQF, {
+                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+              })
+            : _.createElement(_.FH7, {
+                className: _.DeviceLogo,
+              });
         else if (
           1 == _.platform_type &&
           _.gaming_device_type === _._.k_EGamingDeviceType_SteamDeck
         )
-          _ = _.createElement(_.oEi, {
-            className: _.DeviceLogo,
-          });
+          _ = _
+            ? _.createElement(_.VRo, {
+                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+              })
+            : _.createElement(_.oEi, {
+                className: _.DeviceLogo,
+              });
         else
           switch (_.os_platform) {
             case _._.k_EPlatformTypeWin32:
             case _._.k_EPlatformTypeWin64:
             case _._.k_EPlatformTypeOSX:
-              _ = _.createElement(_._, {
-                className: _.DeviceLogo,
-              });
+              _ = _
+                ? _.createElement(_.ulH, {
+                    className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+                  })
+                : _.createElement(_.nl8, {
+                    className: _.DeviceLogo,
+                  });
               break;
             case _._.k_EPlatformTypeAndroid32:
             case _._.k_EPlatformTypeAndroid64:
@@ -2644,7 +2688,10 @@
           _ = _.Get(),
           _ = _(_),
           _ = _(),
-          _ = [...(_.GetDevices() ?? []), ...(_.GetRecentDevices() ?? [])];
+          _ = [
+            ...(_.GetActiveDevices() ?? []),
+            ...(_.GetActiveDevices() ?? []),
+          ];
         let _ = null,
           _ = !1;
         return (

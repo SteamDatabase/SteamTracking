@@ -1153,7 +1153,8 @@
           );
         }
         const _ = "ded" == _ ? "Gameserver" : "Peer",
-          _ = !1;
+          _ = !1,
+          _ = _.useId();
         return _.createElement(
           _._,
           null,
@@ -1197,6 +1198,7 @@
                 _.createElement(
                   "div",
                   {
+                    _: _,
                     className: "DialogLabel",
                   },
                   "Connection kind",
@@ -1204,6 +1206,7 @@
                 _.createElement(
                   _._,
                   {
+                    labelId: _,
                     value: _,
                     onChange: (_) => _(_),
                   },

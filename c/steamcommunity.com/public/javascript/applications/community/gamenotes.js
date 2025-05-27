@@ -7,6 +7,8 @@
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
         TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",

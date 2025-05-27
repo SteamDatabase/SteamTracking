@@ -611,6 +611,7 @@
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
+        QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
         SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
         AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
@@ -3616,7 +3617,7 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug;
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
           [_, _] = _.useState({
             bFocusWithin: !1,
             navTarget: null,
@@ -3655,11 +3656,12 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, {
-            ...__webpack_require__,
-            ..._,
-            refMeasure: _,
-          }),
+          !__webpack_require__ &&
+            _.createElement(_, {
+              ..._,
+              ..._,
+              refMeasure: _,
+            }),
           _.createElement(
             _._.Provider,
             {
@@ -7460,11 +7462,6 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  trace_tag: {
-                    _: 21,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   webapi_key_id: {
                     _: 25,
                     _: _._.readUint32,
@@ -7558,6 +7555,11 @@
                     _: 44,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  trace_tag: {
+                    _: 45,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),
@@ -22118,7 +22120,8 @@
             )
           : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
           const { showArrows: _, arrowFill: _ } = this.props,
@@ -22305,6 +22308,8 @@
                     className: _.innerSlide,
                     key: "slide_" + _,
                     index: _,
+                    role: "listitem",
+                    "aria-label": void 0,
                   },
                   _,
                 );
@@ -22409,9 +22414,11 @@
                   _.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
+                "aria-label": (0, _._)("#Carousel_Prev"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
           _.createElement(
@@ -22420,6 +22427,7 @@
               className: _._.GetScrollableClassname(),
               classNameTray: _.slideTrayCustomize,
               classNameAnimation: _.DisableSliderMotion,
+              role: "list",
             },
             _.createElement(_._, null, _),
           ),
@@ -22433,9 +22441,11 @@
                   _.carouselNavButton,
                   "CarouselBtnRight",
                 ),
+                "aria-label": (0, _._)("#Carousel_Next"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
         );
@@ -23494,15 +23504,23 @@
           });
         });
       }
-      let _ = (0, _._)("DialogHeader"),
-        _ = (0, _._)("DialogSubHeader"),
-        _ = ((0, _._)("SettingsDialogSubHeader"), (0, _._)("DialogFooter")),
+      let _ = (0, _._)("DialogHeader", "heading"),
+        _ = (0, _._)("DialogSubHeader", "heading", {
+          "aria-level": 3,
+        }),
+        _ =
+          ((0, _._)("SettingsDialogSubHeader", "heading", {
+            "aria-level": 3,
+          }),
+          (0, _._)("DialogFooter")),
         _ = (0, _._)("DialogLabel _DialogLayout"),
         _ = (0, _._)("DialogBodyText"),
         _ = (0, _._)("DialogBody"),
         _ = _("DialogBody"),
         _ = ((0, _._)("DialogInnerBody"), (0, _._)("DialogControlsSection")),
-        _ = (0, _._)("DialogControlsSectionHeader"),
+        _ = (0, _._)("DialogControlsSectionHeader", "heading", {
+          "aria-level": 3,
+        }),
         _ = _("DialogTwoColLayout _DialogColLayout"),
         _ = _("DialogThreeColLayout _DialogColLayout"),
         _ =
@@ -23851,6 +23869,8 @@
               ? _.createElement(
                   _._,
                   {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
                     className:
                       "DialogCheckbox_Container _DialogLayout " +
                       (this.props.className ? this.props.className : "") +
@@ -24085,21 +24105,23 @@
         _: () => _,
         _: () => _._,
         _: () => _._,
-        _: () => _._,
-        _: () => _,
         _: () => _,
         _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
         _: () => _,
-        _: () => _,
-        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24803,7 +24825,11 @@
             onChange: __webpack_require__,
             classNames: _,
             disabled: _,
+            labelId: _,
+            descriptionId: _,
+            role: _ = "radiogroup",
             children: _,
+            ..._
           } = _,
           _ = {
             value: _,
@@ -24818,6 +24844,10 @@
           _.createElement(
             _._,
             {
+              role: _,
+              "aria-labelledby": _,
+              "aria-describedby": _,
+              ..._,
               className: (0, _._)(
                 _().Group,
                 "Shared_Radio_Group",
@@ -24831,13 +24861,21 @@
         );
       }
       function _(_) {
-        const { value: _, children: __webpack_require__, ..._ } = _,
+        const {
+            value: _,
+            children: __webpack_require__,
+            role: _ = "radio",
+            ..._
+          } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
         const _ = _ === _;
         return _.createElement(
           _._,
           {
+            role: _,
+            "aria-checked": _,
+            "aria-selected": _,
             className: (0, _._)(
               _().Button,
               "RadioButton",
@@ -25124,6 +25162,9 @@
               "aria-controls": this.m_iMenuInstance
                 ? `dropdownmenu_${this.m_iMenuInstance.key}`
                 : void 0,
+              "aria-expanded": this.state.bOpened,
+              "aria-labelledby": this.props["aria-labelledby"],
+              "aria-describedby": this.props["aria-describedby"],
             },
             _,
           );
@@ -26425,9 +26466,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ ? _ + "_Label" : void 0;
+      }
+      function _(_) {
+        return _ ? _ + "_Description" : void 0;
+      }
+      function _(_, _) {
+        const { label: __webpack_require__, description: _ } = _;
+        return {
+          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-describedby": _ ? _(_) : void 0,
+        };
+      }
       const _ = _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            accessibilityId: __webpack_require__,
+            label: _,
             description: _,
             icon: _,
             children: _,
@@ -26457,8 +26512,7 @@
           _ = "below" == _ && !!_,
           _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
           _ = !!(_.onClick || _.onActivate || _.focusable),
-          _ =
-            (null != _ && _) || null != __webpack_require__ || (_ && null != _),
+          _ = (null != _ && _) || null != _ || (_ && null != _),
           _ = _ ?? "min",
           _ = _ ?? "standard",
           _ = _ ?? "standard",
@@ -26477,7 +26531,7 @@
               onOptionsButton: _,
               onOptionsActionDescription: _,
             };
-          })(_ ?? __webpack_require__, _),
+          })(_ ?? _, _),
           _ = _.useRef(),
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
@@ -26532,6 +26586,7 @@
                 "div",
                 {
                   className: _().FieldLabel,
+                  _: _(__webpack_require__),
                 },
                 _ &&
                   _.createElement(
@@ -26541,7 +26596,7 @@
                     },
                     _,
                   ),
-                __webpack_require__,
+                _,
                 _ &&
                   _.createElement(_._, {
                     tooltip: _,
@@ -26597,6 +26652,7 @@
               "div",
               {
                 className: _().FieldDescription,
+                _: _(__webpack_require__),
               },
               _,
             ),
@@ -26618,12 +26674,30 @@
             inlineWrap: _,
             fieldClassName: _,
             fieldChildren: _,
+            accessibilityNameOrder: _ = ["label", "button"],
             ..._
           } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_);
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId(),
+          _ = (function (_, _, _) {
+            const _ = _.useId(),
+              _ = _(_, _),
+              _ = {
+                _: _,
+                "aria-labelledby": "",
+              };
+            return (
+              (_["aria-labelledby"] = __webpack_require__
+                .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
+                .join(" ")),
+              (_["aria-describedby"] = _["aria-describedby"]),
+              _
+            );
+          })(_, _, _);
         return _.createElement(
           _,
           {
+            accessibilityId: _,
             label: __webpack_require__,
             description: _,
             icon: _,
@@ -26643,6 +26717,7 @@
           },
           _.createElement(_._, {
             ..._,
+            ..._,
             disabled: _,
             ref: _,
           }),
@@ -26659,10 +26734,12 @@
             highlightOnFocus: _,
             ..._
           } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_);
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId();
         return _.createElement(
           _,
           {
+            accessibilityId: _,
             label: __webpack_require__,
             description: _,
             icon: _,
@@ -26988,14 +27065,22 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
+        const {
+            className: __webpack_require__,
+            opened: _,
+            arrowClassName: _,
+            "aria-labelledby": _ = "",
+            ..._
+          } = _,
+          _ = _.useId(),
+          _ = _ + " " + _;
         return _.createElement(
           _._,
           {
-            className: (0, _._)(_().DropDownControlButton, _.className),
-            focusable: _.focusable,
-            disabled: _.disabled,
-            onClick: _.onClick,
-            tabIndex: _.tabIndex,
+            _: _,
+            className: (0, _._)(_().DropDownControlButton, __webpack_require__),
+            "aria-labelledby": _,
+            ..._,
             ref: _,
           },
           _.createElement(
@@ -27954,175 +28039,204 @@
           }
         }
         render() {
-          const _ = this.props.showBookendLabels ?? !1,
-            _ = this.props.notchTicksVisible ?? !_,
-            _ = _ ? 2 : this.props.notchCount,
-            _ = [
-              {
-                notchIndex: 0,
-                label: `${this.props.min}`,
-              },
-              {
-                notchIndex: 1,
-                label: `${this.props.max}`,
-              },
-            ],
-            _ = _ ? _ : this.props.notchLabels,
-            _ = this.props.focusable ?? !0,
+          const {
+              min: _,
+              max: _,
+              value: __webpack_require__,
+              clampMax: _,
+              clampMin: _,
+              className: _,
+              disabled: _,
+              dpadStep: _,
+              extraNotchPadding: _,
+              focusable: _,
+              handleType: _,
+              innerRef: _,
+              isKeyNavTarget: _,
+              navRef: _,
+              notchCount: _,
+              notchLabels: _,
+              notchTicksVisible: _,
+              onChange: _,
+              onChangeComplete: _,
+              onChangeStart: _,
+              renderNotch: _,
+              renderValue: _,
+              resetValue: _,
+              resetValueAppearance: _ = "top-caret",
+              showBookendLabels: _,
+              showHandle: _,
+              step: _,
+              strValueSuffix: _,
+              trackStyleOverride: _,
+              trackTone: _,
+              ..._
+            } = this.props,
+            _ = _ ?? !1,
+            _ = _ ?? !_,
+            _ = _ ? 2 : _,
+            _ = _
+              ? [
+                  {
+                    notchIndex: 0,
+                    label: `${_}`,
+                  },
+                  {
+                    notchIndex: 1,
+                    label: `${_}`,
+                  },
+                ]
+              : _,
+            _ = _ ?? !0,
             _ = this.normalizedDefaultValue,
             _ = this.normalizedSliderOrigin,
             _ = null != _,
-            _ = this.props.resetValueAppearance ?? "top-caret",
             _ = "top-caret" == _,
             _ = !_,
+            _ = _ || _,
             _ = {};
           this.CanResetToDefault &&
             (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
           let _ = `${_().SliderHandle} SliderHandle`,
             _ = `${_().SliderHandleContainer} SliderHandleContainer `;
-          return (
-            "verticalline" == this.props.handleType
-              ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
-                (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
-              : ("leftparen" != this.props.handleType &&
-                  "rightparen" != this.props.handleType) ||
-                ((_ = (0, _._)(
-                  _().ParenSliderHandle,
-                  "leftparen" == this.props.handleType ? _().Left : _().Right,
-                  "SliderHandle",
-                )),
-                (_ = (0, _._)(
-                  _().ParenSliderHandleContainer,
-                  "leftparen" == this.props.handleType ? _().Left : _().Right,
-                  "SliderHandleContainer",
-                ))),
+          "verticalline" == _
+            ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
+              (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+            : ("leftparen" != _ && "rightparen" != _) ||
+              ((_ = (0, _._)(
+                _().ParenSliderHandle,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandle",
+              )),
+              (_ = (0, _._)(
+                _().ParenSliderHandleContainer,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandleContainer",
+              )));
+          const _ = _(__webpack_require__);
+          return _.createElement(
+            _,
+            {
+              noFocusRing: !0,
+              className: (0, _._)(
+                _().SliderControlPanelGroup,
+                "SliderControlPanelGroup",
+                _,
+              ),
+              navRef: _,
+              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
+              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
+              onOKActionDescription: _
+                ? null
+                : (0, _._)("#Slider_AdjustSlider"),
+              focusable: _,
+              childFocusDisabled: _ || !_,
+              onContextMenu: this.OnContextMenu,
+              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
+              onSecondaryButton: this.CanResetToDefault
+                ? this.ResetToDefault
+                : void 0,
+              onSecondaryActionDescription: this.CanResetToDefault
+                ? (0, _._)("#ResetToDefault")
+                : void 0,
+              actionDescriptionMap: _,
+            },
             _.createElement(
-              _,
+              _._,
               {
-                noFocusRing: !0,
+                role: "slider",
+                "aria-valuenow": __webpack_require__,
+                "aria-valuetext": _,
+                ..._,
                 className: (0, _._)(
-                  _().SliderControlPanelGroup,
-                  "SliderControlPanelGroup",
-                  this.props.className,
+                  _().SliderControlAndNotches,
+                  _ && _().Disabled,
+                  _ && _().WithDefaultValue,
+                  _ && _ && _().DefaultValueIsColorRange,
+                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
+                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
                 ),
-                navRef: this.props.navRef,
-                onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
-                onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
-                onOKActionDescription: this.props.disabled
-                  ? null
-                  : (0, _._)("#Slider_AdjustSlider"),
-                focusable: _,
-                childFocusDisabled: this.props.disabled || !_,
-                onContextMenu: this.OnContextMenu,
-                onOKButton: this.props.disabled
-                  ? () => _._.PlayNavSound(_._.FailedNav)
-                  : void 0,
-                onSecondaryButton: this.CanResetToDefault
-                  ? this.ResetToDefault
-                  : void 0,
-                onSecondaryActionDescription: this.CanResetToDefault
-                  ? (0, _._)("#ResetToDefault")
-                  : void 0,
-                actionDescriptionMap: _,
+                focusable: this.isKeyNavTarget,
+                noFocusRing: !0,
+                onFocus: this.OnInnerSliderFocus,
+                onBlur: this.OnInnerSliderBlur,
+                style: {
+                  "--normalized-slider-value": this.normalizedClampedValue,
+                  "--normalized-slider-default-value": _,
+                  "--normalized-slider-origin": _,
+                  "--default-value-track-color": _
+                    ? _.trackForegroundColor
+                    : void 0,
+                  "--slider-extra-notch-padding": _ ?? "0px",
+                },
+                ref: (0, _._)(this.m_refSlider, _),
+                navRef: this.m_navRefSlider,
+                onGamepadDirection: this.OnGamepadDirection,
+                onOKButton: this.BlurInnerSlider,
+                onOKActionDescription: null,
+                onCancelButton: this.BlurInnerSlider,
+                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
               },
               _.createElement(
-                _._,
+                "div",
                 {
-                  className: (0, _._)(
-                    _().SliderControlAndNotches,
-                    this.props.disabled && _().Disabled,
-                    _ && _().WithDefaultValue,
-                    _ && _ && _().DefaultValueIsColorRange,
-                    _ && _ && "left" == _.side && _().DefaultValueColorLeft,
-                    _ && _ && "left" != _.side && _().DefaultValueColorRight,
-                  ),
-                  focusable: this.isKeyNavTarget,
-                  noFocusRing: !0,
-                  onFocus: this.OnInnerSliderFocus,
-                  onBlur: this.OnInnerSliderBlur,
-                  style: {
-                    "--normalized-slider-value": this.normalizedClampedValue,
-                    "--normalized-slider-default-value": _,
-                    "--normalized-slider-origin": _,
-                    "--default-value-track-color": _
-                      ? _.trackForegroundColor
-                      : void 0,
-                    "--slider-extra-notch-padding":
-                      this.props.extraNotchPadding ?? "0px",
-                  },
-                  ref: (0, _._)(this.m_refSlider, this.props.innerRef),
-                  navRef: this.m_navRefSlider,
-                  onGamepadDirection: this.OnGamepadDirection,
-                  onOKButton: this.BlurInnerSlider,
-                  onOKActionDescription: null,
-                  onCancelButton: this.BlurInnerSlider,
-                  onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
+                  className: (0, _._)(_().SliderControl, "SliderControl"),
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().SliderControl, "SliderControl"),
-                  },
-                  _.createElement("div", {
-                    className: (0, _._)(
-                      _().SliderTrack,
-                      null != this.props.notchCount &&
-                        _ &&
-                        _().SliderHasNotches,
-                      {
-                        [_().SliderTrackDark]: "dark" === this.props.trackTone,
-                      },
-                      "SliderTrack",
-                    ),
-                  }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().SliderTrack,
+                    null != _ && _ && _().SliderHasNotches,
+                    {
+                      [_().SliderTrackDark]: "dark" === _,
+                    },
+                    "SliderTrack",
+                  ),
+                }),
+                _ &&
                   _ &&
-                    _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().DefaultValueTickContainer,
+                    },
                     _.createElement(
                       "div",
                       {
-                        className: _().DefaultValueTickContainer,
+                        className: _().DefaultValueTick,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().DefaultValueTick,
-                        },
-                        _.createElement(_.u49, {
-                          direction: "down",
-                        }),
-                      ),
+                      _.createElement(_.u49, {
+                        direction: "down",
+                      }),
                     ),
-                  this.validRange &&
-                    null != this.props.value &&
-                    !isNaN(this.props.value) &&
-                    this.showHandle &&
+                  ),
+                this.validRange &&
+                  null != __webpack_require__ &&
+                  !isNaN(__webpack_require__) &&
+                  this.showHandle &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _,
+                    },
                     _.createElement(
                       "div",
                       {
                         className: _,
+                        ref: this.m_refHandle,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _,
-                          ref: this.m_refHandle,
-                        },
-                        "leftparen" == this.props.handleType &&
-                          _.createElement(_.Epp, null),
-                        "rightparen" == this.props.handleType &&
-                          _.createElement(_.jvG, null),
-                      ),
+                      "leftparen" == _ && _.createElement(_.Epp, null),
+                      "rightparen" == _ && _.createElement(_.jvG, null),
                     ),
-                ),
-                _.createElement(_, {
-                  notchCount: _,
-                  notchLabels: _,
-                  sliderValue: this.normalizedClampedValue,
-                  notchTicksVisible: _,
-                  renderNotch: this.props.renderNotch,
-                }),
+                  ),
               ),
-            )
+              _.createElement(_, {
+                notchCount: _,
+                notchLabels: _,
+                sliderValue: this.normalizedClampedValue,
+                notchTicksVisible: _,
+                renderNotch: _,
+              }),
+            ),
           );
         }
       }
@@ -28277,10 +28391,12 @@
           focusable: _,
           children: _,
           navRef: _,
+          ..._
         } = _;
         return _.createElement(
           _._,
           {
+            ..._,
             noFocusRing: !0,
             className: (0, _._)(_, _().Toggle, {
               [_().Disabled]: !!_,
@@ -28307,41 +28423,51 @@
           _,
         );
       });
+      function _(_) {
+        const _ = !!_.disabled,
+          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
+          _._)(_),
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            className: _.className,
+            disabled: _,
+            label: _.label,
+            icon: _.icon,
+            description: _.description,
+            explainer: _.explainer,
+            explainerTitle: _.explainerTitle,
+            padding: _.padding,
+            bottomSeparator: _.bottomSeparator,
+            highlightOnFocus: _.highlightOnFocus,
+            inlineWrap: "keep-inline",
+            onContextMenu: _.onContextMenu,
+            actionDescriptionMap: __webpack_require__,
+            onClick: _.onClick,
+            indentLevel: _.indentLevel,
+            ..._,
+          },
+          _.createElement(_, {
+            ..._(_, _),
+            onChange: _.OnToggleChange,
+            value: _.checked,
+            disabled: _,
+            navRef: _.navRef,
+          }),
+        );
+      }
       class _ extends _._ {
         OnToggleChange(_) {
           this.props.disabled || _ === this.checked || this.Toggle();
         }
         render() {
-          const _ = !!this.props.disabled,
-            { actionDescriptions: _, gamepadEvents: __webpack_require__ } = (0,
-            _._)(this.props);
-          return _.createElement(
-            _,
-            {
-              className: this.props.className,
-              disabled: _,
-              label: this.props.label,
-              icon: this.props.icon,
-              description: this.props.description,
-              explainer: this.props.explainer,
-              explainerTitle: this.props.explainerTitle,
-              padding: this.props.padding,
-              bottomSeparator: this.props.bottomSeparator,
-              highlightOnFocus: this.props.highlightOnFocus,
-              inlineWrap: "keep-inline",
-              onContextMenu: this.props.onContextMenu,
-              actionDescriptionMap: _,
-              onClick: this.props.onClick,
-              indentLevel: this.props.indentLevel,
-              ...__webpack_require__,
-            },
-            _.createElement(_, {
-              onChange: this.OnToggleChange,
-              value: this.checked,
-              disabled: _,
-              navRef: this.props.navRef,
-            }),
-          );
+          return _.createElement(_, {
+            ...this.props,
+            OnToggleChange: this.OnToggleChange,
+            checked: this.checked,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnToggleChange", null);
@@ -34124,8 +34250,8 @@
             xmlns: "http://www.w3.org/2000/svg",
           },
           _.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             _: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
             fill: "currentColor",
           }),
@@ -35594,10 +35720,12 @@
           null,
           Boolean(_.condition) ? _.wrap(_.children) : _.children,
         );
-      function _(_) {
+      function _(_, _, _) {
         return _.forwardRef(function (_, _) {
           return _.createElement("div", {
             ..._,
+            ..._,
+            role: _,
             className: (0, _._)(_, _.className),
             ref: _,
           });
@@ -35970,6 +36098,9 @@
           return {
             Unsubscribe: this.m_callbacks.Register(_).Unregister,
           };
+        }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
         }
       }
       function _(_, _) {

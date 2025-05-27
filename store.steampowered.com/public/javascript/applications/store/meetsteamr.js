@@ -226,8 +226,9 @@
             toggleMinimized: r,
             className: s,
             children: g,
+            elAdditionalButtons: E,
           } = e,
-          E = (0, d.q3)(() => a());
+          _ = (0, d.q3)(() => a());
         return i.createElement(
           i.Fragment,
           null,
@@ -252,9 +253,10 @@
               t,
               Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            i.createElement(p, { bIsMinimized: E, fnToggleMinimize: r }),
+            E,
+            i.createElement(p, { bIsMinimized: _, fnToggleMinimize: r }),
           ),
-          !E && i.createElement(c.tH, null, g),
+          !_ && i.createElement(c.tH, null, g),
         );
       }
       function E(e) {

@@ -776,6 +776,7 @@
                   l.createElement("img", {
                     ...F,
                     className: P().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 l.createElement(
@@ -843,6 +844,7 @@
               l.createElement("img", {
                 className: P().AppCapsuleImage,
                 src: n.GetAssets().GetSmallCapsuleURL(),
+                alt: n.GetName(),
               }),
             ),
             Boolean(!a && !n.BIsFree()) &&
@@ -918,6 +920,7 @@
                   l.createElement("img", {
                     src: c,
                     className: P().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),

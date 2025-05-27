@@ -1088,7 +1088,15 @@ img {
   font-weight: bold;
 }
 .-khhIHR9pWYus_nTScWdO {
-  color: #ffba70;
+  color: #ffb15d;
+  background-color: #707070;
+  padding: 2px 0;
+  font-size: 12px;
+}
+._3kt_NxdtRh4OR_iFeApvM9 {
+  color: silver;
+  background-color: #707070;
+  padding: 2px 0;
   font-size: 12px;
 }
 ._3dSNtZdgIHIa6P9ZODRBJs {
@@ -1200,10 +1208,12 @@ img.ProseMirror-separator {
 ._4aB4b9buM8DFxojRymZ_5 {
   color: #db7093;
 }
-img._1W2-3_i4cuGzBmocT-ZAk5 {
+img._1W2-3_i4cuGzBmocT-ZAk5,
+video._1W2-3_i4cuGzBmocT-ZAk5 {
   max-width: 100%;
 }
-.sakeS4kMEd2FGp4Da4Xrt img._1W2-3_i4cuGzBmocT-ZAk5 {
+.sakeS4kMEd2FGp4Da4Xrt img._1W2-3_i4cuGzBmocT-ZAk5,
+.sakeS4kMEd2FGp4Da4Xrt video._1W2-3_i4cuGzBmocT-ZAk5 {
   filter: saturate(0.1) blur(3px);
   z-index: 0;
 }
@@ -1392,6 +1402,15 @@ img._1W2-3_i4cuGzBmocT-ZAk5 {
 }
 ._1yX-VOaM5vG__71wYRKXpF > .DialogContent_InnerWidth {
   max-width: none;
+}
+._1yX-VOaM5vG__71wYRKXpF ._3DKy0FBx7VieVYhRL6ykCt {
+  object-fit: contain;
+  max-height: 300px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 ._2AS-5DvwKtFXZy1pWhENnE {
   display: flex;

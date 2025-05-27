@@ -102,11 +102,11 @@ body.v6 .game_area_purchase h2.package_group {
 
 }
 
-#game_highlights a {
+:where(#game_highlights) a {
 	color: #67c1f5;
 }
 
-#game_highlights a:hover {
+:where(#game_highlights) a:hover {
 	color: #ffffff;
 }
 
@@ -277,6 +277,7 @@ body.v6 .game_area_purchase h2.package_group {
 .glance_ctn .release_date {
 	display: flex;
 	line-height: 16px;
+	color: inherit;
 
 }
 .glance_ctn .user_reviews_summary_row .column,
@@ -2621,7 +2622,8 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 }
 .queue_btn_menu:hover .queue_menu_flyout,
-.queue_menu_flyout:hover {
+.queue_menu_flyout:hover,
+[aria-expanded=true] ~ .queue_menu_flyout {
 	display: block;
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
@@ -2630,6 +2632,10 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 .queue_menu_option {
+	background: unset;
+	text-align: inherit;
+	border: none;
+	font-size: 12px;
 	display: flex;
 	cursor: pointer;
     padding: 12px;

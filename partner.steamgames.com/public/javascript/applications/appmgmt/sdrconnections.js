@@ -801,7 +801,7 @@
           [S, b] = s.useState(""),
           [k, F] = s.useState(0),
           [P, x] = s.useState(""),
-          [R, T] = s.useState("");
+          [R, I] = s.useState("");
         s.useEffect(() => {
           let e = new URLSearchParams(t.location.search);
           const n = e.get("client_id") || "",
@@ -809,7 +809,7 @@
             l = e.get("kind") || "",
             c = e.get("app_name1") || "",
             o = e.get("app_value1") || "";
-          if ((v(n), y(s), b(l), x(c), T(o), !e.toString() && 0 == k)) return;
+          if ((v(n), y(s), b(l), x(c), I(o), !e.toString() && 0 == k)) return;
           E(!0), f(""), a > 0 && e.set("appid", "" + a);
           const i =
             d.TS.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
@@ -836,7 +836,7 @@
             E(!1);
           })();
         }, [a, t.location, k]);
-        let D = null;
+        let T = null;
         if (void 0 !== g) {
           let e = [];
           for (const t of g) {
@@ -844,7 +844,7 @@
               (t.client.id || "") + "-" + (t.client.connection_id || "");
             e.push(s.createElement(w, { key: a, cxn: t }));
           }
-          D = s.createElement(
+          T = s.createElement(
             "div",
             { className: u.SearchResultsCtr },
             s.createElement(
@@ -857,8 +857,9 @@
             e,
           );
         }
-        const I = "ded" == S ? "Gameserver" : "Peer",
-          M = !1;
+        const D = "ded" == S ? "Gameserver" : "Peer",
+          M = !1,
+          A = s.useId();
         return s.createElement(
           i.tH,
           null,
@@ -888,12 +889,12 @@
                 },
                 s.createElement(
                   "div",
-                  { className: "DialogLabel" },
+                  { id: A, className: "DialogLabel" },
                   "Connection kind",
                 ),
                 s.createElement(
                   o.zW,
-                  { value: S, onChange: (e) => b(e) },
+                  { labelId: A, value: S, onChange: (e) => b(e) },
                   s.createElement(o.a, { value: "" }, "Any"),
                   s.createElement(o.a, { value: "ded" }, "Dedicated server"),
                   s.createElement(o.a, { value: "p2p" }, "Peer-to-Peer"),
@@ -913,7 +914,7 @@
                   type: "text",
                   value: N,
                   disabled: M,
-                  label: I,
+                  label: D,
                   onChange: (e) => y(e.currentTarget.value),
                 }),
               ),
@@ -932,7 +933,7 @@
                   value: R,
                   disabled: M,
                   label: "App field value 1",
-                  onChange: (e) => T(e.currentTarget.value),
+                  onChange: (e) => I(e.currentTarget.value),
                 }),
               ),
               s.createElement(
@@ -961,7 +962,7 @@
               ),
             ),
             n && s.createElement(p.t, null),
-            D,
+            T,
           ),
         );
       }

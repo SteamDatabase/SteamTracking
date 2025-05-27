@@ -537,18 +537,22 @@
           case 3:
             return _.createElement(_.o5Q, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 2:
             return _.createElement(_.aVR, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }
@@ -558,14 +562,17 @@
           case 2:
             return _.createElement(_.ZjT, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }

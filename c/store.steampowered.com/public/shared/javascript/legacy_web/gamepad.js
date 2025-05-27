@@ -747,6 +747,9 @@
             Unsubscribe: this.m_callbacks.Register(_).Unregister,
           };
         }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
+        }
       }
       function _(_, _) {
         return new _(_, _);
@@ -755,31 +758,31 @@
         m_fnMap;
         m_originalSubscribableValue;
         m_mappedSubscribableValue;
-        m_mappedUnsubscribe;
-        m_subscriptionRefCount = 0;
+        m_bMappedValueStale = !1;
         constructor(_, _, _) {
           (this.m_originalSubscribableValue = _),
             (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-            (this.m_fnMap = _);
+            (this.m_fnMap = _),
+            this.m_originalSubscribableValue.Subscribe(() => {
+              this.m_mappedSubscribableValue.SubscriberCount > 0
+                ? this.UpdateMappedValue()
+                : (this.m_bMappedValueStale = !0);
+            });
         }
         get Value() {
-          return this.m_mappedSubscribableValue?.Value;
+          return (
+            this.m_bMappedValueStale && this.UpdateMappedValue(),
+            this.m_mappedSubscribableValue?.Value
+          );
         }
         Subscribe(_) {
-          0 == this.m_subscriptionRefCount++ &&
-            (this.m_mappedUnsubscribe =
-              this.m_originalSubscribableValue.Subscribe((_) =>
-                this.m_mappedSubscribableValue.Set(this.m_fnMap(_)),
-              ));
-          const _ = this.m_mappedSubscribableValue?.Subscribe(_);
-          return {
-            Unsubscribe: () => {
-              _.Unsubscribe(),
-                0 == --this.m_subscriptionRefCount &&
-                  (this.m_mappedUnsubscribe?.Unsubscribe(),
-                  (this.m_mappedUnsubscribe = void 0));
-            },
-          };
+          return this.m_mappedSubscribableValue.Subscribe(_);
+        }
+        UpdateMappedValue() {
+          this.m_mappedSubscribableValue.Set(
+            this.m_fnMap(this.m_originalSubscribableValue.Value),
+          ),
+            (this.m_bMappedValueStale = !1);
         }
       }
       function _(_, _, _) {

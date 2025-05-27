@@ -2364,7 +2364,12 @@
         _ = ["item_class_10", "item_class_6"],
         _ = "4";
       function _(_) {
-        const { filter: _, onFilterChange: __webpack_require__, ..._ } = _,
+        const {
+            filter: _,
+            onFilterChange: __webpack_require__,
+            searchPath: _,
+            ..._
+          } = _,
           _ = _.bSteamItems;
         return _.createElement(
           _,
@@ -2488,15 +2493,15 @@
                 {
                   type: "submit",
                   onClick: () => {
-                    window.location.href = (function (_) {
+                    window.location.href = (function (_, _ = "market/search") {
                       const {
-                        strSearch: _,
-                        bSteamItems: __webpack_require__,
+                        strSearch: __webpack_require__,
+                        bSteamItems: _,
                         filterInGame: _,
                         filterSteam: _,
                       } = _;
                       let _ = _;
-                      __webpack_require__ &&
+                      _ &&
                         ((_ = {
                           ..._,
                           facets: {
@@ -2516,7 +2521,7 @@
                       const { app: _, facets: _ } = _,
                         _ = new FormData();
                       _ && _.set("appid", _.appid.toString());
-                      _ && _.set("q", _);
+                      __webpack_require__ && _.set("q", __webpack_require__);
                       for (const _ of Object.keys(_))
                         if (_[_])
                           for (const _ of Object.keys(_[_]))
@@ -2525,8 +2530,8 @@
                                 `category_${_.appid}_${_}[]`,
                                 `tag_${_}`,
                               );
-                      return `${_._.COMMUNITY_BASE_URL}market/search?${new URLSearchParams(_).toString()}`;
-                    })(_);
+                      return `${_._.COMMUNITY_BASE_URL}${_}?${new URLSearchParams(_).toString()}`;
+                    })(_, _);
                   },
                 },
                 _.Localize("#AdvancedSearch_Search"),

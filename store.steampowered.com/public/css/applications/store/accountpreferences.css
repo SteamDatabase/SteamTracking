@@ -798,6 +798,18 @@
   font-size: 17px;
   margin-top: 5px;
 }
+._20iEFcT5JyJPhTjbaJ0ajE ._2mir-ym1kKS06jV0W7mtUx ._2gQ1ywJDhv3qFFjvjtt39w svg {
+  color: #ffffff36;
+}
+._20iEFcT5JyJPhTjbaJ0ajE ._2mir-ym1kKS06jV0W7mtUx ._22EU1rJVczbjFuV39qprXh {
+  background-color: #a3a3a326;
+}
+._20iEFcT5JyJPhTjbaJ0ajE
+  ._2mir-ym1kKS06jV0W7mtUx
+  ._22EU1rJVczbjFuV39qprXh
+  ._3u6D3tBNr6Pd8scEAu0WHh {
+  color: #ffffff36;
+}
 ._173r5KvavKBUk01FwZftvC {
   margin: 1px 0px;
   padding: 6px 10px;
@@ -962,11 +974,14 @@
   flex-direction: row;
   background-color: #00000033;
 }
+._3EYcq6Ow2WM7bGuzWyQRMN ._37dMp7l0gWnMweQxR4Qj7Z {
+  max-width: 50%;
+  margin: auto;
+}
 ._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton {
   height: 40px;
   padding: 0px 10px;
-  background-color: #d9412688;
-  border: 1px solid red;
+  background-color: #a94847;
   color: #fff;
   align-self: center;
   text-wrap: nowrap;

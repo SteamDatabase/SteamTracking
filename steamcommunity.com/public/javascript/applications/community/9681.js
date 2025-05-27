@@ -61,15 +61,15 @@
         m = n(81047),
         p = n(28954),
         E = n(27666),
-        g = n(71138),
+        g = n(86355),
         _ = n(68255),
         f = n(2805),
         v = n(36509),
         h = n(4869),
         b = n(28015),
         C = n(71696),
-        w = n(30175),
-        I = n(61859),
+        I = n(30175),
+        w = n(61859),
         M = n(27650),
         S = n(73745),
         k = n(30470),
@@ -131,20 +131,20 @@
               "span",
               { className: D.ImageControls },
               u.createElement(
-                w.ff,
+                I.ff,
                 {
                   className: D.ImageControlButton,
                   onClick: E,
-                  tooltip: (0, I.we)("#EventEditor_ReplaceImage_Title"),
+                  tooltip: (0, w.we)("#EventEditor_ReplaceImage_Title"),
                 },
                 u.createElement(h.ffu, null),
               ),
               u.createElement(
-                w.ff,
+                I.ff,
                 {
                   className: D.ImageControlButton,
                   onClick: m,
-                  tooltip: (0, I.we)("#StoreAdmin_GameDescription_RemoveImage"),
+                  tooltip: (0, w.we)("#StoreAdmin_GameDescription_RemoveImage"),
                 },
                 u.createElement(h.sED, null),
               ),
@@ -187,38 +187,39 @@
               l({ ...m, ...e }, s), a();
             },
             [m, l, a, s],
-          );
-        let w,
-          M = null;
+          ),
+          I = u.useId();
+        let M,
+          S = null;
         if ("image" == c)
-          (M = u.createElement(A, {
+          (S = u.createElement(A, {
             active: "hotlink" == f,
             bIsEdit: t,
             hideModal: a,
             onImageSelected: h,
             src: m.src,
           })),
-            (w = t
-              ? (0, I.we)("#EventEditor_ReplaceImage_Title")
-              : (0, I.we)("#EventEditor_InsertImage_Title"));
+            (M = t
+              ? (0, w.we)("#EventEditor_ReplaceImage_Title")
+              : (0, w.we)("#EventEditor_InsertImage_Title"));
         else {
           if ("video" != c) return (0, i.z)(c, "Unhandled type"), null;
-          (M = u.createElement(B, {
+          (S = u.createElement(B, {
             active: "hotlink" == f,
             bIsEdit: t,
             hideModal: a,
             attrs: m,
             setAttrs: l,
           })),
-            (w = (0, I.we)("#EventEditor_EditVideo_Title"));
+            (M = (0, w.we)("#EventEditor_EditVideo_Title"));
         }
         return u.createElement(
           b.mt,
           { active: !0, onDismiss: a, className: D.ClanImageModalContent },
-          u.createElement(_.Y9, null, w),
+          u.createElement(_.Y9, { id: I }, M),
           u.createElement(
             _.zW,
-            { value: f, onChange: (e) => v(e) },
+            { labelId: I, value: f, onChange: (e) => v(e) },
             u.createElement(_.a, { value: "uploaded" }, "Uploaded"),
             u.createElement(_.a, { value: "hotlink" }, "Enter URL"),
           ),
@@ -241,7 +242,7 @@
             {
               className: d()(D.ClanImageModalMode, "hotlink" == f && D.Active),
             },
-            M,
+            S,
           ),
         );
       }
@@ -256,8 +257,8 @@
           [r, s] = u.useState(l),
           i = u.useCallback((e) => s(e.currentTarget.value), []),
           c = n
-            ? (0, I.we)("#EventEditor_ReplaceImage_Title")
-            : (0, I.we)("#EventEditor_InsertImage_Title"),
+            ? (0, w.we)("#EventEditor_ReplaceImage_Title")
+            : (0, w.we)("#EventEditor_InsertImage_Title"),
           d = u.useRef();
         return (
           u.useEffect(() => {
@@ -273,7 +274,7 @@
                 ref: d,
                 value: r,
                 onChange: i,
-                label: (0, I.we)("#EventEditor_InsertImage_URL"),
+                label: (0, w.we)("#EventEditor_InsertImage_URL"),
               }),
             ),
             u.createElement(_.CB, {
@@ -323,32 +324,32 @@
               ref: v,
               value: r,
               onChange: (e) => s(e.currentTarget.value),
-              label: (0, I.we)("#EventEditor_InsertVideo_InputMP4"),
+              label: (0, w.we)("#EventEditor_InsertVideo_InputMP4"),
             }),
             u.createElement(_.pd, {
               value: i,
               onChange: (e) => c(e.currentTarget.value),
-              label: (0, I.we)("#EventEditor_InsertVideo_InputWebM"),
+              label: (0, w.we)("#EventEditor_InsertVideo_InputWebM"),
             }),
             u.createElement(_.pd, {
               value: d,
               onChange: (e) => m(e.currentTarget.value),
-              label: (0, I.we)("#EventEditor_InsertVideo_InputPoster"),
+              label: (0, w.we)("#EventEditor_InsertVideo_InputPoster"),
             }),
             u.createElement(_.Yh, {
               checked: p,
               onChange: E,
-              label: (0, I.we)("#EventEditor_InsertVideo_InputAutoplay"),
+              label: (0, w.we)("#EventEditor_InsertVideo_InputAutoplay"),
             }),
             u.createElement(_.Yh, {
               checked: g,
               onChange: f,
-              label: (0, I.we)("#EventEditor_InsertVideo_InputShowControls"),
+              label: (0, w.we)("#EventEditor_InsertVideo_InputShowControls"),
             }),
           ),
           u.createElement(_.CB, {
             onCancel: a,
-            strOKText: (0, I.we)("#EventEditor_EditVideo_Title"),
+            strOKText: (0, w.we)("#EventEditor_EditVideo_Title"),
             bOKDisabled: !r && !i,
           }),
         );
@@ -364,8 +365,8 @@
           [r, s] = u.useState(null),
           [i, c] = u.useState(e.selectedImage),
           d = t
-            ? (0, I.we)("#EventEditor_ReplaceImage_Title")
-            : (0, I.we)("#EventEditor_InsertImage_Title"),
+            ? (0, w.we)("#EventEditor_ReplaceImage_Title")
+            : (0, w.we)("#EventEditor_InsertImage_Title"),
           p = u.useCallback(
             (e) => {
               switch (e.file_type) {
@@ -705,9 +706,9 @@
       function ie(e) {
         const {
           onEditClick: t,
-          strEditDescription: n = (0, I.we)("#Button_Edit"),
+          strEditDescription: n = (0, w.we)("#Button_Edit"),
           onDeleteClick: a,
-          strDeleteDescription: o = (0, I.we)("#Button_Remove"),
+          strDeleteDescription: o = (0, w.we)("#Button_Remove"),
           bStrongShadows: l = !1,
           children: r,
         } = e;
@@ -742,7 +743,7 @@
       function de(e) {
         const { onClick: t, description: n, children: a } = e;
         return u.createElement(
-          w.ff,
+          I.ff,
           { onClick: t, tooltip: n, className: ae.FloatingToolbarButton },
           a,
         );
@@ -809,7 +810,7 @@
           p = u.useCallback(() => {
             const { strVideoID: e } = (0, J.XU)(i);
             return (
-              e ? l(e, r) : m((0, I.we)("#EventEditor_InsertYouTube_NoURL")), !1
+              e ? l(e, r) : m((0, w.we)("#EventEditor_InsertYouTube_NoURL")), !1
             );
           }, [i, r, l]),
           E = u.useCallback((e) => {
@@ -821,38 +822,38 @@
           u.createElement(
             ne._,
             {
-              strTitle: (0, I.we)("#EventEditor_InsertYouTube"),
+              strTitle: (0, w.we)("#EventEditor_InsertYouTube"),
               closeModal: o,
               strOKText: a
-                ? (0, I.we)("#Button_Save")
-                : (0, I.we)("#EventEditor_InsertYouTube"),
+                ? (0, w.we)("#Button_Save")
+                : (0, w.we)("#EventEditor_InsertYouTube"),
               onOK: p,
             },
             d && u.createElement("div", { className: L.Error }, d),
             u.createElement(_.pd, {
-              label: (0, I.we)("#EventEditor_InsertYouTube_URL"),
-              placeholder: (0, I.we)("#EventEditor_InsertYouTube_Placholder"),
+              label: (0, w.we)("#EventEditor_InsertYouTube_URL"),
+              placeholder: (0, w.we)("#EventEditor_InsertYouTube_Placholder"),
               value: i,
               ref: E,
               onChange: (e) => c(e.currentTarget.value),
             }),
             u.createElement(
               _.o1,
-              { label: (0, I.we)("#EventEditor_InsertYouTube_Position") },
+              { label: (0, w.we)("#EventEditor_InsertYouTube_Position") },
               u.createElement(_.Od, {
                 checked: r == ee.V2.left,
                 onChange: (e) => e && s(ee.V2.left),
-                label: (0, I.we)("#EventEditor_InsertYouTube_Left"),
+                label: (0, w.we)("#EventEditor_InsertYouTube_Left"),
               }),
               u.createElement(_.Od, {
                 checked: r == ee.V2.right,
                 onChange: (e) => e && s(ee.V2.right),
-                label: (0, I.we)("#EventEditor_InsertYouTube_Right"),
+                label: (0, w.we)("#EventEditor_InsertYouTube_Right"),
               }),
               u.createElement(_.Od, {
                 checked: r == ee.V2.full,
                 onChange: (e) => e && s(ee.V2.full),
-                label: (0, I.we)("#EventEditor_InsertYouTube_Full"),
+                label: (0, w.we)("#EventEditor_InsertYouTube_Full"),
               }),
             ),
           ),
@@ -867,8 +868,8 @@
         he = n(1397),
         be = n.n(he),
         Ce = n(63556),
-        we = n(44165),
-        Ie = n(95695),
+        Ie = n(44165),
+        we = n(95695),
         Me = n(99637),
         Se = n(62490),
         ke = n(91675),
@@ -890,7 +891,7 @@
           u.createElement(
             fe.o0,
             {
-              strTitle: (0, I.we)("#MeetSteam_create_title"),
+              strTitle: (0, w.we)("#MeetSteam_create_title"),
               onOK: () => n(a, l),
               closeModal: () => {
                 r(Pe(!0, null)), o(He(!0, null)), t();
@@ -915,7 +916,7 @@
           u.createElement(
             fe.o0,
             {
-              strTitle: (0, I.we)("#MeetSteam_edit_title"),
+              strTitle: (0, w.we)("#MeetSteam_edit_title"),
               onOK: () => {
                 a(o), t();
               },
@@ -946,7 +947,7 @@
           u.createElement(
             fe.o0,
             {
-              strTitle: (0, I.we)(
+              strTitle: (0, w.we)(
                 t ? "#MeetSteam_create_title" : "#MeetSteam_edit_title",
               ),
               onOK: () => {
@@ -973,11 +974,11 @@
           null,
           u.createElement(_.pd, {
             type: "text",
-            label: (0, I.we)("#MeetSteam_edit_session_name"),
-            value: I.NT.Get(t.localized_session_title, a),
+            label: (0, w.we)("#MeetSteam_edit_session_name"),
+            value: w.NT.Get(t.localized_session_title, a),
             onChange: (e) => {
               const o = { ...t };
-              (o.localized_session_title = I.NT.Set(
+              (o.localized_session_title = w.NT.Set(
                 o.localized_session_title,
                 a,
                 e.currentTarget.value,
@@ -988,18 +989,18 @@
           u.createElement(
             _.JU,
             null,
-            (0, I.we)("#MeetSteam_edit_session_desc"),
+            (0, w.we)("#MeetSteam_edit_session_desc"),
           ),
           u.createElement("textarea", {
             className: (0, R.A)(
               "DialogTextInputBase",
               be().EventDescriptionField,
             ),
-            value: I.NT.Get(t.localized_session_description, a),
+            value: w.NT.Get(t.localized_session_description, a),
             rows: 5,
             onChange: (e) => {
               const o = { ...t };
-              (o.localized_session_description = I.NT.Set(
+              (o.localized_session_description = w.NT.Set(
                 o.localized_session_description,
                 a,
                 e.currentTarget.value,
@@ -1031,7 +1032,7 @@
           h = Te.unix(t.rtime_end).tz(m),
           b = Te.unix(t.rtime_end).tz(E),
           C = b.utcOffset() - h.utcOffset(),
-          w = (function () {
+          I = (function () {
             const e = (0, Ne.I)({
               queryKey: ["timezone"],
               queryFn: async () => {
@@ -1044,29 +1045,33 @@
             return e.isSuccess ? e.data : [];
           })(),
           M = u.useMemo(
-            () => w.reduce((e, t) => e.set(t.name, t.friendly_name), new Map()),
-            [w],
+            () => I.reduce((e, t) => e.set(t.name, t.friendly_name), new Map()),
+            [I],
           ),
           S = (e) => {
             var t;
             return null !== (t = M.get(e)) && void 0 !== t ? t : e;
-          };
+          },
+          k = u.useId(),
+          D = u.useId();
         return u.createElement(
           u.Fragment,
           null,
           u.createElement(
             "div",
-            { className: Ie.EventEditorTextTitle },
-            (0, I.we)("#MeetSteam_edit_date_display_title"),
+            { id: k, className: we.EventEditorTextTitle },
+            (0, w.we)("#MeetSteam_edit_date_display_title"),
           ),
           u.createElement(
             "div",
-            { className: Ie.EventEditorTextSubTitle },
-            (0, I.we)("#MeetSteam_edit_date_display_desc"),
+            { id: D, className: we.EventEditorTextSubTitle },
+            (0, w.we)("#MeetSteam_edit_date_display_desc"),
           ),
           u.createElement(
             _.zW,
             {
+              labelId: k,
+              descriptionId: D,
               value: s,
               onChange: (e) => {
                 n({ ...t, location_type: e });
@@ -1075,12 +1080,12 @@
             u.createElement(
               _.a,
               { value: "in_person" },
-              (0, I.we)("#MeetSteam_edit_date_display_in_person"),
+              (0, w.we)("#MeetSteam_edit_date_display_in_person"),
             ),
             u.createElement(
               _.a,
               { value: "virtual" },
-              (0, I.we)("#MeetSteam_edit_date_display_virtual"),
+              (0, w.we)("#MeetSteam_edit_date_display_virtual"),
             ),
           ),
           "in_person" === s &&
@@ -1088,7 +1093,7 @@
               styles: { option: (e) => ({ ...e, color: "#444444" }) },
               isSearchable: !0,
               isMulti: !1,
-              options: w.map((e) => ({
+              options: I.map((e) => ({
                 label: e.friendly_name,
                 value: e.name,
               })),
@@ -1098,7 +1103,7 @@
             }),
           u.createElement("br", null),
           u.createElement(Me.K, {
-            strDescription: (0, I.we)("#MeetSteam_edit_start"),
+            strDescription: (0, w.we)("#MeetSteam_edit_start"),
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => a,
             fnSetTimeToUpdate: (e) =>
@@ -1110,7 +1115,7 @@
           u.createElement(_.pd, {
             type: "number",
             min: 0,
-            label: (0, I.we)("#MeetSteam_edit_duration"),
+            label: (0, w.we)("#MeetSteam_edit_duration"),
             onChange: (e) => {
               const a = Number.parseInt(e.currentTarget.value);
               n({ ...t, rtime_end: t.rtime_start + De.Kp.PerMinute * a });
@@ -1120,7 +1125,7 @@
           u.createElement(
             "div",
             null,
-            (0, I.we)("#MeetSteam_edit_displayed_start"),
+            (0, w.we)("#MeetSteam_edit_displayed_start"),
             ": ",
             (0, ke.P0)(f.unix() + 60 * v, !1, f.format("z")),
             " ",
@@ -1128,7 +1133,7 @@
           u.createElement(
             "div",
             null,
-            (0, I.we)("#MeetSteam_edit_displayed_end"),
+            (0, w.we)("#MeetSteam_edit_displayed_end"),
             ": ",
             (0, ke.P0)(b.unix() + 60 * C, !1, b.format("z")),
             " ",
@@ -1141,7 +1146,7 @@
             u.createElement(_.pd, {
               type: "number",
               value: l,
-              label: (0, I.we)("#MeetSteam_edit_max_capacity"),
+              label: (0, w.we)("#MeetSteam_edit_max_capacity"),
               min: 1,
               onChange: (e) =>
                 n({
@@ -1151,8 +1156,8 @@
             }),
             u.createElement(_.m, {
               controlled: !0,
-              label: (0, I.we)("#MeetSteam_edit_guest_count"),
-              tooltip: (0, I.we)("#MeetSteam_edit_guest_count_ttip"),
+              label: (0, w.we)("#MeetSteam_edit_guest_count"),
+              tooltip: (0, w.we)("#MeetSteam_edit_guest_count_ttip"),
               rgOptions: c,
               selectedOption: r,
               onChange: (e) => n({ ...t, max_per_team: e.data }),
@@ -1191,7 +1196,7 @@
       }
       function Pe(e, t) {
         if (e) {
-          const e = we.HD.GetTimeNowWithOverride(),
+          const e = Ie.HD.GetTimeNowWithOverride(),
             t = pe.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
             n =
               null == t ? void 0 : t.reduce((e, t) => e.concat(t.sessions), []);
@@ -1269,13 +1274,13 @@
                 "div",
                 { className: be().controls },
                 u.createElement(
-                  w.ff,
-                  { onClick: s, tooltip: (0, I.we)("#Button_Edit") },
+                  I.ff,
+                  { onClick: s, tooltip: (0, w.we)("#Button_Edit") },
                   u.createElement(h.ffu, null),
                 ),
                 u.createElement(
-                  w.ff,
-                  { onClick: m, tooltip: (0, I.we)("#Button_Delete") },
+                  I.ff,
+                  { onClick: m, tooltip: (0, w.we)("#Button_Delete") },
                   u.createElement(h.sED, null),
                 ),
               ),
@@ -1295,8 +1300,8 @@
                   ve.E,
                   { active: !0 },
                   u.createElement(fe.o0, {
-                    strTitle: (0, I.we)("#Button_Delete"),
-                    strDescription: (0, I.we)("#Dialog_AreYouSure"),
+                    strTitle: (0, w.we)("#Button_Delete"),
+                    strDescription: (0, w.we)("#Dialog_AreYouSure"),
                     onOK: () => {
                       const { groupIndex: e } = Ye(l.group_id),
                         t = pe.mh.GetEditModel(),
@@ -1336,11 +1341,11 @@
                 }),
               ),
               u.createElement(
-                w.ff,
+                I.ff,
                 {
                   className: be().AddNew,
                   onClick: l,
-                  tooltip: (0, I.we)("#MeetSteam_add"),
+                  tooltip: (0, w.we)("#MeetSteam_add"),
                 },
                 u.createElement(h.OMN, null),
               ),
@@ -1387,13 +1392,13 @@
                 "div",
                 { className: be().controls },
                 u.createElement(
-                  w.ff,
-                  { onClick: i, tooltip: (0, I.we)("#Button_Edit") },
+                  I.ff,
+                  { onClick: i, tooltip: (0, w.we)("#Button_Edit") },
                   u.createElement(h.ffu, null),
                 ),
                 u.createElement(
-                  w.ff,
-                  { onClick: p, tooltip: (0, I.we)("#Button_Delete") },
+                  I.ff,
+                  { onClick: p, tooltip: (0, w.we)("#Button_Delete") },
                   u.createElement(h.sED, null),
                 ),
               ),
@@ -1421,8 +1426,8 @@
                 ve.E,
                 { active: !0 },
                 u.createElement(fe.o0, {
-                  strTitle: (0, I.we)("#Button_Delete"),
-                  strDescription: (0, I.we)("#Dialog_AreYouSure"),
+                  strTitle: (0, w.we)("#Button_Delete"),
+                  strDescription: (0, w.we)("#Dialog_AreYouSure"),
                   onOK: () => {
                     const e = pe.mh.GetEditModel(),
                       { groupIndex: n, sessionIndex: a } = Re(t),
@@ -1458,30 +1463,30 @@
           setSpellcheckEnabled: s,
         } = e;
         return u.createElement(
-          w.bI,
+          I.bI,
           { refUpdateToolbar: a, view: t },
           u.createElement(
             "div",
             { className: e.className },
             u.createElement(
-              w.Ez,
+              I.Ez,
               { className: e.className },
               u.createElement(Le.MV, null),
-              u.createElement(w.XQ, null),
+              u.createElement(I.XQ, null),
               u.createElement(Le.Km, { schema: n }),
-              u.createElement(w.XQ, null),
+              u.createElement(I.XQ, null),
               n.marks.link && u.createElement(Qe, { schema: n }),
-              u.createElement(w.XQ, null),
+              u.createElement(I.XQ, null),
               u.createElement(Le.Hz, { schema: n }),
               u.createElement(Le.WJ, { schema: n, levels: 3 }),
-              u.createElement(w.XQ, null),
+              u.createElement(I.XQ, null),
               u.createElement(We, { schema: n, clanSteamID: l }),
               !1,
               u.createElement(Le.C$, {
                 schema: n,
                 showIndentButtonsAsNeeded: !0,
               }),
-              u.createElement(w.hK, null),
+              u.createElement(I.hK, null),
               s &&
                 u.createElement(Le.Nt, {
                   bSpellcheckEnabled: r,
@@ -1500,7 +1505,7 @@
       }
       function We(e) {
         const { schema: t, clanSteamID: n } = e,
-          { callbacks: a, view: o } = (0, w.wU)(),
+          { callbacks: a, view: o } = (0, I.wU)(),
           { image: l, video: r, previewyoutube: s } = t.nodes,
           [i, c] = u.useState(),
           d = u.useCallback(() => {
@@ -1541,7 +1546,7 @@
             }),
           l &&
             u.createElement(
-              w.ff,
+              I.ff,
               {
                 tooltip: "#EventEditor_InsertImage_Title",
                 onClick: m,
@@ -1551,7 +1556,7 @@
             ),
           r &&
             u.createElement(
-              w.ff,
+              I.ff,
               {
                 tooltip: "#EventEditor_EditVideo_Title",
                 onClick: p,
@@ -1560,12 +1565,12 @@
               u.createElement(h.CeX, null),
             ),
           s && u.createElement(Xe, { schema: t }),
-          (l || r || s) && u.createElement(w.XQ, null),
+          (l || r || s) && u.createElement(I.XQ, null),
         );
       }
       function Xe(e) {
         const { schema: t } = e,
-          { callbacks: n, view: a } = (0, w.wU)(),
+          { callbacks: n, view: a } = (0, I.wU)(),
           [o, l, r] = (0, oe.uD)(),
           s = u.useCallback(() => {
             r(), a.focus();
@@ -1589,7 +1594,7 @@
           null,
           o && u.createElement(me, { hideModal: s, onSave: i }),
           u.createElement(
-            w.ff,
+            I.ff,
             { tooltip: "#EventEditor_InsertYouTube", onClick: l, toggled: o },
             u.createElement("img", { src: qe.A }),
           ),
@@ -1597,7 +1602,7 @@
       }
       function Ze(e) {
         const { schema: t } = e,
-          { callbacks: n, view: a } = (0, w.wU)(),
+          { callbacks: n, view: a } = (0, I.wU)(),
           o = pe.mh.GetEditModel(),
           [l, r, s] = (0, oe.uD)(),
           i = u.useCallback(() => {
@@ -1628,7 +1633,7 @@
             null,
             l && u.createElement(Oe, { hideModal: i, fnUpdateSession: c }),
             u.createElement(
-              w.ff,
+              I.ff,
               { tooltip: "#MeetSteam_add_group_ttip", onClick: r, toggled: l },
               u.createElement("img", { src: qe.A }),
             ),
@@ -1718,7 +1723,7 @@
             de,
             {
               onClick: () => window.open(t),
-              description: (0, I.we)("#ContextMenu_OpenLinkInNewWindow"),
+              description: (0, w.we)("#ContextMenu_OpenLinkInNewWindow"),
             },
             u.createElement(h.YNO, null),
           ),

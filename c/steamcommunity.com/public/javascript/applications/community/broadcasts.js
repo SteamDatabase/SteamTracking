@@ -2307,6 +2307,7 @@
                   _.createElement("img", {
                     ..._,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 _.createElement(
@@ -2392,6 +2393,7 @@
               _.createElement("img", {
                 className: _().AppCapsuleImage,
                 src: _.GetAssets().GetSmallCapsuleURL(),
+                alt: _.GetName(),
               }),
             ),
             Boolean(!__webpack_require__ && !_.BIsFree()) &&
@@ -2477,6 +2479,7 @@
                   _.createElement("img", {
                     src: _,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),

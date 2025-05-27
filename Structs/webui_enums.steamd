@@ -471,6 +471,7 @@ enum EEventState
 	k_EEventStateUnpublished = 0;
 	k_EEventStateStaged = 1;
 	k_EEventStateVisible = 2;
+	k_EEventStateUnlisted = 3;
 }
 
 enum EFamilyQuery
@@ -3426,6 +3427,13 @@ enum UnnamedEnum961ee65102a01e04
 	Item = 1;
 	Synergy = 2;
 	Talent = 3;
+}
+
+enum UnnamedEnum9702664a8f09fc14
+{
+	Invalid = 0;
+	StreamGone = 1;
+	PlaybackError = 2;
 }
 
 enum UnnamedEnum9744fddc6b9fcf31

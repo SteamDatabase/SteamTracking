@@ -376,8 +376,8 @@
         C = n(99637),
         w = n(8905),
         y = n(9154),
-        P = n(738),
-        A = n(48479),
+        A = n(738),
+        P = n(48479),
         D = n(56011),
         R = n(61859),
         k = n(95695),
@@ -506,7 +506,7 @@
           r.createElement(
             S.$n,
             {
-              onClick: (e) => (0, P.pg)(r.createElement(V, null), (0, D.uX)(e)),
+              onClick: (e) => (0, A.pg)(r.createElement(V, null), (0, D.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
@@ -529,7 +529,7 @@
             return (0, g.hL)(_.Get().GetPositionListChangeCallback(e), n), t;
           })(t);
         return r.createElement(
-          A.qx,
+          P.qx,
           {
             bStartMinimized: !1,
             title: a,
@@ -539,7 +539,7 @@
             S.$n,
             {
               onClick: (e) =>
-                (0, P.pg)(r.createElement(O, { productID: t }), (0, D.uX)(e)),
+                (0, A.pg)(r.createElement(O, { productID: t }), (0, D.uX)(e)),
             },
             "Add new start position",
           ),
@@ -610,7 +610,7 @@
               S.$n,
               {
                 onClick: (e) =>
-                  (0, P.pg)(
+                  (0, A.pg)(
                     r.createElement(O, {
                       productID: t,
                       existingPositionMsg: t,
@@ -624,7 +624,7 @@
               S.$n,
               {
                 onClick: (e) =>
-                  (0, P.pg)(
+                  (0, A.pg)(
                     r.createElement(z, { positionMsg: t }),
                     (0, D.uX)(e),
                   ),
@@ -1041,8 +1041,8 @@
           strDescToolTip: C,
           strDescription: w,
           bShowTimeZone: y,
-          strInvalidDateTimeLocalizedMsg: P,
-          fnIsValidDateTime: A,
+          strInvalidDateTimeLocalizedMsg: A,
+          fnIsValidDateTime: P,
           bWeekdaysOnly: D,
           fnSetTimeToUpdate: R,
           bForce24HourFormat: k,
@@ -1078,7 +1078,7 @@
               }, [c, s]),
               c
             );
-          })(B, F, P, A, l),
+          })(B, F, A, P, l),
           q = !l && Y;
         let O, z;
         if (t && n && t == n && n > o.HD.GetTimeNowWithOverride()) {
@@ -1358,8 +1358,9 @@
             toggleMinimized: a,
             className: s,
             children: g,
+            elAdditionalButtons: p,
           } = e,
-          p = (0, d.q3)(() => r());
+          f = (0, d.q3)(() => r());
         return i.createElement(
           i.Fragment,
           null,
@@ -1384,9 +1385,10 @@
               t,
               Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            i.createElement(_, { bIsMinimized: p, fnToggleMinimize: a }),
+            p,
+            i.createElement(_, { bIsMinimized: f, fnToggleMinimize: a }),
           ),
-          !p && i.createElement(c.tH, null, g),
+          !f && i.createElement(c.tH, null, g),
         );
       }
       function p(e) {

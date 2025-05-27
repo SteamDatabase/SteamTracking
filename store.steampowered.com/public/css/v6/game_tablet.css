@@ -816,7 +816,8 @@ html.tablet #shareBtn img {
 }
 html.tablet #shareBtn a,
 html.tablet #reportBtn a,
-html.tablet #queueBtnFollow > div {
+html.tablet #queueBtnFollow > div,
+html.tablet #queueBtnFollow > button {
 	width: 100%;
 	text-align: center;
 }

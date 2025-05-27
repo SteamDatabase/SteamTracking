@@ -10,6 +10,8 @@
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
         TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -319,6 +321,8 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
+        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     18654: (e) => {
@@ -7493,7 +7497,7 @@
                 {
                   className: (0, f.A)({
                     [a().ExpandSectionBlock]: !0,
-                    [l.style]: !0,
+                    [l.style]: null != l.style,
                     [a().ExpandSectionExpanded]: r,
                     [a().ExpandSectionCollapsed]: !r,
                     BBCodeExpanded: r,
@@ -8260,6 +8264,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: u,
           },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: d },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: d },
           marketingmessage_art: {
@@ -8499,7 +8509,7 @@
         (e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
-          (e[(e.k_EEventStatsUnlisted = 3)] = "k_EEventStatsUnlisted");
+          (e[(e.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
       })(R || (R = {}));
       var D, G, k, z, F, U;
       function O(e) {
@@ -9096,7 +9106,7 @@
         BIsVisibleEvent() {
           let e = Math.floor(p.HD.GetTimeNowWithOverride());
           return (
-            this.visibility_state == R.k_EEventStatsUnlisted ||
+            this.visibility_state == R.k_EEventStateUnlisted ||
             (this.visibility_state == R.k_EEventStateVisible &&
               e > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || e < this.visibilityEndTime))
@@ -9106,7 +9116,7 @@
           return this.visibility_state == R.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == R.k_EEventStatsUnlisted;
+          return this.visibility_state == R.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -9997,7 +10007,7 @@
           }),
           t.published
             ? t.unlisted
-              ? (r.visibility_state = s.zv.k_EEventStatsUnlisted)
+              ? (r.visibility_state = s.zv.k_EEventStateUnlisted)
               : t.hidden
                 ? (r.visibility_state = s.zv.k_EEventStateStaged)
                 : (r.visibility_state = s.zv.k_EEventStateVisible)
@@ -12553,6 +12563,7 @@
             (this.width = i),
             (this.dataUrl = r);
         }
+        GetImageOptionLabel() {}
       }
       (0, i.Cg)([a.sH], s.prototype, "dataUrl", void 0),
         (0, i.Cg)([a.sH], s.prototype, "width", void 0),
@@ -12563,7 +12574,7 @@
     },
     28954: (e, t, r) => {
       "use strict";
-      r.d(t, { M0: () => f, VE: () => w, zO: () => S });
+      r.d(t, { M0: () => w, VE: () => S, zO: () => B });
       var i = r(34629),
         a = r(90626),
         n = r(2160),
@@ -12579,10 +12590,12 @@
         g = r(78327),
         h = r(86355),
         y = r(64953),
-        b = r(69343);
-      function f(e) {
+        b = r(69343),
+        f = r(81393);
+      function w(e) {
         return e?.map((e) => {
           const t = c.Fj[e];
+          (0, f.w)(Boolean(t), `Artwork Type not in Map ${e}`);
           return {
             sKey: e,
             width: t.width,
@@ -12598,7 +12611,7 @@
           };
         });
       }
-      class w {
+      class S {
         m_filesToUpload = l.sH.array();
         m_filesCompleted = [];
         m_clanSteamID;
@@ -12609,7 +12622,7 @@
         constructor(e, t) {
           (0, l.Gn)(this),
             (this.m_clanSteamID = e),
-            (this.m_rgImageOptions = f(t));
+            (this.m_rgImageOptions = w(t));
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -12857,7 +12870,7 @@
           );
         }
       }
-      function S(e, t) {
+      function B(e, t) {
         const r = (function (e) {
             const t = a.useRef(e);
             (t.current.length !== e.length ||
@@ -12866,16 +12879,16 @@
             return t.current;
           })(t instanceof Array ? t : [t]),
           i = e.ConvertTo64BitString();
-        return a.useMemo(() => new w(e, r), [i, r]);
+        return a.useMemo(() => new S(e, r), [i, r]);
       }
-      (0, i.Cg)([l.sH], w.prototype, "m_filesToUpload", void 0),
-        (0, i.Cg)([l.sH], w.prototype, "m_filesCompleted", void 0),
-        (0, i.Cg)([l.sH], w.prototype, "m_lastError", void 0),
-        (0, i.Cg)([d.o], w.prototype, "AddImage", null),
-        (0, i.Cg)([d.o], w.prototype, "AddExistingClanImage", null),
-        (0, i.Cg)([d.o], w.prototype, "DeleteUploadImageByIndex", null),
-        (0, i.Cg)([d.o], w.prototype, "DeleteUploadImage", null),
-        (0, i.Cg)([d.o], w.prototype, "ClearImages", null);
+      (0, i.Cg)([l.sH], S.prototype, "m_filesToUpload", void 0),
+        (0, i.Cg)([l.sH], S.prototype, "m_filesCompleted", void 0),
+        (0, i.Cg)([l.sH], S.prototype, "m_lastError", void 0),
+        (0, i.Cg)([d.o], S.prototype, "AddImage", null),
+        (0, i.Cg)([d.o], S.prototype, "AddExistingClanImage", null),
+        (0, i.Cg)([d.o], S.prototype, "DeleteUploadImageByIndex", null),
+        (0, i.Cg)([d.o], S.prototype, "DeleteUploadImage", null),
+        (0, i.Cg)([d.o], S.prototype, "ClearImages", null);
     },
     64953: (e, t, r) => {
       "use strict";
@@ -16573,6 +16586,7 @@
               t &&
               Array.isArray(t) &&
               t.length > 0 &&
+              t[0] &&
               "object" == typeof t[0]
             ) &&
             ("string" == typeof t[0].gid ||
@@ -17683,7 +17697,46 @@
             return ".webp";
         }
       }
-      r.d(t, { EG: () => n, ab: () => i, qR: () => a });
+      async function s(e, t) {
+        if (!e || 0 == e.length) return null;
+        return await new Promise((r) => {
+          if (t) {
+            const t = document.createElement("video");
+            (t.onloadeddata = () => r(t)),
+              (t.onerror = (e) => {
+                console.error(
+                  "GetLoadedMediaElement failed to load the video, details",
+                  e,
+                ),
+                  r(void 0);
+              }),
+              (t.src = e);
+          } else {
+            const t = new Image();
+            (t.onload = () => r(t)),
+              (t.onerror = (e) => {
+                console.error(
+                  "GetLoadedMediaElement failed to load the image, details",
+                  e,
+                ),
+                  r(void 0);
+              }),
+              (t.src = e);
+          }
+        });
+      }
+      function o(e) {
+        return e instanceof HTMLVideoElement
+          ? { width: e.videoWidth, height: e.videoHeight }
+          : { width: e.width, height: e.height };
+      }
+      r.d(t, {
+        EG: () => n,
+        II: () => o,
+        ab: () => i,
+        qR: () => a,
+        sy: () => s,
+      });
     },
     6469: (e, t, r) => {
       "use strict";

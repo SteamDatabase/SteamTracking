@@ -69,6 +69,7 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 
 	var $IgnoreMenuBtn = $J('#queue_ignore_menu_arrow');
 	var $IgnoreMenu = $J('#queue_btn_ignore_menu');
+	var $IgnoreMenuContent = $J('#ignore_menu_flyout > div');
 	var $IgnoreMenuOption_NotInterested = $J('#queue_ignore_menu_option_not_interested' );
 	var $IgnoreMenuOption_OwnedElsewhere = $J('#queue_ignore_menu_option_owned_elsewhere' );
 
@@ -99,8 +100,14 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 			snr: snr,
 			ignore_reason: ignore_reason
 		}).done( function( data ) {
+			const bWasFocused = document.activeElement === $IgnoreBtn[0];
 			$IgnoreBtn.hide();
 			$UnIgnoreBtn.show();
+			$IgnoreMenuBtn.attr( 'aria-expanded', false );
+			if ( bWasFocused )
+			{
+				$UnIgnoreBtn.focus();
+			}
 
 			$IgnoreMenu.data( "ignoredreason", ignore_reason );
 			funcUpdateIgnoredReasonClasses();
@@ -116,10 +123,43 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 		funcIgnoreGame( 0 );
 	} );
 	$IgnoreMenuOption_NotInterested.click( function() {
-		funcIgnoreGame( 0 );
+		var curIgnoredReason = $IgnoreMenu.data( "ignoredreason" );
+		if ( curIgnoredReason === 0 )
+		{
+			$UnIgnoreBtn.click();
+			$IgnoreMenuBtn.attr( 'aria-expanded', false );
+		}
+		else
+		{
+			funcIgnoreGame( 0 );
+		}
 	} );
 	$IgnoreMenuOption_OwnedElsewhere.click( function() {
-		funcIgnoreGame( 2 );
+		var curIgnoredReason = $IgnoreMenu.data( "ignoredreason" );
+		if ( curIgnoredReason === 2 )
+		{
+			$UnIgnoreBtn.click();
+			$IgnoreMenuBtn.attr( 'aria-expanded', false );
+		}
+		else
+		{
+			funcIgnoreGame( 2 );
+		}
+	} );
+
+	$IgnoreMenuBtn.click( function() {
+		const bIsExpanded = $IgnoreMenuBtn.attr( 'aria-expanded' ) == "true";
+		$IgnoreMenuBtn.attr( 'aria-expanded', !bIsExpanded );
+		if ( !bIsExpanded )
+		{
+			$IgnoreMenuContent[0].children[0].focus();
+		}
+	} );
+	$IgnoreMenuContent.focusout( function(e) {
+		if ( !$IgnoreMenuContent[0].contains( e.relatedTarget ) )
+		{
+			$IgnoreMenuBtn.attr( 'aria-expanded', false );
+		}
 	} );
 
 	$UnIgnoreBtn.click( function() {
@@ -129,8 +169,13 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 			snr: snr,
 			remove: 1
 		}).done( function() {
+			const bWasFocused = document.activeElement === $UnIgnoreBtn[0];
 			$IgnoreBtn.show();
 			$UnIgnoreBtn.hide();
+			if ( bWasFocused )
+			{
+				$IgnoreBtn.focus();
+			}
 			$IgnoreMenu.removeClass( "not_interested owned_elsewhere" );
 			$IgnoreMenuBtn.removeClass( "queue_btn_active" );
 			$IgnoreMenuBtn.addClass( "queue_btn_inactive" );
@@ -145,8 +190,13 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 			sessionid: g_sessionID,
 			appid: appid_for_follow
 		}).done( function() {
+			const bWasFocused = document.activeElement === $FollowBtn[0];
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
+			if ( bWasFocused )
+			{
+				$UnFollowBtn.focus();
+			}
 		}).fail( function() {
 			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
@@ -158,8 +208,13 @@ function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, 
 			appid: appid_for_follow,
 			unfollow: 1
 		}).done( function() {
+			const bWasFocused = document.activeElement === $UnFollowBtn[0];
 			$FollowBtn.show();
 			$UnFollowBtn.hide();
+			if ( bWasFocused )
+			{
+				$FollowBtn.focus();
+			}
 		}).fail( function() {
 			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
@@ -1318,8 +1373,20 @@ function BuildReviewHistogram()
 
 function SetReviewsGraphVisibility( bVisible )
 {
+	const previousFocusedElement = document.activeElement;
 	$J( "#review_histograms_container" ).toggleClass( "collapsed", !bVisible );
 	$J( "#reviews_filter_options" ).toggleClass( "graph_collapsed", !bVisible );
+
+	const showButton = document.getElementById( "review_show_graph_button" );
+	const hideButton = document.getElementById( "review_hide_graph_button" );
+	if ( previousFocusedElement === showButton )
+	{
+		hideButton.focus();
+	}
+	else if(previousFocusedElement === hideButton )
+	{
+		showButton.focus();
+	}
 }
 
 function ClearReviewDateFilter()
@@ -1568,13 +1635,23 @@ function UpdatePlaytimeFilterValues( hourMin, hourMax )
 	var strHoursMaxNumber = v_numberformat( hourMax, 0 );
 	var strHourMax = hourMax > 0 && hourMax != maxHours ? '%1$s hour(s)'.replace( /%1\$s/g, strHoursMaxNumber ) : 'No maximum';
 	$J( "#app_reviews_playtime_range_text_max" ).text( strHourMax );
+
+
+	const handles = [...document.querySelectorAll( "#app_reviews_playtime_slider .ui-slider-handle" )];
+	if ( handles.length > 0 )
+	{
+		handles[0].ariaValueNow = hourMin;
+		handles[0].ariaValueText = strHourMin;
+		handles[1].ariaValueNow = hourMax;
+		handles[1].ariaValueText = strHourMax;
+	}
 }
 
 function InitPlaytimeFilterSlider()
 {
 	var maxHours = 100;
 	var maxSeconds = maxHours * 60 * 60;
-	$J( "#app_reviews_playtime_slider" ).slider({
+	const slider = $J( "#app_reviews_playtime_slider" ).slider({
 		range: true,
 		min: 0,
 		max: maxSeconds,
@@ -1602,6 +1679,16 @@ function InitPlaytimeFilterSlider()
 			}
 		}
 	});
+	UpdatePlaytimeFilterValues( 0, maxHours );
+	const handles = [...slider[0].querySelectorAll(".ui-slider-handle")];
+	for ( const handle of handles )
+	{
+		handle.role = "slider";
+		handle.ariaValueMin = 0;
+		handle.ariaValueMax = maxHours;
+	}
+	handles[0].ariaLabel = 'Minimum hours played';
+	handles[1].ariaLabel = 'Maximum hours played';
 }
 
 //formerly app_reporting.js
@@ -1983,6 +2070,10 @@ function ReparentAppLandingPageForSmallScreens()
 			// hide the 'see all X languages" link since all languages are now visible
 			$J('#languageTable').find('.all_languages').css('display', 'none');
 		}
+		else
+		{
+			$J('#reviews_active_filters').attr( 'role', 'group' );
+		}
 
 		// hide the language table on small screens since a banner is clicked to reveal it
 		//
@@ -2266,5 +2357,54 @@ function ToggleShowAllPackageContentsText( event )
 {
 	const elContainer = event.target.parentNode.parentNode;
 	elContainer.classList.toggle( 'package_contents_collapsed');
+}
+
+function SetupReviewFilterMenus()
+{
+	[...document.querySelectorAll( "#reviews_filter_options button[aria-expanded]" )].forEach( ( button ) => {
+		const flyout = button.ariaControlsElements[0];
+		button.addEventListener( "click", () => {
+			if ( button.ariaExpanded === "true" )
+			{
+				button.ariaExpanded = "false";
+			}
+			else {
+				button.ariaExpanded = "true";
+			}
+
+			const currentFocus = document.activeElement;
+			let nextFocusTarget = flyout.firstElementChild;
+			const visited = new Set();
+			while ( nextFocusTarget && nextFocusTarget !== flyout )
+			{
+				nextFocusTarget.focus();
+				if ( document.activeElement !== currentFocus )
+				{
+					// successfully moved focus
+					break;
+				}
+				visited.add( nextFocusTarget );
+				if ( nextFocusTarget.firstElementChild && !visited.has( nextFocusTarget.firstElementChild ) )
+				{
+					nextFocusTarget = nextFocusTarget.firstElementChild;
+				}
+				else if ( nextFocusTarget.nextElementSibling && !visited.has( nextFocusTarget.nextElementSibling ) )
+				{
+					nextFocusTarget = nextFocusTarget.nextElementSibling;
+				}
+				else
+				{
+					nextFocusTarget = nextFocusTarget.parentElement;
+				}
+			}
+		} );
+
+		flyout.addEventListener( "focusout", ( e ) => {
+			if ( !flyout.contains( e.relatedTarget ) )
+			{
+				button.ariaExpanded = "false";
+			}
+		} );
+	} );
 }
 

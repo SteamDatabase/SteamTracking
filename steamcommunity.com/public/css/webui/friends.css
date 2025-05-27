@@ -2602,14 +2602,38 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   flex-grow: 1;
   margin-left: 4px;
 }
+@property --GradientColor1 {
+  syntax: "<color>";
+  initial-value: #81399a;
+  inherits: false;
+}
+@property --GradientColor2 {
+  syntax: "<color>";
+  initial-value: #0094a2;
+  inherits: false;
+}
 .partnereventshared_JumpToButton_c4K67 {
   font-size: 12px;
-  background: linear-gradient(136deg, #81399a 8%, #0094a2 90.05%);
+  background: linear-gradient(
+    136deg,
+    var(--GradientColor1) 8%,
+    var(--GradientColor2) 90.05%
+  );
   border: none;
   border-radius: 3px;
   margin-left: 8px;
   color: #fff;
   cursor: pointer;
+  transition: --GradientColor1 .3s ease-in, --GradientColor2 .3s ease-in;
+}
+.partnereventshared_JumpToButton_c4K67:hover {
+  --GradientColor1: #0094a2;
+  --GradientColor2: #81399a;
+}
+.partnereventshared_QACtn_337X4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .partnereventshared_SaleSectionSubtitle_2rIaW {
   font-size: 15px;
@@ -11704,7 +11728,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 p.bbcodes_Paragraph_3lnqG {
   margin: .5em 0;
 }
-.bbcodes_TemplateMediaTitle__DE_6 p.bbcodes_Paragraph_3lnqG {
+.bbcodes_TemplateMediaTitle__DE_6 p.bbcodes_Paragraph_3lnqG,
+.bbcodes_Question_2Hj1t p.bbcodes_Paragraph_3lnqG,
+.bbcodes_Answer_syKgz p.bbcodes_Paragraph_3lnqG {
   margin: 0;
 }
 .bbcodes_Header1_2LYsF,
@@ -30037,7 +30063,7 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   fill: #fff;
 }
 .BBCodeAlreadyCollapsed.Minimized:hover .BBCodeAlreadyCollapsedText,
-.BBCodeResizableComponent.Minimized:hover .BBCodeCollapsed {
+.BBCodeResizableComponent.Minimized:hover .BBCodeCollapsed_Friend {
   background-color: #5a7585;
   color: #fff;
 }
@@ -30061,7 +30087,7 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   letter-spacing: 1px;
   white-space: nowrap;
 }
-.BBCodeCollapsed {
+.BBCodeCollapsed_Friend {
   position: absolute;
   margin-left: 22px;
   background-color: #2e3c44;
@@ -30082,7 +30108,7 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   z-index: 1;
   pointer-events: none;
 }
-.BBCodeResizableComponent.Minimized .BBCodeCollapsed {
+.BBCodeResizableComponent.Minimized .BBCodeCollapsed_Friend {
   opacity: 1;
   transform: translateX(0px);
   transition-duration: .46s;

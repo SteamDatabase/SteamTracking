@@ -883,7 +883,7 @@
     },
     1596: (e, t, a) => {
       "use strict";
-      a.d(t, { F: () => C });
+      a.d(t, { F: () => S });
       var n = a(65731),
         i = a(90626),
         r = a(76217),
@@ -920,8 +920,9 @@
             )
           : o;
       }
-      var h = a(7445);
-      class f extends i.Component {
+      var h = a(7445),
+        f = a(61859);
+      class g extends i.Component {
         render() {
           const { showArrows: e, arrowFill: t } = this.props,
             a = this.props.visibleSlides,
@@ -1000,18 +1001,18 @@
           );
         }
       }
-      const g = (0, n.Yw)(f, (e) => ({
+      const C = (0, n.Yw)(g, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function C(e) {
+      function S(e) {
         const t = (0, p.Qn)();
         return (!e.screenIsWide && !t) || e.bForceSimpleCarousel
           ? i.createElement(_, { ...e }, e.children)
-          : i.createElement(S, { ...e }, e.children);
+          : i.createElement(E, { ...e }, e.children);
       }
-      function S(e) {
+      function E(e) {
         const t = (0, p.Qn)(),
           a = () => i.Children.count(e.children),
           o = a(),
@@ -1021,8 +1022,8 @@
           _ = e.hideArrows || !u,
           h = !u || e.hidePips;
         let f = 4 / 3,
-          C = !0;
-        e.slideAspectRatio && ((f = e.slideAspectRatio), (C = !1));
+          g = !0;
+        e.slideAspectRatio && ((f = e.slideAspectRatio), (g = !1));
         const S = `items_in_row_${e.visibleElements}`;
         return i.createElement(
           r.Z,
@@ -1040,7 +1041,7 @@
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: C,
+              isIntrinsicHeight: g,
               dragEnabled: !1,
               touchEnabled: !1,
               lockOnWindowScroll: !0,
@@ -1048,7 +1049,7 @@
               disableKeyboard: !0,
             },
             i.createElement(
-              y,
+              w,
               {
                 bHideArrows: _,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -1070,14 +1071,20 @@
                   : t;
                 return i.createElement(
                   n.q7,
-                  { className: m.innerSlide, key: "slide_" + a, index: a },
+                  {
+                    className: m.innerSlide,
+                    key: "slide_" + a,
+                    index: a,
+                    role: "listitem",
+                    "aria-label": void 0,
+                  },
                   r,
                 );
               }),
             ),
             !h &&
               (e.useTestScrollbar
-                ? i.createElement(g, { showArrows: _, carouselStore: null })
+                ? i.createElement(C, { showArrows: _, carouselStore: null })
                 : i.createElement(
                     "div",
                     { className: m.breadcrumbContainer },
@@ -1095,10 +1102,10 @@
           ),
         );
       }
-      function E(e) {
+      function y(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function y(e) {
+      function w(e) {
         const {
             bHideArrows: t,
             bAutoAdvance: a,
@@ -1108,15 +1115,15 @@
           } = e,
           p = i.useContext(n.Yc),
           u = i.useRef(p.state.currentSlide),
-          [_, f] = i.useState(null),
-          [g, C] = i.useState(!!a),
-          S = i.useRef(null),
-          y = i.useRef(null);
+          [_, g] = i.useState(null),
+          [C, S] = i.useState(!!a),
+          E = i.useRef(null),
+          w = i.useRef(null);
         i.useEffect(() => {
           const e = () => {
-            S.current = window.setTimeout(() => {
-              if (S.current) {
-                E(S);
+            E.current = window.setTimeout(() => {
+              if (E.current) {
+                y(E);
                 let e = 0;
                 p.state.currentSlide + p.state.visibleSlides <
                   p.state.totalSlides &&
@@ -1128,28 +1135,28 @@
               }
             }, 8e3);
           };
-          g && e();
+          C && e();
           const t = () => {
             const t = u.current,
               a = p.state.currentSlide;
-            s && s(a), f(a > t ? "Right" : a < t ? "Left" : null), E(y);
-            (y.current = window.setTimeout(() => {
-              y.current && (f(null), E(y));
+            s && s(a), g(a > t ? "Right" : a < t ? "Left" : null), y(w);
+            (w.current = window.setTimeout(() => {
+              w.current && (g(null), y(w));
             }, 1e3)),
               (u.current = a),
-              S.current ? (E(S), C(!1)) : g && e();
+              E.current ? (y(E), S(!1)) : C && e();
           };
           return (
             p.subscribe(t),
             () => {
-              p.unsubscribe(t), E(S), E(y);
+              p.unsubscribe(t), y(E), y(w);
             }
           );
-        }, [p, g]);
-        const w = !!_ && "CarouselSliding" + _;
+        }, [p, C]);
+        const I = !!_ && "CarouselSliding" + _;
         return i.createElement(
           "div",
-          { className: (0, l.A)(m.sliderBody, "SliderBody", w) },
+          { className: (0, l.A)(m.sliderBody, "SliderBody", I) },
           !t &&
             i.createElement(
               n._X,
@@ -1160,8 +1167,12 @@
                   m.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
+                "aria-label": (0, f.we)("#Carousel_Prev"),
               },
-              i.createElement(o.uMb, { fill: c || "white" }),
+              i.createElement(o.uMb, {
+                fill: c || "white",
+                role: "presentation",
+              }),
             ),
           i.createElement(
             n.Ap,
@@ -1169,6 +1180,7 @@
               className: d.J.GetScrollableClassname(),
               classNameTray: m.slideTrayCustomize,
               classNameAnimation: m.DisableSliderMotion,
+              role: "list",
             },
             i.createElement(h.q, null, r),
           ),
@@ -1182,8 +1194,12 @@
                   m.carouselNavButton,
                   "CarouselBtnRight",
                 ),
+                "aria-label": (0, f.we)("#Carousel_Next"),
               },
-              i.createElement(o.uMb, { fill: c || "white" }),
+              i.createElement(o.uMb, {
+                fill: c || "white",
+                role: "presentation",
+              }),
             ),
         );
       }

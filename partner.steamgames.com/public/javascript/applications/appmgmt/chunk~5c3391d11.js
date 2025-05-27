@@ -484,24 +484,45 @@
         const { category: t } = e;
         switch (t) {
           case 3:
-            return r.createElement(f.o5Q, { className: _().CategoryIcon });
+            return r.createElement(f.o5Q, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
           case 2:
-            return r.createElement(f.aVR, { className: _().CategoryIcon });
+            return r.createElement(f.aVR, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
           case 1:
-            return r.createElement(f.jIP, { className: _().CategoryIcon });
+            return r.createElement(f.jIP, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
           case 0:
-            return r.createElement(f.WX$, { className: _().CategoryIcon });
+            return r.createElement(f.WX$, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
         }
       }
       function R(e) {
         const { category: t } = e;
         switch (t) {
           case 2:
-            return r.createElement(f.ZjT, { className: _().CategoryIcon });
+            return r.createElement(f.ZjT, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
           case 1:
-            return r.createElement(f.jIP, { className: _().CategoryIcon });
+            return r.createElement(f.jIP, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
           case 0:
-            return r.createElement(f.WX$, { className: _().CategoryIcon });
+            return r.createElement(f.WX$, {
+              className: _().CategoryIcon,
+              role: "presentation",
+            });
         }
       }
       function Z(e) {

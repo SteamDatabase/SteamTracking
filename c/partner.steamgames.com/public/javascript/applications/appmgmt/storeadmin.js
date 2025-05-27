@@ -236,6 +236,7 @@
         ExtraAssetName: "_1v6uTQuGLshmZKWXULJOSr",
         EnableExtraAssetsV2Ctn: "eeKg-l7aZaopjLwnTg0pT",
         LocalizeAssetDialogContent: "_1yX-VOaM5vG__71wYRKXpF",
+        DisplayLocImage: "_3DKy0FBx7VieVYhRL6ykCt",
         LocalizeAssetsDialogDescription: "_2AS-5DvwKtFXZy1pWhENnE",
         LocalizedAssetMain: "RzrYxmOI_AsfjKkcxy234",
         LanguageColumn: "_2TmGHFx_V1QDQrc-3q_8-f",
@@ -1170,76 +1171,77 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        constructor(_, _, _, _, _) {
-          super(_, _, _, _, _);
+        bCropped = !1;
+        m_bExtraAssetsV2;
+        m_bLockedToSpecificAsset;
+        m_fnGetImageOptions;
+        m_rgCurrentImageOptionKey = void 0;
+        constructor(_, _, _, _, _, _) {
+          const _ = (0, _._)(_);
+          super(_, _, _.src, _.width, _.height),
+            (0, _._)(this),
+            (this.m_bExtraAssetsV2 = _),
+            (this.m_bLockedToSpecificAsset = _),
+            (this.m_fnGetImageOptions = _);
         }
         IsValidAssetType(_, _) {
-          let _ = 0,
-            _ = 0,
-            _ = !1;
-          const _ = this.GetCurrentImageOption();
-          _
-            ? ((_ = _.width), (_ = _.height), (_ = !0))
-            : _?.bEnforceDimensions &&
-              ((_ = _.width), (_ = _.height), (_ = !0));
-          const _ = _ && _ != this.fileType,
+          const _ = this.GetCurrentImageOption(),
+            _ = _?.width ?? 0,
+            _ = _?.height ?? 0,
+            _ = _ && _ != this.fileType,
             _ = (function (_) {
               switch (_) {
                 case 1:
                 case 3:
                 case 10:
                 case 2:
+                case 4:
+                case 5:
                   return !0;
                 default:
                   return !1;
               }
             })(this.fileType),
-            _ = !_ || (this.width === _ && this.height === _),
+            _ = this.BIsVideo() ? 1 : 0,
+            _ =
+              !(_ > 0 && _ > 0) ||
+              (Math.abs(this.width - _) <= _ && Math.abs(this.height - _) <= _),
             _ = _?.bMismatchedNewSizes;
           let _ = "";
+          _
+            ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
+            : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected"));
+          const _ = [],
+            _ = [];
           return (
-            _
-              ? _
-                ? (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
-                : _
-                  ? _ && (_ = (0, _._)("#ImageUpload_MismatchedResolution"))
-                  : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
-              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            !_ && _
+              ? _.push(
+                  (0, _._)("#ImageUpload_InvalidResolution", _.extraAssetName),
+                )
+              : _ &&
+                _ &&
+                _.push(
+                  (0, _._)(
+                    "#ImageUpload_MismatchedResolution",
+                    _.extraAssetName,
+                  ),
+                ),
+            _?.rgExistingLanguages?.length > 1 &&
+              _.rgExistingLanguages.includes(this.language) &&
+              _.push(
+                (0, _._)(
+                  "#ImageUpload_ReplaceLanguage",
+                  (0, _._)("#Language_" + (0, _._)(this.language)),
+                ),
+              ),
             {
               error: _,
+              messages: _,
+              warnings: _,
               needsCrop: !1,
               match: this.GetCurrentImageOption(),
             }
           );
-        }
-      }
-      class _ extends _ {
-        bCropped = !1;
-        m_bExtraAssetsV2;
-        m_fnGetImageOptions;
-        m_media;
-        m_rgCurrentImageOptionKey = void 0;
-        constructor(_, _, _, _, _) {
-          const _ = (function (_) {
-            const _ = _.split(".").pop().toLocaleLowerCase();
-            return "webm" == _ || "mp4" == _;
-          })(_.name);
-          super(
-            _,
-            _,
-            _.src,
-            _ ? _.videoWidth : _.width,
-            _ ? _.videoHeight : _.height,
-          ),
-            (0, _._)(this),
-            (this.m_bExtraAssetsV2 = _),
-            (this.m_fnGetImageOptions = _),
-            (this.m_media = _);
-        }
-        ResetImage() {
-          (this.height = this.m_media.height),
-            (this.width = this.m_media.width),
-            (this.dataUrl = this.m_media.src);
         }
         BIsOriginalMinimumDimensions(_) {
           return !0;
@@ -1263,19 +1265,21 @@
               -1 != _ ? this.file.name.slice(0, _) : this.file.name
             ).toLowerCase(),
             _ = this.m_fnGetImageOptions();
-          if (__webpack_require__.find((_) => _.extraAssetName == _)) return _;
-          return [
-            ..._,
-            {
-              sKey: _,
-              fnGetLabelText: () => _,
-              width: this.width,
-              height: this.height,
-              bEnforceDimensions: !1,
-              extraAssetName: _,
-              bMismatchedNewSizes: !1,
-            },
-          ];
+          return (
+            this.m_bLockedToSpecificAsset ||
+              __webpack_require__.find((_) => _.extraAssetName == _) ||
+              __webpack_require__.push({
+                sKey: _,
+                fnGetLabelText: () => _,
+                width: this.width,
+                height: this.height,
+                bEnforceDimensions: !1,
+                extraAssetName: _,
+                bMismatchedNewSizes: !1,
+                rgExistingLanguages: [],
+              }),
+            _
+          );
         }
         GetCurrentImageOptionKey() {
           return this.m_bExtraAssetsV2 ? this.m_rgCurrentImageOptionKey : null;
@@ -1290,24 +1294,29 @@
             (_) =>
               _.extraAssetName == (0, _._)(this.file.name, -1).baseFilename,
           );
-          return _ || null;
+          return _ || (1 == _.length ? _[0] : null);
         }
         SetCurrentImageOption(_) {
           this.m_rgCurrentImageOptionKey = _.sKey;
+        }
+        GetImageOptionLabel() {
+          return (0, _._)("#ImageUpload_ImageGroup");
         }
       }
       (0, _._)([_._], _.prototype, "bCropped", void 0),
         (0, _._)([_._], _.prototype, "m_rgCurrentImageOptionKey", void 0),
         (0, _._)([_._], _.prototype, "ImageOptions", null),
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_filesToUpload = _._.array();
         m_strUploadPath;
         m_bExtraAssetsV2;
-        m_rgExistingExtraAssets;
-        m_rgImageSizes;
         m_fnExtraAssetsUpdated;
+        m_onlyExtraAsset = void 0;
+        m_rgExistingExtraAssets = void 0;
+        m_rgImageSizes = void 0;
         constructor(_, _, _) {
           (0, _._)(this),
             (this.m_strUploadPath = _),
@@ -1337,6 +1346,9 @@
         SetExistingExtraAssets(_, _) {
           (this.m_rgExistingExtraAssets = _), (this.m_rgImageSizes = _);
         }
+        SetOnlyExistingAsset(_) {
+          this.m_onlyExtraAsset = _;
+        }
         isImageFile(_) {
           return _.type.startsWith("image/");
         }
@@ -1344,66 +1356,50 @@
           return _.type.startsWith("video/");
         }
         async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _(
-                      this.m_bExtraAssetsV2,
-                      () => this.GetImageOptions(),
-                      _,
-                      _,
-                      _,
-                    );
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      __webpack_require__();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CExtraAssetImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        __webpack_require__();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else
-                this.isVideoFile(_) ||
-                  (console.error(
-                    "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
-                    _,
-                    _.type,
-                  ),
-                  (_ = !1));
-            }),
-            _
-          );
+          if (this.isImageFile(_) || this.isVideoFile(_)) {
+            const _ = await new Promise((_) => {
+              const _ = new FileReader();
+              (_.onload = async () =>
+                _(await (0, _._)(_.result.toString(), this.isVideoFile(_)))),
+                __webpack_require__.readAsDataURL(_);
+            });
+            if (_) {
+              const _ = new _(
+                this.m_bExtraAssetsV2,
+                !!this.m_onlyExtraAsset,
+                () => this.GetImageOptions(),
+                _,
+                _,
+                _,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else
+            console.error(
+              "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          return !1;
         }
         async UploadAllImages(_, _, _, _) {
+          const _ = this.m_filesToUpload.filter((_) => {
+            const _ = _.IsValidAssetType(_, _);
+            return "pending" === _.status && !_.error && !_.needsCrop;
+          });
+          for (const _ of _) _.status = "uploading";
           let _;
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = await this.UploadFile(
-                  _.file,
-                  _.GetCurrentImageOption()?.extraAssetName ?? _.file.name,
-                  _.language,
-                );
-                "errors" in _
-                  ? ((_.status = "failed"), (_.message = _.errors.join("\n")))
-                  : "rgExtraAssets" in _ &&
-                    ((_.status = "success"), (_ = _.rgExtraAssets));
-              }
-            }
+          for (const _ of _) {
+            const _ = await this.UploadFile(
+              _.file,
+              _.GetCurrentImageOption()?.extraAssetName ?? _.file.name,
+              _.language,
+            );
+            "errors" in _
+              ? ((_.status = "failed"), (_.message = _.errors.join("\n")))
+              : "rgExtraAssets" in _ &&
+                ((_.status = "success"), (_ = _.rgExtraAssets));
+          }
           return (
             _ && this.m_fnExtraAssetsUpdated(_),
             {
@@ -1466,16 +1462,39 @@
                 height: _,
               },
             }),
-            _ = this.m_filesToUpload.flatMap((_) => {
+            _ = [];
+          for (const _ of this.m_filesToUpload.filter(
+            (_) => "pending" == _.status || "uploading" == _.status,
+          ))
+            if (this.m_onlyExtraAsset)
+              _.push(
+                _(
+                  (0, _._)(this.m_onlyExtraAsset),
+                  _.language ?? 0,
+                  !0,
+                  _.width,
+                  _.height,
+                ),
+              );
+            else {
               const _ = (0, _._)(_.file.name).baseFilename,
-                _ = _.GetCurrentImageOptionKey() ?? _,
-                _ = [_(_, _.language ?? 0, !0, _.width, _.height)];
-              return _ != _ && _.push(_(_, -1, !0, _.width, _.height)), _;
-            }),
-            _ = _.ZipArrays(
-              this.m_rgExistingExtraAssets,
-              this.m_rgImageSizes ?? [],
-            )
+                _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
+              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
+                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
+            }
+          (0, _._)(
+            !this.m_onlyExtraAsset ||
+              this.m_rgExistingExtraAssets.find(
+                (_) =>
+                  (0, _._)(_) &&
+                  _.extra_asset_name == this.m_onlyExtraAsset.extra_asset_name,
+              ),
+            "onlyExtraAsset isn't in the existing assets list",
+          );
+          const _ = this.m_onlyExtraAsset
+              ? [this.m_onlyExtraAsset]
+              : this.m_rgExistingExtraAssets,
+            _ = _.ZipArrays(_, this.m_rgImageSizes ?? [])
               .filter(([_]) => (0, _._)(_))
               .map(([_, _]) => ({
                 asset: _,
@@ -1483,7 +1502,7 @@
               }))
               .flatMap(({ asset: _, size: _ }) =>
                 ((_, _) =>
-                  _.languages.map((_) =>
+                  _.images.map((_) =>
                     _(
                       (0, _._)(_),
                       (0, _._)(_.language),
@@ -1496,41 +1515,43 @@
             _ = _.concat(_).reduce((_, _) => {
               const _ = _.get(_.baseFilename) ?? [];
               return __webpack_require__.push(_), _.set(_.baseFilename, _), _;
-            }, new Map());
-          return Array.from(_.keys())
-            .map((_) => {
-              const _ = _.get(_).filter((_) => -1 != _.language),
-                _ = new Set(_.map((_) => _.language)).size,
-                _ =
-                  _ > 1
-                    ? (0, _._)(
-                        "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
-                        _,
-                        _,
-                      )
-                    : _,
-                _ = new Map();
-              for (let _ of _.filter((_) => !_.bNew).concat(
-                _.filter((_) => _.bNew),
-              ))
-                _.set(_.language, _);
-              const _ = Array.from(_.values()).filter((_) => !_.bNew),
-                _ = _.length > 0 ? _[0].size : void 0,
-                _ = _.filter((_) => _.bNew)._(0)?.size,
-                _ = _.filter((_) => _.bNew).some(
-                  (_) => _.size.width != _.width || _.size.height != _.height,
-                );
-              return {
-                sKey: _,
-                fnGetLabelText: () => _,
-                width: _?.width ?? 0,
-                height: _?.height ?? 0,
-                bEnforceDimensions: null != _,
-                extraAssetName: _,
-                bMismatchedNewSizes: _,
-              };
-            })
-            .sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0));
+            }, new Map()),
+            _ = [];
+          for (const _ of _.keys()) {
+            const _ = _.get(_).filter((_) => -1 != _.language),
+              _ = new Set(_.map((_) => _.language)).size,
+              _ =
+                _ > 1
+                  ? (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeGroup", _, _)
+                  : _,
+              _ = new Map();
+            for (let _ of _.filter((_) => !_.bNew).concat(
+              _.filter((_) => _.bNew),
+            ))
+              _.set(_.language, _);
+            const _ = Array.from(_.values()).filter((_) => !_.bNew),
+              _ = _.length > 0 ? _[0].size : void 0,
+              _ = _.filter((_) => _.bNew)._(0)?.size,
+              _ = _.filter((_) => _.bNew).some(
+                (_) => _.size.width != _.width || _.size.height != _.height,
+              );
+            _.push({
+              sKey: _,
+              fnGetLabelText: () => _,
+              width: _?.width ?? 0,
+              height: _?.height ?? 0,
+              bEnforceDimensions: !1,
+              extraAssetName: _,
+              bMismatchedNewSizes: _,
+              rgExistingLanguages: _.filter((_) => !_.bNew).map(
+                (_) => _.language,
+              ),
+            });
+          }
+          return (
+            _.sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0)),
+            _
+          );
         }
         static ZipArrays(_, _) {
           const _ = Math.min(_.length, _.length);
@@ -1543,10 +1564,14 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_onlyExtraAsset", void 0),
+        (0, _._)([_._], _.prototype, "m_rgExistingExtraAssets", void 0),
+        (0, _._)([_._], _.prototype, "m_rgImageSizes", void 0),
         (0, _._)([_._], _.prototype, "GetUploadImages", null),
         (0, _._)([_._], _.prototype, "ClearImages", null),
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
         (0, _._)([_._], _.prototype, "SetExistingExtraAssets", null),
+        (0, _._)([_._], _.prototype, "SetOnlyExistingAsset", null),
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
         (0, _._)([_._], _.prototype, "UploadAllImages", null);
       var _ = __webpack_require__("chunkid");
@@ -1568,19 +1593,36 @@
           _ = _.useMemo(() => _.find((_) => (0, _._)(_) === _), [_, _]),
           _ = _ ? (0, _._)(_) : null,
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
-            _((0, _._)(_) ? _ : null, _, _);
+            _((0, _._)(_) ? _ : null, _, _),
+          _ = (_) => {
+            const _ = _.currentTarget;
+            _.paused ? _.play() : _.pause();
+          };
         let _;
         if (_) {
-          const _ = (0, _._)(_, _);
+          const _ = (0, _._)(_, !0, _);
           if (_) {
             const _ = (0, _._)(_, _);
-            _ = _.createElement("img", {
-              key: _,
-              className: _.ExtraAssetImg,
-              src: _,
-              alt: _,
-              title: _,
-            });
+            _ =
+              1 == _.usage
+                ? _.createElement("video", {
+                    key: _,
+                    className: _.ExtraAssetImg,
+                    src: _.url,
+                    title: _,
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    autoPlay: !0,
+                    onClick: _,
+                  })
+                : _.createElement("img", {
+                    key: _,
+                    className: _.ExtraAssetImg,
+                    src: _.url,
+                    alt: _,
+                    title: _,
+                  });
           } else
             _ = _.createElement(
               "span",
@@ -1651,21 +1693,11 @@
         );
       }
       function _(_, _, _) {
-        const [_, _] = _.useState(void 0),
-          [_, _, _] = (0, _._)(),
+        const [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__?.(), _();
           }, [_, _]);
-        if (
-          (_.useEffect(() => {
-            _ &&
-              _({
-                extra_asset_name: _.extra_asset_name,
-                languages: [],
-              });
-          }, [_]),
-          !_ && !_)
-        )
+        if (!_)
           return {
             elLocalizedImageGroupDialog: void 0,
             elLocalizedImageGroupControl: void 0,
@@ -1674,7 +1706,7 @@
           elLocalizedImageGroupDialog:
             _ &&
             _.createElement(_, {
-              selectedAsset: _ ?? _,
+              selectedAsset: _,
               hideModal: _,
               activeLanguage: _,
             }),
@@ -1771,8 +1803,7 @@
               _ && (__webpack_require__(_), _());
             },
             [__webpack_require__, _],
-          ),
-          _ = _.useCallback((_, _) => (_ ? _(_) : _(_)), [_]);
+          );
         return _.createElement(
           _._,
           {
@@ -1841,7 +1872,8 @@
                     _.createElement(_, {
                       key: (0, _._)(_),
                       extraAsset: _,
-                      onAssetClick: _,
+                      onSelectAsset: _,
+                      onChooseAsset: _,
                       selected: (0, _._)(_) == _,
                     }),
                   ),
@@ -1868,7 +1900,8 @@
       function _(_) {
         const {
             extraAsset: _,
-            onAssetClick: __webpack_require__,
+            onSelectAsset: __webpack_require__,
+            onChooseAsset: _,
             selected: _,
           } = _,
           _ = (0, _._)(_);
@@ -1876,9 +1909,9 @@
           "div",
           {
             className: (0, _._)(_.ExtraAssetChoice, _ && _.Selected),
-            onClick: () => __webpack_require__(_, !1),
-            onDoubleClick: () => __webpack_require__(_, !0),
             title: _,
+            onClick: (_) => __webpack_require__(_),
+            onDoubleClick: (_) => _(_),
           },
           _.createElement(_, {
             extraAsset: _,
@@ -1893,18 +1926,15 @@
           hideModal: _,
         } = _;
         var _, _;
-        (_ = !_),
+        if (
+          ((_ = !_),
           (_ = _),
           _.useEffect(() => {
             _ && _();
-          }, [_, _]);
-        const { bAppHasSteamChinaToolsEnabled: _ } = (0, _._)();
-        if (!_) return;
-        const _ = (0, _._)(_);
-        (0, _._)(_, (_, _) => ({
-          label: _,
-          value: _,
-        }));
+          }, [_, _]),
+          !_)
+        )
+          return;
         return _.createElement(
           _._,
           {
@@ -1939,20 +1969,16 @@
               _.createElement(
                 _._,
                 null,
+                _.createElement(_, {
+                  onlyExtraAsset: _,
+                }),
                 _.createElement(
-                  "div",
+                  _._,
                   null,
                   _.createElement(_, {
-                    onlyExtraAsset: _,
+                    extraAsset: _,
+                    activeLanguage: __webpack_require__,
                   }),
-                  _.createElement(
-                    _._,
-                    null,
-                    _.createElement(_, {
-                      extraAsset: _,
-                      activeLanguage: __webpack_require__,
-                    }),
-                  ),
                 ),
               ),
               _.createElement(
@@ -1973,8 +1999,8 @@
       }
       function _(_) {
         const { extraAsset: _, activeLanguage: __webpack_require__ } = _,
-          _ = _.languages?.map((_) => (0, _._)(_.language)),
-          _ = _.useCallback((_) => (0, _._)(_, _), [_]),
+          _ = _.images?.map((_) => (0, _._)(_.language)),
+          _ = _.useCallback((_) => (0, _._)(_, !0, _)?.url, [_]),
           [_, _] = _.useState(void 0),
           [_, _, _] = (0, _._)();
         return _
@@ -1990,6 +2016,8 @@
               _.createElement(_._, {
                 rgAssetLangs: _,
                 initialLang: __webpack_require__,
+                showDeleteAll: !1,
+                imageClassname: _.DisplayLocImage,
                 fnGetAssetUrl: _,
                 fnDeletAssetLang: (_) => {
                   _(_), _();
@@ -2038,16 +2066,13 @@
           ),
           _ = (0, _._)(),
           _ = _(_);
-        _.useEffect(() => _.SetExistingExtraAssets(_, _), [_, _, _]);
+        _.useEffect(() => {
+          _.SetExistingExtraAssets(_, _), _.SetOnlyExistingAsset(_);
+        }, [_, _, _, _]);
         const _ = (function (_) {
-            const _ = _.useMemo(() => [_], [_]),
+            const _ = _.useMemo(() => (_ ? [_] : []), [_]),
               _ = _(_);
-            return _?.length > 0
-              ? _[0]
-              : {
-                  width: 0,
-                  height: 0,
-                };
+            return _?.length > 0 ? _[0] : void 0;
           })(_),
           { rgRealmList: _ } = (0, _._)();
         return _.createElement(
@@ -2056,16 +2081,11 @@
           _.createElement(_._, {
             imageUploader: _,
             rgRealmList: _,
-            forceResolution: _
-              ? {
-                  width: _.width,
-                  height: _.height,
-                }
-              : void 0,
             elAdditonalButtons: _.createElement(
               _.Fragment,
               null,
               _ &&
+                _ &&
                 _.createElement(
                   "div",
                   null,
@@ -2074,6 +2094,13 @@
                     _.width,
                     _.height,
                   ),
+                ),
+              _ &&
+                !_ &&
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#AssetUpload_LocalizeAsset_InstructionsWithSize"),
                 ),
               !_ &&
                 _.createElement(
@@ -2091,28 +2118,13 @@
         const [_, __webpack_require__] = _.useState(void 0);
         return (
           _.useEffect(() => {
-            const _ = _.map(
-              (_) =>
-                new Promise((_) => {
-                  const _ = (function (_) {
-                    return !_ || (0, _._)(_)
-                      ? (0, _._)(_)
-                      : 0 == _.languages.length
-                        ? null
-                        : (0, _._)(_.languages[0]);
-                  })(_);
-                  if (_?.length > 0) {
-                    const _ = new Image();
-                    (_.onload = () =>
-                      _({
-                        width: _.width,
-                        height: _.height,
-                      })),
-                      (_.onerror = () => _(void 0)),
-                      (_.src = _);
-                  } else _(void 0);
-                }),
-            );
+            const _ = _.map(async (_) => {
+              let _ = (0, _._)(_, !1, -1);
+              return (
+                _ || (_ = (0, _._)(_, !0, -1)),
+                (0, _._)(await (0, _._)(_?.url, 1 == _.usage))
+              );
+            });
             Promise.all(_).then(__webpack_require__);
           }, [_]),
           _
@@ -2122,91 +2134,116 @@
         const { extraAsset: _, controls: __webpack_require__ = !0 } = _,
           [_, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_)
-            ? [(0, _._)(_)]
-            : Array.from({
-                length: Math.min(3, _.languages.length),
-              }).map((_, _) => (0, _._)(_, (0, _._)(_.languages[_].language))),
-          _ = () => {
-            window.open(_[0]);
+          _ = (0, _._)(_);
+        let _;
+        if ((0, _._)(_)) {
+          const _ = (0, _._)(_, !1);
+          _ = _ ? [_] : [];
+        } else
+          _ = Array.from({
+            length: Math.min(3, _.images.length),
+          }).map((_, _) => (0, _._)(_, 0 == _, (0, _._)(_.images[_].language)));
+        const _ = () => {
+            window.open(_[0]?.url);
           },
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
-            _((0, _._)(_) ? _ : null, null, null);
+            _((0, _._)(_) ? _ : null, null, null),
+          _ = (_) => {
+            const _ = _.currentTarget;
+            _.paused ? _.play() : _.pause();
+          };
         return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _.ExtraAssetStack,
-              _.ExtraAssetControlsContainer,
-              _ && _.Hovered,
-            ),
-            ..._,
-            title: _,
-          },
+          _.Fragment,
+          null,
           _,
-          _ &&
-            _.createElement(_, {
-              extraAsset: _,
-              hideModal: _,
-            }),
-          __webpack_require__ &&
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.ExtraAssetStack,
+                _.ExtraAssetControlsContainer,
+                _ && _.Hovered,
+              ),
+              ..._,
+              title: _,
+            },
+            _ &&
+              _.createElement(_, {
+                extraAsset: _,
+                hideModal: _,
+              }),
+            __webpack_require__ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.ExtraAssetControls,
+                  title: "",
+                },
+                _,
+                _.createElement(
+                  _._,
+                  {
+                    onClick: _,
+                    tooltip: (0, _._)(
+                      "#StoreAdmin_GameDescription_OpenInNewWindow",
+                    ),
+                  },
+                  _.createElement(_.glU, null),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => (0, _._)(_),
+                    tooltip: (0, _._)(
+                      "#StoreAdmin_GameDescription_CopyNameToClipboard",
+                    ),
+                  },
+                  _.createElement(_.QRo, null),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: _,
+                    tooltip: (0, _._)(
+                      "#StoreAdmin_GameDescription_DeleteAsset",
+                    ),
+                  },
+                  _.createElement(_.sED, null),
+                ),
+              ),
             _.createElement(
               "div",
               {
-                className: _.ExtraAssetControls,
-                title: "",
+                className: _.StackedImageCtn,
               },
-              _,
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                  tooltip: (0, _._)(
-                    "#StoreAdmin_GameDescription_OpenInNewWindow",
-                  ),
-                },
-                _.createElement(_.glU, null),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => (0, _._)(_),
-                  tooltip: (0, _._)(
-                    "#StoreAdmin_GameDescription_CopyNameToClipboard",
-                  ),
-                },
-                _.createElement(_.QRo, null),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: _,
-                  tooltip: (0, _._)("#StoreAdmin_GameDescription_DeleteAsset"),
-                },
-                _.createElement(_.sED, null),
+              _.map((_, _) =>
+                1 == _.usage
+                  ? _.createElement("video", {
+                      key: _.url + _,
+                      className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
+                      src: _.url,
+                      onDoubleClick: __webpack_require__ ? _ : void 0,
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      autoPlay: !0,
+                      onClick: _,
+                    })
+                  : _.createElement("img", {
+                      key: _.url + _,
+                      className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
+                      src: _.url,
+                      onDoubleClick: __webpack_require__ ? _ : void 0,
+                    }),
               ),
             ),
-          _.createElement(
-            "div",
-            {
-              className: _.StackedImageCtn,
-            },
-            _.map((_, _) =>
-              _.createElement("img", {
-                key: _ + _,
-                className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
-                src: _,
-                onDoubleClick: _,
-              }),
+            _.createElement(
+              "div",
+              {
+                className: _.ExtraAssetName,
+              },
+              (0, _._)(_),
             ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.ExtraAssetName,
-            },
-            (0, _._)(_),
           ),
         );
       }
@@ -2472,7 +2509,7 @@
               _ = _.find((_) => (0, _._)(_) == _);
             if (!_) return;
             if ((0, _._)(_)) return _;
-            return _.languages.find((_) => (0, _._)(_.language) == _);
+            return _.images.find((_) => (0, _._)(_.language) == _);
           });
         }, [_, _, _, _]);
         const _ =
@@ -2620,7 +2657,7 @@
                   src:
                     "name" in __webpack_require__
                       ? (0, _._)(__webpack_require__)
-                      : (0, _._)(__webpack_require__),
+                      : (0, _._)(__webpack_require__, !1)?.url,
                   className: _.ImgPreview,
                 }),
               ),
@@ -2677,6 +2714,12 @@
             return "png";
           case "image/gif":
             return "gif";
+          case "image/webp":
+            return "webp";
+          case "image/mp4":
+            return "mp4";
+          case "image/webm":
+            return "webm";
           default:
             return;
         }
@@ -2685,6 +2728,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2705,28 +2749,65 @@
       function _(_) {
         if (_) return _(_) ? _.name : _.extra_asset_name;
       }
+      function _(_, _) {
+        if (_) {
+          const _ = _.encodings?.find((_) =>
+            (function (_) {
+              const _ = _.extension.split(".").pop().toLocaleLowerCase();
+              return "webm" == _ || "mp4" == _;
+            })(_),
+          );
+          if (_)
+            return {
+              url: _.url,
+              usage: _(_.extension),
+            };
+        }
+        const _ = _.encodings[0];
+        return _
+          ? {
+              url: _.url,
+              usage: _(_.extension),
+            }
+          : null;
+      }
       function _(_) {
-        const _ = _.encodings?.[0];
-        return _ ? _.url : null;
+        switch (_) {
+          case "mp4":
+          case "webm":
+            return 1;
+        }
+        return 0;
       }
       function _(_, _) {
-        if (!_?.languages || 0 == _.languages.length) return null;
-        if (1 == _.languages.length) return _.languages._(0);
-        let _ = _.languages.find((_) => (0, _._)(_.language) == _);
+        if (!_ || 0 == _.length) return null;
+        if (1 == _.length) return _._(0);
+        let _ = _.find((_) => (0, _._)(_.language) == _);
         if (_) return _;
         const _ = 29 == _ ? 6 : 0;
         return (
-          (_ = _.languages.find((_) => (0, _._)(_.language) == _)), _ || null
+          (_ = _.find((_) => (0, _._)(_.language) == _)),
+          _ || (-1 == _ ? _[0] : null)
         );
       }
       function _(_, _ = 0) {
-        if (_(_)) return _.url;
-        const _ = _(_, _);
-        return _ ? _(_) : null;
+        const _ = _(_, !1, _);
+        return _ ? _.url : null;
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (!_) return;
+        if (_(_))
+          return {
+            url: _.url,
+            usage: 0,
+          };
+        const _ = _(_.images, __webpack_require__);
+        return _ ? _(_, _) : null;
       }
       function _(_, _ = 0) {
+        if (!_) return;
         if (_(_)) return _.name;
-        const _ = _(_, _);
+        const _ = _(_.text, _);
         return _ ? _.alt_text : null;
       }
       function _(_) {
@@ -2739,7 +2820,8 @@
       function _(_) {
         return `{STEAM_APP_IMAGE}/extras/${_}`;
       }
-      const _ = "image/png, image/jpeg, image/gif";
+      const _ =
+        "image/png, image/jpeg, image/gif, image/webp, video/mp4, video/webm";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4843,8 +4925,9 @@
             const _ = _.useRef(void 0);
             if (!_.current) {
               const _ = (_) => {
-                const _ = _.current.find((_) => (0, _._)(_) === _);
-                return (0, _._)(_, _.current);
+                const _ = _.current.find((_) => (0, _._)(_) === _),
+                  _ = (0, _._)(_, !0, _.current)?.url;
+                return _;
               };
               _.current =
                 ((_ = _),
@@ -5573,6 +5656,7 @@
         return _.createElement(_, {
           tagImage: _.createElement(_.Moo, {
             className: (0, _._)(_.Tilt, _.SmallerSVG),
+            role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -5588,6 +5672,7 @@
           },
           _.createElement(_.Kz1, {
             className: (0, _._)(_.PurchaseNoticeImage),
+            role: "presentation",
           }),
           _.createElement(
             "div",
@@ -5634,6 +5719,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             }),
             _ = _ || _;
           _.push(
@@ -5652,6 +5738,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -5682,6 +5769,7 @@
               className: _.SmallerSVG,
               controllerType: 45,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -5731,6 +5819,7 @@
                   className: _.SmallerSVG,
                   controllerType: 32,
                   partial: !_,
+                  role: "presentation",
                 }),
                 strLocalizationToken: _
                   ? "#Store_ControllerSupport_Xbox_Personalized"
@@ -5744,6 +5833,7 @@
                   tagImage: _.createElement(_.kdM, {
                     className: _.BiggerSVG,
                     bGreyOutRightSide: !_,
+                    role: "presentation",
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
@@ -5753,6 +5843,7 @@
                 _.createElement(_, {
                   tagImage: _.createElement(_.vet, {
                     className: _.BiggerSVG,
+                    role: "presentation",
                   }),
                   strLocalizationToken:
                     _ || _ || _
@@ -5852,6 +5943,7 @@
             _.createElement(
               _._,
               {
+                labelId: null,
                 value: _(),
                 onChange: (_) => {
                   const _ = _.find((_) => _._ == _);
@@ -5959,6 +6051,7 @@
             _.createElement(
               _._,
               {
+                labelId: null,
                 value: _(),
                 onChange: _,
               },
@@ -6198,6 +6291,7 @@
             _.createElement(
               _._,
               {
+                labelId: null,
                 value: _,
                 onChange: (_) => {
                   const _ = _.find((_) => _._ == _);
@@ -17579,6 +17673,7 @@
             break;
           case "Library Capsule":
           case "Vertical Capsule":
+          case "Library Header":
             _ = ["BigLogo", "NoAdditionalText"];
             break;
           case "Library Hero":
@@ -18517,12 +18612,8 @@
                       "Mod-b": (0, _._)(__webpack_require__.strong),
                       "Mod-i": (0, _._)(__webpack_require__.italic),
                       "Mod-u": (0, _._)(__webpack_require__.underline),
-                      "Mod-Shift-x": (0, _._)(
-                        __webpack_require__.strikethrough,
-                      ),
-                      "Ctrl-Shift-s": (0, _._)(
-                        __webpack_require__.strikethrough,
-                      ),
+                      "Mod-Shift-x": (0, _._)(__webpack_require__.strike),
+                      "Ctrl-Shift-s": (0, _._)(__webpack_require__.strike),
                       Enter: (0, _._)(_.list_item),
                       "Mod-[": (0, _._)(_.list_item),
                       "Mod-]": (0, _._)(_.list_item),

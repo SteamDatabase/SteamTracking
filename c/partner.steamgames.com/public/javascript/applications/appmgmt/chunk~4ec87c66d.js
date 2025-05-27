@@ -11030,6 +11030,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31670,7 +31671,7 @@
                   null,
                   "If you’d like to offer a discount on your title throughout the ",
                   _._.Get().GetCurEventTitle(),
-                  " event, you'll need to enter your discounts before the event begins on ",
+                  " event, you'll need to enter your offer before the event begins on ",
                   _.createElement(
                     "span",
                     null,
@@ -31690,10 +31691,10 @@
                     },
                     _.createElement("span", null, "discount dashboard"),
                   ),
-                  " to check your eligible games and enter your discounts.",
+                  " to check your eligible games and enter your desired amount.",
                   _.createElement("br", null),
                   _.createElement("br", null),
-                  "Remember, all discounts are subject to the same cooldown between discounts, with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
+                  "Remember, all discounts are subject to the same cooldown period with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
                   _.createElement(
                     "a",
                     {
@@ -31701,7 +31702,7 @@
                     },
                     _.createElement("span", null, "Discounting documentation"),
                   ),
-                  ". If you wish, you may delete conflicting custom discounts you had planned. It's up to you to choose which discount events you participate in.",
+                  ". If you wish, you may delete conflicting custom offers you had planned. It's up to you to choose which events you participate in.",
                 ));
               break;
             case _._.k_EnterDiscountReminder:
@@ -31726,7 +31727,7 @@
                     },
                     _.createElement("span", null, "discount dashboard"),
                   ),
-                  " to check your eligible games and enter your discounts.",
+                  " to check your eligible games and enter your desired amounts.",
                 ));
               break;
             case _._.k_LearnMore:
@@ -31783,7 +31784,7 @@
                         {
                           href: _,
                         },
-                        _,
+                        (0, _._)("#OptIn_EmailSection_Register_Body_2_var1"),
                       ),
                     ),
                   ),
@@ -32110,7 +32111,7 @@
                 ));
               break;
             case _._.k_NextFestMediaUsageIntendedTrailer:
-              (_ = "WE NEED TO KNOW IF YOU ARE STILL IN"),
+              (_ = "We need to know if you won’t be able to participate"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -32119,7 +32120,29 @@
                     {
                       className: _().SectionBody,
                     },
-                    "Your game is on our shortlist for the official event trailer, so we need to know ASAP If your plans have changed and you won't be able to participate.",
+                    "Your game’s trailer is among the finalists that we are selecting from to build the official Steam Next Fest June Edition trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SectionBody,
+                    },
+                    "Before we make the final cut of the trailer, we need to make sure we know that you’ll still be participating in this edition of Next Fest.",
+                    _.createElement("br", null),
+                    _.createElement(
+                      "ul",
+                      null,
+                      _.createElement(
+                        "li",
+                        null,
+                        "If you are still planning to participate, then no action is necessary",
+                      ),
+                      _.createElement(
+                        "li",
+                        null,
+                        "If your plans have changed and you won’t be able to participate, please see 'Need to opt out or cancel?' below.",
+                      ),
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -32150,7 +32173,16 @@
                     {
                       className: _().SectionBody,
                     },
-                    "Of course, participation in this edition of Steam Next Fest with a playable demo is required in order to be featured. If you can no longer participate for any reason please follow the instructions below.",
+                    "Of course, participation in this edition of Steam Next Fest with a playable demo is required in order to be featured. Please see ",
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer",
+                        target: "_blank",
+                      },
+                      "full elegibility critera",
+                    ),
+                    " to make sure you've got everything covered. If you can no longer participate for any reason please follow the instructions below.",
                   ),
                   _.createElement(
                     "div",
@@ -38897,6 +38929,7 @@
                   }),
               ),
             );
+          const _ = _.useId();
           return _.createElement(
             "div",
             null,
@@ -38904,6 +38937,7 @@
               _.createElement(
                 "div",
                 {
+                  _: _,
                   className: _.ListTitle,
                 },
                 _,
@@ -38911,6 +38945,7 @@
             _.createElement(
               _._,
               {
+                labelId: _,
                 value: _.length > 0 ? _[0] : null,
                 onChange: (_) => _([_]),
               },
@@ -48964,7 +48999,9 @@
           } = _,
           [_, _] = (0, _._)(_, {
             include_all_purchase_options: !0,
-          });
+          }),
+          _ = _.useId(),
+          _ = _.useId();
         if (2 === _) return null;
         if (!_)
           return _.createElement(_._, {
@@ -49021,18 +49058,23 @@
               _.createElement(
                 "div",
                 {
+                  _: _,
                   className: "DialogLabel",
                 },
                 (0, _._)("#DailyDeals_Featured_title"),
               ),
               _.createElement(
                 "div",
-                null,
+                {
+                  _: _,
+                },
                 (0, _._)("#DailyDeals_Featured_Desc"),
               ),
               _.createElement(
                 _._,
                 {
+                  labelId: _,
+                  descriptionId: _,
                   value: (0, _._)(__webpack_require__),
                   onChange: (_) => _((0, _._)(_)),
                 },
@@ -60051,6 +60093,36 @@
               }),
               _.createElement(
                 _._,
+                {
+                  onClick: (_) => {
+                    (0, _._)(
+                      _.createElement(
+                        _._,
+                        {
+                          bAllowFullSize: !0,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            style: {
+                              width: "90vw",
+                              maxWidth: "90%",
+                              margin: "0 auto",
+                            },
+                          },
+                          _.createElement(_._, {
+                            gid: _,
+                          }),
+                        ),
+                      ),
+                      (0, _._)(_),
+                    );
+                  },
+                },
+                "Expand",
+              ),
+              _.createElement(
+                _._,
                 null,
                 "Carousel index seen at by users:",
                 _.createElement(
@@ -60073,6 +60145,27 @@
               }),
               _.createElement(_, {
                 oEditableMessage: _,
+              }),
+              _.createElement(
+                _._,
+                null,
+                "Clicked by users:",
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: "Stats computed hourly",
+                  },
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().tooltip_Ctn,
+                    },
+                    "?",
+                  ),
+                ),
+              ),
+              _.createElement(_._, {
+                gid: _,
               }),
               _.createElement(
                 _._,
@@ -61424,6 +61517,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -61644,6 +61738,108 @@
               position: "center",
             });
       }
+      function _(_) {
+        const { gid: _, templateType: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          [_, _, _] = (0, _.useMemo)(() => {
+            if (!_) return [0, 0, []];
+            const _ = _(_, __webpack_require__);
+            let _ = 0,
+              _ = 0;
+            return (
+              _.forEach((_) => {
+                _.clicked_count > _ && (_ = _.clicked_count),
+                  (_ += _.clicked_count);
+              }),
+              [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
+            );
+          }, [_, __webpack_require__]);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _.DashStatsContainer,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.Chart,
+                },
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    Data: _,
+                    nPeak: _,
+                    field: "clicked_count",
+                  }),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Stats,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CurrentStats,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatsTitle,
+                    },
+                    (0, _._)(_),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatSubtitle,
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: _.Now,
+                      },
+                      "Total Clicks",
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PeakStats,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatsTitle,
+                    },
+                    (0, _._)(_),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.StatSubtitle,
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: _.Concurrent,
+                      },
+                      "Peak Hourly Clicks",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : _.createElement(_._, {
+              string: "Loading Stats",
+              size: "medium",
+              position: "center",
+            });
+      }
       function _(_, _) {
         const _ = new Map();
         return (
@@ -61667,28 +61863,7 @@
           _ = (0, _._)()?.rgClicks,
           [_, _, _] = (0, _.useMemo)(() => {
             if (!_) return [0, 0, []];
-            const _ = (function (_, _) {
-              const _ = new Map();
-              return (
-                _.forEach((_) => {
-                  (_ && _.template_type != _) ||
-                    (__webpack_require__.has(_.rt_time_hour)
-                      ? __webpack_require__.set(
-                          _.rt_time_hour,
-                          __webpack_require__.get(_.rt_time_hour) +
-                            _.clicked_count,
-                        )
-                      : __webpack_require__.set(
-                          _.rt_time_hour,
-                          _.clicked_count,
-                        ));
-                }),
-                Array.from(_).map((_) => ({
-                  rt_time_hour: _[0],
-                  clicked_count: _[1],
-                }))
-              );
-            })(_, _);
+            const _ = _(_, _);
             let _ = 0,
               _ = 0;
             return (
@@ -61784,6 +61959,24 @@
               size: "medium",
               position: "center",
             });
+      }
+      function _(_, _) {
+        const _ = new Map();
+        return (
+          _.forEach((_) => {
+            (_ && _.template_type != _) ||
+              (__webpack_require__.has(_.rt_time_hour)
+                ? __webpack_require__.set(
+                    _.rt_time_hour,
+                    __webpack_require__.get(_.rt_time_hour) + _.clicked_count,
+                  )
+                : __webpack_require__.set(_.rt_time_hour, _.clicked_count));
+          }),
+          Array.from(_).map((_) => ({
+            rt_time_hour: _[0],
+            clicked_count: _[1],
+          }))
+        );
       }
       const _ = _.memo((_) => {
         const { Data: _, nPeak: __webpack_require__, field: _ } = _;
@@ -69876,16 +70069,24 @@
                 : "weekenddeal"
             );
             var _;
-          });
+          }),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
             className: _().CuratedPromoFinderCtn,
           },
-          _.createElement(_._, null, "Upcoming Featuring Finder"),
           _.createElement(
             _._,
             {
+              _: _,
+            },
+            "Upcoming Featuring Finder",
+          ),
+          _.createElement(
+            _._,
+            {
+              labelId: _,
               value: _,
               onChange: (_) => {
                 _(_);
@@ -72703,7 +72904,8 @@
             setPartnerID: _,
           } = _,
           _ = (0, _._)(_, __webpack_require__),
-          [_] = (0, _._)(_, __webpack_require__, {});
+          [_] = (0, _._)(_, __webpack_require__, {}),
+          _ = _.useId();
         if (
           (_.useEffect(() => {
             0 == _ && _?.length > 0 && _(_[0].partner_id);
@@ -72778,12 +72980,15 @@
                   null,
                   _.createElement(
                     "div",
-                    null,
+                    {
+                      _: _,
+                    },
                     "Choose Partner for Discount Event:",
                   ),
                   _.createElement(
                     _._,
                     {
+                      labelId: _,
                       value: _,
                       onChange: (_) => _(_),
                     },

@@ -258,6 +258,7 @@
         Hover: "_2Zd3311XV6d_wOGB8C9H4D",
         HoverImage: "_2ZYpYXOs7Rs6UqKCGlQffu",
         HoverTime: "qSkn0N2OLSYYw4IxDl6LF",
+        FatalErrorMessage: "_1pJhZ_qwY_Idku2_lkVQZM",
       };
     },
     chunkid: (module) => {
@@ -280,6 +281,8 @@
         GamepadCarousel: "_3ADDqqKx55ugBLEOJm6pqJ",
         Fullscreen: "_1ZiAH8gp-JZJAodTjQipQP",
         CarouselItem: "_2jIJye_-HmWo1Thf6yuIpF",
+        SingleFileTrailer: "_2YInI0ugDsx_gBvN3MAaBI",
+        Screenshot: "_21tCdmh0lupqHu_ExgZBQH",
       };
     },
     chunkid: (module) => {
@@ -1625,7 +1628,9 @@
             {
               className: _.LatestUpdateIcon,
             },
-            _.createElement(_.UTF, null),
+            _.createElement(_.UTF, {
+              role: "presentation",
+            }),
           ),
           _.createElement(
             _._,
@@ -2329,6 +2334,7 @@
         m_bUserInputNeeded = !1;
         m_bMuted = !1;
         m_nVolume = 1;
+        m_eFailureReason = _._.Invalid;
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
@@ -2444,8 +2450,9 @@
           console.log("video end detected"),
             this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
         }
-        OnDownloadFailed() {
-          console.log("video download failed");
+        OnDownloadFailed(_) {
+          console.log("video download failed", _.detail),
+            (this.m_eFailureReason = _.detail || _._.PlaybackError);
         }
         OnUserInputNeeded() {
           this.m_bUserInputNeeded = !0;
@@ -2510,6 +2517,9 @@
         SetVideoRepresentation(_) {
           this.IsInitialized() && this.m_player.SetVideoRepresentation(_);
         }
+        GetFailureReason() {
+          return this.m_eFailureReason;
+        }
       }
       function _(_, _, _) {
         let _ = (0, _.useContext)(_),
@@ -2535,6 +2545,7 @@
         (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
         (0, _._)([_._], _.prototype, "m_bMuted", void 0),
         (0, _._)([_._], _.prototype, "m_nVolume", void 0),
+        (0, _._)([_._], _.prototype, "m_eFailureReason", void 0),
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
@@ -3178,6 +3189,25 @@
         };
       }
       function _(_) {
+        let { player: _ } = _,
+          _ = (function (_) {
+            return (0, _._)(() => _.GetFailureReason());
+          })(_),
+          _ = "";
+        return (
+          _ != _._.Invalid && (_ = (0, _._)("#TrailerPlayer_Error_Playback")),
+          _
+            ? _.createElement(
+                "div",
+                {
+                  className: _().FatalErrorMessage,
+                },
+                _.createElement("span", null, _),
+              )
+            : null
+        );
+      }
+      function _(_) {
         let { player: _, fullscreen: __webpack_require__ } = _,
           _ = (0, _.useRef)(),
           _ = (0, _.useRef)(),
@@ -3695,6 +3725,9 @@
               player: _,
               screenshot: _,
             }),
+            _.createElement(_, {
+              player: _,
+            }),
           )
         );
       }
@@ -3928,6 +3961,7 @@
         return _.createElement(_, {
           tagImage: _.createElement(_.Moo, {
             className: (0, _._)(_.Tilt, _.SmallerSVG),
+            role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -3943,6 +3977,7 @@
           },
           _.createElement(_.Kz1, {
             className: (0, _._)(_.PurchaseNoticeImage),
+            role: "presentation",
           }),
           _.createElement(
             "div",
@@ -3989,6 +4024,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             }),
             _ = _ || _;
           _.push(
@@ -4007,6 +4043,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -4037,6 +4074,7 @@
               className: _.SmallerSVG,
               controllerType: 45,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -4086,6 +4124,7 @@
                   className: _.SmallerSVG,
                   controllerType: 32,
                   partial: !_,
+                  role: "presentation",
                 }),
                 strLocalizationToken: _
                   ? "#Store_ControllerSupport_Xbox_Personalized"
@@ -4099,6 +4138,7 @@
                   tagImage: _.createElement(_.kdM, {
                     className: _.BiggerSVG,
                     bGreyOutRightSide: !_,
+                    role: "presentation",
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
@@ -4108,6 +4148,7 @@
                 _.createElement(_, {
                   tagImage: _.createElement(_.vet, {
                     className: _.BiggerSVG,
+                    role: "presentation",
                   }),
                   strLocalizationToken:
                     _ || _ || _
@@ -5708,11 +5749,12 @@
         );
       }
       function _(_) {
-        let { screenshot: _ } = _;
+        let { screenshot: _ } = _,
+          _ = (0, _._)(_.CarouselItem, _.Screenshot);
         return _.createElement(
           _._,
           {
-            className: _.CarouselItem,
+            className: _,
             focusable: !0,
             onOKActionDescription: "",
           },
@@ -5839,11 +5881,12 @@
             : "#TrailerPlayer_Mute_Tooltip",
           _ = _.bPaused
             ? "#TrailerPlayer_Play_Tooltip"
-            : "#TrailerPlayer_Pause_Tooltip";
+            : "#TrailerPlayer_Pause_Tooltip",
+          _ = (0, _._)(_.CarouselItem, _.SingleFileTrailer);
         return _.createElement(
           _._,
           {
-            className: _.CarouselItem,
+            className: _,
             onActivate: _,
             onOKActionDescription: (0, _._)(_),
             ..._,

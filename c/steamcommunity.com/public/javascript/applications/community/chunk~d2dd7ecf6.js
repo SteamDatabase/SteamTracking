@@ -125,6 +125,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -1260,6 +1261,7 @@
                   _.createElement("img", {
                     ..._,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 _.createElement(
@@ -1345,6 +1347,7 @@
               _.createElement("img", {
                 className: _().AppCapsuleImage,
                 src: _.GetAssets().GetSmallCapsuleURL(),
+                alt: _.GetName(),
               }),
             ),
             Boolean(!__webpack_require__ && !_.BIsFree()) &&
@@ -1430,6 +1433,7 @@
                   _.createElement("img", {
                     src: _,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -2343,9 +2347,8 @@
             ),
             _.createElement(_, {
               imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
+              fnOnUploadImageRequested: async () =>
+                await _.UploadAllImages(_, _, _, _ && _.file_type),
             }),
           )
         );
@@ -2407,7 +2410,7 @@
         );
       }
       const _ = (0, _._)(function (_) {
-        var _, _, _;
+        var _, _, _, _, _;
         const { asset: _, fnOnRemove: _, languageRealms: _ } = _,
           _ =
             null === (_ = _.ImageOptions) || void 0 === _
@@ -2462,12 +2465,12 @@
               )
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
         let _ = null;
         const _ = _.GetCurrentImageOption();
         _ &&
@@ -2506,11 +2509,38 @@
             }),
           Boolean((null == _ ? void 0 : _.length) > 1) &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            (null === (_ = _.warnings) || void 0 === _
+              ? void 0
+              : _.map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: _().UploadPreviewWarning,
+                    },
+                    _,
+                  ),
+                )),
+          _ &&
+            (null === (_ = _.messages) || void 0 === _
+              ? void 0
+              : _.map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: _().UploadPreviewMessage,
+                    },
+                    _,
+                  ),
+                )),
           _.createElement(
             "div",
             {
@@ -2535,7 +2565,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2543,37 +2574,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });

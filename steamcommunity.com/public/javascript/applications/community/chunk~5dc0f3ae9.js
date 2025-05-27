@@ -216,6 +216,8 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
+        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     18654: (e) => {
@@ -8295,11 +8297,10 @@
       const l = i.createContext({ bForceShowCompatInfo: !1, bSteamDeck: !1 }),
         c = () => i.useContext(l);
       function m() {
-        const { bForceShowCompatInfo: e, bSteamDeck: t } = c(),
-          r = (0, o.Qn)();
-        return o.TS.ON_STEAMOS && r && !t
+        const { bForceShowCompatInfo: e, bSteamDeck: t } = c();
+        return o.TS.ON_STEAMOS && !t
           ? [!0, 2]
-          : e || (o.TS.ON_DECK && r)
+          : o.TS.ON_STEAMOS || e
             ? [!0, 1]
             : [!1, 0];
       }
@@ -13756,24 +13757,45 @@
         const { category: t } = e;
         switch (t) {
           case 3:
-            return i.createElement(B.o5Q, { className: w().CategoryIcon });
+            return i.createElement(B.o5Q, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
           case 2:
-            return i.createElement(B.aVR, { className: w().CategoryIcon });
+            return i.createElement(B.aVR, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
           case 1:
-            return i.createElement(B.jIP, { className: w().CategoryIcon });
+            return i.createElement(B.jIP, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
           case 0:
-            return i.createElement(B.WX$, { className: w().CategoryIcon });
+            return i.createElement(B.WX$, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
         }
       }
       function H(e) {
         const { category: t } = e;
         switch (t) {
           case 2:
-            return i.createElement(B.ZjT, { className: w().CategoryIcon });
+            return i.createElement(B.ZjT, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
           case 1:
-            return i.createElement(B.jIP, { className: w().CategoryIcon });
+            return i.createElement(B.jIP, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
           case 0:
-            return i.createElement(B.WX$, { className: w().CategoryIcon });
+            return i.createElement(B.WX$, {
+              className: w().CategoryIcon,
+              role: "presentation",
+            });
         }
       }
       function j(e) {

@@ -5355,11 +5355,6 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  trace_tag: {
-                    _: 21,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   webapi_key_id: {
                     _: 25,
                     _: _._.readUint32,
@@ -5453,6 +5448,11 @@ var CLSTAMP = "steamdb";
                     _: 44,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  trace_tag: {
+                    _: 45,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),
@@ -38378,6 +38378,16 @@ var CLSTAMP = "steamdb";
                     _: 32,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  contextid: {
+                    _: 33,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  assetid: {
+                    _: 34,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),

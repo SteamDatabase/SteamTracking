@@ -408,7 +408,9 @@
             {
               className: _.LatestUpdateIcon,
             },
-            _.createElement(_.UTF, null),
+            _.createElement(_.UTF, {
+              role: "presentation",
+            }),
           ),
           _.createElement(
             _._,

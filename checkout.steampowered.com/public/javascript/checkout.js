@@ -1943,92 +1943,92 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'konbini' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Konbini transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Konbini transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Konbini customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from Degica will also be sent to you with the details of your Konbini.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the KOMOJU website as you complete your transaction.  An email from KOMOJU will also be sent to you with the details of your Konbini.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'credit_card_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Credit Card transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Credit Card transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Domestic Credit Card customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bank_transfer_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank transfer transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank transfer transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Transfer customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'payeasy' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Pay Easy transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pay Easy transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pay Easy customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'webmoney_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'WebMoney transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'WebMoney transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WebMoney customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'webmoney_japan_steam_card' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Steam Prepaid Card transactions are authorized by WebMoney through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Steam Prepaid Card transactions are authorized by WebMoney through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Steam Prepaid Card customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bitcash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'BitCash transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'BitCash transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BitCash customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'netcash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'NetCash transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'NetCash transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for NetCash customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'nanaco' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Nanaco transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Nanaco transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Nanaco customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'zong' )
@@ -2043,52 +2043,52 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'culturevoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Culture Voucher customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your cultureland account details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by entering your cultureland account details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'happymoneyvoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Happymoney Voucher transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Happymoney Voucher transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Happymoney Voucher customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'toss' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Toss transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Toss transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Toss customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your Toss payment details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by entering your Toss payment details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'payco' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PAYCO transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PAYCO transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PAYCO customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by scanning the QR code with your PAYCO application.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by scanning the QR code with your PAYCO application.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'mobile_wallet_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile Wallet transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile Wallet transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Mobile Wallet customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your mobile wallet payment details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by entering your mobile wallet payment details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'eclubpoints' )
@@ -2283,12 +2283,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'korean_mobile' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile Payment transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile Payment transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Mobile Payment customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'naranja' )
@@ -2663,32 +2663,32 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'linepay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'LINE Pay transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'LINE Pay transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for LINE Pay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'merpay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Merpay transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Merpay transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Merpay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'paypay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPay transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPay transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'alfaclick' )
@@ -2743,12 +2743,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'aupay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'au PAY transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'au PAY transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for au PAY customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'alipayhk' )
@@ -2763,12 +2763,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'naverpay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'NaverPay transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'NaverPay transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for NaverPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'linkaja' )
@@ -2843,22 +2843,22 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'upi' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'UPI transactions are authorized through the Komodo website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Komodo';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'UPI transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for UPI customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Komodo website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'rupay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'RuPay transactions are authorized through the Komodo website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Komodo';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'RuPay transactions are authorized through the KOMOJU website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to KOMOJU';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for RuPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Komodo website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the KOMOJU website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
       }
@@ -5780,7 +5780,7 @@ function DisplayPendingReceiptPage()
 		case 'bank_transfer_japan':
 		case 'payeasy':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">KOMOJU</a>.';
 			break;
 
 		case 'eclubpoints':

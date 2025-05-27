@@ -4912,22 +4912,30 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 ._28IrQlNugT300MZ5kfI5Xv._27BgMawG26a5WuzkrlgUeF {
   box-shadow: 0 0 20px 5px #48abe04f;
 }
-._1hqaxq1Bu0NJlHYpJjzvnM {
+._2vw-5sdiSgMFoLayGMH1PT,
+._3CcSTb3GIn-bxUOt7KyywI {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.25em;
-  gap: .75em;
+  gap: 1rem;
+}
+._2vw-5sdiSgMFoLayGMH1PT ._1hqaxq1Bu0NJlHYpJjzvnM {
+  display: grid;
+  grid-template-columns: minmax(0, 35%) auto;
+  align-items: start;
+  gap: 1.25rem;
+}
+._3CcSTb3GIn-bxUOt7KyywI ._1hqaxq1Bu0NJlHYpJjzvnM {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 .W21F8c7j9huN7-oSTInbQ {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
-  font-weight: 800;
-  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
 }
 ._1OGR6oUuIjxqO5dezch_OQ {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  color: #8b929a;
 }
 
 ._2DwHnbQk_PGfGThmz17qKu {
@@ -5045,22 +5053,24 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   background-color: #8a2be2;
 }
 .PzQp3t3y61lCOWbGACZqy {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.PzQp3t3y61lCOWbGACZqy._3TKdKvs7o8kbqWUcJyPuyo {
   font-size: 24px;
-  line-height: 28px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.PzQp3t3y61lCOWbGACZqy._2BZyC-dmzrlUCPfHClu51J {
+  font-size: 26px;
+  line-height: 32px;
   font-weight: 600;
 }
 .PzQp3t3y61lCOWbGACZqy._2XQ2s4PGGXTf-33SoML_Nn {
-  font-size: 24px;
-  line-height: 28px;
-}
-.PzQp3t3y61lCOWbGACZqy._2BZyC-dmzrlUCPfHClu51J {
   font-size: 30px;
-  line-height: 34px;
-}
-.PzQp3t3y61lCOWbGACZqy._3TKdKvs7o8kbqWUcJyPuyo {
-  font-size: 34px;
-  line-height: 38px;
-  font-weight: 900;
+  line-height: 36px;
+  font-weight: 800;
 }
 .PzQp3t3y61lCOWbGACZqy._3Bz6jMGpR_Vr3p7g3paBao {
   text-align: left;
@@ -5072,9 +5082,9 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   text-align: center;
 }
 ._2cbokCRMR_rzjYjDIlQERN {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
-  font-weight: 600;
+  font-weight: 500;
 }
 ._2cbokCRMR_rzjYjDIlQERN._3Bz6jMGpR_Vr3p7g3paBao {
   text-align: left;
@@ -5085,6 +5095,10 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 ._2cbokCRMR_rzjYjDIlQERN.woD-PhBCDg6E0eRDR9JaP {
   text-align: center;
 }
+.r3oaGi8Z4_MjYvdW_zsl5 {
+  font-size: 16px;
+  font-weight: 400;
+}
 .r3oaGi8Z4_MjYvdW_zsl5._3Bz6jMGpR_Vr3p7g3paBao {
   text-align: left;
 }
@@ -5093,6 +5107,10 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 .r3oaGi8Z4_MjYvdW_zsl5.woD-PhBCDg6E0eRDR9JaP {
   text-align: center;
+}
+
+._1OfOnnPi_1tjY-hFpLV1x7 {
+  padding: 0px;
 }
 ._2Ars_QZL3AKTZg52VUb9kA {
   position: absolute;

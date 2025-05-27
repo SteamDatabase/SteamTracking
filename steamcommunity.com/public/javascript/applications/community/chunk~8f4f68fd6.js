@@ -1419,6 +1419,16 @@
                     bw: c.gp.writeString,
                   },
                   sealed: { n: 32, br: c.qM.readBool, bw: c.gp.writeBool },
+                  contextid: {
+                    n: 33,
+                    br: c.qM.readUint64String,
+                    bw: c.gp.writeUint64String,
+                  },
+                  assetid: {
+                    n: 34,
+                    br: c.qM.readUint64String,
+                    bw: c.gp.writeUint64String,
+                  },
                 },
               }),
             g.sm_m

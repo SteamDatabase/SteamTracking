@@ -4566,6 +4566,16 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  contextid: {
+                    _: 33,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  assetid: {
+                    _: 34,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
                 },
               }),
             _.sm_m

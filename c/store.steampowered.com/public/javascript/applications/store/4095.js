@@ -7,6 +7,8 @@
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
         TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -358,6 +360,8 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
+        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     chunkid: (module) => {
@@ -5447,7 +5451,7 @@
                 {
                   className: (0, _._)({
                     [_().ExpandSectionBlock]: !0,
-                    [_.style]: !0,
+                    [_.style]: null != _.style,
                     [_().ExpandSectionExpanded]: __webpack_require__,
                     [_().ExpandSectionCollapsed]: !__webpack_require__,
                     BBCodeExpanded: __webpack_require__,
@@ -6277,8 +6281,11 @@
       }
       function _(_, _, _) {
         let _ = _(_),
-          _ = _ + ((1e3 * _.GetStartTime()) % _);
+          _ = _(_, _, _);
         return Math.floor(_ / _) + _.segmentTemplate.nStartNumber;
+      }
+      function _(_, _, _) {
+        return _ + ((1e3 * _.GetStartTime()) % _);
       }
       function _(_) {
         return _(_.segmentTemplate.strInitialization, _.strID, 0);
@@ -6459,7 +6466,12 @@
             )
               return (0, _._)("MPD - Representation Audio Data Missing"), null;
           } else if (_.bContainsThumbnails) {
-            if ("image/jpeg" != (_ = _.strMimeType) && "image/jpg" != _)
+            if (
+              ((_ = _.strMimeType),
+              !["image/jpeg", "image/jpg", "image/avif", "image/webp"].includes(
+                _,
+              ))
+            )
               return (
                 (0, _._)(
                   "MPD - Representation Thumbnail MimeType not supported",
@@ -6848,11 +6860,13 @@
           );
         }
         GetMaxSegment() {
-          if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
-          {
-            let _ = this.m_mpd.GetEndTime() - this.m_mpd.GetStartTime();
-            return _(this.m_mpd, this.m_representation, 1e3 * _);
-          }
+          return (function (_, _) {
+            if (_.IsLiveContent()) return Number.MAX_VALUE;
+            let _ = 1e3 * (_.GetEndTime() - _.GetStartTime()),
+              _ = _(_),
+              _ = _(_, _, _);
+            return Math.ceil(_ / _) + _.segmentTemplate.nStartNumber - 1;
+          })(this.m_mpd, this.m_representation);
         }
         GetAmountBufferedInPlayerMS(_) {
           if (!this.m_sourceBuffer) return 0;
@@ -7277,7 +7291,8 @@
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.StreamGone = 1)] = "StreamGone");
+            (_[(_.StreamGone = 1)] = "StreamGone"),
+            (_[(_.PlaybackError = 2)] = "PlaybackError");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Absolute = 0)] = "Absolute"),
@@ -7362,12 +7377,12 @@
               this.BCreateLoaders()
                 ? (this.InitVideoControl(), this.InitTimedText(_))
                 : this.CloseWithError(
-                    "playbackerror",
+                    _.PlaybackError,
                     "Failed to create segment loaders",
                   );
             } else
               this.CloseWithError(
-                "playbackerror",
+                _.PlaybackError,
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
@@ -7497,7 +7512,7 @@
             if (_ && 410 == _.status)
               return (
                 this.CloseWithError(
-                  "playbackerror",
+                  _.PlaybackError,
                   "Failed to download MPD: 410 Gone",
                 ),
                 null
@@ -7525,12 +7540,14 @@
                     this.UpdateMPD,
                   ))
               : this.CloseWithError(
-                  "playbackerror",
+                  _.PlaybackError,
                   "Failed to parse on Update the MPD file",
                 ));
         }
         CloseWithError(_, ..._) {
-          this.Close(), (0, _._)(..._);
+          this.DispatchEvent("valve-downloadfailed", _),
+            this.Close(),
+            (0, _._)(..._);
         }
         BCreateLoaders() {
           let _ = this.m_mpd.GetPeriods();
@@ -9576,6 +9593,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: _,
           },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
           spotlight_art: {
             width: 306,
             height: 260,
@@ -9924,7 +9947,7 @@
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (_[(_.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (_[(_.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
-          (_[(_.k_EEventStatsUnlisted = 3)] = "k_EEventStatsUnlisted");
+          (_[(_.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
       })(_ || (_ = {}));
       const _ = "bordered";
       var _, _, _, _, _, _;
@@ -10609,7 +10632,7 @@
         BIsVisibleEvent() {
           let _ = Math.floor(_._.GetTimeNowWithOverride());
           return (
-            this.visibility_state == _.k_EEventStatsUnlisted ||
+            this.visibility_state == _.k_EEventStateUnlisted ||
             (this.visibility_state == _.k_EEventStateVisible &&
               _ > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || _ < this.visibilityEndTime))
@@ -10619,7 +10642,7 @@
           return this.visibility_state == _.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == _.k_EEventStatsUnlisted;
+          return this.visibility_state == _.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -11496,11 +11519,10 @@
         }),
         _ = () => _.useContext(_);
       function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _(),
-          _ = (0, _._)();
-        return _._.ON_STEAMOS && _ && !_
+        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _();
+        return _._.ON_STEAMOS && !_
           ? [!0, 2]
-          : _ || (_._.ON_DECK && _)
+          : _._.ON_STEAMOS || _
             ? [!0, 1]
             : [!1, 0];
       }
@@ -13963,10 +13985,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _?.map((_) => {
           const _ = _._[_];
+          (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
           return {
             sKey: _,
             width: _.width,
@@ -14305,6 +14329,7 @@
             (this.width = _),
             (this.dataUrl = _);
         }
+        GetImageOptionLabel() {}
       }
       (0, _._)([_._], _.prototype, "dataUrl", void 0),
         (0, _._)([_._], _.prototype, "width", void 0),
@@ -17638,6 +17663,7 @@
               _ &&
               Array.isArray(_) &&
               _.length > 0 &&
+              _[0] &&
               "object" == typeof _[0]
             ) &&
             ("string" == typeof _[0].gid ||
@@ -17919,7 +17945,7 @@
               }),
               _.published
                 ? _.unlisted
-                  ? (_.visibility_state = _._.k_EEventStatsUnlisted)
+                  ? (_.visibility_state = _._.k_EEventStateUnlisted)
                   : _.hidden
                     ? (_.visibility_state = _._.k_EEventStateStaged)
                     : (_.visibility_state = _._.k_EEventStateVisible)
@@ -20899,18 +20925,22 @@
           case 3:
             return _.createElement(_.o5Q, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 2:
             return _.createElement(_.aVR, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }
@@ -20920,14 +20950,17 @@
           case 2:
             return _.createElement(_.ZjT, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }

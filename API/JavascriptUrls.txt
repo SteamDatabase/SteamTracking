@@ -140,6 +140,7 @@ ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
+${COMMUNITY_BASE_URL}${}?${}
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
@@ -261,8 +262,8 @@ ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
-${COMMUNITY_BASE_URL}market/search?${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
+${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
@@ -2019,6 +2020,7 @@ ${g_szBaseURL}/apps/savestat/${appid}
 ${g_szBaseURL}/apps/setcommunityfriendlyname/${appid}
 ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
+${g_szBaseURL}/apps/setdontrecordcoplay/${appid}
 ${g_szBaseURL}/apps/setdrmguid/${appid}
 ${g_szBaseURL}/apps/seteconomyinfo/${appid}
 ${g_szBaseURL}/apps/setinstallscriptoverride/${appid}
@@ -2794,6 +2796,7 @@ https://partner.steamgames.com/doc/marketing/event_tools/stats
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
 https://partner.steamgames.com/doc/marketing/upcoming_events
+https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer
 https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
 https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales

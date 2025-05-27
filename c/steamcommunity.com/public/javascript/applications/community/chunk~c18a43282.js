@@ -7,6 +7,8 @@
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
         TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -757,7 +759,7 @@
                   {
                     className: (0, _._)({
                       [_().ExpandSectionBlock]: !0,
-                      [_.style]: !0,
+                      [_.style]: null != _.style,
                       [_().ExpandSectionExpanded]: __webpack_require__,
                       [_().ExpandSectionCollapsed]: !__webpack_require__,
                       BBCodeExpanded: __webpack_require__,
@@ -1281,10 +1283,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = [1, 3, 2],
         _ = [1, 3],
         _ = [5, 4],
+        _ = [7, 6],
         _ = {
           capsule: {
             width: 800,
@@ -1490,6 +1494,12 @@
             height: 0,
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: _,
+          },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
           spotlight_art: {
             width: 306,
@@ -1914,7 +1924,7 @@
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (_[(_.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (_[(_.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
-          (_[(_.k_EEventStatsUnlisted = 3)] = "k_EEventStatsUnlisted");
+          (_[(_.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
       })(_ || (_ = {}));
       const _ = "bordered";
       var _, _, _, _, _, _;
@@ -2604,7 +2614,7 @@
         BIsVisibleEvent() {
           let _ = Math.floor(_._.GetTimeNowWithOverride());
           return (
-            this.visibility_state == _.k_EEventStatsUnlisted ||
+            this.visibility_state == _.k_EEventStateUnlisted ||
             (this.visibility_state == _.k_EEventStateVisible &&
               _ > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || _ < this.visibilityEndTime))
@@ -2614,7 +2624,7 @@
           return this.visibility_state == _.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == _.k_EEventStatsUnlisted;
+          return this.visibility_state == _.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -3768,7 +3778,7 @@
           }),
           _.published
             ? _.unlisted
-              ? (_.visibility_state = _._.k_EEventStatsUnlisted)
+              ? (_.visibility_state = _._.k_EEventStateUnlisted)
               : _.hidden
                 ? (_.visibility_state = _._.k_EEventStateStaged)
                 : (_.visibility_state = _._.k_EEventStateVisible)
@@ -3892,12 +3902,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return null == _
           ? void 0
           : _.map((_) => {
               const _ = _._[_];
+              (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
               return {
                 sKey: _,
                 width: _.width,
@@ -4232,6 +4244,7 @@
             (this.width = _),
             (this.dataUrl = _);
         }
+        GetImageOptionLabel() {}
       }
       (0, _._)([_._], _.prototype, "dataUrl", void 0),
         (0, _._)([_._], _.prototype, "width", void 0),
@@ -4525,8 +4538,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       var _;
       function _(_, _, _, _ = !1) {
         if (_)
@@ -4583,28 +4597,7 @@
           return (0, _._)(_.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(_) {
-          return (function (_) {
-            return (
-              _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-              _.endsWith(".jpg")
-                ? 1
-                : _.endsWith(".png")
-                  ? 3
-                  : _.endsWith(".gif")
-                    ? 2
-                    : _.endsWith(".mp4")
-                      ? 4
-                      : _.endsWith(".webm")
-                        ? 5
-                        : _.endsWith(".vtt")
-                          ? 6
-                          : _.endsWith(".srt")
-                            ? 7
-                            : _.endsWith(".webp")
-                              ? 10
-                              : void 0
-            );
-          })(_);
+          return (0, _._)(_);
         }
         static GetHashAndExt(_) {
           return _ ? _.image_hash + _.GetExtensionString(_) : null;
@@ -5052,6 +5045,35 @@
               _.LoadClanImages(_, !1, _).then(() => _(!0));
           }, [_, _]),
           _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      function _(_) {
+        return (
+          _.indexOf("?") > 0 && (_ = _.split("?")[0]),
+          _.endsWith(".jpg")
+            ? 1
+            : _.endsWith(".png")
+              ? 3
+              : _.endsWith(".gif")
+                ? 2
+                : _.endsWith(".mp4")
+                  ? 4
+                  : _.endsWith(".webm")
+                    ? 5
+                    : _.endsWith(".vtt")
+                      ? 6
+                      : _.endsWith(".srt")
+                        ? 7
+                        : _.endsWith(".webp")
+                          ? 10
+                          : void 0
         );
       }
     },
@@ -6489,6 +6511,7 @@
               _ &&
               Array.isArray(_) &&
               _.length > 0 &&
+              _[0] &&
               "object" == typeof _[0]
             ) &&
             ("string" == typeof _[0].gid ||

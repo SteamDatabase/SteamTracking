@@ -581,6 +581,8 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
+        SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
@@ -612,9 +614,9 @@
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
-        _: "_2XQ2s4PGGXTf-33SoML_Nn",
-        _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        _: "_2BZyC-dmzrlUCPfHClu51J",
+        _: "_2XQ2s4PGGXTf-33SoML_Nn",
         Left: "_3Bz6jMGpR_Vr3p7g3paBao",
         Right: "_3KumxdhZbtSA8tvxSUkIoq",
         Center: "woD-PhBCDg6E0eRDR9JaP",
@@ -624,6 +626,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Container: "_1OfOnnPi_1tjY-hFpLV1x7",
         TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
         TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
@@ -5168,6 +5171,7 @@
                   _.createElement("img", {
                     ..._,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 _.createElement(
@@ -5253,6 +5257,7 @@
               _.createElement("img", {
                 className: _().AppCapsuleImage,
                 src: _.GetAssets().GetSmallCapsuleURL(),
+                alt: _.GetName(),
               }),
             ),
             Boolean(!__webpack_require__ && !_.BIsFree()) &&
@@ -5336,6 +5341,7 @@
                   _.createElement("img", {
                     src: _,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -24139,97 +24145,97 @@
           _ = (0, _._)(),
           { fnSetClaimState: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(_.k_ClaimState_None);
-        return (
-          (0, _.useEffect)(() => {
-            _.bLoading ||
-              (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
-                ? _.bCanClaimNewItem
-                  ? _(_.k_ClaimState_Now)
-                  : _.rtNextClaimTime
-                    ? _(_.k_ClaimState_Next)
-                    : !_.bCanClaimNewItem &&
-                      _.bAlreadyClaimedCurrentItem &&
-                      _(_.k_ClaimState_NoMoreClaimsLeft)
-                : _(_.k_ClaimState_None));
-          }, [
-            _.bAlreadyClaimedCurrentItem,
-            _.bCanClaimNewItem,
-            _.bLoading,
-            _.rtNextClaimTime,
-          ]),
+        (0, _.useEffect)(() => {
+          _.bLoading ||
+            (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
+              ? _.bCanClaimNewItem
+                ? _(_.k_ClaimState_Now)
+                : _.rtNextClaimTime
+                  ? _(_.k_ClaimState_Next)
+                  : !_.bCanClaimNewItem &&
+                    _.bAlreadyClaimedCurrentItem &&
+                    _(_.k_ClaimState_NoMoreClaimsLeft)
+              : _(_.k_ClaimState_None));
+        }, [
+          _.bAlreadyClaimedCurrentItem,
+          _.bCanClaimNewItem,
+          _.bLoading,
+          _.rtNextClaimTime,
+        ]);
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            strTitle: "Test Claim Item",
+            closeModal: _,
+            onOK: () => {
+              switch (_) {
+                case _.k_ClaimState_None:
+                  _({
+                    bAlreadyClaimedCurrentItem: !1,
+                    bCanClaimNewItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Now:
+                  _({
+                    bCanClaimNewItem: !0,
+                    bAlreadyClaimedCurrentItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Next:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                    rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
+                  });
+                  break;
+                case _.k_ClaimState_NoMoreClaimsLeft:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                  });
+              }
+              _ && _();
+            },
+          },
           _.createElement(
             _._,
             {
-              strTitle: "Test Claim Item",
-              closeModal: _,
-              onOK: () => {
-                switch (_) {
-                  case _.k_ClaimState_None:
-                    _({
-                      bAlreadyClaimedCurrentItem: !1,
-                      bCanClaimNewItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Now:
-                    _({
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Next:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
-                    });
-                    break;
-                  case _.k_ClaimState_NoMoreClaimsLeft:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                    });
-                }
-                _ && _();
+              labelId: _,
+              value: _,
+              onChange: (_) => {
+                _(_);
               },
             },
             _.createElement(
               _._,
               {
-                value: _,
-                onChange: (_) => {
-                  _(_);
-                },
+                value: _.k_ClaimState_None,
               },
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_None,
-                },
-                "No Claimable item",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Now,
-                },
-                "Claim Now",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Next,
-                },
-                "Claimed, Next Available...",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_NoMoreClaimsLeft,
-                },
-                "Claimed, No more Claimable item",
-              ),
+              "No Claimable item",
             ),
-          )
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Now,
+              },
+              "Claim Now",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Next,
+              },
+              "Claimed, Next Available...",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_NoMoreClaimsLeft,
+              },
+              "Claimed, No more Claimable item",
+            ),
+          ),
         );
       }
       !(function (_) {
@@ -24653,6 +24659,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -24705,266 +24713,7 @@
           ),
         );
       }
-      function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0,
-          _ = (0, _._)(() => __webpack_require__.quiz.questions),
-          [_] = (0, _._)(() => [
-            __webpack_require__.quiz?.template_faq_display ||
-              _._.TemplateFAQDisplaySimpleRow,
-          ]);
-        return _.createElement(
-          _._,
-          {
-            feature: "templatefaq",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)({
-                [_.SaleSection]: !0,
-                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
-                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
-              }),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: _.unique_id,
-                iQuestionIndex: _,
-                question: _,
-                language: _,
-                bIsPreview: _,
-                event: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            question: _,
-            language: __webpack_require__,
-            bIsPreview: _,
-            iQuestionIndex: _,
-            event: _,
-          } = _,
-          _ = _._.GetELanguageFallback(__webpack_require__),
-          _ =
-            _.localized_question?.length > 0
-              ? _.localized_question[__webpack_require__] ||
-                _.localized_question[_] ||
-                ""
-              : void 0,
-          _ =
-            _.answers?.[0]?.localized_answer?.length > 0
-              ? _.answers[0].localized_answer[__webpack_require__] ||
-                _.answers[0].localized_answer[_] ||
-                ""
-              : void 0,
-          [_, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
-          ]),
-          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().questionCtn, "questionCtn"),
-            style: {
-              background: _,
-            },
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("questions"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: __webpack_require__,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("answere"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: __webpack_require__,
-            }),
-          ),
-        );
-      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0;
-        return _.createElement(
-          _._,
-          {
-            feature: "templatetechspec",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)(
-                _.SaleSection,
-                _().SaleSectionCtn,
-                "SaleQuizCSS",
-              ),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
-            __webpack_require__.tech_specs?.tech_spec_block_list?.map((_) =>
-              _.createElement(_, {
-                key: "tsblock_" + _.unique_id,
-                block: _,
-                language: _,
-                fallbackLanguage: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            block: _,
-            language: __webpack_require__,
-            fallbackLanguage: _,
-          } = _,
-          _ =
-            _.localized_block_title?.length > 0
-              ? _.localized_block_title[__webpack_require__] ||
-                _.localized_block_title[_] ||
-                ""
-              : void 0;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().BlockTitle,
-            },
-            _,
-          ),
-          _.spec_list.map((_) =>
-            _.createElement(_, {
-              key: "tsitem_" + _.unique_id + "_" + _.unique_id,
-              item: _,
-              language: __webpack_require__,
-              fallbackLanguage: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            item: _,
-            language: __webpack_require__,
-            fallbackLanguage: _,
-          } = _,
-          _ =
-            _.localized_spec_name?.length > 0
-              ? _.localized_spec_name[__webpack_require__] ||
-                _.localized_spec_name[_] ||
-                ""
-              : void 0,
-          _ =
-            _.localized_spec_description?.length > 0
-              ? _.localized_spec_description[__webpack_require__] ||
-                _.localized_spec_description[_] ||
-                ""
-              : void 0,
-          _ = _?.split("\n") || [""];
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, _),
-          _.createElement(
-            "div",
-            null,
-            _.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: "specline_" + _.unique_id + "_" + _,
-                },
-                _,
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
@@ -25229,51 +24978,60 @@
         const {
           title: _,
           subtitle: __webpack_require__,
-          description: _,
-          event: _,
-          language: _,
           eTitleDisplaySize: _,
           titleAlign: _,
+          event: _,
+          language: _,
           subtitleAlign: _,
-          descAlign: _,
           titleMedia: _,
           titleMediaType: _,
           titleHAlign: _,
           titleVAlign: _,
+        } = _;
+        return _
+          ? _.createElement(_, {
+              media: _,
+              mediaType: _,
+              mediaHAlign: _,
+              mediaVAlign: _,
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                title: _,
+                eTitleDisplaySize: _,
+                eTextAlign: _,
+                language: _,
+              }),
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                subtitle: __webpack_require__,
+                eTextAlign: _,
+                language: _,
+              }),
+            );
+      }
+      function _(_) {
+        const {
+          description: _,
+          event: __webpack_require__,
+          language: _,
+          descAlign: _,
         } = _;
         return _.createElement(
           "div",
           {
             className: _().Text,
           },
-          Boolean(_)
-            ? _.createElement(_, {
-                media: _,
-                mediaType: _,
-                mediaHAlign: _,
-                mediaVAlign: _,
-              })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  title: _,
-                  eTitleDisplaySize: _,
-                  eTextAlign: _,
-                  language: _,
-                }),
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  subtitle: __webpack_require__,
-                  eTextAlign: _,
-                  language: _,
-                }),
-              ),
           _.createElement(_, {
-            event: _,
+            ..._,
+          }),
+          _.createElement(_, {
+            event: __webpack_require__,
             description: _,
             eTextAlign: _,
             language: _,
@@ -25422,6 +25180,317 @@
                 languageOverride: _,
               }),
             );
+      }
+      function _(_) {
+        const { event: _, section: __webpack_require__, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _._.GetELanguageFallback(_),
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.localized_description?.length > 0
+              ? __webpack_require__.localized_description[_] ||
+                __webpack_require__.localized_description[_] ||
+                ""
+              : void 0,
+            Boolean(__webpack_require__.quiz?.display_border),
+            __webpack_require__.quiz?.border_color,
+          ]),
+          _ = (0, _._)(() => __webpack_require__.quiz.questions),
+          [_] = (0, _._)(() => [
+            __webpack_require__.quiz?.template_faq_display ||
+              _._.TemplateFAQDisplaySimpleRow,
+          ]);
+        return _.createElement(
+          _._,
+          {
+            feature: "templatefaq",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)({
+                [_.SaleSection]: !0,
+                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
+                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
+              }),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            Boolean(__webpack_require__.quiz?.titleSubDesc) &&
+              _.createElement(_, {
+                titleSubDesc: __webpack_require__.quiz.titleSubDesc,
+                event: _,
+                language: _,
+              }),
+            _.map((_, _) =>
+              _.createElement(_, {
+                key: _.unique_id,
+                iQuestionIndex: _,
+                question: _,
+                language: _,
+                bIsPreview: _,
+                event: _,
+                bDisplayBorder: _,
+                strBorderColor: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { event: _, language: __webpack_require__, titleSubDesc: _ } = _,
+          _ = _._.GetELanguageFallback(__webpack_require__),
+          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+            _.localized_media_title?.length > 0
+              ? _.localized_media_title[__webpack_require__] ||
+                _.localized_media_title[_] ||
+                ""
+              : void 0,
+            _.localized_media_subtitle?.length > 0
+              ? _.localized_media_subtitle[__webpack_require__] ||
+                _.localized_media_subtitle[_] ||
+                ""
+              : void 0,
+            _.eTitleDisplaySize,
+            _.title_alignment,
+            _.subtitle_alignment,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.localized_media[__webpack_require__] ||
+                _.title_media.localized_media[_] ||
+                {}
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_type
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_vertical_alignment
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_horizontal_alignment
+              : void 0,
+          ]);
+        return _.createElement(_, {
+          event: _,
+          language: __webpack_require__,
+          title: _,
+          subtitle: _,
+          eTitleDisplaySize: _,
+          titleAlign: _,
+          subtitleAlign: _,
+          titleMedia: _,
+          titleMediaType: _,
+          titleVAlign: _,
+          titleHAlign: _,
+        });
+      }
+      function _(_) {
+        const {
+            question: _,
+            language: __webpack_require__,
+            bIsPreview: _,
+            iQuestionIndex: _,
+            event: _,
+            bDisplayBorder: _,
+          } = _,
+          _ = _._.GetELanguageFallback(__webpack_require__),
+          _ =
+            _.localized_question?.length > 0
+              ? _.localized_question[__webpack_require__] ||
+                _.localized_question[_] ||
+                ""
+              : void 0,
+          _ =
+            _.answers?.[0]?.localized_answer?.length > 0
+              ? _.answers[0].localized_answer[__webpack_require__] ||
+                _.answers[0].localized_answer[_] ||
+                ""
+              : void 0,
+          [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().QuestionCtn]: !0,
+              QuestionCtn: !0,
+              [_().DisplayBorder]: _,
+            }),
+            style: {
+              background: _,
+            },
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Question]: !0,
+                [_().Question]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: __webpack_require__,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Answer]: !0,
+                [_().Answer]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: __webpack_require__,
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { event: _, section: __webpack_require__, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _._.GetELanguageFallback(_),
+          _ =
+            __webpack_require__.localized_description?.length > 0
+              ? __webpack_require__.localized_description[_] ||
+                __webpack_require__.localized_description[_] ||
+                ""
+              : void 0;
+        return _.createElement(
+          _._,
+          {
+            feature: "templatetechspec",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)(
+                _.SaleSection,
+                _().SaleSectionCtn,
+                "SaleQuizCSS",
+              ),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().description,
+                },
+                _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: _,
+                }),
+              ),
+            __webpack_require__.tech_specs?.tech_spec_block_list?.map((_) =>
+              _.createElement(_, {
+                key: "tsblock_" + _.unique_id,
+                block: _,
+                language: _,
+                fallbackLanguage: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            block: _,
+            language: __webpack_require__,
+            fallbackLanguage: _,
+          } = _,
+          _ =
+            _.localized_block_title?.length > 0
+              ? _.localized_block_title[__webpack_require__] ||
+                _.localized_block_title[_] ||
+                ""
+              : void 0;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().BlockTitle,
+            },
+            _,
+          ),
+          _.spec_list.map((_) =>
+            _.createElement(_, {
+              key: "tsitem_" + _.unique_id + "_" + _.unique_id,
+              item: _,
+              language: __webpack_require__,
+              fallbackLanguage: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            item: _,
+            language: __webpack_require__,
+            fallbackLanguage: _,
+          } = _,
+          _ =
+            _.localized_spec_name?.length > 0
+              ? _.localized_spec_name[__webpack_require__] ||
+                _.localized_spec_name[_] ||
+                ""
+              : void 0,
+          _ =
+            _.localized_spec_description?.length > 0
+              ? _.localized_spec_description[__webpack_require__] ||
+                _.localized_spec_description[_] ||
+                ""
+              : void 0,
+          _ = _?.split("\n") || [""];
+        return _.createElement(
+          "div",
+          null,
+          _.createElement("div", null, _),
+          _.createElement(
+            "div",
+            null,
+            _.map((_, _) =>
+              _.createElement(
+                "div",
+                {
+                  key: "specline_" + _.unique_id + "_" + _,
+                },
+                _,
+              ),
+            ),
+          ),
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);

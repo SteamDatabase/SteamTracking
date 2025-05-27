@@ -1018,7 +1018,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 					$('.video_category', titleBar).text( $(wrapper).data( 'video-category' ) );
 
 				if ( $(wrapper).data( 'video-title' )?.length )
+				{
+					video.attr('aria-label', $(wrapper).data( 'video-title' ) );
 					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
+				}
 
 				updateVolume();
 			}

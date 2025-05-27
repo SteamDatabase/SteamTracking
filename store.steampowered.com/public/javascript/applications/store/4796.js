@@ -303,9 +303,13 @@
                 const t = l.b.InitFromClanID(
                   "string" == typeof e ? Number.parseInt(e) : e,
                 );
-                _.LoadClanInfoForClanSteamID(t).then((e) => {
-                  a(e ?? void 0), n(!1);
-                });
+                _.LoadClanInfoForClanSteamID(t)
+                  .then((e) => {
+                    a(e ?? void 0), n(!1);
+                  })
+                  .catch((t) =>
+                    console.error(`Failed to load clan info ${e}`, t),
+                  );
               }
             else a(void 0), n(!1);
           }, [e]),

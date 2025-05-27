@@ -579,6 +579,8 @@
     76846: (e) => {
       e.exports = {
         narrowWidth: "500px",
+        ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
+        SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
@@ -610,9 +612,9 @@
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
-        H1: "_2XQ2s4PGGXTf-33SoML_Nn",
-        H2: "_2BZyC-dmzrlUCPfHClu51J",
         H3: "_3TKdKvs7o8kbqWUcJyPuyo",
+        H2: "_2BZyC-dmzrlUCPfHClu51J",
+        H1: "_2XQ2s4PGGXTf-33SoML_Nn",
         Left: "_3Bz6jMGpR_Vr3p7g3paBao",
         Right: "_3KumxdhZbtSA8tvxSUkIoq",
         Center: "woD-PhBCDg6E0eRDR9JaP",
@@ -622,6 +624,7 @@
     },
     67634: (e) => {
       e.exports = {
+        Container: "_1OfOnnPi_1tjY-hFpLV1x7",
         TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
         TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
@@ -4743,6 +4746,7 @@
                   l.createElement("img", {
                     ...A,
                     className: L().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 l.createElement(
@@ -4810,6 +4814,7 @@
               l.createElement("img", {
                 className: L().AppCapsuleImage,
                 src: n.GetAssets().GetSmallCapsuleURL(),
+                alt: n.GetName(),
               }),
             ),
             Boolean(!a && !n.BIsFree()) &&
@@ -4885,6 +4890,7 @@
                   l.createElement("img", {
                     src: c,
                     className: L().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -8540,7 +8546,7 @@
     },
     42326: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Jo });
+      a.d(t, { H: () => Xo });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -21444,80 +21450,76 @@
           a = (0, zi.Oz)(),
           { fnSetClaimState: r } = (0, zi.lu)(),
           [s, i] = (0, n.useState)(Qi.k_ClaimState_None);
-        return (
-          (0, n.useEffect)(() => {
-            a.bLoading ||
-              (a.bCanClaimNewItem || a.bAlreadyClaimedCurrentItem
-                ? a.bCanClaimNewItem
-                  ? i(Qi.k_ClaimState_Now)
-                  : a.rtNextClaimTime
-                    ? i(Qi.k_ClaimState_Next)
-                    : !a.bCanClaimNewItem &&
-                      a.bAlreadyClaimedCurrentItem &&
-                      i(Qi.k_ClaimState_NoMoreClaimsLeft)
-                : i(Qi.k_ClaimState_None));
-          }, [
-            a.bAlreadyClaimedCurrentItem,
-            a.bCanClaimNewItem,
-            a.bLoading,
-            a.rtNextClaimTime,
-          ]),
+        (0, n.useEffect)(() => {
+          a.bLoading ||
+            (a.bCanClaimNewItem || a.bAlreadyClaimedCurrentItem
+              ? a.bCanClaimNewItem
+                ? i(Qi.k_ClaimState_Now)
+                : a.rtNextClaimTime
+                  ? i(Qi.k_ClaimState_Next)
+                  : !a.bCanClaimNewItem &&
+                    a.bAlreadyClaimedCurrentItem &&
+                    i(Qi.k_ClaimState_NoMoreClaimsLeft)
+              : i(Qi.k_ClaimState_None));
+        }, [
+          a.bAlreadyClaimedCurrentItem,
+          a.bCanClaimNewItem,
+          a.bLoading,
+          a.rtNextClaimTime,
+        ]);
+        const o = n.useId();
+        return n.createElement(
+          Qt.o0,
+          {
+            strTitle: "Test Claim Item",
+            closeModal: t,
+            onOK: () => {
+              switch (s) {
+                case Qi.k_ClaimState_None:
+                  r({ bAlreadyClaimedCurrentItem: !1, bCanClaimNewItem: !1 });
+                  break;
+                case Qi.k_ClaimState_Now:
+                  r({ bCanClaimNewItem: !0, bAlreadyClaimedCurrentItem: !1 });
+                  break;
+                case Qi.k_ClaimState_Next:
+                  r({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                    rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
+                  });
+                  break;
+                case Qi.k_ClaimState_NoMoreClaimsLeft:
+                  r({ bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !0 });
+              }
+              t && t();
+            },
+          },
           n.createElement(
-            Qt.o0,
+            Ce.zW,
             {
-              strTitle: "Test Claim Item",
-              closeModal: t,
-              onOK: () => {
-                switch (s) {
-                  case Qi.k_ClaimState_None:
-                    r({ bAlreadyClaimedCurrentItem: !1, bCanClaimNewItem: !1 });
-                    break;
-                  case Qi.k_ClaimState_Now:
-                    r({ bCanClaimNewItem: !0, bAlreadyClaimedCurrentItem: !1 });
-                    break;
-                  case Qi.k_ClaimState_Next:
-                    r({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
-                    });
-                    break;
-                  case Qi.k_ClaimState_NoMoreClaimsLeft:
-                    r({ bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !0 });
-                }
-                t && t();
+              labelId: o,
+              value: s,
+              onChange: (e) => {
+                i(e);
               },
             },
             n.createElement(
-              Ce.zW,
-              {
-                value: s,
-                onChange: (e) => {
-                  i(e);
-                },
-              },
-              n.createElement(
-                Ce.a,
-                { value: Qi.k_ClaimState_None },
-                "No Claimable item",
-              ),
-              n.createElement(
-                Ce.a,
-                { value: Qi.k_ClaimState_Now },
-                "Claim Now",
-              ),
-              n.createElement(
-                Ce.a,
-                { value: Qi.k_ClaimState_Next },
-                "Claimed, Next Available...",
-              ),
-              n.createElement(
-                Ce.a,
-                { value: Qi.k_ClaimState_NoMoreClaimsLeft },
-                "Claimed, No more Claimable item",
-              ),
+              Ce.a,
+              { value: Qi.k_ClaimState_None },
+              "No Claimable item",
             ),
-          )
+            n.createElement(Ce.a, { value: Qi.k_ClaimState_Now }, "Claim Now"),
+            n.createElement(
+              Ce.a,
+              { value: Qi.k_ClaimState_Next },
+              "Claimed, Next Available...",
+            ),
+            n.createElement(
+              Ce.a,
+              { value: Qi.k_ClaimState_NoMoreClaimsLeft },
+              "Claimed, No more Claimable item",
+            ),
+          ),
         );
       }
       !(function (e) {
@@ -21887,11 +21889,13 @@
         );
       var ho = a(40353),
         So = a(65350),
-        fo = a(76846),
+        fo = a(33645),
         vo = a.n(fo),
-        yo = a(17224),
-        bo = a.n(yo);
-      function Eo(e) {
+        yo = a(76846),
+        bo = a.n(yo),
+        Eo = a(17224),
+        Co = a.n(Eo);
+      function wo(e) {
         const { section: t, event: a, language: r, title: s, subtitle: i } = e,
           o = (0, dt.yD)(),
           l =
@@ -21900,13 +21904,13 @@
         const c = i || (0, It.CP)(t, a, r);
         return n.createElement(
           "div",
-          { className: (0, f.A)(bo().TemplateLabelCtn) },
+          { className: (0, f.A)(Co().TemplateLabelCtn) },
           n.createElement(
             "div",
-            { className: bo().SectionTitleInnerCtn },
+            { className: Co().SectionTitleInnerCtn },
             n.createElement(
               "div",
-              { className: (0, f.A)(bo().SaleSectionHeader) },
+              { className: (0, f.A)(Co().SaleSectionHeader) },
               l,
             ),
             Boolean(c) &&
@@ -21914,8 +21918,8 @@
                 "div",
                 {
                   className: (0, f.A)(
-                    bo().SaleSectionHeader,
-                    bo().SaleSectionSubtitle,
+                    Co().SaleSectionHeader,
+                    Co().SaleSectionSubtitle,
                   ),
                 },
                 c,
@@ -21923,219 +21927,9 @@
           ),
         );
       }
-      function Co(e) {
-        const { event: t, section: a, language: r } = e,
-          s = (0, dt.MU)(),
-          i = (0, v.Qn)(),
-          o = T.A0.GetELanguageFallback(r),
-          l =
-            a.localized_description?.length > 0
-              ? a.localized_description[r] || a.localized_description[o] || ""
-              : void 0,
-          u = (0, he.q3)(() => a.quiz.questions),
-          [d] = (0, he.q3)(() => [
-            a.quiz?.template_faq_display || On.nx.TemplateFAQDisplaySimpleRow,
-          ]);
-        return n.createElement(
-          h.Ay,
-          { feature: "templatefaq" },
-          n.createElement(
-            p.K,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: y.$m,
-              className: (0, f.A)({
-                [m.SaleSection]: !0,
-                [vo().ColumnFormatCtn]: d == On.nx.TemplateFAQDisplayColumn,
-                [vo().SimpleRowCtn]: d == On.nx.TemplateFAQDisplaySimpleRow,
-              }),
-              style: (0, c.Vb)(a, t, i),
-            },
-            n.createElement(Eo, { section: a, event: t, language: r }),
-            Boolean(l) &&
-              n.createElement(
-                "div",
-                { className: vo().description },
-                n.createElement(za.f, {
-                  text: l,
-                  partnerEventStore: yt.O3,
-                  showErrorInfo: s,
-                  event: t,
-                  languageOverride: r,
-                }),
-              ),
-            u.map((e, a) =>
-              n.createElement(wo, {
-                key: e.unique_id,
-                iQuestionIndex: a,
-                question: e,
-                language: r,
-                bIsPreview: s,
-                event: t,
-              }),
-            ),
-          ),
-        );
-      }
-      function wo(e) {
-        const {
-            question: t,
-            language: a,
-            bIsPreview: r,
-            iQuestionIndex: s,
-            event: i,
-          } = e,
-          o = T.A0.GetELanguageFallback(a),
-          l =
-            t.localized_question?.length > 0
-              ? t.localized_question[a] || t.localized_question[o] || ""
-              : void 0,
-          c =
-            t.answers?.[0]?.localized_answer?.length > 0
-              ? t.answers[0].localized_answer[a] ||
-                t.answers[0].localized_answer[o] ||
-                ""
-              : void 0,
-          [m, u] = (0, he.q3)(() => [
-            t.background_gradient_bottom,
-            t.background_gradient_top,
-          ]),
-          d = `linear-gradient(0deg, ${m || "transparent"} 0%, ${u || "transparent"} 100%)`;
-        return n.createElement(
-          "div",
-          {
-            className: (0, f.A)(vo().questionCtn, "questionCtn"),
-            style: { background: d },
-          },
-          n.createElement(
-            "div",
-            { className: (0, f.A)("questions") },
-            n.createElement(za.f, {
-              text: l,
-              partnerEventStore: yt.O3,
-              showErrorInfo: r,
-              event: i,
-              languageOverride: a,
-            }),
-          ),
-          n.createElement(
-            "div",
-            { className: (0, f.A)("answere") },
-            n.createElement(za.f, {
-              text: c,
-              partnerEventStore: yt.O3,
-              showErrorInfo: r,
-              event: i,
-              languageOverride: a,
-            }),
-          ),
-        );
-      }
-      var Ao = a(94581),
+      var Ao = a(94960),
         Io = a.n(Ao);
       function To(e) {
-        const { event: t, section: a, language: r } = e,
-          s = (0, dt.MU)(),
-          i = (0, v.Qn)(),
-          o = T.A0.GetELanguageFallback(r),
-          u =
-            a.localized_description?.length > 0
-              ? a.localized_description[r] || a.localized_description[o] || ""
-              : void 0;
-        return n.createElement(
-          h.Ay,
-          { feature: "templatetechspec" },
-          n.createElement(
-            p.K,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: y.$m,
-              className: (0, f.A)(
-                m.SaleSection,
-                l().SaleSectionCtn,
-                "SaleQuizCSS",
-              ),
-              style: (0, c.Vb)(a, t, i),
-            },
-            n.createElement(Eo, { section: a, event: t, language: r }),
-            Boolean(u) &&
-              n.createElement(
-                "div",
-                { className: Io().description },
-                n.createElement(za.f, {
-                  text: u,
-                  partnerEventStore: yt.O3,
-                  showErrorInfo: s,
-                  event: t,
-                  languageOverride: r,
-                }),
-              ),
-            a.tech_specs?.tech_spec_block_list?.map((e) =>
-              n.createElement(Bo, {
-                key: "tsblock_" + e.unique_id,
-                block: e,
-                language: r,
-                fallbackLanguage: o,
-              }),
-            ),
-          ),
-        );
-      }
-      function Bo(e) {
-        const { block: t, language: a, fallbackLanguage: r } = e,
-          s =
-            t.localized_block_title?.length > 0
-              ? t.localized_block_title[a] || t.localized_block_title[r] || ""
-              : void 0;
-        return n.createElement(
-          "div",
-          null,
-          n.createElement("div", { className: Io().BlockTitle }, s),
-          t.spec_list.map((e) =>
-            n.createElement(Do, {
-              key: "tsitem_" + e.unique_id + "_" + t.unique_id,
-              item: e,
-              language: a,
-              fallbackLanguage: r,
-            }),
-          ),
-        );
-      }
-      function Do(e) {
-        const { item: t, language: a, fallbackLanguage: r } = e,
-          s =
-            t.localized_spec_name?.length > 0
-              ? t.localized_spec_name[a] || t.localized_spec_name[r] || ""
-              : void 0,
-          i =
-            t.localized_spec_description?.length > 0
-              ? t.localized_spec_description[a] ||
-                t.localized_spec_description[r] ||
-                ""
-              : void 0,
-          o = i?.split("\n") || [""];
-        return n.createElement(
-          "div",
-          null,
-          n.createElement("div", null, s),
-          n.createElement(
-            "div",
-            null,
-            o.map((e, a) =>
-              n.createElement(
-                "div",
-                { key: "specline_" + t.unique_id + "_" + a },
-                e,
-              ),
-            ),
-          ),
-        );
-      }
-      var Go = a(33645),
-        ko = a.n(Go),
-        Po = a(94960),
-        No = a.n(Po);
-      function Lo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, v.Qn)();
         return n.createElement(
@@ -22149,13 +21943,13 @@
               className: (0, f.A)(
                 m.SaleSection,
                 l().SaleSectionCtn,
-                No().Container,
+                Io().Container,
               ),
               style: (0, c.Vb)(a, t, s),
             },
-            n.createElement(Eo, { section: a, event: t, language: r }),
+            n.createElement(wo, { section: a, event: t, language: r }),
             a?.media_container?.media_rows?.map((t, r) =>
-              n.createElement(Ro, {
+              n.createElement(Bo, {
                 key: "templategrid_" + a.unique_id + "_" + r,
                 ...e,
                 row: t,
@@ -22164,22 +21958,22 @@
           ),
         );
       }
-      function Ro(e) {
+      function Bo(e) {
         const { event: t, section: a, language: r, row: s } = e,
           i = (0, he.q3)(() => s.media_columns?.length || 0);
         return n.createElement(
           "div",
           {
             className: (0, f.A)({
-              [No().MediaRow]: !0,
-              [No().RowSize1]: 1 == i,
-              [No().RowSize2]: 2 == i,
-              [No().RowSize3]: 3 == i,
-              [No().RowSize4]: 4 == i,
+              [Io().MediaRow]: !0,
+              [Io().RowSize1]: 1 == i,
+              [Io().RowSize2]: 2 == i,
+              [Io().RowSize3]: 3 == i,
+              [Io().RowSize4]: 4 == i,
             }),
           },
           s.media_columns?.map((t) =>
-            n.createElement(Fo, {
+            n.createElement(Do, {
               key: "mc_" + a.unique_id + "_" + t.unique_id,
               ...e,
               content: t,
@@ -22187,7 +21981,7 @@
           ),
         );
       }
-      function Fo(e) {
+      function Do(e) {
         const { event: t, section: a, language: r, content: s } = e,
           [i, o, l, c, m, u, d, _, p, g, h, S, f, v, y, b] = (0, he.q3)(() => {
             const e = T.A0.GetELanguageFallback(r);
@@ -22232,7 +22026,7 @@
                 : void 0,
             ];
           });
-        return n.createElement(Mo, {
+        return n.createElement(Go, {
           displayOrder: i,
           event: t,
           section: a,
@@ -22255,7 +22049,7 @@
           titleHAlign: b,
         });
       }
-      function Mo(e) {
+      function Go(e) {
         const { displayOrder: t, content: a, section: r } = e,
           s = (0, v.Qn)(),
           i = n.useRef(),
@@ -22283,27 +22077,27 @@
             {
               ref: i,
               className: (0, f.A)({
-                [No().MediaCtn]: !0,
-                [No().LivePreview]: l,
-                [No().JumpedTo]: m,
-                [No().HorizontalMediaFirst]:
+                [Io().MediaCtn]: !0,
+                [Io().LivePreview]: l,
+                [Io().JumpedTo]: m,
+                [Io().HorizontalMediaFirst]:
                   !t || t == so.k_HorizontalMediaFirst,
-                [No().HorizontalTextFirst]: t == so.k_HorizontalTextFirst,
-                [No().VerticalMediaFirst]: t == so.k_MediaTitleDesc,
-                [No().VerticalTextFirst]: t == so.k_TitleDescMedia,
+                [Io().HorizontalTextFirst]: t == so.k_HorizontalTextFirst,
+                [Io().VerticalMediaFirst]: t == so.k_MediaTitleDesc,
+                [Io().VerticalTextFirst]: t == so.k_TitleDescMedia,
               }),
               style: (0, c.vU)(a, s),
             },
             Boolean(
               !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
-            ) && n.createElement(Oo, { ...e }),
+            ) && n.createElement(ko, { ...e }),
             Boolean(
               t == so.k_HorizontalTextFirst || t == so.k_TitleDescMedia,
-            ) && n.createElement(xo, { ...e }),
+            ) && n.createElement(Po, { ...e }),
           )
         );
       }
-      function Oo(e) {
+      function ko(e) {
         const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
         return n.createElement(
           n.Fragment,
@@ -22312,45 +22106,45 @@
             "div",
             {
               className: (0, f.A)({
-                [No().Media]: !0,
-                [No().HorizLeft]: r == oo.k_Left,
-                [No().HorizCenter]: !r || r == oo.k_Center,
-                [No().HorizRight]: r == oo.k_Right,
-                [No().VertTop]: s == oo.k_Top,
-                [No().VertCenter]: !s || s == oo.k_Center,
-                [No().VertBottom]: s == oo.k_Bottom,
+                [Io().Media]: !0,
+                [Io().HorizLeft]: r == oo.k_Left,
+                [Io().HorizCenter]: !r || r == oo.k_Center,
+                [Io().HorizRight]: r == oo.k_Right,
+                [Io().VertTop]: s == oo.k_Top,
+                [Io().VertCenter]: !s || s == oo.k_Center,
+                [Io().VertBottom]: s == oo.k_Bottom,
               }),
             },
-            n.createElement(Uo, {
+            n.createElement(Ro, {
               media: t,
               mediaType: a,
               mediaHAlign: r,
               mediaVAlign: s,
             }),
           ),
-          n.createElement(Ho, { ...e }),
+          n.createElement(Lo, { ...e }),
         );
       }
-      function xo(e) {
+      function Po(e) {
         const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Ho, { ...e }),
+          n.createElement(Lo, { ...e }),
           n.createElement(
             "div",
             {
               className: (0, f.A)({
-                [No().Media]: !0,
-                [No().HorizLeft]: r == oo.k_Left,
-                [No().HorizCenter]: !r || r == oo.k_Center,
-                [No().HorizRight]: r == oo.k_Right,
-                [No().VertTop]: s == oo.k_Top,
-                [No().VertCenter]: !s || s == oo.k_Center,
-                [No().VertBottom]: s == oo.k_Bottom,
+                [Io().Media]: !0,
+                [Io().HorizLeft]: r == oo.k_Left,
+                [Io().HorizCenter]: !r || r == oo.k_Center,
+                [Io().HorizRight]: r == oo.k_Right,
+                [Io().VertTop]: s == oo.k_Top,
+                [Io().VertCenter]: !s || s == oo.k_Center,
+                [Io().VertBottom]: s == oo.k_Bottom,
               }),
             },
-            n.createElement(Uo, {
+            n.createElement(Ro, {
               media: t,
               mediaType: a,
               mediaHAlign: r,
@@ -22359,60 +22153,62 @@
           ),
         );
       }
-      function Ho(e) {
+      function No(e) {
         const {
           title: t,
           subtitle: a,
-          description: r,
-          event: s,
-          language: i,
-          eTitleDisplaySize: o,
-          titleAlign: l,
-          subtitleAlign: c,
-          descAlign: m,
-          titleMedia: u,
-          titleMediaType: d,
-          titleHAlign: _,
-          titleVAlign: p,
+          eTitleDisplaySize: r,
+          titleAlign: s,
+          event: i,
+          language: o,
+          subtitleAlign: l,
+          titleMedia: c,
+          titleMediaType: m,
+          titleHAlign: u,
+          titleVAlign: d,
         } = e;
+        return c
+          ? n.createElement(Ro, {
+              media: c,
+              mediaType: m,
+              mediaHAlign: u,
+              mediaVAlign: d,
+            })
+          : n.createElement(
+              n.Fragment,
+              null,
+              n.createElement(xo, {
+                event: i,
+                className: Io().TextFirstTitle,
+                title: t,
+                eTitleDisplaySize: r,
+                eTextAlign: s,
+                language: o,
+              }),
+              n.createElement(Fo, {
+                event: i,
+                className: Io().TextFirstTitle,
+                subtitle: a,
+                eTextAlign: l,
+                language: o,
+              }),
+            );
+      }
+      function Lo(e) {
+        const { description: t, event: a, language: r, descAlign: s } = e;
         return n.createElement(
           "div",
-          { className: No().Text },
-          Boolean(u)
-            ? n.createElement(Uo, {
-                media: u,
-                mediaType: d,
-                mediaHAlign: _,
-                mediaVAlign: p,
-              })
-            : n.createElement(
-                n.Fragment,
-                null,
-                n.createElement(Vo, {
-                  event: s,
-                  className: No().TextFirstTitle,
-                  title: t,
-                  eTitleDisplaySize: o,
-                  eTextAlign: l,
-                  language: i,
-                }),
-                n.createElement(zo, {
-                  event: s,
-                  className: No().TextFirstTitle,
-                  subtitle: a,
-                  eTextAlign: c,
-                  language: i,
-                }),
-              ),
-          n.createElement(jo, {
-            event: s,
-            description: r,
-            eTextAlign: m,
-            language: i,
+          { className: Io().Text },
+          n.createElement(No, { ...e }),
+          n.createElement(Ho, {
+            event: a,
+            description: t,
+            eTextAlign: s,
+            language: r,
           }),
         );
       }
-      function Uo(e) {
+      function Ro(e) {
         const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
         if (a == ro.k_MediaImage)
           return t.image && 0 != t.image?.trim().length
@@ -22437,7 +22233,7 @@
               }));
         }
       }
-      function zo(e) {
+      function Fo(e) {
         const {
             event: t,
             subtitle: a,
@@ -22446,18 +22242,18 @@
             eTextAlign: i,
           } = e,
           o = (0, dt.MU)();
-        return qo(a)
+        return Oo(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, f.A)({
-                  [No().Subtitle]: !0,
+                  [Io().Subtitle]: !0,
                   [r]: !0,
-                  [No().Left]: !i || i == oo.k_Left,
-                  [No().Center]: i == oo.k_Center,
-                  [No().Right]: i == oo.k_Right,
-                  [ko().TemplateMediaTitle]: !0,
+                  [Io().Left]: !i || i == oo.k_Left,
+                  [Io().Center]: i == oo.k_Center,
+                  [Io().Right]: i == oo.k_Right,
+                  [vo().TemplateMediaTitle]: !0,
                 }),
               },
               n.createElement(za.f, {
@@ -22469,11 +22265,11 @@
               }),
             );
       }
-      const Wo = "[p][/p]";
-      function qo(e) {
-        return !e || 0 == e.length || (e.length == Wo.length && e == Wo);
+      const Mo = "[p][/p]";
+      function Oo(e) {
+        return !e || 0 == e.length || (e.length == Mo.length && e == Mo);
       }
-      function Vo(e) {
+      function xo(e) {
         const {
             event: t,
             title: a,
@@ -22483,21 +22279,21 @@
             eTextAlign: o,
           } = e,
           l = (0, dt.MU)();
-        return qo(a)
+        return Oo(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, f.A)({
-                  [No().Title]: !0,
+                  [Io().Title]: !0,
                   [r]: !0,
-                  [No().H1]: !s || s == io.k_Header1,
-                  [No().H2]: s == io.k_Header2,
-                  [No().H3]: s == io.k_Header3,
-                  [No().Left]: !o || o == oo.k_Left,
-                  [No().Center]: o == oo.k_Center,
-                  [No().Right]: o == oo.k_Right,
-                  [ko().TemplateMediaTitle]: !0,
+                  [Io().H1]: !s || s == io.k_Header1,
+                  [Io().H2]: s == io.k_Header2,
+                  [Io().H3]: s == io.k_Header3,
+                  [Io().Left]: !o || o == oo.k_Left,
+                  [Io().Center]: o == oo.k_Center,
+                  [Io().Right]: o == oo.k_Right,
+                  [vo().TemplateMediaTitle]: !0,
                 }),
               },
               n.createElement(za.f, {
@@ -22509,20 +22305,20 @@
               }),
             );
       }
-      function jo(e) {
+      function Ho(e) {
         const { event: t, description: a, language: r, eTextAlign: s } = e,
           i = (0, dt.MU)();
-        return qo(a)
+        return Oo(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, f.A)({
-                  [No().Description]: !0,
-                  [No().Left]: !s || s == oo.k_Left,
-                  [No().Center]: s == oo.k_Center,
-                  [No().Right]: s == oo.k_Right,
-                  [ko().TemplateMediaDescription]: !0,
+                  [Io().Description]: !0,
+                  [Io().Left]: !s || s == oo.k_Left,
+                  [Io().Center]: s == oo.k_Center,
+                  [Io().Right]: s == oo.k_Right,
+                  [vo().TemplateMediaDescription]: !0,
                 }),
               },
               n.createElement(za.f, {
@@ -22534,9 +22330,267 @@
               }),
             );
       }
-      var Qo = a(67634),
-        Ko = a.n(Qo);
-      function Yo(e) {
+      function Uo(e) {
+        const { event: t, section: a, language: r } = e,
+          s = (0, dt.MU)(),
+          i = (0, v.Qn)(),
+          o = T.A0.GetELanguageFallback(r),
+          [l, u, d] = (0, he.q3)(() => [
+            a.localized_description?.length > 0
+              ? a.localized_description[r] || a.localized_description[o] || ""
+              : void 0,
+            Boolean(a.quiz?.display_border),
+            a.quiz?.border_color,
+          ]),
+          _ = (0, he.q3)(() => a.quiz.questions),
+          [g] = (0, he.q3)(() => [
+            a.quiz?.template_faq_display || On.nx.TemplateFAQDisplaySimpleRow,
+          ]);
+        return n.createElement(
+          h.Ay,
+          { feature: "templatefaq" },
+          n.createElement(
+            p.K,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: y.$m,
+              className: (0, f.A)({
+                [m.SaleSection]: !0,
+                [bo().ColumnFormatCtn]: g == On.nx.TemplateFAQDisplayColumn,
+                [bo().SimpleRowCtn]: g == On.nx.TemplateFAQDisplaySimpleRow,
+              }),
+              style: (0, c.Vb)(a, t, i),
+            },
+            n.createElement(wo, { section: a, event: t, language: r }),
+            Boolean(a.quiz?.titleSubDesc) &&
+              n.createElement(zo, {
+                titleSubDesc: a.quiz.titleSubDesc,
+                event: t,
+                language: r,
+              }),
+            _.map((e, a) =>
+              n.createElement(Wo, {
+                key: e.unique_id,
+                iQuestionIndex: a,
+                question: e,
+                language: r,
+                bIsPreview: s,
+                event: t,
+                bDisplayBorder: u,
+                strBorderColor: d,
+              }),
+            ),
+          ),
+        );
+      }
+      function zo(e) {
+        const { event: t, language: a, titleSubDesc: r } = e,
+          s = T.A0.GetELanguageFallback(a),
+          [i, o, l, c, m, u, d, _, p] = (0, he.q3)(() => [
+            r.localized_media_title?.length > 0
+              ? r.localized_media_title[a] || r.localized_media_title[s] || ""
+              : void 0,
+            r.localized_media_subtitle?.length > 0
+              ? r.localized_media_subtitle[a] ||
+                r.localized_media_subtitle[s] ||
+                ""
+              : void 0,
+            r.eTitleDisplaySize,
+            r.title_alignment,
+            r.subtitle_alignment,
+            r.is_title_as_image && r.title_media?.localized_media.length > 0
+              ? r.title_media.localized_media[a] ||
+                r.title_media.localized_media[s] ||
+                {}
+              : void 0,
+            r.is_title_as_image && r.title_media?.localized_media.length > 0
+              ? r.title_media.media_type
+              : void 0,
+            r.is_title_as_image && r.title_media?.localized_media.length > 0
+              ? r.title_media.media_vertical_alignment
+              : void 0,
+            r.is_title_as_image && r.title_media?.localized_media.length > 0
+              ? r.title_media.media_horizontal_alignment
+              : void 0,
+          ]);
+        return n.createElement(No, {
+          event: t,
+          language: a,
+          title: i,
+          subtitle: o,
+          eTitleDisplaySize: l,
+          titleAlign: c,
+          subtitleAlign: m,
+          titleMedia: u,
+          titleMediaType: d,
+          titleVAlign: _,
+          titleHAlign: p,
+        });
+      }
+      function Wo(e) {
+        const {
+            question: t,
+            language: a,
+            bIsPreview: r,
+            iQuestionIndex: s,
+            event: i,
+            bDisplayBorder: o,
+          } = e,
+          l = T.A0.GetELanguageFallback(a),
+          c =
+            t.localized_question?.length > 0
+              ? t.localized_question[a] || t.localized_question[l] || ""
+              : void 0,
+          m =
+            t.answers?.[0]?.localized_answer?.length > 0
+              ? t.answers[0].localized_answer[a] ||
+                t.answers[0].localized_answer[l] ||
+                ""
+              : void 0,
+          [u, d] = (0, he.q3)(() => [
+            t.background_gradient_bottom,
+            t.background_gradient_top,
+          ]),
+          _ = `linear-gradient(0deg, ${u || "transparent"} 0%, ${d || "transparent"} 100%)`;
+        return n.createElement(
+          "div",
+          {
+            className: (0, f.A)({
+              [bo().QuestionCtn]: !0,
+              QuestionCtn: !0,
+              [bo().DisplayBorder]: o,
+            }),
+            style: { background: _ },
+          },
+          n.createElement(
+            "div",
+            {
+              className: (0, f.A)({ [bo().Question]: !0, [vo().Question]: !0 }),
+            },
+            n.createElement(za.f, {
+              text: c,
+              partnerEventStore: yt.O3,
+              showErrorInfo: r,
+              event: i,
+              languageOverride: a,
+            }),
+          ),
+          n.createElement(
+            "div",
+            { className: (0, f.A)({ [bo().Answer]: !0, [vo().Answer]: !0 }) },
+            n.createElement(za.f, {
+              text: m,
+              partnerEventStore: yt.O3,
+              showErrorInfo: r,
+              event: i,
+              languageOverride: a,
+            }),
+          ),
+        );
+      }
+      var qo = a(94581),
+        Vo = a.n(qo);
+      function jo(e) {
+        const { event: t, section: a, language: r } = e,
+          s = (0, dt.MU)(),
+          i = (0, v.Qn)(),
+          o = T.A0.GetELanguageFallback(r),
+          u =
+            a.localized_description?.length > 0
+              ? a.localized_description[r] || a.localized_description[o] || ""
+              : void 0;
+        return n.createElement(
+          h.Ay,
+          { feature: "templatetechspec" },
+          n.createElement(
+            p.K,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: y.$m,
+              className: (0, f.A)(
+                m.SaleSection,
+                l().SaleSectionCtn,
+                "SaleQuizCSS",
+              ),
+              style: (0, c.Vb)(a, t, i),
+            },
+            n.createElement(wo, { section: a, event: t, language: r }),
+            Boolean(u) &&
+              n.createElement(
+                "div",
+                { className: Vo().description },
+                n.createElement(za.f, {
+                  text: u,
+                  partnerEventStore: yt.O3,
+                  showErrorInfo: s,
+                  event: t,
+                  languageOverride: r,
+                }),
+              ),
+            a.tech_specs?.tech_spec_block_list?.map((e) =>
+              n.createElement(Qo, {
+                key: "tsblock_" + e.unique_id,
+                block: e,
+                language: r,
+                fallbackLanguage: o,
+              }),
+            ),
+          ),
+        );
+      }
+      function Qo(e) {
+        const { block: t, language: a, fallbackLanguage: r } = e,
+          s =
+            t.localized_block_title?.length > 0
+              ? t.localized_block_title[a] || t.localized_block_title[r] || ""
+              : void 0;
+        return n.createElement(
+          "div",
+          null,
+          n.createElement("div", { className: Vo().BlockTitle }, s),
+          t.spec_list.map((e) =>
+            n.createElement(Ko, {
+              key: "tsitem_" + e.unique_id + "_" + t.unique_id,
+              item: e,
+              language: a,
+              fallbackLanguage: r,
+            }),
+          ),
+        );
+      }
+      function Ko(e) {
+        const { item: t, language: a, fallbackLanguage: r } = e,
+          s =
+            t.localized_spec_name?.length > 0
+              ? t.localized_spec_name[a] || t.localized_spec_name[r] || ""
+              : void 0,
+          i =
+            t.localized_spec_description?.length > 0
+              ? t.localized_spec_description[a] ||
+                t.localized_spec_description[r] ||
+                ""
+              : void 0,
+          o = i?.split("\n") || [""];
+        return n.createElement(
+          "div",
+          null,
+          n.createElement("div", null, s),
+          n.createElement(
+            "div",
+            null,
+            o.map((e, a) =>
+              n.createElement(
+                "div",
+                { key: "specline_" + t.unique_id + "_" + a },
+                e,
+              ),
+            ),
+          ),
+        );
+      }
+      var Yo = a(67634),
+        Jo = a.n(Yo);
+      function Zo(e) {
         const { event: t, section: a, language: r } = e,
           s = ((0, dt.MU)(), (0, v.Qn)()),
           [i, o, u, d, _, g, S, b, E, C, w, A, I, B, D, G] = (0, he.q3)(() => {
@@ -22601,11 +22655,11 @@
               className: (0, f.A)(
                 m.SaleSection,
                 l().SaleSectionCtn,
-                Ko().Container,
+                Jo().Container,
               ),
               style: (0, c.Vb)(a, t, s),
             },
-            n.createElement(Eo, { section: a, event: t, language: r }),
+            n.createElement(wo, { section: a, event: t, language: r }),
             n.createElement(
               "div",
               null,
@@ -22613,18 +22667,18 @@
                 "div",
                 {
                   className: (0, f.A)({
-                    [Ko().TopLeft]: !i || i == lo.k_TopLeft,
-                    [Ko().TopCenter]: i == lo.k_TopCenter,
-                    [Ko().TopRight]: i == lo.k_TopRight,
-                    [Ko().LeftCenter]: i == lo.k_LeftCenter,
-                    [Ko().Center]: i == lo.k_Center,
-                    [Ko().RightCenter]: i == lo.k_RightCenter,
-                    [Ko().BottomLeft]: i == lo.k_BottomLeft,
-                    [Ko().BottomCenter]: i == lo.k_BottomCenter,
-                    [Ko().BottomRight]: i == lo.k_BottomRight,
+                    [Jo().TopLeft]: !i || i == lo.k_TopLeft,
+                    [Jo().TopCenter]: i == lo.k_TopCenter,
+                    [Jo().TopRight]: i == lo.k_TopRight,
+                    [Jo().LeftCenter]: i == lo.k_LeftCenter,
+                    [Jo().Center]: i == lo.k_Center,
+                    [Jo().RightCenter]: i == lo.k_RightCenter,
+                    [Jo().BottomLeft]: i == lo.k_BottomLeft,
+                    [Jo().BottomCenter]: i == lo.k_BottomCenter,
+                    [Jo().BottomRight]: i == lo.k_BottomRight,
                   }),
                 },
-                n.createElement(Ho, {
+                n.createElement(Lo, {
                   title: d,
                   titleAlign: b,
                   subtitle: _,
@@ -22641,7 +22695,7 @@
                   language: r,
                 }),
               ),
-              n.createElement(Uo, {
+              n.createElement(Ro, {
                 media: u,
                 mediaType: o,
                 mediaHAlign: w,
@@ -22651,7 +22705,7 @@
           ),
         );
       }
-      function Jo(e) {
+      function Xo(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           i = (0, v.Qn)();
         switch (a.section_type) {
@@ -22843,13 +22897,13 @@
           case "unselected_empty":
             break;
           case "template_faq":
-            return n.createElement(Co, { ...e });
+            return n.createElement(Uo, { ...e });
           case "template_techspec":
-            return n.createElement(To, { ...e });
+            return n.createElement(jo, { ...e });
           case "template_media_content":
-            return n.createElement(Lo, { ...e });
+            return n.createElement(To, { ...e });
           case "template_media_overlay":
-            return n.createElement(Yo, { ...e });
+            return n.createElement(Zo, { ...e });
           case "media_layout":
             return n.createElement(mo, { ...e });
           case "contenthubsections":

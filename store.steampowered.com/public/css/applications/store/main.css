@@ -1547,14 +1547,38 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   flex-grow: 1;
   margin-left: 4px;
 }
+@property --GradientColor1 {
+  syntax: "<color>";
+  initial-value: #81399a;
+  inherits: false;
+}
+@property --GradientColor2 {
+  syntax: "<color>";
+  initial-value: #0094a2;
+  inherits: false;
+}
 .c4K67QJ5cG4Zr1eb4H_Fu {
   font-size: 12px;
-  background: linear-gradient(136deg, #81399a 8%, #0094a2 90.05%);
+  background: linear-gradient(
+    136deg,
+    var(--GradientColor1) 8%,
+    var(--GradientColor2) 90.05%
+  );
   border: none;
   border-radius: 3px;
   margin-left: 8px;
   color: #fff;
   cursor: pointer;
+  transition: --GradientColor1 .3s ease-in, --GradientColor2 .3s ease-in;
+}
+.c4K67QJ5cG4Zr1eb4H_Fu:hover {
+  --GradientColor1: #0094a2;
+  --GradientColor2: #81399a;
+}
+._337X4KlsU9k5t9s423wb_I {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 ._2rIaWN5LbF3muB3D2A-q5k {
   font-size: 15px;

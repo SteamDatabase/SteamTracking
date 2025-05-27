@@ -214,6 +214,8 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
+        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     chunkid: (module) => {
@@ -9095,11 +9097,10 @@
         }),
         _ = () => _.useContext(_);
       function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _(),
-          _ = (0, _._)();
-        return _._.ON_STEAMOS && _ && !_
+        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _();
+        return _._.ON_STEAMOS && !_
           ? [!0, 2]
-          : _ || (_._.ON_DECK && _)
+          : _._.ON_STEAMOS || _
             ? [!0, 1]
             : [!1, 0];
       }
@@ -14795,18 +14796,22 @@
           case 3:
             return _.createElement(_.o5Q, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 2:
             return _.createElement(_.aVR, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }
@@ -14816,14 +14821,17 @@
           case 2:
             return _.createElement(_.ZjT, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }

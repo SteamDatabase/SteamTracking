@@ -296,12 +296,8 @@
                       "Mod-b": (0, _._)(__webpack_require__.strong),
                       "Mod-i": (0, _._)(__webpack_require__.italic),
                       "Mod-u": (0, _._)(__webpack_require__.underline),
-                      "Mod-Shift-x": (0, _._)(
-                        __webpack_require__.strikethrough,
-                      ),
-                      "Ctrl-Shift-s": (0, _._)(
-                        __webpack_require__.strikethrough,
-                      ),
+                      "Mod-Shift-x": (0, _._)(__webpack_require__.strike),
+                      "Ctrl-Shift-s": (0, _._)(__webpack_require__.strike),
                       Enter: (0, _._)(_.list_item),
                       "Mod-[": (0, _._)(_.list_item),
                       "Mod-]": (0, _._)(_.list_item),

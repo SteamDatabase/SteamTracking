@@ -1256,7 +1256,7 @@ GDynamicStore = {
 				var Item = GStoreItemData.GetCapParams( 'bundle_component_preview', null, rgItemsWithCaps[i], null, rgLinkParams );
 				var $Link = $J('<a/>', rgLinkParams );
 
-				var $Img = $J('<img/>', {'src': Item.tiny_capsule, 'class': 'bundle_contents_preview_img' } );
+				var $Img = $J('<img/>', {'src': Item.tiny_capsule, 'class': 'bundle_contents_preview_img', 'alt': Item.name } );
 				if ( i > 0 && bNeedToCollapse )
 				{
 					var flPositionRight = 100 * i / rgItemsWithCaps.length;
@@ -2578,7 +2578,7 @@ GDynamicStorePage = {
 				// if there's no item associated, perserve it; it's probably a sale page or event
 				rgUnidentifiedCaps.push(i);
 				continue;
-			} 
+			}
       else if( itemid.appid &&
 				GDynamicStore.BIsSalePageAppID(itemid.appid) &&
 				(

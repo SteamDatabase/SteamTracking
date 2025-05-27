@@ -8,6 +8,8 @@
         Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
         Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
         TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
         Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
         Header2: "_6-VR2WCBCDupCcUN5INQM",
         Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
@@ -317,6 +319,8 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
+        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     chunkid: (module) => {
@@ -8898,7 +8902,7 @@
                 {
                   className: (0, _._)({
                     [_().ExpandSectionBlock]: !0,
-                    [_.style]: !0,
+                    [_.style]: null != _.style,
                     [_().ExpandSectionExpanded]: __webpack_require__,
                     [_().ExpandSectionCollapsed]: !__webpack_require__,
                     BBCodeExpanded: __webpack_require__,
@@ -9842,6 +9846,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: _,
           },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
           spotlight_art: {
             width: 306,
             height: 260,
@@ -10114,7 +10124,7 @@
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (_[(_.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (_[(_.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
-          (_[(_.k_EEventStatsUnlisted = 3)] = "k_EEventStatsUnlisted");
+          (_[(_.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
       })(_ || (_ = {}));
       var _, _, _, _, _, _;
       function _(_) {
@@ -10713,7 +10723,7 @@
         BIsVisibleEvent() {
           let _ = Math.floor(_._.GetTimeNowWithOverride());
           return (
-            this.visibility_state == _.k_EEventStatsUnlisted ||
+            this.visibility_state == _.k_EEventStateUnlisted ||
             (this.visibility_state == _.k_EEventStateVisible &&
               _ > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || _ < this.visibilityEndTime))
@@ -10723,7 +10733,7 @@
           return this.visibility_state == _.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == _.k_EEventStatsUnlisted;
+          return this.visibility_state == _.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -11640,7 +11650,7 @@
           }),
           _.published
             ? _.unlisted
-              ? (_.visibility_state = _._.k_EEventStatsUnlisted)
+              ? (_.visibility_state = _._.k_EEventStateUnlisted)
               : _.hidden
                 ? (_.visibility_state = _._.k_EEventStateStaged)
                 : (_.visibility_state = _._.k_EEventStateVisible)
@@ -14299,6 +14309,7 @@
             (this.width = _),
             (this.dataUrl = _);
         }
+        GetImageOptionLabel() {}
       }
       (0, _._)([_._], _.prototype, "dataUrl", void 0),
         (0, _._)([_._], _.prototype, "width", void 0),
@@ -14329,10 +14340,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _?.map((_) => {
           const _ = _._[_];
+          (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
           return {
             sKey: _,
             width: _.width,
@@ -18527,6 +18540,7 @@
               _ &&
               Array.isArray(_) &&
               _.length > 0 &&
+              _[0] &&
               "object" == typeof _[0]
             ) &&
             ("string" == typeof _[0].gid ||
@@ -19687,7 +19701,48 @@
             return ".webp";
         }
       }
+      async function _(_, _) {
+        if (!_ || 0 == _.length) return null;
+        return await new Promise((_) => {
+          if (_) {
+            const _ = document.createElement("video");
+            (_.onloadeddata = () => __webpack_require__(_)),
+              (_.onerror = (_) => {
+                console.error(
+                  "GetLoadedMediaElement failed to load the video, details",
+                  _,
+                ),
+                  __webpack_require__(void 0);
+              }),
+              (_.src = _);
+          } else {
+            const _ = new Image();
+            (_.onload = () => __webpack_require__(_)),
+              (_.onerror = (_) => {
+                console.error(
+                  "GetLoadedMediaElement failed to load the image, details",
+                  _,
+                ),
+                  __webpack_require__(void 0);
+              }),
+              (_.src = _);
+          }
+        });
+      }
+      function _(_) {
+        return _ instanceof HTMLVideoElement
+          ? {
+              width: _.videoWidth,
+              height: _.videoHeight,
+            }
+          : {
+              width: _.width,
+              height: _.height,
+            };
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

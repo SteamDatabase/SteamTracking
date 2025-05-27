@@ -1685,7 +1685,7 @@
         d = a(84143),
         u = a(70078),
         E = a(17720),
-        p = a(71138),
+        p = a(86355),
         v = a(4796),
         _ = a(46067),
         A = a(60746),
@@ -1945,6 +1945,7 @@
                   i.createElement("img", {
                     ...b,
                     className: O().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 i.createElement(
@@ -2012,6 +2013,7 @@
               i.createElement("img", {
                 className: O().AppCapsuleImage,
                 src: n.GetAssets().GetSmallCapsuleURL(),
+                alt: n.GetName(),
               }),
             ),
             Boolean(!a && !n.BIsFree()) &&
@@ -2089,6 +2091,7 @@
                   i.createElement("img", {
                     src: c,
                     className: O().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),

@@ -15677,7 +15677,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 155466124,
+            broadcasterAccountID: 1532096361,
           },
         ],
       };
