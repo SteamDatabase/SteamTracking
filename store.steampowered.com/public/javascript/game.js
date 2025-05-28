@@ -2362,7 +2362,7 @@ function ToggleShowAllPackageContentsText( event )
 function SetupReviewFilterMenus()
 {
 	[...document.querySelectorAll( "#reviews_filter_options button[aria-expanded]" )].forEach( ( button ) => {
-		const flyout = button.ariaControlsElements[0];
+		const flyout = button.ariaControlsElements?.[0] ?? document.getElementById(button["aria-controls"]);
 		button.addEventListener( "click", () => {
 			if ( button.ariaExpanded === "true" )
 			{
@@ -2373,7 +2373,7 @@ function SetupReviewFilterMenus()
 			}
 
 			const currentFocus = document.activeElement;
-			let nextFocusTarget = flyout.firstElementChild;
+			let nextFocusTarget = flyout?.firstElementChild;
 			const visited = new Set();
 			while ( nextFocusTarget && nextFocusTarget !== flyout )
 			{
