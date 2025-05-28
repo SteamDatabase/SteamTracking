@@ -1647,8 +1647,13 @@ function UpdatePlaytimeFilterValues( hourMin, hourMax )
 	}
 }
 
+
 function InitPlaytimeFilterSlider()
 {
+	// Element doesn't exist playtime filters is empty
+	if ( $J( "#app_reviews_playtime_slider" ).length === 0 )
+		return;
+
 	var maxHours = 100;
 	var maxSeconds = maxHours * 60 * 60;
 	const slider = $J( "#app_reviews_playtime_slider" ).slider({
@@ -2362,7 +2367,7 @@ function ToggleShowAllPackageContentsText( event )
 function SetupReviewFilterMenus()
 {
 	[...document.querySelectorAll( "#reviews_filter_options button[aria-expanded]" )].forEach( ( button ) => {
-		const flyout = button.ariaControlsElements?.[0] ?? document.getElementById(button["aria-controls"]);
+		const flyout = button.ariaControlsElements?.[0] ?? document.getElementById(button.getAttribute("aria-controls"));
 		button.addEventListener( "click", () => {
 			if ( button.ariaExpanded === "true" )
 			{
@@ -2399,7 +2404,7 @@ function SetupReviewFilterMenus()
 			}
 		} );
 
-		flyout.addEventListener( "focusout", ( e ) => {
+		flyout?.addEventListener( "focusout", ( e ) => {
 			if ( !flyout.contains( e.relatedTarget ) )
 			{
 				button.ariaExpanded = "false";
