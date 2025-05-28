@@ -1455,10 +1455,7 @@ GHomepage = {
 				GDynamicStore.MarkAppDisplayed( rgItemsShown );
 		}
 
-		// sometimes this carousel gets scrolled during recreation, slam to 0 just in case
-		if ( $J('#spotlight_carousel > .carousel_items').length > 0 )
-			$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
-
+		CreateFadingCarousel( $Spotlights, 0);
 		$Spotlights.css( 'visibility', '' );
 	},
 
