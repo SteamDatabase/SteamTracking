@@ -48969,6 +48969,7 @@
           ),
         _ = new Map([["marci_pickmeup", "marci_companion_run_secondary"]]),
         _ = [
+          "abilities/lich_death_charge",
           "abilities/necrolyte_sadist",
           "abilities/nevermore_necromastery",
           "abilities/zuus_static_field",
