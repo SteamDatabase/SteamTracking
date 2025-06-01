@@ -3452,7 +3452,10 @@
           (this.m_bAutoplayEnabled = e), (this.m_fnSetAutoplayEnabled = t);
         }
         InitPlayerVolumeMethods(e, t) {
-          (this.m_flPlayerVolume = e), (this.m_fnSetPlayerVolume = t);
+          (this.m_flPlayerVolume = e / 100),
+            (this.m_fnSetPlayerVolume = (e) => {
+              t((e *= 100));
+            });
         }
         InitAudioMutedMethods(e, t) {
           (this.m_bAudioMuted = e), (this.m_fnSetAudioMuted = t);
@@ -3461,7 +3464,7 @@
           this.m_bAutoplayEnabled = e;
         }
         UpdateVolume(e) {
-          this.m_flPlayerVolume = e;
+          this.m_flPlayerVolume = e / 100;
         }
         UpdateMuted(e) {
           this.m_bAudioMuted = e;

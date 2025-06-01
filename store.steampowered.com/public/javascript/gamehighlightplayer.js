@@ -55,7 +55,7 @@ function GetGameHighlightPlayerVolume()
 	var rgMatches = document.cookie.match( /(^|; )flGameHighlightPlayerVolume=([^;]*)/ );
 
 	// default to 80
-	var flValue = rgMatches && rgMatches[2] ? rgMatches[2] : 80;
+	var flValue = rgMatches && rgMatches[2] ? parseFloat(rgMatches[2]) : 80;
 
 	// clamp to 0-100
 	if ( flValue < 0 )
