@@ -4222,8 +4222,8 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "steam_subnav_featured"		"Utvalgt"
 "steam_subnav_news"			"Nyheter"
 "steam_subnav_recommended"	"Anbefalt"
-"steam_subnav_discovery_queue"		"Oppdagelseskø"
-"steam_subnav_points_shop"		"Poengbutikk"
+"steam_subnav_discovery_queue"		"Oppdagelseskøen"
+"steam_subnav_points_shop"		"Poengbutikken"
 "steam_subnav_wishlist"		"Ønskeliste"
 "steam_subnav_stats"		"Statistikk"
 

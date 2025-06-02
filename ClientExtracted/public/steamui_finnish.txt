@@ -4257,7 +4257,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_DeviceAuth_ChooseDialog_Title" "Haluatko pelata tätä peliä?"
 "Steam_DeviceAuth_ChooseDialog_Text" "Tämä peli kuuluu Steam-käyttäjälle %owner%. Haluatko pyytää käyttöoikeutta käyttäjän %owner% peleihin tällä laitteella?"
 "Steam_DeviceAuth_ChooseDialog_Purchase" "Ostaisin sen mieluummin..."
-"Steam_DeviceAuth_ChooseDialog_Request" "Pyydä käyttöoikeutta..."
+"Steam_DeviceAuth_ChooseDialog_Request" "Pyydä käyttöoikeutta"
 "Steam_DeviceAuth_ChooseDialog_Cancel" "Peruuta"
 
 

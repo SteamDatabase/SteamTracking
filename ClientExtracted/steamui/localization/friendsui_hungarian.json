@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Betöltés...",
     "Chat_Invite_ExpiresOneDay": "Lejárat: 1 nap",
     "Chat_Invite_ExpiresSetting": "Lejárat: %1$s",
-    "Chat_TextFilter_Active": "Az erős káromkodások és sértések általad nem ismert emberektől mostantól alapértelmezetten rejtve vannak a Steam Csevegésben. [url=%1$s]Szűrési beállítások áttekintése.[/url]",
+    "Chat_TextFilter_Active": "Néhány tartalom el van homályosítva a Steam Csevegésben. Ezt a [url=%1$s]csevegésszűrési beállításokban[/url] tudod állítani.",
     "Chat_Settings_Room_Name": "Csevegés neve",
     "GroupSettings": "Csoportbeállítások",
     "GroupSettings_General_Section": "Általános",

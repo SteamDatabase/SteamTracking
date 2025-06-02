@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Yükleniyor...",
     "Chat_Invite_ExpiresOneDay": "Sona Erme: 1 gün",
     "Chat_Invite_ExpiresSetting": "Sona Erme: %1$s",
-    "Chat_TextFilter_Active": "Tanımadığınız kullanıcılardan gelen küfür ve hakaretler artık Steam sohbetinde varsayılan olarak engellenir. [url=%1$s]Filtreleme ayarlarınızı gözden geçirin.[/url]",
+    "Chat_TextFilter_Active": "Steam sohbetinde bazı içerikler gizleniyor. Bu içerikleri [url=%1$s]sohbet filtreleme ayarlarından[/url] yönetebilirsiniz.",
     "Chat_Settings_Room_Name": "Sohbet Adı",
     "GroupSettings": "Grup Ayarları",
     "GroupSettings_General_Section": "Genel",

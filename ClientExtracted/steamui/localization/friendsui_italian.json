@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Caricamento...",
     "Chat_Invite_ExpiresOneDay": "Scade tra: 1 giorno",
     "Chat_Invite_ExpiresSetting": "Scade il: %1$s",
-    "Chat_TextFilter_Active": "Le parolacce e gli insulti pesanti di persone che non conosci ora sono oscurati dalla chat di Steam per impostazione predefinita. [url=%1$s]Consulta le impostazioni di filtraggio[/url]",
+    "Chat_TextFilter_Active": "Alcuni contenuti sono stati oscurati nella chat di Steam. Puoi modificare le [url=%1$s]impostazioni di filtraggio della chat[/url]",
     "Chat_Settings_Room_Name": "Nome della chat",
     "GroupSettings": "Impostazioni del gruppo",
     "GroupSettings_General_Section": "Generali",

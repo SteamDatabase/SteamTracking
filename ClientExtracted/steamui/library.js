@@ -1,4 +1,4 @@
-var CLSTAMP = "9760156";
+var CLSTAMP = "9798649";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -169,14 +169,14 @@ var CLSTAMP = "9760156";
         n.d(t, {
           $6: () => P,
           DO: () => T,
-          H2: () => $,
+          H2: () => Y,
           ID: () => I,
           IV: () => _,
           Iy: () => m,
           JP: () => g,
           Lg: () => k,
           ME: () => E,
-          Rh: () => Y,
+          Rh: () => $,
           S$: () => r,
           SS: () => W,
           Sx: () => U,
@@ -208,8 +208,8 @@ var CLSTAMP = "9760156";
           w1: () => a,
           wK: () => f,
           wr: () => S,
-          ww: () => L,
-          x6: () => x,
+          ww: () => x,
+          x6: () => L,
           y4: () => c,
           zm: () => G,
         });
@@ -239,7 +239,7 @@ var CLSTAMP = "9760156";
         const y = "18446744073709551615",
           E = 0,
           B = 2147483647;
-        function L(e, t = "en") {
+        function x(e, t = "en") {
           switch (e) {
             case 0:
               return "en";
@@ -307,7 +307,7 @@ var CLSTAMP = "9760156";
               return t;
           }
         }
-        const x = (e) => ("koreana" === e ? "korean" : e);
+        const L = (e) => ("koreana" === e ? "korean" : e);
         function k(e, t = "") {
           switch (e) {
             case 0:
@@ -506,7 +506,7 @@ var CLSTAMP = "9760156";
               return "unknown";
           }
         }
-        var O, A, N, z, P, H, W, U, G, V, j, q, Z, K, Y, $, X;
+        var O, A, N, z, P, H, W, U, G, V, j, q, Z, K, $, Y, X;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -689,7 +689,7 @@ var CLSTAMP = "9760156";
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
               (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-          })(Y || (Y = {})),
+          })($ || ($ = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -723,7 +723,7 @@ var CLSTAMP = "9760156";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })($ || ($ = {})),
+          })(Y || (Y = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -927,7 +927,7 @@ var CLSTAMP = "9760156";
               ...S
             } = e,
             { elemProps: y, navOptions: E, gamepadEvents: B } = (0, o.sl)(S),
-            { refDiv: L, tree: x } = (function (e) {
+            { refDiv: x, tree: L } = (function (e) {
               const {
                   navID: t,
                   virtualFocus: n,
@@ -980,20 +980,20 @@ var CLSTAMP = "9760156";
               onGlobalButtonDown: b,
               navTreeRef: d,
             });
-          (0, r.hL)(x.OnActivateCallbacks, n),
-            (0, r.hL)(x.OnDeactivateCallbacks, m),
-            (0, u.KF)(B, L, x),
+          (0, r.hL)(L.OnActivateCallbacks, n),
+            (0, r.hL)(L.OnDeactivateCallbacks, m),
+            (0, u.KF)(B, x, L),
             s.useLayoutEffect(() => {
               const e = (0, a.O)(M);
-              x.Root.SetProperties({ ...E, layout: e });
+              L.Root.SetProperties({ ...E, layout: e });
             });
-          const k = (0, i.Ue)(L, _.ref);
+          const k = (0, i.Ue)(x, _.ref);
           return s.createElement(
             p,
-            { tree: v ? null : x, disableFocusClasses: C || v },
+            { tree: v ? null : L, disableFocusClasses: C || v },
             s.createElement(
               o.TJ.Provider,
-              { value: v ? null : x.Root },
+              { value: v ? null : L.Root },
               s.cloneElement(_, { id: t, "data-react-nav-root": t, ref: k }),
             ),
           );
@@ -1101,7 +1101,7 @@ var CLSTAMP = "9760156";
           D0: () => S,
           Mg: () => B,
           sQ: () => w,
-          HR: () => x,
+          HR: () => L,
           v0: () => k,
           TJ: () => _,
           qp: () => b,
@@ -1224,9 +1224,9 @@ var CLSTAMP = "9760156";
               resetNavOnEntry: S,
               ...y
             } = e,
-            { gamepadEvents: E, actionDescriptions: B, props: L } = C(y);
+            { gamepadEvents: E, actionDescriptions: B, props: x } = C(y);
           return {
-            elemProps: L,
+            elemProps: x,
             navOptions: {
               autoFocus: t,
               preferredFocus: n,
@@ -1302,7 +1302,7 @@ var CLSTAMP = "9760156";
         }
         const E = a.createContext(void 0),
           B = E.Provider;
-        function L(e, t, n, r, s) {
+        function x(e, t, n, r, s) {
           const {
               elemProps: {
                 focusClassName: c,
@@ -1328,15 +1328,15 @@ var CLSTAMP = "9760156";
               ? (d.tabIndex = d.tabIndex || 0)
               : !h.focusable && C && (d.tabIndex = d.tabIndex ?? -1),
             (0, m.Ui)(g, S);
-          const L = (0, i.Ue)(r, S),
-            x = (0, a.useContext)(E)?.Component;
+          const x = (0, i.Ue)(r, S),
+            L = (0, a.useContext)(E)?.Component;
           let k = { ...d };
           return (
             "onClick" in d && (k.role ??= "button"),
             B
               ? ((k = {
                   ...k,
-                  divRef: L,
+                  divRef: x,
                   node: B,
                   focusClassName: o()(c, "gpfocus"),
                   focusWithinClassName: "gpfocuswithin",
@@ -1346,21 +1346,21 @@ var CLSTAMP = "9760156";
                 a.createElement(
                   _.Provider,
                   { value: B },
-                  x
-                    ? a.createElement(x, { ...k, Component: t }, l)
+                  L
+                    ? a.createElement(L, { ...k, Component: t }, l)
                     : a.createElement(t, k, l),
                 ))
               : a.createElement(
                   e,
-                  { ...k, ref: L, className: o()(d.className, "Focusable") },
+                  { ...k, ref: x, className: o()(d.className, "Focusable") },
                   l,
                 )
           );
         }
-        function x(e, t) {
+        function L(e, t) {
           const n = M(e);
           return a.forwardRef(function (r, i) {
-            return L(e, n, r, i, t);
+            return x(e, n, r, i, t);
           });
         }
         function k(e) {
@@ -1395,7 +1395,7 @@ var CLSTAMP = "9760156";
               })(n),
               c = (0, g.Cz)(s, o),
               l = (0, i.Ue)(r, c);
-            return L(e, t, a, l);
+            return x(e, t, a, l);
           });
         }
       },
@@ -2861,12 +2861,23 @@ var CLSTAMP = "9760156";
                   const i =
                       ("y" == n ? e.innerHeight : e.innerWidth) /
                       (t ? 4.5 : 3.33),
-                    s = (0, w.QE)(r.Element);
+                    o = (0, w.QE)(r.Element);
+                  let a = !1;
                   if (
-                    (s.top > e.innerHeight && s.bottom > e.innerHeight + i) ||
-                    (s.bottom < 0 && s.top < -i) ||
-                    (s.left > e.innerWidth && s.right > e.innerWidth + i) ||
-                    (s.right < 0 && s.left < -i)
+                    ("y" == n
+                      ? s == S.FORWARD
+                        ? (a =
+                            o.top > e.innerHeight &&
+                            o.bottom > e.innerHeight + i)
+                        : s == S.BACKWARD && (a = o.bottom < 0 && o.top < -i)
+                      : "x" == n &&
+                        (s == S.FORWARD
+                          ? (a =
+                              o.left > e.innerWidth &&
+                              o.right > e.innerWidth + i)
+                          : s == S.BACKWARD &&
+                            (a = o.right < 0 && o.left < -i)),
+                    a)
                   )
                     return (
                       b(`Element too far away, scrolling ${i} on ${n} axis `),
@@ -3229,17 +3240,29 @@ var CLSTAMP = "9760156";
         function _(e, t) {
           const n = e.Element;
           if (!n) return;
-          let r = [e];
+          let r = [
+            { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+          ];
           for (let t = e.Parent; t; t = t.Parent) {
-            const e = t.m_Properties?.scrollIntoViewWhenChildFocused;
-            "force" === e ? (r = [t]) : e && r.push(t);
+            const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+              n = t.m_Properties?.scrollIntoViewType;
+            if (e) {
+              const i = { node: t, eScrollType: n };
+              "force" === e ? (r = [i]) : r.push(i);
+            }
+            if (void 0 !== n)
+              for (
+                let e = r.length - 1;
+                e >= 0 && void 0 === r[e].eScrollType;
+                e--
+              )
+                r[e].eScrollType = n;
           }
           for (; r.length; ) {
-            let i = r.pop(),
-              s = 0 == r.length,
-              o = i?.m_Properties?.scrollIntoViewType;
+            let { node: i, eScrollType: s } = r.pop(),
+              o = 0 == r.length;
             if (
-              (void 0 === o && (o = h ? m.Yo.NoTransform : m.Yo.Standard),
+              (void 0 === s && (s = h ? m.Yo.NoTransform : m.Yo.Standard),
               i?.m_Properties?.fnScrollIntoViewHandler)
             ) {
               if (!1 !== i.m_Properties.fnScrollIntoViewHandler(e, t, i))
@@ -3247,31 +3270,37 @@ var CLSTAMP = "9760156";
             }
             const a = i.m_element,
               c =
-                o == m.Yo.NoTransform ||
-                o == m.Yo.NoTransformSparseContent ||
-                !s;
+                s == m.Yo.NoTransform ||
+                s == m.Yo.NoTransformSparseContent ||
+                !o;
             if (t) {
               const t = c ? w(a) : a.getBoundingClientRect();
               let r = !1;
-              const i = Math.max((t.bottom - t.top) * p, 40);
-              ((g && performance.now() - g < f) ||
+              const i = Math.max((t.bottom - t.top) * p, 40),
+                s = g && performance.now() - g < f;
+              (s ||
                 t.bottom < -i ||
-                t.top > window.innerHeight + i) &&
-                (r = !0);
-              let s = r ? "auto" : "smooth";
+                t.top > a.ownerDocument.defaultView.innerHeight + i) &&
+                ((r = !0),
+                s ||
+                  d(
+                    `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
+                  ));
+              let o = r ? "auto" : "smooth";
               r && (g = performance.now()),
-                e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
+                e.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
                 c
-                  ? E(n, a, s)
-                  : a.scrollIntoView({ behavior: s, block: "nearest" });
+                  ? E(n, a, o)
+                  : a.scrollIntoView({ behavior: o, block: "nearest" });
             } else
-              c
-                ? E(n, a, "auto")
-                : a?.scrollIntoView({
-                    behavior: "auto",
-                    block: "nearest",
-                    inline: "nearest",
-                  });
+              d("No previous element for scrolling, will jump"),
+                c
+                  ? E(n, a, "auto")
+                  : a?.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    });
           }
         }
         function w(e) {
@@ -3317,13 +3346,15 @@ var CLSTAMP = "9760156";
           let [i, s, o] = b(e, r),
             [a, c, l] = b(t, r),
             [u, m] = b(n, r);
-          return i < a && s > c
-            ? 0
-            : (i < a && o <= l) || (s > c && o > l)
-              ? i - a - u
-              : (i < a && o > l) || (s > c && o <= l)
-                ? s - c + m
-                : 0;
+          if (i < a && s > c) return 0;
+          const d = i - u,
+            h = s + m,
+            p = o > l;
+          return (d < a && !p) || (h > c && p)
+            ? d - a
+            : (d < a && p) || (h > c && !p)
+              ? h - c
+              : 0;
         }
         function v(e) {
           return "auto" == e
@@ -3385,7 +3416,7 @@ var CLSTAMP = "9760156";
             e || (e = (0, o.qf)(c));
             let t = M(c),
               n = S(e, w(e)),
-              m = x(e),
+              m = L(e),
               h = { element: e, left: 0, top: 0 };
             if (
               (d(
@@ -3440,7 +3471,7 @@ var CLSTAMP = "9760156";
           let m = !1;
           for (let e of a) {
             if (y(e.left) && y(e.top)) continue;
-            let t = x(e.element),
+            let t = L(e.element),
               r = t.scrollTop + e.top,
               s = t.scrollLeft + e.left;
             (s = i.OQ(s, 0, t.MaxScrollLeft())),
@@ -3565,13 +3596,13 @@ var CLSTAMP = "9760156";
           }
         }
         (0, r.Cg)([s.o], B.prototype, "ResetScrollState", null);
-        const L = new WeakMap();
-        function x(e) {
-          let t = L.get(e);
-          return t || ((t = new B(e)), L.set(e, t)), t;
+        const x = new WeakMap();
+        function L(e) {
+          let t = x.get(e);
+          return t || ((t = new B(e)), x.set(e, t)), t;
         }
         function k(e) {
-          const t = L.get(e);
+          const t = x.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
             : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -3750,20 +3781,29 @@ var CLSTAMP = "9760156";
           for (let n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
           return !0;
         }
-        function o(e, t) {
-          return a(e, (e) => t == e);
+        function o(e, t, n) {
+          if (!e && !t) return !0;
+          if (!e || !t) return !1;
+          if (e.length !== t.length) return !1;
+          const r = e.slice().sort(n),
+            i = t.slice().sort(n);
+          for (let e = 0; e < r.length; e++) if (r[e] !== i[e]) return !1;
+          return !0;
         }
         function a(e, t) {
+          return c(e, (e) => t == e);
+        }
+        function c(e, t) {
           const n = e.findIndex(t);
           return n >= 0 && (e.splice(n, 1), !0);
         }
-        function c(e, t) {
+        function l(e, t) {
           return e.reduce((e, n, r, i) => e + (t(n, r, i) ? 1 : 0), 0);
         }
-        function l(e, t) {
+        function u(e, t) {
           return e.filter((e) => t !== e);
         }
-        function u(e, t) {
+        function m(e, t) {
           let n = 0,
             r = e.length - 1;
           for (; n <= r; ) {
@@ -3779,11 +3819,11 @@ var CLSTAMP = "9760156";
           }
           return r;
         }
-        function m(e, t, n) {
-          const r = u(e, (e) => n(t, e));
+        function d(e, t, n) {
+          const r = m(e, (e) => n(t, e));
           e.splice(r + 1, 0, t);
         }
-        function d(e, t) {
+        function h(e, t) {
           let n = 0,
             r = 0;
           for (; n < e.length; ) {
@@ -3792,7 +3832,7 @@ var CLSTAMP = "9760156";
           }
           return (e.length = r), e;
         }
-        function h(e, t, n) {
+        function p(e, t, n) {
           return (
             e ||
               console.error(
@@ -3801,23 +3841,24 @@ var CLSTAMP = "9760156";
             e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
           );
         }
-        function p(e) {
+        function g(e) {
           const t = new Set();
           return e.forEach((e) => t.add(e)), Array.from(t);
         }
         n.d(t, {
-          $D: () => c,
-          $Y: () => h,
-          Ew: () => p,
+          $D: () => l,
+          $Y: () => p,
+          Ew: () => g,
           R5: () => s,
-          Wp: () => a,
-          Xr: () => m,
+          Wp: () => c,
+          Xr: () => d,
           fW: () => r,
-          hT: () => d,
-          il: () => l,
-          rJ: () => u,
-          x9: () => o,
+          hT: () => h,
+          il: () => u,
+          rJ: () => m,
+          x9: () => a,
           yY: () => i,
+          zl: () => o,
         });
       },
       85688: (e, t, n) => {
@@ -3923,7 +3964,7 @@ var CLSTAMP = "9760156";
         "use strict";
         n.d(t, { O: () => r, S: () => s });
         const r =
-            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/,
+            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
           i = /^(steam|ftp|https?):\/\//;
         function s(e) {
           return i.test(e) ? e : "https://" + e;
@@ -4513,11 +4554,6 @@ var CLSTAMP = "9760156";
                       bw: s.gp.writeUint32,
                     },
                     sysid: { n: 20, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                    trace_tag: {
-                      n: 21,
-                      br: s.qM.readUint64String,
-                      bw: s.gp.writeUint64String,
-                    },
                     webapi_key_id: {
                       n: 25,
                       br: s.qM.readUint32,
@@ -4608,6 +4644,11 @@ var CLSTAMP = "9760156";
                       n: 44,
                       br: s.qM.readBool,
                       bw: s.gp.writeBool,
+                    },
+                    trace_tag: {
+                      n: 45,
+                      br: s.qM.readFixed64String,
+                      bw: s.gp.writeFixed64String,
                     },
                   },
                 }),
@@ -6866,8 +6907,8 @@ var CLSTAMP = "9760156";
                 (B.sm_m = {
                   proto: B,
                   fields: {
-                    emoticons: { n: 1, c: L, r: !0, q: !0 },
-                    stickers: { n: 2, c: x, r: !0, q: !0 },
+                    emoticons: { n: 1, c: x, r: !0, q: !0 },
+                    stickers: { n: 2, c: L, r: !0, q: !0 },
                     effects: { n: 3, c: k, r: !0, q: !0 },
                   },
                 }),
@@ -6911,20 +6952,20 @@ var CLSTAMP = "9760156";
             return "CMsgClientEmoticonList";
           }
         }
-        class L extends r.Message {
+        class x extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              L.prototype.name || s.Sg(L.M()),
+              x.prototype.name || s.Sg(x.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              L.sm_m ||
-                (L.sm_m = {
-                  proto: L,
+              x.sm_m ||
+                (x.sm_m = {
+                  proto: x,
                   fields: {
                     name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
                     count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
@@ -6944,81 +6985,6 @@ var CLSTAMP = "9760156";
                       bw: s.gp.writeUint32,
                     },
                     appid: { n: 6, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                  },
-                }),
-              L.sm_m
-            );
-          }
-          static MBF() {
-            return L.sm_mbf || (L.sm_mbf = s.w0(L.M())), L.sm_mbf;
-          }
-          toObject(e = !1) {
-            return L.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(L.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(L.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new L();
-            return L.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(L.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(L.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientEmoticonList_Emoticon";
-          }
-        }
-        class x extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              x.prototype.name || s.Sg(x.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
-                  fields: {
-                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
-                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
-                    time_received: {
-                      n: 3,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                    time_last_used: {
-                      n: 5,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    use_count: {
-                      n: 6,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
                   },
                 }),
               x.sm_m
@@ -7055,6 +7021,81 @@ var CLSTAMP = "9760156";
             var e = new (i().BinaryWriter)();
             return (
               x.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientEmoticonList_Emoticon";
+          }
+        }
+        class L extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              L.prototype.name || s.Sg(L.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              L.sm_m ||
+                (L.sm_m = {
+                  proto: L,
+                  fields: {
+                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
+                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
+                    time_received: {
+                      n: 3,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                    time_last_used: {
+                      n: 5,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    use_count: {
+                      n: 6,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                  },
+                }),
+              L.sm_m
+            );
+          }
+          static MBF() {
+            return L.sm_mbf || (L.sm_mbf = s.w0(L.M())), L.sm_mbf;
+          }
+          toObject(e = !1) {
+            return L.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(L.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(L.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new L();
+            return L.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(L.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(L.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -9136,7 +9177,7 @@ var CLSTAMP = "9760156";
           $$: () => c,
           AX: () => T,
           CH: () => h,
-          DF: () => x,
+          DF: () => L,
           L$: () => u,
           ML: () => f,
           OP: () => F,
@@ -9156,7 +9197,7 @@ var CLSTAMP = "9760156";
           o4: () => C,
           ob: () => A,
           uD: () => k,
-          uH: () => L,
+          uH: () => x,
           uN: () => E,
           vJ: () => d,
           x2: () => y,
@@ -9406,7 +9447,7 @@ var CLSTAMP = "9760156";
             t.current
           );
         }
-        function L(e, t) {
+        function x(e, t) {
           const [n, i] = r.useState(e);
           return (
             r.useEffect(() => {
@@ -9419,8 +9460,8 @@ var CLSTAMP = "9760156";
             n
           );
         }
-        function x(e, t) {
-          return L(e, t) || e;
+        function L(e, t) {
+          return x(e, t) || e;
         }
         function k(e = !1) {
           const [t, n] = r.useState(e);
@@ -9750,6 +9791,8 @@ var CLSTAMP = "9760156";
                 "k_EAccountFlagLimitedUserForce"),
               (e[(e.k_EAccountFlagEmailValidated = 16384)] =
                 "k_EAccountFlagEmailValidated"),
+              (e[(e.k_EAccountFlagValveEmail = 32768)] =
+                "k_EAccountFlagValveEmail"),
               (e[(e.k_EAccountFlagForcePasswordChange = 131072)] =
                 "k_EAccountFlagForcePasswordChange"),
               (e[(e.k_EAccountFlagLogonExtraSecurity = 524288)] =
@@ -9963,7 +10006,7 @@ var CLSTAMP = "9760156";
         n.d(t, { A: () => s });
         var r = n(17372);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751}',
         );
         class s {
           static InstrumentLink(e, t, n = null) {
@@ -10571,9 +10614,9 @@ var CLSTAMP = "9760156";
       11131: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Ad: () => L,
+          Ad: () => x,
           Dr: () => i,
-          K9: () => x,
+          K9: () => L,
           Of: () => R,
           R7: () => E,
           Wf: () => r,
@@ -10715,7 +10758,7 @@ var CLSTAMP = "9760156";
             r = l.useMemo(() => ({ ownerWindow: t }), [t]);
           return l.createElement(y.Provider, { value: r }, n);
         }
-        class L {
+        class x {
           m_strName;
           m_strTitle;
           m_rgParams;
@@ -10976,16 +11019,16 @@ var CLSTAMP = "9760156";
           OnFocus() {}
           OnBlur() {}
         }
-        (0, s.Cg)([c.sH], L.prototype, "m_bFocused", void 0),
-          (0, s.Cg)([w.o], L.prototype, "OnMessage", null),
-          (0, s.Cg)([w.o], L.prototype, "RenderInternal", null),
-          (0, s.Cg)([w.o], L.prototype, "OnCreateInternal", null),
-          (0, s.Cg)([w.o], L.prototype, "OnResizeEvent", null),
-          (0, s.Cg)([w.o], L.prototype, "OnBeforeUnloadEvent", null),
-          (0, s.Cg)([w.o], L.prototype, "OnUnload", null),
-          (0, s.Cg)([w.o], L.prototype, "OnFocusInternal", null),
-          (0, s.Cg)([w.o], L.prototype, "OnBlurInternal", null);
-        class x extends L {
+        (0, s.Cg)([c.sH], x.prototype, "m_bFocused", void 0),
+          (0, s.Cg)([w.o], x.prototype, "OnMessage", null),
+          (0, s.Cg)([w.o], x.prototype, "RenderInternal", null),
+          (0, s.Cg)([w.o], x.prototype, "OnCreateInternal", null),
+          (0, s.Cg)([w.o], x.prototype, "OnResizeEvent", null),
+          (0, s.Cg)([w.o], x.prototype, "OnBeforeUnloadEvent", null),
+          (0, s.Cg)([w.o], x.prototype, "OnUnload", null),
+          (0, s.Cg)([w.o], x.prototype, "OnFocusInternal", null),
+          (0, s.Cg)([w.o], x.prototype, "OnBlurInternal", null);
+        class L extends x {
           m_strSavedDimensionsKey;
           m_strInitialSavedDimensionsKey;
           m_strInitialRestoreDetails;
@@ -11062,7 +11105,7 @@ var CLSTAMP = "9760156";
               (this.m_rgParams.strRestoreDetails = e);
           }
         }
-        (0, s.Cg)([w.o], x.prototype, "QueryAndStoreWindowPosition", null);
+        (0, s.Cg)([w.o], L.prototype, "QueryAndStoreWindowPosition", null);
         class k {
           m_bShuttingDown = !1;
           m_mapPopups = c.sH.map([], { deep: !1 });
@@ -11077,9 +11120,9 @@ var CLSTAMP = "9760156";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 19 2025 : 17:21:13",
-                BUILD_TIME_UTC: "May 20 2025 : 00:21:13",
-                BUILD_RTIME_UTC: 1747700473,
+                BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
+                BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
+                BUILD_RTIME_UTC: 1748892104,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -12683,7 +12726,7 @@ var CLSTAMP = "9760156";
           y = n(44846),
           E = n(83957),
           B = n.n(E);
-        class L {
+        class x {
           m_CMList = { rgCMList: [], rtLastLoaded: 0 };
           m_Storage;
           m_InitPromise;
@@ -12748,7 +12791,7 @@ var CLSTAMP = "9760156";
           }
           async GetCMListFromWebAPI() {
             try {
-              const n = await ((e = x),
+              const n = await ((e = L),
                 (t = 1e4),
                 () =>
                   new Promise((n, r) => {
@@ -12908,7 +12951,7 @@ var CLSTAMP = "9760156";
             return (e.rtLastCheck = new Date().getTime() / 1e3), e.msPing;
           }
         }
-        async function x() {
+        async function L() {
           const e = `${s.TS.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`,
             t = (await B().get(e)).data,
             n = (t && t.response && t.response.serverlist) || [];
@@ -12933,7 +12976,7 @@ var CLSTAMP = "9760156";
           m_iIntervalHeartbeat;
           m_iCallSeq = 1;
           m_mapWaitingCallbacks = new Map();
-          m_CMList = new L();
+          m_CMList = new x();
           constructor(e) {
             super(), (0, u.Gn)(this), this.m_CMList.Init(e);
           }
@@ -13448,9 +13491,9 @@ var CLSTAMP = "9760156";
           Dy: () => O,
           Fd: () => B,
           IK: () => E,
-          K5: () => L,
+          K5: () => x,
           P: () => M,
-          Vs: () => x,
+          Vs: () => L,
           Y8: () => N,
           aE: () => T,
           ai: () => R,
@@ -13571,7 +13614,7 @@ var CLSTAMP = "9760156";
                   l.createElement(
                     l.Fragment,
                     null,
-                    l.createElement(L, null),
+                    l.createElement(x, null),
                     l.createElement(
                       y,
                       { className: h.Cancel, onSelected: n },
@@ -13702,11 +13745,11 @@ var CLSTAMP = "9760156";
             );
           }
         }
-        function L(e) {
+        function x(e) {
           const t = l.useContext(M).styles ?? v();
           return l.createElement("div", { className: t.ContextMenuSeparator });
         }
-        const x = (e) => {
+        const L = (e) => {
           const t = (0, b.Qn)();
           return l.createElement(k, { ...e, bInGamepadUI: t });
         };
@@ -13977,11 +14020,11 @@ var CLSTAMP = "9760156";
                 : (g.menuLeft = t.bOverlapHorizontal ? _ : w);
             let E = a ?? h.top,
               B = a ?? h.bottom,
-              L = n.scrollHeight;
-            t.bMatchHeight && ((L = B - E), (g.menuHeight = L));
-            let x = (t.bOverlapVertical ? B : E) - l - L,
-              k = x > 0,
-              R = l + m - (t.bOverlapVertical ? E : B) - L,
+              x = n.scrollHeight;
+            t.bMatchHeight && ((x = B - E), (g.menuHeight = x));
+            let L = (t.bOverlapVertical ? B : E) - l - x,
+              k = L > 0,
+              R = l + m - (t.bOverlapVertical ? E : B) - x,
               I = R > 0,
               T = (t.bPreferPopTop || !I) && k && !t.bDisablePopTop;
             if (!k && !I) {
@@ -13989,11 +14032,11 @@ var CLSTAMP = "9760156";
                 void 0 !== t.bShiftToFitWindow
                   ? t.bShiftToFitWindow
                   : !!t.bFitToWindow && !t.bOverlapHorizontal;
-              (T = x > R && !t.bDisablePopTop),
+              (T = L > R && !t.bDisablePopTop),
                 e && (T ? (g.menuTop = 4) : (g.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (L = Math.min(L, m - 8)) : (L += T ? x : R),
-                  (g.menuHeight = L - 8));
+                  (e ? (x = Math.min(x, m - 8)) : (x += T ? L : R),
+                  (g.menuHeight = x - 8));
             }
             void 0 === g.menuBottom &&
               void 0 === g.menuTop &&
@@ -14277,7 +14320,7 @@ var CLSTAMP = "9760156";
                   ),
                 ),
               e.length > 0 &&
-                (t.push(l.createElement(L, { key: "devtools-separator" })),
+                (t.push(l.createElement(x, { key: "devtools-separator" })),
                 t.push(...e));
           }
           if (t.length)
@@ -14959,7 +15002,7 @@ var CLSTAMP = "9760156";
                       rctActiveContextMenus: t && c ? a : void 0,
                     };
                   return e instanceof b._F
-                    ? r.createElement(B, { ...n, modal: e, Component: o ?? L })
+                    ? r.createElement(B, { ...n, modal: e, Component: o ?? x })
                     : e instanceof b.$9
                       ? r.createElement(E, {
                           ...n,
@@ -15023,7 +15066,7 @@ var CLSTAMP = "9760156";
             }),
             n,
           );
-          return s ? r.createElement(x, { active: i }, a) : a;
+          return s ? r.createElement(L, { active: i }, a) : a;
         }
         function B(e) {
           const {
@@ -15054,10 +15097,10 @@ var CLSTAMP = "9760156";
             )
           );
         }
-        function L(e) {
+        function x(e) {
           const { className: t, active: n, children: i } = e;
           return r.createElement(
-            x,
+            L,
             { active: n },
             r.createElement(
               M.C$,
@@ -15066,7 +15109,7 @@ var CLSTAMP = "9760156";
             ),
           );
         }
-        function x(e) {
+        function L(e) {
           const { active: t, children: n } = e,
             i = r.useRef(null);
           return (
@@ -15491,7 +15534,7 @@ var CLSTAMP = "9760156";
           BeN: () => P,
           Bir: () => on,
           Bki: () => hn,
-          CE1: () => xt,
+          CE1: () => Lt,
           CeX: () => me,
           Cip: () => ft,
           Cv4: () => m,
@@ -15522,7 +15565,7 @@ var CLSTAMP = "9760156";
           MUh: () => qe,
           MbF: () => In,
           MvQ: () => Se,
-          MxO: () => Y,
+          MxO: () => $,
           N8C: () => Qe,
           NCC: () => Ht,
           NtH: () => zt,
@@ -15547,7 +15590,7 @@ var CLSTAMP = "9760156";
           T4m: () => At,
           UTF: () => kt,
           U_V: () => ct,
-          V5W: () => xe,
+          V5W: () => Le,
           VR: () => je,
           VSd: () => Mn,
           Vgk: () => gn,
@@ -15555,16 +15598,16 @@ var CLSTAMP = "9760156";
           WOg: () => bt,
           WX$: () => Qt,
           Wy0: () => ht,
-          X: () => x,
+          X: () => L,
           X4B: () => ce,
           XH_: () => nn,
           XTb: () => E,
           Xjb: () => ve,
           Xz0: () => pt,
           YJl: () => U,
-          YNO: () => L,
+          YNO: () => x,
           Yb3: () => rn,
-          YuU: () => Ye,
+          YuU: () => $e,
           ZPc: () => Dt,
           ZWw: () => Me,
           ZjT: () => Zt,
@@ -15576,9 +15619,9 @@ var CLSTAMP = "9760156";
           _r0: () => yt,
           a3E: () => it,
           aPd: () => F,
-          aVR: () => $t,
+          aVR: () => Yt,
           aeP: () => be,
-          agV: () => xn,
+          agV: () => Ln,
           apU: () => Pe,
           b8_: () => cn,
           bKN: () => kn,
@@ -15626,11 +15669,11 @@ var CLSTAMP = "9760156";
           mrd: () => D,
           nGC: () => ee,
           nm_: () => dn,
-          o5Q: () => Yt,
+          o5Q: () => $t,
           ofN: () => Sn,
           oy: () => yn,
           pDR: () => X,
-          qcc: () => $e,
+          qcc: () => Ye,
           qnF: () => Ot,
           qzq: () => Ne,
           rNt: () => vn,
@@ -15640,7 +15683,7 @@ var CLSTAMP = "9760156";
           sdo: () => Z,
           t$Q: () => H,
           tID: () => Te,
-          tIO: () => Ln,
+          tIO: () => xn,
           tcj: () => N,
           tmR: () => S,
           twC: () => Bt,
@@ -15654,13 +15697,13 @@ var CLSTAMP = "9760156";
           wVV: () => Rt,
           wbc: () => f,
           xTY: () => en,
-          xv8: () => $,
+          xv8: () => Y,
           yFA: () => V,
           yUp: () => j,
           y_e: () => Oe,
-          ypD: () => Lt,
+          ypD: () => xt,
           zD7: () => M,
-          zHo: () => Le,
+          zHo: () => xe,
         });
         var r = n(63696),
           i = n(90765),
@@ -16211,7 +16254,7 @@ var CLSTAMP = "9760156";
             ),
           );
         }
-        function L() {
+        function x() {
           return r.createElement(
             "svg",
             {
@@ -16227,7 +16270,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function x(e) {
+        function L(e) {
           return r.createElement(
             "svg",
             {
@@ -16935,7 +16978,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function Y(e) {
+        function $(e) {
           return (0, c.Qn)()
             ? r.createElement(
                 "svg",
@@ -17004,7 +17047,7 @@ var CLSTAMP = "9760156";
                 ),
               );
         }
-        function $() {
+        function Y() {
           return r.createElement(
             "svg",
             {
@@ -18082,7 +18125,7 @@ var CLSTAMP = "9760156";
             ),
           );
         }
-        function Le() {
+        function xe() {
           return r.createElement(
             "svg",
             {
@@ -18159,7 +18202,7 @@ var CLSTAMP = "9760156";
             ),
           );
         }
-        function xe(e) {
+        function Le(e) {
           return r.createElement(
             "svg",
             {
@@ -18992,7 +19035,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function Ye() {
+        function $e() {
           return r.createElement(
             "svg",
             {
@@ -19011,7 +19054,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function $e() {
+        function Ye() {
           return r.createElement(
             "svg",
             {
@@ -19926,7 +19969,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function Lt(e) {
+        function xt(e) {
           return r.createElement(
             "svg",
             {
@@ -19949,7 +19992,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function xt(e) {
+        function Lt(e) {
           return r.createElement(
             "svg",
             {
@@ -20560,7 +20603,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function Yt(e) {
+        function $t(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20583,7 +20626,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function $t(e) {
+        function Yt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -21154,7 +21197,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function Ln(e) {
+        function xn(e) {
           return r.createElement(
             "svg",
             {
@@ -21168,7 +21211,7 @@ var CLSTAMP = "9760156";
             }),
           );
         }
-        function xn(e) {
+        function Ln(e) {
           return r.createElement(
             "svg",
             {
@@ -21763,7 +21806,7 @@ var CLSTAMP = "9760156";
           Gq: () => w,
           I2: () => E,
           MA: () => y,
-          Vr: () => x,
+          Vr: () => L,
           ep: () => h,
           fS: () => v,
           he: () => g,
@@ -21883,9 +21926,13 @@ var CLSTAMP = "9760156";
             },
             [w, b] = r.useState(!1),
             [C, v] = r.useState(),
-            M = r.useCallback((e) => {
-              b(!0), v(e.currentTarget);
-            }, []),
+            M = r.useCallback(
+              (e) => {
+                (h && "pointerType" in e && "mouse" != e.pointerType) ||
+                  (b(!0), v(e.currentTarget));
+              },
+              [h],
+            ),
             S = r.useCallback(() => {
               b(!1);
             }, []),
@@ -21976,11 +22023,11 @@ var CLSTAMP = "9760156";
             h ?? n.ownerDocument.body,
           );
         }
-        const L = "DEBUG_StickyHovers";
-        function x(e) {
+        const x = "DEBUG_StickyHovers";
+        function L(e) {
           e
-            ? window.sessionStorage.setItem(L, "true")
-            : window.sessionStorage.removeItem(L);
+            ? window.sessionStorage.setItem(x, "true")
+            : window.sessionStorage.removeItem(x);
         }
       },
       34742: (e, t, n) => {
@@ -22065,6 +22112,9 @@ var CLSTAMP = "9760156";
           Subscribe(e) {
             return { Unsubscribe: this.m_callbacks.Register(e).Unregister };
           }
+          get SubscriberCount() {
+            return this.m_callbacks.CountRegistered();
+          }
         }
         function c(e, t) {
           return new a(e, t);
@@ -22073,31 +22123,31 @@ var CLSTAMP = "9760156";
           m_fnMap;
           m_originalSubscribableValue;
           m_mappedSubscribableValue;
-          m_mappedUnsubscribe;
-          m_subscriptionRefCount = 0;
+          m_bMappedValueStale = !1;
           constructor(e, t, n) {
             (this.m_originalSubscribableValue = e),
               (this.m_mappedSubscribableValue = new a(t(e.Value), n)),
-              (this.m_fnMap = t);
+              (this.m_fnMap = t),
+              this.m_originalSubscribableValue.Subscribe(() => {
+                this.m_mappedSubscribableValue.SubscriberCount > 0
+                  ? this.UpdateMappedValue()
+                  : (this.m_bMappedValueStale = !0);
+              });
           }
           get Value() {
-            return this.m_mappedSubscribableValue?.Value;
+            return (
+              this.m_bMappedValueStale && this.UpdateMappedValue(),
+              this.m_mappedSubscribableValue?.Value
+            );
           }
           Subscribe(e) {
-            0 == this.m_subscriptionRefCount++ &&
-              (this.m_mappedUnsubscribe =
-                this.m_originalSubscribableValue.Subscribe((e) =>
-                  this.m_mappedSubscribableValue.Set(this.m_fnMap(e)),
-                ));
-            const t = this.m_mappedSubscribableValue?.Subscribe(e);
-            return {
-              Unsubscribe: () => {
-                t.Unsubscribe(),
-                  0 == --this.m_subscriptionRefCount &&
-                    (this.m_mappedUnsubscribe?.Unsubscribe(),
-                    (this.m_mappedUnsubscribe = void 0));
-              },
-            };
+            return this.m_mappedSubscribableValue.Subscribe(e);
+          }
+          UpdateMappedValue() {
+            this.m_mappedSubscribableValue.Set(
+              this.m_fnMap(this.m_originalSubscribableValue.Value),
+            ),
+              (this.m_bMappedValueStale = !1);
           }
         }
         function u(e, t, n) {
@@ -22452,10 +22502,10 @@ var CLSTAMP = "9760156";
           }
         }
         n.d(t, {
-          $e: () => L,
+          $e: () => x,
           BA: () => T,
           IB: () => S,
-          Kf: () => x,
+          Kf: () => L,
           MS: () => M,
           NO: () => i,
           No: () => m,
@@ -22518,13 +22568,13 @@ var CLSTAMP = "9760156";
           }
           return r(n) ? n : null;
         }
-        function L(e, t) {
+        function x(e, t) {
           const n = [];
           let r = e;
           for (; (r = B(r, t)); ) n.push(r);
           return n;
         }
-        function x(e, t) {
+        function L(e, t) {
           let n = e;
           for (; n; ) {
             if (t(n)) return n;
@@ -22937,7 +22987,7 @@ var CLSTAMP = "9760156";
           qZ: () => O,
           sq: () => k,
           u6: () => R,
-          vl: () => x,
+          vl: () => L,
         });
         var r,
           i = n(59351),
@@ -23157,7 +23207,7 @@ var CLSTAMP = "9760156";
             if (!a.bGranularFutureTime)
               return (
                 i.tB(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? L(n) : k(n)
+                n.getFullYear() == r.getFullYear() ? x(n) : k(n)
               );
             i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -23213,7 +23263,7 @@ var CLSTAMP = "9760156";
               ? (0, s.we)("#TimeSince_1Week")
               : (0, s.we)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? L(n) : k(n);
+          return n.getFullYear() == r.getFullYear() ? x(n) : k(n);
         }
         function b(e) {
           const t = new Date(1e3 * e),
@@ -23226,10 +23276,10 @@ var CLSTAMP = "9760156";
             t >= r
               ? (0, s.we)("#Time_Recent")
               : t.getFullYear() == n.getFullYear()
-                ? L(t)
+                ? x(t)
                 : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
                   ? k(t)
-                  : x(t)
+                  : L(t)
           );
         }
         const C = new Map(),
@@ -23264,7 +23314,7 @@ var CLSTAMP = "9760156";
             t)
           );
         }
-        function L(e) {
+        function x(e) {
           let t = v.get(e.getMonth());
           return (
             t ||
@@ -23275,7 +23325,7 @@ var CLSTAMP = "9760156";
             t)
           );
         }
-        function x(e) {
+        function L(e) {
           let t = M.get(e.getFullYear());
           return (
             t ||
@@ -24241,7 +24291,7 @@ var CLSTAMP = "9760156";
           GP: () => o.GP,
           Hn: () => S,
           IW: () => y,
-          NQ: () => L,
+          NQ: () => x,
           On: () => B,
           Pr: () => v,
           QO: () => l,
@@ -24261,7 +24311,7 @@ var CLSTAMP = "9760156";
           ss: () => m,
           td: () => C,
           uI: () => f,
-          xv: () => x,
+          xv: () => L,
           yK: () => k,
         });
         var r = n(63696),
@@ -24348,10 +24398,10 @@ var CLSTAMP = "9760156";
         function B(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        const L = "unknown";
-        function x() {
+        const x = "unknown";
+        function L() {
           if (!window || !window.location || !window.location.href)
-            return console.warn("Unable to determine base url!"), L;
+            return console.warn("Unable to determine base url!"), x;
           const e = window.location.href;
           return B(e, o.TS.STORE_BASE_URL)
             ? o.TS.STORE_BASE_URL
@@ -24546,9 +24596,9 @@ var CLSTAMP = "9760156";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 19 2025 : 17:21:13",
-                    BUILD_TIME_UTC: "May 20 2025 : 00:21:13",
-                    BUILD_RTIME_UTC: 1747700473,
+                    BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
+                    BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
+                    BUILD_RTIME_UTC: 1748892104,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24745,8 +24795,8 @@ var CLSTAMP = "9760156";
           y = n(49455),
           E = n(91435),
           B = n(24295),
-          L = n(72905);
-        const x = r.lazy(() =>
+          x = n(72905);
+        const L = r.lazy(() =>
             Promise.all([n.e(8732), n.e(9858)]).then(n.bind(n, 26326)),
           ),
           k = r.lazy(() =>
@@ -24790,7 +24840,7 @@ var CLSTAMP = "9760156";
                     C.tH,
                     null,
                     r.createElement(
-                      L.Ay,
+                      x.Ay,
                       { domain: "steamclient" },
                       r.createElement(
                         u.ss,
@@ -24798,7 +24848,7 @@ var CLSTAMP = "9760156";
                         r.createElement(
                           E.EO,
                           null,
-                          r.createElement(x, { cm: t }),
+                          r.createElement(L, { cm: t }),
                         ),
                       ),
                     ),
@@ -24947,7 +24997,7 @@ var CLSTAMP = "9760156";
     (a.e = (e) =>
       Promise.all(Object.keys(a.f).reduce((t, n) => (a.f[n](e, t), t), []))),
     (a.u = (e) =>
-      ({
+      (({
         48: "localization/friendsui_turkish-json",
         89: "localization/friendsui_tchinese-json",
         106: "localization/steamui_finnish-json",
@@ -25080,152 +25130,153 @@ var CLSTAMP = "9760156";
         9858: "chunk~2dcc5aaf7",
         9869: "localization/shared_vietnamese-json",
         9887: "localization/steamui_german-json",
-      })[e] +
+      })[e] || e) +
       ".js?contenthash=" +
       {
-        48: "22f42df535835ac04289",
-        89: "89503179abc434a195bb",
-        106: "e39e99bd9dd27e8e16f6",
-        129: "7b325e56cc61fe29e42e",
-        139: "2b372475eca130dd830d",
-        297: "238fffaabd086047736f",
-        740: "08be05696f19d35fe749",
-        786: "5ce4f975a0902d0be830",
-        823: "edbce3dab0aeb7a5e33d",
-        901: "be035bdfd798d5299916",
-        1005: "98a80dadf82a8cc5166b",
+        48: "6c8b8d906ea798b78f78",
+        89: "518b89b708126afaf165",
+        106: "713590168b45c708cccb",
+        129: "d456b7375916b3d038e2",
+        139: "a3011da7b7a7131979e4",
+        297: "00a79cfa858ca0c7c4ca",
+        674: "7a1901ebfb5882c56a0b",
+        740: "b307f48181939fbd54c4",
+        786: "45ea218a07e68e7300e5",
+        823: "c2de73b42149edcb026b",
+        901: "e6c0b1dfad931a4b8d22",
+        1005: "f56b966896d91c409cef",
         1012: "cded7344104308eb77a6",
-        1093: "57220ffa981bd47b4160",
-        1220: "2fe7ac88a45ebc982931",
+        1093: "7bd044ddebc026b54f90",
+        1220: "267d5635590d2b12d141",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "d08342ef6e5c1fa855d0",
-        1423: "61660a5b711b757572ff",
-        1463: "40f654088908f41e25c1",
-        1478: "b5d53c9a8af635952919",
-        1511: "cbcb46a6e7fcd38e0538",
-        1573: "a09e80800c18d1d4bee8",
-        1648: "fc7ef3b27067f6f9bb05",
-        1822: "bd392e66329f4d0adb16",
+        1389: "7ffb87513c5c80987949",
+        1423: "20c38cada66f6cf6c2aa",
+        1463: "307781324619512fcd79",
+        1478: "69bce2d55d610fcf6343",
+        1511: "3f37c1735b705e9e6b0e",
+        1573: "4d1ee92e3323b551a24e",
+        1648: "7594502630482655a3aa",
+        1822: "061646be97e8abe973e9",
         1879: "62d6403013b08cb655c3",
-        2021: "965a92d3643921c0d121",
-        2056: "f4dcc5665cdbfb652536",
-        2199: "3736414e9a48a712baf9",
+        2021: "88a8c7588a202078e56b",
+        2056: "acad628a1efe48c33d19",
+        2199: "d9b6672a76f28d5a2949",
         2225: "dc3d09d21b6992daad2e",
-        2263: "52c09a51da49a8cce9ec",
-        2266: "666bc382f36572c32123",
-        2320: "ef013e6daf1cc7a24bc5",
-        2438: "c4e211b5a0dbe5f5e82a",
+        2263: "be2c4a6ac17d52ee6115",
+        2266: "eea6d65831676709717e",
+        2320: "64ee85cb1171ed9a0a8c",
+        2438: "26a9e6a84718d7f64059",
         2448: "c1f0b015f00cac957233",
-        2481: "18f9598d339e36e994aa",
+        2481: "9b1820b031f183a1f00d",
         2611: "a2afb4fc0dc2e7577bc2",
-        2640: "fd382fdfb719b150c43e",
-        2646: "2f45fbc39c6726d4a369",
-        2664: "ecd754fc74c7f3498da5",
-        2761: "906b79a1c37052305264",
-        2783: "0ed1918019cfea503c09",
+        2640: "3076a4bb4fed859d9897",
+        2646: "fd760620e7dcb1d9794f",
+        2664: "eeca789f2206dbe86870",
+        2761: "229a4f158c3f5dd77301",
+        2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "bd9afc9559bf52d6c7c7",
-        2880: "37f421534443cba03ac3",
+        2867: "76c3ebdd602d01c56ff6",
+        2880: "7603cfbd19eccab12dd7",
         2889: "b9abff4f1a3a1f07e514",
         2952: "5cc53fdb04ed91186e12",
-        2959: "451980dbc79b5ad2ccb1",
+        2959: "7e027f5f100fdda95e0e",
         2984: "cdb6f5e43526a559784c",
-        3087: "10ca8bc0b93197ff8da7",
+        3087: "1b12286c0ff7df76a21e",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "5e7e33483f69295f553d",
+        3569: "bc0b73d8b543893bc8d1",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "38393f357888b21f8a7b",
-        3714: "662e71cc4e41c701f22d",
-        3869: "bbefb20bdcebd0bc3123",
-        4026: "20103f7b73c270b46c32",
+        3594: "8ba86d9069ca6bc96221",
+        3714: "44067310221ac08dea86",
+        3869: "20939aca3e060894ca25",
+        4026: "f3d756cb30a6f6fa6263",
         4102: "f43aeb08951dc8b6d64b",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "7d48da785ff02d191f6a",
-        4321: "75db495d256a5f3ea544",
-        4481: "0da565ed627abe8c7ca5",
+        4224: "eaf78917e2166a68b8bd",
+        4321: "3e3710967075e22f0171",
+        4481: "b0b06683619111998752",
         4839: "b1ca14b72a083777a78d",
-        4842: "d228e6e6dbaca52c5c71",
-        4952: "4a439fe441edb3ee22e0",
+        4842: "ad9e809fb763ba707c7a",
+        4952: "e851389af7fdfd4ecc17",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "29f1ce5cb1c9a2ec7b3e",
-        5592: "656e5bb698e246f77311",
+        5553: "025b79907c06588649c0",
+        5592: "309f0536e54213d0a6f4",
         5704: "379467b643925dea1061",
-        5716: "4afa70ab9472b6ef1e00",
-        5803: "5d254e4ba7fa8b96d60b",
-        5864: "4018e6ecc9f8f440a3f1",
-        6120: "6a9617f7f6297a7064b9",
-        6197: "8796e8718676fc7161ee",
-        6345: "67b0d2ad16a7a9495c4d",
-        6409: "e1e2584f3933f8d87561",
-        6430: "2987b2674c30f2920953",
-        6472: "1c47eb32160a2a38b2d9",
-        6577: "c401634787db152b8953",
-        6752: "fe9c9923c101f2afa94d",
+        5716: "cec2a2374e4c4d6ceb1d",
+        5803: "b3fec519e2c2e3d7781a",
+        5864: "9463a2261627ca1400af",
+        6120: "d946a96f63f5fa098ff3",
+        6197: "6bf631d966cee999819e",
+        6345: "fef99a42fdc175f05941",
+        6409: "cd54d036f7a9bb3d6a7b",
+        6430: "b77b36b59338277605c3",
+        6472: "3451eddd2e99c4e7ffbe",
+        6577: "fb6fab64291cae12d1e8",
+        6752: "d122485af833368312ba",
         6785: "69a9f0b91f21affb7342",
-        6888: "0140c4286a8181c0818f",
-        6890: "15600e16f841fed7f5b4",
-        6896: "7461983b766373845376",
+        6888: "67dc1a80d4283e01dbcb",
+        6890: "d731707e94845b5a7268",
+        6896: "f18f04bfef098a57e289",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "ba02063b19c7e9e75f57",
-        7314: "9d22ec4b2863256357ce",
+        7155: "48aee583c0a605cfb5bc",
+        7314: "9549b4c2bbcd41c7dade",
         7316: "18e5e6b118a1b52fddc2",
         7376: "d565c2b610194d0cc673",
-        7442: "2b0c7d4d54a99ba4f19e",
+        7442: "2139401653ba765c159b",
         7462: "52ace9199689821be1eb",
-        7533: "e6be3989c98fd88d679f",
+        7533: "a6ba94780cef155c19fc",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "2bfc68bdfef58fbed093",
-        7696: "b34f04daf750a3584d09",
+        7653: "aed4c0fda5b9b4db2dd3",
+        7696: "a89e569223ed2ec0b8d4",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "dd3e12418f29e5edc684",
-        7993: "333c1c9181fa4c46f5a7",
+        7836: "841239f248823c93f737",
+        7993: "fcb261fcac4a1394f5b3",
         8054: "cffb972d0ae14c9266f8",
-        8159: "4b562953e10580591689",
-        8263: "2ca1b24e13d28d33c24a",
-        8280: "ff687559f14132ff5a83",
+        8159: "0fc0f44a1d6d685af0d5",
+        8263: "b24751f2ee6b3f9a1cfa",
+        8280: "3ac92a197517e25c86d4",
         8286: "1f5be36130bf4017cada",
-        8291: "51998aa8ee0e0a08a0d3",
-        8396: "4293254175d2186d7318",
+        8291: "4b0518a52cd70070033d",
+        8396: "32e5eb4a4e5a546da28d",
         8443: "14576c5b8a2b6ac79ecd",
-        8445: "a6014afae28fa3af5766",
+        8445: "ae709c6c6dcbaa934ce2",
         8478: "6a43580d5abdab6866bc",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "17290529f37350cac282",
-        8534: "dffa3608a2c989490080",
+        8522: "78728023f57a9486b4e8",
+        8534: "bf0d8dee24ebf5e16c5f",
         8545: "1aa2273a0a3161924d55",
-        8674: "c78427706f5599fc0a93",
-        8699: "ef4ce5a4d1521e2331a9",
+        8674: "7139f23448ff0ece1627",
+        8699: "43afd6e96d56692322f9",
         8732: "718e037a5490ae486048",
-        8830: "48828c1d9866c50dcc33",
-        8872: "bffa69ef9b370fb676ed",
-        9053: "e43dc1856f72f786130a",
+        8830: "e48b0f667f5f5d4425bd",
+        8872: "a6cfe28ab99f13c9a6d9",
+        9053: "c821c0535165201e4ce2",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "7289a5f241da7fa5580c",
-        9298: "752a9840ec80b510d031",
-        9368: "cb14291ba9dcf5305fc0",
+        9171: "3292f950a3414be887cf",
+        9298: "4aa5b4a029a268e1f348",
+        9368: "15740caf2dd882886d4b",
         9418: "29e9fa15a9fc8e62a893",
-        9462: "89227ab1a3d278d803ec",
+        9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "649c0ce49bcf83db88c2",
-        9869: "1d6909b12ee210eccdf8",
-        9887: "1886bec7e4bc503260fc",
+        9858: "846def69dbdc2c7ec3d8",
+        9869: "dbd455fdaf48a06fd9ed",
+        9887: "5dfb2cd2a8d69bee9b8e",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +
-      {
+      ({
         1220: "gamenotes",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
         9129: "awardicon",
         9858: "chunk~2dcc5aaf7",
-      }[e] +
+      }[e] || e) +
       ".css"),
     (a.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -25363,7 +25414,9 @@ var CLSTAMP = "9760156";
           t[n]
             ? r.push(t[n])
             : 0 !== t[n] &&
-              { 1220: 1, 7462: 1, 7653: 1, 8396: 1, 9129: 1, 9858: 1 }[n] &&
+              { 674: 1, 1220: 1, 7462: 1, 7653: 1, 8396: 1, 9129: 1, 9858: 1 }[
+                n
+              ] &&
               r.push(
                 (t[n] = e(n).then(
                   () => {

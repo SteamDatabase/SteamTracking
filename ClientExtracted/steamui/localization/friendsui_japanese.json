@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "読み込み中...",
     "Chat_Invite_ExpiresOneDay": "有効期限：1日",
     "Chat_Invite_ExpiresSetting": "終了期限：%1$s",
-    "Chat_TextFilter_Active": "Steamチャットでは知らない人からの強い冒涜表現や中傷表現がデフォルトで隠されるようになりました。[url=%1$s]フィルター設定を確認[/url]",
+    "Chat_TextFilter_Active": "Steamチャットで一部のコンテンツが隠されています。これは[url =%1$s]チャットフィルタリング設定 [/url]で調整できます。",
     "Chat_Settings_Room_Name": "チャット名",
     "GroupSettings": "グループ設定",
     "GroupSettings_General_Section": "一般",

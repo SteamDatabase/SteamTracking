@@ -79,6 +79,8 @@ message CEconItem_Description {
 	optional string market_buy_country_restriction = 30;
 	optional string market_sell_country_restriction = 31;
 	optional bool sealed = 32;
+	optional uint64 contextid = 33;
+	optional uint64 assetid = 34;
 }
 
 message CEconItem_Tag {

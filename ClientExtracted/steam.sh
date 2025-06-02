@@ -817,52 +817,20 @@ if [ -n "$log_opened" ]; then
 	set -- -srt-logger-opened "$@"
 fi
 
-# Expand and check the sniper runtime early if present
-supervisor="${STEAM_RUNTIME_SCOUT}/amd64/usr/bin/steam-runtime-supervisor"
-if [ -x "$supervisor" ]; then
-    log "Using supervisor $supervisor"
-    common_lock_options=( \
-        --exit-with-parent \
-        --subreaper \
-        --terminate-idle-timeout=1 \
-        --terminate-timeout=5 \
-        --lock-create \
-        --lock-verbose \
-        --lock-file "$STEAMROOT/$PLATFORM64/steam-runtime-steamrt.lock" \
-    )
-
-	# Because options are parsed in order, --lock-exclusive needs to be
-	# specified before --lock-file
-	exclusive_lock=( "$supervisor" --lock-exclusive "${common_lock_options[@]}" -- )
-else
-	# Unexpected - we unpack scout unconditionally
-	log "Unable to find $supervisor"
-	exit 255
-fi
-
-function is_steamrt_override_up_to_date()
-{
-	cmp "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.version.txt" "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt/VERSIONS.txt"
-}
+# Clean up remnants of the sniper runtime, now replaced by steamrt3c (steamrt64)
+rm -fr "${STEAMROOT}/ubuntu12_64/steam-runtime-sniper/"
+rm -f "${STEAMROOT}/ubuntu12_64/steam-runtime-sniper.lock"
+rm -f "${STEAMROOT}/ubuntu12_64/steam-runtime-steamrt.lock"
 
 function setup_steamrt_override()
 {
-	# Force the setup script to re-unpack the runtime
-	# There isn't a flag to do this in steam-runtime-steamrt.sh as far
-	# as I could tell
-	rm -fr "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt"
-
 	status=0
-	"${exclusive_lock[@]}" \
 	"$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.sh" \
 	--unpack-dir="$STEAMROOT/$STEAMRT64" \
 	--runtime=steam-runtime-steamrt > /dev/null || status="$?"
 	case "$status" in
 		(0)
 			# Unpacked successfully
-			;;
-		(125)
-			log "Could not acquire lock - steam may be running already, continue."
 			;;
 		(*)
 			log "Encountered a problem expanding the steamrt runtime, forcing extended file verification."
@@ -876,9 +844,7 @@ function setup_steamrt_override()
 #  * Place the runtime files in the relevant platform folder
 #  * Inhibit the bootstrapper via Steam.cfg (otherwise the bootstrapper will overwrite it)
 if [[ -f "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.tar.xz" ]]; then
-	if ! is_steamrt_override_up_to_date; then
-		setup_steamrt_override
-	fi
+	setup_steamrt_override
 fi
 
 # prepend our lib path to LD_LIBRARY_PATH

@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Memuat...",
     "Chat_Invite_ExpiresOneDay": "Kedaluwarsa dalam: 1 hari",
     "Chat_Invite_ExpiresSetting": "Kedaluwarsa dalam: %1$s",
-    "Chat_TextFilter_Active": "Kata-kata kasar dan hinaan dari orang asing sekarang ditutupi secara default di Obrolan Steam [url=%1$s]Tinjau pengaturan filter[/url]",
+    "Chat_TextFilter_Active": "Beberapa konten dikaburkan di Obrolan Steam. Kamu dapat menyesuaikan ini di [url=%1$s]pengaturan pemfilteran obrolan[/url]",
     "Chat_Settings_Room_Name": "Nama Obrolan",
     "GroupSettings": "Pengaturan Grup",
     "GroupSettings_General_Section": "Umum",

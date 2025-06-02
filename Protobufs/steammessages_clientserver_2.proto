@@ -199,12 +199,17 @@ message CMsgClientSentLogs {
 }
 
 message CMsgGCClient {
+	enum EFlag {
+		VALVE_DS = 1;
+	}
+
 	optional uint32 appid = 1;
 	optional uint32 msgtype = 2;
 	optional bytes payload = 3;
 	optional fixed64 steamid = 4;
 	optional string gcname = 5;
 	optional uint32 ip = 6;
+	optional uint32 flags = 7;
 }
 
 message CMsgClientRequestFreeLicense {

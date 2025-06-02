@@ -47,17 +47,6 @@ enum EAuthenticationType {
 	k_EAuthenticationType_GuestAccount = 4;
 }
 
-enum EAuthTokenRevokeAction {
-	k_EAuthTokenRevokeLogout = 0;
-	k_EAuthTokenRevokePermanent = 1;
-	k_EAuthTokenRevokeReplaced = 2;
-	k_EAuthTokenRevokeSupport = 3;
-	k_EAuthTokenRevokeConsume = 4;
-	k_EAuthTokenRevokeNonRememberedLogout = 5;
-	k_EAuthTokenRevokeNonRememberedPermanent = 6;
-	k_EAuthTokenRevokeAutomatic = 7;
-}
-
 enum EAuthTokenState {
 	k_EAuthTokenState_Invalid = 0;
 	k_EAuthTokenState_New = 1;
@@ -67,6 +56,17 @@ enum EAuthTokenState {
 	k_EAuthTokenState_LoggedOut = 5;
 	k_EAuthTokenState_Consumed = 6;
 	k_EAuthTokenState_Revoked = 99;
+}
+
+enum EAuthTokenRevokeAction {
+	k_EAuthTokenRevokeLogout = 0;
+	k_EAuthTokenRevokePermanent = 1;
+	k_EAuthTokenRevokeReplaced = 2;
+	k_EAuthTokenRevokeSupport = 3;
+	k_EAuthTokenRevokeConsume = 4;
+	k_EAuthTokenRevokeNonRememberedLogout = 5;
+	k_EAuthTokenRevokeNonRememberedPermanent = 6;
+	k_EAuthTokenRevokeAutomatic = 7;
 }
 
 message CAuthentication_GetPasswordRSAPublicKey_Request {
@@ -234,6 +234,7 @@ message CAuthentication_AccessToken_GenerateForApp_Response {
 }
 
 message CAuthentication_RefreshToken_Enumerate_Request {
+	optional bool include_revoked = 1 [default = false];
 }
 
 message CAuthentication_RefreshToken_Enumerate_Response {
@@ -259,6 +260,7 @@ message CAuthentication_RefreshToken_Enumerate_Response {
 		optional .CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent last_seen = 10;
 		optional int32 os_type = 11;
 		optional .EAuthenticationType authentication_type = 12 [default = k_EAuthenticationType_Unknown];
+		optional .EAuthTokenState effective_token_state = 13 [default = k_EAuthTokenState_Invalid];
 	}
 
 	repeated .CAuthentication_RefreshToken_Enumerate_Response.RefreshTokenDescription refresh_tokens = 1;

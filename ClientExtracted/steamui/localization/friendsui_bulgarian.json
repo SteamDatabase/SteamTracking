@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Зареждане…",
     "Chat_Invite_ExpiresOneDay": "Изтича: 1 ден",
     "Chat_Invite_ExpiresSetting": "Изтича: %1$s",
-    "Chat_TextFilter_Active": "Много обидните ругатни и клевети от хора, които не познавате, вече по подразбиране се прикриват в Steam чата. [url=%1$s]Настройки за филтриране на рецензии[/url].",
+    "Chat_TextFilter_Active": "Известно съдържание в Steam чата бива прикрито. Можете да коригирате това в [url=%1$s]настройките за филтриране на чата[/url].",
     "Chat_Settings_Room_Name": "Име на чата",
     "GroupSettings": "Групови настройки",
     "GroupSettings_General_Section": "Общи",

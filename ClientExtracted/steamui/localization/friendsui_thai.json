@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "กำลังโหลด...",
     "Chat_Invite_ExpiresOneDay": "หมดเขต:  1 วัน",
     "Chat_Invite_ExpiresSetting": "หมดอายุ:  %1$s",
-    "Chat_TextFilter_Active": "ตอนนี้คำหยาบรุนแรงและคำด่าจากคนที่คุณไม่รู้จักจะถูกปิดบังไว้ตามค่าเริ่มต้นในแช็ตบน Steam [url=%1$s]ตรวจสอบการตั้งค่าการกรอง[/url]",
+    "Chat_TextFilter_Active": "ตอนนี้แช็ตบน Steam จะปิดบังเนื้อหาบางอย่างไว้ แต่คุณสามารถปรับเปลี่ยนได้ใน[url=%1$s]การตั้งค่าการกรองแช็ต[/url]",
     "Chat_Settings_Room_Name": "ชื่อแช็ต",
     "GroupSettings": "การตั้งค่ากลุ่ม",
     "GroupSettings_General_Section": "ทั่วไป",

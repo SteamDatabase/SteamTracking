@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Screenshot"
 "app_task_friend_activity" "Aktivitas Teman"
 "app_task_console"	"Konsol"
-"app_task_musicplayer"	"Pemutar Musik"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Sudahi Remote Play"
 

@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "正在载入…",
     "Chat_Invite_ExpiresOneDay": "失效时间：1 天内",
     "Chat_Invite_ExpiresSetting": "失效时间：%1$s",
-    "Chat_TextFilter_Active": "来自陌生人的强烈脏话和侮辱性文字现已默认在 Steam 聊天中模糊处理。[url=%1$s]查看过滤设置[/url]",
+    "Chat_TextFilter_Active": "某些内容在 Steam 聊天中被模糊处理。您可以在[url=%1$s]聊天过滤设置[/url]中对此进行调整。",
     "Chat_Settings_Room_Name": "聊天室名称",
     "GroupSettings": "群组设置",
     "GroupSettings_General_Section": "通用",

@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Capturas"
 "app_task_friend_activity" "Actividad de los amigos"
 "app_task_console"	"Consola"
-"app_task_musicplayer"	"Reproductor de música"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Detener Remote Play"
 

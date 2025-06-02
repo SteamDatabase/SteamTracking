@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Знімки екрана"
 "app_task_friend_activity" "Діяльність друзів"
 "app_task_console"	"Консоль"
-"app_task_musicplayer"	"Музичний програвач"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Зупинити Remote Play"
 

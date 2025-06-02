@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Загрузка...",
     "Chat_Invite_ExpiresOneDay": "Действует: 1 день",
     "Chat_Invite_ExpiresSetting": "Истекает %1$s",
-    "Chat_TextFilter_Active": "Ругательства и оскорбления от людей, которых вы не знаете, теперь по умолчанию скрыты в чатах Steam. [url=%1$s]Открыть настройки фильтрации[/url]",
+    "Chat_TextFilter_Active": "Некоторый контент в чате Steam скрывается. Это можно изменить в [url=%1$s]настройках фильтрации чата[/url]",
     "Chat_Settings_Room_Name": "Название чата",
     "GroupSettings": "Настройки чата",
     "GroupSettings_General_Section": "Общие",

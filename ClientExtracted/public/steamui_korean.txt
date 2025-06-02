@@ -1328,7 +1328,7 @@
 "Steam_UpdateNews_Title"	"Steam - 뉴스"
 "Steam_SettingsNotification_Info"	"다음에 대한 추가 또는 변경 사항이 있을 경우 알림(Steam 메시지로 수신)"
 "Steam_SettingsNotification_MyGames"	"내 게임"
-"Steam_SettingsNotification_UpcomingReleases"	"출시 예정 및 신규 출시 제품"
+"Steam_SettingsNotification_UpcomingReleases"	"출시 예정 및 신규 출시 게임"
 "Steam_PurchaseError_HardwarePromoAlreadyOwned" "이 Steam 계정을 사용하여 이미 %subscription% 요청을 실행하였습니다."
 
 "Steam_GamesDialog_RightClick_UpdateNews"	"업데이트 뉴스 보기"
@@ -1588,19 +1588,19 @@
 "Steam_TotalBackupProgress"	"남은 시간:"
 "Steam_complete"		"완료"
 
-"Steam_ChooseRestoreDirectory_Info"	"복원하려는 백업 파일이 포함된 디렉토리를 찾습니다. 백업을 Steam의 기본 위치에 저장한 경우, 이 기본 위치는 Backups'이라는 디렉토리 내의 폴더가 됩니다."
+"Steam_ChooseRestoreDirectory_Info"	"복원하려는 백업 파일이 포함된 디렉터리를 찾습니다. 백업을 Steam의 기본 위치에 저장한 경우, 이 기본 위치는 Backups'이라는 디렉터리 내의 폴더가 됩니다."
 "Steam_RestoreDirectory"		"다음 폴더에서 프로그램 복원:"
 "Steam_RestoreGameFound"		"검색된 프로그램 백업:"
 "Steam_RestoreNoneFound"		"없음"
 
 "Steam_SelectRestoreDirectory_Title" 	"백업 파일 찾기"
 
-"Steam_ChooseBackupDirectory_Info"	"백업 파일을 만들 디렉토리를 선택하세요."
+"Steam_ChooseBackupDirectory_Info"	"백업 파일을 만들 디렉터리를 선택하세요."
 "Steam_BackupDirectory"			"백업 위치"
 "Steam_ChangeDirectory"			"찾아보기..."
 "Steam_BackingUpFiles_Info"		"백업 아카이브를 압축하고 저장하는 동안 잠시 기다려 주세요."
 "Steam_BadBackupDir_Title"		"Steam - 백업"
-"Steam_CannotBackupToRootDirectory"	"시스템 디렉토리에 백업 파일을 만들 수 없습니다."
+"Steam_CannotBackupToRootDirectory"	"시스템 디렉터리에 백업 파일을 만들 수 없습니다."
 "Steam_CannotCreateBackupDirectory"	"선택하신 폴더는 존재하지 않으며, Steam도 해당 폴더를 생성할 수 없었습니다."
 "Steam_CannotBackupNoEnoughDiskSpace"	"이 드라이브는 디스크 여유 공간이 부족합니다."
 
@@ -2478,7 +2478,7 @@
 "Steam_BackupSize_Custom"				"사용자 지정..."
 
 "Steam_BackupFileAlreadyExists_Title"		"Steam - 백업"
-"Steam_BackupFileAlreadyExists_Info"		"다음 위치에 Steam 백업 파일을 만들 수 없습니다.\n\n%path%\n\n해당 이름의 디렉토리가 이미 존재합니다."
+"Steam_BackupFileAlreadyExists_Info"		"다음 위치에 Steam 백업 파일을 만들 수 없습니다.\n\n%path%\n\n해당 이름의 디렉터리가 이미 존재합니다."
 
 "Steam_Games"								"게임"
 

@@ -223,7 +223,7 @@
 "vgui_HTMLCopyLink" "링크 주소 복사"
 "vgui_HTMLSearchMatch" "%findactive%/%findcount%"
 "vgui_HTMLSearchThisPage" "이 페이지 검색"
-"vgui_choosedirectoryname"	"경로명을 선택하여 주세요"
+"vgui_choosedirectoryname"	"디렉터리 이름을 선택해 주세요."
 "vgui_HTMLCloseDevTools"	"개발자 도구 닫기"
 "vgui_HTMLOpenDevTools"		"개발자 도구 열기"
 "vgui_HTMLInspectElement"	"요소 검사"

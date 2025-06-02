@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Wczytywanie…",
     "Chat_Invite_ExpiresOneDay": "Wygasa za: 1 dzień",
     "Chat_Invite_ExpiresSetting": "Wygasa: %1$s",
-    "Chat_TextFilter_Active": "Przekleństwa i obelgi od nieznanych ci osób są teraz domyślnie ukrywane na czacie Steam. [url=%1$s]Przejrzyj ustawienia filtrowania[/url].",
+    "Chat_TextFilter_Active": "Niektóre treści są ukrywane na czacie Steam. Możesz to zmienić w [url=%1$s]ustawieniach filtrowania czatu[/url].",
     "Chat_Settings_Room_Name": "Nazwa czatu",
     "GroupSettings": "Ustawienia grupy",
     "GroupSettings_General_Section": "Ogólne",

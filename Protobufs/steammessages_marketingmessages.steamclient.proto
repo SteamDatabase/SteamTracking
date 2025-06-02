@@ -246,20 +246,21 @@ message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request {
 	optional uint32 rt_end_time = 2;
 }
 
-message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
-	repeated .CMarketingMessageHourlyStats stats = 1;
-}
-
-message CMarketingMessages_GetMarketingMessageClickedStats_Request {
-	optional fixed64 gid = 1;
-}
-
 message CMarketingMessageClickedHourlyStats {
 	optional uint32 rt_time_hour = 1;
 	optional uint32 clicked_count = 2;
 	optional uint32 display_index = 3;
 	optional .EMarketingMessageTemplateType template_type = 4 [default = k_EMarketingMessageTemplate_Unknown];
 	optional .EMarketingMessageClickLocation click_location = 5 [default = k_EMarketingMessageClickLocation_Unknown];
+}
+
+message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
+	repeated .CMarketingMessageHourlyStats stats = 1;
+	repeated .CMarketingMessageClickedHourlyStats clicked_stats = 2;
+}
+
+message CMarketingMessages_GetMarketingMessageClickedStats_Request {
+	optional fixed64 gid = 1;
 }
 
 message CMarketingMessages_GetMarketingMessageClickedStats_Response {

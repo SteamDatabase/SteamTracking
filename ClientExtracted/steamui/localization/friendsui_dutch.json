@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Laden ...",
     "Chat_Invite_ExpiresOneDay": "Verloopt over 1 dag",
     "Chat_Invite_ExpiresSetting": "Verloopt: %1$s",
-    "Chat_TextFilter_Active": "Erg grof taalgebruik en beledigingen van mensen die je niet kent, worden nu standaard verborgen in Steam-chat. [url=%1$s]Filterinstellingen bekijken[/url]",
+    "Chat_TextFilter_Active": "Sommige inhoud wordt verborgen in Steam-chat. Je kunt dit aanpassen in de [url=%1$s]instellingen voor chatfilters[/url].",
     "Chat_Settings_Room_Name": "Naam chat",
     "GroupSettings": "Groepsinstellingen",
     "GroupSettings_General_Section": "Algemeen",

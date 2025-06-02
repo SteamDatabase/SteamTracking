@@ -5,28 +5,29 @@
     81143: (e, n, t) => {
       t.r(n), t.d(n, { default: () => k });
       var l = t(89748),
-        r = t(35560),
-        a = t(46422),
+        a = t(35560),
+        r = t(46422),
         c = t(10501),
         u = t(63696),
         o = t(98606),
         m = t(91435),
         i = t(50341),
-        s = t(83857),
-        w = t(42318);
-      const E = u.memo(function (e) {
+        w = t(83857),
+        s = t(42318);
+      const d = u.memo(function (e) {
         return u.createElement(
-          w.wC,
+          s.wC,
           null,
-          u.createElement(s.L, null),
+          u.createElement(w.L, null),
           u.createElement(i.BV, null),
         );
       });
-      var d = t(29971),
-        f = t(87913);
+      var E = t(29971),
+        f = t(87913),
+        v = t(59578);
       const g = u.memo(function () {
         return (0, f.u$)()
-          ? u.createElement(w.tH, null, u.createElement(d._V, null))
+          ? u.createElement(s.tH, null, u.createElement(E._V, null))
           : null;
       });
       (0, t(89193).jK)({ enforceActions: "never" }),
@@ -49,16 +50,20 @@
           u.createElement(
             m.EO,
             { bOnlyPopups: !0 },
-            u.createElement(E, null),
+            u.createElement(d, null),
             n &&
               u.createElement(
-                r.VQ,
-                { controller: a.oy.NavigationManager },
+                a.VQ,
+                { controller: r.oy.NavigationManager },
                 u.createElement(
                   o.p,
                   null,
-                  u.createElement(c.u, { cm: e.cm }),
-                  u.createElement(g, null),
+                  u.createElement(
+                    v.QA,
+                    { eAdultOnlyMediaBehavior: "allowed" },
+                    u.createElement(c.u, { cm: e.cm }),
+                    u.createElement(g, null),
+                  ),
                 ),
               ),
           ),

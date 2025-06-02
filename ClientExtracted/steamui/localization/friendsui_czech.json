@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Načítání...",
     "Chat_Invite_ExpiresOneDay": "Vyprší: za 1 den",
     "Chat_Invite_ExpiresSetting": "Vyprší: %1$s",
-    "Chat_TextFilter_Active": "V konverzacích s cizími uživateli jsou nově ve výchozím nastavení skrývány hrubé vulgarismy a urážky. [url=%1$s]Přejít na nastavení filtrování[/url]",
+    "Chat_TextFilter_Active": "V konverzacích je skrýván určitý obsah. Nastavení filtrování můžete změnit [url=%1$s]zde[/url].",
     "Chat_Settings_Room_Name": "Název místnosti",
     "GroupSettings": "Nastavení místnosti",
     "GroupSettings_General_Section": "Obecné",

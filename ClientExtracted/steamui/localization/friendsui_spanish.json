@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Cargando...",
     "Chat_Invite_ExpiresOneDay": "Caduca en 1 día",
     "Chat_Invite_ExpiresSetting": "Finaliza el %1$s",
-    "Chat_TextFilter_Active": "Las palabrotas fuertes e insultos procedentes de personas que no conoces son ahora ocultadas por defecto en el chat de Steam. [url=%1$s]Revisar las configuraciones del filtrado[/url]",
+    "Chat_TextFilter_Active": "Se está ocultando parte del contenido en el chat de Steam. Puedes modificar este ajuste en la [url=%1$s]configuración del filtrado del chat[/url].",
     "Chat_Settings_Room_Name": "Nombre del chat",
     "GroupSettings": "Configuración de grupo",
     "GroupSettings_General_Section": "General",

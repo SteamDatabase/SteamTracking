@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Kuvakaappaukset"
 "app_task_friend_activity" "Kavereiden tapahtumat"
 "app_task_console"	"Konsoli"
-"app_task_musicplayer"	"Musiikkisoitin"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Lopeta Remote Play"
 

@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Indlæser...",
     "Chat_Invite_ExpiresOneDay": "Udløber: 1 dag",
     "Chat_Invite_ExpiresSetting": "Udløber: %1$s",
-    "Chat_TextFilter_Active": "Grove skældsord og nedsættende udtryk fra folk, du ikke kender, bliver nu sløret som standardindstilling i Steam-chat. [url=%1$s]Gennemgå filterindstillinger[/url]",
+    "Chat_TextFilter_Active": "Noget indhold sløres i Steam-chat. Du kan justere dette i [url=%1$s]chatfilterindstillingerne[/url].",
     "Chat_Settings_Room_Name": "Chatnavn",
     "GroupSettings": "Gruppeindstillinger",
     "GroupSettings_General_Section": "Generelt",

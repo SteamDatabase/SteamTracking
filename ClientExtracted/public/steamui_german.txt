@@ -1426,7 +1426,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_Upgrade_Nvidia_Driver_URL" "https://support.steampowered.com/kb_article.php?ref=8509-RFXM-1964"
 
 "SteamUI_AMD_BigPicture_Problem_Title" "Grafiktreiber-Problem"
-"SteamUI_AMD_BigPicture_Problem_Info" "Auf Ihrem System ist der AMD-Grafiktreiber in der Version 13.1 installiert. Bitte installieren Sie Version 13.2 oder höher, bevor Sie Steam Big Picture benutzen."
+"SteamUI_AMD_BigPicture_Problem_Info" "Auf Ihrem System ist der AMD-Grafiktreiber in der Version 13.1 installiert. Bitte installieren Sie Version 13.2 oder höher, bevor Sie den Steam Big-Picture -Modus benutzen."
 "SteamUI_AMD_BigPicture_Problem_Url_Label" "AMD-Grafiktreiber herunterladen"
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/de/gpudownload/linux/Pages/radeon_linux.aspx"
 

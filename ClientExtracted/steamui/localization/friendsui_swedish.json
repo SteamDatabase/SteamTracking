@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Läser in ...",
     "Chat_Invite_ExpiresOneDay": "Upphör: 1 dag",
     "Chat_Invite_ExpiresSetting": "Upphör: %1$s",
-    "Chat_TextFilter_Active": "Grova svordomar och skällsord från personer du inte känner döljs som standard i Steam-chatten. [url=%1$s]Utforska filterinställningarna[/url]",
+    "Chat_TextFilter_Active": "En del innehåll döljs i Steam-chatten. Du kan justera detta i [url=%1$s]chattfiltreringsinställningarna[/url].",
     "Chat_Settings_Room_Name": "Chattnamn",
     "GroupSettings": "Gruppinställningar",
     "GroupSettings_General_Section": "Allmänna",

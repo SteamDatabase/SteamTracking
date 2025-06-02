@@ -250,7 +250,7 @@
 "Friends_Chat_ActionResultBanSuccess"     "%user_name% 님을 차단했습니다."
 "Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 님을 더 이상 차단하지 않습니다."
 
-"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 멤버 또는 초대받은 사용자만 입장 가능).\n"
+"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 회원 또는 초대받은 사용자만 입장 가능).\n"
 "Friends_Chat_ActionResultUnlockChatSuccess"	"이제 채팅방이 공개되었습니다. (모든 사용자에게 개방)\n"
 
 "Friends_Chat_ActionResultTitleFailed"    "액션 실패"
@@ -532,7 +532,7 @@
 "Friends_SteamInputControllerConnectedNotification_Info" "설정 사용:"
 "Friends_SteamInputControllerConfigNotification_Info" "설정 불러오기:"
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
-"Friends_SteamInputControllerConfigNotification_Info3" "Steam 오버레이에서 수정하기"
+"Friends_SteamInputControllerConfigNotification_Info3" "Steam 오버레이에서 수정"
 "Library_ControllerSaveDefaultTitle" "공식 설정"
 "SettingsController_AutosaveName" "개인설정 자동 저장"
 "SettingsController_SteamController" "Steam Controller"

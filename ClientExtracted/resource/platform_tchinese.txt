@@ -27,7 +27,6 @@
 "app_task_screenshots"	"螢幕擷圖"
 "app_task_friend_activity" "好友動態"
 "app_task_console"	"命令列"
-"app_task_musicplayer"	"音樂播放器"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"停止遠端暢玩"
 

@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Cargando...",
     "Chat_Invite_ExpiresOneDay": "Caduca en 1 día",
     "Chat_Invite_ExpiresSetting": "Caduca: %1$s",
-    "Chat_TextFilter_Active": "Las obscenidades e insultos procedentes de personas que no conoces ahora se ocultan por defecto en el chat de Steam. [url=%1$s]Revisar las configuraciones del filtrado[/url]",
+    "Chat_TextFilter_Active": "Parte del contenido se oculta en Steam Chat. Esto puede configurarse en [url=%1$s]configuraciones de filtrado del char[/url]",
     "Chat_Settings_Room_Name": "Nombre del chat",
     "GroupSettings": "Configuración de grupo",
     "GroupSettings_General_Section": "General",

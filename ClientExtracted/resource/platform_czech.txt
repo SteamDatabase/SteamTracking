@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Snímky"
 "app_task_friend_activity" "Aktivita přátel"
 "app_task_console"	"Konzole"
-"app_task_musicplayer"	"Hudební přehrávač"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Ukončit Remote Play"
 

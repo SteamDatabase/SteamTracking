@@ -232,6 +232,20 @@ message CCommunity_FetchTranslationFromCrowdIn_Request {
 message CCommunity_FetchTranslationFromCrowdIn_Response {
 }
 
+message CCommunity_HideAndReportComment_Request {
+	optional uint64 gidfeature = 1;
+	optional uint64 gidfeature2 = 2;
+	optional uint64 gidcomment = 3;
+	optional fixed64 steamid = 4;
+	optional string commentthreadtype = 5;
+	optional bool hide = 6;
+	optional .EContentReportReason report_reason = 7 [default = k_EContentReportReason_Invalid];
+	optional string report_text = 8;
+}
+
+message CCommunity_HideAndReportComment_Response {
+}
+
 message CAppPriority {
 	optional uint32 priority = 1;
 	repeated uint32 appid = 2;
@@ -358,6 +372,7 @@ service Community {
 	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
 	rpc GetClanCrowdInMetadata (.CCommunity_GetClanCrowdInMetadata_Request) returns (.CCommunity_GetClanCrowdInMetadata_Response);
 	rpc FetchTranslationFromCrowdIn (.CCommunity_FetchTranslationFromCrowdIn_Request) returns (.CCommunity_FetchTranslationFromCrowdIn_Response);
+	rpc HideAndReportComment (.CCommunity_HideAndReportComment_Request) returns (.CCommunity_HideAndReportComment_Response);
 	rpc GetUserPartnerEventNews (.CCommunity_GetUserPartnerEventNews_Request) returns (.CCommunity_GetUserPartnerEventNews_Response);
 	rpc GetBestEventsForUser (.CCommunity_GetBestEventsForUser_Request) returns (.CCommunity_GetBestEventsForUser_Response);
 	rpc MarkPartnerEventsForUser (.CCommunity_MarkPartnerEventsForUser_Request) returns (.CCommunity_MarkPartnerEventsForUser_Response);

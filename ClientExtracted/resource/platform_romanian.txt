@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Capturi de ecran"
 "app_task_friend_activity" "Activitatea prietenilor"
 "app_task_console"	"Consolă"
-"app_task_musicplayer"	"Player de muzică"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Oprește Remote Play"
 

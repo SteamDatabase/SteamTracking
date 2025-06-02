@@ -3067,11 +3067,22 @@ var CLSTAMP = "steamdb";
                       ("y" == _ ? _.innerHeight : _.innerWidth) /
                       (_ ? 4.5 : 3.33),
                     _ = (0, _._)(_.Element);
+                  let _ = !1;
                   if (
-                    (_.top > _.innerHeight && _.bottom > _.innerHeight + _) ||
-                    (_.bottom < 0 && _.top < -_) ||
-                    (_.left > _.innerWidth && _.right > _.innerWidth + _) ||
-                    (_.right < 0 && _.left < -_)
+                    ("y" == _
+                      ? _ == _.FORWARD
+                        ? (_ =
+                            _.top > _.innerHeight &&
+                            _.bottom > _.innerHeight + _)
+                        : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                      : "x" == _ &&
+                        (_ == _.FORWARD
+                          ? (_ =
+                              _.left > _.innerWidth &&
+                              _.right > _.innerWidth + _)
+                          : _ == _.BACKWARD &&
+                            (_ = _.right < 0 && _.left < -_)),
+                    _)
                   )
                     return (
                       _(`Element too far away, scrolling ${_} on ${_} axis `),
@@ -3450,15 +3461,33 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           const _ = _.Element;
           if (!_) return;
-          let _ = [_];
+          let _ = [
+            {
+              node: _,
+              eScrollType: _.m_Properties?.scrollIntoViewType,
+            },
+          ];
           for (let _ = _.Parent; _; _ = _.Parent) {
-            const _ = _.m_Properties?.scrollIntoViewWhenChildFocused;
-            "force" === _ ? (_ = [_]) : _ && _.push(_);
+            const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+              _ = _.m_Properties?.scrollIntoViewType;
+            if (_) {
+              const _ = {
+                node: _,
+                eScrollType: _,
+              };
+              "force" === _ ? (_ = [_]) : _.push(_);
+            }
+            if (void 0 !== _)
+              for (
+                let _ = _.length - 1;
+                _ >= 0 && void 0 === _[_].eScrollType;
+                _--
+              )
+                _[_].eScrollType = _;
           }
           for (; _.length; ) {
-            let _ = _.pop(),
-              _ = 0 == _.length,
-              _ = _?.m_Properties?.scrollIntoViewType;
+            let { node: _, eScrollType: _ } = _.pop(),
+              _ = 0 == _.length;
             if (
               (void 0 === _ && (_ = _ ? _._.NoTransform : _._.Standard),
               _?.m_Properties?.fnScrollIntoViewHandler)
@@ -3472,11 +3501,16 @@ var CLSTAMP = "steamdb";
             if (_) {
               const _ = _ ? _(_) : _.getBoundingClientRect();
               let _ = !1;
-              const _ = Math.max((_.bottom - _.top) * _, 40);
-              ((_ && performance.now() - _ < _) ||
+              const _ = Math.max((_.bottom - _.top) * _, 40),
+                _ = _ && performance.now() - _ < _;
+              (_ ||
                 _.bottom < -_ ||
-                _.top > window.innerHeight + _) &&
-                (_ = !0);
+                _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                ((_ = !0),
+                _ ||
+                  _(
+                    `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                  ));
               let _ = _ ? "auto" : "smooth";
               _ && (_ = performance.now()),
                 _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
@@ -3487,13 +3521,14 @@ var CLSTAMP = "steamdb";
                       block: "nearest",
                     });
             } else
-              _
-                ? _(_, _, "auto")
-                : _?.scrollIntoView({
-                    behavior: "auto",
-                    block: "nearest",
-                    inline: "nearest",
-                  });
+              _("No previous element for scrolling, will jump"),
+                _
+                  ? _(_, _, "auto")
+                  : _?.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    });
           }
         }
         function _(_) {
@@ -3545,13 +3580,15 @@ var CLSTAMP = "steamdb";
           let [_, _, _] = _(_, _),
             [_, _, _] = _(_, _),
             [_, _] = _(_, _);
-          return _ < _ && _ > _
-            ? 0
-            : (_ < _ && _ <= _) || (_ > _ && _ > _)
-              ? _ - _ - _
-              : (_ < _ && _ > _) || (_ > _ && _ <= _)
-                ? _ - _ + _
-                : 0;
+          if (_ < _ && _ > _) return 0;
+          const _ = _ - _,
+            _ = _ + _,
+            _ = _ > _;
+          return (_ < _ && !_) || (_ > _ && _)
+            ? _ - _
+            : (_ < _ && _) || (_ > _ && !_)
+              ? _ - _
+              : 0;
         }
         function _(_) {
           return "auto" == _
@@ -4021,6 +4058,15 @@ var CLSTAMP = "steamdb";
           for (let _ = 0; _ < _.length; _++) if (_[_] !== _[_]) return !1;
           return !0;
         }
+        function _(_, _, _) {
+          if (!_ && !_) return !0;
+          if (!_ || !_) return !1;
+          if (_.length !== _.length) return !1;
+          const _ = _.slice().sort(_),
+            _ = _.slice().sort(_);
+          for (let _ = 0; _ < _.length; _++) if (_[_] !== _[_]) return !1;
+          return !0;
+        }
         function _(_, _) {
           return _(_, (_) => _ == _);
         }
@@ -4077,6 +4123,7 @@ var CLSTAMP = "steamdb";
           return _.forEach((_) => _.add(_)), Array.from(_);
         }
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -4206,7 +4253,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         const _ =
-            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/,
+            /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
           _ = /^(steam|ftp|https?):\/\//;
         function _(_) {
           return _.test(_) ? _ : "https://" + _;
@@ -4840,11 +4887,6 @@ var CLSTAMP = "steamdb";
                       _: _._.readUint32,
                       _: _._.writeUint32,
                     },
-                    trace_tag: {
-                      _: 21,
-                      _: _._.readUint64String,
-                      _: _._.writeUint64String,
-                    },
                     webapi_key_id: {
                       _: 25,
                       _: _._.readUint32,
@@ -4938,6 +4980,11 @@ var CLSTAMP = "steamdb";
                       _: 44,
                       _: _._.readBool,
                       _: _._.writeBool,
+                    },
+                    trace_tag: {
+                      _: 45,
+                      _: _._.readFixed64String,
+                      _: _._.writeFixed64String,
                     },
                   },
                 }),
@@ -10384,6 +10431,8 @@ var CLSTAMP = "steamdb";
                 "k_EAccountFlagLimitedUserForce"),
               (_[(_.k_EAccountFlagEmailValidated = 16384)] =
                 "k_EAccountFlagEmailValidated"),
+              (_[(_.k_EAccountFlagValveEmail = 32768)] =
+                "k_EAccountFlagValveEmail"),
               (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
                 "k_EAccountFlagForcePasswordChange"),
               (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
@@ -11265,7 +11314,8 @@ var CLSTAMP = "steamdb";
 	"templatemediacontent": 100747,
 	"templatefaq": 100748,
 	"templatetechspec": 100749,
-	"topnewreleases": 100750
+	"topnewreleases": 100750,
+	"newreleases": 100751
 }`);
         class _ {
           static InstrumentLink(_, _, _ = null) {
@@ -12484,9 +12534,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 19 2025 : 17:21:13",
-                BUILD_TIME_UTC: "May 20 2025 : 00:21:13",
-                BUILD_RTIME_UTC: 1747700473,
+                BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
+                BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
+                BUILD_RTIME_UTC: 1748892104,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -23946,9 +23996,13 @@ var CLSTAMP = "steamdb";
             },
             [_, _] = _.useState(!1),
             [_, _] = _.useState(),
-            _ = _.useCallback((_) => {
-              _(!0), _(_.currentTarget);
-            }, []),
+            _ = _.useCallback(
+              (_) => {
+                (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
+                  (_(!0), _(_.currentTarget));
+              },
+              [_],
+            ),
             _ = _.useCallback(() => {
               _(!1);
             }, []),
@@ -24159,6 +24213,9 @@ var CLSTAMP = "steamdb";
               Unsubscribe: this.m_callbacks.Register(_).Unregister,
             };
           }
+          get SubscriberCount() {
+            return this.m_callbacks.CountRegistered();
+          }
         }
         function _(_, _) {
           return new _(_, _);
@@ -24167,31 +24224,31 @@ var CLSTAMP = "steamdb";
           m_fnMap;
           m_originalSubscribableValue;
           m_mappedSubscribableValue;
-          m_mappedUnsubscribe;
-          m_subscriptionRefCount = 0;
+          m_bMappedValueStale = !1;
           constructor(_, _, _) {
             (this.m_originalSubscribableValue = _),
               (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-              (this.m_fnMap = _);
+              (this.m_fnMap = _),
+              this.m_originalSubscribableValue.Subscribe(() => {
+                this.m_mappedSubscribableValue.SubscriberCount > 0
+                  ? this.UpdateMappedValue()
+                  : (this.m_bMappedValueStale = !0);
+              });
           }
           get Value() {
-            return this.m_mappedSubscribableValue?.Value;
+            return (
+              this.m_bMappedValueStale && this.UpdateMappedValue(),
+              this.m_mappedSubscribableValue?.Value
+            );
           }
           Subscribe(_) {
-            0 == this.m_subscriptionRefCount++ &&
-              (this.m_mappedUnsubscribe =
-                this.m_originalSubscribableValue.Subscribe((_) =>
-                  this.m_mappedSubscribableValue.Set(this.m_fnMap(_)),
-                ));
-            const _ = this.m_mappedSubscribableValue?.Subscribe(_);
-            return {
-              Unsubscribe: () => {
-                _.Unsubscribe(),
-                  0 == --this.m_subscriptionRefCount &&
-                    (this.m_mappedUnsubscribe?.Unsubscribe(),
-                    (this.m_mappedUnsubscribe = void 0));
-              },
-            };
+            return this.m_mappedSubscribableValue.Subscribe(_);
+          }
+          UpdateMappedValue() {
+            this.m_mappedSubscribableValue.Set(
+              this.m_fnMap(this.m_originalSubscribableValue.Value),
+            ),
+              (this.m_bMappedValueStale = !1);
           }
         }
         function _(_, _, _) {
@@ -26757,9 +26814,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 19 2025 : 17:21:13",
-                    BUILD_TIME_UTC: "May 20 2025 : 00:21:13",
-                    BUILD_RTIME_UTC: 1747700473,
+                    BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
+                    BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
+                    BUILD_RTIME_UTC: 1748892104,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27240,7 +27297,7 @@ var CLSTAMP = "steamdb";
     (_._ = (_) =>
       Promise.all(Object.keys(_._).reduce((_, _) => (_._[_](_, _), _), []))),
     (_._ = (_) =>
-      ({
+      (({
         48: "localization/friendsui_turkish-json",
         89: "localization/friendsui_tchinese-json",
         106: "localization/steamui_finnish-json",
@@ -27373,152 +27430,153 @@ var CLSTAMP = "steamdb";
         9858: "chunk~2dcc5aaf7",
         9869: "localization/shared_vietnamese-json",
         9887: "localization/steamui_german-json",
-      })[_] +
+      })[_] || _) +
       ".js?contenthash=" +
       {
-        48: "22f42df535835ac04289",
-        89: "89503179abc434a195bb",
-        106: "e39e99bd9dd27e8e16f6",
-        129: "7b325e56cc61fe29e42e",
-        139: "2b372475eca130dd830d",
-        297: "238fffaabd086047736f",
-        740: "08be05696f19d35fe749",
-        786: "5ce4f975a0902d0be830",
-        823: "edbce3dab0aeb7a5e33d",
-        901: "be035bdfd798d5299916",
-        1005: "98a80dadf82a8cc5166b",
+        48: "6c8b8d906ea798b78f78",
+        89: "518b89b708126afaf165",
+        106: "713590168b45c708cccb",
+        129: "d456b7375916b3d038e2",
+        139: "a3011da7b7a7131979e4",
+        297: "00a79cfa858ca0c7c4ca",
+        674: "7a1901ebfb5882c56a0b",
+        740: "b307f48181939fbd54c4",
+        786: "45ea218a07e68e7300e5",
+        823: "c2de73b42149edcb026b",
+        901: "e6c0b1dfad931a4b8d22",
+        1005: "f56b966896d91c409cef",
         1012: "cded7344104308eb77a6",
-        1093: "57220ffa981bd47b4160",
-        1220: "2fe7ac88a45ebc982931",
+        1093: "7bd044ddebc026b54f90",
+        1220: "267d5635590d2b12d141",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "d08342ef6e5c1fa855d0",
-        1423: "61660a5b711b757572ff",
-        1463: "40f654088908f41e25c1",
-        1478: "b5d53c9a8af635952919",
-        1511: "cbcb46a6e7fcd38e0538",
-        1573: "a09e80800c18d1d4bee8",
-        1648: "fc7ef3b27067f6f9bb05",
-        1822: "bd392e66329f4d0adb16",
+        1389: "7ffb87513c5c80987949",
+        1423: "20c38cada66f6cf6c2aa",
+        1463: "307781324619512fcd79",
+        1478: "69bce2d55d610fcf6343",
+        1511: "3f37c1735b705e9e6b0e",
+        1573: "4d1ee92e3323b551a24e",
+        1648: "7594502630482655a3aa",
+        1822: "061646be97e8abe973e9",
         1879: "62d6403013b08cb655c3",
-        2021: "965a92d3643921c0d121",
-        2056: "f4dcc5665cdbfb652536",
-        2199: "3736414e9a48a712baf9",
+        2021: "88a8c7588a202078e56b",
+        2056: "acad628a1efe48c33d19",
+        2199: "d9b6672a76f28d5a2949",
         2225: "dc3d09d21b6992daad2e",
-        2263: "52c09a51da49a8cce9ec",
-        2266: "666bc382f36572c32123",
-        2320: "ef013e6daf1cc7a24bc5",
-        2438: "c4e211b5a0dbe5f5e82a",
+        2263: "be2c4a6ac17d52ee6115",
+        2266: "eea6d65831676709717e",
+        2320: "64ee85cb1171ed9a0a8c",
+        2438: "26a9e6a84718d7f64059",
         2448: "c1f0b015f00cac957233",
-        2481: "18f9598d339e36e994aa",
+        2481: "9b1820b031f183a1f00d",
         2611: "a2afb4fc0dc2e7577bc2",
-        2640: "fd382fdfb719b150c43e",
-        2646: "2f45fbc39c6726d4a369",
-        2664: "ecd754fc74c7f3498da5",
-        2761: "906b79a1c37052305264",
-        2783: "0ed1918019cfea503c09",
+        2640: "3076a4bb4fed859d9897",
+        2646: "fd760620e7dcb1d9794f",
+        2664: "eeca789f2206dbe86870",
+        2761: "229a4f158c3f5dd77301",
+        2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "bd9afc9559bf52d6c7c7",
-        2880: "37f421534443cba03ac3",
+        2867: "76c3ebdd602d01c56ff6",
+        2880: "7603cfbd19eccab12dd7",
         2889: "b9abff4f1a3a1f07e514",
         2952: "5cc53fdb04ed91186e12",
-        2959: "451980dbc79b5ad2ccb1",
+        2959: "7e027f5f100fdda95e0e",
         2984: "cdb6f5e43526a559784c",
-        3087: "10ca8bc0b93197ff8da7",
+        3087: "1b12286c0ff7df76a21e",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "5e7e33483f69295f553d",
+        3569: "bc0b73d8b543893bc8d1",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "38393f357888b21f8a7b",
-        3714: "662e71cc4e41c701f22d",
-        3869: "bbefb20bdcebd0bc3123",
-        4026: "20103f7b73c270b46c32",
+        3594: "8ba86d9069ca6bc96221",
+        3714: "44067310221ac08dea86",
+        3869: "20939aca3e060894ca25",
+        4026: "f3d756cb30a6f6fa6263",
         4102: "f43aeb08951dc8b6d64b",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "7d48da785ff02d191f6a",
-        4321: "75db495d256a5f3ea544",
-        4481: "0da565ed627abe8c7ca5",
+        4224: "eaf78917e2166a68b8bd",
+        4321: "3e3710967075e22f0171",
+        4481: "b0b06683619111998752",
         4839: "b1ca14b72a083777a78d",
-        4842: "d228e6e6dbaca52c5c71",
-        4952: "4a439fe441edb3ee22e0",
+        4842: "ad9e809fb763ba707c7a",
+        4952: "e851389af7fdfd4ecc17",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "29f1ce5cb1c9a2ec7b3e",
-        5592: "656e5bb698e246f77311",
+        5553: "025b79907c06588649c0",
+        5592: "309f0536e54213d0a6f4",
         5704: "379467b643925dea1061",
-        5716: "4afa70ab9472b6ef1e00",
-        5803: "5d254e4ba7fa8b96d60b",
-        5864: "4018e6ecc9f8f440a3f1",
-        6120: "6a9617f7f6297a7064b9",
-        6197: "8796e8718676fc7161ee",
-        6345: "67b0d2ad16a7a9495c4d",
-        6409: "e1e2584f3933f8d87561",
-        6430: "2987b2674c30f2920953",
-        6472: "1c47eb32160a2a38b2d9",
-        6577: "c401634787db152b8953",
-        6752: "fe9c9923c101f2afa94d",
+        5716: "cec2a2374e4c4d6ceb1d",
+        5803: "b3fec519e2c2e3d7781a",
+        5864: "9463a2261627ca1400af",
+        6120: "d946a96f63f5fa098ff3",
+        6197: "6bf631d966cee999819e",
+        6345: "fef99a42fdc175f05941",
+        6409: "cd54d036f7a9bb3d6a7b",
+        6430: "b77b36b59338277605c3",
+        6472: "3451eddd2e99c4e7ffbe",
+        6577: "fb6fab64291cae12d1e8",
+        6752: "d122485af833368312ba",
         6785: "69a9f0b91f21affb7342",
-        6888: "0140c4286a8181c0818f",
-        6890: "15600e16f841fed7f5b4",
-        6896: "7461983b766373845376",
+        6888: "67dc1a80d4283e01dbcb",
+        6890: "d731707e94845b5a7268",
+        6896: "f18f04bfef098a57e289",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "ba02063b19c7e9e75f57",
-        7314: "9d22ec4b2863256357ce",
+        7155: "48aee583c0a605cfb5bc",
+        7314: "9549b4c2bbcd41c7dade",
         7316: "18e5e6b118a1b52fddc2",
         7376: "d565c2b610194d0cc673",
-        7442: "2b0c7d4d54a99ba4f19e",
+        7442: "2139401653ba765c159b",
         7462: "52ace9199689821be1eb",
-        7533: "e6be3989c98fd88d679f",
+        7533: "a6ba94780cef155c19fc",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "2bfc68bdfef58fbed093",
-        7696: "b34f04daf750a3584d09",
+        7653: "aed4c0fda5b9b4db2dd3",
+        7696: "a89e569223ed2ec0b8d4",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "dd3e12418f29e5edc684",
-        7993: "333c1c9181fa4c46f5a7",
+        7836: "841239f248823c93f737",
+        7993: "fcb261fcac4a1394f5b3",
         8054: "cffb972d0ae14c9266f8",
-        8159: "4b562953e10580591689",
-        8263: "2ca1b24e13d28d33c24a",
-        8280: "ff687559f14132ff5a83",
+        8159: "0fc0f44a1d6d685af0d5",
+        8263: "b24751f2ee6b3f9a1cfa",
+        8280: "3ac92a197517e25c86d4",
         8286: "1f5be36130bf4017cada",
-        8291: "51998aa8ee0e0a08a0d3",
-        8396: "4293254175d2186d7318",
+        8291: "4b0518a52cd70070033d",
+        8396: "32e5eb4a4e5a546da28d",
         8443: "14576c5b8a2b6ac79ecd",
-        8445: "a6014afae28fa3af5766",
+        8445: "ae709c6c6dcbaa934ce2",
         8478: "6a43580d5abdab6866bc",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "17290529f37350cac282",
-        8534: "dffa3608a2c989490080",
+        8522: "78728023f57a9486b4e8",
+        8534: "bf0d8dee24ebf5e16c5f",
         8545: "1aa2273a0a3161924d55",
-        8674: "c78427706f5599fc0a93",
-        8699: "ef4ce5a4d1521e2331a9",
+        8674: "7139f23448ff0ece1627",
+        8699: "43afd6e96d56692322f9",
         8732: "718e037a5490ae486048",
-        8830: "48828c1d9866c50dcc33",
-        8872: "bffa69ef9b370fb676ed",
-        9053: "e43dc1856f72f786130a",
+        8830: "e48b0f667f5f5d4425bd",
+        8872: "a6cfe28ab99f13c9a6d9",
+        9053: "c821c0535165201e4ce2",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "7289a5f241da7fa5580c",
-        9298: "752a9840ec80b510d031",
-        9368: "cb14291ba9dcf5305fc0",
+        9171: "3292f950a3414be887cf",
+        9298: "4aa5b4a029a268e1f348",
+        9368: "15740caf2dd882886d4b",
         9418: "29e9fa15a9fc8e62a893",
-        9462: "89227ab1a3d278d803ec",
+        9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "649c0ce49bcf83db88c2",
-        9869: "1d6909b12ee210eccdf8",
-        9887: "1886bec7e4bc503260fc",
+        9858: "846def69dbdc2c7ec3d8",
+        9869: "dbd455fdaf48a06fd9ed",
+        9887: "5dfb2cd2a8d69bee9b8e",
       }[_]),
     (_.miniCssF = (_) =>
       "css/" +
-      {
+      ({
         1220: "gamenotes",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
         9129: "awardicon",
         9858: "chunk~2dcc5aaf7",
-      }[_] +
+      }[_] || _) +
       ".css"),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -27666,6 +27724,7 @@ var CLSTAMP = "steamdb";
             ? _.push(_[_])
             : 0 !== _[_] &&
               {
+                674: 1,
                 1220: 1,
                 7462: 1,
                 7653: 1,

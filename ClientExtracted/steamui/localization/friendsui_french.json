@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Chargement...",
     "Chat_Invite_ExpiresOneDay": "Expire dans 1 jour",
     "Chat_Invite_ExpiresSetting": "Expire : %1$s",
-    "Chat_TextFilter_Active": "Par défaut, les obscénités et insultes proférées par des personnes que vous ne connaissez pas sont maintenant censurées dans le chat Steam.  [url=%1$s]Voir les paramètres de filtre[/url]",
+    "Chat_TextFilter_Active": "Du contenu est masqué dans le chat Steam. Vous pouvez modifier ce comportement dans [url=%1$s]paramètres de filtre du chat[/url]",
     "Chat_Settings_Room_Name": "Nom du chat",
     "GroupSettings": "Paramètres du groupe",
     "GroupSettings_General_Section": "Général",

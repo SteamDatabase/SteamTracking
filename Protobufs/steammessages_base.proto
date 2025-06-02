@@ -107,7 +107,6 @@ message CMsgProtoBufHeader {
 	optional uint64 messageid = 18 [default = 18446744073709551615];
 	optional uint32 publisher_group_id = 19;
 	optional uint32 sysid = 20;
-	optional uint64 trace_tag = 21;
 	optional uint32 webapi_key_id = 25;
 	optional bool is_from_external_source = 26;
 	repeated uint32 forward_to_sysid = 27;
@@ -125,6 +124,7 @@ message CMsgProtoBufHeader {
 	repeated int32 exclude_client_sessionids = 41;
 	optional fixed64 admin_request_spoofing_steamid = 43;
 	optional bool is_valveds = 44;
+	optional fixed64 trace_tag = 45;
 
 	oneof ip_addr {
 		uint32 ip = 15;

@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Φόρτωση…",
     "Chat_Invite_ExpiresOneDay": "Λήγει σε: 1 ημέρα",
     "Chat_Invite_ExpiresSetting": "Λήγει: %1$s",
-    "Chat_TextFilter_Active": "Βαριές βωμολοχίες και βρισιές από άτομα που δε γνωρίζετε πλέον αποκρύπτονται από προεπιλογή στη συνομιλία Steam. [url=%1$s]Ελέγξτε τις ρυθμίσεις φιλτραρίσματος[/url]",
+    "Chat_TextFilter_Active": "Κάποιο περιεχόμενο αποκρύπτεται στη Συνομιλία Steam. Μπορείτε να το προσαρμόσετε στις [url=%1$s]ρυθμίσεις φιλτραρίσματος συνομιλίας[/url].",
     "Chat_Settings_Room_Name": "ΟΝΟΜΑ ΣΥΝΟΜΙΛΙΑΣ",
     "GroupSettings": "ΡΥΘΜΙΣΕΙΣ ΟΜΑΔΑΣ",
     "GroupSettings_General_Section": "ΓΕΝΙΚΕΣ",

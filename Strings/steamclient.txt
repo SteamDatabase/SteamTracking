@@ -456,7 +456,7 @@
 "0\n.CChatRoom_SetUserChatGroupPreferences_Response"
 "0\n.CFamilyGroups_CancelFamilyGroupInvite_Response"a\n+CFamilyGroups_GetUsersSharingDevice_Request
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-"1\n/CCommunity_FetchTranslationFromCrowdIn_Response"/\n\fCAppPriority
+"1\n/CCommunity_FetchTranslationFromCrowdIn_Response"
 "1\n/CHardwareUpdate_UpdateStateChanged_Notification2
 "1\n/CTransportValidation_RequestInvalidBool_Request"a\n0CTransportValidation_RequestInvalidBool_Response
 "1\n/CTransportValidation_TriggerDataRequest_Request"@\n0CTransportValidation_TriggerDataRequest_Response
@@ -648,7 +648,6 @@
 "_\n$CChatRoom_DeleteRoleFromUser_Request
 "_\n-CCredentials_SteamGuardPhishingReport_Request
 "_\n/COffline_GetUnsignedOfflineLogonTicket_Response
-"_\n\rCMsgAddHeader
 "`\n"CMsgClientMMSSetLobbyOwnerResponse
 "`\n%CMsgClientServiceMethodLegacyResponse
 "`\n*CGameRecording_ExportProgress_Notification
@@ -696,11 +695,13 @@
 "q\n5CCommunity_GetUserPartnerEventsAppPriorities_Response
 "r\n'CBroadcast_WebRTCSetAnswer_Notification
 "r\n.CGameRecording_UserUpdateTimelineEntry_Request
+"r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
 "revoke_action": %u,
 "serverId": "
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
 "storeId":"
 "t\n%CSiteLicense_LCSAssociateUser_Request
+"t\n\rCMsgAddHeader
 "token": "%s"
 "u\n"CMsgSteamDatagramCertificateSigned
 "u\n#CMsgClientMMSGetLobbyStatusResponse
@@ -1153,6 +1154,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentReportReason_Terrorism
 $\n k_EControllerElementTypeKeyboard
 $\n k_EDeviceDisconnectMethodUnknown
 $\n k_EExternalSaleEventType_Unknown
@@ -1700,6 +1702,8 @@ $steammessages_parental_objects.proto"
 %s: trying to find modeid that matches: %dx%d@%f
 %s: up to date
 %s: update already applied: %s
+%s: update available - but AC required
+%s: update available - but not enough battery
 %s: update available to version %s
 %s: update check already running
 %s: update check success: available:%d
@@ -2133,6 +2137,7 @@ $steammessages_parental_objects.proto"
 '\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EClientPersonaStateFlagPlayerName
 '\n#k_EClipRangeMethod_CreateClipButton
+'\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EControllerElementTypeButtonStart
 '\n#k_EControllerElementTypeButtonSteam
 '\n#k_EControllerElementTypeRecordInput
@@ -2213,6 +2218,7 @@ $steammessages_parental_objects.proto"
 (.CCloud_AppCloudStateChange_Notification
 (.CCommunity_GetBestEventsForUser_Request
 (.CCommunity_GetLinkFilterHashes_Response"
+(.CCommunity_HideAndReportComment_Request
 (.CCommunity_PostCommentToThread_Response"
 (.CCommunity_RateClanAnnouncement_Request
 (.CContentBuilder_CommitAppBuild_Response
@@ -2632,7 +2638,6 @@ $steammessages_parental_objects.proto"
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
 (\r"n\n$CMsgClientRequestFreeLicenseResponse
 (\r"o\n(CBroadcast_GetBroadcastChatInfo_Response
-(\r"p\n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 (\r"q\n\vCMsgKeyChar
 (\r"s\n1CFriendsMessages_GetActiveMessageSessions_Request
 (\r"u\n CWorkshop_GetEULAStatus_Response
@@ -2669,6 +2674,7 @@ $steammessages_parental_objects.proto"
 (\t")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
+(\t"*\n(CCommunity_HideAndReportComment_Response"/\n\fCAppPriority
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
@@ -2676,7 +2682,6 @@ $steammessages_parental_objects.proto"
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAuthentication_RefreshToken_Enumerate_Request"
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -2731,6 +2736,7 @@ $steammessages_parental_objects.proto"
 (\t"N\n,CSteamEngine_GetTextFilterDictionary_Request
 (\t"O\n#CSteamTV_GetChatModerators_Response
 (\t"P\n#CParental_PlaytimeUsed_Notification
+(\t"P\n.CAuthentication_RefreshToken_Enumerate_Request
 (\t"Q\n"CStoreBrowse_GetPriceStops_Request
 (\t"Q\n%CPlayer_GetProfileBackground_Response
 (\t"S\n)CChatRoom_SetChatRoomGroupTagline_Request
@@ -2865,6 +2871,7 @@ $steammessages_parental_objects.proto"
 (\v2$.CClientMetrics_AppInterfaceCreation
 (\v2$.CCommunity_PartnerEventsAppPriority"G\n6CCommunity_ClearSinglePartnerEventsAppPriority_Request
 (\v2$.CGameNetworkingUI_ConnectionSummaryB
+(\v2$.CMarketingMessageClickedHourlyStats"I\n:CMarketingMessages_GetMarketingMessageClickedStats_Request
 (\v2$.CMarketingMessageClickedHourlyStats"P\n;CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 (\v2$.CMsgClientConnectionStats.Stats_UDP
 (\v2$.CMsgNetworkDevicesData.Device.Wired
@@ -3244,6 +3251,7 @@ $steammessages_parental_objects.proto"
 ).CChat_RequestFriendPersonaStates_Request
 ).CCloud_ClientLogUploadCheck_Notification
 ).CCommunity_GetBestEventsForUser_Response"
+).CCommunity_HideAndReportComment_Response"
 ).CCommunity_RateClanAnnouncement_Response"
 ).CContentBuilder_StartDepotUpload_Request
 ).CEconMarket_IsMarketplaceAllowed_Request
@@ -3380,8 +3388,10 @@ $steammessages_parental_objects.proto"
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
 )\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_ECommunityItemClass_ProfileModifier
+)\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
 )\n%k_EContentDescriptor_AnyMatureContent
+)\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EControllerElementTypeJoystickRight
 )\n%k_EControllerElementTypePlaybackInput
 )\n%k_EControllerElementTypeTrackpadRight
@@ -4118,6 +4128,7 @@ $steammessages_parental_objects.proto"
 ,\n(k_EChatRoomMemberStateChange_RankChanged
 ,\n(k_EChatroomNotificationLevel_AllMessages
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EControllerElementTypeButtonBumperLeft
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EMarketingMessageClickLocation_Unknown
@@ -4153,6 +4164,7 @@ $steammessages_parental_objects.proto"
 ,\n\fvideo_decode
 ,\n\fvideo_encode
 ,\n\rreaction_type
+,\n\rreport_reason
 ,\n\tStoreItem
 ,\n\tbroadcast
 ,\n\tfinger_up
@@ -4364,6 +4376,7 @@ $steammessages_parental_objects.proto"
 -disable_broadcast_webrtc
 -disablelauncherservice
 -disablepartnerlicenses
+-disablevulkanlayer
 -force-no-dbus-simulate-user-activity
 -forcedeckcontroller
 -friendsui
@@ -4610,7 +4623,7 @@ $steammessages_parental_objects.proto"
 .CKeyEscrow_Request
 .CKeyEscrow_Response"
 .CKeyEscrow_Ticket*7\n
-.CMarketingMessageHourlyStats"I\n:CMarketingMessages_GetMarketingMessageClickedStats_Request
+.CMarketingMessageHourlyStats
 .CMarketingMessageHourlyStats"m\n?CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 .CMarketingMessageProto
 .CMarketingMessageProto"
@@ -4853,7 +4866,8 @@ $steammessages_parental_objects.proto"
 .EAuthTokenPlatformType"
 .EAuthTokenRevokeAction:
 .EAuthTokenState
-.EAuthenticationType"3\n1CAuthentication_GetAuthSessionsForAccount_Request"H\n2CAuthentication_GetAuthSessionsForAccount_Response
+.EAuthTokenState"3\n1CAuthentication_GetAuthSessionsForAccount_Request"H\n2CAuthentication_GetAuthSessionsForAccount_Response
+.EAuthenticationType
 .EBanContentCheckResult
 .EBluetoothDeviceType
 .EBroadcastChatPermission
@@ -4886,6 +4900,7 @@ $steammessages_parental_objects.proto"
 .EContentDescriptorID"A\n
 .EContentDescriptorID"M\n0CPublishedFile_UpdateContentDescriptors_Response
 .EContentHubDiscountFilterType
+.EContentReportReason
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EFamilyGroupChangeLogType
@@ -4910,7 +4925,7 @@ $steammessages_parental_objects.proto"
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
 .EMMSLobbyStatus*
-.EMarketingMessageClickLocation"r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
+.EMarketingMessageClickLocation"
 .EMarketingMessageClickLocation:(k_EMarketingMessageClickLocation_Unknown"=\n.CMarketingMessages_GetMarketingMessage_Request
 .EMarketingMessageLookupType
 .EMarketingMessageTemplateType
@@ -5125,6 +5140,8 @@ $steammessages_parental_objects.proto"
 .\n*k_ECompromiseDetectionType_MaliciousRefund
 .\n*k_EContentDeltaChunkDataLocationInProtobuf
 .\n*k_EContentDescriptor_NudityOrSexualContent
+.\n*k_EControlledLegalCategoryStatus_Acquitted
+.\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EControllerElementTypeButtonJoystickLeft
 .\n*k_EControllerElementTypeButtonMacro1Finger
 .\n*k_EControllerElementTypeButtonMacro2Finger
@@ -5454,8 +5471,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemmanager.cpp
 /data/src/clientdll/systemmanager.cpp:2659
 /data/src/clientdll/systemmanager.cpp:3166
-/data/src/clientdll/systemmanager.cpp:4710
-/data/src/clientdll/systemmanager.cpp:5271
+/data/src/clientdll/systemmanager.cpp:4708
+/data/src/clientdll/systemmanager.cpp:5314
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1399
@@ -11744,6 +11761,7 @@ $steammessages_parental_objects.proto"
 39CCloud_AppCloudStateChange_Notification
 39CCommunity_GetBestEventsForUser_Request
 39CCommunity_GetLinkFilterHashes_Response
+39CCommunity_HideAndReportComment_Request
 39CCommunity_PostCommentToThread_Response
 39CCommunity_RateClanAnnouncement_Request
 39CContentBuilder_CommitAppBuild_Response
@@ -11902,6 +11920,7 @@ $steammessages_parental_objects.proto"
 40CClientJobWriteHighQualityScreenshotCopy
 40CCloud_ClientLogUploadCheck_Notification
 40CCommunity_GetBestEventsForUser_Response
+40CCommunity_HideAndReportComment_Response
 40CCommunity_RateClanAnnouncement_Response
 40CContentBuilder_StartDepotUpload_Request
 40CEconMarket_IsMarketplaceAllowed_Request
@@ -13683,12 +13702,13 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO420
+;MO42 
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
 ;\n7k_ESteamDeckKeyboardLayout_Chinese_Traditional_Bopomofo
 ;\n\nchunk_keys
+;\n\rclicked_stats
 ;\n\tDateRange
 ;\n\ttransport
 ;\n\vstats_logon
@@ -15860,7 +15880,7 @@ CMsgClientRichPresenceRequest
 CMsgClientRichPresenceUpload
 CMsgClientScreenshotsChangedB
 CMsgClientSecret
-CMsgClientSentLogs"l\n\fCMsgGCClient
+CMsgClientSentLogs"
 CMsgClientServersAvailable
 CMsgClientServiceCall
 CMsgClientServiceCallResponse
@@ -17767,7 +17787,9 @@ EContentCheckProvider
 EContentDeltaChunkDataLocation
 EContentDescriptorID
 EContentHubDiscountFilterType
+EContentModeratorLevel
 EContentReportReason
+EControlledLegalCategoryStatus
 EControllerAction
 EControllerActivationType
 EControllerBindingType
@@ -17784,6 +17806,7 @@ EExternalSaleEventType
 EFamilyGroupChangeLogType
 EFamilyGroupRole
 EFamilyGroupsTwoFactorMethod
+EFlag
 EFlags
 EFrameAccumulatedStat
 EFunctionCurveType
@@ -17952,7 +17975,6 @@ EWatchResponse
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
 EXTRACTOR-dtls_srtp
-EYhG
 EYieldingCall - Inventory Lock
 EYldPollSession no longer connected to CM
 EYldRequestAgeVerification
@@ -19941,6 +19963,7 @@ HeartbeatBroadcast
 Hebrew
 Hen\fM
 Hf-2
+HideAndReportComment
 HideFriend
 Hiding blacklisted Device %x/%x\n
 Hiragana
@@ -20152,6 +20175,7 @@ Ignoring connection request, no local logged-in user
 Ignoring hibernate request while a suspend operation is already in progress
 Ignoring high priority wildcard mapping for %u (is Proton or SLR).
 Ignoring incoming data due to bMute\n
+Ignoring initial input. Connection time: %.2f\n
 Ignoring invalid cached cert - Failed to parse authorized_client_identity_string '%s'!
 Ignoring invalid cached cert - Issued for AppID %u instead of %u
 Ignoring invalid cached cert - Issued to '%s' instead of %s
@@ -22428,6 +22452,7 @@ Preset "%s" id "%d" is invalid.
 Preset_1%06d
 PrevActionSet
 Prevented loading a mapping that's being deleted\n
+Prevents loading of Vulkan layer if overlay disabled
 Preview
 Preview file %s does not exist.\n
 Previous login response
@@ -25727,6 +25752,7 @@ V8zc5\e
 V<^Af
 V?wm\v
 VACBanStatus2
+VALVE_DS
 VCache
 VGUI input
 VID=0x%.4x\n
@@ -26962,6 +26988,7 @@ Zpm"U
 \n'CBroadcast_StartBroadcastUpload_Request
 \n'CChatRoom_UpdateMessageReaction_Request
 \n'CCommunity_GetBestEventsForUser_Request
+\n'CCommunity_HideAndReportComment_Request
 \n'CContentBuilder_InitDepotBuild_Response
 \n'CDataPublisher_GetVRDeviceInfo_Response
 \n'CMsgClientMMSSetRatelimitPolicyOnClient
@@ -27277,6 +27304,7 @@ Zpm"U
 \n?CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 \n?CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 \n@CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
+\n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 \nCClientJobGatherRuntimeInformation: "%s" container read output failed\n
 \nCClientJobGatherRuntimeInformation: mkstemp container failed\n
 \nCaching Proxies:\n
@@ -27288,6 +27316,7 @@ Zpm"U
 \nWait for confirmation timed out.
 \nWaiting for confirmation...
 \nYg:a
+\n\fCMsgGCClient
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
@@ -28610,6 +28639,7 @@ Zpm"U
 \n\vrelay_popid
 \n\vremote_play
 \n\vreplay_year
+\n\vreport_text
 \n\vrequest_ids
 \n\vrequest_url
 \n\vreturn_apps
@@ -28622,6 +28652,7 @@ Zpm"U
 \n\vsearch_term
 \n\vsearch_text
 \n\vsection_CRC
+\n\vsend_in_xhr
 \n\vsender_time
 \n\vseq_num_c2r
 \n\vseq_num_e2e
@@ -30726,6 +30757,7 @@ eeeeeexxeeeennnnooooooeeyyyyyyyyrr
 eehresiij
 eekkkkkkkkhhhh
 eewwoovvvv
+effective_token_state
 effects
 efriendrelationship
 eh?o
@@ -31994,6 +32026,7 @@ include_read_events_only
 include_recent_votes_only
 include_release
 include_reviews
+include_revoked
 include_revoked_tokens
 include_screenshots
 include_seen_messages
@@ -32537,7 +32570,11 @@ k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
 k_EContentDescriptorMAX
+k_EContentModeratorLevel_Any
+k_EContentModeratorLevel_MAX
+k_EContentModeratorLevel_Valve
 k_EContentReportReason_Abusive
+k_EContentReportReason_CSAM
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic
@@ -34004,6 +34041,7 @@ k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 k_TestingAbortedk_TestingBindAButtonk_TestingBindBButtonk_TestingBindDPadDownk_TestingBindDPadLeftk_TestingBindDPadRightk_TestingBindDPadUpk_TestingBindGuidek_TestingBindLeftShoulderk_TestingBindLeftStickButtonk_TestingBindLeftStickDownk_TestingBindLeftStickLeftk_TestingBindLeftStickRightk_TestingBindLeftStickUpk_TestingBindLeftTriggerk_TestingBindRightShoulderk_TestingBindRightStickButtonk_TestingBindRightStickDownk_TestingBindRightStickLeftk_TestingBindRightStickRightk_TestingBindRightStickUpk_TestingBindRightTriggerk_TestingBindSelectk_TestingBindSharek_TestingBindStartk_TestingBindTouchpadk_TestingBindXButtonk_TestingBindYButtonk_TestingBindingCompletek_TestingButtonsk_TestingCompletek_TestingFreeModek_TestingLeftHapticsk_TestingLeftJoystickk_TestingLeftTrackpadk_TestingLeftTrackpadPressurek_TestingLeftTriggerk_TestingRightHapticsk_TestingRightJoystickk_TestingRightTrackpadk_TestingRightTrackpadPressurek_TestingRightTriggerk_TestingStarted
+k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Pro2k_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
 k_eDiskSpaceType_Clip
 k_eDiskSpaceType_Recording
 k_eJPEG
@@ -36497,6 +36535,7 @@ nm_utils_ssid_to_utf8
 nm_utils_uuid_generate
 nmq(t
 nnbbpprrff
+nnci
 nnvb
 no access code
 no details

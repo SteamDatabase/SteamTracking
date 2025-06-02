@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Loading...",
     "Chat_Invite_ExpiresOneDay": "Expires: 1 day",
     "Chat_Invite_ExpiresSetting": "Expires: %1$s",
-    "Chat_TextFilter_Active": "Strong profanity and slurs from people you don't know are now obscured by default in Steam Chat. [url=%1$s]Review filtering settings[/url]",
+    "Chat_TextFilter_Active": "Some content is being obscured in Steam Chat. You can adjust this in [url=%1$s]chat filtering settings[/url]",
     "Chat_Settings_Room_Name": "Chat Name",
     "GroupSettings": "Group Settings",
     "GroupSettings_General_Section": "General",

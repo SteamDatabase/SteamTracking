@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Se încarcă...",
     "Chat_Invite_ExpiresOneDay": "Expiră într-o zi",
     "Chat_Invite_ExpiresSetting": "Expiră la: %1$s",
-    "Chat_TextFilter_Active": "Cuvintele obscene și jignitoare grave de la cei pe care nu-i cunoști sunt acum ascunse implicit în chatul Steam. [url=%1$s]Verifică configurarea filtrului[/url]",
+    "Chat_TextFilter_Active": "O parte din conținut este ascuns din chatul Steam. Poți modifica setările de filtrare a chatului [url=%1$s]aici[/url].",
     "Chat_Settings_Room_Name": "Numele chatului",
     "GroupSettings": "Setările grupului",
     "GroupSettings_General_Section": "General",

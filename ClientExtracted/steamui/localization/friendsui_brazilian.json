@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Carregando...",
     "Chat_Invite_ExpiresOneDay": "Vence em 1 dia",
     "Chat_Invite_ExpiresSetting": "Válido até: %1$s",
-    "Chat_TextFilter_Active": "Agora, palavras de baixo calão e xingamentos graves de desconhecidos são filtrados por padrão na Conversa Steam. [url=%1$s]Revisar configurações de filtragem[/url]",
+    "Chat_TextFilter_Active": "Alguns conteúdos na Conversa Steam foram filtrados. Altere o que deve ser filtrado nas [url=%1$s]configurações[/url].",
     "Chat_Settings_Room_Name": "Nome da conversa",
     "GroupSettings": "Configurações da sala",
     "GroupSettings_General_Section": "Geral",

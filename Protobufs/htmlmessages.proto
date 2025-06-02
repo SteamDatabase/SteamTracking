@@ -176,6 +176,7 @@ message CMsgAddHeader {
 	optional string key = 2;
 	optional string value = 3;
 	optional bool only_send_to_steam = 4;
+	optional bool send_in_xhr = 5;
 }
 
 message CMsgStopLoad {

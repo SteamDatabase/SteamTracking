@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Laster inn …",
     "Chat_Invite_ExpiresOneDay": "Utløper: 1dag",
     "Chat_Invite_ExpiresSetting": "Utløper: %1$s",
-    "Chat_TextFilter_Active": "Grove banneord og skjellsord fra folk du ikke kjenner, tilsløres nå som standard i Steam-samtalen. [url=%1$s]Gå gjennom filterinnstillinger[/url]",
+    "Chat_TextFilter_Active": "Noe innhold blir skjult i Steam-samtalen. Du kan justere dette i [url=%1$s]innstillinger for samtalefiltrering[/url].",
     "Chat_Settings_Room_Name": "Samtalenavn",
     "GroupSettings": "Gruppeinnstillinger",
     "GroupSettings_General_Section": "Generelt",

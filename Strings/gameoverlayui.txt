@@ -13,7 +13,7 @@
 "????'????????????????????????????????????????????????????\????
 "\n\farray_values
 "^\n\fOneofOptions
-"_\n\rCMsgAddHeader
+"t\n\rCMsgAddHeader
 #FLR
 #tDq
 $ORIGIN
@@ -26,6 +26,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentReportReason_Terrorism
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -94,6 +95,7 @@ $\nY8O
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
+'\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
 '\n#k_EHDRVisualization_HeatmapExtended
 '\n#k_EPersonaStateFlag_HasRichPresence
@@ -177,7 +179,9 @@ $\nY8O
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
 )\n%k_EBrowserGPUStatus_DisabledJSRequest
 )\n%k_ECommunityItemClass_ProfileModifier
+)\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
 )\n%k_EProfileCustomizationTypeGreenlight
 )\n%k_EProfileCustomizationTypeMyWorkshop
@@ -233,6 +237,7 @@ $\nY8O
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
 ,\n(k_EProfileCustomizationTypeGameCollector
@@ -270,6 +275,8 @@ $\nY8O
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
 .\n*k_ECompromiseDetectionType_MaliciousRefund
+.\n*k_EControlledLegalCategoryStatus_Acquitted
+.\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
 .\n*k_ESteamDeckCompatibilityCategory_Playable
@@ -1095,7 +1102,9 @@ ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
 EContentCheckProvider
+EContentModeratorLevel
 EContentReportReason
+EControlledLegalCategoryStatus
 EExternalSaleEventType
 EGPUPerformanceLevel
 EGameRecordingType
@@ -1922,6 +1931,7 @@ Zjz\v
 \n\vpinch_scale
 \n\vpopup_index
 \n\vrequest_url
+\n\vsend_in_xhr
 \n\vsource_file
 \n\vtransparent
 \n\vunlock_code
@@ -2356,7 +2366,11 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
+k_EContentModeratorLevel_Any
+k_EContentModeratorLevel_MAX
+k_EContentModeratorLevel_Valve
 k_EContentReportReason_Abusive
+k_EContentReportReason_CSAM
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic

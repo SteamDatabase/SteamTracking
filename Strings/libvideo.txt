@@ -278,6 +278,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1Vo
 (U1h
 (ZdOt\n&
 (\n#k_EMsgAMCheckClanInviteRateLimiting
@@ -1387,6 +1388,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9HDC
 9IGv
 9IMemAlloc
 9PE,$
@@ -1601,7 +1603,6 @@ Another DATA frame has already been deferred
 A~Se
 B#B)B/BCBSBUB[BaBsB}B
 B*k@5
-B2OUj
 B2pr
 BConvertYUVtoRGB
 BEnableGameRecordingH265

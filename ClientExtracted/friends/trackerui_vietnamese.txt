@@ -66,7 +66,7 @@
 "Friends_FriendList_Offline"		"RỜI MẠNG"
 
 "Friends_SendInstantMessage"		"Gửi tin nhắn..."
-"Friends_Ignore"			"Chặn mọi liên lạc..."
+"Friends_Ignore"			"Chặn tất cả giao tiếp..."
 "Friends_UnIgnore"			"Bỏ chặn"
 "Friends_InviteFriendToGame"		"Gửi lời mời chơi"
 "Friends_JoinGame"				"Tham gia trò chơi"
@@ -167,7 +167,7 @@
 "Friends_InvitationSent"				"Thư mời đã được gửi đến email của %search%, họ sẽ được thêm vào danh sách bạn bè của bạn khi họ chấp nhận.\n"
 "Friends_DefaultInviteError"			"Đã có vấn đề phát sinh khi gửi lời mời tới %search%." 
 "Friends_TooManyPendingInvitations"   "Bạn đã gửi quá nhiều lời mời gần đây. Hãy thử mời %search% lại sau một hoặc hai ngày."
-"Friends_InvitationBlocking"		"Bạn đã chặn toàn bộ liên lạc với người dùng này. Trước khi liên lạc với người dùng này, bạn phải bỏ chặn họ bằng cách tới thăm hồ sơ cộng đồng Steam của họ."
+"Friends_InvitationBlocking"		"Bạn đã chặn tất cả giao tiếp với người dùng này. Trước khi liên lạc với người dùng, bạn phải bỏ chặn bằng cách ghé vào trang hồ sơ cộng đồng Steam của họ."
 
 "Friends_DontGiveOutPassword"			"Không bao giờ tiết lộ mật khẩu của bạn cho bất cứ ai.\n"
 "Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
@@ -481,9 +481,9 @@
 "Friends_ChatPasswordWarning_Continue"		"Có, hãy gửi tin nhắn của tôi"
 "Friends_ChatPasswordWarning_DontSend"		"Không, đừng gửi nó"
 
-"Friends_BlockCommunicationWarning_Title"	"Chặn toàn bộ giao tiếp với %username%"
-"Friends_BlockCommunicationWarning_Info"	"Bạn đang chuẩn bị chặn toàn bộ liên lạc với %username%.\n\nViệc chặn này cũng sẽ ngăn bạn và người chơi này tham gia cùng trận đấu với khả năng xếp trận của Steamworks."
-"Friends_BlockCommunicationWarning_Info2"	"Bạn đang chuẩn bị chặn toàn bộ liên lạc với %username%.\n\nBạn sẽ không thể gửi hoặc nhận các tin nhắn cũng như lời mời với người chơi này.\n\nBạn có thể hủy bỏ việc này bằng cách vào hồ sơ Steam của họ hoặc bỏ chặn họ thông qua danh sách bạn bè."
+"Friends_BlockCommunicationWarning_Title"	"Chặn tất cả giao tiếp với %username%"
+"Friends_BlockCommunicationWarning_Info"	"Bạn đang chuẩn bị chặn tất cả giao tiếp với %username%.\n\nHành động chặn này cũng sẽ ngăn bạn và người chơi tham gia cùng trận đấu với khả năng xếp trận của Steamworks."
+"Friends_BlockCommunicationWarning_Info2"	"Bạn đang chuẩn bị chặn toàn bộ liên lạc với %username%.\n\nBạn sẽ không thể gửi hoặc nhận các tin nhắn cũng như lời mời với người chơi này.\n\nBạn có thể hủy bỏ bằng cách vào hồ sơ Steam của họ hoặc bỏ chặn thông qua danh sách bạn bè."
 "Friends_BlockCommunicationWarning_LinkInfo"	"Tìm hiểu thêm về xếp trận của Steamworks."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Không hiện lần sau."
 "Friends_BlockCommunicationWarning_Block"	"Chặn người chơi"

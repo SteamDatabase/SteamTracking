@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Στιγμιότυπα"
 "app_task_friend_activity" "Δραστηριότητα φίλων"
 "app_task_console"	"Κονσόλα"
-"app_task_musicplayer"	"Αναπαραγωγή μουσικής"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Διακοπή Remote Play"
 

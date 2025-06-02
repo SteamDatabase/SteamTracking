@@ -1283,11 +1283,6 @@
                     bw: K.writeUint32,
                   },
                   sysid: { n: 20, br: $.readUint32, bw: K.writeUint32 },
-                  trace_tag: {
-                    n: 21,
-                    br: $.readUint64String,
-                    bw: K.writeUint64String,
-                  },
                   webapi_key_id: { n: 25, br: $.readUint32, bw: K.writeUint32 },
                   is_from_external_source: {
                     n: 26,
@@ -1354,6 +1349,11 @@
                     bw: K.writeFixed64String,
                   },
                   is_valveds: { n: 44, br: $.readBool, bw: K.writeBool },
+                  trace_tag: {
+                    n: 45,
+                    br: $.readFixed64String,
+                    bw: K.writeFixed64String,
+                  },
                 },
               }),
             ie.sm_m
@@ -1506,6 +1506,8 @@
             "k_EAccountFlagLimitedUserForce"),
           (e[(e.k_EAccountFlagEmailValidated = 16384)] =
             "k_EAccountFlagEmailValidated"),
+          (e[(e.k_EAccountFlagValveEmail = 32768)] =
+            "k_EAccountFlagValveEmail"),
           (e[(e.k_EAccountFlagForcePasswordChange = 131072)] =
             "k_EAccountFlagForcePasswordChange"),
           (e[(e.k_EAccountFlagLogonExtraSecurity = 524288)] =

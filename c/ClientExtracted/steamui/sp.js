@@ -26,6 +26,7 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function () {
         return (0, _._)()
@@ -66,10 +67,16 @@
                 _.createElement(
                   _._,
                   null,
-                  _.createElement(_._, {
-                    _: _._,
-                  }),
-                  _.createElement(_, null),
+                  _.createElement(
+                    _._,
+                    {
+                      eAdultOnlyMediaBehavior: "allowed",
+                    },
+                    _.createElement(_._, {
+                      _: _._,
+                    }),
+                    _.createElement(_, null),
+                  ),
                 ),
               ),
           ),

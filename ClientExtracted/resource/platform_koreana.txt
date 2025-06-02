@@ -27,7 +27,6 @@
 "app_task_screenshots"	"스크린샷"
 "app_task_friend_activity" "친구 활동"
 "app_task_console"	"콘솔"
-"app_task_musicplayer"	"음악 플레이어"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Remote Play 중지"
 

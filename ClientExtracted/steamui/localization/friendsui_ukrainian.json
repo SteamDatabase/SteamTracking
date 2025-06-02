@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Завантаження…",
     "Chat_Invite_ExpiresOneDay": "Спливає через: 1 день",
     "Chat_Invite_ExpiresSetting": "Термін дії: %1$s",
-    "Chat_TextFilter_Active": "Груба ненормативна лексика та образливі висловлювання від незнайомих користувачів тепер стандартно приховуються в чаті Steam.\n[url=%1$s]Переглянути налаштування фільтрів[/url]",
+    "Chat_TextFilter_Active": "Деякий вміст приховується в чаті Steam. Змінити це можна в [url=%1$s]налаштуваннях фільтрування чату[/url].",
     "Chat_Settings_Room_Name": "Назва чату",
     "GroupSettings": "Налаштування групи",
     "GroupSettings_General_Section": "Загальні",

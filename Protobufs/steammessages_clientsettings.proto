@@ -246,8 +246,8 @@ message CMsgClientSettings {
 	optional bool gamescope_composite_debug = 21010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/CompositeDebug", (setting_default_bool) = false];
 	optional bool gamescope_force_composite = 21011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/ForceComposite", (setting_default_bool) = false];
 	optional string gamescope_game_resolution_global = 21012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GameResolutionGlobal", (setting_default_string) = "Default"];
-	optional .CMsgHotkey gamescope_guide_hotkey = 21013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GuideKeyboardHotkey"];
-	optional .CMsgHotkey gamescope_qam_hotkey = 21014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/QAMKeyboardHotkey"];
+	optional .CMsgHotkey gamescope_guide_hotkey = 21013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GuideKeyboardHotkey", (setting_default_string) = "Shift\tKEY_TAB"];
+	optional .CMsgHotkey gamescope_qam_hotkey = 21014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/QAMKeyboardHotkey", (setting_default_string) = "CTRL\tShift\tKEY_TAB"];
 	optional bool gamescope_hdr_enabled = 21015 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/HDREnabled", (setting_default_bool) = true, (setting_profile_mode) = k_ESettingProfileMode_PerDisplay];
 	optional bool gamescope_native_external_res_in_steam = 21016 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/EnableSteamNativeExternalResolution"];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
@@ -275,4 +275,5 @@ message CMsgClientSettings {
 	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
 	optional bool hardware_updater_enabled = 24001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/HardwareUpdater/Enabled", (setting_default_bool) = false];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
+	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
 }

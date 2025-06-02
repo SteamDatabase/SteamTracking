@@ -27,7 +27,6 @@
 "app_task_screenshots"	"Capturas de tela"
 "app_task_friend_activity" "Atividade dos amigos"
 "app_task_console"	"Console"
-"app_task_musicplayer"	"Reprodutor de música"
 "app_task_steamvr"	"SteamVR"
 "app_task_stop_streaming"	"Desconectar-se"
 

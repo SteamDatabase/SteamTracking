@@ -66,7 +66,7 @@
 "Friends_FriendList_Offline"		"OFFLINE"
 
 "Friends_SendInstantMessage"		"Enviar mensagem..."
-"Friends_Ignore"			"Bloquear todas as comunicações"
+"Friends_Ignore"			"Bloquear comunicações..."
 "Friends_UnIgnore"			"Desbloquear"
 "Friends_InviteFriendToGame"		"Convidar para partida"
 "Friends_JoinGame"				"Entrar na partida"

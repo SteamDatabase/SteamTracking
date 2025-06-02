@@ -141,6 +141,7 @@ enum EAccountFlag
 	k_EAccountFlagLimitedUser = 4096;
 	k_EAccountFlagLimitedUserForce = 8192;
 	k_EAccountFlagEmailValidated = 16384;
+	k_EAccountFlagValveEmail = 32768;
 	k_EAccountFlagForcePasswordChange = 131072;
 	k_EAccountFlagLogonExtraSecurity = 524288;
 	k_EAccountFlagLogonExtraSecurityDisabled = 1048576;
@@ -357,15 +358,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
 	k_EControllerTypeFlags_AllNintendoControllers = 13824;
-	k_EControllerTypeFlags_2Grips = 499975;
-	k_EControllerTypeFlags_4Grips = 106758;
-	k_EControllerTypeFlags_Gyro = 520759;
 	k_EControllerTypeFlags_LeftTrackpad = 49207;
 	k_EControllerTypeFlags_RightTrackpad = 180279;
 	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_RightJoystick = -4100;
-	k_EControllerTypeFlags_DPad = -4100;
-	k_EControllerTypeFlags_Triggers = -4097;
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
@@ -3937,12 +3932,6 @@ enum UnnamedEnumb6bf80faeebca491
 	FILE = 0;
 	FOLDER = 1;
 	ROOT_FOLDER = 2;
-}
-
-enum UnnamedEnumb8bceb83053e4b5b
-{
-	Invalid = 0;
-	StreamGone = 1;
 }
 
 enum UnnamedEnumb9dbd68757ae6dad

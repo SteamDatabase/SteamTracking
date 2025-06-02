@@ -877,6 +877,7 @@ button.TextButton.gpfocus {
 }
 .DialogDropDown_Arrow {
   height: 1em;
+  width: 1em;
   top: 14px;
   right: 10px;
 }
@@ -1818,6 +1819,37 @@ div:focus,
 a:focus,
 span:focus {
   outline: none;
+}
+.DebugAccessibilityRoles [role="heading"],
+.DebugAccessibilityRoles h1,
+.DebugAccessibilityRoles h2,
+.DebugAccessibilityRoles h3,
+.DebugAccessibilityRoles h4,
+.DebugAccessibilityRoles h5,
+.DebugAccessibilityRoles h6 {
+  border: 1px solid green !important;
+}
+.DebugAccessibilityRoles [role="button"] {
+  border: 1px solid blue !important;
+}
+.DebugAccessibilityRoles [role="checkbox"] {
+  border: 1px solid red !important;
+}
+.DebugAccessibilityRoles [role="searchbox"],
+.DebugAccessibilityRoles input[type="search"] {
+  border: 1px solid #ff0 !important;
+}
+.DebugAccessibilityRoles [role="tablist"] {
+  background-color: rgba(255, 69, 0, 0.1) !important;
+}
+.DebugAccessibilityRoles [role="tab"] {
+  border: 1px solid #ff4500 !important;
+}
+.DebugAccessibilityRoles [role="list"] {
+  background-color: rgba(255, 0, 255, 0.1) !important;
+}
+.DebugAccessibilityRoles [role="listitem"] {
+  border: 1px solid #f0f !important;
 }
 ._2mu1wGa9DBwSPaacW6GVmk {
   width: 100%;

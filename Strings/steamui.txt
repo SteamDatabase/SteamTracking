@@ -364,7 +364,7 @@
 "0\n.CChatRoom_SetUserChatGroupPreferences_Response"
 "0\n.CFamilyGroups_CancelFamilyGroupInvite_Response"a\n+CFamilyGroups_GetUsersSharingDevice_Request
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-"1\n/CCommunity_FetchTranslationFromCrowdIn_Response"/\n\fCAppPriority
+"1\n/CCommunity_FetchTranslationFromCrowdIn_Response"
 "1\n/CHardwareUpdate_UpdateStateChanged_Notification2
 "1\n/CTransportValidation_RequestInvalidBool_Request"a\n0CTransportValidation_RequestInvalidBool_Response
 "1\n/CTransportValidation_TriggerDataRequest_Request"@\n0CTransportValidation_TriggerDataRequest_Response
@@ -552,7 +552,6 @@
 "_\n$CClientNotificationGameRecordingStop
 "_\n-CCredentials_SteamGuardPhishingReport_Request
 "_\n/COffline_GetUnsignedOfflineLogonTicket_Response
-"_\n\rCMsgAddHeader
 "`\n*CGameRecording_ExportProgress_Notification
 "`\n*CGameRecording_GetTimelinesForApp_Response
 "`\n/CPlayer_UpdateSteamAnnouncementLastRead_Request
@@ -623,8 +622,10 @@
 "rBO
 "r\n'CBroadcast_WebRTCSetAnswer_Notification
 "r\n.CGameRecording_UserUpdateTimelineEntry_Request
+"r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
 "t\n%CSiteLicense_LCSAssociateUser_Request
+"t\n\rCMsgAddHeader
 "t\n\vCardinality
 "u\n'CRemotePlay_SessionStopped_Notification
 "u\n*CStore_GetWishlistDemoEmailStatus_Response
@@ -925,7 +926,6 @@
 #app_task_friend_activity
 #app_task_friends
 #app_task_games
-#app_task_musicplayer
 #app_task_screenshots
 #app_task_servers
 #app_task_steamvr
@@ -1049,6 +1049,7 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
+$\n k_EContentReportReason_Terrorism
 $\n k_EControllerElementTypeKeyboard
 $\n k_EDeviceDisconnectMethodUnknown
 $\n k_EDisplayStatusDownloadDisabled
@@ -1880,6 +1881,7 @@ ${LANGUAGE}
 '\n#k_EClientNotificationType_MajorSale
 '\n#k_EClientPersonaStateFlagPlayerName
 '\n#k_EClipRangeMethod_CreateClipButton
+'\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EControllerElementTypeButtonStart
 '\n#k_EControllerElementTypeButtonSteam
 '\n#k_EControllerElementTypeRecordInput
@@ -1956,6 +1958,7 @@ ${LANGUAGE}
 (.CCloud_AppCloudStateChange_Notification
 (.CCommunity_GetBestEventsForUser_Request
 (.CCommunity_GetLinkFilterHashes_Response"
+(.CCommunity_HideAndReportComment_Request
 (.CCommunity_PostCommentToThread_Response"
 (.CCommunity_RateClanAnnouncement_Request
 (.CContentBuilder_CommitAppBuild_Response
@@ -2356,7 +2359,6 @@ ${LANGUAGE}
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
 (\r"o\n(CBroadcast_GetBroadcastChatInfo_Response
-(\r"p\n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 (\r"q\n\vCMsgKeyChar
 (\r"s\n1CFriendsMessages_GetActiveMessageSessions_Request
 (\r"u\n CWorkshop_GetEULAStatus_Response
@@ -2392,6 +2394,7 @@ ${LANGUAGE}
 (\t")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
+(\t"*\n(CCommunity_HideAndReportComment_Response"/\n\fCAppPriority
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
@@ -2400,7 +2403,6 @@ ${LANGUAGE}
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
-(\t"0\n.CAuthentication_RefreshToken_Enumerate_Request"
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -2454,6 +2456,7 @@ ${LANGUAGE}
 (\t"O\n#CSteamTV_GetChatModerators_Response
 (\t"O\n)CClientNotificationRemoteClientConnection
 (\t"P\n#CParental_PlaytimeUsed_Notification
+(\t"P\n.CAuthentication_RefreshToken_Enumerate_Request
 (\t"Q\n"CStoreBrowse_GetPriceStops_Request
 (\t"Q\n%CPlayer_GetProfileBackground_Response
 (\t"S\n)CChatRoom_SetChatRoomGroupTagline_Request
@@ -2568,6 +2571,7 @@ ${LANGUAGE}
 (\v2$.CAuthentication_AllowedConfirmation
 (\v2$.CClientMetrics_AppInterfaceCreation
 (\v2$.CCommunity_PartnerEventsAppPriority"G\n6CCommunity_ClearSinglePartnerEventsAppPriority_Request
+(\v2$.CMarketingMessageClickedHourlyStats"I\n:CMarketingMessages_GetMarketingMessageClickedStats_Request
 (\v2$.CMarketingMessageClickedHourlyStats"P\n;CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 (\v2$.CMsgNetworkDevicesData.Device.Wired
 (\v2$.CMsgRemoteClientAppStatus.AppStatus
@@ -2840,11 +2844,12 @@ ${LANGUAGE}
 (\v2\r.ProfileTheme
 (\v2\r.ProfileTheme"3\n
 (\v2\v.CMsgHotkeyB
-(\v2\v.CMsgHotkeyB#
 (\v2\v.CMsgHotkeyB%
 (\v2\v.CMsgHotkeyB,
+(\v2\v.CMsgHotkeyB6
 (\v2\v.CMsgHotkeyB7
 (\v2\v.CMsgHotkeyB8
+(\v2\v.CMsgHotkeyB9
 (\v2\v.CMsgHotkeyH
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
@@ -2881,6 +2886,7 @@ ${LANGUAGE}
 ).CChat_RequestFriendPersonaStates_Request
 ).CCloud_ClientLogUploadCheck_Notification
 ).CCommunity_GetBestEventsForUser_Response"
+).CCommunity_HideAndReportComment_Response"
 ).CCommunity_RateClanAnnouncement_Response"
 ).CContentBuilder_StartDepotUpload_Request
 ).CEconMarket_IsMarketplaceAllowed_Request
@@ -3016,8 +3022,10 @@ ${LANGUAGE}
 )\n%k_EClientNotificationType_Achievement
 )\n%k_EClientNotificationType_HelpRequest
 )\n%k_ECommunityItemClass_ProfileModifier
+)\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
 )\n%k_EContentDescriptor_AnyMatureContent
+)\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EControllerElementTypeJoystickRight
 )\n%k_EControllerElementTypePlaybackInput
 )\n%k_EControllerElementTypeTrackpadRight
@@ -3233,8 +3241,7 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
 *23CInternalLambdaWorkItemIZN12CUDisksDrive8YldAdoptEPKcS2_bEUlvE_iE
 *23CInternalLambdaWorkItemIZN18CLibraryAssetCache26BYldMoveFileAndUpdateCacheEj17ELibraryAssetTypePKcS3_EUlvE_bE
-*23CInternalLambdaWorkItemIZN19CFactoryResetHelper16YldResetUserDataEvEUlvE_7EResultE
-*23CInternalLambdaWorkItemIZN19CFactoryResetHelper19YldFactoryResetFullEvEUlvE_7EResultE
+*23CInternalLambdaWorkItemIZN19CFactoryResetHelper15YldFactoryResetEbbEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSMandatoryUpdate14YldApplyUpdateEvEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSMandatoryUpdate17YldCheckForUpdateEvEUlvE_bE
 *23CInternalLambdaWorkItemIZN23CSystemReportController16YldSaveToDesktopERK10CUtlStringEUlvE_7EResultE
@@ -3289,7 +3296,6 @@ ${LANGUAGE}
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN13CSteamStartup12ExecSteamURLE19EShellExecuteSourcePKcEUl7EResultS2_E_
-*ZN15CSteamOSManager29QueuePollForInterfacesChangedEyEUlvE_
 *ZN15CWebUITransport16StartHealthCheckEvEUlvE_
 *ZN15CWebUITransport23ThreadedRequestShutdownEvEUlvE_
 *ZN15CWebUITransport29ThreadedBroadcastNotificationEPKcRN6google8protobuf11MessageLiteEEUlvE_
@@ -3567,7 +3573,7 @@ ${LANGUAGE}
 *ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
 *ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 *ZZN12CUDisksDrive8YldAdoptEPKcS1_bENKUlvE_clEvEUl10StringViewE_
-*ZZN19CFactoryResetHelper19YldFactoryResetFullEvENKUlvE_clEvEUl10StringViewE_
+*ZZN19CFactoryResetHelper15YldFactoryResetEbbENKUlvE_clEvEUl10StringViewE_
 *ZZN23CPulseAudioRecorderBase26CreateProcessRecordingSinkEvENKUlvE0_clEvEUlvE0_
 *ZZN23CPulseAudioRecorderBase4QuitEvENKUlP10pa_contextPK14pa_module_infoiPvE1_clES1_S4_iS5_EUlvE0_
 *ZZN24CGameRecordingController13YldExportClipERK33CGameRecording_ExportClip_RequestR34CGameRecording_ExportClip_ResponseENKUlvE_clEvEUlfE_
@@ -3982,6 +3988,7 @@ ${LANGUAGE}
 ,\n(k_EClientNotificationType_ClipDownloaded
 ,\n(k_EClientNotificationType_HardwareSurvey
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EControllerElementTypeButtonBumperLeft
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EMarketingMessageClickLocation_Unknown
@@ -4017,6 +4024,7 @@ ${LANGUAGE}
 ,\n\fvideo_encode
 ,\n\nerror_type
 ,\n\rreaction_type
+,\n\rreport_reason
 ,\n\tStoreItem
 ,\n\t\t"functions": {\n\t\t\t"vkGetInstanceProcAddr": "%sGetInstanceProcAddr",\n\t\t\t"vkGetDeviceProcAddr": "%sGetDeviceProcAddr"\n\t\t}
 ,\n\tbroadcast
@@ -4503,7 +4511,7 @@ ${LANGUAGE}
 .CKeyEscrow_Request
 .CKeyEscrow_Response"
 .CKeyEscrow_Ticket*7\n
-.CMarketingMessageHourlyStats"I\n:CMarketingMessages_GetMarketingMessageClickedStats_Request
+.CMarketingMessageHourlyStats
 .CMarketingMessageHourlyStats"m\n?CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 .CMarketingMessageProto
 .CMarketingMessageProto"
@@ -4724,7 +4732,8 @@ ${LANGUAGE}
 .EAuthTokenPlatformType"
 .EAuthTokenRevokeAction:
 .EAuthTokenState
-.EAuthenticationType"3\n1CAuthentication_GetAuthSessionsForAccount_Request"H\n2CAuthentication_GetAuthSessionsForAccount_Response
+.EAuthTokenState"3\n1CAuthentication_GetAuthSessionsForAccount_Request"H\n2CAuthentication_GetAuthSessionsForAccount_Response
+.EAuthenticationType
 .EBanContentCheckResult
 .EBluetoothDeviceType
 .EBroadcastChatPermission
@@ -4759,6 +4768,7 @@ ${LANGUAGE}
 .EContentDescriptorID"A\n
 .EContentDescriptorID"M\n0CPublishedFile_UpdateContentDescriptors_Response
 .EContentHubDiscountFilterType
+.EContentReportReason
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EDisplayStatus
@@ -4787,7 +4797,7 @@ ${LANGUAGE}
 .EHIDDeviceLocation
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
-.EMarketingMessageClickLocation"r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
+.EMarketingMessageClickLocation"
 .EMarketingMessageClickLocation:(k_EMarketingMessageClickLocation_Unknown"=\n.CMarketingMessages_GetMarketingMessage_Request
 .EMarketingMessageLookupType
 .EMarketingMessageTemplateType
@@ -5005,6 +5015,8 @@ ${LANGUAGE}
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
 .\n*k_ECompromiseDetectionType_MaliciousRefund
 .\n*k_EContentDescriptor_NudityOrSexualContent
+.\n*k_EControlledLegalCategoryStatus_Acquitted
+.\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EControllerElementTypeButtonJoystickLeft
 .\n*k_EControllerElementTypeButtonMacro1Finger
 .\n*k_EControllerElementTypeButtonMacro2Finger
@@ -5328,10 +5340,10 @@ ${LANGUAGE}
 /data/src/steamUI/shutdowncontroller.cpp
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
-/data/src/steamUI/steamoscontroller.cpp:701
-/data/src/steamUI/steamoscontroller.cpp:731
+/data/src/steamUI/steamoscontroller.cpp:675
+/data/src/steamUI/steamoscontroller.cpp:705
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:619
+/data/src/steamUI/steamosmanager.cpp:560
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -5347,7 +5359,7 @@ ${LANGUAGE}
 /data/src/steamUI/steamurlcontroller.cpp
 /data/src/steamUI/streamingservergameactions.cpp
 /data/src/steamUI/systemaudiocontroller.cpp
-/data/src/steamUI/systembluetoothcontroller.cpp:687
+/data/src/steamUI/systembluetoothcontroller.cpp:519
 /data/src/steamUI/systemcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp:75
@@ -9209,6 +9221,7 @@ ${LANGUAGE}
 39CCloud_AppCloudStateChange_Notification
 39CCommunity_GetBestEventsForUser_Request
 39CCommunity_GetLinkFilterHashes_Response
+39CCommunity_HideAndReportComment_Request
 39CCommunity_PostCommentToThread_Response
 39CCommunity_RateClanAnnouncement_Request
 39CContentBuilder_CommitAppBuild_Response
@@ -9347,6 +9360,7 @@ ${LANGUAGE}
 40CClientNotificationHardwareSurveyPending
 40CCloud_ClientLogUploadCheck_Notification
 40CCommunity_GetBestEventsForUser_Response
+40CCommunity_HideAndReportComment_Response
 40CCommunity_RateClanAnnouncement_Response
 40CContentBuilder_StartDepotUpload_Request
 40CEconMarket_IsMarketplaceAllowed_Request
@@ -10899,6 +10913,7 @@ ${LANGUAGE}
 ;\n7k_EClientNotificationType_FamilyPurchaseRequestResponse
 ;\n7k_ESteamDeckKeyboardLayout_Chinese_Traditional_Bopomofo
 ;\n\nchunk_keys
+;\n\rclicked_stats
 ;\n\tDateRange
 ;\n\ttransport
 ;fD4~
@@ -11351,6 +11366,7 @@ A\n\rremote_packet
 A\n\tcandidate
 A\n\vFreeWeekend
 AcG\nt
+Accessibility/DebugVisualizer
 Account: %s \n
 AccountHardware
 AccountName
@@ -13086,6 +13102,7 @@ CSystemDockManagerController::OnUnsupportedFWNotification
 CSystemPerfController::OnDiagnosticInfoUpdated
 CSystemPerfController::OnPerfStateUpdated
 CSystemSuspendMsg"*\n
+CTRL\tShift\tKEY_TAB
 CTier0::ValidateGlobals(CValidator&)
 CTimelineEntry
 CToggleMagnificationMsg""\n
@@ -13844,7 +13861,9 @@ ECompromiseDetectionType
 EContentCheckProvider
 EContentDescriptorID
 EContentHubDiscountFilterType
+EContentModeratorLevel
 EContentReportReason
+EControlledLegalCategoryStatus
 EControllerElementType
 EConvertMPDToMP4
 EDiskSpaceType
@@ -13910,6 +13929,7 @@ EPublishedFileRevision
 EPublishedFileStorageSystem
 EPurchaseRequestAction
 ERROR: An existing client is not running.
+ERROR: factory reset request with no mode selected
 ERR_getErrorString
 ERemoteClientBroadcastMsg
 ERemoteClientService
@@ -14073,6 +14093,8 @@ Error:
 Error: %s
 Error: %s Device not found %s\n
 Error: %s couldn't access device %s\n
+Error: %s: %s: empty hotkey
+Error: %s: %s: failed to register binding
 Error: %s: Failed to initialize storage device manager
 Error: %s: Failed to submit system report: %d
 Error: %s: SLS daemon does not meet the minimum required version - telemetry will not be enabled
@@ -14109,7 +14131,6 @@ Error: %s: failed to prepare system report for upload
 Error: %s: failed to prepare wifi trace file upload
 Error: %s: failed to read screenshot file: %s
 Error: %s: failed to register agent
-Error: %s: failed to register binding
 Error: %s: failed to remove device: %s
 Error: %s: failed to remove directory: %s
 Error: %s: failed to retrieve diagnostic info state
@@ -14141,7 +14162,6 @@ Error: %s: no options provided
 Error: %s: not a valid directory: %s
 Error: %s: only accessible in gamescope session
 Error: %s: operation not supported
-Error: %s: skipping user data reset is currently unsupported
 Error: %s: timed out
 Error: %s: timed out waiting for drive eject result
 Error: %s: timed out waiting for filesystem unmount result
@@ -15229,6 +15249,7 @@ Hen\fM
 Hero
 Hero Blur
 Hf-2
+HideAndReportComment
 HideSharingNotifications
 Hiragana
 HistoryGames
@@ -15670,6 +15691,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
+Jun  2 2025 21:21:05
 K(\f]C15
 K2@9
 K3F>
@@ -15884,7 +15906,6 @@ MarkTokenCompromised
 MarketingMessageForUser
 MarketingMessages
 Maximum capture: %dx%d %.2f FPS
-May 19 2025 19:51:03
 Meetei_Mayek
 MemberListViewEntry
 MergeAR64Plane
@@ -17422,7 +17443,6 @@ Please start a game with capturing mode enabled in order to use this feature.\n
 Plural
 PmNk
 PollAuthSessionStatus
-PollForInterfacesChanged
 PollResponseAsync
 Position
 PostChatMessage
@@ -17635,6 +17655,7 @@ RegisterSteamController
 RegisterSteamProtocolHandler
 RegisterValveIndexComponent
 Registered bluetooth agent
+Registered global hotkey: name:'%s' chord:[ %s ]
 Registering duplicate IWaylandEventListener
 Rejang
 RelativeRangeEdge
@@ -17872,6 +17893,7 @@ SDL_DestroyWindow
 SDL_DisableScreenSaver
 SDL_EnableScreenSaver
 SDL_GAMECONTROLLERCONFIG
+SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 SDL_GL_CreateContext
 SDL_GL_GetCurrentContext
 SDL_GL_MakeCurrent
@@ -17897,6 +17919,7 @@ SDL_GetGamepadTypeForID
 SDL_GetGamepads
 SDL_GetGlobalMouseState
 SDL_GetHint
+SDL_GetHintBoolean
 SDL_GetJoystickAxisInitialState
 SDL_GetJoystickGUID
 SDL_GetJoystickGUIDForID
@@ -17925,6 +17948,7 @@ SDL_JOYSTICK_HIDAPI_GIP
 SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED
 SDL_JOYSTICK_HIDAPI_STEAM
 SDL_JOYSTICK_HIDAPI_STEAMXBOX
+SDL_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS
 SDL_JOYSTICK_LINUX_DEADZONES
 SDL_JOYSTICK_RAWINPUT
 SDL_JOYSTICK_ROG_CHAKRAM
@@ -20043,7 +20067,6 @@ YldConnect
 YldDisconnect
 YldDoesGamePhaseRecordingExist
 YldEject
-YldFactoryReset
 YldFindOrLoadMutableClip
 YldForget
 YldFormat
@@ -20404,6 +20427,7 @@ Zpm"U
 \n'CBroadcast_StartBroadcastUpload_Request
 \n'CChatRoom_UpdateMessageReaction_Request
 \n'CCommunity_GetBestEventsForUser_Request
+\n'CCommunity_HideAndReportComment_Request
 \n'CContentBuilder_InitDepotBuild_Response
 \n'CDataPublisher_GetVRDeviceInfo_Response
 \n'COffline_GetOfflineLogonTicket_Response
@@ -20685,6 +20709,7 @@ Zpm"U
 \n?CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 \n?CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 \n@CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
+\n@CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 \nO1Ie
 \nSteam logging initialized: directory: %s\n\n
 \nW2a
@@ -21811,6 +21836,7 @@ Zpm"U
 \n\vraw_version
 \n\vrecent_peak
 \n\vreplay_year
+\n\vreport_text
 \n\vrequest_ids
 \n\vrequest_url
 \n\vreturn_apps
@@ -21822,6 +21848,7 @@ Zpm"U
 \n\vscreenshots
 \n\vsearch_term
 \n\vsearch_text
+\n\vsend_in_xhr
 \n\vsender_name
 \n\vsender_time
 \n\vserver_name
@@ -22258,6 +22285,7 @@ a5<p
 a5j_5W
 a8Bk
 a?wSa?\
+aEXIN
 aI)h
 aRe.
 aT\v>wB
@@ -22286,6 +22314,7 @@ accepted
 access
 access-control-allow-origi
 access-control-allow-origin
+accessibility_debug_visualizer
 accountID
 accountName
 account_name
@@ -23730,6 +23759,7 @@ eCloudStatus
 eCloudSync
 eConnectivityTestResult
 eControllerRumblePreference
+eControllerStyle
 eControllerType
 eControllerType_OBSOLETE
 eDisplayStatus
@@ -23797,6 +23827,7 @@ edit_state_flags
 edit_store_display_content
 edit_url
 eeX=
+effective_token_state
 effects
 efriendrelationship
 eglBindAPI
@@ -24927,7 +24958,6 @@ high444
 high_pending_orders
 high_pri
 high_usage_login
-hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1
 hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
 hint_probe_frequency_seconds
 history
@@ -25094,6 +25124,7 @@ include_read_events_only
 include_recent_votes_only
 include_release
 include_reviews
+include_revoked
 include_revoked_tokens
 include_screenshots
 include_seen_messages
@@ -25597,7 +25628,11 @@ k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
 k_EContentDescriptorMAX
+k_EContentModeratorLevel_Any
+k_EContentModeratorLevel_MAX
+k_EContentModeratorLevel_Valve
 k_EContentReportReason_Abusive
+k_EContentReportReason_CSAM
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic
@@ -27096,6 +27131,7 @@ k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 k_TestingAbortedk_TestingBindAButtonk_TestingBindBButtonk_TestingBindDPadDownk_TestingBindDPadLeftk_TestingBindDPadRightk_TestingBindDPadUpk_TestingBindGuidek_TestingBindLeftShoulderk_TestingBindLeftStickButtonk_TestingBindLeftStickDownk_TestingBindLeftStickLeftk_TestingBindLeftStickRightk_TestingBindLeftStickUpk_TestingBindLeftTriggerk_TestingBindRightShoulderk_TestingBindRightStickButtonk_TestingBindRightStickDownk_TestingBindRightStickLeftk_TestingBindRightStickRightk_TestingBindRightStickUpk_TestingBindRightTriggerk_TestingBindSelectk_TestingBindSharek_TestingBindStartk_TestingBindTouchpadk_TestingBindXButtonk_TestingBindYButtonk_TestingBindingCompletek_TestingButtonsk_TestingCompletek_TestingFreeModek_TestingLeftHapticsk_TestingLeftJoystickk_TestingLeftTrackpadk_TestingLeftTrackpadPressurek_TestingLeftTriggerk_TestingRightHapticsk_TestingRightJoystickk_TestingRightTrackpadk_TestingRightTrackpadPressurek_TestingRightTriggerk_TestingStarted
+k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Pro2k_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
 k_eDiskSpaceType_Clip
 k_eDiskSpaceType_Recording
 k_eJPEG
@@ -28229,6 +28265,8 @@ minutes_played_forever
 minutes_playtime_forever
 minutes_playtime_last_two_weeks
 minutes_remaining
+misc2:b12,
+misc2:b15,misc3:b16,
 missing
 missing "gameid" argument\n
 missing "gameid" parameter\n
@@ -28366,6 +28404,7 @@ nHeightPct
 nHour
 nI9>h
 nIndex
+nIndex != m_mapBindings.InvalidIndex()
 nInstanceID
 nLEDColorB
 nLEDColorG
@@ -28948,8 +28987,14 @@ packed
 packet_size_received
 packet_size_requested
 packets
+paddle1:b11,paddle2:b12,paddle3:b13,paddle4:b14,
+paddle1:b12,paddle2:b11,paddle3:b14,paddle4:b13,
+paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,
+paddle1:b12,paddle3:b14,
+paddle1:b14,paddle2:b13,
 paddle1:b15,paddle2:b17,paddle3:b16,paddle4:b18,
 paddle1:b20,paddle2:b19,paddle3:b18,paddle4:b17,
+paddle2:b13,paddle4:b15,
 page
 page_background
 page_background_path
@@ -30184,7 +30229,6 @@ steam://open/bigpicture
 steam://open/console
 steam://open/friends
 steam://open/games
-steam://open/musicplayer
 steam://open/musicplayer/%u
 steam://open/screenshots
 steam://open/screenshots/%llu
@@ -30232,10 +30276,20 @@ steam_oslog_submitter_helper_proxy_get_property
 steam_oslog_submitter_helper_proxy_set_property
 steam_oslog_submitter_manager_proxy_get_property
 steam_oslog_submitter_manager_proxy_set_property
+steam_osmanager1_ambient_light_sensor1_proxy_get_property
+steam_osmanager1_ambient_light_sensor1_proxy_set_property
 steam_osmanager1_battery_charge_limit1_proxy_get_property
 steam_osmanager1_battery_charge_limit1_proxy_set_property
+steam_osmanager1_cpu_scaling1_proxy_get_property
+steam_osmanager1_cpu_scaling1_proxy_set_property
+steam_osmanager1_fan_control1_proxy_get_property
+steam_osmanager1_fan_control1_proxy_set_property
 steam_osmanager1_gpu_performance_level1_proxy_get_property
 steam_osmanager1_gpu_performance_level1_proxy_set_property
+steam_osmanager1_gpu_power_profile1_proxy_get_property
+steam_osmanager1_gpu_power_profile1_proxy_set_property
+steam_osmanager1_hdmi_cec1_proxy_get_property
+steam_osmanager1_hdmi_cec1_proxy_set_property
 steam_osmanager1_manager2_proxy_get_property
 steam_osmanager1_manager2_proxy_set_property
 steam_osmanager1_performance_profile1_proxy_get_property
@@ -30244,6 +30298,8 @@ steam_osmanager1_tdp_limit1_proxy_get_property
 steam_osmanager1_tdp_limit1_proxy_set_property
 steam_osmanager1_wifi_debug1_proxy_get_property
 steam_osmanager1_wifi_debug1_proxy_set_property
+steam_osmanager1_wifi_power_management1_proxy_get_property
+steam_osmanager1_wifi_power_management1_proxy_set_property
 steam_osmanager_legacy__proxy_get_property
 steam_osmanager_legacy__proxy_set_property
 steam_play
@@ -31052,6 +31108,7 @@ total_missing_chunks
 total_queue_size
 total_seconds_watched
 total_unique_viewers
+touchpad:b12,misc2:b13,misc3:b14,
 toupper
 trackDisplayName
 trackNumber

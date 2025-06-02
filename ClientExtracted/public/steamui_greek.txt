@@ -4252,7 +4252,7 @@
 "Steam_DeviceAuth_ChooseDialog_Title" "Θέλετε να παίξετε αυτό το παιχνίδι;"
 "Steam_DeviceAuth_ChooseDialog_Text" "Αυτό το παιχνίδι ανήκει στον χρήστη του Steam %owner%. Θέλετε να ζητήσετε πρόσβαση για τα παιχνίδια του χρήστη %owner% σε αυτή τη συσκευή;"
 "Steam_DeviceAuth_ChooseDialog_Purchase" "ΑΓΟΡΑ ΠΑΙΧΝΙΔΙΟΥ..."
-"Steam_DeviceAuth_ChooseDialog_Request" "ΑΙΤΗΜΑ ΠΡΟΣΒΑΣΗΣ..."
+"Steam_DeviceAuth_ChooseDialog_Request" "ΑΙΤΗΣΗ ΠΡΟΣΒΑΣΗΣ..."
 "Steam_DeviceAuth_ChooseDialog_Cancel" "Ακύρωση"
 
 

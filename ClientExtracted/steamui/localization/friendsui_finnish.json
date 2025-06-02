@@ -335,7 +335,7 @@
     "Chat_Invite_Loading": "Ladataan...",
     "Chat_Invite_ExpiresOneDay": "Voimassa 1 päivän",
     "Chat_Invite_ExpiresSetting": "Voimassaolo päättyy %1$s",
-    "Chat_TextFilter_Active": "Vahvat kirosanat ja herjaukset sensuroidaan nyt oletuksena Steam-chatissa käyttäjiltä, joita et tunne. [url=%1$s]Tarkista suodatusasetukset[/url]",
+    "Chat_TextFilter_Active": "Osa sisällöstä peitetään näkyvistä Steam-chatissa. Asetusta voi muuttaa [url=%1$s]chatin suodatusasetuksissa[/url].",
     "Chat_Settings_Room_Name": "Chatin nimi",
     "GroupSettings": "Ryhmäasetukset",
     "GroupSettings_General_Section": "Yleiset",
