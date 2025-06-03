@@ -189,7 +189,7 @@
                         error: n,
                       });
                     if (l[a].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let { language: o } = (0, s.j)(l[a].name, -1);
+                      let { language: o } = (0, s.jj)(l[a].name, -1);
                       if (null == o || -1 == o)
                         return void n({
                           code: "",

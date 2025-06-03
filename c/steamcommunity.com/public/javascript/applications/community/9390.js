@@ -2324,13 +2324,16 @@
               : _(_, _))
           );
         }
+        function _(_, ..._) {
+          return _(_(_, _().languages), ..._);
+        }
         return (
           __webpack_require__.then(() => (_ = !0)),
           (_ = _),
           null != _ || (_ = new Set()),
           _.add(_),
           {
-            Localize: (_, ..._) => _(_(_, _().languages), ..._),
+            Localize: (_, ..._) => _(_, ..._),
             LocalizeReact(_, ..._) {
               const _ = this.Localize(_);
               if (_ === _) return _;
@@ -2348,6 +2351,8 @@
                 _.createElement(_.Fragment, null, ..._)
               );
             },
+            LocalizePlural: (_, _, ..._) =>
+              1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,

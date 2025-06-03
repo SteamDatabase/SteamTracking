@@ -1033,7 +1033,8 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            depositPackageID: __webpack_require__,
+            event: __webpack_require__,
+            depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
           } = _,
@@ -1044,13 +1045,13 @@
               {
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
-                deposit_package: __webpack_require__,
+                deposit_package: _,
                 localized_reservation_desc: new Array(),
                 localized_out_of_stock_override: new Array(),
                 psu_less_package: _,
               },
             ],
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         if (!_ || (_ && !_))
           return _.createElement(_._, {
@@ -1085,6 +1086,7 @@
               }),
               _ &&
                 _.createElement(_._, {
+                  event: __webpack_require__,
                   reservationDef: _[0],
                   hardwareDetail: _,
                 }),
@@ -1258,12 +1260,14 @@
           : _.createElement(_.Fragment, null);
       }
       function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args));
+        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+          _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
             _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
           return _.createElement(_, {
             reservationPackageID: _,
+            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
           });

@@ -111,7 +111,7 @@
             (_) => {
               _.isIntersecting &&
                 _((_) =>
-                  _?.appID == _ && _.snr == _
+                  _?.appID == _ && _?.snr == _
                     ? _
                     : {
                         appID: _,
@@ -122,7 +122,7 @@
             [_, _],
           );
         (0, _.useEffect)(() => {
-          _ && _.AddImpression(_.appID, _.snr);
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),

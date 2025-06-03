@@ -1084,9 +1084,83 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, lang: __webpack_require__ } = _,
+          _ = (0, _._)(() => _.jsondata.meet_steam_groups),
+          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          [_, _, _] = (0, _.useMemo)(() => {
+            const _ = new Map(),
+              _ = new Map();
+            let _ = !1;
+            return (
+              _.forEach((_) => {
+                _.group_visibility_tokens?.length > 0
+                  ? (_.group_visibility_tokens.forEach((_) => {
+                      _.has(_)
+                        ? _.get(_).push(_.group_id)
+                        : _.set(_, [_.group_id]);
+                    }),
+                    _.set(_.group_id, _.localized_session_title[0]))
+                  : (_ = !0);
+              }),
+              [_, _, _]
+            );
+          }, [_]);
+        return 0 == _.size
+          ? null
+          : _.can_edit
+            ? _.createElement(
+                "div",
+                null,
+                _.createElement(_._, null, "Meet Steam URLs"),
+                Array.from(_.keys()).map((_) => {
+                  const _ = _.get(_);
+                  return _.createElement(
+                    "div",
+                    {
+                      key: `tokenurl_${_}`,
+                    },
+                    _.createElement(
+                      "a",
+                      {
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.clanSteamID.ConvertTo64BitString()}/${_}`,
+                        target: "_blank",
+                      },
+                      "Shows Sessions: ",
+                      __webpack_require__.map((_) =>
+                        _.createElement(
+                          "span",
+                          {
+                            key: "name" + _ + "_" + _,
+                          },
+                          _.get(_),
+                          ",",
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+                Boolean(_) &&
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      "a",
+                      {
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.clanSteamID.ConvertTo64BitString()}`,
+                        target: "_blank",
+                      },
+                      "Show all public sessions",
+                    ),
+                  ),
+              )
+            : null;
+      }
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1590,6 +1664,11 @@
                     event: _,
                     bIsOGG: _.is_ogg,
                   }),
+                  Boolean(_.jsondata.meet_steam_groups) &&
+                    _.createElement(_, {
+                      event: _,
+                      lang: __webpack_require__,
+                    }),
                 ),
               )
           : ((0, _._)(

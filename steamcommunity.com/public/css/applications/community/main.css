@@ -462,6 +462,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 .Ke5f13IVZVzYSmQVJgVyd {
   display: flex;
   flex-direction: row;
+  gap: 4px;
 }
 .Ke5f13IVZVzYSmQVJgVyd.qy-9mgJyhfEb8Wt0gqzaF {
   justify-content: center;
@@ -1001,13 +1002,13 @@ b {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
   width: 24px;
   height: 24px;
 }
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button {
   height: 16px;
   width: 16px;
+  margin-right: 0px;
 }
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button rect,
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button line {
@@ -3785,6 +3786,9 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   ._2_vG6TwMW2XtyLlTEaODH9::before {
   background-color: #67707b;
   pointer-events: none;
+}
+._2jMXncsB0FrrPo_Ngj1Azp ._2_vG6TwMW2XtyLlTEaODH9::before {
+  visibility: hidden;
 }
 ._20c10ESSWkT6N_HX85Xj8_ {
   background-color: #000;

@@ -739,8 +739,8 @@
         S = n(22797),
         w = n(6878),
         I = n(94057),
-        b = n(29868);
-      function f(e) {
+        f = n(29868);
+      function b(e) {
         return e < 10 ? "0" + e : e;
       }
       function y(e) {
@@ -756,11 +756,11 @@
           ? null
           : r.createElement(
               "div",
-              { className: b.countdownCtn },
+              { className: f.countdownCtn },
               Boolean(l) &&
                 r.createElement(
                   "div",
-                  { className: b.Closed },
+                  { className: f.Closed },
                   o > 0
                     ? (0, c.we)("#Giveaway_Closed", o.toLocaleString())
                     : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
@@ -772,7 +772,7 @@
                   Boolean(s <= 0)
                     ? r.createElement(
                         "div",
-                        { className: b.Throbber },
+                        { className: f.Throbber },
                         r.createElement(S.t, { size: "small" }),
                         r.createElement(
                           "div",
@@ -782,15 +782,15 @@
                       )
                     : r.createElement(
                         "div",
-                        { className: b.CountDownCtn },
+                        { className: f.CountDownCtn },
                         r.createElement(
                           "div",
-                          { className: b.CountDownTime },
-                          f(Math.floor(s / 60)) + ":" + f(s % 60),
+                          { className: f.CountDownTime },
+                          b(Math.floor(s / 60)) + ":" + b(s % 60),
                         ),
                         r.createElement(
                           "div",
-                          { className: b.CountDownText },
+                          { className: f.CountDownText },
                           (0, c.we)("#Giveaway_CountDown2"),
                           " ",
                           (0, c.we)("#Giveaway_KeepWatching"),
@@ -799,15 +799,15 @@
                   Boolean(o > 0) &&
                     r.createElement(
                       "div",
-                      { className: b.WinnerInfo },
+                      { className: f.WinnerInfo },
                       r.createElement(
                         "div",
-                        { className: b.WinnerCount },
+                        { className: f.WinnerCount },
                         o.toLocaleString(),
                       ),
                       r.createElement(
                         "div",
-                        { className: b.WinnerText },
+                        { className: f.WinnerText },
                         (0, c.we)("#Giveaway_Congratulation"),
                       ),
                     ),
@@ -825,7 +825,7 @@
         F = n(7193),
         H = n(39199),
         M = n(96971),
-        R = n(42326),
+        R = n(53677),
         x = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -967,58 +967,60 @@
       function Q(e) {
         const {
             reservationPackageID: t,
-            depositPackageID: n,
-            bIsPreview: a,
-            psuLessPackageID: o,
+            event: n,
+            depositPackageID: a,
+            bIsPreview: o,
+            psuLessPackageID: l,
           } = e,
-          l = (0, j.DR)(t),
-          s = (0, j.DR)(o),
-          i = (0, r.useMemo)(
+          s = (0, j.DR)(t),
+          i = (0, j.DR)(l),
+          u = (0, r.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + t,
                 reservation_package: t,
-                deposit_package: n,
+                deposit_package: a,
                 localized_reservation_desc: new Array(),
                 localized_out_of_stock_override: new Array(),
-                psu_less_package: o,
+                psu_less_package: l,
               },
             ],
-            [n, t, o],
+            [a, t, l],
           );
-        if (!l || (o && !s))
+        if (!s || (l && !i))
           return r.createElement(S.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const u = !J.iA.logged_in || !l.account_restricted_from_purchasing;
+        const m = !J.iA.logged_in || !s.account_restricted_from_purchasing;
         return r.createElement(
           K.tH,
           null,
           r.createElement(
             r.Suspense,
             { fallback: null },
-            r.createElement(X, { bIsPreview: a, rgReservationDef: i }),
+            r.createElement(X, { bIsPreview: o, rgReservationDef: u }),
           ),
-          Boolean(l.allow_purchase_in_country) &&
+          Boolean(s.allow_purchase_in_country) &&
             r.createElement(
               "div",
-              { className: i[0].unique_id },
+              { className: u[0].unique_id },
               r.createElement(z.bk, {
-                reservationDef: i[0],
-                hardwareDetail: l,
+                reservationDef: u[0],
+                hardwareDetail: s,
                 bPSULessModel: !1,
               }),
-              u &&
+              m &&
                 r.createElement(z.pc, {
-                  reservationDef: i[0],
-                  hardwareDetail: l,
-                }),
-              Boolean(s?.allow_purchase_in_country) &&
-                r.createElement(z.bk, {
-                  reservationDef: i[0],
+                  event: n,
+                  reservationDef: u[0],
                   hardwareDetail: s,
+                }),
+              Boolean(i?.allow_purchase_in_country) &&
+                r.createElement(z.bk, {
+                  reservationDef: u[0],
+                  hardwareDetail: i,
                   bPSULessModel: !0,
                 }),
             ),
@@ -1154,14 +1156,16 @@
           : r.createElement(r.Fragment, null);
       }
       function he(e) {
-        const t = Number.parseInt((0, m.j$)(e.args));
-        if (t) {
+        const { event: t, showErrorInfo: n } = e.context,
+          a = Number.parseInt((0, m.j$)(e.args));
+        if (a) {
           const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
-            a = Number.parseInt((0, m.j$)(e.args, "psulesspackageid"));
+            o = Number.parseInt((0, m.j$)(e.args, "psulesspackageid"));
           return r.createElement(Q, {
-            reservationPackageID: t,
+            reservationPackageID: a,
+            event: t,
             depositPackageID: n,
-            psuLessPackageID: a,
+            psuLessPackageID: o,
           });
         }
         return r.createElement(r.Fragment, null);
@@ -1243,11 +1247,11 @@
         v = n(8107),
         E = n(75113),
         C = n(35685),
-        S = n(40224),
+        S = n(92557),
         w = n(90316),
         I = n.n(w),
-        b = n(95695),
-        f = n.n(b),
+        f = n(95695),
+        b = n.n(f),
         y = n(22797),
         N = n(52038),
         G = n(61859),
@@ -1279,7 +1283,7 @@
               include_screenshots: !0,
             }),
             [g, w] = (0, r.useState)(!1),
-            b = (e, t) => {
+            f = (e, t) => {
               t.token.reason ||
                 (i(e),
                 (function (e) {
@@ -1316,17 +1320,17 @@
                 s ||
                   (n && !H.GetClanEventModel(n)
                     ? H.LoadPartnerEventGeneric(o, l, n, void 0, 0)
-                        .then((t) => b(t, e))
+                        .then((t) => f(t, e))
                         .catch(() => {
                           e.token.reason ||
                             H.LoadPartnerEventGeneric(o, l, void 0, n, 0)
-                              .then((t) => b(t, e))
+                              .then((t) => f(t, e))
                               .catch(k);
                         })
                     : a &&
                       !H.GetClanEventGIDFromAnnouncementGID(a) &&
                       H.LoadPartnerEventGeneric(o, l, void 0, a, 0)
-                        .then((t) => b(t, e))
+                        .then((t) => f(t, e))
                         .catch(k)),
                 () => {
                   e.cancel("StoreEventDetailView: unmounting");
@@ -1343,7 +1347,7 @@
                 className: (0, N.A)(
                   I().EventDetailsPageContainer,
                   e,
-                  f().PartnerEventFont,
+                  b().PartnerEventFont,
                   I().NoTitleArtwork,
                 ),
               },
@@ -1787,7 +1791,7 @@
         Se = n(48838),
         we = n(63292),
         Ie = n.n(we);
-      const be = (e) =>
+      const fe = (e) =>
           r.createElement(
             Ee.x_,
             { onEscKeypress: e.closeModal },
@@ -1824,7 +1828,7 @@
               ),
             ),
           ),
-        fe = (e) =>
+        be = (e) =>
           r.createElement(
             $e,
             {
@@ -1936,7 +1940,7 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    f().FlexRowContainer,
+                    b().FlexRowContainer,
                     Ie().CuratorInfoTitleCtn,
                   ),
                   onClick: () => n(!0),
@@ -1955,7 +1959,7 @@
             );
           return r.createElement(
             "div",
-            { className: (0, N.A)(f().FlexRowWrapSpaceBetweenContainer, s) },
+            { className: (0, N.A)(b().FlexRowWrapSpaceBetweenContainer, s) },
             t
               ? r.createElement(
                   _.tH,
@@ -1978,7 +1982,7 @@
               "div",
               {
                 className: (0, N.A)(
-                  f().FlexRowContainer,
+                  b().FlexRowContainer,
                   Ie().CuratorInfoActionCtn,
                 ),
               },
@@ -2276,7 +2280,7 @@
         ShowBrowseCurator(e) {
           Cn()
             ? qe.Get().SetDisplay("browse_curator")
-            : (0, ie.pg)(r.createElement(be, null), (0, le.uX)(e));
+            : (0, ie.pg)(r.createElement(fe, null), (0, le.uX)(e));
         }
       }
       (0, O.Cg)([P.sH], qe.prototype, "m_curDisplay", void 0);
@@ -2640,7 +2644,7 @@
               });
               break;
             case "browse_curator":
-              p = r.createElement(fe, null);
+              p = r.createElement(be, null);
               break;
             case "desktop_navigation":
               p = r.createElement(tt, {
@@ -2955,7 +2959,7 @@
                   className: (0, N.A)(
                     ke().NewsChannel,
                     l && ke().NewsChannelOnPage,
-                    i && f().ValveOnlyBackground,
+                    i && b().ValveOnlyBackground,
                   ),
                 },
                 Boolean(c) &&
@@ -3317,8 +3321,8 @@
         (St = (0, O.Cg)([u.PA], St));
       const wt = (0, o.y)(St);
       var It = n(74976),
-        bt = n(43667),
-        ft = n(76684),
+        ft = n(43667),
+        bt = n(76684),
         yt = n(10224),
         Nt = n(94743),
         Gt = n(82227),
@@ -3342,7 +3346,7 @@
         const d = X.KN.Get(),
           g = (0, m.sf)(D.TS.LANGUAGE),
           _ = "capsule",
-          [h, v, C, S, w, I, b, f, y, G, T] = (0, U.q3)(() => [
+          [h, v, C, S, w, I, f, b, y, G, T] = (0, U.q3)(() => [
             t.has_live_stream,
             t.GetEventType(),
             t.GetAllTags(),
@@ -3359,7 +3363,7 @@
             (0, yt.c5)() && 14 == v ? Y.wI.full : Y.wI.capsule_main,
           ),
           A = (0, U.q3)(() =>
-            Boolean(I && b)
+            Boolean(I && f)
               ? t.GetFallbackArtworkScreenshot()
               : t.GetImageURLWithFallback(_, g, k),
           ),
@@ -3407,7 +3411,7 @@
             a ? Ct().DisableHovers : Ct().EnableHovers,
             c && Ct().VideoPlayerReady,
             L && Ct().HasVideo,
-            d.HasEventBeenRead(f) && Ct().HasBeenRead,
+            d.HasEventBeenRead(b) && Ct().HasBeenRead,
             "wide" === o && Ct().WideMode,
             "carousel" === o && Ct().CarouselMode,
             "upcoming" === o && Ct().UpcomingMode,
@@ -3439,7 +3443,7 @@
               {
                 className: (0, N.A)(Ct().ReminderContainer, z && Ct().OnlyIcon),
               },
-              r.createElement(bt.j, {
+              r.createElement(ft.j, {
                 eventModel: t,
                 lang: g,
                 bShowStartTime: !0,
@@ -3706,7 +3710,7 @@
               "div",
               { className: (0, N.A)(Ct().LiveText, a) },
               r.createElement(
-                ft.gS,
+                bt.gS,
                 { rtFullDate: l, stylesmodule: Ct() },
                 r.createElement(
                   "div",
@@ -3715,7 +3719,7 @@
                 ),
               ),
               r.createElement(
-                ft.gS,
+                bt.gS,
                 { rtFullDate: s, stylesmodule: Ct() },
                 (0, G.we)("#EventCalendar_TimeLeft", t),
               ),
@@ -3725,7 +3729,7 @@
             const e = o - l,
               t = e < 86400 ? (0, G.Hq)(e, !1, !0) : (0, G._l)(l);
             return r.createElement(
-              ft.gS,
+              bt.gS,
               { className: a, rtFullDate: l, stylesmodule: Ct() },
               r.createElement("div", { className: Ct().PastDateText }, t),
             );
@@ -3736,9 +3740,9 @@
             const t = e.getTime() / 1e3,
               n = Math.floor((l - t) / 86400),
               s = n > 1 && n <= 5 ? (0, G.cc)(new Date(1e3 * l)) : (0, G._l)(l),
-              i = (0, ft.pg)(l);
+              i = (0, bt.pg)(l);
             return r.createElement(
-              ft.gS,
+              bt.gS,
               { className: a, rtFullDate: l, stylesmodule: Ct() },
               r.createElement(
                 "div",
@@ -4962,7 +4966,7 @@
                         nTopOffset: t,
                         fnToggleCollapsed: this.MobileNavOpenSettings,
                       }),
-                    r.createElement(bn, {
+                    r.createElement(fn, {
                       nTopOffset: a,
                       bLargeMode: this.state.nScrollTop <= 0 && !(0, yt.c5)(),
                     }),
@@ -4970,7 +4974,7 @@
                   r.createElement(
                     _.tH,
                     null,
-                    r.createElement(fn, {
+                    r.createElement(bn, {
                       bShowFutureViewOnly: this.BShowFutureView(),
                       bShowUpdatesOnly: this.BShowUpdatesOnly(),
                       fnOnEventClick: this.OnEventClicked,
@@ -5001,7 +5005,7 @@
         (0, O.Cg)([se.oI], wn.prototype, "ResetAllFilters", null),
         (wn = gn = (0, O.Cg)([u.PA], wn));
       const In = (0, o.y)(wn);
-      function bn(e) {
+      function fn(e) {
         const t = (0, U.q3)(() => (0, K.v0)()),
           [n, a, o, s, i, c, u, d] = (0, U.q3)(() => [
             t.GetCollectionMetaData()?.clan_event_gid || void 0,
@@ -5102,7 +5106,7 @@
         }
         return null;
       }
-      let fn = class extends r.Component {
+      let bn = class extends r.Component {
         GetCurrentSectionLayout() {
           let e = 0;
           return (0, K.v0)()
@@ -5320,7 +5324,7 @@
           );
         }
       };
-      fn = (0, O.Cg)([u.PA], fn);
+      bn = (0, O.Cg)([u.PA], bn);
       let yn = class extends r.Component {
         render() {
           const e = this.props.rgCalendarItems[0].start_time,

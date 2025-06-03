@@ -600,7 +600,12 @@
         }
         async OnDropFiles(_) {
           if (_ && _.length > 0) {
-            this.m_clanImageUploader = new _._(this.props.clanSteamID, null);
+            this.m_clanImageUploader = new _._(
+              this.props.clanSteamID,
+              null,
+              this.props.rgRealmList,
+              _._.Get().GetCurEditLanguage(),
+            );
             let _ = !0,
               _ = Array.from(_);
             for (let _ = 0; _ && _ < _.length; _++) {
@@ -626,10 +631,7 @@
                   filenameSearch: "",
                   uploadToken: ++_.m_uploaderCounter,
                 }),
-                this.m_clanImageUploader.UploadAllImages(
-                  this.props.rgRealmList,
-                  _._.Get().GetCurEditLanguage(),
-                )),
+                this.m_clanImageUploader.UploadAllImages()),
               _
             );
           }
@@ -1499,12 +1501,10 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
-          _ = _.useMemo(
-            () => _.uploaderOverride || new _._(_, __webpack_require__),
-            [_.ConvertTo64BitString(), _.uploaderOverride],
-          ),
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]);
+          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
+          _ = (0, _._)(_, __webpack_require__, _, _),
+          _ = _.uploaderOverride || _,
+          [_, _] = _.useState(!1);
         _.useEffect(() => {
           _.SetImageAllUrlFunction(_.fnSetImageURL);
         }, [_, _.fnSetImageURL]);
@@ -2239,7 +2239,8 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -2311,46 +2312,46 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _._,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _._,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  forceFileType: _ && _.file_type,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () =>
-                await _.UploadAllImages(_, _, _, _ && _.file_type),
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              null == __webpack_require__ || __webpack_require__(_);
+            },
+          }),
         );
       }
       function _(_) {

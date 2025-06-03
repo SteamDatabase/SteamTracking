@@ -182,6 +182,8 @@
         AppType: "_2ZrhAQm3GQlhhKkqzdGwsF",
         DLC: "_3joD2YzY0xQ4OQFjl8vTK1",
         Playtest: "_2BpsHGvYJ2BpGraZ66oN_-",
+        Demo: "_2RgXBp9gOVTZDwSY533Aiz",
+        Music: "_1yUcqupOCPqJJkEMvpmNyu",
         AppRelease: "_1XsM2jNRjoVa7SfxlYIXAb",
       };
     },
@@ -2257,20 +2259,52 @@
             (this.m_assetInput = _),
             (this.m_optIn = _),
             (this._ = _),
-            (this.title =
-              _?.description?.definition?.event_title?.[_._.LANGUAGE] ??
-              (function (_) {
-                const _ = [
-                  "takeover",
-                  "takeunder",
-                  "midweek",
-                  "midweek deal",
-                  "weekend deal",
-                ];
-                for (const _ of _)
-                  _ = _.replace(new RegExp("^" + _ + "\\s*[:-]\\s*", "i"), "");
-                return _;
-              })(_.name)),
+            (this.title = (function (_, _, _, _) {
+              let _ = _;
+              if ("seasonalsale" == _) {
+                const _ = new Date(1e3 * _),
+                  _ = _.getFullYear();
+                _ =
+                  _ >= new Date(_, 11, 10)
+                    ? (0, _._)(
+                        "#Dashboard_UpcomingEvents_SeasonalSale_Winter",
+                        _,
+                      )
+                    : _ >= new Date(_, 8, 1)
+                      ? (0, _._)(
+                          "#Dashboard_UpcomingEvents_SeasonalSale_Autumn",
+                          _,
+                        )
+                      : _ >= new Date(_, 4, 1)
+                        ? (0, _._)(
+                            "#Dashboard_UpcomingEvents_SeasonalSale_Summer",
+                            _,
+                          )
+                        : (0, _._)(
+                            "#Dashboard_UpcomingEvents_SeasonalSale_Spring",
+                            _,
+                          );
+              } else {
+                const _ =
+                  _?.description?.definition?.event_title?.[_._.LANGUAGE];
+                if (_) _ = _;
+                else {
+                  const _ = [
+                    "takeover",
+                    "takeunder",
+                    "midweek",
+                    "midweek deal",
+                    "weekend deal",
+                  ];
+                  for (const _ of _)
+                    _ = _.replace(
+                      new RegExp("^" + _ + "\\s*[:-]\\s*", "i"),
+                      "",
+                    );
+                }
+              }
+              return _;
+            })(_.name, _.type, _, _.start_date)),
             (this.startDate = _),
             (this.endDate = _),
             (this.eventType = _),
@@ -3971,7 +4005,7 @@
                     (0, _._)("#PartnerDeadline_NextFest_DemoBuildReview_Title"),
                     _,
                   ),
-                  bUrgent: !0,
+                  bUrgent: !1,
                   element: _.createElement(_, {
                     deadline: _,
                     json: _,
@@ -4126,7 +4160,6 @@
           _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
         return _
           ? _.createElement(_, {
-              urgent: !0,
               strTitle: _.description.definition.event_title[_._.LANGUAGE],
               strBody: (0, _._)(
                 "#PartnerDeadline_NextFest_DemoBuildReview_Body",
@@ -6857,9 +6890,14 @@
             ? (_ = (0, _._)("#Dashboard_RecentApps_Game"))
             : "DLC" == _
               ? ((_ = (0, _._)("#Dashboard_RecentApps_DLC")), (_ = _.DLC))
-              : "Beta" == _ &&
-                ((_ = (0, _._)("#Dashboard_RecentApps_Playtest")),
-                (_ = _.Playtest)),
+              : "Beta" == _
+                ? ((_ = (0, _._)("#Dashboard_RecentApps_Playtest")),
+                  (_ = _.Playtest))
+                : "Demo" == _
+                  ? ((_ = (0, _._)("#Dashboard_RecentApps_Demo")), (_ = _.Demo))
+                  : "Music" == _ &&
+                    ((_ = (0, _._)("#Dashboard_RecentApps_Music")),
+                    (_ = _.Music)),
           !!_ &&
             _.createElement(
               "div",

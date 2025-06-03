@@ -497,7 +497,7 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => R, W: () => k });
+      a.d(t, { J: () => R, W: () => F });
       var n = a(90626),
         r = a(57876),
         l = a(45699),
@@ -529,7 +529,7 @@
         P = a(99956),
         G = a(49411);
       const R = "capsule_index_";
-      function k(e) {
+      function F(e) {
         const {
             capsule: t,
             bShowParentApp: a,
@@ -545,7 +545,7 @@
           [C] = (0, m.t7)(a && h?.GetParentAppID(), r.Xh);
         if (!h) return null;
         const I = Boolean(C),
-          S = n.createElement(B, {
+          S = n.createElement(k, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
@@ -592,7 +592,7 @@
             Boolean(l) && n.createElement(n.Fragment, null, l),
           ),
           I &&
-            n.createElement(F, {
+            n.createElement(B, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: C,
               childAppType: h.GetAppType(),
@@ -600,7 +600,7 @@
             }),
         );
       }
-      function F(e) {
+      function B(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
@@ -638,7 +638,7 @@
           ),
         );
       }
-      function B(e) {
+      function k(e) {
         const {
             info: t,
             bHideStatusBanners: a,
@@ -668,26 +668,23 @@
           n.Fragment,
           null,
           n.createElement(
-            l.Ii,
-            {
-              href: A ? null : L,
-              style: { display: "block", cursor: "pointer" },
-              className: g().CapsuleFocusCtn,
-              preferredFocus: d,
-              onClick: A,
-            },
+            "div",
+            { className: g().CapsuleFocusCtn },
             n.createElement(
               "div",
               { className: (0, y.A)({ [N().TwoWidthCtn]: R }) },
               n.createElement(
-                "div",
-                { className: (0, y.A)({ [N().TwoWidthCapsule]: R }) },
+                l.Ii,
+                {
+                  href: A ? null : L,
+                  style: { display: "block", cursor: "pointer" },
+                  className: (0, y.A)({ [N().TwoWidthCapsule]: R }),
+                  preferredFocus: d,
+                  onClick: A,
+                },
                 n.createElement(v.V, { appids: T, hide_status_banners: a }),
                 n.createElement(_.aU, { imageType: c, info: t }),
-                n.createElement(S.S, {
-                  eDeckCompatibilityCategory:
-                    b?.GetPlatforms()?.steam_deck_compat_category,
-                }),
+                n.createElement(S.J, { storeItem: b }),
                 Boolean(p) && n.createElement(f.m, { appInfo: t }),
               ),
               R &&
@@ -930,7 +927,7 @@
         const t = G.exec(e);
         return t?.length > 1 ? t[1] : null;
       }
-      function k(e) {
+      function F(e) {
         const {
             posterURL: t,
             videoid: a,
@@ -1005,8 +1002,8 @@
           )
         );
       }
-      var F = a(26101),
-        B = a(99032),
+      var B = a(26101),
+        k = a(99032),
         H = a(45359),
         x = a(46416),
         M = a(22797),
@@ -1165,13 +1162,13 @@
                 .then(() => {
                   const e = a.map((e) => e.recommended_app.appid);
                   S.A.Get()
-                    .QueueMultipleAppRequests(e, B.jy)
+                    .QueueMultipleAppRequests(e, k.jy)
                     .then(() => {
                       u.token.reason ||
                         i(
                           a.filter(
                             (e) =>
-                              !(0, B.Li)(
+                              !(0, k.Li)(
                                 S.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
@@ -1277,7 +1274,7 @@
             r.createElement(
               "div",
               { className: z().VideoReviewCtn },
-              r.createElement(k, {
+              r.createElement(F, {
                 videoid: c,
                 posterURL: "",
                 imageClassnames: z().YouTubePreviewImage,
@@ -1392,7 +1389,7 @@
             "div",
             { className: z().YouTubeCtn },
             i
-              ? r.createElement(k, {
+              ? r.createElement(F, {
                   videoid: t,
                   posterURL: c?.GetAssets().GetHeaderURL(),
                   imageClassnames: z().YouTubePreviewImage,
@@ -1418,7 +1415,7 @@
               "div",
               { className: z().GameImageCtn },
               r.createElement(
-                F.Qf,
+                B.Qf,
                 {
                   item: n,
                   bShowDemoButton: o,

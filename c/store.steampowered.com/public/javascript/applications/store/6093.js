@@ -36,6 +36,7 @@
 	"Menu_Popover_WaysToPlay": "Manieren om te spelen",
 	"Menu_Popover_SpecialSections": "Speciale secties",
 	"Menu_Popover_ViewAll": "Alles weergeven",
+	"Menu_Popover_More": "Meer",
 	"Menu_Section_Browse_RecentlyViewed": "Onlangs bekeken",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Ga verder waar je gebleven was",
 	"Menu_Section_Browse_Recommended": "Aanbevolen voor jou",

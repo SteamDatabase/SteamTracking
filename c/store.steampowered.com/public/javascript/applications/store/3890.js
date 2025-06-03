@@ -36,6 +36,7 @@
 	"Menu_Popover_WaysToPlay": "Начини за игра",
 	"Menu_Popover_SpecialSections": "Специални секции",
 	"Menu_Popover_ViewAll": "Преглед на всички",
+	"Menu_Popover_More": "Още",
 	"Menu_Section_Browse_RecentlyViewed": "Наскоро прегледани",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Продължете оттам, докъдето сте стигнали",
 	"Menu_Section_Browse_Recommended": "Препоръчано за Вас",

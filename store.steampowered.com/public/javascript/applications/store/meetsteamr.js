@@ -9,6 +9,7 @@
     64734: (e) => {
       e.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
@@ -253,8 +254,12 @@
               t,
               Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            E,
-            i.createElement(p, { bIsMinimized: _, fnToggleMinimize: r }),
+            i.createElement(
+              "div",
+              { className: u.SectionTitleButtons },
+              E,
+              i.createElement(p, { bIsMinimized: _, fnToggleMinimize: r }),
+            ),
           ),
           !_ && i.createElement(c.tH, null, g),
         );
@@ -281,7 +286,7 @@
     },
     68541: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => W, default: () => Y });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => Y, default: () => W });
       var a = n(90626),
         r = n(43527),
         s = n(92757),
@@ -292,7 +297,7 @@
         u = n(60746),
         d = n(6379),
         m = n(30756),
-        g = n(40224),
+        g = n(92557),
         E = n(22797),
         p = n(61859),
         _ = n(43068);
@@ -346,26 +351,26 @@
         A = n(95034),
         D = n(8905),
         k = n(78395),
-        N = n(21869),
-        R = n(48479),
-        B = n(91675),
+        B = n(21869),
+        N = n(48479),
+        R = n(91675),
         I = n(73745),
         L = n(30470),
-        U = n(24484),
-        $ = n(15588),
-        z = n.n($),
-        C = n(52038);
-      function F(e) {
+        z = n(24484),
+        U = n(15588),
+        $ = n.n(U),
+        j = n(52038);
+      function C(e) {
         const [t] = (0, A.QD)("gid"),
           n = (0, h.RR)(t),
           r = (0, o.sf)(L.TS.LANGUAGE);
         return n
           ? a.createElement(
               "div",
-              { className: z().Ctn },
+              { className: $().Ctn },
               a.createElement(
                 "div",
-                { className: z().Row },
+                { className: $().Row },
                 a.createElement("h2", null, n.GetNameWithFallback(r)),
                 a.createElement(
                   "a",
@@ -376,16 +381,16 @@
                   "See Event Details",
                 ),
               ),
-              a.createElement(j, { eventModel: n }),
+              a.createElement(F, { eventModel: n }),
             )
           : a.createElement(E.t, { string: (0, p.we)("#Loading") });
       }
-      function j(e) {
+      function F(e) {
         const { eventModel: t } = e,
           n = (function (e) {
             const t = (0, T.f1)(),
               [n] = (0, a.useState)(() =>
-                (0, U.Tc)("registrations", "application_config")
+                (0, z.Tc)("registrations", "application_config")
                   .sort((t, n) => {
                     const a = K(
                         e.jsondata.meet_steam_groups,
@@ -454,18 +459,18 @@
           a.createElement("br", null),
           a.createElement("br", null),
           a.createElement("br", null),
-          a.createElement(x, {
+          a.createElement(G, {
             eventModel: t,
             rgUserRegs: n.today,
-            strTitle: "Today " + (0, B.$z)(s),
+            strTitle: "Today " + (0, R.$z)(s),
           }),
-          a.createElement(x, {
+          a.createElement(G, {
             eventModel: t,
             rgUserRegs: n.future,
             bHideIfEmpty: !0,
             strTitle: "Future",
           }),
-          a.createElement(x, {
+          a.createElement(G, {
             eventModel: t,
             rgUserRegs: n.past,
             bHideIfEmpty: !0,
@@ -473,7 +478,7 @@
           }),
         );
       }
-      function x(e) {
+      function G(e) {
         const {
           eventModel: t,
           rgUserRegs: n,
@@ -483,7 +488,7 @@
         return 0 == n.length && r
           ? null
           : a.createElement(
-              R.qx,
+              N.qx,
               { title: `${s} (${n.length})`, bStartMinimized: r },
               Boolean(!n || 0 == n.length)
                 ? a.createElement("div", null, r ? "" : "No registrations")
@@ -500,16 +505,16 @@
                   ),
             );
       }
-      function G(e) {
+      function x(e) {
         const { desc: t } = e,
           [n, r] = (0, a.useState)(!1),
           s = (0, a.useCallback)(() => r((e) => !e), []);
         return a.createElement(
           "div",
           {
-            className: (0, C.A)({
-              [z().DescriptionWrapper]: !0,
-              [z().Expanded]: n,
+            className: (0, j.A)({
+              [$().DescriptionWrapper]: !0,
+              [$().Expanded]: n,
             }),
             onClick: s,
             onMouseEnter: () => r(!0),
@@ -554,7 +559,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(H, { group: m, session: g }),
+          a.createElement(q, { group: m, session: g }),
           Boolean(c)
             ? a.createElement(
                 "div",
@@ -598,12 +603,12 @@
                 ),
               ),
           a.createElement(
-            N.E,
+            B.E,
             { active: E },
             a.createElement(
               i.tH,
               null,
-              a.createElement(q, {
+              a.createElement(H, {
                 closeModal: f,
                 rgGuestsAttending: o,
                 fnMarkAttendance: v,
@@ -613,7 +618,7 @@
           ),
         );
       }
-      function q(e) {
+      function H(e) {
         const {
             closeModal: t,
             rgGuestsAttending: n,
@@ -655,7 +660,7 @@
               "Mark Attendance?",
             );
       }
-      function H(e) {
+      function q(e) {
         const { session: t, group: n } = e;
         return t && n
           ? a.createElement(
@@ -671,7 +676,7 @@
               a.createElement(
                 "div",
                 null,
-                a.createElement(G, {
+                a.createElement(x, {
                   desc: `Description: ${n.localized_session_description[0] || ""}`,
                 }),
               ),
@@ -679,12 +684,12 @@
                 "div",
                 null,
                 "Time:",
-                (0, B._l)(t.rtime_start, !1, !0),
+                (0, R._l)(t.rtime_start, !1, !0),
                 " @",
                 a.createElement(
                   "b",
                   null,
-                  (0, B.Vx)(t.rtime_start, t.rtime_end, !0),
+                  (0, R.Vx)(t.rtime_start, t.rtime_end, !0),
                 ),
               ),
               "dev" == L.TS.WEB_UNIVERSE &&
@@ -706,20 +711,20 @@
         return { group: null, session: null };
       }
       var P = n(97058);
-      const W = {
+      const Y = {
         MeetSteamAttendance: () => `${r.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${r.B.MeetSteamRoute()}:gid(\\d+)`,
       };
-      function Y(e) {
+      function W(e) {
         return a.createElement(
           s.dO,
           null,
           a.createElement(s.qh, {
-            path: W.MeetSteamAttendance(),
-            render: (e) => a.createElement(F, { ...e }),
+            path: Y.MeetSteamAttendance(),
+            render: (e) => a.createElement(C, { ...e }),
           }),
           a.createElement(s.qh, {
-            path: W.MeetSteamEvent(),
+            path: Y.MeetSteamEvent(),
             render: (e) => a.createElement(f, { ...e }),
           }),
           a.createElement(s.qh, null, a.createElement(P.a, null)),

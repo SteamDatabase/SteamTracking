@@ -80,6 +80,7 @@
     64734: (e) => {
       e.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
@@ -921,9 +922,9 @@
         M = n(52038),
         U = n(61859),
         L = n(41338),
-        q = n(14771),
-        B = n(76048),
-        V = n.n(B),
+        B = n(14771),
+        q = n(76048),
+        V = n.n(q),
         H = n(14336);
       function P(e) {
         const t = (function () {
@@ -1164,7 +1165,7 @@
           })(n);
         if (!l) return null;
         const c = r - l.rtPostTime,
-          m = c < q.Kp.PerDay ? (0, U.Hq)(c) : (0, U._l)(l.rtPostTime),
+          m = c < B.Kp.PerDay ? (0, U.Hq)(c) : (0, U._l)(l.rtPostTime),
           A = a ? () => i(n, !l.bUserUpVoted) : null,
           v = a
             ? l.bUserUpVoted
@@ -1250,7 +1251,7 @@
           o = t.rtAnswerTime && n - t.rtAnswerTime,
           a =
             t.rtAnswerTime &&
-            (o < q.Kp.PerDay ? (0, U.Hq)(o) : (0, U._l)(t.rtAnswerTime));
+            (o < B.Kp.PerDay ? (0, U.Hq)(o) : (0, U._l)(t.rtAnswerTime));
         return t.strAnswerText
           ? s.createElement(
               "div",
@@ -1735,8 +1736,12 @@
               t,
               Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            v,
-            i.createElement(Q, { bIsMinimized: _, fnToggleMinimize: o }),
+            i.createElement(
+              "div",
+              { className: u.SectionTitleButtons },
+              v,
+              i.createElement(Q, { bIsMinimized: _, fnToggleMinimize: o }),
+            ),
           ),
           !_ && i.createElement(d.tH, null, A),
         );

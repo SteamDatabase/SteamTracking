@@ -5,7 +5,7 @@
   [1240],
   {
     30756: (e, t, r) => {
-      r.d(t, { g: () => Rt });
+      r.d(t, { g: () => ht });
       var i,
         n,
         a,
@@ -5560,8 +5560,9 @@
       }
       var ft = r(95034),
         zt = r(12155),
-        St = r(32754);
-      function Rt(e) {
+        St = r(32754),
+        Rt = r(77021);
+      function ht(e) {
         const {
             eventModel: t,
             partnerEventStore: r,
@@ -5611,11 +5612,12 @@
               }),
               (0, ut.uX)(e),
             );
-          };
+          },
+          v = (0, l.q3)(() => Rt.TU.Get().BIsConnected());
         if (u) return (0, st.OG)(t, st.PH.k_eCommunityAdminPage);
-        const v = b == c.zv.k_EEventStateVisible,
-          F = b == c.zv.k_EEventStateStaged;
-        if ((w.can_edit || w.support_user) && !s) {
+        const F = b == c.zv.k_EEventStateVisible,
+          j = b == c.zv.k_EEventStateStaged;
+        if ((w.can_edit || w.support_user) && !s && !v) {
           const e = [];
           if (void 0 !== g)
             for (let t = 0; t <= g; ++t)
@@ -5681,7 +5683,7 @@
                     { className: lt.Button + " " + pt.AdminButton, onClick: h },
                     (0, Xe.we)("#EventDisplay_DeleteEvent"),
                   ),
-                !v &&
+                !F &&
                   m.createElement(
                     m.Fragment,
                     null,
@@ -5693,7 +5695,7 @@
                         className: (0, ct.A)(lt.Button, pt.AdminButton),
                       },
                       (0, Xe.we)(
-                        F
+                        j
                           ? "#EventEditor_Publish_VisibleNow"
                           : "#Button_Publish",
                       ),
@@ -5768,7 +5770,7 @@
                     (0, Xe.we)("#EventDisplay_InvitationPlannerPage"),
                   ),
                 Boolean(p && d && y) &&
-                  m.createElement(jt, {
+                  m.createElement(Pt, {
                     clanAccountID: t.clanSteamID.GetAccountID(),
                     gidClanEvent: y,
                   }),
@@ -5786,7 +5788,7 @@
                     },
                     (0, Xe.we)("#EventDisplay_CategoryEditor"),
                   ),
-                Boolean(v && (u || o)) &&
+                Boolean(F && (u || o)) &&
                   m.createElement(
                     st.tj,
                     {
@@ -5802,7 +5804,7 @@
                         : "#EventDisplay_ViewOnCommunity",
                     ),
                   ),
-                Boolean(v && l) &&
+                Boolean(F && l) &&
                   m.createElement(
                     st.tj,
                     {
@@ -5813,9 +5815,9 @@
                     (0, Xe.we)("#EventDisplay_ViewOnStore"),
                   ),
                 m.createElement(yt, { eventModel: t }),
-                m.createElement(vt, { eventModel: t }),
+                m.createElement(Ft, { eventModel: t }),
                 Boolean(rt.iA.is_support) &&
-                  m.createElement(ht, { eventModel: t }),
+                  m.createElement(vt, { eventModel: t }),
                 b &&
                   m.createElement(
                     "div",
@@ -5861,7 +5863,7 @@
         }
         return m.createElement("span", null);
       }
-      function ht(e) {
+      function vt(e) {
         const { eventModel: t } = e,
           r = (0, Ve.Fb)(),
           [i] = (0, ft.QD)(u.jD, void 0);
@@ -5942,7 +5944,7 @@
             )
           : null;
       }
-      function vt(e) {
+      function Ft(e) {
         const { eventModel: t } = e,
           r = (0, l.q3)(() => t.jsondata.sale_sections),
           i = (0, m.useMemo)(
@@ -5950,10 +5952,10 @@
             [r],
           );
         return i?.badge_progress?.levels?.length > 0 && rt.iA.is_support
-          ? m.createElement(Ft, { section: i })
+          ? m.createElement(jt, { section: i })
           : null;
       }
-      function Ft(e) {
+      function jt(e) {
         const { section: t } = e,
           r = (0, d.fy)(t.badge_progress?.event_badgeid),
           i = (0, l.q3)(() => t.badge_progress.levels),
@@ -5975,7 +5977,7 @@
             }),
         });
       }
-      function jt(e) {
+      function Pt(e) {
         const { clanAccountID: t, gidClanEvent: r } = e,
           i = ke(t, r);
         return i

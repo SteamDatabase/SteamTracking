@@ -1518,6 +1518,7 @@
         });
         return _;
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.InitFromClanID((0, _._)()),
           _ = (function () {
@@ -1526,7 +1527,7 @@
             );
             return _;
           })(),
-          [_, _] = _.useState(!1),
+          [_, _] = (0, _._)("showpastevents", !1),
           { bIsLoading: _, events: _ } = (0, _._)(_),
           _ = _.useMemo(() => {
             if (!_) return null;
@@ -2034,6 +2035,10 @@
             __webpack_require__?.localized_session_description,
             0,
           ),
+          _ = _._.GetWithFallback(
+            __webpack_require__?.localized_intended_audience,
+            0,
+          ),
           _ = _?.find(
             (_) =>
               _.group_id == __webpack_require__.group_id && _.session_id == _._,
@@ -2054,6 +2059,7 @@
                 _.createElement(_._, {
                   tooltip: _,
                 }),
+                Boolean(_) && _.createElement("div", null, _),
               )
             : _.createElement("td", null),
           _.createElement(
@@ -3770,6 +3776,67 @@
               ),
             ),
           )
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() =>
+            (function () {
+              const _ = (0, _._)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+              const _ = new _._(_._.WEBAPI_BASE_URL, _);
+              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  _,
+                );
+              return _;
+            })(),
+          ),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              realm: _._.EREALM,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
+            [_],
+          ),
+          _
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
+              })
+            : null
         );
       }
     },

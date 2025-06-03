@@ -1103,7 +1103,7 @@
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, "dummy"),
+          _ = (0, _._)(_, "dummy", [_._.k_ESteamRealmGlobal], _),
           _ = _.useCallback(
             async (_) => {
               if (
@@ -1194,11 +1194,7 @@
                       onClick: async () => {
                         _(!0);
                         try {
-                          const _ = await _.UploadAllImages(
-                              [_._.k_ESteamRealmGlobal],
-                              _,
-                              _,
-                            ),
+                          const _ = await _.UploadAllImages(_),
                             _ = Object.values(_);
                           if (
                             _ &&
@@ -1208,9 +1204,9 @@
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 _.length,
                             ),
-                            1 == _[0].success)
+                            _[0].bSuccess)
                           ) {
-                            const _ = _[0],
+                            const _ = _[0].uploadResult,
                               _ = (0, _._)() + _.GetAccountID() + "/",
                               _ = (0, _._)(_.file_type),
                               _ = _ + _.image_hash + _,

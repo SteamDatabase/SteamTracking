@@ -271,7 +271,7 @@
 	display: inline;
 }
 
-.redeem_form_row .dselect_container a.trigger, .dselect_container a.activetrigger
+.redeem_form_row .dselect_container button.trigger, .dselect_container button.activetrigger
 {
 	padding-right: 30px;
 }

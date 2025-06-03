@@ -3077,6 +3077,11 @@
                     br: u.qM.readBool,
                     bw: u.gp.writeBool,
                   },
+                  label_smoothing: {
+                    n: 9,
+                    br: u.qM.readFloat,
+                    bw: u.gp.writeFloat,
+                  },
                 },
               }),
             $.sm_m
@@ -5657,6 +5662,11 @@
                     br: u.qM.readFloat,
                     bw: u.gp.writeFloat,
                   },
+                  repeat_multiplier: {
+                    n: 9,
+                    br: u.qM.readFloat,
+                    bw: u.gp.writeFloat,
+                  },
                 },
               }),
             We.sm_m
@@ -5812,6 +5822,11 @@
                     bw: u.gp.writeString,
                   },
                   iterate_beam_search: { n: 13, c: We },
+                  debug_spew: {
+                    n: 14,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
                 },
               }),
             xe.sm_m
@@ -10544,6 +10559,11 @@
                     bw: u.gp.writeString,
                   },
                   iterate_beam_search: { n: 13, c: We },
+                  debug_spew: {
+                    n: 14,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
                 },
               }),
             ia.sm_m
@@ -31275,7 +31295,7 @@
               label: (0, l.we)("#SteamLearn_TrainSettings_FetchChunkSizeInput"),
               fnGetInitialValue: () =>
                 t.train_config().fetch_chunk_size()?.toString() || "10000",
-              fnValidateValue: (e) => Wr(e, 100, 1e5),
+              fnValidateValue: (e) => Wr(e, 10, 1e5),
               fnSetValue: (e) =>
                 t.train_config().set_fetch_chunk_size(parseInt(e)),
             }),

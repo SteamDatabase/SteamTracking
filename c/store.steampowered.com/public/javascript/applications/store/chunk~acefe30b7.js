@@ -877,32 +877,187 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-          eLocation: 0,
-        },
-        _ = _.createContext(_);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_sParentOrigin;
+        m_eventModelJson = void 0;
+        m_setMouseOverSectionID = _._.set();
+        m_setMouseOverSubsectionID = _._.set();
+        m_jumpToSection = void 0;
+        m_jumpToSubsection = void 0;
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_PartnerSaleLivePreviewClient = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {
+          (0, _._)(this),
+            window.opener &&
+              ((this.m_sParentOrigin = (0, _._)(
+                location.search,
+                "parentOrigin",
+              )),
+              window.addEventListener("message", this.HandleMessage),
+              window.addEventListener("beforeunload", () =>
+                window.opener.postMessage(
+                  {
+                    message: "PartnerEventEditor_ClientUnready",
+                  },
+                  this.m_sParentOrigin,
+                ),
+              ),
+              window.opener.postMessage(
+                {
+                  message: "PartnerEventEditor_ClientReady",
+                },
+                this.m_sParentOrigin,
+              ));
+        }
+        BIsConnected() {
+          return !!window.opener && this.m_eventModelJson;
+        }
+        GetEventModel() {
+          return this.m_eventModelJson;
+        }
+        GetMouseOverSectionID() {
+          return this.m_setMouseOverSectionID.size > 0
+            ? this.m_setMouseOverSectionID.values().next().value
+            : void 0;
+        }
+        GetMouseOverSubsectionID() {
+          return this.m_setMouseOverSubsectionID.size > 0
+            ? this.m_setMouseOverSubsectionID.values().next().value
+            : void 0;
+        }
+        GetJumpToSectionID() {
+          return this.m_jumpToSection;
+        }
+        GetJumpToSubsectionIDs() {
+          return this.m_jumpToSubsection;
+        }
+        ClearJumpToSectionID() {
+          (0, _._)(() => (this.m_jumpToSection = void 0));
+        }
+        ClearJumpToSubectionID() {
+          (0, _._)(() => (this.m_jumpToSubsection = void 0));
+        }
+        PostMessage(_) {
+          window.opener &&
+            this.m_sParentOrigin &&
+            window.opener.postMessage(_, this.m_sParentOrigin);
+        }
+        SetMouseOverSection(_, _) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_MouseOverViewSection",
+            nSectionID: _,
+            bMouseOver: _,
+          };
+          this.PostMessage(_);
+        }
+        SetMouseOverSubsection(_, _) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_MouseOverViewSubsection",
+            strSubsectionID: _,
+            bMouseOver: _,
+          };
+          this.PostMessage(_);
+        }
+        JumpToSection(_) {
+          if (!this.BIsConnected()) return;
+          const _ = {
+            message: "PartnerEventEditor_JumpToViewSection",
+            nSectionID: _,
+          };
+          this.PostMessage(_);
+        }
+        HandleMessage(_) {
+          if (_.origin != this.m_sParentOrigin) return;
+          const _ = _.data && "message" in _.data ? _.data : null;
+          if (_)
+            switch (_.message) {
+              case "PartnerEventEditor_Update":
+                if ("eventModelJson" in _ && _.eventModelJson) {
+                  const _ = _;
+                  (0, _._)(() => (this.m_eventModelJson = _.eventModelJson));
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSection":
+                if ("nSectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSectionID.add(_.nSectionID)
+                      : this.m_setMouseOverSectionID.delete(_.nSectionID);
+                  });
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSubsection":
+                if ("strSubsectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    _.bMouseOver
+                      ? this.m_setMouseOverSubsectionID.add(_.strSubsectionID)
+                      : this.m_setMouseOverSubsectionID.delete(
+                          _.strSubsectionID,
+                        );
+                  });
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSection":
+                if ("nSectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => (this.m_jumpToSection = _.nSectionID));
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSubection":
+                if ("strSubsectionID" in _) {
+                  const _ = _;
+                  (0, _._)(() => {
+                    (this.m_jumpToSection = _.nSectionID),
+                      (this.m_jumpToSubsection = {
+                        nSectionID: _.nSectionID,
+                        strSubsectionID: _.strSubsectionID,
+                      });
+                  });
+                }
+            }
+        }
+      }
       function _(_) {
-        const { children: _, location: __webpack_require__ } = _;
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              ..._,
-              eLocation: __webpack_require__,
-            },
-          },
-          _,
-        );
+        const _ = (0, _._)(() => _.Get().GetJumpToSectionID());
+        _.useEffect(() => {
+          if (!_.Get().BIsConnected() || !_) return;
+          _(_) && _.Get().ClearJumpToSectionID();
+        }, [_, _]);
       }
-      function _() {
-        return _.useContext(_);
+      function _(_) {
+        const _ = (0, _._)(() => _.Get().GetJumpToSubsectionIDs());
+        _.useEffect(() => {
+          if (!_.Get().BIsConnected() || !_) return;
+          _(_.nSectionID, _.strSubsectionID) &&
+            _.Get().ClearJumpToSubectionID();
+        }, [_, _]);
       }
-      function _() {
-        return 2 == _().eLocation;
-      }
+      (0, _._)([_._], _.prototype, "m_eventModelJson", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
+        (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
+        (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
   },
 ]);

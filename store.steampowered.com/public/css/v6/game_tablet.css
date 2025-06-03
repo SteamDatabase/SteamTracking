@@ -2156,7 +2156,7 @@ html.tablet #review_create .content .controls .dselect_container {
 	margin-top: unset;
 }
 
-#review_create .content .controls .dselect_container a.trigger {
+#review_create .content .controls .dselect_container button.trigger {
 	padding: 10px 12px;
 }
 

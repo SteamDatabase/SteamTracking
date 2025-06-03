@@ -1950,6 +1950,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
 .partnereventshared_FlexRowContainer_Ke5f1 {
   display: flex;
   flex-direction: row;
+  gap: 4px;
 }
 .partnereventshared_FlexRowContainer_Ke5f1.partnereventshared_Centered_qy-9m {
   justify-content: center;
@@ -2498,13 +2499,13 @@ b {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
   width: 24px;
   height: 24px;
 }
 .partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button {
   height: 16px;
   width: 16px;
+  margin-right: 0px;
 }
 .partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button rect,
 .partnereventshared_CloseSectionTools_1d0D9 .DialogButton .SVGIcon_Button line {
@@ -5086,6 +5087,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   .gamepadslider_SliderTrack_2_vG6::before {
   background-color: #67707b;
   pointer-events: none;
+}
+.gamepadslider_ForegroundInvisible_2jMXn
+  .gamepadslider_SliderTrack_2_vG6::before {
+  visibility: hidden;
 }
 .gamepadslider_SliderTrackDark_20c10 {
   background-color: #000;
@@ -12187,6 +12192,9 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   padding: 20px;
   margin-bottom: 6px;
 }
+.meetsteambbcode_VisibilityOverride_1y7PC {
+  border: 2px dotted red;
+}
 .meetsteambbcode_CtnRegistered_3PeTr {
   background-color: #fff;
   border: 2px solid #007bff;
@@ -12208,12 +12216,14 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
 }
 .meetsteambbcode_SessionTitle_3vGq3 {
   color: #fff;
+  text-align: left;
   font-size: 24px;
   line-height: 1.1;
   font-weight: 400;
   margin-bottom: 6px;
 }
 .meetsteambbcode_SessionDesc_24r8E {
+  text-align: left;
   color: #fff;
   font-size: 14px;
 }
@@ -12230,16 +12240,13 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   text-align: center;
   background: #40444d;
   border-radius: 4px;
   border: 1px solid transparent;
 }
-.meetsteambbcode_SessionInstance_1igTM .meetsteambbcode_Button_2qgSQ {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.meetsteambbcode_SessionInstance_1igTM .meetsteambbcode_Background_3k-Bv {
   background: linear-gradient(to bottom, #707787, #555b67);
   border: none;
   margin: 0;
@@ -12247,6 +12254,12 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   border-radius: 4px;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.meetsteambbcode_SessionInstance_1igTM .meetsteambbcode_Button_2qgSQ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 14px;
   line-height: 19px;
   transition: filter .2s ease-in-out;
@@ -12363,6 +12376,166 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
 }
 .meetsteambbcode_CompleteRegistrationCtn_6ykmN button.DialogButton.Primary {
   line-height: 45px;
+}
+.meetsteambbcode_ExpanderRow_3y3yN {
+  display: flex;
+  flex-direction: row;
+}
+.meetsteambbcode_SingleDayCtn_2Oiew {
+  margin-bottom: 30px;
+}
+.meetsteambbcode_SingleDayCtn_2Oiew
+  .meetsteambbcode_ScheduleRow_3LI8Y:not(:first-of-type) {
+  border-top: 1px solid #52565e;
+}
+.meetsteambbcode_ScheduleTopDate_1-WKv {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.meetsteambbcode_ScheduleRow_3LI8Y {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.meetsteambbcode_ScheduleRow_3LI8Y .meetsteambbcode_ScheduleTimeColumn_1vNsS {
+  width: 165px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.meetsteambbcode_ScheduleRow_3LI8Y
+  .meetsteambbcode_ScheduleSessionsColumn_2rvBP {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.meetsteambbcode_ScheduleRow_3LI8Y .meetsteambbcode_ScheduleActionRow_16ZAk {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.familysharedcomponents_RoleIcon_1uvKF {
+  width: 20px;
+  height: 20px;
+}
+.familysharedcomponents_ProfileLink_2oSTS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.familysharedcomponents_MeBadge_2W_HQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e141b;
+  background-color: #59bf40;
+  font-size: 12px;
+  font-weight: 600;
+  height: 21px;
+  width: 50px;
+  text-align: center;
+}
+.familysharedcomponents_PlayerName_AdQYb {
+  font-size: 20px;
+  overflow: hidden;
+}
+.familysharedcomponents_RoleAndIcon_3VzCn {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+.familysharedcomponents_RoleName_3C9nR {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.familysharedcomponents_FamilyErrorDisplay_egC2p {
+  background-color: #de3618;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.familysharedcomponents_FamilyMemberRow_2LyGI {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  transition: height .5s;
+}
+.familysharedcomponents_FamilyMemberRow_2LyGI
+  .familysharedcomponents_FamilyMemberRowTop_mz0H0,
+.familysharedcomponents_FamilyMemberRow_2LyGI
+  .familysharedcomponents_FamilyMemberRowTop_mz0H0
+  .familysharedcomponents_Left_3wWOE {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_FamilyMemberRow_2LyGI
+    .familysharedcomponents_FamilyMemberRowTop_mz0H0,
+  .familysharedcomponents_FamilyMemberRow_2LyGI
+    .familysharedcomponents_FamilyMemberRowTop_mz0H0
+    .familysharedcomponents_Left_3wWOE {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+.familysharedcomponents_FamilyMemberRow_2LyGI
+  .familysharedcomponents_InvitePending_1IeeH {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  color: #ff0;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ff0;
+  border-width: thin;
+}
+.familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_ExpandRowButton_3Qa1u {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  height: 24px;
+  width: 24px;
+}
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_ExpandRowButton_3Qa1u {
+    width: 100%;
+    background-color: #23262e;
+  }
+}
+.familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_ExpandRowButton_3Qa1u:hover {
+  background-color: #1a9fff;
+}
+.familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_ExpandRowButton_3Qa1u
+  svg {
+  transition: transform .2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_ExpandRowButton_3Qa1u.familysharedcomponents_Selected_r0ToH
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform .2s ease-in-out;
 }
 .localdateandtime_DateAndTime_2V6GL,
 .localdateandtime_DateAndTimeInline_HZ6b2 {

@@ -993,7 +993,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 }
 
 .game_area_purchase_game h1,
-.game_area_offsite_purchase h1 {
+.game_area_offsite_purchase h1,
+.game_area_purchase_game h2.title.title {
 	font-size: 21px;
 	line-height: 23px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1001,6 +1002,11 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 			color: #ffffff;
     font-weight: normal;
+	text-transform: unset;
+	letter-spacing: inherit;
+	margin: 0;
+	padding: 0;
+	background-image: unset;
 }
 
 .game_area_purchase_game b,
@@ -1652,7 +1658,8 @@ body.v6 .game_description_column h2.gradientbg {
 	margin-bottom: 6px;
 }
 
-.game_area_description img.bb_img {
+.game_area_description img.bb_img,
+.game_area_description video.bb_img {
 	max-width: 100%;
 }
 
@@ -3600,7 +3607,7 @@ div.early_access_header .heading {
 
 }
 
-div.early_access_header .heading h1 {
+div.early_access_header .heading h2 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -3608,9 +3615,15 @@ div.early_access_header .heading h1 {
 	font-weight: normal;
 	font-style: normal;
 	color: #fff;
+	text-transform: unset;
+	margin: 0;
+	padding: 0;
+	letter-spacing: inherit;
+	line-height: inherit;
+	background-image: none;
 }
 
-div.early_access_header .heading h2 {
+div.early_access_header .heading p.subtitle {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -3711,14 +3724,20 @@ div.early_access_header .devnotes ul, div.early_access_header .devnotes ol {
 	padding-left: 17px;
 }
 
-div.early_access_header .devnotes h1 {
+div.early_access_header .devnotes h3 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 500; /* medium */
 
 		    font-weight: normal;
 	font-size: 14px;
 	color: #fff;
+	text-transform: unset;
+	margin: 0;
+	padding: 0;
 	margin-top: 10px;
+	letter-spacing: inherit;
+	line-height: inherit;
+	background-image: none;
 }
 
 div.early_access_header .devnotes .morebutton {
@@ -6539,7 +6558,8 @@ a.open_in_steam_body:hover {
     height: 10px;
 }
 
-.mask_images .game_area_description img.bb_img {
+.mask_images .game_area_description img.bb_img
+.mask_images .game_area_description video.bb_img {
 	filter: blur(30px);
 	clip-path: inset(0);	}
 

@@ -1427,9 +1427,10 @@ html.touch .similar_grid_item .buttons {
     padding-top: 16px;
 }
 
-#review_create h1, .reviewDate {
+#review_create h2, .reviewDate {
 	font-size: 18px;
 	font-weight: normal;
+	margin: 0;
 	margin-bottom: 3px;
     color: #66c0f4;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1438,6 +1439,8 @@ html.touch .similar_grid_item .buttons {
 		    width: 100%;
     border-top: 1px solid #212c3d;
     padding-top: 10px;
+	text-transform: unset;
+	letter-spacing: inherit;
 }
 
 #review_create p {
@@ -1584,7 +1587,7 @@ html.touch .similar_grid_item .buttons {
 	margin-top: -3px;
 
 }
-#review_create .content .controls .dselect_container a.trigger, #review_create .content .controls .dselect_container a.activetrigger {
+#review_create .content .controls .dselect_container button.trigger, #review_create .content .controls .dselect_container button.activetrigger {
 	background: transparent;
 	color: #ebebeb;
 	text-decoration: none;
@@ -1592,9 +1595,9 @@ html.touch .similar_grid_item .buttons {
 	padding-top: 3px;
 }
 
-#review_create .content .controls .dselect_container a.trigger:hover,
-#review_create .content .controls .dselect_container a.activetrigger,
-#review_create .content .controls .dselect_container a.activetrigger:hover
+#review_create .content .controls .dselect_container button.trigger:hover,
+#review_create .content .controls .dselect_container button.activetrigger,
+#review_create .content .controls .dselect_container button.activetrigger:hover
  {
     color: #ffffff;
     border-radius: 3px;
@@ -2643,7 +2646,7 @@ background: -webkit-linear-gradient( 30deg, #313b46 5%,#566573 95%);
 	box-shadow: 0 0 30px rgba(102, 192, 244, 0.4);
 }
 
-body.recommendgame #review_create h1  {
+body.recommendgame #review_create h2  {
 	border-top: none;
 	padding-top: 0;
 }

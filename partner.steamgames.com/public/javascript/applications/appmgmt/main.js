@@ -402,6 +402,7 @@
         DefaultValueIsColorRange: "BKyENCj-EIOyULNJlDOtz",
         DefaultValueColorLeft: "_3mRyvMGiDLM0201gdyBNxA",
         DefaultValueColorRight: "_2KP6TN1CqkX-HgbPjfINAJ",
+        ForegroundInvisible: "_2jMXncsB0FrrPo_Ngj1Azp",
         SliderTrackDark: "_20c10ESSWkT6N_HX85Xj8_",
         SliderHandleContainer: "_8xNY6EWVZsDfOfUqDrus-",
         VerticalLineSliderHandleContainer: "_2jnK7ztb7w86dQCP1wwI9E",
@@ -1266,8 +1267,8 @@
         D = r(73745),
         k = r(7860),
         O = r(76011),
-        F = r(41735),
-        L = r.n(F),
+        L = r(41735),
+        F = r.n(L),
         x = r(51614),
         A = r(16676),
         z = r(30470),
@@ -1285,7 +1286,7 @@
               r.append("sessionid", z.TS.SESSIONID),
                 r.append("keys", JSON.stringify(t));
               const n = `${z.TS.PARTNER_BASE_URL}apps/requestkeys/${e}`,
-                i = await L().post(n, r);
+                i = await F().post(n, r);
               return (
                 "dev" == z.TS.WEB_UNIVERSE && console.log("RequestKeys", i),
                 i?.data?.message
@@ -1616,11 +1617,10 @@
           Promise.all([
             r.e(8787),
             r.e(9954),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
-            r.e(8713),
-            r.e(8129),
+            r.e(2979),
             r.e(4160),
             r.e(6700),
             r.e(8995),
@@ -1638,16 +1638,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1669,16 +1668,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1700,16 +1698,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1731,16 +1728,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1764,16 +1760,15 @@
             r.e(2946),
             r.e(8932),
             r.e(6995),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(8758),
@@ -1792,16 +1787,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1813,13 +1807,9 @@
           ]).then(r.bind(r, 53724)),
         ),
         _e = u.lazy(() =>
-          Promise.all([
-            r.e(1784),
-            r.e(9017),
-            r.e(7224),
-            r.e(8713),
-            r.e(6343),
-          ]).then(r.bind(r, 63023)),
+          Promise.all([r.e(1784), r.e(9017), r.e(7224), r.e(6343)]).then(
+            r.bind(r, 63023),
+          ),
         ),
         fe = u.lazy(() =>
           Promise.all([
@@ -1832,16 +1822,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1857,7 +1846,7 @@
             r.e(8787),
             r.e(5841),
             r.e(2946),
-            r.e(725),
+            r.e(7693),
             r.e(6672),
             r.e(4985),
           ]).then(r.bind(r, 43709)),
@@ -1869,12 +1858,14 @@
             r.e(5841),
             r.e(1134),
             r.e(4843),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
+            r.e(2979),
             r.e(2012),
             r.e(7352),
             r.e(3025),
@@ -1891,16 +1882,15 @@
             r.e(2946),
             r.e(8932),
             r.e(1084),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4160),
             r.e(4440),
             r.e(6700),
@@ -1923,16 +1913,15 @@
             r.e(316),
             r.e(1134),
             r.e(9954),
+            r.e(7693),
             r.e(9017),
             r.e(9001),
-            r.e(725),
             r.e(1810),
             r.e(6672),
             r.e(7224),
             r.e(4298),
-            r.e(8713),
+            r.e(2979),
             r.e(2012),
-            r.e(8129),
             r.e(4440),
             r.e(6700),
             r.e(6762),
@@ -2265,7 +2254,7 @@
         ke = r(26317),
         Oe = r(44332);
       r(5977);
-      async function Fe(e) {
+      async function Le(e) {
         const [t, n, i, s] = await Promise.all([
             r(14919)(`./shared_${e}.json`),
             r(6527)(`./marketing_${e}.json`),
@@ -2300,7 +2289,7 @@
                 CLSTAMP,
                 new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
-              await Fe(g.TS.LANGUAGE),
+              await Le(g.TS.LANGUAGE),
               De.H(document.getElementById("application_root")).render(
                 u.createElement(Ee, {}),
               ))
@@ -2310,7 +2299,7 @@
                 CLSTAMP,
                 new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
-              await Fe(g.TS.LANGUAGE),
+              await Le(g.TS.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".StoreAdminReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -4614,7 +4603,7 @@
               ));
         }
       }
-      class F {
+      class L {
         m_element;
         m_fnOriginalScrollTo;
         m_window;
@@ -4724,14 +4713,14 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, n.Cg)([o.o], F.prototype, "ResetScrollState", null);
-      const L = new WeakMap();
+      (0, n.Cg)([o.o], L.prototype, "ResetScrollState", null);
+      const F = new WeakMap();
       function x(e) {
-        let t = L.get(e);
-        return t || ((t = new F(e)), L.set(e, t)), t;
+        let t = F.get(e);
+        return t || ((t = new L(e)), F.set(e, t)), t;
       }
       function A(e) {
-        const t = L.get(e);
+        const t = F.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -5841,9 +5830,11 @@
         );
       }
       function i(e, t, r) {
-        t < 0 ||
-          r < 0 ||
-          (r >= e.length && (e[r] = void 0), e.splice(r, 0, e.splice(t, 1)[0]));
+        if (t >= 0 || r >= 0) {
+          const n = e.splice(t, 1)[0];
+          r >= e.length ? (e[r] = n) : e.splice(r, 0, n);
+        }
+        return e;
       }
       function s(e, t) {
         return a(e, (e) => t == e);
@@ -5882,14 +5873,18 @@
         );
       }
       function u(e) {
-        const t = new Set();
-        return e.forEach((e) => t.add(e)), Array.from(t);
+        return Array.from(new Set(e));
+      }
+      function m(e, t) {
+        const r = Math.min(e.length, t.length);
+        return Array.from({ length: r }, (r, n) => [e[n], t[n]]);
       }
       r.d(t, {
         $Y: () => c,
         Ew: () => u,
         Wp: () => a,
         Xr: () => l,
+        qQ: () => m,
         rJ: () => o,
         rj: () => n,
         x9: () => s,
@@ -5990,9 +5985,9 @@
         Fu: () => s,
         OQ: () => i,
         TG: () => o,
+        TT: () => l,
         Tg: () => n,
         bT: () => a,
-        kf: () => l,
       });
     },
     56545: (e, t, r) => {
@@ -7552,7 +7547,7 @@
     59134: (e, t, r) => {
       "use strict";
       r.d(t, {
-        IR: () => F,
+        IR: () => L,
         Gf: () => S,
         tF: () => v,
         bc: () => b,
@@ -9378,74 +9373,6 @@
           return "CClientMetrics_ClipShare_Notification";
         }
       }
-      class F extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.original_range_method || a.Sg(F.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  original_range_method: {
-                    n: 1,
-                    br: a.qM.readEnum,
-                    bw: a.gp.writeEnum,
-                  },
-                  start: { n: 2, c: L },
-                  end: { n: 3, c: L },
-                  seconds: { n: 4, br: a.qM.readFloat, bw: a.gp.writeFloat },
-                  gameid: {
-                    n: 5,
-                    br: a.qM.readFixed64String,
-                    bw: a.gp.writeFixed64String,
-                  },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = a.w0(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientMetrics_ClipRange_Notification";
-        }
-      }
       class L extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -9466,12 +9393,14 @@
                     br: a.qM.readEnum,
                     bw: a.gp.writeEnum,
                   },
-                  latest_range_method: {
-                    n: 2,
-                    br: a.qM.readEnum,
-                    bw: a.gp.writeEnum,
+                  start: { n: 2, c: F },
+                  end: { n: 3, c: F },
+                  seconds: { n: 4, br: a.qM.readFloat, bw: a.gp.writeFloat },
+                  gameid: {
+                    n: 5,
+                    br: a.qM.readFixed64String,
+                    bw: a.gp.writeFixed64String,
                   },
-                  delta_ms: { n: 3, br: a.qM.readInt32, bw: a.gp.writeInt32 },
                 },
               }),
             L.sm_m
@@ -9507,6 +9436,72 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ClipRange_Notification";
+        }
+      }
+      class F extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            F.prototype.original_range_method || a.Sg(F.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
+                fields: {
+                  original_range_method: {
+                    n: 1,
+                    br: a.qM.readEnum,
+                    bw: a.gp.writeEnum,
+                  },
+                  latest_range_method: {
+                    n: 2,
+                    br: a.qM.readEnum,
+                    bw: a.gp.writeEnum,
+                  },
+                  delta_ms: { n: 3, br: a.qM.readInt32, bw: a.gp.writeInt32 },
+                },
+              }),
+            F.sm_m
+          );
+        }
+        static MBF() {
+          return F.sm_mbf || (F.sm_mbf = a.w0(F.M())), F.sm_mbf;
+        }
+        toObject(e = !1) {
+          return F.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(F.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(F.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(F.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(F.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ClipRange_Notification_RelativeRangeEdge";
@@ -10018,7 +10013,7 @@
           (e.ReportClipRange = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClipRange#1",
-              (0, o.I8)(F, t),
+              (0, o.I8)(L, t),
               { ePrivilege: 1 },
             );
           }),
@@ -10528,7 +10523,7 @@
                     br: a.qM.readString,
                     bw: a.gp.writeString,
                   },
-                  free_weekend: { n: 54, c: F },
+                  free_weekend: { n: 54, c: L },
                   unlisted: { n: 55, br: a.qM.readBool, bw: a.gp.writeBool },
                   game_count: {
                     n: 56,
@@ -10552,7 +10547,7 @@
                   },
                   assets_without_overrides: { n: 60, c: C },
                   user_filter_failure: { n: 70, c: se },
-                  links: { n: 71, c: L, r: !0, q: !0 },
+                  links: { n: 71, c: F, r: !0, q: !0 },
                 },
               }),
             m.sm_m
@@ -12184,73 +12179,11 @@
           return "StoreItem_SupportedLanguage";
         }
       }
-      class F extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.start_time || a.Sg(F.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  start_time: {
-                    n: 1,
-                    br: a.qM.readUint32,
-                    bw: a.gp.writeUint32,
-                  },
-                  end_time: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
-                  text: { n: 3, br: a.qM.readString, bw: a.gp.writeString },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = a.w0(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_FreeWeekend";
-        }
-      }
       class L extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            L.prototype.link_type || a.Sg(L.M()),
+            L.prototype.start_time || a.Sg(L.M()),
             i.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -12261,8 +12194,12 @@
               (L.sm_m = {
                 proto: L,
                 fields: {
-                  link_type: { n: 1, br: a.qM.readEnum, bw: a.gp.writeEnum },
-                  url: { n: 2, br: a.qM.readString, bw: a.gp.writeString },
+                  start_time: {
+                    n: 1,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
+                  end_time: { n: 2, br: a.qM.readUint32, bw: a.gp.writeUint32 },
                   text: { n: 3, br: a.qM.readString, bw: a.gp.writeString },
                 },
               }),
@@ -12299,6 +12236,64 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_FreeWeekend";
+        }
+      }
+      class F extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            F.prototype.link_type || a.Sg(F.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
+                fields: {
+                  link_type: { n: 1, br: a.qM.readEnum, bw: a.gp.writeEnum },
+                  url: { n: 2, br: a.qM.readString, bw: a.gp.writeString },
+                  text: { n: 3, br: a.qM.readString, bw: a.gp.writeString },
+                },
+              }),
+            F.sm_m
+          );
+        }
+        static MBF() {
+          return F.sm_mbf || (F.sm_mbf = a.w0(F.M())), F.sm_mbf;
+        }
+        toObject(e = !1) {
+          return F.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(F.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(F.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(F.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(F.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Link";
@@ -15655,6 +15650,7 @@
         hL: () => m,
         l6: () => c,
         uD: () => g,
+        wm: () => b,
         x2: () => p,
         xA: () => l,
       });
@@ -15809,6 +15805,15 @@
             onMouseLeave: n.useCallback(() => t(!1), []),
           },
         ];
+      }
+      function b(e) {
+        const t = n.useRef(e);
+        return (
+          (t.current.length !== e.length ||
+            t.current.some((t, r) => t !== e[r])) &&
+            (t.current = e),
+          t.current
+        );
       }
     },
     8871: (e, t, r) => {
@@ -20860,7 +20865,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = L() ? 150 : 0;
+            const e = F() ? 150 : 0;
             this.props.instance.OnCancel(e);
           }
         }
@@ -21276,10 +21281,10 @@
         (0, n.Cg)([C.oI], D.prototype, "OnBlur", null),
         (0, n.Cg)([C.oI], D.prototype, "OnKeyDown", null),
         (D = (0, n.Cg)([u.PA], D));
-      const F = "EnableContextMenuBlurDelay3";
-      function L() {
+      const L = "EnableContextMenuBlurDelay3";
+      function F() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(F))
+          "true" === (window.localStorage && window.localStorage.getItem(L))
         );
       }
     },
@@ -21344,7 +21349,7 @@
         dR: () => B,
         f3: () => S,
         iK: () => f,
-        jn: () => L,
+        jn: () => F,
         lr: () => y,
         mq: () => O,
         nB: () => M,
@@ -21450,7 +21455,7 @@
         );
       }
       (0, n.Cg)([c.o], D.prototype, "OnSubmit", null);
-      const F = i.forwardRef(function (e, t) {
+      const L = i.forwardRef(function (e, t) {
           const r = (0, p.a_)(),
             { svgicon: n, ...a } = e,
             o = (0, u.A)(
@@ -21489,8 +21494,8 @@
             e.children,
           );
         }),
-        L = i.forwardRef(function (e, t) {
-          return i.createElement(F, {
+        F = i.forwardRef(function (e, t) {
+          return i.createElement(L, {
             preferredFocus: !0,
             type: e.onClick ? "button" : "submit",
             ...e,
@@ -21504,7 +21509,7 @@
           });
         }),
         x = i.forwardRef(function (e, t) {
-          return i.createElement(F, {
+          return i.createElement(L, {
             type: "button",
             ...e,
             ref: t,
@@ -21517,7 +21522,7 @@
           });
         }),
         A = i.forwardRef(function (e, t) {
-          return i.createElement(F, {
+          return i.createElement(L, {
             type: "button",
             ...e,
             ref: t,
@@ -21530,7 +21535,7 @@
           });
         }),
         z = i.forwardRef(function (e, t) {
-          return i.createElement(F, {
+          return i.createElement(L, {
             type: "button",
             ...e,
             ref: t,
@@ -21541,7 +21546,7 @@
           });
         });
       i.forwardRef(function (e, t) {
-        return i.createElement(F, {
+        return i.createElement(L, {
           type: "button",
           ...e,
           ref: t,
@@ -21553,7 +21558,7 @@
           B,
           { className: e.className },
           i.createElement(
-            L,
+            F,
             {
               onClick: e.onOK,
               disabled: e.bOKDisabled,
@@ -21574,8 +21579,8 @@
         );
       }
       function P(e) {
-        const t = e.bOKDisabled ? x : L,
-          r = e.bOKDisabled ? L : x;
+        const t = e.bOKDisabled ? x : F,
+          r = e.bOKDisabled ? F : x;
         return i.createElement(
           E,
           null,
@@ -21879,7 +21884,7 @@
         Dm: () => xe,
         Y9: () => n.Y9,
         pd: () => w,
-        m1: () => L,
+        m1: () => F,
         JU: () => n.JU,
         CB: () => n.CB,
         VQ: () => n.VQ,
@@ -22584,8 +22589,8 @@
         D = r(88997),
         k = r(32754),
         O = r(58053),
-        F = r.n(O);
-      function L(e) {
+        L = r.n(O);
+      function F(e) {
         return "object" == typeof e && "data" in e;
       }
       function x(e) {
@@ -22611,13 +22616,13 @@
                   e.tooltip === t.tooltip &&
                     A(e) == A(t) &&
                       !(A(e) && A(t) && !z(e.options, t.options)) &&
-                (!L(e) || !L(t) || e.data === t.data));
+                (!F(e) || !F(t) || e.data === t.data));
       }
       function P(e, t) {
         if (null != e)
           for (let r = 0; r < e.length; r++) {
             const n = e[r];
-            if (L(n) && n.data === t) return n;
+            if (F(n) && n.data === t) return n;
             if (A(n)) {
               const e = P(n.options, t);
               if (null != e) return e;
@@ -22673,7 +22678,7 @@
             s.createElement(
               "div",
               { className: (0, u.A)(e.arrowClassName, "DialogDropDown_Arrow") },
-              s.createElement(l.GB9, null),
+              s.createElement(l.GB9, { role: "presentation" }),
             ),
         );
       });
@@ -22796,7 +22801,7 @@
             this.setState({ bOpened: !1 }, () => this.m_elInput.focus());
         }
         OnKeyDown(e) {
-          G(e, this.props.rgOptions.filter(L), this.value?.data, (e) =>
+          G(e, this.props.rgOptions.filter(F), this.value?.data, (e) =>
             this.OnValueSelected(void 0, e),
           );
         }
@@ -22866,7 +22871,7 @@
             selectedValue: i,
           } = e,
           [a, o] = s.useState(i),
-          l = s.useMemo(() => t.filter(L), [t]),
+          l = s.useMemo(() => t.filter(F), [t]),
           c = s.useCallback(
             (e) => {
               G(e, l, a, (e) => o(e.data));
@@ -22877,7 +22882,7 @@
           "div",
           {
             className: (0, u.A)(
-              F().DialogDropDownMenu,
+              L().DialogDropDownMenu,
               "_DialogInputContainer",
               e.strDropDownMenuCtnClass,
             ),
@@ -22899,8 +22904,8 @@
             ? s.createElement("hr", {
                 key: t,
                 className: (0, u.A)(
-                  F().DialogDropDownMenu_Item,
-                  F().DialogDropDownMenu_Separator,
+                  L().DialogDropDownMenu_Item,
+                  L().DialogDropDownMenu_Separator,
                 ),
               })
             : A(e)
@@ -22926,7 +22931,7 @@
           {
             type: "button",
             className: (0, u.A)(
-              F().DialogDropDownMenu_Item,
+              L().DialogDropDownMenu_Item,
               r,
               t.strOptionClass,
               c && "ContextMenuAutoFocus",
@@ -24014,17 +24019,17 @@
         De = r(78327),
         ke = r(13871),
         Oe = r(78395);
-      function Fe(e) {
+      function Le(e) {
         return e ? e + "_Label" : void 0;
       }
-      function Le(e) {
+      function Fe(e) {
         return e ? e + "_Description" : void 0;
       }
       function xe(e, t) {
         const { label: r, description: n } = t;
         return {
-          "aria-labelledby": r ? Fe(e) : void 0,
-          "aria-describedby": n ? Le(e) : void 0,
+          "aria-labelledby": r ? Le(e) : void 0,
+          "aria-describedby": n ? Fe(e) : void 0,
         };
       }
       const Ae = s.forwardRef(function (e, t) {
@@ -24055,12 +24060,12 @@
           D = c ?? "inline",
           k = y ?? "front",
           O = "front" == k && !!a,
-          F = "before-children" == k && !!a,
-          L = "inline" == D && !!l,
+          L = "before-children" == k && !!a,
+          F = "inline" == D && !!l,
           x = "below" == D && !!l,
           A = p ?? (T ? "shift-children-below" : "keep-inline"),
           z = !!(I.onClick || I.onActivate || I.focusable),
-          N = (null != a && O) || null != n || (L && null != l),
+          N = (null != a && O) || null != n || (F && null != l),
           P = h ?? "min",
           W = g ?? "standard",
           U = f ?? "standard",
@@ -24102,7 +24107,7 @@
               Te().Field,
               b && Te().Disabled,
               N && Te().WithFirstRow,
-              L && Te().WithChildrenInline,
+              F && Te().WithChildrenInline,
               x && Te().WithChildrenBelow,
               "center" == q && Te().VerticalAlignCenter,
               "shift-children-below" == A && Te().InlineWrapShiftsChildrenBelow,
@@ -24125,7 +24130,7 @@
               { className: Te().FieldLabelRow },
               s.createElement(
                 "div",
-                { className: Te().FieldLabel, id: Fe(r) },
+                { className: Te().FieldLabel, id: Le(r) },
                 O &&
                   s.createElement(
                     "div",
@@ -24135,11 +24140,11 @@
                 n,
                 B && s.createElement(_.o, { tooltip: B }),
               ),
-              L &&
+              F &&
                 s.createElement(
                   "div",
                   { className: Te().FieldChildrenWithIcon },
-                  F &&
+                  L &&
                     s.createElement(
                       "div",
                       {
@@ -24161,7 +24166,7 @@
             s.createElement(
               "div",
               { className: Te().FieldChildrenWithIcon },
-              F &&
+              L &&
                 s.createElement(
                   "div",
                   { className: (0, u.A)(Te().FieldIcon, Te().BeforeChildren) },
@@ -24172,7 +24177,7 @@
           i &&
             s.createElement(
               "div",
-              { className: Te().FieldDescription, id: Le(r) },
+              { className: Te().FieldDescription, id: Fe(r) },
               i,
             ),
         );
@@ -25505,47 +25510,49 @@
               showBookendLabels: D,
               showHandle: k,
               step: O,
-              strValueSuffix: F,
-              trackStyleOverride: L,
-              trackTone: x,
-              ...A
+              strValueSuffix: L,
+              trackStyleOverride: F,
+              trackStyleBackground: x,
+              trackForegroundVisible: A = !0,
+              trackTone: z,
+              ...N
             } = this.props,
-            z = D ?? !1,
-            N = S ?? !z,
-            P = z ? 2 : w,
-            W = z
+            P = D ?? !1,
+            W = S ?? !P,
+            U = P ? 2 : w,
+            H = P
               ? [
                   { notchIndex: 0, label: `${e}` },
                   { notchIndex: 1, label: `${t}` },
                 ]
               : C,
-            U = h ?? !0,
-            H = this.normalizedDefaultValue,
-            j = this.normalizedSliderOrigin,
-            V = null != H,
-            q = "top-caret" == T,
-            G = !q,
-            Z = R || M,
-            K = {};
+            j = h ?? !0,
+            V = this.normalizedDefaultValue,
+            q = this.normalizedSliderOrigin,
+            G = null != V,
+            Z = "top-caret" == T,
+            K = !Z,
+            Y = R || M,
+            X = {};
           this.CanResetToDefault &&
-            (K[ue.pR.SECONDARY] = (0, m.we)("#ResetToDefault"));
-          let Y = `${it().SliderHandle} SliderHandle`,
-            X = `${it().SliderHandleContainer} SliderHandleContainer `;
+            (X[ue.pR.SECONDARY] = (0, m.we)("#ResetToDefault"));
+          let Q = `${it().SliderHandle} SliderHandle`,
+            $ = `${it().SliderHandleContainer} SliderHandleContainer `;
           "verticalline" == g
-            ? ((Y = `${it().VerticalLineSliderHandle} SliderHandle`),
-              (X = `${it().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+            ? ((Q = `${it().VerticalLineSliderHandle} SliderHandle`),
+              ($ = `${it().VerticalLineSliderHandleContainer} SliderHandleContainer `))
             : ("leftparen" != g && "rightparen" != g) ||
-              ((Y = (0, u.A)(
+              ((Q = (0, u.A)(
                 it().ParenSliderHandle,
                 "leftparen" == g ? it().Left : it().Right,
                 "SliderHandle",
               )),
-              (X = (0, u.A)(
+              ($ = (0, u.A)(
                 it().ParenSliderHandleContainer,
                 "leftparen" == g ? it().Left : it().Right,
                 "SliderHandleContainer",
               )));
-          const Q = Z(r);
+          const J = Y(r);
           return s.createElement(
             ot,
             {
@@ -25561,8 +25568,8 @@
               onOKActionDescription: l
                 ? null
                 : (0, m.we)("#Slider_AdjustSlider"),
-              focusable: U,
-              childFocusDisabled: l || !U,
+              focusable: j,
+              childFocusDisabled: l || !j,
               onContextMenu: this.OnContextMenu,
               onOKButton: l
                 ? () => de.eZ.PlayNavSound(de.PN.FailedNav)
@@ -25573,22 +25580,23 @@
               onSecondaryActionDescription: this.CanResetToDefault
                 ? (0, m.we)("#ResetToDefault")
                 : void 0,
-              actionDescriptionMap: K,
+              actionDescriptionMap: X,
             },
             s.createElement(
               a.ml,
               {
                 role: "slider",
                 "aria-valuenow": r,
-                "aria-valuetext": Q,
-                ...A,
+                "aria-valuetext": J,
+                ...N,
                 className: (0, u.A)(
                   it().SliderControlAndNotches,
                   l && it().Disabled,
-                  V && it().WithDefaultValue,
-                  V && G && it().DefaultValueIsColorRange,
-                  V && G && "left" == T.side && it().DefaultValueColorLeft,
-                  V && G && "left" != T.side && it().DefaultValueColorRight,
+                  G && it().WithDefaultValue,
+                  G && K && it().DefaultValueIsColorRange,
+                  G && K && "left" == T.side && it().DefaultValueColorLeft,
+                  G && K && "left" != T.side && it().DefaultValueColorRight,
+                  !A && it().ForegroundInvisible,
                 ),
                 focusable: this.isKeyNavTarget,
                 noFocusRing: !0,
@@ -25596,9 +25604,9 @@
                 onBlur: this.OnInnerSliderBlur,
                 style: {
                   "--normalized-slider-value": this.normalizedClampedValue,
-                  "--normalized-slider-default-value": H,
-                  "--normalized-slider-origin": j,
-                  "--default-value-track-color": G
+                  "--normalized-slider-default-value": V,
+                  "--normalized-slider-origin": q,
+                  "--default-value-track-color": K
                     ? T.trackForegroundColor
                     : void 0,
                   "--slider-extra-notch-padding": p ?? "0px",
@@ -25617,13 +25625,15 @@
                 s.createElement("div", {
                   className: (0, u.A)(
                     it().SliderTrack,
-                    null != w && N && it().SliderHasNotches,
-                    { [it().SliderTrackDark]: "dark" === x },
+                    null != w && W && it().SliderHasNotches,
+                    { [it().SliderTrackDark]: "dark" === z },
+                    x,
                     "SliderTrack",
                   ),
+                  style: this.props.trackStyleOverride,
                 }),
-                V &&
-                  q &&
+                G &&
+                  Z &&
                   s.createElement(
                     "div",
                     { className: it().DefaultValueTickContainer },
@@ -25639,20 +25649,20 @@
                   this.showHandle &&
                   s.createElement(
                     "div",
-                    { className: X },
+                    { className: $ },
                     s.createElement(
                       "div",
-                      { className: Y, ref: this.m_refHandle },
+                      { className: Q, ref: this.m_refHandle },
                       "leftparen" == g && s.createElement(pe.Epp, null),
                       "rightparen" == g && s.createElement(pe.jvG, null),
                     ),
                   ),
               ),
               s.createElement(vt, {
-                notchCount: P,
-                notchLabels: W,
+                notchCount: U,
+                notchLabels: H,
                 sliderValue: this.normalizedClampedValue,
-                notchTicksVisible: N,
+                notchTicksVisible: W,
                 renderNotch: E,
               }),
             ),
@@ -26211,45 +26221,47 @@
         Bal: () => T,
         CeX: () => M,
         Epp: () => E,
-        Gj3: () => q,
+        FId: () => W,
+        Gj3: () => Z,
         JPq: () => k,
-        Kz1: () => Y,
-        LSz: () => P,
+        Kz1: () => Q,
+        LSz: () => U,
         MGO: () => u,
-        Moo: () => K,
+        Moo: () => X,
         Q9b: () => B,
         QRo: () => g,
-        UKJ: () => W,
+        UKJ: () => H,
         VnB: () => I,
-        YqK: () => U,
+        YqK: () => j,
         ZyV: () => y,
         _V3: () => C,
         b8_: () => p,
-        bmT: () => O,
+        bmT: () => L,
         ffu: () => _,
         glU: () => S,
         i3G: () => m,
-        iYj: () => j,
+        iYj: () => q,
+        jE0: () => O,
         jRw: () => F,
-        jXA: () => z,
+        jXA: () => N,
         jvG: () => R,
-        kdM: () => G,
+        kdM: () => K,
         l4n: () => D,
         lMJ: () => f,
         lrM: () => h,
         nl: () => b,
         pcV: () => l,
-        qOW: () => L,
-        qzO: () => A,
-        r7n: () => N,
+        qOW: () => x,
+        qzO: () => z,
+        r7n: () => P,
         rxV: () => v,
         sED: () => w,
-        tI4: () => V,
+        tI4: () => G,
         u49: () => d,
-        vet: () => Z,
-        x7X: () => x,
+        vet: () => Y,
+        x7X: () => A,
         xIk: () => o,
-        ycU: () => H,
+        ycU: () => V,
       });
       var n = r(90626),
         i = (r(51396), r(97875)),
@@ -27180,7 +27192,44 @@
           ),
         );
       }
-      function O() {
+      function O(e) {
+        return n.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextBullets",
+            baseProfile: "tiny",
+            version: "1.2",
+            viewBox: "0 0 36 36",
+            ...e,
+          },
+          n.createElement("path", {
+            d: "M15.2,11.1h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,19.5h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15.2,27.9h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8Z",
+            fill: "#fff",
+            strokeWidth: "0",
+          }),
+          n.createElement(
+            "g",
+            null,
+            n.createElement("path", {
+              d: "M5.8,12.5v-1h1.6v1h-1.6ZM5.9,7.9v-1.1l1.4-.5v1.1l-1.4.5ZM7.3,12.5v-6.2h1.2v6.2h-1.2ZM8.4,12.5v-1h1.4v1h-1.4Z",
+              fill: "#fff",
+              strokeWidth: "0",
+            }),
+            n.createElement("path", {
+              d: "M5.7,21v-1.2c.9-.5,1.6-1,2.1-1.5.5-.5.7-1.1.7-1.6s0-.5-.2-.6c-.1-.1-.4-.2-.6-.2s-.5,0-.8.2c-.3.1-.5.3-.7.5l-.7-.8c.2-.3.5-.6.9-.8.4-.2.8-.3,1.3-.3.7,0,1.2.2,1.5.5.3.3.5.8.5,1.4s-.2,1.1-.5,1.7c-.3.5-.9,1-1.6,1.5v1.2h-1.8ZM6,21v-1.1h3.9v1.1h-3.9Z",
+              fill: "#fff",
+              strokeWidth: "0",
+            }),
+            n.createElement("path", {
+              d: "M6.8,26.9v-1c.3,0,.6-.1.9-.2.3,0,.4-.2.6-.4s.2-.3.2-.5,0-.3-.2-.4c-.1,0-.3-.1-.5-.1s-.5,0-.8.1-.5.2-.8.4l-.6-.9c.3-.3.6-.5,1-.6.4-.1.8-.2,1.2-.2s1.1.1,1.4.4c.3.2.5.6.5,1s-.1.7-.4,1c-.3.3-.6.5-1,.6v.5l-1.4.2ZM7.4,29.6c-.3,0-.6,0-.9,0-.3,0-.5,0-.7-.2v-1.1c.3,0,.5.1.8.2.2,0,.5,0,.9,0s.7,0,.9-.2c.2-.1.3-.3.3-.6s0-.3-.2-.5c-.1-.1-.3-.2-.6-.3-.2,0-.5,0-.9,0h-.1v-1c-.1,0,1.2.5,1.2.5.5,0,1,.1,1.3.4.3.3.5.6.5,1.1s-.2,1-.6,1.3c-.4.3-1,.5-1.8.5Z",
+              fill: "#fff",
+              strokeWidth: "0",
+            }),
+          ),
+        );
+      }
+      function L() {
         return n.createElement(
           "svg",
           {
@@ -27218,7 +27267,7 @@
           ),
         );
       }
-      function L() {
+      function x() {
         return n.createElement(
           "svg",
           {
@@ -27237,7 +27286,7 @@
           ),
         );
       }
-      function x() {
+      function A() {
         return n.createElement(
           "svg",
           {
@@ -27256,7 +27305,7 @@
           ),
         );
       }
-      function A() {
+      function z() {
         return n.createElement(
           "svg",
           {
@@ -27275,7 +27324,7 @@
           ),
         );
       }
-      function z() {
+      function N() {
         return n.createElement(
           "svg",
           {
@@ -27294,7 +27343,7 @@
           ),
         );
       }
-      function N() {
+      function P() {
         return n.createElement(
           "svg",
           {
@@ -27318,7 +27367,32 @@
           }),
         );
       }
-      function P() {
+      function W() {
+        return n.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            className: "SVGIcon_Button SVGIcon_TextH5",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          n.createElement("rect", {
+            x: "3",
+            y: "14",
+            width: "18",
+            height: "6",
+            fill: "currentColor",
+            opacity: "0.4",
+          }),
+          n.createElement("path", {
+            d: "M12 3L7 17H9L10.2 13H13.8L15 17H17L12 3ZM11.1 11L12 8L12.9 11H11.1Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function U() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27359,7 +27433,7 @@
           ),
         );
       }
-      function W() {
+      function H() {
         return n.createElement(
           "svg",
           {
@@ -27378,7 +27452,7 @@
           ),
         );
       }
-      function U() {
+      function j() {
         return n.createElement(
           "svg",
           {
@@ -27397,7 +27471,7 @@
           ),
         );
       }
-      function H() {
+      function V() {
         return n.createElement(
           "svg",
           {
@@ -27426,7 +27500,7 @@
           ),
         );
       }
-      function j() {
+      function q() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27458,7 +27532,7 @@
           ),
         );
       }
-      function V() {
+      function G() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27492,7 +27566,7 @@
           ),
         );
       }
-      function q() {
+      function Z() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27528,7 +27602,7 @@
           ),
         );
       }
-      function G(e) {
+      function K(e) {
         const { bGreyOutRightSide: t, ...r } = e;
         return t
           ? n.createElement(
@@ -27574,7 +27648,7 @@
               }),
             );
       }
-      function Z(e) {
+      function Y(e) {
         return n.createElement(
           "svg",
           {
@@ -27618,7 +27692,7 @@
           }),
         );
       }
-      function K(e) {
+      function X(e) {
         return n.createElement(
           "svg",
           {
@@ -27636,7 +27710,7 @@
           }),
         );
       }
-      function Y(e) {
+      function Q(e) {
         return n.createElement(
           "svg",
           {
@@ -27767,7 +27841,7 @@
     },
     81194: (e, t, r) => {
       "use strict";
-      r.d(t, { L: () => y });
+      r.d(t, { L: () => B });
       var n = r(90626);
       function i(e) {
         const [t, r] = (0, n.useState)(!0);
@@ -27783,16 +27857,17 @@
       var s = r(13871),
         a = r(84811),
         o = r(72739),
-        l = r(48902),
-        c = r(68451),
-        u = r(97348),
-        m = r(25118),
-        d = r(78327);
-      function p(e) {
+        l = r(64753),
+        c = r(48902),
+        u = r(68451),
+        m = r(97348),
+        d = r(25118),
+        p = r(78327);
+      function h(e) {
         const { Modal: t } = e,
           { name: r, modalProps: i, options: a } = t,
-          p = (0, s.R7)().ownerWindow,
-          { popup: h, element: g } = (0, l.OJ)(
+          h = (0, s.R7)().ownerWindow,
+          { popup: g, element: _ } = (0, c.OJ)(
             r,
             {
               title: i.strTitle,
@@ -27804,8 +27879,8 @@
               owner_window: void 0,
               replace_existing_popup: !0,
               target_browser: i.browserContext,
-              availscreenwidth: p.screen.availWidth,
-              availscreenheight: p.screen.availHeight,
+              availscreenwidth: h.screen.availWidth,
+              availscreenheight: h.screen.availHeight,
               bModal: i.bHideMainWindowForPopouts,
             },
             {
@@ -27816,7 +27891,7 @@
                     a,
                     o = t.popupWidth || 500,
                     l = t.popupHeight || 400;
-                  if (d.TS.IN_CLIENT && n?.SteamClient?.Browser?.GetBrowserID)
+                  if (p.TS.IN_CLIENT && n?.SteamClient?.Browser?.GetBrowserID)
                     a = n.SteamClient.Browser.GetBrowserID();
                   else {
                     let e = n.screen;
@@ -27832,32 +27907,33 @@
                     center_on_window: r.bCenterOnWindow ? n : void 0,
                     window_opener_id: a,
                   };
-                })(e, i, a, p),
+                })(e, i, a, h),
               onClose: () => i.fnOnClose && i.fnOnClose(),
             },
-          ),
-          _ = a?.bHideActions,
-          f =
+          );
+        (0, l.l6)(h, "click", () => g?.SteamClient.Window.BringToFront());
+        const f = a?.bHideActions,
+          b =
             "number" == typeof a?.nDragAreaHeight
               ? { height: a.nDragAreaHeight }
               : void 0;
-        return g
+        return _
           ? o.createPortal(
               n.createElement(
                 s.kc,
-                { ownerWindow: h },
+                { ownerWindow: g },
                 n.createElement(
                   "div",
-                  { className: "PopupFullWindow", onContextMenu: c.aE },
-                  n.createElement(m.c, {
+                  { className: "PopupFullWindow", onContextMenu: u.aE },
+                  n.createElement(d.c, {
                     hideMin: !0,
                     hideMax: !0,
-                    popup: h,
-                    hideActions: _,
-                    style: f,
+                    popup: g,
+                    hideActions: f,
+                    style: b,
                   }),
                   n.createElement(
-                    u.EO,
+                    m.EO,
                     {
                       browserInfo: i.browserContext,
                       bCenterPopupsOnWindow: a.bCenterOnWindow,
@@ -27866,11 +27942,11 @@
                   ),
                 ),
               ),
-              g,
+              _,
             )
           : null;
       }
-      function h(e) {
+      function g(e) {
         const { ModalManager: t } = e,
           [r, i] = n.useState(void 0),
           [s, a] = n.useState(!0),
@@ -27894,14 +27970,14 @@
             });
         }, []);
         return r
-          ? n.createElement(g, {
+          ? n.createElement(_, {
               key: o.current,
               onMeasureComplete: c,
               request: r,
             })
           : null;
       }
-      function g(e) {
+      function _(e) {
         const [t, r] = n.useState(),
           i = (0, s.R7)().ownerWindow;
         return (
@@ -27919,11 +27995,11 @@
             );
           }, [i]),
           t
-            ? o.createPortal(n.createElement(_, { ...e, elContainer: t }), t)
+            ? o.createPortal(n.createElement(f, { ...e, elContainer: t }), t)
             : null
         );
       }
-      function _(e) {
+      function f(e) {
         const { elContainer: t, onMeasureComplete: r, request: i } = e;
         return (
           n.useEffect(() => {
@@ -27935,7 +28011,7 @@
               (async function (e, t) {
                 t && (await t);
                 let r = document;
-                d.TS.IN_STEAMUI && r.fonts && (await r.fonts.ready);
+                p.TS.IN_STEAMUI && r.fonts && (await r.fonts.ready);
                 const n = e.getBoundingClientRect(),
                   i = Math.ceil(n.height),
                   s = Math.ceil(n.width);
@@ -27947,22 +28023,22 @@
           n.createElement(a.tH, null, i.rctToMeasure)
         );
       }
-      var f = r(52038),
-        b = r(73745),
-        w = r(78025),
-        C = r(76222),
-        M = r(88843),
-        S = r(32754);
-      function v(e) {
+      var b = r(52038),
+        w = r(73745),
+        C = r(78025),
+        M = r(76222),
+        S = r(88843),
+        v = r(32754);
+      function y(e) {
         n.useEffect(() => {
           if (e)
             return (
-              document.body.classList.add(M.BodyNoScrollDialog),
-              () => document.body.classList.remove(M.BodyNoScrollDialog)
+              document.body.classList.add(S.BodyNoScrollDialog),
+              () => document.body.classList.remove(S.BodyNoScrollDialog)
             );
         }, [e]);
       }
-      function y(e) {
+      function B(e) {
         let {
           ModalManager: t,
           bRegisterModalManager: r = !0,
@@ -27975,10 +28051,10 @@
         const m = t.modals,
           d = m && !!m.length,
           p = t.active_modal;
-        v(d),
+        y(d),
           (function (e) {
             const t = (0, s.R7)().ownerWindow,
-              r = (0, b.CH)(),
+              r = (0, w.CH)(),
               i = n.useCallback(() => {
                 t?.SteamClient?.Window && t.SteamClient.Window.BringToFront();
               }, [t]);
@@ -27988,18 +28064,18 @@
                 [e, i],
               );
           })(t);
-        const g = (function (e, t) {
-          return (0, b.QS)(
+        const h = (function (e, t) {
+          return (0, w.QS)(
             (r) => {
               if (!r || !t) return;
               const n = r.ownerDocument.defaultView;
-              return C.BR.RegisterModalManager(e, n);
+              return M.BR.RegisterModalManager(e, n);
             },
             [e],
           );
         })(t, r);
         let _ = null,
-          M = !l;
+          f = !l;
         return (
           m && m.length
             ? (_ = m.map((e) => {
@@ -28009,17 +28085,17 @@
                     active: t,
                     rctActiveContextMenus: t && l ? o : void 0,
                   };
-                return e instanceof w._F
-                  ? n.createElement(E, { ...r, modal: e, Component: a ?? R })
-                  : e instanceof w.$9
-                    ? n.createElement(B, {
+                return e instanceof C._F
+                  ? n.createElement(R, { ...r, modal: e, Component: a ?? I })
+                  : e instanceof C.$9
+                    ? n.createElement(E, {
                         ...r,
                         modal: e,
                         bUseDialogElement: l,
                       })
                     : void 0;
               }))
-            : ((M = !0), (c = { ...c, display: "none" })),
+            : ((f = !0), (c = { ...c, display: "none" })),
           n.createElement(
             n.Fragment,
             null,
@@ -28031,22 +28107,22 @@
                 {
                   ...u,
                   style: c,
-                  ref: g,
-                  className: (0, f.A)(u.className, "FullModalOverlay"),
+                  ref: h,
+                  className: (0, b.A)(u.className, "FullModalOverlay"),
                 },
                 n.createElement("div", {
                   className: "ModalOverlayContent ModalOverlayBackground",
                 }),
                 _,
               ),
-              M && o,
+              f && o,
             ),
-            n.createElement(h, { ModalManager: t }),
-            n.createElement(T, { ModalManager: t }),
+            n.createElement(g, { ModalManager: t }),
+            n.createElement(D, { ModalManager: t }),
           )
         );
       }
-      function B(e) {
+      function E(e) {
         const {
           modal: t,
           rctActiveContextMenus: r,
@@ -28066,7 +28142,7 @@
           a.tH,
           null,
           n.createElement("div", {
-            className: (0, f.A)(
+            className: (0, b.A)(
               "ModalOverlayContent",
               i ? "active" : "inactive",
             ),
@@ -28074,25 +28150,25 @@
           }),
           r,
         );
-        return s ? n.createElement(I, { active: i }, o) : o;
+        return s ? n.createElement(T, { active: i }, o) : o;
       }
-      function E(e) {
+      function R(e) {
         const {
             modal: t,
             active: r,
             rctActiveContextMenus: i,
             Component: s,
           } = e,
-          o = (0, b.CH)();
+          o = (0, w.CH)();
         return (
-          (0, b.hL)(t.ModalUpdatedCallback, o),
+          (0, w.hL)(t.ModalUpdatedCallback, o),
           n.createElement(
             a.tH,
             null,
             n.createElement(
               s,
               {
-                className: (0, f.A)(
+                className: (0, b.A)(
                   "ModalOverlayContent",
                   r ? "active" : "inactive",
                 ),
@@ -28105,19 +28181,19 @@
           )
         );
       }
-      function R(e) {
+      function I(e) {
         const { className: t, active: r, children: i } = e;
         return n.createElement(
-          I,
+          T,
           { active: r },
           n.createElement(
-            S.C$,
+            v.C$,
             null,
             n.createElement("div", { className: t, tabIndex: -1 }, i),
           ),
         );
       }
-      function I(e) {
+      function T(e) {
         const { active: t, children: r } = e,
           i = n.useRef(null);
         return (
@@ -28129,23 +28205,23 @@
             "dialog",
             {
               ref: i,
-              className: M.ModalDialog,
+              className: S.ModalDialog,
               onCancel: (e) => e.preventDefault(),
             },
             e.children,
           )
         );
       }
-      function T(e) {
+      function D(e) {
         const { ModalManager: t } = e,
-          r = (0, b.CH)();
+          r = (0, w.CH)();
         return (
-          (0, b.hL)(t.LegacyPopupModalCountChangedCallbacks, r),
+          (0, w.hL)(t.LegacyPopupModalCountChangedCallbacks, r),
           n.createElement(
             n.Fragment,
             null,
             t.legacy_popup_modals.map((e) =>
-              n.createElement(p, { key: e.key, Modal: e }),
+              n.createElement(h, { key: e.key, Modal: e }),
             ),
           )
         );
@@ -29171,101 +29247,103 @@
     12155: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $$j: () => se,
-        $4X: () => fe,
-        $vK: () => Pe,
+        $$j: () => ae,
+        $4X: () => be,
+        $vK: () => Ue,
         Aj0: () => z,
-        BQz: () => Ne,
-        Bki: () => xe,
+        BQz: () => We,
+        Bki: () => ze,
         CeX: () => R,
         DK4: () => p,
-        DQe: () => Fe,
+        DQe: () => xe,
         Dp6: () => q,
         FEq: () => te,
         GB9: () => d,
-        Gkr: () => we,
-        GrD: () => ce,
+        Gkr: () => Ce,
+        GrD: () => ue,
         IrQ: () => I,
         Jlk: () => y,
         KKS: () => X,
-        KQV: () => ke,
+        KQV: () => Oe,
+        MJR: () => re,
         MUh: () => Y,
-        MbF: () => Je,
+        MbF: () => tt,
         MvQ: () => x,
         N8C: () => J,
-        NCC: () => be,
-        OSJ: () => Ze,
+        NCC: () => we,
+        OSJ: () => Ye,
         P7r: () => $,
         Q38: () => u,
         Qte: () => P,
         ROZ: () => U,
-        SYj: () => Se,
-        T4m: () => _e,
+        SYj: () => ve,
+        T4m: () => fe,
         V5W: () => A,
         VR: () => K,
-        VSd: () => Ve,
-        Vgk: () => ze,
-        VnB: () => L,
-        Vt2: () => We,
-        WX$: () => Te,
+        VSd: () => Ge,
+        Vgk: () => Pe,
+        VnB: () => F,
+        Vt2: () => He,
+        WX$: () => De,
         X: () => b,
         X4B: () => B,
-        XH_: () => Oe,
+        XH_: () => Le,
         XTb: () => _,
         Xjb: () => O,
-        Xz0: () => oe,
+        Xz0: () => le,
         YNO: () => f,
-        ZPc: () => he,
-        ZWw: () => F,
-        ZjT: () => ye,
-        ZnA: () => Ae,
-        _VW: () => ue,
-        aVR: () => Re,
-        agV: () => Xe,
+        ZPc: () => ge,
+        ZWw: () => L,
+        ZjT: () => Be,
+        ZnA: () => Ne,
+        _VW: () => me,
+        aVR: () => Ie,
+        agV: () => $e,
         apU: () => V,
-        bKN: () => Qe,
+        b8_: () => Fe,
+        bKN: () => Je,
         bPr: () => G,
-        bcZ: () => Be,
-        bfp: () => me,
-        ccb: () => He,
-        dJT: () => ne,
+        bcZ: () => Ee,
+        bfp: () => de,
+        ccb: () => Ve,
+        dJT: () => ie,
         eSy: () => h,
         eTF: () => E,
-        emH: () => et,
-        f5X: () => re,
+        emH: () => rt,
+        f5X: () => ne,
         fSs: () => M,
-        faJ: () => le,
-        ffu: () => ie,
-        g$j: () => Ue,
+        faJ: () => ce,
+        ffu: () => se,
+        g$j: () => je,
         hz4: () => k,
         i3G: () => T,
         i6V: () => j,
         jGG: () => S,
-        jIP: () => Ie,
-        jZW: () => pe,
+        jIP: () => Te,
+        jZW: () => he,
         jZl: () => ee,
-        jdP: () => Ke,
-        kPc: () => ae,
-        lRD: () => ve,
-        nm_: () => Le,
-        o5Q: () => Ee,
-        ofN: () => qe,
-        oy: () => Ge,
+        jdP: () => Xe,
+        kPc: () => oe,
+        lRD: () => ye,
+        nm_: () => Ae,
+        o5Q: () => Re,
+        ofN: () => Ze,
+        oy: () => Ke,
         qcc: () => Q,
-        qnF: () => ge,
+        qnF: () => _e,
         qzq: () => H,
-        rNt: () => je,
+        rNt: () => qe,
         rfv: () => Z,
-        sDU: () => $e,
+        sDU: () => et,
         sED: () => w,
         tID: () => N,
-        tIO: () => Ye,
+        tIO: () => Qe,
         uMb: () => D,
         vRz: () => v,
         wB_: () => m,
-        wVV: () => de,
+        wVV: () => pe,
         xv8: () => C,
-        yCC: () => De,
+        yCC: () => ke,
         y_e: () => W,
         zD7: () => g,
       });
@@ -29333,7 +29411,7 @@
           }),
         );
       }
-      function d() {
+      function d(e) {
         return n.createElement(
           "svg",
           {
@@ -29343,6 +29421,7 @@
             viewBox: "0 0 128 128",
             x: "0px",
             y: "0px",
+            ...e,
           },
           n.createElement("polygon", {
             points:
@@ -29942,7 +30021,7 @@
             x: "24",
             y: "42.167",
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "208",
@@ -29950,7 +30029,7 @@
           }),
           n.createElement("line", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "42",
             strokeMiterlimit: "10",
             x1: "24",
@@ -29976,7 +30055,7 @@
           },
           n.createElement("line", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             x1: "24",
@@ -29986,7 +30065,7 @@
           }),
         );
       }
-      function F() {
+      function L() {
         return n.createElement(
           "svg",
           {
@@ -30002,7 +30081,7 @@
           },
           n.createElement("polyline", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
@@ -30011,7 +30090,7 @@
             x: "24",
             y: "90.861",
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "149",
@@ -30019,7 +30098,7 @@
           }),
         );
       }
-      function L() {
+      function F() {
         return n.createElement(
           "svg",
           {
@@ -30175,10 +30254,11 @@
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
             fill: "#FFFFFF",
-            className: t,
             x: "0px",
             y: "0px",
             viewBox: "0 0 256 256",
+            ...e,
+            className: t,
           },
           n.createElement("path", {
             fill: "currentColor",
@@ -30635,6 +30715,26 @@
         return n.createElement(
           "svg",
           {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_CornerRibbon",
+            x: "0px",
+            y: "0px",
+            width: "254.154px",
+            height: "146.13px",
+            viewBox: "1 1 254.154 146.13",
+          },
+          n.createElement("path", {
+            fill: "#ffffff",
+            d: "M9.322,147.13c-4.577,0-8.322-3.745-8.322-8.321V9.322C1,4.745,4.745,1,9.322,1h239.084 c4.576,0,7.531,3.661,6.564,8.135l-28.037,129.86c-0.967,4.475-5.502,8.135-10.078,8.135H9.322z",
+          }),
+        );
+      }
+      function ne() {
+        return n.createElement(
+          "svg",
+          {
             xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button SVGIcon_Download",
             viewBox: "0 0 36 36",
@@ -30657,7 +30757,7 @@
           ),
         );
       }
-      function ne() {
+      function ie() {
         return n.createElement(
           "svg",
           {
@@ -30676,7 +30776,7 @@
           }),
         );
       }
-      function ie() {
+      function se() {
         return n.createElement(
           "svg",
           {
@@ -30714,7 +30814,7 @@
           }),
         );
       }
-      function se() {
+      function ae() {
         return n.createElement(
           "svg",
           {
@@ -30750,7 +30850,7 @@
           }),
         );
       }
-      function ae(e) {
+      function oe(e) {
         return n.createElement(
           "svg",
           {
@@ -30773,7 +30873,7 @@
           }),
         );
       }
-      function oe() {
+      function le(e) {
         return n.createElement(
           "svg",
           {
@@ -30786,6 +30886,7 @@
             height: "100%",
             viewBox: "0 0 128 128",
             enableBackground: "new 0 0 128 128",
+            ...e,
           },
           n.createElement("rect", {
             fill: "currentColor",
@@ -30813,7 +30914,7 @@
           }),
         );
       }
-      function le() {
+      function ce() {
         return n.createElement(
           "svg",
           {
@@ -30829,7 +30930,7 @@
           n.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
         );
       }
-      function ce() {
+      function ue() {
         return n.createElement(
           "svg",
           {
@@ -30848,7 +30949,7 @@
           }),
         );
       }
-      function ue() {
+      function me() {
         return n.createElement(
           "svg",
           {
@@ -30871,7 +30972,7 @@
           }),
         );
       }
-      function me(e) {
+      function de(e) {
         return n.createElement(
           "svg",
           {
@@ -30890,7 +30991,7 @@
           }),
         );
       }
-      function de(e) {
+      function pe(e) {
         return n.createElement(
           "svg",
           { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -30917,7 +31018,7 @@
           }),
         );
       }
-      function pe(e) {
+      function he(e) {
         return n.createElement(
           "svg",
           {
@@ -30934,7 +31035,7 @@
           }),
         );
       }
-      function he() {
+      function ge() {
         return n.createElement(
           "svg",
           {
@@ -30965,7 +31066,7 @@
           ),
         );
       }
-      function ge(e) {
+      function _e(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30979,7 +31080,7 @@
           }),
         );
       }
-      function _e(e) {
+      function fe(e) {
         return n.createElement(
           "svg",
           { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 100 100", ...e },
@@ -30993,7 +31094,7 @@
           }),
         );
       }
-      function fe() {
+      function be() {
         return n.createElement(
           "svg",
           {
@@ -31011,7 +31112,7 @@
           }),
         );
       }
-      function be() {
+      function we() {
         return n.createElement(
           "svg",
           {
@@ -31033,7 +31134,7 @@
           ),
         );
       }
-      function we() {
+      function Ce() {
         return n.createElement(
           "svg",
           {
@@ -31071,7 +31172,7 @@
           ),
         );
       }
-      function Ce(e) {
+      function Me(e) {
         return n.createElement(
           "svg",
           {
@@ -31090,7 +31191,7 @@
           }),
         );
       }
-      function Me(e) {
+      function Se(e) {
         return n.createElement(
           "svg",
           {
@@ -31110,12 +31211,12 @@
           }),
         );
       }
-      function Se(e) {
-        return (0, c.Ae)()
-          ? n.createElement(Me, { ...e })
-          : n.createElement(Ce, { ...e });
-      }
       function ve(e) {
+        return (0, c.Ae)()
+          ? n.createElement(Se, { ...e })
+          : n.createElement(Me, { ...e });
+      }
+      function ye(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31135,7 +31236,7 @@
           }),
         );
       }
-      function ye(e) {
+      function Be(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31158,7 +31259,7 @@
           }),
         );
       }
-      function Be(e) {
+      function Ee(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31181,7 +31282,7 @@
           }),
         );
       }
-      function Ee(e) {
+      function Re(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31204,7 +31305,7 @@
           }),
         );
       }
-      function Re(e) {
+      function Ie(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31227,7 +31328,7 @@
           }),
         );
       }
-      function Ie(e) {
+      function Te(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31250,7 +31351,7 @@
           }),
         );
       }
-      function Te(e) {
+      function De(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31273,7 +31374,7 @@
           }),
         );
       }
-      function De(e) {
+      function ke(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31302,7 +31403,7 @@
           }),
         );
       }
-      function ke(e) {
+      function Oe(e) {
         const { className: t, ...r } = e;
         return n.createElement(
           "svg",
@@ -31335,7 +31436,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function Le(e) {
         return n.createElement(
           "svg",
           {
@@ -31355,6 +31456,67 @@
         );
       }
       function Fe(e) {
+        const { direction: t, ...r } = e;
+        switch (t) {
+          case "up":
+            return n.createElement(
+              "svg",
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+              },
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
+              }),
+            );
+          case "down":
+            return n.createElement(
+              "svg",
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+              },
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
+              }),
+            );
+          case "left":
+            return n.createElement(
+              "svg",
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+              },
+              n.createElement("path", {
+                d: "M14.23 30.75L1.45996 18L14.23 5.20999L17.77 8.74999L8.53996 18L17.77 27.23L14.23 30.75ZM31.77 27.21L22.54 18L31.77 8.76999L28.23 5.20999L15.46 18L28.23 30.75L31.77 27.21Z",
+                fill: "currentColor",
+              }),
+            );
+          case "right":
+            return n.createElement(
+              "svg",
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+              },
+              n.createElement("path", {
+                d: "M19 30.75L31.77 18L19 5.20999L15.46 8.74999L24.69 18L15.46 27.23L19 30.75ZM1.46002 27.21L10.69 18L1.46002 8.76999L5.00002 5.20999L17.77 18L5.00002 30.75L1.46002 27.21Z",
+                fill: "currentColor",
+              }),
+            );
+        }
+      }
+      function xe(e) {
         const { className: t } = e;
         return n.createElement(
           "svg",
@@ -31372,7 +31534,7 @@
           }),
         );
       }
-      function Le(e) {
+      function Ae(e) {
         return n.createElement(
           "svg",
           {
@@ -31386,7 +31548,7 @@
           }),
         );
       }
-      function xe(e) {
+      function ze(e) {
         return n.createElement(
           "svg",
           {
@@ -31400,7 +31562,7 @@
           }),
         );
       }
-      function Ae(e) {
+      function Ne(e) {
         return n.createElement(
           "svg",
           {
@@ -31414,7 +31576,7 @@
           }),
         );
       }
-      function ze(e) {
+      function Pe(e) {
         return n.createElement(
           "svg",
           {
@@ -31428,7 +31590,7 @@
           }),
         );
       }
-      function Ne(e) {
+      function We(e) {
         return n.createElement(
           "svg",
           {
@@ -31442,7 +31604,7 @@
           }),
         );
       }
-      function Pe(e) {
+      function Ue(e) {
         return n.createElement(
           "svg",
           {
@@ -31456,7 +31618,7 @@
           }),
         );
       }
-      function We(e) {
+      function He(e) {
         return n.createElement(
           "svg",
           {
@@ -31470,7 +31632,7 @@
           }),
         );
       }
-      function Ue(e) {
+      function je(e) {
         return n.createElement(
           "svg",
           {
@@ -31484,7 +31646,7 @@
           }),
         );
       }
-      function He(e) {
+      function Ve(e) {
         return n.createElement(
           "svg",
           {
@@ -31504,7 +31666,7 @@
           }),
         );
       }
-      function je(e) {
+      function qe(e) {
         return n.createElement(
           "svg",
           {
@@ -31518,7 +31680,7 @@
           }),
         );
       }
-      function Ve(e) {
+      function Ge(e) {
         return n.createElement(
           "svg",
           {
@@ -31532,7 +31694,7 @@
           }),
         );
       }
-      function qe(e) {
+      function Ze(e) {
         return n.createElement(
           "svg",
           {
@@ -31558,7 +31720,7 @@
           }),
         );
       }
-      function Ge(e) {
+      function Ke(e) {
         return n.createElement(
           "svg",
           {
@@ -31572,7 +31734,7 @@
           }),
         );
       }
-      function Ze(e) {
+      function Ye(e) {
         return n.createElement(
           "svg",
           {
@@ -31586,7 +31748,7 @@
           }),
         );
       }
-      function Ke(e) {
+      function Xe(e) {
         return n.createElement(
           "svg",
           {
@@ -31603,7 +31765,7 @@
           }),
         );
       }
-      function Ye(e) {
+      function Qe(e) {
         return n.createElement(
           "svg",
           {
@@ -31617,7 +31779,7 @@
           }),
         );
       }
-      function Xe(e) {
+      function $e(e) {
         return n.createElement(
           "svg",
           {
@@ -31631,7 +31793,7 @@
           }),
         );
       }
-      function Qe(e) {
+      function Je(e) {
         return n.createElement(
           "svg",
           {
@@ -31645,7 +31807,7 @@
           }),
         );
       }
-      function $e(e) {
+      function et(e) {
         return n.createElement(
           "svg",
           {
@@ -31659,7 +31821,7 @@
           }),
         );
       }
-      function Je(e) {
+      function tt(e) {
         return n.createElement(
           "svg",
           {
@@ -31673,7 +31835,7 @@
           }),
         );
       }
-      function et(e) {
+      function rt(e) {
         return n.createElement(
           "svg",
           {
@@ -32812,13 +32974,7 @@
     },
     6144: (e, t, r) => {
       "use strict";
-      r.d(t, {
-        Jc: () => l,
-        Ji: () => u,
-        LU: () => c,
-        RR: () => m,
-        lu: () => a.l,
-      });
+      r.d(t, { Jc: () => l, Ji: () => u, LU: () => c, lu: () => a.l });
       var n = r(34629),
         i = r(62490),
         s = r(6419),
@@ -32884,15 +33040,6 @@
             e.element.removeEventListener(e.type, e.listener);
           this.m_rgListeners = [];
         }
-      }
-      async function m(e) {
-        const t = [],
-          r = Object.keys(e);
-        r.forEach((r) => t.push(e[r]));
-        return (await Promise.all(t)).reduce(
-          (e, t, n) => ((e[r[n]] = t), e),
-          {},
-        );
       }
       (0, n.Cg)(
         [s.o],
@@ -33449,7 +33596,7 @@
       }
       class C {
         static Set(e, t, r) {
-          if (e.length <= t) {
+          if ((e || (e = (0, o.$Y)([], 31, null)), e.length <= t)) {
             if (t >= 31) return e;
             e = (0, o.$Y)(e, t + 1, null);
           }
@@ -35045,6 +35192,8 @@
         );
       }
       function p() {
+        let e = navigator,
+          t = e && e.maxTouchPoint && e.maxTouchPoint > 1;
         (a = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (s = d("Valve Steam GameOverlay", "force_overlay_view")),
           (i = a || d("Valve Steam Client", "force_client_view")),
@@ -35052,8 +35201,7 @@
             d("iphone", "force_ios_view") ||
             d("ipad", "force_ios_view") ||
             d("ipod", "force_ios_view") ||
-            (d("macintosh", "force_ios_view") &&
-              d("safari", "force_ios_view"))),
+            (d("macintosh", "force_ios_view") && t)),
           (o = d("android", "force_android_view")),
           (n = !0);
       }

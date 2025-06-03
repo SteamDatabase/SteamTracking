@@ -4675,6 +4675,18 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
         _,
@@ -5081,6 +5093,17 @@
           _
         );
       }
+      function _(_, _, _ = 1) {
+        const _ = {
+          ..._,
+          colspan: _.colspan + _,
+        };
+        if (_.colwidth) {
+          _.colwidth = _.colwidth.slice();
+          for (let _ = 0; _ < _; _++) _.colwidth.splice(_, 0, 0);
+        }
+        return _;
+      }
       var _ = class _ extends _._ {
         constructor(_, _ = _) {
           const _ = _.node(-1),
@@ -5413,6 +5436,363 @@
           table: _,
         };
       }
+      function _(_, { map: _, tableStart: _, table: _ }, _) {
+        let _ = _ > 0 ? -1 : 0;
+        (function (_, _, _) {
+          const _ = _(_.type.schema).header_cell;
+          for (let _ = 0; _ < _.height; _++)
+            if (_.nodeAt(_.map[_ + _ * _.width]).type != _) return !1;
+          return !0;
+        })(_, _, _ + _) && (_ = 0 == _ || _ == _.width ? null : 0);
+        for (let _ = 0; _ < _.height; _++) {
+          const _ = _ * _.width + _;
+          if (_ > 0 && _ < _.width && _.map[_ - 1] == _.map[_]) {
+            const _ = _.map[_],
+              _ = _.nodeAt(_);
+            _.setNodeMarkup(
+              _.mapping.map(_ + _),
+              null,
+              _(_.attrs, _ - _.colCount(_)),
+            ),
+              (_ += _.attrs.rowspan - 1);
+          } else {
+            const _ =
+                null == _ ? _(_.type.schema).cell : _.nodeAt(_.map[_ + _]).type,
+              _ = _.positionAt(_, _, _);
+            _.insert(_.mapping.map(_ + _), _.createAndFill());
+          }
+        }
+        return _;
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_);
+          _(_(_._, _, _.left));
+        }
+        return !0;
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_);
+          _(_(_._, _, _.right));
+        }
+        return !0;
+      }
+      function _(_, { map: _, table: _, tableStart: _ }, _) {
+        const _ = _.mapping.maps.length;
+        for (let _ = 0; _ < _.height; ) {
+          const _ = _ * _.width + _,
+            _ = _.map[_],
+            _ = __webpack_require__.nodeAt(_),
+            _ = _.attrs;
+          if (
+            (_ > 0 && _.map[_ - 1] == _) ||
+            (_ < _.width - 1 && _.map[_ + 1] == _)
+          )
+            _.setNodeMarkup(
+              _.mapping.slice(_).map(_ + _),
+              null,
+              _(_, _ - _.colCount(_)),
+            );
+          else {
+            const _ = _.mapping.slice(_).map(_ + _);
+            _.delete(_, _ + _.nodeSize);
+          }
+          _ += _.rowspan;
+        }
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_),
+            _ = _._;
+          if (0 == _.left && _.right == _.map.width) return !1;
+          for (let _ = _.right - 1; _(_, _, _), _ != _.left; _--) {
+            const _ = _.tableStart ? _.doc.nodeAt(_.tableStart - 1) : _.doc;
+            if (!_) throw RangeError("No table found");
+            (_.table = _), (_.map = _.get(_));
+          }
+          _(_);
+        }
+        return !0;
+      }
+      function _(_, { map: _, tableStart: _, table: _ }, _) {
+        var _;
+        let _ = _;
+        for (let _ = 0; _ < _; _++) _ += _.child(_).nodeSize;
+        const _ = [];
+        let _ = _ > 0 ? -1 : 0;
+        (function (_, _, _) {
+          var _;
+          const _ = _(_.type.schema).header_cell;
+          for (let _ = 0; _ < _.width; _++)
+            if (
+              (null == (_ = _.nodeAt(_.map[_ + _ * _.width]))
+                ? void 0
+                : _.type) != _
+            )
+              return !1;
+          return !0;
+        })(_, _, _ + _) && (_ = 0 == _ || _ == _.height ? null : 0);
+        for (let _ = 0, _ = _.width * _; _ < _.width; _++, _++)
+          if (_ > 0 && _ < _.height && _.map[_] == _.map[_ - _.width]) {
+            const _ = _.map[_],
+              _ = _.nodeAt(_).attrs;
+            _.setNodeMarkup(_ + _, null, {
+              ..._,
+              rowspan: _.rowspan + 1,
+            }),
+              (_ += _.colspan - 1);
+          } else {
+            const _ =
+                null == _
+                  ? _(_.type.schema).cell
+                  : null == (_ = _.nodeAt(_.map[_ + _ * _.width]))
+                    ? void 0
+                    : _.type,
+              _ = null == _ ? void 0 : _.createAndFill();
+            _ && _.push(_);
+          }
+        return _.insert(_, _(_.type.schema).row.create(null, _)), _;
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_);
+          _(_(_._, _, _.top));
+        }
+        return !0;
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_);
+          _(_(_._, _, _.bottom));
+        }
+        return !0;
+      }
+      function _(_, { map: _, table: _, tableStart: _ }, _) {
+        let _ = 0;
+        for (let _ = 0; _ < _; _++) _ += __webpack_require__.child(_).nodeSize;
+        const _ = _ + __webpack_require__.child(_).nodeSize,
+          _ = _.mapping.maps.length;
+        _.delete(_ + _, _ + _);
+        const _ = new Set();
+        for (let _ = 0, _ = _ * _.width; _ < _.width; _++, _++) {
+          const _ = _.map[_];
+          if (!_.has(_))
+            if ((_.add(_), _ > 0 && _ == _.map[_ - _.width])) {
+              const _ = __webpack_require__.nodeAt(_).attrs;
+              _.setNodeMarkup(_.mapping.slice(_).map(_ + _), null, {
+                ..._,
+                rowspan: _.rowspan - 1,
+              }),
+                (_ += _.colspan - 1);
+            } else if (_ < _.height && _ == _.map[_ + _.width]) {
+              const _ = __webpack_require__.nodeAt(_),
+                _ = _.attrs,
+                _ = _.type.create(
+                  {
+                    ..._,
+                    rowspan: _.attrs.rowspan - 1,
+                  },
+                  _.content,
+                ),
+                _ = _.positionAt(_ + 1, _, _);
+              _.insert(_.mapping.slice(_).map(_ + _), _), (_ += _.colspan - 1);
+            }
+        }
+      }
+      function _(_, _) {
+        if (!_(_)) return !1;
+        if (_) {
+          const _ = _(_),
+            _ = _._;
+          if (0 == _.top && _.bottom == _.map.height) return !1;
+          for (let _ = _.bottom - 1; _(_, _, _), _ != _.top; _--) {
+            const _ = _.tableStart ? _.doc.nodeAt(_.tableStart - 1) : _.doc;
+            if (!_) throw RangeError("No table found");
+            (_.table = _), (_.map = _.get(_.table));
+          }
+          _(_);
+        }
+        return !0;
+      }
+      function _(_) {
+        const _ = _.content;
+        return (
+          1 == _.childCount &&
+          _.child(0).isTextblock &&
+          0 == _.child(0).childCount
+        );
+      }
+      function _(_, _) {
+        const _ = _.selection;
+        if (!(_ instanceof _) || _.$anchorCell.pos == _.$headCell.pos)
+          return !1;
+        const _ = _(_),
+          { map: _ } = _;
+        if (
+          (function ({ width: _, height: _, map: _ }, _) {
+            let _ = _.top * _ + _.left,
+              _ = _,
+              _ = (_.bottom - 1) * _ + _.left,
+              _ = _ + (_.right - _.left - 1);
+            for (let _ = _.top; _ < _.bottom; _++) {
+              if (
+                (_.left > 0 && _[_] == _[_ - 1]) ||
+                (_.right < _ && _[_] == _[_ + 1])
+              )
+                return !0;
+              (_ += _), (_ += _);
+            }
+            for (let _ = _.left; _ < _.right; _++) {
+              if (
+                (_.top > 0 && _[_] == _[_ - _]) ||
+                (_.bottom < _ && _[_] == _[_ + _])
+              )
+                return !0;
+              _++, _++;
+            }
+            return !1;
+          })(_, _)
+        )
+          return !1;
+        if (_) {
+          const _ = _._,
+            _ = {};
+          let _,
+            _,
+            _ = _._.empty;
+          for (let _ = _.top; _ < _.bottom; _++)
+            for (let _ = _.left; _ < _.right; _++) {
+              const _ = _.map[_ * _.width + _],
+                _ = _.table.nodeAt(_);
+              if (!_[_] && _)
+                if (((_[_] = !0), null == _)) (_ = _), (_ = _);
+                else {
+                  _(_) || (_ = _.append(_.content));
+                  const _ = _.mapping.map(_ + _.tableStart);
+                  __webpack_require__.delete(_, _ + _.nodeSize);
+                }
+            }
+          if (null == _ || null == _) return !0;
+          if (
+            (__webpack_require__.setNodeMarkup(_ + _.tableStart, null, {
+              ..._(
+                _.attrs,
+                _.attrs.colspan,
+                _.right - _.left - _.attrs.colspan,
+              ),
+              rowspan: _.bottom - _.top,
+            }),
+            _.size)
+          ) {
+            const _ = _ + 1 + _.content.size,
+              _ = _(_) ? _ + 1 : _;
+            __webpack_require__.replaceWith(
+              _ + _.tableStart,
+              _ + _.tableStart,
+              _,
+            );
+          }
+          __webpack_require__.setSelection(
+            new _(_.doc.resolve(_ + _.tableStart)),
+          ),
+            _(_);
+        }
+        return !0;
+      }
+      function _(_, _) {
+        const _ = _(_.schema);
+        return ((_ = ({ node: _ }) => _[_.type.spec.tableRole]),
+        (_, _) => {
+          var _;
+          const _ = _.selection;
+          let _, _;
+          if (_ instanceof _) {
+            if (_.$anchorCell.pos != _.$headCell.pos) return !1;
+            (_ = _.$anchorCell.nodeAfter), (_ = _.$anchorCell.pos);
+          } else {
+            if (
+              ((_ = (function (_) {
+                for (let _ = _.depth; _ > 0; _--) {
+                  const _ = _.node(_).type.spec.tableRole;
+                  if ("cell" === _ || "header_cell" === _) return _.node(_);
+                }
+                return null;
+              })(_.$from)),
+              !_)
+            )
+              return !1;
+            _ = null == (_ = _(_.$from)) ? void 0 : _.pos;
+          }
+          if (null == _ || null == _) return !1;
+          if (1 == _.attrs.colspan && 1 == _.attrs.rowspan) return !1;
+          if (_) {
+            let _ = _.attrs;
+            const _ = [],
+              _ = _.colwidth;
+            _.rowspan > 1 &&
+              (_ = {
+                ..._,
+                rowspan: 1,
+              }),
+              _.colspan > 1 &&
+                (_ = {
+                  ..._,
+                  colspan: 1,
+                });
+            const _ = _(_),
+              _ = _._;
+            for (let _ = 0; _ < _.right - _.left; _++)
+              _.push(
+                _
+                  ? {
+                      ..._,
+                      colwidth: _ && _[_] ? [_[_]] : null,
+                    }
+                  : _,
+              );
+            let _;
+            for (let _ = _.top; _ < _.bottom; _++) {
+              let _ = _.map.positionAt(_, _.left, _.table);
+              _ == _.top && (_ += _.nodeSize);
+              for (let _ = _.left, _ = 0; _ < _.right; _++, _++)
+                (_ == _.left && _ == _.top) ||
+                  _.insert(
+                    (_ = _.mapping.map(_ + _.tableStart, 1)),
+                    _({
+                      node: _,
+                      row: _,
+                      col: _,
+                    }).createAndFill(_[_]),
+                  );
+            }
+            _.setNodeMarkup(
+              _,
+              _({
+                node: _,
+                row: _.top,
+                col: _.left,
+              }),
+              _[0],
+            ),
+              _ instanceof _ &&
+                _.setSelection(
+                  new _(
+                    _.doc.resolve(_.$anchorCell.pos),
+                    _ ? _.doc.resolve(_) : void 0,
+                  ),
+                ),
+              _(_);
+          }
+          return !0;
+        })(_, _);
+        var _;
+      }
       function _(_, _, _) {
         const _ = _.map.cellsInRect({
           left: 0,
@@ -5515,13 +5895,13 @@
               return !0;
             };
       }
-      _("row", {
-        useDeprecatedLogic: !0,
-      }),
-        _("column", {
+      var _ = _("row", {
           useDeprecatedLogic: !0,
         }),
-        _("cell", {
+        _ = _("column", {
+          useDeprecatedLogic: !0,
+        }),
+        _ = _("cell", {
           useDeprecatedLogic: !0,
         });
       function _(_, _) {

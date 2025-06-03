@@ -8710,6 +8710,13 @@
                   autocloses: !1,
                 },
               ],
+              [
+                "meetsteamscheduleview",
+                {
+                  Constructor: _._,
+                  autocloses: !1,
+                },
+              ],
             ])),
           _).entries(),
         ),

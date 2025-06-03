@@ -2114,6 +2114,19 @@
           link: (e) =>
             F.TS.COMMUNITY_BASE_URL + "my/moderatormessages/" + e.msgid,
         },
+        28: {
+          displayNameLoc: (e) =>
+            e.is_limited_launch
+              ? "#Notification_LimitedLaunchInviteTitle"
+              : "#Notification_PlaytestInviteTitle",
+          titleLoc: (e) =>
+            e.is_limited_launch
+              ? "#Notification_LimitedLaunchInviteBody"
+              : "#Notification_PlaytestInviteBody",
+          image: (e) => e.appid,
+          link: (e) =>
+            F.TS.STORE_BASE_URL + "account/gatedaccess?appid=" + e.appid,
+        },
       };
       function A(e) {
         if (void 0 !== e) return k[e];
@@ -2248,6 +2261,7 @@
           parental_feature_access_responses: 0,
           parental_playtime_responses: 0,
           requested_game_added: 0,
+          playtest_invites: 0,
         };
         m_bLoaded = !1;
         m_nUnviewed = 0;
@@ -2400,6 +2414,7 @@
                   parental_feature_access_responses: 0,
                   parental_playtime_responses: 0,
                   requested_game_added: 0,
+                  playtest_invites: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -2480,6 +2495,7 @@
               parental_feature_access_responses: 0,
               parental_playtime_responses: 0,
               requested_game_added: 0,
+              playtest_invites: 0,
             },
             i = 0;
           if (
@@ -2908,6 +2924,7 @@
         22: { rollup_field: "requested_game_added", eFeature: T.uX },
         23: { rollup_field: void 0, eFeature: T.uX },
         24: { rollup_field: void 0, eFeature: T.uX },
+        28: { rollup_field: "playtest_invites", eFeature: 1 },
       };
       function ge(e) {
         const t = pe[e];

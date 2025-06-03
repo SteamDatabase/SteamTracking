@@ -1167,12 +1167,250 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _._ {
+        constructor(_, _, _) {
+          const _ = (0, _._)(_);
+          super(_, _, _.src, _.width, _.height), (0, _._)(this);
+        }
+        IsValidAssetType(_, _) {
+          const _ = _ && _ != this.fileType;
+          let _ = "";
+          return (
+            this.IsFileTypeSupported(this.fileType)
+              ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
+              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: _,
+              needsCrop: !1,
+            }
+          );
+        }
+        BIsOriginalMinimumDimensions(_) {
+          return !0;
+        }
+        FileTypeMatchesImageTypes(_) {
+          return !0;
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
+        }
+        GetResizeDimension() {
+          return null;
+        }
+        BSupportsLanguages() {
+          return !1;
+        }
+        get ImageOptions() {
+          return null;
+        }
+        GetCurrentImageOptionKey() {
+          return null;
+        }
+        GetCurrentImageOption() {
+          return null;
+        }
+        SetCurrentImageOption(_) {}
+        IsFileTypeSupported(_) {
+          switch (_) {
+            case 1:
+            case 3:
+            case 10:
+            case 2:
+              return !0;
+            default:
+              return !1;
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        bCropped = !1;
-        m_bExtraAssetsV2;
+        m_filesToUpload = _._.array();
+        m_fnCreateUploadImage;
+        m_onlyAssetGroup = void 0;
+        m_rgExistingAssetGroups = void 0;
+        m_rgImageSizes = void 0;
+        constructor(_) {
+          super(), (0, _._)(this), (this.m_fnCreateUploadImage = _);
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        SetExistingAssetGroups(_, _) {
+          (this.m_rgExistingAssetGroups = _), (this.m_rgImageSizes = _);
+        }
+        SetOnlyAssetGroup(_) {
+          this.m_onlyAssetGroup = _;
+        }
+        isImageFile(_) {
+          return _.type.startsWith("image/");
+        }
+        isVideoFile(_) {
+          return _.type.startsWith("video/");
+        }
+        async AddImageForLanguage(_, _, _) {
+          if (this.isImageFile(_) || this.isVideoFile(_)) {
+            const _ = await (0, _._)(_, this.isVideoFile(_));
+            if (_) {
+              const _ = this.m_fnCreateUploadImage(
+                () => this.GetImageOptions(),
+                this.m_onlyAssetGroup,
+                _,
+                _,
+                _,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else
+            console.error(
+              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          return !1;
+        }
+        async UploadAllImages(_, _) {
+          const _ = this.m_filesToUpload.filter((_) => {
+            const _ = __webpack_require__.IsValidAssetType(_, _);
+            return "pending" === _.status && !_.error && !_.needsCrop;
+          });
+          for (const _ of _) _.status = "uploading";
+          const _ = [];
+          for (const _ of _) {
+            const _ = _.GetCurrentImageOption()?.groupName ?? _.file.name,
+              _ = await this.UploadSingleImage(_.file, _, _.language);
+            (_.status = _.bSuccess ? "success" : "failed"),
+              (_.message = _.strErrorMessage ?? ""),
+              _.push({
+                file: _.file,
+                bSuccess: _.bSuccess,
+                uploadResult: _.result,
+              });
+          }
+          return _;
+        }
+        GetImageOptions() {
+          const _ = (_, _, _, _, _) => ({
+              baseFilename: _,
+              language: _,
+              bNew: _,
+              size: {
+                width: _,
+                height: _,
+              },
+            }),
+            _ = [];
+          for (const _ of this.m_filesToUpload.filter(
+            (_) => "pending" == _.status || "uploading" == _.status,
+          ))
+            if (this.m_onlyAssetGroup)
+              _.push(
+                _(
+                  this.m_onlyAssetGroup.baseFilename,
+                  _.language ?? 0,
+                  !0,
+                  _.width,
+                  _.height,
+                ),
+              );
+            else {
+              const _ = (0, _._)(_.file.name).baseFilename,
+                _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
+              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
+                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
+            }
+          let _ = this.m_rgExistingAssetGroups,
+            _ = this.m_rgImageSizes ?? [];
+          if (this.m_onlyAssetGroup) {
+            const _ = this.m_rgExistingAssetGroups.findIndex(
+              (_) => _.baseFilename == this.m_onlyAssetGroup.baseFilename,
+            );
+            (0, _._)(
+              -1 != _,
+              "onlyAssetGroup isn't in the existing assets list",
+            ),
+              (_ = [this.m_rgExistingAssetGroups[_]]),
+              (_ = [_[_]]);
+          }
+          const _ = _._(_, _).flatMap(([_, _]) =>
+              ((_, _) =>
+                _.languages.map((_) =>
+                  _(_.baseFilename, _, !1, _?.width ?? 0, _?.height ?? 0),
+                ))(_, _),
+            ),
+            _ = _.concat(_).reduce((_, _) => {
+              const _ = _.get(_.baseFilename) ?? [];
+              return __webpack_require__.push(_), _.set(_.baseFilename, _), _;
+            }, new Map()),
+            _ = [];
+          for (const _ of _.keys()) {
+            const _ = _.get(_).filter((_) => -1 != _.language),
+              _ = new Set(_.map((_) => _.language)).size,
+              _ =
+                _ > 1
+                  ? (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeGroup", _, _)
+                  : _,
+              _ = new Map();
+            for (let _ of _.filter((_) => !_.bNew).concat(
+              _.filter((_) => _.bNew),
+            ))
+              _.set(_.language, _);
+            const _ = Array.from(_.values()).filter((_) => !_.bNew),
+              _ = _.length > 0 ? _[0].size : void 0,
+              _ = _.filter((_) => _.bNew)._(0)?.size,
+              _ = _.filter((_) => _.bNew).some(
+                (_) => _.size.width != _.width || _.size.height != _.height,
+              ),
+              _ = {
+                sKey: _,
+                fnGetLabelText: () => _,
+                width: _?.width ?? 0,
+                height: _?.height ?? 0,
+                bEnforceDimensions: !1,
+                groupName: _,
+                bMismatchedNewSizes: _,
+                rgExistingLanguages: _.filter((_) => !_.bNew).map(
+                  (_) => _.language,
+                ),
+              };
+            _.push(_);
+          }
+          return (
+            _.sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0)),
+            _
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
+        (0, _._)([_._], _.prototype, "m_rgExistingAssetGroups", void 0),
+        (0, _._)([_._], _.prototype, "m_rgImageSizes", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "SetExistingAssetGroups", null),
+        (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
+        (0, _._)([_._], _.prototype, "UploadAllImages", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _._ {
+        m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
         m_rgCurrentImageOptionKey = void 0;
@@ -1180,7 +1418,7 @@
           const _ = (0, _._)(_);
           super(_, _, _.src, _.width, _.height),
             (0, _._)(this),
-            (this.m_bExtraAssetsV2 = _),
+            (this.m_bAllowVideos = _),
             (this.m_bLockedToSpecificAsset = _),
             (this.m_fnGetImageOptions = _);
         }
@@ -1189,19 +1427,7 @@
             _ = _?.width ?? 0,
             _ = _?.height ?? 0,
             _ = _ && _ != this.fileType,
-            _ = (function (_) {
-              switch (_) {
-                case 1:
-                case 3:
-                case 10:
-                case 2:
-                case 4:
-                case 5:
-                  return !0;
-                default:
-                  return !1;
-              }
-            })(this.fileType),
+            _ = this.IsFileTypeSupported(this.fileType),
             _ = this.BIsVideo() ? 1 : 0,
             _ =
               !(_ > 0 && _ > 0) ||
@@ -1215,16 +1441,11 @@
             _ = [];
           return (
             !_ && _
-              ? _.push(
-                  (0, _._)("#ImageUpload_InvalidResolution", _.extraAssetName),
-                )
+              ? _.push((0, _._)("#ImageUpload_InvalidResolution", _.groupName))
               : _ &&
                 _ &&
                 _.push(
-                  (0, _._)(
-                    "#ImageUpload_MismatchedResolution",
-                    _.extraAssetName,
-                  ),
+                  (0, _._)("#ImageUpload_MismatchedResolution", _.groupName),
                 ),
             _?.rgExistingLanguages?.length > 1 &&
               _.rgExistingLanguages.includes(this.language) &&
@@ -1253,13 +1474,12 @@
           return _._.includes(this.fileType);
         }
         BSupportsLanguages() {
-          return this.m_bExtraAssetsV2;
+          return !0;
         }
         GetResizeDimension() {
           return null;
         }
         get ImageOptions() {
-          if (!this.m_bExtraAssetsV2) return null;
           const _ = this.file.name.lastIndexOf("."),
             _ = (
               -1 != _ ? this.file.name.slice(0, _) : this.file.name
@@ -1267,14 +1487,14 @@
             _ = this.m_fnGetImageOptions();
           return (
             this.m_bLockedToSpecificAsset ||
-              __webpack_require__.find((_) => _.extraAssetName == _) ||
+              __webpack_require__.find((_) => _.groupName == _) ||
               __webpack_require__.push({
                 sKey: _,
                 fnGetLabelText: () => _,
                 width: this.width,
                 height: this.height,
                 bEnforceDimensions: !1,
-                extraAssetName: _,
+                groupName: _,
                 bMismatchedNewSizes: !1,
                 rgExistingLanguages: [],
               }),
@@ -1282,17 +1502,15 @@
           );
         }
         GetCurrentImageOptionKey() {
-          return this.m_bExtraAssetsV2 ? this.m_rgCurrentImageOptionKey : null;
+          return this.m_rgCurrentImageOptionKey;
         }
         GetCurrentImageOption() {
-          if (!this.m_bExtraAssetsV2) return null;
           const _ = this.m_fnGetImageOptions();
           if (this.m_rgCurrentImageOptionKey) {
             return _.find((_) => _.sKey == this.m_rgCurrentImageOptionKey);
           }
           const _ = _.find(
-            (_) =>
-              _.extraAssetName == (0, _._)(this.file.name, -1).baseFilename,
+            (_) => _.groupName == (0, _._)(this.file.name, -1).baseFilename,
           );
           return _ || (1 == _.length ? _[0] : null);
         }
@@ -1300,28 +1518,43 @@
           this.m_rgCurrentImageOptionKey = _.sKey;
         }
         GetImageOptionLabel() {
-          return (0, _._)("#ImageUpload_ImageGroup");
+          return _.createElement(
+            "span",
+            null,
+            (0, _._)("#ImageUpload_ImageGroup"),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#ImageUpload_ImageGroup_ttip"),
+            }),
+          );
+        }
+        IsFileTypeSupported(_) {
+          switch (_) {
+            case 1:
+            case 3:
+            case 10:
+            case 2:
+              return !0;
+            case 4:
+            case 5:
+              return this.m_bAllowVideos;
+            default:
+              return !1;
+          }
         }
       }
-      (0, _._)([_._], _.prototype, "bCropped", void 0),
-        (0, _._)([_._], _.prototype, "m_rgCurrentImageOptionKey", void 0),
+      (0, _._)([_._], _.prototype, "m_rgCurrentImageOptionKey", void 0),
         (0, _._)([_._], _.prototype, "ImageOptions", null),
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_filesToUpload = _._.array();
+      class _ extends _ {
         m_strUploadPath;
         m_bExtraAssetsV2;
-        m_fnExtraAssetsUpdated;
-        m_onlyExtraAsset = void 0;
-        m_rgExistingExtraAssets = void 0;
-        m_rgImageSizes = void 0;
         constructor(_, _, _) {
-          (0, _._)(this),
+          super((_, _, _, _, _) =>
+            this.m_bExtraAssetsV2 ? new _(_, !!_, _, _, _, _) : new _(_, _, _),
+          ),
+            (0, _._)(this),
             (this.m_strUploadPath = _),
-            (this.m_bExtraAssetsV2 = _),
-            (this.m_fnExtraAssetsUpdated = _);
+            (this.m_bExtraAssetsV2 = _);
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -1329,85 +1562,7 @@
         SetUploadPath(_) {
           this.m_strUploadPath = _;
         }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        SetExistingExtraAssets(_, _) {
-          (this.m_rgExistingExtraAssets = _), (this.m_rgImageSizes = _);
-        }
-        SetOnlyExistingAsset(_) {
-          this.m_onlyExtraAsset = _;
-        }
-        isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        async AddImageForLanguage(_, _, _) {
-          if (this.isImageFile(_) || this.isVideoFile(_)) {
-            const _ = await new Promise((_) => {
-              const _ = new FileReader();
-              (_.onload = async () =>
-                _(await (0, _._)(_.result.toString(), this.isVideoFile(_)))),
-                __webpack_require__.readAsDataURL(_);
-            });
-            if (_) {
-              const _ = new _(
-                this.m_bExtraAssetsV2,
-                !!this.m_onlyExtraAsset,
-                () => this.GetImageOptions(),
-                _,
-                _,
-                _,
-              );
-              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-            }
-          } else
-            console.error(
-              "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
-              _,
-              _.type,
-            );
-          return !1;
-        }
-        async UploadAllImages(_, _, _, _) {
-          const _ = this.m_filesToUpload.filter((_) => {
-            const _ = _.IsValidAssetType(_, _);
-            return "pending" === _.status && !_.error && !_.needsCrop;
-          });
-          for (const _ of _) _.status = "uploading";
-          let _;
-          for (const _ of _) {
-            const _ = await this.UploadFile(
-              _.file,
-              _.GetCurrentImageOption()?.extraAssetName ?? _.file.name,
-              _.language,
-            );
-            "errors" in _
-              ? ((_.status = "failed"), (_.message = _.errors.join("\n")))
-              : "rgExtraAssets" in _ &&
-                ((_.status = "success"), (_ = _.rgExtraAssets));
-          }
-          return (
-            _ && this.m_fnExtraAssetsUpdated(_),
-            {
-              rgUpdatedExtraAssets: _,
-            }
-          );
-        }
-        async UploadFile(_, _, _) {
+        async UploadSingleImage(_, _, _) {
           const _ = new FormData();
           if (this.m_bExtraAssetsV2)
             _.append("sessionid", _._.SESSIONID),
@@ -1436,7 +1591,9 @@
                 "CExtraAssetsImageUploader.UploadFile failed to parse JSON response",
               ),
               {
-                errors: ["Can not parse json response"],
+                bSuccess: !1,
+                strErrorMessage: "Can not parse json response",
+                result: null,
               }
             );
           }
@@ -1447,133 +1604,20 @@
                 "CExtraAssetsImageUploader.UploadFile failed ",
                 _.errors,
               ),
-              _
+              {
+                bSuccess: !1,
+                strErrorMessage: _.errors.join("\n"),
+                result: null,
+              }
             );
           }
-          return _;
-        }
-        GetImageOptions() {
-          const _ = (_, _, _, _, _) => ({
-              baseFilename: _,
-              language: _,
-              bNew: _,
-              size: {
-                width: _,
-                height: _,
-              },
-            }),
-            _ = [];
-          for (const _ of this.m_filesToUpload.filter(
-            (_) => "pending" == _.status || "uploading" == _.status,
-          ))
-            if (this.m_onlyExtraAsset)
-              _.push(
-                _(
-                  (0, _._)(this.m_onlyExtraAsset),
-                  _.language ?? 0,
-                  !0,
-                  _.width,
-                  _.height,
-                ),
-              );
-            else {
-              const _ = (0, _._)(_.file.name).baseFilename,
-                _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
-              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
-                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
-            }
-          (0, _._)(
-            !this.m_onlyExtraAsset ||
-              this.m_rgExistingExtraAssets.find(
-                (_) =>
-                  (0, _._)(_) &&
-                  _.extra_asset_name == this.m_onlyExtraAsset.extra_asset_name,
-              ),
-            "onlyExtraAsset isn't in the existing assets list",
-          );
-          const _ = this.m_onlyExtraAsset
-              ? [this.m_onlyExtraAsset]
-              : this.m_rgExistingExtraAssets,
-            _ = _.ZipArrays(_, this.m_rgImageSizes ?? [])
-              .filter(([_]) => (0, _._)(_))
-              .map(([_, _]) => ({
-                asset: _,
-                size: _,
-              }))
-              .flatMap(({ asset: _, size: _ }) =>
-                ((_, _) =>
-                  _.images.map((_) =>
-                    _(
-                      (0, _._)(_),
-                      (0, _._)(_.language),
-                      !1,
-                      _?.width ?? 0,
-                      _?.height ?? 0,
-                    ),
-                  ))(_, _),
-              ),
-            _ = _.concat(_).reduce((_, _) => {
-              const _ = _.get(_.baseFilename) ?? [];
-              return __webpack_require__.push(_), _.set(_.baseFilename, _), _;
-            }, new Map()),
-            _ = [];
-          for (const _ of _.keys()) {
-            const _ = _.get(_).filter((_) => -1 != _.language),
-              _ = new Set(_.map((_) => _.language)).size,
-              _ =
-                _ > 1
-                  ? (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeGroup", _, _)
-                  : _,
-              _ = new Map();
-            for (let _ of _.filter((_) => !_.bNew).concat(
-              _.filter((_) => _.bNew),
-            ))
-              _.set(_.language, _);
-            const _ = Array.from(_.values()).filter((_) => !_.bNew),
-              _ = _.length > 0 ? _[0].size : void 0,
-              _ = _.filter((_) => _.bNew)._(0)?.size,
-              _ = _.filter((_) => _.bNew).some(
-                (_) => _.size.width != _.width || _.size.height != _.height,
-              );
-            _.push({
-              sKey: _,
-              fnGetLabelText: () => _,
-              width: _?.width ?? 0,
-              height: _?.height ?? 0,
-              bEnforceDimensions: !1,
-              extraAssetName: _,
-              bMismatchedNewSizes: _,
-              rgExistingLanguages: _.filter((_) => !_.bNew).map(
-                (_) => _.language,
-              ),
-            });
-          }
-          return (
-            _.sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0)),
-            _
-          );
-        }
-        static ZipArrays(_, _) {
-          const _ = Math.min(_.length, _.length);
-          return Array.from(
-            {
-              length: _,
-            },
-            (_, _) => [_[_], _[_]],
-          );
+          return {
+            bSuccess: !0,
+            strErrorMessage: null,
+            result: _.rgExtraAssets,
+          };
         }
       }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_onlyExtraAsset", void 0),
-        (0, _._)([_._], _.prototype, "m_rgExistingExtraAssets", void 0),
-        (0, _._)([_._], _.prototype, "m_rgImageSizes", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "SetExistingExtraAssets", null),
-        (0, _._)([_._], _.prototype, "SetOnlyExistingAsset", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1593,7 +1637,7 @@
           _ = _.useMemo(() => _.find((_) => (0, _._)(_) === _), [_, _]),
           _ = _ ? (0, _._)(_) : null,
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
-            _((0, _._)(_) ? _ : null, _, _),
+            _(_, _, _),
           _ = (_) => {
             const _ = _.currentTarget;
             _.paused ? _.play() : _.pause();
@@ -1696,29 +1740,45 @@
         const [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__?.(), _();
-          }, [_, _]);
-        if (!_)
-          return {
-            elLocalizedImageGroupDialog: void 0,
-            elLocalizedImageGroupControl: void 0,
-          };
-        return {
-          elLocalizedImageGroupDialog:
-            _ &&
-            _.createElement(_, {
-              selectedAsset: _,
-              hideModal: _,
-              activeLanguage: _,
-            }),
-          elLocalizedImageGroupControl: _.createElement(
-            _._,
-            {
-              onClick: _,
-              tooltip: (0, _._)("#StoreAdmin_GameDescription_EditImageDetails"),
-            },
-            _.createElement(_.qzq, null),
-          ),
-        };
+          }, [_, _]),
+          { bExtraAssetsV2: _ } = (0, _._)();
+        let _, _;
+        return (
+          (0, _._)(_)
+            ? ((_ =
+                _ &&
+                _.createElement(_, {
+                  selectedAsset: _,
+                  hideModal: _,
+                  activeLanguage: _,
+                })),
+              (_ = _.createElement(
+                _._,
+                {
+                  onClick: _,
+                  tooltip: (0, _._)(
+                    "#StoreAdmin_GameDescription_EditImageDetails",
+                  ),
+                },
+                _.createElement(_.qzq, null),
+              )))
+            : _ &&
+              (0, _._)(_) &&
+              (_ = _.createElement(
+                _._,
+                {
+                  onClick: () => {},
+                  tooltip: (0, _._)(
+                    "#StoreAdmin_GameDescription_EditImageDetails_Legacy",
+                  ),
+                },
+                _.createElement(_.MJR, null),
+              )),
+          {
+            elLocalizedImageGroupDialog: _,
+            elLocalizedImageGroupControl: _,
+          }
+        );
       }
       function _() {
         return _.createElement(
@@ -2058,6 +2118,7 @@
       function _(_) {
         const { onlyExtraAsset: _ } = _,
           { bExtraAssetsV2: __webpack_require__ } = (0, _._)(),
+          { bExtraAssetsV2Videos: _ } = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)("ajaxmodifyextraassets"),
           _ = _.useMemo(
@@ -2065,9 +2126,17 @@
             [_, __webpack_require__, _],
           ),
           _ = (0, _._)(),
+          _ = _.useMemo(() => _.filter(_._), [_]),
           _ = _(_);
         _.useEffect(() => {
-          _.SetExistingExtraAssets(_, _), _.SetOnlyExistingAsset(_);
+          const _ = (_) => ({
+            baseFilename: (0, _._)(_),
+            languages: (0, _._)(_)
+              ? [0]
+              : _.images.map((_) => (0, _._)(_.language)),
+          });
+          _.SetExistingAssetGroups(_.map(_), _),
+            _.SetOnlyAssetGroup(_ ? _(_) : null);
         }, [_, _, _, _]);
         const _ = (function (_) {
             const _ = _.useMemo(() => (_ ? [_] : []), [_]),
@@ -2081,6 +2150,12 @@
           _.createElement(_._, {
             imageUploader: _,
             rgRealmList: _,
+            fnUploadComplete: (_) => {
+              const _ = _
+                ? [..._].reverse().find((_) => _.bSuccess)?.uploadResult
+                : null;
+              _ && _(_);
+            },
             elAdditonalButtons: _.createElement(
               _.Fragment,
               null,
@@ -2147,7 +2222,7 @@
             window.open(_[0]?.url);
           },
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
-            _((0, _._)(_) ? _ : null, null, null),
+            _(_, null, null),
           _ = (_) => {
             const _ = _.currentTarget;
             _.paused ? _.play() : _.pause();
@@ -2380,10 +2455,11 @@
             fnUploadComplete: _,
           } = _,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0),
+          { bExtraAssetsV2Videos: _ } = (0, _._)();
         _.useEffect(() => {
           __webpack_require__ &&
-            (_(_.file) ||
+            (_(_.file, _) ||
               _(
                 (0, _._)(
                   "#StoreAdmin_UploadError_UnsupportedFileType",
@@ -2391,7 +2467,7 @@
                 ),
               )),
             _(__webpack_require__);
-        }, [__webpack_require__, _]);
+        }, [__webpack_require__, _, _]);
         const { bExtraAssetsV2: _ } = (0, _._)(),
           { mutate: _, isPending: _ } = (function (_, _, _, _) {
             const _ = (0, _._)("ajaxmodifyextraassets"),
@@ -2481,7 +2557,7 @@
             (_) => {
               if (!_) return "";
               const _ = _.replace(_, "_");
-              return _ ? _ : _.replace(/(?:\.[a-zA-Z]{3,4})?$/, `.${_(_)}`);
+              return _ ? _ : _.replace(/(?:\.[a-zA-Z]{3,4})?$/, `.${_(_, !0)}`);
             },
             [_, _, _],
           ),
@@ -2548,6 +2624,7 @@
               null,
               _.createElement(_, {
                 file: _,
+                isVideo: _(_),
                 duplicate: _,
                 bShowThrobber: __webpack_require__,
                 onUseDuplicate: _,
@@ -2588,24 +2665,42 @@
       }
       function _(_) {
         const {
-          bExtraAssetsV2: _,
-          bExtraAssetsV2Allowed: __webpack_require__,
-          setExtraAssetsV2: _,
-        } = (0, _._)();
+            bExtraAssetsV2: _,
+            bExtraAssetsV2Allowed: __webpack_require__,
+            setExtraAssetsV2: _,
+          } = (0, _._)(),
+          {
+            bExtraAssetsV2Videos: _,
+            bExtraAssetsV2VideosAllowed: _,
+            setExtraAssetsV2Videos: _,
+          } = (0, _._)();
         return _._.is_support
-          ? __webpack_require__ &&
-              _.createElement(_._, {
-                className: _.EnableExtraAssetsV2,
-                label: "New media conversion",
-                checked: _,
-                onChange: (_) => _(_),
-              })
+          ? _.createElement(
+              _.Fragment,
+              null,
+              __webpack_require__ &&
+                _.createElement(_._, {
+                  className: _.EnableExtraAssetsV2,
+                  label: "New media conversion",
+                  checked: _,
+                  onChange: (_) => _(_),
+                }),
+              _ &&
+                _ &&
+                _.createElement(_._, {
+                  className: _.EnableExtraAssetsV2,
+                  label: "Videos allowed",
+                  checked: _,
+                  onChange: (_) => _(_),
+                }),
+            )
           : null;
       }
       function _(_) {
         const {
             file: _,
-            duplicate: __webpack_require__,
+            isVideo: __webpack_require__,
+            duplicate: _,
             bShowThrobber: _,
             onUseDuplicate: _,
           } = _,
@@ -2613,7 +2708,7 @@
         return _.createElement(
           _.Fragment,
           null,
-          __webpack_require__ &&
+          _ &&
             _.createElement(
               "div",
               {
@@ -2637,7 +2732,7 @@
                   size: "xlarge",
                 }),
               ),
-            __webpack_require__ &&
+            _ &&
               _.createElement(
                 "div",
                 {
@@ -2654,10 +2749,7 @@
                   (0, _._)("#StoreAdmin_ExtraAssetUpload_Original"),
                 ),
                 _.createElement("img", {
-                  src:
-                    "name" in __webpack_require__
-                      ? (0, _._)(__webpack_require__)
-                      : (0, _._)(__webpack_require__, !1)?.url,
+                  src: "name" in _ ? (0, _._)(_) : (0, _._)(_, !1)?.url,
                   className: _.ImgPreview,
                 }),
               ),
@@ -2666,7 +2758,7 @@
               {
                 className: _.ImgPreviewContainer,
               },
-              __webpack_require__ &&
+              _ &&
                 _.createElement(
                   "div",
                   {
@@ -2674,10 +2766,20 @@
                   },
                   (0, _._)("#StoreAdmin_ExtraAssetUpload_Replacement"),
                 ),
-              _.createElement("img", {
-                src: _,
-                className: _.ImgPreview,
-              }),
+              !__webpack_require__ &&
+                _.createElement("img", {
+                  src: _,
+                  className: _.ImgPreview,
+                }),
+              __webpack_require__ &&
+                _.createElement("video", {
+                  src: _,
+                  className: _.ImgPreview,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  autoPlay: !0,
+                }),
             ),
           ),
         );
@@ -2706,7 +2808,7 @@
           }),
         );
       }
-      function _(_) {
+      function _(_, _) {
         switch (_.type) {
           case "image/jpeg":
             return "jpg";
@@ -2716,13 +2818,16 @@
             return "gif";
           case "image/webp":
             return "webp";
-          case "image/mp4":
-            return "mp4";
-          case "image/webm":
-            return "webm";
+          case "video/mp4":
+            return _ ? "mp4" : void 0;
+          case "video/webm":
+            return _ ? "webm" : void 0;
           default:
             return;
         }
+      }
+      function _(_) {
+        return _.type.startsWith("video/");
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3492,15 +3597,15 @@
           this.dom = _;
           const { selection: _ } = _.state;
           this.selected = _() >= _.from && _() + _.nodeSize <= _._;
-          const _ = {
-              setAttrs: (_, _) => {
-                __webpack_require__.dispatch(
-                  _.state._.setNodeMarkup(_(), _, _),
-                );
-              },
-              removeNode: () => {
-                __webpack_require__.dispatch(_.state._.delete(_(), _() + 1));
-              },
+          const _ = (_) => {
+              const _ = _(_.state._, _, _());
+              _ && __webpack_require__.dispatch(_);
+            },
+            _ = {
+              update: _,
+              setAttrs: (_, _) =>
+                _((_, _, _) => __webpack_require__.setNodeMarkup(_, _, _)),
+              removeNode: () => _((_, _, _) => _.delete(_, _ + _.nodeSize)),
               focusView: () => {
                 window.setTimeout(() => __webpack_require__.focus(), 1);
               },
@@ -4351,12 +4456,30 @@
         );
       });
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (_.startsWith("rgb")) {
+          const _ = _.match(/\d+/g);
+          if (!_ || _.length < 3) return "#000000";
+          const [__webpack_require__, _, _] = _.map(Number);
+          return (
+            "#" +
+            [__webpack_require__, _, _]
+              .map((_) => {
+                const _ = _.toString(16);
+                return 1 === _.length ? "0" + _ : _;
+              })
+              .join("")
+          );
+        }
+        return _;
+      }
       const _ = _.memo(function (_) {
         const {
             schema: _,
             strColor: __webpack_require__,
             bIsUpdate: _,
             strTargetText: _,
+            bColor: _,
             addtlAttrs: _,
             addtlAttrsValues: _,
             closeModal: _,
@@ -4366,88 +4489,138 @@
           } = _,
           [_, _] = _.useState(__webpack_require__),
           _ = _.useRef(null),
-          [_, _] = _.useState(_);
+          [_, _] = _.useState(_),
+          _ = _.useCallback(() => {
+            const { state: _, dispatch: __webpack_require__ } = _,
+              _ = _ ? _.marks.color : _.marks.bgcolor;
+            if (!_) return;
+            if (!_ || !_.startsWith("#") || 7 !== _.length) return;
+            if (_ < 0 || _ > _.doc.content.size || _ > _)
+              return void console.error("Invalid selection range:", _, _);
+            let _;
+            try {
+              if (
+                ((_ = _.create({
+                  color: _,
+                  ..._,
+                })),
+                !_)
+              )
+                return void console.error(
+                  "Failed to create mark — mark is null",
+                );
+            } catch (_) {
+              return void console.error("Failed to create color mark:", _);
+            }
+            let _ = _._;
+            _ === _
+              ? (_ = _.addStoredMark(_))
+              : ((_ = _.removeMark(_, _, _)),
+                (_ = _.addMark(_, _, _)),
+                (_ = _.setSelection(_._.create(_.doc, _)))),
+              "dev" == _._.WEB_UNIVERSE &&
+                console.log(
+                  "Dispatching transaction:",
+                  _.steps.map((_) => _.toJSON()),
+                  _,
+                  _,
+                );
+            try {
+              (_.docChanged || _.steps.length > 0) && __webpack_require__(_);
+            } catch (_) {
+              console.error(_);
+            } finally {
+              requestAnimationFrame(() => _());
+            }
+          }, [_, _, _, _, _, _.marks.bgcolor, _.marks.color, _, _]);
         _.useLayoutEffect(() => {
           _.current, _.current.focus();
         }, []);
-        const _ = (0, _._)("#FormattingToolbar_Color"),
+        const _ = (0, _._)(
+            _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+          ),
           _ = _
             ? (0, _._)("#Button_Save")
-            : (0, _._)("#FormattingToolbar_Color");
+            : (0, _._)(
+                _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+              );
         return _.createElement(
           _,
           {
-            onOK: () => {
-              let _ = _.state._;
-              const _ = {
-                color: _,
-              };
-              for (const _ in _) _[_] = _[_];
-              const _ = _.text(_, [_.marks.color.create(_)]);
-              (_ = _.replaceRangeWith(_, _, _)),
-                (_ = _.setSelection(
-                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
-                )),
-                _.dispatch(_),
-                _();
-            },
+            onOK: _,
             closeModal: _,
             strTitle: _,
             strOKText: _,
-            bOKDisabled: 0 == _.length,
+            bOKDisabled: !_ || 0 == _.length,
           },
           _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
           _.createElement("input", {
             type: "color",
             ref: _,
-            value: _,
+            value: _(_),
             onChange: (_) => _(_.currentTarget.value),
           }),
         );
       });
       function _(_) {
-        const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
+        const {
+            schema: _,
+            bColor: __webpack_require__,
+            addtlAttrs: _,
+            children: _,
+          } = _,
           { callbacks: _, view: _ } = (0, _._)(),
-          [_, _] = _.useState(() => (0, _._)(_.state, _.marks.link)),
-          _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
+          [_, _] = _.useState(() =>
+            (0, _._)(
+              _.state,
+              __webpack_require__ ? _.marks.color : _.marks.bgcolor,
+            ),
+          ),
+          _ = _.useCallback(
+            (_) =>
+              _(
+                (0, _._)(
+                  _.state,
+                  __webpack_require__ ? _.marks.color : _.marks.bgcolor,
+                ),
+              ),
+            [__webpack_require__, _],
+          );
         (0, _._)(_, _);
-        const [_, _] = (function (_, _) {
-          const [__webpack_require__, _] = _.useState(void 0),
+        const [_, _] = (function (_, _, _) {
+          const [_, _] = _.useState(void 0),
             _ = _.useCallback(
               (_) => {
-                const _ = _.state.selection;
+                const { state: _, dispatch: _ } = _,
+                  _ = _.selection;
+                let { from: _, _: _, empty: _ } = _;
+                const _ = _ ? _.marks.color : _.marks.bgcolor;
                 let _ = "",
-                  _ = "",
-                  { from: _, _: _ } = _;
-                const _ = (0, _._)(_.state, _.marks.color, _.$from),
+                  _ = "";
+                const _ = _ ? _.$from : _.doc.resolve(_),
+                  _ = (0, _._)(_, _, _),
                   _ = !!_;
                 _
                   ? ((_ = _.mark.attrs.color),
-                    _.empty
+                    _
                       ? ((_ = _.slice.content.textBetween(
                           0,
                           _.slice.content.size,
                         )),
                         (_ = _.from),
                         (_ = _._))
-                      : ((_ = Math.max(_.from, _.from)),
-                        (_ = Math.min(_._, _._)),
+                      : ((_ = Math.max(_.from, _)),
+                        (_ = Math.min(_._, _)),
                         (_ = _.slice.content.textBetween(
                           _ - _.from,
                           _ - _.from,
                         ))))
-                  : _.state.selection.empty ||
-                    (_ = _.state.doc.cut(
-                      _.state.selection.from,
-                      _.state.selection._,
-                    ).textContent);
+                  : _ || (_ = _.doc.cut(_, _).textContent);
                 let _ = {};
                 if (_)
                   for (const _ in _) {
                     const _ = _[_],
-                      _ = _
-                        ? __webpack_require__.fnReadValue(_.mark)
-                        : _.defaultValue;
+                      _ = _ ? _.fnReadValue(_.mark) : _.defaultValue;
                     _[_] = _;
                   }
                 _({
@@ -4461,15 +4634,15 @@
                   _: _,
                 });
               },
-              [_, _.marks.color],
+              [_, _, _.marks.bgcolor, _.marks.color],
             ),
-            _ = __webpack_require__?.view,
+            _ = _?.view,
             _ = _.useCallback(() => {
               window.setTimeout(() => _.focus(), 1), _(void 0);
             }, [_]);
           return [
             _,
-            __webpack_require__ &&
+            _ &&
               _.createElement(
                 _._,
                 {
@@ -4477,12 +4650,13 @@
                 },
                 _.createElement(_, {
                   schema: _,
+                  bColor: _,
                   closeModal: _,
-                  ...__webpack_require__,
+                  ..._,
                 }),
               ),
           ];
-        })(_, __webpack_require__);
+        })(_, __webpack_require__, _);
         return _.createElement(
           _.Fragment,
           null,
@@ -4492,7 +4666,9 @@
             {
               onClick: () => _(_),
               toggled: _,
-              tooltip: "#FormattingToolbar_Color",
+              tooltip: __webpack_require__
+                ? "#FormattingToolbar_Color"
+                : "#FormattingToolbar_BgColor",
             },
             _,
           ),
@@ -4580,8 +4756,18 @@
               _,
               {
                 schema: _,
+                bColor: !0,
               },
               _.createElement(_.r7n, null),
+            ),
+          "bgcolor" in _.marks &&
+            _.createElement(
+              _,
+              {
+                schema: _,
+                bColor: !1,
+              },
+              _.createElement(_.FId, null),
             ),
         );
       }
@@ -4707,7 +4893,17 @@
               },
               _.createElement(_.JPq, null),
             ),
-            _ && !1,
+            _ &&
+              _.createElement(
+                _,
+                {
+                  tooltip: "#FormattingToolbar_OrderedList",
+                  keyboardShortcut: "Ctrl-Shift-7",
+                  list_type: _,
+                  list_item: _,
+                },
+                _.createElement(_.jE0, null),
+              ),
             (!__webpack_require__ || _) &&
               _.createElement(
                 _.Fragment,
@@ -5286,6 +5482,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5368,7 +5565,12 @@
                 )
               );
           }, [_]),
-          { bExtraAssetsV2: _, setExtraAssetsV2: _ } = (function () {
+          {
+            bExtraAssetsV2: _,
+            setExtraAssetsV2: _,
+            bExtraAssetsV2Videos: _,
+            setExtraAssetsV2Videos: _,
+          } = (function () {
             const _ = "storeUseExtraAssetsV2",
               [_, __webpack_require__] = _.useState(
                 () => !!localStorage.getItem(_),
@@ -5376,10 +5578,18 @@
               _ = _.useCallback((_) => {
                 _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
                   __webpack_require__(_);
+              }, []),
+              _ = "storeUseExtraAssetsV2Videos",
+              [_, _] = _.useState(() => !!localStorage.getItem(_)),
+              _ = _.useCallback((_) => {
+                _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
+                  _(_);
               }, []);
             return {
               bExtraAssetsV2: _,
               setExtraAssetsV2: _,
+              bExtraAssetsV2Videos: _,
+              setExtraAssetsV2Videos: _,
             };
           })(),
           _ = _.useMemo(
@@ -5395,9 +5605,11 @@
               eStoreItemType: _?.eStoreItemType,
               bExtraAssetsV2: _,
               setExtraAssetsV2: _,
+              bExtraAssetsV2Videos: _,
+              setExtraAssetsV2Videos: _,
               bAppHasSteamChinaToolsEnabled: _,
             }),
-            [_, _, _, __webpack_require__, _, _, _],
+            [_, _, _, __webpack_require__, _, _, _, _, _],
           );
         return _
           ? _.createElement(
@@ -5443,6 +5655,17 @@
           bExtraAssetsV2: _.bExtraAssetsV2 && _,
           bExtraAssetsV2Allowed: _,
           setExtraAssetsV2: _.setExtraAssetsV2,
+        };
+      }
+      function _() {
+        const _ = _.useContext(_),
+          _ =
+            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
+            2 == _._.EUNIVERSE;
+        return {
+          bExtraAssetsV2Videos: _.bExtraAssetsV2Videos && _,
+          bExtraAssetsV2VideosAllowed: _,
+          setExtraAssetsV2Videos: _.setExtraAssetsV2Videos,
         };
       }
       function _() {
@@ -8177,7 +8400,7 @@
           ? _.createElement(
               "div",
               {
-                className: "valveOutline padded",
+                className: (0, _._)(_.AppDashboard, "valveOutline padded"),
               },
               _.createElement(
                 "p",
@@ -8849,16 +9072,9 @@
           _.Fragment,
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              href: _ ? null : _,
-              style: {
-                display: "block",
-                cursor: "pointer",
-              },
               className: _().CapsuleFocusCtn,
-              preferredFocus: _,
-              onClick: _,
             },
             _.createElement(
               "div",
@@ -8868,11 +9084,18 @@
                 }),
               },
               _.createElement(
-                "div",
+                _._,
                 {
+                  href: _ ? null : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
                   className: (0, _._)({
                     [_().TwoWidthCapsule]: _,
                   }),
+                  preferredFocus: _,
+                  onClick: _,
                 },
                 _.createElement(_._, {
                   appids: _,
@@ -8883,8 +9106,7 @@
                   info: _,
                 }),
                 _.createElement(_._, {
-                  eDeckCompatibilityCategory:
-                    _?.GetPlatforms()?.steam_deck_compat_category,
+                  storeItem: _,
                 }),
                 Boolean(_) &&
                   _.createElement(_._, {
@@ -18089,10 +18311,9 @@
                             _.fnSetError(!0));
                       })
                       .catch((_) => {
-                        console.log("adil catch"),
-                          _.fnSetStrError(
-                            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                          ),
+                        _.fnSetStrError(
+                          (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+                        ),
                           _.fnSetError(!0),
                           console.error(
                             `unlinking failed appid ${_} with error ${((0, _._))(_).strErrorMsg} `,
@@ -19078,7 +19299,8 @@
         const { element: _, data: __webpack_require__ } = _,
           _ = "file" in __webpack_require__ ? __webpack_require__.file : void 0,
           _ = _.useMemo(() => _ && URL.createObjectURL(_), [_]),
-          _ = "url" in __webpack_require__ ? __webpack_require__.url : _;
+          _ = "url" in __webpack_require__ ? __webpack_require__.url : _,
+          _ = _.type.startsWith("video/");
         return _.createPortal(
           _.createElement(
             "span",
@@ -19108,10 +19330,20 @@
                 (0, _._)("#Prosemirror_FileUpload_Uploading"),
               ),
             ),
-            _.createElement("img", {
-              src: _,
-              className: _.PendingImage,
-            }),
+            !_ &&
+              _.createElement("img", {
+                src: _,
+                className: _.PendingImage,
+              }),
+            _ &&
+              _.createElement("video", {
+                src: _,
+                className: _.PendingImage,
+                muted: !0,
+                loop: !0,
+                playsInline: !0,
+                autoPlay: !0,
+              }),
           ),
           _,
         );

@@ -110,7 +110,7 @@ function InitTabPreview()
 
 			var $elInfoDiv = $J('<div>',{'class': 'tab_preview'});
 
-			$elInfoDiv.append($J('<h2>').html( rgData.name ));
+			$elInfoDiv.append($J('<span>', {'class': 'tab_title'}).html( rgData.name ));
 
 			if ( rgData['review_summary'] )
 			{

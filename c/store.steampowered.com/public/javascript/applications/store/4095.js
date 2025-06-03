@@ -58,6 +58,40 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
+        ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
+        MeBadge: "_2W_HQa5Rhf-hHITgV5H0bu",
+        PlayerName: "AdQYbMq7HHJ3Jgljib9UX",
+        RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
+        RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
+        FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
+        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
+        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
+        ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
+        Selected: "r0ToHd0tmv46GM00Lr0a_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
+        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
+        none: "T3Fb5KTXwIHM2B-ThTvEs",
+        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
+        Large: "_3BESV4eFnr4EnaSaJSdk6T",
+        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
+        _: "_2hnF3M_l4xdIdQ4CkN7LYB",
+        _: "VmQTOrz5MPOWte5C9K7YS",
+        _: "_29mtadjX8N6pRn5TX1nA0o",
+        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
+        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
+        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         GotSteamDialog: "_2Qusm1gosCAtAqLKo5hioQ",
         DownloadSteamUrl: "_10lP7BWsYbhm_AclLUpjRi",
         GameName: "_1_uzwF-1oILlCEkcaApC-n",
@@ -68,6 +102,39 @@
         ActionText: "_2s5NsgqEDdI6nKvz-9YFa4",
         Footer: "_3OKQsxzgQZkt2GtKz9679g",
         Logo: "_2AEA_k1tEcjAtTL7-Bnitk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
+        threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
+        blocked: "VTxPkslK1CSpKNFMgKg7d",
+        richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
+        playerName: "nOdcT-MoOaXGePXLyPe0H",
+        playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
+        playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
+        richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
+        gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
+        twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
+        DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
+        partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
+        hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
+        compactView: "_3bbRZyUiK-bfc5Qov6xukI",
+        noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
+        gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
+        PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
+        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
       };
     },
     chunkid: (module) => {
@@ -143,12 +210,14 @@
     chunkid: (module) => {
       module.exports = {
         Ctn: "ZXluexXJ1Y_muqBcBgGU-",
+        VisibilityOverride: "_1y7PCc5LUAg1_6yIpshcZa",
         CtnRegistered: "_3PeTrgTLLyRMIUb_pRn4rO",
         SessionTitle: "_3vGq3WcmmGaYbbqYkD9Ysp",
         SessionDesc: "_24r8E1kKzw_9iIVhmvEZ3T",
         SessionOptions: "_3KAHxFNUEscoxtvBzwWKvs",
         SessionColumnCtn: "iUmtJvs3v_bmv-tu43tpL",
         SessionInstance: "_1igTM-TlnNkIhWxl95pTyB",
+        Background: "_3k-Bve67pUbtbb7heNH--5",
         Button: "_2qgSQSN_hv-UncznBRb42v",
         Title: "_3iF42Uos8JELw32j386Kco",
         TimeFrame: "_3HLk01gOqM10DYThBCLuUx",
@@ -165,6 +234,13 @@
         CompleteRegistrationCtn: "_6ykmNnOs_SfkGOYurJogH",
         Visible: "_3WTs5L7ce_Du4_KNac_sXd",
         "confirm-panel-intro": "_1zMMdC3loRunAeI72QvaDX",
+        ExpanderRow: "_3y3yND3p_J6RNdjtcaEBMA",
+        SingleDayCtn: "_2Oiew_rwCOmnTk99m8bzBP",
+        ScheduleRow: "_3LI8YqHLQvj-FrIQyGTC30",
+        ScheduleTopDate: "_1-WKvbi_KTTmHoHJWC0BfO",
+        ScheduleTimeColumn: "_1vNsS_XmyjaIia8mzWvz1X",
+        ScheduleSessionsColumn: "_2rvBPfiuqnVUSz34DmNK-r",
+        ScheduleActionRow: "_16ZAklYwJzKFzKBVMTqx7y",
       };
     },
     chunkid: (module) => {
@@ -325,6 +401,7 @@
         AppSummaryWidgetCtn: "_2H8BmYvTdIYKMgG-XiCkc-",
         CarouselSalePageCapsule: "_3r4Ny9tQdQZc50XDM5B2q2",
         SaleBroadcastCtn: "_1SFMhugeWIHJIHrHl6ZQvD",
+        SaleOuterTopMargin: "_2-wCQql61VqgdUYz9XDAE6",
         SaleOuterContainer: "_150kddWk8JgylTvh_eC20b",
         CustomStyle_together: "_1lAygDKkL4NolLsYyh0b_x",
         SaleNewSizing: "_1v-BVc2xZoBmJV2CPwNpq0",
@@ -638,6 +715,8 @@
           "u",
           "hr",
           "i",
+          "emoticon",
+          "dynamiclink",
           "img",
           "strike",
           "spoiler",
@@ -653,6 +732,7 @@
           "tr",
           "td",
           "th",
+          "carousel",
           "previewyoutube",
           "looping_media",
           "roomeffect",
@@ -672,6 +752,7 @@
           "uploadfilebutton",
           "docimg",
           "meetsteamsessiongroup",
+          "meetsteamscheduleview",
         ],
         _ = [
           "h1",
@@ -687,6 +768,7 @@
         ],
         _ = [
           "img",
+          "carousel",
           "previewyoutube",
           "looping_media",
           "roomeffect",
@@ -970,7 +1052,7 @@
                   },
                   streak_games: {
                     _: 3,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -1130,7 +1212,7 @@
                   },
                   playtime_streak: {
                     _: 3,
-                    _,
+                    _: _,
                   },
                   playtime_ranks: {
                     _: 4,
@@ -1982,7 +2064,7 @@
                   },
                   playtime_streak: {
                     _: 3,
-                    _,
+                    _: _,
                   },
                   months: {
                     _: 5,
@@ -4811,7 +4893,7 @@
             (_) => {
               _.isIntersecting &&
                 _((_) =>
-                  _?.appID == _ && _.snr == _
+                  _?.appID == _ && _?.snr == _
                     ? _
                     : {
                         appID: _,
@@ -4822,7 +4904,7 @@
             [_, _],
           );
         (0, _.useEffect)(() => {
-          _ && _.AddImpression(_.appID, _.snr);
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),
@@ -5352,13 +5434,9 @@
                     "colgroup",
                     null,
                     _.split(",").map((_, _) =>
-                      _.createElement("col", {
+                      _.createElement(_, {
                         key: _,
-                        style: _
-                          ? {
-                              width: `${_}px`,
-                            }
-                          : void 0,
+                        width: _,
                       }),
                     ),
                   ),
@@ -5664,6 +5742,24 @@
           },
         ],
         [
+          "bgcolor",
+          {
+            Constructor: function (_) {
+              const _ = _(_.args);
+              return _.createElement(
+                "span",
+                {
+                  style: {
+                    backgroundColor: _,
+                  },
+                },
+                _.children,
+              );
+            },
+            autocloses: !1,
+          },
+        ],
+        [
           "p",
           {
             Constructor: function (_) {
@@ -5855,6 +5951,20 @@
             },
             _.children,
           )
+        );
+      }
+      function _(_) {
+        const { width: _ } = _;
+        let _;
+        return (
+          _ &&
+            parseInt(_) > 0 &&
+            (_ = {
+              width: `${_}px`,
+            }),
+          _.createElement("col", {
+            style: _,
+          })
         );
       }
       function _(_, _) {
@@ -7355,7 +7465,8 @@
           if (_)
             if (((this.m_mpd = new _()), this.m_mpd.BParse(_.data, _))) {
               if (
-                (this.IsLiveContent() &&
+                (this.DispatchEvent("valve-metadatachanged"),
+                this.IsLiveContent() &&
                   (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                     this.m_schUpdateMPD.Schedule(
                       1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
@@ -7538,7 +7649,8 @@
                   this.m_schUpdateMPD.Schedule(
                     1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                     this.UpdateMPD,
-                  ))
+                  ),
+                this.DispatchEvent("valve-metadatachanged"))
               : this.CloseWithError(
                   _.PlaybackError,
                   "Failed to parse on Update the MPD file",
@@ -8345,6 +8457,17 @@
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;
+        }
+        GetMaxWidthAndHeight() {
+          if (!this.m_mpd) return null;
+          let _ = this.m_mpd.GetVideoAdaption();
+          if (!_) return null;
+          if (0 == _.rgRepresentations.length) return null;
+          let _ = _.rgRepresentations[0];
+          return {
+            nWidth: _.nWidth,
+            nHeight: _.nHeight,
+          };
         }
       }
       function _(_) {
@@ -9371,6 +9494,226 @@
               ? _._.k_RejectAlreadyDisplayed
               : _(_, _)
             : _._.k_NotRejected;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(_.d1w, null);
+      }
+      function _(_) {
+        return _.createElement(_.Bir, null);
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.RoleIcon, _.className),
+          },
+          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
+        );
+      }
+      function _(_) {
+        const { steamid: _ } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.data?.get(new _._(_).GetAccountID()),
+          _ = _.data?.preferences().parenthesize_nicknames();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.data?.m_strPlayerName || " ",
+          " ",
+          _ &&
+            _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.playerNickname,
+              },
+              "(",
+              _,
+              ")",
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            strSteamID: _,
+            role: __webpack_require__,
+            persona: _,
+            isSelf: _,
+          } = _,
+          _ = new _._(_);
+        let _ = _.size || "Large";
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.data?.get(_.GetAccountID()),
+          _ = _.data?.preferences().parenthesize_nicknames();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "a",
+            {
+              className: _.ProfileLink,
+              href: _.GetCommunityProfileURL(),
+              onClick: (_) => {
+                _.stopPropagation();
+              },
+            },
+            _.createElement(_._, {
+              className: _.Avatar,
+              persona: _,
+              size: _,
+              statusPosition: "right",
+            }),
+            _.createElement(_._, {
+              className: _.PlayerName,
+              bIsSelf: _,
+              bHideStatus: !1,
+              bHidePersona: !1,
+              bParenthesizeNicknames: _,
+              bCompactView: !1,
+              persona: _,
+              strNickname: _,
+              eFriendRelationship: 3,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.RoleAndIcon,
+            },
+            _.createElement(_, {
+              className: _.ProfileRoleIcon,
+              role: __webpack_require__,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.RoleName,
+              },
+              (0, _._)(`#FamilyManagement_Role_${__webpack_require__}`),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = (0, _.useContext)(_._);
+        return _.errorMessage
+          ? _.createElement(
+              "div",
+              {
+                className: _.FamilyErrorDisplay,
+              },
+              _.errorMessage,
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            strSteamID: _,
+            role: __webpack_require__,
+            bInvitePending: _,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = _ == _,
+          _ = (0, _._)(_);
+        if (
+          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          !_.isSuccess)
+        )
+          return null;
+        const _ = _.data;
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(
+              _.FamilyMemberRow,
+              _ && _.ActiveFamilyMemberRow,
+            ),
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.FamilyMemberRowTop,
+              onActivate: _ ? () => _(!_) : void 0,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.Left,
+              },
+              _.createElement(_, {
+                strSteamID: _,
+                role: __webpack_require__,
+                persona: _,
+                isSelf: _,
+              }),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.InvitePending,
+                  },
+                  (0, _._)("#FamilyManagement_InvitePending"),
+                ),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.MeBadge,
+                  },
+                  (0, _._)("#FamilyManagement_Me"),
+                ),
+            ),
+            _ &&
+              _.createElement(_, {
+                bExpanded: _,
+                setExpanded: _,
+              }),
+          ),
+          _ && _,
+        );
+      }
+      function _(_) {
+        const { bExpanded: _, setExpanded: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
+            onClick: () => __webpack_require__(!_),
+          },
+          _.createElement(_.b8_, {
+            direction: "down",
+          }),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11505,92 +11848,395 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      const _ = _.createContext({
-          bForceShowCompatInfo: !1,
-          bSteamDeck: !1,
-        }),
-        _ = () => _.useContext(_);
-      function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _();
-        return _._.ON_STEAMOS && !_
-          ? [!0, 2]
-          : _._.ON_STEAMOS || _
-            ? [!0, 1]
-            : [!1, 0];
-      }
-      const _ = (_) => {
-          const _ = _(_.category);
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
-            },
-            _.createElement(_.lRD, null),
-            _.createElement(_, {
-              className: _.SteamDeckCompatIcon,
-            }),
-          );
-        },
-        _ = (_) => {
-          const _ = _(_.category);
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
-            },
-            _.createElement(_, {
-              className: _.SteamDeckCompatIcon,
-            }),
-          );
-        },
-        _ = (_) => {
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      let _ = class extends _.Component {
+        static get hoverClass() {
+          return _().hoverParent;
+        }
+        render() {
           const {
-            eDisplay: _,
-            storeItem: __webpack_require__,
+            persona: _,
+            animating: _,
+            className: __webpack_require__,
+            size: _,
+            dim: _,
+            ..._
+          } = this.props;
+          let _ = "";
+          return (
+            "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().SnoozeContainer,
+                  _.online_state,
+                  __webpack_require__,
+                  _ && _().animating,
+                  _,
+                  _ && _().Dim,
+                ),
+                ..._,
+              },
+              _.createElement(
+                "div",
+                {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                },
+                "Z",
+              ),
+              _.createElement(
+                "div",
+                {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                },
+                "Z",
+              ),
+              _.createElement(
+                "div",
+                {
+                  "data-text": "Z",
+                  className: (0, _._)(_().SnoozeZ, _()._),
+                },
+                "Z",
+              ),
+            )
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const { persona: _, className: __webpack_require__, ..._ } = _;
+        if (!_) return null;
+        if (!_.is_online) return null;
+        const _ = _.HasStateFlag(512),
+          _ = _.HasStateFlag(2048),
+          _ = _.IsOnSteamDeck() && !_,
+          _ = !_ && !_ && _.HasStateFlag(1024);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  __webpack_require__,
+                  _().PersonaStatusIcon,
+                  _().MobilePhoneIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_Mobile"),
+                ..._,
+              },
+              _.createElement(_._, null),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  __webpack_require__,
+                  _().PersonaStatusIcon,
+                  _().VRIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_VR"),
+                ..._,
+              },
+              _.createElement(_.MUh, null),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  __webpack_require__,
+                  _().PersonaStatusIcon,
+                  _().BigPictureIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_BigPicture"),
+                ..._,
+              },
+              _.createElement(_.bPr, null),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  __webpack_require__,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
+                  (0, _._)(_),
+                ),
+                title: (0, _._)("#Platform_Hint_SteamDeck"),
+                ..._,
+              },
+              _.createElement(_.DQe, null),
+            ),
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "span",
+            {
+              className: _().partyBeaconJoin,
+            },
+            (0, _._)("#User_WantsToPlay"),
+          ),
+          " – ",
+          _.persona.GetCurrentGameName(),
+        );
+      }
+      let _ = class extends _.Component {
+        render() {
+          const {
             className: _,
-          } = _;
-          return 1 == _
-            ? _.createElement(_, {
-                category:
-                  __webpack_require__.GetPlatforms()
-                    ?.steam_deck_compat_category ?? 0,
-                className: _,
-              })
-            : 2 == _
-              ? _.createElement(_, {
-                  category:
-                    __webpack_require__.GetPlatforms()
-                      ?.steam_os_compat_category ?? 0,
-                  className: _,
-                })
-              : null;
-        },
-        _ = {
-          1: _.jIP,
-          2: _.aVR,
-          3: _.o5Q,
-          0: _.WX$,
-        },
-        _ = {
-          0: _.WX$,
-          1: _.jIP,
-          2: _.ZjT,
-        };
-      function _(_) {
-        return _[_] || _.WX$;
-      }
-      function _(_) {
-        return _[_] || _.WX$;
-      }
+            onContextMenu: _,
+            persona: __webpack_require__,
+            eFriendRelationship: _,
+            bIsSelf: _,
+            bParenthesizeNicknames: _,
+            strNickname: _,
+            bCompactView: _,
+            bHideGameName: _,
+            bHideEnhancedRichPresenceLabel: _,
+            bHideSnooze: _,
+            bHideStatus: _,
+            renderStatus: _,
+            renderRichPresence: _,
+            bHidePersona: _,
+            bDNDSet: _,
+            bHasPartyBeacon: _,
+            bHasGamePrivacy: _,
+            bNoMask: _,
+            ..._
+          } = this.props;
+          let _ = null,
+            _ = null,
+            _ = null,
+            _ = [
+              _,
+              _().personaNameAndStatusLabel,
+              (0, _._)(__webpack_require__),
+              _ && _().compactView,
+              _ && _().NoMask,
+            ];
+          _ || __webpack_require__.has_public_party_beacon
+            ? (_ = _.createElement(_, {
+                persona: __webpack_require__,
+              }))
+            : (0, _._)(_)
+              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
+              : __webpack_require__.is_ingame
+                ? ((_ =
+                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
+                      ? __webpack_require__.GetCurrentGameName()
+                      : (0, _._)("#PersonaStateInNonSteamGame")),
+                  _ || _
+                    ? _ &&
+                      __webpack_require__.is_awayOrSnooze &&
+                      (_ = (0, _._)("#PersonaStateAway"))
+                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
+                : __webpack_require__.m_broadcastAccountId &&
+                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
+            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
+            _ && (_ = _());
+          let _ = !_ && !_;
+          !1 === _ && (_ = !0),
+            __webpack_require__.is_awayOrSnooze &&
+              _ &&
+              (_ = _.createElement(_, {
+                persona: __webpack_require__,
+              }));
+          let _ = null;
+          _
+            ? (_ = _.createElement(
+                "div",
+                {
+                  className: "ContextMenuButton",
+                  onClick: _,
+                },
+                _.createElement(_.GB9, null),
+              ))
+            : _.push(_().noContextMenu),
+            _ && _.push(_().hidePersona),
+            _ && (_ = _()),
+            (!_ && _) || _.push(_().twoLine);
+          const _ = !__webpack_require__.is_ingame && !_,
+            _ = !_ && _,
+            _ = _ && (!_ || !_),
+            _ = (0, _._)(_._.LAUNCHER_TYPE);
+          let _ = _ && !_,
+            _ = _ ? _ : __webpack_require__.m_strPlayerName,
+            _ = !_ && (_ || _) && _;
+          return _.createElement(
+            "div",
+            {
+              ..._,
+              className: (0, _._)(..._),
+              onContextMenu: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().statusAndName, _ && _().threeLines),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().playerName,
+                },
+                _ || " ",
+                _ &&
+                  _ &&
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().playerNickname,
+                    },
+                    "(",
+                    _,
+                    ")",
+                  ),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DNDContainer,
+                    title: (0, _._)("#User_ToggleDoNotDisturb"),
+                  },
+                  _.createElement(_.Aj0, null),
+                ),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _().playerNicknameBracket,
+                    title: (0, _._)("#isNickname"),
+                  },
+                  " *",
+                ),
+              _.createElement(_, {
+                persona: __webpack_require__,
+              }),
+              _,
+              (__webpack_require__.m_bPlayerNamePending ||
+                __webpack_require__.m_bAvatarPending) &&
+                _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().PendingPersona,
+                    title: (0, _._)("#SteamChina_PendingPersonaName"),
+                  },
+                  _.createElement(_.zD7, null),
+                ),
+              _,
+            ),
+            !_ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().richPresenceContainer,
+                },
+                (_ || _) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _().gameName,
+                        _ && _().threeLines,
+                        _().richPresenceLabel,
+                        "no-drag",
+                      ),
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().gameIsPrivateIcon,
+                          title: (0, _._)("#User_GameInfoHidden"),
+                        },
+                        _.createElement(_.jZl, null),
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                    },
+                    _,
+                    " ",
+                  ),
+              ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+        const {
+          persona: _,
+          bParenthesizeNicknames: __webpack_require__,
+          strNickname: _,
+          bIgnorePersonaStatus: _,
+          bDisableColoring: _,
+          className: _,
+          ..._
+        } = _;
+        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
+        return _.createElement(
+          "span",
+          {
+            ..._,
+            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
+          },
+          _.createElement(
+            "span",
+            {
+              className: _().playerName,
+            },
+            _ || " ",
+            __webpack_require__ &&
+              _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().playerNickname,
+                },
+                "(",
+                _,
+                ")",
+              ),
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13974,7 +14620,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14007,17 +14652,22 @@
           };
         });
       }
-      class _ {
+      class _ extends _._ {
         m_filesToUpload = _._.array();
         m_filesCompleted = [];
         m_clanSteamID;
+        m_rgRealmList;
+        m_eDefaultLanguage;
         m_rgImageOptions;
         m_allCancelTokens = new Array();
         m_lastError = void 0;
         m_fnSetImageURL = null;
-        constructor(_, _) {
-          (0, _._)(this),
+        constructor(_, _, _, _) {
+          super(),
+            (0, _._)(this),
             (this.m_clanSteamID = _),
+            (this.m_rgRealmList = _),
+            (this.m_eDefaultLanguage = _),
             (this.m_rgImageOptions = _(_));
         }
         GetClanSteamID() {
@@ -14125,8 +14775,8 @@
         BIsFileCompleted(_) {
           return -1 != this.m_filesCompleted.indexOf(_);
         }
-        async UploadAllImages(_, _, _, _) {
-          const _ = {};
+        async UploadAllImages(_, _) {
+          const _ = [];
           for (let _ of this.m_filesToUpload)
             if (!this.BIsFileCompleted(_.file)) {
               const _ = _.IsValidAssetType(_, _);
@@ -14139,49 +14789,64 @@
                   });
               else {
                 _.status = "uploading";
-                _[`${_.uploadTime}/${_.file.name}`] = this.UploadFile({
-                  uploadFile: _.file,
-                  filename: _.file.name,
-                  imageOption: _.match,
-                  resizeRequests: _.GetResizeDimension(),
-                  primaryLocalizeImage: _.localizedImageGroupPrimaryImage,
-                  lang: _.language,
-                  width: _.width,
-                  height: _.height,
-                });
+                const _ = this.UploadFile({
+                    uploadFile: _.file,
+                    filename: _.file.name,
+                    imageOption: _.match,
+                    resizeRequests: _.GetResizeDimension(),
+                    primaryLocalizeImage: _.localizedImageGroupPrimaryImage,
+                    lang: _.language,
+                    width: _.width,
+                    height: _.height,
+                  }),
+                  _ = {
+                    file: _.file,
+                    promise: _,
+                  };
+                __webpack_require__.push(_);
               }
             }
-          const _ = await (0, _._)(_);
-          return (
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
-              if (_)
-                if (1 !== _.success)
-                  (_.status = "failed"), (_.message = _.message);
-                else if (((_.status = "success"), this.m_fnSetImageURL))
-                  if (_.origimagehash) {
-                    const _ = (0, _._)(_.language, _, _);
-                    _._.AddLocalizeImageUploaded(_.origimagehash, _);
-                  } else {
-                    const _ = _._.GetClanImageByImageHash(
-                      this.m_clanSteamID,
-                      _.image_hash,
+          await Promise.all(__webpack_require__.map((_) => _.promise));
+          const _ = [];
+          for (const _ of _) {
+            const _ = await _.promise;
+            _.push({
+              file: _.file,
+              bSuccess: 1 === _.success,
+              uploadResult: _,
+            });
+            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
+            if (_)
+              if (1 !== _.success)
+                (_.status = "failed"), (_.message = _.message);
+              else if (((_.status = "success"), this.m_fnSetImageURL))
+                if (_.origimagehash) {
+                  const _ = (0, _._)(
+                    _.language,
+                    this.m_eDefaultLanguage,
+                    this.m_rgRealmList,
+                  );
+                  _._.AddLocalizeImageUploaded(_.origimagehash, _);
+                } else {
+                  const _ = _._.GetClanImageByImageHash(
+                    this.m_clanSteamID,
+                    _.image_hash,
+                  );
+                  if (_) {
+                    const _ = (0, _._)(
+                      _.language,
+                      this.m_eDefaultLanguage,
+                      this.m_rgRealmList,
                     );
-                    if (_) {
-                      const _ = (0, _._)(_.language, _, _);
-                      this.m_fnSetImageURL(
-                        _.GetCurrentImageOption().artworkType,
-                        _,
-                        _,
-                      );
-                    }
+                    this.m_fnSetImageURL(
+                      __webpack_require__.GetCurrentImageOption().artworkType,
+                      _,
+                      _,
+                    );
                   }
-            }),
-            _
-          );
+                }
+          }
+          return _;
         }
         CancelAllUploads() {
           for (let _ of this.m_allCancelTokens)
@@ -14189,8 +14854,7 @@
           this.m_allCancelTokens = new Array();
         }
         RetryAllFailedUploads() {
-          this.CancelAllUploads(),
-            this.UploadAllImages([_._.k_ESteamRealmGlobal], 0);
+          this.CancelAllUploads(), this.UploadAllImages();
         }
         async handleUploadRefresh(_) {
           await _._.LoadClanImages(this.m_clanSteamID, !0, _);
@@ -14276,16 +14940,11 @@
           );
         }
       }
-      function _(_, _) {
-        const _ = (function (_) {
-            const _ = _.useRef(_);
-            (_.current.length !== _.length ||
-              _.current.some((_, _) => _ !== _[_])) &&
-              (_.current = _);
-            return _.current;
-          })(_ instanceof Array ? _ : [_]),
+      function _(_, _, _, _) {
+        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
+          _ = (0, _._)(_),
           _ = _.ConvertTo64BitString();
-        return _.useMemo(() => new _(_, _), [_, _]);
+        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
@@ -14346,7 +15005,8 @@
         _ = 156;
       class _ extends _ {
         m_rgImageOptions;
-        m_currentType = void 0;
+        m_currentImageOption = void 0;
+        m_currentImageOptionKey = void 0;
         constructor(_, _, _, _, _, _) {
           super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
         }
@@ -14425,14 +15085,19 @@
         get ImageOptions() {
           return this.m_rgImageOptions;
         }
+        GetCurrentImageOptionKey() {
+          return this.m_currentImageOptionKey;
+        }
         GetCurrentImageOption() {
-          return this.m_currentType ?? this.ComputeDefaultImageOption();
+          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
         }
         SetCurrentImageOption(_) {
-          this.m_currentType = _;
+          (this.m_currentImageOption = _),
+            (this.m_currentImageOptionKey = _?.sKey);
         }
       }
-      (0, _._)([_._], _.prototype, "m_currentType", void 0);
+      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
+        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
       class _ extends _ {
         video;
         constructor(_, _, _, _) {
@@ -14538,10 +15203,12 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ {}
       function _(_, _, _) {
         if (((null != _ && null != _) || (_ = _), !_ || 0 === _.length))
           return _;
@@ -14973,7 +15640,7 @@
                 err_msg: _,
               })
             );
-          let _ = new _._(_, null),
+          let _ = new _._(_, null, null, -1),
             _ = await _.UploadFile({
               uploadFile: _,
               filename: _,
@@ -17423,6 +18090,1000 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.bincremental || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  bincremental: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  friends: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  max_friend_count: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  active_friend_count: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  friends_limit_hit: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgClientFriendsList";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.ulfriendid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  ulfriendid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  efriendrelationship: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgClientFriendsList_Friend";
+        }
+      }
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.groupid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  groupid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  name: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  accountid_members: {
+                    _: 3,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsListCategory";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetCategories_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.categories || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  categories: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetCategories_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clanid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  chat_group_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsListFavoriteEntry";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFavorites_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFavorites_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_SetFavorites_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_SetFavorites_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.favorites || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  favorites: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_FavoritesChanged_Notification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFriendsList_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.friendslist || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  friendslist: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsList_GetFriendsList_Response";
+        }
+      }
+      !(function (_) {
+        (_.GetCategories = function (_, _) {
+          return _.SendMsg("FriendsList.GetCategories#1", (0, _._)(_, _), _, {
+            bConstMethod: !0,
+            ePrivilege: 1,
+          });
+        }),
+          (_.GetFriendsList = function (_, _) {
+            return _.SendMsg(
+              "FriendsList.GetFriendsList#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetFavorites = function (_, _) {
+            return _.SendMsg("FriendsList.GetFavorites#1", (0, _._)(_, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            });
+          }),
+          (_.SetFavorites = function (_, _) {
+            return _.SendMsg("FriendsList.SetFavorites#1", (0, _._)(_, _), _, {
+              ePrivilege: 1,
+            });
+          });
+      })(_ || (_ = {})),
+        (function (_) {
+          _.FavoritesChangedHandler = {
+            name: "FriendsListClient.FavoritesChanged#1",
+            request: _,
+          };
+        })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        let _ = {
+          loadNicknames: !1,
+          loadFavorites: !1,
+          ..._,
+        };
+        return (0, _._)({
+          queryKey: ["FriendsList", _, _],
+          queryFn: async () => {
+            const _ = _.fetchQuery(_(_, _)),
+              _ = _.loadNicknames ? _.fetchQuery(_(_, _)) : void 0,
+              _ = _.loadFavorites ? _.fetchQuery(_(_, _)) : void 0,
+              _ = await _,
+              _ = new Map(_.map((_) => [_, _.fetchQuery((0, _._)(_, _, _))]));
+            let _;
+            if (_) {
+              const _ = (await _).nicknames;
+              _ = new Map(_.map((_) => [_.accountid, _.nickname]));
+            }
+            const _ = new Set(await (_ ?? Promise.resolve([])));
+            return (
+              await Promise.all(
+                _.map(async (_) => {
+                  const _ = new _._(_).GetAccountID(),
+                    _ = {
+                      accountid: _,
+                      persona: await _.get(_),
+                    };
+                  return (
+                    _.has(_) && (_.is_favorite = !0),
+                    _ && _.has(_) && (_.nickname = _.get(_)),
+                    _
+                  );
+                }),
+              )
+            ).filter((_) => !!_.persona);
+          },
+          staleTime: 12e4,
+        });
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["GetFriendsList", _],
+          queryFn: async () => {
+            const _ = _._.Init(_),
+              _ = await _.GetFriendsList(_, _);
+            return __webpack_require__
+              .Body()
+              .friendslist()
+              ?.friends()
+              ?.filter((_) => {
+                const _ = new _._(_.ulfriendid());
+                return (
+                  (3 == _.efriendrelationship() ||
+                    6 == _.efriendrelationship()) &&
+                  _.BIsIndividualAccount()
+                );
+              })
+              .map((_) => _.ulfriendid());
+          },
+        };
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["GetIgnoredAccounts", _],
+          queryFn: async () => {
+            const _ = _._.Init(_),
+              _ = await _.GetFriendsList(_, _);
+            return __webpack_require__
+              .Body()
+              .friendslist()
+              ?.friends()
+              ?.filter((_) => {
+                const _ = new _._(_.ulfriendid());
+                return (
+                  (5 == _.efriendrelationship() ||
+                    6 == _.efriendrelationship()) &&
+                  _.BIsIndividualAccount()
+                );
+              })
+              .map((_) => _.ulfriendid());
+          },
+        });
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["GetFriendNicknameList", _],
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            return (await _._.GetNicknameList(_, _)).Body().toObject();
+          },
+        };
+      }
+      function _(_ = {}) {
+        return (function (_ = {}) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            ..._(_, _),
+            ..._,
+          });
+        })({
+          ..._,
+          select: (_) =>
+            new Map(_.nicknames.map((_) => [_.accountid, _.nickname])),
+        });
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["GetFriendFavorites", _],
+          queryFn: async () => {
+            const _ = _._.Init(_),
+              _ = (await _.GetFavorites(_, _)).Body().toObject();
+            return _.favorites
+              ?.filter((_) => _.accountid)
+              .map((_) => _.accountid);
+          },
+        };
+      }
+      async function _(_, _) {
+        const _ = _._.Init(_._);
+        __webpack_require__.Body().set_appid(_);
+        const _ = await _._.GetFriendsGameplayInfo(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(`Failed to get gameplay info: ${_.GetEResult()}`),
+          _.Body().toObject()
+        );
+      }
+      function _(_, _ = {}) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          queryKey: [`GameplayInfo_${_}_${_}`],
+          queryFn: async () => await _(_, _),
+          ..._,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18759,6 +20420,16 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _() {
+        let _, _;
+        return {
+          promise: new Promise((_, _) => {
+            (_ = _), (_ = _);
+          }),
+          resolve: _,
+          reject: _,
+        };
+      }
       function _(_) {
         const _ = _.toLowerCase();
         return _.endsWith(".jpg")
@@ -18799,7 +20470,55 @@
             return ".webp";
         }
       }
+      function _(_) {
+        const _ = _(),
+          _ = new Image();
+        return (
+          (_.onload = () => _.resolve(_)),
+          (_.onerror = (_) => {
+            console.error("LoadImage failed to load the image, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          _ = document.createElement("video");
+        return (
+          (_.preload = "metadata"),
+          __webpack_require__.addEventListener("loadedmetadata", () =>
+            _.resolve(_),
+          ),
+          (_.onerror = (_) => {
+            console.error("LoadVideo failed to load the video, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      async function _(_, _) {
+        if (_) return _(URL.createObjectURL(_));
+        {
+          const _ = _(),
+            _ = new FileReader();
+          (_.onload = () => _.resolve(_.result)),
+            (_.onerror = () => {
+              console.error(
+                "GetMediaElementFromFile failed to load the image, details",
+                _.error,
+              ),
+                _.resolve(void 0);
+            }),
+            __webpack_require__.readAsDataURL(_);
+          const _ = await _.promise;
+          return _ ? _(_.toString()) : null;
+        }
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -21514,9 +23233,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -23261,6 +24982,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
       function _(_) {
@@ -23308,6 +25032,15 @@
       function _(_) {
         const { groupData: _, eventModel: __webpack_require__ } = _,
           _ = _(),
+          _ = (0, _._)(),
+          _ = (function () {
+            const [_] = (0, _.useState)(() =>
+              Number.parseInt(
+                (0, _._)("meet_steam_visibility_id", "application_config"),
+              ),
+            );
+            return _;
+          })(),
           _ = _(),
           _ = _(
             _,
@@ -23337,65 +25070,75 @@
             position: "center",
             string: (0, _._)("#Loading"),
           });
-        return _.createElement(
-          _,
-          {
-            groupData: _,
-          },
-          _?.map((_, _) => {
-            const _ = _.data.find(
-                (_) => _.group_id === _.group_id && _.session_id === _._,
-              ),
-              _ = _.get(_._),
-              _ = _ + 1 < _.length;
-            return _.createElement(
-              _.Fragment,
+        return _.group_visibility_tokens?.length > 0 &&
+          !_.group_visibility_tokens.includes(_) &&
+          !_
+          ? null
+          : _.createElement(
+              _,
               {
-                key: "timecol_" + _.group_id + "_" + _._,
+                groupData: _,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.SessionColumnCtn,
-                },
-                _.createElement(_, {
-                  sessionData: _,
-                  onClick: () =>
-                    _(() =>
-                      ((_) => {
-                        const _ = _.Get().GetSelection(_.group_id) == _;
-                        _.Get().SetSelection(_.group_id, _ ? void 0 : _);
-                      })(_._),
-                    ),
-                  nGuestReservations: _?.guest_count || 0,
-                  eRegistrationStatus: _,
-                  bAllowedToRegisterIfFull: _,
-                }),
-              ),
-              _ && _.createElement(_, null),
+              _?.map((_, _) => {
+                const _ = _.data.find(
+                    (_) => _.group_id === _.group_id && _.session_id === _._,
+                  ),
+                  _ = _.get(_._),
+                  _ = _ + 1 < _.length;
+                return _.createElement(
+                  _.Fragment,
+                  {
+                    key: "timecol_" + _.group_id + "_" + _._,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SessionColumnCtn,
+                    },
+                    _.createElement(_, {
+                      sessionData: _,
+                      onClick: () =>
+                        _(() =>
+                          ((_) => {
+                            const _ = _.Get().GetSelection(_.group_id) == _;
+                            _.Get().SetSelection(_.group_id, _ ? void 0 : _);
+                          })(_._),
+                        ),
+                      nGuestReservations: _?.guest_count || 0,
+                      eRegistrationStatus: _,
+                      bAllowedToRegisterIfFull: _,
+                    }),
+                  ),
+                  _ && _.createElement(_, null),
+                );
+              }),
             );
-          }),
-        );
       }
       function _(_) {
         const { groupData: _, children: __webpack_require__ } = _,
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.GetWithFallback(_?.localized_session_title, _),
-          _ = _._.GetWithFallback(_?.localized_session_description, _);
+          _ = _._.GetWithFallback(_?.localized_session_description, _),
+          _ = _._.GetWithFallback(_?.localized_intended_audience, _),
+          _ = _._.GetWithFallback(_?.localized_sesssion_faq, _),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1);
         return _
           ? _.createElement(
               "div",
               {
                 className: (0, _._)({
-                  [_.Ctn]: !0,
-                  [_.CtnRegistered]: !1,
+                  [_().Ctn]: !0,
+                  [_().CtnRegistered]: !1,
+                  [_().VisibilityOverride]:
+                    _ && _.group_visibility_tokens?.length > 0,
                 }),
               },
               Boolean(_) &&
                 _.createElement(
                   "div",
                   {
-                    className: _.SessionTitle,
+                    className: _().SessionTitle,
                   },
                   _,
                 ),
@@ -23403,14 +25146,32 @@
                 _.createElement(
                   "div",
                   {
-                    className: _.SessionDesc,
+                    className: _().SessionDesc,
                   },
                   _,
+                ),
+              Boolean(_) && _.createElement("div", null, _),
+              Boolean(_) &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().ExpanderRow,
+                    },
+                    _.createElement(_._, {
+                      bExpanded: _,
+                      setExpanded: _,
+                    }),
+                    _.createElement("div", null, "FAQ"),
+                  ),
+                  _ && _.createElement("div", null, _),
                 ),
               _.createElement(
                 "div",
                 {
-                  className: _.SessionOptions,
+                  className: _().SessionOptions,
                 },
                 __webpack_require__,
               ),
@@ -23435,10 +25196,10 @@
             "in_person" === _.location_type
               ? (_.in_person_time_zone ?? "America/Los_Angeles")
               : _,
-          _ = _.unix(_),
-          _ = _.unix(_)._(_).utcOffset() - _.utcOffset(),
-          _ = _.unix(_),
-          _ = _.unix(_)._(_),
+          _ = _().unix(_),
+          _ = _().unix(_)._(_).utcOffset() - _.utcOffset(),
+          _ = _().unix(_),
+          _ = _().unix(_)._(_),
           _ = _.utcOffset() - _.utcOffset(),
           _ = Math.max(0, _ - (_ || 0)),
           _ = _ || (0 === _ && _ > 0) || 1 === _ || 2 === _ || 3 === _;
@@ -23446,82 +25207,97 @@
           _ = null;
         return (
           1 == _
-            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _.Registered))
+            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _().Registered))
             : 2 == _
-              ? ((_ = (0, _._)("#MeetSteam_Registering")), (_ = _.Registering))
+              ? ((_ = (0, _._)("#MeetSteam_Registering")),
+                (_ = _().Registering))
               : 3 == _ &&
                 ((_ = (0, _._)("#MeetSteam_Unegistering")),
-                (_ = _.Unregistering)),
+                (_ = _().Unregistering)),
           _.createElement(
             _.Fragment,
             null,
             _.createElement(
               "div",
               {
-                className: (0, _._)(_.SessionInstance, _),
+                className: (0, _._)(_().SessionInstance, _),
               },
               _.createElement(
                 "div",
                 {
-                  className: _.StatusText,
+                  className: _().StatusText,
                 },
                 _.createElement("span", null, _),
               ),
               _.createElement(
                 "button",
                 {
-                  className: _.Button,
+                  className: (0, _._)(_().Button, _().Background),
                   disabled: !_,
                   onClick: __webpack_require__,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.Title,
+                    className: _().Title,
                   },
                   (0, _._)(new Date(1e3 * (_ + 60 * _))),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: _.TimeFrame,
+                    className: _().TimeFrame,
                   },
                   (0, _._)(_ + 60 * _, _ + 60 * _, !0),
                   " ",
                   _.format("z"),
                 ),
               ),
-              _ ||
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  " ",
-                  _ < 1
-                    ? _.createElement(
-                        "div",
-                        {
-                          className: _.SoldOut,
-                        },
-                        (0, _._)("#MeetSteam_SoldOut"),
-                      )
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _.MaxSize,
-                        },
-                        (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
-                      ),
-                  " ",
-                ),
+              _.createElement(_, {
+                nAvailableSpace: _,
+                bAllowedToRegisterIfFull: _,
+              }),
             ),
           )
+        );
+      }
+      function _(_) {
+        const {
+          nAvailableSpace: _,
+          bAllowedToRegisterIfFull: __webpack_require__,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          __webpack_require__ ||
+            _.createElement(
+              _.Fragment,
+              null,
+              " ",
+              _ < 1
+                ? _.createElement(
+                    "div",
+                    {
+                      className: _().SoldOut,
+                    },
+                    (0, _._)("#MeetSteam_SoldOut"),
+                  )
+                : _.createElement(
+                    "div",
+                    {
+                      className: _().MaxSize,
+                    },
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                  ),
+              " ",
+            ),
         );
       }
       function _() {
         return _.createElement(
           "div",
           {
-            className: _.InstanceDivider,
+            className: _().InstanceDivider,
           },
           (0, _._)("#MeetSteam_Or"),
         );
@@ -23592,8 +25368,8 @@
               ref: _,
               className: (0, _._)(
                 _,
-                _.CompleteRegistrationCtn,
-                _ && _ && _.Visible,
+                _().CompleteRegistrationCtn,
+                _ && _ && _().Visible,
               ),
             },
             _.createElement(
@@ -23670,6 +25446,338 @@
                 }),
                 window,
               );
+      }
+      function _(_) {
+        const _ = _.context.event,
+          _ = _.context.showErrorInfo,
+          _ = (0, _._)(_.args, "schedule_id"),
+          _ = Number.parseInt(_),
+          _ = (0, _._)(() =>
+            (function (_, _) {
+              const _ = _?.jsondata?.meet_steam_schedules || [];
+              return __webpack_require__?.find((_) => _.schedule_id == _);
+            })(_, _),
+          );
+        return _
+          ? _.clanSteamID.GetAccountID() != _()
+            ? _
+              ? _.createElement("div", null, "Only support on special group")
+              : null
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  scheduleData: _,
+                  eventModel: _,
+                }),
+                _.createElement(_, {
+                  eventModel: _,
+                }),
+              )
+          : _
+            ? _.createElement(
+                "div",
+                null,
+                "Failed to find session schedule id ",
+                _,
+              )
+            : null;
+      }
+      function _(_) {
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const { eventModel: _, scheduleData: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.jsondata.meet_steam_groups,
+            __webpack_require__.in_person_time_zone,
+            __webpack_require__.location_type,
+          ]),
+          [_, _, _] = (0, _.useMemo)(() => {
+            if (!_) return [null, null, null];
+            const _ = new Map(),
+              _ = new Map();
+            for (const _ of _)
+              for (const _ of _.sessions) {
+                const _ = (
+                  "in_person" == _
+                    ? _().unix(_.rtime_start)._(_)
+                    : _().unix(_.rtime_start)
+                ).format("YYYY-MM-DD");
+                _.has(_) || _.set(_, []),
+                  _.get(_).push({
+                    group: _,
+                    session: _,
+                  });
+              }
+            for (const _ of _.session_breaks || []) {
+              const _ = (
+                "in_person" == _
+                  ? _().unix(_.rtime_start)._(_)
+                  : _().unix(_.rtime_start)
+              ).format("YYYY-MM-DD");
+              _.has(_) || _.set(_, []), _.get(_).push(_);
+            }
+            for (const _ of Array.from(_.keys()))
+              _.get(_).sort(
+                (_, _) => _.session.rtime_start - _.session.rtime_start,
+              );
+            return [_, _, Array.from(_.keys()).sort()];
+          }, [_, _, _, __webpack_require__.session_breaks]);
+        return _
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.map((_) => {
+                const _ = _.get(_);
+                return _.createElement(
+                  "div",
+                  {
+                    key: "day_" + _,
+                    className: _().SingleDayCtn,
+                  },
+                  _.createElement(
+                    "h2",
+                    {
+                      className: _().ScheduleTopDate,
+                    },
+                    _,
+                  ),
+                  _.createElement(_, {
+                    scheduleData: __webpack_require__,
+                    rgDayGroupSessions: _,
+                    rgBreakSessions: _.get(_) || [],
+                  }),
+                );
+              }),
+            )
+          : _.createElement(
+              "div",
+              null,
+              "No Meet Steam Events; please create some first.",
+            );
+      }
+      function _(_) {
+        const {
+            scheduleData: _,
+            rgDayGroupSessions: __webpack_require__,
+            rgBreakSessions: _,
+          } = _,
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            for (const _ of __webpack_require__)
+              0 == _.length ||
+              _[_.length - 1][0].session.rtime_start != _.session.rtime_start
+                ? _.push([_])
+                : _[_.length - 1].push(_);
+            return _;
+          }, [__webpack_require__]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.filter((_) => _.rtime_end <= _[0][0].session.rtime_start).map((_) =>
+            _.createElement(_, {
+              key: `breaks_${_.schedule_id}_${_.break_id}`,
+              scheduleData: _,
+              breakSession: _,
+            }),
+          ),
+          _.map((_, _) => {
+            let _ = [];
+            if (_ + 1 < _.length) {
+              const _ = _[0].session.rtime_start,
+                _ = _[_ + 1][0].session.rtime_end;
+              _ = _.filter((_) => _ < _.rtime_start && _.rtime_end < _);
+            }
+            return _.createElement(
+              _.Fragment,
+              {
+                key: "start_" + _[0].session.rtime_start,
+              },
+              _.createElement(_, {
+                scheduleData: _,
+                rgSlotSessions: _,
+              }),
+              _.map((_) =>
+                _.createElement(_, {
+                  key: `breaks_${_.schedule_id}_${_.break_id}`,
+                  scheduleData: _,
+                  breakSession: _,
+                }),
+              ),
+            );
+          }),
+          _.filter(
+            (_) => _.rtime_start >= _[_.length - 1][0].session.rtime_end,
+          ).map((_) =>
+            _.createElement(_, {
+              key: `breaks_${_.schedule_id}_${_.break_id}`,
+              scheduleData: _,
+              breakSession: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { scheduleData: _, breakSession: __webpack_require__ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.localized_break_description[_] ||
+              __webpack_require__.localized_break_description[0] ||
+              "",
+            __webpack_require__.rtime_start,
+            __webpack_require__.rtime_end,
+          ]);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_, {
+            scheduleData: _,
+            rtStart: _,
+            rtEnd: _,
+          }),
+          _.createElement("div", null, _),
+        );
+      }
+      function _(_) {
+        const { scheduleData: _, rgSlotSessions: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            __webpack_require__[0].session.rtime_start,
+            __webpack_require__[0].session.rtime_end,
+          ]);
+        return _.createElement(
+          "div",
+          {
+            className: _().ScheduleRow,
+          },
+          _.createElement(_, {
+            scheduleData: _,
+            rtStart: _,
+            rtEnd: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().ScheduleSessionsColumn,
+            },
+            __webpack_require__.map((_) =>
+              _.createElement(_, {
+                key: `entry_${_.group.group_id}_${_.session._}`,
+                session: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { scheduleData: _, rtStart: __webpack_require__, rtEnd: _ } = _,
+          [_, _] = (0, _._)(() => [_.in_person_time_zone, _.location_type]),
+          _ =
+            "in_person" == _
+              ? _().unix(__webpack_require__)._(_)
+              : _().unix(__webpack_require__),
+          _ = "in_person" == _ ? _().unix(_)._(_) : _().unix(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().ScheduleTimeColumn,
+          },
+          _.createElement(
+            "div",
+            null,
+            `${_.format("HH:mm")} - ${_.format("HH:mm")}`,
+          ),
+          _.createElement("div", null, `${_.format("z")}`),
+        );
+      }
+      function _(_) {
+        const { session: _ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _, _, _] = (0, _._)(() => [
+            _.group.localized_session_title?.[_] ||
+              _.group.localized_session_description?.[0] ||
+              "",
+            _.group.localized_intended_audience?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+            _.group.localized_sesssion_faq?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+            _.group.localized_session_description?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+          ]),
+          [_, _, _] = (0, _._)(!1);
+        return _.createElement(
+          "div",
+          {
+            className: _().SessionInstance,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().Background,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().SessionTitle,
+              },
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SessionDesc,
+              },
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().ScheduleActionRow,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: _,
+                },
+                (0, _._)("#MeetSteam_Session_Details"),
+              ),
+              _.createElement(_._, null, (0, _._)("#Button_Select")),
+            ),
+          ),
+          _.createElement(_, {
+            nAvailableSpace: _.session.max_capacity,
+            bAllowedToRegisterIfFull: !0,
+          }),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                strTitle: _,
+                bAlertDialog: !0,
+                bAllowFullSize: !0,
+                closeModal: _,
+              },
+              _.createElement("div", null, _),
+              _.createElement("div", null, _),
+              Boolean(_) &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
+                  _.createElement("div", null, _),
+                ),
+            ),
+          ),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -26174,6 +28282,39 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+          eLocation: 0,
+        },
+        _ = _.createContext(_);
+      function _(_) {
+        const { children: _, location: __webpack_require__ } = _;
+        return _.createElement(
+          _.Provider,
+          {
+            value: {
+              ..._,
+              eLocation: __webpack_require__,
+            },
+          },
+          _,
+        );
+      }
+      function _() {
+        return _.useContext(_);
+      }
+      function _() {
+        return 2 == _().eLocation;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -26534,8 +28675,7 @@
                         imageType: "header",
                       }),
                       _.createElement(_._, {
-                        eDeckCompatibilityCategory:
-                          _.GetPlatforms()?.steam_deck_compat_category,
+                        storeItem: _,
                       }),
                       Boolean(_ && _) &&
                         _.createElement(_._, {
@@ -26993,7 +29133,7 @@
           {
             url: _.link.url,
             className: _.strClassName ? _.strClassName : void 0,
-            bSkipForcingStoreLink: !0,
+            bSkipForcingStoreLink: !1,
           },
           _.createElement(
             "div",
@@ -27117,31 +29257,37 @@
         const _ = _.GetPlatforms();
         if (_) {
           let _ =
-            _.windows &&
+            _?.windows &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Windows"),
               },
-              _.createElement(_.Xz0, null),
+              _.createElement(_.Xz0, {
+                "aria-label": (0, _._)("#Platform_Windows"),
+              }),
             );
           return (
-            (0, _._)() && _.mac
+            (0, _._)() && _?.mac
               ? (_ = _.createElement(
                   "span",
                   {
                     title: (0, _._)("#Platform_Mac"),
                   },
-                  _.createElement(_.kPc, null),
+                  _.createElement(_.kPc, {
+                    "aria-label": (0, _._)("#Platform_Mac"),
+                  }),
                 ))
               : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                _.steamos_linux &&
+                _?.steamos_linux &&
                 (_ = _.createElement(
                   "span",
                   {
                     title: (0, _._)("#Platform_Linux"),
                   },
-                  _.createElement(_.Qte, null),
+                  _.createElement(_.Qte, {
+                    "aria-label": (0, _._)("#Platform_Linux"),
+                  }),
                 )),
             _
               ? _.createElement(
@@ -27162,37 +29308,45 @@
           {
             className: (0, _._)(_().CapsulePlatform, __webpack_require__),
           },
-          _.windows &&
+          _?.windows &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Windows"),
               },
-              _.createElement(_.Xz0, null),
+              _.createElement(_.Xz0, {
+                "aria-label": (0, _._)("#Platform_Windows"),
+              }),
             ),
-          _.mac &&
+          _?.mac &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Mac"),
               },
-              _.createElement(_.kPc, null),
+              _.createElement(_.kPc, {
+                "aria-label": (0, _._)("#Platform_Mac"),
+              }),
             ),
-          _.steamos_linux &&
+          _?.steamos_linux &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Linux"),
               },
-              _.createElement(_.Qte, null),
+              _.createElement(_.Qte, {
+                "aria-label": (0, _._)("#Platform_Linux"),
+              }),
             ),
-          _.vr_support?.vrhmd &&
+          _?.vr_support?.vrhmd &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_VR"),
               },
-              _.createElement(_._, null),
+              _.createElement(_._, {
+                "aria-label": (0, _._)("#Platform_VR"),
+              }),
             ),
         );
       }
@@ -27580,7 +29734,13 @@
         if (
           __webpack_require__.BIsComingSoon() &&
           !__webpack_require__.GetBestPurchaseOption()?.packageid
-        )
+        ) {
+          const _ = __webpack_require__.BIsCustomComingSoonDisplay()
+            ? __webpack_require__.GetFormattedSteamReleaseDate()
+            : (0, _._)(
+                "#EventDisplay_CallToAction_ComingSoon_Date",
+                __webpack_require__.GetFormattedSteamReleaseDate(),
+              );
           return _.createElement(
             "div",
             {
@@ -27591,9 +29751,10 @@
               {
                 className: _().StoreSalePriceBox,
               },
-              (0, _._)("#EventDisplay_CallToAction_ComingSoon"),
+              _,
             ),
           );
+        }
         if (__webpack_require__.BIsFree()) {
           if (!__webpack_require__.BIsFreeTemporary())
             return 0 == __webpack_require__.GetStoreItemType() &&
@@ -27707,10 +29868,7 @@
             _.createElement(
               "div",
               {
-                className: (0, _._)(
-                  _().StoreSalePriceBox,
-                  _().StoreSalePrepurchaseLabel,
-                ),
+                className: (0, _._)(_().StoreSalePrepurchaseLabel),
               },
               _.createElement(
                 "span",
@@ -28157,6 +30315,7 @@
                 target: _._.IN_CLIENT ? void 0 : "_blank",
                 className: _,
                 style: _,
+                rel: "noopener noreferrer",
               },
               _,
             )
@@ -28491,6 +30650,7 @@
             bLoop: _,
             bMuted: _,
             className: _,
+            mediaScale: _,
           } = _,
           _ = (0, _.useMemo)(
             () =>
@@ -28552,6 +30712,9 @@
             },
             ref: _,
             className: _,
+            style: {
+              width: _ >= 1 && _ < 100 ? `${_}%` : void 0,
+            },
           },
           _.createElement(_, {
             rgVideoSources: __webpack_require__.rgVideoSources,
@@ -30118,25 +32281,70 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bAllowOutsideOfDeck: _ } = _;
+        return (0, _._)()
+          ? _.createElement(_.MGO, {
+              ..._,
+            })
+          : _.createElement(_.Jlk, {
+              ..._,
+            });
+      }
+      function _() {
+        return _.createElement(_.rfv, null);
+      }
+      function _() {
+        return (0, _._)()
+          ? _.createElement(_._, null)
+          : _.createElement(_.jZW, null);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { bAllowOutsideOfDeck: _, storeItem: __webpack_require__ } = _,
+          [_, _] = (0, _._)();
         if (!(0, _._)() && !_) return null;
         let _ = "unknown";
-        switch (_.eDeckCompatibilityCategory) {
-          case 3:
-            _ = "verified";
-            break;
-          case 2:
-            _ = "playable";
-            break;
-          case 1:
-            _ = "unsupported";
-        }
+        if (2 == _)
+          switch (__webpack_require__.GetPlatforms().steam_os_compat_category) {
+            case 2:
+              _ = "steamoscompatible";
+              break;
+            case 1:
+              _ = "steamosunsupported";
+              break;
+            case 0:
+              _ = "steamosunknown";
+          }
+        else
+          switch (
+            __webpack_require__.GetPlatforms().steam_deck_compat_category
+          ) {
+            case 3:
+              _ = "verified";
+              break;
+            case 2:
+              _ = "playable";
+              break;
+            case 1:
+              _ = "unsupported";
+          }
         return _.createElement("div", {
           className: (0, _._)(
             _.CompatIcon,
@@ -31475,6 +33683,31 @@
         (0, _._)([_._], _.prototype, "OnError", null),
         (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
         (0, _._)([_._], _.prototype, "PlayVideo", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["communitypreferences"],
+          queryFn: async () => {
+            const _ = _._.Init(_._),
+              _ = await _._.GetCommunityPreferences(_, _);
+            if (1 != __webpack_require__.GetEResult())
+              throw new Error(
+                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+              );
+            return __webpack_require__.Body();
+          },
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

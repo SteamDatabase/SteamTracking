@@ -1789,7 +1789,7 @@
         var _ = {};
         for (var _ in _)
           if ({}.hasOwnProperty.call(_, _)) {
-            if (_.includes(_)) continue;
+            if (-1 !== _.indexOf(_)) continue;
             _[_] = _[_];
           }
         return _;

@@ -108,11 +108,11 @@ input.phone_input_number {
 	width: 250px;
 }
 
-.dselect_container a.trigger, .dselect_container a.activetrigger {
+.dselect_container button.trigger, .dselect_container button.activetrigger {
 	line-height: 22px;
 }
 
-.dselect_container a {
+.dselect_container a, .dselect_container button {
 	color: #67c1f5;
 	font-size: 11px;
 	outline: 0px;

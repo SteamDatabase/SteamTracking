@@ -5381,8 +5381,9 @@
           var a = Object.getOwnPropertySymbols(e);
           for (o = 0; o < a.length; o++)
             (n = a[o]),
-              t.includes(n) ||
-                ({}.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+              -1 === t.indexOf(n) &&
+                {}.propertyIsEnumerable.call(e, n) &&
+                (i[n] = e[n]);
         }
         return i;
       }

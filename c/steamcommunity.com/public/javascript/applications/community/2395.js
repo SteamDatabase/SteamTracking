@@ -18,7 +18,20 @@
 	"Header_MarketTitle": "Steam Community Market",
 	"Header_MarketDescription": "Buy and sell items with community members for Steam Wallet Funds",
 	"Header_LearnMore": "Learn More",
-	"CommodityExplanation": "This item is a commodity, where all the individual items are effectively identical. Individual listings aren't accessible; you can instead issue orders to buy at a specific price, with the cheapest listing getting automatically matched to the highest buy order."
+	"CommodityExplanation": "This item is a commodity, where all the individual items are effectively identical. Individual listings aren't accessible; you can instead issue orders to buy at a specific price, with the cheapest listing getting automatically matched to the highest buy order.",
+	"Search_AmountFound": "Found %1$s result",
+	"Search_AmountFound_Plural": "Found %1$s results",
+	"Search_ListingsFound": "Found %1$s listing",
+	"Search_ListingsFound_Plural": "Found %1$s listings",
+	"SortBy_Name_Asc": "Name (A to Z)",
+	"SortBy_Name_Desc": "Name (Z to A)",
+	"SortBy_Price_Asc": "Price (low to high)",
+	"SortBy_Price_Desc": "Price (high to low)",
+	"SortBy_Quantity_Asc": "Quantity (low to high)",
+	"SortBy_Quantity_Desc": "Quantity (high to low)",
+	"SortBy_Placeholder": "Sort By",
+	"Search_Button": "Search",
+	"Search_Placeholder": "Search..."
 }`);
     },
   },

@@ -179,6 +179,7 @@
         AppSummaryWidgetCtn: "_2H8BmYvTdIYKMgG-XiCkc-",
         CarouselSalePageCapsule: "_3r4Ny9tQdQZc50XDM5B2q2",
         SaleBroadcastCtn: "_1SFMhugeWIHJIHrHl6ZQvD",
+        SaleOuterTopMargin: "_2-wCQql61VqgdUYz9XDAE6",
         SaleOuterContainer: "_150kddWk8JgylTvh_eC20b",
         CustomStyle_together: "_1lAygDKkL4NolLsYyh0b_x",
         SaleNewSizing: "_1v-BVc2xZoBmJV2CPwNpq0",
@@ -5609,7 +5610,8 @@
             (_) => {
               _.isIntersecting &&
                 _((_) =>
-                  (null == _ ? void 0 : _.appID) == _ && _.snr == _
+                  (null == _ ? void 0 : _.appID) == _ &&
+                  (null == _ ? void 0 : _.snr) == _
                     ? _
                     : {
                         appID: _,
@@ -5620,7 +5622,7 @@
             [_, _],
           );
         (0, _.useEffect)(() => {
-          _ && _.AddImpression(_.appID, _.snr);
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),
@@ -9089,18 +9091,23 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = _.createContext({
           bForceShowCompatInfo: !1,
+          bSteamOS: !1,
           bSteamDeck: !1,
         }),
         _ = () => _.useContext(_);
       function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _ } = _();
-        return _._.ON_STEAMOS && !_
+        const {
+          bForceShowCompatInfo: _,
+          bSteamDeck: _,
+          bSteamOS: __webpack_require__,
+        } = _();
+        return __webpack_require__ && !_
           ? [!0, 2]
-          : _._.ON_STEAMOS || _
+          : __webpack_require__ || _
             ? [!0, 1]
             : [!1, 0];
       }
@@ -18762,7 +18769,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          var _, _, _;
+          var _, _;
           const {
               bIsHovered: _,
               setIsHovered: _,
@@ -18897,10 +18904,7 @@
                         imageType: "header",
                       }),
                       _.createElement(_._, {
-                        eDeckCompatibilityCategory:
-                          null === (_ = _.GetPlatforms()) || void 0 === _
-                            ? void 0
-                            : _.steam_deck_compat_category,
+                        storeItem: _,
                       }),
                       Boolean(_ && _) &&
                         _.createElement(_._, {
@@ -19372,7 +19376,7 @@
           {
             url: _.link.url,
             className: _.strClassName ? _.strClassName : void 0,
-            bSkipForcingStoreLink: !0,
+            bSkipForcingStoreLink: !1,
           },
           _.createElement(
             "div",
@@ -19507,31 +19511,37 @@
         const _ = _.GetPlatforms();
         if (_) {
           let _ =
-            _.windows &&
+            (null == _ ? void 0 : _.windows) &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Windows"),
               },
-              _.createElement(_.Xz0, null),
+              _.createElement(_.Xz0, {
+                "aria-label": (0, _._)("#Platform_Windows"),
+              }),
             );
           return (
-            (0, _._)() && _.mac
+            (0, _._)() && (null == _ ? void 0 : _.mac)
               ? (_ = _.createElement(
                   "span",
                   {
                     title: (0, _._)("#Platform_Mac"),
                   },
-                  _.createElement(_.kPc, null),
+                  _.createElement(_.kPc, {
+                    "aria-label": (0, _._)("#Platform_Mac"),
+                  }),
                 ))
               : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                _.steamos_linux &&
+                (null == _ ? void 0 : _.steamos_linux) &&
                 (_ = _.createElement(
                   "span",
                   {
                     title: (0, _._)("#Platform_Linux"),
                   },
-                  _.createElement(_.Qte, null),
+                  _.createElement(_.Qte, {
+                    "aria-label": (0, _._)("#Platform_Linux"),
+                  }),
                 )),
             _
               ? _.createElement(
@@ -19549,37 +19559,47 @@
           {
             className: (0, _._)(_().CapsulePlatform, _),
           },
-          _.windows &&
+          (null == _ ? void 0 : _.windows) &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Windows"),
               },
-              _.createElement(_.Xz0, null),
+              _.createElement(_.Xz0, {
+                "aria-label": (0, _._)("#Platform_Windows"),
+              }),
             ),
-          _.mac &&
+          (null == _ ? void 0 : _.mac) &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Mac"),
               },
-              _.createElement(_.kPc, null),
+              _.createElement(_.kPc, {
+                "aria-label": (0, _._)("#Platform_Mac"),
+              }),
             ),
-          _.steamos_linux &&
+          (null == _ ? void 0 : _.steamos_linux) &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_Linux"),
               },
-              _.createElement(_.Qte, null),
+              _.createElement(_.Qte, {
+                "aria-label": (0, _._)("#Platform_Linux"),
+              }),
             ),
-          (null === (_ = _.vr_support) || void 0 === _ ? void 0 : _.vrhmd) &&
+          (null === (_ = null == _ ? void 0 : _.vr_support) || void 0 === _
+            ? void 0
+            : _.vrhmd) &&
             _.createElement(
               "span",
               {
                 title: (0, _._)("#Platform_VR"),
               },
-              _.createElement(_._, null),
+              _.createElement(_._, {
+                "aria-label": (0, _._)("#Platform_VR"),
+              }),
             ),
         );
       }
@@ -19986,7 +20006,13 @@
           !(null === (_ = _.GetBestPurchaseOption()) || void 0 === _
             ? void 0
             : _.packageid)
-        )
+        ) {
+          const _ = _.BIsCustomComingSoonDisplay()
+            ? _.GetFormattedSteamReleaseDate()
+            : (0, _._)(
+                "#EventDisplay_CallToAction_ComingSoon_Date",
+                _.GetFormattedSteamReleaseDate(),
+              );
           return _.createElement(
             "div",
             {
@@ -19997,9 +20023,10 @@
               {
                 className: _().StoreSalePriceBox,
               },
-              (0, _._)("#EventDisplay_CallToAction_ComingSoon"),
+              _,
             ),
           );
+        }
         if (_.BIsFree()) {
           if (!_.BIsFreeTemporary())
             return 0 == _.GetStoreItemType() && 1 == _.GetAppType()
@@ -20112,10 +20139,7 @@
             _.createElement(
               "div",
               {
-                className: (0, _._)(
-                  _().StoreSalePriceBox,
-                  _().StoreSalePrepurchaseLabel,
-                ),
+                className: (0, _._)(_().StoreSalePrepurchaseLabel),
               },
               _.createElement(
                 "span",
@@ -20563,6 +20587,7 @@
                 target: _._.IN_CLIENT ? void 0 : "_blank",
                 className: _,
                 style: _,
+                rel: "noopener noreferrer",
               },
               _,
             )
@@ -22492,21 +22517,37 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bAllowOutsideOfDeck: _ } = _;
+        const { bAllowOutsideOfDeck: _, storeItem: __webpack_require__ } = _,
+          [_, _] = (0, _._)();
         if (!(0, _._)() && !_) return null;
         let _ = "unknown";
-        switch (_.eDeckCompatibilityCategory) {
-          case 3:
-            _ = "verified";
-            break;
-          case 2:
-            _ = "playable";
-            break;
-          case 1:
-            _ = "unsupported";
-        }
+        if (2 == _)
+          switch (__webpack_require__.GetPlatforms().steam_os_compat_category) {
+            case 2:
+              _ = "steamoscompatible";
+              break;
+            case 1:
+              _ = "steamosunsupported";
+              break;
+            case 0:
+              _ = "steamosunknown";
+          }
+        else
+          switch (
+            __webpack_require__.GetPlatforms().steam_deck_compat_category
+          ) {
+            case 3:
+              _ = "verified";
+              break;
+            case 2:
+              _ = "playable";
+              break;
+            case 1:
+              _ = "unsupported";
+          }
         return _.createElement("div", {
           className: (0, _._)(
             _.CompatIcon,

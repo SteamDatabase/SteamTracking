@@ -29693,7 +29693,7 @@
         var r = {};
         for (var n in e)
           if ({}.hasOwnProperty.call(e, n)) {
-            if (t.includes(n)) continue;
+            if (-1 !== t.indexOf(n)) continue;
             r[n] = e[n];
           }
         return r;

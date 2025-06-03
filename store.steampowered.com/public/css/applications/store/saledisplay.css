@@ -210,12 +210,23 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
 }
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;
+  justify-content: space-between;
 }
 ._2g5oNomwd2lv8wL2qlsLVA .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+._2g5oNomwd2lv8wL2qlsLVA .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.RGHKm1_KeaBjdzuvisfYN {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
 }
 ._3yDPZjnsoLc2FkrAH2UOEd {
   display: flex;

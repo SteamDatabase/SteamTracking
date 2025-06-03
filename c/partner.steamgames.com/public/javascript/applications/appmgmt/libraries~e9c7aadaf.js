@@ -6126,8 +6126,9 @@
           var _ = Object.getOwnPropertySymbols(_);
           for (_ = 0; _ < _.length; _++)
             (_ = _[_]),
-              _.includes(_) ||
-                ({}.propertyIsEnumerable.call(_, _) && (_[_] = _[_]));
+              -1 === _.indexOf(_) &&
+                {}.propertyIsEnumerable.call(_, _) &&
+                (_[_] = _[_]);
         }
         return _;
       }

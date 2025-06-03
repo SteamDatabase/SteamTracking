@@ -7,6 +7,9 @@
     19976: (e) => {
       e.exports = {
         DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
+        AppDashboard: "_3AZIiEfg9ySoDT99t5sFmp",
+        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
+        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         DashStatsContainer: "_2pZUWz9doUUVgJTIiA_5qb",
         Chart: "_2z00NeTIYdtaDdJPVZrLm2",
         Stats: "_2jxzC1AyBA_xxpsnV5l1uW",
@@ -21,11 +24,9 @@
         ToolTipTableRow: "_1hcQcqAFKPCYQUGtHIcGn4",
         TotalRow: "_1esRSJn8rPckHux_JS4iQg",
         ToolTipTableCell: "iIyyn73ITYmBOzqghT5NY",
-        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
         LeftAlign: "mgkgnb7LlDnVJwX6L29YM",
         ModuleTitle: "_1_qWSYHWj0MC9ivPG5LNEJ",
         ViewDetailLink: "_3LC92YRlgqBty5woF3CakT",
-        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         StatGroup: "_2H61dmCW7zg12hj9OKWviV",
         Header: "gpt4bNGeQpWFC9R3TR6gU",
         Numerals: "_1aa9BSk_Qolo1ZpNuEGUqD",
@@ -1888,26 +1889,27 @@
       function N(e) {
         const {
             imageUploader: t,
-            strOverrideDragAndDropText: a,
-            forceResolution: r,
-            localizedPrimaryImage: o,
-            elAdditonalButtons: l,
-            rgRealmList: i,
+            fnUploadComplete: a,
+            strOverrideDragAndDropText: r,
+            forceResolution: o,
+            localizedPrimaryImage: l,
+            elAdditonalButtons: i,
+            rgRealmList: u,
           } = e,
-          [u, d] = (0, n.q3)(() => [
+          [d, g] = (0, n.q3)(() => [
             t.GetUploadImages(),
             m.O.Get().GetCurEditLanguage(),
           ]),
-          g = s.useCallback(
+          f = s.useCallback(
             async (e) => {
               let a = Array.from(e),
                 n = !0;
               for (let e = 0; e < a.length; e++) {
                 const r = a[e],
-                  { language: l } = (0, c.j)(r?.name, d);
+                  { language: o } = (0, c.jj)(r?.name, g);
                 try {
-                  const a = (0, c.P)(l, d, i);
-                  (n = await t.AddImageForLanguage(r, a, o)),
+                  const a = (0, c.PD)(o, g, u);
+                  (n = await t.AddImageForLanguage(r, a, l)),
                     n ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -1943,56 +1945,56 @@
               }
               return n;
             },
-            [d, t, o, i],
+            [g, t, l, u],
           ),
-          f = s.useMemo(
+          h = s.useMemo(
             () =>
-              l instanceof Array
-                ? l
+              i instanceof Array
+                ? i
                 : [
                     s.createElement(
                       s.Fragment,
                       { key: "elAdditonalButtons" },
-                      l,
+                      i,
                     ),
                   ],
-            [l],
+            [i],
           );
-        return (
-          (0, n.q3)(() =>
-            u.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
-          ),
+        (0, n.q3)(() =>
+          d.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
+        );
+        return s.createElement(
+          E,
+          {
+            onDropFiles: f,
+            elAdditonalButtons: h,
+            strOverrideDragAndDropText: r,
+          },
           s.createElement(
-            E,
-            {
-              onDropFiles: g,
-              elAdditonalButtons: f,
-              strOverrideDragAndDropText: a,
-            },
+            s.Fragment,
+            null,
             s.createElement(
-              s.Fragment,
-              null,
-              s.createElement(
-                "div",
-                { className: k().UploadPreviewCtn },
-                u.map((e) =>
-                  s.createElement(L, {
-                    key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
-                    asset: e,
-                    forceResolution: r,
-                    forceFileType: o && o.file_type,
-                    fnOnRemove: () => t.DeleteUploadImage(e),
-                    languageRealms: i,
-                  }),
-                ),
+              "div",
+              { className: k().UploadPreviewCtn },
+              d.map((e) =>
+                s.createElement(L, {
+                  key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
+                  asset: e,
+                  forceResolution: o,
+                  forceFileType: l && l.file_type,
+                  fnOnRemove: () => t.DeleteUploadImage(e),
+                  languageRealms: u,
+                }),
               ),
             ),
-            s.createElement(B, {
-              imageUploader: t,
-              fnOnUploadImageRequested: async () =>
-                await t.UploadAllImages(i, d, r, o && o.file_type),
-            }),
-          )
+          ),
+          s.createElement(B, {
+            imageUploader: t,
+            fnOnUploadImageRequested: async () => {
+              const e = await t.UploadAllImages(o, l && l.file_type);
+              a?.(e);
+            },
+          }),
         );
       }
       function B(e) {
@@ -2120,7 +2122,7 @@
               {
                 onClick: () =>
                   ((t) => {
-                    if (t instanceof i.A_) {
+                    if (t instanceof i.M7) {
                       t.ResetImage();
                       const a = window,
                         n = s.createElement(T.q, {

@@ -620,19 +620,22 @@
         Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
         Description: "r3oaGi8Z4_MjYvdW_zsl5",
+        TitleDescriptionCtn: "_1nqoF3NLNjaj2qxQrb7JgV",
+        MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
       };
     },
     67634: (e) => {
       e.exports = {
         Container: "_1OfOnnPi_1tjY-hFpLV1x7",
+        MediaOverlayCtn: "_2ol_Y4sMpjQ86Dtzmc_8tB",
         TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
-        TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
-        TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         LeftCenter: "rPnDdGasAukKhy7-xBgcI",
-        Center: "_2zwc1G-Lg4dnBphmxeygHe",
-        RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomLeft: "_1OQT1WvY7DQoN1F93TIInl",
+        TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
+        Center: "_2zwc1G-Lg4dnBphmxeygHe",
         BottomCenter: "_2157ASOvqcVmPZ7QZk_SDy",
+        TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
+        RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
       };
     },
@@ -5020,14 +5023,15 @@
             a.e(2797),
             a.e(7436),
             a.e(7403),
-            a.e(9214),
+            a.e(9882),
+            a.e(2837),
             a.e(5487),
             a.e(3270),
-            a.e(4796),
-            a.e(9063),
+            a.e(9699),
             a.e(4095),
-            a.e(6883),
+            a.e(6550),
             a.e(9105),
+            a.e(8601),
             a.e(283),
             a.e(177),
             a.e(8396),
@@ -5110,186 +5114,6 @@
           ),
         );
       }
-    },
-    77021: (e, t, a) => {
-      "use strict";
-      a.d(t, { PM: () => d, TU: () => m, lM: () => u });
-      var n = a(34629),
-        r = a(90626),
-        s = a(78327),
-        i = a(73745),
-        o = a(14947),
-        l = a(95034),
-        c = a(65946);
-      class m {
-        m_sParentOrigin;
-        m_eventModelJson = void 0;
-        m_setMouseOverSectionID = o.sH.set();
-        m_setMouseOverSubsectionID = o.sH.set();
-        m_jumpToSection = void 0;
-        m_jumpToSubsection = void 0;
-        static s_Singleton;
-        static Get() {
-          return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              "dev" == s.TS.WEB_UNIVERSE &&
-                (window.g_PartnerSaleLivePreviewClient = m.s_Singleton)),
-            m.s_Singleton
-          );
-        }
-        constructor() {
-          (0, o.Gn)(this),
-            window.opener &&
-              ((this.m_sParentOrigin = (0, l.f3)(
-                location.search,
-                "parentOrigin",
-              )),
-              window.addEventListener("message", this.HandleMessage),
-              window.addEventListener("beforeunload", () =>
-                window.opener.postMessage(
-                  { message: "PartnerEventEditor_ClientUnready" },
-                  this.m_sParentOrigin,
-                ),
-              ),
-              window.opener.postMessage(
-                { message: "PartnerEventEditor_ClientReady" },
-                this.m_sParentOrigin,
-              ));
-        }
-        BIsConnected() {
-          return !!window.opener && this.m_eventModelJson;
-        }
-        GetEventModel() {
-          return this.m_eventModelJson;
-        }
-        GetMouseOverSectionID() {
-          return this.m_setMouseOverSectionID.size > 0
-            ? this.m_setMouseOverSectionID.values().next().value
-            : void 0;
-        }
-        GetMouseOverSubsectionID() {
-          return this.m_setMouseOverSubsectionID.size > 0
-            ? this.m_setMouseOverSubsectionID.values().next().value
-            : void 0;
-        }
-        GetJumpToSectionID() {
-          return this.m_jumpToSection;
-        }
-        GetJumpToSubsectionIDs() {
-          return this.m_jumpToSubsection;
-        }
-        ClearJumpToSectionID() {
-          (0, o.h5)(() => (this.m_jumpToSection = void 0));
-        }
-        ClearJumpToSubectionID() {
-          (0, o.h5)(() => (this.m_jumpToSubsection = void 0));
-        }
-        PostMessage(e) {
-          window.opener &&
-            this.m_sParentOrigin &&
-            window.opener.postMessage(e, this.m_sParentOrigin);
-        }
-        SetMouseOverSection(e, t) {
-          if (!this.BIsConnected()) return;
-          const a = {
-            message: "PartnerEventEditor_MouseOverViewSection",
-            nSectionID: e,
-            bMouseOver: t,
-          };
-          this.PostMessage(a);
-        }
-        SetMouseOverSubsection(e, t) {
-          if (!this.BIsConnected()) return;
-          const a = {
-            message: "PartnerEventEditor_MouseOverViewSubsection",
-            strSubsectionID: e,
-            bMouseOver: t,
-          };
-          this.PostMessage(a);
-        }
-        JumpToSection(e) {
-          if (!this.BIsConnected()) return;
-          const t = {
-            message: "PartnerEventEditor_JumpToViewSection",
-            nSectionID: e,
-          };
-          this.PostMessage(t);
-        }
-        HandleMessage(e) {
-          if (e.origin != this.m_sParentOrigin) return;
-          const t = e.data && "message" in e.data ? e.data : null;
-          if (t)
-            switch (t.message) {
-              case "PartnerEventEditor_Update":
-                if ("eventModelJson" in t && t.eventModelJson) {
-                  const e = t;
-                  (0, o.h5)(() => (this.m_eventModelJson = e.eventModelJson));
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSection":
-                if ("nSectionID" in t) {
-                  const e = t;
-                  (0, o.h5)(() => {
-                    e.bMouseOver
-                      ? this.m_setMouseOverSectionID.add(e.nSectionID)
-                      : this.m_setMouseOverSectionID.delete(e.nSectionID);
-                  });
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSubsection":
-                if ("strSubsectionID" in t) {
-                  const e = t;
-                  (0, o.h5)(() => {
-                    e.bMouseOver
-                      ? this.m_setMouseOverSubsectionID.add(e.strSubsectionID)
-                      : this.m_setMouseOverSubsectionID.delete(
-                          e.strSubsectionID,
-                        );
-                  });
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSection":
-                if ("nSectionID" in t) {
-                  const e = t;
-                  (0, o.h5)(() => (this.m_jumpToSection = e.nSectionID));
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSubection":
-                if ("strSubsectionID" in t) {
-                  const e = t;
-                  (0, o.h5)(() => {
-                    (this.m_jumpToSection = e.nSectionID),
-                      (this.m_jumpToSubsection = {
-                        nSectionID: e.nSectionID,
-                        strSubsectionID: e.strSubsectionID,
-                      });
-                  });
-                }
-            }
-        }
-      }
-      function u(e) {
-        const t = (0, c.q3)(() => m.Get().GetJumpToSectionID());
-        r.useEffect(() => {
-          if (!m.Get().BIsConnected() || !t) return;
-          e(t) && m.Get().ClearJumpToSectionID();
-        }, [e, t]);
-      }
-      function d(e) {
-        const t = (0, c.q3)(() => m.Get().GetJumpToSubsectionIDs());
-        r.useEffect(() => {
-          if (!m.Get().BIsConnected() || !t) return;
-          e(t.nSectionID, t.strSubsectionID) &&
-            m.Get().ClearJumpToSubectionID();
-        }, [e, t]);
-      }
-      (0, n.Cg)([o.sH], m.prototype, "m_eventModelJson", void 0),
-        (0, n.Cg)([o.sH], m.prototype, "m_setMouseOverSectionID", void 0),
-        (0, n.Cg)([o.sH], m.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, n.Cg)([o.sH], m.prototype, "m_jumpToSection", void 0),
-        (0, n.Cg)([o.sH], m.prototype, "m_jumpToSubsection", void 0),
-        (0, n.Cg)([i.oI], m.prototype, "HandleMessage", null);
     },
     72443: (e, t, a) => {
       "use strict";
@@ -5791,7 +5615,7 @@
     },
     77291: (e, t, a) => {
       "use strict";
-      a.d(t, { iQ: () => R, pc: () => P, bk: () => k });
+      a.d(t, { iQ: () => x, pc: () => F, bk: () => R });
       var n = a(22837),
         r = a(90626),
         s = a(56046),
@@ -5883,8 +5707,12 @@
         );
       }
       var B = a(60014),
-        D = a(12155);
-      function G(e) {
+        D = a(12155),
+        G = a(65946),
+        k = a(6379),
+        P = a(43616),
+        N = a(96971);
+      function L(e) {
         return (
           !e.requires_reservation &&
           e.allow_purchase_in_country &&
@@ -5894,7 +5722,7 @@
           e.reservation_state != s.G.k_EPurchaseReservationState_Reserved
         );
       }
-      function k(e) {
+      function R(e) {
         const { reservationDef: t, hardwareDetail: a, bPSULessModel: s } = e;
         if (
           !v.iA.logged_in &&
@@ -5915,8 +5743,8 @@
                   ),
                 ),
               );
-        if (G(a))
-          return r.createElement(M, { hardwareDetail: a, bPSULessModel: s });
+        if (L(a))
+          return r.createElement(U, { hardwareDetail: a, bPSULessModel: s });
         if (!a.requires_reservation && a.account_restricted_from_purchasing)
           return s
             ? null
@@ -5964,21 +5792,38 @@
             ),
           );
         }
-        return r.createElement(H, { reservationDef: t, hardwareDetail: a });
+        return r.createElement(q, { reservationDef: t, hardwareDetail: a });
       }
-      function P(e) {
-        const { hardwareDetail: t } = e,
-          a = !(
+      function F(e) {
+        const { hardwareDetail: t, reservationDef: a, event: i } = e,
+          o = (0, N.MU)(),
+          l = !(
             t.inventory_available ||
             (null != t.reservation_state &&
               t.reservation_state !=
                 s.G.k_EPurchaseReservationState_NotReserved) ||
             t.requires_reservation
           ),
-          n = t.account_restricted_from_purchasing && !v.iA.logged_in;
-        if (a || n) return null;
+          c = (0, G.q3)(() => {
+            if (
+              a.localized_reservation_desc?.length > 0 &&
+              (!a.override_delivery_only_out_of_stock ||
+                (!t.requires_reservation && !t.inventory_available))
+            ) {
+              const e = (0, n.sf)(v.TS.LANGUAGE),
+                t = f.A0.GetELanguageFallback(e);
+              return (
+                a.localized_reservation_desc[e] ||
+                a.localized_reservation_desc[t] ||
+                ""
+              );
+            }
+            return null;
+          }),
+          m = t.account_restricted_from_purchasing && !v.iA.logged_in;
+        if (l || m) return null;
         if (
-          G(t) ||
+          L(t) ||
           t.reservation_state == s.G.k_EPurchaseReservationState_Allocated
         )
           return r.createElement(
@@ -6004,19 +5849,32 @@
                 "ReservationExpectedDate",
               ),
             },
-            (0, f.we)(
-              t.reservation_state == s.G.k_EPurchaseReservationState_Reserved
-                ? "#Sale_Reservation_YourExpectedDate"
-                : "#Sale_Reservation_ExpectedDate",
-            ),
-            r.createElement(T, {
-              rtEstimatedNotifcationDate: t.rtime_estimated_notification,
-              strToken: t.notificaton_token,
-            }),
+            Boolean(c)
+              ? r.createElement(P.f, {
+                  text: c,
+                  partnerEventStore: k.O3,
+                  showErrorInfo: o,
+                  event: i,
+                  languageOverride: (0, n.sf)(v.TS.LANGUAGE),
+                })
+              : r.createElement(
+                  r.Fragment,
+                  null,
+                  (0, f.we)(
+                    t.reservation_state ==
+                      s.G.k_EPurchaseReservationState_Reserved
+                      ? "#Sale_Reservation_YourExpectedDate"
+                      : "#Sale_Reservation_ExpectedDate",
+                  ),
+                  r.createElement(T, {
+                    rtEstimatedNotifcationDate: t.rtime_estimated_notification,
+                    strToken: t.notificaton_token,
+                  }),
+                ),
           ),
         );
       }
-      function N(e) {
+      function M(e) {
         const { hardwareDetail: t } = e,
           { fnUpdateReservation: a } = (0, l.BB)(),
           [n, s] = (0, r.useState)(!1),
@@ -6069,7 +5927,7 @@
             r.createElement("div", { className: u.ErrorStylesWithIcon }, c),
         );
       }
-      function L(e) {
+      function O(e) {
         const { hardwareDetail: t } = e;
         return r.createElement(
           "div",
@@ -6086,16 +5944,16 @@
               }),
             ),
           ),
-          r.createElement(N, { ...e }),
+          r.createElement(M, { ...e }),
         );
       }
-      function R(e, t, a) {
+      function x(e, t, a) {
         const n = `${v.TS.STORE_BASE_URL}cart`,
           r = `${v.TS.STORE_BASE_URL}cart/addtocart`,
           s = (0, i.L3)(a);
         o.Fm.Get().AddToCart(e, t, r, n, s);
       }
-      function F(e) {
+      function H(e) {
         const { hardwareDetail: t } = e,
           a = (0, B.n9)();
         return c.HD.GetTimeNowWithOverride() < t.time_expires
@@ -6127,10 +5985,10 @@
               ),
               r.createElement(
                 m.$n,
-                { onClick: (e) => R(e, t.packageid, a) },
+                { onClick: (e) => x(e, t.packageid, a) },
                 (0, f.we)("#Sale_Reservation_CompletePurchase"),
               ),
-              r.createElement(N, { ...e }),
+              r.createElement(M, { ...e }),
             )
           : r.createElement(
               "div",
@@ -6146,10 +6004,10 @@
                   (0, f.we)("#Sale_Reservation_Expired"),
                 ),
               ),
-              r.createElement(N, { ...e }),
+              r.createElement(M, { ...e }),
             );
       }
-      function M(e) {
+      function U(e) {
         const { hardwareDetail: t, bPSULessModel: a } = e,
           n = (0, B.Nc)();
         return r.createElement(
@@ -6164,7 +6022,7 @@
           },
           r.createElement(
             m.$n,
-            { onClick: (e) => R(e, t.packageid, n) },
+            { onClick: (e) => x(e, t.packageid, n) },
             Boolean(a) && r.createElement(D.mb7, null),
             (0, f.we)(
               a
@@ -6174,10 +6032,10 @@
           ),
         );
       }
-      function O(e) {
-        return r.createElement(x, { ...e });
+      function z(e) {
+        return r.createElement(W, { ...e });
       }
-      function x(e) {
+      function W(e) {
         const { hardwareDetail: t } = e,
           [a, n] = (0, r.useState)(!1),
           [s, i] = (0, r.useState)(!1),
@@ -6217,13 +6075,13 @@
             r.createElement("div", { className: u.ErrorStylesWithIcon }, o),
         );
       }
-      function H(e) {
+      function q(e) {
         const { hardwareDetail: t } = e;
         switch (t.reservation_state) {
           case s.G.k_EPurchaseReservationState_Reserved:
-            return r.createElement(L, { ...e });
+            return r.createElement(O, { ...e });
           case s.G.k_EPurchaseReservationState_Allocated:
-            return r.createElement(F, { ...e });
+            return r.createElement(H, { ...e });
           case s.G.k_EPurchaseReservationState_UnavailableRegion:
             return r.createElement(
               "div",
@@ -6239,7 +6097,7 @@
           case s.G.k_EPurchaseReservationState_Consumed:
           case s.G.k_EPurchaseReservationState_Cancelled:
           default:
-            return r.createElement(O, { ...e });
+            return r.createElement(z, { ...e });
         }
       }
     },
@@ -7904,10 +7762,7 @@
                     { className: A().StoreSaleWidgetImage },
                     n.createElement(_.V, { appids: O }),
                     n.createElement(i.aU, { info: l, imageType: "library" }),
-                    n.createElement(f.S, {
-                      eDeckCompatibilityCategory:
-                        r.GetPlatforms()?.steam_deck_compat_category,
-                    }),
+                    n.createElement(f.J, { storeItem: r }),
                   ),
                 ),
               ),
@@ -8036,10 +7891,7 @@
                   "div",
                   { className: A().StoreSaleWidgetBgTint },
                   n.createElement(D.G, { info: l }),
-                  n.createElement(f.S, {
-                    eDeckCompatibilityCategory:
-                      r.GetPlatforms()?.steam_deck_compat_category,
-                  }),
+                  n.createElement(f.J, { storeItem: r }),
                 ),
               ),
             ),
@@ -8544,9 +8396,9 @@
         );
       }
     },
-    42326: (e, t, a) => {
+    53677: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Xo });
+      a.d(t, { H: () => $o });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -11279,9 +11131,9 @@
             className: ze.LibraryImage,
             src: a.GetAssets().GetLibraryCapsuleURL(),
           }),
-          n.createElement(Ue.S, {
+          n.createElement(Ue.J, {
             bAllowOutsideOfDeck: !0,
-            eDeckCompatibilityCategory: 3,
+            storeItem: a,
             className: ze.CompatIconOverride,
           }),
         );
@@ -12438,7 +12290,7 @@
             {
               capsules: t.slice(0, h).map((e) => ({ id: e, type: "game" })),
               bMoreRemaining: !1,
-              firstCapsule: (0, ot.kf)(e)
+              firstCapsule: (0, ot.TT)(e)
                 ? { id: parseInt(e), type: "game" }
                 : null,
             }
@@ -21929,7 +21781,14 @@
       }
       var Ao = a(94960),
         Io = a.n(Ao);
-      function To(e) {
+      function To(e, t) {
+        return t
+          ? t.startsWith("https://") || t.startsWith("http://")
+            ? t
+            : `${fe.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
+          : t;
+      }
+      function Bo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, v.Qn)();
         return n.createElement(
@@ -21949,7 +21808,7 @@
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             a?.media_container?.media_rows?.map((t, r) =>
-              n.createElement(Bo, {
+              n.createElement(Do, {
                 key: "templategrid_" + a.unique_id + "_" + r,
                 ...e,
                 row: t,
@@ -21958,7 +21817,7 @@
           ),
         );
       }
-      function Bo(e) {
+      function Do(e) {
         const { event: t, section: a, language: r, row: s } = e,
           i = (0, he.q3)(() => s.media_columns?.length || 0);
         return n.createElement(
@@ -21973,7 +21832,7 @@
             }),
           },
           s.media_columns?.map((t) =>
-            n.createElement(Do, {
+            n.createElement(Go, {
               key: "mc_" + a.unique_id + "_" + t.unique_id,
               ...e,
               content: t,
@@ -21981,7 +21840,7 @@
           ),
         );
       }
-      function Do(e) {
+      function Go(e) {
         const { event: t, section: a, language: r, content: s } = e,
           [i, o, l, c, m, u, d, _, p, g, h, S, f, v, y, b] = (0, he.q3)(() => {
             const e = T.A0.GetELanguageFallback(r);
@@ -22026,7 +21885,7 @@
                 : void 0,
             ];
           });
-        return n.createElement(Go, {
+        return n.createElement(ko, {
           displayOrder: i,
           event: t,
           section: a,
@@ -22049,7 +21908,7 @@
           titleHAlign: b,
         });
       }
-      function Go(e) {
+      function ko(e) {
         const { displayOrder: t, content: a, section: r } = e,
           s = (0, v.Qn)(),
           i = n.useRef(),
@@ -22090,47 +21949,24 @@
             },
             Boolean(
               !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
-            ) && n.createElement(ko, { ...e }),
+            ) && n.createElement(Po, { ...e }),
             Boolean(
               t == so.k_HorizontalTextFirst || t == so.k_TitleDescMedia,
-            ) && n.createElement(Po, { ...e }),
+            ) && n.createElement(No, { ...e }),
           )
         );
       }
-      function ko(e) {
-        const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            "div",
-            {
-              className: (0, f.A)({
-                [Io().Media]: !0,
-                [Io().HorizLeft]: r == oo.k_Left,
-                [Io().HorizCenter]: !r || r == oo.k_Center,
-                [Io().HorizRight]: r == oo.k_Right,
-                [Io().VertTop]: s == oo.k_Top,
-                [Io().VertCenter]: !s || s == oo.k_Center,
-                [Io().VertBottom]: s == oo.k_Bottom,
-              }),
-            },
-            n.createElement(Ro, {
-              media: t,
-              mediaType: a,
-              mediaHAlign: r,
-              mediaVAlign: s,
-            }),
-          ),
-          n.createElement(Lo, { ...e }),
-        );
-      }
       function Po(e) {
-        const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
+        const {
+          media: t,
+          mediaType: a,
+          mediaHAlign: r,
+          mediaVAlign: s,
+          event: i,
+        } = e;
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Lo, { ...e }),
           n.createElement(
             "div",
             {
@@ -22144,16 +21980,53 @@
                 [Io().VertBottom]: s == oo.k_Bottom,
               }),
             },
-            n.createElement(Ro, {
+            n.createElement(Fo, {
               media: t,
               mediaType: a,
               mediaHAlign: r,
               mediaVAlign: s,
+              clanAccountID: i.clanSteamID.GetAccountID(),
             }),
           ),
+          n.createElement(Ro, { ...e }),
         );
       }
       function No(e) {
+        const {
+          media: t,
+          mediaType: a,
+          mediaHAlign: r,
+          mediaVAlign: s,
+          event: i,
+        } = e;
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(Ro, { ...e }),
+          n.createElement(
+            "div",
+            {
+              className: (0, f.A)({
+                [Io().Media]: !0,
+                [Io().HorizLeft]: r == oo.k_Left,
+                [Io().HorizCenter]: !r || r == oo.k_Center,
+                [Io().HorizRight]: r == oo.k_Right,
+                [Io().VertTop]: s == oo.k_Top,
+                [Io().VertCenter]: !s || s == oo.k_Center,
+                [Io().VertBottom]: s == oo.k_Bottom,
+              }),
+            },
+            n.createElement(Fo, {
+              media: t,
+              mediaType: a,
+              mediaHAlign: r,
+              mediaVAlign: s,
+              clanAccountID: i.clanSteamID.GetAccountID(),
+            }),
+          ),
+        );
+      }
+      function Lo(e) {
         const {
           title: t,
           subtitle: a,
@@ -22166,18 +22039,25 @@
           titleMediaType: m,
           titleHAlign: u,
           titleVAlign: d,
+          titleMediaScale: _,
         } = e;
         return c
-          ? n.createElement(Ro, {
-              media: c,
-              mediaType: m,
-              mediaHAlign: u,
-              mediaVAlign: d,
-            })
+          ? n.createElement(
+              "div",
+              { className: Io().MediaLogo },
+              n.createElement(Fo, {
+                media: c,
+                mediaType: m,
+                mediaHAlign: u,
+                mediaVAlign: d,
+                mediaScale: _,
+                clanAccountID: i.clanSteamID.GetAccountID(),
+              }),
+            )
           : n.createElement(
               n.Fragment,
               null,
-              n.createElement(xo, {
+              n.createElement(Ho, {
                 event: i,
                 className: Io().TextFirstTitle,
                 title: t,
@@ -22185,7 +22065,7 @@
                 eTextAlign: s,
                 language: o,
               }),
-              n.createElement(Fo, {
+              n.createElement(Mo, {
                 event: i,
                 className: Io().TextFirstTitle,
                 subtitle: a,
@@ -22194,46 +22074,89 @@
               }),
             );
       }
-      function Lo(e) {
-        const { description: t, event: a, language: r, descAlign: s } = e;
+      function Ro(e) {
+        const {
+          description: t,
+          event: a,
+          language: r,
+          descAlign: s,
+          eDescriptionDisplaySize: i,
+        } = e;
         return n.createElement(
           "div",
-          { className: Io().Text },
-          n.createElement(No, { ...e }),
-          n.createElement(Ho, {
+          { className: Io().TitleDescriptionCtn },
+          n.createElement(Lo, { ...e }),
+          n.createElement(Uo, {
             event: a,
             description: t,
             eTextAlign: s,
             language: r,
+            eDescriptionDisplaySize: i,
           }),
         );
       }
-      function Ro(e) {
-        const { media: t, mediaType: a, mediaHAlign: r, mediaVAlign: s } = e;
-        if (a == ro.k_MediaImage)
-          return t.image && 0 != t.image?.trim().length
-            ? n.createElement("img", { src: t.image })
-            : null;
-        {
-          const e = [];
-          return (!t.video_webm_src && !t.video_mp4_src) ||
-            (0 == t.video_webm_src?.trim().length &&
-              0 == t.video_mp4_src?.trim().length)
-            ? null
-            : (t.video_webm_src &&
-                e.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
-              t.video_mp4_src &&
-                e.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
-              n.createElement(Yt.L, {
-                video: { sPoster: t.image, rgVideoSources: e },
-                bAutoPlay: !0,
-                bControls: !1,
-                bLoop: !0,
-                bMuted: !0,
-              }));
-        }
-      }
       function Fo(e) {
+        const {
+            media: t,
+            mediaType: a,
+            mediaHAlign: r,
+            mediaVAlign: s,
+            clanAccountID: i,
+            mediaScale: o,
+          } = e,
+          l = (0, n.useRef)(null),
+          [c, m] = (0, n.useState)(null),
+          u = o && o >= 1 && o <= 100 ? o / 100 : 1;
+        (0, n.useEffect)(() => {
+          if (l.current && l.current.complete) {
+            const { naturalWidth: e, naturalHeight: t } = l.current;
+            m({ width: e, height: t });
+          }
+        }, []);
+        const d = () => {
+          if (l.current) {
+            const { naturalWidth: e, naturalHeight: t } = l.current;
+            m({ width: e, height: t });
+          }
+        };
+        if (!t.video_webm_src) {
+          if (!t.image || 0 === t.image.trim().length) return null;
+          const e = c ? c.width * u : "auto";
+          return n.createElement(
+            "div",
+            { style: { display: "inline-block" } },
+            n.createElement("img", {
+              ref: l,
+              onLoad: d,
+              src: To(i, t.image),
+              alt: "",
+              style: {
+                width: "number" == typeof e ? `${e}px` : "auto",
+                height: "auto",
+                display: "block",
+              },
+            }),
+          );
+        }
+        const _ = [];
+        return (!t.video_webm_src && !t.video_mp4_src) ||
+          (0 === t.video_webm_src?.trim().length &&
+            0 === t.video_mp4_src?.trim().length)
+          ? null
+          : (t.video_webm_src &&
+              _.push({ sURL: To(i, t.video_webm_src), sFormat: "video/webm" }),
+            t.video_mp4_src &&
+              _.push({ sURL: To(i, t.video_mp4_src), sFormat: "video/mp4" }),
+            n.createElement(Yt.L, {
+              video: { sPoster: To(i, t.image), rgVideoSources: _ },
+              bAutoPlay: !0,
+              bControls: !1,
+              bLoop: !0,
+              bMuted: !0,
+              mediaScale: o,
+            }));
+      }
+      function Mo(e) {
         const {
             event: t,
             subtitle: a,
@@ -22242,7 +22165,7 @@
             eTextAlign: i,
           } = e,
           o = (0, dt.MU)();
-        return Oo(a)
+        return xo(a)
           ? null
           : n.createElement(
               "div",
@@ -22265,11 +22188,11 @@
               }),
             );
       }
-      const Mo = "[p][/p]";
-      function Oo(e) {
-        return !e || 0 == e.length || (e.length == Mo.length && e == Mo);
-      }
+      const Oo = "[p][/p]";
       function xo(e) {
+        return !e || 0 == e.length || (e.length == Oo.length && e == Oo);
+      }
+      function Ho(e) {
         const {
             event: t,
             title: a,
@@ -22279,7 +22202,7 @@
             eTextAlign: o,
           } = e,
           l = (0, dt.MU)();
-        return Oo(a)
+        return xo(a)
           ? null
           : n.createElement(
               "div",
@@ -22287,7 +22210,7 @@
                 className: (0, f.A)({
                   [Io().Title]: !0,
                   [r]: !0,
-                  [Io().H1]: !s || s == io.k_Header1,
+                  [Io().H1]: s == io.k_Header1,
                   [Io().H2]: s == io.k_Header2,
                   [Io().H3]: s == io.k_Header3,
                   [Io().Left]: !o || o == oo.k_Left,
@@ -22305,10 +22228,16 @@
               }),
             );
       }
-      function Ho(e) {
-        const { event: t, description: a, language: r, eTextAlign: s } = e,
-          i = (0, dt.MU)();
-        return Oo(a)
+      function Uo(e) {
+        const {
+            event: t,
+            description: a,
+            language: r,
+            eTextAlign: s,
+            eDescriptionDisplaySize: i,
+          } = e,
+          o = (0, dt.MU)();
+        return xo(a)
           ? null
           : n.createElement(
               "div",
@@ -22318,19 +22247,22 @@
                   [Io().Left]: !s || s == oo.k_Left,
                   [Io().Center]: s == oo.k_Center,
                   [Io().Right]: s == oo.k_Right,
+                  [Io().H1]: i == io.k_Header1,
+                  [Io().H2]: i == io.k_Header2,
+                  [Io().H3]: i == io.k_Header3,
                   [vo().TemplateMediaDescription]: !0,
                 }),
               },
               n.createElement(za.f, {
                 text: a,
                 partnerEventStore: yt.O3,
-                showErrorInfo: i,
+                showErrorInfo: o,
                 event: t,
                 languageOverride: r,
               }),
             );
       }
-      function Uo(e) {
+      function zo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, dt.MU)(),
           i = (0, v.Qn)(),
@@ -22363,13 +22295,13 @@
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             Boolean(a.quiz?.titleSubDesc) &&
-              n.createElement(zo, {
+              n.createElement(Wo, {
                 titleSubDesc: a.quiz.titleSubDesc,
                 event: t,
                 language: r,
               }),
             _.map((e, a) =>
-              n.createElement(Wo, {
+              n.createElement(qo, {
                 key: e.unique_id,
                 iQuestionIndex: a,
                 question: e,
@@ -22383,7 +22315,7 @@
           ),
         );
       }
-      function zo(e) {
+      function Wo(e) {
         const { event: t, language: a, titleSubDesc: r } = e,
           s = T.A0.GetELanguageFallback(a),
           [i, o, l, c, m, u, d, _, p] = (0, he.q3)(() => [
@@ -22413,7 +22345,7 @@
               ? r.title_media.media_horizontal_alignment
               : void 0,
           ]);
-        return n.createElement(No, {
+        return n.createElement(Lo, {
           event: t,
           language: a,
           title: i,
@@ -22427,7 +22359,7 @@
           titleHAlign: p,
         });
       }
-      function Wo(e) {
+      function qo(e) {
         const {
             question: t,
             language: a,
@@ -22488,9 +22420,9 @@
           ),
         );
       }
-      var qo = a(94581),
-        Vo = a.n(qo);
-      function jo(e) {
+      var Vo = a(94581),
+        jo = a.n(Vo);
+      function Qo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, dt.MU)(),
           i = (0, v.Qn)(),
@@ -22518,7 +22450,7 @@
             Boolean(u) &&
               n.createElement(
                 "div",
-                { className: Vo().description },
+                { className: jo().description },
                 n.createElement(za.f, {
                   text: u,
                   partnerEventStore: yt.O3,
@@ -22528,7 +22460,7 @@
                 }),
               ),
             a.tech_specs?.tech_spec_block_list?.map((e) =>
-              n.createElement(Qo, {
+              n.createElement(Ko, {
                 key: "tsblock_" + e.unique_id,
                 block: e,
                 language: r,
@@ -22538,7 +22470,7 @@
           ),
         );
       }
-      function Qo(e) {
+      function Ko(e) {
         const { block: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_block_title?.length > 0
@@ -22547,9 +22479,9 @@
         return n.createElement(
           "div",
           null,
-          n.createElement("div", { className: Vo().BlockTitle }, s),
+          n.createElement("div", { className: jo().BlockTitle }, s),
           t.spec_list.map((e) =>
-            n.createElement(Ko, {
+            n.createElement(Yo, {
               key: "tsitem_" + e.unique_id + "_" + t.unique_id,
               item: e,
               language: a,
@@ -22558,7 +22490,7 @@
           ),
         );
       }
-      function Ko(e) {
+      function Yo(e) {
         const { item: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_spec_name?.length > 0
@@ -22588,62 +22520,66 @@
           ),
         );
       }
-      var Yo = a(67634),
-        Jo = a.n(Yo);
-      function Zo(e) {
+      var Jo = a(67634),
+        Zo = a.n(Jo);
+      function Xo(e) {
         const { event: t, section: a, language: r } = e,
           s = ((0, dt.MU)(), (0, v.Qn)()),
-          [i, o, u, d, _, g, S, b, E, C, w, A, I, B, D, G] = (0, he.q3)(() => {
-            const e = T.A0.GetELanguageFallback(r);
-            return [
-              a.media_overlay?.text_placement || lo.k_TopLeft,
-              a.media_overlay?.media_type,
-              a.media_overlay?.localized_media?.length > 0
-                ? a.media_overlay?.localized_media[r] ||
-                  a.media_overlay?.localized_media[e] ||
-                  {}
-                : void 0,
-              a.media_overlay?.localized_media_title?.length > 0
-                ? a.media_overlay?.localized_media_title[r] ||
-                  a.media_overlay?.localized_media_title[e] ||
-                  ""
-                : void 0,
-              a.media_overlay?.localized_media_subtitle?.length > 0
-                ? a.media_overlay?.localized_media_subtitle[r] ||
-                  a.media_overlay?.localized_media_subtitle[e] ||
-                  ""
-                : void 0,
-              a.media_overlay?.localized_media_description?.length > 0
-                ? a.media_overlay?.localized_media_description[r] ||
-                  a.media_overlay?.localized_media_description[e] ||
-                  ""
-                : void 0,
-              a.media_overlay?.eTitleDisplaySize,
-              a.media_overlay?.title_alignment,
-              a.media_overlay?.subtitle_alignment,
-              a.media_overlay?.description_alignment,
-              a.media_overlay?.media_horizontal_alignment,
-              a.media_overlay?.media_vertical_alignment,
-              a.media_overlay?.is_title_as_image &&
-              a.media_overlay?.title_media?.localized_media.length > 0
-                ? a.media_overlay?.title_media.localized_media[r] ||
-                  a.media_overlay?.title_media.localized_media[e] ||
-                  {}
-                : void 0,
-              a.media_overlay?.is_title_as_image &&
-              a.media_overlay?.title_media?.localized_media.length > 0
-                ? a.media_overlay?.title_media.media_type
-                : void 0,
-              a.media_overlay?.is_title_as_image &&
-              a.media_overlay?.title_media?.localized_media.length > 0
-                ? a.media_overlay?.title_media.media_vertical_alignment
-                : void 0,
-              a.media_overlay?.is_title_as_image &&
-              a.media_overlay?.title_media?.localized_media.length > 0
-                ? a.media_overlay?.title_media.media_horizontal_alignment
-                : void 0,
-            ];
-          });
+          [i, o, u, d, _, g, S, b, E, C, w, A, I, B, D, G, k, P] = (0, he.q3)(
+            () => {
+              const e = T.A0.GetELanguageFallback(r);
+              return [
+                a.media_overlay?.text_placement || lo.k_TopLeft,
+                a.media_overlay?.media_type,
+                a.media_overlay?.localized_media?.length > 0
+                  ? a.media_overlay?.localized_media[r] ||
+                    a.media_overlay?.localized_media[e] ||
+                    {}
+                  : void 0,
+                a.media_overlay?.localized_media_title?.length > 0
+                  ? a.media_overlay?.localized_media_title[r] ||
+                    a.media_overlay?.localized_media_title[e] ||
+                    ""
+                  : void 0,
+                a.media_overlay?.localized_media_subtitle?.length > 0
+                  ? a.media_overlay?.localized_media_subtitle[r] ||
+                    a.media_overlay?.localized_media_subtitle[e] ||
+                    ""
+                  : void 0,
+                a.media_overlay?.localized_media_description?.length > 0
+                  ? a.media_overlay?.localized_media_description[r] ||
+                    a.media_overlay?.localized_media_description[e] ||
+                    ""
+                  : void 0,
+                a.media_overlay?.eTitleDisplaySize,
+                a.media_overlay?.title_alignment,
+                a.media_overlay?.subtitle_alignment,
+                a.media_overlay?.description_alignment,
+                a.media_overlay?.media_horizontal_alignment,
+                a.media_overlay?.media_vertical_alignment,
+                a.media_overlay?.is_title_as_image &&
+                a.media_overlay?.title_media?.localized_media.length > 0
+                  ? a.media_overlay?.title_media.localized_media[r] ||
+                    a.media_overlay?.title_media.localized_media[e] ||
+                    {}
+                  : void 0,
+                a.media_overlay?.is_title_as_image &&
+                a.media_overlay?.title_media?.localized_media.length > 0
+                  ? a.media_overlay?.title_media.media_type
+                  : void 0,
+                a.media_overlay?.is_title_as_image &&
+                a.media_overlay?.title_media?.localized_media.length > 0
+                  ? a.media_overlay?.title_media.media_vertical_alignment
+                  : void 0,
+                a.media_overlay?.is_title_as_image &&
+                a.media_overlay?.title_media?.localized_media.length > 0
+                  ? a.media_overlay?.title_media.media_horizontal_alignment
+                  : void 0,
+                a.media_overlay?.eDescriptionDisplaySize,
+                a.media_overlay?.title_media?.media_scale,
+              ];
+            },
+          );
         return n.createElement(
           h.Ay,
           { feature: "templatemediacontent" },
@@ -22655,30 +22591,30 @@
               className: (0, f.A)(
                 m.SaleSection,
                 l().SaleSectionCtn,
-                Jo().Container,
+                Zo().Container,
               ),
               style: (0, c.Vb)(a, t, s),
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             n.createElement(
               "div",
-              null,
+              { className: Zo().MediaOverlayCtn },
               n.createElement(
                 "div",
                 {
                   className: (0, f.A)({
-                    [Jo().TopLeft]: !i || i == lo.k_TopLeft,
-                    [Jo().TopCenter]: i == lo.k_TopCenter,
-                    [Jo().TopRight]: i == lo.k_TopRight,
-                    [Jo().LeftCenter]: i == lo.k_LeftCenter,
-                    [Jo().Center]: i == lo.k_Center,
-                    [Jo().RightCenter]: i == lo.k_RightCenter,
-                    [Jo().BottomLeft]: i == lo.k_BottomLeft,
-                    [Jo().BottomCenter]: i == lo.k_BottomCenter,
-                    [Jo().BottomRight]: i == lo.k_BottomRight,
+                    [Zo().TopLeft]: !i || i == lo.k_TopLeft,
+                    [Zo().TopCenter]: i == lo.k_TopCenter,
+                    [Zo().TopRight]: i == lo.k_TopRight,
+                    [Zo().LeftCenter]: i == lo.k_LeftCenter,
+                    [Zo().Center]: i == lo.k_Center,
+                    [Zo().RightCenter]: i == lo.k_RightCenter,
+                    [Zo().BottomLeft]: i == lo.k_BottomLeft,
+                    [Zo().BottomCenter]: i == lo.k_BottomCenter,
+                    [Zo().BottomRight]: i == lo.k_BottomRight,
                   }),
                 },
-                n.createElement(Lo, {
+                n.createElement(Ro, {
                   title: d,
                   titleAlign: b,
                   subtitle: _,
@@ -22686,6 +22622,7 @@
                   description: g,
                   descAlign: C,
                   eTitleDisplaySize: S,
+                  eDescriptionDisplaySize: k,
                   titleMedia: I,
                   titleMediaType: B,
                   titleVAlign: D,
@@ -22693,19 +22630,21 @@
                   event: t,
                   section: a,
                   language: r,
+                  titleMediaScale: P,
                 }),
               ),
-              n.createElement(Ro, {
+              n.createElement(Fo, {
                 media: u,
                 mediaType: o,
                 mediaHAlign: w,
                 mediaVAlign: A,
+                clanAccountID: t.clanSteamID.GetAccountID(),
               }),
             ),
           ),
         );
       }
-      function Xo(e) {
+      function $o(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           i = (0, v.Qn)();
         switch (a.section_type) {
@@ -22897,13 +22836,13 @@
           case "unselected_empty":
             break;
           case "template_faq":
-            return n.createElement(Uo, { ...e });
+            return n.createElement(zo, { ...e });
           case "template_techspec":
-            return n.createElement(jo, { ...e });
+            return n.createElement(Qo, { ...e });
           case "template_media_content":
-            return n.createElement(To, { ...e });
+            return n.createElement(Bo, { ...e });
           case "template_media_overlay":
-            return n.createElement(Zo, { ...e });
+            return n.createElement(Xo, { ...e });
           case "media_layout":
             return n.createElement(mo, { ...e });
           case "contenthubsections":

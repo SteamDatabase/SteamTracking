@@ -726,7 +726,8 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   ._12t6JmDCFT6MqtNVrSi5NJ {
   align-items: center;
 }
-._2P-FBc3tZWGeeBFplDSb9g img._2HezQYTfmFfdRmuB8l9QPI {
+._2P-FBc3tZWGeeBFplDSb9g img._2HezQYTfmFfdRmuB8l9QPI,
+._2P-FBc3tZWGeeBFplDSb9g video._2HezQYTfmFfdRmuB8l9QPI {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -789,14 +790,16 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   flex: 1;
   transition: opacity .25s;
 }
-._15tW0aE5WXrWrGgguKGlWn img.xUnBDVbIvtL7vyAS4rn2t {
+._15tW0aE5WXrWrGgguKGlWn img.xUnBDVbIvtL7vyAS4rn2t,
+._15tW0aE5WXrWrGgguKGlWn video.xUnBDVbIvtL7vyAS4rn2t {
   max-width: 100%;
   max-height: 40vh;
   min-width: 200px;
   object-fit: contain;
   display: inline-block;
 }
-._15tW0aE5WXrWrGgguKGlWn._14-dbrekvOWYS09OPByyHh img.xUnBDVbIvtL7vyAS4rn2t {
+._15tW0aE5WXrWrGgguKGlWn._14-dbrekvOWYS09OPByyHh img.xUnBDVbIvtL7vyAS4rn2t,
+._15tW0aE5WXrWrGgguKGlWn._14-dbrekvOWYS09OPByyHh video.xUnBDVbIvtL7vyAS4rn2t {
   opacity: 0.8;
 }
 ._20VH0unQDu2_N7XNfRnqm_ {
@@ -1353,6 +1356,8 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
   flex-direction: column;
   width: 200px;
   height: 200px;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 .doWjXy-F7LwBxlzCUBAGC ._3gElE6VZJ9uU4-RaFC8Ra8 {
   display: flex;
@@ -1372,19 +1377,19 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
   ._3gElE6VZJ9uU4-RaFC8Ra8
   ._2hABNX3YzXj9JYRLANr-hg._3cPT5-4vXp4iE6v0qwHc23 {
   z-index: 3;
-  transform: translate(16px, 16px);
 }
 .doWjXy-F7LwBxlzCUBAGC
   ._3gElE6VZJ9uU4-RaFC8Ra8
   ._2hABNX3YzXj9JYRLANr-hg._2BP4s6zHDy_5HIqCoVQqIg {
   z-index: 2;
-  transform: translate(8px, 8px);
+  transform: translate(-8px, -8px);
   filter: brightness(0.75);
 }
 .doWjXy-F7LwBxlzCUBAGC
   ._3gElE6VZJ9uU4-RaFC8Ra8
   ._2hABNX3YzXj9JYRLANr-hg.y5NNNiOOneEJF6_a7pq8O {
   z-index: 1;
+  transform: translate(-16px, -16px);
   filter: brightness(0.5);
 }
 .doWjXy-F7LwBxlzCUBAGC ._1v6uTQuGLshmZKWXULJOSr {
@@ -1394,7 +1399,7 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
   white-space: nowrap;
   max-width: 20vw;
   flex-shrink: 0;
-  margin-top: 18px;
+  margin-top: 2px;
 }
 .eeKg-l7aZaopjLwnTg0pT {
   margin: 6px 0 0 0;
@@ -1910,6 +1915,26 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   height: 210px;
   width: 940px;
 }
+._3AZIiEfg9ySoDT99t5sFmp {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  grid-template-areas: "vo vo" "controls controls" "numbers graph";
+}
+._3AZIiEfg9ySoDT99t5sFmp p.valveh2 {
+  grid-area: vo;
+}
+._3AZIiEfg9ySoDT99t5sFmp ._2jVePp7nya3Nj-SFteMHaj {
+  grid-area: controls;
+}
+._3AZIiEfg9ySoDT99t5sFmp .-BcZBPWZjsiRyi3CtgICp {
+  grid-area: numbers;
+}
+._3AZIiEfg9ySoDT99t5sFmp ._2pZUWz9doUUVgJTIiA_5qb {
+  height: 154px;
+  padding: 16px 16px 10px 16px;
+  grid-area: graph;
+}
 ._2pZUWz9doUUVgJTIiA_5qb {
   background-image: linear-gradient(
     180deg,
@@ -2057,7 +2082,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 }
 .-BcZBPWZjsiRyi3CtgICp {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   background-color: rgba(144, 153, 161, 0.1);
 }
@@ -2071,7 +2096,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 }
 .-BcZBPWZjsiRyi3CtgICp ._1aa9BSk_Qolo1ZpNuEGUqD {
   color: #fff;
-  font-size: 56px;
+  font-size: 32px;
   font-weight: 750;
 }
 ._9H6b5yfaxlmcnHvkqtwDK {
@@ -2461,15 +2486,16 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   width: 220px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 6px;
+  padding: 6px 12px;
 }
 ._2qz5D65VkY796Xw-al9f_a ._2h0GKAYcXRP10ryZHFn79d {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 18px;
-  font-weight: 300;
-  background: #66c0f4;
+  font-weight: 400;
+  background: rgba(103, 193, 245, 0.15);
+  color: #67c1f5;
   width: fit-content;
   padding: 0 6px;
   border-radius: 3px;
@@ -2784,12 +2810,23 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 }
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;
+  justify-content: space-between;
 }
 ._2g5oNomwd2lv8wL2qlsLVA .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+._2g5oNomwd2lv8wL2qlsLVA .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.RGHKm1_KeaBjdzuvisfYN {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
 }
 ._3yDPZjnsoLc2FkrAH2UOEd {
   display: flex;

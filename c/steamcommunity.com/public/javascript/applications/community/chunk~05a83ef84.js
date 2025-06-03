@@ -211,6 +211,51 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const {
+            msAutosaveTimeout: __webpack_require__ = 1e3,
+            msMaxInterval: _ = 10 * __webpack_require__,
+          } = _ || {},
+          [_, _] = _.useState(!1),
+          _ = _.useRef(0);
+        return (
+          (0, _._)(
+            _,
+            _.useCallback(() => {
+              (_.current = performance.now()), _(!0);
+            }, []),
+          ),
+          _.useEffect(() => {
+            if (!_ || !_) return;
+            const _ = performance.now(),
+              _ = (_ = !1) => {
+                _ = void 0;
+                const _ = performance.now(),
+                  _ = _ - _.current;
+                _ || _ >= __webpack_require__ || _ - _ >= _
+                  ? (console.log("Committing changes"),
+                    _.CommitChanges(),
+                    _(!1))
+                  : (_ = window.setTimeout(_, __webpack_require__ - _));
+              };
+            let _ = window.setTimeout(_, __webpack_require__);
+            return () => {
+              _ && (window.clearTimeout(_), _(!0));
+            };
+          }, [_, _, __webpack_require__, _]),
+          {
+            bDirty: _,
+          }
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -842,6 +887,42 @@
                   },
                 }),
               },
+              inclusive: !0,
+              excludes: "",
+            },
+            bgcolor: {
+              attrs: {
+                color: {},
+              },
+              parseDOM: [
+                {
+                  style: "bgcolor",
+                  getAttrs: (_) => ({
+                    color: _,
+                  }),
+                },
+              ],
+              toDOM: (_) => [
+                "span",
+                {
+                  style: `background-color: ${_.attrs.color}`,
+                  class: (0, _._)("BB_BGColor", _().BGColor),
+                },
+                0,
+              ],
+              bbCode: {
+                tag: "bgcolor",
+                BBArgsToAttrs: (_) => ({
+                  color: _[""],
+                }),
+                AttrsToBBArgs: (_) => ({
+                  args: {
+                    "": _.color,
+                  },
+                }),
+              },
+              inclusive: !0,
+              excludes: "",
             },
           },
         };
@@ -1495,44 +1576,42 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const [__webpack_require__, _] = _.useState(void 0),
+      function _(_, _, _) {
+        const [_, _] = _.useState(void 0),
           _ = _.useCallback(
             (_) => {
-              const _ = _.state.selection;
+              const { state: _, dispatch: _ } = _,
+                _ = _.selection;
+              let { from: _, _: _, empty: _ } = _;
+              const _ = _ ? _.marks.color : _.marks.bgcolor;
               let _ = "",
-                _ = "",
-                { from: _, _: _ } = _;
-              const _ = (0, _._)(_.state, _.marks.color, _.$from),
+                _ = "";
+              const _ = _ ? _.$from : _.doc.resolve(_),
+                _ = (0, _._)(_, _, _),
                 _ = !!_;
               _
                 ? ((_ = _.mark.attrs.color),
-                  _.empty
+                  _
                     ? ((_ = _.slice.content.textBetween(
                         0,
                         _.slice.content.size,
                       )),
                       (_ = _.from),
                       (_ = _._))
-                    : ((_ = Math.max(_.from, _.from)),
-                      (_ = Math.min(_._, _._)),
+                    : ((_ = Math.max(_.from, _)),
+                      (_ = Math.min(_._, _)),
                       (_ = _.slice.content.textBetween(
                         _ - _.from,
                         _ - _.from,
                       ))))
-                : _.state.selection.empty ||
-                  (_ = _.state.doc.cut(
-                    _.state.selection.from,
-                    _.state.selection._,
-                  ).textContent);
+                : _ || (_ = _.doc.cut(_, _).textContent);
               let _ = {};
               if (_)
                 for (const _ in _) {
                   const _ = _[_],
-                    _ = _
-                      ? __webpack_require__.fnReadValue(_.mark)
-                      : _.defaultValue;
+                    _ = _ ? _.fnReadValue(_.mark) : _.defaultValue;
                   _[_] = _;
                 }
               _({
@@ -1546,15 +1625,15 @@
                 _: _,
               });
             },
-            [_, _.marks.color],
+            [_, _, _.marks.bgcolor, _.marks.color],
           ),
-          _ = null == __webpack_require__ ? void 0 : __webpack_require__.view,
+          _ = null == _ ? void 0 : _.view,
           _ = _.useCallback(() => {
             window.setTimeout(() => _.focus(), 1), _(void 0);
           }, [_]);
         return [
           _,
-          __webpack_require__ &&
+          _ &&
             _.createElement(
               _._,
               {
@@ -1562,11 +1641,29 @@
               },
               _.createElement(_, {
                 schema: _,
+                bColor: _,
                 closeModal: _,
-                ...__webpack_require__,
+                ..._,
               }),
             ),
         ];
+      }
+      function _(_) {
+        if (_.startsWith("rgb")) {
+          const _ = _.match(/\d+/g);
+          if (!_ || _.length < 3) return "#000000";
+          const [__webpack_require__, _, _] = _.map(Number);
+          return (
+            "#" +
+            [__webpack_require__, _, _]
+              .map((_) => {
+                const _ = _.toString(16);
+                return 1 === _.length ? "0" + _ : _;
+              })
+              .join("")
+          );
+        }
+        return _;
       }
       const _ = _.memo(function (_) {
         const {
@@ -1574,6 +1671,7 @@
             strColor: __webpack_require__,
             bIsUpdate: _,
             strTargetText: _,
+            bColor: _,
             addtlAttrs: _,
             addtlAttrsValues: _,
             closeModal: _,
@@ -1583,7 +1681,50 @@
           } = _,
           [_, _] = _.useState(__webpack_require__),
           _ = _.useRef(null),
-          [_, _] = _.useState(_);
+          [_, _] = _.useState(_),
+          _ = _.useCallback(() => {
+            const { state: _, dispatch: __webpack_require__ } = _,
+              _ = _ ? _.marks.color : _.marks.bgcolor;
+            if (!_) return;
+            if (!_ || !_.startsWith("#") || 7 !== _.length) return;
+            if (_ < 0 || _ > _.doc.content.size || _ > _)
+              return void console.error("Invalid selection range:", _, _);
+            let _;
+            try {
+              if (
+                ((_ = _.create({
+                  color: _,
+                  ..._,
+                })),
+                !_)
+              )
+                return void console.error(
+                  "Failed to create mark — mark is null",
+                );
+            } catch (_) {
+              return void console.error("Failed to create color mark:", _);
+            }
+            let _ = _._;
+            _ === _
+              ? (_ = _.addStoredMark(_))
+              : ((_ = _.removeMark(_, _, _)),
+                (_ = _.addMark(_, _, _)),
+                (_ = _.setSelection(_._.create(_.doc, _)))),
+              "dev" == _._.WEB_UNIVERSE &&
+                console.log(
+                  "Dispatching transaction:",
+                  _.steps.map((_) => _.toJSON()),
+                  _,
+                  _,
+                );
+            try {
+              (_.docChanged || _.steps.length > 0) && __webpack_require__(_);
+            } catch (_) {
+              console.error(_);
+            } finally {
+              requestAnimationFrame(() => _());
+            }
+          }, [_, _, _, _, _, _.marks.bgcolor, _.marks.color, _, _]);
         _.useLayoutEffect(() => {
           var _, _, _;
           (
@@ -1599,37 +1740,28 @@
               void 0 === _ ||
               __webpack_require__.focus();
         }, []);
-        const _ = (0, _._)("#FormattingToolbar_Color"),
+        const _ = (0, _._)(
+            _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+          ),
           _ = _
             ? (0, _._)("#Button_Save")
-            : (0, _._)("#FormattingToolbar_Color");
+            : (0, _._)(
+                _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+              );
         return _.createElement(
           _._,
           {
-            onOK: () => {
-              let _ = _.state._;
-              const _ = {
-                color: _,
-              };
-              for (const _ in _) _[_] = _[_];
-              const _ = _.text(_, [_.marks.color.create(_)]);
-              (_ = _.replaceRangeWith(_, _, _)),
-                (_ = _.setSelection(
-                  _._.create(_.doc, _ + _.nodeSize, _ + _.nodeSize),
-                )),
-                _.dispatch(_),
-                _();
-            },
+            onOK: _,
             closeModal: _,
             strTitle: _,
             strOKText: _,
-            bOKDisabled: 0 == _.length,
+            bOKDisabled: !_ || 0 == _.length,
           },
           _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
           _.createElement("input", {
             type: "color",
             ref: _,
-            value: _,
+            value: _(_),
             onChange: (_) => _(_.currentTarget.value),
           }),
         );
@@ -2126,12 +2258,31 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { schema: _, addtlAttrs: __webpack_require__, children: _ } = _,
+        const {
+            schema: _,
+            bColor: __webpack_require__,
+            addtlAttrs: _,
+            children: _,
+          } = _,
           { callbacks: _, view: _ } = (0, _._)(),
-          [_, _] = _.useState(() => (0, _._)(_.state, _.marks.link)),
-          _ = _.useCallback((_) => _((0, _._)(_.state, _.marks.link)), [_]);
+          [_, _] = _.useState(() =>
+            (0, _._)(
+              _.state,
+              __webpack_require__ ? _.marks.color : _.marks.bgcolor,
+            ),
+          ),
+          _ = _.useCallback(
+            (_) =>
+              _(
+                (0, _._)(
+                  _.state,
+                  __webpack_require__ ? _.marks.color : _.marks.bgcolor,
+                ),
+              ),
+            [__webpack_require__, _],
+          );
         (0, _._)(_, _);
-        const [_, _] = (0, _._)(_, __webpack_require__);
+        const [_, _] = (0, _._)(_, __webpack_require__, _);
         return _.createElement(
           _.Fragment,
           null,
@@ -2141,7 +2292,9 @@
             {
               onClick: () => _(_),
               toggled: _,
-              tooltip: "#FormattingToolbar_Color",
+              tooltip: __webpack_require__
+                ? "#FormattingToolbar_Color"
+                : "#FormattingToolbar_BgColor",
             },
             _,
           ),
@@ -2229,8 +2382,18 @@
               _,
               {
                 schema: _,
+                bColor: !0,
               },
               _.createElement(_.r7n, null),
+            ),
+          "bgcolor" in _.marks &&
+            _.createElement(
+              _,
+              {
+                schema: _,
+                bColor: !1,
+              },
+              _.createElement(_.FId, null),
             ),
         );
       }
@@ -2356,7 +2519,17 @@
               },
               _.createElement(_.JPq, null),
             ),
-            _ && !1,
+            _ &&
+              _.createElement(
+                _,
+                {
+                  tooltip: "#FormattingToolbar_OrderedList",
+                  keyboardShortcut: "Ctrl-Shift-7",
+                  list_type: _,
+                  list_item: _,
+                },
+                _.createElement(_.jE0, null),
+              ),
             (!__webpack_require__ || _) &&
               _.createElement(
                 _.Fragment,

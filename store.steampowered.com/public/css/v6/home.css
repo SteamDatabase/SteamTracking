@@ -1596,13 +1596,17 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	margin-top: 30px;
 }
 
-.home_content.single h1 {
+.home_content.single h2.single_title {
 	font-size: 24px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 			font-weight: normal;
 	color: #fff;
+	letter-spacing: normal;
+	text-transform: unset;
+	margin: 0;
+	padding: 0;
 }
 
 .home_content.single .gamelink {
@@ -3448,12 +3452,20 @@ body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6 .apps_r
 
 /* Community Recommendations widget */
 
-.community_recommendations_by_steam_labs_ctn h2 {
-	margin-bottom: 0px;
-	color: #ffffff66;
+.community_recommendations_by_steam_labs_ctn .subtitle {
+	display: block;
+	font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    padding-top: 2px;
 }
 
-.community_recommendations_by_steam_labs_ctn h1 {
+div.community_recommendations_by_steam_labs_ctn h2.title {
 	text-transform: uppercase;
 	color: #ffffff;
 			font-family: "Motiva Sans", Sans-serif;
@@ -3466,9 +3478,6 @@ body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6 .apps_r
 	line-height: 36px;
 	letter-spacing: 0.07em;
 	z-index: -1;
-}
-
-.community_recommendations_by_steam_labs_ctn h1 {
 	margin-bottom: -8px;
 }
 
@@ -4690,7 +4699,8 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	color: #263645;
 }
 
-body.v6 .home_rightcol .tab_preview h2 {
+body.v6 .home_rightcol .tab_preview .tab_title {
+	font-family: "Motiva Sans", Sans-serif;
 	text-transform: none;
 	font-size: 21px;
 	letter-spacing: 0px;
@@ -4987,7 +4997,7 @@ body.v6 h2 .header_inline {
 	}
 }
 
-.spotlight_block .spotlight_content>h2, .spotlight_body {
+.spotlight_block .spotlight_content>.spotlight_title, .spotlight_body {
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -5249,12 +5259,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		float: none;
 	}
 
-	html.responsive .community_recommendations_by_steam_labs_ctn h1 {
+	html.responsive .community_recommendations_by_steam_labs_ctn span.title {
 		font-size: 18px;
 		line-height: 21px;
 		margin: 0px;
 	}
-	html.responsive .community_recommendations_by_steam_labs_ctn h2 > span.right {
+	html.responsive .community_recommendations_by_steam_labs_ctn .subtitle > span.right {
 		float: none;
 		top: 0px;
 	}

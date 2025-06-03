@@ -531,6 +531,11 @@
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ByTa3bBdyJMzBnwuLJ64v video {
   width: 100%;

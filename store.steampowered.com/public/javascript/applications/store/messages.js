@@ -4042,26 +4042,23 @@
           s.Fragment,
           null,
           s.createElement(
-            i.Ii,
-            {
-              href: C ? null : R,
-              style: { display: "block", cursor: "pointer" },
-              className: _().CapsuleFocusCtn,
-              preferredFocus: g,
-              onClick: C,
-            },
+            "div",
+            { className: _().CapsuleFocusCtn },
             s.createElement(
               "div",
               { className: (0, T.A)({ [I().TwoWidthCtn]: W }) },
               s.createElement(
-                "div",
-                { className: (0, T.A)({ [I().TwoWidthCapsule]: W }) },
+                i.Ii,
+                {
+                  href: C ? null : R,
+                  style: { display: "block", cursor: "pointer" },
+                  className: (0, T.A)({ [I().TwoWidthCapsule]: W }),
+                  preferredFocus: g,
+                  onClick: C,
+                },
                 s.createElement(B.V, { appids: E, hide_status_banners: r }),
                 s.createElement(p.aU, { imageType: c, info: t }),
-                s.createElement(S.S, {
-                  eDeckCompatibilityCategory:
-                    f?.GetPlatforms()?.steam_deck_compat_category,
-                }),
+                s.createElement(S.J, { storeItem: f }),
                 Boolean(d) && s.createElement(y.m, { appInfo: t }),
               ),
               W &&

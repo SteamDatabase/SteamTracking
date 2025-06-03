@@ -2290,8 +2290,12 @@ input.filter_search_box:focus {
 	position: relative;
 
 }
-.dselect_container a.trigger, .dselect_container a.activetrigger {
+.dselect_container button.trigger, .dselect_container button.activetrigger {
 	display: block;
+	box-sizing: content-box;
+	text-align: inherit;
+	cursor: pointer;
+
 	color: #67c1f5;
 	padding: 0 30px 0 8px;
 	font-size: 12px;
@@ -2306,24 +2310,24 @@ input.filter_search_box:focus {
 	position:relative;
 }
 
-.dselect_container a.trigger {
+.dselect_container button.trigger {
 	background: rgba( 103, 193, 245, 0.1 );
 }
 
-.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
 	color: #ffffff;
 	background: #67c1f5;
 }
 
 
-.dselect_container a.activetrigger {
+.dselect_container button.activetrigger {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	z-index: 91;
 	position: relative;
 }
 
-.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -2333,7 +2337,7 @@ input.filter_search_box:focus {
 	content: '';
 }
 
-.dselect_container a.trigger:hover,
+.dselect_container button.trigger:hover,
 .dselect_container .dropcontainer a.highlighted_selection
 {
 	color: #ffffff;
@@ -2348,22 +2352,22 @@ input.filter_search_box:focus {
 	display: inline-block;
 }
 
-.market_dialog_content .dselect_container a.trigger {
+.market_dialog_content .dselect_container button.trigger {
 	color: #ffffff;
 	background: rgba( 0, 0, 0, 0.4);
 }
 
-.dselect_container a.trigger:hover
+.dselect_container button.trigger:hover
 {
 	background-color: #67c1f5; /* Old browsers */
 background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
-.market_dialog_content .dselect_container a,
-.market_dialog_content .dselect_container a:hover,
-.market_dialog_content .dselect_container a:active,
-.market_dialog_content .dselect_container a:visited
+.market_dialog_content .dselect_container button,
+.market_dialog_content .dselect_container button:hover,
+.market_dialog_content .dselect_container button:active,
+.market_dialog_content .dselect_container button:visited
 {
 	text-decoration: none;
 	font-weight: normal;
@@ -2379,7 +2383,7 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 .market_dialog_content input[type="text"],
 .market_dialog_content select,
 .market_dialog_content textarea,
-.market_dialog_content .dselect_container a.trigger
+.market_dialog_content .dselect_container button.trigger
 {
 	background-color: rgba( 0, 0, 0, 0.4);
 	color: #fff;
@@ -2397,7 +2401,7 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	line-height: 18px;
 }
 
-.market_dialog_content .dselect_container a.trigger.activetrigger
+.market_dialog_content .dselect_container button.trigger.activetrigger
 {
 	color: #ffffff;
 	background: #67c1f5;

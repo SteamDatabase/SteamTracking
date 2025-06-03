@@ -318,7 +318,7 @@ a.nohover, a.nohover:hover
 	background-color: #333333;
 	margin: 6px 0;
 
-	
+
 }
 
 .profile_menu_item {
@@ -390,7 +390,7 @@ a.nohover, a.nohover:hover
 	border-top: 1px solid #000;
 	border-right: 1px solid #354357;
 	border-bottom: 1px solid #354357;
-	
+
 }
 
 .blotter_status_entry .commentthread_entry_quotebox .commentthread_textarea {
@@ -959,8 +959,7 @@ a.nohover, a.nohover:hover
 }
 
 .blotter_viewallcomments_container {
-	/*margin: 6px 0px 0px 7px;*/
-	padding: 10px 0px 0px 6px;
+	padding: 10px 5px;
 
 }
 
@@ -1042,7 +1041,7 @@ img.movie_thumb {
 	height: 100%;
 }
 
-/* blotter game purchase 
+/* blotter game purchase
 .blotter_gamepurchase {
 	background-color: #1a1c1f;
 	padding: 6px;
@@ -1205,7 +1204,7 @@ img.movie_thumb {
 	padding-right: 14px;
 	color: #c6d4df;
 	overflow: hidden;
-	
+
 }
 
 .blotter_workshopitem_description img {
@@ -1368,7 +1367,7 @@ color: #8c8885;
 	border-top: 1px solid #000;
 	border-right: 1px solid #354357;
 	border-bottom: 1px solid #354357;
-	
+
 }
 
 .blotter_comment_thread .commentthread_comment {
@@ -1848,6 +1847,17 @@ div.slider div.handle:hover {
 	html.responsive .blotter_comment_thread .commentthread_textarea,
 	html.responsive .blotter_status_entry .commentthread_entry_quotebox .commentthread_textarea {
 		font-size: 16px;
+	}
+
+	html.responsive .blotter_group_announcement_content img
+	{
+		max-width: 100%;
+	}
+
+	html.responsive .blotter_viewallcomments_container a {
+		width: 100%;
+		text-align: center;
+		padding: 5px;
 	}
 
 }

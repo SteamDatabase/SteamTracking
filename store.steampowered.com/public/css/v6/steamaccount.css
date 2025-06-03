@@ -444,17 +444,17 @@ p.currency_change_confirm_dialog_footer {
 	color: white;
 }
 
-.account_settings_container .dselect_container a.trigger, .dselect_container a.activetrigger {
+.account_settings_container .dselect_container button.trigger, .dselect_container button.activetrigger {
 	color: white;
 }
 
-.account_settings_container .dselect_container a.trigger {
+.account_settings_container .dselect_container button.trigger {
 	background: rgba( 103, 193, 245, 0.1 );
 }
 
-.account_settings_container .dselect_container a.activetrigger,
-.account_settings_container .dselect_container a.trigger:hover,
-.account_settings_container .dselect_container a.activetrigger:hover {
+.account_settings_container .dselect_container button.activetrigger,
+.account_settings_container .dselect_container button.trigger:hover,
+.account_settings_container .dselect_container button.activetrigger:hover {
 	background-color: #464d58;
 }
 

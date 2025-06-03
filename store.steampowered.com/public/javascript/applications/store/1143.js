@@ -987,7 +987,7 @@
         oe = n(28954),
         se = n(63556),
         ie = n(2160),
-        le = n(82817);
+        le = n(32396);
       const ce = (0, o.PA)((e) => {
         const {
             clanSteamID: t,
@@ -1001,7 +1001,7 @@
           [m, h] = s.useState(Boolean(n)),
           [u, d] = s.useState(!1),
           [S] = (0, ee.q3)(() => [se.O.Get().GetCurEditLanguage()]),
-          E = (0, oe.zO)(t, "dummy"),
+          E = (0, oe.zO)(t, "dummy", [ie.TU.k_ESteamRealmGlobal], S),
           C = s.useCallback(
             async (e) => {
               if (
@@ -1088,11 +1088,7 @@
                       onClick: async () => {
                         d(!0);
                         try {
-                          const e = await E.UploadAllImages(
-                              [ie.TU.k_ESteamRealmGlobal],
-                              S,
-                              i,
-                            ),
+                          const e = await E.UploadAllImages(i),
                             n = Object.values(e);
                           if (
                             n &&
@@ -1102,9 +1098,9 @@
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 n.length,
                             ),
-                            1 == n[0].success)
+                            n[0].bSuccess)
                           ) {
-                            const e = n[0],
+                            const e = n[0].uploadResult,
                               a = (0, g.mJ)() + t.GetAccountID() + "/",
                               r = (0, le.EG)(e.file_type),
                               s = a + e.image_hash + r,

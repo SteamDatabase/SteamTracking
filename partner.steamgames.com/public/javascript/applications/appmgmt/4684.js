@@ -161,7 +161,10 @@
             a.createElement(
               "div",
               { className: u().ImageContainer },
-              a.createElement(p, { className: u().CategoryIcon }),
+              a.createElement(p, {
+                className: u().CategoryIcon,
+                "aria-label": "",
+              }),
             ),
             a.createElement(
               "span",

@@ -45,27 +45,28 @@
     64734: (e) => {
       e.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
     43709: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => $ });
-      var r = n(90626),
+      var i = n(90626),
         a = n(24484);
-      const s = (0, a.Tc)("physical_goods", "application_config");
-      var i = n(34629),
-        o = n(56545),
+      const o = (0, a.Tc)("physical_goods", "application_config");
+      var s = n(34629),
+        r = n(56545),
         l = n(75487),
         c = n(96059),
         u = n(44332),
-        d = n(68797),
-        m = n(6144),
-        g = n(73745),
-        p = n(30470);
-      class _ {
+        m = n(68797),
+        d = n(6144),
+        _ = n(73745),
+        g = n(30470);
+      class p {
         m_mapProductPositionMsgList = new Map();
-        m_productListChangeCallback = new m.lu();
+        m_productListChangeCallback = new d.lu();
         m_messageListChangeCallback = new Map();
         m_steamInterface = null;
         GetKey(e) {
@@ -84,7 +85,7 @@
         GetPositionListViaKeyChangeCallback(e) {
           return (
             this.m_messageListChangeCallback.has(e) ||
-              this.m_messageListChangeCallback.set(e, new m.lu()),
+              this.m_messageListChangeCallback.set(e, new d.lu()),
             this.m_messageListChangeCallback.get(e)
           );
         }
@@ -112,7 +113,7 @@
             ));
         }
         async SetPositionMessages(e) {
-          const t = o.w.Init(l.ku);
+          const t = r.w.Init(l.ku);
           if (0 == e.length)
             return (
               console.log(
@@ -132,24 +133,24 @@
           });
           let n = null;
           try {
-            const r = await l.nd.SetReservationPositionMessage(
+            const i = await l.nd.SetReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
-            if (1 == r.GetEResult()) {
+            if (1 == i.GetEResult()) {
               const t = new Set(),
                 n = Math.floor(Date.now() / 1e3);
               return (
                 e.forEach((e) => {
-                  (e.accountid = p.iA.accountid), (e.rtime_created = n);
-                  const r = this.GetKey(e);
-                  let a = this.m_mapProductPositionMsgList.get(r);
-                  const s = a.findIndex(
+                  (e.accountid = g.iA.accountid), (e.rtime_created = n);
+                  const i = this.GetKey(e);
+                  let a = this.m_mapProductPositionMsgList.get(i);
+                  const o = a.findIndex(
                     (t) => t.start_queue_position == e.start_queue_position,
                   );
-                  let i = [...a];
-                  s >= 0 ? (i[s] = e) : (i.push(e), this.SortList(i)),
-                    this.m_mapProductPositionMsgList.set(r, i),
+                  let s = [...a];
+                  o >= 0 ? (s[o] = e) : (s.push(e), this.SortList(s)),
+                    this.m_mapProductPositionMsgList.set(i, s),
                     t.add(this.GetKey(e));
                 }),
                 Array.from(t).forEach((e) => {
@@ -160,9 +161,9 @@
                 !0
               );
             }
-            n = (0, d.H)(r);
+            n = (0, m.H)(i);
           } catch (e) {
-            n = (0, d.H)(e);
+            n = (0, m.H)(e);
           }
           return (
             console.error(
@@ -174,33 +175,33 @@
           );
         }
         async DeletePositionMessage(e) {
-          const t = o.w.Init(l.$J);
+          const t = r.w.Init(l.$J);
           t.Body().set_edistributor(e.edistributor),
             t.Body().set_product_identifier(e.product_identifier),
             t.Body().set_start_queue_position(e.start_queue_position);
           let n = null;
           try {
-            const r = await l.nd.DeleteReservationPositionMessage(
+            const i = await l.nd.DeleteReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
-            if (1 == r.GetEResult()) {
+            if (1 == i.GetEResult()) {
               const t = this.GetKey(e);
               let n = this.m_mapProductPositionMsgList.get(t);
-              const r = n.findIndex(
+              const i = n.findIndex(
                   (t) => t.start_queue_position == e.start_queue_position,
                 ),
                 a = [...n];
               return (
-                a.splice(r, 1),
+                a.splice(i, 1),
                 this.m_mapProductPositionMsgList.set(t, a),
                 this.GetPositionListChangeCallback(e).Dispatch(a),
                 !0
               );
             }
-            n = (0, d.H)(r);
+            n = (0, m.H)(i);
           } catch (e) {
-            n = (0, d.H)(e);
+            n = (0, m.H)(e);
           }
           return (
             console.error(
@@ -212,7 +213,7 @@
           );
         }
         async ReloadReservationPositionMessages() {
-          const e = o.w.Init(l.jd);
+          const e = r.w.Init(l.jd);
           return await l.nd.ReloadAllReservationPositionMessages(
             this.m_steamInterface.GetServiceTransport(),
             e,
@@ -221,12 +222,12 @@
         static s_Singleton;
         static Get() {
           return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == p.TS.WEB_UNIVERSE &&
-                (window.g_ReservationMessagingStore = _.s_Singleton)),
-            _.s_Singleton
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
+              p.s_Singleton.Init(),
+              "dev" == g.TS.WEB_UNIVERSE &&
+                (window.g_ReservationMessagingStore = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         constructor() {}
@@ -236,12 +237,12 @@
             "application_config",
           );
           (0, u.w)(Boolean(e), "require promotion_operation_token"),
-            "dev" == p.TS.WEB_UNIVERSE &&
+            "dev" == g.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
                 e,
               ),
-            (this.m_steamInterface = new c.D(p.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new c.D(g.TS.WEBAPI_BASE_URL, e));
           const t = (0, a.Tc)(
             "reservation_queue_position_messages",
             "application_config",
@@ -269,12 +270,12 @@
           );
         }
       }
-      function f() {
-        const [e, t] = (0, r.useState)(() => _.Get().GetAllProducts());
-        return (0, g.hL)(_.Get().GetProductListChangeCallback(), t), e;
-      }
       function h() {
-        const e = _.Get();
+        const [e, t] = (0, i.useState)(() => p.Get().GetAllProducts());
+        return (0, _.hL)(p.Get().GetProductListChangeCallback(), t), e;
+      }
+      function f() {
+        const e = p.Get();
         return {
           fnAddProductID: e.AddProductID,
           fnSetPositionMessages: e.SetPositionMessages,
@@ -283,33 +284,33 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, i.Cg)([g.oI], _.prototype, "AddProductID", null),
-        (0, i.Cg)([g.oI], _.prototype, "SetPositionMessages", null),
-        (0, i.Cg)([g.oI], _.prototype, "DeletePositionMessage", null),
-        (0, i.Cg)(
-          [g.oI],
-          _.prototype,
+      (0, s.Cg)([_.oI], p.prototype, "AddProductID", null),
+        (0, s.Cg)([_.oI], p.prototype, "SetPositionMessages", null),
+        (0, s.Cg)([_.oI], p.prototype, "DeletePositionMessage", null),
+        (0, s.Cg)(
+          [_.oI],
+          p.prototype,
           "ReloadReservationPositionMessages",
           null,
         );
       var E = n(82359),
-        v = n(65285),
-        S = n(16676);
+        S = n(65285),
+        v = n(16676);
       function M(e) {
-        const [t, n] = (0, r.useState)(null),
-          { fnAddProductID: a } = h();
-        return r.createElement(
+        const [t, n] = (0, i.useState)(null),
+          { fnAddProductID: a } = f();
+        return i.createElement(
           "div",
           null,
-          r.createElement(S.JU, null, "Add Product SKU:"),
-          r.createElement(
+          i.createElement(v.JU, null, "Add Product SKU:"),
+          i.createElement(
             "p",
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          r.createElement(T, { selected: t, setSelected: n }),
-          r.createElement(
-            S.$n,
+          i.createElement(T, { selected: t, setSelected: n }),
+          i.createElement(
+            v.$n,
             {
               disabled: !t,
               onClick: () => {
@@ -324,20 +325,20 @@
       }
       function T(e) {
         const { selected: t, setSelected: n } = e,
-          a = (0, r.useRef)(void 0),
-          i = (function () {
-            const [e] = (0, r.useState)(() => s);
+          a = (0, i.useRef)(void 0),
+          s = (function () {
+            const [e] = (0, i.useState)(() => o);
             return e;
           })(),
-          o = f(),
-          l = (0, r.useMemo)(
+          r = h(),
+          l = (0, i.useMemo)(
             () =>
-              i && o
-                ? i
+              s && r
+                ? s
                     .filter(
                       (e) =>
                         -1 ==
-                        o.findIndex(
+                        r.findIndex(
                           (t) =>
                             t.edistributor == e.edistributor &&
                             t.product_identifier == e.product_identifier,
@@ -348,23 +349,23 @@
                       label: `${e.product_description} @ ${e.distributor} - product id: ${e.product_identifier}, part number ${e.part_number} `,
                     }))
                 : [],
-            [i, o],
+            [s, r],
           );
-        (0, r.useEffect)(() => {
+        (0, i.useEffect)(() => {
           a?.current && a.current.clearValue();
-        }, [o]);
+        }, [r]);
         const c = l?.find(
           (e) =>
             t &&
             t.edistributor == e.value.edistributor &&
             t.product_identifier == e.value.product_identifier,
         );
-        return r.createElement(E.Ay, {
+        return i.createElement(E.Ay, {
           isSearchable: !0,
           ref: a,
           isMulti: !1,
           isClearable: !0,
-          className: v.ItemSelect,
+          className: S.ItemSelect,
           options: l,
           value: c,
           onChange: (e) => {
@@ -373,197 +374,197 @@
         });
       }
       var b = n(71298),
-        C = n(99637),
-        w = n(8905),
+        w = n(99637),
+        P = n(8905),
         y = n(9154),
-        A = n(738),
-        P = n(48479),
-        D = n(56011),
+        C = n(738),
+        D = n(48479),
+        A = n(56011),
         R = n(61859),
         k = n(95695),
         I = n(92825),
-        L = n.n(I),
-        N = n(44165);
+        N = n.n(I),
+        L = n(44165);
       function G(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
       function B(e) {
         const { strToken: t, rtEstimatedNotifcationDate: n } = e,
           a = new Date(1e3 * n),
-          s = a.getMonth() + 1;
-        let i = "",
-          o = "",
+          o = a.getMonth() + 1;
+        let s = "",
+          r = "",
           l = "",
           c = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
-            i = "" + a.getFullYear();
+            s = "" + a.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (i = (0, R.we)("#Sale_Reservation_MonthNoun_" + s)),
-              (o = "" + a.getFullYear());
+            (s = (0, R.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (r = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (i = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(s, 1))),
-              (o = (0, R.we)("#Sale_Reservation_MonthNoun_" + s)),
+            (s = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(o, 1))),
+              (r = (0, R.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (i = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(s, 2))),
-              (o = (0, R.we)("#Sale_Reservation_MonthNoun_" + s)),
+            (s = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(o, 2))),
+              (r = (0, R.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (i = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(s, 3))),
-              (o = (0, R.we)("#Sale_Reservation_MonthNoun_" + s)),
+            (s = (0, R.we)("#Sale_Reservation_MonthNoun_" + G(o, 3))),
+              (r = (0, R.we)("#Sale_Reservation_MonthNoun_" + o)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (c = "#Sale_Reservation_Quarter" + (Math.floor((s - 1) / 3) + 1)),
-              (i = "" + a.getFullYear());
+            (c = "#Sale_Reservation_Quarter" + (Math.floor((o - 1) / 3) + 1)),
+              (s = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (c =
-              "#Sale_Reservation_AfterQuarter" + (Math.floor((s - 1) / 3) + 1)),
-              (i = (0, R.we)("#Sale_Reservation_MonthNoun_" + s)),
-              (o = "" + a.getFullYear());
+              "#Sale_Reservation_AfterQuarter" + (Math.floor((o - 1) / 3) + 1)),
+              (s = (0, R.we)("#Sale_Reservation_MonthNoun_" + o)),
+              (r = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
-              const e = N.HD.GetTimeNowWithOverride(),
+              const e = L.HD.GetTimeNowWithOverride(),
                 t = Math.floor((n - e) / 86400);
               t < 7 ||
                 (t < 28
                   ? ((c = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (i = "" + Math.floor(t / 7 + 1)))
+                    (s = "" + Math.floor(t / 7 + 1)))
                   : ((c = "#Sale_Reservation_RelativeMonthly"),
-                    (i = "" + Math.floor(t / 28 + 1))));
+                    (s = "" + Math.floor(t / 28 + 1))));
             }
             break;
           default:
             c = "#Sale_Reservation_Fallback";
         }
-        return r.createElement(
+        return i.createElement(
           "div",
-          { className: L().Ctn },
-          (0, R.we)(c, i, o, l, ""),
+          { className: N().Ctn },
+          (0, R.we)(c, s, r, l, ""),
         );
       }
       function x(e) {
-        const t = f();
+        const t = h();
         return t && 0 != t.length
-          ? r.createElement(
+          ? i.createElement(
               "div",
               null,
               t.map((e) =>
-                r.createElement(Y, {
+                i.createElement(q, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
               ),
             )
-          : r.createElement(
+          : i.createElement(
               "div",
               null,
               "No products with reservation position messages exists.",
             );
       }
       function F(e) {
-        return r.createElement(
+        return i.createElement(
           "div",
           null,
-          r.createElement(S.JU, null, "instructions:"),
-          r.createElement(
+          i.createElement(v.JU, null, "instructions:"),
+          i.createElement(
             "p",
             null,
             "Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.",
           ),
-          r.createElement(
+          i.createElement(
             "p",
             null,
             "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
           ),
         );
       }
-      function U(e) {
-        f();
-        return r.createElement(
+      function Y(e) {
+        h();
+        return i.createElement(
           "div",
           null,
-          r.createElement(S.JU, null, "Force update:"),
-          r.createElement(
+          i.createElement(v.JU, null, "Force update:"),
+          i.createElement(
             "p",
             null,
             "By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.",
           ),
-          r.createElement(
+          i.createElement(
             "p",
             null,
             "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
           ),
-          r.createElement(
-            S.$n,
+          i.createElement(
+            v.$n,
             {
-              onClick: (e) => (0, A.pg)(r.createElement(V, null), (0, D.uX)(e)),
+              onClick: (e) => (0, C.pg)(i.createElement(V, null), (0, A.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function Y(e) {
+      function q(e) {
         const { productID: t } = e,
           n = (function (e) {
-            return s.find(
+            return o.find(
               (t) =>
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
           })(t),
           a = n.product_description + " " + n.distributor,
-          i = (function (e) {
-            const [t, n] = (0, r.useState)(() =>
-              _.Get().GetPositionMessagingForProduct(e),
+          s = (function (e) {
+            const [t, n] = (0, i.useState)(() =>
+              p.Get().GetPositionMessagingForProduct(e),
             );
-            return (0, g.hL)(_.Get().GetPositionListChangeCallback(e), n), t;
+            return (0, _.hL)(p.Get().GetPositionListChangeCallback(e), n), t;
           })(t);
-        return r.createElement(
-          P.qx,
+        return i.createElement(
+          D.qx,
           {
             bStartMinimized: !1,
             title: a,
             tooltip: `distributor enum: ${n.edistributor}, part number: ${n.part_number}, product identifier: ${n.product_identifier}`,
           },
-          r.createElement(
-            S.$n,
+          i.createElement(
+            v.$n,
             {
               onClick: (e) =>
-                (0, A.pg)(r.createElement(O, { productID: t }), (0, D.uX)(e)),
+                (0, C.pg)(i.createElement(z, { productID: t }), (0, A.uX)(e)),
             },
             "Add new start position",
           ),
-          r.createElement(
+          i.createElement(
             "table",
-            { className: v.ItemTable },
-            r.createElement(
+            { className: S.ItemTable },
+            i.createElement(
               "thead",
               null,
-              r.createElement(
+              i.createElement(
                 "tr",
                 null,
-                r.createElement("th", null, "Starting Queue Position"),
-                r.createElement("th", null, "Estimate Date Receive Invite"),
-                r.createElement("th", null, "Localized Date"),
-                r.createElement("th", null, "Entry Created By"),
-                r.createElement("th", null),
+                i.createElement("th", null, "Starting Queue Position"),
+                i.createElement("th", null, "Estimate Date Receive Invite"),
+                i.createElement("th", null, "Localized Date"),
+                i.createElement("th", null, "Entry Created By"),
+                i.createElement("th", null),
               ),
             ),
-            r.createElement(
+            i.createElement(
               "tbody",
               null,
-              i.map((e) =>
-                r.createElement(q, {
+              s.map((e) =>
+                i.createElement(U, {
                   key: a + e.start_queue_position,
                   positionMsg: e,
                 }),
@@ -572,61 +573,61 @@
           ),
         );
       }
-      function q(e) {
+      function U(e) {
         const { positionMsg: t } = e;
-        return r.createElement(
+        return i.createElement(
           "tr",
           null,
-          r.createElement("td", null, t.start_queue_position.toLocaleString()),
-          r.createElement(
+          i.createElement("td", null, t.start_queue_position.toLocaleString()),
+          i.createElement(
             "td",
             null,
             (0, R.TW)(t.rtime_estimated_notification),
           ),
-          r.createElement(
+          i.createElement(
             "td",
             null,
-            r.createElement(B, {
+            i.createElement(B, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.localization_token,
             }),
           ),
-          r.createElement(
+          i.createElement(
             "td",
             null,
-            r.createElement(
+            i.createElement(
               "div",
               null,
-              r.createElement(w.p, { accountID: t.accountid }),
+              i.createElement(P.p, { accountID: t.accountid }),
             ),
-            r.createElement("br", null),
+            i.createElement("br", null),
             "On: ",
             (0, R.TW)(t.rtime_created),
           ),
-          r.createElement(
+          i.createElement(
             "td",
             null,
-            r.createElement(
-              S.$n,
+            i.createElement(
+              v.$n,
               {
                 onClick: (e) =>
-                  (0, A.pg)(
-                    r.createElement(O, {
+                  (0, C.pg)(
+                    i.createElement(z, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
-                    (0, D.uX)(e),
+                    (0, A.uX)(e),
                   ),
               },
               "Update",
             ),
-            r.createElement(
-              S.$n,
+            i.createElement(
+              v.$n,
               {
                 onClick: (e) =>
-                  (0, A.pg)(
-                    r.createElement(z, { positionMsg: t }),
-                    (0, D.uX)(e),
+                  (0, C.pg)(
+                    i.createElement(O, { positionMsg: t }),
+                    (0, A.uX)(e),
                   ),
               },
               "Delete",
@@ -634,109 +635,109 @@
           ),
         );
       }
-      function O(e) {
+      function z(e) {
         const { productID: t, existingPositionMsg: n, closeModal: a } = e,
-          { fnSetPositionMessages: s } = h(),
-          i = Math.floor(Date.now() / 1e3),
-          [o, l] = (0, r.useState)(n?.start_queue_position || 0),
-          [c, u] = (0, r.useState)(
-            n?.rtime_estimated_notification || i + 86400,
+          { fnSetPositionMessages: o } = f(),
+          s = Math.floor(Date.now() / 1e3),
+          [r, l] = (0, i.useState)(n?.start_queue_position || 0),
+          [c, u] = (0, i.useState)(
+            n?.rtime_estimated_notification || s + 86400,
           ),
-          [d, m] = (0, r.useState)(
+          [m, d] = (0, i.useState)(
             n?.localization_token || "#Sale_Reservation_MonthYear",
           ),
-          g = n ? "Update Queue Range" : "Create Queue Range",
-          p = (0, b.vs)();
-        return p.bLoading
-          ? r.createElement(b.Hh, {
-              state: p,
-              strDialogTitle: g,
+          _ = n ? "Update Queue Range" : "Create Queue Range",
+          g = (0, b.vs)();
+        return g.bLoading
+          ? i.createElement(b.Hh, {
+              state: g,
+              strDialogTitle: _,
               closeModal: a,
             })
-          : r.createElement(
+          : i.createElement(
               y.o0,
               {
                 bDisableBackgroundDismiss: !0,
-                strTitle: g,
+                strTitle: _,
                 onCancel: a,
                 onOK: () => {
-                  p.fnSetLoading(!0);
+                  g.fnSetLoading(!0);
                   const e = {
                     ...t,
-                    start_queue_position: o,
+                    start_queue_position: r,
                     rtime_estimated_notification: c,
-                    localization_token: d,
+                    localization_token: m,
                   };
-                  s([e]).then((e) => {
+                  o([e]).then((e) => {
                     e
-                      ? (p.fnSetSuccess(!0),
-                        p.fnSetStrSuccess("Successfully created position"))
-                      : (p.fnSetSuccess(!1),
-                        p.fnSetStrError(
+                      ? (g.fnSetSuccess(!0),
+                        g.fnSetStrSuccess("Successfully created position"))
+                      : (g.fnSetSuccess(!1),
+                        g.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
                 },
               },
-              r.createElement(
+              i.createElement(
                 "div",
-                { className: v.NewEntryCtn },
-                r.createElement(
+                { className: S.NewEntryCtn },
+                i.createElement(
                   "p",
                   null,
                   "When we get to accepting reservation number ",
-                  r.createElement("i", null, "n"),
+                  i.createElement("i", null, "n"),
                   ", show those users a date they can anticipate to recieve an invite to purchase.",
                 ),
-                r.createElement(S.pd, {
+                i.createElement(v.pd, {
                   type: "number",
                   min: "0",
-                  value: o,
+                  value: r,
                   label: "Starting Queue Position",
                   onChange: (e) =>
                     l(Number.parseInt(e?.currentTarget?.value || "0")),
                 }),
-                r.createElement(C.K, {
+                i.createElement(w.K, {
                   bShowTimeZone: !0,
                   strDescription: "Estimated Time Users will receive invite",
                   strDescToolTip:
                     "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
-                  nEarliestTime: i,
+                  nEarliestTime: s,
                   fnGetTimeToUpdate: () => c,
                   fnSetTimeToUpdate: u,
                 }),
-                r.createElement("br", null),
-                r.createElement(Q, {
-                  strToken: d,
-                  fnSetToken: m,
+                i.createElement("br", null),
+                i.createElement(K, {
+                  strToken: m,
+                  fnSetToken: d,
                   rtEstimateDate: c,
                 }),
               ),
             );
       }
-      function z(e) {
+      function O(e) {
         const { positionMsg: t, closeModal: n } = e,
-          { fnDeletePositionMessage: a } = h(),
-          s = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          i = (0, b.vs)();
-        return i.bLoading
-          ? r.createElement(b.Hh, {
-              state: i,
-              strDialogTitle: s,
+          { fnDeletePositionMessage: a } = f(),
+          o = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
+          s = (0, b.vs)();
+        return s.bLoading
+          ? i.createElement(b.Hh, {
+              state: s,
+              strDialogTitle: o,
               closeModal: n,
             })
-          : r.createElement(y.o0, {
-              strTitle: s,
+          : i.createElement(y.o0, {
+              strTitle: o,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
               onOK: () => {
-                i.fnSetLoading(!0),
+                s.fnSetLoading(!0),
                   a(t).then((e) => {
                     e
-                      ? (i.fnSetSuccess(!0),
-                        i.fnSetStrSuccess("Successfully delete position"))
-                      : (i.fnSetSuccess(!1),
-                        i.fnSetStrError(
+                      ? (s.fnSetSuccess(!0),
+                        s.fnSetStrSuccess("Successfully delete position"))
+                      : (s.fnSetSuccess(!1),
+                        s.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
@@ -745,13 +746,13 @@
       }
       function V(e) {
         const { closeModal: t } = e,
-          { fnReloadReservationPositionMessages: n } = h(),
-          [a, s] = (0, r.useState)(!1);
+          { fnReloadReservationPositionMessages: n } = f(),
+          [a, o] = (0, i.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
-            n().then(() => s(!0));
+          (0, i.useEffect)(() => {
+            n().then(() => o(!0));
           }, [n]),
-          r.createElement(y.o0, {
+          i.createElement(y.o0, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: a
@@ -773,12 +774,12 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function Q(e) {
+      function K(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: a } = e,
-          s = (0, r.useMemo)(
+          o = (0, i.useMemo)(
             () =>
               W.map((e) => ({
-                label: r.createElement(B, {
+                label: i.createElement(B, {
                   strToken: e,
                   rtEstimatedNotifcationDate: a,
                 }),
@@ -786,31 +787,31 @@
               })),
             [a],
           );
-        return r.createElement(
+        return i.createElement(
           "div",
           null,
-          r.createElement(S.m, {
+          i.createElement(v.m, {
             strDropDownClassName: k.DropDownScroll,
             label: "Date Format",
-            rgOptions: s,
+            rgOptions: o,
             selectedOption: t,
             onChange: (e) => n(e.data),
             bDisableMouseOverlay: !0,
             contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
           }),
-          r.createElement(
+          i.createElement(
             "div",
             null,
-            r.createElement("h3", null, "This will display to users as: "),
-            r.createElement(
+            i.createElement("h3", null, "This will display to users as: "),
+            i.createElement(
               "div",
-              { className: v.DatePreview },
-              r.createElement(
+              { className: S.DatePreview },
+              i.createElement(
                 "div",
                 null,
                 (0, R.we)("#Sale_Reservation_ExpectedDate"),
               ),
-              r.createElement(B, {
+              i.createElement(B, {
                 rtEstimatedNotifcationDate: a,
                 strToken: t,
               }),
@@ -818,63 +819,63 @@
           ),
         );
       }
-      var H = n(52038),
-        K = n(45737),
-        j = n.n(K);
+      var Q = n(52038),
+        H = n(45737),
+        Z = n.n(H);
       function $(e) {
-        return r.createElement(
+        return i.createElement(
           "div",
-          { className: (0, H.A)(v.ctn, j().AdminPageCtn) },
-          r.createElement(
+          { className: (0, Q.A)(S.ctn, Z().AdminPageCtn) },
+          i.createElement(
             "h1",
-            { className: j().PageTitle },
+            { className: Z().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
-          r.createElement("hr", { className: "VO" }),
-          r.createElement(
+          i.createElement("hr", { className: "VO" }),
+          i.createElement(
             "div",
-            { className: j().ColumnCtn },
-            r.createElement(
+            { className: Z().ColumnCtn },
+            i.createElement(
               "div",
-              { className: j().LeftCol },
-              r.createElement(
+              { className: Z().LeftCol },
+              i.createElement(
                 "div",
-                { className: j().SectionCtn },
-                r.createElement(M, null),
+                { className: Z().SectionCtn },
+                i.createElement(M, null),
               ),
-              r.createElement(
+              i.createElement(
                 "div",
-                { className: j().SectionCtn },
-                r.createElement(x, null),
+                { className: Z().SectionCtn },
+                i.createElement(x, null),
               ),
             ),
-            r.createElement(
+            i.createElement(
               "div",
-              { className: j().RightCol },
-              r.createElement(
+              { className: Z().RightCol },
+              i.createElement(
                 "div",
-                { className: j().SectionCtn },
-                r.createElement(F, null),
+                { className: Z().SectionCtn },
+                i.createElement(F, null),
               ),
-              r.createElement(
+              i.createElement(
                 "div",
-                { className: j().SectionCtn },
-                r.createElement(U, null),
+                { className: Z().SectionCtn },
+                i.createElement(Y, null),
               ),
-              r.createElement(
+              i.createElement(
                 "div",
-                { className: j().SectionCtn },
-                r.createElement(S.JU, null, "Useful Links:"),
-                r.createElement(
+                { className: Z().SectionCtn },
+                i.createElement(v.JU, null, "Useful Links:"),
+                i.createElement(
                   "ul",
                   null,
-                  r.createElement(
+                  i.createElement(
                     "li",
                     null,
-                    r.createElement(
+                    i.createElement(
                       "a",
                       {
-                        href: `${p.TS.STATS_BASE_URL}steamdeck/reservations/`,
+                        href: `${g.TS.STATS_BASE_URL}steamdeck/reservations/`,
                         target: "_blank",
                       },
                       "Steam Deck reservation stats page",
@@ -890,33 +891,33 @@
     27144: (e, t, n) => {
       "use strict";
       n.d(t, { B3: () => T, CF: () => b, KM: () => E, KT: () => M });
-      var r = n(41735),
-        a = n.n(r),
-        s = n(58632),
-        i = n.n(s),
-        o = n(90626),
+      var i = n(41735),
+        a = n.n(i),
+        o = n(58632),
+        s = n.n(o),
+        r = n(90626),
         l = n(20194),
         c = n(75233),
         u = n(17720),
-        d = n(68797),
-        m = n(78327),
-        g = n(56545),
-        p = n(37735),
-        _ = n(23809),
-        f = n(7860);
-      const h = "nicknames";
+        m = n(68797),
+        d = n(78327),
+        _ = n(56545),
+        g = n(37735),
+        p = n(23809),
+        h = n(7860);
+      const f = "nicknames";
       function E(e) {
-        const t = (0, _.KV)(),
-          { data: n, isLoading: r } = (0, l.I)({
-            queryKey: [h],
+        const t = (0, p.KV)(),
+          { data: n, isLoading: i } = (0, l.I)({
+            queryKey: [f],
             queryFn: async () => {
               const e = new Map();
-              if (m.iA.logged_in) {
-                const n = g.w.Init(p.dN),
-                  r = (await p.xt.GetNicknameList(t, n)).Body().toObject();
-                r?.nicknames &&
-                  r.nicknames.length > 0 &&
-                  r.nicknames.forEach((t) => {
+              if (d.iA.logged_in) {
+                const n = _.w.Init(g.dN),
+                  i = (await g.xt.GetNicknameList(t, n)).Body().toObject();
+                i?.nicknames &&
+                  i.nicknames.length > 0 &&
+                  i.nicknames.forEach((t) => {
                     e.set(t.accountid, t.nickname);
                   });
               }
@@ -925,68 +926,68 @@
           });
         return n ? n.get(e) : null;
       }
-      const v = new (i())(
+      const S = new (s())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
-                  r = await a().get(`${t}actions/ajaxgetavatarpersona`, {
+                  i = await a().get(`${t}actions/ajaxgetavatarpersona`, {
                     params: n,
                   });
                 if (
-                  !r ||
-                  200 != r.status ||
-                  1 != r.data?.success ||
-                  !r.data?.userinfo
+                  !i ||
+                  200 != i.status ||
+                  1 != i.data?.success ||
+                  !i.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(r).strErrorMsg}`;
-                return [r.data.userinfo];
+                  throw `Load single avatar/persona failed ${((0, m.H))(i).strErrorMsg}`;
+                return [i.data.userinfo];
               }
               {
                 const n = { accountids: e.join(","), origin: self.origin },
-                  r = await a().get(`${t}actions/ajaxgetmultiavatarpersona`, {
+                  i = await a().get(`${t}actions/ajaxgetmultiavatarpersona`, {
                     params: n,
                   });
                 if (
-                  !r ||
-                  200 != r.status ||
-                  1 != r.data?.success ||
-                  !r.data?.userinfos
+                  !i ||
+                  200 != i.status ||
+                  1 != i.data?.success ||
+                  !i.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(r).strErrorMsg}`;
-                const s = new Map();
+                  throw `Load single avatar/persona failed ${((0, m.H))(i).strErrorMsg}`;
+                const o = new Map();
                 return (
-                  r.data.userinfos.forEach((e) =>
-                    s.set(new u.b(e.steamid).GetAccountID(), e),
+                  i.data.userinfos.forEach((e) =>
+                    o.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
-                  e.map((e) => s.get(e))
+                  e.map((e) => o.get(e))
                 );
               }
             })(e),
           { cache: !1 },
         ),
-        S = "avatarandpersonas";
+        v = "avatarandpersonas";
       function M(e) {
         const { data: t, isLoading: n } = (0, l.I)({
-          queryKey: [S, e],
-          queryFn: () => v.load(e),
+          queryKey: [v, e],
+          queryFn: () => S.load(e),
         });
         return [t, n];
       }
       function T(e) {
         const t = (0, c.jE)(),
-          { data: n, isLoading: r } = (0, l.I)({
-            queryKey: [S, e],
+          { data: n, isLoading: i } = (0, l.I)({
+            queryKey: [v, e],
             queryFn: async () => {
-              const n = await v.loadMany(e);
+              const n = await S.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [S, new u.b(e.steamid).GetAccountID()];
+                  const n = [v, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -994,7 +995,7 @@
             },
             enabled: e?.length > 0,
           }),
-          a = (0, o.useMemo)(() => {
+          a = (0, r.useMemo)(() => {
             const e = new Array();
             return (
               n?.forEach((t) => {
@@ -1003,87 +1004,87 @@
               e
             );
           }, [n]);
-        return r ? null : a;
+        return i ? null : a;
       }
       function b(e) {
-        return f.L.getQueryData([S, e]);
+        return h.L.getQueryData([v, e]);
       }
     },
     99637: (e, t, n) => {
       "use strict";
-      n.d(t, { K: () => v });
-      var r = n(90626),
+      n.d(t, { K: () => S });
+      var i = n(90626),
         a = n(92298),
-        s = n.n(a),
-        i = n(44894),
-        o = n(44165),
+        o = n.n(a),
+        s = n(44894),
+        r = n(44165),
         l = n(95695),
         c = n.n(l),
         u = n(52038),
-        d = n(61859),
-        m = n(32754),
-        g = n(12916),
-        p = n.n(g),
-        _ = n(87937),
-        f = n.n(_);
-      const h = "hh:mm a",
+        m = n(61859),
+        d = n(32754),
+        _ = n(12916),
+        g = n.n(_),
+        p = n(87937),
+        h = n.n(p);
+      const f = "hh:mm a",
         E = "HH:mm";
-      function v(e) {
+      function S(e) {
         const {
           nLatestTime: t,
           nEarliestTime: n,
           fnGetTimeToUpdate: a,
           onError: l,
-          strAlsoShowTimeZone: g,
-          disabled: _,
-          bNoDefaultDate: v,
+          strAlsoShowTimeZone: _,
+          disabled: p,
+          bNoDefaultDate: S,
           className: b,
-          strDescToolTip: C,
-          strDescription: w,
+          strDescToolTip: w,
+          strDescription: P,
           bShowTimeZone: y,
-          strInvalidDateTimeLocalizedMsg: A,
-          fnIsValidDateTime: P,
-          bWeekdaysOnly: D,
+          strInvalidDateTimeLocalizedMsg: C,
+          fnIsValidDateTime: D,
+          bWeekdaysOnly: A,
           fnSetTimeToUpdate: R,
           bForce24HourFormat: k,
         } = e;
         let I =
           (function () {
-            const e = f()("2025-01-14T13:00:00");
+            const e = h()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
           })() || k
             ? E
-            : h;
-        const L = a(),
-          [N, G] = r.useState(L > 0 ? f()(1e3 * L) : null),
-          [B, x] = r.useState(),
-          [F, U] = r.useState(),
-          Y = (function (e, t, n, a, s) {
-            const i = a && a(),
-              o = t && !M(t).isValid(),
+            : f;
+        const N = a(),
+          [L, G] = i.useState(N > 0 ? h()(1e3 * N) : null),
+          [B, x] = i.useState(),
+          [F, Y] = i.useState(),
+          q = (function (e, t, n, a, o) {
+            const s = a && a(),
+              r = t && !M(t).isValid(),
               l = e && !T(e).isValid();
             let c = null;
-            (l || o || "string" == typeof i || !1 === i) &&
-              ((c = (0, d.we)(
+            (l || r || "string" == typeof s || !1 === s) &&
+              ((c = (0, m.we)(
                 n || "#DateTimePicker_Fallback_Invalid_DateTime",
               )),
               l
-                ? (c = (0, d.we)("#DateTimePicker_Time_CannotParse"))
-                : o
-                  ? (c = (0, d.we)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof i && (c = i));
+                ? (c = (0, m.we)("#DateTimePicker_Time_CannotParse"))
+                : r
+                  ? (c = (0, m.we)("#DateTimePicker_Date_CannotParse"))
+                  : "string" == typeof s && (c = s));
             return (
-              r.useEffect(() => {
-                s && s(c);
-              }, [c, s]),
+              i.useEffect(() => {
+                o && o(c);
+              }, [c, o]),
               c
             );
-          })(B, F, A, P, l),
-          q = !l && Y;
-        let O, z;
-        if (t && n && t == n && n > o.HD.GetTimeNowWithOverride()) {
-          const e = f().unix(n);
-          (O = {
+          })(B, F, C, D, l),
+          U = !l && q;
+        let z, O;
+        if (t && n && t == n && n > r.HD.GetTimeNowWithOverride()) {
+          const e = h().unix(n);
+          (z = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
@@ -1091,199 +1092,199 @@
           }),
             (I = E);
         }
-        L || !n || v || (z = f().unix(n));
-        const V = f().tz.guess(),
-          W = f().unix(L).tz(V),
-          Q = !!g && V != g && f().unix(L).tz(g),
+        N || !n || S || (O = h().unix(n));
+        const V = h().tz.guess(),
+          W = h().unix(N).tz(V),
+          K = !!_ && V != _ && h().unix(N).tz(_),
           {
-            fnOnInput: H,
-            fnOnInputBlur: K,
-            fnOnChange: j,
-          } = S(
+            fnOnInput: Q,
+            fnOnInputBlur: H,
+            fnOnChange: Z,
+          } = v(
             M,
             (e) => {
-              if (_) return;
-              U(null);
+              if (p) return;
+              Y(null);
               const t = a(),
-                n = f().unix(t || o.HD.GetTimeNowWithOverride());
+                n = h().unix(t || r.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(n.hour()),
                 e.minute(n.minute()),
                 e.second(0),
                 R(e.unix()),
                 G(e);
             },
-            U,
+            Y,
           ),
           {
             fnOnInput: $,
-            fnOnInputBlur: Z,
+            fnOnInputBlur: j,
             fnOnChange: J,
-          } = S(
+          } = v(
             T,
             (e) => {
-              if (_) return;
+              if (p) return;
               x(null);
               let t = a(),
-                r = 0;
+                i = 0;
               if (t) {
-                const n = f().unix(t);
+                const n = h().unix(t);
                 (e = e.clone()).year(n.year()),
                   e.month(n.month()),
                   e.date(n.date()),
-                  (r = e.unix());
+                  (i = e.unix());
               } else {
-                r =
-                  f().unix(n).hour(0).second(0).minutes(0).unix() +
+                i =
+                  h().unix(n).hour(0).second(0).minutes(0).unix() +
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              R(r), G(f().unix(r));
+              R(i), G(h().unix(i));
             },
             x,
           );
-        return r.createElement(
+        return i.createElement(
           "div",
-          { className: (0, u.A)(p().EventTimeSection, b) },
-          r.createElement(
+          { className: (0, u.A)(g().EventTimeSection, b) },
+          i.createElement(
             "div",
-            { className: (0, u.A)(p().EventTimeTitle, "DialogLabel") },
-            r.createElement(
-              m.he,
-              { toolTipContent: C, direction: "top" },
-              Boolean(w) && r.createElement("span", null, w),
+            { className: (0, u.A)(g().EventTimeTitle, "DialogLabel") },
+            i.createElement(
+              d.he,
+              { toolTipContent: w, direction: "top" },
+              Boolean(P) && i.createElement("span", null, P),
             ),
-            q &&
-              r.createElement(
+            U &&
+              i.createElement(
                 "span",
-                { className: p().DateErrorCtn },
-                r.createElement("img", { src: i.A }),
-                q,
+                { className: g().DateErrorCtn },
+                i.createElement("img", { src: s.A }),
+                U,
               ),
           ),
-          r.createElement(
+          i.createElement(
             "div",
             { className: c().FlexRowContainer },
-            r.createElement(
+            i.createElement(
               "div",
-              { className: (0, u.A)(c().InputBorder, p().TimeBlock) },
-              r.createElement(s(), {
-                onChange: j,
+              { className: (0, u.A)(c().InputBorder, g().TimeBlock) },
+              i.createElement(o(), {
+                onChange: Z,
                 timeFormat: !1,
-                value: null != F ? F : N,
+                value: null != F ? F : L,
                 isValidDate: (e) =>
-                  !_ &&
-                  (function (e, t, n, r) {
-                    const a = f().unix(e).hour(0).seconds(0).minute(0);
-                    let s = r.unix() >= a.unix();
-                    if (s && t && t >= e) {
-                      const e = f().unix(t).hour(23).minute(59).seconds(59);
-                      s = r.unix() <= e.unix();
+                  !p &&
+                  (function (e, t, n, i) {
+                    const a = h().unix(e).hour(0).seconds(0).minute(0);
+                    let o = i.unix() >= a.unix();
+                    if (o && t && t >= e) {
+                      const e = h().unix(t).hour(23).minute(59).seconds(59);
+                      o = i.unix() <= e.unix();
                     }
-                    s &&
+                    o &&
                       n &&
-                      ((0 != r.weekday() && 6 != r.weekday()) || (s = !1));
-                    return s;
-                  })(n, t, D, e),
-                initialValue: z,
+                      ((0 != i.weekday() && 6 != i.weekday()) || (o = !1));
+                    return o;
+                  })(n, t, A, e),
+                initialValue: O,
                 inputProps: {
-                  placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
+                  placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
                   className: (0, u.A)(
-                    p().DateWidth,
+                    g().DateWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
-                  disabled: _,
-                  onChange: (e) => H(e.currentTarget.value),
-                  onBlur: (e) => K(e.currentTarget.value),
+                  disabled: p,
+                  onChange: (e) => Q(e.currentTarget.value),
+                  onBlur: (e) => H(e.currentTarget.value),
                 },
               }),
-              !!Q &&
-                r.createElement(
+              !!K &&
+                i.createElement(
                   "div",
-                  { className: p().PacificTimeHint },
-                  Q.format("L"),
+                  { className: g().PacificTimeHint },
+                  K.format("L"),
                 ),
             ),
-            r.createElement(
+            i.createElement(
               "div",
-              { className: (0, u.A)(c().InputBorder, p().TimeBlock) },
-              r.createElement(s(), {
+              { className: (0, u.A)(c().InputBorder, g().TimeBlock) },
+              i.createElement(o(), {
                 onChange: J,
                 dateFormat: !1,
                 timeFormat: I,
-                timeConstraints: O,
-                value: null != B ? B : N,
+                timeConstraints: z,
+                value: null != B ? B : L,
                 inputProps: {
-                  placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
+                  placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                   className: (0, u.A)(
-                    p().TimeWidth,
+                    g().TimeWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
-                  disabled: _,
+                  disabled: p,
                   onChange: (e) => $(e.currentTarget.value),
-                  onBlur: (e) => Z(e.currentTarget.value),
+                  onBlur: (e) => j(e.currentTarget.value),
                 },
               }),
-              !!Q &&
-                r.createElement(
+              !!K &&
+                i.createElement(
                   "div",
-                  { className: p().PacificTimeHint },
-                  Q.format("LT"),
+                  { className: g().PacificTimeHint },
+                  K.format("LT"),
                 ),
             ),
             y &&
-              r.createElement(
+              i.createElement(
                 "div",
                 null,
-                r.createElement(
+                i.createElement(
                   "div",
-                  { className: p().TimeZone },
+                  { className: g().TimeZone },
                   W.zoneAbbr(),
                 ),
-                !!Q &&
-                  r.createElement(
+                !!K &&
+                  i.createElement(
                     "div",
-                    { className: p().TimeZone },
-                    Q.zoneAbbr(),
+                    { className: g().TimeZone },
+                    K.zoneAbbr(),
                   ),
               ),
           ),
-          Boolean(O) &&
-            r.createElement(
+          Boolean(z) &&
+            i.createElement(
               "div",
               null,
-              (0, d.we)("#DateTimePicker_DateTime_Fixed"),
+              (0, m.we)("#DateTimePicker_DateTime_Fixed"),
             ),
         );
       }
-      function S(e, t, n) {
-        const [a, s] = r.useState(!1);
+      function v(e, t, n) {
+        const [a, o] = i.useState(!1);
         return {
           fnOnInput: (e) => {
-            n(e), s(!0);
+            n(e), o(!0);
           },
           fnOnInputBlur: (n) => {
             if (a) {
-              const r = e(n);
-              r.isValid() && t(r);
+              const i = e(n);
+              i.isValid() && t(i);
             }
-            s(!1);
+            o(!1);
           },
           fnOnChange: (n) => {
             if (!a)
               if ("string" == typeof n) {
-                const r = e(n);
-                r.isValid() && t(r);
+                const i = e(n);
+                i.isValid() && t(i);
               } else t(n);
           },
         };
       }
       function M(e) {
-        return f()(
+        return h()(
           e,
           (function () {
-            const e = f()("2025-01-14").format("L").split(/[-/.]/),
+            const e = h()("2025-01-14").format("L").split(/[-/.]/),
               t = e.indexOf("14");
             return e.indexOf("01") < t;
           })()
@@ -1293,42 +1294,42 @@
         );
       }
       function T(e) {
-        return f()(e, [h, E], !1);
+        return h()(e, [f, E], !1);
       }
     },
     8905: (e, t, n) => {
       "use strict";
       n.d(t, { p: () => l });
-      var r = n(90626),
+      var i = n(90626),
         a = n(17720),
-        s = n(27144),
-        i = n(15736),
-        o = n(78327);
+        o = n(27144),
+        s = n(15736),
+        r = n(78327);
       function l(e) {
         const { accountID: t, bHideWhenNotAvailable: n, bHideName: l } = e,
-          [c] = (0, s.KT)(t),
-          u = (0, s.KM)(t),
-          d = r.useMemo(() => a.b.InitFromAccountID(t), [t]),
-          m = `${o.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`;
-        return r.createElement(
-          r.Fragment,
+          [c] = (0, o.KT)(t),
+          u = (0, o.KM)(t),
+          m = i.useMemo(() => a.b.InitFromAccountID(t), [t]),
+          d = `${r.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
+        return i.createElement(
+          i.Fragment,
           null,
           Boolean(!c)
-            ? r.createElement(
-                r.Fragment,
+            ? i.createElement(
+                i.Fragment,
                 null,
-                Boolean(!n) && r.createElement("span", null, t),
+                Boolean(!n) && i.createElement("span", null, t),
               )
-            : r.createElement(
+            : i.createElement(
                 "a",
-                { href: m },
-                r.createElement("img", {
-                  className: i.SmallAvatar,
+                { href: d },
+                i.createElement("img", {
+                  className: s.SmallAvatar,
                   src: c.avatar_url,
-                  "data-miniprofile": "s" + d.ConvertTo64BitString(),
+                  "data-miniprofile": "s" + m.ConvertTo64BitString(),
                 }),
                 Boolean(!l) &&
-                  r.createElement(
+                  i.createElement(
                     "span",
                     null,
                     u ? `${u} (${c.persona_name})` : c.persona_name,
@@ -1339,175 +1340,86 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => g, qx: () => p });
-      var r = n(16676),
+      n.d(t, { AQ: () => _, qx: () => g });
+      var i = n(16676),
         a = n(61859),
-        s = n(12155),
-        i = n(90626),
-        o = n(52038),
+        o = n(12155),
+        s = n(90626),
+        r = n(52038),
         l = n(95695),
         c = n(84811),
         u = n(64734),
-        d = n(65946),
-        m = n(26408);
-      function g(e) {
+        m = n(65946),
+        d = n(26408);
+      function _(e) {
         const {
             title: t,
             tooltip: n,
-            getMinimized: r,
+            getMinimized: i,
             toggleMinimized: a,
-            className: s,
-            children: g,
-            elAdditionalButtons: p,
+            className: o,
+            children: _,
+            elAdditionalButtons: g,
           } = e,
-          f = (0, d.q3)(() => r());
-        return i.createElement(
-          i.Fragment,
+          h = (0, m.q3)(() => i());
+        return s.createElement(
+          s.Fragment,
           null,
-          i.createElement(
+          s.createElement(
             "div",
             {
-              className: (0, o.A)(
-                s,
+              className: (0, r.A)(
+                o,
                 u.SectionTitleHeader,
                 u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            i.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, o.A)(
+                className: (0, r.A)(
                   l.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               t,
-              Boolean(n) && i.createElement(m.o, { tooltip: n }),
+              Boolean(n) && s.createElement(d.o, { tooltip: n }),
             ),
-            p,
-            i.createElement(_, { bIsMinimized: f, fnToggleMinimize: a }),
+            s.createElement(
+              "div",
+              { className: u.SectionTitleButtons },
+              g,
+              s.createElement(p, { bIsMinimized: h, fnToggleMinimize: a }),
+            ),
           ),
-          !f && i.createElement(c.tH, null, g),
+          !h && s.createElement(c.tH, null, _),
         );
       }
-      function p(e) {
-        const [t, n] = i.useState(Boolean(e.bStartMinimized));
-        return i.createElement(
-          g,
+      function g(e) {
+        const [t, n] = s.useState(Boolean(e.bStartMinimized));
+        return s.createElement(
+          _,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );
       }
-      function _(e) {
+      function p(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return i.createElement(
-          r.$n,
-          { "data-tooltip-text": (0, a.we)(o), onClick: n },
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return s.createElement(
+          i.$n,
+          { "data-tooltip-text": (0, a.we)(r), onClick: n },
           e.bIsMinimized
-            ? i.createElement(s.hz4, null)
-            : i.createElement(s.Xjb, null),
+            ? s.createElement(o.hz4, null)
+            : s.createElement(o.Xjb, null),
         );
-      }
-    },
-    4434: (e, t, n) => {
-      "use strict";
-      n.d(t, { m: () => i });
-      var r = n(41735),
-        a = n.n(r),
-        s = n(90626);
-      function i(e) {
-        const t = s.useRef(a().CancelToken.source());
-        return (
-          s.useEffect(() => {
-            const n = t.current;
-            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
-    68797: (e, t, n) => {
-      "use strict";
-      n.d(t, { H: () => i });
-      var r = n(41735),
-        a = n.n(r),
-        s = n(56545);
-      function i(e) {
-        if (a().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (
-          void 0 !== e.response &&
-          e.response.data &&
-          "object" == typeof e.response.data
-        ) {
-          if ("msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.msg,
-              errorCode: e.response.data.success,
-            };
-          if ("err_msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.err_msg,
-              errorCode: e.response.data.success,
-            };
-          if ("message" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.message,
-              errorCode: e.response.data.success,
-            };
-          if ("success" in e.response.data)
-            return {
-              strErrorMsg: "error code: " + e.response.data.success,
-              errorCode: e.response.data.success,
-            };
-        } else if ("object" == typeof e.data) {
-          if ("msg" in e.data)
-            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
-          if ("err_msg" in e.data)
-            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.data)
-            return { strErrorMsg: e.data.message, errorCode: e.data.success };
-          if ("success" in e.data)
-            return {
-              strErrorMsg: "error code: " + e.data.success,
-              errorCode: e.data.success,
-            };
-        } else {
-          if (void 0 !== e.success && void 0 !== e.msg)
-            return { strErrorMsg: e.msg, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.message)
-            return { strErrorMsg: e.message, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.err_msg)
-            return { strErrorMsg: e.err_msg, errorCode: e.success };
-          if ("string" == typeof e && e.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(e),
-              console.groupEnd();
-          else {
-            if ("object" == typeof e && e instanceof s.w)
-              return {
-                strErrorMsg: "" + e.GetErrorMessage(),
-                errorCode: e.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
-          }
-        }
-        return "object" == typeof e && "status" in e
-          ? {
-              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
-            }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
     44894: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => r });
-      const r =
+      n.d(t, { A: () => i });
+      const i =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },

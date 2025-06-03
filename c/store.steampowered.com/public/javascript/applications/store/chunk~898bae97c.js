@@ -5960,6 +5960,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6011,11 +6012,12 @@
               }),
               (0, _._)(_),
             );
-          };
+          },
+          _ = (0, _._)(() => _._.Get().BIsConnected());
         if (_) return (0, _._)(_, _._.k_eCommunityAdminPage);
         const _ = _ == _._.k_EEventStateVisible,
           _ = _ == _._.k_EEventStateStaged;
-        if ((_.can_edit || _.support_user) && !_) {
+        if ((_.can_edit || _.support_user) && !_ && !_) {
           const _ = [];
           if (void 0 !== _)
             for (let _ = 0; _ <= _; ++_)

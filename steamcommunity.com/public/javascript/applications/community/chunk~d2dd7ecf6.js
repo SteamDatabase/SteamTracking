@@ -258,7 +258,7 @@
         y = a(9449),
         R = a(2472),
         T = a(26408),
-        U = a(82817);
+        U = a(32396);
       let G = class extends s.Component {
         constructor() {
           super(...arguments),
@@ -559,7 +559,12 @@
         }
         async OnDropFiles(e) {
           if (e && e.length > 0) {
-            this.m_clanImageUploader = new m.VE(this.props.clanSteamID, null);
+            this.m_clanImageUploader = new m.VE(
+              this.props.clanSteamID,
+              null,
+              this.props.rgRealmList,
+              d.O.Get().GetCurEditLanguage(),
+            );
             let t = !0,
               a = Array.from(e);
             for (let e = 0; t && e < a.length; e++) {
@@ -585,10 +590,7 @@
                   filenameSearch: "",
                   uploadToken: ++x.m_uploaderCounter,
                 }),
-                this.m_clanImageUploader.UploadAllImages(
-                  this.props.rgRealmList,
-                  d.O.Get().GetCurEditLanguage(),
-                )),
+                this.m_clanImageUploader.UploadAllImages()),
               t
             );
           }
@@ -1332,23 +1334,21 @@
             fnSetImageURL: _,
             rgRealmList: v,
           } = e,
-          h = l.useMemo(
-            () => e.uploaderOverride || new r.VE(t, a),
-            [t.ConvertTo64BitString(), e.uploaderOverride],
-          ),
-          [C, w] = l.useState(!1),
-          [S] = (0, n.q3)(() => [i.O.Get().GetCurEditLanguage()]);
+          [h] = (0, n.q3)(() => [i.O.Get().GetCurEditLanguage()]),
+          C = (0, r.zO)(t, a, v, h),
+          w = e.uploaderOverride || C,
+          [S, A] = l.useState(!1);
         l.useEffect(() => {
-          h.SetImageAllUrlFunction(e.fnSetImageURL);
-        }, [h, e.fnSetImageURL]);
-        const A = l.useCallback(
+          w.SetImageAllUrlFunction(e.fnSetImageURL);
+        }, [w, e.fnSetImageURL]);
+        const f = l.useCallback(
             async (e, t) => {
-              if (!C) {
-                w(!0);
+              if (!S) {
+                A(!0);
                 try {
-                  const { language: t } = (0, o.j)(e.file_name, S),
-                    a = (0, o.P)(t, S, v);
-                  await h.AddExistingClanImage(e, a, E);
+                  const { language: t } = (0, o.jj)(e.file_name, h),
+                    a = (0, o.PD)(t, h, v);
+                  await w.AddExistingClanImage(e, a, E);
                 } catch (e) {
                   let t = (0, g.H)(e);
                   console.error("AddExistingClanImage: " + t.strErrorMsg, t),
@@ -1362,12 +1362,12 @@
                       window,
                     );
                 }
-                w(!1);
+                A(!1);
               }
             },
-            [C, h, S, E, v],
+            [S, w, h, E, v],
           ),
-          f = l.useMemo(
+          D = l.useMemo(
             () =>
               I
                 ? [
@@ -1377,18 +1377,18 @@
                         clanSteamID: t,
                         fnSetImageURL: _,
                         rgRealmList: v,
-                        OnClanImageSelected: A,
+                        OnClanImageSelected: f,
                       }),
                     ],
                   ]
                 : null,
-            [A, I, t, _, v],
+            [f, I, t, _, v],
           );
         return l.createElement(p.O9, {
           ...e,
-          imageUploader: h,
+          imageUploader: w,
           rgRealmList: v,
-          elAdditonalButtons: C
+          elAdditonalButtons: S
             ? [
                 l.createElement(m.t, {
                   key: "throbbing",
@@ -1397,7 +1397,7 @@
                   string: (0, d.we)("#Loading"),
                 }),
               ]
-            : f,
+            : D,
         });
       }
     },
@@ -1971,26 +1971,27 @@
       function b(e) {
         const {
             imageUploader: t,
-            strOverrideDragAndDropText: a,
-            forceResolution: l,
-            localizedPrimaryImage: o,
-            elAdditonalButtons: i,
-            rgRealmList: s,
+            fnUploadComplete: a,
+            strOverrideDragAndDropText: l,
+            forceResolution: o,
+            localizedPrimaryImage: i,
+            elAdditonalButtons: s,
+            rgRealmList: g,
           } = e,
-          [g, p] = (0, n.q3)(() => [
+          [p, u] = (0, n.q3)(() => [
             t.GetUploadImages(),
             m.O.Get().GetCurEditLanguage(),
           ]),
-          u = r.useCallback(
+          _ = r.useCallback(
             async (e) => {
               let a = Array.from(e),
                 n = !0;
               for (let e = 0; e < a.length; e++) {
                 const l = a[e],
-                  { language: i } = (0, c.j)(null == l ? void 0 : l.name, p);
+                  { language: o } = (0, c.jj)(null == l ? void 0 : l.name, u);
                 try {
-                  const a = (0, c.P)(i, p, s);
-                  (n = await t.AddImageForLanguage(l, a, o)),
+                  const a = (0, c.PD)(o, u, g);
+                  (n = await t.AddImageForLanguage(l, a, i)),
                     n ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -2026,56 +2027,56 @@
               }
               return n;
             },
-            [p, t, o, s],
+            [u, t, i, g],
           ),
-          _ = r.useMemo(
+          v = r.useMemo(
             () =>
-              i instanceof Array
-                ? i
+              s instanceof Array
+                ? s
                 : [
                     r.createElement(
                       r.Fragment,
                       { key: "elAdditonalButtons" },
-                      i,
+                      s,
                     ),
                   ],
-            [i],
+            [s],
           );
-        return (
-          (0, n.q3)(() =>
-            g.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
-          ),
+        (0, n.q3)(() =>
+          p.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
+        );
+        return r.createElement(
+          d.D,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: v,
+            strOverrideDragAndDropText: l,
+          },
           r.createElement(
-            d.D,
-            {
-              onDropFiles: u,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: a,
-            },
+            r.Fragment,
+            null,
             r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                "div",
-                { className: L().UploadPreviewCtn },
-                g.map((e) =>
-                  r.createElement(R, {
-                    key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
-                    asset: e,
-                    forceResolution: l,
-                    forceFileType: o && o.file_type,
-                    fnOnRemove: () => t.DeleteUploadImage(e),
-                    languageRealms: s,
-                  }),
-                ),
+              "div",
+              { className: L().UploadPreviewCtn },
+              p.map((e) =>
+                r.createElement(R, {
+                  key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
+                  asset: e,
+                  forceResolution: o,
+                  forceFileType: i && i.file_type,
+                  fnOnRemove: () => t.DeleteUploadImage(e),
+                  languageRealms: g,
+                }),
               ),
             ),
-            r.createElement(N, {
-              imageUploader: t,
-              fnOnUploadImageRequested: async () =>
-                await t.UploadAllImages(s, p, l, o && o.file_type),
-            }),
-          )
+          ),
+          r.createElement(N, {
+            imageUploader: t,
+            fnOnUploadImageRequested: async () => {
+              const e = await t.UploadAllImages(o, i && i.file_type);
+              null == a || a(e);
+            },
+          }),
         );
       }
       function N(e) {
@@ -2256,7 +2257,7 @@
               {
                 onClick: () =>
                   ((t) => {
-                    if (t instanceof s.A_) {
+                    if (t instanceof s.M7) {
                       t.ResetImage();
                       const a = window,
                         n = r.createElement(f.q, {

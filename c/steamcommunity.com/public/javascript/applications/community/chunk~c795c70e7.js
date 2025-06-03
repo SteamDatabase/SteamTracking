@@ -1242,7 +1242,8 @@
           if (_)
             if (((this.m_mpd = new _()), this.m_mpd.BParse(_.data, _))) {
               if (
-                (this.IsLiveContent() &&
+                (this.DispatchEvent("valve-metadatachanged"),
+                this.IsLiveContent() &&
                   (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                     this.m_schUpdateMPD.Schedule(
                       1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
@@ -1425,7 +1426,8 @@
                   this.m_schUpdateMPD.Schedule(
                     1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                     this.UpdateMPD,
-                  ))
+                  ),
+                this.DispatchEvent("valve-metadatachanged"))
               : this.CloseWithError(
                   _.PlaybackError,
                   "Failed to parse on Update the MPD file",
@@ -2090,7 +2092,8 @@
           let _ = this.m_elVideo.paused;
           if ((_ || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = _ - this.m_hlsTimeOffset),
-              this.PlayOnElement();
+              this.PlayOnElement(),
+              this.DispatchEvent("valve-bufferupdate");
           else {
             (this.m_bIsBuffering = !0),
               (this.m_seekingToTime = {
@@ -2234,6 +2237,17 @@
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;
+        }
+        GetMaxWidthAndHeight() {
+          if (!this.m_mpd) return null;
+          let _ = this.m_mpd.GetVideoAdaption();
+          if (!_) return null;
+          if (0 == _.rgRepresentations.length) return null;
+          let _ = _.rgRepresentations[0];
+          return {
+            nWidth: _.nWidth,
+            nHeight: _.nHeight,
+          };
         }
       }
       function _(_) {

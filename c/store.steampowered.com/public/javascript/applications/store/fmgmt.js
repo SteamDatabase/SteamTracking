@@ -18,73 +18,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
-        RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
-        ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
-        MeBadge: "_2W_HQa5Rhf-hHITgV5H0bu",
-        PlayerName: "AdQYbMq7HHJ3Jgljib9UX",
-        RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
-        RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
-        FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
-        FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
-        InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
-        ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
-        Selected: "r0ToHd0tmv46GM00Lr0a_",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
-        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
-        none: "T3Fb5KTXwIHM2B-ThTvEs",
-        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
-        Large: "_3BESV4eFnr4EnaSaJSdk6T",
-        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
-        _: "_2hnF3M_l4xdIdQ4CkN7LYB",
-        _: "VmQTOrz5MPOWte5C9K7YS",
-        _: "_29mtadjX8N6pRn5TX1nA0o",
-        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
-        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
-        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
-        threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
-        blocked: "VTxPkslK1CSpKNFMgKg7d",
-        richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
-        playerName: "nOdcT-MoOaXGePXLyPe0H",
-        playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
-        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
-        playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
-        richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
-        gameName: "_1cB0qtF0paHWWyj1XNcnbG",
-        NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
-        twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
-        DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
-        partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
-        hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
-        compactView: "_3bbRZyUiK-bfc5Qov6xukI",
-        noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
-        gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
-        PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
-        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
-        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
-        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         strBarForegroundColor: "#1a9fff",
@@ -408,6 +341,44 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          (_) => {
+            if (!_) return;
+            const _ = _(_.ownerDocument.defaultView, (_) => {
+              _(_[0]);
+            });
+            return _.observe(_), () => _.unobserve(_);
+          },
+          [_, _],
+        );
+      }
+      function _(_) {
+        return _(
+          _,
+          _.useCallback(
+            (_, _) =>
+              _.ResizeObserver
+                ? new _.ResizeObserver(_)
+                : ((0, _._)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -468,621 +439,6 @@
                 ? _(__webpack_require__, "library_capsule")
                 : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.createElement(_.d1w, null);
-      }
-      function _(_) {
-        return _.createElement(_.Bir, null);
-      }
-      function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.RoleIcon, _.className),
-          },
-          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
-        );
-      }
-      function _(_) {
-        const { steamid: _ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.data?.get(new _._(_).GetAccountID()),
-          _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.data?.m_strPlayerName || " ",
-          " ",
-          _ &&
-            _ &&
-            _.createElement(
-              "span",
-              {
-                className: _.playerNickname,
-              },
-              "(",
-              _,
-              ")",
-            ),
-        );
-      }
-      function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            persona: _,
-            isSelf: _,
-          } = _,
-          _ = new _._(_);
-        let _ = _.size || "Large";
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.data?.get(_.GetAccountID()),
-          _ = _.data?.preferences().parenthesize_nicknames();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "a",
-            {
-              className: _.ProfileLink,
-              href: _.GetCommunityProfileURL(),
-              onClick: (_) => {
-                _.stopPropagation();
-              },
-            },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: _,
-              size: _,
-              statusPosition: "right",
-            }),
-            _.createElement(_._, {
-              className: _.PlayerName,
-              bIsSelf: _,
-              bHideStatus: !1,
-              bHidePersona: !1,
-              bParenthesizeNicknames: _,
-              bCompactView: !1,
-              persona: _,
-              strNickname: _,
-              eFriendRelationship: 3,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.RoleAndIcon,
-            },
-            _.createElement(_, {
-              className: _.ProfileRoleIcon,
-              role: __webpack_require__,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.RoleName,
-              },
-              (0, _._)(`#FamilyManagement_Role_${__webpack_require__}`),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = (0, _.useContext)(_._);
-        return _.errorMessage
-          ? _.createElement(
-              "div",
-              {
-                className: _.FamilyErrorDisplay,
-              },
-              _.errorMessage,
-            )
-          : null;
-      }
-      function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            bInvitePending: _,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = _ == _,
-          _ = (0, _._)(_);
-        if (
-          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !_.isSuccess)
-        )
-          return null;
-        const _ = _.data;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _.FamilyMemberRow,
-              _ && _.ActiveFamilyMemberRow,
-            ),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.FamilyMemberRowTop,
-              onActivate: _ ? () => _(!_) : void 0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Left,
-              },
-              _.createElement(_, {
-                strSteamID: _,
-                role: __webpack_require__,
-                persona: _,
-                isSelf: _,
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InvitePending,
-                  },
-                  (0, _._)("#FamilyManagement_InvitePending"),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.MeBadge,
-                  },
-                  (0, _._)("#FamilyManagement_Me"),
-                ),
-            ),
-            _ &&
-              _.createElement(_, {
-                bExpanded: _,
-                setExpanded: _,
-              }),
-          ),
-          _ && _,
-        );
-      }
-      function _(_) {
-        const { bExpanded: _, setExpanded: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
-            onClick: () => __webpack_require__(!_),
-          },
-          _.createElement(_.b8_, {
-            direction: "down",
-          }),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        static get hoverClass() {
-          return _().hoverParent;
-        }
-        render() {
-          const {
-            persona: _,
-            animating: _,
-            className: __webpack_require__,
-            size: _,
-            dim: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SnoozeContainer,
-                  _.online_state,
-                  __webpack_require__,
-                  _ && _().animating,
-                  _,
-                  _ && _().Dim,
-                ),
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const { persona: _, className: __webpack_require__, ..._ } = _;
-        if (!_) return null;
-        if (!_.is_online) return null;
-        const _ = _.HasStateFlag(512),
-          _ = _.HasStateFlag(2048),
-          _ = _.IsOnSteamDeck() && !_,
-          _ = !_ && !_ && _.HasStateFlag(1024);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().MobilePhoneIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_Mobile"),
-                ..._,
-              },
-              _.createElement(_._, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().VRIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_VR"),
-                ..._,
-              },
-              _.createElement(_.MUh, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().BigPictureIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_BigPicture"),
-                ..._,
-              },
-              _.createElement(_.bPr, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_SteamDeck"),
-                ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-        );
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "span",
-            {
-              className: _().partyBeaconJoin,
-            },
-            (0, _._)("#User_WantsToPlay"),
-          ),
-          " – ",
-          _.persona.GetCurrentGameName(),
-        );
-      }
-      let _ = class extends _.Component {
-        render() {
-          const {
-            className: _,
-            onContextMenu: _,
-            persona: __webpack_require__,
-            eFriendRelationship: _,
-            bIsSelf: _,
-            bParenthesizeNicknames: _,
-            strNickname: _,
-            bCompactView: _,
-            bHideGameName: _,
-            bHideEnhancedRichPresenceLabel: _,
-            bHideSnooze: _,
-            bHideStatus: _,
-            renderStatus: _,
-            renderRichPresence: _,
-            bHidePersona: _,
-            bDNDSet: _,
-            bHasPartyBeacon: _,
-            bHasGamePrivacy: _,
-            bNoMask: _,
-            ..._
-          } = this.props;
-          let _ = null,
-            _ = null,
-            _ = null,
-            _ = [
-              _,
-              _().personaNameAndStatusLabel,
-              (0, _._)(__webpack_require__),
-              _ && _().compactView,
-              _ && _().NoMask,
-            ];
-          _ || __webpack_require__.has_public_party_beacon
-            ? (_ = _.createElement(_, {
-                persona: __webpack_require__,
-              }))
-            : (0, _._)(_)
-              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
-              : __webpack_require__.is_ingame
-                ? ((_ =
-                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
-                      ? __webpack_require__.GetCurrentGameName()
-                      : (0, _._)("#PersonaStateInNonSteamGame")),
-                  _ || _
-                    ? _ &&
-                      __webpack_require__.is_awayOrSnooze &&
-                      (_ = (0, _._)("#PersonaStateAway"))
-                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
-                : __webpack_require__.m_broadcastAccountId &&
-                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
-            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
-            _ && (_ = _());
-          let _ = !_ && !_;
-          !1 === _ && (_ = !0),
-            __webpack_require__.is_awayOrSnooze &&
-              _ &&
-              (_ = _.createElement(_, {
-                persona: __webpack_require__,
-              }));
-          let _ = null;
-          _
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: "ContextMenuButton",
-                  onClick: _,
-                },
-                _.createElement(_.GB9, null),
-              ))
-            : _.push(_().noContextMenu),
-            _ && _.push(_().hidePersona),
-            _ && (_ = _()),
-            (!_ && _) || _.push(_().twoLine);
-          const _ = !__webpack_require__.is_ingame && !_,
-            _ = !_ && _,
-            _ = _ && (!_ || !_),
-            _ = (0, _._)(_._.LAUNCHER_TYPE);
-          let _ = _ && !_,
-            _ = _ ? _ : __webpack_require__.m_strPlayerName,
-            _ = !_ && (_ || _) && _;
-          return _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(..._),
-              onContextMenu: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().playerName,
-                },
-                _ || " ",
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().playerNickname,
-                    },
-                    "(",
-                    _,
-                    ")",
-                  ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DNDContainer,
-                    title: (0, _._)("#User_ToggleDoNotDisturb"),
-                  },
-                  _.createElement(_.Aj0, null),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().playerNicknameBracket,
-                    title: (0, _._)("#isNickname"),
-                  },
-                  " *",
-                ),
-              _.createElement(_, {
-                persona: __webpack_require__,
-              }),
-              _,
-              (__webpack_require__.m_bPlayerNamePending ||
-                __webpack_require__.m_bAvatarPending) &&
-                _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PendingPersona,
-                    title: (0, _._)("#SteamChina_PendingPersonaName"),
-                  },
-                  _.createElement(_.zD7, null),
-                ),
-              _,
-            ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().richPresenceContainer,
-                },
-                (_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().gameName,
-                        _ && _().threeLines,
-                        _().richPresenceLabel,
-                        "no-drag",
-                      ),
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().gameIsPrivateIcon,
-                          title: (0, _._)("#User_GameInfoHidden"),
-                        },
-                        _.createElement(_.jZl, null),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
-                    },
-                    _,
-                    " ",
-                  ),
-              ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        const {
-          persona: _,
-          bParenthesizeNicknames: __webpack_require__,
-          strNickname: _,
-          bIgnorePersonaStatus: _,
-          bDisableColoring: _,
-          className: _,
-          ..._
-        } = _;
-        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
-        return _.createElement(
-          "span",
-          {
-            ..._,
-            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
-          },
-          _.createElement(
-            "span",
-            {
-              className: _().playerName,
-            },
-            _ || " ",
-            __webpack_require__ &&
-              _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().playerNickname,
-                },
-                "(",
-                _,
-                ")",
-              ),
-          ),
-        );
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1212,31 +568,6 @@
             );
           }, [__webpack_require__]);
         return _ ? null : _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["communitypreferences"],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
-              throw new Error(
-                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
-              );
-            return __webpack_require__.Body();
-          },
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2807,37 +2138,8 @@
       const _ =
         __webpack_require__._ +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          (_) => {
-            if (!_) return;
-            const _ = _(_.ownerDocument.defaultView, (_) => {
-              _(_[0]);
-            });
-            return _.observe(_), () => _.unobserve(_);
-          },
-          [_, _],
-        );
-      }
-      function _(_) {
-        return _(
-          _,
-          _.useCallback(
-            (_, _) =>
-              _.ResizeObserver
-                ? new _.ResizeObserver(_)
-                : ((0, _._)(!1, "ResizeObserver is not available"),
-                  {
-                    observe: () => {},
-                    unobserve: () => {},
-                    disconnect: () => {},
-                  }),
-            [],
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             idxStart: _,
@@ -2875,19 +2177,18 @@
           _ = Math.ceil(_ / _),
           _ = Math.max(0, Math.floor((_ - (_ - 1) * _) / _)),
           _ = Math.floor(_ / _),
-          _ = _(
-            _.useCallback(
-              (_) => {
-                _(_.borderBoxSize[0].inlineSize),
-                  _ &&
-                    _(
-                      _.target.ownerDocument.defaultView?.innerWidth || 0,
-                      _.borderBoxSize[0].inlineSize,
-                    );
-              },
-              [_],
-            ),
-          );
+          _ = _.useCallback(
+            (_) => {
+              _(_.borderBoxSize[0].inlineSize),
+                _ &&
+                  _(
+                    _.target.ownerDocument.defaultView?.innerWidth || 0,
+                    _.borderBoxSize[0].inlineSize,
+                  );
+            },
+            [_],
+          ),
+          _ = (0, _._)(_);
         return _.createElement(_, {
           ref: _,
           nRows: _,

@@ -494,16 +494,9 @@
           _.Fragment,
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              href: _ ? null : _,
-              style: {
-                display: "block",
-                cursor: "pointer",
-              },
               className: _().CapsuleFocusCtn,
-              preferredFocus: _,
-              onClick: _,
             },
             _.createElement(
               "div",
@@ -513,11 +506,18 @@
                 }),
               },
               _.createElement(
-                "div",
+                _._,
                 {
+                  href: _ ? null : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
                   className: (0, _._)({
                     [_().TwoWidthCapsule]: _,
                   }),
+                  preferredFocus: _,
+                  onClick: _,
                 },
                 _.createElement(_._, {
                   appids: _,
@@ -528,8 +528,7 @@
                   info: _,
                 }),
                 _.createElement(_._, {
-                  eDeckCompatibilityCategory:
-                    _?.GetPlatforms()?.steam_deck_compat_category,
+                  storeItem: _,
                 }),
                 Boolean(_) &&
                   _.createElement(_._, {

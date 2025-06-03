@@ -1964,13 +1964,16 @@
               : i(e, c))
           );
         }
+        function l(e, ...t) {
+          return qe(i(e, Qe().languages), ...t);
+        }
         return (
           n.then(() => (a = !0)),
           (s = n),
           null != Ye || (Ye = new Set()),
           Ye.add(s),
           {
-            Localize: (e, ...t) => qe(i(e, Qe().languages), ...t),
+            Localize: (e, ...t) => l(e, ...t),
             LocalizeReact(e, ...t) {
               const n = this.Localize(e);
               if (n === e) return n;
@@ -1987,6 +1990,8 @@
                 a.push(n.slice(i)), r.createElement(r.Fragment, null, ...a)
               );
             },
+            LocalizePlural: (e, t, ...n) =>
+              1 === t || "1" === t ? l(e, t, ...n) : l(e + "_Plural", t, ...n),
             LocalizeInSpecificLang: (e, t, ...n) => qe(i(t, [e]), ...n),
             Ready: () => n,
             IsReady: () => a,

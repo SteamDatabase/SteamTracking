@@ -67,6 +67,7 @@
         SectionWithLinkColumn: "_2FscOBiHTC-mDQbBZcor2q",
         SectionContent: "_3alyfigZPNuJhJC7kPjpXa",
         LinkColumn: "_3yVlS9z9PTGyCfVQglgKhf",
+        Wide: "_3qAbJmKqxd4kYsC0VB-t11",
         Link: "_2_kJGzEzE3lOlT6Uy1ReTv",
         HorizontalRule: "Uzdu5VqTCSIYTejHO19Ou",
         GridSection: "SbRQCjXaAzR-Ur35LPzZv",
@@ -113,23 +114,30 @@
     },
     chunkid: (module) => {
       module.exports = {
-        StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
+        StoreMenuLegacyWrapper: "_2QlYKhF-leHfMXFSiSshZC",
+        StoreMenuContainer: "pzuGfMA6MeGlV2I3yY60c",
         GamepadUI: "_2cz9ufAQLjlNOwbp2JCJST",
+        StoreMenuBackdropContainer: "h2B3SGR_w4RWdrnsRZEcD",
+        Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
+        BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
+        StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
+        Hidden: "_234vIwVerIU5MqgZwrEcd8",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
-        FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
-        Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
-        PopoverBackdrop: "Or55qOb8IXp60HwNN8KKQ",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
+        FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
+        MenuLabel: "vj9hwW9u0MpjH7MVjjNw0",
+        MenuUnderscoreCtn: "_1-hPfsxjynE3demuqGmqf0",
+        MenuUnderscore: "_3gaaE-cRfFWJdZcC8XMi0x",
+        Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
         ValveOnlyNotice: "_15mDm5FgO9il_6z-qj2UnK",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        PopoverContainer: "oeCR-_-EhS8CaxEaFAqDZ",
         Popover: "_2RyPu-qJzs6novxZiGSDf-",
         PopoverContent: "_2t1IMWc-EYYJD-dsioJxSp",
         StaticMenu: "_1XjtpBn93p5fSXOBFU6T4R",
@@ -164,6 +172,44 @@
         _: () => _,
         _: () => _,
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          (_) => {
+            if (!_) return;
+            const _ = _(_.ownerDocument.defaultView, (_) => {
+              _(_[0]);
+            });
+            return _.observe(_), () => _.unobserve(_);
+          },
+          [_, _],
+        );
+      }
+      function _(_) {
+        return _(
+          _,
+          _.useCallback(
+            (_, _) =>
+              _.ResizeObserver
+                ? new _.ResizeObserver(_)
+                : ((0, _._)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2540,12 +2586,87 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const {
+          visible: _,
+          closePopover: __webpack_require__,
+          children: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _,
+            {
+              visible: _,
+              msAnimationDuration: 100,
+            },
+            _.createElement(
+              _,
+              {
+                visible: _,
+                closePopover: __webpack_require__,
+              },
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  className: _.PopoverContent,
+                  onCancelButton: __webpack_require__,
+                },
+                _,
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            visible: _,
+            closePopover: __webpack_require__,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _.useRef();
+        return (
+          (0, _._)(_, _, !0),
+          _
+            ? _.createElement(
+                _._,
+                {
+                  navID: "StoreMenuPopover",
+                  onDeactivated: __webpack_require__,
+                  navTreeRef: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Popover,
+                  },
+                  _.createElement(_._, null, _),
+                ),
+              )
+            : _.createElement(
+                "div",
+                {
+                  className: _.Popover,
+                },
+                _,
+              )
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _();
         return _.createElement(
           "div",
           {
-            className: _.Section,
+            className: _()(_.Section, _ && _.Wide),
           },
           _.children,
         );
@@ -2716,8 +2837,28 @@
           ),
         );
       }
+      const _ = _.createContext({
+        wide: !0,
+      });
+      function _(_) {
+        const _ = _.useMemo(
+          () => ({
+            wide: !1,
+          }),
+          [],
+        );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _() {
+        return _.useContext(_).wide;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2750,6 +2891,7 @@
           _.createElement(
             _,
             null,
+            _.createElement(_, null),
             _.createElement(
               _,
               null,
@@ -2765,15 +2907,61 @@
           ),
         );
       }
-      function _(_, _, _, _) {
-        const _ = [
-          _.prefetchQuery(
-            (0, _._)(_, _, void 0, {
-              include_assets: !0,
-            }),
+      function _() {
+        return _.createElement(
+          _,
+          null,
+          _.createElement(_, null, _("#Menu_Popover_TopLinks")),
+          _.createElement(
+            _,
+            {
+              href: _._.STORE_BASE_URL,
+            },
+            _("#Menu_Popover_StoreHome"),
           ),
-        ];
-        return _ && _.push(_.prefetchQuery(_(_, _))), Promise.all(_);
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}genre/Free%20to%20Play/`,
+            },
+            _("#Menu_Popover_FreeToPlay"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}charts/`,
+            },
+            _("#Menu_Popover_SteamCharts"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}points/`,
+            },
+            _("#Menu_Popover_PointsShop"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+            },
+            _("#Menu_Popover_GiftCards"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}news/`,
+            },
+            _("#Menu_Popover_NewsAndUpdates"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/preferences/`,
+            },
+            _("#Menu_Popover_Preferences"),
+          ),
+        );
       }
       const _ = _._();
       function _(_) {
@@ -3121,7 +3309,10 @@
               })(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
-              _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []);
+              _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []),
+              _ = _(),
+              _ = _ ? 8 : 5,
+              _ = _ ? 12 : 8;
             return _.useMemo(() => {
               if (null == _ || null == _ || !_ || !_) return [null, null];
               const _ = new Set(),
@@ -3175,7 +3366,7 @@
                 }
               }
               return [_, _];
-            }, [_, _, _, _, _]);
+            }, [_, _, _, _, _, _, _]);
           })();
           return null === _ || null === _
             ? null
@@ -3236,9 +3427,7 @@
                 ),
               );
         }),
-        _ = _._(),
-        _ = 5,
-        _ = 10;
+        _ = _._();
       function _(_) {
         const { featuredCategory: _ } = _,
           { strHandle: __webpack_require__, strURLPath: _, strName: _ } = _;
@@ -3732,20 +3921,15 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = _.useMemo(
-            () => [
-              ["browse", _("#Menu_Popover_Browse")],
-              ["recommendations", _("#Menu_Popover_Recommendations")],
-              ["categories", _("#Menu_Popover_Categories")],
-              ["hardware", _("#Menu_Popover_Hardware")],
-              ["waystoplay", _("#Menu_Popover_WaysToPlay")],
-              ["specialsections", _("#Menu_Popover_SpecialSections")],
-            ],
-            [],
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_] = _.useState(_.excludedSections),
+          _ = _.useMemo(
+            () => _().filter((_) => !("more" === _[0] || (_ && _.has(_[0])))),
+            [_],
           ),
-          [_, __webpack_require__] = _.useState(_[0][0]);
+          [_, _] = _.useState(_[0][0]);
         !(function () {
           const _ = (0, _._)(),
             _ = (0, _._)(),
@@ -3753,7 +3937,16 @@
             _ = (0, _._)(),
             _ = (0, _._)();
           (0, _.useEffect)(() => {
-            _(_, _, _, _),
+            !(function (_, _, _, _) {
+              const _ = [
+                _.prefetchQuery(
+                  (0, _._)(_, _, void 0, {
+                    include_assets: !0,
+                  }),
+                ),
+              ];
+              _ && _.push(_.prefetchQuery(_(_, _))), Promise.all(_);
+            })(_, _, _, _),
               (function (_, _, _, _, _) {
                 const _ = [_.prefetchQuery((0, _._)(_, _, _.language))];
                 _ &&
@@ -3814,7 +4007,7 @@
             onMouseLeaveContainer: _,
             onMouseEnterItem: _,
           };
-        })(_, __webpack_require__);
+        })(_, _);
         return _.createElement(
           _._,
           {
@@ -3829,13 +4022,13 @@
               className: _.MenuOptions,
               onMouseLeave: _,
             },
-            _.map(([_, _]) =>
+            __webpack_require__.map(([_, _]) =>
               _.createElement(
                 _,
                 {
                   key: _,
                   active: _ == _,
-                  setSection: __webpack_require__,
+                  setSection: _,
                   onMouseEnterItem: _,
                   section: _,
                 },
@@ -3851,74 +4044,47 @@
               _("#Menu_Popover_ViewAll"),
             ),
           ),
-          _.createElement(_, {
-            rgSections: _,
-            section: _,
-          }),
-        );
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (
-          (0, _.useEffect)(() => {
-            _(_, _, _, _);
-          }, [_, _, _, _]),
-          null
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, {
+              rgSections: _,
+              section: _,
+            }),
+          ),
         );
       }
       const _ = _.memo(function (_) {
-        const { rgSections: _, section: __webpack_require__ } = _,
-          [_, _] = _.useState(__webpack_require__),
-          [_, _] = _.useState(void 0);
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _.findIndex((_) => _[0] == _) || 0,
-              _ = _.findIndex((_) => _[0] == __webpack_require__) || 0;
-            _(_ < _ ? _.Down : _ > _ ? _._ : void 0), _(__webpack_require__);
-          }, [__webpack_require__, _]),
-          _.createElement(
-            "div",
-            {
-              className: _.TransitionContainer,
-            },
+          const { rgSections: _, section: __webpack_require__ } = _,
+            [_, _] = _.useState(__webpack_require__),
+            [_, _] = _.useState(void 0);
+          return (
+            (0, _.useEffect)(() => {
+              const _ = _.findIndex((_) => _[0] == _) || 0,
+                _ = _.findIndex((_) => _[0] == __webpack_require__) || 0;
+              _(_ < _ ? _.Down : _ > _ ? _._ : void 0), _(__webpack_require__);
+            }, [__webpack_require__, _]),
             _.createElement(
-              _._,
+              "div",
               {
-                childrenKey: _,
-                childrenClasses: (0, _._)(_, _.SectionTransition),
-                directionClass: _,
-                animate: !!_,
+                className: _.TransitionContainer,
               },
-              _.createElement(_, {
-                section: _,
-              }),
-            ),
-          )
-        );
-      });
-      function _(_) {
-        const { section: _ } = _;
-        switch (_) {
-          case "browse":
-            return _.createElement(_, null);
-          case "recommendations":
-            return _.createElement(_, null);
-          case "categories":
-            return _.createElement(_, null);
-          case "hardware":
-            return _.createElement(_, null);
-          case "waystoplay":
-            return _.createElement(_, null);
-          case "specialsections":
-            return _.createElement(_, null);
-          default:
-            return (0, _._)(_, `Unknown section ${_}`), null;
-        }
-      }
-      const _ = 0.25;
+              _.createElement(
+                _._,
+                {
+                  childrenKey: _,
+                  childrenClasses: (0, _._)(_, _.SectionTransition),
+                  directionClass: _,
+                  animate: !!_,
+                },
+                _.createElement(_, {
+                  section: _,
+                }),
+              ),
+            )
+          );
+        }),
+        _ = 0.25;
       function _(_) {
         const {
             setSection: _,
@@ -3969,276 +4135,80 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { visible: _, closePopover: __webpack_require__ } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _,
-            {
-              visible: _,
-              className: _.PopoverContainer,
-              msAnimationDuration: 100,
-            },
-            _.createElement(
-              _,
-              {
-                visible: _,
-                closePopover: __webpack_require__,
-              },
-              _.createElement(
-                _._,
-                {
-                  "flow-children": "row",
-                  className: _.PopoverContent,
-                  onCancelButton: __webpack_require__,
-                },
-                _.createElement(_, null),
-                _.createElement(_, null),
-              ),
-            ),
-          ),
-        );
+      function _() {
+        return [
+          ["browse", _("#Menu_Popover_Top")],
+          ["recommendations", _("#Menu_Popover_Recommendations")],
+          ["categories", _("#Menu_Popover_Categories")],
+          ["hardware", _("#Menu_Popover_Hardware")],
+          ["waystoplay", _("#Menu_Popover_WaysToPlay")],
+          ["specialsections", _("#Menu_Popover_SpecialSections")],
+          ["more", _("#Menu_Popover_More")],
+        ];
       }
       function _(_) {
         const {
-            visible: _,
+            activeSection: _,
             closePopover: __webpack_require__,
-            children: _,
+            visibleSections: _,
           } = _,
-          _ = (0, _._)(),
-          _ = _.useRef();
+          _ = _.useRef(_);
         return (
-          (0, _._)(_, _, !0),
-          _
-            ? _.createElement(
-                _._,
-                {
-                  navID: "StoreMenuPopover",
-                  onDeactivated: __webpack_require__,
-                  navTreeRef: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Popover,
-                  },
-                  _.createElement(_._, null, _),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.Popover,
-                },
-                _,
-              )
-        );
-      }
-      function _() {
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _.StaticMenu,
-          },
+          _ && (_.current = _),
           _.createElement(
             _,
             {
-              href: _._.STORE_BASE_URL,
+              visible: void 0 !== _,
+              closePopover: __webpack_require__,
             },
-            _("#Menu_Popover_StoreHome"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}genre/Free%20to%20Play/`,
-            },
-            _("#Menu_Popover_FreeToPlay"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}charts/`,
-            },
-            _("#Menu_Popover_SteamCharts"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}points/`,
-            },
-            _("#Menu_Popover_PointsShop"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
-            },
-            _("#Menu_Popover_GiftCards"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}news/`,
-            },
-            _("#Menu_Popover_NewsAndUpdates"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}account/preferences/`,
-            },
-            _("#Menu_Popover_Preferences"),
-          ),
-        );
-      }
-      function _(_) {
-        const { href: _, children: __webpack_require__ } = _,
-          _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          {
-            href: _,
-            className: _.MenuItem,
-          },
-          __webpack_require__,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const { refPage: _ } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _()(_.StoreMenu, _ && _.GamepadUI),
-          },
-          _.createElement(_, {
-            refPage: _,
-          }),
-        );
-      });
-      function _(_) {
-        const { refPage: _ } = _,
-          _ = _.useRef(null),
-          [_, _, _] = (0, _._)(),
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _ ? _() : _(), _();
-          }, [_, _, _, _]),
-          _ = _.useCallback(() => {
-            _(), _();
-          }, [_, _]);
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _.current,
-              _ = _.current,
-              _ = _ ? 0 : _.clientHeight;
-            return (
-              _.style.setProperty("--store-menu-floating-height", `${_}px`),
-              () => {
-                _?.style.removeProperty("--store-menu-floating-height");
-              }
-            );
-          }, [_, _]),
-          _.createElement(
-            _._,
-            {
-              feature: "storemenuv7",
-            },
-            _.createElement(
-              _._,
-              {
-                "flow-children": "row",
-                className: _.Content,
-                ref: _,
-              },
+            _.current &&
               _.createElement(_, {
-                onClick: _,
+                section: _.current,
+                visibleSections: _,
               }),
-              _.createElement(_, null),
-              _.createElement(
-                _,
-                {
-                  strURL: `${_._.STORE_BASE_URL}charts/topselling/`,
-                },
-                _.Localize("#Menu_TopSellers"),
-              ),
-              _.createElement(_, null),
-              _.createElement(
-                _,
-                {
-                  strURL: `${_._.STORE_BASE_URL}explore/new/`,
-                },
-                _.Localize("#Menu_NewReleases"),
-              ),
-              _.createElement(_, null),
-              _.createElement(
-                _,
-                {
-                  strURL: `${_._.STORE_BASE_URL}specials/`,
-                },
-                _.Localize("#Menu_OnSale"),
-              ),
-              !_ &&
-                _.createElement(_, {
-                  bSearchVisible: _,
-                  openSearch: _,
-                  closeSearch: _,
-                }),
-              _ &&
-                _.createElement("div", {
-                  className: _.NoSearchBarSpacer,
-                }),
-              _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-            _.createElement(_, {
-              visible: _,
-              closePopover: _,
-            }),
-            _.createElement(_, {
-              active: _ || _,
-              refPage: _,
-              closePopover: _,
-            }),
           )
         );
       }
       function _(_) {
-        const { active: _, refPage: __webpack_require__, closePopover: _ } = _;
-        return __webpack_require__.current
-          ? _.createPortal(
-              _.createElement("div", {
-                className: _()(_.PopoverBackdrop, _ && _.Active),
-                onClick: _,
-              }),
-              __webpack_require__.current,
-            )
-          : null;
+        const { section: _, visibleSections: __webpack_require__ } = _;
+        switch (_) {
+          case "browse":
+            return _.createElement(_, null);
+          case "recommendations":
+            return _.createElement(_, null);
+          case "categories":
+            return _.createElement(_, null);
+          case "hardware":
+            return _.createElement(_, null);
+          case "waystoplay":
+            return _.createElement(_, null);
+          case "specialsections":
+            return _.createElement(_, null);
+          case "more":
+            return _.createElement(_, {
+              excludedSections: __webpack_require__,
+            });
+          default:
+            return (0, _._)(_, `unhandled section ${_}`), null;
+        }
       }
+      var _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const { refPage: _ } = _;
+        return _.createElement(_, {
+          refPage: _,
+        });
+      });
       function _() {
         const _ = _(_),
           _ = _.useRef(null),
-          [__webpack_require__, _] = _.useState(null),
-          _ = (0, _._)();
+          [__webpack_require__, _] = _.useState(null);
         _.current = __webpack_require__;
-        const _ = _.useCallback(
-          (_) => {
-            _ &&
-              _.parentElement &&
-              (_.parentElement.className = _()(_.StoreMenu, _ && _.GamepadUI));
-          },
-          [_],
-        );
+        const _ = _.useCallback((_) => {
+          _ &&
+            _.parentElement &&
+            (_.parentElement.className = _()(_.StoreMenuLegacyWrapper));
+        }, []);
         return (
           (0, _.useEffect)(
             () => (
@@ -4253,52 +4223,233 @@
             ? _.createElement(
                 _.Fragment,
                 null,
-                _.createElement(_, {
-                  refPage: _,
-                }),
                 _.createElement("div", {
                   ref: _,
+                }),
+                _.createElement(_, {
+                  refPage: _,
                 }),
               )
             : null
         );
       }
-      function _() {
-        return _.createElement("div", {
-          className: _.Separator,
-        });
-      }
       function _(_) {
-        const { onClick: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
-          _ = _.useCallback(() => _(!0), []);
+        const {
+            bShowBackdrop: _,
+            closePopover: __webpack_require__,
+            children: _,
+          } = _,
+          _ = (0, _._)();
         return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ && _.createElement(_, null),
+          "div",
+          {
+            className: _()(_.StoreMenuContainer, _ && _.GamepadUI),
+          },
           _.createElement(
-            _._,
+            "div",
             {
-              className: _.MenuButton,
-              onClick: _,
-              onMouseEnter: _,
+              className: _()(
+                _.StoreMenuBackdropContainer,
+                _ && _.BackdropActive,
+              ),
             },
-            _.createElement(_, null),
-            " ",
-            _.Localize("#Menu_OpenFlyout"),
+            _.createElement(
+              "div",
+              {
+                className: _.StoreMenu,
+              },
+              _,
+            ),
+            _.createElement("div", {
+              className: _.Backdrop,
+              onClick: __webpack_require__,
+            }),
           ),
         );
       }
       function _(_) {
-        const { strURL: _, children: __webpack_require__ } = _,
+        const { refPage: _ } = _,
+          [__webpack_require__, _] = _.useState(),
+          [_, _] = _.useState(() => {}),
+          [_, _, _] = (0, _._)(),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          _ = (0, _._)(),
+          _ = _.useCallback(() => _(void 0), []),
+          _ = _.useCallback(
+            (_) => {
+              _((_) => (_ == _ ? void 0 : _)), _();
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => {
+            _(), _();
+          }, [_, _]),
+          _ = _.useCallback((_) => {
+            _(_.borderBoxSize[0].blockSize), _(_.contentBoxSize[0].inlineSize);
+          }, []),
           _ = (0, _._)(_);
+        return (
+          (0, _.useEffect)(() => {
+            if (void 0 === _) return;
+            const _ = _.current,
+              _ = _ ? 0 : _;
+            return (
+              _.style.setProperty("--store-menu-floating-height", `${_}px`),
+              () => {
+                _?.style.removeProperty("--store-menu-floating-height");
+              }
+            );
+          }, [_, _, _]),
+          _.createElement(
+            _._,
+            {
+              feature: "storemenuv7",
+            },
+            _.createElement(
+              _,
+              {
+                bShowBackdrop: _ || !!__webpack_require__,
+                closePopover: _,
+              },
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  className: _.Content,
+                  ref: _,
+                },
+                _.createElement(_, {
+                  nMenuWidth: _,
+                  openPopover: _,
+                  activeSection: __webpack_require__,
+                  visibleSections: _,
+                  setVisibleSections: _,
+                }),
+                !_ &&
+                  _.createElement(_, {
+                    bSearchVisible: _,
+                    openSearch: _,
+                    closeSearch: _,
+                  }),
+                _ &&
+                  _.createElement("div", {
+                    className: _.NoSearchBarSpacer,
+                  }),
+                _.createElement(_, null),
+                _.createElement(_, null),
+              ),
+              _.createElement(_, {
+                activeSection: __webpack_require__,
+                closePopover: _,
+                visibleSections: _,
+              }),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            openPopover: _,
+            activeSection: __webpack_require__,
+            visibleSections: _,
+            setVisibleSections: _,
+            nMenuWidth: _,
+          } = _,
+          _ = _.useRef([]),
+          [_, _] = _.useState(),
+          _ = _.useMemo(() => _(), []);
+        return (
+          _.current.length != _.length &&
+            (_.current = _.map(() => _.createRef())),
+          _.useLayoutEffect(() => _(void 0), [_]),
+          _.useLayoutEffect(() => {
+            if (void 0 !== _) return;
+            const _ = _.current,
+              _ = [];
+            for (let _ = 0; _ < _.length - 1; _++)
+              _[_].current
+                ? _.push(_[_].current.clientWidth)
+                : console.assert(!1, `Missing ref button ${_}`);
+            _(_);
+          }, [_]),
+          _.useLayoutEffect(() => {
+            if (!_ || void 0 === _) return;
+            const _ = _.slice(),
+              _ = _.pop();
+            let _ = _ - _ - 450;
+            const _ = [];
+            for (let _ = 0; _ < _.length && _[_] < _; _++)
+              (_ -= _[_]), _.push(_[_][0]);
+            _.push(_[_.length - 1][0]), _(new Set(_));
+          }, [_, _, _, _]),
+          _.map((_, _) => {
+            const [_, _] = _;
+            return _ && !_.has(_)
+              ? null
+              : _.createElement(_, {
+                  key: _,
+                  section: _,
+                  label: _,
+                  openPopover: _,
+                  active: __webpack_require__ === _,
+                  refButton: _.current[_],
+                });
+          })
+        );
+      }
+      function _(_) {
+        const {
+            section: _,
+            openPopover: __webpack_require__,
+            label: _,
+            active: _,
+            refButton: _,
+          } = _,
+          _ = _.useCallback(
+            () => __webpack_require__(_),
+            [__webpack_require__, _],
+          );
         return _.createElement(
           _._,
           {
-            className: _()(_.MenuButton, _.FlyoutMenuButton),
-            href: _,
+            className: _()(_.MenuButton, _ && _.Active),
+            onClick: _,
+            ref: _,
           },
-          __webpack_require__,
+          _.createElement(
+            "div",
+            {
+              className: _.MenuLabel,
+            },
+            _,
+            _.createElement(
+              "div",
+              {
+                className: _.MenuUnderscoreCtn,
+              },
+              _.createElement("div", {
+                className: _.MenuUnderscore,
+              }),
+            ),
+          ),
+          _.createElement(_, null),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 12 12",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M5.81026 6.36084L8.50899 3.66211L9.6875 4.84062L5.81026 8.71786L1.93302 4.84062L3.11153 3.66211L5.81026 6.36084Z",
+          }),
         );
       }
       function _() {
@@ -4342,34 +4493,6 @@
               _ > 0 && _.createElement(_, null, _),
             )
           : null;
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 14 12",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("rect", {
-            fill: "currentColor",
-            width: "14",
-            height: "2",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "5",
-            width: "14",
-            height: "2",
-          }),
-          _.createElement("rect", {
-            fill: "currentColor",
-            _: "10",
-            width: "14",
-            height: "2",
-          }),
-        );
       }
       function _(_) {
         return _.createElement(
@@ -4444,7 +4567,7 @@
             (_) => {
               _.isIntersecting &&
                 _((_) =>
-                  _?.appID == _ && _.snr == _
+                  _?.appID == _ && _?.snr == _
                     ? _
                     : {
                         appID: _,
@@ -4455,7 +4578,7 @@
             [_, _],
           );
         (0, _.useEffect)(() => {
-          _ && _.AddImpression(_.appID, _.snr);
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),

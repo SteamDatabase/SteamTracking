@@ -41,7 +41,7 @@
       i.r(t), i.d(t, { default: () => J });
       var n,
         s = i(90626),
-        a = i(23854),
+        a = i(92406),
         o = i(78327),
         r = i(30470),
         l = i(12155),
@@ -156,7 +156,7 @@
               const t = this.k_rgFilterCheckboxes.findIndex((t) => t.hash == e);
               -1 !== t
                 ? this.rgFilterState.set(this.k_rgFilterCheckboxes[t].type, !0)
-                : (0, F.kf)(e) &&
+                : (0, F.TT)(e) &&
                   this.rgFilterState.has(3) &&
                   this.commentFilter.setItemTypes.add(parseInt(e));
             });

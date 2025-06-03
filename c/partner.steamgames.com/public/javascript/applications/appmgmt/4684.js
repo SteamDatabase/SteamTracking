@@ -168,6 +168,7 @@
               },
               _.createElement(_, {
                 className: _().CategoryIcon,
+                "aria-label": "",
               }),
             ),
             _.createElement(

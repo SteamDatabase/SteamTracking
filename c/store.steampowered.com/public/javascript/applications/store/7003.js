@@ -36,6 +36,7 @@
 	"Menu_Popover_WaysToPlay": "Spielmöglichkeiten",
 	"Menu_Popover_SpecialSections": "Angebotsbereiche",
 	"Menu_Popover_ViewAll": "Alle anzeigen",
+	"Menu_Popover_More": "Weitere",
 	"Menu_Section_Browse_RecentlyViewed": "Zuletzt angesehen",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Dort fortsetzen, wo Sie zuletzt aufgehört haben",
 	"Menu_Section_Browse_Recommended": "Für Sie empfohlen",

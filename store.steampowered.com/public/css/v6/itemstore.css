@@ -577,8 +577,8 @@ a#store_search_link img:hover {
 .game_purchase_action {
     margin-bottom: 6px;
 }
-.dselect_container a.activetrigger,
-.dselect_container a.trigger,
+.dselect_container button.activetrigger,
+.dselect_container button.trigger,
 .dropcontainer ul li a {
     display: flex;
     flex-direction: row;
@@ -603,9 +603,9 @@ a#store_search_link img:hover {
 .dropcontainer ul li a:hover {
     transform: translateX(3px);
 }
-.dselect_container a.trigger:hover,
+.dselect_container button.trigger:hover,
 .dselect_container .dropcontainer a.highlighted_selection,
-.dselect_container a.activetrigger:hover {
+.dselect_container button.activetrigger:hover {
     background: #9ba0a6;
 }
 .dselect_container .discount_block .discount_pct {

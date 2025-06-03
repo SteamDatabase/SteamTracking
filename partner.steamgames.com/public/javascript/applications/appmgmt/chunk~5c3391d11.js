@@ -74,15 +74,24 @@
     },
     91822: (e, t, l) => {
       "use strict";
-      l.d(t, { $o: () => c, _R: () => m, z5: () => C });
+      l.d(t, { $o: () => C, FD: () => s, _R: () => d, z5: () => p });
       var r = l(90626),
         a = l(52038),
         n = l(12155),
         o = l(57866);
-      l(61859), l(78327);
-      r.createContext({ bForceShowCompatInfo: !1, bSteamDeck: !1 });
-      const c = (e) => {
-          const t = C(e.category);
+      l(61859);
+      const c = r.createContext({
+          bForceShowCompatInfo: !1,
+          bSteamOS: !1,
+          bSteamDeck: !1,
+        }),
+        i = () => r.useContext(c);
+      function s() {
+        const { bForceShowCompatInfo: e, bSteamDeck: t, bSteamOS: l } = i();
+        return l && !t ? [!0, 2] : l || e ? [!0, 1] : [!1, 0];
+      }
+      const C = (e) => {
+          const t = p(e.category);
           return r.createElement(
             "div",
             { className: (0, a.A)(o.SteamDeckCompatInfo, e.className) },
@@ -90,13 +99,13 @@
             r.createElement(t, { className: o.SteamDeckCompatIcon }),
           );
         },
-        i = { 1: n.jIP, 2: n.aVR, 3: n.o5Q, 0: n.WX$ },
-        s = { 0: n.WX$, 1: n.jIP, 2: n.ZjT };
-      function C(e) {
-        return i[e] || n.WX$;
+        m = { 1: n.jIP, 2: n.aVR, 3: n.o5Q, 0: n.WX$ },
+        u = { 0: n.WX$, 1: n.jIP, 2: n.ZjT };
+      function p(e) {
+        return m[e] || n.WX$;
       }
-      function m(e) {
-        return s[e] || n.WX$;
+      function d(e) {
+        return u[e] || n.WX$;
       }
     },
     20713: (e, t, l) => {

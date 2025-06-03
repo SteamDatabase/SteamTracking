@@ -106,13 +106,13 @@
             (e) => {
               e.isIntersecting &&
                 p((e) =>
-                  e?.appID == t && e.snr == d ? e : { appID: t, snr: d },
+                  e?.appID == t && e?.snr == d ? e : { appID: t, snr: d },
                 );
             },
             [t, d],
           );
         (0, i.useEffect)(() => {
-          m && u.AddImpression(m.appID, m.snr);
+          m && null != m.appID && u.AddImpression(m.appID, m.snr);
         }, [u, m]);
         const _ = (0, o.BL)(g),
           h = t && (!m || (m.appID != t && m.snr != d)),

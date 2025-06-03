@@ -110,7 +110,7 @@ body.v6.login .rightcol .spotlight_block {
 	font-size: 13px !important;
 	display: -moz-inline-box !important;
 	display: inline-block !important;
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 
 .checkout_content_box
@@ -161,7 +161,7 @@ body.v6 .checkout_content_box h2
 .checkout_content_box input[type="password"],
 .checkout_content_box select,
 .checkout_content_box textarea,
-.checkout_main .dselect_container a.trigger
+.checkout_main .dselect_container button.trigger
 {
 	background-color: rgba( 0, 0, 0, 0.4);
 	color: #fff;
@@ -177,7 +177,7 @@ body.v6 .checkout_content_box h2
 	line-height: 21px;
 }
 
-.checkout_main .dselect_container a.trigger.activetrigger
+.checkout_main .dselect_container button.trigger.activetrigger
 {
 	color: #ffffff;
 	background: #67c1f5;
@@ -241,7 +241,7 @@ img.payment_method_logo {
 	display: -webkit-box; /* Very Old webkit */
 	display: -ms-flexbox; /* IE 10 */
 	display: -webkit-flex; /* Old webkit */
-	display:flex;	
+	display:flex;
 }
 
 .pending_purchase_summary_retry_note {
@@ -340,7 +340,7 @@ img.payment_method_logo {
 }
 
 .button_row .continue, .button_row .working, .cart_checkout_buttons .continue {
-	float: right;	
+	float: right;
 	margin-right: 16px;
 }
 .button_row #payment_method_previous_button {
@@ -422,19 +422,19 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 	margin: 9px 0px;
 }
 
-.checkout_content_box h2.checkout_pending_purchase_title 
+.checkout_content_box h2.checkout_pending_purchase_title
 {
 	color: #ff9900;
 }
 
-.checkout_content_box .checkout_content.cart, .checkout_content_box .checkout_content.confirm 
+.checkout_content_box .checkout_content.cart, .checkout_content_box .checkout_content.confirm
 {
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 16px;
 	margin-top: 4px;
 }
 
-.checkout_content_box .checkout_content.cart 
+.checkout_content_box .checkout_content.cart
 {
 	padding: 0px;
 }
@@ -453,7 +453,7 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 	margin-bottom: 6px;
 	height: 58px;
 	display: flex;
-	align-items: center;	
+	align-items: center;
 	flex-direction: row;
 	padding-left: 16px;
 	padding-right: 16px;
@@ -493,14 +493,14 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 }
 
 .checkout_steam_rewards_banner div div.link
-{	
+{
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
 			font-size: 13px;
 }
 
-.checkout_steam_rewards_banner div.left 
+.checkout_steam_rewards_banner div.left
 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -508,7 +508,7 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 			font-size: 14px;
 	line-height: 130.2%;
 	letter-spacing: 0.02em;
-	color: #bbD2e4;	
+	color: #bbD2e4;
 }
 
 .checkout_steam_rewards_banner div.right
@@ -560,7 +560,7 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
-			font-size: 16px;	
+			font-size: 16px;
 }
 
 .checkout_pending_purchase_payment_method_notes {
@@ -838,7 +838,7 @@ body.v6 .cart_digital_notice_ctn h2
 	color: #C6D4DF;
 	min-height: 15px;
 	font-size: 13px;
-	line-height: 17px;		
+	line-height: 17px;
 }
 
 
@@ -1327,7 +1327,7 @@ div.game_hover {
 	margin-right: 13px;
 	position: relative;
 	text-align: center;
-	color: white;	
+	color: white;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -1666,7 +1666,7 @@ div.game_hover {
 
 .cart_total_row
 {
-	font-size: 13px;	
+	font-size: 13px;
 	text-align: left;
 
 }
@@ -1786,7 +1786,7 @@ div.game_hover {
 }
 
 .checkout_content .cart_bodycopy {
-	padding: 4px 16px;	
+	padding: 4px 16px;
 	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -2034,7 +2034,7 @@ label.send_choice_txt {
 
 .checkout_tab .form_row_sizable, .checkout_tab #youll_get_to_review {
 	padding: 8px;
-	padding-left: 0px;	
+	padding-left: 0px;
 	font-size: 13px;
 
 }
@@ -2074,7 +2074,7 @@ label.send_choice_txt {
   border-radius:4px;
 }
 
-.payment_method_notes_bubble:after 
+.payment_method_notes_bubble:after
 {
   content:"";
   position:absolute;
@@ -2324,22 +2324,22 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	display: inline-block;
 }
 
-.checkout_main .dselect_container a.trigger {
+.checkout_main .dselect_container button.trigger {
 	color: #ffffff;
 	background: rgba( 0, 0, 0, 0.4);
 }
 
-.dselect_container a.trigger:hover
+.dselect_container button.trigger:hover
 {
 	background-color: #67c1f5; /* Old browsers */
 background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
-.checkout_main .dselect_container a,
-.checkout_main .dselect_container a:hover,
-.checkout_main .dselect_container a:active,
-.checkout_main .dselect_container a:visited
+.checkout_main .dselect_container button,
+.checkout_main .dselect_container button:hover,
+.checkout_main .dselect_container button:active,
+.checkout_main .dselect_container button:visited
 {
 	text-decoration: none;
 	font-weight: normal;
@@ -2746,7 +2746,7 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 
 .cafefundedinstruction .block {
   font-size: 16px;
-	margin-top: 5px;	
+	margin-top: 5px;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 30px;
@@ -2844,7 +2844,7 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 
 #lny_tokens
 {
-	margin-top: 10px;	
+	margin-top: 10px;
 	position: relative;
 }
 
@@ -2915,7 +2915,7 @@ body.checkout .block .block_content {
 .cart_steam_rewards_points_balance_box
 {
 	background: linear-gradient(45.73deg, #2B5190 -10.06%, #2B5190 15.11%, rgba(62, 98, 156, 0) 22.27%, #2B5190 37.18%, rgba(68, 108, 175, 0.03) 71.29%, #2B5190 87.29%, #2B5190 97.3%), #2B5190;
-	border-radius: 2px;	
+	border-radius: 2px;
 }
 
 .cart_rewards_banner_box {
@@ -2932,7 +2932,7 @@ body.checkout .block .block_content {
 	box-shadow: inset 0px 0px 120px rgba(46, 107, 211, 0.5);
 	border: 1px solid;
 	border-image-slice: 1;
-	border-width: 1px;	
+	border-width: 1px;
 	border-color: #30538A;
 
 }
@@ -2953,7 +2953,7 @@ body.checkout .block .block_content {
 	display: flex;
 	align-items: flex-start;
 	padding-bottom: 15px;
-	padding-top: 15x;	
+	padding-top: 15x;
 }
 
 .cart_rewards_row.disabled
@@ -2981,14 +2981,14 @@ body.checkout .block .block_content {
 
 .cart_rewards_points_balance
 {
-	text-align: right;	
+	text-align: right;
 	padding-top: 5px;
 }
 
 .cart_steam_rewards_points_balance_box
 {
 	background: linear-gradient(51.62deg, #2B5190 -10.06%, #2B5190 15.11%, rgba(62, 98, 156, 0) 22.27%, #2B5190 37.18%, rgba(68, 108, 175, 0.03) 71.29%, #2B5190 87.29%, #2B5190 97.3%), #2B5190;
-	border-radius: 2px;	
+	border-radius: 2px;
 	display: inline-block;
 	padding: 3px 15px 1px 15px;
 	min-width: 60px;
@@ -3007,20 +3007,20 @@ body.checkout .block .block_content {
 }
 
 .cart_primary_body_copy {
-	font-size: 13px;	
+	font-size: 13px;
 }
 
 .steam_rewards_title
 {
 	font-size: 18px;
-	font-weight: regular;	
-	text-transform: uppercase;	
+	font-weight: regular;
+	text-transform: uppercase;
 }
 
 .steam_rewards_title span
 {
 	background: -webkit-linear-gradient(0deg, rgb(60,141,214), rgb(125,176,215));
-	font-weight: bold;	
+	font-weight: bold;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -3028,7 +3028,7 @@ body.checkout .block .block_content {
 .steam_rewards_possible_savings
 {
 	flex: 1;
-	text-align: right;	
+	text-align: right;
 }
 
 

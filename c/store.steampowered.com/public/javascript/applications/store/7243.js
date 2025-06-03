@@ -36,6 +36,7 @@
 	"Menu_Popover_WaysToPlay": "วิธีเล่น",
 	"Menu_Popover_SpecialSections": "หมวดพิเศษ",
 	"Menu_Popover_ViewAll": "ดูทั้งหมด",
+	"Menu_Popover_More": "เพิ่มเติม",
 	"Menu_Section_Browse_RecentlyViewed": "เพิ่งดูล่าสุด",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "เล่นต่อจากที่คุณเล่นค้างไว้",
 	"Menu_Section_Browse_Recommended": "แนะนำสำหรับคุณ",

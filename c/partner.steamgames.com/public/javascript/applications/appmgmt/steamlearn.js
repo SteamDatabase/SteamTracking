@@ -3475,6 +3475,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  label_smoothing: {
+                    _: 9,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
                 },
               }),
             _.sm_m
@@ -6260,6 +6265,11 @@
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
+                  repeat_multiplier: {
+                    _: 9,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
                 },
               }),
             _.sm_m
@@ -6428,6 +6438,11 @@
                   iterate_beam_search: {
                     _: 13,
                     _: _,
+                  },
+                  debug_spew: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -11669,6 +11684,11 @@
                   iterate_beam_search: {
                     _: 13,
                     _: _,
+                  },
+                  debug_spew: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -36437,7 +36457,7 @@
               label: (0, _._)("#SteamLearn_TrainSettings_FetchChunkSizeInput"),
               fnGetInitialValue: () =>
                 _.train_config().fetch_chunk_size()?.toString() || "10000",
-              fnValidateValue: (_) => _(_, 100, 1e5),
+              fnValidateValue: (_) => _(_, 10, 1e5),
               fnSetValue: (_) =>
                 _.train_config().set_fetch_chunk_size(parseInt(_)),
             }),

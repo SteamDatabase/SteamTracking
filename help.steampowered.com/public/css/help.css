@@ -248,8 +248,12 @@ input.custom_form_text.right_hint
 	position: relative;
 
 }
-.dselect_container a.trigger, .dselect_container a.activetrigger {
+.dselect_container button.trigger, .dselect_container button.activetrigger {
 	display: block;
+	box-sizing: content-box;
+	text-align: inherit;
+	cursor: pointer;
+
 	color: #67C1F5;
 	padding: 0 30px 0 8px;
 	font-size: 12px;
@@ -263,24 +267,24 @@ input.custom_form_text.right_hint
 	white-space: nowrap;
 }
 
-.dselect_container a.trigger {
+.dselect_container button.trigger {
 	background: rgba( 103, 193, 245, 0.2 );
 }
 
-.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
 	color: #ffffff;
 	background: #67c1f5;
 }
 
 
-.dselect_container a.activetrigger {
+.dselect_container button.activetrigger {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	z-index: 91;
 	position: relative;
 }
 
-.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
 	position: absolute;
 	right: 0;
 	top: 3px;
@@ -290,7 +294,7 @@ input.custom_form_text.right_hint
 	content: '';
 }
 
-.dselect_container a.trigger:hover,
+.dselect_container button.trigger:hover,
 .dselect_container .dropcontainer a.highlighted_selection
 {
 	color: #ffffff;

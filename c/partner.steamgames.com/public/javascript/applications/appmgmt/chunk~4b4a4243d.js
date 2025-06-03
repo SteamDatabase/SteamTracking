@@ -5,6 +5,9 @@
     chunkid: (module) => {
       module.exports = {
         DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
+        AppDashboard: "_3AZIiEfg9ySoDT99t5sFmp",
+        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
+        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         DashStatsContainer: "_2pZUWz9doUUVgJTIiA_5qb",
         Chart: "_2z00NeTIYdtaDdJPVZrLm2",
         Stats: "_2jxzC1AyBA_xxpsnV5l1uW",
@@ -19,11 +22,9 @@
         ToolTipTableRow: "_1hcQcqAFKPCYQUGtHIcGn4",
         TotalRow: "_1esRSJn8rPckHux_JS4iQg",
         ToolTipTableCell: "iIyyn73ITYmBOzqghT5NY",
-        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
         LeftAlign: "mgkgnb7LlDnVJwX6L29YM",
         ModuleTitle: "_1_qWSYHWj0MC9ivPG5LNEJ",
         ViewDetailLink: "_3LC92YRlgqBty5woF3CakT",
-        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         StatGroup: "_2H61dmCW7zg12hj9OKWviV",
         Header: "gpt4bNGeQpWFC9R3TR6gU",
         Numerals: "_1aa9BSk_Qolo1ZpNuEGUqD",
@@ -2111,7 +2112,8 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -2183,46 +2185,46 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  forceFileType: _ && _.file_type,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () =>
-                await _.UploadAllImages(_, _, _, _ && _.file_type),
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              __webpack_require__?.(_);
+            },
+          }),
         );
       }
       function _(_) {

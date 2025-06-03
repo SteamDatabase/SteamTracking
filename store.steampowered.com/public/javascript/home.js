@@ -737,7 +737,7 @@ GHomepage = {
 
 			var $ReasonLocal = creator.link.indexOf( 'developer/' ) >= 0 ? "<strong>Developed<\/strong> by<br><span>%1$s<\/span>" : "<strong>Published<\/strong> by<br><span>%1$s<\/span>";
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('creator').html( $ReasonLocal.replace("%1$s", V_EscapeHTML( creator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ).attr('alt', V_EscapeHTML( creator.name )) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -963,7 +963,7 @@ GHomepage = {
 						var rgData = rgLookup.item;
 						$elInfoDiv = $J('<div>',{'class': 'tab_preview'});
 
-						$elInfoDiv.append($J('<h2>').html( rgData.name ));
+						$elInfoDiv.append($J('<span>', {'class': 'tab_title'}).html( rgData.name ));
 
 						if ( rgData['review_summary'] )
 						{
@@ -2061,7 +2061,7 @@ GHomepage = {
 			if ( reviewer )
 			{
 				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
-				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s" alt="%4$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid).replace(/\%4\$s/g, reviewer.name) );
 				$AuthorBlock.append( $AvatarCap );
 
 				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );

@@ -408,8 +408,8 @@ html.tablet input.discussionSearchText.gpfocus::placeholder {
 /* DROPDOWN DSELECTS */
 
 /* Style dselect container */
-html.tablet .dselect_container a.trigger,
-html.tablet .dselect_container a.activetrigger {
+html.tablet .dselect_container button.trigger,
+html.tablet .dselect_container button.activetrigger {
 	border-radius: var(--gpCorner-Medium);
 	font: var(--gpText-BodyLarge);
 	transition: all 0.1s ease;
@@ -418,22 +418,22 @@ html.tablet .dselect_container a.activetrigger {
 	box-shadow: unset;
 }
 
-html.tablet .dselect_container a.trigger {
+html.tablet .dselect_container button.trigger {
 	background: var(--gpBackground-LightMedium);
 	color: white;
 }
 
-html.tablet .dselect_container a.trigger:hover {
+html.tablet .dselect_container button.trigger:hover {
 	background: var(--gpBackground-LightHard);
 }
 
-html.tablet .dselect_container a.trigger.gpfocus {
+html.tablet .dselect_container button.trigger.gpfocus {
 	background: var(--gpBackground-LightHard);
 	border-radius: 0px;
 }
 
-html.tablet .dselect_container a.trigger:active,
-html.tablet .dselect_container a.trigger.activetrigger {
+html.tablet .dselect_container button.trigger:active,
+html.tablet .dselect_container button.trigger.activetrigger {
 	background: white;
 	color: black;
 	border-radius: 0px;

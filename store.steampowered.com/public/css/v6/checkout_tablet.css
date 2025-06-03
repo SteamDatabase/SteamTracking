@@ -775,8 +775,8 @@ html.tablet .payment_method_list_content {
 /* INPUTS */
 
 /* Input widths */
-html.tablet .dselect_container a.trigger,
-html.tablet .dselect_container a.activetrigger,
+html.tablet .dselect_container button.trigger,
+html.tablet .dselect_container button.activetrigger,
 html.tablet .checkout_main input[type="text"],
 html.tablet #payment_method_dselect_container,
 html.tablet #billing_state_select_dselect_container,
@@ -1076,7 +1076,7 @@ html.tablet .checkout_content.cart_send_choice {
 
 html.tablet .cart_send_schedule_datepicker .dselect_container,
 html.tablet #schedule_send_time,
-html.tablet .dselect_container a.trigger {
+html.tablet .dselect_container button.trigger {
 	margin: unset;
 }
 

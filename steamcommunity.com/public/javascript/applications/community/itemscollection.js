@@ -582,7 +582,8 @@
             (e) => {
               e.isIntersecting &&
                 u((e) =>
-                  (null == e ? void 0 : e.appID) == t && e.snr == c
+                  (null == e ? void 0 : e.appID) == t &&
+                  (null == e ? void 0 : e.snr) == c
                     ? e
                     : { appID: t, snr: c },
                 );
@@ -590,7 +591,7 @@
             [t, c],
           );
         (0, i.useEffect)(() => {
-          d && _.AddImpression(d.appID, d.snr);
+          d && null != d.appID && _.AddImpression(d.appID, d.snr);
         }, [_, d]);
         const g = (0, s.BL)(p),
           I = t && (!d || (d.appID != t && d.snr != c)),

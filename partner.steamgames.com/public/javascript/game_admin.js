@@ -1779,7 +1779,10 @@ function ProcessRatingQuestionaire( itemid )
 
 function AgreeToBaseAssetsUpload()
 {
-	$J( '.graphical_assets_base_assets_drop_warning' ).hide();
-	$J( '.drag_and_drop_contents' ).show();
+	if ( $J( '.graphical_assets_base_assets_drop_warning' ).is( ":visible" ) )
+	{
+		$J( '.graphical_assets_base_assets_drop_warning' ).hide();
+		$J( '.drag_and_drop_contents' ).show();
+	}
 }
 

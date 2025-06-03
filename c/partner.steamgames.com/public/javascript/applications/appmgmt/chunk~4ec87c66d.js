@@ -733,6 +733,8 @@
         HeaderDownArrowSVG: "_1M---DuBLBmJ3wziNwQwZK",
         FeaturingFinderDropDown: "_19yKcT-6yXGzPTnwowUH_p",
         FeaturingFinderGOButton: "_8VJYI1VS6M0clgIu1wQbl",
+        DocLinkCtn: "_3U67RyuXYHsatAXXRaSRRI",
+        DocLink: "_30VSH__WuOtSV8EJQP9z2y",
       };
     },
     chunkid: (module) => {
@@ -1121,64 +1123,6 @@
         BroadcastPlayerLiteVideo: "yCd0zjymzfw3HkVm-1YwX",
         BroadcastContext: "_3TnYLKMweBMIC69qFU6OJj",
         BroadcastPlaceholderImg: "_3hxn99MT14hFUCrUp6zbsf",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
-        SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
-        none: "T3Fb5KTXwIHM2B-ThTvEs",
-        Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
-        Large: "_3BESV4eFnr4EnaSaJSdk6T",
-        Dim: "rpZ9bKyFXYvNQvgtKn5GV",
-        _: "_2hnF3M_l4xdIdQ4CkN7LYB",
-        _: "VmQTOrz5MPOWte5C9K7YS",
-        _: "_29mtadjX8N6pRn5TX1nA0o",
-        hoverParent: "_3-8cByP2koYzHwgZqjvFA",
-        animating: "_2rXc7hLg6bohWZ-JpRcYEB",
-        Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
-        threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
-        blocked: "VTxPkslK1CSpKNFMgKg7d",
-        richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
-        playerName: "nOdcT-MoOaXGePXLyPe0H",
-        playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
-        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
-        playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
-        richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
-        gameName: "_1cB0qtF0paHWWyj1XNcnbG",
-        NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
-        twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
-        DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
-        partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
-        hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
-        compactView: "_3bbRZyUiK-bfc5Qov6xukI",
-        noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
-        gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
-        PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
-        MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
-        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
-        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        avatarHolder: "nibodjvvrm86uCfnnAn4g",
-        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
-        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
-        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
-        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
       };
     },
     chunkid: (module) => {
@@ -10590,7 +10534,9 @@
             _?.valid_realms || 0,
             _?.button_text,
             _?.explicit_no_associated_item,
-            _?.partner?.trim().length > 0 || _?.explicit_no_partner_name_needed,
+            _?.partner?.trim().length > 0 ||
+              _?.explicit_no_partner_name_needed ||
+              _?.custom_legal_text?.trim().length > 0,
             _?.type,
             _?.update_event_clan_accountid,
             _?.update_event_gid,
@@ -12021,6 +11967,7 @@
             type: _,
             strPromotionPlanID: _,
             bRequireSalePage: _,
+            bRequireDiscount: _,
             eRequireSalePageType: _,
             bRequireMarketingBanner: _,
             bRequireSpotlightBanner: _,
@@ -12039,6 +11986,7 @@
               _ && _.append("eRequireSalePageType", "" + _),
               _ && _.append("bRequireSpotlightBanner", "" + _),
               _ && _.append("bRequireMarketingBanner", "" + _),
+              _ && _.append("bRequireDiscount", "" + _),
               _.append("nPromoType", "" + _),
               _.append("rtExpireTime", "" + _);
             const _ =
@@ -31694,7 +31642,7 @@
                   " to check your eligible games and enter your desired amount.",
                   _.createElement("br", null),
                   _.createElement("br", null),
-                  "Remember, all discounts are subject to the same cooldown period with the only exceptions being for major Steam seasonal sales. For more details on the discounting, please see the ",
+                  "Remember, all discounts are subject to the same cooldown period with the only exceptions being for major Steam seasonal sales. For more details, please see the ",
                   _.createElement(
                     "a",
                     {
@@ -44791,6 +44739,7 @@
               strPromotionPlanID: _.GetID(),
               bRequireMarketingBanner: _.BIsMarketingMessageArtRequest(),
               bRequireSpotlightBanner: _.BIsSpotlightArtRequest(),
+              bRequireDiscount: Boolean(_.GetDiscountEventID()),
             };
             _(_)
               .then((_) => {
@@ -54175,6 +54124,7 @@
                       nPartnerID: _,
                       bRequireSalePage: 0 != _,
                       eRequireSalePageType: _,
+                      bRequireDiscount: !0,
                     };
                   _(_)
                     .then((_) => {
@@ -68626,7 +68576,22 @@
               className: (0, _._)(_().PageTitle, _().PageTitle),
             },
             _.createElement("div", null, "Promo Invitation Planner (VO)"),
-            _.createElement(_._, null),
+            _.createElement(
+              "div",
+              {
+                className: _().DocLinkCtn,
+              },
+              _.createElement(
+                "a",
+                {
+                  className: _().DocLink,
+                  href: "https://confluence.valve.org/display/SteamBiz/Curated+Promotion+Thresholds",
+                  target: "_blank",
+                },
+                "Promo Thresholds",
+              ),
+              _.createElement(_._, null),
+            ),
           ),
           _.createElement("hr", {
             className: "VO",
@@ -103060,872 +103025,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bincremental || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bincremental: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  friends: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  max_friend_count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  active_friend_count: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  friends_limit_hit: {
-                    _: 5,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgClientFriendsList";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.ulfriendid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  ulfriendid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  efriendrelationship: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgClientFriendsList_Friend";
-        }
-      }
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      _.Message;
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.groupid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  groupid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  name: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  accountid_members: {
-                    _: 3,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsListCategory";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.categories || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  categories: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetCategories_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  clanid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  chat_group_id: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsListFavoriteEntry";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFavorites_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFavorites_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_SetFavorites_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_SetFavorites_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.favorites || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  favorites: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_FavoritesChanged_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFriendsList_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.friendslist || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  friendslist: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsList_GetFriendsList_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetCategories = function (_, _) {
-          return _.SendMsg("FriendsList.GetCategories#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
-        }),
-          (_.GetFriendsList = function (_, _) {
-            return _.SendMsg(
-              "FriendsList.GetFriendsList#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.GetFavorites#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.SetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.SetFavorites#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          _.FavoritesChangedHandler = {
-            name: "FriendsListClient.FavoritesChanged#1",
-            request: _,
-          };
-        })(_ || (_ = {}));
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(_(_, _));
-      }
-      function _(_, _) {
-        return {
-          queryKey: ["GetFriendsList", _],
-          queryFn: async () => {
-            const _ = _._.Init(_),
-              _ = await _.GetFriendsList(_, _);
-            return __webpack_require__
-              .Body()
-              .friendslist()
-              ?.friends()
-              ?.filter((_) => {
-                const _ = new _._(_.ulfriendid());
-                return (
-                  (3 == _.efriendrelationship() ||
-                    6 == _.efriendrelationship()) &&
-                  _.BIsIndividualAccount()
-                );
-              })
-              .map((_) => _.ulfriendid());
-          },
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -109204,7 +108303,7 @@
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, "dummy"),
+          _ = (0, _._)(_, "dummy", [_._.k_ESteamRealmGlobal], _),
           _ = _.useCallback(
             async (_) => {
               if (
@@ -109295,11 +108394,7 @@
                       onClick: async () => {
                         _(!0);
                         try {
-                          const _ = await _.UploadAllImages(
-                              [_._.k_ESteamRealmGlobal],
-                              _,
-                              _,
-                            ),
+                          const _ = await _.UploadAllImages(_),
                             _ = Object.values(_);
                           if (
                             _ &&
@@ -109309,9 +108404,9 @@
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 _.length,
                             ),
-                            1 == _[0].success)
+                            _[0].bSuccess)
                           ) {
-                            const _ = _[0],
+                            const _ = _[0].uploadResult,
                               _ = (0, _._)() + _.GetAccountID() + "/",
                               _ = (0, _._)(_.file_type),
                               _ = _ + _.image_hash + _,
@@ -111007,24 +110102,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
+      class _ extends _._ {
         m_filesToUpload = _._.array();
         m_strUploadPath = null;
+        m_rgRealmList;
+        m_eDefaultLanguage;
         m_rgImageOptions;
-        m_fnUploadSuccessCallback = null;
         m_bSynchronousUpload = !1;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
+        constructor(_, _, _, _, _) {
+          super(),
+            (0, _._)(this),
             (this.m_strUploadPath = _),
+            (this.m_rgRealmList = _),
+            (this.m_eDefaultLanguage = _),
             (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_fnUploadSuccessCallback = _),
             (this.m_bSynchronousUpload = _);
-        }
-        GetFnOnUploadSuccess() {
-          return this.m_fnUploadSuccessCallback;
-        }
-        SetFnOnUploadSuccess(_) {
-          this.m_fnUploadSuccessCallback = _;
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -111046,13 +110138,13 @@
             (this.m_filesToUpload.splice(_, 1),
             (this.m_filesToUpload = [...this.m_filesToUpload]));
         }
-        isImageFile(_) {
+        static isImageFile(_) {
           return _.type.startsWith("image/");
         }
-        isVideoFile(_) {
+        static isVideoFile(_) {
           return _.type.startsWith("video/");
         }
-        isSubtitleTextFile(_) {
+        static isSubtitleTextFile(_) {
           return (
             _.type.startsWith("text/") ||
             ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
@@ -111060,128 +110152,76 @@
           );
         }
         async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        _();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else if (this.isVideoFile(_)) {
-                const _ = document.createElement("video");
-                (_.preload = "metadata"),
-                  __webpack_require__.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CCloudImageUploader failed to load the video, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = URL.createObjectURL(_));
-              } else
-                this.isSubtitleTextFile(_)
-                  ? ((this.m_filesToUpload = [
-                      ...this.m_filesToUpload,
-                      new _._(_, _, this.m_rgImageOptions),
-                    ]),
-                    (_ = !0),
-                    _())
-                  : (console.error(
-                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                      _,
-                      _.type,
-                    ),
-                    (_ = !1));
-            }),
-            _
-          );
+          if (_.isImageFile(_) || _.isVideoFile(_)) {
+            const _ = await (0, _._)(_, _.isVideoFile(_));
+            if (_ instanceof HTMLImageElement) {
+              const _ = new _._(_, _, this.m_rgImageOptions, _, _);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+            if (_ instanceof HTMLVideoElement) {
+              const _ = new _._(_, _, this.m_rgImageOptions, _);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else {
+            if (_.isSubtitleTextFile(_))
+              return (
+                (this.m_filesToUpload = [
+                  ...this.m_filesToUpload,
+                  new _._(_, _, this.m_rgImageOptions),
+                ]),
+                !0
+              );
+            console.error(
+              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          }
+          return !1;
         }
-        async UploadAllImages(_, _, _, _) {
-          const _ = {};
-          let _ = {};
+        async UploadAllImages(_, _) {
+          const _ = [];
           for (const _ of this.m_filesToUpload)
             if ("pending" === _.status) {
               const _ = _.IsValidAssetType(_, _);
               if (!_.error && !_.needsCrop) {
                 _.status = "uploading";
-                const _ = `${_.uploadTime}/${_.file.name}`;
-                (_[_] = this.UploadFile(
-                  _.file,
-                  _.file.name,
-                  _.language,
-                  _.match,
-                )),
-                  this.m_bSynchronousUpload && (_[_] = await _[_]);
+                const _ = this.UploadFile(
+                    _.file,
+                    _.file.name,
+                    _.language,
+                    _.match,
+                  ),
+                  _ = {
+                    file: _.file,
+                    promise: _,
+                  };
+                __webpack_require__.push(_),
+                  this.m_bSynchronousUpload && (await _);
               }
             }
-          return (
-            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
+          this.m_bSynchronousUpload ||
+            (await Promise.all(__webpack_require__.map((_) => _.promise)));
+          const _ = [];
+          for (const _ of _) {
+            const _ = await _.promise;
+            _.push({
+              file: _.file,
+              bSuccess: 1 === _.success,
+              uploadResult: _,
+            });
+            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
+            if (_)
+              if (_ && 1 === _.success) {
+                _.status = "success";
+                (0, _._)(
+                  _.language,
+                  this.m_eDefaultLanguage,
+                  this.m_rgRealmList,
                 );
-              if (_)
-                if (_ && 1 === _.success) {
-                  _.status = "success";
-                  const _ = (0, _._)(_.language, _, _);
-                  this.m_fnUploadSuccessCallback(
-                    _.image_hash,
-                    _.file_name,
-                    _,
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "image/gif";
-                        case 1:
-                          return "image/jpeg";
-                        case 3:
-                          return "image/png";
-                        case 4:
-                          return "video/mp4";
-                        case 5:
-                          return "video/webm";
-                        case 6:
-                          return "text/vtt";
-                        case 7:
-                          return "text/srt";
-                        case 10:
-                          return "image/webp";
-                      }
-                      return null;
-                    })(_.file_type),
-                    _.GetCurrentImageOption().artworkType,
-                    _.width,
-                    _.height,
-                  );
-                } else (_.status = "failed"), (_.message = _.message);
-            }),
-            _
-          );
+              } else (_.status = "failed"), (_.message = _.message);
+          }
+          return _;
         }
         async UploadFile(_, _, _, _, _, _) {
           let _ = null;
@@ -111218,32 +110258,75 @@
           return _?.data;
         }
       }
-      function _(_) {
-        const {
-            strUploadAjaxURL: _,
-            fnOnUploadSuccess: __webpack_require__,
-            bSynchronousUpload: _,
-            rgSupportArtwork: _,
-          } = _,
-          [_] = (0, _.useState)(new _(_, _, __webpack_require__, _ ?? !1));
-        return (
-          (0, _.useEffect)(() => {
-            _.GetFnOnUploadSuccess() != __webpack_require__ &&
-              _.SetFnOnUploadSuccess(__webpack_require__),
-              _.GetUploadPath() != _ && _.SetUploadPath(_);
-          }, [_, __webpack_require__, _]),
-          _.createElement(_._, {
-            ..._,
-            imageUploader: _,
-          })
-        );
-      }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "GetUploadImages", null),
         (0, _._)([_._], _.prototype, "ClearImages", null),
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
         (0, _._)([_._], _.prototype, "UploadAllImages", null);
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            strUploadAjaxURL: _,
+            fnOnUploadSuccess: __webpack_require__,
+            bSynchronousUpload: _,
+            rgSupportArtwork: _,
+            rgRealmList: _,
+          } = _,
+          _ = _._.Get().GetCurEditLanguage(),
+          _ = (function (_, _, _, _, _) {
+            const _ = (0, _._)(_ instanceof Array ? _ : [_]),
+              _ = (0, _._)(_);
+            return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
+          })(_, _, _ ?? !1, _, _);
+        return (
+          _.useEffect(() => {
+            _.GetUploadPath() != _ && _.SetUploadPath(_);
+          }, [_, __webpack_require__, _]),
+          _.createElement(_._, {
+            ..._,
+            imageUploader: _,
+            fnUploadComplete: (_) => {
+              for (const _ of _) {
+                if (!_.bSuccess) continue;
+                const _ = _.uploadResult,
+                  _ = _.GetUploadImages().find((_) => _.file == _.file),
+                  _ = (0, _._)(_.language, _, _);
+                __webpack_require__(
+                  _.image_hash,
+                  _.file_name,
+                  _,
+                  _(_.file_type),
+                  _.GetCurrentImageOption().artworkType,
+                  _.width,
+                  _.height,
+                );
+              }
+            },
+          })
+        );
+      }
+      function _(_) {
+        switch (_) {
+          case 2:
+            return "image/gif";
+          case 1:
+            return "image/jpeg";
+          case 3:
+            return "image/png";
+          case 4:
+            return "video/mp4";
+          case 5:
+            return "video/webm";
+          case 6:
+            return "text/vtt";
+          case 7:
+            return "text/srt";
+          case 10:
+            return "image/webp";
+        }
+        return null;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -115495,6 +114578,13 @@
                   autocloses: !1,
                 },
               ],
+              [
+                "meetsteamscheduleview",
+                {
+                  Constructor: _._,
+                  autocloses: !1,
+                },
+              ],
             ])),
           _
         );
@@ -115866,35 +114956,6 @@
         }
       }
       (0, _._)([_._], _.prototype, "ElementAccumulator", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-          eLocation: 0,
-        },
-        _ = _.createContext(_);
-      function _(_) {
-        const { children: _, location: __webpack_require__ } = _;
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              ..._,
-              eLocation: __webpack_require__,
-            },
-          },
-          _,
-        );
-      }
-      function _() {
-        return _.useContext(_);
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -116400,12 +115461,11 @@
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
@@ -116415,639 +115475,10 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        _ =
-          __webpack_require__._ +
-          "images/applications/appmgmt/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            strAvatarURL: _,
-            size: __webpack_require__ = "Medium",
-            className: _,
-            statusStyle: _,
-            statusPosition: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              _ && _.push(_),
-              _.push(
-                (function (_) {
-                  switch (_) {
-                    case "X-Small":
-                    case "Small":
-                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
-                    case "Medium":
-                    case "MediumLarge":
-                      return _;
-                    case "Large":
-                    case "X-Large":
-                    case "FillArea":
-                      return _;
-                    default:
-                      return (0, _._)(_, `Unhandled size ${_}`), _;
-                  }
-                })(__webpack_require__),
-              ),
-              _
-            );
-          }, [_, __webpack_require__]);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              __webpack_require__,
-              _,
-            ),
-            ..._,
-          },
-          _.createElement("div", {
-            className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-            style: _,
-          }),
-          _.createElement(_._, {
-            className: (0, _._)(_().avatar, "avatar"),
-            rgSources: _,
-            draggable: !1,
-          }),
-          _,
-        );
-      });
-      let _ = class extends _.Component {
-        render() {
-          const {
-            persona: _,
-            size: _ = "Medium",
-            animatedAvatar: __webpack_require__,
-            className: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            __webpack_require__ &&
-            __webpack_require__.image_small &&
-            0 != __webpack_require__.image_small.length
-              ? (_ =
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/" +
-                  __webpack_require__.image_small)
-              : _ &&
-                ((_ = _.avatar_url_medium),
-                "Small" == _ || "X-Small" == _
-                  ? (_ = _.avatar_url)
-                  : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
-                    (_ = _.avatar_url_full)),
-            _.createElement(_, {
-              strAvatarURL: _,
-              size: _,
-              className: (0, _._)((0, _._)(_), _),
-              ..._,
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        const {
-          profileItem: _,
-          className: __webpack_require__,
-          bDisableAnimation: _,
-          ..._
-        } = _;
-        if (!_ || !_.image_small || 0 == _.image_small.length) return null;
-        let _ = _ ? _.image_large : _.image_small;
-        return (
-          _ || (_ = _.image_small),
-          _.startsWith("https://") ||
-            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().avatarFrame,
-                __webpack_require__,
-                "avatarFrame",
-              ),
-              ..._,
-            },
-            _.createElement("img", {
-              className: _().avatarFrameImg,
-              src: _,
-            }),
-          )
-        );
-      });
-      let _ = class extends _.Component {
-        m_timer;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = 0);
-        }
-        componentDidMount() {
-          this.props.bParentHovered || this.SetupAnimationTimer();
-        }
-        SetupAnimationTimer() {
-          let _ = 0;
-          switch (this.props.loopDuration) {
-            case "Short":
-              _ = 2500;
-              break;
-            case "Medium":
-              _ = 5e3;
-              break;
-            case "Long":
-              _ = 1e4;
-          }
-          0 != _ &&
-            (this.setState({
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = window.setTimeout(
-              () =>
-                this.setState({
-                  bAnimate: !1,
-                }),
-              _,
-            )));
-        }
-        StopAnimationTimer() {
-          this.m_timer &&
-            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
-        }
-        onHover() {
-          this.SetupAnimationTimer();
-        }
-        componentWillUnmount() {
-          this.StopAnimationTimer();
-        }
-        componentDidUpdate(_) {
-          this.props.loopDuration != _.loopDuration &&
-            ("None" == this.props.loopDuration
-              ? (this.setState({
-                  bAnimate: !1,
-                }),
-                this.StopAnimationTimer())
-              : "Infinite" == this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.SetupAnimationTimer())),
-            this.props.bParentHovered != _.bParentHovered &&
-              (this.props.bParentHovered &&
-              "None" != this.props.loopDuration &&
-              "Infinite" != this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : this.state.bAnimate && this.SetupAnimationTimer());
-        }
-        render() {
-          let {
-            loopDuration: _,
-            animatedAvatar: _,
-            avatarFrame: __webpack_require__,
-            children: _,
-            style: _,
-            bLimitProfileFrameAnimationTime: _,
-            bParentHovered: _,
-            ..._
-          } = this.props;
-          return (
-            _.onClick &&
-              (_ = {
-                ..._,
-                cursor: "pointer",
-              }),
-            this.state.bAnimate || (_ = null),
-            _.createElement(
-              "div",
-              {
-                onMouseEnter: () =>
-                  this.setState({
-                    bAnimate: "None" != this.props.loopDuration,
-                  }),
-                onMouseLeave: () => this.SetupAnimationTimer(),
-              },
-              _.createElement(
-                _,
-                {
-                  animatedAvatar: _,
-                  ..._,
-                },
-                _,
-                _.createElement(_, {
-                  profileItem: __webpack_require__,
-                  bDisableAnimation: _ && !this.state.bAnimate,
-                }),
-              ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        static get hoverClass() {
-          return _().hoverParent;
-        }
-        render() {
-          const {
-            persona: _,
-            animating: _,
-            className: __webpack_require__,
-            size: _,
-            dim: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            "medium" == _ ? (_ = _().Medium) : "large" == _ && (_ = _().Large),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SnoozeContainer,
-                  _.online_state,
-                  __webpack_require__,
-                  _ && _().animating,
-                  _,
-                  _ && _().Dim,
-                ),
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-              _.createElement(
-                "div",
-                {
-                  "data-text": "Z",
-                  className: (0, _._)(_().SnoozeZ, _()._),
-                },
-                "Z",
-              ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const { persona: _, className: __webpack_require__, ..._ } = _;
-        if (!_) return null;
-        if (!_.is_online) return null;
-        const _ = _.HasStateFlag(512),
-          _ = _.HasStateFlag(2048),
-          _ = _.IsOnSteamDeck() && !_,
-          _ = !_ && !_ && _.HasStateFlag(1024);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().MobilePhoneIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_Mobile"),
-                ..._,
-              },
-              _.createElement(_._, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().VRIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_VR"),
-                ..._,
-              },
-              _.createElement(_.MUh, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().BigPictureIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_BigPicture"),
-                ..._,
-              },
-              _.createElement(_.bPr, null),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  __webpack_require__,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
-                  (0, _._)(_),
-                ),
-                title: (0, _._)("#Platform_Hint_SteamDeck"),
-                ..._,
-              },
-              _.createElement(_.DQe, null),
-            ),
-        );
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "span",
-            {
-              className: _().partyBeaconJoin,
-            },
-            (0, _._)("#User_WantsToPlay"),
-          ),
-          " – ",
-          _.persona.GetCurrentGameName(),
-        );
-      }
-      let _ = class extends _.Component {
-        render() {
-          const {
-            className: _,
-            onContextMenu: _,
-            persona: __webpack_require__,
-            eFriendRelationship: _,
-            bIsSelf: _,
-            bParenthesizeNicknames: _,
-            strNickname: _,
-            bCompactView: _,
-            bHideGameName: _,
-            bHideEnhancedRichPresenceLabel: _,
-            bHideSnooze: _,
-            bHideStatus: _,
-            renderStatus: _,
-            renderRichPresence: _,
-            bHidePersona: _,
-            bDNDSet: _,
-            bHasPartyBeacon: _,
-            bHasGamePrivacy: _,
-            bNoMask: _,
-            ..._
-          } = this.props;
-          let _ = null,
-            _ = null,
-            _ = null,
-            _ = [
-              _,
-              _().personaNameAndStatusLabel,
-              (0, _._)(__webpack_require__),
-              _ && _().compactView,
-              _ && _().NoMask,
-            ];
-          _ || __webpack_require__.has_public_party_beacon
-            ? (_ = _.createElement(_, {
-                persona: __webpack_require__,
-              }))
-            : (0, _._)(_)
-              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
-              : __webpack_require__.is_ingame
-                ? ((_ =
-                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
-                      ? __webpack_require__.GetCurrentGameName()
-                      : (0, _._)("#PersonaStateInNonSteamGame")),
-                  _ || _
-                    ? _ &&
-                      __webpack_require__.is_awayOrSnooze &&
-                      (_ = (0, _._)("#PersonaStateAway"))
-                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
-                : __webpack_require__.m_broadcastAccountId &&
-                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
-            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
-            _ && (_ = _());
-          let _ = !_ && !_;
-          !1 === _ && (_ = !0),
-            __webpack_require__.is_awayOrSnooze &&
-              _ &&
-              (_ = _.createElement(_, {
-                persona: __webpack_require__,
-              }));
-          let _ = null;
-          _
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: "ContextMenuButton",
-                  onClick: _,
-                },
-                _.createElement(_.GB9, null),
-              ))
-            : _.push(_().noContextMenu),
-            _ && _.push(_().hidePersona),
-            _ && (_ = _()),
-            (!_ && _) || _.push(_().twoLine);
-          const _ = !__webpack_require__.is_ingame && !_,
-            _ = !_ && _,
-            _ = _ && (!_ || !_),
-            _ = (0, _._)(_._.LAUNCHER_TYPE);
-          let _ = _ && !_,
-            _ = _ ? _ : __webpack_require__.m_strPlayerName,
-            _ = !_ && (_ || _) && _;
-          return _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(..._),
-              onContextMenu: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().playerName,
-                },
-                _ || " ",
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().playerNickname,
-                    },
-                    "(",
-                    _,
-                    ")",
-                  ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DNDContainer,
-                    title: (0, _._)("#User_ToggleDoNotDisturb"),
-                  },
-                  _.createElement(_.Aj0, null),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().playerNicknameBracket,
-                    title: (0, _._)("#isNickname"),
-                  },
-                  " *",
-                ),
-              _.createElement(_, {
-                persona: __webpack_require__,
-              }),
-              _,
-              (__webpack_require__.m_bPlayerNamePending ||
-                __webpack_require__.m_bAvatarPending) &&
-                _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PendingPersona,
-                    title: (0, _._)("#SteamChina_PendingPersonaName"),
-                  },
-                  _.createElement(_.zD7, null),
-                ),
-              _,
-            ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().richPresenceContainer,
-                },
-                (_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().gameName,
-                        _ && _().threeLines,
-                        _().richPresenceLabel,
-                        "no-drag",
-                      ),
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().gameIsPrivateIcon,
-                          title: (0, _._)("#User_GameInfoHidden"),
-                        },
-                        _.createElement(_.jZl, null),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
-                    },
-                    _,
-                    " ",
-                  ),
-              ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      (0, _._)((_) => {
-        const {
-          persona: _,
-          bParenthesizeNicknames: __webpack_require__,
-          strNickname: _,
-          bIgnorePersonaStatus: _,
-          bDisableColoring: _,
-          className: _,
-          ..._
-        } = _;
-        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
-        return _.createElement(
-          "span",
-          {
-            ..._,
-            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
-          },
-          _.createElement(
-            "span",
-            {
-              className: _().playerName,
-            },
-            _ || " ",
-            __webpack_require__ &&
-              _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().playerNickname,
-                },
-                "(",
-                _,
-                ")",
-              ),
-          ),
-        );
-      });
-      __webpack_require__("chunkid");
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -118647,25 +117078,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return _.createElement(_.rfv, null);
-      }
-      function _() {
-        return (0, _._)()
-          ? _.createElement(_._, null)
-          : _.createElement(_.jZW, null);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
@@ -119032,82 +117444,6 @@
             ),
           );
         };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-            });
-        }
-        componentDidUpdate(_) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
-            );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              ..._
-            } = this.props,
-            _ = this.src;
-          return _.createElement("img", {
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

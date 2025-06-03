@@ -36,6 +36,7 @@
 	"Menu_Popover_WaysToPlay": "Cara Bermain",
 	"Menu_Popover_SpecialSections": "Bagian Spesial",
 	"Menu_Popover_ViewAll": "Lihat Semua",
+	"Menu_Popover_More": "Lainnya",
 	"Menu_Section_Browse_RecentlyViewed": "Baru dilihat",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Lanjutkan dari yang terakhir dilihat",
 	"Menu_Section_Browse_Recommended": "Direkomendasikan untukmu",

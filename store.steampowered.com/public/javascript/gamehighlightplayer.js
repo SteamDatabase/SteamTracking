@@ -792,7 +792,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 		$Title.text( 'View full-size version in browser' );
 	else
 		$Title.text( 'Download full-size version' );
-	$Title.append( ' ', $J('<img/>', {src: 'https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif' } ) );
+	$Title.append( ' ', $J('<img/>', {src: 'https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif',  alt: 'External' } ) );
 
 	var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
 

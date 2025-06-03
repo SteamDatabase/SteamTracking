@@ -5,25 +5,25 @@
   [6866],
   {
     56055: (e, t, n) => {
-      n.d(t, { b2: () => a, nx: () => o });
-      const a = "terminal";
-      var o;
+      n.d(t, { b2: () => o, nx: () => s });
+      const o = "terminal";
+      var s;
       !(function (e) {
         (e[(e.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
           (e[(e.TemplateFAQDisplaySimpleRow = 2)] =
             "TemplateFAQDisplaySimpleRow");
-      })(o || (o = {}));
+      })(s || (s = {}));
     },
     39733: (e, t, n) => {
-      n.d(t, { Du: () => _, fy: () => u, pt: () => m });
-      var a = n(68797),
-        o = n(78327),
-        s = n(41735),
-        r = n.n(s),
-        i = n(90626),
+      n.d(t, { Du: () => h, fy: () => m, pt: () => _ });
+      var o = n(68797),
+        s = n(78327),
+        i = n(41735),
+        r = n.n(i),
+        a = n(90626),
         l = n(6144),
         c = n(73745),
-        h = n(44332);
+        u = n(44332);
       class d {
         m_mapBadgeInfo = new Map();
         m_mapBadgeLoadPromises = new Map();
@@ -60,14 +60,14 @@
           if (!e || !Number.isInteger(e)) return { badgeid: e, level: 0 };
           let t = null;
           try {
-            const n = (0, o.xv)();
-            (0, h.w)(
-              n == o.TS.STORE_BASE_URL || n == o.TS.COMMUNITY_BASE_URL,
+            const n = (0, s.xv)();
+            (0, u.w)(
+              n == s.TS.STORE_BASE_URL || n == s.TS.COMMUNITY_BASE_URL,
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
-            const s = n + "actions/ajaxgetbadgeinfo",
-              i = { badgeid: e },
-              l = await r().get(s, { params: i, withCredentials: !0 });
+            const i = n + "actions/ajaxgetbadgeinfo",
+              a = { badgeid: e },
+              l = await r().get(i, { params: a, withCredentials: !0 });
             if (
               200 == l.status &&
               (1 == l.data?.success || 42 == l.data?.success)
@@ -85,9 +85,9 @@
                 t
               );
             }
-            t = (0, a.H)(l);
+            t = (0, o.H)(l);
           } catch (e) {
-            t = (0, a.H)(e);
+            t = (0, o.H)(e);
           }
           console.error("useEventBadge: " + t?.strErrorMsg, t);
           const n = { badgeid: e, level: 0 };
@@ -98,17 +98,17 @@
           return (
             d.s_Singleton ||
               ((d.s_Singleton = new d()),
-              "dev" == o.TS.WEB_UNIVERSE &&
+              "dev" == s.TS.WEB_UNIVERSE &&
                 (window.g_UserBadgeForEventStore = d.s_Singleton)),
             d.s_Singleton
           );
         }
         constructor() {}
       }
-      function u(e) {
-        const [t, n] = (0, i.useState)(d.Get().GetBadgeInfo(e));
+      function m(e) {
+        const [t, n] = (0, a.useState)(d.Get().GetBadgeInfo(e));
         return (
-          (0, i.useEffect)(() => {
+          (0, a.useEffect)(() => {
             !t &&
               e &&
               d
@@ -120,13 +120,13 @@
           t
         );
       }
-      function _(e) {
+      function h(e) {
         d.Get().Test_SetBadgeInfo(e);
       }
-      function m(e) {
-        const [t, n] = (0, i.useState)(d.Get().GetInitialBadgeInfo(e));
+      function _(e) {
+        const [t, n] = (0, a.useState)(d.Get().GetInitialBadgeInfo(e));
         return (
-          (0, i.useEffect)(() => {
+          (0, a.useEffect)(() => {
             !t && e && d.Get().LoadBadgeInfo(e);
           }, [e, t]),
           (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), () =>
@@ -138,11 +138,11 @@
     },
     1501: (e, t, n) => {
       n.d(t, { N: () => l });
-      var a = n(34629),
-        o = n(14947),
-        s = n(56055),
+      var o = n(34629),
+        s = n(14947),
+        i = n(56055),
         r = n(62490),
-        i = n(78327);
+        a = n(78327);
       class l {
         m_rgAnswerToCategoryID = Array();
         m_rgAnswerChosen = Array();
@@ -199,7 +199,7 @@
         }
         BHasTerminalAnswerChosen() {
           return this.m_rgAnswerChosen.some(
-            (e) => e.reveal_question_id == s.b2,
+            (e) => e.reveal_question_id == i.b2,
           );
         }
         static s_Singleton;
@@ -207,42 +207,42 @@
           return (
             l.s_Singleton ||
               ((l.s_Singleton = new l()),
-              "dev" == i.TS.WEB_UNIVERSE &&
+              "dev" == a.TS.WEB_UNIVERSE &&
                 (window.g_SaleQuizAnswerStore = l.s_Singleton)),
             l.s_Singleton
           );
         }
         constructor() {
-          (0, o.Gn)(this);
+          (0, s.Gn)(this);
         }
       }
-      (0, a.Cg)([o.sH], l.prototype, "m_rgAnswerToCategoryID", void 0),
-        (0, a.Cg)([o.sH], l.prototype, "m_rgAnswerChosen", void 0);
+      (0, o.Cg)([s.sH], l.prototype, "m_rgAnswerToCategoryID", void 0),
+        (0, o.Cg)([s.sH], l.prototype, "m_rgAnswerChosen", void 0);
     },
     35400: (e, t, n) => {
       n.d(t, {
         DV: () => D,
-        Fq: () => m,
+        Fq: () => _,
         OC: () => I,
-        OM: () => C,
-        Sp: () => y,
-        Tn: () => S,
-        W3: () => f,
+        OM: () => S,
+        Sp: () => f,
+        Tn: () => C,
+        W3: () => b,
         hH: () => g,
-        my: () => b,
+        my: () => w,
       });
-      var a = n(34629),
-        o = n(41735),
-        s = n.n(o),
+      var o = n(34629),
+        s = n(41735),
+        i = n.n(s),
         r = n(14947),
-        i = n(90626),
+        a = n(90626),
         l = n(68797),
         c = n(6144),
-        h = n(73745),
+        u = n(73745),
         d = n(78327),
-        u = n(44165),
-        _ = n(34824);
-      const m = 7,
+        m = n(44165),
+        h = n(34824);
+      const _ = 7,
         p = -1;
       class g {
         m_userData;
@@ -271,7 +271,7 @@
           );
         }
         BCanUserOpenDoor(e) {
-          let t = u.HD.GetTimeNowWithOverride();
+          let t = m.HD.GetTimeNowWithOverride();
           return (
             d.iA.logged_in &&
             this.m_userData &&
@@ -309,10 +309,10 @@
           return this.m_bLoadedDuringInit;
         }
         GetMaxDoor() {
-          return m;
+          return _;
         }
         SetInMemoryUpdateDoorOpenUpto(e) {
-          for (let t = 0; t < m; ++t) {
+          for (let t = 0; t < _; ++t) {
             const n = t <= e;
             this.m_userData[t].opened != n &&
               ((this.m_userData[t].opened = n),
@@ -321,7 +321,7 @@
           this.RecomputeState();
         }
         SetInMemorySpecificDoorState(e, t) {
-          e < m
+          e < _
             ? this.m_userData[e].opened != t &&
               ((this.m_userData[e].opened = t),
               this.GetDoorStateChangeCallback(e).Dispatch(t),
@@ -341,7 +341,7 @@
               ((this.m_nHighestDoorOpened = e),
               this.GetLargestDoorIndexChange().Dispatch(e));
         }
-        async OpenDoor(e, t = !0, n = "", a = !1) {
+        async OpenDoor(e, t = !0, n = "", o = !1) {
           return !d.iA.logged_in ||
             !this.m_userData ||
             e > this.m_userData.length ||
@@ -362,38 +362,38 @@
                 : (this.m_mapDoorOpenPromise.has(e) ||
                     this.m_mapDoorOpenPromise.set(
                       e,
-                      this.InternalOpenDoor(e, t, n, a),
+                      this.InternalOpenDoor(e, t, n, o),
                     ),
                   this.m_mapDoorOpenPromise.get(e));
         }
-        async InternalOpenDoor(e, t = !0, n, a = !1) {
-          let o = d.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
+        async InternalOpenDoor(e, t = !0, n, o = !1) {
+          let s = d.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const r = new FormData();
           r.append("sessionid", d.TS.SESSIONID),
             n && r.append("datarecord", n),
-            a && r.append("fake_open", "" + a),
+            o && r.append("fake_open", "" + o),
             r.append("door_index", "" + e),
             r.append("clan_accountid", "" + d.UF.CLANACCOUNTID),
             t || r.append("open_door", "0");
-          let i = null;
+          let a = null;
           try {
-            let n = await s().post(o, r, { withCredentials: !0 });
+            let n = await i().post(s, r, { withCredentials: !0 });
             if (200 == n?.status && 1 == n?.data?.success)
               return (
                 (this.m_userData[e].opened = t),
                 (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
-                n.data.capsuleinsert && (0, _.YH)([n.data.capsuleinsert]),
+                n.data.capsuleinsert && (0, h.YH)([n.data.capsuleinsert]),
                 this.GetDoorStateChangeCallback(e).Dispatch(t),
                 this.RecomputeState(),
                 n.data
               );
-            i = (0, l.H)(n);
+            a = (0, l.H)(n);
           } catch (e) {
-            i = (0, l.H)(e);
+            a = (0, l.H)(e);
           }
           return (
             this.m_mapDoorOpenPromise.delete(e),
-            console.error("OpenDoor hit error: " + i.strErrorMsg, i),
+            console.error("OpenDoor hit error: " + a.strErrorMsg, a),
             null
           );
         }
@@ -408,11 +408,11 @@
           const e = d.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
           let t = null;
           try {
-            const n = await s().get(e, { withCredentials: !0 });
+            const n = await i().get(e, { withCredentials: !0 });
             if (200 == n.status && n.data?.doordata) {
               (this.m_userData = n.data.doordata),
                 (this.m_bLoadedDuringInit = !0);
-              for (let e = 0; e < m; ++e)
+              for (let e = 0; e < _; ++e)
                 this.GetDoorStateChangeCallback(e).Dispatch(
                   this.m_userData[e].opened,
                 );
@@ -441,26 +441,26 @@
           const n = new FormData();
           n.append("sessionid", d.TS.SESSIONID),
             n.append("clan_accountid", "" + e);
-          let a = null;
+          let o = null;
           try {
-            let e = await s().post(t, n, { withCredentials: !0 });
+            let e = await i().post(t, n, { withCredentials: !0 });
             if (200 == e.status && 1 == e?.data?.success) {
               console.log("CDoorStore - closed " + e.data.count);
-              for (let e = 0; e < m; ++e)
+              for (let e = 0; e < _; ++e)
                 (this.m_userData[e].opened = !1),
                   this.GetDoorStateChangeCallback(e).Dispatch(
                     this.m_userData[e].opened,
                   );
               return this.RecomputeState(), !0;
             }
-            a = (0, l.H)(e);
+            o = (0, l.H)(e);
           } catch (e) {
-            a = (0, l.H)(e);
+            o = (0, l.H)(e);
           }
           return (
             console.error(
-              "CDoorStore.CloseAllDoors failed: " + a?.strErrorMsg,
-              a,
+              "CDoorStore.CloseAllDoors failed: " + o?.strErrorMsg,
+              o,
             ),
             null
           );
@@ -492,69 +492,69 @@
         return { fnOpenDoor: g.Get().OpenDoor };
       }
       function D() {
-        const [e, t] = (0, i.useState)(g.Get().BIsInitialized());
+        const [e, t] = (0, a.useState)(g.Get().BIsInitialized());
         return (
-          (0, i.useEffect)(() => {
+          (0, a.useEffect)(() => {
             e || g.Get().LoadDoorData();
           }, [e]),
-          (0, h.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
+          (0, u.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
           e
         );
       }
-      function C(e) {
+      function S(e) {
         const t = D(),
-          [n, a] = (0, i.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
-        return (0, h.hL)(g.Get().GetDoorStateChangeCallback(e), a), n;
+          [n, o] = (0, a.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
+        return (0, u.hL)(g.Get().GetDoorStateChangeCallback(e), o), n;
       }
-      function S() {
+      function C() {
         const e = D(),
-          [t, n] = (0, i.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
-        return (0, h.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
+          [t, n] = (0, a.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
+        return (0, u.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
       }
-      function f() {
+      function b() {
         const e = D(),
-          [t, n] = (0, i.useState)(!!e && g.Get().BIsAnyDoorOpened());
-        return (0, h.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
+          [t, n] = (0, a.useState)(!!e && g.Get().BIsAnyDoorOpened());
+        return (0, u.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function y(e) {
+      function f(e) {
         g.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      function b(e, t) {
+      function w(e, t) {
         g.Get().SetInMemorySpecificDoorState(e, t);
       }
-      (0, a.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, a.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
-        (0, a.Cg)([h.oI], g.prototype, "BIsDoorOpened", null),
-        (0, a.Cg)([h.oI], g.prototype, "OpenDoor", null);
+      (0, o.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, o.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
+        (0, o.Cg)([u.oI], g.prototype, "BIsDoorOpened", null),
+        (0, o.Cg)([u.oI], g.prototype, "OpenDoor", null);
     },
     34824: (e, t, n) => {
       n.d(t, {
-        Fb: () => C,
-        Jz: () => S,
+        Fb: () => S,
+        Jz: () => C,
         M$: () => I,
         Tb: () => g,
         YH: () => p,
         tO: () => D,
       });
-      var a,
-        o = n(34629),
-        s = n(14947),
+      var o,
+        s = n(34629),
+        i = n(14947),
         r = (n(90626), n(77516)),
-        i = n(44332),
+        a = n(44332),
         l = n(6144),
         c = n(73745),
-        h = n(78327),
+        u = n(78327),
         d = n(6379),
-        u = n(82097),
-        _ = n(3967);
+        m = n(82097),
+        h = n(3967);
       !(function (e) {
         (e[(e.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
           (e[(e.k_EDiscoveryAction_OpenStorePage = 1)] =
             "k_EDiscoveryAction_OpenStorePage"),
           (e[(e.k_EDiscoveryAction_OpenDoor = 2)] =
             "k_EDiscoveryAction_OpenDoor");
-      })(a || (a = {}));
-      class m {
+      })(o || (o = {}));
+      class _ {
         m_mapMaterializedInsertion = new Map();
         m_mapInsertCallback = new Map();
         m_rgFutureInsertions = new Array();
@@ -620,7 +620,7 @@
                   this.m_rgFutureInsertions[n],
                 );
                 t &&
-                  ((0, i.w)(
+                  ((0, a.w)(
                     Boolean(t.sectionID),
                     "Expected to have a materialized insertion at this poiunt: " +
                       t.sectionID,
@@ -659,12 +659,12 @@
         }
         DeployCapsuleIfPossible(e, t) {
           if (this.BHasExistingInsertion(e)) return null;
-          if (h.P9.ANNOUNCEMENT_GID) {
+          if (u.P9.ANNOUNCEMENT_GID) {
             const n = d.O3.GetClanEventFromAnnouncementGID(
-                h.P9.ANNOUNCEMENT_GID,
+                u.P9.ANNOUNCEMENT_GID,
               ),
-              a = n?.GetSaleSectionByID(e.sectionid);
-            if (this.BIsInsertableSectionType(a)) {
+              o = n?.GetSaleSectionByID(e.sectionid);
+            if (this.BIsInsertableSectionType(o)) {
               if (
                 t.insertion_requirement.additional_adds > 0 &&
                 t.insertion_requirement.delta_interactions > 0
@@ -691,33 +691,33 @@
         static s_Singleton;
         static Get() {
           return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              m.s_Singleton.Init(),
-              "dev" == h.TS.WEB_UNIVERSE &&
-                (window.g_DynamicCapsuleInsertStore = m.s_Singleton)),
-            m.s_Singleton
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == u.TS.WEB_UNIVERSE &&
+                (window.g_DynamicCapsuleInsertStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
         constructor() {
-          (0, s.Gn)(this);
+          (0, i.Gn)(this);
         }
         Init() {
-          const e = (0, h.Fd)("capsuleinsert", "application_config");
-          m.ValidateData(e) &&
+          const e = (0, u.Fd)("capsuleinsert", "application_config");
+          _.ValidateData(e) &&
             (e.sectionID
               ? this.m_mapMaterializedInsertion.set(this.GetKey(e), e)
               : e.insertion_requirement
                 ? (this.m_rgFutureInsertions.push(e),
                   e?.appid &&
-                    u.A.Get()
+                    m.A.Get()
                       .QueueAppRequest(e.appid, {
                         include_assets: !0,
                         include_release: !0,
                         include_trailers: !0,
                       })
                       .then(() => {
-                        const t = u.A.Get().GetApp(e.appid);
+                        const t = m.A.Get().GetApp(e.appid);
                         !t ||
                           t.GetBestPurchaseOption()?.formatted_final_price
                             ?.length > 0 ||
@@ -729,14 +729,14 @@
                             discount_pct: 50,
                           });
                       }))
-                : "dev" == h.TS.WEB_UNIVERSE &&
+                : "dev" == u.TS.WEB_UNIVERSE &&
                   console.error(
                     "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
                     e,
                   ),
-            "dev" == h.TS.WEB_UNIVERSE &&
+            "dev" == u.TS.WEB_UNIVERSE &&
               console.log("CDynamicCapsuleInsertStore loaded ", e)),
-            _.I.Get()
+            h.I.Get()
               .GetNewInteractionCallback()
               .Register(this.SaleInteractionCallback);
         }
@@ -752,44 +752,44 @@
         }
       }
       function p(e) {
-        m.Get().ReplaceInsertion(e);
+        _.Get().ReplaceInsertion(e);
       }
       function g(e, t) {
-        return m.Get().GetMatchingInsertion(e, t);
+        return _.Get().GetMatchingInsertion(e, t);
       }
       function I(e, t) {
-        return m.Get().GetChangeCallback(e, t);
+        return _.Get().GetChangeCallback(e, t);
       }
       function D(e) {
-        m.Get().AppCapsuleFound(e);
+        _.Get().AppCapsuleFound(e);
       }
-      function C() {
-        return m.Get().GetAnyNonMaterializedInsertionRequest();
+      function S() {
+        return _.Get().GetAnyNonMaterializedInsertionRequest();
       }
-      function S(e) {
-        return m.Get().BIsInsertableSectionType(e);
+      function C(e) {
+        return _.Get().BIsInsertableSectionType(e);
       }
-      (0, o.Cg)([c.oI], m.prototype, "SaleInteractionCallback", null),
-        (0, o.Cg)([s.XI], m.prototype, "DeployCapsuleIfPossible", null);
+      (0, s.Cg)([c.oI], _.prototype, "SaleInteractionCallback", null),
+        (0, s.Cg)([i.XI], _.prototype, "DeployCapsuleIfPossible", null);
     },
     3967: (e, t, n) => {
-      n.d(t, { I: () => s });
-      var a = n(6144),
-        o = n(78327);
-      class s {
+      n.d(t, { I: () => i });
+      var o = n(6144),
+        s = n(78327);
+      class i {
         m_setInteractions = new Set();
         m_nActiveTabID = -1;
-        m_interactionCallback = new a.lu();
+        m_interactionCallback = new o.lu();
         m_bDebugMode = !0;
         GetNewInteractionCallback() {
           return this.m_interactionCallback;
         }
         AddInteraction(e, t) {
           const n = `${this.m_nActiveTabID}_${e}_${t}`,
-            a = !this.m_setInteractions.has(n);
+            o = !this.m_setInteractions.has(n);
           this.m_setInteractions.add(n),
-            a &&
-              ("dev" == o.TS.WEB_UNIVERSE &&
+            o &&
+              ("dev" == s.TS.WEB_UNIVERSE &&
                 this.m_bDebugMode &&
                 console.log(
                   "CSaleInteractionStore new: " +
@@ -808,37 +808,196 @@
         static s_Singleton;
         static Get() {
           return (
-            s.s_Singleton ||
-              ((s.s_Singleton = new s()),
-              s.s_Singleton.Init(),
-              "dev" == o.TS.WEB_UNIVERSE &&
-                (window.g_SaleInteractionStore = s.s_Singleton)),
-            s.s_Singleton
+            i.s_Singleton ||
+              ((i.s_Singleton = new i()),
+              i.s_Singleton.Init(),
+              "dev" == s.TS.WEB_UNIVERSE &&
+                (window.g_SaleInteractionStore = i.s_Singleton)),
+            i.s_Singleton
           );
         }
         constructor() {}
         Init() {}
       }
     },
-    96971: (e, t, n) => {
-      n.d(t, { Cs: () => r, LD: () => s, MU: () => l, yD: () => i });
-      var a = n(90626);
-      const o = { eLocation: 0 },
-        s = a.createContext(o);
-      function r(e) {
-        const { children: t, location: n } = e;
-        return a.createElement(
-          s.Provider,
-          { value: { ...o, eLocation: n } },
-          t,
-        );
+    77021: (e, t, n) => {
+      n.d(t, { PM: () => m, TU: () => u, lM: () => d });
+      var o = n(34629),
+        s = n(90626),
+        i = n(78327),
+        r = n(73745),
+        a = n(14947),
+        l = n(95034),
+        c = n(65946);
+      class u {
+        m_sParentOrigin;
+        m_eventModelJson = void 0;
+        m_setMouseOverSectionID = a.sH.set();
+        m_setMouseOverSubsectionID = a.sH.set();
+        m_jumpToSection = void 0;
+        m_jumpToSubsection = void 0;
+        static s_Singleton;
+        static Get() {
+          return (
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
+              "dev" == i.TS.WEB_UNIVERSE &&
+                (window.g_PartnerSaleLivePreviewClient = u.s_Singleton)),
+            u.s_Singleton
+          );
+        }
+        constructor() {
+          (0, a.Gn)(this),
+            window.opener &&
+              ((this.m_sParentOrigin = (0, l.f3)(
+                location.search,
+                "parentOrigin",
+              )),
+              window.addEventListener("message", this.HandleMessage),
+              window.addEventListener("beforeunload", () =>
+                window.opener.postMessage(
+                  { message: "PartnerEventEditor_ClientUnready" },
+                  this.m_sParentOrigin,
+                ),
+              ),
+              window.opener.postMessage(
+                { message: "PartnerEventEditor_ClientReady" },
+                this.m_sParentOrigin,
+              ));
+        }
+        BIsConnected() {
+          return !!window.opener && this.m_eventModelJson;
+        }
+        GetEventModel() {
+          return this.m_eventModelJson;
+        }
+        GetMouseOverSectionID() {
+          return this.m_setMouseOverSectionID.size > 0
+            ? this.m_setMouseOverSectionID.values().next().value
+            : void 0;
+        }
+        GetMouseOverSubsectionID() {
+          return this.m_setMouseOverSubsectionID.size > 0
+            ? this.m_setMouseOverSubsectionID.values().next().value
+            : void 0;
+        }
+        GetJumpToSectionID() {
+          return this.m_jumpToSection;
+        }
+        GetJumpToSubsectionIDs() {
+          return this.m_jumpToSubsection;
+        }
+        ClearJumpToSectionID() {
+          (0, a.h5)(() => (this.m_jumpToSection = void 0));
+        }
+        ClearJumpToSubectionID() {
+          (0, a.h5)(() => (this.m_jumpToSubsection = void 0));
+        }
+        PostMessage(e) {
+          window.opener &&
+            this.m_sParentOrigin &&
+            window.opener.postMessage(e, this.m_sParentOrigin);
+        }
+        SetMouseOverSection(e, t) {
+          if (!this.BIsConnected()) return;
+          const n = {
+            message: "PartnerEventEditor_MouseOverViewSection",
+            nSectionID: e,
+            bMouseOver: t,
+          };
+          this.PostMessage(n);
+        }
+        SetMouseOverSubsection(e, t) {
+          if (!this.BIsConnected()) return;
+          const n = {
+            message: "PartnerEventEditor_MouseOverViewSubsection",
+            strSubsectionID: e,
+            bMouseOver: t,
+          };
+          this.PostMessage(n);
+        }
+        JumpToSection(e) {
+          if (!this.BIsConnected()) return;
+          const t = {
+            message: "PartnerEventEditor_JumpToViewSection",
+            nSectionID: e,
+          };
+          this.PostMessage(t);
+        }
+        HandleMessage(e) {
+          if (e.origin != this.m_sParentOrigin) return;
+          const t = e.data && "message" in e.data ? e.data : null;
+          if (t)
+            switch (t.message) {
+              case "PartnerEventEditor_Update":
+                if ("eventModelJson" in t && t.eventModelJson) {
+                  const e = t;
+                  (0, a.h5)(() => (this.m_eventModelJson = e.eventModelJson));
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSection":
+                if ("nSectionID" in t) {
+                  const e = t;
+                  (0, a.h5)(() => {
+                    e.bMouseOver
+                      ? this.m_setMouseOverSectionID.add(e.nSectionID)
+                      : this.m_setMouseOverSectionID.delete(e.nSectionID);
+                  });
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSubsection":
+                if ("strSubsectionID" in t) {
+                  const e = t;
+                  (0, a.h5)(() => {
+                    e.bMouseOver
+                      ? this.m_setMouseOverSubsectionID.add(e.strSubsectionID)
+                      : this.m_setMouseOverSubsectionID.delete(
+                          e.strSubsectionID,
+                        );
+                  });
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSection":
+                if ("nSectionID" in t) {
+                  const e = t;
+                  (0, a.h5)(() => (this.m_jumpToSection = e.nSectionID));
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSubection":
+                if ("strSubsectionID" in t) {
+                  const e = t;
+                  (0, a.h5)(() => {
+                    (this.m_jumpToSection = e.nSectionID),
+                      (this.m_jumpToSubsection = {
+                        nSectionID: e.nSectionID,
+                        strSubsectionID: e.strSubsectionID,
+                      });
+                  });
+                }
+            }
+        }
       }
-      function i() {
-        return a.useContext(s);
+      function d(e) {
+        const t = (0, c.q3)(() => u.Get().GetJumpToSectionID());
+        s.useEffect(() => {
+          if (!u.Get().BIsConnected() || !t) return;
+          e(t) && u.Get().ClearJumpToSectionID();
+        }, [e, t]);
       }
-      function l() {
-        return 2 == i().eLocation;
+      function m(e) {
+        const t = (0, c.q3)(() => u.Get().GetJumpToSubsectionIDs());
+        s.useEffect(() => {
+          if (!u.Get().BIsConnected() || !t) return;
+          e(t.nSectionID, t.strSubsectionID) &&
+            u.Get().ClearJumpToSubectionID();
+        }, [e, t]);
       }
+      (0, o.Cg)([a.sH], u.prototype, "m_eventModelJson", void 0),
+        (0, o.Cg)([a.sH], u.prototype, "m_setMouseOverSectionID", void 0),
+        (0, o.Cg)([a.sH], u.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, o.Cg)([a.sH], u.prototype, "m_jumpToSection", void 0),
+        (0, o.Cg)([a.sH], u.prototype, "m_jumpToSubsection", void 0),
+        (0, o.Cg)([r.oI], u.prototype, "HandleMessage", null);
     },
   },
 ]);

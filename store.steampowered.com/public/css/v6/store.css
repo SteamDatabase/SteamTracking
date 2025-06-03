@@ -233,16 +233,18 @@ body.v6 h2 a:hover {
     text-decoration: none;
 }
 
-body.v6 .home_rightcol h2 {
+body.v6 .home_rightcol .tab_title {
+	padding-top: 2px;
     margin-bottom: 7px;
     margin-top: 0px;
+	display: block;
 }
-body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
+body.v6 .home_rightcol.recommended .tab_title, body.v6 .home_leftcol h2 {
     margin-top: 30px;
     margin-bottom: 7px;
 }
 
-body.v6 .responsive_home_spotlight_recommended .home_leftcol .spotlight_content h2 {
+body.v6 .responsive_home_spotlight_recommended .home_leftcol .spotlight_content .spotlight_title {
 	margin-bottom: 2px;
 	margin-top: 1px;
 }
@@ -2400,13 +2402,25 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	margin-top: 10px;
 }
 
-.spotlight_block .spotlight_content>h2 {
+.spotlight_block .spotlight_content>.spotlight_title {
 	color: #c7d5e0;
 	font-size: 21px;
 	font-weight: normal;
 	margin: 0;
 }
 
+.spotlight_content .spotlight_title {
+	display: block;
+	font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    padding-top: 2px;
+}
 
 /*
  * TABS
@@ -3570,8 +3584,12 @@ body.v6 .discover_queue_empty>h3 {
 	position: relative;
 
 }
-.dselect_container a.trigger, .dselect_container a.activetrigger {
+.dselect_container button.trigger, .dselect_container button.activetrigger {
 	display: block;
+	box-sizing: content-box;
+	text-align: inherit;
+	cursor: pointer;
+
 	color: #67c1f5;
 	padding: 0 30px 0 8px;
 	font-size: 12px;
@@ -3586,24 +3604,24 @@ body.v6 .discover_queue_empty>h3 {
 	position:relative;
 }
 
-.dselect_container a.trigger {
+.dselect_container button.trigger {
 	background: rgba( 103, 193, 245, 0.1 );
 }
 
-.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
 	color: #ffffff;
 	background: #67c1f5;
 }
 
 
-.dselect_container a.activetrigger {
+.dselect_container button.activetrigger {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	z-index: 91;
 	position: relative;
 }
 
-.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -3613,7 +3631,7 @@ body.v6 .discover_queue_empty>h3 {
 	content: '';
 }
 
-.dselect_container a.trigger:hover,
+.dselect_container button.trigger:hover,
 .dselect_container .dropcontainer a.highlighted_selection
 {
 	color: #ffffff;
@@ -4625,7 +4643,7 @@ a.cluster_capsule:hover {
 }
 
 
-body.v6 .store_capsule_frame h2 span.right {
+body.v6 .store_capsule_frame :is(h2,span) span.right {
 	float: right;
 	text-transform: none;
 	letter-spacing: normal;
@@ -4908,11 +4926,11 @@ body.v6 .recommendation_mainsection h2 {
 	padding-top: 2px;
 }
 
-body.v6 .home_page_content h2 span.right,
-body.v6 .recommendation_section h2 span.right,
-body.v6 .recommendation_mainsection h2 span.right,
+body.v6 .home_page_content :is(h2,span) span.right,
+body.v6 .recommendation_section :is(h2,span) span.right,
+body.v6 .recommendation_mainsection :is(h2,span) span.right,
 body.v6 .user_reviews_header span.right,
-body.v6 .bucket h2 span.right{
+body.v6 .bucket :is(h2,span) span.right{
 	float: right;
 	text-transform: none;
 	letter-spacing: normal;
@@ -6312,7 +6330,9 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 }
 
 .StoreMenuLoadingPlaceholder {
-	background: #20252F;
+	border-bottom: 1px solid rgba(126, 126, 126, 0.17);
+	background: rgba(12, 26, 36, 0.55);
+	backdrop-filter: blur(50px);
 	height: 46px;
 }
 
@@ -6320,6 +6340,10 @@ body.v7menu .responsive_page_template_content {
 	position: relative;
 	z-index: 0;
 	display: flow-root; /* create a block formatting context so margins don't extend outside of this element */
+}
+
+body.v7menu:not(.sale_page_background):not(.game_bg) .responsive_page_template_content {
+	padding-top: var( --store-menu-floating-height, 46px );
 }
 
 /* 2025 Game Page Widening */

@@ -7,6 +7,7 @@
     64734: (t) => {
       t.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
@@ -299,7 +300,7 @@
     },
     27144: (t, e, n) => {
       "use strict";
-      n.d(e, { B3: () => b, CF: () => I, KM: () => L, KT: () => y });
+      n.d(e, { B3: () => b, CF: () => I, KM: () => S, KT: () => y });
       var a = n(41735),
         r = n.n(a),
         o = n(58632),
@@ -315,7 +316,7 @@
         f = n(23809),
         _ = n(7860);
       const h = "nicknames";
-      function L(t) {
+      function S(t) {
         const e = (0, f.KV)(),
           { data: n, isLoading: a } = (0, u.I)({
             queryKey: [h],
@@ -335,7 +336,7 @@
           });
         return n ? n.get(t) : null;
       }
-      const S = new (s())(
+      const L = new (s())(
           (t) =>
             (async function (t) {
               if (!t || 0 == t.length) return [];
@@ -384,7 +385,7 @@
       function y(t) {
         const { data: e, isLoading: n } = (0, u.I)({
           queryKey: [E, t],
-          queryFn: () => S.load(t),
+          queryFn: () => L.load(t),
         });
         return [e, n];
       }
@@ -393,7 +394,7 @@
           { data: n, isLoading: a } = (0, u.I)({
             queryKey: [E, t],
             queryFn: async () => {
-              const n = await S.loadMany(t);
+              const n = await L.loadMany(t);
               return (
                 n.forEach((t) => {
                   const n = [E, new l.b(t.steamid).GetAccountID()];
@@ -421,7 +422,7 @@
     },
     1909: (t, e, n) => {
       "use strict";
-      n.d(e, { Ng: () => h, iN: () => L, yk: () => S });
+      n.d(e, { Ng: () => h, iN: () => S, yk: () => L });
       var a = n(34629),
         r = n(75844),
         o = n(65946),
@@ -536,7 +537,7 @@
           );
         }
       };
-      function L(t) {
+      function S(t) {
         const [e, n] = (0, o.q3)(() => [
           c.O.Get().GetHasLocalizationContext(),
           c.O.Get().GetCurEditLanguage(),
@@ -549,7 +550,7 @@
           strTooltip: e ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function S(t) {
+      function L(t) {
         const { fnLangHasData: e } = t;
         s.useEffect(
           () => (
@@ -619,8 +620,12 @@
               e,
               Boolean(n) && s.createElement(p.o, { tooltip: n }),
             ),
-            m,
-            s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
+            s.createElement(
+              "div",
+              { className: l.SectionTitleButtons },
+              m,
+              s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
+            ),
           ),
           !_ && s.createElement(c.tH, null, d),
         );

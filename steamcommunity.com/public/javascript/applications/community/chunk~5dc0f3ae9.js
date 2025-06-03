@@ -181,6 +181,7 @@
         AppSummaryWidgetCtn: "_2H8BmYvTdIYKMgG-XiCkc-",
         CarouselSalePageCapsule: "_3r4Ny9tQdQZc50XDM5B2q2",
         SaleBroadcastCtn: "_1SFMhugeWIHJIHrHl6ZQvD",
+        SaleOuterTopMargin: "_2-wCQql61VqgdUYz9XDAE6",
         SaleOuterContainer: "_150kddWk8JgylTvh_eC20b",
         CustomStyle_together: "_1lAygDKkL4NolLsYyh0b_x",
         SaleNewSizing: "_1v-BVc2xZoBmJV2CPwNpq0",
@@ -5136,7 +5137,8 @@
             (e) => {
               e.isIntersecting &&
                 p((e) =>
-                  (null == e ? void 0 : e.appID) == t && e.snr == m
+                  (null == e ? void 0 : e.appID) == t &&
+                  (null == e ? void 0 : e.snr) == m
                     ? e
                     : { appID: t, snr: m },
                 );
@@ -5144,7 +5146,7 @@
             [t, m],
           );
         (0, a.useEffect)(() => {
-          u && d.AddImpression(u.appID, u.snr);
+          u && null != u.appID && d.AddImpression(u.appID, u.snr);
         }, [d, u]);
         const _ = (0, s.BL)(g),
           h = t && (!u || (u.appID != t && u.snr != m)),
@@ -8283,29 +8285,29 @@
     91822: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $o: () => d,
-        FD: () => m,
-        Ff: () => p,
-        _R: () => B,
-        z5: () => h,
+        $o: () => m,
+        FD: () => c,
+        Ff: () => u,
+        _R: () => h,
+        z5: () => _,
       });
       var i = r(90626),
         a = r(52038),
         n = r(12155),
-        s = r(57866),
-        o = (r(61859), r(78327));
-      const l = i.createContext({ bForceShowCompatInfo: !1, bSteamDeck: !1 }),
-        c = () => i.useContext(l);
-      function m() {
-        const { bForceShowCompatInfo: e, bSteamDeck: t } = c();
-        return o.TS.ON_STEAMOS && !t
-          ? [!0, 2]
-          : o.TS.ON_STEAMOS || e
-            ? [!0, 1]
-            : [!1, 0];
+        s = r(57866);
+      r(61859);
+      const o = i.createContext({
+          bForceShowCompatInfo: !1,
+          bSteamOS: !1,
+          bSteamDeck: !1,
+        }),
+        l = () => i.useContext(o);
+      function c() {
+        const { bForceShowCompatInfo: e, bSteamDeck: t, bSteamOS: r } = l();
+        return r && !t ? [!0, 2] : r || e ? [!0, 1] : [!1, 0];
       }
-      const d = (e) => {
-          const t = h(e.category);
+      const m = (e) => {
+          const t = _(e.category);
           return i.createElement(
             "div",
             { className: (0, a.A)(s.SteamDeckCompatInfo, e.className) },
@@ -8313,19 +8315,19 @@
             i.createElement(t, { className: s.SteamDeckCompatIcon }),
           );
         },
-        u = (e) => {
-          const t = B(e.category);
+        d = (e) => {
+          const t = h(e.category);
           return i.createElement(
             "div",
             { className: (0, a.A)(s.SteamDeckCompatInfo, e.className) },
             i.createElement(t, { className: s.SteamDeckCompatIcon }),
           );
         },
-        p = (e) => {
+        u = (e) => {
           var t, r, a, n;
           const { eDisplay: s, storeItem: o, className: l } = e;
           return 1 == s
-            ? i.createElement(d, {
+            ? i.createElement(m, {
                 category:
                   null !==
                     (r =
@@ -8337,7 +8339,7 @@
                 className: l,
               })
             : 2 == s
-              ? i.createElement(u, {
+              ? i.createElement(d, {
                   category:
                     null !==
                       (n =
@@ -8350,13 +8352,13 @@
                 })
               : null;
         },
-        g = { 1: n.jIP, 2: n.aVR, 3: n.o5Q, 0: n.WX$ },
-        _ = { 0: n.WX$, 1: n.jIP, 2: n.ZjT };
+        p = { 1: n.jIP, 2: n.aVR, 3: n.o5Q, 0: n.WX$ },
+        g = { 0: n.WX$, 1: n.jIP, 2: n.ZjT };
+      function _(e) {
+        return p[e] || n.WX$;
+      }
       function h(e) {
         return g[e] || n.WX$;
-      }
-      function B(e) {
-        return _[e] || n.WX$;
       }
     },
     34010: (e, t, r) => {
@@ -17301,113 +17303,113 @@
         q = r(79613),
         x = r(49411);
       const Z = (0, i.PA)((e) => {
-          var t, r, i;
+          var t, r;
           const {
-              bIsHovered: c,
-              setIsHovered: u,
-              displayStoreItem: p,
-              baseGameStoreItem: g,
-              displayInfo: _,
-              fallbackStoreItem: h,
+              bIsHovered: i,
+              setIsHovered: c,
+              displayStoreItem: u,
+              baseGameStoreItem: p,
+              displayInfo: g,
+              fallbackStoreItem: _,
             } = (0, S.u)(e),
             {
-              bShowDemoButton: B,
-              bPreferDemoStorePage: R,
-              bHidePrice: E,
-              bUseSubscriptionLayout: A,
-              bHidePlatforms: W,
-              bHideContainedApps: G,
-              bAllowTwoLinesForHeader: L,
-              bShowReviewSummary: U,
-              bShowDeckCompatibilityDialog: j,
-              bAutoFocus: P,
-              fnOnClickOverride: V,
-              bIsMarketingMessage: Z,
+              bShowDemoButton: h,
+              bPreferDemoStorePage: B,
+              bHidePrice: R,
+              bUseSubscriptionLayout: E,
+              bHidePlatforms: A,
+              bHideContainedApps: W,
+              bAllowTwoLinesForHeader: G,
+              bShowReviewSummary: L,
+              bShowDeckCompatibilityDialog: U,
+              bAutoFocus: j,
+              fnOnClickOverride: P,
+              bIsMarketingMessage: V,
             } = e,
-            K = (0, H.n9)(),
-            Y = (0, x.w)(),
-            J = a.useMemo(
-              () => (null == p ? void 0 : p.GetIncludedAppIDsOrSelf()),
-              [p],
+            Z = (0, H.n9)(),
+            K = (0, x.w)(),
+            Y = a.useMemo(
+              () => (null == u ? void 0 : u.GetIncludedAppIDsOrSelf()),
+              [u],
             ),
-            X = (0, a.useRef)(null),
-            [ee, te] = (0, a.useState)(!1),
-            re = (0, D.Qn)();
+            J = (0, a.useRef)(null),
+            [X, ee] = (0, a.useState)(!1),
+            te = (0, D.Qn)();
           if (
             ((0, a.useEffect)(() => {
-              X.current && te(X.current.offsetWidth < 370);
-            }, [X]),
-            !p)
+              J.current && ee(J.current.offsetWidth < 370);
+            }, [J]),
+            !u)
           )
             return null;
-          const ie = p.GetBestPurchaseOption().discount_pct,
-            ae = p.GetIncludedAppIDs().length,
-            ne = (0, d.L3)(K),
-            se = (0, n.tB)(p.GetStorePageURL(R)),
-            oe = Boolean(!G && ae > 1),
-            le = p.BHasTags()
-              ? p.GetTagIDs()
-              : (null == g ? void 0 : g.BHasTags())
-                ? g.GetTagIDs()
+          const re = u.GetBestPurchaseOption().discount_pct,
+            ie = u.GetIncludedAppIDs().length,
+            ae = (0, d.L3)(Z),
+            ne = (0, n.tB)(u.GetStorePageURL(B)),
+            se = Boolean(!W && ie > 1),
+            oe = u.BHasTags()
+              ? u.GetTagIDs()
+              : (null == p ? void 0 : p.BHasTags())
+                ? p.GetTagIDs()
                 : [],
-            ce = 1 == p.GetStoreItemType() && 1 == ae,
-            me = 0 == p.GetStoreItemType() || ce,
-            de = ce && h ? h.GetID() : _.id,
-            ue = (0, d.It)(se, K, Y),
-            pe = (0, q.Ae)(),
-            ge =
-              (null === (t = p.GetName()) || void 0 === t ? void 0 : t.length) >
+            le = 1 == u.GetStoreItemType() && 1 == ie,
+            ce = 0 == u.GetStoreItemType() || le,
+            me = le && _ ? _.GetID() : g.id,
+            de = (0, d.It)(ne, Z, K),
+            ue = (0, q.Ae)(),
+            pe =
+              (null === (t = u.GetName()) || void 0 === t ? void 0 : t.length) >
               0
-                ? p.GetName()
-                : h.GetName(),
-            _e =
-              (null === (r = p.GetFormattedSteamReleaseDate()) || void 0 === r
+                ? u.GetName()
+                : _.GetName(),
+            ge =
+              (null === (r = u.GetFormattedSteamReleaseDate()) || void 0 === r
                 ? void 0
                 : r.length) > 0
-                ? p.GetFormattedSteamReleaseDate()
-                : null == h
+                ? u.GetFormattedSteamReleaseDate()
+                : null == _
                   ? void 0
-                  : h.GetFormattedSteamReleaseDate();
-          let he = p.GetShortDescription();
-          (2 == p.GetStoreItemType() || (1 == p.GetStoreItemType() && !ce)) &&
-            (he = ie
-              ? (0, F.we)("#Sale_BundleSave_WithDiscount", ie, ae)
-              : (0, F.we)("#Sale_BundleSave", ae)),
-            (he =
-              (null == he ? void 0 : he.length) > 0
-                ? he
-                : null == h
+                  : _.GetFormattedSteamReleaseDate();
+          let _e = u.GetShortDescription();
+          (2 == u.GetStoreItemType() || (1 == u.GetStoreItemType() && !le)) &&
+            (_e = re
+              ? (0, F.we)("#Sale_BundleSave_WithDiscount", re, ie)
+              : (0, F.we)("#Sale_BundleSave", ie)),
+            (_e =
+              (null == _e ? void 0 : _e.length) > 0
+                ? _e
+                : null == _
                   ? void 0
-                  : h.GetShortDescription());
-          const Be = re || p.BIsReleased() || p.BIsPrePurchase();
+                  : _.GetShortDescription());
+          const he = te || u.BIsReleased() || u.BIsPrePurchase();
           return a.createElement(
             I.oj,
-            { appid: me ? p.GetAppID() : void 0 },
+            { appid: ce ? u.GetAppID() : void 0 },
             a.createElement(
               o.Z,
               {
                 className: (0, k.A)({
                   [N().StoreSaleWidgetOuterContainer]: !0,
-                  [N().AllowTwoLineHeader]: L,
+                  [N().AllowTwoLineHeader]: G,
                 }),
-                onMouseEnter: () => !pe && u(!0),
-                onMouseLeave: () => !pe && u(!1),
+                onMouseEnter: () => !ue && c(!0),
+                onMouseLeave: () => !ue && c(!1),
                 "flow-children": "grid",
                 navEntryPreferPosition: l.iU.PREFERRED_CHILD,
-                autoFocus: P,
-                navKey: "preview_widget_" + p.GetID(),
+                autoFocus: j,
+                navKey: "preview_widget_" + u.GetID(),
               },
               a.createElement(
                 s.ml,
                 {
-                  onClick: Z ? V : null,
+                  onClick: V ? P : null,
                   className: (0, k.A)(
                     N().StoreSaleWidgetContainer,
                     N().SaleItemDefaultCapsuleDisplay,
-                    Z ? N().MarketingMessage : "",
+                    V ? N().MarketingMessage : "",
                   ),
-                  ...(0, M.S)(p, K, re, R, void 0, V),
-                  preferredFocus: oe,
+                  ...(0, M.S)(u, Z, te, B, void 0, P),
+                  preferredFocus: se,
                 },
                 a.createElement(
                   "div",
@@ -17415,22 +17417,17 @@
                   a.createElement(
                     "a",
                     {
-                      href: V ? void 0 : ue,
-                      target: D.TS.IN_CLIENT || V ? void 0 : "_blank",
-                      onClick: V,
+                      href: P ? void 0 : de,
+                      target: D.TS.IN_CLIENT || P ? void 0 : "_blank",
+                      onClick: P,
                     },
                     a.createElement(
                       "div",
                       { className: N().StoreSaleWidgetImage },
-                      a.createElement(f.V, { appids: J }),
-                      a.createElement($, { info: _, imageType: "header" }),
-                      a.createElement(z.S, {
-                        eDeckCompatibilityCategory:
-                          null === (i = p.GetPlatforms()) || void 0 === i
-                            ? void 0
-                            : i.steam_deck_compat_category,
-                      }),
-                      Boolean(_ && c) && a.createElement(b.m, { appInfo: _ }),
+                      a.createElement(f.V, { appids: Y }),
+                      a.createElement($, { info: g, imageType: "header" }),
+                      a.createElement(z.J, { storeItem: u }),
+                      Boolean(g && i) && a.createElement(b.m, { appInfo: g }),
                     ),
                   ),
                 ),
@@ -17439,17 +17436,17 @@
                   {
                     className: (0, k.A)(
                       N().StoreSaleWidgetRight,
-                      oe ? N().Bundle : "",
+                      se ? N().Bundle : "",
                     ),
                   },
-                  Boolean(me && !V) &&
+                  Boolean(ce && !P) &&
                     a.createElement(O.EP, {
-                      appID: de,
+                      appID: me,
                       classOverride: (0, k.A)(
                         y().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: ne,
+                      snr: ae,
                     }),
                   a.createElement(
                     "div",
@@ -17457,9 +17454,9 @@
                     a.createElement(
                       "a",
                       {
-                        href: V ? void 0 : ue,
+                        href: P ? void 0 : de,
                         target: D.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: V,
+                        onClick: P,
                       },
                       a.createElement(
                         "div",
@@ -17469,18 +17466,18 @@
                             "StoreSaleWidgetTitle",
                           ),
                         },
-                        ge,
+                        pe,
                       ),
                     ),
                   ),
                   a.createElement(
                     "div",
                     { className: N().StoreSaleWidgetReleaseAndTags },
-                    le &&
+                    oe &&
                       a.createElement(
                         "div",
                         { className: N().StoreSaleWidgetTags },
-                        le.map((e) =>
+                        oe.map((e) =>
                           a.createElement(v.p, {
                             key: "tag_" + e,
                             tagid: e,
@@ -17492,39 +17489,39 @@
                       "div",
                       {
                         className: N().WidgetReleaseDateAndPlatformCtn,
-                        ref: X,
+                        ref: J,
                       },
-                      me &&
+                      ce &&
                         a.createElement(
                           "div",
                           { className: N().StoreSaleWidgetRelease },
-                          _e,
+                          ge,
                         ),
-                      !W &&
+                      !A &&
                         a.createElement(
                           a.Fragment,
                           null,
                           a.createElement(w.Q, {
-                            item: _,
-                            bMinimizePlatforms: ee,
+                            item: g,
+                            bMinimizePlatforms: X,
                           }),
                           Boolean(
-                            j &&
+                            U &&
                               0 ==
-                                (null == p ? void 0 : p.GetStoreItemType()) &&
-                              p.GetPlatforms(),
+                                (null == u ? void 0 : u.GetStoreItemType()) &&
+                              u.GetPlatforms(),
                           ) &&
                             a.createElement(m.$o, {
                               className: N().DeckCompatIcon,
                               category:
-                                p.GetPlatforms().steam_deck_compat_category,
+                                u.GetPlatforms().steam_deck_compat_category,
                             }),
                         ),
                     ),
-                    U && a.createElement(O.Jz, { appInfo: _ }),
+                    L && a.createElement(O.Jz, { appInfo: g }),
                   ),
-                  oe && a.createElement(Q, { info: _ }),
-                  Boolean(me && he) &&
+                  se && a.createElement(Q, { info: g }),
+                  Boolean(ce && _e) &&
                     a.createElement(
                       "div",
                       {
@@ -17533,32 +17530,32 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(he.startsWith("#") && -1 == he.indexOf(" "))
+                      Boolean(_e.startsWith("#") && -1 == _e.indexOf(" "))
                         ? a.createElement(
                             "span",
                             { className: N().LocalizationSpan },
                             (0, F.oW)(
-                              he,
+                              _e,
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                             ),
                           )
-                        : he,
+                        : _e,
                     ),
-                  Boolean(!V)
+                  Boolean(!P)
                     ? a.createElement(
                         a.Fragment,
                         null,
-                        Boolean(A && me)
-                          ? a.createElement(T.E, { appid: de, bIsMuted: c })
+                        Boolean(E && ce)
+                          ? a.createElement(T.E, { appid: me, bIsMuted: i })
                           : a.createElement(C.wD, {
-                              info: _,
-                              bShowDemoButton: B,
-                              bHidePrice: E,
-                              bHideWishlistButton: Be,
-                              bShowDeckCompatibilityDialog: j,
+                              info: g,
+                              bShowDemoButton: h,
+                              bHidePrice: R,
+                              bHideWishlistButton: he,
+                              bShowDeckCompatibilityDialog: U,
                             }),
                       )
                     : a.createElement(
@@ -17569,13 +17566,13 @@
                           {
                             className: N().StoreSalePriceActionWidgetContainer,
                           },
-                          a.createElement(C.wc, { info: _ }),
+                          a.createElement(C.wc, { info: g }),
                         ),
                       ),
                   a.createElement(
                     "div",
                     { className: N().StoreSaleWidgetBgTint },
-                    a.createElement($, { info: _, imageType: "header" }),
+                    a.createElement($, { info: g, imageType: "header" }),
                   ),
                 ),
               ),
@@ -17808,7 +17805,7 @@
           {
             url: e.link.url,
             className: e.strClassName ? e.strClassName : void 0,
-            bSkipForcingStoreLink: !0,
+            bSkipForcingStoreLink: !1,
           },
           a.createElement(
             "div",
@@ -17922,25 +17919,31 @@
         const g = p.GetPlatforms();
         if (u) {
           let e =
-            g.windows &&
+            (null == g ? void 0 : g.windows) &&
             i.createElement(
               "span",
               { title: (0, m.we)("#Platform_Windows") },
-              i.createElement(s.Xz0, null),
+              i.createElement(s.Xz0, {
+                "aria-label": (0, m.we)("#Platform_Windows"),
+              }),
             );
           return (
-            (0, d.Pr)() && g.mac
+            (0, d.Pr)() && (null == g ? void 0 : g.mac)
               ? (e = i.createElement(
                   "span",
                   { title: (0, m.we)("#Platform_Mac") },
-                  i.createElement(s.kPc, null),
+                  i.createElement(s.kPc, {
+                    "aria-label": (0, m.we)("#Platform_Mac"),
+                  }),
                 ))
               : ((0, d.CI)() || (0, d.Hn)() || (0, d.rf)()) &&
-                g.steamos_linux &&
+                (null == g ? void 0 : g.steamos_linux) &&
                 (e = i.createElement(
                   "span",
                   { title: (0, m.we)("#Platform_Linux") },
-                  i.createElement(s.Qte, null),
+                  i.createElement(s.Qte, {
+                    "aria-label": (0, m.we)("#Platform_Linux"),
+                  }),
                 )),
             e
               ? i.createElement(
@@ -17954,29 +17957,39 @@
         return i.createElement(
           "span",
           { className: (0, o.A)(c().CapsulePlatform, l) },
-          g.windows &&
+          (null == g ? void 0 : g.windows) &&
             i.createElement(
               "span",
               { title: (0, m.we)("#Platform_Windows") },
-              i.createElement(s.Xz0, null),
+              i.createElement(s.Xz0, {
+                "aria-label": (0, m.we)("#Platform_Windows"),
+              }),
             ),
-          g.mac &&
+          (null == g ? void 0 : g.mac) &&
             i.createElement(
               "span",
               { title: (0, m.we)("#Platform_Mac") },
-              i.createElement(s.kPc, null),
+              i.createElement(s.kPc, {
+                "aria-label": (0, m.we)("#Platform_Mac"),
+              }),
             ),
-          g.steamos_linux &&
+          (null == g ? void 0 : g.steamos_linux) &&
             i.createElement(
               "span",
               { title: (0, m.we)("#Platform_Linux") },
-              i.createElement(s.Qte, null),
+              i.createElement(s.Qte, {
+                "aria-label": (0, m.we)("#Platform_Linux"),
+              }),
             ),
-          (null === (t = g.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
+          (null === (t = null == g ? void 0 : g.vr_support) || void 0 === t
+            ? void 0
+            : t.vrhmd) &&
             i.createElement(
               "span",
               { title: (0, m.we)("#Platform_VR") },
-              i.createElement(s.VR, null),
+              i.createElement(s.VR, {
+                "aria-label": (0, m.we)("#Platform_VR"),
+              }),
             ),
         );
       }
@@ -18304,16 +18317,19 @@
           !(null === (t = s.GetBestPurchaseOption()) || void 0 === t
             ? void 0
             : t.packageid)
-        )
+        ) {
+          const e = s.BIsCustomComingSoonDisplay()
+            ? s.GetFormattedSteamReleaseDate()
+            : (0, w.we)(
+                "#EventDisplay_CallToAction_ComingSoon_Date",
+                s.GetFormattedSteamReleaseDate(),
+              );
           return n.createElement(
             "div",
             { className: d },
-            n.createElement(
-              "div",
-              { className: h().StoreSalePriceBox },
-              (0, w.we)("#EventDisplay_CallToAction_ComingSoon"),
-            ),
+            n.createElement("div", { className: h().StoreSalePriceBox }, e),
           );
+        }
         if (s.BIsFree()) {
           if (!s.BIsFreeTemporary())
             return 0 == s.GetStoreItemType() && 1 == s.GetAppType()
@@ -18409,12 +18425,7 @@
           Boolean(i) &&
             n.createElement(
               "div",
-              {
-                className: (0, b.A)(
-                  h().StoreSalePriceBox,
-                  h().StoreSalePrepurchaseLabel,
-                ),
-              },
+              { className: (0, b.A)(h().StoreSalePrepurchaseLabel) },
               n.createElement(
                 "span",
                 null,
@@ -18783,6 +18794,7 @@
                 target: m.TS.IN_CLIENT ? void 0 : "_blank",
                 className: t,
                 style: s,
+                rel: "noopener noreferrer",
               },
               o,
             )
@@ -20564,30 +20576,44 @@
     },
     54492: (e, t, r) => {
       "use strict";
-      r.d(t, { S: () => o });
+      r.d(t, { J: () => l });
       var i = r(90626),
         a = r(78327),
         n = r(52038),
-        s = r(58855);
-      function o(e) {
-        const { bAllowOutsideOfDeck: t } = e;
+        s = r(58855),
+        o = r(91822);
+      function l(e) {
+        const { bAllowOutsideOfDeck: t, storeItem: r } = e,
+          [l, c] = (0, o.FD)();
         if (!(0, a.Qn)() && !t) return null;
-        let r = "unknown";
-        switch (e.eDeckCompatibilityCategory) {
-          case 3:
-            r = "verified";
-            break;
-          case 2:
-            r = "playable";
-            break;
-          case 1:
-            r = "unsupported";
-        }
+        let m = "unknown";
+        if (2 == c)
+          switch (r.GetPlatforms().steam_os_compat_category) {
+            case 2:
+              m = "steamoscompatible";
+              break;
+            case 1:
+              m = "steamosunsupported";
+              break;
+            case 0:
+              m = "steamosunknown";
+          }
+        else
+          switch (r.GetPlatforms().steam_deck_compat_category) {
+            case 3:
+              m = "verified";
+              break;
+            case 2:
+              m = "playable";
+              break;
+            case 1:
+              m = "unsupported";
+          }
         return i.createElement("div", {
           className: (0, n.A)(
             s.CompatIcon,
             "ds_steam_deck_compat",
-            r,
+            m,
             e.className,
           ),
         });

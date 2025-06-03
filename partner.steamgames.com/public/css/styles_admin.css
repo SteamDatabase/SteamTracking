@@ -3958,10 +3958,19 @@ span.new {
 	grid-column: 2 / 4;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 15px;
 }
 
 .graphical_assets_override_option input[type="radio"] {
 	cursor: pointer;
+}
+
+.graphical_assets_override_image_col_selected {
+	display: flex;
+	flex-direction: column;
+	justify-self: end;
+	max-width: 350px;
+	gap: 5px;
 }
 
 .graphical_assets_override_option.selected {
@@ -3972,6 +3981,7 @@ span.new {
 .graphical_assets_override_option.selected .graphical_assets_override_option_title {
 	color: #ffffff;
 	cursor: default;
+	margin-bottom: 8px;
 }
 
 .graphical_assets_override_option.active .graphical_assets_override_option_title {
@@ -4019,6 +4029,10 @@ span.new {
 .graphical_assets_override_dates {
 	margin-top: 10px;
 	color: #ffffff;
+}
+
+.graphical_assets_override_create_time_label {
+	margin: 8px 0;
 }
 
 .graphical_assets_override_dates span {
