@@ -3,6 +3,13 @@
   {
     chunkid: (module) => {
       module.exports = {
+        BrowseLinkSection: "RybporTv7QYX6amlsKykc",
+        BrowseLinkGrid: "_1YL0igQNeU2NbZWTMj3MeV",
+        BrowseLinkButton: "_2u5qV-nuJYx3iwYvYEANsE",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TopCategories: "_1PQMwJUws5GG2KNPUB3H2V",
         CategoryLink: "ubV1J09hPbSYVw4DDsoqC",
         CategoryTileImage: "kp0aq-PEOve0gtNBK7PYg",
@@ -12,7 +19,6 @@
         TagLinksContainer: "_2PN4L_YNEzSUF7dDnrWSI8",
         TagLinks: "_2p1X6cYN2wtyIIon75SPqb",
         TagLink: "_4BBZ5bSJ7hftdt06nG_TH",
-        ViewAllTags: "_13kiWFXG_7p5X-hgA8XQZB",
       };
     },
     chunkid: (module) => {
@@ -76,6 +82,7 @@
         WithIcon: "_3HlkVRt9sbw2w1unA_5zZa",
         Icon: "_2sLiPNUEuQwBkKg6CLoUL0",
         Label: "_2YmyTz3bPsTarV5L3l7vVk",
+        ViewAllLink: "IkPS-NRSi9fmI3iBzRqpc",
       };
     },
     chunkid: (module) => {
@@ -274,80 +281,6 @@
               : __webpack_require__.library_capsule
                 ? _(__webpack_require__, "library_capsule")
                 : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_ = 0, _ = void 0) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _, !1, _));
-      }
-      function _(_, _, __webpack_require__ = !1, _ = void 0) {
-        return {
-          queryKey: ["DiscoveryQueue", _, _],
-          queryFn: () =>
-            (async function (_, _, __webpack_require__ = !1, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_queue_type(_),
-                _.Body().set_country_code(_._.COUNTRY),
-                _.Body().set_rebuild_queue(__webpack_require__),
-                _.Body().set_rebuild_queue_if_stale(!0),
-                (_?.nSaleTagID || _?.strContentHubType) &&
-                  _.Body().set_store_page_filter(_(_));
-              const _ = await _._.GetDiscoveryQueue(_, _);
-              if (!_.BSuccess())
-                throw `Error loading discovery queue: ${_.GetErrorMessage()}`;
-              return _.Body().toObject();
-            })(_, _, __webpack_require__, _),
-          enabled: _._.logged_in,
-        };
-      }
-      function _(_) {
-        const _ = _?.nSaleTagID,
-          _ = _?.strContentHubType,
-          _ = _?.strContentHubCategory,
-          _ = _?.nContentHubTagID,
-          _ = _?.bDiscountsOnly,
-          _ = _?.bPrioritizeDiscounts,
-          _ = _?.strOptInName,
-          _ = _?.nOptInTagID,
-          _ = _?.nPruneTagID,
-          _ = _?.bOptInOnly,
-          _ = new _._();
-        if (_) {
-          const _ = new _._();
-          _.set_sale_tagid(_), _.set_sale_filter(_);
-        } else if (_) {
-          const _ = new _._();
-          if (
-            (_.set_hub_type(_),
-            "category" === _
-              ? _.set_hub_category(_)
-              : "tags" === _ && _.set_hub_tagid(_),
-            _ ? _.set_discount_filter(1) : _ && _.set_discount_filter(2),
-            _)
-          ) {
-            const _ = new _._();
-            _.set_name(_),
-              _.set_optin_tagid(_),
-              _.set_prune_tagid(_),
-              _.set_optin_only(_),
-              _.set_optin(_);
-          }
-          _.set_content_hub_filter(_);
-        }
-        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -586,6 +519,24 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          storeBrowseContext: _,
+          cacheStoreItemData: __webpack_require__,
+        } = (0, _._)();
+        return _.useMemo(
+          () => ({
+            storeBrowseContext: _,
+            dataPreload: _
+              ? {
+                  cacheStoreItemData: __webpack_require__,
+                  data_request: _,
+                }
+              : void 0,
+          }),
+          [_, __webpack_require__, _],
+        );
+      }
       function _(_, _, _, _, _ = 5, _) {
         return {
           queryKey: ["SearchSuggestions", _, _, _],
@@ -693,6 +644,16 @@
         );
       }
       const _ = [4, 3];
+      function _(_, _) {
+        const _ = [_];
+        if (_ && _.preferences && void 0 !== _.preferences.primary_language) {
+          const { primary_language: _, secondary_languages: _ } = _.preferences;
+          if ((_ !== _ && __webpack_require__.push(_), _))
+            for (let _ = 0; _ < 31; _++)
+              (_ >> _) & 1 && _ != _ && _ != _ && __webpack_require__.push(_);
+        }
+        return _;
+      }
       function _(_) {
         return _?.content_descriptor_preferences?.content_descriptors_to_exclude
           ? _.content_descriptor_preferences?.content_descriptors_to_exclude?.map(
@@ -1191,15 +1152,7 @@
               const _ = await _._.GetContentHubConfig(_, _);
               if (!_.BSuccess())
                 throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
-              const _ = _.Body().toObject().hubconfigs || [];
-              return (
-                _.forEach((_) => {
-                  _.url_path ||
-                    "tagids" !== _.type ||
-                    (_.url_path = `category/${encodeURIComponent(_.handle)}/`);
-                }),
-                _
-              );
+              return _.Body().toObject().hubconfigs || [];
             })(_, _),
           staleTime: _,
         };
@@ -1223,15 +1176,6 @@
           },
           staleTime: _,
         };
-      }
-      function _(_ = !0) {
-        const _ = _((0, _._)(), (0, _._)());
-        return (0, _._)({
-          ..._,
-          select: (_) =>
-            _.visit_data?.recent_apps?.map(({ item_id: _ }) => _) || [],
-          enabled: _.enabled && _,
-        });
       }
       function _(_ = !0) {
         const _ = _((0, _._)(), (0, _._)(), (0, _._)(), (0, _._)(), (0, _._)());
@@ -1832,17 +1776,6 @@
           ),
         );
       }
-      function _(_) {
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _.CapsuleList,
-          },
-          _.children,
-        );
-      }
       const _ = _.memo(function (_) {
         const {
             itemid: _,
@@ -2090,24 +2023,8 @@
           ),
           _ = (function (_, _ = 5, _) {
             const _ = (0, _._)(),
-              { storeBrowseContext: _, cacheStoreItemData: _ } = (0, _._)();
-            return _.useCallback(
-              (_) =>
-                _(
-                  _,
-                  _,
-                  _,
-                  _
-                    ? {
-                        cacheStoreItemData: _,
-                        data_request: _,
-                      }
-                    : void 0,
-                  _,
-                  _,
-                ),
-              [_, _, _, _, _, _],
-            );
+              { storeBrowseContext: _, dataPreload: _ } = _(_);
+            return _.useCallback((_) => _(_, _, _, _, _, _), [_, _, _, _, _]);
           })(_, 5, _),
           _ = (function (_, ..._) {
             const [_, _] = _.useState([]);
@@ -2142,7 +2059,15 @@
           _ = _ && "" == _,
           { data: _ } = _(_),
           { data: _ } = _(_),
-          { data: _ } = _(_);
+          { data: _ } = (function (_ = !0) {
+            const _ = _((0, _._)(), (0, _._)());
+            return (0, _._)({
+              ..._,
+              select: (_) =>
+                _.visit_data?.recent_apps?.map(({ item_id: _ }) => _) || [],
+              enabled: _.enabled && _,
+            });
+          })(_);
         _.useMemo(() => _._(_().slice()), []);
         return (function (_) {
           const [_, _] = _.useState(_ || _),
@@ -2858,33 +2783,100 @@
       function _() {
         return _.useContext(_).wide;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          href: _,
+          label: __webpack_require__ = _("#Menu_Popover_ViewAll"),
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.ViewAllLink,
+            href: _,
+          },
+          __webpack_require__,
+          _.createElement(_, null),
+        );
+      }
       function _() {
-        const { data: _, isFetching: _ } = _(),
-          { data: __webpack_require__ } = _(
-            !_._.logged_in || (_ && 0 == _.length && !_),
-          ),
-          { title: _, rgApps: _ } = _.useMemo(
-            () =>
-              _ && _.length
-                ? {
-                    title: _("#Menu_Section_Browse_PickUpWhereYouLeftOff"),
-                    rgApps: _.slice(0, 3),
-                  }
-                : __webpack_require__
-                  ? {
-                      title: _("#Menu_SearchBar_PopularItems"),
-                      rgApps: __webpack_require__.slice(0, 3),
-                    }
-                  : {
-                      title: "",
-                      rgApps: void 0,
-                    },
-            [_, __webpack_require__],
-          );
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 7 11",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M3.41628 5.2L-6.9089e-08 1.58057L1.49186 6.52113e-08L6.4 5.2L1.49186 10.4L-3.85509e-07 8.81943L3.41628 5.2Z",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        return {
+          queryKey: ["StoreQuery", _],
+          queryFn: () =>
+            (async function (_, _, _, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
+              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
+              const _ = await _._.Query(_, _);
+              if (1 != _.GetEResult())
+                throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
+              _ &&
+                _.Body()
+                  .store_items()
+                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
+              return {
+                rgItemIDs: _.Body().ids().map(_._),
+                metadata: _.Body().metadata().toObject(),
+              };
+            })(_, _, _, _, _),
+          staleTime: 6e5,
+        };
+      }
+      function _(_, _, _, _, _, _) {
+        const { count: _ = 40, name: _ = "PopularNewReleases" } = _ ?? {};
+        return _(
+          _,
+          _,
+          _,
+          {
+            sort: 40,
+            start: 0,
+            count: _,
+            filters: {
+              released_only: !0,
+              exclude_from: [3, 2],
+              predefined_filter: {
+                filter_type: 1,
+                language_preferences: _,
+              },
+              content_descriptors_excluded: _,
+            },
+          },
+          _,
+        );
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _, dataPreload: _ } = _(_),
+          { data: _ } = (function () {
+            const _ = (0, _._)(),
+              _ = _._.accountid;
+            return (0, _._)(_(_, _));
+          })();
+        return (0, _._)({
+          ..._(_, _, _, _(_, (0, _._)(_._.LANGUAGE)), _(_), _),
+          enabled: void 0 !== _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _() {
         return _.createElement(
           _,
           null,
@@ -2892,21 +2884,14 @@
             _,
             null,
             _.createElement(_, null),
-            _.createElement(
-              _,
-              null,
-              _.createElement(_, null, _),
-              _ &&
-                _.createElement(_, {
-                  rgItemIDs: _,
-                }),
-            ),
-            _.createElement(_, {
-              rgRecentApps: _,
-            }),
+            _.createElement(_, null, _.createElement(_, null)),
+            _.createElement(_, null),
           ),
         );
       }
+      const _ = {
+        include_assets: !0,
+      };
       function _() {
         return _.createElement(
           _,
@@ -2963,96 +2948,109 @@
           ),
         );
       }
-      const _ = _._();
-      function _(_) {
-        const { rgRecentApps: _ } = _,
-          _ = _.useMemo(() => new Set(_?.map((_) => (0, _._)(_)) || []), [_]);
+      _._();
+      function _() {
+        const { data: _ } = _(),
+          _ = _?.get("freetoplay"),
+          _ = _?.get("demos");
         return _.createElement(
           _,
           null,
-          _.createElement(_, {
-            setRecentApps: _,
-          }),
+          _.createElement(
+            _,
+            {
+              title: _("#Menu_Section_Browse_FreeToPlay"),
+              hrefViewAll: _?.url_path,
+            },
+            _ &&
+              _.createElement(_, {
+                label: _("#Menu_Section_Browse_TopFreeToPlay"),
+                href: _.url_path,
+              }),
+            _ &&
+              _.createElement(_, {
+                label: _.display_name,
+                href: _.url_path,
+              }),
+          ),
+          _.createElement(
+            _,
+            {
+              title: _("#Menu_Section_Browse_Discounts"),
+              hrefViewAll: "specials/",
+            },
+            _.createElement(_, {
+              label: _("#Menu_Section_Browse_Discounts_OnYourWishlist"),
+              href: "wishlist/?min_discount=any",
+            }),
+            _.createElement(_, {
+              label: _("#Menu_Section_Browse_Discounts_SpecialEvents"),
+              href: "news/TODO",
+            }),
+            _.createElement(_, {
+              label: _("#Menu_Section_Browse_Discounts_PopularTitles"),
+              href: "specials/",
+            }),
+          ),
           _.createElement(_, null),
         );
       }
       function _(_) {
-        const { setRecentApps: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(6),
-          { data: _ } = (0, _._)(7),
-          { data: _ } = (0, _._)(
-            __webpack_require__?.exhausted ? _._.steamid : void 0,
+        const { title: _, hrefViewAll: __webpack_require__, children: _ } = _,
+          _ = (0, _._)(
+            __webpack_require__ &&
+              `${_._.STORE_BASE_URL}${__webpack_require__}`,
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _.BrowseLinkSection,
+          },
+          _.createElement(
+            _,
+            {
+              title: _,
+            },
+            _ &&
+              _.createElement(_, {
+                href: _,
+              }),
           ),
-          _ = _.useMemo(() => {
-            let _ = [];
-            __webpack_require__ && __webpack_require__.appids?.length
-              ? (_ = __webpack_require__.appids)
-              : _ && _.items.length && (_ = _.items.map(({ appid: _ }) => _));
-            const _ = _.filter(
-              (_) =>
-                !_.has(
-                  (0, _._)({
-                    appid: _,
-                  }),
-                ),
-            );
-            if (!_.length) return [];
-            const _ = _._(_);
-            return _._(_, 3, _);
-          }, [_, __webpack_require__, _]),
-          _ = _.useMemo(() => {
-            if (!_ || !_.appids?.length) return [];
-            const _ = _.appids.filter(
-              (_) =>
-                !_.has(
-                  (0, _._)({
-                    appid: _,
-                  }),
-                ) && !_.includes(_),
-            );
-            if (!_.length) return [];
-            const _ = _._(_);
-            return _._(_, 3, _);
-          }, [_, _, _]);
-        if (!_.length && !_.length) return null;
-        const _ = _.slice(0, _.length > 0 ? 1 : 2),
-          _ = _.slice(0, 2 - _.length);
+          _.createElement(
+            "div",
+            {
+              className: _.BrowseLinkGrid,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const { label: _, href: __webpack_require__ } = _,
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
+        return _.createElement(
+          "a",
+          {
+            className: _.BrowseLinkButton,
+            href: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { data: _ } = _(
+          {
+            count: 3,
+          },
+          _,
+        );
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, null, _("#Menu_Section_Browse_ForYou")),
-          _.createElement(
-            _,
-            null,
-            _.map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _,
-                  toolTipContent: _("#Menu_Section_Browse_FromYourWishlist"),
-                },
-                _.createElement(_, {
-                  itemid: {
-                    appid: _,
-                  },
-                }),
-              ),
-            ),
-            _.map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _,
-                  toolTipContent: _("#Menu_Section_Browse_DLCForYou"),
-                },
-                _.createElement(_, {
-                  itemid: {
-                    appid: _,
-                  },
-                }),
-              ),
-            ),
-          ),
+          _.createElement(_, null, "Popular New"),
+          _.createElement(_, {
+            rgItemIDs: _?.rgItemIDs || [],
+          }),
         );
       }
       function _() {
@@ -3281,15 +3279,10 @@
             {
               title: _("#Menu_Section_Categories_YourTopGenres"),
             },
-            _.createElement(
-              "a",
-              {
-                className: _.ViewAllTags,
-                href: `${_._.STORE_BASE_URL}sitemap/#genres`,
-              },
-              _("#Menu_Section_Categories_ViewAll"),
-              _.createElement(_, null),
-            ),
+            _.createElement(_, {
+              href: `${_._.STORE_BASE_URL}sitemap/#genres`,
+              label: _("#Menu_Section_Categories_ViewAll"),
+            }),
           ),
           _.createElement(_, null, _.createElement(_, null)),
         );
@@ -3415,15 +3408,10 @@
                           }),
                     ),
                   ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.ViewAllTags,
-                      href: `${_._.STORE_BASE_URL}tag/browse/`,
-                    },
-                    _("#Menu_Section_Categories_ViewAllTags"),
-                    _.createElement(_, null),
-                  ),
+                  _.createElement(_, {
+                    href: `${_._.STORE_BASE_URL}tag/browse/`,
+                    label: _("#Menu_Section_Categories_ViewAllTags"),
+                  }),
                 ),
               );
         }),
@@ -3530,22 +3518,6 @@
           alt: "",
           src: `${_._.STORE_CDN_URL}categories/image/tags/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
         });
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 7 11",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M3.41628 5.2L-6.9089e-08 1.58057L1.49186 6.52113e-08L6.4 5.2L1.49186 10.4L-3.85509e-07 8.81943L3.41628 5.2Z",
-          }),
-        );
       }
       var _ = __webpack_require__("chunkid");
       const _ =
@@ -3937,16 +3909,7 @@
             _ = (0, _._)(),
             _ = (0, _._)();
           (0, _.useEffect)(() => {
-            !(function (_, _, _, _) {
-              const _ = [
-                _.prefetchQuery(
-                  (0, _._)(_, _, void 0, {
-                    include_assets: !0,
-                  }),
-                ),
-              ];
-              _ && _.push(_.prefetchQuery(_(_, _))), Promise.all(_);
-            })(_, _, _, _),
+            Promise.resolve(),
               (function (_, _, _, _, _) {
                 const _ = [_.prefetchQuery((0, _._)(_, _, _.language))];
                 _ &&
@@ -4756,6 +4719,239 @@
             __webpack_require__.content_descriptorids.includes(3) ||
             __webpack_require__.content_descriptorids.includes(4))
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.filter((_) => !_.includes(_));
+      }
+      var _ = class extends _._ {
+          #e;
+          #t;
+          #n;
+          #r;
+          #a;
+          #i;
+          #s;
+          #c;
+          constructor(_, _, _) {
+            super(),
+              (this.#e = _),
+              (this.#r = _),
+              (this.#n = []),
+              (this.#a = []),
+              (this.#t = []),
+              this.setQueries(_);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#a.forEach((_) => {
+                _.subscribe((_) => {
+                  this.#o(_, _);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#a.forEach((_) => {
+                _.destroy();
+              });
+          }
+          setQueries(_, _, _) {
+            (this.#n = _),
+              (this.#r = _),
+              _._.batch(() => {
+                const _ = this.#a,
+                  _ = this.#l(this.#n);
+                _.forEach((_) =>
+                  _.observer.setOptions(_.defaultedQueryOptions, _),
+                );
+                const _ = _.map((_) => _.observer),
+                  _ = _.map((_) => _.getCurrentResult()),
+                  _ = _.some((_, _) => _ !== _[_]);
+                (_.length !== _.length || _) &&
+                  ((this.#a = _),
+                  (this.#t = _),
+                  this.hasListeners() &&
+                    (_(_, _).forEach((_) => {
+                      _.destroy();
+                    }),
+                    _(_, _).forEach((_) => {
+                      _.subscribe((_) => {
+                        this.#o(_, _);
+                      });
+                    }),
+                    this.#u()));
+              });
+          }
+          getCurrentResult() {
+            return this.#t;
+          }
+          getQueries() {
+            return this.#a.map((_) => _.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#a;
+          }
+          getOptimisticResult(_, _) {
+            const _ = this.#l(_).map((_) =>
+              _.observer.getOptimisticResult(_.defaultedQueryOptions),
+            );
+            return [_, (_) => this.#m(_ ?? _, _), () => this.#d(_, _)];
+          }
+          #d(_, _) {
+            const _ = this.#l(_);
+            return __webpack_require__.map((_, _) => {
+              const _ = _[_];
+              return _.defaultedQueryOptions.notifyOnChangeProps
+                ? _
+                : _.observer.trackResult(_, (_) => {
+                    __webpack_require__.forEach((_) => {
+                      _.observer.trackProp(_);
+                    });
+                  });
+            });
+          }
+          #m(_, _) {
+            return _
+              ? ((this.#i && this.#t === this.#c && _ === this.#s) ||
+                  ((this.#s = _),
+                  (this.#c = this.#t),
+                  (this.#i = (0, _._)(this.#i, _(_)))),
+                this.#i)
+              : _;
+          }
+          #l(_) {
+            const _ = new Map(this.#a.map((_) => [_.options.queryHash, _])),
+              _ = [];
+            return (
+              _.forEach((_) => {
+                const _ = this.#e.defaultQueryOptions(_),
+                  _ = _.get(_.queryHash);
+                if (_)
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _,
+                  });
+                else {
+                  const _ = this.#a.find(
+                    (_) => _.options.queryHash === _.queryHash,
+                  );
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _ ?? new _._(this.#e, _),
+                  });
+                }
+              }),
+              __webpack_require__.sort(
+                (_, _) =>
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ) -
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ),
+              )
+            );
+          }
+          #o(_, _) {
+            const _ = this.#a.indexOf(_);
+            -1 !== _ &&
+              ((this.#t = (function (_, _, _) {
+                const _ = _.slice(0);
+                return (_[_] = _), _;
+              })(this.#t, _, _)),
+              this.#u());
+          }
+          #u() {
+            if (this.hasListeners()) {
+              this.#i !==
+                this.#m(this.#d(this.#t, this.#n), this.#r?.combine) &&
+                _._.batch(() => {
+                  this.listeners.forEach((_) => {
+                    _(this.#t);
+                  });
+                });
+            }
+          }
+        },
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ queries: _, ..._ }, _) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => {
+                const _ = _.defaultQueryOptions(_);
+                return (
+                  (_._optimisticResults = _ ? "isRestoring" : "optimistic"), _
+                );
+              }),
+            [_, _, _],
+          );
+        _.forEach((_) => {
+          (0, _._)(_), (0, _._)(_, _);
+        }),
+          (0, _._)(_);
+        const [_] = _.useState(() => new _(_, _, _)),
+          [_, _, _] = _.getOptimisticResult(_, _.combine);
+        _.useSyncExternalStore(
+          _.useCallback(
+            (_) => (_ ? _._ : _.subscribe(_._.batchCalls(_))),
+            [_, _],
+          ),
+          () => _.getCurrentResult(),
+          () => _.getCurrentResult(),
+        ),
+          _.useEffect(() => {
+            _.setQueries(_, _, {
+              listeners: !1,
+            });
+          }, [_, _, _]);
+        const _ = _.some((_, _) => (0, _._)(_[_], _))
+          ? _.flatMap((_, _) => {
+              const _ = _[_];
+              if (_) {
+                const _ = new _._(_, _);
+                if ((0, _._)(_, _)) return (0, _._)(_, _, _);
+                (0, _._)(_, _) && (0, _._)(_, _, _);
+              }
+              return [];
+            })
+          : [];
+        if (_.length > 0) throw Promise.all(_);
+        const _ = _.find((_, _) => {
+          const _ = _[_];
+          return (
+            _ &&
+            (0, _._)({
+              result: _,
+              errorResetBoundary: _,
+              throwOnError: _.throwOnError,
+              query: _.getQueryCache().get(_.queryHash),
+            })
+          );
+        });
+        if (_?.error) throw _.error;
+        return _(_());
       }
     },
   },

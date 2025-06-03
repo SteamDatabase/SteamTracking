@@ -4946,28 +4946,21 @@
         }
         return e;
       }
-      function n(e, t, r = Math.random) {
-        const i = [];
-        let n = t;
-        for (let t = 0; t < e.length && n > 0; t++)
-          r() <= n / (e.length - t) && (i.push(e[t]), n--);
-        return i;
-      }
-      function s(e, t, r) {
+      function n(e, t, r) {
         if (t >= 0 || r >= 0) {
           const i = e.splice(t, 1)[0];
           r >= e.length ? (e[r] = i) : e.splice(r, 0, i);
         }
         return e;
       }
-      function a(e, t) {
+      function s(e, t) {
         if (!e && !t) return !0;
         if (!e || !t) return !1;
         if (e.length != t.length) return !1;
         for (let r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
         return !0;
       }
-      function o(e, t, r) {
+      function a(e, t, r) {
         if (!e && !t) return !0;
         if (!e || !t) return !1;
         if (e.length !== t.length) return !1;
@@ -4976,14 +4969,14 @@
         for (let e = 0; e < i.length; e++) if (i[e] !== n[e]) return !1;
         return !0;
       }
-      function l(e, t) {
-        return c(e, (e) => t == e);
+      function o(e, t) {
+        return l(e, (e) => t == e);
       }
-      function c(e, t) {
+      function l(e, t) {
         const r = e.findIndex(t);
         return r >= 0 && (e.splice(r, 1), !0);
       }
-      function u(e, t, r) {
+      function c(e, t, r) {
         return (
           e ||
             console.error(
@@ -4993,14 +4986,13 @@
         );
       }
       r.d(t, {
-        $Y: () => u,
-        R5: () => a,
-        Wp: () => c,
+        $Y: () => c,
+        R5: () => s,
+        Wp: () => l,
         fW: () => i,
-        tQ: () => n,
-        x9: () => l,
-        yY: () => s,
-        zl: () => o,
+        x9: () => o,
+        yY: () => n,
+        zl: () => a,
       });
     },
     81393: (e, t, r) => {
@@ -28091,7 +28083,7 @@
     },
     6375: (e, t, r) => {
       "use strict";
-      r.d(t, { Zz: () => k, nU: () => F, hR: () => L });
+      r.d(t, { Zz: () => W, hR: () => O });
       var i,
         n = r(56545),
         s = r(80613),
@@ -29262,32 +29254,12 @@
       })(i || (i = {}));
       var I = r(23809),
         T = r(20194);
-      function E(e, t) {
-        return {
-          queryKey: ["wishlist", t],
-          queryFn: () =>
-            (async function (e, t) {
-              const r = n.w.Init(u);
-              r.Body().set_steamid(t);
-              const s = await i.GetWishlist(e, r);
-              if (!s.BSuccess())
-                throw `Error loading wishlist: ${s.GetErrorMessage()}`;
-              return { steamid: t, items: s.Body().toObject().items || [] };
-            })(e, t),
-          staleTime: 6e5,
-          enabled: !!t && "0" != t,
-        };
-      }
-      function F(e) {
-        const t = (0, I.KV)();
-        return (0, T.I)(E(t, e));
-      }
-      function O(e) {
+      function E(e) {
         return ["wishlistitemcount", e];
       }
-      function W(e, t) {
+      function F(e, t) {
         return {
-          queryKey: O(t),
+          queryKey: E(t),
           queryFn: () =>
             (async function (e, t) {
               const r = await i.GetWishlistItemCount(e, { steamid: t });
@@ -29299,12 +29271,12 @@
           enabled: !!t && "0" != t,
         };
       }
-      function L(e) {
+      function O(e) {
         const t = (0, I.KV)();
-        return (0, T.I)(W(t, e));
+        return (0, T.I)(F(t, e));
       }
-      function k(e, t, r) {
-        e.setQueryData(O(t), () => r);
+      function W(e, t, r) {
+        e.setQueryData(E(t), () => r);
       }
     },
     12611: (e, t, r) => {
@@ -56805,9 +56777,8 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
-            r.e(5783),
             r.e(8567),
-            r.e(1283),
+            r.e(2125),
             r.e(2965),
           ]).then(r.bind(r, 16546)),
         ),
@@ -56831,9 +56802,8 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
-            r.e(5783),
             r.e(8567),
-            r.e(1283),
+            r.e(2125),
             r.e(2965),
           ])
             .then(r.bind(r, 16546))
@@ -57333,9 +57303,8 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
-            r.e(5783),
             r.e(8567),
-            r.e(1283),
+            r.e(2125),
             r.e(3164),
           ]).then(r.bind(r, 13164)),
         ),
@@ -57359,9 +57328,8 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
-            r.e(5783),
             r.e(8567),
-            r.e(1283),
+            r.e(2125),
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
@@ -57385,11 +57353,10 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
-            r.e(5783),
             r.e(8567),
-            r.e(1283),
+            r.e(2125),
             r.e(2965),
-          ]).then(r.bind(r, 42976)),
+          ]).then(r.bind(r, 44979)),
         ),
         ut = n.lazy(() =>
           Promise.all([
@@ -57583,7 +57550,7 @@
           ]).then(r.bind(r, 84155)),
         ),
         Bt = n.lazy(() =>
-          Promise.all([r.e(5487), r.e(5783), r.e(6723)]).then(r.bind(r, 83294)),
+          Promise.all([r.e(5487), r.e(6723)]).then(r.bind(r, 98501)),
         );
       const wt = function (e) {
         return n.createElement(W.tH, null, n.createElement(C.qh, { ...e }));

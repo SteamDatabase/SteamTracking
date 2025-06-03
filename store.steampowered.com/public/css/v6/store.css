@@ -4714,6 +4714,10 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	min-width: 972px;
 }
 
+body.v7menu .game_page_background {
+	padding-top: var( --store-menu-floating-height, 46px );
+}
+
 .mature_content_filtered {
 	padding: 10px;
 	margin-bottom: 10px;
