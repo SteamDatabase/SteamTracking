@@ -253,6 +253,7 @@ input.custom_form_text.right_hint
 	box-sizing: content-box;
 	text-align: inherit;
 	cursor: pointer;
+	position: relative;
 
 	color: #67C1F5;
 	padding: 0 30px 0 8px;
