@@ -30167,6 +30167,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -30196,6 +30197,23 @@
         _ && (_ = _);
         const _ = _ ? _ : _;
         return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["resolvedSingleAppPackageIDs", _?.map(_._)],
+          queryFn: async () =>
+            await Promise.all(
+              _.map((_) =>
+                "packageid" in _
+                  ? __webpack_require__.fetchQuery(_(_, _))
+                  : Promise.resolve(_),
+              ),
+            ),
+          enabled: !!_,
+          staleTime: 1 / 0,
+        });
       }
       function _(_, _) {
         const _ = _ && "packageid" in _ && !!_.packageid;
@@ -62843,10 +62861,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63387,35 +63407,38 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63636,6 +63659,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),

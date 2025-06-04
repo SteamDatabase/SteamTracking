@@ -27390,17 +27390,18 @@
     39777: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AQ: () => g,
+        AQ: () => _,
         J$: () => o,
-        Q_: () => m,
+        Q_: () => d,
         U2: () => l,
-        j4: () => p,
-        jD: () => h,
-        lv: () => d,
-        rK: () => _,
-        us: () => B,
-        vB: () => y,
-        wl: () => u,
+        hu: () => c,
+        j4: () => g,
+        jD: () => f,
+        lv: () => p,
+        rK: () => h,
+        us: () => w,
+        vB: () => M,
+        wl: () => m,
       });
       var i = r(20194),
         n = r(75233),
@@ -27408,7 +27409,7 @@
         a = r(7338);
       function o(e) {
         const t = (0, a.eG)();
-        return (0, i.I)(B(t, e));
+        return (0, i.I)(w(t, e));
       }
       function l(e) {
         const t = (0, a.eG)(),
@@ -27416,22 +27417,37 @@
           s = e && "packageid" in e && !!e.packageid;
         let o;
         if (s) {
-          const t = r.getQueryData(w(e, "default_info"));
+          const t = r.getQueryData(y(e, "default_info"));
           t &&
             1 == t.included_appids?.length &&
             (o = { appid: t.included_appids[0] });
         }
-        const { data: l } = (0, i.I)({ ...c(t, e), enabled: s && !o });
+        const { data: l } = (0, i.I)({ ...u(t, e), enabled: s && !o });
         l && (o = l);
-        const u = s ? o : e;
-        return (0, i.I)(B(t, u));
+        const c = s ? o : e;
+        return (0, i.I)(w(t, c));
       }
-      function c(e, t) {
+      function c(e) {
+        const t = (0, a.eG)(),
+          r = (0, n.jE)();
+        return (0, i.I)({
+          queryKey: ["resolvedSingleAppPackageIDs", e?.map(s.ER)],
+          queryFn: async () =>
+            await Promise.all(
+              e.map((e) =>
+                "packageid" in e ? r.fetchQuery(u(t, e)) : Promise.resolve(e),
+              ),
+            ),
+          enabled: !!e,
+          staleTime: 1 / 0,
+        });
+      }
+      function u(e, t) {
         const r = t && "packageid" in t && !!t.packageid;
         return {
-          queryKey: w(t, "include_included_items"),
+          queryKey: y(t, "include_included_items"),
           queryFn: async () => {
-            const r = await S(e, t, "include_included_items");
+            const r = await v(e, t, "include_included_items");
             return 1 == r.included_appids?.length
               ? { appid: r.included_appids[0] }
               : t;
@@ -27440,94 +27456,94 @@
           enabled: r,
         };
       }
-      function u(e) {
-        const t = (0, a.eG)();
-        return (0, i.I)(
-          (function (e, t) {
-            return f(e, t, "include_basic_info", "basic_info");
-          })(t, e),
-        );
-      }
       function m(e) {
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
+            return b(e, t, "include_basic_info", "basic_info");
+          })(t, e),
+        );
+      }
+      function d(e) {
+        const t = (0, a.eG)();
+        return (0, i.I)(
+          (function (e, t) {
             return {
-              ...B(e, t),
+              ...w(e, t),
               select: (e) => e.best_purchase_option || null,
               staleTime: 6e5,
             };
           })(t, e),
         );
       }
-      function d(e) {
-        const t = (0, a.eG)();
-        return (0, i.I)(g(t, e));
-      }
       function p(e) {
+        const t = (0, a.eG)();
+        return (0, i.I)(_(t, e));
+      }
+      function g(e) {
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return f(e, t, "include_screenshots", "screenshots");
+            return b(e, t, "include_screenshots", "screenshots");
           })(t, e),
         );
       }
-      function g(e, t) {
-        return f(e, t, "include_assets", "assets");
-      }
       function _(e, t) {
-        return f(e, t, "include_platforms", "platforms");
+        return b(e, t, "include_assets", "assets");
       }
       function h(e, t) {
-        return f(e, t, "apply_user_filters", "user_filter_failure");
+        return b(e, t, "include_platforms", "platforms");
       }
-      function f(e, t, r, i) {
+      function f(e, t) {
+        return b(e, t, "apply_user_filters", "user_filter_failure");
+      }
+      function b(e, t, r, i) {
         return {
-          queryKey: w(t, r),
-          queryFn: async () => (await S(e, t, r))[i] || null,
+          queryKey: y(t, r),
+          queryFn: async () => (await v(e, t, r))[i] || null,
           staleTime: 216e5,
           enabled: !!t,
         };
       }
-      function b(e, t, r, i, n) {
-        e.setQueryData(w(t, i), r[n]);
-      }
-      function B(e, t) {
-        return {
-          queryKey: w(t, "default_info"),
-          queryFn: async () => C(await S(e, t, "default_info")),
-          staleTime: 216e5,
-          enabled: !!t,
-        };
+      function B(e, t, r, i, n) {
+        e.setQueryData(y(t, i), r[n]);
       }
       function w(e, t) {
+        return {
+          queryKey: y(t, "default_info"),
+          queryFn: async () => S(await v(e, t, "default_info")),
+          staleTime: 216e5,
+          enabled: !!t,
+        };
+      }
+      function y(e, t) {
         return ["StoreItem", e && (0, s.ER)(e), t];
       }
-      function y(e, t, r) {
+      function M(e, t, r) {
         const i = (0, s.Jz)(t);
         i &&
           (!(function (e, t, r) {
-            e.setQueryData(w(t, "default_info"), C(r));
+            e.setQueryData(y(t, "default_info"), S(r));
           })(e, i, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              b(e, t, r, "include_basic_info", "basic_info");
+              B(e, t, r, "include_basic_info", "basic_info");
             })(e, i, t),
           r.include_assets &&
             (function (e, t, r) {
-              b(e, t, r, "include_assets", "assets");
+              B(e, t, r, "include_assets", "assets");
             })(e, i, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              b(e, t, r, "include_screenshots", "screenshots");
+              B(e, t, r, "include_screenshots", "screenshots");
             })(e, i, t),
           r.include_trailers &&
             (function (e, t, r) {
-              b(e, t, r, "include_trailers", "trailers");
+              B(e, t, r, "include_trailers", "trailers");
             })(e, i, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              b(
+              B(
                 e,
                 t,
                 r,
@@ -27537,35 +27553,35 @@
             })(e, i, t),
           r.include_reviews &&
             (function (e, t, r) {
-              b(e, t, r, "include_reviews", "reviews");
+              B(e, t, r, "include_reviews", "reviews");
             })(e, i, t),
           r.include_release &&
             (function (e, t, r) {
-              b(e, t, r, "include_release", "release");
+              B(e, t, r, "include_release", "release");
             })(e, i, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              b(e, t, r, "top_tags", "tags");
+              B(e, t, r, "top_tags", "tags");
             })(e, i, t),
           r.include_platforms &&
             (function (e, t, r) {
-              b(e, t, r, "include_platforms", "platforms");
+              B(e, t, r, "include_platforms", "platforms");
             })(e, i, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              b(e, t, r, "apply_user_filters", "user_filter_failure");
+              B(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, i, t),
           r.include_included_items &&
             r.included_item_data_request &&
             (t.included_items?.included_apps?.forEach((t) =>
-              y(e, t, r.included_item_data_request),
+              M(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_packages?.forEach((t) =>
-              y(e, t, r.included_item_data_request),
+              M(e, t, r.included_item_data_request),
             )));
       }
-      const M = [
+      const C = [
         "assets",
         "tagids",
         "tags",
@@ -27583,12 +27599,12 @@
         "platforms",
         "release",
       ];
-      function C(e) {
+      function S(e) {
         const t = { ...e };
-        for (const e of M) delete t[e];
+        for (const e of C) delete t[e];
         return t;
       }
-      async function S(e, t, r) {
+      async function v(e, t, r) {
         return await e.load(`${(0, s.ER)(t)}|${r}`);
       }
     },
@@ -56777,8 +56793,9 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
+            r.e(5783),
             r.e(8567),
-            r.e(2125),
+            r.e(1283),
             r.e(2965),
           ]).then(r.bind(r, 16546)),
         ),
@@ -56802,8 +56819,9 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
+            r.e(5783),
             r.e(8567),
-            r.e(2125),
+            r.e(1283),
             r.e(2965),
           ])
             .then(r.bind(r, 16546))
@@ -57303,8 +57321,9 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
+            r.e(5783),
             r.e(8567),
-            r.e(2125),
+            r.e(1283),
             r.e(3164),
           ]).then(r.bind(r, 13164)),
         ),
@@ -57328,8 +57347,9 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
+            r.e(5783),
             r.e(8567),
-            r.e(2125),
+            r.e(1283),
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
@@ -57353,10 +57373,11 @@
             r.e(9216),
             r.e(6956),
             r.e(6492),
+            r.e(5783),
             r.e(8567),
-            r.e(2125),
+            r.e(1283),
             r.e(2965),
-          ]).then(r.bind(r, 44979)),
+          ]).then(r.bind(r, 42976)),
         ),
         ut = n.lazy(() =>
           Promise.all([
@@ -57550,7 +57571,7 @@
           ]).then(r.bind(r, 84155)),
         ),
         Bt = n.lazy(() =>
-          Promise.all([r.e(5487), r.e(6723)]).then(r.bind(r, 98501)),
+          Promise.all([r.e(5487), r.e(5783), r.e(6723)]).then(r.bind(r, 47434)),
         );
       const wt = function (e) {
         return n.createElement(W.tH, null, n.createElement(C.qh, { ...e }));

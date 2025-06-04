@@ -6189,6 +6189,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
@@ -6260,12 +6266,6 @@
           (0, _._)(_, _, _, _, ""),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           !_.requires_reservation &&
@@ -6391,22 +6391,22 @@
           ),
           _ = (0, _._)(() => {
             if (
-              __webpack_require__.localized_reservation_desc?.length > 0 &&
-              (!__webpack_require__.override_delivery_only_out_of_stock ||
-                (!_.requires_reservation && !_.inventory_available))
+              __webpack_require__.localized_delivery_override_desc?.length >
+                0 &&
+              (!__webpack_require__.override_delivery_only_out_of_stock || _)
             ) {
               const _ = (0, _._)(_._.LANGUAGE),
                 _ = _._.GetELanguageFallback(_);
               return (
-                __webpack_require__.localized_reservation_desc[_] ||
-                __webpack_require__.localized_reservation_desc[_] ||
+                __webpack_require__.localized_delivery_override_desc[_] ||
+                __webpack_require__.localized_delivery_override_desc[_] ||
                 ""
               );
             }
             return null;
           }),
           _ = _.account_restricted_from_purchasing && !_._.logged_in;
-        if (_ || _) return null;
+        if ((_ && !_) || _) return null;
         if (
           _(_) ||
           _.reservation_state == _._.k_EPurchaseReservationState_Allocated
@@ -6416,14 +6416,29 @@
             {
               className: (0, _._)(_.expecteddate, "ReservationBuyNow"),
             },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.expecteddate_str, "ReservationShipDate"),
-              },
-              (0, _._)("#Sale_Reservation_ExpectedDeliveryDate"),
-            ),
-            (0, _._)(_),
+            Boolean(_)
+              ? _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: (0, _._)(_._.LANGUAGE),
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _.expecteddate_str,
+                        "ReservationShipDate",
+                      ),
+                    },
+                    (0, _._)("#Sale_Reservation_ExpectedDeliveryDate"),
+                  ),
+                  (0, _._)(_),
+                ),
           );
         return _.createElement(
           "div",

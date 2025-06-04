@@ -814,6 +814,91 @@ html.client .WFyPwmwIjPaI784fImRbi ._1Yo-ZsBr-KbVMyAMXEYszd svg {
   background-size: cover;
   background-position: center;
 }
+._3PAP1PfUymQrLEveRsxQxP {
+  height: 200px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--gpShadow-Medium);
+  background: #386483;
+  transition: transform .2s ease-in-out;
+}
+._3PAP1PfUymQrLEveRsxQxP:hover,
+._3PAP1PfUymQrLEveRsxQxP.gpfocus {
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  transform: scale(1.05);
+}
+._3PAP1PfUymQrLEveRsxQxP:hover ._3i8xWeKjrdNgEjml1PQRuq,
+._3PAP1PfUymQrLEveRsxQxP.gpfocus ._3i8xWeKjrdNgEjml1PQRuq {
+  filter: brightness(1.2);
+}
+._1DaxYFphX9KPH-YWeuNTvO {
+  width: 50%;
+  margin-left: auto;
+  position: relative;
+  background-color: #386483;
+  transform: rotateZ(-11deg) translateX(14px);
+  --capsule-width: 320px;
+}
+._3PAP1PfUymQrLEveRsxQxP:not(.gjxSD08f5aogKCSeys9k5) ._1DaxYFphX9KPH-YWeuNTvO {
+  display: flex;
+}
+._1DaxYFphX9KPH-YWeuNTvO ._3QqziF_w5iNtHF8dOkfrD0 {
+  margin: auto;
+  margin-right: 90px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+@keyframes Qc0gimNJ0GLAPE87EH3Gp {
+  from {
+    opacity: 0;
+  }
+}
+._2qPvUCeD7uiBSn261-Gg25 {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: Qc0gimNJ0GLAPE87EH3Gp;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  gap: 8px;
+}
+._3G65z75zOTQeHrXxszHO4b {
+  width: var(--capsule-width);
+  height: calc(var(--capsule-width) / 1.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 80%;
+  box-shadow: 0 0 10px #000;
+}
+.r6OCNSBahfTSSDTqXDVqY {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+._1QVat7gXKVzPNiStElIJCt {
+  display: flex;
+}
+._1QVat7gXKVzPNiStElIJCt img {
+  width: 50px;
+}
+._3OUOaqR0a3uYqsWOZbfSSh {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
 ._1PQMwJUws5GG2KNPUB3H2V {
   display: flex;
   justify-content: space-between;

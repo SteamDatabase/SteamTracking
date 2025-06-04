@@ -285,11 +285,18 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_ = 0, _ = void 0) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _, !1, _));
+      }
       function _(_, _, __webpack_require__ = !1, _ = void 0) {
         return {
           queryKey: ["DiscoveryQueue", _, _],
@@ -345,6 +352,177 @@
           _.set_content_hub_filter(_);
         }
         return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            arrDiscoveryApps: _,
+            onClick: __webpack_require__,
+            className: _,
+            bDisableAnimation: _ = !1,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!_),
+          _ = _.useCallback(
+            (_) => {
+              _ || _(_);
+            },
+            [_],
+          );
+        return _.createElement(
+          _._,
+          {
+            trigger: "repeated",
+            onVisibilityChange: _,
+          },
+          _.createElement(
+            _._,
+            {
+              focusable: !0,
+              onGamepadFocus: () => _(!0),
+              onMouseEnter: () => _ && _(!0),
+              onGamepadBlur: () => _(!1),
+              onMouseLeave: () => _ && _(!1),
+              onActivate: __webpack_require__,
+              onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
+              className: (0, _._)(
+                _.DiscoveryQueueWidgetCtn,
+                _,
+                void 0 !== _ && _.Initialized,
+              ),
+            },
+            _.createElement(_, {
+              rgAppIDs: _,
+              bAnimationEnabled: !_ && _,
+            }),
+            _,
+          ),
+        );
+      }
+      let _;
+      function _(_) {
+        const {
+            rgAppIDs: _,
+            bAnimationEnabled: __webpack_require__ = !0,
+            nCapsuleWidth: _ = 320,
+          } = _,
+          [_, _] = _.useState(null);
+        return (
+          _.useEffect(() => {
+            if (!__webpack_require__ || !_) return;
+            let _;
+            _ || (_ = performance.now());
+            const _ = () => {
+              const _ =
+                (((performance.now() - _) / 40) %
+                  (_.offsetWidth - 3 * _ - 16)) +
+                _;
+              (_.style.transform = `translateX( -${_}px )`),
+                (_ = requestAnimationFrame(_));
+            };
+            return (
+              (_ = requestAnimationFrame(_)), () => cancelAnimationFrame(_)
+            );
+          }, [_, __webpack_require__, _]),
+          _ && _.length
+            ? _.createElement(
+                "div",
+                {
+                  className: _.AppCarouselPosition,
+                  style: {
+                    "--capsule-width": `${_}px`,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    ref: _,
+                    className: (0, _._)(_.AppCarouselCtn, "vt-scrollable"),
+                    style: {
+                      transform: `translateX( -${_}px )`,
+                    },
+                  },
+                  _.map((_) =>
+                    _.createElement(_, {
+                      key: "Capsule_" + _,
+                      appID: _,
+                    }),
+                  ),
+                  [..._, ..._].slice(0, 3).map((_) =>
+                    _.createElement(_, {
+                      key: "Capsule2_" + _,
+                      appID: _,
+                    }),
+                  ),
+                ),
+              )
+            : null
+        );
+      }
+      function _(_) {
+        const { appID: _ } = _,
+          _ = {
+            appid: _,
+          },
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_) || [],
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        let _ = _.length
+          ? (0, _._)(_[0], "600x338")
+          : _ && (0, _._)(_, "main_capsule");
+        const _ = {
+          backgroundImage:
+            "radial-gradient(135% 125% at 100% 0%, rgba(0, 0, 0, 0) 22.5%, rgba(0, 0, 0, 1) 92.5%)" +
+            (_ ? `, url('${_}')` : ""),
+        };
+        return _.createElement(
+          "div",
+          {
+            className: _.AppCapsuleCtn,
+            style: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.CapsuleColumn, _.LibraryImage),
+            },
+            _.createElement("img", {
+              src: _,
+              alt: _?.name,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.CapsuleColumn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.AppName,
+              },
+              _?.name,
+            ),
+          ),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -793,166 +971,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            arrDiscoveryApps: _,
-            onClick: __webpack_require__,
-            className: _,
-            bDisableAnimation: _ = !1,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!_),
-          _ = _.useCallback(
-            (_) => {
-              _ || _(_);
-            },
-            [_],
-          );
-        return _.createElement(
-          _._,
-          {
-            trigger: "repeated",
-            onVisibilityChange: _,
-          },
-          _.createElement(
-            _._,
-            {
-              focusable: !0,
-              onGamepadFocus: () => _(!0),
-              onMouseEnter: () => _ && _(!0),
-              onGamepadBlur: () => _(!1),
-              onMouseLeave: () => _ && _(!1),
-              onActivate: __webpack_require__,
-              onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
-              className: (0, _._)(
-                _.DiscoveryQueueWidgetCtn,
-                _,
-                void 0 !== _ && _.Initialized,
-              ),
-            },
-            _.createElement(_, {
-              rgAppIDs: _,
-              bAnimationEnabled: !_ && _,
-            }),
-            _,
-          ),
-        );
-      }
-      let _;
-      function _(_) {
-        const {
-            rgAppIDs: _,
-            bAnimationEnabled: __webpack_require__ = !0,
-            nCapsuleWidth: _ = 320,
-          } = _,
-          [_, _] = _.useState(null);
-        return (
-          _.useEffect(() => {
-            if (!__webpack_require__ || !_) return;
-            let _;
-            _ || (_ = performance.now());
-            const _ = () => {
-              const _ =
-                (((performance.now() - _) / 40) %
-                  (_.offsetWidth - 3 * _ - 16)) +
-                _;
-              (_.style.transform = `translateX( -${_}px )`),
-                (_ = requestAnimationFrame(_));
-            };
-            return (
-              (_ = requestAnimationFrame(_)), () => cancelAnimationFrame(_)
-            );
-          }, [_, __webpack_require__, _]),
-          _ && _.length
-            ? _.createElement(
-                "div",
-                {
-                  className: _.AppCarouselPosition,
-                  style: {
-                    "--capsule-width": `${_}px`,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    ref: _,
-                    className: (0, _._)(_.AppCarouselCtn, "vt-scrollable"),
-                    style: {
-                      transform: `translateX( -${_}px )`,
-                    },
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: "Capsule_" + _,
-                      appID: _,
-                    }),
-                  ),
-                  [..._, ..._].slice(0, 3).map((_) =>
-                    _.createElement(_, {
-                      key: "Capsule2_" + _,
-                      appID: _,
-                    }),
-                  ),
-                ),
-              )
-            : null
-        );
-      }
-      function _(_) {
-        const { appID: _ } = _,
-          _ = {
-            appid: _,
-          },
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_) || [],
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        let _ = _.length
-          ? (0, _._)(_[0], "600x338")
-          : _ && (0, _._)(_, "main_capsule");
-        const _ = {
-          backgroundImage:
-            "radial-gradient(135% 125% at 100% 0%, rgba(0, 0, 0, 0) 22.5%, rgba(0, 0, 0, 1) 92.5%)" +
-            (_ ? `, url('${_}')` : ""),
-        };
-        return _.createElement(
-          "div",
-          {
-            className: _.AppCapsuleCtn,
-            style: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.CapsuleColumn, _.LibraryImage),
-            },
-            _.createElement("img", {
-              src: _,
-              alt: _?.name,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.CapsuleColumn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.AppName,
-              },
-              _?.name,
-            ),
-          ),
-        );
-      }
       function _(_) {
         return (0, _._)()
           ? _.createElement(
@@ -1034,7 +1053,7 @@
           _.Fragment,
           null,
           _.createElement(
-            _,
+            _._,
             {
               onClick: _,
               arrDiscoveryApps: _,
@@ -1117,7 +1136,7 @@
             window.location.href = `${_._.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
           }, []);
         return _.createElement(
-          _,
+          _._,
           {
             onClick: _,
             arrDiscoveryApps: _,
