@@ -20220,8 +20220,7 @@
             className: Da.DialogSize,
             strTitle: (0, D.we)(l ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
             bOKDisabled:
-              0 == (null == r ? void 0 : r.trim().length) ||
-              !r.startsWith(Ba.TS.STORE_BASE_URL),
+              !r || 0 == r.trim().length || !r.startsWith(Ba.TS.STORE_BASE_URL),
             closeModal: n,
             onOK: () => {
               (a.url = r), t.SetDirty(i.IQ.jsondata_sales);
@@ -20245,7 +20244,7 @@
           }),
           Boolean(
             (null == r ? void 0 : r.length) > 8 &&
-              !r.startsWith(Ba.TS.STORE_BASE_URL),
+              !(null == r ? void 0 : r.startsWith(Ba.TS.STORE_BASE_URL)),
           ) &&
             c.createElement(
               "div",

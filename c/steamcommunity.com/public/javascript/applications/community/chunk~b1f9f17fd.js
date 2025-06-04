@@ -22333,8 +22333,7 @@
             className: _.DialogSize,
             strTitle: (0, _._)(_ ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
             bOKDisabled:
-              0 == (null == _ ? void 0 : _.trim().length) ||
-              !_.startsWith(_._.STORE_BASE_URL),
+              !_ || 0 == _.trim().length || !_.startsWith(_._.STORE_BASE_URL),
             closeModal: _,
             onOK: () => {
               (__webpack_require__.url = _), _.SetDirty(_._.jsondata_sales);
@@ -22358,7 +22357,7 @@
           }),
           Boolean(
             (null == _ ? void 0 : _.length) > 8 &&
-              !_.startsWith(_._.STORE_BASE_URL),
+              !(null == _ ? void 0 : _.startsWith(_._.STORE_BASE_URL)),
           ) &&
             _.createElement(
               "div",
