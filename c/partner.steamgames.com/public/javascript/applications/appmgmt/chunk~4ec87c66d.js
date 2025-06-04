@@ -2111,6 +2111,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (
@@ -2375,6 +2377,30 @@
         }
         GetInternalAssetURL() {
           return this.m_oAdditionalRestrictions.internal_asset_url;
+        }
+        GetAltTextRaw(_) {
+          return (
+            (_ < this.m_oTemplateVars.localized_alt_text?.length &&
+              this.m_oTemplateVars.localized_alt_text[_]) ||
+            ""
+          );
+        }
+        GetAltTextLocalized(_) {
+          if (this.m_oTemplateVars.localized_alt_text) {
+            const _ = _._.GetELanguageFallback(_);
+            return (
+              this.m_oTemplateVars.localized_alt_text[_] ||
+              this.m_oTemplateVars.localized_alt_text[_] ||
+              ""
+            );
+          }
+          return "";
+        }
+        BHasAltTextRaw(_) {
+          return (
+            _ < this.m_oTemplateVars.localized_alt_text?.length &&
+            Boolean(this.m_oTemplateVars.localized_alt_text[_]?.length > 0)
+          );
         }
         BHasPlatformWindows() {
           return Boolean(
@@ -3019,6 +3045,16 @@
             ((this.m_oAdditionalRestrictions.plan_asset_request_gid = _),
             this.Dispatch());
         }
+        SetAltText(_, _) {
+          (this.m_oTemplateVars.localized_alt_text = (0, _._)(
+            this.m_oTemplateVars.localized_alt_text || [],
+            31,
+            null,
+          )),
+            this.m_oTemplateVars.localized_alt_text[_] != _ &&
+              ((this.m_oTemplateVars.localized_alt_text[_] = _),
+              this.Dispatch());
+        }
         SetUpdateEvent(_, _) {
           (this.m_oTemplateVars.update_event_gid === _ &&
             this.m_oTemplateVars.update_event_clan_accountid == _) ||
@@ -3097,6 +3133,7 @@
         (0, _._)([_._], _.prototype, "SetRequiresSalePage", null),
         (0, _._)([_._], _.prototype, "SetRequiresSalePageType", null),
         (0, _._)([_._], _.prototype, "SetPlanAssetRequestGID", null),
+        (0, _._)([_._], _.prototype, "SetAltText", null),
         (0, _._)([_._], _.prototype, "SetUpdateEvent", null),
         (0, _._)([_._], _.prototype, "ClearUpdateEvent", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null),
@@ -58168,6 +58205,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -58526,15 +58565,17 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => [
+          _ = (0, _._)(),
+          [_, _, _, _, _, _, _] = (0, _._)(() => [
             _?.GetRealm(),
             _?.GetAssetsObject("ll_image"),
             _?.BHasAnimatedAssets(),
             "featured_video" === _?.GetCustomTemplate(),
             _?.GetGID(),
             "partner_event" === _?.GetCustomTemplate(),
+            _?.GetAltTextRaw(_),
           ]),
-          _ = Boolean(0 != __webpack_require__),
+          _ = Boolean(0 != _),
           _ = (0, _.useMemo)(() => {
             const _ = [_ ? "capsule" : "localized_marketing_message"];
             return (
@@ -58602,6 +58643,9 @@
           ? _.createElement(
               _.Fragment,
               null,
+              _.createElement(_._, {
+                fnLangHasData: (_) => _.BHasAltTextRaw(_),
+              }),
               _.createElement(
                 "div",
                 {
@@ -58655,6 +58699,15 @@
                     },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
+                _.createElement(_._, null),
+                _.createElement(_._, {
+                  type: "text",
+                  value: _,
+                  onChange: (_) => _.SetAltText(_, _.currentTarget.value),
+                  label: "Alternative Text",
+                  tooltip:
+                    "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+                }),
                 _.createElement(_._, {
                   rgSupportArtwork: _,
                   rgRealmList: _,

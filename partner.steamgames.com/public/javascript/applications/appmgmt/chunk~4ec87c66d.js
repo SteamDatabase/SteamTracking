@@ -2061,7 +2061,7 @@
     },
     43258: (e, t, a) => {
       "use strict";
-      a.d(t, { AK: () => E, Z8: () => S, fV: () => v, mH: () => y });
+      a.d(t, { AK: () => y, Z8: () => v, fV: () => b, mH: () => f });
       var n = a(34629),
         r = a(2160),
         i = a(22837),
@@ -2074,16 +2074,18 @@
         u = a(6419),
         p = a(6144),
         _ = a(78327),
-        g = a(23910);
-      function h(e, t) {
+        g = a(23910),
+        h = a(61859),
+        E = a(62490);
+      function S(e, t) {
         if (
           ((t.temp_id =
             ("clause" in t ? t.clause + "_" : "filter_") +
-            ++v.sm_nTempIDCounter),
+            ++b.sm_nTempIDCounter),
           "children" in t)
         )
           Array.isArray(t.children)
-            ? t.children.forEach((t) => h(e, t))
+            ? t.children.forEach((t) => S(e, t))
             : (console.error(
                 `marketing message ${e}:  clause error, clearing its setting so we can continue in the editor. `,
                 (0, l.HO)(t),
@@ -2097,7 +2099,7 @@
               : (e.id_list = []);
         }
       }
-      function E(e, t) {
+      function y(e, t) {
         if (!e || !t) return null;
         const a = JSON.parse(t) || {};
         return (
@@ -2112,11 +2114,11 @@
           a.experiment_control_group &&
             (a.experiment_control_group = parseInt(a.experiment_control_group)),
           a.user_filters &&
-            ((a.no_filters_required = !1), h(e, a.user_filters)),
+            ((a.no_filters_required = !1), S(e, a.user_filters)),
           a
         );
       }
-      function S(e, t) {
+      function v(e, t) {
         switch (e) {
           case 1:
             return (0, m.wR)(t);
@@ -2127,7 +2129,7 @@
         }
         return null;
       }
-      function y(e) {
+      function f(e) {
         if (e?.user_filters?.children?.length > 0) {
           let t = 0;
           return (
@@ -2139,7 +2141,7 @@
         }
         return 0;
       }
-      class v {
+      class b {
         m_oMessage = null;
         m_originalMessage = null;
         m_oTemplateVars = null;
@@ -2174,7 +2176,7 @@
               ];
           }
           (this.m_oTemplateVars = (0, c.c2)(e.template_vars_json) || {}),
-            (this.m_oAdditionalRestrictions = E(
+            (this.m_oAdditionalRestrictions = y(
               e.gid,
               e.additional_restrictions_json,
             )),
@@ -2204,7 +2206,7 @@
           );
         }
         SetupStoreItemKey() {
-          (this.m_storeItemKey = S(
+          (this.m_storeItemKey = v(
             this.m_oMessage.association_type,
             this.m_oMessage.associated_id,
           )),
@@ -2327,6 +2329,30 @@
         }
         GetInternalAssetURL() {
           return this.m_oAdditionalRestrictions.internal_asset_url;
+        }
+        GetAltTextRaw(e) {
+          return (
+            (e < this.m_oTemplateVars.localized_alt_text?.length &&
+              this.m_oTemplateVars.localized_alt_text[e]) ||
+            ""
+          );
+        }
+        GetAltTextLocalized(e) {
+          if (this.m_oTemplateVars.localized_alt_text) {
+            const t = h.A0.GetELanguageFallback(e);
+            return (
+              this.m_oTemplateVars.localized_alt_text[e] ||
+              this.m_oTemplateVars.localized_alt_text[t] ||
+              ""
+            );
+          }
+          return "";
+        }
+        BHasAltTextRaw(e) {
+          return (
+            e < this.m_oTemplateVars.localized_alt_text?.length &&
+            Boolean(this.m_oTemplateVars.localized_alt_text[e]?.length > 0)
+          );
         }
         BHasPlatformWindows() {
           return Boolean(
@@ -2466,7 +2492,7 @@
           return this.m_oAdditionalRestrictions?.must_have_client_package_lte;
         }
         GetUserMessageFilterCount() {
-          return y(this.m_oAdditionalRestrictions);
+          return f(this.m_oAdditionalRestrictions);
         }
         FlattenUserMessageFilterToFlattened() {
           return (
@@ -2748,7 +2774,7 @@
         ReplaceUserFilter(e) {
           (this.m_oAdditionalRestrictions.no_filters_required = !1),
             (this.m_oAdditionalRestrictions.user_filters = e),
-            h(this.GetGID(), this.m_oAdditionalRestrictions.user_filters),
+            S(this.GetGID(), this.m_oAdditionalRestrictions.user_filters),
             this.Dispatch();
         }
         AddNewAndUserFilter(e = { filter_type: 1, id_list: [] }) {
@@ -2758,13 +2784,13 @@
               (this.m_oAdditionalRestrictions.user_filters = {
                 clause: "and",
                 children: [],
-                temp_id: "and_" + ++v.sm_nTempIDCounter,
+                temp_id: "and_" + ++b.sm_nTempIDCounter,
               }),
-            (e.temp_id = "filter_" + ++v.sm_nTempIDCounter);
+            (e.temp_id = "filter_" + ++b.sm_nTempIDCounter);
           const t = {
             clause: "or",
             children: [e],
-            temp_id: "or_" + ++v.sm_nTempIDCounter,
+            temp_id: "or_" + ++b.sm_nTempIDCounter,
           };
           this.m_oAdditionalRestrictions.user_filters.children.push(t),
             this.Dispatch();
@@ -2785,7 +2811,7 @@
           const a = this.m_oAdditionalRestrictions.user_filters;
           (0, d.w)("children" in a.children[e], "or clauses broken"),
             "children" in a.children[e] &&
-              ((t.temp_id = "filter_" + ++v.sm_nTempIDCounter),
+              ((t.temp_id = "filter_" + ++b.sm_nTempIDCounter),
               a.children[e].children.push(t),
               this.Dispatch());
         }
@@ -2804,7 +2830,7 @@
           (0, d.w)("children" in n.children[t], "or clauses broken"),
             "children" in n.children[t] &&
               JSON.stringify(n.children[t].children[a]) != JSON.stringify(e) &&
-              ((e.temp_id = "filter_" + ++v.sm_nTempIDCounter),
+              ((e.temp_id = "filter_" + ++b.sm_nTempIDCounter),
               (n.children[t].children[a] = e),
               this.Dispatch());
         }
@@ -2958,6 +2984,16 @@
             ((this.m_oAdditionalRestrictions.plan_asset_request_gid = e),
             this.Dispatch());
         }
+        SetAltText(e, t) {
+          (this.m_oTemplateVars.localized_alt_text = (0, E.$Y)(
+            this.m_oTemplateVars.localized_alt_text || [],
+            31,
+            null,
+          )),
+            this.m_oTemplateVars.localized_alt_text[e] != t &&
+              ((this.m_oTemplateVars.localized_alt_text[e] = t),
+              this.Dispatch());
+        }
         SetUpdateEvent(e, t) {
           (this.m_oTemplateVars.update_event_gid === t &&
             this.m_oTemplateVars.update_event_clan_accountid == e) ||
@@ -2979,67 +3015,68 @@
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
         }
       }
-      (0, n.Cg)([l.sH], v.prototype, "m_bDirty", void 0),
-        (0, n.Cg)([u.o], v.prototype, "ClearAllLegacyRestrictions", null),
-        (0, n.Cg)([u.o], v.prototype, "SetExplicitNoLegalPartnerNeeded", null),
-        (0, n.Cg)([u.o], v.prototype, "SetAdminNote", null),
-        (0, n.Cg)([u.o], v.prototype, "SetName", null),
-        (0, n.Cg)([u.o], v.prototype, "SetType", null),
-        (0, n.Cg)([u.o], v.prototype, "SetVisibility", null),
-        (0, n.Cg)([u.o], v.prototype, "SetAssociation", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearAssociation", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMessageTime", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMessageStartTime", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMessageEndTime", null),
-        (0, n.Cg)([u.o], v.prototype, "SetCountryAllow", null),
-        (0, n.Cg)([u.o], v.prototype, "SetCountryDeny", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearCountryRestrictions", null),
-        (0, n.Cg)([u.o], v.prototype, "SetAndConvertURL", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustOwnAppID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustNotOwnAppID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustOwnPackageID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustNotOwnPackageID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustHaveLaunchedAppID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetLinkURL", null),
-        (0, n.Cg)([u.o], v.prototype, "SetRealm", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustUseClientLanguage", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustHaveClientPackageGTE", null),
-        (0, n.Cg)([u.o], v.prototype, "SetMustHaveClientPackageLTE", null),
-        (0, n.Cg)([u.o], v.prototype, "SetPlatformWindows", null),
-        (0, n.Cg)([u.o], v.prototype, "SetPlatformMac", null),
-        (0, n.Cg)([u.o], v.prototype, "SetPlatformLinux", null),
-        (0, n.Cg)([u.o], v.prototype, "SetNoFiltersRequired", null),
-        (0, n.Cg)([u.o], v.prototype, "AddToWatchList", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearWatchList", null),
-        (0, n.Cg)([u.o], v.prototype, "RemoveFromWatchList", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearUserDynamicFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "ReplaceUserFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "AddNewAndUserFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "RemoveAndUserFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "AddNewOrUserFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "RemoveOrUserFilterAt", null),
-        (0, n.Cg)([u.o], v.prototype, "UpdateUserFilter", null),
-        (0, n.Cg)([u.o], v.prototype, "SetButtonToken", null),
-        (0, n.Cg)([u.o], v.prototype, "SetLegalTextPartnerName", null),
-        (0, n.Cg)([u.o], v.prototype, "SetHidePriceOnMessage", null),
-        (0, n.Cg)([u.o], v.prototype, "SetTemplateAssetImagePath", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearAllAssetObjects", null),
-        (0, n.Cg)([u.o], v.prototype, "DeleteAssetObjectLang", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearUserFilters", null),
-        (0, n.Cg)([u.o], v.prototype, "SetInternalAssetURL", null),
-        (0, n.Cg)([u.o], v.prototype, "SetCustomLegalText", null),
-        (0, n.Cg)([u.o], v.prototype, "SetUseCustomLegalText", null),
-        (0, n.Cg)([u.o], v.prototype, "SetAnimatedAssetsEnabled", null),
-        (0, n.Cg)([u.o], v.prototype, "SetAssociatedItemReleaseState", null),
-        (0, n.Cg)([u.o], v.prototype, "SetSaleEvent", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearSalePage", null),
-        (0, n.Cg)([u.o], v.prototype, "SetRequiresSalePage", null),
-        (0, n.Cg)([u.o], v.prototype, "SetRequiresSalePageType", null),
-        (0, n.Cg)([u.o], v.prototype, "SetPlanAssetRequestGID", null),
-        (0, n.Cg)([u.o], v.prototype, "SetUpdateEvent", null),
-        (0, n.Cg)([u.o], v.prototype, "ClearUpdateEvent", null),
-        (0, n.Cg)([u.o], v.prototype, "RevertChanges", null),
-        (0, n.Cg)([l.XI.bound], v.prototype, "Dispatch", null);
+      (0, n.Cg)([l.sH], b.prototype, "m_bDirty", void 0),
+        (0, n.Cg)([u.o], b.prototype, "ClearAllLegacyRestrictions", null),
+        (0, n.Cg)([u.o], b.prototype, "SetExplicitNoLegalPartnerNeeded", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAdminNote", null),
+        (0, n.Cg)([u.o], b.prototype, "SetName", null),
+        (0, n.Cg)([u.o], b.prototype, "SetType", null),
+        (0, n.Cg)([u.o], b.prototype, "SetVisibility", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAssociation", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearAssociation", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMessageTime", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMessageStartTime", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMessageEndTime", null),
+        (0, n.Cg)([u.o], b.prototype, "SetCountryAllow", null),
+        (0, n.Cg)([u.o], b.prototype, "SetCountryDeny", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearCountryRestrictions", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAndConvertURL", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustOwnAppID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustNotOwnAppID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustOwnPackageID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustNotOwnPackageID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustHaveLaunchedAppID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetLinkURL", null),
+        (0, n.Cg)([u.o], b.prototype, "SetRealm", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustUseClientLanguage", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustHaveClientPackageGTE", null),
+        (0, n.Cg)([u.o], b.prototype, "SetMustHaveClientPackageLTE", null),
+        (0, n.Cg)([u.o], b.prototype, "SetPlatformWindows", null),
+        (0, n.Cg)([u.o], b.prototype, "SetPlatformMac", null),
+        (0, n.Cg)([u.o], b.prototype, "SetPlatformLinux", null),
+        (0, n.Cg)([u.o], b.prototype, "SetNoFiltersRequired", null),
+        (0, n.Cg)([u.o], b.prototype, "AddToWatchList", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearWatchList", null),
+        (0, n.Cg)([u.o], b.prototype, "RemoveFromWatchList", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearUserDynamicFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "ReplaceUserFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "AddNewAndUserFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "RemoveAndUserFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "AddNewOrUserFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "RemoveOrUserFilterAt", null),
+        (0, n.Cg)([u.o], b.prototype, "UpdateUserFilter", null),
+        (0, n.Cg)([u.o], b.prototype, "SetButtonToken", null),
+        (0, n.Cg)([u.o], b.prototype, "SetLegalTextPartnerName", null),
+        (0, n.Cg)([u.o], b.prototype, "SetHidePriceOnMessage", null),
+        (0, n.Cg)([u.o], b.prototype, "SetTemplateAssetImagePath", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearAllAssetObjects", null),
+        (0, n.Cg)([u.o], b.prototype, "DeleteAssetObjectLang", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearUserFilters", null),
+        (0, n.Cg)([u.o], b.prototype, "SetInternalAssetURL", null),
+        (0, n.Cg)([u.o], b.prototype, "SetCustomLegalText", null),
+        (0, n.Cg)([u.o], b.prototype, "SetUseCustomLegalText", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAnimatedAssetsEnabled", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAssociatedItemReleaseState", null),
+        (0, n.Cg)([u.o], b.prototype, "SetSaleEvent", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearSalePage", null),
+        (0, n.Cg)([u.o], b.prototype, "SetRequiresSalePage", null),
+        (0, n.Cg)([u.o], b.prototype, "SetRequiresSalePageType", null),
+        (0, n.Cg)([u.o], b.prototype, "SetPlanAssetRequestGID", null),
+        (0, n.Cg)([u.o], b.prototype, "SetAltText", null),
+        (0, n.Cg)([u.o], b.prototype, "SetUpdateEvent", null),
+        (0, n.Cg)([u.o], b.prototype, "ClearUpdateEvent", null),
+        (0, n.Cg)([u.o], b.prototype, "RevertChanges", null),
+        (0, n.Cg)([l.XI.bound], b.prototype, "Dispatch", null);
     },
     81418: (e, t, a) => {
       "use strict";
@@ -52222,7 +52259,7 @@
     },
     95896: (e, t, a) => {
       "use strict";
-      a.d(t, { NM: () => G, rR: () => P });
+      a.d(t, { NM: () => F, rR: () => G });
       var n = a(2160),
         r = a(22837),
         i = a(34288),
@@ -52252,8 +52289,10 @@
         M = a(627),
         k = a(7706),
         A = a(98076),
-        R = a(55263);
-      function P(e) {
+        R = a(55263),
+        P = a(63556),
+        N = a(1909);
+      function G(e) {
         const { bAssetUploadOnly: t, promotionPlanID: a, id: n } = e,
           r = (0, i.zw)(n),
           [o, c] = (0, s.q3)(() => [
@@ -52279,9 +52318,9 @@
                   l.createElement(
                     "div",
                     { className: u().LeftCol },
-                    Boolean(!t) && l.createElement(N, { oEditableMessage: r }),
+                    Boolean(!t) && l.createElement(O, { oEditableMessage: r }),
                     Boolean(!o && !c) &&
-                      l.createElement(x, { oEditableMessage: r }),
+                      l.createElement(W, { oEditableMessage: r }),
                     l.createElement(k.u, { oEditableMessage: r }),
                   ),
                   l.createElement(M.O, {
@@ -52299,9 +52338,9 @@
               string: (0, B.we)("#Loading"),
             });
       }
-      function N(e) {
+      function O(e) {
         const { oEditableMessage: t } = e,
-          [a, n] = (0, s.q3)(() => [t?.GetInternalAssetURL(), z(t)]);
+          [a, n] = (0, s.q3)(() => [t?.GetInternalAssetURL(), q(t)]);
         return t
           ? l.createElement(
               "div",
@@ -52317,8 +52356,8 @@
               }),
               l.createElement("br", null),
               l.createElement("br", null),
-              l.createElement(F, { oEditableMessage: t }),
-              l.createElement(L, { oEditableMessage: t }),
+              l.createElement(U, { oEditableMessage: t }),
+              l.createElement(z, { oEditableMessage: t }),
             )
           : l.createElement(w.t, {
               size: "medium",
@@ -52326,7 +52365,7 @@
               string: (0, B.we)("#Loading"),
             });
       }
-      function G(e, t) {
+      function F(e, t) {
         switch ((e.SetAnimatedAssetsEnabled(!1), e.ClearCustomTemplate(), t)) {
           default:
           case "mm_image":
@@ -52351,11 +52390,11 @@
             e.SetCustomTemplate("mm_auto_render");
         }
       }
-      const O = {};
-      function F(e) {
+      const L = {};
+      function U(e) {
         const { oEditableMessage: t } = e,
-          [a] = (0, R.t7)(t?.GetStoreItemID()?.appid, O),
-          [n, r] = (0, l.useState)(z(t)),
+          [a] = (0, R.t7)(t?.GetStoreItemID()?.appid, L),
+          [n, r] = (0, l.useState)(q(t)),
           [i] = (0, s.q3)(() => [t.GetAutoRenderWithoutOverride()]),
           o = (0, l.useMemo)(
             () => [
@@ -52412,7 +52451,7 @@
             rgOptions: o,
             selectedOption: n,
             onChange: (e) => {
-              G(t, e.data), r(e.data);
+              F(t, e.data), r(e.data);
             },
           }),
           Boolean(
@@ -52432,7 +52471,7 @@
             }),
         );
       }
-      function L(e) {
+      function z(e) {
         const { oEditableMessage: t } = e,
           [a, n, r, i, o] = (0, s.q3)(() => [
             t.GetCustomTemplate(),
@@ -52493,7 +52532,7 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoMP4Url(e.currentTarget.value),
               }),
-              l.createElement(U, {
+              l.createElement(x, {
                 strURL: n,
                 mimetype: "video/mp4",
                 extension: ".mp4",
@@ -52505,14 +52544,14 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoWebMUrl(e.currentTarget.value),
               }),
-              l.createElement(U, {
+              l.createElement(x, {
                 strURL: r,
                 mimetype: "video/webm",
                 extension: ".webm",
               }),
             );
       }
-      function U(e) {
+      function x(e) {
         const { strURL: t, extension: a, mimetype: n } = e;
         if (!t || 0 == t.trim().length) return null;
         const r = !(0, i.BQ)(t, a);
@@ -52548,7 +52587,7 @@
               ),
         );
       }
-      function z(e) {
+      function q(e) {
         return e
           ? e.BHasAnimatedAssets()
             ? "mm_animated_image"
@@ -52565,46 +52604,48 @@
                     : "mm_image"
           : "mm_image";
       }
-      function x(e) {
+      function W(e) {
         const { oEditableMessage: t } = e,
-          [a, r, i, m, d, _] = (0, s.q3)(() => [
+          a = (0, P.E)(),
+          [r, i, m, d, _, S, y] = (0, s.q3)(() => [
             t?.GetRealm(),
             t?.GetAssetsObject("ll_image"),
             t?.BHasAnimatedAssets(),
             "featured_video" === t?.GetCustomTemplate(),
             t?.GetGID(),
             "partner_event" === t?.GetCustomTemplate(),
+            t?.GetAltTextRaw(a),
           ]),
-          g = Boolean(0 != a),
-          S = (0, l.useMemo)(() => {
-            const e = [_ ? "capsule" : "localized_marketing_message"];
+          v = Boolean(0 != r),
+          f = (0, l.useMemo)(() => {
+            const e = [S ? "capsule" : "localized_marketing_message"];
             return (
-              i
-                ? (_
+              m
+                ? (S
                     ? (e.push("localized_partnerevent_mp4"),
                       e.push("localized_partnerevent_webm"))
                     : (e.push("localized_marketingmessage_mp4"),
                       e.push("localized_marketingmessage_webm")),
                   (0, D.w)(
-                    !m,
+                    !d,
                     "Animated Image and Featured video are mutually exclusive.",
                   ))
-                : m &&
+                : d &&
                   (e.push("localized_marketingmessage_background"),
                   e.push("localized_marketingmessage_poster"),
                   e.push("localized_subtitles")),
               e
             );
-          }, [i, m, _]),
-          y = (0, l.useMemo)(
+          }, [m, d, S]),
+          b = (0, l.useMemo)(
             () => [n.TU.k_ESteamRealmGlobal, n.TU.k_ESteamRealmChina],
             [],
           ),
-          v = (0, l.useCallback)(
+          w = (0, l.useCallback)(
             (e, a, n, r, i, s, l) => {
               (0, D.w)(
                 null != n && n >= 0 && n < 31,
-                "Unexpected value for elang: " + n + " " + d,
+                "Unexpected value for elang: " + n + " " + _,
               );
               let m = null;
               switch (r) {
@@ -52637,12 +52678,15 @@
               }
               m && t.SetTemplateAssetImagePath(e + (0, c.qR)(r), m, n);
             },
-            [t, d],
+            [t, _],
           );
         return t
           ? l.createElement(
               l.Fragment,
               null,
+              l.createElement(N.yk, {
+                fnLangHasData: (e) => t.BHasAltTextRaw(e),
+              }),
               l.createElement(
                 "div",
                 { className: u().SectionCtn },
@@ -52652,7 +52696,7 @@
                   "MARKETING MESSAGE ASSETS",
                 ),
                 l.createElement("hr", null),
-                Boolean(g && (!r || !r.sc_schinese)) &&
+                Boolean(v && (!i || !i.sc_schinese)) &&
                   l.createElement(
                     "div",
                     { className: E.WarningStylesWithIcon },
@@ -52688,13 +52732,22 @@
                     { className: E.WarningStylesWithIcon },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
+                l.createElement(N.iN, null),
+                l.createElement(g.pd, {
+                  type: "text",
+                  value: y,
+                  onChange: (e) => t.SetAltText(a, e.currentTarget.value),
+                  label: "Alternative Text",
+                  tooltip:
+                    "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+                }),
                 l.createElement(p.U, {
-                  rgSupportArtwork: S,
-                  rgRealmList: y,
+                  rgSupportArtwork: f,
+                  rgRealmList: b,
                   strOverrideDragAndDropText:
                     "Drag any asset here to upload (max 5MB)",
                   strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
-                  fnOnUploadSuccess: v,
+                  fnOnUploadSuccess: w,
                 }),
                 l.createElement(
                   h.tH,
@@ -52707,22 +52760,22 @@
                     l.createElement(
                       "span",
                       null,
-                      _ ? "800px by 450px" : "570px by 600px",
+                      S ? "800px by 450px" : "570px by 600px",
                     ),
                     " (.jpg,.png,.gif,.webp)",
                   ),
-                  l.createElement(j, {
+                  l.createElement(V, {
                     oEditableMessage: t,
                     assetType: "ll_image",
                   }),
-                  l.createElement(q, { oEditableMessage: t }),
-                  l.createElement(W, { oEditableMessage: t }),
+                  l.createElement(j, { oEditableMessage: t }),
+                  l.createElement(H, { oEditableMessage: t }),
                 ),
               ),
             )
           : null;
       }
-      function q(e) {
+      function j(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, s.q3)(() => [
             t.BHasAnimatedAssets(),
@@ -52749,14 +52802,14 @@
             r,
             " (required for Steam Client)",
           ),
-          l.createElement(j, { oEditableMessage: t, assetType: "webm" }),
+          l.createElement(V, { oEditableMessage: t, assetType: "webm" }),
           l.createElement("br", null),
           l.createElement(g.JU, null, "MP4"),
           l.createElement("div", null, ".Mp4 ", r, " (required for iOS)"),
-          l.createElement(j, { oEditableMessage: t, assetType: "mp4" }),
+          l.createElement(V, { oEditableMessage: t, assetType: "mp4" }),
         );
       }
-      function W(e) {
+      function H(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, s.q3)(() => [t.GetCustomTemplate()]);
         return "featured_video" != a
@@ -52778,7 +52831,7 @@
                 l.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) ",
               ),
-              l.createElement(j, {
+              l.createElement(V, {
                 oEditableMessage: t,
                 assetType: "background",
               }),
@@ -52790,7 +52843,7 @@
                 l.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)",
               ),
-              l.createElement(j, { oEditableMessage: t, assetType: "poster" }),
+              l.createElement(V, { oEditableMessage: t, assetType: "poster" }),
               l.createElement("br", null),
               l.createElement(g.JU, null, "Subtitles"),
               l.createElement(
@@ -52798,13 +52851,13 @@
                 null,
                 ".vtt/.srt format (include extension or mapping will fail)",
               ),
-              l.createElement(j, {
+              l.createElement(V, {
                 oEditableMessage: t,
                 assetType: "subtitles",
               }),
             );
       }
-      function j(e) {
+      function V(e) {
         const { oEditableMessage: t, assetType: a } = e,
           [n, i, o] = (0, s.q3)(() => [
             t.GetAssetsObject(a),
