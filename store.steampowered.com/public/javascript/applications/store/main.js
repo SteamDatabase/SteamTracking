@@ -56023,7 +56023,7 @@
       }
       function _() {
         let e = navigator,
-          t = e && e.maxTouchPoint && e.maxTouchPoint > 1;
+          t = e && e.maxTouchPoints && e.maxTouchPoints > 1;
         (a = g("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (s = g("Valve Steam GameOverlay", "force_overlay_view")),
           (n = a || g("Valve Steam Client", "force_client_view")),

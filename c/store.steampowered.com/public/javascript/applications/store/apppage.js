@@ -2033,7 +2033,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({});
       function _(_) {
@@ -2158,10 +2157,7 @@
               "valve-metadatachanged",
               this.OnMetadataChanged,
             ),
-            (this.m_player = new _._(
-              this.m_elVideo,
-              !(0, _._)() && (0, _._)(),
-            ));
+            (this.m_player = new _._(this.m_elVideo));
           let _ =
             void 0 !== this.m_persistState.m_bAudioMuted &&
             this.m_persistState.m_bAudioMuted;
@@ -2969,7 +2965,10 @@
           })(_),
           _ = "";
         return (
-          _ != _._.Invalid && (_ = (0, _._)("#TrailerPlayer_Error_Playback")),
+          _ == _._.UnsupportedMediaType
+            ? (_ = (0, _._)("#TrailerPlayer_Error_UnsupportedCodec"))
+            : _ != _._.Invalid &&
+              (_ = (0, _._)("#TrailerPlayer_Error_Playback")),
           _
             ? _.createElement(
                 "div",

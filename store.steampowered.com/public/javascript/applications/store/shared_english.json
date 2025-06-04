@@ -2618,6 +2618,7 @@
     "TrailerPlayer_ExitFullScreen_Tooltip": "Exit full screen",
     "TrailerPlayer_Quality_Auto": "Auto",
     "TrailerPlayer_Error_Playback": "An error occurred while playing this video",
+    "TrailerPlayer_Error_UnsupportedCodec": "Video format not supported on this device",
     "ManageFriends_AddAFriend": "Add a friend",
     "ManageFriends_InviteAFriend": "Invite a friend",
     "ManageFriends_YourFriendCode": "Your Friend Code",

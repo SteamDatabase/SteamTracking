@@ -5790,9 +5790,16 @@
           for (let r of t.rgAdaptationSets) if (e == r.strID) return r;
           return null;
         }
-        GetVideoAdaption() {
+        GetMainVideoAdaption() {
           let e = this.m_rgPeriods[0];
-          for (let t of e.rgAdaptationSets) if (t.bContainsVideo) return t;
+          for (let t of e.rgAdaptationSets)
+            if (D(t) && t.bContainsVideo) return t;
+          return null;
+        }
+        GetMainAudioAdaption() {
+          let e = this.m_rgPeriods[0];
+          for (let t of e.rgAdaptationSets)
+            if (D(t) && t.bContainsAudio) return t;
           return null;
         }
         GetThumbnailAdaptation() {
@@ -6731,7 +6738,8 @@
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.StreamGone = 1)] = "StreamGone"),
-            (e[(e.PlaybackError = 2)] = "PlaybackError");
+            (e[(e.PlaybackError = 2)] = "PlaybackError"),
+            (e[(e.UnsupportedMediaType = 3)] = "UnsupportedMediaType");
         })(H || (H = {})),
         (function (e) {
           (e[(e.Absolute = 0)] = "Absolute"),
@@ -6771,11 +6779,10 @@
         m_schFirstFrameThrottler = new c.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new c.LU();
-        constructor(e, t = !1) {
+        constructor(e) {
           (0, s.Gn)(this),
             (this.m_elVideo = e),
-            this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats),
-            (this.m_bUseHLSManifest = t);
+            this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats);
         }
         CalcVideoStartRelativeToSystemClock(e) {
           let t =
@@ -6791,40 +6798,79 @@
             (this.m_strHLS = r),
             (this.m_strCDNAuthURLParameters = t);
           let a = await this.DownloadMPD();
-          if (a)
-            if (((this.m_mpd = new L()), this.m_mpd.BParse(a.data, e))) {
-              if (
-                (this.DispatchEvent("valve-metadatachanged"),
-                this.IsLiveContent() &&
-                  (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
-                    this.m_schUpdateMPD.Schedule(
-                      1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
-                      this.UpdateMPD,
-                    ),
-                  this.CalcVideoStartRelativeToSystemClock(a.headers.date)),
-                this.m_bUseHLSManifest)
-              )
-                return (
-                  (this.m_elVideo.src = this.m_strHLS),
-                  this.m_elVideo.addEventListener("loadedmetadata", () => {
-                    (this.m_bIsBuffering = !1), this.BeginPlayback();
-                  }),
-                  void document.addEventListener(
-                    "visibilitychange",
-                    this.OnVisibilityChange,
-                  )
+          if (!a) return;
+          if (((this.m_mpd = new L()), !this.m_mpd.BParse(a.data, e)))
+            return void this.CloseWithError(
+              H.PlaybackError,
+              "Failed to parse MPD file",
+              this.m_strMPD,
+            );
+          let n = (function (e) {
+            let t = "",
+              r = "",
+              i = "",
+              a = e.GetMainVideoAdaption();
+            a &&
+              a.rgRepresentations.length > 0 &&
+              ((t = a.rgRepresentations[0].strMimeType),
+              (r = a.rgRepresentations[0].strCodecs));
+            (a = e.GetMainAudioAdaption()),
+              a &&
+                a.rgRepresentations.length > 0 &&
+                (i = a.rgRepresentations[0].strCodecs);
+            return t && r && i ? `${t}; codecs="${r}, ${i}` : "";
+          })(this.m_mpd);
+          if (
+            !n ||
+            !(function (e) {
+              let t = !1;
+              try {
+                t = MediaSource.isTypeSupported(e);
+              } catch (e) {}
+              return t;
+            })(n)
+          ) {
+            if (
+              !r ||
+              !(function (e) {
+                let t = e.canPlayType(
+                  'application/vnd.apple.mpegurl;codecs="avc1.64001f, mp4a.40.02"',
                 );
-              this.BCreateLoaders()
-                ? (this.InitVideoControl(), this.InitTimedText(i))
-                : this.CloseWithError(
-                    H.PlaybackError,
-                    "Failed to create segment loaders",
-                  );
-            } else
-              this.CloseWithError(
+                return "probably" === t || "maybe" === t;
+              })(this.m_elVideo)
+            )
+              return void this.OnMediaUnsupportedError(null, n);
+            this.m_bUseHLSManifest = !0;
+          }
+          if (
+            (this.DispatchEvent("valve-metadatachanged"),
+            this.IsLiveContent() &&
+              (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
+                this.m_schUpdateMPD.Schedule(
+                  1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
+                  this.UpdateMPD,
+                ),
+              this.CalcVideoStartRelativeToSystemClock(a.headers.date)),
+            this.m_bUseHLSManifest)
+          )
+            return (
+              (this.m_elVideo.src = this.m_strHLS),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "loadedmetadata",
+                this.OnLoadedMetadataForHLS,
+              ),
+              void this.m_listeners.AddEventListener(
+                document,
+                "visibilitychange",
+                this.OnVisibilityChangeForHLS,
+              )
+            );
+          this.BCreateLoaders()
+            ? (this.InitVideoControl(), this.InitTimedText(i))
+            : this.CloseWithError(
                 H.PlaybackError,
-                "Failed to parse MPD file",
-                this.m_strMPD,
+                "Failed to create segment loaders",
               );
         }
         InitTimedText(e) {
@@ -6870,19 +6916,19 @@
           this.m_timedTextRepSelected = t;
         }
         PlayWebRTC(e, t, r, i, a) {}
-        OnVisibilityChange() {
-          "visible" === document.visibilityState &&
+        OnLoadedMetadataForHLS() {
+          this.m_bUseHLSManifest &&
+            ((this.m_bIsBuffering = !1), this.BeginPlayback());
+        }
+        OnVisibilityChangeForHLS() {
+          this.m_bUseHLSManifest &&
+            "visible" === document.visibilityState &&
             (this.m_elVideo.src = this.m_strHLS);
         }
         Close() {
           if (
             ((this.m_bClosing = !0),
             this.m_listeners.Unregister(),
-            this.m_bUseHLSManifest &&
-              document.removeEventListener(
-                "visibilitychange",
-                this.OnVisibilityChange,
-              ),
             this.StopDownloads(),
             this.m_elVideo && this.m_elVideo.pause(),
             this.m_mediaSource)
@@ -7425,7 +7471,7 @@
               this.OnSegmentDownloadFailed(e, H.StreamGone));
         }
         OnMediaUnsupportedError(e, t) {
-          this.DispatchEvent("valve-typeerror", t);
+          this.DispatchEvent("valve-downloadfailed", H.UnsupportedMediaType);
         }
         OnMediaSourceError(e) {
           this.DispatchEvent("valve-playbackerror");
@@ -7776,7 +7822,7 @@
         }
         GetMaxWidthAndHeight() {
           if (!this.m_mpd) return null;
-          let e = this.m_mpd.GetVideoAdaption();
+          let e = this.m_mpd.GetMainVideoAdaption();
           if (!e) return null;
           if (0 == e.rgRepresentations.length) return null;
           let t = e.rgRepresentations[0];
@@ -7791,7 +7837,8 @@
       }
       (0, i.Cg)([s.sH], V.prototype, "m_nTimedText", void 0),
         (0, i.Cg)([s.XI], V.prototype, "InitTimedText", null),
-        (0, i.Cg)([u.o], V.prototype, "OnVisibilityChange", null),
+        (0, i.Cg)([u.o], V.prototype, "OnLoadedMetadataForHLS", null),
+        (0, i.Cg)([u.o], V.prototype, "OnVisibilityChangeForHLS", null),
         (0, i.Cg)([u.o], V.prototype, "UpdateMPD", null),
         (0, i.Cg)([u.o], V.prototype, "OnMediaSourceOpen", null),
         (0, i.Cg)([u.o], V.prototype, "HandleMediaSourceError", null),
@@ -13335,10 +13382,7 @@
         StartBroadcast(e) {
           this.InitPlayer(),
             e.m_data.url
-              ? ((this.m_player = new p.Zn(
-                  this.m_elVideo,
-                  !(0, u.Mc)() && (0, u.aM)(),
-                )),
+              ? ((this.m_player = new p.Zn(this.m_elVideo)),
                 this.m_player.PlayMPD(
                   e.m_data.url,
                   e.m_strCDNAuthUrlParameters,
@@ -13380,7 +13424,7 @@
         }
         StartVOD(e) {
           this.InitPlayer();
-          let t = new p.Zn(this.m_elVideo, !(0, u.Mc)() && (0, u.aM)());
+          let t = new p.Zn(this.m_elVideo);
           (this.m_player = t),
             h.iA.logged_in &&
               e.m_nAppIDVOD &&

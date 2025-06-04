@@ -2136,6 +2136,14 @@ enum UnnamedEnum453e526514507ded
 	Immediate = 1;
 }
 
+enum UnnamedEnum453fb51a20bad046
+{
+	Invalid = 0;
+	StreamGone = 1;
+	PlaybackError = 2;
+	UnsupportedMediaType = 3;
+}
+
 enum UnnamedEnum47122ffa63e68b01
 {
 	Character = 0;
