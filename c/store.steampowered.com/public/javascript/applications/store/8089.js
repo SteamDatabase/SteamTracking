@@ -22,6 +22,7 @@
 	"Menu_SearchPlaceholder": "Cari di toko",
 	"Menu_Wishlist": "Wishlist",
 	"Menu_Cart": "Keranjang",
+	"Menu_Popover_TopLinks": "Tautan Teratas",
 	"Menu_Popover_StoreHome": "Beranda Toko",
 	"Menu_Popover_FreeToPlay": "F2P",
 	"Menu_Popover_SteamCharts": "Grafik Steam",

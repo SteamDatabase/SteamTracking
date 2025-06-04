@@ -18,90 +18,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        BrowseLinkSection: "RybporTv7QYX6amlsKykc",
-        BrowseLinkGrid: "_1YL0igQNeU2NbZWTMj3MeV",
-        BrowseLinkButton: "_2u5qV-nuJYx3iwYvYEANsE",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TopCategories: "_1PQMwJUws5GG2KNPUB3H2V",
-        CategoryLink: "ubV1J09hPbSYVw4DDsoqC",
-        CategoryTileImage: "kp0aq-PEOve0gtNBK7PYg",
-        Gradient: "_2zRLw46Y9Eqp8_t9jpinIk",
-        CategoryTitleAlign: "ljABrTqd8cuc-R0vbbAtZ",
-        CategoryTitle: "el9EOHtmRDUFN7LzCUnaD",
-        TagLinksContainer: "_2PN4L_YNEzSUF7dDnrWSI8",
-        TagLinks: "_2p1X6cYN2wtyIIon75SPqb",
-        TagLink: "_4BBZ5bSJ7hftdt06nG_TH",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        DynamicMenu: "_1dI4qqsWcoI4p2nRWsp8Wy",
-        MenuOptions: "_2mflLz-vXJFKhEdsNS5atP",
-        MenuSection: "_2li5ul2RkrwOyn4zcl2p49",
-        MenuItem: "_1zFM3ZACxZNmHF6HBfodAX",
-        ChevronSpacer: "_16VpkhrXup7z_3mmbz6VTZ",
-        Chevron: "_2uDx2iTz1AjWoZXctl8WUl",
-        Active: "_2dmueAreMdij35536lcAQo",
-        TransitionContainer: "_3l4VT3iErrv5pttlsws7Yh",
-        _: "_8-M_ZMVTPerTGSk219I0V",
-        SectionTransition: "_3cMbIg1BTMw0JaNY4YA2W",
-        Enter: "_214TJABp5PjaDZWeEW7YDz",
-        EnterActive: "_3S5CX8TxFZicH7Pwod22AU",
-        Exit: "_1zNBeF7e2N-L4JcO-PC0dE",
-        ExitActive: "_3L3Jo32GTG5J1uW4s5r5lX",
-        Down: "_2ysG6AacOg9Upg4araV4DM",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FeaturedHardwareRow: "FmAEkFQ6XF8foM47KiKnd",
-        FeaturedHardware: "_3IAVMnUyGa4dpDAq_YcN3y",
-        Image: "_2M9-d1hmoceX9Fursjk8a7",
-        TitleContainer: "_2hIfDuqLa2-6LrnZatnhCE",
-        Title: "_316pcHC9SClgzaoxp_gVC1",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        RecommendationTwoCol: "_2vCZ3m7EZ__BIWFro69g0E",
-        DiscoveryQueue: "_1B2JJNeyQvp3Qjsk2tA6Dm",
-        Background: "wQcyxcxsr-DIPnNtpCCR4",
-        BackgroundOverlay: "_13qxLiVAk6UyWvHeZ8PeHh",
-        Content: "_1U248m_EO3YZtj2E45RZ25",
-        Title: "_1E3Nq5CSUHxqzbIwY5RV5n",
-        Description: "Z9gggfPCKOb7HQzgDI-IO",
-        ActionButton: "_2oIBiZP1I6MuCy2kr3Hj9W",
-        ButtonText: "_1EIoFwT9NvCIwLJp2Veym",
-        _: "_1smV7EF6GqKJXu7-nrY-CX",
-        BackgroundImage: "_3b5qvYAcHrmDMwXQ4WeIGI",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Section: "_3ZBsPRDEluKBcM8I865w-w",
-        SectionTitle: "_3e2RTcsH3DgG7vVqSKKfXQ",
-        SectionTitleWithLink: "_3othFwSh438iTbFeT-AP5F",
-        LinkContainer: "LSE-VFMidzmWhe29tQ--n",
-        SectionWithLinkColumn: "_2FscOBiHTC-mDQbBZcor2q",
-        SectionContent: "_3alyfigZPNuJhJC7kPjpXa",
-        LinkColumn: "_3yVlS9z9PTGyCfVQglgKhf",
-        Wide: "_3qAbJmKqxd4kYsC0VB-t11",
-        Link: "_2_kJGzEzE3lOlT6Uy1ReTv",
-        HorizontalRule: "Uzdu5VqTCSIYTejHO19Ou",
-        GridSection: "SbRQCjXaAzR-Ur35LPzZv",
-        Row: "EVs6WfWijI9mhdFnyZEF3",
-        Button: "vN1L7CNTqheqcdXRbRAJ_",
-        WithIcon: "_3HlkVRt9sbw2w1unA_5zZa",
-        Icon: "_2sLiPNUEuQwBkKg6CLoUL0",
-        Label: "_2YmyTz3bPsTarV5L3l7vVk",
-        ViewAllLink: "IkPS-NRSi9fmI3iBzRqpc",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         CapsuleList: "_16WEqEDIlh-957kKg14gBt",
         ItemCapsule: "_3Z1skIYVoqLbYiP2wy46Ce",
         Active: "tHXw2oCZIXQZPrZvcoSPB",
@@ -132,6 +48,90 @@
         Active: "vHnThqOPQZvwPy0YyMOyR",
         CategoryIcon: "_3852oj6diaYgwaA7_k2JEJ",
         Content: "NOctYARrXun3C2m8ZOA3u",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BrowseLinkSection: "_3DYXcTryqomaHXCoQolTr_",
+        BrowseLinkGrid: "-bDCBiZsIWB-_6IzGxbhz",
+        BrowseLinkButton: "_15eaL848WovXjJ0POHaD9D",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TopCategories: "_1_Cs2jL-zQHuz1FSXBASEL",
+        CategoryLink: "_1-cbd4jE7Y3ZRkLFocvEDW",
+        CategoryTileImage: "_2zLGA-bpYZoQ1tlrxdC0bl",
+        Gradient: "_36Qgx6aYS9HfYORRauakKF",
+        CategoryTitleAlign: "_2lMeDNY8MZL79iTgvrtg10",
+        CategoryTitle: "_3HqvlP8tdG4sTsVC0ANwfg",
+        TagLinksContainer: "_1UkrDgMhl-oqKXXt9KXc4N",
+        TagLinks: "_2ovPL35Q1O7gq-DbxmP4cs",
+        TagLink: "_2oz62CVNbwTn7KrUUwRdRw",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FeaturedHardwareRow: "_3CCxBBbZTQS6eTjcQD5W-D",
+        FeaturedHardware: "_23ZVj5bpOrPKV-d5CWG7lu",
+        Image: "_2YW7iSUhkhAU2OZIFBgSbN",
+        TitleContainer: "_2Cc-FLjIFWZwBaGz0TSrW8",
+        Title: "_11IYP42PAMrnzCjJnoaZAH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        DynamicMenu: "_2ULEyYgHBHtbdS-UzA2CMo",
+        MenuOptions: "_25y40YQQ9yLoSxeIiYPBLW",
+        MenuSection: "_23OS9-_9K0-cbQx2VaCRgG",
+        MenuItem: "_23dSXPnMLAqirY-XNeEJ-r",
+        ChevronSpacer: "YZpHY8ObBmj_6-2uAFY3-",
+        Chevron: "_14F0v3UrBwdLuNbzG_w_dc",
+        Active: "_3YhUrzz0wbuwkRosba0Mso",
+        TransitionContainer: "_2j0yfyrqbOsnOPaTA8Tqkm",
+        _: "_1PbF1hu7CelqcpP1W4Vb5v",
+        SectionTransition: "oinCQwcYY1YNIHuKJeYJw",
+        Enter: "_2RExD1Rn35tuYU4P3iq1g6",
+        EnterActive: "_1Az5sluIUIBtdXhxRFgEIb",
+        Exit: "_9rIUUcLDBmzOF6ae3dqm1",
+        ExitActive: "_2-qxNCdn_qJkT8TIBYe4xg",
+        Down: "_3uEj_EGp3hFxwPvVMW02QT",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        RecommendationTwoCol: "_21F52O1eUPKz37HniCe3kj",
+        DiscoveryQueue: "_2SuTwoGRq7L6D8hZByqE62",
+        Background: "_1hrnAqRA57mMuhK3gjPSLu",
+        BackgroundOverlay: "_2-rKQdmSx7Khacm27tXK0K",
+        Content: "_3MacNs6QCQ7GzBJWv7LNxa",
+        Title: "_3xA_zAPk4Gs81l4iCC0fRz",
+        Description: "_1Wz57jagOh6dxI7GUA5igl",
+        ActionButton: "_1PSb462Tg4S8M046QIk4PM",
+        ButtonText: "_1fyDZMVLKzvHIle_9i4Lpq",
+        _: "_1UYj3bhmlk9olzBLJiCHmC",
+        BackgroundImage: "_2TQdMr4X39QLH39Z0_airS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Section: "_2ihG7DC0YPrw01ComUbKnY",
+        SectionTitle: "_3wkp8GaMeHBsrImd61r1X-",
+        SectionTitleWithLink: "t3RAs516ziDj593wzPx-v",
+        LinkContainer: "_2ei6XGyZTi_2PvVZFtlzcZ",
+        SectionWithLinkColumn: "_2dL6ap-BkfhXkVntihe2KS",
+        SectionContent: "wX6LdxJgqoPyuPTGpQRC0",
+        LinkColumn: "_39xRzOagrnlvU_DbiDnzVW",
+        Wide: "JeKLaTDB6BY1_KxkPBi7y",
+        Link: "_3xfL7u7e8rFk4XeOpKN0oC",
+        HorizontalRule: "_1tOe1a5sCJUgvbHanH8BmV",
+        GridSection: "_1ECtb6W4gvvCrevAbzsKq_",
+        Row: "_3jXeonOfw-RB-1PDdJqSUx",
+        Button: "_1vPyDoJDpPKIAmF1YMCtY0",
+        WithIcon: "_38ngLpACn1zS6vXvyaDLDM",
+        Icon: "_1-3HkXvDUXTzJg8JfSFCwI",
+        Label: "_3nohIP2x4JypyTk3gtBog0",
+        ViewAllLink: "_1PuyX9P-ZPobFUE_2scw0_",
       };
     },
     chunkid: (module) => {
@@ -672,7 +672,7 @@
         (_.ukrainian = () =>
           __webpack_require__
             ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53409, 19))),
+            .then(__webpack_require__._.bind(__webpack_require__, 75790, 19))),
         (_.vietnamese = () =>
           __webpack_require__
             ._("chunkid")
@@ -1400,7 +1400,18 @@
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
-        return (0, _._)(_(_, _, _));
+        return (0, _._)(
+          (function (_, _, _) {
+            return {
+              queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(_(_, _));
+                return new Map(_.map((_) => [_.handle, _]));
+              },
+              staleTime: _,
+            };
+          })(_, _, _),
+        );
       }
       function _(_, _) {
         return {
@@ -1427,56 +1438,49 @@
           staleTime: _,
         };
       }
-      function _(_, _, _) {
-        return {
-          queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
-          queryFn: async () => {
-            const _ = await _.fetchQuery(_(_, _));
-            return new Map(_.map((_) => [_.handle, _]));
-          },
-          staleTime: _,
-        };
-      }
       function _(_ = !0) {
-        const _ = _((0, _._)(), (0, _._)(), (0, _._)(), (0, _._)(), (0, _._)());
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ =
+            ((0, _._)(),
+            (function (_, _, _, _, _) {
+              return {
+                queryKey: ["StoreFrequentlyVisitedHubs", _],
+                queryFn: async () => {
+                  const [_, _] = await Promise.all([
+                    _.fetchQuery(_(_, _)),
+                    _.fetchQuery(_(_, _, _)),
+                  ]);
+                  return (_.frequent_hubs || [])
+                    .map((_) =>
+                      _.item_id.hubcategoryid
+                        ? {
+                            ..._,
+                            hubconfig: _.get(_.item_id.hubcategoryid),
+                          }
+                        : _.item_id.tagid
+                          ? {
+                              ..._,
+                              tagid: _.item_id.tagid,
+                            }
+                          : null,
+                    )
+                    .filter(
+                      (_) =>
+                        _ &&
+                        (("hubconfig" in _ && _.hubconfig) ||
+                          ("tagid" in _ && _.tagid)),
+                    );
+                },
+                enabled: !!_,
+                initialData: _ ? void 0 : [],
+                staleTime: 6e5,
+              };
+            })(_, _, 0, (0, _._)(), (0, _._)()));
         return (0, _._)({
           ..._,
           enabled: _.enabled && _,
         });
-      }
-      function _(_, _, _, _, _) {
-        return {
-          queryKey: ["StoreFrequentlyVisitedHubs", _],
-          queryFn: async () => {
-            const [_, _] = await Promise.all([
-              _.fetchQuery(_(_, _)),
-              _.fetchQuery(_(_, _, _)),
-            ]);
-            return (_.frequent_hubs || [])
-              .map((_) =>
-                _.item_id.hubcategoryid
-                  ? {
-                      ..._,
-                      hubconfig: _.get(_.item_id.hubcategoryid),
-                    }
-                  : _.item_id.tagid
-                    ? {
-                        ..._,
-                        tagid: _.item_id.tagid,
-                      }
-                    : null,
-              )
-              .filter(
-                (_) =>
-                  _ &&
-                  (("hubconfig" in _ && _.hubconfig) ||
-                    ("tagid" in _ && _.tagid)),
-              );
-          },
-          enabled: !!_,
-          initialData: _ ? void 0 : [],
-          staleTime: 6e5,
-        };
       }
       function _(_, _) {
         return {
@@ -3074,8 +3078,62 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            const {
+              item_count: _,
+              owned_games: _ = "exclude",
+              wishlisted_games: _,
+              ignored_games: _ = "exclude",
+              dlc_for_unowned_games: _ = "exclude",
+            } = _;
+            return {
+              queryKey: [
+                "FilterListForUser",
+                _,
+                {
+                  item_count: _,
+                  owned_games: _,
+                  wishlisted_games: _,
+                  ignored_games: _,
+                  dlc_for_unowned_games: _,
+                },
+              ],
+              queryFn: async () =>
+                (
+                  await Promise.all(
+                    __webpack_require__.map(async (_) => ({
+                      _: _,
+                      user_filter: await _.fetchQuery((0, _._)(_, _)),
+                    })),
+                  )
+                )
+                  .filter(
+                    ({ _: _, user_filter: _ }) =>
+                      !(
+                        ("only" == _ && !_?.already_owned) ||
+                        ("only" == _ && !_?.on_wishlist) ||
+                        (_ &&
+                          (_.excluded_content_descriptorids?.length ||
+                            ("exclude" == _ && _.already_owned) ||
+                            ("exclude" == _ && _.on_wishlist) ||
+                            ("exclude" == _ && _.ignored) ||
+                            ("exclude" == _ && _.dlc_for_unowned_game)))
+                      ),
+                  )
+                  .slice(0, _)
+                  .map(({ _: _ }) => _),
+              staleTime: 6e5,
+              enabled: void 0 !== _,
+            };
+          })(_, _, _, _),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         return {
           queryKey: ["StoreQuery", _],
@@ -3151,6 +3209,7 @@
       }
       const _ = {
         include_assets: !0,
+        apply_user_filters: !0,
       };
       function _() {
         return _.createElement(
@@ -3199,6 +3258,19 @@
             },
             _("#Menu_Popover_Preferences"),
           ),
+        );
+      }
+      function _() {
+        return (
+          _(),
+          _(
+            {
+              count: 10,
+              name: "Store Menu Popular New",
+            },
+            _,
+          ),
+          null
         );
       }
       _._();
@@ -3292,18 +3364,21 @@
       }
       function _(_) {
         const { data: _ } = _(
-          {
-            count: 3,
-            name: "Store Menu Popular New",
-          },
-          _,
-        );
+            {
+              count: 10,
+              name: "Store Menu Popular New",
+            },
+            _,
+          ),
+          { data: __webpack_require__ } = _(_?.rgItemIDs, {
+            item_count: 3,
+          });
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(_, null, _("#Menu_Section_Browse_PopularNew")),
           _.createElement(_, {
-            rgItemIDs: _?.rgItemIDs || [],
+            rgItemIDs: __webpack_require__ ?? [],
           }),
         );
       }
@@ -3333,10 +3408,10 @@
               _.createElement(
                 "a",
                 {
-                  href: "https://confluence.valve.org/pages/viewpage.action?pageId=386859931",
+                  href: "https://valve.enterprise.slack.com/archives/C08VC797WA1",
                   target: "_blank",
                 },
-                "Give feedback",
+                "Give feedback on Slack",
               ),
             ),
           ),
@@ -3391,6 +3466,9 @@
             _.createElement(_, null),
           ),
         );
+      }
+      function _() {
+        return (0, _._)(_), (0, _._)(), null;
       }
       function _() {
         return _.createElement(
@@ -3497,16 +3575,14 @@
                 .slice(0, 10)
                 .filter((_) => !_.has((0, _._)(_)));
             return _._(_, 0, _._(_)).slice(0, 3);
-          }, [__webpack_require__, _]),
-          { data: _ } = (0, _._)(_);
+          }, [__webpack_require__, _]);
         return _.createElement(
           "div",
           null,
           _.createElement(_, null, _("#Menu_Section_Browse_Recommended")),
-          _ &&
-            _.createElement(_, {
-              rgItemIDs: _,
-            }),
+          _.createElement(_, {
+            rgItemIDs: _,
+          }),
         );
       }
       function _() {
@@ -3554,6 +3630,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          ..._(_, _),
+          enabled: !!_,
+          initialData: _ ? void 0 : [],
+        });
+      }
       function _(_, _) {
         return {
           queryKey: ["RecommendedTagsForUser", _.country, _.language],
@@ -3589,19 +3675,13 @@
           _.createElement(_, null, _.createElement(_, null)),
         );
       }
+      function _() {
+        return (0, _._)(_._.LANGUAGE), _(_._.logged_in), _(), null;
+      }
       const _ = _.memo(function () {
           const [_, _] = (function () {
             const { data: _ } = _(),
-              { data: _ } = (function () {
-                const _ = (0, _._)(),
-                  _ = (0, _._)(),
-                  _ = (0, _._)();
-                return (0, _._)({
-                  ..._(_, _),
-                  enabled: !!_,
-                  initialData: _ ? void 0 : [],
-                });
-              })(),
+              { data: _ } = _(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
               _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []),
@@ -4199,124 +4279,112 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_] = _.useState(_.excludedSections),
-          _ = _.useMemo(
-            () => _().filter((_) => !("more" === _[0] || (_ && _.has(_[0])))),
-            [_],
-          ),
-          [_, _] = _.useState(_[0][0]);
-        !(function () {
-          const _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)();
-          (0, _.useEffect)(() => {
-            Promise.resolve(),
-              (function (_, _, _, _, _) {
-                const _ = [_.prefetchQuery((0, _._)(_, _, _.language))];
-                _ &&
-                  _.push(
-                    _.prefetchQuery(_(_, _, 0, _, _)),
-                    _.prefetchQuery(_(_, _)),
-                  ),
-                  Promise.all(_);
-              })(_, _, _, _.storeBrowseContext, _),
-              (function (_, _, _) {
-                Promise.all([
-                  _.prefetchQuery((0, _._)(_.dataLoader, _)),
-                  _.prefetchQuery((0, _._)(_.dataLoader, _)),
-                  _.prefetchQuery((0, _._)(_.dataLoader, _)),
-                  _.prefetchQuery(_(_, _, _.storeBrowseContext)),
-                ]);
-              })(_, _, _);
-          }, [_, _, _, _, _]);
-        })();
-        const { onMouseLeaveContainer: _, onMouseEnterItem: _ } = (function (
-          _,
-          _,
-        ) {
-          const _ = _.useRef(void 0);
-          (0, _.useEffect)(() => {
-            _.current?.section != _ && (_.current = void 0);
-          }, [_]);
-          const _ = _.useCallback(() => (_.current = void 0), []),
-            _ = _.useCallback(
-              (_, _) => {
-                if (_.current) {
-                  const { _: _, _: _, section: _ } = _.current,
-                    _ = _.clientX - _,
-                    _ = _.clientY - _;
-                  if (_ == _)
-                    return void (
-                      _ < 0 &&
-                      (_.current = {
-                        _: _.clientX,
-                        _: _.clientY,
-                        section: _,
-                      })
-                    );
-                  if (_ > 0) {
-                    if ((0 != _ ? Math.abs(_) / _ : 0) < _) return;
+          _ = _(_),
+          [_, _] = _.useState(_[0][0]),
+          { onMouseLeaveContainer: _, onMouseEnterItem: _ } = (function (_, _) {
+            const _ = _.useRef(void 0);
+            (0, _.useEffect)(() => {
+              _.current?.section != _ && (_.current = void 0);
+            }, [_]);
+            const _ = _.useCallback(() => (_.current = void 0), []),
+              _ = _.useCallback(
+                (_, _) => {
+                  if (_.current) {
+                    const { _: _, _: _, section: _ } = _.current,
+                      _ = _.clientX - _,
+                      _ = _.clientY - _;
+                    if (_ == _)
+                      return void (
+                        _ < 0 &&
+                        (_.current = {
+                          _: _.clientX,
+                          _: _.clientY,
+                          section: _,
+                        })
+                      );
+                    if (_ > 0) {
+                      if ((0 != _ ? Math.abs(_) / _ : 0) < _) return;
+                    }
                   }
-                }
-                _(_),
-                  (_.current = {
-                    _: _.clientX,
-                    _: _.clientY,
-                    section: _,
-                  });
-              },
-              [_],
-            );
-          return {
-            onMouseLeaveContainer: _,
-            onMouseEnterItem: _,
-          };
-        })(_, _);
+                  _(_),
+                    (_.current = {
+                      _: _.clientX,
+                      _: _.clientY,
+                      section: _,
+                    });
+                },
+                [_],
+              );
+            return {
+              onMouseLeaveContainer: _,
+              onMouseEnterItem: _,
+            };
+          })(_, _);
         return _.createElement(
-          _._,
-          {
-            "flow-children": "row",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _.DynamicMenu,
-          },
+          _.Fragment,
+          null,
           _.createElement(
             _._,
             {
-              "flow-children": "column",
-              className: _.MenuOptions,
-              onMouseLeave: _,
+              "flow-children": "row",
+              navEntryPreferPosition: _._.MAINTAIN_Y,
+              className: _.DynamicMenu,
             },
-            __webpack_require__.map(([_, _]) =>
-              _.createElement(
-                _,
-                {
-                  key: _,
-                  active: _ == _,
-                  setSection: _,
-                  onMouseEnterItem: _,
-                  section: _,
-                },
-                _,
-              ),
-            ),
             _.createElement(
               _._,
               {
-                className: _.MenuItem,
-                href: `${_._.STORE_BASE_URL}sitemap`,
+                "flow-children": "column",
+                className: _.MenuOptions,
+                onMouseLeave: _,
               },
-              _("#Menu_Popover_ViewAll"),
+              __webpack_require__.map(([_, _]) =>
+                _.createElement(
+                  _,
+                  {
+                    key: _,
+                    active: _ == _,
+                    setSection: _,
+                    onMouseEnterItem: _,
+                    section: _,
+                  },
+                  _,
+                ),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _.MenuItem,
+                  href: `${_._.STORE_BASE_URL}sitemap`,
+                },
+                _("#Menu_Popover_ViewAll"),
+              ),
+            ),
+            _.createElement(
+              _,
+              null,
+              _.createElement(_, {
+                rgSections: _,
+                section: _,
+              }),
             ),
           ),
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              rgSections: _,
-              section: _,
-            }),
-          ),
+          _.createElement(_, {
+            excludedSections: _,
+          }),
+        );
+      }
+      const _ = _.memo(function (_) {
+        return _(_.excludedSections).map((_) =>
+          _.createElement(_, {
+            key: _[0],
+            section: _[0],
+          }),
+        );
+      });
+      function _(_) {
+        return _.useMemo(
+          () => _().filter((_) => !("more" === _[0] || (_ && _.has(_[0])))),
+          [_],
         );
       }
       const _ = _.memo(function (_) {
@@ -4453,6 +4521,24 @@
             return _.createElement(_, {
               excludedSections: __webpack_require__,
             });
+          default:
+            return (0, _._)(_, `unhandled section ${_}`), null;
+        }
+      }
+      function _(_) {
+        const { section: _ } = _;
+        switch (_) {
+          case "browse":
+            return _.createElement(_, null);
+          case "recommendations":
+            return _.createElement(_, null);
+          case "categories":
+            return _.createElement(_, null);
+          case "hardware":
+          case "waystoplay":
+          case "specialsections":
+          case "more":
+            return null;
           default:
             return (0, _._)(_, `unhandled section ${_}`), null;
         }
@@ -4671,14 +4757,17 @@
             active: _,
             refButton: _,
           } = _,
+          [_, _] = _.useState(!1),
           _ = _.useCallback(
             () => __webpack_require__(_),
             [__webpack_require__, _],
-          );
+          ),
+          _ = _.useCallback(() => _(!0), []);
         return _.createElement(
           _._,
           {
             className: _()(_.MenuButton, _ && _.Active),
+            onMouseEnter: _,
             onClick: _,
             ref: _,
           },
@@ -4699,6 +4788,10 @@
             ),
           ),
           _.createElement(_, null),
+          _ &&
+            _.createElement(_, {
+              section: _,
+            }),
         );
       }
       function _() {
@@ -4874,7 +4967,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

@@ -30178,12 +30178,18 @@
         return (0, _._)(_(_, _));
       }
       function _(_) {
+        return _(_, _);
+      }
+      function _(_) {
+        return _(_, _, "include_assets");
+      }
+      function _(_, _, _) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _ && "packageid" in _ && !!_.packageid;
         let _;
         if (_) {
-          const _ = __webpack_require__.getQueryData(_(_, "default_info"));
+          const _ = _.getQueryData(_(_, "default_info"));
           _ &&
             1 == _.included_appids?.length &&
             (_ = {
@@ -30191,35 +30197,19 @@
             });
         }
         const { data: _ } = (0, _._)({
-          ..._(_, _),
+          ..._(_, _, _),
           enabled: _ && !_,
         });
         _ && (_ = _);
         const _ = _ ? _ : _;
         return (0, _._)(_(_, _));
       }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["resolvedSingleAppPackageIDs", _?.map(_._)],
-          queryFn: async () =>
-            await Promise.all(
-              _.map((_) =>
-                "packageid" in _
-                  ? __webpack_require__.fetchQuery(_(_, _))
-                  : Promise.resolve(_),
-              ),
-            ),
-          enabled: !!_,
-          staleTime: 1 / 0,
-        });
-      }
-      function _(_, _) {
+      function _(_, _, _) {
         const _ = _ && "packageid" in _ && !!_.packageid;
         return {
           queryKey: _(_, "include_included_items"),
           queryFn: async () => {
+            _ && _(_, _, _);
             const _ = await _(_, _, "include_included_items");
             return 1 == _.included_appids?.length
               ? {

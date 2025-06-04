@@ -22,6 +22,7 @@
 	"Menu_SearchPlaceholder": "Zoeken in de winkel",
 	"Menu_Wishlist": "Verlanglijst",
 	"Menu_Cart": "Winkelwagen",
+	"Menu_Popover_TopLinks": "Populaire links",
 	"Menu_Popover_StoreHome": "Winkel-startpagina",
 	"Menu_Popover_FreeToPlay": "Gratis spelen",
 	"Menu_Popover_SteamCharts": "Steam-lijsten",
