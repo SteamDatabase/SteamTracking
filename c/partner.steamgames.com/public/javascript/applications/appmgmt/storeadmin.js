@@ -3035,27 +3035,25 @@
             bExtraAssetsV2VideosAllowed: _,
             setExtraAssetsV2Videos: _,
           } = (0, _._)();
-        return _._.is_support
-          ? _.createElement(
-              _.Fragment,
-              null,
-              __webpack_require__ &&
-                _.createElement(_._, {
-                  className: _.EnableExtraAssetsV2,
-                  label: "New media conversion",
-                  checked: _,
-                  onChange: (_) => _(_),
-                }),
-              _ &&
-                _ &&
-                _.createElement(_._, {
-                  className: _.EnableExtraAssetsV2,
-                  label: "Videos allowed",
-                  checked: _,
-                  onChange: (_) => _(_),
-                }),
-            )
-          : null;
+        return _.createElement(
+          _.Fragment,
+          null,
+          __webpack_require__ &&
+            _.createElement(_._, {
+              className: _.EnableExtraAssetsV2,
+              label: "New media conversion",
+              checked: _,
+              onChange: (_) => _(_),
+            }),
+          _ &&
+            _ &&
+            _.createElement(_._, {
+              className: _.EnableExtraAssetsV2,
+              label: "Videos allowed",
+              checked: _,
+              onChange: (_) => _(_),
+            }),
+        );
       }
       function _(_) {
         const {
@@ -6014,9 +6012,7 @@
       }
       function _() {
         const _ = _.useContext(_),
-          _ =
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            2 == _._.EUNIVERSE;
+          _ = _._.is_support;
         return {
           bExtraAssetsV2: _.bExtraAssetsV2 && _,
           bExtraAssetsV2Allowed: _,
@@ -6025,9 +6021,7 @@
       }
       function _() {
         const _ = _.useContext(_),
-          _ =
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            2 == _._.EUNIVERSE;
+          _ = _._.is_support;
         return {
           bExtraAssetsV2Videos: _.bExtraAssetsV2Videos && _,
           bExtraAssetsV2VideosAllowed: _,

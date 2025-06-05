@@ -2796,27 +2796,25 @@
             bExtraAssetsV2VideosAllowed: o,
             setExtraAssetsV2Videos: c,
           } = (0, l.vh)();
-        return g.iA.is_support
-          ? s.createElement(
-              s.Fragment,
-              null,
-              n &&
-                s.createElement(i.Yh, {
-                  className: E.EnableExtraAssetsV2,
-                  label: "New media conversion",
-                  checked: t,
-                  onChange: (e) => a(e),
-                }),
-              t &&
-                o &&
-                s.createElement(i.Yh, {
-                  className: E.EnableExtraAssetsV2,
-                  label: "Videos allowed",
-                  checked: r,
-                  onChange: (e) => c(e),
-                }),
-            )
-          : null;
+        return s.createElement(
+          s.Fragment,
+          null,
+          n &&
+            s.createElement(i.Yh, {
+              className: E.EnableExtraAssetsV2,
+              label: "New media conversion",
+              checked: t,
+              onChange: (e) => a(e),
+            }),
+          t &&
+            o &&
+            s.createElement(i.Yh, {
+              className: E.EnableExtraAssetsV2,
+              label: "Videos allowed",
+              checked: r,
+              onChange: (e) => c(e),
+            }),
+        );
       }
       function w(e) {
         const {
@@ -5287,9 +5285,7 @@
       }
       function C() {
         const e = s.useContext(A),
-          t =
-            ("dev" == i.TS.WEB_UNIVERSE || "beta" == i.TS.WEB_UNIVERSE) &&
-            2 == i.TS.EUNIVERSE;
+          t = i.iA.is_support;
         return {
           bExtraAssetsV2: e.bExtraAssetsV2 && t,
           bExtraAssetsV2Allowed: t,
@@ -5298,9 +5294,7 @@
       }
       function S() {
         const e = s.useContext(A),
-          t =
-            ("dev" == i.TS.WEB_UNIVERSE || "beta" == i.TS.WEB_UNIVERSE) &&
-            2 == i.TS.EUNIVERSE;
+          t = i.iA.is_support;
         return {
           bExtraAssetsV2Videos: e.bExtraAssetsV2Videos && t,
           bExtraAssetsV2VideosAllowed: t,
