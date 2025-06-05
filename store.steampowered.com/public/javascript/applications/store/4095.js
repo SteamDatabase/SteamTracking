@@ -6860,10 +6860,15 @@
                 "loadedmetadata",
                 this.OnLoadedMetadataForHLS,
               ),
-              void this.m_listeners.AddEventListener(
+              this.m_listeners.AddEventListener(
                 document,
                 "visibilitychange",
                 this.OnVisibilityChangeForHLS,
+              ),
+              void this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "ended",
+                this.OnEndedForHLS,
               )
             );
           this.BCreateLoaders()
@@ -6924,6 +6929,9 @@
           this.m_bUseHLSManifest &&
             "visible" === document.visibilityState &&
             (this.m_elVideo.src = this.m_strHLS);
+        }
+        OnEndedForHLS() {
+          this.m_bUseHLSManifest && this.DispatchEvent("valve-ended");
         }
         Close() {
           if (
@@ -7839,6 +7847,7 @@
         (0, i.Cg)([s.XI], V.prototype, "InitTimedText", null),
         (0, i.Cg)([u.o], V.prototype, "OnLoadedMetadataForHLS", null),
         (0, i.Cg)([u.o], V.prototype, "OnVisibilityChangeForHLS", null),
+        (0, i.Cg)([u.o], V.prototype, "OnEndedForHLS", null),
         (0, i.Cg)([u.o], V.prototype, "UpdateMPD", null),
         (0, i.Cg)([u.o], V.prototype, "OnMediaSourceOpen", null),
         (0, i.Cg)([u.o], V.prototype, "HandleMediaSourceError", null),
