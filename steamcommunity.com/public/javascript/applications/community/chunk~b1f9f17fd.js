@@ -31508,34 +31508,34 @@
     },
     3937: (e, t, a) => {
       "use strict";
-      a.d(t, { c: () => b });
+      a.d(t, { c: () => y });
       var n = a(43527),
         i = a(25918),
         r = a(75844),
         o = a(90626),
         l = a(92757),
         s = a(43470),
-        c = a(738),
-        d = a(56011),
-        u = a(61859),
-        m = a(59461),
-        _ = a(52778),
-        p = a(51520),
-        g = a(26408),
-        h = a(62752),
-        v = a(73745),
-        S = a(52038),
-        E = a(14771),
-        y = a(68255);
-      const b = (0, r.PA)((e) => {
+        c = a(61859),
+        d = a(59461),
+        u = a(52778),
+        m = a(51520),
+        _ = a(26408),
+        p = a(62752),
+        g = a(73745),
+        h = a(52038),
+        v = a(14771),
+        S = a(68255),
+        E = a(21869);
+      const y = (0, r.PA)((e) => {
         const { editModel: t } = e,
           [a] = (0, s.hr)(),
           r = t.GetEventModel().bOldAnnouncement,
-          [v, b] = o.useState(!1),
-          w = t.BIsDirty() || a(t.GetGID()),
-          C = f(0.5 * E.Kp.PerMinute * 1e3, w),
-          T = f(5 * E.Kp.PerMinute * 1e3, w);
-        if (v) {
+          [y, f] = o.useState(!1),
+          [w, C, T] = (0, g.uD)(),
+          I = t.BIsDirty() || a(t.GetGID()),
+          D = b(0.5 * v.Kp.PerMinute * 1e3, I),
+          B = b(5 * v.Kp.PerMinute * 1e3, I);
+        if (y) {
           const e = t.GetStrVanityOrAppID();
           return o.createElement(l.rd, {
             push: !0,
@@ -31544,58 +31544,57 @@
               : n.GY.Edit(e, t.BHasGid() ? t.GetGID() : ""),
           });
         }
-        const I = t.BHidden(),
-          D = t.BPublished() && !t.BHidden();
+        const A = t.BHidden(),
+          M = t.BPublished() && !t.BHidden();
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            y.$n,
+            S.$n,
             {
-              onClick: (e) => {
-                const t = i.mh.GetEditModel(),
-                  a = t.BHasGid();
-                (0, c.pg)(
-                  o.createElement(_.t, {
-                    editModel: t,
-                    OnSuccess: () => {
-                      a || b(!0);
-                    },
-                    partnerEventEditorStore: i.mh,
-                  }),
-                  (0, d.uX)(e),
-                );
-              },
-              className: (0, S.A)({
-                [p.SaveButton]: !0,
-                [p.HaventSavedInAShortTime]: C,
-                [p.HaventSavedInALongTime]: T,
+              onClick: C,
+              className: (0, h.A)({
+                [m.SaveButton]: !0,
+                [m.HaventSavedInAShortTime]: D,
+                [m.HaventSavedInALongTime]: B,
               }),
             },
             o.createElement(
               "span",
               null,
-              !w &&
-                o.createElement("img", { className: p.SavedImage, src: m.A }),
-              (0, u.we)(w ? "#Button_Save" : "#Button_Saved"),
-              w &&
-                (I || D) &&
-                o.createElement(g.o, {
-                  tooltip: I
-                    ? (0, u.we)("#EventEditor_Create_ttip")
-                    : D
-                      ? (0, u.we)("#EventEditor_SaveLive_ttip")
+              !I &&
+                o.createElement("img", { className: m.SavedImage, src: d.A }),
+              (0, c.we)(I ? "#Button_Save" : "#Button_Saved"),
+              I &&
+                (A || M) &&
+                o.createElement(_.o, {
+                  tooltip: A
+                    ? (0, c.we)("#EventEditor_Create_ttip")
+                    : M
+                      ? (0, c.we)("#EventEditor_SaveLive_ttip")
                       : "",
                 }),
             ),
           ),
-          w && o.createElement(h.lj, { editModel: t }),
+          I && o.createElement(p.lj, { editModel: t }),
+          o.createElement(
+            E.E,
+            { active: w },
+            o.createElement(u.t, {
+              editModel: t,
+              closeModal: T,
+              OnSuccess: () => {
+                t.BHasGid() || f(!0);
+              },
+              partnerEventEditorStore: i.mh,
+            }),
+          ),
         );
       });
-      function f(e, t) {
+      function b(e, t) {
         const [a, n] = o.useState(!1);
         return (
-          (0, v.eV)(() => n(t), e, [t]),
+          (0, g.eV)(() => n(t), e, [t]),
           o.useEffect(() => {
             t || n(!1);
           }, [t]),

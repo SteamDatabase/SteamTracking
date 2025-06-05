@@ -35197,13 +35197,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _,
           [__webpack_require__] = (0, _._)(),
           _ = _.GetEventModel().bOldAnnouncement,
           [_, _] = _.useState(!1),
+          [_, _, _] = (0, _._)(),
           _ = _.BIsDirty() || __webpack_require__(_.GetGID()),
           _ = _(0.5 * _._.PerMinute * 1e3, _),
           _ = _(5 * _._.PerMinute * 1e3, _);
@@ -35224,20 +35224,7 @@
           _.createElement(
             _._,
             {
-              onClick: (_) => {
-                const _ = _._.GetEditModel(),
-                  _ = _.BHasGid();
-                (0, _._)(
-                  _.createElement(_._, {
-                    editModel: _,
-                    OnSuccess: () => {
-                      _ || _(!0);
-                    },
-                    partnerEventEditorStore: _._,
-                  }),
-                  (0, _._)(_),
-                );
-              },
+              onClick: _,
               className: (0, _._)({
                 [_.SaveButton]: !0,
                 [_.HaventSavedInAShortTime]: _,
@@ -35268,6 +35255,20 @@
             _.createElement(_._, {
               editModel: _,
             }),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_._, {
+              editModel: _,
+              closeModal: _,
+              OnSuccess: () => {
+                _.BHasGid() || _(!0);
+              },
+              partnerEventEditorStore: _._,
+            }),
+          ),
         );
       });
       function _(_, _) {
