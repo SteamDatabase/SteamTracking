@@ -247,6 +247,7 @@
     "EventEditor_StreamLoc": "Live-Stream Location",
     "EventEditor_Description": "Event Description",
     "EventEditor_DescriptionNews": "Announcement Content",
+    "EventEditor_UseVisualEditor": "Use visual editor",
     "EventEditor_AssociateBuild": "Link To Build...",
     "EventEditor_AssociateBuild_ttip": "Link this post with a specific build to have this post appear as Patch Notes in the 'Downloads' window of Steam.",
     "EventEditor_AssociateBuildBlank": "This event is not linked to any build",

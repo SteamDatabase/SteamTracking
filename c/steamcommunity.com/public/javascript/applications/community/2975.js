@@ -20,6 +20,8 @@
         ClanImageModalContent: "SsgHukHcE1jf7p3W6Ta8g",
         ClanImageModalMode: "_1RAzAQViGO8A_wCFzSUStH",
         Active: "_1qsUls0lc9uJ_RarLA3dcG",
+        ClanImageGridForm: "_3uCm4z1gjW0tmhRd228Xqh",
+        ClanImageGridContainer: "_3Q5TF6lMOT30JuoipVGd5C",
       };
     },
     chunkid: (module) => {
@@ -1078,21 +1080,32 @@
             _._,
             {
               onSubmit: () => _ && _(_),
+              className: _.ClanImageGridForm,
             },
             _.createElement(_._, {
               fnSetImageSearch: _,
             }),
-            _.createElement(_._, {
-              clanAccountID: _.GetAccountID(),
-              fileNameSearch: _,
-              onImageSelected: _,
-              selectedItem: _,
-            }),
-            _.createElement(_._, {
-              onCancel: __webpack_require__,
-              strOKText: _,
-              bOKDisabled: !_ || _ == _.selectedImage,
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _.ClanImageGridContainer,
+              },
+              _.createElement(_._, {
+                clanAccountID: _.GetAccountID(),
+                fileNameSearch: _,
+                onImageSelected: _,
+                selectedItem: _,
+              }),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_._, {
+                onCancel: __webpack_require__,
+                strOKText: _,
+                bOKDisabled: !_ || _ == _.selectedImage,
+              }),
+            ),
           ),
         );
       }

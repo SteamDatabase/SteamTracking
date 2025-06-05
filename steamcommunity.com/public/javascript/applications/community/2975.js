@@ -22,6 +22,8 @@
         ClanImageModalContent: "SsgHukHcE1jf7p3W6Ta8g",
         ClanImageModalMode: "_1RAzAQViGO8A_wCFzSUStH",
         Active: "_1qsUls0lc9uJ_RarLA3dcG",
+        ClanImageGridForm: "_3uCm4z1gjW0tmhRd228Xqh",
+        ClanImageGridContainer: "_3Q5TF6lMOT30JuoipVGd5C",
       };
     },
     1397: (e) => {
@@ -55,7 +57,7 @@
     },
     4537: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Pt });
+      n.r(t), n.d(t, { default: () => Rt });
       var a = n(90286),
         o = n(26555),
         l = n(22145),
@@ -204,18 +206,18 @@
         );
       }
       var O = n(12155),
-        L = n(88997),
-        P = n(60155),
-        R = n(5068),
-        V = n(9154),
-        F = n(62490),
+        F = n(88997),
+        R = n(60155),
+        L = n(5068),
+        P = n(9154),
+        V = n(62490),
         H = n(84811),
-        K = n(74005);
-      function j(e, t) {
+        j = n(74005);
+      function K(e, t) {
         const n = ee(t);
         if (n) return { node: t, nodeAttrs: n, clanImage: ae(e, n) };
       }
-      function Y(e) {
+      function q(e) {
         const {
             node: t,
             imageNodeType: n,
@@ -243,7 +245,7 @@
           }, [n, a, t]),
           g = m.useCallback((e) => i((0, r.M)(e)), [i]),
           v = "true" === t.attrs.autoadvance,
-          [h, f] = q(g, {
+          [h, f] = Q(g, {
             autoAdvance: v,
             clanSteamID: E,
             imageNodeType: n,
@@ -290,13 +292,13 @@
           ),
         );
       }
-      function q(e, t) {
+      function Q(e, t) {
         const n = t.carouselNodeType,
           [a, o] = m.useState(void 0),
           l = t.clanSteamID,
           r = m.useCallback(
             (e) => {
-              o(e.map((e) => j(l, e)).filter(Boolean));
+              o(e.map((e) => K(l, e)).filter(Boolean));
             },
             [l],
           ),
@@ -314,7 +316,7 @@
         return [
           r,
           m.createElement(
-            V.EN,
+            P.EN,
             { active: void 0 !== a },
             m.createElement($, {
               ...t,
@@ -325,7 +327,7 @@
           ),
         ];
       }
-      function Q(e) {
+      function Y(e) {
         const { nodeAttrs: t } = e;
         return "image" == t.type ? t.attrs.src : t.attrs.mp4 || t.attrs.webm;
       }
@@ -345,12 +347,12 @@
           ),
           p = m.useCallback(
             (e, t) => {
-              const n = j(l, t.create(e));
+              const n = K(l, t.create(e));
               if (!n)
                 throw `Couldn't parse image ${t.name} - ${JSON.stringify(e)}`;
               c((e) => {
-                const t = Q(n);
-                return e.find((e) => Q(e) == t) ? e : [...e, n];
+                const t = Y(n);
+                return e.find((e) => Y(e) == t) ? e : [...e, n];
               });
             },
             [l],
@@ -360,7 +362,7 @@
           }, [o, n, d, i]),
           _ = m.useCallback((e) => {
             e.destination &&
-              c((t) => F.yY(t.slice(), e.source.index, e.destination.index));
+              c((t) => V.yY(t.slice(), e.source.index, e.destination.index));
           }, []),
           { showInsertImageModal: v, imageModal: h } = oe({
             clanSteamID: l,
@@ -373,7 +375,7 @@
           null,
           h,
           m.createElement(
-            V.mt,
+            P.mt,
             { active: !0, onDismiss: n },
             m.createElement(
               g.Y9,
@@ -389,26 +391,26 @@
                 onChange: u,
               }),
               m.createElement(
-                K.JY,
+                j.JY,
                 { onDragEnd: _ },
                 m.createElement(
-                  K.gL,
+                  j.gL,
                   { droppableId: "droppable", direction: "horizontal" },
                   (e) =>
                     m.createElement(
                       "div",
                       {
-                        className: R.CarouselList,
+                        className: L.CarouselList,
                         ...e.droppableProps,
                         ref: e.innerRef,
                       },
                       i.map((e, t) =>
                         m.createElement(
                           H.tH,
-                          { key: Q(e) },
+                          { key: Y(e) },
                           m.createElement(
-                            K.sx,
-                            { draggableId: Q(e), index: t },
+                            j.sx,
+                            { draggableId: Y(e), index: t },
                             (n, a, o) =>
                               m.createElement(W, {
                                 draggableProvided: n,
@@ -434,8 +436,8 @@
                 },
                 m.createElement(
                   g.$n,
-                  { type: "button", className: R.AddButton, onClick: v },
-                  m.createElement(D.OMN, { className: R.PlusIcon }),
+                  { type: "button", className: L.AddButton, onClick: v },
+                  m.createElement(D.OMN, { className: L.PlusIcon }),
                 ),
               ),
             ),
@@ -461,24 +463,24 @@
         return m.createElement(
           "div",
           {
-            className: d()(R.ListItem, R.DraggableItem),
+            className: d()(L.ListItem, L.DraggableItem),
             ref: t.innerRef,
             ...t.draggableProps,
             ...t.dragHandleProps,
           },
           m.createElement(
             "div",
-            { className: R.ImagePreview },
+            { className: L.ImagePreview },
             m.createElement("img", { src: (0, E.v6)(n.node.attrs.src) }),
             m.createElement(
               "div",
-              { className: R.Controls },
+              { className: L.Controls },
               m.createElement(
                 "div",
-                { className: R.Control },
+                { className: L.Control },
                 m.createElement(
                   T.ff,
-                  { onClick: r, className: R.Button },
+                  { onClick: r, className: L.Button },
                   m.createElement(D.sED, null),
                 ),
               ),
@@ -512,7 +514,7 @@
             d(), g();
           }, [d, g]),
           b = m.useCallback((e) => p((0, r.M)(e)), [p]),
-          [C, w] = q(b, {
+          [C, w] = Q(b, {
             clanSteamID: i,
             imageNodeType: o,
             videoNodeType: l,
@@ -554,7 +556,7 @@
         const { showModal: t, removeNode: n, contextMenuProps: a } = e,
           o = m.useCallback(
             (e) => {
-              (0, L.lX)(m.createElement(Z, { ...a }), e, {
+              (0, F.lX)(m.createElement(Z, { ...a }), e, {
                 bPreferPopTop: !1,
                 bPreferPopLeft: !0,
               });
@@ -580,16 +582,16 @@
             window.open(n);
           }, [n]);
         return m.createElement(
-          P.tz,
+          R.tz,
           null,
           t &&
             m.createElement(
-              P.kt,
+              R.kt,
               { onSelected: t },
               (0, C.we)("#EventEditor_CarouselEditor_CreateACarousel"),
             ),
           m.createElement(
-            P.kt,
+            R.kt,
             { onSelected: a },
             (0, C.we)("#EventEditor_ImageEdit_PreviewImage"),
           ),
@@ -922,19 +924,27 @@
           null,
           m.createElement(
             g.lV,
-            { onSubmit: () => i && p(i) },
+            { onSubmit: () => i && p(i), className: k.ClanImageGridForm },
             m.createElement(h.g, { fnSetImageSearch: s }),
-            m.createElement(v.ge, {
-              clanAccountID: l.GetAccountID(),
-              fileNameSearch: r,
-              onImageSelected: E,
-              selectedItem: i,
-            }),
-            m.createElement(g.CB, {
-              onCancel: n,
-              strOKText: d,
-              bOKDisabled: !i || i == e.selectedImage,
-            }),
+            m.createElement(
+              "div",
+              { className: k.ClanImageGridContainer },
+              m.createElement(v.ge, {
+                clanAccountID: l.GetAccountID(),
+                fileNameSearch: r,
+                onImageSelected: E,
+                selectedItem: i,
+              }),
+            ),
+            m.createElement(
+              g.wi,
+              null,
+              m.createElement(g.CB, {
+                onCancel: n,
+                strOKText: d,
+                bOKDisabled: !i || i == e.selectedImage,
+              }),
+            ),
           ),
         );
       }
@@ -1065,7 +1075,7 @@
             e && (e.element.focus(), e.element.select());
           }, []);
         return m.createElement(
-          V.EN,
+          P.EN,
           { active: !0 },
           m.createElement(
             _e._,
@@ -1125,10 +1135,10 @@
         Ue = n(61819),
         ze = n(88942),
         Oe = n(78327),
-        Le = n(41735),
-        Pe = n.n(Le),
-        Re = n(26408);
-      function Ve(e) {
+        Fe = n(41735),
+        Re = n.n(Fe),
+        Le = n(26408);
+      function Pe(e) {
         const { hideModal: t, fnUpdateSession: n } = e,
           [a, o] = (0, m.useState)(() => $e(!0, null)),
           [l, r] = (0, m.useState)(() => We(!0, null)),
@@ -1149,13 +1159,13 @@
             m.createElement(
               "div",
               { className: ye().DialogCtn },
-              m.createElement(Ke, { group: a, fnSetGroup: o }),
-              m.createElement(Ye, { session: l, fnSetSession: r }),
+              m.createElement(je, { group: a, fnSetGroup: o }),
+              m.createElement(qe, { session: l, fnSetSession: r }),
             ),
           ),
         );
       }
-      function Fe(e) {
+      function Ve(e) {
         const { hideModal: t, groupInput: n, fnUpdateGroupSession: a } = e,
           [o, l] = (0, m.useState)(() => $e(!1, n));
         return m.createElement(
@@ -1175,7 +1185,7 @@
             m.createElement(
               "div",
               { className: ye().DialogCtn },
-              m.createElement(Ke, { group: o, fnSetGroup: l }),
+              m.createElement(je, { group: o, fnSetGroup: l }),
             ),
           ),
         );
@@ -1209,12 +1219,12 @@
             m.createElement(
               "div",
               { className: ye().DialogCtn },
-              m.createElement(Ye, { session: l, fnSetSession: r }),
+              m.createElement(qe, { session: l, fnSetSession: r }),
             ),
           ),
         );
       }
-      function Ke(e) {
+      function je(e) {
         const { group: t, fnSetGroup: n } = e,
           a = (0, Te.E)();
         return m.createElement(
@@ -1276,7 +1286,7 @@
             g.JU,
             null,
             "FAQ ",
-            m.createElement(Re.o, {
+            m.createElement(Le.o, {
               tooltip:
                 "Optional FAQ section which appears in the pop-up display and hidden by default",
             }),
@@ -1307,10 +1317,10 @@
             label:
               "Ask partner to tell us what they want to learn from the sessions",
           }),
-          m.createElement(je, { ...e }),
+          m.createElement(Ke, { ...e }),
         );
       }
-      function je(e) {
+      function Ke(e) {
         var t;
         const { group: n, fnSetGroup: a } = e,
           [o, l] = (0, m.useState)(
@@ -1378,7 +1388,7 @@
               label: "Change Visibility Options",
             });
       }
-      function Ye(e) {
+      function qe(e) {
         const { session: t, fnSetSession: n } = e,
           [a, o, l, r, s, i] = (0, we.q3)(() => [
             t.rtime_start,
@@ -1396,7 +1406,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement(Qe, {
+          m.createElement(Ye, {
             location_type: s,
             fnUpdateLocationAndTZ: (e, a) =>
               n({ ...t, location_type: e, in_person_time_zone: a }),
@@ -1423,7 +1433,7 @@
             },
             value: d,
           }),
-          m.createElement(qe, {
+          m.createElement(Qe, {
             rtime_start: a,
             rtime_end: o,
             sDisplayTimeZone: p,
@@ -1455,7 +1465,7 @@
           ),
         );
       }
-      function qe(e) {
+      function Qe(e) {
         const { rtime_start: t, rtime_end: n, sDisplayTimeZone: a } = e,
           o = Be.unix(t).tz(Ie.hh),
           l = Be.unix(t).tz(a),
@@ -1484,7 +1494,7 @@
           ),
         );
       }
-      function Qe(e) {
+      function Ye(e) {
         const {
             location_type: t,
             fnUpdateLocationAndTZ: n,
@@ -1496,7 +1506,7 @@
               queryFn: async () => {
                 const e = `${Oe.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   t = {},
-                  n = await Pe().get(e, { params: t });
+                  n = await Re().get(e, { params: t });
                 return null == n ? void 0 : n.data.timezones;
               },
             });
@@ -1571,10 +1581,10 @@
           } while (e && e.findIndex((e) => e.group_id == t) >= 0);
           return {
             group_id: t,
-            localized_session_title: (0, F.$Y)([], 31, null),
-            localized_session_description: (0, F.$Y)([], 31, null),
-            localized_sesssion_faq: (0, F.$Y)([], 31, null),
-            localized_intended_audience: (0, F.$Y)([], 31, null),
+            localized_session_title: (0, V.$Y)([], 31, null),
+            localized_session_description: (0, V.$Y)([], 31, null),
+            localized_sesssion_faq: (0, V.$Y)([], 31, null),
+            localized_intended_audience: (0, V.$Y)([], 31, null),
             group_visibility_tokens: [],
             ask_registration_question: !1,
             sessions: [],
@@ -1723,7 +1733,7 @@
                   ),
               ),
               Boolean(s) &&
-                m.createElement(Fe, {
+                m.createElement(Ve, {
                   hideModal: d,
                   groupInput: r,
                   fnUpdateGroupSession: (e) => {
@@ -2102,7 +2112,7 @@
             m.createElement(
               "div",
               { className: pt().DialogCtn },
-              m.createElement(Qe, {
+              m.createElement(Ye, {
                 location_type: i,
                 in_person_time_zone: c,
                 fnUpdateLocationAndTZ: (e, t) =>
@@ -2163,7 +2173,7 @@
                 r(
                   {
                     break_id: o,
-                    localized_break_description: (0, F.$Y)([], 31, null),
+                    localized_break_description: (0, V.$Y)([], 31, null),
                     rtime_start: a,
                     rtime_end: a + xe.Kp.PerHour,
                   },
@@ -2225,7 +2235,7 @@
               (a.localized_break_description[l] = e.currentTarget.value), n(a);
             },
           }),
-          m.createElement(qe, {
+          m.createElement(Qe, {
             rtime_start: r,
             rtime_end: s,
             sDisplayTimeZone: o,
@@ -2478,7 +2488,7 @@
           return m.createElement(
             m.Fragment,
             null,
-            l && m.createElement(Ve, { hideModal: i, fnUpdateSession: c }),
+            l && m.createElement(Pe, { hideModal: i, fnUpdateSession: c }),
             m.createElement(
               T.ff,
               { tooltip: "#MeetSteam_add_group_ttip", onClick: r, toggled: l },
@@ -2597,7 +2607,7 @@
           return m.createElement(
             x,
             {
-              toolbar: m.createElement(Lt, {
+              toolbar: m.createElement(Ft, {
                 removeNode: e.removeNode,
                 href: n,
               }),
@@ -2607,7 +2617,7 @@
         }
         return m.createElement("a", { href: n }, n);
       }
-      function Lt(e) {
+      function Ft(e) {
         const { href: t, removeNode: n } = e;
         return m.createElement(
           B,
@@ -2622,15 +2632,15 @@
           ),
         );
       }
-      const Pt = (0, kt.PA)(function (e) {
+      const Rt = (0, kt.PA)(function (e) {
         const { editModel: t } = e,
           n = t.GetEventModel().loadedAllLanguages,
           a = t.GetCurEditLanguage();
         return n
-          ? m.createElement(Rt, { ...e, eCurrentEditLanguage: a })
+          ? m.createElement(Lt, { ...e, eCurrentEditLanguage: a })
           : null;
       });
-      const Rt = m.memo(function (e) {
+      const Lt = m.memo(function (e) {
           const {
               editModel: t,
               refOnInsertImage: n,
@@ -2728,14 +2738,14 @@
                       refView: c,
                       panelProps: { onBlur: () => p.CommitChanges() },
                     },
-                    m.createElement(Vt, { eventSchemaConfig: d, editModel: t }),
+                    m.createElement(Pt, { eventSchemaConfig: d, editModel: t }),
                   ),
                 ),
               ),
             )
           );
         }),
-        Vt = m.memo(function (e) {
+        Pt = m.memo(function (e) {
           const { eventSchemaConfig: t, editModel: n } = e,
             { marks: a, nodes: o } = t.pm_schema,
             l = (function (e, t, n) {
@@ -2782,7 +2792,7 @@
               schema: t.pm_schema,
             }),
             o.image && m.createElement(b.pw, { nodeType: o.image }),
-            m.createElement(Ft, {
+            m.createElement(Vt, {
               schemaConfig: t,
               editModel: n,
               clanSteamID: n.GetClanSteamID(),
@@ -2790,7 +2800,7 @@
             m.createElement(Gt, { emoticonStore: Bt.A, schema: t.pm_schema }),
           );
         });
-      function Ft(e) {
+      function Vt(e) {
         const { schemaConfig: t, editModel: n, clanSteamID: a } = e,
           o = t.pm_schema,
           s = m.useMemo(
@@ -2847,7 +2857,7 @@
               },
               i.carousel && {
                 type: i.carousel,
-                component: Y,
+                component: q,
                 readProps: (e) => ({
                   node: e,
                   imageNodeType: c,

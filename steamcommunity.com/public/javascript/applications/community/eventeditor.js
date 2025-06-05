@@ -11439,34 +11439,28 @@
       );
       function Oi(e) {
         const { editModel: t, refOnInsertImage: a } = e,
-          [n, l, i] = (function (e) {
-            const t = [
-                4397053,
-                40893422,
-                2 == ba.TS.EUNIVERSE ? 2581 : 45267781,
-              ].includes(e.GetClanAccountID()),
-              a = 1 != ba.TS.EUNIVERSE || G.iA.is_support || t,
-              n = "partnerEventsRichEditorOptIn",
-              l = t ? "1" : "0",
-              [i, o] = c.useState(() => {
+          [n, l] = (function (e) {
+            const t = "partnerEventsRichEditorOptIn",
+              a = "1",
+              [n, l] = c.useState(() => {
                 var e;
                 return (
                   "1" ==
-                  (null !== (e = localStorage.getItem(n)) && void 0 !== e
+                  (null !== (e = localStorage.getItem(t)) && void 0 !== e
                     ? e
-                    : l)
+                    : a)
                 );
               }),
-              r = c.useCallback(
+              i = c.useCallback(
                 (e) => {
-                  a && (localStorage.setItem(n, e ? "1" : "0"), o(e));
+                  localStorage.setItem(t, e ? "1" : "0"), l(e);
                 },
-                [a, n],
+                [t],
               );
-            return [a, a && i, r];
-          })(t),
-          o = (0, zt.q3)(() => t.GetEventType()),
-          r = (0, U.QS)(
+            return [n, i];
+          })(),
+          i = (0, zt.q3)(() => t.GetEventType()),
+          o = (0, U.QS)(
             (e) => {
               if (!e) return;
               const t = (t, a) => (0, mi.fW)(e, t, a);
@@ -11479,7 +11473,7 @@
             },
             [a],
           ),
-          s = c.useMemo(() => {
+          r = c.useMemo(() => {
             const e = G.iA.is_support;
             return (0, ci.BY)({
               bIncludeMedia: G.UF.CAN_UPLOAD_IMAGES,
@@ -11492,29 +11486,28 @@
           c.createElement(
             "div",
             { className: h().EventEditorTextTitle },
-            28 == o
+            28 == i
               ? (0, D.we)("#EventEditor_DescriptionNews")
               : (0, D.we)("#EventEditor_Description"),
           ),
-          n &&
-            c.createElement(
-              "label",
-              null,
-              c.createElement("input", {
-                type: "checkbox",
-                checked: l,
-                onChange: (e) => i(e.currentTarget.checked),
-              }),
-              "(VO) Use rich editor",
-            ),
-          l
+          c.createElement(
+            "label",
+            null,
+            c.createElement("input", {
+              type: "checkbox",
+              checked: n,
+              onChange: (e) => l(e.currentTarget.checked),
+            }),
+            (0, D.we)("#EventEditor_UseVisualEditor"),
+          ),
+          n
             ? c.createElement(
                 c.Suspense,
                 null,
                 c.createElement(Ri, {
                   editModel: t,
                   refOnInsertImage: a,
-                  limitBBCode: s,
+                  limitBBCode: r,
                 }),
               )
             : c.createElement(_i.I, {
@@ -11533,11 +11526,11 @@
                 strPlaceholder: (0, D.we)(
                   "#EventEditor_Description_PlaceHolder",
                 ),
-                ref: r,
+                ref: o,
                 emoticonStore: Ot.A,
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
-                limitBBCode: s,
+                limitBBCode: r,
                 classNameForTextArea: qn.EventEditorDescription,
                 clanSteamID: t.GetClanSteamID(),
               }),

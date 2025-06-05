@@ -403,6 +403,9 @@
     69290: (e) => {
       e.exports = { TitleAndDoc: "voPt0u3YF0z3YDxxPg97z" };
     },
+    75026: (e) => {
+      e.exports = { Ctn: "qjnBU-RIaxCk4vQUtznbK" };
+    },
     59040: (e) => {
       e.exports = {
         ChartContainer: "_38gl3E5j4bYagIMSd9MXCf",
@@ -2337,6 +2340,9 @@
             ""
           );
         }
+        GetAllAltLocalizedText() {
+          return this.m_oTemplateVars.localized_alt_text;
+        }
         GetAltTextLocalized(e) {
           if (this.m_oTemplateVars.localized_alt_text) {
             const t = h.A0.GetELanguageFallback(e);
@@ -3016,6 +3022,7 @@
         }
       }
       (0, n.Cg)([l.sH], b.prototype, "m_bDirty", void 0),
+        (0, n.Cg)([u.o], b.prototype, "GetAltTextRaw", null),
         (0, n.Cg)([u.o], b.prototype, "ClearAllLegacyRestrictions", null),
         (0, n.Cg)([u.o], b.prototype, "SetExplicitNoLegalPartnerNeeded", null),
         (0, n.Cg)([u.o], b.prototype, "SetAdminNote", null),
@@ -10079,16 +10086,16 @@
         _ = a(34288),
         g = a(68612),
         h = a(10592);
-      function E(e, t, a, r, i, s, l, o, c, m, d) {
-        const u = Boolean(1 != t),
-          p = Boolean(0 != t);
-        let g = 0;
+      function E(e, t, a, r, i, s, l, o, c, m, d, u) {
+        const p = Boolean(1 != t),
+          g = Boolean(0 != t);
+        let E = 0;
         if ("mm_auto_render" != s)
-          for (let t = 0; t < 31; ++t) e && e[(0, n.Lg)(t)] && (g += 1);
-        let E,
-          S = h.G;
-        if ((1 == t ? (S = 1) : 2 == t && (S += 1), a)) {
-          E = !0;
+          for (let t = 0; t < 31; ++t) e && e[(0, n.Lg)(t)] && (E += 1);
+        let S,
+          y = h.G;
+        if ((1 == t ? (y = 1) : 2 == t && (y += 1), a)) {
+          S = !0;
           let t = 0;
           for (let a = 0; a < 31; ++a) {
             const s = (0, n.Lg)(a);
@@ -10096,44 +10103,46 @@
               (r && r[s] && i && i[s] && (t += 1),
               r && r[s] && (!i || !i[s] || !e || !e[s]))
             ) {
-              E = !1;
+              S = !1;
               break;
             }
             if (i && i[s] && (!r || !r[s] || !e || !e[s])) {
-              E = !1;
+              S = !1;
               break;
             }
           }
-          0 == t && (E = !1);
+          0 == t && (S = !1);
         }
-        let y = 0,
-          v = 0;
+        let v = 0,
+          f = 0;
         if ("featured_video" == s) {
-          E = (0, _.BQ)(c, ".mp4") && (0, _.BQ)(m, ".webm");
+          S = (0, _.BQ)(c, ".mp4") && (0, _.BQ)(m, ".webm");
           for (let e = 0; e < 31; ++e) {
             const t = (0, n.Lg)(e);
-            l && l[t] && (y += 1), o && o[t] && (v += 1);
+            l && l[t] && (v += 1), o && o[t] && (f += 1);
           }
         }
-        const f = d?.GetAssets().GetHeroCapsuleURL()?.length > 0;
+        const b = d?.GetAssets().GetHeroCapsuleURL()?.length > 0;
         return {
           bMinimumAssetsSetup: Boolean(
             "mm_auto_render" == s ||
-              (e && (!u || e.english) && (!p || e.sc_schinese)),
+              (e && (!p || e.english) && (!g || e.sc_schinese)),
           ),
-          nAssetSetup: g,
-          nCompleteAssetRequired: S,
-          bMatchingVideoAssets: E,
-          nSubtitleCount: y,
-          nPosterCount: v,
+          nAssetSetup: E,
+          nCompleteAssetRequired: y,
+          bMatchingVideoAssets: S,
+          nSubtitleCount: v,
+          nPosterCount: f,
           strCustomTemplateType: s,
-          bHasStoreVerticalCapsule: f,
+          bHasStoreVerticalCapsule: b,
+          bRequireAltText: "mm_auto_render" != s && !s?.startsWith("replay"),
+          bAltTextEntered: u?.[0]?.trim().length > 0,
         };
       }
       const S = { include_assets: !0 };
       function y(e) {
         const t = (0, _.zw)(e),
-          [a, n, r, i, s, o, c, m, d, p, g] = (0, l.q3)(() => [
+          [a, n, r, i, s, o, c, m, d, p, g, h] = (0, l.q3)(() => [
             t?.GetAssetsObject("ll_image"),
             t?.GetRealm(),
             t?.BHasAnimatedAssets(),
@@ -10145,10 +10154,11 @@
             t?.GetFeaturedVideoMP4Url(),
             t?.GetFeaturedVideoWebMUrl(),
             t?.GetStoreItemID(),
+            t?.GetAllAltLocalizedText(),
           ]),
-          [h] = (0, u.t7)(g?.appid, S);
+          [y] = (0, u.t7)(g?.appid, S);
         return t?.GetGID() == e
-          ? E(a, n, r, i, s, o, c, m, d, p, h)
+          ? E(a, n, r, i, s, o, c, m, d, p, y, h)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -10158,6 +10168,8 @@
               nPosterCount: 0,
               strCustomTemplateType: null,
               bHasStoreVerticalCapsule: !1,
+              bRequireAltText: !1,
+              bAltTextEntered: !1,
             };
       }
       function v(e, t) {
@@ -10175,7 +10187,7 @@
             d((0, m.c2)(n.template_vars_json)),
             _((0, i.AK)(e, n.additional_restrictions_json)));
         }, [r, e, n]);
-        const [h, y, v, f, b, w, D, C, I, B, T] = (0, l.q3)(() => [
+        const [h, y, v, f, b, w, D, C, I, B, T, M] = (0, l.q3)(() => [
             c?.ll_image,
             p?.valid_realms || 0,
             c?.has_animated_assets,
@@ -10187,10 +10199,11 @@
             c?.featured_video_mp4,
             c?.featured_video_webm,
             1 == n?.association_type ? n?.associated_id : void 0,
+            c?.localized_alt_text,
           ]),
-          [M] = (0, u.t7)(T, S);
+          [k] = (0, u.t7)(T, S);
         return n
-          ? E(h, y, v, f, b, w, D, C, I, B, M)
+          ? E(h, y, v, f, b, w, D, C, I, B, k, M)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -10200,6 +10213,8 @@
               nPosterCount: 0,
               strCustomTemplateType: null,
               bHasStoreVerticalCapsule: !1,
+              bRequireAltText: !1,
+              bAltTextEntered: !1,
             };
       }
       var f;
@@ -10213,30 +10228,30 @@
             "k_StoreGeneralAvailability");
       })(f || (f = {}));
       const b = { include_release: !0 };
-      function w(e, t, a, n, i, l, o, c, m, d, u, _, g, h, E) {
-        const S = (0, r.e5)(d, m),
-          y = (0, s.UT)(m),
-          v = Boolean(m?.startsWith("steam://open/"));
-        let b = f.k_StoreInvalidState;
+      function w(e, t, a, n, i, l, o, c, m, d, u, _, g, h, E, S, y) {
+        const v = (0, r.e5)(d, m),
+          b = (0, s.UT)(m),
+          w = Boolean(m?.startsWith("steam://open/"));
+        let D = f.k_StoreInvalidState;
         return (
           2 == l
-            ? (b = f.k_StoreUnavailable)
+            ? (D = f.k_StoreUnavailable)
             : i &&
               (i.BIsPrePurchase()
-                ? (b = f.k_StorePrePurchase)
+                ? (D = f.k_StorePrePurchase)
                 : i.BIsComingSoon()
-                  ? (b = f.k_StoreComingSoon)
+                  ? (D = f.k_StoreComingSoon)
                   : i.BIsEarlyAccess()
-                    ? (b = f.k_StoreEarlyAccess)
+                    ? (D = f.k_StoreEarlyAccess)
                     : i.BIsReleased() &&
                       !i.BIsComingSoon() &&
-                      (b = f.k_StoreGeneralAvailability)),
+                      (D = f.k_StoreGeneralAvailability)),
           {
             eVisibility: e,
             bDateSet: Boolean(t) && Boolean(a) && t < a,
             bItemAssociated: Boolean(n) || _,
             bFiltersSetup: Boolean(o > 0 || c),
-            bValidLink: Boolean(m && p.pd.validateUrl(m) && ((S && y) || v)),
+            bValidLink: Boolean(m && p.pd.validateUrl(m) && ((v && b) || w)),
             bButtonTokenEntered: Boolean(u),
             bExplicitNoItemAssociation: _,
             bLegalLineHandled: g,
@@ -10244,10 +10259,12 @@
               14 == i?.GetAppType() &&
               (!i.GetStorePageURLOverride() ||
                 0 == i.GetStorePageURLOverride().trim().length),
-            eStoreItemMarketingMessageState: b,
+            eStoreItemMarketingMessageState: D,
             bRequiresPartnerEvent: 10 == h,
             bUpdateEventLinked: Boolean(E),
             bUpdateEventLive: E?.BIsVisibleEvent(),
+            bRequireAltText: "mm_auto_render" != S && !S?.startsWith("replay"),
+            bAltTextEntered: y?.[0]?.trim().length > 0,
           }
         );
       }
@@ -10266,11 +10283,13 @@
           bRequiresPartnerEvent: !1,
           bUpdateEventLinked: !1,
           bUpdateEventLive: !1,
+          bRequireAltText: !1,
+          bAltTextEntered: !1,
         };
       }
       function C(e) {
         const t = (0, _.zw)(e),
-          [a, n, r, i, s, o, m, p, g, h, E, S, y, v] = (0, l.q3)(() => [
+          [a, n, r, i, s, o, m, p, g, h, E, S, y, v, f, C] = (0, l.q3)(() => [
             t?.GetVisibilty(),
             t?.GetStartRTime(),
             t?.GetEndRTime(),
@@ -10287,11 +10306,13 @@
             t?.GetType(),
             t?.GetUpdateEventClanAccountID(),
             t?.GetUpdateEventGID(),
+            t?.GetCustomTemplate(),
+            t?.GetAllAltLocalizedText(),
           ]),
-          { eventModel: f } = (0, c.B9)(y, v, !0),
-          [C, I] = (0, u.G6)((0, d.M9)(i), (0, d.pk)(i), b);
+          { eventModel: I } = (0, c.B9)(y, v, !0),
+          [B, T] = (0, u.G6)((0, d.M9)(i), (0, d.pk)(i), b);
         return t?.GetGID() == e
-          ? w(a, n, r, i, C, I, s, o, m, p, g, h, E, S, f)
+          ? w(a, n, r, i, B, T, s, o, m, p, g, h, E, S, I, f, C)
           : D();
       }
       function I(e, t) {
@@ -10309,27 +10330,33 @@
             _((0, m.c2)(n.template_vars_json)),
             E((0, i.AK)(e, n.additional_restrictions_json)));
         }, [r, e, n]);
-        const [S, y, v, f, C, I, B, T, M, k, A, R, P, N] = (0, l.q3)(() => [
-            n?.visibility,
-            n?.start_date,
-            n?.end_date,
-            (0, d.Di)((0, i.Z8)(n?.association_type, n?.associated_id)),
-            (0, i.mH)(h),
-            h?.no_filters_required,
-            p?.linkurl,
-            h?.valid_realms || 0,
-            p?.button_text,
-            h?.explicit_no_associated_item,
-            p?.partner?.trim().length > 0 ||
-              h?.explicit_no_partner_name_needed ||
-              p?.custom_legal_text?.trim().length > 0,
-            n?.type,
-            p?.update_event_clan_accountid,
-            p?.update_event_gid,
-          ]),
-          [G, O] = (0, u.G6)((0, d.M9)(f), (0, d.pk)(f), b),
-          { eventModel: F } = (0, c.B9)(P, N);
-        return origin ? w(S, y, v, f, G, O, C, I, B, T, M, k, A, R, F) : D();
+        const [S, y, v, f, C, I, B, T, M, k, A, R, P, N, G, O] = (0, l.q3)(
+            () => [
+              n?.visibility,
+              n?.start_date,
+              n?.end_date,
+              (0, d.Di)((0, i.Z8)(n?.association_type, n?.associated_id)),
+              (0, i.mH)(h),
+              h?.no_filters_required,
+              p?.linkurl,
+              h?.valid_realms || 0,
+              p?.button_text,
+              h?.explicit_no_associated_item,
+              p?.partner?.trim().length > 0 ||
+                h?.explicit_no_partner_name_needed ||
+                p?.custom_legal_text?.trim().length > 0,
+              n?.type,
+              p?.update_event_clan_accountid,
+              p?.update_event_gid,
+              p?.custom_display,
+              p?.localized_alt_text,
+            ],
+          ),
+          [F, L] = (0, u.G6)((0, d.M9)(f), (0, d.pk)(f), b),
+          { eventModel: U } = (0, c.B9)(P, N);
+        return origin
+          ? w(S, y, v, f, F, L, C, I, B, T, M, k, A, R, U, G, O)
+          : D();
       }
       function B(e) {
         return M(C(e), y(e), !1);
@@ -10350,17 +10377,19 @@
             bExplicitNoItemAssociation: d,
             bRequiresPartnerEvent: u,
             bUpdateEventLive: p,
+            bRequireAltText: _,
+            bAltTextEntered: g,
           } = e,
-          { bMinimumAssetsSetup: _ } = t;
-        let g = n && _ && l && o && !c;
+          { bMinimumAssetsSetup: h } = t;
+        let E = n && h && l && o && !c && (!_ || g);
         a ||
-          (g =
-            g &&
+          (E =
+            E &&
             r &&
             i &&
             s &&
             (d || (m != f.k_StoreInvalidState && m != f.k_StoreUnavailable)));
-        return { bReady: g && (!u || p), bReadyExceptLiveEvent: g };
+        return { bReady: E && (!u || p), bReadyExceptLiveEvent: E };
       }
     },
     68612: (e, t, a) => {
@@ -49132,7 +49161,7 @@
               }),
             );
       }
-      var x = a(95896),
+      var x = a(66991),
         q = a(90207),
         W = a(2160),
         j = a(92135),
@@ -52206,26 +52235,33 @@
             nPosterCount: p,
             nSubtitleCount: _,
             bHasStoreVerticalCapsule: g,
+            bRequireAltText: h,
+            bAltTextEntered: E,
           } = (0, n.M)(t?.GetGID()),
-          [h, E] = (0, m.q3)(() => [
+          [S, y] = (0, m.q3)(() => [
             (0, d.$I)(t?.GetCustomTemplate() || ""),
             (0, d.Zi)(t?.GetCustomTemplate()),
           ]),
-          S = (0, u.L)(t);
+          v = (0, u.L)(t);
         return t
           ? r.createElement(
               r.Fragment,
               null,
-              Boolean(h) && r.createElement("div", null, "No Asset Required"),
-              Boolean(E || S) &&
+              Boolean(S) && r.createElement("div", null, "No Asset Required"),
+              Boolean(y || v) &&
                 r.createElement(o._, {
                   bDone: g,
                   name: "Store Item has Vertical Asset",
                   tooltip:
                     "The vertical capsule is required for the native display of the Marketing Message carousel on the Steam deck to work",
                 }),
-              Boolean(!h && !E) &&
+              Boolean(!S && !y) &&
                 r.createElement(o._, { bDone: a, name: `Assets (${i}/${s})` }),
+              Boolean(h) &&
+                r.createElement(o._, {
+                  bDone: E,
+                  name: "Alternative Text For Image Entered",
+                }),
               !c &&
                 void 0 !== l &&
                 r.createElement(o._, {
@@ -52257,9 +52293,9 @@
           : null;
       }
     },
-    95896: (e, t, a) => {
+    66991: (e, t, a) => {
       "use strict";
-      a.d(t, { NM: () => F, rR: () => G });
+      a.d(t, { rR: () => U, NM: () => x });
       var n = a(2160),
         r = a(22837),
         i = a(34288),
@@ -52291,8 +52327,75 @@
         A = a(98076),
         R = a(55263),
         P = a(63556),
-        N = a(1909);
-      function G(e) {
+        N = a(1909),
+        G = a(75026),
+        O = a.n(G),
+        F = a(26408);
+      function L(e) {
+        const { fnGetAltText: t, fnSetAltText: a } = e,
+          n = (0, P.E)(),
+          i = (0, s.q3)(() => t(n)),
+          o = (0, l.useCallback)(
+            (e) => {
+              const t = e.target.files?.[0];
+              if (!t) return;
+              const n = new FileReader();
+              (n.onload = (e) => {
+                try {
+                  const t = e.target?.result,
+                    n = JSON.parse(t);
+                  Object.entries(n).forEach(([e, t]) => {
+                    if ("string" == typeof t) {
+                      const n = (0, r.sf)(e.toLowerCase());
+                      n >= 0 && n < 31
+                        ? a(n, t)
+                        : console.error("Unknown language");
+                    }
+                  });
+                } catch (e) {
+                  console.error("Failed to read or parse JSON:", e);
+                }
+              }),
+                n.readAsText(t);
+            },
+            [a],
+          );
+        return l.createElement(
+          l.Fragment,
+          null,
+          l.createElement(N.yk, {
+            fnLangHasData: (e) => t(e)?.trim().length > 0,
+          }),
+          l.createElement(
+            "div",
+            { className: O().Ctn },
+            l.createElement(N.iN, null),
+            l.createElement(
+              g.JU,
+              null,
+              "Or import json ",
+              l.createElement(F.o, {
+                tooltip:
+                  'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
+              }),
+            ),
+            l.createElement("input", {
+              type: "file",
+              accept: ".json",
+              onChange: o,
+            }),
+          ),
+          l.createElement(g.pd, {
+            type: "text",
+            value: i,
+            onChange: (e) => a(n, e.currentTarget.value),
+            label: "Alternative Text",
+            tooltip:
+              "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+          }),
+        );
+      }
+      function U(e) {
         const { bAssetUploadOnly: t, promotionPlanID: a, id: n } = e,
           r = (0, i.zw)(n),
           [o, c] = (0, s.q3)(() => [
@@ -52318,9 +52421,9 @@
                   l.createElement(
                     "div",
                     { className: u().LeftCol },
-                    Boolean(!t) && l.createElement(O, { oEditableMessage: r }),
+                    Boolean(!t) && l.createElement(z, { oEditableMessage: r }),
                     Boolean(!o && !c) &&
-                      l.createElement(W, { oEditableMessage: r }),
+                      l.createElement(K, { oEditableMessage: r }),
                     l.createElement(k.u, { oEditableMessage: r }),
                   ),
                   l.createElement(M.O, {
@@ -52338,9 +52441,9 @@
               string: (0, B.we)("#Loading"),
             });
       }
-      function O(e) {
+      function z(e) {
         const { oEditableMessage: t } = e,
-          [a, n] = (0, s.q3)(() => [t?.GetInternalAssetURL(), q(t)]);
+          [a, n] = (0, s.q3)(() => [t?.GetInternalAssetURL(), V(t)]);
         return t
           ? l.createElement(
               "div",
@@ -52356,8 +52459,8 @@
               }),
               l.createElement("br", null),
               l.createElement("br", null),
-              l.createElement(U, { oEditableMessage: t }),
-              l.createElement(z, { oEditableMessage: t }),
+              l.createElement(W, { oEditableMessage: t }),
+              l.createElement(j, { oEditableMessage: t }),
             )
           : l.createElement(w.t, {
               size: "medium",
@@ -52365,7 +52468,7 @@
               string: (0, B.we)("#Loading"),
             });
       }
-      function F(e, t) {
+      function x(e, t) {
         switch ((e.SetAnimatedAssetsEnabled(!1), e.ClearCustomTemplate(), t)) {
           default:
           case "mm_image":
@@ -52390,11 +52493,11 @@
             e.SetCustomTemplate("mm_auto_render");
         }
       }
-      const L = {};
-      function U(e) {
+      const q = {};
+      function W(e) {
         const { oEditableMessage: t } = e,
-          [a] = (0, R.t7)(t?.GetStoreItemID()?.appid, L),
-          [n, r] = (0, l.useState)(q(t)),
+          [a] = (0, R.t7)(t?.GetStoreItemID()?.appid, q),
+          [n, r] = (0, l.useState)(V(t)),
           [i] = (0, s.q3)(() => [t.GetAutoRenderWithoutOverride()]),
           o = (0, l.useMemo)(
             () => [
@@ -52451,7 +52554,7 @@
             rgOptions: o,
             selectedOption: n,
             onChange: (e) => {
-              F(t, e.data), r(e.data);
+              x(t, e.data), r(e.data);
             },
           }),
           Boolean(
@@ -52471,7 +52574,7 @@
             }),
         );
       }
-      function z(e) {
+      function j(e) {
         const { oEditableMessage: t } = e,
           [a, n, r, i, o] = (0, s.q3)(() => [
             t.GetCustomTemplate(),
@@ -52532,7 +52635,7 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoMP4Url(e.currentTarget.value),
               }),
-              l.createElement(x, {
+              l.createElement(H, {
                 strURL: n,
                 mimetype: "video/mp4",
                 extension: ".mp4",
@@ -52544,14 +52647,14 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoWebMUrl(e.currentTarget.value),
               }),
-              l.createElement(x, {
+              l.createElement(H, {
                 strURL: r,
                 mimetype: "video/webm",
                 extension: ".webm",
               }),
             );
       }
-      function x(e) {
+      function H(e) {
         const { strURL: t, extension: a, mimetype: n } = e;
         if (!t || 0 == t.trim().length) return null;
         const r = !(0, i.BQ)(t, a);
@@ -52587,7 +52690,7 @@
               ),
         );
       }
-      function q(e) {
+      function V(e) {
         return e
           ? e.BHasAnimatedAssets()
             ? "mm_animated_image"
@@ -52604,48 +52707,46 @@
                     : "mm_image"
           : "mm_image";
       }
-      function W(e) {
+      function K(e) {
         const { oEditableMessage: t } = e,
-          a = (0, P.E)(),
-          [r, i, m, d, _, S, y] = (0, s.q3)(() => [
+          [a, r, i, m, d, _] = (0, s.q3)(() => [
             t?.GetRealm(),
             t?.GetAssetsObject("ll_image"),
             t?.BHasAnimatedAssets(),
             "featured_video" === t?.GetCustomTemplate(),
             t?.GetGID(),
             "partner_event" === t?.GetCustomTemplate(),
-            t?.GetAltTextRaw(a),
           ]),
-          v = Boolean(0 != r),
-          f = (0, l.useMemo)(() => {
-            const e = [S ? "capsule" : "localized_marketing_message"];
+          g = Boolean(0 != a),
+          S = (0, l.useMemo)(() => {
+            const e = [_ ? "capsule" : "localized_marketing_message"];
             return (
-              m
-                ? (S
+              i
+                ? (_
                     ? (e.push("localized_partnerevent_mp4"),
                       e.push("localized_partnerevent_webm"))
                     : (e.push("localized_marketingmessage_mp4"),
                       e.push("localized_marketingmessage_webm")),
                   (0, D.w)(
-                    !d,
+                    !m,
                     "Animated Image and Featured video are mutually exclusive.",
                   ))
-                : d &&
+                : m &&
                   (e.push("localized_marketingmessage_background"),
                   e.push("localized_marketingmessage_poster"),
                   e.push("localized_subtitles")),
               e
             );
-          }, [m, d, S]),
-          b = (0, l.useMemo)(
+          }, [i, m, _]),
+          y = (0, l.useMemo)(
             () => [n.TU.k_ESteamRealmGlobal, n.TU.k_ESteamRealmChina],
             [],
           ),
-          w = (0, l.useCallback)(
+          v = (0, l.useCallback)(
             (e, a, n, r, i, s, l) => {
               (0, D.w)(
                 null != n && n >= 0 && n < 31,
-                "Unexpected value for elang: " + n + " " + _,
+                "Unexpected value for elang: " + n + " " + d,
               );
               let m = null;
               switch (r) {
@@ -52678,15 +52779,12 @@
               }
               m && t.SetTemplateAssetImagePath(e + (0, c.qR)(r), m, n);
             },
-            [t, _],
+            [t, d],
           );
         return t
           ? l.createElement(
               l.Fragment,
               null,
-              l.createElement(N.yk, {
-                fnLangHasData: (e) => t.BHasAltTextRaw(e),
-              }),
               l.createElement(
                 "div",
                 { className: u().SectionCtn },
@@ -52696,7 +52794,7 @@
                   "MARKETING MESSAGE ASSETS",
                 ),
                 l.createElement("hr", null),
-                Boolean(v && (!i || !i.sc_schinese)) &&
+                Boolean(g && (!r || !r.sc_schinese)) &&
                   l.createElement(
                     "div",
                     { className: E.WarningStylesWithIcon },
@@ -52732,22 +52830,17 @@
                     { className: E.WarningStylesWithIcon },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
-                l.createElement(N.iN, null),
-                l.createElement(g.pd, {
-                  type: "text",
-                  value: y,
-                  onChange: (e) => t.SetAltText(a, e.currentTarget.value),
-                  label: "Alternative Text",
-                  tooltip:
-                    "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+                l.createElement(L, {
+                  fnGetAltText: t.GetAltTextRaw,
+                  fnSetAltText: t.SetAltText,
                 }),
                 l.createElement(p.U, {
-                  rgSupportArtwork: f,
-                  rgRealmList: b,
+                  rgSupportArtwork: S,
+                  rgRealmList: y,
                   strOverrideDragAndDropText:
                     "Drag any asset here to upload (max 5MB)",
                   strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
-                  fnOnUploadSuccess: w,
+                  fnOnUploadSuccess: v,
                 }),
                 l.createElement(
                   h.tH,
@@ -52760,22 +52853,22 @@
                     l.createElement(
                       "span",
                       null,
-                      S ? "800px by 450px" : "570px by 600px",
+                      _ ? "800px by 450px" : "570px by 600px",
                     ),
                     " (.jpg,.png,.gif,.webp)",
                   ),
-                  l.createElement(V, {
+                  l.createElement(J, {
                     oEditableMessage: t,
                     assetType: "ll_image",
                   }),
-                  l.createElement(j, { oEditableMessage: t }),
-                  l.createElement(H, { oEditableMessage: t }),
+                  l.createElement(Y, { oEditableMessage: t }),
+                  l.createElement($, { oEditableMessage: t }),
                 ),
               ),
             )
           : null;
       }
-      function j(e) {
+      function Y(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, s.q3)(() => [
             t.BHasAnimatedAssets(),
@@ -52802,14 +52895,14 @@
             r,
             " (required for Steam Client)",
           ),
-          l.createElement(V, { oEditableMessage: t, assetType: "webm" }),
+          l.createElement(J, { oEditableMessage: t, assetType: "webm" }),
           l.createElement("br", null),
           l.createElement(g.JU, null, "MP4"),
           l.createElement("div", null, ".Mp4 ", r, " (required for iOS)"),
-          l.createElement(V, { oEditableMessage: t, assetType: "mp4" }),
+          l.createElement(J, { oEditableMessage: t, assetType: "mp4" }),
         );
       }
-      function H(e) {
+      function $(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, s.q3)(() => [t.GetCustomTemplate()]);
         return "featured_video" != a
@@ -52831,7 +52924,7 @@
                 l.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) ",
               ),
-              l.createElement(V, {
+              l.createElement(J, {
                 oEditableMessage: t,
                 assetType: "background",
               }),
@@ -52843,7 +52936,7 @@
                 l.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)",
               ),
-              l.createElement(V, { oEditableMessage: t, assetType: "poster" }),
+              l.createElement(J, { oEditableMessage: t, assetType: "poster" }),
               l.createElement("br", null),
               l.createElement(g.JU, null, "Subtitles"),
               l.createElement(
@@ -52851,13 +52944,13 @@
                 null,
                 ".vtt/.srt format (include extension or mapping will fail)",
               ),
-              l.createElement(V, {
+              l.createElement(J, {
                 oEditableMessage: t,
                 assetType: "subtitles",
               }),
             );
       }
-      function V(e) {
+      function J(e) {
         const { oEditableMessage: t, assetType: a } = e,
           [n, i, o] = (0, s.q3)(() => [
             t.GetAssetsObject(a),
@@ -53642,9 +53735,11 @@
             bRequiresPartnerEvent: g,
             bUpdateEventLinked: h,
             bUpdateEventLive: S,
+            bRequireAltText: y,
+            bAltTextEntered: f,
           } = (0, r.GO)(t.GetGID()),
-          { bReady: y, bReadyExceptLiveEvent: f } = (0, r.w2)(t.GetGID()),
-          [D, B] = (0, l.useState)(!1);
+          { bReady: D, bReadyExceptLiveEvent: B } = (0, r.w2)(t.GetGID()),
+          [M, k] = (0, l.useState)(!1);
         return l.createElement(
           l.Fragment,
           null,
@@ -53655,11 +53750,11 @@
             l.createElement(
               "div",
               null,
-              Boolean(y || D)
+              Boolean(D || M)
                 ? l.createElement("h2", null, "Checklist Complete!")
                 : l.createElement("h2", null, "Checklist Incomplete / Private"),
             ),
-            Boolean(y || D) &&
+            Boolean(D || M) &&
               l.createElement(
                 l.Fragment,
                 null,
@@ -53731,6 +53826,7 @@
               bDone: u,
               name: "Legal Partner Name (on options tab)",
             }),
+            y && l.createElement(x, { bDone: f, name: "Alt Text for Artwork" }),
             p &&
               l.createElement(x, {
                 bDone: !1,
@@ -53760,7 +53856,7 @@
                 l.createElement(x, { bDone: h, name: "Update Event Linked" }),
                 l.createElement(x, { bDone: S, name: "Update Event Visible" }),
               ),
-            Boolean(f) &&
+            Boolean(B) &&
               l.createElement(
                 "div",
                 { className: m().HalfWidthBtnCtn },
@@ -53786,14 +53882,14 @@
                 ),
               ),
           ),
-          !y &&
+          !D &&
             l.createElement(
               "div",
               { className: m().SectionCtn },
               l.createElement(d.JU, null, "Override"),
               l.createElement(d.Yh, {
-                checked: D,
-                onChange: B,
+                checked: M,
+                onChange: k,
                 label: "Override Readiness Checklist (use caution)",
                 tooltip:
                   "We need to bypass the progress check to ship this marketing message for reasons",
@@ -58308,7 +58404,7 @@
       var nt = a(85254),
         rt = a.n(nt),
         it = a(82097),
-        st = a(95896),
+        st = a(66991),
         lt = a(50250);
       function ot(e) {
         const { oEditableMessage: t, storeItem: a, closeModal: n } = e;

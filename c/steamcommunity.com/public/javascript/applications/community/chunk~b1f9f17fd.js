@@ -7778,36 +7778,37 @@
           [_, _] = _.useState(_ ? (0, _._)(__webpack_require__) : null),
           _ = __webpack_require__.GetGID(),
           [_, _, _] = (0, _._)(),
-          [_, _] = _.useState(
+          [_, _] = _.useState(() =>
             (null == _ ? void 0 : _.length) > 0
               ? "prevalidateerror"
               : (null == _ ? void 0 : _.length) > 0
                 ? "showwarning"
                 : "default",
           ),
-          [_, _] = _.useState(null);
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          _ = _.useCallback((_) => {
+            const _ = (0, _._)(_);
+            let _ = "error";
+            !_.strErrorMsg &&
+              (0, _._)(`#EventEditor_Error_${_.errorCode}`) &&
+              (_.strErrorMsg = (0, _._)(`#EventEditor_Error_${_.errorCode}`)),
+              27 == _.errorCode && (_ = "overwrite"),
+              _(_),
+              _(_);
+          }, []);
         switch (
           (_.useEffect(() => {
             if (
-              "default" === _ ||
-              "bypasswarning" === _ ||
-              "bypassoverwritewarning" == _
+              ("default" === _ ||
+                "bypasswarning" === _ ||
+                "bypassoverwritewarning" == _) &&
+              !_
             ) {
+              _(!0);
               const _ = __webpack_require__.GetClanSteamID();
               __webpack_require__.OnPreSave();
-              const _ = (_) => {
-                  const _ = (0, _._)(_);
-                  let _ = "error";
-                  !_.strErrorMsg &&
-                    (0, _._)(`#EventEditor_Error_${_.errorCode}`) &&
-                    (_.strErrorMsg = (0, _._)(
-                      `#EventEditor_Error_${_.errorCode}`,
-                    )),
-                    27 == _.errorCode && (_ = "overwrite"),
-                    _(_),
-                    _(_);
-                },
-                _ = "default" !== _;
+              const _ = "default" !== _;
               (0, _._)(__webpack_require__, _).then((_) => {
                 if ((null == _ ? void 0 : _.length) > 0)
                   return _(_), void _("showwarning");
@@ -7825,7 +7826,7 @@
                   .catch(_);
               });
             }
-          }, [_, __webpack_require__, _, _, _, _]),
+          }, [_, __webpack_require__, _, _, _, _, _, _]),
           _)
         ) {
           case "prevalidateerror":
@@ -7864,7 +7865,9 @@
                     : "#EventEdit_Saving_Warning_Title",
                 ),
                 strDescription: (0, _._)("#EventEdit_Saving_WarningDesc"),
-                onOK: () => _("bypasswarning"),
+                onOK: () => {
+                  _("bypasswarning"), _(!1);
+                },
                 onCancel: _,
                 strOKButtonText: (0, _._)("#EventEdit_Saving_ByPassWarnings"),
               },
@@ -7950,7 +7953,9 @@
                 strTitle: (0, _._)("#EventEditor_SaveOrPublish_ClobberTitle"),
                 strDescription: (0, _._)("#EventEdit_Saving_Failure_Desc"),
                 onCancel: _,
-                onOK: () => _("bypassoverwritewarning"),
+                onOK: () => {
+                  _("bypassoverwritewarning"), _(!1);
+                },
                 strOKButtonText: (0, _._)("#Button_Overwrite"),
                 bDestructiveWarning: !0,
               },

@@ -7277,54 +7277,55 @@
           [E, y] = l.useState(m ? (0, r.vc)(a) : null),
           b = a.GetGID(),
           [f, w, C] = (0, s.hr)(),
-          [T, I] = l.useState(
+          [T, I] = l.useState(() =>
             (null == p ? void 0 : p.length) > 0
               ? "prevalidateerror"
               : (null == E ? void 0 : E.length) > 0
                 ? "showwarning"
                 : "default",
           ),
-          [D, B] = l.useState(null);
+          [D, B] = l.useState(!1),
+          [A, M] = l.useState(null),
+          G = l.useCallback((e) => {
+            const t = (0, S.H)(e);
+            let a = "error";
+            !t.strErrorMsg &&
+              (0, v.we)(`#EventEditor_Error_${t.errorCode}`) &&
+              (t.strErrorMsg = (0, v.we)(`#EventEditor_Error_${t.errorCode}`)),
+              27 == t.errorCode && (a = "overwrite"),
+              M(t),
+              I(a);
+          }, []);
         switch (
           (l.useEffect(() => {
             if (
-              "default" === T ||
-              "bypasswarning" === T ||
-              "bypassoverwritewarning" == T
+              ("default" === T ||
+                "bypasswarning" === T ||
+                "bypassoverwritewarning" == T) &&
+              !D
             ) {
+              B(!0);
               const e = a.GetClanSteamID();
               a.OnPreSave();
-              const t = (e) => {
-                  const t = (0, S.H)(e);
-                  let a = "error";
-                  !t.strErrorMsg &&
-                    (0, v.we)(`#EventEditor_Error_${t.errorCode}`) &&
-                    (t.strErrorMsg = (0, v.we)(
-                      `#EventEditor_Error_${t.errorCode}`,
-                    )),
-                    27 == t.errorCode && (a = "overwrite"),
-                    B(t),
-                    I(a);
-                },
-                n = "default" !== T;
-              (0, r.wy)(a, n).then((a) => {
-                if ((null == a ? void 0 : a.length) > 0)
-                  return y(a), void I("showwarning");
-                const n = "bypassoverwritewarning" === T;
-                c.SaveModel(e, n)
+              const t = "default" !== T;
+              (0, r.wy)(a, t).then((t) => {
+                if ((null == t ? void 0 : t.length) > 0)
+                  return y(t), void I("showwarning");
+                const a = "bypassoverwritewarning" === T;
+                c.SaveModel(e, a)
                   .then((e) => {
                     f(b)
                       ? C(b || e.gid)
-                          .then((a) => {
-                            1 == a ? I("success") : t(e);
+                          .then((t) => {
+                            1 == t ? I("success") : G(e);
                           })
-                          .catch(t)
+                          .catch(G)
                       : I("success");
                   })
-                  .catch(t);
+                  .catch(G);
               });
             }
-          }, [T, a, C, f, b, c]),
+          }, [T, a, G, C, f, b, c, D]),
           T)
         ) {
           case "prevalidateerror":
@@ -7363,7 +7364,9 @@
                     : "#EventEdit_Saving_Warning_Title",
                 ),
                 strDescription: (0, v.we)("#EventEdit_Saving_WarningDesc"),
-                onOK: () => I("bypasswarning"),
+                onOK: () => {
+                  I("bypasswarning"), B(!1);
+                },
                 onCancel: t,
                 strOKButtonText: (0, v.we)("#EventEdit_Saving_ByPassWarnings"),
               },
@@ -7438,7 +7441,7 @@
               },
               l.createElement("br", null),
               l.createElement("br", null),
-              D.strErrorMsg,
+              A.strErrorMsg,
             );
           case "overwrite":
             return l.createElement(
@@ -7447,13 +7450,15 @@
                 strTitle: (0, v.we)("#EventEditor_SaveOrPublish_ClobberTitle"),
                 strDescription: (0, v.we)("#EventEdit_Saving_Failure_Desc"),
                 onCancel: t,
-                onOK: () => I("bypassoverwritewarning"),
+                onOK: () => {
+                  I("bypassoverwritewarning"), B(!1);
+                },
                 strOKButtonText: (0, v.we)("#Button_Overwrite"),
                 bDestructiveWarning: !0,
               },
               l.createElement("br", null),
               l.createElement("br", null),
-              D.strErrorMsg,
+              A.strErrorMsg,
             );
         }
       }

@@ -15,10 +15,26 @@
   width: 600px;
 }
 ._1RAzAQViGO8A_wCFzSUStH {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
   margin-top: 12px;
 }
 ._1RAzAQViGO8A_wCFzSUStH:not(._1qsUls0lc9uJ_RarLA3dcG) {
   display: none;
+}
+._3uCm4z1gjW0tmhRd228Xqh {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+  gap: 8px;
+}
+._3Q5TF6lMOT30JuoipVGd5C {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 .o3hf9xdErkO0g06PW47cS {
   position: relative;

@@ -12758,15 +12758,9 @@
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
-          [_, _, _] = (function (_) {
-            const _ = [
-                4397053,
-                40893422,
-                2 == _._.EUNIVERSE ? 2581 : 45267781,
-              ].includes(_.GetClanAccountID()),
-              _ = 1 != _._.EUNIVERSE || _._.is_support || _,
-              _ = "partnerEventsRichEditorOptIn",
-              _ = _ ? "1" : "0",
+          [_, _] = (function (_) {
+            const _ = "partnerEventsRichEditorOptIn",
+              _ = "1",
               [_, _] = _.useState(() => {
                 var _;
                 return (
@@ -12778,12 +12772,12 @@
               }),
               _ = _.useCallback(
                 (_) => {
-                  _ && (localStorage.setItem(_, _ ? "1" : "0"), _(_));
+                  localStorage.setItem(_, _ ? "1" : "0"), _(_);
                 },
-                [_, _],
+                [_],
               );
-            return [_, _ && _, _];
-          })(_),
+            return [_, _];
+          })(),
           _ = (0, _._)(() => _.GetEventType()),
           _ = (0, _._)(
             (_) => {
@@ -12820,17 +12814,16 @@
               ? (0, _._)("#EventEditor_DescriptionNews")
               : (0, _._)("#EventEditor_Description"),
           ),
-          _ &&
-            _.createElement(
-              "label",
-              null,
-              _.createElement("input", {
-                type: "checkbox",
-                checked: _,
-                onChange: (_) => _(_.currentTarget.checked),
-              }),
-              "(VO) Use rich editor",
-            ),
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: _,
+              onChange: (_) => _(_.currentTarget.checked),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
           _
             ? _.createElement(
                 _.Suspense,

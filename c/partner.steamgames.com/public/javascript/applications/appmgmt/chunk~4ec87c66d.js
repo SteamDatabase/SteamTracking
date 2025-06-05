@@ -413,6 +413,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "qjnBU-RIaxCk4vQUtznbK",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ChartContainer: "_38gl3E5j4bYagIMSd9MXCf",
         Chart: "_3hXybphdl7Tr8Q7-L69uTA",
       };
@@ -2385,6 +2390,9 @@
             ""
           );
         }
+        GetAllAltLocalizedText() {
+          return this.m_oTemplateVars.localized_alt_text;
+        }
         GetAltTextLocalized(_) {
           if (this.m_oTemplateVars.localized_alt_text) {
             const _ = _._.GetELanguageFallback(_);
@@ -3077,6 +3085,7 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+        (0, _._)([_._], _.prototype, "GetAltTextRaw", null),
         (0, _._)([_._], _.prototype, "ClearAllLegacyRestrictions", null),
         (0, _._)([_._], _.prototype, "SetExplicitNoLegalPartnerNeeded", null),
         (0, _._)([_._], _.prototype, "SetAdminNote", null),
@@ -10325,7 +10334,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _, _, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _, _, _, _, _) {
         const _ = Boolean(1 != _),
           _ = Boolean(0 != _);
         let _ = 0;
@@ -10374,6 +10383,8 @@
           nPosterCount: _,
           strCustomTemplateType: _,
           bHasStoreVerticalCapsule: _,
+          bRequireAltText: "mm_auto_render" != _ && !_?.startsWith("replay"),
+          bAltTextEntered: _?.[0]?.trim().length > 0,
         };
       }
       const _ = {
@@ -10381,22 +10392,25 @@
       };
       function _(_) {
         const _ = (0, _._)(_),
-          [__webpack_require__, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
-            _?.GetAssetsObject("ll_image"),
-            _?.GetRealm(),
-            _?.BHasAnimatedAssets(),
-            _?.GetAssetsObject("mp4"),
-            _?.GetAssetsObject("webm"),
-            _?.GetCustomTemplate(),
-            _?.GetAssetsObject("subtitles"),
-            _?.GetAssetsObject("poster"),
-            _?.GetFeaturedVideoMP4Url(),
-            _?.GetFeaturedVideoWebMUrl(),
-            _?.GetStoreItemID(),
-          ]),
+          [__webpack_require__, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+            () => [
+              _?.GetAssetsObject("ll_image"),
+              _?.GetRealm(),
+              _?.BHasAnimatedAssets(),
+              _?.GetAssetsObject("mp4"),
+              _?.GetAssetsObject("webm"),
+              _?.GetCustomTemplate(),
+              _?.GetAssetsObject("subtitles"),
+              _?.GetAssetsObject("poster"),
+              _?.GetFeaturedVideoMP4Url(),
+              _?.GetFeaturedVideoWebMUrl(),
+              _?.GetStoreItemID(),
+              _?.GetAllAltLocalizedText(),
+            ],
+          ),
           [_] = (0, _._)(_?.appid, _);
         return _?.GetGID() == _
-          ? _(__webpack_require__, _, _, _, _, _, _, _, _, _, _)
+          ? _(__webpack_require__, _, _, _, _, _, _, _, _, _, _, _)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -10406,6 +10420,8 @@
               nPosterCount: 0,
               strCustomTemplateType: null,
               bHasStoreVerticalCapsule: !1,
+              bRequireAltText: !1,
+              bAltTextEntered: !1,
             };
       }
       function _(_, _) {
@@ -10423,7 +10439,7 @@
             _((0, _._)(_.template_vars_json)),
             _((0, _._)(_, _.additional_restrictions_json)));
         }, [_, _, _]);
-        const [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+        const [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _?.ll_image,
             _?.valid_realms || 0,
             _?.has_animated_assets,
@@ -10435,10 +10451,11 @@
             _?.featured_video_mp4,
             _?.featured_video_webm,
             1 == _?.association_type ? _?.associated_id : void 0,
+            _?.localized_alt_text,
           ]),
           [_] = (0, _._)(_, _);
         return _
-          ? _(_, _, _, _, _, _, _, _, _, _, _)
+          ? _(_, _, _, _, _, _, _, _, _, _, _, _)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -10448,6 +10465,8 @@
               nPosterCount: 0,
               strCustomTemplateType: null,
               bHasStoreVerticalCapsule: !1,
+              bRequireAltText: !1,
+              bAltTextEntered: !1,
             };
       }
       var _;
@@ -10463,7 +10482,7 @@
       const _ = {
         include_release: !0,
       };
-      function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) {
         const _ = (0, _._)(_, _),
           _ = (0, _._)(_),
           _ = Boolean(_?.startsWith("steam://open/"));
@@ -10498,6 +10517,8 @@
             bRequiresPartnerEvent: 10 == _,
             bUpdateEventLinked: Boolean(_),
             bUpdateEventLive: _?.BIsVisibleEvent(),
+            bRequireAltText: "mm_auto_render" != _ && !_?.startsWith("replay"),
+            bAltTextEntered: _?.[0]?.trim().length > 0,
           }
         );
       }
@@ -10516,33 +10537,55 @@
           bRequiresPartnerEvent: !1,
           bUpdateEventLinked: !1,
           bUpdateEventLive: !1,
+          bRequireAltText: !1,
+          bAltTextEntered: !1,
         };
       }
       function _(_) {
         const _ = (0, _._)(_),
-          [__webpack_require__, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0,
-          _._)(() => [
-            _?.GetVisibilty(),
-            _?.GetStartRTime(),
-            _?.GetEndRTime(),
-            _?.GetStoreItemID(),
-            _?.GetUserMessageFilterCount(),
-            _?.BIsNoFilterRequired(),
-            _?.GetLinkURL(),
-            _?.GetRealm(),
-            _?.GetButtonToken(),
-            _?.BExplicitNoAssociationItem(),
-            _?.BHasLegalLinePartner() ||
-              _?.BExplicitNoLegalPartnerNeeded() ||
-              _?.BUseCustomLegalText(),
-            _?.GetType(),
-            _?.GetUpdateEventClanAccountID(),
-            _?.GetUpdateEventGID(),
-          ]),
+          [__webpack_require__, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
+            (0, _._)(() => [
+              _?.GetVisibilty(),
+              _?.GetStartRTime(),
+              _?.GetEndRTime(),
+              _?.GetStoreItemID(),
+              _?.GetUserMessageFilterCount(),
+              _?.BIsNoFilterRequired(),
+              _?.GetLinkURL(),
+              _?.GetRealm(),
+              _?.GetButtonToken(),
+              _?.BExplicitNoAssociationItem(),
+              _?.BHasLegalLinePartner() ||
+                _?.BExplicitNoLegalPartnerNeeded() ||
+                _?.BUseCustomLegalText(),
+              _?.GetType(),
+              _?.GetUpdateEventClanAccountID(),
+              _?.GetUpdateEventGID(),
+              _?.GetCustomTemplate(),
+              _?.GetAllAltLocalizedText(),
+            ]),
           { eventModel: _ } = (0, _._)(_, _, !0),
           [_, _] = (0, _._)((0, _._)(_), (0, _._)(_), _);
         return _?.GetGID() == _
-          ? _(__webpack_require__, _, _, _, _, _, _, _, _, _, _, _, _, _, _)
+          ? _(
+              __webpack_require__,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+            )
           : _();
       }
       function _(_, _) {
@@ -10560,27 +10603,33 @@
             _((0, _._)(_.template_vars_json)),
             _((0, _._)(_, _.additional_restrictions_json)));
         }, [_, _, _]);
-        const [_, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
-            _?.visibility,
-            _?.start_date,
-            _?.end_date,
-            (0, _._)((0, _._)(_?.association_type, _?.associated_id)),
-            (0, _._)(_),
-            _?.no_filters_required,
-            _?.linkurl,
-            _?.valid_realms || 0,
-            _?.button_text,
-            _?.explicit_no_associated_item,
-            _?.partner?.trim().length > 0 ||
-              _?.explicit_no_partner_name_needed ||
-              _?.custom_legal_text?.trim().length > 0,
-            _?.type,
-            _?.update_event_clan_accountid,
-            _?.update_event_gid,
-          ]),
+        const [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+            () => [
+              _?.visibility,
+              _?.start_date,
+              _?.end_date,
+              (0, _._)((0, _._)(_?.association_type, _?.associated_id)),
+              (0, _._)(_),
+              _?.no_filters_required,
+              _?.linkurl,
+              _?.valid_realms || 0,
+              _?.button_text,
+              _?.explicit_no_associated_item,
+              _?.partner?.trim().length > 0 ||
+                _?.explicit_no_partner_name_needed ||
+                _?.custom_legal_text?.trim().length > 0,
+              _?.type,
+              _?.update_event_clan_accountid,
+              _?.update_event_gid,
+              _?.custom_display,
+              _?.localized_alt_text,
+            ],
+          ),
           [_, _] = (0, _._)((0, _._)(_), (0, _._)(_), _),
           { eventModel: _ } = (0, _._)(_, _);
-        return origin ? _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _) : _();
+        return origin
+          ? _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)
+          : _();
       }
       function _(_) {
         return _(_(_), _(_), !1);
@@ -10601,9 +10650,11 @@
             bExplicitNoItemAssociation: _,
             bRequiresPartnerEvent: _,
             bUpdateEventLive: _,
+            bRequireAltText: _,
+            bAltTextEntered: _,
           } = _,
           { bMinimumAssetsSetup: _ } = _;
-        let _ = _ && _ && _ && _ && !_;
+        let _ = _ && _ && _ && _ && !_ && (!_ || _);
         _ ||
           (_ =
             _ &&
@@ -58116,6 +58167,8 @@
             nPosterCount: _,
             nSubtitleCount: _,
             bHasStoreVerticalCapsule: _,
+            bRequireAltText: _,
+            bAltTextEntered: _,
           } = (0, _._)(_?.GetGID()),
           [_, _] = (0, _._)(() => [
             (0, _._)(_?.GetCustomTemplate() || ""),
@@ -58138,6 +58191,11 @@
                 _.createElement(_._, {
                   bDone: __webpack_require__,
                   name: `Assets (${_}/${_})`,
+                }),
+              Boolean(_) &&
+                _.createElement(_._, {
+                  bDone: _,
+                  name: "Alternative Text For Image Entered",
                 }),
               !_ &&
                 void 0 !== _ &&
@@ -58207,7 +58265,76 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(() => _(_)),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = _.target.files?.[0];
+              if (!_) return;
+              const _ = new FileReader();
+              (_.onload = (_) => {
+                try {
+                  const _ = _.target?.result,
+                    _ = JSON.parse(_);
+                  Object.entries(_).forEach(([_, _]) => {
+                    if ("string" == typeof _) {
+                      const _ = (0, _._)(_.toLowerCase());
+                      _ >= 0 && _ < 31
+                        ? __webpack_require__(_, _)
+                        : console.error("Unknown language");
+                    }
+                  });
+                } catch (_) {
+                  console.error("Failed to read or parse JSON:", _);
+                }
+              }),
+                _.readAsText(_);
+            },
+            [__webpack_require__],
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            fnLangHasData: (_) => _(_)?.trim().length > 0,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().Ctn,
+            },
+            _.createElement(_._, null),
+            _.createElement(
+              _._,
+              null,
+              "Or import json ",
+              _.createElement(_._, {
+                tooltip:
+                  'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
+              }),
+            ),
+            _.createElement("input", {
+              type: "file",
+              accept: ".json",
+              onChange: _,
+            }),
+          ),
+          _.createElement(_._, {
+            type: "text",
+            value: _,
+            onChange: (_) => __webpack_require__(_, _.currentTarget.value),
+            label: "Alternative Text",
+            tooltip:
+              "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+          }),
+        );
+      }
       function _(_) {
         const {
             bAssetUploadOnly: _,
@@ -58565,17 +58692,15 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          _ = (0, _._)(),
-          [_, _, _, _, _, _, _] = (0, _._)(() => [
+          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => [
             _?.GetRealm(),
             _?.GetAssetsObject("ll_image"),
             _?.BHasAnimatedAssets(),
             "featured_video" === _?.GetCustomTemplate(),
             _?.GetGID(),
             "partner_event" === _?.GetCustomTemplate(),
-            _?.GetAltTextRaw(_),
           ]),
-          _ = Boolean(0 != _),
+          _ = Boolean(0 != __webpack_require__),
           _ = (0, _.useMemo)(() => {
             const _ = [_ ? "capsule" : "localized_marketing_message"];
             return (
@@ -58643,9 +58768,6 @@
           ? _.createElement(
               _.Fragment,
               null,
-              _.createElement(_._, {
-                fnLangHasData: (_) => _.BHasAltTextRaw(_),
-              }),
               _.createElement(
                 "div",
                 {
@@ -58699,14 +58821,9 @@
                     },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
-                _.createElement(_._, null),
-                _.createElement(_._, {
-                  type: "text",
-                  value: _,
-                  onChange: (_) => _.SetAltText(_, _.currentTarget.value),
-                  label: "Alternative Text",
-                  tooltip:
-                    "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+                _.createElement(_, {
+                  fnGetAltText: _.GetAltTextRaw,
+                  fnSetAltText: _.SetAltText,
                 }),
                 _.createElement(_._, {
                   rgSupportArtwork: _,
@@ -59754,6 +59871,8 @@
             bRequiresPartnerEvent: _,
             bUpdateEventLinked: _,
             bUpdateEventLive: _,
+            bRequireAltText: _,
+            bAltTextEntered: _,
           } = (0, _._)(_.GetGID()),
           { bReady: _, bReadyExceptLiveEvent: _ } = (0, _._)(_.GetGID()),
           [_, _] = (0, _.useState)(!1);
@@ -59862,6 +59981,11 @@
               bDone: _,
               name: "Legal Partner Name (on options tab)",
             }),
+            _ &&
+              _.createElement(_, {
+                bDone: _,
+                name: "Alt Text for Artwork",
+              }),
             _ &&
               _.createElement(_, {
                 bDone: !1,
