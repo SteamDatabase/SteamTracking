@@ -11,7 +11,10 @@
       };
     },
     4852: (e) => {
-      e.exports = { StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o" };
+      e.exports = {
+        StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o",
+        StoreVideo: "_1Nwn2Vf2AjZ4McbxZX9P8V",
+      };
     },
     29298: (e) => {
       e.exports = {
@@ -37,24 +40,24 @@
         o = n(38390),
         l = n(6379),
         r = n(55263),
-        c = n(63369),
-        i = n(8107),
+        i = n(63369),
+        c = n(8107),
         m = n(60014),
         p = n(55963),
         d = n(1431),
-        _ = n.n(d);
-      const u = { include_assets: !0, include_basic_info: !0 };
+        u = n.n(d);
+      const _ = { include_assets: !0, include_basic_info: !0 };
       function E(e) {
         const { appid: t } = e,
-          [n] = (0, r.t7)(t, u),
+          [n] = (0, r.t7)(t, _),
           a = (0, m.n9)();
         return n && t
           ? s.createElement(
               "div",
-              { className: _().StoreItemCtn },
+              { className: u().StoreItemCtn },
               s.createElement(
                 "div",
-                { className: _().StoreItemRow },
+                { className: u().StoreItemRow },
                 s.createElement(
                   "a",
                   { href: (0, p.wJ)(n.GetStorePageURL(), a) },
@@ -63,7 +66,7 @@
                   }),
                   s.createElement(
                     "div",
-                    { className: _().StoreItemDescription },
+                    { className: u().StoreItemDescription },
                     n.GetShortDescription(),
                     " ",
                   ),
@@ -74,40 +77,41 @@
       }
       var S = n(32630),
         g = n(99376),
-        h = n(42780),
-        v = n(59952),
-        R = n(12611),
-        f = n(30470);
-      function P() {
+        f = n(42780),
+        h = n(59952),
+        v = n(12611),
+        R = n(30470);
+      function w() {
         const e = new URL(window.location.href),
           t = e.pathname.split("/"),
           n = t?.[2];
         e.searchParams.get("beta");
-        return `${f.TS.STORE_ICON_BASE_URL}${n}/`;
+        return `${R.TS.STORE_ICON_BASE_URL}${n}/`;
       }
-      var A = n(61859),
-        D = n(26296),
+      var P = n(61859),
+        b = n(26296),
         I = n(4852),
-        w = n.n(I),
-        b = n(24484);
-      function G(e) {
-        return new h.OJ(new h.R8(), 0);
-      }
+        x = n.n(I),
+        A = n(24484),
+        D = n(78327);
       function N(e) {
+        return new f.OJ(new f.R8(), 0);
+      }
+      function G(e) {
         const { text: t, languageOverride: n } = e,
           [a] = (0, s.useState)(
             new g.B(
               new Map([
-                ...Array.from(v.W4.entries()),
-                ["img", { Constructor: B, autocloses: !1 }],
+                ...Array.from(h.W4.entries()),
+                ["img", { Constructor: T, autocloses: !1 }],
               ]),
-              G,
+              N,
               n,
             ),
           );
         return s.createElement(s.Fragment, null, a.ParseBBCode(t, {}));
       }
-      function B(e) {
+      function T(e) {
         const { showErrorInfo: t } = e.context;
         let n = e?.children?.toString();
         if (
@@ -116,24 +120,82 @@
           null == n || null == n || 0 == n.length)
         )
           return "";
-        const a = (0, b.Fd)("store_page_asset_url", "application_config");
-        return (
-          (n =
-            a && n.startsWith(R.qR)
-              ? a.replace("%s", n.replace(R.qR, ""))
-              : n.replace(R.qR, P()).replace("http://", "https://")),
-          t
-            ? s.createElement(D.i, { className: w().StoreImage, src: n })
-            : s.createElement("img", {
-                className: w().StoreImage,
+        const a = (0, A.Fd)("store_page_asset_url", "application_config"),
+          o = (0, A.Fd)("store_page_extra_assets_url", "application_config"),
+          l = (0, A.Fd)("store_page_extra_assets_map", "application_config");
+        if (a && n.startsWith(v.qR + "/")) {
+          const e = n.replace(v.qR + "/", ""),
+            t = l[e];
+          if (t) {
+            const e = [];
+            let n = !1;
+            for (const a of t) {
+              const t = a.urlPart;
+              e.push({
+                url: o.replace("%s", t),
+                extension: a.extension,
+                alt_text: a.alt_text ?? null,
+              }),
+                (n = n || ["mp4", "webm"].includes(a.extension));
+            }
+            if (n) {
+              const t = e.find((e) => "webm" === e.extension)?.url,
+                n = e.find((e) => "mp4" === e.extension)?.url,
+                a = e.find(
+                  (e) =>
+                    ".poster.webp" === e.extension ||
+                    ".poster.avif" === e.extension,
+                )?.url,
+                o = e.find(
+                  (e) =>
+                    e.alt_text?.length > 0 &&
+                    ("webm" === e.extension || "webm" === e.extension),
+                )?.alt_text,
+                l = (e) => {
+                  const t = e.currentTarget;
+                  t.paused ? t.play() : t.pause();
+                };
+              return s.createElement(
+                "video",
+                {
+                  className: x().StoreVideo,
+                  poster: a,
+                  "aria-label": o,
+                  autoPlay: !0,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  onClick: l,
+                },
+                t && s.createElement("source", { src: t, type: "video/webm" }),
+                n &&
+                  !D.TS.IN_CLIENT &&
+                  s.createElement("source", { src: n, type: "video/mp4" }),
+              );
+            }
+            {
+              const t = e[0]?.alt_text,
+                n = e[0]?.url;
+              return s.createElement("img", {
+                className: x().StoreImage,
                 src: n,
-                alt: (0, A.we)("#EventEditor_InsertImage_URL"),
-              })
-        );
+                alt: t,
+              });
+            }
+          }
+          n = a.replace("%s", e);
+        } else n = n.replace(v.qR, w()).replace("http://", "https://");
+        return t
+          ? s.createElement(b.i, { className: x().StoreImage, src: n })
+          : s.createElement("img", {
+              className: x().StoreImage,
+              src: n,
+              alt: (0, P.we)("#EventEditor_InsertImage_URL"),
+            });
       }
-      var T = n(52038),
-        k = n(29298),
-        C = n.n(k);
+      var B = n(52038),
+        C = n(29298),
+        k = n.n(C);
       function L(e) {
         const { season_pass: t } = e;
         return t && t.milestones && 0 != t.milestones.length
@@ -146,16 +208,16 @@
                   className:
                     "game_area_description overflow_allowed season_pass_area",
                 },
-                s.createElement("h2", null, (0, A.we)("#SeasonPass_Header")),
+                s.createElement("h2", null, (0, P.we)("#SeasonPass_Header")),
                 s.createElement(
                   "p",
                   null,
-                  (0, A.oW)("#SeasonPass_Incomplete_Desc"),
+                  (0, P.oW)("#SeasonPass_Incomplete_Desc"),
                 ),
                 s.createElement(
                   "p",
                   null,
-                  (0, A.oW)(
+                  (0, P.oW)(
                     "#SeasonPass_Incomplete_Desc2",
                     s.createElement("a", {
                       href: `${a.TS.STORE_BASE_URL}account/emailoptout`,
@@ -165,7 +227,7 @@
                 t.milestones
                   .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
                   .map((e) =>
-                    s.createElement(U, {
+                    s.createElement(y, {
                       key: "ms_" + e.milestone_id,
                       baseGameAppID: t.appid,
                       milestone: e,
@@ -175,36 +237,36 @@
             )
           : null;
       }
-      function U(e) {
+      function y(e) {
         const { milestone: t, baseGameAppID: n } = e,
           a = t.milestone_desc?.length > 0;
         return s.createElement(
           "div",
-          { className: C().SeasonPass },
+          { className: k().SeasonPass },
           s.createElement(
             "div",
             {
-              className: (0, T.A)(C().Title, Boolean(t.shipped) && C().Shipped),
+              className: (0, B.A)(k().Title, Boolean(t.shipped) && k().Shipped),
             },
             s.createElement(
               "span",
               null,
               Boolean(t.shipped) && "✓",
               " ",
-              A.A0.GetTokenWithFallback(t.title),
+              P.A0.GetTokenWithFallback(t.title),
             ),
             s.createElement(
               "div",
-              { className: C().DateAndControl },
-              s.createElement(y, { milestone: t }),
+              { className: k().DateAndControl },
+              s.createElement(W, { milestone: t }),
             ),
           ),
-          a && s.createElement(x, { milestone: t, baseGameAppID: n }),
+          a && s.createElement(U, { milestone: t, baseGameAppID: n }),
         );
       }
-      function x(e) {
+      function U(e) {
         const { milestone: t, baseGameAppID: n } = e,
-          a = A.A0.GetTokenWithFallback(t.milestone_desc),
+          a = P.A0.GetTokenWithFallback(t.milestone_desc),
           o = t.appid || t.coming_soon_appid;
         return s.createElement(
           s.Fragment,
@@ -212,33 +274,33 @@
           Boolean(o) && s.createElement(E, { appid: o }),
           s.createElement(
             "div",
-            { className: C().Description },
-            s.createElement(N, { text: a }),
+            { className: k().Description },
+            s.createElement(G, { text: a }),
             Boolean(t.shipped) &&
-              s.createElement(O, { milestone: t, baseGameAppID: n }),
+              s.createElement($, { milestone: t, baseGameAppID: n }),
           ),
         );
       }
-      function y(e) {
+      function W(e) {
         const { milestone: t } = e;
         return t.shipped
           ? s.createElement(
               "div",
-              { className: C().Shipped },
-              (0, A.PP)(
+              { className: k().Shipped },
+              (0, P.PP)(
                 "#SeasonPass_Released_Date",
                 s.createElement("br", null),
-                (0, A.TW)(t.rtime_complete),
+                (0, P.TW)(t.rtime_complete),
               ),
             )
           : s.createElement(
               "div",
-              { className: C().Upcoming },
-              (0, A.PP)(
+              { className: k().Upcoming },
+              (0, P.PP)(
                 "#SeasonPass_Release_Date",
                 s.createElement("br", null),
                 [...t.dates].reverse().map((e, n) => {
-                  const a = (0, c.M)(
+                  const a = (0, i.M)(
                     e.coming_soon_display_type,
                     e.rtime,
                     null,
@@ -248,7 +310,7 @@
                     "div",
                     {
                       key: "dd" + e.rtime + e.coming_soon_display_type,
-                      className: n + 1 < t.dates.length ? C().Strike : void 0,
+                      className: n + 1 < t.dates.length ? k().Strike : void 0,
                     },
                     a,
                   );
@@ -256,41 +318,41 @@
               ),
             );
       }
-      const W = {};
-      function O(e) {
+      const O = {};
+      function $(e) {
         const { milestone: t, baseGameAppID: n } = e;
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
-            { className: C().Status },
-            (0, A.PP)(
+            { className: k().Status },
+            (0, P.PP)(
               t.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
             ),
           ),
-          t.appid && s.createElement($, { milestone: t }),
+          t.appid && s.createElement(Z, { milestone: t }),
           Boolean(t.appid && t.event_gid) &&
-            s.createElement("span", { className: C().Padding }),
+            s.createElement("span", { className: k().Padding }),
           Boolean(t.event_gid) &&
-            s.createElement(Z, { milestone: t, baseGameAppID: n }),
+            s.createElement(F, { milestone: t, baseGameAppID: n }),
         );
       }
-      function $(e) {
+      function Z(e) {
         const { milestone: t } = e,
-          [n] = (0, r.t7)(t.appid, W);
+          [n] = (0, r.t7)(t.appid, O);
         return s.createElement(
           "a",
           {
             href:
               n?.GetStorePageURL() || `${a.TS.STORE_BASE_URL}app/${t.appid}`,
           },
-          (0, A.we)("#SeasonPass_ShowStore"),
+          (0, P.we)("#SeasonPass_ShowStore"),
         );
       }
-      function Z(e) {
+      function F(e) {
         const { milestone: t, baseGameAppID: n } = e,
-          [r, c] = (0, s.useState)(!1),
+          [r, i] = (0, s.useState)(!1),
           m = (0, o.RR)(t.event_gid);
         return m
           ? s.createElement(
@@ -301,17 +363,17 @@
                 {
                   href: `${a.TS.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
                   onClick: (e) => {
-                    e.preventDefault(), e.stopPropagation(), c(!0);
+                    e.preventDefault(), e.stopPropagation(), i(!0);
                   },
                 },
-                (0, A.we)("#SeasonPass_ReadEvent"),
+                (0, P.we)("#SeasonPass_ReadEvent"),
               ),
               Boolean(r) &&
-                s.createElement(i.N, {
+                s.createElement(c.N, {
                   appid: n,
                   eventModel: m,
                   announcementGID: m.AnnouncementGID,
-                  closeModal: () => c(!1),
+                  closeModal: () => i(!1),
                   partnerEventStore: l.O3,
                   bShowOnlyInitialEvent: !0,
                   showAppHeader: !0,
@@ -323,7 +385,7 @@
               {
                 href: `${a.TS.STORE_BASE_URL}news/app/${n}/view/${t.event_gid}`,
               },
-              (0, A.we)("#SeasonPass_ReadEvent"),
+              (0, P.we)("#SeasonPass_ReadEvent"),
             );
       }
     },

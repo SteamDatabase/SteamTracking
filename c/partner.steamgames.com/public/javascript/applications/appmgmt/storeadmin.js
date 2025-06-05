@@ -250,6 +250,14 @@
         Name: "lGJk6OffakeBbm9rvukuH",
         LocalizedAssetUploadWarning: "_26-vmpZD8b_p2ApFLrcji8",
         LocalizedAssetUploadButton: "FrlNPlPwQkjgzk604bAC4",
+        AltTextGrid: "_11su_JQ6bIR2Y5Y-HXsMjG",
+        AltTextHeader: "_1L02Ehdw7vvzV72zkxkrGQ",
+        AltTextName: "LSLNQo0JXd1gmYVpX2lpI",
+        AltTextInput: "RhZs0wFCcxhu1qSSpW9El",
+        AltTextRow: "_10cb7y-PwrO4JuuBuLNCZQ",
+        AltTextImage: "_2IzTROu1kwFs_86GfRQ2TN",
+        AltTextFailed: "_12Ou1sgTchaLAocFFpIwd",
+        AltTextMutateFailed: "_2PeF8JJAuPqEnIkcFV9qbc",
       };
     },
     chunkid: (module) => {
@@ -1618,7 +1626,9 @@
           };
         }
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             src: _,
@@ -1992,74 +2002,72 @@
           _.useEffect(() => {
             _ && _();
           }, [_, _]),
-          !_)
+          _)
         )
-          return;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
+          return _.createElement(
             _._,
             {
-              onEscKeypress: _,
+              active: !0,
             },
             _.createElement(
               _._,
               {
-                classNameContent: _.LocalizeAssetDialogContent,
+                onEscKeypress: _,
               },
               _.createElement(
                 _._,
-                null,
-                (0, _._)("#AssetUpload_LocalizeAsset_Title"),
-              ),
-              _.createElement(
-                "div",
                 {
-                  className: _.LocalizeAssetsDialogDescription,
+                  classNameContent: _.LocalizeAssetDialogContent,
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   null,
-                  (0, _._)("#AssetUpload_LocalizeAsset_Desc"),
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Title"),
                 ),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  onlyExtraAsset: _,
-                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LocalizeAssetsDialogDescription,
+                  },
+                  _.createElement(
+                    "div",
+                    null,
+                    (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Desc"),
+                  ),
+                ),
                 _.createElement(
                   _._,
                   null,
                   _.createElement(_, {
-                    extraAsset: _,
-                    activeLanguage: __webpack_require__,
+                    onlyExtraAsset: _,
                   }),
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(_, {
+                      extraAsset: _,
+                      activeLanguage: __webpack_require__,
+                    }),
+                  ),
+                ),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                    },
+                    (0, _._)("#Button_Close"),
+                  ),
                 ),
               ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  onCancel: _,
-                  onOK: (_) => {
-                    _.preventDefault();
-                  },
-                  bOKDisabled: !_,
-                  strOKText: (0, _._)("#AssetUpload_LocalizeAsset_Save"),
-                }),
-              ),
             ),
-          ),
-        );
+          );
       }
       function _(_) {
         const { extraAsset: _, activeLanguage: __webpack_require__ } = _,
-          _ = _.images?.map((_) => (0, _._)(_.language)),
+          _ = (0, _._)(_),
           _ = _.useCallback((_) => (0, _._)(_, !0, _)?.url, [_]),
           [_, _] = _.useState(void 0),
           [_, _, _] = (0, _._)();
@@ -2090,10 +2098,24 @@
           : null;
       }
       function _(_) {
-        const _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _, _] = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
+          _ &&
+            _.createElement(_, {
+              hideModal: _,
+            }),
+          _.some(_._) &&
+            _.createElement(
+              _._,
+              {
+                onClick: _,
+              },
+              (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Button"),
+            ),
           _.createElement(
             "div",
             {
@@ -2108,11 +2130,332 @@
                 _.createElement(_, {
                   key: (0, _._)(_),
                   extraAsset: _,
+                  primaryLanguage: _,
                 }),
               ),
             ),
           ),
           _.createElement(_, null),
+        );
+      }
+      function _(_) {
+        const { hideModal: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(!0),
+          { bAppHasSteamChinaToolsEnabled: _ } = (0, _._)(),
+          _ = _.useMemo(() => (0, _._)(_), [_]),
+          {
+            strActiveLanguage: _,
+            eActiveLang: _,
+            rctLanguageSelect: _,
+            mapValues: _,
+          } = (function (_) {
+            const {
+                strActiveLanguage: _,
+                mapValues: _,
+                rctLanguageSelect: _,
+                setActiveLanguage: _,
+              } = (0, _._)(_, [], null, null),
+              _ = (0, _._)(_, 0);
+            return (
+              _.useEffect(() => {
+                _._.Get().SetCurEditLanguage(_);
+              }, [_]),
+              (0, _._)(_._.Get().GetCallback(), (_) => _((0, _._)(_))),
+              {
+                strActiveLanguage: _,
+                eActiveLang: _,
+                rctLanguageSelect: _,
+                mapValues: _,
+              }
+            );
+          })(_),
+          _ = (0, _._)(() => new Map()),
+          _ = (0, _._)(() => new Map());
+        _.useEffect(() => {
+          if (_) {
+            _(!1);
+            for (const _ of __webpack_require__.filter(_._))
+              _.set((0, _._)(_), {
+                ..._.alt_text,
+              }),
+                _.set((0, _._)(_), {
+                  ..._.alt_text,
+                });
+          }
+        }, [_, _, _, _]);
+        const _ = _.useCallback(() => {
+          for (const _ of _.keys()) {
+            const _ = Array.from(_.values()).some((_) => _ in _);
+            _.get(_).Set(_ ? "yes" : "");
+          }
+        }, [_, _, _]);
+        _.useEffect(() => _(), [_]);
+        const _ = (0, _._)(),
+          _ = (_) => _.get((0, _._)(_))?.[_] ?? "",
+          { mutateAsync: _, isPending: _ } = (function () {
+            const _ = (0, _._)("ajaxmodifyextraassets"),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async ({
+                strExtraAssetFileName: _,
+                mapAltText: _,
+              }) => {
+                if (!_ || !_) return !1;
+                const _ = new FormData();
+                _.append("sessionid", _._.SESSIONID),
+                  _.append("action", "alt_text"),
+                  _.append("name", _),
+                  _.append(
+                    "alt_text",
+                    JSON.stringify(
+                      Object.entries(_).map(([_, _]) => ({
+                        lang: _,
+                        text: _,
+                      })),
+                    ),
+                  );
+                const _ = await fetch(_, {
+                    method: "post",
+                    body: _,
+                  }),
+                  _ = await _.json();
+                if (!_._) throw _.errors?.join(" ") || "Error deleting asset";
+                return _;
+              },
+              onSuccess: (_) => {
+                !1 !== _ && _(_.rgExtraAssets);
+              },
+              onError: (_) => {
+                console.error(
+                  (0, _._)(
+                    "#StoreAdmin_UploadError_Generic",
+                    "string" == typeof _ ? _ : _.message,
+                  ),
+                );
+              },
+            });
+          })(),
+          _ = _._.set(),
+          _ = () => {
+            _ || _();
+          };
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(
+            _._,
+            {
+              onEscKeypress: _,
+              bDisableBackgroundDismiss: _,
+            },
+            _.createElement(
+              _._,
+              {
+                classNameContent: _.ExtraAssetDialogContent,
+              },
+              _.createElement(
+                _._,
+                null,
+                (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Title"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.ExtraAssetsDialogDescription,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Desc"),
+                ),
+                _,
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  "table",
+                  {
+                    className: (0, _._)(_.AltTextGrid),
+                  },
+                  _.createElement(
+                    "thead",
+                    {
+                      className: (0, _._)(_.AltTextHeader),
+                    },
+                    _.createElement(
+                      "tr",
+                      null,
+                      _.createElement("th", null),
+                      _.createElement(
+                        "th",
+                        {
+                          className: (0, _._)(_.AltTextName),
+                        },
+                        (0, _._)(
+                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAssetName",
+                        ),
+                      ),
+                      _.createElement(
+                        "th",
+                        {
+                          className: (0, _._)(_.AltTextInput),
+                        },
+                        (0, _._)(
+                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAltText",
+                        ),
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "tbody",
+                    null,
+                    __webpack_require__.filter(_._).map((_) =>
+                      _.createElement(_, {
+                        key: `${(0, _._)(_)}-${_}`,
+                        lang: _,
+                        extraAsset: _,
+                        altText: _(_),
+                        setAltText: (_) =>
+                          ((_, _) => {
+                            let _ = _.get((0, _._)(_));
+                            _ || ((_ = {}), _.set((0, _._)(_), _)),
+                              _.trim().length > 0 ? (_[_] = _) : delete _[_],
+                              _(),
+                              _();
+                          })(_, _),
+                        failedMutate: _.has((0, _._)(_)),
+                      }),
+                    ),
+                  ),
+                ),
+                _ && _.createElement(_._, null),
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.size > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.AltTextMutateFailed,
+                    },
+                    (0, _._)(
+                      "#StoreAdmin_ExtraAssetUpload_EditAltText_MutateFailed",
+                    ),
+                  ),
+                _.createElement(_._, {
+                  onCancel: _,
+                  onOK: (_) => {
+                    _.preventDefault(),
+                      (async () => {
+                        try {
+                          _.clear();
+                          for (const [_, _] of _.entries())
+                            _(_.get(_), _.get(_)) ||
+                              (!1 !==
+                              (await _({
+                                strExtraAssetFileName: _,
+                                mapAltText: _,
+                              }))
+                                ? _.set(_, {
+                                    ..._,
+                                  })
+                                : _.add(_));
+                          0 == _.size && _();
+                        } catch (_) {
+                          console.error("Some mutations failed", _);
+                        }
+                      })();
+                  },
+                  bOKDisabled: _ || _(_, _),
+                  bCancelDisabled: _,
+                  strOKText: (0, _._)(
+                    "#StoreAdmin_ExtraAssetUpload_EditAltText_Save",
+                  ),
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_, _) {
+        if (Object.keys(_).length !== Object.keys(_).length) return !1;
+        for (const _ of Object.keys(_)) if (_[_] !== _[_]) return !1;
+        return !0;
+      }
+      function _(_, _) {
+        if (_.size !== _.size) return !1;
+        for (const [__webpack_require__, _] of _) {
+          const _ = _.get(__webpack_require__);
+          if (!_ || !_(_, _)) return !1;
+        }
+        return !0;
+      }
+      function _(_) {
+        const {
+            lang: _,
+            extraAsset: __webpack_require__,
+            altText: _,
+            setAltText: _,
+            failedMutate: _,
+          } = _,
+          [_, _] = _.useState(_);
+        return _.createElement(
+          "tr",
+          {
+            className: _.AltTextRow,
+          },
+          _.createElement(
+            "td",
+            {
+              className: _.AltTextImage,
+            },
+            _.createElement(_, {
+              extraAsset: __webpack_require__,
+              caption: !1,
+              controls: !1,
+              primaryLanguage: _,
+            }),
+          ),
+          _.createElement(
+            "td",
+            {
+              className: _.AltTextName,
+            },
+            (0, _._)(__webpack_require__),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.AltTextFailed,
+                },
+                (0, _._)(
+                  "#StoreAdmin_ExtraAssetUpload_EditAltText_EntryMutateFailed",
+                ),
+              ),
+          ),
+          _.createElement(
+            "td",
+            {
+              className: _.AltTextInput,
+            },
+            _.createElement(_._, {
+              type: "text",
+              placeholder: (0, _._)(
+                "#StoreAdmin_ExtraAssetUpload_EditAltText_Placeholder",
+                (0, _._)(`#Language_${(0, _._)(_)}`),
+              ),
+              value: _,
+              onChange: (_) => {
+                return (_ = _.target.value), _(_), void _(_);
+                var _;
+              },
+            }),
+          ),
         );
       }
       function _(_) {
@@ -2131,9 +2474,7 @@
         _.useEffect(() => {
           const _ = (_) => ({
             baseFilename: (0, _._)(_),
-            languages: (0, _._)(_)
-              ? [0]
-              : _.images.map((_) => (0, _._)(_.language)),
+            languages: (0, _._)(_) ? [0] : (0, _._)(_),
           });
           _.SetExistingAssetGroups(_.map(_), _),
             _.SetOnlyAssetGroup(_ ? _(_) : null);
@@ -2165,7 +2506,7 @@
                   "div",
                   null,
                   (0, _._)(
-                    "#AssetUpload_LocalizeAsset_Instructions",
+                    "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Instructions",
                     _.width,
                     _.height,
                   ),
@@ -2175,7 +2516,9 @@
                 _.createElement(
                   "div",
                   null,
-                  (0, _._)("#AssetUpload_LocalizeAsset_InstructionsWithSize"),
+                  (0, _._)(
+                    "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_InstructionsWithSize",
+                  ),
                 ),
               !_ &&
                 _.createElement(
@@ -2206,7 +2549,12 @@
         );
       }
       function _(_) {
-        const { extraAsset: _, controls: __webpack_require__ = !0 } = _,
+        const {
+            extraAsset: _,
+            caption: __webpack_require__ = !0,
+            controls: _ = !0,
+            primaryLanguage: _,
+          } = _,
           [_, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(_);
@@ -2214,10 +2562,21 @@
         if ((0, _._)(_)) {
           const _ = (0, _._)(_, !1);
           _ = _ ? [_] : [];
-        } else
+        } else {
+          const _ = 29 == _ ? 6 : 0,
+            _ = (0, _._)(_).sort((_, _) => {
+              if (null != _) {
+                if (_ == _ && _ != _) return -1;
+                if (_ != _ && _ == _) return 1;
+                if (_ == _ && _ != _) return -1;
+                if (_ != _ && _ == _) return 1;
+              }
+              return _ - _;
+            });
           _ = Array.from({
-            length: Math.min(3, _.images.length),
-          }).map((_, _) => (0, _._)(_, 0 == _, (0, _._)(_.images[_].language)));
+            length: Math.min(3, _.length),
+          }).map((_, _) => (0, _._)(_, 0 == _, _[_]));
+        }
         const _ = () => {
             window.open(_[0]?.url);
           },
@@ -2247,7 +2606,7 @@
                 extraAsset: _,
                 hideModal: _,
               }),
-            __webpack_require__ &&
+            _ &&
               _.createElement(
                 "div",
                 {
@@ -2297,7 +2656,7 @@
                       key: _.url + _,
                       className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
                       src: _.url,
-                      onDoubleClick: __webpack_require__ ? _ : void 0,
+                      onDoubleClick: _ ? _ : void 0,
                       muted: !0,
                       loop: !0,
                       playsInline: !0,
@@ -2308,17 +2667,18 @@
                       key: _.url + _,
                       className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
                       src: _.url,
-                      onDoubleClick: __webpack_require__ ? _ : void 0,
+                      onDoubleClick: _ ? _ : void 0,
                     }),
               ),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.ExtraAssetName,
-              },
-              (0, _._)(_),
-            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.ExtraAssetName,
+                },
+                (0, _._)(_),
+              ),
           ),
         );
       }
@@ -2585,7 +2945,8 @@
               _ = _.find((_) => (0, _._)(_) == _);
             if (!_) return;
             if ((0, _._)(_)) return _;
-            return _.images.find((_) => (0, _._)(_.language) == _);
+            const _ = _.images?.[(0, _._)(_)];
+            return _;
           });
         }, [_, _, _, _]);
         const _ =
@@ -2843,6 +3204,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2884,17 +3246,6 @@
         }
         return 0;
       }
-      function _(_, _) {
-        if (!_ || 0 == _.length) return null;
-        if (1 == _.length) return _._(0);
-        let _ = _.find((_) => (0, _._)(_.language) == _);
-        if (_) return _;
-        const _ = 29 == _ ? 6 : 0;
-        return (
-          (_ = _.find((_) => (0, _._)(_.language) == _)),
-          _ || (-1 == _ ? _[0] : null)
-        );
-      }
       function _(_, _ = 0) {
         const _ = _(_, !1, _);
         return _ ? _.url : null;
@@ -2906,14 +3257,26 @@
             url: _.url,
             usage: 0,
           };
-        const _ = _(_.images, __webpack_require__);
+        const _ = (function (_, _) {
+          if (!_ || 0 == Object.keys(_).length) return null;
+          if (1 == Object.keys(_).length) return Object.values(_)._(0);
+          let _ = _[(0, _._)(_)];
+          if (_) return _;
+          const _ = 29 == _ ? 6 : 0;
+          return (_ = _[(0, _._)(_)]), _ || (-1 == _ ? _[0] : null);
+        })(_.images, __webpack_require__);
         return _ ? _(_, _) : null;
       }
       function _(_, _ = 0) {
         if (!_) return;
         if (_(_)) return _.name;
-        const _ = _(_.text, _);
-        return _ ? _.alt_text : null;
+        const _ = _.alt_text?.[(0, _._)(_)];
+        return _;
+      }
+      function _(_) {
+        return (
+          (_?.images && Object.keys(_.images).map((_) => (0, _._)(_))) ?? []
+        );
       }
       function _(_) {
         if (!_) return;
@@ -2931,6 +3294,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -3034,7 +3398,6 @@
                 _.push({
                   data: _,
                   label: _.createElement(_, {
-                    language: _,
                     strLocLanguage: _,
                     value: __webpack_require__.get(_),
                   }),
@@ -3052,22 +3415,21 @@
         });
       }
       function _(_) {
-        const {
-            language: _,
-            strLocLanguage: __webpack_require__,
-            value: _,
-          } = _,
-          [_, _] = _.useState(() => !!_?.Value?.trim()),
+        const { strLocLanguage: _, value: __webpack_require__ } = _,
+          [_, _] = _.useState(() => !!__webpack_require__?.Value?.trim()),
           _ = _.useCallback((_) => _(!!_.trim()), []);
         return (
-          (0, _._)(_, _),
-          _.useEffect(() => _(_.Value), [_, _]),
+          (0, _._)(__webpack_require__, _),
+          _.useEffect(
+            () => _(__webpack_require__.Value),
+            [_, __webpack_require__],
+          ),
           _.createElement(
             "span",
             {
               className: (0, _._)(_.LanguageOption, _ && _.HasValue),
             },
-            __webpack_require__,
+            _,
           )
         );
       }
@@ -3103,6 +3465,10 @@
           value: _,
         });
       });
+      function _() {
+        const _ = _.useContext(_);
+        return (0, _._)(_?.strActiveLanguage, 0);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

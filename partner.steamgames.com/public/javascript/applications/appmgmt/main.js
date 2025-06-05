@@ -15642,15 +15642,16 @@
         $$: () => s,
         CH: () => a,
         DF: () => h,
-        OP: () => f,
+        OP: () => b,
         Qi: () => u,
+        YR: () => f,
         _g: () => o,
         bs: () => _,
         gc: () => d,
         hL: () => m,
         l6: () => c,
         uD: () => g,
-        wm: () => b,
+        wm: () => w,
         x2: () => p,
         xA: () => l,
       });
@@ -15796,7 +15797,15 @@
           [e],
         );
       }
-      function f() {
+      function f(e) {
+        const t = n.useRef({ value: void 0, bConstructed: !1 });
+        return (
+          t.current.bConstructed ||
+            (t.current = { value: e(), bConstructed: !0 }),
+          t.current.value
+        );
+      }
+      function b() {
         const [e, t] = n.useState(!1);
         return [
           e,
@@ -15806,7 +15815,7 @@
           },
         ];
       }
-      function b(e) {
+      function w(e) {
         const t = n.useRef(e);
         return (
           (t.current.length !== e.length ||

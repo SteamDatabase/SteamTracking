@@ -17299,6 +17299,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17443,6 +17444,20 @@
             _.current.value
           ),
           [_],
+        );
+      }
+      function _(_) {
+        const _ = _.useRef({
+          value: void 0,
+          bConstructed: !1,
+        });
+        return (
+          _.current.bConstructed ||
+            (_.current = {
+              value: _(),
+              bConstructed: !0,
+            }),
+          _.current.value
         );
       }
       function _() {

@@ -2735,6 +2735,7 @@
     "ImageUpload_ImageGroup_ttip": "The group of images that will contain this image upon upload. We try to autodetect the image language based on the suffix of the image filename, e.g. myimage_english.jpg. You can use this dropdown to override which other images this gets grouped with.",
     "ImageDisplay_NoAssetUploaded": "No Assets Uploaded",
     "ImageDisplay_ShowAllAssets": "Show all %1$s language assets",
+    "ImageDisplay_EditAltText": "Alt text: Please describe what is happening and shown in the image above for players that use screen readers.",
     "ImageUpload_DeleteAll_Confirm": "This will remove all of the localized artwork of this type.  Must save the event afterward for it to apply. Are you sure?",
     "UserGameNotes_UntitledNote_Title": "Untitled Note",
     "UserGameNotes_NewNote": "New Note",

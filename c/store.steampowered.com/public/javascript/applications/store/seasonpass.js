@@ -11,6 +11,7 @@
     chunkid: (module) => {
       module.exports = {
         StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o",
+        StoreVideo: "_1Nwn2Vf2AjZ4McbxZX9P8V",
       };
     },
     chunkid: (module) => {
@@ -103,6 +104,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return new _._(new _._(), 0);
@@ -136,25 +138,91 @@
           null == _ || null == _ || 0 == _.length)
         )
           return "";
-        const _ = (0, _._)("store_page_asset_url", "application_config");
-        return (
-          (_ =
-            _ && __webpack_require__.startsWith(_._)
-              ? _.replace("%s", __webpack_require__.replace(_._, ""))
-              : __webpack_require__
-                  .replace(_._, _())
-                  .replace("http://", "https://")),
-          _
-            ? _.createElement(_._, {
+        const _ = (0, _._)("store_page_asset_url", "application_config"),
+          _ = (0, _._)("store_page_extra_assets_url", "application_config"),
+          _ = (0, _._)("store_page_extra_assets_map", "application_config");
+        if (_ && __webpack_require__.startsWith(_._ + "/")) {
+          const _ = __webpack_require__.replace(_._ + "/", ""),
+            _ = _[_];
+          if (_) {
+            const _ = [];
+            let _ = !1;
+            for (const _ of _) {
+              const _ = _.urlPart;
+              _.push({
+                url: _.replace("%s", _),
+                extension: _.extension,
+                alt_text: _.alt_text ?? null,
+              }),
+                (_ = _ || ["mp4", "webm"].includes(_.extension));
+            }
+            if (_) {
+              const _ = _.find((_) => "webm" === _.extension)?.url,
+                _ = _.find((_) => "mp4" === _.extension)?.url,
+                _ = _.find(
+                  (_) =>
+                    ".poster.webp" === _.extension ||
+                    ".poster.avif" === _.extension,
+                )?.url,
+                _ = _.find(
+                  (_) =>
+                    _.alt_text?.length > 0 &&
+                    ("webm" === _.extension || "webm" === _.extension),
+                )?.alt_text,
+                _ = (_) => {
+                  const _ = _.currentTarget;
+                  _.paused ? _.play() : _.pause();
+                };
+              return _.createElement(
+                "video",
+                {
+                  className: _().StoreVideo,
+                  poster: _,
+                  "aria-label": _,
+                  autoPlay: !0,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  onClick: _,
+                },
+                _ &&
+                  _.createElement("source", {
+                    src: _,
+                    type: "video/webm",
+                  }),
+                _ &&
+                  !_._.IN_CLIENT &&
+                  _.createElement("source", {
+                    src: _,
+                    type: "video/mp4",
+                  }),
+              );
+            }
+            {
+              const _ = _[0]?.alt_text,
+                _ = _[0]?.url;
+              return _.createElement("img", {
                 className: _().StoreImage,
                 src: _,
-              })
-            : _.createElement("img", {
-                className: _().StoreImage,
-                src: _,
-                alt: (0, _._)("#EventEditor_InsertImage_URL"),
-              })
-        );
+                alt: _,
+              });
+            }
+          }
+          _ = _.replace("%s", _);
+        } else
+          _ = __webpack_require__
+            .replace(_._, _())
+            .replace("http://", "https://");
+        return _
+          ? _.createElement(_._, {
+              className: _().StoreImage,
+              src: _,
+            })
+          : _.createElement("img", {
+              className: _().StoreImage,
+              src: _,
+              alt: (0, _._)("#EventEditor_InsertImage_URL"),
+            });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
