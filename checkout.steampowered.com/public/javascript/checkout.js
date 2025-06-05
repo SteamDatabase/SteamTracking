@@ -4966,7 +4966,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'RuPay';
 			}
     }
-    
+
 		$J('#review_address_body').text( $('first_name').value+' '+$('last_name').value+' ' );
 		$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_address').value+' ' ) );
 		if ( $('billing_address_two').value.length > 0 )
@@ -4975,7 +4975,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 		}
 		if ( g_bHasBillingStates )
 		{
-			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_select_trigger').text+', '+$('billing_postal_code').value+' ' ) );
+			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_select_trigger').innerText+', '+$('billing_postal_code').value+' ' ) );
 		}
 		else
 		{

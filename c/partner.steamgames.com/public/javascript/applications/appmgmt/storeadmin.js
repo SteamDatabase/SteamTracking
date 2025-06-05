@@ -18417,7 +18417,9 @@
             return _.isLoading ? null : _.data;
           })(_),
           _ = _?.find(
-            (_) => _.linkname.toLocaleLowerCase() === _.toLocaleLowerCase(),
+            (_) =>
+              _.linkname.trim().toLocaleLowerCase() ==
+              _.trim().toLocaleLowerCase(),
           );
         return _.createElement(
           "div",

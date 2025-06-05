@@ -15872,7 +15872,9 @@
             return n.isLoading ? null : n.data;
           })(t),
           u = d?.find(
-            (e) => e.linkname.toLocaleLowerCase() === r.toLocaleLowerCase(),
+            (e) =>
+              e.linkname.trim().toLocaleLowerCase() ==
+              r.trim().toLocaleLowerCase(),
           );
         return a.createElement(
           "div",
