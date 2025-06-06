@@ -4662,25 +4662,35 @@
               r = (0, a.useCallback)(() => !!e && (t(!1), !0), [t, e]);
             return [e, n, r];
           })(),
-          i = [],
-          u = new Map();
+          [i, u] = (function (e, t) {
+            let n = (0, a.useCallback)(
+                (n) => {
+                  e && !n && t();
+                },
+                [e, t],
+              ),
+              r = (0, a.useCallback)((t) => !!e, [e]);
+            return [r, n];
+          })(r, o),
+          m = [],
+          d = new Map();
         for (let e of t)
           if (
             (e.featured &&
-              (i.push(a.createElement(ea, { key: e.id, trailer: e })),
-              u.set(e.id, !0)),
-            i.length >= 2)
+              (m.push(a.createElement(ea, { key: e.id, trailer: e })),
+              d.set(e.id, !0)),
+            m.length >= 2)
           )
             break;
-        let m = n.map((e) =>
+        let p = n.map((e) =>
             a.createElement($n, { key: e.name, screenshot: e }),
           ),
-          d = [];
+          h = [];
         for (let e of t)
-          u.has(e.id) || d.push(a.createElement(ea, { key: e.id, trailer: e }));
-        let p = [...i, ...m, ...d],
-          h = r ? "" : "#TrailerPlayer_FullScreen_Tooltip",
-          _ = (0, U.A)(Xn.GamepadCarousel, r && Xn.Fullscreen);
+          d.has(e.id) || h.push(a.createElement(ea, { key: e.id, trailer: e }));
+        let _ = [...m, ...p, ...h],
+          g = r ? "" : "#TrailerPlayer_FullScreen_Tooltip",
+          C = (0, U.A)(Xn.GamepadCarousel, r && Xn.Fullscreen);
         return a.createElement(
           Kn.u,
           { navID: "GameHighlightGamepadCarousel" },
@@ -4690,14 +4700,16 @@
             a.createElement(
               s.Z,
               {
-                className: _,
+                className: C,
                 "flow-children": "row",
                 navEntryPreferPosition: c.iU.MAINTAIN_X,
-                onOptionsActionDescription: (0, E.we)(h),
+                onOptionsActionDescription: (0, E.we)(g),
                 onOptionsButton: l,
                 onCancelButton: o,
+                onGamepadDirection: i,
+                onFocusWithin: u,
               },
-              a.createElement(Yn.q, { disableFocusRing: r }, p),
+              a.createElement(Yn.q, { disableFocusRing: r }, _),
             ),
           ),
         );

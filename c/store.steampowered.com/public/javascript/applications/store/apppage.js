@@ -5676,6 +5676,16 @@
               _ = (0, _.useCallback)(() => !!_ && (_(!1), !0), [_, _]);
             return [_, _, _];
           })(),
+          [_, _] = (function (_, _) {
+            let _ = (0, _.useCallback)(
+                (_) => {
+                  _ && !_ && _();
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)((_) => !!_, [_]);
+            return [_, _];
+          })(_, _),
           _ = [],
           _ = new Map();
         for (let _ of _)
@@ -5726,6 +5736,8 @@
                 onOptionsActionDescription: (0, _._)(_),
                 onOptionsButton: _,
                 onCancelButton: _,
+                onGamepadDirection: _,
+                onFocusWithin: _,
               },
               _.createElement(
                 _._,
