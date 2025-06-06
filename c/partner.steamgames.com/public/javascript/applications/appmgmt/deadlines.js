@@ -2910,6 +2910,7 @@
           _ = JSON.parse(_.deadline.data.description_jsondata),
           [, _] = _(),
           _ = new Date(_?.CreatedOn);
+        if ("ActionComplete" == _.TemplateName) return null;
         if (!_[_.TemplateName])
           return _.createElement(
             "div",

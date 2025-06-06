@@ -2417,6 +2417,7 @@
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = P(),
           r = new Date(a?.CreatedOn);
+        if ("ActionComplete" == a.TemplateName) return null;
         if (!B[a.TemplateName])
           return n.createElement(
             "div",
