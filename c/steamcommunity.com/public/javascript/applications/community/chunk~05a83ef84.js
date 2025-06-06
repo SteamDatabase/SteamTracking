@@ -941,16 +941,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        constructor(_) {
-          (this.m_nodes = []), (this.m_schema = _);
+        constructor(_, _) {
+          (this.m_nodes = []),
+            (this.m_schema = _),
+            (this.m_bConvertNewlinesToBR = _);
         }
         AppendText(_, _) {
-          let _ = 0;
-          for (let _ = _.indexOf("\n", _); -1 !== _; _ = _.indexOf("\n", _))
-            _ != _ && this.m_nodes.push(this.m_schema.text(_.substring(_, _))),
-              this.m_nodes.push(this.m_schema.nodes.hard_break.createChecked()),
-              (_ = _ + 1);
-          _ < _.length && this.m_nodes.push(this.m_schema.text(_.substring(_)));
+          _.length &&
+            (this.m_bConvertNewlinesToBR
+              ? this.m_nodes.push(
+                  ...(function (_, _) {
+                    const _ = [];
+                    let _ = 0;
+                    for (
+                      let _ = _.indexOf("\n", _);
+                      -1 !== _;
+                      _ = _.indexOf("\n", _)
+                    )
+                      _ != _ &&
+                        __webpack_require__.push(_.text(_.substring(_, _))),
+                        __webpack_require__.push(
+                          _.nodes.hard_break.createChecked(),
+                        ),
+                        (_ = _ + 1);
+                    _ < _.length &&
+                      __webpack_require__.push(_.text(_.substring(_)));
+                    return _;
+                  })(_, this.m_schema),
+                )
+              : this.m_nodes.push(this.m_schema.text(_)));
         }
         AppendNode(_) {
           this.m_nodes.push(_);
@@ -960,8 +979,12 @@
         }
       }
       class _ extends _._ {
-        constructor(_) {
-          super(_.bbcode_dictionary, () => new _(_.pm_schema)),
+        constructor(_, _) {
+          const { bConvertNewlinesToBR: __webpack_require__ = !1 } = _;
+          super(
+            _.bbcode_dictionary,
+            () => new _(_.pm_schema, __webpack_require__),
+          ),
             (this.m_mapPMBBNodes = new Map()),
             (this.m_schemaConfig = _),
             this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
@@ -1204,11 +1227,12 @@
       }
       const _ = new _._("CProseMirrorState - OnChange");
       class _ {
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
           (this.m_bHasUncomittedChanges = !1),
-            (this.m_onStateChangedCallbacks = new _._()),
-            (this.m_schemaConfig = _),
-            (this.m_bbcodeParser = new _(_)),
+            (this.m_onStateChangedCallbacks = new _._());
+          const { parser: _ } = null != _ ? _ : {};
+          (this.m_schemaConfig = _),
+            (this.m_bbcodeParser = new _(_, null != _ ? _ : {})),
             (this.m_bbcode = _),
             (this.m_fnCommitChanges = _),
             (this.m_state = this.ConstructState());

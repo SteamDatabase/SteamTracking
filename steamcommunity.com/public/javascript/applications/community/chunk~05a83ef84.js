@@ -688,16 +688,31 @@
         c = o(57053),
         i = o(81393);
       class d {
-        constructor(e) {
-          (this.m_nodes = []), (this.m_schema = e);
+        constructor(e, t) {
+          (this.m_nodes = []),
+            (this.m_schema = e),
+            (this.m_bConvertNewlinesToBR = t);
         }
         AppendText(e, t) {
-          let o = 0;
-          for (let t = e.indexOf("\n", o); -1 !== t; t = e.indexOf("\n", o))
-            o != t && this.m_nodes.push(this.m_schema.text(e.substring(o, t))),
-              this.m_nodes.push(this.m_schema.nodes.hard_break.createChecked()),
-              (o = t + 1);
-          o < e.length && this.m_nodes.push(this.m_schema.text(e.substring(o)));
+          e.length &&
+            (this.m_bConvertNewlinesToBR
+              ? this.m_nodes.push(
+                  ...(function (e, t) {
+                    const o = [];
+                    let r = 0;
+                    for (
+                      let n = e.indexOf("\n", r);
+                      -1 !== n;
+                      n = e.indexOf("\n", r)
+                    )
+                      r != n && o.push(t.text(e.substring(r, n))),
+                        o.push(t.nodes.hard_break.createChecked()),
+                        (r = n + 1);
+                    r < e.length && o.push(t.text(e.substring(r)));
+                    return o;
+                  })(e, this.m_schema),
+                )
+              : this.m_nodes.push(this.m_schema.text(e)));
         }
         AppendNode(e) {
           this.m_nodes.push(e);
@@ -707,8 +722,9 @@
         }
       }
       class u extends l.Al {
-        constructor(e) {
-          super(e.bbcode_dictionary, () => new d(e.pm_schema)),
+        constructor(e, t) {
+          const { bConvertNewlinesToBR: o = !1 } = t;
+          super(e.bbcode_dictionary, () => new d(e.pm_schema, o)),
             (this.m_mapPMBBNodes = new Map()),
             (this.m_schemaConfig = e),
             this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
@@ -935,11 +951,12 @@
       }
       const f = new s.hs("CProseMirrorState - OnChange");
       class b {
-        constructor(e, t, o) {
+        constructor(e, t, o, n) {
           (this.m_bHasUncomittedChanges = !1),
-            (this.m_onStateChangedCallbacks = new r.l()),
-            (this.m_schemaConfig = e),
-            (this.m_bbcodeParser = new u(e)),
+            (this.m_onStateChangedCallbacks = new r.l());
+          const { parser: a } = null != n ? n : {};
+          (this.m_schemaConfig = e),
+            (this.m_bbcodeParser = new u(e, null != a ? a : {})),
             (this.m_bbcode = t),
             (this.m_fnCommitChanges = o),
             (this.m_state = this.ConstructState());

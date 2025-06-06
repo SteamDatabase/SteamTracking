@@ -949,7 +949,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -2244,7 +2243,6 @@
         constructor(_, _, _) {
           (this.m_OGGAvatars = new _()),
             (this.m_EmoticonStore = new _._()),
-            (this.m_EmoticonHoverStore = new _._()),
             (this.m_Profile = new _(_)),
             (this.m_WebAPI = _),
             (this.m_AppInfoStore = new _._()),
@@ -2301,9 +2299,6 @@
         }
         get EmoticonStore() {
           return this.m_EmoticonStore;
-        }
-        get EmoticonHoverStore() {
-          return this.m_EmoticonHoverStore;
         }
         get MiniProfileOverrideData() {
           return {
@@ -4279,16 +4274,12 @@
             this.props.Profile.SetSummary(_);
         }
         render() {
-          const {
-              EmoticonStore: _,
-              EmoticonHoverStore: _,
-              Profile: __webpack_require__,
-            } = this.props,
-            { strSummary: _ } = this.state;
+          const { EmoticonStore: _, Profile: _ } = this.props,
+            { strSummary: __webpack_require__ } = this.state;
           return _.createElement(
             _,
             {
-              Profile: __webpack_require__,
+              Profile: _,
             },
             _.createElement(_._, {
               nMinHeight: 40,
@@ -4297,7 +4288,7 @@
               cols: 40,
               onChange: this.OnChange,
               className: _.summaryTextArea,
-              value: _,
+              value: __webpack_require__,
               ref: this.m_refTextInput,
             }),
             _.createElement(
@@ -4309,7 +4300,6 @@
                 className: _.formattingButton,
                 disabled: !1,
                 OnEmoticonSelected: this.InsertEmoticon,
-                emoticonHoverStore: _,
                 emoticonStore: _,
               }),
             ),
@@ -4373,12 +4363,8 @@
             });
         }
         render() {
-          const {
-              Profile: _,
-              EmoticonStore: _,
-              EmoticonHoverStore: __webpack_require__,
-            } = this.props,
-            { bSaving: _, strHTMLError: _ } = this.state;
+          const { Profile: _, EmoticonStore: _ } = this.props,
+            { bSaving: __webpack_require__, strHTMLError: _ } = this.state;
           return _.createElement(
             "form",
             {
@@ -4463,7 +4449,6 @@
                 _.createElement(_, {
                   Profile: _,
                   EmoticonStore: _,
-                  EmoticonHoverStore: __webpack_require__,
                 }),
               ),
             !(0, _._)(_._.EREALM) &&
@@ -4478,7 +4463,7 @@
               ),
             _.createElement(_, {
               onCancel: this.RevertChanges,
-              disabled: _,
+              disabled: __webpack_require__,
             }),
           );
         }
@@ -7221,7 +7206,6 @@
             ProfileItems: _,
             ProfileTheme: _,
             EmoticonStore: _,
-            EmoticonHoverStore: _,
           } = _,
           _ = _,
           _ = {
@@ -7264,7 +7248,6 @@
                 _.createElement(_, {
                   Profile: _,
                   EmoticonStore: _,
-                  EmoticonHoverStore: _,
                 }),
               ),
               _.createElement(

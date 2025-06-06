@@ -1615,7 +1615,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _) {
@@ -1684,7 +1683,6 @@
                 _.createElement(
                   _._,
                   {
-                    emoticonHoverStore: _._,
                     emoticon: _,
                   },
                   [],

@@ -1859,7 +1859,7 @@ var CLSTAMP = "steamdb";
           "./shared_finnish.json": [19950, 6031],
           "./shared_french.json": [80879, 5018],
           "./shared_german.json": [80165, 6208],
-          "./shared_greek.json": [8721, 9712],
+          "./shared_greek.json": [31102, 9712],
           "./shared_hungarian.json": [66712, 6165],
           "./shared_indonesian.json": [80515, 8306],
           "./shared_italian.json": [3617, 3912],
@@ -1907,7 +1907,7 @@ var CLSTAMP = "steamdb";
           "./shared_finnish.json": [19950, 6031],
           "./shared_french.json": [80879, 5018],
           "./shared_german.json": [80165, 6208],
-          "./shared_greek.json": [8721, 9712],
+          "./shared_greek.json": [31102, 9712],
           "./shared_hungarian.json": [66712, 6165],
           "./shared_indonesian.json": [80515, 8306],
           "./shared_italian.json": [3617, 3912],
@@ -2152,7 +2152,7 @@ var CLSTAMP = "steamdb";
         8967: "4bd4a2aefe5df5847053",
         9027: "ea9c7d7754fa995b186c",
         9152: "41068edf72003be4b9c2",
-        9712: "b100587d5a973a58f7b9",
+        9712: "b7b61b19c4830f5f36f3",
         9746: "b2d5ee0df27ec7fc5f3d",
         9808: "2236518d6c984fd37a4f",
       }[_]),
@@ -2300,6 +2300,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(41870));
+  var _ = _._(void 0, [1068], () => _(52530));
   _ = _._(_);
 })();

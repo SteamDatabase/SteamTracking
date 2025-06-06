@@ -11738,6 +11738,14 @@ p.bbcodes_Paragraph_3lnqG {
 .bbcodes_Answer_syKgz p.bbcodes_Paragraph_3lnqG {
   margin: 0;
 }
+th > p.bbcodes_Paragraph_3lnqG:first-child,
+td > p.bbcodes_Paragraph_3lnqG:first-child {
+  margin-top: 0;
+}
+th > p.bbcodes_Paragraph_3lnqG:first-child,
+td > p.bbcodes_Paragraph_3lnqG:first-child {
+  margin-bottom: 0;
+}
 .bbcodes_Header1_2LYsF,
 .bbcodes_Header2_6-VR2,
 .bbcodes_Header3_1sGnl,

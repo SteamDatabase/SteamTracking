@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [2975],
+  [7760],
   {
     chunkid: (module) => {
       module.exports = {
@@ -2725,6 +2725,64 @@
               "Error: Cannot edit meet steam schedule view",
             );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { schema: _ } = _,
+          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(
+            (_, _) => {
+              _.dispatch(
+                _.state._.insert(
+                  _.state.selection._,
+                  _.nodes.emoticon.create(null, _.text(_)),
+                ),
+              ),
+                _ || _.focus();
+            },
+            [_, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(!0);
+              const _ = (0, _._)(
+                _.createElement(_, {
+                  OnSelected: _,
+                }),
+                _,
+                {
+                  bOverlapHorizontal: !0,
+                },
+              );
+              (0, _._)(
+                () => !_.visible,
+                () => _(!1),
+              );
+            },
+            [_],
+          );
+        return _.createElement(
+          _._,
+          {
+            tooltip: "#Editor_Emoticon",
+            onClick: _,
+            toggled: _,
+          },
+          _.createElement(_.jZW, null),
+        );
+      }
+      function _(_) {
+        return (
+          (0, _._)(_._),
+          _.createElement(_._, {
+            emoticonStore: _._,
+            OnSelected: _.OnSelected,
+          })
+        );
+      }
       const _ = _.memo(function (_) {
         const {
           view: _,
@@ -2770,6 +2828,9 @@
                 levels: 3,
               }),
               _.createElement(_._, null),
+              _.createElement(_, {
+                schema: __webpack_require__,
+              }),
               _.createElement(_, {
                 schema: __webpack_require__,
                 clanSteamID: _,
@@ -3017,7 +3078,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { schema: _, emoticonStore: __webpack_require__ } = _,
@@ -3084,7 +3144,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, href: __webpack_require__, setAttrs: _ } = _,

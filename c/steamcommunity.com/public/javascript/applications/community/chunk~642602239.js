@@ -1706,15 +1706,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      class _ {}
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1770,7 +1761,6 @@
             ((_ = _
               ? _.createElement(_._, {
                   emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   onEmoticonSelected: (_) =>
                     this.props.OnEmoticonSelected(_, !1),
@@ -1787,13 +1777,11 @@
                     : _.length) > 0
                 ? _.createElement(_._, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
                 : _.createElement(_._, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })),
@@ -2174,8 +2162,7 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          emoticonHoverStore: __webpack_require__,
-          roomEffectSettings: _,
+          roomEffectSettings: __webpack_require__,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
@@ -2215,7 +2202,6 @@
               renderContent: () =>
                 _.createElement(_, {
                   store: _,
-                  hoverStore: __webpack_require__,
                   onEmoticonSelect: (_) => _(_.name),
                   onStickerSelect: (_) => _(_.name),
                   flairGroupID: _,
@@ -2240,7 +2226,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: _,
-                      hoverStore: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
                       flairGroupID: _,
                     }),
@@ -2274,7 +2259,7 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: _,
-                      effectSettings: _,
+                      effectSettings: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -2303,9 +2288,8 @@
         render() {
           const {
               emoticonStore: _,
-              emoticonHoverStore: _,
-              onEmoticonSelected: __webpack_require__,
-              onStickerSelected: _,
+              onEmoticonSelected: _,
+              onStickerSelected: __webpack_require__,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -2328,9 +2312,8 @@
                 renderContent: () =>
                   _.createElement(_, {
                     store: _,
-                    hoverStore: _,
-                    onEmoticonSelect: (_) => __webpack_require__(_.name),
-                    onStickerSelect: (_) => _(_.name),
+                    onEmoticonSelect: (_) => _(_.name),
+                    onStickerSelect: (_) => __webpack_require__(_.name),
                     flairGroupID: _,
                   }),
               }),
@@ -2356,8 +2339,7 @@
                     renderContent: () =>
                       _.createElement(_, {
                         store: _,
-                        hoverStore: _,
-                        onItemSelect: (_) => __webpack_require__(_.name),
+                        onItemSelect: (_) => _(_.name),
                         flairGroupID: _,
                       }),
                   },
@@ -2377,7 +2359,7 @@
                     renderContent: () =>
                       _.createElement(_, {
                         store: _,
-                        onItemSelect: (_) => _(_.name),
+                        onItemSelect: (_) => __webpack_require__(_.name),
                       }),
                   },
                 ],
@@ -2423,7 +2405,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -2469,7 +2450,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -2489,9 +2469,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onEmoticonSelect: __webpack_require__,
-              onStickerSelect: _,
+              onEmoticonSelect: _,
+              onStickerSelect: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -2500,11 +2479,10 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentEmoticons"),
                 items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -2523,7 +2501,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: _,
+                onItemSelect: __webpack_require__,
                 renderItem: (_) =>
                   _.createElement(_, {
                     sticker: _,
@@ -2562,21 +2540,22 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
-            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
+            _ =
+              !_ && __webpack_require__
+                ? _.GetFlairListByGroupID(__webpack_require__)
+                : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return _.createElement(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               _.createElement(_, {
                 emoticon: _,
-                emoticonHoverStore: _,
               }),
             keyExtractor: (_) => _.name,
             onFilterChange: (_) =>
@@ -2584,7 +2563,7 @@
                 filter: _,
               }),
             filter: _,
-            onSubmit: () => __webpack_require__(_[0]),
+            onSubmit: () => _(_[0]),
             renderEmpty: () =>
               _
                 ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
@@ -2758,9 +2737,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -2769,11 +2747,10 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentEmoticons"),
                 items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -2799,11 +2776,10 @@
                 {
                   title: (0, _._)("#AddonPicker_AllEmoticons"),
                   items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
-                  onItemSelect: __webpack_require__,
+                  onItemSelect: _,
                   renderItem: (_) =>
                     _.createElement(_, {
                       emoticon: _,
-                      emoticonHoverStore: _,
                     }),
                   keyExtractor: (_) => _.name,
                   renderEmpty: () =>
@@ -2831,9 +2807,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state;
           return _.createElement(_, {
@@ -2845,12 +2820,14 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
-                onItemSelect: __webpack_require__,
+                items: _._.FilterStickers(
+                  _.GetFlairListByGroupID(__webpack_require__),
+                  _,
+                ),
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -2868,11 +2845,7 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const {
-            emoticon: _,
-            emoticonHoverStore: __webpack_require__,
-            large: _,
-          } = _,
+        const { emoticon: _, large: __webpack_require__ } = _,
           _ = !_.last_used && _.time_received;
         return _.createElement(
           "div",
@@ -2881,8 +2854,7 @@
           },
           _.createElement(_._, {
             emoticon: _.name,
-            emoticonHoverStore: __webpack_require__,
-            large: _,
+            large: __webpack_require__,
           }),
           _ && _.createElement(_, null),
         );

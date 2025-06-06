@@ -1489,18 +1489,17 @@
     },
     87540: (e, t, r) => {
       "use strict";
-      r.d(t, { PV: () => d, gL: () => u, pH: () => m });
+      r.d(t, { PV: () => m, gL: () => d, pH: () => c });
       var n = r(90626),
-        i = r(65739),
-        a = r(81962),
-        s = r(61336),
-        o = r(42780),
-        l = r(6866),
-        c = r(26205);
-      class m extends o.K0 {
+        i = r(81962),
+        a = r(61336),
+        s = r(42780),
+        o = r(6866),
+        l = r(26205);
+      class c extends s.K0 {
         constructor(e, t, r, n) {
           super(e),
-            (this.m_LinkFilter = c.O),
+            (this.m_LinkFilter = l.O),
             (this.m_parentNode = void 0),
             (this.m_parentNode = t),
             (this.m_mapHostToComponent = r),
@@ -1537,7 +1536,7 @@
                       );
                     break;
                   }
-              i || super.AppendNode((0, l.Pm)(r)),
+              i || super.AppendNode((0, o.Pm)(r)),
                 (n = e.input.substring(e.index + r.length)),
                 (e = this.m_LinkFilter.exec(n));
             }
@@ -1545,7 +1544,7 @@
           n.length > 0 && super.AppendText(n, t);
         }
       }
-      class d extends o.K0 {
+      class m extends s.K0 {
         constructor() {
           super(...arguments),
             (this.m_EmoteRegex = new RegExp("[ː:]([a-zA-Z0-9_]+)[ː:]"));
@@ -1559,22 +1558,16 @@
                 let r = e.input.substring(0, e.index);
                 super.AppendText(r, t);
               }
-              let s = e[1];
-              super.AppendNode(
-                n.createElement(
-                  a.n,
-                  { emoticonHoverStore: i.s, emoticon: s },
-                  [],
-                ),
-              ),
-                (r = e.input.substring(e.index + s.length + 2)),
+              let a = e[1];
+              super.AppendNode(n.createElement(i.n, { emoticon: a }, [])),
+                (r = e.input.substring(e.index + a.length + 2)),
                 (e = this.m_EmoteRegex.exec(r));
             }
           }
           r.length > 0 && super.AppendText(r, t);
         }
       }
-      class u extends o.K0 {
+      class d extends s.K0 {
         constructor(e, t) {
           super(e), (this.m_parentNode = void 0), (this.m_parentNode = t);
         }
@@ -1582,7 +1575,7 @@
           let r = e;
           this.m_parentNode &&
             "img" == this.m_parentNode.tag &&
-            (r = (0, s.L$)(r)),
+            (r = (0, a.L$)(r)),
             super.AppendText(r, t);
         }
       }

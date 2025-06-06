@@ -217,6 +217,14 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 .syKgzmlrcUIJHIBfWsn4h p._3lnqGBzYap-Z2T81XBiBUU {
   margin: 0;
 }
+th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
+td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
+  margin-top: 0;
+}
+th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
+td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
+  margin-bottom: 0;
+}
 ._2LYsFAwy8wdRJQTNJOUcsT,
 ._6-VR2WCBCDupCcUN5INQM,
 ._1sGnlGwCeaGUp63h4Lx-pU,

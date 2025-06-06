@@ -121,7 +121,7 @@
     },
     39606: (e, t, r) => {
       "use strict";
-      r.d(t, { I: () => G });
+      r.d(t, { I: () => N });
       var i = r(34629),
         a = r(14947),
         s = r(75844),
@@ -130,54 +130,53 @@
         l = r(88997),
         c = r(99764),
         m = r(60727),
-        d = r(65739),
-        u = r(90024),
-        B = r.n(u),
-        g = r(60155),
-        _ = r(68255),
-        b = r(81962),
-        M = r(283),
-        y = r(82477),
-        w = r(48079),
-        p = r(33543),
-        h = r.n(p);
-      const S = () =>
+        d = r(90024),
+        u = r.n(d),
+        B = r(60155),
+        g = r(68255),
+        _ = r(81962),
+        b = r(283),
+        M = r(82477),
+        y = r(48079),
+        w = r(33543),
+        p = r.n(w);
+      const h = () =>
           o.createElement(
             "div",
-            { className: h().FriendsListInsetShadowCtn },
-            o.createElement("div", { className: h().FriendListInsetShadowTop }),
+            { className: p().FriendsListInsetShadowCtn },
+            o.createElement("div", { className: p().FriendListInsetShadowTop }),
           ),
-        z = () =>
+        S = () =>
           o.createElement(
             "div",
-            { className: h().FriendsListInsetShadowCtn },
+            { className: p().FriendsListInsetShadowCtn },
             o.createElement("div", {
-              className: h().FriendListInsetShadowBottom,
+              className: p().FriendListInsetShadowBottom,
             }),
           );
-      var f = r(12155),
-        R = r(52038),
-        T = r(61859),
-        F = r(73745),
-        C = r(78327),
-        W = r(63508),
-        v = r.n(W),
-        I = r(29268),
-        j = r(4299),
-        q = r(32754);
-      const O = new RegExp("ː([^ː]*)ː", "g"),
-        U = new RegExp(
+      var z = r(12155),
+        f = r(52038),
+        R = r(61859),
+        T = r(73745),
+        F = r(78327),
+        C = r(63508),
+        W = r.n(C),
+        v = r(29268),
+        I = r(4299),
+        j = r(32754);
+      const q = new RegExp("ː([^ː]*)ː", "g"),
+        O = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
           "i",
         );
-      const x = (e) => {
+      const U = (e) => {
           const { userType: t, msg: r, presenterInfo: i } = e;
           if ("presenter" === t)
             return o.createElement(
               "span",
               null,
               o.createElement(
-                w.fI,
+                y.fI,
                 {
                   name: i.name,
                   title: i.title,
@@ -188,8 +187,8 @@
                 o.createElement(
                   "a",
                   {
-                    className: (0, R.A)(v().MessageName, v().MessagePresenter),
-                    href: C.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    className: (0, f.A)(W().MessageName, W().MessagePresenter),
+                    href: F.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -201,16 +200,16 @@
             let e = null;
             return (
               "broadcaster" === t
-                ? (e = v().MessageBroadcaster)
-                : "moderator" === t && (e = v().MessageModerator),
+                ? (e = W().MessageBroadcaster)
+                : "moderator" === t && (e = W().MessageModerator),
               o.createElement(
                 "span",
                 null,
                 o.createElement(
                   "a",
                   {
-                    className: (0, R.A)(v().MessageName, e),
-                    href: C.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    className: (0, f.A)(W().MessageName, e),
+                    href: F.TS.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     "data-miniprofile": "s" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
@@ -221,55 +220,55 @@
             );
           }
         },
-        N = (e) => {
+        x = (e) => {
           switch (e.userType) {
             case "presenter":
               return o.createElement(
-                q.Gq,
+                j.Gq,
                 {
-                  toolTipContent: (0, T.we)(
+                  toolTipContent: (0, R.we)(
                     "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
                 o.createElement(
                   "span",
-                  { className: v().RoleFlairContainer },
-                  o.createElement(f.NCC, null),
+                  { className: W().RoleFlairContainer },
+                  o.createElement(z.NCC, null),
                 ),
               );
             case "moderator":
               return o.createElement(
-                q.Gq,
+                j.Gq,
                 {
-                  toolTipContent: (0, T.we)(
+                  toolTipContent: (0, R.we)(
                     "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
                 o.createElement(
                   "span",
-                  { className: v().RoleFlairContainer },
-                  o.createElement(f.$4X, null),
+                  { className: W().RoleFlairContainer },
+                  o.createElement(z.$4X, null),
                 ),
               );
             case "broadcaster":
               return o.createElement(
-                q.Gq,
+                j.Gq,
                 {
-                  toolTipContent: (0, T.we)(
+                  toolTipContent: (0, R.we)(
                     "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
                 o.createElement(
                   "span",
-                  { className: v().RoleFlairContainer },
-                  o.createElement(f.Gkr, null),
+                  { className: W().RoleFlairContainer },
+                  o.createElement(z.Gkr, null),
                 ),
               );
             default:
               return null;
           }
         };
-      let G = class extends o.Component {
+      let N = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_chat = null),
@@ -314,22 +313,17 @@
           }
         }
         IsTrustedDomain(e) {
-          return !!e.match(U);
+          return !!e.match(O);
         }
         AddLinksEmoticons(e, t) {
-          let r = O;
+          let r = q;
           t && (r = this.m_chat.GetUserEmoticons());
-          let i = e.split(O);
+          let i = e.split(q);
           const a = [];
           for (let e = 0; e < i.length; e += 1)
             e % 2 == 1
               ? a.push(
-                  o.createElement(b.n, {
-                    emoticonHoverStore: d.s,
-                    key: e,
-                    emoticon: i[e],
-                    large: !0,
-                  }),
+                  o.createElement(_.n, { key: e, emoticon: i[e], large: !0 }),
                 )
               : a.push(i[e]);
           return a;
@@ -349,17 +343,17 @@
               : this.messagesContainer.current.scrollHeight);
         }
         OnContextMenu(e, t) {
-          if (t.type !== j.X8.Chat) return null;
+          if (t.type !== I.X8.Chat) return null;
           const r = [],
             i = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
             a = this.m_chat.BIsUserBroadcastModerator(
               this.m_chat.GetUserSteamID(),
             );
           if (
-            ((C.iA && C.iA.is_support) || i || a
+            ((F.iA && F.iA.is_support) || i || a
               ? r.push(
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "remove",
                       onSelected: () =>
@@ -368,10 +362,10 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_RemoveMessages"),
+                    (0, R.we)("#BroadcastChat_RemoveMessages"),
                   ),
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "updatebanh",
                       onSelected: () =>
@@ -383,10 +377,10 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_half_Mute"),
+                    (0, R.we)("#BroadcastChat_half_Mute"),
                   ),
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "updateband",
                       onSelected: () =>
@@ -398,10 +392,10 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_day_Mute"),
+                    (0, R.we)("#BroadcastChat_day_Mute"),
                   ),
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "updatebanw",
                       onSelected: () =>
@@ -413,10 +407,10 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_week_Mute"),
+                    (0, R.we)("#BroadcastChat_week_Mute"),
                   ),
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "updatebanp",
                       onSelected: () =>
@@ -428,10 +422,10 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_perm_Mute"),
+                    (0, R.we)("#BroadcastChat_perm_Mute"),
                   ),
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "removeban",
                       onSelected: () =>
@@ -444,13 +438,13 @@
                           !0,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_Unmute"),
+                    (0, R.we)("#BroadcastChat_Unmute"),
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
                 ? r.push(
                     o.createElement(
-                      g.kt,
+                      B.kt,
                       {
                         key: "unmuteuser",
                         onSelected: () =>
@@ -459,12 +453,12 @@
                             t.persona_name,
                           ),
                       },
-                      (0, T.we)("#BroadcastChat_UnmuteLocal"),
+                      (0, R.we)("#BroadcastChat_UnmuteLocal"),
                     ),
                   )
                 : r.push(
                     o.createElement(
-                      g.kt,
+                      B.kt,
                       {
                         key: "muteuser",
                         onSelected: () =>
@@ -473,17 +467,17 @@
                             t.persona_name,
                           ),
                       },
-                      (0, T.we)("#BroadcastChat_MuteLocal"),
+                      (0, R.we)("#BroadcastChat_MuteLocal"),
                     ),
                   ),
-            ((C.iA && C.iA.is_support) ||
+            ((F.iA && F.iA.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
           ) {
             this.m_chat.BIsUserBroadcastModerator(t.steamid)
               ? r.push(
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "removemod",
                       onSelected: () =>
@@ -493,12 +487,12 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_Remove_Moderator"),
+                    (0, R.we)("#BroadcastChat_Remove_Moderator"),
                   ),
                 )
               : r.push(
                   o.createElement(
-                    g.kt,
+                    B.kt,
                     {
                       key: "addmod",
                       onSelected: () =>
@@ -508,23 +502,23 @@
                           t.persona_name,
                         ),
                     },
-                    (0, T.we)("#BroadcastChat_Add_Moderator"),
+                    (0, R.we)("#BroadcastChat_Add_Moderator"),
                   ),
                 );
           }
           return r.length
             ? (0, l.lX)(
                 o.createElement(
-                  g.tz,
+                  B.tz,
                   null,
                   o.createElement(
                     "div",
-                    { className: v().SelectedUserNameCtn },
-                    (0, T.we)("#BroadcastChat_User"),
+                    { className: W().SelectedUserNameCtn },
+                    (0, R.we)("#BroadcastChat_User"),
                     o.createElement("br", null),
                     o.createElement(
                       "span",
-                      { className: v().SelectedUserName },
+                      { className: W().SelectedUserName },
                       t.persona_name,
                     ),
                   ),
@@ -535,14 +529,14 @@
             : null;
         }
         GetTypeClassName(e) {
-          return e.type === j.X8.Notification
-            ? v().MessageNotification
-            : e.type === j.X8.Error
-              ? v().MessageError
-              : v().MessageChat;
+          return e.type === I.X8.Notification
+            ? W().MessageNotification
+            : e.type === I.X8.Error
+              ? W().MessageError
+              : W().MessageChat;
         }
         FormatMessage(e, t) {
-          if (e.type === j.X8.Chat) {
+          if (e.type === I.X8.Chat) {
             let r = t ? t.FilterText(e.steamid, e.msg) : e.msg;
             return this.AddLinksEmoticons(r, !1);
           }
@@ -551,7 +545,7 @@
         RenderUserChatLine(e, t, r) {
           let i = r ? r.get(e.steamid) : void 0;
           const a =
-            e.type === j.X8.Chat
+            e.type === I.X8.Chat
               ? (function (e, t, r) {
                   return r
                     ? "presenter"
@@ -569,39 +563,39 @@
               className: this.GetTypeClassName(e),
               onContextMenu: (t) => this.OnContextMenu(t, e),
             },
-            e.type === j.X8.Chat && o.createElement(N, { userType: a }),
+            e.type === I.X8.Chat && o.createElement(x, { userType: a }),
             e.flair &&
               o.createElement(
                 "span",
-                { className: v().FlairContainer },
+                { className: W().FlairContainer },
                 this.AddLinksEmoticons(e.flair, !1),
               ),
-            e.type === j.X8.Chat &&
-              o.createElement(x, { userType: a, msg: e, presenterInfo: i }),
-            e.type === j.X8.Chat &&
+            e.type === I.X8.Chat &&
+              o.createElement(U, { userType: a, msg: e, presenterInfo: i }),
+            e.type === I.X8.Chat &&
               this.m_chat.GetBroadcastSteamID() === e.steamid &&
               o.createElement(
                 "span",
                 {
-                  className: `${v().MessageNotification} ${v().MessageContents}`,
+                  className: `${W().MessageNotification} ${W().MessageContents}`,
                 },
-                ` (${(0, T.we)("#BroadcastChat_Broadcaster")})`,
+                ` (${(0, R.we)("#BroadcastChat_Broadcaster")})`,
               ),
-            e.type === j.X8.Chat &&
+            e.type === I.X8.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
               o.createElement(
                 "span",
                 {
-                  className: `${v().MessageNotification} ${v().MessageContents}`,
+                  className: `${W().MessageNotification} ${W().MessageContents}`,
                 },
-                ` (${(0, T.we)("#BroadcastChat_Moderator")})`,
+                ` (${(0, R.we)("#BroadcastChat_Moderator")})`,
               ),
             o.createElement(
               "span",
               {
-                className: `${v().MessageContents} ${this.AddLinksEmoticons(e.msg, !1).filter((e) => e && "string" == typeof e).length ? "" : v().EmoticonsOnly}`,
+                className: `${W().MessageContents} ${this.AddLinksEmoticons(e.msg, !1).filter((e) => e && "string" == typeof e).length ? "" : W().EmoticonsOnly}`,
               },
-              e.type === j.X8.Chat ? " : " : "",
+              e.type === I.X8.Chat ? " : " : "",
               this.FormatMessage(e, this.m_chat.TextFilterStore),
             ),
           );
@@ -623,23 +617,23 @@
           return o.createElement(
             "div",
             {
-              className: (0, R.A)(v().ChatPanel, "ChatPanel"),
+              className: (0, f.A)(W().ChatPanel, "ChatPanel"),
               style: e ? { display: "none" } : void 0,
             },
-            o.createElement(I.P, { latestAnnouncement: n }),
+            o.createElement(v.P, { latestAnnouncement: n }),
             r &&
               !!this.m_chat &&
-              o.createElement(A, {
+              o.createElement(G, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
               }),
-            o.createElement(S, null),
+            o.createElement(h, null),
             o.createElement(
               "div",
               {
-                className: (0, R.A)(
-                  `${v().ChatMessages} ${B().minHeightZero}`,
+                className: (0, f.A)(
+                  `${W().ChatMessages} ${u().minHeightZero}`,
                   "ChatMessages",
                 ),
                 onScroll: this.HandleScroll,
@@ -647,10 +641,10 @@
               },
               a.map((e, t) => this.RenderUserChatLine(e, t, s)),
             ),
-            o.createElement(z, null),
+            o.createElement(S, null),
             !r &&
               !!this.m_chat &&
-              o.createElement(A, {
+              o.createElement(G, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -658,19 +652,19 @@
           );
         }
       };
-      function A(e) {
+      function G(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: i } = e;
         return !i ||
-          ((null === C.iA || void 0 === C.iA ? void 0 : C.iA.logged_in) &&
-            (null === C.iA || void 0 === C.iA
+          ((null === F.iA || void 0 === F.iA ? void 0 : F.iA.logged_in) &&
+            (null === F.iA || void 0 === F.iA
               ? void 0
-              : C.iA.is_partner_member))
-          ? (null === C.iA || void 0 === C.iA ? void 0 : C.iA.logged_in)
-            ? o.createElement(D, { oChat: t, emoticonStore: r })
+              : F.iA.is_partner_member))
+          ? (null === F.iA || void 0 === F.iA ? void 0 : F.iA.logged_in)
+            ? o.createElement(A, { oChat: t, emoticonStore: r })
             : null
-          : o.createElement(V, null);
+          : o.createElement(P, null);
       }
-      function D(e) {
+      function A(e) {
         const { oChat: t, emoticonStore: r } = e,
           [i, a] = o.useState(""),
           s = o.useRef(),
@@ -691,66 +685,65 @@
             },
             [i, s],
           );
-        let u = l || 0 == i.trim().length,
-          g = (0, R.A)(B().chatSubmitButton, 0 == i.length && B().disabled);
+        let d = l || 0 == i.trim().length,
+          B = (0, f.A)(u().chatSubmitButton, 0 == i.length && u().disabled);
         return o.createElement(
           "div",
-          { className: (0, R.A)(v().ChatEntryCtn, "ChatEntryCtn") },
+          { className: (0, f.A)(W().ChatEntryCtn, "ChatEntryCtn") },
           o.createElement(
             "div",
-            { className: (0, R.A)(v().ChatEntry, "ChatEntry") },
+            { className: (0, f.A)(W().ChatEntry, "ChatEntry") },
             o.createElement(
               "form",
-              { className: `${B().chatEntryControls}` },
+              { className: `${u().chatEntryControls}` },
               o.createElement("textarea", {
-                className: B().chatTextarea,
-                placeholder: (0, T.we)("#BroadcastChat_EnterResponse"),
+                className: u().chatTextarea,
+                placeholder: (0, R.we)("#BroadcastChat_EnterResponse"),
                 onKeyPress: c,
                 onChange: (e) => a(e.target.value),
                 value: i,
                 ref: s,
               }),
               l &&
-                o.createElement(P, {
+                o.createElement(E, {
                   nSeconds: t.m_nRateLimitSeconds,
                   bRateLimited: t.m_bRateLimited,
                 }),
               o.createElement(
                 "button",
                 {
-                  className: g,
-                  title: (0, T.we)("#ChatEntryButton_Submit"),
-                  disabled: u,
+                  className: B,
+                  title: (0, R.we)("#ChatEntryButton_Submit"),
+                  disabled: d,
                   onClick: () => {
                     t.SendMessage(i), a("");
                   },
                 },
-                o.createElement(f.XTb, null),
+                o.createElement(z.XTb, null),
               ),
             ),
             o.createElement(
               "div",
               {
                 style: { height: "50px" },
-                className: `${B().chatEntryActionsContainer}`,
+                className: `${u().chatEntryActionsContainer}`,
               },
               o.createElement(
                 "div",
-                { className: B().chatEntryActionsGroup },
-                o.createElement(M.A, {
+                { className: u().chatEntryActionsGroup },
+                o.createElement(b.A, {
                   disabled: !1,
                   OnEmoticonSelected: m,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                   emoticonStore: r,
-                  emoticonHoverStore: d.s,
                 }),
-                o.createElement(E, { ...e, textInputRef: s }),
+                o.createElement(D, { ...e, textInputRef: s }),
               ),
             ),
           ),
         );
       }
-      function E(e) {
+      function D(e) {
         var t;
         const { oChat: r, emoticonStore: i, textInputRef: a } = e;
         return r.m_strFlairGroupID &&
@@ -759,7 +752,7 @@
           void 0 === t
             ? void 0
             : t.length)
-          ? o.createElement(M.A, {
+          ? o.createElement(b.A, {
               disabled: !1,
               OnEmoticonSelected: (e) => {
                 r.UpdateChatMessageFlair(e),
@@ -767,57 +760,56 @@
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
               emoticonStore: i,
-              emoticonHoverStore: d.s,
               strFlairGroupID: r.m_strFlairGroupID,
-              title: (0, T.we)("#ChatEntryButton_Flair"),
-              buttonIcon: o.createElement(f.P7r, null),
+              title: (0, R.we)("#ChatEntryButton_Flair"),
+              buttonIcon: o.createElement(z.P7r, null),
             })
           : null;
       }
-      (0, i.Cg)([a.sH], G.prototype, "m_chat", void 0),
-        (0, i.Cg)([F.oI], G.prototype, "StartChat", null),
-        (0, i.Cg)([F.oI], G.prototype, "HandleScroll", null),
-        (0, i.Cg)([F.oI], G.prototype, "OnContextMenu", null),
-        (0, i.Cg)([F.oI], G.prototype, "RenderUserChatLine", null),
-        (G = (0, i.Cg)([s.PA], G));
-      class P extends o.Component {
+      (0, i.Cg)([a.sH], N.prototype, "m_chat", void 0),
+        (0, i.Cg)([T.oI], N.prototype, "StartChat", null),
+        (0, i.Cg)([T.oI], N.prototype, "HandleScroll", null),
+        (0, i.Cg)([T.oI], N.prototype, "OnContextMenu", null),
+        (0, i.Cg)([T.oI], N.prototype, "RenderUserChatLine", null),
+        (N = (0, i.Cg)([s.PA], N));
+      class E extends o.Component {
         render() {
           return o.createElement(
             "div",
-            { className: v().TimedProgressBarContainer },
+            { className: W().TimedProgressBarContainer },
             o.createElement(
               "div",
-              { className: v().wrapper },
+              { className: W().wrapper },
               o.createElement("div", {
-                className: `${v().spinner} ${v().pie}`,
+                className: `${W().spinner} ${W().pie}`,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               }),
               o.createElement("div", {
-                className: `${v().filler} ${v().pie}`,
+                className: `${W().filler} ${W().pie}`,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               }),
               o.createElement("div", {
-                className: v().mask,
+                className: W().mask,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
               }),
             ),
           );
         }
       }
-      function V(e) {
+      function P(e) {
         return o.createElement(
           "div",
-          { className: v().Description },
+          { className: W().Description },
           o.createElement(
             "div",
-            { className: v().LogInPrompt },
-            (0, T.we)("#Broadcast_PartnerChat_Login"),
+            { className: W().LogInPrompt },
+            (0, R.we)("#Broadcast_PartnerChat_Login"),
           ),
-          !C.iA.logged_in &&
+          !F.iA.logged_in &&
             o.createElement(
-              _.$n,
-              { onClick: y.vg, className: (0, R.A)(v().SignInButton) },
-              (0, T.we)("#Login_SignIn"),
+              g.$n,
+              { onClick: M.vg, className: (0, f.A)(W().SignInButton) },
+              (0, R.we)("#Login_SignIn"),
             ),
         );
       }
