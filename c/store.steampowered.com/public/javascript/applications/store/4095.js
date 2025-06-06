@@ -16964,7 +16964,7 @@
         return null == _.get() && _({}), _.get(_.get());
       }
       function _() {
-        return null !== _;
+        return null !== _.get();
       }
       window.g_EventCalendarMap = _;
     },
@@ -17525,6 +17525,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -18112,6 +18113,19 @@
                 _.jsondata.clone_from_sale_enabled))
           );
         }
+      }
+      function _() {
+        const [_, _] = (0, _.useState)(() => _.BIsInited());
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) {
+              (async () => {
+                await Promise.all([_.InitGlobal()]), _(!0);
+              })();
+            }
+          }, [_]),
+          _
+        );
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(

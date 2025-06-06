@@ -15874,7 +15874,7 @@
         return null == D.get() && A({}), R.get(D.get());
       }
       function G() {
-        return null !== D;
+        return null !== D.get();
       }
       window.g_EventCalendarMap = R;
     },
@@ -16418,7 +16418,7 @@
     },
     60746: (e, t, r) => {
       "use strict";
-      r.d(t, { KN: () => b, Nh: () => _, Ec: () => w });
+      r.d(t, { KN: () => b, Nh: () => _, Ec: () => v, kY: () => w });
       var i = r(34629),
         a = r(41735),
         n = r.n(a),
@@ -16977,7 +16977,20 @@
           );
         }
       }
-      function w(e) {
+      function w() {
+        const [e, t] = (0, f.useState)(() => b.BIsInited());
+        return (
+          (0, f.useEffect)(() => {
+            if (!e) {
+              (async () => {
+                await Promise.all([b.InitGlobal()]), t(!0);
+              })();
+            }
+          }, [e]),
+          e
+        );
+      }
+      function v(e) {
         const [t, r] = (0, f.useState)(
             b.Get().BIsPartnerEventPermissionsLoaded(e),
           ),
