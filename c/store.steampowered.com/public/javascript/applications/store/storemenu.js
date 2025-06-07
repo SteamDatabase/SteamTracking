@@ -3372,11 +3372,20 @@
           ),
           { data: __webpack_require__ } = _(_?.rgItemIDs, {
             item_count: 3,
-          });
+          }),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}explore/new/`);
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, null, _("#Menu_Section_Browse_PopularNew")),
+          _.createElement(
+            _,
+            {
+              title: _("#Menu_Section_Browse_PopularNew"),
+            },
+            _.createElement(_, {
+              href: _,
+            }),
+          ),
           _.createElement(_, {
             rgItemIDs: __webpack_require__ ?? [],
           }),

@@ -1541,6 +1541,7 @@ ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore?dq=widget

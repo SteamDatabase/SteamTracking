@@ -6334,10 +6334,19 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 }
 
 .StoreMenuLoadingPlaceholder {
+	height: 0;
+	overflow: visible;
+}
+
+.StoreMenuLoadingPlaceholder .PlaceholderInner {
 	border-bottom: 1px solid rgba(126, 126, 126, 0.17);
-	background: rgba(12, 26, 36, 0.55);
+	background: rgba(12, 26, 36, 0.75);
 	backdrop-filter: blur(50px);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 	height: 46px;
+
+	position: relative;
+	z-index: 1;
 }
 
 body.v7menu .responsive_page_template_content {
@@ -6346,8 +6355,15 @@ body.v7menu .responsive_page_template_content {
 	display: flow-root; /* create a block formatting context so margins don't extend outside of this element */
 }
 
-body.v7menu:not(.sale_page_background):not(.game_bg) .responsive_page_template_content {
+body.v7menu:not(.menu_background_overlap):not(.sale_page_background) .responsive_page_template_content {
 	padding-top: var( --store-menu-floating-height, 46px );
+}
+
+body.v7menu .v7menu_spacer {
+	height: 66px;
+}
+body.v7menu .v7menu_spacer.cartonly {
+	height: 29px;
 }
 
 /* 2025 Game Page Widening */

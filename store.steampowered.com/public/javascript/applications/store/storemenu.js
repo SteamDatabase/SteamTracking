@@ -612,8 +612,8 @@
         p = n(56545),
         h = n(94601),
         E = n(58214),
-        v = n(23809),
-        S = n(81393),
+        S = n(23809),
+        v = n(81393),
         C = n(7338);
       function y(e) {
         const { storeBrowseContext: t, cacheStoreItemData: n } = (0, C.yn)();
@@ -697,8 +697,8 @@
       }
       var I = n(22837),
         R = n(75487),
-        k = n(20194);
-      function A(e, t) {
+        A = n(20194);
+      function k(e, t) {
         return {
           queryKey: O(t),
           queryFn: async () => {
@@ -721,11 +721,11 @@
         };
       }
       function x() {
-        const e = (0, v.KV)(),
+        const e = (0, S.KV)(),
           t = s.iA.accountid;
-        return (0, k.I)(
+        return (0, A.I)(
           (function (e, t) {
-            return { ...A(e, t), select: D };
+            return { ...k(e, t), select: D };
           })(e, t),
         );
       }
@@ -1174,9 +1174,9 @@
       const X = 1 / 0;
       function ee() {
         const e = (0, C.ce)(),
-          t = (0, v.KV)(),
+          t = (0, S.KV)(),
           n = (0, H.jE)();
-        return (0, k.I)(
+        return (0, A.I)(
           (function (e, t, n) {
             return {
               queryKey: ["CategoryHubDefinitions", n.language, "MapByHandle"],
@@ -1216,9 +1216,9 @@
       }
       function re(e = !0) {
         const t = (0, H.jE)(),
-          n = (0, v.KV)(),
+          n = (0, S.KV)(),
           r =
-            ((0, v.rX)(),
+            ((0, S.rX)(),
             (function (e, t, n, r, a) {
               return {
                 queryKey: ["StoreFrequentlyVisitedHubs", a],
@@ -1247,7 +1247,7 @@
                 staleTime: 6e5,
               };
             })(t, n, 0, (0, C.ce)(), (0, J.LH)()));
-        return (0, k.I)({ ...r, enabled: r.enabled && e });
+        return (0, A.I)({ ...r, enabled: r.enabled && e });
       }
       function ae(e, t) {
         return {
@@ -1427,8 +1427,8 @@
         );
       }
       var Ee = n(42834),
-        ve = n(84518),
-        Se = n(45699);
+        Se = n(84518),
+        ve = n(45699);
       function Ce(e) {
         const {
             storeItem: t,
@@ -1447,9 +1447,9 @@
             );
           })(t);
         if (!t) return a;
-        const m = i.createElement(Se.Ii, { ...c, href: u }, a);
+        const m = i.createElement(ve.Ii, { ...c, href: u }, a);
         return l && !o
-          ? i.createElement(ve.A, { appID: l, feature: n, depth: r }, m)
+          ? i.createElement(Se.A, { appID: l, feature: n, depth: r }, m)
           : m;
       }
       var ye = n(86325),
@@ -1544,8 +1544,8 @@
         };
       }
       const Re = { include_assets: !0 },
-        ke = { include_tags: !0, include_creators: !0 };
-      function Ae(e) {
+        Ae = { include_tags: !0, include_creators: !0 };
+      function ke(e) {
         const {
           list: t,
           iActiveIndex: n,
@@ -1596,7 +1596,7 @@
             l = "recent";
             break;
           default:
-            (0, S.z)(t.eListType, `Unhandled list type ${t.eListType}`);
+            (0, v.z)(t.eListType, `Unhandled list type ${t.eListType}`);
         }
         return i.createElement(
           me.Ay,
@@ -1614,13 +1614,13 @@
       function xe(e = !0) {
         return (function (e = 10, t = {}, n = !0) {
           const r = (0, H.jE)(),
-            a = (0, v.KV)(),
+            a = (0, S.KV)(),
             {
               dataLoader: i,
               storeBrowseContext: s,
               cacheStoreItemData: o,
             } = (0, C.yn)();
-          return (0, k.I)({
+          return (0, A.I)({
             queryKey: ["MostVisitedItemsFiltered", e],
             queryFn: async () => {
               const n = await r.fetchQuery(
@@ -1667,11 +1667,11 @@
                   ...e,
                   filters: { ...(t ?? {}), ...(e.filters ?? {}) },
                 };
-              })(ke, r),
+              })(Ae, r),
             [r],
           ),
           o = (function (e, t = 5, n) {
-            const r = (0, v.KV)(),
+            const r = (0, S.KV)(),
               { storeBrowseContext: a, dataPreload: s } = y(e);
             return i.useCallback((e) => b(r, a, e, s, t, n), [r, a, s, t, n]);
           })(Re, 5, a),
@@ -1703,8 +1703,8 @@
           { data: u } = xe(l),
           { data: d } = re(l),
           { data: _ } = (function (e = !0) {
-            const t = ae((0, v.KV)(), (0, J.LH)());
-            return (0, k.I)({
+            const t = ae((0, S.KV)(), (0, J.LH)());
+            return (0, A.I)({
               ...t,
               select: (e) =>
                 e.visit_data?.recent_apps?.map(({ item_id: e }) => e) || [],
@@ -1846,7 +1846,7 @@
                         ? n.push(e)
                         : "creatorid" in e
                           ? r.push(e)
-                          : (0, S.z)(
+                          : (0, v.z)(
                               e,
                               `unexepected id type: ${JSON.stringify(e)}`,
                             );
@@ -1983,7 +1983,7 @@
             i.createElement(
               qe,
               { visible: t, id: u },
-              i.createElement(Ae, { ..._ }),
+              i.createElement(ke, { ..._ }),
             ),
           );
         }),
@@ -2087,7 +2087,7 @@
           a = (0, Ke.Qn)(),
           s = i.useRef();
         return (
-          (0, Se.O7)(s, t, !0),
+          (0, ve.O7)(s, t, !0),
           a
             ? i.createElement(
                 Qe.D6,
@@ -2104,7 +2104,7 @@
       var tt = n(94544),
         nt = n(30470);
       function rt(e) {
-        const t = vt();
+        const t = St();
         return i.createElement(
           "div",
           { className: L()(tt.Section, t && tt.Wide) },
@@ -2155,7 +2155,7 @@
       function lt(e) {
         const t = (0, w.aL)(e.href);
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           { href: t, className: tt.Link },
           e.children,
         );
@@ -2221,7 +2221,7 @@
       function pt(e) {
         const t = (0, w.aL)(e.href);
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           { href: t, className: L()(tt.Button, e.icon && tt.WithIcon) },
           e.icon && i.createElement("span", { className: tt.Icon }, e.icon),
           i.createElement("span", { className: tt.Label }, e.name),
@@ -2232,13 +2232,13 @@
         const t = i.useMemo(() => ({ wide: !1 }), []);
         return i.createElement(ht.Provider, { value: t }, e.children);
       }
-      function vt() {
+      function St() {
         return i.useContext(ht).wide;
       }
-      function St(e) {
+      function vt(e) {
         const { href: t, label: n = m("#Menu_Popover_ViewAll") } = e;
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           { className: tt.ViewAllLink, href: t },
           n,
           i.createElement(Ct, null),
@@ -2264,7 +2264,7 @@
       function bt(e, t) {
         const n = (0, H.jE)(),
           r = (0, C.eG)();
-        return (0, k.I)(
+        return (0, A.I)(
           (function (e, t, n, r) {
             const {
               item_count: a,
@@ -2362,14 +2362,14 @@
         );
       }
       function Lt(e, t) {
-        const n = (0, v.KV)(),
+        const n = (0, S.KV)(),
           { storeBrowseContext: r, dataPreload: a } = y(t),
           { data: i } = (function () {
-            const e = (0, v.KV)(),
+            const e = (0, S.KV)(),
               t = s.iA.accountid;
-            return (0, k.I)(A(e, t));
+            return (0, A.I)(k(e, t));
           })();
-        return (0, k.I)({
+        return (0, A.I)({
           ...Mt(n, r, a, P(i, (0, I.sf)(s.TS.LANGUAGE)), D(i), e),
           enabled: void 0 !== i,
         });
@@ -2382,14 +2382,14 @@
           i.createElement(
             st,
             null,
-            i.createElement(kt, null),
+            i.createElement(At, null),
             i.createElement(ot, null, i.createElement(Dt, null)),
             i.createElement(xt, null),
           ),
         );
       }
       const Rt = { include_assets: !0, apply_user_filters: !0 };
-      function kt() {
+      function At() {
         return i.createElement(
           ct,
           null,
@@ -2426,7 +2426,7 @@
           ),
         );
       }
-      function At() {
+      function kt() {
         return (
           ee(), Lt({ count: 10, name: "Store Menu Popular New" }, Rt), null
         );
@@ -2484,7 +2484,7 @@
           i.createElement(
             it,
             { title: t },
-            a && i.createElement(St, { href: a }),
+            a && i.createElement(vt, { href: a }),
           ),
           i.createElement("div", { className: Bt.BrowseLinkGrid }, r),
         );
@@ -2503,11 +2503,16 @@
             { count: 10, name: "Store Menu Popular New" },
             Rt,
           ),
-          { data: n } = bt(t?.rgItemIDs, { item_count: 3 });
+          { data: n } = bt(t?.rgItemIDs, { item_count: 3 }),
+          r = (0, w.aL)(`${s.TS.STORE_BASE_URL}explore/new/`);
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(at, null, m("#Menu_Section_Browse_PopularNew")),
+          i.createElement(
+            it,
+            { title: m("#Menu_Section_Browse_PopularNew") },
+            i.createElement(vt, { href: r }),
+          ),
           i.createElement(we, { rgItemIDs: n ?? [] }),
         );
       }
@@ -2643,7 +2648,7 @@
               m("#Menu_Section_Recommendations_DiscoveryQueue_Description"),
             ),
             i.createElement(
-              Se.Ii,
+              ve.Ii,
               {
                 className: zt.ActionButton,
                 href: `${nt.TS.STORE_BASE_URL}explore/next/0`,
@@ -2677,10 +2682,10 @@
       }
       function Yt() {
         const { data: e } = (function (e, t) {
-          const n = (0, v.KV)(),
+          const n = (0, S.KV)(),
             { storeBrowseContext: r, dataPreload: a } = y(t),
             { data: i } = x();
-          return (0, k.I)({ ...Vt(n, r, a, i, e), enabled: void 0 !== i });
+          return (0, A.I)({ ...Vt(n, r, a, i, e), enabled: void 0 !== i });
         })({ count: 3, name: "Store Menu Top Grossing" }, $t);
         return i.createElement(
           "div",
@@ -2704,9 +2709,9 @@
         en = n(39020);
       function tn() {
         const e = (0, C.ce)(),
-          t = (0, v.KV)(),
+          t = (0, S.KV)(),
           n = (0, J.LH)();
-        return (0, k.I)({
+        return (0, A.I)({
           ...nn(t, e),
           enabled: !!n,
           initialData: n ? void 0 : [],
@@ -2737,7 +2742,7 @@
           i.createElement(
             it,
             { title: m("#Menu_Section_Categories_YourTopGenres") },
-            i.createElement(St, {
+            i.createElement(vt, {
               href: `${s.TS.STORE_BASE_URL}sitemap/#genres`,
               label: m("#Menu_Section_Categories_ViewAll"),
             }),
@@ -2755,7 +2760,7 @@
               n = Ge(le),
               { data: r } = (0, en.Fv)(s.TS.LANGUAGE),
               a = i.useMemo(() => se.fW(ue().slice(), 0, yt.A(cn)), []),
-              o = vt(),
+              o = St(),
               c = o ? 8 : 5,
               l = o ? 12 : 8;
             return i.useMemo(() => {
@@ -2842,7 +2847,7 @@
                           }),
                     ),
                   ),
-                  i.createElement(St, {
+                  i.createElement(vt, {
                     href: `${s.TS.STORE_BASE_URL}tag/browse/`,
                     label: m("#Menu_Section_Categories_ViewAllTags"),
                   }),
@@ -2872,7 +2877,7 @@
       function mn(e) {
         const { children: t, title: n, href: r } = e;
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           { className: Jt.CategoryLink, href: r },
           t,
           i.createElement("div", { className: Jt.Gradient }),
@@ -2887,7 +2892,7 @@
         const { featuredLink: t } = e,
           n = (0, Xt.r)(t.unTagID);
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           { className: Jt.TagLink, href: n, fnCanTakeFocus: rn.Nw },
           i.createElement(Xt.K, { tagid: t.unTagID }),
         );
@@ -2895,7 +2900,7 @@
       function _n(e) {
         const { featuredLink: t } = e;
         return i.createElement(
-          Se.Ii,
+          ve.Ii,
           {
             className: Jt.TagLink,
             href: `${s.TS.STORE_BASE_URL}${t.strURLPath}`,
@@ -2929,8 +2934,8 @@
         En =
           n.p +
           "images/applications/store/steam_deck_dock.png?v=valveisgoodatcaching",
-        vn = { appid: 1675200 },
-        Sn = { appid: 1696780 },
+        Sn = { appid: 1675200 },
+        vn = { appid: 1696780 },
         Cn = { packageid: 354231 };
       function yn() {
         return i.createElement(
@@ -2946,8 +2951,8 @@
         );
       }
       function bn() {
-        const { data: e } = (0, T.J$)(vn),
-          { data: t } = (0, T.J$)(Sn),
+        const { data: e } = (0, T.J$)(Sn),
+          { data: t } = (0, T.J$)(vn),
           { data: n } = (0, T.J$)(Cn),
           r = [
             { storeItem: e, image: (0, s.YJ)(hn) },
@@ -2981,8 +2986,8 @@
         );
       }
       function wn() {
-        const { data: e } = (0, T.J$)(vn),
-          { data: t } = (0, T.J$)(Sn),
+        const { data: e } = (0, T.J$)(Sn),
+          { data: t } = (0, T.J$)(vn),
           { data: n } = (0, T.J$)(Cn);
         return i.createElement(
           ct,
@@ -3034,7 +3039,7 @@
             null,
             i.createElement(ft, {
               handle: "greatondeck",
-              icon: i.createElement(An, null),
+              icon: i.createElement(kn, null),
             }),
             i.createElement(ft, {
               handle: "remoteplay_hub",
@@ -3042,7 +3047,7 @@
             }),
             i.createElement(ft, {
               handle: "vr",
-              icon: i.createElement(kn, null),
+              icon: i.createElement(An, null),
             }),
           ),
           i.createElement(
@@ -3088,7 +3093,7 @@
           }),
         );
       }
-      function kn() {
+      function An() {
         return i.createElement(
           "svg",
           {
@@ -3102,7 +3107,7 @@
           }),
         );
       }
-      function An() {
+      function kn() {
         return i.createElement(
           "svg",
           {
@@ -3274,7 +3279,7 @@
                 ),
               ),
               i.createElement(
-                Se.Ii,
+                ve.Ii,
                 {
                   className: zn.MenuItem,
                   href: `${nt.TS.STORE_BASE_URL}sitemap`,
@@ -3340,7 +3345,7 @@
           o = i.useCallback(() => t(a), [t, a]),
           c = i.useCallback((e) => n(a, e), [n, a]);
         return i.createElement(
-          Se.fu,
+          ve.fu,
           {
             className: L()(zn.MenuItem, r && zn.Active),
             onClick: o,
@@ -3416,14 +3421,14 @@
           case "more":
             return i.createElement(Hn, { excludedSections: n });
           default:
-            return (0, S.z)(t, `unhandled section ${t}`), null;
+            return (0, v.z)(t, `unhandled section ${t}`), null;
         }
       }
       function Yn(e) {
         const { section: t } = e;
         switch (t) {
           case "browse":
-            return i.createElement(At, null);
+            return i.createElement(kt, null);
           case "recommendations":
             return i.createElement(Wt, null);
           case "categories":
@@ -3434,7 +3439,7 @@
           case "more":
             return null;
           default:
-            return (0, S.z)(t, `unhandled section ${t}`), null;
+            return (0, v.z)(t, `unhandled section ${t}`), null;
         }
       }
       var Qn = n(40236);
@@ -3509,10 +3514,10 @@
           E = i.useCallback(() => {
             l(), p();
           }, [p, l]),
-          v = i.useCallback((e) => {
+          S = i.useCallback((e) => {
             g(e.borderBoxSize[0].blockSize), d(e.contentBoxSize[0].inlineSize);
           }, []),
-          S = (0, Qn.wY)(v);
+          v = (0, Qn.wY)(S);
         return (
           (0, i.useEffect)(() => {
             if (void 0 === _) return;
@@ -3533,7 +3538,7 @@
               { bShowBackdrop: c || !!n, closePopover: p },
               i.createElement(
                 be.Z,
-                { "flow-children": "row", className: r.Content, ref: S },
+                { "flow-children": "row", className: r.Content, ref: v },
                 i.createElement(nr, {
                   nMenuWidth: m,
                   openPopover: h,
@@ -3622,7 +3627,7 @@
           u = i.useCallback(() => n(t), [n, t]),
           m = i.useCallback(() => l(!0), []);
         return i.createElement(
-          Se.fu,
+          ve.fu,
           {
             className: L()(r.MenuButton, s && r.Active),
             onMouseEnter: m,
@@ -3665,7 +3670,7 @@
           n = (0, w.aL)(`${s.TS.STORE_BASE_URL}wishlist/`);
         return e
           ? i.createElement(
-              Se.Ii,
+              ve.Ii,
               { className: r.MenuButton, href: n },
               i.createElement(cr, null),
               u.Localize("#Menu_Wishlist"),
@@ -3681,7 +3686,7 @@
           t = (0, w.aL)(`${s.TS.STORE_BASE_URL}cart/`);
         return e
           ? i.createElement(
-              Se.Ii,
+              ve.Ii,
               { className: L()(r.MenuButton, r.CartButton), href: t },
               i.createElement(lr, null),
               u.Localize("#Menu_Cart"),
