@@ -1,18 +1,258 @@
+  f_bavail: %llu\n
+  f_bfree : %llu\n
+  f_blocks: %llu\n
+  f_bsize : %lu\n
+  f_frsize: %lu\n
+  what():  
+ 2>/dev/null
+ Gbps
+ Kbps
+ Mbps
+ ReadToken overflow
+ [clone 
+ __vector(
+ bps
+ bytes
+ const
+ for 
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !AxU
+!m_data.HasError()
+!m_fnGlobalChangeCallback || !callback
+!m_pInt
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pszString || pszString[nChars] == '\0'
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
+#!/bin/sh\nexit 0\n
 #FLR
+#include
+#include is NULL 
 #tDq
 $ORIGIN
 $\nY8O
 %$%a%b%V%U%c%Q%W%]%\%[%
+%.17g
+%.18g
+%0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+%8X%4X%4X%2X%2X%2X%2X%2X%2X%2X%2X
+%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
+%d MB avail\n
+%d MB free space\n
+%d MB total space\n
+%d:00
+%f %f %f %f
+%lld
+%llu
+%s %s %s %s
+%s not implemented
+%s overflow!\n
+%s%c.temp_write_%x
+%s.%u.tmp
+%s.async%u.tmp
+%s/.steam/%s
+%s/.steam/steam
+%s/steamXXXXXX
+%s: __pos (which is %zu) > this->size() (which is %zu)
+&AElig;
+&Aacute;
+&Acirc;
+&Agrave;
+&Aring;
+&Atilde;
+&Auml;
+&Ccedil;
+&ETH;
+&Eacute;
+&Ecirc;
+&Egrave;
+&Euml;
+&Iacute;
+&Icirc;
+&Igrave;
+&Iuml;
+&Ntilde;
+&Oacute;
+&Ocirc;
+&Ograve;
+&Oslash;
+&Otilde;
+&Ouml;
+&THORN;
+&Uacute;
+&Ucirc;
+&Ugrave;
+&Uuml;
+&Yacute;
+&aacute;
+&acirc;
+&acute;
+&aelig;
+&agrave;
+&amp;
+&apos;
+&aring;
+&atilde;
+&auml;
+&brvbar;
 &bzi
+&ccedil;
+&cedil;
+&cent;
+&copy;
+&curren;
+&deg;
+&divide;
+&eacute;
+&ecirc;
+&egrave;
+&eth;
+&euml;
+&euro;
+&frac12;
+&frac14;
+&frac34;
+&hellip;
+&iacute;
+&icirc;
+&iexcl;
+&igrave;
+&iquest;
+&iuml;
+&laquo;
+&lsquo;
+&macr;
+&mdash;
+&micro;
+&middot;
+&nbsp;
+&ndash;
+&not;
+&ntilde;
+&oacute;
+&ocirc;
+&ograve;
+&ordf;
+&ordm;
+&oslash;
+&otilde;
+&ouml;
+&para;
+&plusmn;
+&pound;
+&quot;
+&raquo;
+&reg;
+&rsquo;
+&sect;
+&shy;
+&sup1;
+&sup2;
+&sup3;
+&szlig;
+&thorn;
+&times;
+&trade;
+&uacute;
+&ucirc;
+&ugrave;
+&uml;
+&uuml;
+&yacute;
+&yen;
+&yuml;
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+(anonymous namespace)
+(int)(intp)m_hParam != -1
+(main)
+(no name set)
+(none)
 *ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
 *ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 +ulsX
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+----------------------------------------\n
+-0123456789
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
+.cpl
+.steam_exec_test.sh
 .y4w
+/data/src/common/filesystem_helpers.cpp
+/data/src/external/picojson/picojson.h
+/data/src/public/tier0/tslist.h
+/data/src/public/tier0/vprof.h
+/data/src/public/tier1/bitstring.h
+/data/src/public/tier1/smartptr.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/public/vstdlib/../tier1/utlstring.h
+/data/src/tier1/KeyValues.cpp
+/data/src/tier1/bitstring.cpp
+/data/src/tier1/convar.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/mempool.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vstdlib/commandline.cpp
+/data/src/vstdlib/coroutine.cpp
+/data/src/vstdlib/cvar.cpp
+/data/src/vstdlib/debugstatssystem.cpp
+/data/src/vstdlib/keyvaluessystem.cpp
+/data/src/vstdlib/parseurl.cpp
+/data/src/vstdlib/stringnormalize.cpp
+/data/src/vstdlib/strtools.cpp
+/data/src/vstdlib/strtools_unicode.cpp
+/dev
+/dev/
+/dev/disk/by-uuid
+/etc/SUSE-release
+/etc/arch-release
+/etc/centos-release
+/etc/debian_release
+/etc/fedora-release
+/etc/gentoo-release
+/etc/lsb-release
+/etc/mandrake-release
+/etc/mtab
+/etc/os-release
+/etc/redhat-release
+/etc/slackware-release
+/etc/yellowdog-release
+/proc/mounts
+/proc/version
+/tmp
+/tmp/disk-free.XXXXXX
+/ubuntu12_32
+/ubuntu12_64/disk-free 
+/usr/bin/crosdisk %s
+0123456789
+0123456789ABCDEF
 0123456789abcdef
 0F`8
+0x%4.4X is both the source and destination of a normalization mapping
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -89,20 +329,144 @@ $\nY8O
 8\foQS
 9IValidate
 9a&g
+</script>
+<empty>\n
 A@qVc"
+ACADEMY
+ACCOUNTANTS
+ACTIVE
+ACTOR
+AERO
+AGENCY
+AIRFORCE
+AKST
+ANDROID
+ANDROID32
+ANDROID64
+ARCHI
+ARMY
+ARPA
+ASCII
+ASCII//TRANSLIT
+ASIA
+ASSOCIATES
+ATTORNEY
+AUCTION
+AUDIO
+AUTOS
+Android
+Android 6.x
+Android 7.x
+Android 8.x
+Android 9.x
+April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+Assertion failed: length > k_cchMaxString
+Attempted to change replicated CVar when you are not the GM\n
+August
+BARGAINS
+BAYERN
+BCreateDirectory
+BEER
+BERLIN
+BEST
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BHanIdeograph
+BIKE
+BIsOpen()
+BLACK
+BLACKFRIDAY
+BLUE
+BOUTIQUE
+BRUSSELS
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BUILD
+BUILDERS
+BUZZ
+Bad expression token: %c %c\n
+Bad expression token: %c at %d in %s\n
+Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
+Breaking '%s' in '%s'\n
+Bucket size : count\n
 C-Yn
+CAMERA
+CAMP
+CANCERRESEARCH
+CAPETOWN
+CAPITAL
+CARDS
+CARE
+CAREER
+CAREERS
+CASH
+CATERING
+CCoroutine
+CCoroutineMgr
+CDefaultCvar cvar
+CENTER
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
+CHEAP
+CHRISTMAS
+CHROMEOS
+CHURCH
+CITIC
+CITY
+CKeyValuesSystem
+CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
+CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
+CKeyValuesSystem::AddStringToPool: out of memory
+CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
+CLAIMS
+CLEANING
+CLINIC
+CLOTHING
+CLUB
+CMemoryPool
+CMemoryPool::AddNewBlob: mode == GROW_NONE
+CMemoryPool::Alloc: ran out of memory
+CODES
+COFFEE
+COLLEGE
+COLOGNE
+COMMUNITY
+COMPANY
+COMPUTER
+CONDOS
+CONSTRUCTION
+CONSULTING
+CONTRACTORS
+COOKING
+COOL
+COOP
+COUNTRY
+CPathString
+CREDIT
+CREDITCARD
+CRUISES
+CStringNormalization statics
 CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
 CStringNormalization::Initialize()
 CStringNormalization::Normalize(bool, char const*, char*, int)
 CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)
 CStringNormalization::Test_BValidateStructures()
 CStringNormalization::ValidateStatics(CValidator&, char const*)
+CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
+CStringNormalize is full of quirks that need fixing. You just hit one. Error return due to string truncation.
+CUISINELLA
 CURLUtils::FixupSeparatorScheme(CUtlString&)
 CURLUtils::IsTLD(char const*)
 CURLUtils::ValidateStatics(CValidator&, char const*)
@@ -113,6 +477,15 @@ CUniformRandomStream::RandomFillMemory(void*, unsigned int)
 CUniformRandomStream::RandomFloat(float, float)
 CUniformRandomStream::RandomInt(int, int)
 CUniformRandomStream::SetSeed(int)
+CUtlBuffer
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlString::ReplaceInternal
+CUtlString::SetValue
+CUtlString::VAppendFormat
+CUtlString::VFormat
+CUtlStringBuilder::Data::MoveToHeap
+CUtlStringBuilder::InternalPrepareBuffer
+CUtlStringBuilder::ReplaceInternal
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*, bool)
 CValidator::ClaimMemory(void const*, bool)
@@ -120,10 +493,19 @@ CValidator::DumpDoubleClaim(char const*) const
 CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
+CVariableBitStringBase
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 CanBeginLine
 CanBreakBetween
 CanBreakRepeated
 CanEndLine
+Command line options:\n
+CommandLine
+ConCommand '%s' not currently supported in config file\n
+ConVar
+ConVar::InternalSetValue: called with NULL
+Convars
+Coroutine '%s' stack save size is %d bytes
 Coroutine_Cancel
 Coroutine_Continue
 Coroutine_Create
@@ -131,18 +513,88 @@ Coroutine_DebugBreak
 Coroutine_GetCurrentlyActive
 Coroutine_GetStackDepth
 Coroutine_IsActive
+Coroutine_IsActive()
 Coroutine_IsAddressInOurStack
 Coroutine_ReleaseThreadMemory
 Coroutine_Test
 Coroutine_ValidateGlobals
 Coroutine_YieldToMain
+Couldn't write %s: %s\n
 CreateInterface
+DANCE
+DATING
+DBG_PATHMATCH
+DBG_STAT
+DEALS
+DEGREE
+DEMOCRAT
+DENTAL
+DENTIST
+DESI
+DIAMONDS
+DIGITAL
+DIRECT
+DIRECTORY
+DISCOUNT
+DLOPEN Error:%s\n
+DOMAINS
+DURBAN
 D\vvf:
 DebugStatsSystem
+December
+Don't know how to check filesystem type on POSIX!
+EDUCATION
+EMAIL
+ENGINEER
+ENGINEERING
+ENTERPRISES
+EQUIPMENT
+ESTATE
+EVENTS
+EXCHANGE
+EXPERT
+EXPOSED
+Element( i )
 Error
+Error State on string being set.
+Error decoding string1: %s
+Error decoding string2: %s
+Error while parsing text KeyValues for resource %s
+Execute: %s\n
+Expected %lld but got %lld!
+FAIL
+FARM
+FCVAR_NEVER_AS_STRING
 FCZ&
+FEEDBACK
+FINANCE
+FINANCIAL
+FISH
+FISHING
+FITNESS
+FLIGHTS
+FLORIST
+FOUNDATION
+FROGANS
+FUND
+FURNITURE
+FUTBOL
+Failed system(%s) in execute test: %d %s\n
+Failed system(%s) in execute test: %d\n
+Failed to load optional module %s\n
+February
+File change notification for %s but no file contents changed based on hash\n
+Free disk space for %s would overflow
+Friday
+GALLERY
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GCoroutineMgr().IsAnyCoroutineActive()
+GCoroutineMgr().IsValidCoroutine(hCoroutine)
+GENT
+GIFT
+GIVES
+GLASS
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
@@ -154,6 +606,21 @@ GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
+GLOBAL
+GLOBO
+GRAPHICS
+GRATIS
+GREEN
+GRIPE
+GUIDE
+GUITARS
+GURU
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
+GetFloatFromString() did not get correct peCS parameter
+GetInt64FromString() did not get correct peCS parameter
+GetIntFromString() did not get correct peCS parameter
+GetInts()
 GetNameFromOSType
 GetOSDetailString
 GetOSType
@@ -162,13 +629,172 @@ GetPlatformName
 GetPlatformNameFromEPlatformType
 GetPortableOsVersionInformation
 GetSpewOutputFunc
+GetUint64FromString() did not get correct peCS parameter
 H$6t
 H*0"ZOW
+HAMBURG
+HAUS
+HIPHOP
+HOLDINGS
+HOLIDAY
+HOME
+HOMES
+HORSE
+HOST
+HOUSE
+IMMOBILIEN
+INDUSTRIES
+INFO
+INSTITUTE
+INSURE
+INTERNATIONAL
+INVESTMENTS
+IVALIDATE001
+Incorrect number of arguments.  %d arguments required, %d were given.\n
 InstallUniformRandomStream
+Invalid FileWriterItem_t
+Invalid flags in %s
+Invalid index %u
 Is64BitOS
+IsInList(before)
+IsText()
+IsValidIndex( elem )
+IsValidIndex(elem)
+JArray
+JETZT
+JOBS
+JOBURG
+JUEGOS
 JZJ{.
+January
+July
+June
+KAUFEN
+KITCHEN
+KIWI
+KOELN
+KRED
+KeyValues
+KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues don't support #include anymore, file "%s"
+KeyValues::ReadAsBinary - Set name
+KeyValues::ReadAsBinary - TYPE_BINARY_STRING
+KeyValues::ReadAsBinary - TYPE_COLOR
+KeyValues::ReadAsBinary - TYPE_FLOAT
+KeyValues::ReadAsBinary - TYPE_INT
+KeyValues::ReadAsBinary - TYPE_INT64
+KeyValues::ReadAsBinary - TYPE_NONE
+KeyValues::ReadAsBinary - TYPE_PTR
+KeyValues::ReadAsBinary - TYPE_STRING
+KeyValues::ReadAsBinary - TYPE_UINT64
+KeyValues::ReadAsBinary - TYPE_WSTRING
+KeyValues::ReadAsBinary() stack depth > 100
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::WriteAsBinary() called with a text buffer\n
+KeyValues::WriteAsBinary() called with an invalid buffer\n
+KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
+KeyValuesSystem()
 KeyValuesSystemSteam
+LACAIXA
+LAND
+LAWYER
+LEASE
+LGBT
+LIFE
+LIGHTING
+LIMITED
+LIMO
+LINK
+LINUX
+LINUX32
+LINUX64
+LOANS
+LOCK_EX
+LOCK_SH
+LONDON
+LOTTO
+LUXE
+LUXURY
+Leaked KeyValues (%u):\n
+Linux
+Linux 2.2
+Linux 2.4
+Linux 2.6
+Linux 3.10
+Linux 3.16
+Linux 3.18
+Linux 3.2
+Linux 3.5
+Linux 3.6
+Linux 3.x
+Linux 4.1
+Linux 4.14
+Linux 4.19
+Linux 4.4
+Linux 4.9
+Linux 4.x
+Linux 5.10
+Linux 5.4
+Linux 5.x
+Linux 6.x
+Linux 7.x
+LoadFileIntoBuffer: NULL parameters
+LoadFileRangeIntoBuffer_Internal
+LoadFromBuffer: missing {   (current key: '%s')
+Lowered '%s' -> '%s'\n
+MAISON
+MANAGEMENT
+MANGO
+MARKET
+MARKETING
+MEDIA
+MEET
+MELBOURNE
+MENU
 MGiI
+MIAMI
+MINI
+MOBI
+MODA
+MONASH
+MORTGAGE
+MOSCOW
+MOTORCYCLES
+MUSEUM
+Mac OS
+MacOS 10.10
+MacOS 10.11
+MacOS 10.12
+MacOS 10.13
+MacOS 10.14
+MacOS 10.15
+MacOS 10.4
+MacOS 10.5
+MacOS 10.5.8
+MacOS 10.6
+MacOS 10.6.3
+MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
+MacOS 10.6.7
+MacOS 10.7
+MacOS 10.8
+MacOS 10.9
+MacOS 11
+MacOS 11 (as 10.16)
+MacOS 11.1
+MacOS 12
+MacOS 12 (as 10.17)
+MacOS 13
+MacOS 13 (as 10.18)
+MacOS 14
+MacOS 14 (as 10.19)
+MacOS 15
+MacOS 15 (as 10.20)
+March
+Matched '%s' -> '%s'\n
+Memory leak: mempool blocks left in memory: %d\n
+Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
@@ -183,10 +809,43 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
+NAGOYA
+NAME
+NAVY
+NEUSTAR
+NINJA
 NSt6locale5facetE
 NSt8ios_base7failureE
+NULL
+NULL buffer passed to V_atof()
+NULL buffer passed to V_atoi()
+Not continuing coroutine due to g_bPreventCoroutineContinue, %s
+November
+OKINAWA
+ORGANIC
 OSIsCompatible
 OSTypesAreCompatible
+OSX1010
+October
+PARIS
+PARTNERS
+PARTS
+PHOTO
+PHOTOGRAPHY
+PHOTOS
+PHYSIO
+PICS
+PICTURES
+PINK
+PLACE
+PLUMBING
+POSIX
+POST
+PRAXI
+PRESS
+PRODUCTIONS
+PROPERTIES
+Parameter file '%s' not found, skipping...\n
 Plat_CommandLineParamExists
 Plat_GetExecutablePathUTF8
 Plat_GetProcessArgv
@@ -196,9 +855,62 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_localtime
+PrepareBuffer( nNewLength ) == pstrNew
+QPON
+QUEBEC
 Qkkbal
 R1h58
+RECIPES
+REHAB
+REISE
+REISEN
+RENTALS
+REPAIR
+REPORT
+REPUBLICAN
+REST
+REVIEWS
+RGBA: %.2X %.2X %.2X %.2X
+RICH
+ROCKS
+RODEO
+RUHR
+RYUKYU
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got conditional between key and value
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got } in key
+SAARLAND
+SCHMIDT
+SCHULE
+SCOT
+SERVICES
+SEXY
+SHIKSHA
+SHOES
+SINGLES
 SKyu
+SOCIAL
+SOFTWARE
+SOHU
+SOLAR
+SOLUTIONS
+SPACE
+SPIEGEL
+SUPPLIES
+SUPPLY
+SUPPORT
+SURF
+SURGERY
+SUZUKI
+SYSTEMS
+Saturday
+SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
+September
+Size() == operand.Size()
 Sm"\vg
 St10ctype_base
 St10money_base
@@ -270,6 +982,8 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
+StaticFileWriterThread()
+Steam - DirWatcher
 SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
@@ -301,9 +1015,27 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
+String pool bytes used %u, max %u, %u pools\n
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
+Sunday
+TATTOO
+TECHNOLOGY
+TIENDA
+TIPS
+TIROL
+TLS init function for 
+TLS wrapper function for 
+TMPDIR
+TODAY
+TOKYO
+TOOLS
+TOWN
+TOYS
+TRADE
+TRAINING
+TRAVEL
 TSListBase_Init
 TSListBase_Pop
 TSListBase_UnsafePeek
@@ -313,6 +1045,9 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
+Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
+Target buffer too short to terminate\n
+Target buffer too short\n
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadImplOneTimeInit
@@ -324,21 +1059,51 @@ ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
+Thursday
+Too many arguments. %d arguments at most.
+Total number of strings %u, longest string size %u, avg size %u\n
+Total of %u buckets with %u hash collisions\n
+Tuesday
+UNIVERSITY
+UTF-8
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unknown
+Unmatched %s\n
+VACATIONS
+VEGAS
+VENTURES
+VERSICHERUNG
+VEngineCvar002
+VIAJES
+VILLAS
+VISION
+VISTA
+VLAANDEREN
+VODKA
+VOTE
+VOTING
+VOTO
+VOYAGE
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VStdLib_GetICVarFactory
+VTT for 
 V_AggressiveStripAllMeanWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
 V_AppendParamToURL
 V_AppendSlash
+V_AppendSlash: ran out of space on %s.
 V_BasicHtmlEntityEncode
 V_BasicHtmlEntityEncodeBuffer
 V_BuildSortTitle
 V_CP437CharsToUTF8
 V_ComposeFileName
+V_ConvertStringToUUID
 V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)
+V_ConvertUUIDToString
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, wchar_t*, int)
 V_CopyAndFixSlashes
@@ -363,6 +1128,7 @@ V_GetCurrentDirectory
 V_GetFileExtension
 V_HtmlEntityDecodeToUTF8
 V_IsAbsolutePath
+V_IsAbsolutePath( pPath )
 V_IsDeprecatedW
 V_IsInCommaDelimitedList
 V_IsMeanSpaceW
@@ -380,6 +1146,7 @@ V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned lon
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_LevenshteinDistance
 V_MakeAbsolutePath
+V_MakeAbsolutePath: _getcwd failed.
 V_MakeFileSafeName
 V_MakeRelativePath
 V_MatchWildcardDNSName
@@ -393,6 +1160,7 @@ V_ParseSteamOpenURLExternalProtocol
 V_ParseURLQueryString
 V_RemoveChar
 V_RemoveDotSlashes
+V_RemoveDotSlashes failed for "%s".
 V_ReplaceBadFilenameCharacters
 V_ReplaceBadFilenameCharactersInPlace
 V_SetCurrentDirectory
@@ -432,6 +1200,7 @@ V_UChar32ToUTF8Len
 V_URLContainsDomain
 V_URLCracker
 V_URLDecode
+V_URLDecode needs a dest buffer at least as large as the source
 V_URLDecodeRaw
 V_URLEncode
 V_URLEncodeRaw
@@ -519,6 +1288,22 @@ V_wcstoi64
 V_wcstoui64
 V_whextobinary
 Vc0a
+WANG
+WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WATCH
+WEBCAM
+WEBSITE
+WHOSWHO
+WIEN
+WIKI
+WILLIAMHILL
+WIN32
+WIN64
+WIN7
+WINDOWS
+WORKAROUND_GdbSymbolLoadHook
+WORKS
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Warning
 WeakRandomChar
 WeakRandomFillMemory
@@ -527,11 +1312,114 @@ WeakRandomGaussianFloat
 WeakRandomInt
 WeakRandomSeed
 WeakRandomUint32
+Web Client
+Wednesday
+Windows
+Windows 10
+Windows 11
+Windows 2000
+Windows 2003
+Windows 2008
+Windows 2012
+Windows 2012 R2
+Windows 2016
+Windows 2019
+Windows 2022
+Windows 3.11
+Windows 7
+Windows 8
+Windows 8.1
+Windows 95
+Windows 98
+Windows ME
+Windows NT
+Windows Vista
+Windows XP
+X360
+XN--3BST00M
+XN--3DS443G
+XN--3E0B707E
+XN--45BRJ9C
+XN--4GBRIM
+XN--55QW42G
+XN--55QX5D
+XN--6FRZ82G
+XN--6QQ986B3XL
+XN--80ADXHKS
+XN--80AO21A
+XN--80ASEHDB
+XN--80ASWG
+XN--90A3AC
+XN--C1AVG
+XN--CG4BKI
+XN--CLCHC0EA0B2G2A9GCD
+XN--CZR694B
+XN--CZRU2D
+XN--D1ACJ3B
+XN--FIQ228C5HS
+XN--FIQ64B
+XN--FIQS8S
+XN--FIQZ9S
+XN--FPCRJ9C3D
+XN--FZC2C9E2C
+XN--GECRJ9C
+XN--H2BRJ9C
+XN--I1B6B1A6A2E
+XN--IO0A7I
+XN--J1AMH
+XN--J6W193G
+XN--KPRW13D
+XN--KPRY57D
+XN--KPUT3I
+XN--L1ACC
+XN--LGBBAT1AD8J
+XN--MGB9AWBF
+XN--MGBA3A4F16A
+XN--MGBAAM7A8H
+XN--MGBAB2BD
+XN--MGBAYH7GPA
+XN--MGBBH1A71E
+XN--MGBC0A9AZCG
+XN--MGBERP4A5D4AR
+XN--MGBX4CD0AB
+XN--NGBC5AZD
+XN--NQV7F
+XN--NQV7FS00EMA
+XN--O3CW4H
+XN--OGBPF8FL
+XN--P1AI
+XN--PGBS0DH
+XN--Q9JYB4C
+XN--RHQV96G
+XN--S9BRJ9C
+XN--SES554G
+XN--UNUP4Y
+XN--WGBH1C
+XN--WGBL6A
+XN--XKC2AL3HYE2A
+XN--XKC2DL3A5EE0H
+XN--YFRO4I67O
+XN--YGBI2AMMX
+XN--ZFR164B
+YACHTS
+YANDEX
+YOKOHAMA
+You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+ZONE
 Zjz\v
+[abi:
+\nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nYg:a
 \rRoOs
+\t(%zu) comparing %s with %s\n
+\u%04x
+\u000
+\u001
 ]JldN
+_Accum
 _DMsg
+_Fract
+_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -539,6 +1427,8 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( y, unNodeSize, pMemBase )
+_Sat 
 _SpewMessageType
 ___tls_get_addr
 __ctype_b_loc
@@ -549,9 +1439,13 @@ __cxa_atexit
 __cxa_finalize
 __duplocale
 __errno_location
+__float128
 __freelocale
 __fxstat64
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __iswctype_l
 __lxstat
@@ -629,32 +1523,118 @@ _txnal_runtime_error_get_msg(void*)
 a\rxg[
 abort
 access
+alignof 
+allocator
+alnum
+alpha
 alphasort64
+alse
+android
+argLen < 0x10000000u
+array
+auto
+auto:
+availableSpace
 b,uZ
+bad_function_call
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
 bind_textdomain_codeset
 bindtextdomain
+bitNum >= 0 && bitNum < this->Size()
+blank
+blobSize <= nMaxBlobSize
+bool
+boolean
 btowc
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+bufferLen == 0 || pDest != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 bwiO'
+byte
+cActualReplacements == cReplacements
 calloc
+can't convert int64 to uint64 (negative number)
+can't convert uint64 to int32 (data loss)
+can't convert uint64 to int64 (data loss)
+cbActual < (uint32)nBufSizeWithTerminator
+cbToRead <= 1024 * 1024 * 1024
+ccMax >= 1
+char
+char16_t
+char32_t
+char8_t
 chdir
+checkLen >= 0
 chmod
 chown
 clock_gettime
 close
 closedir
+cntrl
+complex 
+components.Count() == 0
+console
+const_cast
+construction vtable for 
+context.m_vecStack.Count() <= 1
 convar_
+count == 0 || s1 != NULL
+count == 0 || s2 != NULL
+count >= 0
+covariant return thunk to 
+cubBytesToRead < INT32_MAX
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
 dQy/
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete 
+delete[] 
+dest != NULL
+destCapacity != 0
+destSize >= 1
 dgettext
+digit
+dirName
+disk-free command failed\n
+diskSize
 dl_iterate_phdr
 dlclose
 dlerror
 dlmopen
+dlmopen %s failed: %s\n
 dlopen
 dlsym
+double
+dynamic_cast
 endmntent
+error
+existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
+expandableSpace
+extension
+extension[0] == '.'
 f.N%H
 faccessat
 fallocate64
+false
+false 
 fclose
 fcntl
 fdatasync
@@ -663,9 +1643,15 @@ feof
 fflush
 fgets
 fileno
+filesystem
+float
 flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
 fopen
+fopen tmpfile failed\n
 fopen64
 fprintf
 fputc
@@ -675,17 +1661,28 @@ free
 freeaddrinfo
 freopen
 fscanf
+fscanf disk-free output failed\n
 fseek
 fseeko64
+fsync %s failed, errno = %d\n
 ftello64
 ftruncate
 ftruncate64
 futimes
 fwrite
 gAY:
+gCURLUtils_hashTLDs
 g_VProfProfilesRunningCount
 g_VProfile
+g_VecLoadedModules
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_VecPCoroutineMgr
+g_VecPCoroutineMgr[i]
+g_mapPairs
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
+get_disk_info
 getaddrinfo
 getc
 getcwd
@@ -695,22 +1692,68 @@ getsockname
 gettext
 getuid
 getwc
+global constructors keyed to 
+global destructors keyed to 
+graph
+guard variable for 
+half
+hidden alias for 
+iOS 1
+iOS 10
+iOS 10.1
+iOS 10.2
+iOS 10.3
+iOS 11
+iOS 11.1
+iOS 11.2
+iOS 11.3
+iOS 11.4
+iOS 12
+iOS 12.1
+iOS 2
+iOS 3
+iOS 4
+iOS 5
+iOS 6
+iOS 6.1
+iOS 7
+iOS 7.1
+iOS 8
+iOS 8.1
+iOS 8.2
+iOS 8.3
+iOS 8.4
+iOS 9
+iOS 9.1
+iOS 9.2
+iOS 9_.3
+iOption != m_listCommandLineOption.InvalidIndex()
 i]Wb
 iconv
 iconv_close
 iconv_open
 ig,o
+imaginary 
+in != out
+info.m_pReplacementString == 0
+invalid input pointer
 ioctl
 isalnum
 isspace
 iswalnum
 iswalpha
 iswspace
+java Class for 
+java resource 
 k2U\v
+k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
+k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 lDa>
 lEd/
 lchown
 ld-linux.so.2
+len < maxlen
+len > 0 || HasError()
 libc.so.6
 libdl.so.2
 libm.so.6
@@ -718,11 +1761,78 @@ libpthread.so.0
 librt.so.1
 libtier0_s.so
 link
+linux
+locale::facet::_S_create_c_locale name not valid
 localeconv
 logf
+long
+long double
+long long
 longjmp
+lower
 lseek64
+m_Count == 0
+m_Elements
+m_HashItemMemPool
+m_LeakTrack
+m_ListCoroutines
+m_ListCoroutines[iRoutine]
+m_Memory
+m_TotalElements != InvalidIndex()
+m_Tree
+m_VecCoroutineStack
+m_VecCoroutineStack.Count() > 1
+m_bInitialized
+m_bitsMigratedBuckets
+m_buffer
+m_configOverride
+m_errorIndex>=0
+m_fileReader
+m_fnCompletionCallback
+m_listChangedFiles
+m_listCommandLineOption
+m_mapConditionalSymbolTable
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+m_memNodes
+m_nAllocationCount >= 0
+m_p == NULL
+m_pParent == this
+m_pSavedStack
+m_pStackHigh
+m_pVecStringValue
+m_pVecUlValue
+m_pkvLastKeyAdded != NULL
+m_pszName
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_strCmdLine
+m_strConvertedDefaultValue
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strWatchPath
+m_unInCounter == m_unOutCounter
+m_vecCallbacks
+m_vecCallbacks.Count() == 0
+m_vecCallbacks.Count() == 0 || !callback
+m_vecHashBuckets
+m_vecParms
+m_vecParms.IsValidIndex( nIndex )
+m_vecParms[i]
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
+macos
 malloc
+maxLen <= INT_MAX
+maxLen == 0 || pDest != NULL
+maxLen > 0
+maxLen > 0 && maxLen <= INT_MAX
+maxLenInBytes == 0 || pDest != NULL
+maxLenInBytes >= 0
+maxlen >= 1
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -734,6 +1844,7 @@ memset
 mkdir
 mkfifo
 mkstemp
+mkstemp errno %d\n
 mmap
 mmap64
 modf
@@ -742,21 +1853,94 @@ mount
 msync
 munmap
 mwa!
+n == 0 || s1 != NULL
+n == 0 || s2 != NULL
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nDestSize == 0 || pDest != NULL
+nGrowSize >= 0
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nPut + nPutDelta <= outBuf.TellMaxPut()
+nSize != 0
+nSize >= 0
+nTotal number of strings %u, longest string size %u, avg size %u\n
+nValue >= 0 && nValue <= 15
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+null
+num > 0
+numElements >= 0
+object
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset >= 0
 open
 open64
 opendir
+operator
+operator 
+operator"" 
+out of order normalization entry
+outsize >= ( inputbytes * 2 ) + 1
+outsize >= 1
+pBlob
 pCRF
+pConv && pConv->GetDelimiterLength() > 0
+pData
+pDefaultValue
+pDest
+pDest != NULL
+pDest >= pBuffer && pDest <= pBuffer + destBufferSize
+pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+pFmt
+pFormat != NULL
+pKeyValuesTextParser
+pName
+pNode && pNode->Next == QueueEnd()
+pSearch != NULL
+pSrc != NULL
+pStr != NULL
+pStr1 != NULL
+pStr2 != NULL
+pToken
+pWatcher != NULL
+parms.Count() == 0
+path
+pathStringLength >= 1
+pchEnd
+pchFileName
+pchHaystack != NULL
+pchNeedle != NULL
+pchOut
+pchStart
+pchURL != NULL
 pclose
 poll
 popen
 posix_fadvise
+ppath
 pread64
+prefix != NULL
+print
 printf
+pstrDest[nNewLength] == '\0'
+pstrNew + nNewLength == pstrDestination + 1
+pstrNew == pstrDestination
+pstrNew == pszString
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+punct
+pure virtual method called\n
 putc
 putwc
+pwchDest != NULL
+pwchSrc != NULL
 pwrite64
 qR5FE%
 read
@@ -765,29 +1949,73 @@ readdir64
 readlink
 realloc
 realpath
+reference temporary #
+reinterpret_cast
+release_space %llu
 rename
+request_space %llu
+resizeNumBits >= 0
 rmdir
+root
 ru&o
+s1 != NULL
+s2 != NULL
 scandir
 scandir64
 sched_yield
+script
 sendfile64
 setlocale
 setmntent
 setvbuf
 shm_open
 shm_unlink
+short
+signed char
+size < INT_MAX
+sizeof 
+sizeof...
 snprintf
+space
+spaceGranted
+spaceReleased
 sprintf
 sqrtf
+src != NULL
 sscanf
+stackLevel >= 0 && stackLevel < m_errorIndex
 statfs
 statfs64
+static_cast
+static_cast<Node_t*>(pNode)->elem
 statvfs
 statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 reports success but zero free space\n
+statvfs64: ret %d errno %d\n
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stdin
 stdout
+steam://close
+steam://close/
+steam://openurl/
+steam://openurl_external/
+str != NULL
 strcasecmp
 strcasestr
 strchr
@@ -796,7 +2024,9 @@ strcpy
 strdup
 strerror
 strftime
+string literal
 strlen
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
 strncat
 strncmp
@@ -813,14 +2043,29 @@ strtoull
 swprintf
 swscanf
 symlink
+syntax error at line %d near: 
 syscall
 system
+szDomainName != nullptr
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+test string
+the 
+this
+throw
+throw 
 time
 tolower
 towlower
 towupper
+transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
 typeinfo for CUniformRandomStream
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__class_type_info
@@ -830,6 +2075,7 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
 typeinfo name for CUniformRandomStream
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
@@ -838,20 +2084,37 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
 uname
 ungetc
 ungetwc
+unknown
 unlink
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+upper
 usleep
 utime
 utimes
 vasprintf
+vector::_M_realloc_insert
+virtual thunk to 
+void
 vsnprintf
+vstdlib_s.dll
 vstdlib_wcsicmp
 vstdlib_wcsnicmp
 vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
+vtable for 
 vtable for CUniformRandomStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
@@ -863,6 +2126,7 @@ vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 w+OQvr
 wXR\r
+wchar_t
 wcrtomb
 wcscasecmp
 wcscmp
@@ -875,6 +2139,7 @@ wcstol
 wcstoll
 wcstoull
 wctob
+windows
 wmemchr
 wmemcmp
 wmemcpy
@@ -882,7 +2147,15 @@ wmemmove
 wmemset
 wn>Jj
 write
+write %s failed, errno = %d\n
 writev
+xdigit
 y9*O
 zC`G;
+{%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
+{%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
+{default arg#
 {kHw
+{lambda(
+{parm#
+{unnamed type#

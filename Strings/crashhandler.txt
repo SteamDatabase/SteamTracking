@@ -1,9 +1,319 @@
+       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)\n
+  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
+  %10.3f %6.2f      %6d
+  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f\n
+  %s = '%s'\n
+  ---------- ------      ---------- ------      ---------- ------   ------ ------\n
+  ---------- ------      ------\n
+  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------\n
+  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
+  f_bavail: %llu\n
+  f_bfree : %llu\n
+  f_blocks: %llu\n
+  f_bsize : %lu\n
+  f_frsize: %lu\n
+  what():  
  (deleted)
+ - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
+ 2>/dev/null
+ Avg Time/Frame (ms)\n
+ Gbps
+ GiB
+ Kbps
+ KiB
+ Mbps
+ MiB
+ [clone 
+ __vector(
+ bps
+ bytes
+ const
+ for 
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
+!directory.empty()
+!dumper_->IsPostMortem()
+!g_VProfile
+!g_pCrashMemoryReserve
+!m_bJustCount
+!m_data.HasError()
+!member || mapping_id < mappings_.size()
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pTracker->IsClaimed( pKey )
+!pszString || pszString[nChars] == '\0'
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
+#!/bin/sh\nexit 0\n
 $ORIGIN
 %$%a%b%V%U%c%Q%W%]%\%[%
+%%%ds | %%9s | %%12s\n
+%%-%ds | %%9d | %%12s\n
+%*s%s %s --> %d blocks = %s (%s larger)\n
+%*s%s %s --> %d blocks = %s (new)\n
+%.17g
+%.18g
+%.1f pct of time accounted for\n
+%0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+%02d:%02d:%02d
+%02i/%02i %02i:%02i:%02i 
+%04d%02d%02d%02d%02d%02d
+%8X%4X%4X%2X%2X%2X%2X%2X%2X%2X%2X
+%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
+%d MB avail\n
+%d MB free space\n
+%d MB total space\n
+%d frames sampled for %.2f seconds\n
+%d validator nodes, %d nodes larger than %s\n
+%d.%d.%d.%d:%d
+%d:00
+%lld
+%llu
+%s Adding custom info: %s=%s.\n
+%s Calling pre minidump callback\n
+%s Done.\n
+%s Ignoring t_id != getpid()\n
+%s Initializing.\n
+%s No pre-minidump callback registered\n
+%s Returning as already initialized.\n
+%s Setting app ID to %u.\n
+%s Setting comment to %s.\n
+%s Skipping as Steam ID = 0.\n
+%s Skipping as app ID = 0.\n
+%s Skipping as no handler.\n
+%s Writing.\n
+%s double claimed!\n
+%s not implemented
+%s overflow!\n
+%s%02d
+%s%c.temp_write_%x
+%s.%u.tmp
+%s.async%u.tmp
+%s/%s_log.txt
+%s/.steam/%s
+%s/.steam/steam
+%s/steamXXXXXX
+%s: Already initialized.\n
+%s: Attempting to send crash report in process: %s\n
+%s: Attempting to use error reporter path: %s\n
+%s: Installing breakpad exception handler for appid(%s)/version(%s)/tid(%d)\n
+%s: Sending crash report.\n
+%s: Sending.\n
+%s: Skipping, no context!\n
+%s: Starting.\n
+%s: Writing.\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%s: could not delete, skipping.\n
+%s: failed to create, skipping\n
+%s: insufficient permissions - delete and recreate\n
+%s: is not a directory - delete and recreate.\n
+%s: is not owned by us - delete and recreate.\n
+%s: no such process %d\n
+%s_%d%.2d%.2d%.2d%.2d%.2d_%d
+&AElig;
+&Aacute;
+&Acirc;
+&Agrave;
+&Aring;
+&Atilde;
+&Auml;
+&Ccedil;
+&ETH;
+&Eacute;
+&Ecirc;
+&Egrave;
+&Euml;
+&Iacute;
+&Icirc;
+&Igrave;
+&Iuml;
+&Ntilde;
+&Oacute;
+&Ocirc;
+&Ograve;
+&Oslash;
+&Otilde;
+&Ouml;
+&THORN;
+&Uacute;
+&Ucirc;
+&Ugrave;
+&Uuml;
+&Yacute;
+&aacute;
+&acirc;
+&acute;
+&aelig;
+&agrave;
+&amp;
+&apos;
+&aring;
+&atilde;
+&auml;
+&brvbar;
+&ccedil;
+&cedil;
+&cent;
+&copy;
+&curren;
+&deg;
+&divide;
+&eacute;
+&ecirc;
+&egrave;
+&eth;
+&euml;
+&euro;
+&frac12;
+&frac14;
+&frac34;
+&hellip;
+&iacute;
+&icirc;
+&iexcl;
+&igrave;
+&iquest;
+&iuml;
+&laquo;
+&lsquo;
+&macr;
+&mdash;
+&micro;
+&middot;
+&nbsp;
+&ndash;
+&not;
+&ntilde;
+&oacute;
+&ocirc;
+&ograve;
+&ordf;
+&ordm;
+&oslash;
+&otilde;
+&ouml;
+&para;
+&plusmn;
+&pound;
+&quot;
+&raquo;
+&reg;
+&rsquo;
+&sect;
+&shy;
+&sup1;
+&sup2;
+&sup3;
+&szlig;
+&thorn;
+&times;
+&trade;
+&uacute;
+&ucirc;
+&ugrave;
+&uml;
+&uuml;
+&yacute;
+&yen;
+&yuml;
+'', upload 
+( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
+( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+(anonymous namespace)
+(iub & (m_nSizeWithStack-1)) == 0
+***** OUT OF MEMORY! attempted allocation size: %zu ****\n
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-- Hierarchical Call Graph --\n
+-- Profile scopes sorted by average time (including children) --
+-- Profile scopes sorted by average time (without children) --
+-- Profile scopes sorted by peak --
+-- Profile scopes sorted by peak over average (including children) --
+-- Profile scopes sorted by time (including children) --
+-- Profile scopes sorted by time (without children) --
+-- Summary --\n
+-----BEGIN BREAKPAD MICRODUMP-----
+-----END BREAKPAD MICRODUMP-----
+-0123456789
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
+-debugbreak
+-noassert
+-nocrashdialog
+-stack=
+./src/client/linux/handler/minidump_descriptor.h
+./src/client/linux/minidump_writer/directory_reader.h
+./src/client/linux/minidump_writer/line_reader.h
+./src/client/linux/minidump_writer/proc_cpuinfo_reader.h
+./src/client/minidump_file_writer-inl.h
+./src/common/linux/elfutils-inl.h
+.dmp
+.dynamic
+.dynstr
+.note.gnu.build-id
+.steam_exec_test.sh
+.text
+/bin/sh
+/bin/steamerrorreporter
+/data/src/common/environmentmanager.cpp
+/data/src/crashhandler/breakpad_linux.cpp
+/data/src/external/picojson/picojson.h
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/tslist.h
+/data/src/public/tier0/vprof.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier0/dbg.cpp
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/platform_posix.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/vprof.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vstdlib/strtools.cpp
+/data/src/vstdlib/strtools_unicode.cpp
+/dev
 /dev/
+/dev/disk/by-uuid
+/dev/urandom
+/etc/lsb-release
+/etc/mtab
+/proc/%d/status
+/proc/cpuinfo
+/proc/meminfo
+/proc/mounts
+/proc/self/cmdline
+/proc/self/exe
+/proc/self/fd
+/steamerrorreporter
+/tmp
+/tmp/disk-free.XXXXXX
+/tmp/dumps
+/ubuntu12_64/disk-free 
+/usr/bin/crosdisk %s
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -31,22 +341,151 @@ $ORIGIN
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
+21:20:49
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
+64 >= identifier_length
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 9IMemAlloc
+</script>
+<empty>
+<family %u, %u bytes>
+<no address info>
+<unknown>
+AKST
+ALL_PROXY
+ASCII
+ASCII//TRANSLIT
+Anonymous mutex cannot have bAllAccess == true
+April
+Assert
+Assert( %s ):%s:%d\n
+Assertion Failed: stack%2d: %s
+Assertion Failed: stack%2d: %s (%d): %s
+Assertion Failed: stack%2d: 0x%llX
+Assertion failed: length > k_cchMaxString
+Attempting to create a named event with a null name
+August
+Average %.2f fps, %.2f ms per frame\n
+BCreateDirectory
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsOpen()
+BREAKPAD_DUMP_LOCATION
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+Bad thread local: Get\n
+Bad thread local: Set\n
+Beta
+Blocks
+Breaking '%s' in '%s'\n
 Breakpad/1.0 (Linux)
+Breakpad_FilterCallback
+Breakpad_MinidumpCallback
 Breakpad_SetSteamID
+BuildID
+Busy, please retry.\n
+C-runtime internal
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
 CH\f1
+CPathString
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv called with no value
+CProcessEnvironmentManager::setenv invalid index %d\n
+CTSListBase: Misaligned list\n
+CTSQueue bad node count
+CTSQueue bad peek pointer when empty
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue freelist depth mismatch
+CTSQueue m_HeadTailPair mismatch when empty
+CUtlBuffer
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlString::ReplaceInternal
+CUtlString::SetValue
+CUtlString::VAppendFormat
+CUtlString::VFormat
+CUtlStringBuilder::Data::MoveToHeap
+CUtlStringBuilder::InternalPrepareBuffer
+CUtlStringBuilder::ReplaceInternal
+CVProfNode
+CValidator
+CValidator : too many memory nodes to store, try again with a higher threshold value\n
+CValidator::ClaimArrayMemory
+CValidator::ClaimMemory
+CValidator::ClaimUntrackedMemory
+CValidator::IsClaimed
+CValidator::Pop
+CValidator::Push
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+CatchAndWriteContext_t::Invoke with bogus argc/argv
+CatchAndWriteContext_t::Invoke with bogus void *ptr
+CatchAndWriteContext_t::Set w/o a function pointer!
+Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
+Could not read /proc/self/cmdline when trying to find steamerrorreporter
+Couldn't write %s: %s\n
+CrashTime
 CreateInterface
+DBG_PATHMATCH
+DBG_STAT
+DONT_BREAK_ON_ASSERT
+December
+Deleting thread object from the thread, this is bad
+Don't know how to check filesystem type on POSIX!
+DumpMemTrackingStats %d %d \n
+ELegacyEnvironmentVariable
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
+ERROR TRYING TO vfork() TO SEND MINIDUMP\nRESORTING TO IN-PROCESS MINIDUMP\n
+ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
+ERROR: execv failed when trying to send minidump\n
+ERROR: waitpid() on child forked process failed when uploading minidump: %d\n
+Element( i )
+Error State on string being set.
+Error decoding string1: %s
+Error decoding string2: %s
 ExceptionHandler::GenerateDump sys_pipe failed:
 ExceptionHandler::GenerateDump waitpid failed:
 ExceptionHandler::SendContinueSignalToChild sys_write failed:
 ExceptionHandler::WaitForContinueSignal sys_read failed:
+Execute: %s\n
+Exiting on SPEW_ABORT\n
+Expected %lld but got %lld!
+Failed system(%s) in execute test: %d %s\n
+Failed system(%s) in execute test: %d\n
+Failed to capture callstack
+Failed to create thread (error 0x%x)
+Failed to get thread priority: foreign thread unsupported\n
+Failed to get thread priority: getpriority failed %d\n
+Failed to set thread local value
+Failed writing minidump, nothing to upload.\n
 Fatal Assertion Failed: 
+Fatal assert
+Fatal assert; application exiting
+February
+File change notification for %s but no file contents changed based on hash\n
+FilterCallback
 FoCLcx
+Free disk space for %s would overflow
+Friday
+GAMESCOPE_WAYLAND_DISPLAY
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
@@ -64,6 +503,49 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
+HOME
+HTTP_PROXY
+IVALIDATE001
+Ignoring resume of count %d\n
+Illegal termination of worker thread '%s'
+Init
+InitHandler
+Internal
+Invalid FileWriterItem_t
+Invalid flags in %s
+Invalid index %u
+Invalid initial value for semaphore
+Invalid max value for semaphore
+Invalid thread id during thread Start()
+IsSpewActive
+IsText()
+IsValidIndex( elem )
+IsValidIndex(elem)
+JArray
+January
+July
+Jun  2 2025
+June
+LOCK_EX
+LOCK_SH
+Leaked mem: %s %s\n
+Linux
+LoadFileRangeIntoBuffer_Internal
+Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
+Lowered '%s' -> '%s'\n
+MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
+March
+Matched '%s' -> '%s'\n
+MemFree:
+MemTotal:
+MinidumpCallback
+Minidumps written:\n
+Mismatched thread handle during thread Start()
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
+Monday
+Must Start() thread before setting priority
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -88,6 +570,18 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt6locale5facetE
 NSt8ios_base7failureE
+NULL != m_pValObjectCur
+NULL buffer passed to V_atof()
+NULL buffer passed to V_atoi()
+No Error
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+No samples during profile period.\n
+No tracked allocs currently in use. Total %d\n
+November
+OUT OF MEMORY
+Object
+October
+Only thread can stop self: Use a higher-level protocol
 PKDd
 PKDe
 PKDf
@@ -95,7 +589,38 @@ PKDi
 PKDn
 PKDs
 PKDu
+POSIX does not support inheriting full mutexes
+PPid:\t
+PS3 Unattributed
+Peak %.2f ms frame\n
+Platform
+PrepareBuffer( nNewLength ) == pstrNew
+Probably deadlock or failure waiting for thread to initialize.
+ProductName
+Public
 QkkXa
+Root
+SDL_GetError
+SDL_SetCurrentThreadPriority
+STEAMVIDEOTOKEN
+STEAM_BASE_FOLDER
+Saturday
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
+Semaphore name (%s) is longer than POSIX can handle, truncating.
+SendCrashReport
+SendExistingMinidump
+September
+SetAppID
+SetComment
+SetSteamID
+Setting Steam ID: %llu\n
+Setting SteamUniverse: %d = %s\n
+Size
+Someone called ClearWritingMinidump without holding the minidump lock.
+Someone called SetWritingMinidump without holding the minidump lock.
+Spew Globals
+Spew globals
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -165,7 +690,90 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
+Stack%2d: %s\n
+Stack%2d: 0x%llX\n
+Stack:%2d    %s (%d): %s\n
+StartupTime
+StaticFileWriterThread()
+Steam
+Steam - DirWatcher
+Steam Helper
+Steam3Master
 SteamRealPath
+SteamUniverse
+SteamUser
+Sunday
+TLS init function for 
+TLS wrapper function for 
+TMPDIR
+Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
+Target buffer too short to terminate\n
+Target buffer too short\n
+Tgid:\t
+Thread cannot be joined with self
+Thread did nothing but sleep during profile period.\n
+Thread failed to initialize\n
+Thread synchronization object is unuseable
+Thread(0x%p/0x%p/0x%x)
+ThreadGetProcessExitCode
+Thursday
+Total bytes allocated (os heap reported): %s\n
+Total bytes allocated counted: %s\n
+TracerPid:
+Tracked allocs currently in use. %d Total %d\n
+Tried to create a thread that has already been created!
+Tuesday
+USER
+UTF-8
+Unable to write failure log\n
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unknown
+Unknown universe %d, assuming public\n
+Unmatched %s\n
+Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
+UserID
+VPROF Report for Thread: %d - %s\n
+VTT for 
+V_AppendSlash: ran out of space on %s.
+V_ConvertStringToUUID
+V_ConvertUUIDToString
+V_IsAbsolutePath( pPath )
+V_MakeAbsolutePath: _getcwd failed.
+V_RemoveDotSlashes failed for "%s".
+V_URLDecode needs a dest buffer at least as large as the source
+Validate Failed: !!!Leaked:\t%llu %s%s\n
+Validate Failed: Leaked connection %u\n
+Validate Failed: Leaked file %p\n
+Validate Failed: Leaked socket %p\n
+Valve
+Vendor
+Version
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
+WSL_DISTRO_NAME
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+Warning: failed to set thread priority: foreign thread unsupported\n
+Warning: failed to set thread priority: set failed for %d: %s\n
+Warning: failed to set thread priority: set failed for priority %d\n
+Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
+Warning: thread priority outside allowed range %d\n
+Wednesday
+WriteMiniDump
+WriteMinidump
+[ func+child   func ]     Count\n
+[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
+[abi:
+\nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
+\t%d items : %s - %s:%d\n
+\t(%zu) comparing %s with %s\n
+\tValidate Failed: leaked connection to %s\n
+\tValidate Failed: leaked file '%s'\n
+\tValidate Failed: leaked socket remote address %s\n
+\u%04x
+_Accum
+_ExitOnFatalAssert\n
+_Fract
+_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -173,6 +781,9 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( y, unNodeSize, pMemBase )
+_STEAM_SETENV_MANAGER
+_Sat 
 ___tls_get_addr
 __assert_fail
 __ctype_b_loc
@@ -184,11 +795,15 @@ __cxa_finalize
 __dprintf_chk
 __duplocale
 __errno_location
+__float128
 __fprintf_chk
 __fread_chk
 __freelocale
 __fxstat64
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __iswctype_l
 __lxstat
 __lxstat64
@@ -268,26 +883,159 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+aarch64
 abort
 access
+adding %d curl form parameters\n
+alignof 
+all_proxy
+allocation_state_ == ARRAY
+allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
+allocator
+alnum
+alpha
 alphasort64
+alse
+argLen < 0x10000000u
+array
 asctime
 asctime_r
+assert
+audio.so
+auto
+auto:
+auxv
+availableSpace
 backtrace
 backtrace_symbols
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
 bind_textdomain_codeset
 bindtextdomain
+blank
+bool
+bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
+bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
+bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
+bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*, size_t)
+bool google_breakpad::MinidumpFileWriter::Copy(MDRVA, const void*, ssize_t)
+bool google_breakpad::MinidumpFileWriter::Open(const char*)
+bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = char]
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = wchar_t]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDString; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawDirectory]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawLinkMap32]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDString; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::UntypedMDRVA::Allocate(size_t)
+bool google_breakpad::UntypedMDRVA::Copy(MDRVA, const void*, size_t)
+bool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
+bool {anonymous}::MicrodumpWriter::DumpCrashingThread()
+bool {anonymous}::MinidumpWriter::WriteFile(MDLocationDescriptor*, const char*)
+boolean
+breakpad_testfile
+breakpad_verbose
 btowc
+buf_used_ > 0
+buf_used_ >= len + 1
+bufferLen == 0 || pDest != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+buffers->next == __null
+byte
+cActualReplacements == cReplacements
 calloc
+cbActual < (uint32)nBufSizeWithTerminator
+cbToRead <= 1024 * 1024 * 1024
+ccMax >= 1
+cefwebhelper
+char
+char16_t
+char32_t
+char8_t
 chdir
+checkLen >= 0
 chmod
 chown
+chromehtml.so
 clock_gettime
 close
 closedir
+cmdline
+cntrl
+com.valvesoftware.steam
+complex 
+components.Count() == 0
+console
+const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
+const_cast
+construction vtable for 
+count && length
+count == 0 || s1 != NULL
+count == 0 || s2 != NULL
+count >= 0
+covariant return thunk to 
+cpu family
+crash
+crashhandler.so
+crashhandler001
+crashhandler002
+crashhandler003
+crashhandler004
 ctime_r
+cubBytesToRead < INT32_MAX
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
+curl_easy_cleanup
+curl_easy_cleanup()\n
+curl_easy_getinfo
+curl_easy_init
+curl_easy_init -- failed\n
+curl_easy_perform
+curl_easy_perform returned:  %d %s\n
+curl_easy_setopt
+curl_easy_setopt()\n
+curl_easy_strerror
+curl_formadd
+curl_formadd file %s\n
+curl_formfree
+curl_slist_append
+curl_slist_free_all
 daylight
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete 
+delete[] 
+descriptor.path_.empty()
+dest != NULL
+destCapacity != 0
+destSize >= 1
 dgettext
+digit
+dirName
+disk-free command failed\n
+diskSize
 dl_iterate_phdr
 dladdr
 dlclose
@@ -295,36 +1043,73 @@ dlerror
 dlmopen
 dlopen
 dlsym
+done with curl\n
+double
+dynamic_cast
+eGroup < VPROF_BUDGETGROUP_MAX
+elf_header->e_ident[4] == ElfClass::kClass
+elf_mapped_base
 endmntent
+environ
+error
+error:  %s\n
+exec 
 execv
+existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
+expandableSpace
+extension
+extension[0] == '.'
+externaltests.so
 faccessat
 fallocate64
+false
+false 
 fclose
 fcntl
+fd_ != -1 || minidump_path
+fd_ == -1 || !minidump_path
 fdatasync
 fdopen
 feof
 fflush
 fgets
+file ''
+file_ != -1
+file_ == -1
 fileno
+filesystem_stdio.so
+filesystem_steam.so
+float
 flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
 fopen
+fopen tmpfile failed\n
 fopen64
 fork
+fp_regs || size
 fputc
 fputs
 fread
 free
 freopen
+friendsui.so
 fscanf
+fscanf disk-free output failed\n
 fseek
 fseeko64
+fsync %s failed, errno = %d\n
 ftello64
 ftruncate
 ftruncate64
 futimes
 fwrite
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
+g_pMemAllocSteam
+get_disk_info
 getc
 getcontext
 getcwd
@@ -340,35 +1125,112 @@ getpriority
 gettext
 gettimeofday
 getwc
+global constructors keyed to 
+global destructors keyed to 
 gmtime
 gmtime_r
 gnu_get_libc_version
+google_breakpad::MinidumpDescriptor& google_breakpad::MinidumpDescriptor::operator=(const google_breakpad::MinidumpDescriptor&)
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const google_breakpad::MinidumpDescriptor&)
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
+gp_regs || size
+graph
+gsoapwrapper.so
+guard variable for 
+half
+hidden alias for 
+http_proxy
+https://crash.steampowered.com/submit
 iconv
 iconv_close
 iconv_open
+imaginary 
+in != out
+info != __null
+info.m_pReplacementString == 0
+invalid input pointer
 ioctl
 isspace
 iswalnum
 iswalpha
 iswspace
+item %p sentinel corrupted. skipping.\n
+java Class for 
+java resource 
 kill
 lchown
 ld-linux.so.2
+len < maxlen
+len > 0 || HasError()
+libSDL3.so.0
 libc.so.6
+libcurl-gnutls.so.4
+libcurl.so
+libcurl.so.3
+libcurl.so.4
 libdl.so.2
 libm.so.6
 libpthread.so.0
 librt.so.1
 link
 linux-gate.so
+locale::facet::_S_create_c_locale name not valid
 localeconv
 localtime
 localtime_r
+location
 logf
+long
+long double
+long long
+lower
 lseek
 lseek64
+m_Count == 0
+m_Elements
+m_Memory
+m_TotalElements != InvalidIndex()
+m_Tree
+m_bInitialized
+m_bSemOwner
+m_buffer
+m_fileReader
+m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
+m_iThreadMutexValidationLock == 0
+m_listChangedFiles
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+m_nAllocationCount >= 0
+m_nRecursions > 0
+m_pBudgetGroups
+m_pBudgetGroups == NULL
+m_pChild
+m_pSibling
+m_pValObjects != NULL
+m_pszName
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strWatchPath
+m_unInCounter == m_unOutCounter
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
 malloc
 malloc_usable_size
+maps
+maxLen <= INT_MAX
+maxLen == 0 || pDest != NULL
+maxLen > 0
+maxLen > 0 && maxLen <= INT_MAX
+maxLenInBytes == 0 || pDest != NULL
+maxLenInBytes >= 0
+maxlen >= 1
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -377,27 +1239,111 @@ memcmp
 memcpy
 memmove
 memset
+minidumps folder is set to %s\n
+misc.h
 mkdir
 mkfifo
 mkstemp
+mkstemp errno %d\n
 mmap
 mmap64
+mode_ == kWriteMinidumpToFile && !directory_.empty()
+model
 modf
 mold 1.10.1 (compatible with GNU ld)
 mount
 mprotect
 msync
 munmap
+my_strncmp(elf_base, "\177ELF", 4) == 0
+n == 0 || s1 != NULL
+n == 0 || s2 != NULL
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nDestSize == 0 || pDest != NULL
+nGrowSize >= 0
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nPut + nPutDelta <= outBuf.TellMaxPut()
+nSize != 0
+nSize >= 0
+nValue >= 0 && nValue <= 15
+name != __null
 nanosleep
+nattypeprobe.so
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+nsection > 0
+null
+num > 0
+numElements >= 0
+object
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset >= 0
 open
 open64
 opendir
+operator
+operator 
+operator"" 
+output
+outsize >= ( inputbytes * 2 ) + 1
+outsize >= 1
+p2pcore.so
+p2prelayserver.so
+p2pstunserver.so
+pAllocTracker->m_uSentinel == 0xaa110ced
+pChild
+pConv && pConv->GetDelimiterLength() > 0
+pDest
+pDest != NULL
+pDest >= pBuffer && pDest <= pBuffer + destBufferSize
+pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+pFmt
+pFormat != NULL
+pGroupName
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+pNode && pNode->Next == QueueEnd()
+pSearch != NULL
+pSrc != NULL
+pStr != NULL
+pStr1 != NULL
+pStr2 != NULL
+pToken
+pTracker->Find( pKey ) != NULL
+pWatcher != NULL
+panorama.so
+parms.Count() == 0
+path
+pathStringLength >= 1
+pchFileName
+pchHaystack != NULL
+pchNeedle != NULL
+pchOut
 pclose
 poll
 popen
+pos + size <= position_ + size_
 posix_fadvise
 posix_memalign
+ppFrames[iFrame] != NULL
+ppath
 pread64
+prefix != NULL
+print
+processor
+propack.so
+pstrDest[nNewLength] == '\0'
+pstrNew + nNewLength == pstrDestination + 1
+pstrNew == pstrDestination
+pstrNew == pszString
+pszName
+pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pthread_attr_init
 pthread_attr_setstacksize
 pthread_cancel
@@ -429,6 +1375,8 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
+punct
+pure virtual method called\n
 putc
 putwc
 pwrite64
@@ -438,40 +1386,110 @@ readdir64
 readlink
 realloc
 realpath
+reference temporary #
+reinterpret_cast
+release_space %llu
 rename
+request_space %llu
+response:  %s\n
 rewind
 rmdir
+root
+s1 != NULL
+s2 != NULL
+s_dev_urandom_fd >= 0
 scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
+script
+sdk32
+secblock.h
+section_size
+section_start
+sections != __null
+segment_size
+segment_start
+semaphore creation failed %s
 semctl
 semget
 semop
 sendfile64
+server.so
+serverbrowser.so
 setenv
 setlocale
 setmntent
 setpriority
 setsid
 setvbuf
+short
 sigaction
 sigaddset
 sigemptyset
 signal
+signed char
 sigprocmask
+size
+sizeof 
+sizeof...
 snprintf
+space
+spaceGranted
+spaceReleased
 sprintf
 sqrtf
+src != NULL
+src/client/linux/dump_writer_common/thread_info.cc
+src/client/linux/handler/minidump_descriptor.cc
+src/client/linux/microdump_writer/microdump_writer.cc
+src/client/linux/minidump_writer/linux_dumper.cc
+src/client/linux/minidump_writer/linux_ptrace_dumper.cc
+src/client/linux/minidump_writer/minidump_writer.cc
+src/client/minidump_file_writer.cc
+src/common/linux/elfutils.cc
+src/common/linux/file_id.cc
 sscanf
 statfs
 statfs64
+static void google_breakpad::FileID::ConvertIdentifierToString(const uint8_t*, size_t, char*, int)
+static_cast
+static_cast<Node_t*>(pNode)->elem
+status
 statvfs
 statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 reports success but zero free space\n
+statvfs64: ret %d errno %d\n
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stdin
 stdout
+steam://close
+steam://close/
+steam://openurl/
+steam://openurl_external/
+steamclient.so
+steamservice.so
+steamui.so
+steamwebhelper
+stepping
+str != NULL
 strcasecmp
 strcasestr
 strchr
@@ -480,7 +1498,9 @@ strcpy
 strdup
 strerror
 strftime
+string literal
 strlen
+strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 strncasecmp
 strncat
 strncmp
@@ -494,19 +1514,38 @@ strtold_l
 strtoll
 strtoul
 strtoull
+success = %s\n
 swprintf
 swscanf
 symlink
+syntax error at line %d near: 
 syscall
 sysconf
 system
+szDomainName != nullptr
+task
+template parameter object for 
+tenfoot.so
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+the 
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
+this
+throw
+throw 
+tid(%u) pthread_key_create failed: %s\n
 time
 timegm
 timezone
 tolower
 towupper
+transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -594,6 +1633,7 @@ typeinfo for void*
 typeinfo for wchar_t
 typeinfo for wchar_t const*
 typeinfo for wchar_t*
+typeinfo name for 
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -681,17 +1721,56 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
+ucontext_
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
 uname
 ungetc
 ungetwc
+unknown
 unlink
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+upload_file_minidump
+upper
+uptime
+urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 usleep
 utime
 utimes
+value_
+vector::_M_default_append
+vector::_M_fill_insert
+vector::_M_realloc_insert
+vector::reserve
 vendor_id
 vfork
+vgui2_s.so
+video.so
+video64_server.so
+virtual bool google_breakpad::LinuxPtraceDumper::GetThreadInfoByIndex(size_t, google_breakpad::ThreadInfo*)
+virtual thunk to 
+void
+void google_breakpad::LineReader::PopLine(unsigned int)
+void google_breakpad::MinidumpDescriptor::UpdatePath(const char*)
+void google_breakpad::MinidumpFileWriter::SetFile(int)
+void google_breakpad::ThreadInfo::GetFloatingPointRegisters(void**, size_t*)
+void google_breakpad::ThreadInfo::GetGeneralPurposeRegisters(void**, size_t*)
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
 vsnprintf
+vstdlib_wcstoi64
+vstdlib_wcstoui64
 vswprintf
+vtable for 
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -706,6 +1785,7 @@ vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 waitid
 waitpid
+wchar_t
 wcrtomb
 wcscmp
 wcslen
@@ -722,4 +1802,17 @@ wmemcpy
 wmemmove
 wmemset
 write
+write %s failed, errno = %d\n
 writev
+www.steampowered.com
+x86_64
+xdigit
+xlocale
+xmemory
+{%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
+{%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
+{anonymous}::MinidumpWriter::MinidumpWriter(const char*, int, const google_breakpad::ExceptionHandler::CrashContext*, const MappingList&, const AppMemoryList&, google_breakpad::LinuxDumper*)
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

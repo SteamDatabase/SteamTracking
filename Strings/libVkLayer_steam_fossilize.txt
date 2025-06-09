@@ -1,24 +1,214 @@
+  what():  
+ (pNext->sType chain: [
+ [clone 
+ __vector(
+ const
+ for 
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
 !a9X
 $ORIGIN
+%016llx
+%02x
+%02x.%016llx.json
 %4xY
+%s handle 0x%016llx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%x.%llx.json
+(anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-0123456789
 -St9bad_alloc
 -sSO\
+.foz
 .wN\f9
+/fossilize-replayer-%d-%u
+/proc/self/%s
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+0123456789
 0123456789ABCDEF
+10.0.3
 11eU%
 9a&g
 :V!2m
 ;\tFzo
 @BXV
 @iZb
+AKST
+ASCII
+ASCII//TRANSLIT
+ApplicationName
+ApplicationVersion
+ApplicationVersionMajor
+ApplicationVersionMinor
+ApplicationVersionPatch
+April
+August
+Base pipeline
+Base pipeline index is out of range.\n
+Binary varint buffer overflows payload.\n
+BindlessUBO
+BufferDeviceAddress
 CH\f1
+CRC mismatch!\n
+CRC-32 check failed
+Cannot copy unknown pNext sType: %d.\n
+Cannot find compute pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find descriptor set layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find graphics pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find pipeline layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find raytracing pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find render pass in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find sampler in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot find shader module in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Cannot shallow copy unknown pNext sType: %d.\n
+Cannot use imported metadata along with white- or blacklists.\n
+Cannot use imported metadata together with blacklists.\n
+Cannot use imported metadata together with whitelists.\n
+Compute pipeline
+December
+Descriptor set layout
+DescriptorBuffer
+Detected sliced file. Dropping entries from here.\n
+DynamicRendering
+EngineName
+EngineVersion
+EngineVersionMajor
+EngineVersionMinor
+EngineVersionPatch
 EydV
 FOSSILIZEDB
+FOSSILIZE_APPLICATION_INFO_FILTER_PATH
+FOSSILIZE_DUMP_SYNC
+Failed to add blob to cache.\n
+Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
+Failed to allocate space for metadata block.\n
+Failed to capture eagerly.\n
+Failed to create shared memory.\n
+Failed to extract blob.\n
+Failed to finalize archive.\n
+Failed to initialize ZIP writer from reader.\n
+Failed to map metadata block.\n
+Failed to open ZIP archive for writing. Cannot serialize anything to disk.\n
+Failed to open file: %s\n
+Failed to parse ApplicationInfoFilter, letting recording go through.\n
+Failed to parse pNext chain for sType: %d\n
+Failed to prepare database, will not dump data to database.\n
+Failed to prepare module identifier database, will not dump identifiers.\n
+Failed to prepare on-use database, will not dump those.\n
+Failed to record YCbCr conversion, usually caused by unsupported pNext.\n
+Failed to record application info.\n
+Failed to record compute pipeline, usually caused by unsupported pNext.\n
+Failed to record descriptor set layout, usually caused by unsupported pNext.\n
+Failed to record graphics pipeline, usually caused by unsupported pNext.\n
+Failed to record physical device features.\n
+Failed to record pipeline layout, usually caused by unsupported pNext.\n
+Failed to record render pass, usually caused by unsupported pNext.\n
+Failed to record sampler, usually caused by unsupported pNext.\n
+Failed to record shader module, usually caused by unsupported pNext.\n
+Failed to seek in file: %s\n
+Failed to serialize application info.\n
+Failed to shallow copy pNext chain.
+Failed to unlink SHM block.\n
+Failed to write metadata block.\n
+Failed to write serialized state to disk (%s).\n
+Failed to write serialized state to disk.\n
+February
 FoCLcx
+Fossilize ERROR: Base pipeline index is out of range.\n
+Fossilize ERROR: Binary varint buffer overflows payload.\n
+Fossilize ERROR: CRC mismatch!\n
+Fossilize ERROR: Cannot copy unknown pNext sType: %d.\n
+Fossilize ERROR: Cannot shallow copy unknown pNext sType: %d.\n
+Fossilize ERROR: Cannot use imported metadata along with white- or blacklists.\n
+Fossilize ERROR: Cannot use imported metadata together with blacklists.\n
+Fossilize ERROR: Cannot use imported metadata together with whitelists.\n
+Fossilize ERROR: Failed to add blob to cache.\n
+Fossilize ERROR: Failed to allocate space for metadata block.\n
+Fossilize ERROR: Failed to create directory %s.\n
+Fossilize ERROR: Failed to create shared memory.\n
+Fossilize ERROR: Failed to extract blob.\n
+Fossilize ERROR: Failed to finalize archive.\n
+Fossilize ERROR: Failed to initialize ZIP writer from reader.\n
+Fossilize ERROR: Failed to map metadata block.\n
+Fossilize ERROR: Failed to open ZIP archive for writing. Cannot serialize anything to disk.\n
+Fossilize ERROR: Failed to open file: %s\n
+Fossilize ERROR: Failed to parse ApplicationInfoFilter, letting recording go through.\n
+Fossilize ERROR: Failed to parse pNext chain for sType: %d\n
+Fossilize ERROR: Failed to prepare database, will not dump data to database.\n
+Fossilize ERROR: Failed to prepare module identifier database, will not dump identifiers.\n
+Fossilize ERROR: Failed to prepare on-use database, will not dump those.\n
+Fossilize ERROR: Failed to record application info.\n
+Fossilize ERROR: Failed to record physical device features.\n
+Fossilize ERROR: Failed to seek in file: %s\n
+Fossilize ERROR: Failed to serialize application info.\n
+Fossilize ERROR: Failed to shallow copy pNext chain.
+Fossilize ERROR: Failed to unlink SHM block.\n
+Fossilize ERROR: Failed to write metadata block.\n
+Fossilize ERROR: Failed to write serialized state to disk (%s).\n
+Fossilize ERROR: Failed to write serialized state to disk.\n
+Fossilize ERROR: Got parse error: %d\n
+Fossilize ERROR: Invalid varint format.\n
+Fossilize ERROR: JSON version mismatches.
+Fossilize ERROR: Member not found.\n
+Fossilize ERROR: Not a string.\n
+Fossilize ERROR: Not an array.\n
+Fossilize ERROR: Not an int.\n
+Fossilize ERROR: Not an object.\n
+Fossilize ERROR: blacklistEnvironment element must be object.\n
+Fossilize ERROR: blacklistedEnvironments must be an object.\n
+Fossilize ERROR: bucketVariantDependencies must be an array.\n
+Fossilize ERROR: mz_zip_end failed!\n
+Fossilize INFO: Overriding serialization path: "%s".\n
+Fossilize INFO: QA: Required fallback compilation for a total of %llu pipelines.\n
+Fossilize INFO: QA: Successfully created total of %llu pipelines without compilation.\n
+Fossilize INFO: Skipping recording due to environment rule for: %s.\n
+Fossilize INFO: apiVersion %u is too low for pApplicationName %s. Skipping.\n
+Fossilize INFO: apiVersion %u is too low for pEngineName %s. Skipping.\n
+Fossilize INFO: applicationVersion %u is too low for pApplicationName %s. Skipping.\n
+Fossilize INFO: engineVersion %u is too low for pEngineName %s. Skipping.\n
+Fossilize INFO: pApplicationName %s is blacklisted for recording. Skipping.\n
+Fossilize INFO: pEngineName %s is blacklisted for recording. Skipping.\n
+Fossilize WARN: %s handle 0x%016llx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
+Fossilize WARN: %s\n
+Fossilize WARN: Archive %s could not be prepared, skipping.\n
+Fossilize WARN: Cannot find compute pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find descriptor set layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find graphics pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find pipeline layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find raytracing pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find render pass in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find sampler in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find shader module in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Couldn't find variant dependency for %s, ignoring.\n
+Fossilize WARN: Detected sliced file. Dropping entries from here.\n
+Fossilize WARN: Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
+Fossilize WARN: Failed to capture eagerly.\n
+Fossilize WARN: Failed to record YCbCr conversion, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record compute pipeline, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record descriptor set layout, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record graphics pipeline, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record pipeline layout, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record render pass, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record sampler, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record shader module, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to touch last access in %s.\n
+Fossilize WARN: QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
+Fossilize WARN: Recording compute pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
+Fossilize WARN: Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
+FossilizeApplicationInfoFilter
+FragmentShadingRate
+Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
@@ -31,9 +221,21 @@ GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.6
+Got parse error: %d\n
+Graphics pipeline
 IEND
+Immutable sampler
+Invalid varint format.\n
+JArray
+JSON version mismatches.
+January
 Jugm
+July
+June
 MGiI
+March
+Monday
+MutableDescriptorType
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
@@ -51,10 +253,31 @@ NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt6thread6_StateE
 NSt8ios_base7failureE
+November
 O8Mr
+October
+Pipeline layout
+Pipeline library
+QA: Pipeline compilation required for pipeline, flags %08x'%08x.\n
 Qkkbal
 RJqn
+Raytracing pipeline
+Recording compute pipeline failed, usually caused by unsupported pNext.\n
+Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Recording ray tracing pipeline failed, usually caused by unsupported pNext.\n
+Referenced %s %016llx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
+Referenced %s %016llx, but it is VK_NULL_HANDLE.\nThe create info was likely not supported by device.\n
+Render pass
+STEAM_FOSSILIZE_DUMP_PATH
+STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
+STEAM_FOSSILIZE_IDENTIFIER_DUMP_PATH
+STEAM_FOSSILIZE_LAST_USE_TAG
+STEAM_FOSSILIZE_PRECOMPILE_QA
 STv/N
+Sampler
+Saturday
+September
+Shader module
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -122,19 +345,37 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
+Sunday
 T%L9
+TLS init function for 
+TLS wrapper function for 
+TOUCH
+Thursday
+Tuesday
 U1(\Q
+UTF-8
+Unsupported pNext found, cannot hash sType.
+Unsupported pNext found, cannot hash.
+VK_EXT_pipeline_creation_cache_control
+VK_KHR_get_physical_device_properties2
 VK_LAYER_fossilize_GetDeviceProcAddr
 VK_LAYER_fossilize_GetInstanceProcAddr
+VTT for 
+VendorID
 W4vC
+Wednesday
 X5AHx
 XqkY
 Zjz\v
 [*QmU
+[abi:
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \ysK
 ]rHa
+_Accum
+_Fract
+_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -142,16 +383,21 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_Sat 
 ___tls_get_addr
 __ctype_get_mb_cur_max
 __cxa_atexit
 __cxa_finalize
 __duplocale
 __errno_location
+__float128
 __fprintf_chk
 __freelocale
 __fxstat
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __iswctype_l
 __memcpy_chk
 __memset_chk
@@ -184,34 +430,233 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+a.out
 abort
+addressModeU
+addressModeV
+addressModeW
+alignof 
+allocation failed
+allocator
+alnum
+alpha
+alphaBlendOp
+alphaToCoverageEnable
+alphaToOneEnable
+anisotropyEnable
+anyHitShader
+apiVersion
+application
+applicationFilters
+applicationInfo
+applicationName
+applicationVersion
+archive is too large
+aspectMask
+aspectReferences
+asset
+attachment
+attachmentCount
+attachmentFragmentShadingRate
+attachments
+attributes
+auto
+auto:
+back
+basePipelineHandle
+basePipelineIndex
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
 bind_textdomain_codeset
+binding
+bindingFlags
+bindings
 bindtextdomain
+blacklistedApplicationNames
+blacklistedEngineNames
+blacklistedEnvironments
+blank
+blendConstants
+blendEnable
+blendOverlap
 bnMG
+bool
+boolean
+borderColor
 btowc
+bucketVariantDependencies
+bucketVariantFeatureDependencies
+buf error
+buffer too small
+byte
 bzo=
+cannot create std::deque larger than max_size()
+cannot create std::vector larger than max_size()
+char
+char16_t
+char32_t
+char8_t
+chromaFilter
 close
 closedir
+closestHitShader
+cntrl
+code
+codeSize
+colorAttachmentCount
+colorAttachmentFormats
+colorAttachmentInputIndices
+colorAttachmentLocations
+colorAttachments
+colorBlendOp
+colorBlendState
+colorWriteEnables
+colorWriteMask
+combinerOps
+compareEnable
+compareMask
+compareOp
+complex 
+components
+compression failed
+computePipelines
+conservativeRasterizationMode
+const_cast
+constantID
+construction vtable for 
+contains
+correlatedViewMasks
+correlationMasks
+covariant return thunk to 
+cullMode
+customBorderColor
 d6\f6
+data
+data error
+dataSize
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+decompression failed or archive is corrupted
+defaultBucketVariantDependencies
+defaultBucketVariantFeatureDependencies
+delete 
+delete[] 
+dependencies
+dependencyFlags
+depthAttachmentFormat
+depthBiasClamp
+depthBiasConstantFactor
+depthBiasEnable
+depthBiasExact
+depthBiasRepresentation
+depthBiasSlopeFactor
+depthBoundsTestEnable
+depthClampEnable
+depthClampMode
+depthClampRange
+depthClipEnable
+depthCompareOp
+depthFailOp
+depthInputAttachmentIndex
+depthResolveMode
+depthStencilAttachment
+depthStencilResolveAttachment
+depthStencilState
+depthTestEnable
+depthWriteEnable
+descriptorBuffer
+descriptorBufferCaptureReplay
+descriptorBufferImageLayoutIgnored
+descriptorBufferPushDescriptors
+descriptorCount
+descriptorType
 dgettext
+digit
+disallowMerging
+discardRectangleCount
+discardRectangleMode
+discardRectangles
+divisor
 dl_iterate_phdr
+domainOrigin
+double
+dstAccessMask
+dstAlphaBlendFactor
+dstColorBlendFactor
+dstPremultiplied
+dstStageMask
+dstSubpass
 dup2
+dynamicState
+dynamic_cast
 eax~Z
 ekhHD
+engineFilters
+engineName
+engineVersion
+equals
 execv
 exit
+extraPrimitiveOverestimationSize
+failOp
+failed finding central directory
+false
 fclose
 fcntl
 fflush
+file
+file close failed
+file create failed
+file error
+file not found
+file open failed
+file read failed
+file seek failed
+file stat failed
+file too large
+file write failed
+file://
 fileno
+finalLayout
+flags
+float
 fopen
 fopen64
+forceExplicitReconstruction
 fork
+format
+fossilize
 fputc
 fputs
+fragmentDensityMapAttachment
+fragmentShadingRateAttachment
+fragmentShadingRateEnums
+fragmentSize
 fread
 free
 freopen64
+front
+frontFace
 fseek
 fseeko64
 ftell
@@ -219,27 +664,83 @@ ftello64
 ftruncate
 futimens
 fwrite
+generalShader
+generic
 get_nprocs
 getenv
 getpgrp
 getpid
 gettext
+global constructors keyed to 
+global destructors keyed to 
+graph
+graphicsPipelines
+groups
+guard variable for 
 hGT.
+half
+hash
+height
+hidden alias for 
 i]Wb
 iconv
 iconv_close
 iconv_open
+image2DViewOf3D
+images
+imaginary 
+immutableSamplers
+initialLayout
+inputAssemblyState
+inputAttachmentIndex
+inputAttachments
+inputRate
+internal error
+intersectionShader
+invalid filename
+invalid header or archive is corrupted
+invalid parameter
 isxdigit
+java Class for 
+java resource 
 k*do^
 k0V(
 killpg
+layout
 ld-linux.so.2
 libc.so.6
 libpthread.so.0
+libraries
+libraryInfo
+libraryInterface
 librt.so.1
+lineRasterizationMode
+lineStippleFactor
+lineStipplePattern
+lineWidth
+link
+loadOp
+locale::facet::_S_create_c_locale name not valid
 localtime
+location
+logicOp
+logicOpEnable
+long
+long double
+long long
+lower
 mSx@
+magFilter
 malloc
+mapEntries
+maxAnisotropy
+maxDepth
+maxDepthBounds
+maxDepthClamp
+maxLod
+maxPipelineRayHitAttributeSize
+maxPipelineRayPayloadSize
+maxPipelineRayRecursionDepth
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -248,21 +749,79 @@ memcmp
 memcpy
 memmove
 memset
+meshShader
+meshShaderQueries
+minDepth
+minDepthBounds
+minDepthClamp
+minFilter
+minLod
+minSampleShading
+minimumApiVersion
+minimumApplicationVersion
+minimumEngineVersion
+mipLodBias
+mipmapMode
 mkdir
 mktime
 mmap
+module
 mold 1.10.1 (compatible with GNU ld)
 mr"iR
+multisampleState
+multisampledRenderToSingleSampledEnable
+multiviewMeshShader
 munmap
+mutableDescriptorTypeLists
+mz_zip_end failed!\n
 nQ:B
+name
 nanosleep
+need dictionary
+negativeOneToOne
+new 
+new[]
 nice
+no error
+noInvocationFragmentShadingRates
+non-transaction clone for 
+non-virtual thunk to 
+nonnull
+not a ZIP archive
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+nullDescriptor
+offset
 open
 opendir
+operator
+operator 
+operator"" 
+out of memory
 pH_r
+pNext
+pNext in VkApplicationInfo not supported.
+pNext in VkPipelineDynamicStateCreateInfo not supported.
+pNext in VkPipelineLayoutCreateInfo not supported.
+parameter error
+passOp
+patchControlPoints
 pc2g
+physicalDeviceFeatures
 pipe
+pipelineBindPoint
+pipelineFragmentShadingRate
+pipelineLayouts
+polygonMode
 posix_fadvise
+preserveAttachments
+primitiveFragmentShadingRate
+primitiveFragmentShadingRateMeshShader
+primitiveRestartEnable
+primitivesGeneratedQuery
+primitivesGeneratedQueryWithNonZeroStreams
+primitivesGeneratedQueryWithRasterizerDiscard
+print
+provokingVertexMode
 pthread_cond_broadcast
 pthread_cond_destroy
 pthread_cond_signal
@@ -278,28 +837,116 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_setspecific
+punct
+pure virtual method called\n
+pushConstantRanges
 quAt
 raB3G
+rasterizationSamples
+rasterizationState
+rasterizationStream
+rasterizerDiscardEnable
+raytracingPipelines
 read
 readdir
 readlink
 realloc
+recordImmutableSamplers
+reductionMode
+reference
+reference temporary #
+reinterpret_cast
 remove
+renderPass
+renderPasses
+renderPasses2
+requiredSubgroupSize
+resolveAttachments
 rewind
+robustBufferAccess
+robustBufferAccess2
+robustImageAccess
+robustImageAccess2
+sType
+sampleLocationGridSize
+sampleLocations
+sampleLocationsEnable
+sampleLocationsInfo
+sampleLocationsPerPixel
+sampleMask
+sampleShadingEnable
+sampler2DViewOf3D
+samplers
+samples
 sched_setscheduler
+scissorCount
+scissors
 send
+setLayouts
 setenv
 setlocale
 setsid
+shaderModules
+shaderObject
+shadingRateAttachmentTexelSize
 shm_open
 shm_unlink
+short
 shutdown
+signed char
+size
+sizeof 
+sizeof...
 socketpair
+space
+specializationInfo
+srcAccessMask
+srcAlphaBlendFactor
+srcColorBlendFactor
+srcPremultiplied
+srcStageMask
+srcSubpass
+srgb
 sscanf
+stage
+stageFlags
+stages
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
+stencilAttachmentFormat
+stencilFinalLayout
+stencilInitialLayout
+stencilInputAttachmentIndex
+stencilLayout
+stencilLoadOp
+stencilResolveMode
+stencilStoreOp
+stencilTestEnable
+stippledLineEnable
+storageBuffers
+storeOp
 strcmp
 strdup
+stream end
+stream error
 strerror
+stride
+string literal
 strlen
 strncmp
 strstr
@@ -307,11 +954,31 @@ strtol
 strtold_l
 strtoul
 strtoull
+subpass
+subpasses
+supersampleFragmentShadingRates
 syscall
+system
 tC7Ddx
+taskShader
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+tessellationState
+this
+throw
+throw 
 time
+too many files
+topology
+transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
+true
+type
+typeinfo fn for 
+typeinfo for 
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -320,6 +987,7 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -328,11 +996,76 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+undefined error
+unexpected decompressed size
+uniformBuffers
+unknown error
+unnormalizedCoordinates
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported central directory size
+unsupported encryption
+unsupported feature
+unsupported method
+unsupported multidisk archive
+upper
 usleep
 utime
 uuuuuuuubtnufruuuuuuuuuuuuuuuuuu
 vH7B
+validation failed
+varintOffset
+varintSize
+vector::_M_default_append
+vector::_M_realloc_insert
+vector::reserve
+version
+version error
+vertexBindingDivisorCount
+vertexBindingDivisors
+vertexInputState
+vertexInputs
+viewMask
+viewMasks
+viewOffset
+viewOffsets
+viewportCount
+viewportState
+viewports
+virtual thunk to 
+vkCreateComputePipelines
+vkCreateDescriptorSetLayout
+vkCreateDevice
+vkCreateGraphicsPipelines
+vkCreateInstance
+vkCreatePipelineBinariesKHR
+vkCreatePipelineLayout
+vkCreateRayTracingPipelinesKHR
+vkCreateRenderPass
+vkCreateRenderPass2
+vkCreateRenderPass2KHR
+vkCreateSampler
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversionKHR
+vkCreateShaderModule
+vkDestroyDevice
+vkDestroyInstance
+vkDestroyPipeline
+vkGetDeviceProcAddr
+vkGetInstanceProcAddr
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2KHR
+vkGetShaderModuleCreateInfoIdentifierEXT
+vkGetShaderModuleIdentifierEXT
+void
 vsnprintf
+vtable for 
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -342,11 +1075,13 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 waitpid
+wchar_t
 wcrtomb
 wcscmp
 wcslen
 wcsnrtombs
 wctob
+width
 wmemchr
 wmemcmp
 wmemcpy
@@ -354,7 +1089,18 @@ wmemmove
 wmemset
 wn>Jj
 write
+write calledback failed
+writeMask
+xChromaOffset
+xdigit
 xg^Jp5|
+yChromaOffset
 yMzw\n
+ycbcrModel
+ycbcrRange
 z^KD
+{default arg#
+{lambda(
+{parm#
+{unnamed type#
 {zel#|67

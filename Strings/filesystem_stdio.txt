@@ -1,4 +1,101 @@
+  f_bavail: %llu\n
+  f_bfree : %llu\n
+  f_blocks: %llu\n
+  f_bsize : %lu\n
+  f_frsize: %lu\n
+  what():  
+ 2>/dev/null
+ [clone 
+ __vector(
+ const
+ for 
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
+!m_bMounted
+!m_data.HasError()
+!pszString || pszString[nChars] == '\0'
+!strchr(filename, '\n') && !strchr(filename, '\r')
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
+#!/bin/sh\nexit 0\n
 $ORIGIN
+%.17g
+%.18g
+%d MB avail\n
+%d MB free space\n
+%d MB total space\n
+%d:00
+%lld
+%llu
+%s has %i files
+%s is not a packfile
+%s overflow!\n
+%s%c.temp_write_%x
+%s.%u.tmp
+%s.async%u.tmp
+%s/.steam/%s
+%s/.steam/steam
+%s/steamXXXXXX
+%s: __pos (which is %zu) > this->size() (which is %zu)
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+(anonymous namespace)
+(unsigned)elem <= (unsigned)m_Size
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+---------------\n
+---FS:  %s %s\n
+---FS:  close %s %p %i\n
+---FS:  read %s %llu %p\n
+---FS:  write %s %llu %p\n
+-0123456789
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
+-fs_log
+-fs_logbins
+-fs_target
+.bsp
+.cpl
+.steam_exec_test.sh
+/data/src/external/picojson/picojson.h
+/data/src/filesystem/BaseFileSystem.cpp
+/data/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/data/src/public/tier0/tslist.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlsymbol.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/tier1/utlsymbol.cpp
+/dev
+/dev/
+/dev/disk/by-uuid
+/etc/mtab
+/proc/mounts
+/tmp
+/tmp/disk-free.XXXXXX
+/ubuntu12_32
+/ubuntu12_64/disk-free 
+/usr/bin/crosdisk %s
+0123456789
+0123456789ABCDEF
+0123456789abcdef
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -56,8 +153,62 @@ $ORIGIN
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapIPKcii22CDefCaselessStringLessE
 9IValidate
+:done\n
+:error\n
+@echo off\n
+@echo on\n
+AKST
+ASCII
+ASCII//TRANSLIT
+April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+Assertion failed: length > k_cchMaxString
+August
+BCreateDirectory
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsOpen()
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+Breaking '%s' in '%s'\n
+CBaseFileSystem
+CBaseFileSystem::Close
+CBaseFileSystem::FPrintf
+CBaseFileSystem::FileExists
+CBaseFileSystem::FindFirst
+CBaseFileSystem::FindNext
+CBaseFileSystem::Flush
+CBaseFileSystem::GetFileTime
+CBaseFileSystem::Open
+CBaseFileSystem::Read
+CBaseFileSystem::Seek
+CBaseFileSystem::Size
+CBaseFileSystem::Tell
+CBaseFileSystem::Write
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileSystem_Stdio
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
+CPathString
+CUtlBuffer
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlDict
+CUtlString::ReplaceInternal
+CUtlString::SetValue
+CUtlString::VAppendFormat
+CUtlString::VFormat
+CUtlStringBuilder::Data::MoveToHeap
+CUtlStringBuilder::InternalPrepareBuffer
+CUtlStringBuilder::ReplaceInternal
+CUtlSymbol::ValidateGlobals
+CUtlSymbolTable
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*, bool)
 CValidator::ClaimMemory(void const*, bool)
@@ -65,8 +216,53 @@ CValidator::DumpDoubleClaim(char const*) const
 CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+Couldn't open .bsp %s for embedded pack file check\n
+Couldn't write %s: %s\n
 CreateInterface
+DBG_PATHMATCH
+DBG_STAT
+DEFAULT_WRITE_PATH
+DLOPEN Error:%s\n
+December
+Don't know how to check filesystem type on POSIX!
+EXECUTABLE_PATH
+Element( i )
 Error
+Error State on string being set.
+Execute: %s\n
+Expected %lld but got %lld!
+FS:  Specified two path IDs (%s, %s).\n
+FS:  Tried to Close NULL file handle!\n
+FS:  Tried to Close NULL file pointer inside valid file handle!\n
+FS:  Tried to EndOfFile NULL file handle!\n
+FS:  Tried to EndOfFile NULL file pointer inside valid file handle!\n
+FS:  Tried to FPrintf NULL file handle!\n
+FS:  Tried to FPrintf NULL file pointer inside valid file handle!\n
+FS:  Tried to Flush NULL file handle!\n
+FS:  Tried to Flush NULL file pointer inside valid file handle!\n
+FS:  Tried to IsOk NULL file handle!\n
+FS:  Tried to IsOk NULL file pointer inside valid file handle!\n
+FS:  Tried to Read NULL file handle!\n
+FS:  Tried to Read NULL file pointer inside valid file handle!\n
+FS:  Tried to Seek NULL file pointer inside valid file handle!\n
+FS:  Tried to Size NULL file handle!\n
+FS:  Tried to Size NULL file pointer inside valid file handle!\n
+FS:  Tried to Size NULL filename!\n
+FS:  Tried to Tell NULL file handle!\n
+FS:  Tried to Tell NULL file pointer inside valid file handle!\n
+FS:  Tried to Write NULL file handle!\n
+FS:  Tried to Write NULL file pointer inside valid file handle!\n
+FS_stat on file %s which appeared to exist failed!!!\n
+Failed system(%s) in execute test: %d %s\n
+Failed system(%s) in execute test: %d\n
+Failed to load optional module %s\n
+February
+File %s was never closed\n
+File change notification for %s but no file contents changed based on hash\n
+Filesystem
+Free disk space for %s would overflow
+Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GLIBC_2.0
@@ -81,6 +277,28 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
+HOME
+IVALIDATE001
+Invalid FileWriterItem_t
+Invalid index %u
+IsText()
+IsValidIndex( elem )
+IsValidIndex(elem)
+JArray
+January
+July
+June
+LOCK_EX
+LOCK_SH
+LoadFileRangeIntoBuffer_Internal
+Log file system accesses
+Log the binaries we load during operation
+Lowered '%s' -> '%s'\n
+March
+Matched '%s' -> '%s'\n
+Monday
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N17CFileWriterThread14CFileWriteItemE
@@ -93,6 +311,9 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt6locale5facetE
 NSt8ios_base7failureE
+November
+October
+Paths:\n
 Plat_CommandLineParamExists
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
@@ -100,6 +321,13 @@ Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_ctime
 Plat_localtime
+PrepareBuffer( nNewLength ) == pstrNew
+Requested non-existent write path %s!\n
+Saturday
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
+September
+Set target syntax
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -168,6 +396,8 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
+StaticFileWriterThread()
+Steam - DirWatcher
 SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
@@ -191,6 +421,11 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
+Sunday
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+TLS init function for 
+TLS wrapper function for 
+TMPDIR
 TSListBase_Init
 TSListBase_Pop
 TSListBase_UnsafePeek
@@ -207,7 +442,22 @@ ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
+Thursday
+Tried to Seek NULL file handle!\n
+Tried to close unknown file pointer %p\n
+Tried to read %llu bytes from unknown file pointer %p\n
+Tried to write %llu bytes from unknown file pointer %p\n
+Tuesday
+UTF-8
+Unable to remove %s!\n
+Unable to rename %s to %s!\n
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unmatched %s\n
+VBaseFileSystem008
+VFileSystem014
 VProfInternalEnterScopeCurrentThread
+VTT for 
 V_AppendSlash
 V_ComposeFileName
 V_ExtractFileExtension
@@ -218,6 +468,7 @@ V_FormatAndAppend
 V_IsAbsolutePath
 V_MakeAbsolutePath
 V_RemoveDotSlashes
+V_RemoveDotSlashes failed for "%s".
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
@@ -242,7 +493,16 @@ V_strnicmp
 V_strnistr
 V_vsnprintf
 V_vsnprintfRet
+WORKAROUND_GdbSymbolLoadHook
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
+Wednesday
+[abi:
+\t(%zu) comparing %s with %s\n
+\u%04x
+_Accum
+_Fract
+_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -250,6 +510,8 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( y, unNodeSize, pMemBase )
+_Sat 
 ___tls_get_addr
 __ctype_b_loc
 __ctype_get_mb_cur_max
@@ -258,11 +520,15 @@ __cxa_atexit
 __cxa_finalize
 __duplocale
 __errno_location
+__float128
 __fprintf_chk
 __fread_chk
 __freelocale
 __fxstat64
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __iswctype_l
 __lxstat
 __lxstat64
@@ -344,26 +610,112 @@ _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
 access
+alignof 
+allocator
+alnum
+alpha
 alphasort64
+alse
+array
+auto
+auto:
+availableSpace
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
 bind_textdomain_codeset
 bindtextdomain
+blank
+bool
+boolean
 btowc
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+byte
+cActualReplacements == cReplacements
+cbActual < (uint32)nBufSizeWithTerminator
+cbToRead <= 1024 * 1024 * 1024
+char
+char16_t
+char32_t
+char8_t
 chdir
 chmod
 chown
 clock_gettime
 close
 closedir
+cntrl
+complex 
+const_cast
+construction vtable for 
+copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\filesystem_stdio.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\launcher.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\materialsystem.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\mss32.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\shader_nv*.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\shaderapidx9.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\soundemittersystem.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\stdshader*.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\studiorender.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\tier0.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\vgui2.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\vguimatsurface.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\voice_miles.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\vphysics.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\vstdlib.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\hl2.dat" "%%fs_target%%"\n
+copy "%%binsrc%%\hl2.exe" "%%fs_target%%"\n
+copy "%%binsrc%%\hl2\bin\gameui.dll" "%%fs_target%%\hl2\bin"\n
+copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"\n
+copy "%s" "%s"\n
+covariant return thunk to 
+cubBytesToRead < INT32_MAX
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete 
+delete[] 
+desktop
 dgettext
+digit
+disk-free command failed\n
+diskSize
 dl_iterate_phdr
 dlclose
 dlerror
 dlmopen
+dlmopen %s failed: %s\n
 dlopen
 dlsym
+double
+dynamic_cast
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
+echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
 endmntent
+error
+existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
+expandableSpace
 faccessat
 fallocate64
+false
+false 
 fclose
 fcntl
 fdatasync
@@ -372,39 +724,73 @@ feof
 ferror
 fflush
 fgets
+fileHeader.compressionMethod == 0
+fileHeader.signature == 0x02014b50
 fileno
+filetime
+float
 flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 fnmatch
 fopen
+fopen tmpfile failed\n
 fopen64
+foundEndOfCentralDirRecord
 fputc
 fputs
 fread
 free
 freopen
+fs_debug
+fs_debug: %s\n
 fscanf
+fscanf disk-free output failed\n
 fseek
 fseeko64
+fsync %s failed, errno = %d\n
 ftell
 ftello64
 ftruncate64
 futimes
 fwrite
+g_FileSystem_Stdio
+g_PathIDTable
 g_VProfProfilesRunningCount
+g_VecLoadedModules
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
+get_disk_info
 getc
 getcwd
 getenv
 getmntent
 gettext
 getwc
+global constructors keyed to 
+global destructors keyed to 
+goto done\n
+graph
+guard variable for 
+half
+hidden alias for 
 iconv
 iconv_close
 iconv_open
+if "%%fs_target%%" == "" goto error\n
+imaginary 
+info.m_pReplacementString == 0
 ioctl
 isspace
+java Class for 
+java resource 
 lchown
 ld-linux.so.2
+len <= INT_MAX
+len > 0 || HasError()
 libc.so.6
 libdl.so.2
 libm.so.6
@@ -413,8 +799,50 @@ librt.so.1
 libtier0_s.so
 libvstdlib_s.so
 link
+localFileHeader.signature == 0x04034b50
+locale::facet::_S_create_c_locale name not valid
 localeconv
+long
+long double
+long long
+lower
 lseek64
+m_Count == 0
+m_Elements
+m_FileNames
+m_FindData
+m_FindData[ iFind ].m_VisitedFiles
+m_FindData[ iFind ].m_VisitedSearchPaths
+m_FindData[ iFind ].wildCardString
+m_LogFuncs
+m_Lookup
+m_Memory
+m_OpenedFileHandles
+m_OpenedFiles
+m_PackFileHandles
+m_PathIDInfos
+m_SearchPaths
+m_SearchPaths[ iPath ].m_PackFiles
+m_StringPools
+m_TotalElements != InvalidIndex()
+m_Tree
+m_buffer
+m_fileReader
+m_listChangedFiles
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+m_nAllocationCount >= 0
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strWatchPath
+m_unInCounter == m_unOutCounter
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
 malloc
 mbrtowc
 mbsnrtowcs
@@ -425,25 +853,79 @@ memcpy
 memmove
 memset
 mkdir
+mkdir "%%fs_target%%"\n
+mkdir "%%fs_target%%\bin"\n
+mkdir "%s"\n
 mkfifo
 mkstemp
+mkstemp errno %d\n
 mmap64
 modf
 mold 1.10.1 (compatible with GNU ld)
 mount
 msync
 munmap
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nBytesRead <= INT_MAX
+nBytesWritten <= INT_MAX
+nGrowSize >= 0
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nPut + nPutDelta <= outBuf.TellMaxPut()
+nSize != 0
+nSize >= 0
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+null
+num > 0
+numElements >= 0
+object
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset >= 0
 open
 open64
 opendir
+operator
+operator 
+operator"" 
+pConv && pConv->GetDelimiterLength() > 0
+pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+pFindData
+pFmt
+pHandle
+pModule == nullptr
+pNode && pNode->Next == QueueEnd()
+pOldPath && pNewPath
+pOldPathId
+pPathID
+pPool->m_SpaceUsed < 0xFFFF
+pToken
+pWatcher != NULL
+pWildCard
+packfile.m_bIsPackFile
+packfile.m_hPackFile
+pathID
 pclose
 poll
 popen
 posix_fadvise
 pread64
+print
+pstrDest[nNewLength] == '\0'
+pstrNew + nNewLength == pstrDestination + 1
+pstrNew == pstrDestination
+pstrNew == pszString
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+punct
+pure virtual method called\n
 putc
 puts
 putwc
@@ -453,20 +935,58 @@ readdir64
 readlink
 realloc
 realpath
+reference temporary #
+reinterpret_cast
+release_space %llu
 rename
+request_space %llu
 rmdir
+root
+s_bAllowStaticSymbolTable
+s_pSymbolTable
 scandir
 scandir64
 sched_yield
 sendfile64
+set binsrc="%s"\n
+set fs_target="%s"\n
+setlocal\n
 setlocale
 setmntent
 setvbuf
+short
+signed char
+sizeof 
+sizeof...
+space
+spaceGranted
+spaceReleased
 sscanf
+stat
 statfs
 statfs64
+static_cast
+static_cast<Node_t*>(pNode)->elem
 statvfs
 statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 reports success but zero free space\n
+statvfs64: ret %d errno %d\n
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stderr
 stdin
 stdout
@@ -477,7 +997,9 @@ strcmp
 strdup
 strerror
 strftime
+string literal
 strlen
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
 strncmp
 strncpy
@@ -490,31 +1012,59 @@ strtold_l
 strtoll
 strtoul
 symlink
+syntax error at line %d near: 
 syscall
 system
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+throw
+throw 
 time
 tolower
 toupper
+transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
 ungetc
 ungetwc
 unlink
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+upper
 usleep
 utime
 utimes
+vector::_M_realloc_insert
+virtual thunk to 
+void
 vsnprintf
+vtable for 
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -523,6 +1073,7 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
+wchar_t
 wcrtomb
 wcscmp
 wcscpy
@@ -535,4 +1086,11 @@ wmemcpy
 wmemmove
 wmemset
 write
+write %s failed, errno = %d\n
 writev
+xdigit
+zip%i.zip
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

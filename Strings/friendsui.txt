@@ -1,16 +1,149 @@
+  Actual   : 
+  Comment started here.
+  Expected : 
+  f_bavail: %llu\n
+  f_bfree : %llu\n
+  f_blocks: %llu\n
+  f_bsize : %lu\n
+  f_frsize: %lu\n
+  what():  
  !"#$%&'()*+,-./0123
+ +0000
+ 2>/dev/null
+ = { <proto text format> }". To set fields within it, use syntax like "
+ BackUp() can only be called after Next().
+ Can't back up over more bytes than were returned by the last call to Next().
+ Outdent() without matching Indent().
+ Parameter to BackUp() can't be negative.
+ ReadToken overflow
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
+ [clone 
+ [default = $0
  \n\vinitial_top
+ __vector(
+ a protocol 
+ args were given.  Full format string was: "
+ arguments. 
+ but running with 
+ bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
+ cannot be required.
+ conflicts with an existing enum type.
+ conflicts with an existing field.
+ conflicts with an existing nested message type.
+ conflicts with an existing oneof type.
+ const
+ contains invalid 
+ definition file imports the proto which defines the option.
+ details: 
+ exceeded maximum protobuf size of 2GB: 
+ for 
+ has the same name as 
+ if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ is unused.
+ libpng version 1.6.37 - April 14, 2019\n\n
+ message of type "
+ noexcept
+ not found
+ of the Protocol Buffer runtime library, but the installed version is 
+ of the Protocol Buffer runtime library, which is not compatible with the installed version (
+ restrict
+ stack frames not accounted for stack unwind.
+ throw
+ transaction_safe
+ type does not match\n
+ using zstream
+ volatile
+ was modified concurrently during serialization.
+ with type 
+!"Not implemented"
+!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!("Invalid number of parameters")
+!("No handler for vgui message function")
+!(cascadeMenu && checkable)
 !1AQaq
 !AxU
+!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !\n\finitial_left
+!is_large()
+!m_SelectedItems.HasElement( itemID )
+!m_data.HasError()
+!m_pInt
+!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pCmd->has_hwnd_browser()
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pszString || pszString[nChars] == '\0'
+!sm_bShutDown
+!sm_bShuttingDown
+!sm_pLogInstance
 " \n\rCMsgSetUIMode
+" because it is missing required fields: 
+" conflicts with field "
+" conflicts with the existing symbol "
+" contains null character.
+" for field "
+" for option "
+" has no field named "
+" has no value named "
+" has not been loaded.
+" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
+" is already defined in "
+" is already defined in file "
+" is already defined.
+" is an atomic type, not a message.
+" is missing required fields: 
+" is not a field or extension of message "
+" is not a message type.
+" is not a proto3 enum, but is used in "
+" is not a type.
+" is not a valid identifier.
+" is not an enum type.
+" is not defined or is not an extension of "
+" is not defined.
+" is resolved to "
+" is resolved to "(
+" is specified along with field "
+" is specified multiple times.
+" must be unique within 
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" seems to be defined in "
+" stored in google.protobuf.Any has missing required fields
+" stored in google.protobuf.Any.
+" unknown. Ensure that your proto
+" uses the same enum value as "
+" was already set.
+" was listed twice.
+" was not found or had errors.
+" which is a proto3 message type.
+" which is not defined or is not an extension of "
+" which is.
 "#\n\tCMsgClose
+"$0" does not declare $1 as an extension number.
 "&\n\fCMsgStopLoad
 "'\n\rCMsgShowPopup
 "(\n&CClientNotificationOverlaySplashScreen"L\n,CClientNotificationBroadcastAvailableToWatch
+") is not compatible with this reflection object (which is for type "
+") to start from the outermost scope.
+").  Note that the exact same class is required; not just the same descriptor.
 "*\n(CClientNotificationClaimSteamDeckRewards"6\n
 "*\n(CClientNotificationHardwareSurveyPending"7\n
+", another member of oneof "
+", but only 
+", field number 
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+", which is not imported by "
+".  To use it here, please add the necessary import.
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
+". This appears to be a value from a sibling type.
+". This is not 
+". Value: "
+"/*" inside block comment.  Block comments cannot be nested.
+"0x" must be followed by hex digits.
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
 "3\n\rCRemoteHIDMsg
@@ -18,19 +151,208 @@
 "????'????????????????????????????????????????????????????\????
 "A\n%CClientNotificationFriendInviteRollup
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
+"DeleteMapValue"
+"GetMapData"
+"GetRawRepeatedField"
+"InsertOrLookupMapValue"
+"LookupMapValue"
+"MapBegin"
+"MapEnd"
+"MapSize"
+"MutableRawRepeatedField"
 "N\n"CClientNotificationPlaytimeWarning
 "P\n*CClientNotificationRemoteClientStartStream
 "\n\fapplist_base
 "\n\farray_values
 "^\n\fOneofOptions
 "_\n$CClientNotificationGameRecordingStop
+"ctrl"\t"1"\n
+"e" must be followed by exponent.
 "f\n+CClientNotificationGameRecordingInstantClip
+"keycode"\t"%s"\n
 "p\n+CClientNotificationFamilySharingStopPlaying
+"shift"\t"1"\n
 "t\n\rCMsgAddHeader
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
+#!/bin/sh\nexit 0\n
 #3CScs
 #FLR
+#FileOpenDialog_Cancel
+#FileOpenDialog_Col_Attributes
+#FileOpenDialog_Col_DateCreated
+#FileOpenDialog_Col_DateModified
+#FileOpenDialog_Col_Name
+#FileOpenDialog_Col_Size
+#FileOpenDialog_Col_Type
+#FileOpenDialog_FileType_Folder
+#FileOpenDialog_File_name
+#FileOpenDialog_File_type
+#FileOpenDialog_Look_in
+#FileOpenDialog_NewFolderPrompt
+#FileOpenDialog_NewFolder_DefaultName
+#FileOpenDialog_NewFolder_InputTitle
+#FileOpenDialog_Open
+#FileOpenDialog_Save
+#FileOpenDialog_ToolTip_NewFolder
+#FileOpenDialog_ToolTip_Up
+#Frame_Untitled
+#Friends_NameChangeCooldown_Info
+#Friends_NameChangeDenied_Info
+#Friends_NameChangeFailed_Info
+#Friends_NameChangeInvalid_Info
+#Friends_NameChangeThrottled_Info
+#MessageBox_OK
+#Panorama_Lang_Arabic
+#Panorama_Lang_Brazilian
+#Panorama_Lang_Bulgarian
+#Panorama_Lang_Czech
+#Panorama_Lang_Danish
+#Panorama_Lang_Dutch
+#Panorama_Lang_English
+#Panorama_Lang_Finnish
+#Panorama_Lang_French
+#Panorama_Lang_German
+#Panorama_Lang_Greek
+#Panorama_Lang_Hungarian
+#Panorama_Lang_Indonesian
+#Panorama_Lang_Italian
+#Panorama_Lang_Japanese
+#Panorama_Lang_Korean
+#Panorama_Lang_Latam_Spanish
+#Panorama_Lang_Norwegian
+#Panorama_Lang_Polish
+#Panorama_Lang_Portuguese
+#Panorama_Lang_Romanian
+#Panorama_Lang_Russian
+#Panorama_Lang_Simplified_Chinese
+#Panorama_Lang_Spanish
+#Panorama_Lang_Swedish
+#Panorama_Lang_Thai
+#Panorama_Lang_Traditional_Chinese
+#Panorama_Lang_Turkish
+#Panorama_Lang_Ukrainian
+#Panorama_Lang_Vietnamese
+#Panorama_Selection_Arabic
+#Panorama_Selection_Brazilian
+#Panorama_Selection_Bulgarian
+#Panorama_Selection_Czech
+#Panorama_Selection_Danish
+#Panorama_Selection_Dutch
+#Panorama_Selection_English
+#Panorama_Selection_Finnish
+#Panorama_Selection_French
+#Panorama_Selection_German
+#Panorama_Selection_Greek
+#Panorama_Selection_Hungarian
+#Panorama_Selection_Indonesian
+#Panorama_Selection_Italian
+#Panorama_Selection_Japanese
+#Panorama_Selection_Korean
+#Panorama_Selection_Latam_Spanish
+#Panorama_Selection_Norwegian
+#Panorama_Selection_Polish
+#Panorama_Selection_Portuguese
+#Panorama_Selection_Romanian
+#Panorama_Selection_Russian
+#Panorama_Selection_Simplified_Chinese
+#Panorama_Selection_Spanish
+#Panorama_Selection_Swedish
+#Panorama_Selection_Thai
+#Panorama_Selection_Traditional_Chinese
+#Panorama_Selection_Turkish
+#Panorama_Selection_Ukrainian
+#Panorama_Selection_Vietnamese
+#QueryBox_Cancel
+#SteamUI_Selection_Arabic
+#SteamUI_Selection_Brazilian
+#SteamUI_Selection_Bulgarian
+#SteamUI_Selection_Czech
+#SteamUI_Selection_Danish
+#SteamUI_Selection_Dutch
+#SteamUI_Selection_English
+#SteamUI_Selection_Finnish
+#SteamUI_Selection_French
+#SteamUI_Selection_German
+#SteamUI_Selection_Greek
+#SteamUI_Selection_Hungarian
+#SteamUI_Selection_Indonesian
+#SteamUI_Selection_Italian
+#SteamUI_Selection_Japanese
+#SteamUI_Selection_Korean
+#SteamUI_Selection_Latam_Spanish
+#SteamUI_Selection_Norwegian
+#SteamUI_Selection_Polish
+#SteamUI_Selection_Portuguese
+#SteamUI_Selection_Romanian
+#SteamUI_Selection_Russian
+#SteamUI_Selection_Simplified_Chinese
+#SteamUI_Selection_Spanish
+#SteamUI_Selection_Swedish
+#SteamUI_Selection_Thai
+#SteamUI_Selection_Traditional_Chinese
+#SteamUI_Selection_Turkish
+#SteamUI_Selection_Ukrainian
+#SteamUI_Selection_Vietnamese
+#Steam_Browser_Disabled
+#Steam_Browser_Disabled_KB
+#Steam_Browser_Disabled_KB_URL
+#SysMenu_Close
+#SysMenu_Maximize
+#SysMenu_Minimize
+#TextEntry_AppendText
+#TextEntry_ConversionMode
+#TextEntry_Copy
+#TextEntry_CopyAllToClipboard
+#TextEntry_Cut
+#TextEntry_Language
+#TextEntry_Paste
+#TextEntry_PrependText
+#TextEntry_ReplaceText
+#TextEntry_SelectAll
+#TextEntry_SentenceMode
+#VGui_Cancel
+#VGui_CreateFolder
+#VGui_OK
+#VGui_Select
 #bML"
+#include
+#include is NULL 
 #tDq
+#var_%s
+#vgui_CreateDirectoryFail_AlreadyExists
+#vgui_CreateDirectoryFail_Info
+#vgui_CreateDirectoryFail_Title
+#vgui_HTMLBack
+#vgui_HTMLCopyLink
+#vgui_HTMLCopyUrl
+#vgui_HTMLForward
+#vgui_HTMLInspectElement
+#vgui_HTMLOpenDevTools
+#vgui_HTMLReload
+#vgui_HTMLStop
+#vgui_HTMLViewSource
+#vgui_Webkit_badurl
+#vgui_Webkit_cachemiss
+#vgui_Webkit_connectionproblem
+#vgui_Webkit_error_header
+#vgui_Webkit_error_title
+#vgui_Webkit_proxyconnectionproblem
+#vgui_Webkit_unknown
+#vgui_cancel
+#vgui_choosedirectoryname
+#vgui_ok
+$0  extend .$1 {\n
+$0  extensions $1 to $2;\n
+$0  reserved 
+$0 to max, 
+$0$1$2 $3 = $4
+$0enum $1 {\n
+$0message $1
+$0oneof $1 {
+$0option $1;\n
+$0rpc $1($4.$2) returns ($5.$3)
 $4DTdt
 $ORIGIN
 $\n k_BluetoothDeviceType_Headphones
@@ -72,10 +394,21 @@ $\n k_EStreamFrameResultDroppedReset
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
 $\nY8O
+%.17g
+%.18g
+%02d/%02d/%02d
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+%04u%02u%02u
+%04u%02u%02u%02u%02u%02u
+%04u%02u%02uT%02u%02u%02uZ
+%04u-%02u-%02u
+%04u-%02u-%02u %02u:%02u:%02u
 %5EUeu
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
 %Y-%m-%d %H:%M:%S
+%Y-%m-%dT%H:%M:%S+00:00
 %Y-%m-%dT%H:%M:%SZ
 %\n k_EPersonaStateFlag_ClientTypeVR
 %\n k_EStreamControlStartNeptuneData
@@ -103,6 +436,47 @@ $\nY8O
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
+%a, %e %b %Y %H:%M:%S
+%a, %e %b %Y %H:%M:%S 
+%a, %e-%b-%Y %H:%M:%S
+%a, %e-%b-%y %H:%M:%S
+%d %d %d %d
+%d MB avail\n
+%d MB free space\n
+%d MB total space\n
+%d.%d.%d.%d:%d
+%d:00
+%f %f %f %f
+%hu:%u:%u%c
+%i.%i.%i.%i
+%i.%i.%i.%i:%i
+%lld
+%llu
+%s (%d,%d,%d,%d)
+%s [%s]%-*s
+%s call had invalid argument (arg %d): %s
+%s overflow!\n
+%s requires %d arguments; only %d given
+%s%02d
+%s%02d:%02d:%02d
+%s%c.temp_write_%x
+%s%s %s: %s\n
+%s%s[%d]: -> %s\n
+%s%s_full.jpg
+%s.%10u.txt
+%s.%u.tmp
+%s.async%u.tmp
+%s.current.txt
+%s/.steam/%s
+%s/.steam/steam
+%s/steamXXXXXX
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%s:%d: OpenSSL internal error: %s\n
+%s:hscroll
+%s:vscroll
+%s_collapsed
+%s_hidden
+%s_url
 &6FVfv
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n!k_EStreamControlEnableNeptuneData
@@ -161,7 +535,13 @@ $\nY8O
 '\n#k_EStreamControlStartMicrophoneData
 '\n#k_EStreamControlToggleMagnification
 '\n#k_EStreamControl_LAST_SETUP_MESSAGE
+( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (8HXhx
+(KeyValues*)m_ReplacedKVs.Element(idx)
+(KeyValues*)m_ResourceCache.Element(idx)
 (\n disable_nvidia_hardware_encoding
 (\n#k_EStreamControlControllerConfigMsg
 (\n$k_EBroadcastPermissionFriendsAllowed
@@ -271,6 +651,15 @@ $\nY8O
 (\v2\f.CMsgJSValue"g\n
 (\v2\f.CMsgJSValue"x\n
 (\v2\f.ParentalApp
+(anonymous namespace)
+(cannot determine missing fields for lite message)
+(eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
+(elem == Count()) || IsValidIndex(elem)
+(merge 
+(null)
+(unsigned)elem <= (unsigned)m_Size
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )9IYiy
 )\n$k_EPersonaStateFlag_ClientTypeMobile
 )\n$k_EStreamControlPauseControllerInput
@@ -350,6 +739,9 @@ $\nY8O
 *\n\frestrictions
 *^\n\fELogFileType
 *d\n\fEAudioFormat
+*m_vecControllers[ i ]
+*pchMsg && *pchMsg == '%'
+*pcubDecodedData
 *|\n\fECPUGovernor
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -373,6 +765,20 @@ $\nY8O
 +\n\vmethod_type
 +\n\vmouse_wheel
 +ulsX
+, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
+, but was 
+, int SubTabPosition
+, int showDownArrow
+, int zpos, string image, string border, string fillcolor, bool scaleImage, bool gradientVertical, color gradientStart, color gradientEnd
+, not just within "
+, string URLText
+, string command, int default
+, string image
+, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
+, string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
+, string progress, string variable
+, string text, bool scrollbar
+, string title
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
@@ -397,6 +803,12 @@ $\nY8O
 ,\n\fvideo_encode
 ,\n\nerror_type
 ,\n\tfinger_up
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-------------------\n
+-----CJSArray-----\n
+-----CJSObject-----\n
+-0123456789
 -\n%enable_hardware_encoding_amd_OBSOLETE
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n(k_EStreamControlTouchActionSetLayerAdded
@@ -413,6 +825,47 @@ $\nY8O
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
+-dev
+-devsites
+-devsiteshost
+-friendsui
+-html-enable-tooltips
+-html-perf-monitor
+-inf
+-nofriendsui
+-openalldevtools
+-opendevtools
+-openoverlaydevtools
+-quicklogin
+-silent
+-toggle-overlay-html-mode
+-vguimessages
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+. Difference of 
+...<truncated>...
+..Too many IDATs found
+./google/protobuf/arena_impl.h
+./google/protobuf/arenastring.h
+./google/protobuf/descriptor.pb.h
+./google/protobuf/dynamic_message.h
+./google/protobuf/extension_set.h
+./google/protobuf/extension_set_inl.h
+./google/protobuf/generated_message_reflection.h
+./google/protobuf/io/coded_stream.h
+./google/protobuf/map.h
+./google/protobuf/map_field.h
+./google/protobuf/message_lite.h
+./google/protobuf/metadata_lite.h
+./google/protobuf/parse_context.h
+./google/protobuf/reflection.h
+./google/protobuf/reflection_internal.h
+./google/protobuf/repeated_field.h
+./google/protobuf/stubs/stringpiece.h
+./google/protobuf/unknown_field_set.h
 .CCookie"
 .CFrameStatAccumulatedValue
 .CHTMLPageSecurityInfo"n\n
@@ -466,9 +919,11 @@ $\nY8O
 .EStreamVideoCodec"
 .EStreamingDataType
 .ESystemUpdateNotificationType"
+.PLACEHOLDER_VALUE
 .ParentalPlaytimeDay
 .ParentalPlaytimeDay"j\n%ParentalTemporaryPlaytimeRestrictions
 .ParentalPlaytimeRestrictions
+.Too many IDATs found
 .\n&dynamically_adjust_resolution_OBSOLETE
 .\n&excluded_community_content_descriptors
 .\n*k_EAsyncGameSessionUserStateReadyForAction
@@ -488,6 +943,11 @@ $\nY8O
 .\n*k_ESteamOSCompatibilityCategory_Compatible
 .\n*k_EStreamControlInputGamepadEvent_OBSOLETE
 .\n\tdirection
+.cpl
+.current.txt
+.dummy
+.foo = value".
+.gif
 .google.protobuf.EnumOptions
 .google.protobuf.FieldOptions
 .google.protobuf.FileOptions
@@ -496,8 +956,20 @@ $\nY8O
 .google.protobuf.OneofOptions"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
+.jpeg
+.jpg
+.layout
+.mp4
+.mpeg
+.mpg
+.ogv
+.placeholder.proto
+.png
+.steam_exec_test.sh
+.webm
 .y4w
 /P8i
+/ValveIPCSHM_%d
 /\n enable_touch_controller_OBSOLETE
 /\n'enable_hardware_encoding_intel_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
@@ -516,9 +988,104 @@ $\nY8O
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
 /\n+k_EStreamControllerConfigMsg_ConfigResponse
 /\n+k_PublishedFileQueryType_RankedByTextSearch
+/data/src/common/commonkeycode.cpp
+/data/src/common/crypto_digest_openssl.cpp
+/data/src/common/crypto_passwordhash.cpp
+/data/src/common/crypto_scrypt.cpp
+/data/src/common/crypto_textencode.cpp
+/data/src/common/filesystem_helpers.cpp
+/data/src/common/friendsuihelpers.cpp
+/data/src/common/html_jstypes.cpp
+/data/src/common/language.cpp
+/data/src/common/logger.cpp
+/data/src/common/parentalinterpreter.cpp
+/data/src/common/steam/client_api.cpp
+/data/src/common/steamid.cpp
+/data/src/common/string_misc.cpp
+/data/src/common/urlhelper.cpp
+/data/src/external/picojson/picojson.h
+/data/src/friendsUI/friendsUI.cpp
+/data/src/friendsUI/friendswebchat.cpp
+/data/src/public/html/htmlpaintbuffer.h
+/data/src/public/html/htmlprotobuf.cpp
+/data/src/public/rtime.cpp
+/data/src/public/tier0/tslist.h
+/data/src/public/tier1/bitstring.h
+/data/src/public/tier1/netadr.h
+/data/src/public/tier1/refcount.h
+/data/src/public/tier1/smartptr.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utlhandletable.h
+/data/src/public/tier1/utlhashmap.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlqueue.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlsymbol.h
+/data/src/public/tier1/utlvector.h
+/data/src/public/vgui_controls/Image.h
+/data/src/public/vgui_controls/MenuItem.h
+/data/src/steamUI/remoteplaycontroller.cpp
+/data/src/steamUI/sharedconnectioncontroller.cpp
+/data/src/tier1/KeyValues.cpp
+/data/src/tier1/bitstring.cpp
+/data/src/tier1/convar.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/mempool.cpp
+/data/src/tier1/netadr.cpp
+/data/src/tier1/shared_memory.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlqueue.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/tier1/utlsymbol.cpp
+/data/src/vgui2/controls/AnimationController.cpp
+/data/src/vgui2/controls/BuildFactoryHelper.cpp
+/data/src/vgui2/controls/BuildGroup.cpp
+/data/src/vgui2/controls/EditablePanel.cpp
+/data/src/vgui2/controls/FileOpenDialog.cpp
+/data/src/vgui2/controls/Frame.cpp
+/data/src/vgui2/controls/GraphPanel.cpp
+/data/src/vgui2/controls/HTML.cpp
+/data/src/vgui2/controls/ImageList.cpp
+/data/src/vgui2/controls/ImagePanel.cpp
+/data/src/vgui2/controls/Label.cpp
+/data/src/vgui2/controls/ListPanel.cpp
+/data/src/vgui2/controls/ListViewPanel.cpp
+/data/src/vgui2/controls/Menu.cpp
+/data/src/vgui2/controls/MenuItem.cpp
+/data/src/vgui2/controls/Panel.cpp
+/data/src/vgui2/controls/RichText.cpp
+/data/src/vgui2/controls/TextEntry.cpp
+/data/src/vgui2/controls/TextImage.cpp
+/data/src/vgui2/controls/TreeView.cpp
+/data/src/vgui2/controls/TreeViewListControl.cpp
+/data/src/vgui2/controls/controls.cpp
+/dev
+/dev/
+/dev/disk/by-uuid
+/etc/mtab
+/proc/mounts
+/tmp
+/tmp/disk-free.XXXXXX
+/ubuntu12_32
+/ubuntu12_64/disk-free 
+/usr/bin/crosdisk %s
+/usr/bin/xdg-open
 /yQA
+0 != m_rgchPrefixFileName[0]
+0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
+0 == sm_ThreadSafeQueueLogEvents.Count()
+0 == sm_ThreadSafeQueueLogMsgSpew.Count()
+0000000000000000000000000000000000000000
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -539,6 +1106,10 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0\n,k_ESystemUpdateNotificationType_NeedsRestart
 0\n\vfinger_down
+0x%llx
+1.2.11
+1.6.37
+1000
 10BlankImage
 10CHintLabel
 10CMsgGoBack
@@ -748,6 +1319,7 @@ $\nY8O
 11IVGuiModule
 11KeyValuesAD
 11ParentalApp
+123456789
 12CAudioFormat
 12CAutoReleaseI15CJSCallbackFuncE
 12CAutoReleaseI18CJSCallbackPromiseE
@@ -1312,6 +1884,7 @@ $\nY8O
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
 4\n\rfinger_motion
 4i5U6B738%9
+5000
 50CClientNotificationCannotReadControllerGuideButton
 52F*
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -1408,6 +1981,9 @@ $\nY8O
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
+: failed to parse contents
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
@@ -1420,6 +1996,9 @@ $\nY8O
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_EStreamControlInputControllerWirelessPresence_OBSOLETE
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
+<empty>\n
+<no url>
+<unnamed>
 =\n9k_EClientNotificationType_CannotReadControllerGuideButton
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
@@ -1428,25 +2007,144 @@ $\nY8O
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
 @\n!ControllerPersonalizationResponse
+@bEnableLogTearOff
+@bEnableSpewThrottle
+@import
+@nSpewThrottleNagFrequencyMs
+@nSpewThrottlePeriodMs
+@nSpewThrottleResumeThreshold
+@nSpewThrottleTriggerThreshold
+@nSpewThrottleUnconditionalResumeMs
+@nSpewThrottleUnconditionalTriggerCount
+A file with this name is already in the pool.
+A protocol message was rejected because it was too big (more than 
 A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+ABORTED
+AKST
+ALREADY_EXISTS
+ANDROID
+ANDROID32
+ANDROID64
+ASCII
+ASCII conversion buffer too small
+ASCII//TRANSLIT
 A\n\nannotation
 A\n\tcandidate
+Accel
+AcceptPanel
+Activate
+ActivateItem
+AddAllocatedMessage
+AddBool
+AddDouble
+AddEnum
+AddFloat
+AddInt32
+AddInt64
+AddMessage
+AddString
+AddUInt32
+AddUInt64
 AdditionalRoute
+Address too small!
+Afrikaans
+Albanian
+All files
+Already have converter for type %s, ignoring...\n
+Already saw decimal point or exponent; can't have another one.
+Amharic
+AnimatingImagePanel
+AnimationController
+Application built with libpng-
+Application jmp_buf size changed
+Application must supply a known background gamma
+ApplySchemeSettings did not chain back to base class: %s
+April
+Arabic
+ArmItem
+Armenian
+Assamese
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+Assertion failed: length > k_cchMaxString
+Attempt to create persistent logs with no end date!
+Attempted to change replicated CVar when you are not the GM\n
+August
 AuthenticationResult
+AutoResize
+Azerbaijani
 B#C0D?EQFeG|H
+BCreateDirectory
+BEGIN
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIPFamiliesOverlap - unknown eServerFamilies value %d
+BIsOpen()
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BResolveHostString - unexpected DNS lookup flag '%d'\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
 BWritingFatalMiniDump
 BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
+BackButton
+BackUp() can only be called after a successful Next().
+Backspace
+Bad expression token: %c %c\n
+Bad expression token: %c at %d in %s\n
+Bad flag in RTime32DateAdd
+Bangla
+BaseControls
+Basque
+Belarusian
+BgColor
+BitmapImagePanel
+Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
+Boolean default must be true or false.
+Bosnian
+Brazilian
+Break
+Breaking '%s' in '%s'\n
+Broadcast.ApproveViewerRequest
+Broadcast.InviteToWatch
+Broadcast.RegisterForBroadcastStatus
+Broadcast.RegisterForViewerRequests
+Broadcast.RejectViewerRequest
+Broadcast.StopBroadcasting
+BrowserBringWindowToFront
+BrowserDisabledKBLink
+BrowserDisabledMessage
+BrowserDraggableRegionsChanged
+BrowserHideWindow
+BrowserMaximizeRestoreWindow
+BrowserMinimizeWindow
+BrowserResizeGripChanged
+BrowserSetForegroundWindow
+BrowserSetWindowPosition
+BrowserShowWindow
+BuildGroup::ValidateGlobals
+Bulgarian
+Button
+ButtonClicked
+ButtonToggled
 Bx\r9
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 C-Yn
+CANCELLED
 CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAuthenticationRequestMsg
 CAuthenticationResponseMsg
+CBitmapImagePanel
+CBroadcastController::OnBroadcastMicrophoneStatus
+CBroadcastController::OnBroadcastStatus
+CBroadcastController::OnBroadcastUploadStatus
+CBroadcastController::OnPostLogonState
+CBroadcastController::OnViewerApprovalResult
+CBroadcastController::OnViewerNeedsApproval
+CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 CClientHandshakeMsg
 CClientNotificationAchievement
 CClientNotificationFriendInGame
@@ -1461,6 +2159,26 @@ CClientNotificationSystemUpdate
 CClientNotificationTimerExpired"b\n-CClientNotificationSteamInputActionSetChanged
 CControllerConfigMsg
 CCookie
+CCrypto::BGeneratePasswordHash
+CCrypto::BValidatePasswordHash
+CCrypto::Base64Decode
+CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
+CCrypto::Base64Encode
+CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
+CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d\n
+CCrypto::GenerateFastScryptDigest
+CCrypto::GenerateHMAC
+CCrypto::GenerateHMAC256
+CCrypto::GenerateHMAC512
+CCrypto::GenerateHMACMD5
+CCrypto::GenerateMD5Digest
+CCrypto::GenerateSHA1Digest
+CCrypto::GenerateSHA256Digest
+CCrypto::GenerateSaltedSHA1Digest
+CCrypto::GenerateStrongScryptDigest
+CCrypto::HexDecode
+CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
+CCrypto::HexEncode
 CDeleteCursorMsg
 CDisableHighResCaptureMsg"
 CDisableNeptuneDataMsg"
@@ -1468,14 +2186,283 @@ CDiscoveryPingRequest
 CDiscoveryPingResponse
 CEnableHighResCaptureMsg"
 CEnableNeptuneDataMsg"
+CFileOpenListPanel
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
 CFrameStatAccumulatedValue
 CFrameStatsListMsg
+CFriendsUIModule
+CFriendsUIModule::Initialize: ClientAPI_Init() returned false.\n
+CFriendsUIModule::Initialize: VGuiControls_Init() returned false.\n
+CFriendsUIModule::OnOpenChatDialog
+CFriendsUIModule::OnOpenChatRoomGroupDialog
+CFriendsUIModule::OnOpenFriendsDialog
+CFriendsUIModule::OnOpenInviteToTradeDialog
+CFriendsUIModule::OnUIModeChanged
+CFriendsUIModule::RunFrame
+CFriendsWebChat::OnChatRoomDlgClose
+CFriendsWebChat::OnClientUICommand
+CFriendsWebChat::OnClientUINotification
+CFriendsWebChat::OnClientUINotificationResponse
+CFriendsWebChat::OnComputerActiveStateChange
+CFriendsWebChat::OnOpenURLInClient
+CFriendsWebChat::OnOverlayChatBrowserInfoChanged
+CFriendsWebChat::OnSetPersonaStateInternal
+CFriendsWebChat::OnShowChatRoomGroupInvite
+CFriendsWebChat::OnUIModeChanged
+CFriendsWebChat::OnUserFriendRequestRollup
+CFriendsWebChat::OnVoiceHotKeyStateChanged
 CGetCursorImageMsg
 CGetTouchConfigDataMsg
 CGetTouchIconDataMsg
+CHECK failed: !InRealOneof(field): 
+CHECK failed: !IsDefault(default_value): 
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
+CHECK failed: !checkpoints_.empty(): 
+CHECK failed: !descriptor_: 
+CHECK failed: !ext->is_repeated: 
+CHECK failed: !extension->is_repeated: 
+CHECK failed: !failed_: 
+CHECK failed: !field->options().weak(): 
+CHECK failed: !fields_.empty(): 
+CHECK failed: !file->finished_building_: 
+CHECK failed: !file_: 
+CHECK failed: !had_error_: 
+CHECK failed: !is_closed_: 
+CHECK failed: !name_: 
+CHECK failed: !once_: 
+CHECK failed: !oneof_descriptor->is_synthetic(): 
+CHECK failed: !out.HadError(): 
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
+CHECK failed: !tagged_ptr_.IsTagged(): 
+CHECK failed: !tree->empty(): 
+CHECK failed: !value || options_ != nullptr: 
+CHECK failed: !value || source_code_info_ != nullptr: 
+CHECK failed: (&from) != (this): 
+CHECK failed: (&from) != (to): 
+CHECK failed: (&other) != (this): 
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
+CHECK failed: (*buffer) == (first_byte): 
+CHECK failed: (0) != (n): 
+CHECK failed: (0) <= (pos): 
+CHECK failed: (0) == (BufferSize()): 
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
+CHECK failed: (backup_bytes_) == (0): 
+CHECK failed: (bucket_index_ & 1) == (0u): 
+CHECK failed: (buffer[0]) >= (128): 
+CHECK failed: (buffer_size) >= (0): 
+CHECK failed: (buffer_used_) == (0): 
+CHECK failed: (buffer_used_) == (buffer_size_): 
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
+CHECK failed: (calc_escaped_size) == (escaped_len): 
+CHECK failed: (count) <= (buffer_used_): 
+CHECK failed: (count) <= (kMaxLength): 
+CHECK failed: (count) <= (last_returned_size_): 
+CHECK failed: (count) == (tree->size()): 
+CHECK failed: (count) >= (0): 
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
+CHECK failed: (current_size_) > (0): 
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
+CHECK failed: (digits) < (100): 
+CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
+CHECK failed: (extension->is_packed) == (packed): 
+CHECK failed: (extension->type) == (other_extension.type): 
+CHECK failed: (field->message_type()) == (desc): 
+CHECK failed: (field->options().ctype()) == (ctype): 
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
+CHECK failed: (field_count()) == (2): 
+CHECK failed: (final_byte_count) < (target_byte_count): 
+CHECK failed: (first_byte & 0x80) == (0x80): 
+CHECK failed: (first_byte_or_zero) != (0): 
+CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
+CHECK failed: (from.GetDescriptor()) == (descriptor): 
+CHECK failed: (has_bit_index) != (~0u): 
+CHECK failed: (index) < (current_size_): 
+CHECK failed: (index) >= (0): 
+CHECK failed: (internal::AlignUpTo8(n)) == (n): 
+CHECK failed: (it.m_) == (this): 
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
+CHECK failed: (last_returned_size_) > (0): 
+CHECK failed: (len) <= (dest_len): 
+CHECK failed: (len) >= (0): 
+CHECK failed: (limit_) >= (ptr_): 
+CHECK failed: (message1->GetReflection()) == (this): 
+CHECK failed: (message2->GetReflection()) == (this): 
+CHECK failed: (message_type) == (field->message_type()): 
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
+CHECK failed: (n & (n - 1)) == (0): 
+CHECK failed: (n) >= (0): 
+CHECK failed: (new_num_buckets) >= (kMinTableSize): 
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
+CHECK failed: (out) == (begin + result->size()): 
+CHECK failed: (out) == (begin + result.size()): 
+CHECK failed: (overrun) <= (kSlopBytes): 
+CHECK failed: (pos) <= (x.length_): 
+CHECK failed: (recursion_budget_) < (recursion_limit_): 
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
+CHECK failed: (size) <= (6): 
+CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
+CHECK failed: (size) > (0): 
+CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
+CHECK failed: (table_[b]) == (table_[b ^ 1]): 
+CHECK failed: (target - output->data()) == (output->size()): 
+CHECK failed: (temp[0]) == ('1'): 
+CHECK failed: (temp[size - 1]) == ('5'): 
+CHECK failed: (to->GetDescriptor()) == (descriptor): 
+CHECK failed: (total_size_ - current_size_) >= (n): 
+CHECK failed: (total_size_) > (0): 
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
+CHECK failed: *ptr: 
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
+CHECK failed: GetArena() == NULL: 
+CHECK failed: GetArena() == nullptr: 
+CHECK failed: GetArena() == other->GetArena(): 
+CHECK failed: HasExtensionSet(): 
+CHECK failed: HasHasbits(): 
+CHECK failed: IsDefault(default_value): 
+CHECK failed: IsInitialized(): 
+CHECK failed: IsMapValid() && other.IsMapValid(): 
+CHECK failed: TableEntryIsNonEmptyList(b): 
+CHECK failed: TableEntryIsTree(b): 
+CHECK failed: a.type() == b.type(): 
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
+CHECK failed: arena != nullptr: 
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
+CHECK failed: builder_: 
+CHECK failed: checkpoints_.empty(): 
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
+CHECK failed: ctx.LastTag() != 1: 
+CHECK failed: cur_: 
+CHECK failed: desc_proto.has_name(): 
+CHECK failed: descriptor: 
+CHECK failed: dest: 
+CHECK failed: dynamic.get() != nullptr: 
+CHECK failed: end >= ptr: 
+CHECK failed: enum_type_->value_count(): 
+CHECK failed: errors == nullptr: 
+CHECK failed: extension != NULL: 
+CHECK failed: extension->is_repeated: 
+CHECK failed: fallback_database_ == nullptr: 
+CHECK failed: field != nullptr: 
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
+CHECK failed: field->is_repeated() || (index == -1): 
+CHECK failed: field->is_repeated(): 
+CHECK failed: file != nullptr: 
+CHECK failed: file && file->pool_: 
+CHECK failed: file()->finished_building_ == true: 
+CHECK failed: file->pool_->lazily_build_dependencies_: 
+CHECK failed: file_->finished_building_: 
+CHECK failed: find(node->kv.first) == end(): 
+CHECK failed: finished_building_ == true: 
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
+CHECK failed: has_default_value(): 
+CHECK failed: i >= 0: 
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
+CHECK failed: is_prototype(): 
+CHECK failed: is_repeated: 
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
+CHECK failed: limit_ > 0: 
+CHECK failed: limit_ > kSlopBytes: 
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
+CHECK failed: limit_end_ == buffer_end_: 
+CHECK failed: m1->GetArena() != m2_arena: 
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
+CHECK failed: message_arena != submessage_arena: 
+CHECK failed: mutex_ == nullptr: 
+CHECK failed: n <= size: 
+CHECK failed: n >= kMinTableSize: 
+CHECK failed: node_ != nullptr && m_ != nullptr: 
+CHECK failed: options_ != nullptr: 
+CHECK failed: options_descriptor: 
+CHECK failed: original_uninterpreted_options_field != nullptr: 
+CHECK failed: other->GetArena() != GetArena(): 
+CHECK failed: out_location != nullptr: 
+CHECK failed: output->message_info.prototype != nullptr: 
+CHECK failed: output: 
+CHECK failed: overrun != limit_: 
+CHECK failed: overrun < limit_: 
+CHECK failed: overrun <= kSlopBytes: 
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
+CHECK failed: overrun >= 0: 
+CHECK failed: owning_arena == nullptr: 
+CHECK failed: prototype != NULL: 
+CHECK failed: ptr < end_: 
+CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
+CHECK failed: ptr <= end_ + kSlopBytes: 
+CHECK failed: reflection: 
+CHECK failed: result != nullptr: 
+CHECK failed: s != nullptr: 
+CHECK failed: s >= 0: 
+CHECK failed: schema_.HasHasbits(): 
+CHECK failed: size > 0: 
+CHECK failed: size > chunk_size: 
+CHECK failed: size_ == 0: 
+CHECK failed: size_ > kSlopBytes: 
+CHECK failed: source_code_info_ != nullptr: 
+CHECK failed: submessage->GetArena() == submessage_arena: 
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
+CHECK failed: target + size == res: 
+CHECK failed: target_ != NULL: 
+CHECK failed: this != other: 
+CHECK failed: this == other_mutator: 
+CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
+CHECK failed: uninterpreted_options_field != nullptr: 
+CHECK failed: value != nullptr: 
+CHECK failed: z.first != NULL: 
+CHROMEOS
+CHTMLFindBar
 CHTMLPageSecurityInfo
 CH\f1
 CHideCursorMsg""\n\rCSetCursorMsg
+CIMEPanel
+CIPAndPort::GetIPv4 called on IPv6 address
 CInputKeyDownMsg
 CInputKeyUpMsg
 CInputLatencyTestMsg
@@ -1486,7 +2473,25 @@ CInputMouseWheelMsg
 CInputTouchFingerDownMsg
 CInputTouchFingerMotionMsg
 CInputTouchFingerUpMsg
+CJSMethodArgs::AddProtobufAsBinary
+CJSMethodArgs::AddProtobufAsObject
+CLIENTENGINE_INTERFACE_VERSION005
+CLogEvent
+CLogInstance::EmitEventNow
+CLogInstance::WriteToLog
 CLogMsg
+CLogger class statics
+CLogger::DeserializeVaArgs
+CLogger::EmitEventInternal
+CLogger::FlushEventQueue
+CLogger::FlushLog()
+CLogger::FlushLogIfNecessary
+CLogger::GeneratePrefixFromLogWatchParam
+CLogger::PublishLogEvent
+CLogger::PublishMsgSpew
+CMemoryPool
+CMemoryPool::AddNewBlob: mode == GROW_NONE
+CMemoryPool::Alloc: ran out of memory
 CMsgAckPIDShuttingDown
 CMsgAckScreenDPI
 CMsgAckSharedPaintBuffers
@@ -1619,10 +2624,53 @@ CNegotiationInitMsg
 CNegotiationSetConfigMsg
 CORD
 COverlayEnabledMsg
+CPPTYPE_BOOL
+CPPTYPE_DOUBLE
+CPPTYPE_ENUM
+CPPTYPE_FLOAT
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_MESSAGE
+CPPTYPE_STRING
+CPPTYPE_UINT32
+CPPTYPE_UINT64
+CPanelKeyBindingMapDictionary
+CParentalCache::OnParentalLockChangeBegin
+CPathString
 CPauseControllerInputMsg"
+CRC error
 CRYPTO_memcmp
 CRecordedInput
 CRecordedInputStream
+CRemotePlayController::OnCheckStreamingDriverSupport
+CRemotePlayController::OnPlaceholderStateChange
+CRemotePlayController::OnPostLogonState
+CRemotePlayController::OnRemoteClientAvailable
+CRemotePlayController::OnRemoteClientConnected
+CRemotePlayController::OnRemoteClientDisconnected
+CRemotePlayController::OnRemoteClientInputSettingsChange
+CRemotePlayController::OnRemoteClientLaunchFailed
+CRemotePlayController::OnRemoteClientOffline
+CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride
+CRemotePlayController::OnRemoteClientRemotePlayClearControllers
+CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet
+CRemotePlayController::OnRemoteClientRemotePlayQualityOverride
+CRemotePlayController::OnRemoteClientStreamLifetime
+CRemotePlayController::OnRemoteClientStreamSessionUpdateNetworkUtilization
+CRemotePlayController::OnRemoteClientStreamingEnabledChanged
+CRemotePlayController::OnRemoteDeviceAuthorizationCancelled
+CRemotePlayController::OnRemoteDeviceAuthorizationRequested
+CRemotePlayController::OnRemoteDevicePairingPINChanged
+CRemotePlayController::OnRemoteDevicesChanged
+CRemotePlayController::OnRemotePlayInviteResult
+CRemotePlayController::OnRemotePlaySessionStopped
+CRemotePlayController::OnRemotePlayTogetherGroupCreated
+CRemotePlayController::OnRemotePlayTogetherGroupDisbanded
+CRemotePlayController::OnRemotePlayTogetherPlayerJoined
+CRemotePlayController::OnRemotePlayTogetherPlayerLeft
+CRemotePlayController::OnStreamingClientConnected
+CRemotePlayController::OnStreamingClientDisconnected
+CRemotePlayController::OnStreamingClientUsedInput
 CResumeControllerInputMsg"
 CSaveTouchConfigLayoutMsg
 CServerHandshakeMsg
@@ -1642,12 +2690,22 @@ CSetTargetBitrateMsg
 CSetTargetFramerateMsg
 CSetTouchConfigDataMsg
 CSetTouchIconDataMsg
+CSharedConnectionController::OnMessageReady
+CSharedConnectionController::OnPostLogonState
+CSharedConnectionController::OnServersConnected
+CSharedConnectionController::OnServersDisconnected
 CShowCursorMsg
 CShowOnScreenKeyboardMsg"~\n#CControllerPersonalizationUpdateMsg
 CStartAudioDataMsg
 CStartNeptuneDataMsg
 CStartNetworkTestMsg
 CStartVideoDataMsg
+CSteamParentalController::OnParentalLockChangeBegin
+CSteamParentalController::OnParentalLockChangeComplete
+CSteamParentalController::OnParentalPlaytimeExhausted
+CSteamParentalController::OnParentalPlaytimeWarning
+CSteamParentalController::OnParentalWebTokenChanged
+CSteamUIMessagingController::OnClientPostMessage
 CStopAudioDataMsg"{\n
 CStopNeptuneDataMsg"
 CStopVideoDataMsg"'\n
@@ -1669,7 +2727,26 @@ CTouchActionSetLayerAddedMsg
 CTouchActionSetLayerRemovedMsg
 CTouchConfigActiveMsg
 CTransportSignalMsg
+CTreeViewListControl
 CType
+CUIProtoBufMsg::BDeserialize
+CUIProtoBufMsg::SerializeCrossProc
+CUtlBuffer
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlDict
+CUtlHandleTable
+CUtlHashMap::RemoveAt - Invalid index
+CUtlHashMap::RemoveAt - couldn't find bucket for item
+CUtlString::ReplaceInternal
+CUtlString::SetValue
+CUtlString::VAppendFormat
+CUtlString::VFormat
+CUtlStringBuilder::Data::MoveToHeap
+CUtlStringBuilder::InternalPrepareBuffer
+CUtlStringBuilder::ReplaceInternal
+CUtlSymbol
+CUtlSymbol::ValidateGlobals
+CUtlSymbolTable
 CVProfile_ExitScope
 CVRConnectionReady
 CValidator::ClaimArrayMemory(void const*, bool)
@@ -1678,23 +2755,232 @@ CValidator::DumpDoubleClaim(char const*) const
 CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
+CVariableBitStringBase
 CVideoDecoderInfoMsg
 CVideoEncoderInfoMsg
 CVirtualHereReadyMsg
 CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
 C\n#direct_rendering_display_compositor
+Call set methods to initialize MapKey.
+Call to NULL read function
+Call to NULL write function
+Caller should provide us with *buffer_ when buffer is non-empty
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+Can't 
+Can't BackUp() after failed Next().
+Can't add Keybindings Context for unnamed panels\n
+Can't discard critical data on CRC error
+Can't get here.
+Can't get here: failed to get default value as string
+Can't happen
+Can't print proto content: proto type 
+Can't reach
+Can't set both read_data_fn and write_data_fn in the same structure
+Can't write sCAL (buffer too small)
+Can't write tRNS with an alpha channel
+CanBeDefaultButton
 CanBreakBetween
+Cancel
+CancelButton
+Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
+Cannot copy json_name to a proto of a different size.
+Cannot get here
+Cannot skip field value, unexpected token: 
+Caps Lock
+Caps Lock Toggle
+CaptionGripPanel
+CaptionGripPanel::OnThink()
+Catalan
+ChatFlashMode
+Check
+CheckAllItems
+CheckButton
+CheckButton::OnThink()
+CheckButtonChecked
+Cherokee
+Clear
+ClearButton
+ClearField
+ClearSchemeSettings
+ClickPanel
+ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientController returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMusic returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParentalSettings returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteClientManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStreamClient returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientTimeline returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUGC returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUnifiedMessages returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
+ClientAPI_Init: Cannot create pipe.  Steam not running?\n
+ClientAPI_Init: InternalAPI_Init_Internal failed.\n
+ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.so (the Steam client is a 32-bit app).\n
+ClientAPI_RunCallbacks
+ClientNotifications.DisplayClientNotification
+ClientNotifications.OnRespondToClientNotification
+Close
+Close before rename failed. Log will keep its old name\n
+CloseChatDialog
+CloseExternal
+CloseFrameButtonPressed
+CloseFrameHotKeyPressed
+CloseImmediately
+CloseMenu
+CloseModal
+CollapserChanged
+Color
+ColumnResized
+ColumnSelectButton
+ComboBox
+ComboBoxButton
+ComboBoxHost
+ComboBtn
+ComboMenu
+Command
+Compression buffer size cannot be changed because it is in use
+Compression buffer size cannot be reduced below 6
+ConCommand '%s' not currently supported in config file\n
+ConVar
+ConVar::InternalSetValue: called with NULL
+Connected
 ContextCommand
+ContextMenu
+ControlFactory
+ControlName
 ControllerActiveConfigMsg
 ControllerConfigResponse
+Convars
+ConversionMode
+ConversionModeMenu
+Copy
+Could not create an instance of 
+Could not find type "
+Could not get SERVERBROWSER and RUNGAMEENGINE interfaces.
+Could not parse
+Couldn't find script file %s\n
+Couldn't format time value %llu
+Couldn't parse default value "
+Couldn't parse script file: expected 'event', found '%s'\n
+Couldn't parse script file: expected <event name>, found nothing\n
+Couldn't parse script sequence '%s': expected '{', found '%s'\n
+Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
+Couldn't write %s: %s\n
+Create
+CreateButton
+CreateDirectory
+CreateDirectoryDialog
 CreateInterface
+Croatian
+Ctrl
+Cursor
+CursorEntered
+CursorEnteredChild
+CursorEnteredMenuButton
+CursorEnteredMenuItem
+CursorExited
+CursorExitedChild
+CursorExitedMenuItem
+CursorMoved
+CustomStyle
+CustomURL
+Czech
+DATA_LOSS
+DBG_PATHMATCH
+DBG_STAT
 DDDDUUUU
+DEADLINE_EXCEEDED
+DLOPEN Error:%s\n
+DO NOT PARSE: fields may be stripped and missing.\n
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 D\vvf:
+Danish
+Dari
+Deaccel
+December
+Decode failed
+Default
+Default value for an enum field must be an identifier.
+DefaultFixed
+DefaultUnderline
+DefaultVerySmall
+Delete
+DeletePanel
 DescriptorProto
 DescriptorProtosH
+Detected file change in %s\n
+DialogVariables
+DifferentVersion
+DirTree
+DirectorySelectDialog
+DirectorySelectDialogClosed
+DirectorySelected
+DirectoryTreeView
+Disabled
+Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
+DisarmItem
+DismissJSDialog
+Divider
+Division or mod by zero: dividend.hi=
+DoConversionModeChanged
+DoCopyAllText
+DoCopySelected
+DoCutSelected
+DoDeleteThenPaste
+DoLanguageChanged
+DoNotDisturb
+DoPaste
+DoSelectAll
+DoSentenceModeChanged
+Don't know how to check filesystem type on POSIX!
+Don't lookup extension types if they aren't present (1). 
+Don't lookup extension types if they aren't present (2). 
+Down
+DragDrop
+DragDrop.DragFrame
+DragDrop.DropFrame
+DragDroppedText
 DraggableRects
+Draws html perf data
+DropContext
+Duplicate property %s in object
+Dutch
 E=FZGrH
 EACState
 EAsyncGameSessionUserState
@@ -1733,6 +3019,7 @@ EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
+ERROR
 ESDCardFormatStage
 ESessionPersistence
 ESplitScalingFilter
@@ -1778,31 +3065,199 @@ ETW_Steamworks_DispatchCallback_End_
 ETW_Steamworks_DispatchCallback_Start
 ETW_Steamworks_RunCallbacks_End_
 ETW_Steamworks_RunCallbacks_Start
+EVCert
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
+EditMenu
+EditablePanel
+EditablePanel::LayoutCmd_CreateRegion()
+EditablePanel::LayoutCmd_Place()
+EditablePanel::PerformLayout()
+Element( i )
+Empty
+End-of-file inside block comment.
+EndDrag
+English
 EnsureValidBoolValue
+Enter
+Entry
+Enum name 
+Enum type "
+Enum value "$0" is reserved multiple times.
+Enum value "$0" is reserved.
+Enum value "$0" uses reserved number $1.
+Enum value in map must define 0 as the first value.
 EnumDescriptorProto
+EnumOptions
 EnumReservedRange
 EnumValueDescriptorProto
 EnumValueOptions
+Enums must contain at least one value.
 Error
+Error State on string being set.
+Error parsing text-format 
+Error reporting not implemented.
+Error while parsing option value for "
+Error while parsing text KeyValues for resource %s
+Escape
+Estonian
+Execute: %s\n
+Expand
+Expanded map entry type 
+Expect a decimal number, got: 
+Expected "
+Expected %lld but got %lld!
+Expected double, got: 
+Expected eight hex digits up to 10ffff for \U escape sequence
+Expected four hex digits for \u escape sequence.
+Expected hex digits for escape sequence.
+Expected identifier, got: 
+Expected integer or identifier, got: 
+Expected integer, got: 
+Expected string, got: 
+Explicit default values are not allowed in proto3.
+Extension "
+Extension conflicts with extension already in database: extend 
+Extension factory's GetPrototype() returned NULL for extension: 
+Extension not found.
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Extension number $0 has already been used in "$1" by extension "$2".
+Extension numbers cannot be greater than $0.
+Extension numbers must be positive integers.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Extension range $0 to $1 overlaps with reserved range $2 to $3.
+Extension range end number must be greater than start number.
+Extension ranges are not allowed in proto3.
 ExtensionRange
 ExtensionRangeOptions
+Extensions in proto3 are only allowed for defining options.
+Extensions of MessageSets must be optional messages.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+Extra compressed data
 FAILED
+FAILED_PRECONDITION
+FATAL
+FCVAR_NEVER_AS_STRING
 FCZ&
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
+Failed creating HTML browser %s: %s
+Failed system(%s) in execute test: %d %s\n
+Failed system(%s) in execute test: %d\n
+Failed to close logfile with prefix %s during BTearOffLogFile call!
+Failed to find time in logfile name
+Failed to load menu file %s\n
+Failed to load optional module %s\n
+Failed to provide options
+Failed to remove log event from threadsafe queue!
+Failed to start Addl Log Instance for prefix %s
+False
+FastHexToBuffer() wants non-negative integers, not 
+February
+Feel free to add support for more if you need it.
+Field "
+Field "$0" uses reserved number $1.
+Field = 
+Field does not match message type.
+Field is not a map field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
+Field name "$0" is reserved multiple times.
+Field name "$0" is reserved.
+Field number $0 has already been used in "$1" by field "$2".
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+Field numbers cannot be greater than $0.
+Field numbers must be positive integers.
+Field with message or enum type missing type_name.
+Field with primitive type has type_name.
+Field: 
 FieldDescriptorProto
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldOptions
+FieldSize
+Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
+Fields with proto3_optional set must be a member of a one-field oneof
+File already exists in database: 
+File appears to be in generated pool but wasn't registered: 
+File change notification for %s but no file contents changed based on hash\n
+File is already registered: 
+File not found in database (unexpected): 
+File recursively imports itself: 
+FileCompletionEdit
 FileDescriptorProto
 FileDescriptorSet
+FileList
+FileNameEdit
+FileNameLabel
+FileOpenDialog
+FileOptions
+FileSelected
+FileSelectionCancelled
+FileTypeCombo
+FileTypeLabel
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
+Filipino
 Filter
+FindBar
+FindCount
+FindEntry
+Finnish
+First argument to Swap() (of type "
+First argument to SwapFields() (of type "
+FlashWindow
+Flicker
 FoCLcx
+FolderIcon
+FolderUpButton
+ForwardButton
+Found invalid proto option data for: 
+Frame
+Frame.AutoSnapRange
+Frame.ClientInsetX
+Frame.ClientInsetY
+Frame.FocusTransitionEffectTime
+Frame.OnDragAlphaDelayTime
+Frame.OnDragAlphaMultiplier
+Frame.TransitionEffectTime
+Frame.UsesAlphaBlending
+Frame::ApplyLayoutTemplate() : couldn't find subpanel '%s' as specified in template '%s'\n
+Frame::SetTitle - vgui::localize not initialized
+FrameBRGripPanel
+FrameButton
+FrameCloseButton
+FrameMaximizeButton
+FrameMinimizeButton
+FrameRestoreButton
+FrameSystemButton
+FrameSystemButton.DisabledIcon
+FrameSystemButton.Icon
+FrameTitle
+FrameTitleBar.Font
+FrameTitleBar.SmallFont
+Free disk space for %s would overflow
+French
+Friday
+FriendSettings.GetEnabledFeatures
+FriendSettings.RegisterForSettingsChanges
+FriendSettings.SetFriendSettings
+FriendsFilter
+FriendsUI
+FriendsUI.dll could not get RunGameEngine interface\n
+FriendsUIInterfaceV001
+FullPathEdit
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GCC: (crosstool-NG 1.12.2) 4.5.3
 GCC: (crosstool-NG 1.17.0) 4.6.3
+GIF Image (*.gif)
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
@@ -1815,34 +3270,647 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+Galician
 GeneratedCodeInfo
+Georgian
+German
+GetAnimationController()
+GetBool
+GetBootstrapperVersion
 GetCPUInformation()
+GetCPUInformation().m_bSSE3
+GetCommand
+GetDouble
+GetEnumValue
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
+GetFloat
+GetFloatFromString() did not get correct peCS parameter
+GetInt32
+GetInt64
+GetInt64FromString() did not get correct peCS parameter
+GetIntFromString() did not get correct peCS parameter
+GetInts()
+GetMessage
+GetName() && GetName()[ 0 ]
 GetOSType
+GetPanelAnimationDictionary()
+GetPanelKeyBindingMapDictionary()
+GetPanelMessageMapDictionary()
+GetRawRepeatedField
+GetRepeatedBool
+GetRepeatedDouble
+GetRepeatedEnumValue
+GetRepeatedFloat
+GetRepeatedInt32
+GetRepeatedInt64
+GetRepeatedMessage
+GetRepeatedString
+GetRepeatedStringReference
+GetRepeatedUInt32
+GetRepeatedUInt64
 GetSpewOutputFunc
+GetState
+GetString
+GetStringReference
+GetText
+GetUInt32
+GetUInt64
+GetUint64FromString() did not get correct peCS parameter
+GetVParent()
 Google.Protobuf.Reflection
+GraphPanel
+Gray color space not permitted on RGB PNG
+Greek
+GripPanel
+Groups are not supported in proto3 syntax.
+Gujarati
 H$6t
 H*0"ZOW
+HFont
+HOME
+HTML
+HTML.SearchAnimationTime
+HTML.SearchInsetX
+HTML.SearchInsetY
+HTML.SearchTall
+HTML.SearchWide
+HTML::Paint()
+HTMLBackRequested
+HTMLCanGoBackAndForward
+HTMLComboBoxHost
+HTMLForwardRequested
+HTMLFramelessWrapper
+HTMLPopup
 H\n\tCandidate
+HasField
+Hausa
+Hebrew
+Hex and octal numbers must be integers.
+HideIMECandidates
+Hindi
+Hit absolute maximum emit event queue size -- NOT adding this event
+Home
+HorizScrollBar
+Hotkey
+HtmlPopup
+Hungarian
+ICC profile length invalid (not a multiple of 4)
+ICC profile tag outside profile
+ICC profile tag start not a multiple of 4
+ICC profile too short
 IDEMPOTENCY_UNKNOWN
+IMECandidate
+IMECandidateList
+IMECandidateSelected
+IMECandidatesMenu
+IMEConversionModes
+IMELanguageList
+IMESentenceModes
+INFO
+INTERNAL
+INVALID_ARGUMENT
+INVALID_CPPTYPE
+IVALIDATE001
+Icelandic
 IdempotencyLevel
+Igbo
+IgnoreScheme
+Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
+Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
+Ignoring attempt to write bKGD chunk out-of-range for bit_depth
+Ignoring attempt to write tRNS chunk out-of-range for bit_depth
+Ignoring extension "
+Ignoring invalid time value
+Ignoring request to write a PLTE chunk in grayscale PNG
 IiGM>nw
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
+Image
+Image height exceeds user limit in IHDR
+Image height is zero in IHDR
+Image is too high to process with png_read_png()
+Image width exceeds user limit in IHDR
+Image width is too large for this architecture
+Image width is zero in IHDR
+ImagePanel
+ImeCancelComposition
+ImeCommitString
+ImeCompositionString
+Import 
+Import "
+Incorrect number of arguments.  %d arguments required, %d were given.\n
+Index must be -1 for non-repeated fields
+Index must be -1 for singular fields.
+Index must be in range of repeated field values. 
+Index out-of-bounds (field is empty).
+Indonesian
+Infinite time value
+InputCanceled
+InputCompleted
+InputDialog
+Insufficient memory for eXIf chunk data
+Insufficient memory for hIST chunk data
+Insufficient memory for pCAL parameter
+Insufficient memory for pCAL params
+Insufficient memory for pCAL purpose
+Insufficient memory for pCAL units
+Insufficient memory to process iCCP chunk
+Insufficient memory to process iCCP profile
+Insufficient memory to process text chunk
+Insufficient memory to store text
+Integer out of range (
+Interlace handling should be turned on when using png_read_image
+Internal failure
+Interpreting non ascii codepoint %d.
+Invalid FileWriterItem_t
+Invalid IHDR data
+Invalid attempt to read row data
+Invalid background palette index
+Invalid bit depth for RGB image
+Invalid bit depth for RGBA image
+Invalid bit depth for grayscale image
+Invalid bit depth for grayscale+alpha image
+Invalid bit depth for paletted image
+Invalid bit depth in IHDR
+Invalid color type in IHDR
+Invalid color type/bit depth combination in IHDR
+Invalid compression type specified
+Invalid control characters encountered in text.
+Invalid descriptor
+Invalid escape sequence in string literal.
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
+Invalid filter method in IHDR
+Invalid filter type specified
+Invalid float number: 
+Invalid format for pCAL parameter
+Invalid iCCP compression method
+Invalid image color type specified
+Invalid image height in IHDR
+Invalid image panel position %d %d\n
+Invalid image panel size %d %d\n
+Invalid image width in IHDR
+Invalid index %u
+Invalid interlace type specified
+Invalid key for map field.
+Invalid message set extension.
+Invalid number of colors in palette
+Invalid number of histogram entries specified
+Invalid number of transparent colors specified
+Invalid object
+Invalid pCAL equation type
+Invalid pCAL parameter count
+Invalid package name: 
+Invalid palette
+Invalid palette length
+Invalid palette size, hIST allocation skipped
+Invalid parent region %s specified for region %s in panel %s
+Invalid password hash type %u passed to BGeneratePasswordHash\n
+Invalid proto descriptor for file "
+Invalid public dependency index.
+Invalid sBIT depth specified
+Invalid sCAL height
+Invalid sCAL height ignored
+Invalid sCAL unit
+Invalid sCAL width
+Invalid sCAL width ignored
+Invalid sRGB rendering intent specified
+Invalid spew group
+Invalid strings::Substitute() format string: "
+Invalid symbol name: 
+Invalid time specified for tIME chunk
+Invalid time value
+Invalid value for boolean field "
+Invalid weak dependency index.
+Invalid wire type for CPPTYPE_INT32: 
+Invalid wire type for CPPTYPE_INT64: 
+Invalid wire type for CPPTYPE_MESSAGE: 
+Invalid wire type for CPPTYPE_UINT32: 
+Invalid wire type for CPPTYPE_UINT64: 
+Invalidate
+Irish
 Is64BitOS
+Is64BitOS()
+IsARM64() || GetCPUInformation().m_bSSE2
+IsLabelEditingAllowed()
+IsPointInCaptureRegion
+IsPowerOfTwo( nNewCapacity )
+IsResizeBorder
+IsText()
+IsTriplePressAllowed()
+IsValidIndex( elem )
+IsValidIndex( idx )
+IsValidIndex(elem)
+IsValidKeyBindingsContext()
+IsVisible()
+Italian
+ItemDeselected
+ItemSelected
+ItemsChecked
+JArray
+JPEG Image (*.jpeg)
+JPEG Image (*.jpg)
+JSClientStorage
 JSObjectProperty
 JSType
 JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
+January
+Japanese
+July
+June
+K'iche'
+KEY_0
+KEY_1
+KEY_2
+KEY_3
+KEY_4
+KEY_5
+KEY_6
+KEY_7
+KEY_8
+KEY_9
+KEY_A
+KEY_AMPERSAND
+KEY_APOSTROPHE
+KEY_APP
+KEY_AT
+KEY_B
+KEY_BACKQUOTE
+KEY_BACKSLASH
+KEY_BACKSPACE
+KEY_BAR
+KEY_BREAK
+KEY_C
+KEY_CAPSLOCK
+KEY_CAPSLOCKTOGGLE
+KEY_CARET
+KEY_CLEAR
+KEY_COLON
+KEY_COMMA
+KEY_D
+KEY_DELETE
+KEY_DOLLAR
+KEY_DOWN
+KEY_DQUOTE
+KEY_E
+KEY_END
+KEY_ENTER
+KEY_EQUAL
+KEY_ESCAPE
+KEY_EXCLAMATION
+KEY_F
+KEY_F1
+KEY_F10
+KEY_F11
+KEY_F12
+KEY_F13
+KEY_F14
+KEY_F15
+KEY_F16
+KEY_F17
+KEY_F18
+KEY_F19
+KEY_F2
+KEY_F20
+KEY_F21
+KEY_F22
+KEY_F23
+KEY_F24
+KEY_F3
+KEY_F4
+KEY_F5
+KEY_F6
+KEY_F7
+KEY_F8
+KEY_F9
+KEY_G
+KEY_GREATER
+KEY_H
+KEY_HASH
+KEY_HOME
+KEY_I
+KEY_INSERT
+KEY_J
+KEY_K
+KEY_L
+KEY_LALT
+KEY_LBRACKET
+KEY_LCONTROL
+KEY_LCURLY
+KEY_LEFT
+KEY_LESS
+KEY_LPAREN
+KEY_LSHIFT
+KEY_LWIN
+KEY_M
+KEY_MINUS
+KEY_MULTIPLY
+KEY_N
+KEY_NONE
+KEY_NUMLOCK
+KEY_NUMLOCKTOGGLE
+KEY_O
+KEY_P
+KEY_PAD_0
+KEY_PAD_1
+KEY_PAD_2
+KEY_PAD_3
+KEY_PAD_4
+KEY_PAD_5
+KEY_PAD_6
+KEY_PAD_7
+KEY_PAD_8
+KEY_PAD_9
+KEY_PAD_DECIMAL
+KEY_PAD_DIVIDE
+KEY_PAD_ENTER
+KEY_PAD_EQUAL
+KEY_PAD_MINUS
+KEY_PAD_MULTIPLY
+KEY_PAD_PLUS
+KEY_PAGEDOWN
+KEY_PAGEUP
+KEY_PERCENT
+KEY_PERIOD
+KEY_PLUS
+KEY_Q
+KEY_QUESTION
+KEY_R
+KEY_RALT
+KEY_RBRACKET
+KEY_RCONTROL
+KEY_RCURLY
+KEY_RIGHT
+KEY_RPAREN
+KEY_RSHIFT
+KEY_RWIN
+KEY_S
+KEY_SCROLLLOCK
+KEY_SCROLLLOCKTOGGLE
+KEY_SEMICOLON
+KEY_SLASH
+KEY_SPACE
+KEY_T
+KEY_TAB
+KEY_TILDE
+KEY_U
+KEY_UNDERSCORE
+KEY_UP
+KEY_V
+KEY_W
+KEY_X
+KEY_Y
+KEY_Z
+Kannada
+Kazakh
+Key Pad *
+Key Pad +
+Key Pad -
+Key Pad .
+Key Pad /
+Key Pad 0
+Key Pad 1
+Key Pad 2
+Key Pad 3
+Key Pad 4
+Key Pad 5
+Key Pad 6
+Key Pad 7
+Key Pad 8
+Key Pad 9
+Key Pad =
+Key Pad Enter
+Key in map fields cannot be enum types.
+Key in map fields cannot be float/double, bytes or message types.
+KeyBinding for panel '%s' contained unknown binding '%s'\n
+KeyCodePressed
+KeyCodeReleased
+KeyCodeTyped
+KeyCodeUnhandled
+KeyFocusTicked
+KeyModeSet
+KeyTyped
+KeyValues
+KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues don't support #include anymore, file "%s"
+KeyValues::ReadAsBinary - Set name
+KeyValues::ReadAsBinary - TYPE_BINARY_STRING
+KeyValues::ReadAsBinary - TYPE_COLOR
+KeyValues::ReadAsBinary - TYPE_FLOAT
+KeyValues::ReadAsBinary - TYPE_INT
+KeyValues::ReadAsBinary - TYPE_INT64
+KeyValues::ReadAsBinary - TYPE_NONE
+KeyValues::ReadAsBinary - TYPE_PTR
+KeyValues::ReadAsBinary - TYPE_STRING
+KeyValues::ReadAsBinary - TYPE_UINT64
+KeyValues::ReadAsBinary - TYPE_WSTRING
+KeyValues::ReadAsBinary() stack depth > 100
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::WriteAsBinary() called with a text buffer\n
+KeyValues::WriteAsBinary() called with an invalid buffer\n
+KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
 KeyValuesSystemSteam
+Khmer
+KillFocus
+Kinyarwanda
+Konkani
+Korean
+Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
+LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
+LINUX
+LINUX32
+LINUX64
+LOCK_EX
+LOCK_SH
 Label
+Label::Paint()
+LabelBright
+LabelChanged
+LabelDull
+Language
+LanguageMenu
+Last Message Repeated %d times.\n%s
+Latam_Spanish
+Latvian
+LayoutFileChanged
+LayoutTemplates
+Left
+Libpng jmp_buf still allocated
+ListImage
+ListItemSelected
+ListPanel
+ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time\n
+ListPanel.BgColor
+ListPanel.DisabledSelectedTextColor
+ListPanel.DisabledTextColor
+ListPanel.PostSectionLeading
+ListPanel.SelectedBgColor
+ListPanel.SelectedOutOfFocusBgColor
+ListPanel.SelectedTextColor
+ListPanel.TextBgColor
+ListPanel.TextColor
+ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'\n
+ListPanel::AddItem
+ListPanel::ApplyItemChanges
+ListPanel::CalculateVisibleRowPositions()
+ListPanel::OnCheckButtonChecked sanity
+ListPanel::PaintInterior()
+ListPanel::PerformLayout()
+ListPanel::RemoveItem
+ListPanel::SortList()
+ListPanel::UpdateColumnWidths()
+ListPanelCheckBox
+ListPanelCheckBox::OnThink()
+ListPanelCollapserBase
+ListPanelCollapserBase::OnAppearanceChanged()
+ListPanelColumnHeader
+ListPanelColumnSelectButton
+ListPanelDragger
+ListPanelInterior
+ListPanelSectionCollapser
+ListPanelSectionHeader
+ListViewItem
+ListViewItemSelected
+ListViewPanel
+Lithuanian
+LoadDefaultControlSettings
+LoadFileIntoBuffer: NULL parameters
+LoadFileRangeIntoBuffer_Internal
+LoadFromBuffer: missing {   (current key: '%s')
+LoaderWindowSynchronization
+LocalizationFileChanged
 Location
+Log event queue grew unreasonably large in a short time!
+Log started.\n
+Log stopped.\n
 Logger
+Logger does not handle * char as used for a width specifier (where width is a param)
+Logic problem? szsrc = 
+LookInLabel
+Lowered '%s' -> '%s'\n
+Luxembourgish
 LwH'
 M8MF
 MGiI
+MNG features are not allowed in a PNG datastream
+MOUSE_4
+MOUSE_5
+MOUSE_LAST
+MOUSE_LEFT
+MOUSE_MIDDLE
+MOUSE_RIGHT
+MP4 Media File (*.mp4)
+MPEG Media File (*.mpeg)
+MPEG Media File (*.mpg)
+Macedonian
+MachineStorage.DeleteKey
+MachineStorage.GetJSON
+MachineStorage.GetString
+MachineStorage.SetObject
+MachineStorage.SetString
+Malay
+Malayalam
+Maltese
+Maori
+MapKey::GetBoolValue
+MapKey::GetInt32Value
+MapKey::GetInt64Value
+MapKey::GetStringValue
+MapKey::GetUInt32Value
+MapKey::GetUInt64Value
+MapKey::type MapKey is not initialized. 
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetMessageValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueRef::MutableMessageValue
+MapValueRef::SetBoolValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetEnumValue
+MapValueRef::SetFloatValue
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetStringValue
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
+Marathi
+March
+Matched '%s' -> '%s'\n
+Maximize
+MaybeAllocateAligned cannot fail here.
+Memory allocation failed while processing sCAL
+Memory leak: mempool blocks left in memory: %d\n
+Menu
+Menu.TextInset
+MenuBar
+MenuBarLoaded
+MenuButton
+MenuClose
+MenuItem
+MenuItemHighlight
+MenuItemSelected
+MenuScrollBar
+MenuSeparator
+Message '%s' not handled by panel '%s'\n
+Message '%s', sent to '%s', has an invalid parameter type\n
+Message '%s', sent to '%s', has invalid parameter types\n
+Message class "
+Message does not support reflection (type 
+Message is too deep, the parser exceeded the configured recursion limit of 
+Message missing required fields: 
+Message of type "
+Message type "
+MessageBox
+MessageBox.ButtonHeight
+MessageBoxText
+MessageLite at 0x
 MessageOptions
+MessageSet is not supported in proto3.
+MessageSets cannot have fields, only extensions.
+Messages can't have default values!
+Messages can't have default values.
+Messaging.PostMessage
+Messaging.RegisterForMessages
+Method call failed: %s
 MethodDescriptorProto
+MethodOptions
+Minimize
+MinimizeToSysTray
+Missing IHDR before IDAT
+Missing PLTE before IDAT
+Missing field: FileDescriptorProto.name.
+Missing name.
+Monday
+Mongolian
+Mouse 3
+Mouse 4
+Mouse 5
+Mouse Left
+Mouse Right
+MouseCaptureLost
+MouseDoublePressed
+MouseFocusTicked
+MousePressed
+MouseReleased
+MouseScrolled
+MouseTriplePressed
+Move
+Multiple extension registrations for type "
+MutableMessage
+MutableRawRepeatedField
+MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
@@ -2106,32 +4174,160 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NJ2"v
+NOT_FOUND
 NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
+NULL
+NULL != pchFileName
+NULL != pchPrefixPassed
+NULL == m_pFile
+NULL output buffer with non-zero size passed to Base64Decode
+NULL output buffer with non-zero size passed to Base64Encode
+NULL row buffer
+NaCl
+NameEntry
 NamePart
+Need space between identifier and decimal point.
+Need space between number and identifier.
+Nepali
+NewFolder
+NewFolderButton
+NewVoiceHotKeyState
+Nil time value
+No IDATs written into file
+No binding for '%s', defautl key already bound to '%s'\n
+No default value
+No field named "uninterpreted_option" in the Options proto.
+No profile for iCCP chunk
+No space in chunk cache for sPLT
+No such Panel Animation class %s\n
+Non-primitive types can't be packed.
+Non-repeated Any specified multiple times.
+Non-repeated field "
+NonFriendMessageHandling
+None
+Norwegian
+Not a PNG file
+Not connected / invalid hSharedConnection
+Not enough image data
+Not found
+Not implemented field number 
+Not recognizing known sRGB profile that has been edited
+Not supported.
+NotConnected
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+NotificationClickPanel
+Notifications_EventsAndAnnouncements
+Notifications_ShowIngame
+Notifications_ShowMessage
+Notifications_ShowOnline
+November
+Num Lock
+Num Lock Toggle
+Numbers starting with leading zero must be in octal.
+NumericInputOnly
 O*9y]
+OKButton
 OPENSSL_atomic_add
 OPENSSL_cleanse
 OPENSSL_far_spin
 OPENSSL_ia32_cpuid
 OPENSSL_ia32_rdrand_bytes
 OPENSSL_ia32_rdseed_bytes
+OPENSSL_ia32cap
 OPENSSL_instrument_bus
 OPENSSL_instrument_bus2
 OPENSSL_instrument_halt
 OPENSSL_rdtsc
 OPENSSL_wipe_cpu
+OSX1010
+OUT_OF_RANGE
 OZw3(?
 O\n\nAnnotation
+October
+Odia
+Ogg Media File (*.ogv)
+OnAppShutdown
+OnCloseWindow
+OnCursorMoved
+OnFinishRequest
+OnFolderUp
+OnMouseFocusTicked
+OnNewFolder
+OnOpen
+OnRequestFocus
+OnScreenSizeChanged
+OnSetHTMLTitle
+OnSetStatusText
+OnStartRequest
+OnTaskBarChanged
+OnURLChanged
+Oneof must have at least one field.
 OneofDescriptorProto
+OneofOptions
+Only compression method 8 is supported by PNG
+Only compression windows <= 32k supported by PNG
+Only compression windows >= 256 supported by PNG
+Open Chrome devtools for shared JS context (offscreen window) on launch
+Open Chrome devtools on creation of any overlay browsers
+Open Chrome devtools on launch for every HTML window
+OpenButton
+OpenColumnChoiceMenu
+OpenContextMenu
+Option "
+Option field "
+Option must have a name.
+Option must not use reserved name "uninterpreted_option".
+Out of Memory
+Out of memory
+PCS illuminant is not D50
+PERMISSION_DENIED
+PLACEHOLDER_VALUE
+PNG Image (*.png)
+PNG file corrupted by ASCII conversion
+PNG load error %s\n
+PNG load warning %s\n
+PNG unsigned integer out of range
+PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
+POSIX
+PageLoadThrobber
+PageTitleChange
+Paired
+Palette is NULL in indexed image
+Panel
+Panel::InternalPerformLayout()
+Panel::IsWithinTraverse
+Panel::LocalToScreen
+Panel::OnThink
+Panel::ParentLocalToScreen
+Panel::ReloadKeyBindings:  Can't find entry for panel '%s'\n
+Panel::SaveKeyBindings '%s' is read-only!!!\n
+Panel::ScreenToLocal
+PanelPtr
+Parent
+Parental.LockParentalLock
+Parental.RegisterForParentalPlaytimeWarnings
+Parental.RegisterForParentalSettingsChanges
+Parental.UnlockParentalLock
 ParentalFeatureRequest
 ParentalPlaytimeDay
 ParentalPlaytimeRequest
 ParentalPlaytimeRestrictions
 ParentalSettings
+Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
+PathLabel
 Pe6^
+Persian
+Persistent Logfiles created which have no cleanup limit specified!
+Persistent logfile %s is past the keep until date - cleaning up\n
+PersonaNotifications
+PgDn
+PgUp
+PinCorner
+PinnedCornerOffsetX
+PinnedCornerOffsetY
 Plat_CommandLineParamExists
 Plat_FloatTime
 Plat_GetExecutablePathUTF8
@@ -2152,18 +4348,278 @@ Plat_localtime
 Plat_timegm
 Plat_timezone
 Player
+Polish
+PopulateDriveList
+PopulateFileList
+PopulateFileNameCompletion
+PopupHTML
+Portuguese
+Potential overflow in png_zalloc()
+PrepareBuffer( nNewLength ) == pstrNew
+PressButton
+ProgressBar
+Prompt
+Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
+Protocol Buffer map usage error:\n
+Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Pulse
+Punjabi (Gurmukhi)
+Punjabi (Shahmukhi)
 Qkkbal
+Quechua
+QueryBox
+Quit
 QyReSOT5U
 R1h58
+RESOURCE_EXHAUSTED
+RGB color space not permitted on grayscale PNG
+RGBA: %.2X %.2X %.2X %.2X
+RadioButton
+RadioButton::OnThink()
+RadioButtonChecked
+Reached an unintended state: CPPTYPE_MESSAGE
+Reached impossible case in HasBit().
+Read Error
+Read failure in png_handle_zTXt
+Read palette index exceeding num_palette
+Recursion limit at end of parse should be 
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got conditional between key and value
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got } in key
+ReleaseLast
+ReleaseLast() called on a RepeatedPtrField that is on an arena, 
+ReleaseMessage
+ReloadButton
+Remote call failed
+RemotePlay.BCanAcceptInviteForGame
+RemotePlay.BCanCreateInviteForGame
+RemotePlay.BRemotePlayTogetherGuestOnPhoneOrTablet
+RemotePlay.BRemotePlayTogetherGuestSupported
+RemotePlay.CancelInviteAndSession
+RemotePlay.CancelInviteAndSessionWithGuestID
+RemotePlay.CancelRemoteClientPairing
+RemotePlay.CloseGroup
+RemotePlay.CreateGroup
+RemotePlay.CreateInviteAndSession
+RemotePlay.CreateInviteAndSessionWithGuestID
+RemotePlay.GetClientID
+RemotePlay.GetClientStreamingBitrate
+RemotePlay.GetClientStreamingQuality
+RemotePlay.GetControllerType
+RemotePlay.GetGameSystemVolume
+RemotePlay.GetPerUserInputSettings
+RemotePlay.GetPerUserInputSettingsWithGuestID
+RemotePlay.IdentifyController
+RemotePlay.InstallAudioDriver
+RemotePlay.InstallInputDriver
+RemotePlay.MoveControllerToSlot
+RemotePlay.RegisterForAudioDriverPrompt
+RemotePlay.RegisterForBitrateOverride
+RemotePlay.RegisterForClearControllers
+RemotePlay.RegisterForControllerIndexSet
+RemotePlay.RegisterForDevicesChanges
+RemotePlay.RegisterForGroupCreated
+RemotePlay.RegisterForGroupDisbanded
+RemotePlay.RegisterForInputDriverPrompt
+RemotePlay.RegisterForInputDriverRestartNotice
+RemotePlay.RegisterForInputUsed
+RemotePlay.RegisterForInviteResult
+RemotePlay.RegisterForNetworkUtilizationUpdate
+RemotePlay.RegisterForPlaceholderStateChanged
+RemotePlay.RegisterForPlayerInputSettingsChanged
+RemotePlay.RegisterForQualityOverride
+RemotePlay.RegisterForRemoteClientLaunchFailed
+RemotePlay.RegisterForRemoteClientStarted
+RemotePlay.RegisterForRemoteClientStopped
+RemotePlay.RegisterForRemoteDeviceAuthorizationCancelled
+RemotePlay.RegisterForRemoteDeviceAuthorizationRequested
+RemotePlay.RegisterForRemoteDevicePairingPINChanged
+RemotePlay.RegisterForRestrictedSessionChanges
+RemotePlay.RegisterForSessionJoined
+RemotePlay.RegisterForSessionStarted
+RemotePlay.RegisterForSessionStopped
+RemotePlay.RegisterForSettingsChanges
+RemotePlay.SetClientStreamingBitrate
+RemotePlay.SetClientStreamingQuality
+RemotePlay.SetGameSystemVolume
+RemotePlay.SetPerUserControllerInputEnabled
+RemotePlay.SetPerUserControllerInputEnabledWithGuestID
+RemotePlay.SetPerUserKeyboardInputEnabled
+RemotePlay.SetPerUserKeyboardInputEnabledWithGuestID
+RemotePlay.SetPerUserMouseInputEnabled
+RemotePlay.SetPerUserMouseInputEnabledWithGuestID
+RemotePlay.SetRemoteDeviceAuthorized
+RemotePlay.SetRemoteDevicePIN
+RemotePlay.SetRemotePlayEnabled
+RemotePlay.SetStreamingClientConfig
+RemotePlay.SetStreamingClientConfigEnabled
+RemotePlay.SetStreamingDesktopToRemotePlayTogetherEnabled
+RemotePlay.SetStreamingP2PScope
+RemotePlay.SetStreamingServerConfig
+RemotePlay.SetStreamingServerConfigEnabled
+RemotePlay.StopStreamingClient
+RemotePlay.StopStreamingSession
+RemotePlay.StopStreamingSessionAndSuspendDevice
+RemotePlay.UnlockH264
+RemotePlay.UnpairRemoteDevices
+RemotePlayTogetherVolume
+RemoveLast
+Repaint
+Repeated fields can't have default values.
+RequestFocus
+Requested size is too large to fit into size_t.
+Required fields are not allowed in proto3.
+Reserved numbers must be positive integers.
+Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
+Reserved range end number must be greater than start number.
+ResizeColumnToContents
+Resource\warning.wav
+RichText
+RichText.InsetX
+RichText.InsetY
+RichText: textfile parameter '%s' not found.\n
+RichText::DrawString
+RichText::OnThink()
+RichText::ParseTextStringForURL
+RichText::RecalculateLineBreaks
+RichTextInterior
+RichTextReceivedUnneededFocus
+Right
+RoamingStorage.DeleteKey
+RoamingStorage.GetJSON
+RoamingStorage.GetString
+RoamingStorage.SetObject
+RoamingStorage.SetString
+Romanian
+Row has too many bytes to allocate in memory
+RunGameEngine007
+Russian
+SHA1_Init( &c )
+SHA256_Init( &c )
+SKIN
 SKyu
 SPEED
+STEAM_
 STRING
+Saturday
+SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+Saving unknown chunk:
+Scots
+Scroll Lock
+Scroll Lock Toggle
+ScrollBar
+ScrollBar.Horizontal
+ScrollBar.Wide
+ScrollBarButton
+ScrollBarButton.Down
+ScrollBarButton.Left
+ScrollBarButton.Right
+ScrollBarButton.Up
+ScrollBarHandle
+ScrollBarSlider
+ScrollBarSlider.Horizontal
+ScrollBarSliderMoved
+ScrollBar_Horizontal
+ScrollBar_Vertical
+ScrollButtonPressed
+Second argument to Swap() (of type "
+Second argument to SwapFields() (of type "
+Second file dialog opened
+SecurityStatus
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
+Select
+SelectButton
+SelectedImage
+Send failed
+SentenceMode
+SentenceModeMenu
+September
+Serbian
+ServerVirtualizedMemberLists
 ServiceDescriptorProto
 ServiceOptions
+Set the base used to construct quick login URLs
+SetAllocatedMessage
+SetAlpha
+SetBool
+SetCursor
+SetDouble
+SetEnum
+SetEnumValue
+SetFloat
+SetFocus
+SetFont
+SetInt32
+SetInt64
+SetPersonaState
+SetProgress
+SetRepeatedBool
+SetRepeatedDouble
+SetRepeatedEnum
+SetRepeatedFloat
+SetRepeatedInt32
+SetRepeatedInt64
+SetRepeatedString
+SetRepeatedUInt32
+SetRepeatedUInt64
+SetSortColumn
+SetState
+SetString
+SetText
+SetTexture
+SetTitle
+SetUInt32
+SetUInt64
+SetURL
+SharedConnection.AllocateSharedConnection
+SharedConnection.Close
+SharedConnection.RegisterOnBinaryMessageReceived
+SharedConnection.RegisterOnLogonInfoChanged
+SharedConnection.RegisterOnMessageReceived
+SharedConnection.SendMsg
+SharedConnection.SendMsgAndAwaitBinaryResponse
+SharedConnection.SendMsgAndAwaitResponse
+SharedConnection.SubscribeToClientServiceMethod
+SharedConnection.SubscribeToEMsg
+ShellCmd
+Shift
+Should not reach here.
+Show browser tooltips
+ShowChatRoomGroupDialog
+ShowChatRoomGroupInvite
+ShowFriendChatDialog
+ShowIMECandidates
+ShowInviteToTradeDialog
+ShowPanel
+ShowPopupFriendsList
+SignIntoFriends
+Simplified_Chinese
+Sindhi
+Sinhala
+Size() == operand.Size()
+Skipping js method registration, already exists: %s
+SliderHoriz
+Slovak
+Slovenian
 Sm"\vg
+SnapRange
+Software\Valve\Steam\FriendsUI\FriendsUIJSON
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
+Sorani
+Sotho
+Sounds_EventsAndAnnouncements
+Sounds_PlayIngame
+Sounds_PlayMessage
+Sounds_PlayOnline
 SourceCodeInfo
+Space
+Spanish
 SpewAndLogActivate
 SpewAndLogChangeIfStillDefault
+Spline
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -2236,6 +4692,12 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
+StaticFileWriterThread()
+StatusText
+Steam - DirWatcher
+Steam ID does not pass strict parsing: '%s'
+SteamChina_SChinese
+SteamID
 SteamRealPath
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
@@ -2262,9 +4724,39 @@ SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamUIGames001
+SteamUIUIInterfaceV001
+Steam_BGetCallback
+Steam_FreeLastCallback
+Steam_GetAPICallResult
+SteamworksChatAPI
+Stop using I64/I32 - use lld or d, respectively
+StopButton
+StopPanelAnimations
+Storage.DeleteKey
+Storage.GetJSON
+Storage.GetString
+Storage.SetObject
+Storage.SetString
+Streaming
+String field
+String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
+StringPrintfVector currently only supports up to 
+SubTabPosition
+Sunday
+Supported Types (%s)
+Swahili
+Swap
+Swedish
+Symbol name "
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Synthetic oneofs must be after all other oneofs
+TLS init function for 
+TLS wrapper function for 
+TMPDIR
 TSListBase_Init
 TSListBase_Pop
 TSListBase_UnsafePeek
@@ -2274,10 +4766,40 @@ TSQueueBase_Push
 TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
+TabPosition
+Table %s Key %d\n
+Tajik
+Tamil
+Tatar
+Telugu
+Text
+TextBlock
+TextChanged
+TextClicked
+TextEntry
+TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
+TextEntry.IMEBGColor
+TextEntry.IMEFGColor
+TextEntryClearButton
+TextEscape
+TextImage::Paint()
+TextKillFocus
+TextNewLine
+Thai
+The JSON camel-case name of field "
+The [proto3_optional=true] option may only be set on proto3fields, not 
+The extension 
+The first enum value must be zero in proto3.
+The type parameter T in RepeatedFieldRef<T> API doesn't match 
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
+This program requires version 
+This program was compiled against version 
+This shouldn't be called if all the sizes are equal.
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadImplOneTimeInit
 ThreadInMainThread
+ThreadInMainThread()
 ThreadInterlockedAssignIf
 ThreadInterlockedCompareExchange
 ThreadInterlockedDecrement
@@ -2287,12 +4809,117 @@ ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadShellExecute
 ThreadSleep
+ThrobberImagePanel
+Thursday
+Tick
+Tigrinya
+ToggleButton
+ToggleColumnVisible
+Too many IDATs found
+Too many arguments. %d arguments at most.
+Too many bytes for PNG signature
+Too much image data
+ToolWindow::s_ToolWindows
+Tooltip.Anchor
+Tooltip.Delay
+TooltipHTML
+TooltipWindow
+Traditional_Chinese
+TreeImage
+TreeNode
+TreeNodeText
+TreeView
+TreeViewItemSelected
+TreeViewSubPanel
+Tried to merge messages of different types 
+Tried to register a non-generated type with the generated type registry.
+True
+Tswana
+Tuesday
+Turkish
+Turkmen
 Type
+Type appears to be in generated pool but wasn't 
+Type is already registered: 
+Type: %s\n
+UNAUTHENTICATED
+UNAVAILABLE
+UNIMPLEMENTED
+UNKNOWN
+UNKNOWN_ENUM_VALUE_%s_%d
+URLBar
+URLBarBrokenSecure
+URLBarSecure
+URLClicked
+URLLabel
+URLStatusImage
+URLText
+UTF-8
+UTF-8 data when 
 UUUU
+Ukrainian
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unexpected Error
+Unexpected end of string.
+Unexpected error
+Unexpected failure while serializing option submessage 
+Unhandled notification type coming from Friends UI?
+Unimplemented type: 
+Uninitialized row
+Uninterpreted option is missing name or value.
 UninterpretedOption
 Universe
 Unknown
+Unknown GameID type
+Unknown compression method in IHDR
+Unknown cpp_type %d
+Unknown custom filter method
+Unknown enumeration value of "
+Unknown filter method in IHDR
+Unknown freer parameter in png_data_freer
+Unknown interlace method in IHDR
+Unknown method: %s
+Unknown row filter for method 0
+Unknown scaling '%s'; valid values are none, panel, image, fit
+Unmatched %s\n
+UnpinnedCornerOffsetX
+UnpinnedCornerOffsetY
+Unrecognized character code '%c' in format string, ignoring
+Unrecognized character code (%c) in format string, ignoring
+Unrecognized equation type for pCAL chunk
+Unrecognized field type: %d
+Unrecognized syntax: 
+Unrecognized unit type for oFFs chunk
+Unrecognized unit type for pHYs chunk
+Unsupported
+Unsupported format qualifier %c%c
+Unsupported format qualifier l%c
+Unsupported format qualifier z%c
+Unsupported friends ui mode
+Unsupported: type mismatch
+UpdateIMECandidates
+Urdu
+Use local dev websites
+UtlThreadSafeQueue
+Uyghur
+Uzbek
+VFileSystem014
+VGUI Controls Global
+VGUI Globals
+VGUI_Input005
+VGUI_Localize003
+VGUI_NotificationManager002
+VGUI_Panel010
+VGUI_Scheme010
+VGUI_Surface039
+VGUI_System011
+VGUI_ivgui007
+VGuiModuleTracker001
+VISTA
+VPanel
 VProfInternalEnterScopeCurrentThread
+VTT for 
 V_AppendSlash
 V_ComposeFileName
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
@@ -2307,6 +4934,7 @@ V_IsSteamCloseProtocol
 V_IsValidURLCharacter
 V_MakeAbsolutePath
 V_RemoveDotSlashes
+V_RemoveDotSlashes failed for "%s".
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 V_StrSubstInPlace
 V_StrTrim
@@ -2338,6 +4966,7 @@ V_snprintf
 V_strcat
 V_stricmp_prefix
 V_stristr(char const*, char const*)
+V_strlen( pchTime ) == 25
 V_strlower_fast
 V_strncat
 V_strncat_length
@@ -2358,17 +4987,117 @@ V_vsnwprintf
 V_wcsncpy
 V_wcstoi64
 V_wcstoui64
+Valencian
+Valid palette required for paletted images
+Value must be "true" or "false" for boolean option "
+Value must be identifier for boolean option "
+Value must be identifier for enum-valued option "
+Value must be integer for int32 option "
+Value must be integer for int64 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for double option "
+Value must be number for float option "
+Value must be quoted string for string option "
+Value of type "
+Value out of range for int32 option "
+Value out of range for int64 option "
+Value out of range for uint32 option "
+Value too long
+Value:\n
 Vc0a
+VertScrollBar
+Vietnamese
+WARNING
+WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WIN32
+WIN64
+WIN7
+WINDOWS
+WORKAROUND_GdbSymbolLoadHook
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Warning
+Warning parsing text-format 
 Wb8e{ ;
 WeakRandomFloat
 WeakRandomInt
 WeakRandomUint32
+WebBack
+WebChat.BSuppressPopupsInRestore
+WebChat.GetCurrentUserAccountID
+WebChat.GetLocalAvatarBase64
+WebChat.GetLocalPersonaName
+WebChat.GetOverlayChatBrowserInfo
+WebChat.GetPrivateConnectString
+WebChat.GetPushToTalkEnabled
+WebChat.GetSignIntoFriendsOnStart
+WebChat.GetUIMode
+WebChat.OnGroupChatUserStateChange
+WebChat.OnNewGroupChatMsgAdded
+WebChat.OpenURLInClient
+WebChat.RegisterForComputerActiveStateChange
+WebChat.RegisterForFriendPostMessage
+WebChat.RegisterForMouseXButtonDown
+WebChat.RegisterForPushToTalkStateChange
+WebChat.RegisterForUIModeChange
+WebChat.RegisterOverlayChatBrowserInfoChanged
+WebChat.SetActiveClanChatIDs
+WebChat.SetNumChatsWithUnreadPriorityMessages
+WebChat.SetPersonaName
+WebChat.SetPushToMuteEnabled
+WebChat.SetPushToTalkEnabled
+WebChat.SetPushToTalkHotKey
+WebChat.SetPushToTalkMouseButton
+WebChat.SetVoiceChatActive
+WebChat.SetVoiceChatStatus
+WebChat.ShowChatRoomGroupDialog
+WebChat.ShowFriendChatDialog
+WebChat.UnregisterForMouseXButtonDown
+WebForward
+WebM Video File (*.webm)
+WebReload
+WebSteamURL
+WebStop
+WebStorage
+Wednesday
+Welsh
+WindowMaximized
+WindowRestored
+Windows
+Wolof
+Write Error
+Writing zero-length unknown chunk
+Wrote palette index exceeding num_palette
+X360
+Xhosa
 XsBI
+YYYY
 YbZ6[
+Yoruba
+You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z-google.golang.org/protobuf/types/descriptorpb
+Z0000
+Z_OK on Z_FINISH with output space
 Zjz\v
+Zulu
+[%s] applying key '%s', has changed from '%s' to '%s'\n
+[A:%u:%u:%u]
+[M:%u:%u:%u]
+[TXN:%llu] 
+[abi:
 [h1R
+[lazy = true] can only be specified for submessage fields.
+[libprotobuf %s %s:%d] %s\n
+[packed = true] can only be specified for repeated primitive fields.
+\%03o
+\U%08x
+\n    Actual    : 
+\n    Field type: 
+\n  Field       : 
+\n  Message type: 
+\n  Problem     : 
+\n  Problem     : Enum value did not match field type:\n    Expected  : 
+\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n CClientNotificationFriendMessage
 \n EWindowsUpdateInstallationImpact
 \n google/protobuf/descriptor.proto
@@ -2385,6 +5114,8 @@ Zjz\v
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \n+steammessages_clientnotificationtypes.proto"4\n#CClientNotificationCloudSyncFailure
+\nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nParsing attempt:  
 \nYg:a
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
@@ -2589,6 +5320,7 @@ Zjz\v
 \n\vunlock_code
 \n\vurl_rewrite
 \n\vwindow_icon
+\nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \r8STs\ne
 \rRoOs
 \r\n\tCODE_SIZE
@@ -2600,13 +5332,21 @@ Zjz\v
 \r\n\tTYPE_ENUM
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \rmj>zjZ
+\t(%zu) comparing %s with %s\n
 \t\t\n\n\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\u%04x
+\u000
+\u001
 \venums.proto"0\n\vParentalApp
 \venums.proto"^\n\tCMsgKeyUp
+\x%02x
 ]JldN
 ^oEZ_
+_Accum
 _DMsg
+_Fract
+_GLOBAL_
 _ITM_RU1
 _ITM_RU4
 _ITM_addUserCommitAction
@@ -2614,6 +5354,9 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
+_Sat 
 _SpewMessageType
 ___tls_get_addr
 __assert_fail
@@ -2624,11 +5367,15 @@ __cxa_atexit
 __cxa_finalize
 __duplocale
 __errno_location
+__float128
 __fprintf_chk
 __fread_chk
 __freelocale
 __fxstat64
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
 __isoc99_sscanf
 __iswctype_l
 __longjmp_chk
@@ -2705,10 +5452,21 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_actionMessage
+_actionSignalTargetDar
+_associateName
+_blank
+_clickableTextPanels
 _fini
+_imageDar
+_imageDar.IsValidIndex( index )
 _init
+_internal.RegisterForStyleChanges
+_new
+_panelDar
 _setjmp
 _strlwr
+_textImage
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -2718,12 +5476,17 @@ _txnal_runtime_error_get_msg(void*)
 `tun%
 a\rxg[
 abort
+about to perform blocking dns call from the main thread.  consider refactoring.\n
+about:blank
 access
+accessor_ == other.accessor_
+account
 accountid_owner
 accumulated_stats
 achieved
 achievement_id
 action_set_name
+active
 activeConfigChangeMsg
 activity
 additional_includes
@@ -2740,85 +5503,307 @@ aesni_set_decrypt_key
 aesni_set_encrypt_key
 aesni_xts_decrypt
 aesni_xts_encrypt
+afrikaans
 aggregate_value
+albanian
+alignof 
+allocator
+allowed in proto3.
 allowed_daily_minutes
 allowed_extensions
 allowed_seconds
 allowed_time_windows
+alnum
+alpha
 alphasort64
+alse
 altgr_capslock_keycode
 altgr_shift_capslock_keycode
 altgr_shift_keycode
+amazon.com
+amharic
 amount
+animate
 anonymous
 answer
+aperturescience.com
+appID
+appearance
+append
 appid
 applist_base_description
 applist_base_id
 applist_custom
 apply_playtime_restrictions
 approved
+ar_AE
+arabic
 args
 argument
+armenian
+array
+assamese
+associate
+attributes
 audio_channels
+auto
+auto:
+autocheck
+availableSpace
 available_video_modes_OBSOLETE
 avatar_location
 average
 average_network_time_ms
+azerbaijani
 b,uZ
 bAllow
+bBroadcastCapable
+bCanSteamVR
+bCanSuspend
+bChooseDirectory
+bControllerEnabled
+bDoNotDisturbMode
+bEnabled
 bHasMultipleInputs
 bInput
+bIsBroadcasting
+bIsRecordingDesktop
 bKGD
+bKGD must be after
+bKeyboardEnabled
+bLoggedOn
+bMicrophoneActive
+bMicrophoneEnabled
+bMouseEnabled
 bNewNavigation
+bNotifications_EventsAndAnnouncements
+bNotifications_ShowIngame
+bNotifications_ShowMessage
+bNotifications_ShowOnline
+bPanelFound
+bPushToMute
+bSaveMode
+bSignIntoFriends
+bSounds_EventsAndAnnouncements
+bSounds_PlayIngame
+bSounds_PlayMessage
+bSounds_PlayOnline
+bUseAsDefault
+back
+background color must be supplied to remove alpha/transparency
+bad adaptive filter value
+bad background index (internal error)
+bad color-map processing (internal error)
+bad compression info
+bad compression method
+bad data option (internal error)
+bad encoding (internal error)
+bad height format
+bad keyword
+bad longjmp: 
+bad parameters to zlib
+bad width format
+bad_function_call
 bad_url
+baidu.com
 bandwidth_test
+bangla
+barinset
+baseIP.GetType() == k_EIPTypeV4
+baseIP.GetType() == k_EIPTypeV6
 baseline
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basque
+bbc.co.uk
 begin
+belarusian
+bg_BG
+bgcolor
 bgoback
 bind_textdomain_codeset
+binding
 bindtextdomain
 binput
+bitNum >= 0 && bitNum < this->Size()
 bitrate
+blGrip
+blank
+blobSize <= nMaxBlobSize
+blogger.com
 body
+bold
+bool
+bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
+boolean
+bootstrap
+bosnian
+bottom
+bottomGrip
+boundTall >= 0
+boundWide >= 0
+brazilian
+brighttext
+broadcast
+broadcast/watch/
 broadcast_permission
+broadcastid
 browser_handle
+browserid
 bsuccess
+btakefocus
 btowc
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+buf.IsText()
+buffer error
+buffer. Use the 'bytes' type if you intend to send raw 
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+buildGroup != NULL
 build_id
+bulgarian
 burst_bitrate_kbps
 button
 bwiO'
+byte
+bytes
+bytes. 
+cActualReplacements == cReplacements
+cChildren <= SHRT_MAX
+cDaysKeepPersistentLogFiles > 0
+cDigest != 0
 cHRM
+cHRM Blue X
+cHRM Blue Y
+cHRM Blue Z
+cHRM Green X
+cHRM Green Y
+cHRM Green Z
+cHRM Red X
+cHRM Red Y
+cHRM Red Z
+cHRM White X
+cHRM White Y
+cHRM chunk does not match sRGB
+cSecs >= 0
 calloc
+can't convert int64 to uint64 (negative number)
+can't convert uint64 to int32 (data loss)
+can't convert uint64 to int64 (data loss)
+can't reach here.
+candidate
+cannot create std::vector larger than max_size()
 canvas_oop_rasterization
 capslock_keycode
+catalan
+cbActual < (uint32)nBufSizeWithTerminator
+cbToRead <= 1024 * 1024 * 1024
 cc_enable_arenas
 cc_generic_services
+cchCharBlock <= m_TextStream.Count()
+cchEncodedData > 0
+cchEncodedData >= ( cubData * 2 ) + 1
 ceil
+cellcolor
+center
 certName
+certerror
+certname
 change_desktop_resolution
+changed
 channel
 channels
+char
+char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
+char16_t
+char32_t
+char8_t
+chat
+chat_group_id
 chat_id
+chat_room_id
+chatroomgroupid
+chatroomid
 chdir
+check
+checkable
+checked
+checkout
+cherokee
+child
+china
 chmod
 choose_directory
 chown
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
+chunk data is too large
+className
+clickabletextaction
+client
+clientId
+clientName
 client_bitrate
 client_streaming
+clientui.so
+clientui_overlay_fps
 clip_id
 clock_gettime
 close
+close() failed: 
 closedir
+closeonescape
+cloud
+clping
+cnet.com
+cnn.com
+cntrl
+code
 codec
+col < m_CurrentColumns.Count()
 color
+color map overflow (BAD internal error)
+color-map index out of range
+column
 com.google.protobufB
+command
+community.csgo.com.cn
+complex 
+compressed data too long
 config
 configResponse
+conflicting calls to set alpha mode and background
 connect_params
+connect_private
 connection_problem
+console
+const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
+const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
+const string& google::protobuf::UnknownField::length_delimited() const
+const_cast
+construction vtable for 
+content
+context.m_vecStack.Count() <= 1
+contextmenu
+continuous
+controlKeys
+controller
 controllerData
 controllerPath
 controllerType
@@ -2828,23 +5813,71 @@ controller_name
 controller_overlay_hotkey
 controller_path
 controller_slots
+controller_ui
+controllerconfig/
+controls
 convar_
 cookies
 coord_x
 coord_y
+copy
+copylink
+copyurl
+could not get input settings
 count
+count >= 0
+covariant return thunk to 
+created
+created64
 creation_flags
 creator
+croatian
+crypto
+cs_CZ
 csharp_namespace
+ctrl
 ctype
+cubBytesToRead < INT32_MAX
+cubData
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
+cubData > 0
+cubInput > 0
+cubKey > 0
+curFilter[0] == '*' && curFilter[1] == '.'
 current_playtime_restrictions
 current_progress
 cursor
+custom_
+custom_%d
 custom_commands
+czech
 dQy/
+da_DK
+damaged LZ stream
+danish
+dari
 data
+data error
 data"8\n
+data:image/
+data:image/png;base64,
+data_ == other.data_
+datacoll
+dayofdefeat.com
+de_DE
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
 default_local_path
+deflateEnd failed (ignored)
+delete 
+delete[] 
+delta
 deltax
 deltay
 desired_bitrate_kbps
@@ -2852,27 +5885,65 @@ desired_framerate_denominator
 desired_framerate_numerator
 desired_resolution_x
 desired_resolution_y
+developer
 device_address
 dgettext
+different KV data types in a single list column
+digg.com
+digit
+direction
+directory
 disable
 disable_amd_hardware_encoding
 disable_client_cursor
 disable_intel_hardware_encoding
 disable_steam_store
 disabled
+disk-free command failed\n
+diskSize
+divider
 dl_iterate_phdr
 dlclose
 dlerror
 dlmopen
+dlmopen %s failed: %s\n
 dlopen
 dlsym
 domain
 domains
+dota2.com
+double
+downarrow
 dpi_horizontal
+drophoverdelay
+droppable
+dulltext
+dupKeyMap
+duplicate
+duplicate sRGB information ignored
 duration
+dutch
+dynamic_cast
+eBroadcastReady
+eBrowserType
+eCmd > 0 && eCmd < eHTMLCommands_None
+eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
+eResult
+eRet != k_ESteamRealmUnknown
+eUIMode
+eUniverse
 eXIf
+east
+ebay.com
+echar >= schar
 edit_state_flags
+editable
+el_GR
+elem + num <= Count()
+elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elementtagname
+emphasis
+en_US
 enable_audio_streaming
 enable_audio_uncompressed
 enable_capture_nvfbc
@@ -2892,21 +5963,42 @@ enable_video_streaming
 enabled
 enabled_features
 endmntent
+engadget.com
+english
 entries
+entry
+enum
+enums.proto
+error
+error in user chunk
+error writing ancillary chunked compressed data
 error_description
+es-419
+es_419
+es_ES
 estackingorder
+estonian
+event
 event_id
 events
+ever_enabled
 ewh/?y
+exceeds application limits
+existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
+expandableSpace
 expires
+extend .$0 {\n
 extendee
 extension_range
+extra compressed data
 f.N%H
 fP~V
 faccessat
+facebook.com
 fallocate64
 false
+false 
 false"
 false"&\n\fCMsgStopFind
 false"M\n
@@ -2915,64 +6007,152 @@ fclose
 fcntl
 fdatasync
 fdopen
+feature
 features
+featuresEnabled
 feof
 ferror
 fflush
+fgcolor
 fgets
+fi_FI
 field
+fieldName
 file
+file error
 filename
 fileno
+fileop
+fileplanet.com
 files
+filesize
+filesize64
+filesystem
+filetx
+filipino
+fillcolor
 filler
+filter
+filtered
+filterinfo
 filters
 find
+findactive
+findcount
 fingerid
+finnish
+fixed point overflow ignored
+fixed32
+fixed64
 flags
+flickr.com
+float
 flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
 fmodf
 fnmatch
 focus
 focused
+font
 fopen
+fopen tmpfile failed\n
 fopen64
 force_direct_hwnd_popups
+force_to_foreground
+forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
+formFactor
 format
+forward
+fotolog.net
+foxsports.com
 fprintf
 fputc
 fputs
+fr_FR
+frame_brGrip
+frame_captiongrip
+frame_close
 frame_display_delta
 frame_id
 frame_loss_percentage
+frame_maximize
+frame_menu
+frame_minimize
+frame_mintosystray
 frame_start_delta
+frame_title
 framerate_denominator
 framerate_numerator
 frames
+framesettitlebarvisible
+frametitle
 fread
 free
 freeaddrinfo
+french
 freopen
 frexp
+friends
+friends/trackerui_%language%.txt
+friendster.com
+friendsui.dll
 fscanf
+fscanf disk-free output failed\n
 fseek
 fseeko64
+fsync %s failed, errno = %d\n
 ftello64
+ftp:
 ftruncate
+ftruncate failed\n
 ftruncate64
 fu`z
+fullpath
+func
+function
 function_handle
 futimes
 fwrite
 gAMA
 gAY:
+g_AnimationPropertyConverters
+g_ButtonSoundNames
+g_FriendsUIModule
+g_ParentalCache
+g_ScriptSymbols
 g_VProfProfilesRunningCount
+g_VecLoadedModules
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
+g_vecTempTextBuffer
+ga-alpha color-map: too few entries
+galician
+gameID
 game_id
 gameid
+gameoverlayrenderer.so
+gamesforwindows.com
+gamespot.com
+gamesradar.com
+gametap.com
+gamezone.com
+gamingheads.com
+gamma table being rebuilt
+gamma value
+gamma value does not match libpng estimate
+gamma value does not match sRGB
+gamma value out of range
+generic
+georgian
+german
 gesture
 gestures
+get_disk_info
 getaddrinfo
 getc
 getcwd
@@ -2982,62 +6162,384 @@ getsockname
 gettext
 getuid
 getwc
+gizmodo.com
+global constructors keyed to 
+global destructors keyed to 
 global_achieved_pct
 gmtime
+google.fr
 google.protobuf"G\n
+google.protobuf.
 google.protobuf.Any
+google.protobuf.BoolValue
+google.protobuf.BytesValue
+google.protobuf.DescriptorProto.name
+google.protobuf.DescriptorProto.reserved_name
+google.protobuf.DoubleValue
+google.protobuf.Duration
+google.protobuf.Empty
+google.protobuf.EnumDescriptorProto.name
+google.protobuf.EnumDescriptorProto.reserved_name
+google.protobuf.EnumOptions
+google.protobuf.EnumValueDescriptorProto.name
+google.protobuf.EnumValueOptions
+google.protobuf.ExtensionRangeOptions
+google.protobuf.FieldDescriptorProto.default_value
+google.protobuf.FieldDescriptorProto.extendee
+google.protobuf.FieldDescriptorProto.json_name
+google.protobuf.FieldDescriptorProto.name
+google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldMask
+google.protobuf.FieldOptions
+google.protobuf.FieldOptions.boxed_type
+google.protobuf.FileDescriptorProto.dependency
+google.protobuf.FileDescriptorProto.name
+google.protobuf.FileDescriptorProto.package
+google.protobuf.FileDescriptorProto.syntax
+google.protobuf.FileOptions
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FileOptions.csharp_namespace
+google.protobuf.FileOptions.go_package
+google.protobuf.FileOptions.java_outer_classname
+google.protobuf.FileOptions.java_package
+google.protobuf.FileOptions.objc_class_prefix
+google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_metadata_namespace
+google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.swift_prefix
+google.protobuf.FloatValue
+google.protobuf.GeneratedCodeInfo.Annotation.source_file
+google.protobuf.Int32Value
+google.protobuf.Int64Value
+google.protobuf.ListValue
+google.protobuf.MessageOptions
+google.protobuf.MethodDescriptorProto.input_type
+google.protobuf.MethodDescriptorProto.name
+google.protobuf.MethodDescriptorProto.output_type
+google.protobuf.MethodOptions
+google.protobuf.OneofDescriptorProto.name
+google.protobuf.OneofOptions
+google.protobuf.ServiceDescriptorProto.name
+google.protobuf.ServiceOptions
+google.protobuf.SourceCodeInfo.Location.leading_comments
+google.protobuf.SourceCodeInfo.Location.leading_detached_comments
+google.protobuf.SourceCodeInfo.Location.trailing_comments
+google.protobuf.StringValue
+google.protobuf.Struct
+google.protobuf.Timestamp
+google.protobuf.UInt32Value
+google.protobuf.UInt64Value
+google.protobuf.UninterpretedOption.NamePart.name_part
+google.protobuf.UninterpretedOption.aggregate_value
+google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.Value
+google.protobuf.bridge.MessageSet
+google/protobuf/arena.cc
+google/protobuf/arenastring.cc
+google/protobuf/descriptor.cc
+google/protobuf/descriptor.pb.cc
+google/protobuf/descriptor.proto
+google/protobuf/descriptor_database.cc
+google/protobuf/dynamic_message.cc
+google/protobuf/extension_set.cc
+google/protobuf/extension_set_heavy.cc
+google/protobuf/generated_message_reflection.cc
+google/protobuf/generated_message_util.cc
+google/protobuf/io/coded_stream.cc
+google/protobuf/io/tokenizer.cc
+google/protobuf/io/zero_copy_stream.cc
+google/protobuf/io/zero_copy_stream_impl.cc
+google/protobuf/io/zero_copy_stream_impl_lite.cc
+google/protobuf/map_field.cc
+google/protobuf/message.cc
+google/protobuf/message_lite.cc
+google/protobuf/parse_context.cc
+google/protobuf/reflection_ops.cc
+google/protobuf/repeated_field.cc
+google/protobuf/stubs/common.cc
+google/protobuf/stubs/int128.cc
+google/protobuf/stubs/stringpiece.cc
+google/protobuf/stubs/stringprintf.cc
+google/protobuf/stubs/strutil.cc
+google/protobuf/stubs/substitute.cc
+google/protobuf/text_format.cc
+google/protobuf/unknown_field_set.cc
+google/protobuf/wire_format.cc
+google/protobuf/wire_format_lite.cc
+google::protobuf::FieldDescriptorProto_Label_IsValid(value)
+google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
+google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
+google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
+google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
+google::protobuf::uint64 google::protobuf::UnknownField::varint() const
+google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 gpu_compositing
 gqr<
+gradientEnd
+gradientStart
+gradientVertical
+graph
+graphics/chk_menu_item
+graphics/html_lock
+graphics/html_lock_broken
+graphics/loop_
+graphics/rampDown_
+graphics/rampDown_4
+gray+alpha color-map: too few entries
+gray-alpha color-map: too few entries
+gray[16] color-map: too few entries
+gray[8] color-map: too few entries
+greek
 greeting
+group
+guard variable for 
 guestid
+guestpass
+gujarati
+gurmukhi
 hIST
+hIST must be after
 hPU3
+half
+half-life2.com
 handle
+handleValue
 has_on_screen_keyboard
+hashTypeOut == k_EHashPBKDF2_10000
+hausa
 header
+header crc mismatch
 headers
+hebrew
 height
+help
+hi5.com
 hidden
+hidden alias for 
+hindi
+hintText
+horizontal-align
 host
 host_play_audio
 hostname
 hot_x
 hot_y
+href=
+html
+html-findbar
 htmlmessages.proto
+htmlpopupchild
+http:
+http://
+httpclient
 httponly
+https:
+https://
+https://%s-china.%s.steam.dev/
+https://%s-china.beta.valve.org/
+https://%s.%s.steam.dev/
+https://%s.beta.steampowered.com/
+https://%s.steamchina.com/
+https://%s.steampowered.com/
+https://appmgmt.%s.steam.dev/
+https://avatars.beta.steamstatic.com/
+https://avatars.cdn.steamchina.eccdnx.com/
+https://avatars.steamstatic.com/
+https://beta.steamcommunity.com/
+https://cdn.beta.steampowered.com/steamcommunity/beta/
+https://cdn.beta.steampowered.com/store
+https://cdn.steamchina.eccdnx.com/steamcommunity/public/
+https://cdn.steamchina.eccdnx.com/store
+https://cdn.steamstatic.com/steamcommunity/public/
+https://cdn.steamstatic.com/store
+https://clan.beta.steamstatic.com/
+https://clan.cdn.steamchina.eccdnx.com/
+https://clan.steamstatic.com/
+https://community-china.%s.steam.dev/
+https://community-china.beta.valve.org/
+https://community.%s.steam.dev/
+https://community.csgo.com.cn/
+https://my.steamchina.com/
+https://partner.steamgames.com/
+https://s.team/q/
+https://shared.beta.steamstatic.com/
+https://shared.beta.steamstatic.com/store_item_assets/steam/apps
+https://shared.cdn.steamchina.eccdnx.com/
+https://shared.cdn.steamchina.eccdnx.com/store_item_assets/steam/apps
+https://shared.steamstatic.com/
+https://shared.steamstatic.com/store_item_assets/steam/apps
+https://steam-chat.com/
+https://steamcommunity-a.akamaihd.net/
+https://steamcommunity.com/
+https://steamloopback.host
+https://steampublishbeta.valve.org/
+https://store.steamchina.com/qr/
+https://video.beta.steamstatic.com/
+https://video.cdn.steamchina.eccdnx.com/
+https://video.steamstatic.com/
+httpserver
+hu_HU
+hungarian
 hwnd
 hxi(j
+i < length_
 i91k
 iCCP
+iCCP: invalid keyword
+iNewReadIndex != 3
+iSection < 32
+iSection >= 0
 iTXt
+iTXt: invalid compression
+iTXt: invalid keyword
+iTXt: uncompressed text too long
 i]Wb
+icelandic
 icon
 iconv
 iconv_close
 iconv_open
+id_ID
 idempotency_level
 identifier_value
 ig,o
+igbo
+ign.com
+ignored in grayscale PNG
+ignoring out of range rgb_to_gray coefficients
 image
+image row stride too large
+image-height-only
+image-width-only
+imageAlignment
+imageSelected
+imagecolor
+imaginary 
+import "$0";\n
+import public "$0";\n
+import weak "$0";\n
+in use by IDAT
+incompatible version
+inconsistent chromaticities
+inconsistent rendering intents
+incorrect byte-order specifier
+incorrect data check
+incorrect header check
+incorrect length check
 index
+index > 0
+index >= 0 && index < kb->m_Panels.Count()
+indonesian
 infind
+infinity
 info
+info change after png_start_read_image or png_read_update_info
+info.m_pReplacementString == 0
+ingame
 initial_height
+input
+inputData
+inspectelement
+insufficient memory
+insufficient memory to read chunk
+int google::protobuf::CalculateBase64EscapedLen(int, bool)
+int32
+int64
+intent outside defined range
+internal error checking chromaticities
+internal error handling cHRM coefficients
+internal error handling cHRM->XYZ
+internal error in map key sorting
+internal error: array alloc
+internal error: array realloc
+internal row logic error
+internal row size calculation error
+internal row width error
+internal sequential row size calculation error
+internal write transform logic error
+invalid
+invalid ICC profile color space
+invalid PNG color type
+invalid after png_start_read_image or png_read_update_info
+invalid alpha mode
+invalid background gamma type
+invalid before the PNG header has been read
+invalid bit length repeat
+invalid block type
+invalid chromaticities
+invalid chunk type
+invalid code -- missing end-of-block
+invalid code lengths set
+invalid color
+invalid compression buffer size
+invalid data
+invalid distance code
+invalid distance too far back
+invalid distances set
+invalid embedded Abstract ICC profile
+invalid end points
+invalid error action to rgb_to_gray
+invalid file gamma in png_set_gamma
+invalid gray level
+invalid index
+invalid length
+invalid literal/length code
+invalid literal/lengths set
+invalid location in png_set_unknown_chunks
+invalid memory read
+invalid parameter count
+invalid rendering intent
+invalid sRGB rendering intent
+invalid screen gamma in png_set_gamma
+invalid signature
+invalid stored block lengths
+invalid unit
+invalid unknown chunk location
+invalid user transform pixel depth
+invalid values
+invalid window size
+invalid window size (libpng)
+invalid with alpha channel
+inventory
+invite_code
 ioctl
+irish
 is_array
+is_large()
 is_save
 is_site_license_lock
 isalnum
 isalpha
+isevcert
+ispageload
+isredirect
 isspace
 iswcntrl
 iswspace
+it_IT
+italian
+item
+itemID
+itemIndex
+itemid
+ja_JP
+japanese
+java Class for 
+java resource 
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
+joinlobby/
+joinparty/
+json_name = "
 jstype
+jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 k2U\v
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
@@ -3092,6 +6594,7 @@ k_ECPUGovernor_Invalid
 k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
+k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
@@ -3186,6 +6689,7 @@ k_EHDRToneMapOperator_Uncharted
 k_EHDRVisualization_Analysis
 k_EHDRVisualization_Heatmap
 k_EHDRVisualization_None
+k_EIPTypeV4 == addr.GetType()
 k_EJSRegisterMethodType_Invalid
 k_EJSRegisterMethodType_Promise
 k_ELogFileSystemBoot
@@ -3427,154 +6931,687 @@ k_SystemAudioPortType_Unknown
 k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
+k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
+k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
+kannada
+kazakh
+kbPanel
+kbPanel->GetName()
+kbPanel->GetName()[ 0 ]
 keyCode
+keyMap
 key_down
 key_up
+keybindings
+keybindings\n
 keyboard_enabled
+keyboardinputenabled
 keycode
 keymap
+keyword "@1": bad character '0x@2'
+keyword truncated
+khmer
+kiche
+kickstarter.com
 kill
+kinyarwanda
+known incorrect sRGB profile
+ko_KR
+konkani
+koreana
+kotaku.com
+kyrgyz
+l4d.com
 l6qnk
 lDa>
 lEd/
 label
+labelText
+labeltext
 language
+last_directory
+latam
 latest_frame_id
+latvian
 layout
 lazy
 lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
+left
+leftGrip
+len > 0 || HasError()
+len >= input_len
+length does not match profile
+length exceeds PNG maximum
+length_ >= n
+libaudio.so
 libc.so.6
 libdl.so.2
 libm.so.6
+libpng does not support gamma+background+rgb_to_gray
+libpng error: %s
+libpng warning: %s
 libpthread.so.0
 librt.so.1
+libsteam.so
 libtier0_s.so
 libvstdlib_s.so
+license
 licensed_device_count
+lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+lineStartIndex >= _utext
+lineheight
 link
 link_bandwidth
 link_url
 list
+lithuanian
+live.com
 local
+locale::facet::_S_create_c_locale name not valid
 localeconv
 localization_path
 location
+locked
+login
+logon
+long
+long double
+long long
 longjmp
+loopback
+lost rgb to gray
+lost/gained channels
+lowRange < highRange
+lower
 lseek
 lseek64
+luxembourgish
+m_ActiveAnimations
+m_AllChildren
+m_AnimationMaps
+m_AnimationMaps[ iAnimationMap ].map->entries
+m_BaseIP.GetType() == k_EIPTypeV4
+m_ColumnsData
+m_ColumnsData[ iColumn ].m_strCustomStyle
+m_ColumnsData[m_CurrentColumns[column]].m_iFlags & COLUMN_CUSTOMPANEL
+m_Count == 0
+m_CurrentColumns
+m_CustomURLHandlers
+m_DataItems
+m_DataItems[ iData ]
+m_DirWatcherClient
+m_DragData
+m_DragPanels
+m_Elements
+m_ExpandStateQueue
+m_Filenames
+m_FormatStream
+m_FormatStream[i].textStreamIndex > cullPos
+m_Frames
+m_HandleTable
+m_Images
+m_LineBreaks
+m_List
+m_LogEventPrev
+m_Lookup
+m_Memory
+m_MenuItems
+m_MenuItems.IsValidIndex( itemID )
+m_MenuItems.IsValidIndex(itemID)
+m_MessageMaps
+m_MessageMaps[ iMessageMap ].map->boundkeys
+m_MessageMaps[ iMessageMap ].map->defaultkeys
+m_MessageMaps[ iMessageMap ].map->entries
+m_NodeList
+m_NodeList.IsValidIndex( endItem )
+m_NodeList.IsValidIndex(itemIndex)
+m_PanelAnimationMapPool
+m_PanelKeyBindingMapPool
+m_PanelMessageMapPool
+m_ParentalSettings
+m_PerLineEllipses
+m_PostedMessages
+m_RangeList
+m_ReplacedKVs
+m_ResourceCache
+m_Samples
+m_SelectedItems
+m_SeparatorPanels
+m_SeparatorPanels.Count() == 0
+m_Separators
+m_Sequences
+m_Sequences[ iSequence ].cmdList
+m_SortedItems
+m_SpewThrottle
+m_StringPools
+m_TextStream
+m_TotalElements != InvalidIndex()
+m_Tree
+m_UndoTextStream
+m_VecURLLabels
+m_VisibleItems
+m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
+m_VisibleItems.IsValidIndex( iItem )
+m_VisibleSortedItems
+m_bAllowUnstableRemoval
+m_bCheckable
+m_bitsMigratedBuckets
+m_buffer
+m_bufferVarArgs
+m_cbkBroadcastStatus
+m_cbkViewerRequest
+m_configOverride
+m_dictChannelCallbacks
+m_dictRegions
+m_dictStyles
+m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
+m_eParentalState == k_EParentalStateUnlocked
+m_errorIndex>=0
+m_fileReader
+m_fnCompletionCallback
+m_fnComputerActiveStateChange
+m_fnMouseXButtonDownCallback
+m_fnOverlayChatBrowserInfoChanged
+m_fnPostMessage
+m_fnPushToTalkStateChange
+m_fnReject
+m_fnResolve
+m_fnUIModeChangedCallback
+m_iHTMLTextureID
+m_iRefs > 0 && m_iRefs < 0x1000000
+m_iRefs >= 0 && m_iRefs < 0x0ffffff
+m_jumpHandler
+m_list
+m_listChangedFiles
+m_listLogWatchParams
+m_mapAppIdBaseList
+m_mapAppIdCustomList
+m_mapCharToWidth
+m_mapConnections
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+m_mapGroupsVisible
+m_mapNotificationCallbacks
+m_mapWaitingCalls
+m_memNodes
+m_nAllocationCount >= 0
+m_nBrowserID
+m_nLockedIdx == -1
+m_nLockedIdx >= 0
+m_nSuppressDialogVariablesMessages >= 1
+m_p == NULL
+m_pBuildGroup
+m_pChildren
+m_pDialogVariables
+m_pDragDrop
+m_pDragDrop->m_DragData.Count()
+m_pDragDrop->m_bDragging
+m_pEditMenu
+m_pExpandImage
+m_pFontWidthCache
+m_pFriendButtons
+m_pImageList
+m_pImagePanel
+m_pKV
+m_pLogInstance
+m_pObj
+m_pObj == NULL
+m_pParent == this
+m_pRef->m_pT
+m_pRootNode == NULL
+m_pTextImage
+m_pTooltips
+m_pTreeView->IsLabelEditingAllowed()
+m_pTreeView->m_pFilter
+m_pUserData
+m_pVecStringValue
+m_pVecUlValue
+m_pWebChat
+m_pfnOnLogonInfoChanged
+m_pfnOnMessageReceived
+m_pkv
+m_pkvCommand
+m_pkvData
+m_pkvDialogVariables
+m_pkvLastKeyAdded != NULL
+m_pkvSettings
+m_protoSettings.ParseFromArray( ( char * )pBuffer->Base() + pBuffer->TellGet(), nBytesProto )
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_sColorName
+m_sConfigName
+m_sCurrentFilename
+m_sCurrentURL
+m_sDeviceRequestingRegistration
+m_sDragURL
+m_sGradientEnd
+m_sGradientStart
+m_sHeadlineText
+m_sImageName
+m_sLastImageSet
+m_sLastSearchString
+m_sLayoutFile
+m_sLoopImagePrefix
+m_sMenuFile
+m_sNoActivityImage
+m_sPairingClient
+m_sPairingPIN
+m_sParserWarning
+m_sPendingPostData
+m_sPendingURLLoad
+m_sPreviousFilename
+m_sRampDownImagePrefix
+m_sRampUpImagePrefix
+m_sText
+m_sTextSetting
+m_sURL
+m_strChatURL
+m_strConvertedDefaultValue
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strParentalPasswordPlaintext
+m_strParentalWebToken
+m_strResourceName
+m_strWatchPath
+m_unInCounter == m_unOutCounter
+m_unPID
+m_unused
+m_usType == k_EIPTypeV6
+m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
+m_vecActiveSessions
+m_vecCallbacks
+m_vecCallbacks.Count() == 0
+m_vecCallbacks.Count() == 0 || !callback
+m_vecControllerSlots
+m_vecControllers
+m_vecFuncs
+m_vecHCursor
+m_vecHashBuckets
+m_vecJumpWChars
+m_vecLayoutCmds
+m_vecLayoutCmds[i].m_vecControls
+m_vecMenuButtons
+m_vecParentalPlaytimeWarnings
+m_vecParentalSettingsChanged
+m_vecQueuedMessages
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
+m_vecSections
+m_vecSections.IsValidIndex(iSection)
+m_vecSections[i].m_sName
+m_vecSettingsChangedCallbacks
+m_vecStyleChangedCallbacks
+m_vecUnlockPromise
+m_vecVisibleItemsYPos
+macedonian
 machine
+mailto:
+malay
+malayalam
+malformed sPLT chunk
 malloc
+maltese
+maori
+map keys are not unique
+map<$0, $1>
+map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+marathi
+maxHeight
+maxWidth
+maxWidth >= width
+maxchars
+maximizebuttonvisible
 maximum_burst_bitrate_kbps
 maximum_decode_bitrate_kbps
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
 md5_block_asm_data_order
+megaupload.com
 memchr
 memcmp
 memcpy
 memmove
+memory image too large
 memset
+menu
+menubar
+menuname
 message
 message_set_wire_format
+metacritic.com
 method
+metrics
+microsoft.com
+minHeight
+minWidth
+minWidth <= width
 miniprofile_location
+missing IHDR
+missing LZ dictionary
 misspelled_word
 mkdir
 mkfifo
 mkstemp
+mkstemp errno %d\n
 mktime
 mmap
 mmap64
 mode
 modf
+modified
+modified64
 mold 1.10.1 (compatible with GNU ld)
+mongolian
 mount
 mouse_up
+mouseinputenabled
 msg"
+msn.com
 msync
 multiple_raster_threads
 munmap
+music
 mwa!
+myspace.com
+nBrowserID
+nBytes
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nChatFlashMode
+nCurrentFPS
+nDay < 32
+nDay > 0
+nGrowSize >= 0
+nIndex < ( unsigned int )m_list.Count()
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMonth == 1 || nMonth == 3 || nMonth == 5 || nMonth == 7 || nMonth == 8 || nMonth == 10 || nMonth == 12
+nNumChars >= 0
+nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+nPut + nPutDelta <= outBuf.TellMaxPut()
+nRequests
+nScreenHeight
+nScreenWidth
+nSize != 0
+nSize >= 0
 nTargetFrameRate
+nUploadKbps
+nViewers
+nYear > 1712
+nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 name
 native_dropdowns
+need dictionary
 negative_int_value
+nepali
+network
+networkmgr
+new 
+new[]
 new_backpack_items
 new_invite_count
 new_item_count
+next
+nl_NL
+no color-map for color-mapped image
+no rows for png_write_image to write
+no space in chunk cache
+no_NO
 no_standard_descriptor_accessor
+non-positive height
+non-positive width
+non-transaction clone for 
+non-virtual thunk to 
+none
 normal_keycode
+north
+north-east
+north-west
+northeast
+northwest
+norwegian
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
 notification_type
 notificationid
+null
+nullptr output boolean given.
+num > 0
+numElements >= 0
 number
+nytimes.com
 oFFs
 objc_class_prefix
+object
 object_properties
+odia
 offer
 offline
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset >= 0
+oldtall
+oldwide
 only_allow_trusted_popups
 only_send_to_steam
 open
+open/library
 open64
+open_external
 opendir
+openexternalforpid/
 opengl
+openurl_external
+operator
+operator 
+operator"" 
+option json_name is not allowed on extension fields.
+optional
 options
+original
+orkut.com
+out of memory
+out of place
+out-of-date sRGB profile with no signature
+output gamma out of expected range
+output specified is nullptr
+outputData
 override_height
 override_width
 owning_browser_handle
+pBlob
+pBuffer->TellPut() == 0
 pCAL
+pCAL: invalid keyword
 pCRF
+pCallback->m_gameID == m_ActiveGameID
+pChild
+pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
+pConv && pConv->GetDelimiterLength() > 0
+pData
+pDecodedData
+pDefaultValue
+pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+pFmt
 pHYs
+pKeyValuesTextParser
+pLineEnd >= pLineStart
+pLogInstance == sm_pLogInstance
+pName
+pNode && pNode->Next == QueueEnd()
+pOutDigest
+pOutputDigest
+pPool->m_SpaceUsed < 0xFFFF
+pSalt
+pScheme
+pToken
+pWatcher != NULL
 package
+package $0;\n\n
 packed
 packet_size_received
 packet_size_requested
 packets
 page_url
+paintbackground
+palette color-map: too few entries
+panel
+panel != NULL
+parent
+parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 parent_popup_index
+parental
+parse
+parsing
+password
 passwordhashtype
+paste
 path
 patterns
+pcgamer.com
+pcgames.gwn.com
+pchBaseFileName
+pchBuffer
+pchData
+pchEncodedData
+pchInput
+pchMsg
+pchSteam2ID
+pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
+pcmag.com
+pcubDecodedData
+persian
+persona_state
 personalizationData
 personalizationResponse
 php_class_prefix
 php_generic_services
 php_metadata_namespace
+pixelsindent
+pl_PL
+playdota.com
 played_seconds
 players
 playtime_remaining
 playtime_restrictions
+please implement MergeFrom for your type.
 plogs
+png_do_encode_alpha: unexpected call
+png_do_quantize returned rowbytes=0
+png_do_rgb_to_gray found nongray pixel
+png_get_eXIf does not work; use png_get_eXIf_1
+png_image_begin_read_from_file: incorrect PNG_IMAGE_VERSION
+png_image_begin_read_from_file: invalid argument
+png_image_begin_read_from_memory: incorrect PNG_IMAGE_VERSION
+png_image_begin_read_from_memory: invalid argument
+png_image_begin_read_from_stdio: incorrect PNG_IMAGE_VERSION
+png_image_begin_read_from_stdio: invalid argument
+png_image_finish_read: damaged PNG_IMAGE_VERSION
+png_image_finish_read: image too large
+png_image_finish_read: invalid argument
+png_image_finish_read: row_stride too large
+png_image_finish_read[color-map]: no color-map
+png_image_read: alpha channel lost
+png_image_read: opaque pointer not NULL
+png_image_read: out of memory
+png_image_write_: out of memory
+png_image_write_to_file: incorrect PNG_IMAGE_VERSION
+png_image_write_to_file: invalid argument
+png_image_write_to_memory: PNG too big
+png_image_write_to_memory: incorrect PNG_IMAGE_VERSION
+png_image_write_to_memory: invalid argument
+png_image_write_to_stdio: incorrect PNG_IMAGE_VERSION
+png_image_write_to_stdio: invalid argument
+png_read_image: invalid transformations
+png_read_image: unsupported transformation
+png_read_update_info/png_start_read_image: duplicate call
+png_set_background
+png_set_eXIf does not work; use png_set_eXIf_1
+png_set_filler is invalid for low bit depth gray output
+png_set_filler: inappropriate color type
+png_set_filter: UP/AVG/PAETH cannot be added after start
+png_set_gAMA
+png_set_keep_unknown_chunks: invalid keep
+png_set_keep_unknown_chunks: no chunk list
+png_set_keep_unknown_chunks: too many chunks
+png_set_sPLT: invalid sPLT
+png_set_unknown_chunks now expects a valid location
+png_start_read_image/png_read_update_info: duplicate call
+png_write_image: internal call error
+png_write_image: unsupported transformation
+png_write_info was never called before png_write_row
+polish
 poll
 popen
+port
+portuguese
+pos == MAX_BUFFER_SIZE
+position
 positive_int_value
 posix_fadvise
 post
 postData
+postdata
 pread64
+prepend
+preserveAspectRatio
 pressed
+previous
+print
+profile '
+profile matches sRGB but writing iCCP instead
+progress
 promise_handle
+propertysheet
+proportional_float
+proportional_int
+proto
+proto2
+proto3
 proto3_optional
+pstrDest[nNewLength] == '\0'
+pstrNew + nNewLength == pstrDestination + 1
+pstrNew == pstrDestination
+pstrNew == pszString
+pt-br
+pt_BR
+pt_PT
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+pubData
+pubInput
+pubKey
 public
 public_dependency
+publish
+punct
+pure virtual method called\n
 putc
 putwc
+pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
 py_generic_services
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 quality
+quechua
+queueAsList
+queueAsList[ iData ]
+rFilePatterns
+rapidshare.com
 raw_draw
 rawbody
 read
+read beyond end of data
 readdir64
 readlink
 realloc
@@ -3583,13 +7620,42 @@ reasons
 received
 recovery_email
 rects
+recursion_budget_ < recursion_limit_
+reddit.com
+reference temporary #
 referrer
 refresh_rate_denominator
 refresh_rate_numerator
+registered: 
+reinterpret_cast
+reject
+relative
+release_space %llu
+reload
+remoteplay/connect/
 remove
 rename
+repeated
+replace
+reply
+request_space %llu
 requesting_url
+required
 reserved_range
+resizeNumBits >= 0
+resolve
+resource/FileOpenDialog.res
+resource/icon_clear_field
+resource/icon_file
+resource/icon_folder
+resource/icon_folder_selected
+resource/icon_folderup
+resource/icon_newfolder
+resource/layout/%s.layout
+resource/layout/%s_%s.layout
+resource/layout/htmlfindbar.layout
+resource/layout/htmlpopup.layout
+resource/webkit.css
 response_steamurl
 restrictions_approved
 result
@@ -3597,92 +7663,301 @@ results
 reverse
 reverse_diamond_button_layout
 revision
+rgFilters
+rgb color-map: too few entries
+rgb to gray green coefficient
+rgb to gray red coefficient
+rgb+alpha color-map: too few entries
+rgb-alpha color-map: too few entries
+rgb[ga] color-map: too few entries
+rgb[gray] color-map: too few entries
 rgba
+right
+rightGrip
+rightarrow
 rmdir
+ro_RO
+roaming
+romanian
+root
 round
 roundf
+rounds != 0
 routes
+rowheight
 rtime_unlocked
 ru&o
+ru_RU
+runevent
+rungame/
+rungameid/
+russian
 sBIT
 sCAL
+sCAL height
+sCAL width
 sPLT
+sPLT chunk has bad length
+sPLT chunk requires too much memory
+sPLT chunk too long
+sPLT out of memory
+sPLT: invalid keyword
 sRGB
 sTER
+s_VecModuleAddressRanges
+s_bAllowStaticSymbolTable
+s_hashMapIPWatches
+s_hashMapServerTypeWatches
+s_hashMapSteamIDWatches
+s_hashMapTxnIDWatches
+s_pFileSystemInterface
+s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
+s_pSymbolTable
+s_treeThreadLocalAddressRanges
+s_treeThreadLocalAddressRanges[i]
+s_treeThreadLocalIPAddressMaps
+s_treeThreadLocalIPAddressMaps[i]
+s_treeThreadLocalServerTypeMaps
+s_treeThreadLocalServerTypeMaps[i]
+s_treeThreadLocalSteamIDMaps
+s_treeThreadLocalSteamIDMaps[i]
+s_treeThreadLocalTxnIDMaps
+s_treeThreadLocalTxnIDMaps[i]
 salt
 samesite
+sc_schinese
 scale
+scaleImage
+scaling
 scancode
 scandir
 scandir64
 sched_yield
+scheme
+schinese
+scots
 screenshot_handle
+screenx
+screeny
 script
+scriptname
 scroll
+scrollbar
 scrollx
 scrolly
+scrypt: N out of range
+scrypt: hash function power-on-self-test failed
+scrypt: mix function power-on-self-test failed
+scrypt: not enough address space on this CPU to allocate required memory
+scrypt: out of memory
+scrypt: p out of range
+scrypt: power on self test failed
+scrypt: r out of range
+scrypt: scrypt power-on-self-test failed
+sdk32
 sdp_mid
 sdp_mline_index
 searchbuttontext
 seconds_remaining
+section
+sections
 secure
+sel->IsLabelEditingAllowed()
+selected
 selected_audio_codec
 selected_video_codec
 selectionOrder
 selection_text
 sendfile64
 sequence
+sequential row overflow
+serbian
+serialize
+serializing
 server_bitrate
 server_streaming
 service
+service $0 {\n
+set to see debug vgiui2 messages
 setlocale
 setmntent
+settings
+settitlebarvisible
 setvbuf
+sfixed32
+sfixed64
 sha1_block_data_order
 sha256_block_data_order
 sha512_block_data_order
+shacknews.com
+shahmukhi
 shared_memory_handle
 shared_memory_size
+shellcmd
+shift
 shift_capslock_keycode
 shm_open
+shm_open failed (errno %d)
 shm_unlink
+short
+shortname
+showDownArrow
+showhotkey
+signed char
+sindhi
+sinhala
+sint32
+sint64
+size
+size too big: 
+size_t to int conversion
+sizeable
+sizeof 
+sizeof...
+slovak
+slovenian
+sm_ListWatchingLogs
+sm_ThreadSafeQueueLogEvents
+sm_ThreadSafeQueueLogEvents.GetQueue()[ iLogEvent ]
+sm_ThreadSafeQueueLogMsgSpew
+sm_bShuttingDown
+sm_bShuttingDown && sm_pLogInstance
+sm_cRef == 0
+sm_cRef > 0
+sm_msgSpewThrottle
+sm_pLogInstance
+sm_vecLogListeners
+smtp
 software_encoding_threads
+sorani
+sort_column
+sort_column_asc
+sort_column_secondary
+sort_column_secondary_asc
+sotho
 source_code_info
+south
+south-east
+south-west
+southeast
+southwest
+space
+spaceGranted
+spaceReleased
 span
+spanish
 sprintf
 sqrt
 sqrtf
+srvping
 sscanf
+stackLevel >= 0 && stackLevel < m_errorIndex
 start
+startIndex < m_TextStream.Count()
+startItem >= 0
+startup
 state
 statfs
 statfs64
+static_cast
+static_cast<Node_t*>(pNode)->elem
 stats
+status
 statvfs
 statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 reports success but zero free space\n
+statvfs64: ret %d errno %d\n
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
 stddev
 stddev_network_time_ms
 stddev_sum_frame_ms
 stderr
 stdin
 stdout
+steam.pid
+steam:
+steam://
+steam://openexternalforpid/%u/%s
+steam://openurlforpid/%u/%s
+steamIDChat.GetEAccountType() == k_EAccountTypeChat
+steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steam_beta_name
+steambeta://
+steamchina.com
+steamchina://
+steamchinabeta://
+steamclient.so
+steamcommunity.com
+steamconsole.so
 steamdeck_stable
+steamgames.com
 steamid
 steamid_responder
 steamid_sender
+steamlink://
+steammessages_clientnotificationtypes.proto
+steammessages_parental_objects.proto
+steammessages_remoteplay.proto
 steammessages_remoteplay.proto"H\n
+steampowered.com
+steamtranslation.ru
+steamui.so
+stop
+stop using I64/I32, use lld or d respectively
+stopanimation
+stopevent
+store
+store/
+strAccountName
+strArgs
+strChannel
+strCommunityImagesURL
+strFileTypeName
+strInitialFile
+strKeyName
+strMessage
+strMessageToken
+strOut.BEndsWith( "/" )
+strPersonaName
+strPlaintextPassword
+strSteamid
+strTitle
+strUserCountry
 strcasecmp
 strcasestr
 strchr
 strcmp
 strcpy
 strdup
+stream 
+stream end
+stream error
+streaming
 streaming_client_caps
 streaming_client_config
 strerror
 strftime
+string
+string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext, string appearance
+string literal
+strings::Substitute format string invalid: asked for "$
 strlen
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
 strncmp
 strncpy
@@ -3697,60 +7972,193 @@ strtold_l
 strtoll
 strtoul
 strtoull
+style
+subFocus
+subtabposition
+subtype mismatch
 success
+supplied row stride too small
 supported_audio_codecs
 supported_colorspaces
 supported_video_codecs
 supports_remote_hid
 supports_touch_input
 supports_video_hevc_OBSOLETE
+surface()->GetOverlayInterface()
+sv_SE
 svcK71b.
+svcm
+swahili
+swedish
 symlink
 syntax
+syntax = "$0";\n\n
+syntax error at line %d near: 
 syscall
 system
 system_can_suspend
 tEXt
+tEXt: invalid keyword
+tEXt: text too long
 tIME
+tRNS chunk has out-of-range samples for bit_depth
+tRNS must be after
+tabPosition
+tabposition
+tag count too large
+tajik
 tall
+tall > 0
+tamil
 target
+tatar
+tchinese
+teamfortress.com
+telugu
+template parameter object for 
 temporary_enabled_features
 temporary_playtime_restrictions
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+test
 text
+text chunk: out of memory
+text compression mode is out of range
+text format contains deprecated field "
+textAlignment
+textHidden
+textalignment
+textclickable
+textfile
+textstreamindex
+textureid
+tf2.com
+th_TH
+thai
+the actual field type (for enums T should be the generated enum 
+the global scope
+this
 threads
+throw
+throw 
+tigrinya
 time
 time_requested
 time_responded
 title
+tlGrip
+toggledevtools
 token
 tolower
+too many length or distance symbols
+too many profiles
+too many sPLT chunks
+too many text chunks
+too many unknown chunks
+too short
+tooltip
+tooltip_headline
+tooltip_label
+tooltipanchor
+tooltipdelay
+tooltiptext
+topGrip
+trGrip
+tr_TR
 trailing_comments
+transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
+truncated
 trusted_creator
+tswana
+turkish
+turkmen
 type
+type or int32).
+type() == TYPE_FIXED32
+type() == TYPE_FIXED64
+type() == TYPE_GROUP
+type() == TYPE_LENGTH_DELIMITED
+type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
+typeinfo fn for 
+typeinfo for 
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 ui_mode
+uint
+uint32
+uint64
+uk_UA
+ukrainian
+ulValue < k_nMaxJSNumber
+unNetworkBitsIPv4 <= 32
+unNetworkBitsIPv4 >= 8
+unNetworkBitsIPv6 <= 64
+unNetworkBitsIPv6 >= 32
+unPID
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+unSize < 128 * 1024 * 1024
+unStreamingSessionID
+unable to find control '%s'\n
+undefined
+unexpected 8-bit transformation
+unexpected DeviceLink ICC profile class
+unexpected ICC PCS encoding
+unexpected NamedColor ICC profile class
+unexpected alpha swap transformation
+unexpected bit depth
+unexpected compose
+unexpected encoding (internal error)
+unexpected end of LZ stream
+unexpected zlib return
+unexpected zlib return code
 unfiltered_link_url
 ungetc
 ungetwc
+unhandled critical chunk
 unichar
+unicode
+unimplemented
 uninterpreted_option
 unknown
+unknown chunk exceeds memory limits
+unknown chunk: out of memory
+unknown compression method
+unknown compression type
+unknown header flags set
+unknown interlace type
 unlink
+unrecognized ICC profile class
+unrecognized equation type
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+unsupported zlib version
+uparrow
+upper
+urdu
+url 
 urls
 use_qos
 user_css
@@ -3758,16 +8166,62 @@ usleep
 utility_appids
 utime
 utimes
+uyghur
+uzbek
 vQO+t
 vRQ>
+valencian
 value
+valvesoftware.com
+variable
+vector::_M_default_append
+vector::_M_range_insert
+vector::_M_realloc_insert
+vector::reserve
+veoh.com
 version
+vertical-align
+vgui::
+vgui::BuildGroup
+vgui::CPanelAnimationDictionary
+vgui::CPanelMessageMapDictionary
+vgui::CheckButton
+vgui::DragDrop_t
+vgui::EditablePanel
+vgui::Frame
+vgui::HFont
+vgui::HTML
+vgui::Label
+vgui::ListPanel
+vgui::ListPanelColumnHeader
+vgui::ListPanelItem
+vgui::Menu
+vgui::MenuBar
+vgui::MenuItem
+vgui::Panel
+vgui::RichText
+vgui::TextEntry
+vgui::TextImage
+vgui::TreeNode
+vgui::TreeView
+vi_VN
+vietnamese
+viewfriendsgame
+viewsource
+virtual thunk to 
 visible
+vkHotKey
+void
+void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
+void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
+void google::protobuf::StringPiece::remove_prefix(google::protobuf::stringpiece_ssize_type)
 void google::protobuf::internal::byteswap<1>(void*)
 void google::protobuf::internal::byteswap<4>(void*)
 void google::protobuf::internal::byteswap<8>(void*)
+void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vr_overlay_key
 vsnprintf
+vtable for 
 vtable for CAdHocValidation_SimpleCallback
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
@@ -3782,6 +8236,7 @@ vulkan
 w+OQvr
 w3Xc
 wXR\r
+wchar_t
 wcrtomb
 wcscasecmp
 wcschr
@@ -3799,22 +8254,58 @@ webgl2
 webgpu
 webnn
 webrtc
+welsh
+west
 wide
+wide > 0
 width
+wikipedia.org
+with a type that does not implement MergeFrom. This is unsafe; 
 wmemchr
 wmemcmp
 wmemcpy
 wmemmove
 wmemset
 wn>Jj
+wolof
+wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+wordStartIndex >= _utext
+wrap
 write
+write %s failed, errno = %d\n
 writev
+wrong submessage type
+www.
 x_local
+xbox.com
+xdigit
+xfire.com
+xhosa
 xhotspot
+xpos
 y9*O
 y_local
 yhotspot
+yoruba
+youtube.com
+ypos
 zC`G;
 zTXt
+zTXt: invalid compression type
+zTXt: invalid keyword
+zh-cn
+zh-tw
+zh-xc
+zh_CN
+zh_TW
+zh_XC
+zlib IO error
 zoom
+zpos
+zstream unclaimed
+zulu
+{default arg#
 {kHw
+{lambda(
+{parm#
+{unnamed type#
