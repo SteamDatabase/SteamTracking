@@ -1,4 +1,4 @@
-var CLSTAMP = "9798649";
+var CLSTAMP = "9816764";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11120,9 +11120,9 @@ var CLSTAMP = "9798649";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
-                BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
-                BUILD_RTIME_UTC: 1748892104,
+                BUILD_TIME_LOCAL: "Jun 9 2025 : 15:02:28",
+                BUILD_TIME_UTC: "Jun 9 2025 : 22:02:28",
+                BUILD_RTIME_UTC: 1749506548,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -14755,7 +14755,7 @@ var CLSTAMP = "9798649";
       },
       36437: (e, t, n) => {
         "use strict";
-        n.d(t, { L: () => y });
+        n.d(t, { L: () => E });
         var r = n(63696);
         function i(e) {
           const [t, n] = (0, r.useState)(!0);
@@ -14771,16 +14771,17 @@ var CLSTAMP = "9798649";
         var s = n(11131),
           o = n(42318),
           a = n(78325),
-          c = n(63439),
-          l = n(88750),
-          u = n(91435),
-          m = n(27773),
-          d = n(72476);
-        function h(e) {
+          c = n(42898),
+          l = n(63439),
+          u = n(88750),
+          m = n(91435),
+          d = n(27773),
+          h = n(72476);
+        function p(e) {
           const { Modal: t } = e,
             { name: n, modalProps: i, options: o } = t,
-            h = (0, s.R7)().ownerWindow,
-            { popup: p, element: g } = (0, c.OJ)(
+            p = (0, s.R7)().ownerWindow,
+            { popup: g, element: f } = (0, l.OJ)(
               n,
               {
                 title: i.strTitle,
@@ -14792,8 +14793,8 @@ var CLSTAMP = "9798649";
                 owner_window: void 0,
                 replace_existing_popup: !0,
                 target_browser: i.browserContext,
-                availscreenwidth: h.screen.availWidth,
-                availscreenheight: h.screen.availHeight,
+                availscreenwidth: p.screen.availWidth,
+                availscreenheight: p.screen.availHeight,
                 bModal: i.bHideMainWindowForPopouts,
               },
               {
@@ -14804,7 +14805,7 @@ var CLSTAMP = "9798649";
                       o,
                       a = t.popupWidth || 500,
                       c = t.popupHeight || 400;
-                    if (d.TS.IN_CLIENT && r?.SteamClient?.Browser?.GetBrowserID)
+                    if (h.TS.IN_CLIENT && r?.SteamClient?.Browser?.GetBrowserID)
                       o = r.SteamClient.Browser.GetBrowserID();
                     else {
                       let e = r.screen;
@@ -14821,32 +14822,33 @@ var CLSTAMP = "9798649";
                       center_on_window: n.bCenterOnWindow ? r : void 0,
                       window_opener_id: o,
                     };
-                  })(e, i, o, h),
+                  })(e, i, o, p),
                 onClose: () => i.fnOnClose && i.fnOnClose(),
               },
-            ),
-            f = o?.bHideActions,
-            _ =
+            );
+          (0, c.l6)(p, "click", () => g?.SteamClient.Window.BringToFront());
+          const _ = o?.bHideActions,
+            w =
               "number" == typeof o?.nDragAreaHeight
                 ? { height: o.nDragAreaHeight }
                 : void 0;
-          return g
+          return f
             ? a.createPortal(
                 r.createElement(
                   s.kc,
-                  { ownerWindow: p },
+                  { ownerWindow: g },
                   r.createElement(
                     "div",
-                    { className: "PopupFullWindow", onContextMenu: l.aE },
-                    r.createElement(m.c, {
+                    { className: "PopupFullWindow", onContextMenu: u.aE },
+                    r.createElement(d.c, {
                       hideMin: !0,
                       hideMax: !0,
-                      popup: p,
-                      hideActions: f,
-                      style: _,
+                      popup: g,
+                      hideActions: _,
+                      style: w,
                     }),
                     r.createElement(
-                      u.EO,
+                      m.EO,
                       {
                         browserInfo: i.browserContext,
                         bCenterPopupsOnWindow: o.bCenterOnWindow,
@@ -14855,11 +14857,11 @@ var CLSTAMP = "9798649";
                     ),
                   ),
                 ),
-                g,
+                f,
               )
             : null;
         }
-        function p(e) {
+        function g(e) {
           const { ModalManager: t } = e,
             [n, i] = r.useState(void 0),
             [s, o] = r.useState(!0),
@@ -14886,14 +14888,14 @@ var CLSTAMP = "9798649";
               });
           }, []);
           return n
-            ? r.createElement(g, {
+            ? r.createElement(f, {
                 key: a.current,
                 onMeasureComplete: l,
                 request: n,
               })
             : null;
         }
-        function g(e) {
+        function f(e) {
           const [t, n] = r.useState(),
             i = (0, s.R7)().ownerWindow;
           return (
@@ -14911,11 +14913,11 @@ var CLSTAMP = "9798649";
               );
             }, [i]),
             t
-              ? a.createPortal(r.createElement(f, { ...e, elContainer: t }), t)
+              ? a.createPortal(r.createElement(_, { ...e, elContainer: t }), t)
               : null
           );
         }
-        function f(e) {
+        function _(e) {
           const { elContainer: t, onMeasureComplete: n, request: i } = e;
           return (
             r.useEffect(() => {
@@ -14927,7 +14929,7 @@ var CLSTAMP = "9798649";
                 (async function (e, t) {
                   t && (await t);
                   let n = document;
-                  d.TS.IN_STEAMUI && n.fonts && (await n.fonts.ready);
+                  h.TS.IN_STEAMUI && n.fonts && (await n.fonts.ready);
                   const r = e.getBoundingClientRect(),
                     i = Math.ceil(r.height),
                     s = Math.ceil(r.width);
@@ -14939,22 +14941,22 @@ var CLSTAMP = "9798649";
             r.createElement(o.tH, null, i.rctToMeasure)
           );
         }
-        var _ = n(90765),
-          w = n(51115),
-          b = n(21440),
-          C = n(3673),
-          v = n(55993),
-          M = n(98995);
-        function S(e) {
+        var w = n(90765),
+          b = n(51115),
+          C = n(21440),
+          v = n(3673),
+          M = n(55993),
+          S = n(98995);
+        function y(e) {
           r.useEffect(() => {
             if (e)
               return (
-                document.body.classList.add(v.BodyNoScrollDialog),
-                () => document.body.classList.remove(v.BodyNoScrollDialog)
+                document.body.classList.add(M.BodyNoScrollDialog),
+                () => document.body.classList.remove(M.BodyNoScrollDialog)
               );
           }, [e]);
         }
-        function y(e) {
+        function E(e) {
           let {
             ModalManager: t,
             bRegisterModalManager: n = !0,
@@ -14967,10 +14969,10 @@ var CLSTAMP = "9798649";
           const m = t.modals,
             d = m && !!m.length,
             h = t.active_modal;
-          S(d),
+          y(d),
             (function (e) {
               const t = (0, s.R7)().ownerWindow,
-                n = (0, w.CH)(),
+                n = (0, b.CH)(),
                 i = r.useCallback(() => {
                   t?.SteamClient?.Window && t.SteamClient.Window.BringToFront();
                 }, [t]);
@@ -14980,18 +14982,18 @@ var CLSTAMP = "9798649";
                   [e, i],
                 );
             })(t);
-          const g = (function (e, t) {
-            return (0, w.QS)(
+          const p = (function (e, t) {
+            return (0, b.QS)(
               (n) => {
                 if (!n || !t) return;
                 const r = n.ownerDocument.defaultView;
-                return C.BR.RegisterModalManager(e, r);
+                return v.BR.RegisterModalManager(e, r);
               },
               [e],
             );
           })(t, n);
           let f = null,
-            v = !c;
+            _ = !c;
           return (
             m && m.length
               ? (f = m.map((e) => {
@@ -15001,17 +15003,17 @@ var CLSTAMP = "9798649";
                       active: t,
                       rctActiveContextMenus: t && c ? a : void 0,
                     };
-                  return e instanceof b._F
-                    ? r.createElement(B, { ...n, modal: e, Component: o ?? x })
-                    : e instanceof b.$9
-                      ? r.createElement(E, {
+                  return e instanceof C._F
+                    ? r.createElement(x, { ...n, modal: e, Component: o ?? L })
+                    : e instanceof C.$9
+                      ? r.createElement(B, {
                           ...n,
                           modal: e,
                           bUseDialogElement: c,
                         })
                       : void 0;
                 }))
-              : ((v = !0), (l = { ...l, display: "none" })),
+              : ((_ = !0), (l = { ...l, display: "none" })),
             r.createElement(
               r.Fragment,
               null,
@@ -15023,22 +15025,22 @@ var CLSTAMP = "9798649";
                   {
                     ...u,
                     style: l,
-                    ref: g,
-                    className: (0, _.A)(u.className, "FullModalOverlay"),
+                    ref: p,
+                    className: (0, w.A)(u.className, "FullModalOverlay"),
                   },
                   r.createElement("div", {
                     className: "ModalOverlayContent ModalOverlayBackground",
                   }),
                   f,
                 ),
-                v && a,
+                _ && a,
               ),
-              r.createElement(p, { ModalManager: t }),
-              r.createElement(k, { ModalManager: t }),
+              r.createElement(g, { ModalManager: t }),
+              r.createElement(R, { ModalManager: t }),
             )
           );
         }
-        function E(e) {
+        function B(e) {
           const {
             modal: t,
             rctActiveContextMenus: n,
@@ -15058,7 +15060,7 @@ var CLSTAMP = "9798649";
             o.tH,
             null,
             r.createElement("div", {
-              className: (0, _.A)(
+              className: (0, w.A)(
                 "ModalOverlayContent",
                 i ? "active" : "inactive",
               ),
@@ -15066,25 +15068,25 @@ var CLSTAMP = "9798649";
             }),
             n,
           );
-          return s ? r.createElement(L, { active: i }, a) : a;
+          return s ? r.createElement(k, { active: i }, a) : a;
         }
-        function B(e) {
+        function x(e) {
           const {
               modal: t,
               active: n,
               rctActiveContextMenus: i,
               Component: s,
             } = e,
-            a = (0, w.CH)();
+            a = (0, b.CH)();
           return (
-            (0, w.hL)(t.ModalUpdatedCallback, a),
+            (0, b.hL)(t.ModalUpdatedCallback, a),
             r.createElement(
               o.tH,
               null,
               r.createElement(
                 s,
                 {
-                  className: (0, _.A)(
+                  className: (0, w.A)(
                     "ModalOverlayContent",
                     n ? "active" : "inactive",
                   ),
@@ -15097,19 +15099,19 @@ var CLSTAMP = "9798649";
             )
           );
         }
-        function x(e) {
+        function L(e) {
           const { className: t, active: n, children: i } = e;
           return r.createElement(
-            L,
+            k,
             { active: n },
             r.createElement(
-              M.C$,
+              S.C$,
               null,
               r.createElement("div", { className: t, tabIndex: -1 }, i),
             ),
           );
         }
-        function L(e) {
+        function k(e) {
           const { active: t, children: n } = e,
             i = r.useRef(null);
           return (
@@ -15121,23 +15123,23 @@ var CLSTAMP = "9798649";
               "dialog",
               {
                 ref: i,
-                className: v.ModalDialog,
+                className: M.ModalDialog,
                 onCancel: (e) => e.preventDefault(),
               },
               e.children,
             )
           );
         }
-        function k(e) {
+        function R(e) {
           const { ModalManager: t } = e,
-            n = (0, w.CH)();
+            n = (0, b.CH)();
           return (
-            (0, w.hL)(t.LegacyPopupModalCountChangedCallbacks, n),
+            (0, b.hL)(t.LegacyPopupModalCountChangedCallbacks, n),
             r.createElement(
               r.Fragment,
               null,
               t.legacy_popup_modals.map((e) =>
-                r.createElement(h, { key: e.key, Modal: e }),
+                r.createElement(p, { key: e.key, Modal: e }),
               ),
             )
           );
@@ -24596,9 +24598,9 @@ var CLSTAMP = "9798649";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
-                    BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
-                    BUILD_RTIME_UTC: 1748892104,
+                    BUILD_TIME_LOCAL: "Jun 9 2025 : 15:02:28",
+                    BUILD_TIME_UTC: "Jun 9 2025 : 22:02:28",
+                    BUILD_RTIME_UTC: 1749506548,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25171,7 +25173,7 @@ var CLSTAMP = "9798649";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "3076a4bb4fed859d9897",
         2646: "fd760620e7dcb1d9794f",
-        2664: "eeca789f2206dbe86870",
+        2664: "9be0b43a756245c53acc",
         2761: "229a4f158c3f5dd77301",
         2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
@@ -25185,7 +25187,7 @@ var CLSTAMP = "9798649";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "bc0b73d8b543893bc8d1",
+        3569: "51398c8540937c85c065",
         3583: "f831ab7edbd9ffa591ac",
         3594: "8ba86d9069ca6bc96221",
         3714: "44067310221ac08dea86",
@@ -25263,7 +25265,7 @@ var CLSTAMP = "9798649";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "846def69dbdc2c7ec3d8",
+        9858: "a4f45de9337bee8c848c",
         9869: "dbd455fdaf48a06fd9ed",
         9887: "5dfb2cd2a8d69bee9b8e",
       }[e]),

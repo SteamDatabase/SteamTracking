@@ -267,7 +267,7 @@
 ! !K+hcF&db
 ! "Could not connect to Steam network.\n" "Either the Steam network is currently not running, or your internet connection is down.\n" "Please check your internet connection and try again."
 ! "There was a problem with your Steam installation.\n" "Please reinstall steam.\n"
-!! Controller %u attributes%s:\n  Type: %u\n  ProductID: %u\n  Serial: %s\n  Capabilities: %08x\n  Firmware Version: %u\n
+!! Controller %u attributes%s:\n  Type: %u\n  ProductID: %u\n  Serial: %s\n  Capabilities: %016llx\n  Firmware Version: %u\n
 !!!Invalid
 !"Chrome interface missing"
 !"Don't poll on UDP sockets dude"
@@ -4672,6 +4672,7 @@ ${LANGUAGE}
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
 +\n'k_ESteamDeckCompatibilityFeedback_Unset
 +\n'k_ESteamNotificationType_ClipDownloaded
++\n'k_ESteamNotificationType_PlaytestInvite
 +\n'k_ESteamOSCompatibilityCategory_Unknown
 +\n'k_EStoreBrowseFilterFailure_Unavailable
 +\n'k_EStoreDiscoveryQueueTypeDLCTopSellers
@@ -4856,6 +4857,7 @@ ${LANGUAGE}
 ,\n(k_EChatroomNotificationLevel_AllMessages
 ,\n(k_EClientNotificationType_ClipDownloaded
 ,\n(k_EClientNotificationType_HardwareSurvey
+,\n(k_EClientNotificationType_PlaytestInvite
 ,\n(k_ECommentThreadTypePublishedFile_Public
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EControllerElementTypeButtonBumperLeft
@@ -11962,6 +11964,11 @@ ${LANGUAGE}
 8?61$#*-pw~ylkbeHOFATSZ]
 8A3J
 8A6j
+8Bitdo Pro 2 Controller
+8Bitdo Pro 3 Controller
+8Bitdo SF30 Controller
+8Bitdo SN30 Controller
+8Bitdo Ultimate 2 Wireless Controller
 8CAutoPtrI11CHTTPServerE
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI18CJSServerListQueryE
@@ -13459,7 +13466,6 @@ Attempting cloud eval with invalid user type %s
 Attempting to fetch value instead of handling error 
 Attempting to purchase same app in different packages
 Attempting to save a clip to %s from %s, %s[%llu] to %s[%llu]: %d timelines, %s including current, %s recording
-AttribCapabilityBits
 AttribCapabilityGroup
 AuDp,
 Audio
@@ -21414,7 +21420,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  2 2025 21:21:05
+Jun  9 2025 17:58:34
 June
 K'iche'
 K(\f]C15
@@ -31216,6 +31222,7 @@ Zulu
 \n\ncall_again
 \n\ncall_count
 \n\ncan_invite
+\n\ncaps_bits2
 \n\ncategories
 \n\ncategoryid
 \n\ncertExpiry
@@ -32542,7 +32549,6 @@ a8Bk
 a?wSa?\
 aDSS
 aECDSA
-aEXIN
 aGOST
 aGOST01
 aGOST12
@@ -33374,6 +33380,14 @@ bManualReset
 bMicMuted
 bMicrophoneActive
 bMicrophoneEnabled
+bMisc1
+bMisc2
+bMisc3
+bMisc4
+bMisc5
+bMisc6
+bMisc7
+bMisc8
 bMouseEnabled
 bN.l
 bNeedsGameInstall
@@ -34059,37 +34073,6 @@ cannot load private key
 cant check dh key
 cant pack structure
 canvas_oop_rasterization
-cap_additonal_buttons
-cap_analog_triggers
-cap_aux_sensor
-cap_back_button
-cap_button_diamond
-cap_cant_read_guidebutton
-cap_capstick
-cap_capture_button
-cap_center_trackpad
-cap_color_led
-cap_dpad
-cap_emulated_rumble
-cap_gen_serial
-cap_grip_buttons
-cap_grips_flipped
-cap_guide_button
-cap_gyro
-cap_haptics
-cap_led
-cap_leftstick
-cap_nintendo_layout
-cap_player_led
-cap_pressure
-cap_rightstick
-cap_rumble
-cap_sdl_bind
-cap_shoulder_buttons
-cap_start_button
-cap_stick_buttons
-cap_trackpad
-cap_uncalibrated_imu
 capability
 capslock_keycode
 capsule_filename
@@ -34736,6 +34719,7 @@ controllerData
 controllerIdx
 controllerPath
 controllerType
+controller_8bitdo
 controller_android
 controller_apple
 controller_categoryids
@@ -36538,7 +36522,6 @@ false"4\n2CAccountHardware_SteamControllerSetConfig_Response"
 false">\n+CPartnerApps_FinishUploadLegacyDRM_Response
 false"I\n$CVideo_SetVideoBookmark_Notification
 false"M\n
-false"w\n
 false:4\n\vdescription
 false:<\n
 false:J\n
@@ -41240,7 +41223,7 @@ k_SystemFanControlMode_Default
 k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 k_TestingAbortedk_TestingBindAButtonk_TestingBindBButtonk_TestingBindDPadDownk_TestingBindDPadLeftk_TestingBindDPadRightk_TestingBindDPadUpk_TestingBindGuidek_TestingBindLeftShoulderk_TestingBindLeftStickButtonk_TestingBindLeftStickDownk_TestingBindLeftStickLeftk_TestingBindLeftStickRightk_TestingBindLeftStickUpk_TestingBindLeftTriggerk_TestingBindRightShoulderk_TestingBindRightStickButtonk_TestingBindRightStickDownk_TestingBindRightStickLeftk_TestingBindRightStickRightk_TestingBindRightStickUpk_TestingBindRightTriggerk_TestingBindSelectk_TestingBindSharek_TestingBindStartk_TestingBindTouchpadk_TestingBindXButtonk_TestingBindYButtonk_TestingBindingCompletek_TestingButtonsk_TestingCompletek_TestingFreeModek_TestingLeftHapticsk_TestingLeftJoystickk_TestingLeftTrackpadk_TestingLeftTrackpadPressurek_TestingLeftTriggerk_TestingRightHapticsk_TestingRightJoystickk_TestingRightTrackpadk_TestingRightTrackpadPressurek_TestingRightTriggerk_TestingStarted
-k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Pro2k_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
+k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Prok_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_FlyDigi_Apexk_eControllerStyle_Gamepad_FlyDigi_Vaderk_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
 k_eDiskSpaceType_Clip
 k_eDiskSpaceType_Recording
 k_eJPEG
@@ -47641,6 +47624,7 @@ strAvatarHash
 strBytesMoved
 strBytesProcessed
 strBytesToProcess
+strCapabilities
 strCapsuleImage
 strCaption
 strCaptivePortalURL
@@ -48996,7 +48980,6 @@ unAppId & k_unLocalAppIDFlag
 unBufferEndThisRecv > unOffset
 unBytes == 0
 unCX
-unCapabilities
 unControllerIndex
 unDataLen < INT_MAX
 unDataLen <= (uint32)INT_MAX

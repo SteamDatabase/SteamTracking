@@ -1237,6 +1237,7 @@ $\nY8O
 16CSharedMemStream
 16HTMLComboBoxHost
 16ListPanelDragger
+17:58:29
 17CFileWriterThread
 17CMsgBrowserCreate
 17CMsgBrowserRemove
@@ -1307,7 +1308,6 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
-21:21:00
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1643,7 +1643,6 @@ Assertion failed: length > k_cchMaxString
 Attempt to create persistent logs with no end date!
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to purchase same app in different packages
-AttribCapabilityBits
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
@@ -3437,7 +3436,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun  2 2025
+Jun  9 2025
 June
 K'iche'
 KEY_0
@@ -6052,37 +6051,6 @@ canceled the join request
 candidate
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
-cap_additonal_buttons
-cap_analog_triggers
-cap_aux_sensor
-cap_back_button
-cap_button_diamond
-cap_cant_read_guidebutton
-cap_capstick
-cap_capture_button
-cap_center_trackpad
-cap_color_led
-cap_dpad
-cap_emulated_rumble
-cap_gen_serial
-cap_grip_buttons
-cap_grips_flipped
-cap_guide_button
-cap_gyro
-cap_haptics
-cap_led
-cap_leftstick
-cap_nintendo_layout
-cap_player_led
-cap_pressure
-cap_rightstick
-cap_rumble
-cap_sdl_bind
-cap_shoulder_buttons
-cap_start_button
-cap_stick_buttons
-cap_trackpad
-cap_uncalibrated_imu
 catalan
 category_1
 category_10
@@ -6257,6 +6225,7 @@ contextmenu
 continuous
 controlKeys
 controller
+controller_8bitdo
 controller_android
 controller_apple
 controller_front_panel_board

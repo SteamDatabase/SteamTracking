@@ -1477,6 +1477,18 @@
 #origin_SteamDeck_View
 #origin_SteamDeck_X
 #origin_SteamDeck_Y
+#origin_generic_C
+#origin_generic_MISC1
+#origin_generic_MISC2
+#origin_generic_MISC3
+#origin_generic_MISC4
+#origin_generic_MISC5
+#origin_generic_MISC6
+#origin_generic_MISC7
+#origin_generic_MISC8
+#origin_generic_PL
+#origin_generic_PR
+#origin_generic_Z
 #origin_horipad_m1
 #origin_horipad_m2
 #origin_legion_go_y1
@@ -5071,6 +5083,7 @@ $steammessages_parental_objects.proto"
 +\n'k_ESteamNetworkingUDPMsg_ChallengeReply
 +\n'k_ESteamNetworkingUDPMsg_ConnectRequest
 +\n'k_ESteamNotificationType_ClipDownloaded
++\n'k_ESteamNotificationType_PlaytestInvite
 +\n'k_ESteamOSCompatibilityCategory_Unknown
 +\n'k_EStoreBrowseFilterFailure_Unavailable
 +\n'k_EStoreDiscoveryQueueTypeDLCTopSellers
@@ -5291,6 +5304,9 @@ $steammessages_parental_objects.proto"
 ,leftstick:
 ,lefttrigger:
 ,misc1:
+,misc2:
+,misc3:
+,misc4:
 ,n2+8!>ADyJ
 ,name:
 ,paddle
@@ -8012,8 +8028,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapI8CSteamIDPN21CP2PNetworkingSession15P2PConnection_tE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI8PresetIdi10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI8PresetIdi10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
-10CUtlMemoryIN11CUtlHashMapI8SDL_GUIDj10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_ES1_E12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI8SDL_GUIDj10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS2_NS1_20AddrConnectionInfo_tENS2_2EqENS2_4HashEE15ElementBucket_tES5_S6_S2_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS2_NS1_20AddrConnectionInfo_tENS2_2EqENS2_4HashEE15ElementBucket_tES5_S6_S2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tEE
@@ -8628,7 +8642,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CUtlHashMapI8CSteamIDN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI8CSteamIDPN21CP2PNetworkingSession15P2PConnection_tE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI8PresetIdi10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
-10CUtlVectorIN11CUtlHashMapI8SDL_GUIDj10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS2_NS1_20AddrConnectionInfo_tENS2_2EqENS2_4HashEE15ElementBucket_tES5_S6_S2_E12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIN25SteamNetworkingSocketsLib14AddrAnd32bitIDEPNS1_33CConnectionTransportFromSDRClientESt8equal_toIS2_ENS1_25AddrAnd32bitIDHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS9_EE
@@ -8904,7 +8917,6 @@ $steammessages_parental_objects.proto"
 11CUtlHashMapI8CSteamIDN14CUtlHashMapLRUIS0_7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_S0_E
 11CUtlHashMapI8CSteamIDPN21CP2PNetworkingSession15P2PConnection_tE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI8PresetIdi10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-11CUtlHashMapI8SDL_GUIDj10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_ES0_E
 11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS1_NS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tES4_S5_S1_E
 11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS0_19SpewThrottleEntry_tE10CDefEqualsIS1_ENS0_23SpewLocationHashFunctorES1_E
 11CUtlHashMapIN25SteamNetworkingSocketsLib14AddrAnd32bitIDEPNS0_33CConnectionTransportFromSDRClientESt8equal_toIS1_ENS0_25AddrAnd32bitIDHashFunctorES1_E
@@ -15314,6 +15326,11 @@ $steammessages_parental_objects.proto"
 88pH
 8>0RF>
 8A6j
+8Bitdo Pro 2 Controller
+8Bitdo Pro 3 Controller
+8Bitdo SF30 Controller
+8Bitdo SN30 Controller
+8Bitdo Ultimate 2 Wireless Controller
 8CAppData
 8CAutoPtrI11CHTTPServerE
 8CAutoPtrI15CWebUITransportE
@@ -15586,7 +15603,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42 
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -16821,7 +16838,6 @@ Attempting to purchase same app in different packages
 Attempting to remove more tokens than the bucket size! starting: %u, toremove: %u
 Attempting to send message to chat room (%s) we are no longer a member of
 Attemt to send packet, but socket has been closed!
-AttribCapabilityBits
 AttribCapabilityGroup
 Attributes
 Audio
@@ -33744,6 +33760,7 @@ SetCurrentQueueEntry
 SetCurrentUIMode
 SetCurrentVideoEncodingRate
 SetCustomIPSettings
+SetDebugInstallDir
 SetDedicatedServer
 SetDefaultConfig
 SetDefaultNintendoButtonLayout
@@ -39715,6 +39732,7 @@ Zulu
 \n\ncall_again
 \n\ncall_count
 \n\ncan_invite
+\n\ncaps_bits2
 \n\ncategories
 \n\ncategoryid
 \n\ncertExpiry
@@ -42374,6 +42392,7 @@ button_back_left_upper
 button_back_right
 button_back_right_upper
 button_back_view
+button_c
 button_capture
 button_circle
 button_create
@@ -42431,6 +42450,7 @@ button_triangle
 button_view
 button_x
 button_y
+button_z
 buttons
 buttons_e
 buttons_n
@@ -42656,37 +42676,6 @@ cannot suspend in external parameter entity
 cant check dh key
 cant pack structure
 canvas_oop_rasterization
-cap_additonal_buttons
-cap_analog_triggers
-cap_aux_sensor
-cap_back_button
-cap_button_diamond
-cap_cant_read_guidebutton
-cap_capstick
-cap_capture_button
-cap_center_trackpad
-cap_color_led
-cap_dpad
-cap_emulated_rumble
-cap_gen_serial
-cap_grip_buttons
-cap_grips_flipped
-cap_guide_button
-cap_gyro
-cap_haptics
-cap_led
-cap_leftstick
-cap_nintendo_layout
-cap_player_led
-cap_pressure
-cap_rightstick
-cap_rumble
-cap_sdl_bind
-cap_shoulder_buttons
-cap_start_button
-cap_stick_buttons
-cap_trackpad
-cap_uncalibrated_imu
 capslock_keycode
 capsule_filename
 capsule_headline
@@ -43483,6 +43472,7 @@ controller
 controllerData
 controllerPath
 controllerType
+controller_8bitdo
 controller_action
 controller_action %s
 controller_action empty_binding
@@ -45411,7 +45401,6 @@ false">\n+CPartnerApps_FinishUploadLegacyDRM_Response
 false"I\n$CVideo_SetVideoBookmark_Notification
 false"M\n
 false"M\n CMsgClientUCMDeletePublishedFile
-false"w\n
 false:4\n\vdescription
 false:<\n
 false:J\n
@@ -46231,7 +46220,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen6
 ghjkl
 gidlist
 gidparentcomment
@@ -50079,7 +50068,7 @@ k_SystemFanControlMode_Disabled
 k_SystemFanControlMode_Invalid
 k_TestingAbortedk_TestingBindAButtonk_TestingBindBButtonk_TestingBindDPadDownk_TestingBindDPadLeftk_TestingBindDPadRightk_TestingBindDPadUpk_TestingBindGuidek_TestingBindLeftShoulderk_TestingBindLeftStickButtonk_TestingBindLeftStickDownk_TestingBindLeftStickLeftk_TestingBindLeftStickRightk_TestingBindLeftStickUpk_TestingBindLeftTriggerk_TestingBindRightShoulderk_TestingBindRightStickButtonk_TestingBindRightStickDownk_TestingBindRightStickLeftk_TestingBindRightStickRightk_TestingBindRightStickUpk_TestingBindRightTriggerk_TestingBindSelectk_TestingBindSharek_TestingBindStartk_TestingBindTouchpadk_TestingBindXButtonk_TestingBindYButtonk_TestingBindingCompletek_TestingButtonsk_TestingCompletek_TestingFreeModek_TestingLeftHapticsk_TestingLeftJoystickk_TestingLeftTrackpadk_TestingLeftTrackpadPressurek_TestingLeftTriggerk_TestingRightHapticsk_TestingRightJoystickk_TestingRightTrackpadk_TestingRightTrackpadPressurek_TestingRightTriggerk_TestingStarted
 k_cbMaxSteamDatagramGameCoordinatorServerLoginSerialized set too small, we are close to overflowing!
-k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Pro2k_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
+k_eControllerStyle_ArcadeStickk_eControllerStyle_Gamepadk_eControllerStyle_Gamepad_8BitDo_Prok_eControllerStyle_Gamepad_8BitDo_SN30k_eControllerStyle_Gamepad_8BitDo_Ultimatek_eControllerStyle_Gamepad_FlyDigi_Apexk_eControllerStyle_Gamepad_FlyDigi_Vaderk_eControllerStyle_Gamepad_GameCubek_eControllerStyle_Handheldk_eControllerStyle_Unknown
 k_eDiskSpaceType_Clip
 k_eDiskSpaceType_Recording
 k_eJPEG
@@ -51427,7 +51416,6 @@ m_mapConnectionToBuffer
 m_mapConnectionToClient
 m_mapConsumedContent
 m_mapConsumedContent[iMap].GetPtr()
-m_mapControllerCaps
 m_mapControllerEnabled
 m_mapCoplayEvents
 m_mapCurrentItemDefPricesByApp
@@ -53982,7 +53970,6 @@ nm_utils_ssid_to_utf8
 nm_utils_uuid_generate
 nmq(t
 nnbbpprrff
-nnci
 nnvb
 no accept addr or service specified
 no access code
@@ -57891,7 +57878,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun  2 2025 21:21:01
+steam Jun  9 2025 17:58:30
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

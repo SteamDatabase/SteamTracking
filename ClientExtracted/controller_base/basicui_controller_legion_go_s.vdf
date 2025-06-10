@@ -5,7 +5,7 @@
 	"title"		"Official Configuration for Big Picture"
 	"description"		""
 	"creator"		"76561197979773977"
-	"controller_type"		"controller_xboxone"
+	"controller_type"		"controller_legion_go_s"
 	"Timestamp"		"1541455567"
 	"actions"
 	{
@@ -100,6 +100,8 @@
 				"LEFTSTICK_RIGHT"		"#Action_Right"
 				"A"		"#Action_Confirm"
 				"B"		"#Action_Cancel"
+				"X"		"#Action_Action1"
+				"Y"		"#Action_Action2"
 				"LSHOULDER"		"#Action_LSilo"
 				"RSHOULDER"		"#Action_RSilo"
 				"BrowserMoveTabLeft"		"#Action_TabLeft"
@@ -289,7 +291,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserMoreMenu, Open Menu"
+							"binding"		"game_action WebBrowser X"
 						}
 					}
 				}
@@ -302,7 +304,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserGoToFavorites, Open Favorites"
+							"binding"		"game_action WebBrowser Y"
 						}
 					}
 				}

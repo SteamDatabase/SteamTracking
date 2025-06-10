@@ -12534,9 +12534,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
-                BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
-                BUILD_RTIME_UTC: 1748892104,
+                BUILD_TIME_LOCAL: "Jun 9 2025 : 15:02:28",
+                BUILD_TIME_UTC: "Jun 9 2025 : 22:02:28",
+                BUILD_RTIME_UTC: 1749506548,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -16440,6 +16440,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { Modal: _ } = _,
@@ -16494,8 +16495,9 @@ var CLSTAMP = "steamdb";
                   })(_, _, _, _),
                 onClose: () => _.fnOnClose && _.fnOnClose(),
               },
-            ),
-            _ = _?.bHideActions,
+            );
+          (0, _._)(_, "click", () => _?.SteamClient.Window.BringToFront());
+          const _ = _?.bHideActions,
             _ =
               "number" == typeof _?.nDragAreaHeight
                 ? {
@@ -26814,9 +26816,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 2 2025 : 12:21:44",
-                    BUILD_TIME_UTC: "Jun 2 2025 : 19:21:44",
-                    BUILD_RTIME_UTC: 1748892104,
+                    BUILD_TIME_LOCAL: "Jun 9 2025 : 15:02:28",
+                    BUILD_TIME_UTC: "Jun 9 2025 : 22:02:28",
+                    BUILD_RTIME_UTC: 1749506548,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27471,7 +27473,7 @@ var CLSTAMP = "steamdb";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "3076a4bb4fed859d9897",
         2646: "fd760620e7dcb1d9794f",
-        2664: "eeca789f2206dbe86870",
+        2664: "9be0b43a756245c53acc",
         2761: "229a4f158c3f5dd77301",
         2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
@@ -27485,7 +27487,7 @@ var CLSTAMP = "steamdb";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "bc0b73d8b543893bc8d1",
+        3569: "51398c8540937c85c065",
         3583: "f831ab7edbd9ffa591ac",
         3594: "8ba86d9069ca6bc96221",
         3714: "44067310221ac08dea86",
@@ -27563,7 +27565,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "846def69dbdc2c7ec3d8",
+        9858: "a4f45de9337bee8c848c",
         9869: "dbd455fdaf48a06fd9ed",
         9887: "5dfb2cd2a8d69bee9b8e",
       }[_]),

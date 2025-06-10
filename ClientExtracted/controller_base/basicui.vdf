@@ -101,6 +101,8 @@
 				"LEFTSTICK_RIGHT"		"#Action_Right"
 				"A"		"#Action_Confirm"
 				"B"		"#Action_Cancel"
+				"X"		"#Action_Action1"
+				"Y"		"#Action_Action2"
 				"LSHOULDER"		"#Action_LSilo"
 				"RSHOULDER"		"#Action_RSilo"
 				"BrowserMoveTabLeft"		"#Action_TabLeft"
@@ -1915,7 +1917,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+							"binding"		"game_action WebBrowser X"
 						}
 					}
 				}
@@ -1928,7 +1930,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserGoToFavorites, Open Favorites"
+							"binding"		"game_action WebBrowser Y"
 						}
 					}
 				}

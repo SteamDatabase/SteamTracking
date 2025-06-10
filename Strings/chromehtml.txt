@@ -1207,7 +1207,6 @@ AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString
 Attempting to purchase same app in different packages
-AttribCapabilityBits
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
@@ -4244,37 +4243,6 @@ can't reach here.
 canceled the join request
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
-cap_additonal_buttons
-cap_analog_triggers
-cap_aux_sensor
-cap_back_button
-cap_button_diamond
-cap_cant_read_guidebutton
-cap_capstick
-cap_capture_button
-cap_center_trackpad
-cap_color_led
-cap_dpad
-cap_emulated_rumble
-cap_gen_serial
-cap_grip_buttons
-cap_grips_flipped
-cap_guide_button
-cap_gyro
-cap_haptics
-cap_led
-cap_leftstick
-cap_nintendo_layout
-cap_player_led
-cap_pressure
-cap_rightstick
-cap_rumble
-cap_sdl_bind
-cap_shoulder_buttons
-cap_start_button
-cap_stick_buttons
-cap_trackpad
-cap_uncalibrated_imu
 catalan
 category_1
 category_10
@@ -4411,6 +4379,7 @@ construction vtable for
 contenthubs
 contentregionsandsources
 contentserver
+controller_8bitdo
 controller_android
 controller_apple
 controller_front_panel_board

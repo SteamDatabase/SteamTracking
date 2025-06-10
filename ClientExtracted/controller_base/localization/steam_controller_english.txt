@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 Button"
 	"origin_legion_go_y2"							"Y2 Button"
+
+	"origin_generic_PL"							"PL Button"
+	"origin_generic_PR"							"PR Button"
+	"origin_generic_C"							"C Button"
+	"origin_generic_Z"							"Z Button"
+	"origin_generic_MISC1"						"MISC1 Button"
+	"origin_generic_MISC2"						"MISC2 Button"
+	"origin_generic_MISC3"						"MISC3 Button"
+	"origin_generic_MISC4"						"MISC4 Button"
+	"origin_generic_MISC5"						"MISC5 Button"
+	"origin_generic_MISC6"						"MISC6 Button"
+	"origin_generic_MISC7"						"MISC7 Button"
+	"origin_generic_MISC8"						"MISC8 Button"
+
 }

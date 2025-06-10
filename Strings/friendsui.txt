@@ -784,6 +784,7 @@ $\nY8O
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_EClientNotificationType_ClipDownloaded
 ,\n(k_EClientNotificationType_HardwareSurvey
+,\n(k_EClientNotificationType_PlaytestInvite
 ,\n(k_ECommentThreadTypePublishedFile_Public
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording

@@ -32,6 +32,7 @@ enum ESteamNotificationType {
 	k_ESteamNotificationType_2FAPrompt = 25;
 	k_ESteamNotificationType_MobileConfirmation = 26;
 	k_ESteamNotificationType_PartnerEvent = 27;
+	k_ESteamNotificationType_PlaytestInvite = 28;
 }
 
 message SteamNotificationData {
