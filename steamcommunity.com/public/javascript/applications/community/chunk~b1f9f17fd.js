@@ -10499,14 +10499,17 @@
         const { section: t, editModel: a, expanded: n } = e,
           i = a.GetCurEditLanguage(),
           r = (0, s.q3)(() => (0, O.dy)()),
-          o = (0, s.q3)(() =>
-            t.tabs.map((e) => ({
-              tab: e,
-              unique_id: e.unique_id,
-              bHide: e.hide,
-            })),
-          );
-        return t.tabs && 0 != t.tabs.length
+          o = (0, s.q3)(() => {
+            var e;
+            return null === (e = t.tabs) || void 0 === e
+              ? void 0
+              : e.map((e) => ({
+                  unique_id: e.unique_id,
+                  bHide: e.hide,
+                  strLabel: x(e, i),
+                }));
+          });
+        return o && 0 != o.length
           ? c.createElement(
               "div",
               { className: (0, M.A)(P.TabSummaryCtn, n && P.Expanded) },
@@ -10515,7 +10518,7 @@
                   "button",
                   {
                     key: e.unique_id,
-                    "data-label": x(e.tab, i),
+                    "data-label": e.strLabel,
                     className: (0, M.A)(
                       P.TabSummaryItem,
                       e.unique_id == r && P.Checked,
@@ -10528,7 +10531,7 @@
                       var t;
                     },
                   },
-                  x(e.tab, i),
+                  e.strLabel,
                 ),
               ),
             )

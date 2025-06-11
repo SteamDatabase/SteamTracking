@@ -11386,14 +11386,17 @@
         const { section: _, editModel: __webpack_require__, expanded: _ } = _,
           _ = __webpack_require__.GetCurEditLanguage(),
           _ = (0, _._)(() => (0, _._)()),
-          _ = (0, _._)(() =>
-            _.tabs.map((_) => ({
-              tab: _,
-              unique_id: _.unique_id,
-              bHide: _.hide,
-            })),
-          );
-        return _.tabs && 0 != _.tabs.length
+          _ = (0, _._)(() => {
+            var _;
+            return null === (_ = _.tabs) || void 0 === _
+              ? void 0
+              : _.map((_) => ({
+                  unique_id: _.unique_id,
+                  bHide: _.hide,
+                  strLabel: _(_, _),
+                }));
+          });
+        return _ && 0 != _.length
           ? _.createElement(
               "div",
               {
@@ -11404,7 +11407,7 @@
                   "button",
                   {
                     key: _.unique_id,
-                    "data-label": _(_.tab, _),
+                    "data-label": _.strLabel,
                     className: (0, _._)(
                       _.TabSummaryItem,
                       _.unique_id == _ && _.Checked,
@@ -11417,7 +11420,7 @@
                       var _;
                     },
                   },
-                  _(_.tab, _),
+                  _.strLabel,
                 ),
               ),
             )

@@ -15896,7 +15896,7 @@
               key: "broadcast",
               hidden:
                 !G.UF.CAN_UPLOAD_IMAGES || i.GetClanAccountID() == (0, Qt.H7)(),
-              vo_warning: o && (0, D.we)("#EventEditor_CuratorImageWarning"),
+              vo_warning: o() && (0, D.we)("#EventEditor_CuratorImageWarning"),
               contents: c.createElement(
                 tt.tH,
                 null,
@@ -15927,7 +15927,7 @@
               status: c.createElement(ir, { fnGetStatus: zt.C7 }),
               statusToolTip: null == _ ? void 0 : _.ttip,
               hidden: m,
-              vo_warning: o && (0, D.we)("#EventEditor_CuratorImageWarning"),
+              vo_warning: o() && (0, D.we)("#EventEditor_CuratorImageWarning"),
               contents: c.createElement(
                 tt.tH,
                 null,

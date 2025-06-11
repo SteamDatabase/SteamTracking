@@ -17831,7 +17831,7 @@
               key: "broadcast",
               hidden:
                 !_._.CAN_UPLOAD_IMAGES || _.GetClanAccountID() == (0, _._)(),
-              vo_warning: _ && (0, _._)("#EventEditor_CuratorImageWarning"),
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
               contents: _.createElement(
                 _._,
                 null,
@@ -17870,7 +17870,7 @@
               }),
               statusToolTip: null == _ ? void 0 : _.ttip,
               hidden: _,
-              vo_warning: _ && (0, _._)("#EventEditor_CuratorImageWarning"),
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
               contents: _.createElement(
                 _._,
                 null,
