@@ -4,6 +4,19 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3350],
   {
+    2341: (e) => {
+      e.exports = {
+        DashboardCtn: "_1_hOYVlP7oAcGzMRqRHq_p",
+        DashboardFilters: "_3FyleqzPJd8DHbxjl4y9F3",
+        TaxRequirementResultsContainer: "_1qWALk5nCmq5k9L83nsTxt",
+        TaxRequirementFilters: "_3cFbkh1j0JJXVXBjJFnxdz",
+        TaxRequirementFilterRow: "_3a7_xRkLXFkxUoWZSqyVcJ",
+        TaxRequirementTable: "_1QERjK04vLK1z0MWL5yn81",
+        ActionID: "B58x_VqxTzgU8vlzTwJFC",
+        Status: "_3tFjoS3ygfhuPvoh8ow2Of",
+        CreatedOn: "phqo4zDzqftYUoAI6wSzt",
+      };
+    },
     54292: (e) => {
       e.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
@@ -87,18 +100,18 @@
       "use strict";
       a.d(t, { u: () => l });
       var n = a(8527),
-        i = a(20194),
-        r = a(41735),
-        o = a.n(r),
+        r = a(20194),
+        i = a(41735),
+        o = a.n(i),
         s = a(90626);
       function l(e) {
-        const t = (0, i.I)({
+        const t = (0, r.I)({
           queryKey: ["useMilestoneByAppID", e],
           queryFn: async () => {
             const t = `${n.TS.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
               a = { appid: e },
-              i = await o().get(t, { params: a });
-            if (1 == i?.data?.success) return i.data.milestones;
+              r = await o().get(t, { params: a });
+            if (1 == r?.data?.success) return r.data.milestones;
             throw new Error("failed to load milestonse for appid " + e);
           },
           enabled: Boolean(e),
@@ -117,8 +130,8 @@
         vh: () => u,
       });
       var n = a(34629),
-        i = a(41735),
-        r = a.n(i),
+        r = a(41735),
+        i = a.n(r),
         o = a(90626),
         s = a(68797),
         l = a(78327),
@@ -151,9 +164,9 @@
                 searchtext: e,
                 origin: self.origin,
               },
-              i = await r().get(a, { params: n });
-            200 == i?.status && 1 == i?.data?.success
-              ? i.data.publishers.forEach((e) => {
+              r = await i().get(a, { params: n });
+            200 == r?.status && 1 == r?.data?.success
+              ? r.data.publishers.forEach((e) => {
                   const a = {
                     partnerid: e.publisherid,
                     name: e.publishername,
@@ -164,7 +177,7 @@
                   this.m_mapOptInToPartners.set(e.publisherid, a), t.push(a);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${i?.status} eresult ${i?.data?.success} and msg ${i?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
                 );
           } catch (e) {
             const t = (0, s.H)(e);
@@ -268,122 +281,149 @@
       }
       (0, n.Cg)([c.o], m.prototype, "FindPartnerByName", null);
     },
-    37789: (e, t, a) => {
+    92513: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => T });
+      a.r(t), a.d(t, { default: () => P, usePartnerDeadlines: () => A });
       var n = a(90626),
-        i = a(24484),
-        r = a(18573),
-        o = a.n(r),
-        s = a(52038),
-        l = a(95695),
-        c = a.n(l),
-        d = a(51272),
-        m = a(84811),
-        u = a(16676),
-        h = a(95034),
-        p = a(55263),
-        f = a(82097),
-        y = a(32179),
-        v = a(8527),
-        E = a(61859),
-        g = a(91675),
-        S = a(26408),
-        N = a(54330);
-      const b = { include_assets: !0, include_release: !0 };
-      function w(e) {
-        const { rgDeadlines: t } = e,
-          [a, i] = (0, h.QD)("query", ""),
-          r = (0, n.useMemo)(
+        r = a(84811),
+        i = a(2341),
+        o = a.n(i),
+        s = a(16676),
+        l = a(20194),
+        c = a(41735),
+        d = a.n(c),
+        m = a(78327),
+        u = a(95034),
+        h = a(55263),
+        p = a(82097),
+        f = a(32179),
+        y = a(8527),
+        v = a(61859),
+        E = a(91675),
+        g = a(26408),
+        S = a(54330),
+        N = a(95695),
+        b = a.n(N),
+        w = a(51272),
+        _ = a(52038);
+      const T = { include_assets: !0, include_release: !0 };
+      function C() {
+        const e = A(9),
+          [t, a] = (0, u.QD)("query", ""),
+          i = (0, n.useMemo)(
             () =>
               Array.from(
-                new Set(t.map((e) => e.data.store_item_id).filter(Boolean)),
+                new Set(e?.map((e) => e.data.store_item_id).filter(Boolean)),
               ),
-            [t],
+            [e],
           ),
           o = (0, n.useMemo)(
             () =>
               Array.from(
-                new Set(t.map((e) => e.data.partnerid).filter(Boolean)),
+                new Set(e?.map((e) => e.data.partnerid).filter(Boolean)),
               ),
-            [t],
+            [e],
           ),
-          s = (0, p.zX)(r, b),
-          l = (0, y.vh)(o),
-          c = (0, n.useMemo)(() => {
-            const e = a.trim().toLocaleLowerCase();
-            return t
-              .filter(
-                (t) =>
-                  0 == e.length ||
-                  1 == s ||
-                  !l ||
-                  f.A.Get()
-                    .GetApp(t.data.store_item_id)
+          l = (0, h.zX)(i, T),
+          c = (0, f.vh)(o),
+          d = (0, n.useMemo)(() => {
+            const a = t.trim().toLocaleLowerCase();
+            return e
+              ?.filter(
+                (e) =>
+                  0 == a.length ||
+                  1 == l ||
+                  !c ||
+                  p.A.Get()
+                    .GetApp(e.data.store_item_id)
                     ?.GetName()
                     .toLocaleLowerCase()
-                    .includes(e) ||
-                  (0, y.Yd)(t.data.partnerid)
+                    .includes(a) ||
+                  (0, f.Yd)(e.data.partnerid)
                     ?.name.toLocaleLowerCase()
-                    .includes(e),
+                    .includes(a),
               )
               .sort((e, t) => t.data.due_date - e.data.due_date);
-          }, [a, t, s, l]);
-        return n.createElement(
-          m.tH,
-          null,
-          n.createElement("h3", null, "Season Passes"),
-          n.createElement(u.pd, {
-            type: "string",
-            value: a,
-            onChange: (e) => i(e.currentTarget.value.toLocaleLowerCase()),
-            label: "Filter",
-            tooltip:
-              "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
-            placeholder: "type here...",
-          }),
-          n.createElement(
-            "table",
-            null,
-            n.createElement(
-              "thead",
+          }, [t, e, l, c]);
+        return e
+          ? n.createElement(
+              r.tH,
               null,
               n.createElement(
-                "tr",
+                "h3",
                 null,
-                n.createElement("th", null, "Deadline ID"),
+                "Season Passes ",
                 n.createElement(
-                  "th",
-                  null,
-                  "Milestone ID ",
-                  n.createElement(S.o, {
-                    tooltip: "This is only unique within a DLC Season Pass",
-                  }),
+                  "button",
+                  {
+                    className: (0, _.A)(b().Button),
+                    style: { float: "right", marginRight: "16px" },
+                    onClick: (e) =>
+                      (0, w.EP)(
+                        e,
+                        "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
+                      ),
+                  },
+                  "Help",
                 ),
-                n.createElement("th", null, "Season Pass DLC"),
-                n.createElement("th", null, "Partner"),
-                n.createElement("th", null, "Season Pass Release Date"),
-                n.createElement("th", null, "Deadline Date"),
-                n.createElement("th", null, "Milestone Name"),
-                n.createElement("th", null, "Ticket?"),
               ),
-            ),
-            n.createElement(
-              "tbody",
-              null,
-              c.map((e) =>
-                n.createElement(_, { key: "" + e.deadlineid, deadline: e }),
+              n.createElement(
+                "p",
+                null,
+                "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
               ),
-            ),
-          ),
-        );
+              n.createElement(s.pd, {
+                type: "string",
+                value: t,
+                onChange: (e) => a(e.currentTarget.value.toLocaleLowerCase()),
+                label: "Filter",
+                tooltip:
+                  "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
+                placeholder: "type here...",
+              }),
+              n.createElement(
+                "table",
+                null,
+                n.createElement(
+                  "thead",
+                  null,
+                  n.createElement(
+                    "tr",
+                    null,
+                    n.createElement("th", null, "Deadline ID"),
+                    n.createElement(
+                      "th",
+                      null,
+                      "Milestone ID ",
+                      n.createElement(g.o, {
+                        tooltip: "This is only unique within a DLC Season Pass",
+                      }),
+                    ),
+                    n.createElement("th", null, "Season Pass DLC"),
+                    n.createElement("th", null, "Partner"),
+                    n.createElement("th", null, "Season Pass Release Date"),
+                    n.createElement("th", null, "Deadline Date"),
+                    n.createElement("th", null, "Milestone Name"),
+                    n.createElement("th", null, "Ticket?"),
+                  ),
+                ),
+                n.createElement(
+                  "tbody",
+                  null,
+                  d.map((e) =>
+                    n.createElement(x, { key: "" + e.deadlineid, deadline: e }),
+                  ),
+                ),
+              ),
+            )
+          : null;
       }
-      function _(e) {
+      function x(e) {
         const { deadline: t } = e,
-          [a] = (0, p.t7)(t.data.store_item_id, b),
-          [i] = (0, y.UA)(t.data.partnerid),
-          r = (0, N.u)(t.data.store_item_id),
-          o = r?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
+          [a] = (0, h.t7)(t.data.store_item_id, T),
+          [r] = (0, f.UA)(t.data.partnerid),
+          i = (0, S.u)(t.data.store_item_id),
+          o = i?.find((e) => e.milestone_id == Number.parseInt(t.data.gid));
         return n.createElement(
           "tr",
           null,
@@ -401,7 +441,7 @@
             n.createElement(
               "a",
               {
-                href: `${v.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
+                href: `${y.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.data.store_item_id}`,
                 target: "_blank",
               },
               t.data.store_item_id,
@@ -414,10 +454,10 @@
             n.createElement(
               "a",
               {
-                href: `${v.TS}pub/companydetails/${t.data.partnerid}`,
+                href: `${y.TS}pub/companydetails/${t.data.partnerid}`,
                 target: "_blank",
               },
-              i?.name || "unknown",
+              r?.name || "unknown",
               " (",
               t.data.partnerid,
               ")",
@@ -426,16 +466,16 @@
           n.createElement(
             "td",
             null,
-            (0, E.TW)(a?.GetReleaseDateRTime()),
+            (0, v.TW)(a?.GetReleaseDateRTime()),
             n.createElement("span", null, " - "),
-            (0, g.KC)(a?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
+            (0, E.KC)(a?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
           ),
           n.createElement(
             "td",
             null,
-            (0, E.TW)(t.data.due_date),
+            (0, v.TW)(t.data.due_date),
             n.createElement("span", null, " - "),
-            (0, g.KC)(t.data.due_date, { bForce24HourClock: !1 }),
+            (0, E.KC)(t.data.due_date, { bForce24HourClock: !1 }),
           ),
           n.createElement(
             "td",
@@ -445,46 +485,187 @@
           n.createElement("td", null, "TODO"),
         );
       }
-      function T(e) {
-        const t = (function () {
-          const [e] = (0, n.useState)(
-            (0, i.Tc)("deadlines", "application_config"),
+      function I() {
+        const [e, t] = n.useState(0),
+          a = A(10, e),
+          r = n.useRef(0);
+        n.useEffect(() => () => window.clearTimeout(r.current), []);
+        const i = n.useMemo(() => {
+          const e = new Map(),
+            t = a?.sort((e, t) => {
+              const a = JSON.parse(e.data.description_jsondata),
+                n = JSON.parse(t.data.description_jsondata),
+                r = new Date(a?.CreatedOn);
+              return new Date(n?.CreatedOn).getTime() - r.getTime();
+            });
+          return (
+            t?.forEach((t) => {
+              let a;
+              e.has(t.data.gid)
+                ? (a = e.get(t.data.gid))
+                : ((a = new Array()), e.set(t.data.gid, a)),
+                a.push(t.data);
+            }),
+            e
           );
-          return e;
-        })();
+        }, [a]);
         return n.createElement(
-          m.tH,
+          "div",
+          { className: o().TaxRequirementResultsContainer },
+          n.createElement("h3", null, "Tax Requirement Deadlines"),
+          n.createElement(
+            "div",
+            { className: o().TaxRequirementFilters },
+            n.createElement(
+              "div",
+              { className: o().TaxRequirementFilterRow },
+              "PartnerID: ",
+              n.createElement("textarea", {
+                cols: 30,
+                rows: 1,
+                onChange: (e) => {
+                  const a = Number(e.currentTarget.value);
+                  window.clearTimeout(r.current),
+                    (r.current = window.setTimeout(() => t(a), 1e3));
+                },
+              }),
+            ),
+          ),
+          n.createElement(
+            "div",
+            { className: o().TaxRequirementTable },
+            n.createElement(
+              "table",
+              null,
+              n.createElement(
+                "thead",
+                null,
+                n.createElement(
+                  "tr",
+                  null,
+                  n.createElement(
+                    "th",
+                    { className: o().ActionID },
+                    "Action ID",
+                  ),
+                  n.createElement("th", { className: o().Status }, "Status"),
+                  n.createElement("th", null, "Template"),
+                  n.createElement(
+                    "th",
+                    { className: o().CreatedOn },
+                    "Created On",
+                  ),
+                  n.createElement("th", null, "Dropbox URL"),
+                  n.createElement("th", null, "Freeform Message"),
+                ),
+              ),
+              n.createElement(
+                "tbody",
+                null,
+                !!i &&
+                  Array.from(i?.values()).map((e, t) =>
+                    e.length > 0
+                      ? n.createElement(R, {
+                          key: "aid_" + t,
+                          actionID: e[0].gid,
+                          rgDeadlines: e,
+                        })
+                      : null,
+                  ),
+              ),
+            ),
+          ),
+        );
+      }
+      function R(e) {
+        const { actionID: t, rgDeadlines: a } = e;
+        return a.length
+          ? n.createElement(
+              n.Fragment,
+              null,
+              n.createElement("tr", null, n.createElement("td", null, t)),
+              a.map((e, t) =>
+                n.createElement(B, { key: e.gid + "_" + t, deadline: e }),
+              ),
+            )
+          : null;
+      }
+      function B(e) {
+        const { deadline: t } = e,
+          a = JSON.parse(t.description_jsondata),
+          r = new Date(a.CreatedOn).toUTCString();
+        return n.createElement(
+          "tr",
+          null,
+          n.createElement("td", null),
+          n.createElement("td", null, t.status ? "Complete" : "Active"),
+          n.createElement("td", null, a.TemplateName),
+          n.createElement("td", null, r),
+          n.createElement("td", null, a.Parameters?.Dropbox_FileRequest_Url),
+          n.createElement("td", null, a.Parameters?.CustomMessageBody),
+        );
+      }
+      function P(e) {
+        const [t, a] = n.useState((9).toString()),
+          i = [
+            { label: "Season Pass Milestone", data: (9).toString() },
+            { label: "Tax Requirement", data: (10).toString() },
+          ];
+        let l = null;
+        switch (t) {
+          case (10).toString():
+            l = n.createElement(I, null);
+            break;
+          case (9).toString():
+            l = n.createElement(C, null);
+            break;
+          default:
+            console.error(
+              "results component not implemented for this deadline type",
+            );
+        }
+        return n.createElement(
+          r.tH,
           null,
           n.createElement(
             "div",
             { className: o().DashboardCtn },
-            n.createElement(
-              "h1",
-              null,
-              "Missed Deadlines Dashboard",
-              n.createElement(
-                "button",
-                {
-                  className: (0, s.A)(c().Button),
-                  style: { float: "right", marginRight: "16px" },
-                  onClick: (e) =>
-                    (0, d.EP)(
-                      e,
-                      "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
-                    ),
-                },
-                "Help",
-              ),
-            ),
+            n.createElement("h1", null, "Deadlines Dashboard"),
             n.createElement("hr", null),
             n.createElement(
-              "p",
-              null,
-              "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
+              "div",
+              { className: o().DashboardFilters },
+              "Type: ",
+              n.createElement(s.ZU, {
+                rgOptions: i,
+                selectedOption: t,
+                strDropDownClassName: o().Test,
+                onChange: (e) => {
+                  a(e.data);
+                },
+                contextMenuPositionOptions: { bMatchWidth: !1 },
+              }),
             ),
+            n.createElement("div", { className: o().DashboardResults }, l),
           ),
-          n.createElement(w, { rgDeadlines: t }),
         );
+      }
+      function A(e, t) {
+        const a = (0, l.I)({
+          queryKey: ["partnerDeadlines", e, t],
+          queryFn: async () => {
+            if (t && t < 0) return;
+            const a = new FormData();
+            a.append("type", e.toString()),
+              a.append("sessionid", m.TS.SESSIONID),
+              t && a.append("partnerid", t.toString());
+            const n = `${m.TS.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
+              r = await d().post(n, a, { withCredentials: !0 });
+            return 200 == r?.status ? r.data : void 0;
+          },
+          staleTime: 12e4,
+        });
+        return a.isLoading ? null : a.data?.deadlines;
       }
     },
     2203: (e, t, a) => {
@@ -496,8 +677,8 @@
           k_rgTemplateNameOptionsList: () => R,
         });
       var n = a(90626),
-        i = a(24484),
-        r = a(84811),
+        r = a(24484),
+        i = a(84811),
         o = a(54292),
         s = a.n(o),
         l = a(45737),
@@ -513,11 +694,11 @@
       function E(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          i = a.Parameters?.CustomMessageBody ?? "Message not available";
+          r = a.Parameters?.CustomMessageBody ?? "Message not available";
         return n.createElement(
           "div",
           { className: (0, m.A)(s().NotificationContainer, c().SectionCtn) },
-          n.createElement("div", null, i),
+          n.createElement("div", null, r),
           n.createElement(w, { ...e }),
         );
       }
@@ -537,11 +718,11 @@
         N = -1;
       function b(e) {
         const { requirement: t } = e,
-          [a, i] = (0, n.useState)(""),
-          [r, o] = (0, n.useState)(!1),
+          [a, r] = (0, n.useState)(""),
+          [i, o] = (0, n.useState)(!1),
           l = (0, n.useCallback)(async () => {
-            if ((i(""), !t.deadline?.data?.partnerid))
-              return void i("An error occurred.  Missing partner id");
+            if ((r(""), !t.deadline?.data?.partnerid))
+              return void r("An error occurred.  Missing partner id");
             const e = t.onboarded ? "pub" : "newpartner",
               a = `${p.TS.PARTNER_BASE_URL}${e}/ajaxstarttaxidentityworkflow/${t.deadline.data.partnerid}`,
               n = new FormData();
@@ -550,9 +731,9 @@
               const e = await y().post(a, n, { withCredentials: !0 });
               200 == e?.status && 1 == e.data?.success && e.data.url
                 ? window.open(e.data.url, "_blank")
-                : i("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
+                : r("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
             } catch (e) {
-              i("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
+              r("An error occurred. " + (0, v.H)(e)?.strErrorMsg);
             }
             o(!1);
           }, [t]);
@@ -565,19 +746,19 @@
           n.createElement(
             u.jn,
             {
-              disabled: r,
+              disabled: i,
               onClick: () => l(),
               className: s().NotificationButton,
             },
-            r ? "Opening Tax Interview" : "Begin Tax Interview",
+            i ? "Opening Tax Interview" : "Begin Tax Interview",
           ),
         );
       }
       function w(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          i = a.Parameters?.Dropbox_FileRequest_Url;
-        if (!i) return null;
+          r = a.Parameters?.Dropbox_FileRequest_Url;
+        if (!r) return null;
         if (-1 == N) N = t.index;
         else if (N != t.index) return null;
         return n.createElement(
@@ -602,7 +783,7 @@
           n.createElement(
             u.jn,
             {
-              onClick: () => window.open(i, "_blank"),
+              onClick: () => window.open(r, "_blank"),
               className: s().NotificationButton,
             },
             "Open Dropbox™ File Request",
@@ -629,7 +810,7 @@
       function _(e) {
         const { requirement: t } = e,
           a = (0, d.$z)(t.deadline.data.due_date),
-          i = t.onboarded
+          r = t.onboarded
             ? `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview. Until your tax information has been verified, you will not be able to receive any further payments.`
             : `If the additional documents noted below have not been provided by ${a}, per US IRS requirements, the\n\t\t\t\ttax form you completed for Valve is invalid and you will need to retake the full tax interview. You will be unable to distribute your product via Steam\n\t\t\t\tuntil we receive a valid tax form from you.`;
         return n.createElement(
@@ -650,7 +831,7 @@
             { className: s().SectionTitle },
             "Why is this important?",
           ),
-          n.createElement("div", { className: s().SectionBody }, i),
+          n.createElement("div", { className: s().SectionBody }, r),
         );
       }
       function T(e) {
@@ -660,8 +841,8 @@
           : "You will be unable to distribute your product via Steam until we receive valid KYC and tax information from you.";
       }
       var C = a(738),
-        I = a(56011),
-        x = a(78395);
+        x = a(56011),
+        I = a(78395);
       const R = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
@@ -1308,12 +1489,12 @@
             component: function (e) {
               const { requirement: t } = e,
                 a = `${p.TS.PARTNER_BASE_URL}pub/companydetails/${t.deadline.data.partnerid}`,
-                i = JSON.parse(t.deadline.data.description_jsondata),
-                r = t.bTestDisplay
+                r = JSON.parse(t.deadline.data.description_jsondata),
+                i = t.bTestDisplay
                   ? new Date().getFullYear() - 1
-                  : i?.Parameters?.TaxYear,
-                o = r
-                  ? `Our records show that you consented to electronic delivery of your tax documents. You can find your 1099Misc tax statement for ${r} available\n\t\tfor download underneath your tax information in Steamworks. The form reflects the amount of Steam revenue payments we paid to you in ${r}.\n\t\tThis form is prepared on a cash-basis for each calendar year.`
+                  : r?.Parameters?.TaxYear,
+                o = i
+                  ? `Our records show that you consented to electronic delivery of your tax documents. You can find your 1099Misc tax statement for ${i} available\n\t\tfor download underneath your tax information in Steamworks. The form reflects the amount of Steam revenue payments we paid to you in ${i}.\n\t\tThis form is prepared on a cash-basis for each calendar year.`
                   : "Our records show that you consented to electronic delivery of your tax documents. You can find a new 1099Misc tax statement available for download\n\t\tunderneath your tax information in Steamworks. This form is prepared on a cash-basis for each calendar year";
               return n.createElement(
                 "div",
@@ -1357,11 +1538,11 @@
             component: function (e) {
               const { requirement: t } = e,
                 a = `${p.TS.PARTNER_BASE_URL}pub/companydetails/${t.deadline.data.partnerid}`,
-                i = JSON.parse(t.deadline.data.description_jsondata),
-                r = t.bTestDisplay
+                r = JSON.parse(t.deadline.data.description_jsondata),
+                i = t.bTestDisplay
                   ? new Date().getFullYear() - 1
-                  : i?.Parameters?.TaxYear,
-                o = `Our records show that you consented to electronic delivery of your tax documents.  ${r ? `You can find your 1042-S tax statement for ${r} available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person's U.S. Source Income Subject to Withholding" on an annual basis. The Form reflects the amount of Steam revenue share payments on \n\tUS sales we paid to you in ${r} and related withholding taxes, if applicable.` : 'You can find a new 1042-S tax statement available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person\'s U.S. Source Income Subject to Withholding" on an annual basis.'}  This Form is prepared on a cash-basis for each calendar year. Receiving this \n\tForm does not require you to file a U.S. tax return but there may be other circumstances that may require you to file a U.S. tax return. Generally, this form is \n\tfor informational purposes to you but you may want to consult with your tax advisors for additional guidance.`;
+                  : r?.Parameters?.TaxYear,
+                o = `Our records show that you consented to electronic delivery of your tax documents.  ${i ? `You can find your 1042-S tax statement for ${i} available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person's U.S. Source Income Subject to Withholding" on an annual basis. The Form reflects the amount of Steam revenue share payments on \n\tUS sales we paid to you in ${i} and related withholding taxes, if applicable.` : 'You can find a new 1042-S tax statement available for download \n\tunderneath your tax information in Steamworks. We are required by the Internal Revenue Service (the U.S. taxing authority) to prepare and provide you with a \n\tForm 1042-S, "Foreign Person\'s U.S. Source Income Subject to Withholding" on an annual basis.'}  This Form is prepared on a cash-basis for each calendar year. Receiving this \n\tForm does not require you to file a U.S. tax return but there may be other circumstances that may require you to file a U.S. tax return. Generally, this form is \n\tfor informational purposes to you but you may want to consult with your tax advisors for additional guidance.`;
               return n.createElement(
                 "div",
                 {
@@ -1754,7 +1935,7 @@
                     n.createElement(b, { ...e }),
                   ),
                 ),
-                i = n.createElement(
+                r = n.createElement(
                   n.Fragment,
                   null,
                   n.createElement(
@@ -1826,7 +2007,7 @@
                     ),
                   },
                   t.onboarded && a,
-                  !t.onboarded && i,
+                  !t.onboarded && r,
                 ),
               );
             },
@@ -2142,28 +2323,28 @@
         };
       function P() {
         const [e] = (0, n.useState)(
-            (0, i.Tc)("deadlines", "application_config"),
+            (0, r.Tc)("deadlines", "application_config"),
           ),
           [t] = (0, n.useState)(
-            parseInt((0, i.Tc)("action_id", "application_config")),
+            parseInt((0, r.Tc)("action_id", "application_config")),
           ),
           [a] = (0, n.useState)(
-            parseInt((0, i.Tc)("publisher_id", "application_config")),
+            parseInt((0, r.Tc)("publisher_id", "application_config")),
           ),
-          [r] = (0, n.useState)(
-            (0, i.Tc)("publisher_name", "application_config"),
+          [i] = (0, n.useState)(
+            (0, r.Tc)("publisher_name", "application_config"),
           ),
           [o] = (0, n.useState)(
-            parseInt((0, i.Tc)("publisher_onboarded", "application_config")),
+            parseInt((0, r.Tc)("publisher_onboarded", "application_config")),
           );
-        return [e, r, t, a, o];
+        return [e, i, t, a, o];
       }
       function A(e) {
-        const { closeModal: t, subject: a, publisherid: i } = e,
-          [r, o] = n.useState(""),
+        const { closeModal: t, subject: a, publisherid: r } = e,
+          [i, o] = n.useState(""),
           [l, c] = n.useState("");
         return n.createElement(
-          x.o0,
+          I.o0,
           {
             strTitle: "Contact TaxIdentity",
             strDescription: l
@@ -2174,9 +2355,9 @@
               : async () => {
                   const e = new FormData();
                   e.append("sessionid", p.TS.SESSIONID),
-                    e.append("publisherid", "" + i),
+                    e.append("publisherid", "" + r),
                     e.append("subject", a),
-                    e.append("message", r);
+                    e.append("message", i);
                   const t = `${p.TS.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
                     n = await y().post(t, e);
                   200 == n?.status && 1 == n.data?.success
@@ -2188,7 +2369,7 @@
                       );
                 },
             strOKButtonText: l ? "Close" : "Send Message",
-            bOKDisabled: 0 == r.trim().length,
+            bOKDisabled: 0 == i.trim().length,
             onCancel: t,
             className: s().ContactTaxIdentityDialog,
           },
@@ -2200,7 +2381,7 @@
                 cols: 80,
                 rows: 10,
                 onChange: (e) => o(e.currentTarget.value),
-                value: r,
+                value: i,
                 autoFocus: !0,
               }),
             n.createElement(
@@ -2215,10 +2396,10 @@
         const [t, a, o, l, d] = P(),
           [h, f] = (function () {
             const [e] = (0, n.useState)(
-                (0, i.Tc)("testpage", "application_config"),
+                (0, r.Tc)("testpage", "application_config"),
               ),
               [t] = (0, n.useState)(
-                (0, i.Tc)("testtemplate", "application_config"),
+                (0, r.Tc)("testtemplate", "application_config"),
               );
             return [e, t];
           })(),
@@ -2258,7 +2439,7 @@
               ? JSON.parse(y[0]?.data.description_jsondata)?.Subject
               : "");
         return n.createElement(
-          r.tH,
+          i.tH,
           null,
           n.createElement(
             "div",
@@ -2351,7 +2532,7 @@
                         onClick: (e) =>
                           (0, C.pg)(
                             n.createElement(A, { subject: E, publisherid: l }),
-                            (0, I.uX)(e),
+                            (0, x.uX)(e),
                           ),
                         className: s().NotificationButton,
                       },
@@ -2366,8 +2547,8 @@
       }
       function q(e) {
         const { strTemplate: t } = e,
-          [a, i] = n.useState(t || "Renewal-W8-Initial"),
-          [r, o] = n.useState(!0),
+          [a, r] = n.useState(t || "Renewal-W8-Initial"),
+          [i, o] = n.useState(!0),
           s = R.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
@@ -2386,13 +2567,13 @@
                 rgOptions: s,
                 selectedOption: a,
                 onChange: (e) => {
-                  i(e.data);
+                  r(e.data);
                 },
               }),
               n.createElement(u.Yh, {
-                checked: r,
+                checked: i,
                 style: { marginLeft: "10px", marginRight: "10px" },
-                onClick: () => o(!r),
+                onClick: () => o(!i),
               }),
               n.createElement(
                 "div",
@@ -2405,7 +2586,7 @@
               requirement: {
                 deadline: c,
                 index: 0,
-                onboarded: r,
+                onboarded: i,
                 bTestDisplay: !0,
               },
             }),
@@ -2415,8 +2596,8 @@
       function D(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, i] = P(),
-          r = new Date(a?.CreatedOn);
+          [, r] = P(),
+          i = new Date(a?.CreatedOn);
         if ("ActionComplete" == a.TemplateName) return null;
         if (!B[a.TemplateName])
           return n.createElement(
@@ -2425,7 +2606,7 @@
             n.createElement(
               "div",
               { className: s().MessageDate },
-              (0, d.$z)(r.getTime() / 1e3),
+              (0, d.$z)(i.getTime() / 1e3),
             ),
             n.createElement("div", null, "Message Not Available"),
           );
@@ -2436,7 +2617,7 @@
           n.createElement(
             "div",
             { className: s().MessageDate },
-            (0, d.$z)(r.getTime() / 1e3),
+            (0, d.$z)(i.getTime() / 1e3),
           ),
           n.createElement(o, { requirement: t }),
         );
@@ -2455,16 +2636,16 @@
         zX: () => p,
       });
       var n = a(41735),
-        i = a.n(n),
-        r = a(90626),
+        r = a.n(n),
+        i = a(90626),
         o = a(73745),
         s = a(82097);
       function l(e, t, a, n) {
-        const l = (0, r.useRef)(),
-          c = (0, r.useRef)(void 0),
+        const l = (0, i.useRef)(),
+          c = (0, i.useRef)(void 0),
           d = (0, o.CH)();
         l.current = e;
-        const [m, u] = (0, r.useState)(void 0),
+        const [m, u] = (0, i.useState)(void 0),
           {
             include_assets: h,
             include_release: p,
@@ -2480,11 +2661,11 @@
             include_full_description: _,
             include_included_items: T,
             include_assets_without_overrides: C,
-            apply_user_filters: I,
-            include_links: x,
+            apply_user_filters: x,
+            include_links: I,
           } = a;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             const a = {
               include_assets: h,
               include_release: p,
@@ -2500,25 +2681,25 @@
               include_full_description: _,
               include_included_items: T,
               include_assets_without_overrides: C,
-              apply_user_filters: I,
-              include_links: x,
+              apply_user_filters: x,
+              include_links: I,
             };
-            let r = null;
+            let i = null;
             return (
               !e ||
                 e < 0 ||
                 s.A.Get().BHasStoreItem(e, t, a) ||
                 (void 0 !== m && n && n == c.current) ||
                 (n !== c.current && (u(void 0), (c.current = n)),
-                (r = i().CancelToken.source()),
+                (i = r().CancelToken.source()),
                 s.A.Get()
                   .QueueStoreItemRequest(e, t, a)
                   .then((t) => {
-                    r?.token.reason || l.current !== e || u(1 == t), d();
+                    i?.token.reason || l.current !== e || u(1 == t), d();
                   })),
-              () => r?.cancel("useStoreItemCache: unmounting")
+              () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, w, _, T, C, I, x, d]),
+          }, [e, t, n, m, h, p, f, y, v, E, g, S, N, b, w, _, T, C, x, I, d]),
           !e)
         )
           return [null, 2];
@@ -2538,14 +2719,14 @@
         return l(e, 1, t, a);
       }
       function u(e, t, a) {
-        const [n, i] = l(e, t, a);
-        let r;
+        const [n, r] = l(e, t, a);
+        let i;
         1 != n?.GetStoreItemType() ||
           n.GetAssets()?.GetHeaderURL() ||
           1 != n?.GetIncludedAppIDs().length ||
-          (r = n.GetIncludedAppIDs()[0]);
-        const [o, s] = c(r, a);
-        return r && o?.BIsVisible() ? [o, s] : [n, i];
+          (i = n.GetIncludedAppIDs()[0]);
+        const [o, s] = c(i, a);
+        return i && o?.BIsVisible() ? [o, s] : [n, r];
       }
       function h(e, t, a, n) {
         const l = (0, o.CH)(),
@@ -2568,7 +2749,7 @@
             include_links: _,
           } = a;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const a = {
                 include_assets: c,
@@ -2596,13 +2777,13 @@
                   ),
               );
             if (0 == n.length) return;
-            const r = i().CancelToken.source(),
+            const i = r().CancelToken.source(),
               o = n.map((e) => s.A.Get().QueueStoreItemRequest(e, t, a));
             return (
               Promise.all(o).then(() => {
-                r.token.reason || l();
+                i.token.reason || l();
               }),
-              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
           }, [e, t, n, l, c, d, m, u, h, p, f, y, v, E, g, S, N, b, w, _]),
           !e)
@@ -2636,10 +2817,10 @@
       "use strict";
       a.d(t, { H: () => o });
       var n = a(41735),
-        i = a.n(n),
-        r = a(56545);
+        r = a.n(n),
+        i = a(56545);
       function o(e) {
-        if (i().isCancel(e))
+        if (r().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -2692,7 +2873,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof r.w)
+            if ("object" == typeof e && e instanceof i.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),

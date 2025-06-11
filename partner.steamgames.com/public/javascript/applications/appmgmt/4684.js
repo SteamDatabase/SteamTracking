@@ -1034,7 +1034,12 @@
                 Q(76, e.bAccessibilityMouseOnlyOption),
                 Q(77, e.bAccessibilityTouchOnlyOption),
                 Q(78, e.bAccessibilityDifficultyLevels),
-                Q(79, e.bAccessibilitySaveAnytime);
+                Q(79, e.bAccessibilitySaveAnytime),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true");
               const t = document.getElementById("submitBtn");
               t && t.click();
             })(_),

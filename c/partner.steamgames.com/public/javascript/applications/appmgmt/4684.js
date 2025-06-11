@@ -1141,7 +1141,12 @@
                 _(76, _.bAccessibilityMouseOnlyOption),
                 _(77, _.bAccessibilityTouchOnlyOption),
                 _(78, _.bAccessibilityDifficultyLevels),
-                _(79, _.bAccessibilitySaveAnytime);
+                _(79, _.bAccessibilitySaveAnytime),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true");
               const _ = document.getElementById("submitBtn");
               _ && _.click();
             })(_),
