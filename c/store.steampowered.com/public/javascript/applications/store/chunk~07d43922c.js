@@ -584,6 +584,7 @@
         ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
         SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
+        DisplayBorder: "_1LEcwJMAoZCV3ULGhU85sq",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
       };
@@ -6916,6 +6917,7 @@
                       trailer: _,
                       bPlayVideo: _,
                       fnTogglePlayTrailer: _,
+                      bControls: !0,
                     }),
               )
             : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
@@ -6981,6 +6983,8 @@
           [_, _] = _.useState(void 0),
           [_, _] = (0, _._)(),
           _ = (0, _._)(),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0),
           _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
@@ -6997,15 +7001,22 @@
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               }),
             ),
             _.push(
               _.createElement(_, {
                 key: "trail_inline",
+                ref: _,
                 name: __webpack_require__.GetName(),
                 trailer: _,
                 bUseMicroTrailer: !0,
+                bControls: !1,
                 bPlayVideo: !0,
+                startTime: _,
                 fnTogglePlayTrailer: () => {},
               }),
             ));
@@ -7079,65 +7090,85 @@
           )
         );
       }
-      function _(_) {
-        const {
+      const _ = (0, _.forwardRef)(
+        (
+          {
             name: _,
-            trailer: __webpack_require__,
+            trailer: _,
+            bControls: __webpack_require__,
             bPlayVideo: _,
             fnTogglePlayTrailer: _,
             bUseMicroTrailer: _,
-          } = _,
-          _ = (0, _._)();
-        let _ = __webpack_require__.GetTrailerMax();
-        return (
-          _
-            ? (_ = __webpack_require__.GetMicroTrailer())
-            : _ && (_ = __webpack_require__.GetTrailer480p()),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().VideoLargeContainer]: !0,
-                [_().videoPlaying]: _,
-              }),
-              onClick: _,
-            },
-            _.createElement(_._, {
-              name: _,
-              trailerCategory: __webpack_require__.GetTrailerCategory(),
-              trailerDisplay: 1,
-              mouseOver: !1,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "video",
-                {
-                  className: _().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  loop: !0,
-                  poster: __webpack_require__.GetScreenshot(),
-                },
-                _.createElement("source", {
-                  src: _.strWebMURL,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: _.strMP4URL,
-                    type: "video/mp4",
-                  }),
-              ),
+            startTime: _,
+          },
+          _,
+        ) => {
+          const _ = (0, _._)();
+          let _ = _.GetTrailerMax();
+          return (
+            _ ? (_ = _.GetMicroTrailer()) : _ && (_ = _.GetTrailer480p()),
+            (0, _.useEffect)(() => {
+              const _ = _?.current;
+              if (_ > 0 && _) {
+                const _ = () => {
+                  _.currentTime = _;
+                };
+                return (
+                  _.addEventListener("loadedmetadata", _),
+                  () => {
+                    _.removeEventListener("loadedmetadata", _);
+                  }
+                );
+              }
+            }, [_, _]),
             _.createElement(
               "div",
               {
+                className: (0, _._)({
+                  [_().VideoLargeContainer]: !0,
+                  [_().videoPlaying]: _,
+                }),
                 onClick: _,
               },
-              _.createElement(_.sED, null),
-            ),
-          )
-        );
-      }
+              _.createElement(_._, {
+                name: _,
+                trailerCategory: _.GetTrailerCategory(),
+                trailerDisplay: 1,
+                mouseOver: !1,
+              }),
+              Boolean(_) &&
+                _.createElement(
+                  "video",
+                  {
+                    className: _().VideoLarge,
+                    ref: _,
+                    controls: __webpack_require__,
+                    autoPlay: !0,
+                    loop: !0,
+                    poster: _ > 0 ? void 0 : _.GetScreenshot(),
+                  },
+                  _.createElement("source", {
+                    src: _.strWebMURL,
+                    type: "video/webm",
+                  }),
+                  Boolean(!_._.IN_CLIENT) &&
+                    _.createElement("source", {
+                      src: _.strMP4URL,
+                      type: "video/mp4",
+                    }),
+                ),
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                  },
+                  _.createElement(_.sED, null),
+                ),
+            )
+          );
+        },
+      );
       function _(_, _) {
         const _ = _.replace(/\.[^\.]+$/g, "");
         return _ + _ + _.slice(_.length);
@@ -7204,6 +7235,7 @@
           fnTogglePlayTrailer: __webpack_require__,
           bPlayVideo: _,
           onMouseEnter: _,
+          onMouseLeave: _,
         } = _;
         return _.createElement(
           "div",
@@ -7215,6 +7247,7 @@
             }),
             onClick: __webpack_require__,
             onMouseEnter: _,
+            onMouseLeave: _,
           },
           _.createElement("img", {
             src: _.GetScreenshot(),
@@ -7284,6 +7317,7 @@
           ),
         );
       }
+      _.displayName = "InlineTrailer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -18199,11 +18233,18 @@
                 [_().CarouselDisplay]: _.show_as_carousel,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_().Blur]: "coverBlur" == _.background_repeat,
               }),
               rootMargin: _._,
-              style: (0, _._)(_, _, _),
               onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
             },
+            _.createElement("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
             _.createElement(
               "div",
               {
@@ -19488,33 +19529,39 @@
           )
         );
       }
-      function _(_, _, _) {
-        if (
-          (_.country_allow_list &&
-            _.country_allow_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) < 0) ||
-          (_.country_deny_list &&
-            _.country_deny_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) >= 0)
-        )
-          return !1;
-        if (_.package_allow_list?.length > 0) {
-          if (
-            !_.package_allow_list.some((_) =>
-              __webpack_require__.BOwnsPackage(_),
-            )
-          )
-            return !1;
-        }
-        return !(
-          _._.BFilterRequiresFeatureAdultOnly(_) &&
-          (!_._.logged_in ||
-            (0, _._)() ||
-            _ ||
-            __webpack_require__.BExcludesContentDescriptor([3]))
+      function _(_, _, _, _) {
+        const _ = (0, _._)(() =>
+          _?.filter((_) =>
+            (function (_, _, _, _) {
+              if (_.hide) return !1;
+              if (_) return !0;
+              if (
+                (_.country_allow_list &&
+                  _.country_allow_list
+                    .toLowerCase()
+                    .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                (_.country_deny_list &&
+                  _.country_deny_list
+                    .toLowerCase()
+                    .indexOf(_._.country_code.toLowerCase()) >= 0)
+              )
+                return !1;
+              if (
+                _.package_allow_list?.length > 0 &&
+                !_.package_allow_list.some((_) => _.BOwnsPackage(_))
+              )
+                return !1;
+              return !(
+                _._.BFilterRequiresFeatureAdultOnly(_) &&
+                (!_._.logged_in ||
+                  (0, _._)() ||
+                  _ ||
+                  _.BExcludesContentDescriptor([3]))
+              );
+            })(_, _, _, _),
+          ),
         );
+        return _;
       }
       function _(_) {
         const {
@@ -19526,11 +19573,7 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _._)(),
-          _ = (0, _._)(() => _.tabs),
-          _ = _.useMemo(
-            () => (_ ? _ : _?.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          ),
+          _ = _(_.tabs, _, _, _),
           _ = (0, _._)(),
           _ = _.useRef();
         _.useEffect(() => {
@@ -19629,18 +19672,9 @@
             bIsPreview: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)();
-        let _ = (function (_) {
-          for (const _ of _.GetSaleSections())
-            if ("tabs" === _.section_type) return _;
-          return null;
-        })(_);
-        const _ = (0, _._)(() => _?.tabs),
-          _ = _.useMemo(
-            () => (_ ? _ : _?.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          );
-        if (!_ || !_.tabs || 0 === _.tabs.length) return null;
+          [_, _] = (0, _._)(),
+          _ = _(_?.tabs, _, _, _);
+        if (!_ || 0 === _.length) return null;
         const _ = _.map((_) => {
           const _ = __webpack_require__?.GetActiveTabUniqueID() === _.unique_id;
           if (_ && _) return null;
@@ -25117,17 +25151,11 @@
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          [_, _, _] = (0, _._)(() => [
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0,
+          [_, _] = (0, _._)(() => [
             Boolean(__webpack_require__.quiz?.display_border),
             __webpack_require__.quiz?.border_color,
           ]),
-          _ = (0, _._)(() => __webpack_require__.quiz.questions),
+          _ = (0, _._)(() => __webpack_require__.quiz.questions || []),
           [_] = (0, _._)(() => [
             __webpack_require__.quiz?.template_faq_display ||
               _._.TemplateFAQDisplaySimpleRow,
@@ -25910,6 +25938,7 @@
               background:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
+              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
               outlineWidth: _.border_width ? `${_.border_width}px` : void 0,

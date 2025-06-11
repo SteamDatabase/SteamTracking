@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "뉴스 및 업데이트",
 	"Menu_Popover_Preferences": "환경 설정",
 	"Menu_Popover_Browse": "검색",
+	"Menu_Popover_Top": "인기",
 	"Menu_Popover_Recommendations": "추천 제품",
 	"Menu_Popover_Categories": "카테고리",
 	"Menu_Popover_Hardware": "하드웨어",
@@ -44,9 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "찜 목록 게임",
 	"Menu_Section_Browse_DLCForYou": "추천 DLC",
 	"Menu_Section_Browse_ForYou": "추천 게임",
+	"Menu_Section_Browse_PopularNew": "주목받는 신규 게임",
+	"Menu_Section_Browse_FreeToPlay": "무료 플레이",
 	"Menu_Section_Browse_TopFreeToPlay": "인기 무료 플레이 게임",
 	"Menu_Section_Browse_Discounts": "할인",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "찜 목록에 있는 게임",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "특별 이벤트",
+	"Menu_Section_Browse_Discounts_PopularTitles": "인기 게임",
 	"Menu_Section_Recommendations": "추천",
 	"Menu_Section_Recommendations_NewReleasesQueue": "신규 출시 게임 대기열",
 	"Menu_Section_Recommendations_CommunityRecommendations": "커뮤니티 추천",
@@ -77,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "인기 게임",
 	"Menu_SearchBar_SearchResults": "검색 결과",
 	"Menu_SearchBar_YourTopGenres": "주로 플레이하는 장르",
-	"Menu_SearchBar_BrowseBy": "검색 기준..."
+	"Menu_SearchBar_BrowseBy": "검색 기준...",
+	"Menu_Search": "검색",
+	"Menu_Label": "상점 메뉴"
 }`);
     },
   },

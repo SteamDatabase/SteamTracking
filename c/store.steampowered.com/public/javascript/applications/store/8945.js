@@ -45,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Dans votre liste de souhaits",
 	"Menu_Section_Browse_DLCForYou": "DLC pour vos jeux",
 	"Menu_Section_Browse_ForYou": "Pour vous",
+	"Menu_Section_Browse_PopularNew": "Nouveaux et populaires",
+	"Menu_Section_Browse_FreeToPlay": "Free-to-play",
+	"Menu_Section_Browse_TopFreeToPlay": "Jeux free-to-play les plus populaires",
+	"Menu_Section_Browse_Discounts": "Remises",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Dans votre liste de souhaits",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Évènements spéciaux",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Titres populaires",
 	"Menu_Section_Recommendations": "Recommandations",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Liste des nouveautés",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Recommandations de la communauté",
@@ -75,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Articles populaires",
 	"Menu_SearchBar_SearchResults": "Résultats de la recherche",
 	"Menu_SearchBar_YourTopGenres": "Vos genres préférés",
-	"Menu_SearchBar_BrowseBy": "Parcourir par ..."
+	"Menu_SearchBar_BrowseBy": "Parcourir par ...",
+	"Menu_Search": "Rechercher",
+	"Menu_Label": "Menu du magasin"
 }`);
     },
   },

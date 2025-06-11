@@ -217,7 +217,7 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
-/* 
+/*
  *		Inventory
  */
 var g_ActiveInventory = null;
@@ -335,21 +335,21 @@ var CInventory = Class.create( {
 	elTagContainer: null,
 
 	initialized: false,
-	
+
 	cItemsPerPage: 0,
 	cPageWidth: 0,
 
 	pageCurrent: 0,
 	pageList: null,
 	pageTotal: 0,
-	
+
 	selectedItem: null,
 
 	bInPagingTransition: false,
 
 	bNeedsRepagination: true,
 	m_rgLazyLoadImages: null,
-	
+
 	initialize: function( owner, appid, contextid, rgInventory, rgCurrency )
 	{
 		this.owner = owner;
@@ -959,7 +959,7 @@ var CInventory = Class.create( {
 		if ( rgItem.fraudwarnings )
 		{
 			var elFraudWarningIcon = new Element( 'div', {'class': 'slot_app_fraudwarning' } );
-			elItem.appendChild( elFraudWarningIcon );			
+			elItem.appendChild( elFraudWarningIcon );
 		}
 
 		return elItem;
@@ -2374,6 +2374,7 @@ function SelectInventoryFromUser( user, appid, contextid, bForceSelect )
 		inventory.Initialize();
 	}
 
+	
 	inventory.MakeActive();
 
 	return true;
@@ -2595,7 +2596,7 @@ function BuildHover( prefix, item, owner )
 			elFraudWarnings.hide();
 		}
 	}
-	
+
 	if ( item.appid && g_rgAppContextData[item.appid] )
 	{
 		var rgAppData = g_rgAppContextData[item.appid];
@@ -2671,7 +2672,7 @@ function BuildHover( prefix, item, owner )
 		PopulateMarketActions( elMarketActions, item );
 	}
 
-		
+	
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
 }
@@ -2696,7 +2697,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 			var date = new Date( p1 * 1000 );
 			return date.toLocaleString();
 		}) );
-		
+
 		var elDescription = new Element( 'div', {'class': 'descriptor' } );
 		if ( description.color )
 			elDescription.style.color = '#' + description.color;
@@ -2981,7 +2982,7 @@ function PopulateMarketActions( elActions, item )
 		return;
 	}
 	
-		
+	
 	elActions.show();
 }
 
@@ -3062,7 +3063,7 @@ MessageDialog = {
 
 	OnAccept: function( event ) {
 		event.stop();
-		this.Dismiss(); 
+		this.Dismiss();
 	}
 };
 
@@ -3286,7 +3287,7 @@ SellItemDialog = {
 			$J('#pricehistory').show();
 
 			var line1 = transport.responseJSON.prices;
-			
+
 			this.m_timePriceHistoryEarliest = new Date();
 			if ( line1 != false )
 			{
@@ -3499,7 +3500,7 @@ SellItemDialog = {
 			event.stop();
 			return;
 		}
-		
+
 		this.m_bWaitingForUserToConfirm = false;
 
 		// reverse the effects
@@ -3646,7 +3647,7 @@ SellItemDialog = {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
 		var quantity = this.GetQuantityAsInt();
-		
+
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			// Calculate what the buyer pays
@@ -3700,9 +3701,9 @@ function ShowHover( elem, item )
 		BuildHover( 'hover', item );
 		hover.target = elem;
 	}
-	
+
 	var divHoverContents = hover.down( '.hover_box' );
-	
+
 	hover.style.visibility = 'hidden';
 	hover.show();
 
@@ -3766,10 +3767,10 @@ function ShowHover( elem, item )
 function HideHover()
 {
 	var hover = $('hover');
-	
+
 	if ( !hover.visible() || !hover.target )
 		return;
-	
+
 	hover.target.removeClassName('hover');
 
 	HideWithFade( hover );
@@ -4128,7 +4129,7 @@ function CreateItemHoverFromContainer( container, id, appid, contextid, assetid,
 	var element = $(id);
 	if ( element == null )
 		return;
-	
+
 	var rgItem = container[appid][contextid][assetid];
 	if ( !rgItem )
 		return;

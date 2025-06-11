@@ -82,6 +82,9 @@ function StandardCallback( results, elementName )
 		// set style based on returned success code
 		elt.className = results[ 'success' ] ? "outputSuccess" : "outputFailure";
 
+		if ( !results[ 'success' ] )
+			document.getElementById(elementName).scrollIntoView();
+
 		ShowUnpublishedChangesWarningIfNeeded();
 
 		return true;
@@ -3719,27 +3722,49 @@ function SetToolFreeToDownload( appid, bAdd )
 	});
 }
 
+// Helper for passing around CreateNewAppHelper options
+class CAppCreationOptions
+{
+	m_bF2P = false;
+	m_bF2PText = false;
+	m_bAddPartnerAppReporting = false;
+	m_bStandaloneDemoStorePage = false;
+	m_bCDKeyBeta = false;
+}
+
 function CreateDemo( parentId, demoName, bStandaloneDemoStorePage )
 {
-	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true, undefined, bStandaloneDemoStorePage );
+	const appOptions = new CAppCreationOptions();
+	appOptions.m_bAddPartnerAppReporting = true;
+	appOptions.m_bStandaloneDemoStorePage = bStandaloneDemoStorePage;
+	CreateNewAppHelper( 0, parentId, demoName, 'Demo', 10, appOptions );
 }
 
 function CreateTool( parentId, strName )
 {
-	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, undefined, false );
+	const appOptions = new CAppCreationOptions();
+	appOptions.m_bAddPartnerAppReporting = true;
+	CreateNewAppHelper( 0, parentId, strName, 'Tool', 10, appOptions );
 }
 
-function CreateBetaApp( pubId, parentId, appName )
+function CreateBetaApp( pubId, parentId, appName, bCDKeyOnly )
 {
-	CreateNewAppHelper( pubId, parentId, appName, 'Beta', false, 10, true, undefined, false );
+	const appOptions = new CAppCreationOptions();
+	appOptions.m_bAddPartnerAppReporting = true;
+	appOptions.m_bCDKeyBeta = bCDKeyOnly;
+	CreateNewAppHelper( pubId, parentId, appName, 'Beta', 10, appOptions );
 }
 
 function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
 {
-	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText, false );
+	const appOptions = new CAppCreationOptions();
+	appOptions.m_bF2P = bF2P;
+	appOptions.m_bAddPartnerAppReporting = bAddPartnerAppReporting;
+	appOptions.m_bF2PText = bF2PText;
+	CreateNewAppHelper( pubId, 0, appName, appType, reservedRange, appOptions );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText, bStandaloneDemoStorePage )
+function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, appOptions /* CAppCreationOptions */ )
 {
 	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
 	progressDialog.done( function() { top.location.reload(); } );
@@ -3753,13 +3778,14 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'name' : appName,
 			'type' : appType,
 			'range' : reservedRange,
-			'add_partner_app_reporting' : bAddPartnerAppReporting ? 1 : 0,
+			'add_partner_app_reporting' : appOptions.m_bAddPartnerAppReporting ? 1 : 0,
 			'publisherid' : pubId,
 			'parentid' : parentId,
-			'f2p' : bF2P ? 1 : 0,
-			'f2ptext' : bF2PText,
+			'f2p' : appOptions.m_bF2P ? 1 : 0,
+			'f2ptext' : appOptions.m_bF2PText,
 			'sessionid' : g_sessionID,
-			'standalonestore' : bStandaloneDemoStorePage ? true : undefined
+			'standalonestore' : appOptions.m_bStandaloneDemoStorePage ? true : undefined,
+			'cdkeybeta' : appOptions.m_bCDKeyBeta ? 1 : 0
 		}
 	).done(
 		function( response ) {

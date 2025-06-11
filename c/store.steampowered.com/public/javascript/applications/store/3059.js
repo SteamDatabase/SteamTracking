@@ -82,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Artículos populares",
 	"Menu_SearchBar_SearchResults": "Resultados de la búsqueda",
 	"Menu_SearchBar_YourTopGenres": "Tus géneros favoritos",
-	"Menu_SearchBar_BrowseBy": "Explorar según..."
+	"Menu_SearchBar_BrowseBy": "Explorar según...",
+	"Menu_Search": "Búsqueda",
+	"Menu_Label": "Menú de la tienda"
 }`);
     },
   },

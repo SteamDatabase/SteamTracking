@@ -85,7 +85,7 @@ function BeginTrading( bShowTutorial )
 		appid = force_appid[ 'appid' ];
 		contextid = force_appid[ 'contextid' ];
 	}
-	
+
 	// Otherwise default to the last used inventory
 	if ( appid == 0 ) {
 		var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
@@ -659,7 +659,7 @@ function OnDropItemInInventory( elItem, elTarget, event )
 function ShowStackableItemDialog( elItem )
 {
 	var currency = elItem.rgItem;
-	
+
 	if ( currency.parent_item )
 		return;
 
@@ -699,6 +699,7 @@ function FindSlotAndSetItem( item, xferAmount )
 		}
 	}
 
+	
 	var iSlot = 0;
 
 	// find a slot to drop this item in
@@ -742,7 +743,7 @@ function MoveItemToInventory( elItem )
 	}
 
 	RevertItem( item );
-	
+
 	item.homeElement.down('.slot_actionmenu_button').show();
 
 	GTradeStateManager.RemoveItemFromTrade( item );
@@ -935,7 +936,7 @@ function CreateSlotElement( id )
 	elActionMenuButton.style.display = 'none';
 	elActionMenuButton.href = "javascript:void(0)";
 	elSlot.appendChild( elActionMenuButton );
-	
+
 	var elFraudWarningIcon = new Element( 'div', {'class': 'slot_app_fraudwarning' } );
 	elFraudWarningIcon.style.display = 'none';
 	elSlot.appendChild( elFraudWarningIcon );
@@ -1245,7 +1246,7 @@ function OnTradeStatusUpdate( transport )
 function OnTradeStatusFailure()
 {
 	g_bPollInFlight = false;
-	
+
 	if ( g_cTradePollFailures++ > 3 )
 	{
 		StopWatchingForUnload();
@@ -1310,6 +1311,7 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 
 		UpdateSlots( rgTradeStatusForSlots.them.assets, rgTradeStatusForSlots.them.currency, false, UserThem, rgTradeStatusForSlots.version );
 
+		
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 
@@ -1983,14 +1985,14 @@ function ToggleReady( bReady )
 			if ( g_bTradeOffer && GTradeStateManager.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW )
 			{
 				strTitle =  'Warning';
-				strWarning = 'You have not selected any items for %s to offer in exchange for yours.  If %s accepts this trade, you will lose the items you\'ve offered but will not receive any items.';
+				strWarning = 'You have not selected any items in exchange for yours.';
 			}
 			else
 			{
 				strWarning = '%s has not offered any items in the trade.  When this trade is completed, you will not receive anything.  If %s has promised you Steam Wallet funds, CD-Keys, or other items outside the trade window, they may be attempting to scam you.';
 			}
 
-			strWarning += '<br><br>' + 'Please confirm that you are giving your items away, and expect nothing in return.';
+			strWarning += '<br><br>' + 'Please confirm that you are giving your items away and expect nothing in return.';
 			strButton = 'Yes, this is a gift';
 		}
 		else
@@ -2192,7 +2194,7 @@ function UpdateCurrencyDisplay( currency )
 			var bShouldConvert = typeof(g_rgWalletInfo) != 'undefined' &&
 					g_rgWalletInfo['wallet_currency'] != g_rgWalletInfo['wallet_other_currency'] &&
 					g_rgWalletInfo['wallet_currency'] != ( currency.id % 1000 );
-			
+
 			var strAmount = ( currency.owner != UserYou && bShouldConvert ?
 					v_currencyformat( ConvertToOurCurrencyForDisplay( currency.amount ), GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) :
 					v_currencyformat( currency.amount, currency.name.escapeHTML() ) );
@@ -2454,7 +2456,7 @@ CurrencyDialog = {
 };
 
 WarningDialog = {
-	
+
 	m_bInitialized: false,
 	m_fnDocumentKeyHandler: null,
 
@@ -2482,7 +2484,7 @@ WarningDialog = {
 	},
 
 	OnAccept: function( event ) {
-		
+
 		this.Dismiss();
 		event.stop();
 	},
@@ -2550,7 +2552,7 @@ CurrencyConversionDialog = {
 		$('trade_currency_dialog_conversion_remaining').style.color = currency.name_color ? '#' + currency.name_color : '';
 		$('trade_currency_dialog_conversion_currencyname1').style.color = currency.name_color ? '#' + currency.name_color : '';
 		$('trade_currency_dialog_conversion_currencyname2').style.color = currency.name_color ? '#' + currency.name_color : '';
-		
+
 		$('trade_currency_dialog_conversion_currencyname1').update( currency.name.escapeHTML() );
 		$('trade_currency_dialog_conversion_username1').update( g_strTradePartnerPersonaName );
 		$('trade_currency_dialog_conversion_currencyname2').update( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
@@ -2968,7 +2970,7 @@ function TransferFocusToChat( event )
 	// try not to catch any browser shortcuts
 	if ( event.altKey || event.ctrlKey || event.metaKey )
 		return;
-	
+
 	var c=null;
 	if ( event.charCode )
 		c = event.charCode;

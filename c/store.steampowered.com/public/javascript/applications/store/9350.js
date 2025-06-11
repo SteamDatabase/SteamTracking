@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Știri și actualizări",
 	"Menu_Popover_Preferences": "Preferințe",
 	"Menu_Popover_Browse": "Navighează",
+	"Menu_Popover_Top": "Populare",
 	"Menu_Popover_Recommendations": "Recomandări",
 	"Menu_Popover_Categories": "Categorii",
 	"Menu_Popover_Hardware": "Hardware",
@@ -46,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "Pentru tine",
 	"Menu_Section_Browse_PopularNew": "Noi și populare",
 	"Menu_Section_Browse_FreeToPlay": "Gratuite",
+	"Menu_Section_Browse_TopFreeToPlay": "Jocuri gratuite populare",
 	"Menu_Section_Browse_Discounts": "Reduceri",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "În lista ta de dorințe",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Evenimente speciale",
@@ -80,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Articole populare",
 	"Menu_SearchBar_SearchResults": "Rezultatele căutării",
 	"Menu_SearchBar_YourTopGenres": "Genurile tale preferate",
-	"Menu_SearchBar_BrowseBy": "Caută după..."
+	"Menu_SearchBar_BrowseBy": "Caută după...",
+	"Menu_Search": "Căutare",
+	"Menu_Label": "Meniul de magazin"
 }`);
     },
   },

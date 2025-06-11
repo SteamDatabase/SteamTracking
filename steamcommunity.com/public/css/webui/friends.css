@@ -46,6 +46,7 @@
   backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
+  align-items: center;
 }
 .shared_svg_library_SteamDeckCompatLogo_1dzQL {
   width: 20px;
@@ -1950,7 +1951,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
 .partnereventshared_FlexRowContainer_Ke5f1 {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  column-gap: 8px;
 }
 .partnereventshared_FlexRowContainer_Ke5f1.partnereventshared_Centered_qy-9m {
   justify-content: center;
@@ -1958,9 +1959,6 @@ dialog.modals_ModalDialog_32QRv::backdrop {
 .partnereventshared_FlexContainSpaceBetween_3nPGW {
   justify-content: space-between;
   position: absolute;
-}
-.partnereventshared_FlexRowContainer_Ke5f1 > div:not(:first-child) {
-  margin-left: 8px;
 }
 .partnereventshared_FlexRowWrapSpaceBetweenContainer_19CjI {
   display: flex;
@@ -2536,7 +2534,29 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+.partnereventshared_BackgroundImage_2wlqO {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.partnereventshared_BackgroundImage_2wlqO.partnereventshared_Blur_1rJkk {
+  opacity: 0.7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.partnereventshared_BackgroundImage_2wlqO.partnereventshared_Blur_1rJkk::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(30px);
+}
 .partnereventshared_SaleSectionHeader_2WMiQ {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

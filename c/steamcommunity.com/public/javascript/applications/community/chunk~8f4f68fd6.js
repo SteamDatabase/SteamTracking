@@ -1597,16 +1597,6 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  contextid: {
-                    _: 33,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  assetid: {
-                    _: 34,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                 },
               }),
             _.sm_m
@@ -2620,7 +2610,7 @@
       function _(_) {
         return !!_(_);
       }
-      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
+      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function _(_) {
         return null != _.findIndex((_) => _ == _);
       }
@@ -3512,6 +3502,10 @@
         28: {
           rollup_field: "playtest_invites",
           eFeature: 1,
+        },
+        29: {
+          rollup_field: void 0,
+          eFeature: 6,
         },
       };
       function _(_) {
@@ -4931,350 +4925,6 @@
           [_, _]
         );
       }
-      const _ = {
-        chunkid: function (module) {
-          var _, _, _;
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = _(_),
-            _ = (0, _._)(),
-            _ = _._.COMMUNITY_BASE_URL + _.url,
-            _ = (0, _._)(_)
-              ? null === (_ = null == _ ? void 0 : _.account_steam_id) ||
-                void 0 === _
-                ? void 0
-                : _.GetAccountID()
-              : null,
-            { data: _ } = (0, _._)(_),
-            _ = (0, _._)(_)
-              ? null === (_ = null == _ ? void 0 : _.owner_steam_id) ||
-                void 0 === _
-                ? void 0
-                : __webpack_require__.GetAccountID()
-              : null,
-            { data: _ } = (0, _._)(_),
-            [_] = (0, _._)(
-              null === (_ = _.json_data) || void 0 === _ ? void 0 : _.app_id,
-              {
-                include_assets: !0,
-              },
-            ),
-            [_, _] = _(),
-            _ = _
-              ? _.FilterText(_.account_steam_id.GetAccountID(), _.title)
-              : "",
-            _ = _
-              ? _.FilterText(_.account_steam_id.GetAccountID(), _.comment)
-              : "";
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => {
-                _(() => {}, _.item, _);
-              },
-            },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.MwB, null),
-              onActivate: () => _(() => window.location.assign(_), _.item),
-              location: _,
-              currentUserSteamID: _,
-              eUIMode: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              postedByAvatarURL: null == _ ? void 0 : _.avatar_url_medium,
-              postedByDisplayName: null == _ ? void 0 : _.m_strPlayerName,
-              ownerDisplayName: null == _ ? void 0 : _.m_strPlayerName,
-              bNewIndicator: (0, _._)(_.item),
-              app: _,
-              onHide: _,
-              commentTitle: _,
-              commentBody: _,
-              bLoading: !_,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = _(_),
-            [_] = (0, _._)(_.appid, {
-              include_assets: !0,
-            }),
-            [_, _] = (0, _.useState)(""),
-            _ = (0, _._)();
-          (0, _.useEffect)(() => {
-            var _;
-            if (
-              _.count > 1 &&
-              (null === (_ = _.appids) || void 0 === _ ? void 0 : _.length)
-            )
-              return _(
-                _._.STORE_BASE_URL +
-                  `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
-              );
-            if (_) return _(_.GetStorePageURL());
-            const _ = _.appid ? `?appid=${_.appid}` : "";
-            _(_._.STORE_BASE_URL + `wishlist/profiles/${_}/${_}#sort=discount`);
-          }, [_, _, _]);
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.ilR, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              app: _,
-              location: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              eUIMode: _,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = (0, _._)(),
-            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
-            _ = _(_),
-            { data: _ } = (0, _._)(_.requestorID);
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Gv$, null),
-              icon: _.createElement(_.sdo, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              requestorAvatarURL: null == _ ? void 0 : _.avatar_url_medium,
-              requestorName: null == _ ? void 0 : _.m_strPlayerName,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(_.item, _, _),
-            _ = _(_),
-            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory`;
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              icon: _.createElement(_.rI_, null),
-              fallbackLogo: _.createElement(_.Qte, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              itemState: _,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = (0, _._)(),
-            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory/#pending_gifts`,
-            _ = _(_),
-            _ = _._.InitFromAccountID(_),
-            { data: _ } = (0, _._)(_.GetAccountID());
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              logo: _.createElement(_.Qte, null),
-              icon: _.createElement(_._, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              senderName: null == _ ? void 0 : _.m_strPlayerName,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = (0, _._)(),
-            _ = _(_),
-            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
-            _ = _._.InitFromAccountID(_),
-            { data: _ } = (0, _._)(_.GetAccountID());
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              logo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.h20, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              displayName: null == _ ? void 0 : _.m_strPlayerName,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
-            _ = _(_),
-            [_] = (0, _._)(_.appid, {
-              include_assets: !0,
-            });
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              icon: _.createElement(_.Qte, null),
-              fallbackLogo: _.createElement(_.wC1, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              app: _,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-        chunkid: function (module) {
-          var _;
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = _(_),
-            { data: _ } = (0, _._)(_.responder_steamid),
-            _ = _.package_id > 0 ? _.package_id : _.bundle_id,
-            _ = _.package_id > 0 ? 1 : 2,
-            [_] = (0, _._)(_, _, {
-              include_basic_info: !0,
-              include_assets: !0,
-            }),
-            _ = _ ? `app/${_.GetAppID()}` : "",
-            _ = `${_._.STORE_BASE_URL}${_}`,
-            _ = !_ || !_,
-            _ = (0, _._)("#SteamNotifications_RequestedGameAddedTitle"),
-            _ = _
-              ? (0, _._)(
-                  "#SteamNotifications_RequestedGameAddedBody",
-                  null !== (_ = _.GetName()) && void 0 !== _ ? _ : "",
-                )
-              : "";
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => _(() => {}, __webpack_require__.item, _),
-            },
-            _.createElement(_, {
-              title: _,
-              body: _,
-              bDataLoading: _,
-              logoUrl: null == _ ? void 0 : _.avatar_url_medium,
-              icon: _.createElement(_.Qte, null),
-              onActivate: () =>
-                _(() => window.location.assign(_), __webpack_require__.item),
-              location: _,
-              eUIMode: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          );
-        },
-      };
       function _(_) {
         let _ = null;
         return (
@@ -5502,6 +5152,356 @@
               )
           : null;
       }
+      const _ = {
+        chunkid: function (module) {
+          var _, _, _;
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = _(_),
+            _ = (0, _._)(),
+            _ = _._.COMMUNITY_BASE_URL + _.url,
+            _ = (0, _._)(_)
+              ? null === (_ = null == _ ? void 0 : _.account_steam_id) ||
+                void 0 === _
+                ? void 0
+                : _.GetAccountID()
+              : null,
+            { data: _ } = (0, _._)(_),
+            _ = (0, _._)(_)
+              ? null === (_ = null == _ ? void 0 : _.owner_steam_id) ||
+                void 0 === _
+                ? void 0
+                : __webpack_require__.GetAccountID()
+              : null,
+            { data: _ } = (0, _._)(_),
+            [_] = (0, _._)(
+              null === (_ = _.json_data) || void 0 === _ ? void 0 : _.app_id,
+              {
+                include_assets: !0,
+              },
+            ),
+            [_, _] = _(),
+            _ = _
+              ? _.FilterText(_.account_steam_id.GetAccountID(), _.title)
+              : "",
+            _ = _
+              ? _.FilterText(_.account_steam_id.GetAccountID(), _.comment)
+              : "";
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => {
+                _(() => {}, _.item, _);
+              },
+            },
+            _.createElement(_, {
+              fallbackLogo: _.createElement(_.Qte, null),
+              icon: _.createElement(_.MwB, null),
+              onActivate: () => _(() => window.location.assign(_), _.item),
+              location: _,
+              currentUserSteamID: _,
+              eUIMode: _,
+              data: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              postedByAvatarURL: null == _ ? void 0 : _.avatar_url_medium,
+              postedByDisplayName: null == _ ? void 0 : _.m_strPlayerName,
+              ownerDisplayName: null == _ ? void 0 : _.m_strPlayerName,
+              bNewIndicator: (0, _._)(_.item),
+              app: _,
+              onHide: _,
+              commentTitle: _,
+              commentBody: _,
+              bLoading: !_,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = _(_),
+            [_] = (0, _._)(_.appid, {
+              include_assets: !0,
+            }),
+            [_, _] = (0, _.useState)(""),
+            _ = (0, _._)();
+          return (
+            (0, _.useEffect)(() => {
+              var _;
+              if (
+                _.count > 1 &&
+                (null === (_ = _.appids) || void 0 === _ ? void 0 : _.length)
+              )
+                return _(
+                  _._.STORE_BASE_URL +
+                    `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
+                );
+              if (_) return _(_.GetStorePageURL());
+              const _ = _.appid ? `?appid=${_.appid}` : "";
+              _(
+                _._.STORE_BASE_URL +
+                  `wishlist/profiles/${_}/${_}#sort=discount`,
+              );
+            }, [_, _, _]),
+            _.createElement(
+              "a",
+              {
+                href: _,
+                onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+              },
+              _.createElement(_, {
+                fallbackLogo: _.createElement(_.Qte, null),
+                icon: _.createElement(_.ilR, null),
+                onActivate: () =>
+                  __webpack_require__(() => window.location.assign(_), _.item),
+                app: _,
+                location: _,
+                data: _,
+                timestamp: _.timestamp,
+                nUnread: _.rgunread.length,
+                eUIMode: _,
+                bNewIndicator: (0, _._)(_.item),
+                onHide: _,
+              }),
+            )
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = (0, _._)(),
+            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
+            _ = _(_),
+            { data: _ } = (0, _._)(_.requestorID);
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              fallbackLogo: _.createElement(_.Gv$, null),
+              icon: _.createElement(_.sdo, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              data: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              requestorAvatarURL: null == _ ? void 0 : _.avatar_url_medium,
+              requestorName: null == _ ? void 0 : _.m_strPlayerName,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)(_.item, _, _),
+            _ = _(_),
+            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory`;
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              icon: _.createElement(_.rI_, null),
+              fallbackLogo: _.createElement(_.Qte, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              data: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              itemState: _,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = (0, _._)(),
+            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory/#pending_gifts`,
+            _ = _(_),
+            _ = _._.InitFromAccountID(_),
+            { data: _ } = (0, _._)(_.GetAccountID());
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              logo: _.createElement(_.Qte, null),
+              icon: _.createElement(_._, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              senderName: null == _ ? void 0 : _.m_strPlayerName,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = (0, _._)(),
+            _ = _(_),
+            _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
+            _ = _._.InitFromAccountID(_),
+            { data: _ } = (0, _._)(_.GetAccountID());
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              logo: _.createElement(_.Qte, null),
+              icon: _.createElement(_.h20, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              displayName: null == _ ? void 0 : _.m_strPlayerName,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
+            _ = _(_),
+            [_] = (0, _._)(_.appid, {
+              include_assets: !0,
+            });
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              icon: _.createElement(_.Qte, null),
+              fallbackLogo: _.createElement(_.wC1, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              data: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              app: _,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: function (module) {
+          var _;
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = _(_),
+            { data: _ } = (0, _._)(_.responder_steamid),
+            _ = _.package_id > 0 ? _.package_id : _.bundle_id,
+            _ = _.package_id > 0 ? 1 : 2,
+            [_] = (0, _._)(_, _, {
+              include_basic_info: !0,
+              include_assets: !0,
+            }),
+            _ = _ ? `app/${_.GetAppID()}` : "",
+            _ = `${_._.STORE_BASE_URL}${_}`,
+            _ = !_ || !_,
+            _ = (0, _._)("#SteamNotifications_RequestedGameAddedTitle"),
+            _ = _
+              ? (0, _._)(
+                  "#SteamNotifications_RequestedGameAddedBody",
+                  null !== (_ = _.GetName()) && void 0 !== _ ? _ : "",
+                )
+              : "";
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => _(() => {}, __webpack_require__.item, _),
+            },
+            _.createElement(_, {
+              title: _,
+              body: _,
+              bDataLoading: _,
+              logoUrl: null == _ ? void 0 : _.avatar_url_medium,
+              icon: _.createElement(_.Qte, null),
+              onActivate: () =>
+                _(() => window.location.assign(_), __webpack_require__.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
+        chunkid: () => null,
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

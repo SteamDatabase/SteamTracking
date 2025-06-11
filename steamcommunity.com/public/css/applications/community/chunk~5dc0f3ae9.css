@@ -1592,6 +1592,10 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 .axjdi0dhiB17GHjL5FRCr {
   container-type: inline-size;
 }
+.axjdi0dhiB17GHjL5FRCr ._3j4dI1yA7cRfCvK8h406OB {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 .axjdi0dhiB17GHjL5FRCr ._2s-O5T3qJJYR2AUq4b9jIN,
 .axjdi0dhiB17GHjL5FRCr ._3j4dI1yA7cRfCvK8h406OB {
   background-color: transparent;
@@ -5051,19 +5055,20 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   padding: 4px;
   height: fit-content;
 }
-._1HwWXjF06mJ9sG_9KXlgA- {
+._2artmqqQS2Rl8YMsi1nV-U ._1HwWXjF06mJ9sG_9KXlgA- {
+  padding: 5px 8px;
   background-color: #54a5d4;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1ch;
+  gap: 2px;
 }
-._1HwWXjF06mJ9sG_9KXlgA- svg {
+._2artmqqQS2Rl8YMsi1nV-U ._1HwWXjF06mJ9sG_9KXlgA- svg {
   width: 18px;
   height: 18px;
-  margin-left: -7px;
+  margin-left: -2px;
 }
 ._1a5djsChaeoZViyFSGNom5 {
   font-size: 12px;

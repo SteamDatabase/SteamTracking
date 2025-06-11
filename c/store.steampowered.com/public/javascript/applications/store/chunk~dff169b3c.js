@@ -1419,16 +1419,6 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  contextid: {
-                    _: 33,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  assetid: {
-                    _: 34,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                 },
               }),
             _.sm_m
@@ -2464,7 +2454,7 @@
       function _(_) {
         return !!_(_);
       }
-      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
+      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function _(_) {
         return null != _.findIndex((_) => _ == _);
       }
@@ -3256,6 +3246,10 @@
         28: {
           rollup_field: "playtest_invites",
           eFeature: 1,
+        },
+        29: {
+          rollup_field: void 0,
+          eFeature: 6,
         },
       };
       function _(_) {

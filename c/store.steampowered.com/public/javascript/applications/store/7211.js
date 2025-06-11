@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Νέα και ενημερώσεις",
 	"Menu_Popover_Preferences": "Προτιμήσεις",
 	"Menu_Popover_Browse": "Περιήγηση",
+	"Menu_Popover_Top": "Κορυφαία",
 	"Menu_Popover_Recommendations": "Προτάσεις",
 	"Menu_Popover_Categories": "Κατηγορίες",
 	"Menu_Popover_Hardware": "Υλισμικό",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Από τη Λίστα Επιθυμιών σας",
 	"Menu_Section_Browse_DLCForYou": "DLC για εσάς",
 	"Menu_Section_Browse_ForYou": "Για εσάς",
+	"Menu_Section_Browse_PopularNew": "Νέα και ανερχόμενα",
+	"Menu_Section_Browse_FreeToPlay": "Δωρεάν για παίξιμο",
+	"Menu_Section_Browse_TopFreeToPlay": "Κορυφαία δωρεάν παιχνίδια",
+	"Menu_Section_Browse_Discounts": "Εκπτώσεις",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Στη Λίστα Επιθυμιών σας",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Ειδικά συμβάντα",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Δημοφιλείς τίτλοι",
 	"Menu_Section_Recommendations": "Προτάσεις",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Σειρά νέων κυκλοφοριών",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Προτάσεις Κοινότητας",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Δημοφιλή αντικείμενα",
 	"Menu_SearchBar_SearchResults": "Αποτελέσματα αναζήτησης",
 	"Menu_SearchBar_YourTopGenres": "Τα κορυφαία είδη σας",
-	"Menu_SearchBar_BrowseBy": "Περιήγηση ανά…"
+	"Menu_SearchBar_BrowseBy": "Περιήγηση ανά…",
+	"Menu_Search": "Αναζήτηση",
+	"Menu_Label": "Μενού Καταστήματος"
 }`);
     },
   },

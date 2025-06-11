@@ -582,6 +582,7 @@
         ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
         SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
+        DisplayBorder: "_1LEcwJMAoZCV3ULGhU85sq",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
       };
@@ -2025,7 +2026,7 @@
         u = a(99032),
         d = a(62490),
         _ = a(68797),
-        p = (a(6144), a(73745), a(78327)),
+        p = (a(6144), a(84933), a(78327)),
         g = a(36837);
       function h(e, t, a, n) {
         let r = e;
@@ -2635,7 +2636,7 @@
         _ = a(62490),
         p = a(44332),
         g = a(68797),
-        h = a(73745),
+        h = a(84933),
         S = a(78327);
       function f(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
@@ -2908,7 +2909,7 @@
         i = a(90626),
         o = a(68797),
         l = a(6144),
-        c = a(73745),
+        c = a(84933),
         m = a(78327);
       class u {
         m_library;
@@ -3077,7 +3078,7 @@
         c = a(72034),
         m = a(62490),
         u = a(6144),
-        d = a(73745),
+        d = a(84933),
         _ = a(30470),
         p = a(24484),
         g = a(72839);
@@ -3300,7 +3301,7 @@
         i = a(90626),
         o = a(68797),
         l = a(6144),
-        c = a(73745),
+        c = a(84933),
         m = a(78327);
       class u {
         m_mapAppItemDefs = new Map();
@@ -4191,7 +4192,7 @@
         l = a(68033),
         c = a(41550),
         m = a(738),
-        u = a(73745),
+        u = a(84933),
         d = a(19332),
         _ = a(51706);
       function p(e) {
@@ -4924,7 +4925,7 @@
       a.d(t, { Z: () => c });
       var n = a(34629),
         r = a(90626),
-        s = a(73745),
+        s = a(84933),
         i = a(52724),
         o = a.n(i),
         l = a(76217);
@@ -6254,6 +6255,7 @@
                       trailer: S,
                       bPlayVideo: r,
                       fnTogglePlayTrailer: f,
+                      bControls: !0,
                     }),
               )
             : (("dev" != d.TS.WEB_UNIVERSE && "beta" != d.TS.WEB_UNIVERSE) ||
@@ -6309,41 +6311,50 @@
           [o, c] = s.useState(void 0),
           [m, d] = (0, l.XC)(),
           _ = (0, B.dy)(),
-          p = t || (void 0 !== o && -1 !== o) ? o : 0,
-          g = new Array(),
-          S = new Array();
+          p = (0, s.useRef)(null),
+          [g, S] = (0, s.useState)(0),
+          f = t || (void 0 !== o && -1 !== o) ? o : 0,
+          v = new Array(),
+          y = new Array();
         if (r) {
           const e = a?.GetAllTrailers().GetHighlightTrailers(_),
             t = e?.length > 0 && e[0];
           t &&
-            (g.push(
+            (v.push(
               s.createElement(O, {
                 key: "trail_thumb_",
                 trailer: t,
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => c(0),
+                onMouseLeave: () => {
+                  const e = p.current;
+                  e && S(e.currentTime);
+                },
               }),
             ),
-            S.push(
+            y.push(
               s.createElement(R, {
                 key: "trail_inline",
+                ref: p,
                 name: a.GetName(),
                 trailer: t,
                 bUseMicroTrailer: !0,
+                bControls: !1,
                 bPlayVideo: !0,
+                startTime: g,
                 fnTogglePlayTrailer: () => {},
               }),
             ));
         }
-        const f = a.GetScreenshots(_);
+        const b = a.GetScreenshots(_);
         return (
-          f.forEach((e, a) => {
-            if ((t || a > 0) && g.length < 3) {
+          b.forEach((e, a) => {
+            if ((t || a > 0) && v.length < 3) {
               const t = F(e, ".600x338").replace("http://", "https://"),
                 n = F(e, ".800x600").replace("http://", "https://"),
-                r = g.length;
-              g.push(
+                r = v.length;
+              v.push(
                 s.createElement(
                   "div",
                   {
@@ -6358,7 +6369,7 @@
                     onClick: i
                       ? void 0
                       : () => {
-                          const e = [...f];
+                          const e = [...b];
                           for (let t = 0; t < a; ++t) e.push(e.shift());
                           m(e);
                         },
@@ -6366,7 +6377,7 @@
                   }),
                 ),
               ),
-                S.push(
+                y.push(
                   s.createElement(
                     "div",
                     {
@@ -6385,77 +6396,99 @@
             s.createElement(
               "div",
               { className: n || h().MainMediaCtn },
-              Boolean(t && (-1 === p || void 0 === p))
+              Boolean(t && (-1 === f || void 0 === f))
                 ? s.createElement(s.Fragment, null, t)
-                : s.createElement(s.Fragment, null, S[p]),
+                : s.createElement(s.Fragment, null, y[f]),
             ),
-            Boolean(g.length > 0) &&
+            Boolean(v.length > 0) &&
               s.createElement(
                 "div",
                 {
                   className: h().ScreenshotThumbnailRow,
                   onMouseLeave: () => c(-1),
                 },
-                g,
+                v,
               ),
           )
         );
       }
-      function R(e) {
-        const {
-            name: t,
-            trailer: a,
+      const R = (0, s.forwardRef)(
+        (
+          {
+            name: e,
+            trailer: t,
+            bControls: a,
             bPlayVideo: n,
             fnTogglePlayTrailer: r,
             bUseMicroTrailer: i,
-          } = e,
-          o = (0, m.zI)();
-        let l = a.GetTrailerMax();
-        return (
-          i ? (l = a.GetMicroTrailer()) : o && (l = a.GetTrailer480p()),
-          s.createElement(
-            "div",
-            {
-              className: (0, u.A)({
-                [h().VideoLargeContainer]: !0,
-                [h().videoPlaying]: n,
-              }),
-              onClick: r,
-            },
-            s.createElement(T.h, {
-              name: t,
-              trailerCategory: a.GetTrailerCategory(),
-              trailerDisplay: 1,
-              mouseOver: !1,
-            }),
-            Boolean(n) &&
-              s.createElement(
-                "video",
-                {
-                  className: h().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  loop: !0,
-                  poster: a.GetScreenshot(),
-                },
-                s.createElement("source", {
-                  src: l.strWebMURL,
-                  type: "video/webm",
-                }),
-                Boolean(!d.TS.IN_CLIENT) &&
-                  s.createElement("source", {
-                    src: l.strMP4URL,
-                    type: "video/mp4",
-                  }),
-              ),
+            startTime: o,
+          },
+          l,
+        ) => {
+          const _ = (0, m.zI)();
+          let p = t.GetTrailerMax();
+          return (
+            i ? (p = t.GetMicroTrailer()) : _ && (p = t.GetTrailer480p()),
+            (0, s.useEffect)(() => {
+              const e = l?.current;
+              if (o > 0 && e) {
+                const t = () => {
+                  e.currentTime = o;
+                };
+                return (
+                  e.addEventListener("loadedmetadata", t),
+                  () => {
+                    e.removeEventListener("loadedmetadata", t);
+                  }
+                );
+              }
+            }, [l, o]),
             s.createElement(
               "div",
-              { onClick: r },
-              s.createElement(c.sED, null),
-            ),
-          )
-        );
-      }
+              {
+                className: (0, u.A)({
+                  [h().VideoLargeContainer]: !0,
+                  [h().videoPlaying]: n,
+                }),
+                onClick: r,
+              },
+              s.createElement(T.h, {
+                name: e,
+                trailerCategory: t.GetTrailerCategory(),
+                trailerDisplay: 1,
+                mouseOver: !1,
+              }),
+              Boolean(n) &&
+                s.createElement(
+                  "video",
+                  {
+                    className: h().VideoLarge,
+                    ref: l,
+                    controls: a,
+                    autoPlay: !0,
+                    loop: !0,
+                    poster: o > 0 ? void 0 : t.GetScreenshot(),
+                  },
+                  s.createElement("source", {
+                    src: p.strWebMURL,
+                    type: "video/webm",
+                  }),
+                  Boolean(!d.TS.IN_CLIENT) &&
+                    s.createElement("source", {
+                      src: p.strMP4URL,
+                      type: "video/mp4",
+                    }),
+                ),
+              a &&
+                s.createElement(
+                  "div",
+                  { onClick: r },
+                  s.createElement(c.sED, null),
+                ),
+            )
+          );
+        },
+      );
       function F(e, t) {
         const a = e.replace(/\.[^\.]+$/g, "");
         return a + t + e.slice(a.length);
@@ -6504,6 +6537,7 @@
           fnTogglePlayTrailer: a,
           bPlayVideo: n,
           onMouseEnter: r,
+          onMouseLeave: i,
         } = e;
         return s.createElement(
           "div",
@@ -6515,6 +6549,7 @@
             }),
             onClick: a,
             onMouseEnter: r,
+            onMouseLeave: i,
           },
           s.createElement("img", { src: t.GetScreenshot() }),
           s.createElement(
@@ -6569,6 +6604,7 @@
           ),
         );
       }
+      R.displayName = "InlineTrailer";
     },
     28188: (e, t, a) => {
       "use strict";
@@ -11171,7 +11207,7 @@
         dt = a(96971),
         _t = a(51428),
         pt = a.n(_t),
-        gt = a(73745),
+        gt = a(84933),
         ht = a(2627);
       const St = "bTrailerCarouselAutoAdvance";
       function ft(e) {
@@ -16137,11 +16173,18 @@
                 [u().CarouselDisplay]: j.show_as_carousel,
                 [l().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [u().Blur]: "coverBlur" == j.background_repeat,
               }),
               rootMargin: y.$m,
-              style: (0, c.Vb)(j, t, _),
               onRender: () => or.I.Get().AddInteraction(j.unique_id, 0),
             },
+            n.createElement("div", {
+              className: (0, f.A)(
+                qn().BackgroundImage,
+                "coverBlur" == j.background_repeat ? qn().Blur : "",
+              ),
+              style: (0, c.Vb)(j, t, _),
+            }),
             n.createElement(
               "div",
               { className: u().SaleSectionTitleCtn },
@@ -17295,28 +17338,39 @@
           )
         );
       }
-      function Mr(e, t, a) {
-        if (
-          (e.country_allow_list &&
-            e.country_allow_list
-              .toLowerCase()
-              .indexOf(v.iA.country_code.toLowerCase()) < 0) ||
-          (e.country_deny_list &&
-            e.country_deny_list
-              .toLowerCase()
-              .indexOf(v.iA.country_code.toLowerCase()) >= 0)
-        )
-          return !1;
-        if (e.package_allow_list?.length > 0) {
-          if (!e.package_allow_list.some((e) => a.BOwnsPackage(e))) return !1;
-        }
-        return !(
-          Vt.y.BFilterRequiresFeatureAdultOnly(e) &&
-          (!v.iA.logged_in ||
-            (0, v.Y2)() ||
-            t ||
-            a.BExcludesContentDescriptor([3]))
+      function Mr(e, t, a, n) {
+        const r = (0, he.q3)(() =>
+          e?.filter((e) =>
+            (function (e, t, a, n) {
+              if (e.hide) return !1;
+              if (t) return !0;
+              if (
+                (e.country_allow_list &&
+                  e.country_allow_list
+                    .toLowerCase()
+                    .indexOf(v.iA.country_code.toLowerCase()) < 0) ||
+                (e.country_deny_list &&
+                  e.country_deny_list
+                    .toLowerCase()
+                    .indexOf(v.iA.country_code.toLowerCase()) >= 0)
+              )
+                return !1;
+              if (
+                e.package_allow_list?.length > 0 &&
+                !e.package_allow_list.some((e) => n.BOwnsPackage(e))
+              )
+                return !1;
+              return !(
+                Vt.y.BFilterRequiresFeatureAdultOnly(e) &&
+                (!v.iA.logged_in ||
+                  (0, v.Y2)() ||
+                  a ||
+                  n.BExcludesContentDescriptor([3]))
+              );
+            })(e, t, a, n),
+          ),
         );
+        return r;
       }
       function Or(e) {
         const {
@@ -17328,32 +17382,28 @@
           } = e,
           o = (0, dt.MU)(),
           [l, m] = (0, M.L2)(),
-          u = (0, he.q3)(() => t.tabs),
-          d = n.useMemo(
-            () => (o ? u : u?.filter((e) => Mr(e, l, m))),
-            [u, o, l, m],
-          ),
-          _ = (0, v.Qn)(),
-          p = n.useRef();
+          u = Mr(t.tabs, o, l, m),
+          d = (0, v.Qn)(),
+          _ = n.useRef();
         n.useEffect(() => {
           const e = document.getElementById("Tab_" + s.unique_id);
-          if (e && p?.current?.parentElement) {
-            const t = p.current.parentElement,
+          if (e && _?.current?.parentElement) {
+            const t = _.current.parentElement,
               a = e.offsetLeft + e.clientWidth;
             a > window.innerWidth && t.scrollBy(a - window.innerWidth, 0);
           }
-        }, [p?.current]),
+        }, [_?.current]),
           n.useEffect(() => {
             s && or.I.Get().SetActiveTab(s.unique_id);
           }, [s]);
-        const g = n.useRef(null),
-          [h, S] = n.useState(!1);
+        const p = n.useRef(null),
+          [g, h] = n.useState(!1);
         if (
           (n.useEffect(() => {
             const e = () => {
-              if (g.current) {
-                const e = g.current.getBoundingClientRect();
-                S(e.top <= 0);
+              if (p.current) {
+                const e = p.current.getBoundingClientRect();
+                h(e.top <= 0);
               }
             };
             return (
@@ -17361,17 +17411,17 @@
               () => window.removeEventListener("scroll", e)
             );
           }, []),
-          d.length < 2)
+          u.length < 2)
         )
           return null;
-        const b = (0, f.A)(Nr().SaleSectionTabsTab),
-          E = (0, c.Vb)(t, a, _);
+        const S = (0, f.A)(Nr().SaleSectionTabsTab),
+          b = (0, c.Vb)(t, a, d);
         if (s?.tab_bar_bg_image?.length > 0) {
           const e = kr.i6.GenerateArtworkURLFromHashAndExtensions(
             a.clanSteamID,
             s.tab_bar_bg_image,
           );
-          E.background = `url(${e})`;
+          b.background = `url(${e})`;
         }
         return n.createElement(
           "div",
@@ -17380,10 +17430,10 @@
               [Nr().SaleSection]: !0,
               [Nr().SaleSectionTabs]: !0,
               [Nr().DesktopTabs]: "dev" === v.TS.WEB_UNIVERSE,
-              [Nr().Pinned]: h,
+              [Nr().Pinned]: g,
             }),
-            ref: g,
-            style: E,
+            ref: p,
+            style: b,
             id: y.mj + t.unique_id,
           },
           n.createElement(
@@ -17396,9 +17446,9 @@
                   [qn().SaleSectionContainer]: !0,
                   [Nr().SaleSectionTabsRow]: !0,
                 }),
-                ref: p,
+                ref: _,
               },
-              d.map((e) =>
+              u.map((e) =>
                 n.createElement(Lr, {
                   key: "Tab_" + e.unique_id,
                   section: t,
@@ -17406,7 +17456,7 @@
                   tab: e,
                   language: r,
                   classNames: (0, f.A)(
-                    b,
+                    S,
                     e === s && Nr().SaleSectionTabsSelected,
                   ),
                   onTabSelected: i,
@@ -17427,19 +17477,10 @@
             bIsPreview: l,
           } = e,
           m = (0, v.Qn)(),
-          [u, d] = (0, M.L2)();
-        let _ = (function (e) {
-          for (const t of e.GetSaleSections())
-            if ("tabs" === t.section_type) return t;
-          return null;
-        })(s);
-        const p = (0, he.q3)(() => _?.tabs),
-          g = n.useMemo(
-            () => (l ? p : p?.filter((e) => Mr(e, u, d))),
-            [l, u, p, d],
-          );
-        if (!_ || !_.tabs || 0 === _.tabs.length) return null;
-        const h = g.map((e) => {
+          [u, d] = (0, M.L2)(),
+          _ = Mr(t?.tabs, l, u, d);
+        if (!_ || 0 === _.length) return null;
+        const p = _.map((e) => {
           const s = a?.GetActiveTabUniqueID() === e.unique_id;
           if (s && o) return null;
           const l = t.unique_id + "_tab_button_" + e.unique_id;
@@ -17456,7 +17497,7 @@
           "div",
           { className: Nr().SaleSection, style: (0, c.Vb)(t, s, m) },
           n.createElement(W.jR, { ...e }),
-          n.createElement("div", { className: Nr().TabButtonsCtn }, h),
+          n.createElement("div", { className: Nr().TabButtonsCtn }, p),
         );
       };
       var Hr = a(77021);
@@ -22280,16 +22321,12 @@
         const { event: t, section: a, language: r } = e,
           s = (0, dt.MU)(),
           i = (0, v.Qn)(),
-          o = T.A0.GetELanguageFallback(r),
-          [l, u, d] = (0, he.q3)(() => [
-            a.localized_description?.length > 0
-              ? a.localized_description[r] || a.localized_description[o] || ""
-              : void 0,
+          [o, l] = (0, he.q3)(() => [
             Boolean(a.quiz?.display_border),
             a.quiz?.border_color,
           ]),
-          _ = (0, he.q3)(() => a.quiz.questions),
-          [g] = (0, he.q3)(() => [
+          u = (0, he.q3)(() => a.quiz.questions || []),
+          [d] = (0, he.q3)(() => [
             a.quiz?.template_faq_display || On.nx.TemplateFAQDisplaySimpleRow,
           ]);
         return n.createElement(
@@ -22302,8 +22339,8 @@
               rootMargin: y.$m,
               className: (0, f.A)({
                 [m.SaleSection]: !0,
-                [bo().ColumnFormatCtn]: g == On.nx.TemplateFAQDisplayColumn,
-                [bo().SimpleRowCtn]: g == On.nx.TemplateFAQDisplaySimpleRow,
+                [bo().ColumnFormatCtn]: d == On.nx.TemplateFAQDisplayColumn,
+                [bo().SimpleRowCtn]: d == On.nx.TemplateFAQDisplaySimpleRow,
               }),
               style: (0, c.Vb)(a, t, i),
             },
@@ -22314,7 +22351,7 @@
                 event: t,
                 language: r,
               }),
-            _.map((e, a) =>
+            u.map((e, a) =>
               n.createElement(qo, {
                 key: e.unique_id,
                 iQuestionIndex: a,
@@ -22322,8 +22359,8 @@
                 language: r,
                 bIsPreview: s,
                 event: t,
-                bDisplayBorder: u,
-                strBorderColor: d,
+                bDisplayBorder: o,
+                strBorderColor: l,
               }),
             ),
           ),
@@ -22909,6 +22946,7 @@
               background:
                 r(e.background_gradient_bottom, e.background_gradient_top) + s,
               backgroundRepeat: e.background_repeat,
+              backgroundSize: "coverBlur" == e.background_repeat ? "cover" : "",
               outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
               outlineColor: e.border_color,
               outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
@@ -23082,7 +23120,7 @@
       a.d(t, { q: () => o });
       var n = a(90626),
         r = a(78327),
-        s = a(73745);
+        s = a(84933);
       const i = 2e4;
       function o(e) {
         const t = (0, n.useRef)(!1),

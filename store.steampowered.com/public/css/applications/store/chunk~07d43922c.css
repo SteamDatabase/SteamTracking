@@ -5552,6 +5552,10 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   gap: 1rem;
   padding: 32px;
 }
+._1hqaxq1Bu0NJlHYpJjzvnM._1LEcwJMAoZCV3ULGhU85sq {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 15px;
+}
 ._2vw-5sdiSgMFoLayGMH1PT ._1hqaxq1Bu0NJlHYpJjzvnM {
   display: grid;
   grid-template-columns: minmax(0, 35%) auto;
@@ -5564,7 +5568,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   margin-bottom: 1rem;
 }
 .W21F8c7j9huN7-oSTInbQ {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 }
 ._1OGR6oUuIjxqO5dezch_OQ {
@@ -5615,21 +5619,27 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 300px) minmax(0, 1fr);
+  gap: 1rem;
 }
 .xIqX_PvYjm1_rnxpXFAu5 .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 250px) minmax(0, 1fr);
+  gap: 1rem;
 }
 ._3Q6EKKVEKVFpC_BW0FHOB_ .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 175px) minmax(0, 1fr);
+  gap: 1rem;
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 300px);
+  gap: 1rem;
 }
 .xIqX_PvYjm1_rnxpXFAu5 .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 250px);
+  gap: 1rem;
 }
 ._3Q6EKKVEKVFpC_BW0FHOB_ .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 175px);
+  gap: 1rem;
 }
 .-BNnqulztTaTeP1QNeSBu._2WX2HLoszD567aFrCJKkYG {
   outline: 4px solid #00f811bb;
@@ -5688,21 +5698,21 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 .PzQp3t3y61lCOWbGACZqy {
   font-size: 20px;
-  line-height: 26px;
+  line-height: 24px;
   font-weight: 600;
 }
 .PzQp3t3y61lCOWbGACZqy._3TKdKvs7o8kbqWUcJyPuyo {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: 800;
 }
 .PzQp3t3y61lCOWbGACZqy._2BZyC-dmzrlUCPfHClu51J {
-  font-size: 26px;
+  font-size: 28px;
   line-height: 32px;
   font-weight: 800;
 }
 .PzQp3t3y61lCOWbGACZqy._2XQ2s4PGGXTf-33SoML_Nn {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 36px;
   font-weight: 800;
 }
@@ -5717,7 +5727,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 ._2cbokCRMR_rzjYjDIlQERN {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 22px;
   font-weight: 500;
 }
 ._2cbokCRMR_rzjYjDIlQERN._3Bz6jMGpR_Vr3p7g3paBao {

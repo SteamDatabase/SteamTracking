@@ -116,8 +116,8 @@
         c = a(90626),
         d = a(77516),
         _ = a(4796),
-        u = a(44165),
-        p = a(60746),
+        p = a(44165),
+        u = a(60746),
         v = a(78327),
         E = a(14947),
         h = a(68797),
@@ -411,8 +411,8 @@
           [r, i] = c.useState(!0),
           [o, m] = c.useState(!0),
           d = 1063339200,
-          _ = u.HD.GetTimeNowWithOverride(),
-          [p, E] = c.useState(_ - ee.Kp.PerMonth),
+          _ = p.HD.GetTimeNowWithOverride(),
+          [u, E] = c.useState(_ - ee.Kp.PerMonth),
           [h, S] = c.useState(_),
           [g, w] = c.useState(-1),
           b = g >= 0;
@@ -433,12 +433,12 @@
                 const c = 100;
                 let d,
                   _ = 0,
-                  u = new Array();
-                const p = (0, s.sf)(v.TS.LANGUAGE);
+                  p = new Array();
+                const u = (0, s.sf)(v.TS.LANGUAGE);
                 do {
                   if (
                     ((_ += 1),
-                    (u = await q.O3.LoadAdjacentPartnerEvents(
+                    (p = await q.O3.LoadAdjacentPartnerEvents(
                       d,
                       e.clanSteamID,
                       void 0,
@@ -447,10 +447,10 @@
                       { rtime_oldestevent: a, only_summaries: !0 },
                       o,
                     )),
-                    u?.length > 0)
+                    p?.length > 0)
                   ) {
-                    (m += u.length), r(m), (d = u[u.length - 1].GID);
-                    const a = u
+                    (m += p.length), r(m), (d = p[p.length - 1].GID);
+                    const a = p
                       .filter((e) => e.startTime <= n && e.BIsVisibleEvent())
                       .map((e) => e.GID);
                     a.length > 0 &&
@@ -465,7 +465,7 @@
                         i.push({
                           appid: e.appid,
                           app_name: t?.GetName() || "",
-                          event_name: s.GetNameWithFallback(p),
+                          event_name: s.GetNameWithFallback(u),
                           event_type: s.GetEventTypeAsString(),
                           event_start_date: (0, V.TW)(r) + " @ " + (0, J.KC)(r),
                           event_end_date: (0, V.TW)(l) + " @ " + (0, J.KC)(l),
@@ -474,7 +474,7 @@
                         });
                       }));
                   }
-                } while (u.length == c && _ < 100);
+                } while (p.length == c && _ < 100);
                 return (
                   X.WriteCSVToFile(
                     i,
@@ -484,7 +484,7 @@
                   ),
                   !0
                 );
-              })(t, n, r ? d : p, o ? Number.MAX_SAFE_INTEGER : h, w).then(() =>
+              })(t, n, r ? d : u, o ? Number.MAX_SAFE_INTEGER : h, w).then(() =>
                 a(),
               ),
           },
@@ -520,7 +520,7 @@
                         nEarliestTime: d,
                         nLatestTime: o ? void 0 : h,
                         bShowTimeZone: !0,
-                        fnGetTimeToUpdate: () => p,
+                        fnGetTimeToUpdate: () => u,
                         fnSetTimeToUpdate: E,
                         disabled: b,
                       }),
@@ -546,7 +546,7 @@
                       null,
                       (0, V.we)("#EventDashboard_Stats_Newest_Override"),
                       c.createElement(K.K, {
-                        nEarliestTime: r ? d : p,
+                        nEarliestTime: r ? d : u,
                         bShowTimeZone: !0,
                         fnGetTimeToUpdate: () => h,
                         fnSetTimeToUpdate: S,
@@ -942,11 +942,11 @@
         ce = a(69409),
         de = a(46416),
         _e = a(14326),
-        ue = a(64641),
-        pe = a.n(ue),
+        pe = a(64641),
+        ue = a.n(pe),
         ve = a(17289),
         Ee = a(44332),
-        he = a(73745),
+        he = a(84933),
         Se = a(61336),
         ge = a(92007),
         we = a(18663),
@@ -954,7 +954,7 @@
       function ye(e) {
         const { event: t, lang: a } = e,
           n = (0, m.q3)(() => t.jsondata.meet_steam_groups),
-          s = (0, p.Ec)(t.clanSteamID.GetAccountID()),
+          s = (0, u.Ec)(t.clanSteamID.GetAccountID()),
           [r, i, l] = (0, c.useMemo)(() => {
             const e = new Map(),
               t = new Map();
@@ -1054,23 +1054,23 @@
               otherEventRow: m,
               titleBar: d,
             } = e,
-            u = t.appid,
-            p = t.clanSteamID.GetAccountID(),
+            p = t.appid,
+            u = t.clanSteamID.GetAccountID(),
             v = (0, H.MU)(),
-            [E, h] = (0, y.t7)(u, {
+            [E, h] = (0, y.t7)(p, {
               include_assets: !0,
               include_platforms: !0,
               include_basic_info: !0,
               include_release: !0,
             }),
-            [S, g] = (0, _.TB)(p);
+            [S, g] = (0, _.TB)(u);
           if (
-            (c.useEffect(() => window.scrollTo(0, 0), [u, p]),
-            !t.bLoaded || !g || (u && !E && 2 !== h))
+            (c.useEffect(() => window.scrollTo(0, 0), [p, u]),
+            !t.bLoaded || !g || (p && !E && 2 !== h))
           )
             return c.createElement(
               "div",
-              { className: pe().FlexCenter, style: { height: "400px" } },
+              { className: ue().FlexCenter, style: { height: "400px" } },
               c.createElement(Y.t, {
                 size: "medium",
                 string: (0, V.we)("#Loading"),
@@ -1193,6 +1193,7 @@
                         c.createElement(ge.e, {
                           id: t.jsondata.associated_appid,
                           inputType: "game",
+                          bApplyUserContentPref: !1,
                         }),
                     ),
                   ),
@@ -1381,10 +1382,10 @@
             nOverrideStartTime: n,
             nOverrideEndTime: s,
           } = e,
-          [r, i, l, o, d, p] = (0, m.q3)(() => [
+          [r, i, l, o, d, u] = (0, m.q3)(() => [
             t.appid,
             t.clanSteamID,
-            u.HD.GetTimeNowWithOverride(),
+            p.HD.GetTimeNowWithOverride(),
             n || t.GetStartTimeAndDateUnixSeconds(),
             t.GetCategoryAsString(),
             t.type,
@@ -1412,7 +1413,7 @@
                     nOverrideEndTime: s,
                     nOverrideStartTime: n,
                   }),
-                  28 !== p &&
+                  28 !== u &&
                     l < o &&
                     c.createElement(
                       "div",
@@ -1530,7 +1531,7 @@
         }
         render() {
           if (
-            !p.KN.Get().GetPartnerEventPermissions(this.props.event.clanSteamID)
+            !u.KN.Get().GetPartnerEventPermissions(this.props.event.clanSteamID)
               .valve_admin
           )
             return c.createElement("div", null);
@@ -1570,7 +1571,7 @@
           const { event: e } = this.props;
           e.BIsPartnerEvent() &&
             e.BIsVisibleEvent() &&
-            p.KN.Get()
+            u.KN.Get()
               .LoadSingleAppEventPermissions(e.clanSteamID)
               .then((t) => {
                 t &&
@@ -1587,7 +1588,7 @@
         }
         render() {
           const { event: e, bIsOGG: t } = this.props;
-          if (!p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).can_edit)
+          if (!u.KN.Get().GetPartnerEventPermissions(e.clanSteamID).can_edit)
             return null;
           const a =
             e.BIsPartnerEvent() &&
@@ -1669,8 +1670,8 @@
         c = a(52038),
         d = a(61859),
         _ = a(32754),
-        u = a(12916),
-        p = a.n(u),
+        p = a(12916),
+        u = a.n(p),
         v = a(87937),
         E = a.n(v);
       const h = "hh:mm a",
@@ -1681,7 +1682,7 @@
           nEarliestTime: a,
           fnGetTimeToUpdate: s,
           onError: o,
-          strAlsoShowTimeZone: u,
+          strAlsoShowTimeZone: p,
           disabled: v,
           bNoDefaultDate: g,
           className: b,
@@ -1741,7 +1742,7 @@
         P || !a || g || (W = E().unix(a));
         const j = E().tz.guess(),
           z = E().unix(P).tz(j),
-          q = !!u && j != u && E().unix(P).tz(u),
+          q = !!p && j != p && E().unix(P).tz(p),
           {
             fnOnInput: K,
             fnOnInputBlur: Q,
@@ -1790,10 +1791,10 @@
           );
         return n.createElement(
           "div",
-          { className: (0, c.A)(p().EventTimeSection, b) },
+          { className: (0, c.A)(u().EventTimeSection, b) },
           n.createElement(
             "div",
-            { className: (0, c.A)(p().EventTimeTitle, "DialogLabel") },
+            { className: (0, c.A)(u().EventTimeTitle, "DialogLabel") },
             n.createElement(
               _.he,
               { toolTipContent: T, direction: "top" },
@@ -1802,7 +1803,7 @@
             x &&
               n.createElement(
                 "span",
-                { className: p().DateErrorCtn },
+                { className: u().DateErrorCtn },
                 n.createElement("img", { src: i.A }),
                 x,
               ),
@@ -1812,7 +1813,7 @@
             { className: m().FlexRowContainer },
             n.createElement(
               "div",
-              { className: (0, c.A)(m().InputBorder, p().TimeBlock) },
+              { className: (0, c.A)(m().InputBorder, u().TimeBlock) },
               n.createElement(r(), {
                 onChange: Y,
                 timeFormat: !1,
@@ -1835,7 +1836,7 @@
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
                   className: (0, c.A)(
-                    p().DateWidth,
+                    u().DateWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
@@ -1847,13 +1848,13 @@
               !!q &&
                 n.createElement(
                   "div",
-                  { className: p().PacificTimeHint },
+                  { className: u().PacificTimeHint },
                   q.format("L"),
                 ),
             ),
             n.createElement(
               "div",
-              { className: (0, c.A)(m().InputBorder, p().TimeBlock) },
+              { className: (0, c.A)(m().InputBorder, u().TimeBlock) },
               n.createElement(r(), {
                 onChange: X,
                 dateFormat: !1,
@@ -1863,7 +1864,7 @@
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
                   className: (0, c.A)(
-                    p().TimeWidth,
+                    u().TimeWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
@@ -1875,7 +1876,7 @@
               !!q &&
                 n.createElement(
                   "div",
-                  { className: p().PacificTimeHint },
+                  { className: u().PacificTimeHint },
                   q.format("LT"),
                 ),
             ),
@@ -1885,13 +1886,13 @@
                 null,
                 n.createElement(
                   "div",
-                  { className: p().TimeZone },
+                  { className: u().TimeZone },
                   z.zoneAbbr(),
                 ),
                 !!q &&
                   n.createElement(
                     "div",
-                    { className: p().TimeZone },
+                    { className: u().TimeZone },
                     q.zoneAbbr(),
                   ),
               ),
@@ -2014,8 +2015,8 @@
       (0, r.Cg)([i.sH], c.prototype, "m_objApprovalPriviledge", void 0);
       var d = a(75844),
         _ = a(90626),
-        u = a(17720),
-        p = a(60746),
+        p = a(17720),
+        u = a(60746),
         v = a(30756),
         E = a(90316),
         h = a(95695),
@@ -2033,8 +2034,8 @@
             const e = s().CancelToken.source();
             return (
               (async () => {
-                const t = u.b.InitFromClanID(r),
-                  n = await p.KN.Get().LoadSingleAppEventPermissions(t),
+                const t = p.b.InitFromClanID(r),
+                  n = await u.KN.Get().LoadSingleAppEventPermissions(t),
                   s = await c.Get().HintLoadAppApprovalPriviledge();
                 e.token.reason ||
                   a(l.iA.is_support || n.can_edit || s.bHasAccess);
@@ -2042,9 +2043,9 @@
               () => e.cancel("SteamChinaAdminPanel is unmounting")
             );
           }, [r]);
-          const i = u.b.InitFromClanID(r);
+          const i = p.b.InitFromClanID(r);
           return l.iA.is_support ||
-            p.KN.Get().GetPartnerEventPermissions(i).can_edit
+            u.KN.Get().GetPartnerEventPermissions(i).can_edit
             ? _.createElement(v.g, {
                 eventModel: n,
                 partnerEventStore: e.partnerEventStore,

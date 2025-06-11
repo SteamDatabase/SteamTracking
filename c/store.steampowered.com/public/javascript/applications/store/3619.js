@@ -31,7 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Notizie e aggiornamenti",
 	"Menu_Popover_Preferences": "Preferenze",
 	"Menu_Popover_Browse": "Sfoglia",
-	"Menu_Popover_Top": "In alto",
+	"Menu_Popover_Top": "Popolari",
 	"Menu_Popover_Recommendations": "Consigli",
 	"Menu_Popover_Categories": "Categorie",
 	"Menu_Popover_Hardware": "Hardware",
@@ -47,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "Per te",
 	"Menu_Section_Browse_PopularNew": "Novità popolari",
 	"Menu_Section_Browse_FreeToPlay": "Free-to-play",
+	"Menu_Section_Browse_TopFreeToPlay": "Giochi Free-to-Play più popolari",
 	"Menu_Section_Browse_Discounts": "Sconti",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "Nella tua Lista dei desideri",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Eventi speciali",
@@ -81,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Oggetti popolari",
 	"Menu_SearchBar_SearchResults": "Risultati della ricerca",
 	"Menu_SearchBar_YourTopGenres": "I tuoi generi preferiti",
-	"Menu_SearchBar_BrowseBy": "Sfoglia per..."
+	"Menu_SearchBar_BrowseBy": "Sfoglia per...",
+	"Menu_Search": "Cerca",
+	"Menu_Label": "Menu del Negozio"
 }`);
     },
   },

@@ -348,6 +348,7 @@
         GridRowEnd: "_3HjlrI3alztQQ7yy_VjZgU",
         GridArea: "uh0Q7gKQw3ZgTwvd5mQiZ",
         Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
+        Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
       };
     },
     chunkid: (module) => {
@@ -729,6 +730,12 @@
             responsive: !0,
             className: _.Background,
             cssProperty: (_) => ["--background", `var(--color-${_})`],
+          },
+          {
+            prop: "overflow",
+            responsive: !0,
+            className: _.Overflow,
+            cssProperty: "--overflow",
           },
         ];
       var _ = __webpack_require__("chunkid");

@@ -651,7 +651,8 @@
                     (_ = _);
                 }
                 const _ =
-                  "button" == _(_.args, "style") ? _().LinkButton : null;
+                    "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = _ && _(_.args, "buttoncolor");
                 let _ = _(_.args, "id");
                 _ &&
                   "string" == typeof _ &&
@@ -677,6 +678,9 @@
                     className: _,
                     href: _,
                     _: _,
+                    style: {
+                      backgroundColor: _,
+                    },
                   },
                   _.children,
                 );
@@ -1069,11 +1073,15 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args),
-                  _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = _ && _(_.args, "buttoncolor");
                 return _.createElement(
                   _,
                   {
                     className: _,
+                    style: {
+                      backgroundColor: _,
+                    },
                     href: `${_._.PARTNER_BASE_URL}doc/${_}`,
                   },
                   _.children,
@@ -3450,7 +3458,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3629,88 +3636,6 @@
           clanEventSummaryLoadError: _,
           fnRefetch: _,
         };
-      }
-      async function _(_, _, _) {
-        try {
-          await _._.LoadHiddenPartnerEventByAnnouncementGID(_, _, _);
-        } catch (_) {
-          console.warn(
-            "Fail to load event, if it was hidden, it's possible it was only partially constructed: " +
-              _,
-            (0, _._)(_).strErrorMsg,
-          );
-        }
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(null),
-          _ = (0, _._)("useDraftAndHiddenPartnerEvents"),
-          _ = _.useRef(0);
-        return (
-          _.useEffect(() => {
-            (async () => {
-              var _;
-              const _ = ++_.current,
-                _ = await (async function (_, _) {
-                  var _;
-                  const _ =
-                      _._.COMMUNITY_BASE_URL +
-                      "/gid/" +
-                      _.ConvertTo64BitString() +
-                      "/ajaxlisteventsfordashboard/",
-                    _ = {
-                      start: 0,
-                      count: 20,
-                      _: _._.LANGUAGE,
-                    },
-                    _ = await _().get(_, {
-                      params: _,
-                      cancelToken: _ ? _.token : void 0,
-                    });
-                  return 1 ==
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.success)
-                    ? _.data
-                    : void 0;
-                })(_, _);
-              if (_) {
-                _(
-                  null === (_ = _.hidden_announcement_gids) || void 0 === _
-                    ? void 0
-                    : _.length,
-                );
-                const _ = (function (_, _) {
-                  var _, _;
-                  const _ = new Array();
-                  return (
-                    1 == (null == _ ? void 0 : _.success) &&
-                      (null === (_ = _.announcement_gids) ||
-                        void 0 === _ ||
-                        __webpack_require__.forEach((_) => _.push(_(_, _, !0))),
-                      null === (_ = _.hidden_announcement_gids) ||
-                        void 0 === _ ||
-                        _.forEach((_) => _.push(_(_, _, !0)))),
-                    _
-                  );
-                })(_, _);
-                __webpack_require__.forEach((_) =>
-                  _.then(() => {
-                    _.current == _ && _(_._.GetAllClanEvents(_));
-                  }),
-                ),
-                  await Promise.all(_);
-              }
-              __webpack_require__(!1);
-            })();
-          }, [_, _]),
-          {
-            bIsLoading: _,
-            nHiddenEventCount: _,
-            rgEventModels: _,
-          }
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -3040,11 +3040,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -3078,7 +3073,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new $e.Zn(this.m_elVideo, !1)),
+            (this.m_player = new $e.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t, null, null, !1),
             (this.m_bMuted = it("muted")),
@@ -3156,17 +3151,17 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          (0, ke.ZI)("video download failed"),
+        async OnDownloadFailed(e) {
+          if ((e.detail || $e.N_.PlaybackError) == $e.N_.UnsupportedMediaType)
+            return (
+              (0, ke.ZI)("media type error"),
+              void (this.m_ePlayerError = Ze.MediaTypeError)
+            );
+          (0, ke.ZI)("video download failed", e.detail),
             this.m_nDownloadFailureCount < 2
               ? (await this.m_player?.UpdateMPD(),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = Ze.DownloadFailed);
-        }
-        OnMediaTypeError(e) {
-          "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
-            (0, ke.ZI)("media type error", e.detail),
-            (this.m_ePlayerError = Ze.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -3286,7 +3281,6 @@
         (0, p.Cg)([q.oI], et.prototype, "OnSeeking", null),
         (0, p.Cg)([q.oI], et.prototype, "OnLoadedMetadata", null),
         (0, p.Cg)([q.oI], et.prototype, "OnDownloadFailed", null),
-        (0, p.Cg)([q.oI], et.prototype, "OnMediaTypeError", null),
         (0, p.Cg)([q.oI], et.prototype, "OnPlaybackError", null),
         (0, p.Cg)([q.oI], et.prototype, "OnUserInputNeeded", null),
         (0, p.Cg)([q.oI], et.prototype, "OnVolumeChange", null),

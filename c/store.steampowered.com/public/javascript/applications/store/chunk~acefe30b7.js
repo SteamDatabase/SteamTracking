@@ -986,7 +986,10 @@
         }
         HandleMessage(_) {
           if (_.origin != this.m_sParentOrigin) return;
-          const _ = _.data && "message" in _.data ? _.data : null;
+          const _ =
+            _.data && "object" == typeof _.data && "message" in _.data
+              ? _.data
+              : null;
           if (_)
             switch (_.message) {
               case "PartnerEventEditor_Update":

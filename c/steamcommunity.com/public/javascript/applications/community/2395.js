@@ -31,7 +31,10 @@
 	"SortBy_Quantity_Desc": "Quantity (high to low)",
 	"SortBy_Placeholder": "Sort By",
 	"Search_Button": "Search",
-	"Search_Placeholder": "Search..."
+	"Search_Placeholder": "Search...",
+	"Button_Buy": "Buy",
+	"Search_ListingQuantity": "Quantity for sale: %1$s",
+	"Bucket_PriceFrom": "From %1$s"
 }`);
     },
   },

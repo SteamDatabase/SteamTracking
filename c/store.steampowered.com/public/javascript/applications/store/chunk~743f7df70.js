@@ -1432,7 +1432,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_LinkFilter = _._;
@@ -1495,7 +1494,6 @@
                 _.createElement(
                   _._,
                   {
-                    emoticonHoverStore: _._,
                     emoticon: _,
                   },
                   [],
@@ -2652,6 +2650,7 @@
               return _.createElement(_._, {
                 _: _,
                 inputType: _,
+                bApplyUserContentPref: !0,
               });
           }
         }
@@ -2791,17 +2790,24 @@
         let _ = (0, _._)(_.args) || (0, _._)(_.args, "href");
         const _ = (0, _._)(_.args, "style"),
           _ = (0, _._)(_.args, "id"),
+          _ = (0, _._)(_.args, "buttoncolor"),
           _ = (function (_) {
             return "button" === _
               ? (0, _._)(_.LinkButton, "LinkButton")
               : (0, _._)(_.Link, "Link");
-          })(_);
-        _.context.event;
+          })(_),
+          _ = _.context.event;
         if (void 0 === _) return _.children || "";
         if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(_, _.language, _.context.event?.rtime32_last_modified);
+          const _ = _._(_, _.language, _?.rtime32_last_modified);
           _ = "string" == typeof _ ? _ : _[1];
         }
+        const _ = (function (_, _) {
+          if ("button" == _ && _)
+            return {
+              backgroundColor: _,
+            };
+        })(_, _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             "store" == (0, _._)() &&
@@ -2816,6 +2822,7 @@
                 {
                   className: _,
                   href: _,
+                  style: _,
                 },
                 _.children,
               )
@@ -2835,6 +2842,7 @@
                     url: _,
                     event: _.context.event,
                     _: _,
+                    style: _,
                   },
                   _.children,
                 )
@@ -3830,10 +3838,50 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        ..._._,
+        apply_user_filters: !0,
+      };
       function _(_) {
-        const { inputType: _, _: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, (0, _._)(_), {});
+        const {
+            inputType: _,
+            _: __webpack_require__,
+            bApplyUserContentPref: _,
+          } = _,
+          [_] = (0, _._)(__webpack_require__, (0, _._)(_), _ ? _ : _._);
+        if (!_) return null;
+        if (_) {
+          const _ = _.GetUserFilterFailure();
+          if (40 == _?.filter_failure || 50 == _?.filter_failure) {
+            let _ = "#StoreCapsule_App_Excluded";
+            switch (_) {
+              case "sub":
+                _ = "#StoreCapsule_Package_Excluded";
+                break;
+              case "bundle":
+                _ = "#StoreCapsule_Bundle_Excluded";
+            }
+            return _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _.AppSummaryWidgetCtn,
+                  "AppSummaryWidgetCtn",
+                ),
+              },
+              (0, _._)(
+                _,
+                _.createElement("a", {
+                  href: _._.STORE_BASE_URL + "account/preferences/",
+                }),
+              ),
+            );
+          }
+        }
         let _ = "bundle" == _ ? "bundle" : "sub" == _ ? "sub" : "game";
         return _.createElement(
           "div",

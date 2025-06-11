@@ -7662,6 +7662,7 @@
 	"footer-help-dropdown": 23,
 	"footer-publisher-catalogs": 24,
 	"wishlist": 25,
+	"stats": 26,
 	"spotlight": 40,
 	"message": 41,
 	"marketing-message": 42,
@@ -8207,6 +8208,8 @@
 	"salesmartdecktopplayed": 7008,
 	"salesmartcategory": 7009,
 	"vrhardwarelanding": 7010,
+	"monthlytopreleases": 7011,
+	"bestofyear": 7012,
 	"apphome": 100000,
 	"images": 100001,
 	"allnews": 100003,
@@ -8763,7 +8766,8 @@
                     __webpack_require__.startsWith("https://")) &&
                   (_ = _);
               }
-              const _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+              const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
               let _ = _(_.args, "id");
               _ &&
                 "string" == typeof _ &&
@@ -8789,6 +8793,9 @@
                   className: _,
                   href: _,
                   _: _,
+                  style: {
+                    backgroundColor: _,
+                  },
                 },
                 _.children,
               );
@@ -9170,11 +9177,15 @@
           {
             Constructor: function (_) {
               const _ = _(_.args),
-                _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+                _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
               return _.createElement(
                 _,
                 {
                   className: _,
+                  style: {
+                    backgroundColor: _,
+                  },
                   href: `${_._.PARTNER_BASE_URL}doc/${_}`,
                 },
                 _.children,
@@ -9570,7 +9581,12 @@
         );
       }
       const _ = (_) => {
-        const { url: _, event: __webpack_require__, className: _ } = _;
+        const {
+          url: _,
+          event: __webpack_require__,
+          className: _,
+          style: _,
+        } = _;
         let _,
           _ = (0, _._)(_);
         (_ = _(_, __webpack_require__)),
@@ -9595,6 +9611,7 @@
               href: _,
               rel: _,
               _: _._,
+              style: _,
             },
             _.children,
           ),
@@ -14760,10 +14777,7 @@
         StartBroadcast(_) {
           this.InitPlayer(),
             _.m_data.url
-              ? ((this.m_player = new _._(
-                  this.m_elVideo,
-                  !(0, _._)() && (0, _._)(),
-                )),
+              ? ((this.m_player = new _._(this.m_elVideo)),
                 this.m_player.PlayMPD(
                   _.m_data.url,
                   _.m_strCDNAuthUrlParameters,
@@ -14805,7 +14819,7 @@
         }
         StartVOD(_) {
           this.InitPlayer();
-          let _ = new _._(this.m_elVideo, !(0, _._)() && (0, _._)());
+          let _ = new _._(this.m_elVideo);
           (this.m_player = _),
             _._.logged_in &&
               _.m_nAppIDVOD &&
@@ -39284,7 +39298,7 @@
       });
       function _(_) {
         _ ||
-          (null !== _ &&
+          (null !== _.get() &&
             (_().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
               _().m_visibilityStore.BIsGameSourceAllowed(_._.k_ECurator) ||
               (0, _._)(_.createElement(_, null), window)));

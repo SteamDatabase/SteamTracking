@@ -82,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Népszerű tételek",
 	"Menu_SearchBar_SearchResults": "Keresési eredmények",
 	"Menu_SearchBar_YourTopGenres": "Legjobb műfajaid",
-	"Menu_SearchBar_BrowseBy": "Böngészési elv..."
+	"Menu_SearchBar_BrowseBy": "Böngészési elv...",
+	"Menu_Search": "Keresés",
+	"Menu_Label": "Áruházi menü"
 }`);
     },
   },

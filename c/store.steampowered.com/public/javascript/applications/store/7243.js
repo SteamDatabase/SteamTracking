@@ -47,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "สำหรับคุณ",
 	"Menu_Section_Browse_PopularNew": "ใหม่และกระแสนิยม",
 	"Menu_Section_Browse_FreeToPlay": "เล่นฟรี",
+	"Menu_Section_Browse_TopFreeToPlay": "เกมเล่นฟรียอดนิยม",
 	"Menu_Section_Browse_Discounts": "ส่วนลด",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "อยู่ในสิ่งที่คุณอยากได้",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "กิจกรรมพิเศษ",
@@ -81,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "ไอเท็มยอดนิยม",
 	"Menu_SearchBar_SearchResults": "ผลลัพธ์การค้นหา",
 	"Menu_SearchBar_YourTopGenres": "แนวยอดนิยมของคุณ",
-	"Menu_SearchBar_BrowseBy": "เปิดหาตาม..."
+	"Menu_SearchBar_BrowseBy": "เปิดหาตาม...",
+	"Menu_Search": "ค้นหา",
+	"Menu_Label": "เมนูร้านค้า"
 }`);
     },
   },

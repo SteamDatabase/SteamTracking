@@ -3243,11 +3243,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -3281,7 +3276,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new _._(this.m_elVideo, !1)),
+            (this.m_player = new _._(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(_, null, null, !1),
             (this.m_bMuted = _("muted")),
@@ -3359,17 +3354,17 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          (0, _._)("video download failed"),
+        async OnDownloadFailed(_) {
+          if ((_.detail || _._.PlaybackError) == _._.UnsupportedMediaType)
+            return (
+              (0, _._)("media type error"),
+              void (this.m_ePlayerError = _.MediaTypeError)
+            );
+          (0, _._)("video download failed", _.detail),
             this.m_nDownloadFailureCount < 2
               ? (await this.m_player?.UpdateMPD(),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = _.DownloadFailed);
-        }
-        OnMediaTypeError(_) {
-          "string" == typeof _.detail && (this.m_strMediaTypeError = _.detail),
-            (0, _._)("media type error", _.detail),
-            (this.m_ePlayerError = _.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -3492,7 +3487,6 @@
         (0, _._)([_._], _.prototype, "OnSeeking", null),
         (0, _._)([_._], _.prototype, "OnLoadedMetadata", null),
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
-        (0, _._)([_._], _.prototype, "OnMediaTypeError", null),
         (0, _._)([_._], _.prototype, "OnPlaybackError", null),
         (0, _._)([_._], _.prototype, "OnUserInputNeeded", null),
         (0, _._)([_._], _.prototype, "OnVolumeChange", null),

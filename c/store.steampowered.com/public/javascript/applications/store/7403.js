@@ -4011,10 +4011,10 @@
                     pbr: _._.readPackedUint64String,
                     _: _._.writeRepeatedUint64String,
                   },
-                  force_rerun: {
+                  app_id: {
                     _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

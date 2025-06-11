@@ -47,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "あなたへのおすすめ",
 	"Menu_Section_Browse_PopularNew": "話題の新作",
 	"Menu_Section_Browse_FreeToPlay": "無料プレイ",
+	"Menu_Section_Browse_TopFreeToPlay": "売上上位の無料プレイゲーム",
 	"Menu_Section_Browse_Discounts": "割引",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "ウィッシュリストに追加済み",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "スペシャルイベント",
@@ -81,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "人気アイテム",
 	"Menu_SearchBar_SearchResults": "検索結果",
 	"Menu_SearchBar_YourTopGenres": "あなたのトップジャンル",
-	"Menu_SearchBar_BrowseBy": "絞り込み検索..."
+	"Menu_SearchBar_BrowseBy": "絞り込み検索...",
+	"Menu_Search": "検索",
+	"Menu_Label": "ストアメニュー"
 }`);
     },
   },

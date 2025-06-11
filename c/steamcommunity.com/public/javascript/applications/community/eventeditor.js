@@ -3,11 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        PublishContainer: "_1hjOmDUtmgTGQK43-ZlgrD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SearchResults: "_26iJ3c5EI_arYCNqRvcLNX",
       };
     },
@@ -173,16 +168,13 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PublishContainer: "_2tCY6WhL-As79rMJ0OnLbz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SummaryItems: "_12a_LkNOoLjY4U8GJXGiJr",
         ReachItems: "H_jRCccfsQh7wJDqpSFW",
         StatusRow: "SZwFXdjVvpVCLQbSx9W0N",
         StatusText: "_1NUKtMG9ZbBMEKZGUbo5dU",
         LinkRow: "_1WnQ1-TNrdTLC4CNy0LMal",
+        PublishOptionsCtn: "_379kpZ55vVRtg4v3mmyzjh",
+        PublishOption: "_2iQ1tjpuZUgm_7yak-mUME",
         VisibilityNote: "_2UnJcjbE6D6gpVyZQK1fpg",
         ReachSubject: "_3EQb8yhc8g_YREweH7REin",
         Future: "_5EyH71mHwoPLik7PPLwj6",
@@ -2849,6 +2841,7 @@
               _.createElement(_._, {
                 eventModel: this.props.eventModel,
                 partnerEventStore: _._,
+                onDeleteSuccessAndCloseDialog: () => this.props.refresh(),
               }),
               (0, _._)(_),
             );
@@ -3179,9 +3172,10 @@
             _ = _.useMemo(() => new _._(), []),
             _ = _.useMemo(() => _().CancelToken.source(), []),
             {
-              bIsLoading: _,
+              bIsFetching: _,
               nHiddenEventCount: _,
               rgEventModels: _,
+              fnRefetch: _,
             } = (0, _._)(_),
             {
               rgClanEventData: _,
@@ -3194,8 +3188,8 @@
               fnRefetch: _,
             } = (0, _._)(_, 10, _);
           _.useEffect(
-            () => (_(), () => _.cancel("EventListView to unload")),
-            [_, _],
+            () => (_(), _(), () => _.cancel("EventListView to unload")),
+            [_, _, _],
           );
           const _ = (0, _._)(_),
             _ = _.useMemo(() => {
@@ -3275,6 +3269,9 @@
                       gid: _.GID,
                       eventModel: _,
                       bShowEventMetaDataSizes: __webpack_require__,
+                      refresh: () => {
+                        _(), _();
+                      },
                     }),
                   );
               }
@@ -3408,6 +3405,7 @@
                 className: _().MainLists,
               },
               _.length > 0 &&
+                !_ &&
                 _.createElement(
                   "div",
                   {
@@ -3693,7 +3691,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4763,7 +4764,7 @@
               void 0 === _
                 ? void 0
                 : _.filter(Boolean).length) || 0,
-              _.GetEventModel().jsondata.sale_header_show_top_margin,
+              _.GetEventModel().jsondata.sale_header_disable_top_margin,
             ];
           });
         return _.createElement(
@@ -4842,9 +4843,9 @@
               ),
           _.createElement(_._, {
             checked: _,
-            label: "Show Sale Page Top Margin",
+            label: "Disable Sale Page Top Pixels",
             onChange: (_) => {
-              (_.GetEventModel().jsondata.sale_header_show_top_margin = _),
+              (_.GetEventModel().jsondata.sale_header_disable_top_margin = _),
                 _.SetDirty(_._.jsondata_sales);
             },
           }),
@@ -6414,10 +6415,8 @@
             ),
             _
               ? _.createElement(
-                  "div",
-                  {
-                    className: _.OpenGuidelinesBtnCtn,
-                  },
+                  _.Fragment,
+                  null,
                   _.createElement(
                     _._,
                     {
@@ -6428,10 +6427,8 @@
                   ),
                 )
               : _.createElement(
-                  "div",
-                  {
-                    className: _.OpenGuidelinesBtnCtn,
-                  },
+                  _.Fragment,
+                  null,
                   _.createElement(
                     _._,
                     {
@@ -6443,16 +6440,16 @@
                 ),
             Boolean(__webpack_require__) &&
               _.createElement(
-                "div",
-                {
-                  className: _.OpenGuidelinesBtnCtn,
-                },
+                _.Fragment,
+                null,
                 _.createElement(
                   _._,
                   {
-                    href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${__webpack_require__}`,
-                    className: (0, _._)(_.Button),
-                    bForceExternal: !0,
+                    onClick: (_) =>
+                      (0, _._)(
+                        _,
+                        `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${__webpack_require__}`,
+                      ),
                   },
                   (0, _._)("#EventEditor_SaleValveApproval_Request_Link"),
                 ),
@@ -14381,7 +14378,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
@@ -16566,7 +16562,7 @@
         return _.createElement(
           "div",
           {
-            className: _().FlexColumnContainer,
+            className: (0, _._)(_().FlexColumnContainer, _().PublishOption),
           },
           _.createElement(
             "div",
@@ -16690,7 +16686,6 @@
           ),
         );
       });
-      var _ = __webpack_require__("chunkid");
       class _ {
         GetVisibilityRounds(_, _) {
           return 0 == _
@@ -16785,10 +16780,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       const _ = 100;
       function _(_) {
         var _;
@@ -16809,7 +16801,10 @@
             : _.createElement(
                 "div",
                 {
-                  className: _().FlexColumnContainer,
+                  className: (0, _._)(
+                    _().FlexColumnContainer,
+                    _().PublishOption,
+                  ),
                 },
                 _.createElement(
                   "div",
@@ -16817,25 +16812,15 @@
                     className: _().EventEditorTextTitle,
                   },
                   (0, _._)("#EventPublishing_Replace_To"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#EventPublishing_Replace_To_ttip"),
-                  }),
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                    },
-                    (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                  ),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: (0, _._)(
-                      _().RightColumnContainer,
-                      _().PublishContainer,
-                    ),
+                    className: (0, _._)(_().RightColumnContainer),
                   },
+                  (0, _._)("#EventPublishing_Replace_To_Desc"),
+                  _.createElement("br", null),
+                  _.createElement("br", null),
                   _.createElement(_, {
                     editModel: __webpack_require__,
                   }),
@@ -17124,13 +17109,19 @@
               _.createElement(_, {
                 editModel: _,
               }),
-              _.createElement(_, {
-                editModel: _,
-                bTakePublishAction: !1,
-              }),
-              _.createElement(_, {
-                editModel: _,
-              }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.FlexRowContainer, _.PublishOptionsCtn),
+                },
+                _.createElement(_, {
+                  editModel: _,
+                  bTakePublishAction: !1,
+                }),
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
               _.createElement(_, {
                 eventType: _,
                 clanSteamID: __webpack_require__,
@@ -17734,231 +17725,211 @@
           ),
         );
       }
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments), (this.m_cancelSignal = _().CancelToken.source());
-        }
-        componentDidMount() {
-          _._.IS_CURATOR &&
-            _._.LoadCreatorHome(this.props.clanSteamID, this.m_cancelSignal);
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "Partner Events editor input pane unmounted",
-          );
-        }
-        BCanOnlyUploadBecauseSupportUser() {
-          const _ = _._.GetCreatorHome(this.props.clanSteamID);
-          if (_._.is_support && _._.CAN_UPLOAD_IMAGES && _._.IS_CURATOR && _) {
-            return !(
-              _.BHasClanAccountFlagSet(2) ||
-              _.BHasClanAccountFlagSet(1) ||
-              _.BHasClanAccountFlagSet(4) ||
-              _.GetNumFollowers() >= 15e3
-            );
-          }
-          return !1;
-        }
-        BIsSalePageFeatureVisible() {
-          let _ = _._.GetEditModel().GetEventModel();
-          if (_.BHasSaleEnabled()) return !0;
-          if (
-            _.jsondata.clone_from_event_gid &&
-            _.jsondata.clone_from_sale_enabled
-          )
-            return !0;
-          const _ = _._.GetCreatorHome(this.props.clanSteamID);
-          return !(!_ || !_.BHasClanAccountFlagSet(32));
-        }
-        render() {
-          var _;
-          let _ = _._.GetEditModel(),
-            _ = _.GetEventModel();
-          const _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel());
-          let _ = !_._.Get().BShowSaleEditorTab(_.GetEventModel());
-          _._.IS_CREATOR_HOME && (_ = !1);
-          const _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID),
-            _ = (0, _._)(),
-            _ = _.clanSteamID;
-          _._.LoadClanInfoForClanSteamID(_);
-          const _ = Boolean(
-              null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
-                void 0 === _
-                ? void 0
-                : _.has_rss_feed,
-            ),
-            _ = (_) =>
-              window.sessionStorage.setItem(
-                "editorCurrentTab",
-                `?tab=${_.key}`,
+      function _(_) {
+        var _;
+        const { bInitiatePublishDialog: __webpack_require__, clanSteamID: _ } =
+            _,
+          _ = (0, _._)("EventInputPane"),
+          _ = (0, _._)();
+        (0, _.useEffect)(() => {
+          _._.IS_CURATOR && _._.LoadCreatorHome(_, _);
+        }, [_, _]);
+        const _ = (0, _.useCallback)(() => {
+            const _ = _._.GetCreatorHome(_);
+            if (
+              _._.is_support &&
+              _._.CAN_UPLOAD_IMAGES &&
+              _._.IS_CURATOR &&
+              _
+            ) {
+              return !(
+                _.BHasClanAccountFlagSet(2) ||
+                _.BHasClanAccountFlagSet(1) ||
+                _.BHasClanAccountFlagSet(4) ||
+                _.GetNumFollowers() >= 15e3
+              );
+            }
+            return !1;
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            const _ = _.GetEventModel();
+            if (_.BHasSaleEnabled()) return !0;
+            if (
+              _.jsondata.clone_from_event_gid &&
+              _.jsondata.clone_from_sale_enabled
+            )
+              return !0;
+            const _ = _._.GetCreatorHome(_);
+            return !(!_ || !_.BHasClanAccountFlagSet(32));
+          }, [_, _]),
+          _ = _.GetEventModel(),
+          _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel());
+        let _ = !_._.Get().BShowSaleEditorTab(_.GetEventModel());
+        _._.IS_CREATOR_HOME && (_ = !1);
+        const _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID),
+          _ = (0, _._)();
+        _._.LoadClanInfoForClanSteamID(_);
+        const _ = Boolean(
+            null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
+              void 0 === _
+              ? void 0
+              : _.has_rss_feed,
+          ),
+          _ = (_) =>
+            window.sessionStorage.setItem("editorCurrentTab", `?tab=${_.key}`),
+          _ = [
+            {
+              name: (0, _._)("#EventEditor_Description_tab"),
+              key: "description",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                  bInitiatePublishDialog: __webpack_require__,
+                  bCanManuallyTagAssociatedApps: _,
+                }),
               ),
-            _ = [
-              {
-                name: (0, _._)("#EventEditor_Description_tab"),
-                key: "description",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                    bInitiatePublishDialog: this.props.bInitiatePublishDialog,
-                    bCanManuallyTagAssociatedApps: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#EventEditor_Visibility_Title"),
-                key: "options",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                  _.createElement("div", {
-                    className: _().ClearThings,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#EventEditor_Artwork"),
-                key: "artwork",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                hidden: !_._.CAN_UPLOAD_IMAGES,
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(_, {
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#EventEditor_Visibility_Title"),
+              key: "options",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
                   editModel: _,
                 }),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#Broadcast_tab"),
-                key: "broadcast",
-                hidden:
-                  !_._.CAN_UPLOAD_IMAGES || _.GetClanAccountID() == (0, _._)(),
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name:
-                  (__webpack_require__.BHasEmailEnabled() ? "" : "(VO) ") +
-                  (0, _._)("#EventEmail_TabTitle"),
-                key: "email",
-                hidden: _,
-                status:
-                  _.GetClanAccountID() == (0, _._)()
-                    ? _.createElement(_, {
-                        fnGetStatus: _._,
-                      })
-                    : void 0,
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name:
-                  (this.BIsSalePageFeatureVisible() ? "" : "(VO) ") +
-                  (0, _._)("#Sale_TabTitle"),
-                key: "sale",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
+                _.createElement("div", {
+                  className: _().ClearThings,
                 }),
-                statusToolTip: null == _ ? void 0 : _.ttip,
-                hidden: _,
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#Button_Publish"),
-                key: "publishing",
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: "(VO) Debug",
-                key: "debug",
-                hidden: !_.valve_admin,
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: "(VO) Stats",
-                key: "stats",
-                hidden:
-                  !_.valve_admin ||
-                  !_.GID ||
-                  !__webpack_require__.BHasSaleEnabled(),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-            ];
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_._, {
-              tabs: _,
-            }),
-            _.createElement("div", {
-              className: _().ClearThings,
-            }),
-          );
-        }
-      };
+              ),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#EventEditor_Artwork"),
+              key: "artwork",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              hidden: !_._.CAN_UPLOAD_IMAGES,
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(_, {
+                editModel: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#Broadcast_tab"),
+              key: "broadcast",
+              hidden:
+                !_._.CAN_UPLOAD_IMAGES || _.GetClanAccountID() == (0, _._)(),
+              vo_warning: _ && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name:
+                (_.BHasEmailEnabled() ? "" : "(VO) ") +
+                (0, _._)("#EventEmail_TabTitle"),
+              key: "email",
+              hidden: _,
+              status:
+                _.GetClanAccountID() == (0, _._)()
+                  ? _.createElement(_, {
+                      fnGetStatus: _._,
+                    })
+                  : void 0,
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: (_() ? "" : "(VO) ") + (0, _._)("#Sale_TabTitle"),
+              key: "sale",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              statusToolTip: null == _ ? void 0 : _.ttip,
+              hidden: _,
+              vo_warning: _ && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#Button_Publish"),
+              key: "publishing",
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: "(VO) Debug",
+              key: "debug",
+              hidden: !_.valve_admin,
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_._, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: "(VO) Stats",
+              key: "stats",
+              hidden: !_.valve_admin || !_.GID || !_.BHasSaleEnabled(),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+          ];
+        return _.createElement(
+          _,
+          null,
+          _.createElement(_._, {
+            tabs: _,
+          }),
+          _.createElement("div", {
+            className: _().ClearThings,
+          }),
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = _.useState();
         return _.createElement(

@@ -121,6 +121,130 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapPartnerToContactInfo = new Map();
+        m_mapPromisePartnerLoading = new Map();
+        async FetchValvePartnerContacts(_) {
+          const _ =
+              _._.PARTNER_BASE_URL + "actions/ajaxgetpartnervalvecontacts",
+            _ = {
+              sessionid: _._.SESSIONID,
+              strPartnerIDs: _.join(","),
+            },
+            _ = await _().get(_, {
+              params: _,
+              withCredentials: !0,
+            });
+          return 200 == _?.status && 1 == _?.data.success
+            ? (_.data.contacts.forEach((_) => {
+                this.m_mapPartnerToContactInfo.has(_.partnerid) ||
+                  this.m_mapPartnerToContactInfo.set(_.partnerid, []),
+                  this.m_mapPartnerToContactInfo.get(_.partnerid).push(_);
+              }),
+              _.data.contacts)
+            : [];
+        }
+        async LoadValvePartnerContact(_) {
+          return _
+            ? this.m_mapPartnerToContactInfo.has(_)
+              ? this.m_mapPartnerToContactInfo.get(_)
+              : (this.m_mapPromisePartnerLoading.has(_) ||
+                  this.m_mapPromisePartnerLoading.set(
+                    _,
+                    this.InternalLoadValvePartnerContact(_),
+                  ),
+                this.m_mapPromisePartnerLoading.get(_))
+            : [];
+        }
+        async InternalLoadValvePartnerContact(_) {
+          return this.FetchValvePartnerContacts([_]);
+        }
+        GetPartnerContact(_) {
+          return this.m_mapPartnerToContactInfo.get(_);
+        }
+        GetPartnerContactAccountsByFilter(_, _, _) {
+          const _ = this.m_mapPartnerToContactInfo.get(_);
+          if (_?.length > 0) {
+            const _ = _.filter((_) => !_.appid || _.appid == _)
+              .filter(
+                (_) =>
+                  !_ ||
+                  "any" == _ ||
+                  ("business" == _ && _.is_business_contact) ||
+                  ("tech" == _ && _.is_tech_contact),
+              )
+              .map((_) => new _._(_.steamid).GetAccountID());
+            return _._(_);
+          }
+          return [];
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_PartnerValveContactStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        Init() {
+          const _ = (0, _._)(
+            "partner_valve_contact_list",
+            "application_config",
+          );
+          _ &&
+            _.forEach((_) => {
+              this.m_mapPartnerToContactInfo.has(_.partnerid)
+                ? this.m_mapPartnerToContactInfo.get(_.partnerid).push(_)
+                : this.m_mapPartnerToContactInfo.set(_.partnerid, [_]);
+            });
+        }
+      }
+      function _(_) {
+        return ["PartnerValveContactByPartnerID", _];
+      }
+      function _(_, _) {
+        return _.prefetchQuery({
+          queryKey: _(_),
+          queryFn: async () => _.Get().LoadValvePartnerContact(_),
+        });
+      }
+      function _(_, _, _) {
+        return _.Get().GetPartnerContactAccountsByFilter(_, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = (0, _.useState)(null),
+          _ = (function (_) {
+            const { data: _, isLoading: _ } = (0, _._)({
+              queryKey: _(_),
+              queryFn: async () => _.Get().LoadValvePartnerContact(_),
+            });
+            return _ ? null : _;
+          })(_);
+        return (
+          (0, _.useEffect)(() => {
+            _ && _(_.Get().GetPartnerContactAccountsByFilter(_, _, _));
+          }, [_, _, _, _]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           MeetSteamRoutes: () => _,
@@ -147,6 +271,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2149,6 +2274,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(),
@@ -2260,6 +2387,7 @@
               ),
             [_, __webpack_require__],
           ),
+          _ = (0, _._)(),
           { bComplete: _, nCount: _ } = (function (_) {
             const [_, __webpack_require__] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(0),
@@ -2277,6 +2405,7 @@
                           queryKey: _(_),
                           queryFn: async () => _(_),
                         }),
+                        (0, _._)(_, _),
                       ]),
                       ++_,
                       _(_);
@@ -2291,12 +2420,17 @@
             );
           })(_);
         return _
-          ? _ && 0 != _.length
-            ? _.createElement(_, {
-                conf: _,
-                rgSurveyInterest: _,
+          ? _?.length
+            ? _ && 0 != _.length
+              ? _.createElement(_, {
+                  conf: _,
+                  rgSurveyInterest: _,
+                })
+              : _.createElement("div", null, "No users with interest")
+            : _.createElement(_._, {
+                position: "center",
+                string: "Loading Valve Account info (this shouldn't take long)",
               })
-            : _.createElement("div", null, "No users with interest")
           : _.createElement(_._, {
               position: "center",
               string: `Loading ${_} of ${_.length}`,
@@ -2316,6 +2450,7 @@
                 _.push([
                   "AccountID",
                   "Partner ID",
+                  "Valve Partner Contacts",
                   "Email Override",
                   "Account Name",
                   "Name",
@@ -2327,6 +2462,7 @@
                   "Partner Name",
                   "Gross USD",
                   "Best AppID",
+                  "Best AppID Name",
                   "Long Term Sales Rank",
                 ]),
                   __webpack_require__.forEach((_) => {
@@ -2336,6 +2472,10 @@
                     const _ = (0, _._)(_.GetAccountID()),
                       _ = _.results.partner_id;
                     __webpack_require__.push("" + _);
+                    const _ = (0, _._)(_).map(
+                      (_) => (0, _._)(_, _)?.displayName || "" + _,
+                    );
+                    __webpack_require__.push(_.join("|"));
                     const _ = _.results.email_override || "";
                     __webpack_require__.push("" + _),
                       __webpack_require__.push(
@@ -2370,9 +2510,13 @@
                       ? (__webpack_require__.push("" + _(_.strGrossUSD)),
                         __webpack_require__.push("" + _.nBestAppID),
                         __webpack_require__.push(
+                          _._.Get().GetApp(_.nBestAppID)?.GetName(),
+                        ),
+                        __webpack_require__.push(
                           "" + _.nBestAppLongTermSalesRank,
                         ))
                       : (__webpack_require__.push(""),
+                        __webpack_require__.push(""),
                         __webpack_require__.push(""),
                         __webpack_require__.push("")),
                       _.push(_);
@@ -2397,6 +2541,7 @@
                 _.createElement("th", null, "Name and Email"),
                 _.createElement("th", null, "Have you met steam?"),
                 _.createElement("th", null, "Partner"),
+                _.createElement("th", null, "Valve Contacts"),
                 _.createElement("th", null, "Partner Revenue"),
                 _.createElement("th", null, "Biggest Game"),
                 _.createElement("th", null, "Long Term Sales Rank"),
@@ -2485,7 +2630,9 @@
               enabled: Boolean(_),
             });
             return _.isLoading ? null : _.data;
-          })(_);
+          })(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
@@ -2493,6 +2640,11 @@
             "td",
             null,
             __webpack_require__ ? __webpack_require__?.name + ` (${_})` : _,
+          ),
+          _.createElement(
+            "td",
+            null,
+            _?.map((_) => (0, _._)(_, _)?.displayName || "" + _).join(","),
           ),
           _.createElement("td", null, "$", _?.strGrossUSD),
           _.createElement(
@@ -2529,13 +2681,15 @@
       function _(_) {
         const { rgSurveyInterest: _ } = _,
           _ = (0, _._)(),
-          _ = (0, _.useMemo)(
-            () =>
-              _.filter((_) =>
-                Boolean(_.results?.suggestion?.trim().length > 0),
-              ),
-            [_],
-          );
+          _ =
+            ((0, _._)(),
+            (0, _.useMemo)(
+              () =>
+                _.filter((_) =>
+                  Boolean(_.results?.suggestion?.trim().length > 0),
+                ),
+              [_],
+            ));
         return _.createElement(
           _._,
           {
@@ -2610,6 +2764,7 @@
                 null,
                 _.createElement("th", null, "Name and Email"),
                 _.createElement("th", null, "Partner"),
+                _.createElement("th", null, "Valve Contacts"),
                 _.createElement("th", null, "Partner Revenue"),
                 _.createElement("th", null, "Biggest Game"),
                 _.createElement("th", null, "Long Term Sales Rank"),
@@ -2650,7 +2805,6 @@
           _.createElement("td", null, _.results.suggestion.trim()),
         );
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         loadUserEmailAndLangs: async (_) =>
           await (function () {

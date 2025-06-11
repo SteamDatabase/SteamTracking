@@ -1048,13 +1048,15 @@
           }, [_]),
           _ = _.useCallback((_) => {
             _(!1), _?.stopPropagation();
-          }, []);
+          }, []),
+          _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             _._,
             {
+              "aria-labelledby": _,
               onClick: _,
               arrDiscoveryApps: _,
               bDisableAnimation: _,
@@ -1063,6 +1065,7 @@
             _.createElement(_, null),
             !_ &&
               _.createElement(_, {
+                _: _,
                 strQueueDescriptionOverride: _,
               }),
           ),
@@ -1079,11 +1082,12 @@
         );
       }
       function _(_) {
-        const { strQueueDescriptionOverride: _ } = _,
+        const { strQueueDescriptionOverride: _, _: __webpack_require__ } = _,
           _ = _ ?? (0, _._)("#DiscoveryQueue_WidgetHeader");
         return _.createElement(
           "div",
           {
+            _: __webpack_require__,
             className: (0, _._)(_().WidgetHeaderCtn, "WidgetHeaderCtn"),
           },
           _.createElement(

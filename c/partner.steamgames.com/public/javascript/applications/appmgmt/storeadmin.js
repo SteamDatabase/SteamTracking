@@ -228,6 +228,7 @@
         ExtraAssetChoice: "_13xCWTST4J-cgOyz6kwfIJ",
         Selected: "QRTy6qng-IEOMiXMxwVtY",
         ExtraAssetStack: "doWjXy-F7LwBxlzCUBAGC",
+        AltTextBtn: "_1JdiJTPLBYcAxWzLqjYV5P",
         StackedImageCtn: "_3gElE6VZJ9uU4-RaFC8Ra8",
         StackedImage: "_2hABNX3YzXj9JYRLANr-hg",
         "Image-0": "_3cPT5-4vXp4iE6v0qwHc23",
@@ -250,14 +251,6 @@
         Name: "lGJk6OffakeBbm9rvukuH",
         LocalizedAssetUploadWarning: "_26-vmpZD8b_p2ApFLrcji8",
         LocalizedAssetUploadButton: "FrlNPlPwQkjgzk604bAC4",
-        AltTextGrid: "_11su_JQ6bIR2Y5Y-HXsMjG",
-        AltTextHeader: "_1L02Ehdw7vvzV72zkxkrGQ",
-        AltTextName: "LSLNQo0JXd1gmYVpX2lpI",
-        AltTextInput: "RhZs0wFCcxhu1qSSpW9El",
-        AltTextRow: "_10cb7y-PwrO4JuuBuLNCZQ",
-        AltTextImage: "_2IzTROu1kwFs_86GfRQ2TN",
-        AltTextFailed: "_12Ou1sgTchaLAocFFpIwd",
-        AltTextMutateFailed: "_2PeF8JJAuPqEnIkcFV9qbc",
       };
     },
     chunkid: (module) => {
@@ -294,6 +287,20 @@
     },
     chunkid: (module) => {
       module.exports = {
+        AltTextDialogContent: "FSO6VV5iXmPANFhTj7Bzp",
+        AltTextDialogDescription: "VsXbYkSe5CrbxkE5GhQfI",
+        AltTextGrid: "_1DSTal-SoqU7Zf0nk0FmRl",
+        AltTextHeader: "DxwrrF6sruBZ-N_Q98dP9",
+        AltTextImage: "_3_3Dqx1hIyrpPPlER58SWu",
+        AltTextName: "iIe8caS0kpCFy1oLCOUCE",
+        AltTextInput: "_160Whafs351qmmXz5c-5_b",
+        AltTextRow: "_1okAG3zavPs6wvi1wP1-tW",
+        AltTextFailed: "_3Az0YOAE-dFfsOyEkDyEoR",
+        AltTextMutateFailed: "tyh1ewxCBrVfWQeIlU505",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         AntiCheatDropDown: "_1Ein4m5qBonpTJl1GbVcV_",
         OtherSerivceName: "_2wW0IMGaGmFIjizuMml3mB",
         KernelMode: "iAq_jMg3JrFT_qjIU6gSL",
@@ -321,6 +328,11 @@
         ImageCtn: "kbtD90I1ou1gx_xO8tcXC",
         ImageSrc: "_1Md62ii5C2Q4QaiqWoEdhf",
         ImageCheckboxes: "_3eo-7msJ5jV20gub1qOBn",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ValveOnly: "eUTKmOUlH3cY_22TnBS8k",
       };
     },
     chunkid: (module) => {
@@ -1739,7 +1751,7 @@
                   onClick: _,
                   tooltip: (0, _._)("#StoreAdmin_GameDescription_RemoveImage"),
                 },
-                _.createElement(_.sED, null),
+                _.createElement(_._, null),
               ),
             ),
             _,
@@ -1770,7 +1782,9 @@
                     "#StoreAdmin_GameDescription_EditImageDetails",
                   ),
                 },
-                _.createElement(_.qzq, null),
+                _.createElement(_.vCk, {
+                  className: "SVGIcon_Button",
+                }),
               )))
             : _ &&
               (0, _._)(_) &&
@@ -1782,7 +1796,7 @@
                     "#StoreAdmin_GameDescription_EditImageDetails_Legacy",
                   ),
                 },
-                _.createElement(_.MJR, null),
+                _.createElement(_.R2D, null),
               )),
           {
             elLocalizedImageGroupDialog: _,
@@ -2099,100 +2113,18 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _, _] = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              hideModal: _,
-            }),
-          _.some(_._) &&
-            _.createElement(
-              _._,
-              {
-                onClick: _,
-              },
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Button"),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _.ExtraAssetsPageList,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ExtraAssetsGrid,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: (0, _._)(_),
-                  extraAsset: _,
-                  primaryLanguage: _,
-                }),
-              ),
-            ),
+          _ = _.useMemo(() => _._(_.filter(_._), _._), [_]),
+          _ = _.useMemo(
+            () =>
+              _.filter(_._).map((_) => ({
+                key: (0, _._)(_),
+                caption: (0, _._)(_),
+                mapAltText: _.alt_text,
+              })),
+            [_],
           ),
-          _.createElement(_, null),
-        );
-      }
-      function _(_) {
-        const { hideModal: _ } = _,
           _ = (0, _._)(),
-          [_, _] = _.useState(!0),
-          { bAppHasSteamChinaToolsEnabled: _ } = (0, _._)(),
-          _ = _.useMemo(() => (0, _._)(_), [_]),
-          {
-            strActiveLanguage: _,
-            eActiveLang: _,
-            rctLanguageSelect: _,
-            mapValues: _,
-          } = (function (_) {
-            const {
-                strActiveLanguage: _,
-                mapValues: _,
-                rctLanguageSelect: _,
-                setActiveLanguage: _,
-              } = (0, _._)(_, [], null, null),
-              _ = (0, _._)(_, 0);
-            return (
-              _.useEffect(() => {
-                _._.Get().SetCurEditLanguage(_);
-              }, [_]),
-              (0, _._)(_._.Get().GetCallback(), (_) => _((0, _._)(_))),
-              {
-                strActiveLanguage: _,
-                eActiveLang: _,
-                rctLanguageSelect: _,
-                mapValues: _,
-              }
-            );
-          })(_),
-          _ = (0, _._)(() => new Map()),
-          _ = (0, _._)(() => new Map());
-        _.useEffect(() => {
-          if (_) {
-            _(!1);
-            for (const _ of __webpack_require__.filter(_._))
-              _.set((0, _._)(_), {
-                ..._.alt_text,
-              }),
-                _.set((0, _._)(_), {
-                  ..._.alt_text,
-                });
-          }
-        }, [_, _, _, _]);
-        const _ = _.useCallback(() => {
-          for (const _ of _.keys()) {
-            const _ = Array.from(_.values()).some((_) => _ in _);
-            _.get(_).Set(_ ? "yes" : "");
-          }
-        }, [_, _, _]);
-        _.useEffect(() => _(), [_]);
-        const _ = (0, _._)(),
-          _ = (_) => _.get((0, _._)(_))?.[_] ?? "",
+          [_, _, _] = (0, _._)(),
           { mutateAsync: _, isPending: _ } = (function () {
             const _ = (0, _._)("ajaxmodifyextraassets"),
               _ = (0, _._)();
@@ -2235,227 +2167,64 @@
                 );
               },
             });
-          })(),
-          _ = _._.set(),
-          _ = () => {
-            _ || _();
-          };
+          })();
         return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            _._,
-            {
-              onEscKeypress: _,
-              bDisableBackgroundDismiss: _,
-            },
+          _.Fragment,
+          null,
+          _ &&
+            _.createElement(_._, {
+              entries: _,
+              isLoading: !1,
+              hideModal: _,
+              mutateAltTextAsync: async (_, _) =>
+                !1 !==
+                (await _({
+                  strExtraAssetFileName: _,
+                  mapAltText: _,
+                })),
+              isMutatePending: _,
+              fnGetImage: (_, _) =>
+                _.createElement(_, {
+                  extraAsset: __webpack_require__.get(_),
+                  caption: !1,
+                  controls: !1,
+                  primaryLanguage: _,
+                }),
+            }),
+          _.some(_._) &&
             _.createElement(
-              _._,
+              "div",
               {
-                classNameContent: _.ExtraAssetDialogContent,
+                className: _.AltTextBtn,
               },
               _.createElement(
                 _._,
-                null,
-                (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Title"),
-              ),
-              _.createElement(
-                "div",
                 {
-                  className: _.ExtraAssetsDialogDescription,
+                  onClick: _,
                 },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#StoreAdmin_ExtraAssetUpload_EditAltText_Desc"),
-                ),
-                _,
+                (0, _._)("#StoreAdmin_EditAltText_Button"),
               ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  "table",
-                  {
-                    className: (0, _._)(_.AltTextGrid),
-                  },
-                  _.createElement(
-                    "thead",
-                    {
-                      className: (0, _._)(_.AltTextHeader),
-                    },
-                    _.createElement(
-                      "tr",
-                      null,
-                      _.createElement("th", null),
-                      _.createElement(
-                        "th",
-                        {
-                          className: (0, _._)(_.AltTextName),
-                        },
-                        (0, _._)(
-                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAssetName",
-                        ),
-                      ),
-                      _.createElement(
-                        "th",
-                        {
-                          className: (0, _._)(_.AltTextInput),
-                        },
-                        (0, _._)(
-                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAltText",
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "tbody",
-                    null,
-                    __webpack_require__.filter(_._).map((_) =>
-                      _.createElement(_, {
-                        key: `${(0, _._)(_)}-${_}`,
-                        lang: _,
-                        extraAsset: _,
-                        altText: _(_),
-                        setAltText: (_) =>
-                          ((_, _) => {
-                            let _ = _.get((0, _._)(_));
-                            _ || ((_ = {}), _.set((0, _._)(_), _)),
-                              _.trim().length > 0 ? (_[_] = _) : delete _[_],
-                              _(),
-                              _();
-                          })(_, _),
-                        failedMutate: _.has((0, _._)(_)),
-                      }),
-                    ),
-                  ),
-                ),
-                _ && _.createElement(_._, null),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.size > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AltTextMutateFailed,
-                    },
-                    (0, _._)(
-                      "#StoreAdmin_ExtraAssetUpload_EditAltText_MutateFailed",
-                    ),
-                  ),
-                _.createElement(_._, {
-                  onCancel: _,
-                  onOK: (_) => {
-                    _.preventDefault(),
-                      (async () => {
-                        try {
-                          _.clear();
-                          for (const [_, _] of _.entries())
-                            _(_.get(_), _.get(_)) ||
-                              (!1 !==
-                              (await _({
-                                strExtraAssetFileName: _,
-                                mapAltText: _,
-                              }))
-                                ? _.set(_, {
-                                    ..._,
-                                  })
-                                : _.add(_));
-                          0 == _.size && _();
-                        } catch (_) {
-                          console.error("Some mutations failed", _);
-                        }
-                      })();
-                  },
-                  bOKDisabled: _ || _(_, _),
-                  bCancelDisabled: _,
-                  strOKText: (0, _._)(
-                    "#StoreAdmin_ExtraAssetUpload_EditAltText_Save",
-                  ),
+            ),
+          _.createElement(
+            "div",
+            {
+              className: _.ExtraAssetsPageList,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.ExtraAssetsGrid,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: (0, _._)(_),
+                  extraAsset: _,
+                  primaryLanguage: _,
                 }),
               ),
             ),
           ),
-        );
-      }
-      function _(_, _) {
-        if (Object.keys(_).length !== Object.keys(_).length) return !1;
-        for (const _ of Object.keys(_)) if (_[_] !== _[_]) return !1;
-        return !0;
-      }
-      function _(_, _) {
-        if (_.size !== _.size) return !1;
-        for (const [__webpack_require__, _] of _) {
-          const _ = _.get(__webpack_require__);
-          if (!_ || !_(_, _)) return !1;
-        }
-        return !0;
-      }
-      function _(_) {
-        const {
-            lang: _,
-            extraAsset: __webpack_require__,
-            altText: _,
-            setAltText: _,
-            failedMutate: _,
-          } = _,
-          [_, _] = _.useState(_);
-        return _.createElement(
-          "tr",
-          {
-            className: _.AltTextRow,
-          },
-          _.createElement(
-            "td",
-            {
-              className: _.AltTextImage,
-            },
-            _.createElement(_, {
-              extraAsset: __webpack_require__,
-              caption: !1,
-              controls: !1,
-              primaryLanguage: _,
-            }),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _.AltTextName,
-            },
-            (0, _._)(__webpack_require__),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.AltTextFailed,
-                },
-                (0, _._)(
-                  "#StoreAdmin_ExtraAssetUpload_EditAltText_EntryMutateFailed",
-                ),
-              ),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _.AltTextInput,
-            },
-            _.createElement(_._, {
-              type: "text",
-              placeholder: (0, _._)(
-                "#StoreAdmin_ExtraAssetUpload_EditAltText_Placeholder",
-                (0, _._)(`#Language_${(0, _._)(_)}`),
-              ),
-              value: _,
-              onChange: (_) => {
-                return (_ = _.target.value), _(_), void _(_);
-                var _;
-              },
-            }),
-          ),
+          _.createElement(_, null),
         );
       }
       function _(_) {
@@ -2642,7 +2411,7 @@
                       "#StoreAdmin_GameDescription_DeleteAsset",
                     ),
                   },
-                  _.createElement(_.sED, null),
+                  _.createElement(_._, null),
                 ),
               ),
             _.createElement(
@@ -3295,8 +3064,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3467,6 +3238,27 @@
         const _ = _.useContext(_);
         return (0, _._)(_?.strActiveLanguage, 0);
       }
+      function _(_) {
+        const {
+            strActiveLanguage: _,
+            mapValues: __webpack_require__,
+            rctLanguageSelect: _,
+            setActiveLanguage: _,
+          } = _(_, [], null, null),
+          _ = (0, _._)(_, 0);
+        return (
+          _.useEffect(() => {
+            _._.Get().SetCurEditLanguage(_);
+          }, [_]),
+          (0, _._)(_._.Get().GetCallback(), (_) => _((0, _._)(_))),
+          {
+            strActiveLanguage: _,
+            eActiveLang: _,
+            rctLanguageSelect: _,
+            mapValues: __webpack_require__,
+          }
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3485,16 +3277,34 @@
       class _ {
         m_nodes = [];
         m_schema;
-        constructor(_) {
-          this.m_schema = _;
+        m_bConvertNewlinesToBR;
+        constructor(_, _) {
+          (this.m_schema = _), (this.m_bConvertNewlinesToBR = _);
         }
         AppendText(_, _) {
-          let _ = 0;
-          for (let _ = _.indexOf("\n", _); -1 !== _; _ = _.indexOf("\n", _))
-            _ != _ && this.m_nodes.push(this.m_schema.text(_.substring(_, _))),
-              this.m_nodes.push(this.m_schema.nodes.hard_break.createChecked()),
-              (_ = _ + 1);
-          _ < _.length && this.m_nodes.push(this.m_schema.text(_.substring(_)));
+          _.length &&
+            (this.m_bConvertNewlinesToBR
+              ? this.m_nodes.push(
+                  ...(function (_, _) {
+                    const _ = [];
+                    let _ = 0;
+                    for (
+                      let _ = _.indexOf("\n", _);
+                      -1 !== _;
+                      _ = _.indexOf("\n", _)
+                    )
+                      _ != _ &&
+                        __webpack_require__.push(_.text(_.substring(_, _))),
+                        __webpack_require__.push(
+                          _.nodes.hard_break.createChecked(),
+                        ),
+                        (_ = _ + 1);
+                    _ < _.length &&
+                      __webpack_require__.push(_.text(_.substring(_)));
+                    return _;
+                  })(_, this.m_schema),
+                )
+              : this.m_nodes.push(this.m_schema.text(_)));
         }
         AppendNode(_) {
           this.m_nodes.push(_);
@@ -3511,8 +3321,12 @@
       class _ extends _._ {
         m_schemaConfig;
         m_mapPMBBNodes = new Map();
-        constructor(_) {
-          super(_.bbcode_dictionary, () => new _(_.pm_schema)),
+        constructor(_, _) {
+          const { bConvertNewlinesToBR: __webpack_require__ = !1 } = _;
+          super(
+            _.bbcode_dictionary,
+            () => new _(_.pm_schema, __webpack_require__),
+          ),
             (this.m_schemaConfig = _),
             this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
               "node" in _.Constructor &&
@@ -3758,9 +3572,10 @@
         m_fnCommitChanges;
         m_view;
         m_state;
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
+          const { parser: _ } = _ ?? {};
           (this.m_schemaConfig = _),
-            (this.m_bbcodeParser = new _(_)),
+            (this.m_bbcodeParser = new _(_, _ ?? {})),
             (this.m_bbcode = _),
             (this.m_fnCommitChanges = _),
             (this.m_state = this.ConstructState());
@@ -5464,7 +5279,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = new _._();
+      const _ = new _._(),
+        _ = {
+          parser: {
+            bConvertNewlinesToBR: !0,
+          },
+        };
       function _(_) {
         const {
             language: _,
@@ -5595,7 +5415,8 @@
           [_] = _.useState(() => new Map()),
           [_, _] = _.useState();
         _.useEffect(() => {
-          _.has(_) || _.set(_, new _(_, _.Value, (_) => _.Set(_))), _(_.get(_));
+          _.has(_) || _.set(_, new _(_, _.Value, (_) => _.Set(_), _)),
+            _(_.get(_));
         }, [_, _, _]),
           _(_, {
             msAutosaveTimeout: 5e3,
@@ -5830,6 +5651,301 @@
             nodeType: _.pm_schema.nodes.image,
           }),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            hideModal: _,
+            entries: __webpack_require__,
+            isLoading: _,
+            fnRefetch: _,
+            mutateAltTextAsync: _,
+            isMutatePending: _,
+            fnGetImage: _,
+          } = _,
+          { bAppHasSteamChinaToolsEnabled: _ } = (0, _._)(),
+          _ = _.useMemo(() => (0, _._)(_), [_]),
+          {
+            strActiveLanguage: _,
+            eActiveLang: _,
+            rctLanguageSelect: _,
+            mapValues: _,
+          } = (0, _._)(_),
+          [_, _] = _.useState(new Map()),
+          [_, _] = _.useState(new Map());
+        _.useEffect(() => {
+          const _ = new Map(),
+            _ = new Map();
+          for (const _ of __webpack_require__)
+            _.set(_.key, structuredClone(_)), _.set(_.key, structuredClone(_));
+          _(_), _(_);
+        }, [__webpack_require__]);
+        const _ = _.useCallback(() => {
+          for (const _ of _.keys()) {
+            const _ = Array.from(_.values()).some(
+              (_) => _.mapAltText && _ in _.mapAltText,
+            );
+            _.get(_).Set(_ ? "yes" : "");
+          }
+        }, [_, _, _]);
+        _.useEffect(() => _(), [_]);
+        const _ = (0, _._)(),
+          _ = _._.set(),
+          _ = _ || _,
+          _ = () => {
+            _ || _();
+          },
+          _ = Array.from(_.values()).some((_) => null != _.caption);
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(
+            _._,
+            {
+              onEscKeypress: _,
+              bDisableBackgroundDismiss: _,
+            },
+            _.createElement(
+              _._,
+              {
+                classNameContent: _.AltTextDialogContent,
+              },
+              _.createElement(
+                _._,
+                null,
+                (0, _._)("#StoreAdmin_EditAltText_Title"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.AltTextDialogDescription,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)("#StoreAdmin_EditAltText_Desc"),
+                  ),
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)("#StoreAdmin_EditAltText_Desc2"),
+                  ),
+                ),
+                _,
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  "table",
+                  {
+                    className: (0, _._)(_.AltTextGrid),
+                  },
+                  _.createElement(
+                    "thead",
+                    {
+                      className: (0, _._)(_.AltTextHeader),
+                    },
+                    _.createElement(
+                      "tr",
+                      null,
+                      _.createElement("th", {
+                        className: (0, _._)(_.AltTextImage),
+                      }),
+                      _ &&
+                        _.createElement(
+                          "th",
+                          {
+                            className: (0, _._)(_.AltTextName),
+                          },
+                          (0, _._)("#StoreAdmin_EditAltText_ColAssetName"),
+                        ),
+                      _.createElement(
+                        "th",
+                        {
+                          className: (0, _._)(_.AltTextInput),
+                        },
+                        (0, _._)("#StoreAdmin_EditAltText_ColAltText"),
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "tbody",
+                    null,
+                    !_ &&
+                      Array.from(_.values()).map((_) => {
+                        return _.createElement(_, {
+                          key: `${_.key}-${_}`,
+                          lang: _,
+                          caption: _.caption,
+                          image: _(_.key, _),
+                          altText:
+                            ((_ = _.key), _.get(_)?.mapAltText?.[_] ?? ""),
+                          setAltText: (_) =>
+                            ((_, _) => {
+                              let _ = _.get(_);
+                              _ || ((_ = {}), _.set(_, _)),
+                                _.mapAltText || (_.mapAltText = {}),
+                                _.trim().length > 0
+                                  ? (_.mapAltText[_] = _)
+                                  : delete _.mapAltText[_],
+                                _(),
+                                _();
+                            })(_.key, _),
+                          failedMutate: _.has(_.key),
+                          showCaptionColumn: _,
+                        });
+                        var _;
+                      }),
+                  ),
+                ),
+                _ && _.createElement(_._, null),
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.size > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.AltTextMutateFailed,
+                    },
+                    (0, _._)("#StoreAdmin_EditAltText_MutateFailed"),
+                  ),
+                _.createElement(_._, {
+                  onCancel: _,
+                  onOK: (_) => {
+                    _.preventDefault(),
+                      (async () => {
+                        try {
+                          _.clear();
+                          for (const [_, _] of _.entries()) {
+                            if (_(_.mapAltText, _.get(_).mapAltText)) continue;
+                            const _ = {
+                              ..._.mapAltText,
+                            };
+                            for (const _ of Object.keys(
+                              _.get(_).mapAltText ?? {},
+                            ))
+                              _ in _.mapAltText || (_[_] = "");
+                            (await _(_, _))
+                              ? _.set(_, {
+                                  ..._,
+                                })
+                              : _.add(_);
+                          }
+                          _?.(), 0 == _.size && _();
+                        } catch (_) {
+                          console.error("Some mutations failed", _);
+                        }
+                      })();
+                  },
+                  bOKDisabled: _ || _(_, _),
+                  bCancelDisabled: _,
+                  strOKText: (0, _._)("#StoreAdmin_EditAltText_Save"),
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            lang: _,
+            image: __webpack_require__,
+            caption: _,
+            altText: _,
+            setAltText: _,
+            failedMutate: _,
+            showCaptionColumn: _,
+          } = _,
+          [_, _] = _.useState(_);
+        return _.createElement(
+          "tr",
+          {
+            className: _.AltTextRow,
+          },
+          _.createElement(
+            "td",
+            {
+              className: _.AltTextImage,
+            },
+            __webpack_require__,
+          ),
+          _ &&
+            _.createElement(
+              "td",
+              {
+                className: _.AltTextName,
+              },
+              _,
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.AltTextFailed,
+                  },
+                  (0, _._)("#StoreAdmin_EditAltText_EntryMutateFailed"),
+                ),
+            ),
+          _.createElement(
+            "td",
+            {
+              className: _.AltTextInput,
+            },
+            _.createElement(_._, {
+              type: "text",
+              placeholder: (0, _._)(
+                "#StoreAdmin_EditAltText_Placeholder",
+                (0, _._)(`#Language_${(0, _._)(_)}`),
+              ),
+              value: _,
+              onChange: (_) => {
+                return (_ = _.target.value), _(_), void _(_);
+                var _;
+              },
+            }),
+          ),
+        );
+      }
+      function _(_, _) {
+        const _ = _ ? Object.keys(_) : [],
+          _ = _ ? Object.keys(_) : [];
+        return (
+          _.length === _.length &&
+          __webpack_require__.every((_) => _[_] === _[_])
+        );
+      }
+      function _(_, _) {
+        if (_.size !== _.size) return !1;
+        for (const [__webpack_require__, _] of _) {
+          const _ = _.get(__webpack_require__);
+          if (!_ || !_(_.mapAltText, _.mapAltText)) return !1;
+        }
+        return !0;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -18905,6 +19021,120 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__, _] = (0, _._)(),
+          {
+            rgScreenshots: _,
+            refetch: _,
+            isFetching: _,
+          } = (function (_) {
+            const _ = (0, _._)("screenshots"),
+              {
+                data: __webpack_require__,
+                refetch: _,
+                isFetching: _,
+              } = (0, _._)({
+                queryKey: ["StoreAppScreenshots", _],
+                queryFn: async () => {
+                  const _ = await fetch(_);
+                  try {
+                    return await _.json();
+                  } catch (_) {
+                    return null;
+                  }
+                },
+                enabled: _,
+                refetchOnMount: "always",
+                staleTime: 0,
+              });
+            return {
+              rgScreenshots: __webpack_require__,
+              refetch: _,
+              isFetching: _,
+            };
+          })(_),
+          { mutateAsync: _, isPending: _ } = (function () {
+            const _ = (0, _._)("quickupdateajax");
+            return (0, _._)({
+              mutationFn: async ({
+                nIndex: _,
+                mapAltText: __webpack_require__,
+              }) => {
+                if (null == _ || !__webpack_require__) return !1;
+                const _ = new FormData();
+                _.append("sessionid", _._.SESSIONID);
+                for (const [_, _] of Object.entries(__webpack_require__))
+                  _.append(`app[assets][screenshots][${_}][alt_text][${_}]`, _);
+                const _ = await fetch(_, {
+                    method: "post",
+                    body: _,
+                  }),
+                  _ = await _.json();
+                if (!_._) throw "Error modifying screenshot";
+                return _;
+              },
+              onError: (_) => {
+                console.error(
+                  (0, _._)(
+                    "#StoreAdmin_UploadError_Generic",
+                    "string" == typeof _ ? _ : _.message,
+                  ),
+                );
+              },
+            });
+          })(),
+          _ = _.useMemo(
+            () =>
+              _?.map((_, _) => ({
+                key: _,
+                mapAltText: _.alt_text,
+              })) ?? [],
+            [_],
+          );
+        if (!_._.is_support) return null;
+        const _ = (_, _) => {
+          const _ = (0, _._)(_),
+            _ = (0, _._)(29 == _ ? 6 : 0);
+          return _ in _[_].urls
+            ? _[_].urls[_]
+            : _ in _[_].urls
+              ? _[_].urls[_]
+              : null;
+        };
+        return _.createElement(
+          "div",
+          {
+            className: _.ValveOnly,
+          },
+          _ &&
+            _.createElement(_._, {
+              entries: _,
+              isLoading: _ || _,
+              hideModal: _,
+              fnRefetch: _,
+              mutateAltTextAsync: async (_, _) =>
+                !1 !==
+                (await _({
+                  nIndex: _,
+                  mapAltText: _,
+                })),
+              isMutatePending: _,
+              fnGetImage: (_, _) =>
+                _.createElement("img", {
+                  src: _(_, _),
+                }),
+            }),
+          _.createElement(
+            _._,
+            {
+              onClick: __webpack_require__,
+            },
+            (0, _._)("#StoreAdmin_EditAltText_Button"),
+          ),
+        );
+      }
       const _ = _.lazy(async () => ({
         default: (
           await __webpack_require__
@@ -18984,6 +19214,10 @@
                       ..._,
                     }),
                   "storeadmin-creator-home-edit": (_) =>
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  "storeadmin-app-screenshot-alttext": (_) =>
                     _.createElement(_, {
                       ..._,
                     }),

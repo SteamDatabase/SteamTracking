@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Новости и обновления",
 	"Menu_Popover_Preferences": "Настройки",
 	"Menu_Popover_Browse": "Просмотр",
+	"Menu_Popover_Top": "Популярное",
 	"Menu_Popover_Recommendations": "Рекомендации",
 	"Menu_Popover_Categories": "Категории",
 	"Menu_Popover_Hardware": "Устройства",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Из вашего списка желаемого",
 	"Menu_Section_Browse_DLCForYou": "Доп. контент для вас",
 	"Menu_Section_Browse_ForYou": "Для вас",
+	"Menu_Section_Browse_PopularNew": "Популярные новинки",
+	"Menu_Section_Browse_FreeToPlay": "Бесплатные игры",
+	"Menu_Section_Browse_TopFreeToPlay": "Популярные бесплатные игры",
+	"Menu_Section_Browse_Discounts": "Скидки",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "В списке желаемого",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Особые события",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Популярные игры",
 	"Menu_Section_Recommendations": "Рекомендации",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Список новинок",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Рекомендации сообщества",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Популярное",
 	"Menu_SearchBar_SearchResults": "Результаты поиска",
 	"Menu_SearchBar_YourTopGenres": "Ваши любимые жанры",
-	"Menu_SearchBar_BrowseBy": "Просмотреть..."
+	"Menu_SearchBar_BrowseBy": "Просмотреть...",
+	"Menu_Search": "Поиск",
+	"Menu_Label": "Меню магазина"
 }`);
     },
   },

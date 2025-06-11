@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Tin tức & Cập nhật",
 	"Menu_Popover_Preferences": "Tùy chỉnh",
 	"Menu_Popover_Browse": "Duyệt tìm",
+	"Menu_Popover_Top": "Phổ biến",
 	"Menu_Popover_Recommendations": "Khuyến nghị",
 	"Menu_Popover_Categories": "Danh mục",
 	"Menu_Popover_Hardware": "Phần cứng",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Từ danh sách ước",
 	"Menu_Section_Browse_DLCForYou": "DLC cho bạn",
 	"Menu_Section_Browse_ForYou": "Cho bạn",
+	"Menu_Section_Browse_PopularNew": "Mới và đang nổi",
+	"Menu_Section_Browse_FreeToPlay": "Chơi miễn phí",
+	"Menu_Section_Browse_TopFreeToPlay": "Trò chơi miễn phí hàng đầu",
+	"Menu_Section_Browse_Discounts": "Giảm giá",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Trong danh sách ước",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Sự kiện đặc biệt",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Tựa phổ biến",
 	"Menu_Section_Recommendations": "Khuyến nghị",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Hàng khám phá phát hành mới",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Khuyến nghị từ cộng đồng",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Vật phẩm phổ biến",
 	"Menu_SearchBar_SearchResults": "Kết quả tìm kiếm",
 	"Menu_SearchBar_YourTopGenres": "Thể loại hàng đầu của bạn",
-	"Menu_SearchBar_BrowseBy": "Duyệt theo..."
+	"Menu_SearchBar_BrowseBy": "Duyệt theo...",
+	"Menu_Search": "Tìm kiếm",
+	"Menu_Label": "Menu cửa hàng"
 }`);
     },
   },

@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Berita & Pembaruan",
 	"Menu_Popover_Preferences": "Preferensi",
 	"Menu_Popover_Browse": "Telusuri",
+	"Menu_Popover_Top": "Teratas",
 	"Menu_Popover_Recommendations": "Rekomendasi",
 	"Menu_Popover_Categories": "Kategori",
 	"Menu_Popover_Hardware": "Hardware",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Ada di wishlist-mu",
 	"Menu_Section_Browse_DLCForYou": "DLC untukmu",
 	"Menu_Section_Browse_ForYou": "Untukmu",
+	"Menu_Section_Browse_PopularNew": "Baru dan Sedang Tren",
+	"Menu_Section_Browse_FreeToPlay": "F2P",
+	"Menu_Section_Browse_TopFreeToPlay": "Game FTP Teratas",
+	"Menu_Section_Browse_Discounts": "Diskon",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Ada di Wishlist-mu",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Event Spesial",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Produk Populer",
 	"Menu_Section_Recommendations": "Rekomendasi",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Daftar Rilisan Terbaru",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Rekomendasi Komunitas",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Item Populer",
 	"Menu_SearchBar_SearchResults": "Hasil Pencarian",
 	"Menu_SearchBar_YourTopGenres": "Genre teratasmu",
-	"Menu_SearchBar_BrowseBy": "Telusuri berdasarkan..."
+	"Menu_SearchBar_BrowseBy": "Telusuri berdasarkan...",
+	"Menu_Search": "Cari",
+	"Menu_Label": "Menu Toko"
 }`);
     },
   },

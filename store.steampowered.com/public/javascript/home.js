@@ -56,6 +56,9 @@ GHomepage = {
 
 	rgContentHubs: [],
 
+	bSteamOS: false,
+	eHWVariant: 0, /* k_EHardwareVariant_Unknown */
+
 	InitLayout: function()
 	{
 		var $Ctn = $J('.home_page_body_ctn');
@@ -215,6 +218,8 @@ GHomepage = {
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
 			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
+			GHomepage.bSteamOS = rgParams.bSteamOS || false;
+			GHomepage.eHWVariant = rgParams.eHWVariant || 0;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -239,6 +244,8 @@ GHomepage = {
 					data: {
 						v: 2,							bNeedRecommendedCurators: 0,
 						u: g_AccountID,
+						hwsos: Number( GHomepage.bSteamOS ),
+						hwvar: GHomepage.eHWVariant,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -2885,7 +2892,9 @@ var g_bDisableAutoloader = false;
 							main: rgMainCap,
 							sub: rgSubCap,
 							similar: rgSimilarItems,
-							depth: ele.index || 0
+							depth: ele.index || 0,
+							hwsos: Number( GHomepage.bSteamOS ),
+							hwvar: GHomepage.eHWVariant,
 						},
 						//dataType: 'json',
 						type: 'GET'

@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Uutiset ja päivitykset",
 	"Menu_Popover_Preferences": "Asetukset",
 	"Menu_Popover_Browse": "Selaa",
+	"Menu_Popover_Top": "Tärkeät",
 	"Menu_Popover_Recommendations": "Suositukset",
 	"Menu_Popover_Categories": "Luokat",
 	"Menu_Popover_Hardware": "Laitteistot",
@@ -45,9 +46,12 @@
 	"Menu_Section_Browse_DLCForYou": "Suositellut lisämateriaalit",
 	"Menu_Section_Browse_ForYou": "Sinulle",
 	"Menu_Section_Browse_PopularNew": "Uudet ja nousussa",
+	"Menu_Section_Browse_FreeToPlay": "Ilmaispelit",
+	"Menu_Section_Browse_TopFreeToPlay": "Suosituimmat ilmaispelit",
 	"Menu_Section_Browse_Discounts": "Alennukset",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "Toivelistalla",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Erikoistapahtumat",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Suositut",
 	"Menu_Section_Recommendations": "Suositukset",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Uudet julkaisut -jono",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Yhteisösuositukset",
@@ -78,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Suositut esineet",
 	"Menu_SearchBar_SearchResults": "Hakutulokset",
 	"Menu_SearchBar_YourTopGenres": "Omat suosikkilajityypit",
-	"Menu_SearchBar_BrowseBy": "Selaa"
+	"Menu_SearchBar_BrowseBy": "Selaa",
+	"Menu_Search": "Haku",
+	"Menu_Label": "Kaupan valikko"
 }`);
     },
   },

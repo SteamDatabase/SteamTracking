@@ -22,7 +22,7 @@
         r = n.n(i),
         a = n(90626),
         l = n(6144),
-        c = n(73745),
+        c = n(84933),
         u = n(44332);
       class d {
         m_mapBadgeInfo = new Map();
@@ -238,7 +238,7 @@
         a = n(90626),
         l = n(68797),
         c = n(6144),
-        u = n(73745),
+        u = n(84933),
         d = n(78327),
         m = n(44165),
         h = n(34824);
@@ -542,7 +542,7 @@
         r = (n(90626), n(77516)),
         a = n(44332),
         l = n(6144),
-        c = n(73745),
+        c = n(84933),
         u = n(78327),
         d = n(6379),
         m = n(82097),
@@ -825,7 +825,7 @@
       var o = n(34629),
         s = n(90626),
         i = n(78327),
-        r = n(73745),
+        r = n(84933),
         a = n(14947),
         l = n(95034),
         c = n(65946);
@@ -926,7 +926,10 @@
         }
         HandleMessage(e) {
           if (e.origin != this.m_sParentOrigin) return;
-          const t = e.data && "message" in e.data ? e.data : null;
+          const t =
+            e.data && "object" == typeof e.data && "message" in e.data
+              ? e.data
+              : null;
           if (t)
             switch (t.message) {
               case "PartnerEventEditor_Update":

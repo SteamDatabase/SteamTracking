@@ -37909,10 +37909,10 @@ var CLSTAMP = "steamdb";
                     pbr: _._.readPackedUint64String,
                     _: _._.writeRepeatedUint64String,
                   },
-                  force_rerun: {
+                  app_id: {
                     _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -38763,16 +38763,6 @@ var CLSTAMP = "steamdb";
                     _: 32,
                     _: _._.readBool,
                     _: _._.writeBool,
-                  },
-                  contextid: {
-                    _: 33,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  assetid: {
-                    _: 34,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
                   },
                 },
               }),

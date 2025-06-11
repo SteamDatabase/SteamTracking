@@ -1944,6 +1944,216 @@
           [_, _]
         );
       }
+      function _(_) {
+        const { rollup: _, uimode: __webpack_require__, location: _ } = _,
+          _ = (function (_) {
+            let _ = null;
+            return (
+              (0, _._)(_)
+                ? (_ = _)
+                : (0, _._)(_)
+                  ? (_ = _)
+                  : _[_] && (_ = _[_]),
+              _
+            );
+          })(_.type);
+        return _
+          ? _.createElement(
+              _._,
+              {
+                controller: "notification",
+                method: (0, _._)(__webpack_require__),
+                submethod: (0, _._)(_),
+              },
+              _.createElement(_, {
+                ..._,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            rollup: _,
+            onNotificationClick: __webpack_require__,
+            location: _,
+            uimode: _,
+            onHide: _,
+          } = _,
+          _ =
+            ((_ = _.item.notification_type),
+            (_ = _.item.body_data),
+            _.useMemo(() => {
+              if (void 0 === _) return null;
+              let _ = (0, _._)(_);
+              const _ = (0, _._)(_);
+              if (!_ || !_) return null;
+              const _ =
+                  "function" != typeof _.displayNameLoc
+                    ? {
+                        locString: _.displayNameLoc,
+                      }
+                    : _.displayNameLoc(_),
+                _ =
+                  "function" != typeof _.titleLoc
+                    ? {
+                        locString: _.titleLoc,
+                      }
+                    : _.titleLoc(_),
+                _ =
+                  "function" != typeof _.bodyLoc
+                    ? {
+                        locString: _.bodyLoc,
+                      }
+                    : _.bodyLoc(_),
+                _ = "function" != typeof _.image ? _.image : _.image(_),
+                _ = "function" != typeof _.link ? _.link : _.link(_);
+              return {
+                display_name: _(_),
+                title: _(_),
+                body: _(_),
+                image: _,
+                link: _,
+              };
+            }, [_, _]));
+        var _, _;
+        const _ = "number" == typeof _?.image,
+          [_] = (0, _._)(_ ? _.image : 0, {
+            include_assets: !0,
+          }),
+          _ = (0, _._)(_.type)
+            .replace("k_ESteamNotificationType_", "")
+            ?.toLowerCase(),
+          _ = (0, _._)(_?.link ?? "#", _);
+        return _.createElement(
+          "a",
+          {
+            href: _?.link ? _ : "#",
+            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+          },
+          _.createElement(_, {
+            icon: _(_.type),
+            onActivate: () =>
+              __webpack_require__(() => {
+                _?.link && _ && window.location.assign(_);
+              }, _.item),
+            fallbackLogo: _.createElement(_.Qte, null),
+            location: _,
+            eUIMode: _,
+            data: _,
+            timestamp: _.timestamp,
+            nUnread: _.rgunread.length,
+            app: _,
+            bNewIndicator: (0, _._)(_.item),
+            onHide: _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            steamid: _,
+            url: __webpack_require__,
+            strTitleLoc: _,
+            strBodyLoc: _,
+            rollup: _,
+            onNotificationClick: _,
+            location: _,
+            uimode: _,
+            onHide: _,
+          } = _,
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = !_,
+          _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
+          _ = (0, _._)(_, _?.m_strPlayerName ?? "");
+        return _.createElement(
+          "a",
+          {
+            href: __webpack_require__,
+            onMouseDown: (_) => _(() => {}, _.item, _),
+          },
+          _.createElement(_, {
+            title: _,
+            body: _,
+            bDataLoading: _,
+            logoUrl: _?.avatar_url_medium,
+            icon: _.createElement(_.Qte, null),
+            onActivate: () =>
+              _(() => window.location.assign(__webpack_require__), _.item),
+            location: _,
+            eUIMode: _,
+            timestamp: _.timestamp,
+            nUnread: _.rgunread.length,
+            bNewIndicator: (0, _._)(_.item),
+            onHide: _,
+          }),
+        );
+      }
+      function _(_) {
+        const _ =
+          ((__webpack_require__ = _.rollup.type),
+          (_ = _.rollup.item.body_data),
+          _.useMemo(() => {
+            const _ = __webpack_require__,
+              _ = (0, _._)(_),
+              _ = (0, _._)(_);
+            if (!_) return null;
+            const _ =
+                "string" == typeof _.titleLoc ? _.titleLoc : _.titleLoc(_),
+              _ = "string" == typeof _.bodyLoc ? _.bodyLoc : _.bodyLoc(_),
+              _ = "string" == typeof _.url ? _.url : _.url(_),
+              _ =
+                "string" == typeof _.steamidAttribute
+                  ? _.steamidAttribute
+                  : _.steamidAttribute(_);
+            return {
+              strTitleLoc: _,
+              strBodyLoc: _,
+              strUrl: _,
+              steamid: _ && _[_],
+            };
+          }, [_, __webpack_require__]));
+        var _, _;
+        if (!_) return null;
+        const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
+        return _ && _ && _
+          ? _.createElement(_, {
+              steamid: _,
+              url: _,
+              strTitleLoc: _,
+              strBodyLoc: _,
+              ..._,
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            url: _,
+            count: __webpack_require__,
+            icon: _,
+            strLocToken: _,
+            eFeature: _,
+          } = _,
+          _ = (0, _._)(_);
+        return __webpack_require__
+          ? _
+            ? null
+            : _.createElement(
+                "a",
+                {
+                  href: _,
+                  className: _().WebPinnedNotification,
+                },
+                _.createElement(_, {
+                  icon: _.createElement(_, null),
+                  count: __webpack_require__,
+                  onActivate: () => window.location.assign(_),
+                  strLocToken: _,
+                  eUIMode: 3,
+                  visible: !0,
+                }),
+              )
+          : null;
+      }
       const _ = {
         chunkid: function (module) {
           const {
@@ -2015,36 +2225,41 @@
             }),
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
-          (0, _.useEffect)(() => {
-            if (_.count > 1 && _.appids?.length)
-              return _(
+          return (
+            (0, _.useEffect)(() => {
+              if (_.count > 1 && _.appids?.length)
+                return _(
+                  _._.STORE_BASE_URL +
+                    `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
+                );
+              if (_) return _(_.GetStorePageURL());
+              const _ = _.appid ? `?appid=${_.appid}` : "";
+              _(
                 _._.STORE_BASE_URL +
-                  `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
+                  `wishlist/profiles/${_}/${_}#sort=discount`,
               );
-            if (_) return _(_.GetStorePageURL());
-            const _ = _.appid ? `?appid=${_.appid}` : "";
-            _(_._.STORE_BASE_URL + `wishlist/profiles/${_}/${_}#sort=discount`);
-          }, [_, _, _]);
-          return _.createElement(
-            "a",
-            {
-              href: _,
-              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            },
-            _.createElement(_, {
-              fallbackLogo: _.createElement(_.Qte, null),
-              icon: _.createElement(_.ilR, null),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              app: _,
-              location: _,
-              data: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              eUIMode: _,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
+            }, [_, _, _]),
+            _.createElement(
+              "a",
+              {
+                href: _,
+                onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+              },
+              _.createElement(_, {
+                fallbackLogo: _.createElement(_.Qte, null),
+                icon: _.createElement(_.ilR, null),
+                onActivate: () =>
+                  __webpack_require__(() => window.location.assign(_), _.item),
+                app: _,
+                location: _,
+                data: _,
+                timestamp: _.timestamp,
+                nUnread: _.rgunread.length,
+                eUIMode: _,
+                bNewIndicator: (0, _._)(_.item),
+                onHide: _,
+              }),
+            )
           );
         },
         chunkid: function (module) {
@@ -2269,217 +2484,8 @@
             }),
           );
         },
+        chunkid: () => null,
       };
-      function _(_) {
-        const { rollup: _, uimode: __webpack_require__, location: _ } = _,
-          _ = (function (_) {
-            let _ = null;
-            return (
-              (0, _._)(_)
-                ? (_ = _)
-                : (0, _._)(_)
-                  ? (_ = _)
-                  : _[_] && (_ = _[_]),
-              _
-            );
-          })(_.type);
-        return _
-          ? _.createElement(
-              _._,
-              {
-                controller: "notification",
-                method: (0, _._)(__webpack_require__),
-                submethod: (0, _._)(_),
-              },
-              _.createElement(_, {
-                ..._,
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const {
-            rollup: _,
-            onNotificationClick: __webpack_require__,
-            location: _,
-            uimode: _,
-            onHide: _,
-          } = _,
-          _ =
-            ((_ = _.item.notification_type),
-            (_ = _.item.body_data),
-            _.useMemo(() => {
-              if (void 0 === _) return null;
-              let _ = (0, _._)(_);
-              const _ = (0, _._)(_);
-              if (!_ || !_) return null;
-              const _ =
-                  "function" != typeof _.displayNameLoc
-                    ? {
-                        locString: _.displayNameLoc,
-                      }
-                    : _.displayNameLoc(_),
-                _ =
-                  "function" != typeof _.titleLoc
-                    ? {
-                        locString: _.titleLoc,
-                      }
-                    : _.titleLoc(_),
-                _ =
-                  "function" != typeof _.bodyLoc
-                    ? {
-                        locString: _.bodyLoc,
-                      }
-                    : _.bodyLoc(_),
-                _ = "function" != typeof _.image ? _.image : _.image(_),
-                _ = "function" != typeof _.link ? _.link : _.link(_);
-              return {
-                display_name: _(_),
-                title: _(_),
-                body: _(_),
-                image: _,
-                link: _,
-              };
-            }, [_, _]));
-        var _, _;
-        const _ = "number" == typeof _?.image,
-          [_] = (0, _._)(_ ? _.image : 0, {
-            include_assets: !0,
-          }),
-          _ = (0, _._)(_.type)
-            .replace("k_ESteamNotificationType_", "")
-            ?.toLowerCase(),
-          _ = (0, _._)(_?.link ?? "#", _);
-        return _.createElement(
-          "a",
-          {
-            href: _?.link ? _ : "#",
-            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-          },
-          _.createElement(_, {
-            icon: _(_.type),
-            onActivate: () =>
-              __webpack_require__(() => {
-                _?.link && _ && window.location.assign(_);
-              }, _.item),
-            fallbackLogo: _.createElement(_.Qte, null),
-            location: _,
-            eUIMode: _,
-            data: _,
-            timestamp: _.timestamp,
-            nUnread: _.rgunread.length,
-            app: _,
-            bNewIndicator: (0, _._)(_.item),
-            onHide: _,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            steamid: _,
-            url: __webpack_require__,
-            strTitleLoc: _,
-            strBodyLoc: _,
-            rollup: _,
-            onNotificationClick: _,
-            location: _,
-            uimode: _,
-            onHide: _,
-          } = _,
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        const _ = !_,
-          _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
-          _ = (0, _._)(_, _?.m_strPlayerName ?? "");
-        return _.createElement(
-          "a",
-          {
-            href: __webpack_require__,
-            onMouseDown: (_) => _(() => {}, _.item, _),
-          },
-          _.createElement(_, {
-            title: _,
-            body: _,
-            bDataLoading: _,
-            logoUrl: _?.avatar_url_medium,
-            icon: _.createElement(_.Qte, null),
-            onActivate: () =>
-              _(() => window.location.assign(__webpack_require__), _.item),
-            location: _,
-            eUIMode: _,
-            timestamp: _.timestamp,
-            nUnread: _.rgunread.length,
-            bNewIndicator: (0, _._)(_.item),
-            onHide: _,
-          }),
-        );
-      }
-      function _(_) {
-        const _ =
-          ((__webpack_require__ = _.rollup.type),
-          (_ = _.rollup.item.body_data),
-          _.useMemo(() => {
-            const _ = __webpack_require__,
-              _ = (0, _._)(_),
-              _ = (0, _._)(_);
-            if (!_) return null;
-            const _ =
-                "string" == typeof _.titleLoc ? _.titleLoc : _.titleLoc(_),
-              _ = "string" == typeof _.bodyLoc ? _.bodyLoc : _.bodyLoc(_),
-              _ = "string" == typeof _.url ? _.url : _.url(_),
-              _ =
-                "string" == typeof _.steamidAttribute
-                  ? _.steamidAttribute
-                  : _.steamidAttribute(_);
-            return {
-              strTitleLoc: _,
-              strBodyLoc: _,
-              strUrl: _,
-              steamid: _ && _[_],
-            };
-          }, [_, __webpack_require__]));
-        var _, _;
-        if (!_) return null;
-        const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
-        return _ && _ && _
-          ? _.createElement(_, {
-              steamid: _,
-              url: _,
-              strTitleLoc: _,
-              strBodyLoc: _,
-              ..._,
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            url: _,
-            count: __webpack_require__,
-            icon: _,
-            strLocToken: _,
-            eFeature: _,
-          } = _,
-          _ = (0, _._)(_);
-        return __webpack_require__
-          ? _
-            ? null
-            : _.createElement(
-                "a",
-                {
-                  href: _,
-                  className: _().WebPinnedNotification,
-                },
-                _.createElement(_, {
-                  icon: _.createElement(_, null),
-                  count: __webpack_require__,
-                  onActivate: () => window.location.assign(_),
-                  strLocToken: _,
-                  eUIMode: 3,
-                  visible: !0,
-                }),
-              )
-          : null;
-      }
       var _ = __webpack_require__("chunkid");
       const _ = new _._(),
         _ = (0, _._)(function (_) {

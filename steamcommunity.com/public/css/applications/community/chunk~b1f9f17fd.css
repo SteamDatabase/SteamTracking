@@ -50,6 +50,7 @@
   margin-bottom: 60px;
 }
 .SOMqOmFuQUxmS-kwXwSfo._2RNmZYi7OiANiHhKj8ix8G ._23WNqXb_8WsGkX2fRjOoDw {
+  position: relative;
   background: #22242a;
   padding: 16px;
 }
@@ -59,9 +60,9 @@
 .SOMqOmFuQUxmS-kwXwSfo ._6erSL-Cistlp7anVYn0qe {
   display: flex;
   flex-direction: row;
-  background: #3d4450;
+  background: #3d44508a;
   padding: 5px 10px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .SOMqOmFuQUxmS-kwXwSfo ._1Dwr3-biecaiVOwPgQFmd2 {
   padding: 0 16px;
@@ -145,6 +146,7 @@
   background-color: #404040;
 }
 .SOMqOmFuQUxmS-kwXwSfo ._3TjtfWwqteTLHWQx8t65at {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -158,8 +160,7 @@
   padding: 8px 0px;
 }
 .SOMqOmFuQUxmS-kwXwSfo ._3TjtfWwqteTLHWQx8t65at ._NW49CxcH5JoUR1KZ7qPh {
-  width: fit-content;
-  min-width: 30%;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
 }
@@ -1137,6 +1138,19 @@
 ._2EmV2o2gk_2viWSHanFe7X ._2awCchtsP6sUsXvtYLhlIs {
   border: 4px solid rgba(255, 255, 255, 0.5);
 }
+._2cT7wst-UhvDbRqPOUFLHl {
+  margin: 10px auto 5px auto;
+  width: fit-content;
+}
+._2cT7wst-UhvDbRqPOUFLHl svg {
+  display: flex;
+  padding: 5px 10px;
+  margin: auto;
+  width: 18px;
+}
+._2cT7wst-UhvDbRqPOUFLHl ._1SFKrl2Gt5OR-Nop7cqHIP {
+  border: 1px solid #67707b;
+}
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;
   justify-content: space-between;
@@ -1757,6 +1771,9 @@ span._11TnLmbm2QkVVfCckvEXbJ {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.rTO_V4bWjmL5KPs9ie2N1._3EV1PHdAKLmwc4snnQ1DUX {
+  text-decoration: line-through;
 }
 ._1ryeeV7EHMEPGeLMgRv2QA {
   font-size: 16px;
@@ -4896,6 +4913,25 @@ td.rdtYear:hover {
   overflow: hidden;
   display: block;
 }
+._2wI0jrWTXmdWAEiz7y1yTH._3CFHNxlYvvFQa74bL_-8xT {
+  overflow: hidden;
+}
+._2wI0jrWTXmdWAEiz7y1yTH._3CFHNxlYvvFQa74bL_-8xT::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom left,
+    transparent calc(50% - 1px),
+    red calc(50% - 1px),
+    red calc(50% + 1px),
+    transparent calc(50% + 1px)
+  );
+  pointer-events: none;
+}
 ._32aXgVSaIKM-RWmcUWAb_w {
   padding: 8px;
   width: 100%;
@@ -5189,6 +5225,24 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   border-radius: 3px;
   padding: 0 6px;
 }
+.f2X3toOiE6SBBj8gkgwsN {
+  position: relative;
+  display: inline-block;
+}
+.f2X3toOiE6SBBj8gkgwsN._1s7z9aW7wZunEhIaxF8Q_y .ZBNgQGP99gSH15SNAtiFt {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 255, 0.25);
+  z-index: 1;
+}
+._2898lC8lJ2Jih-o_aYzoaG ._1U35sXRoYsDiZXSTPbY1mk {
+  color: red;
+  font-weight: bold;
+}
 .ByGenr3ssO3oe0dFraX__,
 .ByGenr3ssO3oe0dFraX__ p {
   line-height: 1.5em;
@@ -5260,24 +5314,6 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 ._2xUo8ICmESPj0EdotIYJW4 {
   font-size: 20px;
   font-weight: 600;
-}
-.f2X3toOiE6SBBj8gkgwsN {
-  position: relative;
-  display: inline-block;
-}
-.f2X3toOiE6SBBj8gkgwsN._1s7z9aW7wZunEhIaxF8Q_y .ZBNgQGP99gSH15SNAtiFt {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 255, 0.25);
-  z-index: 1;
-}
-._2898lC8lJ2Jih-o_aYzoaG ._1U35sXRoYsDiZXSTPbY1mk {
-  color: red;
-  font-weight: bold;
 }
 ._3c3WIK_LdblX1exoQPKKmK {
   display: flex;
@@ -6213,6 +6249,9 @@ textarea._3793xvP87t1rZYbAQDC1pG {
   padding: 8px;
   border-radius: 5px;
 }
+._9zCKtf5oUzA2xMaX1jCeD {
+  max-width: 100%;
+}
 ._1YUipJCfnLbOPdU5NI7mEp {
   padding: 10px 0px;
 }
@@ -6238,6 +6277,9 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 ._3mLVVPFbvugLDOjqasWsB5._3mLVVPFbvugLDOjqasWsB5 .ProseMirror {
   min-height: 566px;
   outline: none;
+}
+.fIoWQoqtjnmiQlz0-u8jG {
+  color: #e47900;
 }
 ._1FMKn6fiDHgpbdS7r9qPZa {
   margin-top: 8px;
@@ -11090,6 +11132,10 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   gap: 1rem;
   padding: 32px;
 }
+._1hqaxq1Bu0NJlHYpJjzvnM._1LEcwJMAoZCV3ULGhU85sq {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 15px;
+}
 ._2vw-5sdiSgMFoLayGMH1PT ._1hqaxq1Bu0NJlHYpJjzvnM {
   display: grid;
   grid-template-columns: minmax(0, 35%) auto;
@@ -11102,7 +11148,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   margin-bottom: 1rem;
 }
 .W21F8c7j9huN7-oSTInbQ {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
 }
 ._1OGR6oUuIjxqO5dezch_OQ {
@@ -11153,21 +11199,27 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 300px) minmax(0, 1fr);
+  gap: 1rem;
 }
 .xIqX_PvYjm1_rnxpXFAu5 .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 250px) minmax(0, 1fr);
+  gap: 1rem;
 }
 ._3Q6EKKVEKVFpC_BW0FHOB_ .-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 {
   grid-template-rows: minmax(0, 175px) minmax(0, 1fr);
+  gap: 1rem;
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 300px);
+  gap: 1rem;
 }
 .xIqX_PvYjm1_rnxpXFAu5 .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 250px);
+  gap: 1rem;
 }
 ._3Q6EKKVEKVFpC_BW0FHOB_ .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: minmax(0, 1fr) minmax(0, 175px);
+  gap: 1rem;
 }
 .-BNnqulztTaTeP1QNeSBu._2WX2HLoszD567aFrCJKkYG {
   outline: 4px solid #00f811bb;
@@ -11226,21 +11278,21 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 .PzQp3t3y61lCOWbGACZqy {
   font-size: 20px;
-  line-height: 26px;
+  line-height: 24px;
   font-weight: 600;
 }
 .PzQp3t3y61lCOWbGACZqy._3TKdKvs7o8kbqWUcJyPuyo {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: 800;
 }
 .PzQp3t3y61lCOWbGACZqy._2BZyC-dmzrlUCPfHClu51J {
-  font-size: 26px;
+  font-size: 28px;
   line-height: 32px;
   font-weight: 800;
 }
 .PzQp3t3y61lCOWbGACZqy._2XQ2s4PGGXTf-33SoML_Nn {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 36px;
   font-weight: 800;
 }
@@ -11255,7 +11307,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 ._2cbokCRMR_rzjYjDIlQERN {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 22px;
   font-weight: 500;
 }
 ._2cbokCRMR_rzjYjDIlQERN._3Bz6jMGpR_Vr3p7g3paBao {

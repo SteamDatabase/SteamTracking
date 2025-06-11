@@ -5302,7 +5302,8 @@
                     __webpack_require__.startsWith("https://")) &&
                   (_ = _);
               }
-              const _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+              const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
               let _ = _(_.args, "id");
               _ &&
                 "string" == typeof _ &&
@@ -5328,6 +5329,9 @@
                   className: _,
                   href: _,
                   _: _,
+                  style: {
+                    backgroundColor: _,
+                  },
                 },
                 _.children,
               );
@@ -5709,11 +5713,15 @@
           {
             Constructor: function (_) {
               const _ = _(_.args),
-                _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+                _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = _ && _(_.args, "buttoncolor");
               return _.createElement(
                 _,
                 {
                   className: _,
+                  style: {
+                    backgroundColor: _,
+                  },
                   href: `${_._.PARTNER_BASE_URL}doc/${_}`,
                 },
                 _.children,
@@ -6109,7 +6117,12 @@
         );
       }
       const _ = (_) => {
-        const { url: _, event: __webpack_require__, className: _ } = _;
+        const {
+          url: _,
+          event: __webpack_require__,
+          className: _,
+          style: _,
+        } = _;
         let _,
           _ = (0, _._)(_);
         (_ = _(_, __webpack_require__)),
@@ -6134,6 +6147,7 @@
               href: _,
               rel: _,
               _: _._,
+              style: _,
             },
             _.children,
           ),

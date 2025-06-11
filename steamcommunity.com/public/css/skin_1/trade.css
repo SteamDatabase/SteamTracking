@@ -44,7 +44,7 @@ body.tutorial_mode .pagecontent {
 	left: 1px;
 	right: 1px;
 	height: 34px;
-	
+
 	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);
 	background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);
 }
@@ -106,6 +106,7 @@ body.tutorial_mode .pagecontent {
 	line-height: 20px;
 	color: #ffffff;
 }
+
 
 /* trade partner header */
 .trade_partner_header {
@@ -293,7 +294,7 @@ body.tutorial_mode .pagecontent {
 #your_slots .item a.inventory_item_link, #inventories .item a.inventory_item_link {
 	cursor: pointer;
 	cursor: grab;
-	cursor: -moz-grab;	
+	cursor: -moz-grab;
 }
 
 .trade_offer.ready #your_slots .item a.inventory_item_link, .trade_offer.ready #their_slots .item a.inventory_item_link {
@@ -767,7 +768,7 @@ div#chat_send_btn.active {
 
 .trade_confirm_box {
 	text-align: center;
-	
+
 	color: #7f7f7f;
 	font-size: 14px;
 
@@ -785,10 +786,10 @@ div#chat_send_btn.active {
 	background-repeat: repeat-x;
 	background-position: 0 -50px;
 	padding: 0 50px;
-	cursor: default; 
-	
+	cursor: default;
+
 	max-width: 248px;
-	
+
 }
 
 .trade_confirmbtn .cap {
@@ -872,7 +873,7 @@ div#chat_send_btn.active {
 .trade_rule.maketrade {
 	margin-top: 17px;
 	margin-bottom: 22px;
-	
+
 }
 
 .cancelbtn_ctn {
@@ -1209,7 +1210,7 @@ div#chat_send_btn.active {
 	position: absolute;
 	top: 327px;
 	left: 0;
-	
+
 	font-size: 14px;
 }
 

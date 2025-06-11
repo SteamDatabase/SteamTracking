@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Novinky a aktualizace",
 	"Menu_Popover_Preferences": "Předvolby",
 	"Menu_Popover_Browse": "Procházet",
+	"Menu_Popover_Top": "Nejlepší",
 	"Menu_Popover_Recommendations": "Doporučení",
 	"Menu_Popover_Categories": "Kategorie",
 	"Menu_Popover_Hardware": "Hardware",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Z Vašeho seznamu přání",
 	"Menu_Section_Browse_DLCForYou": "DLC pro Vás",
 	"Menu_Section_Browse_ForYou": "Pro Vás",
+	"Menu_Section_Browse_PopularNew": "Nové a populární",
+	"Menu_Section_Browse_FreeToPlay": "Free to play",
+	"Menu_Section_Browse_TopFreeToPlay": "Nejlepší bezplatné hry",
+	"Menu_Section_Browse_Discounts": "Slevy",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Z Vašeho seznamu přání",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Speciální události",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Populární",
 	"Menu_Section_Recommendations": "Doporučení",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Fronta nově vydaných",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Co doporučuje komunita",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Populární produkty",
 	"Menu_SearchBar_SearchResults": "Výsledky vyhledávání",
 	"Menu_SearchBar_YourTopGenres": "Vaše nejhranější žánry",
-	"Menu_SearchBar_BrowseBy": "Procházet podle..."
+	"Menu_SearchBar_BrowseBy": "Procházet podle...",
+	"Menu_Search": "Vyhledávání",
+	"Menu_Label": "Nabídka obchodu"
 }`);
     },
   },

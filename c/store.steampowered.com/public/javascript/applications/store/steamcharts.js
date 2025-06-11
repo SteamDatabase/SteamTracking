@@ -3,6 +3,12 @@
   {
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         CalendarBtn: "_6LCq5awwJWbT0WLusE-as",
         PickerContainer: "_3YV5gmu_9QoN0IYGWX7N0E",
@@ -1456,7 +1462,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         Keyify = (_) =>
@@ -1692,10 +1697,13 @@
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
         (0, _._)([_._], _.prototype, "UploadAllImages", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
-          color: this.props.color || "rgba(1.0,1.0,1.0,1.0)",
+          color: this.props.color || "rgba(255, 255, 255, 1)",
         };
         static GetColorString(_) {
           return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
@@ -1707,14 +1715,58 @@
           }),
             this.props.onChange(_);
         }
+        async OnEyedropperClick() {
+          if ("EyeDropper" in window)
+            try {
+              const _ = new window.EyeDropper(),
+                _ = (await _.open()).sRGBHex,
+                _ = this.hexToRgba(_);
+              this.setState({
+                color: _,
+              }),
+                this.props.onChange(_);
+            } catch (_) {
+              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+            }
+          else alert((0, _._)("#Sale_EyeDropperError"));
+        }
+        hexToRgba(_) {
+          const _ = parseInt(_.slice(1), 16);
+          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+        }
         render() {
-          return _.createElement(_._, {
-            onChange: this.OnColorChange,
-            color: this.state.color,
-          });
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              onChange: this.OnColorChange,
+              color: this.state.color,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EyeDropperCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _().EyeDropperBtn,
+                    onClick: this.OnEyedropperClick,
+                  },
+                  _.createElement(_.O7b, null),
+                ),
+              ),
+            ),
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "OnColorChange", null);
+      (0, _._)([_._], _.prototype, "OnColorChange", null),
+        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -4485,6 +4537,10 @@
                 label: (0, _._)("#EventEditor_Tile_Repeat"),
                 data: "repeat",
               }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_NoRepeatAndBlur"),
+                data: "coverBlur",
+              }),
               _
             );
           }, []);
@@ -5457,19 +5513,20 @@
           [_],
         );
         const _ = (0, _._)(
-            () => __webpack_require__.jsondata.sale_header_show_top_margin,
+            () => __webpack_require__.jsondata.sale_header_disable_top_margin,
           ),
           _ = (function (_, _) {
             const [__webpack_require__] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
-              const _ = _.GetSaleSectionFirstMatchByType("tabs");
-              if (_?.tabs?.length > 0) {
+              const _ = _.GetSaleSectionFirstMatchByType("tabs"),
+                _ = _?.tabs?.filter((_) => !_.hide);
+              if (_?.length > 0) {
                 let _ =
                   __webpack_require__ > 0
-                    ? _.tabs.find((_) => _.unique_id == __webpack_require__)
+                    ? _.find((_) => _.unique_id == __webpack_require__)
                     : void 0;
-                _ || (_ = _.tabs[0]);
-                const _ = _ === _.tabs[0];
+                _ || (_ = _[0]);
+                const _ = _ === _[0];
                 return new _._(_, _, _);
               }
             }, [_, _, __webpack_require__]);
@@ -5559,82 +5616,78 @@
               },
               _.createElement(
                 _._,
-                null,
+                {
+                  location: _ ? 2 : 0,
+                },
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    location: _ ? 2 : 0,
+                    event: __webpack_require__,
+                    language: _,
+                    bIsPreview: _,
                   },
+                  _ && _.createElement(_._, null),
+                  _.createElement(_, {
+                    eventModel: __webpack_require__,
+                  }),
+                  Boolean(_) &&
+                    _.createElement(_, {
+                      backgroundImageEditModel: _,
+                      bBackgroundImgGroupEditMode: _,
+                      fnSetBackgroundImgGroupEditMode: _,
+                    }),
                   _.createElement(
-                    _,
+                    "div",
                     {
-                      event: __webpack_require__,
-                      language: _,
-                      bIsPreview: _,
+                      className: (0, _._)({
+                        [_().SaleOuterContainer]: !0,
+                        [_().SaleOuterTopMargin]: _,
+                        [_().SaleNewSizing]: _,
+                        [_()[
+                          `CustomStyle_${__webpack_require__.jsondata.sale_vanity_id}`
+                        ]]: !0,
+                        SaleOuterContainer: !0,
+                        [_().SalePageLogoSet]: _,
+                        [_().ContentHub]: _,
+                      }),
+                      style: _
+                        ? null
+                        : {
+                            marginTop: `${_ || 0}px`,
+                          },
                     },
-                    _ && _.createElement(_._, null),
                     _.createElement(_, {
                       eventModel: __webpack_require__,
+                      language: _,
                     }),
-                    Boolean(_) &&
-                      _.createElement(_, {
-                        backgroundImageEditModel: _,
-                        bBackgroundImgGroupEditMode: _,
-                        fnSetBackgroundImgGroupEditMode: _,
-                      }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)({
-                          [_().SaleOuterContainer]: !0,
-                          [_().SaleOuterTopMargin]: _,
-                          [_().SaleNewSizing]: _,
-                          [_()[
-                            `CustomStyle_${__webpack_require__.jsondata.sale_vanity_id}`
-                          ]]: !0,
-                          SaleOuterContainer: !0,
-                          [_().SalePageLogoSet]: _,
-                          [_().ContentHub]: _,
-                        }),
-                        style: _
-                          ? null
-                          : {
-                              marginTop: `${_ || 0}px`,
-                            },
-                      },
-                      _.createElement(_, {
-                        eventModel: __webpack_require__,
-                        language: _,
-                      }),
-                      _.createElement(_, {
-                        rgPresenters:
-                          __webpack_require__.jsondata.sale_presenters,
-                      }),
+                    _.createElement(_, {
+                      rgPresenters:
+                        __webpack_require__.jsondata.sale_presenters,
+                    }),
+                    _.createElement(_, {
+                      event: __webpack_require__,
+                      broadcastEmbedContext: _,
+                    }),
+                    _.createElement(_, {
+                      ePreviewMode: _,
+                      event: __webpack_require__,
+                      backgroundImageEditModel: _,
+                      language: _,
+                      promotionName: _,
+                      nSaleDayIndex: _,
+                      broadcastEmbedContext: _,
+                      selectedTab: _,
+                    }),
+                    !_ &&
                       _.createElement(_, {
                         event: __webpack_require__,
-                        broadcastEmbedContext: _,
+                        addtionalAdminButtons: _,
+                        fnOnChangeDayIndex: (_) => {
+                          _ != _ &&
+                            ((__webpack_require__.m_overrideCurrentDay = _),
+                            _(_));
+                        },
                       }),
-                      _.createElement(_, {
-                        ePreviewMode: _,
-                        event: __webpack_require__,
-                        backgroundImageEditModel: _,
-                        language: _,
-                        promotionName: _,
-                        nSaleDayIndex: _,
-                        broadcastEmbedContext: _,
-                        selectedTab: _,
-                      }),
-                      !_ &&
-                        _.createElement(_, {
-                          event: __webpack_require__,
-                          addtionalAdminButtons: _,
-                          fnOnChangeDayIndex: (_) => {
-                            _ != _ &&
-                              ((__webpack_require__.m_overrideCurrentDay = _),
-                              _(_));
-                          },
-                        }),
-                    ),
                   ),
                 ),
               ),
@@ -7634,7 +7687,7 @@
               (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
               (_.jsondata.sale_vanity_id = _),
               (_.jsondata.sale_header_offset = 0),
-              (_.jsondata.sale_header_show_top_margin = !1),
+              (_.jsondata.sale_header_disable_top_margin = !1),
               _
             );
           })(_._, _),
@@ -8843,19 +8896,27 @@
                       [_().Disabled]: !_,
                     }),
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      _: _ ? _.TopNewReleases(_) : void 0,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavPrev,
-                      },
-                      " ",
-                    ),
-                  ),
+                  _
+                    ? _.createElement(
+                        _._,
+                        {
+                          _: _ ? _.TopNewReleases(_) : void 0,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavPrev,
+                          },
+                          " ",
+                        ),
+                      )
+                    : _.createElement(
+                        "div",
+                        {
+                          className: _().ChartNavPrev,
+                        },
+                        " ",
+                      ),
                 ),
               ),
               _.createElement(
@@ -8871,19 +8932,27 @@
                       [_().Disabled]: !_,
                     }),
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      _: _ ? _.TopNewReleases(_) : null,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavNext,
-                      },
-                      " ",
-                    ),
-                  ),
+                  _
+                    ? _.createElement(
+                        _._,
+                        {
+                          _: _.TopNewReleases(_),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavNext,
+                          },
+                          " ",
+                        ),
+                      )
+                    : _.createElement(
+                        "div",
+                        {
+                          className: _().ChartNavNext,
+                        },
+                        " ",
+                      ),
                 ),
               ),
               _.createElement(_, {
@@ -12242,7 +12311,7 @@
                     return _.createElement(
                       _._,
                       {
-                        method: "topnewreleases",
+                        method: "monthlytopreleases",
                       },
                       _.createElement(
                         _._,

@@ -1746,76 +1746,12 @@
           return "CCommunity_GetAvatarHistory_Response_AvatarData";
         }
       }
-      class I extends a.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            I.prototype.priority || n.Sg(I.M()),
-            a.Message.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  priority: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  appid: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readUint32,
-                    pbr: n.qM.readPackedUint32,
-                    bw: n.gp.writeRepeatedUint32,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = n.w0(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAppPriority";
-        }
-      }
       class U extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            U.prototype.count || n.Sg(U.M()),
-            a.Message.initialize(this, e, 0, -1, [5, 6, 8], null);
+            U.prototype.priority || n.Sg(U.M()),
+            a.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1825,51 +1761,14 @@
               (U.sm_m = {
                 proto: U,
                 fields: {
-                  count: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  offset: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  rtime32_start_time: {
-                    n: 3,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  rtime32_end_time: {
-                    n: 4,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  language_preference: {
-                    n: 5,
+                  priority: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  appid: {
+                    n: 2,
                     r: !0,
                     q: !0,
                     br: n.qM.readUint32,
                     pbr: n.qM.readPackedUint32,
                     bw: n.gp.writeRepeatedUint32,
-                  },
-                  filter_event_type: {
-                    n: 6,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readEnum,
-                    pbr: n.qM.readPackedEnum,
-                    bw: n.gp.writeRepeatedEnum,
-                  },
-                  filter_to_appid: {
-                    n: 7,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
-                  app_list: { n: 8, c: I, r: !0, q: !0 },
-                  count_after: {
-                    n: 9,
-                    d: 0,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  count_before: {
-                    n: 10,
-                    d: 0,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
                   },
                 },
               }),
@@ -1906,6 +1805,107 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAppPriority";
+        }
+      }
+      class I extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            I.prototype.count || n.Sg(I.M()),
+            a.Message.initialize(this, e, 0, -1, [5, 6, 8], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
+                fields: {
+                  count: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  offset: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  rtime32_start_time: {
+                    n: 3,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  rtime32_end_time: {
+                    n: 4,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  language_preference: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readUint32,
+                    pbr: n.qM.readPackedUint32,
+                    bw: n.gp.writeRepeatedUint32,
+                  },
+                  filter_event_type: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readEnum,
+                    pbr: n.qM.readPackedEnum,
+                    bw: n.gp.writeRepeatedEnum,
+                  },
+                  filter_to_appid: {
+                    n: 7,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  app_list: { n: 8, c: U, r: !0, q: !0 },
+                  count_after: {
+                    n: 9,
+                    d: 0,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  count_before: {
+                    n: 10,
+                    d: 0,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                },
+              }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = n.w0(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetUserPartnerEventNews_Request";
@@ -3684,7 +3684,7 @@
                     pbr: n.qM.readPackedUint64String,
                     bw: n.gp.writeRepeatedUint64String,
                   },
-                  force_rerun: { n: 2, br: n.qM.readBool, bw: n.gp.writeBool },
+                  app_id: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
                 },
               }),
             ge.sm_m
@@ -3955,7 +3955,7 @@
           (e.GetUserPartnerEventNews = function (e, t) {
             return e.SendMsg(
               "Community.GetUserPartnerEventNews#1",
-              (0, m.I8)(U, t),
+              (0, m.I8)(I, t),
               x,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );

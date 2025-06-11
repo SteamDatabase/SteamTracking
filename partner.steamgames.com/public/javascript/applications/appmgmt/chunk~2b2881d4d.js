@@ -80,6 +80,7 @@
         m_DataRequested = { include_tag_count: 0 };
         m_strInternalName;
         m_rgLinks;
+        m_userFilterFailure;
         constructor(e, t) {
           (this.m_eItemType = e.item_type()),
             (this.m_unID = e.id()),
@@ -167,7 +168,11 @@
             t.include_links &&
               !this.m_rgLinks &&
               ((this.m_rgLinks = e.links().map((e) => e.toObject())),
-              (this.m_DataRequested.include_links = !0));
+              (this.m_DataRequested.include_links = !0)),
+            t.apply_user_filters &&
+              !this.m_userFilterFailure &&
+              ((this.m_userFilterFailure = e.user_filter_failure()?.toObject()),
+              (this.m_DataRequested.apply_user_filters = !0));
         }
         static BDataRequestContainsOtherDataRequest(e, t) {
           return Boolean(
@@ -634,6 +639,12 @@
           return (
             this.BCheckDataRequestIncluded({ include_links: !0 }),
             this.m_rgLinks
+          );
+        }
+        GetUserFilterFailure() {
+          return (
+            this.BCheckDataRequestIncluded({ apply_user_filters: !0 }),
+            this.m_userFilterFailure
           );
         }
         ReplaceBestPurchaseOption(e) {

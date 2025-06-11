@@ -45,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "У вашому списку бажаного",
 	"Menu_Section_Browse_DLCForYou": "Завантажуваний вміст для вас",
 	"Menu_Section_Browse_ForYou": "Для вас",
+	"Menu_Section_Browse_PopularNew": "Новинки та популярне",
+	"Menu_Section_Browse_FreeToPlay": "Вільний доступ",
+	"Menu_Section_Browse_TopFreeToPlay": "Найкращі ігри з вільним доступом",
+	"Menu_Section_Browse_Discounts": "Знижки",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "У вашому списку бажаного",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Особливі події",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Популярні ігри",
 	"Menu_Section_Recommendations": "Рекомендації",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Черга новинок",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Рекомендації спільноти",
@@ -75,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Популярні товари",
 	"Menu_SearchBar_SearchResults": "Результати пошуку",
 	"Menu_SearchBar_YourTopGenres": "Ваші улюблені жанри",
-	"Menu_SearchBar_BrowseBy": "Переглянути..."
+	"Menu_SearchBar_BrowseBy": "Переглянути...",
+	"Menu_Search": "Пошук",
+	"Menu_Label": "Меню крамниці"
 }`);
     },
   },

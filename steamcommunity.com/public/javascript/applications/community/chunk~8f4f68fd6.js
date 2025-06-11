@@ -1419,16 +1419,6 @@
                     bw: c.gp.writeString,
                   },
                   sealed: { n: 32, br: c.qM.readBool, bw: c.gp.writeBool },
-                  contextid: {
-                    n: 33,
-                    br: c.qM.readUint64String,
-                    bw: c.gp.writeUint64String,
-                  },
-                  assetid: {
-                    n: 34,
-                    br: c.qM.readUint64String,
-                    bw: c.gp.writeUint64String,
-                  },
                 },
               }),
             _.sm_m
@@ -2362,7 +2352,7 @@
       function P(e) {
         return !!D(e);
       }
-      const G = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
+      const G = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function H(e) {
         return null != G.findIndex((t) => t == e);
       }
@@ -3177,6 +3167,7 @@
         23: { rollup_field: void 0, eFeature: z.uX },
         24: { rollup_field: void 0, eFeature: z.uX },
         28: { rollup_field: "playtest_invites", eFeature: 1 },
+        29: { rollup_field: void 0, eFeature: 6 },
       };
       function be(e) {
         const t = ye[e];
@@ -3210,7 +3201,7 @@
     },
     16264: (e, t, i) => {
       "use strict";
-      i.d(t, { Rd: () => pe, R1: () => fe, QR: () => Be });
+      i.d(t, { Rd: () => _e, R1: () => pe, QR: () => be });
       var r = i(90626),
         n = i(22837),
         a = i(97788),
@@ -4283,7 +4274,219 @@
           [i, me]
         );
       }
-      const _e = {
+      function _e(e) {
+        let t = null;
+        return (
+          (0, m.sR)(e)
+            ? (t = ye)
+            : (0, m.IC)(e)
+              ? (t = fe)
+              : Be[e] && (t = Be[e]),
+          t
+        );
+      }
+      function pe(e) {
+        const { rollup: t, uimode: i, location: a } = e,
+          s = _e(t.type);
+        return s
+          ? r.createElement(
+              b.Ay,
+              {
+                controller: "notification",
+                method: (0, n.fL)(i),
+                submethod: (0, n.ey)(a),
+              },
+              r.createElement(s, { ...e }),
+            )
+          : null;
+      }
+      function fe(e) {
+        var t, i;
+        const {
+            rollup: n,
+            onNotificationClick: s,
+            location: o,
+            uimode: l,
+            onHide: c,
+          } = e,
+          d =
+            ((_ = n.item.notification_type),
+            (f = n.item.body_data),
+            r.useMemo(() => {
+              if (void 0 === _) return null;
+              let e = (0, m.K9)(_);
+              const t = (0, m.u5)(f);
+              if (!e || !t) return null;
+              const i =
+                  "function" != typeof e.displayNameLoc
+                    ? { locString: e.displayNameLoc }
+                    : e.displayNameLoc(t),
+                r =
+                  "function" != typeof e.titleLoc
+                    ? { locString: e.titleLoc }
+                    : e.titleLoc(t),
+                n =
+                  "function" != typeof e.bodyLoc
+                    ? { locString: e.bodyLoc }
+                    : e.bodyLoc(t),
+                a = "function" != typeof e.image ? e.image : e.image(t),
+                s = "function" != typeof e.link ? e.link : e.link(t);
+              return {
+                display_name: u(i),
+                title: u(r),
+                body: u(n),
+                image: a,
+                link: s,
+              };
+            }, [f, _]));
+        var _, f;
+        const g = "number" == typeof (null == d ? void 0 : d.image),
+          [b] = (0, p.t7)(g ? d.image : 0, { include_assets: !0 }),
+          w =
+            null ===
+              (t = (0, a.p$)(n.type).replace(
+                "k_ESteamNotificationType_",
+                "",
+              )) || void 0 === t
+              ? void 0
+              : t.toLowerCase(),
+          S = (0, B.aL)(
+            null !== (i = null == d ? void 0 : d.link) && void 0 !== i
+              ? i
+              : "#",
+            w,
+          );
+        return r.createElement(
+          "a",
+          {
+            href: (null == d ? void 0 : d.link) ? S : "#",
+            onMouseDown: (e) => s(() => {}, n.item, e),
+          },
+          r.createElement(Y, {
+            icon: X(n.type),
+            onActivate: () =>
+              s(() => {
+                (null == d ? void 0 : d.link) && S && window.location.assign(S);
+              }, n.item),
+            fallbackLogo: r.createElement(y.Qte, null),
+            location: o,
+            eUIMode: l,
+            data: d,
+            timestamp: n.timestamp,
+            nUnread: n.rgunread.length,
+            app: b,
+            bNewIndicator: (0, m.Rl)(n.item),
+            onHide: c,
+          }),
+        );
+      }
+      function ge(e) {
+        var t, i;
+        const {
+            steamid: n,
+            url: a,
+            strTitleLoc: s,
+            strBodyLoc: o,
+            rollup: l,
+            onNotificationClick: c,
+            location: u,
+            uimode: _,
+            onHide: p,
+          } = e,
+          { data: f } = (0, S.js)(n);
+        if (!o) return null;
+        const g = !f,
+          b = (0, d.we)(
+            s,
+            null !== (t = null == f ? void 0 : f.m_strPlayerName) &&
+              void 0 !== t
+              ? t
+              : "",
+          ),
+          B = (0, d.we)(
+            o,
+            null !== (i = null == f ? void 0 : f.m_strPlayerName) &&
+              void 0 !== i
+              ? i
+              : "",
+          );
+        return r.createElement(
+          "a",
+          { href: a, onMouseDown: (e) => c(() => {}, l.item, e) },
+          r.createElement(ie, {
+            title: b,
+            body: B,
+            bDataLoading: g,
+            logoUrl: null == f ? void 0 : f.avatar_url_medium,
+            icon: r.createElement(y.Qte, null),
+            onActivate: () => c(() => window.location.assign(a), l.item),
+            location: u,
+            eUIMode: _,
+            timestamp: l.timestamp,
+            nUnread: l.rgunread.length,
+            bNewIndicator: (0, m.Rl)(l.item),
+            onHide: p,
+          }),
+        );
+      }
+      function ye(e) {
+        const t =
+          ((i = e.rollup.type),
+          (n = e.rollup.item.body_data),
+          r.useMemo(() => {
+            const e = i,
+              t = (0, m.aq)(e),
+              r = (0, m.u5)(n);
+            if (!t) return null;
+            const a =
+                "string" == typeof t.titleLoc ? t.titleLoc : t.titleLoc(r),
+              s = "string" == typeof t.bodyLoc ? t.bodyLoc : t.bodyLoc(r),
+              o = "string" == typeof t.url ? t.url : t.url(r),
+              l =
+                "string" == typeof t.steamidAttribute
+                  ? t.steamidAttribute
+                  : t.steamidAttribute(r);
+            return {
+              strTitleLoc: a,
+              strBodyLoc: s,
+              strUrl: o,
+              steamid: r && r[l],
+            };
+          }, [n, i]));
+        var i, n;
+        if (!t) return null;
+        const { strTitleLoc: a, strBodyLoc: s, strUrl: o, steamid: l } = t;
+        return l && a && s
+          ? r.createElement(ge, {
+              steamid: l,
+              url: o,
+              strTitleLoc: a,
+              strBodyLoc: s,
+              ...e,
+            })
+          : null;
+      }
+      function be(e) {
+        const { url: t, count: i, icon: n, strLocToken: a, eFeature: s } = e,
+          l = (0, o.Hw)(s);
+        return i
+          ? l
+            ? null
+            : r.createElement(
+                "a",
+                { href: t, className: g().WebPinnedNotification },
+                r.createElement(E, {
+                  icon: r.createElement(n, null),
+                  count: i,
+                  onActivate: () => window.location.assign(t),
+                  strLocToken: a,
+                  eUIMode: 3,
+                  visible: !0,
+                }),
+              )
+          : null;
+      }
+      const Be = {
         3: function (e) {
           var t, i, n;
           const {
@@ -4363,38 +4566,41 @@
             [c] = (0, p.t7)(l.appid, { include_assets: !0 }),
             [d, u] = (0, r.useState)(""),
             f = (0, s.LH)();
-          (0, r.useEffect)(() => {
-            var e;
-            if (
-              l.count > 1 &&
-              (null === (e = l.appids) || void 0 === e ? void 0 : e.length)
-            )
-              return u(
+          return (
+            (0, r.useEffect)(() => {
+              var e;
+              if (
+                l.count > 1 &&
+                (null === (e = l.appids) || void 0 === e ? void 0 : e.length)
+              )
+                return u(
+                  w.TS.STORE_BASE_URL +
+                    `wishlist/profiles/${f}/?wng=${l.appids.toString()}#sort=discount`,
+                );
+              if (c) return u(c.GetStorePageURL());
+              const t = l.appid ? `?appid=${l.appid}` : "";
+              u(
                 w.TS.STORE_BASE_URL +
-                  `wishlist/profiles/${f}/?wng=${l.appids.toString()}#sort=discount`,
+                  `wishlist/profiles/${f}/${t}#sort=discount`,
               );
-            if (c) return u(c.GetStorePageURL());
-            const t = l.appid ? `?appid=${l.appid}` : "";
-            u(
-              w.TS.STORE_BASE_URL + `wishlist/profiles/${f}/${t}#sort=discount`,
-            );
-          }, [l, c, f]);
-          return r.createElement(
-            "a",
-            { href: d, onMouseDown: (e) => i(() => {}, t.item, e) },
-            r.createElement(ne, {
-              fallbackLogo: r.createElement(y.Qte, null),
-              icon: r.createElement(y.ilR, null),
-              onActivate: () => i(() => window.location.assign(d), t.item),
-              app: c,
-              location: n,
-              data: l,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              eUIMode: a,
-              bNewIndicator: (0, m.Rl)(t.item),
-              onHide: o,
-            }),
+            }, [l, c, f]),
+            r.createElement(
+              "a",
+              { href: d, onMouseDown: (e) => i(() => {}, t.item, e) },
+              r.createElement(ne, {
+                fallbackLogo: r.createElement(y.Qte, null),
+                icon: r.createElement(y.ilR, null),
+                onActivate: () => i(() => window.location.assign(d), t.item),
+                app: c,
+                location: n,
+                data: l,
+                timestamp: t.timestamp,
+                nUnread: t.rgunread.length,
+                eUIMode: a,
+                bNewIndicator: (0, m.Rl)(t.item),
+                onHide: o,
+              }),
+            )
           );
         },
         5: function (e) {
@@ -4594,219 +4800,8 @@
             }),
           );
         },
+        29: () => null,
       };
-      function pe(e) {
-        let t = null;
-        return (
-          (0, m.sR)(e)
-            ? (t = be)
-            : (0, m.IC)(e)
-              ? (t = ge)
-              : _e[e] && (t = _e[e]),
-          t
-        );
-      }
-      function fe(e) {
-        const { rollup: t, uimode: i, location: a } = e,
-          s = pe(t.type);
-        return s
-          ? r.createElement(
-              b.Ay,
-              {
-                controller: "notification",
-                method: (0, n.fL)(i),
-                submethod: (0, n.ey)(a),
-              },
-              r.createElement(s, { ...e }),
-            )
-          : null;
-      }
-      function ge(e) {
-        var t, i;
-        const {
-            rollup: n,
-            onNotificationClick: s,
-            location: o,
-            uimode: l,
-            onHide: c,
-          } = e,
-          d =
-            ((_ = n.item.notification_type),
-            (f = n.item.body_data),
-            r.useMemo(() => {
-              if (void 0 === _) return null;
-              let e = (0, m.K9)(_);
-              const t = (0, m.u5)(f);
-              if (!e || !t) return null;
-              const i =
-                  "function" != typeof e.displayNameLoc
-                    ? { locString: e.displayNameLoc }
-                    : e.displayNameLoc(t),
-                r =
-                  "function" != typeof e.titleLoc
-                    ? { locString: e.titleLoc }
-                    : e.titleLoc(t),
-                n =
-                  "function" != typeof e.bodyLoc
-                    ? { locString: e.bodyLoc }
-                    : e.bodyLoc(t),
-                a = "function" != typeof e.image ? e.image : e.image(t),
-                s = "function" != typeof e.link ? e.link : e.link(t);
-              return {
-                display_name: u(i),
-                title: u(r),
-                body: u(n),
-                image: a,
-                link: s,
-              };
-            }, [f, _]));
-        var _, f;
-        const g = "number" == typeof (null == d ? void 0 : d.image),
-          [b] = (0, p.t7)(g ? d.image : 0, { include_assets: !0 }),
-          w =
-            null ===
-              (t = (0, a.p$)(n.type).replace(
-                "k_ESteamNotificationType_",
-                "",
-              )) || void 0 === t
-              ? void 0
-              : t.toLowerCase(),
-          S = (0, B.aL)(
-            null !== (i = null == d ? void 0 : d.link) && void 0 !== i
-              ? i
-              : "#",
-            w,
-          );
-        return r.createElement(
-          "a",
-          {
-            href: (null == d ? void 0 : d.link) ? S : "#",
-            onMouseDown: (e) => s(() => {}, n.item, e),
-          },
-          r.createElement(Y, {
-            icon: X(n.type),
-            onActivate: () =>
-              s(() => {
-                (null == d ? void 0 : d.link) && S && window.location.assign(S);
-              }, n.item),
-            fallbackLogo: r.createElement(y.Qte, null),
-            location: o,
-            eUIMode: l,
-            data: d,
-            timestamp: n.timestamp,
-            nUnread: n.rgunread.length,
-            app: b,
-            bNewIndicator: (0, m.Rl)(n.item),
-            onHide: c,
-          }),
-        );
-      }
-      function ye(e) {
-        var t, i;
-        const {
-            steamid: n,
-            url: a,
-            strTitleLoc: s,
-            strBodyLoc: o,
-            rollup: l,
-            onNotificationClick: c,
-            location: u,
-            uimode: _,
-            onHide: p,
-          } = e,
-          { data: f } = (0, S.js)(n);
-        if (!o) return null;
-        const g = !f,
-          b = (0, d.we)(
-            s,
-            null !== (t = null == f ? void 0 : f.m_strPlayerName) &&
-              void 0 !== t
-              ? t
-              : "",
-          ),
-          B = (0, d.we)(
-            o,
-            null !== (i = null == f ? void 0 : f.m_strPlayerName) &&
-              void 0 !== i
-              ? i
-              : "",
-          );
-        return r.createElement(
-          "a",
-          { href: a, onMouseDown: (e) => c(() => {}, l.item, e) },
-          r.createElement(ie, {
-            title: b,
-            body: B,
-            bDataLoading: g,
-            logoUrl: null == f ? void 0 : f.avatar_url_medium,
-            icon: r.createElement(y.Qte, null),
-            onActivate: () => c(() => window.location.assign(a), l.item),
-            location: u,
-            eUIMode: _,
-            timestamp: l.timestamp,
-            nUnread: l.rgunread.length,
-            bNewIndicator: (0, m.Rl)(l.item),
-            onHide: p,
-          }),
-        );
-      }
-      function be(e) {
-        const t =
-          ((i = e.rollup.type),
-          (n = e.rollup.item.body_data),
-          r.useMemo(() => {
-            const e = i,
-              t = (0, m.aq)(e),
-              r = (0, m.u5)(n);
-            if (!t) return null;
-            const a =
-                "string" == typeof t.titleLoc ? t.titleLoc : t.titleLoc(r),
-              s = "string" == typeof t.bodyLoc ? t.bodyLoc : t.bodyLoc(r),
-              o = "string" == typeof t.url ? t.url : t.url(r),
-              l =
-                "string" == typeof t.steamidAttribute
-                  ? t.steamidAttribute
-                  : t.steamidAttribute(r);
-            return {
-              strTitleLoc: a,
-              strBodyLoc: s,
-              strUrl: o,
-              steamid: r && r[l],
-            };
-          }, [n, i]));
-        var i, n;
-        if (!t) return null;
-        const { strTitleLoc: a, strBodyLoc: s, strUrl: o, steamid: l } = t;
-        return l && a && s
-          ? r.createElement(ye, {
-              steamid: l,
-              url: o,
-              strTitleLoc: a,
-              strBodyLoc: s,
-              ...e,
-            })
-          : null;
-      }
-      function Be(e) {
-        const { url: t, count: i, icon: n, strLocToken: a, eFeature: s } = e,
-          l = (0, o.Hw)(s);
-        return i
-          ? l
-            ? null
-            : r.createElement(
-                "a",
-                { href: t, className: g().WebPinnedNotification },
-                r.createElement(E, {
-                  icon: r.createElement(n, null),
-                  count: i,
-                  onActivate: () => window.location.assign(t),
-                  strLocToken: a,
-                  eUIMode: 3,
-                  visible: !0,
-                }),
-              )
-          : null;
-      }
     },
     33861: (e, t, i) => {
       "use strict";

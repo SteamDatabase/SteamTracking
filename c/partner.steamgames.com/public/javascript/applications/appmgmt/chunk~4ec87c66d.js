@@ -11340,6 +11340,130 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapPartnerToContactInfo = new Map();
+        m_mapPromisePartnerLoading = new Map();
+        async FetchValvePartnerContacts(_) {
+          const _ =
+              _._.PARTNER_BASE_URL + "actions/ajaxgetpartnervalvecontacts",
+            _ = {
+              sessionid: _._.SESSIONID,
+              strPartnerIDs: _.join(","),
+            },
+            _ = await _().get(_, {
+              params: _,
+              withCredentials: !0,
+            });
+          return 200 == _?.status && 1 == _?.data.success
+            ? (_.data.contacts.forEach((_) => {
+                this.m_mapPartnerToContactInfo.has(_.partnerid) ||
+                  this.m_mapPartnerToContactInfo.set(_.partnerid, []),
+                  this.m_mapPartnerToContactInfo.get(_.partnerid).push(_);
+              }),
+              _.data.contacts)
+            : [];
+        }
+        async LoadValvePartnerContact(_) {
+          return _
+            ? this.m_mapPartnerToContactInfo.has(_)
+              ? this.m_mapPartnerToContactInfo.get(_)
+              : (this.m_mapPromisePartnerLoading.has(_) ||
+                  this.m_mapPromisePartnerLoading.set(
+                    _,
+                    this.InternalLoadValvePartnerContact(_),
+                  ),
+                this.m_mapPromisePartnerLoading.get(_))
+            : [];
+        }
+        async InternalLoadValvePartnerContact(_) {
+          return this.FetchValvePartnerContacts([_]);
+        }
+        GetPartnerContact(_) {
+          return this.m_mapPartnerToContactInfo.get(_);
+        }
+        GetPartnerContactAccountsByFilter(_, _, _) {
+          const _ = this.m_mapPartnerToContactInfo.get(_);
+          if (_?.length > 0) {
+            const _ = _.filter((_) => !_.appid || _.appid == _)
+              .filter(
+                (_) =>
+                  !_ ||
+                  "any" == _ ||
+                  ("business" == _ && _.is_business_contact) ||
+                  ("tech" == _ && _.is_tech_contact),
+              )
+              .map((_) => new _._(_.steamid).GetAccountID());
+            return _._(_);
+          }
+          return [];
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_PartnerValveContactStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        Init() {
+          const _ = (0, _._)(
+            "partner_valve_contact_list",
+            "application_config",
+          );
+          _ &&
+            _.forEach((_) => {
+              this.m_mapPartnerToContactInfo.has(_.partnerid)
+                ? this.m_mapPartnerToContactInfo.get(_.partnerid).push(_)
+                : this.m_mapPartnerToContactInfo.set(_.partnerid, [_]);
+            });
+        }
+      }
+      function _(_) {
+        return ["PartnerValveContactByPartnerID", _];
+      }
+      function _(_, _) {
+        return _.prefetchQuery({
+          queryKey: _(_),
+          queryFn: async () => _.Get().LoadValvePartnerContact(_),
+        });
+      }
+      function _(_, _, _) {
+        return _.Get().GetPartnerContactAccountsByFilter(_, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = (0, _.useState)(null),
+          _ = (function (_) {
+            const { data: _, isLoading: _ } = (0, _._)({
+              queryKey: _(_),
+              queryFn: async () => _.Get().LoadValvePartnerContact(_),
+            });
+            return _ ? null : _;
+          })(_);
+        return (
+          (0, _.useEffect)(() => {
+            _ && _(_.Get().GetPartnerContactAccountsByFilter(_, _, _));
+          }, [_, _, _, _]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -11529,6 +11653,14 @@
                   ? "marketingmessage_art_eventcapsule"
                   : "marketingmessage_art_2_eventcapsule"),
             ),
+          );
+        }
+        BIsAnyMarketingMessageArtRequest() {
+          return (
+            this.BIsMarketingMessageArtRequest() ||
+            this.BIsMarketingMessageArtRequest_2() ||
+            this.BIsMarketingMessageEventCapsuleRequest() ||
+            this.BIsMarketingMessageEventCapsuleRequest_2()
           );
         }
         BIsEventHeaderImageRequest() {
@@ -20976,96 +21108,82 @@
             _.createElement("div", null, "Success! You can close this Dialog."),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = _._.Get(),
-          _ = (0, _.useRef)(null),
+        const { closeModal: _ } = _,
+          _ = _._.Get(),
           _ = _().CancelToken.source(),
           [_, _] = (0, _.useState)(""),
-          _ = () => {
-            _.current && __webpack_require__.current("new create requested."),
-              _.closeModal && _.closeModal();
-          };
+          _ = (0, _._)();
+        if (_.bLoading)
+          return _.createElement(_._, {
+            state: _,
+            strDialogTitle: "Creating a new Opt In Page",
+            closeModal: _,
+            strThrobber: "Creating... Please be patient.",
+          });
         return _.createElement(
           _._,
           {
             onCancel: _,
+            strTitle: "Create a new Opt In Page",
+            strDescription:
+              "Please provide a unique ID for the page. Do not start with the 'sale_' prefix, this will automatically be added for you.",
+            onOK: async function () {
+              if (
+                (_.fnSetLoading(!0),
+                await __webpack_require__.CreatePage(_, _.token),
+                __webpack_require__.GetCreatedPageId())
+              )
+                window.location.href =
+                  _._.PARTNER_BASE_URL +
+                  "optin/admin/edit/" +
+                  __webpack_require__.GetCreatedPageId();
+              else {
+                _.fnSetError(!0);
+                document.getElementById("resultmsg");
+                __webpack_require__.GetCreatePageErrMsg()
+                  ? _.fnSetStrError(__webpack_require__.GetCreatePageErrMsg())
+                  : _.fnSetStrError(
+                      "Error occured when attempting to create page.  Please try again.",
+                    );
+              }
+            },
+            strOKButtonText: (0, _._)("#Button_Continue"),
           },
-          _.createElement(_._, null, "Create a new Opt In Page"),
+          _.createElement("br", null),
           _.createElement(
-            _._,
+            "div",
             null,
             _.createElement(
               "span",
-              null,
-              "Please provide a unique ID for the page. Do not start with the 'sale_' prefix, this will automatically be added for you.",
-            ),
-            _.createElement("br", null),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "span",
-                {
-                  style: {
-                    width: "100px",
-                    display: "inline-block",
-                  },
-                },
-                "Sale ID",
-              ),
-              _.createElement("input", {
-                type: "text",
-                onChange: function (_) {
-                  _(_.target.value);
-                },
-              }),
-              _.createElement("br", null),
-              _.createElement("p", null),
-              _.createElement(
-                "span",
-                {
-                  style: {
-                    fontStyle: "italic",
-                  },
-                },
-                "The Sale ID is used in the URL for the page. Only letters, numbers, and underscores are allowed.",
-              ),
-              _.createElement("p", null),
-              _.createElement("span", {
-                _: "resultmsg",
+              {
                 style: {
-                  color: "red",
+                  width: "100px",
+                  display: "inline-block",
                 },
-              }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              onCancel: _,
-              onOK: async function () {
-                if (
-                  (_.current &&
-                    __webpack_require__.current("new create requested."),
-                  await _.CreatePage(_, _.token),
-                  _.GetCreatedPageId())
-                )
-                  window.location.href =
-                    _._.PARTNER_BASE_URL +
-                    "optin/admin/edit/" +
-                    _.GetCreatedPageId();
-                else {
-                  let _ = document.getElementById("resultmsg");
-                  _.GetCreatePageErrMsg()
-                    ? (_.innerText = _.GetCreatePageErrMsg())
-                    : (_.innerText =
-                        "Error occured when attempting to create page.  Please try again.");
-                }
               },
-              strOKText: (0, _._)("#Button_Continue"),
+              "Sale ID",
+            ),
+            _.createElement("input", {
+              type: "text",
+              onChange: function (_) {
+                _(_.target.value);
+              },
             }),
+            _.createElement("br", null),
+            _.createElement("p", null),
+            _.createElement(
+              "span",
+              {
+                style: {
+                  fontStyle: "italic",
+                },
+              },
+              "The Sale ID is used in the URL for the page. Only letters, numbers, and underscores are allowed.",
+            ),
+            _.createElement("p", null),
           ),
         );
       }
@@ -22895,6 +23013,244 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.opt_in_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  opt_in_id: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  opt_in_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  active: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  start_date: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  end_date: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  jsondata: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  last_modified_time: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  last_modifier_accountid: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "COptInDef";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.opt_in_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  opt_in_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  start: {
+                    _: 2,
+                    _: 0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  count: {
+                    _: 3,
+                    _: 20,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  include_json: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_GetOptInHistoryInternal_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.opt_ins || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  opt_ins: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_GetOptInHistoryInternal_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.opt_in_name || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -23503,6 +23859,16 @@
               },
             );
           }),
+          (_.GetOptInHistoryInternal = function (_, _) {
+            return _.SendMsg(
+              "Publishing.GetOptInHistoryInternal#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 4,
+              },
+            );
+          }),
           (_.GetPartnerAppOptInsIDs = function (_, _) {
             return _.SendMsg(
               "Publishing.GetPartnerAppOptInsIDs#1",
@@ -24001,13 +24367,16 @@
         (0, _._)([_._], _.prototype, "TestFireEmailToSelf", null),
         (0, _._)([_._], _.prototype, "Init", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
+        const [_, __webpack_require__, _] = (0, _._)(!1);
         (0, _.useEffect)(() => {
           _._.Get(), _._.Get().Reset(null, null);
         }, []);
-        const [_, __webpack_require__] = (0, _._)("tab", "active"),
-          _ = (_) => __webpack_require__(_.key),
+        const [_, _] = (0, _._)("tab", "active"),
+          _ = (_) => _(_.key),
           _ = [
             {
               name: `Active Opt-In Events (${_._.Get().GetActiveOptIn()?.length || 0})`,
@@ -24106,9 +24475,7 @@
                     float: "right",
                     marginRight: "16px",
                   },
-                  onClick: (_) => {
-                    (0, _._)(_.createElement(_, null), (0, _._)(_));
-                  },
+                  onClick: (_) => __webpack_require__(),
                 },
                 "Create Opt-In Page",
               ),
@@ -24118,6 +24485,15 @@
               "p",
               null,
               "This shows all of the active and past opt-in definitions we have setup. Definition drives both the eligibility of the app that are included and also describe the content we show partners on their specific opt-in page.",
+            ),
+            _.createElement(
+              _._,
+              {
+                active: _,
+              },
+              _.createElement(_, {
+                closeModal: _,
+              }),
             ),
             _.createElement(_._, {
               tabs: _,
@@ -25184,9 +25560,6 @@
               );
         }
       }
-      (0, _._)([_._], _.prototype, "ChangeAppsAdditionalFeaturingState", null),
-        (0, _._)([_._], _.prototype, "Init", null);
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             strTitle: _,
@@ -25382,6 +25755,8 @@
           closeModal: _.closeModal,
         });
       }
+      (0, _._)([_._], _.prototype, "ChangeAppsAdditionalFeaturingState", null),
+        (0, _._)([_._], _.prototype, "Init", null);
       class _ {
         async UpdateAppInvitation(_, _, _, _, _, _) {
           let _ = 1;
@@ -27121,7 +27496,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get(),
@@ -27129,7 +27503,8 @@
             _.GetName(),
             _.GetFullName(),
             _.BIsOptInEnabled(),
-          ]);
+          ]),
+          [_, _, _] = (0, _._)(!1);
         return _.createElement(
           "div",
           {
@@ -27189,7 +27564,9 @@
                 _.createElement(_._, {
                   label: "Enable Partners to opt-in",
                   checked: _,
-                  onChange: _.SetOptInEnabled,
+                  onChange: (_) => {
+                    _ ? _.SetOptInEnabled(_) : _();
+                  },
                 }),
                 _.createElement(
                   "a",
@@ -27198,6 +27575,21 @@
                     target: "_blank",
                   },
                   "Steam Works Doc Page",
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    active: _,
+                  },
+                  _.createElement(_._, {
+                    strTitle: (0, _._)("#Dialog_AreYouSure"),
+                    strDescription:
+                      "This opt-in was previously enabled and could be visible to partners. This will turn it off for all partners after you save. Are you sure you want to do this?",
+                    onOK: () => {
+                      _.SetOptInEnabled(!1);
+                    },
+                    closeModal: _,
+                  }),
                 ),
               ),
             ),
@@ -34501,7 +34893,7 @@
                       const _ = {
                           unique_id: _(),
                           type: _._.k_Starting,
-                          internal_name: "Going Live Now!",
+                          internal_name: "Going Live Today",
                           sections: [],
                           subject_token: "#OptIn_EmailSubject_NF_StartsToday",
                           targeting: 1,
@@ -40017,8 +40409,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { optInDefinition: _ } = _,
           _ = _.Get().GetModel(),
@@ -44701,6 +45092,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditablePlan: _ } = _,
@@ -44712,7 +45105,9 @@
           _ = Math.floor(Date.now() / 1e3),
           _ = _?.GetDueDate() ?? _.GetStartDate() - _._,
           _ = _ <= _ && _ != _._,
-          _ = (0, _._)(_.GetID());
+          _ = (0, _._)(_.GetID()),
+          _ = (0, _._)(() => _.GetModel().submitting_accountid),
+          [_, _, _] = (0, _._)();
         return _.createElement(
           "div",
           null,
@@ -44761,6 +45156,18 @@
                     },
                     "Warning: due date is not in the future",
                   ),
+                Boolean(_) &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                    },
+                    "Clear Submit ",
+                    _.createElement(_._, {
+                      tooltip:
+                        "Reset the submissions so they can re-upload their content",
+                    }),
+                  ),
               ),
               _.createElement(
                 "div",
@@ -44807,6 +45214,22 @@
           _.createElement(_, {
             oEditablePlan: _,
           }),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_._, {
+              strTitle: "Are you sure?",
+              strDescription:
+                "This resets their submissions information so they can update and re-upload their content.",
+              onOK: () => {
+                (_.GetModel().submitting_accountid = void 0),
+                  (_.GetModel().submitting_rtime = void 0);
+              },
+              closeModal: _,
+            }),
+          ),
           _.createElement(_, null),
         );
       }
@@ -44825,7 +45248,7 @@
               rtExpireTime: _,
               nPartnerID: _.GetPartnerID(),
               strPromotionPlanID: _.GetID(),
-              bRequireMarketingBanner: _.BIsMarketingMessageArtRequest(),
+              bRequireMarketingBanner: _.BIsAnyMarketingMessageArtRequest(),
               bRequireSpotlightBanner: _.BIsSpotlightArtRequest(),
               bRequireDiscount: Boolean(_.GetDiscountEventID()),
             };
@@ -47673,14 +48096,13 @@
           _ = _?.trim().length > 0,
           _ = _ && !(_ || _),
           _ =
-            (_ &&
-              _.trim().length > 0 &&
-              (!_ || _) &&
-              (!_ || _) &&
-              (!_ || _) &&
-              (!_ || _)) ||
-            !_ ||
-            _;
+            _ &&
+            _.trim().length > 0 &&
+            (!_ || _) &&
+            (!_ || _) &&
+            (!_ || _) &&
+            (!_ || _) &&
+            (!_ || _);
         return _.createElement(
           "div",
           {
@@ -47859,7 +48281,9 @@
             _._,
             {
               toolTipContent: _
-                ? void 0
+                ? _
+                  ? void 0
+                  : (0, _._)("#AssetRequest_Incomplete")
                 : (0, _._)("#AssetRequest_InvalidLink"),
             },
             _.createElement(
@@ -68497,93 +68921,7 @@
       let _;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapPartnerToContactInfo = new Map();
-        m_mapPromisePartnerLoading = new Map();
-        async FetchValvePartnerContacts(_) {
-          const _ =
-              _._.PARTNER_BASE_URL + "actions/ajaxgetpartnervalvecontacts",
-            _ = {
-              sessionid: _._.SESSIONID,
-              strPartnerIDs: _.join(","),
-            },
-            _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-          return 200 == _?.status && 1 == _?.data.success
-            ? _.data.contacts
-            : [];
-        }
-        async LoadValvePartnerContact(_) {
-          return _
-            ? this.m_mapPartnerToContactInfo.has(_)
-              ? this.m_mapPartnerToContactInfo.get(_)
-              : (this.m_mapPromisePartnerLoading.has(_) ||
-                  this.m_mapPromisePartnerLoading.set(
-                    _,
-                    this.InternalLoadValvePartnerContact(_),
-                  ),
-                this.m_mapPromisePartnerLoading.get(_))
-            : [];
-        }
-        async InternalLoadValvePartnerContact(_) {
-          return this.FetchValvePartnerContacts([_]);
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerValveContactStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        Init() {
-          const _ = (0, _._)(
-            "partner_valve_contact_list",
-            "application_config",
-          );
-          _ &&
-            _.forEach((_) => {
-              this.m_mapPartnerToContactInfo.has(_.partnerid)
-                ? this.m_mapPartnerToContactInfo.get(_.partnerid).push(_)
-                : this.m_mapPartnerToContactInfo.set(_.partnerid, [_]);
-            });
-        }
-      }
-      function _(_, _, _) {
-        const [_, _] = (0, _.useState)(null),
-          _ = (function (_) {
-            const { data: _, isLoading: _ } = (0, _._)({
-              queryKey: ["PartnerValveContactByPartnerID", _],
-              queryFn: () => _.Get().LoadValvePartnerContact(_),
-            });
-            return _ ? null : _;
-          })(_);
-        return (
-          (0, _.useEffect)(() => {
-            if (_?.length > 0) {
-              const _ = _.filter((_) => !_.appid || _.appid == _)
-                .filter(
-                  (_) =>
-                    "any" == _ ||
-                    ("business" == _ && _.is_business_contact) ||
-                    ("tech" == _ && _.is_tech_contact),
-                )
-                .map((_) => new _._(_.steamid).GetAccountID());
-              _(_._(_));
-            }
-          }, [_, _, _]),
-          _
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -68594,6 +68932,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -70068,7 +70408,7 @@
       function _(_) {
         const { partnerID: _, appInfo: __webpack_require__ } = _,
           [_] = (0, _._)(_),
-          _ = _(_, __webpack_require__.appid, "business");
+          _ = (0, _._)(_, __webpack_require__.appid, "business");
         return _
           ? _.createElement(
               "div",
@@ -103195,13 +103535,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      const _ = new (class {})();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -103401,6 +103734,15 @@
         }
         GetTemplateVars() {
           return this.m_templateVars;
+        }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_templateVars?.localized_alt_text?.[_] ||
+            this.m_templateVars?.localized_alt_text?.[
+              _._.GetELanguageFallback(_)
+            ] ||
+            void 0
+          );
         }
         GetTemplateImage() {
           let _ = this.m_templateVars.ll_image[_._.LANGUAGE],
@@ -107728,7 +108070,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -107999,7 +108340,6 @@
               },
               _.createElement(_._, {
                 emoticon: _.name,
-                emoticonHoverStore: this.props.emoticonHoverStore,
               }),
               _.new && _.createElement(_._, null),
             ),
@@ -108225,7 +108565,6 @@
             case "Emoticon":
               _ = _.createElement(_, {
                 emoticonStore: _,
-                emoticonHoverStore: _._,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -109154,7 +109493,6 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: _._,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,
@@ -110539,7 +110877,6 @@
             ((_ = _
               ? _.createElement(_._, {
                   emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   onEmoticonSelected: (_) =>
                     this.props.OnEmoticonSelected(_, !1),
@@ -110552,13 +110889,11 @@
                   _.GetFlairListByGroupID(__webpack_require__)?.length > 0
                 ? _.createElement(_._, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
                 : _.createElement(_._, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })),
@@ -110939,8 +111274,7 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          emoticonHoverStore: __webpack_require__,
-          roomEffectSettings: _,
+          roomEffectSettings: __webpack_require__,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
@@ -110980,7 +111314,6 @@
               renderContent: () =>
                 _.createElement(_, {
                   store: _,
-                  hoverStore: __webpack_require__,
                   onEmoticonSelect: (_) => _(_.name),
                   onStickerSelect: (_) => _(_.name),
                   flairGroupID: _,
@@ -111005,7 +111338,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: _,
-                      hoverStore: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
                       flairGroupID: _,
                     }),
@@ -111039,7 +111371,7 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: _,
-                      effectSettings: _,
+                      effectSettings: __webpack_require__,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -111069,9 +111401,8 @@
         render() {
           const {
               emoticonStore: _,
-              emoticonHoverStore: _,
-              onEmoticonSelected: __webpack_require__,
-              onStickerSelected: _,
+              onEmoticonSelected: _,
+              onStickerSelected: __webpack_require__,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -111094,9 +111425,8 @@
                 renderContent: () =>
                   _.createElement(_, {
                     store: _,
-                    hoverStore: _,
-                    onEmoticonSelect: (_) => __webpack_require__(_.name),
-                    onStickerSelect: (_) => _(_.name),
+                    onEmoticonSelect: (_) => _(_.name),
+                    onStickerSelect: (_) => __webpack_require__(_.name),
                     flairGroupID: _,
                   }),
               }),
@@ -111122,8 +111452,7 @@
                     renderContent: () =>
                       _.createElement(_, {
                         store: _,
-                        hoverStore: _,
-                        onItemSelect: (_) => __webpack_require__(_.name),
+                        onItemSelect: (_) => _(_.name),
                         flairGroupID: _,
                       }),
                   },
@@ -111143,7 +111472,7 @@
                     renderContent: () =>
                       _.createElement(_, {
                         store: _,
-                        onItemSelect: (_) => _(_.name),
+                        onItemSelect: (_) => __webpack_require__(_.name),
                       }),
                   },
                 ],
@@ -111190,7 +111519,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -111237,7 +111565,6 @@
                   renderContent: () =>
                     _.createElement(_, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (_) => this.props.OnSelected(_.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -111254,9 +111581,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onEmoticonSelect: __webpack_require__,
-              onStickerSelect: _,
+              onEmoticonSelect: _,
+              onStickerSelect: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -111265,11 +111591,10 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentEmoticons"),
                 items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -111288,7 +111613,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: _,
+                onItemSelect: __webpack_require__,
                 renderItem: (_) =>
                   _.createElement(_, {
                     sticker: _,
@@ -111324,21 +111649,22 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
-            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
+            _ =
+              !_ && __webpack_require__
+                ? _.GetFlairListByGroupID(__webpack_require__)
+                : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return _.createElement(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               _.createElement(_, {
                 emoticon: _,
-                emoticonHoverStore: _,
               }),
             keyExtractor: (_) => _.name,
             onFilterChange: (_) =>
@@ -111346,7 +111672,7 @@
                 filter: _,
               }),
             filter: _,
-            onSubmit: () => __webpack_require__(_[0]),
+            onSubmit: () => _(_[0]),
             renderEmpty: () =>
               _
                 ? _.createElement(_, null, (0, _._)("#AddonPicker_NoResults"))
@@ -111511,9 +111837,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -111522,11 +111847,10 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentEmoticons"),
                 items: _._.FilterEmoticons(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -111552,11 +111876,10 @@
                 {
                   title: (0, _._)("#AddonPicker_AllEmoticons"),
                   items: _._.FilterStickers(_.emoticon_list, _).slice(0, 1e3),
-                  onItemSelect: __webpack_require__,
+                  onItemSelect: _,
                   renderItem: (_) =>
                     _.createElement(_, {
                       emoticon: _,
-                      emoticonHoverStore: _,
                     }),
                   keyExtractor: (_) => _.name,
                   renderEmpty: () =>
@@ -111581,9 +111904,8 @@
         render() {
           const {
               store: _,
-              hoverStore: _,
-              onItemSelect: __webpack_require__,
-              flairGroupID: _,
+              onItemSelect: _,
+              flairGroupID: __webpack_require__,
             } = this.props,
             { filter: _ } = this.state;
           return _.createElement(_, {
@@ -111595,12 +111917,14 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
-                onItemSelect: __webpack_require__,
+                items: _._.FilterStickers(
+                  _.GetFlairListByGroupID(__webpack_require__),
+                  _,
+                ),
+                onItemSelect: _,
                 renderItem: (_) =>
                   _.createElement(_, {
                     emoticon: _,
-                    emoticonHoverStore: _,
                   }),
                 keyExtractor: (_) => _.name,
                 renderEmpty: () =>
@@ -111618,11 +111942,7 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const {
-            emoticon: _,
-            emoticonHoverStore: __webpack_require__,
-            large: _,
-          } = _,
+        const { emoticon: _, large: __webpack_require__ } = _,
           _ = !_.last_used && _.time_received;
         return _.createElement(
           "div",
@@ -111631,8 +111951,7 @@
           },
           _.createElement(_._, {
             emoticon: _.name,
-            emoticonHoverStore: __webpack_require__,
-            large: _,
+            large: __webpack_require__,
           }),
           _ && _.createElement(_, null),
         );
@@ -112046,7 +112365,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_LinkFilter = _._;
@@ -112109,7 +112427,6 @@
                 _.createElement(
                   _._,
                   {
-                    emoticonHoverStore: _._,
                     emoticon: _,
                   },
                   [],
@@ -113237,10 +113554,49 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        ..._._,
+        apply_user_filters: !0,
+      };
       function _(_) {
-        const { inputType: _, _: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, (0, _._)(_), {});
+        const {
+            inputType: _,
+            _: __webpack_require__,
+            bApplyUserContentPref: _,
+          } = _,
+          [_] = (0, _._)(__webpack_require__, (0, _._)(_), _ ? _ : _._);
+        if (!_) return null;
+        if (_) {
+          const _ = _.GetUserFilterFailure();
+          if (40 == _?.filter_failure || 50 == _?.filter_failure) {
+            let _ = "#StoreCapsule_App_Excluded";
+            switch (_) {
+              case "sub":
+                _ = "#StoreCapsule_Package_Excluded";
+                break;
+              case "bundle":
+                _ = "#StoreCapsule_Bundle_Excluded";
+            }
+            return _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _.AppSummaryWidgetCtn,
+                  "AppSummaryWidgetCtn",
+                ),
+              },
+              (0, _._)(
+                _,
+                _.createElement("a", {
+                  href: _._.STORE_BASE_URL + "account/preferences/",
+                }),
+              ),
+            );
+          }
+        }
         let _ = "bundle" == _ ? "bundle" : "sub" == _ ? "sub" : "game";
         return _.createElement(
           "div",
@@ -113451,6 +113807,7 @@
               return _.createElement(_, {
                 _: _,
                 inputType: _,
+                bApplyUserContentPref: !0,
               });
           }
         }
@@ -113590,17 +113947,24 @@
         let _ = (0, _._)(_.args) || (0, _._)(_.args, "href");
         const _ = (0, _._)(_.args, "style"),
           _ = (0, _._)(_.args, "id"),
+          _ = (0, _._)(_.args, "buttoncolor"),
           _ = (function (_) {
             return "button" === _
               ? (0, _._)(_.LinkButton, "LinkButton")
               : (0, _._)(_.Link, "Link");
-          })(_);
-        _.context.event;
+          })(_),
+          _ = _.context.event;
         if (void 0 === _) return _.children || "";
         if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(_, _.language, _.context.event?.rtime32_last_modified);
+          const _ = _._(_, _.language, _?.rtime32_last_modified);
           _ = "string" == typeof _ ? _ : _[1];
         }
+        const _ = (function (_, _) {
+          if ("button" == _ && _)
+            return {
+              backgroundColor: _,
+            };
+        })(_, _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             "store" == (0, _._)() &&
@@ -113615,6 +113979,7 @@
                 {
                   className: _,
                   href: _,
+                  style: _,
                 },
                 _.children,
               )
@@ -113634,6 +113999,7 @@
                     url: _,
                     event: _.context.event,
                     _: _,
+                    style: _,
                   },
                   _.children,
                 )
@@ -117244,6 +117610,7 @@
               background:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
+              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
               outlineWidth: _.border_width ? `${_.border_width}px` : void 0,

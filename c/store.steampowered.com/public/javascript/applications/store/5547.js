@@ -82,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Populære gjenstander",
 	"Menu_SearchBar_SearchResults": "Søkeresultater",
 	"Menu_SearchBar_YourTopGenres": "Sjangere for deg",
-	"Menu_SearchBar_BrowseBy": "Bla etter …"
+	"Menu_SearchBar_BrowseBy": "Bla etter …",
+	"Menu_Search": "Søk",
+	"Menu_Label": "Butikkmeny"
 }`);
     },
   },

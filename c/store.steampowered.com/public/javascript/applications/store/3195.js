@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Haberler ve Güncellemeler",
 	"Menu_Popover_Preferences": "Tercihler",
 	"Menu_Popover_Browse": "Göz at",
+	"Menu_Popover_Top": "Popüler",
 	"Menu_Popover_Recommendations": "Tavsiyeler",
 	"Menu_Popover_Categories": "Kategoriler",
 	"Menu_Popover_Hardware": "Donanım",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "İstek listenizden",
 	"Menu_Section_Browse_DLCForYou": "Sizin için DLC'ler",
 	"Menu_Section_Browse_ForYou": "Sizin için",
+	"Menu_Section_Browse_PopularNew": "Yeni ve Popüler",
+	"Menu_Section_Browse_FreeToPlay": "Oynaması Ücretsiz",
+	"Menu_Section_Browse_TopFreeToPlay": "Popüler Oynaması Ücretsiz Oyunlar",
+	"Menu_Section_Browse_Discounts": "İndirimler",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "İstek Listenizde",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Özel Etkinlikler",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Popüler Ürünler",
 	"Menu_Section_Recommendations": "Tavsiyeler",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Yeni Yayınlananlar Kuyruğu",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Topluluk Tavsiyeleri",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Popüler Öğeler",
 	"Menu_SearchBar_SearchResults": "Arama Sonuçları",
 	"Menu_SearchBar_YourTopGenres": "En sevdiğiniz türler",
-	"Menu_SearchBar_BrowseBy": "Göz at..."
+	"Menu_SearchBar_BrowseBy": "Göz at...",
+	"Menu_Search": "Ara",
+	"Menu_Label": "Mağaza menüsü"
 }`);
     },
   },

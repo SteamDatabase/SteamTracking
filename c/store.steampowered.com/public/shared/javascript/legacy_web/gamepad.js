@@ -197,6 +197,7 @@
           navState: _?.[_],
         };
       }
+      const _ = new (__webpack_require__("chunkid")._)("FocusNavigation").Debug;
       var _;
       !(function (_) {
         (_[(_.Unknown = 0)] = "Unknown"),
@@ -329,6 +330,9 @@
         return "jquery" in _ ? _.get(_[0]) || _.Unknown : _.get(_) || _.Unknown;
       }
       function _(_) {
+        return "jquery" in _ ? _.has(_[0]) : _.has(_);
+      }
+      function _(_) {
         _.find("*")
           .addBack()
           .each(function () {
@@ -346,9 +350,7 @@
           .addBack(_)
           .each(function () {
             var _;
-            (function (_) {
-              return "jquery" in _ ? _.has(_[0]) : _.has(_);
-            })((_ = this)) || _(_);
+            _((_ = this)) || _(_);
           }),
           (function () {
             for (let _ = _.length - 1; _ >= 0; _--)
@@ -606,8 +608,19 @@
           );
         },
         GPOnShowingModalWindow: function (_) {
-          const _ = _;
-          return _()(_).attr("data-nav-modal", "true"), () => _(_);
+          _("Showing element as modal", _);
+          const _ = _()(_),
+            _ = _(_);
+          return (
+            _ &&
+              (_(
+                "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
+              ),
+              _(_)),
+            _.attr("data-nav-modal", "true"),
+            _ && _(_),
+            () => _(_)
+          );
         },
         GPShowVirtualKeyboard: function (_ = !0) {
           _ ? _.ShowVirtualKeyboard() : _.HideVirtualKeyboard();
@@ -718,7 +731,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

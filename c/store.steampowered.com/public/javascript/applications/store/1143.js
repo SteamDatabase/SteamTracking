@@ -519,7 +519,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -790,7 +789,6 @@
               },
               _.createElement(_._, {
                 emoticon: _.name,
-                emoticonHoverStore: this.props.emoticonHoverStore,
               }),
               _.new && _.createElement(_._, null),
             ),
@@ -1016,7 +1014,6 @@
             case "Emoticon":
               _ = _.createElement(_, {
                 emoticonStore: _,
-                emoticonHoverStore: _._,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -1777,7 +1774,6 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: _._,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,

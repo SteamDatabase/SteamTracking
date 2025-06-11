@@ -136,6 +136,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        menuHeight: "46px",
         StoreMenuLegacyWrapper: "_2QlYKhF-leHfMXFSiSshZC",
         StoreMenuContainer: "pzuGfMA6MeGlV2I3yY60c",
         GamepadUI: "_2cz9ufAQLjlNOwbp2JCJST",
@@ -144,9 +145,13 @@
         BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
+        HideTransition: "YNdpuNoh9QiKr4kpbAIwZ",
+        Hide: "QxMlWcMzMZxcogv_rHw2j",
+        HideMenu: "_2gv6G2MeBRAI0FqxejcYS8",
+        Hidden: "_234vIwVerIU5MqgZwrEcd8",
+        Show: "_22kVz2i2PscI9OSO_WhNry",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
-        Hidden: "_234vIwVerIU5MqgZwrEcd8",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
@@ -2680,7 +2685,9 @@
                 className: _.SearchIcon,
                 type: "submit",
               },
-              _.createElement(_, null),
+              _.createElement(_, {
+                "aria-label": _("#Menu_Search"),
+              }),
             ),
             _.createElement(
               _,
@@ -2778,13 +2785,44 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-          visible: _,
-          closePopover: __webpack_require__,
-          children: _,
-        } = _;
+            visible: _,
+            closePopover: __webpack_require__,
+            children: _,
+            refPopover: _,
+            refActiveButton: _,
+          } = _,
+          _ = _.useCallback(
+            (_) => {
+              if (
+                _.current &&
+                _.current &&
+                document.activeElement &&
+                "Tab" === _.key
+              ) {
+                const _ = (0, _._)(_.current),
+                  _ = _.indexOf(document.activeElement);
+                if (-1 === _) return;
+                if (
+                  (0 === _ &&
+                    _.shiftKey &&
+                    (_.current.focus(), _.preventDefault()),
+                  _ === _.length - 1 && !_.shiftKey && _.current.parentElement)
+                ) {
+                  const _ = (0, _._)(_.current.parentElement),
+                    _ = _.indexOf(_.current);
+                  if (-1 !== _) {
+                    const _ = _[_ + 1];
+                    _ && (_.focus(), _.preventDefault());
+                  }
+                }
+              }
+            },
+            [_, _],
+          );
         return _.createElement(
           _.Fragment,
           null,
@@ -2806,6 +2844,8 @@
                   "flow-children": "row",
                   className: _.PopoverContent,
                   onCancelButton: __webpack_require__,
+                  ref: _,
+                  onKeyDown: _,
                 },
                 _,
               ),
@@ -4493,6 +4533,8 @@
             activeSection: _,
             closePopover: __webpack_require__,
             visibleSections: _,
+            refPopover: _,
+            refActiveButton: _,
           } = _,
           _ = _.useRef(_);
         return (
@@ -4502,6 +4544,8 @@
             {
               visible: void 0 !== _,
               closePopover: __webpack_require__,
+              refPopover: _,
+              refActiveButton: _,
             },
             _.current &&
               _.createElement(_, {
@@ -4552,7 +4596,8 @@
             return (0, _._)(_, `unhandled section ${_}`), null;
         }
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const { refPage: _ } = _;
         return _.createElement(_, {
@@ -4597,34 +4642,112 @@
         const {
             bShowBackdrop: _,
             closePopover: __webpack_require__,
+            refPage: _,
             children: _,
           } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _()(_.StoreMenuContainer, _ && _.GamepadUI),
-          },
+          _ = (0, _._)(),
+          [_, _] = _.useState("visible"),
+          _ = _.useRef();
+        _.current || (_.current = new WeakMap()),
+          (0, _.useLayoutEffect)(() => {
+            (_.current = new WeakMap()), _("visible");
+          }, [_]);
+        const _ = _.useCallback((_) => {
+          const _ = _.current,
+            _ = _.get(_),
+            _ = "scrollTop" in _ ? _.scrollTop : _.scrollY;
+          if (void 0 !== _) {
+            const _ = _ - _;
+            if (_ > 90 && _ > 400) _((_) => ("hidden" != _ ? "hide" : _));
+            else {
+              if (!(_ < -30)) return;
+              _((_) => ("visible" != _ ? "show" : _));
+            }
+          }
+          _.set(_, _);
+        }, []);
+        (0, _._)(
+          window,
+          "scroll",
+          _.useCallback((_) => _(window), [_]),
+        );
+        const _ = (0, _._)(
+            _.useCallback(
+              (_) => {
+                const _ = _.currentTarget;
+                (0, _._)(_) && _(_);
+              },
+              [_],
+            ),
+          ),
+          _ = (function (_, _) {
+            const [__webpack_require__, _] = _.useState(),
+              _ = _.useCallback((_) => {
+                _(
+                  Math.min(
+                    _.borderBoxSize[0].blockSize,
+                    parseInt(_.menuHeight),
+                  ),
+                );
+              }, []);
+            return (
+              (0, _.useEffect)(() => {
+                if (void 0 === __webpack_require__) return;
+                const _ = _.current,
+                  _ = _ ? 0 : __webpack_require__;
+                return (
+                  _.style.setProperty("--store-menu-floating-height", `${_}px`),
+                  () => {
+                    _?.style.removeProperty("--store-menu-floating-height");
+                  }
+                );
+              }, [_, __webpack_require__, _]),
+              (0, _._)(_)
+            );
+          })(_, _),
+          _ = "visible" != _ && !_,
+          _ = _()(
+            _.StoreMenu,
+            _ && _.HideTransition,
+            "hide" == _ && _.Hide,
+            "hidden" == _ && _.Hidden,
+            "show" == _ && _.Show,
+          );
+        let _;
+        return (
+          "hide" == _
+            ? (_ = () => _((_) => ("hide" == _ ? "hidden" : _)))
+            : "show" == _ &&
+              (_ = () => _((_) => ("show" == _ ? "visible" : _))),
           _.createElement(
             "div",
             {
-              className: _()(
-                _.StoreMenuBackdropContainer,
-                _ && _.BackdropActive,
-              ),
+              className: _()(_.StoreMenuContainer, _ && _.GamepadUI),
+              ref: _,
             },
             _.createElement(
               "div",
               {
-                className: _.StoreMenu,
+                className: _()(
+                  _.StoreMenuBackdropContainer,
+                  _ && _.BackdropActive,
+                ),
               },
-              _,
+              _.createElement(
+                "div",
+                {
+                  className: _,
+                  ref: _,
+                  onAnimationEnd: _,
+                },
+                _,
+              ),
+              _.createElement("div", {
+                className: _.Backdrop,
+                onClick: __webpack_require__,
+              }),
             ),
-            _.createElement("div", {
-              className: _.Backdrop,
-              onClick: __webpack_require__,
-            }),
-          ),
+          )
         );
       }
       function _(_) {
@@ -4632,7 +4755,6 @@
           [__webpack_require__, _] = _.useState(),
           [_, _] = _.useState(() => {}),
           [_, _, _] = (0, _._)(),
-          [_, _] = _.useState(),
           [_, _] = _.useState(),
           _ = (0, _._)(),
           _ = _.useCallback(() => _(void 0), []),
@@ -4646,66 +4768,62 @@
             _(), _();
           }, [_, _]),
           _ = _.useCallback((_) => {
-            _(_.borderBoxSize[0].blockSize), _(_.contentBoxSize[0].inlineSize);
+            _(_.contentBoxSize[0].inlineSize);
           }, []),
-          _ = (0, _._)(_);
-        return (
-          (0, _.useEffect)(() => {
-            if (void 0 === _) return;
-            const _ = _.current,
-              _ = _ ? 0 : _;
-            return (
-              _.style.setProperty("--store-menu-floating-height", `${_}px`),
-              () => {
-                _?.style.removeProperty("--store-menu-floating-height");
-              }
-            );
-          }, [_, _, _]),
+          _ = (0, _._)(_),
+          _ = _.useRef(null),
+          _ = _.useRef(null);
+        return _.createElement(
+          _._,
+          {
+            feature: "storemenuv7",
+          },
           _.createElement(
-            _._,
+            _,
             {
-              feature: "storemenuv7",
+              bShowBackdrop: _ || !!__webpack_require__,
+              closePopover: _,
+              refPage: _,
             },
             _.createElement(
-              _,
+              _._,
               {
-                bShowBackdrop: _ || !!__webpack_require__,
-                closePopover: _,
+                "flow-children": "row",
+                className: _.Content,
+                ref: _,
+                role: "navigation",
+                "aria-label": _("#Menu_Label"),
               },
-              _.createElement(
-                _._,
-                {
-                  "flow-children": "row",
-                  className: _.Content,
-                  ref: _,
-                },
-                _.createElement(_, {
-                  nMenuWidth: _,
-                  openPopover: _,
-                  activeSection: __webpack_require__,
-                  visibleSections: _,
-                  setVisibleSections: _,
-                }),
-                !_ &&
-                  _.createElement(_, {
-                    bSearchVisible: _,
-                    openSearch: _,
-                    closeSearch: _,
-                  }),
-                _ &&
-                  _.createElement("div", {
-                    className: _.NoSearchBarSpacer,
-                  }),
-                _.createElement(_, null),
-                _.createElement(_, null),
-              ),
               _.createElement(_, {
+                nMenuWidth: _,
+                openPopover: _,
                 activeSection: __webpack_require__,
-                closePopover: _,
                 visibleSections: _,
+                setVisibleSections: _,
+                refPopover: _,
+                refActiveButton: _,
               }),
+              !_ &&
+                _.createElement(_, {
+                  bSearchVisible: _,
+                  openSearch: _,
+                  closeSearch: _,
+                }),
+              _ &&
+                _.createElement("div", {
+                  className: _.NoSearchBarSpacer,
+                }),
+              _.createElement(_, null),
+              _.createElement(_, null),
             ),
-          )
+            _.createElement(_, {
+              activeSection: __webpack_require__,
+              closePopover: _,
+              visibleSections: _,
+              refPopover: _,
+              refActiveButton: _,
+            }),
+          ),
         );
       }
       function _(_) {
@@ -4715,6 +4833,8 @@
             visibleSections: _,
             setVisibleSections: _,
             nMenuWidth: _,
+            refPopover: _,
+            refActiveButton: _,
           } = _,
           _ = _.useRef([]),
           [_, _] = _.useState(),
@@ -4745,16 +4865,25 @@
           }, [_, _, _, _]),
           _.map((_, _) => {
             const [_, _] = _;
-            return _ && !_.has(_)
-              ? null
-              : _.createElement(_, {
-                  key: _,
-                  section: _,
-                  label: _,
-                  openPopover: _,
-                  active: __webpack_require__ === _,
-                  refButton: _.current[_],
-                });
+            if (_ && !_.has(_)) return null;
+            const _ = __webpack_require__ === _;
+            _ && (_.current = _.current[_].current);
+            let _ = null;
+            for (let _ = _ - 1; _ >= 0; _--)
+              if (!_ || _.has(_[_][0])) {
+                _ = _[_][0];
+                break;
+              }
+            return _.createElement(_, {
+              key: _,
+              section: _,
+              label: _,
+              openPopover: _,
+              active: _,
+              previousActive: _ === __webpack_require__,
+              refButton: _.current[_],
+              refPopover: _,
+            });
           })
         );
       }
@@ -4764,14 +4893,30 @@
             openPopover: __webpack_require__,
             label: _,
             active: _,
+            previousActive: _,
             refButton: _,
+            refPopover: _,
           } = _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(
             () => __webpack_require__(_),
             [__webpack_require__, _],
           ),
-          _ = _.useCallback(() => _(!0), []);
+          _ = _.useCallback(() => _(!0), []),
+          _ = _.useCallback(
+            (_) => {
+              if (_ && "Tab" === _.key && !_.shiftKey && _.current) {
+                const _ = (0, _._)(_.current);
+                _ && (_.focus(), _.preventDefault());
+              }
+              if (_ && "Tab" === _.key && _.shiftKey && _.current) {
+                const _ = (0, _._)(_.current),
+                  _ = _[_.length - 1];
+                _ && (__webpack_require__.focus(), _.preventDefault());
+              }
+            },
+            [_, _, _],
+          );
         return _.createElement(
           _._,
           {
@@ -4779,6 +4924,8 @@
             onMouseEnter: _,
             onClick: _,
             ref: _,
+            "aria-expanded": !!_,
+            onKeyDown: _,
           },
           _.createElement(
             "div",
@@ -4810,6 +4957,7 @@
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 12 12",
             fill: "none",
+            role: "presentation",
           },
           _.createElement("path", {
             fill: "currentColor",
@@ -4830,7 +4978,9 @@
                 className: _.MenuButton,
                 href: _,
               },
-              _.createElement(_, null),
+              _.createElement(_, {
+                role: "presentation",
+              }),
               _.Localize("#Menu_Wishlist"),
               _ > 0 && _.createElement(_, null, _),
             )

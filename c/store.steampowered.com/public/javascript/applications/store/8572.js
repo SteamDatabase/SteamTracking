@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Aktualności",
 	"Menu_Popover_Preferences": "Preferencje",
 	"Menu_Popover_Browse": "Przeglądaj",
+	"Menu_Popover_Top": "Najpopularniejsze",
 	"Menu_Popover_Recommendations": "Rekomendacje",
 	"Menu_Popover_Categories": "Kategorie",
 	"Menu_Popover_Hardware": "Sprzęt",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Z twojej listy życzeń",
 	"Menu_Section_Browse_DLCForYou": "DLC dla ciebie",
 	"Menu_Section_Browse_ForYou": "Dla ciebie",
+	"Menu_Section_Browse_PopularNew": "Wschodzące nowości",
+	"Menu_Section_Browse_FreeToPlay": "Free to Play",
+	"Menu_Section_Browse_TopFreeToPlay": "Najpopularniejsze darmowe gry",
+	"Menu_Section_Browse_Discounts": "Zniżki",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Na twojej liście życzeń",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Wydarzenia specjalne",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Popularne tytuły",
 	"Menu_Section_Recommendations": "Rekomendacje",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Kolejka nowych tytułów",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Rekomendacje społeczności",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Popularne produkty",
 	"Menu_SearchBar_SearchResults": "Wyniki wyszukiwania",
 	"Menu_SearchBar_YourTopGenres": "Twoje najczęstsze gatunki",
-	"Menu_SearchBar_BrowseBy": "Przeglądaj według…"
+	"Menu_SearchBar_BrowseBy": "Przeglądaj według…",
+	"Menu_Search": "Szukaj",
+	"Menu_Label": "Menu sklepu"
 }`);
     },
   },

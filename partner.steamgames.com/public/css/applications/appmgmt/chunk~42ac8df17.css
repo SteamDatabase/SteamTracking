@@ -512,6 +512,14 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 .syKgzmlrcUIJHIBfWsn4h p._3lnqGBzYap-Z2T81XBiBUU {
   margin: 0;
 }
+th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
+td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
+  margin-top: 0;
+}
+th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
+td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
+  margin-bottom: 0;
+}
 ._2LYsFAwy8wdRJQTNJOUcsT,
 ._6-VR2WCBCDupCcUN5INQM,
 ._1sGnlGwCeaGUp63h4Lx-pU,
@@ -3287,19 +3295,20 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   padding: 4px;
   height: fit-content;
 }
-._1HwWXjF06mJ9sG_9KXlgA- {
+._2artmqqQS2Rl8YMsi1nV-U ._1HwWXjF06mJ9sG_9KXlgA- {
+  padding: 5px 8px;
   background-color: #54a5d4;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1ch;
+  gap: 2px;
 }
-._1HwWXjF06mJ9sG_9KXlgA- svg {
+._2artmqqQS2Rl8YMsi1nV-U ._1HwWXjF06mJ9sG_9KXlgA- svg {
   width: 18px;
   height: 18px;
-  margin-left: -7px;
+  margin-left: -2px;
 }
 ._1a5djsChaeoZViyFSGNom5 {
   font-size: 12px;
@@ -4623,6 +4632,10 @@ div._1o1Ds-OdAZcjo18bw9QiEH {
 }
 .axjdi0dhiB17GHjL5FRCr {
   container-type: inline-size;
+}
+.axjdi0dhiB17GHjL5FRCr ._3j4dI1yA7cRfCvK8h406OB {
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .axjdi0dhiB17GHjL5FRCr ._2s-O5T3qJJYR2AUq4b9jIN,
 .axjdi0dhiB17GHjL5FRCr ._3j4dI1yA7cRfCvK8h406OB {

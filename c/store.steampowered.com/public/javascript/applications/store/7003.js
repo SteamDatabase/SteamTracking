@@ -47,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "Für Sie",
 	"Menu_Section_Browse_PopularNew": "Neu und angesagt",
 	"Menu_Section_Browse_FreeToPlay": "Kostenlos spielbar",
+	"Menu_Section_Browse_TopFreeToPlay": "Kostenlose Topspiele",
 	"Menu_Section_Browse_Discounts": "Rabatte",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "Auf Ihrer Wunschliste",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Sonderevents",
@@ -81,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Beliebte Artikel",
 	"Menu_SearchBar_SearchResults": "Suchergebnisse",
 	"Menu_SearchBar_YourTopGenres": "Ihre Top-Genres",
-	"Menu_SearchBar_BrowseBy": "Durchsuchen nach …"
+	"Menu_SearchBar_BrowseBy": "Durchsuchen nach …",
+	"Menu_Search": "Suchen",
+	"Menu_Label": "Shop-Menü"
 }`);
     },
   },

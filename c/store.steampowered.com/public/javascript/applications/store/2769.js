@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "新闻与更新",
 	"Menu_Popover_Preferences": "偏好",
 	"Menu_Popover_Browse": "浏览",
+	"Menu_Popover_Top": "热门",
 	"Menu_Popover_Recommendations": "推荐",
 	"Menu_Popover_Categories": "类别",
 	"Menu_Popover_Hardware": "硬件",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "在您的愿望单中",
 	"Menu_Section_Browse_DLCForYou": "为您推荐的 DLC",
 	"Menu_Section_Browse_ForYou": "为您推荐",
+	"Menu_Section_Browse_PopularNew": "人气蹿升的新品",
+	"Menu_Section_Browse_FreeToPlay": "免费开玩游戏",
+	"Menu_Section_Browse_TopFreeToPlay": "热门免费开玩游戏",
+	"Menu_Section_Browse_Discounts": "折扣",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "在您的愿望单上",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "特别活动",
+	"Menu_Section_Browse_Discounts_PopularTitles": "热门作品",
 	"Menu_Section_Recommendations": "推荐",
 	"Menu_Section_Recommendations_NewReleasesQueue": "新品队列",
 	"Menu_Section_Recommendations_CommunityRecommendations": "社区推荐",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "热门物品",
 	"Menu_SearchBar_SearchResults": "搜索结果",
 	"Menu_SearchBar_YourTopGenres": "您最喜欢的类型",
-	"Menu_SearchBar_BrowseBy": "浏览关键词："
+	"Menu_SearchBar_BrowseBy": "浏览关键词：",
+	"Menu_Search": "搜索",
+	"Menu_Label": "商店菜单"
 }`);
     },
   },

@@ -1355,6 +1355,7 @@
                         _.createElement(_._, {
                           _: _.jsondata.associated_appid,
                           inputType: "game",
+                          bApplyUserContentPref: !1,
                         }),
                     ),
                   ),

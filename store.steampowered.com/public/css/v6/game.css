@@ -2006,6 +2006,11 @@ body.v6 .game_area_description h2.bb_tag strong {
 	margin-right: 4px;
 }
 
+.widestore .communitylink_achievement {
+	width: 60px;
+	height: 60px;
+}
+
 a.communitylink_achievement.communitylink_achivement_plusmore {
     background-color: rgba( 103, 193, 245, 0.2 );
     border-radius: 1px;
@@ -2036,6 +2041,10 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
     background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.widestore a.communitylink_achievement.communitylink_achivement_plusmore {
+	height: 60px;
 }
 
 .communitylink_points_shop_images {
@@ -6670,7 +6679,7 @@ a.open_in_steam_body:hover {
 }
 
 .widestore .queue_ctn {
-    max-width: 1200px;
+    max-width: 1100px;
 	width: 100%;
     background: rgba( 0, 0, 0, 0.2 );
 	margin: 0px auto;
@@ -6695,7 +6704,7 @@ body.v6.widestore .game_area_already_owned.page_content {
 		    line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
-	max-width: 1200px;
+	max-width: 1100px;
 	width: 100%;
 }
 
@@ -6715,7 +6724,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
     padding: 0px 16px 16px 16px;
 	margin: 0px auto;
     margin-bottom: 40px;
-	max-width: calc(1200px - 32px);
+	max-width: calc(1100px - 32px);
 }
 
 .widestore .steam_curator_recommendation
@@ -6739,7 +6748,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
 	max-width: 1168px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
 	body.v6.widestore .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;

@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Nyheter och uppdateringar",
 	"Menu_Popover_Preferences": "Preferenser",
 	"Menu_Popover_Browse": "Bläddra",
+	"Menu_Popover_Top": "Topplänkar",
 	"Menu_Popover_Recommendations": "Rekommendationer",
 	"Menu_Popover_Categories": "Kategorier",
 	"Menu_Popover_Hardware": "Maskinvara",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Från din önskelista",
 	"Menu_Section_Browse_DLCForYou": "DLC för dig",
 	"Menu_Section_Browse_ForYou": "För dig",
+	"Menu_Section_Browse_PopularNew": "Nytt och populärt",
+	"Menu_Section_Browse_FreeToPlay": "Gratis att spela",
+	"Menu_Section_Browse_TopFreeToPlay": "Populära gratisspel",
+	"Menu_Section_Browse_Discounts": "Rabatter",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "På din önskelista",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Specialevent",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Populära titlar",
 	"Menu_Section_Recommendations": "Rekommendationer",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Kö med nya släpp",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Gemenskapsrekommendationer",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Populära artiklar",
 	"Menu_SearchBar_SearchResults": "Sökresultat",
 	"Menu_SearchBar_YourTopGenres": "Genrer för dig",
-	"Menu_SearchBar_BrowseBy": "Sök per ..."
+	"Menu_SearchBar_BrowseBy": "Sök per ...",
+	"Menu_Search": "Sök",
+	"Menu_Label": "Butiksmeny"
 }`);
     },
   },

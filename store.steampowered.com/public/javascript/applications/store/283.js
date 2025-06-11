@@ -45,15 +45,15 @@
       var r = n(34629),
         o = n(90626),
         i = n(75844),
-        c = n(73745),
+        c = n(84933),
         s = n(45699),
         l = n(76217),
         a = n(88997),
         m = n(10820),
         d = n(61859),
         E = n(52038),
-        p = n(90024),
-        u = n.n(p),
+        u = n(90024),
+        p = n.n(u),
         h = n(97232),
         S = n(32754);
       const C = 1576780700;
@@ -71,7 +71,6 @@
             ((s = c
               ? o.createElement(m.Q4, {
                   emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   onEmoticonSelected: (e) =>
                     this.props.OnEmoticonSelected(e, !1),
@@ -82,13 +81,11 @@
               : n && t.flair_list && t.GetFlairListByGroupID(n)?.length > 0
                 ? o.createElement(m.CE, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })
                 : o.createElement(m.iY, {
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: this.props.emoticonHoverStore,
                     strFlairGroupID: this.props.strFlairGroupID,
                     OnSelected: this.props.OnEmoticonSelected,
                   })),
@@ -149,7 +146,7 @@
                     }),
                   ),
                 )
-              : (i.push(u().chatSubmitButton, u().EmoticonPickerButton),
+              : (i.push(p().chatSubmitButton, p().EmoticonPickerButton),
                 o.createElement(
                   s.fu,
                   {
@@ -180,7 +177,7 @@
     },
     10820: (e, t, n) => {
       "use strict";
-      n.d(t, { Q4: () => G, iY: () => M, CE: () => B, iD: () => Y });
+      n.d(t, { Q4: () => y, iY: () => B, CE: () => H, iD: () => Y });
       var r = n(34629),
         o = n(14947),
         i = n(75844),
@@ -193,8 +190,8 @@
       function E(e, t) {
         return e + "economy/sticker/" + encodeURIComponent(t);
       }
-      var p = n(78327),
-        u = n(10981),
+      var u = n(78327),
+        p = n(10981),
         h = n(76217),
         S = n(88006),
         C = n(19418);
@@ -233,7 +230,7 @@
           return this.props.config.map(({ renderTab: e }, t) => {
             const n = this.state.activeIndex === t;
             return c.createElement(
-              v,
+              A,
               {
                 key: t,
                 active: n,
@@ -254,7 +251,7 @@
       function _(e) {
         return c.createElement("div", { className: C.Content }, e.children);
       }
-      function v(e) {
+      function A(e) {
         const { active: t, children: n, onClick: r } = e;
         return c.createElement(
           h.Z,
@@ -270,7 +267,7 @@
           ),
         );
       }
-      function A(e) {
+      function I(e) {
         const {
           items: t,
           renderItem: n,
@@ -300,7 +297,7 @@
           )
         );
       }
-      function I(e) {
+      function w(e) {
         const { title: t, onFilterChange: n, filter: r, onSubmit: o, ...i } = e;
         return c.createElement(
           c.Fragment,
@@ -308,12 +305,12 @@
           c.createElement(
             _,
             null,
-            c.createElement(P, { title: t }, c.createElement(A, { ...i })),
+            c.createElement(P, { title: t }, c.createElement(I, { ...i })),
           ),
           c.createElement(N, { value: r, onChange: n, onSubmit: o }),
         );
       }
-      function w(e) {
+      function v(e) {
         const { onFilterChange: t, filter: n, sections: r, title: o } = e;
         return c.createElement(
           c.Fragment,
@@ -326,7 +323,7 @@
               c.createElement(
                 P,
                 { title: e, key: e },
-                c.createElement(A, { ...t }),
+                c.createElement(I, { ...t }),
               ),
             ),
           ),
@@ -346,7 +343,7 @@
         return c.createElement(
           "div",
           { className: C.FilterInputContainer },
-          c.createElement(u.pd, {
+          c.createElement(p.pd, {
             type: "text",
             placeholder: "Search...",
             className: C.FilterInput,
@@ -366,25 +363,24 @@
       var L = n(42060),
         T = n.n(L),
         b = n(51272),
-        H = n(81962);
-      function x(e) {
+        x = n(81962);
+      function F(e) {
         return e.recent_emoticons;
       }
-      function F(e) {
+      function R(e) {
         return e.recent_stickers;
       }
-      function R(e) {
-        return x(e).length + F(e).length > 0;
+      function G(e) {
+        return F(e).length + R(e).length > 0;
       }
-      const G = (0, i.PA)((e) => {
+      const y = (0, i.PA)((e) => {
         const {
           emoticonStore: t,
-          emoticonHoverStore: n,
-          roomEffectSettings: r,
-          strFlairGroupID: i,
-          onEmoticonSelected: s,
-          onRoomEffectSelected: l,
-          onStickerSelected: E,
+          roomEffectSettings: n,
+          strFlairGroupID: r,
+          onEmoticonSelected: i,
+          onRoomEffectSelected: s,
+          onStickerSelected: l,
         } = e;
         !(function (e) {
           const [t, n] = (0, c.useState)(e.is_initialized);
@@ -400,10 +396,10 @@
             return () => {};
           }, [e]);
         })(t);
-        const p = [];
+        const E = [];
         return (
-          R(t) &&
-            p.push({
+          G(t) &&
+            E.push({
               renderTab: (e) =>
                 c.createElement(
                   "span",
@@ -420,10 +416,9 @@
               renderContent: () =>
                 c.createElement(O, {
                   store: t,
-                  hoverStore: n,
-                  onEmoticonSelect: (e) => s(e.name),
-                  onStickerSelect: (e) => E(e.name),
-                  flairGroupID: i,
+                  onEmoticonSelect: (e) => i(e.name),
+                  onStickerSelect: (e) => l(e.name),
+                  flairGroupID: r,
                 }),
             }),
           c.createElement(
@@ -431,7 +426,7 @@
             null,
             c.createElement(f, {
               config: [
-                ...p,
+                ...E,
                 {
                   renderTab: (e) =>
                     c.createElement(
@@ -445,9 +440,8 @@
                   renderContent: () =>
                     c.createElement(U, {
                       store: t,
-                      hoverStore: n,
-                      onItemSelect: (e) => s(e.name),
-                      flairGroupID: i,
+                      onItemSelect: (e) => i(e.name),
+                      flairGroupID: r,
                     }),
                 },
                 {
@@ -463,7 +457,7 @@
                   renderContent: () =>
                     c.createElement(z, {
                       store: t,
-                      onItemSelect: (e) => E(e.name),
+                      onItemSelect: (e) => l(e.name),
                     }),
                 },
                 {
@@ -479,8 +473,8 @@
                   renderContent: () =>
                     c.createElement(Z, {
                       store: t,
-                      effectSettings: r,
-                      onItemSelect: (e) => l(e.name),
+                      effectSettings: n,
+                      onItemSelect: (e) => s(e.name),
                     }),
                 },
               ],
@@ -488,7 +482,7 @@
           )
         );
       });
-      let y = class extends c.Component {
+      let M = class extends c.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -506,15 +500,14 @@
         render() {
           const {
               emoticonStore: e,
-              emoticonHoverStore: t,
-              onEmoticonSelected: n,
-              onStickerSelected: r,
-              strFlairGroupID: o,
+              onEmoticonSelected: t,
+              onStickerSelected: n,
+              strFlairGroupID: r,
             } = this.props,
-            i = [];
+            o = [];
           return (
-            R(e) &&
-              i.push({
+            G(e) &&
+              o.push({
                 renderTab: (e) =>
                   c.createElement(
                     "span",
@@ -531,10 +524,9 @@
                 renderContent: () =>
                   c.createElement(O, {
                     store: e,
-                    hoverStore: t,
-                    onEmoticonSelect: (e) => n(e.name),
-                    onStickerSelect: (e) => r(e.name),
-                    flairGroupID: o,
+                    onEmoticonSelect: (e) => t(e.name),
+                    onStickerSelect: (e) => n(e.name),
+                    flairGroupID: r,
                   }),
               }),
             c.createElement(
@@ -542,7 +534,7 @@
               null,
               c.createElement(f, {
                 config: [
-                  ...i,
+                  ...o,
                   {
                     renderTab: (e) =>
                       c.createElement(
@@ -559,9 +551,8 @@
                     renderContent: () =>
                       c.createElement(U, {
                         store: e,
-                        hoverStore: t,
-                        onItemSelect: (e) => n(e.name),
-                        flairGroupID: o,
+                        onItemSelect: (e) => t(e.name),
+                        flairGroupID: r,
                       }),
                   },
                   {
@@ -580,7 +571,7 @@
                     renderContent: () =>
                       c.createElement(z, {
                         store: e,
-                        onItemSelect: (e) => r(e.name),
+                        onItemSelect: (e) => n(e.name),
                       }),
                   },
                 ],
@@ -589,8 +580,8 @@
           );
         }
       };
-      y = (0, r.Cg)([i.PA], y);
-      class M extends c.Component {
+      M = (0, r.Cg)([i.PA], M);
+      class B extends c.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -624,7 +615,6 @@
                   renderContent: () =>
                     c.createElement(V, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -634,7 +624,7 @@
           );
         }
       }
-      class B extends c.Component {
+      class H extends c.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -668,7 +658,6 @@
                   renderContent: () =>
                     c.createElement(q, {
                       store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
                     }),
@@ -683,26 +672,24 @@
         render() {
           const {
               store: e,
-              hoverStore: t,
-              onEmoticonSelect: n,
-              onStickerSelect: r,
+              onEmoticonSelect: t,
+              onStickerSelect: n,
             } = this.props,
-            { filter: o } = this.state,
-            i = [];
+            { filter: r } = this.state,
+            o = [];
           return (
-            x(e) &&
-              i.push({
+            F(e) &&
+              o.push({
                 title: (0, d.we)("#AddonPicker_RecentEmoticons"),
-                items: s.pN.FilterEmoticons(x(e), o),
-                onItemSelect: n,
-                renderItem: (e) =>
-                  c.createElement(W, { emoticon: e, emoticonHoverStore: t }),
+                items: s.pN.FilterEmoticons(F(e), r),
+                onItemSelect: t,
+                renderItem: (e) => c.createElement(W, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   c.createElement(
                     g,
                     null,
-                    o
+                    r
                       ? (0, d.we)("#AddonPicker_NoResults")
                       : (0, d.we)(
                           "#AddonPicker_NoRecent",
@@ -710,18 +697,18 @@
                         ),
                   ),
               }),
-            F(e).length &&
-              i.push({
+            R(e).length &&
+              o.push({
                 title: (0, d.we)("#AddonPicker_RecentStickers"),
-                items: s.pN.FilterStickers(F(e), o),
-                onItemSelect: r,
+                items: s.pN.FilterStickers(R(e), r),
+                onItemSelect: n,
                 renderItem: (e) => c.createElement(X, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   c.createElement(
                     g,
                     null,
-                    o
+                    r
                       ? (0, d.we)("#AddonPicker_NoResults")
                       : (0, d.we)(
                           "#AddonPicker_NoRecent",
@@ -729,10 +716,10 @@
                         ),
                   ),
               }),
-            c.createElement(w, {
+            c.createElement(v, {
               onFilterChange: (e) => this.setState({ filter: e }),
-              filter: o,
-              sections: i,
+              filter: r,
+              sections: o,
             })
           );
         }
@@ -740,27 +727,21 @@
       class U extends c.Component {
         state = { filter: "" };
         render() {
-          const {
-              store: e,
-              hoverStore: t,
-              onItemSelect: n,
-              flairGroupID: r,
-            } = this.props,
-            { filter: o } = this.state,
-            i = !o && r ? e.GetFlairListByGroupID(r) : e.emoticon_list,
-            l = s.pN.FilterEmoticons(i, o).slice(0, 1e3);
-          return c.createElement(I, {
+          const { store: e, onItemSelect: t, flairGroupID: n } = this.props,
+            { filter: r } = this.state,
+            o = !r && n ? e.GetFlairListByGroupID(n) : e.emoticon_list,
+            i = s.pN.FilterEmoticons(o, r).slice(0, 1e3);
+          return c.createElement(w, {
             title: (0, d.we)("#AddonPicker_Emoticons"),
-            items: l,
-            onItemSelect: n,
-            renderItem: (e) =>
-              c.createElement(W, { emoticon: e, emoticonHoverStore: t }),
+            items: i,
+            onItemSelect: t,
+            renderItem: (e) => c.createElement(W, { emoticon: e }),
             keyExtractor: (e) => e.name,
             onFilterChange: (e) => this.setState({ filter: e }),
-            filter: o,
-            onSubmit: () => n(l[0]),
+            filter: r,
+            onSubmit: () => t(i[0]),
             renderEmpty: () =>
-              o
+              r
                 ? c.createElement(g, null, (0, d.we)("#AddonPicker_NoResults"))
                 : c.createElement(D, null),
           });
@@ -785,12 +766,12 @@
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               c.createElement(
                 b.uU,
-                { href: `${p.TS.STORE_BASE_URL}points/shop/c/emoticons` },
+                { href: `${u.TS.STORE_BASE_URL}points/shop/c/emoticons` },
                 (0, d.we)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               c.createElement(
                 b.uU,
-                { href: `${p.TS.COMMUNITY_BASE_URL}market` },
+                { href: `${u.TS.COMMUNITY_BASE_URL}market` },
                 (0, d.we)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
               ),
             ),
@@ -803,7 +784,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
             r = s.pN.FilterStickers(e.GetStickerList(), n);
-          return c.createElement(I, {
+          return c.createElement(w, {
             title: (0, d.we)("#EmoticonPicker_StickerHeading"),
             items: r,
             onItemSelect: t,
@@ -834,7 +815,7 @@
                         c.createElement(
                           b.uU,
                           {
-                            href: `${p.TS.STORE_BASE_URL}points/shop/c/stickers`,
+                            href: `${u.TS.STORE_BASE_URL}points/shop/c/stickers`,
                           },
                           (0, d.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
@@ -850,7 +831,7 @@
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
             { filter: r } = this.state,
             o = e.GetEffectList().filter(({ name: e }) => e.indexOf(r) > -1);
-          return c.createElement(I, {
+          return c.createElement(w, {
             title: (0, d.we)("#EmoticonPicker_EffectHeading"),
             items: o,
             onItemSelect: n,
@@ -882,7 +863,7 @@
                         c.createElement(
                           b.uU,
                           {
-                            href: `${p.TS.STORE_BASE_URL}points/shop/c/chateffects`,
+                            href: `${u.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
                           (0, d.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                         ),
@@ -895,28 +876,22 @@
       let V = class extends c.Component {
         state = { filter: "" };
         render() {
-          const {
-              store: e,
-              hoverStore: t,
-              onItemSelect: n,
-              flairGroupID: r,
-            } = this.props,
-            { filter: o } = this.state,
-            i = [];
+          const { store: e, onItemSelect: t, flairGroupID: n } = this.props,
+            { filter: r } = this.state,
+            o = [];
           return (
-            x(e).length &&
-              i.push({
+            F(e).length &&
+              o.push({
                 title: (0, d.we)("#AddonPicker_RecentEmoticons"),
-                items: s.pN.FilterEmoticons(x(e), o),
-                onItemSelect: n,
-                renderItem: (e) =>
-                  c.createElement(W, { emoticon: e, emoticonHoverStore: t }),
+                items: s.pN.FilterEmoticons(F(e), r),
+                onItemSelect: t,
+                renderItem: (e) => c.createElement(W, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   c.createElement(
                     g,
                     null,
-                    o
+                    r
                       ? (0, d.we)("#AddonPicker_NoResults")
                       : (0, d.we)(
                           "#AddonPicker_NoRecent",
@@ -924,20 +899,19 @@
                         ),
                   ),
               }),
-            c.createElement(w, {
+            c.createElement(v, {
               onFilterChange: (e) => this.setState({ filter: e }),
-              filter: o,
+              filter: r,
               sections: [
-                ...i,
+                ...o,
                 {
                   title: (0, d.we)("#AddonPicker_AllEmoticons"),
-                  items: s.pN.FilterStickers(e.emoticon_list, o).slice(0, 1e3),
-                  onItemSelect: n,
-                  renderItem: (e) =>
-                    c.createElement(W, { emoticon: e, emoticonHoverStore: t }),
+                  items: s.pN.FilterStickers(e.emoticon_list, r).slice(0, 1e3),
+                  onItemSelect: t,
+                  renderItem: (e) => c.createElement(W, { emoticon: e }),
                   keyExtractor: (e) => e.name,
                   renderEmpty: () =>
-                    o
+                    r
                       ? c.createElement(
                           g,
                           null,
@@ -954,26 +928,20 @@
       let q = class extends c.Component {
         state = { filter: "" };
         render() {
-          const {
-              store: e,
-              hoverStore: t,
-              onItemSelect: n,
-              flairGroupID: r,
-            } = this.props,
-            { filter: o } = this.state;
-          return c.createElement(w, {
+          const { store: e, onItemSelect: t, flairGroupID: n } = this.props,
+            { filter: r } = this.state;
+          return c.createElement(v, {
             onFilterChange: (e) => this.setState({ filter: e }),
-            filter: o,
+            filter: r,
             sections: [
               {
                 title: (0, d.we)("#ChatEntryButton_Flair"),
-                items: s.pN.FilterStickers(e.GetFlairListByGroupID(r), o),
-                onItemSelect: n,
-                renderItem: (e) =>
-                  c.createElement(W, { emoticon: e, emoticonHoverStore: t }),
+                items: s.pN.FilterStickers(e.GetFlairListByGroupID(n), r),
+                onItemSelect: t,
+                renderItem: (e) => c.createElement(W, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
-                  o
+                  r
                     ? c.createElement(
                         g,
                         null,
@@ -987,17 +955,13 @@
       };
       q = (0, r.Cg)([i.PA], q);
       const W = (e) => {
-        const { emoticon: t, emoticonHoverStore: n, large: r } = e,
-          o = !t.last_used && t.time_received;
+        const { emoticon: t, large: n } = e,
+          r = !t.last_used && t.time_received;
         return c.createElement(
           "div",
           { className: T().EmoticonItem },
-          c.createElement(H.n, {
-            emoticon: t.name,
-            emoticonHoverStore: n,
-            large: r,
-          }),
-          o && c.createElement(Y, null),
+          c.createElement(x.n, { emoticon: t.name, large: n }),
+          r && c.createElement(Y, null),
         );
       };
       class X extends c.Component {
@@ -1005,7 +969,7 @@
         m_ref = c.createRef();
         render() {
           const { sticker: e, className: t, ...n } = this.props,
-            r = E(p.TS.COMMUNITY_CDN_URL, e.name);
+            r = E(u.TS.COMMUNITY_CDN_URL, e.name);
           return c.createElement(
             "div",
             {
@@ -1030,10 +994,10 @@
           } = e,
           [o] = (0, l.t7)(r, {});
         return c.createElement(
-          H.c,
+          x.c,
           { target: t, title: n, subtitle: o?.GetName() },
           c.createElement("img", {
-            src: E(p.TS.COMMUNITY_CDN_URL, n),
+            src: E(u.TS.COMMUNITY_CDN_URL, n),
             className: T().StickerHoverSticker,
           }),
         );
@@ -1079,7 +1043,7 @@
           i = o[n],
           [s] = (0, l.t7)(r, {});
         return c.createElement(
-          H.c,
+          x.c,
           { target: t, title: n, subtitle: s?.GetName() },
           c.createElement(
             "div",

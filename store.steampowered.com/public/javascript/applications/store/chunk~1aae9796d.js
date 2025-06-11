@@ -499,7 +499,7 @@
       r.d(t, { M: () => o });
       var a = r(90626),
         n = r(6144),
-        i = r(73745);
+        i = r(84933);
       const s = (e) => null != e;
       function o(e, t) {
         const [r, n] = a.useState(window.localStorage.getItem(e)),
@@ -560,7 +560,7 @@
         s = r(56545),
         o = r(75487),
         l = r(6144),
-        c = r(73745),
+        c = r(84933),
         u = r(41338),
         d = r(78327),
         m = r(64753),
@@ -940,20 +940,22 @@
           }, [g]),
           f = n.useCallback((e) => {
             u(!1), e?.stopPropagation();
-          }, []);
+          }, []),
+          h = n.useId();
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             w.g,
             {
+              "aria-labelledby": h,
               onClick: y,
               arrDiscoveryApps: d,
               bDisableAnimation: c,
               className: _().DiscoveryQueueWidget,
             },
             n.createElement(A, null),
-            !g && n.createElement(C, { strQueueDescriptionOverride: a }),
+            !g && n.createElement(C, { id: h, strQueueDescriptionOverride: a }),
           ),
           d &&
             c &&
@@ -968,17 +970,20 @@
         );
       }
       function C(e) {
-        const { strQueueDescriptionOverride: t } = e,
-          r = t ?? (0, d.we)("#DiscoveryQueue_WidgetHeader");
+        const { strQueueDescriptionOverride: t, id: r } = e,
+          a = t ?? (0, d.we)("#DiscoveryQueue_WidgetHeader");
         return n.createElement(
           "div",
-          { className: (0, u.A)(_().WidgetHeaderCtn, "WidgetHeaderCtn") },
+          {
+            id: r,
+            className: (0, u.A)(_().WidgetHeaderCtn, "WidgetHeaderCtn"),
+          },
           n.createElement(
             "div",
             { className: _().WidgetHeaderText },
             (0, d.we)("#DiscoveryQueue_WidgetHeader_Yours"),
           ),
-          n.createElement("div", { className: _().WidgetHeaderSubText }, r),
+          n.createElement("div", { className: _().WidgetHeaderSubText }, a),
         );
       }
       function E(e) {

@@ -233,7 +233,7 @@
       i.r(t),
         i.d(t, {
           GreenEnvelope: () => bi,
-          default: () => zi,
+          default: () => Fi,
           useSteamNotifications: () => Bi,
         });
       var r,
@@ -1027,55 +1027,55 @@
           return "CSteamNotification_NotificationsReceived_Notification";
         }
       }
-      class z extends f.Message {
+      class F extends f.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.preferences || g.Sg(z.M()),
+            F.prototype.preferences || g.Sg(F.M()),
             f.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: { preferences: { n: 1, c: M, r: !0, q: !0 } },
               }),
-            z.sm_m
+            F.sm_m
           );
         }
         static MBF() {
-          return z.sm_mbf || (z.sm_mbf = g.w0(z.M())), z.sm_mbf;
+          return F.sm_mbf || (F.sm_mbf = g.w0(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
-          return z.toObject(e, this);
+          return F.toObject(e, this);
         }
         static toObject(e, t) {
-          return g.BT(z.M(), e, t);
+          return g.BT(F.M(), e, t);
         }
         static fromObject(e) {
-          return g.Uq(z.M(), e);
+          return g.Uq(F.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (p().BinaryReader)(e),
-            i = new z();
-          return z.deserializeBinaryFromReader(i, t);
+            i = new F();
+          return F.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(z.MBF(), e, t);
+          return g.zj(F.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (p().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          g.i0(z.M(), e, t);
+          g.i0(F.M(), e, t);
         }
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamNotification_PreferencesUpdated_Notification";
@@ -1135,23 +1135,23 @@
           }),
             (e.PreferencesUpdatedHandler = {
               name: "SteamNotificationClient.PreferencesUpdated#1",
-              request: z,
+              request: F,
             });
         })(n || (n = {}));
-      class F extends f.Message {
+      class z extends f.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            F.prototype.type || g.Sg(F.M()),
+            z.prototype.type || g.Sg(z.M()),
             f.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
                 fields: {
                   type: { n: 1, br: g.qM.readString, bw: g.gp.writeString },
                   value: { n: 2, br: g.qM.readString, bw: g.gp.writeString },
@@ -1160,39 +1160,39 @@
                   name: { n: 5, br: g.qM.readString, bw: g.gp.writeString },
                 },
               }),
-            F.sm_m
+            z.sm_m
           );
         }
         static MBF() {
-          return F.sm_mbf || (F.sm_mbf = g.w0(F.M())), F.sm_mbf;
+          return z.sm_mbf || (z.sm_mbf = g.w0(z.M())), z.sm_mbf;
         }
         toObject(e = !1) {
-          return F.toObject(e, this);
+          return z.toObject(e, this);
         }
         static toObject(e, t) {
-          return g.BT(F.M(), e, t);
+          return g.BT(z.M(), e, t);
         }
         static fromObject(e) {
-          return g.Uq(F.M(), e);
+          return g.Uq(z.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (p().BinaryReader)(e),
-            i = new F();
-          return F.deserializeBinaryFromReader(i, t);
+            i = new z();
+          return z.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(F.MBF(), e, t);
+          return g.zj(z.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (p().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          g.i0(F.M(), e, t);
+          g.i0(z.M(), e, t);
         }
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEconItem_DescriptionLine";
@@ -1328,11 +1328,11 @@
           return "CEconItem_Tag";
         }
       }
-      class q extends f.Message {
+      class O extends f.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            q.prototype.appid || g.Sg(q.M()),
+            O.prototype.appid || g.Sg(O.M()),
             f.Message.initialize(
               this,
               e,
@@ -1346,9 +1346,9 @@
         static sm_mbf;
         static M() {
           return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   appid: { n: 1, br: g.qM.readInt32, bw: g.gp.writeInt32 },
                   classid: {
@@ -1373,10 +1373,10 @@
                     br: g.qM.readString,
                     bw: g.gp.writeString,
                   },
-                  descriptions: { n: 8, c: F, r: !0, q: !0 },
+                  descriptions: { n: 8, c: z, r: !0, q: !0 },
                   tradable: { n: 9, br: g.qM.readBool, bw: g.gp.writeBool },
                   actions: { n: 10, c: C, r: !0, q: !0 },
-                  owner_descriptions: { n: 11, c: F, r: !0, q: !0 },
+                  owner_descriptions: { n: 11, c: z, r: !0, q: !0 },
                   owner_actions: { n: 12, c: C, r: !0, q: !0 },
                   fraudwarnings: {
                     n: 13,
@@ -1412,7 +1412,7 @@
                     br: g.qM.readInt32,
                     bw: g.gp.writeInt32,
                   },
-                  contained_item: { n: 20, c: q },
+                  contained_item: { n: 20, c: O },
                   market_actions: { n: 21, c: C, r: !0, q: !0 },
                   commodity: { n: 22, br: g.qM.readBool, bw: g.gp.writeBool },
                   market_tradable_restriction: {
@@ -1443,70 +1443,60 @@
                     bw: g.gp.writeString,
                   },
                   sealed: { n: 32, br: g.qM.readBool, bw: g.gp.writeBool },
-                  contextid: {
-                    n: 33,
-                    br: g.qM.readUint64String,
-                    bw: g.gp.writeUint64String,
-                  },
-                  assetid: {
-                    n: 34,
-                    br: g.qM.readUint64String,
-                    bw: g.gp.writeUint64String,
-                  },
                 },
               }),
-            q.sm_m
+            O.sm_m
           );
         }
         static MBF() {
-          return q.sm_mbf || (q.sm_mbf = g.w0(q.M())), q.sm_mbf;
+          return O.sm_mbf || (O.sm_mbf = g.w0(O.M())), O.sm_mbf;
         }
         toObject(e = !1) {
-          return q.toObject(e, this);
+          return O.toObject(e, this);
         }
         static toObject(e, t) {
-          return g.BT(q.M(), e, t);
+          return g.BT(O.M(), e, t);
         }
         static fromObject(e) {
-          return g.Uq(q.M(), e);
+          return g.Uq(O.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (p().BinaryReader)(e),
-            i = new q();
-          return q.deserializeBinaryFromReader(i, t);
+            i = new O();
+          return O.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(q.MBF(), e, t);
+          return g.zj(O.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (p().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          g.i0(q.M(), e, t);
+          g.i0(O.M(), e, t);
         }
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEconItem_Description";
         }
       }
-      class O extends f.Message {
+      class A extends f.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.appid || g.Sg(O.M()),
+            A.prototype.appid || g.Sg(A.M()),
             f.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   appid: { n: 1, br: g.qM.readUint32, bw: g.gp.writeUint32 },
                   contextid: {
@@ -1547,90 +1537,6 @@
                   },
                 },
               }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = g.w0(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return g.BT(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return g.Uq(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (p().BinaryReader)(e),
-            i = new O();
-          return O.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return g.zj(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (p().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          g.i0(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (p().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEcon_Asset";
-        }
-      }
-      class A extends f.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.steamid || g.Sg(A.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: g.qM.readFixed64String,
-                    bw: g.gp.writeFixed64String,
-                  },
-                  appid: { n: 2, br: g.qM.readUint32, bw: g.gp.writeUint32 },
-                  contextid: {
-                    n: 3,
-                    br: g.qM.readUint64String,
-                    bw: g.gp.writeUint64String,
-                  },
-                  get_descriptions: {
-                    n: 4,
-                    br: g.qM.readBool,
-                    bw: g.gp.writeBool,
-                  },
-                  for_trade_offer_verification: {
-                    n: 10,
-                    br: g.qM.readBool,
-                    bw: g.gp.writeBool,
-                  },
-                  language: { n: 5, br: g.qM.readString, bw: g.gp.writeString },
-                  filters: { n: 6, c: W },
-                  start_assetid: {
-                    n: 8,
-                    br: g.qM.readUint64String,
-                    bw: g.gp.writeUint64String,
-                  },
-                  count: { n: 9, br: g.qM.readInt32, bw: g.gp.writeInt32 },
-                },
-              }),
             A.sm_m
           );
         }
@@ -1664,6 +1570,90 @@
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_Asset";
+        }
+      }
+      class q extends f.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            q.prototype.steamid || g.Sg(q.M()),
+            f.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: g.qM.readFixed64String,
+                    bw: g.gp.writeFixed64String,
+                  },
+                  appid: { n: 2, br: g.qM.readUint32, bw: g.gp.writeUint32 },
+                  contextid: {
+                    n: 3,
+                    br: g.qM.readUint64String,
+                    bw: g.gp.writeUint64String,
+                  },
+                  get_descriptions: {
+                    n: 4,
+                    br: g.qM.readBool,
+                    bw: g.gp.writeBool,
+                  },
+                  for_trade_offer_verification: {
+                    n: 10,
+                    br: g.qM.readBool,
+                    bw: g.gp.writeBool,
+                  },
+                  language: { n: 5, br: g.qM.readString, bw: g.gp.writeString },
+                  filters: { n: 6, c: W },
+                  start_assetid: {
+                    n: 8,
+                    br: g.qM.readUint64String,
+                    bw: g.gp.writeUint64String,
+                  },
+                  count: { n: 9, br: g.qM.readInt32, bw: g.gp.writeInt32 },
+                },
+              }),
+            q.sm_m
+          );
+        }
+        static MBF() {
+          return q.sm_mbf || (q.sm_mbf = g.w0(q.M())), q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return g.BT(q.M(), e, t);
+        }
+        static fromObject(e) {
+          return g.Uq(q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (p().BinaryReader)(e),
+            i = new q();
+          return q.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return g.zj(q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (p().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          g.i0(q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (p().BinaryWriter)();
+          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_GetInventoryItemsWithDescriptions_Request";
@@ -1765,9 +1755,9 @@
               (L.sm_m = {
                 proto: L,
                 fields: {
-                  assets: { n: 1, c: O, r: !0, q: !0 },
-                  descriptions: { n: 2, c: q, r: !0, q: !0 },
-                  missing_assets: { n: 3, c: O, r: !0, q: !0 },
+                  assets: { n: 1, c: A, r: !0, q: !0 },
+                  descriptions: { n: 2, c: O, r: !0, q: !0 },
+                  missing_assets: { n: 3, c: A, r: !0, q: !0 },
                   more_items: { n: 4, br: g.qM.readBool, bw: g.gp.writeBool },
                   last_assetid: {
                     n: 5,
@@ -2193,7 +2183,7 @@
             H.sm_m ||
               (H.sm_m = {
                 proto: H,
-                fields: { descriptions: { n: 1, c: q, r: !0, q: !0 } },
+                fields: { descriptions: { n: 1, c: O, r: !0, q: !0 } },
               }),
             H.sm_m
           );
@@ -2237,7 +2227,7 @@
         (e.GetInventoryItemsWithDescriptions = function (e, t) {
           return e.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, y.I8)(A, t),
+            (0, y.I8)(q, t),
             L,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
           );
@@ -2407,7 +2397,7 @@
       function le(e) {
         return !!oe(e);
       }
-      const ce = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
+      const ce = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function me(e) {
         return null != ce.findIndex((t) => t == e);
       }
@@ -2498,7 +2488,7 @@
         BSendToCallbackAsNew(e) {
           return (
             !e.read &&
-            !Ae(e) &&
+            !qe(e) &&
             !this.m_rgUnreadNotificationIDs.includes(e.notification_id)
           );
         }
@@ -2566,7 +2556,7 @@
             this.NotifyServerNotificationsHidden([...i.rgunread, ...i.rgread]);
         }
         ReduceNewTotals(e, t) {
-          qe(this.m_summary, e, -t);
+          Oe(this.m_summary, e, -t);
         }
         MarkAllItemsViewed() {
           const e = y.w.Init(h);
@@ -2713,7 +2703,7 @@
                         (e) => e == r.notification_id,
                       ) && (r.read = !0);
                   }
-                  r.read || qe(t, r.notification_type, 1),
+                  r.read || Oe(t, r.notification_type, 1),
                     r.viewed || i++,
                     this.AddNotificationToRollups(e, r);
                 }
@@ -2904,7 +2894,7 @@
                 return (
                   ye("Item notification missing required attributes"), null
                 );
-              const i = y.w.Init(A);
+              const i = y.w.Init(q);
               i.Body().set_steamid(e.steamid),
                 i.Body().set_contextid(e.contextid),
                 i.Body().set_appid(parseInt(e.appid)),
@@ -2990,7 +2980,7 @@
               owner_steam_id: i.owner_steam_id
                 ? new X.b(i.owner_steam_id)
                 : null,
-              bclan_account: ze(i.bclan_account),
+              bclan_account: Fe(i.bclan_account),
               title: i.title,
               comment: i.text,
               time: i.last_post,
@@ -3000,11 +2990,11 @@
               account_steam_id: i.account_id
                 ? X.b.InitFromAccountID(i.account_id)
                 : null,
-              bhas_friend: ze(i.bhas_friend),
-              bis_forum: ze(i.bis_forum),
+              bhas_friend: Fe(i.bhas_friend),
+              bis_forum: Fe(i.bis_forum),
               last_post: i.last_post,
-              bsubscribed: ze(i.subscribed),
-              bis_owner: ze(i.bis_owner),
+              bsubscribed: Fe(i.subscribed),
+              bis_owner: Fe(i.bis_owner),
             };
             return (
               i.json_data &&
@@ -3048,7 +3038,7 @@
             );
         }
       }
-      function ze(e) {
+      function Fe(e) {
         if (void 0 === e) return !1;
         if ("number" == typeof e) return e > 0;
         if ("string" == typeof e)
@@ -3061,7 +3051,7 @@
           }
         return ge("notification contained unexpected boolean value"), !1;
       }
-      const Fe = {
+      const ze = {
         0: { rollup_field: void 0, eFeature: void 0 },
         1: { rollup_field: void 0, eFeature: void 0 },
         2: { rollup_field: "gifts", eFeature: $.uX },
@@ -3093,9 +3083,10 @@
         23: { rollup_field: void 0, eFeature: $.uX },
         24: { rollup_field: void 0, eFeature: $.uX },
         28: { rollup_field: "playtest_invites", eFeature: 1 },
+        29: { rollup_field: void 0, eFeature: 6 },
       };
       function Ce(e) {
-        const t = Fe[e];
+        const t = ze[e];
         return (0, ie.w)(!!t, `Missing notification type data for ${e}`), t;
       }
       function Ue(e, t, i) {
@@ -3103,17 +3094,17 @@
         const r = Ce(e);
         return (0, m.EC)(t, r?.eFeature ?? $.JC, i);
       }
-      function qe(e, t, i) {
+      function Oe(e, t, i) {
         (0, Y.h5)(() => {
           const r = Ce(t);
           r?.rollup_field &&
             (e[r.rollup_field] = Math.max(0, e[r.rollup_field] + i));
         });
       }
-      function Oe(e) {
+      function Ae(e) {
         return !e.viewed || e.viewed + fe > (0, V._2)();
       }
-      function Ae(e) {
+      function qe(e) {
         return e.viewed && e.viewed + _e < (0, V._2)();
       }
       var We = i(4869),
@@ -3524,7 +3515,7 @@
           [g, y] = l.useState(!1),
           b = () => y(!0);
         let B = null;
-        if (m) B = At(i, t, f);
+        if (m) B = qt(i, t, f);
         else {
           const e = f ? Tt().ShortLogoDimensions : Tt().StandardLogoDimensions;
           B =
@@ -3645,7 +3636,7 @@
               ),
             );
       }
-      function zt(e) {
+      function Ft(e) {
         let {
           requestorName: t,
           requestorAvatarURL: i,
@@ -3712,7 +3703,7 @@
               ),
             );
       }
-      function Ft(e) {
+      function zt(e) {
         let {
           itemState: t,
           fallbackLogo: i,
@@ -3818,7 +3809,7 @@
           onHide: c,
         } = e;
         const m = Bt(n),
-          d = At(i, t, m),
+          d = qt(i, t, m),
           u = !i;
         let _ = "";
         return (
@@ -3918,7 +3909,7 @@
               ),
             );
       }
-      function qt(e) {
+      function Ot(e) {
         let {
             currentUserSteamID: t,
             fallbackLogo: i,
@@ -4047,7 +4038,7 @@
               ),
             );
       }
-      function Ot(e) {
+      function At(e) {
         let {
           app: t,
           fallbackLogo: i,
@@ -4059,7 +4050,7 @@
           onHide: c,
         } = e;
         const m = Bt(n),
-          d = At(t, i, m),
+          d = qt(t, i, m),
           u = r.appid && !t;
         let _ = "",
           f = null;
@@ -4133,7 +4124,7 @@
               )
         );
       }
-      function At(e, t, i = !1) {
+      function qt(e, t, i = !1) {
         const [r, n] = l.useState(!1),
           a = () => n(!0);
         return !e || r
@@ -5469,319 +5460,12 @@
           [i, si]
         );
       }
-      const ci = {
-        3: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = He(t),
-            o = (0, c.LH)(),
-            m = J.TS.COMMUNITY_BASE_URL + t.url,
-            d = (function (e) {
-              return Te(e) || Ne(e);
-            })(s)
-              ? s?.account_steam_id?.GetAccountID()
-              : null,
-            { data: u } = (0, tt.js)(d),
-            _ = (function (e) {
-              return ve(e);
-            })(s)
-              ? s?.owner_steam_id?.GetAccountID()
-              : null,
-            { data: f } = (0, tt.js)(_),
-            [p] = $e(s.json_data?.app_id, { include_assets: !0 }),
-            [g, y] = li(),
-            b = g
-              ? y.FilterText(s.account_steam_id.GetAccountID(), s.title)
-              : "",
-            B = g
-              ? y.FilterText(s.account_steam_id.GetAccountID(), s.comment)
-              : "";
-          return l.createElement(
-            "a",
-            {
-              href: m,
-              onMouseDown: (e) => {
-                i(() => {}, t.item, e);
-              },
-            },
-            l.createElement(qt, {
-              fallbackLogo: l.createElement(Le.Qte, null),
-              icon: l.createElement(Le.MwB, null),
-              onActivate: () => i(() => window.location.assign(m), t.item),
-              location: r,
-              currentUserSteamID: o,
-              eUIMode: n,
-              data: s,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              postedByAvatarURL: u?.avatar_url_medium,
-              postedByDisplayName: u?.m_strPlayerName,
-              ownerDisplayName: f?.m_strPlayerName,
-              bNewIndicator: Oe(t.item),
-              app: p,
-              onHide: a,
-              commentTitle: b,
-              commentBody: B,
-              bLoading: !g,
-            }),
-          );
-        },
-        8: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = He(t),
-            [o] = $e(s.appid, { include_assets: !0 }),
-            [m, d] = (0, l.useState)(""),
-            u = (0, c.LH)();
-          (0, l.useEffect)(() => {
-            if (s.count > 1 && s.appids?.length)
-              return d(
-                J.TS.STORE_BASE_URL +
-                  `wishlist/profiles/${u}/?wng=${s.appids.toString()}#sort=discount`,
-              );
-            if (o) return d(o.GetStorePageURL());
-            const e = s.appid ? `?appid=${s.appid}` : "";
-            d(
-              J.TS.STORE_BASE_URL + `wishlist/profiles/${u}/${e}#sort=discount`,
-            );
-          }, [s, o, u]);
-          return l.createElement(
-            "a",
-            { href: m, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Ot, {
-              fallbackLogo: l.createElement(Le.Qte, null),
-              icon: l.createElement(Le.ilR, null),
-              onActivate: () => i(() => window.location.assign(m), t.item),
-              app: o,
-              location: r,
-              data: s,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              eUIMode: n,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        5: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = (0, c.LH)(),
-            o = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/friends/pending`,
-            m = He(t),
-            { data: d } = (0, tt.js)(m.requestorID);
-          return l.createElement(
-            "a",
-            { href: o, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(zt, {
-              fallbackLogo: l.createElement(Le.Gv$, null),
-              icon: l.createElement(Le.sdo, null),
-              onActivate: () => i(() => window.location.assign(o), t.item),
-              location: r,
-              eUIMode: n,
-              data: m,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              requestorAvatarURL: d?.avatar_url_medium,
-              requestorName: d?.m_strPlayerName,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        4: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = (0, c.LH)(),
-            o = (0, d.KV)(),
-            m = he(t.item, s, o),
-            u = He(t),
-            _ = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/inventory`;
-          return l.createElement(
-            "a",
-            { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Ft, {
-              icon: l.createElement(Le.rI_, null),
-              fallbackLogo: l.createElement(Le.Qte, null),
-              onActivate: () => i(() => window.location.assign(_), t.item),
-              location: r,
-              eUIMode: n,
-              data: u,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              itemState: m,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        2: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = (0, c.LH)(),
-            o = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/inventory/#pending_gifts`,
-            m = He(t),
-            d = X.b.InitFromAccountID(m),
-            { data: u } = (0, tt.js)(d.GetAccountID());
-          return l.createElement(
-            "a",
-            { href: o, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Et, {
-              logo: l.createElement(Le.Qte, null),
-              icon: l.createElement(Le.pD, null),
-              onActivate: () => i(() => window.location.assign(o), t.item),
-              location: r,
-              eUIMode: n,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              senderName: u?.m_strPlayerName,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        9: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = (0, c.LH)(),
-            o = He(t),
-            m = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/tradeoffers`,
-            d = X.b.InitFromAccountID(o),
-            { data: u } = (0, tt.js)(d.GetAccountID());
-          return l.createElement(
-            "a",
-            { href: m, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Rt, {
-              logo: l.createElement(Le.Qte, null),
-              icon: l.createElement(Le.h20, null),
-              onActivate: () => i(() => window.location.assign(m), t.item),
-              location: r,
-              eUIMode: n,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              displayName: u?.m_strPlayerName,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        12: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = `${J.TS.COMMUNITY_BASE_URL}my/gamenotifications/`,
-            o = He(t),
-            [c] = $e(o.appid, { include_assets: !0 });
-          return l.createElement(
-            "a",
-            { href: s, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Ct, {
-              icon: l.createElement(Le.Qte, null),
-              fallbackLogo: l.createElement(Le.wC1, null),
-              onActivate: () => i(() => window.location.assign(s), t.item),
-              location: r,
-              eUIMode: n,
-              data: o,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              app: c,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-        22: function (e) {
-          const {
-              rollup: t,
-              onNotificationClick: i,
-              location: r,
-              uimode: n,
-              onHide: a,
-            } = e,
-            s = He(t),
-            { data: o } = (0, tt.js)(s.responder_steamid),
-            c = s.package_id > 0 ? s.package_id : s.bundle_id,
-            m = s.package_id > 0 ? 1 : 2,
-            [d] = (function (e, t, i) {
-              const [r, n] = Qe(e, t, i);
-              let a;
-              1 != r?.GetStoreItemType() ||
-                r.GetAssets()?.GetHeaderURL() ||
-                1 != r?.GetIncludedAppIDs().length ||
-                (a = r.GetIncludedAppIDs()[0]);
-              const [s, o] = $e(a, i);
-              return a && s?.BIsVisible() ? [s, o] : [r, n];
-            })(c, m, { include_basic_info: !0, include_assets: !0 }),
-            u = d ? `app/${d.GetAppID()}` : "",
-            _ = `${J.TS.STORE_BASE_URL}${u}`,
-            f = !o || !d,
-            p = (0, De.we)("#SteamNotifications_RequestedGameAddedTitle"),
-            g = d
-              ? (0, De.we)(
-                  "#SteamNotifications_RequestedGameAddedBody",
-                  d.GetName() ?? "",
-                )
-              : "";
-          return l.createElement(
-            "a",
-            { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
-            l.createElement(Ut, {
-              title: p,
-              body: g,
-              bDataLoading: f,
-              logoUrl: o?.avatar_url_medium,
-              icon: l.createElement(Le.Qte, null),
-              onActivate: () => i(() => window.location.assign(_), t.item),
-              location: r,
-              eUIMode: n,
-              timestamp: t.timestamp,
-              nUnread: t.rgunread.length,
-              bNewIndicator: Oe(t.item),
-              onHide: a,
-            }),
-          );
-        },
-      };
-      function mi(e) {
+      function ci(e) {
         const { rollup: t, uimode: i, location: r } = e,
           n = (function (e) {
             let t = null;
             return (
-              le(e) ? (t = _i) : ae(e) ? (t = di) : ci[e] && (t = ci[e]), t
+              le(e) ? (t = ui) : ae(e) ? (t = mi) : fi[e] && (t = fi[e]), t
             );
           })(t.type);
         return n
@@ -5796,7 +5480,7 @@
             )
           : null;
       }
-      function di(e) {
+      function mi(e) {
         const {
             rollup: t,
             onNotificationClick: i,
@@ -5861,12 +5545,12 @@
             timestamp: t.timestamp,
             nUnread: t.rgunread.length,
             app: d,
-            bNewIndicator: Oe(t.item),
+            bNewIndicator: Ae(t.item),
             onHide: a,
           }),
         );
       }
-      function ui(e) {
+      function di(e) {
         const {
             steamid: t,
             url: i,
@@ -5897,12 +5581,12 @@
             eUIMode: c,
             timestamp: a.timestamp,
             nUnread: a.rgunread.length,
-            bNewIndicator: Oe(a.item),
+            bNewIndicator: Ae(a.item),
             onHide: m,
           }),
         );
       }
-      function _i(e) {
+      function ui(e) {
         const t =
           ((i = e.rollup.type),
           (r = e.rollup.item.body_data),
@@ -5929,7 +5613,7 @@
         if (!t) return null;
         const { strTitleLoc: n, strBodyLoc: a, strUrl: s, steamid: o } = t;
         return o && n && a
-          ? l.createElement(ui, {
+          ? l.createElement(di, {
               steamid: o,
               url: s,
               strTitleLoc: n,
@@ -5938,7 +5622,7 @@
             })
           : null;
       }
-      function fi(e) {
+      function _i(e) {
         const { url: t, count: i, icon: r, strLocToken: n, eFeature: a } = e,
           s = (0, m.Hw)(a);
         return i
@@ -5958,6 +5642,317 @@
               )
           : null;
       }
+      const fi = {
+        3: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = He(t),
+            o = (0, c.LH)(),
+            m = J.TS.COMMUNITY_BASE_URL + t.url,
+            d = (function (e) {
+              return Te(e) || Ne(e);
+            })(s)
+              ? s?.account_steam_id?.GetAccountID()
+              : null,
+            { data: u } = (0, tt.js)(d),
+            _ = (function (e) {
+              return ve(e);
+            })(s)
+              ? s?.owner_steam_id?.GetAccountID()
+              : null,
+            { data: f } = (0, tt.js)(_),
+            [p] = $e(s.json_data?.app_id, { include_assets: !0 }),
+            [g, y] = li(),
+            b = g
+              ? y.FilterText(s.account_steam_id.GetAccountID(), s.title)
+              : "",
+            B = g
+              ? y.FilterText(s.account_steam_id.GetAccountID(), s.comment)
+              : "";
+          return l.createElement(
+            "a",
+            {
+              href: m,
+              onMouseDown: (e) => {
+                i(() => {}, t.item, e);
+              },
+            },
+            l.createElement(Ot, {
+              fallbackLogo: l.createElement(Le.Qte, null),
+              icon: l.createElement(Le.MwB, null),
+              onActivate: () => i(() => window.location.assign(m), t.item),
+              location: r,
+              currentUserSteamID: o,
+              eUIMode: n,
+              data: s,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              postedByAvatarURL: u?.avatar_url_medium,
+              postedByDisplayName: u?.m_strPlayerName,
+              ownerDisplayName: f?.m_strPlayerName,
+              bNewIndicator: Ae(t.item),
+              app: p,
+              onHide: a,
+              commentTitle: b,
+              commentBody: B,
+              bLoading: !g,
+            }),
+          );
+        },
+        8: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = He(t),
+            [o] = $e(s.appid, { include_assets: !0 }),
+            [m, d] = (0, l.useState)(""),
+            u = (0, c.LH)();
+          return (
+            (0, l.useEffect)(() => {
+              if (s.count > 1 && s.appids?.length)
+                return d(
+                  J.TS.STORE_BASE_URL +
+                    `wishlist/profiles/${u}/?wng=${s.appids.toString()}#sort=discount`,
+                );
+              if (o) return d(o.GetStorePageURL());
+              const e = s.appid ? `?appid=${s.appid}` : "";
+              d(
+                J.TS.STORE_BASE_URL +
+                  `wishlist/profiles/${u}/${e}#sort=discount`,
+              );
+            }, [s, o, u]),
+            l.createElement(
+              "a",
+              { href: m, onMouseDown: (e) => i(() => {}, t.item, e) },
+              l.createElement(At, {
+                fallbackLogo: l.createElement(Le.Qte, null),
+                icon: l.createElement(Le.ilR, null),
+                onActivate: () => i(() => window.location.assign(m), t.item),
+                app: o,
+                location: r,
+                data: s,
+                timestamp: t.timestamp,
+                nUnread: t.rgunread.length,
+                eUIMode: n,
+                bNewIndicator: Ae(t.item),
+                onHide: a,
+              }),
+            )
+          );
+        },
+        5: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = (0, c.LH)(),
+            o = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/friends/pending`,
+            m = He(t),
+            { data: d } = (0, tt.js)(m.requestorID);
+          return l.createElement(
+            "a",
+            { href: o, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(Ft, {
+              fallbackLogo: l.createElement(Le.Gv$, null),
+              icon: l.createElement(Le.sdo, null),
+              onActivate: () => i(() => window.location.assign(o), t.item),
+              location: r,
+              eUIMode: n,
+              data: m,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              requestorAvatarURL: d?.avatar_url_medium,
+              requestorName: d?.m_strPlayerName,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        4: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = (0, c.LH)(),
+            o = (0, d.KV)(),
+            m = he(t.item, s, o),
+            u = He(t),
+            _ = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/inventory`;
+          return l.createElement(
+            "a",
+            { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(zt, {
+              icon: l.createElement(Le.rI_, null),
+              fallbackLogo: l.createElement(Le.Qte, null),
+              onActivate: () => i(() => window.location.assign(_), t.item),
+              location: r,
+              eUIMode: n,
+              data: u,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              itemState: m,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        2: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = (0, c.LH)(),
+            o = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/inventory/#pending_gifts`,
+            m = He(t),
+            d = X.b.InitFromAccountID(m),
+            { data: u } = (0, tt.js)(d.GetAccountID());
+          return l.createElement(
+            "a",
+            { href: o, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(Et, {
+              logo: l.createElement(Le.Qte, null),
+              icon: l.createElement(Le.pD, null),
+              onActivate: () => i(() => window.location.assign(o), t.item),
+              location: r,
+              eUIMode: n,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              senderName: u?.m_strPlayerName,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        9: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = (0, c.LH)(),
+            o = He(t),
+            m = `${J.TS.COMMUNITY_BASE_URL}profiles/${s}/tradeoffers`,
+            d = X.b.InitFromAccountID(o),
+            { data: u } = (0, tt.js)(d.GetAccountID());
+          return l.createElement(
+            "a",
+            { href: m, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(Rt, {
+              logo: l.createElement(Le.Qte, null),
+              icon: l.createElement(Le.h20, null),
+              onActivate: () => i(() => window.location.assign(m), t.item),
+              location: r,
+              eUIMode: n,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              displayName: u?.m_strPlayerName,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        12: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = `${J.TS.COMMUNITY_BASE_URL}my/gamenotifications/`,
+            o = He(t),
+            [c] = $e(o.appid, { include_assets: !0 });
+          return l.createElement(
+            "a",
+            { href: s, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(Ct, {
+              icon: l.createElement(Le.Qte, null),
+              fallbackLogo: l.createElement(Le.wC1, null),
+              onActivate: () => i(() => window.location.assign(s), t.item),
+              location: r,
+              eUIMode: n,
+              data: o,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              app: c,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        22: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: r,
+              uimode: n,
+              onHide: a,
+            } = e,
+            s = He(t),
+            { data: o } = (0, tt.js)(s.responder_steamid),
+            c = s.package_id > 0 ? s.package_id : s.bundle_id,
+            m = s.package_id > 0 ? 1 : 2,
+            [d] = (function (e, t, i) {
+              const [r, n] = Qe(e, t, i);
+              let a;
+              1 != r?.GetStoreItemType() ||
+                r.GetAssets()?.GetHeaderURL() ||
+                1 != r?.GetIncludedAppIDs().length ||
+                (a = r.GetIncludedAppIDs()[0]);
+              const [s, o] = $e(a, i);
+              return a && s?.BIsVisible() ? [s, o] : [r, n];
+            })(c, m, { include_basic_info: !0, include_assets: !0 }),
+            u = d ? `app/${d.GetAppID()}` : "",
+            _ = `${J.TS.STORE_BASE_URL}${u}`,
+            f = !o || !d,
+            p = (0, De.we)("#SteamNotifications_RequestedGameAddedTitle"),
+            g = d
+              ? (0, De.we)(
+                  "#SteamNotifications_RequestedGameAddedBody",
+                  d.GetName() ?? "",
+                )
+              : "";
+          return l.createElement(
+            "a",
+            { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
+            l.createElement(Ut, {
+              title: p,
+              body: g,
+              bDataLoading: f,
+              logoUrl: o?.avatar_url_medium,
+              icon: l.createElement(Le.Qte, null),
+              onActivate: () => i(() => window.location.assign(_), t.item),
+              location: r,
+              eUIMode: n,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              bNewIndicator: Ae(t.item),
+              onHide: a,
+            }),
+          );
+        },
+        29: () => null,
+      };
       var pi = i(6011);
       class gi extends l.Component {
         static GetScrollableClassname() {
@@ -6132,7 +6127,7 @@
           { data: i } = (0, m.S0)(t),
           r = (0, m.BM)(),
           n = i?.settings;
-        return e.notifications.filter((e) => !Ue(e.type, n, r) && !Ae(e.item));
+        return e.notifications.filter((e) => !Ue(e.type, n, r) && !qe(e.item));
       }
       function wi(e) {
         const { nTotalUnviewed: t } = e,
@@ -6275,7 +6270,7 @@
               "div",
               { className: ke().NotificationsMenuEntriesContainer },
               e.map((e, t) =>
-                l.createElement(mi, {
+                l.createElement(ci, {
                   key: t,
                   rollup: e,
                   onNotificationClick: Ni,
@@ -6360,7 +6355,7 @@
           l.Fragment,
           null,
           Ii.map((t) =>
-            l.createElement(fi, {
+            l.createElement(_i, {
               key: t.countItem,
               url: t.fnUrl(),
               count: e.summary[t.countItem],
@@ -6387,7 +6382,7 @@
           ),
         );
       }
-      const zi = bi;
+      const Fi = bi;
     },
   },
 ]);

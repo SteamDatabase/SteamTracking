@@ -82,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Popular Items",
 	"Menu_SearchBar_SearchResults": "Search Results",
 	"Menu_SearchBar_YourTopGenres": "Your top genres",
-	"Menu_SearchBar_BrowseBy": "Browse by..."
+	"Menu_SearchBar_BrowseBy": "Browse by...",
+	"Menu_Search": "Search",
+	"Menu_Label": "Store menu"
 }`);
     },
   },

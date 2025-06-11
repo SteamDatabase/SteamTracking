@@ -495,3 +495,7 @@ table.game_language_options {
 	width: 100%;
 }
 
+.package_landing_page_item_list {
+	max-height: 360px;
+	overflow-y: scroll;
+}

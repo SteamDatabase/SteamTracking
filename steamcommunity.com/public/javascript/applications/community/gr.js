@@ -2312,11 +2312,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -2350,7 +2345,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new te.Zn(this.m_elVideo, !1)),
+            (this.m_player = new te.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t, null, null, !1),
             (this.m_bMuted = se("muted")),
@@ -2431,20 +2426,20 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          var e;
-          (0, X.ZI)("video download failed"),
+        async OnDownloadFailed(e) {
+          var t;
+          if ((e.detail || te.N_.PlaybackError) == te.N_.UnsupportedMediaType)
+            return (
+              (0, X.ZI)("media type error"),
+              void (this.m_ePlayerError = V.MediaTypeError)
+            );
+          (0, X.ZI)("video download failed", e.detail),
             this.m_nDownloadFailureCount < 2
-              ? (await (null === (e = this.m_player) || void 0 === e
+              ? (await (null === (t = this.m_player) || void 0 === t
                   ? void 0
-                  : e.UpdateMPD()),
+                  : t.UpdateMPD()),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = V.DownloadFailed);
-        }
-        OnMediaTypeError(e) {
-          "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
-            (0, X.ZI)("media type error", e.detail),
-            (this.m_ePlayerError = V.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -2564,7 +2559,6 @@
         (0, Z.Cg)([Q.oI], ie.prototype, "OnSeeking", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnLoadedMetadata", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnDownloadFailed", null),
-        (0, Z.Cg)([Q.oI], ie.prototype, "OnMediaTypeError", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnPlaybackError", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnUserInputNeeded", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnVolumeChange", null),
@@ -7071,21 +7065,19 @@
             );
       }
       function li(e) {
-        const { player: t } = e,
-          r = (0, k.q3)(() => t.GetPlaybackError());
-        (0, k.q3)(() => t.GetMediaTypeError());
-        let i = "";
-        switch (r) {
+        const { player: t } = e;
+        let r = "";
+        switch ((0, k.q3)(() => t.GetPlaybackError())) {
           case V.DownloadFailed:
           case V.PlaybackError:
           case V.MediaTypeError:
-            i = "#GameRecording_PlayerError_Generic";
+            r = "#GameRecording_PlayerError_Generic";
         }
-        return i
+        return r
           ? a.createElement(
               "div",
               { className: wt().PlayerError },
-              a.createElement("div", { className: wt().Text }, (0, ce.we)(i)),
+              a.createElement("div", { className: wt().Text }, (0, ce.we)(r)),
             )
           : null;
       }

@@ -228,6 +228,7 @@
         ExtraAssetChoice: "_13xCWTST4J-cgOyz6kwfIJ",
         Selected: "QRTy6qng-IEOMiXMxwVtY",
         ExtraAssetStack: "doWjXy-F7LwBxlzCUBAGC",
+        AltTextBtn: "_1JdiJTPLBYcAxWzLqjYV5P",
         StackedImageCtn: "_3gElE6VZJ9uU4-RaFC8Ra8",
         StackedImage: "_2hABNX3YzXj9JYRLANr-hg",
         "Image-0": "_3cPT5-4vXp4iE6v0qwHc23",
@@ -250,14 +251,6 @@
         Name: "lGJk6OffakeBbm9rvukuH",
         LocalizedAssetUploadWarning: "_26-vmpZD8b_p2ApFLrcji8",
         LocalizedAssetUploadButton: "FrlNPlPwQkjgzk604bAC4",
-        AltTextGrid: "_11su_JQ6bIR2Y5Y-HXsMjG",
-        AltTextHeader: "_1L02Ehdw7vvzV72zkxkrGQ",
-        AltTextName: "LSLNQo0JXd1gmYVpX2lpI",
-        AltTextInput: "RhZs0wFCcxhu1qSSpW9El",
-        AltTextRow: "_10cb7y-PwrO4JuuBuLNCZQ",
-        AltTextImage: "_2IzTROu1kwFs_86GfRQ2TN",
-        AltTextFailed: "_12Ou1sgTchaLAocFFpIwd",
-        AltTextMutateFailed: "_2PeF8JJAuPqEnIkcFV9qbc",
       };
     },
     76349: (e) => {
@@ -292,6 +285,20 @@
         Sticky: "_2YccUEt5UoKig0cAk4W6DK",
       };
     },
+    27539: (e) => {
+      e.exports = {
+        AltTextDialogContent: "FSO6VV5iXmPANFhTj7Bzp",
+        AltTextDialogDescription: "VsXbYkSe5CrbxkE5GhQfI",
+        AltTextGrid: "_1DSTal-SoqU7Zf0nk0FmRl",
+        AltTextHeader: "DxwrrF6sruBZ-N_Q98dP9",
+        AltTextImage: "_3_3Dqx1hIyrpPPlER58SWu",
+        AltTextName: "iIe8caS0kpCFy1oLCOUCE",
+        AltTextInput: "_160Whafs351qmmXz5c-5_b",
+        AltTextRow: "_1okAG3zavPs6wvi1wP1-tW",
+        AltTextFailed: "_3Az0YOAE-dFfsOyEkDyEoR",
+        AltTextMutateFailed: "tyh1ewxCBrVfWQeIlU505",
+      };
+    },
     23256: (e) => {
       e.exports = {
         AntiCheatDropDown: "_1Ein4m5qBonpTJl1GbVcV_",
@@ -322,6 +329,9 @@
         ImageSrc: "_1Md62ii5C2Q4QaiqWoEdhf",
         ImageCheckboxes: "_3eo-7msJ5jV20gub1qOBn",
       };
+    },
+    16931: (e) => {
+      e.exports = { ValveOnly: "eUTKmOUlH3cY_22TnBS8k" };
     },
     30041: (e) => {
       e.exports = {
@@ -767,11 +777,11 @@
           { strClassName: A } = v(s, c),
           w = "USD" == c,
           D = m ?? u,
-          T = d != D;
+          N = d != D;
         return o.createElement(
           "div",
           { ref: S, onKeyDown: r.nm, className: A },
-          T && o.createElement(P, { nPriceInCents: d, nSavedPriceInCents: D }),
+          N && o.createElement(P, { nPriceInCents: d, nSavedPriceInCents: D }),
           _ && o.createElement("div", { className: k().PricePrefix }, _),
           o.createElement(
             "div",
@@ -799,7 +809,7 @@
                         bEnablePointerEvents: !0,
                         nBodyDistance: 0,
                       },
-                      o.createElement(N, {
+                      o.createElement(T, {
                         key: b,
                         packageID: s,
                         strPriceKey: c,
@@ -886,7 +896,7 @@
           v = A || y || f,
           P = !(g || !l || (r && l == r)),
           D = 4 == p?.eState,
-          N = (0, u.A)(
+          T = (0, u.A)(
             k().PriceCell,
             _ && k().USD,
             g && k().ChangedLocally,
@@ -899,12 +909,12 @@
         return o.useMemo(
           () => ({
             strPriceWarning: b,
-            strClassName: N,
+            strClassName: T,
             bBadPrice: A,
             bShowSevereWarning: y,
             bShowWarningIcon: v,
           }),
-          [b, N, A, y, v],
+          [b, T, A, y, v],
         );
       }
       function P(e) {
@@ -950,7 +960,7 @@
           minute: "2-digit",
         });
       }
-      function N(e) {
+      function T(e) {
         const { packageID: t, strPriceKey: n } = e,
           {
             nPriceInCents: r,
@@ -1102,10 +1112,10 @@
         v = n(42027),
         P = n(14947),
         D = n(34629),
-        N = n(73744),
-        T = n(78511),
+        T = n(73744),
+        N = n(78511),
         I = n(32396);
-      class L extends T.q {
+      class L extends N.q {
         constructor(e, t, n) {
           const a = (0, I.II)(n);
           super(e, t, n.src, a.width, a.height), (0, P.Gn)(this);
@@ -1127,7 +1137,7 @@
           return !0;
         }
         BIsVideo() {
-          return N.Ho.includes(this.fileType);
+          return T.Ho.includes(this.fileType);
         }
         GetResizeDimension() {
           return null;
@@ -1346,7 +1356,7 @@
         (0, D.Cg)([R.o], O.prototype, "UploadAllImages", null);
       var F = n(78327),
         U = n(26408);
-      class G extends T.q {
+      class G extends N.q {
         m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
@@ -1408,7 +1418,7 @@
           return !0;
         }
         BIsVideo() {
-          return N.Ho.includes(this.fileType);
+          return T.Ho.includes(this.fileType);
         }
         BSupportsLanguages() {
           return !0;
@@ -1554,64 +1564,64 @@
         }
       }
       var K = n(87706),
-        V = n(63556),
-        W = n(83247);
+        V = n(83247),
+        W = n(56520);
       function z(e) {
         const {
             src: t,
             inLink: n,
             setAttrs: a,
             focusView: s,
-            removeNode: i,
-            activeLanguage: d,
+            removeNode: d,
+            activeLanguage: u,
           } = e,
-          [u, m] = (0, S.OP)(),
-          [p, g, h] = (0, S.uD)(),
-          f = (0, o.FD)(),
-          k = l.useCallback(() => {
-            s(), h();
-          }, [s, h]),
-          A = l.useMemo(() => f.find((e) => (0, r.q3)(e) === t), [t, f]),
-          y = A ? (0, r.q3)(A) : null,
-          { elLocalizedImageGroupDialog: w, elLocalizedImageGroupControl: v } =
-            $(A, d, s),
-          P = (e) => {
+          [m, p] = (0, S.OP)(),
+          [g, h, f] = (0, S.uD)(),
+          k = (0, o.FD)(),
+          A = l.useCallback(() => {
+            s(), f();
+          }, [s, f]),
+          y = l.useMemo(() => k.find((e) => (0, r.q3)(e) === t), [t, k]),
+          w = y ? (0, r.q3)(y) : null,
+          { elLocalizedImageGroupDialog: v, elLocalizedImageGroupControl: P } =
+            $(y, u, s),
+          D = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        let D;
-        if (A) {
-          const e = (0, r.IP)(A, !0, d);
+        let T;
+        if (y) {
+          const e = (0, r.IP)(y, !0, u);
           if (e) {
-            const t = (0, r.Bv)(A, d);
-            D =
+            const t = (0, r.Bv)(y, u);
+            T =
               1 == e.usage
                 ? l.createElement("video", {
-                    key: y,
+                    key: w,
                     className: b.ExtraAssetImg,
                     src: e.url,
-                    title: y,
+                    title: w,
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                     autoPlay: !0,
-                    onClick: P,
+                    onClick: D,
                   })
                 : l.createElement("img", {
-                    key: y,
+                    key: w,
                     className: b.ExtraAssetImg,
                     src: e.url,
                     alt: t,
-                    title: y,
+                    title: w,
                   });
           } else
-            D = l.createElement(
+            T = l.createElement(
               "span",
               { className: b.ExtraAssetError },
               (0, C.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          D = l.createElement(
+          T = l.createElement(
             "span",
             { className: b.ExtraAssetError },
             (0, C.we)("#StoreAdmin_GameDescription_MissingImage", t),
@@ -1619,34 +1629,34 @@
         return l.createElement(
           l.Fragment,
           null,
-          p &&
+          g &&
             l.createElement(X, {
-              editAsset: y,
+              editAsset: w,
               onAssetSelected: (e) => a({ src: e }),
-              hideModal: k,
+              hideModal: A,
             }),
-          w,
+          v,
           l.createElement(
             "span",
             {
               className: (0, E.A)(
                 b.ExtraAssetImgTag,
                 b.ExtraAssetControlsContainer,
-                u && b.Hovered,
+                m && b.Hovered,
                 n && b.InDeprecatedLink,
               ),
-              ...m,
+              ...p,
               title: "",
             },
             n && l.createElement(j, null),
             l.createElement(
               "span",
               { className: b.ExtraAssetControls },
-              v,
+              P,
               l.createElement(
                 _.ff,
                 {
-                  onClick: g,
+                  onClick: h,
                   tooltip: (0, C.we)(
                     "#StoreAdmin_GameDescription_ReplaceImage",
                   ),
@@ -1656,13 +1666,13 @@
               l.createElement(
                 _.ff,
                 {
-                  onClick: i,
+                  onClick: d,
                   tooltip: (0, C.we)("#StoreAdmin_GameDescription_RemoveImage"),
                 },
-                l.createElement(c.sED, null),
+                l.createElement(i.X, null),
               ),
             ),
-            D,
+            T,
           ),
         );
       }
@@ -1690,7 +1700,7 @@
                     "#StoreAdmin_GameDescription_EditImageDetails",
                   ),
                 },
-                l.createElement(i.qzq, null),
+                l.createElement(i.vCk, { className: "SVGIcon_Button" }),
               )))
             : u &&
               (0, r.i$)(e) &&
@@ -1702,7 +1712,7 @@
                     "#StoreAdmin_GameDescription_EditImageDetails_Legacy",
                   ),
                 },
-                l.createElement(i.MJR, null),
+                l.createElement(i.R2D, null),
               )),
           { elLocalizedImageGroupDialog: m, elLocalizedImageGroupControl: p }
         );
@@ -1869,7 +1879,7 @@
             onClick: (e) => n(s),
             onDoubleClick: (e) => a(s),
           },
-          l.createElement(le, { extraAsset: t, controls: !1 }),
+          l.createElement(ne, { extraAsset: t, controls: !1 }),
         );
       }
       function Q(e) {
@@ -1911,7 +1921,7 @@
                 l.createElement(
                   s.nB,
                   null,
-                  l.createElement(re, { onlyExtraAsset: t }),
+                  l.createElement(ee, { onlyExtraAsset: t }),
                   l.createElement(
                     y.tH,
                     null,
@@ -1942,7 +1952,7 @@
               "div",
               null,
               c &&
-                l.createElement(se, {
+                l.createElement(ae, {
                   extraAsset: t,
                   deleteLang: s,
                   hideModal: u,
@@ -1965,88 +1975,21 @@
       }
       function J(e) {
         const t = (0, o.FD)(),
-          n = (0, W.gU)(),
-          [a, i, c] = (0, S.uD)();
-        return l.createElement(
-          l.Fragment,
-          null,
-          a && l.createElement(ee, { hideModal: c }),
-          t.some(r.pN) &&
-            l.createElement(
-              s.$n,
-              { onClick: i },
-              (0, C.we)("#StoreAdmin_ExtraAssetUpload_EditAltText_Button"),
-            ),
-          l.createElement(
-            "div",
-            { className: b.ExtraAssetsPageList },
-            l.createElement(
-              "div",
-              { className: b.ExtraAssetsGrid },
-              t.map((e) =>
-                l.createElement(le, {
-                  key: (0, r.q3)(e),
-                  extraAsset: e,
-                  primaryLanguage: n,
-                }),
-              ),
-            ),
+          n = l.useMemo(() => M.WD(t.filter(r.pN), r.K7), [t]),
+          i = l.useMemo(
+            () =>
+              t
+                .filter(r.pN)
+                .map((e) => ({
+                  key: (0, r.K7)(e),
+                  caption: (0, r.K7)(e),
+                  mapAltText: e.alt_text,
+                })),
+            [t],
           ),
-          l.createElement(re, null),
-        );
-      }
-      function ee(e) {
-        const { hideModal: t } = e,
-          n = (0, o.FD)(),
-          [i, c] = l.useState(!0),
-          { bAppHasSteamChinaToolsEnabled: d } = (0, o.aJ)(),
-          p = l.useMemo(() => (0, C.O9)(d), [d]),
-          {
-            strActiveLanguage: _,
-            eActiveLang: h,
-            rctLanguageSelect: k,
-            mapValues: y,
-          } = (function (e) {
-            const {
-                strActiveLanguage: t,
-                mapValues: n,
-                rctLanguageSelect: a,
-                setActiveLanguage: r,
-              } = (0, W.KC)(e, [], null, null),
-              o = (0, A.sf)(t, 0);
-            return (
-              l.useEffect(() => {
-                V.O.Get().SetCurEditLanguage(o);
-              }, [o]),
-              (0, S.hL)(V.O.Get().GetCallback(), (e) => r((0, A.Lg)(e))),
-              {
-                strActiveLanguage: t,
-                eActiveLang: o,
-                rctLanguageSelect: a,
-                mapValues: n,
-              }
-            );
-          })(p),
-          w = (0, S.YR)(() => new Map()),
-          v = (0, S.YR)(() => new Map());
-        l.useEffect(() => {
-          if (i) {
-            c(!1);
-            for (const e of n.filter(r.pN))
-              w.set((0, r.K7)(e), { ...e.alt_text }),
-                v.set((0, r.K7)(e), { ...e.alt_text });
-          }
-        }, [i, n, w, v]);
-        const D = l.useCallback(() => {
-          for (const e of p.keys()) {
-            const t = Array.from(w.values()).some((t) => e in t);
-            y.get(e).Set(t ? "yes" : "");
-          }
-        }, [y, w, p]);
-        l.useEffect(() => D(), [D]);
-        const N = (0, S.CH)(),
-          T = (e) => w.get((0, r.K7)(e))?.[_] ?? "",
-          { mutateAsync: I, isPending: L } = (function () {
+          c = (0, V.gU)(),
+          [d, u, m] = (0, S.uD)(),
+          { mutateAsync: p, isPending: _ } = (function () {
             const e = (0, o.Z3)("ajaxmodifyextraassets"),
               t = (0, o.Y7)();
             return (0, a.n)({
@@ -2082,199 +2025,55 @@
                 );
               },
             });
-          })(),
-          R = P.sH.set(),
-          x = () => {
-            L || t();
-          };
+          })();
         return l.createElement(
-          u.E,
-          { active: !0 },
-          l.createElement(
-            m.x_,
-            { onEscKeypress: x, bDisableBackgroundDismiss: L },
+          l.Fragment,
+          null,
+          d &&
+            l.createElement(W.B, {
+              entries: i,
+              isLoading: !1,
+              hideModal: m,
+              mutateAltTextAsync: async (e, t) =>
+                !1 !== (await p({ strExtraAssetFileName: e, mapAltText: t })),
+              isMutatePending: _,
+              fnGetImage: (e, t) =>
+                l.createElement(ne, {
+                  extraAsset: n.get(e),
+                  caption: !1,
+                  controls: !1,
+                  primaryLanguage: t,
+                }),
+            }),
+          t.some(r.pN) &&
             l.createElement(
-              s.U9,
-              { classNameContent: b.ExtraAssetDialogContent },
+              "div",
+              { className: b.AltTextBtn },
               l.createElement(
-                s.Y9,
-                null,
-                (0, C.we)("#StoreAdmin_ExtraAssetUpload_EditAltText_Title"),
+                s.jn,
+                { onClick: u },
+                (0, C.we)("#StoreAdmin_EditAltText_Button"),
               ),
-              l.createElement(
-                "div",
-                { className: b.ExtraAssetsDialogDescription },
-                l.createElement(
-                  "div",
-                  null,
-                  (0, C.we)("#StoreAdmin_ExtraAssetUpload_EditAltText_Desc"),
-                ),
-                k,
-              ),
-              l.createElement(
-                s.nB,
-                null,
-                l.createElement(
-                  "table",
-                  { className: (0, E.A)(b.AltTextGrid) },
-                  l.createElement(
-                    "thead",
-                    { className: (0, E.A)(b.AltTextHeader) },
-                    l.createElement(
-                      "tr",
-                      null,
-                      l.createElement("th", null),
-                      l.createElement(
-                        "th",
-                        { className: (0, E.A)(b.AltTextName) },
-                        (0, C.we)(
-                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAssetName",
-                        ),
-                      ),
-                      l.createElement(
-                        "th",
-                        { className: (0, E.A)(b.AltTextInput) },
-                        (0, C.we)(
-                          "#StoreAdmin_ExtraAssetUpload_EditAltText_ColAltText",
-                        ),
-                      ),
-                    ),
-                  ),
-                  l.createElement(
-                    "tbody",
-                    null,
-                    n.filter(r.pN).map((e) =>
-                      l.createElement(ae, {
-                        key: `${(0, r.K7)(e)}-${h}`,
-                        lang: h,
-                        extraAsset: e,
-                        altText: T(e),
-                        setAltText: (t) =>
-                          ((e, t) => {
-                            let n = w.get((0, r.K7)(e));
-                            n || ((n = {}), w.set((0, r.K7)(e), n)),
-                              t.trim().length > 0 ? (n[_] = t) : delete n[_],
-                              D(),
-                              N();
-                          })(e, t),
-                        failedMutate: R.has((0, r.K7)(e)),
-                      }),
-                    ),
-                  ),
-                ),
-                L && l.createElement(g.t, null),
-              ),
-              l.createElement(
-                s.wi,
-                null,
-                R.size > 0 &&
-                  l.createElement(
-                    "div",
-                    { className: b.AltTextMutateFailed },
-                    (0, C.we)(
-                      "#StoreAdmin_ExtraAssetUpload_EditAltText_MutateFailed",
-                    ),
-                  ),
-                l.createElement(s.CB, {
-                  onCancel: x,
-                  onOK: (e) => {
-                    e.preventDefault(),
-                      (async () => {
-                        try {
-                          R.clear();
-                          for (const [e, t] of w.entries())
-                            te(w.get(e), v.get(e)) ||
-                              (!1 !==
-                              (await I({
-                                strExtraAssetFileName: e,
-                                mapAltText: t,
-                              }))
-                                ? v.set(e, { ...t })
-                                : R.add(e));
-                          0 == R.size && t();
-                        } catch (e) {
-                          console.error("Some mutations failed", e);
-                        }
-                      })();
-                  },
-                  bOKDisabled: L || ne(w, v),
-                  bCancelDisabled: L,
-                  strOKText: (0, C.we)(
-                    "#StoreAdmin_ExtraAssetUpload_EditAltText_Save",
-                  ),
+            ),
+          l.createElement(
+            "div",
+            { className: b.ExtraAssetsPageList },
+            l.createElement(
+              "div",
+              { className: b.ExtraAssetsGrid },
+              t.map((e) =>
+                l.createElement(ne, {
+                  key: (0, r.q3)(e),
+                  extraAsset: e,
+                  primaryLanguage: c,
                 }),
               ),
             ),
           ),
+          l.createElement(ee, null),
         );
       }
-      function te(e, t) {
-        if (Object.keys(e).length !== Object.keys(t).length) return !1;
-        for (const n of Object.keys(e)) if (t[n] !== e[n]) return !1;
-        return !0;
-      }
-      function ne(e, t) {
-        if (e.size !== t.size) return !1;
-        for (const [n, a] of e) {
-          const e = t.get(n);
-          if (!e || !te(a, e)) return !1;
-        }
-        return !0;
-      }
-      function ae(e) {
-        const {
-            lang: t,
-            extraAsset: n,
-            altText: a,
-            setAltText: o,
-            failedMutate: i,
-          } = e,
-          [c, d] = l.useState(a);
-        return l.createElement(
-          "tr",
-          { className: b.AltTextRow },
-          l.createElement(
-            "td",
-            { className: b.AltTextImage },
-            l.createElement(le, {
-              extraAsset: n,
-              caption: !1,
-              controls: !1,
-              primaryLanguage: t,
-            }),
-          ),
-          l.createElement(
-            "td",
-            { className: b.AltTextName },
-            (0, r.K7)(n),
-            i &&
-              l.createElement(
-                "div",
-                { className: b.AltTextFailed },
-                (0, C.we)(
-                  "#StoreAdmin_ExtraAssetUpload_EditAltText_EntryMutateFailed",
-                ),
-              ),
-          ),
-          l.createElement(
-            "td",
-            { className: b.AltTextInput },
-            l.createElement(s.pd, {
-              type: "text",
-              placeholder: (0, C.we)(
-                "#StoreAdmin_ExtraAssetUpload_EditAltText_Placeholder",
-                (0, C.we)(`#Language_${(0, A.Lg)(t)}`),
-              ),
-              value: c,
-              onChange: (e) => {
-                return (t = e.target.value), d(t), void o(t);
-                var t;
-              },
-            }),
-          ),
-        );
-      }
-      function re(e) {
+      function ee(e) {
         const { onlyExtraAsset: t } = e,
           { bExtraAssetsV2: n } = (0, o.nz)(),
           { bExtraAssetsV2Videos: a } = (0, o.vh)(),
@@ -2283,7 +2082,7 @@
           c = l.useMemo(() => new H(i, n, a), [i, n, a]),
           d = (0, o.FD)(),
           u = l.useMemo(() => d.filter(r.pN), [d]),
-          m = oe(u);
+          m = te(u);
         l.useEffect(() => {
           const e = (e) => ({
             baseFilename: (0, r.K7)(e),
@@ -2294,7 +2093,7 @@
         }, [c, u, t, m]);
         const p = (function (e) {
             const t = l.useMemo(() => (e ? [e] : []), [e]),
-              n = oe(t);
+              n = te(t);
             return n?.length > 0 ? n[0] : void 0;
           })(t),
           { rgRealmList: _ } = (0, o.aJ)();
@@ -2343,7 +2142,7 @@
           }),
         );
       }
-      function oe(e) {
+      function te(e) {
         const [t, n] = l.useState(void 0);
         return (
           l.useEffect(() => {
@@ -2359,20 +2158,20 @@
           t
         );
       }
-      function le(e) {
+      function ne(e) {
         const {
             extraAsset: t,
             caption: n = !0,
             controls: a = !0,
             primaryLanguage: o,
           } = e,
-          [s, i] = (0, S.OP)(),
-          [d, u, m] = (0, S.uD)(),
-          p = (0, r.q3)(t);
-        let g;
+          [s, d] = (0, S.OP)(),
+          [u, m, p] = (0, S.uD)(),
+          g = (0, r.q3)(t);
+        let f;
         if ((0, r.i$)(t)) {
           const e = (0, r.IP)(t, !1);
-          g = e ? [e] : [];
+          f = e ? [e] : [];
         } else {
           const e = 29 == o ? 6 : 0,
             n = (0, r.wN)(t).sort((t, n) => {
@@ -2384,23 +2183,23 @@
               }
               return t - n;
             });
-          g = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
+          f = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
             (0, r.IP)(t, 0 == a, n[a]),
           );
         }
-        const f = () => {
-            window.open(g[0]?.url);
+        const k = () => {
+            window.open(f[0]?.url);
           },
-          { elLocalizedImageGroupDialog: k, elLocalizedImageGroupControl: A } =
+          { elLocalizedImageGroupDialog: A, elLocalizedImageGroupControl: y } =
             $(t, null, null),
-          y = (e) => {
+          w = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
         return l.createElement(
           l.Fragment,
           null,
-          k,
+          A,
           l.createElement(
             "div",
             {
@@ -2409,19 +2208,19 @@
                 b.ExtraAssetControlsContainer,
                 s && b.Hovered,
               ),
-              ...i,
-              title: p,
+              ...d,
+              title: g,
             },
-            d && l.createElement(se, { extraAsset: t, hideModal: m }),
+            u && l.createElement(ae, { extraAsset: t, hideModal: p }),
             a &&
               l.createElement(
                 "div",
                 { className: b.ExtraAssetControls, title: "" },
-                A,
+                y,
                 l.createElement(
                   _.ff,
                   {
-                    onClick: f,
+                    onClick: k,
                     tooltip: (0, C.we)(
                       "#StoreAdmin_GameDescription_OpenInNewWindow",
                     ),
@@ -2431,7 +2230,7 @@
                 l.createElement(
                   _.ff,
                   {
-                    onClick: () => (0, h.OG)(p),
+                    onClick: () => (0, h.OG)(g),
                     tooltip: (0, C.we)(
                       "#StoreAdmin_GameDescription_CopyNameToClipboard",
                     ),
@@ -2441,35 +2240,35 @@
                 l.createElement(
                   _.ff,
                   {
-                    onClick: u,
+                    onClick: m,
                     tooltip: (0, C.we)(
                       "#StoreAdmin_GameDescription_DeleteAsset",
                     ),
                   },
-                  l.createElement(c.sED, null),
+                  l.createElement(i.X, null),
                 ),
               ),
             l.createElement(
               "div",
               { className: b.StackedImageCtn },
-              g.map((e, t) =>
+              f.map((e, t) =>
                 1 == e.usage
                   ? l.createElement("video", {
                       key: e.url + t,
                       className: (0, E.A)(b.StackedImage, b[`Image-${t}`]),
                       src: e.url,
-                      onDoubleClick: a ? f : void 0,
+                      onDoubleClick: a ? k : void 0,
                       muted: !0,
                       loop: !0,
                       playsInline: !0,
                       autoPlay: !0,
-                      onClick: y,
+                      onClick: w,
                     })
                   : l.createElement("img", {
                       key: e.url + t,
                       className: (0, E.A)(b.StackedImage, b[`Image-${t}`]),
                       src: e.url,
-                      onDoubleClick: a ? f : void 0,
+                      onDoubleClick: a ? k : void 0,
                     }),
               ),
             ),
@@ -2482,7 +2281,7 @@
           ),
         );
       }
-      function se(e) {
+      function ae(e) {
         const { extraAsset: t, deleteLang: n, hideModal: s } = e,
           {
             mutate: i,
@@ -2693,12 +2492,12 @@
             const e = p ? h : r.name;
             return g(e);
           }),
-          N = s.useMemo(() => g(k), [k, g]),
-          T = (0, f.Gr)(t.languages),
+          T = s.useMemo(() => g(k), [k, g]),
+          N = (0, f.Gr)(t.languages),
           I = (function (e, t, n) {
             return 1 == e?.length ? e[0] : -1 != t ? t : n;
           })(
-            T.map((e) => e.data),
+            N.map((e) => e.data),
             b,
             t.activeLanguage,
           ),
@@ -2707,24 +2506,24 @@
           M = r.name;
         s.useEffect(() => {
           B(() => {
-            if (!N) return;
-            const { baseFilename: e } = (0, C.jj)(N),
+            if (!T) return;
+            const { baseFilename: e } = (0, C.jj)(T),
               t = u.find((t) => (0, o.K7)(t) == e);
             if (!t) return;
             if ((0, o.i$)(t)) return t;
             const n = t.images?.[(0, S.Lg)(L)];
             return n;
           });
-        }, [M, N, u, L]);
+        }, [M, T, u, L]);
         const O =
             (function (e) {
               return e && e.length > 0;
-            })(N) && !n
-              ? () => a(N, L)
+            })(T) && !n
+              ? () => a(T, L)
               : void 0,
           F = s.useCallback(() => {
-            t.onComplete((0, o.TQ)(N));
-          }, [t, N]),
+            t.onComplete((0, o.TQ)(T));
+          }, [t, T]),
           U = x
             ? (0, _.we)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
             : (0, _.we)("#Button_Upload");
@@ -2755,14 +2554,14 @@
               }),
               s.createElement(v, {
                 name: k,
-                validatedName: N,
+                validatedName: T,
                 setName: A,
                 disabled: n,
               }),
               p &&
-                T.length > 1 &&
+                N.length > 1 &&
                 s.createElement(i.m, {
-                  rgOptions: T,
+                  rgOptions: N,
                   selectedOption: L,
                   onChange: (e) => R(e.data),
                 }),
@@ -3015,7 +2814,7 @@
     },
     83247: (e, t, n) => {
       "use strict";
-      n.d(t, { KC: () => _, gU: () => S, jy: () => p });
+      n.d(t, { KC: () => g, eE: () => b, gU: () => f, jy: () => _ });
       var a = n(90626),
         r = n(16676),
         o = n(6144),
@@ -3023,10 +2822,11 @@
         s = n(64753),
         i = n(30470),
         c = n(97982),
-        d = n(22837);
-      const u = "v_StoreAdminLanguageChange",
-        m = a.createContext(void 0);
-      function p(e) {
+        d = n(22837),
+        u = n(63556);
+      const m = "v_StoreAdminLanguageChange",
+        p = a.createContext(void 0);
+      function _(e) {
         const [t, n] = a.useState(),
           r = a.useMemo(
             () => ({ strActiveLanguage: t, setActiveLanguage: n }),
@@ -3040,22 +2840,22 @@
           }, [t]),
           (0, s.l6)(
             window,
-            u,
+            m,
             a.useCallback((e) => {
               e.detail.strLanguage && n(e.detail.strLanguage);
             }, []),
           ),
-          a.createElement(m.Provider, { value: r }, e.children)
+          a.createElement(p.Provider, { value: r }, e.children)
         );
       }
-      function _(e, t, n, r) {
+      function g(e, t, n, r) {
         const l = a.useMemo(() => Array.from(e.keys()), [e]),
           [s] = a.useState(() => {
             const e = new Map(t);
             return new Map(l.map((t) => [t, (0, o.Jc)(e.get(t) || "")]));
           }),
-          c = a.useContext(m),
-          [u, p] = a.useState(() => {
+          c = a.useContext(p),
+          [u, m] = a.useState(() => {
             return (t = s.size ? s : e).has(i.TS.LANGUAGE)
               ? i.TS.LANGUAGE
               : t.has("english")
@@ -3064,21 +2864,21 @@
             var t;
           }),
           _ = c?.strActiveLanguage ?? u,
-          E = a.useCallback(
+          g = a.useCallback(
             (e) => {
-              c?.setActiveLanguage(e), p(e);
+              c?.setActiveLanguage(e), m(e);
             },
             [c],
           ),
-          C = a.createElement(g, {
+          h = a.createElement(E, {
             mapLanguages: e,
             mapValues: s,
             strActiveLanguage: _,
-            setActiveLanguage: E,
+            setActiveLanguage: g,
           }),
           S =
             Boolean(n && r) &&
-            a.createElement(h, {
+            a.createElement(C, {
               rgLanguages: l,
               mapValues: s,
               namePrefix: n,
@@ -3087,13 +2887,13 @@
         return {
           strActiveLanguage: _,
           mapValues: s,
-          rctLanguageSelect: C,
+          rctLanguageSelect: h,
           rgLanguages: l.map(d.sf),
           rctHiddenInputs: S,
-          setActiveLanguage: E,
+          setActiveLanguage: g,
         };
       }
-      function g(e) {
+      function E(e) {
         const {
             mapLanguages: t,
             mapValues: n,
@@ -3106,7 +2906,7 @@
               t.forEach((t, r) => {
                 e.push({
                   data: r,
-                  label: a.createElement(E, {
+                  label: a.createElement(h, {
                     strLocLanguage: t,
                     value: n.get(r),
                   }),
@@ -3123,7 +2923,7 @@
           rgOptions: s,
         });
       }
-      function E(e) {
+      function h(e) {
         const { strLocLanguage: t, value: n } = e,
           [r, o] = a.useState(() => !!n?.Value?.trim()),
           i = a.useCallback((e) => o(!!e.trim()), []);
@@ -3137,10 +2937,10 @@
           )
         );
       }
-      function h(e) {
+      function C(e) {
         const { rgLanguages: t, mapValues: n, namePrefix: r, rgPath: o } = e;
         return t.map((e) =>
-          a.createElement(C, {
+          a.createElement(S, {
             key: e,
             language: e,
             value: n.get(e),
@@ -3149,20 +2949,41 @@
           }),
         );
       }
-      const C = a.memo(function (e) {
+      const S = a.memo(function (e) {
         const { language: t, value: n, namePrefix: r, rgPath: o } = e,
           l = (0, s.gc)(n) || "",
           i = r + [...o, t].map((e) => `[${e}]`).join("");
         return a.createElement("input", { type: "hidden", name: i, value: l });
       });
-      function S() {
-        const e = a.useContext(m);
+      function f() {
+        const e = a.useContext(p);
         return (0, d.sf)(e?.strActiveLanguage, 0);
+      }
+      function b(e) {
+        const {
+            strActiveLanguage: t,
+            mapValues: n,
+            rctLanguageSelect: r,
+            setActiveLanguage: o,
+          } = g(e, [], null, null),
+          l = (0, d.sf)(t, 0);
+        return (
+          a.useEffect(() => {
+            u.O.Get().SetCurEditLanguage(l);
+          }, [l]),
+          (0, s.hL)(u.O.Get().GetCallback(), (e) => o((0, d.Lg)(e))),
+          {
+            strActiveLanguage: t,
+            eActiveLang: l,
+            rctLanguageSelect: r,
+            mapValues: n,
+          }
+        );
       }
     },
     47693: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { StoreAppPageHeader: () => Ue, default: () => Me });
+      n.r(t), n.d(t, { StoreAppPageHeader: () => Ge, default: () => Oe });
       var a = n(91986),
         r = n(64753),
         o = n(98724),
@@ -3173,16 +2994,30 @@
       class d {
         m_nodes = [];
         m_schema;
-        constructor(e) {
-          this.m_schema = e;
+        m_bConvertNewlinesToBR;
+        constructor(e, t) {
+          (this.m_schema = e), (this.m_bConvertNewlinesToBR = t);
         }
         AppendText(e, t) {
-          let n = 0;
-          for (let t = e.indexOf("\n", n); -1 !== t; t = e.indexOf("\n", n))
-            n != t && this.m_nodes.push(this.m_schema.text(e.substring(n, t))),
-              this.m_nodes.push(this.m_schema.nodes.hard_break.createChecked()),
-              (n = t + 1);
-          n < e.length && this.m_nodes.push(this.m_schema.text(e.substring(n)));
+          e.length &&
+            (this.m_bConvertNewlinesToBR
+              ? this.m_nodes.push(
+                  ...(function (e, t) {
+                    const n = [];
+                    let a = 0;
+                    for (
+                      let r = e.indexOf("\n", a);
+                      -1 !== r;
+                      r = e.indexOf("\n", a)
+                    )
+                      a != r && n.push(t.text(e.substring(a, r))),
+                        n.push(t.nodes.hard_break.createChecked()),
+                        (a = r + 1);
+                    a < e.length && n.push(t.text(e.substring(a)));
+                    return n;
+                  })(e, this.m_schema),
+                )
+              : this.m_nodes.push(this.m_schema.text(e)));
         }
         AppendNode(e) {
           this.m_nodes.push(e);
@@ -3200,8 +3035,9 @@
       class m extends s.Al {
         m_schemaConfig;
         m_mapPMBBNodes = new Map();
-        constructor(e) {
-          super(e.bbcode_dictionary, () => new d(e.pm_schema)),
+        constructor(e, t) {
+          const { bConvertNewlinesToBR: n = !1 } = t;
+          super(e.bbcode_dictionary, () => new d(e.pm_schema, n)),
             (this.m_schemaConfig = e),
             this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
               "node" in e.Constructor &&
@@ -3427,9 +3263,10 @@
         m_fnCommitChanges;
         m_view;
         m_state;
-        constructor(e, t, n) {
+        constructor(e, t, n, a) {
+          const { parser: r } = a ?? {};
           (this.m_schemaConfig = e),
-            (this.m_bbcodeParser = new m(e)),
+            (this.m_bbcodeParser = new m(e, r ?? {})),
             (this.m_bbcode = t),
             (this.m_fnCommitChanges = n),
             (this.m_state = this.ConstructState());
@@ -3648,8 +3485,8 @@
       var v = n(57699),
         P = n(60863),
         D = n(29655),
-        N = n(71696),
-        T = n(76217),
+        T = n(71696),
+        N = n(76217),
         I = n(63512),
         L = n(73170),
         R = n(29287),
@@ -4040,7 +3877,7 @@
         return S.createElement(
           k.Ot,
           { view: u, pmState: t },
-          S.createElement(T.Z, {
+          S.createElement(N.Z, {
             key: `editordiv_${o}`,
             className: (0, G.A)(n, Z.Container),
             ref: E,
@@ -4820,15 +4657,16 @@
           strong: ve,
           italic: Pe,
           underline: De,
-          link: Ne,
-          strike: Te,
+          link: Te,
+          strike: Ne,
         } = V.marks;
       var Ie = n(6144),
         Le = n(30600),
         Re = n(80968),
         xe = n(22837);
-      const Be = new Ie.lu();
-      function Me(e) {
+      const Be = new Ie.lu(),
+        Me = { parser: { bConvertNewlinesToBR: !0 } };
+      function Oe(e) {
         const {
             language: t,
             languages: n,
@@ -4906,13 +4744,13 @@
                     strong: ve,
                     italic: Pe,
                     underline: De,
-                    strike: Te,
+                    strike: Ne,
                     link: {
-                      ...Ne,
+                      ...Te,
                       toDOM: (e, t) => [
                         "a",
                         {
-                          ...Ne.toDOM(e, t)[1],
+                          ...Te.toDOM(e, t)[1],
                           title: (0, Y.we)(
                             "#StoreAdmin_GameDescription_LinksDisabled",
                           ),
@@ -4930,7 +4768,8 @@
           [m] = S.useState(() => new Map()),
           [p, _] = S.useState();
         S.useEffect(() => {
-          m.has(o) || m.set(o, new C(u, o.Value, (e) => o.Set(e))), _(m.get(o));
+          m.has(o) || m.set(o, new C(u, o.Value, (e) => o.Set(e), Me)),
+            _(m.get(o));
         }, [u, m, o]),
           f(p, { msAutosaveTimeout: 5e3 }),
           S.useEffect(() => {
@@ -4944,14 +4783,14 @@
           }, [i, o]);
         const g = (0, xe.sf)(t);
         return S.createElement(
-          Oe,
+          Fe,
           {
             imageNodeType: u.pm_schema.nodes.image,
             activeLanguage: g,
             languages: n,
           },
           S.createElement(
-            Fe,
+            Ue,
             {
               editorType: l,
               view: i,
@@ -4972,12 +4811,12 @@
                 refOnUpdate: d,
                 refView: c,
               },
-              S.createElement(He, { schema: u, activeLanguage: g }),
+              S.createElement(Ke, { schema: u, activeLanguage: g }),
             ),
           ),
         );
       }
-      function Oe(e) {
+      function Fe(e) {
         const {
             imageNodeType: t,
             activeLanguage: n,
@@ -5011,12 +4850,12 @@
             return await n.blob();
           }, []);
         return S.createElement(
-          N.Xv,
+          T.Xv,
           { ProcessFileUpload: l, FetchImageURL: s },
           S.createElement("div", null, "\t", r),
         );
       }
-      function Fe(e) {
+      function Ue(e) {
         const {
             editorType: t,
             view: n,
@@ -5037,7 +4876,7 @@
         return S.createElement(
           S.Fragment,
           null,
-          S.createElement(Ge, {
+          S.createElement(He, {
             view: n,
             refUpdateToolbar: a,
             sticky: i,
@@ -5058,7 +4897,7 @@
           ),
         );
       }
-      function Ue(e) {
+      function Ge(e) {
         return S.createElement(
           "h2",
           { className: Re.StoreAppPageHeader },
@@ -5066,7 +4905,7 @@
           S.createElement("div", { className: Re.GradientRule }),
         );
       }
-      function Ge(e) {
+      function He(e) {
         const {
           view: t,
           refUpdateToolbar: n,
@@ -5105,7 +4944,7 @@
           ),
         );
       }
-      function He(e) {
+      function Ke(e) {
         const { schema: t, activeLanguage: n } = e,
           a = S.useMemo(
             () => [
@@ -5125,8 +4964,259 @@
           S.Fragment,
           null,
           S.createElement(A, { specs: a }),
-          S.createElement(N.pw, { nodeType: t.pm_schema.nodes.image }),
+          S.createElement(T.pw, { nodeType: t.pm_schema.nodes.image }),
         );
+      }
+    },
+    56520: (e, t, n) => {
+      "use strict";
+      n.d(t, { B: () => E });
+      var a = n(90626),
+        r = n(16676),
+        o = n(29655),
+        l = n(21869),
+        s = n(738),
+        i = n(22797),
+        c = n(52038),
+        d = n(61859),
+        u = n(64753),
+        m = n(27539),
+        p = n(22837),
+        _ = n(14947),
+        g = n(83247);
+      function E(e) {
+        const {
+            hideModal: t,
+            entries: n,
+            isLoading: p,
+            fnRefetch: E,
+            mutateAltTextAsync: f,
+            isMutatePending: b,
+            fnGetImage: k,
+          } = e,
+          { bAppHasSteamChinaToolsEnabled: A } = (0, o.aJ)(),
+          y = a.useMemo(() => (0, d.O9)(A), [A]),
+          {
+            strActiveLanguage: w,
+            eActiveLang: v,
+            rctLanguageSelect: P,
+            mapValues: D,
+          } = (0, g.eE)(y),
+          [T, N] = a.useState(new Map()),
+          [I, L] = a.useState(new Map());
+        a.useEffect(() => {
+          const e = new Map(),
+            t = new Map();
+          for (const a of n)
+            e.set(a.key, structuredClone(a)), t.set(a.key, structuredClone(a));
+          N(e), L(t);
+        }, [n]);
+        const R = a.useCallback(() => {
+          for (const e of y.keys()) {
+            const t = Array.from(T.values()).some(
+              (t) => t.mapAltText && e in t.mapAltText,
+            );
+            D.get(e).Set(t ? "yes" : "");
+          }
+        }, [D, T, y]);
+        a.useEffect(() => R(), [R]);
+        const x = (0, u.CH)(),
+          B = _.sH.set(),
+          M = b || p,
+          O = () => {
+            M || t();
+          },
+          F = Array.from(T.values()).some((e) => null != e.caption);
+        return a.createElement(
+          l.E,
+          { active: !0 },
+          a.createElement(
+            s.x_,
+            { onEscKeypress: O, bDisableBackgroundDismiss: M },
+            a.createElement(
+              r.U9,
+              { classNameContent: m.AltTextDialogContent },
+              a.createElement(
+                r.Y9,
+                null,
+                (0, d.we)("#StoreAdmin_EditAltText_Title"),
+              ),
+              a.createElement(
+                "div",
+                { className: m.AltTextDialogDescription },
+                a.createElement(
+                  "div",
+                  null,
+                  a.createElement(
+                    "p",
+                    null,
+                    (0, d.we)("#StoreAdmin_EditAltText_Desc"),
+                  ),
+                  a.createElement(
+                    "p",
+                    null,
+                    (0, d.we)("#StoreAdmin_EditAltText_Desc2"),
+                  ),
+                ),
+                P,
+              ),
+              a.createElement(
+                r.nB,
+                null,
+                a.createElement(
+                  "table",
+                  { className: (0, c.A)(m.AltTextGrid) },
+                  a.createElement(
+                    "thead",
+                    { className: (0, c.A)(m.AltTextHeader) },
+                    a.createElement(
+                      "tr",
+                      null,
+                      a.createElement("th", {
+                        className: (0, c.A)(m.AltTextImage),
+                      }),
+                      F &&
+                        a.createElement(
+                          "th",
+                          { className: (0, c.A)(m.AltTextName) },
+                          (0, d.we)("#StoreAdmin_EditAltText_ColAssetName"),
+                        ),
+                      a.createElement(
+                        "th",
+                        { className: (0, c.A)(m.AltTextInput) },
+                        (0, d.we)("#StoreAdmin_EditAltText_ColAltText"),
+                      ),
+                    ),
+                  ),
+                  a.createElement(
+                    "tbody",
+                    null,
+                    !M &&
+                      Array.from(T.values()).map((e) => {
+                        return a.createElement(h, {
+                          key: `${e.key}-${v}`,
+                          lang: v,
+                          caption: e.caption,
+                          image: k(e.key, v),
+                          altText:
+                            ((t = e.key), T.get(t)?.mapAltText?.[w] ?? ""),
+                          setAltText: (t) =>
+                            ((e, t) => {
+                              let n = T.get(e);
+                              n || ((n = {}), T.set(e, n)),
+                                n.mapAltText || (n.mapAltText = {}),
+                                t.trim().length > 0
+                                  ? (n.mapAltText[w] = t)
+                                  : delete n.mapAltText[w],
+                                R(),
+                                x();
+                            })(e.key, t),
+                          failedMutate: B.has(e.key),
+                          showCaptionColumn: F,
+                        });
+                        var t;
+                      }),
+                  ),
+                ),
+                M && a.createElement(i.t, null),
+              ),
+              a.createElement(
+                r.wi,
+                null,
+                B.size > 0 &&
+                  a.createElement(
+                    "div",
+                    { className: m.AltTextMutateFailed },
+                    (0, d.we)("#StoreAdmin_EditAltText_MutateFailed"),
+                  ),
+                a.createElement(r.CB, {
+                  onCancel: O,
+                  onOK: (e) => {
+                    e.preventDefault(),
+                      (async () => {
+                        try {
+                          B.clear();
+                          for (const [e, t] of T.entries()) {
+                            if (C(t.mapAltText, I.get(e).mapAltText)) continue;
+                            const n = { ...t.mapAltText };
+                            for (const a of Object.keys(
+                              I.get(e).mapAltText ?? {},
+                            ))
+                              a in t.mapAltText || (n[a] = "");
+                            (await f(e, n)) ? I.set(e, { ...t }) : B.add(e);
+                          }
+                          E?.(), 0 == B.size && t();
+                        } catch (e) {
+                          console.error("Some mutations failed", e);
+                        }
+                      })();
+                  },
+                  bOKDisabled: M || S(T, I),
+                  bCancelDisabled: M,
+                  strOKText: (0, d.we)("#StoreAdmin_EditAltText_Save"),
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function h(e) {
+        const {
+            lang: t,
+            image: n,
+            caption: o,
+            altText: l,
+            setAltText: s,
+            failedMutate: i,
+            showCaptionColumn: c,
+          } = e,
+          [u, _] = a.useState(l);
+        return a.createElement(
+          "tr",
+          { className: m.AltTextRow },
+          a.createElement("td", { className: m.AltTextImage }, n),
+          c &&
+            a.createElement(
+              "td",
+              { className: m.AltTextName },
+              o,
+              i &&
+                a.createElement(
+                  "div",
+                  { className: m.AltTextFailed },
+                  (0, d.we)("#StoreAdmin_EditAltText_EntryMutateFailed"),
+                ),
+            ),
+          a.createElement(
+            "td",
+            { className: m.AltTextInput },
+            a.createElement(r.pd, {
+              type: "text",
+              placeholder: (0, d.we)(
+                "#StoreAdmin_EditAltText_Placeholder",
+                (0, d.we)(`#Language_${(0, p.Lg)(t)}`),
+              ),
+              value: u,
+              onChange: (e) => {
+                return (t = e.target.value), _(t), void s(t);
+                var t;
+              },
+            }),
+          ),
+        );
+      }
+      function C(e, t) {
+        const n = e ? Object.keys(e) : [],
+          a = t ? Object.keys(t) : [];
+        return n.length === a.length && n.every((n) => e[n] === t[n]);
+      }
+      function S(e, t) {
+        if (e.size !== t.size) return !1;
+        for (const [n, a] of e) {
+          const e = t.get(n);
+          if (!e || !C(a.mapAltText, e.mapAltText)) return !1;
+        }
+        return !0;
       }
     },
     29655: (e, t, n) => {
@@ -5336,9 +5426,9 @@
         return s.createElement(y.Provider, { value: o }, e.children);
       }
     },
-    60691: (e, t, n) => {
+    93177: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Zl });
+      n.r(t), n.d(t, { default: () => ts });
       var a = n(90626),
         r = n(64046),
         o = n(88997);
@@ -5788,7 +5878,7 @@
           leftColumnContent: d,
         });
       }
-      function N(e) {
+      function T(e) {
         const {
             nPageNum: t,
             currentValues: n,
@@ -5896,7 +5986,7 @@
           leftColumnContent: p,
         });
       }
-      function T(e) {
+      function N(e) {
         const { nPageNum: t, currentValues: n, setCurrentValues: r } = e,
           o = [
             {
@@ -6161,7 +6251,7 @@
             });
             break;
           case 1:
-            E = a.createElement(N, {
+            E = a.createElement(T, {
               nPageNum: p,
               currentValues: c,
               setCurrentValues: d,
@@ -6169,7 +6259,7 @@
             });
             break;
           case 2:
-            E = a.createElement(T, {
+            E = a.createElement(N, {
               nPageNum: p,
               currentValues: c,
               setCurrentValues: d,
@@ -6886,13 +6976,13 @@
               y.dR,
               null,
               a.createElement(
-                Ne,
+                Te,
                 { label: (0, s.we)("#App_Landing_IntendedReleaseDateTitle") },
-                a.createElement(Te, { rtSelectedDate: c, setSelectedDate: d }),
+                a.createElement(Ne, { rtSelectedDate: c, setSelectedDate: d }),
                 a.createElement(Ie, null),
               ),
               a.createElement(
-                Ne,
+                Te,
                 { label: (0, s.we)("#App_Landing_PublicDateDisplayTitle") },
                 a.createElement(fe, {
                   rtSteamReleaseDate: c,
@@ -6993,7 +7083,7 @@
           }),
         );
       }
-      function Ne(e) {
+      function Te(e) {
         const { label: t, children: n } = e;
         return a.createElement(
           y.VP,
@@ -7002,7 +7092,7 @@
           a.createElement("div", { className: be.ColumnContent }, n),
         );
       }
-      function Te(e) {
+      function Ne(e) {
         const { rtSelectedDate: t, setSelectedDate: n } = e,
           { bCanUpdateComingSoonDate: r, rtEarliestDate: o } = ye();
         return a.createElement(
@@ -7970,8 +8060,8 @@
       var vt,
         Pt = n(8527),
         Dt = n(82359),
-        Nt = n(17720),
-        Tt = n(4796),
+        Tt = n(17720),
+        Nt = n(4796),
         It = n(12493),
         Lt = n(96001);
       !(function (e) {
@@ -8238,7 +8328,7 @@
           (0, a.useEffect)(() => {
             if (n) {
               (async () => {
-                await Tt.ac.AddGroupVanities(n), o(!1);
+                await Nt.ac.AddGroupVanities(n), o(!1);
               })();
             } else o(!1);
           }, [n]),
@@ -8305,7 +8395,7 @@
               const n = t.find((t) => t.linkname == e);
               if (n)
                 return {
-                  clan_account_id: new Nt.b(n.clan_steamid).GetAccountID(),
+                  clan_account_id: new Tt.b(n.clan_steamid).GetAccountID(),
                   sort_order: "salesrank",
                   featured_appids: void 0,
                 };
@@ -8333,11 +8423,11 @@
           d = (0, a.useMemo)(() => {
             if (l.clan_account_id == vt.k_CreatorHomeAll) {
               const e = new Set();
-              t.forEach((t) => e.add(new Nt.b(t.clan_steamid).GetAccountID()));
+              t.forEach((t) => e.add(new Tt.b(t.clan_steamid).GetAccountID()));
               const n = new Array();
               return (
                 e.forEach((e) => {
-                  const t = Tt.ac.GetClanInfoByClanAccountID(e);
+                  const t = Nt.ac.GetClanInfoByClanAccountID(e);
                   n.push({
                     name: t?.group_name || "" + e,
                     key: "clanid" + e,
@@ -8421,7 +8511,7 @@
                     });
                   },
                 }),
-                a.createElement(Nn, { oFeatured: l, fnSetFeatured: i }),
+                a.createElement(Tn, { oFeatured: l, fnSetFeatured: i }),
               ),
             a.createElement(fn, { oFeatured: l }),
           ),
@@ -8742,7 +8832,7 @@
       }
       function vn(e) {
         if (!e) return null;
-        const t = Tt.ac.GetClanInfoByClanAccountID(e);
+        const t = Nt.ac.GetClanInfoByClanAccountID(e);
         return {
           name: t?.group_name || `(${e})`,
           clan_account_id: e,
@@ -8753,7 +8843,7 @@
         const { rgCreatorHomes: t, oFeatured: n, fnSetFeatured: r } = e,
           o = (0, a.useMemo)(() => {
             const e = new Set();
-            t.forEach((t) => e.add(new Nt.b(t.clan_steamid).GetAccountID()));
+            t.forEach((t) => e.add(new Tt.b(t.clan_steamid).GetAccountID()));
             const n = new Array();
             return (
               n.push({
@@ -8762,7 +8852,7 @@
                 tooltip: (0, s.we)("#Create_Home_None_Selected_ttip"),
               }),
               e.forEach((e) => {
-                const t = Tt.ac.GetClanInfoByClanAccountID(e);
+                const t = Nt.ac.GetClanInfoByClanAccountID(e);
                 n.push({ label: t?.group_name || `(${e})`, data: e });
               }),
               n.length > 2 &&
@@ -8814,7 +8904,7 @@
           )
         );
       }
-      function Nn(e) {
+      function Tn(e) {
         const { oFeatured: t, fnSetFeatured: n } = e;
         return a.createElement(
           y.G5,
@@ -8860,7 +8950,7 @@
           ),
         );
       }
-      var Tn = n(69515),
+      var Nn = n(69515),
         In = n(24484);
       var Ln = n(81393);
       function Rn(e) {
@@ -8971,7 +9061,7 @@
           appid: t.dlc_appid,
           elEditor: a.createElement(
             "div",
-            { className: Tn.RelationshipType },
+            { className: Nn.RelationshipType },
             a.createElement(y.m, {
               label: (0, s.we)("#DLC_Dependency_Relationship"),
               rgOptions: On,
@@ -9028,7 +9118,7 @@
         return i && 1 != c
           ? a.createElement(
               "div",
-              { className: Tn.SelectorRow },
+              { className: Nn.SelectorRow },
               a.createElement(Dt.Ay, {
                 className: "react-select-container",
                 classNamePrefix: "react-select",
@@ -10266,8 +10356,8 @@
         va = n(8905);
       const Pa = { include_release: !0 };
       var Da = n(71298),
-        Na = n(61051);
-      function Ta(e) {
+        Ta = n(61051);
+      function Na(e) {
         const t = new Array();
         return (
           pa.forEach((n) => {
@@ -10293,7 +10383,7 @@
           ?.amount;
       }
       function La(e, t, n, a, r, o) {
-        a.price * Na.Oo < t.amount.amount
+        a.price * Ta.Oo < t.amount.amount
           ? r.push({
               strCurrency: n ? Ca(n) : da(t.amount.currency_code),
               nAmountCents: t.amount.amount,
@@ -10302,7 +10392,7 @@
               nGuidancePrice: a.price,
               nOriginalPrice: Ia(e, n, t.amount.currency_code),
             })
-          : a.price / Na.Oo > t.amount.amount &&
+          : a.price / Ta.Oo > t.amount.amount &&
             o.push({
               strCurrency: n ? Ca(n) : da(t.amount.currency_code),
               nAmountCents: t.amount.amount,
@@ -10386,7 +10476,7 @@
                 {
                   onClick: (e) => {
                     const o = new Array();
-                    Ta(t).length > 0 && o.push("currency_missing");
+                    Na(t).length > 0 && o.push("currency_missing");
                     const l = t.proposed_prices.base_amounts.find(
                         (e) => e.amount.currency_code == na.k_ECurrencyCodeUSD,
                       )?.amount.amount,
@@ -10534,7 +10624,7 @@
       }
       function qa(e) {
         const { helpReq: t } = e,
-          n = (0, $a.q)();
+          n = (0, $a.qh)();
         return n
           ? a.createElement(
               "div",
@@ -10632,7 +10722,7 @@
           [l] = (0, wa.UA)(t),
           [s] = (0, Ye.Gg)(n, Ya),
           i = (0, a.useMemo)(
-            () => Nt.b.InitFromAccountID(o).ConvertTo64BitString(),
+            () => Tt.b.InitFromAccountID(o).ConvertTo64BitString(),
             [o],
           ),
           [c, d] = (0, a.useState)(() => s?.GetAppID() || 0),
@@ -11231,7 +11321,7 @@
       }
       function Cr(e) {
         const { proposal: t } = e,
-          n = (0, a.useMemo)(() => Ta(t), [t]);
+          n = (0, a.useMemo)(() => Na(t), [t]);
         return n?.length > 0
           ? a.createElement(
               "div",
@@ -11498,7 +11588,7 @@
       }
       var Pr = n(45737),
         Dr = n.n(Pr);
-      class Nr {
+      class Tr {
         m_mapPackageToPartners = new Map();
         GetMap() {
           return this.m_mapPackageToPartners;
@@ -11506,9 +11596,9 @@
         static s_Singleton;
         static Get() {
           return (
-            Nr.s_Singleton ||
-              ((Nr.s_Singleton = new Nr()), Nr.s_Singleton.Init()),
-            Nr.s_Singleton
+            Tr.s_Singleton ||
+              ((Tr.s_Singleton = new Tr()), Tr.s_Singleton.Init()),
+            Tr.s_Singleton
           );
         }
         constructor() {}
@@ -11522,8 +11612,8 @@
           );
         }
       }
-      function Tr() {
-        const [e, t] = (0, a.useState)(() => Nr.Get().GetMap());
+      function Nr() {
+        const [e, t] = (0, a.useState)(() => Tr.Get().GetMap());
         return e;
       }
       function Ir(e) {
@@ -11542,7 +11632,7 @@
             return e;
           })(),
           o = ta(),
-          l = Tr(),
+          l = Nr(),
           [s, i] = (0, pr.QD)("tab", "delta"),
           c = (e) => i(e.key),
           d = [
@@ -12736,8 +12826,8 @@
           [k, A] = (0, a.useState)(r?.localized_title || { english: "" }),
           [w] = (0, a.useState)(r?.milestone_desc || {}),
           [v, P] = (0, a.useState)(r?.coming_soon_appid),
-          [D, N] = (0, a.useState)(Boolean(r?.backfilled_release)),
-          T = (0, a.useRef)(void 0),
+          [D, T] = (0, a.useState)(Boolean(r?.backfilled_release)),
+          N = (0, a.useRef)(void 0),
           [I, L] = (0, a.useState)(!1),
           R = (0, a.useMemo)(
             () =>
@@ -12922,12 +13012,12 @@
                       ),
                   ),
                   a.createElement(y.Yh, {
-                    ref: T,
+                    ref: N,
                     label: (0, s.we)("#SeasonPass_Backfill_check"),
                     tooltip: (0, s.we)("#SeasonPass_Backfill_check_ttip"),
                     onChange: (e) => {
                       let t = !(!e && C < g);
-                      L(!t), t ? N(e) : T.current.SetChecked(!0, !1);
+                      L(!t), t ? T(e) : N.current.SetChecked(!0, !1);
                     },
                     checked: D,
                   }),
@@ -13047,8 +13137,8 @@
           ),
         );
       }
-      const No = { include_release: !0, include_included_items: !0 };
-      function To(e) {
+      const To = { include_release: !0, include_included_items: !0 };
+      function No(e) {
         const {
             inputMilestone: t,
             setCurrentMilestone: n,
@@ -13057,7 +13147,7 @@
             index: l,
             rgShippedMilestoneIDs: i,
           } = e,
-          [c] = (0, Ye.t7)(t.completed_appid, No),
+          [c] = (0, Ye.t7)(t.completed_appid, To),
           [d, u, m] = (0, V.uD)(),
           [_, g, E] = (0, V.uD)(),
           h = Boolean(i.includes(t.milestone_id)),
@@ -13522,7 +13612,7 @@
             a.createElement(
               "div",
               { className: ho().BtnCtn },
-              a.createElement(To, {
+              a.createElement(No, {
                 inputMilestone: m,
                 setCurrentMilestone: _,
                 seasonPassID: r,
@@ -15693,8 +15783,8 @@
       var vl = n(72671),
         Pl = n(69818),
         Dl = n(44332),
-        Nl = n(51272);
-      function Tl(e) {
+        Tl = n(51272);
+      function Nl(e) {
         const [t, n] = (0, a.useState)([]),
           [r, o] = (0, a.useState)(!1),
           { itemid: l, apptype: s, altasset: i, altpostfix: c } = e;
@@ -15797,7 +15887,7 @@
             { className: vl.ConfirmationDescription },
             (0, s.oW)(
               "#StoreAdmin_GraphicalAssets_ConfirmDialog_Desc",
-              a.createElement(Nl.uU, {
+              a.createElement(Tl.uU, {
                 href: `${Pt.TS.PARTNER_BASE_URL}doc/store/assets/rules`,
               }),
             ),
@@ -15886,7 +15976,7 @@
             const a = Fl();
             return (0, Ha.n)({
               mutationFn: async () => {
-                const r = Nt.b.InitFromClanID(t),
+                const r = Tt.b.InitFromClanID(t),
                   o = {
                     appid: e,
                     remove: !0,
@@ -15973,7 +16063,7 @@
                 clanAccountID: r,
                 bReuseExistingClan: o,
               }) => {
-                const l = Nt.b.InitFromClanID(r),
+                const l = Tt.b.InitFromClanID(r),
                   s = {
                     appid: t,
                     remove: !1,
@@ -16126,7 +16216,7 @@
       }
       function jl(e) {
         const { clanAccountID: t, bExistingLink: n } = e,
-          [r, o] = (0, Tt.TB)(t),
+          [r, o] = (0, Nt.TB)(t),
           l = o ? o.group_name + `(${t})` : "" + t;
         return a.createElement(
           p.Gq,
@@ -16234,11 +16324,11 @@
       function Yl(e) {
         const { pageLink: t, strKvTargetName: n } = e,
           r = (0, a.useMemo)(
-            () => new Nt.b(t.clan_steamid).GetAccountID(),
+            () => new Tt.b(t.clan_steamid).GetAccountID(),
             [t],
           ),
           o = (0, It.FV)(r),
-          [l, i] = (0, Tt.TB)(r),
+          [l, i] = (0, Nt.TB)(r),
           c = (0, a.useMemo)(() => {
             let e = "developer";
             return (
@@ -16291,11 +16381,100 @@
           }),
         );
       }
-      const Ql = a.lazy(async () => ({
+      var Ql = n(16931),
+        Zl = n(56520);
+      function Jl(e) {
+        const [t, n, r] = (0, V.uD)(),
+          {
+            rgScreenshots: o,
+            refetch: l,
+            isFetching: i,
+          } = (function (e) {
+            const t = (0, Z.Z3)("screenshots"),
+              {
+                data: n,
+                refetch: a,
+                isFetching: r,
+              } = (0, pe.I)({
+                queryKey: ["StoreAppScreenshots", t],
+                queryFn: async () => {
+                  const e = await fetch(t);
+                  try {
+                    return await e.json();
+                  } catch (e) {
+                    return null;
+                  }
+                },
+                enabled: e,
+                refetchOnMount: "always",
+                staleTime: 0,
+              });
+            return { rgScreenshots: n, refetch: a, isFetching: r };
+          })(t),
+          { mutateAsync: c, isPending: d } = (function () {
+            const e = (0, Z.Z3)("quickupdateajax");
+            return (0, Ha.n)({
+              mutationFn: async ({ nIndex: t, mapAltText: n }) => {
+                if (null == t || !n) return !1;
+                const a = new FormData();
+                a.append("sessionid", _.TS.SESSIONID);
+                for (const [e, r] of Object.entries(n))
+                  a.append(`app[assets][screenshots][${t}][alt_text][${e}]`, r);
+                const r = await fetch(e, { method: "post", body: a }),
+                  o = await r.json();
+                if (!r.ok) throw "Error modifying screenshot";
+                return o;
+              },
+              onError: (e) => {
+                console.error(
+                  (0, s.we)(
+                    "#StoreAdmin_UploadError_Generic",
+                    "string" == typeof e ? e : e.message,
+                  ),
+                );
+              },
+            });
+          })(),
+          u = a.useMemo(
+            () => o?.map((e, t) => ({ key: t, mapAltText: e.alt_text })) ?? [],
+            [o],
+          );
+        if (!_.iA.is_support) return null;
+        const m = (e, t) => {
+          const n = (0, te.Lg)(t),
+            a = (0, te.Lg)(29 == t ? 6 : 0);
+          return n in o[e].urls
+            ? o[e].urls[n]
+            : a in o[e].urls
+              ? o[e].urls[a]
+              : null;
+        };
+        return a.createElement(
+          "div",
+          { className: Ql.ValveOnly },
+          t &&
+            a.createElement(Zl.B, {
+              entries: u,
+              isLoading: i || d,
+              hideModal: r,
+              fnRefetch: l,
+              mutateAltTextAsync: async (e, t) =>
+                !1 !== (await c({ nIndex: e, mapAltText: t })),
+              isMutatePending: d,
+              fnGetImage: (e, t) => a.createElement("img", { src: m(e, t) }),
+            }),
+          a.createElement(
+            y.$n,
+            { onClick: n },
+            (0, s.we)("#StoreAdmin_EditAltText_Button"),
+          ),
+        );
+      }
+      const es = a.lazy(async () => ({
         default: (await n.e(4684).then(n.bind(n, 64684)))
           .AccessibilityFeaturesInfo,
       }));
-      function Zl(e) {
+      function ts(e) {
         return a.createElement(
           Ke.dO,
           null,
@@ -16327,15 +16506,17 @@
                   "storeadmin-anticheat-edit": (e) =>
                     a.createElement(tl, { ...e }),
                   "storeadmin-graphicalassets-confirmdialog": (e) =>
-                    a.createElement(Tl, { ...e }),
+                    a.createElement(Nl, { ...e }),
                   "storeadmin-pinnedbundles-edit": (e) =>
                     a.createElement(Xn, { ...e }),
                   "storeadmin-purchaseoptionsorder-edit": (e) =>
                     a.createElement(Kr, { ...e }),
                   "storeadmin-accessibilityfeatures": (e) =>
-                    a.createElement(Ql, { ...e }),
+                    a.createElement(es, { ...e }),
                   "storeadmin-creator-home-edit": (e) =>
                     a.createElement(ql, { ...e }),
+                  "storeadmin-app-screenshot-alttext": (e) =>
+                    a.createElement(Jl, { ...e }),
                 },
               }),
             ),
@@ -16346,7 +16527,7 @@
             a.createElement(Ve.X, {
               config: {
                 "storeadmin-graphicalassets-confirmdialog": (e) =>
-                  a.createElement(Tl, { ...e }),
+                  a.createElement(Nl, { ...e }),
               },
             }),
           ),
@@ -16356,7 +16537,7 @@
             a.createElement(Ve.X, {
               config: {
                 "storeadmin-graphicalassets-confirmdialog": (e) =>
-                  a.createElement(Tl, { ...e }),
+                  a.createElement(Nl, { ...e }),
               },
             }),
           ),
@@ -17223,7 +17404,7 @@
             l.createElement(
               l.Fragment,
               { key: t },
-              l.createElement(D, null, l.createElement(N, { modifier: e })),
+              l.createElement(D, null, l.createElement(T, { modifier: e })),
               " + ",
             ),
           ),
@@ -17233,7 +17414,7 @@
       function D(e) {
         return l.createElement("span", { className: _.KeyCap }, e.children);
       }
-      function N(e) {
+      function T(e) {
         const { modifier: t } = e;
         switch (t) {
           case "Mod":

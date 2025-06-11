@@ -536,6 +536,10 @@ html.responsive body.movescrolltocontent {
 @media screen and (max-width: 910px)
 {
 
+	html.responsive {
+		--responsive-menu-floating-height: 62px;
+	}
+
 	html.responsive div#global_header {
 		display: none;
 	}
@@ -554,7 +558,7 @@ html.responsive body.movescrolltocontent {
 	}
 
 	html.responsive .responsive_page_frame.with_header div.responsive_page_content {
-		padding-top: 62px;	/* the header overlaps this area */
+		padding-top: var( --responsive-menu-floating-height, 0 );	/* the header overlaps this area */
 	}
 
 	/* we show a footer in the menu itself */
@@ -588,6 +592,10 @@ html.responsive body.movescrolltocontent {
 
 }
 
+	html.responsive.touch {
+		--responsive-menu-floating-height: 62px;
+	}
+
 	html.responsive.touch div#global_header {
 		display: none;
 	}
@@ -606,7 +614,7 @@ html.responsive body.movescrolltocontent {
 	}
 
 	html.responsive.touch .responsive_page_frame.with_header div.responsive_page_content {
-		padding-top: 62px;	/* the header overlaps this area */
+		padding-top: var( --responsive-menu-floating-height, 0 );	/* the header overlaps this area */
 	}
 
 	/* we show a footer in the menu itself */

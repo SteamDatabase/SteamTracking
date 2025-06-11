@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "新聞與更新",
 	"Menu_Popover_Preferences": "偏好設定",
 	"Menu_Popover_Browse": "瀏覽",
+	"Menu_Popover_Top": "熱門",
 	"Menu_Popover_Recommendations": "推薦",
 	"Menu_Popover_Categories": "類別",
 	"Menu_Popover_Hardware": "硬體",
@@ -46,6 +47,7 @@
 	"Menu_Section_Browse_ForYou": "為您推薦",
 	"Menu_Section_Browse_PopularNew": "新品與話題商品",
 	"Menu_Section_Browse_FreeToPlay": "免費遊玩",
+	"Menu_Section_Browse_TopFreeToPlay": "熱門免費遊玩遊戲",
 	"Menu_Section_Browse_Discounts": "折扣",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "於您的願望清單中",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "特殊活動",
@@ -80,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "熱門項目",
 	"Menu_SearchBar_SearchResults": "搜尋結果",
 	"Menu_SearchBar_YourTopGenres": "近期感興趣的類型",
-	"Menu_SearchBar_BrowseBy": "瀏覽依據…"
+	"Menu_SearchBar_BrowseBy": "瀏覽依據…",
+	"Menu_Search": "搜尋",
+	"Menu_Label": "商店選單"
 }`);
     },
   },

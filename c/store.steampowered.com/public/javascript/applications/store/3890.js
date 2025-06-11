@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Новини и обновления",
 	"Menu_Popover_Preferences": "Предпочитания",
 	"Menu_Popover_Browse": "Преглед",
+	"Menu_Popover_Top": "Най-популярни",
 	"Menu_Popover_Recommendations": "Препоръки",
 	"Menu_Popover_Categories": "Категории",
 	"Menu_Popover_Hardware": "Хардуер",
@@ -81,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Популярни артикули",
 	"Menu_SearchBar_SearchResults": "Резултати от търсене",
 	"Menu_SearchBar_YourTopGenres": "Върховите Ви жанрове",
-	"Menu_SearchBar_BrowseBy": "Преглед по…"
+	"Menu_SearchBar_BrowseBy": "Преглед по…",
+	"Menu_Search": "Търсачка",
+	"Menu_Label": "Меню за магазина"
 }`);
     },
   },

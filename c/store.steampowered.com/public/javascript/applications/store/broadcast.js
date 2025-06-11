@@ -12668,7 +12668,6 @@
         (0, _._)([_._], _.prototype, "MuteUserForSession", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13043,7 +13042,6 @@
             _ % 2 == 1
               ? _.push(
                   _.createElement(_._, {
-                    emoticonHoverStore: _._,
                     key: _,
                     emoticon: _[_],
                     large: !0,
@@ -13491,7 +13489,6 @@
                   OnEmoticonSelected: _,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                   emoticonStore: __webpack_require__,
-                  emoticonHoverStore: _._,
                 }),
                 _.createElement(_, {
                   ..._,
@@ -13518,7 +13515,6 @@
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
               emoticonStore: __webpack_require__,
-              emoticonHoverStore: _._,
               strFlairGroupID: _.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
               buttonIcon: _.createElement(_.P7r, null),

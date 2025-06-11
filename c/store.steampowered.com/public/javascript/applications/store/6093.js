@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Nieuws en updates",
 	"Menu_Popover_Preferences": "Voorkeuren",
 	"Menu_Popover_Browse": "Bladeren",
+	"Menu_Popover_Top": "Populair",
 	"Menu_Popover_Recommendations": "Aanbevelingen",
 	"Menu_Popover_Categories": "Categorieën",
 	"Menu_Popover_Hardware": "Hardware",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Van je verlanglijst",
 	"Menu_Section_Browse_DLCForYou": "DLC voor jou",
 	"Menu_Section_Browse_ForYou": "Voor jou",
+	"Menu_Section_Browse_PopularNew": "Nieuw en populair",
+	"Menu_Section_Browse_FreeToPlay": "Gratis spelen",
+	"Menu_Section_Browse_TopFreeToPlay": "Populairste gratis te spelen",
+	"Menu_Section_Browse_Discounts": "Kortingen",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "Op je verlanglijst",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Speciale evenementen",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Populaire titels",
 	"Menu_Section_Recommendations": "Aanbevelingen",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Wachtrij nieuwe uitgaven",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Communityaanbevelingen",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Populaire artikelen",
 	"Menu_SearchBar_SearchResults": "Zoekresultaten",
 	"Menu_SearchBar_YourTopGenres": "Je favoriete genres",
-	"Menu_SearchBar_BrowseBy": "Sorteren op ..."
+	"Menu_SearchBar_BrowseBy": "Sorteren op ...",
+	"Menu_Search": "Zoeken",
+	"Menu_Label": "Winkelmenu"
 }`);
     },
   },

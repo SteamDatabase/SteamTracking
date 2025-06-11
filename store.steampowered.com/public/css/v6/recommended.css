@@ -2779,6 +2779,38 @@ body.recommendgame #review_create h2  {
 	padding-bottom: 10px;
 }
 
+.review_language_outliers {
+	box-shadow: 0 0 5px #000;
+	position: relative;
+
+	padding: 10px 15px;
+	margin-bottom: 3px;
+	background-color: #2a475e;
+	border: 2px solid #ff6f6f;
+}
+.review_language_outliers_table {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.review_language_outlier {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.review_language_outlier:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier.header {
+	font-weight: bold;
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier .cell {
+	display: flex;
+	flex: 1;
+}
+
 /* review histogram */
 
 #review_histograms_container {
@@ -3242,7 +3274,7 @@ body.v6 h2.morelike_section_divider
 }
 
 .widestore #review_histogram_rollup_section {
-	width: 865px;
+	width: 765px;
 }
 
 .widestore .review_box a.vote_header {

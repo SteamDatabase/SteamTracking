@@ -906,6 +906,8 @@
         InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
+        BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
+        Blur: "_1rJkktMMsrzAultu2NgHkZ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -5836,7 +5838,7 @@
         );
       }
       function _(_, _, _, _, _) {
-        _.setQueryData(_(_, _), _[_]);
+        _.setQueryData(_(_, _), _[_] ?? null);
       }
       function _(_, _) {
         return ["StoreItem", _ && _(_), _];
@@ -9380,6 +9382,8 @@
               : _.createElement(
                   _._,
                   {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
                     className: _,
                     ...this.GetPanelElementProps(),
                   },
@@ -39242,7 +39246,8 @@
                     (_ = _);
                 }
                 const _ =
-                  "button" == _(_.args, "style") ? _().LinkButton : null;
+                    "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = _ && _(_.args, "buttoncolor");
                 let _ = _(_.args, "id");
                 _ &&
                   "string" == typeof _ &&
@@ -39268,6 +39273,9 @@
                     className: _,
                     href: _,
                     _: _,
+                    style: {
+                      backgroundColor: _,
+                    },
                   },
                   _.children,
                 );
@@ -39700,11 +39708,15 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args),
-                  _ = "button" == _(_.args, "style") ? _().LinkButton : null;
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = _ && _(_.args, "buttoncolor");
                 return _.createElement(
                   _,
                   {
                     className: _,
+                    style: {
+                      backgroundColor: _,
+                    },
                     href: `${_._.PARTNER_BASE_URL}doc/${_}`,
                   },
                   _.children,
@@ -39993,7 +40005,6 @@
           bLoop: _ ? _ : _,
         });
       }
-      new (class {})();
       const _ = "ː",
         _ = 604800;
       class _ {
@@ -40276,7 +40287,12 @@
         );
       }
       const _ = (_) => {
-        const { url: _, event: __webpack_require__, className: _ } = _;
+        const {
+          url: _,
+          event: __webpack_require__,
+          className: _,
+          style: _,
+        } = _;
         let _,
           _ = (0, _._)(_);
         (_ = (function (_, _) {
@@ -40305,6 +40321,7 @@
               href: _,
               rel: _,
               _: _._,
+              style: _,
             },
             _.children,
           ),
@@ -44723,6 +44740,15 @@
         }
         CountRegistered() {
           return this.m_vecCallbacks.length;
+        }
+        static PromiseFromAny(_) {
+          return new Promise((_) => {
+            let _ = [];
+            const _ = () => {
+              __webpack_require__.forEach((_) => _.Unregister()), _();
+            };
+            for (const _ of _) __webpack_require__.push(_.Register(_));
+          });
         }
       }
     },
@@ -50363,10 +50389,10 @@
                     pbr: _._.readPackedUint64String,
                     _: _._.writeRepeatedUint64String,
                   },
-                  force_rerun: {
+                  app_id: {
                     _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -67504,6 +67530,7 @@
 	"footer-help-dropdown": 23,
 	"footer-publisher-catalogs": 24,
 	"wishlist": 25,
+	"stats": 26,
 	"spotlight": 40,
 	"message": 41,
 	"marketing-message": 42,
@@ -68049,6 +68076,8 @@
 	"salesmartdecktopplayed": 7008,
 	"salesmartcategory": 7009,
 	"vrhardwarelanding": 7010,
+	"monthlytopreleases": 7011,
+	"bestofyear": 7012,
 	"apphome": 100000,
 	"images": 100001,
 	"allnews": 100003,
@@ -85125,6 +85154,7 @@
         };
         m_strInternalName;
         m_rgLinks;
+        m_userFilterFailure;
         constructor(_, _) {
           (this.m_eItemType = _.item_type()),
             (this.m_unID = _._()),
@@ -85212,7 +85242,11 @@
             _.include_links &&
               !this.m_rgLinks &&
               ((this.m_rgLinks = _.links().map((_) => _.toObject())),
-              (this.m_DataRequested.include_links = !0));
+              (this.m_DataRequested.include_links = !0)),
+            _.apply_user_filters &&
+              !this.m_userFilterFailure &&
+              ((this.m_userFilterFailure = _.user_filter_failure()?.toObject()),
+              (this.m_DataRequested.apply_user_filters = !0));
         }
         static BDataRequestContainsOtherDataRequest(_, _) {
           return Boolean(
@@ -85747,6 +85781,14 @@
               include_links: !0,
             }),
             this.m_rgLinks
+          );
+        }
+        GetUserFilterFailure() {
+          return (
+            this.BCheckDataRequestIncluded({
+              apply_user_filters: !0,
+            }),
+            this.m_userFilterFailure
           );
         }
         ReplaceBestPurchaseOption(_) {
@@ -87068,6 +87110,8 @@
             refInstance: _,
             bForceDesktopPresentation: _,
             footer: _,
+            role: _ = "menu",
+            labelId: _,
             ..._
           } = this.props;
           const _ = this.context.styles ?? _();
@@ -87115,9 +87159,22 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 navRef: this.m_navRef,
                 ref: this.m_divRef,
+                role: _,
+                "aria-labelledby": __webpack_require__ ? _ : void 0,
                 ..._,
               },
               _,
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  __webpack_require__,
+                ),
               !this.instance.BIsSubMenu() &&
                 _.createElement(
                   _.Fragment,
@@ -87142,6 +87199,13 @@
           }
         }
       };
+      function _(_) {
+        const _ = _.useId();
+        return _.createElement(_, {
+          labelId: _,
+          ..._,
+        });
+      }
       (0, _._)([_._], _.prototype, "HideIfSubmenu", null),
         (0, _._)([_._], _.prototype, "HideMenu", null),
         (_ = (0, _._)([_._], _));
@@ -87209,8 +87273,8 @@
                   onOKButton: this.OnOKButton,
                   onMoveRight: __webpack_require__,
                   unselectable: this.props.unselectable,
-                  role: _.role ?? "option",
-                  "aria-selected": this.props.selected ?? !1,
+                  role: _.role ?? "menuitem",
+                  "aria-selected": this.props.selected,
                 },
                 this.props.children,
               )
@@ -87223,7 +87287,7 @@
                   onClick: this.OnClick,
                   unselectable: this.props.unselectable,
                   className: this.props.className,
-                  role: _.role ?? "option",
+                  role: _.role ?? "menuitem",
                   "aria-selected": this.props.selected,
                 },
                 this.props.children,
@@ -87240,6 +87304,7 @@
         const _ = _.useContext(_).styles ?? _();
         return _.createElement("div", {
           className: _.ContextMenuSeparator,
+          role: "separator",
         });
       }
       class _ extends _.PureComponent {
@@ -91491,7 +91556,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 3332), _((_._ = _));
+      return (_ = 5518), _((_._ = _));
       var _;
     });
     _._();

@@ -13,7 +13,7 @@
     },
     98019: (t, e, n) => {
       "use strict";
-      n.d(e, { p: () => u, q: () => i });
+      n.d(e, { YA: () => c, p: () => u, qh: () => i });
       var a = n(20194),
         r = n(41735),
         o = n.n(r),
@@ -34,6 +34,10 @@
       function u(t) {
         const e = i();
         return e?.find((e) => e.id == t);
+      }
+      function c(t, e) {
+        const n = t.getQueryData(["useValveAccounts"]);
+        return n?.find((t) => t.id === e);
       }
     },
     32179: (t, e, n) => {

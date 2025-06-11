@@ -342,6 +342,7 @@
         GridRowEnd: "_3HjlrI3alztQQ7yy_VjZgU",
         GridArea: "uh0Q7gKQw3ZgTwvd5mQiZ",
         Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
+        Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
       };
     },
     13857: (e) => {
@@ -657,6 +658,12 @@
             className: _.Background,
             cssProperty: (e) => ["--background", `var(--color-${e})`],
           },
+          {
+            prop: "overflow",
+            responsive: !0,
+            className: _.Overflow,
+            cssProperty: "--overflow",
+          },
         ];
       var E = n(44041);
       const y = r.forwardRef(function (e, t) {
@@ -664,26 +671,26 @@
           return r.createElement("div", { ref: t, ...n });
         }),
         S = C;
-      var x = n(65274);
-      const w = r.forwardRef(function (e, t) {
+      var w = n(65274);
+      const x = r.forwardRef(function (e, t) {
           const { as: n = "span", ...a } = e,
             o = n;
           return r.createElement(o, {
             ref: t,
-            ...h({ ...a, className: x.Text }, k),
+            ...h({ ...a, className: w.Text }, k),
           });
         }),
         b = [
           {
             prop: "weight",
             responsive: !0,
-            className: x.TextWeight,
+            className: w.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: x.TextAlign,
+            className: w.TextAlign,
             cssProperty: "--text-align",
           },
           {
@@ -693,11 +700,11 @@
               ["--text-color-secondary", `var(--color-${e}-9)`],
             ],
           },
-          { prop: "truncate", className: x.Truncate },
+          { prop: "truncate", className: w.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: x.LineClamp,
+            className: w.LineClamp,
             cssProperty: "--line-clamp",
           },
         ],
@@ -707,9 +714,9 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => x[`TextSize-${e}`],
+            className: (e) => w[`TextSize-${e}`],
           },
-          { prop: "secondary", className: x.Secondary },
+          { prop: "secondary", className: w.Secondary },
         ];
       var z = n(39049);
       r.forwardRef(function (e, t) {
@@ -811,10 +818,10 @@
         return r.createElement("div", {
           role: "separator",
           "aria-orientation": t,
-          ...h({ ...a, size: n, className: H.Separator }, M),
+          ...h({ ...a, size: n, className: H.Separator }, T),
         });
       }
-      const M = [
+      const T = [
         ...v,
         { prop: "size", className: (e) => H[`Size-${e}`] },
         {
@@ -822,9 +829,9 @@
           cssProperty: (e) => ["--separator-color", `var(--color-${e})`],
         },
       ];
-      var T = n(91239);
+      var M = n(91239);
       var D = n(38878);
-      const G = (0, r.forwardRef)(function (e, t) {
+      const F = (0, r.forwardRef)(function (e, t) {
         const {
             variant: n = "default",
             size: a = "2",
@@ -863,14 +870,14 @@
           d && r.createElement(O, { paddingLeft: "2" }, d),
         );
       });
-      var F = n(88411);
+      var G = n(88411);
       function U(e) {
         const { extracted: t, remaining: n } = (function (e) {
             return g(e, C);
           })(e),
           { variant: a, size: o, beforeContent: s, afterContent: i, ...l } = n;
         return r.createElement(
-          G,
+          F,
           { ...t, variant: a, size: o },
           r.createElement(j, { ...l }),
         );
@@ -881,7 +888,7 @@
           ref: t,
           type: "text",
           ...s,
-          className: l()(T.Reset, F.TextInput),
+          className: l()(M.Reset, G.TextInput),
           value: n || "",
           onChange: (e) => {
             a(e.target.value), o && o(e);
@@ -913,7 +920,7 @@
           onValueChange: s,
         } = e;
         return r.createElement(
-          G,
+          F,
           { variant: t, radius: n, className: W.SegmentedControlBox },
           r.createElement(
             q.Provider,
@@ -1208,13 +1215,13 @@
       }
       function ve(e) {
         return r.createElement(
-          w,
+          x,
           { weight: "medium", truncate: !0 },
           e.children,
         );
       }
       function Ce(e) {
-        return r.createElement(w, { secondary: !0, truncate: !0 }, e.children);
+        return r.createElement(x, { secondary: !0, truncate: !0 }, e.children);
       }
       function Ee(e) {
         const { onSelectionChange: t, ...n } = e,
@@ -1244,7 +1251,7 @@
               },
             };
           return r.createElement(
-            we.Provider,
+            xe.Provider,
             { value: l },
             r.createElement(
               ie.Root,
@@ -1300,7 +1307,7 @@
             ie.Anchor,
             null,
             r.createElement(
-              G,
+              F,
               {
                 clickable: !0,
                 focusable: !0,
@@ -1361,7 +1368,7 @@
                 "")
           : "";
       }
-      const xe = Object.assign(function (e) {
+      const we = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
@@ -1378,16 +1385,16 @@
             }),
             c = null != t;
           return r.createElement(
-            xe.Root,
+            we.Root,
             { state: l, ...i },
             r.createElement(
-              xe.Trigger,
+              we.Trigger,
               null,
               c && r.createElement(ve, null, s(t)),
               !c && r.createElement(Ce, null, o),
             ),
             r.createElement(
-              xe.Options,
+              we.Options,
               null,
               l.rgOptions.map((e) =>
                 r.createElement(_e, { value: e, key: s(e) }, s(e)),
@@ -1395,9 +1402,9 @@
             ),
           );
         }, ye),
-        we = (0, r.createContext)(null);
+        xe = (0, r.createContext)(null);
       function be(e) {
-        const t = (0, r.useContext)(we);
+        const t = (0, r.useContext)(xe);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
       var ke = n(21895);
@@ -1522,7 +1529,7 @@
             onFocusChange: o,
             selectedValue: s,
             onSelectionChange: i,
-          } = Ge("<ComboboxTrigger>"),
+          } = Fe("<ComboboxTrigger>"),
           l = t === s,
           c = t === a;
         return r.createElement(
@@ -1612,7 +1619,7 @@
         },
         Option: Ae,
         Options: function (e) {
-          const { refPopover: t } = Ge("<Combobox.Options>");
+          const { refPopover: t } = Fe("<Combobox.Options>");
           return r.createElement(
             he,
             { ref: t },
@@ -1637,7 +1644,7 @@
               onSelectionChange: h,
               refPopover: _,
               clearable: v,
-            } = Ge("<ComboboxTrigger>"),
+            } = Fe("<ComboboxTrigger>"),
             C = (0, r.useRef)(null);
           (0, r.useEffect)(() => {
             C.current && (a ? C.current.focus() : C.current.blur());
@@ -1665,7 +1672,7 @@
             ie.Anchor,
             null,
             r.createElement(
-              G,
+              F,
               {
                 clickable: !0,
                 focusable: !0,
@@ -1730,7 +1737,7 @@
                   r.createElement(
                     O,
                     { position: "absolute", inset: "0", align: "center" },
-                    r.createElement(w, { weight: "medium" }, t),
+                    r.createElement(x, { weight: "medium" }, t),
                   ),
               ),
             ),
@@ -1738,7 +1745,7 @@
         },
         DefaultOptionFilter: Re,
       };
-      function Me(e) {
+      function Te(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -1751,14 +1758,14 @@
                 "")
           : "";
       }
-      const Te = Object.assign(function (e) {
+      const Me = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: a,
               filter: o,
               placeholder: s,
-              getOptionLabel: i = Me,
+              getOptionLabel: i = Te,
               ...l
             } = e,
             c = He({
@@ -1769,11 +1776,11 @@
               filter: o,
             });
           return r.createElement(
-            Te.Root,
+            Me.Root,
             { state: c, ...l },
-            r.createElement(Te.Trigger, null, null === t ? null : i(t)),
+            r.createElement(Me.Trigger, null, null === t ? null : i(t)),
             r.createElement(
-              Te.Options,
+              Me.Options,
               null,
               c.rgFilteredOptions.map((e) =>
                 r.createElement(Ae, { value: e, key: i(e) }, i(e)),
@@ -1782,11 +1789,11 @@
           );
         }, Ve),
         De = (0, r.createContext)(null);
-      function Ge(e) {
+      function Fe(e) {
         const t = (0, r.useContext)(De);
         return t || console.error(`${e} must be used within a <Combobox>!`), t;
       }
-      var Fe = n(73406);
+      var Ge = n(73406);
       function Ue(e) {
         const { size: t = "3", loading: n = !0, children: a, ...o } = e;
         return a || !n
@@ -1795,7 +1802,7 @@
               { position: "relative", ...o, width: "fit-content" },
               r.createElement(
                 "div",
-                { "data-visibility": !n, className: Fe.ChildContainer },
+                { "data-visibility": !n, className: Ge.ChildContainer },
                 a,
               ),
               n &&
@@ -1814,11 +1821,11 @@
       }
       function je(e) {
         const { className: t, ...n } = h(e, Ze);
-        return r.createElement("div", { className: l()(t, Fe.Spinner), ...n });
+        return r.createElement("div", { className: l()(t, Ge.Spinner), ...n });
       }
       const Ze = [
           ...v,
-          { prop: "size", responsive: !0, className: (e) => Fe[`Size-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => Ge[`Size-${e}`] },
         ],
         Be = new Set([
           "sc_schinese",
@@ -2192,7 +2199,7 @@
           i = (0, s.I)({
             queryKey: ["marketfilters", tt],
             queryFn: async () => {
-              const e = await wt(tt),
+              const e = await xt(tt),
                 t = e[nt];
               if ((delete e[nt], !t.tags))
                 return { rgApps: [], facets: {}, mapAppIDs: {} };
@@ -2362,7 +2369,7 @@
         return r.createElement(
           y,
           { marginTop: ot },
-          r.createElement(w, { weight: "medium" }, t),
+          r.createElement(x, { weight: "medium" }, t),
           r.createElement(
             X,
             { columns: "repeat( auto-fit, minmax( 230px, 1fr ) )", gap: "2" },
@@ -2412,7 +2419,7 @@
             ...s,
           },
           n && r.createElement(n, { className: $e.Icon }),
-          r.createElement(w, { weight: "medium" }, t),
+          r.createElement(x, { weight: "medium" }, t),
         );
       }
       function dt(e) {
@@ -2589,7 +2596,7 @@
                 facets: { ...n.facets, [e]: { ...n.facets[e], [t]: r } },
               });
             };
-            return r.createElement(xt, {
+            return r.createElement(wt, {
               ...t,
               value: n.facets[t.id],
               onChange: e,
@@ -2612,7 +2619,7 @@
       }
       function Et(e) {
         return r.createElement(
-          w,
+          x,
           {
             align: "center",
             secondary: !0,
@@ -2628,7 +2635,7 @@
           o = (function (e) {
             return (0, s.I)({
               queryKey: ["marketfilters", e],
-              queryFn: () => wt(e),
+              queryFn: () => xt(e),
               enabled: !!e,
             });
           })(t),
@@ -2659,31 +2666,31 @@
             onSelectionChange: (e) => s(t, null == e ? void 0 : e.id),
           });
         return r.createElement(
-          xe.Root,
+          we.Root,
           { state: c, variant: "highlight", radius: "sm" },
           r.createElement(
-            xe.Trigger,
+            we.Trigger,
             null,
-            !l && r.createElement(xe.Value, null, a),
+            !l && r.createElement(we.Value, null, a),
             !!l &&
               r.createElement(
-                xe.Value,
+                we.Value,
                 null,
                 a,
                 ": ",
                 r.createElement(
-                  w,
+                  x,
                   { color: "accent", secondary: !0 },
                   l.strLabel,
                 ),
               ),
           ),
           r.createElement(
-            xe.Options,
+            we.Options,
             null,
             !!l &&
               r.createElement(
-                xe.Option,
+                we.Option,
                 { value: null },
                 r.createElement(
                   O,
@@ -2694,7 +2701,7 @@
               ),
             n.map((e) =>
               r.createElement(
-                xe.Option,
+                we.Option,
                 { value: e, key: e.strLabel },
                 e.strLabel,
               ),
@@ -2702,13 +2709,13 @@
           ),
         );
       }
-      function xt(e) {
+      function wt(e) {
         const { id: t, rgTags: n, strLabel: a, value: o = {}, onChange: s } = e,
           i = n.map(({ id: e }) => e).filter((e) => o[e]);
         return r.createElement(
           y,
           { paddingLeft: "2", marginBottom: ot },
-          r.createElement(w, { weight: "medium" }, a),
+          r.createElement(x, { weight: "medium" }, a),
           r.createElement(
             Oe,
             {
@@ -2722,7 +2729,7 @@
                 Oe.Item,
                 { key: e.id, value: e.id },
                 r.createElement(
-                  w,
+                  x,
                   { secondary: !0, color: o[e.id] ? "accent" : void 0 },
                   e.strLabel,
                 ),
@@ -2731,7 +2738,7 @@
           ),
         );
       }
-      async function wt(e) {
+      async function xt(e) {
         const t = await fetch(
           `${o.TS.COMMUNITY_BASE_URL}market/appfilters/${e}`,
         );
@@ -2854,25 +2861,25 @@
           }),
           s = t && 0 == o.inputValue.trim().length;
         return r.createElement(
-          Te.Root,
+          Me.Root,
           { state: o, size: "3", radius: "sm" },
           r.createElement(
-            Te.Trigger,
+            Me.Trigger,
             null,
             t && r.createElement(Ot, { app: t }),
           ),
           r.createElement(
-            Te.Options,
+            Me.Options,
             null,
             s &&
               r.createElement(
-                Te.Option,
+                Me.Option,
                 { value: null },
                 Xe.Localize("#AdvancedSearch_AppSelect_Clear"),
               ),
             o.rgFilteredOptions.map((e) =>
               r.createElement(
-                Te.Option,
+                Me.Option,
                 { value: e, key: e.appid },
                 r.createElement(Ot, { app: e }),
               ),
@@ -2893,7 +2900,7 @@
               style: { width: "var(--spacing-6)", height: "var(--spacing-6)" },
               alt: "",
             }),
-          r.createElement(w, null, n),
+          r.createElement(x, null, n),
         );
       }
       function At() {
@@ -2936,12 +2943,12 @@
         );
       });
       var Vt = n(738),
-        Mt = n(69818),
-        Tt = n(78327);
+        Tt = n(69818),
+        Mt = n(78327);
       function Dt(e) {
-        return r.createElement(Gt, { ...e });
+        return r.createElement(Ft, { ...e });
       }
-      function Gt(e) {
+      function Ft(e) {
         const [t, n] = (0, r.useState)(!1);
         return (
           (0, r.useEffect)(
@@ -2955,10 +2962,10 @@
             ),
             [],
           ),
-          r.createElement(Ft, { active: t, onRequestClose: () => n(!1), ...e })
+          r.createElement(Gt, { active: t, onRequestClose: () => n(!1), ...e })
         );
       }
-      function Ft(e) {
+      function Gt(e) {
         const { active: t, onRequestClose: n, ...o } = e,
           [s, i] = (0, r.useState)(() => ht(e));
         return r.createElement(
@@ -2977,12 +2984,12 @@
       }
       function Ut(e) {
         const { onRequestClose: t, children: n } = e,
-          a = (0, Tt.Qn)();
+          a = (0, Mt.Qn)();
         return r.createElement(
           Vt.x_,
           { onEscKeypress: t },
           r.createElement(
-            Mt.UC,
+            Tt.UC,
             {
               bCenterVertically: !a,
               className: "DialogContentFullSize noOpinionatedGlobalStyles",

@@ -5841,7 +5841,12 @@
         );
       }
       const _ = (_) => {
-        const { url: _, event: __webpack_require__, className: _ } = _;
+        const {
+          url: _,
+          event: __webpack_require__,
+          className: _,
+          style: _,
+        } = _;
         let _,
           _ = (0, _._)(_);
         (_ = _(_, __webpack_require__)),
@@ -5866,6 +5871,7 @@
               href: _,
               rel: _,
               _: _._,
+              style: _,
             },
             _.children,
           ),
@@ -9125,12 +9131,14 @@
           );
         },
         _ = (_) => {
-          const _ = _(_.category);
+          const { category: _, elControllerSupport: __webpack_require__ } = _,
+            _ = _(_);
           return _.createElement(
             "div",
             {
               className: (0, _._)(_.SteamDeckCompatInfo, _.className),
             },
+            __webpack_require__,
             _.createElement(_, {
               className: _.SteamDeckCompatIcon,
             }),
@@ -11176,10 +11184,7 @@
         StartBroadcast(_) {
           this.InitPlayer(),
             _.m_data.url
-              ? ((this.m_player = new _._(
-                  this.m_elVideo,
-                  !(0, _._)() && (0, _._)(),
-                )),
+              ? ((this.m_player = new _._(this.m_elVideo)),
                 this.m_player.PlayMPD(
                   _.m_data.url,
                   _.m_strCDNAuthUrlParameters,
@@ -11221,7 +11226,7 @@
         }
         StartVOD(_) {
           this.InitPlayer();
-          let _ = new _._(this.m_elVideo, !(0, _._)() && (0, _._)());
+          let _ = new _._(this.m_elVideo);
           (this.m_player = _),
             _._.logged_in &&
               _.m_nAppIDVOD &&
@@ -12911,7 +12916,7 @@
         return null == _.get() && _({}), _.get(_.get());
       }
       function _() {
-        return null !== _;
+        return null !== _.get();
       }
       window.g_EventCalendarMap = _;
     },

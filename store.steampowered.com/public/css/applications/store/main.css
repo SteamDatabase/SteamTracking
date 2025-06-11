@@ -332,6 +332,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
+  align-items: center;
 }
 ._1dzQL1mVR8GTmmSi_kpDgr {
   width: 20px;
@@ -911,7 +912,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 .Ke5f13IVZVzYSmQVJgVyd {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  column-gap: 8px;
 }
 .Ke5f13IVZVzYSmQVJgVyd.qy-9mgJyhfEb8Wt0gqzaF {
   justify-content: center;
@@ -919,9 +920,6 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._3nPGWNNLFjqXgZ6hjwUnkf {
   justify-content: space-between;
   position: absolute;
-}
-.Ke5f13IVZVzYSmQVJgVyd > div:not(:first-child) {
-  margin-left: 8px;
 }
 ._19CjIj6mAtlIoY_7_iyOlz {
   display: flex;
@@ -1488,7 +1486,29 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+._2wlqOo3XXW1wCAxwfudaL8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+._2wlqOo3XXW1wCAxwfudaL8._1rJkktMMsrzAultu2NgHkZ {
+  opacity: 0.7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+._2wlqOo3XXW1wCAxwfudaL8._1rJkktMMsrzAultu2NgHkZ::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(30px);
+}
 ._2WMiQ5MbP_ReyaX5DOpoUD {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

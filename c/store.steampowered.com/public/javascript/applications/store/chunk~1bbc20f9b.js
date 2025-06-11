@@ -390,13 +390,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      const _ = new (class {})();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),

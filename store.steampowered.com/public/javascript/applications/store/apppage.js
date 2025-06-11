@@ -989,7 +989,7 @@
         p = n(35685),
         h = n(12155),
         E = n(61859),
-        _ = n(73745),
+        _ = n(84933),
         g = n(78327),
         C = n(8107),
         f = n(75113),
@@ -4633,8 +4633,8 @@
             "div",
             { className: Un().AppDetails },
             a.createElement(
-              "div",
-              { className: (0, U.A)(Un().GameName) },
+              "a",
+              { className: (0, U.A)(Un().GameName), href: l },
               n.GetName(),
             ),
             a.createElement(
@@ -4961,7 +4961,10 @@
             n.e(8396),
           ]).then(n.bind(n, 70834)),
         ),
-        ia = () => null;
+        ia = a.lazy(async () => ({
+          default: (await n.e(445).then(n.bind(n, 13229)))
+            .AccessibilityFeatureDisplay,
+        }));
       function sa(e) {
         const { appid: t } = e;
         return a.createElement(

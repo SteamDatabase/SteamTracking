@@ -5639,9 +5639,10 @@
               className: _().AppDetails,
             },
             _.createElement(
-              "div",
+              "a",
               {
                 className: (0, _._)(_().GameName),
+                href: _,
               },
               __webpack_require__.GetName(),
             ),
@@ -6036,7 +6037,13 @@
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
-        _ = () => null;
+        _ = _.lazy(async () => ({
+          default: (
+            await __webpack_require__
+              ._("chunkid")
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).AccessibilityFeatureDisplay,
+        }));
       function _(_) {
         const { appid: _ } = _;
         return _.createElement(

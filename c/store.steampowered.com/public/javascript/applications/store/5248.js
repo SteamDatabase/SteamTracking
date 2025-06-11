@@ -31,6 +31,7 @@
 	"Menu_Popover_NewsAndUpdates": "Nyheder og opdateringer",
 	"Menu_Popover_Preferences": "Præferencer",
 	"Menu_Popover_Browse": "Gennemse",
+	"Menu_Popover_Top": "Populært",
 	"Menu_Popover_Recommendations": "Anbefalinger",
 	"Menu_Popover_Categories": "Kategorier",
 	"Menu_Popover_Hardware": "Hardware",
@@ -44,6 +45,13 @@
 	"Menu_Section_Browse_FromYourWishlist": "Fra din ønskeliste",
 	"Menu_Section_Browse_DLCForYou": "DLC til dig",
 	"Menu_Section_Browse_ForYou": "Til dig",
+	"Menu_Section_Browse_PopularNew": "Nyt og populært",
+	"Menu_Section_Browse_FreeToPlay": "Gratis at spille",
+	"Menu_Section_Browse_TopFreeToPlay": "Populære gratisspil",
+	"Menu_Section_Browse_Discounts": "Rabatter",
+	"Menu_Section_Browse_Discounts_OnYourWishlist": "På din ønskeliste",
+	"Menu_Section_Browse_Discounts_SpecialEvents": "Særlige begivenheder",
+	"Menu_Section_Browse_Discounts_PopularTitles": "Populære titler",
 	"Menu_Section_Recommendations": "Anbefalinger",
 	"Menu_Section_Recommendations_NewReleasesQueue": "Kø for nye udgivelser",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Fællesskabsanbefalinger",
@@ -74,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Populære emner",
 	"Menu_SearchBar_SearchResults": "Søgeresultater",
 	"Menu_SearchBar_YourTopGenres": "Dine topgenrer",
-	"Menu_SearchBar_BrowseBy": "Søg efter..."
+	"Menu_SearchBar_BrowseBy": "Søg efter...",
+	"Menu_Search": "Søg",
+	"Menu_Label": "Butiksmenu"
 }`);
     },
   },

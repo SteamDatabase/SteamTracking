@@ -51,6 +51,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
         DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
         ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
@@ -1727,10 +1733,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
-          color: this.props.color || "rgba(1.0,1.0,1.0,1.0)",
+          color: this.props.color || "rgba(255, 255, 255, 1)",
         };
         static GetColorString(_) {
           return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
@@ -1742,14 +1754,58 @@
           }),
             this.props.onChange(_);
         }
+        async OnEyedropperClick() {
+          if ("EyeDropper" in window)
+            try {
+              const _ = new window.EyeDropper(),
+                _ = (await _.open()).sRGBHex,
+                _ = this.hexToRgba(_);
+              this.setState({
+                color: _,
+              }),
+                this.props.onChange(_);
+            } catch (_) {
+              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+            }
+          else alert((0, _._)("#Sale_EyeDropperError"));
+        }
+        hexToRgba(_) {
+          const _ = parseInt(_.slice(1), 16);
+          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+        }
         render() {
-          return _.createElement(_._, {
-            onChange: this.OnColorChange,
-            color: this.state.color,
-          });
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              onChange: this.OnColorChange,
+              color: this.state.color,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EyeDropperCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _().EyeDropperBtn,
+                    onClick: this.OnEyedropperClick,
+                  },
+                  _.createElement(_.O7b, null),
+                ),
+              ),
+            ),
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "OnColorChange", null);
+      (0, _._)([_._], _.prototype, "OnColorChange", null),
+        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

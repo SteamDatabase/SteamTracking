@@ -4832,26 +4832,27 @@
                   (r.startsWith("http://") || r.startsWith("https://")) &&
                   (t = r);
               }
-              const r = "button" == I(e.args, "style") ? a().LinkButton : null;
-              let i = I(e.args, "id");
-              i &&
-                "string" == typeof i &&
-                i.length > 0 &&
-                "#" === i[0] &&
-                (i = i.substring(1));
-              if (void 0 === t && !i) return e.children || "";
+              const r = "button" == I(e.args, "style") ? a().LinkButton : null,
+                i = r && I(e.args, "buttoncolor");
+              let n = I(e.args, "id");
+              n &&
+                "string" == typeof n &&
+                n.length > 0 &&
+                "#" === n[0] &&
+                (n = n.substring(1));
+              if (void 0 === t && !n) return e.children || "";
               if (
                 void 0 === t ||
                 ("string" == typeof t && t.length > 0 && "#" == t[0])
               )
                 return c.createElement(
                   "a",
-                  { href: t ?? null, id: i },
+                  { href: t ?? null, id: n },
                   e.children,
                 );
               return c.createElement(
                 k,
-                { className: r, href: t, id: i },
+                { className: r, href: t, id: n, style: { backgroundColor: i } },
                 e.children,
               );
             },
@@ -5177,10 +5178,15 @@
           {
             Constructor: function (e) {
               const t = I(e.args),
-                r = "button" == I(e.args, "style") ? a().LinkButton : null;
+                r = "button" == I(e.args, "style") ? a().LinkButton : null,
+                i = r && I(e.args, "buttoncolor");
               return c.createElement(
                 k,
-                { className: r, href: `${v.TS.PARTNER_BASE_URL}doc/${t}` },
+                {
+                  className: r,
+                  style: { backgroundColor: i },
+                  href: `${v.TS.PARTNER_BASE_URL}doc/${t}`,
+                },
                 e.children,
               );
             },
@@ -5478,11 +5484,11 @@
         );
       }
       const u = (e) => {
-        const { url: t, event: r, className: l } = e;
-        let c,
-          d = (0, n.OZ)(t);
-        (d = m(d, r)), (0, a.p)(d) && (c = "noopener nofollow");
-        const u =
+        const { url: t, event: r, className: l, style: c } = e;
+        let d,
+          u = (0, n.OZ)(t);
+        (u = m(u, r)), (0, a.p)(u) && (d = "noopener nofollow");
+        const p =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
@@ -5491,10 +5497,10 @@
             : void 0;
         return i.createElement(
           s.Gq,
-          { toolTipContent: u, direction: "top" },
+          { toolTipContent: p, direction: "top" },
           i.createElement(
             "a",
-            { className: l, href: d, rel: c, id: e.id },
+            { className: l, href: u, rel: d, id: e.id, style: c },
             e.children,
           ),
         );
@@ -14296,7 +14302,7 @@
         _ = r(44332),
         h = r(68797),
         g = r(6144),
-        f = r(73745),
+        f = r(84933),
         y = r(14771),
         S = r(78327),
         b = r(27666);
@@ -18052,7 +18058,7 @@
         h = r(6144),
         g = r(41338),
         f = r(78327),
-        y = (r(90626), r(73745)),
+        y = (r(90626), r(84933)),
         S = r(38390);
       function b(e) {
         return (
@@ -20146,7 +20152,7 @@
         a = r(34629),
         n = r(88006),
         s = r(60778),
-        o = r(73745);
+        o = r(84933);
       function l(e) {
         switch (e) {
           case n.pR.OK:
@@ -20528,7 +20534,7 @@
         d = r.n(m),
         u = r(68797),
         p = r(6144),
-        _ = r(73745),
+        _ = r(84933),
         h = r(78327);
       class g {
         m_mapAppResults = new Map();
@@ -24806,7 +24812,7 @@
         D = r(68797),
         R = r(52038),
         A = r(61859),
-        k = r(73745),
+        k = r(84933),
         G = r(14771),
         L = r(61336),
         F = r(6878),
@@ -25550,7 +25556,7 @@
         D = r(6144),
         R = r(52038),
         A = r(61859),
-        k = r(73745),
+        k = r(84933),
         G = r(78327),
         L = r(30786),
         F = r(83284),
@@ -28249,7 +28255,7 @@
         o = r(61859),
         l = r(61336),
         c = r(78327),
-        m = r(73745);
+        m = r(84933);
       class d {
         m_bUserHasVolumePreference = !1;
         m_flVolumePreference = 0;
@@ -29873,7 +29879,7 @@
       var i,
         a = r(34629),
         n = r(90626),
-        s = r(73745),
+        s = r(84933),
         o = r(75844),
         l = r(6144),
         c = r(61859),
@@ -30843,7 +30849,7 @@
         n = r(90626),
         s = r(62490),
         o = r(94607),
-        l = r(73745),
+        l = r(84933),
         c = r(52038),
         m = r(22797);
       !(function (e) {
@@ -31061,7 +31067,7 @@
         l = r(51706),
         c = r(52038),
         m = r(61859),
-        d = r(73745),
+        d = r(84933),
         u = r(50666),
         p = r(56011);
       class _ extends a.Component {

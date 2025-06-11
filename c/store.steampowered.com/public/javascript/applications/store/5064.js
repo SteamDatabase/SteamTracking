@@ -46,6 +46,8 @@
 	"Menu_Section_Browse_DLCForYou": "DLC que te recomendamos",
 	"Menu_Section_Browse_ForYou": "Para ti",
 	"Menu_Section_Browse_PopularNew": "Novedades destacadas",
+	"Menu_Section_Browse_FreeToPlay": "Free to Play",
+	"Menu_Section_Browse_TopFreeToPlay": "Juegos Free to Play más populares",
 	"Menu_Section_Browse_Discounts": "Descuentos",
 	"Menu_Section_Browse_Discounts_OnYourWishlist": "En tu lista de deseados",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Eventos especiales",
@@ -80,7 +82,9 @@
 	"Menu_SearchBar_PopularItems": "Artículos populares",
 	"Menu_SearchBar_SearchResults": "Resultados de búsqueda",
 	"Menu_SearchBar_YourTopGenres": "Tus géneros favoritos",
-	"Menu_SearchBar_BrowseBy": "Explorar según..."
+	"Menu_SearchBar_BrowseBy": "Explorar según...",
+	"Menu_Search": "Búsqueda",
+	"Menu_Label": "Menú de la tienda"
 }`);
     },
   },

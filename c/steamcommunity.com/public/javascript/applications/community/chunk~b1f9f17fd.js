@@ -147,6 +147,7 @@
       module.exports = {
         RadioButtons: "_3gOI2Om8NIab7UNJ7F2E7t",
         RadioButtonCtn: "_2AokjG6N1tt-HGd0mhBgrN",
+        ImageFit: "_9zCKtf5oUzA2xMaX1jCeD",
       };
     },
     chunkid: (module) => {
@@ -178,11 +179,17 @@
         Expanded: "_1nReDgRjI0XUSMzT635iGm",
         TabSummaryItem: "_2wI0jrWTXmdWAEiz7y1yTH",
         Checked: "_17x-C-paezhBHOimg-XpU5",
+        Hide: "_3CFHNxlYvvFQa74bL_-8xT",
       };
     },
     chunkid: (module) => {
       module.exports = {
         InputCtn: "_32aXgVSaIKM-RWmcUWAb_w",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        IntroVideoAppMismatchWarning: "fIoWQoqtjnmiQlz0-u8jG",
       };
     },
     chunkid: (module) => {
@@ -295,6 +302,7 @@
         TitleSelectionContainer: "wXKYm7JBK1IIedZJCyuUE",
         SaleSectionTitleHeader: "_1PZp0p1oli0RoT2U7FYJfM",
         TabsSelectorEntry: "rTO_V4bWjmL5KPs9ie2N1",
+        Hide: "_3EV1PHdAKLmwc4snnQ1DUX",
         TabsSelectorEntrySelected: "_1ryeeV7EHMEPGeLMgRv2QA",
         TabsMultipleError: "_2-JUWQrk4T6sm_K6uHtAke",
         TabsSelectToEdit: "_2HsE1f2CYnrmyGIAtZQFjy",
@@ -686,6 +694,12 @@
       module.exports = {
         "duration-app-launch": "800ms",
         TrailerCarouselApp: "_3olpRSXr66ohyQFxmzqokI",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
       };
     },
     chunkid: (module) => {
@@ -1363,6 +1377,7 @@
         ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
         SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
+        DisplayBorder: "_1LEcwJMAoZCV3ULGhU85sq",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
       };
@@ -5332,10 +5347,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5939,6 +5956,81 @@
             _ = JSON.parse(_);
           } catch {}
         return _;
+      }
+      async function _(_, _, _) {
+        try {
+          await _.LoadHiddenPartnerEventByAnnouncementGID(_, _, _);
+        } catch (_) {
+          console.warn(
+            "Fail to load event, if it was hidden, it's possible it was only partially constructed: " +
+              _,
+            (0, _._)(_).strErrorMsg,
+          );
+        }
+      }
+      function _(_) {
+        const {
+          data: _,
+          isFetching: __webpack_require__,
+          refetch: _,
+        } = (0, _._)({
+          queryKey: ["DraftAndHiddenPartnerEvents", _],
+          queryFn: async () => {
+            var _, _, _;
+            const _ = await (async function (_, _) {
+              var _;
+              const _ =
+                  _._.COMMUNITY_BASE_URL +
+                  "/gid/" +
+                  _.ConvertTo64BitString() +
+                  "/ajaxlisteventsfordashboard/",
+                _ = {
+                  start: 0,
+                  count: 20,
+                  _: _._.LANGUAGE,
+                },
+                _ = await _().get(_, {
+                  params: _,
+                  cancelToken: _ ? _.token : void 0,
+                });
+              return 1 ==
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success)
+                ? _.data
+                : void 0;
+            })(_);
+            if (1 == (null == _ ? void 0 : _.success)) {
+              const _ = new Array();
+              return (
+                null === (_ = _.announcement_gids) ||
+                  void 0 === _ ||
+                  _.forEach((_) => _.push(_(_, _, !0))),
+                null === (_ = _.hidden_announcement_gids) ||
+                  void 0 === _ ||
+                  __webpack_require__.forEach((_) => _.push(_(_, _, !0))),
+                await Promise.all(_),
+                {
+                  rgEventModels: _.GetAllClanEvents(_),
+                  nHiddenEventCount:
+                    null === (_ = _.hidden_announcement_gids) || void 0 === _
+                      ? void 0
+                      : _.length,
+                }
+              );
+            }
+            return {
+              rgEventModels: [],
+              nHiddenEventCount: 0,
+            };
+          },
+        });
+        return {
+          bIsFetching: __webpack_require__,
+          nHiddenEventCount: null == _ ? void 0 : _.nHiddenEventCount,
+          rgEventModels: null == _ ? void 0 : _.rgEventModels,
+          fnRefetch: _,
+        };
       }
       (0, _._)([_._], _.prototype, "m_curHoverCategoryType", void 0),
         (0, _._)([_._], _.prototype, "m_curHoverCategoryTags", void 0),
@@ -7037,15 +7129,24 @@
               style: {
                 default: null,
               },
+              buttoncolor: {
+                default: null,
+              },
             },
             toDOM(_) {
-              const { href: _, title: __webpack_require__, style: _ } = _.attrs;
+              const {
+                href: _,
+                title: __webpack_require__,
+                style: _,
+                buttoncolor: _,
+              } = _.attrs;
               return [
                 "a",
                 {
                   href: _,
                   title: __webpack_require__,
                   class: (0, _._)(_),
+                  style: (0, _._)(_, _),
                 },
                 0,
               ];
@@ -7055,6 +7156,7 @@
               BBArgsToAttrs: (_) => ({
                 href: _[""],
                 style: _.style,
+                buttoncolor: _.buttoncolor,
               }),
               AttrsToBBArgs: (_) => {
                 let _ = {
@@ -7062,6 +7164,7 @@
                 };
                 return (
                   _.style && (_.style = _.style),
+                  _.buttoncolor && (_.buttoncolor = _.buttoncolor),
                   {
                     args: _,
                   }
@@ -7994,7 +8097,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10794,12 +10896,13 @@
       }
       const _ = (0, _._)((_) => {
         var _;
-        const { tab: __webpack_require__, language: _ } = _,
+        const { tab: __webpack_require__ } = _,
           _ = _(_.tab, _.language),
           _ =
             _.tab.capsules.length > 0
               ? (0, _._)("#Sale_Tabs_TitleItemCount", _, _.tab.capsules.length)
-              : (0, _._)("#Sale_Tabs_TitleShowAllItems", _);
+              : (0, _._)("#Sale_Tabs_TitleShowAllItems", _),
+          _ = (0, _._)(() => __webpack_require__.hide);
         let _ = null;
         if (
           (null === (_ = __webpack_require__.tab_bar_bg_image) || void 0 === _
@@ -10817,6 +10920,7 @@
           {
             className: (0, _._)(
               _.TabsSelectorEntry,
+              _ && _.Hide,
               _.selected && _.TabsSelectorEntrySelected,
             ),
             onClick: () => _.onSelected(_.tab),
@@ -11096,7 +11200,8 @@
               : null;
       }
       function _(_) {
-        const { tab: _, editModel: __webpack_require__ } = _;
+        const { tab: _, editModel: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [_.hide]);
         return _.createElement(
           _.Fragment,
           null,
@@ -11110,6 +11215,15 @@
               tooltip: (0, _._)("#Sale_Tabs_Visibility_ttip"),
             }),
           ),
+          _.createElement(_._, {
+            checked: _,
+            label: (0, _._)("#Sale_Tabs_HideTab"),
+            onChange: (_) => {
+              _.hide != _ &&
+                ((_.hide = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+          }),
           _.createElement(_._, {
             key: _.unique_id,
             fnMarkDirty: () => __webpack_require__.SetDirty(_._.jsondata_sales),
@@ -11271,22 +11385,30 @@
       function _(_) {
         const { section: _, editModel: __webpack_require__, expanded: _ } = _,
           _ = __webpack_require__.GetCurEditLanguage(),
-          _ = (0, _._)(() => (0, _._)());
+          _ = (0, _._)(() => (0, _._)()),
+          _ = (0, _._)(() =>
+            _.tabs.map((_) => ({
+              tab: _,
+              unique_id: _.unique_id,
+              bHide: _.hide,
+            })),
+          );
         return _.tabs && 0 != _.tabs.length
           ? _.createElement(
               "div",
               {
                 className: (0, _._)(_.TabSummaryCtn, _ && _.Expanded),
               },
-              _.tabs.map((_) =>
+              _.map((_) =>
                 _.createElement(
                   "button",
                   {
                     key: _.unique_id,
-                    "data-label": _(_, _),
+                    "data-label": _(_.tab, _),
                     className: (0, _._)(
                       _.TabSummaryItem,
                       _.unique_id == _ && _.Checked,
+                      _.bHide && _.Hide,
                     ),
                     onClick: () => {
                       return (
@@ -11295,7 +11417,7 @@
                       var _;
                     },
                   },
-                  _(_, _),
+                  _(_.tab, _),
                 ),
               ),
             )
@@ -12169,6 +12291,9 @@
                               Number(_.target.value)),
                               _();
                           },
+                          placeholder: (0, _._)(
+                            "#FacetedBrowseEditor_MinMatchesText_Placeholder",
+                          ),
                         }),
                       ),
                     ),
@@ -12201,6 +12326,9 @@
                               Number(_.target.value)),
                               _();
                           },
+                          placeholder: (0, _._)(
+                            "#FacetedBrowseEditor_MaxFacetValuesText_Placeholder",
+                          ),
                         }),
                       ),
                     ),
@@ -14312,8 +14440,8 @@
                       (_.sale_background_video_mp4 =
                         _.sale_background_video_mp4),
                       (_.sale_header_offset = _.sale_header_offset),
-                      (_.sale_header_show_top_margin =
-                        _.sale_header_show_top_margin),
+                      (_.sale_header_disable_top_margin =
+                        _.sale_header_disable_top_margin),
                       (_.sale_section_disable_capitalize =
                         _.sale_section_disable_capitalize),
                       (_.sale_section_font_size = _.sale_section_font_size),
@@ -15412,6 +15540,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15434,7 +15565,7 @@
       function _(_) {
         const {
             editModel: _,
-            index: __webpack_require__,
+            saleSection: __webpack_require__,
             SetIsExiting: _,
             bMinimized: _,
             fnToggleMinimized: _,
@@ -15464,9 +15595,8 @@
                     {
                       className: _().CopyPasteButton,
                       onClick: () =>
-                        (async function (_, _, _) {
-                          const _ = _.GetEventModel().jsondata.sale_sections[_],
-                            _ = JSON.stringify({
+                        (async function (_, _) {
+                          const _ = JSON.stringify({
                               type: "sale_section",
                               version: 1,
                               contents: _,
@@ -15480,10 +15610,10 @@
                               _,
                             );
                           }
-                          __webpack_require__("copied"),
+                          _("copied"),
                             await new Promise((_) => setTimeout(_, 1e3)),
-                            __webpack_require__(void 0);
-                        })(_, __webpack_require__, (_) => _(_)),
+                            _(void 0);
+                        })(__webpack_require__, (_) => _(_)),
                     },
                     _.createElement(_.cKB, null),
                     "copied" == _ &&
@@ -15522,7 +15652,11 @@
                             );
                           }
                           if ("sale_section" == (null == _ ? void 0 : _.type)) {
-                            const _ = _.contents;
+                            const _ =
+                                _.GetEventModel().jsondata.sale_sections.findIndex(
+                                  (_) => _ == _,
+                                ),
+                              _ = _.contents;
                             let _ = _ + 1;
                             for (; _.GetSaleSectionByID(_); ) _++;
                             (_.unique_id = _),
@@ -15557,9 +15691,13 @@
                       className: _().CloseButton,
                       onClick: () =>
                         (function (_, _, _) {
-                          const _ = (_, _) => {
+                          const _ = () => {
                             __webpack_require__(),
                               window.setTimeout(() => {
+                                const _ =
+                                  _.GetEventModel().jsondata.sale_sections.findIndex(
+                                    (_) => _ == _,
+                                  );
                                 _.GetEventModel().jsondata.sale_sections.splice(
                                   _,
                                   1,
@@ -15573,7 +15711,7 @@
                               strDescription: (0, _._)(
                                 "#Sale_RemoveSectionConfirmation",
                               ),
-                              onOK: () => _(_, _),
+                              onOK: () => _(),
                             }),
                             window,
                           );
@@ -15791,7 +15929,6 @@
           );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17245,8 +17382,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24504,6 +24639,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
@@ -24656,10 +24792,74 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!0);
+        return _
+          ? _.createElement(_, {
+              ..._,
+              fnShowRichTextEditor: __webpack_require__,
+            })
+          : _.createElement(_, {
+              ..._,
+              fnShowRichTextEditor: __webpack_require__,
+            });
+      }
+      function _(_) {
+        const {
+            fnShowRichTextEditor: _,
+            strPlaceholder: __webpack_require__,
+            content: _,
+            fnUpdateContent: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _.useMemo(() => {
+            const _ = _._.is_support;
+            return (0, _._)({
+              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
+              bIncludeValveOnly: _,
+            });
+          }, []);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: !1,
+              onChange: (_) => _(!0),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
+          _.createElement(_._, {
+            fnGetCurText: () => _,
+            fnOnTextChange: (_) => {
+              var _;
+              return _(
+                (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                void 0 === _
+                  ? void 0
+                  : _.value) || "",
+              );
+            },
+            fnSetText: (_) => _(_),
+            strPlaceholder: __webpack_require__,
+            emoticonStore: _._,
+            bSupportHTMLImport: !0,
+            showFormatHelp: "PartnerEvents",
+            limitBBCode: _,
+            classNameForTextArea: _().EventEditorDescription,
+            clanSteamID: _.GetClanSteamID(),
+          }),
+        );
+      }
       function _(_) {
         const {
             content: _,
@@ -24674,6 +24874,7 @@
             rctToolbarControls: _,
             eTitleDisplaySize: _,
             eTextAlignment: _,
+            fnShowRichTextEditor: _,
           } = _,
           [_, _] = _.useState(),
           [_, _] = _.useState(),
@@ -24753,6 +24954,7 @@
                 bSingleLineEditor: Boolean(_),
                 rctToolbarControls: _,
                 schema: _.pm_schema,
+                fnShowRichTextEditor: _,
               }),
             ),
             _.createElement(
@@ -24832,6 +25034,7 @@
             schema: _,
             sticky: _,
             bSingleLineEditor: _,
+            fnShowRichTextEditor: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -24848,8 +25051,16 @@
                 [_().Sticky]: _,
               }),
             },
-            _.createElement(_._, null),
-            _.createElement(_._, null),
+            _._.is_support &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(!1),
+                  toggled: !1,
+                  tooltip: "Toggle off the rich text editor",
+                },
+                "VO",
+              ),
             _.createElement(_._, {
               schema: _,
             }),
@@ -25034,7 +25245,6 @@
         return null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25318,13 +25528,10 @@
             [_, __webpack_require__],
           ),
           _ = `${_._.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${_.GetClanSteamID().ConvertTo64BitString()}`,
+          _ = (0, _._)(() => __webpack_require__.localized_media),
           [_] = (0, _.useMemo)(
-            () => [
-              Array.from(__webpack_require__.localized_media.keys()).filter(
-                (_) => Boolean(__webpack_require__.localized_media[_]),
-              ),
-            ],
-            [__webpack_require__.localized_media],
+            () => [Array.from(_.keys()).filter((_) => Boolean(_[_]))],
+            [_],
           );
         return _.createElement(
           "div",
@@ -25343,8 +25550,10 @@
           _.createElement(_, {
             rgAssetLangs: _,
             fnDeletAssetLang: (_) => {
-              __webpack_require__.localized_media &&
-                ((__webpack_require__.localized_media[_] = null), _());
+              if (__webpack_require__.localized_media) {
+                const _ = [...__webpack_require__.localized_media];
+                (_[_] = null), (__webpack_require__.localized_media = _), _();
+              }
             },
             fnDeleteAllAssets: () => {
               (__webpack_require__.localized_media = (0, _._)([], 31, null)),
@@ -25655,7 +25864,7 @@
             () => __webpack_require__.SetDirty(_._.jsondata_sales),
             [__webpack_require__],
           ),
-          [_, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _] = (0, _._)(() => {
             var _, _, _, _, _;
             return [
               null !==
@@ -25674,8 +25883,11 @@
                   : _.display_border,
               ),
               null === (_ = _.quiz) || void 0 === _ ? void 0 : _.border_color,
+              _.background_gradient_bottom,
+              _.background_gradient_top,
             ];
-          });
+          }),
+          _ = (0, _._)(_, _);
         (0, _.useEffect)(() => {
           _.quiz ||
             (_.quiz = {
@@ -25763,6 +25975,7 @@
                 position: null,
                 totalColumns: null,
                 titleSubDesc: _.quiz.titleSubDesc,
+                strOverrideBackgroundColor: _,
               }),
               _.createElement(
                 "h2",
@@ -26488,7 +26701,7 @@
             _.createElement(
               _._,
               {
-                className: _().Icon,
+                className: (0, _._)(_().Icon, _().RemoveButton),
                 onClick: (_) => {
                   var _, _;
                   _.preventDefault(),
@@ -26508,7 +26721,7 @@
                       : _();
                 },
               },
-              _.createElement(_.lMJ, null),
+              _.createElement(_._, null),
             ),
           ),
           _.createElement(
@@ -26680,13 +26893,45 @@
       function _(_) {
         switch (_.displayOrder) {
           case _._.k_HorizontalTextFirst:
-            return _.createElement(_.znK, null);
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_HorizontalTextFirst_ttip",
+                ),
+              },
+              _.createElement(_.znK, null),
+            );
           case _._.k_MediaTitleDesc:
-            return _.createElement(_._bA, null);
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_VerticalMediaFirst_ttip",
+                ),
+              },
+              _.createElement(_._bA, null),
+            );
           case _._.k_TitleDescMedia:
-            return _.createElement(_.Ehx, null);
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_VerticalTextFirst_ttip",
+                ),
+              },
+              _.createElement(_.Ehx, null),
+            );
         }
-        return _.createElement(_.LHj, null);
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: (0, _._)(
+              "#Template_Section_MediaContent_HorizontalMediaFirst_ttip",
+            ),
+          },
+          _.createElement(_.LHj, null),
+        );
       }
       function _(_) {
         const {
@@ -28124,6 +28369,7 @@
                 _
                   ? _.createElement("img", {
                       src: _,
+                      className: _.ImageFit,
                     })
                   : _.createElement(
                       "div",
@@ -28139,8 +28385,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -28962,6 +29206,8 @@
             }),
         );
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           [_, _, _, _] = (0, _._)(() => [
@@ -29028,6 +29274,37 @@
               capsuleContainer: _,
               editModel: __webpack_require__,
             }),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = __webpack_require__
+            .GetSaleSections()
+            .filter((_) => "trailercarousel" == _.section_type),
+          _ = _[0].unique_id == _.unique_id,
+          _ = (0, _._)(
+            () =>
+              _ &&
+              _.length > 1 &&
+              _.some(
+                (_) =>
+                  _.trailer_carousel_intro_video_appid !=
+                  _.trailer_carousel_intro_video_appid,
+              ),
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().IntroVideoAppMismatchWarning,
+              },
+              (0, _._)(
+                "#Sale_TrailerCarouselType_IntroVideoAppMismatchWarning",
+              ),
+            ),
         );
       }
       const _ = (0, _._)((_) => {
@@ -30158,13 +30435,21 @@
                   [_.JumpedTo]: _,
                   [_.Expanded]: !_,
                 }),
+                onAnimationEnd: () => _(!1),
+              },
+              _.createElement("div", {
+                className: (0, _._)(
+                  _.BackgroundImage,
+                  "coverBlur" == __webpack_require__.background_repeat
+                    ? _.Blur
+                    : "",
+                ),
                 style: {
                   ..._(__webpack_require__, _.GetEventModel(), !1),
                   opacity: _ ? 0 : 1,
                   transition: "opacity 500ms",
                 },
-                onAnimationEnd: () => _(!1),
-              },
+              }),
               _.createElement(
                 "div",
                 {
@@ -30221,7 +30506,7 @@
                 ),
                 _.createElement(_, {
                   editModel: _,
-                  index: _,
+                  saleSection: __webpack_require__,
                   bMinimized: _,
                   SetIsExiting: _,
                   fnToggleMinimized: _,
@@ -30260,73 +30545,68 @@
                     expanded: !_,
                   }),
                 ),
-              _
-                ? _.createElement(
-                    "div",
+              _.createElement(_, {
+                editModel: _,
+                section: __webpack_require__,
+                tabSection: _,
+                minimized: _,
+              }),
+              !_ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    _._,
                     {
-                      className: _.SectionSummaryCtn,
+                      placeholderHeight: "300px",
+                      rootMargin: "0px 0px 100% 0px",
+                      className: _.SectionTypePicker,
                     },
-                    _.createElement(_, {
-                      editModel: _,
-                      section: __webpack_require__,
-                      tabSection: _,
-                    }),
-                  )
-                : _.createElement(
-                    _.Fragment,
-                    null,
                     _.createElement(
-                      _._,
+                      "div",
                       {
-                        placeholderHeight: "300px",
-                        rootMargin: "0px 0px 100% 0px",
-                        className: _.SectionTypePicker,
+                        className: _.SectionTypePrompt,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.SectionTypePrompt,
-                        },
-                        " ",
-                        (0, _._)("#Sale_SectionContents"),
-                        " ",
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.SectionTypeSelector,
-                        },
-                        _.createElement(_._, {
-                          rgOptions: _,
-                          strDropDownClassName: _.DropDownScroll,
-                          strDropDownMenuCtnClass: _.DropDownScroll,
-                          strDropDownItemClassName: _.DropDownScrollItem,
-                          selectedOption: _,
-                          onChange: (_) => {
-                            _._.SetSaleSectionType(__webpack_require__, _.data),
-                              _.SetDirty(_._.jsondata_sales);
-                          },
-                          contextMenuPositionOptions: {
-                            bDisablePopTop: !0,
-                          },
-                        }),
-                      ),
+                      " ",
+                      (0, _._)("#Sale_SectionContents"),
+                      " ",
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.SectionTypeSelector,
+                      },
                       _.createElement(_._, {
-                        tooltip: (0, _._)("#Sale_SectionTypeTTip_" + _),
+                        rgOptions: _,
+                        strDropDownClassName: _.DropDownScroll,
+                        strDropDownMenuCtnClass: _.DropDownScroll,
+                        strDropDownItemClassName: _.DropDownScrollItem,
+                        selectedOption: _,
+                        onChange: (_) => {
+                          _._.SetSaleSectionType(__webpack_require__, _.data),
+                            _.SetDirty(_._.jsondata_sales);
+                        },
+                        contextMenuPositionOptions: {
+                          bDisablePopTop: !0,
+                        },
                       }),
                     ),
-                    Boolean("unselected_empty" !== _) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.TabContents,
-                        },
-                        _.createElement(_._, {
-                          tabs: _,
-                          bDisableRouting: !0,
-                        }),
-                      ),
+                    _.createElement(_._, {
+                      tooltip: (0, _._)("#Sale_SectionTypeTTip_" + _),
+                    }),
                   ),
+                  Boolean("unselected_empty" !== _) &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.TabContents,
+                      },
+                      _.createElement(_._, {
+                        tabs: _,
+                        bDisableRouting: !0,
+                      }),
+                    ),
+                ),
             );
       });
       const _ = (_) => {
@@ -30334,6 +30614,7 @@
               editModel: _,
               section: __webpack_require__,
               tabSection: _,
+              minimized: _,
             } = _,
             _ = _
               ? _.createElement(
@@ -30362,44 +30643,73 @@
                   ),
                 )
               : null;
-          return ((0, _._)(__webpack_require__.section_type) &&
-            !__webpack_require__.smart_section_type) ||
-            "events" === __webpack_require__.section_type
-            ? _.createElement(
-                _.Fragment,
-                null,
-                (0, _._)(__webpack_require__.section_type)
-                  ? (0, _._)(
-                      "#Sale_SectionDesc_Items",
-                      __webpack_require__.capsules
-                        ? __webpack_require__.capsules.length
-                        : 0,
+          let _;
+          return (
+            (_ =
+              ((0, _._)(__webpack_require__.section_type) &&
+                !__webpack_require__.smart_section_type) ||
+              "events" === __webpack_require__.section_type
+                ? _.createElement(
+                    _.Fragment,
+                    null,
+                    (0, _._)(__webpack_require__.section_type)
+                      ? (0, _._)(
+                          "#Sale_SectionDesc_Items",
+                          __webpack_require__.capsules
+                            ? __webpack_require__.capsules.length
+                            : 0,
+                        )
+                      : (0, _._)(
+                          "#Sale_SectionDesc_Events",
+                          __webpack_require__.events
+                            ? __webpack_require__.events.length
+                            : 0,
+                        ),
+                    Boolean(__webpack_require__.show_as_carousel) &&
+                      (0, _._)("#Sale_SectionDesc_Carousel"),
+                    _ && " - ",
+                    _,
+                  )
+                : "event_schedule" === __webpack_require__.section_type
+                  ? _.createElement(
+                      _.Fragment,
+                      null,
+                      (0, _._)(
+                        "#EventEditor_SaleEventSchedule_MinView",
+                        __webpack_require__.event_schedule_categories
+                          ? __webpack_require__.event_schedule_categories.length
+                          : (0, _._)("#Dialog_Off"),
+                      ),
+                      _ && " - ",
+                      _,
                     )
-                  : (0, _._)(
-                      "#Sale_SectionDesc_Events",
-                      __webpack_require__.events
-                        ? __webpack_require__.events.length
-                        : 0,
-                    ),
-                Boolean(__webpack_require__.show_as_carousel) &&
-                  (0, _._)("#Sale_SectionDesc_Carousel"),
-                _ && " - ",
+                  : "trailercarousel" === __webpack_require__.section_type
+                    ? _.createElement(
+                        _.Fragment,
+                        null,
+                        _ &&
+                          _.createElement(
+                            _.Fragment,
+                            null,
+                            _,
+                            _.createElement("br", null),
+                            _.createElement("br", null),
+                          ),
+                        _.createElement(_, {
+                          editModel: _,
+                          saleSection: __webpack_require__,
+                        }),
+                      )
+                    : _),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.SectionSummaryCtn,
+                },
                 _,
               )
-            : "event_schedule" === __webpack_require__.section_type
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  (0, _._)(
-                    "#EventEditor_SaleEventSchedule_MinView",
-                    __webpack_require__.event_schedule_categories
-                      ? __webpack_require__.event_schedule_categories.length
-                      : (0, _._)("#Dialog_Off"),
-                  ),
-                  _ && " - ",
-                  _,
-                )
-              : _;
+          );
         },
         _ = (0, _._)((_) => {
           var _, _;
@@ -41131,12 +41441,18 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
           super(...arguments),
             (this.state = {
-              color: this.props.color || "rgba(1.0,1.0,1.0,1.0)",
+              color: this.props.color || "rgba(255, 255, 255, 1)",
             });
         }
         static GetColorString(_) {
@@ -41149,14 +41465,58 @@
           }),
             this.props.onChange(_);
         }
+        async OnEyedropperClick() {
+          if ("EyeDropper" in window)
+            try {
+              const _ = new window.EyeDropper(),
+                _ = (await _.open()).sRGBHex,
+                _ = this.hexToRgba(_);
+              this.setState({
+                color: _,
+              }),
+                this.props.onChange(_);
+            } catch (_) {
+              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+            }
+          else alert((0, _._)("#Sale_EyeDropperError"));
+        }
+        hexToRgba(_) {
+          const _ = parseInt(_.slice(1), 16);
+          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+        }
         render() {
-          return _.createElement(_._, {
-            onChange: this.OnColorChange,
-            color: this.state.color,
-          });
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              onChange: this.OnColorChange,
+              color: this.state.color,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EyeDropperCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _().EyeDropperBtn,
+                    onClick: this.OnEyedropperClick,
+                  },
+                  _.createElement(_.O7b, null),
+                ),
+              ),
+            ),
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "OnColorChange", null);
+      (0, _._)([_._], _.prototype, "OnColorChange", null),
+        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -48549,6 +48909,10 @@
                 label: (0, _._)("#EventEditor_Tile_Repeat"),
                 data: "repeat",
               }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_NoRepeatAndBlur"),
+                data: "coverBlur",
+              }),
               _
             );
           }, []);
@@ -49132,6 +49496,7 @@
                         _.createElement(_._, {
                           _: _.jsondata.associated_appid,
                           inputType: "game",
+                          bApplyUserContentPref: !1,
                         }),
                     ),
                   ),
@@ -51314,7 +51679,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -52291,23 +52655,23 @@
           ),
           [_],
         );
-        const _ = (0, _._)(() => _.jsondata.sale_header_show_top_margin),
+        const _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
           _ = (function (_, _) {
             const [__webpack_require__] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
               var _;
-              const _ = _.GetSaleSectionFirstMatchByType("tabs");
-              if (
-                (null === (_ = null == _ ? void 0 : _.tabs) || void 0 === _
-                  ? void 0
-                  : _.length) > 0
-              ) {
+              const _ = _.GetSaleSectionFirstMatchByType("tabs"),
+                _ =
+                  null === (_ = null == _ ? void 0 : _.tabs) || void 0 === _
+                    ? void 0
+                    : _.filter((_) => !_.hide);
+              if ((null == _ ? void 0 : _.length) > 0) {
                 let _ =
                   __webpack_require__ > 0
-                    ? _.tabs.find((_) => _.unique_id == __webpack_require__)
+                    ? _.find((_) => _.unique_id == __webpack_require__)
                     : void 0;
-                _ || (_ = _.tabs[0]);
-                const _ = _ === _.tabs[0];
+                _ || (_ = _[0]);
+                const _ = _ === _[0];
                 return new _._(_, _, _);
               }
             }, [_, _, __webpack_require__]);
@@ -52401,77 +52765,73 @@
               },
               _.createElement(
                 _._,
-                null,
+                {
+                  location: _ ? 2 : 0,
+                },
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    location: _ ? 2 : 0,
+                    event: _,
+                    language: _,
+                    bIsPreview: _,
                   },
+                  _ && _.createElement(_._, null),
+                  _.createElement(_, {
+                    eventModel: _,
+                  }),
+                  Boolean(_) &&
+                    _.createElement(_, {
+                      backgroundImageEditModel: _,
+                      bBackgroundImgGroupEditMode: _,
+                      fnSetBackgroundImgGroupEditMode: _,
+                    }),
                   _.createElement(
-                    _,
+                    "div",
                     {
-                      event: _,
-                      language: _,
-                      bIsPreview: _,
+                      className: (0, _._)({
+                        [_().SaleOuterContainer]: !0,
+                        [_().SaleOuterTopMargin]: _,
+                        [_().SaleNewSizing]: _,
+                        [_()[`CustomStyle_${_.jsondata.sale_vanity_id}`]]: !0,
+                        SaleOuterContainer: !0,
+                        [_().SalePageLogoSet]: _,
+                        [_().ContentHub]: _,
+                      }),
+                      style: _
+                        ? null
+                        : {
+                            marginTop: `${_ || 0}px`,
+                          },
                     },
-                    _ && _.createElement(_._, null),
                     _.createElement(_, {
                       eventModel: _,
+                      language: _,
                     }),
-                    Boolean(_) &&
-                      _.createElement(_, {
-                        backgroundImageEditModel: _,
-                        bBackgroundImgGroupEditMode: _,
-                        fnSetBackgroundImgGroupEditMode: _,
-                      }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)({
-                          [_().SaleOuterContainer]: !0,
-                          [_().SaleOuterTopMargin]: _,
-                          [_().SaleNewSizing]: _,
-                          [_()[`CustomStyle_${_.jsondata.sale_vanity_id}`]]: !0,
-                          SaleOuterContainer: !0,
-                          [_().SalePageLogoSet]: _,
-                          [_().ContentHub]: _,
-                        }),
-                        style: _
-                          ? null
-                          : {
-                              marginTop: `${_ || 0}px`,
-                            },
-                      },
-                      _.createElement(_, {
-                        eventModel: _,
-                        language: _,
-                      }),
-                      _.createElement(_._, {
-                        rgPresenters: _.jsondata.sale_presenters,
-                      }),
+                    _.createElement(_._, {
+                      rgPresenters: _.jsondata.sale_presenters,
+                    }),
+                    _.createElement(_, {
+                      event: _,
+                      broadcastEmbedContext: _,
+                    }),
+                    _.createElement(_, {
+                      ePreviewMode: _,
+                      event: _,
+                      backgroundImageEditModel: _,
+                      language: _,
+                      promotionName: __webpack_require__,
+                      nSaleDayIndex: _,
+                      broadcastEmbedContext: _,
+                      selectedTab: _,
+                    }),
+                    !_ &&
                       _.createElement(_, {
                         event: _,
-                        broadcastEmbedContext: _,
+                        addtionalAdminButtons: _,
+                        fnOnChangeDayIndex: (_) => {
+                          _ != _ && ((_.m_overrideCurrentDay = _), _(_));
+                        },
                       }),
-                      _.createElement(_, {
-                        ePreviewMode: _,
-                        event: _,
-                        backgroundImageEditModel: _,
-                        language: _,
-                        promotionName: __webpack_require__,
-                        nSaleDayIndex: _,
-                        broadcastEmbedContext: _,
-                        selectedTab: _,
-                      }),
-                      !_ &&
-                        _.createElement(_, {
-                          event: _,
-                          addtionalAdminButtons: _,
-                          fnOnChangeDayIndex: (_) => {
-                            _ != _ && ((_.m_overrideCurrentDay = _), _(_));
-                          },
-                        }),
-                    ),
                   ),
                 ),
               ),
@@ -52992,7 +53352,10 @@
         }
         HandleMessage(_) {
           if (_.origin != this.m_sParentOrigin) return;
-          const _ = _.data && "message" in _.data ? _.data : null;
+          const _ =
+            _.data && "object" == typeof _.data && "message" in _.data
+              ? _.data
+              : null;
           if (_)
             switch (_.message) {
               case "PartnerEventEditor_Update":
@@ -53201,7 +53564,9 @@
           this.PostMessage(_);
         }
         static GetPayload(_) {
-          return _.data && "message" in _.data ? _.data : null;
+          return _.data && "object" == typeof _.data && "message" in _.data
+            ? _.data
+            : null;
         }
         HandleMessage(_) {
           const _ = _.GetPayload(_);
@@ -54568,6 +54933,7 @@
                       trailer: _,
                       bPlayVideo: _,
                       fnTogglePlayTrailer: _,
+                      bControls: !0,
                     }),
               )
             : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
@@ -54598,6 +54964,8 @@
           [_, _] = _.useState(void 0),
           [_, _] = (0, _._)(),
           _ = (0, _._)(),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0),
           _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
@@ -54615,15 +54983,22 @@
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               }),
             ),
             _.push(
               _.createElement(_, {
                 key: "trail_inline",
+                ref: _,
                 name: __webpack_require__.GetName(),
                 trailer: _,
                 bUseMicroTrailer: !0,
+                bControls: !1,
                 bPlayVideo: !0,
+                startTime: _,
                 fnTogglePlayTrailer: () => {},
               }),
             ));
@@ -54697,65 +55072,85 @@
           )
         );
       }
-      function _(_) {
-        const {
+      const _ = (0, _.forwardRef)(
+        (
+          {
             name: _,
-            trailer: __webpack_require__,
+            trailer: _,
+            bControls: __webpack_require__,
             bPlayVideo: _,
             fnTogglePlayTrailer: _,
             bUseMicroTrailer: _,
-          } = _,
-          _ = (0, _._)();
-        let _ = __webpack_require__.GetTrailerMax();
-        return (
-          _
-            ? (_ = __webpack_require__.GetMicroTrailer())
-            : _ && (_ = __webpack_require__.GetTrailer480p()),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().VideoLargeContainer]: !0,
-                [_().videoPlaying]: _,
-              }),
-              onClick: _,
-            },
-            _.createElement(_._, {
-              name: _,
-              trailerCategory: __webpack_require__.GetTrailerCategory(),
-              trailerDisplay: 1,
-              mouseOver: !1,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "video",
-                {
-                  className: _().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  loop: !0,
-                  poster: __webpack_require__.GetScreenshot(),
-                },
-                _.createElement("source", {
-                  src: _.strWebMURL,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: _.strMP4URL,
-                    type: "video/mp4",
-                  }),
-              ),
+            startTime: _,
+          },
+          _,
+        ) => {
+          const _ = (0, _._)();
+          let _ = _.GetTrailerMax();
+          return (
+            _ ? (_ = _.GetMicroTrailer()) : _ && (_ = _.GetTrailer480p()),
+            (0, _.useEffect)(() => {
+              const _ = null == _ ? void 0 : _.current;
+              if (_ > 0 && _) {
+                const _ = () => {
+                  _.currentTime = _;
+                };
+                return (
+                  _.addEventListener("loadedmetadata", _),
+                  () => {
+                    _.removeEventListener("loadedmetadata", _);
+                  }
+                );
+              }
+            }, [_, _]),
             _.createElement(
               "div",
               {
+                className: (0, _._)({
+                  [_().VideoLargeContainer]: !0,
+                  [_().videoPlaying]: _,
+                }),
                 onClick: _,
               },
-              _.createElement(_.sED, null),
-            ),
-          )
-        );
-      }
+              _.createElement(_._, {
+                name: _,
+                trailerCategory: _.GetTrailerCategory(),
+                trailerDisplay: 1,
+                mouseOver: !1,
+              }),
+              Boolean(_) &&
+                _.createElement(
+                  "video",
+                  {
+                    className: _().VideoLarge,
+                    ref: _,
+                    controls: __webpack_require__,
+                    autoPlay: !0,
+                    loop: !0,
+                    poster: _ > 0 ? void 0 : _.GetScreenshot(),
+                  },
+                  _.createElement("source", {
+                    src: _.strWebMURL,
+                    type: "video/webm",
+                  }),
+                  Boolean(!_._.IN_CLIENT) &&
+                    _.createElement("source", {
+                      src: _.strMP4URL,
+                      type: "video/mp4",
+                    }),
+                ),
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                  },
+                  _.createElement(_.sED, null),
+                ),
+            )
+          );
+        },
+      );
       function _(_, _) {
         const _ = _.replace(/\.[^\.]+$/g, "");
         return _ + _ + _.slice(_.length);
@@ -54827,6 +55222,7 @@
           fnTogglePlayTrailer: __webpack_require__,
           bPlayVideo: _,
           onMouseEnter: _,
+          onMouseLeave: _,
         } = _;
         return _.createElement(
           "div",
@@ -54838,6 +55234,7 @@
             }),
             onClick: __webpack_require__,
             onMouseEnter: _,
+            onMouseLeave: _,
           },
           _.createElement("img", {
             src: _.GetScreenshot(),
@@ -54851,6 +55248,7 @@
           ),
         );
       }
+      _.displayName = "InlineTrailer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -57564,13 +57962,15 @@
           }, [_]),
           _ = _.useCallback((_) => {
             _(!1), null == _ || _.stopPropagation();
-          }, []);
+          }, []),
+          _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             _,
             {
+              "aria-labelledby": _,
               onClick: _,
               arrDiscoveryApps: _,
               bDisableAnimation: _,
@@ -57579,6 +57979,7 @@
             _.createElement(_, null),
             !_ &&
               _.createElement(_, {
+                _: _,
                 strQueueDescriptionOverride: _,
               }),
           ),
@@ -57595,11 +57996,12 @@
         );
       }
       function _(_) {
-        const { strQueueDescriptionOverride: _ } = _,
+        const { strQueueDescriptionOverride: _, _: __webpack_require__ } = _,
           _ = null != _ ? _ : (0, _._)("#DiscoveryQueue_WidgetHeader");
         return _.createElement(
           "div",
           {
+            _: __webpack_require__,
             className: (0, _._)(_().WidgetHeaderCtn, "WidgetHeaderCtn"),
           },
           _.createElement(
@@ -70404,11 +70806,18 @@
                 [_().CarouselDisplay]: _.show_as_carousel,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_().Blur]: "coverBlur" == _.background_repeat,
               }),
               rootMargin: _._,
-              style: (0, _._)(_, _, _),
               onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
             },
+            _.createElement("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
             _.createElement(
               "div",
               {
@@ -71863,38 +72272,44 @@
           )
         );
       }
-      function _(_, _, _) {
-        var _;
-        if (
-          (_.country_allow_list &&
-            _.country_allow_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) < 0) ||
-          (_.country_deny_list &&
-            _.country_deny_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) >= 0)
-        )
-          return !1;
-        if (
-          (null === (_ = _.package_allow_list) || void 0 === _
+      function _(_, _, _, _) {
+        const _ = (0, _._)(() =>
+          null == _
             ? void 0
-            : _.length) > 0
-        ) {
-          if (
-            !_.package_allow_list.some((_) =>
-              __webpack_require__.BOwnsPackage(_),
-            )
-          )
-            return !1;
-        }
-        return !(
-          _._.BFilterRequiresFeatureAdultOnly(_) &&
-          (!_._.logged_in ||
-            (0, _._)() ||
-            _ ||
-            __webpack_require__.BExcludesContentDescriptor([3]))
+            : _.filter((_) =>
+                (function (_, _, _, _) {
+                  var _;
+                  if (_.hide) return !1;
+                  if (_) return !0;
+                  if (
+                    (_.country_allow_list &&
+                      _.country_allow_list
+                        .toLowerCase()
+                        .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                    (_.country_deny_list &&
+                      _.country_deny_list
+                        .toLowerCase()
+                        .indexOf(_._.country_code.toLowerCase()) >= 0)
+                  )
+                    return !1;
+                  if (
+                    (null === (_ = _.package_allow_list) || void 0 === _
+                      ? void 0
+                      : _.length) > 0 &&
+                    !_.package_allow_list.some((_) => _.BOwnsPackage(_))
+                  )
+                    return !1;
+                  return !(
+                    _._.BFilterRequiresFeatureAdultOnly(_) &&
+                    (!_._.logged_in ||
+                      (0, _._)() ||
+                      _ ||
+                      _.BExcludesContentDescriptor([3]))
+                  );
+                })(_, _, _, _),
+              ),
         );
+        return _;
       }
       function _(_) {
         var _;
@@ -71907,11 +72322,7 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _._)(),
-          _ = (0, _._)(() => __webpack_require__.tabs),
-          _ = _.useMemo(
-            () => (_ ? _ : null == _ ? void 0 : _.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          ),
+          _ = _(__webpack_require__.tabs, _, _, _),
           _ = (0, _._)(),
           _ = _.useRef();
         _.useEffect(() => {
@@ -72021,18 +72432,9 @@
             bIsPreview: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)();
-        let _ = (function (_) {
-          for (const _ of _.GetSaleSections())
-            if ("tabs" === _.section_type) return _;
-          return null;
-        })(_);
-        const _ = (0, _._)(() => (null == _ ? void 0 : _.tabs)),
-          _ = _.useMemo(
-            () => (_ ? _ : null == _ ? void 0 : _.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          );
-        if (!_ || !_.tabs || 0 === _.tabs.length) return null;
+          [_, _] = (0, _._)(),
+          _ = _(null == _ ? void 0 : _.tabs, _, _, _);
+        if (!_ || 0 === _.length) return null;
         const _ = _.map((_) => {
           const _ =
             (null == __webpack_require__
@@ -77999,15 +78401,9 @@
         const { event: __webpack_require__, section: _, language: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          [_, _, _] = (0, _._)(() => {
-            var _, _, _;
+          [_, _] = (0, _._)(() => {
+            var _, _;
             return [
-              (null === (_ = _.localized_description) || void 0 === _
-                ? void 0
-                : _.length) > 0
-                ? _.localized_description[_] || _.localized_description[_] || ""
-                : void 0,
               Boolean(
                 null === (_ = _.quiz) || void 0 === _
                   ? void 0
@@ -78016,7 +78412,7 @@
               null === (_ = _.quiz) || void 0 === _ ? void 0 : _.border_color,
             ];
           }),
-          _ = (0, _._)(() => _.quiz.questions),
+          _ = (0, _._)(() => _.quiz.questions || []),
           [_] = (0, _._)(() => {
             var _;
             return [
@@ -79001,6 +79397,7 @@
               background:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
+              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
               outlineWidth: _.border_width ? `${_.border_width}px` : void 0,

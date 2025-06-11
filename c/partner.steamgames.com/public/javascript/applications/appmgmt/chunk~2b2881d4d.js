@@ -86,6 +86,7 @@
         };
         m_strInternalName;
         m_rgLinks;
+        m_userFilterFailure;
         constructor(_, _) {
           (this.m_eItemType = _.item_type()),
             (this.m_unID = _._()),
@@ -173,7 +174,11 @@
             _.include_links &&
               !this.m_rgLinks &&
               ((this.m_rgLinks = _.links().map((_) => _.toObject())),
-              (this.m_DataRequested.include_links = !0));
+              (this.m_DataRequested.include_links = !0)),
+            _.apply_user_filters &&
+              !this.m_userFilterFailure &&
+              ((this.m_userFilterFailure = _.user_filter_failure()?.toObject()),
+              (this.m_DataRequested.apply_user_filters = !0));
         }
         static BDataRequestContainsOtherDataRequest(_, _) {
           return Boolean(
@@ -696,6 +701,14 @@
               include_links: !0,
             }),
             this.m_rgLinks
+          );
+        }
+        GetUserFilterFailure() {
+          return (
+            this.BCheckDataRequestIncluded({
+              apply_user_filters: !0,
+            }),
+            this.m_userFilterFailure
           );
         }
         ReplaceBestPurchaseOption(_) {

@@ -5330,11 +5330,11 @@
         );
       }
       const u = (e) => {
-        const { url: t, event: r, className: l } = e;
-        let c,
-          d = (0, n.OZ)(t);
-        (d = m(d, r)), (0, a.p)(d) && (c = "noopener nofollow");
-        const u =
+        const { url: t, event: r, className: l, style: c } = e;
+        let d,
+          u = (0, n.OZ)(t);
+        (u = m(u, r)), (0, a.p)(u) && (d = "noopener nofollow");
+        const p =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
@@ -5343,10 +5343,10 @@
             : void 0;
         return i.createElement(
           s.Gq,
-          { toolTipContent: u, direction: "top" },
+          { toolTipContent: p, direction: "top" },
           i.createElement(
             "a",
-            { className: l, href: d, rel: c, id: e.id },
+            { className: l, href: u, rel: d, id: e.id, style: c },
             e.children,
           ),
         );
@@ -8316,11 +8316,13 @@
           );
         },
         d = (e) => {
-          const t = h(e.category);
+          const { category: t, elControllerSupport: r } = e,
+            n = h(t);
           return i.createElement(
             "div",
             { className: (0, a.A)(s.SteamDeckCompatInfo, e.className) },
-            i.createElement(t, { className: s.SteamDeckCompatIcon }),
+            r,
+            i.createElement(n, { className: s.SteamDeckCompatIcon }),
           );
         },
         u = (e) => {
@@ -10297,10 +10299,7 @@
         StartBroadcast(e) {
           this.InitPlayer(),
             e.m_data.url
-              ? ((this.m_player = new p.Zn(
-                  this.m_elVideo,
-                  !(0, u.Mc)() && (0, u.aM)(),
-                )),
+              ? ((this.m_player = new p.Zn(this.m_elVideo)),
                 this.m_player.PlayMPD(
                   e.m_data.url,
                   e.m_strCDNAuthUrlParameters,
@@ -10342,7 +10341,7 @@
         }
         StartVOD(e) {
           this.InitPlayer();
-          let t = new p.Zn(this.m_elVideo, !(0, u.Mc)() && (0, u.aM)());
+          let t = new p.Zn(this.m_elVideo);
           (this.m_player = t),
             _.iA.logged_in &&
               e.m_nAppIDVOD &&
@@ -12012,7 +12011,7 @@
         return null == E.get() && A({}), z.get(E.get());
       }
       function F() {
-        return null !== E;
+        return null !== E.get();
       }
       window.g_EventCalendarMap = z;
     },
