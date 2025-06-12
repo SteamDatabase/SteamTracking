@@ -85,9 +85,9 @@ for (const { file, cdn } of files) {
 					let suffix;
 
 					if (folder.startsWith("javascript/")) {
-						suffix = ".js?__TIME__&l=english&_cdn=cloudflare";
+						suffix = ".js?__TIME__&l=english&__CDN__";
 					} else if (folder.startsWith("css/")) {
-						suffix = ".css?__TIME__&_cdn=cloudflare";
+						suffix = ".css?__TIME__&__CDN__";
 					} else {
 						console.error("Wrong match:", folder);
 						return;
