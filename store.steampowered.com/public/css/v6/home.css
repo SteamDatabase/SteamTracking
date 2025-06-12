@@ -12,8 +12,6 @@
 	overflow: hidden;
 }
 
-
-
 .page_background_holder {
 	position: absolute;
 	top: 0;
@@ -22,10 +20,6 @@
 	left: 0;
 	background-repeat: no-repeat;
 	background-position: center top;
-}
-
-body.v7menu .page_background_holder {
-	top: -66px;
 }
 
 .page_background_holder_mobile {
