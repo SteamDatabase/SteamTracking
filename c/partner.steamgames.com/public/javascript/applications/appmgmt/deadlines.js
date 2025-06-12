@@ -9,6 +9,7 @@
         TaxRequirementResultsContainer: "_1qWALk5nCmq5k9L83nsTxt",
         TaxRequirementFilters: "_3cFbkh1j0JJXVXBjJFnxdz",
         TaxRequirementFilterRow: "_3a7_xRkLXFkxUoWZSqyVcJ",
+        EmptyNotifications: "_6epyMHoLUeMwgaxAABPk9",
         TaxRequirementTable: "_1QERjK04vLK1z0MWL5yn81",
         ActionID: "B58x_VqxTzgU8vlzTwJFC",
         Status: "_3tFjoS3ygfhuPvoh8ow2Of",
@@ -92,6 +93,15 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Loading: "_24C5lxFpKz_kHyuT-8GJKK",
+        LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
+        Small: "_2FPxEVbkMdVDAw1TLfl_B5",
+        Medium: "_2FfWbZHeiT3_nRXH-pI7av",
+        Large: "_30IMocjbXd0leP4E5U2Yrx",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -514,6 +524,7 @@
           _.createElement("td", null, "TODO"),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = _.useState(0),
           _ = _(10, _),
@@ -609,7 +620,7 @@
               _.createElement(
                 "tbody",
                 null,
-                !!_ &&
+                Boolean(_?.size > 0) &&
                   Array.from(_?.values()).map((_, _) =>
                     _.length > 0
                       ? _.createElement(_, {
@@ -621,6 +632,19 @@
                   ),
               ),
             ),
+            Boolean(!_ && _ > 0) &&
+              _.createElement(_._, {
+                size: "small",
+              }),
+            Boolean(0 == _?.length && _ > 0) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().EmptyNotifications,
+                },
+                "No tax notifications for partner ",
+                _,
+              ),
           ),
         );
       }
@@ -3353,6 +3377,39 @@
       }
       function _(_, _, _) {
         return _(_, 1, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+          _ = {
+            borderColor: _,
+            borderLeftColor: __webpack_require__,
+          };
+        if ("number" == typeof _) {
+          const _ = `${_}px`;
+          (_.width = _),
+            (_.height = _),
+            (_.minHeight = _),
+            (_.minWidth = _),
+            (_.borderWidth = _ / 10 + "px");
+        }
+        return _.createElement("div", {
+          className: (0, _._)(
+            _.Loading,
+            "small" == _ && _.Small,
+            ("medium" == _ || !_) && _.Medium,
+            "large" == _ && _.Large,
+          ),
+          style: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

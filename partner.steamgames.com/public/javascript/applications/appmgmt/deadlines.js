@@ -11,6 +11,7 @@
         TaxRequirementResultsContainer: "_1qWALk5nCmq5k9L83nsTxt",
         TaxRequirementFilters: "_3cFbkh1j0JJXVXBjJFnxdz",
         TaxRequirementFilterRow: "_3a7_xRkLXFkxUoWZSqyVcJ",
+        EmptyNotifications: "_6epyMHoLUeMwgaxAABPk9",
         TaxRequirementTable: "_1QERjK04vLK1z0MWL5yn81",
         ActionID: "B58x_VqxTzgU8vlzTwJFC",
         Status: "_3tFjoS3ygfhuPvoh8ow2Of",
@@ -94,6 +95,15 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    37999: (e) => {
+      e.exports = {
+        Loading: "_24C5lxFpKz_kHyuT-8GJKK",
+        LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
+        Small: "_2FPxEVbkMdVDAw1TLfl_B5",
+        Medium: "_2FfWbZHeiT3_nRXH-pI7av",
+        Large: "_30IMocjbXd0leP4E5U2Yrx",
       };
     },
     54330: (e, t, a) => {
@@ -283,7 +293,7 @@
     },
     92513: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => P, usePartnerDeadlines: () => A });
+      a.r(t), a.d(t, { default: () => P, usePartnerDeadlines: () => k });
       var n = a(90626),
         r = a(84811),
         i = a(2341),
@@ -308,7 +318,7 @@
         _ = a(52038);
       const T = { include_assets: !0, include_release: !0 };
       function C() {
-        const e = A(9),
+        const e = k(9),
           [t, a] = (0, u.QD)("query", ""),
           i = (0, n.useMemo)(
             () =>
@@ -485,9 +495,10 @@
           n.createElement("td", null, "TODO"),
         );
       }
-      function I() {
+      var I = a(39700);
+      function R() {
         const [e, t] = n.useState(0),
-          a = A(10, e),
+          a = k(10, e),
           r = n.useRef(0);
         n.useEffect(() => () => window.clearTimeout(r.current), []);
         const i = n.useMemo(() => {
@@ -562,10 +573,10 @@
               n.createElement(
                 "tbody",
                 null,
-                !!i &&
+                Boolean(i?.size > 0) &&
                   Array.from(i?.values()).map((e, t) =>
                     e.length > 0
-                      ? n.createElement(R, {
+                      ? n.createElement(B, {
                           key: "aid_" + t,
                           actionID: e[0].gid,
                           rgDeadlines: e,
@@ -574,10 +585,18 @@
                   ),
               ),
             ),
+            Boolean(!a && e > 0) && n.createElement(I.k, { size: "small" }),
+            Boolean(0 == a?.length && e > 0) &&
+              n.createElement(
+                "div",
+                { className: o().EmptyNotifications },
+                "No tax notifications for partner ",
+                e,
+              ),
           ),
         );
       }
-      function R(e) {
+      function B(e) {
         const { actionID: t, rgDeadlines: a } = e;
         return a.length
           ? n.createElement(
@@ -585,12 +604,12 @@
               null,
               n.createElement("tr", null, n.createElement("td", null, t)),
               a.map((e, t) =>
-                n.createElement(B, { key: e.gid + "_" + t, deadline: e }),
+                n.createElement(A, { key: e.gid + "_" + t, deadline: e }),
               ),
             )
           : null;
       }
-      function B(e) {
+      function A(e) {
         const { deadline: t } = e,
           a = JSON.parse(t.description_jsondata),
           r = new Date(a.CreatedOn).toUTCString();
@@ -614,7 +633,7 @@
         let l = null;
         switch (t) {
           case (10).toString():
-            l = n.createElement(I, null);
+            l = n.createElement(R, null);
             break;
           case (9).toString():
             l = n.createElement(C, null);
@@ -650,7 +669,7 @@
           ),
         );
       }
-      function A(e, t) {
+      function k(e, t) {
         const a = (0, l.I)({
           queryKey: ["partnerDeadlines", e, t],
           queryFn: async () => {
@@ -672,7 +691,7 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ContactTaxIdentityDialog: () => A,
+          ContactTaxIdentityDialog: () => P,
           default: () => k,
           k_rgTemplateNameOptionsList: () => R,
         });
@@ -2321,7 +2340,7 @@
             },
           },
         };
-      function P() {
+      function A() {
         const [e] = (0, n.useState)(
             (0, r.Tc)("deadlines", "application_config"),
           ),
@@ -2339,7 +2358,7 @@
           );
         return [e, i, t, a, o];
       }
-      function A(e) {
+      function P(e) {
         const { closeModal: t, subject: a, publisherid: r } = e,
           [i, o] = n.useState(""),
           [l, c] = n.useState("");
@@ -2393,7 +2412,7 @@
         );
       }
       function k(e) {
-        const [t, a, o, l, d] = P(),
+        const [t, a, o, l, d] = A(),
           [h, f] = (function () {
             const [e] = (0, n.useState)(
                 (0, r.Tc)("testpage", "application_config"),
@@ -2465,11 +2484,11 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  h && n.createElement(q, { strTemplate: f }),
+                  h && n.createElement(D, { strTemplate: f }),
                   v &&
                     y.length > 0 &&
                     y.map((e, t) =>
-                      n.createElement(D, {
+                      n.createElement(q, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2531,7 +2550,7 @@
                       {
                         onClick: (e) =>
                           (0, C.pg)(
-                            n.createElement(A, { subject: E, publisherid: l }),
+                            n.createElement(P, { subject: E, publisherid: l }),
                             (0, x.uX)(e),
                           ),
                         className: s().NotificationButton,
@@ -2545,7 +2564,7 @@
           ),
         );
       }
-      function q(e) {
+      function D(e) {
         const { strTemplate: t } = e,
           [a, r] = n.useState(t || "Renewal-W8-Initial"),
           [i, o] = n.useState(!0),
@@ -2582,7 +2601,7 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(D, {
+            n.createElement(q, {
               requirement: {
                 deadline: c,
                 index: 0,
@@ -2593,10 +2612,10 @@
           )
         );
       }
-      function D(e) {
+      function q(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
-          [, r] = P(),
+          [, r] = A(),
           i = new Date(a?.CreatedOn);
         if ("ActionComplete" == a.TemplateName) return null;
         if (!B[a.TemplateName])
@@ -2811,6 +2830,34 @@
       }
       function y(e, t, a) {
         return h(e, 1, t, a);
+      }
+    },
+    39700: (e, t, a) => {
+      "use strict";
+      a.d(t, { k: () => o });
+      var n = a(90626),
+        r = a(52038),
+        i = a(37999);
+      function o(e) {
+        const { size: t, color: a, trackColor: o } = e,
+          s = { borderColor: o, borderLeftColor: a };
+        if ("number" == typeof t) {
+          const e = `${t}px`;
+          (s.width = e),
+            (s.height = e),
+            (s.minHeight = e),
+            (s.minWidth = e),
+            (s.borderWidth = t / 10 + "px");
+        }
+        return n.createElement("div", {
+          className: (0, r.A)(
+            i.Loading,
+            "small" == t && i.Small,
+            ("medium" == t || !t) && i.Medium,
+            "large" == t && i.Large,
+          ),
+          style: s,
+        });
       }
     },
     68797: (e, t, a) => {

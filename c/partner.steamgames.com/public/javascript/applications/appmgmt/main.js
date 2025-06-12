@@ -6363,7 +6363,37 @@
       function _(_, _) {
         return _.reduce((_, _) => (_.set(_(_), _), _), new Map());
       }
+      function _(_, _, __webpack_require__ = !0) {
+        return _ && 0 != _.length
+          ? _
+            ? _.sort((_, _) =>
+                _ == _
+                  ? 0
+                  : __webpack_require__
+                    ? _ < _
+                      ? -1
+                      : 1
+                    : _ > _
+                      ? -1
+                      : 1,
+              )
+            : _.sort((_, _) => {
+                const _ = _.toLowerCase(),
+                  _ = _.toLowerCase();
+                return _ == _
+                  ? 0
+                  : __webpack_require__
+                    ? _ < _
+                      ? -1
+                      : 1
+                    : _ > _
+                      ? -1
+                      : 1;
+              })
+          : _;
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

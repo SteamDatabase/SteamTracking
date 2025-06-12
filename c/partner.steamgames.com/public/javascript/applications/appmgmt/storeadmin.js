@@ -8433,6 +8433,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 7,
         _ = 7;
@@ -8547,13 +8548,29 @@
               }),
               [_] = (0, _._)(_, {
                 include_release: !0,
-              });
-            if (_.isLoading || _.isLoading)
+              }),
+              _ = _.isLoading || _.isLoading,
+              _ = _.isSuccess && _.isSuccess,
+              [_, _, _, _] = _.useMemo(() => {
+                if (!_) return [];
+                const _ = (_) =>
+                  _._(
+                    _?.map((_) => _.toUpperCase()),
+                    !0,
+                  );
+                return [
+                  _(_.data.allowed_countries),
+                  _(_.data.restricted_countries)?.filter((_) => "XC" != _),
+                  _(_.data.allowed_countries),
+                  _(_.data.restricted_countries)?.filter((_) => "XC" != _),
+                ];
+              }, [_, _, _]);
+            if (_)
               return {
                 bLoading: !0,
                 rgWarnings: [],
               };
-            if (!_.isSuccess || !_.isSuccess)
+            if (!_)
               return {
                 bLoading: !1,
                 rgWarnings: [
@@ -8576,11 +8593,7 @@
                   _.GetFormattedSteamReleaseDate(),
                 ),
               });
-            const _ = _.data.allowed_countries,
-              _ = _.data.restricted_countries.filter((_) => "XC" != _),
-              _ = _.data.allowed_countries,
-              _ = _.data.restricted_countries.filter((_) => "XC" != _),
-              _ = (_, _) =>
+            const _ = (_, _) =>
                 0 == _.length && 0 == _.length
                   ? "unrestricted"
                   : _.length > 0
@@ -9666,7 +9679,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
