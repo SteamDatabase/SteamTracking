@@ -2356,7 +2356,6 @@ GetBool
 GetCPUInformation()
 GetCPUInformation().m_bSSE2 || IsARM()
 GetCPUInformation().m_bSSE3
-GetClientActualLauncherType
 GetDouble
 GetEnumValue
 GetFileSystemStableId requires a valid path
@@ -3109,7 +3108,6 @@ Plat_AbsoluteTime
 Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_FloatTime
-Plat_GetExecutablePath
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
@@ -3459,7 +3457,6 @@ Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
 Steam3Master
-SteamBootstrapper_GetInstallDir
 SteamBootstrapper_GetLoggingDir
 SteamBox
 SteamCache

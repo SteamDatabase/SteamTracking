@@ -4012,7 +4012,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Software instalado:"
 "steam_systeminfo_info"			"Steam ha detectado el siguiente hardware y software en tu sistema:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Por favor, dedica un momento a responder a esta pequeña encuesta. Cada mes, Steam reúne información sobre qué clase de hardware y software usan nuestros clientes. Los datos de esta encuesta son increíblemente valiosos para nosotros ya que nos ayudan a estar seguros en nuestras decisiones sobre en qué tipos de tecnología debemos invertir y qué productos debemos ofrecer.\nLa información que recabamos es anónima y no será asociada a tu cuenta."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Por favor, dedica un momento a responder a esta pequeña encuesta. Cada mes, Steam reúne información sobre qué clase de hardware y software usan nuestros clientes. Los datos de esta encuesta son increíblemente valiosos para nosotros, ya que nos ayudan a estar seguros en nuestras decisiones sobre en qué tipos de tecnología debemos invertir y qué productos debemos ofrecer.\nLa información que recabamos es anónima y no será asociada a tu cuenta."
 
 "steam_statuslabel"	"Estado"
 

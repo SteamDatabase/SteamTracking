@@ -2,41 +2,60 @@
 {
 	controls
 	{
-		TextLabel { controlname=Label labeltext="99" }
-	}
+		PresentationFPS { controlname=CIngameFPSPresentationFPS }
+		GameFPS { controlname="CIngameFPSGameFPS" }
 	
+		IngameFPSGraph { controlname=CIngameFPSGraph wide="0" tall="24" }
+	}
+
+	colors
+	{
+		FPSGraph.ColorFPSAvg "0 212 53 255"
+		FPSGraph.ColorFPSBad "218 100 100 255"  // Code will adjust alpha for intensity depending on actual bad frame count in the second
+		FPSGraph.ColorLegend "0 212 53 255"
+		FPSGraph.HeightSmall "23"
+		FPSGraph.HeightMedium "26"
+		FPSGraph.HeightLarge "28"
+	}
+   	
 	styles
 	{
-		CounterTextSmall
+		Label
 		{
-			font-size="12"
+			font-family="Motiva"
 		}
-		
-		CounterTextMedium
+		GraphSmall
 		{
+			font-family="Motiva"
 			font-size="14"
 		}
-		
-		CounterTextLarge
+
+		GraphMedium
 		{
+			font-family="Motiva"
+			font-size="15"
+		}
+
+		GraphLarge
+		{
+			font-family="Motiva"
 			font-size="16"
 		}
+
+		BackgroundHighContrast
+		{
+			bgcolor="0 0 0 90"
+		}
+
+		BackgroundLowContrast
+		{
+			bgcolor="0 0 0 90"
+		}
 		
-		HighContrast
-		{
-			bgcolor="0 0 0 60"
-			textcolor="0 255 0 255"
-		}
-	  
-		LowContrast
-		{
-			bgcolor="0 0 0 0"
-			textcolor="128 128 128 255"
-		}
 	}
 	
 	layout
 	{
-		place { control="TextLabel" margin=4 align=center }
+		place { control="PresentationFPS,GameFPS,IngameFPSGraph" align=left-center spacing=0 }
 	}
 }

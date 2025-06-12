@@ -938,6 +938,7 @@ $ffn
 '\n"k_EMsgGMGetModifiedConVarsResponse
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
+'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
@@ -1004,7 +1005,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1Vr
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -2118,7 +2118,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-17:58:19
 17CAudioFileDecoder
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2141,6 +2140,7 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:28:40
 18CAVFrameYUVWrapper
 18CAlignedBufferBase
 18CBaseFrameFunction
@@ -2462,7 +2462,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9HDF
 9IGv
 9IMemAlloc
 9PE,$
@@ -6389,7 +6388,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  9 2025
+Jun 12 2025
 June
 K'iche'
 K(\f]C15
@@ -15042,9 +15041,8 @@ k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
 k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceAddTrigger
 k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTrigger
+k_EMsgRMMsgTraceRemoveTriggers
 k_EMsgRMRemoteInvoke
 k_EMsgRMTestVerisignOTP
 k_EMsgRMTestVerisignOTPResponse

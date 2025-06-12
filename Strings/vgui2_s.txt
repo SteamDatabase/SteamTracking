@@ -1,3 +1,6 @@
+  Actual   : 
+  Comment started here.
+  Expected : 
   KEY_SPACE
   f_bavail: %llu\n
   f_bfree : %llu\n
@@ -5,6 +8,7 @@
   f_bsize : %lu\n
   f_frsize: %lu\n
   what():  
+ !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./012312CIMENullImpl
  +0000
  --enable-duplicate-detection
@@ -12,20 +16,52 @@
  --label '%s'
  16IDynamicFunction
  2>/dev/null
+ = { <proto text format> }". To set fields within it, use syntax like "
+ BackUp() can only be called after Next().
+ Can't back up over more bytes than were returned by the last call to Next().
+ Outdent() without matching Indent().
+ Parameter to BackUp() can't be negative.
  ReadToken overflow
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [clone 
+ [default = $0
  __vector(
+ a protocol 
+ args were given.  Full format string was: "
+ arguments. 
  but running with 
+ bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
+ cannot be required.
+ conflicts with an existing enum type.
+ conflicts with an existing field.
+ conflicts with an existing nested message type.
+ conflicts with an existing oneof type.
  const
+ contains invalid 
+ definition file imports the proto which defines the option.
+ details: 
+ exceeded maximum protobuf size of 2GB: 
  for 
+ has the same name as 
+ if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ is unused.
  libpng version 1.6.37 - April 14, 2019\n\n
+ message of type "
  noexcept
+ not found
+ of the Protocol Buffer runtime library, but the installed version is 
+ of the Protocol Buffer runtime library, which is not compatible with the installed version (
  restrict
+ stack frames not accounted for stack unwind.
  throw
  transaction_safe
+ type does not match\n
  using zstream
  volatile
+ was modified concurrently during serialization.
+ with type 
 !"Attempting to upload sub texture without making texture first"
 !"CSystem::CreateShortcut"
 !"CSystem::GetShortcutTarget"
@@ -47,6 +83,7 @@
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 !1AQaq
 !AxU
+!is_large()
 !m_InDispatcher
 !m_data.HasError()
 !m_pInt
@@ -56,8 +93,79 @@
 !style->IsDirty()
 !texture->m_id2X
 !vecTraversalCache.Count() == !nInternalDepth
+" because it is missing required fields: 
+" conflicts with field "
+" conflicts with the existing symbol "
+" contains null character.
+" for field "
+" for option "
+" has no field named "
+" has no value named "
+" has not been loaded.
+" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
+" is already defined in "
+" is already defined in file "
+" is already defined.
+" is an atomic type, not a message.
+" is missing required fields: 
+" is not a field or extension of message "
+" is not a message type.
+" is not a proto3 enum, but is used in "
+" is not a type.
+" is not a valid identifier.
+" is not an enum type.
+" is not defined or is not an extension of "
+" is not defined.
+" is resolved to "
+" is resolved to "(
+" is specified along with field "
+" is specified multiple times.
+" must be unique within 
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" seems to be defined in "
+" stored in google.protobuf.Any has missing required fields
+" stored in google.protobuf.Any.
+" unknown. Ensure that your proto
+" uses the same enum value as "
+" was already set.
+" was listed twice.
+" was not found or had errors.
+" which is a proto3 message type.
+" which is not defined or is not an extension of "
+" which is.
+"$0" does not declare $1 as an extension number.
+") is not compatible with this reflection object (which is for type "
+") to start from the outermost scope.
+").  Note that the exact same class is required; not just the same descriptor.
+", another member of oneof "
+", but only 
+", field number 
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+", which is not imported by "
+".  To use it here, please add the necessary import.
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
+". This appears to be a value from a sibling type.
+". This is not 
+". Value: "
+"/*" inside block comment.  Block comments cannot be nested.
+"0x" must be followed by hex digits.
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
+"????'????????????????????????????????????????????????????\????
+"DeleteMapValue"
+"GetMapData"
+"GetRawRepeatedField"
+"InsertOrLookupMapValue"
+"LookupMapValue"
+"MapBegin"
+"MapEnd"
+"MapSize"
+"MutableRawRepeatedField"
+"^\n\fOneofOptions
+"e" must be followed by exponent.
 "lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
@@ -161,6 +269,16 @@
 #tDq
 #vgui_
 #vgui_TimeLeft
+$0  extend .$1 {\n
+$0  extensions $1 to $2;\n
+$0  reserved 
+$0 to max, 
+$0$1$2 $3 = $4
+$0enum $1 {\n
+$0message $1
+$0oneof $1 {
+$0option $1;\n
+$0rpc $1($4.$2) returns ($5.$3)
 $4DTdt
 $HOME/
 $ORIGIN
@@ -237,6 +355,7 @@ $\nY8O
 %s: set timezone to %s\n
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: system() failed, errno %d\n
+%s:%d: OpenSSL internal error: %s\n
 %s:%dx%d@%d
 %sToday
 %sTomorrow
@@ -251,24 +370,59 @@ $\nY8O
 (%zu) readdir failed to find '%s' in '%s'\n
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (8HXhx
+(\v2 .google.protobuf.DescriptorProto
+(\v2!.google.protobuf.EnumValueOptions"
+(\v2$.google.protobuf.EnumDescriptorProto
+(\v2$.google.protobuf.FileDescriptorProto"
+(\v2$.google.protobuf.UninterpretedOption"/\n
+(\v2$.google.protobuf.UninterpretedOption":\n\fOptimizeMode
+(\v2$.google.protobuf.UninterpretedOption"P\n
+(\v2$.google.protobuf.UninterpretedOption*\t
+(\v2%.google.protobuf.FieldDescriptorProto
+(\v2%.google.protobuf.OneofDescriptorProto
+(\v2&.google.protobuf.ExtensionRangeOptions
+(\v2&.google.protobuf.MethodDescriptorProto
+(\v2'.google.protobuf.ServiceDescriptorProto
+(\v2(.google.protobuf.SourceCodeInfo.Location
+(\v2).google.protobuf.EnumValueDescriptorProto
+(\v2,.CUIFontFilePackagePB.CUIEncryptedFontFilePB
+(\v2-.google.protobuf.GeneratedCodeInfo.Annotation
+(\v2-.google.protobuf.UninterpretedOption.NamePart
+(\v2..google.protobuf.DescriptorProto.ReservedRange
+(\v2/.google.protobuf.DescriptorProto.ExtensionRange
+(\v26.google.protobuf.EnumDescriptorProto.EnumReservedRange
 (anonymous namespace)
+(cannot determine missing fields for lite message)
 (context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
 (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
 (home_dir != NULL) && (home_dir[0] != '\0')
+(merge 
 (no class)
 (no name)
 (null panel)
 (unsigned)elem <= (unsigned)m_Size
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )9IYiy
 **KEY_PAD_MULTIPLY
 *5KS
 *:JZjz
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+*N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
+*N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
+*N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
+*N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
+*N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
 *ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 *pcubDecodedData
 ++KEY_PAD_PLUS
++\n\rReservedRange
 +ulsX
+, but was 
+, not just within "
 ,<KEY_COMMA
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -288,17 +442,51 @@ $\nY8O
 -clientbeta
 -compat
 -display-scale=
+-inf
 -language
 -nodpiscale
 -pid
 -vguifocus
 -vguimessages
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+. Difference of 
+...<truncated>...
 ..Too many IDATs found
+./google/protobuf/arena_impl.h
+./google/protobuf/arenastring.h
+./google/protobuf/descriptor.pb.h
+./google/protobuf/dynamic_message.h
+./google/protobuf/extension_set.h
+./google/protobuf/extension_set_inl.h
+./google/protobuf/generated_message_reflection.h
+./google/protobuf/io/coded_stream.h
+./google/protobuf/map.h
+./google/protobuf/map_field.h
+./google/protobuf/message_lite.h
+./google/protobuf/metadata_lite.h
+./google/protobuf/parse_context.h
+./google/protobuf/reflection.h
+./google/protobuf/reflection_internal.h
+./google/protobuf/repeated_field.h
+./google/protobuf/stubs/stringpiece.h
+./google/protobuf/unknown_field_set.h
 .>KEY_PERIOD
 .LTRS
+.PLACEHOLDER_VALUE
 .Too many IDATs found
 .cpl
+.dummy
+.foo = value".
+.google.protobuf.EnumOptions
+.google.protobuf.FieldOptions
+.google.protobuf.FileOptions
+.google.protobuf.MessageOptions
+.google.protobuf.MethodOptions
+.google.protobuf.OneofOptions"
+.google.protobuf.ServiceOptions"
+.google.protobuf.SourceCodeInfo
 .layout
+.placeholder.proto
 .res
 .steam_exec_test.sh
 .y4w
@@ -424,6 +612,7 @@ $\nY8O
 /yQA
 0)KEY_0
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
@@ -585,6 +774,7 @@ $\nY8O
 12CDynamicFuncIPFvPvEE
 12CDynamicFuncIPFvjEE
 12CDynamicFuncIPFvvEE
+13CUIFontFilePB
 13VPanelWrapper
 14CSchemeManager
 14CSerializedIME
@@ -611,7 +801,14 @@ $\nY8O
 19CUtlNoEscConversion
 1A26b
 1wsHp
+2#.google.protobuf.FieldOptions.CType:
+2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
+2).google.protobuf.FileOptions.OptimizeMode:
+2*.google.protobuf.FieldDescriptorProto.Type
+2+.google.protobuf.FieldDescriptorProto.Label
+2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20CNotificationManager
+20CUIFontFilePackagePB
 21CLocalizedStringTable
 21CUtlCStringConversion
 23CVGuiSystemModuleLoader
@@ -623,6 +820,8 @@ $\nY8O
 3333
 3333UUUU
 4$KEY_4
+43CUIFontFilePackagePB_CUIEncryptedFontFilePB
+456789:;<=
 49fN
 4IIME
 4i5U6B738%9
@@ -630,8 +829,10 @@ $\nY8O
 52F*
 5CVGui
 5T&w&
+5\n\vnested_type
 6 PQ
 6ConVar
+6\n\fmessage_type
 6^KEY_6
 7&KEY_7
 7CScheme
@@ -653,6 +854,7 @@ $\nY8O
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
 7CUtlMapIybi8CDefLessE
 7CUtlPtrI16CStyleAppearanceE
+7\n\tenum_type
 7style_t
 7~8A
 8*KEY_8
@@ -664,10 +866,15 @@ $\nY8O
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
 8CUtlDictI5Color22CDefCaselessStringLessiE
 8\foQS
+8\n\textension
 9(KEY_9
 9CStyleSet
 9IValidate
+9\n\noneof_decl
 9a&g
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
+: failed to parse contents
 :active
 :disabled
 :empty
@@ -684,9 +891,15 @@ $\nY8O
 =+KEY_EQUAL, L
 >/dev/null
 ?456789:;<=
+???\f???????\n???\r?\t?\v
+A file with this name is already in the pool.
+A protocol message was rejected because it was too big (more than 
 A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+ABORTED
 AKST
+ALREADY_EXISTS
 ANDROID
 ANDROID32
 ANDROID64
@@ -694,10 +907,23 @@ APPLICATION
 ASCII
 ASCII conversion buffer too small
 ASCII//TRANSLIT
+A\n\nannotation
+AddAllocatedMessage
+AddBool
+AddDouble
+AddEnum
+AddFloat
+AddInt32
+AddInt64
+AddMessage
+AddString
+AddUInt32
+AddUInt64
 Adding custom font file: %s\n
 Address too small!
 Afrikaans
 Albanian
+Already saw decimal point or exponent; can't have another one.
 Amharic
 Application built with libpng-
 Application jmp_buf size changed
@@ -720,6 +946,9 @@ B#C0D?EQFeG|H
 BCreateDirectory
 BEGIN
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BF_cbc_encrypt
+BF_decrypt
+BF_encrypt
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
@@ -730,6 +959,7 @@ BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result i
 BUILD_ID
 BWriteValueToFileAsUser
 BWriteValuetoFileAsRoot
+BackUp() can only be called after a successful Next().
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
 Bad flag in RTime32DateAdd
@@ -738,6 +968,7 @@ Bangla
 BaseSettings
 Basque
 Belarusian
+Boolean default must be true or false.
 Bosnian
 BottomLeft
 BottomRight
@@ -746,7 +977,9 @@ Breaking '%s' in '%s'\n
 BringToFront
 Bulgarian
 Bx\r9
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 C-Yn
+CANCELLED
 CAudioController::ServiceMiles
 CAudioController::SetMilesMixFragmentMilliseconds
 CBaseSurface
@@ -791,7 +1024,243 @@ CFontAmalgam
 CFontDataFile
 CFontInfo
 CFontManager
+CHECK failed: !InRealOneof(field): 
+CHECK failed: !IsDefault(default_value): 
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
+CHECK failed: !checkpoints_.empty(): 
+CHECK failed: !descriptor_: 
+CHECK failed: !ext->is_repeated: 
+CHECK failed: !extension->is_repeated: 
+CHECK failed: !failed_: 
+CHECK failed: !field->options().weak(): 
+CHECK failed: !fields_.empty(): 
+CHECK failed: !file->finished_building_: 
+CHECK failed: !file_: 
+CHECK failed: !had_error_: 
+CHECK failed: !is_closed_: 
+CHECK failed: !name_: 
+CHECK failed: !once_: 
+CHECK failed: !oneof_descriptor->is_synthetic(): 
+CHECK failed: !out.HadError(): 
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
+CHECK failed: !tagged_ptr_.IsTagged(): 
+CHECK failed: !tree->empty(): 
+CHECK failed: !value || options_ != nullptr: 
+CHECK failed: !value || source_code_info_ != nullptr: 
+CHECK failed: (&from) != (this): 
+CHECK failed: (&from) != (to): 
+CHECK failed: (&other) != (this): 
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
+CHECK failed: (*buffer) == (first_byte): 
+CHECK failed: (0) != (n): 
+CHECK failed: (0) <= (pos): 
+CHECK failed: (0) == (BufferSize()): 
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
+CHECK failed: (backup_bytes_) == (0): 
+CHECK failed: (bucket_index_ & 1) == (0u): 
+CHECK failed: (buffer[0]) >= (128): 
+CHECK failed: (buffer_size) >= (0): 
+CHECK failed: (buffer_used_) == (0): 
+CHECK failed: (buffer_used_) == (buffer_size_): 
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
+CHECK failed: (calc_escaped_size) == (escaped_len): 
+CHECK failed: (count) <= (buffer_used_): 
+CHECK failed: (count) <= (kMaxLength): 
+CHECK failed: (count) <= (last_returned_size_): 
+CHECK failed: (count) == (tree->size()): 
+CHECK failed: (count) >= (0): 
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
+CHECK failed: (current_size_) > (0): 
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
+CHECK failed: (digits) < (100): 
+CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
+CHECK failed: (extension->is_packed) == (packed): 
+CHECK failed: (extension->type) == (other_extension.type): 
+CHECK failed: (field->message_type()) == (desc): 
+CHECK failed: (field->options().ctype()) == (ctype): 
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
+CHECK failed: (field_count()) == (2): 
+CHECK failed: (final_byte_count) < (target_byte_count): 
+CHECK failed: (first_byte & 0x80) == (0x80): 
+CHECK failed: (first_byte_or_zero) != (0): 
+CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
+CHECK failed: (from.GetDescriptor()) == (descriptor): 
+CHECK failed: (has_bit_index) != (~0u): 
+CHECK failed: (index) < (current_size_): 
+CHECK failed: (index) >= (0): 
+CHECK failed: (internal::AlignUpTo8(n)) == (n): 
+CHECK failed: (it.m_) == (this): 
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
+CHECK failed: (last_returned_size_) > (0): 
+CHECK failed: (len) <= (dest_len): 
+CHECK failed: (len) >= (0): 
+CHECK failed: (limit_) >= (ptr_): 
+CHECK failed: (message1->GetReflection()) == (this): 
+CHECK failed: (message2->GetReflection()) == (this): 
+CHECK failed: (message_type) == (field->message_type()): 
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
+CHECK failed: (n & (n - 1)) == (0): 
+CHECK failed: (n) >= (0): 
+CHECK failed: (new_num_buckets) >= (kMinTableSize): 
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
+CHECK failed: (out) == (begin + result->size()): 
+CHECK failed: (out) == (begin + result.size()): 
+CHECK failed: (overrun) <= (kSlopBytes): 
+CHECK failed: (pos) <= (x.length_): 
+CHECK failed: (recursion_budget_) < (recursion_limit_): 
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
+CHECK failed: (size) <= (6): 
+CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
+CHECK failed: (size) > (0): 
+CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
+CHECK failed: (table_[b]) == (table_[b ^ 1]): 
+CHECK failed: (target - output->data()) == (output->size()): 
+CHECK failed: (temp[0]) == ('1'): 
+CHECK failed: (temp[size - 1]) == ('5'): 
+CHECK failed: (to->GetDescriptor()) == (descriptor): 
+CHECK failed: (total_size_ - current_size_) >= (n): 
+CHECK failed: (total_size_) > (0): 
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
+CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
+CHECK failed: *ptr: 
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
+CHECK failed: GetArena() == NULL: 
+CHECK failed: GetArena() == nullptr: 
+CHECK failed: GetArena() == other->GetArena(): 
+CHECK failed: HasExtensionSet(): 
+CHECK failed: HasHasbits(): 
+CHECK failed: IsDefault(default_value): 
+CHECK failed: IsInitialized(): 
+CHECK failed: IsMapValid() && other.IsMapValid(): 
+CHECK failed: TableEntryIsNonEmptyList(b): 
+CHECK failed: TableEntryIsTree(b): 
+CHECK failed: a.type() == b.type(): 
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
+CHECK failed: arena != nullptr: 
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
+CHECK failed: builder_: 
+CHECK failed: checkpoints_.empty(): 
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
+CHECK failed: ctx.LastTag() != 1: 
+CHECK failed: cur_: 
+CHECK failed: desc_proto.has_name(): 
+CHECK failed: descriptor: 
+CHECK failed: dest: 
+CHECK failed: dynamic.get() != nullptr: 
+CHECK failed: end >= ptr: 
+CHECK failed: enum_type_->value_count(): 
+CHECK failed: errors == nullptr: 
+CHECK failed: extension != NULL: 
+CHECK failed: extension->is_repeated: 
+CHECK failed: fallback_database_ == nullptr: 
+CHECK failed: field != nullptr: 
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
+CHECK failed: field->is_repeated() || (index == -1): 
+CHECK failed: field->is_repeated(): 
+CHECK failed: file != nullptr: 
+CHECK failed: file && file->pool_: 
+CHECK failed: file()->finished_building_ == true: 
+CHECK failed: file->pool_->lazily_build_dependencies_: 
+CHECK failed: file_->finished_building_: 
+CHECK failed: find(node->kv.first) == end(): 
+CHECK failed: finished_building_ == true: 
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
+CHECK failed: has_default_value(): 
+CHECK failed: i >= 0: 
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
+CHECK failed: is_prototype(): 
+CHECK failed: is_repeated: 
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
+CHECK failed: limit_ > 0: 
+CHECK failed: limit_ > kSlopBytes: 
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
+CHECK failed: limit_end_ == buffer_end_: 
+CHECK failed: m1->GetArena() != m2_arena: 
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
+CHECK failed: message_arena != submessage_arena: 
+CHECK failed: mutex_ == nullptr: 
+CHECK failed: n <= size: 
+CHECK failed: n >= kMinTableSize: 
+CHECK failed: node_ != nullptr && m_ != nullptr: 
+CHECK failed: options_ != nullptr: 
+CHECK failed: options_descriptor: 
+CHECK failed: original_uninterpreted_options_field != nullptr: 
+CHECK failed: other->GetArena() != GetArena(): 
+CHECK failed: out_location != nullptr: 
+CHECK failed: output->message_info.prototype != nullptr: 
+CHECK failed: output: 
+CHECK failed: overrun != limit_: 
+CHECK failed: overrun < limit_: 
+CHECK failed: overrun <= kSlopBytes: 
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
+CHECK failed: overrun >= 0: 
+CHECK failed: owning_arena == nullptr: 
+CHECK failed: prototype != NULL: 
+CHECK failed: ptr < end_: 
+CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
+CHECK failed: ptr <= end_ + kSlopBytes: 
+CHECK failed: reflection: 
+CHECK failed: result != nullptr: 
+CHECK failed: s != nullptr: 
+CHECK failed: s >= 0: 
+CHECK failed: schema_.HasHasbits(): 
+CHECK failed: size > 0: 
+CHECK failed: size > chunk_size: 
+CHECK failed: size_ == 0: 
+CHECK failed: size_ > kSlopBytes: 
+CHECK failed: source_code_info_ != nullptr: 
+CHECK failed: submessage->GetArena() == submessage_arena: 
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
+CHECK failed: target + size == res: 
+CHECK failed: target_ != NULL: 
+CHECK failed: this != other: 
+CHECK failed: this == other_mutator: 
+CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
+CHECK failed: uninterpreted_options_field != nullptr: 
+CHECK failed: value != nullptr: 
+CHECK failed: z.first != NULL: 
 CHROMEOS
+CH\f1
 CInputBase
 CInputBase::InputContext_t
 CInputBase::IsChildOfModalPanel
@@ -803,14 +1272,29 @@ CLinuxSurface::RunFrame() - Sleep
 CLocalizedStringTable
 CNotificationManager
 CONFIG
+CORD
 COpenGLSurface::DrawGradientFilledRect
 COpenGLSurface::DrawSubTexturedRect
 COpenGLSurface::PushMakeCurrent
+CPPTYPE_BOOL
+CPPTYPE_DOUBLE
+CPPTYPE_ENUM
+CPPTYPE_FLOAT
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_MESSAGE
+CPPTYPE_STRING
+CPPTYPE_UINT32
+CPPTYPE_UINT64
 CPathString
 CRC error
+CRYPTO_memcmp
 CScheme
 CSchemeManager
 CSerializedSurface::DrawSetTextureRGBA
+CType
+CUIEncryptedFontFilePB
+CUIFontFilePackagePB
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
 CUtlDict
@@ -835,20 +1319,46 @@ CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
+Call set methods to initialize MapKey.
 Call to NULL read function
 Call to NULL write function
+Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+Camellia_DecryptBlock
+Camellia_DecryptBlock_Rounds
+Camellia_Ekeygen
+Camellia_EncryptBlock
+Camellia_EncryptBlock_Rounds
+Camellia_cbc_encrypt
+Camellia_decrypt
+Camellia_encrypt
+Camellia_set_key
+Can't 
+Can't BackUp() after failed Next().
 Can't discard critical data on CRC error
+Can't get here.
+Can't get here: failed to get default value as string
+Can't happen
+Can't print proto content: proto type 
+Can't reach
 Can't set both read_data_fn and write_data_fn in the same structure
 Can't write sCAL (buffer too small)
 Can't write tRNS with an alpha channel
 CanBeDefaultButton
+Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
+Cannot copy json_name to a proto of a different size.
+Cannot get here
+Cannot skip field value, unexpected token: 
 Caps Lock
 Catalan
+ChaCha20_ctr32
+ChaCha20_ssse3
+ChaCha20_xop
 Changing resolution from (%d, %d) to (%d, %d)\n
 Cherokee
 ChromeController
 ChromeHTML_Controller_003
+ClearField
 ClearSchemeSettings
 CloseExternal
 Closing socket.\n
@@ -861,11 +1371,14 @@ ConVar
 ConVar::InternalSetValue: called with NULL
 Convars
 Could not connect to X session manager: %s\n
+Could not create an instance of 
+Could not find type "
 Could not read existing registry file.
 Could not set CLIPBOARD selection.\n
 Couldn't find color '%s' referenced in render fill comand '%s'\n
 Couldn't find custom font file '%s'\n
 Couldn't find scheme color '%s'\n
+Couldn't parse default value "
 Couldn't write %s: %s\n
 CreateInterface
 CreateMilesMusicAudioDevice
@@ -879,13 +1392,23 @@ CursorExitedChild
 CursorMoved
 CustomFontFiles
 Czech
+DATA_LOSS
 DBG_PATHMATCH
 DBG_STAT
 DDDDUUUU
+DEADLINE_EXCEEDED
 DEPRECATION
 DESKTOP
+DES_SPtrans
+DES_decrypt3
+DES_ede3_cbc_encrypt
+DES_encrypt1
+DES_encrypt2
+DES_encrypt3
+DES_ncbc_encrypt
 DISPLAY
 DLOPEN Error:%s\n
+DO NOT PARSE: fields may be stripped and missing.\n
 DOCUMENTS
 DOWNLOAD
 D\vvf:
@@ -893,12 +1416,18 @@ Danish
 Dari
 Days
 December
+Default value for an enum field must be an identifier.
 DejaVu Sans
 Delayed
 Delete
+DescriptorProto
+DescriptorProtosH
 Detected leaked fd
 DialogConfigOverlay_%dx%d.vdf
+Division or mod by zero: dividend.hi=
 Don't know how to check filesystem type on POSIX!
+Don't lookup extension types if they aren't present (1). 
+Don't lookup extension types if they aren't present (2). 
 DrawRenderCharFromInfo is not implemented and should not be needed in overlay\n
 DrawSetSubTextureRGBA called on invalid texture\n
 DrawSetSubTextureRGBA called on unallocated texture\n
@@ -911,11 +1440,28 @@ ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
 EXECUTABLE_PATH
 Element( i )
+End-of-file inside block comment.
 English
+Entry
+Enum name 
+Enum type "
+Enum value "$0" is reserved multiple times.
+Enum value "$0" is reserved.
+Enum value "$0" uses reserved number $1.
+Enum value in map must define 0 as the first value.
+EnumDescriptorProto
+EnumOptions
+EnumReservedRange
+EnumValueDescriptorProto
+EnumValueOptions
+Enums must contain at least one value.
 Error
 Error Serial #%d
 Error State on string being set.
 Error in FL_Load_Glyph: %x\n
+Error parsing text-format 
+Error reporting not implemented.
+Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error: %s: XInput extension not present\n
 Error: %s: XInput extension version required: 2.X  present: %d.%d\n
@@ -937,8 +1483,40 @@ ErrorSerial
 Errors in %s:\n%s
 Estonian
 Execute: %s\n
+Expanded map entry type 
+Expect a decimal number, got: 
+Expected "
 Expected %lld but got %lld!
+Expected double, got: 
+Expected eight hex digits up to 10ffff for \U escape sequence
+Expected four hex digits for \u escape sequence.
+Expected hex digits for escape sequence.
+Expected identifier, got: 
+Expected integer or identifier, got: 
+Expected integer, got: 
+Expected string, got: 
+Explicit default values are not allowed in proto3.
+Extension "
+Extension conflicts with extension already in database: extend 
+Extension factory's GetPrototype() returned NULL for extension: 
+Extension not found.
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Extension number $0 has already been used in "$1" by extension "$2".
+Extension numbers cannot be greater than $0.
+Extension numbers must be positive integers.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Extension range $0 to $1 overlaps with reserved range $2 to $3.
+Extension range end number must be greater than start number.
+Extension ranges are not allowed in proto3.
+ExtensionRange
+ExtensionRangeOptions
+Extensions in proto3 are only allowed for defining options.
+Extensions of MessageSets must be optional messages.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra compressed data
+FAILED_PRECONDITION
+FATAL
 FCVAR_NEVER_AS_STRING
 FCZ&
 FT_Done_Face
@@ -951,6 +1529,7 @@ FT_Load_Glyph
 FT_New_Face
 FT_New_Memory_Face
 FT_Set_Pixel_Sizes
+F\n\foptimize_for
 Failed loading registry KV.
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
@@ -958,6 +1537,8 @@ Failed to load "%s"
 Failed to load custom font file '%s'\n
 Failed to load optional module %s\n
 Failed to parse lsof source port
+False
+FastHexToBuffer() wants non-negative integers, not 
 Fatal IO error %d (%s) on X server %s.\n
 FcCharSetCopy
 FcCharSetDestroy
@@ -979,12 +1560,53 @@ FcPatternDestroy
 FcPatternGetCharSet
 FcPatternGetString
 February
+Feel free to add support for more if you need it.
+Field "
+Field "$0" uses reserved number $1.
+Field = 
+Field does not match message type.
+Field is not a map field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
+Field name "$0" is reserved multiple times.
+Field name "$0" is reserved.
+Field number $0 has already been used in "$1" by field "$2".
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+Field numbers cannot be greater than $0.
+Field numbers must be positive integers.
+Field with message or enum type missing type_name.
+Field with primitive type has type_name.
+Field: 
+FieldDescriptorProto
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldOptions
+FieldSize
+Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
+Fields with proto3_optional set must be a member of a one-field oneof
+File already exists in database: 
+File appears to be in generated pool but wasn't registered: 
 File change notification for %s but no file contents changed based on hash\n
+File is already registered: 
+File not found in database (unexpected): 
+File recursively imports itself: 
+FileDescriptorProto
+FileDescriptorSet
+FileOptions
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Filipino
 Finnish
+First argument to Swap() (of type "
+First argument to SwapFields() (of type "
+FoCLcx
 FontManager()
 Fonts
 ForceQuit
+Found invalid proto option data for: 
 Free disk space for %s would overflow
 FreeAudioDevice
 French
@@ -1025,6 +1647,7 @@ GAMESCOPE_VRR_CAPABLE
 GAMESCOPE_VRR_ENABLED
 GAMESCOPE_VRR_FEEDBACK
 GAMESCOPE_XWAYLAND_MODE_CONTROL
+GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
@@ -1035,10 +1658,12 @@ GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3
 GLIBC_2.11
+GLIBC_2.15
 GLIBC_2.2
 GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
@@ -1048,27 +1673,53 @@ GL_EXT_texture_filter_anisotropic
 GL_EXT_texture_lod_bias
 GL_NVX_gpu_memory_info
 Galician
+GeneratedCodeInfo
 Georgian
 German
 GetAbsoluteWindowBounds
+GetBool
 GetCPUInformation()
 GetClientLauncherType
+GetDouble
+GetEnumValue
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
+GetFloat
 GetFloatFromString() did not get correct peCS parameter
 GetIPCConnectionDetails
+GetInt32
+GetInt64
 GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
 GetInts()
+GetMessage
 GetNameFromOSType
 GetOSType
+GetRawRepeatedField
+GetRepeatedBool
+GetRepeatedDouble
+GetRepeatedEnumValue
+GetRepeatedFloat
+GetRepeatedInt32
+GetRepeatedInt64
+GetRepeatedMessage
+GetRepeatedString
+GetRepeatedStringReference
+GetRepeatedUInt32
+GetRepeatedUInt64
 GetSpewOutputFunc
+GetString
+GetStringReference
 GetSystemVersionDetails
 GetTextureForString failed\n
+GetUInt32
+GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetWin32Stats
+Google.Protobuf.Reflection
 Gray color space not permitted on RGB PNG
 Greek
+Groups are not supported in proto3 syntax.
 Gujarati
 H$6t
 H*0"ZOW
@@ -1086,8 +1737,10 @@ HKLM
 HKLM32
 HKLM64
 HOME
+HasField
 Hausa
 Hebrew
+Hex and octal numbers must be integers.
 Hidden
 Hindi
 Horizontal
@@ -1099,20 +1752,28 @@ ICC profile length invalid (not a multiple of 4)
 ICC profile tag outside profile
 ICC profile tag start not a multiple of 4
 ICC profile too short
+IDEMPOTENCY_UNKNOWN
 ILocalize::AddFile() failed to load file "%s".\n
+INFO
+INTERNAL
+INVALID_ARGUMENT
+INVALID_CPPTYPE
 INotificationManager()->RunFrame()
 IVALIDATE001
 IceConnectionNumber
 IceProcessMessages
 Icelandic
+IdempotencyLevel
 Igbo
 Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
 Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
 Ignoring attempt to write bKGD chunk out-of-range for bit_depth
 Ignoring attempt to write tRNS chunk out-of-range for bit_depth
+Ignoring extension "
 Ignoring invalid time value
 Ignoring request to write a PLTE chunk in grayscale PNG
 IiGM>nw
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
 Image is too high to process with png_read_png()
@@ -1120,7 +1781,13 @@ Image width exceeds user limit in IHDR
 Image width is too large for this architecture
 Image width is zero in IHDR
 Impl COpenGLSurface::DrawPolyLine()\n
+Import 
+Import "
 Incorrect number of arguments.  %d arguments required, %d were given.\n
+Index must be -1 for non-repeated fields
+Index must be -1 for singular fields.
+Index must be in range of repeated field values. 
+Index out-of-bounds (field is empty).
 Indonesian
 Infinite time value
 Init
@@ -1135,7 +1802,9 @@ Insufficient memory to process iCCP chunk
 Insufficient memory to process iCCP profile
 Insufficient memory to process text chunk
 Insufficient memory to store text
+Integer out of range (
 Interlace handling should be turned on when using png_read_image
+Interpreting non ascii codepoint %d.
 Invalid FileWriterItem_t
 Invalid IHDR data
 Invalid attempt to read row data
@@ -1149,8 +1818,13 @@ Invalid bit depth in IHDR
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
 Invalid compression type specified
+Invalid control characters encountered in text.
+Invalid descriptor
+Invalid escape sequence in string literal.
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid filter method in IHDR
 Invalid filter type specified
+Invalid float number: 
 Invalid format for pCAL parameter
 Invalid iCCP compression method
 Invalid image color type specified
@@ -1158,15 +1832,20 @@ Invalid image height in IHDR
 Invalid image width in IHDR
 Invalid index %u
 Invalid interlace type specified
+Invalid key for map field.
 Invalid m_Position for NotificationManager!\n
+Invalid message set extension.
 Invalid number of colors in palette
 Invalid number of histogram entries specified
 Invalid number of transparent colors specified
 Invalid pCAL equation type
 Invalid pCAL parameter count
+Invalid package name: 
 Invalid palette
 Invalid palette length
 Invalid palette size, hIST allocation skipped
+Invalid proto descriptor for file "
+Invalid public dependency index.
 Invalid sBIT depth specified
 Invalid sCAL height
 Invalid sCAL height ignored
@@ -1174,10 +1853,19 @@ Invalid sCAL unit
 Invalid sCAL width
 Invalid sCAL width ignored
 Invalid sRGB rendering intent specified
+Invalid strings::Substitute() format string: "
+Invalid symbol name: 
 Invalid system directory %d
 Invalid time specified for tIME chunk
 Invalid time value
+Invalid value for boolean field "
+Invalid weak dependency index.
 Invalid width or height to AllocatePageForString()
+Invalid wire type for CPPTYPE_INT32: 
+Invalid wire type for CPPTYPE_INT64: 
+Invalid wire type for CPPTYPE_MESSAGE: 
+Invalid wire type for CPPTYPE_UINT32: 
+Invalid wire type for CPPTYPE_UINT64: 
 Irish
 Is64BitOS
 IsInList(after)
@@ -1188,6 +1876,7 @@ IsValidIndex( elem )
 IsValidIndex(elem)
 Italian
 JArray
+JSType
 JZJ{.
 January
 Japanese
@@ -1255,6 +1944,8 @@ KEY_VOLUME_UP
 KWM_WIN_DECORATION
 Kannada
 Kazakh
+Key in map fields cannot be enum types.
+Key in map fields cannot be float/double, bytes or message types.
 KeyCodePressed
 KeyCodeReleased
 KeyCodeTyped
@@ -1289,6 +1980,9 @@ Kinyarwanda
 Konkani
 Korean
 Kyrgyz
+LABEL_OPTIONAL
+LABEL_REPEATED
+LABEL_REQUIRED
 LANG
 LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
 LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -1316,6 +2010,8 @@ LoadFromBuffer: missing {   (current key: '%s')
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 Loading raw RGBA texture with invalid height/width\n
 LocalizationFileChanged
+Location
+Logic problem? szsrc = 
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Lowered '%s' -> '%s'\n
 Luxembourgish
@@ -1330,17 +2026,62 @@ Malay
 Malayalam
 Maltese
 Maori
+MapKey::GetBoolValue
+MapKey::GetInt32Value
+MapKey::GetInt64Value
+MapKey::GetStringValue
+MapKey::GetUInt32Value
+MapKey::GetUInt64Value
+MapKey::type MapKey is not initialized. 
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetMessageValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueRef::MutableMessageValue
+MapValueRef::SetBoolValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetEnumValue
+MapValueRef::SetFloatValue
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetStringValue
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
 Marathi
 March
 Marlett
 Matched '%s' -> '%s'\n
+MaybeAllocateAligned cannot fail here.
 Memory allocation failed while processing sCAL
 Menu
 MenuName
+Message class "
+Message does not support reflection (type 
+Message is too deep, the parser exceeded the configured recursion limit of 
+Message missing required fields: 
+Message of type "
+Message type "
+MessageLite at 0x
+MessageOptions
+MessageSet is not supported in proto3.
+MessageSets cannot have fields, only extensions.
+Messages can't have default values!
+Messages can't have default values.
+MethodDescriptorProto
+MethodOptions
 Minute
 Minutes
 Missing IHDR before IDAT
 Missing PLTE before IDAT
+Missing field: FileDescriptorProto.name.
+Missing name.
 ModalSubTree
 Monday
 Mongolian
@@ -1351,6 +2092,10 @@ MousePressed
 MouseReleased
 MouseScrolled
 Move
+Multiple extension registrations for type "
+MutableMessage
+MutableRawRepeatedField
+MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N17CFileWriterThread14CFileWriteItemE
@@ -1375,6 +2120,104 @@ N4vgui7ISystemE
 N4vgui8ISurfaceE
 N4vgui9ILocalizeE
 N4vgui9VGUISetupE
+N6google8protobuf10TextFormat17BaseTextGeneratorE
+N6google8protobuf10TextFormat17FieldValuePrinterE
+N6google8protobuf10TextFormat21FastFieldValuePrinterE
+N6google8protobuf10TextFormat6FinderE
+N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
+N6google8protobuf10TextFormat7Printer13TextGeneratorE
+N6google8protobuf11EnumOptionsE
+N6google8protobuf11FileOptionsE
+N6google8protobuf11MessageLiteE
+N6google8protobuf12FieldOptionsE
+N6google8protobuf12OneofOptionsE
+N6google8protobuf13MethodOptionsE
+N6google8protobuf14DynamicMessageE
+N6google8protobuf14FatalExceptionE
+N6google8protobuf14MessageFactoryE
+N6google8protobuf14MessageOptionsE
+N6google8protobuf14ServiceOptionsE
+N6google8protobuf14SourceCodeInfoE
+N6google8protobuf15DescriptorProtoE
+N6google8protobuf16EnumValueOptionsE
+N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
+N6google8protobuf17FileDescriptorSetE
+N6google8protobuf17GeneratedCodeInfoE
+N6google8protobuf18DescriptorDatabaseE
+N6google8protobuf19EnumDescriptorProtoE
+N6google8protobuf19FileDescriptorProtoE
+N6google8protobuf19UninterpretedOptionE
+N6google8protobuf20FieldDescriptorProtoE
+N6google8protobuf20OneofDescriptorProtoE
+N6google8protobuf21DynamicMessageFactoryE
+N6google8protobuf21ExtensionRangeOptionsE
+N6google8protobuf21MethodDescriptorProtoE
+N6google8protobuf22DescriptorPoolDatabaseE
+N6google8protobuf22ServiceDescriptorProtoE
+N6google8protobuf23SourceCodeInfo_LocationE
+N6google8protobuf24EnumValueDescriptorProtoE
+N6google8protobuf24MergedDescriptorDatabaseE
+N6google8protobuf24SimpleDescriptorDatabaseE
+N6google8protobuf24ZeroCopyCodedInputStreamE
+N6google8protobuf25EncodedDescriptorDatabaseE
+N6google8protobuf28GeneratedCodeInfo_AnnotationE
+N6google8protobuf28UninterpretedOption_NamePartE
+N6google8protobuf29DescriptorProto_ReservedRangeE
+N6google8protobuf2io14ErrorCollectorE
+N6google8protobuf2io15FileInputStream22CopyingFileInputStreamE
+N6google8protobuf2io15FileInputStreamE
+N6google8protobuf2io16ArrayInputStreamE
+N6google8protobuf2io16FileOutputStream23CopyingFileOutputStreamE
+N6google8protobuf2io16FileOutputStreamE
+N6google8protobuf2io17ArrayOutputStreamE
+N6google8protobuf2io18CopyingInputStreamE
+N6google8protobuf2io18IstreamInputStream25CopyingIstreamInputStreamE
+N6google8protobuf2io18IstreamInputStreamE
+N6google8protobuf2io18StringOutputStreamE
+N6google8protobuf2io19CopyingOutputStreamE
+N6google8protobuf2io19LimitingInputStreamE
+N6google8protobuf2io19OstreamOutputStream26CopyingOstreamOutputStreamE
+N6google8protobuf2io19OstreamOutputStreamE
+N6google8protobuf2io19ZeroCopyInputStreamE
+N6google8protobuf2io20ZeroCopyOutputStreamE
+N6google8protobuf2io24ConcatenatingInputStreamE
+N6google8protobuf2io25CopyingInputStreamAdaptorE
+N6google8protobuf2io26CopyingOutputStreamAdaptorE
+N6google8protobuf30DescriptorProto_ExtensionRangeE
+N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
+N6google8protobuf7MessageE
+N6google8protobuf8internal12FieldSkipperE
+N6google8protobuf8internal12MapFieldBaseE
+N6google8protobuf8internal15DynamicMapFieldE
+N6google8protobuf8internal15ExtensionFinderE
+N6google8protobuf8internal16MapFieldAccessorE
+N6google8protobuf8internal19ImplicitWeakMessageE
+N6google8protobuf8internal20RepeatedFieldWrapperIbEE
+N6google8protobuf8internal20RepeatedFieldWrapperIdEE
+N6google8protobuf8internal20RepeatedFieldWrapperIfEE
+N6google8protobuf8internal20RepeatedFieldWrapperIiEE
+N6google8protobuf8internal20RepeatedFieldWrapperIjEE
+N6google8protobuf8internal20RepeatedFieldWrapperIxEE
+N6google8protobuf8internal20RepeatedFieldWrapperIyEE
+N6google8protobuf8internal21RepeatedFieldAccessorE
+N6google8protobuf8internal22MessageSetFieldSkipperE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperISsEE
+N6google8protobuf8internal23TypeDefinedMapFieldBaseINS0_6MapKeyENS0_11MapValueRefEEE
+N6google8protobuf8internal24GeneratedExtensionFinderE
+N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
+N6google8protobuf8internal29CodedOutputStreamFieldSkipperE
+N6google8protobuf8internal29DescriptorPoolExtensionFinderE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIbEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIdEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIfEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIiEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIjEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIxEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIyEE
+N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
+N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
+N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N9OaP
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
@@ -1382,6 +2225,9 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NJ2"v
+NOT_FOUND
+NO_SIDE_EFFECTS
+NSt3_V214error_categoryE
 NSt6locale5facetE
 NSt8ios_base7failureE
 NULL
@@ -1390,18 +2236,29 @@ NULL output buffer with non-zero size passed to Base64Encode
 NULL row buffer
 NV-CONTROL
 Name
+NamePart
+Need space between identifier and decimal point.
+Need space between number and identifier.
 Nepali
 Nil time value
 No IDATs written into file
+No default value
+No field named "uninterpreted_option" in the Options proto.
 No font for char %u
 No profile for iCCP chunk
 No space in chunk cache for sPLT
 No valid page for string texture of %dx%d size
+Non-primitive types can't be packed.
+Non-repeated Any specified multiple times.
+Non-repeated field "
 None
 Norwegian
 Not a PNG file
 Not enough image data
+Not implemented field number 
 Not recognizing known sRGB profile that has been edited
+Not supported.
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notifications.DisplayTime
 Notifications.FadeInTime
 Notifications.FadeOutTime
@@ -1412,10 +2269,25 @@ Notifications.SlideDirection
 Notifications.StackSize
 November
 Num %5u, Size %4u, Total Kb %2u, Class %s\n
+Numbers starting with leading zero must be in octal.
 O*9y]
+OPENSSL_atomic_add
+OPENSSL_cleanse
+OPENSSL_far_spin
+OPENSSL_ia32_cpuid
+OPENSSL_ia32_rdrand_bytes
+OPENSSL_ia32_rdseed_bytes
+OPENSSL_ia32cap
+OPENSSL_instrument_bus
+OPENSSL_instrument_bus2
+OPENSSL_instrument_halt
+OPENSSL_rdtsc
+OPENSSL_wipe_cpu
 OSX1010
 OTHER
+OUT_OF_RANGE
 OZw3(?
+O\n\nAnnotation
 October
 Odia
 On-disk registry has changed and is marked dirty - we're about to lose data.
@@ -1425,18 +2297,27 @@ OnChromePaintBufferClientDisconnect m_mapShMemFD has %d entries, m_mapChromePain
 OnChromePaintBufferClientDisconnect m_mapShMemFD pid %u, ShMemFD %d\n
 OnScreenSizeChanged
 OnTaskBarChanged
+Oneof must have at least one field.
+OneofDescriptorProto
+OneofOptions
 Only compression method 8 is supported by PNG
 Only compression windows <= 32k supported by PNG
 Only compression windows >= 256 supported by PNG
 OpenGL GLX context is not using direct rendering
 OpenGL GLX context is not using direct rendering, which may cause performance problems.\n\nFor more information visit https://support.steampowered.com/kb_article.php?ref=9938-EYZB-7457
 OpenGL GLX extension not supported by display
+Option "
+Option field "
+Option must have a name.
+Option must not use reserved name "uninterpreted_option".
 Out of Memory
 Out of memory
 Overwriting on-disk registry with newly created registry.
 PCS illuminant is not D50
 PERFORMANCE
+PERMISSION_DENIED
 PICTURES
+PLACEHOLDER_VALUE
 PLATFORM
 PNG file corrupted by ASCII conversion
 PNG load error %s\n
@@ -1482,6 +2363,9 @@ Potential overflow in png_zalloc()
 PrepareBuffer( nNewLength ) == pstrNew
 Primary
 Print out details of which panel has keyboard focus
+Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
+Protocol Buffer map usage error:\n
+Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
 Qkkbal
@@ -1490,24 +2374,40 @@ Quit
 QyReSOT5U
 R1h58
 RADV_FORCE_VRS_CONFIG_FILE
+RC4_options
+RC4_set_key
+RESOURCE_EXHAUSTED
 RGB color space not permitted on grayscale PNG
 RGBA: %.2X %.2X %.2X %.2X
+Reached an unintended state: CPPTYPE_MESSAGE
+Reached impossible case in HasBit().
 Read Error
 Read failure in png_handle_zTXt
 Read palette index exceeding num_palette
 Really too many panels, crashing
+Recursion limit at end of parse should be 
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 Registry
+ReleaseLast
+ReleaseLast() called on a RepeatedPtrField that is on an arena, 
+ReleaseMessage
 Remaining
+RemoveLast
 Render command has left edge > right edge: '%s'\n
 Render command has top edge > bottom edge: '%s'\n
 Render command has x0 and x1 reversed: '%s'\n
 Render command has y0 and y1 reversed: '%s'\n
+Repeated fields can't have default values.
 Request Major code %d
+Requested size is too large to fit into size_t.
+Required fields are not allowed in proto3.
+Reserved numbers must be positive integers.
+Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
+Reserved range end number must be greater than start number.
 ResourceID
 ResourceID 0x%x
 Romanian
@@ -1536,6 +2436,7 @@ SHADER_COMPILER
 SKIN
 SKyu
 SOFTWARE\Valve\Steam
+SPEED
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_GAMESCOPE_DYNAMIC_REFRESH_IN_STEAM_SUPPORTED
 STEAM_GAMESCOPE_VRR_SUPPORTED
@@ -1548,20 +2449,23 @@ STEAM_SCREEN_MAGNIFICATION
 STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
 STEAM_USE_DYNAMIC_VRS
+STRING
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving unknown chunk:
 Scheme
 Scots
 Second
+Second argument to Swap() (of type "
+Second argument to SwapFields() (of type "
 Secondary
 Seconds
+SecureRandomBytes
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 SendSHMemFDToClient pid %d failed: %d %s\n
 September
 Serbian
-SerializedSurface::DrawLine() not yet implemented\n
 SerializedSurface::DrawOutlinedCircle() not yet implemented\n
 SerializedSurface::DrawPolyLine() not yet implemented\n
 SerializedSurface::DrawTexturedLine() not yet implemented\n
@@ -1569,16 +2473,39 @@ SerializedSurface::DrawTexturedPolyLine() not yet implemented\n
 SerializedSurface::DrawTexturedPolygon() not yet implemented\n
 SerializedSurface::DrawTexturedSubRect() not yet implemented\n
 SerializedSurface::RestrictPaintToSinglePanel() not yet implemented\n
+ServiceDescriptorProto
+ServiceOptions
 Set Steam client UI language
+SetAllocatedMessage
 SetAlpha
+SetBool
+SetDouble
+SetEnum
+SetEnumValue
+SetFloat
 SetFocus
 SetForegroundWindow
 SetHostname
+SetInt32
+SetInt64
 SetMouseFocus()
+SetRepeatedBool
+SetRepeatedDouble
+SetRepeatedEnum
+SetRepeatedFloat
+SetRepeatedInt32
+SetRepeatedInt64
+SetRepeatedString
+SetRepeatedUInt32
+SetRepeatedUInt64
 SetScreenSize from (%d, %d) to ( %d, %d ) with pixel size (%d, %d)\n
+SetString
 SetTimezone
 SetTopLevelFocus
+SetUInt32
+SetUInt64
 ShellExecute
+Should not reach here.
 Simplified_Chinese
 Sindhi
 Sinhala
@@ -1591,8 +2518,10 @@ SmcGetIceConnection
 SmcOpenConnection
 SmcSaveYourselfDone
 SolveTraverse
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Sorani
 Sotho
+SourceCodeInfo
 Spanish
 Spew details about the localized strings we load
 St10ctype_base
@@ -1607,6 +2536,7 @@ St11logic_error
 St12codecvt_base
 St12length_error
 St12out_of_range
+St12system_error
 St13bad_exception
 St13basic_istreamIwSt11char_traitsIwEE
 St13basic_ostreamIwSt11char_traitsIwEE
@@ -1614,6 +2544,7 @@ St13messages_base
 St13runtime_error
 St15basic_streambufIcSt11char_traitsIcEE
 St15basic_streambufIwSt11char_traitsIwEE
+St15basic_stringbufIcSt11char_traitsIcESaIcEE
 St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
@@ -1623,6 +2554,7 @@ St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
 St18__moneypunct_cacheIwLb1EE
+St19basic_ostringstreamIcSt11char_traitsIcESaIcEE
 St20bad_array_new_length
 St21__ctype_abstract_baseIwE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
@@ -1700,14 +2632,20 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+String field
+String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
+StringPrintfVector currently only supports up to 
 Sunday
 SurfaceSetCursorPos needs to be implemented!\n
 Swahili
+Swap
 Swedish
 SwitchToUser
+Symbol name "
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Synthetic oneofs must be after all other oneofs
 TARGETS
 TEXT
 THIRD_PARTY
@@ -1730,6 +2668,16 @@ Tatar
 Telugu
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
 Thai
+The JSON camel-case name of field "
+The [proto3_optional=true] option may only be set on proto3fields, not 
+The extension 
+The first enum value must be zero in proto3.
+The type parameter T in RepeatedFieldRef<T> API doesn't match 
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
+This program requires version 
+This program was compiled against version 
+This shouldn't be called if all the sizes are equal.
+ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadImplOneTimeInit
 ThreadInMainThread
@@ -1752,13 +2700,24 @@ Too much image data
 TopLeft
 TopRight
 Traditional_Chinese
+Tried to merge messages of different types 
+Tried to register a non-generated type with the generated type registry.
+True
 Tswana
 Tuesday
 Turkish
 Turkmen
+Type
+Type appears to be in generated pool but wasn't 
+Type is already registered: 
+UNAUTHENTICATED
+UNAVAILABLE
 UNDEFINED_BEHAVIOR
+UNIMPLEMENTED
 UNKNOWN
+UNKNOWN_ENUM_VALUE_%s_%d
 UTF-8
+UTF-8 data when 
 UTF8_STRING
 UUUU
 Ukrainian
@@ -1767,14 +2726,20 @@ Unable to initalize freetype library, is it installed?
 Unable to open display
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unexpected end of string.
+Unexpected failure while serializing option submessage 
 Unexpected number of glibc version components
 Unexpected number of glibc version components: %d
 Unhandled eRegKeyRoot passed into HKeyGet
 UnhandledMouseClick
+Unimplemented type: 
 Uninitialized row
+Uninterpreted option is missing name or value.
+UninterpretedOption
 Unknown
 Unknown compression method in IHDR
 Unknown custom filter method
+Unknown enumeration value of "
 Unknown filter method in IHDR
 Unknown freer parameter in png_data_freer
 Unknown interlace method in IHDR
@@ -1782,8 +2747,11 @@ Unknown key '%s' set in style '%s' in file '%s'\n
 Unknown row filter for method 0
 Unmatched %s\n
 Unrecognized equation type for pCAL chunk
+Unrecognized syntax: 
 Unrecognized unit type for oFFs chunk
 Unrecognized unit type for pHYs chunk
+Unsupported
+Unsupported: type mismatch
 UpdateMouseFocus()
 Urdu
 UserConfigData
@@ -1879,12 +2847,27 @@ Valencian
 Valid palette required for paletted images
 Value
 Value 0x%x
+Value must be "true" or "false" for boolean option "
+Value must be identifier for boolean option "
+Value must be identifier for enum-valued option "
+Value must be integer for int32 option "
+Value must be integer for int64 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for double option "
+Value must be number for float option "
+Value must be quoted string for string option "
+Value of type "
+Value out of range for int32 option "
+Value out of range for int64 option "
+Value out of range for uint32 option "
 Valve Steam Client
 Valve Steam Client/%s
 Valve Steam GameOverlay
 Vc0a
 Vertical
 Vietnamese
+WARNING
 WARNING: Failed to initialize base backlight, using dpaux as fallback\n
 WARNING: discarding _NET_WM_PID %u as invalid for X11 window - use specialized XCB_X11_TO_PID function!\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
@@ -1906,6 +2889,7 @@ WM_STATE
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Warning
+Warning parsing text-format 
 Warning: %s: lsof is required to run steam and it may not be available - please install
 Warning: %s: unexpected number of address fields
 Warning: Failed to find a compatible 32bpp X11 visual\n
@@ -2077,6 +3061,7 @@ YearOrMore
 Yoruba
 You need to name the scheme!
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+Z-google.golang.org/protobuf/types/descriptorpb
 Z0000
 Z_OK on Z_FINISH with output space
 Zjz\v
@@ -2087,12 +3072,77 @@ Zulu
 [abi:
 [english]
 [h1R
+[lazy = true] can only be specified for submessage fields.
+[libprotobuf %s %s:%d] %s\n
+[packed = true] can only be specified for repeated primitive fields.
 [{KEY_LBRACKET
+\%03o
+\U%08x
+\n    Actual    : 
+\n    Field type: 
+\n  Field       : 
+\n  Message type: 
+\n  Problem     : 
+\n  Problem     : Enum value did not match field type:\n    Expected  : 
+\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n Total Panels %u, total size in Kb %u \n
+\n google/protobuf/descriptor.proto
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nParsing attempt:  
 \nYg:a
+\n\fFieldOptions
+\n\fLITE_RUNTIME
+\n\fSTRING_PIECE
+\n\fTYPE_FIXED32
+\n\fTYPE_FIXED64
+\n\fTYPE_MESSAGE
+\n\fdouble_value
+\n\fis_extension
+\n\fjava_package
+\n\fruby_package
+\n\fstring_value
+\n\fswift_prefix
+\n\nIDEMPOTENT
+\n\nTYPE_BYTES
+\n\nTYPE_FLOAT
+\n\nTYPE_GROUP
+\n\nTYPE_INT32
+\n\nTYPE_INT64
+\n\nboxed_type
+\n\ndependency
+\n\ndeprecated
+\n\ngo_package
+\n\ninput_type
+\n\rMethodOptions
+\n\rTYPE_SFIXED32
+\n\rTYPE_SFIXED64
+\n\rdefault_value
+\n\rphp_namespace
+\n\rreserved_name
+\n\tjson_name
+\n\tmap_entry
+\n\tname_part
+\n\ttype_name
+\n\vEnumOptions
+\n\vFileOptions
+\n\vTYPE_DOUBLE
+\n\vTYPE_SINT32
+\n\vTYPE_SINT64
+\n\vTYPE_STRING
+\n\vTYPE_UINT32
+\n\vTYPE_UINT64
+\n\vallow_alias
+\n\voneof_index
+\n\voutput_type
+\n\vsource_file
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \rRoOs
+\r\n\tCODE_SIZE
+\r\n\tJS_NORMAL
+\r\n\tJS_NUMBER
+\r\n\tJS_STRING
+\r\n\tTYPE_BOOL
+\r\n\tTYPE_ENUM
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \rmj>zjZ
 \t(%zu) comparing %s with %s\n
@@ -2102,6 +3152,7 @@ Zulu
 \u%04x
 \u000
 \u001
+\x%02x
 \|KEY_BACKSLASH
 ]JldN
 ]}KEY_RBRACKET
@@ -2154,6 +3205,7 @@ _XReply
 _XSend
 _XSetLastRequestRead
 ___tls_get_addr
+__assert_fail
 __ctype_b_loc
 __ctype_get_mb_cur_max
 __ctype_tolower_loc
@@ -2162,10 +3214,12 @@ __cxa_finalize
 __dprintf_chk
 __duplocale
 __errno_location
+__fdelt_chk
 __float128
 __fprintf_chk
 __fread_chk
 __freelocale
+__fxstat
 __fxstat64
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
@@ -2177,16 +3231,20 @@ __longjmp_chk
 __lxstat
 __lxstat64
 __memcpy_chk
+__memset_chk
 __newlocale
 __nl_langinfo_l
 __printf_chk
 __pthread_key_create
 __realpath_chk
+__register_atfork
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail
+__strcat_chk
 __strcoll_l
 __strcpy_chk
+__strdup
 __strftime_l
 __strncat_chk
 __strtod_l
@@ -2197,6 +3255,7 @@ __towlower_l
 __towupper_l
 __uselocale
 __vasprintf_chk
+__vfprintf_chk
 __vsnprintf_chk
 __wcscoll_l
 __wcsftime_l
@@ -2241,6 +3300,7 @@ __wrap_unlink
 __wrap_utime
 __wrap_utimes
 __xmknod
+__xpg_strerror_r
 __xstat
 __xstat64
 _childDar
@@ -2248,6 +3308,7 @@ _english.txt
 _exit
 _fini
 _init
+_longjmp
 _popupList
 _setjmp
 _strlwr
@@ -2265,9 +3326,25 @@ abort
 about to perform blocking dns call from the main thread.  consider refactoring.\n
 accept
 access
+accessor_ == other.accessor_
 active
+additional_includes
 additive
+aesni_cbc_encrypt
+aesni_ccm64_decrypt_blocks
+aesni_ccm64_encrypt_blocks
+aesni_ctr32_encrypt_blocks
+aesni_decrypt
+aesni_ecb_encrypt
+aesni_encrypt
+aesni_ocb_decrypt
+aesni_ocb_encrypt
+aesni_set_decrypt_key
+aesni_set_encrypt_key
+aesni_xts_decrypt
+aesni_xts_encrypt
 afrikaans
+aggregate_value
 alCaptureDevice
 albanian
 alcGetString
@@ -2277,6 +3354,7 @@ allocator
 allow-both
 allow-horizontal
 allow-vertical
+allowed in proto3.
 alnum
 alpha
 alphasort64
@@ -2325,10 +3403,16 @@ basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
 basic_string::copy
 basic_string::erase
+basic_string::insert
+basic_string::replace
 basic_string::resize
+basic_string::substr
 basque
+begin
 belarusian
 bg_BG
 bgcolor
@@ -2339,7 +3423,21 @@ bitNum >= 0 && bitNum < this->Size()
 black
 blank
 blur
+bn_GF2m_mul_2x2
+bn_add_words
+bn_div_words
+bn_mul_add_words
+bn_mul_comba4
+bn_mul_comba8
+bn_mul_mont
+bn_mul_words
+bn_sqr_comba4
+bn_sqr_comba8
+bn_sqr_words
+bn_sub_part_words
+bn_sub_words
 bool
+bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
 bosnian
 bottom
@@ -2350,10 +3448,13 @@ broadcast
 btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 buffer error
+buffer. Use the 'bytes' type if you intend to send raw 
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 bulgarian
 bwiO'
 byte
+bytes
+bytes. 
 cActualReplacements == cReplacements
 cCKEY_C
 cHRM
@@ -2374,15 +3475,20 @@ calloc
 can't convert int64 to uint64 (negative number)
 can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
+can't reach here.
+cannot create std::vector larger than max_size()
 catalan
 cbActual < (uint32)nBufSizeWithTerminator
 cbToRead <= 1024 * 1024 * 1024
+cc_enable_arenas
+cc_generic_services
 cchEncodedData > 0
 cchEncodedData >= ( cubData * 2 ) + 1
 center
 changing kb focus from %s (%p) to %s (%p)\n
 changing mouse focus from %s to %s\n
 char
+char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
 char16_t
 char32_t
 char8_t
@@ -2393,21 +3499,30 @@ chmod
 chown
 chunk data is too large
 clientWindow
+client_streaming
 clientui.so
 clip.m_iTempCount <= clip.m_pTempVertices.Count()
 clock_gettime
 close
+close() failed: 
 closedir
 cntrl
 code
 color map overflow (BAD internal error)
 color-map index out of range
 colors
+com.google.protobufB
 command
 complex 
 compressed data too long
 conflicting calls to set alpha mode and background
+connect
 console
+const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
+const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
+const string& google::protobuf::UnknownField::length_delimited() const
 const_cast
 construction vtable for 
 content_adaptive_brightness
@@ -2424,6 +3539,8 @@ count >= 0
 covariant return thunk to 
 croatian
 cs_CZ
+csharp_namespace
+ctype
 cubBytesToRead < INT32_MAX
 cubData
 cubData < FIO_MAX_IO_BYTES
@@ -2438,6 +3555,7 @@ danish
 dari
 dashedrect
 data error
+data_ == other.data_
 days
 de_DE
 decimal128
@@ -2485,14 +3603,35 @@ eEKEY_E
 eXIf
 echo "%s" | sudo -n tee "%s"
 echo %s | tee %s
+ecp_nistz256_add
+ecp_nistz256_div_by_2
+ecp_nistz256_from_mont
+ecp_nistz256_gather_w5
+ecp_nistz256_gather_w7
+ecp_nistz256_mul_by_2
+ecp_nistz256_mul_by_3
+ecp_nistz256_mul_mont
+ecp_nistz256_neg
+ecp_nistz256_point_add
+ecp_nistz256_point_add_affine
+ecp_nistz256_point_double
+ecp_nistz256_precomputed
+ecp_nistz256_scatter_w5
+ecp_nistz256_scatter_w7
+ecp_nistz256_sqr_mont
+ecp_nistz256_sub
+ecp_nistz256_to_mont
 el_GR
 elem + num <= Count()
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 en_US
+encrypted_contents
+encrypted_font_files
 end-down
 end-right
 endmntent
 english
+enum
 error
 error in user chunk
 error loading file '%s', %s\n
@@ -2508,6 +3647,9 @@ execl
 execl failed, errno %d\n
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
+extend .$0 {\n
+extendee
+extension_range
 extra compressed data
 f.N%H
 fFKEY_F
@@ -2517,6 +3659,7 @@ failed to generate a valid callback handler key
 fallocate64
 false
 false 
+false"
 family
 fclose
 fcntl
@@ -2528,6 +3671,7 @@ fflush
 fgetc
 fgets
 fi_FI
+field
 file
 file error
 fileno
@@ -2539,6 +3683,8 @@ filterEvents
 finnish
 firmware_node/path
 fixed point overflow ignored
+fixed32
+fixed64
 flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
 flags
 float
@@ -2560,6 +3706,7 @@ font-outerglow-offset
 font-size
 font-style
 font-weight
+font_file_name
 fopen
 fopen tmpfile failed\n
 fopen64
@@ -2580,6 +3727,7 @@ fscanf disk-free output failed\n
 fseek
 fseeko64
 fsync %s failed, errno = %d\n
+ftell
 ftello64
 ftruncate64
 fu`z
@@ -2607,6 +3755,7 @@ g_pMemAllocSteam
 g_treeValidStyleKeySymbols
 g_vecTempTextBuffer
 ga-alpha color-map: too few entries
+gai_strerror
 galician
 galileo
 gameoverlayrenderer.so
@@ -2615,16 +3764,34 @@ gamma value
 gamma value does not match libpng estimate
 gamma value does not match sRGB
 gamma value out of range
+gcm_ghash_4bit_mmx
+gcm_ghash_4bit_x86
+gcm_ghash_clmul
+gcm_gmult_4bit_mmx
+gcm_gmult_4bit_x86
+gcm_gmult_clmul
+gcm_init_clmul
+generic
 georgian
 german
 get_disk_info
 getaddrinfo
 getc
+getcontext
 getcwd
+getegid
+getentropy
 getenv
+geteuid
+getgid
+gethostbyname
 getmntent
+getnameinfo
+getpid
 getsockname
+getsockopt
 gettext
+gettimeofday
 getuid
 getwc
 glBegin
@@ -2678,7 +3845,117 @@ glXSwapBuffers
 global constructors keyed to 
 global destructors keyed to 
 gmtime
+gmtime_r
 gnu_get_libc_version
+google.protobuf"G\n
+google.protobuf.
+google.protobuf.Any
+google.protobuf.BoolValue
+google.protobuf.BytesValue
+google.protobuf.DescriptorProto.name
+google.protobuf.DescriptorProto.reserved_name
+google.protobuf.DoubleValue
+google.protobuf.Duration
+google.protobuf.Empty
+google.protobuf.EnumDescriptorProto.name
+google.protobuf.EnumDescriptorProto.reserved_name
+google.protobuf.EnumOptions
+google.protobuf.EnumValueDescriptorProto.name
+google.protobuf.EnumValueOptions
+google.protobuf.ExtensionRangeOptions
+google.protobuf.FieldDescriptorProto.default_value
+google.protobuf.FieldDescriptorProto.extendee
+google.protobuf.FieldDescriptorProto.json_name
+google.protobuf.FieldDescriptorProto.name
+google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldMask
+google.protobuf.FieldOptions
+google.protobuf.FieldOptions.boxed_type
+google.protobuf.FileDescriptorProto.dependency
+google.protobuf.FileDescriptorProto.name
+google.protobuf.FileDescriptorProto.package
+google.protobuf.FileDescriptorProto.syntax
+google.protobuf.FileOptions
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FileOptions.csharp_namespace
+google.protobuf.FileOptions.go_package
+google.protobuf.FileOptions.java_outer_classname
+google.protobuf.FileOptions.java_package
+google.protobuf.FileOptions.objc_class_prefix
+google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_metadata_namespace
+google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.swift_prefix
+google.protobuf.FloatValue
+google.protobuf.GeneratedCodeInfo.Annotation.source_file
+google.protobuf.Int32Value
+google.protobuf.Int64Value
+google.protobuf.ListValue
+google.protobuf.MessageOptions
+google.protobuf.MethodDescriptorProto.input_type
+google.protobuf.MethodDescriptorProto.name
+google.protobuf.MethodDescriptorProto.output_type
+google.protobuf.MethodOptions
+google.protobuf.OneofDescriptorProto.name
+google.protobuf.OneofOptions
+google.protobuf.ServiceDescriptorProto.name
+google.protobuf.ServiceOptions
+google.protobuf.SourceCodeInfo.Location.leading_comments
+google.protobuf.SourceCodeInfo.Location.leading_detached_comments
+google.protobuf.SourceCodeInfo.Location.trailing_comments
+google.protobuf.StringValue
+google.protobuf.Struct
+google.protobuf.Timestamp
+google.protobuf.UInt32Value
+google.protobuf.UInt64Value
+google.protobuf.UninterpretedOption.NamePart.name_part
+google.protobuf.UninterpretedOption.aggregate_value
+google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.Value
+google.protobuf.bridge.MessageSet
+google/protobuf/arena.cc
+google/protobuf/arenastring.cc
+google/protobuf/descriptor.cc
+google/protobuf/descriptor.pb.cc
+google/protobuf/descriptor.proto
+google/protobuf/descriptor_database.cc
+google/protobuf/dynamic_message.cc
+google/protobuf/extension_set.cc
+google/protobuf/extension_set_heavy.cc
+google/protobuf/generated_message_reflection.cc
+google/protobuf/generated_message_util.cc
+google/protobuf/io/coded_stream.cc
+google/protobuf/io/tokenizer.cc
+google/protobuf/io/zero_copy_stream.cc
+google/protobuf/io/zero_copy_stream_impl.cc
+google/protobuf/io/zero_copy_stream_impl_lite.cc
+google/protobuf/map_field.cc
+google/protobuf/message.cc
+google/protobuf/message_lite.cc
+google/protobuf/parse_context.cc
+google/protobuf/reflection_ops.cc
+google/protobuf/repeated_field.cc
+google/protobuf/stubs/common.cc
+google/protobuf/stubs/int128.cc
+google/protobuf/stubs/stringpiece.cc
+google/protobuf/stubs/stringprintf.cc
+google/protobuf/stubs/strutil.cc
+google/protobuf/stubs/substitute.cc
+google/protobuf/text_format.cc
+google/protobuf/unknown_field_set.cc
+google/protobuf/wire_format.cc
+google/protobuf/wire_format_lite.cc
+google::protobuf::FieldDescriptorProto_Label_IsValid(value)
+google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
+google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
+google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
+google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
+google::protobuf::uint64 google::protobuf::UnknownField::varint() const
+google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 gqr<
 gradient
 gradient_horizontal
@@ -2688,6 +3965,7 @@ gray-alpha color-map: too few entries
 gray[16] color-map: too few entries
 gray[8] color-map: too few entries
 greek
+group
 grow-horizontal
 grow-vertical
 gtk_disable_setlocale
@@ -2713,6 +3991,7 @@ hungarian
 hw:%d
 hwmon*
 hxi(j
+i < length_
 i91k
 iCCP
 iCCP: invalid keyword
@@ -2728,6 +4007,8 @@ iconv
 iconv_close
 iconv_open
 id_ID
+idempotency_level
+identifier_value
 ig,o
 igbo
 ignored in grayscale PNG
@@ -2739,6 +4020,9 @@ image_proportional
 image_scale
 image_tiled
 imaginary 
+import "$0";\n
+import public "$0";\n
+import weak "$0";\n
 in use by IDAT
 in_illuminance_raw
 include
@@ -2751,6 +4035,7 @@ incorrect header check
 incorrect length check
 index != m_mapFontTextureCache.InvalidIndex()
 indonesian
+infinity
 info change after png_start_read_image or png_read_update_info
 info.m_pReplacementString == 0
 input()->RunFrame()
@@ -2765,11 +4050,15 @@ inset-right
 inset-top
 insufficient memory
 insufficient memory to read chunk
+int google::protobuf::CalculateBase64EscapedLen(int, bool)
+int32
+int64
 intent outside defined range
 interface
 internal error checking chromaticities
 internal error handling cHRM coefficients
 internal error handling cHRM->XYZ
+internal error in map key sorting
 internal error: array alloc
 internal error: array realloc
 internal row logic error
@@ -2822,6 +4111,7 @@ invalid window size (libpng)
 invalid with alpha channel
 ioctl
 irish
+is_large()
 isalnum
 isspace
 iswcntrl
@@ -2834,6 +4124,14 @@ ja_JP
 japanese
 java Class for 
 java resource 
+java_generate_equals_and_hash
+java_generic_services
+java_multiple_files
+java_outer_classname
+java_string_check_utf8
+json_name = "
+jstype
+jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 jupiter
 k2U\v
 kKKEY_K
@@ -2855,17 +4153,23 @@ l6qnk
 lDa>
 lEd/
 lLKEY_L, L
+label
 lastProgressUpdateTime <= currentTime
 latam
 latvian
 layout
+lazy
 lchown
 ld-linux.so.2
+leading_comments
+leading_detached_comments
 led_brightness
 left-center
 len > 0 || HasError()
+len >= input_len
 length does not match profile
 length exceeds PNG maximum
+length_ >= n
 lenovo
 libGL.so.1
 libICE.so.6
@@ -2903,6 +4207,7 @@ lithuanian
 locale::facet::_S_create_c_locale name not valid
 localeconv
 localtime
+location
 long
 long double
 long long
@@ -3063,12 +4368,16 @@ m_vecTextColorRangeValues
 m_vecTextColorRangeValues.Count()
 m_vecTraversalCache
 macedonian
+makecontext
 malay
 malayalam
 malformed sPLT chunk
 malloc
 maltese
 maori
+map keys are not unique
+map<$0, $1>
+map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
 marathi
 margin
 margin-bottom
@@ -3079,6 +4388,7 @@ maxUnitCount == 1 || maxUnitCount == 2
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
+md5_block_asm_data_order
 memchr
 memcmp
 memcpy
@@ -3086,6 +4396,9 @@ memmove
 memory image too large
 memset
 menuname
+message
+message_set_wire_format
+method
 minimum-height
 minimum-width
 minutes
@@ -3096,12 +4409,15 @@ mkfifo
 mkstemp
 mkstemp errno %d\n
 mktime
+mlock
+mmap
 mmap64
 modf
 modifiers
 mold 1.10.1 (compatible with GNU ld)
 mongolian
 mount
+mprotect
 msync
 munmap
 mwa!
@@ -3122,6 +4438,7 @@ nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 name
 need dictionary
+negative_int_value
 nepali
 new 
 new[]
@@ -3130,6 +4447,7 @@ no color-map for color-mapped image
 no rows for png_write_image to write
 no space in chunk cache
 no_NO
+no_standard_descriptor_accessor
 non-positive height
 non-positive width
 non-transaction clone for 
@@ -3138,11 +4456,14 @@ none
 norwegian
 not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
 null
+nullptr output boolean given.
 num > 0
 numElements <= m_nAllocationCount
 numElements >= 0
+number
 oFFs
 oOKEY_O
+objc_class_prefix
 object
 odia
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
@@ -3153,17 +4474,22 @@ oldwide
 open
 open64
 opendir
+opentype_font_data
 operator
 operator 
 operator"" 
 operator()
 opt3001
+option json_name is not allowed on extension fields.
+optional
+options
 out of memory
 out of place
 out-of-date sRGB profile with no signature
 outerglow
 outline
 output gamma out of expected range
+output specified is nullptr
 overflow
 pCAL
 pCAL: invalid keyword
@@ -3188,6 +4514,10 @@ pRoot->Client()
 pToken
 pVPanel->IsVisible()
 pWatcher != NULL
+package
+package $0;\n\n
+package_version
+packed
 padding
 padding-bottom
 padding-left
@@ -3196,14 +4526,17 @@ padding-top
 palette color-map: too few entries
 panel != 0
 params->GetName()
+parse
 parse render key : Couldn't load image '%s' in '%s'\n
 parse render key : Expected '(', found '%s' in '%s'\n
 parse render key : Expected ')', found '%s' in '%s'\n
 parse render key : Expected [+ - ,], found '%s' in '%s'\n
 parse render key : Expected [x0 y0 x1 y1], found '%s' in '%s'\n
 parse render key : Expected command token, found '%s' in '%s'\n
+parsing
 parsing of file '%s' failed\n
 parsing render key : Expected [, )], found '%s' in '%s'\n
+path
 pchBuffer
 pchData
 pchEncodedData
@@ -3211,9 +4544,13 @@ pchRegPath
 pclose
 pcubDecodedData
 persian
+php_class_prefix
+php_generic_services
+php_metadata_namespace
 pl_PL
 place
 plat
+please implement MergeFrom for your type.
 png_do_encode_alpha: unexpected call
 png_do_quantize returned rowbytes=0
 png_do_rgb_to_gray found nongray pixel
@@ -3260,9 +4597,13 @@ png_write_image: unsupported transformation
 png_write_info was never called before png_write_row
 polish
 poll
+poly1305_blocks
+poly1305_emit
+poly1305_init
 popen
 port
 portuguese
+positive_int_value
 posix_fadvise
 powf
 pppOutVertex
@@ -3272,6 +4613,10 @@ privileged write polkit:%s -> %s\n
 privileged write: %s -> %s\n
 profile '
 profile matches sRGB but writing iCCP instead
+proto
+proto2
+proto3
+proto3_optional
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
@@ -3279,10 +4624,21 @@ pstrNew == pszString
 pt-br
 pt_BR
 pt_PT
+pthread_getspecific
+pthread_key_create
+pthread_key_delete
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+pthread_rwlock_destroy
+pthread_rwlock_init
+pthread_rwlock_rdlock
+pthread_rwlock_unlock
+pthread_rwlock_wrlock
+pthread_self
+pthread_setspecific
 public/steam_tray_48
+public_dependency
 punct
 pure virtual method called\n
 putc
@@ -3290,6 +4646,7 @@ putwc
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwString
 pwrite64
+py_generic_services
 qQKEY_Q
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
@@ -3299,13 +4656,16 @@ rRKEY_R
 read
 read beyond end of data
 read failed, errno %d\n
+readdir
 readdir64
 readlink
 realloc
 realpath
+recursion_budget_ < recursion_limit_
 recvmsg
 reference temporary #
 region
+registered: 
 registry
 registry.vdf
 reinterpret_cast
@@ -3318,8 +4678,11 @@ removing kb focus %s\n
 rename
 render
 render_bg
+repeated
 request_space %llu
+required
 res > 0
+reserved_range
 resizeNumBits >= 0
 resourceClass
 resourceName
@@ -3334,11 +4697,13 @@ rgb[ga] color-map: too few entries
 rgb[gray] color-map: too few entries
 right
 right-wrap
+ripemd160_block_asm_data_order
 rmdir
 ro_RO
 romanian
 root
 rotary
+roundf
 ru&o
 ru_RU
 russian
@@ -3373,26 +4738,48 @@ scroll-horizontal
 scroll-vertical
 seconds
 secondsInterval >= 0
+select
 selectedbgcolor
 selectedtextcolor
 sendfile64
 sendmsg
 sequential row overflow
 serbian
+serialize
+serializing
+server_streaming
+service
+service $0 {\n
 set to see debug vgiui2 messages
+setcontext
 setlocale
 setmntent
+setsockopt
 settings
 setvbuf
+sfixed32
+sfixed64
+sha1_block_data_order
+sha256_block_data_order
+sha512_block_data_order
 shadowtextcolor
 shahmukhi
+shmat
+shmdt
+shmget
 short
 shortname
 showhotkey
 shred --remove %s
+sigaction
+signal
 signed char
 sindhi
 sinhala
+sint32
+sint64
+size too big: 
+size_t to int conversion
 sizeof 
 sizeof...
 slant
@@ -3414,10 +4801,12 @@ snd_ctl_open
 socket
 sorani
 sotho
+source_code_info
 space
 spaceGranted
 spaceReleased
 spacing
+span
 spanish
 sqrt
 sqrtf
@@ -3464,15 +4853,20 @@ steamui.so
 stpcpy
 strcasecmp
 strcasestr
+strcat
 strchr
 strcmp
+strcpy
 strdup
+stream 
 stream end
 stream error
 strerror
 strftime
 strikeout
+string
 string literal
+strings::Substitute format string invalid: asked for "$
 strlen
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
@@ -3481,14 +4875,18 @@ strncpy
 strpbrk
 strptime
 strrchr
+strspn
 strstr
 strtod
+strtof
 strtol
 strtold_l
 strtoll
 strtoul
+strtoull
 style
 styles
+subtype mismatch
 successfullyAdded
 sudo -n /usr/bin/steam_serialnumber.sh
 sudo -n /usr/lib/hwsupport/format-sdcard.sh
@@ -3506,8 +4904,11 @@ swahili
 swedish
 symbol
 symlink
+syntax
+syntax = "$0";\n\n
 syntax error at line %d near: 
 syscall
+sysconf
 system
 system()->RunFrame()
 tEXt
@@ -3523,7 +4924,9 @@ tall
 tall > 0
 tamil
 tatar
+tcgetattr
 tchinese
+tcsetattr
 telugu
 template parameter object for 
 terminate called after throwing an instance of '
@@ -3532,11 +4935,14 @@ terminate called without an active exception\n
 texCoords
 text chunk: out of memory
 text compression mode is out of range
+text format contains deprecated field "
 textcolor
 texture->m_eTextureFormat == ISurface::eTextureFormat_RGBA
 texture->m_eTextureFormat == eTextureFomat
 th_TH
 thai
+the actual field type (for enums T should be the generated enum 
+the global scope
 this
 throw
 throw 
@@ -3552,6 +4958,7 @@ too short
 top-center
 toupper
 tr_TR
+trailing_comments
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
@@ -3560,6 +4967,15 @@ truncated
 tswana
 turkish
 turkmen
+type
+type or int32).
+type() == TYPE_FIXED32
+type() == TYPE_FIXED64
+type() == TYPE_GROUP
+type() == TYPE_LENGTH_DELIMITED
+type() == TYPE_VARINT
+type.googleapis.com/
+type.googleprod.com/
 typeinfo fn for 
 typeinfo for 
 typeinfo for SteamThreadTools::CThread
@@ -3575,6 +4991,10 @@ typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
 uUKEY_U
+uifontfile_format.proto
+uifontfile_format.proto"C\n\rCUIFontFilePB
+uint32
+uint64
 uk_UA
 ukrainian
 unNetworkBitsIPv4 <= 32
@@ -3601,6 +5021,7 @@ ungetc
 ungetwc
 unhandled critical chunk
 unichar
+uninterpreted_option
 unity_launcher_entry_get_for_app_uri
 unity_launcher_entry_get_for_desktop_file
 unity_launcher_entry_get_for_desktop_id
@@ -3645,10 +5066,14 @@ vOther.IsValid()
 vQO+t
 vVKEY_V
 valencian
+value
 valve
 vars
 vecTraversalCache.Count() > 0 && vecTraversalCache[0].vpanel == panel
+vector::_M_default_append
+vector::_M_range_insert
 vector::_M_realloc_insert
+vector::reserve
 vgui/
 vgui2::WM_PAINT
 vgui::Bitmap
@@ -3657,6 +5082,18 @@ vi_VN
 vietnamese
 virtual thunk to 
 void
+void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
+void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
+void google::protobuf::StringPiece::remove_prefix(google::protobuf::stringpiece_ssize_type)
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
+void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
+vpaes_cbc_encrypt
+vpaes_decrypt
+vpaes_encrypt
+vpaes_set_decrypt_key
+vpaes_set_encrypt_key
 vsnprintf
 vtable for 
 vtable for __cxxabiv1::__class_type_info
@@ -3683,6 +5120,8 @@ wcsncpy
 wcsnrtombs
 wcstol
 wctob
+weak
+weak_dependency
 weight
 welsh
 which lsof >/dev/null 2>&1
@@ -3690,6 +5129,7 @@ wide && tall
 wide > 0
 width
 winFont
+with a type that does not implement MergeFrom. This is unsafe; 
 wmemchr
 wmemcmp
 wmemcpy
@@ -3701,6 +5141,7 @@ write
 write %s failed, errno = %d\n
 write() failed, errno %d\n
 writev
+wrong submessage type
 xXKEY_X
 xdg-user-dir %s
 xdigit

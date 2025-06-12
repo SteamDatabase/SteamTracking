@@ -1,0 +1,45 @@
+"resource/layout/ingamegamefps.layout"
+{
+	controls
+	{
+		FPSLabel { controlname=Label }
+		MinLabel { controlname=Label }
+		MinFPSNumber { controlname=Label labeltext="" }
+		MaxLabel { controlname=Label }
+		MaxFPSNumber { controlname=Label labeltext="" }
+
+		Seperator { controlname=Label visible=0 style="PerfSeperator" }
+	}
+
+	styles
+	{
+		Label
+		{
+			font-family="Motiva"
+		}
+
+		GameFPSLabel
+		{
+			font-family="Motiva"
+			font-weight="700"
+
+			textcolor="190 190 190 255"
+		}
+
+		GameFPSValue
+		{
+			font-family="Motiva"
+			textcolor="190 190 190 255"
+		}
+		GameFPSValueWarning
+		{
+			font-family="Motiva"
+			textcolor="218 100 100 255"
+		}
+	}
+	
+	layout
+	{
+		place { control="FPSLabel,MinLabel,MinFPSNumber,MaxLabel,MaxFPSNumber,Seperator" dir="right" align="left-center" spacing=0 }
+	}
+}

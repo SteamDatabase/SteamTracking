@@ -444,6 +444,7 @@ $\nY8O
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s:hscroll
 %s:vscroll
+%sSeperator
 %s_avail
 %s_collapsed
 %s_hidden
@@ -453,7 +454,6 @@ $\nY8O
 %s_written
 %store%
 %storehttps%
-%u FPS
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
@@ -1155,6 +1155,7 @@ $\nY8O
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 15CConVarAccessor
+15CIngameFPSGraph
 15CJSCallbackFunc
 15CMsgBrowserSize
 15CMsgFullRepaint
@@ -1237,8 +1238,8 @@ $\nY8O
 16CSharedMemStream
 16HTMLComboBoxHost
 16ListPanelDragger
-17:58:29
 17CFileWriterThread
+17CIngameFPSGameFPS
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -1252,6 +1253,7 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
+18:28:53
 18CJSCallbackPromise
 18CMsgBlockedRequest
 18CMsgBrowserResized
@@ -1347,6 +1349,7 @@ $\nY8O
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
 24CProportionalIntProperty
+25CIngameFPSPresentationFPS
 25CMsgAckSharedPaintBuffers
 25CMsgBrowserCreateResponse
 25CMsgFileLoadDialog_Filter
@@ -1676,6 +1679,8 @@ BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackButton
 BackUp() can only be called after a successful Next().
+BackgroundHighContrast
+BackgroundLowContrast
 Backspace
 Backup Running
 Bad Access flag on shared mem create: %s: %u\n
@@ -2025,6 +2030,9 @@ CH\f1
 CIMEPanel
 CIPAndPort::GetIPv4 called on IPv6 address
 CIngameFPSBanner
+CIngameFPSGameFPS
+CIngameFPSGraph
+CIngameFPSPresentationFPS
 CJSMethodArgs::AddProtobufAsBinary
 CJSMethodArgs::AddProtobufAsObject
 CLIENTENGINE_INTERFACE_VERSION005
@@ -2447,9 +2455,6 @@ Couldn't parse script file: expected <event name>, found nothing\n
 Couldn't parse script sequence '%s': expected '{', found '%s'\n
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 Couldn't write %s: %s\n
-CounterTextLarge
-CounterTextMedium
-CounterTextSmall
 Coupon has expired
 Create
 Create process failed
@@ -2500,6 +2505,7 @@ DEFINE
 DEFINE group contains more than one branch
 DELETE
 DLOPEN Error:%s\n
+DLSS
 DO NOT PARSE: fields may be stripped and missing.\n
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 D\vvf:
@@ -2886,6 +2892,15 @@ FATAL
 FCVAR_NEVER_AS_STRING
 FCZ&
 FLOAT
+FPS 
+FPSGraph.ColorFPSAvg
+FPSGraph.ColorFPSBad
+FPSGraph.ColorLegend
+FPSGraph.HeightLarge
+FPSGraph.HeightMedium
+FPSGraph.HeightSmall
+FPSLabel
+FPSNumber
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 Facebook query returned an error
@@ -3094,6 +3109,10 @@ Game Release
 Game Server
 Game Voucher
 GameAppID
+GameFPS
+GameFPSLabel
+GameFPSValue
+GameFPSValueWarning
 GameManagedItems
 GameOverlay exiting due to missing PID argument\n
 GameOverlay exiting due to missing manuallyclearframes argument\n
@@ -3178,7 +3197,10 @@ Got gameid on commandline: %llu\n
 Gothic
 GpuTopology
 GrabPay
+GraphLarge
+GraphMedium
 GraphPanel
+GraphSmall
 Greek
 Greenlight Items
 GreenlightItems
@@ -3236,7 +3258,6 @@ Hebrew
 HelpFrontPage
 Hex and octal numbers must be integers.
 HideIMECandidates
-HighContrast
 Hindi
 Hipercard
 Hiragana
@@ -3310,6 +3331,7 @@ Individual
 Indonesian
 Infinite time value
 IngameFPSBanner
+IngameFPSGraph
 Inherited
 Init
 Init Failed
@@ -3436,7 +3458,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun  9 2025
+Jun 12 2025
 June
 K'iche'
 KEY_0
@@ -3769,7 +3791,6 @@ Looking to Trade
 Loop Detected
 Low FPS
 Low Violence
-LowContrast
 Lowered '%s' -> '%s'\n
 Luxembourgish
 Lycian
@@ -3837,6 +3858,8 @@ Master Subscription
 MasterCard
 Mastercard (BoaCompra)
 Matched '%s' -> '%s'\n
+MaxFPSNumber
+MaxLabel
 MaxResults
 Maximize
 Maximum family size exceeded
@@ -3900,6 +3923,8 @@ Miao
 Microtransaction
 Migrate
 MilliSeconds
+MinFPSNumber
+MinLabel
 Minimize
 MinimizeToSysTray
 Mirror
@@ -4457,6 +4482,11 @@ Pending Gift
 Pending Log Request Active
 Pending Refund
 PendingApproval
+PerfHighContrast
+PerfLowContrast
+PerfTextLarge
+PerfTextMedium
+PerfTextSmall
 Permanent
 Permanent Redirect
 Persian
@@ -4518,6 +4548,7 @@ Preferred Owner
 Prefetch
 Prefetching Info
 PrepareBuffer( nNewLength ) == pstrNew
+PresentationFPS
 PressButton
 Priority Auto Update
 Priority Down
@@ -4756,6 +4787,7 @@ SendPerGameConfiguration()
 Sending of an email failed
 SentenceMode
 SentenceModeMenu
+Seperator
 September
 Serbian
 SerialNumber
@@ -5098,7 +5130,6 @@ TextEntryClearButton
 TextEscape
 TextImage::Paint()
 TextKillFocus
-TextLabel
 TextNewLine
 Thaana
 Thai
@@ -8014,6 +8045,8 @@ resource/layout/%s_%s.layout
 resource/layout/htmlfindbar.layout
 resource/layout/htmlpopup.layout
 resource/layout/ingamefpsbanner.layout
+resource/layout/ingamegamefps.layout
+resource/layout/ingamepresentationfps.layout
 resource/layout/layoutdebugdialog.layout
 resource/layout/layoutdebugdialog_details.layout
 resource/layout/pagedragframe.layout
@@ -8665,6 +8698,7 @@ xhosa
 xhotspot
 xpos
 y9*O
+y_Ai
 y_local
 year
 yhotspot

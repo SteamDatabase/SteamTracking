@@ -1263,8 +1263,8 @@ enum EMsg {
 	k_EMsgRMDeleteMemcachedKeys = 7803;
 	k_EMsgRMRemoteInvoke = 7804;
 	k_EMsgBadLoginIPList = 7805;
-	k_EMsgRMMsgTraceAddTrigger = 7806;
-	k_EMsgRMMsgTraceRemoveTrigger = 7807;
+	k_EMsgRMMsgTraceAddOrUpdateTrigger = 7806;
+	k_EMsgRMMsgTraceRemoveTriggers = 7807;
 	k_EMsgRMMsgTraceEvent = 7808;
 	k_EMsgUGSBase = 7900;
 	k_EMsgUGSUpdateGlobalStats = 7900;

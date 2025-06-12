@@ -3432,13 +3432,6 @@ enum UnnamedEnum961ee65102a01e04
 	Talent = 3;
 }
 
-enum UnnamedEnum9702664a8f09fc14
-{
-	Invalid = 0;
-	StreamGone = 1;
-	PlaybackError = 2;
-}
-
 enum UnnamedEnum9744fddc6b9fcf31
 {
 	UNSET = 0;
@@ -4746,6 +4739,14 @@ enum UnnamedEnumfffa6d846ba9b8ac
 	NONE = 0;
 	MOUSE_HOVER = 1;
 	ACTIVE_ITEM = 2;
+}
+
+enum ViewFrom
+{
+	ViewFromBack = 0;
+	ViewFromTop = 1;
+	ViewFromRight = 2;
+	ViewFromLeft = 3;
 }
 
 enum VRInitError

@@ -3646,6 +3646,15 @@
         CountRegistered() {
           return this.m_vecCallbacks.length;
         }
+        static PromiseFromAny(_) {
+          return new Promise((_) => {
+            let _ = [];
+            const _ = () => {
+              __webpack_require__.forEach((_) => _.Unregister()), _();
+            };
+            for (const _ of _) __webpack_require__.push(_.Register(_));
+          });
+        }
       }
       (0, _._)(
         [_],

@@ -2124,7 +2124,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 
 "Steam_Controller_Support_PS4" "PS"
 "Steam_Controller_Support_XBox" "Xbox"
-"Steam_Controller_Support_Generic" "Standard"
+"Steam_Controller_Support_Generic" "Generisch"
 "Steam_Controller_Support_Switch" "Switch"
 "Steam_Controller_Support_None" "Keine Auswahl"
 
@@ -3477,7 +3477,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_TextFilterSettingURL"									"Chatfiltereinstellungen ändern"
 
 "Steam_SettingsInGameScreenshotFolder"	"Screenshot-Ordner"
-"Steam_SettingsInGameTitle"	"Das Steam Overlay"
+"Steam_SettingsInGameTitle"	"Das Steam-Overlay"
 
 "SteamUI_JoinDialog_PreparingToPlay" 	"%game% wird gestartet %dots%"
 "SteamUI_JoinDialog_Title"		"%game% – Steam"

@@ -36,6 +36,7 @@ message CSteamOSManagerState {
 	optional int32 charge_limit_min = 21;
 	optional int32 charge_limit_max = 22;
 	optional int32 charge_limit_default = 23;
+	optional bool is_screen_reader_supported = 24;
 }
 
 message CSteamOSManager_GetState_Request {

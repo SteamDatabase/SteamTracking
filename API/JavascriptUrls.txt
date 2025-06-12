@@ -3458,6 +3458,7 @@ steam://open/settings/customization
 steam://open/settings/friends
 steam://open/settings/ingame
 steam://open/settings/voice
+steam://open/supportalert
 steam://open/systeminfo
 steam://open/systemreport
 steam://open/workshop

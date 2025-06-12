@@ -953,6 +953,7 @@
 "6\n%CCloud_ClientGetAppQuotaUsage_Request
 "6\n4CAuthenticationSupport_MarkTokenCompromised_Response"C\n CCloudGaming_CreateNonce_Request
 "6\n4CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"X\n.CChatRoom_JoinMiniGameForChatRoomGroup_Request
+"6\n4CCommunity_SetRecommendationBotReviewStatus_Response"h\n5CCommunity_GetBotReviewScoreForRecommendation_Request
 "6\n4CFamilyGroups_ResendInvitationToFamilyGroup_Response"N\n%CFamilyGroups_JoinFamilyGroup_Request
 "6\n4CTransportValidation_TriggerSyntheticEvents_Response"J\n6CTransportValidation_NotifySyntheticEvent_Notification
 "7?NWlv
@@ -3077,6 +3078,7 @@ $steammessages_parental_objects.proto"
 '\n"k_EMsgGMGetModifiedConVarsResponse
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
+'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
@@ -3204,6 +3206,8 @@ $steammessages_parental_objects.proto"
 (%p) no more requests allowed on HTTP session (%s)\n
 (%s / %s, host: %s)
 (%s) HTTP Request matches no routing rules: %s, %s, %s\n
+(%s) HTTP Response being sent for: %s http%s://%s %s\n
+(%s) Request Line: %s http%s://%s %s\n
 (%s) content-encoding: %s not yet implemented (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
@@ -3294,6 +3298,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1fTQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3545,7 +3550,7 @@ $steammessages_parental_objects.proto"
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
 (\r"8\n\rCMsgDisableF5
 (\r"9\n$CParties_ChangeNumOpenSlots_Response
-(\r"9\n7CCommunity_ClearSinglePartnerEventsAppPriority_Response*
+(\r"9\n7CCommunity_ClearSinglePartnerEventsAppPriority_Response"
 (\r"9\n7CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request"K\n8CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
 (\r":\n#CChatRoom_GetInviteLinkInfo_Request
 (\r";\n#CMsgClientNetworkingMobileCertReply
@@ -4174,6 +4179,7 @@ $steammessages_parental_objects.proto"
 (\v2@.CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay
 (\v2@.CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent
 (\v2@.CCommunity_MarkPartnerEventsForUser_Request.PartnerEventMarking
+(\v2@.CCommunity_SetRecommendationBotReviewStatus_Request.ReviewLabel
 (\v2@.CPlayer_GetProfileCustomization_Response.PurchasedCustomization
 (\v2@.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor
 (\v2A.CChatRoom_GetMessageHistory_Response.ChatMessage.MessageReaction
@@ -4193,6 +4199,7 @@ $steammessages_parental_objects.proto"
 (\v2I.CMsgClientUCMEnumeratePublishedFilesByUserActionResponse.PublishedFileId
 (\v2J.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPublicData
 (\v2J.CPlayer_GetPurchasedProfileCustomizations_Response.PurchasedCustomization
+(\v2K.CCommunity_GetBotReviewScoreForRecommendation_Response.BotReviewScoreEntry
 (\v2K.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPrivateData
 (\v2L.CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse.AuthorSnapshot"
 (\v2M.CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse.PublishedFileId
@@ -4887,6 +4894,7 @@ $steammessages_parental_objects.proto"
 *\n&k_ESteamDatagramMsg_DataRouterToServer
 *\n&k_ESteamDatagramMsg_DataServerToRouter
 *\n&k_ESteamDatagramMsg_TicketDecryptReply
+*\n&k_ESteamNotificationType_TradeReversal
 *\n&k_ESteamTVContentTemplate_ConveyorBelt
 *\n&k_ESteamTVContentTemplate_QuickExplore
 *\n&k_EStoreCategoryType_ControllerSupport
@@ -6010,7 +6018,7 @@ $steammessages_parental_objects.proto"
 .CMarketingMessageProto"p\n1CMarketingMessages_CreateMarketingMessage_Request
 .CMarketingMessageProto*
 .CMsgAuthTicket
-.CMsgAvailableHardwareUpdate" \n
+.CMsgAvailableHardwareUpdate"7\n
 .CMsgBluetoothManagerDeviceInfo"9\n+CBluetoothManager_GetAdapterDetails_Request
 .CMsgCellList.Cell
 .CMsgClientAppInfoRequest.App
@@ -13744,6 +13752,7 @@ $steammessages_parental_objects.proto"
 4.CAuthenticationSupport_MarkTokenCompromised_Request
 4.CAuthentication_AccessToken_GenerateForApp_Response"
 4.CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
+4.CCommunity_SetRecommendationBotReviewStatus_Request
 4.CContentServerDirectory_GetPeerContentInfo_Response"
 4.CFamilyGroups_ResendInvitationToFamilyGroup_Request
 4.CGameNotifications_OnUserStatusChanged_Notification
@@ -14588,6 +14597,7 @@ $steammessages_parental_objects.proto"
 5.CAuthenticationSupport_QueryRefreshTokenByID_Request
 5.CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"
 5.CCommunity_GetUserPartnerEventsAppPriorities_Request
+5.CCommunity_SetRecommendationBotReviewStatus_Response"
 5.CContentServerDirectory_GetClientUpdateHosts_Request
 5.CFamilyGroups_ResendInvitationToFamilyGroup_Response"
 5.CGameRecording_GetAndTrimPostGameHighlights_Response
@@ -14652,6 +14662,7 @@ $steammessages_parental_objects.proto"
 51CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
 51CClientMetrics_DownloadRates_Notification_StatsInfo
 51CClientMetrics_ReportClientError_Notification_Error
+51CCommunity_SetRecommendationBotReviewStatus_Request
 51CContentServerDirectory_GetPeerContentInfo_Response
 51CFamilyGroups_ResendInvitationToFamilyGroup_Request
 51CGameNotifications_OnUserStatusChanged_Notification
@@ -14672,6 +14683,7 @@ $steammessages_parental_objects.proto"
 52CAuthenticationSupport_QueryRefreshTokenByID_Request
 52CChatRoom_SetChatRoomGroupWatchingBroadcast_Response
 52CCommunity_GetUserPartnerEventsAppPriorities_Request
+52CCommunity_SetRecommendationBotReviewStatus_Response
 52CContentServerDirectory_ConnectedSteamPipeServerInfo
 52CContentServerDirectory_GetClientUpdateHosts_Request
 52CFamilyGroups_ResendInvitationToFamilyGroup_Response
@@ -14691,6 +14703,7 @@ $steammessages_parental_objects.proto"
 52F*
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
+53CCommunity_GetBotReviewScoreForRecommendation_Request
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
 53CContentBuilder_GetMissingDepotChunks_Response_Chunks
 53CContentServerDirectory_GetClientUpdateHosts_Response
@@ -14715,6 +14728,7 @@ $steammessages_parental_objects.proto"
 54CClientMetrics_ReportReactUsage_Notification_RouteData
 54CCommunity_ClearSinglePartnerEventsAppPriority_Request
 54CCommunity_ClearUserPartnerEventsAppPriorities_Request
+54CCommunity_GetBotReviewScoreForRecommendation_Response
 54CContentServerDirectory_GetManifestRequestCode_Request
 54CContentServerDirectory_GetServersForSteamPipe_Request
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -14897,6 +14911,7 @@ $steammessages_parental_objects.proto"
 6-nn
 6.CAccountHardware_RegisterValveIndexComponent_Response"
 6.CAuthenticationSupport_QueryRefreshTokenByID_Response"
+6.CCommunity_GetBotReviewScoreForRecommendation_Request
 6.CCommunity_GetUserPartnerEventsAppPriorities_Response"
 6.CContentServerDirectory_GetClientUpdateHosts_Response"
 6.CGameNotifications_UpdateNotificationSettings_Request
@@ -14936,6 +14951,7 @@ $steammessages_parental_objects.proto"
 63CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent
 63CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 63CCommunity_MarkPartnerEventsForUser_Request_PartnerEventMarking
+63CCommunity_SetRecommendationBotReviewStatus_Request_ReviewLabel
 63CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 63CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 63CPlayer_GetProfileCustomization_Response_PurchasedCustomization
@@ -15002,6 +15018,7 @@ $steammessages_parental_objects.proto"
 7.CAuthentication_BeginAuthSessionViaCredentials_Request
 7.CCommunity_ClearSinglePartnerEventsAppPriority_Request
 7.CCommunity_ClearUserPartnerEventsAppPriorities_Request
+7.CCommunity_GetBotReviewScoreForRecommendation_Response"
 7.CContentServerDirectory_GetManifestRequestCode_Request
 7.CContentServerDirectory_GetServersForSteamPipe_Request
 7.CGameNotifications_UpdateNotificationSettings_Response"
@@ -15026,6 +15043,7 @@ $steammessages_parental_objects.proto"
 72CMsgClientUCMEnumeratePublishedFilesByUserActionResponse_PublishedFileId
 73CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPublicData
 73CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization
+74CCommunity_GetBotReviewScoreForRecommendation_Response_BotReviewScoreEntry
 74CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPrivateData
 75CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse_AuthorSnapshot
 75th
@@ -17579,6 +17597,7 @@ Booty Bass
 Bopomofo
 Borrowed
 Bosnian
+BotReviewScoreEntry
 Bounce
 Bound on 
 Bound on <IPV6>:
@@ -19015,7 +19034,7 @@ CHTTPUtil::BFindNextHeader called with invalid parameters
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 CH\f1
 CHardwarePackageDetails
-CHardwareUpdate_Update_Request"!\n
+CHardwareUpdate_Update_Request
 CHardwareUpdate_Update_Response"?\n+CHardwareUpdate_UpdateProgress_Notification
 CHideCursorMsg""\n\rCSetCursorMsg
 CIJgP
@@ -20054,9 +20073,17 @@ CRemoteClientJobRemotePlayInvite timed out k_ERemoteClientWaitUIProcessStreamSta
 CRemoteClientJobRequestControllerConfig
 CRemoteClientJobStartRemoteApp
 CRemoteClientJobStartRemoteApp couldn't get nonce for NVIDIA launch
+CRemoteClientJobStartRemoteApp timed out waiting for k_ERemoteClientWaitUIClientAuthorizationResponse
+CRemoteClientJobStartRemoteApp timed out waiting for reply (not possible?)
 CRemoteClientJobStartRemoteApp: PerformApplicationPrelaunchCheck( "%s" ) failed with %s
 CRemoteClientJobStartRemoteApp: Post-launch PerformApplicationPrelaunchCheck( "%s" ) failed with %s
 CRemoteClientJobStartStream
+CRemoteClientJobStartStream returning launch result %d
+CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIDriverInstallation
+CRemoteClientJobStartStream timed out k_ERemoteClientWaitUILaunch
+CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIProcessStreamStart
+CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIProcessStreamStop
+CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIStreamingAudioPrepared
 CRemoteClientJobStartStream timed out k_ERemoteClientWaitVRConnectionReady
 CRemoteClientManager - only IPv4 currently supported
 CRemoteClientManager::AutoConnectToRemoteIfNecessary
@@ -25016,7 +25043,6 @@ GetClanOwner
 GetClanOwner() called with unknown clan ID %s - has RequestClanOfficerList() been called?\n
 GetClanRelationship
 GetClanTag
-GetClientActualLauncherType
 GetClientBootstrapMetrics
 GetClientEncryptionKey
 GetClientInfo
@@ -25906,7 +25932,6 @@ HTTP Connection (%p) handle (%X) Dispatching pending request (%p) as failed due 
 HTTP File request %s result: %d
 HTTP POST failed, error code %d\n
 HTTP POST timeout\n
-HTTP Response being sent for: %s http%s://%s %s\n
 HTTP Server has zero active connections.\n
 HTTP Version not supported
 HTTP cache fileio still busy after waiting %dms.  Giving up!\n
@@ -27965,6 +27990,7 @@ M\n\nGetBanList
 M\n\nNotifyText
 M\n\nRenameRole
 M\n\ralt_addresses
+M\n\vReviewLabel
 M\rLAI)haL<|p\t\t
 MaU(a[i
 MacAppSupport
@@ -28329,6 +28355,7 @@ Method GetAvatarHistory() not implemented.
 Method GetBackgroundRecordingFileSize() not implemented.
 Method GetBanList() not implemented.
 Method GetBestEventsForUser() not implemented.
+Method GetBotReviewScoreForRecommendation() not implemented.
 Method GetBroadcastChannelBroadcasters() not implemented.
 Method GetBroadcastChannelClips() not implemented.
 Method GetBroadcastChannelID() not implemented.
@@ -28802,6 +28829,7 @@ Method SetProfileBackground() not implemented.
 Method SetProfilePreferences() not implemented.
 Method SetProfileTheme() not implemented.
 Method SetRTMPInfo() not implemented.
+Method SetRecommendationBotReviewStatus() not implemented.
 Method SetReservationPositionMessage() not implemented.
 Method SetSessionActiveChatRoomGroups() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
@@ -32385,7 +32413,6 @@ Request %s requires validation (ie, conditional GET request)\n
 Request %s\n
 Request Entity Too Large
 Request Header Fields Too Large
-Request Line: %s http%s://%s %s\n
 Request Not Sent
 Request Timeout
 Request being dispatched not in m_mapRequestsAwaitingCompletion
@@ -34178,11 +34205,13 @@ SiteLicense.ClientSeatCheckout#1
 SiteLicense.InitiateAssociation#1
 SiteLicense.LCSAssociateUser#1
 SiteLicense.LCSAuthenticate#1
+SiteLicenseClient
 SiteManagerClient
 SiteManagerClient.ClientSeatCheckoutNotification#1
 SiteManagerClient.IncomingClient#1
 SiteManagerClient.TrackedPaymentsNotification#1
 SiteServer
+SiteServerUI
 SiteServerUI_Login_Request
 SiteServerUI_Login_Response
 SiteServerUI_Logout_Request"K\n
@@ -35060,7 +35089,6 @@ SteamAppUser
 SteamApps001
 SteamBilling002
 SteamBootstrapper_GetEUniverse
-SteamBootstrapper_GetInstallDir
 SteamBootstrapper_GetLoggingDir
 SteamBox
 SteamCache
@@ -37396,6 +37424,7 @@ WXXX
 W\n\fRelatedItems
 W\n\nGetDetails
 W\n\nQueryFiles
+W\n\rreview_labels
 W\n\tOptInInfo
 Wait cause, job, or caller
 Wait for msg
@@ -37519,6 +37548,7 @@ WebUI Transport Websocket Connection
 WebUI method '%s' has already been registered. Skipping duplicate registration
 WebUIJob
 WebUINoResponse*
+WebUITransport
 WebUITransport Health Check
 WebUITransport: 
 WebUITransportHealthCheck
@@ -38814,6 +38844,7 @@ Zulu
 \n GetPartnerReadyToPublishMessages
 \n SetControllerPersonalizationFile
 \n SetDesiredControllerConfigForApp
+\n SetRecommendationBotReviewStatus
 \n Uninstalled AppID: %d\n
 \n UserContentDescriptorPreferences
 \n google/protobuf/descriptor.proto
@@ -38892,6 +38923,7 @@ Zulu
 \n"CreateRemotePlayTogetherInvitation
 \n"DeleteRemotePlayTogetherInvitation
 \n"EPartnerLinkTrackingBackfillSource
+\n"GetBotReviewScoreForRecommendation
 \n"GetMutualFriendsForIncomingInvites
 \n"SiteServerUI_ClientStatus_Response
 \n"StopPlaytimeTrackingForAllAppItems
@@ -39311,6 +39343,7 @@ Zulu
 \n2CPublishedFile_GetAppRelationshipsBatched_Response
 \n2gQ\v\tU
 \n3CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
+\n3CCommunity_SetRecommendationBotReviewStatus_Request
 \n3CGameNotifications_OnUserStatusChanged_Notification
 \n3CGameRecording_RecordingSessionChanged_Notification
 \n3CPlayer_GetMutualFriendsForIncomingInvites_Response
@@ -39325,6 +39358,7 @@ Zulu
 \n5CSteamInputService_GyroQuaternionChanged_Notification
 \n5CSteamNotification_NotificationsReceived_Notification
 \n6CAuthentication_BeginAuthSessionViaCredentials_Request
+\n6CCommunity_GetBotReviewScoreForRecommendation_Response
 \n6CContentServerDirectory_GetManifestRequestCode_Request
 \n6CContentServerDirectory_GetServersForSteamPipe_Request
 \n6CMarketingMessages_GetActiveMarketingMessages_Response
@@ -40057,6 +40091,7 @@ Zulu
 \n\rinternal_name
 \n\rip_was_shared
 \n\ripv6_and_port
+\n\ris_bot_review
 \n\ris_only_delta
 \n\ris_steam_deck
 \n\ris_subscribed
@@ -40123,7 +40158,6 @@ Zulu
 \n\rother_regions
 \n\rother_steamid
 \n\rowner_steamid
-\n\rpacket_number
 \n\rpassword_hash
 \n\rpath_prefixes
 \n\rpersona_state
@@ -40585,6 +40619,7 @@ Zulu
 \n\vfilter_type
 \n\vfolder_path
 \n\vforce_proxy
+\n\vforce_rerun
 \n\vform_factor
 \n\vfrom_fakeip
 \n\vfull_report
@@ -42263,6 +42298,7 @@ boot-loader-entries
 boot_loader_entry
 bootstrap
 bosnian
+bot_review_score
 both
 bots
 boundary
@@ -45189,6 +45225,7 @@ est_usd
 estackingorder
 estate
 estatus
+estimated_packet_rate
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -46220,7 +46257,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen6
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -47963,6 +48000,7 @@ is_restart_pending
 is_root_device
 is_rtmp
 is_save
+is_screen_reader_supported
 is_service_available
 is_shared_file
 is_site_license_lock
@@ -49519,9 +49557,8 @@ k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
 k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceAddTrigger
 k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTrigger
+k_EMsgRMMsgTraceRemoveTriggers
 k_EMsgRMRemoteInvoke
 k_EMsgRMTestVerisignOTP
 k_EMsgRMTestVerisignOTPResponse
@@ -50648,8 +50685,8 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:454
 low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2530
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3940
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2554
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3964
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
@@ -50899,6 +50936,7 @@ m_SSLTCPHost
 m_SSLTCPHostDR
 m_STimeSwitched.LTime() == CSTime::LServerTimeCur()
 m_ScheduledAbortStaleConnection.IsScheduled()
+m_ServerName
 m_ServerSystemInfo
 m_Servers
 m_ServiceMethodsByNames
@@ -55794,6 +55832,7 @@ protocol_version
 proton
 proton-stable
 proton_compat_config
+proton_experimental
 provide_deck_feedback
 providescover
 proxied
@@ -56170,6 +56209,8 @@ recipient-unavailable
 recipientEncryptedKeys
 recipientInfos
 recipientinfo
+recommendation_ids
+recommendationid
 recommended-private-length: %d bits\n
 recommended_runtime
 record length mismatch
@@ -57878,7 +57919,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun  9 2025 17:58:30
+steam Jun 12 2025 18:28:52
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

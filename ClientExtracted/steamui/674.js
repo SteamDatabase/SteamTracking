@@ -76,7 +76,7 @@
     },
     70674: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Qe });
+      n.r(t), n.d(t, { default: () => Pe });
       var a = n(34629),
         o = n(63696),
         r = n(44846),
@@ -92,8 +92,8 @@
         h = n(99447),
         E = n(73674),
         C = n(10606),
-        S = n(98995),
-        M = n(43397),
+        M = n(98995),
+        S = n(43397),
         I = n(49946),
         A = n.n(I),
         T = n(41230),
@@ -246,7 +246,7 @@
           const { selectedLang: e, bDisabled: t, strTooltip: n } = this.props;
           let a = this.GenerateLanguageOptions();
           return o.createElement(
-            S.he,
+            M.he,
             { toolTipContent: n },
             o.createElement(
               "select",
@@ -269,14 +269,13 @@
         z = n(50712),
         H = n(36885),
         G = n(19166),
-        Y = n(56840),
-        F = n(7372),
-        P = n(98592),
-        Q = n(33724),
-        Z = n.n(Q),
-        V = n(48214),
-        W = n.n(V);
-      class J extends P.A {
+        Y = n(7372),
+        F = n(98592),
+        P = n(33724),
+        Q = n.n(P),
+        Z = n(48214),
+        V = n.n(Z);
+      class W extends F.A {
         performSearch(e) {
           let t = Array();
           return (
@@ -295,8 +294,8 @@
         renderMatch(e) {
           return o.createElement(
             "div",
-            { key: e.name, className: (0, p.A)(Z().BBCodeSuggestion) },
-            o.createElement("div", { className: Z().BBCode }, e.name),
+            { key: e.name, className: (0, p.A)(Q().BBCodeSuggestion) },
+            o.createElement("div", { className: Q().BBCode }, e.name),
             "[",
             e.name,
             "]...[/",
@@ -309,7 +308,7 @@
             "div",
             {
               key: "nomatches",
-              className: (0, p.A)(W().mentionSearchOption, W().noMatches),
+              className: (0, p.A)(V().mentionSearchOption, V().noMatches),
             },
             (0, m.we)("#Bbcode_No_Match"),
           );
@@ -324,7 +323,7 @@
           return Number.MAX_VALUE;
         }
       }
-      class X extends o.Component {
+      class J extends o.Component {
         descTextAreaRef = o.createRef();
         m_MentionDialog;
         m_bDisabled = !0;
@@ -460,9 +459,8 @@
             } = this.props;
           switch (this.state.activeSuggestSearchType) {
             case "Emoticon":
-              e = o.createElement(F.A, {
+              e = o.createElement(Y.A, {
                 emoticonStore: t,
-                emoticonHoverStore: Y.s,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -470,7 +468,7 @@
               });
               break;
             case "BBCode":
-              e = o.createElement(J, {
+              e = o.createElement(W, {
                 supportBBCodes: n,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -493,35 +491,35 @@
           );
         }
       }
-      (0, a.Cg)([u.oI], X.prototype, "BindMentionDialog", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnKeyDown", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnFocus", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnKeyPress", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnClick", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, a.Cg)([u.oI], X.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, a.Cg)([u.oI], X.prototype, "FocusTextInput", null),
-        (0, a.Cg)([u.oI], X.prototype, "GetTextAreaRef", null),
-        (0, a.Cg)([u.oI], X.prototype, "GetTextAreaCurrent", null);
-      var K = n(64608),
-        q = n(15688),
-        $ = n(13869),
-        ee = n(3083),
-        te = n.n(ee),
-        ne = n(54644);
-      var ae = n(15918),
-        oe = n(17613),
-        re = n(88750),
-        le = n(13352),
-        se = n(26853),
-        ie = n(73902),
-        ce = n.n(ie),
-        pe = n(90095),
-        me = n(49455),
-        ue = n(57100),
-        ge = n(42318),
-        de = n(63444);
-      const he = (e) => {
+      (0, a.Cg)([u.oI], J.prototype, "BindMentionDialog", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnKeyDown", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnFocus", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnKeyPress", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnClick", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnEmoticonSuggestionSelected", null),
+        (0, a.Cg)([u.oI], J.prototype, "OnBBCodeSuggestionSelected", null),
+        (0, a.Cg)([u.oI], J.prototype, "FocusTextInput", null),
+        (0, a.Cg)([u.oI], J.prototype, "GetTextAreaRef", null),
+        (0, a.Cg)([u.oI], J.prototype, "GetTextAreaCurrent", null);
+      var X = n(64608),
+        K = n(15688),
+        q = n(13869),
+        $ = n(3083),
+        ee = n.n($),
+        te = n(54644);
+      var ne = n(15918),
+        ae = n(17613),
+        oe = n(88750),
+        re = n(13352),
+        le = n(26853),
+        se = n(73902),
+        ie = n.n(se),
+        ce = n(90095),
+        pe = n(49455),
+        me = n(57100),
+        ue = n(42318),
+        ge = n(63444);
+      const de = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
             [a, r] = (0, o.useState)(""),
             l = (0, G.mr)(e.clanSteamID.GetAccountID()),
@@ -531,46 +529,46 @@
               n(e), s();
             };
           return o.createElement(
-            ge.tH,
+            ue.tH,
             null,
             o.createElement(
               C.x_,
               { onEscKeypress: s },
               o.createElement(
-                K.UC,
+                X.UC,
                 null,
                 o.createElement(
-                  K.Y9,
+                  X.Y9,
                   null,
                   (0, m.we)("#ClanImageChooser_Title"),
                 ),
                 o.createElement(
-                  K.nB,
+                  X.nB,
                   null,
                   o.createElement(
-                    K.a3,
+                    X.a3,
                     null,
                     o.createElement(
                       "p",
                       null,
                       (0, m.we)("#ClanImageChooser_Desc"),
                     ),
-                    o.createElement(K.pd, {
+                    o.createElement(X.pd, {
                       placeholder: (0, m.we)("#ClanImageChooser_Search"),
                       value: a,
                       onChange: (e) => r(e.currentTarget.value),
                     }),
                     o.createElement(
                       "div",
-                      { className: de.ImagesOuterContainer },
+                      { className: ge.ImagesOuterContainer },
                       l
-                        ? o.createElement(se.t, {
+                        ? o.createElement(le.t, {
                             size: "medium",
                             string: (0, m.we)("#Loading"),
                           })
                         : Boolean(i.length > 0)
                           ? i.map((e) =>
-                              o.createElement(Ee, {
+                              o.createElement(he, {
                                 key: "ci" + e.image_hash,
                                 clanImage: e,
                                 searchStringHilight: a,
@@ -594,10 +592,10 @@
                   ),
                 ),
                 o.createElement(
-                  K.wi,
+                  X.wi,
                   null,
                   o.createElement(
-                    K.$n,
+                    X.$n,
                     { onClick: s },
                     (0, m.we)("#Button_Cancel"),
                   ),
@@ -606,7 +604,7 @@
             ),
           );
         },
-        Ee = (e) => {
+        he = (e) => {
           const { clanImage: t, searchStringHilight: n, fnImageClick: a } = e;
           let r = t.file_name ? t.file_name : "",
             l = (function (e, t, n, a) {
@@ -644,26 +642,26 @@
                 }
               } else r.push(o.createElement("span", { key: n + "_null" }, t));
               return r;
-            })(n, r, String(t.imageid), de.Hilight);
+            })(n, r, String(t.imageid), ge.Hilight);
           return o.createElement(
             "div",
-            { className: de.ImageContainer },
+            { className: ge.ImageContainer },
             o.createElement("div", {
-              className: de.Image,
+              className: ge.Image,
               style: { backgroundImage: `url( '${t.thumb_url}' )` },
               onDoubleClick: () => a(t),
             }),
             o.createElement(
               "div",
-              { className: de.ImageFilename, title: r },
+              { className: ge.ImageFilename, title: r },
               l,
             ),
           );
         };
-      var Ce = n(67123),
-        Se = n(52709),
+      var Ee = n(67123),
+        Ce = n(52709),
         Me = n(79048);
-      const Ie = (0, T.PA)((e) => {
+      const Se = (0, T.PA)((e) => {
         const {
             clanSteamID: t,
             inputClanImage: n,
@@ -675,9 +673,9 @@
           [i, c] = o.useState(void 0),
           [p, u] = o.useState(Boolean(n)),
           [d, h] = o.useState(!1),
-          [E] = (0, pe.q3)(() => [y.Get().GetCurEditLanguage()]),
-          C = (0, Se.zO)(t, "dummy"),
-          S = o.useCallback(
+          [E] = (0, ce.q3)(() => [y.Get().GetCurEditLanguage()]),
+          C = (0, Ce.zO)(t, "dummy", [L.TU.k_ESteamRealmGlobal], E),
+          M = o.useCallback(
             async (e) => {
               if (
                 (C.ClearImages(),
@@ -695,29 +693,29 @@
             [C, n, l, s],
           );
         o.useEffect(() => {
-          S(n);
-        }, [S, n]);
-        let M,
+          M(n);
+        }, [M, n]);
+        let S,
           I = "",
           A = !1;
         if (C && C.GetFilesToUpload().length > 0) {
-          M = C.GetUploadImages()[0];
-          const e = M.IsValidAssetType(s);
+          S = C.GetUploadImages()[0];
+          const e = S.IsValidAssetType(s);
           (I = e.error), (A = e.needsCrop);
         }
         return o.createElement(
           o.Fragment,
           null,
           p
-            ? o.createElement(se.t, {
+            ? o.createElement(le.t, {
                 size: "medium",
                 string: (0, m.we)("#Loading"),
               })
             : Boolean(i) &&
                 o.createElement("div", {
-                  className: Ce.Image,
+                  className: Ee.Image,
                   style: {
-                    backgroundImage: `url( '${M ? M.dataUrl : i.url}' )`,
+                    backgroundImage: `url( '${S ? S.dataUrl : i.url}' )`,
                     height: `${r}px`,
                     width: `${a}px`,
                   },
@@ -725,13 +723,13 @@
           Boolean(I) && o.createElement("p", null, I),
           A &&
             o.createElement(
-              K.$n,
+              X.$n,
               {
                 onClick: (e) => {
-                  const t = (0, ne.uX)(e);
+                  const t = (0, te.uX)(e);
                   let n = C.GetUploadImages()[0];
-                  (0, $.pg)(
-                    o.createElement(ue.q, {
+                  (0, q.pg)(
+                    o.createElement(me.q, {
                       ownerWin: t,
                       uploadFile: n,
                       forceResolution: { width: a, height: r },
@@ -743,43 +741,39 @@
               },
               (0, m.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(M && M.bCropped) &&
+          Boolean(S && S.bCropped) &&
             o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
                 null,
-                (0, m.we)("#ClanImagePickAndResize_UploadStatus", M.status),
+                (0, m.we)("#ClanImagePickAndResize_UploadStatus", S.status),
               ),
               d
-                ? o.createElement(se.t, {
+                ? o.createElement(le.t, {
                     string: (0, m.we)("#Uploading"),
                     size: "small",
                   })
                 : o.createElement(
-                    K.$n,
+                    X.$n,
                     {
                       onClick: async () => {
                         h(!0);
                         try {
-                          const e = await C.UploadAllImages(
-                              [L.TU.k_ESteamRealmGlobal],
-                              E,
-                              s,
-                            ),
+                          const e = await C.UploadAllImages(s),
                             n = Object.values(e);
                           if (
                             n &&
                             n.length > 0 &&
-                            ((0, me.w)(
+                            ((0, pe.w)(
                               1 == n.length,
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 n.length,
                             ),
-                            1 == n[0].success)
+                            n[0].bSuccess)
                           ) {
-                            const e = n[0],
+                            const e = n[0].uploadResult,
                               a = (0, H.mJ)() + t.GetAccountID() + "/",
                               o = (0, Me.EG)(e.file_type),
                               r = a + e.image_hash + o,
@@ -808,16 +802,16 @@
                   ),
             ),
           o.createElement(
-            K.$n,
+            X.$n,
             {
               onClick: (e) => {
                 const t = new j.b(g.UF.CLANSTEAMID);
-                (0, $.pg)(
-                  o.createElement(he, {
+                (0, q.pg)(
+                  o.createElement(de, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => S(e),
+                    fnImageSelectCallBack: (e) => M(e),
                   }),
-                  (0, ne.uX)(e),
+                  (0, te.uX)(e),
                 );
               },
             },
@@ -825,11 +819,11 @@
           ),
         );
       });
-      var Ae,
-        Te = n(16154);
-      let Le = class extends o.Component {
+      var Ie,
+        Ae = n(16154);
+      let Te = class extends o.Component {
         static {
-          Ae = this;
+          Ie = this;
         }
         m_cancelSignal = x().CancelToken.source();
         static s_formattingHelp = new Map();
@@ -837,15 +831,15 @@
           super(e),
             (this.state = {
               formattingHelp: {
-                __html: Ae.s_formattingHelp.has(e.formatType)
-                  ? Ae.s_formattingHelp.get(e.formatType)
+                __html: Ie.s_formattingHelp.has(e.formatType)
+                  ? Ie.s_formattingHelp.get(e.formatType)
                   : "",
               },
             });
         }
         componentDidMount() {
           this.AjaxGetFormattingHelp().catch((e) => {
-            this.setState((0, Te.H)(e));
+            this.setState((0, Ae.H)(e));
           });
         }
         componentWillUnmount() {
@@ -866,11 +860,11 @@
           if ("" == this.state.formattingHelp.__html) {
             let e,
               t = { sessionid: g.TS.SESSIONID };
-            (e = await x().get(Ae.GetHelpURL(this.props.formatType, !0), {
+            (e = await x().get(Ie.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
             })),
-              Ae.s_formattingHelp.set(this.props.formatType, e.data),
+              Ie.s_formattingHelp.set(this.props.formatType, e.data),
               this.setState({ formattingHelp: { __html: e.data } });
           }
         }
@@ -884,7 +878,7 @@
                 this.state.errorCode,
               )
             : "" == this.state.formattingHelp.__html
-              ? o.createElement(se.t, null)
+              ? o.createElement(le.t, null)
               : o.createElement(
                   C.o0,
                   {
@@ -904,12 +898,12 @@
                 );
         }
       };
-      Le = Ae = (0, a.Cg)([T.PA], Le);
-      var Ne,
-        De = n(24546),
-        we = n(34091),
-        ve = n(27793);
-      let ye = class extends o.Component {
+      Te = Ie = (0, a.Cg)([T.PA], Te);
+      var Le,
+        Ne = n(24546),
+        De = n(34091),
+        we = n(27793);
+      let ve = class extends o.Component {
         descAutoTextAreaRef = o.createRef();
         constructor(e) {
           super(e), (this.state = { bShowDragTarget: !1 });
@@ -928,7 +922,7 @@
           e && e.target.select();
         }
         InsertText(e) {
-          be.replaceSelection(this.GetTextAreaRef().current, e);
+          ye.replaceSelection(this.GetTextAreaRef().current, e);
         }
         OnTextAreaDropListener(e) {
           if (
@@ -940,8 +934,8 @@
             if (t && t.length > 0) {
               let e = (0, H.mJ)();
               if (t.startsWith(e)) {
-                let n = "[img]" + De.lw + "/" + t.substr(e.length) + "[/img]";
-                be.replaceSelection(this.GetTextAreaRef().current, n);
+                let n = "[img]" + Ne.lw + "/" + t.substr(e.length) + "[/img]";
+                ye.replaceSelection(this.GetTextAreaRef().current, n);
               }
             }
           }
@@ -955,7 +949,7 @@
           return o.createElement(
             o.Fragment,
             null,
-            o.createElement(ke, {
+            o.createElement(be, {
               pathToImages:
                 g.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
@@ -972,18 +966,18 @@
               "div",
               {
                 className: (0, p.A)(
-                  ce().DescriptionCtn,
-                  ce().BBCodeEditorInputStyles,
-                  this.state.bShowDragTarget ? ce().DragTarget : "",
+                  ie().DescriptionCtn,
+                  ie().BBCodeEditorInputStyles,
+                  this.state.bShowDragTarget ? ie().DragTarget : "",
                   this.props.className ? this.props.className : "",
                 ),
               },
-              o.createElement(X, {
+              o.createElement(J, {
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
                 maxLength: 64e3,
                 className: (0, p.A)(
-                  ce().DefaultEditor,
+                  ie().DefaultEditor,
                   this.props.classNameForTextArea
                     ? this.props.classNameForTextArea
                     : "",
@@ -1003,12 +997,12 @@
           );
         }
       };
-      (0, a.Cg)([u.oI], ye.prototype, "ClanImageDragListener", null),
-        (0, a.Cg)([u.oI], ye.prototype, "onFocus", null),
-        (0, a.Cg)([u.oI], ye.prototype, "OnTextAreaDropListener", null),
-        (0, a.Cg)([u.oI], ye.prototype, "GetTextAreaRef", null),
-        (ye = (0, a.Cg)([T.PA], ye));
-      class be {
+      (0, a.Cg)([u.oI], ve.prototype, "ClanImageDragListener", null),
+        (0, a.Cg)([u.oI], ve.prototype, "onFocus", null),
+        (0, a.Cg)([u.oI], ve.prototype, "OnTextAreaDropListener", null),
+        (0, a.Cg)([u.oI], ve.prototype, "GetTextAreaRef", null),
+        (ve = (0, a.Cg)([T.PA], ve));
+      class ye {
         static BIsFireFox() {
           return Boolean(
             new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -1019,7 +1013,7 @@
         static replaceSelection(e, t) {
           let n = e.selectionStart;
           e.focus(),
-            be.InsertTextAtSelect(t, e),
+            ye.InsertTextAtSelect(t, e),
             e.setSelectionRange(n, n + t.length);
         }
         static getSelectedString(e) {
@@ -1029,19 +1023,19 @@
           );
         }
         static wrapBBCode(e, t, n) {
-          let a = be.getSelectedString(n),
+          let a = ye.getSelectedString(n),
             o = "";
           (o =
             0 == a.indexOf(e) && a.lastIndexOf(t) == a.length - t.length
               ? a.substr(e.length, a.length - e.length - t.length)
               : e + a + t),
-            be.replaceSelection(n, o);
+            ye.replaceSelection(n, o);
         }
         static append(e, t) {
           t &&
             (t.focus(),
             t.setSelectionRange(t.value.length, t.value.length),
-            be.InsertTextAtSelect(e, t));
+            ye.InsertTextAtSelect(e, t));
         }
         static ClearTextArea(e) {
           if (e) {
@@ -1059,7 +1053,7 @@
           }
         }
         static overwrite(e, t) {
-          t && (be.ClearTextArea(t), be.InsertTextAtSelect(e, t));
+          t && (ye.ClearTextArea(t), ye.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
           const n = t.selectionStart,
@@ -1075,32 +1069,32 @@
           t.focus();
         }
       }
-      let ke = class extends o.Component {
+      let be = class extends o.Component {
         m_linkPopupRef = o.createRef();
         onBold() {
-          be.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
         }
         onItalics() {
-          be.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
         }
         onUnderline() {
-          be.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
         }
         onStrikeThrough() {
-          be.wrapBBCode(
+          ye.wrapBBCode(
             "[strike]",
             "[/strike]",
             this.props.fnTextareaRef().current,
           );
         }
         onHeader() {
-          be.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
         }
         onHeader2() {
-          be.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
         }
         onHeader3() {
-          be.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          ye.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
         }
         onUnorderedList() {
           this.handleList("list");
@@ -1113,37 +1107,37 @@
             n = "[" + e + "]\n",
             a = "[/" + e + "]";
           if (t.selectionStart == t.selectionEnd)
-            be.wrapBBCode(n + "[*]", "\n" + a, t);
+            ye.wrapBBCode(n + "[*]", "\n" + a, t);
           else {
             let e =
               n +
-              be
+              ye
                 .getSelectedString(t)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
               a;
-            be.replaceSelection(t, e);
+            ye.replaceSelection(t, e);
           }
         }
         OnAddLink(e) {
-          (0, $.HT)(
-            o.createElement(Be, { textareaRef: this.props.fnTextareaRef() }),
-            (0, ne.uX)(e),
+          (0, q.HT)(
+            o.createElement(xe, { textareaRef: this.props.fnTextareaRef() }),
+            (0, te.uX)(e),
           );
         }
         ShowHelpDialog(e) {
           this.props.showFormatHelp &&
-            (0, $.HT)(
-              o.createElement(Le, { formatType: this.props.showFormatHelp }),
-              (0, ne.uX)(e),
+            (0, q.HT)(
+              o.createElement(Te, { formatType: this.props.showFormatHelp }),
+              (0, te.uX)(e),
             );
         }
         OnConvertHTMLToBBCodeDialog(e) {
-          const t = (0, ne.uX)(e);
-          (0, $.HT)(
-            o.createElement(Ue, {
+          const t = (0, te.uX)(e);
+          (0, q.HT)(
+            o.createElement(Re, {
               ownerWindow: t,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -1152,32 +1146,32 @@
         }
         OnOpenYoutubeDialog(e) {
           let t = g.TS.IMG_URL + "applications/community/";
-          (0, $.HT)(
-            o.createElement(xe, {
+          (0, q.HT)(
+            o.createElement(Oe, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: t,
             }),
-            (0, ne.uX)(e),
+            (0, te.uX)(e),
           );
         }
         OnOpenImageDialog(e) {
-          (0, $.HT)(
-            o.createElement(_e, { textareaRef: this.props.fnTextareaRef() }),
-            (0, ne.uX)(e),
+          (0, q.HT)(
+            o.createElement(Be, { textareaRef: this.props.fnTextareaRef() }),
+            (0, te.uX)(e),
           );
         }
         OnOpenSpeakerDialog(e) {
-          (0, $.pg)(
-            o.createElement(fe, {
+          (0, q.pg)(
+            o.createElement(_e, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
-            (0, ne.uX)(e),
+            (0, te.uX)(e),
           );
         }
         OnEmoticonSelected(e, t = !1) {
           let n = `ː${e}ː`;
-          be.replaceSelection(this.props.fnTextareaRef().current, n),
+          ye.replaceSelection(this.props.fnTextareaRef().current, n),
             this.props.fnTextareaRef().current.focus();
         }
         BSupports(e) {
@@ -1196,9 +1190,9 @@
               (r = t
                 ? o.createElement(
                     "span",
-                    { className: (0, p.A)("ttip", ce().ActionGetHelp) },
+                    { className: (0, p.A)("ttip", ie().ActionGetHelp) },
                     o.createElement(
-                      S.he,
+                      M.he,
                       {
                         toolTipContent: (0, m.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
@@ -1207,7 +1201,7 @@
                       o.createElement(
                         "a",
                         {
-                          href: Le.GetHelpURL(this.props.showFormatHelp, !1),
+                          href: Te.GetHelpURL(this.props.showFormatHelp, !1),
                           target: g.TS.IN_CLIENT ? void 0 : "_blank",
                         },
                         o.createElement("img", { src: a + "/action_help.png" }),
@@ -1220,10 +1214,10 @@
                     "span",
                     {
                       onClick: this.ShowHelpDialog,
-                      className: (0, p.A)("ttip", ce().ActionGetHelp),
+                      className: (0, p.A)("ttip", ie().ActionGetHelp),
                     },
                     o.createElement(
-                      S.he,
+                      M.he,
                       {
                         toolTipContent: (0, m.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
@@ -1236,69 +1230,69 @@
                   )),
             o.createElement(
               "div",
-              { className: ce().TextEditorToolBarContainer },
+              { className: ie().TextEditorToolBarContainer },
               this.BSupports("b") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onBold,
                   tooltip: (0, m.we)("#Editor_Bold"),
                   imgURL: this.props.pathToImages + "/format_bold.png",
                 }),
               this.BSupports("u") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onUnderline,
                   tooltip: (0, m.we)("#Editor_Underline"),
                   imgURL: this.props.pathToImages + "/format_underline.png",
                 }),
               this.BSupports("i") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onItalics,
                   tooltip: (0, m.we)("#Editor_Italics"),
                   imgURL: this.props.pathToImages + "/format_italic.png",
                 }),
               this.BSupports("strike") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onStrikeThrough,
                   tooltip: (0, m.we)("#Editor_StrikeThrough"),
                   imgURL: this.props.pathToImages + "/format_strike.png",
                 }),
               Boolean(this.BSupports("url") && !t) &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.OnAddLink,
                   tooltip: (0, m.we)("#Editor_Link"),
                   imgURL: this.props.pathToImages + "/format_link.png",
                 }),
               this.BSupports("list") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onUnorderedList,
                   tooltip: (0, m.we)("#Editor_Unordered"),
                   imgURL: this.props.pathToImages + "/format_bullet.png",
                 }),
               this.BSupports("olist") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onOrderedList,
                   tooltip: (0, m.we)("#Editor_Ordered"),
                   imgURL: this.props.pathToImages + "/format_numbered.png",
                 }),
               this.BSupports("h1") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onHeader,
                   tooltip: (0, m.we)("#Editor_Header"),
                   imgURL: this.props.pathToImages + "/format_header1.png",
                 }),
               this.BSupports("h2") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onHeader2,
                   tooltip: (0, m.we)("#Editor_Header2"),
                   imgURL: this.props.pathToImages + "/format_header2.png",
                 }),
               this.BSupports("h3") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.onHeader3,
                   tooltip: (0, m.we)("#Editor_Header3"),
                   imgURL: this.props.pathToImages + "/format_header3.png",
                 }),
               this.BSupports("previewyoutube") &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.OnOpenYoutubeDialog,
                   tooltip: (0, m.we)("#EventEditor_InsertYouTube"),
                   imgURL:
@@ -1309,16 +1303,15 @@
                 { className: "ttip" },
                 this.props.emoticonStore &&
                   o.createElement(
-                    S.he,
+                    M.he,
                     { toolTipContent: (0, m.we)("#Editor_Emoticon") },
-                    o.createElement(q.A, {
+                    o.createElement(K.A, {
                       title: " ",
-                      className: (0, p.A)(ce().EmoteOuter),
+                      className: (0, p.A)(ie().EmoteOuter),
                       disabled: !1,
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: Y.s,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,
@@ -1328,7 +1321,7 @@
                   ),
               ),
               Boolean(this.BSupports("img") && !t) &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.OnOpenImageDialog,
                   tooltip: (0, m.we)("#EventEditor_InsertImage"),
                   imgURL: this.props.pathToImages + "/insert_img.png",
@@ -1338,17 +1331,17 @@
                   this.props.clanSteamID &&
                   this.BSupports("speaker"),
               ) &&
-                o.createElement(Oe, {
+                o.createElement(ke, {
                   onClick: this.OnOpenSpeakerDialog,
                   tooltip: (0, m.we)("#EventEditor_AddSpeaker"),
                   imgURL: this.props.pathToImages + "/insert_img.png",
                 }),
               Boolean(n && !t) &&
                 o.createElement(
-                  Oe,
+                  ke,
                   {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
-                    className: ce().ActionImportHTML,
+                    className: ie().ActionImportHTML,
                     tooltip: (0, m.we)("#EventEditor_ImportFromHTML_ttip"),
                   },
                   (0, m.we)("#EventEditor_ImportHTML"),
@@ -1358,47 +1351,47 @@
           );
         }
       };
-      function Oe(e) {
+      function ke(e) {
         return o.createElement(
           "span",
           { onClick: e.onClick, className: e.className },
           o.createElement(
-            S.he,
+            M.he,
             { toolTipContent: e.tooltip, className: "ttip" },
             Boolean(e.imgURL) && o.createElement("img", { src: e.imgURL }),
             e.children,
           ),
         );
       }
-      (0, a.Cg)([u.oI], ke.prototype, "onBold", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onItalics", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onUnderline", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onStrikeThrough", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onHeader", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onHeader2", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onHeader3", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onUnorderedList", null),
-        (0, a.Cg)([u.oI], ke.prototype, "onOrderedList", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnAddLink", null),
-        (0, a.Cg)([u.oI], ke.prototype, "ShowHelpDialog", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnOpenYoutubeDialog", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnOpenImageDialog", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnOpenSpeakerDialog", null),
-        (0, a.Cg)([u.oI], ke.prototype, "OnEmoticonSelected", null),
-        (ke = (0, a.Cg)([T.PA], ke));
-      let xe = class extends o.Component {
-        state = { youtubeInput: "", alignment: we.V2.left };
+      (0, a.Cg)([u.oI], be.prototype, "onBold", null),
+        (0, a.Cg)([u.oI], be.prototype, "onItalics", null),
+        (0, a.Cg)([u.oI], be.prototype, "onUnderline", null),
+        (0, a.Cg)([u.oI], be.prototype, "onStrikeThrough", null),
+        (0, a.Cg)([u.oI], be.prototype, "onHeader", null),
+        (0, a.Cg)([u.oI], be.prototype, "onHeader2", null),
+        (0, a.Cg)([u.oI], be.prototype, "onHeader3", null),
+        (0, a.Cg)([u.oI], be.prototype, "onUnorderedList", null),
+        (0, a.Cg)([u.oI], be.prototype, "onOrderedList", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnAddLink", null),
+        (0, a.Cg)([u.oI], be.prototype, "ShowHelpDialog", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnOpenYoutubeDialog", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnOpenImageDialog", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnOpenSpeakerDialog", null),
+        (0, a.Cg)([u.oI], be.prototype, "OnEmoticonSelected", null),
+        (be = (0, a.Cg)([T.PA], be));
+      let Oe = class extends o.Component {
+        state = { youtubeInput: "", alignment: De.V2.left };
         OnYoutubeInsertLink() {
           const e =
             this.state.youtubeInput && (0, z.XU)(this.state.youtubeInput);
           if (e) {
-            if (this.state.alignment == we.V2.summary) {
+            if (this.state.alignment == De.V2.summary) {
               const t =
                 "https://www.youtube.com/watch?v=" +
                 e.strVideoID +
                 (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-              be.wrapBBCode(t, "", this.props.textareaRef.current);
+              ye.wrapBBCode(t, "", this.props.textareaRef.current);
             } else {
               let t =
                 "[previewyoutube=" +
@@ -1406,13 +1399,13 @@
                 ";" +
                 this.state.alignment +
                 "]";
-              be.wrapBBCode(
+              ye.wrapBBCode(
                 t,
                 "[/previewyoutube]",
                 this.props.textareaRef.current,
               );
             }
-            this.setState({ youtubeInput: "", alignment: we.V2.left });
+            this.setState({ youtubeInput: "", alignment: De.V2.left });
           } else alert((0, m.we)("#EventEditor_InsertYouTube_NoURL"));
         }
         OnUrlChange(e) {
@@ -1420,16 +1413,16 @@
             this.setState({ youtubeInput: e.target.value });
         }
         OnLeftSelected() {
-          this.setState({ alignment: we.V2.left });
+          this.setState({ alignment: De.V2.left });
         }
         OnRightSelected() {
-          this.setState({ alignment: we.V2.right });
+          this.setState({ alignment: De.V2.right });
         }
         OnFullSelected() {
-          this.setState({ alignment: we.V2.full });
+          this.setState({ alignment: De.V2.full });
         }
         OnSummarySelected() {
-          this.setState({ alignment: we.V2.summary });
+          this.setState({ alignment: De.V2.summary });
         }
         OnOuterDivClickPassDown(e) {}
         render() {
@@ -1442,11 +1435,11 @@
               onCancel: this.props.closeModal,
               onOK: this.OnYoutubeInsertLink,
               strOKButtonText: (0, m.we)("#EventEditor_InsertYouTube"),
-              className: ce().BBCodeEditorInputStyles,
+              className: ie().BBCodeEditorInputStyles,
             },
             o.createElement(
               "div",
-              { className: ce().YouTubeInput },
+              { className: ie().YouTubeInput },
               o.createElement(
                 "div",
                 { className: "DialogInputLabelGroup" },
@@ -1485,20 +1478,20 @@
                 o.createElement(
                   "div",
                   {
-                    className: ce().YouTubePreviewInsertOption,
+                    className: ie().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   o.createElement("input", {
                     type: "radio",
                     name: "YouTubePreviewInsertType",
-                    id: we.V2.left,
-                    value: we.V2.left,
-                    checked: this.state.alignment == we.V2.left,
+                    id: De.V2.left,
+                    value: De.V2.left,
+                    checked: this.state.alignment == De.V2.left,
                     onChange: this.OnLeftSelected,
                   }),
                   o.createElement(
                     "label",
-                    { htmlFor: we.V2.left },
+                    { htmlFor: De.V2.left },
                     o.createElement(
                       "span",
                       null,
@@ -1509,20 +1502,20 @@
                 o.createElement(
                   "div",
                   {
-                    className: ce().YouTubePreviewInsertOption,
+                    className: ie().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   o.createElement("input", {
                     type: "radio",
                     name: "YouTubePreviewInsertType",
-                    id: we.V2.right,
-                    value: we.V2.right,
-                    checked: this.state.alignment == we.V2.right,
+                    id: De.V2.right,
+                    value: De.V2.right,
+                    checked: this.state.alignment == De.V2.right,
                     onChange: this.OnRightSelected,
                   }),
                   o.createElement(
                     "label",
-                    { htmlFor: we.V2.right },
+                    { htmlFor: De.V2.right },
                     o.createElement(
                       "span",
                       null,
@@ -1533,20 +1526,20 @@
                 o.createElement(
                   "div",
                   {
-                    className: ce().YouTubePreviewInsertOption,
+                    className: ie().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   o.createElement("input", {
                     type: "radio",
                     name: "YouTubePreviewInsertType",
-                    id: we.V2.full,
-                    value: we.V2.full,
-                    checked: this.state.alignment == we.V2.full,
+                    id: De.V2.full,
+                    value: De.V2.full,
+                    checked: this.state.alignment == De.V2.full,
                     onChange: this.OnFullSelected,
                   }),
                   o.createElement(
                     "label",
-                    { htmlFor: we.V2.full },
+                    { htmlFor: De.V2.full },
                     o.createElement(
                       "span",
                       null,
@@ -1557,20 +1550,20 @@
                 o.createElement(
                   "div",
                   {
-                    className: ce().YouTubePreviewInsertOption,
+                    className: ie().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   o.createElement("input", {
                     type: "radio",
                     name: "YouTubePreviewInsertType",
-                    id: we.V2.summary,
-                    value: we.V2.summary,
-                    checked: this.state.alignment == we.V2.summary,
+                    id: De.V2.summary,
+                    value: De.V2.summary,
+                    checked: this.state.alignment == De.V2.summary,
                     onChange: this.OnSummarySelected,
                   }),
                   o.createElement(
                     "label",
-                    { htmlFor: we.V2.summary },
+                    { htmlFor: De.V2.summary },
                     o.createElement(
                       "span",
                       null,
@@ -1583,25 +1576,25 @@
           );
         }
       };
-      (0, a.Cg)([u.oI], xe.prototype, "OnYoutubeInsertLink", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnUrlChange", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnLeftSelected", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnRightSelected", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnFullSelected", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnSummarySelected", null),
-        (0, a.Cg)([u.oI], xe.prototype, "OnOuterDivClickPassDown", null),
-        (xe = (0, a.Cg)([T.PA], xe));
-      let Be = class extends o.Component {
+      (0, a.Cg)([u.oI], Oe.prototype, "OnYoutubeInsertLink", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnUrlChange", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnLeftSelected", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnRightSelected", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnFullSelected", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnSummarySelected", null),
+        (0, a.Cg)([u.oI], Oe.prototype, "OnOuterDivClickPassDown", null),
+        (Oe = (0, a.Cg)([T.PA], Oe));
+      let xe = class extends o.Component {
         static {
-          Ne = this;
+          Le = this;
         }
         state = { textToDisplay: "", strURL: "" };
         static m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i);
         LoadFromTextArea() {
           const { textareaRef: e } = this.props;
           if (e && e.current) {
-            let t = be.getSelectedString(e.current),
-              n = Ne.m_regExp.exec(t);
+            let t = ye.getSelectedString(e.current),
+              n = Le.m_regExp.exec(t);
             n
               ? this.setState({ strURL: n[1], textToDisplay: n[2] })
               : this.setState({ textToDisplay: t });
@@ -1619,7 +1612,7 @@
         onInsertLink() {
           const { strURL: e, textToDisplay: t } = this.state;
           let n = "[url=" + e + "]" + t + "[/url]";
-          be.replaceSelection(this.props.textareaRef.current, n);
+          ye.replaceSelection(this.props.textareaRef.current, n);
         }
         render() {
           return o.createElement(
@@ -1631,11 +1624,11 @@
               onOK: this.onInsertLink,
               onCancel: this.props.closeModal,
               strOKButtonText: (0, m.we)("#EventEditor_InsertLinkURL"),
-              className: ce().BBCodeEditorInputStyles,
+              className: ie().BBCodeEditorInputStyles,
             },
             o.createElement(
               "div",
-              { className: ce().EventEditorLinkInput },
+              { className: ie().EventEditorLinkInput },
               o.createElement(
                 "div",
                 { className: "DialogInputLabelGroup" },
@@ -1686,11 +1679,11 @@
           );
         }
       };
-      (0, a.Cg)([u.oI], Be.prototype, "onLinkTitleUpdate", null),
-        (0, a.Cg)([u.oI], Be.prototype, "onLinkURLUpdate", null),
-        (0, a.Cg)([u.oI], Be.prototype, "onInsertLink", null),
-        (Be = Ne = (0, a.Cg)([T.PA], Be));
-      let _e = class extends o.Component {
+      (0, a.Cg)([u.oI], xe.prototype, "onLinkTitleUpdate", null),
+        (0, a.Cg)([u.oI], xe.prototype, "onLinkURLUpdate", null),
+        (0, a.Cg)([u.oI], xe.prototype, "onInsertLink", null),
+        (xe = Le = (0, a.Cg)([T.PA], xe));
+      let Be = class extends o.Component {
         refFirstInput;
         state = { imgURL: "", anchorURL: "" };
         componentDidMount() {
@@ -1703,7 +1696,7 @@
           e && e.length > 0 && ((n += "[url=" + e + "]"), (a = "[/url]" + a)),
             (n += "[img]" + t),
             (a = "[/img]" + a),
-            be.wrapBBCode(n, a, this.props.textareaRef.current);
+            ye.wrapBBCode(n, a, this.props.textareaRef.current);
         }
         OnImageURLChange(e) {
           this.state.imgURL != e.target.value &&
@@ -1724,11 +1717,11 @@
               onCancel: this.props.closeModal,
               onOK: this.OnImageInsert,
               strOKButtonText: (0, m.we)("#EventEditor_InsertImage_Title"),
-              className: ce().BBCodeEditorInputStyles,
+              className: ie().BBCodeEditorInputStyles,
             },
             o.createElement(
               "div",
-              { className: ce().EventEditorLinkInput },
+              { className: ie().EventEditorLinkInput },
               o.createElement(
                 "p",
                 null,
@@ -1791,19 +1784,19 @@
           );
         }
       };
-      (0, a.Cg)([u.oI], _e.prototype, "OnImageInsert", null),
-        (0, a.Cg)([u.oI], _e.prototype, "OnImageURLChange", null),
-        (0, a.Cg)([u.oI], _e.prototype, "OnAnchorURLChange", null),
-        (_e = (0, a.Cg)([T.PA], _e));
-      const fe = (e) => {
+      (0, a.Cg)([u.oI], Be.prototype, "OnImageInsert", null),
+        (0, a.Cg)([u.oI], Be.prototype, "OnImageURLChange", null),
+        (0, a.Cg)([u.oI], Be.prototype, "OnAnchorURLChange", null),
+        (Be = (0, a.Cg)([T.PA], Be));
+      const _e = (e) => {
         const [t, n] = o.useState(""),
           [a, r] = o.useState(""),
           [l, s] = o.useState(""),
           [i, c] = o.useState(""),
           [p, u] = o.useState(void 0),
           [d, h] = o.useState(void 0),
-          { data: E } = (0, ae.Dv)(),
-          { isLoading: M, data: I } = (0, oe.js)(d?.GetAccountID()),
+          { data: E } = (0, ne.Dv)(),
+          { isLoading: S, data: I } = (0, ae.js)(d?.GetAccountID()),
           A = 0 != t.trim().length && 0 != i.trim().length;
         return o.createElement(
           C.o0,
@@ -1820,18 +1813,18 @@
                 l.trim().length > 0 && (n += ` company="${l}"`),
                 p)
               ) {
-                n += ` photo="${De.lw + "/" + p.clanAccountID + "/" + G.i6.GetHashAndExt(p)}"`;
+                n += ` photo="${Ne.lw + "/" + p.clanAccountID + "/" + G.i6.GetHashAndExt(p)}"`;
               }
               d && (n += ` steamid="${d.ConvertTo64BitString()}"`),
                 (n += `]${i}[/speaker]`),
-                be.replaceSelection(e.textareaRef.current, n);
+                ye.replaceSelection(e.textareaRef.current, n);
             },
-            className: ce().BBCodeEditorInputStyles,
+            className: ie().BBCodeEditorInputStyles,
           },
           o.createElement(
             "div",
-            { className: ce().InsertSpeakerCtn },
-            o.createElement(K.pd, {
+            { className: ie().InsertSpeakerCtn },
+            o.createElement(X.pd, {
               type: "text",
               label: (0, m.we)("#EventEditor_AddSpeaker_Name"),
               value: t,
@@ -1840,14 +1833,14 @@
             }),
             o.createElement(
               "div",
-              { className: ce().TitleGroup },
-              o.createElement(K.pd, {
+              { className: ie().TitleGroup },
+              o.createElement(X.pd, {
                 type: "text",
                 label: (0, m.we)("#EventEditor_AddSpeaker_Title"),
                 value: a,
                 onChange: (e) => r(e.target.value),
               }),
-              o.createElement(K.pd, {
+              o.createElement(X.pd, {
                 type: "text",
                 label: (0, m.we)("#EventEditor_AddSpeaker_Company"),
                 value: l,
@@ -1855,7 +1848,7 @@
               }),
             ),
             o.createElement(
-              S.he,
+              M.he,
               {
                 toolTipContent: (0, m.we)(
                   "#EventEditor_AssociateSteamAccount_ttip",
@@ -1871,8 +1864,8 @@
             o.createElement(
               "div",
               null,
-              M &&
-                o.createElement(se.t, {
+              S &&
+                o.createElement(le.t, {
                   string: (0, m.we)("#Loading"),
                   size: "small",
                 }),
@@ -1896,25 +1889,25 @@
                 ),
               o.createElement(
                 "div",
-                { className: ce().AssociateRowCtn },
+                { className: ie().AssociateRowCtn },
                 o.createElement(
-                  K.$n,
+                  X.$n,
                   { onClick: () => h(new j.b(g.iA.steamid)) },
                   (0, m.we)("#EventEditor_SteamAccount_addme"),
                 ),
                 o.createElement(
-                  K.$n,
+                  X.$n,
                   {
                     onClick: (e) =>
                       (0, U.lX)(
-                        o.createElement(je, { friends: E, setSteamID: h }),
+                        o.createElement(fe, { friends: E, setSteamID: h }),
                         e,
                       ),
                   },
                   (0, m.we)("#EventEditor_SteamAccount_addfriend"),
                 ),
                 o.createElement(
-                  K.$n,
+                  X.$n,
                   { onClick: () => h(void 0) },
                   (0, m.we)("#EventEditor_SteamAccount_clear"),
                 ),
@@ -1922,13 +1915,13 @@
             ),
             o.createElement(
               "div",
-              { className: ce().PhotoCtn },
+              { className: ie().PhotoCtn },
               o.createElement(
                 "div",
                 { className: "DialogLabel" },
                 (0, m.we)("#EventEditor_ChoosePhoto"),
               ),
-              o.createElement(Ie, {
+              o.createElement(Se, {
                 clanSteamID: e.clanSteamID,
                 inputClanImage: p,
                 setImage: u,
@@ -1938,13 +1931,13 @@
             ),
             o.createElement(
               "div",
-              { className: ce().AboutCtn },
+              { className: ie().AboutCtn },
               o.createElement(
                 "div",
                 { className: "DialogLabel" },
                 (0, m.we)("#EventEditor_AddSpeaker_About"),
               ),
-              o.createElement(K.Cl, {
+              o.createElement(X.Cl, {
                 value: i,
                 onChange: (e) => c(e.target.value),
                 rows: 8,
@@ -1957,13 +1950,13 @@
             ),
             o.createElement(
               "div",
-              { className: ce().PreviewCtn },
+              { className: ie().PreviewCtn },
               o.createElement(
                 "div",
                 { className: "DialogLabel" },
                 (0, m.we)("#Button_Preview"),
               ),
-              o.createElement(le.$k, {
+              o.createElement(re.$k, {
                 company: l,
                 name: t,
                 title: a,
@@ -1974,35 +1967,35 @@
           ),
         );
       };
-      function je(e) {
+      function fe(e) {
         const { friends: t, setSteamID: n } = e;
         return o.createElement(
           "div",
-          { className: ce().DropDownScroll },
+          { className: ie().DropDownScroll },
           t.map((e) =>
-            o.createElement(Re, { key: e, steamid: e, setSteamID: n }),
+            o.createElement(je, { key: e, steamid: e, setSteamID: n }),
           ),
         );
       }
-      function Re(e) {
+      function je(e) {
         const { steamid: t, setSteamID: n } = e,
-          { data: a } = (0, oe.js)(t);
+          { data: a } = (0, ae.js)(t);
         return o.createElement(
-          re.kt,
+          oe.kt,
           { onSelected: () => n(new j.b(t)) },
           o.createElement(
             "div",
             { style: { display: "flex", alignItems: "center" } },
             a &&
               o.createElement("img", {
-                className: te().WhitelistAvatar,
+                className: ee().WhitelistAvatar,
                 src: a.avatar_url,
               }),
             a?.m_strPlayerName,
           ),
         );
       }
-      let Ue = class extends o.Component {
+      let Re = class extends o.Component {
         m_isMounted = !1;
         m_bAppend = !1;
         constructor(e) {
@@ -2041,12 +2034,12 @@
               .then((e) => {
                 this.m_isMounted &&
                   (this.m_bAppend
-                    ? be.append(e, this.props.textareaRef.current)
-                    : be.overwrite(e, this.props.textareaRef.current),
+                    ? ye.append(e, this.props.textareaRef.current)
+                    : ye.overwrite(e, this.props.textareaRef.current),
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
-                (0, $.pg)(
+                (0, q.pg)(
                   o.createElement(C.KG, {
                     strTitle: (0, m.we)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, m.we)(
@@ -2084,7 +2077,7 @@
                   onOK: e,
                   onCancel: e,
                 },
-                o.createElement(se.t, null),
+                o.createElement(le.t, null),
               )
             : this.state.bFinishedConverting
               ? o.createElement(C.o0, {
@@ -2102,27 +2095,27 @@
                   {
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
-                    className: ce().BBCodeEditorInputStyles,
+                    className: ie().BBCodeEditorInputStyles,
                   },
                   o.createElement(
-                    K.Y9,
+                    X.Y9,
                     null,
                     " ",
                     (0, m.we)("#EventEditor_ImportFromHTML"),
                     " ",
                   ),
                   o.createElement(
-                    K.nB,
+                    X.nB,
                     null,
                     o.createElement(
-                      K.a3,
+                      X.a3,
                       null,
                       o.createElement(
                         "div",
                         {
                           className: (0, p.A)(
                             i().FlexColumnContainer,
-                            ce().ImportHTMLCtn,
+                            ie().ImportHTMLCtn,
                           ),
                         },
                         o.createElement(
@@ -2147,13 +2140,13 @@
                           placeholder: (0, m.we)(
                             "#EventEditor_ImportFromHTML_Instruction",
                           ),
-                          className: ce().ImportHTMLTextArea,
+                          className: ie().ImportHTMLTextArea,
                           onChange: this.OnTextAreaChange,
                           ref: (e) => e && e.focus(),
                         }),
                         o.createElement(
                           "div",
-                          { className: ce().ImportHTMLCheckBoxLine },
+                          { className: ie().ImportHTMLCheckBoxLine },
                           o.createElement("input", {
                             id: "ImportFromHTMLNewLines",
                             type: "checkbox",
@@ -2166,7 +2159,7 @@
                             (0, m.we)(
                               "#EventEditor_ImportFromHTML_PreserveNewlines",
                             ),
-                            o.createElement(ve.o, {
+                            o.createElement(we.o, {
                               tooltip: (0, m.we)(
                                 "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
                               ),
@@ -2183,9 +2176,9 @@
                       ),
                     ),
                     o.createElement(
-                      K.wi,
+                      X.wi,
                       null,
-                      o.createElement(K.VQ, {
+                      o.createElement(X.VQ, {
                         onCancel: e,
                         strOKText: (0, m.we)("#Button_Overwrite"),
                         onUpdate: this.OnConvertAndAppendHTML,
@@ -2196,29 +2189,29 @@
                 );
         }
       };
-      (0, a.Cg)([u.oI], Ue.prototype, "OnConvertAndOverriteHTML", null),
-        (0, a.Cg)([u.oI], Ue.prototype, "OnConvertAndAppendHTML", null),
-        (0, a.Cg)([u.oI], Ue.prototype, "OnCheckboxChange", null),
-        (0, a.Cg)([u.oI], Ue.prototype, "OnTextAreaChange", null),
-        (Ue = (0, a.Cg)([T.PA], Ue));
-      var ze = n(8953),
-        He = n(83450),
-        Ge = n.n(He);
-      const Ye = (0, T.PA)((e) => {
+      (0, a.Cg)([u.oI], Re.prototype, "OnConvertAndOverriteHTML", null),
+        (0, a.Cg)([u.oI], Re.prototype, "OnConvertAndAppendHTML", null),
+        (0, a.Cg)([u.oI], Re.prototype, "OnCheckboxChange", null),
+        (0, a.Cg)([u.oI], Re.prototype, "OnTextAreaChange", null),
+        (Re = (0, a.Cg)([T.PA], Re));
+      var Ue = n(8953),
+        ze = n(83450),
+        He = n.n(ze);
+      const Ge = (0, T.PA)((e) => {
         const { appid: t, eventLink: n } = e,
           a = o.useRef(null),
-          { data: r } = (0, oe.js)(g.iA.steamid),
+          { data: r } = (0, ae.js)(g.iA.steamid),
           [l, s] = o.useState(""),
           [c, u] = o.useState(!1),
           [d, h] = o.useState(""),
-          [E, S] = o.useState(!1);
+          [E, M] = o.useState(!1);
         o.useEffect(
           () => () =>
             a.current &&
             a.current("ShareEventOnFriendsActivityFeed: unmounting"),
           [],
         );
-        const M = r ? r.avatar_url : null,
+        const S = r ? r.avatar_url : null,
           I = j.b.InitFromAccountID(g.iA.accountid),
           A = async () => {
             a.current &&
@@ -2265,9 +2258,9 @@
                 }
               }
               e.token.reason ||
-                (S(!0), h((0, m.we)("#EventDisplay_Share_Success")));
+                (M(!0), h((0, m.we)("#EventDisplay_Share_Success")));
             } catch (t) {
-              const n = (0, Te.H)(t),
+              const n = (0, Ae.H)(t),
                 a =
                   (0, m.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
@@ -2295,9 +2288,9 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ge().Container },
+                  { className: He().Container },
                   0 == d?.length
-                    ? o.createElement(se.t, { position: "center" })
+                    ? o.createElement(le.t, { position: "center" })
                     : o.createElement("div", null, d),
                   Boolean(E) &&
                     o.createElement(
@@ -2336,7 +2329,7 @@
                   "div",
                   {
                     className: (0, p.A)(
-                      Ge().Container,
+                      He().Container,
                       i().FlexColumnContainer,
                     ),
                   },
@@ -2344,14 +2337,14 @@
                     "div",
                     null,
                     o.createElement("img", {
-                      className: Ge().SmallAvatar,
-                      src: M,
+                      className: He().SmallAvatar,
+                      src: S,
                       "data-miniprofile": "s" + g.iA.steamid,
                     }),
                     o.createElement(
                       "div",
                       { className: (0, p.A)(i().FlexColumnContainer) },
-                      o.createElement(ye, {
+                      o.createElement(ve, {
                         strPlaceholder: (0, m.we)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",
                         ),
@@ -2362,15 +2355,15 @@
                         bSupportHTMLImport: !1,
                         showFormatHelp: "UserStatusPublished",
                         limitBBCode: B.iH,
-                        classNameForTextArea: Ge().ShareDescription,
+                        classNameForTextArea: He().ShareDescription,
                         bEmbeddedInDialog: !0,
                       }),
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ge().ShareLink },
-                    o.createElement(ze.f, {
+                    { className: He().ShareLink },
+                    o.createElement(Ue.f, {
                       text: n,
                       event: null,
                       partnerEventStore: e.partnerEventStore,
@@ -2380,8 +2373,8 @@
               ),
             );
       });
-      var Fe = n(30470);
-      const Pe = (e) => {
+      var Ye = n(30470);
+      const Fe = (e) => {
         const t = o.createRef(),
           [n, a] = o.useState(""),
           r = o.createRef();
@@ -2430,11 +2423,11 @@
                   title: (0, m.we)("#ToolTip_CopyLinkToClipboard"),
                 },
                 o.createElement(
-                  S.he,
+                  M.he,
                   { toolTipContent: (0, m.we)("#ToolTip_CopyLinkToClipboard") },
                   o.createElement("img", {
                     className: A().ClipboardIcon,
-                    src: Fe.A,
+                    src: Ye.A,
                   }),
                 ),
               ),
@@ -2442,7 +2435,7 @@
           o.createElement("div", { ref: r, className: A().ClipboardText }, n),
         );
       };
-      class Qe extends o.Component {
+      class Pe extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
           g.iA.logged_in
@@ -2473,7 +2466,7 @@
                 onOK: () => (0, c.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? o.createElement(Ye, {
+              ? o.createElement(Ge, {
                   eventLink: e,
                   appid: n,
                   emoticonStore: r,
@@ -2490,7 +2483,7 @@
                     bAlertDialog: !0,
                     modalClassName: "EventDisplay_Share_Dialog",
                   },
-                  o.createElement(Ze, {
+                  o.createElement(Qe, {
                     eventLink: e,
                     fnGetSharePageUrl: t,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
@@ -2498,8 +2491,8 @@
                 );
         }
       }
-      (0, a.Cg)([u.oI], Qe.prototype, "ShareOnSteamActivityFeed", null);
-      const Ze = (e) => {
+      (0, a.Cg)([u.oI], Pe.prototype, "ShareOnSteamActivityFeed", null);
+      const Qe = (e) => {
         const {
             eventLink: t,
             fnGetSharePageUrl: n,
@@ -2527,7 +2520,7 @@
                 "div",
                 { className: A().ShareLanguagePicker },
                 o.createElement(
-                  K.JU,
+                  X.JU,
                   { className: A().LanguageLabel },
                   (0, m.we)("#EventDisplay_Share_LanguageLabel"),
                 ),
@@ -2550,7 +2543,7 @@
                   style: { flexWrap: "wrap" },
                 },
                 o.createElement(
-                  S.he,
+                  M.he,
                   { toolTipContent: (0, m.we)("#EventDisplay_Share_OnSteam") },
                   o.createElement(
                     "div",
@@ -2574,12 +2567,12 @@
                   ),
                 ),
                 o.createElement(
-                  S.he,
+                  M.he,
                   {
                     toolTipContent: (0, m.we)("#EventDisplay_Share_OnFaceBook"),
                   },
                   o.createElement(
-                    M.uU,
+                    S.uU,
                     { href: n(l._.k_eFacebook), className: A().ShareBtn },
                     o.createElement("img", {
                       className: (0, p.A)(i().Button),
@@ -2588,12 +2581,12 @@
                   ),
                 ),
                 o.createElement(
-                  S.he,
+                  M.he,
                   {
                     toolTipContent: (0, m.we)("#EventDisplay_Share_OnTwitter"),
                   },
                   o.createElement(
-                    M.uU,
+                    S.uU,
                     { href: n(l._.k_eTwitter), className: A().ShareBtn },
                     o.createElement("img", {
                       className: (0, p.A)(i().Button),
@@ -2602,10 +2595,10 @@
                   ),
                 ),
                 o.createElement(
-                  S.he,
+                  M.he,
                   { toolTipContent: (0, m.we)("#EventDisplay_Share_OnReddit") },
                   o.createElement(
-                    M.uU,
+                    S.uU,
                     { href: n(l._.k_eReddit), className: A().ShareBtn },
                     o.createElement("img", {
                       className: (0, p.A)(i().Button),
@@ -2616,7 +2609,7 @@
               ),
               o.createElement("div", { className: i().Divider }),
             ),
-          o.createElement(Pe, { eventLink: C }),
+          o.createElement(Fe, { eventLink: C }),
         );
       };
     },

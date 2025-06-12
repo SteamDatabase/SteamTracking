@@ -122,6 +122,7 @@ Failed to write serialized state to disk (%s).\n
 Failed to write serialized state to disk.\n
 February
 FoCLcx
+Fossilize ERROR: *VersionBucketDeltas must be an array.\n
 Fossilize ERROR: Base pipeline index is out of range.\n
 Fossilize ERROR: Binary varint buffer overflows payload.\n
 Fossilize ERROR: CRC mismatch!\n
@@ -451,6 +452,7 @@ applicationFilters
 applicationInfo
 applicationName
 applicationVersion
+applicationVersionBucketDeltas
 archive is too large
 aspectMask
 aspectReferences
@@ -614,6 +616,7 @@ ekhHD
 engineFilters
 engineName
 engineVersion
+engineVersionBucketDeltas
 equals
 execv
 exit

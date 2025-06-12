@@ -2467,7 +2467,7 @@
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
 "SteamUI_GamesDialog_RightClick_LaunchMediaAppWithAssociatedViewer" "연결된 뷰어로 미디어 플레이..."
 
-"Steam_CCDeclined_SupportLink"	"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
+"Steam_CCDeclined_SupportLink"	"자세한 내용은 Steam 고객지원 웹사이트를 방문하세요."
 
 "Steam_RetailInstall_InstallingFromDisk"	"디스크에서 설치 중..."
 
@@ -2484,7 +2484,7 @@
 
 "Steam_RegionRestricted_Title"			"Steam - 이용할 수 없는 게임"
 "Steam_RegionRestrictedPurchase_Info"				"이 게임은 특정 지역에서만 유효한 제품 코드로 활성화되었습니다. 현재 사용자는 해당 지역에 있지 않으므로, %game% 게임을 실행 할 수 없습니다."
-"Steam_RegionRestricted_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
+"Steam_RegionRestricted_SupportLink"		"자세한 내용은 Steam 고객지원 웹사이트를 방문하세요."
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% 게임은 사용자의 지역에서 사용할 수 없습니다."
 "Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
@@ -2953,7 +2953,7 @@
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 주소에 문제가 있습니다. 문제를 %provider%에서 해결하거나 '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 결제 수단에 문제가 있습니다. 문제를 %provider%에서 해결하거나 '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 인증에 실패했습니다. '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
-"Steam_PayPalDeclined_SupportLink"									"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
+"Steam_PayPalDeclined_SupportLink"									"자세한 내용은 Steam 고객지원 웹사이트를 방문하세요."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "지원하지 않는 결제 수단입니다."
 "Steam_SubscriptionCancelled_RegionNotSupported" "%subscription%에 대한 구매가 완료되지 않았습니다.\n\n현재 선택한 결제 수단은 해당 국가에서 사용할 수 없습니다. '뒤로'를 클릭하고 다른 결제 수단을 선택하세요."
@@ -3342,7 +3342,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_GiftRevoked_Title"			"Steam - 선물 취소됨"
 "Steam_GiftRevoked"					"%gifter% 님으로부터 최근에 받은 %package% 선물은 이 품목의 결제 처리 관련 문제로 인해 취소되었습니다.\n\n따라서 이 선물과 관련된 게임을 더 이상 플레이할 수 없습니다. 이 품목을 구매하려면 Steam 상점을 방문하세요. 그렇지 않은 경우 이 선물과 관련된 로컬 콘텐츠를 삭제하셔도 좋습니다."
-"Steam_GiftRevoked_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
+"Steam_GiftRevoked_SupportLink"		"자세한 내용은 Steam 고객지원 웹사이트를 방문하세요."
 
 "Steam_ExternalSignupButton" "지금 %s1 웹사이트로 이동하기"
 "Steam_ExternalSignupHeadline"	"내 %game% 계정"
@@ -4782,7 +4782,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_WindowsCompat_Continue" "계속"
 
 "Steam_WindowsCompat_BigPicture" "Steam이 현재 Windows 호환 모드로 실행되고 있습니다. 이 때문에 Steam이 Windows XP 이하의 버전으로 실행되고 있다고 인식되어 Steam으로 Big Picture를 켜지 못할 수 있습니다."
-"Steam_WindowsCompat_Webhelper" "Steam 웹 브라우저가 현재 Windows 호환 모드로 실행 중입니다. 이로 인해 웹 컨텐츠가 정상적으로 보이지 않을 수 있습니다. \n\nSteam에서 해당 문제를 해결하고 다시 시작 하겠습니다. \n\n만약 이 메시지를 또 보게 된다면, 아래의 지시 사항을 따라 호환 모드를 제거하시기 바랍니다."
+"Steam_WindowsCompat_Webhelper" "Steam 웹 브라우저가 현재 Windows 호환 모드로 실행 중입니다. 이로 인해 웹 콘텐츠가 정상적으로 보이지 않을 수 있습니다. \n\nSteam에서 해당 문제를 해결하고 다시 시작 하겠습니다. \n\n만약 이 메시지를 또 보게 된다면, 아래의 지시 사항을 따라 호환 모드를 제거하시기 바랍니다."
 
 "Steam_InstallIssue_FolderReadOnly"	"현재 Steam 설치 폴더에 쓰기가 불가능합니다. 이는 일부 Steam 기능과 게임 실행에 문제가 될 수 있습니다. \n\nSteam에서 이 문제를 해결하고 다시 시작해야 합니다."
 "Steam_InstallIssue_WindowsRegistry" 	"현재 Steam 레지스트리 경로에 쓰기가 불가능합니다. 이는 일부 Steam 기능과 게임 실행에 문제가 될 수 있습니다. \n\nSteam에서 이 문제를 해결하고 다시 시작해야 합니다."

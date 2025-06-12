@@ -86,7 +86,7 @@ message CSteamInputService_GyroQuaternionChanged_Notification {
 	optional .ControllerQuaternion gyro_raw_quaternion = 3;
 	optional .ControllerQuaternion gyro_filtered_quaternion = 4;
 	optional uint32 imu_sensor_delta_time = 5;
-	optional uint32 packet_number = 6;
+	optional uint32 estimated_packet_rate = 6;
 }
 
 message CSteamInputService_GyroSpeedChanged_Notification {

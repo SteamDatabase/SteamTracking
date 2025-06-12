@@ -159,6 +159,7 @@
  7Me}
  = { <proto text format> }". To set fields within it, use syntax like "
  A33s?
+ Accessibility/ScreenReaderVolume
  BackUp() can only be called after Next().
  Beta
  Can't back up over more bytes than were returned by the last call to Next().
@@ -351,6 +352,7 @@
 !6SD}j
 !8F[q
 != and not NULL
+!Accessibility/ScreenReaderEnabled
 !AxU
 !BInitializedAudio()
 !BUseIOCP()
@@ -702,6 +704,7 @@
 "6\n%CCloud_ClientGetAppQuotaUsage_Request
 "6\n4CAuthenticationSupport_MarkTokenCompromised_Response"C\n CCloudGaming_CreateNonce_Request
 "6\n4CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"X\n.CChatRoom_JoinMiniGameForChatRoomGroup_Request
+"6\n4CCommunity_SetRecommendationBotReviewStatus_Response"h\n5CCommunity_GetBotReviewScoreForRecommendation_Request
 "6\n4CFamilyGroups_ResendInvitationToFamilyGroup_Response"N\n%CFamilyGroups_JoinFamilyGroup_Request
 "6\n4CTransportValidation_TriggerSyntheticEvents_Response"J\n6CTransportValidation_NotifySyntheticEvent_Notification
 "7?NWlv
@@ -2170,6 +2173,7 @@ ${LANGUAGE}
 %s: command exited unexpectedly: %s\n
 %s: command exited unexpectedly\n
 %s: command failed: %d\n
+%s: computed CEC state: %d
 %s: device: 0x%x
 %s: display was not open yet, good\n
 %s: drive: 0x%x
@@ -2198,10 +2202,11 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: starting
-%s: starting update
 %s: starting update check
+%s: starting update: %s
 %s: system() failed, errno %d\n
 %s: update available: %s
+%s: update complete: %s
 %s:%d: OpenSSL internal error: %s\n
 %s:%d: invalid %s id %u for "%s" of type '%s' in '%s'
 %s:%dx%d@%d
@@ -2602,6 +2607,7 @@ ${LANGUAGE}
 '\n"k_EMsgGMGetModifiedConVarsResponse
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
+'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
@@ -2717,6 +2723,8 @@ ${LANGUAGE}
 (%p) TLS handshake was not valid for SNI hostname '%s', disconnecting\n
 (%p) no more requests allowed on HTTP session (%s)\n
 (%s) HTTP Request matches no routing rules: %s, %s, %s\n
+(%s) HTTP Response being sent for: %s http%s://%s %s\n
+(%s) Request Line: %s http%s://%s %s\n
 (%s) content-encoding: %s not yet implemented (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
@@ -3046,7 +3054,7 @@ ${LANGUAGE}
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
 (\r"8\n\rCMsgDisableF5
 (\r"9\n$CParties_ChangeNumOpenSlots_Response
-(\r"9\n7CCommunity_ClearSinglePartnerEventsAppPriority_Response*
+(\r"9\n7CCommunity_ClearSinglePartnerEventsAppPriority_Response"
 (\r"9\n7CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request"K\n8CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response
 (\r":\n#CChatRoom_GetInviteLinkInfo_Request
 (\r";\n%CMsgClientSiteLicenseCheckoutResponse
@@ -3582,6 +3590,7 @@ ${LANGUAGE}
 (\v2@.CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay
 (\v2@.CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent
 (\v2@.CCommunity_MarkPartnerEventsForUser_Request.PartnerEventMarking
+(\v2@.CCommunity_SetRecommendationBotReviewStatus_Request.ReviewLabel
 (\v2@.CPlayer_GetProfileCustomization_Response.PurchasedCustomization
 (\v2@.CPublishedFile_GetContentDescriptors_Response.ContentDescriptor
 (\v2A.CChatRoom_GetMessageHistory_Response.ChatMessage.MessageReaction
@@ -3598,6 +3607,7 @@ ${LANGUAGE}
 (\v2I.CFriendMessages_GetRecentMessages_Response.FriendMessage.MessageReaction
 (\v2J.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPublicData
 (\v2J.CPlayer_GetPurchasedProfileCustomizations_Response.PurchasedCustomization
+(\v2K.CCommunity_GetBotReviewScoreForRecommendation_Response.BotReviewScoreEntry
 (\v2K.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPrivateData
 (\v2M.CPublishedFile_SetPlaytimeForControllerConfigs_Request.ControllerConfigUsage
 (\v2P.CMarketingMessages_GetMarketingMessagesForUser_Response.MarketingMessageForUser
@@ -4078,8 +4088,6 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
 *23CInternalLambdaWorkItemIZZN21CSteamUIAppController21RequestIconDataForAppEjENKUlvE_clEvEUlvE0_NS0_10IconData_sEE
 *23CInternalLambdaWorkItemIZZN21CSteamUIAppController21RequestIconDataForAppEjENKUlvE_clEvEUlvE_NS0_10IconData_sEE
-*23CInternalLambdaWorkItemIZZN23CSteamOSControllerLinux13SetCECEnabledEbENKUlvE_clEvEUlvE_vE
-*23CInternalLambdaWorkItemIZZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN23CSystemDevkitController24UpdateDevkitServiceStateEvENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN23CSystemReportController20CleanupSystemReportsEvENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN26CSteamUISharedJSController23OnBrowserOpenFileDialogERKN11IHTMLWindow23OpenFileDialogRequest_tEENKUlvE0_clEvEUlvE1_vE
@@ -4168,9 +4176,13 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE11_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE12_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE18_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE20_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE4_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE8_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE9_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE21_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE22_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE23_
 *ZN23CSteamOSControllerLinux10InitializeEvEUliE14_
 *ZN23CSteamOSControllerLinux10InitializeEvEUliE19_
 *ZN23CSteamOSControllerLinux10InitializeEvEUliE6_
@@ -4183,7 +4195,11 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux17SetManualGPUClockEiEUlvE_
 *ZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbEUlvE_
+*ZN23CSteamOSControllerLinux19SetScreenReaderRateEfEUlvE_
 *ZN23CSteamOSControllerLinux20CommitTDPLimitUpdateEvEUlvE_
+*ZN23CSteamOSControllerLinux20SetScreenReaderPitchEfEUlvE_
+*ZN23CSteamOSControllerLinux21SetScreenReaderVolumeEfEUlvE_
+*ZN23CSteamOSControllerLinux22SetScreenReaderEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux23CommitChargeLimitUpdateEvEUlvE_
 *ZN23CSteamOSControllerLinux24SetManualGPUClockEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux25SetWifiForceWPASupplicantEbEUlvE_
@@ -4488,6 +4504,7 @@ ${LANGUAGE}
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_ERemoteDeviceAuthorizationInProgress
 *\n&k_ESharedLibrary_AppExcluded_ByPartner
+*\n&k_ESteamNotificationType_TradeReversal
 *\n&k_ESteamTVContentTemplate_ConveyorBelt
 *\n&k_ESteamTVContentTemplate_QuickExplore
 *\n&k_EStoreCategoryType_ControllerSupport
@@ -4960,7 +4977,7 @@ ${LANGUAGE}
 --redirect=vhui.log --control="%s"
 --title
 --type
---update-all
+--update-by-serial 
 -.CAuthentication_MigrateMobileSession_Request
 -.CAuthentication_RefreshToken_Revoke_Response"
 -.CBluetoothManager_GetAdapterDetails_Response
@@ -5460,7 +5477,7 @@ ${LANGUAGE}
 .CMarketingMessageProto"M\n8CMarketingMessage_GetMarketingMessagesForPartner_Request
 .CMarketingMessageProto"p\n1CMarketingMessages_CreateMarketingMessage_Request
 .CMarketingMessageProto*
-.CMsgAvailableHardwareUpdate" \n
+.CMsgAvailableHardwareUpdate"7\n
 .CMsgBluetoothManagerDeviceInfo"9\n+CBluetoothManager_GetAdapterDetails_Request
 .CMsgCellList.Cell
 .CMsgClientEmoticonList.Effect
@@ -6420,10 +6437,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:5044
-/data/src/steamUI/gamerecordingcontroller.cpp:5144
-/data/src/steamUI/gamerecordingcontroller.cpp:6455
-/data/src/steamUI/gamerecordingcontroller.cpp:6530
+/data/src/steamUI/gamerecordingcontroller.cpp:5046
+/data/src/steamUI/gamerecordingcontroller.cpp:5146
+/data/src/steamUI/gamerecordingcontroller.cpp:6457
+/data/src/steamUI/gamerecordingcontroller.cpp:6532
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/broadcastwebrtcencoder.cpp
@@ -6452,8 +6469,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/nvencwrapper.cpp
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:159
-/data/src/steamUI/hardwareupdatecontroller.cpp:205
+/data/src/steamUI/hardwareupdatecontroller.cpp:236
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
 /data/src/steamUI/modmanager.cpp
@@ -6469,10 +6485,8 @@ ${LANGUAGE}
 /data/src/steamUI/shutdowncontroller.cpp
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
-/data/src/steamUI/steamoscontroller.cpp:675
-/data/src/steamUI/steamoscontroller.cpp:705
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:560
+/data/src/steamUI/steamosmanager.cpp:562
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -10661,6 +10675,7 @@ ${LANGUAGE}
 4.CAuthenticationSupport_MarkTokenCompromised_Request
 4.CAuthentication_AccessToken_GenerateForApp_Response"
 4.CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
+4.CCommunity_SetRecommendationBotReviewStatus_Request
 4.CContentServerDirectory_GetPeerContentInfo_Response"
 4.CFamilyGroups_ResendInvitationToFamilyGroup_Request
 4.CGameNotifications_OnUserStatusChanged_Notification
@@ -11402,6 +11417,7 @@ ${LANGUAGE}
 5.CAuthenticationSupport_QueryRefreshTokenByID_Request
 5.CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"
 5.CCommunity_GetUserPartnerEventsAppPriorities_Request
+5.CCommunity_SetRecommendationBotReviewStatus_Response"
 5.CContentServerDirectory_GetClientUpdateHosts_Request
 5.CFamilyGroups_ResendInvitationToFamilyGroup_Response"
 5.CGameRecording_GetAndTrimPostGameHighlights_Response
@@ -11462,6 +11478,7 @@ ${LANGUAGE}
 51CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
 51CClientMetrics_DownloadRates_Notification_StatsInfo
 51CClientMetrics_ReportClientError_Notification_Error
+51CCommunity_SetRecommendationBotReviewStatus_Request
 51CContentServerDirectory_GetPeerContentInfo_Response
 51CFamilyGroups_ResendInvitationToFamilyGroup_Request
 51CGameNotifications_OnUserStatusChanged_Notification
@@ -11480,6 +11497,7 @@ ${LANGUAGE}
 52CAuthenticationSupport_QueryRefreshTokenByID_Request
 52CChatRoom_SetChatRoomGroupWatchingBroadcast_Response
 52CCommunity_GetUserPartnerEventsAppPriorities_Request
+52CCommunity_SetRecommendationBotReviewStatus_Response
 52CContentServerDirectory_ConnectedSteamPipeServerInfo
 52CContentServerDirectory_GetClientUpdateHosts_Request
 52CFamilyGroups_ResendInvitationToFamilyGroup_Response
@@ -11495,6 +11513,7 @@ ${LANGUAGE}
 52F*
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
+53CCommunity_GetBotReviewScoreForRecommendation_Request
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
 53CContentBuilder_GetMissingDepotChunks_Response_Chunks
 53CContentServerDirectory_GetClientUpdateHosts_Response
@@ -11518,6 +11537,7 @@ ${LANGUAGE}
 54CClientMetrics_ReportReactUsage_Notification_RouteData
 54CCommunity_ClearSinglePartnerEventsAppPriority_Request
 54CCommunity_ClearUserPartnerEventsAppPriorities_Request
+54CCommunity_GetBotReviewScoreForRecommendation_Response
 54CContentServerDirectory_GetManifestRequestCode_Request
 54CContentServerDirectory_GetServersForSteamPipe_Request
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -11697,6 +11717,7 @@ ${LANGUAGE}
 6-nn
 6.CAccountHardware_RegisterValveIndexComponent_Response"
 6.CAuthenticationSupport_QueryRefreshTokenByID_Response"
+6.CCommunity_GetBotReviewScoreForRecommendation_Request
 6.CCommunity_GetUserPartnerEventsAppPriorities_Response"
 6.CContentServerDirectory_GetClientUpdateHosts_Response"
 6.CGameNotifications_UpdateNotificationSettings_Request
@@ -11734,6 +11755,7 @@ ${LANGUAGE}
 63CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent
 63CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 63CCommunity_MarkPartnerEventsForUser_Request_PartnerEventMarking
+63CCommunity_SetRecommendationBotReviewStatus_Request_ReviewLabel
 63CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 63CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 63CPlayer_GetProfileCustomization_Response_PurchasedCustomization
@@ -11795,6 +11817,7 @@ ${LANGUAGE}
 7.CAuthentication_BeginAuthSessionViaCredentials_Request
 7.CCommunity_ClearSinglePartnerEventsAppPriority_Request
 7.CCommunity_ClearUserPartnerEventsAppPriorities_Request
+7.CCommunity_GetBotReviewScoreForRecommendation_Response"
 7.CContentServerDirectory_GetManifestRequestCode_Request
 7.CContentServerDirectory_GetServersForSteamPipe_Request
 7.CGameNotifications_UpdateNotificationSettings_Response"
@@ -11818,6 +11841,7 @@ ${LANGUAGE}
 73CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPublicData
 73CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization
 743F-2E0E-C9A5-C375
+74CCommunity_GetBotReviewScoreForRecommendation_Response_BotReviewScoreEntry
 74CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPrivateData
 768 Kbps
 768K
@@ -13077,6 +13101,8 @@ Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
 Accessibility/DebugVisualizer
+Accessibility/ScreenReaderPitch
+Accessibility/ScreenReaderRate
 Account Disabled
 Account Locked Down
 Account Logon Denied
@@ -13968,6 +13994,7 @@ BootReserve
 Bopomofo
 Borrowed
 Bosnian
+BotReviewScoreEntry
 Bounce
 Bound bt-agent on: %s
 Bradesco Online
@@ -15203,7 +15230,7 @@ CH\f1
 CHardwarePackageDetails
 CHardwareUpdateController::OnControllerDetails
 CHardwareUpdateController::OnControllerDisconnected
-CHardwareUpdate_Update_Request"!\n
+CHardwareUpdate_Update_Request
 CHardwareUpdate_Update_Response"?\n+CHardwareUpdate_UpdateProgress_Notification
 CHideCursorMsg""\n\rCSetCursorMsg
 CIMEPanel
@@ -18661,6 +18688,7 @@ English
 EnsureValidBoolValue
 Enter
 Enter PEM pass phrase:
+EnterDownloadMode
 Enterprises
 EntitledApp
 Entry
@@ -18708,6 +18736,7 @@ Error setting property '%s' on interface com.steampowered.SteamOSManager1.HdmiCe
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.Manager2: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.Manager: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.PerformanceProfile1: %s (%s, %d)
+Error setting property '%s' on interface com.steampowered.SteamOSManager1.ScreenReader0: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.TdpLimit1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.WifiDebug1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.WifiPowerManagement1: %s (%s, %d)
@@ -20332,7 +20361,6 @@ HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending r
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to AsyncAbort() called before send\n
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to failure sending\n
 HTTP Connection (%p) handle (%X) Dispatching pending request (%p) as failed due to AsyncAbort() called before RecvHTTPResponseData\n
-HTTP Response being sent for: %s http%s://%s %s\n
 HTTP Server has zero active connections.\n
 HTTP Version not supported
 HTTP cache fileio still busy after waiting %dms.  Giving up!\n
@@ -21420,7 +21448,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  9 2025 17:58:34
+Jun 12 2025 18:28:56
 June
 K'iche'
 K(\f]C15
@@ -21820,6 +21848,7 @@ LeftTrackpadY
 LeftTrigger
 Legacy Free Sub
 LegacyPairing
+LegionGoS
 Length Required
 Lepcha
 Level
@@ -21852,6 +21881,7 @@ Links
 Linux
 LinuxHelpers
 LinuxHelpers::RunFrame();
+ListDownloadModeHandles
 ListImage
 ListItemSelected
 ListPanel
@@ -22029,6 +22059,7 @@ M\n\nDeleteRole
 M\n\nGetBanList
 M\n\nNotifyText
 M\n\nRenameRole
+M\n\vReviewLabel
 M\rLAI)haL<|p\t\t
 MacOS
 Macedonian
@@ -22389,6 +22420,7 @@ Method GetAvatarHistory() not implemented.
 Method GetBackgroundRecordingFileSize() not implemented.
 Method GetBanList() not implemented.
 Method GetBestEventsForUser() not implemented.
+Method GetBotReviewScoreForRecommendation() not implemented.
 Method GetBroadcastChannelBroadcasters() not implemented.
 Method GetBroadcastChannelClips() not implemented.
 Method GetBroadcastChannelID() not implemented.
@@ -22862,6 +22894,7 @@ Method SetProfileBackground() not implemented.
 Method SetProfilePreferences() not implemented.
 Method SetProfileTheme() not implemented.
 Method SetRTMPInfo() not implemented.
+Method SetRecommendationBotReviewStatus() not implemented.
 Method SetReservationPositionMessage() not implemented.
 Method SetSessionActiveChatRoomGroups() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
@@ -25280,6 +25313,7 @@ Pinged %s but got reply from %s?
 PinnedCornerOffsetX
 PinnedCornerOffsetY
 Piracy or Cheats
+Pitch
 Plat_AbsoluteTime
 Plat_AbsoluteTimeToFloat
 Plat_CommandLineParamExists
@@ -26042,7 +26076,6 @@ Request %s gets 504 response from cache since only-if-cached is set and non-stal
 Request %s requires validation (ie, conditional GET request)\n
 Request Entity Too Large
 Request Header Fields Too Large
-Request Line: %s http%s://%s %s\n
 Request Not Sent
 Request Timeout
 Request being dispatched not in m_mapRequestsAwaitingCompletion
@@ -26628,7 +26661,6 @@ STEAM_ALLOW_DRIVE_ADOPT
 STEAM_ALLOW_DRIVE_UNMOUNT
 STEAM_BASE_FOLDER
 STEAM_CLIENT_LOG_FOLDER
-STEAM_ENABLE_CEC
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_ENABLE_STATUS_LED_BRIGHTNESS
 STEAM_ENABLE_VOLUME_HANDLER
@@ -26967,6 +26999,10 @@ Set manual gpu clock enabled: %d
 Set manual gpu clock hz: %d
 Set offline mode: %d
 Set platform performance profile: %s
+Set screen reader enabled: %d
+Set screen reader pitch: %f
+Set screen reader rate: %f
+Set screen reader volume: %f
 Set tdp limit enabled: %d
 Set tdp limit: %d
 Set the base used to construct quick login URLs
@@ -27057,6 +27093,10 @@ SetRepeatedUInt32
 SetRepeatedUInt64
 SetReservationPositionMessage
 SetRow_C
+SetScreenReaderEnabled
+SetScreenReaderPitch
+SetScreenReaderRate
+SetScreenReaderVolume
 SetSessionActiveChatRoomGroups
 SetSortColumn
 SetState
@@ -27560,6 +27600,8 @@ SteamController_SwitchSupport
 SteamController_XBoxDriver
 SteamController_XBoxSupport
 SteamDeck
+SteamDeck LCD
+SteamDeck OLED
 SteamDeckIgnoreRegistrationPrompt
 SteamDeckRegisteredSerialNumber
 SteamDeckRegisteredSteamID
@@ -27632,6 +27674,8 @@ SteamOSManager1Job1
 SteamOSManager1Job1Proxy
 SteamOSManager1JobManager1
 SteamOSManager1JobManager1Proxy
+SteamOSManager1LowPowerMode1
+SteamOSManager1LowPowerMode1Proxy
 SteamOSManager1Manager2
 SteamOSManager1Manager2Proxy
 SteamOSManager1Object
@@ -27639,6 +27683,8 @@ SteamOSManager1ObjectManagerClient
 SteamOSManager1ObjectProxy
 SteamOSManager1PerformanceProfile1
 SteamOSManager1PerformanceProfile1Proxy
+SteamOSManager1ScreenReader0
+SteamOSManager1ScreenReader0Proxy
 SteamOSManager1Storage1
 SteamOSManager1Storage1Proxy
 SteamOSManager1TdpLimit1
@@ -28070,7 +28116,7 @@ Syriac
 System
 System Pulse
 System Report: debug wifi debug trace file is available: %s
-System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
+System details: codename:%s variant:%s version:%s build:%s bios:%s hardware:'%s' cef_debugging:%d
 System startup time: %.2f seconds\n
 System storage time delta too far in the future
 System.Audio.ClearDefaultDeviceOverride
@@ -28621,7 +28667,6 @@ ThreadedCount
 ThreadedFactoryResetProgress
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreadedSaveSysemReportToDesktop
-ThreadedSetCECEnabled
 ThreadedSetDevkitServiceState
 ThreadedSteamOSFactoryReset
 ThreadedSteamOSFactoryReset: failed to fetch os-status: no internet?
@@ -29583,6 +29628,7 @@ VisibleOnlyOnAvailablePlatforms
 VisibleOnlyWhenInstalled
 Vm\t2
 VoiceReceiveVolume
+Volume
 VolumeDown
 VolumeUp
 Vote
@@ -29639,6 +29685,7 @@ W\n"gamerecording_export_limit_size_mb
 W\n\fRelatedItems
 W\n\nGetDetails
 W\n\nQueryFiles
+W\n\rreview_labels
 W\n\tOptInInfo
 Wait
 Wait cause, job, or caller
@@ -29746,6 +29793,7 @@ WebUI Transport Websocket Connection
 WebUI method '%s' has already been registered. Skipping duplicate registration
 WebUIJob
 WebUINoResponse*
+WebUITransport
 WebUITransport Health Check
 WebUITransport.GetTransportInfo
 WebUITransport.NotifyTransportFailure
@@ -30217,6 +30265,7 @@ YldSaveClip
 YldSaveToDesktop
 YldSetBluetoothEnabledInternal
 YldSetBlurParams
+YldSetCECEnabled
 YldSetDiscovering
 YldSetEnabled
 YldSetPlatformPerformanceProfile
@@ -30294,6 +30343,7 @@ ZN19CSettingHandlerImplI10CUtlStringE22SetDefaultValueHandlerEOSt8functionIFS0_v
 ZN19CSettingHandlerImplIP10CMsgHotkeyE16SetChangeHandlerEOSt8functionIFvRKS1_EEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIbE16SetChangeHandlerEOSt8functionIFvRKbEEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIbE22SetDefaultValueHandlerEOSt8functionIFbvEEEUlP18CMsgSettingVariantE_
+ZN19CSettingHandlerImplIfE16SetChangeHandlerEOSt8functionIFvRKfEEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIiE16SetChangeHandlerEOSt8functionIFvRKiEEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIiE22SetDefaultValueHandlerEOSt8functionIFivEEEUlP18CMsgSettingVariantE_
 ZPKE?81("
@@ -30305,6 +30355,8 @@ ZUINT32
 ZUINT64
 ZW][Rbmxv\fqsuwc;Wo?opP~|}|
 Z\fL+i
+Z\n accessibility_screen_reader_rate
+Z\n!accessibility_screen_reader_pitch
 Z\n"gamerecording_export_limit_bitrate
 Z\n\rResetPlaytime
 Z\n\rtemplate_type
@@ -30388,6 +30440,7 @@ Zulu
 \U%08x
 \W%08lX
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\n#accessibility_screen_reader_enabled
 \\n\rGetDLCForApps
 \\n\rGetPriceStops
 \\n\treactions
@@ -30445,6 +30498,7 @@ Zulu
 \n GetPartnerReadyToPublishMessages
 \n SetControllerPersonalizationFile
 \n SetDesiredControllerConfigForApp
+\n SetRecommendationBotReviewStatus
 \n UserContentDescriptorPreferences
 \n google/protobuf/descriptor.proto
 \n steammessages_clientlanp2p.proto
@@ -30499,6 +30553,7 @@ Zulu
 \n"CreateRemotePlayTogetherInvitation
 \n"DeleteRemotePlayTogetherInvitation
 \n"EPartnerLinkTrackingBackfillSource
+\n"GetBotReviewScoreForRecommendation
 \n"GetMutualFriendsForIncomingInvites
 \n"SiteServerUI_ClientStatus_Response
 \n"StopPlaytimeTrackingForAllAppItems
@@ -30864,6 +30919,7 @@ Zulu
 \n2CPublishedFile_GetAppRelationshipsBatched_Response
 \n2gQ\v\tU
 \n3CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
+\n3CCommunity_SetRecommendationBotReviewStatus_Request
 \n3CGameNotifications_OnUserStatusChanged_Notification
 \n3CGameRecording_RecordingSessionChanged_Notification
 \n3CPlayer_GetMutualFriendsForIncomingInvites_Response
@@ -30878,6 +30934,7 @@ Zulu
 \n5CSteamNotification_NotificationsReceived_Notification
 \n5tK
 \n6CAuthentication_BeginAuthSessionViaCredentials_Request
+\n6CCommunity_GetBotReviewScoreForRecommendation_Response
 \n6CContentServerDirectory_GetManifestRequestCode_Request
 \n6CContentServerDirectory_GetServersForSteamPipe_Request
 \n6CMarketingMessages_GetActiveMarketingMessages_Response
@@ -31488,6 +31545,7 @@ Zulu
 \n\rinput_node_id
 \n\rinput_port_id
 \n\rinternal_name
+\n\ris_bot_review
 \n\ris_only_delta
 \n\ris_subscribed
 \n\ris_system_key
@@ -31546,7 +31604,6 @@ Zulu
 \n\rordered_bytes
 \n\rother_regions
 \n\rowner_steamid
-\n\rpacket_number
 \n\rpath_prefixes
 \n\rpct_remaining
 \n\rpersona_state
@@ -31947,6 +32004,7 @@ Zulu
 \n\vfilter_json
 \n\vfolder_path
 \n\vforce_proxy
+\n\vforce_rerun
 \n\vform_factor
 \n\vfull_report
 \n\vfull_update
@@ -32304,6 +32362,7 @@ Zulu
 ]XWRILCFup
 ][QWECIOmkagusy
 ]\n gamescope_game_resolution_global
+]\n"accessibility_screen_reader_volume
 ]\n\fCanSubscribe
 ]\n\fFactoryReset
 ]\n\fGetUserFiles
@@ -32601,6 +32660,10 @@ access denied
 access-control-allow-origi
 access-control-allow-origin
 accessibility_debug_visualizer
+accessibility_screen_reader_enabled
+accessibility_screen_reader_pitch
+accessibility_screen_reader_rate
+accessibility_screen_reader_volume
 accessor_ == other.accessor_
 account
 account flags changed
@@ -33240,6 +33303,7 @@ azerbaijani
 azure
 a{oa{sv}}
 a{qv}
+a{su}
 a{sv}
 b"Iq
 b#M**y`Bl+o(u,{ x$w!
@@ -33768,6 +33832,7 @@ boolean is wrong length
 bootstrap
 bosnian
 botPlayers
+bot_review_score
 bottom
 bottomGrip
 boundTall >= 0
@@ -34509,9 +34574,11 @@ com.steampowered.SteamOSManager1.GpuPowerProfile1
 com.steampowered.SteamOSManager1.HdmiCec1
 com.steampowered.SteamOSManager1.Job1
 com.steampowered.SteamOSManager1.JobManager1
+com.steampowered.SteamOSManager1.LowPowerMode1
 com.steampowered.SteamOSManager1.Manager
 com.steampowered.SteamOSManager1.Manager2
 com.steampowered.SteamOSManager1.PerformanceProfile1
+com.steampowered.SteamOSManager1.ScreenReader0
 com.steampowered.SteamOSManager1.Storage1
 com.steampowered.SteamOSManager1.TdpLimit1
 com.steampowered.SteamOSManager1.UdevEvents1
@@ -36342,6 +36409,7 @@ est_usd
 estackingorder
 estate
 estatus
+estimated_packet_rate
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
@@ -37791,6 +37859,7 @@ handle-disconnect-profile
 handle-display-passkey
 handle-display-pin-code
 handle-eject
+handle-enter-download-mode
 handle-exit-code
 handle-fast-forward
 handle-format
@@ -37805,6 +37874,7 @@ handle-get-secret-configuration
 handle-get-session-idle-time
 handle-inhibit
 handle-introspect
+handle-list-download-mode-handles
 handle-list-pending
 handle-lock
 handle-log
@@ -38546,7 +38616,9 @@ idea-ecb
 idea-ofb
 idempotency_level
 identified-organization
+identifier
 identifier_value
+identifiers
 identity
 identity,*;q=0
 identity_secret
@@ -39093,6 +39165,7 @@ is_root_device
 is_rtmp
 is_save
 is_saved
+is_screen_reader_supported
 is_service_available
 is_shared_file
 is_site_license_lock
@@ -40688,9 +40761,8 @@ k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
 k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceAddTrigger
 k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTrigger
+k_EMsgRMMsgTraceRemoveTriggers
 k_EMsgRMRemoteInvoke
 k_EMsgRMTestVerisignOTP
 k_EMsgRMTestVerisignOTPResponse
@@ -41712,6 +41784,7 @@ loop
 loopback
 lost rgb to gray
 lost/gained channels
+low-power-mode1
 low-pri yield - /data/src/steamUI/libraryassetcache.cpp:1552
 low-pri yield - /data/src/steamUI/libraryassetcache.cpp:1616
 lowRange < highRange
@@ -41878,6 +41951,7 @@ m_SeparatorPanels.Count() == 0
 m_Separators
 m_Sequences
 m_Sequences[ iSequence ].cmdList
+m_ServerName
 m_SettingsArrayChangedCallbacks
 m_ShortcutPath
 m_SortedItems
@@ -45699,6 +45773,8 @@ recipient error
 recipientEncryptedKeys
 recipientInfos
 recipientinfo
+recommendation_ids
+recommendationid
 recommended-private-length: %d bits\n
 recommended_runtime
 reconnect-mode
@@ -46269,6 +46345,7 @@ scheme=
 schinese
 score
 scots
+screen-reader0
 screenshot
 screenshot_full
 screenshot_handle
@@ -47387,6 +47464,8 @@ steam_osmanager1_manager2_proxy_get_property
 steam_osmanager1_manager2_proxy_set_property
 steam_osmanager1_performance_profile1_proxy_get_property
 steam_osmanager1_performance_profile1_proxy_set_property
+steam_osmanager1_screen_reader0_proxy_get_property
+steam_osmanager1_screen_reader0_proxy_set_property
 steam_osmanager1_tdp_limit1_proxy_get_property
 steam_osmanager1_tdp_limit1_proxy_set_property
 steam_osmanager1_wifi_debug1_proxy_get_property
@@ -47950,12 +48029,6 @@ system_can_suspend
 system_default
 system_restart_pending
 system_trace_service_state
-systemctl --user mask --now plasma-remotecontrollers.service
-systemctl --user mask --now wakehook.service
-systemctl --user start plasma-remotecontrollers.service
-systemctl --user start wakehook.service
-systemctl --user unmask --now plasma-remotecontrollers.service
-systemctl --user unmask --now wakehook.service
 systemd-run --user --wait --pipe flatpak install --noninteractive --assumeyes flathub %s
 systemd-run --user --wait --pipe flatpak list --app
 systemd-run --user --wait --pipe flatpak uninstall --noninteractive --assumeyes %s

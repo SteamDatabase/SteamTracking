@@ -843,7 +843,9 @@ function setup_steamrt_override()
 # To use an override runtime:
 #  * Place the runtime files in the relevant platform folder
 #  * Inhibit the bootstrapper via Steam.cfg (otherwise the bootstrapper will overwrite it)
-if [[ -f "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.tar.xz" ]]; then
+if [ -n "${STEAM_RUNTIME_STEAMRT-}" ]; then
+	log "Using custom runtime $STEAM_RUNTIME_STEAMRT for steamwebhelper (this is unsupported)"
+elif [[ -f "$STEAMROOT/$STEAMRT64/steam-runtime-steamrt.tar.xz" ]]; then
 	setup_steamrt_override
 fi
 

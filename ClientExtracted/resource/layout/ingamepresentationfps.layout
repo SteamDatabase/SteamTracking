@@ -1,0 +1,37 @@
+"resource/layout/ingamepresentationfps.layout"
+{
+	controls
+	{
+		FPSLabel { controlname=Label labeltext="" }
+		FPSNumber { controlname=Label labeltext="" }
+		Seperator { controlname=Label labeltext="" visible=0 style="PerfSeperator" }
+	}
+
+	styles
+	{
+		Label
+		{
+			font-family="Motiva"
+		}
+
+		PresentationFPSLabel
+		{
+			font-family="Motiva"
+			font-weight="700"
+
+			textcolor="218 100 100 255"
+			padding-left="3"
+		}
+
+		PresentationFPSNumber
+		{
+			font-family="Motiva"
+			textcolor="220 220 220 255"
+		}
+	}
+	
+	layout
+	{
+		place { control="FPSLabel,FPSNumber,Seperator" dir="right" align="left-center" spacing=0 }
+	}
+}

@@ -1060,6 +1060,7 @@ upper
 usleep
 utime
 utimes
+ux\nH
 vector::_M_realloc_insert
 virtual thunk to 
 void

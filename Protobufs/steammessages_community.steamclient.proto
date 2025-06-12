@@ -358,6 +358,33 @@ message CCommunity_ClearSinglePartnerEventsAppPriority_Request {
 message CCommunity_ClearSinglePartnerEventsAppPriority_Response {
 }
 
+message CCommunity_SetRecommendationBotReviewStatus_Request {
+	message ReviewLabel {
+		optional uint32 appid = 1;
+		optional uint64 recommendationid = 2;
+		optional bool is_bot_review = 3;
+	}
+
+	repeated .CCommunity_SetRecommendationBotReviewStatus_Request.ReviewLabel review_labels = 1;
+}
+
+message CCommunity_SetRecommendationBotReviewStatus_Response {
+}
+
+message CCommunity_GetBotReviewScoreForRecommendation_Request {
+	repeated uint64 recommendation_ids = 1;
+	optional bool force_rerun = 2;
+}
+
+message CCommunity_GetBotReviewScoreForRecommendation_Response {
+	message BotReviewScoreEntry {
+		optional uint64 key = 1;
+		optional uint32 value = 2;
+	}
+
+	repeated .CCommunity_GetBotReviewScoreForRecommendation_Response.BotReviewScoreEntry bot_review_score = 1;
+}
+
 service Community {
 	rpc GetApps (.CCommunity_GetApps_Request) returns (.CCommunity_GetApps_Response);
 	rpc GetAppRichPresenceLocalization (.CCommunity_GetAppRichPresenceLocalization_Request) returns (.CCommunity_GetAppRichPresenceLocalization_Response);
@@ -382,4 +409,6 @@ service Community {
 	rpc ClearUserPartnerEventsAppPriorities (.CCommunity_ClearUserPartnerEventsAppPriorities_Request) returns (.CCommunity_ClearUserPartnerEventsAppPriorities_Response);
 	rpc GetUserPartnerEventsAppPriorities (.CCommunity_GetUserPartnerEventsAppPriorities_Request) returns (.CCommunity_GetUserPartnerEventsAppPriorities_Response);
 	rpc ClearSinglePartnerEventsAppPriority (.CCommunity_ClearSinglePartnerEventsAppPriority_Request) returns (.CCommunity_ClearSinglePartnerEventsAppPriority_Response);
+	rpc SetRecommendationBotReviewStatus (.CCommunity_SetRecommendationBotReviewStatus_Request) returns (.CCommunity_SetRecommendationBotReviewStatus_Response);
+	rpc GetBotReviewScoreForRecommendation (.CCommunity_GetBotReviewScoreForRecommendation_Request) returns (.CCommunity_GetBotReviewScoreForRecommendation_Response);
 }

@@ -40581,8 +40581,9 @@
           var _ = Object.getOwnPropertySymbols(_);
           for (_ = 0; _ < _.length; _++)
             (_ = _[_]),
-              _.includes(_) ||
-                ({}.propertyIsEnumerable.call(_, _) && (_[_] = _[_]));
+              -1 === _.indexOf(_) &&
+                {}.propertyIsEnumerable.call(_, _) &&
+                (_[_] = _[_]);
         }
         return _;
       }
@@ -49469,7 +49470,7 @@
         var _ = {};
         for (var _ in _)
           if ({}.hasOwnProperty.call(_, _)) {
-            if (_.includes(_)) continue;
+            if (-1 !== _.indexOf(_)) continue;
             _[_] = _[_];
           }
         return _;
@@ -49568,7 +49569,7 @@
         var _ = {};
         for (var _ in _)
           if ({}.hasOwnProperty.call(_, _)) {
-            if (_.includes(_)) continue;
+            if (-1 !== _.indexOf(_)) continue;
             _[_] = _[_];
           }
         return _;

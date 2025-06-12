@@ -1,7 +1,7 @@
 ﻿"Language" "romanian"
 "Tokens"
 {
-"WelcomeToSteamTitle" "BUN VENIT PE STEAM"
+"WelcomeToSteamTitle" "BUN-VENIT PE STEAM"
 "WelcomeToSteamInfo" "» Joacă cele mai noi titluri
 » Găsește-ți prietenii
 » Găsește cele mai bune servere

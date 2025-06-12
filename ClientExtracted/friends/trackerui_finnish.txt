@@ -699,7 +699,7 @@
 "Broadcast_FirstTime_ViewerRequest" "%friend% haluaisi katsoa peliäsi %gamename%"
 "Broadcast_FirstTime_CompleteText" "Kiitos lähetysoikeuksien määrittämisestä."
 "Broadcast_FirstTime_Configuration" "Lisää tietoja muista asetuksista, kuten mikrofonin äänityksestä ja videon koosta, löydät täältä:"
-"Broadcast_FirstTime_ConfigurationLink" "Suoratoiston asetukset"
+"Broadcast_FirstTime_ConfigurationLink" "Suoratoistoasetukset"
 
 "Broadcast_Chat_Show_Profile" "Näytä profiili"
 "Broadcast_Chat_Mute_User" "Mykistä katsoja"

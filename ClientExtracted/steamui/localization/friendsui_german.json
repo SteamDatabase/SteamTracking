@@ -1123,7 +1123,7 @@
     "Contacts_Search_Title": "Suchen",
     "Contacts_Search_Placeholder": "Nach Freunden und Gruppen suchen",
     "FamilyView_Title": "Familienansicht",
-    "FamilyView_Unlock_Instructions": "Geben Sie unten Ihre PIN ein, um die Familienansicht zu verlassen.",
+    "FamilyView_Unlock_Instructions": "Geben Sie Ihre PIN zum Verlassen der Familienansicht ein.",
     "FamilyView_BadPIN": "Netter Versuch. Bitte geben Sie die korrekte PIN ein.",
     "FamilyView_TooManyAttempts": "Zu viele fehlgeschlagene Versuche. Bitte starten Sie Steam neu und versuchen Sie es erneut.",
     "Tooltip_NotificationSettings": "Benachrichtigungseinstellungen verwalten",

@@ -3272,6 +3272,15 @@
         CountRegistered() {
           return this.m_vecCallbacks.length;
         }
+        static PromiseFromAny(e) {
+          return new Promise((t) => {
+            let r = [];
+            const a = () => {
+              r.forEach((e) => e.Unregister()), t();
+            };
+            for (const t of e) r.push(t.Register(a));
+          });
+        }
       }
       (0, i.Cg)(
         [H],

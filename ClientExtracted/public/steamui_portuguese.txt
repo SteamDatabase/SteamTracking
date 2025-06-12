@@ -1348,7 +1348,7 @@
 
 "Steam_App_LegacyKey_Failed_Text"  "A solicitação de um código de produto falhou. Tenta de novo daqui a alguns minutos."
 "Steam_App_LegacyKey_NoResponse_Text" "Não foi possível contactar o servidor de códigos de produto do Steam. Verifica a tua ligação à internet e tenta de novo."
-"Steam_App_LegacyKey_Denied_Text"  "O Steam não pôde confirmar a posse de forma a solicitar um código de produto. Por favor, entra em contacto com o Suporte Steam."
+"Steam_App_LegacyKey_Denied_Text"  "O Steam não pôde confirmar a posse de forma a solicitar um código de produto. Entra em contacto com o Suporte Steam."
 "Steam_App_LegacyKey_Denied_Borrowed_Text" "Parte ou a totalidade do conteúdo de %game% só está disponível através de um serviço de terceiros, como por exemplo Uplay ou Origin.\nO proprietário original deve ter uma conta neste serviço para que seja possível aceder a este conteúdo."
 "Steam_App_LegacyKey_Pending_Text" "A solicitação de um código de produto ainda está por ser aprovada pelo Suporte Steam. Tenta de novo daqui a algumas horas."
 "Steam_App_LegacyKey_OutOfKeys_Text" "O Steam está temporariamente sem códigos de produto novos requiridos pelo %game%.\n\nPoderemos fornecer-te um código de produto assim que recebermos mais da editora.\nPor favor, tenta de novo mais tarde. Também podes solicitar um reembolso agora."
@@ -4055,7 +4055,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_Login_ErrorTitle"			"Steam - Erro"
 "Steam_Login_DisabledTitle"			"Steam - Contacta-nos"
 "Steam_ErrorAccountDisabled"		"Esta conta foi suspensa pelo Suporte Steam.\n\nQuando uma conta é acedida por outra pessoa ou existe um litígio corrente\nreferente a pagamentos, pode ocorrer esta situação."
-"Steam_Login_ContactSupport"		"Por favor, entra em contacto com o Suporte Steam para resolver este problema."
+"Steam_Login_ContactSupport"		"Entra em contacto com o Suporte Steam para resolver este problema."
 "Steam_ErrorAccountIPLoginRestricted"		"Esta conta não pode ser acedida a partir desta localização.\n"
 
 "steam_tradedialog_title"			"Trocar"

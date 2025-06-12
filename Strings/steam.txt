@@ -1018,6 +1018,7 @@ $ffn
 '\n"k_EMsgGMGetModifiedConVarsResponse
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
+'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
@@ -1481,6 +1482,7 @@ $ffn
 -allosarches
 -allosvers
 -alwaysrelaunch
+-arch
 -bootstrapperproxy
 -cef-disable-gpu
 -cef-disable-gpu-sandbox
@@ -2306,8 +2308,6 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
-17:58:19
-17:58:26
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2329,6 +2329,8 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:28:40
+18:28:49
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2597,7 +2599,6 @@ $ffn
 5\n0k_EMsgTestWorkerProcessServiceModuleCallResponse
 5\n\vnested_type
 5\tuy
-5bz$
 5ceTk
 5mF\tfE
 5mmQ
@@ -2609,7 +2610,6 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-61{D
 64CK\vH
 65536
 666666666666666666666666666666666666666666666666
@@ -6529,7 +6529,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  9 2025
+Jun 12 2025
 June
 K'iche'
 K(\f]C15
@@ -8745,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun  9 2025 17:58:26
+Startup - updater built Jun 12 2025 18:28:49
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -13008,7 +13008,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenZ
 givenName
 glBegin
 glBindTexture
@@ -15131,9 +15131,8 @@ k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
 k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceAddTrigger
 k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTrigger
+k_EMsgRMMsgTraceRemoveTriggers
 k_EMsgRMRemoteInvoke
 k_EMsgRMTestVerisignOTP
 k_EMsgRMTestVerisignOTPResponse

@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-17:58:21
+18:28:43
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -295,7 +295,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun  9 2025
+Jun 12 2025
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n

@@ -940,6 +940,7 @@ $ffn
 '\n"k_EMsgGMGetModifiedConVarsResponse
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
+'\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
@@ -2102,7 +2103,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-17:58:19
 17CCrossProcessPipe
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2123,6 +2123,7 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:28:40
 18CBaseFrameFunction
 18CHTTPClientRequest
 18CHTTPRequestHandle
@@ -6087,7 +6088,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  9 2025
+Jun 12 2025
 June
 K'iche'
 K(\f]C15
@@ -12191,7 +12192,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenVs
+ggenvs
 givenName
 global constructors keyed to 
 global destructors keyed to 
@@ -14193,9 +14194,8 @@ k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
 k_EMsgRMDeleteMemcachedKeys
-k_EMsgRMMsgTraceAddTrigger
 k_EMsgRMMsgTraceEvent
-k_EMsgRMMsgTraceRemoveTrigger
+k_EMsgRMMsgTraceRemoveTriggers
 k_EMsgRMRemoteInvoke
 k_EMsgRMTestVerisignOTP
 k_EMsgRMTestVerisignOTPResponse
