@@ -1662,7 +1662,7 @@ html.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
     padding-right: 20px;
     margin-right: 16px;
     position: sticky;
-    top: 0px;
+    top: calc(var(--store-menu-floating-height, 0px) + 84px);
     height: fit-content;
     max-height: 100vh;
     overflow-y: scroll;

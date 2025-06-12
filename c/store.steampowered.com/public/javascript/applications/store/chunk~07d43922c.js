@@ -19594,7 +19594,7 @@
             const _ = () => {
               if (_.current) {
                 const _ = _.current.getBoundingClientRect();
-                _(_.top <= 0);
+                _(_.top <= 46);
               }
             };
             return (

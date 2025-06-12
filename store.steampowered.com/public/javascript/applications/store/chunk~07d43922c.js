@@ -17403,7 +17403,7 @@
             const e = () => {
               if (p.current) {
                 const e = p.current.getBoundingClientRect();
-                h(e.top <= 0);
+                h(e.top <= 46);
               }
             };
             return (
