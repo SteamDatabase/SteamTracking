@@ -7293,18 +7293,18 @@
       "use strict";
       a.d(t, { I: () => d, S: () => n });
       var n,
-        r = a(90626),
-        s = a(30894),
-        i = a(44165),
-        o = a(6379),
-        l = a(65350),
-        c = a(61859),
-        m = a(91675),
-        u = a(78327);
+        r = a(8527),
+        s = a(90626),
+        i = a(30894),
+        o = a(44165),
+        l = a(6379),
+        c = a(65350),
+        m = a(61859),
+        u = a(91675);
       function d(e, t, a, d, _) {
-        const p = (0, i.sB)();
+        const p = (0, o.sB)();
         if (e.disable_section)
-          return r.createElement(l.S, { section: e, event: a, language: d });
+          return s.createElement(c.S, { section: e, event: a, language: d });
         if (
           !(
             e.hide_section ||
@@ -7318,30 +7318,30 @@
             (e.country_allow_list?.length > 0 &&
               e.country_allow_list
                 .toLowerCase()
-                .indexOf(u.iA.country_code.toLowerCase()) < 0) ||
+                .indexOf(r.TS.COUNTRY.toLowerCase()) < 0) ||
             (e.country_deny_list?.length > 0 &&
               e.country_deny_list
                 .toLowerCase()
-                .indexOf(u.iA.country_code.toLowerCase()) >= 0)
+                .indexOf(r.TS.COUNTRY.toLowerCase()) >= 0)
           )
             return t == n.EPreviewMode_EditBackground
-              ? r.createElement(l.E, {
+              ? s.createElement(c.E, {
                   section: e,
                   event: a,
                   language: d,
-                  strOverrideLocalized: (0, c.we)(
+                  strOverrideLocalized: (0, m.we)(
                     "#EventEditor_Preview_CountryVisiblity",
                   ),
                 })
               : void 0;
           if (e.package_allow_list?.length > 0) {
-            if (!e.package_allow_list.some((e) => s.Fm.Get().BOwnsPackage(e)))
+            if (!e.package_allow_list.some((e) => i.Fm.Get().BOwnsPackage(e)))
               return t == n.EPreviewMode_EditBackground
-                ? r.createElement(l.E, {
+                ? s.createElement(c.E, {
                     section: e,
                     event: a,
                     language: d,
-                    strOverrideLocalized: (0, c.we)(
+                    strOverrideLocalized: (0, m.we)(
                       "#EventEditor_Preview_PackageVisiblity",
                     ),
                   })
@@ -7349,14 +7349,14 @@
           }
           if (e.hardware_allow_list?.length > 0) {
             if (
-              !e.hardware_allow_list.some((e) => s.Fm.Get().BHasUsedHardware(e))
+              !e.hardware_allow_list.some((e) => i.Fm.Get().BHasUsedHardware(e))
             )
               return t == n.EPreviewMode_EditBackground
-                ? r.createElement(l.E, {
+                ? s.createElement(c.E, {
                     section: e,
                     event: a,
                     language: d,
-                    strOverrideLocalized: (0, c.we)(
+                    strOverrideLocalized: (0, m.we)(
                       "#EventEditor_Preview_HardwareUseVisibility",
                     ),
                   })
@@ -7368,26 +7368,26 @@
               !e.sale_page_cross_promo_featured_app_tagid
             )
               return t && t != n.EPreviewMode_Disabled
-                ? r.createElement(l.E, {
+                ? s.createElement(c.E, {
                     section: e,
                     event: a,
                     language: d,
-                    strOverrideLocalized: (0, c.we)(
+                    strOverrideLocalized: (0, m.we)(
                       "#EventEditor_Preview_CrossPromo_setup",
                     ),
                   })
                 : void 0;
             {
-              const s = o.O3.GetClanEventModel(
+              const r = l.O3.GetClanEventModel(
                 e.sale_page_cross_promo_event_gid,
               );
-              if (!s || !s.BIsVisibleEvent())
+              if (!r || !r.BIsVisibleEvent())
                 return t && t != n.EPreviewMode_Disabled
-                  ? r.createElement(l.E, {
+                  ? s.createElement(c.E, {
                       section: e,
                       event: a,
                       language: d,
-                      strOverrideLocalized: (0, c.we)(
+                      strOverrideLocalized: (0, m.we)(
                         "#EventEditor_Preview_CrossPromo_missing",
                       ),
                     })
@@ -7397,20 +7397,20 @@
           return null;
         }
         if (t == n.EPreviewMode_EditBackground) {
-          let t = (0, c.we)("#EventEditor_Preview_SectionMarkedHidden");
+          let t = (0, m.we)("#EventEditor_Preview_SectionMarkedHidden");
           return (
             e.hide_section_before_rtime && p < e.hide_section_before_rtime
-              ? (t = (0, c.we)(
+              ? (t = (0, m.we)(
                   "#EventEditor_Preview_SectionMarkedHiddenUntil",
-                  (0, m.P0)(e.hide_section_before_rtime, !1, ""),
+                  (0, u.P0)(e.hide_section_before_rtime, !1, ""),
                 ))
               : e.hide_section_after_rtime &&
                 e.hide_section_after_rtime < p &&
-                (t = (0, c.we)(
+                (t = (0, m.we)(
                   "#EventEditor_Preview_SectionMarkedHiddenAfter",
-                  (0, m.P0)(e.hide_section_after_rtime, !1, ""),
+                  (0, u.P0)(e.hide_section_after_rtime, !1, ""),
                 )),
-            r.createElement(l.E, {
+            s.createElement(c.E, {
               section: e,
               event: a,
               language: d,
@@ -17348,11 +17348,11 @@
                 (e.country_allow_list &&
                   e.country_allow_list
                     .toLowerCase()
-                    .indexOf(v.iA.country_code.toLowerCase()) < 0) ||
+                    .indexOf(v.TS.COUNTRY.toLowerCase()) < 0) ||
                 (e.country_deny_list &&
                   e.country_deny_list
                     .toLowerCase()
-                    .indexOf(v.iA.country_code.toLowerCase()) >= 0)
+                    .indexOf(v.TS.COUNTRY.toLowerCase()) >= 0)
               )
                 return !1;
               if (

@@ -8160,11 +8160,11 @@
             (_.country_allow_list?.length > 0 &&
               _.country_allow_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
             (_.country_deny_list?.length > 0 &&
               _.country_deny_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) >= 0)
+                .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
           )
             return _ == _.EPreviewMode_EditBackground
               ? _.createElement(_._, {
@@ -19539,11 +19539,11 @@
                 (_.country_allow_list &&
                   _.country_allow_list
                     .toLowerCase()
-                    .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                    .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
                 (_.country_deny_list &&
                   _.country_deny_list
                     .toLowerCase()
-                    .indexOf(_._.country_code.toLowerCase()) >= 0)
+                    .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
               )
                 return !1;
               if (
