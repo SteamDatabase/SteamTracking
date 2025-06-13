@@ -27235,8 +27235,8 @@
         p = r(94011);
       const _ = (0, r(75844).PA)(function (e) {
         const { appids: t, hide_status_banners: r } = e,
-          n = t.every((e) => s.Fm.Get().BOwnsApp(e)),
-          c = t.every((e) => s.Fm.Get().BIsGameWishlisted(e)),
+          n = t.length > 0 && t.every((e) => s.Fm.Get().BOwnsApp(e)),
+          c = t.length > 0 && t.every((e) => s.Fm.Get().BIsGameWishlisted(e)),
           _ = t.some((e) => {
             const t = o.A.Get().GetApp(e);
             return t && h(e, t?.GetParentAppID());

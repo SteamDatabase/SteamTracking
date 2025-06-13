@@ -29450,8 +29450,8 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, __webpack_require__("chunkid")._)(function (_) {
         const { appids: _, hide_status_banners: __webpack_require__ } = _,
-          _ = _.every((_) => _._.Get().BOwnsApp(_)),
-          _ = _.every((_) => _._.Get().BIsGameWishlisted(_)),
+          _ = _.length > 0 && _.every((_) => _._.Get().BOwnsApp(_)),
+          _ = _.length > 0 && _.every((_) => _._.Get().BIsGameWishlisted(_)),
           _ = _.some((_) => {
             const _ = _._.Get().GetApp(_);
             return _ && _(_, _?.GetParentAppID());

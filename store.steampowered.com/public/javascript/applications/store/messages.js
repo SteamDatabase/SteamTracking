@@ -4072,7 +4072,13 @@
           h = (0, v.n9)(),
           w = (0, F.w)(),
           E = (0, s.useMemo)(() => f?.GetIncludedAppIDsOrSelf(), [f]);
-        if (!f) return null;
+        if (
+          (console.log(f.GetName()),
+          console.log(f.GetStoreItemType()),
+          console.dir(E),
+          !f)
+        )
+          return null;
         const R = (0, z.NT)(
           (0, o.It)(`${f.GetStorePageURL(b)}${n ? `?${n}` : ""}`, h, w),
         );
@@ -4147,6 +4153,7 @@
           [B] = (0, u.G6)(t.id, (0, m.SW)(t.type), a.Xh),
           b =
             B &&
+            B?.GetIncludedAppIDsOrSelf().length > 0 &&
             B?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
           f = b && !i;
         if (n && 0 == B?.GetStoreItemType())

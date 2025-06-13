@@ -728,7 +728,13 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (!_) return null;
+        if (
+          (console.log(_.GetName()),
+          console.log(_.GetStoreItemType()),
+          console.dir(_),
+          !_)
+        )
+          return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
         );
@@ -837,6 +843,7 @@
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ =
             _ &&
+            _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
         if (_ && 0 == _?.GetStoreItemType())
