@@ -897,13 +897,20 @@ function ApplyTags(tagsToRemove=[])
 		var tag = tags[i];
 		rgRankedTagids.push(tag.tagid);
 	}
+	var rgTagsToRemoveIds = [];
+	for(var i = 0; i < tagsToRemove.length; i++)
+	{
+		var tag = tagsToRemove[i];
+		rgTagsToRemoveIds.push(tag.tagid);
+	}
+
 
 	//Formulate the tag application POST request
 	var rgParams = {
 		appid: appid,
 		sessionid: g_sessionID,
 		rankedtagids: rgRankedTagids,
-		negatedtagids: tagsToRemove,
+		negatedtagids: rgTagsToRemoveIds,
 	};
 
 	if(bDiagnostics)
