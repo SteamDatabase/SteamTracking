@@ -2550,7 +2550,7 @@
               (e, t) => (t.rt_last_update_time > e ? t.rt_last_update_time : e),
               0,
             );
-            if (!e || e < s.end_date) return null;
+            if (!(e && e > s.end_date)) return null;
             const t =
                 m.data.stats?.filter(
                   (t) => 0 != e && t.rt_last_update_time == e,
