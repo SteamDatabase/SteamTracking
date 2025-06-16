@@ -27,10 +27,10 @@
         });
       var s = i(90626),
         l = i(61859),
-        c = i(78327),
-        a = i(63404),
-        r = i.n(a);
-      const n = {
+        a = i(78327),
+        c = i(63404),
+        n = i.n(c);
+      const r = {
           bAccessibilityDifficultyLevels:
             "#Accessibility_Feature_AdjustableDifficulty",
           bAccessibilitySaveAnytime: "#Accessibility_Feature_SaveAnytime",
@@ -100,13 +100,13 @@
         };
       function y(e) {
         const [t, i] = (0, s.useState)(e.initialOpen ?? !1),
-          a = s.useId(),
-          n = Object.entries(e.features)
+          c = s.useId(),
+          r = Object.entries(e.features)
             .filter(([e, t]) => t)
             .map(([e]) => e);
-        if (0 === n.length) return null;
+        if (0 === r.length) return null;
         const u = {};
-        n.forEach((e) => {
+        r.forEach((e) => {
           const t = o[e];
           (u[t] ??= []), u[t].push(e);
         });
@@ -114,36 +114,39 @@
         return s.createElement(
           "details",
           {
-            className: r().Details,
+            className: n().Details,
             open: t,
             onToggle: (e) => i(e.currentTarget.open),
           },
           s.createElement(
             "summary",
-            { className: r().Summary },
+            {
+              className: n().Summary,
+              "data-panel": '{"clickOnActivate": true}',
+            },
             s.createElement(
               "div",
-              { className: r().ImageContainer },
+              { className: n().ImageContainer },
               s.createElement(m, {
-                className: r().CategoryIcon,
+                className: n().CategoryIcon,
                 "aria-label": "",
               }),
             ),
             s.createElement(
               "span",
-              { className: r().FeatureNameContainer, id: a },
+              { className: n().FeatureNameContainer, id: c },
               s.createElement(
                 "span",
-                { className: r().FeatureName },
+                { className: n().FeatureName },
                 t
                   ? (0, l.we)("#AccessibilityFeatures")
-                  : (0, l.we)("#AccessibilityFeaturesWithCount", n.length),
+                  : (0, l.we)("#AccessibilityFeaturesWithCount", r.length),
               ),
               s.createElement(
                 "a",
                 {
-                  className: r().InfoLink,
-                  href: `${c.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
+                  className: n().InfoLink,
+                  href: `${a.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
                   target: "_blank",
                 },
                 "?",
@@ -152,7 +155,7 @@
           ),
           s.createElement(
             "ul",
-            { className: r().FeatureList, "aria-labelledby": a },
+            { className: n().FeatureList, "aria-labelledby": c },
             b &&
               s.createElement(
                 s.Fragment,
@@ -164,33 +167,46 @@
                     s.createElement(A, {
                       group: "gameplay",
                       features: u.gameplay,
+                      open: t,
                     }),
                   ),
                 u.visual &&
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, { group: "visual", features: u.visual }),
+                    s.createElement(A, {
+                      group: "visual",
+                      features: u.visual,
+                      open: t,
+                    }),
                   ),
                 u.audio &&
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, { group: "audio", features: u.audio }),
+                    s.createElement(A, {
+                      group: "audio",
+                      features: u.audio,
+                      open: t,
+                    }),
                   ),
                 u.input &&
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, { group: "input", features: u.input }),
+                    s.createElement(A, {
+                      group: "input",
+                      features: u.input,
+                      open: t,
+                    }),
                   ),
               ),
             !b &&
-              n.map((e) =>
+              r.map((e) =>
                 s.createElement(
                   "li",
                   { key: e },
-                  s.createElement(p, { feature: e }),
+                  s.createElement(p, { feature: e, open: t }),
                 ),
               ),
           ),
@@ -229,17 +245,17 @@
           null,
           s.createElement(
             "span",
-            { className: r().GroupLabel, id: t },
+            { className: n().GroupLabel, id: t },
             (0, l.we)(b[e.group]),
           ),
           s.createElement(
             "ul",
-            { className: r().FeatureGroupItems, "aria-labelledby": t },
-            e.features.map((e) =>
+            { className: n().FeatureGroupItems, "aria-labelledby": t },
+            e.features.map((t) =>
               s.createElement(
                 "li",
-                { key: e },
-                s.createElement(p, { feature: e }),
+                { key: t },
+                s.createElement(p, { feature: t, open: e.open }),
               ),
             ),
           ),
@@ -249,16 +265,18 @@
         return s.createElement(
           "a",
           {
-            href: `${c.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${u[e.feature]}`,
-            className: r().InfoRow,
+            href: `${a.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${u[e.feature]}`,
+            className: n().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": e.open ? void 0 : "true",
           },
           s.createElement(
             "span",
-            { className: r().FeatureNameContainer },
+            { className: n().FeatureNameContainer },
             s.createElement(
               "span",
-              { className: r().FeatureName },
-              (0, l.we)(n[e.feature]),
+              { className: n().FeatureName },
+              (0, l.we)(r[e.feature]),
             ),
           ),
         );

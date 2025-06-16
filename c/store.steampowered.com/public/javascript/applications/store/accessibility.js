@@ -120,6 +120,7 @@
             "summary",
             {
               className: _().Summary,
+              "data-panel": '{"clickOnActivate": true}',
             },
             _.createElement(
               "div",
@@ -174,6 +175,7 @@
                     _.createElement(_, {
                       group: "gameplay",
                       features: _.gameplay,
+                      open: _,
                     }),
                   ),
                 _.visual &&
@@ -183,6 +185,7 @@
                     _.createElement(_, {
                       group: "visual",
                       features: _.visual,
+                      open: _,
                     }),
                   ),
                 _.audio &&
@@ -192,6 +195,7 @@
                     _.createElement(_, {
                       group: "audio",
                       features: _.audio,
+                      open: _,
                     }),
                   ),
                 _.input &&
@@ -201,6 +205,7 @@
                     _.createElement(_, {
                       group: "input",
                       features: _.input,
+                      open: _,
                     }),
                   ),
               ),
@@ -213,6 +218,7 @@
                   },
                   _.createElement(_, {
                     feature: _,
+                    open: _,
                   }),
                 ),
               ),
@@ -272,6 +278,7 @@
                 },
                 _.createElement(_, {
                   feature: _,
+                  open: _.open,
                 }),
               ),
             ),
@@ -284,6 +291,8 @@
           {
             href: `${_._.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${_[_.feature]}`,
             className: _().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": _.open ? void 0 : "true",
           },
           _.createElement(
             "span",
