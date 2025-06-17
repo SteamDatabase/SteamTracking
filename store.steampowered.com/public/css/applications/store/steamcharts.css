@@ -872,7 +872,7 @@ div#global_header .content {
 .wLFBOAfa7yijnxFGxj9xs ._1tUsAmcZXj8lDhFYLPtWSX {
   display: flex;
 }
-.wLFBOAfa7yijnxFGxj9xs ._1tUsAmcZXj8lDhFYLPtWSX a {
+.wLFBOAfa7yijnxFGxj9xs ._1tUsAmcZXj8lDhFYLPtWSX ._1PJCAo5GkI9HNCJX88goY5 {
   display: flex;
   background: linear-gradient(
     to right,
@@ -1742,77 +1742,6 @@ input.z7qI4Gjuleb-g6osRQpw2 {
 ._3OWH-tupjKqql_tcQsLYIp {
   width: 1050px;
 }
-._3hEmqKnspI1WSyye2lMCnU {
-  display: flex;
-  flex-direction: column;
-  max-width: 395px;
-}
-input.Y12tprgNrNvnZ-eZvch6X {
-  width: -webkit-fill-available;
-  width: calc(100% - 24px);
-  height: 11px;
-  margin-bottom: 4px;
-  padding: 12px;
-  border: none;
-  background: var(--main-editor-input-bg-color);
-  outline-width: 0;
-  color: var(--main-editor-text-color);
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 18px;
-  border-radius: 4px;
-  box-shadow: 0 0 5px #000 inset;
-}
-._13t_BRkK7eD3KorHIRnCQg {
-  font-weight: bold;
-  color: green;
-}
-.oCi3RlRuxmlmslNXhrvbu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  max-height: 732px;
-  background: #000;
-}
-.oCi3RlRuxmlmslNXhrvbu::-webkit-scrollbar-thumb {
-  background: #3d4450;
-}
-.qkC7CxPM6pro8iwepOfPA {
-  display: flex;
-  flex-direction: column;
-  background-color: #323843;
-  padding: 12px;
-  margin-bottom: 20px;
-}
-._2XGqDBgqyWPUyswJ-2bQy4 {
-  font-size: 14px;
-  color: #fff;
-}
-._3_uPXn6Boi1uEsOtepIaKb {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-._2BZckGhvMPS5VS4DD9bpvT {
-  font-size: 12px;
-  color: gray;
-}
-._2dVHFBaaWfiXq7Ea3wn-wJ {
-  color: red;
-  font-weight: bold;
-}
-._3rToctsao7fc2jlrU7bnW1 {
-  display: flex;
-  flex-direction: column;
-}
-._2WvOuad9iiZkV_HKI8NYlO {
-  color: #a3cf06;
-  font-size: 14px;
-}
-._1HjnUXpsmTADB1fcOmHSpX {
-  align-self: right;
-}
 :root {
   --main-text-color: #dbe2e6;
   --main-light-blue-background: #4582a5;
@@ -2289,6 +2218,10 @@ p a:hover {
 ._3SVRvFP-sXikNXmksKkDQ7 button.DialogButton._2YD-avez2pqO4MJHAO5_v0 {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+.inXVzuN-asDe-A5jnsvvV {
+  color: #a3cf06;
+  font-size: 14px;
 }
 ._2mvgc6dpEDHRJlTWhGDz7h {
   color: #fff;

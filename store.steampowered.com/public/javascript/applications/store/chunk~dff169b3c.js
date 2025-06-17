@@ -2064,7 +2064,7 @@
         j = i(30470),
         O = i(78327),
         W = i(14860),
-        U = i(44332),
+        U = i(81393),
         C = i(15419);
       const k = {
         11: {
@@ -2919,7 +2919,7 @@
       };
       function ge(e) {
         const t = pe[e];
-        return (0, U.w)(!!t, `Missing notification type data for ${e}`), t;
+        return (0, U.wT)(!!t, `Missing notification type data for ${e}`), t;
       }
       function ye(e, t, i) {
         if (!t) return !1;

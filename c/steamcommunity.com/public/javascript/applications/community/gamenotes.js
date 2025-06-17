@@ -4245,28 +4245,11 @@
             });
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.trim();
-      }
-      function _(_) {
-        return _.appid
-          ? {
-              appid: _.appid,
-            }
-          : {
-              shortcut: _.shortcut_name,
-            };
-      }
-      var _ = __webpack_require__("chunkid");
       const _ = new _._("GameNotesCloudStore").Debug;
       function _(_) {
         return _.replace(/[!-/:-@ [\\\]^`]/g, "_");
       }
       class _ {
-        constructor() {
-          (this.m_mapNotesByGame = new Map()),
-            (this.m_mapNotesByShortcut = new Map());
-        }
         FilenameForNotes(_) {
           return "appid" in _
             ? `notes_${Number(_.appid)}`
@@ -4290,12 +4273,7 @@
               }
             : void 0;
         }
-        MapAndKeyNoteType(_) {
-          return "appid" in _
-            ? [this.m_mapNotesByGame, _.appid]
-            : [this.m_mapNotesByShortcut, _.shortcut];
-        }
-        async GetGameNotesList(_, _) {
+        async GetGameNotesList(_) {
           return (await this.InternalLoadNotes(_)).notes.slice();
         }
         NewNote(_, _) {
@@ -4314,52 +4292,17 @@
             }
           );
         }
-        async SaveGameNote(_, _, _) {
-          const _ = _(_),
-            _ = await this.InternalLoadNotes(_),
-            _ = _.notes.findIndex((_) => _._ === _._);
-          return (
-            -1 != _
-              ? (_.notes[_] = {
-                  ..._.notes[_],
-                  ..._,
-                  title: _,
-                  content: _,
-                  time_modified: Math.floor(Date.now() / 1e3),
-                })
-              : _.notes.push({
-                  ..._,
-                  title: _,
-                  content: _,
-                  time_modified: Math.floor(Date.now() / 1e3),
-                }),
-            (_.dirty = !0),
-            await this.InternalSaveNotes(_),
-            _._
+        async SaveGameNotes(_, _) {
+          const _ = {
+            notes: _,
+          };
+          "shortcut" in _ && (_.shortcut_name = _.shortcut);
+          const _ = JSON.stringify(_, (_, _) =>
+            "not_persisted" === _ ? void 0 : _,
           );
-        }
-        async InternalSaveNotes(_) {
-          const [_, __webpack_require__] = this.MapAndKeyNoteType(_),
-            _ = _.get(__webpack_require__);
-          if (_.dirty) {
-            const _ = {
-                notes: _.notes,
-              },
-              _ = JSON.stringify(_, (_, _) =>
-                "not_persisted" === _ ? void 0 : _,
-              );
-            _(_, ` => ${_}`);
-            const _ = await this.WriteNotesFile(this.FilenameForNotes(_), _);
-            if (1 != _) throw `Error saving notes: ${_}`;
-          }
-          return 1;
-        }
-        async DeleteGameNote(_, _) {
-          const _ = await this.InternalLoadNotes(_);
           return (
-            _._(_.notes, (_) => _._ === _) && (_.dirty = !0),
-            await this.InternalSaveNotes(_),
-            _
+            _("SaveGameNotes", _),
+            await this.WriteNotesFile(this.FilenameForNotes(_), _)
           );
         }
       }
@@ -4421,22 +4364,17 @@
           );
         }
         async InternalLoadNotes(_) {
-          const [_, __webpack_require__] = this.MapAndKeyNoteType(_);
-          if (!_.has(__webpack_require__)) {
-            const _ = this.FilenameForNotes(_),
-              _ = await this.GetCloudFileInfo(_);
-            let _;
+          const _ = this.FilenameForNotes(_),
+            _ = await this.GetCloudFileInfo(_);
+          let _;
+          return (
             (_ = _
               ? await this.InternalLoadFileFromCloud(_)
               : {
                   notes: [],
                 }),
-              _.set(__webpack_require__, {
-                dirty: !1,
-                notes: _.notes,
-              });
-          }
-          return _.get(__webpack_require__);
+            _
+          );
         }
         async WriteNotesFile(_, _) {
           return this.m_props.uploadFile(_, _), 1;
@@ -4520,6 +4458,18 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.trim();
+      }
+      function _(_) {
+        return _.appid
+          ? {
+              appid: _.appid,
+            }
+          : {
+              shortcut: _.shortcut_name,
+            };
+      }
       const _ = _.createContext({
         mode: "page",
         store: null,
@@ -4574,20 +4524,27 @@
       function _(_, _) {
         return {
           queryKey: _(_),
-          queryFn: async () => (await _.GetGameNotesList(_, !0)) || [],
-          staleTime: 18e5,
+          queryFn: async () => (await _.GetGameNotesList(_)) || [],
+          staleTime: 18e4,
+          refetchInterval: 9e5,
           enabled: !!_,
+          structuralSharing: !0,
         };
       }
       function _(_, _) {
         const _ = (0, _._)(),
           _ = _(),
-          _ = _._;
+          _ = _(_);
         return (0, _._)({
-          mutationFn: async () =>
-            _.not_persisted ? _ : await _.DeleteGameNote(_(_), _),
-          onSuccess: () => {
-            _(_, _(_), (_) => _.filter((_) => _._ != _)), _ && _();
+          mutationFn: async () => {
+            if (_.not_persisted) return;
+            const _ = await __webpack_require__.fetchQuery(_(_, _));
+            if (!_) throw `Failed to load notes for ${JSON.stringify(_)}`;
+            const _ = _.filter((_) => _._ != _._);
+            return await _.SaveGameNotes(_, _), _;
+          },
+          onSuccess: (_) => {
+            _ && __webpack_require__.setQueryData(_(_), _), _ && _();
           },
         });
       }
@@ -4866,10 +4823,25 @@
               scope: {
                 _: `${"appid" in _ ? _.appid : _.shortcut_name}_${_._}`,
               },
-              mutationFn: (_) => (
-                _(`Saving note ${_.title}`),
-                _.SaveGameNote(_, _.title, _.bbcode)
-              ),
+              mutationFn: async (_) => {
+                const { title: _, bbcode: _ } = _;
+                _(`Saving note ${_}`);
+                const _ = await __webpack_require__.fetchQuery(_(_, _));
+                if (!_) throw `Failed to load notes for ${JSON.stringify(_)}`;
+                const _ = _.find((_) => _._ == _._),
+                  _ = {
+                    ...(null != _ ? _ : {}),
+                    ..._,
+                    title: _,
+                    content: _,
+                    time_modified: Math.floor(Date.now() / 1e3),
+                  };
+                let _;
+                _ = _ ? _.map((_) => (_._ == _._ ? _ : _)) : [..._, _];
+                const _ = await _.SaveGameNotes(_, _);
+                if (1 != _) throw `Error saving notes: ${_}`;
+                return _;
+              },
               onMutate(_) {
                 const _ = {
                   ..._,
@@ -4879,17 +4851,7 @@
                 return _(_, _, (_) => _.map((_) => (_._ == _._ ? _ : _))), _;
               },
               onSuccess(_, _, _) {
-                _(_, _, (_) =>
-                  _.map((_) =>
-                    _._ === _._
-                      ? {
-                          ..._,
-                          _: _,
-                          not_persisted: !1,
-                        }
-                      : _,
-                  ),
-                );
+                __webpack_require__.setQueryData(_(_), _);
               },
               onError(_) {
                 _(_.message || _.name);
@@ -4957,7 +4919,7 @@
           _.document,
           _.useCallback(
             (_) => {
-              "hidden" == _ && _.CommitChanges();
+              "hidden" == _ && _ && _.CommitChanges();
             },
             [_],
           ),
@@ -5378,7 +5340,7 @@
             return (0, _._)({
               queryKey: ["GameNotes", "GamesWithNotes"],
               queryFn: () => _.GetGamesWithNotes(),
-              staleTime: 18e5,
+              staleTime: 6e5,
             });
           })(),
           _ = _.useMemo(

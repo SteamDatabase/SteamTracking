@@ -3686,6 +3686,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         m_cancelSignal = _().CancelToken.source();
@@ -3790,10 +3791,17 @@
                   else {
                     _.bProcessing = !0;
                     let _ = _._.GetHashFromHashAndExt(_),
-                      _ = _._.GetExtensionStringFromHashAndExt(_),
+                      _ = _._.GetExtStringFromHashAndExt(_),
                       _ = (0, _._)(_);
-                    await _._.SendResizeRequest(this.m_cancelSignal, _, _, _, _)
-                      .then((_) => {
+                    if (_)
+                      try {
+                        const _ = await (0, _._)(
+                          this.m_cancelSignal.token,
+                          _,
+                          _,
+                          _,
+                          _,
+                        );
                         console.log("success on the resize request"),
                           _ == _.length
                             ? ((_.bSucceeded = !0),
@@ -3809,13 +3817,17 @@
                                 _ +
                                 " / " +
                                 _.length));
-                      })
-                      .catch((_) => {
+                      } catch (_) {
                         _.bFailed = !0;
                         let _ = (0, _._)(_);
                         (_.strMessage = _.strErrorMsg),
                           console.error("Resize: " + _.strErrorMsg, _);
-                      });
+                      }
+                    else
+                      (_.bFailed = !0),
+                        console.error(
+                          "Resize: resize request couldn't be determined from the artwork type",
+                        );
                   }
                 } else _.bSkipped = !0;
               } else _.bSkipped = !0;

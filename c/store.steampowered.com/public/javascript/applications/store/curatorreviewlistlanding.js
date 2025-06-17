@@ -728,13 +728,7 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (
-          (console.log(_.GetName()),
-          console.log(_.GetStoreItemType()),
-          console.dir(_),
-          !_)
-        )
-          return null;
+        if (!_) return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
         );

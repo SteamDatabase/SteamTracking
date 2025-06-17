@@ -826,7 +826,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton .SVGIcon_Button {
   width: 20px;
   height: 20px;
   padding-bottom: 4px;
-  padding-left: 1px;
+  margin-right: 0px;
 }
 button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
   .SVGIcon_Button.SVGIcon_TextBold,
@@ -1029,6 +1029,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   flex: 1;
   overflow: auto;
   min-height: 0;
+  scrollbar-gutter: stable;
 }
 ._1AL7l2CN6z-vuLfp1iCLa ._1fu6xumTI1nCY5wc6FG_N2 {
   position: absolute;

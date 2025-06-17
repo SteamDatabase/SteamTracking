@@ -17271,9 +17271,15 @@
               1 === (null == _ ? void 0 : _.GetAppType())
                 ? _.GetAppID()
                 : _.GetDemoAppIDs()[0];
-            return _.createElement(_, {
-              appid: _,
-            });
+            return _.createElement(
+              "div",
+              {
+                className: __webpack_require__,
+              },
+              _.createElement(_, {
+                appid: _,
+              }),
+            );
           }
           return null;
         }
@@ -18743,7 +18749,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18765,6 +18770,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19373,9 +19379,10 @@
       }
       const _ = (0, _._)((_) => {
         const _ = _._.GetWithFallback(
-          _.link.localized_link_capsule,
-          _.language,
-        );
+            _.link.localized_link_capsule,
+            _.language,
+          ),
+          _ = _._.GenerateURLFromHashAndExt(_.clanAccountID, _);
         return _.createElement(
           _._,
           {
@@ -19394,7 +19401,7 @@
             Boolean(_.link.localized_link_capsule) &&
               _.createElement(_._, {
                 className: _().LinkCapsuleImage,
-                src: `${(0, _._)()}${_.clanAccountID}/${_}`,
+                src: _,
               }),
             Boolean(_.link.materialized_link_capsule) &&
               _.createElement("img", {
@@ -19627,8 +19634,8 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, __webpack_require__("chunkid")._)(function (_) {
         const { appids: _, hide_status_banners: __webpack_require__ } = _,
-          _ = _.every((_) => _._.Get().BOwnsApp(_)),
-          _ = _.every((_) => _._.Get().BIsGameWishlisted(_)),
+          _ = _.length > 0 && _.every((_) => _._.Get().BOwnsApp(_)),
+          _ = _.length > 0 && _.every((_) => _._.Get().BIsGameWishlisted(_)),
           _ = _.some((_) => {
             const _ = _._.Get().GetApp(_);
             return _ && _(_, null == _ ? void 0 : _.GetParentAppID());

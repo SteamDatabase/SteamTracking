@@ -5708,6 +5708,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  sequence_length: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -14453,7 +14458,7 @@
             _.push(768);
             break;
           case 39:
-            _.push(200);
+            _.push(_.bert_tokenizer().sequence_length());
             break;
           default:
             (0, _._)(
@@ -34338,6 +34343,26 @@
                     (0, _._)(_),
                   ),
                 ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.bert_tokenizer().sequence_length(),
+                  ),
+                ),
               ),
             ),
             _.map((_, _) => {
@@ -34383,9 +34408,14 @@
               msgWorkingProjectConfig: __webpack_require__,
             } = _(),
             [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model());
+            [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model()),
+            [_, _] = _.useState(
+              _.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
+            );
           _.useEffect(() => {
-            _(_.msgNode.comment()), _(_.msgNode.bert_tokenizer().bert_model());
+            _(_.msgNode.comment()),
+              _(_.msgNode.bert_tokenizer().bert_model()),
+              _(_.msgNode.bert_tokenizer().sequence_length()?.toString());
           }, [_.bVisible, _.msgNode]);
           let _ = [
             {
@@ -34506,6 +34536,32 @@
                   options: _,
                 }),
               ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLengthDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 16, 512),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
             ),
             _.createElement(
               "div",
@@ -34518,6 +34574,9 @@
                   onClick: () => {
                     _.msgNode.set_comment(_),
                       _.msgNode.bert_tokenizer().set_bert_model(_),
+                      _.msgNode
+                        .bert_tokenizer()
+                        .set_sequence_length(parseInt(_)),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -35132,7 +35191,10 @@
                       (_ = 1), (_ = 1);
                       break;
                     case 39:
-                      (_ = 1), (_ = 3), _.bert_tokenizer().set_bert_model(2);
+                      (_ = 1),
+                        (_ = 3),
+                        _.bert_tokenizer().set_bert_model(2),
+                        _.bert_tokenizer().set_sequence_length(512);
                       break;
                     case 40:
                       (_ = 3),
@@ -36038,7 +36100,7 @@
       const _ = () => {
           const { msgWorkingProjectConfig: _ } = _(),
             _ = _(),
-            _ = _(_.project_id(), _.published_version(), 100).data,
+            _ = _(_.project_id(), _.published_version(), 5).data,
             [_, _] = _.useState(!1);
           if (!_.isSuccess) return null;
           let _ = [];

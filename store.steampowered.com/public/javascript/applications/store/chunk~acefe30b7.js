@@ -23,7 +23,7 @@
         a = n(90626),
         l = n(6144),
         c = n(84933),
-        u = n(44332);
+        u = n(81393);
       class d {
         m_mapBadgeInfo = new Map();
         m_mapBadgeLoadPromises = new Map();
@@ -61,7 +61,7 @@
           let t = null;
           try {
             const n = (0, s.xv)();
-            (0, u.w)(
+            (0, u.wT)(
               n == s.TS.STORE_BASE_URL || n == s.TS.COMMUNITY_BASE_URL,
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
@@ -540,7 +540,7 @@
         s = n(34629),
         i = n(14947),
         r = (n(90626), n(77516)),
-        a = n(44332),
+        a = n(81393),
         l = n(6144),
         c = n(84933),
         u = n(78327),
@@ -620,7 +620,7 @@
                   this.m_rgFutureInsertions[n],
                 );
                 t &&
-                  ((0, a.w)(
+                  ((0, a.wT)(
                     Boolean(t.sectionID),
                     "Expected to have a materialized insertion at this poiunt: " +
                       t.sectionID,

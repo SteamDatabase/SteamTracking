@@ -2218,7 +2218,7 @@
         F = i(30470),
         A = i(78327),
         O = i(96352),
-        U = i(44332),
+        U = i(81393),
         W = i(60011);
       const k = {
         11: {
@@ -3171,7 +3171,7 @@
       };
       function be(e) {
         const t = ye[e];
-        return (0, U.w)(!!t, `Missing notification type data for ${e}`), t;
+        return (0, U.wT)(!!t, `Missing notification type data for ${e}`), t;
       }
       function Be(e, t, i) {
         var r;

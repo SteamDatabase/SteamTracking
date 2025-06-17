@@ -245,39 +245,7 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 }
 
 //
-// Set the economy info
-//
-function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, privateMode, refundApiLevel, refundPrivateMode, historyApiLevel, hasItemServer, forceCommodity )
-{
-    var rgParams = {
-        'assetURL': assetURL,
-        'apiLevel': apiLevel,
-        'privateMode': privateMode,
-        'refundApiLevel': refundApiLevel,
-        'refundPrivateMode': refundPrivateMode,
-        'historyApiLevel': historyApiLevel,
-        'hasItemServer': hasItemServer,
-        'forceCommodity': forceCommodity
-    };
-
-    if ( assetKey !== null )
-    {
-        rgParams.assetKey = assetKey;
-    }
-
-    AppsAjaxRequest( g_szBaseURL + '/apps/seteconomyinfo/' + appid,
-        rgParams,
-		function( results )
-		{
-			// now reflect results
-			CommonSetHandler( results );
-		},
-		"POST"
-		);
-}
-
-//
-// Set the economy info
+// flush asset appearance cache
 //
 function EconomyFlushAssetAppearanceCache( appid )
 {

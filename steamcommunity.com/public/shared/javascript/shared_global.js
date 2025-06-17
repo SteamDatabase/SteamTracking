@@ -297,7 +297,7 @@ function ShowDialog( strTitle, strDescription, rgModalParams )
  */
 function ShowPromptDialogWithProps( rgParams )
 {
-	let { strOKButton, strCancelButton, strTitle, strDescription, defaultValue, inputType, inputMaxSize, bNoPromiseDismiss } = rgParams;
+	let { strOKButton, strCancelButton, strTitle, strDescription, defaultValue, inputType, inputMaxSize, bNoPromiseDismiss, bInputReadOnly } = rgParams;
 	if ( !strOKButton )
 		strOKButton = 'OK';
 	if ( !strCancelButton )
@@ -310,6 +310,10 @@ function ShowPromptDialogWithProps( rgParams )
 	if ( inputMaxSize )
 	{
 		$Input.attr( 'maxlength', inputMaxSize );
+	}
+	if ( bInputReadOnly )
+	{
+		$Input.attr( 'readonly', true );
 	}
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_description' } ).append( strDescription ) );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_input gray_bevel for_text_input fullwidth' } ).append( $Input ) );

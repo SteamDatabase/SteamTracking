@@ -486,6 +486,16 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  is_bot_review_pct: {
+                    _: 50,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  positivity_pct: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m

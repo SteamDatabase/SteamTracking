@@ -1085,7 +1085,7 @@
       })(a || (a = {}));
       var R = n(17720),
         T = n(6379);
-      var B = n(44332),
+      var B = n(81393),
         I = n(68797);
       class P {
         m_clanAccountID;
@@ -1333,7 +1333,7 @@
         m_cClanInfoRequestsInFlight = 0;
         GetCuratorTransport() {
           return (
-            (0, B.w)(
+            (0, B.wT)(
               this.m_transport,
               "Expects Transpoate to be initialized but it is now",
             ),
@@ -1402,7 +1402,7 @@
                   window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
                 this.m_setPendingClanInfo.add(e),
                 this.m_PendingClanInfoPromise)
-            : ((0, B.w)(!e, "unexpected clanid of zero or undefined: " + e),
+            : ((0, B.wT)(!e, "unexpected clanid of zero or undefined: " + e),
               Promise.resolve());
         }
         async FlushPendingClanInfo() {
@@ -1581,7 +1581,7 @@
         OnCreateOrSaveFeed(e) {
           e.preventDefault(),
             (0, C.pg)(
-              m.createElement(z, {
+              m.createElement(H, {
                 strRSSUrl: this.state.strRssURL,
                 admin: this.m_Admin,
               }),
@@ -1777,7 +1777,7 @@
             })),
               n.forEach((n) => {
                 t.push(
-                  m.createElement(H, {
+                  m.createElement(z, {
                     newsData: n,
                     admin: e,
                     key: "id: " + n.unique_id,
@@ -1923,7 +1923,7 @@
           e
             ? (this.setState({ strErrorMessage: void 0 }),
               (0, C.pg)(
-                m.createElement(z, {
+                m.createElement(H, {
                   strRSSUrl: this.props.admin.GetRSSUrl(),
                   admin: this.props.admin,
                   bActivatePooling: !0,
@@ -2027,7 +2027,7 @@
       (0, a.Cg)([T.oI], N.prototype, "OnToggleChannelAutomation", null),
         (0, a.Cg)([T.oI], N.prototype, "OnQueueScan", null),
         (N = (0, a.Cg)([d.PA], N));
-      let H = class extends m.Component {
+      let z = class extends m.Component {
         state = {
           clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
             this.props.newsData.post.url,
@@ -2114,7 +2114,7 @@
         OnPostNewsEvent(e) {
           const { newsData: t, fnGetRSSUrl: n } = this.props;
           (0, C.pg)(
-            m.createElement(z, {
+            m.createElement(H, {
               newsData: t,
               admin: this.props.admin,
               strRSSUrl: n(),
@@ -2126,7 +2126,7 @@
         OnUpdateNewsEvent(e) {
           const { newsData: t, fnGetRSSUrl: n } = this.props;
           (0, C.pg)(
-            m.createElement(z, {
+            m.createElement(H, {
               newsData: t,
               strRSSUrl: n(),
               admin: this.props.admin,
@@ -2333,19 +2333,19 @@
           );
         }
       };
-      (0, a.Cg)([T.oI], H.prototype, "DoPartnerEventLoad", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnOpenPreviewAsPartnerEvent", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnViewEvent", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnPostNewsEvent", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnUpdateNewsEvent", null),
-        (0, a.Cg)([T.oI], H.prototype, "HideModalEvent", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnClanEventCreateSuccess", null),
-        (0, a.Cg)([T.oI], H.prototype, "OnShowRawRSS", null),
-        (H = (0, a.Cg)([d.PA], H));
-      class z extends m.Component {
+      (0, a.Cg)([T.oI], z.prototype, "DoPartnerEventLoad", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnOpenPreviewAsPartnerEvent", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnViewEvent", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnPostNewsEvent", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnUpdateNewsEvent", null),
+        (0, a.Cg)([T.oI], z.prototype, "HideModalEvent", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnClanEventCreateSuccess", null),
+        (0, a.Cg)([T.oI], z.prototype, "OnShowRawRSS", null),
+        (z = (0, a.Cg)([d.PA], z));
+      class H extends m.Component {
         state = {
-          initialState: z.DetermineStartState(this.props),
-          step: z.DetermineStartState(this.props),
+          initialState: H.DetermineStartState(this.props),
+          step: H.DetermineStartState(this.props),
           bDraftMode: !0,
         };
         static DetermineStartState(e) {
@@ -2646,14 +2646,14 @@
           }
         }
       }
-      (0, a.Cg)([T.oI], z.prototype, "OnCreateNewsFeed", null),
-        (0, a.Cg)([T.oI], z.prototype, "DoCreateNewsFeed", null),
-        (0, a.Cg)([T.oI], z.prototype, "OnCreatePost", null),
-        (0, a.Cg)([T.oI], z.prototype, "DoCreatePost", null),
-        (0, a.Cg)([T.oI], z.prototype, "OnChangeDraftMode", null),
-        (0, a.Cg)([T.oI], z.prototype, "OnChangePermissionsCreateFeed", null),
-        (0, a.Cg)([T.oI], z.prototype, "OnChangeConductCreateFeed", null),
-        (0, a.Cg)([T.oI], z.prototype, "GetStrTitle", null);
+      (0, a.Cg)([T.oI], H.prototype, "OnCreateNewsFeed", null),
+        (0, a.Cg)([T.oI], H.prototype, "DoCreateNewsFeed", null),
+        (0, a.Cg)([T.oI], H.prototype, "OnCreatePost", null),
+        (0, a.Cg)([T.oI], H.prototype, "DoCreatePost", null),
+        (0, a.Cg)([T.oI], H.prototype, "OnChangeDraftMode", null),
+        (0, a.Cg)([T.oI], H.prototype, "OnChangePermissionsCreateFeed", null),
+        (0, a.Cg)([T.oI], H.prototype, "OnChangeConductCreateFeed", null),
+        (0, a.Cg)([T.oI], H.prototype, "GetStrTitle", null);
     },
     34568: (e, t, n) => {
       "use strict";
@@ -2691,7 +2691,7 @@
     },
     58426: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Xe });
+      n.r(t), n.d(t, { default: () => Je });
       var a = n(43527),
         r = n(89241),
         s = n(78327),
@@ -3199,8 +3199,8 @@
         };
       var O = n(34629),
         N = n(6379),
-        H = n(84933),
-        z = n(14947);
+        z = n(84933),
+        H = n(14947);
       class q {
         static s_Singleton;
         m_mapEventGIDToSolrData = new Map();
@@ -3215,7 +3215,7 @@
           return q.s_Singleton || (q.s_Singleton = new q()), q.s_Singleton;
         }
         constructor() {
-          (0, z.Gn)(this);
+          (0, H.Gn)(this);
         }
         ClearAllSolrEvents() {
           (this.m_mapEventGIDToSolrData = new Map()),
@@ -3245,7 +3245,7 @@
           );
           let d = new Array();
           return (
-            (0, z.h5)(() => {
+            (0, H.h5)(() => {
               c.forEach((e) => {
                 this.m_mapEventGIDToSolrData.has(e.unique_id) ||
                   (d.push(e),
@@ -3295,13 +3295,13 @@
           return v.data ? v.data.docs : [];
         }
       }
-      (0, O.Cg)([z.sH], q.prototype, "m_mapEventGIDToSolrData", void 0),
-        (0, O.Cg)([z.sH], q.prototype, "m_listEvents", void 0),
-        (0, O.Cg)([z.XI], q.prototype, "ClearAllSolrEvents", null);
-      var x = n(71138);
+      (0, O.Cg)([H.sH], q.prototype, "m_mapEventGIDToSolrData", void 0),
+        (0, O.Cg)([H.sH], q.prototype, "m_listEvents", void 0),
+        (0, O.Cg)([H.XI], q.prototype, "ClearAllSolrEvents", null);
+      var x = n(86355);
       class W {
         constructor() {
-          (0, z.Gn)(this);
+          (0, H.Gn)(this);
         }
         m_backfill = void 0;
         m_mapEventGIDProcessed = new Map();
@@ -3355,24 +3355,25 @@
             this.m_mapEventGIDProcessed.set(e, t);
         }
       }
-      (0, O.Cg)([z.sH], W.prototype, "m_backfill", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_mapEventGIDProcessed", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_bBackfillInProgress", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_nProcessed", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_nSuccesses", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_nFailures", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_nWarning", void 0),
-        (0, O.Cg)([z.sH], W.prototype, "m_nSkipped", void 0),
-        (0, O.Cg)([z.XI], W.prototype, "StartBackfill", null),
-        (0, O.Cg)([z.XI], W.prototype, "CompleteBackfill", null),
-        (0, O.Cg)([z.XI], W.prototype, "CloseProgress", null);
+      (0, O.Cg)([H.sH], W.prototype, "m_backfill", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_mapEventGIDProcessed", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_bBackfillInProgress", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_nProcessed", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_nSuccesses", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_nFailures", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_nWarning", void 0),
+        (0, O.Cg)([H.sH], W.prototype, "m_nSkipped", void 0),
+        (0, O.Cg)([H.XI], W.prototype, "StartBackfill", null),
+        (0, O.Cg)([H.XI], W.prototype, "CompleteBackfill", null),
+        (0, O.Cg)([H.XI], W.prototype, "CloseProgress", null);
       const j = new W();
       var V = n(45559),
         Y = n(73744),
         K = n(75113),
         Q = n(28954),
-        X = n(40521);
-      let J = class extends u.Component {
+        X = n(40521),
+        J = n(51641);
+      let Z = class extends u.Component {
         m_cancelSignal = o().CancelToken.source();
         m_nImageID = 0;
         m_mapArtworkResizeSuccess = new Map();
@@ -3405,9 +3406,9 @@
               });
         }
         async GetImageInfo(e, t, n = "") {
-          const a = x.i6.GetExtensionTypeFromURL(t),
-            r = x.i6.GetHashFromHashAndExt(t) + n;
-          return x.pU.AsyncGetImageResolution(e, r, a, this.m_cancelSignal, !0);
+          const a = J.z.GetExtensionTypeFromURL(t),
+            r = J.z.GetHashFromHashAndExt(t) + n;
+          return J.z.AsyncGetImageResolution(e, r, a, this.m_cancelSignal, !0);
         }
         HandleErrorFatal(e, t, n, a) {
           let r = (0, l.H)(t),
@@ -3427,7 +3428,7 @@
           for (let s = 0; s < e.length && s < 31; ++s)
             if (e[s] && e[s].length > 0) {
               let i = e[s],
-                o = x.i6.GetExtensionTypeFromURL(i);
+                o = J.z.GetExtensionTypeFromURL(i);
               const c = new g.b(t.clan_steamid);
               if (o) {
                 let e = await this.GetImageInfo(c, i).catch(
@@ -3456,19 +3457,20 @@
                     n.bAlreadyProcessed = !0;
                   else {
                     n.bProcessing = !0;
-                    let e = x.i6.GetHashFromHashAndExt(i),
-                      t = x.i6.GetExtensionStringFromHashAndExt(i),
+                    let e = J.z.GetHashFromHashAndExt(i),
+                      t = J.z.GetExtStringFromHashAndExt(i),
                       r = (0, X.K_)(a);
-                    await Q.VE.SendResizeRequest(
-                      this.m_cancelSignal,
-                      c,
-                      e,
-                      t,
-                      r,
-                    )
-                      .then((e) => {
+                    if (r)
+                      try {
+                        const s = await (0, Q.bT)(
+                          this.m_cancelSignal.token,
+                          c,
+                          e,
+                          t,
+                          r,
+                        );
                         console.log("success on the resize request"),
-                          e == r.length
+                          s == r.length
                             ? ((n.bSucceeded = !0),
                               this.m_mapArtworkResizeSuccess.set(
                                 a,
@@ -3479,16 +3481,20 @@
                                 "Did not resize all: " +
                                 a +
                                 " " +
-                                e +
+                                s +
                                 " / " +
                                 r.length));
-                      })
-                      .catch((e) => {
+                      } catch (e) {
                         n.bFailed = !0;
                         let t = (0, l.H)(e);
                         (n.strMessage = t.strErrorMsg),
                           console.error("Resize: " + t.strErrorMsg, t);
-                      });
+                      }
+                    else
+                      (n.bFailed = !0),
+                        console.error(
+                          "Resize: resize request couldn't be determined from the artwork type",
+                        );
                   }
                 } else n.bSkipped = !0;
               } else n.bSkipped = !0;
@@ -3751,19 +3757,19 @@
           );
         }
       };
-      (0, O.Cg)([H.oI], J.prototype, "OnArtworkResizeBackfill", null),
-        (0, O.Cg)([H.oI], J.prototype, "BeginArtworkResize", null),
-        (J = (0, O.Cg)([m.PA], J));
-      var Z = n(65946),
-        $ = n(92298),
-        ee = n.n($),
-        te = n(47237),
-        ne = n(22837),
-        ae = n(77516),
-        re = n(27543);
-      const se = n(87937),
-        ie = ["mod_reviewed", "auto_migrated"];
-      class oe {
+      (0, O.Cg)([z.oI], Z.prototype, "OnArtworkResizeBackfill", null),
+        (0, O.Cg)([z.oI], Z.prototype, "BeginArtworkResize", null),
+        (Z = (0, O.Cg)([m.PA], Z));
+      var $ = n(65946),
+        ee = n(92298),
+        te = n.n(ee),
+        ne = n(47237),
+        ae = n(22837),
+        re = n(77516),
+        se = n(27543);
+      const ie = n(87937),
+        oe = ["mod_reviewed", "auto_migrated"];
+      class le {
         static s_Singleton;
         selectedTags = void 0;
         excludedTags = void 0;
@@ -3774,10 +3780,10 @@
         bOrderByVisibilityStartTime = !1;
         bUseCustomQuery = !1;
         static Get() {
-          return oe.s_Singleton || (oe.s_Singleton = new oe()), oe.s_Singleton;
+          return le.s_Singleton || (le.s_Singleton = new le()), le.s_Singleton;
         }
         constructor() {
-          (0, z.Gn)(this);
+          (0, H.Gn)(this);
         }
         Init(e) {
           const t = new URLSearchParams(window.location.search);
@@ -3790,7 +3796,7 @@
           let a,
             r,
             s = !1,
-            i = ie.map((e) => ({ label: e, value: e }));
+            i = oe.map((e) => ({ label: e, value: e }));
           t.has("excludedTags") &&
             ((i = t
               .getAll("excludedTags")
@@ -3803,16 +3809,16 @@
                 .filter(Boolean)
                 .map((e) => {
                   const n = Number.parseInt(t.get("eventtype"));
-                  return { label: (0, re.rG)(n), value: n };
+                  return { label: (0, se.rG)(n), value: n };
                 })),
             t.has("filterDate") &&
               t.get("filterDate")?.length > 0 &&
-              (r = se.unix(Number(t.get("filterDate"))));
+              (r = ie.unix(Number(t.get("filterDate"))));
           let o = !1;
           t.has("orderByVisibility") &&
             t.get("orderByVisibility")?.length > 0 &&
             (o = Boolean(t.get("orderByVisibility"))),
-            (0, z.h5)(() => {
+            (0, H.h5)(() => {
               (this.selectedTags = n),
                 (this.excludedTags = i),
                 (this.filterEventTypes = a),
@@ -3823,15 +3829,15 @@
             });
         }
       }
-      var le;
-      (0, O.Cg)([z.sH], oe.prototype, "selectedTags", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "excludedTags", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "filterDate", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "filterDateAsString", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "eventsToLoadPerPaging", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "filterEventTypes", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "bOrderByVisibilityStartTime", void 0),
-        (0, O.Cg)([z.sH], oe.prototype, "bUseCustomQuery", void 0),
+      var ce;
+      (0, O.Cg)([H.sH], le.prototype, "selectedTags", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "excludedTags", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "filterDate", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "filterDateAsString", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "eventsToLoadPerPaging", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "filterEventTypes", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "bOrderByVisibilityStartTime", void 0),
+        (0, O.Cg)([H.sH], le.prototype, "bUseCustomQuery", void 0),
         (function (e) {
           (e[(e.k_ModReviewed = 0)] = "k_ModReviewed"),
             (e[(e.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
@@ -3847,9 +3853,9 @@
             (e[(e.k_ModFlagHalloweenEvent = 8)] = "k_ModFlagHalloweenEvent"),
             (e[(e.k_ModRemoveHalloweenEvent = 9)] =
               "k_ModRemoveHalloweenEvent");
-        })(le || (le = {}));
-      const ce = "ModAct";
-      class de {
+        })(ce || (ce = {}));
+      const de = "ModAct";
+      class me {
         m_moderator;
         m_rtWhen;
         m_action;
@@ -3857,7 +3863,7 @@
         m_newTagAdded;
         ToModString() {
           let e =
-            ce +
+            de +
             "_" +
             this.m_moderator +
             "_" +
@@ -3865,27 +3871,27 @@
             "_" +
             this.m_action;
           switch (this.m_action) {
-            case le.k_ChangeEventType:
+            case ce.k_ChangeEventType:
               e += "_" + this.m_newEventType;
               break;
-            case le.k_UpdateSeasonTags:
+            case ce.k_UpdateSeasonTags:
               e += "_" + this.m_newTagAdded;
           }
           return e;
         }
         FromString(e) {
           let t = e.split("_");
-          if (!t || t[0] !== ce) return !1;
+          if (!t || t[0] !== de) return !1;
           switch (
             ((this.m_moderator = Number(t[1])),
             (this.m_rtWhen = Number(t[2])),
             (this.m_action = Number(t[3])),
             this.m_action)
           ) {
-            case le.k_ChangeEventType:
+            case ce.k_ChangeEventType:
               this.m_newEventType = Number(t[4]);
               break;
-            case le.k_UpdateSeasonTags:
+            case ce.k_UpdateSeasonTags:
               this.m_newTagAdded = t.slice(4).join("_");
           }
           return !0;
@@ -3894,7 +3900,7 @@
           return (
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
-            (this.m_action = le.k_ChangeEventType),
+            (this.m_action = ce.k_ChangeEventType),
             (this.m_newEventType = e),
             this
           );
@@ -3903,7 +3909,7 @@
           return (
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
-            (this.m_action = e ? le.k_ModReviewed : le.k_ModUnreviewed),
+            (this.m_action = e ? ce.k_ModReviewed : ce.k_ModUnreviewed),
             this
           );
         }
@@ -3912,8 +3918,8 @@
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = e
-              ? le.k_ModFlagAdultOnlyContent
-              : le.k_ModRemoveAdultOnlyContent),
+              ? ce.k_ModFlagAdultOnlyContent
+              : ce.k_ModRemoveAdultOnlyContent),
             this
           );
         }
@@ -3922,8 +3928,8 @@
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
             (this.m_action = e
-              ? le.k_ModFlagHalloweenEvent
-              : le.k_ModRemoveHalloweenEvent),
+              ? ce.k_ModFlagHalloweenEvent
+              : ce.k_ModRemoveHalloweenEvent),
             this
           );
         }
@@ -3931,24 +3937,24 @@
           return (
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
-            (this.m_action = e ? le.k_ModReReviewed : le.k_ModUnreviewed),
+            (this.m_action = e ? ce.k_ModReReviewed : ce.k_ModUnreviewed),
             this
           );
         }
         static IsAuditAction(e) {
-          return e.startsWith(ce);
+          return e.startsWith(de);
         }
         SetUpdateSeasonalTags(e) {
           return (
             (this.m_moderator = s.iA.accountid),
             (this.m_rtWhen = Date.now() / 1e3),
-            (this.m_action = le.k_UpdateSeasonTags),
+            (this.m_action = ce.k_UpdateSeasonTags),
             (this.m_newTagAdded = e),
             this
           );
         }
       }
-      class me {
+      class ue {
         static s_Singleton;
         m_mapEventGIDToSolrData = new Map();
         m_listEvents = new Array();
@@ -3959,10 +3965,10 @@
           return this.m_listEvents;
         }
         static Get() {
-          return me.s_Singleton || (me.s_Singleton = new me()), me.s_Singleton;
+          return ue.s_Singleton || (ue.s_Singleton = new ue()), ue.s_Singleton;
         }
         constructor() {
-          (0, z.Gn)(this);
+          (0, H.Gn)(this);
         }
         ClearAllSolrEvents() {
           (this.m_mapEventGIDToSolrData = new Map()),
@@ -3996,7 +4002,7 @@
             if (t && t.data) {
               let e = new Array();
               return (
-                (0, z.h5)(() => {
+                (0, H.h5)(() => {
                   t.data.docs.forEach((t) => {
                     this.m_mapEventGIDToSolrData.has(t.unique_id) ||
                       (e.push(t),
@@ -4041,18 +4047,18 @@
             await o().post(r, i, { withCredentials: !0, cancelToken: e.token });
         }
       }
-      (0, O.Cg)([z.sH], me.prototype, "m_mapEventGIDToSolrData", void 0),
-        (0, O.Cg)([z.sH], me.prototype, "m_listEvents", void 0),
-        (0, O.Cg)([z.XI], me.prototype, "ClearAllSolrEvents", null);
-      var ue = n(82097),
-        pe = n(81301),
-        ge = n(91675),
-        _e = n(61311),
-        he = n(14336);
-      function ve(e) {
+      (0, O.Cg)([H.sH], ue.prototype, "m_mapEventGIDToSolrData", void 0),
+        (0, O.Cg)([H.sH], ue.prototype, "m_listEvents", void 0),
+        (0, O.Cg)([H.XI], ue.prototype, "ClearAllSolrEvents", null);
+      var pe = n(82097),
+        ge = n(81301),
+        _e = n(91675),
+        he = n(61311),
+        ve = n(14336);
+      function Se(e) {
         const { accountID: t, locToken: n } = e,
           a = u.useMemo(() => g.b.InitFromAccountID(t), [t]),
-          { data: r } = (0, he.js)(t);
+          { data: r } = (0, ve.js)(t);
         let i =
           "https://steamsupport.valvesoftware.com/account/overview/" +
           a.ConvertTo64BitString();
@@ -4075,52 +4081,52 @@
           ),
         );
       }
-      function Se(e) {
+      function Ee(e) {
         const { modAction: t } = e,
           n =
             (0, f.TW)(t.m_rtWhen) +
             " @ " +
-            (0, ge.KC)(t.m_rtWhen, { bForce24HourClock: !1 }),
-          a = u.createElement(ve, {
+            (0, _e.KC)(t.m_rtWhen, { bForce24HourClock: !1 }),
+          a = u.createElement(Se, {
             locToken: "#EventModTile_Moderator",
             accountID: t.m_moderator,
           });
         switch (t.m_action) {
-          case le.k_ModReviewed:
+          case ce.k_ModReviewed:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_Reviewed",
                 u.createElement("span", null, n),
                 a,
               ),
             );
-          case le.k_ModUnreviewed:
+          case ce.k_ModUnreviewed:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_UnReviewed",
                 u.createElement("span", null, n),
                 a,
               ),
             );
-          case le.k_ChangeEventType:
+          case ce.k_ChangeEventType:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_NewEventType",
                 u.createElement("span", null, n),
                 a,
-                (0, re.rG)(t.m_newEventType),
+                (0, se.rG)(t.m_newEventType),
               ),
             );
-          case le.k_UpdateSeasonTags:
+          case ce.k_UpdateSeasonTags:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_SeasonTagUpdate",
                 u.createElement("span", null, n),
@@ -4128,40 +4134,40 @@
                 t.m_newTagAdded,
               ),
             );
-          case le.k_ModReReviewed:
+          case ce.k_ModReReviewed:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_ReReviewed",
                 u.createElement("span", null, n),
                 a,
               ),
             );
-          case le.k_ModRemovedFromSteamChina:
+          case ce.k_ModRemovedFromSteamChina:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_RemoveFromSC",
                 u.createElement("span", null, n),
                 a,
               ),
             );
-          case le.k_ModFlagAdultOnlyContent:
+          case ce.k_ModFlagAdultOnlyContent:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_FlagAdultContent",
                 u.createElement("span", null, n),
                 a,
               ),
             );
-          case le.k_ModRemoveAdultOnlyContent:
+          case ce.k_ModRemoveAdultOnlyContent:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, f.PP)(
                 "#EventModTile_Action_RemoveAdultContent",
                 u.createElement("span", null, n),
@@ -4171,17 +4177,17 @@
           default:
             return u.createElement(
               "div",
-              { className: _e.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               t.ToModString(),
             );
         }
       }
-      function Ee(e) {
+      function we(e) {
         const [t, n] = u.useState(!0),
           { eventModel: a } = e;
         let r = a
           .GetAllTags()
-          .filter((e) => de.IsAuditAction(e))
+          .filter((e) => me.IsAuditAction(e))
           .reverse();
         const s = r.length,
           i = r.length > 3 && t;
@@ -4199,43 +4205,43 @@
               ((t) => {
                 const { eventModel: n } = e;
                 return t.map((e) => {
-                  const t = new de();
+                  const t = new me();
                   return (
                     t.FromString(e),
-                    u.createElement(Se, { key: n.GID + e, modAction: t })
+                    u.createElement(Ee, { key: n.GID + e, modAction: t })
                   );
                 });
               })(r),
               i &&
                 u.createElement(
                   "a",
-                  { onClick: () => n(!1), className: _e.ExpandModActions },
+                  { onClick: () => n(!1), className: he.ExpandModActions },
                   (0, f.we)("#EventModTile_Action_More", s - 3),
                 ),
               Boolean(!i && s > 3) &&
                 u.createElement(
                   "a",
-                  { onClick: () => n(!0), className: _e.ExpandModActions },
+                  { onClick: () => n(!0), className: he.ExpandModActions },
                   (0, f.we)("#EventModTile_Action_Hide"),
                 ),
             ));
       }
-      var we = n(67417),
-        Ce = n(95695),
-        be = n.n(Ce),
-        Me = n(37076),
-        Ae = n(3088),
-        ye = n(51272),
-        fe = n(61336),
-        Re = n(961),
-        Te = n(44165);
-      const Be = n(87937),
-        Ie = {
+      var Ce = n(67417),
+        be = n(95695),
+        Me = n.n(be),
+        Ae = n(37076),
+        ye = n(3088),
+        fe = n(51272),
+        Re = n(61336),
+        Te = n(961),
+        Be = n(44165);
+      const Ie = n(87937),
+        Pe = {
           bExhaustedEventList: !1,
           bInfiniteScrollLoading: !0,
           nLastFetchCompletedMS: 0,
         };
-      let Pe = class extends u.Component {
+      let De = class extends u.Component {
         m_cancelSignal = o().CancelToken.source();
         m_refScroll = u.createRef();
         m_IntervalTimer = void 0;
@@ -4251,7 +4257,7 @@
             this.LoadMoreModerationEvents,
           ),
             window.addEventListener("scroll", this.OnScroll, !0),
-            oe.Get().Init(this.props.history.location.search);
+            le.Get().Init(this.props.history.location.search);
         }
         componentWillUnmount() {
           this.m_cancelSignal.cancel(
@@ -4261,7 +4267,7 @@
             this.ClearTimer();
         }
         HandleUpdateQueryParameter() {
-          const e = oe.Get();
+          const e = le.Get();
           if (e.bUseCustomQuery) {
             const {
               selectedTags: t,
@@ -4304,7 +4310,7 @@
         LoadMoreModerationEvents() {
           if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
             let e;
-            const t = oe.Get();
+            const t = le.Get();
             if (t.bUseCustomQuery) {
               let n = t.filterEventTypes
                   ? t.filterEventTypes.map((e) => e.value)
@@ -4329,7 +4335,7 @@
                   t.bOrderByVisibilityStartTime,
                 );
             } else
-              e = me
+              e = ue
                 .Get()
                 .LoadPartnerEventForModerationIncremental(
                   this.m_cancelSignal,
@@ -4351,11 +4357,11 @@
         RenderTiles() {
           let e = new Array();
           return (
-            (oe.Get().bUseCustomQuery
+            (le.Get().bUseCustomQuery
               ? q.Get().GetAllSolrEvents()
-              : me.Get().GetAllSolrEvents()
+              : ue.Get().GetAllSolrEvents()
             ).forEach((t) => {
-              e.push(u.createElement(Oe, { solrData: t, key: t.unique_id }));
+              e.push(u.createElement(Ne, { solrData: t, key: t.unique_id }));
             }),
             e
           );
@@ -4379,19 +4385,19 @@
         }
         RefetchAllEventTiles() {
           (this.m_nPage = 0),
-            me.Get().ClearAllSolrEvents(),
+            ue.Get().ClearAllSolrEvents(),
             q.Get().ClearAllSolrEvents(),
             this.setState(
-              { ...Ie },
+              { ...Pe },
               this.UpdateQueryParametersAndLoadMoreEvents,
             );
         }
         render() {
           let e = this.RenderTiles();
-          const t = oe.Get();
+          const t = le.Get();
           return u.createElement(
             "div",
-            { className: Re.ModerationContainer, ref: this.m_refScroll },
+            { className: Te.ModerationContainer, ref: this.m_refScroll },
             u.createElement(
               "div",
               null,
@@ -4401,12 +4407,12 @@
                 null,
                 u.createElement(
                   "div",
-                  { className: (0, A.A)(be().FlexRowContainer) },
-                  u.createElement(Ge, {
+                  { className: (0, A.A)(Me().FlexRowContainer) },
+                  u.createElement(Fe, {
                     fnRequireRefetchEvents: this.RefetchAllEventTiles,
                   }),
                   Boolean(t.bUseCustomQuery) &&
-                    u.createElement(Fe, {
+                    u.createElement(Le, {
                       fnRequireRefetchEvents: this.RefetchAllEventTiles,
                     }),
                 ),
@@ -4422,28 +4428,28 @@
           );
         }
       };
-      (0, O.Cg)([H.oI], Pe.prototype, "HandleError", null),
-        (0, O.Cg)([H.oI], Pe.prototype, "LoadMorePublicEventWithDelay", null),
-        (0, O.Cg)([H.oI], Pe.prototype, "LoadMoreModerationEvents", null),
+      (0, O.Cg)([z.oI], De.prototype, "HandleError", null),
+        (0, O.Cg)([z.oI], De.prototype, "LoadMorePublicEventWithDelay", null),
+        (0, O.Cg)([z.oI], De.prototype, "LoadMoreModerationEvents", null),
         (0, O.Cg)(
-          [H.oI],
-          Pe.prototype,
+          [z.oI],
+          De.prototype,
           "UpdateQueryParametersAndLoadMoreEvents",
           null,
         ),
-        (0, O.Cg)([H.oI], Pe.prototype, "OnScroll", null),
-        (0, O.Cg)([H.oI], Pe.prototype, "RefetchAllEventTiles", null),
-        (Pe = (0, O.Cg)([m.PA], Pe));
-      const De = (0, p.y)(Pe),
-        Ge = (0, m.PA)((e) => {
-          const t = oe.Get(),
+        (0, O.Cg)([z.oI], De.prototype, "OnScroll", null),
+        (0, O.Cg)([z.oI], De.prototype, "RefetchAllEventTiles", null),
+        (De = (0, O.Cg)([m.PA], De));
+      const Ge = (0, p.y)(De),
+        Fe = (0, m.PA)((e) => {
+          const t = le.Get(),
             { fnRequireRefetchEvents: n } = e;
           return u.createElement(
             u.Fragment,
             null,
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 b.he,
                 {
@@ -4462,7 +4468,7 @@
             ),
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 "label",
                 { htmlFor: "EventPerLoad" },
@@ -4489,13 +4495,13 @@
             ),
           );
         }),
-        Fe = (0, m.PA)((e) => {
-          const t = oe.Get(),
+        Le = (0, m.PA)((e) => {
+          const t = le.Get(),
             { fnRequireRefetchEvents: n } = e,
-            a = ne.Zi.map((e) => ({ value: e, label: (0, re.rG)(e) })).sort(
+            a = ae.Zi.map((e) => ({ value: e, label: (0, se.rG)(e) })).sort(
               (e, t) => e.label.localeCompare(t.label),
             ),
-            r = ae.FZ.map((e) => ({ value: e, label: e })).sort((e, t) =>
+            r = re.FZ.map((e) => ({ value: e, label: e })).sort((e, t) =>
               e.label.localeCompare(t.label),
             ),
             s = { option: (e) => ({ ...e, color: "#444444" }) };
@@ -4504,13 +4510,13 @@
             null,
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 "span",
                 null,
                 (0, f.we)("#EventModeration_FilterByTag"),
               ),
-              u.createElement(te.Ay, {
+              u.createElement(ne.Ay, {
                 isSearchable: !0,
                 isMulti: !0,
                 onChange: (e) => {
@@ -4523,13 +4529,13 @@
             ),
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 "span",
                 null,
                 (0, f.we)("#EventModeration_FilterExcludeByTag"),
               ),
-              u.createElement(te.Ay, {
+              u.createElement(ne.Ay, {
                 isSearchable: !0,
                 isMulti: !0,
                 onChange: (e) => {
@@ -4542,13 +4548,13 @@
             ),
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 "span",
                 null,
                 (0, f.we)("#EventModeration_FilterToType"),
               ),
-              u.createElement(te.Ay, {
+              u.createElement(ne.Ay, {
                 isSearchable: !0,
                 isMulti: !0,
                 onChange: (e) => {
@@ -4561,17 +4567,17 @@
             ),
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement(
                 "span",
                 null,
                 (0, f.we)("#EventModeration_FilterToDate"),
               ),
-              u.createElement(ee(), {
+              u.createElement(te(), {
                 timeFormat: !1,
                 onChange: (e) => {
                   if ("string" == typeof e) {
-                    let n = Be(e, "M/D/YYYY", !0);
+                    let n = Ie(e, "M/D/YYYY", !0);
                     if (!n.isValid()) return void (t.filterDateAsString = e);
                     e = n;
                   }
@@ -4583,7 +4589,7 @@
                   let t = new Date();
                   return (
                     e.unix() <
-                    Be.unix(t.getTime() / 1e3 + 86400)
+                    Ie.unix(t.getTime() / 1e3 + 86400)
                       .hour(0)
                       .seconds(0)
                       .minute(0)
@@ -4592,13 +4598,13 @@
                 },
                 inputProps: {
                   placeholder: (0, f.we)("#EventModeration_PickDatee"),
-                  className: Re.TimeWidth,
+                  className: Te.TimeWidth,
                 },
               }),
             ),
             u.createElement(
               "div",
-              { className: Re.FilterContainer },
+              { className: Te.FilterContainer },
               u.createElement("input", {
                 type: "checkbox",
                 id: "VisibilityStart",
@@ -4616,23 +4622,23 @@
             ),
           );
         }),
-        Le = (0, m.PA)((e) => {
+        ke = (0, m.PA)((e) => {
           const { onClick: t, event: n, bSaving: a } = e;
           let r = (0, f.we)("#EventModTile_Moderate_ClearReviewed"),
-            s = Re.EventModerateClearReview,
+            s = Te.EventModerateClearReview,
             i = !1;
           return (
-            (0, ae.Xx)(n) ||
+            (0, re.Xx)(n) ||
               ((r = (0, f.we)("#EventModTile_Moderate_MarkReviewed")),
-              (s = Re.EventModerateMarkReview),
+              (s = Te.EventModerateMarkReview),
               (i = !0)),
             a &&
               ((r = (0, f.we)("#EventModTile_Moderate_Saving")),
-              (s = Re.EventModerateSaving)),
+              (s = Te.EventModerateSaving)),
             u.createElement(
               "button",
               {
-                className: (0, A.A)(be().Button, Re.Button, s),
+                className: (0, A.A)(Me().Button, Te.Button, s),
                 onClick: () => t(i),
                 disabled: a,
               },
@@ -4641,7 +4647,7 @@
             )
           );
         }),
-        ke = (0, m.PA)((e) => {
+        Ue = (0, m.PA)((e) => {
           const { onClick: t, event: n, bSaving: a } = e,
             r = n.BHasTag("adult_only_content");
           let s = (0, f.we)(
@@ -4654,7 +4660,7 @@
             u.createElement(
               "button",
               {
-                className: (0, A.A)(be().Button, Re.Button),
+                className: (0, A.A)(Me().Button, Te.Button),
                 onClick: () => t(!r),
                 disabled: a,
               },
@@ -4663,21 +4669,21 @@
             )
           );
         });
-      function Ue(e) {
+      function Oe(e) {
         const { onClick: t, event: n, bSaving: a } = e,
-          r = (0, Z.q3)(() => n.BHasTag("halloween"));
+          r = (0, $.q3)(() => n.BHasTag("halloween"));
         let s = (0, f.we)(
           r
             ? "#EventModTile_Moderate_RemoveHalloweenFlag"
             : "#EventModTile_Moderate_FlagHalloween",
         );
         a && (s = (0, f.we)("#EventModTile_Moderate_Saving"));
-        const i = Te.HD.GetTimeNowWithOverrideAsDate();
+        const i = Be.HD.GetTimeNowWithOverrideAsDate();
         return i.getMonth() >= 8 && i.getMonth() <= 10
           ? u.createElement(
               "button",
               {
-                className: (0, A.A)(be().Button, Re.Button),
+                className: (0, A.A)(Me().Button, Te.Button),
                 onClick: () => t(!r),
                 disabled: a,
               },
@@ -4686,7 +4692,7 @@
             )
           : null;
       }
-      let Oe = class extends u.Component {
+      let Ne = class extends u.Component {
         state = {
           bLoadingEvent: !N.O3.BHasClanEventModel(
             this.props.solrData.unique_id,
@@ -4734,7 +4740,7 @@
           if (e === a.BHasTag("adult_only_content")) return;
           const r = new Array(),
             s = new Array();
-          let i = new de().SetAdultOnlyContentAction(e);
+          let i = new me().SetAdultOnlyContentAction(e);
           e ? r.push("adult_only_content") : s.push("adult_only_content"),
             this.UpdateTagsOnEvent(n, r, s, i);
         }
@@ -4747,7 +4753,7 @@
           if (e === a.BHasTag("halloween")) return;
           const r = new Array(),
             s = new Array();
-          let i = new de().SetHalloweenEventTypeAction(e);
+          let i = new me().SetHalloweenEventTypeAction(e);
           e ? r.push("halloween") : s.push("halloween"),
             this.UpdateTagsOnEvent(n, r, s, i);
         }
@@ -4757,10 +4763,10 @@
             n = t.unique_id,
             a = N.O3.GetClanEventModel(n);
           if (!a) return;
-          if (e === (0, ae.Xx)(a)) return;
+          if (e === (0, re.Xx)(a)) return;
           const r = new Array(),
             s = new Array();
-          let i = new de().SetReviewAction(e);
+          let i = new me().SetReviewAction(e);
           e
             ? (r.push("mod_reviewed"),
               s.push("mod_require_rereview"),
@@ -4773,7 +4779,7 @@
             this.setState({ bSavingModeration: !0 }, async () => {
               let r = N.O3.GetClanEventModel(e);
               try {
-                let e = await me
+                let e = await ue
                   .Get()
                   .UpdateTagsOnPartnerEvent(
                     this.m_cancelSignal,
@@ -4794,30 +4800,30 @@
         OnChangeCategory(e) {
           const { solrData: t } = this.props;
           let n = N.O3.GetClanEventModel(t.unique_id);
-          (0, E.pg)(u.createElement(qe, { eventModel: n }), (0, y.uX)(e));
+          (0, E.pg)(u.createElement(xe, { eventModel: n }), (0, y.uX)(e));
         }
         OnUpdateSeasonalTag(e) {
           const { solrData: t } = this.props;
           let n = N.O3.GetClanEventModel(t.unique_id);
-          (0, E.pg)(u.createElement(xe, { eventModel: n }), (0, y.uX)(e));
+          (0, E.pg)(u.createElement(We, { eventModel: n }), (0, y.uX)(e));
         }
         render() {
           const { solrData: e } = this.props,
             t = e.unique_id,
             n = Number(e.appid);
           let a,
-            r = (0, ne.sf)(s.TS.LANGUAGE),
+            r = (0, ae.sf)(s.TS.LANGUAGE),
             i = N.O3.GetClanEventModel(t),
             o = null;
           if (i) {
             this.state.bShowAsModal &&
               (o = u.createElement(
                 B.of,
-                { className: Re.StoreHeaderAdjust },
+                { className: Te.StoreHeaderAdjust },
                 u.createElement(
                   "div",
                   null,
-                  u.createElement(pe.H, {
+                  u.createElement(ge.H, {
                     event: i,
                     fnClose: this.HideModalEvent,
                   }),
@@ -4834,17 +4840,17 @@
                 ? u.createElement(
                     u.Fragment,
                     null,
-                    u.createElement(Ae.c, { rgSources: e }),
+                    u.createElement(ye.c, { rgSources: e }),
                     t &&
                       u.createElement(
                         "div",
-                        { className: Re.NoCapsuleFallback },
+                        { className: Te.NoCapsuleFallback },
                         (0, f.we)("#EventModTile_FallbackImageText"),
                       ),
                   )
                 : u.createElement(
                     "div",
-                    { className: Re.NoCapsule },
+                    { className: Te.NoCapsule },
                     (0, f.we)("#EventModTile_NoCapsule"),
                   );
           } else a = (0, f.we)("#Loading");
@@ -4864,27 +4870,27 @@
             u.createElement(
               "div",
               {
-                className: (0, A.A)({ [Re.Tile]: !0, [Re.HalloweenEvent]: h }),
+                className: (0, A.A)({ [Te.Tile]: !0, [Te.HalloweenEvent]: h }),
               },
               u.createElement(
                 "a",
                 {
                   href: p,
-                  className: Re.TileCapsule,
+                  className: Te.TileCapsule,
                   onClick: this.ShowModalEvent,
                 },
                 a,
               ),
               u.createElement(
                 "div",
-                { className: Re.TileDetails },
+                { className: Te.TileDetails },
                 u.createElement(
                   "div",
-                  { className: Re.DetailsLeft },
+                  { className: Te.DetailsLeft },
                   u.createElement(
                     "a",
                     {
-                      className: Re.EventTitle,
+                      className: Te.EventTitle,
                       href: p,
                       onClick: this.ShowModalEvent,
                     },
@@ -4894,8 +4900,8 @@
                     "div",
                     {
                       className: (0, A.A)(
-                        Re.TileEventType,
-                        1 == c ? Re.TileEventOtherType : "",
+                        Te.TileEventType,
+                        1 == c ? Te.TileEventOtherType : "",
                       ),
                     },
                     i ? i.GetCategoryAsString() : e.event_type,
@@ -4903,7 +4909,7 @@
                   _ &&
                     u.createElement(
                       "div",
-                      { className: Re.HasAdultContent },
+                      { className: Te.HasAdultContent },
                       (0, f.we)("#EventModTile_HasAdultContent"),
                     ),
                   this.state.bLoadingEvent &&
@@ -4913,7 +4919,7 @@
                     }),
                   u.createElement(
                     "div",
-                    { className: Re.ChannelInfo },
+                    { className: Te.ChannelInfo },
                     u.createElement(He, {
                       appid: n,
                       clanSteamID: new g.b(e.clan_steamid),
@@ -4922,12 +4928,12 @@
                 ),
                 u.createElement(
                   "div",
-                  { className: Re.DetailsMiddle },
+                  { className: Te.DetailsMiddle },
                   i &&
                     u.createElement(
                       u.Fragment,
                       null,
-                      u.createElement(Le, {
+                      u.createElement(ke, {
                         onClick: this.SetModeratedState,
                         bSaving: this.state.bSavingModeration,
                         event: i,
@@ -4935,17 +4941,17 @@
                       u.createElement(
                         "button",
                         {
-                          className: (0, A.A)(be().Button, Re.Button),
+                          className: (0, A.A)(Me().Button, Te.Button),
                           onClick: this.OnChangeCategory,
                         },
                         (0, f.we)("#EventModTile_ChangeEventType"),
                       ),
-                      u.createElement(ke, {
+                      u.createElement(Ue, {
                         onClick: this.SetAdultContentState,
                         bSaving: this.state.bSavingModeration,
                         event: i,
                       }),
-                      u.createElement(Ue, {
+                      u.createElement(Oe, {
                         onClick: this.SetHalloweenEventState,
                         bSaving: this.state.bSavingModeration,
                         event: i,
@@ -4954,41 +4960,41 @@
                         u.createElement(
                           "button",
                           {
-                            className: (0, A.A)(be().Button),
+                            className: (0, A.A)(Me().Button),
                             onClick: this.OnUpdateSeasonalTag,
                           },
                           (0, f.we)("#EventModTile_SeasonalTag"),
                         ),
-                      u.createElement(Ee, { eventModel: i }),
+                      u.createElement(we, { eventModel: i }),
                     ),
                 ),
                 u.createElement(
                   "div",
-                  { className: Re.DetailsRight },
+                  { className: Te.DetailsRight },
                   u.createElement(
                     "div",
-                    { className: Re.EventTimingBlock },
+                    { className: Te.EventTimingBlock },
                     Boolean(l) &&
                       u.createElement(
                         "div",
-                        { className: Re.LastUpdateTime },
+                        { className: Te.LastUpdateTime },
                         (0, f.we)(
                           "#EventModTile_LastModified",
                           (0, f.TW)(l) +
                             "@" +
-                            (0, ge.KC)(l, { bForce24HourClock: !1 }),
+                            (0, _e.KC)(l, { bForce24HourClock: !1 }),
                         ),
                       ),
                     i &&
-                      u.createElement(we.j, {
+                      u.createElement(Ce.j, {
                         event: i,
-                        stylesmodule: Re,
+                        stylesmodule: Te,
                         nOverrideEndTime: i.GetEndTimeAndDateUnixSeconds(),
                         nOverrideStartTime: i.GetStartTimeAndDateUnixSeconds(),
                       }),
                   ),
                   i &&
-                    u.createElement(ze, {
+                    u.createElement(qe, {
                       event: i,
                       hidden: e.hidden,
                       published: e.published,
@@ -4999,15 +5005,15 @@
           );
         }
       };
-      (0, O.Cg)([H.oI], Oe.prototype, "ShowModalEvent", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "HideModalEvent", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "SetAdultContentState", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "SetHalloweenEventState", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "SetModeratedState", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "OnChangeCategory", null),
-        (0, O.Cg)([H.oI], Oe.prototype, "OnUpdateSeasonalTag", null),
-        (Oe = (0, O.Cg)([m.PA], Oe));
-      let Ne = class extends u.Component {
+      (0, O.Cg)([z.oI], Ne.prototype, "ShowModalEvent", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "HideModalEvent", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "SetAdultContentState", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "SetHalloweenEventState", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "SetModeratedState", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "OnChangeCategory", null),
+        (0, O.Cg)([z.oI], Ne.prototype, "OnUpdateSeasonalTag", null),
+        (Ne = (0, O.Cg)([m.PA], Ne));
+      let ze = class extends u.Component {
         state = { bDownloadingImages: !1, nLocLanguages: 0 };
         m_cancelSignal = o().CancelToken.source();
         componentWillUnmount() {
@@ -5056,10 +5062,10 @@
             o = this.CountLanguages(e.jsondata.localized_subtitle);
           return u.createElement(
             "div",
-            { className: Re.AnalysisCtn },
+            { className: Te.AnalysisCtn },
             u.createElement(
               "div",
-              { className: Re.TileTitle },
+              { className: Te.TileTitle },
               (0, f.we)("#EventModTile_Analysis"),
             ),
             u.createElement(
@@ -5080,7 +5086,7 @@
             Boolean(t) &&
               u.createElement(
                 "div",
-                { className: Re.ArtHeader },
+                { className: Te.ArtHeader },
                 (0, f.we)("#EventModTile_ImageAnalysis_Header", t),
                 " ",
               ),
@@ -5094,7 +5100,7 @@
             Boolean(a) &&
               u.createElement(
                 "div",
-                { className: Re.ArtSpotlight },
+                { className: Te.ArtSpotlight },
                 (0, f.we)("#EventModTile_ImageAnalysis_Spotlight", a),
                 " ",
               ),
@@ -5108,7 +5114,7 @@
             0 == s &&
               u.createElement(
                 "div",
-                { className: Re.AnalysisMissing },
+                { className: Te.AnalysisMissing },
                 (0, f.we)("#EventModTile_ImageAnalysis_None"),
                 " ",
               ),
@@ -5140,9 +5146,9 @@
           );
         }
       };
-      Ne = (0, O.Cg)([m.PA], Ne);
+      ze = (0, O.Cg)([m.PA], ze);
       const He = (0, m.PA)((e) => {
-        const [t, n] = (0, u.useState)(!ue.A.Get().BHasApp(e.appid)),
+        const [t, n] = (0, u.useState)(!pe.A.Get().BHasApp(e.appid)),
           a = u.useRef(o().CancelToken.source());
         if (
           ((0, u.useEffect)(
@@ -5155,13 +5161,13 @@
           (0, u.useEffect)(() => {
             const { appid: t, clanSteamID: r } = e;
             if (
-              (t && !ue.A.Get().BHasApp(t)) ||
+              (t && !pe.A.Get().BHasApp(t)) ||
               (r && !_.ac.BHasClanInfoLoaded(r))
             ) {
               (async () => {
                 try {
                   await Promise.all([
-                    ue.A.Get().QueueAppRequest(t, {
+                    pe.A.Get().QueueAppRequest(t, {
                       include_assets: !0,
                       include_release: !0,
                       include_screenshots: !0,
@@ -5188,32 +5194,32 @@
           });
         const { appid: r, clanSteamID: i } = e;
         if (r) {
-          const e = ue.A.Get().GetApp(r);
+          const e = pe.A.Get().GetApp(r);
           return e
             ? u.createElement(
                 "div",
-                { className: Re.TileAppInfo },
+                { className: Te.TileAppInfo },
                 u.createElement(
                   "div",
-                  { className: Re.TileAppInfoTitle },
+                  { className: Te.TileAppInfoTitle },
                   u.createElement(
-                    Me.j,
+                    Ae.j,
                     { type: "app", id: e.GetAppID() },
                     u.createElement(
-                      ye.uU,
-                      { href: (0, fe.k2)(e.GetStorePageURL()) },
+                      fe.uU,
+                      { href: (0, Re.k2)(e.GetStorePageURL()) },
                       u.createElement("img", {
-                        className: Re.TileAppInfoImage,
+                        className: Te.TileAppInfoImage,
                         src: e.GetAssets().GetMainCapsuleURL(),
                       }),
                     ),
                   ),
                   u.createElement(
-                    Me.j,
+                    Ae.j,
                     { type: "app", id: e.GetAppID() },
                     u.createElement(
-                      ye.uU,
-                      { href: (0, fe.k2)(e.GetStorePageURL()) },
+                      fe.uU,
+                      { href: (0, Re.k2)(e.GetStorePageURL()) },
                       u.createElement("div", null, e.GetName()),
                     ),
                   ),
@@ -5227,19 +5233,19 @@
           if (t && t.is_curator)
             return u.createElement(
               "div",
-              { className: Re.TileAppInfo },
+              { className: Te.TileAppInfo },
               u.createElement(
                 "div",
-                { className: Re.TileAppInfoTitle },
+                { className: Te.TileAppInfoTitle },
                 u.createElement(
-                  ye.uU,
+                  fe.uU,
                   {
-                    href: (0, fe.k2)(
+                    href: (0, Re.k2)(
                       s.TS.STORE_BASE_URL + "/curator/" + e + "/",
                     ),
                   },
                   u.createElement("img", {
-                    className: Re.TileAppInfoImage,
+                    className: Te.TileAppInfoImage,
                     src: t.avatar_full_url,
                   }),
                   u.createElement(
@@ -5253,7 +5259,7 @@
         }
         return null;
       });
-      let ze = class extends u.Component {
+      let qe = class extends u.Component {
         render() {
           const { event: e, hidden: t, published: n } = this.props,
             a = t
@@ -5261,9 +5267,9 @@
                 ? (0, f.we)("#EVentModTile_State_Staged")
                 : (0, f.we)("#EVentModTile_State_Draft")
               : (0, f.we)("#EVentModTile_State_Published"),
-            r = (0, ae.iy)(e),
-            s = (0, ae.A4)(e),
-            i = (0, ae.ZA)(e);
+            r = (0, re.iy)(e),
+            s = (0, re.A4)(e),
+            i = (0, re.ZA)(e);
           let o = i && !e.BHasTag("hide_store") && !e.BHasTag("mod_hide_store"),
             l =
               r &&
@@ -5275,8 +5281,8 @@
               !e.BHasTag("mod_hide_library_detail");
           return u.createElement(
             "div",
-            { className: Re.VisibiltyCtn },
-            u.createElement("div", { className: Re.TileTitle }, a),
+            { className: Te.VisibiltyCtn },
+            u.createElement("div", { className: Te.TileTitle }, a),
             u.createElement(
               "div",
               null,
@@ -5352,12 +5358,12 @@
           );
         }
       };
-      ze = (0, O.Cg)([m.PA], ze);
-      let qe = class extends u.Component {
+      qe = (0, O.Cg)([m.PA], qe);
+      let xe = class extends u.Component {
         state = {
           bUpdating: !1,
           newCategoryOption: {
-            label: (0, re.rG)(34),
+            label: (0, se.rG)(34),
             value: { eventType: 34 },
           },
         };
@@ -5372,7 +5378,7 @@
           try {
             const n = this.state.newCategoryOption,
               a = n.value.eventType;
-            await me
+            await ue
               .Get()
               .UpdatePartnerEventType(
                 this.m_cancelSignal,
@@ -5380,15 +5386,15 @@
                 e.GID,
                 a,
               );
-            const r = ae.Ac,
+            const r = re.Ac,
               s = [];
             n.value.tags &&
               n.value.tags.forEach((e) => {
                 s.push(e);
-                const t = new de().SetUpdateSeasonalTags(e).ToModString();
+                const t = new me().SetUpdateSeasonalTags(e).ToModString();
                 s.push(t);
               });
-            const i = await me
+            const i = await ue
               .Get()
               .UpdateTagsOnPartnerEvent(
                 this.m_cancelSignal,
@@ -5396,9 +5402,9 @@
                 e.GetAnnouncementGID(),
                 s,
                 r,
-                new de().SetActionChangeEvent(a),
+                new me().SetActionChangeEvent(a),
               );
-            (0, z.h5)(() => {
+            (0, H.h5)(() => {
               (e.type = a), (e.vecTags = i);
             }),
               this.setState({ bUpdating: !1 }, t);
@@ -5413,11 +5419,11 @@
         }
         render() {
           const { eventModel: e, closeModal: t } = this.props,
-            n = ne.Zi.filter((e) => 1 == e || 4 == e || e >= 9).map((e) => {
+            n = ae.Zi.filter((e) => 1 == e || 4 == e || e >= 9).map((e) => {
               const t = { eventType: e };
               return (
                 12 == e && (t.tags = ["patchnotes"]),
-                { label: (0, re.rG)(e), value: t }
+                { label: (0, se.rG)(e), value: t }
               );
             });
           n.push({
@@ -5470,7 +5476,7 @@
                 label: "Halloween: " + (0, f.we)("#PartnerEvent_35"),
               },
             ],
-            r = Te.HD.GetTimeNowWithOverrideAsDate();
+            r = Be.HD.GetTimeNowWithOverrideAsDate();
           return (
             8 == r.getMonth() || 9 == r.getMonth()
               ? n.unshift(...a)
@@ -5492,7 +5498,7 @@
                 null,
                 u.createElement(
                   "div",
-                  { className: Re.CategoryChangeDialog },
+                  { className: Te.CategoryChangeDialog },
                   u.createElement("br", null),
                   this.state.bUpdating &&
                     u.createElement(C.t, { size: "small" }),
@@ -5504,7 +5510,7 @@
                       u.createElement("br", null),
                       this.state.strErrorMsg,
                     ),
-                  u.createElement(te.Ay, {
+                  u.createElement(ne.Ay, {
                     isSearchable: !0,
                     onChange: this.OnChangeSelection,
                     value: this.state.newCategoryOption,
@@ -5516,10 +5522,10 @@
           );
         }
       };
-      (0, O.Cg)([H.oI], qe.prototype, "ChangeCategoryForEvent", null),
-        (0, O.Cg)([H.oI], qe.prototype, "OnChangeSelection", null),
-        (qe = (0, O.Cg)([m.PA], qe));
-      class xe extends u.Component {
+      (0, O.Cg)([z.oI], xe.prototype, "ChangeCategoryForEvent", null),
+        (0, O.Cg)([z.oI], xe.prototype, "OnChangeSelection", null),
+        (xe = (0, O.Cg)([m.PA], xe));
+      class We extends u.Component {
         state = {
           bUpdating: !1,
           bAccept: this.props.eventModel.BHasTag("halloween2019"),
@@ -5551,7 +5557,7 @@
             this.state.bHorror ? e.push("horror") : t.push("horror");
           try {
             const { eventModel: n } = this.props;
-            let a = await me
+            let a = await ue
               .Get()
               .UpdateTagsOnPartnerEvent(
                 this.m_cancelSignal,
@@ -5559,7 +5565,7 @@
                 n.AnnouncementGID,
                 e,
                 t,
-                new de().SetUpdateSeasonalTags(
+                new me().SetUpdateSeasonalTags(
                   this.state.bAccept
                     ? "halloween2019"
                     : "halloween2019reviewed",
@@ -5586,7 +5592,7 @@
               null,
               u.createElement(
                 "div",
-                { className: Re.CategoryChangeDialog },
+                { className: Te.CategoryChangeDialog },
                 u.createElement("input", {
                   id: "Acceptance",
                   type: "checkbox",
@@ -5631,11 +5637,11 @@
           );
         }
       }
-      (0, O.Cg)([H.oI], xe.prototype, "ChangeAcceptance", null),
-        (0, O.Cg)([H.oI], xe.prototype, "ChangeHorror", null),
-        (0, O.Cg)([H.oI], xe.prototype, "ChangeCute", null),
-        (0, O.Cg)([H.oI], xe.prototype, "ApplyAction", null);
-      let We = class extends u.Component {
+      (0, O.Cg)([z.oI], We.prototype, "ChangeAcceptance", null),
+        (0, O.Cg)([z.oI], We.prototype, "ChangeHorror", null),
+        (0, O.Cg)([z.oI], We.prototype, "ChangeCute", null),
+        (0, O.Cg)([z.oI], We.prototype, "ApplyAction", null);
+      let je = class extends u.Component {
         state = { bLoadingEvent: !0 };
         m_cancelSignal = o().CancelToken.source();
         componentWillUnmount() {
@@ -5681,18 +5687,18 @@
                 include_screenshots: !0,
                 include_release: !0,
               };
-              await ue.A.Get().QueueMultipleAppRequests(r, t),
+              await pe.A.Get().QueueMultipleAppRequests(r, t),
                 this.setState({
                   rgAppIDs: r,
                   rgUnknownTypeAppIDs: s,
                   bLoadingApps: !1,
                 }),
-                await ue.A.Get().QueueMultipleAppRequests(r, t),
+                await pe.A.Get().QueueMultipleAppRequests(r, t),
                 this.setState({ bLoadingAssociatedDemoInfo: !1 });
               const n = r.flatMap(
-                (e) => ue.A.Get().GetApp(e)?.GetDemoAppIDs() ?? [],
+                (e) => pe.A.Get().GetApp(e)?.GetDemoAppIDs() ?? [],
               );
-              await ue.A.Get().QueueMultipleAppRequests(n, t),
+              await pe.A.Get().QueueMultipleAppRequests(n, t),
                 this.setState({ bLoadingDemos: !1 });
             } else this.setState({ bLoadingEvent: !1, rgAppIDs: r });
           } else this.setState({ bLoadingEvent: !1 });
@@ -5726,7 +5732,7 @@
           let t = new Array(),
             n = new Array();
           this.state.rgAppIDs
-            .filter((e) => !ue.A.Get().GetApp(e))
+            .filter((e) => !pe.A.Get().GetApp(e))
             .forEach((e) => {
               t.push(
                 u.createElement(
@@ -5745,14 +5751,14 @@
                 n.push(e);
             });
           const a = this.state.rgAppIDs.reduce(
-              (e, t) => e + (ue.A.Get().GetApp(t)?.BHasDemo() ? 1 : 0),
+              (e, t) => e + (pe.A.Get().GetApp(t)?.BHasDemo() ? 1 : 0),
               0,
             ),
             r = new Array();
           this.state.rgAppIDs.forEach((e) => {
-            const t = ue.A.Get().GetApp(e);
+            const t = pe.A.Get().GetApp(e);
             if (t && !t.BHasDemo()) {
-              let t = ue.A.Get().GetApp(e);
+              let t = pe.A.Get().GetApp(e);
               r.push(
                 u.createElement(
                   "div",
@@ -5770,7 +5776,7 @@
                   u.createElement(
                     "a",
                     {
-                      href: (0, fe.k2)(t.GetStorePageURL() + "?beta=0"),
+                      href: (0, Re.k2)(t.GetStorePageURL() + "?beta=0"),
                       target: "_blank",
                     },
                     "Store Page",
@@ -5792,9 +5798,9 @@
             o = 0;
           this.state.rgAppIDs.forEach((e) => {
             let t = !1;
-            const n = ue.A.Get().GetApp(e);
+            const n = pe.A.Get().GetApp(e);
             if (n && n.BHasDemo()) {
-              ue.A.Get().GetApp(n.GetDemoAppIDs()[0]).BIsComingSoon()
+              pe.A.Get().GetApp(n.GetDemoAppIDs()[0]).BIsComingSoon()
                 ? ((i += 1), (t = !0))
                 : (o += 1);
             }
@@ -5803,7 +5809,7 @@
             c = 0;
           return (
             this.state.rgAppIDs.forEach((e) => {
-              const t = ue.A.Get().GetApp(e);
+              const t = pe.A.Get().GetApp(e);
               1 != t?.GetAppType() && (c += 1);
             }),
             u.createElement(
@@ -5812,7 +5818,7 @@
               u.createElement(
                 "h1",
                 null,
-                e.GetNameWithFallback((0, ne.sf)(s.TS.LANGUAGE)),
+                e.GetNameWithFallback((0, ae.sf)(s.TS.LANGUAGE)),
               ),
               u.createElement(
                 "div",
@@ -5961,11 +5967,11 @@
           );
         }
       };
-      We = (0, O.Cg)([m.PA], We);
-      var je = n(72034),
-        Ve = n(44332),
-        Ye = n(7338);
-      function Ke(e) {
+      je = (0, O.Cg)([m.PA], je);
+      var Ve = n(72034),
+        Ye = n(81393),
+        Ke = n(7338);
+      function Qe(e) {
         const [t, n] = (0, u.useState)(!1),
           [a] = (0, u.useState)(() =>
             (function () {
@@ -5973,8 +5979,8 @@
                 "partnerbrowse_webapi_token",
                 "application_config",
               );
-              (0, Ve.w)(Boolean(e), "require partnerbrowse_webapi_token");
-              const t = new je.D(s.TS.WEBAPI_BASE_URL, e);
+              (0, Ye.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+              const t = new Ve.D(s.TS.WEBAPI_BASE_URL, e);
               ("dev" != s.TS.WEB_UNIVERSE && "beta" != s.TS.WEB_UNIVERSE) ||
                 console.log(
                   "DEV_DEBUG: Initializing CStoreItemCache with access token",
@@ -5997,7 +6003,7 @@
             () => (
               n(!0),
               (function (e) {
-                return ue.A.Initialize(
+                return pe.A.Initialize(
                   e.GetServiceTransport(),
                   s.iA.is_partner_member,
                 );
@@ -6006,7 +6012,7 @@
             [a],
           ),
           t
-            ? (0, u.createElement)(Ye.V3, {
+            ? (0, u.createElement)(Ke.V3, {
                 context: r,
                 serviceTransportOverride: a.GetServiceTransport(),
                 children: e.children,
@@ -6014,13 +6020,13 @@
             : null
         );
       }
-      var Qe = n(81881);
-      const Xe = () =>
+      var Xe = n(81881);
+      const Je = () =>
         u.createElement(
-          Ke,
+          Qe,
           null,
           u.createElement(
-            Qe.d,
+            Xe.d,
             null,
             u.createElement(
               p.dO,
@@ -6028,7 +6034,7 @@
               u.createElement(p.qh, {
                 path: a.B.EventGameFestivalDebug(),
                 render: (e) =>
-                  u.createElement(We, {
+                  u.createElement(je, {
                     ...e,
                     clanAccountID: e.match.params.clanacountid,
                     clanEventGID: e.match.params.claneventgid,
@@ -6037,7 +6043,7 @@
               u.createElement(p.qh, {
                 exact: !0,
                 path: a.B.EventBackfill(),
-                render: (e) => u.createElement(J, { ...e }),
+                render: (e) => u.createElement(Z, { ...e }),
               }),
               u.createElement(p.qh, {
                 path: a.B.EventRSSModeration(),
@@ -6046,7 +6052,7 @@
               u.createElement(p.qh, {
                 path: a.B.EventModeration(),
                 render: (e) =>
-                  u.createElement(De, {
+                  u.createElement(Ge, {
                     ...e,
                     appid:
                       e.match.params.appid &&

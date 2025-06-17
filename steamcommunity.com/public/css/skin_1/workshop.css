@@ -2561,14 +2561,16 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 #splits,
-#ServiceProviders {
+#ServiceProviders,
+#ContributorTermsAcceptance {
 	background: rgba( 145, 134, 101, 0.5);
 }
 #ServiceProviders {
 	margin-bottom: 30px;
 }
 #splits .sectionTitle,
-#ServiceProviders .sectionTitle {
+#ServiceProviders .sectionTitle,
+#ContributorTermsAcceptance .sectionTitle {
 	font-size: 18px;
 	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	color: #caba8d;
@@ -2666,7 +2668,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopItemSplit .iconHolder_default {
-	position: absolute;
 	left: 4px;
 	top: 10px;
 	padding: 4px;
@@ -2681,20 +2682,16 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	font-size: 12px;
 	font-weight: bold;
 	margin-right:0px;
-	margin-left:50px;
-	float: left;
 	cursor: pointer;
 }
 
 .workshopSplitPercentage {
-	float: left;
 	margin-left: 10px;
 	color: #413c2f;
     line-height: 16px;
 }
 
 .workshopSplitAcceptedDate {
-	float: left;
 	margin-left: 25px;
 	color: #413c2f;
     line-height: 16px;

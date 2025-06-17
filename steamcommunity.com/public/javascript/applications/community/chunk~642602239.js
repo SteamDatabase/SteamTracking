@@ -104,7 +104,7 @@
       }
       class a {
         constructor(e) {
-          (0, n.w)(e, "decorated accumulator cannot be null"),
+          (0, n.wT)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
         }
         AppendText(e, t = !1) {

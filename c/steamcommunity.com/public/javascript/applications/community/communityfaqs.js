@@ -8637,6 +8637,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) =>
           _.createElement(
@@ -9737,7 +9738,7 @@
                 fnLangHasData: __webpack_require__.BHasSomeTextForLanguage,
                 fnGetImageHash: (_, _) => {
                   if (_._.includes(_)) {
-                    const _ = _._.GetLocalizedImageGroupForEditAsImgArray(_);
+                    const _ = _._.GetAllLocalizedGroupImages();
                     return _ && _.length > _ && null != _[_] ? _[_] : null;
                   }
                   return null;
@@ -9894,6 +9895,8 @@
                       "div",
                       {
                         className: _.FAQTitle,
+                        role: "heading",
+                        "aria-level": 1,
                       },
                       _,
                     ),
@@ -10048,7 +10051,9 @@
                 {
                   className: _.LeftCol,
                 },
-                _.createElement(_._VW, null),
+                _.createElement(_._VW, {
+                  role: "presentation",
+                }),
               ),
               _.createElement(
                 "div",
@@ -10094,7 +10099,9 @@
                   {
                     className: _.LeftCol,
                   },
-                  _.createElement(_.ROZ, null),
+                  _.createElement(_.ROZ, {
+                    role: "presentation",
+                  }),
                 ),
                 _.createElement(
                   "div",

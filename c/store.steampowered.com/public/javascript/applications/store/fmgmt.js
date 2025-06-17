@@ -6710,7 +6710,7 @@
               _.createElement(
                 _,
                 null,
-                _.Hxx({}),
+                _.createElement(_.Hxx, null),
                 _.createElement(
                   "span",
                   {
@@ -6724,7 +6724,7 @@
                     className: _.HelpLink,
                     href: _,
                   },
-                  _._VW(),
+                  _.createElement(_._VW, null),
                 ),
               ),
               _.isLoading &&
@@ -6903,7 +6903,7 @@
                   {
                     className: _.OnboardSplashButtonGraphic,
                   },
-                  _.dsc({}),
+                  _.createElement(_.dsc, null),
                 ),
                 _ > 0 &&
                   _.createElement(
@@ -6934,7 +6934,7 @@
                   {
                     className: _.OnboardSplashButtonGraphic,
                   },
-                  _.LDq({}),
+                  _.createElement(_.LDq, null),
                 ),
               ),
             ),

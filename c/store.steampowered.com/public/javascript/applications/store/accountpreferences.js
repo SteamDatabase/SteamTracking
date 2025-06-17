@@ -1556,7 +1556,8 @@
         _ =
           __webpack_require__._ +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1566,12 +1567,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
+          "k_ETwoFactorTokenSteamguardScheme_None"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_Email = 1)] =
+            "k_ETwoFactorTokenSteamguardScheme_Email"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
+            "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
+      })(_ || (_ = {}));
       const _ = (0, _._)(() => {
         let _ = _.Get();
         const _ = _(),
           _ = Date.now() / 1e3,
           _ = _(_),
           _ = _.GetTwoFactorStatus();
+        let _ = null;
+        switch (_.steamguard_scheme) {
+          default:
+          case _.k_ETwoFactorTokenSteamguardScheme_None:
+            _ = "#accountpreferences_revoked_devices_revoked_description";
+            break;
+          case _.k_ETwoFactorTokenSteamguardScheme_Email:
+            _ = "#accountpreferences_revoked_devices_revoked_description_email";
+            break;
+          case _.k_ETwoFactorTokenSteamguardScheme_TwoFactor:
+            _ = "#accountpreferences_revoked_devices_revoked_description_auth";
+        }
         let _ = [],
           _ = [];
         for (const _ of _.GetActiveDevices()) {
@@ -1706,10 +1727,7 @@
               {
                 className: _.SectionDescription,
               },
-              (0, _._)(
-                "#accountpreferences_revoked_devices_revoked_description",
-                _.createElement("p", null),
-              ),
+              (0, _._)(_, _.createElement("p", null)),
             ),
             _.createElement(
               "div",

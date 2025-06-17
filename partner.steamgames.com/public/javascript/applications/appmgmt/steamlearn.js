@@ -5136,6 +5136,11 @@
                 proto: Le,
                 fields: {
                   bert_model: { n: 1, br: u.qM.readEnum, bw: u.gp.writeEnum },
+                  sequence_length: {
+                    n: 2,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
                 },
               }),
             Le.sm_m
@@ -12250,7 +12255,7 @@
       }
       var ka = a(78327),
         Oa = a(96059),
-        Fa = a(44332);
+        Fa = a(81393);
       class Pa {
         static s_SteamLearnStore;
         static Get() {
@@ -12262,7 +12267,7 @@
         }
         Init() {
           const e = (0, ka.Tc)("webapi_token", "application_config");
-          (0, Fa.w)(Boolean(e), "require webapi_token"),
+          (0, Fa.wT)(Boolean(e), "require webapi_token"),
             "dev" == ka.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CSteamLearnStore with access token ",
@@ -12648,18 +12653,18 @@
         let s = t.project_nodes().find((e) => e.node_id() == a),
           o = t.project_nodes().find((e) => e.node_id() == n);
         if (
-          ((0, Fa.w)(s, `AddEdgeToConfig: Failed to find source node: ${a}`),
-          (0, Fa.w)(o, `AddEdgeToConfig: Failed to find target node: ${n}`),
+          ((0, Fa.wT)(s, `AddEdgeToConfig: Failed to find source node: ${a}`),
+          (0, Fa.wT)(o, `AddEdgeToConfig: Failed to find target node: ${n}`),
           !s || !o)
         )
           return;
         let c = s.connectors().find((e) => e.connector_id() == r),
           l = o.connectors().find((e) => e.connector_id() == i);
-        (0, Fa.w)(
+        (0, Fa.wT)(
           c,
           `AddEdgeToConfig: Failed to find source connector: ${a}, ${r}`,
         ),
-          (0, Fa.w)(
+          (0, Fa.wT)(
             l,
             `AddEdgeToConfig: Failed to find target connector: ${n}, ${i}`,
           ),
@@ -12712,21 +12717,21 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!a) {
-              (0, Fa.w)(!1, `No input connector on node ${t.toObject()}`);
+              (0, Fa.wT)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
             const { msgIncomingNode: n, nIncomingConnectorID: i } = Lr(e, a);
             if (n)
               if (t.embedding().flatten()) {
                 const a = zr(e, n, i);
-                (0, Fa.w)(
+                (0, Fa.wT)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${n.toObject()}, connector ${i}`,
                 ),
                   r.push(a[0] * t.embedding().embedding_width());
               } else {
                 const a = zr(e, n, i);
-                (0, Fa.w)(
+                (0, Fa.wT)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${n.toObject()}, connector ${i}`,
                 ),
@@ -12747,7 +12752,7 @@
                 );
                 if (t) {
                   const r = zr(e, t, s);
-                  (0, Fa.w)(
+                  (0, Fa.wT)(
                     1 == r.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_CONCATENATE not one-dimensional! (node ${t.toObject()}, connector ${s}`,
                   ),
@@ -12768,7 +12773,7 @@
                 );
                 if (t) {
                   const r = zr(e, t, n);
-                  (0, Fa.w)(
+                  (0, Fa.wT)(
                     0 == r.length || 1 == r.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_COMBINE not one-dimensional: ${r}! (node ${t.toObject()}, connector ${n}`,
                   ),
@@ -12784,13 +12789,13 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!a) {
-              (0, Fa.w)(!1, `No input connector on node ${t.toObject()}`);
+              (0, Fa.wT)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
             const { msgIncomingNode: n, nIncomingConnectorID: i } = Lr(e, a);
             if (n) {
               const t = zr(e, n, i);
-              (0, Fa.w)(
+              (0, Fa.wT)(
                 1 == t.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_SHUFFLE not one-dimensional! (node ${n}, connector ${i}`,
               ),
@@ -12807,7 +12812,7 @@
                 .connectors()
                 .filter((e) => !e.is_input_connector())
                 .map((e) => e.connector_id());
-            (0, Fa.w)(
+            (0, Fa.wT)(
               n.length == i.length,
               `Synced shuffle node with different number of input and output connectors: ${t.toObject()}`,
             );
@@ -12840,7 +12845,7 @@
               .connectors()
               .filter((e) => e.is_input_connector())
               .map((e) => e.connector_id());
-            (0, Fa.w)(
+            (0, Fa.wT)(
               3 == a.length,
               "Conditional swap node with other than 3 input connectors:",
               t.toObject(),
@@ -13117,10 +13122,10 @@
             r.push(768);
             break;
           case 39:
-            r.push(200);
+            r.push(t.bert_tokenizer().sequence_length());
             break;
           default:
-            (0, Fa.w)(
+            (0, Fa.wT)(
               !1,
               `GetNodeOutputShape - NEED TO IMPLEMENT node type ${t.type()}`,
             );
@@ -13355,18 +13360,18 @@
         let s = t.project_nodes().find((e) => e.node_id() == a),
           o = t.project_nodes().find((e) => e.node_id() == n);
         if (
-          ((0, Fa.w)(s, `IsValidConnection: Failed to find source node: ${a}`),
-          (0, Fa.w)(o, `IsValidConnection: Failed to find target node: ${n}`),
+          ((0, Fa.wT)(s, `IsValidConnection: Failed to find source node: ${a}`),
+          (0, Fa.wT)(o, `IsValidConnection: Failed to find target node: ${n}`),
           !s || !o)
         )
           return !1;
         let c = s.connectors().find((e) => e.connector_id() == r),
           l = o.connectors().find((e) => e.connector_id() == i);
-        (0, Fa.w)(
+        (0, Fa.wT)(
           c,
           `IsValidConnection: Failed to find source connector: ${a}, ${r}`,
         ),
-          (0, Fa.w)(
+          (0, Fa.wT)(
             l,
             `IsValidConnection: Failed to find target connector: ${n}, ${i}`,
           );
@@ -19136,7 +19141,7 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!e)
-              return void (0, Fa.w)(
+              return void (0, Fa.wT)(
                 !1,
                 `No input connector on node ${o.toObject()}`,
               );
@@ -19145,7 +19150,7 @@
             let s = i;
             if (r) {
               const e = zr(a, r, n);
-              (0, Fa.w)(
+              (0, Fa.wT)(
                 e.length <= 1,
                 `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${e.length} ) (node ${r.node_id()}, connector ${n}`,
               ),
@@ -20985,7 +20990,7 @@
               const e = zr(a, r, n);
               if (e.length > 1)
                 return (
-                  (0, Fa.w)(
+                  (0, Fa.wT)(
                     !1,
                     `Incoming node/connector ${r.node_id()}, ${n} have a shape with a primary dimension of ${e.length}: ${e}!`,
                   ),
@@ -29306,6 +29311,20 @@
                   ),
                   i.createElement("div", { className: Rn.Value }, (0, l.we)(_)),
                 ),
+                i.createElement(
+                  "div",
+                  { className: Rn.LabelValue },
+                  i.createElement(
+                    "div",
+                    { className: Rn.Label },
+                    (0, l.we)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                  ),
+                  i.createElement(
+                    "div",
+                    { className: Rn.Value },
+                    o.bert_tokenizer().sequence_length(),
+                  ),
+                ),
               ),
             ),
             d.map((e, t) => {
@@ -29344,11 +29363,16 @@
         bs = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = Hr(),
             [r, n] = i.useState(e.msgNode.comment()),
-            [s, o] = i.useState(e.msgNode.bert_tokenizer().bert_model());
+            [s, o] = i.useState(e.msgNode.bert_tokenizer().bert_model()),
+            [c, m] = i.useState(
+              e.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
+            );
           i.useEffect(() => {
-            n(e.msgNode.comment()), o(e.msgNode.bert_tokenizer().bert_model());
+            n(e.msgNode.comment()),
+              o(e.msgNode.bert_tokenizer().bert_model()),
+              m(e.msgNode.bert_tokenizer().sequence_length()?.toString());
           }, [e.bVisible, e.msgNode]);
-          let c = [
+          let d = [
             {
               label: (0, l.we)(
                 "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased",
@@ -29442,7 +29466,27 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => s,
                   fnSetValue: (e) => o(parseInt(e)),
-                  options: c,
+                  options: d,
+                }),
+              ),
+              i.createElement(
+                "div",
+                { className: Rn.NodeOptionBlock },
+                i.createElement(
+                  "div",
+                  { className: Rn.NodeOptionHeader },
+                  (0, l.we)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                ),
+                i.createElement(
+                  "div",
+                  { className: Rn.NodeOptionDesc },
+                  (0, l.we)("#SteamLearn_Config_Node_Bert_SequenceLengthDesc"),
+                ),
+                i.createElement(Un, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => c,
+                  fnValidateValue: (e) => Wr(e, 16, 512),
+                  fnSetValue: (e) => m(e),
                 }),
               ),
             ),
@@ -29455,6 +29499,9 @@
                   onClick: () => {
                     e.msgNode.set_comment(r),
                       e.msgNode.bert_tokenizer().set_bert_model(s),
+                      e.msgNode
+                        .bert_tokenizer()
+                        .set_sequence_length(parseInt(c)),
                       kr(t),
                       e.fnSetPopupVisible(!1);
                   },
@@ -29988,7 +30035,10 @@
                       (s = 1), (o = 1);
                       break;
                     case 39:
-                      (s = 1), (o = 3), i.bert_tokenizer().set_bert_model(2);
+                      (s = 1),
+                        (o = 3),
+                        i.bert_tokenizer().set_bert_model(2),
+                        i.bert_tokenizer().set_sequence_length(512);
                       break;
                     case 40:
                       (s = 3),
@@ -30174,7 +30224,7 @@
                         i.external_model().set_unfrozen_layers(0);
                       break;
                     default:
-                      (0, Fa.w)(!1, `Unhandled type in AddNodeToConfig: ${a}`);
+                      (0, Fa.wT)(!1, `Unhandled type in AddNodeToConfig: ${a}`);
                   }
                   if (s + o > 0) {
                     const e = Mr(t, s + o);
@@ -30244,11 +30294,11 @@
                   let s = t.project_nodes().find((e) => e.node_id() == a),
                     o = t.project_nodes().find((e) => e.node_id() == n);
                   if (
-                    ((0, Fa.w)(
+                    ((0, Fa.wT)(
                       s,
                       `RemoveEdgeFromConfig: Failed to find source node: ${a}`,
                     ),
-                    (0, Fa.w)(
+                    (0, Fa.wT)(
                       o,
                       `RemoveEdgeFromConfig: Failed to find target node: ${n}`,
                     ),
@@ -30257,15 +30307,15 @@
                     return;
                   let c = s.connectors().find((e) => e.connector_id() == r),
                     l = o.connectors().find((e) => e.connector_id() == i);
-                  (0, Fa.w)(
+                  (0, Fa.wT)(
                     c,
                     `RemoveEdgeFromConfig: Failed to find source connector: ${a}, ${r}`,
                   ),
-                    (0, Fa.w)(
+                    (0, Fa.wT)(
                       l,
                       `RemoveEdgeFromConfig: Failed to find target connector: ${n}, ${i}`,
                     ),
-                    (0, Fa.w)(
+                    (0, Fa.wT)(
                       c.linked_connector_ids().includes(i),
                       `RemoveEdgeFromConfig: Failed to find target connector in source linked connectors: ${i}`,
                     ),
@@ -30839,7 +30889,7 @@
           case 40:
             return "nodeBertFinetune";
           default:
-            (0, Fa.w)(!1, `Unknown type in GetNodeTypeString: ${e}`);
+            (0, Fa.wT)(!1, `Unknown type in GetNodeTypeString: ${e}`);
         }
         return "";
       }
@@ -30880,7 +30930,7 @@
       const Ts = () => {
           const { msgWorkingProjectConfig: e } = Hr(),
             t = tr(),
-            a = Sr(e.project_id(), e.published_version(), 100).data,
+            a = Sr(e.project_id(), e.published_version(), 5).data,
             [r, n] = i.useState(!1);
           if (!t.isSuccess) return null;
           let s = [];

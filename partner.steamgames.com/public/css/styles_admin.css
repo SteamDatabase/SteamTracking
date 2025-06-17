@@ -2671,6 +2671,10 @@ html, body { height:100%; }
 	padding-right: 6px;
 }
 
+.community_items_localize_checklist > span {
+	color: #e24044;
+}
+
 .communityitem_localized_image {
 	float: left;
 	margin-right: 12px;

@@ -167,7 +167,7 @@
         c = o(80724),
         h = o(73745),
         g = o(3088),
-        p = o(44332),
+        p = o(81393),
         m = o(52038),
         d = o(81363),
         u = o(6144),
@@ -297,7 +297,7 @@
         m_refLogoImage = n.createRef();
         constructor(e) {
           super(e),
-            (0, p.w)(
+            (0, p.wT)(
               !e.editMode || e.rgLogoImages.length <= 1,
               "Can't use multiple logo images in edit mode",
             ),

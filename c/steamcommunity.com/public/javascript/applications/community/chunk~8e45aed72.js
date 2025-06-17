@@ -65,38 +65,43 @@
             "img",
             {
               Constructor: function (_) {
-                var _, _;
+                var _, _, _;
                 const { showErrorInfo: _ } = _.context;
                 let _ =
                   null === (_ = null == _ ? void 0 : _.children) || void 0 === _
                     ? void 0
                     : _.toString();
-                if (
-                  (null == _ || null == _ || 0 == _.length) &&
-                  ((_ =
+                (null != _ && null != _ && 0 != _.length) ||
+                  (_ =
                     null === (_ = null == _ ? void 0 : _.args) || void 0 === _
                       ? void 0
-                      : _[""]),
-                  null == _ || null == _ || 0 == _.length)
-                )
-                  return "";
-                const _ = (0, _._)(_, _.language);
-                return "string" == typeof _
-                  ? ((_ = _),
-                    _
-                      ? _.createElement(_._, {
-                          className: _().FAQImage,
-                          src: _,
-                        })
-                      : ((_ = _.replace("http://", "https://")),
-                        _.createElement("img", {
-                          className: _().FAQImage,
-                          src: _,
-                        })))
-                  : _.createElement(_._, {
-                      className: _().FAQImage,
-                      rgSources: _,
-                    });
+                      : _[""]);
+                const _ =
+                    null === (_ = null == _ ? void 0 : _.args) || void 0 === _
+                      ? void 0
+                      : _.alt,
+                  _ = (0, _._)(_, _.language);
+                return null == _
+                  ? null
+                  : "string" == typeof _
+                    ? ((_ = _),
+                      _
+                        ? _.createElement(_._, {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })
+                        : ((_ = _.replace("http://", "https://")),
+                          _.createElement("img", {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })))
+                    : _.createElement(_._, {
+                        className: _().FAQImage,
+                        rgSources: _,
+                        alt: _,
+                      });
               },
               autocloses: !1,
             },

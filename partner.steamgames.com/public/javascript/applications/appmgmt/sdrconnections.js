@@ -58,89 +58,89 @@
       "use strict";
       a.r(t), a.d(t, { default: () => F });
       var n = a(41735),
-        r = a.n(n),
+        l = a.n(n),
         s = a(90626),
-        l = a(52038),
+        r = a(52038),
         c = a(92757),
-        o = a(16676),
-        i = a(84811),
+        i = a(16676),
+        o = a(84811),
         m = a(68797),
-        d = a(78327),
-        u = a(97712),
+        u = a(78327),
+        d = a(97712),
         p = a(22797),
         E = a(91675);
       function _(e) {
         return s.createElement(
           "span",
-          { className: (0, l.A)(u.GenericLabeledItem, e.className) },
+          { className: (0, r.A)(d.GenericLabeledItem, e.className) },
           s.createElement(
             "span",
-            { className: u.CxnGenericDataLabel },
+            { className: d.CxnGenericDataLabel },
             e.label,
           ),
-          s.createElement("span", { className: u.CxnGenericData }, e.children),
+          s.createElement("span", { className: d.CxnGenericData }, e.children),
         );
       }
       function f(e) {
         const t = e.host,
           a = t.type + ":" + t.id;
         let n = "peer" == e.host_role ? "Peer" : "Client",
-          r = null;
+          l = null;
         if (t.data_center)
           (n = "Gameserver"),
-            (r = s.createElement(
+            (l = s.createElement(
               s.Fragment,
               null,
-              s.createElement("span", { className: u.host_id }, a),
+              s.createElement("span", { className: d.host_id }, a),
               " in ",
               s.createElement(
                 "span",
-                { className: u.GameServerDataCenter },
+                { className: d.GameServerDataCenter },
                 t.data_center,
               ),
             ));
         else if (t.steam_persona) {
-          const e = d.TS.COMMUNITY_BASE_URL + "/profiles/" + t.id;
-          r = s.createElement(
+          const e = u.TS.COMMUNITY_BASE_URL + "/profiles/" + t.id;
+          l = s.createElement(
             s.Fragment,
             null,
             s.createElement(
               "span",
-              { className: u.host_id },
+              { className: d.host_id },
               s.createElement("a", { href: e }, t.steam_persona),
             ),
             " (",
-            s.createElement("span", { className: u.host_id }, a),
+            s.createElement("span", { className: d.host_id }, a),
             ")",
           );
         } else
-          r = s.createElement(
+          l = s.createElement(
             s.Fragment,
             null,
-            s.createElement("span", { className: u.host_id }, a),
+            s.createElement("span", { className: d.host_id }, a),
           );
         return s.createElement(
           "div",
           {
-            className: (0, l.A)(
-              u.ConnectionClientInfo,
-              t.data_center && u.HostIsGameserver,
+            className: (0, r.A)(
+              d.ConnectionClientInfo,
+              t.data_center && d.HostIsGameserver,
             ),
           },
           s.createElement(
             "div",
-            { className: u.HostIDAndConnectionCtr },
-            s.createElement(_, { className: u.HostIDInfo, label: n }, r),
+            { className: d.HostIDAndConnectionCtr },
+            s.createElement(_, { className: d.HostIDInfo, label: n }, l),
             null != t.connection_id &&
               s.createElement(
                 _,
-                { className: u.HostConnectionID, label: "ConnectionID" },
+                { className: d.HostConnectionID, label: "ConnectionID" },
                 t.connection_id,
               ),
           ),
           s.createElement(
             "div",
-            { className: u.ClientIPInfo },
+            { className: d.ClientIPInfo },
             t.addr &&
               s.createElement(_, { className: "addr", label: "IP" }, t.addr),
             t.city_name &&
@@ -159,7 +159,7 @@
           ),
         );
       }
-      function g(e, t) {
+      function h(e, t) {
         return (
           null == t && (t = 0),
           e.toLocaleString(void 0, {
@@ -168,20 +168,20 @@
           })
         );
       }
-      function C(e) {
+      function N(e) {
         let t = 1e30,
           a = -1e30;
         if (e && e.ping_pctile)
           for (const n in e.ping_pctile) {
-            const r = parseFloat(n);
-            if (r >= 5 && r <= 95) {
-              const r = e.ping_pctile[n];
-              r < t && (t = r), r > a && (a = r);
+            const l = parseFloat(n);
+            if (l >= 5 && l <= 95) {
+              const l = e.ping_pctile[n];
+              l < t && (t = l), l > a && (a = l);
             }
           }
         return [t, a];
       }
-      function h(e) {
+      function v(e) {
         let t = 1e30;
         if (e && e.quality_pctile)
           for (const a in e.quality_pctile) {
@@ -193,53 +193,53 @@
           }
         return t;
       }
-      function v(e, t, a) {
+      function g(e, t, a) {
         const n = a > 0 ? t / a : 0,
-          r = (100 * n).toFixed(1) + "%";
+          l = (100 * n).toFixed(1) + "%";
         return s.createElement(
           "tr",
           { key: e },
-          s.createElement("th", { className: u.Label }, e),
-          s.createElement("td", { className: u.Pct }, r),
+          s.createElement("th", { className: d.Label }, e),
+          s.createElement("td", { className: d.Pct }, l),
           s.createElement(
             "td",
             null,
             s.createElement("span", {
-              className: u.Bar,
+              className: d.Bar,
               style: { width: 90 * n + 1 + "px" },
             }),
-            s.createElement("span", { className: u.Num }, g(t)),
+            s.createElement("span", { className: d.Num }, h(t)),
           ),
         );
       }
-      function N(e, t) {
+      function C(e, t) {
         if (!(t > 0)) return null;
         let a = [];
-        for (let n = 0; n < e.length; ++n) a.push(v(e[n][0], e[n][1], t));
+        for (let n = 0; n < e.length; ++n) a.push(g(e[n][0], e[n][1], t));
         return s.createElement(
           "table",
-          { className: u.Histogram },
+          { className: d.Histogram },
           s.createElement("tbody", null, a),
         );
       }
       function y(e) {
         let t = [];
         for (let a = 0; a < e.length; ++a) {
-          const [n, r] = e[a];
-          null != r &&
+          const [n, l] = e[a];
+          null != l &&
             t.push(
               s.createElement(
                 "tr",
                 { key: n },
-                s.createElement("th", { className: u.NTile }, n, "% <="),
-                s.createElement("td", { className: u.Value }, r),
+                s.createElement("th", { className: d.NTile }, n, "% <="),
+                s.createElement("td", { className: d.Value }, l),
               ),
             );
         }
         return t.length
           ? s.createElement(
               "table",
-              { className: u.Distribution },
+              { className: d.Distribution },
               s.createElement("tbody", null, t),
             )
           : null;
@@ -251,26 +251,26 @@
         const t = e.flow;
         return s.createElement(
           "div",
-          { className: u.FlowQualityStats },
-          s.createElement("div", { className: u.FlowQualityTitle }, e.title),
+          { className: d.FlowQualityStats },
+          s.createElement("div", { className: d.FlowQualityTitle }, e.title),
           t
             ? s.createElement(
                 s.Fragment,
                 null,
                 (function (e) {
                   const t = function (e) {
-                      const t = e >= 0 ? g(e) : "?";
+                      const t = e >= 0 ? h(e) : "?";
                       return s.createElement(
                         "td",
-                        { className: u.NumPkts },
+                        { className: d.NumPkts },
                         t + " pkts",
                       );
                     },
                     a = function (e) {
-                      const t = e >= 0 ? g(e) : "?";
+                      const t = e >= 0 ? h(e) : "?";
                       return s.createElement(
                         "td",
-                        { className: u.KB },
+                        { className: d.KB },
                         t + "kb",
                       );
                     },
@@ -280,20 +280,20 @@
                         t > 0 &&
                           e >= 0 &&
                           (a = ((e / t) * 100).toFixed(3) + "%"),
-                        s.createElement("td", { className: u.Pct }, a)
+                        s.createElement("td", { className: d.Pct }, a)
                       );
                     };
                   return s.createElement(
                     "div",
                     {
-                      className: (0, l.A)(
-                        u.FlowPacketCounts,
-                        u.FlowStatsSection,
+                      className: (0, r.A)(
+                        d.FlowPacketCounts,
+                        d.FlowStatsSection,
                       ),
                     },
                     s.createElement(
                       "div",
-                      { className: u.FlowSectionTitle },
+                      { className: d.FlowSectionTitle },
                       "Summary counters",
                     ),
                     s.createElement(
@@ -308,7 +308,7 @@
                           s.createElement("th", null, "Sent"),
                           t(e.sent_pkt),
                           a(e.sent_kb),
-                          s.createElement("td", { className: u.Spacer }),
+                          s.createElement("td", { className: d.Spacer }),
                           s.createElement("th", null, "Dropped"),
                           t(e.drop),
                           n(e.drop, e.recv_seq),
@@ -319,7 +319,7 @@
                           s.createElement("th", null, "Recv"),
                           t(e.recv_pkt),
                           a(e.recv_kb),
-                          s.createElement("td", { className: u.Spacer }),
+                          s.createElement("td", { className: d.Spacer }),
                           s.createElement("th", null, "Duplicate"),
                           t(e.dup),
                           n(e.dup, e.recv_seq),
@@ -330,7 +330,7 @@
                           s.createElement("th", null, "Recv w/ seq"),
                           t(e.recv_seq),
                           s.createElement("td", null),
-                          s.createElement("td", { className: u.Spacer }),
+                          s.createElement("td", { className: d.Spacer }),
                           s.createElement("th", null, "Out of order"),
                           t(e.ooo),
                           n(e.ooo, e.recv_seq),
@@ -341,7 +341,7 @@
                           s.createElement("th", null, "Summary"),
                           s.createElement(
                             "td",
-                            { colSpan: 2, className: u.FlowQualityClass },
+                            { colSpan: 2, className: d.FlowQualityClass },
                             s.createElement(
                               "span",
                               {
@@ -351,7 +351,7 @@
                               e.quality_class,
                             ),
                           ),
-                          s.createElement("td", { className: u.Spacer }),
+                          s.createElement("td", { className: d.Spacer }),
                           s.createElement("th", null, "Seq num lurch"),
                           t(e.seqlurch),
                           n(e.seqlurch, e.recv_seq),
@@ -364,43 +364,43 @@
                   let t = null,
                     a = null,
                     n = 0;
-                  const r = e.quality_hist;
-                  if (r) {
+                  const l = e.quality_hist;
+                  if (l) {
                     const e = [
-                      ["Perfect", r[100] || 0],
-                      [">99%", r[99] || 0],
-                      ["97-99%", r[97] || 0],
-                      ["95-97%", r[95] || 0],
-                      ["90-95%", r[90] || 0],
-                      ["75-90%", r[75] || 0],
-                      ["50-75%", r[50] || 0],
-                      ["<50%", r[1] || 0],
-                      ["Dead", r[0] || 0],
+                      ["Perfect", l[100] || 0],
+                      [">99%", l[99] || 0],
+                      ["97-99%", l[97] || 0],
+                      ["95-97%", l[95] || 0],
+                      ["90-95%", l[90] || 0],
+                      ["75-90%", l[75] || 0],
+                      ["50-75%", l[50] || 0],
+                      ["<50%", l[1] || 0],
+                      ["Dead", l[0] || 0],
                     ];
                     for (let t = 0; t < e.length; ++t) n += e[t][1];
-                    t = N(e, n);
+                    t = C(e, n);
                   }
                   if (n <= 0) return null;
-                  const l = e.quality_pctile;
-                  if (l) {
+                  const r = e.quality_pctile;
+                  if (r) {
                     const e = (e) => (null == e ? void 0 : e + "%");
                     a = y([
-                      [50, e(l[50])],
-                      [25, e(l[25])],
-                      [5, e(l[5])],
-                      [2, e(l[2])],
+                      [50, e(r[50])],
+                      [25, e(r[25])],
+                      [5, e(r[5])],
+                      [2, e(r[2])],
                     ]);
                   }
-                  const c = g(n) + " measurement intervals";
+                  const c = h(n) + " measurement intervals";
                   return s.createElement(
                     "div",
-                    { className: u.QualityBreakdown },
+                    { className: d.QualityBreakdown },
                     s.createElement(
                       "div",
-                      { className: u.FlowSectionTitle },
+                      { className: d.FlowSectionTitle },
                       "Quality interval breakdown",
                     ),
-                    s.createElement("div", { className: u.numSamples }, c),
+                    s.createElement("div", { className: d.numSamples }, c),
                     t,
                     a,
                   );
@@ -421,85 +421,85 @@
                       [200, a[300] || 0],
                       [300, a.max || 0],
                     ];
-                    let r,
-                      l = 0;
+                    let l,
+                      r = 0;
                     for (let t = 0; t < e.length; ++t)
                       e[t][1] > 0 &&
-                        (null == r && (r = t), (l = t + 1), (n += e[t][1]));
+                        (null == l && (l = t), (r = t + 1), (n += e[t][1]));
                     if (n > 0) {
-                      (r = Math.max(0, r - 2)), (l = Math.min(e.length, l + 2));
+                      (l = Math.max(0, l - 2)), (r = Math.min(e.length, r + 2));
                       let a = [];
-                      for (let t = r; t < l; ++t) {
+                      for (let t = l; t < r; ++t) {
                         let s,
-                          [c, o] = e[t];
-                        t == r && 0 == o && (c = 0),
+                          [c, i] = e[t];
+                        t == l && 0 == i && (c = 0),
                           (s =
-                            t + 1 >= e.length || (t + 1 >= l && 0 == o)
+                            t + 1 >= e.length || (t + 1 >= r && 0 == i)
                               ? S(c) + "+"
                               : c + "-" + S(e[t + 1][0])),
-                          a.push(v(s, o, n));
+                          a.push(g(s, i, n));
                       }
                       t = s.createElement(
                         "table",
-                        { className: u.Histogram },
+                        { className: d.Histogram },
                         s.createElement("tbody", null, a),
                       );
                     }
                   }
-                  let r = null;
-                  const l = e.ping_pctile;
-                  if (l) {
+                  let l = null;
+                  const r = e.ping_pctile;
+                  if (r) {
                     const e = (e) => (null == e ? void 0 : S(e));
-                    r = y([
-                      [5, e(l[5])],
-                      [50, e(l[50])],
-                      [75, e(l[75])],
-                      [95, e(l[95])],
-                      [98, e(l[98])],
+                    l = y([
+                      [5, e(r[5])],
+                      [50, e(r[50])],
+                      [75, e(r[75])],
+                      [95, e(r[95])],
+                      [98, e(r[98])],
                     ]);
                   }
                   let c = null,
-                    o = 0;
-                  const i = e.jitter_hist;
-                  if (i) {
+                    i = 0;
+                  const o = e.jitter_hist;
+                  if (o) {
                     const e = [
-                      ["<1ms", i[0] || 0],
-                      ["1-2ms", i[1] || 0],
-                      ["2-5ms", i[2] || 0],
-                      ["5-10ms", i[5] || 0],
-                      ["10-20ms", i[10] || 0],
-                      ["20ms+", i[20] || 0],
+                      ["<1ms", o[0] || 0],
+                      ["1-2ms", o[1] || 0],
+                      ["2-5ms", o[2] || 0],
+                      ["5-10ms", o[5] || 0],
+                      ["10-20ms", o[10] || 0],
+                      ["20ms+", o[20] || 0],
                     ];
-                    for (let t = 0; t < e.length; ++t) o += e[t][1];
-                    c = N(e, o);
+                    for (let t = 0; t < e.length; ++t) i += e[t][1];
+                    c = C(e, i);
                   }
-                  if (!t && !r && !c) return null;
-                  const m = g(n) + " samples",
-                    d = g(o) + " samples";
+                  if (!t && !l && !c) return null;
+                  const m = h(n) + " samples",
+                    u = h(i) + " samples";
                   return s.createElement(
                     "div",
-                    { className: u.PingBreakdown },
+                    { className: d.PingBreakdown },
                     s.createElement(
                       "div",
-                      { className: u.PingSection },
+                      { className: d.PingSection },
                       s.createElement(
                         "div",
-                        { className: u.FlowSectionTitle },
+                        { className: d.FlowSectionTitle },
                         "Round Trip Latency",
                       ),
-                      s.createElement("div", { className: u.NumSamples }, m),
+                      s.createElement("div", { className: d.NumSamples }, m),
                       t,
-                      r,
+                      l,
                     ),
                     s.createElement(
                       "div",
-                      { className: u.JitterSection },
+                      { className: d.JitterSection },
                       s.createElement(
                         "div",
-                        { className: u.FlowSectionTitle },
+                        { className: d.FlowSectionTitle },
                         "Jitter",
                       ),
-                      s.createElement("div", { className: u.NumSamples }, d),
+                      s.createElement("div", { className: d.NumSamples }, u),
                       c,
                     ),
                   );
@@ -507,7 +507,7 @@
               )
             : s.createElement(
                 "div",
-                { className: u.NoFlowDataAvailable },
+                { className: d.NoFlowDataAvailable },
                 "(No data available)",
               ),
         );
@@ -516,7 +516,7 @@
         const t = e.sess,
           a = e.cxn;
         let n = null,
-          r = null;
+          l = null;
         if (t.client_front || t.router_front) {
           const e =
             "ded" == a.kind
@@ -524,7 +524,7 @@
               : "Front side statistics reported by player";
           n = s.createElement(
             "div",
-            { className: u.QualityFlowPairCtr },
+            { className: d.QualityFlowPairCtr },
             s.createElement(b, { title: e, flow: t.client_front }),
             s.createElement(b, {
               title: "Front side statistics reported by relay",
@@ -534,9 +534,9 @@
         }
         return (
           (t.router_back || t.gameserver_back) &&
-            (r = s.createElement(
+            (l = s.createElement(
               "div",
-              { className: u.QualityFlowPairCtr },
+              { className: d.QualityFlowPairCtr },
               s.createElement(b, {
                 title: "Back side statistics reported by relay",
                 flow: t.router_back,
@@ -548,10 +548,10 @@
             )),
           s.createElement(
             "div",
-            { className: u.RelaySessionCtr },
+            { className: d.RelaySessionCtr },
             s.createElement(
               "div",
-              { className: u.RelayInfoCtr },
+              { className: d.RelayInfoCtr },
               s.createElement(
                 _,
                 { label: "Relay address" },
@@ -565,17 +565,17 @@
               s.createElement(_, { label: "Active" }, (0, E.R2)(t.active_time)),
             ),
             n,
-            r,
+            l,
           )
         );
       }
-      function w(e) {
+      function P(e) {
         const t = e.cxn,
           a = t.client,
           n = t.peer,
-          r = t.client_e2e,
-          l = t.peer_e2e,
-          [c, i] = s.useState(!1),
+          l = t.client_e2e,
+          r = t.peer_e2e,
+          [c, o] = s.useState(!1),
           m = (function (e) {
             if (!e || !e.length) return null;
             let t = e[0];
@@ -587,14 +587,14 @@
             }
             return t;
           })(t.client_sessions);
-        let d = null,
+        let u = null,
           p = null,
+          h = null,
           g = null,
-          v = null,
-          N = null,
+          C = null,
           y = null,
           S = null,
-          w = [];
+          P = [];
         if (m) {
           n &&
             m.client.connection_id == n.connection_id &&
@@ -609,13 +609,13 @@
                 month: "short",
                 day: "numeric",
               }),
-              r = e.toLocaleString(a, {
+              l = e.toLocaleString(a, {
                 hour12: !1,
                 hour: "2-digit",
                 minute: "2-digit",
                 second: "2-digit",
               }),
-              l = t.toLocaleString(a, {
+              r = t.toLocaleString(a, {
                 hour12: !1,
                 hour: "2-digit",
                 minute: "2-digit",
@@ -623,10 +623,10 @@
                 timeZoneName: "short",
               }),
               c = (0, E.R2)(m.duration);
-            d = s.createElement(
+            u = s.createElement(
               "span",
-              { className: u.CxnTimeAndDuration },
-              s.createElement(_, { label: "Time" }, n, " ", r, "--", l),
+              { className: d.CxnTimeAndDuration },
+              s.createElement(_, { label: "Time" }, n, " ", l, "--", r),
               s.createElement(_, { label: "Duration" }, c),
             );
           }
@@ -634,7 +634,7 @@
             (m.close_code &&
               (p = s.createElement(
                 _,
-                { label: "Closed", className: u.CxnCloseInfo },
+                { label: "Closed", className: d.CxnCloseInfo },
                 m.close_type,
                 " ",
                 m.close_msg,
@@ -645,7 +645,7 @@
             m.experience_class)
           ) {
             const e = m.class_reason ? ` (${m.class_reason})` : "";
-            g = s.createElement(
+            h = s.createElement(
               _,
               { label: "Experience" },
               s.createElement(
@@ -663,33 +663,33 @@
             e.sort();
             let a = [];
             for (let n of e) a.push(s.createElement(_, { label: n }, t.app[n]));
-            v = s.createElement(
+            g = s.createElement(
               "div",
-              { className: u.AppFieldsCtr },
+              { className: d.AppFieldsCtr },
               s.createElement(
                 "span",
-                { className: u.AppFieldsTitle },
+                { className: d.AppFieldsTitle },
                 "Application fields:",
               ),
               a,
             );
           }
         }
-        if (r || l) {
-          const [e, a] = C(r),
-            [n, o] = C(l),
-            i = Math.min(e, n),
-            m = Math.max(a, o);
-          if (i <= m) {
+        if (l || r) {
+          const [e, a] = N(l),
+            [n, i] = N(r),
+            o = Math.min(e, n),
+            m = Math.max(a, i);
+          if (o <= m) {
             const e =
-              0.03 * i + 2 < m
-                ? `${i}--${m}ms`
-                : Math.floor((i + m) / 2 + 0.5) + "ms";
-            N = s.createElement(_, { label: "Ping" }, e);
+              0.03 * o + 2 < m
+                ? `${o}--${m}ms`
+                : Math.floor((o + m) / 2 + 0.5) + "ms";
+            C = s.createElement(_, { label: "Ping" }, e);
           }
-          const d = h(r),
-            p = h(l),
-            E = Math.min(d, p);
+          const u = v(l),
+            p = v(r),
+            E = Math.min(u, p);
           if (
             (E >= 0 &&
               E <= 100 &&
@@ -707,9 +707,9 @@
                   : "End-to-end statistics reported by peer";
             S = s.createElement(
               "div",
-              { className: u.QualityFlowPairCtr },
-              s.createElement(b, { title: e, flow: r }),
-              s.createElement(b, { title: a, flow: l }),
+              { className: d.QualityFlowPairCtr },
+              s.createElement(b, { title: e, flow: l }),
+              s.createElement(b, { title: a, flow: r }),
             );
           }
         }
@@ -724,70 +724,70 @@
             n = t.peer_sessions && t.peer_sessions.length > 0;
           if (a) {
             "p2p" == t.kind || n
-              ? w.push(
+              ? P.push(
                   s.createElement(
                     "div",
-                    { className: u.SessionsGroupHeader },
+                    { className: d.SessionsGroupHeader },
                     "Client relay sessions",
                   ),
                 )
-              : w.push(
+              : P.push(
                   s.createElement(
                     "div",
-                    { className: u.SessionsGroupHeader },
+                    { className: d.SessionsGroupHeader },
                     "Relay sessions",
                   ),
                 );
             for (const a of e(t.client_sessions))
-              w.push(
+              P.push(
                 s.createElement(k, { cxn: t, sess: a, host_role: "client" }),
               );
           }
           if (n) {
-            w.push(
+            P.push(
               s.createElement(
                 "div",
-                { className: u.SessionsGroupHeader },
+                { className: d.SessionsGroupHeader },
                 "Peer relay sessions",
               ),
             );
             for (const a of e(t.peer_sessions))
-              w.push(
+              P.push(
                 s.createElement(k, { cxn: t, sess: a, host_role: "peer" }),
               );
           }
         }
         return s.createElement(
           "div",
-          { className: u.ConnectionCtr, key: e.key },
+          { className: d.ConnectionCtr, key: e.key },
           s.createElement(
             "div",
-            { className: u.ConnectionHeader },
+            { className: d.ConnectionHeader },
             s.createElement(
               "div",
-              { className: u.CxnSummary },
-              d,
-              N,
+              { className: d.CxnSummary },
+              u,
+              C,
               y,
+              h,
               g,
-              v,
               p,
             ),
-            s.createElement(o.Yh, {
-              className: u.ExpandDetailsCheckbox,
+            s.createElement(i.Yh, {
+              className: d.ExpandDetailsCheckbox,
               label: "Details",
               checked: c,
-              onChange: i,
+              onChange: o,
             }),
           ),
           s.createElement(
             "div",
-            { className: u.CxnPeersCtr },
+            { className: d.CxnPeersCtr },
             s.createElement(f, { host: t.client, host_role: "client" }),
             s.createElement(f, { host: t.peer, host_role: "peer" }),
           ),
           S,
-          w,
+          P,
         );
       }
       function F(e) {
@@ -795,29 +795,29 @@
           a = e.appId,
           [n, E] = s.useState(!1),
           [_, f] = s.useState(""),
-          [g, C] = s.useState(void 0),
-          [h, v] = s.useState(""),
-          [N, y] = s.useState(""),
+          [h, N] = s.useState(void 0),
+          [v, g] = s.useState(""),
+          [C, y] = s.useState(""),
           [S, b] = s.useState(""),
           [k, F] = s.useState(0),
-          [P, x] = s.useState(""),
-          [R, I] = s.useState("");
+          [w, x] = s.useState(""),
+          [I, T] = s.useState("");
         s.useEffect(() => {
           let e = new URLSearchParams(t.location.search);
           const n = e.get("client_id") || "",
             s = e.get("peer_id") || "",
-            l = e.get("kind") || "",
+            r = e.get("kind") || "",
             c = e.get("app_name1") || "",
-            o = e.get("app_value1") || "";
-          if ((v(n), y(s), b(l), x(c), I(o), !e.toString() && 0 == k)) return;
+            i = e.get("app_value1") || "";
+          if ((g(n), y(s), b(r), x(c), T(i), !e.toString() && 0 == k)) return;
           E(!0), f(""), a > 0 && e.set("appid", "" + a);
-          const i =
-            d.TS.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
+          const o =
+            u.TS.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (async () => {
             try {
-              const e = await r().get(i);
+              const e = await l().get(o);
               1 == e?.data?.success
-                ? C(e.data.connections)
+                ? N(e.data.connections)
                 : (console.error(
                     "sdrsessionsearch: OnPerformSearch error code  " +
                       e?.data?.success +
@@ -836,120 +836,120 @@
             E(!1);
           })();
         }, [a, t.location, k]);
-        let T = null;
-        if (void 0 !== g) {
+        let D = null;
+        if (void 0 !== h) {
           let e = [];
-          for (const t of g) {
+          for (const t of h) {
             const a =
               (t.client.id || "") + "-" + (t.client.connection_id || "");
-            e.push(s.createElement(w, { key: a, cxn: t }));
+            e.push(s.createElement(P, { key: a, cxn: t }));
           }
-          T = s.createElement(
+          D = s.createElement(
             "div",
-            { className: u.SearchResultsCtr },
+            { className: d.SearchResultsCtr },
             s.createElement(
               "div",
-              { className: u.SearchResultsTitle },
+              { className: d.SearchResultsTitle },
               "Found ",
-              g.length,
+              h.length,
               " connection(s)",
             ),
             e,
           );
         }
-        const D = "ded" == S ? "Gameserver" : "Peer",
-          M = !1,
-          A = s.useId();
+        const R = "ded" == S ? "Gameserver" : "Peer",
+          A = !1,
+          G = s.useId();
         return s.createElement(
-          i.tH,
+          o.tH,
           null,
           s.createElement(
             "div",
-            { className: u.SDRConnectionsAppCtn },
+            { className: d.SDRConnectionsAppCtn },
             s.createElement(
               "div",
-              { className: u.SDRConnectionsAppTitle },
+              { className: d.SDRConnectionsAppTitle },
               s.createElement(s.Fragment, null, "SDR Connections - "),
               e.appId > 0
                 ? s.createElement(s.Fragment, null, "App ", e.appId)
                 : s.createElement(s.Fragment, null, "All apps"),
               s.createElement(s.Fragment, null, " [BETA feature]"),
             ),
-            _ && s.createElement("div", { className: u.ErrMsg }, _),
+            _ && s.createElement("div", { className: d.ErrMsg }, _),
             s.createElement(
               "div",
-              { className: u.SearchParamsCtr },
+              { className: d.SearchParamsCtr },
               s.createElement(
                 "div",
                 {
-                  className: (0, l.A)(
+                  className: (0, r.A)(
                     "DialogInputLabelGroup",
-                    u.ConnectionKindGroup,
+                    d.ConnectionKindGroup,
                   ),
                 },
                 s.createElement(
                   "div",
-                  { id: A, className: "DialogLabel" },
+                  { id: G, className: "DialogLabel" },
                   "Connection kind",
                 ),
                 s.createElement(
-                  o.zW,
-                  { labelId: A, value: S, onChange: (e) => b(e) },
-                  s.createElement(o.a, { value: "" }, "Any"),
-                  s.createElement(o.a, { value: "ded" }, "Dedicated server"),
-                  s.createElement(o.a, { value: "p2p" }, "Peer-to-Peer"),
+                  i.zW,
+                  { labelId: G, value: S, onChange: (e) => b(e) },
+                  s.createElement(i.a, { value: "" }, "Any"),
+                  s.createElement(i.a, { value: "ded" }, "Dedicated server"),
+                  s.createElement(i.a, { value: "p2p" }, "Peer-to-Peer"),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: u.AppFieldPair },
-                s.createElement(o.pd, {
+                { className: d.AppFieldPair },
+                s.createElement(i.pd, {
                   type: "text",
-                  value: h,
-                  disabled: M,
+                  value: v,
+                  disabled: A,
                   label: "Client",
-                  onChange: (e) => v(e.currentTarget.value),
+                  onChange: (e) => g(e.currentTarget.value),
                 }),
-                s.createElement(o.pd, {
+                s.createElement(i.pd, {
                   type: "text",
-                  value: N,
-                  disabled: M,
-                  label: D,
+                  value: C,
+                  disabled: A,
+                  label: R,
                   onChange: (e) => y(e.currentTarget.value),
                 }),
               ),
               s.createElement(
                 "div",
-                { className: u.AppFieldPair },
-                s.createElement(o.pd, {
+                { className: d.AppFieldPair },
+                s.createElement(i.pd, {
                   type: "text",
-                  value: P,
-                  disabled: M,
+                  value: w,
+                  disabled: A,
                   label: "App field name 1",
                   onChange: (e) => x(e.currentTarget.value),
                 }),
-                s.createElement(o.pd, {
+                s.createElement(i.pd, {
                   type: "text",
-                  value: R,
-                  disabled: M,
+                  value: I,
+                  disabled: A,
                   label: "App field value 1",
-                  onChange: (e) => I(e.currentTarget.value),
+                  onChange: (e) => T(e.currentTarget.value),
                 }),
               ),
               s.createElement(
                 "div",
-                { className: u.SubmitButtonCtn },
+                { className: d.SubmitButtonCtn },
                 s.createElement(
-                  o.jn,
+                  i.jn,
                   {
                     onClick: () => {
                       let e = new URLSearchParams();
-                      h && e.set("client_id", h),
-                        N && e.set("peer_id", N),
+                      v && e.set("client_id", v),
+                        C && e.set("peer_id", C),
                         S && e.set("kind", S),
-                        P &&
-                          R &&
-                          (e.set("app_name1", P), e.set("app_value1", R));
+                        w &&
+                          I &&
+                          (e.set("app_name1", w), e.set("app_value1", I));
                       let a = { ...t.location };
                       (a.search = e.toString()),
                         a != t.location && t.push(a),
@@ -962,85 +962,9 @@
               ),
             ),
             n && s.createElement(p.t, null),
-            T,
+            D,
           ),
         );
-      }
-    },
-    68797: (e, t, a) => {
-      "use strict";
-      a.d(t, { H: () => l });
-      var n = a(41735),
-        r = a.n(n),
-        s = a(56545);
-      function l(e) {
-        if (r().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (
-          void 0 !== e.response &&
-          e.response.data &&
-          "object" == typeof e.response.data
-        ) {
-          if ("msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.msg,
-              errorCode: e.response.data.success,
-            };
-          if ("err_msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.err_msg,
-              errorCode: e.response.data.success,
-            };
-          if ("message" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.message,
-              errorCode: e.response.data.success,
-            };
-          if ("success" in e.response.data)
-            return {
-              strErrorMsg: "error code: " + e.response.data.success,
-              errorCode: e.response.data.success,
-            };
-        } else if ("object" == typeof e.data) {
-          if ("msg" in e.data)
-            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
-          if ("err_msg" in e.data)
-            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.data)
-            return { strErrorMsg: e.data.message, errorCode: e.data.success };
-          if ("success" in e.data)
-            return {
-              strErrorMsg: "error code: " + e.data.success,
-              errorCode: e.data.success,
-            };
-        } else {
-          if (void 0 !== e.success && void 0 !== e.msg)
-            return { strErrorMsg: e.msg, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.message)
-            return { strErrorMsg: e.message, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.err_msg)
-            return { strErrorMsg: e.err_msg, errorCode: e.success };
-          if ("string" == typeof e && e.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(e),
-              console.groupEnd();
-          else {
-            if ("object" == typeof e && e instanceof s.w)
-              return {
-                strErrorMsg: "" + e.GetErrorMessage(),
-                errorCode: e.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
-          }
-        }
-        return "object" == typeof e && "status" in e
-          ? {
-              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
-            }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
   },

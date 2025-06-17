@@ -74,9 +74,9 @@
             bAddLinkToMemberList: A,
             bMinimalDisplay: f,
           } = e,
-          g = (0, l.FV)(t.clan_account_id),
-          [I] = (0, o.L2)();
-        if (I || !g)
+          I = (0, l.FV)(t.clan_account_id),
+          [g] = (0, o.L2)();
+        if (g || !I)
           return n.createElement(
             "div",
             { className: v.DevSummaryWidgetCtn },
@@ -86,15 +86,15 @@
               position: "center",
             }),
           );
-        const y = t.type,
-          w =
+        const w = t.type,
+          y =
             "developer" == t.type
               ? (0, m.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, m.we)("#CreatorHome_PublishedBy")
                 : (0, m.we)("#CreatorHome_InFranchise"),
-          P = g.GetCreatorHomeURL(y),
-          N = g.GetNumFollowers();
+          P = I.GetCreatorHomeURL(w),
+          N = I.GetNumFollowers();
         return n.createElement(
           E.tH,
           null,
@@ -111,14 +111,14 @@
                 ),
                 "flow-children": "row",
               },
-              !s && n.createElement("span", { className: v.Title }, w),
+              !s && n.createElement("span", { className: v.Title }, y),
               n.createElement(
                 "div",
                 { className: v.DevSummaryWidgetCtn },
                 n.createElement("div", {
                   className: v.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${g.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${I.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 n.createElement(
@@ -136,7 +136,7 @@
                       },
                       n.createElement("img", {
                         className: (0, i.A)(v.Avatar, "Avatar_Trgt"),
-                        src: g.GetAvatarURLFullSize(),
+                        src: I.GetAvatarURLFullSize(),
                       }),
                     ),
                     n.createElement(
@@ -158,7 +158,7 @@
                         n.createElement(
                           c.m,
                           { href: (0, u.k2)(P), className: v.CreatorNameName },
-                          g.GetName(),
+                          I.GetName(),
                         ),
                         Boolean(a) &&
                           n.createElement(
@@ -169,7 +169,7 @@
                                 v.CreatorTagline,
                               ),
                             },
-                            g.GetTagLine(),
+                            I.GetTagLine(),
                           ),
                       ),
                       n.createElement(
@@ -207,7 +207,7 @@
                         href:
                           d.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          g.GetClanSteamID().ConvertTo64BitString() +
+                          I.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: v.MembersListLink,
@@ -265,7 +265,7 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => F, W: () => x });
+      a.d(t, { J: () => G, W: () => x });
       var n = a(90626),
         r = a(57876),
         l = a(45699),
@@ -287,16 +287,16 @@
         D = a(47235),
         A = a(37076),
         f = a(54492),
-        g = a(60014),
-        I = a(52038),
-        y = a(61859),
-        w = a(61336),
+        I = a(60014),
+        g = a(52038),
+        w = a(61859),
+        y = a(61336),
         P = a(78327),
         N = a(91291),
         T = a.n(N),
         H = a(99956),
-        G = a(49411);
-      const F = "capsule_index_";
+        F = a(49411);
+      const G = "capsule_index_";
       function x(e) {
         const {
             capsule: t,
@@ -324,9 +324,9 @@
         return n.createElement(
           o.Z,
           {
-            className: (0, I.A)({
+            className: (0, g.A)({
               [b().OuterCapsuleContainer]: !0,
-              [F + c]: 0 == c,
+              [G + c]: 0 == c,
             }),
             navEntryPreferPosition: s.iU.PREFERRED_CHILD,
             navKey: i,
@@ -375,7 +375,7 @@
             childAppType: o,
             bPreferDemoStorePage: s,
           } = e,
-          c = (0, g.n9)(),
+          c = (0, I.n9)(),
           i = (0, P.Qn)();
         return n.createElement(
           l.ml,
@@ -386,7 +386,7 @@
             n.createElement(
               "div",
               { className: b().ParentType },
-              (0, y.we)(
+              (0, w.we)(
                 11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
@@ -419,17 +419,11 @@
             bPreferDemoStorePage: S,
           } = e,
           [_] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          D = (0, g.n9)(),
-          A = (0, G.w)(),
-          y = (0, n.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (
-          (console.log(_.GetName()),
-          console.log(_.GetStoreItemType()),
-          console.dir(y),
-          !_)
-        )
-          return null;
-        const P = (0, w.NT)(
+          D = (0, I.n9)(),
+          A = (0, F.w)(),
+          w = (0, n.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+        if (!_) return null;
+        const P = (0, y.NT)(
           (0, c.It)(`${_.GetStorePageURL(S)}${o ? `?${o}` : ""}`, D, A),
         );
         let N;
@@ -437,7 +431,7 @@
           (N = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const F = Boolean(C);
+        const G = Boolean(C);
         return n.createElement(
           n.Fragment,
           null,
@@ -446,22 +440,22 @@
             { className: b().CapsuleFocusCtn },
             n.createElement(
               "div",
-              { className: (0, I.A)({ [T().TwoWidthCtn]: F }) },
+              { className: (0, g.A)({ [T().TwoWidthCtn]: G }) },
               n.createElement(
                 l.Ii,
                 {
                   href: N ? null : P,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, I.A)({ [T().TwoWidthCapsule]: F }),
+                  className: (0, g.A)({ [T().TwoWidthCapsule]: G }),
                   preferredFocus: u,
                   onClick: N,
                 },
-                n.createElement(h.V, { appids: y, hide_status_banners: a }),
+                n.createElement(h.V, { appids: w, hide_status_banners: a }),
                 n.createElement(E.aU, { imageType: i, info: t }),
                 n.createElement(f.J, { storeItem: _ }),
                 Boolean(d) && n.createElement(v.m, { appInfo: t }),
               ),
-              F &&
+              G &&
                 n.createElement(
                   "div",
                   { className: T().TwoWidthSideInfo },

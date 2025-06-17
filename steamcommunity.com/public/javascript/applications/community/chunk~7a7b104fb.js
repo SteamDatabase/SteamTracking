@@ -853,10 +853,10 @@
               : 0,
           [M, y] = a.useState(_),
           w = (0, B.L$)(
-            `${(0, o.mJ)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${o.z.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           p = (0, B.L$)(
-            `${(0, o.mJ)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${o.z.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           h = (0, l.w)(i.giveaway_gid);
         let S =

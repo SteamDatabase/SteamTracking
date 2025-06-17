@@ -75,7 +75,7 @@
         p = n(56011),
         h = n(14947),
         S = n(85044),
-        v = n(44332);
+        v = n(81393);
       n(68797);
       class f {
         constructor() {
@@ -84,7 +84,7 @@
             (0, h.Gn)(this);
         }
         async LoadProfiles(e, t) {
-          (0, v.w)(
+          (0, v.wT)(
             e.length <= 500,
             "Check LoadProfiles, requesting too many steam IDs",
           );

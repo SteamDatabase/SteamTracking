@@ -2171,7 +2171,6 @@
             fnUploadComplete: __webpack_require__,
             strOverrideDragAndDropText: _,
             forceResolution: _,
-            localizedPrimaryImage: _,
             elAdditonalButtons: _,
             rgRealmList: _,
           } = _,
@@ -2188,7 +2187,7 @@
                   { language: _ } = (0, _._)(_?.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(_, _, _)),
+                  (_ = await _.AddImageForLanguage(_, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -2215,7 +2214,7 @@
                       _.createElement(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
-                          _.strErrorMsg,
+                          _.strErrorMsg ?? "",
                         ),
                       }),
                       window,
@@ -2224,7 +2223,7 @@
               }
               return _;
             },
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -2264,10 +2263,9 @@
               },
               _.map((_) =>
                 _.createElement(_, {
-                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
                   asset: _,
                   forceResolution: _,
-                  forceFileType: _ && _.file_type,
                   fnOnRemove: () => _.DeleteUploadImage(_),
                   languageRealms: _,
                 }),
@@ -2277,7 +2275,7 @@
           _.createElement(_, {
             imageUploader: _,
             fnOnUploadImageRequested: async () => {
-              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              const _ = await _.UploadAllImages(_);
               __webpack_require__?.(_);
             },
           }),
@@ -2356,9 +2354,9 @@
           (_.needsCrop
             ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
             : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
-        let _ = null;
+        let _;
         const _ = _.GetCurrentImageOption();
-        _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
+        _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data);
         _ || (_ = _?.[0]?.data);
         return _.createElement(
           "div",
@@ -2384,7 +2382,8 @@
               onChange: (_) => (_.language = _.data),
               disabled: !_,
             }),
-          Boolean(_?.length > 1) &&
+          _ &&
+            _?.length > 1 &&
             _.createElement(_._, {
               label: _.GetImageOptionLabel(),
               rgOptions: _,

@@ -4094,7 +4094,7 @@
         r.p +
         "images/applications/store/RewardsSeason1Hero.png?v=valveisgoodatcaching";
       var J = r(43527),
-        $ = r(44332),
+        $ = r(81393),
         ee = r(51006),
         te = r(30894),
         re = r(14771);
@@ -4888,7 +4888,7 @@
           );
           return (
             t || this.GetCommunityItemInventory(e.appid),
-            (0, $.w)(
+            (0, $.wT)(
               t.has(e.community_item_type),
               `Missing owned item ${e.community_item_type}`,
             ),
@@ -8783,7 +8783,7 @@
         })(s.Component);
       (B.propTypes = {}), (B.defaultProps = { mode: E });
       const D = B;
-      var A = r(44332),
+      var A = r(81393),
         R = r(96259),
         T = r(12906),
         L = r(43527),
@@ -9928,7 +9928,7 @@
                 void this.CloseModal()
               );
             default:
-              return void (0, A.w)(
+              return void (0, A.wT)(
                 !1,
                 `Missing equip handler for item class ${this.props.definition.rewardDefinition.community_item_class}`,
               );
@@ -10155,7 +10155,7 @@
         Ue = (e) => {
           if (1 == e.type)
             return (
-              (0, A.w)(
+              (0, A.wT)(
                 e.community_item_data,
                 `Missing community item data for virtual item ${e.defid}`,
               ),

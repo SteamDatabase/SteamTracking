@@ -7440,7 +7440,7 @@
             (e, t) =>
               e.ResizeObserver
                 ? new e.ResizeObserver(t)
-                : ((0, Vt.w)(!1, "ResizeObserver is not available"),
+                : ((0, Vt.wT)(!1, "ResizeObserver is not available"),
                   {
                     observe: () => {},
                     unobserve: () => {},

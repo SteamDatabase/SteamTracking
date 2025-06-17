@@ -8,7 +8,7 @@
       n.d(t, { IU: () => p, by: () => c, sc: () => r });
       var i = n(78327),
         s = n(85044),
-        o = n(44332);
+        o = n(81393);
       const r = 0,
         a = "061818254b2c99ac49e6626adb128ed1282a392f",
         p = 120;
@@ -86,7 +86,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, o.w)(
+            (0, o.wT)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -206,7 +206,7 @@
         return e;
       }
       var d = n(37403),
-        h = n(44332),
+        h = n(81393),
         m = n(6144);
       class f {
         m_CMInterface;
@@ -236,7 +236,7 @@
         RegisterCallbackOnLoad(e) {
           if (!this.BHavePendingAppInfoRequests())
             return (
-              (0, h.w)(
+              (0, h.wT)(
                 !1,
                 "Registering for callback on appinfo load, but nothing queued",
               ),
@@ -249,7 +249,7 @@
         }
         GetAppInfo(e) {
           if (
-            ((0, h.w)(
+            ((0, h.wT)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init",
             ),
@@ -314,7 +314,7 @@
           let t = [];
           for (let n of e.Body().apps()) {
             let e = this.m_mapAppInfo.get(n.appid());
-            (0, h.w)(
+            (0, h.wT)(
               e,
               `Got AppInfo response for unrequested AppID: ${n.appid()}`,
             ),
@@ -367,7 +367,7 @@
               if (!n) return e;
               let i = this.m_mapAppInfo.get(e);
               return (
-                (0, h.w)(
+                (0, h.wT)(
                   i,
                   "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                 ),

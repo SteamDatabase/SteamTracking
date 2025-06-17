@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_summer2025 {
-	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/spring2025/front_page_title.webp') repeat center top, #141e24;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2025/front_page_tile.webp?v=2') repeat center top, #141e24;
     font-family: "Motiva Sans", Sans-serif;
 }
 
@@ -620,7 +620,7 @@ body.v6.sale_summer2025 .sale_capsule_carousel .carousel_items > * {
 .home_pagecontent_ctn.featured_special_deals .ctn_background {
 	position: relative;
 	border-radius: 3px;
-	background: linear-gradient(161deg, #285278e0 8.84%, #326957d4 86.04%);
+	background: linear-gradient(161deg, #3f2343 8.84%, #8f5363 86.04%);
 }
 
 @media screen and (max-width: 500px )
@@ -973,11 +973,11 @@ body.v6 .discount_block {}
 }
 
 .content_hub_capsule_ctn .gradient {
-	background: radial-gradient(115% 120% at 0% 0%, transparent, #e6564cc7 80%, #e6564c)
+	background: radial-gradient(115% 120% at 0% 0%, transparent, #e6824cc7 80%, #ff5a2d);
 }
 
 .content_hub_capsule_ctn .label {
-	color: #78478d;
+	color: #8e3303;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -3491,6 +3491,11 @@ img.franchise_placeholder {
 
 .home_ctn {
 	/* background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale_bottomtile_bottom.webp?v=2') repeat-y center;  */
+}
+
+.home_tabs_row_ctn {
+	display: flex;
+	width: unset;
 }
 
 /* Tablet/SteamDeck Overrides */

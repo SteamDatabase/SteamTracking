@@ -132,6 +132,7 @@ ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
 ${CLAN_CDN_ASSET_URL}images/clan/${}/${}
+${CLAN_CDN_ASSET_URL}locimages/
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
@@ -1054,11 +1055,11 @@ ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
-${PARTNER_BASE_URL}apps/landing/${productid}
 ${PARTNER_BASE_URL}apps/landing/${store_item_id}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
+${PARTNER_BASE_URL}apps/setassetpropertyschema/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}appsearch/suggestapps
 ${PARTNER_BASE_URL}appsupport/ajaxgetassets/${}
@@ -1210,7 +1211,7 @@ ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
-${PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagediscountsummary
+${PARTNER_BASE_URL}promotion/analysis/ajaxgetpackagesdiscountsbytimerange
 ${PARTNER_BASE_URL}promotion/analysis/curated
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
@@ -1378,6 +1379,7 @@ ${STORE_BASE_URL}${newshubUrl}
 ${STORE_BASE_URL}${store_url_path}
 ${STORE_BASE_URL}${store_url_path}?snr=${}
 ${STORE_BASE_URL}${strURLPath}
+${STORE_BASE_URL}${type}
 ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
@@ -1542,7 +1544,6 @@ ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
-${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore?dq=widget
@@ -1590,8 +1591,9 @@ ${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
+${STORE_BASE_URL}meetsteam/${GID}
+${STORE_BASE_URL}meetsteam/${GID}/${}
 ${STORE_BASE_URL}meetsteam/${}
-${STORE_BASE_URL}meetsteam/${}/${}
 ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
 ${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
 ${STORE_BASE_URL}mobile
@@ -2025,7 +2027,6 @@ ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
 ${g_szBaseURL}/apps/setdontrecordcoplay/${appid}
 ${g_szBaseURL}/apps/setdrmguid/${appid}
-${g_szBaseURL}/apps/seteconomyinfo/${appid}
 ${g_szBaseURL}/apps/setinstallscriptoverride/${appid}
 ${g_szBaseURL}/apps/setmktglocked/${appid}
 ${g_szBaseURL}/apps/setofficialgs/${appid}

@@ -364,7 +364,7 @@
             (e, t) =>
               e.ResizeObserver
                 ? new e.ResizeObserver(t)
-                : ((0, r.w)(!1, "ResizeObserver is not available"),
+                : ((0, r.wT)(!1, "ResizeObserver is not available"),
                   {
                     observe: () => {},
                     unobserve: () => {},
@@ -403,7 +403,7 @@
             a = "";
             break;
           default:
-            (0, r.z)(t, `Invalid size: ${t}`);
+            (0, r.z_)(t, `Invalid size: ${t}`);
         }
         return (
           n.TS.STORE_ITEM_BASE_URL + e.filename.replace(/\.[^.*]$/, `${a}$&`)
@@ -5650,7 +5650,7 @@
               n.createElement(
                 _n,
                 null,
-                c.Hxx({}),
+                n.createElement(c.Hxx, null),
                 n.createElement(
                   "span",
                   { className: ye.FamilyManagementTitle },
@@ -5659,7 +5659,7 @@
                 n.createElement(
                   r.Ii,
                   { className: ye.HelpLink, href: d },
-                  c._VW(),
+                  n.createElement(c._VW, null),
                 ),
               ),
               o.isLoading &&
@@ -5812,7 +5812,7 @@
                 n.createElement(
                   "div",
                   { className: ye.OnboardSplashButtonGraphic },
-                  c.dsc({}),
+                  n.createElement(c.dsc, null),
                 ),
                 r > 0 &&
                   n.createElement(
@@ -5837,7 +5837,7 @@
                 n.createElement(
                   "div",
                   { className: ye.OnboardSplashButtonGraphic },
-                  c.LDq({}),
+                  n.createElement(c.LDq, null),
                 ),
               ),
             ),

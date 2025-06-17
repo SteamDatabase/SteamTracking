@@ -739,8 +739,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const _ = _.photo ? (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)) : null,
-          _ = _.photo ? ("string" == typeof _ ? _ : _[1]) : null,
+        const _ = (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)),
+          _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
           _ = Boolean(_.title),
           _ = Boolean(_.company);
         return _.createElement(
@@ -864,75 +864,73 @@
           );
         }
       }
-      (0, _._)([_._], _.prototype, "ClosePopup", null),
-        (0, _._)([_._], _.prototype, "OnScroll", null),
-        (0, _._)([_._], _.prototype, "OnHover", null),
-        (0, _._)([_._], _.prototype, "OnLeave", null);
-      class _ extends _.Component {
-        render() {
-          const _ = this.props.photo
-              ? (0, _._)(this.props.photo, (0, _._)(_._.LANGUAGE))
-              : null,
-            _ =
-              this.props.photo && !this.props.hidePhotoInCompactView
-                ? "string" == typeof _
-                  ? _
-                  : _[1]
-                : null,
-            _ = Boolean(this.props.title),
-            _ = Boolean(this.props.company);
-          return _.createElement(
-            "div",
+      function _(_) {
+        const {
+            photo: _,
+            name: __webpack_require__,
+            title: _,
+            company: _,
+            hidePhotoInCompactView: _,
+          } = _,
+          _ = (0, _._)(_, (0, _._)(_._.LANGUAGE)),
+          _ = _ && !_ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_),
+          _ = Boolean(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerOuter,
+          },
+          _.createElement(
+            _,
             {
-              className: _().SpeakerOuter,
+              ..._,
             },
             _.createElement(
-              _,
+              "div",
               {
-                ...this.props,
+                className: _().Speaker,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().Speaker,
+                  className: _().SpeakerInfoOuter,
                 },
+                !!_ &&
+                  _.createElement("img", {
+                    src: _,
+                  }),
                 _.createElement(
                   "div",
                   {
-                    className: _().SpeakerInfoOuter,
+                    className: _().SpeakerInfoInner,
                   },
-                  !!_ &&
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SpeakerInfoInner,
-                    },
-                    _.createElement("div", null, this.props.name),
-                    (_ || _) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        _ &&
-                          _.createElement(
-                            "span",
-                            {
-                              className: _().SpeakerTitle,
-                            },
-                            this.props.title,
-                          ),
-                        _ && _ && _.createElement("span", null, ", "),
-                        _ && _.createElement("span", null, this.props.company),
-                      ),
-                  ),
+                  _.createElement("div", null, __webpack_require__),
+                  (_ || _) &&
+                    _.createElement(
+                      "div",
+                      null,
+                      _ &&
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().SpeakerTitle,
+                          },
+                          _,
+                        ),
+                      _ && _ && _.createElement("span", null, ", "),
+                      _ && _.createElement("span", null, _),
+                    ),
                 ),
               ),
             ),
-          );
-        }
+          ),
+        );
       }
+      (0, _._)([_._], _.prototype, "ClosePopup", null),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "OnHover", null),
+        (0, _._)([_._], _.prototype, "OnLeave", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

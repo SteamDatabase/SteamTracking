@@ -523,6 +523,8 @@
         CurrentPrice: "_3UShm-Rtpl6xK1WV_k7nfD",
         Accept_StartDate: "_1HZxHzVccnQkP1rChOXyfK",
         CreateSalePageFromInviteDesc: "_3SGJTQ6Je87pvkYSy0_enZ",
+        MajorSaleWarning: "_1i687oFOB1JNlGyX2AU4w8",
+        MajorSaleSeeDocumentation: "_1X8rQQj4lft1yyNkDlym3L",
       };
     },
     chunkid: (module) => {
@@ -901,8 +903,12 @@
         Ready: "_1PRvxPXhYGbG_M2kPhOrNJ",
         Approved: "V_M3QNQ4BoCPhcptm3CqU",
         Compact: "_2cprKboJkehwZ_t7Jn2Cst",
+        AppHeader: "YUj0JSEDj5i5izeOvyjwx",
+        ProductRow: "_2jowge4h-e8iPNrlU1Nqbk",
         Row: "_2KUhB_BLktT3FQGqB_y54o",
         Primary: "_2tQk8n1YH5C2v8367dhlfX",
+        Secondary: "VgE7f2nje_NYid1NjFlnF",
+        FlexRow: "_2ClYxZttcWKx0GBIYX3EEP",
         HeaderRow: "MGJxkhOwzywm5cqaty3DR",
         Col: "_2x28WNTnFLN7p5-W6dUFFq",
         ItemName: "K3sWBC1TVzqQqY6olyu0f",
@@ -913,6 +919,8 @@
         Visibility: "wvE-jG0F6Bz8vnGxKpQQY",
         Revenue: "_2oBY-a9UYtSwgEOESAqMZZ",
         Small: "_18G4aX1ScPJrnNOPWKuI6y",
+        Indented: "_1cZpRHQrKwjBKQbnfQvJka",
+        AppGroupContainer: "_1h_liRAveMPJfzuAIcZaYM",
         CountryList: "_17dzIUq2f_CSOR1Eug7HUe",
         OwnerLimit: "LDwRnmtVW5slGcNhaiHPs",
         CapsulePlatform: "_2OJsE_nWOGFfZwO3NXSNsz",
@@ -926,6 +934,7 @@
         MissedRelease: "_1f2UQJ2ioT_SYgxhzez2G4",
         Unset: "mDhm0oiq8R71Z0WQF1mRd",
         NoResults: "_1bOoImFN1WJOMod4hTHJa3",
+        MinMaxButtonContainer: "_2N9vw9S3KKKPf8hJXJsFpy",
       };
     },
     chunkid: (module) => {
@@ -20022,6 +20031,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bShowOnlySummary: _ } = _,
@@ -20047,82 +20059,114 @@
             ],
             [_.data?.stats],
           );
-        return _.isLoading
-          ? _.createElement(_._, null)
-          : _.data?.stats?.length
-            ? _.createElement(
-                _._,
+        if (_.isLoading) return _.createElement(_._, null);
+        if (!_.data?.stats?.length)
+          return _.createElement("div", null, "No data to show");
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_ ? "" : _().AdminPageCtn, _().WidePageCtn),
+            },
+            !_ &&
+              _.createElement(
+                _.Fragment,
                 null,
                 _.createElement(
                   "div",
                   {
-                    className: (0, _._)(
-                      _ ? "" : _().AdminPageCtn,
-                      _().WidePageCtn,
-                    ),
+                    className: _().PageTitle,
                   },
-                  !_ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().PageTitle,
-                        },
-                        "OptIn Admin Demo Stats Analysis: ",
-                        __webpack_require__.GetName(),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().PageSubTitle,
-                        },
-                        "These are stats focussed on demos plays and wishlists that occurred during the fest, calculated after each days completion. The data is computed once per day of the fest, after the day is completed; in other words, the first report available will be 1 day after the starts of the event. This is on the promotion server task 'SteamFestDemoPlayerRollup'.",
-                      ),
-                      _.createElement(
-                        "div",
-                        null,
-                        _.createElement(
-                          _._,
-                          null,
-                          _.createElement(
-                            _._,
-                            {
-                              _: _.OptInRoutes.OptinAdminDashboard(),
-                            },
-                            "Dashboard",
-                          ),
-                        ),
-                      ),
-                      _.createElement("br", null),
-                      _.createElement("hr", null),
-                      _.createElement(
-                        "div",
-                        null,
-                        "Stats Last Collected: ",
-                        (0, _._)(_),
-                        " @ ",
-                        (0, _._)(_),
-                      ),
-                    ),
+                  "OptIn Admin Demo Stats Analysis: ",
+                  __webpack_require__.GetName(),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().PageSubTitle,
+                  },
+                  "These are stats focussed on demos plays and wishlists that occurred during the fest, calculated after each days completion. The data is computed once per day of the fest, after the day is completed; in other words, the first report available will be 1 day after the starts of the event. This is on the promotion server task 'SteamFestDemoPlayerRollup'.",
+                ),
+                _.createElement(
+                  "div",
+                  null,
                   _.createElement(
-                    "div",
+                    _._,
                     null,
-                    _.createElement(_, {
-                      rgDemo: _.data.stats,
-                      rtLatestEndDate: _,
-                      bShowOnlySummary: _,
-                    }),
-                    !_ &&
-                      _.createElement(_, {
-                        rgDemo: _.data.stats,
-                        rtLatestEndDate: _,
-                      }),
+                    _.createElement(
+                      _._,
+                      {
+                        _: _.OptInRoutes.OptinAdminDashboard(),
+                      },
+                      "Dashboard",
+                    ),
                   ),
                 ),
-              )
-            : _.createElement("div", null, "No data to show");
+                _.createElement("br", null),
+                _.createElement("hr", null),
+                _.createElement(
+                  "div",
+                  null,
+                  "Stats Last Collected: ",
+                  (0, _._)(_),
+                  " @ ",
+                  (0, _._)(_),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: function () {
+                      const _ = [];
+                      _.push([
+                        "appid",
+                        "app name",
+                        "demo appid",
+                        "demo name",
+                        "total demo players",
+                        "total wishlists",
+                        "total demo players who also wishlisted",
+                      ]);
+                      for (const _ of _.data.stats) {
+                        const _ = _._.Get().GetApp(_.appid),
+                          _ = _._.Get().GetApp(_.demo_appid);
+                        _.push([
+                          "" + _.appid,
+                          __webpack_require__?.GetName() || "unknown",
+                          "" + _.demo_appid,
+                          _?.GetName() || "unknown",
+                          "" + _.demo_player_count,
+                          "" + _.wishlist_count,
+                          "" + _.player_wishlist_count,
+                        ]);
+                      }
+                      _._.WriteCSVToFile(_, "fest_demo_stats.csv");
+                    },
+                  },
+                  "Download CSV",
+                  _.createElement(_._, {
+                    tooltip:
+                      "Wait for the entire page to complete loading include the capsule art before download the csv",
+                  }),
+                ),
+              ),
+            _.createElement(
+              "div",
+              null,
+              _.createElement(_, {
+                rgDemo: _.data.stats,
+                rtLatestEndDate: _,
+                bShowOnlySummary: _,
+              }),
+              !_ &&
+                _.createElement(_, {
+                  rgDemo: _.data.stats,
+                  rtLatestEndDate: _,
+                }),
+            ),
+          ),
+        );
       }
       function _(_) {
         const {
@@ -30300,7 +30344,8 @@
                           "_" +
                           _),
                           console.log("fetching indirectly ", _),
-                          await _(_, _, _, _, _);
+                          await _(_, _, _, _, _),
+                          _ >= 10 && (await (0, _._)(200));
                       }
                       console.log(`Finished processing appid ${_.GetName()}`);
                     }
@@ -32789,7 +32834,7 @@
                     {
                       className: _().SectionBody,
                     },
-                    "Congratulations! As one of the most popular demos in this edition of Next Fest, your game will highlighted as part of a wrap-up announcement and landing page.",
+                    "Congratulations! As one of the most popular demos in this edition of Next Fest, your game will be highlighted as part of a wrap-up announcement and landing page.",
                   ),
                   _.createElement(
                     "div",
@@ -33129,7 +33174,6 @@
           )
         );
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { emailDef: _ } = _,
           _ = (0, _._)(() => [_?.GetEmailImageCount()]);
@@ -45062,6 +45106,87 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(() => _(_)),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = _.target.files?.[0];
+              if (!_) return;
+              const _ = new FileReader();
+              (_.onload = (_) => {
+                try {
+                  const _ = _.target?.result,
+                    _ = JSON.parse(_);
+                  Object.entries(_).forEach(([_, _]) => {
+                    if ("string" == typeof _) {
+                      const _ = (0, _._)(_.toLowerCase());
+                      _ >= 0 && _ < 31
+                        ? __webpack_require__(_, _)
+                        : console.error("Unknown language");
+                    }
+                  });
+                } catch (_) {
+                  console.error("Failed to read or parse JSON:", _);
+                }
+              }),
+                _.readAsText(_);
+            },
+            [__webpack_require__],
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            fnLangHasData: (_) => _(_)?.trim().length > 0,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().Ctn,
+            },
+            _.createElement(_._, null),
+            _.createElement(
+              _._,
+              null,
+              "Or import json ",
+              _.createElement(_._, {
+                tooltip:
+                  'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
+              }),
+            ),
+            _.createElement("input", {
+              type: "file",
+              accept: ".json",
+              onChange: _,
+            }),
+          ),
+          _.createElement(_._, {
+            type: "text",
+            value: _,
+            onChange: (_) => __webpack_require__(_, _.currentTarget.value),
+            label: "Alternative Text",
+            tooltip:
+              "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+          }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -48738,7 +48863,25 @@
             nMaxDiscountDays: _,
             nextDiscount: _,
           } = _,
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          { rgMajorSaleDiscountEvents: _, eResult: _ } = (0, _._)(!1),
+          [_, _, _] = _.useMemo(() => {
+            let _;
+            _?.length > 0 &&
+              (_ = _.find(
+                (_) => _.start_date > _ && _.start_date - _ < _._.PerDay * _._,
+              ));
+            let _ = -1,
+              _ = _._;
+            return (
+              _ &&
+                ((_ = Math.floor(
+                  (_.start_date - _ + _._.PerHour) / _._.PerDay,
+                )),
+                (_ = Math.min(_, _))),
+              [_, _, _]
+            );
+          }, [_, _]);
         return _
           ? _.createElement(_, {
               rtDay: _,
@@ -48746,6 +48889,9 @@
               invite: _,
               nMaxDiscountDays: _,
               nextDiscount: _,
+              nMinDiscountDays: _,
+              nextMajorSale: _,
+              nDaysUntilMajorSale: _,
             })
           : _.createElement(_._, {
               strDescription: (0, _._)("#DailyDeals_NoInvitation"),
@@ -48817,9 +48963,12 @@
             invite: _,
             nMaxDiscountDays: _,
             nextDiscount: _,
+            nMinDiscountDays: _,
+            nextMajorSale: _,
+            nDaysUntilMajorSale: _,
           } = _,
           [_, _] = _.useState(new Array()),
-          [_, _] = _.useState(_._),
+          [_, _] = _.useState(_),
           [_, _] = _.useState({
             appid: _.appid,
             bundleid: _.bundleid,
@@ -48827,16 +48976,12 @@
           }),
           [_, _] = _.useState(void 0),
           _ = (0, _._)(_, _.primary_partnerid),
-          _ =
-            ((0, _._)(),
-            _.useMemo(() => {
-              const _ = _?.partner_jsondata
-                ? JSON.parse(_?.partner_jsondata)
-                : void 0;
-              return _ && _.require_sale_page
-                ? _.require_sale_page_type || 1
-                : 0;
-            }, [_?.partner_jsondata, _.require_sale_page_type])),
+          _ = _.useMemo(() => {
+            const _ = _?.partner_jsondata
+              ? JSON.parse(_?.partner_jsondata)
+              : void 0;
+            return _ && _.require_sale_page ? _.require_sale_page_type || 1 : 0;
+          }, [_?.partner_jsondata, _.require_sale_page_type]),
           _ = {
             appid: _.appid,
             bundleid: _.bundleid,
@@ -48907,7 +49052,7 @@
                 `${_._.PARTNER_BASE_URL}promotion${_.PromotionRoutes.DailyDealDashboard()}`,
               );
           }, [__webpack_require__]),
-          _ = _ < _._ || _ > _,
+          _ = _ < _ || _ > _,
           _ = _ && Boolean(_) && Boolean(_),
           _ = "America/Los_Angeles",
           _ = {
@@ -48968,6 +49113,9 @@
                   eStoreItemType: _,
                   nMaxDiscountDays: _,
                   nDaysUntilNextDiscount: _,
+                  nMinDiscountDays: _,
+                  nearbyMajorSale: _,
+                  nDaysUntilMajorSale: _,
                 }),
                 Boolean(_.appid) &&
                   _.createElement(_._, {
@@ -49017,6 +49165,34 @@
         );
       }
       function _(_) {
+        const { nearbyMajorSale: _, nDaysUntilMajorSale: __webpack_require__ } =
+            _,
+          _ = `${_._.PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales`;
+        return _.createElement(
+          "div",
+          {
+            className: _.MajorSaleWarning,
+          },
+          (0, _._)(
+            "#DailyDeals_New_DailyDeal_MajorSaleNearby",
+            __webpack_require__,
+            _.name,
+            (0, _._)(_.start_date),
+          ),
+          _.createElement(
+            "a",
+            {
+              className: _.MajorSaleSeeDocumentation,
+              href: _,
+              target: "_blank",
+            },
+            (0, _._)(
+              "#DailyDeals_New_DailyDeal_MajorSaleNearby_SeeDocumentation",
+            ),
+          ),
+        );
+      }
+      function _(_) {
         const {
             nDiscountDays: _,
             fnSetDiscountDays: __webpack_require__,
@@ -49026,6 +49202,9 @@
             eStoreItemType: _,
             nMaxDiscountDays: _,
             nDaysUntilNextDiscount: _,
+            nMinDiscountDays: _,
+            nearbyMajorSale: _,
+            nDaysUntilMajorSale: _,
           } = _,
           [_] = (0, _._)(_, _, _._);
         if (!_)
@@ -49044,7 +49223,13 @@
                   },
                   (0, _._)("#DailyDeals_New_DailiyDeal_DurationLimited", _, _),
                 )
-              : null;
+              : null,
+          _ = _
+            ? _.createElement(_, {
+                nDaysUntilMajorSale: _,
+                nearbyMajorSale: _,
+              })
+            : null;
         return _.createElement(
           "div",
           null,
@@ -49064,12 +49249,13 @@
               "div",
               null,
               _,
+              _,
               _.createElement(
                 "div",
                 null,
                 _ == _._
                   ? (0, _._)("#DailyDeals_New_DailyDeal_Length_Min")
-                  : (0, _._)("#DailyDeals_New_DailyDeal_Length", _._, _),
+                  : (0, _._)("#DailyDeals_New_DailyDeal_Length", _, _),
               ),
               _.createElement(
                 "div",
@@ -49078,7 +49264,7 @@
                 },
                 _.createElement(_._, {
                   type: "number",
-                  min: _._,
+                  min: _,
                   max: _,
                   value: _,
                   onChange: (_) =>
@@ -55572,10 +55758,7 @@
           _ = (0, _.useCallback)(
             (_) =>
               31 != _ && _ >= 0 && _[_]?.length > 0
-                ? _._.GenerateArtworkURLFromHashAndExtensions(
-                    _.GetClanSteamID(),
-                    _[_],
-                  )
+                ? _._.GenerateURLFromHashAndExt(_.GetClanSteamID(), _[_])
                 : null,
             [_, _],
           );
@@ -56125,8 +56308,7 @@
           },
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_oTakeover = null;
         m_originalTakeover = null;
@@ -56181,6 +56363,13 @@
         GetPromoModifyTime() {
           return this.m_oTakeover.promo_mtime;
         }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_oTakeover.localized_alt_text ||
+              (this.m_oTakeover.localized_alt_text = {}),
+            this.GetKVLang(this.m_oTakeover.localized_alt_text, _)
+          );
+        }
         GetAssetCount() {
           let _ = 0;
           return (
@@ -56207,6 +56396,8 @@
               (_.page_bg_color_left = this.m_oTakeover.page_bg_color_left),
             this.m_oTakeover.page_bg_color_right &&
               (_.page_bg_color_right = this.m_oTakeover.page_bg_color_right),
+            this.m_oTakeover.localized_alt_text &&
+              (_.localized_alt_text = this.m_oTakeover.localized_alt_text),
             _
           );
         }
@@ -56301,6 +56492,11 @@
           this.m_oTakeover.page_bg_color_right != _ &&
             ((this.m_oTakeover.page_bg_color_right = _), this.Dispatch());
         }
+        SetLocalizedAltText(_, _) {
+          this.m_oTakeover.localized_alt_text ||
+            (this.m_oTakeover.localized_alt_text = {}),
+            this.SetKVLang(this.m_oTakeover.localized_alt_text, _, _);
+        }
         SetKVLang(_, _, _) {
           (0, _._)(_, _, _) && this.SetDirty(!0);
         }
@@ -56319,6 +56515,7 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+        (0, _._)([_._], _.prototype, "GetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "SetCurImage", null),
         (0, _._)([_._.bound], _.prototype, "SetImage", null),
         (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
@@ -56328,6 +56525,7 @@
         (0, _._)([_._], _.prototype, "SetBackgroundImageHeight", null),
         (0, _._)([_._], _.prototype, "SetColorLeft", null),
         (0, _._)([_._], _.prototype, "SetColorRight", null),
+        (0, _._)([_._], _.prototype, "SetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       class _ {
         m_mapEditModel = new Map();
@@ -56391,6 +56589,7 @@
           _
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             bShowInternalControls: _,
@@ -56640,6 +56839,10 @@
                 },
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
+            _.createElement(_._, {
+              fnGetAltText: _.GetLocalizedAltText,
+              fnSetAltText: _.SetLocalizedAltText,
+            }),
             _.createElement(_._, {
               rgSupportArtwork: _,
               rgRealmList: _,
@@ -58688,77 +58891,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(() => _(_)),
-          _ = (0, _.useCallback)(
-            (_) => {
-              const _ = _.target.files?.[0];
-              if (!_) return;
-              const _ = new FileReader();
-              (_.onload = (_) => {
-                try {
-                  const _ = _.target?.result,
-                    _ = JSON.parse(_);
-                  Object.entries(_).forEach(([_, _]) => {
-                    if ("string" == typeof _) {
-                      const _ = (0, _._)(_.toLowerCase());
-                      _ >= 0 && _ < 31
-                        ? __webpack_require__(_, _)
-                        : console.error("Unknown language");
-                    }
-                  });
-                } catch (_) {
-                  console.error("Failed to read or parse JSON:", _);
-                }
-              }),
-                _.readAsText(_);
-            },
-            [__webpack_require__],
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            fnLangHasData: (_) => _(_)?.trim().length > 0,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().Ctn,
-            },
-            _.createElement(_._, null),
-            _.createElement(
-              _._,
-              null,
-              "Or import json ",
-              _.createElement(_._, {
-                tooltip:
-                  'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
-              }),
-            ),
-            _.createElement("input", {
-              type: "file",
-              accept: ".json",
-              onChange: _,
-            }),
-          ),
-          _.createElement(_._, {
-            type: "text",
-            value: _,
-            onChange: (_) => __webpack_require__(_, _.currentTarget.value),
-            label: "Alternative Text",
-            tooltip:
-              "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
-          }),
-        );
-      }
       function _(_) {
         const {
             bAssetUploadOnly: _,
@@ -59245,7 +59378,7 @@
                     },
                     "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
                   ),
-                _.createElement(_, {
+                _.createElement(_._, {
                   fnGetAltText: _.GetAltTextRaw,
                   fnSetAltText: _.SetAltText,
                 }),
@@ -64009,7 +64142,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -71016,11 +71150,34 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, _: __webpack_require__, payload: _ } = _,
+          _ = _.tickFormatter(_.value, _.index);
+        return _.createElement(
+          "g",
+          {
+            transform: `translate(${_},${__webpack_require__})`,
+          },
+          _.createElement(
+            "text",
+            {
+              _: 0,
+              _: 0,
+              _: 16,
+              textAnchor: "middle",
+              fill: "#FFFFFF",
+              transform: "rotate(0)",
+              fontSize: "11px",
+            },
+            _,
+          ),
+        );
+      }
       const _ = _.memo((_) => {
         const { data: _, fnSelectedData: __webpack_require__ } = _,
           _ = (0, _.useRef)(void 0),
           _ = (0, _.useCallback)(
-            (_, _) => (_[_]?.USD ? (0, _._)(_[_].rtTimeStart) : ""),
+            (_, _) => (_[_]?.rtTimeStart ? (0, _._)(_[_].rtTimeStart) : ""),
             [_],
           );
         return _.createElement(
@@ -71046,14 +71203,12 @@
                   _._,
                   {
                     data: _,
-                    layout: "horizontal",
                     margin: {
                       top: 25,
                       left: 0,
                       right: 0,
                       bottom: 0,
                     },
-                    barGap: 30,
                     onClick: (_, _) => {
                       if (_?.activePayload?.length > 0) {
                         const _ = _.activePayload[0].payload;
@@ -71067,7 +71222,7 @@
                     _.createElement(
                       "linearGradient",
                       {
-                        _: "bar_linear",
+                        _: "weekend_linear",
                         _: "0",
                         _: "0",
                         _: "0",
@@ -71079,7 +71234,25 @@
                       _.createElement("stop", {
                         offset: "1",
                         stopColor: "#1A9FFF",
-                        stopOpacity: "1",
+                        stopOpacity: "0.8",
+                      }),
+                    ),
+                    _.createElement(
+                      "linearGradient",
+                      {
+                        _: "midweek_linear",
+                        _: "0",
+                        _: "0",
+                        _: "0",
+                        _: "1",
+                      },
+                      _.createElement("stop", {
+                        stopColor: "#FF6B6B",
+                      }),
+                      _.createElement("stop", {
+                        offset: "1",
+                        stopColor: "#FF6B6B",
+                        stopOpacity: "0.8",
                       }),
                     ),
                   ),
@@ -71107,10 +71280,41 @@
                     content: _.createElement(_, null),
                   }),
                   _.createElement(_._, {
-                    dataKey: "USD",
-                    barSize: 60,
-                    fill: "url( #bar_linear )",
-                    onMouseEnter: () => (_.current = "USD"),
+                    type: "monotone",
+                    dataKey: "weekendMedian",
+                    stroke: "#1A9FFF",
+                    strokeWidth: 3,
+                    dot: {
+                      fill: "#1A9FFF",
+                      strokeWidth: 0,
+                      _: 4,
+                    },
+                    activeDot: {
+                      _: 6,
+                      stroke: "#1A9FFF",
+                      strokeWidth: 2,
+                      fill: "white",
+                    },
+                    onMouseEnter: () => (_.current = "weekend"),
+                    onMouseOut: () => (_.current = void 0),
+                  }),
+                  _.createElement(_._, {
+                    type: "monotone",
+                    dataKey: "midweekMedian",
+                    stroke: "#FF6B6B",
+                    strokeWidth: 3,
+                    dot: {
+                      fill: "#FF6B6B",
+                      strokeWidth: 0,
+                      _: 4,
+                    },
+                    activeDot: {
+                      _: 6,
+                      stroke: "#FF6B6B",
+                      strokeWidth: 2,
+                      fill: "white",
+                    },
+                    onMouseEnter: () => (_.current = "midweek"),
                     onMouseOut: () => (_.current = void 0),
                   }),
                   _.createElement(_._, {
@@ -71126,42 +71330,81 @@
       });
       function _({ active: _, payload: _ }) {
         if (_ && _ && _.length) {
-          const _ = _[0].payload;
+          const _ = _[0].payload,
+            _ = _.weekendMedian,
+            _ = _.midweekMedian,
+            _ = _ - _,
+            _ = _ > 0 ? ((_ / _) * 100).toFixed(1) : "N/A";
           return _.createElement(
             _._,
             null,
-            _.createElement("b", null, (0, _._)(Number.parseInt(_.USD))),
-            " on ",
-            (0, _._)(Number.parseInt(_.rtTimeStart)),
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "b",
+                null,
+                (0, _._)(Number.parseInt(_.rtTimeStart)),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                style: {
+                  color: "#1A9FFF",
+                },
+              },
+              "Weekend: ",
+              _.createElement("b", null, (0, _._)(_)),
+              " (",
+              _.weekendCount,
+              " deals)",
+            ),
+            _.createElement(
+              "div",
+              {
+                style: {
+                  color: "#FF6B6B",
+                },
+              },
+              "Midweek: ",
+              _.createElement("b", null, (0, _._)(_)),
+              " (",
+              _.midweekCount,
+              " deals)",
+            ),
+            _ > 0 &&
+              _ > 0 &&
+              _.createElement(
+                "div",
+                {
+                  style: {
+                    fontSize: "0.9em",
+                    marginTop: "4px",
+                  },
+                },
+                "Difference: ",
+                _.createElement("b", null, (0, _._)(Math.abs(_))),
+                _.createElement(
+                  "span",
+                  {
+                    style: {
+                      color: _ > 0 ? "#00d4aa" : "#ff6b6b",
+                    },
+                  },
+                  "(",
+                  _ > 0 ? "+" : "",
+                  _,
+                  "%)",
+                ),
+              ),
           );
         }
         return null;
       }
-      function _(_) {
-        const { _: _, _: __webpack_require__, payload: _ } = _,
-          _ = _.tickFormatter(_.value, _.index);
-        return _.createElement(
-          "g",
-          {
-            transform: `translate(${_},${__webpack_require__})`,
-          },
-          _.createElement(
-            "text",
-            {
-              _: 0,
-              _: 0,
-              _: 16,
-              textAnchor: "middle",
-              fill: "#FFFFFF",
-              transform: "rotate(0)",
-              fontSize: "11px",
-            },
-            _,
-          ),
-        );
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -71352,57 +71595,52 @@
         return null;
       }
       const _ = _.createContext({
-        loadPackageDiscountSummary: async (_) =>
-          null == _
-            ? null
-            : await (function () {
+        loadPackageDiscountsByTimeRange: async (_) =>
+          _.packageids && 0 !== _.packageids.length
+            ? await (function () {
                 _ ||
                   (_ = new (_())(
                     async (_) => {
-                      const _ = {
-                          rgPackageIDs: _.join(","),
-                        },
-                        _ = `${_._.PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagediscountsummary`,
-                        _ = await _().get(_, {
-                          params: _,
-                        });
-                      if (200 != _?.status || !_.data || !_.data)
-                        throw `Failed to load discount package summary: ${_?.data?.msg}`;
-                      const _ = new Map(),
-                        _ = new Map();
-                      return (
-                        _.data.discount_summary.forEach((_) => {
-                          _.has(_.packageid) ||
-                            _.set(_.packageid, {
-                              packageID: _.packageid,
-                              combinedDiscounts: [],
-                              packageInfo: [],
+                      const _ = _.map(async (_) => {
+                        const _ = {
+                            rgPackageIDs: _.packageids.join(","),
+                            ...(void 0 !== _.start_time && {
+                              start_time: _.start_time.toString(),
                             }),
-                            _.get(_.packageid).packageInfo.push(_),
-                            _.has(_.combineddiscountid) ||
-                              _.set(_.combineddiscountid, []),
-                            _.get(_.combineddiscountid).push(_.packageid);
-                        }),
-                        _.data.combined_discount_map.forEach((_) => {
-                          _.get(_.combineddiscountid).forEach((_) => {
-                            _.get(_).combinedDiscounts.push(_);
+                            ...(void 0 !== _.end_time && {
+                              end_time: _.end_time.toString(),
+                            }),
+                          },
+                          _ = `${_._.PARTNER_BASE_URL}promotion/analysis/ajaxgetpackagesdiscountsbytimerange`,
+                          _ = await _().get(_, {
+                            params: _,
                           });
-                        }),
-                        _.map((_) => _.get(_) ?? null)
-                      );
+                        if (200 !== _?.status || !_.data)
+                          throw new Error(
+                            `Failed to load package discounts: ${_?.data?.msg || "Unknown error"}`,
+                          );
+                        return {
+                          packageids: _.packageids,
+                          start_time: _.start_time,
+                          end_time: _.end_time,
+                          discounts: _.data.discounts || [],
+                        };
+                      });
+                      return Promise.all(_);
                     },
                     {
                       maxBatchSize: 10,
                     },
                   ));
                 return _;
-              })().load(_),
+              })().load(_)
+            : null,
       });
       function _(_, _) {
         return {
-          queryKey: ["PackageDiscountSummaryQuery", _],
-          queryFn: () => _.loadPackageDiscountSummary(_),
-          enabled: !!_,
+          queryKey: ["GetPackageDiscountsByTimeRangeQuery", _],
+          queryFn: () => _.loadPackageDiscountsByTimeRange(_),
+          enabled: !!(_.packageids && _.packageids.length > 0),
         };
       }
       let _;
@@ -71411,109 +71649,390 @@
           const _ = _.useContext(_),
             _ = (0, _._)(_(_, _));
           return _.isLoading ? null : _.data;
-        })(_);
-        return (
-          console.log("summary", _),
-          console.log("dates", _, _),
-          (0, _.useMemo)(() => {
-            if (!_) return;
-            let _ = _.combinedDiscounts.findIndex(
-              (_) =>
-                _.discount_record[0].start_date - 86400 <= _ &&
-                _.discount_record[0].end_date + 14400 >= _,
-            );
-            if (_ < 0) return null;
-            const _ = _.combinedDiscounts[_].combineddiscountid;
-            let _ = _.packageInfo.findIndex((_) => _.combineddiscountid == _);
-            if (_ < 0) return null;
-            const _ = _.combinedDiscounts[_].discount_record[0],
-              _ = _.packageInfo[_];
-            return {
-              packageID: _,
-              partnerID: _.partnerid,
-              gross_sales_usd: Math.floor(
-                Number.parseInt(_.gross_sales_usdx100) / 1e4,
+        })({
+          packageids: [_],
+          start_time: _,
+          end_time: _,
+        });
+        return (0, _.useMemo)(() => {
+          if (!_ || !_.discounts || 0 === _.discounts.length) return;
+          const _ = _.discounts.reduce((_, _) => {
+            const _ = _.start_time || 0,
+              _ = _.end_time || Number.MAX_SAFE_INTEGER;
+            if (!(_ <= _ && _ >= _)) return _;
+            return (_.percentage || 0) > (_?.percentage || 0) ? _ : _;
+          }, null);
+          return _
+            ? {
+                packageID: _,
+                percentage: _.percentage,
+                discount_start_date: _.start_time,
+                discount_end_date: _.end_time,
+              }
+            : null;
+        }, [_, _, _, _]);
+      }
+      function _({ item: _, rtRange: _ }) {
+        const [__webpack_require__, _] = _,
+          _ = _(_.productid, __webpack_require__, _);
+        return 4 === _.product_type && _
+          ? _.createElement(_.Fragment, null, _.percentage, "%")
+          : _.createElement(_.Fragment, null, "N/A");
+      }
+      function _({ appID: _, items: _, rtRange: __webpack_require__ }) {
+        const [_] = (0, _._)(_, {
+            include_release: !0,
+            include_basic_info: !0,
+          }),
+          _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
+          [_, _] = _.useState(!1),
+          { totalSales: _, totalUnits: _ } = (0, _.useMemo)(
+            () => ({
+              totalSales: _.reduce((_, _) => _ + _.gross_sales_usdx100, 0),
+              totalUnits: _.reduce((_, _) => _ + _.gross_units_sold, 0),
+            }),
+            [_],
+          );
+        return 1 === _.length
+          ? _.createElement(
+              "div",
+              {
+                className: _.AppGroupContainer,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: _,
+                  target: "_blank",
+                  className: (0, _._)(_.RowCtn, _.AppHeader),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Row, _.Primary),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.ItemName),
+                    },
+                    _.createElement(
+                      "strong",
+                      null,
+                      _?.GetName() || "Unknown App",
+                      " ",
+                      0 === _ && "(In-Game)",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Revenue),
+                    },
+                    _.createElement("strong", null, (0, _._)(Math.floor(_))),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Revenue),
+                    },
+                    _.createElement(
+                      "strong",
+                      null,
+                      0 === _ ? "N/A" : _.toLocaleString(),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Revenue),
+                    },
+                    _.createElement(_, {
+                      item: _[0],
+                      rtRange: __webpack_require__,
+                    }),
+                  ),
+                ),
               ),
-              gross_units_sold: _.gross_units_sold,
-              discountid: _.discountid,
-              percentage: _.percentage,
-              discount_name: _.discount_name,
-              discount_occurance: _.discount_occurrence,
-              discount_start_date: _.start_date,
-              discount_end_date: _.end_date,
-              usd_price: _.usd_price,
-            };
-          }, [_, _, _, _])
+            )
+          : _.createElement(
+              "div",
+              {
+                className: _.AppGroupContainer,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.RowCtn, _.AppHeader),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Row, _.Primary),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.ItemName),
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.MinMaxButtonContainer,
+                      },
+                      _.createElement(_._, {
+                        bIsMinimized: !_,
+                        fnToggleMinimize: () => {
+                          _(!_);
+                        },
+                      }),
+                    ),
+                    _.createElement(
+                      "a",
+                      {
+                        href: _,
+                        target: "_blank",
+                      },
+                      _.createElement(
+                        "strong",
+                        null,
+                        _?.GetName() || "Unknown App",
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Revenue),
+                    },
+                    _.createElement("strong", null, (0, _._)(Math.floor(_))),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Revenue),
+                    },
+                    _.createElement("strong", null, _.toLocaleString()),
+                  ),
+                  _.createElement("div", {
+                    className: (0, _._)(_.Col, _.Small),
+                  }),
+                ),
+              ),
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.map((_) =>
+                    _.createElement(_, {
+                      key: `${_}-${_.productid}`,
+                      item: _,
+                      rtRange: __webpack_require__,
+                    }),
+                  ),
+                ),
+            );
+      }
+      function _({ item: _, rtRange: _ }) {
+        const [__webpack_require__] = (0, _._)(_.productid, {
+            include_release: !0,
+            include_basic_info: !0,
+          }),
+          [_] = (0, _._)(_.productid, {
+            include_release: !0,
+            include_basic_info: !0,
+          }),
+          _ = Math.floor(_.gross_sales_usdx100),
+          _ = 4 === _.product_type ? __webpack_require__ : _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.RowCtn, _.ProductRow, _.Compact),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.Row, _.Secondary),
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.Col, _.ItemName, _.Indented),
+              },
+              _?.GetName() || "",
+              " ",
+              1 === _.product_type && "(In-Game)",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.Col, _.Revenue),
+              },
+              (0, _._)(_),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.Col, _.Revenue),
+              },
+              1 === _.product_type
+                ? "N/A"
+                : _.gross_units_sold.toLocaleString(),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.Col, _.Small),
+              },
+              _.createElement(_, {
+                item: _,
+                rtRange: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _({ mapApps: _, rtRange: _ }) {
+        const _ = (0, _.useMemo)(
+          () =>
+            Array.from(_.entries())
+              .map(([_, _]) => {
+                const _ = _.filter((_) => _.gross_sales_usdx100 > 0).sort(
+                    (_, _) => _.gross_sales_usdx100 - _.gross_sales_usdx100,
+                  ),
+                  _ = __webpack_require__.reduce(
+                    (_, _) => _ + _.gross_sales_usdx100,
+                    0,
+                  );
+                return {
+                  appID: _,
+                  items: _,
+                  totalRevenue: _,
+                };
+              })
+              .filter((_) => _.totalRevenue > 0)
+              .sort((_, _) => _.totalRevenue - _.totalRevenue),
+          [_],
+        );
+        return _.createElement(
+          "div",
+          null,
+          __webpack_require__.map(({ appID: _, items: _ }) =>
+            _.createElement(_, {
+              key: `app-${_}`,
+              appID: _,
+              items: _,
+              rtRange: _,
+            }),
+          ),
         );
       }
       function _(_) {
         const { promo: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(5),
-          [_, _, _] = (0, _.useMemo)(() => {
-            let _ = Number.MAX_SAFE_INTEGER,
-              _ = 0;
-            const _ = new Map();
-            _.promoSales.products?.forEach((_) => {
-              const [_, _] =
-                _.packageid && _.packageid > 0
-                  ? [_.packageid, 4]
-                  : [_.appid, 1];
-              if (!_) return;
-              _.has(_) ||
-                _.set(_, {
-                  productid: _,
-                  product_type: _,
-                  gross_units_sold: 0,
-                  gross_sales_usd: 0,
-                  daily_promo_sales: [],
-                });
-              const _ = _.get(_);
-              if (
-                ((_.gross_units_sold +=
-                  Number.parseInt(_.summary_sales?.steam_gross_units_sold) ||
-                  0),
-                (_.gross_sales_usd +=
-                  Math.floor(
-                    Number.parseInt(
-                      _.summary_sales?.total_gross_sales_usdx100,
-                    ) ?? 0,
-                  ) / 1e4),
-                _.daily_promo_sales)
-              ) {
-                const _ = new Map();
-                _.daily_promo_sales.forEach((_) => {
-                  if (_.date) {
-                    const _ = new Date(_.date),
-                      _ = Math.floor(_.getTime() / 1e3);
-                    _ < _ && (_ = _), _ > _ && (_ = _);
-                    const _ = _.date;
-                    if (_.has(_)) {
-                      const _ = _.get(_);
-                      (_.summary_sales.steam_gross_units_sold += parseInt(
-                        _.summary_sales.steam_gross_units_sold,
-                      )),
-                        (_.summary_sales.total_gross_sales_usdx100 += parseInt(
-                          _.summary_sales.total_gross_sales_usdx100,
-                        ));
-                    } else
-                      _.set(_, {
-                        ..._,
-                        rtime_date: _,
-                      });
-                  }
-                }),
-                  (_.daily_promo_sales = Array.from(_.values()).sort(
-                    (_, _) => (_.rtime_date || 0) - (_.rtime_date || 0),
-                  ));
-              }
-            });
-            const _ = Array.from(_.values());
+          _ = [_.promoPlan.start_date, _.promoPlan.end_date],
+          {
+            groupedItems: _,
+            rgAppIDs: _,
+            rgPackageIDs: _,
+          } = (0, _.useMemo)(() => {
+            const _ = [],
+              _ = [],
+              _ = new Map();
             return (
-              _.sort((_, _) => _.gross_sales_usd - _.gross_sales_usd),
-              (isFinite(_) && 0 !== _.length) || ((_ = 0), (_ = 0)),
-              [_, _, _]
+              _.promoSales.products.forEach((_) => {
+                const _ = _.packageid || _.appid,
+                  _ = _.packageid ? 4 : 1,
+                  _ = Number(_.summary_sales.total_gross_sales_usdx100) / 1e4,
+                  _ = Number(_.summary_sales.steam_gross_units_sold);
+                if (_.has(_)) {
+                  const _ = _.get(_);
+                  (_.gross_sales_usdx100 += _), (_.gross_units_sold += _);
+                } else
+                  _.set(_, {
+                    productid: _,
+                    product_type: _,
+                    gross_sales_usdx100: _,
+                    gross_units_sold: _,
+                  });
+                4 === _ ? __webpack_require__.push(_) : 1 === _ && _.push(_);
+              }),
+              {
+                groupedItems: Array.from(_.entries()),
+                rgAppIDs: _,
+                rgPackageIDs: _,
+              }
             );
-          }, [_]);
+          }, [_.promoSales.products]),
+          _ = (0, _._)(_, {
+            include_release: !0,
+            include_basic_info: !0,
+          }),
+          _ = (0, _._)(_, {
+            include_release: !0,
+            include_basic_info: !0,
+          }),
+          _ = (0, _.useMemo)(() => {
+            if (1 === _ || 1 === _) return new Map();
+            const _ = new Map();
+            for (const [_, _] of _) {
+              let _;
+              if (1 === _.product_type) _ = _._.Get().GetApp(_);
+              else {
+                if (4 !== _.product_type) continue;
+                _ = _._.Get().GetPackage(_);
+              }
+              if (!_) {
+                console.log("No storeItem found for:", _);
+                continue;
+              }
+              const _ = _.GetAppID() || _.GetIncludedAppIDsOrSelf()[0];
+              _.has(_) ? _.get(_).push(_) : _.set(_, [_]);
+            }
+            return _;
+          }, [_, _, _]),
+          _ = 1 === _ || 1 === _;
+        return (
+          console.log("DisplayPromoSaleTable Debug:", {
+            cacheState: _,
+            packageCacheState: _,
+            groupedItemsLength: _.length,
+            mapAppsSize: _.size,
+            mapAppsEntries: Array.from(_.entries()),
+            rgAppIDs: _,
+            rgPackageIDs: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.TableContainer,
+            },
+            _
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _.LoadingContainer,
+                  },
+                  _.createElement(_._, {
+                    string: "Loading",
+                    position: "center",
+                    size: "medium",
+                  }),
+                )
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, {
+                    promo: _,
+                  }),
+                  _.createElement(_, {
+                    mapApps: _,
+                    rtRange: _,
+                  }),
+                ),
+          )
+        );
+      }
+      function _({ promo: _ }) {
         return _.createElement(
           "div",
           {
@@ -71522,13 +72041,14 @@
           _.createElement(
             "h4",
             null,
-            _.promoPlan.name,
+            _.promoPlan.name || "Unnamed Promo",
             " ",
             _.createElement(
               "a",
               {
                 href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_.promoPlan._}`,
                 target: "_blank",
+                rel: "noopener noreferrer",
               },
               "See promo plan",
             ),
@@ -71567,166 +72087,8 @@
               },
               "%",
             ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Small),
-              },
-              "$",
-            ),
-          ),
-          _.filter((_) => _.gross_units_sold > 0 || _.gross_sales_usd > 0)
-            .slice(0, __webpack_require__)
-            .map((_) =>
-              _.createElement(_, {
-                key: _.productid,
-                row: _,
-                rtStartDate: _,
-                rtEndDate: _,
-              }),
-            ),
-          Boolean(
-            __webpack_require__ <
-              _.filter((_) => _.gross_units_sold > 0 || _.gross_sales_usd > 0)
-                .length,
-          ) &&
-            _.createElement(
-              _._,
-              {
-                onClick: () => _(_.length),
-              },
-              "Show All",
-            ),
-          Boolean(__webpack_require__ > 5) &&
-            _.createElement(
-              _._,
-              {
-                onClick: () => _(5),
-              },
-              "Show Less",
-            ),
-        );
-      }
-      function _(_) {
-        const { row: _, rtStartDate: __webpack_require__, rtEndDate: _ } = _,
-          [_] = (0, _._)(4 === _.product_type ? _.productid : 0, {}),
-          [_] = (0, _._)(4 !== _.product_type ? _.productid : 0, {}),
-          _ = 4 === _.product_type ? _ : _,
-          _ = Math.floor(_.gross_sales_usd),
-          _ = _._.PARTNER_BASE_URL + "apps/landing/" + _.productid;
-        return _.createElement(
-          "a",
-          {
-            href: _,
-            target: "_blank",
-            className: (0, _._)(_.RowCtn, _.Compact),
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Row, _.Primary),
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.ItemName),
-              },
-              _?.GetName() || "",
-              " (",
-              _.productid,
-              ")",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Revenue),
-              },
-              (0, _._)(_),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Revenue),
-              },
-              _.gross_units_sold.toLocaleString(),
-            ),
-            _.createElement(_, {
-              productID: _.productid,
-              storeItem: _,
-              rtStartDate: __webpack_require__,
-              rtEndDate: _,
-            }),
           ),
         );
-      }
-      function _(_) {
-        const {
-            productID: _,
-            storeItem: __webpack_require__,
-            rtStartDate: _,
-            rtEndDate: _,
-          } = _,
-          _ = _(_, _, _);
-        return __webpack_require__?.BIsFree() &&
-          !__webpack_require__?.BIsFreeTemporary()
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Col, _.Small),
-                },
-                "-",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Col, _.Small),
-                },
-                "FREE",
-              ),
-            )
-          : _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.Col, _.Small),
-                  },
-                  _.percentage,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.Col, _.Small),
-                  },
-                  (0, _._)(
-                    (Number.parseInt(_.usd_price) / 100) *
-                      (1 - _.percentage / 100),
-                  ),
-                ),
-              )
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.Col, _.Small),
-                  },
-                  "N/A",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.Col, _.Small),
-                  },
-                  "N/A",
-                ),
-              );
       }
       function _(_) {
         const _ = _();
@@ -71797,7 +72159,8 @@
             "midweek" == _
               ? __webpack_require__.rgMidweeks
               : __webpack_require__.rgWeekends,
-          [_, _] = (0, _.useState)(() => (_?.length > 0 ? _[0] : null)),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _.useMemo)(
             () =>
               _.map((_) => ({
@@ -71833,16 +72196,25 @@
                 data: _,
                 fnSetSelected: (_) => {
                   let _ = _.findIndex((_) => _.promoPlan.name == _);
-                  _ >= 0 && _(_[_]);
+                  _ >= 0
+                    ? (console.log(
+                        "✅ Setting selected promo:",
+                        _[_].promoPlan.name,
+                      ),
+                      _(_[_]))
+                    : console.log("No matching promo found for:", _);
                 },
               }),
             ),
-            Number.parseInt(
-              _?.promoSales.summary_sales.total_gross_sales_usdx100,
-            ) > 0 &&
-              _.createElement(_, {
-                promo: _,
-              }),
+            _ &&
+              (_
+                ? _.createElement(_._, null)
+                : Number.parseInt(
+                    _.promoSales.summary_sales.total_gross_sales_usdx100,
+                  ) > 0 &&
+                  _.createElement(_, {
+                    promo: _,
+                  })),
           )
         );
       }
@@ -71853,10 +72225,40 @@
           } = _,
           _ = (0, _.useMemo)(
             () =>
-              _.map((_) => ({
-                rtTimeStart: _.rtWeekStart,
-                USD: _.summaryUSD,
-              })),
+              _.map((_) => {
+                const _ =
+                    _.rgWeekends
+                      ?.map((_) => {
+                        const _ =
+                          _.promoSales?.summary_sales
+                            ?.total_gross_sales_usdx100;
+                        return _ ? Number(_) / 1e4 : 0;
+                      })
+                      .filter((_) => _ > 0) || [],
+                  _ =
+                    _.rgMidweeks
+                      ?.map((_) => {
+                        const _ =
+                          _.promoSales?.summary_sales
+                            ?.total_gross_sales_usdx100;
+                        return _ ? Number(_) / 1e4 : 0;
+                      })
+                      .filter((_) => _ > 0) || [],
+                  _ = (_) => {
+                    if (0 === _.length) return 0;
+                    const _ = [..._].sort((_, _) => _ - _),
+                      _ = Math.floor(_.length / 2);
+                    return _.length % 2 == 0 ? (_[_ - 1] + _[_]) / 2 : _[_];
+                  };
+                return {
+                  rtTimeStart: _.rtWeekStart,
+                  weekendMedian: _(_),
+                  midweekMedian: _(_),
+                  weekendCount: _.length,
+                  midweekCount: _.length,
+                  weekData: _,
+                };
+              }).sort((_, _) => (_.rtTimeStart || 0) - (_.rtTimeStart || 0)),
             [_],
           );
         return _.createElement(
@@ -71864,14 +72266,11 @@
           {
             className: _().WithBox,
           },
-          _.createElement("h3", null, "Weekly Promo Comparison"),
+          _.createElement("h3", null, "Weekly Promo Median Revenue Trends"),
           _.createElement(_, {
             data: _,
             fnSelectedData: (_) => {
-              if (_) {
-                const _ = _.findIndex((_) => _.rtWeekStart == _.rtTimeStart);
-                _ >= 0 && _ < _.length && __webpack_require__(_[_]);
-              }
+              _ && _.weekData && __webpack_require__(_.weekData);
             },
           }),
         );
@@ -72255,7 +72654,7 @@
         ThemeSalesDashboard: () => "/themesales/(dashboard)",
         SalesRankDashboard: () => "/planning/salesrank",
         LocalizationAssetPortal: (_) => `/assetportal/localization/${_}`,
-        CuratedPromotionAnalysis: () => "/analysis/(curated)",
+        CuratedPromotionAnalysis: () => "/analysis/curated",
         DataMigration: () => "/planning/migration",
       };
       function _(_) {
@@ -108626,7 +109025,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
@@ -108796,9 +109194,6 @@
           );
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -108818,8 +109213,7 @@
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, "dummy", [_._.k_ESteamRealmGlobal], _),
+          _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
             async (_) => {
               if (
@@ -108923,10 +109317,14 @@
                             _[0].bSuccess)
                           ) {
                             const _ = _[0].uploadResult,
-                              _ = (0, _._)() + _.GetAccountID() + "/",
-                              _ = (0, _._)(_.file_type),
-                              _ = _ + _.image_hash + _,
-                              _ = _ + _.thumbnail_hash + _,
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetHashAndExt(_),
+                              ),
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetThumbHashAndExt(_),
+                              ),
                               _ = {
                                 imageid: -11231412,
                                 image_hash: _.image_hash,
@@ -108937,8 +109335,6 @@
                                 url: _,
                                 thumb_url: _,
                                 uploaded_time: Date.now() / 1e3,
-                                loc_languages: void 0,
-                                is_loc_group: !1,
                               };
                             _(_), _(_);
                           }
@@ -109091,13 +109487,13 @@
             _.dataTransfer.items && _.dataTransfer.items[0])
           ) {
             let _ = _.dataTransfer.getData("text");
-            if (_ && _.length > 0) {
-              let _ = (0, _._)();
-              if (_.startsWith(_)) {
-                let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
-                _.replaceSelection(this.GetTextAreaRef().current, _);
-              }
-            }
+            if (_ && _.length > 0)
+              for (let _ of [_._.GetBaseURL(), _._.GetBaseURLV2()])
+                if (_.startsWith(_)) {
+                  let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
+                  _.replaceSelection(this.GetTextAreaRef().current, _);
+                  break;
+                }
           }
         }
         GetTextAreaRef() {
@@ -110620,16 +111016,12 @@
       class _ extends _._ {
         m_filesToUpload = _._.array();
         m_strUploadPath = null;
-        m_rgRealmList;
-        m_eDefaultLanguage;
         m_rgImageOptions;
         m_bSynchronousUpload = !1;
-        constructor(_, _, _, _, _) {
+        constructor(_, _, _) {
           super(),
             (0, _._)(this),
             (this.m_strUploadPath = _),
-            (this.m_rgRealmList = _),
-            (this.m_eDefaultLanguage = _),
             (this.m_rgImageOptions = (0, _._)(_)),
             (this.m_bSynchronousUpload = _);
         }
@@ -110653,12 +111045,6 @@
             (this.m_filesToUpload.splice(_, 1),
             (this.m_filesToUpload = [...this.m_filesToUpload]));
         }
-        static isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        static isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
         static isSubtitleTextFile(_) {
           return (
             _.type.startsWith("text/") ||
@@ -110666,15 +111052,35 @@
             ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
           );
         }
-        async AddImageForLanguage(_, _, _) {
-          if (_.isImageFile(_) || _.isVideoFile(_)) {
-            const _ = await (0, _._)(_, _.isVideoFile(_));
+        BGetUploadsAreInSerial() {
+          return this.m_bSynchronousUpload;
+        }
+        async AddImageForLanguage(_, _) {
+          if ((0, _._)(_.type) || (0, _._)(_.type)) {
+            const _ = await (0, _._)(_, (0, _._)(_.type));
             if (_ instanceof HTMLImageElement) {
-              const _ = new _._(_, _, this.m_rgImageOptions, _, _);
+              const _ = new _._(
+                _,
+                _.name,
+                _,
+                this.m_rgImageOptions,
+                _.src,
+                (0, _._)(_),
+                _,
+                null,
+              );
               return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
             }
             if (_ instanceof HTMLVideoElement) {
-              const _ = new _._(_, _, this.m_rgImageOptions, _);
+              const _ = new _._(
+                _,
+                _.name,
+                _,
+                this.m_rgImageOptions,
+                _.src,
+                (0, _._)(_),
+                _,
+              );
               return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
             }
           } else {
@@ -110682,7 +111088,7 @@
               return (
                 (this.m_filesToUpload = [
                   ...this.m_filesToUpload,
-                  new _._(_, _, this.m_rgImageOptions),
+                  new _._(_, _.name, _, this.m_rgImageOptions),
                 ]),
                 !0
               );
@@ -110694,68 +111100,21 @@
           }
           return !1;
         }
-        async UploadAllImages(_, _) {
-          const _ = [];
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = this.UploadFile(
-                    _.file,
-                    _.file.name,
-                    _.language,
-                    _.match,
-                  ),
-                  _ = {
-                    file: _.file,
-                    promise: _,
-                  };
-                __webpack_require__.push(_),
-                  this.m_bSynchronousUpload && (await _);
-              }
-            }
-          this.m_bSynchronousUpload ||
-            (await Promise.all(__webpack_require__.map((_) => _.promise)));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise;
-            _.push({
-              file: _.file,
-              bSuccess: 1 === _.success,
-              uploadResult: _,
-            });
-            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
-            if (_)
-              if (_ && 1 === _.success) {
-                _.status = "success";
-                (0, _._)(
-                  _.language,
-                  this.m_eDefaultLanguage,
-                  this.m_rgRealmList,
-                );
-              } else (_.status = "failed"), (_.message = _.message);
-          }
-          return _;
-        }
-        async UploadFile(_, _, _, _, _, _) {
+        async UploadSingleImage(_, _, _, _) {
           let _ = null;
           const _ = new FormData();
-          _.append("assetfile", _, _),
+          _.append("assetfile", _.file, _),
             _.append("sessionid", _._.SESSIONID),
             _.append("elangauge", "" + _),
-            _.append("originalname", _),
-            _?.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              ),
-            _?.artworkType && _.append("arttype", _.artworkType);
+            _.append("originalname", _);
+          const _ = _.GetCurrentImageOption();
+          _?.artworkType && _.append("arttype", _.artworkType);
           const _ = (0, _._)(_);
           if (!_)
             return {
-              success: 8,
-              message: "Invalid file extension, cannot determine mimetype",
+              bSuccess: !1,
+              strErrorMessage:
+                "Invalid file extension, cannot determine mimetype",
             };
           _.append("mimetype", _);
           try {
@@ -110764,21 +111123,24 @@
               headers: {
                 "Content-Type": "multipart/form-data",
               },
+              cancelToken: _,
             });
           } catch (_) {
             const _ = (0, _._)(_);
             console.log("CCloudImageUploader.UploadFile failed ", _, _),
               (_ = _.response);
           }
-          return _?.data;
+          return {
+            bSuccess: !0,
+            result: _?.data,
+          };
         }
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "GetUploadImages", null),
         (0, _._)([_._], _.prototype, "ClearImages", null),
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -110789,11 +111151,10 @@
             rgRealmList: _,
           } = _,
           _ = _._.Get().GetCurEditLanguage(),
-          _ = (function (_, _, _, _, _) {
-            const _ = (0, _._)(_ instanceof Array ? _ : [_]),
-              _ = (0, _._)(_);
-            return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
-          })(_, _, _ ?? !1, _, _);
+          _ = (function (_, _, _) {
+            const _ = (0, _._)(_ instanceof Array ? _ : [_]);
+            return _.useMemo(() => new _(_, _, _), [_, _, _]);
+          })(_, _, _ ?? !1);
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
@@ -110805,16 +111166,15 @@
               for (const _ of _) {
                 if (!_.bSuccess) continue;
                 const _ = _.uploadResult,
-                  _ = _.GetUploadImages().find((_) => _.file == _.file),
                   _ = (0, _._)(_.language, _, _);
                 __webpack_require__(
                   _.image_hash,
                   _.file_name,
                   _,
                   _(_.file_type),
-                  _.GetCurrentImageOption().artworkType,
-                  _.width,
-                  _.height,
+                  _.image.GetCurrentImageOption().artworkType,
+                  _.image.width,
+                  _.image.height,
                 );
               }
             },
@@ -113953,12 +114313,10 @@
               ? (0, _._)(_.LinkButton, "LinkButton")
               : (0, _._)(_.Link, "Link");
           })(_),
-          _ = _.context.event;
+          _ = _.context.event,
+          _ = _._(_, _.language, _?.rtime32_last_modified);
         if (void 0 === _) return _.children || "";
-        if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(_, _.language, _?.rtime32_last_modified);
-          _ = "string" == typeof _ ? _ : _[1];
-        }
+        _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _) {
           if ("button" == _ && _)
             return {
@@ -115135,12 +115493,13 @@
       function _(_) {
         const { showErrorInfo: _, event: __webpack_require__ } = _.context;
         let _ = (0, _._)(_.args, "src") || _.children?.toString();
-        if (!_ && ((_ = (0, _._)(_.args)), null == !_)) return null;
+        _ || (_ = (0, _._)(_.args));
         const _ = _._(
           _,
           _.language,
           __webpack_require__?.rtime32_last_modified,
         );
+        if (null == _) return null;
         if ("string" == typeof _) {
           let _;
           return (
@@ -115535,8 +115894,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const _ = _.photo ? (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)) : null,
-          _ = _.photo ? ("string" == typeof _ ? _ : _[1]) : null,
+        const _ = (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)),
+          _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
           _ = Boolean(_.title),
           _ = Boolean(_.company);
         return _.createElement(
@@ -115660,75 +116019,73 @@
           );
         }
       }
-      (0, _._)([_._], _.prototype, "ClosePopup", null),
-        (0, _._)([_._], _.prototype, "OnScroll", null),
-        (0, _._)([_._], _.prototype, "OnHover", null),
-        (0, _._)([_._], _.prototype, "OnLeave", null);
-      class _ extends _.Component {
-        render() {
-          const _ = this.props.photo
-              ? (0, _._)(this.props.photo, (0, _._)(_._.LANGUAGE))
-              : null,
-            _ =
-              this.props.photo && !this.props.hidePhotoInCompactView
-                ? "string" == typeof _
-                  ? _
-                  : _[1]
-                : null,
-            _ = Boolean(this.props.title),
-            _ = Boolean(this.props.company);
-          return _.createElement(
-            "div",
+      function _(_) {
+        const {
+            photo: _,
+            name: __webpack_require__,
+            title: _,
+            company: _,
+            hidePhotoInCompactView: _,
+          } = _,
+          _ = (0, _._)(_, (0, _._)(_._.LANGUAGE)),
+          _ = _ && !_ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_),
+          _ = Boolean(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerOuter,
+          },
+          _.createElement(
+            _,
             {
-              className: _().SpeakerOuter,
+              ..._,
             },
             _.createElement(
-              _,
+              "div",
               {
-                ...this.props,
+                className: _().Speaker,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().Speaker,
+                  className: _().SpeakerInfoOuter,
                 },
+                !!_ &&
+                  _.createElement("img", {
+                    src: _,
+                  }),
                 _.createElement(
                   "div",
                   {
-                    className: _().SpeakerInfoOuter,
+                    className: _().SpeakerInfoInner,
                   },
-                  !!_ &&
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SpeakerInfoInner,
-                    },
-                    _.createElement("div", null, this.props.name),
-                    (_ || _) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        _ &&
-                          _.createElement(
-                            "span",
-                            {
-                              className: _().SpeakerTitle,
-                            },
-                            this.props.title,
-                          ),
-                        _ && _ && _.createElement("span", null, ", "),
-                        _ && _.createElement("span", null, this.props.company),
-                      ),
-                  ),
+                  _.createElement("div", null, __webpack_require__),
+                  (_ || _) &&
+                    _.createElement(
+                      "div",
+                      null,
+                      _ &&
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().SpeakerTitle,
+                          },
+                          _,
+                        ),
+                      _ && _ && _.createElement("span", null, ", "),
+                      _ && _.createElement("span", null, _),
+                    ),
                 ),
               ),
             ),
-          );
-        }
+          ),
+        );
       }
+      (0, _._)([_._], _.prototype, "ClosePopup", null),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "OnHover", null),
+        (0, _._)([_._], _.prototype, "OnLeave", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -116494,6 +116851,16 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  is_bot_review_pct: {
+                    _: 50,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  positivity_pct: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -117251,7 +117618,7 @@
         }
         const _ = _._.GetWithFallback(_.localized_label_image, _);
         if (!_ && _) {
-          const _ = `${(0, _._)()}${_}/${_}`;
+          const _ = _._.GenerateURLFromHashAndExt(_, _);
           return _.createElement("img", {
             loading: "lazy",
             src: _,
@@ -117313,10 +117680,11 @@
                   _.jsondata.localized_sale_product_mobile_banner,
                   _,
                 );
-              if (_?.length > 0 && _?.length > 0) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);
@@ -117598,7 +117966,7 @@
           };
         let _ = "";
         if (_.background_image) {
-          _ += `,url(${_._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _.background_image)})`;
+          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
         }
         return _.background_gradient_bottom ||
           _.background_gradient_top ||
@@ -117607,7 +117975,7 @@
           _.border_color ||
           _.border_width
           ? {
-              background:
+              backgroundImage:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",

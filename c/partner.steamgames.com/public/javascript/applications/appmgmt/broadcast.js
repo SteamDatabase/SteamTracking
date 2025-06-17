@@ -14391,10 +14391,10 @@
           _ = _.winners_info?.length > 0 ? _.winners_info[0].accountid : 0,
           [_, _] = _.useState(_),
           _ = (0, _._)(
-            `${(0, _._)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${_._.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           _ = (0, _._)(
-            `${(0, _._)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${_._.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           _ = _(_.giveaway_gid);
         let _ =

@@ -26,17 +26,17 @@
       i.d(t, { u: () => m });
       var s = i(8871),
         r = i(90626),
-        n = i(78327),
-        a = i(85585),
+        a = i(78327),
+        n = i(85585),
         l = i(7445);
       function m(e) {
         const { children: t, navTreeRef: i, NavigationManager: m, ...o } = e,
           c = r.useRef(),
           u = (0, s.Ue)(c, i);
-        if ((0, n.Qn)()) {
+        if ((0, a.Qn)()) {
           const e = window.__nav_tree_root;
           return r.createElement(
-            a.B2,
+            n.B2,
             { ...o, navTreeRef: u, parentEmbeddedNavTree: e },
             r.createElement(l.q, null, t),
           );
@@ -56,9 +56,9 @@
       });
       var s = i(34629),
         r = i(56545),
-        n = i(72034),
-        a = i(17645),
-        l = i(44332),
+        a = i(72034),
+        n = i(17645),
+        l = i(81393),
         m = i(78327),
         o = i(90626),
         c = i(68797),
@@ -134,15 +134,15 @@
               this.m_canClaimPromise);
         }
         async InternalLoadCanUserClaimItem() {
-          (0, l.w)(
+          (0, l.wT)(
             m.iA.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
           );
-          const e = r.w.Init(a.c3);
+          const e = r.w.Init(n.c3);
           e.Body().set_language(m.TS.LANGUAGE);
           let t = null;
           try {
-            const i = await a.Qm.CanClaimItem(
+            const i = await n.Qm.CanClaimItem(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             );
@@ -206,19 +206,19 @@
           );
         }
         async InternalUserClaimItem() {
-          (0, l.w)(
+          (0, l.wT)(
             m.iA.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
           ),
-            (0, l.w)(
+            (0, l.wT)(
               this.m_claimState.bCanClaimNewItem,
               "Only should be called when we previously verified you can claim something. ",
             );
-          const e = r.w.Init(a.wt);
+          const e = r.w.Init(n.wt);
           e.Body().set_language(m.TS.LANGUAGE);
           let t = null;
           try {
-            const i = await a.Qm.ClaimItem(
+            const i = await n.Qm.ClaimItem(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             );
@@ -303,11 +303,11 @@
         constructor() {}
         Init() {
           const e = (0, m.Tc)("loyalty_webapi_token", "application_config");
-          (0, l.w)(
+          (0, l.wT)(
             e,
             "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission",
           ),
-            (this.m_SteamInterface = new n.D(m.TS.WEBAPI_BASE_URL, e));
+            (this.m_SteamInterface = new a.D(m.TS.WEBAPI_BASE_URL, e));
         }
       }
       function f() {
@@ -339,31 +339,31 @@
           queryKey: [`SaleRewardsGetDefinition_${e}_${t}_${i}`],
           queryFn: async () =>
             (async function (e, t, i, s) {
-              const n = r.w.Init(a.R4);
+              const a = r.w.Init(n.R4);
               return (
-                n.Body().set_sale_def_type(t),
-                n.Body().set_language(i),
-                n.Body().set_include_community_item_def(s),
-                (await a.Qm.GetCurrentDefinition(e, n)).Body().toObject()
+                a.Body().set_sale_def_type(t),
+                a.Body().set_language(i),
+                a.Body().set_include_community_item_def(s),
+                (await n.Qm.GetCurrentDefinition(e, a)).Body().toObject()
               );
             })(s, e, t, i),
           staleTime: 1 / 0,
         });
       }
       function v(e, t, i, s) {
-        const n = (0, C.KV)();
+        const a = (0, C.KV)();
         return (0, y.I)({
           queryKey: [`GetClaimedSaleRewards_${e}_${t}_${i}_${s}`],
           queryFn: async () =>
             (async function (e, t, i, s) {
-              const n = r.w.Init(a.Ju);
+              const a = r.w.Init(n.Ju);
               return (
-                n.Body().set_sale_def_type(t),
-                n.Body().set_language(i),
-                n.Body().set_include_community_item_def(s),
-                (await a.Qm.GetClaimedSaleRewards(e, n)).Body().toObject()
+                a.Body().set_sale_def_type(t),
+                a.Body().set_language(i),
+                a.Body().set_include_community_item_def(s),
+                (await n.Qm.GetClaimedSaleRewards(e, a)).Body().toObject()
               );
-            })(n, e, t, i),
+            })(a, e, t, i),
           staleTime: 1 / 0,
         });
       }
@@ -375,48 +375,49 @@
       i.d(t, { m: () => d });
       var s = i(90626),
         r = i(22837),
-        n = i(38390),
-        a = i(27666),
-        l = i(52038),
-        m = i(61859),
-        o = i(61336),
-        c = i(78327),
-        u = i(15392);
+        a = i(38390),
+        n = i(52038),
+        l = i(61859),
+        m = i(61336),
+        o = i(78327),
+        c = i(15392),
+        u = i(51641);
       function d(e) {
         const { gidEvent: t } = e,
-          i = (0, n.RR)(t),
+          i = (0, a.RR)(t),
           [d, h] = (0, s.useMemo)(() => {
             if (
               i?.jsondata?.localized_sale_product_banner?.length > 0 &&
               i?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, r.sf)(c.TS.LANGUAGE),
-                t = m.NT.GetWithFallback(
+              const e = (0, r.sf)(o.TS.LANGUAGE),
+                t = l.NT.GetWithFallback(
                   i.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                s = m.NT.GetWithFallback(
+                s = l.NT.GetWithFallback(
                   i.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
-              if (t?.length > 0 && s?.length > 0) {
-                const e = i.clanSteamID.GetAccountID();
-                return [`${(0, a.mJ)()}${e}/${t}`, `${(0, a.mJ)()}${e}/${s}`];
-              }
+              if (t?.length > 0 && s?.length > 0)
+                return [
+                  u.z.GenerateURLFromHashAndExt(i.clanSteamID, t),
+                  u.z.GenerateURLFromHashAndExt(i.clanSteamID, s),
+                ];
             }
             return [null, null];
           }, [i]);
         return d?.length > 0 && h?.length > 0
           ? s.createElement(
               "a",
-              { href: (0, o.k2)(i.GetSaleURL()), className: u.Link },
+              { href: (0, m.k2)(i.GetSaleURL()), className: c.Link },
               s.createElement("img", {
                 src: d,
-                className: (0, l.A)(u.Banner, u.Big),
+                className: (0, n.A)(c.Banner, c.Big),
               }),
               s.createElement("img", {
                 src: h,
-                className: (0, l.A)(u.Banner, u.Mobile),
+                className: (0, n.A)(c.Banner, c.Mobile),
               }),
             )
           : null;
@@ -427,8 +428,8 @@
       i.d(t, { K: () => l });
       var s = i(34629),
         r = i(90626),
-        n = i(84933),
-        a = i(60383);
+        a = i(84933),
+        n = i(60383);
       class l extends r.Component {
         state = {
           bRenderChildren: !1,
@@ -462,7 +463,7 @@
               placeholderHeight: t,
               onRender: i,
               style: s,
-              mode: n,
+              mode: a,
               ...l
             } = this.props,
             m = this.state.bRenderChildren;
@@ -475,7 +476,7 @@
           }
           const c = this.BLoadAndUnload() ? "repeated" : "once";
           return r.createElement(
-            a.J,
+            n.J,
             {
               ref: this.m_refContainer,
               style: o,
@@ -487,15 +488,15 @@
           );
         }
       }
-      (0, s.Cg)([n.oI], l.prototype, "OnVisibilityChange", null);
+      (0, s.Cg)([a.oI], l.prototype, "OnVisibilityChange", null);
     },
     47554: (e, t, i) => {
       "use strict";
       i.r(t), i.d(t, { default: () => p });
       var s = i(90626),
         r = i(12447),
-        n = i(76217),
-        a = i(91336),
+        a = i(76217),
+        n = i(91336),
         l = i(39199),
         m = i(55263),
         o = i(95034),
@@ -513,7 +514,7 @@
           [p, f] = (0, s.useState)(!1),
           [b, g] = (0, s.useState)(!1),
           [S] = (0, m.t7)(t, { include_assets: !0 }),
-          I = (0, a.A)(),
+          I = (0, n.A)(),
           v = s.useRef(void 0);
         s.useEffect(() => v.current?.Activate(!0), []);
         const R = (0, y.Qn)(),
@@ -548,7 +549,7 @@
                   navID: "DiscoveryQueueAppWidget",
                 },
                 s.createElement(
-                  n.Z,
+                  a.Z,
                   {
                     focusable: !0,
                     className: C().DiscoveryQueueWidgetCtn,
@@ -590,13 +591,13 @@
       i.r(t), i.d(t, { default: () => m });
       var s = i(12447),
         r = i(90626),
-        n = i(91336),
-        a = i(96236),
+        a = i(91336),
+        n = i(96236),
         l = i(71922);
       function m() {
-        const e = (0, n.A)();
+        const e = (0, a.A)();
         return r.createElement(
-          a.K,
+          n.K,
           { placeholderHeight: "200px", rootMargin: "0px 0px 100% 0px" },
           r.createElement(
             s.u,
@@ -611,14 +612,14 @@
       i.r(t), i.d(t, { default: () => u });
       var s = i(90626),
         r = i(61859),
-        n = i(5907),
-        a = i(26749),
+        a = i(5907),
+        n = i(26749),
         l = i(76217),
         m = i(78327),
         o = i(51706),
         c = i(738);
       function u(e) {
-        const t = (0, a.G)(),
+        const t = (0, n.G)(),
           [i, u] = (0, s.useState)(!1),
           d = s.useCallback(() => {
             m.iA.logged_in
@@ -647,7 +648,7 @@
                 (0, r.we)("#DiscoveryQueue_OpenWizard"),
               ),
               i &&
-                s.createElement(n.jM, {
+                s.createElement(a.jM, {
                   bWizardVisible: i,
                   fnCloseModal: () => u(!1),
                   eStoreDiscoveryQueueType: 0,
@@ -665,20 +666,20 @@
       i.d(t, { E: () => y });
       var s = i(90626),
         r = i(86709),
-        n = i(45747),
-        a = i(74500),
+        a = i(45747),
+        n = i(74500),
         l = i(57168);
       function m(e, t) {
         return e.filter((e) => !t.includes(e));
       }
-      var o = class extends a.Q {
+      var o = class extends n.Q {
           #e;
           #t;
           #i;
           #s;
           #r;
-          #n;
           #a;
+          #n;
           #l;
           constructor(e, t, i) {
             super(),
@@ -717,8 +718,8 @@
                 );
                 const s = t.map((e) => e.observer),
                   r = s.map((e) => e.getCurrentResult()),
-                  n = s.some((t, i) => t !== e[i]);
-                (e.length !== s.length || n) &&
+                  a = s.some((t, i) => t !== e[i]);
+                (e.length !== s.length || a) &&
                   ((this.#r = s),
                   (this.#t = r),
                   this.hasListeners() &&
@@ -763,11 +764,11 @@
           }
           #u(e, t) {
             return t
-              ? ((this.#n && this.#t === this.#l && t === this.#a) ||
-                  ((this.#a = t),
+              ? ((this.#a && this.#t === this.#l && t === this.#n) ||
+                  ((this.#n = t),
                   (this.#l = this.#t),
-                  (this.#n = (0, l.BH)(this.#n, t(e)))),
-                this.#n)
+                  (this.#a = (0, l.BH)(this.#a, t(e)))),
+                this.#a)
               : e;
           }
           #o(e) {
@@ -784,7 +785,7 @@
                   );
                   i.push({
                     defaultedQueryOptions: s,
-                    observer: e ?? new n.$(this.#e, s),
+                    observer: e ?? new a.$(this.#e, s),
                   });
                 }
               }),
@@ -810,7 +811,7 @@
           }
           #c() {
             if (this.hasListeners()) {
-              this.#n !==
+              this.#a !==
                 this.#u(this.#d(this.#t, this.#i), this.#s?.combine) &&
                 r.j.batch(() => {
                   this.listeners.forEach((e) => {
@@ -827,24 +828,24 @@
         _ = i(44407),
         C = i(19866);
       function y({ queries: e, ...t }, i) {
-        const a = (0, c.jE)(i),
+        const n = (0, c.jE)(i),
           l = (0, u.w)(),
           m = (0, d.h)(),
           y = s.useMemo(
             () =>
               e.map((e) => {
-                const t = a.defaultQueryOptions(e);
+                const t = n.defaultQueryOptions(e);
                 return (
                   (t._optimisticResults = l ? "isRestoring" : "optimistic"), t
                 );
               }),
-            [e, a, l],
+            [e, n, l],
           );
         y.forEach((e) => {
           (0, _.jv)(e), (0, h.LJ)(e, m);
         }),
           (0, h.wZ)(m);
-        const [p] = s.useState(() => new o(a, y, t)),
+        const [p] = s.useState(() => new o(n, y, t)),
           [f, b, g] = p.getOptimisticResult(y, t.combine);
         s.useSyncExternalStore(
           s.useCallback(
@@ -861,7 +862,7 @@
           ? f.flatMap((e, t) => {
               const i = y[t];
               if (i) {
-                const t = new n.$(a, i);
+                const t = new a.$(n, i);
                 if ((0, _.EU)(i, e)) return (0, _.iL)(i, t, m);
                 (0, _.nE)(e, l) && (0, _.iL)(i, t, m);
               }
@@ -877,7 +878,7 @@
               result: e,
               errorResetBoundary: m,
               throwOnError: i.throwOnError,
-              query: a.getQueryCache().get(i.queryHash),
+              query: n.getQueryCache().get(i.queryHash),
             })
           );
         });

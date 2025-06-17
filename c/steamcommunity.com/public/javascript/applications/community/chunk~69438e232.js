@@ -6431,16 +6431,10 @@
           _ = (0, _._)(_.args, "id"),
           _ = (0, _._)(_.args, "buttoncolor"),
           _ = _(_),
-          _ = _.context.event;
+          _ = _.context.event,
+          _ = _._(_, _.language, null == _ ? void 0 : _.rtime32_last_modified);
         if (void 0 === _) return _.children || "";
-        if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(
-            _,
-            _.language,
-            null == _ ? void 0 : _.rtime32_last_modified,
-          );
-          _ = "string" == typeof _ ? _ : _[1];
-        }
+        _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _) {
           if ("button" == _ && _)
             return {
@@ -8181,12 +8175,13 @@
         let _ =
           (0, _._)(_.args, "src") ||
           (null === (_ = _.children) || void 0 === _ ? void 0 : _.toString());
-        if (!_ && ((_ = (0, _._)(_.args)), null == !_)) return null;
+        _ || (_ = (0, _._)(_.args));
         const _ = _._(
           _,
           _.language,
           null == _ ? void 0 : _.rtime32_last_modified,
         );
+        if (null == _) return null;
         if ("string" == typeof _) {
           let _;
           return (
@@ -10883,8 +10878,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const _ = _.photo ? (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)) : null,
-          _ = _.photo ? ("string" == typeof _ ? _ : _[1]) : null,
+        const _ = (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)),
+          _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
           _ = Boolean(_.title),
           _ = Boolean(_.company);
         return _.createElement(
@@ -11007,76 +11002,74 @@
           );
         }
       }
+      function _(_) {
+        const {
+            photo: _,
+            name: __webpack_require__,
+            title: _,
+            company: _,
+            hidePhotoInCompactView: _,
+          } = _,
+          _ = (0, _._)(_, (0, _._)(_._.LANGUAGE)),
+          _ = _ && !_ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_),
+          _ = Boolean(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerOuter,
+          },
+          _.createElement(
+            _,
+            {
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().Speaker,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SpeakerInfoOuter,
+                },
+                !!_ &&
+                  _.createElement("img", {
+                    src: _,
+                  }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpeakerInfoInner,
+                  },
+                  _.createElement("div", null, __webpack_require__),
+                  (_ || _) &&
+                    _.createElement(
+                      "div",
+                      null,
+                      _ &&
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().SpeakerTitle,
+                          },
+                          _,
+                        ),
+                      _ && _ && _.createElement("span", null, ", "),
+                      _ && _.createElement("span", null, _),
+                    ),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
       (_.sm_embeddedElements = new _._("presenter-hover-source-elements")),
         (0, _._)([_._], _.prototype, "ClosePopup", null),
         (0, _._)([_._], _.prototype, "OnScroll", null),
         (0, _._)([_._], _.prototype, "OnHover", null),
         (0, _._)([_._], _.prototype, "OnLeave", null);
-      class _ extends _.Component {
-        render() {
-          const _ = this.props.photo
-              ? (0, _._)(this.props.photo, (0, _._)(_._.LANGUAGE))
-              : null,
-            _ =
-              this.props.photo && !this.props.hidePhotoInCompactView
-                ? "string" == typeof _
-                  ? _
-                  : _[1]
-                : null,
-            _ = Boolean(this.props.title),
-            _ = Boolean(this.props.company);
-          return _.createElement(
-            "div",
-            {
-              className: _().SpeakerOuter,
-            },
-            _.createElement(
-              _,
-              {
-                ...this.props,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Speaker,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SpeakerInfoOuter,
-                  },
-                  !!_ &&
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SpeakerInfoInner,
-                    },
-                    _.createElement("div", null, this.props.name),
-                    (_ || _) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        _ &&
-                          _.createElement(
-                            "span",
-                            {
-                              className: _().SpeakerTitle,
-                            },
-                            this.props.title,
-                          ),
-                        _ && _ && _.createElement("span", null, ", "),
-                        _ && _.createElement("span", null, this.props.company),
-                      ),
-                  ),
-                ),
-              ),
-            ),
-          );
-        }
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -11537,10 +11530,11 @@
               if (
                 (null == _ ? void 0 : _.length) > 0 &&
                 (null == _ ? void 0 : _.length) > 0
-              ) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              )
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);

@@ -753,7 +753,7 @@
                 r[r.length - 1].type == this.schema.nodes.hard_break &&
                 (r = r.slice(0, -1));
               const n = this.m_mapPMBBNodes.get(e.acceptNode.name);
-              (0, i.w)(
+              (0, i.wT)(
                 n,
                 `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
               ),
@@ -852,7 +852,7 @@
                   : t.get(e.type.name)),
                   r
                     ? n.accumulate(r, e)
-                    : ((0, i.w)(
+                    : ((0, i.wT)(
                         !1,
                         `Couldn't accept ${e.type.name} at root of document, converting to paragraph`,
                       ),
@@ -905,7 +905,7 @@
                   if (-1 === t.indexOf(a)) {
                     n || (n = t.slice());
                     const o = e.mapMarks.get(a.type);
-                    if (((0, i.w)(o, "mark missing bbtag"), o)) {
+                    if (((0, i.wT)(o, "mark missing bbtag"), o)) {
                       n.push(a);
                       const { args: e, tag: t } = p(o, a);
                       r += (0, l.CS)(t, e);
@@ -931,7 +931,7 @@
         const a = t.slice();
         for (
           ;
-          n.length && ((0, i.w)(a.length, "no marks left to close"), a.length);
+          n.length && ((0, i.wT)(a.length, "no marks left to close"), a.length);
         ) {
           const t = a.pop(),
             o = e.mapMarks.get(t.type),

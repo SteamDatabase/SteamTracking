@@ -3,6 +3,24 @@
   {
     chunkid: (module) => {
       module.exports = {
+        PickerContainer: "_1qhUOyXySrP5wxstyHcNfi",
+        SearchInput: "lwt4uhPJr5zMlKtOXk7KH",
+        Hilight: "_5oO3lqjoO6KmQtAJqUDAz",
+        ImagesContainer: "_2MNEtVBTbM588lRBH4iSWU",
+        UploaderContainer: "dR0NeWIeEFgvr-YGjRojm",
+        UploaderTitle: "DL9t5BhLQBnOak9WodTTy",
+        UploaderRunning: "_1lRF9BfrKTlDFFAmqE7f6H",
+        UploaderDesc: "_2fhbnZhBGr6n624Mkviv_M",
+        UploadError: "_3B5rV9V3B5jZyTkaOOpLZC",
+        UploadMessageAndButtonsContainer: "_3OQ66CWxfAqQrPyk3ENMN9",
+        UploadSuccess: "_2RXjwOiBQmS6QJlGOp0zjR",
+        UploadDismissButton: "_3j1ztsyZKmnW7dgsO7MeBX",
+        EnableClanImagesV2Ctn: "_25bW2wRPaIRCWnvjX0pmYP",
+        EnableClanImagesV2: "_3khYXUyapfKawwe6aLY1YD",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         LightboxDialog: "_3ZlRVLZBBJ5AlqcTXgH39I",
         LightboxImageContainer: "_2Q0i393KuCPDvhYcQE_8hn",
         LightboxMainImage: "_1QaLXa9BqcHtuXQn-WeKKB",
@@ -77,22 +95,6 @@
         Selected: "_3JVN2Ta1MlQnuMnqPo0XR8",
         ImgCtn: "_248ADrw9QzPyhcxjqlaykT",
         Name: "TzsVI0_4scOG258SCeyqz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PickerContainer: "_3hEmqKnspI1WSyye2lMCnU",
-        SearchInput: "Y12tprgNrNvnZ-eZvch6X",
-        Hilight: "_13t_BRkK7eD3KorHIRnCQg",
-        ImagesContainer: "oCi3RlRuxmlmslNXhrvbu",
-        UploaderContainer: "qkC7CxPM6pro8iwepOfPA",
-        UploaderTitle: "_2XGqDBgqyWPUyswJ-2bQy4",
-        UploaderRunning: "_3_uPXn6Boi1uEsOtepIaKb",
-        UploaderDesc: "_2BZckGhvMPS5VS4DD9bpvT",
-        UploadError: "_2dVHFBaaWfiXq7Ea3wn-wJ",
-        UploadMessageAndButtonsContainer: "_3rToctsao7fc2jlrU7bnW1",
-        UploadSuccess: "_2WvOuad9iiZkV_HKI8NYlO",
-        UploadDismissButton: "_1HjnUXpsmTADB1fcOmHSpX",
       };
     },
     chunkid: (module) => {
@@ -191,6 +193,7 @@
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
       };
     },
     chunkid: (module) => {
@@ -229,9 +232,75 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+          editModel: null,
+          bClanImagesV2: !1,
+          setClanImagesV2: void 0,
+        },
+        _ = _.createContext(_);
+      function _(_) {
+        const { children: _, editModel: __webpack_require__ } = _,
+          { bClanImagesV2: _, setClanImagesV2: _ } = (function () {
+            const _ = "storeUseClanImagesV2",
+              [_, __webpack_require__] = _.useState(
+                () => !!localStorage.getItem(_),
+              ),
+              _ = _.useCallback((_) => {
+                _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
+                  __webpack_require__(_);
+              }, []);
+            return {
+              bClanImagesV2: _,
+              setClanImagesV2: _,
+            };
+          })();
+        return _.createElement(
+          _.Provider,
+          {
+            value: {
+              ..._,
+              editModel: __webpack_require__,
+              bClanImagesV2: _,
+              setClanImagesV2: _,
+            },
+          },
+          _.createElement(
+            _._,
+            {
+              location: 1,
+            },
+            _,
+          ),
+        );
+      }
+      function _() {
+        return _.useContext(_).editModel;
+      }
+      function _() {
+        const _ = _.useContext(_),
+          _ =
+            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
+            2 == _._.EUNIVERSE &&
+            _._.is_support;
+        return {
+          bClanImagesV2: _.bClanImagesV2 && _,
+          bClanImagesV2Allowed: _,
+          setClanImagesV2: _.setClanImagesV2,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -247,6 +316,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -261,169 +331,146 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              bPrefetchingLanguages: !0,
-            }),
-            (this.m_cancelSignal = _().CancelToken.source());
-        }
-        componentDidMount() {
-          if (this.props.closeModal) {
-            const { primaryLocalizedImage: _ } = this.props;
-            _._.SetPrimaryImageForImageGroup(_, "localized_image_group"),
-              this.LoadImageResolution(),
-              this.LoadAvailableLocalizations();
-          }
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("ClanImagePicker component unmounted");
-        }
-        async LoadImageResolution() {
-          try {
-            const { primaryLocalizedImage: _ } = this.props,
-              _ = _._.InitFromClanID(_.clanAccountID),
-              _ = await _._.AsyncGetImageResolution(
-                _,
-                _.image_hash,
-                _.file_type,
-                this.m_cancelSignal,
-                !1,
-              );
-            this.m_cancelSignal.token.reason ||
-              this.setState({
-                imageSize: _,
-              });
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
-          }
-        }
-        async LoadAvailableLocalizations() {
-          try {
-            await _._.DetermineAvailableLocalizationForGroup(
-              this.m_cancelSignal,
-            ),
-              this.m_cancelSignal.token.reason ||
-                this.setState({
-                  bPrefetchingLanguages: !1,
-                });
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
-          }
-        }
-        OnCommitGroup() {}
-        render() {
-          const {
-              closeModal: _,
-              primaryLocalizedImage: _,
-              clanSteamID: __webpack_require__,
-              rgRealmList: _,
-              fnLangHasData: _,
-              appid: _,
-              eventModel: _,
-              partnerEventStore: _,
-            } = this.props,
-            { bPrefetchingLanguages: _, imageSize: _ } = this.state,
-            _ = !_ && _,
-            _ = _ ? ` - ${_.width}x${_.height}` : "",
-            _ = (0, _._)(_.file_type).slice(1),
-            _ = _ && {
-              width: _.width,
-              height: _.height,
-            },
-            _ = _._.GenerateArtworkURLFromHashAndExtensions(
-              __webpack_require__,
-              _._.GetHashAndExt(_),
-            );
-          return _.createElement(
+      const _ = (0, _._)((_) => {
+        const {
+            closeModal: _,
+            appid: __webpack_require__,
+            eventModel: _,
+            partnerEventStore: _,
+            primaryLocalizedImage: _,
+            clanSteamID: _,
+            fnSetImageURL: _,
+            rgRealmList: _,
+            fnLangHasData: _,
+            fnGetImageHash: _,
+          } = _,
+          [_, _] = _.useState(),
+          [_, _] = _.useState(!0),
+          _ = (0, _._)(() => _().CancelToken.source());
+        _.useEffect(
+          () => () => _.cancel("LocalizedImageDialog component unmounted"),
+          [_],
+        );
+        const _ = _.useCallback(async () => {
+            try {
+              const _ = _._.InitFromClanID(_.clanAccountID),
+                _ = await _._.AsyncGetImageResolution(
+                  _,
+                  _.image_hash,
+                  _.file_type,
+                  _,
+                  !1,
+                );
+              _.token.reason || _(_);
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
+            }
+          }, [_, _.clanAccountID, _.file_type, _.image_hash]),
+          _ = _.useCallback(async () => {
+            try {
+              await _._.DetermineAvailableLocalizationForGroup(_),
+                _.token.reason || _(!1);
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
+            }
+          }, [_]);
+        _.useEffect(() => {
+          _ &&
+            (_._.SetPrimaryImageForImageGroup(_, "localized_image_group"),
+            _(),
+            _());
+        }, [_, _, _, _]);
+        const _ = !_ && _,
+          _ = _ ? ` - ${_.width}x${_.height}` : "",
+          _ = (0, _._)(_.file_type).slice(1),
+          _ = _ && {
+            width: _.width,
+            height: _.height,
+          },
+          _ = _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
+        return _.createElement(
+          _._,
+          {
+            bAllowFullSize: !0,
+            onCancel: _,
+            closeModal: _,
+          },
+          _.createElement(_._, null, (0, _._)("#ImagePickerLoc_Title")),
+          _.createElement(
             _._,
-            {
-              onOK: this.OnCommitGroup,
-              bAllowFullSize: !0,
-              onCancel: _,
-              closeModal: _,
-            },
-            _.createElement(_._, null, (0, _._)("#ImagePickerLoc_Title")),
+            null,
             _.createElement(
               _._,
               null,
               _.createElement(
-                _._,
-                null,
+                "div",
+                {
+                  className: _().FlexRowContainer,
+                },
                 _.createElement(
-                  "div",
+                  "span",
                   {
-                    className: _().FlexRowContainer,
+                    className: _().FlexColumnContainer,
                   },
                   _.createElement(
-                    "span",
-                    {
-                      className: _().FlexColumnContainer,
-                    },
-                    _.createElement(
-                      "div",
-                      null,
-                      (0, _._)("#ImagePickerLoc_Default"),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
-                      }),
-                    ),
-                    _.createElement("img", {
-                      className: _.TitleImg,
-                      src: _,
+                    "div",
+                    null,
+                    (0, _._)("#ImagePickerLoc_Default"),
+                    _.createElement(_._, {
+                      tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
                     }),
-                    _.createElement("div", null, _.file_name + _ + " - " + _),
+                  ),
+                  _.createElement("img", {
+                    className: _.TitleImg,
+                    src: _,
+                  }),
+                  _.createElement("div", null, _.file_name + _ + " - " + _),
+                ),
+              ),
+              !_ &&
+                _.createElement(_._, {
+                  position: "center",
+                  string: (0, _._)("#Loading"),
+                }),
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_._, {
+                    clanSteamID: _,
+                    rgSupportArtwork: [],
+                    localizedPrimaryImage: _,
+                    forceResolution: _,
+                    bAllowPreviousClanImageSelection: !0,
+                    fnSetImageURL: _,
+                    rgRealmList: _,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ArtworkBar,
+                    },
+                    _.createElement(_._, {
+                      clanSteamID: _,
+                      eventModel: _,
+                      artworkType: "localized_image_group",
+                      title: (0, _._)("#ImagePickerLoc_Title"),
+                      realms: _,
+                      fnLangHasData: _,
+                      appid: __webpack_require__,
+                      fnGetImageHashAndExt: _,
+                      fnSetImageURL: _,
+                      partnerEventStore: _,
+                    }),
                   ),
                 ),
-                !_ &&
-                  _.createElement(_._, {
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  }),
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_._, {
-                      clanSteamID: __webpack_require__,
-                      rgSupportArtwork: [],
-                      localizedPrimaryImage: _,
-                      forceResolution: _,
-                      bAllowPreviousClanImageSelection: !0,
-                      fnSetImageURL: this.props.fnSetImageURL,
-                      rgRealmList: this.props.rgRealmList,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ArtworkBar,
-                      },
-                      _.createElement(_._, {
-                        clanSteamID: __webpack_require__,
-                        eventModel: _,
-                        artworkType: "localized_image_group",
-                        title: (0, _._)("#ImagePickerLoc_Title"),
-                        realms: _,
-                        fnLangHasData: _,
-                        appid: _,
-                        fnGetImageHashAndExt: this.props.fnGetImageHash,
-                        fnSetImageURL: this.props.fnSetImageURL,
-                        partnerEventStore: _,
-                      }),
-                    ),
-                  ),
-              ),
             ),
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnCommitGroup", null),
-        (_ = (0, _._)([_._], _));
-      var _,
-        _ = __webpack_require__("chunkid"),
+          ),
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = (0, _.useRef)(null);
@@ -533,47 +580,42 @@
           )
         );
       }
-      let _ = (_ = class extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.m_cancelSignal = _().CancelToken.source()),
-            (this.m_searchInput = null),
-            (this.m_mapClanFailedToLoad = new Map()),
-            (this.m_clanImageUploader = null),
-            (this.state = {
-              filenameSearch: "",
-              uploadToken: 0,
-              bLoading: !_._.BHasLoadedClanImages(this.props.clanSteamID),
-            });
-        }
-        componentDidMount() {
-          this.state.bLoading && this.HandleLoadClanImages();
-        }
-        componentDidUpdate(_) {
-          (this.props.clanSteamID.GetAccountID() ==
-            _.clanSteamID.GetAccountID() &&
-            _._.BHasLoadedClanImages(this.props.clanSteamID)) ||
-            (this.state.bLoading ||
-              this.setState({
-                bLoading: !0,
-              }),
-            this.HandleLoadClanImages());
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("ClanImagePicker component unmounted");
-        }
-        HandleLoadClanImages() {
-          this.m_mapClanFailedToLoad.has(
-            this.props.clanSteamID.GetAccountID(),
-          ) ||
-            _._.LoadClanImages(this.props.clanSteamID, !1, this.m_cancelSignal)
-              .then(() => {
-                this.m_cancelSignal.token.reason ||
-                  this.setState({
-                    bLoading: !1,
-                  });
-              })
-              .catch((_) => {
+      var _ = __webpack_require__("chunkid");
+      let _ = 1;
+      const _ = (0, _._)((_) => {
+        const {
+            clanSteamID: _,
+            appid: __webpack_require__,
+            imageInsertCallBack: _,
+            partnerEventStore: _,
+            bHideDragAndDrop: _,
+            bShowLightBox: _,
+            fnSetImageURL: _,
+            rgRealmList: _,
+            fnLangHasData: _,
+            fnGetImageHash: _,
+          } = _,
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(!_._.BHasLoadedClanImages(_)),
+          [_, _] = _.useState(void 0),
+          _ = (0, _._)(() => _().CancelToken.source());
+        _.useEffect(
+          () => () => _.cancel("ClanImagePicker component unmounted"),
+          [_],
+        );
+        const _ = (0, _._)(() => new Map()),
+          [_, _] = (0, _.useState)(null),
+          { bClanImagesV2: _ } = (0, _._)(),
+          _ = _.GetAccountID(),
+          _ = _.useCallback(() => _._.LoadClanImages(_, !1, _.token), [_, _]),
+          _ = _.useCallback(async () => {
+            if (!_.has(_.GetAccountID()))
+              try {
+                await _(), _.token.reason || _(!1);
+              } catch (_) {
                 let _ = (0, _._)(_);
                 console.error(
                   "ClanImagePicker Failed: " +
@@ -581,241 +623,216 @@
                     " errCode: " +
                     _.strErrorMsg,
                 ),
-                  this.m_mapClanFailedToLoad.set(
-                    this.props.clanSteamID.GetAccountID(),
-                    _.strErrorMsg,
-                  ),
-                  this.m_cancelSignal.token.reason ||
-                    this.setState({
-                      bLoading: !1,
-                      strErrMsg: _.strErrorMsg,
-                    });
-              });
-        }
-        onUploaderDismiss() {
-          this.setState({
-            filenameSearch: this.state.filenameSearch,
-            uploadToken: null,
-          });
-        }
-        async OnDropFiles(_) {
-          if (_ && _.length > 0) {
-            this.m_clanImageUploader = new _._(
-              this.props.clanSteamID,
-              null,
-              this.props.rgRealmList,
-              _._.Get().GetCurEditLanguage(),
-            );
-            let _ = !0,
-              _ = Array.from(_);
-            for (let _ = 0; _ && _ < _.length; _++) {
-              let _ = _[_];
-              (_ = await this.m_clanImageUploader.AddImage(_, 0, null)),
-                _ ||
-                  (console.error(
-                    "ClanImagePicker.OnDropFiles: failed on i=" +
-                      _ +
-                      " file=" +
-                      _.name,
-                  ),
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strDescription: (0, _._)("#ImagePicker_Error", _.name),
-                    }),
-                    window,
-                  ));
+                  _.set(_.GetAccountID(), _.strErrorMsg),
+                  _.token.reason || (_(!1), _(_.strErrorMsg));
+              }
+          }, [_, _, _, _]);
+        _.useEffect(() => {
+          _ && _();
+        }, [_, _]);
+        const _ = _.useCallback(() => {
+          _(!0), _();
+        }, [_]);
+        _.useEffect(() => {
+          _();
+        }, [_, _]);
+        const _ = _._.BHasLoadedClanImages(_);
+        _.useEffect(() => {
+          _ || _();
+        }, [_, _]);
+        const _ = () => {
+            _(void 0), _(void 0);
+          },
+          _ = (_) => {
+            if (null != _) {
+              const _ = _[_];
+              _(),
+                requestAnimationFrame(() => {
+                  _(_, _);
+                });
             }
-            return (
-              _ &&
-                (this.setState({
-                  filenameSearch: "",
-                  uploadToken: ++_.m_uploaderCounter,
-                }),
-                this.m_clanImageUploader.UploadAllImages()),
-              _
-            );
-          }
-          return !1;
-        }
-        GetLastUploadFiles() {
-          return this.m_clanImageUploader
-            ? this.m_clanImageUploader.GetFilesToUpload()
-            : null;
-        }
-        BFileUploadCompleted(_) {
-          return (
-            !!this.m_clanImageUploader &&
-            this.m_clanImageUploader.BIsFileCompleted(_)
-          );
-        }
-        OnExpandImage(_) {
-          if (_ && this.props.bShowLightBox) {
-            let _ = _._.GetFilteredClanImages(
-                this.props.clanSteamID,
-                this.state.filenameSearch.trim().toLowerCase(),
-              ),
-              _ = _.findIndex((_, _, _) => _.imageid == _.imageid);
-            _ >= 0 &&
-              this.setState({
-                photoIndex: _,
-                filteredClanImages: _,
-              });
-          }
-        }
-        OnExpandExitImage() {
-          this.setState({
-            photoIndex: void 0,
-            filteredClanImages: void 0,
-          });
-        }
-        OnHandleExpandedFullSize() {
-          this.InternalHandleExpandedAction(_._.k_eInsertFullImage);
-        }
-        OnHandleExpandedThumbnail() {
-          this.InternalHandleExpandedAction(_._.k_eInsertThumbnail);
-        }
-        InternalHandleExpandedAction(_) {
-          if (null != this.state.photoIndex) {
-            const _ = this.state.filteredClanImages[this.state.photoIndex];
-            this.OnExpandExitImage(),
-              requestAnimationFrame(() => {
-                this.props.imageInsertCallBack(_, _);
-              });
-          }
-        }
-        InternalOpenLocalizeImageGroup(_) {
-          const { clanSteamID: _, partnerEventStore: __webpack_require__ } =
-            this.props;
-          (0, _._)(
-            _.createElement(_, {
-              primaryLocalizedImage: _,
-              appid: this.props.appid,
-              eventModel: void 0,
-              clanSteamID: _,
-              fnSetImageURL: this.props.fnSetImageURL,
-              rgRealmList: this.props.rgRealmList,
-              fnLangHasData: this.props.fnLangHasData,
-              fnGetImageHash: this.props.fnGetImageHash,
-              partnerEventStore: __webpack_require__,
-            }),
-            window,
-          );
-        }
-        render() {
-          if (this.state.strErrMsg)
-            return _.createElement(
-              "div",
-              null,
-              _.createElement("div", null, (0, _._)("#Error_Message")),
-              _.createElement("div", null, this.state.strErrMsg),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Button),
-                  onClick: this.HandleLoadClanImages,
-                },
-                (0, _._)("#Button_Retry"),
-              ),
-            );
-          if (this.state.bLoading)
-            return _.createElement(_._, {
-              position: "center",
-              string: (0, _._)("#Loading"),
-            });
-          let _ = this.state.filteredClanImages,
-            _ = this.state.photoIndex;
-          const { clanSteamID: __webpack_require__ } = this.props;
+          };
+        if (_)
           return _.createElement(
             "div",
-            {
-              className: (0, _._)(_().PickerContainer),
-            },
-            _.createElement(_._, {
-              fnSetImageSearch: (_) =>
-                this.setState({
-                  filenameSearch: _,
-                }),
-            }),
+            null,
+            _.createElement("div", null, (0, _._)("#Error_Message")),
+            _.createElement("div", null, _),
             _.createElement(
               "div",
               {
-                className: _().ImagesContainer,
+                className: (0, _._)(_().Button),
+                onClick: _,
               },
-              _.createElement(_._, {
-                clanAccountID: __webpack_require__.GetAccountID(),
-                fileNameSearch: this.state.filenameSearch,
-                imageInsertCallBack: this.props.imageInsertCallBack,
-                fnOnExpandImage: this.OnExpandImage,
-                insertActions: this.props.insertActions,
-                InternalOpenLocalizeImageGroup:
-                  this.InternalOpenLocalizeImageGroup,
-              }),
+              (0, _._)("#Button_Retry"),
             ),
-            this.state.uploadToken > 0 &&
-              _.createElement(_, {
-                key: "clanimageuploaderview" + this.state.uploadToken,
-                uploader: this.m_clanImageUploader,
-                onDismiss: this.onUploaderDismiss,
-              }),
-            !this.props.bHideDragAndDrop &&
-              _.createElement(_._, {
-                onDropFiles: this.OnDropFiles,
-              }),
-            null != _ &&
-              _.createElement(_, {
-                mainSrc: _[_].url,
-                mainSrcThumbnail: _[_].thumb_url,
-                imageTitle: _[_].file_name,
-                nextSrc: _ < _.length - 1 ? _[_ + 1].url : void 0,
-                nextSrcThumbnail:
-                  _ < _.length - 1 ? _[_ + 1].thumb_url : void 0,
-                nextLabel: (0, _._)("#ClanImage_Next"),
-                prevLabel: (0, _._)("#ClanImage_Prev"),
-                closeLabel: (0, _._)("#ClanImage_Close"),
-                zoomInLabel: (0, _._)("#ClanImage_ZoomIn"),
-                zoomOutLabel: (0, _._)("#ClanImage_ZoomOut"),
-                imageLoadErrorMessage: (0, _._)("#ClanImage_ImageLoadFailure"),
-                prevSrc: _ > 0 ? _[_ - 1].url : void 0,
-                prevSrcThumbnail: _ > 0 ? _[_ - 1].thumb_url : void 0,
-                onMoveNextRequest: () =>
-                  this.setState({
-                    photoIndex: _ + 1,
-                  }),
-                onMovePrevRequest: () =>
-                  this.setState({
-                    photoIndex: _ - 1,
-                  }),
-                onCloseRequest: this.OnExpandExitImage,
-                toolbarButtons: [
-                  _.createElement(
-                    "button",
-                    {
-                      key: "fullsize",
-                      className: _().Full,
-                      onClick: this.OnHandleExpandedFullSize,
-                    },
-                    (0, _._)("#ImagePicker_FullSize"),
-                  ),
-                  _.createElement(
-                    "button",
-                    {
-                      key: "thumbnail",
-                      className: _().Full,
-                      onClick: this.OnHandleExpandedThumbnail,
-                    },
-                    (0, _._)("#ImagePicker_Thumbnail"),
-                  ),
-                ],
-              }),
           );
-        }
+        if (_)
+          return _.createElement(_._, {
+            position: "center",
+            string: (0, _._)("#Loading"),
+          });
+        let _ = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().PickerContainer),
+          },
+          _.createElement(_._, {
+            fnSetImageSearch: (_) => _(_),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().ImagesContainer,
+            },
+            _.createElement(_._, {
+              clanAccountID: _.GetAccountID(),
+              fileNameSearch: _,
+              imageInsertCallBack: _,
+              fnOnExpandImage: (_) => {
+                if (_ && _) {
+                  let _ = _._.GetFilteredClanImages(_, _.trim().toLowerCase()),
+                    _ = __webpack_require__.findIndex(
+                      (_, _, _) => _.imageid == _.imageid,
+                    );
+                  _ >= 0 && (_(_), _(_));
+                }
+              },
+              InternalOpenLocalizeImageGroup: (_) => {
+                (0, _._)(
+                  _.createElement(_, {
+                    primaryLocalizedImage: _,
+                    appid: __webpack_require__,
+                    eventModel: void 0,
+                    clanSteamID: _,
+                    fnSetImageURL: _,
+                    rgRealmList: _,
+                    fnLangHasData: _,
+                    fnGetImageHash: _,
+                    partnerEventStore: _,
+                  }),
+                  window,
+                );
+              },
+            }),
+          ),
+          _ > 0 &&
+            _.createElement(_, {
+              key: "clanimageuploaderview" + _,
+              uploader: _,
+              onDismiss: () => {
+                _(_), _(null);
+              },
+            }),
+          !_ &&
+            _.createElement(_._, {
+              onDropFiles: async (_) => {
+                if (_ && _.length > 0) {
+                  const _ = _ ? new _._(_, null) : new _._(_, null);
+                  _(_);
+                  let _ = !0,
+                    _ = Array.from(_);
+                  for (let _ = 0; _ && _ < _.length; _++) {
+                    let _ = _[_];
+                    (_ = await __webpack_require__.AddImage(_, 0)),
+                      _ ||
+                        (console.error(
+                          "ClanImagePicker.OnDropFiles: failed on i=" +
+                            _ +
+                            " file=" +
+                            _.name,
+                        ),
+                        (0, _._)(
+                          _.createElement(_._, {
+                            strDescription: (0, _._)(
+                              "#ImagePicker_Error",
+                              _.name,
+                            ),
+                          }),
+                          window,
+                        ));
+                  }
+                  return (
+                    _ && (_(""), _(++_), __webpack_require__.UploadAllImages()),
+                    _
+                  );
+                }
+                return !1;
+              },
+            }),
+          null != _ &&
+            _.createElement(_, {
+              mainSrc: _[_].url,
+              mainSrcThumbnail: _[_].thumb_url,
+              imageTitle: _[_].file_name,
+              nextSrc: _ < _.length - 1 ? _[_ + 1].url : void 0,
+              nextSrcThumbnail: _ < _.length - 1 ? _[_ + 1].thumb_url : void 0,
+              nextLabel: (0, _._)("#ClanImage_Next"),
+              prevLabel: (0, _._)("#ClanImage_Prev"),
+              closeLabel: (0, _._)("#ClanImage_Close"),
+              zoomInLabel: (0, _._)("#ClanImage_ZoomIn"),
+              zoomOutLabel: (0, _._)("#ClanImage_ZoomOut"),
+              imageLoadErrorMessage: (0, _._)("#ClanImage_ImageLoadFailure"),
+              prevSrc: _ > 0 ? _[_ - 1].url : void 0,
+              prevSrcThumbnail: _ > 0 ? _[_ - 1].thumb_url : void 0,
+              onMoveNextRequest: () => _(_ + 1),
+              onMovePrevRequest: () => _(_ - 1),
+              onCloseRequest: _,
+              toolbarButtons: [
+                _.createElement(
+                  "button",
+                  {
+                    key: "fullsize",
+                    className: _().Full,
+                    onClick: () => {
+                      _(_._.k_eInsertFullImage);
+                    },
+                  },
+                  (0, _._)("#ImagePicker_FullSize"),
+                ),
+                _.createElement(
+                  "button",
+                  {
+                    key: "thumbnail",
+                    className: _().Full,
+                    onClick: () => {
+                      _(_._.k_eInsertThumbnail);
+                    },
+                  },
+                  (0, _._)("#ImagePicker_Thumbnail"),
+                ),
+              ],
+            }),
+          _.createElement(_, null),
+        );
       });
+      function _(_) {
+        const {
+          bClanImagesV2: _,
+          bClanImagesV2Allowed: __webpack_require__,
+          setClanImagesV2: _,
+        } = (0, _._)();
+        return _.createElement(
+          _.Fragment,
+          null,
+          __webpack_require__ &&
+            _ &&
+            _.createElement(_._, {
+              className: _().EnableClanImagesV2,
+              label: "New media conversion",
+              checked: _,
+              onChange: (_) => _(_),
+            }),
+        );
+      }
       function _(_) {
         const { uploader: _, onDismiss: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
             _.BAllDone(),
             !_.BAllDone() && !_.BHasError(),
-          ]);
+          ]),
+          _ = _.GetLastErrorFile();
         return _.createElement(
           "div",
           {
@@ -850,6 +867,7 @@
               ),
             ),
           _.BHasError() &&
+            _ &&
             _.createElement(
               "div",
               {
@@ -862,9 +880,9 @@
                 },
                 (0, _._)(
                   "#ImageUpload_Error",
-                  _.GetLastErrorFile().file.name,
-                  _.GetLastErrorFile().status,
-                  _.GetLastErrorFile().message,
+                  _.file.name,
+                  _.status,
+                  _.message,
                 ),
               ),
               _.createElement(
@@ -900,17 +918,6 @@
             ),
         );
       }
-      (_.m_uploaderCounter = 1),
-        (0, _._)([_._], _.prototype, "HandleLoadClanImages", null),
-        (0, _._)([_._], _.prototype, "onUploaderDismiss", null),
-        (0, _._)([_._], _.prototype, "OnDropFiles", null),
-        (0, _._)([_._], _.prototype, "OnExpandImage", null),
-        (0, _._)([_._], _.prototype, "OnExpandExitImage", null),
-        (0, _._)([_._], _.prototype, "OnHandleExpandedFullSize", null),
-        (0, _._)([_._], _.prototype, "OnHandleExpandedThumbnail", null),
-        (0, _._)([_._], _.prototype, "InternalHandleExpandedAction", null),
-        (0, _._)([_._], _.prototype, "InternalOpenLocalizeImageGroup", null),
-        (_ = _ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1491,6 +1498,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1502,20 +1511,17 @@
             rgRealmList: _,
           } = _,
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, __webpack_require__, _, _),
+          _ = (0, _._)(_, __webpack_require__, _),
           _ = _.uploaderOverride || _,
-          [_, _] = _.useState(!1);
-        _.useEffect(() => {
-          _.SetImageAllUrlFunction(_.fnSetImageURL);
-        }, [_, _.fnSetImageURL]);
-        const _ = _.useCallback(
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(
             async (_, _) => {
               if (!_) {
                 _(!0);
                 try {
                   const { language: _ } = (0, _._)(_.file_name, _),
                     _ = (0, _._)(_, _, _);
-                  await _.AddExistingClanImage(_, _, _);
+                  await _.AddExistingClanImage(_, _);
                 } catch (_) {
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
@@ -1532,7 +1538,7 @@
                 _(!1);
               }
             },
-            [_, _, _, _, _],
+            [_, _, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -1542,14 +1548,12 @@
                       _.createElement(_._, {
                         key: "clanartworkpicker",
                         clanSteamID: _,
-                        fnSetImageURL: _,
-                        rgRealmList: _,
                         OnClanImageSelected: _,
                       }),
                     ],
                   ]
                 : null,
-            [_, _, _, _, _],
+            [_, _, _],
           );
         return _.createElement(_._, {
           ..._,
@@ -1565,6 +1569,21 @@
                 }),
               ]
             : _,
+          fnUploadComplete: (_) => {
+            for (const _ of _) {
+              const _ = _.uploadResult;
+              if (_.origimagehash) {
+                const _ = (0, _._)(_.language, _, _);
+                _._.AddLocalizeImageUploaded(_.origimagehash, _);
+              } else {
+                const _ = _._.GetClanImageByImageHash(_, _.image_hash);
+                if (_) {
+                  const _ = (0, _._)(_.image.language, _, _);
+                  _(_.image.GetCurrentImageOption().artworkType, _, _);
+                }
+              }
+            }
+          },
         });
       }
     },
@@ -1582,7 +1601,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1593,10 +1611,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
@@ -1604,7 +1622,7 @@
           clanAccountID: __webpack_require__,
           imageInsertCallBack: _,
           fnOnExpandImage: _,
-          insertActions: _,
+          showImageActions: _ = !0,
           InternalOpenLocalizeImageGroup: _,
         } = _;
         return _.createElement(
@@ -1620,15 +1638,8 @@
                 clanImage: _,
                 searchStringHilight: _,
                 imageInsertCallBack: _,
+                showImageActions: _,
                 fnOnOpenLocalizedImageGroup: _,
-                insertActions:
-                  null == _
-                    ? void 0
-                    : _.filter(
-                        (_) =>
-                          (5 != _.file_type && 4 != _.file_type) ||
-                          _ == _._.k_eInsertFullImage,
-                      ),
                 OnImageClick: _,
               }),
             ),
@@ -1710,234 +1721,183 @@
             ),
         );
       }
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.m_linkPopupRef = _.createRef()),
-            (this.state = {
-              bDeleting: !1,
-            });
-        }
-        onHandleFullSize() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _._.k_eInsertFullImage,
-          );
-        }
-        onHandleVideo() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _._.k_eInsertVideo,
-          );
-        }
-        onHandleThumbnail() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _._.k_eInsertThumbnail,
-          );
-        }
-        ShowInsertAction(_) {
-          return this.props.insertActions
-            ? this.props.insertActions.indexOf(_) >= 0
-            : (5 != this.props.clanImage.file_type &&
-                4 != this.props.clanImage.file_type) ||
-                _ == _._.k_eInsertVideo;
-        }
-        OnDragStartSource(_) {
-          _.dataTransfer.setData("text", this.props.clanImage.url),
-            _._.GetClanImageDragListener().forEach((_) => {
-              _(_._.InitFromClanID(this.props.clanImage.clanAccountID), !0);
-            });
-        }
-        OnDragEndSource(_) {
-          _._.GetClanImageDragListener().forEach((_) => {
-            _(_._.InitFromClanID(this.props.clanImage.clanAccountID), !1);
-          });
-        }
-        OnDeleteClick(_) {
-          (0, _._)(
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
-                strDescription: "",
-                onOK: this.onDelete,
-                onCancel: this.OnCloseDialog,
-                closeModal: this.OnCloseDialog,
-              },
-              _.createElement(
-                _.Fragment,
-                null,
+      function _(_) {
+        const {
+            clanImage: _,
+            searchStringHilight: __webpack_require__,
+            imageInsertCallBack: _,
+            OnImageClick: _,
+            showImageActions: _,
+            fnOnOpenLocalizedImageGroup: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = () => _(_, _._.k_eInsertFullImage),
+          _ = (_) => {
+            console.log("ClanImageWrapper on delete error: " + _),
+              (0, _._)(
                 _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#ImagePicker_DeleteAreYouSure",
-                    this.props.clanImage.file_name,
-                  ),
+                  _._,
+                  {
+                    strTitle: (0, _._)("#Error_FailureNotice"),
+                    strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
+                  },
+                  _.createElement("p", null, _),
                 ),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#ImagePicker_DeleteWarning"),
-                ),
-              ),
-            ),
-            (0, _._)(_),
-          );
-        }
-        ShowDeleteError(_) {
-          console.log("ClanImageWrapper on delete error: " + _),
-            (0, _._)(
-              _.createElement(
-                _._,
-                {
-                  strTitle: (0, _._)("#Error_FailureNotice"),
-                  strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
-                },
-                _.createElement("p", null, _),
-              ),
-              window,
-            );
-        }
-        onDelete() {
-          this.setState({
-            bDeleting: !0,
-          });
-          let _ = _._.InitFromClanID(this.props.clanImage.clanAccountID);
-          _._.DeleteClanImage(_, this.props.clanImage)
-            .then((_) => {
-              1 != _.success && this.ShowDeleteError((0, _._)(_).strErrorMsg),
-                this.setState({
-                  bDeleting: !1,
-                });
-            })
-            .catch((_) => {
-              this.ShowDeleteError((0, _._)(_).strErrorMsg),
-                this.setState({
-                  bDeleting: !1,
-                });
-            }),
-            this.m_linkPopupRef &&
-              this.m_linkPopupRef.current &&
-              this.m_linkPopupRef.current.click(),
-            this.OnCloseDialog();
-        }
-        OnCloseDialog() {}
-        OnImageClick() {
-          this.props.OnImageClick &&
-            this.props.OnImageClick(this.props.clanImage);
-        }
-        render() {
-          const { clanImage: _ } = this.props;
-          let _ = this.props.clanImage.file_name
-              ? this.props.clanImage.file_name
-              : "",
-            _ = (0, _._)(
-              this.props.searchStringHilight,
-              _,
-              String(this.props.clanImage.imageid),
-              _().Hilight,
-            ),
-            _ = this.state.bDeleting;
-          const _ = (0, _._)(_);
-          let _ = !_ && !_ && this.ShowInsertAction(_._.k_eInsertFullImage),
-            _ = !_ && !_ && this.ShowInsertAction(_._.k_eInsertThumbnail),
-            _ = !_ && _ && this.ShowInsertAction(_._.k_eInsertVideo);
-          const _ = this.ShowInsertAction(_._.k_eShowImageGroup);
-          return _.createElement(
-            _._,
+                window,
+              );
+          },
+          _ = () => {
+            _(!0);
+            let _ = _._.InitFromClanID(_.clanAccountID);
+            _._.DeleteClanImage(_, _)
+              .then((_) => {
+                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
+              })
+              .catch((_) => {
+                _((0, _._)(_).strErrorMsg), _(!1);
+              }),
+              _();
+          },
+          _ = () => {},
+          _ = _.file_name ? _.file_name : "",
+          _ = (0, _._)(__webpack_require__, _, String(_.imageid), _().Hilight),
+          _ = _._.BIsClanImageVideo(_),
+          _ = _ && !_ && !_,
+          _ = _ && !_ && !_,
+          _ = _ && !_ && _,
+          _ = _ && !_ && !_;
+        return _.createElement(
+          _._,
+          {
+            placeholderHeight: "100vh",
+            className: _().ImageWrapperContainer,
+            rootMargin: "0px 0px 100% 0px",
+          },
+          _.createElement(
+            "div",
             {
-              placeholderHeight: "100vh",
-              className: _().ImageWrapperContainer,
-              rootMargin: "0px 0px 100% 0px",
+              className: _().ImageButton,
             },
             _.createElement(
               "div",
               {
-                className: _().ImageButton,
+                className: _().ImageWrapper,
+                style: {
+                  backgroundImage: _ ? "" : `url( '${_.thumb_url}' )`,
+                },
+                draggable: !0,
+                onDragStart: (_) => {
+                  _.dataTransfer.setData("text", _.url),
+                    _._.GetClanImageDragListener().forEach((_) => {
+                      _(_._.InitFromClanID(_.clanAccountID), !0);
+                    });
+                },
+                onDragEnd: (_) => {
+                  _._.GetClanImageDragListener().forEach((_) => {
+                    _(_._.InitFromClanID(_.clanAccountID), !1);
+                  });
+                },
+                onDoubleClick: _,
+                onClick: () => {
+                  _ && _(_);
+                },
               },
-              _.createElement(
-                "div",
-                {
-                  className: _().ImageWrapper,
-                  style: {
-                    backgroundImage: _
-                      ? ""
-                      : `url( '${this.props.clanImage.thumb_url}' )`,
-                  },
-                  draggable: !0,
-                  onDragStart: this.OnDragStartSource,
-                  onDragEnd: this.OnDragEndSource,
-                  onDoubleClick: this.onHandleFullSize,
-                  onClick: this.OnImageClick,
-                },
-                _.createElement(_, {
-                  clanImage: _,
-                  className: _().VideoBackground,
-                }),
-              ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Full,
-                    onClick: this.onHandleFullSize,
-                  },
-                  (0, _._)("#ImagePicker_FullSize"),
-                ),
-              _ &&
-                _.createElement(_._, {
-                  size: "medium",
-                  className: _().FloatingThrobber,
-                }),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Thumb,
-                    onClick: this.onHandleThumbnail,
-                  },
-                  (0, _._)("#ImagePicker_Thumbnail"),
-                ),
-              _ &&
-                _.createElement(_, {
-                  bDeleting: _,
-                  clanImage: this.props.clanImage,
-                  fnOnOpenLocalizedImageGroup:
-                    this.props.fnOnOpenLocalizedImageGroup,
-                }),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Full,
-                    onClick: this.onHandleVideo,
-                  },
-                  (0, _._)("#ImagePicker_Video"),
-                ),
-              !_ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Delete,
-                    onClick: this.OnDeleteClick,
-                  },
-                  _.createElement("img", null),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ImageWrapperFilename,
-                  title: _,
-                },
-                _,
-              ),
+              _.createElement(_, {
+                clanImage: _,
+                className: _().VideoBackground,
+              }),
             ),
-          );
-        }
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Full,
+                  onClick: _,
+                },
+                (0, _._)("#ImagePicker_FullSize"),
+              ),
+            _ &&
+              _.createElement(_._, {
+                size: "medium",
+                className: _().FloatingThrobber,
+              }),
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Thumb,
+                  onClick: () => _(_, _._.k_eInsertThumbnail),
+                },
+                (0, _._)("#ImagePicker_Thumbnail"),
+              ),
+            _ &&
+              _ &&
+              _.createElement(_, {
+                bDeleting: _,
+                clanImage: _,
+                fnOnOpenLocalizedImageGroup: _,
+              }),
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Full,
+                  onClick: () => _(_, _._.k_eInsertVideo),
+                },
+                (0, _._)("#ImagePicker_Video"),
+              ),
+            !_ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Delete,
+                  onClick: (_) => {
+                    (0, _._)(
+                      _.createElement(
+                        _._,
+                        {
+                          strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
+                          strDescription: "",
+                          onOK: _,
+                          onCancel: _,
+                          closeModal: _,
+                        },
+                        _.createElement(
+                          _.Fragment,
+                          null,
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)(
+                              "#ImagePicker_DeleteAreYouSure",
+                              _.file_name,
+                            ),
+                          ),
+                          _.createElement("br", null),
+                          _.createElement("br", null),
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)("#ImagePicker_DeleteWarning"),
+                          ),
+                        ),
+                      ),
+                      (0, _._)(_),
+                    );
+                  },
+                },
+                _.createElement("img", null),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _().ImageWrapperFilename,
+                title: _,
+              },
+              _,
+            ),
+          ),
+        );
       }
       function _(_) {
         const {
@@ -1959,7 +1919,7 @@
       }
       function _(_) {
         const { clanImage: _, className: __webpack_require__ } = _;
-        return (0, _._)(_)
+        return _._.BIsClanImageVideo(_)
           ? _.createElement(
               "video",
               {
@@ -1994,7 +1954,7 @@
             {
               className: _().ImgCtn,
             },
-            (0, _._)(_)
+            _._.BIsClanImageVideo(_)
               ? _.createElement(_, {
                   clanImage: _,
                 })
@@ -2018,14 +1978,13 @@
             closeModal: __webpack_require__,
             OnClanImageSelected: _,
           } = _,
-          _ = (0, _.useCallback)(
+          _ = _.useCallback(
             (_, _) => {
               _(_, _), __webpack_require__();
             },
             [_, __webpack_require__],
           ),
-          _ = (0, _.useMemo)(() => [], []),
-          [_, _] = (0, _.useState)(null);
+          [_, _] = _.useState(null);
         return _.createElement(
           _._,
           {
@@ -2042,18 +2001,12 @@
             clanAccountID: _.GetAccountID(),
             fileNameSearch: _,
             imageInsertCallBack: _,
-            insertActions: _,
-            InternalOpenLocalizeImageGroup: null,
+            showImageActions: !1,
           }),
         );
       }
       function _(_) {
-        const {
-          clanSteamID: _,
-          fnSetImageURL: __webpack_require__,
-          OnClanImageSelected: _,
-          rgRealmList: _,
-        } = _;
+        const { clanSteamID: _, OnClanImageSelected: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
@@ -2088,7 +2041,7 @@
               (0, _._)(
                 _.createElement(_, {
                   clanSteamID: _,
-                  OnClanImageSelected: _,
+                  OnClanImageSelected: __webpack_require__,
                 }),
                 (0, _._)(_),
               );
@@ -2096,15 +2049,6 @@
           }),
         );
       }
-      (0, _._)([_._], _.prototype, "onHandleFullSize", null),
-        (0, _._)([_._], _.prototype, "onHandleVideo", null),
-        (0, _._)([_._], _.prototype, "onHandleThumbnail", null),
-        (0, _._)([_._], _.prototype, "OnDragStartSource", null),
-        (0, _._)([_._], _.prototype, "OnDragEndSource", null),
-        (0, _._)([_._], _.prototype, "OnDeleteClick", null),
-        (0, _._)([_._], _.prototype, "onDelete", null),
-        (0, _._)([_._], _.prototype, "OnCloseDialog", null),
-        (0, _._)([_._], _.prototype, "OnImageClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2242,7 +2186,6 @@
             fnUploadComplete: __webpack_require__,
             strOverrideDragAndDropText: _,
             forceResolution: _,
-            localizedPrimaryImage: _,
             elAdditonalButtons: _,
             rgRealmList: _,
           } = _,
@@ -2252,6 +2195,7 @@
           ]),
           _ = _.useCallback(
             async (_) => {
+              var _;
               let _ = Array.from(_),
                 _ = !0;
               for (let _ = 0; _ < _.length; _++) {
@@ -2259,7 +2203,7 @@
                   { language: _ } = (0, _._)(null == _ ? void 0 : _.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(_, _, _)),
+                  (_ = await _.AddImageForLanguage(_, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -2286,7 +2230,7 @@
                       _.createElement(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
-                          _.strErrorMsg,
+                          null !== (_ = _.strErrorMsg) && void 0 !== _ ? _ : "",
                         ),
                       }),
                       window,
@@ -2295,7 +2239,7 @@
               }
               return _;
             },
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -2335,10 +2279,9 @@
               },
               _.map((_) =>
                 _.createElement(_, {
-                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
                   asset: _,
                   forceResolution: _,
-                  forceFileType: _ && _.file_type,
                   fnOnRemove: () => _.DeleteUploadImage(_),
                   languageRealms: _,
                 }),
@@ -2348,7 +2291,7 @@
           _.createElement(_, {
             imageUploader: _,
             fnOnUploadImageRequested: async () => {
-              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              const _ = await _.UploadAllImages(_);
               null == __webpack_require__ || __webpack_require__(_);
             },
           }),
@@ -2472,11 +2415,13 @@
           (_.needsCrop
             ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
             : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
-        let _ = null;
+        let _;
         const _ = _.GetCurrentImageOption();
         _ &&
           (_ =
-            null === (_ = _.find((_) => _.data.sKey == _.sKey)) || void 0 === _
+            null ===
+              (_ = null == _ ? void 0 : _.find((_) => _.data.sKey == _.sKey)) ||
+            void 0 === _
               ? void 0
               : _.data);
         _ ||
@@ -2508,7 +2453,8 @@
               onChange: (_) => (_.language = _.data),
               disabled: !_,
             }),
-          Boolean((null == _ ? void 0 : _.length) > 1) &&
+          _ &&
+            (null == _ ? void 0 : _.length) > 1 &&
             _.createElement(_._, {
               label: _.GetImageOptionLabel(),
               rgOptions: _,
@@ -2861,6 +2807,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3563,7 +3510,7 @@
           return _.createElement(
             "div",
             {
-              className: _.UploadSuccess,
+              className: _().UploadSuccess,
             },
             _,
           );
@@ -3827,9 +3774,7 @@
             fnGetImageHashAndExt: _,
           } = _,
           _ = _(__webpack_require__, _),
-          _ = _
-            ? _._.GenerateArtworkURLFromHashAndExtensions(_, _, _._.full, _)
-            : "",
+          _ = _ ? _._.GenerateURLFromHashAndExtAndLang(_, _, _._.full, _) : "",
           [_] = (0, _._)(() => [_(__webpack_require__, _)]);
         return 0 == _
           ? _.createElement(
@@ -3985,6 +3930,7 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3992,7 +3938,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanSteamID: _, fnGetImageHash: __webpack_require__ } = _;
+        const {
+          clanSteamID: _,
+          fnGetImageHash: __webpack_require__,
+          fnOnRemoveImage: _,
+        } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
           let _ = new Array();
@@ -4041,6 +3991,7 @@
               _.createElement(_, {
                 key: "lang_select_" + _.GetAccountID() + " " + _.strLang,
                 langData: _,
+                fnOnRemoveImage: _,
                 ..._,
               }),
             ),
@@ -4066,7 +4017,7 @@
             );
             let _ = "";
             _ &&
-              (_ = _._.GenerateArtworkURLFromHashAndExtensions(
+              (_ = _._.GenerateURLFromHashAndExtAndLang(
                 _,
                 _._.GetHashAndExt(_),
                 _._.full,
@@ -4236,13 +4187,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             clanImage: _,
@@ -4255,10 +4206,7 @@
           [_, _] = (0, _.useState)(_),
           _ = _._.InitFromClanID(_.clanAccountID),
           _ = (0, _._)(() =>
-            _._.GenerateArtworkURLFromHashAndExtensions(
-              _,
-              _._.GetHashAndExt(_),
-            ),
+            _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_)),
           );
         return _.createElement(
           _._,

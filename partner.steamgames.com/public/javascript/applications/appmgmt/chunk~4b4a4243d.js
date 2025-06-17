@@ -302,7 +302,7 @@
             "partnerbrowse_webapi_token",
             "application_config",
           );
-          (0, d.w)(Boolean(e), "require partnerbrowse_webapi_token"),
+          (0, d.wT)(Boolean(e), "require partnerbrowse_webapi_token"),
             (this.m_steamInterface = new p.D(g.TS.WEBAPI_BASE_URL, e));
         }
       }
@@ -694,7 +694,7 @@
     },
     13549: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => D, q: () => I });
+      a.d(t, { i: () => D, q: () => y });
       var n = a(23910),
         r = a(65946),
         o = a(90626),
@@ -718,14 +718,14 @@
         const { oEditableMessage: t } = e,
           [a] = (0, r.q3)(() => [t.GetStoreItemKey()]);
         return a && "app" == a.item_type
-          ? o.createElement(y, { oEditableMessage: t, idKey: a })
+          ? o.createElement(I, { oEditableMessage: t, idKey: a })
           : o.createElement(
               "div",
               { className: E.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             );
       }
-      function y(e) {
+      function I(e) {
         const { oEditableMessage: t, idKey: a } = e,
           [l, i] = (0, r.q3)(() => [
             t.GetUpdateEventClanAccountID(),
@@ -737,7 +737,7 @@
         return o.createElement(
           "div",
           null,
-          o.createElement(I, {
+          o.createElement(y, {
             appid: u || a.id,
             selectedEventGID: i,
             fnSetUpdateEvent: t.SetUpdateEvent,
@@ -763,7 +763,7 @@
             ),
         );
       }
-      function I(e) {
+      function y(e) {
         const {
             appid: t,
             selectedEventGID: a,
@@ -773,8 +773,8 @@
             strUrlLearnMore: g,
             bFilterOutDrafts: D,
           } = e,
-          y = (0, d.f1)(),
-          { clanInfo: I, bLoadingClanInfo: C } = (0, l.vF)(t),
+          I = (0, d.f1)(),
+          { clanInfo: y, bLoadingClanInfo: C } = (0, l.vF)(t),
           b = (function (e, t) {
             const a = (0, c.a)(),
               n = (0, o.useMemo)(() => s.b.InitFromClanID(e), [e]),
@@ -812,7 +812,7 @@
                     ),
               [r.data, r.isLoading],
             );
-          })(I?.clanAccountID, y - 2592e3),
+          })(y?.clanAccountID, I - 2592e3),
           S = (0, o.useMemo)(
             () => (D ? b?.filter((e) => !e.hidden) : b),
             [b, D],
@@ -847,7 +847,7 @@
               P,
               P?.gid,
             ),
-          S || (!C && !I?.appid)
+          S || (!C && !y?.appid)
             ? S && 0 != S.length
               ? o.createElement(
                   o.Fragment,
@@ -864,7 +864,7 @@
                     label: r,
                     tooltip: p,
                     selectedOption: P,
-                    onChange: (e) => n(I.clanAccountID, e.data.gid),
+                    onChange: (e) => n(y.clanAccountID, e.data.gid),
                     rgOptions: T,
                   }),
                 )
@@ -927,8 +927,8 @@
             bRunQueryOnLoad: w,
             rgParentAppIDs: v,
           } = e,
-          [D, y] = o.useState(""),
-          [I, C] = o.useState(!1),
+          [D, I] = o.useState(""),
+          [y, C] = o.useState(!1),
           [b, S] = o.useState(!1),
           [T] = o.useState(new i.LU()),
           [P, k] = o.useState(new Array()),
@@ -982,7 +982,7 @@
           G = (0, o.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
-              y(t);
+              I(t);
               const a = R.current?.checked;
               T.Schedule(1e3, () => U(t, a));
             },
@@ -1026,7 +1026,7 @@
             W &&
               o.createElement(l.Yh, {
                 ref: R,
-                checked: I,
+                checked: y,
                 onChange: M,
                 className: d.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
@@ -1659,7 +1659,7 @@
             ? n.createElement(l.Ii, { href: t, ...o }, a)
             : n.createElement("a", { href: t, ...o }, a);
       }
-      var m = a(44332),
+      var m = a(81393),
         u = a(52038),
         d = a(61859),
         p = a(82227),
@@ -1678,11 +1678,11 @@
             bSmallFormat: m,
             bHideFollowButton: v,
             bAddLinkToMemberList: D,
-            bMinimalDisplay: y,
+            bMinimalDisplay: I,
           } = e,
-          I = (0, o.FV)(t.clan_account_id),
+          y = (0, o.FV)(t.clan_account_id),
           [C] = (0, s.L2)();
-        if (C || !I)
+        if (C || !y)
           return n.createElement(
             "div",
             { className: _.DevSummaryWidgetCtn },
@@ -1699,8 +1699,8 @@
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          T = I.GetCreatorHomeURL(b),
-          P = I.GetNumFollowers();
+          T = y.GetCreatorHomeURL(b),
+          P = y.GetNumFollowers();
         return n.createElement(
           f.tH,
           null,
@@ -1713,7 +1713,7 @@
                 className: (0, u.A)(
                   _.DevSummaryCtn,
                   m ? _.SmallFormat : _.LargeFormat,
-                  y ? _.MinimalDisplay : "",
+                  I ? _.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },
@@ -1724,7 +1724,7 @@
                 n.createElement("div", {
                   className: _.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${I.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${y.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 n.createElement(
@@ -1742,7 +1742,7 @@
                       },
                       n.createElement("img", {
                         className: (0, u.A)(_.Avatar, "Avatar_Trgt"),
-                        src: I.GetAvatarURLFullSize(),
+                        src: y.GetAvatarURLFullSize(),
                       }),
                     ),
                     n.createElement(
@@ -1764,7 +1764,7 @@
                         n.createElement(
                           c,
                           { href: (0, g.k2)(T), className: _.CreatorNameName },
-                          I.GetName(),
+                          y.GetName(),
                         ),
                         Boolean(a) &&
                           n.createElement(
@@ -1775,7 +1775,7 @@
                                 _.CreatorTagline,
                               ),
                             },
-                            I.GetTagLine(),
+                            y.GetTagLine(),
                           ),
                       ),
                       n.createElement(
@@ -1813,7 +1813,7 @@
                         href:
                           i.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          I.GetClanSteamID().ConvertTo64BitString() +
+                          y.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: _.MembersListLink,
@@ -1829,7 +1829,7 @@
       function D(e) {
         const { clanInfo: t, bAddLinkToMemberList: a } = e;
         if (
-          ((0, m.w)(
+          ((0, m.wT)(
             t && t.clanAccountID,
             "CuratorHoverContent expect clanInfo, not supplied",
           ),
@@ -1927,8 +1927,8 @@
         w = a(9154),
         v = a(738),
         D = a(64641),
-        y = a.n(D),
-        I = a(12155),
+        I = a.n(D),
+        y = a(12155),
         C = a(22797),
         b = a(68797),
         S = a(56011),
@@ -1941,24 +1941,23 @@
             fnUploadComplete: a,
             strOverrideDragAndDropText: r,
             forceResolution: s,
-            localizedPrimaryImage: l,
-            elAdditonalButtons: i,
-            rgRealmList: u,
+            elAdditonalButtons: l,
+            rgRealmList: i,
           } = e,
-          [d, g] = (0, n.q3)(() => [
+          [u, d] = (0, n.q3)(() => [
             t.GetUploadImages(),
             m.O.Get().GetCurEditLanguage(),
           ]),
-          f = o.useCallback(
+          g = o.useCallback(
             async (e) => {
               let a = Array.from(e),
                 n = !0;
               for (let e = 0; e < a.length; e++) {
                 const r = a[e],
-                  { language: s } = (0, c.jj)(r?.name, g);
+                  { language: s } = (0, c.jj)(r?.name, d);
                 try {
-                  const a = (0, c.PD)(s, g, u);
-                  (n = await t.AddImageForLanguage(r, a, l)),
+                  const a = (0, c.PD)(s, d, i);
+                  (n = await t.AddImageForLanguage(r, a)),
                     n ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -1985,7 +1984,7 @@
                       o.createElement(w.KG, {
                         strDescription: (0, p.we)(
                           "#EventError_Code",
-                          t.strErrorMsg,
+                          t.strErrorMsg ?? "",
                         ),
                       }),
                       window,
@@ -1994,29 +1993,29 @@
               }
               return n;
             },
-            [g, t, l, u],
+            [d, t, i],
           ),
-          h = o.useMemo(
+          f = o.useMemo(
             () =>
-              i instanceof Array
-                ? i
+              l instanceof Array
+                ? l
                 : [
                     o.createElement(
                       o.Fragment,
                       { key: "elAdditonalButtons" },
-                      i,
+                      l,
                     ),
                   ],
-            [i],
+            [l],
           );
         (0, n.q3)(() =>
-          d.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
+          u.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
         return o.createElement(
           E,
           {
-            onDropFiles: f,
-            elAdditonalButtons: h,
+            onDropFiles: g,
+            elAdditonalButtons: f,
             strOverrideDragAndDropText: r,
           },
           o.createElement(
@@ -2025,14 +2024,13 @@
             o.createElement(
               "div",
               { className: k().UploadPreviewCtn },
-              d.map((e) =>
+              u.map((e) =>
                 o.createElement(x, {
-                  key: "arttabupload_" + e.file.name + "_" + e.uploadTime,
+                  key: "arttabupload_" + e.filename + "_" + e.uploadTime,
                   asset: e,
                   forceResolution: s,
-                  forceFileType: l && l.file_type,
                   fnOnRemove: () => t.DeleteUploadImage(e),
-                  languageRealms: u,
+                  languageRealms: i,
                 }),
               ),
             ),
@@ -2040,7 +2038,7 @@
           o.createElement(B, {
             imageUploader: t,
             fnOnUploadImageRequested: async () => {
-              const e = await t.UploadAllImages(s, l && l.file_type);
+              const e = await t.UploadAllImages(s);
               a?.(e);
             },
           }),
@@ -2096,9 +2094,9 @@
           (m.needsCrop
             ? (f = (0, p.we)("#ImageUpload_NeedsCrop"))
             : m.error && (f = (0, p.we)("#ImageUpload_Invalid")));
-        let h = null;
+        let h;
         const E = t.GetCurrentImageOption();
-        E && (h = r.find((e) => e.data.sKey == E.sKey)?.data);
+        E && (h = r?.find((e) => e.data.sKey == E.sKey)?.data);
         h || (h = r?.[0]?.data);
         return o.createElement(
           "div",
@@ -2106,7 +2104,7 @@
           o.createElement(
             "div",
             { className: k().UploadPreviewDelete, onClick: () => a(t) },
-            o.createElement(I.sED, null),
+            o.createElement(y.sED, null),
           ),
           o.createElement(L, { asset: t }),
           c &&
@@ -2117,7 +2115,8 @@
               onChange: (e) => (t.language = e.data),
               disabled: !g,
             }),
-          Boolean(r?.length > 1) &&
+          r &&
+            r?.length > 1 &&
             o.createElement(u.m, {
               label: t.GetImageOptionLabel(),
               rgOptions: r,
@@ -2148,7 +2147,7 @@
             Boolean("uploading" == t.status) &&
               o.createElement(
                 "div",
-                { className: y().FlexCenter },
+                { className: I().FlexCenter },
                 o.createElement(C.t, { size: "small" }),
               ),
           ),
@@ -2295,8 +2294,8 @@
           strAlsoShowTimeZone: p,
           disabled: f,
           bNoDefaultDate: A,
-          className: y,
-          strDescToolTip: I,
+          className: I,
+          strDescToolTip: y,
           strDescription: C,
           bShowTimeZone: b,
           strInvalidDateTimeLocalizedMsg: S,
@@ -2401,13 +2400,13 @@
           );
         return n.createElement(
           "div",
-          { className: (0, m.A)(g().EventTimeSection, y) },
+          { className: (0, m.A)(g().EventTimeSection, I) },
           n.createElement(
             "div",
             { className: (0, m.A)(g().EventTimeTitle, "DialogLabel") },
             n.createElement(
               d.he,
-              { toolTipContent: I, direction: "top" },
+              { toolTipContent: y, direction: "top" },
               Boolean(C) && n.createElement("span", null, C),
             ),
             W &&
@@ -2625,7 +2624,7 @@
             rowClassName: w,
           } = e,
           [v, D] = n.useState(!1),
-          [y, I] = n.useState(void 0),
+          [I, y] = n.useState(void 0),
           [C, b] = n.useState(void 0),
           [S, T] = n.useState(-1),
           [P, k] = n.useState(void 0),
@@ -2661,7 +2660,7 @@
                   );
                 D(!0), T(e), R(void 0), k(e);
                 const n = t.clientX - a.getBoundingClientRect().left;
-                I(n);
+                y(n);
                 const r = t.clientY - a.getBoundingClientRect().top;
                 b(r),
                   (a.style.position = "fixed"),
@@ -2709,7 +2708,7 @@
               ((e) => {
                 const t = O[S]?.current;
                 t
-                  ? ((t.style.left = e.clientX - y + "px"),
+                  ? ((t.style.left = e.clientX - I + "px"),
                     (t.style.top = e.clientY - C + "px"))
                   : console.error("update grab element missing element");
               })(e);

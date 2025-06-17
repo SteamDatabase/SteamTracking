@@ -65,6 +65,7 @@
         Awards: "_2Oe6MhA_wFOxkyvdWn7Wou",
         ToolBarCtn: "_3fLGj1fuHkAXAQdWsoI5Zd",
         ToolBarTitle: "_2xUo8ICmESPj0EdotIYJW4",
+        VOBtn: "_8Tl9WXpZxQVAIunaK4Igx",
       };
     },
     chunkid: (module) => {
@@ -2254,6 +2255,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_ENow = "now"), (_.k_ESpecified = "specified");
@@ -3240,9 +3243,8 @@
             : "";
         }
         SetImageURL(_, _, __webpack_require__ = 0) {
-          let _ = _ ? _._.GetExtensionString(_) : null,
-            _ = _ ? _.image_hash + _ : null,
-            _ = this.m_curModel.jsondata;
+          const _ = _._.GetHashAndExt(_);
+          let _ = this.m_curModel.jsondata;
           if (
             "background" === _ &&
             _.localized_title_image[__webpack_require__] !== _
@@ -4228,41 +4230,6 @@
           null,
         ),
         (0, _._)([_._], _, "SetSaleSectionType", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-          editModel: null,
-        },
-        _ = _.createContext(_);
-      function _(_) {
-        const { children: _, editModel: __webpack_require__ } = _;
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              ..._,
-              editModel: __webpack_require__,
-            },
-          },
-          _.createElement(
-            _._,
-            {
-              location: 1,
-            },
-            _,
-          ),
-        );
-      }
-      function _() {
-        return _.useContext(_).editModel;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5488,7 +5455,7 @@
                       _._.COMMUNITY_BASE_URL +
                       "public/images/events/media_play_icon.png";
                   try {
-                    let _ = await _._.AsyncOverlay(_, _, _, _, 740, 555);
+                    let _ = await _._.OverlayClanImage(_, _, _, _, 740, 555);
                     _.SetVideoHashAndExt(_);
                   } catch (_) {
                     console.error(
@@ -10846,7 +10813,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: __webpack_require__ } = _;
@@ -10910,7 +10876,7 @@
             : _.length) > 0
         ) {
           const _ = new _._(_._.CLANSTEAMID);
-          _ = _._.GenerateArtworkURLFromHashAndExtensions(
+          _ = _._.GenerateURLFromHashAndExt(
             _,
             __webpack_require__.tab_bar_bg_image,
           );
@@ -11289,13 +11255,7 @@
       const _ = (0, _._)((_) => {
         const { tab: _, editModel: __webpack_require__ } = _,
           _ = __webpack_require__.GetClanSteamID(),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(
-            _,
-            ["tab_bar_background"],
-            __webpack_require__.GetIncludedRealmList(),
-            _,
-          ),
+          _ = (0, _._)(_, "tab_bar_background"),
           [_, _] = _.useState(!1);
         return _.createElement(
           "div",
@@ -11317,11 +11277,8 @@
               _.createElement(_._, {
                 key: "saletabeditor_" + _.unique_id,
                 clanSteamID: __webpack_require__.GetClanSteamID(),
-                fnSetImageURL: __webpack_require__.SetImageURL,
-                rgRealmList: __webpack_require__.GetIncludedRealmList(),
                 OnClanImageSelected: async (_, _) => {
-                  const _ = _ ? _._.GetExtensionString(_) : null,
-                    _ = _ ? _.image_hash + _ : null;
+                  const _ = _._.GetHashAndExt(_);
                   (_.tab_bar_bg_image = _),
                     __webpack_require__.SetDirty(_._.jsondata_sales);
                 },
@@ -11375,7 +11332,7 @@
             }),
           Boolean(_.tab_bar_bg_image) &&
             _.createElement("img", {
-              src: _._.GenerateArtworkURLFromHashAndExtensions(
+              src: _._.GenerateURLFromHashAndExt(
                 __webpack_require__.GetClanSteamID(),
                 _.tab_bar_bg_image,
               ),
@@ -19127,19 +19084,13 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { editModel: _, saleSection: __webpack_require__ } = _,
-          [_, _, _, _, _] = (0, _._)(() => [
-            _._.Get().GetCurEditLanguage(),
+          [_, _, _, _] = (0, _._)(() => [
             _.GetEventModel(),
             _.GetClanSteamID(),
             _.GetAppID(),
             _.GetIncludedRealmList(),
           ]),
-          _ = (0, _._)(
-            _,
-            ["sale_section_background"],
-            _.GetIncludedRealmList(),
-            _,
-          ),
+          _ = (0, _._)(_, "sale_section_background"),
           _ = (_) => {
             (0, _._)(
               _.createElement(_._, {
@@ -19242,11 +19193,8 @@
                   _.createElement(_._, {
                     key: "salesection_" + __webpack_require__.unique_id,
                     clanSteamID: _.GetClanSteamID(),
-                    fnSetImageURL: _.SetImageURL,
-                    rgRealmList: _.GetIncludedRealmList(),
                     OnClanImageSelected: async (_, _) => {
-                      const _ = _ ? _._.GetExtensionString(_) : null,
-                        _ = _ ? _.image_hash + _ : null;
+                      const _ = _._.GetHashAndExt(_);
                       (__webpack_require__.background_image = _),
                         _.SetDirty(_._.jsondata_sales);
                     },
@@ -19255,9 +19203,8 @@
                 onDropFiles: async (_) => {
                   if (_ && _.length > 0) {
                     if (await _.AddImage(_[0], 0)) {
-                      const _ = (await _.UploadAllImages())[0].uploadResult;
-                      let _ = _ ? _._.GetExtensionString(_) : null,
-                        _ = _ ? _.image_hash + _ : null;
+                      const _ = (await _.UploadAllImages())[0].uploadResult,
+                        _ = _._.GetHashAndExt(_);
                       (__webpack_require__.background_image = _),
                         _.SetDirty(_._.jsondata_sales);
                     } else
@@ -22222,7 +22169,554 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const { schema: _, colorMarkType: __webpack_require__ } = _,
+          [_, _] = (0, _._)(_, "color" == __webpack_require__.name),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          _ = _.useMemo(
+            () =>
+              new _._({
+                props: {
+                  handleClickOn(_, _, _, _, _, _) {
+                    if (_ && (_.ctrlKey || 1 == _.button)) {
+                      if (
+                        _.resolve(_ - _)
+                          .marks()
+                          .find((_) => _.type == __webpack_require__)
+                      )
+                        return _(_), _.preventDefault(), !0;
+                    }
+                    return !1;
+                  },
+                  handleKeyDown: (_, _) =>
+                    !(
+                      "k" != _.key ||
+                      (!_.metaKey && !_.ctrlKey) ||
+                      !_.shiftKey ||
+                      _.altKey
+                    ) && (_(_), !0),
+                  handleDOMEvents: {
+                    mouseover: (_, _) => {
+                      for (
+                        let _ = _.target;
+                        _ && _ != _.currentTarget;
+                        _ = _.parentElement
+                      )
+                        if ("A" == _.nodeName && "getBoundingClientRect" in _) {
+                          const _ = _.getBoundingClientRect();
+                          return (
+                            _(_.left + _.width / 2), _(_.bottom + 2), void _(_)
+                          );
+                        }
+                      _(void 0);
+                    },
+                    mouseleave: (_, _) => (_(void 0), !1),
+                  },
+                },
+              }),
+            [__webpack_require__, _],
+          );
+        (0, _._)(_);
+        let _ = null;
+        return (
+          _ &&
+            _ &&
+            _ &&
+            (_ = _.createElement(_, {
+              top: _,
+              left: _,
+              href: _.getAttribute(
+                "color" == __webpack_require__.name
+                  ? "color"
+                  : "backgroundColor",
+              ),
+            })),
+          _.createElement(_.Fragment, null, _, _)
+        );
+      });
+      function _(_) {
+        const { top: _, left: __webpack_require__, href: _ } = _,
+          [_, _] = _.useState(0),
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _(_.current.getBoundingClientRect().width);
+        }, [_, __webpack_require__, _]);
+        const _ = {
+          top: `${_}px`,
+          left: `${Math.max(__webpack_require__ - _ / 2, 12)}px`,
+        };
+        return _.createElement(
+          "div",
+          {
+            className: _().Hover,
+            style: _,
+            ref: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().Link,
+            },
+            _,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().LinkHelp,
+            },
+            (0, _._)("#UserGameNotes_ClickToOpenLink"),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const { strPlaceholder: _ } = _;
+        return (
+          (0, _._)(
+            _.useMemo(
+              () =>
+                _
+                  ? (function (_) {
+                      return new _._({
+                        props: {
+                          decorations(_) {
+                            var _;
+                            const _ = _.doc;
+                            if (
+                              1 === _.childCount &&
+                              (null === (_ = _.firstChild) || void 0 === _
+                                ? void 0
+                                : _.isTextblock) &&
+                              0 === _.firstChild.content.size
+                            ) {
+                              const _ = _._.node(0, _.content.size, {
+                                "data-placeholder": _,
+                                class: _.EmptyTextPlaceholder,
+                              });
+                              return _._.create(_, [_]);
+                            }
+                            return _._.empty;
+                          },
+                        },
+                      });
+                    })(_)
+                  : void 0,
+              [_],
+            ),
+          ),
+          null
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!0);
+        return _
+          ? _.createElement(_, {
+              ..._,
+              fnShowRichTextEditor: __webpack_require__,
+            })
+          : _.createElement(_, {
+              ..._,
+              fnShowRichTextEditor: __webpack_require__,
+            });
+      }
+      function _(_) {
+        const {
+            fnShowRichTextEditor: _,
+            strPlaceholder: __webpack_require__,
+            content: _,
+            fnUpdateContent: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _.useMemo(() => {
+            const _ = _._.is_support;
+            return (0, _._)({
+              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
+              bIncludeValveOnly: _,
+            });
+          }, []);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: !1,
+              onChange: (_) => _(!0),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
+          _.createElement(_._, {
+            fnGetCurText: () => _,
+            fnOnTextChange: (_) => {
+              var _;
+              return _(
+                (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                void 0 === _
+                  ? void 0
+                  : _.value) || "",
+              );
+            },
+            fnSetText: (_) => _(_),
+            strPlaceholder: __webpack_require__,
+            emoticonStore: _._,
+            bSupportHTMLImport: !0,
+            showFormatHelp: "PartnerEvents",
+            limitBBCode: _,
+            classNameForTextArea: _().EventEditorDescription,
+            clanSteamID: _.GetClanSteamID(),
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            content: _,
+            language: __webpack_require__,
+            fnUpdateContent: _,
+            label: _,
+            tooltip: _,
+            strPlaceholder: _,
+            bSingleLine: _,
+            nTitleCharLimit: _,
+            strOverrideBackgroundColor: _,
+            rctToolbarControls: _,
+            eTitleDisplaySize: _,
+            eTextAlignment: _,
+            fnShowRichTextEditor: _,
+          } = _,
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          _ = _.useRef(void 0),
+          _ = (function () {
+            const _ = _.useRef(void 0);
+            _.current ||
+              (_.current = (function () {
+                const {
+                    paragraph: _,
+                    bullet_list: _,
+                    list_item: __webpack_require__,
+                  } = _._.nodes,
+                  { strong: _, italic: _, underline: _, strike: _ } = _._.marks,
+                  { link: _ } = _._.marks,
+                  { color: _, bgcolor: _ } = _._.marks;
+                return new _._({
+                  nodes: {
+                    paragraph: _,
+                    bullet_list: _,
+                    list_item: __webpack_require__,
+                  },
+                  marks: {
+                    strong: _,
+                    italic: _,
+                    underline: _,
+                    strike: _,
+                    link: _,
+                    color: _,
+                    bgcolor: _,
+                  },
+                });
+              })());
+            return _.current;
+          })(),
+          _ = (0, _._)();
+        _.useEffect(() => {
+          _(new _._(_, _, (_) => _(_)));
+        }, [_, _, _]);
+        const [_, _] = _.useState(!1),
+          _ = _.useCallback(
+            (_) =>
+              _.borderBoxSize.length > 0 &&
+              _(_.borderBoxSize[0].blockSize > 300),
+            [],
+          ),
+          _ = (0, _._)(_);
+        return (
+          (0, _._)(_, {
+            msAutosaveTimeout: 1e3,
+          }),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _().ToolBarCtn,
+              },
+              Boolean(_) &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _().ToolBarTitle,
+                  },
+                  _,
+                  " ",
+                  _ &&
+                    _.createElement(_._, {
+                      tooltip: _,
+                    }),
+                ),
+              _.createElement(_, {
+                view: _,
+                refUpdateToolbar: _,
+                sticky: _,
+                bSingleLineEditor: _,
+                rctToolbarControls: _,
+                schema: _.pm_schema,
+                fnShowRichTextEditor: _,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().RichTextBackgroundCtn,
+                style: {
+                  backgroundColor:
+                    _.GetEventModel().jsondata.sale_background_color,
+                  backgroundRepeat:
+                    _.GetEventModel().jsondata.sale_background_repeat,
+                },
+              },
+              " ",
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_().AboutTheGameArea]: !0,
+                    [_().Container]: !0,
+                    [_()._]: _ == _._.k_Header1,
+                    [_()._]: _ == _._.k_Header2,
+                    [_()._]: _ == _._.k_Header3,
+                    [_().Left]: _ == _._.k_Left,
+                    [_().Center]: _ == _._.k_Center,
+                    [_().Right]: _ == _._.k_Right,
+                  }),
+                  ref: _,
+                  style: {
+                    backgroundImage: _,
+                  },
+                },
+                _.createElement(
+                  _._,
+                  {
+                    panelProps: {
+                      lang: (0, _._)((0, _._)(__webpack_require__)),
+                      onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
+                    },
+                    className: (0, _._)({
+                      [_().EditorPanel]: !0,
+                      [_().SingleLineProseMirror]: Boolean(_),
+                    }),
+                    pmState: _,
+                    refOnUpdate: _,
+                    refView: _,
+                    bSingleLine: _,
+                  },
+                  "color" in _.pm_schema.marks &&
+                    _.createElement(_, {
+                      colorMarkType: _.pm_schema.marks.color,
+                      schema: _.pm_schema,
+                    }),
+                  "color" in _.pm_schema.marks &&
+                    _.createElement(_, {
+                      colorMarkType: _.pm_schema.marks.bgcolor,
+                      schema: _.pm_schema,
+                    }),
+                  Boolean(_) &&
+                    _.createElement(_._, {
+                      nMaxChars: _,
+                    }),
+                  _.createElement(_, {
+                    strPlaceholder: _,
+                  }),
+                ),
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            view: _,
+            refUpdateToolbar: __webpack_require__,
+            rctToolbarControls: _,
+            schema: _,
+            sticky: _,
+            bSingleLineEditor: _,
+            fnShowRichTextEditor: _,
+          } = _,
+          _ = (0, _._)();
+        return _.createElement(
+          _._,
+          {
+            refUpdateToolbar: __webpack_require__,
+            view: _,
+          },
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)({
+                [_().GameDescriptionEditorToolbar]: !0,
+                [_().Sticky]: _,
+              }),
+            },
+            _._.is_support &&
+              _.createElement(
+                _._,
+                {
+                  className: _().VOBtn,
+                  onClick: () => _(!1),
+                  toggled: !1,
+                  tooltip: "Toggle off the rich text editor",
+                },
+                "VO",
+              ),
+            _.createElement(_._, {
+              schema: _,
+            }),
+            _.createElement(_._, null),
+            _.createElement(_._, {
+              schema: _,
+              addtlAttrs: _,
+            }),
+            !_ &&
+              _.createElement(_._, {
+                schema: _,
+                showIndentButtonsAsNeeded: !0,
+              }),
+            _.createElement(_._, null),
+            _,
+          ),
+        );
+      }
+      const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
+      function _(_) {
+        const {
+          uniqueID: _,
+          eTitleDisplaySize: __webpack_require__,
+          fnUpdateTitleDisplaySize: _,
+          bForceDisplay: _,
+        } = _;
+        return __webpack_require__ || _
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.map((_) =>
+                _.createElement(
+                  _._,
+                  {
+                    key: "title_" + _ + "_" + _,
+                    onClick: (_) => {
+                      var _;
+                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _ ||
+                        _.focus(),
+                        _(_ == __webpack_require__ ? void 0 : _);
+                    },
+                    toggled: _ == __webpack_require__,
+                  },
+                  (0, _._)("#Template_Section_Header_" + _),
+                ),
+              ),
+              _.createElement(_._, null),
+            )
+          : null;
+      }
+      const _ = [_._.k_Left, _._.k_Center, _._.k_Right],
+        _ = [_._.k_Top, _._.k_Center, _._.k_Bottom];
+      function _(_) {
+        const {
+          uniqueID: _,
+          eAlignment: __webpack_require__,
+          fnUpdateAlignment: _,
+          bVertical: _,
+          bText: _,
+        } = _;
+        (0, _.useRef)(null);
+        return __webpack_require__
+          ? _.createElement(
+              _.Fragment,
+              null,
+              (_ ? _ : _).map((_) =>
+                _.createElement(
+                  _._,
+                  {
+                    key: _ + _,
+                    onClick: (_) => {
+                      var _;
+                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _ ||
+                        __webpack_require__.focus(),
+                        _(_);
+                    },
+                    toggled: _ == __webpack_require__,
+                  },
+                  _.createElement(_, {
+                    alignment: _,
+                    bVertical: _,
+                    bText: _,
+                  }),
+                ),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { alignment: _, bVertical: __webpack_require__, bText: _ } = _;
+        if (__webpack_require__)
+          switch (_) {
+            case _._.k_Top:
+              return _.createElement(_.VBK, null);
+            case _._.k_Center:
+              return _.createElement(_.lGP, null);
+            case _._.k_Bottom:
+            default:
+              return _.createElement(_.vbm, null);
+          }
+        else
+          switch (_) {
+            case _._.k_Left:
+              return _
+                ? _.createElement(_.nhL, null)
+                : _.createElement(_.p71, null);
+            case _._.k_Center:
+              return _
+                ? _.createElement(_.J67, null)
+                : _.createElement(_.vsW, null);
+            case _._.k_Right:
+            default:
+              return _
+                ? _.createElement(_.Er9, null)
+                : _.createElement(_.o5t, null);
+          }
+      }
       function _(_) {
         const { saleSection: _, bTitleImageMode: __webpack_require__ } = _;
         return (
@@ -22244,13 +22738,141 @@
         );
       }
       function _(_) {
+        var _;
+        const { saleSection: __webpack_require__, editModel: _ } = _,
+          [_, _] = (0, _.useState)(
+            !(null === (_ = __webpack_require__.localized_title) || void 0 === _
+              ? void 0
+              : _.length),
+          ),
+          _ = (0, _._)(),
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = __webpack_require__.localized_subtitle) ||
+              void 0 === _
+                ? void 0
+                : _[_]) || "",
+            ];
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement("p", null, (0, _._)("#Sale_TitleHeader_feature")),
+          _.createElement(_._, null, (0, _._)("#Sale_TitleHeader_sel")),
+          _.createElement(
+            "div",
+            {
+              className: _.RadioButtonCtn,
+            },
+            _.createElement(_._, {
+              className: _.RadioButtons,
+              checked: _,
+              controlled: !0,
+              onChange: () => _(!0),
+              label: (0, _._)("#Sale_Section_Media_Layout_ContentTypeImage"),
+            }),
+            _.createElement(_._, {
+              className: _.RadioButtons,
+              checked: !_,
+              controlled: !0,
+              onChange: () => _(!1),
+              label: (0, _._)("#Sale_Section_Media_Layout_ContentTypeText"),
+            }),
+          ),
+          _
+            ? _.createElement(_, {
+                ..._,
+              })
+            : _.createElement(_, {
+                ..._,
+              }),
+          _.createElement("br", null),
+          _.createElement(_._, {
+            type: "text",
+            label: (0, _._)("#Sale_TitleHeader_short"),
+            tooltip: (0, _._)("#Sale_TitleHeader_short_ttip"),
+            value: _,
+            onChange: (_) => {
+              __webpack_require__.localized_subtitle ||
+                (__webpack_require__.localized_subtitle = (0, _._)(
+                  [],
+                  31,
+                  null,
+                )),
+                _.currentTarget.value !=
+                  __webpack_require__.localized_subtitle[_] &&
+                  ((__webpack_require__.localized_subtitle[_] =
+                    _.currentTarget.value),
+                  _.SetDirty(_._.jsondata_sales));
+            },
+          }),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          [_, _, _] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.localized_title) || void 0 === _
+                ? void 0
+                : _[_]) || "",
+              _.title_text_alignment || _._.k_Left,
+              _.title_display_size,
+            ];
+          });
+        return _.createElement(_, {
+          language: _,
+          content: _,
+          eTextAlignment: _,
+          eTitleDisplaySize: _,
+          bSingleLine: !0,
+          nTitleCharLimit: 120,
+          fnUpdateContent: (_) => {
+            _.localized_title || (_.localized_title = (0, _._)([], 31, null)),
+              _ != _ &&
+                ((_.localized_title[_] = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+          },
+          rctToolbarControls: _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              uniqueID: "dsec_header_" + _.unique_id,
+              eTitleDisplaySize: _,
+              fnUpdateTitleDisplaySize: (_) => {
+                _ != _.title_display_size &&
+                  ((_.title_display_size = _),
+                  __webpack_require__.SetDirty(_._.jsondata_sales));
+              },
+              bForceDisplay: !0,
+            }),
+            _.createElement(_, {
+              uniqueID: "desc_horiz_" + +_.unique_id,
+              eAlignment: _,
+              fnUpdateAlignment: (_) => {
+                _.title_text_alignment != _ &&
+                  ((_.title_text_alignment = _),
+                  __webpack_require__.SetDirty(_._.jsondata_sales));
+              },
+              bText: !0,
+            }),
+          ),
+        });
+      }
+      function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           _ = (0, _._)(() => {
             var _;
             return null === (_ = _.links) || void 0 === _ ? void 0 : _[0];
           }),
           [_, _, _] = (0, _._)(!1),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _._.GetWithFallback(
+            null == _ ? void 0 : _.localized_link_capsule,
+            _,
+          );
         if (
           ((0, _.useEffect)(() => {
             _.links && 0 != _.links.length
@@ -22267,7 +22889,10 @@
           return _.createElement(_._, {
             string: (0, _._)("#Loading"),
           });
-        const _ = _._.GetWithFallback(_.localized_link_capsule, _);
+        const _ = _._.GenerateURLFromHashAndExt(
+          __webpack_require__.GetClanAccountID(),
+          _,
+        );
         return _.createElement(
           _.Fragment,
           null,
@@ -22275,7 +22900,7 @@
           Boolean(_)
             ? _.createElement("img", {
                 className: _.LinkCapsuleImage,
-                src: `${(0, _._)()}${__webpack_require__.GetClanAccountID()}/${_}`,
+                src: _,
               })
             : _.createElement("div", null, (0, _._)("#ClanImageChooser_None")),
           _.createElement(
@@ -22392,21 +23017,24 @@
             _ += _ ? 1 : 0;
           });
         const [_, _] = (0, _._)(() => [
-          null == __webpack_require__ ? void 0 : __webpack_require__.url,
-          _._.GetWithFallback(
-            null == __webpack_require__
-              ? void 0
-              : __webpack_require__.localized_link_capsule,
-            _,
-          ),
-        ]);
+            null == __webpack_require__ ? void 0 : __webpack_require__.url,
+            _._.GetWithFallback(
+              null == __webpack_require__
+                ? void 0
+                : __webpack_require__.localized_link_capsule,
+              _,
+            ),
+          ]),
+          _ = _
+            ? _._.GenerateURLFromHashAndExt(_.GetClanAccountID(), _)
+            : void 0;
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().FlexCenter, _.UploadLinkRow),
           },
           _.createElement("img", {
-            src: _ ? `${(0, _._)()}${_.GetClanAccountID()}/${_}` : void 0,
+            src: _,
           }),
           _.createElement(
             _._,
@@ -24637,558 +25265,136 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const { schema: _, colorMarkType: __webpack_require__ } = _,
-          [_, _] = (0, _._)(_, "color" == __webpack_require__.name),
-          [_, _] = _.useState(),
-          [_, _] = _.useState(),
-          [_, _] = _.useState(),
-          _ = _.useMemo(
-            () =>
-              new _._({
-                props: {
-                  handleClickOn(_, _, _, _, _, _) {
-                    if (_ && (_.ctrlKey || 1 == _.button)) {
-                      if (
-                        _.resolve(_ - _)
-                          .marks()
-                          .find((_) => _.type == __webpack_require__)
-                      )
-                        return _(_), _.preventDefault(), !0;
-                    }
-                    return !1;
-                  },
-                  handleKeyDown: (_, _) =>
-                    !(
-                      "k" != _.key ||
-                      (!_.metaKey && !_.ctrlKey) ||
-                      !_.shiftKey ||
-                      _.altKey
-                    ) && (_(_), !0),
-                  handleDOMEvents: {
-                    mouseover: (_, _) => {
-                      for (
-                        let _ = _.target;
-                        _ && _ != _.currentTarget;
-                        _ = _.parentElement
-                      )
-                        if ("A" == _.nodeName && "getBoundingClientRect" in _) {
-                          const _ = _.getBoundingClientRect();
-                          return (
-                            _(_.left + _.width / 2), _(_.bottom + 2), void _(_)
-                          );
-                        }
-                      _(void 0);
-                    },
-                    mouseleave: (_, _) => (_(void 0), !1),
-                  },
-                },
-              }),
-            [__webpack_require__, _],
+      class _ extends _._ {
+        constructor(_, _, _) {
+          super(),
+            (this.m_filesToUpload = _._.array()),
+            (this.m_strUploadPath = null),
+            (this.m_bSynchronousUpload = !1),
+            (0, _._)(this),
+            (this.m_strUploadPath = _),
+            (this.m_rgImageOptions = (0, _._)(_)),
+            (this.m_bSynchronousUpload = _);
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(_) {
+          this.m_strUploadPath = _;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
           );
-        (0, _._)(_);
-        let _ = null;
-        return (
-          _ &&
-            _ &&
-            _ &&
-            (_ = _.createElement(_, {
-              top: _,
-              left: _,
-              href: _.getAttribute(
-                "color" == __webpack_require__.name
-                  ? "color"
-                  : "backgroundColor",
-              ),
-            })),
-          _.createElement(_.Fragment, null, _, _)
-        );
-      });
-      function _(_) {
-        const { top: _, left: __webpack_require__, href: _ } = _,
-          [_, _] = _.useState(0),
-          _ = _.useRef(null);
-        _.useLayoutEffect(() => {
-          _(_.current.getBoundingClientRect().width);
-        }, [_, __webpack_require__, _]);
-        const _ = {
-          top: `${_}px`,
-          left: `${Math.max(__webpack_require__ - _ / 2, 12)}px`,
-        };
-        return _.createElement(
-          "div",
-          {
-            className: _().Hover,
-            style: _,
-            ref: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().Link,
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().LinkHelp,
-            },
-            (0, _._)("#UserGameNotes_ClickToOpenLink"),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const { strPlaceholder: _ } = _;
-        return (
-          (0, _._)(
-            _.useMemo(
-              () =>
-                _
-                  ? (function (_) {
-                      return new _._({
-                        props: {
-                          decorations(_) {
-                            var _;
-                            const _ = _.doc;
-                            if (
-                              1 === _.childCount &&
-                              (null === (_ = _.firstChild) || void 0 === _
-                                ? void 0
-                                : _.isTextblock) &&
-                              0 === _.firstChild.content.size
-                            ) {
-                              const _ = _._.node(0, _.content.size, {
-                                "data-placeholder": _,
-                                class: _.EmptyTextPlaceholder,
-                              });
-                              return _._.create(_, [_]);
-                            }
-                            return _._.empty;
-                          },
-                        },
-                      });
-                    })(_)
-                  : void 0,
-              [_],
-            ),
-          ),
-          null
-        );
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
-        return _
-          ? _.createElement(_, {
-              ..._,
-              fnShowRichTextEditor: __webpack_require__,
-            })
-          : _.createElement(_, {
-              ..._,
-              fnShowRichTextEditor: __webpack_require__,
-            });
-      }
-      function _(_) {
-        const {
-            fnShowRichTextEditor: _,
-            strPlaceholder: __webpack_require__,
-            content: _,
-            fnUpdateContent: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = _.useMemo(() => {
-            const _ = _._.is_support;
-            return (0, _._)({
-              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
-              bIncludeValveOnly: _,
-            });
-          }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "label",
-            null,
-            _.createElement("input", {
-              type: "checkbox",
-              checked: !1,
-              onChange: (_) => _(!0),
-            }),
-            (0, _._)("#EventEditor_UseVisualEditor"),
-          ),
-          _.createElement(_._, {
-            fnGetCurText: () => _,
-            fnOnTextChange: (_) => {
-              var _;
-              return _(
-                (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                void 0 === _
-                  ? void 0
-                  : _.value) || "",
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        static isSubtitleTextFile(_) {
+          return (
+            _.type.startsWith("text/") ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
+            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
+          );
+        }
+        BGetUploadsAreInSerial() {
+          return this.m_bSynchronousUpload;
+        }
+        async AddImageForLanguage(_, _) {
+          if ((0, _._)(_.type) || (0, _._)(_.type)) {
+            const _ = await (0, _._)(_, (0, _._)(_.type));
+            if (_ instanceof HTMLImageElement) {
+              const _ = new _._(
+                _,
+                _.name,
+                _,
+                this.m_rgImageOptions,
+                _.src,
+                (0, _._)(_),
+                _,
+                null,
               );
-            },
-            fnSetText: (_) => _(_),
-            strPlaceholder: __webpack_require__,
-            emoticonStore: _._,
-            bSupportHTMLImport: !0,
-            showFormatHelp: "PartnerEvents",
-            limitBBCode: _,
-            classNameForTextArea: _().EventEditorDescription,
-            clanSteamID: _.GetClanSteamID(),
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            content: _,
-            language: __webpack_require__,
-            fnUpdateContent: _,
-            label: _,
-            tooltip: _,
-            strPlaceholder: _,
-            bSingleLine: _,
-            nTitleCharLimit: _,
-            strOverrideBackgroundColor: _,
-            rctToolbarControls: _,
-            eTitleDisplaySize: _,
-            eTextAlignment: _,
-            fnShowRichTextEditor: _,
-          } = _,
-          [_, _] = _.useState(),
-          [_, _] = _.useState(),
-          _ = _.useRef(void 0),
-          _ = (function () {
-            const _ = _.useRef(void 0);
-            _.current ||
-              (_.current = (function () {
-                const {
-                    paragraph: _,
-                    bullet_list: _,
-                    list_item: __webpack_require__,
-                  } = _._.nodes,
-                  { strong: _, italic: _, underline: _, strike: _ } = _._.marks,
-                  { link: _ } = _._.marks,
-                  { color: _, bgcolor: _ } = _._.marks;
-                return new _._({
-                  nodes: {
-                    paragraph: _,
-                    bullet_list: _,
-                    list_item: __webpack_require__,
-                  },
-                  marks: {
-                    strong: _,
-                    italic: _,
-                    underline: _,
-                    strike: _,
-                    link: _,
-                    color: _,
-                    bgcolor: _,
-                  },
-                });
-              })());
-            return _.current;
-          })(),
-          _ = (0, _._)();
-        _.useEffect(() => {
-          _(new _._(_, _, (_) => _(_)));
-        }, [_, _, _]);
-        const [_, _] = _.useState(!1),
-          _ = _.useCallback(
-            (_) =>
-              _.borderBoxSize.length > 0 &&
-              _(_.borderBoxSize[0].blockSize > 300),
-            [],
-          ),
-          _ = (0, _._)(_);
-        return (
-          (0, _._)(_, {
-            msAutosaveTimeout: 1e3,
-          }),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().ToolBarCtn,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().ToolBarTitle,
-                  },
-                  _,
-                  " ",
-                  _ &&
-                    _.createElement(_._, {
-                      tooltip: _,
-                    }),
-                ),
-              _.createElement(_, {
-                view: _,
-                refUpdateToolbar: _,
-                sticky: _,
-                bSingleLineEditor: Boolean(_),
-                rctToolbarControls: _,
-                schema: _.pm_schema,
-                fnShowRichTextEditor: _,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().RichTextBackgroundCtn,
-                style: {
-                  backgroundColor:
-                    _.GetEventModel().jsondata.sale_background_color,
-                  backgroundRepeat:
-                    _.GetEventModel().jsondata.sale_background_repeat,
-                },
-              },
-              " ",
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().AboutTheGameArea]: !0,
-                    [_().Container]: !0,
-                    [_()._]: _ == _._.k_Header1,
-                    [_()._]: _ == _._.k_Header2,
-                    [_()._]: _ == _._.k_Header3,
-                    [_().Left]: _ == _._.k_Left,
-                    [_().Center]: _ == _._.k_Center,
-                    [_().Right]: _ == _._.k_Right,
-                  }),
-                  ref: _,
-                  style: {
-                    backgroundImage: _,
-                  },
-                },
-                _.createElement(
-                  _._,
-                  {
-                    panelProps: {
-                      lang: (0, _._)((0, _._)(__webpack_require__)),
-                      onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
-                    },
-                    className: (0, _._)({
-                      [_().EditorPanel]: !0,
-                      [_().SingleLineProseMirror]: Boolean(_),
-                    }),
-                    pmState: _,
-                    refOnUpdate: _,
-                    refView: _,
-                    bSingleLine: _,
-                  },
-                  "color" in _.pm_schema.marks &&
-                    _.createElement(_, {
-                      colorMarkType: _.pm_schema.marks.color,
-                      schema: _.pm_schema,
-                    }),
-                  "color" in _.pm_schema.marks &&
-                    _.createElement(_, {
-                      colorMarkType: _.pm_schema.marks.bgcolor,
-                      schema: _.pm_schema,
-                    }),
-                  Boolean(_) &&
-                    _.createElement(_._, {
-                      nMaxChars: _,
-                    }),
-                  _.createElement(_, {
-                    strPlaceholder: _,
-                  }),
-                ),
-              ),
-            ),
-          )
-        );
-      }
-      function _(_) {
-        const {
-            view: _,
-            refUpdateToolbar: __webpack_require__,
-            rctToolbarControls: _,
-            schema: _,
-            sticky: _,
-            bSingleLineEditor: _,
-            fnShowRichTextEditor: _,
-          } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            refUpdateToolbar: __webpack_require__,
-            view: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)({
-                [_().GameDescriptionEditorToolbar]: !0,
-                [_().Sticky]: _,
-              }),
-            },
-            _._.is_support &&
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(!1),
-                  toggled: !1,
-                  tooltip: "Toggle off the rich text editor",
-                },
-                "VO",
-              ),
-            _.createElement(_._, {
-              schema: _,
-            }),
-            _.createElement(_._, null),
-            _.createElement(_._, {
-              schema: _,
-              addtlAttrs: _,
-            }),
-            !_ &&
-              _.createElement(_._, {
-                schema: _,
-                showIndentButtonsAsNeeded: !0,
-              }),
-            _.createElement(_._, null),
-            _,
-          ),
-        );
-      }
-      const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
-      function _(_) {
-        const {
-          uniqueID: _,
-          eTitleDisplaySize: __webpack_require__,
-          fnUpdateTitleDisplaySize: _,
-          bForceDisplay: _,
-        } = _;
-        return __webpack_require__ || _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.map((_) =>
-                _.createElement(
-                  _._,
-                  {
-                    key: "title_" + _ + "_" + _,
-                    onClick: (_) => {
-                      var _;
-                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                        void 0 === _ ||
-                        _.focus(),
-                        _(_ == __webpack_require__ ? void 0 : _);
-                    },
-                    toggled: _ == __webpack_require__,
-                  },
-                  (0, _._)("#Template_Section_Header_" + _),
-                ),
-              ),
-              _.createElement(_._, null),
-            )
-          : null;
-      }
-      const _ = [_._.k_Left, _._.k_Center, _._.k_Right],
-        _ = [_._.k_Top, _._.k_Center, _._.k_Bottom];
-      function _(_) {
-        const {
-          uniqueID: _,
-          eAlignment: __webpack_require__,
-          fnUpdateAlignment: _,
-          bVertical: _,
-          bText: _,
-        } = _;
-        (0, _.useRef)(null);
-        return __webpack_require__
-          ? _.createElement(
-              _.Fragment,
-              null,
-              (_ ? _ : _).map((_) =>
-                _.createElement(
-                  _._,
-                  {
-                    key: _ + _,
-                    onClick: (_) => {
-                      var _;
-                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                        void 0 === _ ||
-                        __webpack_require__.focus(),
-                        _(_);
-                    },
-                    toggled: _ == __webpack_require__,
-                  },
-                  _.createElement(_, {
-                    alignment: _,
-                    bVertical: _,
-                    bText: _,
-                  }),
-                ),
-              ),
-            )
-          : null;
-      }
-      function _(_) {
-        const { alignment: _, bVertical: __webpack_require__, bText: _ } = _;
-        if (__webpack_require__)
-          switch (_) {
-            case _._.k_Top:
-              return _.createElement(_.VBK, null);
-            case _._.k_Center:
-              return _.createElement(_.lGP, null);
-            case _._.k_Bottom:
-            default:
-              return _.createElement(_.vbm, null);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+            if (_ instanceof HTMLVideoElement) {
+              const _ = new _._(
+                _,
+                _.name,
+                _,
+                this.m_rgImageOptions,
+                _.src,
+                (0, _._)(_),
+                _,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else {
+            if (_.isSubtitleTextFile(_))
+              return (
+                (this.m_filesToUpload = [
+                  ...this.m_filesToUpload,
+                  new _._(_, _.name, _, this.m_rgImageOptions),
+                ]),
+                !0
+              );
+            console.error(
+              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
           }
-        else
-          switch (_) {
-            case _._.k_Left:
-              return _
-                ? _.createElement(_.nhL, null)
-                : _.createElement(_.p71, null);
-            case _._.k_Center:
-              return _
-                ? _.createElement(_.J67, null)
-                : _.createElement(_.vsW, null);
-            case _._.k_Right:
-            default:
-              return _
-                ? _.createElement(_.Er9, null)
-                : _.createElement(_.o5t, null);
+          return !1;
+        }
+        async UploadSingleImage(_, _, _, _) {
+          let _ = null;
+          const _ = new FormData();
+          _.append("assetfile", _.file, _),
+            _.append("sessionid", _._.SESSIONID),
+            _.append("elangauge", "" + _),
+            _.append("originalname", _);
+          const _ = _.GetCurrentImageOption();
+          (null == _ ? void 0 : _.artworkType) &&
+            _.append("arttype", _.artworkType);
+          const _ = (0, _._)(_);
+          if (!_)
+            return {
+              bSuccess: !1,
+              strErrorMessage:
+                "Invalid file extension, cannot determine mimetype",
+            };
+          _.append("mimetype", _);
+          try {
+            _ = await _().post(this.m_strUploadPath, _, {
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+              cancelToken: _,
+            });
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.log("CCloudImageUploader.UploadFile failed ", _, _),
+              (_ = _.response);
           }
+          return {
+            bSuccess: !0,
+            result: null == _ ? void 0 : _.data,
+          };
+        }
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             strUploadAjaxURL: _,
@@ -25198,7 +25404,10 @@
             rgRealmList: _,
           } = _,
           _ = _._.Get().GetCurEditLanguage(),
-          _ = (0, _._)(_, _, null != _ && _, _, _);
+          _ = (function (_, _, _) {
+            const _ = (0, _._)(_ instanceof Array ? _ : [_]);
+            return _.useMemo(() => new _(_, _, _), [_, _, _]);
+          })(_, _, null != _ && _);
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
@@ -25210,16 +25419,15 @@
               for (const _ of _) {
                 if (!_.bSuccess) continue;
                 const _ = _.uploadResult,
-                  _ = _.GetUploadImages().find((_) => _.file == _.file),
                   _ = (0, _._)(_.language, _, _);
                 __webpack_require__(
                   _.image_hash,
                   _.file_name,
                   _,
                   _(_.file_type),
-                  _.GetCurrentImageOption().artworkType,
-                  _.width,
-                  _.height,
+                  _.image.GetCurrentImageOption().artworkType,
+                  _.image.width,
+                  _.image.height,
                 );
               }
             },
@@ -25247,6 +25455,11 @@
         }
         return null;
       }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -29994,7 +30207,6 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return _.disable_background
           ? {
@@ -30320,7 +30532,8 @@
             ].includes(_);
           })(__webpack_require__.section_type),
           _ = (0, _._)(_.GetClanSteamID()),
-          _ = (function (_, _, _, _, _, _, _, _, _, _, _) {
+          _ = "title_image" != __webpack_require__.section_type,
+          _ = (function (_, _, _, _, _, _, _, _, _, _, _, _) {
             const _ = [];
             if (
               (_ &&
@@ -30347,15 +30560,16 @@
               });
             }
             if (
-              (_.push({
-                name: (0, _._)("#Sale_Section_EditTab_Title"),
-                tooltip: (0, _._)("#Sale_Section_EditTab_Title_ttip"),
-                key: "title",
-                contents: _.createElement(_, {
-                  saleSection: _,
-                  editModel: _,
+              (_ &&
+                _.push({
+                  name: (0, _._)("#Sale_Section_EditTab_Title"),
+                  tooltip: (0, _._)("#Sale_Section_EditTab_Title_ttip"),
+                  key: "title",
+                  contents: _.createElement(_, {
+                    saleSection: _,
+                    editModel: _,
+                  }),
                 }),
-              }),
               _ &&
                 _.push({
                   name: (0, _._)("#Sale_Section_EditTab_Background"),
@@ -30423,7 +30637,7 @@
                 }),
               _
             );
-          })(_, __webpack_require__, _, _, _, _, _, _, _, _, _);
+          })(_, __webpack_require__, _, _, _, _, _, _, _, _, _, _);
         return 0 == _.length
           ? null
           : _.createElement(
@@ -36343,7 +36557,7 @@
         }
         GetImageURLWithFallback(_, _) {
           let _ = this.GetImageHashAndExtWithFallback(_);
-          return _ ? _._.GenerateArtworkURLFromHashAndExtensions(_, _) : void 0;
+          return _ ? _._.GenerateURLFromHashAndExt(_, _) : void 0;
         }
         GetVideoURL() {
           return this.m_section.video_link ? this.m_section.video_link : "";
@@ -36649,201 +36863,6 @@
             (_.MediaLeft = "MediaLeft"),
             (_.MediaRight = "MediaLeft");
         })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)([] || 0, 31, null);
-        for (const _ in _) {
-          const _ = (0, _._)(_);
-          -1 != _ && (_[_] = _[_]);
-        }
-        return _;
-      }
-      class _ extends _._ {
-        constructor(_, _, _, _, _) {
-          super(),
-            (this.m_filesToUpload = _._.array()),
-            (this.m_strUploadPath = null),
-            (this.m_bSynchronousUpload = !1),
-            (0, _._)(this),
-            (this.m_strUploadPath = _),
-            (this.m_rgRealmList = _),
-            (this.m_eDefaultLanguage = _),
-            (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_bSynchronousUpload = _);
-        }
-        GetUploadPath() {
-          return this.m_strUploadPath;
-        }
-        SetUploadPath(_) {
-          this.m_strUploadPath = _;
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        static isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        static isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        static isSubtitleTextFile(_) {
-          return (
-            _.type.startsWith("text/") ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
-          );
-        }
-        async AddImageForLanguage(_, _, _) {
-          if (_.isImageFile(_) || _.isVideoFile(_)) {
-            const _ = await (0, _._)(_, _.isVideoFile(_));
-            if (_ instanceof HTMLImageElement) {
-              const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-            }
-            if (_ instanceof HTMLVideoElement) {
-              const _ = new _._(_, _, this.m_rgImageOptions, _);
-              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-            }
-          } else {
-            if (_.isSubtitleTextFile(_))
-              return (
-                (this.m_filesToUpload = [
-                  ...this.m_filesToUpload,
-                  new _._(_, _, this.m_rgImageOptions),
-                ]),
-                !0
-              );
-            console.error(
-              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-              _,
-              _.type,
-            );
-          }
-          return !1;
-        }
-        async UploadAllImages(_, _) {
-          const _ = [];
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = this.UploadFile(
-                    _.file,
-                    _.file.name,
-                    _.language,
-                    _.match,
-                  ),
-                  _ = {
-                    file: _.file,
-                    promise: _,
-                  };
-                __webpack_require__.push(_),
-                  this.m_bSynchronousUpload && (await _);
-              }
-            }
-          this.m_bSynchronousUpload ||
-            (await Promise.all(__webpack_require__.map((_) => _.promise)));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise;
-            _.push({
-              file: _.file,
-              bSuccess: 1 === _.success,
-              uploadResult: _,
-            });
-            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
-            if (_)
-              if (_ && 1 === _.success) {
-                _.status = "success";
-                (0, _._)(
-                  _.language,
-                  this.m_eDefaultLanguage,
-                  this.m_rgRealmList,
-                );
-              } else (_.status = "failed"), (_.message = _.message);
-          }
-          return _;
-        }
-        async UploadFile(_, _, _, _, _, _) {
-          let _ = null;
-          const _ = new FormData();
-          _.append("assetfile", _, _),
-            _.append("sessionid", _._.SESSIONID),
-            _.append("elangauge", "" + _),
-            _.append("originalname", _),
-            (null == _ ? void 0 : _.length) > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              ),
-            (null == _ ? void 0 : _.artworkType) &&
-              _.append("arttype", _.artworkType);
-          const _ = (0, _._)(_);
-          if (!_)
-            return {
-              success: 8,
-              message: "Invalid file extension, cannot determine mimetype",
-            };
-          _.append("mimetype", _);
-          try {
-            _ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _),
-              (_ = _.response);
-          }
-          return null == _ ? void 0 : _.data;
-        }
-      }
-      function _(_, _, _, _, _) {
-        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
-          _ = (0, _._)(_);
-        return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -48757,6 +48776,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -48772,8 +48792,7 @@
             partnerEventStore: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, [_], _, _),
+          _ = (0, _._)(_, _),
           _ = _.GetAccountID(),
           [_] = (0, _._)(() => [
             _.GetFilesToUpload().length - _.GetCompletedFiles(),
@@ -49240,7 +49259,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, lang: __webpack_require__ } = _,
           _ = (0, _._)(() => _.jsondata.meet_steam_groups),
@@ -49271,8 +49292,13 @@
           : _.can_edit
             ? _.createElement(
                 "div",
-                null,
-                _.createElement(_._, null, "Meet Steam URLs"),
+                {
+                  className: (0, _._)(
+                    _().DefaultSectionCtn,
+                    _().ValveOnlyBackground,
+                  ),
+                },
+                _.createElement(_._, null, "(VO) Meet Steam URLs"),
                 Array.from(_.keys()).map((_) => {
                   const _ = _.get(_);
                   return _.createElement(
@@ -49283,7 +49309,7 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${_._.STORE_BASE_URL}meetsteam/${_.clanSteamID.ConvertTo64BitString()}/${_}`,
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}/${_}`,
                         target: "_blank",
                       },
                       "Shows Sessions: ",
@@ -49307,7 +49333,7 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${_._.STORE_BASE_URL}meetsteam/${_.clanSteamID.ConvertTo64BitString()}`,
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}`,
                         target: "_blank",
                       },
                       "Show all public sessions",
@@ -51215,7 +51241,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map();
       function _(_, _, _) {
@@ -51351,6 +51376,7 @@
           nFirstTabSectionIDWithoutGroup: _,
         };
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         var _, _, _;
         let _ = _.jsondata.sale_background_img_groups.groups.find(
@@ -51410,8 +51436,7 @@
                 ? _
                 : _._.GetLanguageFallback(_._.LANGUAGE),
             _ = _.localized_background_art[_];
-          _ &&
-            (_ = _._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _));
+          _ && (_ = _._.GenerateURLFromHashAndExt(_.clanSteamID, _));
         }
         let _ = "linear-gradient(";
         switch (_.gradient_setting) {
@@ -51605,9 +51630,6 @@
               SaleBackgroundCtn: !0,
               ContentHubSalePage: _,
             }),
-            onClick: () => {
-              0;
-            },
           },
           _.createElement(
             "div",
@@ -51749,10 +51771,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -51772,7 +51794,16 @@
             _.position_setting,
             _.GetIncludedRealmList(),
           ]),
-          [_] = (0, _.useState)(() => (0, _._)(_.localized_background_art));
+          [_] = (0, _.useState)(() =>
+            (function (_) {
+              const _ = _._([] || 0, 31, null);
+              for (const _ in _) {
+                const _ = (0, _._)(_);
+                -1 != _ && (_[_] = _[_]);
+              }
+              return _;
+            })(_.localized_background_art),
+          );
         return _.createElement(
           _._,
           {
@@ -51791,10 +51822,9 @@
             fnSetImageURL: async (_, _, _) => {
               _((_) => {
                 const _ = {
-                  ..._.localized_background_art,
-                };
-                let _ = _ ? _._.GetExtensionString(_) : null,
-                  _ = _ ? _.image_hash + _ : null;
+                    ..._.localized_background_art,
+                  },
+                  _ = _._.GetHashAndExt(_);
                 return (
                   (_[(0, _._)(_)] = _),
                   {
@@ -53757,10 +53787,7 @@
                           ? _.jsondata.localized_store_app_spotlight_mobile
                           : _.jsondata.localized_store_app_spotlight,
                         _ = Boolean(_ < _.length && _[_]) ? _[_] : _[0],
-                        _ = _._.GenerateArtworkURLFromHashAndExtensions(
-                          _.clanSteamID,
-                          _,
-                        );
+                        _ = _._.GenerateURLFromHashAndExt(_.clanSteamID, _);
                       return _.createElement(
                         _._,
                         {
@@ -55265,7 +55292,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -55281,6 +55307,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -55377,11 +55404,13 @@
           [_, _] = _.useState(1),
           _ = (0, _._)();
         if (!_) return null;
-        let _ = _._.GetWithFallback(
+        const _ = _._.GetWithFallback(
           _.localized_itemdef_capsule,
           __webpack_require__,
         );
-        (null == _ ? void 0 : _.length) > 0 && (_ = `${(0, _._)()}/${_}/${_}`);
+        let _;
+        (null == _ ? void 0 : _.length) > 0 &&
+          (_ = _._.GenerateURLFromHashAndExt(_, _));
         const _ = (0, _._)(
           _._.STORE_BASE_URL + `buyitem/${_.nAppID}/${_.nItemDefID}/${_}`,
           _,
@@ -55638,7 +55667,7 @@
         }
         const _ = _._.GetWithFallback(_.localized_label_image, _);
         if (!_ && _) {
-          const _ = `${(0, _._)()}${_}/${_}`;
+          const _ = _._.GenerateURLFromHashAndExt(_, _);
           return _.createElement("img", {
             loading: "lazy",
             src: _,
@@ -57676,7 +57705,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_[_]) return;
@@ -57691,6 +57719,7 @@
             className: _,
             bDisableAnimation: _ = !1,
             children: _,
+            ..._
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!_),
@@ -57721,6 +57750,7 @@
                 _,
                 void 0 !== _ && _.Initialized,
               ),
+              ..._,
             },
             _.createElement(_, {
               rgAppIDs: _,
@@ -58533,13 +58563,13 @@
               : _.length) > 0 &&
               _.country_allow_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
             ((null === (_ = _.country_deny_list) || void 0 === _
               ? void 0
               : _.length) > 0 &&
               _.country_deny_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) >= 0)
+                .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
           )
             return _ == _.EPreviewMode_EditBackground
               ? _.createElement(_._, {
@@ -66025,7 +66055,6 @@
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
@@ -67385,7 +67414,7 @@
               _.createElement(
                 _._,
                 {
-                  href: !_ && _,
+                  href: _ ? null : _,
                   className: _().AppLink,
                 },
                 _.createElement("img", {
@@ -67454,7 +67483,7 @@
                 },
                 !_ &&
                   !_ &&
-                  _.BHasDemo() &&
+                  (_.BHasDemo() || 1 == _.GetAppType()) &&
                   _.createElement(_._, {
                     info: {
                       _: _.GetAppID(),
@@ -69594,7 +69623,11 @@
           _ = (0, _.useMemo)(
             () =>
               _
-                ? (0, _._)((0, _._)(_.quiz.last_revealed_footer_img_url))
+                ? (0, _._)(
+                    _._.ReplacementTokenToClanImageURL(
+                      _.quiz.last_revealed_footer_img_url,
+                    ),
+                  )
                 : null,
             [
               _,
@@ -72125,7 +72158,6 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
         const {
@@ -72288,11 +72320,11 @@
                     (_.country_allow_list &&
                       _.country_allow_list
                         .toLowerCase()
-                        .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                        .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
                     (_.country_deny_list &&
                       _.country_deny_list
                         .toLowerCase()
-                        .indexOf(_._.country_code.toLowerCase()) >= 0)
+                        .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
                   )
                     return !1;
                   if (
@@ -72352,7 +72384,7 @@
             const _ = () => {
               if (_.current) {
                 const _ = _.current.getBoundingClientRect();
-                _(_.top <= 0);
+                _(_.top <= 46);
               }
             };
             return (
@@ -72371,7 +72403,7 @@
             ? void 0
             : _.length) > 0
         ) {
-          const _ = _._.GenerateArtworkURLFromHashAndExtensions(
+          const _ = _._.GenerateURLFromHashAndExt(
             _.clanSteamID,
             _.tab_bar_bg_image,
           );
@@ -72948,6 +72980,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -72980,7 +73013,7 @@
             const _ = (0, _._)(_._.LANGUAGE),
               _ = _._.GetWithFallback(_.localized_track_image, _),
               _ = this.m_mapAnnounceGIDToSaleClanID.get(_.AnnouncementGID);
-            return `${(0, _._)()}${_}/${_}`;
+            return _._.GenerateURLFromHashAndExtAndLang(_, _, null, _);
           }
         }
         BHasTracks() {
@@ -74707,8 +74740,28 @@
             body_discount_loc_token: _,
             button_text: _,
             class_name: _,
-          } = _,
-          _ = _.GetPackageInfo(_),
+          } = _;
+        let _ = null;
+        const _ = (0, _._)(_, _);
+        if (_) {
+          let _ = null;
+          (_ =
+            "string" == typeof _
+              ? _.createElement("img", {
+                  src: _,
+                })
+              : _.createElement(_._, {
+                  rgSources: _,
+                })),
+            (_ = _.createElement(
+              "div",
+              {
+                className: _().LogoImg,
+              },
+              _,
+            ));
+        }
+        const _ = _.GetPackageInfo(_),
           _ = _.GetPackageInfo(_);
         if (!_ || (!_ && _)) return _.LoadPackageInfo([_, _]), null;
         if (!_.formatted_final_price) return null;
@@ -74744,26 +74797,6 @@
           _ != _.renewal_formatted_final_price &&
           ((_ = (0, _._)(_, _)),
           (_ = (0, _._)(_, _.renewal_formatted_final_price)));
-        let _ = null;
-        if (_) {
-          const _ = (0, _._)(_, _);
-          let _ = null;
-          (_ =
-            "string" == typeof _
-              ? _.createElement("img", {
-                  src: _,
-                })
-              : _.createElement(_._, {
-                  rgSources: _,
-                })),
-            (_ = _.createElement(
-              "div",
-              {
-                className: _().LogoImg,
-              },
-              _,
-            ));
-        }
         const _ = (function (_) {
           for (let _ of _.appids) if (_._.Get().BOwnsApp(_)) return !0;
           return !1;
@@ -79388,7 +79421,7 @@
           };
         let _ = "";
         if (_.background_image) {
-          _ += `,url(${_._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _.background_image)})`;
+          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
         }
         return _.background_gradient_bottom ||
           _.background_gradient_top ||
@@ -79397,7 +79430,7 @@
           _.border_color ||
           _.border_width
           ? {
-              background:
+              backgroundImage:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
@@ -79727,6 +79760,7 @@
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ =
             _ &&
+            (null == _ ? void 0 : _.GetIncludedAppIDsOrSelf().length) > 0 &&
             (null == _
               ? void 0
               : _.GetIncludedAppIDsOrSelf().every((_) =>

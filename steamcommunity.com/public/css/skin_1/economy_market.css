@@ -227,6 +227,7 @@ ul.market_restrictions li {
 
 .my_market_header_count {
 	font-size: 75%;
+	line-height: normal;
 	color: #BCBCBC;
 }
 

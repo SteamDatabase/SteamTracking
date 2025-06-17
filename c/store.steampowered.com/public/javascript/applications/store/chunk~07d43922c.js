@@ -5713,10 +5713,7 @@
                           ? _.jsondata.localized_store_app_spotlight_mobile
                           : _.jsondata.localized_store_app_spotlight,
                         _ = Boolean(_ < _.length && _[_]) ? _[_] : _[0],
-                        _ = _._.GenerateArtworkURLFromHashAndExtensions(
-                          _.clanSteamID,
-                          _,
-                        );
+                        _ = _._.GenerateURLFromHashAndExt(_.clanSteamID, _);
                       return _.createElement(
                         _._,
                         {
@@ -7331,7 +7328,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7347,6 +7343,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -7443,11 +7440,12 @@
           [_, _] = _.useState(1),
           _ = (0, _._)();
         if (!_) return null;
-        let _ = _._.GetWithFallback(
+        const _ = _._.GetWithFallback(
           _.localized_itemdef_capsule,
           __webpack_require__,
         );
-        _?.length > 0 && (_ = `${(0, _._)()}/${_}/${_}`);
+        let _;
+        _?.length > 0 && (_ = _._.GenerateURLFromHashAndExt(_, _));
         const _ = (0, _._)(
           _._.STORE_BASE_URL + `buyitem/${_.nAppID}/${_.nItemDefID}/${_}`,
           _,
@@ -7697,7 +7695,7 @@
         }
         const _ = _._.GetWithFallback(_.localized_label_image, _);
         if (!_ && _) {
-          const _ = `${(0, _._)()}${_}/${_}`;
+          const _ = _._.GenerateURLFromHashAndExt(_, _);
           return _.createElement("img", {
             loading: "lazy",
             src: _,
@@ -13617,7 +13615,6 @@
       }
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
           {
@@ -15024,7 +15021,7 @@
               _.createElement(
                 _._,
                 {
-                  href: !_ && _,
+                  href: _ ? null : _,
                   className: _().AppLink,
                 },
                 _.createElement("img", {
@@ -17098,7 +17095,7 @@
             () =>
               _
                 ? (0, _._)(
-                    (0, _._)(
+                    _._.ReplacementTokenToClanImageURL(
                       __webpack_require__.quiz.last_revealed_footer_img_url,
                     ),
                   )
@@ -19379,7 +19376,6 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
         const {
@@ -19608,7 +19604,7 @@
         const _ = (0, _._)(_().SaleSectionTabsTab),
           _ = (0, _._)(_, __webpack_require__, _);
         if (_?.tab_bar_bg_image?.length > 0) {
-          const _ = _._.GenerateArtworkURLFromHashAndExtensions(
+          const _ = _._.GenerateURLFromHashAndExt(
             __webpack_require__.clanSteamID,
             _.tab_bar_bg_image,
           );
@@ -20171,6 +20167,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static s_singleton;
@@ -20202,7 +20199,7 @@
             const _ = (0, _._)(_._.LANGUAGE),
               _ = _._.GetWithFallback(_.localized_track_image, _),
               _ = this.m_mapAnnounceGIDToSaleClanID.get(_.AnnouncementGID);
-            return `${(0, _._)()}${_}/${_}`;
+            return _._.GenerateURLFromHashAndExtAndLang(_, _, null, _);
           }
         }
         BHasTracks() {
@@ -21923,8 +21920,28 @@
             body_discount_loc_token: _,
             button_text: _,
             class_name: _,
-          } = _,
-          _ = _.GetPackageInfo(_),
+          } = _;
+        let _ = null;
+        const _ = (0, _._)(_, _);
+        if (_) {
+          let _ = null;
+          (_ =
+            "string" == typeof _
+              ? _.createElement("img", {
+                  src: _,
+                })
+              : _.createElement(_._, {
+                  rgSources: _,
+                })),
+            (_ = _.createElement(
+              "div",
+              {
+                className: _().LogoImg,
+              },
+              _,
+            ));
+        }
+        const _ = _.GetPackageInfo(_),
           _ = _.GetPackageInfo(_);
         if (!_ || (!_ && _)) return _.LoadPackageInfo([_, _]), null;
         if (!_.formatted_final_price) return null;
@@ -21960,26 +21977,6 @@
           _ != _.renewal_formatted_final_price &&
           ((_ = (0, _._)(_, _)),
           (_ = (0, _._)(_, _.renewal_formatted_final_price)));
-        let _ = null;
-        if (_) {
-          const _ = (0, _._)(_, _);
-          let _ = null;
-          (_ =
-            "string" == typeof _
-              ? _.createElement("img", {
-                  src: _,
-                })
-              : _.createElement(_._, {
-                  rgSources: _,
-                })),
-            (_ = _.createElement(
-              "div",
-              {
-                className: _().LogoImg,
-              },
-              _,
-            ));
-        }
         const _ = (function (_) {
           for (let _ of _.appids) if (_._.Get().BOwnsApp(_)) return !0;
           return !1;
@@ -25926,7 +25923,7 @@
           };
         let _ = "";
         if (_.background_image) {
-          _ += `,url(${_._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _.background_image)})`;
+          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
         }
         return _.background_gradient_bottom ||
           _.background_gradient_top ||
@@ -25935,7 +25932,7 @@
           _.border_color ||
           _.border_width
           ? {
-              background:
+              backgroundImage:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
               backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",

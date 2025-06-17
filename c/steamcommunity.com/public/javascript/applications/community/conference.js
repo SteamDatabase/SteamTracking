@@ -173,11 +173,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
-          (this.m_mapConferences = new Map()),
-            (this.m_mapConferenceCallback = new Map());
+          this.m_mapConferences = _._.map();
         }
         GetConferenceInfo(_) {
           return this.m_mapConferences.get(_);
@@ -192,22 +192,12 @@
             _.s_Singleton
           );
         }
-        Init() {
+        async Init() {
           let _ = (0, _._)("conferenceinfo", "application_config");
           if (this.ValidateStoreDefault(_)) {
             const _ = (0, _._)(_._.LANGUAGE),
               _ = (0, _._)(_.clan_faq_about_page),
               _ = _._.Get().GetFAQPublishedContent(_, _),
-              _ = (0, _._)(
-                _.localized_logo,
-                _,
-                null == _ ? void 0 : _.timestamp,
-              ),
-              _ = (0, _._)(
-                _.localized_mobile_logo,
-                _,
-                null == _ ? void 0 : _.timestamp,
-              ),
               _ = {
                 strConferenceID: _.vanity,
                 rtStartTime: _.start_rtime,
@@ -216,12 +206,27 @@
                 broadcastSteamID: new _._(_.broadcast_steamid),
                 bPartnerOnly: _.partner_only,
                 faqAboutPage: _,
-                strLocalizedLogos: "string" == typeof _ ? [_] : _,
-                strLocalizedMobileLogos: "string" == typeof _ ? [_] : _,
+                strLocalizedLogos: null,
+                strLocalizedMobileLogos: null,
                 globalQandASessionID: _.global_qanda_session_id,
                 youtubeVideoID: _.youtubeVideoID,
               };
             this.m_mapConferences.set(_.vanity, _);
+            const _ = await (0, _._)(
+                _.localized_logo,
+                _,
+                null == _ ? void 0 : _.timestamp,
+              ),
+              _ = await (0, _._)(
+                _.localized_mobile_logo,
+                _,
+                null == _ ? void 0 : _.timestamp,
+              );
+            this.m_mapConferences.set(_.vanity, {
+              ..._,
+              strLocalizedLogos: "string" == typeof _ ? [_] : _,
+              strLocalizedMobileLogos: "string" == typeof _ ? [_] : _,
+            });
           }
         }
         ValidateStoreDefault(_) {

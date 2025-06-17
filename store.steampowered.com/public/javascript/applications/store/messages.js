@@ -3054,7 +3054,7 @@
       })(s || (s = {}));
       var re = r(78327),
         se = r(72839),
-        ae = r(44332),
+        ae = r(81393),
         ie = r(14947),
         ne = r(82097),
         le = r(61859);
@@ -3078,7 +3078,7 @@
         }
         static Get() {
           return (
-            (0, ae.w)(
+            (0, ae.wT)(
               oe.sm_Instance,
               "MarketingMessages store not initialized",
             ),
@@ -4072,13 +4072,7 @@
           h = (0, v.n9)(),
           w = (0, F.w)(),
           E = (0, s.useMemo)(() => f?.GetIncludedAppIDsOrSelf(), [f]);
-        if (
-          (console.log(f.GetName()),
-          console.log(f.GetStoreItemType()),
-          console.dir(E),
-          !f)
-        )
-          return null;
+        if (!f) return null;
         const R = (0, z.NT)(
           (0, o.It)(`${f.GetStorePageURL(b)}${n ? `?${n}` : ""}`, h, w),
         );
@@ -4551,7 +4545,7 @@
           [n, o] = r.GetTemplateMP4WithFallback(i),
           [c, m] = r.GetTemplateWebMWithFallback(i);
         return (
-          (0, F.w)(
+          (0, F.wT)(
             o == m,
             `GameAnimatedImageViaVideo mismatch fallback languages eLang ${i} mp4 ${o} webm ${m}`,
           ),

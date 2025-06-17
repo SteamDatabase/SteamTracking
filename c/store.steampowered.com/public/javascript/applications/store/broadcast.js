@@ -12728,10 +12728,10 @@
           _ = _.winners_info?.length > 0 ? _.winners_info[0].accountid : 0,
           [_, _] = _.useState(_),
           _ = (0, _._)(
-            `${(0, _._)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${_._.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           _ = (0, _._)(
-            `${(0, _._)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${_._.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           _ = (0, _._)(_.giveaway_gid);
         let _ =
@@ -15331,10 +15331,11 @@
                   _.jsondata.localized_sale_product_mobile_banner,
                   _,
                 );
-              if (_?.length > 0 && _?.length > 0) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);

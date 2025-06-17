@@ -11784,7 +11784,7 @@
         Kr = r(63508),
         Jr = r.n(Kr),
         Yr = r(54728),
-        Qr = r(27666),
+        Qr = r(51641),
         Zr = r(94057),
         $r = r(73022),
         ei = r(51272),
@@ -11807,10 +11807,10 @@
           s = t.winners_info?.length > 0 ? t.winners_info[0].accountid : 0,
           [n, o] = d.useState(s),
           l = (0, ti.L$)(
-            `${(0, Qr.mJ)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${Qr.z.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           c = (0, ti.L$)(
-            `${(0, Qr.mJ)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${Qr.z.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           m = (0, Zr.w)(t.giveaway_gid);
         let u =
@@ -14113,12 +14113,12 @@
       var i = r(90626),
         a = r(22837),
         s = r(38390),
-        n = r(27666),
-        o = r(52038),
-        l = r(61859),
-        c = r(61336),
-        m = r(78327),
-        d = r(15392);
+        n = r(52038),
+        o = r(61859),
+        l = r(61336),
+        c = r(78327),
+        m = r(15392),
+        d = r(51641);
       function u(e) {
         const { gidEvent: t } = e,
           r = (0, s.RR)(t),
@@ -14127,33 +14127,34 @@
               r?.jsondata?.localized_sale_product_banner?.length > 0 &&
               r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, a.sf)(m.TS.LANGUAGE),
-                t = l.NT.GetWithFallback(
+              const e = (0, a.sf)(c.TS.LANGUAGE),
+                t = o.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                i = l.NT.GetWithFallback(
+                i = o.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
-              if (t?.length > 0 && i?.length > 0) {
-                const e = r.clanSteamID.GetAccountID();
-                return [`${(0, n.mJ)()}${e}/${t}`, `${(0, n.mJ)()}${e}/${i}`];
-              }
+              if (t?.length > 0 && i?.length > 0)
+                return [
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, i),
+                ];
             }
             return [null, null];
           }, [r]);
         return u?.length > 0 && B?.length > 0
           ? i.createElement(
               "a",
-              { href: (0, c.k2)(r.GetSaleURL()), className: d.Link },
+              { href: (0, l.k2)(r.GetSaleURL()), className: m.Link },
               i.createElement("img", {
                 src: u,
-                className: (0, o.A)(d.Banner, d.Big),
+                className: (0, n.A)(m.Banner, m.Big),
               }),
               i.createElement("img", {
                 src: B,
-                className: (0, o.A)(d.Banner, d.Mobile),
+                className: (0, n.A)(m.Banner, m.Mobile),
               }),
             )
           : null;

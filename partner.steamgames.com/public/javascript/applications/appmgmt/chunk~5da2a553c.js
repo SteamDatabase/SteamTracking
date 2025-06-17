@@ -556,7 +556,7 @@
         r = n(90626),
         c = n(20194),
         l = n(62490),
-        u = n(44332),
+        u = n(81393),
         p = n(68797),
         d = n(6419),
         g = n(6144),
@@ -621,7 +621,7 @@
             e.forEach((e, s) => {
               if (e == t.length) {
                 let t = this.m_mapRegistrations.get(a).get(s);
-                (0, u.w)(t, "Missing OptIn Restration"), n.set(s, t);
+                (0, u.wT)(t, "Missing OptIn Restration"), n.set(s, t);
               }
             }),
             n.size > 0 ? n : null
@@ -3104,7 +3104,7 @@
         r = n(90626),
         c = n(85044),
         l = n(17720),
-        u = n(44332),
+        u = n(81393),
         p = n(68797),
         d = n(78327);
       class g {
@@ -3114,7 +3114,7 @@
         m_mapProfiles = new Map();
         m_mapProfilesLoading = new Map();
         async LoadProfiles(t, e) {
-          (0, u.w)(
+          (0, u.wT)(
             t.length <= 500,
             "Check LoadProfiles, requesting too many steam IDs",
           );

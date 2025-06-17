@@ -21,7 +21,7 @@
         p = i(39393),
         d = i(86318),
         m = i(29210),
-        c = i(44332),
+        c = i(81393),
         g = i(30470),
         u = i(61859);
       const _ = "23B7-49AD-4A28-9590";
@@ -71,7 +71,7 @@
           return this.m_rgAppsWithBackgroundVideo;
         }
         GetTimelineLoaderForGame(e) {
-          (0, c.w)(e, "Invalid GameID: " + e);
+          (0, c.wT)(e, "Invalid GameID: " + e);
           let t = this.m_mapTimelineLoaders.get(e);
           if (!t) {
             let i = new p.SX();
@@ -97,7 +97,7 @@
           };
         }
         GetTimelineLoaderForClip(e) {
-          (0, c.w)(e, "Invalid ClipID: " + e);
+          (0, c.wT)(e, "Invalid ClipID: " + e);
           let t = this.m_mapClipLoaders.get(e);
           if (!t) {
             let i = new p.SX();
@@ -115,7 +115,7 @@
           };
         }
         GetTimelineLoaderForSharedClip(e) {
-          (0, c.w)(e, "Invalid clip");
+          (0, c.wT)(e, "Invalid clip");
           let t = this.m_mapSharedClipLoaders.get(e.clip_id);
           if (!t) {
             let i = new p.SX();
@@ -182,7 +182,7 @@
         OnTimelineEntryChanged(e) {
           if (!e.Body().entry(!1))
             return (
-              (0, c.w)(
+              (0, c.wT)(
                 !1,
                 "OnTimelineEntryChanged received an invalid protobuf",
               ),
@@ -191,7 +191,7 @@
           const { entry: t } = e.Body().toObject();
           if (!t)
             return (
-              (0, c.w)(
+              (0, c.wT)(
                 !1,
                 "OnTimelineEntryChanged received an invalid protobuf after conversion",
               ),

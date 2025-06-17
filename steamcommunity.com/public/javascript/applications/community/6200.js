@@ -617,14 +617,14 @@
           (this.m_fnProcessFileUpload = e),
             (this.m_fnFetchImageURL = t),
             (this.m_bAllowImageHotLinking = n),
-            (0, o.w)(
+            (0, o.wT)(
               !this.m_fnFetchImageURL || !this.m_bAllowImageHotLinking,
               "Not expected to have a URL fetch function and allow hotlinking.  URL fetch function will not be called.",
             );
         }
         RegisterEditor(e, t, n) {
           return (
-            (0, o.w)(!this.m_view, "Duplicate registration"),
+            (0, o.wT)(!this.m_view, "Duplicate registration"),
             (this.m_view = e),
             (this.m_fnCreatePlaceholder = t),
             (this.m_fnReplacePlaceholder = n),

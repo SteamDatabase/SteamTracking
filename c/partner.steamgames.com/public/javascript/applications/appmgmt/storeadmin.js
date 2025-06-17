@@ -139,6 +139,7 @@
     chunkid: (module) => {
       module.exports = {
         DropDown: "_2bdfWkqeuk3tQIDuq_G7QG",
+        DropDownItem: "_2Py3SQ62-egkfSgwVRn6pS",
         DropDownScroll: "_3oak6w26GsyC0GUyUNlKhd",
         Avatar: "-Fm68k4tG1jrT2Jfr0gbx",
       };
@@ -307,6 +308,20 @@
         CheckboxLabel: "XRMda0yOh0NFnSf3EVLP1",
         CheckboxDescription: "_10omFg-YbEQjz9R0VzeuSC",
         LanguageSelector: "_2aIJUMbzwAYBpQHVa8E2Pg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AssetPropertyRow: "_3jHP0Gad5cln72nkP0vb-f",
+        PropertyID: "_3cw2JVquWr2I-c2of7tNua",
+        PropertyName: "Ti0we0Ib-BYRdW0E0nKCD",
+        PropertyType: "_3pMsDNbrX-VHmOENbalkBi",
+        PropertyRangeMin: "_1JXzVqQ8QwMOiMJomHGzHM",
+        PropertyRangeMax: "_2jhFnoXeCTwQKCxubAYRMa",
+        RemoveButton: "_1YTgFZBFg12u3CY2ZIDc5T",
+        AddPropertyButton: "_2h4abqe3IOx7s2LPKUlQl3",
+        SaveButton: "_3ZpekvHN1FCWYHIBN4NnS-",
+        StatusMessage: "_2p_H_J7rCyd7Qnom3fN4nz",
       };
     },
     chunkid: (module) => {
@@ -1191,7 +1206,7 @@
       class _ extends _._ {
         constructor(_, _, _) {
           const _ = (0, _._)(_);
-          super(_, _, _.src, _.width, _.height), (0, _._)(this);
+          super(_, _.name, _, _.src, _), (0, _._)(this);
         }
         IsValidAssetType(_, _) {
           const _ = _ && _ != this.fileType;
@@ -1215,9 +1230,7 @@
         BIsVideo() {
           return _._.includes(this.fileType);
         }
-        GetResizeDimension() {
-          return null;
-        }
+        GetResizeDimension() {}
         BSupportsLanguages() {
           return !1;
         }
@@ -1277,15 +1290,9 @@
         SetOnlyAssetGroup(_) {
           this.m_onlyAssetGroup = _;
         }
-        isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        async AddImageForLanguage(_, _, _) {
-          if (this.isImageFile(_) || this.isVideoFile(_)) {
-            const _ = await (0, _._)(_, this.isVideoFile(_));
+        async AddImageForLanguage(_, _) {
+          if ((0, _._)(_.type) || (0, _._)(_.type)) {
+            const _ = await (0, _._)(_, (0, _._)(_.type));
             if (_) {
               const _ = this.m_fnCreateUploadImage(
                 () => this.GetImageOptions(),
@@ -1303,26 +1310,6 @@
               _.type,
             );
           return !1;
-        }
-        async UploadAllImages(_, _) {
-          const _ = this.m_filesToUpload.filter((_) => {
-            const _ = __webpack_require__.IsValidAssetType(_, _);
-            return "pending" === _.status && !_.error && !_.needsCrop;
-          });
-          for (const _ of _) _.status = "uploading";
-          const _ = [];
-          for (const _ of _) {
-            const _ = _.GetCurrentImageOption()?.groupName ?? _.file.name,
-              _ = await this.UploadSingleImage(_.file, _, _.language);
-            (_.status = _.bSuccess ? "success" : "failed"),
-              (_.message = _.strErrorMessage ?? ""),
-              _.push({
-                file: _.file,
-                bSuccess: _.bSuccess,
-                uploadResult: _.result,
-              });
-          }
-          return _;
         }
         GetImageOptions() {
           const _ = (_, _, _, _, _) => ({
@@ -1349,7 +1336,7 @@
                 ),
               );
             else {
-              const _ = (0, _._)(_.file.name).baseFilename,
+              const _ = (0, _._)(_.filename).baseFilename,
                 _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
               _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
                 _ != _ && _.push(_(_, -1, !0, _.width, _.height));
@@ -1425,8 +1412,7 @@
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
         (0, _._)([_._], _.prototype, "SetExistingAssetGroups", null),
         (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
@@ -1436,7 +1422,7 @@
         m_rgCurrentImageOptionKey = void 0;
         constructor(_, _, _, _, _, _) {
           const _ = (0, _._)(_);
-          super(_, _, _.src, _.width, _.height),
+          super(_, _.name, _, _.src, _),
             (0, _._)(this),
             (this.m_bAllowVideos = _),
             (this.m_bLockedToSpecificAsset = _),
@@ -1455,7 +1441,8 @@
             _ = _?.bMismatchedNewSizes;
           let _ = "";
           _
-            ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
+            ? _ &&
+              (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_) ?? ""))
             : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected"));
           const _ = [],
             _ = [];
@@ -1467,8 +1454,9 @@
                 _.push(
                   (0, _._)("#ImageUpload_MismatchedResolution", _.groupName),
                 ),
-            _?.rgExistingLanguages?.length > 1 &&
-              _.rgExistingLanguages.includes(this.language) &&
+            (_?.rgExistingLanguages?.length ?? 0) > 1 &&
+              this.language &&
+              _?.rgExistingLanguages.includes(this.language) &&
               _.push(
                 (0, _._)(
                   "#ImageUpload_ReplaceLanguage",
@@ -1496,13 +1484,11 @@
         BSupportsLanguages() {
           return !0;
         }
-        GetResizeDimension() {
-          return null;
-        }
+        GetResizeDimension() {}
         get ImageOptions() {
-          const _ = this.file.name.lastIndexOf("."),
+          const _ = this.filename.lastIndexOf("."),
             _ = (
-              -1 != _ ? this.file.name.slice(0, _) : this.file.name
+              -1 != _ ? this.filename.slice(0, _) : this.filename
             ).toLowerCase(),
             _ = this.m_fnGetImageOptions();
           return (
@@ -1530,12 +1516,12 @@
             return _.find((_) => _.sKey == this.m_rgCurrentImageOptionKey);
           }
           const _ = _.find(
-            (_) => _.groupName == (0, _._)(this.file.name, -1).baseFilename,
+            (_) => _.groupName == (0, _._)(this.filename, -1).baseFilename,
           );
-          return _ || (1 == _.length ? _[0] : null);
+          return _ || (1 == _.length ? _[0] : void 0);
         }
         SetCurrentImageOption(_) {
-          this.m_rgCurrentImageOptionKey = _.sKey;
+          this.m_rgCurrentImageOptionKey = _?.sKey;
         }
         GetImageOptionLabel() {
           return _.createElement(
@@ -1565,6 +1551,8 @@
       (0, _._)([_._], _.prototype, "m_rgCurrentImageOptionKey", void 0),
         (0, _._)([_._], _.prototype, "ImageOptions", null),
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       class _ extends _ {
         m_strUploadPath;
         m_bExtraAssetsV2;
@@ -1582,60 +1570,51 @@
         SetUploadPath(_) {
           this.m_strUploadPath = _;
         }
-        async UploadSingleImage(_, _, _) {
+        BGetUploadsAreInSerial() {
+          return !0;
+        }
+        async UploadSingleImage(_, _, _, _) {
           const _ = new FormData();
-          if (this.m_bExtraAssetsV2)
+          if (this.m_bExtraAssetsV2) {
+            const _ = _.GetCurrentImageOption()?.groupName ?? _;
             _.append("sessionid", _._.SESSIONID),
               _.append("action", "upload"),
-              _.append("extra_asset_v2", _),
+              _.append("extra_asset_v2", _.file),
               _.append("name", _),
               -1 != _ && _.append("language", (0, _._)(_));
-          else {
-            const _ = new File([_], _, {
-              type: _.type,
+          } else {
+            const _ = new File([_.file], _, {
+              type: _.file.type,
             });
             _.append("sessionid", _._.SESSIONID),
               _.append("action", "upload"),
               _.append("extra_asset", _);
           }
-          const _ = await fetch(this.m_strUploadPath, {
-            method: "post",
-            body: _,
-          });
-          let _;
+          let _, _;
           try {
-            _ = await _.json();
-          } catch {
-            return (
-              console.warn(
-                "CExtraAssetsImageUploader.UploadFile failed to parse JSON response",
-              ),
+            const _ = await _().post(this.m_strUploadPath, _, {
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+              cancelToken: _,
+            });
+            _ = 200 == _.status ? _.data.rgExtraAssets : void 0;
+          } catch (_) {
+            _ = _.response.data.errors;
+          }
+          return _
+            ? {
+                bSuccess: !0,
+                strErrorMessage: null,
+                result: _,
+              }
+            : (console.warn("CExtraAssetsImageUploader.UploadFile failed ", _),
               {
                 bSuccess: !1,
-                strErrorMessage: "Can not parse json response",
+                strErrorMessage: _.join("\n"),
                 result: null,
-              }
-            );
-          }
-          if (!_._) {
-            const _ = _;
-            return (
-              console.warn(
-                "CExtraAssetsImageUploader.UploadFile failed ",
-                _.errors,
-              ),
-              {
-                bSuccess: !1,
-                strErrorMessage: _.errors.join("\n"),
-                result: null,
-              }
-            );
-          }
-          return {
-            bSuccess: !0,
-            strErrorMessage: null,
-            result: _.rgExtraAssets,
-          };
+              });
         }
       }
       var _ = __webpack_require__("chunkid"),
@@ -8237,6 +8216,7 @@
         GameEditByAppID: (_) => `/admin/game/editbyappid/${_}`,
         AppLanding: (_) => `/apps/landing/${_}`,
         AppInstaller: (_) => `/apps/installer/${_}`,
+        AppEconomy: (_) => `/apps/economy/${_}`,
         CommunityItems: (_) => `/apps/communityitems/${_}`,
         ReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
         PackageLanding: (_) => `/store/packagelanding/${_}`,
@@ -9656,6 +9636,7 @@
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ =
             _ &&
+            _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
         if (_ && 0 == _?.GetStoreItemType())
@@ -18329,8 +18310,280 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgAssetProperties: _, appid: __webpack_require__ } = _,
+          [_, _] = (0, _.useState)(""),
+          [_, _] = (0, _.useState)(
+            (function (_) {
+              return _
+                ? _.map((_) => ({
+                    _: Number(_._),
+                    name: _.name,
+                    type: Number(_.type),
+                    min: _.min ? Number(_.min) : 0,
+                    max: _.max ? Number(_.max) : 0,
+                  }))
+                : [];
+            })(_),
+          );
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            null,
+            _.map((_, _) =>
+              _.createElement(_, {
+                schema: _,
+                index: _,
+                onUpdateID: (_) => {
+                  ((_, _) => {
+                    const _ = _.map((_, _) =>
+                      _ === _
+                        ? {
+                            ..._,
+                            _: _,
+                          }
+                        : _,
+                    );
+                    _(_);
+                  })(_, _);
+                },
+                onUpdateName: (_) => {
+                  ((_, _) => {
+                    const _ = _.map((_, _) =>
+                      _ === _
+                        ? {
+                            ..._,
+                            name: _,
+                          }
+                        : _,
+                    );
+                    _(_);
+                  })(_, _);
+                },
+                onUpdateType: (_) => {
+                  ((_, _) => {
+                    const _ = _.map((_, _) =>
+                      _ === _
+                        ? {
+                            ..._,
+                            type: _,
+                          }
+                        : _,
+                    );
+                    _(_);
+                  })(_, _);
+                },
+                onUpdateRangeMin: (_) => {
+                  ((_, _) => {
+                    const _ = _.map((_, _) =>
+                      _ === _
+                        ? {
+                            ..._,
+                            min: _,
+                          }
+                        : _,
+                    );
+                    _(_);
+                  })(_, _);
+                },
+                onUpdateRangeMax: (_) => {
+                  ((_, _) => {
+                    const _ = _.map((_, _) =>
+                      _ === _
+                        ? {
+                            ..._,
+                            max: _,
+                          }
+                        : _,
+                    );
+                    _(_);
+                  })(_, _);
+                },
+                onRemove: (_) =>
+                  ((_) => {
+                    const _ = _.slice();
+                    _.splice(_, 1), _(_);
+                  })(_),
+                key: _,
+              }),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.AddPropertyButton,
+            },
+            _.createElement(
+              _._,
+              {
+                onClick: () => {
+                  const _ = _.slice();
+                  _.push({
+                    _: 0,
+                    name: "",
+                    type: 0,
+                    min: null,
+                    max: null,
+                  }),
+                    _(_);
+                },
+              },
+              "Add Property",
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.SaveButton,
+            },
+            _.createElement(
+              _._,
+              {
+                onClick: async () => {
+                  _("");
+                  const _ = new FormData();
+                  _.append("sessionid", _._.SESSIONID),
+                    _.append("asset_properties", JSON.stringify(_));
+                  const _ = await fetch(
+                    `${_._.PARTNER_BASE_URL}apps/setassetpropertyschema/${__webpack_require__}`,
+                    {
+                      method: "POST",
+                      body: _,
+                      credentials: "same-origin",
+                    },
+                  );
+                  if (!_ || !_._) return void _("Failed to save properties");
+                  (await _.json()).success
+                    ? _("Saved successfully")
+                    : _("Failed to save properties");
+                },
+              },
+              "Save",
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.StatusMessage,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          schema: _,
+          index: __webpack_require__,
+          onUpdateID: _,
+          onUpdateName: _,
+          onUpdateType: _,
+          onUpdateRangeMin: _,
+          onUpdateRangeMax: _,
+          onRemove: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.AssetPropertyRow,
+          },
+          _.createElement("div", null, "ID"),
+          _.createElement(_._, {
+            className: _.PropertyID,
+            type: "number",
+            value: 0 !== _._ ? _._ : "",
+            placeholder: "Property id",
+            onChange: (_) => {
+              _(_.target.valueAsNumber);
+            },
+          }),
+          _.createElement("div", null, "Name"),
+          _.createElement(_._, {
+            className: _.PropertyName,
+            type: "text",
+            value: _.name,
+            placeholder: "Property name",
+            onChange: (_) => {
+              _(_.target.value);
+            },
+          }),
+          _.createElement("div", null, "Type"),
+          _.createElement(_, {
+            propertyType: _.type,
+            onUpdateType: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.PropertyRangeMinLabel,
+            },
+            "Min",
+          ),
+          _.createElement(_._, {
+            className: _.PropertyRangeMin,
+            type: "number",
+            value: _.min ?? "",
+            placeholder: "Min value",
+            onChange: (_) => {
+              _(_.target.valueAsNumber);
+            },
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.PropertyRangeMaxLabel,
+            },
+            "Max",
+          ),
+          _.createElement(_._, {
+            className: _.PropertyRangeMax,
+            type: "number",
+            value: _.max ?? "",
+            placeholder: "Max value",
+            onChange: (_) => {
+              _(_.target.valueAsNumber);
+            },
+          }),
+          _.createElement(
+            _._,
+            {
+              className: _.RemoveButton,
+              onClick: () => _(__webpack_require__),
+            },
+            "Remove",
+          ),
+        );
+      }
+      function _(_) {
+        const { propertyType: _, onUpdateType: __webpack_require__ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.PropertyType,
+          },
+          _.createElement(_._, {
+            strDefaultLabel: "Choose property type",
+            controlled: !0,
+            rgOptions: [
+              {
+                label: "Integer",
+                data: 2,
+              },
+              {
+                label: "Floating point",
+                data: 1,
+              },
+            ],
+            onChange: (_) => {
+              __webpack_require__(_.data);
+            },
+            selectedOption: _,
+          }),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -18851,8 +19104,10 @@
               : void 0,
           },
           _.createElement(
-            "span",
-            null,
+            "div",
+            {
+              className: _().DropDownItem,
+            },
             _.createElement("img", {
               className: _().Avatar,
               src: _?.avatar_full_url,
@@ -19291,6 +19546,18 @@
               _.createElement(_._, {
                 config: {
                   "storeadmin-steamworksredist-edit": (_) =>
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                },
+              }),
+          }),
+          _.createElement(_._, {
+            path: _.AppEconomy(":appid"),
+            render: (_) =>
+              _.createElement(_._, {
+                config: {
+                  "storeadmin-steamworkseconomy-propertyedit": (_) =>
                     _.createElement(_, {
                       ..._,
                     }),

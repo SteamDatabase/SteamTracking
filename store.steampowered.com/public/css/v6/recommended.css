@@ -3226,6 +3226,16 @@ body.v6 h2.morelike_section_divider
 	height: auto;
 }
 
+.review_summary
+{
+	margin-bottom: 14px;
+}
+
+.review_summary_text
+{
+	font-size: larger;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .recommendation_highlightv2 .header_image

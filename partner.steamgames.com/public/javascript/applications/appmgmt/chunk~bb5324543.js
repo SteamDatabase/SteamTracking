@@ -172,7 +172,7 @@
         u = r(78327),
         d = r(96745),
         g = r(65946),
-        m = r(44332);
+        m = r(81393);
       class h {
         m_mapPackagePrice = new Map();
         m_setRecurringSubscriptions = new Set();
@@ -432,7 +432,7 @@
             this.DispatchPriceOverridesCallbacks());
         }
         OverridePricesForPackage(e, t, r, i) {
-          (0, m.w)(
+          (0, m.wT)(
             t.length == r.length,
             `price list size doesn't match ${t.length} != ${r.length}`,
           );
@@ -1108,7 +1108,7 @@
       var i = r(90626),
         a = r(96059),
         s = r(82097),
-        c = r(44332),
+        c = r(81393),
         n = r(78327),
         o = r(38452);
       function l(e) {
@@ -1119,7 +1119,7 @@
                 "partnerbrowse_webapi_token",
                 "application_config",
               );
-              (0, c.w)(Boolean(e), "require partnerbrowse_webapi_token");
+              (0, c.wT)(Boolean(e), "require partnerbrowse_webapi_token");
               const t = new a.D(n.TS.WEBAPI_BASE_URL, e);
               ("dev" != n.TS.WEB_UNIVERSE && "beta" != n.TS.WEB_UNIVERSE) ||
                 console.log(

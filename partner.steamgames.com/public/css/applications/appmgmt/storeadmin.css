@@ -680,7 +680,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton .SVGIcon_Button {
   width: 20px;
   height: 20px;
   padding-bottom: 4px;
-  padding-left: 1px;
+  margin-right: 0px;
 }
 button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
   .SVGIcon_Button.SVGIcon_TextBold,
@@ -4009,6 +4009,50 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._1lEWAwP0XsnKz4xXZjEm1g ._12HPIcBaY3YHgYnARVwc8M {
   background: #e1c48a;
 }
+._3jHP0Gad5cln72nkP0vb-f {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 0;
+}
+._3cw2JVquWr2I-c2of7tNua {
+  flex: 0 0 100px;
+  min-width: 100px;
+  height: 32px;
+}
+.Ti0we0Ib-BYRdW0E0nKCD {
+  flex: 1 1 300px;
+  min-width: 300px;
+  height: 32px;
+}
+._3pMsDNbrX-VHmOENbalkBi {
+  flex: 0 0 300px;
+}
+._1JXzVqQ8QwMOiMJomHGzHM {
+  flex: 0 0 100px;
+  min-width: 100px;
+  height: 32px;
+}
+._2jhFnoXeCTwQKCxubAYRMa {
+  flex: 0 0 100px;
+  min-width: 100px;
+  height: 32px;
+}
+._1YTgFZBFg12u3CY2ZIDc5T {
+  flex: 0 0 10%;
+  height: 32px;
+}
+._2h4abqe3IOx7s2LPKUlQl3 {
+  width: 150px;
+  margin-top: 15px;
+}
+._3ZpekvHN1FCWYHIBN4NnS- {
+  width: 100px;
+  margin-top: 30px;
+}
+._2p_H_J7rCyd7Qnom3fN4nz {
+  color: #fff;
+}
 ._2Dn55ck2zVwRbA9GNFu_yZ > .DialogContent_InnerWidth {
   width: 900px;
   min-width: 900px;
@@ -4109,8 +4153,16 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._2bdfWkqeuk3tQIDuq_G7QG .DialogInputLabelGroup {
   margin-bottom: 0px;
 }
+._2Py3SQ62-egkfSgwVRn6pS {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 ._3oak6w26GsyC0GUyUNlKhd {
   overflow: hidden scroll;
+}
+._3oak6w26GsyC0GUyUNlKhd ._DialogInputContainer button:last-child {
+  margin-bottom: 20px;
 }
 .-Fm68k4tG1jrT2Jfr0gbx {
   width: 24px;

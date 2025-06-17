@@ -623,38 +623,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
-        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
-        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
-        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
-        TopLeft: "Clgi---P85XXv25yLZwB0",
-        Top: "_2Z9VyBAzofV3JvK__dECbX",
-        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
-        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
-        Middle: "_1HecozzoSZfUZSci9dLkxN",
-        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
-        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
-        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
-        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
-        Bottom: "sIHlK9sN2255-irERXD_V",
-        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
-        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
-        top: "_1iRW1Msfh60zHqD-xe4EAk",
-        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
-        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
-        right: "_15t6A4l27DY4KRL1aAUTTS",
-        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
-        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
-        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
-        middle: "_1CS75ZrrDXna6xatw5ZvPR",
-        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
-        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
-        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
-        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Loading: "_24C5lxFpKz_kHyuT-8GJKK",
         LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
         Small: "_2FPxEVbkMdVDAw1TLfl_B5",
@@ -686,13 +654,6 @@
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
-        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
-        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -5101,7 +5062,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
         [
@@ -5815,23 +5775,34 @@
         ],
       ]);
       function _(_, _, __webpack_require__ = 0) {
-        if (_?.startsWith(_._)) return (0, _._)(_);
-        if (_?.startsWith(_._)) {
-          const _ = new Array(),
-            _ = (0, _._)(),
-            _ = _.substring(_._.length + 1),
-            _ = _._.GetHashFromHashAndExt(_),
-            _ = _._.GetExtensionStringFromHashAndExt(_);
-          if (null != _) {
-            let _ = (0, _._)(_);
-            _.push(_ + _ + "/" + _ + _ + "?t=" + __webpack_require__),
-              4 == _ &&
-                ((_ = (0, _._)((0, _._)(_))),
-                _.push(_ + _ + "/" + _ + _ + "?t=" + __webpack_require__));
+        return _(_, _, __webpack_require__);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (_ && 0 != _.length) {
+          if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
+          if (_?.startsWith(_._)) {
+            const _ = new Array(),
+              _ = _._.GetBaseURL(),
+              _ = _.substring(_._.length + 1),
+              _ = parseInt(_.substring(0, _.indexOf("/"))),
+              _ = _.substring(_.indexOf("/") + 1),
+              _ = _._.GetHashFromHashAndExt(_),
+              _ = _._.GetExtStringFromHashAndExt(_);
+            if (null != _) {
+              let _ = (0, _._)(_);
+              _.push(
+                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+              ),
+                4 == _ &&
+                  ((_ = (0, _._)((0, _._)(_))),
+                  _.push(
+                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                  ));
+            }
+            return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
           }
-          return _.push(_ + _), _;
+          return _;
         }
-        return _;
       }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
@@ -9792,337 +9763,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      const _ = [1, 3, 2],
-        _ = [1, 3],
-        _ = [5, 4],
-        _ = {
-          capsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          spotlight: {
-            width: 2108,
-            height: 460,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight: {
-            width: 1100,
-            height: 240,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_title_image: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          background: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          hero: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          email_full: {
-            width: 800,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          email_centered: {
-            width: 644,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          broadcast_left: {
-            width: 155,
-            height: 337,
-            rgAcceptableTypes: _,
-          },
-          broadcast_right: {
-            width: 155,
-            height: 337,
-            rgAcceptableTypes: _,
-          },
-          sale_header: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_overlay: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_image_group: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_background_art: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_background: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_title: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          link_capsule: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          product_banner: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_banner_override: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner_override: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          schedule_track_art: {
-            width: 196,
-            height: 92,
-            rgAcceptableTypes: _,
-          },
-          tab_bar_background: {
-            width: 1500,
-            height: 100,
-            rgAcceptableTypes: _,
-          },
-          sale_logo: {
-            width: 940,
-            height: 460,
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_marketing_message: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [1, 3, 2, 10],
-          },
-          localized_optin_banner: {
-            width: 1e3,
-            height: 150,
-            rgAcceptableTypes: _,
-          },
-          localized_marketingmessage_webm: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [5],
-          },
-          localized_marketingmessage_mp4: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [4],
-          },
-          localized_partnerevent_webm: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [5],
-          },
-          localized_partnerevent_mp4: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [4],
-          },
-          localized_subtitles: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [6, 7],
-          },
-          localized_marketingmessage_poster: {
-            width: 528,
-            height: 297,
-            rgAcceptableTypes: [1, 3],
-          },
-          localized_marketingmessage_background: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          localized_email_image: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          template_asset: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
-          },
-          spotlight_art: {
-            width: 306,
-            height: 260,
-            rgAcceptableTypes: _,
-          },
-          old_spotlight_art: {
-            width: 306,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          takeover_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [5],
-          },
-          takeover_mp4_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [4],
-          },
-          takeover_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [5],
-          },
-          takeover_mp4_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [4],
-          },
-          takeunder_art: {
-            width: 940,
-            height: 150,
-            rgAcceptableTypes: _,
-          },
-          takeunder_mobile_art: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          app_header_capsule: {
-            width: 920,
-            height: 430,
-            rgAcceptableTypes: _,
-          },
-          app_main_capsule: {
-            width: 1232,
-            height: 706,
-            rgAcceptableTypes: _,
-          },
-        };
-      function _(_, _, _) {
-        const _ = _[_];
-        return (
-          !!_ &&
-          (!!_.bDisableEnforceDimensions || (_ === _.width && _ === _.height))
-        );
-      }
-      function _(_, _, _) {
-        const _ = _[_];
-        return (
-          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
-        );
-      }
-      function _(_, _, _) {
-        const _ = _[_];
-        return (
-          !!_ &&
-          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
-        );
-      }
-      function _(_) {
-        const _ = _[_];
-        return (
-          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
-        );
-      }
-      function _(_, _) {
-        return _.filter((_) => _(_, _));
-      }
-      function _(_, _) {
-        return _[_].rgAcceptableTypes.includes(_);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -10261,6 +9901,7 @@
         broadcast_whitelist: [],
       };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10813,9 +10454,7 @@
               : "sale_overlay" === _
                 ? (_ = this.jsondata.localized_sale_overlay)
                 : _._.includes(_)
-                  ? (_ = _._.GetLocalizedImageGroupForEditAsImgArray(
-                      this.clanSteamID,
-                    ))
+                  ? (_ = _._.GetAllLocalizedGroupImages())
                   : "product_banner" === _
                     ? (_ = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === _
@@ -10839,7 +10478,7 @@
           return _ && _[_].startsWith("http")
             ? _[_]
             : _
-              ? _._.GenerateArtworkURLFromHashAndExtensions(
+              ? _._.GenerateURLFromHashAndExt(
                   this.clanSteamID,
                   _[_],
                   __webpack_require__,
@@ -10941,7 +10580,7 @@
               let _ = __webpack_require__.indexOf("[/img]", _);
               if (-1 != _) {
                 let _ = __webpack_require__.substring(_, _).trim();
-                if (0 != _.length) return (0, _._)(_);
+                if (0 != _.length) return _._.ReplacementTokenToClanImageURL(_);
               }
             }
           }
@@ -11257,7 +10896,7 @@
                       ? _._.STORE_BASE_URL + "genre/Free%20to%20Play/"
                       : "earlyaccess" == _.type
                         ? _._.STORE_BASE_URL + "genre/Early%20Access/"
-                        : _._.STATS_BASE_URL + _.type
+                        : _._.STORE_BASE_URL + _.type
               : _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
@@ -14680,11 +14319,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -14692,1030 +14328,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _?.map((_) => {
-          const _ = _._[_];
-          (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
-          return {
-            sKey: _,
-            width: _.width,
-            height: _.height,
-            bEnforceDimensions: !_.bDisableEnforceDimensions,
-            artworkType: _,
-            bHiddenFromDropdown: "hero" === _,
-            fnGetLabelText() {
-              return "spotlight" == this.artworkType
-                ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
-                : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
-            },
-          };
-        });
-      }
-      class _ extends _._ {
-        m_filesToUpload = _._.array();
-        m_filesCompleted = [];
-        m_clanSteamID;
-        m_rgRealmList;
-        m_eDefaultLanguage;
-        m_rgImageOptions;
-        m_allCancelTokens = new Array();
-        m_lastError = void 0;
-        m_fnSetImageURL = null;
-        constructor(_, _, _, _) {
-          super(),
-            (0, _._)(this),
-            (this.m_clanSteamID = _),
-            (this.m_rgRealmList = _),
-            (this.m_eDefaultLanguage = _),
-            (this.m_rgImageOptions = _(_));
-        }
-        GetClanSteamID() {
-          return this.m_clanSteamID;
-        }
-        SetImageAllUrlFunction(_) {
-          this.m_fnSetImageURL = _;
-        }
-        async AddImage(_, _ = 0, _) {
-          const { language: _ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, _, _);
-        }
-        async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              const _ = new FileReader();
-              (_.onload = () => {
-                const _ = _.name.split(".").pop().toLowerCase();
-                let _ = null;
-                !_._.is_support || ("webm" != _ && "mp4" != _)
-                  ? ((_ = new Image()),
-                    (_.onload = () => {
-                      const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                        (_ = !0),
-                        _();
-                    }))
-                  : ((_ = document.createElement("video")),
-                    (_.onloadeddata = () => {
-                      const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                        (_ = !0),
-                        _();
-                    })),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CClanImageUploader failed to load the image, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = _.result.toString());
-              }),
-                _.readAsDataURL(_);
-            }),
-            _
-          );
-        }
-        async AddExistingClanImage(_, _ = 0, _) {
-          let _ = _._.GetHashAndExt(_),
-            _ = _._.GenerateEditableArtworkURLFromHashAndExtension(
-              this.m_clanSteamID,
-              _,
-            ),
-            _ = await _()({
-              url: _,
-              method: "GET",
-              responseType: "blob",
-            }),
-            _ = (0, _._)(_.data, _.file_name);
-          return await this.AddImage(_, _, _);
-        }
-        DeleteUploadImageByIndex(_) {
-          this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]);
-        }
-        DeleteUploadImage(_) {
-          let _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 && this.DeleteUploadImageByIndex(_);
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        GetFilesUploaded() {
-          return this.m_filesCompleted;
-        }
-        GetLastErrorFile() {
-          return this.m_lastError;
-        }
-        GetCompletedFiles() {
-          return this.m_filesCompleted.length;
-        }
-        GetTotalFiles() {
-          return this.m_filesToUpload.length;
-        }
-        GetFilesToUpload() {
-          return this.m_filesToUpload.map((_) => _.file);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        BHasError() {
-          return null != this.m_lastError;
-        }
-        BAllDone() {
-          return (
-            this.m_filesCompleted.length > 0 &&
-            this.m_filesCompleted.length == this.m_filesToUpload.length
-          );
-        }
-        BIsFileCompleted(_) {
-          return -1 != this.m_filesCompleted.indexOf(_);
-        }
-        async UploadAllImages(_, _) {
-          const _ = [];
-          for (let _ of this.m_filesToUpload)
-            if (!this.BIsFileCompleted(_.file)) {
-              const _ = _.IsValidAssetType(_, _);
-              if (_.error || _.needsCrop)
-                _.error &&
-                  (this.m_lastError = {
-                    file: _.file,
-                    message: _.error,
-                    status: 401,
-                  });
-              else {
-                _.status = "uploading";
-                const _ = this.UploadFile({
-                    uploadFile: _.file,
-                    filename: _.file.name,
-                    imageOption: _.match,
-                    resizeRequests: _.GetResizeDimension(),
-                    primaryLocalizeImage: _.localizedImageGroupPrimaryImage,
-                    lang: _.language,
-                    width: _.width,
-                    height: _.height,
-                  }),
-                  _ = {
-                    file: _.file,
-                    promise: _,
-                  };
-                __webpack_require__.push(_);
-              }
-            }
-          await Promise.all(__webpack_require__.map((_) => _.promise));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise;
-            _.push({
-              file: _.file,
-              bSuccess: 1 === _.success,
-              uploadResult: _,
-            });
-            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
-            if (_)
-              if (1 !== _.success)
-                (_.status = "failed"), (_.message = _.message);
-              else if (((_.status = "success"), this.m_fnSetImageURL))
-                if (_.origimagehash) {
-                  const _ = (0, _._)(
-                    _.language,
-                    this.m_eDefaultLanguage,
-                    this.m_rgRealmList,
-                  );
-                  _._.AddLocalizeImageUploaded(_.origimagehash, _);
-                } else {
-                  const _ = _._.GetClanImageByImageHash(
-                    this.m_clanSteamID,
-                    _.image_hash,
-                  );
-                  if (_) {
-                    const _ = (0, _._)(
-                      _.language,
-                      this.m_eDefaultLanguage,
-                      this.m_rgRealmList,
-                    );
-                    this.m_fnSetImageURL(
-                      __webpack_require__.GetCurrentImageOption().artworkType,
-                      _,
-                      _,
-                    );
-                  }
-                }
-          }
-          return _;
-        }
-        CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
-            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
-        }
-        RetryAllFailedUploads() {
-          this.CancelAllUploads(), this.UploadAllImages();
-        }
-        async handleUploadRefresh(_) {
-          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
-        }
-        async UploadFile(_) {
-          const {
-            uploadFile: _,
-            filename: __webpack_require__,
-            imageOption: _,
-            resizeRequests: _,
-            primaryLocalizeImage: _,
-            lang: _,
-            width: _,
-            height: _,
-          } = _;
-          let _ = null;
-          const _ = new FormData();
-          _.append("clanimage", _, __webpack_require__),
-            _.append("sessionid", _._.SESSIONID),
-            _?.artworkType && _.append("arttype", _.artworkType),
-            _ &&
-              _.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              );
-          let _ = "/uploadimage/";
-          _ &&
-            ((_ = "/ajaxuploadlocalizedimage/"),
-            _.append("origimagehash", _.image_hash),
-            _.append("thumbhash", _.thumbnail_hash),
-            _.append("extension", "" + _.file_type),
-            _.append("language", "" + _));
-          const _ = __webpack_require__.split(".").pop().toLocaleLowerCase();
-          ("webm" != _ && "mp4" != _) ||
-            (_.append("video_width", "" + _), _.append("video_height", "" + _));
-          const _ = _().CancelToken.source();
-          this.m_allCancelTokens.push(_);
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              this.m_clanSteamID.ConvertTo64BitString() +
-              _,
-            _ = {
-              cancelToken: _.token,
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            };
-          try {
-            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
-          } catch (_) {
-            (this.m_lastError = {
-              file: _,
-              status: _.response ? _.response.status : 500,
-              message: (0, _._)(_).strErrorMsg,
-            }),
-              (_ = _.response);
-          }
-          return _ || (await this.handleUploadRefresh(_)), _.data;
-        }
-        static async SendResizeRequest(_, _, _, _, _) {
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/resizeimage/",
-            _ = new FormData();
-          return (
-            _.append("imagehash", _),
-            _.append("extension", _),
-            _.append(
-              "resize",
-              _.map((_) => _.width + "x" + _.height).join(","),
-            ),
-            _.append("sessionid", _._.SESSIONID),
-            (
-              await _().post(_, _, {
-                cancelToken: _.token,
-              })
-            ).data.count
-          );
-        }
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
-          _ = (0, _._)(_),
-          _ = _.ConvertTo64BitString();
-        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
-        (0, _._)([_._], _.prototype, "m_lastError", void 0),
-        (0, _._)([_._], _.prototype, "AddImage", null),
-        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        dataUrl = void 0;
-        width = void 0;
-        height = void 0;
-        status = void 0;
-        message = void 0;
-        language = void 0;
-        file;
-        uploadTime;
-        fileType = 0;
-        constructor(_, _, _, _, _) {
-          (0, _._)(this),
-            (this.file = _),
-            (this.fileType = _._.GetExtensionTypeFromURL(_.name)),
-            (this.language = _),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.height = _),
-            (this.width = _),
-            (this.dataUrl = _);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
-        (0, _._)([_._], _.prototype, "language", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 960,
-        _ = 311,
-        _ = 480,
-        _ = 156;
-      class _ extends _ {
-        m_rgImageOptions;
-        m_currentImageOption = void 0;
-        m_currentImageOptionKey = void 0;
-        constructor(_, _, _, _, _, _) {
-          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
-        }
-        IsValidAssetType(_, _) {
-          let _ = 0,
-            _ = 0,
-            _ = !1,
-            _ =
-              !this.m_rgImageOptions ||
-              0 === this.m_rgImageOptions.length ||
-              this.m_rgImageOptions.some(
-                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
-              );
-          if (_) (_ = _.width), (_ = _.height), (_ = !0);
-          else if (this.GetCurrentImageOption()) {
-            const _ = _._[this.GetCurrentImageOption().artworkType];
-            _ &&
-              ((_ = _.width),
-              (_ = _.height),
-              (_ = !_.bDisableEnforceDimensions));
-          }
-          const _ = this.width >= _ && this.height >= _,
-            _ = _ ? this.width === _ && this.height === _ : _,
-            _ = _ && _ != this.fileType,
-            _ =
-              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
-              0 ==
-                (0, _._)(
-                  this.fileType,
-                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
-                ).length,
-            _ = Boolean((0, _._)(this.fileType));
-          let _ = "",
-            _ = !1;
-          return (
-            _
-              ? _
-                ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
-                : _
-                  ? (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
-                  : _ || _
-                    ? _
-                      ? !_ &&
-                        _ &&
-                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
-                        (_ = !0))
-                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
-                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
-              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
-            {
-              error: _,
-              needsCrop: _,
-              match: this.GetCurrentImageOption(),
-            }
-          );
-        }
-        BSupportsLanguages() {
-          return !0;
-        }
-        ComputeDefaultImageOption() {
-          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
-            return;
-          const _ = (0, _._)(
-            this.fileType,
-            this.m_rgImageOptions?.map((_) => _.artworkType),
-          );
-          let _ = (0, _._)(this.width, this.height, _, !1);
-          if (
-            (void 0 === _ && (_ = (0, _._)(this.width, this.height, _, !0)), _)
-          ) {
-            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
-            if (_) return _;
-          }
-          return this.m_rgImageOptions[0];
-        }
-        get ImageOptions() {
-          return this.m_rgImageOptions;
-        }
-        GetCurrentImageOptionKey() {
-          return this.m_currentImageOptionKey;
-        }
-        GetCurrentImageOption() {
-          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
-        }
-        SetCurrentImageOption(_) {
-          (this.m_currentImageOption = _),
-            (this.m_currentImageOptionKey = _?.sKey);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
-        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
-      class _ extends _ {
-        video;
-        constructor(_, _, _, _) {
-          super(_, _, _, _.src, _.videoWidth, _.videoHeight), (this.video = _);
-        }
-        BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(
-            this.video.videoWidth,
-            this.video.videoHeight,
-            _.artworkType,
-          );
-        }
-        FileTypeMatchesImageTypes(_) {
-          return (0, _._)(this.fileType, _.artworkType);
-        }
-        BIsVideo() {
-          return _._.includes(this.fileType);
-        }
-        GetResizeDimension() {}
-      }
-      class _ extends _ {
-        constructor(_, _, _) {
-          super(_, _, _, URL.createObjectURL(_), 0, 0);
-        }
-        BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(_.artworkType);
-        }
-        FileTypeMatchesImageTypes(_) {
-          return (0, _._)(this.fileType, _.artworkType);
-        }
-        BIsVideo() {
-          return _._.includes(this.fileType);
-        }
-        GetResizeDimension() {}
-      }
-      function _(_) {
-        const _ = _.split(".").pop().toLocaleLowerCase();
-        return "webm" == _ || "mp4" == _;
-      }
-      class _ extends _ {
-        bCropped = !1;
-        localizedImageGroupPrimaryImage;
-        media;
-        constructor(_, _, _, _, _) {
-          super(
-            _,
-            _,
-            _,
-            _.src,
-            _(_.name) ? _.videoWidth : _.width,
-            _(_.name) ? _.videoHeight : _.height,
-          ),
-            (0, _._)(this),
-            (this.media = _),
-            (this.localizedImageGroupPrimaryImage = _);
-        }
-        ResetImage() {
-          (this.height = this.media.height),
-            (this.width = this.media.width),
-            (this.dataUrl = this.media.src);
-        }
-        GetCanvasImageSource() {
-          return this.media;
-        }
-        BIsOriginalMinimumDimensions(_) {
-          return (0, _._)(this.media.width, this.media.height, _.artworkType);
-        }
-        FileTypeMatchesImageTypes(_) {
-          return (0, _._)(this.fileType, _.artworkType);
-        }
-        BIsVideo() {
-          return _._.includes(this.fileType);
-        }
-        GetResizeDimension() {
-          return _(this.GetCurrentImageOption()?.artworkType);
-        }
-      }
-      function _(_) {
-        return "background" === _
-          ? [
-              {
-                width: _,
-                height: _,
-              },
-              {
-                width: _,
-                height: _,
-              },
-            ]
-          : "capsule" === _ || "spotlight" === _
-            ? [
-                {
-                  width: _._[_].width / 2,
-                  height: _._[_].height / 2,
-                },
-              ]
-            : void 0;
-      }
-      (0, _._)([_._], _.prototype, "bCropped", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {}
-      function _(_, _, _) {
-        if (((null != _ && null != _) || (_ = _), !_ || 0 === _.length))
-          return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
-      }
-      function _(_, _ = 0, __webpack_require__ = !0) {
-        let _ = _.lastIndexOf(".");
-        -1 != _ && (_ = _.slice(0, _).toLowerCase());
-        let _ = null,
-          _ = 0;
-        _.endsWith("korean") && ((_ = 4), (_ = 6));
-        for (let _ = 0; _ < 31; ++_) {
-          const _ = (0, _._)(_);
-          if (_.length <= _) continue;
-          if (_.endsWith(_)) {
-            let _ = !__webpack_require__;
-            if (__webpack_require__ && _.length > _.length + 2) {
-              const _ = _[_.length - _.length - 1];
-              _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-            }
-            _ && ((_ = _), (_ = _.length));
-          }
-          const _ = (0, _._)(_);
-          _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
-        }
-        return {
-          language: _ ?? _,
-          baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      var _;
-      function _(_, _, _, _ = !1) {
-        if (_)
-          for (let _ of _) {
-            if (_ ? (0, _._)(_, _, _) : (0, _._)(_, _, _)) return _;
-          }
-      }
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-      class _ {
+        m_curLocImageGroup = null;
+        m_curLocImageGroupType = null;
         constructor() {
           (0, _._)(this),
             "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
-        m_mapClanToImages = new Map();
-        m_mapClanImageLoadPromises = new Map();
-        m_imageListChangeCallback = new Map();
-        m_mapClanImageLoadState = new Map();
-        m_mapImageIDToResolution = new Map();
-        m_curLocImageGroup = null;
-        m_curLocImageGroupType = null;
-        BHasImageResolution(_) {
-          return this.m_mapImageIDToResolution.has(_.imageid);
-        }
-        GetImageResolution(_) {
-          return this.m_mapImageIDToResolution.get(_.imageid);
-        }
-        SetImageResolution(_, _) {
-          this.m_mapImageIDToResolution.set(_.imageid, _);
-        }
-        GetImageListCallbackForClanAccountID(_) {
-          return (
-            this.m_imageListChangeCallback.has(_) ||
-              this.m_imageListChangeCallback.set(_, new _._()),
-            this.m_imageListChangeCallback.get(_)
-          );
-        }
-        static GetExtensionString(_) {
-          return (0, _._)(_.file_type) || ".jpg";
-        }
-        static GetExtensionTypeFromURL(_) {
-          return (function (_) {
-            return (
-              _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-              _.endsWith(".jpg")
-                ? 1
-                : _.endsWith(".png")
-                  ? 3
-                  : _.endsWith(".gif")
-                    ? 2
-                    : _.endsWith(".mp4")
-                      ? 4
-                      : _.endsWith(".webm")
-                        ? 5
-                        : _.endsWith(".vtt")
-                          ? 6
-                          : _.endsWith(".srt")
-                            ? 7
-                            : _.endsWith(".webp")
-                              ? 10
-                              : void 0
-            );
-          })(_);
-        }
-        static GetHashAndExt(_) {
-          return _ ? _.image_hash + _.GetExtensionString(_) : null;
-        }
-        static GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + _.GetExtensionString(_) : null;
-        }
-        m_vecClanImageDragListener = new Array();
-        AddClanImageDragListener(_) {
-          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
-            this.m_vecClanImageDragListener.push(_);
-        }
-        RemoveClanImageDragListener(_) {
-          let _ = this.m_vecClanImageDragListener.indexOf(_);
-          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
-        }
-        GetClanImageDragListener() {
-          return this.m_vecClanImageDragListener;
-        }
-        BHasLoadedClanImages(_) {
-          return this.m_mapClanToImages.has(_.GetAccountID());
-        }
-        async LoadClanImages(_, _, _) {
-          const _ = _.GetAccountID();
-          return (
-            (!_ && this.m_mapClanImageLoadPromises.has(_)) ||
-              this.m_mapClanImageLoadPromises.set(
-                _,
-                this.InternalLoadClanImages(_, _, _),
-              ),
-            this.m_mapClanImageLoadPromises.get(_)
-          );
-        }
-        async InternalLoadClanImages(_, _, _) {
-          let _ = _.GetAccountID();
-          if (
-            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
-            _ && (!this.m_mapClanToImages.has(_) || _))
-          ) {
-            let _ = {},
-              _ = null;
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/getimages/";
-            _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-              cancelToken: _ ? _.token : null,
-            });
-            for (let _ of _.data.images) _.clanAccountID = _;
-            (0, _._)(() => {
-              this.m_mapClanImageLoadState.set(_, {
-                loaded: !0,
-              }),
-                this.m_mapClanToImages.set(_, _.data.images),
-                this.GetImageListCallbackForClanAccountID(_).Dispatch(
-                  _.data.images,
-                );
-            });
-          }
-          return this.m_mapClanToImages.get(_);
-        }
-        GetLoadState(_) {
-          return this.m_mapClanImageLoadState.get(_.GetAccountID());
-        }
-        GetClanImages(_) {
-          return this.GetClanImagesByAccount(_.GetAccountID());
-        }
-        GetClanImagesByAccount(_) {
-          let _ = this.m_mapClanToImages.get(_);
-          return _ || new Array();
-        }
-        GetFilteredClanImages(_, _) {
-          let _ = _.GetClanImages(_);
-          return this.GetFilteredClanImagesList(_, _);
-        }
-        GetFilteredClanImagesList(_, _) {
-          if (_ && _.trim().length > 0) {
-            _ = _.trim().toLowerCase();
-            let _ = new Array();
-            for (let _ of _)
-              _.file_name &&
-                _.file_name.toLowerCase().indexOf(_) >= 0 &&
-                __webpack_require__.push(_);
-            return _;
-          }
-          return _;
-        }
-        GetClanImageByID(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.imageid == _) : null;
-        }
-        GetClanImageByURL(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : null;
-        }
-        GetClanImageByFile(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.file_name == _.name) : null;
-        }
-        GetClanImageByImageHash(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.image_hash == _) : null;
-        }
-        async DeleteClanImageByID(_, _) {
-          let _ = {
-              sessionid: _._.SESSIONID,
-              imageid: _,
-            },
-            _ = _.GetAccountID(),
-            _ = await _().get(
-              _._.COMMUNITY_BASE_URL +
-                "/gid/" +
-                _.ConvertTo64BitString() +
-                "/deleteimage/",
-              {
-                params: _,
-              },
-            );
-          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
-          let _ = this.m_mapClanToImages.get(_),
-            _ = _.findIndex((_, _, _) => _.imageid == _);
-          return (
-            _ >= 0 &&
-              (_.splice(_, 1),
-              this.GetImageListCallbackForClanAccountID(_).Dispatch([..._])),
-            _.data
-          );
-        }
-        async DeleteClanImage(_, _) {
-          return this.DeleteClanImageByID(_, _.imageid);
-        }
-        static GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        }
-        static GetExtensionStringFromHashAndExt(_) {
-          return _.substring(_.lastIndexOf("."));
-        }
-        static GenerateArtworkURLFromHashAndExtensions(
-          _,
-          _,
-          __webpack_require__ = _.full,
-          _,
-          _,
-        ) {
-          if (__webpack_require__ != _.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && "localized_image_group" == _
-              ? (0, _._)() +
-                  _.GetAccountID() +
-                  "/" +
-                  _ +
-                  "/" +
-                  (0, _._)((0, _._)(_)) +
-                  _
-              : (0, _._)() +
-                  _.GetAccountID() +
-                  "/" +
-                  _ +
-                  __webpack_require__ +
-                  _;
-          }
-          return (0, _._)() + _.GetAccountID() + "/" + _;
-        }
-        static GenerateEditableArtworkURLFromHashAndExtension(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        }
-        static GetMimeType(_) {
-          return (0, _._)(_);
-        }
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              _.GetExtensionString({
-                file_type: _,
-              }),
-            _ = _.GenerateEditableArtworkURLFromHashAndExtension(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        }
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          let _ = {
-              success: void 0,
-            },
-            _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = 2);
-            }),
-            (_.onload = () => {
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = 1);
-            }),
-            (_.src = _),
-            _.token.promise.catch((_) => {
-              (_.onload = () => {}), (_.success = 52);
-            });
-          let _ = 0;
-          for (; void 0 === _.success && _ < 100; )
-            await (0, _._)(100), (_ += 1);
-          return (
-            _ >= 100 &&
-              ((_.success = 16),
-              (_.err_msg = "We timed out processing images")),
-            _
-          );
-        }
-        async AsyncOverlay(_, _, _, _, _, _) {
-          let _,
-            _,
-            _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              (_ =
-                "Load fail on url " +
-                _ +
-                " with error: " +
-                (0, _._)(_).strErrorMsg),
-                console.error(_);
-            }),
-            (_.onload = () => {
-              let _ = new Image();
-              (_.crossOrigin = "anonymous"),
-                (_.onerror = (_) => {
-                  (_ =
-                    "Load fail on url " +
-                    _ +
-                    " with error: " +
-                    (0, _._)(_).strErrorMsg),
-                    console.error(_);
-                }),
-                (_.onload = () => {
-                  try {
-                    let _ = document.createElement("canvas"),
-                      _ = _.getContext("2d");
-                    (_.width = _),
-                      (_.height = _),
-                      __webpack_require__.drawImage(_, 0, 0, _, _);
-                    let _ = (_ - _.width) / 2,
-                      _ = (_ - _.height) / 2;
-                    __webpack_require__.drawImage(_, _, _),
-                      _.toBlob((_) => (_ = _), "image/jpeg");
-                  } catch (_) {
-                    _ =
-                      "Failed during image processing for " + _ + " with " + _;
-                  }
-                }),
-                (_.src = _);
-            }),
-            (_.src = _);
-          let _ = 0;
-          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
-          if (
-            (_ >= 100 &&
-              void 0 === _ &&
-              (_ = "AsyncOverlay - We timed out processing images"),
-            _)
-          )
-            throw (
-              (console.log(_),
-              {
-                success: 2,
-                err_msg: _,
-              })
-            );
-          let _ = new _._(_, null, null, -1),
-            _ = await _.UploadFile({
-              uploadFile: _,
-              filename: _,
-              width: _,
-              height: _,
-            });
-          return _.image_hash + _.GetExtensionString(_);
-        }
-        async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
+        static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
           let _ =
               _._.COMMUNITY_BASE_URL +
               "gid/" +
@@ -15765,32 +14386,26 @@
             let _ = this.m_curLocImageGroup.primaryImage;
             return this.m_curLocImageGroup.localized_images[_]
               ? this.m_curLocImageGroup.localized_images[_]
-              : _.GenerateArtworkURLFromHashAndExtensions(
-                  _,
-                  _.GetHashAndExt(_),
-                );
+              : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
           }
           return null;
         }
-        GetLocalizedImageGroupForEditAsImgArray(_) {
-          return this.GetAllLocalizedGroupImages();
-        }
         async DetermineAvailableLocalizationForGroup(_) {
-          let _ = this.m_curLocImageGroup.primaryImage,
+          const _ = this.m_curLocImageGroup.primaryImage,
             _ = _._.InitFromClanID(_.clanAccountID),
-            _ = _.GetHashAndExt(_),
+            _ = _._.GetHashAndExt(_),
             _ = [];
           for (let _ = 0; _ < 31; ++_)
-            _.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
-          let _ = await Promise.all(_);
+            _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
+          const _ = await Promise.all(_);
           (0, _._)(() => {
             for (let _ = 0; _ < 31; ++_)
               _[_] &&
                 (this.m_curLocImageGroup.localized_images[_] =
-                  _.GenerateArtworkURLFromHashAndExtensions(
+                  _._.GenerateURLFromHashAndExtAndLang(
                     _,
                     _,
-                    _.full,
+                    _._.full,
                     _,
                     this.m_curLocImageGroupType,
                   ));
@@ -15799,10 +14414,10 @@
         SetLocalizedImageGroupAtLang(_, _, _) {
           this.m_curLocImageGroup &&
             (this.m_curLocImageGroup.localized_images[_] = _
-              ? _.GenerateArtworkURLFromHashAndExtensions(
+              ? _._.GenerateURLFromHashAndExtAndLang(
                   _,
                   _,
-                  _.full,
+                  _._.full,
                   _,
                   this.m_curLocImageGroupType,
                 )
@@ -15811,13 +14426,13 @@
         AddLocalizeImageUploaded(_, _) {
           let _ = this.m_curLocImageGroup.primaryImage;
           if (_.image_hash == _) {
-            let _ = _._.InitFromClanID(_.clanAccountID),
-              _ = _.GetHashAndExt(_);
+            const _ = _._.InitFromClanID(_.clanAccountID),
+              _ = _._.GetHashAndExt(_);
             this.m_curLocImageGroup.localized_images[_] =
-              _.GenerateArtworkURLFromHashAndExtensions(
+              _._.GenerateURLFromHashAndExtAndLang(
                 _,
                 _,
-                _.full,
+                _._.full,
                 _,
                 this.m_curLocImageGroupType,
               );
@@ -15831,38 +14446,8 @@
           );
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
-        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0),
-        (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
+      (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
       const _ = new _();
-      function _(_) {
-        return 4 == _.file_type || 5 == _.file_type;
-      }
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.GetClanImagesByAccount(_),
-        );
-        return (
-          (0, _._)(
-            _.GetImageListCallbackForClanAccountID(_),
-            __webpack_require__,
-          ),
-          _
-        );
-      }
-      function _(_) {
-        const _ = _._.InitFromClanID(_),
-          _ = (0, _._)("useLoadClanImages"),
-          [_, _] = (0, _.useState)(() => _.BHasLoadedClanImages(_));
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _._.InitFromClanID(_);
-            _.BHasLoadedClanImages(_) ||
-              _.LoadClanImages(_, !1, _).then(() => _(!0));
-          }, [_, _]),
-          _
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -20500,111 +19085,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _() {
-        let _, _;
-        return {
-          promise: new Promise((_, _) => {
-            (_ = _), (_ = _);
-          }),
-          resolve: _,
-          reject: _,
-        };
-      }
-      function _(_) {
-        const _ = _.toLowerCase();
-        return _.endsWith(".jpg")
-          ? "image/jpeg"
-          : _.endsWith(".png")
-            ? "image/png"
-            : _.endsWith(".gif")
-              ? "image/gif"
-              : _.endsWith(".mp4")
-                ? "video/mp4"
-                : _.endsWith(".webm")
-                  ? "video/webm"
-                  : _.endsWith(".srt")
-                    ? "text/srt"
-                    : _.endsWith(".vtt")
-                      ? "text/vtt"
-                      : _.endsWith(".webp")
-                        ? "image/webp"
-                        : null;
-      }
-      function _(_) {
-        switch (_) {
-          case 1:
-            return ".jpg";
-          case 2:
-            return ".gif";
-          case 3:
-            return ".png";
-          case 5:
-            return ".webm";
-          case 4:
-            return ".mp4";
-          case 7:
-            return ".srt";
-          case 6:
-            return ".vtt";
-          case 10:
-            return ".webp";
-        }
-      }
-      function _(_) {
-        const _ = _(),
-          _ = new Image();
-        return (
-          (_.onload = () => _.resolve(_)),
-          (_.onerror = (_) => {
-            console.error("LoadImage failed to load the image, details", _),
-              _.resolve(void 0);
-          }),
-          (_.src = _),
-          _.promise
-        );
-      }
-      function _(_) {
-        const _ = _(),
-          _ = document.createElement("video");
-        return (
-          (_.preload = "metadata"),
-          __webpack_require__.addEventListener("loadedmetadata", () =>
-            _.resolve(_),
-          ),
-          (_.onerror = (_) => {
-            console.error("LoadVideo failed to load the video, details", _),
-              _.resolve(void 0);
-          }),
-          (_.src = _),
-          _.promise
-        );
-      }
-      async function _(_, _) {
-        if (_) return _(URL.createObjectURL(_));
-        {
-          const _ = _(),
-            _ = new FileReader();
-          (_.onload = () => _.resolve(_.result)),
-            (_.onerror = () => {
-              console.error(
-                "GetMediaElementFromFile failed to load the image, details",
-                _.error,
-              ),
-                _.resolve(void 0);
-            }),
-            __webpack_require__.readAsDataURL(_);
-          const _ = await _.promise;
-          return _ ? _(_.toString()) : null;
-        }
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -24606,6 +23086,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)({
@@ -24627,11 +23108,13 @@
       const _ = (_, _) => ["useMeetSteamGetAvailability", _, _];
       function _(_, _, _, _) {
         return (0, _._)({
-          queryKey: _(_, _),
+          queryKey: _(_, _, _),
           queryFn: async () => {
             const _ = _._.Init(_._);
             _.Body().set_type(6),
-              _.Body().set_steamid(_.ConvertTo64BitString()),
+              _.Body().set_steamid(
+                _._.InitFromAccountID(_).ConvertTo64BitString(),
+              ),
               _.Body().set_gid(_);
             const _ = (0, _._)(),
               _ = await _._.GetUserActionData(_.GetServiceTransport(), _);
@@ -24639,10 +23122,10 @@
               ? JSON.parse(_.Body().jsondata())
               : {};
           },
-          enabled: _() == _ && !!_.BIsValid(),
+          enabled: _() == _ && !!_,
         });
       }
-      const _ = (_, _) => ["useMeetSteamGetRegistrationDetails", _, _];
+      const _ = (_, _, _) => ["useMeetSteamGetRegistrationDetails", _, _, _];
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24652,271 +23135,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            transport: _,
-            eventModel: __webpack_require__,
-            fnConfirm: _,
-            fnHideModal: _,
-            nMaxPerTeam: _,
-            bAddingOrChangingSessions: _,
-          } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          [_, _] = _.useState({}),
-          [_, _] = _.useState(!1),
-          _ = _.useCallback(
-            (_) => {
-              _({
-                ..._,
-                ..._,
-              });
-            },
-            [_],
-          ),
-          _ = _(
-            0,
-            __webpack_require__.clanSteamID.GetAccountID(),
-            __webpack_require__.GID,
-            new _._(_._.steamid),
-          ),
-          {
-            sUserAccountEmail: _,
-            sUserAccountRealName: _,
-            rgPartners: _,
-          } = _.useMemo(
-            () => ({
-              sUserAccountRealName: (0, _._)("realname", "application_config"),
-              sUserAccountEmail: (0, _._)("email", "application_config"),
-              rgPartners: (0, _._)("partners", "application_config") ?? [],
-            }),
-            [],
-          ),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              null == _ &&
-                _.push({
-                  data: void 0,
-                  label: (0, _._)("#MeetSteam_ChoosePartner"),
-                }),
-              _.push(
-                ..._.map((_, _) => ({
-                  data: _.partnerid,
-                  label: _.partner_name,
-                })),
-              ),
-              _.push({
-                data: 0,
-                label: (0, _._)("#MeetSteam_ChoosePartnerOther"),
-              }),
-              _
-            );
-          }, [_, _]);
-        _.useEffect(() => {
-          if (!_.isSuccess) return;
-          const _ = _.find((_) => _.partnerid == _.data.partner_id),
-            _ = 0 === _.data.partner_id ? 0 : _?.partnerid;
-          _(_), _(_), _(_.data);
-        }, [_.isSuccess, _.data, _]);
-        const _ = _?.length > 0,
-          _ = !_ || null != _,
-          _ = _ && 0 === _;
-        _.useEffect(() => {
-          if (_ == _) return;
-          if ((_(_), !_ || !_)) return;
-          let _;
-          const _ = _.find((_) => _.partnerid == _);
-          var _;
-          (_ =
-            _ || !_
-              ? {
-                  name: _?.length > 0 ? _ : void 0,
-                  email_override: _?.length > 0 ? _ : void 0,
-                  partner_id: 0,
-                }
-              : {
-                  name:
-                    _.partneruserrealname?.length > 0
-                      ? _.partneruserrealname
-                      : void 0,
-                  company: _.partner_name?.length > 0 ? _.partner_name : void 0,
-                  email_override:
-                    _.partneruseremail?.length > 0
-                      ? _.partneruseremail
-                      : void 0,
-                  partner_id: _.partnerid,
-                }),
-            Object.values(_).some((_) => null != _) &&
-              _(
-                ((_ = _),
-                Object.fromEntries(
-                  Object.entries(_).filter(([_, _]) => void 0 !== _),
-                )),
-              );
-        }, [_, _, _, _, _, _, _, _, _]);
-        const _ = _.isLoading || _,
-          _ = _
-            ? (0, _._)(
-                "#MeetSteam_Register_title",
-                __webpack_require__.GetNameWithFallback(_),
-              )
-            : (0, _._)("#MeetSteam_Unregister_title"),
-          _ =
-            !_ ||
-            (_ &&
-              _.name?.length > 0 &&
-              (!_.guest_names || _.guest_names?.every((_) => _.length > 0)) &&
-              _.email_override?.length > 0 &&
-              _.company?.length > 0);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _ &&
-            _.createElement(
-              _._,
-              {
-                bOKDisabled: !0,
-                bHideCloseIcon: !0,
-                onCancel: () => !1,
-              },
-              _.createElement(_._, {
-                size: "medium",
-                position: "center",
-                string: _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
-              }),
-            ),
-          !_ &&
-            _.createElement(
-              _._,
-              {
-                strTitle: _,
-                onCancel: _,
-                bOKDisabled: !_,
-                onOK: async () => {
-                  _(!0), await _(_), _(!1), _.refetch(), _();
-                },
-              },
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#MeetSteam_Reg_Intro"),
-                  ),
-                  _.createElement("br", null),
-                ),
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _ &&
-                    _.createElement(_._, {
-                      label: (0, _._)("#MeetSteam_Reg_Preset"),
-                      tooltip: (0, _._)("#MeetSteam_Reg_Preset_ttip"),
-                      rgOptions: _,
-                      selectedOption: _,
-                      onChange: (_) => _(_.data),
-                    }),
-                  _ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Name"),
-                        value: _.name || "",
-                        onChange: (_) =>
-                          _({
-                            name: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Email"),
-                        value: _.email_override || "",
-                        mustBeEmail: !0,
-                        onChange: (_) =>
-                          _({
-                            email_override: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Company"),
-                        value: _.company || "",
-                        onChange: (_) =>
-                          _({
-                            company: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Game"),
-                        value: _.game || "",
-                        onChange: (_) =>
-                          _({
-                            game: _.currentTarget.value,
-                          }),
-                      }),
-                      Boolean(_ > 0) &&
-                        _.createElement(_._, {
-                          label: (0, _._)("#MeetSteam_Reg_GuestCount"),
-                          tooltip: (0, _._)("#MeetSteam_Reg_GuestCount_ttip"),
-                          rgOptions: Array.from({
-                            length: _ + 1,
-                          }).map((_, _) => ({
-                            data: _,
-                            label: _,
-                          })),
-                          selectedOption: (_.guests_registered ?? 1) - 1,
-                          onChange: (_) =>
-                            _({
-                              guests_registered: _.data + 1,
-                              guest_names:
-                                _.guest_names?.length > _.data
-                                  ? _.guest_names.slice(0, _.data)
-                                  : _._(_.guest_names ?? [], _.data, ""),
-                            }),
-                        }),
-                      Boolean(_.guests_registered > 1) &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)("#MeetSteam_Reg_Others"),
-                          ),
-                          _.createElement("br", null),
-                          _.guest_names.map((_, _) =>
-                            _.createElement(_._, {
-                              key: "guesname_" + _,
-                              type: "text",
-                              label: (0, _._)("#MeetSteam_Reg_Others_name"),
-                              value: _,
-                              onChange: (_) => {
-                                const _ = [..._.guest_names];
-                                (_[_] = _.currentTarget.value),
-                                  _({
-                                    guest_names: _,
-                                  });
-                              },
-                            }),
-                          ),
-                        ),
-                    ),
-                ),
-            ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_isLoading = !1;
@@ -25055,6 +23274,346 @@
       function _() {
         return (0, _._)(() => _.Get().BIsLoading());
       }
+      function _(_) {
+        const {
+            eventModel: _,
+            fnConfirm: __webpack_require__,
+            fnHideModal: _,
+            nMaxPerTeam: _,
+            bAddingOrChangingSessions: _,
+            transport: _,
+          } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _] = _.useState({}),
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(
+            (_) => {
+              _({
+                ..._,
+                ..._,
+              });
+            },
+            [_],
+          ),
+          _ = _(0, _.clanSteamID.GetAccountID(), _.GID, _._.accountid),
+          {
+            sUserAccountEmail: _,
+            sUserAccountRealName: _,
+            rgPartners: _,
+          } = _.useMemo(
+            () => ({
+              sUserAccountRealName: (0, _._)("realname", "application_config"),
+              sUserAccountEmail: (0, _._)("email", "application_config"),
+              rgPartners: (0, _._)("partners", "application_config") ?? [],
+            }),
+            [],
+          ),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
+          _ = _.useMemo(() => {
+            const _ = [];
+            return (
+              null == _ &&
+                _.push({
+                  data: void 0,
+                  label: (0, _._)("#MeetSteam_ChoosePartner"),
+                }),
+              _.push(
+                ..._.map((_, _) => ({
+                  data: _.partnerid,
+                  label: _.partner_name,
+                })),
+              ),
+              _.push({
+                data: 0,
+                label: (0, _._)("#MeetSteam_ChoosePartnerOther"),
+              }),
+              _
+            );
+          }, [_, _]);
+        _.useEffect(() => {
+          if (!_.isSuccess) return;
+          const _ = _.find((_) => _.partnerid == _.data.partner_id),
+            _ = 0 === _.data.partner_id ? 0 : _?.partnerid;
+          _(_), _(_), _(_.data);
+        }, [_.isSuccess, _.data, _]);
+        const _ = _?.length > 0,
+          _ = !_ || null != _,
+          _ = _ && 0 === _;
+        _.useEffect(() => {
+          if (_ == _) return;
+          if ((_(_), !_ || !_)) return;
+          let _;
+          const _ = _.find((_) => _.partnerid == _);
+          var _;
+          (_ =
+            _ || !_
+              ? {
+                  name: _?.length > 0 ? _ : void 0,
+                  email_override: _?.length > 0 ? _ : void 0,
+                  partner_id: 0,
+                }
+              : {
+                  name:
+                    _.partneruserrealname?.length > 0
+                      ? _.partneruserrealname
+                      : void 0,
+                  company: _.partner_name?.length > 0 ? _.partner_name : void 0,
+                  email_override:
+                    _.partneruseremail?.length > 0
+                      ? _.partneruseremail
+                      : void 0,
+                  partner_id: _.partnerid,
+                }),
+            Object.values(_).some((_) => null != _) &&
+              _(
+                ((_ = _),
+                Object.fromEntries(
+                  Object.entries(_).filter(([_, _]) => void 0 !== _),
+                )),
+              );
+        }, [_, _, _, _, _, _, _, _, _]);
+        const _ = _.isLoading || _,
+          _ = _
+            ? (0, _._)("#MeetSteam_Register_title", _.GetNameWithFallback(_))
+            : (0, _._)("#MeetSteam_Unregister_title"),
+          _ =
+            !_ ||
+            (_ &&
+              _.name?.length > 0 &&
+              (!_.guest_names || _.guest_names?.every((_) => _.length > 0)) &&
+              _.email_override?.length > 0 &&
+              _.company?.length > 0);
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _ &&
+            _.createElement(
+              _._,
+              {
+                bOKDisabled: !0,
+                bHideCloseIcon: !0,
+                onCancel: () => !1,
+              },
+              _.createElement(_._, {
+                size: "medium",
+                position: "center",
+                string: _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
+              }),
+            ),
+          !_ &&
+            _.createElement(
+              _._,
+              {
+                strTitle: _,
+                onCancel: _,
+                bOKDisabled: !_,
+                onOK: async () => {
+                  _(!0), await __webpack_require__(_), _(!1), _.refetch(), _();
+                },
+              },
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    null,
+                    (0, _._)("#MeetSteam_Reg_Intro"),
+                  ),
+                  _.createElement("br", null),
+                  _ &&
+                    _.createElement(_._, {
+                      label: (0, _._)("#MeetSteam_Reg_Preset"),
+                      tooltip: (0, _._)("#MeetSteam_Reg_Preset_ttip"),
+                      rgOptions: _,
+                      selectedOption: _,
+                      onChange: (_) => _(_.data),
+                    }),
+                  _ &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Name"),
+                        value: _.name || "",
+                        onChange: (_) =>
+                          _({
+                            name: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Email"),
+                        value: _.email_override || "",
+                        mustBeEmail: !0,
+                        onChange: (_) =>
+                          _({
+                            email_override: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Company"),
+                        value: _.company || "",
+                        onChange: (_) =>
+                          _({
+                            company: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Game"),
+                        value: _.game || "",
+                        onChange: (_) =>
+                          _({
+                            game: _.currentTarget.value,
+                          }),
+                      }),
+                      Boolean(_ > 0) &&
+                        _.createElement(_._, {
+                          label: (0, _._)("#MeetSteam_Reg_GuestCount"),
+                          tooltip: (0, _._)("#MeetSteam_Reg_GuestCount_ttip"),
+                          rgOptions: Array.from({
+                            length: _ + 1,
+                          }).map((_, _) => ({
+                            data: _,
+                            label: _,
+                          })),
+                          selectedOption: (_.guests_registered ?? 1) - 1,
+                          onChange: (_) =>
+                            _({
+                              guests_registered: _.data + 1,
+                              guest_names:
+                                _.guest_names?.length > _.data
+                                  ? _.guest_names.slice(0, _.data)
+                                  : _._(_.guest_names ?? [], _.data, ""),
+                            }),
+                        }),
+                      Boolean(_.guests_registered > 1) &&
+                        _.createElement(
+                          "div",
+                          null,
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)("#MeetSteam_Reg_Others"),
+                          ),
+                          _.createElement("br", null),
+                          _.guest_names.map((_, _) =>
+                            _.createElement(_._, {
+                              key: "guesname_" + _,
+                              type: "text",
+                              label: (0, _._)("#MeetSteam_Reg_Others_name"),
+                              value: _,
+                              onChange: (_) => {
+                                const _ = [..._.guest_names];
+                                (_[_] = _.currentTarget.value),
+                                  _({
+                                    guest_names: _,
+                                  });
+                              },
+                            }),
+                          ),
+                        ),
+                      _.createElement(_, {
+                        eventModel: _,
+                        oReg: _,
+                        fnUpdateRegistration: _,
+                      }),
+                    ),
+                ),
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            oReg: __webpack_require__,
+            fnUpdateRegistration: _,
+          } = _,
+          _ =
+            ((_ = _.jsondata.meet_steam_groups),
+            (_ = 2),
+            (0, _._)(() =>
+              _.filter((_) =>
+                _.sessions.some(
+                  (_) => _.Get().GetRegistrationStatus(_.group_id, _._) == _,
+                ),
+              ).map((_) => _.group_id),
+            ));
+        var _, _;
+        return _ && 0 != _.length
+          ? _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "h1",
+                null,
+                (0, _._)("#MeetSteam_Reg_Question_title"),
+              ),
+              _.createElement(
+                "p",
+                null,
+                (0, _._)("#MeetSteam_Reg_Question_desc"),
+              ),
+              _.map((_) => {
+                const _ = _.jsondata.meet_steam_groups.find(
+                  (_) => _.group_id == _,
+                );
+                return _.createElement(_, {
+                  key: "groupquestion" + _,
+                  groupInfo: _,
+                  fnUpdateText: (_) => {
+                    const _ = {
+                      ...__webpack_require__,
+                    };
+                    _.pre_event_partner_questions ||
+                      (_.pre_event_partner_questions = []);
+                    let _ = _.pre_event_partner_questions.findIndex(
+                      (_) => _.group_id == _,
+                    );
+                    if (_ <= 0)
+                      _.pre_event_partner_questions.push({
+                        group_id: _,
+                        question: _,
+                      });
+                    else {
+                      const _ = [..._.pre_event_partner_questions];
+                      (_[_] = {
+                        group_id: _,
+                        question: _,
+                      }),
+                        (_.pre_event_partner_questions = _);
+                    }
+                  },
+                });
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { fnUpdateText: _, groupInfo: __webpack_require__ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _._)(
+            () =>
+              __webpack_require__.localized_session_title[_] ||
+              __webpack_require__.localized_session_title[0] ||
+              "",
+          );
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, null, _),
+          _.createElement("textarea", {
+            value: _,
+            onChange: (_) => _(_.currentTarget.value),
+          }),
+        );
+      }
       (0, _._)([_._], _.prototype, "m_isLoading", void 0),
         (0, _._)([_._], _.prototype, "m_existingRegistrations", void 0),
         (0, _._)([_._], _.prototype, "m_selections", void 0),
@@ -25064,6 +23623,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
@@ -25109,18 +23669,19 @@
           [_],
         );
       }
+      function _() {
+        const [_] = (0, _.useState)(() =>
+          Number.parseInt(
+            (0, _._)("meet_steam_visibility_id", "application_config"),
+          ),
+        );
+        return _;
+      }
       function _(_) {
         const { groupData: _, eventModel: __webpack_require__ } = _,
           _ = _(),
           _ = (0, _._)(),
-          _ = (function () {
-            const [_] = (0, _.useState)(() =>
-              Number.parseInt(
-                (0, _._)("meet_steam_visibility_id", "application_config"),
-              ),
-            );
-            return _;
-          })(),
+          _ = _(),
           _ = _(),
           _ = _(
             _,
@@ -25136,15 +23697,20 @@
               new Map(),
             ),
           ),
-          _ = new _._(_._.steamid ? _._.steamid : null),
           _ = _(
             0,
             __webpack_require__.clanSteamID.GetAccountID(),
             __webpack_require__.GID,
-            _,
+            _._.accountid,
           ),
           _ = _.isSuccess && !!_.data.allow_registration_if_full;
-        if (!_.isSuccess || (_ && _._.accountid))
+        if (!_.isSuccess)
+          return _.createElement(
+            "div",
+            null,
+            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+          );
+        if (_ && _._.accountid)
           return _.createElement(_._, {
             size: "medium",
             position: "center",
@@ -25258,6 +23824,26 @@
             )
           : null;
       }
+      function _(_, _, _) {
+        const _ = _ || (0 === _ && _ > 0) || 1 === _ || 2 === _ || 3 === _;
+        let _ = null,
+          _ = null;
+        return (
+          1 == _
+            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _().Registered))
+            : 2 == _
+              ? ((_ = (0, _._)("#MeetSteam_Registering")),
+                (_ = _().Registering))
+              : 3 == _ &&
+                ((_ = (0, _._)("#MeetSteam_Unegistering")),
+                (_ = _().Unregistering)),
+          {
+            bEnabled: _,
+            strStatusClass: _,
+            strStatusToken: _,
+          }
+        );
+      }
       function _(_) {
         const {
             sessionData: _,
@@ -25282,63 +23868,51 @@
           _ = _().unix(_)._(_),
           _ = _.utcOffset() - _.utcOffset(),
           _ = Math.max(0, _ - (_ || 0)),
-          _ = _ || (0 === _ && _ > 0) || 1 === _ || 2 === _ || 3 === _;
-        let _ = null,
-          _ = null;
-        return (
-          1 == _
-            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _().Registered))
-            : 2 == _
-              ? ((_ = (0, _._)("#MeetSteam_Registering")),
-                (_ = _().Registering))
-              : 3 == _ &&
-                ((_ = (0, _._)("#MeetSteam_Unegistering")),
-                (_ = _().Unregistering)),
+          { strStatusClass: _, strStatusToken: _, bEnabled: _ } = _(_, _, _);
+        return _.createElement(
+          _.Fragment,
+          null,
           _.createElement(
-            _.Fragment,
-            null,
+            "div",
+            {
+              className: (0, _._)(_().SessionInstance, _),
+            },
             _.createElement(
               "div",
               {
-                className: (0, _._)(_().SessionInstance, _),
+                className: _().StatusText,
+              },
+              _.createElement("span", null, _),
+            ),
+            _.createElement(
+              "button",
+              {
+                className: (0, _._)(_().Button, _().Background),
+                disabled: !_,
+                onClick: __webpack_require__,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().StatusText,
+                  className: _().Title,
                 },
-                _.createElement("span", null, _),
+                (0, _._)(new Date(1e3 * (_ + 60 * _))),
               ),
               _.createElement(
-                "button",
+                "div",
                 {
-                  className: (0, _._)(_().Button, _().Background),
-                  disabled: !_,
-                  onClick: __webpack_require__,
+                  className: _().TimeFrame,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Title,
-                  },
-                  (0, _._)(new Date(1e3 * (_ + 60 * _))),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TimeFrame,
-                  },
-                  (0, _._)(_ + 60 * _, _ + 60 * _, !0),
-                  " ",
-                  _.format("z"),
-                ),
+                (0, _._)(_ + 60 * _, _ + 60 * _, !0),
+                " ",
+                _.format("z"),
               ),
-              _.createElement(_, {
-                nAvailableSpace: _,
-                bAllowedToRegisterIfFull: _,
-              }),
             ),
-          )
+            _.createElement(_, {
+              nAvailableSpace: _,
+              bAllowedToRegisterIfFull: _,
+            }),
+          ),
         );
       }
       function _(_) {
@@ -25482,7 +24056,6 @@
                   }),
                 _ &&
                   _.createElement(_, {
-                    transport: _,
                     eventModel: _,
                     fnConfirm: async (_) => {
                       _(!0), (await _.Get().Save(_)) || _(), _.refetch(), _(!1);
@@ -25490,6 +24063,7 @@
                     fnHideModal: () => _(!1),
                     nMaxPerTeam: _,
                     bAddingOrChangingSessions: _,
+                    transport: _,
                   }),
                 _ &&
                   _.createElement(
@@ -25564,12 +24138,43 @@
             : null;
       }
       function _(_) {
+        const { eventModel: _ } = _,
+          _ = _(),
+          _ = _(),
+          _ = _(_, _.clanSteamID.GetAccountID(), _.GID),
+          _ = _(0, _.clanSteamID.GetAccountID(), _.GID, _._.accountid);
+        if (!_.isSuccess)
+          return _.createElement(
+            "div",
+            null,
+            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+          );
+        if (_ && _._.accountid)
+          return _.createElement(_._, {
+            size: "medium",
+            position: "center",
+            string: (0, _._)("#Loading"),
+          });
         return _.createElement(_, {
           ..._,
+          fnOnClick: (_, _) => {
+            const _ = _.Get().GetSelection(_) == _;
+            _.Get().SetSelection(_, _ ? void 0 : _);
+          },
+          rgAvailability: _?.data,
+          bAllowedToRegisterIfFull: _?.data?.allow_registration_if_full,
         });
       }
       function _(_) {
-        const { eventModel: _, scheduleData: __webpack_require__ } = _,
+        const {
+            eventModel: _,
+            scheduleData: __webpack_require__,
+            bAllowedToRegisterIfFull: _,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _(),
           [_, _, _] = (0, _._)(() => [
             _.jsondata.meet_steam_groups,
             __webpack_require__.in_person_time_zone,
@@ -25580,18 +24185,23 @@
             const _ = new Map(),
               _ = new Map();
             for (const _ of _)
-              for (const _ of _.sessions) {
-                const _ = (
-                  "in_person" == _
-                    ? _().unix(_.rtime_start)._(_)
-                    : _().unix(_.rtime_start)
-                ).format("YYYY-MM-DD");
-                _.has(_) || _.set(_, []),
-                  _.get(_).push({
-                    group: _,
-                    session: _,
-                  });
-              }
+              if (
+                !(_.group_visibility_tokens?.length > 0) ||
+                _.group_visibility_tokens.includes(_) ||
+                _
+              )
+                for (const _ of _.sessions) {
+                  const _ = (
+                    "in_person" == _
+                      ? _().unix(_.rtime_start)._(_)
+                      : _().unix(_.rtime_start)
+                  ).format("YYYY-MM-DD");
+                  _.has(_) || _.set(_, []),
+                    _.get(_).push({
+                      group: _,
+                      session: _,
+                    });
+                }
             for (const _ of _.session_breaks || []) {
               const _ = (
                 "in_person" == _
@@ -25605,7 +24215,7 @@
                 (_, _) => _.session.rtime_start - _.session.rtime_start,
               );
             return [_, _, Array.from(_.keys()).sort()];
-          }, [_, _, _, __webpack_require__.session_breaks]);
+          }, [_, _, _, _, _, __webpack_require__.session_breaks]);
         return _
           ? _.createElement(
               _.Fragment,
@@ -25618,17 +24228,16 @@
                     key: "day_" + _,
                     className: _().SingleDayCtn,
                   },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().ScheduleTopDate,
-                    },
-                    _,
-                  ),
+                  _.createElement(_, {
+                    dateKey: _,
+                  }),
                   _.createElement(_, {
                     scheduleData: __webpack_require__,
+                    bAllowedToRegisterIfFull: _,
+                    fnOnClick: _,
                     rgDayGroupSessions: _,
                     rgBreakSessions: _.get(_) || [],
+                    rgAvailability: _,
                   }),
                 );
               }),
@@ -25640,10 +24249,27 @@
             );
       }
       function _(_) {
+        const { dateKey: _ } = _,
+          [__webpack_require__, _, _] = _.split("-").map(Number),
+          _ = new Date(__webpack_require__, _ - 1, _),
+          _ = (0, _._)();
+        return _.createElement(
+          "h2",
+          {
+            className: _().ScheduleTopDate,
+          },
+          _.getFullYear() == _.getFullYear() ? (0, _._)(_) : (0, _._)(_),
+          " ",
+        );
+      }
+      function _(_) {
         const {
             scheduleData: _,
             rgDayGroupSessions: __webpack_require__,
             rgBreakSessions: _,
+            bAllowedToRegisterIfFull: _,
+            fnOnClick: _,
+            rgAvailability: _,
           } = _,
           _ = (0, _.useMemo)(() => {
             const _ = [];
@@ -25677,8 +24303,11 @@
                 key: "start_" + _[0].session.rtime_start,
               },
               _.createElement(_, {
+                bAllowedToRegisterIfFull: _,
+                fnOnClick: _,
                 scheduleData: _,
                 rgSlotSessions: _,
+                rgAvailability: _,
               }),
               _.map((_) =>
                 _.createElement(_, {
@@ -25712,7 +24341,9 @@
           ]);
         return _.createElement(
           "div",
-          null,
+          {
+            className: _().ScheduleRow,
+          },
           _.createElement(_, {
             scheduleData: _,
             rtStart: _,
@@ -25722,7 +24353,13 @@
         );
       }
       function _(_) {
-        const { scheduleData: _, rgSlotSessions: __webpack_require__ } = _,
+        const {
+            scheduleData: _,
+            rgSlotSessions: __webpack_require__,
+            bAllowedToRegisterIfFull: _,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
           [_, _] = (0, _._)(() => [
             __webpack_require__[0].session.rtime_start,
             __webpack_require__[0].session.rtime_end,
@@ -25745,7 +24382,10 @@
             __webpack_require__.map((_) =>
               _.createElement(_, {
                 key: `entry_${_.group.group_id}_${_.session._}`,
+                bAllowedToRegisterIfFull: _,
+                fnOnClick: _,
                 session: _,
+                rgAvailability: _,
               }),
             ),
           ),
@@ -25764,16 +24404,17 @@
           {
             className: _().ScheduleTimeColumn,
           },
-          _.createElement(
-            "div",
-            null,
-            `${_.format("HH:mm")} - ${_.format("HH:mm")}`,
-          ),
+          _.createElement("div", null, (0, _._)(_.unix(), _.unix())),
           _.createElement("div", null, `${_.format("z")}`),
         );
       }
       function _(_) {
-        const { session: _ } = _,
+        const {
+            session: _,
+            bAllowedToRegisterIfFull: __webpack_require__,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _, _] = (0, _._)(() => [
             _.group.localized_session_title?.[_] ||
@@ -25789,11 +24430,24 @@
               _.group.localized_intended_audience?.[0] ||
               "",
           ]),
-          [_, _, _] = (0, _._)(!1);
+          [_, _, _] = (0, _._)(!1),
+          _ = (0, _._)(() =>
+            _.Get().GetRegistrationStatus(_.group.group_id, _.session._),
+          ),
+          _ = _?.find(
+            (_) =>
+              _.group_id === _.group.group_id && _.session_id === _.session._,
+          )?.guest_count,
+          _ = Math.max(0, _.session.max_capacity - (_ || 0)),
+          {
+            strStatusClass: _,
+            strStatusToken: _,
+            bEnabled: _,
+          } = _(_, _, __webpack_require__);
         return _.createElement(
           "div",
           {
-            className: _().SessionInstance,
+            className: (0, _._)(_().SessionInstance, _),
           },
           _.createElement(
             "div",
@@ -25826,12 +24480,21 @@
                 },
                 (0, _._)("#MeetSteam_Session_Details"),
               ),
-              _.createElement(_._, null, (0, _._)("#Button_Select")),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _ && _(_.group.group_id, _.session._);
+                  },
+                  disabled: !_,
+                },
+                (0, _._)("#Button_Select"),
+              ),
             ),
           ),
           _.createElement(_, {
-            nAvailableSpace: _.session.max_capacity,
-            bAllowedToRegisterIfFull: !0,
+            nAvailableSpace: _,
+            bAllowedToRegisterIfFull: __webpack_require__,
           }),
           _.createElement(
             _._,
@@ -28368,6 +27031,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {
@@ -28392,6 +27056,10 @@
       }
       function _() {
         return 2 == _().eLocation;
+      }
+      function _() {
+        const _ = _();
+        return 2 == _.eLocation || 1 == _.eLocation;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -28612,7 +27280,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -28634,6 +27301,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -29211,9 +27879,10 @@
       }
       const _ = (0, _._)((_) => {
         const _ = _._.GetWithFallback(
-          _.link.localized_link_capsule,
-          _.language,
-        );
+            _.link.localized_link_capsule,
+            _.language,
+          ),
+          _ = _._.GenerateURLFromHashAndExt(_.clanAccountID, _);
         return _.createElement(
           _._,
           {
@@ -29232,7 +27901,7 @@
             Boolean(_.link.localized_link_capsule) &&
               _.createElement(_._, {
                 className: _().LinkCapsuleImage,
-                src: `${(0, _._)()}${_.clanAccountID}/${_}`,
+                src: _,
               }),
             Boolean(_.link.materialized_link_capsule) &&
               _.createElement("img", {
@@ -32446,512 +31115,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.topleft = "topleft"),
-          (_.top = "top"),
-          (_.topright = "topright"),
-          (_.left = "left"),
-          (_.middle = "middle"),
-          (_.right = "right"),
-          (_.bottomleft = "bottomleft"),
-          (_.bottom = "bottom"),
-          (_.bottomright = "bottomright");
-      })(_ || (_ = {}));
-      let _ = class extends _.Component {
-        m_rectLinkRegion;
-        m_elLinkRegionBox;
-        m_nLocalOffsetXPct;
-        m_nLocalOffsetYPct;
-        m_fnMouseUp = null;
-        m_fnMouseMove = null;
-        m_listeners = new _._();
-        m_strDescription = "";
-        m_aspectRatio = 1;
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
-        }
-        constructor(_) {
-          super(_),
-            (this.state = {
-              curLeftPosPct: this.props.xPosPct,
-              curTopPosPct: this.props.yPosPct,
-              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
-              curBottomPosPct:
-                100 - (this.props.yPosPct + this.props.heightPct),
-              curWidthPct: this.props.widthPct,
-              curHeightPct: this.props.heightPct,
-              EdgeDown: null,
-              text_link_url: this.props.link_url,
-              text_link_description: this.props.link_description,
-              bEditingLink: !1,
-              valid_link: this.validateUrl(this.props.link_url),
-            }),
-            (this.m_strDescription = this.props.link_description),
-            (this.m_aspectRatio =
-              this.props.heightPct > 0 && this.props.widthPct > 0
-                ? this.props.widthPct / this.props.heightPct
-                : 1);
-        }
-        LinkRegionBoxRef(_) {
-          this.m_elLinkRegionBox = _;
-        }
-        OnMouseDown(_, _) {
-          (this.m_fnMouseUp = (_) => {
-            this.OnMouseUp(_, _);
-          }),
-            (this.m_fnMouseMove = (_) => {
-              this.OnMouseMove(_, _);
-            }),
-            this.setState({
-              EdgeDown: _,
-            }),
-            (this.m_rectLinkRegion =
-              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
-            (this.m_nLocalOffsetXPct =
-              ((_.clientX - this.m_rectLinkRegion.left) /
-                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-                100 -
-              this.state.curLeftPosPct),
-            (this.m_nLocalOffsetYPct =
-              ((_.clientY - this.m_rectLinkRegion.top) /
-                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-                100 -
-              this.state.curTopPosPct),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mousemove",
-              this.m_fnMouseMove,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mouseup",
-              this.m_fnMouseUp,
-            ),
-            _.preventDefault(),
-            _.stopPropagation();
-        }
-        OnMouseMove(_, _) {
-          if (void 0 !== this.state.EdgeDown) {
-            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
-              case _.left:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.right:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.top:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                });
-                break;
-              case _.bottom:
-                this.UpdateState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.topleft:
-                this.UpdateState({
-                  curTopPosPct: this.CalcBottomEdge(_.clientY),
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.topright:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.bottomleft:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.bottomright:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.middle: {
-                const _ = (0, _._)(
-                    this.CalcLeftEdge(_.clientX),
-                    0,
-                    100 - this.state.curWidthPct,
-                  ),
-                  _ = 100 - (_ + this.state.curWidthPct),
-                  _ = (0, _._)(
-                    this.CalcTopEdge(_.clientY),
-                    0,
-                    100 - this.state.curHeightPct,
-                  ),
-                  _ = {
-                    curLeftPosPct: _,
-                    curRightPosPct: _,
-                    curTopPosPct: _,
-                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
-                  };
-                this.setState(_);
-                break;
-              }
-            }
-            _.preventDefault(), _.stopPropagation();
-          }
-        }
-        IsValidPct(_) {
-          return _ >= 0 && _ <= 100;
-        }
-        UpdateState(_) {
-          let _ =
-              void 0 !== _.curTopPosPct
-                ? _.curTopPosPct
-                : this.state.curTopPosPct,
-            _ =
-              void 0 !== _.curBottomPosPct
-                ? _.curBottomPosPct
-                : this.state.curBottomPosPct,
-            _ =
-              void 0 !== _.curLeftPosPct
-                ? _.curLeftPosPct
-                : this.state.curLeftPosPct,
-            _ =
-              void 0 !== _.curRightPosPct
-                ? _.curRightPosPct
-                : this.state.curRightPosPct,
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100,
-            ),
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100,
-            );
-          this.props.bLockAspectRatio &&
-            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
-              ? (_ = _ / this.m_aspectRatio)
-              : (_ = _ * this.m_aspectRatio)),
-            void 0 !== _.curLeftPosPct
-              ? (_ = 100 - _ - _)
-              : (_ = 100 - (_ + _)),
-            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
-          const _ = 100 - _ - _,
-            _ = 100 - _ - _;
-          this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.setState({
-              curLeftPosPct: _,
-              curRightPosPct: _,
-              curTopPosPct: _,
-              curBottomPosPct: _,
-            });
-        }
-        GetXPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.left) /
-              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-              100 -
-            this.m_nLocalOffsetXPct
-          );
-        }
-        GetYPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.top) /
-              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-              100 -
-            this.m_nLocalOffsetYPct
-          );
-        }
-        CalcLeftEdge(_) {
-          return (0, _._)(this.GetXPercent(_), 0, 100);
-        }
-        CalcRightEdge(_) {
-          return (0, _._)(
-            100 - (this.GetXPercent(_) + this.state.curWidthPct),
-            0,
-            100,
-          );
-        }
-        CalcTopEdge(_) {
-          return (0, _._)(this.GetYPercent(_), 0, 100);
-        }
-        CalcBottomEdge(_) {
-          return (0, _._)(
-            100 - (this.GetYPercent(_) + this.state.curHeightPct),
-            0,
-            100,
-          );
-        }
-        OnMouseUp(_, _) {
-          this.setState({
-            curWidthPct:
-              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
-          }),
-            this.setState({
-              curHeightPct:
-                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
-            }),
-            this.setState({
-              EdgeDown: void 0,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            }),
-            this.m_listeners.Unregister();
-        }
-        async HandleDelete() {
-          this.props.deleteFn && this.props.deleteFn(this.props.index);
-        }
-        OnSetLinkURLChange(_) {
-          this.setState({
-            text_link_url: _.target.value,
-            valid_link: this.validateUrl(_.target.value),
-          });
-        }
-        OnSetLinkDescriptionChange(_) {
-          this.setState({
-            text_link_description: _.target.value,
-          });
-        }
-        validateUrl(_) {
-          return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-            _,
-          );
-        }
-        OnSaveLink() {
-          (this.m_strDescription = this.state.text_link_description),
-            this.setState({
-              bEditingLink: !this.state.bEditingLink,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            });
-        }
-        OnEditLink() {
-          this.setState({
-            bEditingLink: !this.state.bEditingLink,
-          });
-        }
-        render() {
-          let _ = {
-              left: this.state.curLeftPosPct + "%",
-              top: this.state.curTopPosPct + "%",
-              right: this.state.curRightPosPct + "%",
-              bottom: this.state.curBottomPosPct + "%",
-            },
-            _ = _().LinkRegionDragBox;
-          return (
-            null !== this.state.EdgeDown &&
-              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                style: _,
-                ref: this.LinkRegionBoxRef,
-                draggable: !1,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().LinkRegionGridBox,
-                },
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Top}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.top);
-                  },
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topright);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Left}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.left);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: `${_().LinkRegionEdge} ${_().Middle}`,
-                    onMouseDown: (_) => {
-                      this.OnMouseDown(_, _.middle);
-                    },
-                    draggable: !1,
-                  },
-                  this.props.deleteFn &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionDelete,
-                        onClick: this.HandleDelete,
-                      },
-                      _.createElement(_.sED, null),
-                    ),
-                  !this.props.bDisableLink &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionSettings,
-                        onClick: this.OnEditLink,
-                      },
-                      _.createElement(_.xv8, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkText,
-                    },
-                    " ",
-                    this.m_strDescription,
-                    " ",
-                  ),
-                ),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Right}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.right);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottom);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomright);
-                  },
-                  draggable: !1,
-                }),
-              ),
-              this.state.bEditingLink &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LinkRegionInfo,
-                  },
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_url",
-                    value: this.state.text_link_url,
-                    label: (0, _._)("#SteamTV_LinkURL"),
-                    placeholder: "https://www.example.com",
-                    onChange: this.OnSetLinkURLChange,
-                    mustBeURL: !0,
-                  }),
-                  _.createElement(_._, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_description",
-                    value: this.state.text_link_description,
-                    label: (0, _._)("#SteamTV_LinkDescription"),
-                    placeholder: (0, _._)(
-                      "#SteamTV_LinkDescription_Placeholder",
-                    ),
-                    onChange: this.OnSetLinkDescriptionChange,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkRegionButtonContainer,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        disabled: !this.state.valid_link,
-                        onClick: this.OnSaveLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_OK"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: this.OnEditLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_Cancel"),
-                    ),
-                  ),
-                ),
-            )
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "HandleDelete", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
-        (0, _._)([_._], _.prototype, "OnSaveLink", null),
-        (0, _._)([_._], _.prototype, "OnEditLink", null),
-        (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -33794,221 +31957,6 @@
           },
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          region: {
-            xPosPct: 0,
-            yPosPct: 0,
-            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            heightPct:
-              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-          },
-        };
-        async OnCrop() {
-          await (async function (_, _, _, _, _, _, _, _, _) {
-            return new Promise((_, _) => {
-              const _ = _(_);
-              if (!_) return void _("Invalid format provided");
-              const _ = document.createElement("canvas");
-              (_.width = _), (_.height = _);
-              const _ = 0,
-                _ = 0;
-              _.getContext("2d").drawImage(_, _, _, _, _, _, _, _, _),
-                _.toBlob((_) => {
-                  const _ = _.toDataURL(_);
-                  3 !== _ && __webpack_require__.startsWith("data:image/png")
-                    ? _("Unable to encode into the requested file format")
-                    : ((_.file = (0, _._)(_, _.file.name)),
-                      (_.width = _),
-                      (_.height = _),
-                      (_.dataUrl = _),
-                      (_.uploadTime = Date.now()),
-                      (_.bCropped = !0),
-                      _());
-                });
-            });
-          })(
-            this.props.uploadFile,
-            this.props.uploadFile.GetCanvasImageSource(),
-            (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
-            (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
-            (this.state.region.widthPct / 100) * this.props.uploadFile.width,
-            (this.state.region.heightPct / 100) * this.props.uploadFile.height,
-            this.GetDestWidth(),
-            this.GetDestHeight(),
-            this.props.fileType,
-          ),
-            this.props.closeModal();
-        }
-        UpdateCrop(_, _) {
-          this.setState({
-            region: _,
-          });
-        }
-        GetDestWidth() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.width : _._[_.GetCurrentImageOption().artworkType].width;
-        }
-        GetDestHeight() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _
-            ? _.height
-            : _._[_.GetCurrentImageOption().artworkType].height;
-        }
-        GetLargestBoxThatFits(_, _, _, _) {
-          let _ = _,
-            _ = (_ * _) / Math.max(_, 1);
-          return (
-            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
-        GetPreviewWindowStyle() {
-          const { region: _ } = this.state,
-            _ = this.GetLargestBoxThatFits(
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              500,
-              150,
-            ),
-            _ = _.width,
-            _ = _.height,
-            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
-            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
-            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
-            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
-          return {
-            width: _,
-            height: _,
-            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * _}% ${100 * _}%`,
-            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
-          };
-        }
-        render() {
-          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-            _ = this.GetLargestBoxThatFits(
-              this.props.uploadFile.width,
-              this.props.uploadFile.height,
-              800,
-              500,
-            );
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropImage,
-                  style: {
-                    width: _.width,
-                    height: _.height,
-                  },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
-                }),
-                _.createElement(_._, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
-                }),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case 3:
-            return "image/png";
-          case 1:
-            return "image/jpeg";
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnCrop", null),
-        (0, _._)([_._], _.prototype, "UpdateCrop", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

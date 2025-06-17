@@ -181,14 +181,14 @@
         m = a(6379),
         d = a(99032),
         p = a(62490),
-        _ = a(44332),
+        _ = a(81393),
         E = a(68797),
         g = a(84933),
         f = a(78327);
       function h(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : ((0, _.w)(
+          : ((0, _.wT)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata,
@@ -242,7 +242,7 @@
             if (1 == o?.data?.success) {
               const a = { ...o.data.list_details };
               return (
-                (0, _.w)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
+                (0, _.wT)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
                 h(a),
                 b(o.data.curation_language, a),
                 this.m_mapList.set(t, a),
@@ -526,8 +526,8 @@
         A = a(78327),
         L = a(91291),
         N = a.n(L),
-        G = a(99956),
-        P = a(49411);
+        P = a(99956),
+        G = a(49411);
       const R = "capsule_index_";
       function F(e) {
         const {
@@ -652,15 +652,9 @@
           } = e,
           [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           I = (0, w.n9)(),
-          C = (0, P.w)(),
+          C = (0, G.w)(),
           T = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
-        if (
-          (console.log(b.GetName()),
-          console.log(b.GetStoreItemType()),
-          console.dir(T),
-          !b)
-        )
-          return null;
+        if (!b) return null;
         const A = (0, D.NT)(
           (0, i.It)(`${b.GetStorePageURL(v)}${o ? `?${o}` : ""}`, I, C),
         );
@@ -707,7 +701,7 @@
                       b.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  n.createElement(G.n, {
+                  n.createElement(P.n, {
                     bHideTitle: !0,
                     rgTagIDs: b.GetTagIDs(),
                     instanceNum: s,
@@ -926,12 +920,12 @@
         A = a.n(D),
         L = a(12155),
         N = a(52038),
-        G = a(70758);
-      const P = new RegExp(
+        P = a(70758);
+      const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
       function R(e) {
-        const t = P.exec(e);
+        const t = G.exec(e);
         return t?.length > 1 ? t[1] : null;
       }
       function F(e) {
@@ -953,13 +947,13 @@
             {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                G.YoutubePreviewImage,
+                P.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               onClick: () => m(!1),
             },
             r.createElement("img", {
-              className: (0, N.A)("YoutubePreviewImage", G.YoutubePreviewImage),
+              className: (0, N.A)("YoutubePreviewImage", P.YoutubePreviewImage),
               src:
                 t ||
                 f.TS.COMMUNITY_CDN_URL +
@@ -992,7 +986,7 @@
             r.createElement("img", {
               className: (0, N.A)(
                 "YoutubePreviewContainer",
-                G.YoutubePreviewImage,
+                P.YoutubePreviewImage,
                 e.imageClassnames,
               ),
               src:

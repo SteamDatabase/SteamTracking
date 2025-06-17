@@ -45,7 +45,7 @@
         r = i.n(s),
         o = i(14947),
         a = i(22837),
-        d = i(44332),
+        d = i(81393),
         m = i(6144),
         l = i(61859),
         h = i(25489),
@@ -927,7 +927,7 @@
           this.DownloadSegment(this.m_representation.strID, i, e, t);
         }
         async DownloadSegment(e, t, i, n, s = performance.now()) {
-          (0, d.w)(
+          (0, d.wT)(
             null === this.m_xhrDownload,
             "Trying to download another segment while a download is already in flight",
           ),
@@ -1415,7 +1415,7 @@
         }
         async DownloadMPD() {
           if (this.m_xhrUpdateMPD)
-            return (0, d.w)(!1, "Multiple MPD download requests"), null;
+            return (0, d.wT)(!1, "Multiple MPD download requests"), null;
           let e = performance.now();
           for (; performance.now() - e < 3e4; ) {
             let e = null;
@@ -2088,7 +2088,7 @@
         }
         GetPlaybackStartTime(e) {
           if (!this.m_seekingToTime) return e;
-          (0, d.w)(
+          (0, d.wT)(
             this.m_bPlaybackStarted,
             "Missing mpd info to calculate seek time",
           );

@@ -157,7 +157,10 @@
           },
           a.createElement(
             "summary",
-            { className: u().Summary },
+            {
+              className: u().Summary,
+              "data-panel": '{"clickOnActivate": true}',
+            },
             a.createElement(
               "div",
               { className: u().ImageContainer },
@@ -201,25 +204,38 @@
                     a.createElement(A, {
                       group: "gameplay",
                       features: l.gameplay,
+                      open: t,
                     }),
                   ),
                 l.visual &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "visual", features: l.visual }),
+                    a.createElement(A, {
+                      group: "visual",
+                      features: l.visual,
+                      open: t,
+                    }),
                   ),
                 l.audio &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "audio", features: l.audio }),
+                    a.createElement(A, {
+                      group: "audio",
+                      features: l.audio,
+                      open: t,
+                    }),
                   ),
                 l.input &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "input", features: l.input }),
+                    a.createElement(A, {
+                      group: "input",
+                      features: l.input,
+                      open: t,
+                    }),
                   ),
               ),
             !o &&
@@ -227,7 +243,7 @@
                 a.createElement(
                   "li",
                   { key: e },
-                  a.createElement(y, { feature: e }),
+                  a.createElement(y, { feature: e, open: t }),
                 ),
               ),
           ),
@@ -272,11 +288,11 @@
           a.createElement(
             "ul",
             { className: u().FeatureGroupItems, "aria-labelledby": t },
-            e.features.map((e) =>
+            e.features.map((t) =>
               a.createElement(
                 "li",
-                { key: e },
-                a.createElement(y, { feature: e }),
+                { key: t },
+                a.createElement(y, { feature: t, open: e.open }),
               ),
             ),
           ),
@@ -288,6 +304,8 @@
           {
             href: `${r.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${_[e.feature]}`,
             className: u().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": e.open ? void 0 : "true",
           },
           a.createElement(
             "span",

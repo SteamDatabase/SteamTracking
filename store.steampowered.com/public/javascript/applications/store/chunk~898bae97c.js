@@ -5133,7 +5133,7 @@
               "application_config",
             );
             return (
-              (0, g.w)(
+              (0, g.wT)(
                 e,
                 "GetPromotionWriteAccess: promotion operation token is missing",
               ),

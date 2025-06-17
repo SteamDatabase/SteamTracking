@@ -376,6 +376,7 @@
             className: _,
             bDisableAnimation: _ = !1,
             children: _,
+            ..._
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!_),
@@ -406,6 +407,7 @@
                 _,
                 void 0 !== _ && _.Initialized,
               ),
+              ..._,
             },
             _.createElement(_, {
               rgAppIDs: _,
@@ -1821,6 +1823,16 @@
                     _: 49,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  is_bot_review_pct: {
+                    _: 50,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  positivity_pct: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

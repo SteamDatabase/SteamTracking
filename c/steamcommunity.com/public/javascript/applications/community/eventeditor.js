@@ -3717,25 +3717,25 @@
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg`,
+                    src: `${_._.GetBaseURL()}31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png`,
+                    src: `${_._.GetBaseURL()}7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png`,
+                    src: `${_._.GetBaseURL()}27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg`,
+                    src: `${_._.GetBaseURL()}31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg`,
                   }),
                 ),
               ))
@@ -3752,19 +3752,19 @@
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png`,
+                    src: `${_._.GetBaseURL()}3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}5193306/62436147b454715822a198a2767e5c7a8560617e.jpg`,
+                    src: `${_._.GetBaseURL()}5193306/62436147b454715822a198a2767e5c7a8560617e.jpg`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png`,
+                    src: `${_._.GetBaseURL()}31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png`,
                   }),
                 ))
               : "spotlight" === _.artworkType &&
@@ -3884,21 +3884,21 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
+                        href: `${_._.GetBaseURL()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
+                        src: `${_._.GetBaseURL()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
                       }),
                     ),
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
+                        href: `${_._.GetBaseURL()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
+                        src: `${_._.GetBaseURL()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
                       }),
                     ),
                   ),
@@ -3910,11 +3910,11 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
+                        href: `${_._.GetBaseURL()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
+                        src: `${_._.GetBaseURL()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
                       }),
                     ),
                   ),
@@ -3933,31 +3933,31 @@
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg`,
+                  src: `${_._.GetBaseURL()}4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg`,
+                  src: `${_._.GetBaseURL()}4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/309cb650beb92e00ae352710387832aea78433ef.jpg`,
+                  src: `${_._.GetBaseURL()}4/309cb650beb92e00ae352710387832aea78433ef.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg`,
+                  src: `${_._.GetBaseURL()}4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif`,
+                  src: `${_._.GetBaseURL()}4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif`,
                 }),
               ));
           return _
@@ -12900,7 +12900,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetDLCForAppID(_) {
@@ -13396,8 +13395,7 @@
         }
         OnArtworkLangChange(_, _, _) {
           const { section: _ } = this.props;
-          let _ = _._.GetExtensionString(_);
-          _ && _.SetImage(_.image_hash + _, _),
+          _._.GetExtensionString(_) && _.SetImage(_._.GetHashAndExt(_), _),
             this.setState(
               {
                 langOverride: _,
@@ -13475,29 +13473,22 @@
             this.RefreshUploader();
         }
         RefreshUploader() {
-          this.m_clanImageUploader = new _._(
-            this.props.clanSteamID,
-            [this.props.artworkType],
-            [_._.k_ESteamRealmGlobal],
-            this.props.lang,
-          );
+          this.m_clanImageUploader = new _._(this.props.clanSteamID, [
+            this.props.artworkType,
+          ]);
         }
         async DoUpload() {
           const { section: _ } = this.props;
           try {
             const _ = await this.m_clanImageUploader.UploadAllImages();
-            for (const _ of _) {
-              const _ = this.m_clanImageUploader.m_filesToUpload.find(
-                (_) => _.file === _.file,
-              );
-              if (_)
-                if (_.bSuccess && 1 === _.uploadResult.success) {
-                  _.status = "success";
-                  let _ = _._.GetExtensionString(_.uploadResult);
-                  _.SetImage(_.uploadResult.image_hash + _, _.language);
-                } else
-                  (_.status = "failed"), (_.message = _.uploadResult.message);
-            }
+            for (const _ of _)
+              if (_.bSuccess && 1 === _.uploadResult.success) {
+                _.image.status = "success";
+                let _ = _._.GetExtensionString(_.uploadResult);
+                _.SetImage(_.uploadResult.image_hash + _, _.image.language);
+              } else
+                (_.image.status = "failed"),
+                  (_.image.message = _.uploadResult.message);
           } catch (_) {
             console.error("DoUpload failed:" + (0, _._)(_).strErrorMsg);
           }
@@ -13607,8 +13598,6 @@
                     key: "emailsecion",
                     OnClanImageSelected: this.OnPreviousImageSelected,
                     clanSteamID: _,
-                    fnSetImageURL: _._.GetEditModel().SetImageURL,
-                    rgRealmList: _._.GetEditModel().GetIncludedRealmList(),
                   }),
                 ],
                 renderDesciption: this.RenderInstructions,
@@ -18789,6 +18778,9 @@
             depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _,
+            bDeliveryOverrideOnlyIfOutOfStock: _,
           } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -18798,12 +18790,22 @@
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
                 deposit_package: _,
-                localized_reservation_desc: new Array(),
-                localized_out_of_stock_override: new Array(),
+                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_out_of_stock_override: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                override_delivery_only_out_of_stock: Boolean(_),
                 psu_less_package: _,
               },
             ],
-            [_, _, _],
+            [_, _, _, _, _, _],
           );
         if (!_ || (_ && !_))
           return _.createElement(_._, {
@@ -19027,12 +19029,18 @@
           _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
+            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+            _ = (0, _._)(_.args, "out_of_stock_override"),
+            _ = (0, _._)(_.args, "delivery_override"),
+            _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return _.createElement(_, {
             reservationPackageID: _,
             event: _,
             depositPackageID: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _ || _,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(_),
           });
         }
         return _.createElement(_.Fragment, null);

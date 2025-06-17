@@ -318,7 +318,7 @@
         }
         Init() {
           const e = (0, h.Tc)("store_feature_token", "application_config");
-          (0, X.w)(Boolean(e), "require store_feature_token"),
+          (0, X.wT)(Boolean(e), "require store_feature_token"),
             (this.m_steamInterface = new ee.D(q.TS.WEBAPI_BASE_URL, e));
         }
       }
@@ -3460,7 +3460,7 @@
       var a = n(90626),
         r = n(96059),
         l = n(82097),
-        s = n(44332),
+        s = n(81393),
         i = n(78327),
         c = n(38452);
       function o(e) {
@@ -3471,7 +3471,7 @@
                 "partnerbrowse_webapi_token",
                 "application_config",
               );
-              (0, s.w)(Boolean(e), "require partnerbrowse_webapi_token");
+              (0, s.wT)(Boolean(e), "require partnerbrowse_webapi_token");
               const t = new r.D(i.TS.WEBAPI_BASE_URL, e);
               ("dev" != i.TS.WEB_UNIVERSE && "beta" != i.TS.WEB_UNIVERSE) ||
                 console.log(

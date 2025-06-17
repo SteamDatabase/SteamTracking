@@ -2796,12 +2796,10 @@
               ? (0, _._)(_.LinkButton, "LinkButton")
               : (0, _._)(_.Link, "Link");
           })(_),
-          _ = _.context.event;
+          _ = _.context.event,
+          _ = _._(_, _.language, _?.rtime32_last_modified);
         if (void 0 === _) return _.children || "";
-        if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(_, _.language, _?.rtime32_last_modified);
-          _ = "string" == typeof _ ? _ : _[1];
-        }
+        _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _) {
           if ("button" == _ && _)
             return {
@@ -3463,12 +3461,13 @@
       function _(_) {
         const { showErrorInfo: _, event: __webpack_require__ } = _.context;
         let _ = (0, _._)(_.args, "src") || _.children?.toString();
-        if (!_ && ((_ = (0, _._)(_.args)), null == !_)) return null;
+        _ || (_ = (0, _._)(_.args));
         const _ = _._(
           _,
           _.language,
           __webpack_require__?.rtime32_last_modified,
         );
+        if (null == _) return null;
         if ("string" == typeof _) {
           let _;
           return (

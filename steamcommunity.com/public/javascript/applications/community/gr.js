@@ -4633,7 +4633,7 @@
         wt = r.n(Bt),
         Rt = r(60778),
         Gt = r(4434),
-        It = r(44332),
+        It = r(81393),
         Et = r(30470);
       class Pt {
         constructor() {
@@ -4793,7 +4793,7 @@
                 e[0].cPxMajorAxis,
                 e[0].bPreciseTiming,
               );
-            (0, It.w)(
+            (0, It.wT)(
               (null == r ? void 0 : r.length) == t.length,
               `CThumbnailCache.InternalLoadMultipleThumbnails request ${t.length} and got back ${null == r ? void 0 : r.length}`,
             );
@@ -11648,7 +11648,7 @@
             if (!r)
               return (
                 this.FireEvent("OnInvalidateRecording", e.timeline_id, t),
-                void (0, _.w)(
+                void (0, _.wT)(
                   !1,
                   "Received recording started message before timeline info",
                 )
@@ -18736,7 +18736,7 @@
       var i = r(38506),
         n = r(22837),
         a = r(17690),
-        s = r(44332);
+        s = r(81393);
       class l {
         constructor(e, t, r) {
           if ("string" == typeof e) this.m_ulGameID = i.A.fromString(e, !0);
@@ -18784,7 +18784,9 @@
             case n.Rh.k_EGameIDTypeP2P:
               return this.GetAppID() === a.sc && 2147483648 & this.GetModID();
             default:
-              return (0, s.w)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
+              return (
+                (0, s.wT)(!1, `Unknown GameID type: ${this.GetType()}`), !1
+              );
           }
         }
         static InitFromAppID(e) {

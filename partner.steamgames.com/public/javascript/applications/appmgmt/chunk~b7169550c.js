@@ -294,7 +294,7 @@
             "promotion_operation_token",
             "application_config",
           );
-          (0, a.w)(Boolean(t), "require promotion_operation_token"),
+          (0, a.wT)(Boolean(t), "require promotion_operation_token"),
             (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, t));
         }
       }
@@ -578,7 +578,7 @@
     },
     48479: (t, e, n) => {
       "use strict";
-      n.d(e, { AQ: () => d, qx: () => m });
+      n.d(e, { AQ: () => d, pn: () => f, qx: () => m });
       var a = n(16676),
         r = n(61859),
         o = n(12155),

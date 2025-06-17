@@ -11071,7 +11071,7 @@
         Wr = r(22837),
         jr = r(37735),
         Or = r(26317),
-        qr = r(44332),
+        qr = r(81393),
         xr = r(21920);
       class Ur extends M.Message {
         static ImplementsStaticInterface() {}
@@ -12127,7 +12127,7 @@
                 (await this.LoadLanguage("english"));
           } catch (t) {
             this.m_nLoadLanguagesRetryTimeout &&
-              ((0, qr.w)(
+              ((0, qr.wT)(
                 !this.m_nLoadLanguagesRetryTimeout,
                 "Got two concurrent calls to TextFilteringStore.LoadLanguages",
               ),
@@ -13419,10 +13419,10 @@
           s = t.winners_info?.length > 0 ? t.winners_info[0].accountid : 0,
           [n, o] = d.useState(s),
           l = (0, Fi.L$)(
-            `${(0, hi.mJ)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${hi.z.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           c = (0, Fi.L$)(
-            `${(0, hi.mJ)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${hi.z.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           m = Ri(t.giveaway_gid);
         let u =

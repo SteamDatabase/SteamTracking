@@ -5,14 +5,14 @@
   [6541],
   {
     17690: (e, t, n) => {
-      n.d(t, { IU: () => r, by: () => c, sc: () => o });
+      n.d(t, { IU: () => r, by: () => h, sc: () => o });
       var i = n(78327),
         s = n(85044),
-        a = n(44332);
+        a = n(81393);
       const o = 0,
         p = "061818254b2c99ac49e6626adb128ed1282a392f",
         r = 120;
-      class c {
+      class h {
         constructor(e) {
           (this.m_bInitialized = !1), (this.m_unAppID = e);
         }
@@ -80,7 +80,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, a.w)(
+            (0, a.wT)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -97,14 +97,14 @@
       }
     },
     51006: (e, t, n) => {
-      n.d(t, { Vw: () => g, Mi: () => _ });
+      n.d(t, { Vw: () => g, Mi: () => u });
       var i = n(34629),
         s = n(14947),
         a = n(22837),
         o = n(56545),
         p = n(17690),
         r = n(78327);
-      class c {
+      class h {
         constructor(e) {
           (this.m_nLastUpdated = 0),
             (this.m_mapLanguages = s.sH.map()),
@@ -119,7 +119,7 @@
         }
         Localize(e, t) {
           let n = r.TS.LANGUAGE;
-          return h(
+          return c(
             e,
             this.GetTokenList(n),
             "english" != n ? this.GetTokenList("english") : null,
@@ -138,7 +138,7 @@
           );
         }
       }
-      function h(e, t, n, i, s) {
+      function c(e, t, n, i, s) {
         if (!e.startsWith("#"))
           return (
             console.log(
@@ -180,7 +180,7 @@
         let a = e.match(/{[A-za-z0-9_%#:]+}/g);
         if (a)
           for (let o of a) {
-            let a = h(m(o.slice(1, -1), s), t, n, i, s);
+            let a = c(m(o.slice(1, -1), s), t, n, i, s);
             if (!a) return "";
             e = e.replace(o, a);
           }
@@ -199,9 +199,9 @@
         return e;
       }
       var d = n(37403),
-        u = n(44332),
+        _ = n(81393),
         f = n(6144);
-      class _ {
+      class u {
         constructor() {
           (this.m_mapAppInfo = s.sH.map()),
             (this.m_mapRichPresenceLoc = s.sH.map()),
@@ -226,7 +226,7 @@
         RegisterCallbackOnLoad(e) {
           if (!this.BHavePendingAppInfoRequests())
             return (
-              (0, u.w)(
+              (0, _.wT)(
                 !1,
                 "Registering for callback on appinfo load, but nothing queued",
               ),
@@ -239,7 +239,7 @@
         }
         GetAppInfo(e) {
           if (
-            ((0, u.w)(
+            ((0, _.wT)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init",
             ),
@@ -307,7 +307,7 @@
           let t = [];
           for (let n of e.Body().apps()) {
             let e = this.m_mapAppInfo.get(n.appid());
-            (0, u.w)(
+            (0, _.wT)(
               e,
               `Got AppInfo response for unrequested AppID: ${n.appid()}`,
             ),
@@ -362,7 +362,7 @@
               if (!i) return e;
               let s = this.m_mapAppInfo.get(e);
               return (
-                (0, u.w)(
+                (0, _.wT)(
                   s,
                   "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                 ),
@@ -420,7 +420,7 @@
               t
             );
           }
-          let t = new c(e);
+          let t = new h(e);
           return (
             this.m_mapRichPresenceLoc.set(e.toString(), t),
             this.QueueRichPresenceLocRequest(t),
@@ -479,9 +479,9 @@
           );
         }
       }
-      (0, i.Cg)([s.XI], _.prototype, "OnGetAppsResponse", null),
-        (0, i.Cg)([s.XI], _.prototype, "OnRichPresenceLocUpdate", null);
-      const g = new _();
+      (0, i.Cg)([s.XI], u.prototype, "OnGetAppsResponse", null),
+        (0, i.Cg)([s.XI], u.prototype, "OnRichPresenceLocUpdate", null);
+      const g = new u();
     },
     85044: (e, t, n) => {
       n.d(t, { d: () => s, t: () => a });
@@ -500,22 +500,6 @@
           t && "small" != t && (a += "_" + t),
           (a += n),
           a
-        );
-      }
-    },
-    4434: (e, t, n) => {
-      n.d(t, { m: () => o });
-      var i = n(41735),
-        s = n.n(i),
-        a = n(90626);
-      function o(e) {
-        const t = a.useRef(s().CancelToken.source());
-        return (
-          a.useEffect(() => {
-            const n = t.current;
-            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
         );
       }
     },

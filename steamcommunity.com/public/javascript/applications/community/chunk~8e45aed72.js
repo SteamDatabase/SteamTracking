@@ -62,38 +62,43 @@
             "img",
             {
               Constructor: function (e) {
-                var t, r;
-                const { showErrorInfo: a } = e.context;
-                let l =
+                var t, r, a;
+                const { showErrorInfo: l } = e.context;
+                let o =
                   null === (t = null == e ? void 0 : e.children) || void 0 === t
                     ? void 0
                     : t.toString();
-                if (
-                  (null == l || null == l || 0 == l.length) &&
-                  ((l =
+                (null != o && null != o && 0 != o.length) ||
+                  (o =
                     null === (r = null == e ? void 0 : e.args) || void 0 === r
                       ? void 0
-                      : r[""]),
-                  null == l || null == l || 0 == l.length)
-                )
-                  return "";
-                const o = (0, c._D)(l, e.language);
-                return "string" == typeof o
-                  ? ((l = o),
-                    a
-                      ? i.createElement(s.i, {
-                          className: B().FAQImage,
-                          src: l,
-                        })
-                      : ((l = l.replace("http://", "https://")),
-                        i.createElement("img", {
-                          className: B().FAQImage,
-                          src: l,
-                        })))
-                  : i.createElement(n.c, {
-                      className: B().FAQImage,
-                      rgSources: o,
-                    });
+                      : r[""]);
+                const m =
+                    null === (a = null == e ? void 0 : e.args) || void 0 === a
+                      ? void 0
+                      : a.alt,
+                  u = (0, c.z5)(o, e.language);
+                return null == u
+                  ? null
+                  : "string" == typeof u
+                    ? ((o = u),
+                      l
+                        ? i.createElement(s.i, {
+                            className: B().FAQImage,
+                            src: o,
+                            alt: m,
+                          })
+                        : ((o = o.replace("http://", "https://")),
+                          i.createElement("img", {
+                            className: B().FAQImage,
+                            src: o,
+                            alt: m,
+                          })))
+                    : i.createElement(n.c, {
+                        className: B().FAQImage,
+                        rgSources: u,
+                        alt: m,
+                      });
               },
               autocloses: !1,
             },
@@ -161,7 +166,7 @@
         o = r(90626),
         m = r(56545),
         u = r(2160),
-        c = r(44332),
+        c = r(81393),
         d = r(6419),
         g = r(68797),
         B = r(78327);
@@ -185,7 +190,7 @@
         }
         async SaveDrafts() {
           var e, t, r, i;
-          (0, c.w)(
+          (0, c.wT)(
             Boolean(
               null === (e = this.m_summary) || void 0 === e ? void 0 : e.faq_id,
             ),
@@ -372,7 +377,7 @@
             this.m_summary.visible_in_global_realm &&
               e.push(u.TU.k_ESteamRealmChina),
             0 == e.length && e.push(u.TU.k_ESteamRealmGlobal),
-            (0, c.w)(
+            (0, c.wT)(
               e.length > 0,
               `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
             ),
@@ -1027,53 +1032,53 @@
           return "CClanFAQS_UpdateJsonData_Request";
         }
       }
-      class U extends y.Message {
+      class T extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return U.toObject(e, this);
+          return T.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new U();
+          return new T();
         }
         static deserializeBinary(e) {
           let t = new (b().BinaryReader)(e),
-            r = new U();
-          return U.deserializeBinaryFromReader(r, t);
+            r = new T();
+          return T.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (b().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (b().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_UpdateJsonData_Response";
         }
       }
-      class T extends y.Message {
+      class U extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            T.prototype.steamid || S.Sg(T.M()),
+            U.prototype.steamid || S.Sg(U.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
+            U.sm_m ||
+              (U.sm_m = {
+                proto: U,
                 fields: {
                   steamid: {
                     n: 1,
@@ -1097,39 +1102,39 @@
                   },
                 },
               }),
-            T.sm_m
+            U.sm_m
           );
         }
         static MBF() {
-          return T.sm_mbf || (T.sm_mbf = S.w0(T.M())), T.sm_mbf;
+          return U.sm_mbf || (U.sm_mbf = S.w0(U.M())), U.sm_mbf;
         }
         toObject(e = !1) {
-          return T.toObject(e, this);
+          return U.toObject(e, this);
         }
         static toObject(e, t) {
-          return S.BT(T.M(), e, t);
+          return S.BT(U.M(), e, t);
         }
         static fromObject(e) {
-          return S.Uq(T.M(), e);
+          return S.Uq(U.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (b().BinaryReader)(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
+            r = new U();
+          return U.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return S.zj(T.MBF(), e, t);
+          return S.zj(U.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (b().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          S.i0(T.M(), e, t);
+          S.i0(U.M(), e, t);
         }
         serializeBase64String() {
           var e = new (b().BinaryWriter)();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_SetVisibility_Request";
@@ -2440,12 +2445,12 @@
             );
           }),
           (e.UpdateJsonData = function (e, t) {
-            return e.SendMsg("ClanFAQS.UpdateJsonData#1", (0, m.I8)(q, t), U, {
+            return e.SendMsg("ClanFAQS.UpdateJsonData#1", (0, m.I8)(q, t), T, {
               ePrivilege: 1,
             });
           }),
           (e.SetVisibility = function (e, t) {
-            return e.SendMsg("ClanFAQS.SetVisibility#1", (0, m.I8)(T, t), j, {
+            return e.SendMsg("ClanFAQS.SetVisibility#1", (0, m.I8)(U, t), j, {
               ePrivilege: 1,
             });
           }),
@@ -2764,7 +2769,7 @@
           return null;
         }
         async UpdateVisibility(e, t, r) {
-          const i = m.w.Init(T);
+          const i = m.w.Init(U);
           i.Body().set_steamid(B.UF.CLANSTEAMID),
             i.Body().set_faq_id(e),
             i.Body().set_visible_in_global_realm(t),

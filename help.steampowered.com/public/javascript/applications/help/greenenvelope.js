@@ -2264,7 +2264,7 @@
         J = i(470),
         ee = i(8272),
         te = i(6352),
-        ie = i(4332);
+        ie = i(1393);
       const re = {
         11: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
@@ -3087,7 +3087,7 @@
       };
       function Ce(e) {
         const t = ze[e];
-        return (0, ie.w)(!!t, `Missing notification type data for ${e}`), t;
+        return (0, ie.wT)(!!t, `Missing notification type data for ${e}`), t;
       }
       function Ue(e, t, i) {
         if (!t) return !1;
@@ -5242,7 +5242,7 @@
                 (await this.LoadLanguage("english"));
           } catch (t) {
             this.m_nLoadLanguagesRetryTimeout &&
-              ((0, ie.w)(
+              ((0, ie.wT)(
                 !this.m_nLoadLanguagesRetryTimeout,
                 "Got two concurrent calls to TextFilteringStore.LoadLanguages",
               ),

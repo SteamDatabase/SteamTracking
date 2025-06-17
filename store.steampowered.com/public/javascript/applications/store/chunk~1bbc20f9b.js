@@ -79,7 +79,7 @@
       class s {
         m_decoratedAccumulator;
         constructor(e) {
-          (0, r.w)(e, "decorated accumulator cannot be null"),
+          (0, r.wT)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
         }
         AppendText(e, t = !1) {
@@ -208,11 +208,11 @@
               const o = a.get(e.node.tag),
                 s = r.map((e) => e.node.tag),
                 c = { parentTags: s, tagname: e.node.tag, args: e.node.args },
-                p = t(o.Constructor, c, ...n.GetElements());
+                m = t(o.Constructor, c, ...n.GetElements());
               (n = e.accumulator),
-                Array.isArray(p)
-                  ? p.forEach((e) => n.AppendNode(e))
-                  : n.AppendNode(p),
+                Array.isArray(m)
+                  ? m.forEach((e) => n.AppendNode(e))
+                  : n.AppendNode(m),
                 (i = !!o.skipFollowingNewline),
                 (l = e.bWrapTextForCopying);
             } else if (e) {
@@ -367,7 +367,7 @@
     },
     73022: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => u, h: () => d });
+      n.d(t, { Q: () => u, h: () => p });
       var r = n(34629),
         o = n(41735),
         a = n.n(o),
@@ -375,8 +375,8 @@
         i = n(68797),
         l = n(6144),
         c = n(84933),
-        p = n(78327);
-      class m {
+        m = n(78327);
+      class d {
         m_mapRegistrations = new Map();
         m_mapLoadPromises = new Map();
         m_mapCreatePromises = new Map();
@@ -402,9 +402,9 @@
           let t = null;
           try {
             const n =
-                p.TS.STORE_BASE_URL +
+                m.TS.STORE_BASE_URL +
                 "saleaction/ajaxgetusergiveawayregistration",
-              r = { giveaway_name: e, sessionid: p.TS.SESSIONID },
+              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
               o = await a().get(n, { params: r, withCredentials: !0 });
             if (
               200 == o?.status &&
@@ -447,9 +447,9 @@
           let t = null;
           try {
             const n =
-                p.TS.STORE_BASE_URL +
+                m.TS.STORE_BASE_URL +
                 "saleaction/ajaxupdateusergiveawayregistration",
-              r = { giveaway_name: e, sessionid: p.TS.SESSIONID },
+              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
               o = await a().get(n, { params: r, withCredentials: !0 });
             if (
               200 == o?.status &&
@@ -481,31 +481,31 @@
         static s_Singleton;
         static Get() {
           return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              m.s_Singleton.Init(),
-              "dev" == p.TS.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = m.s_Singleton)),
-            m.s_Singleton
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              d.s_Singleton.Init(),
+              "dev" == m.TS.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         constructor() {}
         Init() {}
       }
-      function d(e) {
-        const [t, n] = (0, s.useState)(m.Get().GetRegistration(e));
+      function p(e) {
+        const [t, n] = (0, s.useState)(d.Get().GetRegistration(e));
         return (
           (0, s.useEffect)(() => {
-            void 0 === t && m.Get().LoadRegistration(e).then(n);
+            void 0 === t && d.Get().LoadRegistration(e).then(n);
           }, [e, t]),
-          (0, c.hL)(m.Get().GetRegistrationChangeCallback(e), n),
+          (0, c.hL)(d.Get().GetRegistrationChangeCallback(e), n),
           t
         );
       }
       function u() {
-        return { fnCreateRegistration: m.Get().CreateRegistration };
+        return { fnCreateRegistration: d.Get().CreateRegistration };
       }
-      (0, r.Cg)([c.oI], m.prototype, "CreateRegistration", null);
+      (0, r.Cg)([c.oI], d.prototype, "CreateRegistration", null);
     },
     23649: (e, t, n) => {
       "use strict";
@@ -558,13 +558,13 @@
       var i = n(52038),
         l = n(42060),
         c = n.n(l),
-        p = n(64753),
-        m = n(20194),
-        d = n(30470);
+        m = n(64753),
+        d = n(20194),
+        p = n(30470);
       function u(e) {
         const { emoticon: t, large: n } = e,
-          [o, l] = (0, p.OP)(),
-          [m, d] = r.useState(),
+          [o, l] = (0, m.OP)(),
+          [d, p] = r.useState(),
           u = `:${t}:`,
           g = a.pN.GetEmoticonURL(t, n);
         return r.createElement(
@@ -579,19 +579,19 @@
               className: (0, i.A)(c().emoticon, n ? c().large : void 0),
               "data-emoticon": t,
               alt: t,
-              ref: d,
+              ref: p,
             }),
           ),
-          o && r.createElement(h, { target: m, emoticon: t }),
+          o && r.createElement(h, { target: d, emoticon: t }),
         );
       }
       function h(e) {
         const { target: t, emoticon: n } = e,
           { data: o } = (function (e) {
-            return (0, m.I)({
+            return (0, d.I)({
               queryKey: ["EmoticonHover", e],
               queryFn: async () => {
-                const t = `${d.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(d.TS.LANGUAGE)}&origin=${self.origin}`,
+                const t = `${p.TS.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(p.TS.LANGUAGE)}&origin=${self.origin}`,
                   n = await fetch(t);
                 if (200 != n.status)
                   throw `Error fetching emoticon: ${n.status} ${n.statusText}`;
@@ -640,14 +640,14 @@
         i = n(22837),
         l = n(49771),
         c = n(6336),
-        p = (n(32754), n(84933)),
-        m = n(78327),
-        d = n(23649),
+        m = (n(32754), n(84933)),
+        d = n(78327),
+        p = n(23649),
         u = n(3246),
         h = n.n(u);
       const g = (0, o.PA)((e) => {
-        const t = e.photo ? (0, s._D)(e.photo, (0, i.sf)(m.TS.LANGUAGE)) : null,
-          n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
+        const t = (0, s.z5)(e.photo, (0, i.sf)(d.TS.LANGUAGE)),
+          n = t ? ("string" == typeof t ? t : t[1]) : null,
           r = Boolean(e.title),
           o = Boolean(e.company);
         return a.createElement(
@@ -681,7 +681,7 @@
               "div",
               { className: h().SpeakerBio },
               e.bio,
-              e.bioString && a.createElement(d.h, { text: e.bioString }),
+              e.bioString && a.createElement(p.h, { text: e.bioString }),
             ),
         );
       });
@@ -748,60 +748,58 @@
           );
         }
       }
-      (0, r.Cg)([p.oI], f.prototype, "ClosePopup", null),
-        (0, r.Cg)([p.oI], f.prototype, "OnScroll", null),
-        (0, r.Cg)([p.oI], f.prototype, "OnHover", null),
-        (0, r.Cg)([p.oI], f.prototype, "OnLeave", null);
-      class _ extends a.Component {
-        render() {
-          const e = this.props.photo
-              ? (0, s._D)(this.props.photo, (0, i.sf)(m.TS.LANGUAGE))
-              : null,
-            t =
-              this.props.photo && !this.props.hidePhotoInCompactView
-                ? "string" == typeof e
-                  ? e
-                  : e[1]
-                : null,
-            n = Boolean(this.props.title),
-            r = Boolean(this.props.company);
-          return a.createElement(
-            "div",
-            { className: h().SpeakerOuter },
+      function _(e) {
+        const {
+            photo: t,
+            name: n,
+            title: r,
+            company: o,
+            hidePhotoInCompactView: l,
+          } = e,
+          c = (0, s.z5)(t, (0, i.sf)(d.TS.LANGUAGE)),
+          m = c && !l ? ("string" == typeof c ? c : c[1]) : null,
+          p = Boolean(r),
+          u = Boolean(o);
+        return a.createElement(
+          "div",
+          { className: h().SpeakerOuter },
+          a.createElement(
+            f,
+            { ...e },
             a.createElement(
-              f,
-              { ...this.props },
+              "div",
+              { className: h().Speaker },
               a.createElement(
                 "div",
-                { className: h().Speaker },
+                { className: h().SpeakerInfoOuter },
+                !!m && a.createElement("img", { src: m }),
                 a.createElement(
                   "div",
-                  { className: h().SpeakerInfoOuter },
-                  !!t && a.createElement("img", { src: t }),
-                  a.createElement(
-                    "div",
-                    { className: h().SpeakerInfoInner },
-                    a.createElement("div", null, this.props.name),
-                    (n || r) &&
-                      a.createElement(
-                        "div",
-                        null,
-                        n &&
-                          a.createElement(
-                            "span",
-                            { className: h().SpeakerTitle },
-                            this.props.title,
-                          ),
-                        n && r && a.createElement("span", null, ", "),
-                        r && a.createElement("span", null, this.props.company),
-                      ),
-                  ),
+                  { className: h().SpeakerInfoInner },
+                  a.createElement("div", null, n),
+                  (p || u) &&
+                    a.createElement(
+                      "div",
+                      null,
+                      p &&
+                        a.createElement(
+                          "span",
+                          { className: h().SpeakerTitle },
+                          r,
+                        ),
+                      p && u && a.createElement("span", null, ", "),
+                      u && a.createElement("span", null, o),
+                    ),
                 ),
               ),
             ),
-          );
-        }
+          ),
+        );
       }
+      (0, r.Cg)([m.oI], f.prototype, "ClosePopup", null),
+        (0, r.Cg)([m.oI], f.prototype, "OnScroll", null),
+        (0, r.Cg)([m.oI], f.prototype, "OnHover", null),
+        (0, r.Cg)([m.oI], f.prototype, "OnLeave", null);
     },
     96236: (e, t, n) => {
       "use strict";
@@ -854,7 +852,7 @@
             (void 0 === o && void 0 === n) ||
               (c = { ...r, minHeight: o, minWidth: n });
           }
-          const p = this.BLoadAndUnload() ? "repeated" : "once";
+          const m = this.BLoadAndUnload() ? "repeated" : "once";
           return o.createElement(
             s.J,
             {
@@ -862,7 +860,7 @@
               style: c,
               ...i,
               onVisibilityChange: this.OnVisibilityChange,
-              trigger: p,
+              trigger: m,
             },
             l && this.props.children,
           );

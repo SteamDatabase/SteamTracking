@@ -529,7 +529,9 @@
               className: _.ImagePreview,
             },
             _.createElement("img", {
-              src: (0, _._)(__webpack_require__.node.attrs.src),
+              src: _._.ReplacementTokenToClanImageURL(
+                __webpack_require__.node.attrs.src,
+              ),
             }),
             _.createElement(
               "div",
@@ -739,7 +741,7 @@
             : "video" == __webpack_require__ && (_ = _.mp4 || _.webm),
           _)
         ) {
-          const [_] = (0, _._)(_);
+          const [_] = _._.ExtractHashFromBBCodeURL(_);
           return _ && _._.GetClanImageByImageHash(_, _);
         }
       }
@@ -1119,13 +1121,8 @@
           _ = _.useCallback(
             async (_) => {
               const _ = _.GetClanSteamID(),
-                _ = new _._(
-                  _,
-                  null,
-                  _.GetIncludedRealmList(),
-                  _.GetCurEditLanguage(),
-                );
-              if (!(await _.AddImage(_, _.GetCurEditLanguage(), null)))
+                _ = new _._(_, null);
+              if (!(await _.AddImage(_, _.GetCurEditLanguage())))
                 throw "Error processing image upload";
               const _ = await _.UploadAllImages();
               if (!_ || 1 != Object.values(_).length)
@@ -1140,7 +1137,9 @@
               );
               return (
                 _.type == __webpack_require__ &&
-                  (await (0, _._)((0, _._)(_.attrs.src))),
+                  (await (0, _._)(
+                    _._.ReplacementTokenToClanImageURL(_.attrs.src),
+                  )),
                 _
               );
             },
@@ -2051,6 +2050,16 @@
                     },
                     _.createElement(_.WLA, null),
                   ),
+                Boolean(_.ask_registration_question) &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: () => {},
+                      tooltip:
+                        "Will ask partner to provides questions for us for this session.",
+                    },
+                    _.createElement(_.vfN, null),
+                  ),
               ),
               Boolean(_) &&
                 _.createElement(_, {
@@ -2491,7 +2500,8 @@
                   }),
               }),
               _.createElement(_, {
-                ..._,
+                inputScheduleModel: _,
+                fnUpdateSession: (_) => _(_),
                 rtBreakStartingTime: _,
               }),
             ),

@@ -433,10 +433,11 @@
                   _.jsondata.localized_sale_product_mobile_banner,
                   _,
                 );
-              if (_?.length > 0 && _?.length > 0) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);
@@ -758,8 +759,8 @@
           #i;
           #s;
           #r;
-          #n;
           #a;
+          #n;
           #l;
           constructor(_, _, _) {
             super(),
@@ -844,11 +845,11 @@
           }
           #u(_, _) {
             return _
-              ? ((this.#n && this.#t === this.#l && _ === this.#a) ||
-                  ((this.#a = _),
+              ? ((this.#a && this.#t === this.#l && _ === this.#n) ||
+                  ((this.#n = _),
                   (this.#l = this.#t),
-                  (this.#n = (0, _._)(this.#n, _(_)))),
-                this.#n)
+                  (this.#a = (0, _._)(this.#a, _(_)))),
+                this.#a)
               : _;
           }
           #o(_) {
@@ -895,7 +896,7 @@
           }
           #c() {
             if (this.hasListeners()) {
-              this.#n !==
+              this.#a !==
                 this.#u(this.#d(this.#t, this.#i), this.#s?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {

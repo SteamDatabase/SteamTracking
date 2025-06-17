@@ -557,6 +557,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "_33vqr13-jdnjTkKKTh414f",
         PagedSettingsDialog_PageContent: "_3mgb-3_dHk3POEOVOh0Dvp",
@@ -1265,8 +1266,8 @@
         "./en-in.js": 2551,
         "./en-nz": 620,
         "./en-nz.js": 620,
-        "./en-sg": 6222,
-        "./en-sg.js": 6222,
+        "./en-sg": 3841,
+        "./en-sg.js": 3841,
         "./eo": 8124,
         "./eo.js": 8124,
         "./es": 9784,
@@ -5623,7 +5624,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         return "appid" in _
@@ -6109,2546 +6109,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _, _, _, _;
-      !(function (_) {
-        (_[(_.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-          (_[(_.EBrowserType_OpenVROverlay = 1)] =
-            "EBrowserType_OpenVROverlay"),
-          (_[(_.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-            "EBrowserType_OpenVROverlay_Dashboard"),
-          (_[(_.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-          (_[(_.EBrowserType_DirectHWND_Borderless = 4)] =
-            "EBrowserType_DirectHWND_Borderless"),
-          (_[(_.EBrowserType_DirectHWND_Hidden = 5)] =
-            "EBrowserType_DirectHWND_Hidden"),
-          (_[(_.EBrowserType_ChildHWNDNative = 6)] =
-            "EBrowserType_ChildHWNDNative"),
-          (_[(_.EBrowserType_Offscreen_SteamUI = 12)] =
-            "EBrowserType_Offscreen_SteamUI"),
-          (_[(_.EBrowserType_OpenVROverlay_Subview = 13)] =
-            "EBrowserType_OpenVROverlay_Subview");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.SystemKey0 = 0)] = "SystemKey0"),
-            (_[(_.SystemKey1 = 1)] = "SystemKey1");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Hidden = 0)] = "Hidden"),
-            (_[(_.Notification = 1)] = "Notification"),
-            (_[(_.Overlay = 2)] = "Overlay"),
-            (_[(_.Opaque = 3)] = "Opaque"),
-            (_[(_.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.MainGamepadUI = 0)] = "MainGamepadUI"),
-            (_[(_.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
-            (_[(_.Keyboard = 2)] = "Keyboard"),
-            (_[(_.ControllerConfigurator = 3)] = "ControllerConfigurator"),
-            (_[(_._ = 4)] = "VR"),
-            (_[(_.MainDesktopUI = 5)] = "MainDesktopUI"),
-            (_[(_.DesktopLogin = 6)] = "DesktopLogin"),
-            (_[(_.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
-            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
-        })(_ || (_ = {}));
-      const _ = {
-        m_unPID: 0,
-        m_nBrowserID: -1,
-      };
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_fnRender;
-        m_rgLoadingLinks = [];
-        constructor(_, _, _) {
-          if (((this.m_rgLoadingLinks = []), _))
-            for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
-          else if (_) {
-            let _ = _.getElementsByTagName("link");
-            for (let _ = 0; _ < _.length; _++) {
-              let _ = _[_];
-              this.AddLink(_, !1);
-            }
-          }
-        }
-        AddLink(_, _) {
-          if (_) {
-            let _ = !1;
-            try {
-              (_.sheet && _.sheet.cssRules && 0 != _.sheet.cssRules.length) ||
-                (_ = !0);
-            } catch (_) {}
-            _ &&
-              (_.addEventListener("load", this.OnLinkLoad),
-              this.m_rgLoadingLinks.push(_));
-          } else
-            _.addEventListener("load", this.OnLinkLoad),
-              this.m_rgLoadingLinks.push(_);
-        }
-        SetTarget(_) {
-          (this.m_fnRender = _),
-            0 == this.m_rgLoadingLinks.length &&
-              (this.m_fnRender(), (this.m_fnRender = void 0));
-        }
-        OnLinkLoad(_) {
-          _.currentTarget.removeEventListener("load", this.OnLinkLoad),
-            _._(this.m_rgLoadingLinks, _.currentTarget),
-            0 == this.m_rgLoadingLinks.length &&
-              (this.m_fnRender?.(), (this.m_fnRender = void 0));
-        }
-      }
-      function _() {
-        return (0, _._)() ? _.Composited : _.None;
-      }
-      function _(_) {
-        let _ = _.None;
-        switch (_) {
-          case _.Overlay:
-            return (
-              (_ |= _.AlwaysOnTop),
-              (_ |= _.NoTaskbarIcon),
-              (_ |= _.NotFocusable),
-              (_ |= _.TransparentParentWindow),
-              _
-            );
-          case _.Notification:
-            return (
-              (_ |= _(_.Overlay)),
-              (_ |= _.NoWindowShadow),
-              (_ |= _.NoRoundedCorners),
-              (_ |= _.OverrideRedirect),
-              _
-            );
-          case _.Tooltip:
-            return (
-              (_ |= _(_.Overlay)),
-              (_ |= _.NoRoundedCorners),
-              (_ |= _.NoWindowShadow),
-              (_ |= _.TooltipHint),
-              (_ |= _()),
-              _
-            );
-          case _.PopupContextMenu:
-            return (
-              (_ |= _.NoTaskbarIcon),
-              (_ |= _.NoRoundedCorners),
-              (_ |= _.NoWindowShadow),
-              (_ |= _.PopUpMenuHint),
-              (_ |= _.TransparentParentWindow),
-              (_ |= _()),
-              _
-            );
-          case _.StandaloneContextMenu:
-            return (
-              (_ = _.NoTaskbarIcon),
-              (_ |= _.NoRoundedCorners),
-              (_ |= _.NoWindowShadow),
-              (_ |= _.OverrideRedirect),
-              (_ |= _.TransparentParentWindow),
-              (_ |= _()),
-              _
-            );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
-        (function (_) {
-          (_[(_.None = 0)] = "None"),
-            (_[(_.Minimized = 1)] = "Minimized"),
-            (_[(_.Hidden = 2)] = "Hidden"),
-            (_[(_.TooltipHint = 4)] = "TooltipHint"),
-            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-            (_[(_.Resizable = 16)] = "Resizable"),
-            (_[(_.ScalePosition = 32)] = "ScalePosition"),
-            (_[(_.ScaleSize = 64)] = "ScaleSize"),
-            (_[(_.Maximized = 128)] = "Maximized"),
-            (_[(_.Composited = 256)] = "Composited"),
-            (_[(_.NotFocusable = 512)] = "NotFocusable"),
-            (_[(_.FullScreen = 1024)] = "FullScreen"),
-            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-              "ApplyBrowserScaleToDimensions"),
-            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-              "IgnoreSteamDisplayScale"),
-            (_[(_.TransparentParentWindow = 4194304)] =
-              "TransparentParentWindow"),
-            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Overlay = 0)] = "Overlay"),
-            (_[(_.Notification = 1)] = "Notification"),
-            (_[(_.Tooltip = 2)] = "Tooltip"),
-            (_[(_.PopupContextMenu = 3)] = "PopupContextMenu"),
-            (_[(_.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
-        })(_ || (_ = {}));
-      const _ = _.createContext({
-          ownerWindow: window,
-        }),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const { ownerWindow: _, children: __webpack_require__ } = _,
-          _ = _.useMemo(
-            () => ({
-              ownerWindow: _,
-            }),
-            [_],
-          );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          __webpack_require__,
-        );
-      }
-      class _ {
-        m_strName;
-        m_strTitle;
-        m_rgParams;
-        m_popup;
-        m_element;
-        m_renderWhenReady;
-        m_bCreateHidden;
-        m_bCreated = !1;
-        m_onCreateRender = null;
-        m_bFocused = !1;
-        constructor(_, _) {
-          (0, _._)(this),
-            (0, _._)(
-              _,
-              "Name is required.  This is an internal name, different from title.",
-            ),
-            (this.m_strName = _);
-          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
-          (this.m_rgParams = {
-            ..._,
-            eCreationFlags: _ ?? 0,
-          }),
-            this.m_rgParams.target_browser &&
-              (this.m_strName +=
-                "_uid" + this.m_rgParams.target_browser.m_unPID),
-            (this.m_bCreateHidden = !!(
-              this.m_rgParams.eCreationFlags & _.Hidden
-            )),
-            (this.m_strTitle = __webpack_require__);
-        }
-        UpdateParamsBeforeShow(_) {
-          return _;
-        }
-        OnDrop(_) {
-          console.log("Ignoring drop onto toplevel window", _),
-            _.preventDefault(),
-            _.stopPropagation();
-        }
-        OnDragOver(_) {
-          _.preventDefault(),
-            (_.dataTransfer.dropEffect = "none"),
-            _.stopPropagation();
-        }
-        OnMessage(_) {
-          "window_moved" == _.data && this.OnResize(),
-            "popup-created" == _.data && this.OnCreateInternal();
-        }
-        Show(_ = _._.k_EWindowBringToFrontAndForceOS) {
-          let _;
-          (_ =
-            "boolean" == typeof _
-              ? _
-                ? _._.k_EWindowBringToFrontAndForceOS
-                : _._.k_EWindowBringToFrontInvalid
-              : _),
-            window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
-            this.m_rgParams.eCreationFlags & _.NotFocusable &&
-              (_ = _._.k_EWindowBringToFrontInvalid),
-            this.BIsValid() &&
-              (this.BIsClosed()
-                ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : _ != _._.k_EWindowBringToFrontInvalid && this.Focus(_));
-          let _,
-            _,
-            _,
-            _ = _.GetExistingPopup(this.m_strName);
-          (_ && !this.m_rgParams.replace_existing_popup) ||
-            ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            _
-              ? ((_ = _.m_element),
-                (_ = _.m_popup),
-                _.ReleasePopup(),
-                (_ = _.m_renderWhenReady),
-                _.RemoveTrackedPopup(_),
-                __webpack_require__?.removeEventListener(
-                  "beforeunload",
-                  _.OnBeforeUnloadEvent,
-                ),
-                __webpack_require__?.removeEventListener("unload", _.OnUnload),
-                __webpack_require__?.removeEventListener(
-                  "resize",
-                  _.OnResizeEvent,
-                ),
-                __webpack_require__?.removeEventListener(
-                  "focus",
-                  this.OnFocusInternal,
-                ),
-                __webpack_require__?.removeEventListener(
-                  "blur",
-                  this.OnBlurInternal,
-                ),
-                __webpack_require__?.removeEventListener("drop", _.OnDrop),
-                __webpack_require__?.removeEventListener(
-                  "dragover",
-                  _.OnDragOver,
-                ),
-                __webpack_require__?.removeEventListener(
-                  "message",
-                  this.OnMessage,
-                ))
-              : (({ popup: _, element: _ } = _.CreatePopup(this.m_strName, {
-                  ...this.m_rgParams,
-                  title: this.m_strTitle,
-                })),
-                (_ = new _(_?.document, _))),
-            _ &&
-              _ &&
-              ((_.document.title = this.m_strTitle),
-              __webpack_require__.addEventListener(
-                "beforeunload",
-                this.OnBeforeUnloadEvent,
-              ),
-              __webpack_require__.addEventListener("unload", this.OnUnload),
-              __webpack_require__.addEventListener(
-                "resize",
-                this.OnResizeEvent,
-              ),
-              __webpack_require__.addEventListener(
-                "focus",
-                this.OnFocusInternal,
-              ),
-              __webpack_require__.addEventListener("blur", this.OnBlurInternal),
-              __webpack_require__.addEventListener("drop", this.OnDrop),
-              __webpack_require__.addEventListener("dragover", this.OnDragOver),
-              __webpack_require__.addEventListener("message", this.OnMessage),
-              _._.LANGUAGE &&
-                _.document.documentElement.setAttribute(
-                  "lang",
-                  (0, _._)() ?? "",
-                ),
-              (this.m_popup = _),
-              (this.m_element = _),
-              (this.m_renderWhenReady = _),
-              this.m_renderWhenReady?.SetTarget(() => {
-                this.m_popup &&
-                  this.m_element &&
-                  this.RenderInternal(this.m_popup, this.m_element, _);
-              })),
-            _.AddTrackedPopup(this),
-            _ &&
-              (this.OnCreateInternal(),
-              _ != _._.k_EWindowBringToFrontInvalid && this.Focus(_)));
-        }
-        RemoveEventListeners() {
-          this.window?.removeEventListener(
-            "beforeunload",
-            this.OnBeforeUnloadEvent,
-          ),
-            this.window?.removeEventListener("unload", this.OnUnload),
-            this.window?.removeEventListener("resize", this.OnResizeEvent),
-            this.window?.removeEventListener("focus", this.OnFocusInternal),
-            this.window?.removeEventListener("blur", this.OnBlurInternal),
-            this.window?.removeEventListener("drop", this.OnDrop),
-            this.window?.removeEventListener("dragover", this.OnDragOver),
-            this.window?.removeEventListener("message", this.OnMessage);
-        }
-        RenderInternal(_, _, _) {
-          var _;
-          this.m_bCreated
-            ? (this.browser_info &&
-                ((_ = this.browser_info.m_eBrowserType) ==
-                  _.EBrowserType_OpenVROverlay ||
-                  _ == _.EBrowserType_OpenVROverlay_Dashboard ||
-                  _ == _.EBrowserType_OpenVROverlay_Subview) &&
-                (_.ownerDocument.body.className += " VR"),
-              this.Render(_, _),
-              this.OnLoad(),
-              _?.SteamClient &&
-                !this.m_bCreateHidden &&
-                (_ != _._.k_EWindowBringToFrontInvalid
-                  ? _.SteamClient.Window.BringToFront(_)
-                  : _.SteamClient.Window.ShowWindow()))
-            : (this.m_onCreateRender = () => this.RenderInternal(_, _, _));
-        }
-        OnCreateInternal() {
-          this.m_bCreated ||
-            ((this.m_bCreated = !0),
-            this.OnCreate(),
-            this.m_onCreateRender &&
-              (this.m_onCreateRender(), (this.m_onCreateRender = null)));
-        }
-        OnCreate() {}
-        OnResizeEvent() {
-          this.OnResize();
-        }
-        OnBeforeUnloadEvent() {
-          this.OnBeforeUnload();
-        }
-        OnUnload(_) {
-          this.RemoveEventListeners(),
-            _.RemoveTrackedPopup(this),
-            this.OnClose(),
-            (this.m_popup = void 0);
-        }
-        get browser_info() {
-          return this.m_rgParams.target_browser;
-        }
-        get window() {
-          return this.m_popup;
-        }
-        get root_element() {
-          return this.m_element;
-        }
-        get title() {
-          return this.m_strTitle;
-        }
-        set title(_) {
-          (this.m_strTitle = _),
-            this.m_popup && (this.m_popup.document.title = this.m_strTitle);
-        }
-        get params() {
-          return this.m_rgParams;
-        }
-        Focus(_ = _._.k_EWindowBringToFrontAndForceOS) {
-          _ != _._.k_EWindowBringToFrontInvalid &&
-            (this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
-              ? this.m_popup.SteamClient.Window.BringToFront(_)
-              : this.m_popup && this.m_popup.focus());
-        }
-        Close() {
-          this.m_popup &&
-            ((0, _._)(this.m_popup.window, "Window.Close")
-              ? this.m_popup.window.SteamClient.Window.Close()
-              : this.m_popup.window.close());
-        }
-        GetName() {
-          return this.m_strName;
-        }
-        BIsValid() {
-          return !!this.m_popup;
-        }
-        BIsClosed() {
-          return !this.m_popup || this.m_popup.closed;
-        }
-        BIsVisible() {
-          return !(
-            !this.m_popup ||
-            this.m_popup.closed ||
-            "visible" != this.m_popup.document.visibilityState
-          );
-        }
-        BIsFocused() {
-          return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
-        }
-        OnFocusInternal() {
-          this.m_popup &&
-            this.m_popup.document.body.classList.add("WindowFocus"),
-            (this.m_bFocused = !0),
-            this.OnFocus();
-        }
-        OnBlurInternal() {
-          this.m_popup &&
-            this.m_popup.document.body.classList.remove("WindowFocus"),
-            (this.m_bFocused = !1),
-            this.OnBlur();
-        }
-        get focused() {
-          return this.m_bFocused;
-        }
-        GetWindowRestoreDetails() {
-          return (0, _._)(this.m_popup, "Window.GetWindowRestoreDetails") &&
-            !this.m_popup.closed
-            ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
-            : Promise.resolve("");
-        }
-        IsMinimized() {
-          return (0, _._)(this.m_popup, "Window.IsWindowMinimized") &&
-            !this.m_popup.closed
-            ? this.m_popup.SteamClient.Window.IsWindowMinimized()
-            : Promise.resolve(!1);
-        }
-        IsMaximized() {
-          return (0, _._)(this.m_popup, "Window.IsWindowMaximized") &&
-            !this.m_popup.closed
-            ? this.m_popup.SteamClient.Window.IsWindowMaximized()
-            : Promise.resolve(!1);
-        }
-        ReleasePopup() {
-          this.OnClose(), (this.m_popup = null);
-        }
-        OnResize() {
-          this.IsMaximized().then((_) => {
-            _
-              ? this.m_popup?.document.body.classList.add("Maximized")
-              : this.m_popup?.document.body.classList.remove("Maximized");
-          });
-        }
-        OnBeforeUnload() {}
-        OnFocus() {}
-        OnBlur() {}
-      }
-      (0, _._)([_._], _.prototype, "m_bFocused", void 0),
-        (0, _._)([_._], _.prototype, "OnMessage", null),
-        (0, _._)([_._], _.prototype, "RenderInternal", null),
-        (0, _._)([_._], _.prototype, "OnCreateInternal", null),
-        (0, _._)([_._], _.prototype, "OnResizeEvent", null),
-        (0, _._)([_._], _.prototype, "OnBeforeUnloadEvent", null),
-        (0, _._)([_._], _.prototype, "OnUnload", null),
-        (0, _._)([_._], _.prototype, "OnFocusInternal", null),
-        (0, _._)([_._], _.prototype, "OnBlurInternal", null);
-      (0, _._)(
-        [_._],
-        class extends _ {
-          m_strSavedDimensionsKey;
-          m_strInitialSavedDimensionsKey;
-          m_strInitialRestoreDetails;
-          m_bExpires;
-          constructor(_, _, _, _) {
-            super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
-          }
-          BIsInOverlay() {
-            return (
-              this.browser_info &&
-              0 != this.browser_info.m_unPID &&
-              -1 != this.browser_info.m_nBrowserID
-            );
-          }
-          SetSavedDimensionsKey(_) {
-            this.m_strSavedDimensionsKey = _;
-          }
-          UpdateParamsBeforeShow(_) {
-            return (
-              !this.m_strSavedDimensionsKey ||
-              _.bIgnoreSavedDimensions ||
-              _.strRestoreDetails
-                ? _.strRestoreDetails &&
-                  ((this.m_strInitialSavedDimensionsKey =
-                    this.GetSavedDimensionsKey()),
-                  _.SetRestoreDetails(
-                    this.m_strInitialSavedDimensionsKey,
-                    _.strRestoreDetails,
-                    this.m_bExpires,
-                  ))
-                : ((this.m_strInitialSavedDimensionsKey =
-                    this.GetSavedDimensionsKey()),
-                  (_.strRestoreDetails = _.GetRestoreDetails(
-                    this.m_strInitialSavedDimensionsKey,
-                  ))),
-              _
-            );
-          }
-          OnLoad() {
-            this.GetWindowRestoreDetails().then((_) => {
-              (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
-            });
-          }
-          OnResize() {
-            super.OnResize(), this.QueryAndStoreWindowPosition();
-          }
-          OnResizeComplete(_) {}
-          QueryAndStoreWindowPosition() {
-            if (this.m_strInitialRestoreDetails) {
-              let _ = this.GetSavedDimensionsKey();
-              this.m_popup?.setTimeout(() => {
-                this.GetWindowRestoreDetails().then((_) => {
-                  let _ =
-                    this.m_rgParams.strRestoreDetails == _ &&
-                    _ == this.m_strInitialSavedDimensionsKey;
-                  this.m_popup &&
-                    this.m_strSavedDimensionsKey &&
-                    _ &&
-                    !_ &&
-                    (_.SetRestoreDetails(_, _, this.m_bExpires),
-                    (this.m_rgParams.strRestoreDetails = _),
-                    (this.m_strInitialSavedDimensionsKey = _),
-                    this.OnResizeComplete(_));
-                });
-              }, 30);
-            }
-          }
-          OnBeforeUnload() {
-            this.QueryAndStoreWindowPosition(), super.OnBeforeUnload();
-          }
-          OnClose() {}
-          SaveWindowPosition(_) {
-            _.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
-              (this.m_rgParams.strRestoreDetails = _);
-          }
-        }.prototype,
-        "QueryAndStoreWindowPosition",
-        null,
-      );
-      class _ {
-        m_bShuttingDown = !1;
-        m_mapPopups = _._.map([], {
-          deep: !1,
-        });
-        m_rgShutdownCallbacks = [];
-        m_rgPopupCreatedCallbacks = [];
-        m_unCurrentAccountID = 0;
-        m_mapRestoreDetails = new Map();
-        m_bSaveRequired = !1;
-        m_DynamicCSSObserver;
-        constructor() {
-          if (
-            !{
-              NODE_ENV: "production",
-              STEAM_BUILD: "buildbot",
-            }.MOBILE_BUILD &&
-            "addEventListener" in window
-          ) {
-            window.addEventListener("beforeunload", (_) => {
-              this.m_bShuttingDown = !0;
-              for (let _ of this.m_rgShutdownCallbacks) _();
-              let _ = [];
-              this.m_mapPopups.forEach((_) => {
-                _.BIsValid() && !_.BIsClosed() && _.push(_);
-              });
-              for (let _ of _)
-                _.window?.SteamClient.Browser
-                  ?.SetShouldExitSteamOnBrowserClosed &&
-                  _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
-                    !1,
-                  ),
-                  _.window?.SteamClient.Window.SetHideOnClose &&
-                    _.window?.SteamClient.Window.SetHideOnClose(!1),
-                  _.Close();
-              this.m_bSaveRequired && this.SaveSavedDimensionStore(),
-                this.m_mapPopups.clear();
-            });
-            let _ = document.querySelector("head");
-            (0, _._)(_, "Couldn't find head element"),
-              _ &&
-                ((this.m_DynamicCSSObserver = new MutationObserver(() => {
-                  const _ = _._();
-                  this.m_mapPopups.forEach((_) => {
-                    _._(_.window.document, _, !1);
-                  });
-                })),
-                this.m_DynamicCSSObserver.observe(_, {
-                  childList: !0,
-                }));
-          }
-        }
-        BAnyPopupHasFocus() {
-          for (const _ of this.m_mapPopups.values()) if (_.focused) return !0;
-          return !1;
-        }
-        BAnyMenuHasFocus() {
-          for (const _ of this.m_mapPopups.values())
-            if (_.focused && (_.params.eCreationFlags ?? 0) & _.NoTaskbarIcon)
-              return !0;
-          return !1;
-        }
-        SetCurrentLoggedInAccountID(_) {
-          this.m_unCurrentAccountID != _ &&
-            ((this.m_unCurrentAccountID = _),
-            _
-              ? this.LoadSavedDimensionStore()
-              : this.ClearSavedDimensionStore());
-        }
-        AddShutdownCallback(_) {
-          this.m_rgShutdownCallbacks.push(_);
-        }
-        AddPopupCreatedCallback(_) {
-          this.m_rgPopupCreatedCallbacks.push(_);
-        }
-        AddTrackedPopup(_) {
-          if ((this.m_mapPopups.set(_.GetName(), _), _.BIsValid()))
-            for (let _ of this.m_rgPopupCreatedCallbacks) _(_);
-        }
-        RemoveTrackedPopup(_) {
-          this.m_mapPopups.delete(_.GetName());
-        }
-        GetExistingPopup(_) {
-          return this.m_mapPopups.get(_);
-        }
-        GetPopups() {
-          return this.m_mapPopups.values();
-        }
-        GetPopupForWindow(_) {
-          for (const _ of this.m_mapPopups.values())
-            if (_.window === _) return _;
-        }
-        ClosePopupsOwnedByBrowser(_) {
-          this.m_mapPopups.forEach((_) => {
-            _.browser_info &&
-              _.browser_info.m_nBrowserID == _.m_nBrowserID &&
-              _.browser_info.m_unPID == _.m_unPID &&
-              _.Close();
-          });
-        }
-        static CreatePopup(_, _) {
-          let _ = _.dimensions || {},
-            _ = _.width || 300,
-            _ = _.height || 300,
-            _ = _.title,
-            _ = "width=" + _ + ",height=" + _;
-          void 0 !== _.left && (_ += ",left=" + _.left),
-            void 0 !== _.top && (_ += ",top=" + _.top),
-            (_ += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
-          let _ = "about:blank",
-            _ = [];
-          _.push("createflags=" + _.eCreationFlags),
-            _.minWidth && _.push("minwidth=" + _.minWidth),
-            _.minHeight && _.push("minheight=" + _.minHeight),
-            _.maxWidth &&
-              _.maxWidth != 1 / 0 &&
-              _.push("maxwidth=" + _.maxWidth),
-            _.maxHeight &&
-              _.maxHeight != 1 / 0 &&
-              _.push("maxheight=" + _.maxHeight),
-            _.target_browser
-              ? (_.push("pid=" + _.target_browser.m_unPID),
-                _.push("browser=" + _.target_browser.m_nBrowserID),
-                _.target_browser.m_eBrowserType
-                  ? _.push("browserType=" + _.target_browser.m_eBrowserType)
-                  : _.browserType && _.push("browserType=" + _.browserType),
-                _.availscreenwidth &&
-                  _.availscreenheight &&
-                  (_.push("screenavailwidth=" + _.availscreenwidth),
-                  _.push("screenavailheight=" + _.availscreenheight)))
-              : _.browserType && _.push("browserType=" + _.browserType),
-            _.strVROverlayKey && _.push("vrOverlayKey=" + _.strVROverlayKey),
-            _.strRestoreDetails &&
-              _.push("restoredetails=" + _.strRestoreDetails),
-            _.window_opener_id && _.push("openerid=" + _.window_opener_id),
-            _.parent_container_popup_id &&
-              _.push("parentcontainerpopupid=" + _.parent_container_popup_id),
-            _.center_on_window &&
-              void 0 === _.left &&
-              void 0 === _.top &&
-              _.push(
-                "centerOnBrowserID=" +
-                  _.center_on_window.SteamClient.Browser.GetBrowserID(),
-              ),
-            _.strUserAgent && _.push("useragent=" + _.strUserAgent),
-            _.hwndParent && _.push("hwndParent=" + _.hwndParent),
-            _.bPinned && _.push("pinned=true"),
-            _.bModal && _.push("modal=true"),
-            _ && (_ += "?" + _.join("&"));
-          let _ = (_.owner_window || window).open(_, _, _);
-          if (!_)
-            return (
-              console.error(
-                `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
-              ),
-              {}
-            );
-          let _ = "";
-          _.html_class && (_ = `class="${_.html_class}"`);
-          let _ = "";
-          _.body_class && (_ = `class="${_.body_class}"`);
-          let _ = "";
-          _.popup_class && (_ = `class="${_.popup_class}"`);
-          let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_}><div id="popup_target" ${_}></div></body></html>`;
-          return (
-            _.document.write(_),
-            (_.document.title = _),
-            _.document.close(),
-            _._(_, _._()),
-            {
-              popup: _,
-              element: _.document.getElementById("popup_target"),
-            }
-          );
-        }
-        BShuttingDown() {
-          return this.m_bShuttingDown;
-        }
-        GetLocalStorageKey() {
-          return "PopupSavedDimensions_" + this.m_unCurrentAccountID;
-        }
-        LoadSavedDimensionStore() {
-          if (!this.m_unCurrentAccountID) return;
-          let _ = this.GetLocalStorageKey();
-          this.m_mapRestoreDetails.clear();
-          let _ = window.localStorage.getItem(_);
-          if (_)
-            try {
-              let _ = JSON.parse(_);
-              this.m_mapRestoreDetails = new Map(_);
-            } catch (_) {}
-        }
-        SaveSavedDimensionStore() {
-          if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
-          let _ = this.GetLocalStorageKey(),
-            _ = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-          try {
-            window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
-          } catch (_) {
-            if ("name" in _ && "QuotaExceededError" == _.name) {
-              console.log("Quota exceeded");
-              for (let _ of Object.keys(window.localStorage))
-                _.startsWith("PopupSavedDimensions_") &&
-                  _ != _ &&
-                  window.localStorage.removeItem(_);
-              window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
-            }
-          }
-        }
-        DebouncedSaveSavedDimensionStore() {
-          this.SaveSavedDimensionStore();
-        }
-        ClearSavedDimensionStore() {
-          this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
-        }
-        GetRestoreDetails(_) {
-          if (!this.m_mapRestoreDetails?.has(_)) return "";
-          let _ = this.m_mapRestoreDetails.get(_);
-          return (
-            (_.last_used = Date.now()),
-            (this.m_bSaveRequired = !0),
-            _.strRestoreDetails
-          );
-        }
-        SetRestoreDetails(_, _, _) {
-          if (_) {
-            if (_) {
-              if (this.m_mapRestoreDetails.size > 50) {
-                let _ = null,
-                  _ = Date.now();
-                for (let _ of Array.from(this.m_mapRestoreDetails.keys())) {
-                  let _ = this.m_mapRestoreDetails.get(_);
-                  _.last_used < _ && _.bExpires && ((_ = _.last_used), (_ = _));
-                }
-                _ && this.m_mapRestoreDetails.delete(_);
-              }
-              let _ = {
-                strRestoreDetails: _,
-                last_used: Date.now(),
-                bExpires: _,
-              };
-              this.m_mapRestoreDetails.set(_, _);
-            } else this.m_mapRestoreDetails.delete(_);
-            (this.m_bSaveRequired = !0),
-              this.m_bShuttingDown
-                ? this.SaveSavedDimensionStore()
-                : this.DebouncedSaveSavedDimensionStore();
-          }
-        }
-      }
-      (0, _._)(
-        [_._, (0, _._)(100)],
-        _.prototype,
-        "DebouncedSaveSavedDimensionStore",
-        null,
-      );
-      const _ = new _();
-      window.g_PopupManager = _;
-      const _ = _.createContext(null);
-      function _(_) {
-        const {
-            refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
-            children: _,
-          } = _,
-          _ = _(),
-          _ = _?.ownerWindow || window,
-          _ = _.useRef();
-        return (
-          _.current || (_.current = new _._()),
-          _.useLayoutEffect(() => {
-            if (__webpack_require__)
-              return (
-                _._.SetMenuManager(_, _.current),
-                () => _._.SetMenuManager(_, void 0)
-              );
-          }, [_, __webpack_require__]),
-          _.useLayoutEffect(
-            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
-            [_],
-          ),
-          _.createElement(
-            _.Provider,
-            {
-              value: _.current,
-            },
-            _,
-          )
-        );
-      }
-      const _ = _.createContext({
-        body_class: "",
-      });
-      function _() {
-        return _.useContext(_);
-      }
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = _.useRef(void 0),
-          [_, _] = _.useState(void 0),
-          _ = _();
-        return (
-          _.current ||
-            (_.current = new _(
-              _,
-              (function (_, _) {
-                return {
-                  ..._,
-                  body_class: (0, _._)(_.body_class, _.body_class),
-                };
-              })(_, _),
-              _,
-            )),
-          (_.current.m_callbacks = _),
-          _.useEffect(() => {
-            if (!_.current?.params.bNoInitialShow) {
-              let _ = _.current?.params.bNoFocusOnShow
-                ? _._.k_EWindowBringToFrontWithoutForcingOS
-                : _._.k_EWindowBringToFrontAndForceOS;
-              _.current?.Show(_);
-            }
-            return () => {
-              (_.current.m_callbacks = void 0),
-                _.current.window?.SteamClient.Window.SetHideOnClose &&
-                  _.current.window?.SteamClient.Window.SetHideOnClose(!1),
-                _.current.Close();
-            };
-          }, []),
-          _.useEffect(() => {
-            _.current.window?.SteamClient.Window.SetHideOnClose &&
-              _.current.window?.SteamClient.Window.SetHideOnClose(
-                !!_.bHideOnClose,
-              );
-          }, [_.bHideOnClose]),
-          {
-            popup: _.current.window,
-            element: _,
-            popupObj: _.current,
-          }
-        );
-      }
-      class _ extends _ {
-        m_callbacks;
-        m_fnReadyToRender;
-        constructor(_, _, _) {
-          super(_, _), (this.m_fnReadyToRender = _);
-        }
-        DoCallback(_) {
-          this.m_callbacks?.[_]?.(this.m_popup, this.m_element);
-        }
-        UpdateParamsBeforeShow(_) {
-          return this.m_callbacks?.updateParamsBeforeShow
-            ? this.m_callbacks.updateParamsBeforeShow(_)
-            : _;
-        }
-        OnCreate() {
-          this.m_callbacks?.onCreate &&
-            this.m_callbacks.onCreate(this.m_popup, this.m_element);
-        }
-        OnBlur() {
-          this.DoCallback("onBlur");
-        }
-        OnFocus() {
-          this.DoCallback("onFocus");
-        }
-        OnLoad() {
-          this.DoCallback("onLoad");
-        }
-        OnResize() {
-          this.DoCallback("onResize");
-        }
-        OnClose() {
-          this.DoCallback("onClose");
-        }
-        Render(_, _) {
-          this.m_fnReadyToRender(_);
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            managerOverride: _,
-            bSuppressMouseOverlay: __webpack_require__,
-          } = _,
-          _ = (0, _._)(),
-          _ = (function () {
-            const { ownerWindow: _ } = _(),
-              _ = _.GetPopupForWindow(_);
-            return _?.browser_info || _;
-          })(),
-          _ = _.useContext(_),
-          _ = _ ?? _;
-        (0, _._)(_.OnMenusChanged, _);
-        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
-          _ = _.GetAllMenus();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ && _.createElement(_._, null),
-          _.map((_) =>
-            _.createElement(
-              _._,
-              {
-                key: _.key,
-              },
-              _.createElement(_, {
-                instance: _,
-                browserInfo: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
-          _ = _(),
-          _ = _().ownerWindow,
-          _ = _.useRef(void 0);
-        void 0 === _.current &&
-          (_.current =
-            (_.options.bForcePopup || _.innerWidth < 400 || _?.BOnlyPopups()) &&
-            !!_.SteamClient?.Window);
-        const _ = _.useMemo(
-            () => ({
-              instance: _,
-              styles: _(),
-              presentation: 0,
-            }),
-            [_],
-          ),
-          _ = _ || _.ReactElement;
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.current
-            ? _.createElement(_, {
-                instance: _,
-                browserInfo: __webpack_require__,
-                children: _,
-              })
-            : _.createElement(_, {
-                instance: _,
-                children: _,
-              }),
-        );
-      }
-      function _(_) {
-        const { instance: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._.position,
-          },
-          __webpack_require__,
-        );
-      }
-      function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _().ownerWindow,
-          _ = _.SteamClient.Browser.GetBrowserID(),
-          _ = _.useCallback(
-            (_) => {
-              const { options: __webpack_require__, position: _ } = _,
-                _ = _.element;
-              if (__webpack_require__.bScreenCoordinates)
-                _.dimensions = {
-                  left: _.clientX,
-                  top: _.clientY,
-                  width: 2,
-                  height: 1,
-                };
-              else {
-                let _ = _._(_, _.getBoundingClientRect());
-                (_.dimensions = {
-                  left: _.right,
-                  top: _.top,
-                  width: 2,
-                  height: 1,
-                }),
-                  (_.availscreenwidth = _.screen.availWidth),
-                  (_.availscreenheight = _.screen.availHeight);
-              }
-              return _;
-            },
-            [_, _],
-          );
-        let _ = _.options.bStandalone
-          ? _(_.StandaloneContextMenu)
-          : _(_.PopupContextMenu);
-        _.options.bCreateHidden && (_ |= _.Hidden),
-          _.options.bAlwaysOnTop && (_ |= _.AlwaysOnTop);
-        const { popupObj: _, element: _ } = _(
-          "contextmenu_" + _.key,
-          {
-            title: _.options.title || "Menu",
-            html_class: _().ContextMenuPopup + " client_chat_frame",
-            body_class: "ContextMenuPopupBody",
-            replace_existing_popup: !1,
-            target_browser: __webpack_require__,
-            window_opener_id: _,
-            bHideOnClose: !0,
-            eCreationFlags: _,
-          },
-          {
-            updateParamsBeforeShow: _,
-          },
-        );
-        return (
-          (0, _.useEffect)(() => {
-            if (_)
-              if (_.visible) {
-                _.current && _.current.PositionMenu(),
-                  _.current && _.current.PositionPopupWindow();
-                let _ = _.options.bNoFocusWhenShown
-                  ? _._.k_EWindowBringToFrontWithoutForcingOS
-                  : _._.k_EWindowBringToFrontAndForceOS;
-                _.TakeFocus(_);
-              } else
-                _.options.bRetainOnHide &&
-                  window.setTimeout(() => {
-                    _.window?.SteamClient.Window.HideWindow();
-                  }, 30);
-          }, [_, _, _.visible]),
-          (function (_) {
-            const _ = _();
-            _.useEffect(() => {
-              if (_) return _.RegisterModalManager(_, _);
-            }, [_, _]);
-          })(_.window),
-          _.useEffect(() => {
-            _.SetPopup(_);
-          }, [_, _]),
-          _
-            ? _.createPortal(
-                _.createElement(
-                  _._,
-                  {
-                    ref: _,
-                    ..._.position,
-                    parentWin: _,
-                    popup: _,
-                  },
-                  _,
-                ),
-                _,
-              )
-            : null
-        );
-      }
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
-        return (
-          (0, _.useEffect)(() => {
-            (0, _.startTransition)(() => {
-              __webpack_require__(!0);
-            });
-          }, []),
-          _ ? _.children : (_.fallback ?? null)
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
-          _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(!1),
-              _ = _.useCallback(() => {
-                (0, _._)(_, "Window.IsWindowMaximized")
-                  ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
-                      __webpack_require__(_);
-                    })
-                  : _?.screen &&
-                    __webpack_require__(
-                      _.screen.availWidth == _.innerWidth &&
-                        _.screen.availHeight == _.innerHeight,
-                    );
-              }, [_]);
-            return (
-              _.useEffect(_, [_, _]),
-              (0, _._)(_, "resize", _),
-              (0, _._)(_, ["window_moved"], _),
-              _
-            );
-          })(_),
-          _ = _.useCallback(() => {
-            __webpack_require__
-              ? __webpack_require__()
-              : (0, _._)(_, "Window.ToggleMaximize") &&
-                _.SteamClient.Window.ToggleMaximize();
-          }, [_, __webpack_require__]);
-        return _.createElement(
-          _,
-          {
-            className: (0, _._)(
-              _ ? "restoreButton" : "maximizeButton",
-              "windowControlButton",
-            ),
-            onClick: _,
-          },
-          !_ &&
-            (_ ? _.createElement(_.ZWw, null) : _.createElement(_.hz4, null)),
-        );
-      }
-      function _(_) {
-        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
-          _ = _.useCallback(() => {
-            _.SteamClient.Window.Minimize();
-          }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "minimizeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.Xjb, null),
-        );
-      }
-      function _(_) {
-        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
-          _ = _.useCallback(() => {
-            _ &&
-              ((0, _._)(_, "Window.Close")
-                ? _.SteamClient.Window.Close()
-                : _.close());
-          }, [_]);
-        return _.createElement(
-          _,
-          {
-            className: "closeButton windowControlButton",
-            onClick: __webpack_require__ ?? _,
-          },
-          !_ && _.createElement(_.sED, null),
-        );
-      }
-      function _(_) {
-        const { className: _, onClick: __webpack_require__, children: _ } = _,
-          _ = _.useCallback(
-            (_) => {
-              __webpack_require__ &&
-                (_.stopPropagation(), __webpack_require__(_));
-            },
-            [__webpack_require__],
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)("title-area-icon", _),
-            onClick: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "title-area-icon-inner",
-            },
-            _,
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            className: _,
-            style: __webpack_require__,
-            hideActions: _,
-            hideClose: _,
-            hideMin: _,
-            hideMax: _,
-            bOSX: _ = (0, _._)(),
-            bForceWindowFocused: _,
-            onMinimize: _,
-            onMaximize: _,
-            onClose: _,
-            extraActions: _,
-            popup: _,
-            children: _,
-          } = _,
-          _ = (function (_, _ = 100) {
-            const [__webpack_require__, _] = _.useState(!1),
-              _ = _.useCallback(() => _(!0), [_]),
-              _ = _.useCallback(() => _(!1), [_]);
-            return (
-              _.useEffect(
-                () =>
-                  _
-                    ? (_.addEventListener("focus", _),
-                      _.addEventListener("blur", _),
-                      () => {
-                        _.removeEventListener("focus", _),
-                          _.removeEventListener("blur", _);
-                      })
-                    : void 0,
-                [_, _, _],
-              ),
-              (0, _._)(__webpack_require__, _)
-            );
-          })(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              "TitleBar",
-              "title-area",
-              _ && "OSX",
-              (_ || _) && "WindowFocus",
-              _,
-            ),
-            style: __webpack_require__,
-          },
-          _.createElement("div", {
-            className: "title-area-highlight",
-          }),
-          _.createElement(
-            "div",
-            {
-              className: "title-area-children",
-            },
-            _,
-          ),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "title-bar-actions extra-actions",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: "title-bar-actions window-controls",
-                },
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onClose: _,
-                    bOSX: _,
-                  }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMaximize: _,
-                    bOSX: _,
-                  }),
-                !_ &&
-                  _.createElement(_, {
-                    popup: _,
-                    onMinimize: _,
-                    bOSX: _,
-                  }),
-              ),
-            ),
-        );
-      }
-      function _(_) {
-        const { Modal: _ } = _,
-          { name: __webpack_require__, modalProps: _, options: _ } = _,
-          _ = _().ownerWindow,
-          { popup: _, element: _ } = _(
-            __webpack_require__,
-            {
-              title: _.strTitle,
-              html_class:
-                "client_chat_frame fullheight ModalDialogPopup LegacyPopup " +
-                (_.className || ""),
-              body_class: "fullheight ModalDialogBody",
-              popup_class: "fullheight popup_chat_frame",
-              owner_window: void 0,
-              replace_existing_popup: !0,
-              target_browser: _.browserContext,
-              availscreenwidth: _.screen.availWidth,
-              availscreenheight: _.screen.availHeight,
-              bModal: _.bHideMainWindowForPopouts,
-            },
-            {
-              updateParamsBeforeShow: (_) =>
-                (function (_, _, _, _) {
-                  let _,
-                    _,
-                    _,
-                    _ = _.popupWidth || 500,
-                    _ = _.popupHeight || 400;
-                  if (_._.IN_CLIENT && _?.SteamClient?.Browser?.GetBrowserID)
-                    _ = _.SteamClient.Browser.GetBrowserID();
-                  else {
-                    let _ = _.screen;
-                    (_ = (_.availWidth - _) / 2), (_ = (_.availHeight - _) / 2);
-                    let _ = _;
-                    void 0 !== _.availLeft &&
-                      void 0 !== _.availTop &&
-                      ((_ += _.availLeft), (_ += _.availTop));
-                  }
-                  return {
-                    ..._,
-                    dimensions: {
-                      width: _,
-                      height: _,
-                      left: _,
-                      top: _,
-                    },
-                    center_on_window: _.bCenterOnWindow ? _ : void 0,
-                    window_opener_id: _,
-                  };
-                })(_, _, _, _),
-              onClose: () => _.fnOnClose && _.fnOnClose(),
-            },
-          );
-        (0, _._)(_, "click", () => _?.SteamClient.Window.BringToFront());
-        const _ = _?.bHideActions,
-          _ =
-            "number" == typeof _?.nDragAreaHeight
-              ? {
-                  height: _.nDragAreaHeight,
-                }
-              : void 0;
-        return _
-          ? _.createPortal(
-              _.createElement(
-                _,
-                {
-                  ownerWindow: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "PopupFullWindow",
-                    onContextMenu: _._,
-                  },
-                  _.createElement(_, {
-                    hideMin: !0,
-                    hideMax: !0,
-                    popup: _,
-                    hideActions: _,
-                    style: _,
-                  }),
-                  _.createElement(
-                    _,
-                    {
-                      browserInfo: _.browserContext,
-                      bCenterPopupsOnWindow: _.bCenterOnWindow,
-                    },
-                    _.element,
-                  ),
-                ),
-              ),
-              _,
-            )
-          : null;
-      }
-      function _(_) {
-        const { ModalManager: _ } = _,
-          [__webpack_require__, _] = _.useState(void 0),
-          [_, _] = _.useState(!0),
-          _ = _.useRef(0),
-          _ = _.useCallback(() => {
-            _.startTransition(() => {
-              _(!0);
-            });
-          }, []);
-        _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
-          _.useLayoutEffect(() => {
-            __webpack_require__ ||
-              _.startTransition(() => {
-                _(_.TakeMeasureModalRequest()), _(!1);
-              });
-          }, [_, __webpack_require__, _]);
-        const _ = _.useCallback((_) => {
-          _.current++,
-            _.startTransition(() => {
-              _((_) => (_ === _ ? void 0 : _));
-            });
-        }, []);
-        return __webpack_require__
-          ? _.createElement(_, {
-              key: _.current,
-              onMeasureComplete: _,
-              request: __webpack_require__,
-            })
-          : null;
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(),
-          _ = _().ownerWindow;
-        return (
-          _.useLayoutEffect(() => {
-            const _ = _.document.body,
-              _ = _.document.createElement("div");
-            return (
-              (_.style.position = "absolute"),
-              (_.style.visibility = "hidden"),
-              _.appendChild(_),
-              __webpack_require__(_),
-              () => {
-                _.removeChild(_);
-              }
-            );
-          }, [_]),
-          _
-            ? _.createPortal(
-                _.createElement(_, {
-                  ..._,
-                  elContainer: _,
-                }),
-                _,
-              )
-            : null
-        );
-      }
-      function _(_) {
-        const {
-          elContainer: _,
-          onMeasureComplete: __webpack_require__,
-          request: _,
-        } = _;
-        return (
-          _.useEffect(() => {
-            let _ = !1;
-            const _ = (_) => {
-              _ || (_.fnResults(_), __webpack_require__(_), (_ = !0));
-            };
-            return (
-              (async function (_, _) {
-                _ && (await _);
-                let _ = document;
-                _._.IN_STEAMUI && _.fonts && (await _.fonts.ready);
-                const _ = _.getBoundingClientRect(),
-                  _ = Math.ceil(_.height),
-                  _ = Math.ceil(_.width);
-                return {
-                  height: _,
-                  width: _,
-                };
-              })(_, _.promiseContentReady).then(_),
-              () => _(void 0)
-            );
-          }, [_, __webpack_require__, _]),
-          _.createElement(_._, null, _.rctToMeasure)
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        key;
-        static sm_lastKey = 0;
-        constructor() {
-          this.key = "Modal_" + _.sm_lastKey++;
-        }
-      }
-      class _ extends _ {
-        element;
-        ModalUpdatedCallback = new _._();
-        constructor(_) {
-          super(), (this.element = _);
-        }
-        UpdateModal(_) {
-          (this.element = _), this.ModalUpdatedCallback.Dispatch();
-        }
-      }
-      class _ extends _ {
-        m_OnElementReadyCallbacks = new _._();
-        m_OnActiveModalCallbacks = new _._();
-        constructor() {
-          super();
-        }
-        get OnElementReadyCallbacks() {
-          return this.m_OnElementReadyCallbacks;
-        }
-        get OnModalActiveCallbacks() {
-          return this.m_OnActiveModalCallbacks;
-        }
-        RefModalElement(_) {
-          _ && this.m_OnElementReadyCallbacks.Dispatch(_);
-        }
-        SetActive(_) {
-          this.m_OnActiveModalCallbacks.Dispatch(_);
-        }
-      }
-      (0, _._)([_._], _.prototype, "RefModalElement", null);
-      class _ extends _ {
-        m_strName;
-        m_modalProps;
-        m_options;
-        constructor(_, _, _, _) {
-          super(_),
-            (this.m_strName = _),
-            (this.m_modalProps = _),
-            (this.m_options = _);
-        }
-        get name() {
-          return this.m_strName;
-        }
-        get modalProps() {
-          return this.m_modalProps;
-        }
-        get options() {
-          return this.m_options;
-        }
-      }
-      class _ {
-        m_bUsePopups = !0;
-        m_bOnlyPopups = !1;
-        m_bCenterPopupsOnWindow = !1;
-        m_rgModals = [];
-        m_OnModalCountChangedCallbacks = new _._();
-        m_OnModalShownCallbacks = new _._();
-        m_OnModalHiddenCallbacks = new _._();
-        m_cMountedOverlays = 0;
-        m_rgMeasureModalRequests = [];
-        m_OnMeasureModal = new _._();
-        m_rgLegacyPopupModals = [];
-        m_OnLegacyPopupModalCountChanged = new _._();
-        m_browserInfo;
-        get ModalCountChangedCallbacks() {
-          return this.m_OnModalCountChangedCallbacks;
-        }
-        get LegacyPopupModalCountChangedCallbacks() {
-          return this.m_OnLegacyPopupModalCountChanged;
-        }
-        RegisterOnModalShownCallback(_) {
-          return this.m_OnModalShownCallbacks.Register(_);
-        }
-        RegisterOnModalHiddenCallback(_) {
-          return this.m_OnModalHiddenCallbacks.Register(_);
-        }
-        RegisterMeasureModalCallback(_) {
-          return this.m_OnMeasureModal.Register(_);
-        }
-        TakeMeasureModalRequest() {
-          return this.m_rgMeasureModalRequests.length
-            ? this.m_rgMeasureModalRequests.shift()
-            : void 0;
-        }
-        RegisterOverlay(_) {
-          (0, _._)(
-            0 == this.m_cMountedOverlays,
-            "Duplicate modal DialogOverlay; modals will appear in both",
-          ),
-            this.m_cMountedOverlays++;
-          const _ = this.m_OnModalCountChangedCallbacks.Register(_);
-          return () => {
-            this.m_cMountedOverlays--, _.Unregister();
-          };
-        }
-        OnModalCountChanged(_) {
-          "show" == _ &&
-            0 == this.m_cMountedOverlays &&
-            window.setTimeout(() => {
-              (0, _._)(
-                this.m_cMountedOverlays > 0,
-                "Modal was shown but ModalManager has no associated DialogOverlay",
-              );
-            }, 50),
-            this.m_OnModalCountChangedCallbacks.Dispatch(
-              this.m_rgModals.length,
-            ),
-            "show" == _
-              ? this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length)
-              : "hide" == _ &&
-                this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length);
-        }
-        get modals() {
-          return this.m_rgModals;
-        }
-        get active_modal() {
-          return this.m_rgModals.length
-            ? this.m_rgModals[this.m_rgModals.length - 1]
-            : void 0;
-        }
-        ShowModal(_) {
-          return this.ShowModalInternal(_);
-        }
-        RemoveModal(_) {
-          let _ = this.m_rgModals.indexOf(_);
-          -1 != _ && this.m_rgModals.splice(_, 1),
-            this.OnModalCountChanged("hide");
-        }
-        ShowModalInternal(_) {
-          (0, _._)(
-            !this.m_bOnlyPopups,
-            "Attempting to show modal in popup-only modal manager; will not display.",
-          );
-          const _ = new _(_);
-          this.m_rgModals.push(_);
-          const _ = {
-            Close: () => {
-              this.RemoveModal(_);
-            },
-            Update: (_) => {
-              _.UpdateModal(_);
-            },
-          };
-          return this.OnModalCountChanged("show"), _;
-        }
-        ShowPortalModal() {
-          (0, _._)(
-            !this.m_bOnlyPopups,
-            "Attempting to show modal in popup-only modal manager; will not display.",
-          );
-          const _ = new _();
-          return (
-            this.m_rgModals.push(_),
-            this.OnModalCountChanged("show"),
-            {
-              key: _.key,
-              Close: () => {
-                this.RemoveModal(_);
-              },
-              OnElementReadyCallbacks: _.OnElementReadyCallbacks,
-              OnModalActiveCallbacks: _.OnModalActiveCallbacks,
-            }
-          );
-        }
-        SetUsePopups(_) {
-          this.m_bUsePopups = _;
-        }
-        BUsePopups() {
-          return this.m_bUsePopups || this.m_bOnlyPopups;
-        }
-        SetOnlyPopups(_) {
-          this.m_bOnlyPopups = _;
-        }
-        BOnlyPopups() {
-          return this.m_bOnlyPopups;
-        }
-        SetBrowserInfo(_) {
-          this.m_browserInfo = _;
-        }
-        GetBrowserInfo() {
-          return this.m_browserInfo;
-        }
-        SetCenterPopupsOnWindow(_) {
-          this.m_bCenterPopupsOnWindow = _;
-        }
-        BCenterPopupsOnWindow() {
-          return this.m_bCenterPopupsOnWindow;
-        }
-        RequestModalMeasure(_, _, _) {
-          this.m_rgMeasureModalRequests.push({
-            rctToMeasure: _,
-            fnResults: _,
-            promiseContentReady: _,
-          }),
-            this.m_OnMeasureModal.Dispatch();
-        }
-        get legacy_popup_modals() {
-          return this.m_rgLegacyPopupModals;
-        }
-        ShowLegacyPopupModal(_, _, _, _) {
-          const _ = () => {
-              let _ = this.m_rgLegacyPopupModals.indexOf(_);
-              -1 != _ && this.m_rgLegacyPopupModals.splice(_, 1),
-                this.m_OnLegacyPopupModalCountChanged.Dispatch(
-                  this.m_rgLegacyPopupModals.length,
-                ),
-                _.fnOnClose && __webpack_require__.fnOnClose();
-            },
-            _ = new _(
-              _,
-              _,
-              {
-                ..._,
-                fnOnClose: _,
-              },
-              {
-                bCenterOnWindow: this.m_bCenterPopupsOnWindow,
-                ..._,
-              },
-            );
-          return (
-            this.m_rgLegacyPopupModals.push(_),
-            this.m_OnLegacyPopupModalCountChanged.Dispatch(
-              this.m_rgLegacyPopupModals.length,
-            ),
-            {
-              Close: _,
-              Update: (_) => {
-                _.UpdateModal(_);
-              },
-            }
-          );
-        }
-      }
-      const _ = new (class {
-        m_mapModalManager = new WeakMap();
-        GetModalManager(_) {
-          let _ = this.m_mapModalManager.get(_);
-          return (
-            _ ||
-              (console.assert(
-                !1,
-                `Early access to modal manager, creating one for ${_.document.title}`,
-              ),
-              (_ = new _()),
-              this.m_mapModalManager.set(_, _)),
-            _
-          );
-        }
-        RegisterModalManager(_, _) {
-          (0, _._)(
-            !this.m_mapModalManager.has(_) || _ == window,
-            `Stomping CModalManager for ${_.document.title}!`,
-          );
-          const _ = this.m_mapModalManager.get(_);
-          return (
-            this.m_mapModalManager.set(_, _),
-            () => {
-              _
-                ? this.m_mapModalManager.set(_, _)
-                : this.m_mapModalManager.delete(_);
-            }
-          );
-        }
-        UnregisterModalManager(_) {
-          this.m_mapModalManager.delete(_);
-        }
-      })();
-      function _(_) {
-        return _.GetModalManager(_);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        m_elHover;
-        m_bNoSpace = !1;
-        static defaultProps = {
-          direction: "right",
-          nBodyAlignment: 0.5,
-          nAllowOffscreenPx: 10,
-          nBodyDistance: 8,
-          nMaxLateralMoveOnScreen: void 0,
-        };
-        state = {
-          _: void 0,
-          _: void 0,
-          hoverPositionReady: !1,
-        };
-        bindHover(_) {
-          (this.m_elHover = _ || void 0), this.positionHover();
-        }
-        componentDidUpdate() {
-          this.positionHover();
-        }
-        render() {
-          const {
-            target: _,
-            visibilityObserver: _,
-            className: __webpack_require__,
-            style: _,
-            bEnablePointerEvents: _,
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            children: _,
-            onNoSpace: _,
-            bTopmost: _,
-            ..._
-          } = this.props;
-          let _ = Object.assign(
-              {
-                left: this.state._,
-                top: this.state._,
-              },
-              _,
-            ),
-            _ = !_ || _.visible;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().HoverPositionOuter,
-                _ && _().HoverAboveModal,
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                ..._,
-                className: (0, _._)(
-                  _().HoverPosition,
-                  _ && this.state.hoverPositionReady && _().Ready,
-                  this.m_bNoSpace && _().NoSpace,
-                  _ && _().EnablePointerEvents,
-                  __webpack_require__,
-                ),
-                style: _,
-                ref: this.bindHover,
-              },
-              _,
-            ),
-          );
-        }
-        positionHover() {
-          let _ = this.m_elHover,
-            _ = this.props.target;
-          if (!_ || !_) return;
-          if (
-            this.state.hoverPositionReady &&
-            this.props.visibilityObserver &&
-            !this.props.visibilityObserver.visible
-          )
-            return;
-          let _ = _.ownerDocument.defaultView;
-          if (!_ || _.closed) return;
-          const _ = _.querySelector(".hover_arrow.left"),
-            _ = _.querySelector(".hover_arrow.right"),
-            _ = _.querySelector(".hover_arrow.top"),
-            _ = _.querySelector(".hover_arrow.bottom"),
-            _ = _.getBoundingClientRect(),
-            _ = _.getBoundingClientRect(),
-            _ =
-              "overlay" == this.props.direction ||
-              "overlay-center" == this.props.direction;
-          _ && _.setAttribute("style", "display: none;"),
-            _ && _.setAttribute("style", "display: none;"),
-            _ && _.setAttribute("style", "display: none;"),
-            _ && _.setAttribute("style", "display: none;");
-          let {
-              nBodyDistance: _ = 8,
-              direction: _ = "right",
-              nBodyAlignment: _ = 0.5,
-            } = this.props,
-            {
-              nLeft: _,
-              nTop: _,
-              nOverflow: _,
-              nLateralOverflow: _,
-            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-          if (_ > (this.props.nAllowOffscreenPx ?? 10) && !_) {
-            const _ = (function (_) {
-                switch (_) {
-                  case "right":
-                    return "left";
-                  case "left":
-                    return "right";
-                  case "bottom":
-                    return "top";
-                  case "top":
-                    return "bottom";
-                  case "overlay":
-                    return "overlay";
-                  case "overlay-center":
-                    return "overlay-center";
-                }
-              })(this.props.direction ?? "right"),
-              {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-            if (
-              (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
-              _ > (this.props.nAllowOffscreenPx ?? 10))
-            )
-              return (
-                console.log(
-                  "Not showing hover because it didn't fit in the main or alt direction",
-                ),
-                _.setAttribute("style", "display: none;"),
-                (this.m_bNoSpace = !0),
-                void (this.props.onNoSpace && this.props.onNoSpace())
-              );
-          }
-          0 === this.props.nMaxLateralMoveOnScreen ||
-            _ ||
-            ([_, _] = (function (_, _, _, _, _) {
-              let _ = Math.max(_[0], _[1]);
-              void 0 !== _ && (_ = Math.min(_, _));
-              _ = Math.max(0, _);
-              const _ = _[0] > _[1] ? _ : -_;
-              "left" === _ || "right" === _ ? (_ += _) : (_ += _);
-              return [_, _];
-            })(this.props.nMaxLateralMoveOnScreen, _, _ ?? "right", _, _));
-          let _ = null;
-          switch (_) {
-            case "left":
-              _ = _;
-              break;
-            case "right":
-              _ = _;
-              break;
-            case "top":
-              _ = _;
-              break;
-            case "bottom":
-              _ = _;
-          }
-          _ && _.setAttribute("style", ""),
-            _ != this.state._ &&
-              this.setState({
-                _: _,
-              }),
-            _ != this.state._ &&
-              this.setState({
-                _: _,
-              }),
-            this.state.hoverPositionReady ||
-              this.setState({
-                hoverPositionReady: !0,
-              });
-        }
-      };
-      function _(_, _, _, _, _, _, _) {
-        const _ = _,
-          _ = _;
-        let _, _, _, _;
-        switch (_) {
-          case "right":
-            (_ = _.right + _),
-              (_ = _(_.top, _.height, _.height, _)),
-              (_ = Math.max(0, _ + _.width - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "left":
-            (_ = _.left - _ - _.width),
-              (_ = _(_.top, _.height, _.height, _)),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "bottom":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.bottom + _),
-              (_ = Math.max(0, _ + _.height - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "top":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.top - _ - _.height),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "overlay":
-            (_ = _.left), (_ = _.top), (_ = 0), (_ = [0, 0]);
-            break;
-          case "overlay-center":
-            (_ = _.left + 0.5 * _.width - 0.5 * _.width),
-              (_ = _.top + 0.5 * _.height - 0.5 * _.height),
-              (_ = 0),
-              (_ = [0, 0]);
-        }
-        return {
-          nLeft: _,
-          nTop: _,
-          nOverflow: _,
-          nLateralOverflow: _,
-        };
-      }
-      function _(_, _, _, _) {
-        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
-      }
-      (0, _._)([_._], _.prototype, "bindHover", null), (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(null),
-          _ = _.useMemo(
-            () => ({
-              targetElement: _,
-            }),
-            [_],
-          );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement("div", {
-            ref: __webpack_require__,
-          }),
-          _.children,
-        );
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _({
-          ..._,
-          toolTipContent: _.toolTipContent
-            ? _.createElement(_, null, _(_.toolTipContent))
-            : null,
-        });
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
-        return _.createElement(
-          _._,
-          {
-            className: "tool-tip-source",
-            noFocusRing: !0,
-            focusable: _.bNavStop ?? !!_.onClick,
-            ..._,
-          },
-          _.createElement(_, {
-            ...__webpack_require__,
-          }),
-          _.children,
-        );
-      }
-      function _(_) {
-        const { children: _ } = _,
-          { divProps: __webpack_require__, tooltipProps: _ } = _({
-            ..._,
-            toolTipContent: _.toolTipContent
-              ? _.createElement(_, null, _(_.toolTipContent))
-              : null,
-          });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.cloneElement(_, {
-            ...__webpack_require__,
-            ..._.props,
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            toolTipContent: _,
-            nDelayShowMS: __webpack_require__ = 300,
-            bDisabled: _,
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            strTooltipClassname: _,
-            bNavStop: _,
-            bTopmost: _,
-            usePointerEvents: _,
-            children: _,
-            onMouseLeave: _,
-            ..._
-          } = _,
-          _ = {
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            className: _,
-            bTopmost: _,
-          },
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(),
-          _ = _.useCallback(
-            (_) => {
-              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
-                (_(!0), _(_.currentTarget));
-            },
-            [_],
-          ),
-          _ = _.useCallback(() => {
-            _(!1);
-          }, []),
-          _ = {
-            active: _ && !_,
-            target: _,
-            nDelayShowMS: __webpack_require__,
-            hoverPositionProps: _,
-            children: _,
-          };
-        let _ = {
-          ..._,
-        };
-        return (
-          _
-            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
-            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
-          {
-            divProps: _,
-            stateHandlers: {
-              setTarget: _,
-              setHovered: _,
-            },
-            tooltipProps: _,
-          }
-        );
-      }
-      function _(_) {
-        return "string" == typeof _ ? (0, _._)(_) : _;
-      }
-      function _(_) {
-        return _.createElement("div", {
-          ..._,
-          className: (0, _._)(_().TextToolTip, _.className),
-        });
-      }
-      function _(_) {
-        const {
-            active: _,
-            target: __webpack_require__,
-            nDelayShowMS: _ = 300,
-            hoverPositionProps: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _();
-        if (
-          (_.useEffect(() => {
-            if (_) {
-              if (_) {
-                const _ = window.setTimeout(() => _(!0), _);
-                return () => window.clearTimeout(_);
-              }
-              _(!0);
-            } else _(!1);
-          }, [_]),
-          !_)
-        )
-          return null;
-        if (!_ || !__webpack_require__) return null;
-        const { targetElement: _ } = _;
-        return _.createPortal(
-          _.createElement(
-            _,
-            {
-              target: __webpack_require__,
-              ..._,
-            },
-            _,
-          ),
-          _ ?? __webpack_require__.ownerDocument.body,
-        );
-      }
-      function _(_) {
-        _.useEffect(() => {
-          if (_)
-            return (
-              document.body.classList.add(_.BodyNoScrollDialog),
-              () => document.body.classList.remove(_.BodyNoScrollDialog)
-            );
-        }, [_]);
-      }
-      function _(_) {
-        let {
-          ModalManager: _,
-          bRegisterModalManager: __webpack_require__ = !0,
-          DialogWrapper: _,
-          rctActiveContextMenus: _,
-          bUseDialogElement: _ = !0,
-          style: _,
-          ..._
-        } = _;
-        const _ = _.modals,
-          _ = _ && !!_.length,
-          _ = _.active_modal;
-        _(_),
-          (function (_) {
-            const _ = _().ownerWindow,
-              _ = (0, _._)(),
-              _ = _.useCallback(() => {
-                _?.SteamClient?.Window && _.SteamClient.Window.BringToFront();
-              }, [_]);
-            _.useEffect(() => _.RegisterOverlay(_), [_, _]),
-              _.useEffect(
-                () => _.RegisterOnModalShownCallback(_).Unregister,
-                [_, _],
-              );
-          })(_);
-        const _ = (function (_, _) {
-          return (0, _._)(
-            (_) => {
-              if (!_ || !_) return;
-              const _ = _.ownerDocument.defaultView;
-              return _.RegisterModalManager(_, _);
-            },
-            [_],
-          );
-        })(_, __webpack_require__);
-        let _ = null,
-          _ = !_;
-        return (
-          _ && _.length
-            ? (_ = _.map((_) => {
-                const _ = _ == _,
-                  _ = {
-                    key: _.key,
-                    active: _,
-                    rctActiveContextMenus: _ && _ ? _ : void 0,
-                  };
-                return _ instanceof _
-                  ? _.createElement(_, {
-                      ..._,
-                      modal: _,
-                      Component: _ ?? _,
-                    })
-                  : _ instanceof _
-                    ? _.createElement(_, {
-                        ..._,
-                        modal: _,
-                        bUseDialogElement: _,
-                      })
-                    : void 0;
-              }))
-            : ((_ = !0),
-              (_ = {
-                ..._,
-                display: "none",
-              })),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  ..._,
-                  style: _,
-                  ref: _,
-                  className: (0, _._)(_.className, "FullModalOverlay"),
-                },
-                _.createElement("div", {
-                  className: "ModalOverlayContent ModalOverlayBackground",
-                }),
-                _,
-              ),
-              _ && _,
-            ),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-            _.createElement(_, {
-              ModalManager: _,
-            }),
-          )
-        );
-      }
-      function _(_) {
-        const {
-          modal: _,
-          rctActiveContextMenus: __webpack_require__,
-          active: _,
-          bUseDialogElement: _,
-        } = _;
-        _.useEffect(() => {
-          if (_)
-            return (
-              _.SetActive(_),
-              () => {
-                _.SetActive(!1);
-              }
-            );
-        }, [_, _]);
-        const _ = _.createElement(
-          _._,
-          null,
-          _.createElement("div", {
-            className: (0, _._)(
-              "ModalOverlayContent",
-              _ ? "active" : "inactive",
-            ),
-            ref: _.RefModalElement,
-          }),
-          __webpack_require__,
-        );
-        return _
-          ? _.createElement(
-              _,
-              {
-                active: _,
-              },
-              _,
-            )
-          : _;
-      }
-      function _(_) {
-        const {
-            modal: _,
-            active: __webpack_require__,
-            rctActiveContextMenus: _,
-            Component: _,
-          } = _,
-          _ = (0, _._)();
-        return (
-          (0, _._)(_.ModalUpdatedCallback, _),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                className: (0, _._)(
-                  "ModalOverlayContent",
-                  __webpack_require__ ? "active" : "inactive",
-                ),
-                active: __webpack_require__,
-                modalKey: _.key,
-              },
-              _,
-              _.element,
-            ),
-          )
-        );
-      }
-      function _(_) {
-        const { className: _, active: __webpack_require__, children: _ } = _;
-        return _.createElement(
-          _,
-          {
-            active: __webpack_require__,
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: -1,
-              },
-              _,
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
-          _ = _.useRef(null);
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            if (_ && _) return _.showModal(), () => _.close();
-          }, [_]),
-          _.createElement(
-            "dialog",
-            {
-              ref: _,
-              className: _.ModalDialog,
-              onCancel: (_) => _.preventDefault(),
-            },
-            _.children,
-          )
-        );
-      }
-      function _(_) {
-        const { ModalManager: _ } = _,
-          _ = (0, _._)();
-        return (
-          (0, _._)(_.LegacyPopupModalCountChangedCallbacks, _),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.legacy_popup_modals.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                Modal: _,
-              }),
-            ),
-          )
-        );
-      }
-      const _ = _.createContext({}),
-        _ = _.memo(function (_) {
-          const {
-              children: _,
-              bRenderOverlayAtRoot: __webpack_require__,
-              refModalManager: _,
-              DialogWrapper: _,
-              bUseDialogElement: _ = !0,
-              ContextMenuComponent: _ = _,
-              refContextMenuManager: _,
-              browserInfo: _,
-              bUsePopups: _,
-              bOnlyPopups: _,
-              bCenterPopupsOnWindow: _,
-              bRegisterManagersWithWindow: _ = !0,
-              ..._
-            } = _,
-            _ = _.useRef();
-          _.current || (_.current = new _());
-          let _ = _.createElement(_, {
-            ..._,
-            DialogWrapper: _,
-            ModalManager: _.current,
-            bUseDialogElement: _,
-            bRegisterModalManager: _,
-            rctActiveContextMenus: _.createElement(_, null),
-          });
-          _.bRenderOverlayAtRoot &&
-            "undefined" != typeof document &&
-            "body" in document &&
-            (_ = _.createPortal(_, document.body)),
-            (0, _._)(_, _.current),
-            void 0 !== _ && _.current?.SetUsePopups(_),
-            void 0 !== _ && _.current?.SetCenterPopupsOnWindow(_),
-            void 0 !== _ && _.current?.SetOnlyPopups(_),
-            _.current.SetBrowserInfo(_);
-          const _ = _.useMemo(
-            () => ({
-              ModalManager: _.current,
-              DialogWrapper: _,
-            }),
-            [_],
-          );
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _,
-              {
-                refContextMenuManager: _,
-                bRegisterMenuManager: _,
-              },
-              _.createElement(_._, null, _),
-              _.children,
-            ),
-          );
-        });
-      function _() {
-        return _.useContext(_).ModalManager;
-      }
       function _({ config: _, isDynamic: _ }) {
         const _ = _ ? _ : _;
         return _.createElement(
@@ -8791,6 +6251,7 @@
             : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { queryClient: _ = _, steamUI: __webpack_require__ } = _;
@@ -8836,6 +6297,11 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         _.useEffect(() => {
@@ -8850,6002 +6316,7 @@
         }, [_, _, _, _]);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          _._.COMMUNITY_BASE_URL + "linkfilter/?u=" + encodeURIComponent(_)
-        );
-      }
-      function _(_, _) {
-        if (_.startsWith("steam://")) return !1;
-        if (_.startsWith("/")) return !1;
-        const _ = (0, _._)(_).toLowerCase(),
-          _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
-          _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase(),
-          _ = (0, _._)(_._.HELP_BASE_URL).toLowerCase(),
-          _ = (0, _._)(_._.PARTNER_BASE_URL || "").toLowerCase();
-        return (
-          _ !== _ &&
-          _ !== _ &&
-          _ !== _ &&
-          "support.steampowered.com" !== _ &&
-          _ !== _ &&
-          "www.dota2.com" !== _ &&
-          (!_ || 0 == _.filter((_) => _ == _).length)
-        );
-      }
-      function _(_, _, _) {
-        return _.forwardRef(function (_, _) {
-          return _.createElement("div", {
-            ..._,
-            ..._,
-            role: _,
-            className: (0, _._)(_, _.className),
-            ref: _,
-          });
-        });
-      }
-      (0, _._)(
-        [_._],
-        class {
-          m_Promise;
-          m_Value = void 0;
-          constructor(_) {
-            (0, _._)(this), (this.promise = _);
-          }
-          set promise(_) {
-            (this.m_Promise = _),
-              (this.m_Value = void 0),
-              _?.then((_) => {
-                this.m_Promise === _ && (this.m_Value = _);
-              });
-          }
-          get promise() {
-            return this.m_Promise;
-          }
-          get value() {
-            return this.m_Value;
-          }
-        }.prototype,
-        "m_Value",
-        void 0,
-      );
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.customTooltip ? _ : _;
-        return _.createElement(
-          _,
-          {
-            toolTipContent: _.tooltip,
-            className: (0, _._)(_.HelperTooltip, "HelperTooltip", _.className),
-          },
-          " ",
-          _.createElement(_._VW, null),
-        );
-      }
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_, _) {
-        return _()[_] ?? _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = _("ToggleControl", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Toggle, _ && _().Disabled),
-            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: (0, _._)(
-              _().ToggleRail,
-              _().Highlight,
-              _ ? _()._ : _().Off,
-            ),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
-          }),
-        );
-      }
-      function _(_) {
-        return _.forwardRef(function (_, _) {
-          return _.createElement(_._, {
-            ..._,
-            className: (0, _._)(_, _.className),
-            ref: _,
-          });
-        });
-      }
-      let _ = _("DialogHeader", "heading"),
-        _ = _("DialogSubHeader", "heading", {
-          "aria-level": 3,
-        }),
-        _ =
-          (_("SettingsDialogSubHeader", "heading", {
-            "aria-level": 3,
-          }),
-          _("DialogFooter")),
-        _ = _("DialogLabel _DialogLayout"),
-        _ = _("DialogBodyText"),
-        _ = (_("DialogBody"), _("DialogBody")),
-        _ =
-          (_("DialogInnerBody"),
-          _("DialogControlsSection"),
-          _("DialogControlsSectionHeader", "heading", {
-            "aria-level": 3,
-          }),
-          _("DialogTwoColLayout _DialogColLayout")),
-        _ = _("DialogThreeColLayout _DialogColLayout");
-      _("DialogTwoThirdColLayout _DialogColLayout"),
-        _("DialogColumn _DialogLayout");
-      function _(_) {
-        const _ = _("Content", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        let {
-            children: _,
-            bCenterVertically: __webpack_require__,
-            refElem: _,
-            ..._
-          } = _,
-          _ =
-            "DialogContent _DialogLayout" +
-            (_.className ? " " + _.className : "");
-        return (
-          __webpack_require__ && (_ += " _DialogCenterVertically"),
-          _.createElement(
-            "div",
-            {
-              ..._,
-              ref: _,
-              className: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: "DialogContent_InnerWidth",
-              },
-              _,
-            ),
-          )
-        );
-      }
-      class _ extends _.Component {
-        OnSubmit(_) {
-          _.preventDefault(), this.props.onSubmit && this.props.onSubmit(_);
-        }
-        render() {
-          return _.createElement("form", {
-            ...this.props,
-            onSubmit: this.OnSubmit,
-          });
-        }
-      }
-      function _(_) {
-        const {
-          classNameContent: _,
-          bCenterVertically: __webpack_require__,
-          ..._
-        } = _;
-        return _.createElement(
-          _,
-          {
-            className: _,
-            bCenterVertically: __webpack_require__,
-          },
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          className: _,
-          children: _,
-        } = _;
-        return _.createElement(
-          "label",
-          {
-            className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
-          },
-          _ &&
-            _.createElement(
-              _,
-              null,
-              _,
-              " ",
-              __webpack_require__ &&
-                _.createElement(_, {
-                  tooltip: __webpack_require__,
-                }),
-              " ",
-            ),
-          _,
-        );
-      }
-      (0, _._)([_._], _.prototype, "OnSubmit", null);
-      const _ = _.forwardRef(function (_, _) {
-          const _ = _(),
-            { svgicon: _, ..._ } = _,
-            _ = (0, _._)(
-              _.className,
-              void 0 !== _ && "hasSVGIcon",
-              _.disabled && "Disabled",
-              _.strButtonClassName,
-            ),
-            _ = (_) => {
-              if (!_.disabled && _)
-                return (_) => {
-                  _.stopPropagation(), _(_);
-                };
-            };
-          return _.createElement(
-            _._,
-            {
-              ref: _,
-              onOKActionDescription: _.disabled ? null : void 0,
-              noFocusRing: !!_.strButtonClassName,
-              ..._,
-              className: _,
-              disabled: !1,
-              onClick: _(_.onClick),
-              onPointerDown: _(_.onPointerDown),
-              onPointerUp: _(_.onPointerUp),
-              onPointerCancel: _(_.onPointerCancel),
-              onMouseDown: _(_.onMouseDown),
-              onMouseUp: _(_.onMouseUp),
-              onTouchStart: _(_.onTouchStart),
-              onTouchEnd: _(_.onTouchEnd),
-              onTouchCancel: _(_.onTouchCancel),
-              onSubmit: _(_.onSubmit),
-            },
-            _ && _(),
-            _.children,
-          );
-        }),
-        _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
-            preferredFocus: !0,
-            type: _.onClick ? "button" : "submit",
-            ..._,
-            ref: _,
-            className: (0, _._)(
-              _.className,
-              "DialogButton",
-              "_DialogLayout",
-              "Primary",
-            ),
-          });
-        }),
-        _ = _.forwardRef(function (_, _) {
-          return _.createElement(_, {
-            type: "button",
-            ..._,
-            ref: _,
-            className: (0, _._)(
-              _.className,
-              "DialogButton",
-              "_DialogLayout",
-              "Secondary",
-            ),
-          });
-        });
-      _.forwardRef(function (_, _) {
-        return _.createElement(_, {
-          type: "button",
-          ..._,
-          ref: _,
-          className: (0, _._)(
-            _.className,
-            "DialogButton",
-            "_DialogLayout",
-            "EmptyButton",
-          ),
-        });
-      }),
-        _.forwardRef(function (_, _) {
-          return _.createElement(_, {
-            type: "button",
-            ..._,
-            ref: _,
-            className: (0, _._)(
-              _.className,
-              "DialogButton _DialogLayout Small",
-            ),
-          });
-        }),
-        _.forwardRef(function (_, _) {
-          return _.createElement(_, {
-            type: "button",
-            ..._,
-            ref: _,
-            className: (0, _._)(_.className, "TextButton"),
-          });
-        });
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            className: _.className,
-          },
-          _.createElement(
-            _,
-            {
-              onClick: _.onOK,
-              disabled: _.bOKDisabled,
-              autoFocus: "primary" == _.focusButton,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
-              onClick: _.onCancel,
-              disabled: _.bCancelDisabled,
-              autoFocus: "secondary" == _.focusButton,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = _.bOKDisabled ? _ : _,
-          _ = _.bOKDisabled ? _ : _;
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
-              onClick: _.onOK,
-              disabled: _.bOKDisabled,
-            },
-            _.strOKText || (0, _._)("#Button_Confirm"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
-              onClick: _.onUpdate,
-              disabled: _.bUpdateDisabled,
-            },
-            _.strUpdateText || (0, _._)("#Button_Update"),
-            " ",
-          ),
-          _.createElement(
-            _,
-            {
-              onClick: _.onCancel,
-              disabled: _.bCancelDisabled,
-            },
-            _.strCancelText || (0, _._)("#Button_Cancel"),
-          ),
-        );
-      }
-      class _ extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.state = {
-              checked: _.checked,
-              disabled: _.disabled,
-            });
-        }
-        componentDidUpdate(_) {
-          this.props.controlled ||
-            (_.checked != this.props.checked &&
-              this.props.checked != this.state.checked &&
-              this.setState({
-                checked: this.props.checked,
-              })),
-            _.disabled != this.props.disabled &&
-              this.props.disabled != this.state.disabled &&
-              this.setState({
-                disabled: this.props.disabled,
-              });
-        }
-        shouldComponentUpdate(_, _) {
-          return (
-            _.label != this.props.label ||
-            _.description != this.props.description ||
-            _.onChange != this.props.onChange ||
-            _.controlled != this.props.controlled ||
-            _.disabled != this.props.disabled ||
-            _.disabled != this.state.disabled ||
-            _.checked != this.checked ||
-            _.checked != this.state.checked
-          );
-        }
-        get checked() {
-          return this.props.controlled
-            ? this.props.checked
-            : this.state.checked;
-        }
-        GetPanelElementProps() {
-          const {
-            onChange: _,
-            checked: _,
-            label: __webpack_require__,
-            description: _,
-            tabIndex: _,
-            disabled: _,
-            className: _,
-            tooltip: _,
-            color: _,
-            highlightColor: _,
-            bottomSeparator: _,
-            controlled: _,
-            ..._
-          } = this.props;
-          return {
-            ..._,
-            tabIndex: _ || 0,
-            onActivate: this.Toggle,
-            onKeyDown: this.KeyDown,
-          };
-        }
-        Toggle() {
-          if (this.props.disabled) return;
-          let _ = !this.checked;
-          this.props.controlled ||
-            this.setState({
-              checked: _,
-            }),
-            this.props.onChange && this.props.onChange(_);
-        }
-        KeyDown(_) {
-          32 == _.keyCode &&
-            (this.Toggle(), _.preventDefault(), _.stopPropagation());
-        }
-        SetChecked(_, _) {
-          this.setState({
-            checked: _,
-          }),
-            _ && this.props.onChange && this.props.onChange(_);
-        }
-      }
-      (0, _._)([_._], _.prototype, "Toggle", null),
-        (0, _._)([_._], _.prototype, "KeyDown", null),
-        (0, _._)([_._], _.prototype, "SetChecked", null);
-      class _ extends _ {
-        render() {
-          let _ = "DialogCheckbox" + (this.checked ? " Active" : "");
-          return (
-            1 == this.state.disabled && (_ += " Disabled"),
-            this.props.label
-              ? _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className:
-                      "DialogCheckbox_Container _DialogLayout " +
-                      (this.props.className ? this.props.className : "") +
-                      (this.state.disabled ? " Disabled" : ""),
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _,
-                    },
-                    _.createElement(_.X4B, {
-                      color: this.props.color,
-                      highlightColor: this.props.highlightColor,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Label",
-                    },
-                    "string" == typeof this.props.label &&
-                      _.createElement("span", null, this.props.label),
-                    "string" != typeof this.props.label && this.props.label,
-                    this.props.tooltip &&
-                      _.createElement(_, {
-                        tooltip: this.props.tooltip,
-                      }),
-                  ),
-                  _.createElement("div", {
-                    style: {
-                      clear: "left",
-                    },
-                  }),
-                  this.props.description &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogToggle_Description",
-                      },
-                      this.props.description,
-                    ),
-                  this.props.children,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    role: "checkbox",
-                    "aria-checked": this.checked,
-                    className: _,
-                    ...this.GetPanelElementProps(),
-                  },
-                  _.createElement(_.X4B, null),
-                )
-          );
-        }
-      }
-      _.forwardRef(function (_, _) {
-        const _ = _("ToggleField", _);
-        return _.createElement(_, {
-          ref: _,
-          ..._,
-        });
-      });
-      class _ extends _ {
-        OnOffKeyDown(_) {
-          (37 == _.keyCode && this.checked) ||
-          (39 == _.keyCode && !this.checked)
-            ? (this.Toggle(), _.preventDefault(), _.stopPropagation())
-            : this.KeyDown(_);
-        }
-        OnNewUIToggle(_) {
-          _ !== this.checked && this.Toggle();
-        }
-        render() {
-          let _ =
-            "DialogToggleField _DialogInputContainer _DialogLayout " +
-            (this.props.className ? this.props.className : "");
-          return (
-            this.props.disabled && (_ += " Disabled"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                tabIndex: this.props.tabIndex || 0,
-                onKeyDown: this.OnOffKeyDown,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "displayColumn alignSelfCenter",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogToggle_Label",
-                  },
-                  _.createElement("span", null, this.props.label),
-                  this.props.tooltip &&
-                    _.createElement(_, {
-                      tooltip: this.props.tooltip,
-                    }),
-                ),
-                this.props.description &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggle_Description",
-                    },
-                    this.props.description,
-                  ),
-                this.props.children,
-              ),
-              this.props.useToggleRail
-                ? _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggleField_NewUIContainer",
-                    },
-                    _.createElement(_, {
-                      onChange: this.OnNewUIToggle,
-                      value: this.checked,
-                    }),
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: "DialogToggleField_Control",
-                      onClick: this.Toggle,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        className: "DialogToggleField_OptionPanel",
-                        onOKButton: this.Toggle,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option Off" +
-                            (this.checked ? "" : " Active"),
-                        },
-                        (0, _._)("#Dialog_Off"),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className:
-                            "DialogToggleField_Option On" +
-                            (this.checked ? " Active" : ""),
-                        },
-                        (0, _._)("#Dialog_On"),
-                      ),
-                    ),
-                  ),
-            )
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnOffKeyDown", null),
-        (0, _._)([_._], _.prototype, "OnNewUIToggle", null);
-      class _ {
-        m_options;
-        m_msStart;
-        m_msEnd;
-        m_bActive = !1;
-        m_fnBoundAnimationFunc = void 0;
-        m_window;
-        constructor(_, _) {
-          (this.m_window = _),
-            (this.m_options = {
-              timing: "sine",
-              ..._,
-            });
-        }
-        Start() {
-          let _;
-          switch (
-            ((this.m_msStart = performance.now()),
-            (this.m_msEnd = this.m_msStart + this.m_options.msDuration),
-            this.m_options.timing)
-          ) {
-            case "linear":
-              _ = function (_) {
-                return _;
-              };
-              break;
-            case "cubic-in-out":
-              _ = function (_) {
-                return _ < 0.5
-                  ? 4 * _ * _ * _
-                  : (_ - 1) * (2 * _ - 2) * (2 * _ - 2) + 1;
-              };
-              break;
-            default:
-              _ = function (_) {
-                return 0.5 - Math.cos(_ * Math._) / 2;
-              };
-          }
-          (this.m_bActive = !0),
-            (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
-            this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
-        }
-        BIsActive() {
-          return this.m_bActive;
-        }
-        End() {
-          if (this.m_bActive) {
-            try {
-              this.Update(1);
-            } catch {}
-            this.ClearInterval(), this.FireOnComplete();
-          }
-        }
-        FireOnComplete() {
-          this.m_options.onComplete && this.m_options.onComplete();
-        }
-        Cancel() {
-          this.m_bActive = !1;
-        }
-        OnInterval(_) {
-          if (!this.m_bActive) return;
-          let _ = performance.now() - this.m_msStart;
-          if (_ >= this.m_options.msDuration) return void this.End();
-          let _ = _ / this.m_options.msDuration;
-          try {
-            this.Update(_(_));
-          } catch {}
-          this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
-        }
-        ClearInterval() {
-          this.m_bActive = !1;
-        }
-      }
-      class _ extends _ {
-        m_object;
-        m_propTargets;
-        m_props = {};
-        constructor(_, _, _) {
-          super("ownerDocument" in _ ? _._(_) : _, _),
-            (this.m_object = _),
-            (this.m_propTargets = _);
-        }
-        Start() {
-          this.m_props = {};
-          for (let _ in this.m_propTargets) {
-            let _ = parseFloat(this.m_object[_]) || 0,
-              _ = this.m_propTargets[_];
-            _ != _ &&
-              (this.m_props[_] = {
-                start: _,
-                end: _,
-              });
-          }
-          super.Start();
-        }
-        Update(_) {
-          for (let _ in this.m_props) {
-            let _ = this.m_props[_],
-              _ = _.start + (_.end - _.start) * _;
-            this.m_object[_] = _;
-          }
-        }
-      }
-      class _ extends _ {
-        m_component;
-        m_propTargets;
-        m_props = {};
-        m_setStateOnComplete;
-        constructor(_, _, _) {
-          super(_._(_.ref.current), _),
-            (this.m_component = _),
-            (this.m_propTargets = _),
-            (this.m_setStateOnComplete = _.setStateOnComplete);
-        }
-        Start() {
-          this.m_props = {};
-          for (let _ in this.m_propTargets) {
-            let _ = parseFloat(this.m_component.state[_]) || 0,
-              _ = this.m_propTargets[_];
-            _ != _ &&
-              (this.m_props[_] = {
-                start: _,
-                end: _,
-              });
-          }
-          super.Start();
-        }
-        Update(_) {
-          let _ = {};
-          for (let _ in this.m_props) {
-            let _ = this.m_props[_],
-              _ = _.start + (_.end - _.start) * _;
-            _[_] = _;
-          }
-          this.m_component.setState(_);
-        }
-        FireOnComplete() {
-          super.FireOnComplete(),
-            this.m_setStateOnComplete &&
-              this.m_component.setState(this.m_setStateOnComplete);
-        }
-      }
-      const _ = _.forwardRef(function (_, _) {
-        const _ = _("InputElement", _._);
-        return _.createElement(_, {
-          ..._,
-          ref: _,
-        });
-      });
-      class _ extends _.PureComponent {
-        m_CopiedAnimation;
-        ref = _.createRef();
-        constructor(_) {
-          super(_),
-            this.CheckProps(_),
-            (this.state = {
-              m_CopiedYPos: 0,
-              m_bPlayingCopiedAnimation: !1,
-              m_bCompletedCopiedAnimation: !1,
-              m_bNumberBelowMinRange: !1,
-              m_bNumberAboveMaxRange: !1,
-              m_bIsNotNumeric: !1,
-              m_bIsInvalidURL: !1,
-              m_strInvalidURLMessage: null,
-              m_bIsInvalidEmail: !1,
-              m_bAboveMaxChars: !1,
-            });
-        }
-        componentDidUpdate(_) {
-          this.CheckProps(this.props);
-        }
-        m_elInput;
-        OnInputRef(_) {
-          (this.m_elInput = _),
-            this.m_elInput && this.props.focusOnMount && this.m_elInput.focus();
-        }
-        get element() {
-          return this.m_elInput;
-        }
-        get value() {
-          return this.m_elInput && this.m_elInput.value;
-        }
-        Focus() {
-          this.m_elInput?.focus();
-        }
-        static validateUrl(_) {
-          return (
-            null != _ &&
-            (/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-              _,
-            ) ||
-              /^steam:\/\/[-a-zA-Z0-9@:%._\+~#=]{2,256}/i.test(_))
-          );
-        }
-        static validateEmail(_) {
-          return (
-            null != _ &&
-            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-              _.toLowerCase(),
-            )
-          );
-        }
-        Validate() {
-          this.setState({
-            m_bNumberBelowMinRange:
-              null !== this.props.rangeMin &&
-              void 0 !== this.props.rangeMin &&
-              Number(this.m_elInput?.value) < this.props.rangeMin,
-            m_bNumberAboveMaxRange:
-              null !== this.props.rangeMax &&
-              void 0 !== this.props.rangeMax &&
-              Number(this.m_elInput?.value) > this.props.rangeMax,
-            m_bIsNotNumeric:
-              1 == this.props.mustBeNumeric &&
-              isNaN(Number(this.m_elInput?.value)),
-            m_bIsInvalidURL:
-              1 == this.props.mustBeURL &&
-              !_.validateUrl(this.m_elInput?.value),
-            m_strInvalidURLMessage: this.props.fnStrValidateURL
-              ? this.props.fnStrValidateURL(this.m_elInput?.value)
-              : null,
-            m_bIsInvalidEmail:
-              1 == this.props.mustBeEmail &&
-              !_.validateEmail(this.m_elInput?.value),
-            m_bAboveMaxChars:
-              null != this.props.maxChars &&
-              null != this.m_elInput &&
-              this.m_elInput.value.length > this.props.maxChars,
-          });
-        }
-        OnChanged(_) {
-          this.props.onChange && this.props.onChange(_), this.Validate();
-        }
-        OnCopyClick(_) {
-          if (!this.m_elInput) return;
-          this.m_elInput.select();
-          let _ = this.m_elInput.ownerDocument;
-          if (_.queryCommandEnabled("copy")) {
-            _.execCommand("copy"),
-              _.currentTarget.focus(),
-              this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel();
-            let _ = -4,
-              _ = -24;
-            this.setState({
-              m_bCompletedCopiedAnimation: !1,
-            }),
-              this.setState(
-                {
-                  m_CopiedYPos: _,
-                },
-                () => {
-                  (this.m_CopiedAnimation = new _(
-                    this,
-                    {
-                      m_CopiedYPos: _,
-                    },
-                    {
-                      msDuration: 300,
-                      timing: "sine",
-                      setStateOnComplete: {
-                        m_bCompletedCopiedAnimation: !0,
-                      },
-                    },
-                  )),
-                    this.m_CopiedAnimation.Start();
-                },
-              );
-          }
-        }
-        OnClearClick(_) {
-          if (this.m_elInput && this.m_elInput.value) {
-            Object.getOwnPropertyDescriptor(
-              window.HTMLInputElement.prototype,
-              "value",
-            ).set.call(this.m_elInput, ""),
-              this.m_elInput.dispatchEvent(
-                new Event("input", {
-                  bubbles: !0,
-                }),
-              );
-          }
-        }
-        CheckProps(_) {
-          (0, _._)(
-            !(_.bShowClearAction || _.bAlwaysShowClearAction) || _.onChange,
-            "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input.",
-          );
-        }
-        render() {
-          const {
-            label: _,
-            description: _,
-            requiredLabel: __webpack_require__,
-            bShowCopyAction: _,
-            bShowClearAction: _,
-            bAlwaysShowClearAction: _,
-            rangeMin: _,
-            rangeMax: _,
-            mustBeNumeric: _,
-            mustBeURL: _,
-            fnStrValidateURL: _,
-            mustBeEmail: _,
-            focusOnMount: _,
-            tooltip: _,
-            inlineControls: _,
-            maxChars: _,
-            ..._
-          } = this.props;
-          let _ =
-              "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-              (_.className ? " " + _.className : ""),
-            _ = "copiedAnimation",
-            _ = this.state.m_bCompletedCopiedAnimation;
-          this.m_CopiedAnimation && (_ = "copiedAnimation animationPlaying"),
-            _ && (_ = "copiedAnimation animationComplete");
-          let _ = {};
-          void 0 !== this.state.m_CopiedYPos &&
-            (_.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              _._,
-              {
-                className: "DialogInput_Wrapper _DialogLayout",
-                "flow-children": "row",
-                ref: this.ref,
-              },
-              _.createElement(_, {
-                type: "text",
-                ..._,
-                className: _,
-                ref: this.OnInputRef,
-                onChange: this.OnChanged,
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayRow",
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      className: "DialogInput_CopyAction Primary",
-                      onClick: this.OnCopyClick,
-                    },
-                    (0, _._)("#Button_Copy"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      style: _,
-                      className: _,
-                    },
-                    (0, _._)("#Button_Copied"),
-                  ),
-                ),
-              (_ || (_ && _.value)) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogInput_ClearAction",
-                    onClick: this.OnClearClick,
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              _,
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
-          return _
-            ? _.createElement(
-                "div",
-                {
-                  className:
-                    "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "DialogLabel",
-                    },
-                    _,
-                    " ",
-                    this.props.tooltip &&
-                      _.createElement(_, {
-                        tooltip: this.props.tooltip,
-                      }),
-                    _.createElement(
-                      "span",
-                      {
-                        className: "DialogInputRequirementLabel",
-                      },
-                      this.props.requiredLabel,
-                    ),
-                    " ",
-                  ),
-                  _,
-                  this.state.m_bNumberBelowMinRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooSmall"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bNumberAboveMaxRange
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_NumberTooLarge"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidURL
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeURL"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_strInvalidURLMessage
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        this.state.m_strInvalidURLMessage,
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsInvalidEmail
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeEmail"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bIsNotNumeric
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_MustBeNumber"),
-                        " ",
-                      )
-                    : null,
-                  this.state.m_bAboveMaxChars
-                    ? _.createElement(
-                        "div",
-                        null,
-                        " ",
-                        (0, _._)("#Input_Error_TooManyCharacters", _),
-                        " ",
-                      )
-                    : null,
-                ),
-              )
-            : _;
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnInputRef", null),
-        (0, _._)([_._], _.prototype, "OnChanged", null),
-        (0, _._)([_._], _.prototype, "OnCopyClick", null),
-        (0, _._)([_._], _.prototype, "OnClearClick", null);
-      class _ extends _ {
-        m_bFocused = !1;
-        OnBackgroundClick() {
-          this.m_elInput && this.m_elInput.focus();
-        }
-        OnInputFocus(_) {
-          this.m_bFocused || ((this.m_bFocused = !0), this.forceUpdate()),
-            this.props.onFocus && this.props.onFocus(_);
-        }
-        OnInputBlur(_) {
-          this.m_bFocused && ((this.m_bFocused = !1), this.forceUpdate()),
-            this.props.onBlur && this.props.onBlur(_);
-        }
-        render() {
-          const {
-            label: _,
-            description: _,
-            requiredLabel: __webpack_require__,
-            bShowCopyAction: _,
-            bShowClearAction: _,
-            bAlwaysShowClearAction: _,
-            rangeMin: _,
-            rangeMax: _,
-            maxChars: _,
-            mustBeNumeric: _,
-            mustBeURL: _,
-            fnStrValidateURL: _,
-            mustBeEmail: _,
-            focusOnMount: _,
-            tooltip: _,
-            inlineControls: _,
-            className: _,
-            children: _,
-            ..._
-          } = this.props;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
-            },
-            _.createElement(
-              "label",
-              null,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogLabel",
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    "_DialogInputContainer",
-                    "DialogTextInputBase",
-                    this.m_bFocused && "Active",
-                  ),
-                  onClick: this.OnBackgroundClick,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: "DialogListBuilderInput_List",
-                    "flow-children": "row",
-                  },
-                  _.Children.map(_, (_, _) =>
-                    _.createElement(
-                      "div",
-                      {
-                        className: "DialogListBuilderInput_ListItem",
-                        key: _,
-                      },
-                      _,
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    type: "text",
-                    ..._,
-                    className:
-                      "DialogListBuilderInput_Input DialogInputPlaceholder",
-                    ref: this.OnInputRef,
-                    onFocus: this.OnInputFocus,
-                    onBlur: this.OnInputBlur,
-                    size: 4,
-                  }),
-                ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "DialogLabelExplainer",
-                  },
-                  _,
-                ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
-        (0, _._)([_._], _.prototype, "OnInputFocus", null),
-        (0, _._)([_._], _.prototype, "OnInputBlur", null);
-      const _ = (_, _) =>
-        "" + (null != _ ? Number.parseFloat(_.toFixed(3)) : null) + (_ ?? "");
-      class _ extends _.Component {
-        m_flLastSetValue = null;
-        constructor(_) {
-          super(_);
-        }
-        ClampValue(_) {
-          return void 0 === _ || isNaN(_) || _ < this.props.min
-            ? this.props.min
-            : _ > this.props.max
-              ? this.props.max
-              : _;
-        }
-        BPropsValid() {
-          return this.props.max > this.props.min;
-        }
-        m_elSlider;
-        m_rectSlider;
-        OnMouseDown(_) {
-          (this.m_elSlider = _.currentTarget),
-            (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
-            this.props.onChangeStart && this.props.onChangeStart(1),
-            this.AdjustSliderForClientX(_.clientX, 1),
-            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
-              "mousemove",
-              this.OnMouseMove,
-            ),
-            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            );
-        }
-        OnMouseMove(_) {
-          this.AdjustSliderForClientX(_.clientX, 1);
-        }
-        OnMouseUp(_) {
-          this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
-            "mousemove",
-            this.OnMouseMove,
-          ),
-            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
-            this.CompleteChange(1);
-        }
-        OnTouchStart(_) {
-          (this.m_elSlider = _.currentTarget),
-            (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
-            this.props.onChangeStart && this.props.onChangeStart(0),
-            this.AdjustSliderForClientX(_.touches[0].clientX, 0),
-            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
-              "touchmove",
-              this.OnTouchMove,
-            ),
-            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
-              "touchend",
-              this.OnTouchEnd,
-            );
-        }
-        OnTouchMove(_) {
-          this.AdjustSliderForClientX(_.touches[0].clientX, 0);
-        }
-        OnTouchEnd(_) {
-          this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
-            "touchmove",
-            this.OnTouchMove,
-          ),
-            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
-              "touchend",
-              this.OnTouchEnd,
-            ),
-            this.CompleteChange(0);
-        }
-        OnKeyDown(_) {
-          let _ = 1;
-          _.ctrlKey &&
-            (_ = Math.max(
-              1,
-              Math.floor(0.1 * (this.props.max - this.props.min) + 0.5),
-            )),
-            37 == _.keyCode
-              ? (this.IncrementValue(-1 * _), _.preventDefault())
-              : 39 == _.keyCode &&
-                (this.IncrementValue(1 * _), _.preventDefault()),
-            this.CompleteChange(2);
-        }
-        AdjustSliderForClientX(_, _) {
-          let _ =
-            ((_ - this.m_rectSlider.left) /
-              (this.m_rectSlider.right - this.m_rectSlider.left)) *
-              (this.props.max - this.props.min) +
-            this.props.min;
-          _ = Math.floor(_ + 0.5);
-          const _ = this.ClampValue(_);
-          _ != this.props.value &&
-            (this.props.onChange && this.props.onChange(_, _),
-            (this.m_flLastSetValue = _));
-        }
-        CompleteChange(_) {
-          null != this.m_flLastSetValue &&
-            (this.props.onChangeComplete &&
-              this.props.onChangeComplete(this.m_flLastSetValue, _),
-            (this.m_flLastSetValue = null));
-        }
-        IncrementValue(_) {
-          let _ = this.ClampValue(this.props.value + _);
-          _ != this.props.value &&
-            (this.props.onChange && this.props.onChange(_, 2),
-            (this.m_flLastSetValue = _));
-        }
-        render() {
-          let _ = {},
-            _ = {};
-          if (this.BPropsValid()) {
-            let _ =
-              (100 * (this.props.value - this.props.min)) /
-                (this.props.max - this.props.min) +
-              "%";
-            (_.width = _), (_.left = _);
-          }
-          const { label: _, description: _, tooltip: _, ..._ } = this.props,
-            _ = this.props.renderValue ?? _;
-          return _.createElement(
-            "div",
-            {
-              className:
-                "DialogSlider_Container _DialogInputContainer _DialogLayout" +
-                (this.props.className ? " " + this.props.className : ""),
-              onKeyDown: this.OnKeyDown,
-              tabIndex: this.props.tabIndex || 0,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabel",
-                },
-                _,
-                Boolean(_) &&
-                  _.createElement(_, {
-                    tooltip: _,
-                  }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: "DialogSlider_Slider",
-                onMouseDown: this.OnMouseDown,
-                onTouchStart: this.OnTouchStart,
-              },
-              _.createElement("div", {
-                className: "DialogSlider_Value",
-                style: _,
-              }),
-              _.createElement("div", {
-                className: "DialogSlider_Grabber",
-                style: _,
-              }),
-            ),
-            this.props.showValue &&
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabelExplainer",
-                },
-                _(this.props.value, this.props.valueSuffix),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "DialogLabelExplainer",
-                },
-                _,
-              ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "OnTouchStart", null),
-        (0, _._)([_._], _.prototype, "OnTouchMove", null),
-        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
-        (0, _._)([_._], _.prototype, "OnKeyDown", null);
-      __webpack_require__("chunkid");
-      _.createContext({
-        setValue: () => {},
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        return "object" == typeof _ && "data" in _;
-      }
-      function _(_) {
-        return "object" == typeof _ && "bIsSeparator" in _;
-      }
-      function _(_) {
-        return "object" == typeof _ && "options" in _;
-      }
-      function _(_, _) {
-        if (_ === _) return !0;
-        if (!Array.isArray(_) || !Array.isArray(_)) return !1;
-        if (_.length != _.length) return !1;
-        for (let _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
-        return !0;
-      }
-      function _(_, _) {
-        return null == _ || null == _
-          ? _ == _
-          : !(!_(_) || !_(_)) ||
-              (!_(_) &&
-                !_(_) &&
-                _.label === _.label &&
-                  _.tooltip === _.tooltip &&
-                    _(_) == _(_) &&
-                      !(_(_) && _(_) && !_(_.options, _.options)) &&
-                (!_(_) || !_(_) || _.data === _.data));
-      }
-      function _(_, _) {
-        if (null != _)
-          for (let _ = 0; _ < _.length; _++) {
-            const _ = _[_];
-            if (_(_) && _.data === _) return _;
-            if (_(_)) {
-              const _ = _(_.options, _);
-              if (null != _) return _;
-            }
-          }
-      }
-      function _(_) {
-        const _ = _("DropDownField", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          strClassName: _,
-          dropDownControlRef: _,
-          ..._
-        } = _;
-        return _.createElement(
-          _,
-          {
-            label: _,
-            tooltip: __webpack_require__,
-            className: _,
-          },
-          _.createElement(_, {
-            menuLabel: _,
-            ..._,
-            ref: _,
-          }),
-        );
-      }
-      const _ = _.forwardRef(function (_, _) {
-        return _.createElement(
-          _._,
-          {
-            focusable: _.focusable,
-            className: (0, _._)(
-              _.className,
-              "DialogDropDown",
-              "_DialogInputContainer",
-              {
-                Active: _.opened,
-                Disabled: _.disabled,
-              },
-            ),
-            tabIndex: _.tabIndex,
-            onClick: _.onClick,
-            onKeyDown: _.onKeyDown,
-            disabled: _.disabled,
-            type: "button",
-            ref: _,
-            noFocusRing: _.noFocusRing,
-            role: _.role ?? "combobox",
-            "aria-controls": _["aria-controls"],
-            "aria-expanded": _.opened,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "DialogDropDown_CurrentDisplay",
-            },
-            _.children,
-          ),
-          !_.disabled &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
-              },
-              _.createElement(_.GB9, {
-                role: "presentation",
-              }),
-            ),
-        );
-      });
-      class _ extends _.Component {
-        static contextType = _;
-        m_elInput;
-        m_iMenuInstance;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              value: _(_.rgOptions, _.selectedOption),
-              bOpened: !1,
-            });
-        }
-        SetSelectedOption(_) {
-          if (this.props.controlled) return;
-          const _ = _(this.props.rgOptions, _);
-          _(_, this.value) ||
-            this.setState({
-              value: _,
-            });
-        }
-        get value() {
-          return this.props.controlled
-            ? _(this.props.rgOptions, this.props.selectedOption)
-            : this.state.value;
-        }
-        shouldComponentUpdate(_, _, _) {
-          if (_.selectedOption !== this.props.selectedOption) return !0;
-          if (_.disabled != this.props.disabled) return !0;
-          if (_.bOpened !== this.state.bOpened) return !0;
-          if (!_(this.props.rgOptions, _.rgOptions)) return !0;
-          if (!_(_.value, this.value)) return !0;
-          let _ = ["selectedOption", "tabIndex", "onChange", "strDefaultLabel"];
-          for (let _ of _) if (_[_] !== this.props[_]) return !0;
-          return !1;
-        }
-        componentDidUpdate(_, _) {
-          (0, _._)(
-            this.props.controlled === _.controlled,
-            '"controlled" prop should never change after mount',
-          );
-          const _ = !_(_.rgOptions, this.props.rgOptions),
-            _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
-          !this.props.controlled &&
-            (_ || _ || _) &&
-            (_ || null == this.value
-              ? this.SetSelectedOption(this.props.selectedOption)
-              : this.SetSelectedOption(this.value.data)),
-            (_ || _) &&
-              (this.state.bOpened
-                ? (this.m_iMenuInstance?.SetOnHideCallback(void 0),
-                  this.m_iMenuInstance?.Hide(),
-                  (this.m_iMenuInstance = void 0),
-                  this.BuildMenu())
-                : this.m_iMenuInstance &&
-                  (this.m_iMenuInstance.SetOnHideCallback(void 0),
-                  (this.m_iMenuInstance = void 0)));
-        }
-        OnInputRef(_) {
-          _ && (this.m_elInput = _);
-        }
-        get element() {
-          return this.m_elInput;
-        }
-        ToggleMenu() {
-          if (this.state.bOpened) this.HideMenu();
-          else {
-            if (
-              this.props.onMenuWillOpen &&
-              0 == this.props.onMenuWillOpen(this.ShowMenu)
-            )
-              return;
-            this.ShowMenu();
-          }
-        }
-        OnValueSelected(_, _) {
-          this.HideMenu(),
-            this.setState({
-              value: _,
-            }),
-            this.props.onChange && this.props.onChange(_, this, _);
-        }
-        BuildMenu() {
-          let _ = "DialogMenuPosition";
-          this.props.strDropDownClassName &&
-            (_ += " " + this.props.strDropDownClassName);
-          let _ = {
-              bOverlapHorizontal: !0,
-              bMatchWidth: this.props.bMatchWidth ?? !0,
-              bFitToWindow: !0,
-              strClassName: _,
-              bDisableMouseOverlay: this.props.bDisableMouseOverlay,
-              ...this.props.contextMenuPositionOptions,
-            },
-            _ = this.props.contextMenuPositionOptions?.onCancel;
-          (this.m_iMenuInstance = (0, _._)(
-            _.createElement(_, {
-              rgOptions: this.props.rgOptions,
-              onValueSelected: this.OnValueSelected,
-              onCancel: _,
-              selectedValue: this.value?.data,
-              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
-              strDropDownItemClassName: this.props.strDropDownItemClassName,
-              _: `dropdownmenu_${this.m_iMenuInstance?.key}`,
-            }),
-            this.m_elInput,
-            _,
-          )),
-            this.m_iMenuInstance.SetLabel(
-              this.props.menuLabel ??
-                ("string" == typeof this.props.strDefaultLabel &&
-                  this.props.strDefaultLabel),
-            ),
-            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
-        }
-        ShowMenu() {
-          this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
-            this.props.onMenuOpened && this.props.onMenuOpened(),
-            this.setState({
-              bOpened: !0,
-            });
-        }
-        HideMenu() {
-          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
-            this.setState(
-              {
-                bOpened: !1,
-              },
-              () => this.m_elInput.focus(),
-            );
-        }
-        OnKeyDown(_) {
-          _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
-            this.OnValueSelected(void 0, _),
-          );
-        }
-        render() {
-          let _ = this.value?.label ?? this.props.strDefaultLabel;
-          null != this.props.renderButtonValue &&
-            (_ = this.props.renderButtonValue(_));
-          const _ = this.props.focusable ?? !0,
-            _ =
-              this.props.renderButton ||
-              this.context.DropDownControlButton ||
-              _;
-          return _.createElement(
-            _,
-            {
-              focusable: _,
-              disabled: this.props.disabled ?? !1,
-              opened: this.state.bOpened,
-              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
-              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
-              ref: this.OnInputRef,
-              className: this.props.strDropDownButtonClassName,
-              arrowClassName: this.props.arrowClassName,
-              role: "combobox",
-              "aria-controls": this.m_iMenuInstance
-                ? `dropdownmenu_${this.m_iMenuInstance.key}`
-                : void 0,
-              "aria-expanded": this.state.bOpened,
-              "aria-labelledby": this.props["aria-labelledby"],
-              "aria-describedby": this.props["aria-describedby"],
-            },
-            _,
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnInputRef", null),
-        (0, _._)([_._], _.prototype, "ToggleMenu", null),
-        (0, _._)([_._], _.prototype, "OnValueSelected", null),
-        (0, _._)([_._], _.prototype, "ShowMenu", null),
-        (0, _._)([_._], _.prototype, "HideMenu", null),
-        (0, _._)([_._], _.prototype, "OnKeyDown", null);
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _("DropDownMenu", _);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {},
-          },
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_, _, _, _) {
-        let _;
-        if ("ArrowDown" === _.key) {
-          _ = (_.findIndex((_) => _.data === _) + 1) % _.length;
-        } else if ("ArrowUp" === _.key) {
-          const _ = _.findIndex((_) => _.data === _);
-          _ = _ <= 0 ? _.length - 1 : _ - 1;
-        }
-        void 0 !== _ && (_(_[_]), _.preventDefault());
-      }
-      function _(_) {
-        const {
-            rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            selectedValue: _,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _.useMemo(() => _.filter(_), [_]),
-          _ = _.useCallback(
-            (_) => {
-              _(_, _, _, (_) => _(_.data));
-            },
-            [_, _],
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().DialogDropDownMenu,
-              "_DialogInputContainer",
-              _.strDropDownMenuCtnClass,
-            ),
-            onKeyDown: _,
-          },
-          _.createElement(_, {
-            rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            activeValue: _,
-            setActiveValue: _,
-          }),
-        );
-      }
-      function _(_) {
-        const { rgOptions: _, ...__webpack_require__ } = _;
-        return _.map((_, _) =>
-          _(_)
-            ? _.createElement("hr", {
-                key: _,
-                className: (0, _._)(
-                  _().DialogDropDownMenu_Item,
-                  _().DialogDropDownMenu_Separator,
-                ),
-              })
-            : _(_)
-              ? _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  rgOptions: _.options,
-                })
-              : _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  option: _,
-                }),
-        );
-      }
-      function _(_) {
-        const {
-            option: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            activeValue: _,
-            setActiveValue: _,
-          } = _,
-          _ = _.useCallback((_) => _ && _.focus(), []),
-          _ = _.useCallback(() => {
-            _(_.data);
-          }, [_, _]),
-          _ = _.data === _;
-        return _.createElement(
-          "button",
-          {
-            type: "button",
-            className: (0, _._)(
-              _().DialogDropDownMenu_Item,
-              __webpack_require__,
-              _.strOptionClass,
-              _ && "ContextMenuAutoFocus",
-            ),
-            onClick: (_) => _(_, _),
-            ref: _ ? _ : void 0,
-            onMouseEnter: _,
-            role: "option",
-            "aria-selected": _,
-          },
-          Boolean(_.tooltip)
-            ? _.createElement(
-                _,
-                {
-                  toolTipContent: _.tooltip,
-                  bTopmost: !0,
-                  className: "TooltipContainer",
-                },
-                _.label,
-              )
-            : _.createElement("div", null, _.label),
-        );
-      }
-      class _ extends _.Component {
-        state = {
-          rgOptions: void 0,
-        };
-        async OnMenuOpened() {
-          if (!this.state.rgOptions) {
-            let _ = await this.props.fnLoadOptions();
-            this.setState({
-              rgOptions: _,
-            });
-          }
-        }
-        render() {
-          const {
-            fnLoadOptions: _,
-            strInitialDisplay: _,
-            initialValue: __webpack_require__,
-            ..._
-          } = this.props;
-          let { rgOptions: _ } = this.state;
-          return (
-            void 0 === _ &&
-              (_ || __webpack_require__
-                ? ((_ = [
-                    {
-                      label: _,
-                      data: __webpack_require__,
-                    },
-                  ]),
-                  (_.selectedOption = __webpack_require__))
-                : (_ = [])),
-            _.createElement(_, {
-              ..._,
-              rgOptions: _,
-              onMenuOpened: this.OnMenuOpened,
-            })
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMenuOpened", null);
-      __webpack_require__("chunkid");
-      class _ {
-        activeObject;
-        instance;
-        constructor(_) {
-          this.instance = new _(_, !1);
-        }
-      }
-      class _ {
-        m_parent;
-        m_window;
-        m_container = null;
-        iIntervalShow;
-        m_bRemoveOnHide;
-        m_reactRoot;
-        constructor(_, _ = !0) {
-          (this.m_parent = _),
-            (this.m_window = _.ownerDocument.defaultView),
-            (this.m_bRemoveOnHide = _);
-        }
-        Show(_, _) {
-          return (
-            this.CancelShowInterval(),
-            _
-              ? new Promise((_, _) => {
-                  this.iIntervalShow = this.m_window.setTimeout(() => {
-                    let _ = this.m_parent.ownerDocument;
-                    _.defaultView &&
-                      !_.defaultView.closed &&
-                      (this.InternalShow(_), __webpack_require__());
-                  }, _);
-                })
-              : (this.InternalShow(_), Promise.resolve())
-          );
-        }
-        InternalShow(_) {
-          this.m_container ||
-            ((this.m_container =
-              this.m_parent.ownerDocument.createElement("div")),
-            this.m_parent.appendChild(this.m_container)),
-            this.m_reactRoot ||
-              (this.m_reactRoot = _.createRoot(this.m_container)),
-            this.m_reactRoot.render(_);
-        }
-        Hide(_) {
-          this.CancelShowInterval(),
-            _
-              ? (this.iIntervalShow = this.m_window.setTimeout(() => {
-                  this.InternalHide();
-                }, _))
-              : this.InternalHide();
-        }
-        InternalHide() {
-          this.m_reactRoot &&
-            (this.m_reactRoot.unmount(), (this.m_reactRoot = void 0)),
-            this.m_container &&
-              this.m_bRemoveOnHide &&
-              (this.m_parent.removeChild(this.m_container),
-              (this.m_container = null));
-        }
-        CancelShowInterval() {
-          void 0 !== this.iIntervalShow &&
-            (this.m_window.clearInterval(this.iIntervalShow),
-            (this.iIntervalShow = void 0));
-        }
-        BIsChildElement(_) {
-          return this.m_container && _._(this.m_container, _);
-        }
-      }
-      class _ {
-        m_strUniqueID;
-        m_mapEmbeddedHovers = new WeakMap();
-        constructor(_) {
-          this.m_strUniqueID = _;
-        }
-        ShowElementDelayed(_, _, _, _) {
-          let _ = this.GetEmbeddedElement(_);
-          return (_.activeObject = _), _.instance.Show(_, _);
-        }
-        ShowElement(_, _, _) {
-          let _ = this.GetEmbeddedElement(_);
-          (_.activeObject = _), _.instance.Show(_);
-        }
-        HideElement(_, _, _) {
-          let _ = this.GetEmbeddedElement(_);
-          _.activeObject == _ &&
-            ((_.activeObject = void 0), _.instance.Hide(_));
-        }
-        GetEmbeddedElement(_) {
-          let _ = this.m_mapEmbeddedHovers.get(_);
-          return (
-            _ || ((_ = new _(_.body)), this.m_mapEmbeddedHovers.set(_, _)), _
-          );
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("DragDrop").Debug;
-      class _ extends _.Component {
-        m_coordinator = new _();
-        OnDrop(_, _) {
-          _ > _ && _--, _ != _ && this.props.onReorder(_, _);
-        }
-        render() {
-          let _ = [];
-          return (
-            _.push(
-              _.createElement(_, {
-                coordinator: this.m_coordinator,
-                key: "dropregion_top",
-                fnBAcceptDraggable: (_) => 0 != _.props.data,
-                fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
-              }),
-            ),
-            _.Children.forEach(this.props.children, (_, _) => {
-              const _ = _.props._ || "__list_" + _,
-                _ = _ + 1;
-              _.push(
-                _.createElement(
-                  _,
-                  {
-                    coordinator: this.m_coordinator,
-                    data: _,
-                    key: _,
-                  },
-                  _,
-                ),
-              ),
-                _.push(
-                  _.createElement(_, {
-                    coordinator: this.m_coordinator,
-                    key: "dropregion_" + _,
-                    fnBAcceptDraggable: (_) => _.props.data != _,
-                    fnOnDrop: (_) => this.OnDrop(_.props.data, _),
-                  }),
-                );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "DialogReorderableList",
-              },
-              _,
-            )
-          );
-        }
-      }
-      function _(_, _, _, _) {
-        return _
-          ? _ && _ > _.left && _ < _.right && _ > _.top && _ < _.bottom
-          : _ && _ >= _.left && _ <= _.right && _ >= _.top && _ <= _.bottom;
-      }
-      (0, _._)([_._], _.prototype, "OnDrop", null);
-      class _ {
-        m_embeddedElement = new _("DragGhosts");
-        m_rgDropRegions = [];
-        m_activeDraggable;
-        m_rgActiveDropRegions = [];
-        m_activeDropRegion;
-        m_dropGhost;
-        m_dragGhost;
-        m_dragOffWindowTimer;
-        RegisterDropRegion(_) {
-          this.m_rgDropRegions.push(_),
-            this.m_activeDraggable &&
-              _.BAcceptDraggable(this.m_activeDraggable) &&
-              (_.OnDragStarted(this.m_activeDraggable),
-              this.m_rgActiveDropRegions.push(_));
-        }
-        UnregisterDropRegion(_) {
-          _._(this.m_rgDropRegions, _),
-            _._(this.m_rgActiveDropRegions, _),
-            this.m_activeDropRegion == _ &&
-              ((this.m_activeDropRegion = void 0),
-              this.m_activeDraggable && this.ShowDragGhost());
-        }
-        OnDragGhostRef(_) {
-          this.m_dragGhost = _;
-        }
-        ShowDragGhost() {
-          const _ = this.m_activeDraggable.renderDragGhost(),
-            _ = (0, _._)(
-              _.props.className,
-              !!this.m_activeDropRegion && "DraggedOverActiveDrop",
-            ),
-            _ = _.cloneElement(_, {
-              ref: this.OnDragGhostRef,
-              className: _,
-            });
-          this.m_embeddedElement.ShowElement(
-            this.m_activeDraggable.GetDragDocument(),
-            _,
-            this.m_activeDraggable,
-          );
-        }
-        HideDragGhost() {
-          this.m_embeddedElement.HideElement(
-            this.m_activeDraggable.GetDragDocument(),
-            this.m_activeDraggable,
-          );
-        }
-        m_elCloneContainer;
-        m_elCloneOriginal;
-        m_nodeCloneCopy;
-        MakeDragClone(_) {
-          (0, _._)(
-            !this.m_nodeCloneCopy && !this.m_elCloneOriginal,
-            "Drag already in progress",
-          ),
-            (this.m_elCloneOriginal = _.m_divRef.current),
-            (this.m_nodeCloneCopy = this.m_elCloneOriginal.cloneNode(!0)),
-            _.m_divRef.current.replaceWith(this.m_nodeCloneCopy),
-            this.m_elCloneContainer ||
-              ((this.m_elCloneContainer =
-                _.GetDragDocument().body.ownerDocument.createElement("div")),
-              _.GetDragDocument().body.appendChild(this.m_elCloneContainer)),
-            this.m_elCloneContainer.appendChild(this.m_elCloneOriginal);
-        }
-        ReverseDragClone() {
-          this.m_nodeCloneCopy.parentNode?.replaceChild(
-            this.m_elCloneOriginal,
-            this.m_nodeCloneCopy,
-          ),
-            (this.m_nodeCloneCopy = void 0),
-            (this.m_elCloneOriginal = void 0);
-        }
-        OnDragStart(_) {
-          (this.m_activeDraggable = _), (this.m_rgActiveDropRegions = []);
-          for (let _ of this.m_rgDropRegions)
-            _.BAcceptDraggable(_) &&
-              (_.OnDragStarted(_), this.m_rgActiveDropRegions.push(_));
-          this.MakeDragClone(_), this.ShowDragGhost();
-        }
-        EndDrag() {
-          if (this.m_activeDraggable) {
-            this.ReverseDragClone(),
-              this.HideDragGhost(),
-              this.m_activeDropRegion &&
-                this.m_activeDropRegion.OnDrop(this.m_activeDraggable);
-            for (let _ of this.m_rgActiveDropRegions)
-              _.OnDragEnded(this.m_activeDraggable);
-            (this.m_activeDraggable = void 0),
-              (this.m_dropGhost = void 0),
-              (this.m_rgActiveDropRegions = []);
-          }
-        }
-        FindBestActiveDropRegionForPoint(_, _) {
-          const _ = this.m_activeDraggable.GetDragDocument();
-          let _;
-          if (
-            ("elementsFromPoint" in _ &&
-              (_ = __webpack_require__.elementsFromPoint(_, _)),
-            _)
-          ) {
-            const _ = new Map();
-            this.m_rgActiveDropRegions.forEach((_) => _.set(_.GetElement(), _));
-            for (const _ of _) {
-              const _ = _.get(_);
-              if (_) return _;
-            }
-          } else {
-            if (
-              this.m_activeDropRegion &&
-              this.m_activeDropRegion.BDraggableInRegion(
-                _,
-                _,
-                this.m_activeDraggable,
-              )
-            )
-              return this.m_activeDropRegion;
-            for (let _ = this.m_rgActiveDropRegions.length - 1; _ >= 0; _--) {
-              const _ = this.m_rgActiveDropRegions[_];
-              if (_.BDraggableInRegion(_, _, this.m_activeDraggable)) return _;
-            }
-          }
-        }
-        m_prevClientX = 0;
-        m_prevClientY = 0;
-        OnDrag(_, _, _) {
-          const _ = this.m_prevClientX || _,
-            _ = this.m_prevClientY || _;
-          if (
-            (_.props.bEnableHTMLDrag &&
-              this.m_dragOffWindowTimer &&
-              window.clearTimeout(this.m_dragOffWindowTimer),
-            this.m_dragGhost)
-          ) {
-            const _ =
-                void 0 === _ ? 0 : _ - (this.m_dragGhost.state.clientX ?? 0),
-              _ = void 0 === _ ? 0 : _ - (this.m_dragGhost.state.clientY ?? 0);
-            if (
-              (this.m_dragGhost.setState({
-                clientX: _,
-                clientY: _,
-                clientXDelta: _,
-                clientYDelta: _,
-                bVisible: !0,
-              }),
-              _.props.bEnableHTMLDrag && (_ || _))
-            ) {
-              const _ = _ + _,
-                _ = _ + _,
-                _ = _.GetDragDocument().body.getBoundingClientRect();
-              if (_(_, _, _) && !_(_, _, _, !0)) {
-                const _ = _._(_, _.left, _.right, _.left - 200, _.right + 200),
-                  _ = _._(_, _.top, _.bottom, _.top - 100, _.bottom + 100),
-                  _ = 50;
-                this.m_dragOffWindowTimer = window.setTimeout(() => {
-                  _ == this.m_activeDraggable && this.OnDrag(_, _, _);
-                }, _);
-              }
-            }
-          }
-          const _ = this.FindBestActiveDropRegionForPoint(_, _);
-          (this.m_prevClientX = _),
-            (this.m_prevClientY = _),
-            !!this.m_activeDropRegion != !!_ &&
-              (this.ShowDragGhost(),
-              this.m_dropGhost ||
-                (this.m_dropGhost = this.m_activeDraggable.renderDropGhost())),
-            this.m_activeDropRegion &&
-              this.m_activeDropRegion != _ &&
-              this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
-            _ &&
-              this.m_activeDropRegion != _ &&
-              _.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
-            (this.m_activeDropRegion = _),
-            this.m_activeDropRegion &&
-              this.m_activeDropRegion.OnDragMove(_, _, this.m_activeDraggable);
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnDragGhostRef", null);
-      class _ extends _.Component {
-        constructor(_) {
-          super(_), (0, _._)(this);
-        }
-        m_DragInfo = {
-          bStarted: !1,
-          startClientX: void 0,
-          startClientY: void 0,
-          startOffsetX: void 0,
-          startOffsetY: void 0,
-          startWidth: void 0,
-          startHeight: void 0,
-          ownerWin: void 0,
-        };
-        m_divRef = _.createRef();
-        GetDragDocument() {
-          return this.m_DragInfo.ownerWin?.document;
-        }
-        RecordDragStart(_, _, _) {
-          (this.m_DragInfo.startClientX = _),
-            (this.m_DragInfo.startClientY = _);
-          let _ = _.getBoundingClientRect();
-          (this.m_DragInfo.startOffsetX = _ - _.left),
-            (this.m_DragInfo.startOffsetY = _ - _.top),
-            (this.m_DragInfo.startWidth = _.width),
-            (this.m_DragInfo.startHeight = _.height),
-            (this.m_DragInfo.ownerWin = _.ownerDocument.defaultView);
-        }
-        ProcessDragMove(_) {
-          _("ProcessDragMove", _, this.props.data);
-          const [_, __webpack_require__] = (function (_) {
-            if ("touches" in _) {
-              let _ = _;
-              return [_.touches[0].clientX, _.touches[0].clientY];
-            }
-            return [_.clientX, _.clientY];
-          })(_);
-          if (this.m_DragInfo.bStarted) {
-            if (
-              this.props.bEnableHTMLDrag &&
-              0 == _ &&
-              0 == __webpack_require__
-            )
-              return;
-            this.props.coordinator.OnDrag(this, _, __webpack_require__);
-          } else
-            Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
-              Math.pow(
-                __webpack_require__ - (this.m_DragInfo.startClientY ?? 0),
-                2,
-              ) >=
-              25 &&
-              ((this.m_DragInfo.bStarted = !0),
-              this.forceUpdate(),
-              this.props.fnOnDragStart && this.props.fnOnDragStart(),
-              this.props.coordinator.OnDragStart(this),
-              this.props.coordinator.OnDrag(this, _, __webpack_require__));
-        }
-        OnMouseDown(_) {
-          this.m_DragInfo.bStarted ||
-            0 != _.button ||
-            (this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
-            this.m_DragInfo.ownerWin?.addEventListener(
-              "mousemove",
-              this.ProcessDragMove,
-            ),
-            this.m_DragInfo.ownerWin?.addEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ));
-        }
-        OnMouseUp(_) {
-          this.m_DragInfo.ownerWin?.removeEventListener(
-            "mousemove",
-            this.ProcessDragMove,
-          ),
-            this.m_DragInfo.ownerWin?.removeEventListener(
-              "mouseup",
-              this.OnMouseUp,
-            ),
-            this.ResetDragState();
-        }
-        OnTouchStart(_) {
-          this.m_DragInfo.bStarted ||
-            (this.RecordDragStart(
-              _.currentTarget,
-              _.touches[0].clientX,
-              _.touches[0].clientY,
-            ),
-            this.m_DragInfo.ownerWin?.addEventListener(
-              "touchmove",
-              this.ProcessDragMove,
-            ),
-            this.m_DragInfo.ownerWin?.addEventListener(
-              "touchend",
-              this.OnTouchEnd,
-            ));
-        }
-        OnTouchEnd(_) {
-          this.m_DragInfo.ownerWin?.removeEventListener(
-            "touchmove",
-            this.ProcessDragMove,
-          ),
-            this.m_DragInfo.ownerWin?.removeEventListener(
-              "touchend",
-              this.OnTouchEnd,
-            ),
-            this.ResetDragState();
-        }
-        ResetDragState() {
-          _("ResetDragState", this.props.data),
-            this.m_DragInfo.bStarted &&
-              (this.props.coordinator.EndDrag(),
-              this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
-            (this.m_DragInfo.bStarted = !1),
-            (this.m_DragInfo.startClientX = void 0),
-            (this.m_DragInfo.startClientY = void 0),
-            (this.m_DragInfo.startOffsetX = void 0),
-            (this.m_DragInfo.startOffsetY = void 0),
-            (this.m_DragInfo.ownerWin = void 0),
-            this.forceUpdate();
-        }
-        OnHTMLDragStart(_) {
-          _("HTMLDragStart", _, this.props.data, this.props.strHTMLDragData),
-            (_.dataTransfer.effectAllowed = "copyMove"),
-            this.props.strHTMLDragData &&
-              this.props.strHTMLDragData.forEach((_, _) =>
-                _.dataTransfer.setData(_, _),
-              ),
-            _.dataTransfer.getData("text/plain") ||
-              _.dataTransfer.setData("text/plain", this.props.data.toString());
-          const _ = new Image();
-          _.dataTransfer.setDragImage(_, 0, 0),
-            this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
-            this.m_DragInfo.ownerWin?.addEventListener("drag", this.OnHTMLDrag),
-            this.m_DragInfo.ownerWin?.addEventListener(
-              "dragend",
-              this.OnHTMLDragEnd,
-            );
-        }
-        OnHTMLDrag(_) {
-          _("HTMLDrag", _, _.dataTransfer?.types.length),
-            this.ProcessDragMove(_);
-        }
-        OnHTMLDragEnd(_) {
-          _(
-            "HTMLDragEnd",
-            _,
-            _.dataTransfer?.getData("text/plain") || "NOTHING",
-            this.props.data,
-          ),
-            this.m_DragInfo.ownerWin?.removeEventListener(
-              "drag",
-              this.OnHTMLDrag,
-            ),
-            this.m_DragInfo.ownerWin?.removeEventListener(
-              "dragend",
-              this.OnHTMLDragEnd,
-            ),
-            this.ResetDragState();
-        }
-        render() {
-          const {
-            coordinator: _,
-            data: _,
-            bEnableHTMLDrag: __webpack_require__,
-            strHTMLDragData: _,
-            fnOnDragStart: _,
-            fnOnDragEnd: _,
-            fnRenderDragGhost: _,
-            fnRenderDropGhost: _,
-            className: _,
-            strActiveClassName: _,
-            children: _,
-            ..._
-          } = this.props;
-          let _ = {},
-            _ = _ || "DialogDraggable";
-          return (
-            this.m_DragInfo.bStarted
-              ? ((_ = (0, _._)(_, _ || "DraggedOut")),
-                __webpack_require__ &&
-                  (_ = {
-                    onDragEnd: this.OnHTMLDragEnd,
-                  }))
-              : (_ = __webpack_require__
-                  ? {
-                      onDragStart: this.OnHTMLDragStart,
-                    }
-                  : {
-                      onMouseDown: this.OnMouseDown,
-                      onTouchStart: this.OnTouchStart,
-                    }),
-            _.createElement(
-              "div",
-              {
-                ref: this.m_divRef,
-                className: _,
-                ..._,
-                ..._,
-                draggable: __webpack_require__,
-              },
-              _,
-            )
-          );
-        }
-        renderDropGhost() {
-          return this.props.fnRenderDropGhost
-            ? this.props.fnRenderDropGhost()
-            : _.createElement(_, {
-                elContent: this.GetClone(),
-              });
-        }
-        renderDragGhost() {
-          return this.props.fnRenderDragGhost
-            ? this.props.fnRenderDragGhost()
-            : _.createElement(_, {
-                elContent: this.GetClone(),
-                offsetX: this.m_DragInfo.startOffsetX,
-                offsetY: this.m_DragInfo.startOffsetY,
-                width: this.m_DragInfo.startWidth,
-                height: this.m_DragInfo.startHeight,
-              });
-        }
-        GetClone() {
-          const _ = this.m_divRef.current;
-          let _;
-          if (_ && _.childElementCount)
-            if (1 == _.childElementCount) _ = _.firstElementChild.cloneNode(!0);
-            else {
-              _ = document.createElement("div");
-              for (let _ = _.firstChild; _; _ = _.nextSibling)
-                _.appendChild(__webpack_require__.cloneNode(!0));
-            }
-          return _;
-        }
-      }
-      (0, _._)([_._], _.prototype, "ProcessDragMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "OnTouchStart", null),
-        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
-        (0, _._)([_._], _.prototype, "ResetDragState", null),
-        (0, _._)([_._], _.prototype, "OnHTMLDragStart", null),
-        (0, _._)([_._], _.prototype, "OnHTMLDrag", null),
-        (0, _._)([_._], _.prototype, "OnHTMLDragEnd", null);
-      class _ extends _.Component {
-        OnRef(_) {
-          _ && this.props.elContent && _.appendChild(this.props.elContent);
-        }
-        render() {
-          return _.createElement("div", {
-            className: "DialogDraggable_DropGhost",
-            ref: this.OnRef,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnRef", null);
-      class _ extends _.Component {
-        state = {
-          clientX: void 0,
-          clientY: void 0,
-          bVisible: !0,
-          clientXDelta: void 0,
-          clientYDelta: void 0,
-        };
-        OnRef(_) {
-          _ && this.props.elContent && _.appendChild(this.props.elContent);
-        }
-        CalculateRotationDegrees(_) {
-          if (!_ || Math.abs(_) < 4) return 0;
-          return (_ > 0 ? 7.5 : -7.5) * Math.sqrt(Math.abs(_));
-        }
-        render() {
-          if (
-            !this.state.bVisible ||
-            void 0 === this.state.clientX ||
-            void 0 === this.state.clientY
-          )
-            return _.createElement("div", null);
-          let _ = {
-              left: this.state.clientX - (this.props.offsetX || 0),
-              top: this.state.clientY - (this.props.offsetY || 0),
-              width: this.props.width || "auto",
-              height: this.props.height || "auto",
-              perspective: "600px",
-            },
-            _ = _._(
-              this.CalculateRotationDegrees(this.state.clientYDelta),
-              -90,
-              90,
-              2,
-              0,
-            ),
-            _ = {
-              transform: `rotateX(${this.CalculateRotationDegrees(-1 * (this.state.clientYDelta ?? 0))}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
-              transition: "transform .16s ease-out, filter .16s ease-out",
-              filter: "brightness(" + _ + ")",
-            };
-          const _ = this.props.className || "DialogDraggable_DragGhost";
-          return _.createElement(
-            "div",
-            {
-              className: _,
-              style: _,
-            },
-            _.createElement("div", {
-              ref: this.OnRef,
-              style: _,
-            }),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnRef", null);
-      class _ extends _.Component {
-        m_divRef = _.createRef();
-        constructor(_) {
-          super(_), (this.state = {});
-        }
-        componentDidMount() {
-          this.props.coordinator.RegisterDropRegion(this);
-        }
-        componentWillUnmount() {
-          this.props.coordinator.UnregisterDropRegion(this);
-        }
-        OnDragStarted(_) {
-          this.setState({
-            bDraggableActive: !0,
-          });
-        }
-        OnDragEnded(_) {
-          this.setState({
-            bDraggableActive: !1,
-          });
-        }
-        OnDragEnter(_, _) {
-          this.setState({
-            dropGhost: _,
-          }),
-            this.props.fnOnDragEnter && this.props.fnOnDragEnter(_);
-        }
-        OnDragLeave(_) {
-          this.setState({
-            dropGhost: void 0,
-          }),
-            this.props.fnOnDragLeave && this.props.fnOnDragLeave(_);
-        }
-        OnDragMove(_, _, _) {}
-        OnDrop(_) {
-          this.setState({
-            dropGhost: void 0,
-          }),
-            this.props.fnOnDrop(_);
-        }
-        BAcceptDraggable(_) {
-          return (
-            !this.props.fnBAcceptDraggable || this.props.fnBAcceptDraggable(_)
-          );
-        }
-        BDraggableInRegion(_, _, _) {
-          return _(_, _, this.GetClientRect());
-        }
-        GetElement() {
-          return this.m_divRef.current;
-        }
-        GetClientRect() {
-          return (
-            this.m_divRef.current &&
-            this.m_divRef.current.getBoundingClientRect()
-          );
-        }
-        render() {
-          const {
-              coordinator: _,
-              fnBAcceptDraggable: _,
-              fnOnDrop: __webpack_require__,
-              fnOnDragEnter: _,
-              fnOnDragLeave: _,
-              className: _,
-              strActiveClassName: _,
-              children: _,
-              focusable: _,
-              containerRef: _,
-              ..._
-            } = this.props,
-            _ = (0, _._)(
-              _ || "DialogDropRegion",
-              this.state.bDraggableActive && (_ || "Active"),
-            );
-          return _.createElement(
-            _._,
-            {
-              ref: (0, _._)(_, this.m_divRef),
-              className: _,
-              ..._,
-              focusable: void 0 === _ ? !!_.onClick : _,
-            },
-            this.state.dropGhost,
-            _,
-          );
-        }
-      }
-      class _ extends _ {
-        BDraggableInRegion(_, _, _) {
-          let _ = this.GetClientRect();
-          return (
-            !!_ &&
-            _ >= _.left && _ <= _.right && _ >= _.top - 20 &&
-            _ <= _.bottom + 20
-          );
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_flPageListScrollTop = 0;
-        m_flPageScrollTop = 0;
-      }
-      (0, _._)([_._], _.prototype, "m_flPageListScrollTop", void 0),
-        (0, _._)([_._], _.prototype, "m_flPageScrollTop", void 0);
-      class _ {
-        static s_Instance;
-        static Get() {
-          return _.s_Instance || (_.s_Instance = new _()), _.s_Instance;
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        m_setPagedSettingsInstances = new Set();
-      }
-      function _(_) {
-        const {
-            stylesheet: _,
-            pages: __webpack_require__,
-            iActivePage: _,
-            onPageSelected: _,
-            PageListItemComponent: _ = _,
-            PageListSeparatorComponent: _ = _,
-          } = _,
-          _ = _.useContext(_);
-        return __webpack_require__.map((_, _) => {
-          const _ = _ === _;
-          if ("separator" === _) {
-            const _ = _ === _ + 1 || _ === _ - 1;
-            return _.createElement(_, {
-              role: "separator",
-              key: _,
-              bTransparent: _,
-            });
-          }
-          if ("spacer" === _)
-            return _.createElement("div", {
-              key: _,
-              className: _().PageListSpacer,
-            });
-          {
-            if (!1 === _.visible) return null;
-            const _ = _.identifier || _.title || __webpack_require__.toString(),
-              _ = () => _(_, _);
-            return _.createElement(_, {
-              className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
-                [_.Active]: _,
-              }),
-              key: _,
-              onClick: _,
-              title: _.title,
-              icon: _.icon,
-              active: _,
-              _: _ + _.identifier,
-              role: "tab",
-              "aria-selected": _,
-              "aria-controls": _ + _.identifier + "_Content",
-            });
-          }
-        });
-      }
-      function _(_) {
-        const {
-          title: _,
-          icon: __webpack_require__,
-          active: _,
-          className: _,
-          onClick: _,
-          ..._
-        } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-            ..._,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
-                  className: _().PageListItem_Icon,
-                },
-                __webpack_require__,
-              )
-            : null,
-          _.createElement(
-            "div",
-            {
-              className: _().PageListItem_Title,
-              ..._,
-            },
-            _,
-          ),
-        );
-      }
-      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
-      const _ = _.forwardRef(function (_, _) {
-        const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
-          _ = _.useContext(_),
-          _ = __webpack_require__?.padding ?? "standard";
-        return _.createElement(
-          _,
-          {
-            style: _,
-            className: (0, _._)(
-              _?.PagedSettingsDialog_PageContent,
-              __webpack_require__?.pageClassName,
-              "none" == _ && _?.NoPadding,
-            ),
-            refElem: _,
-            role: "tabpanel",
-            "aria-labelledby": _ + __webpack_require__?.identifier,
-            _: _ + __webpack_require__?.identifier + "_Content",
-          },
-          __webpack_require__?.header,
-          !__webpack_require__?.hideTitle &&
-            _.createElement(_, null, __webpack_require__?.title),
-          _.createElement(_._, null, __webpack_require__?.content),
-        );
-      });
-      function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
-          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
-            [_().Transparent]: _,
-          }),
-          ..._,
-        });
-      }
-      const _ = _.createContext(void 0),
-        _ = _.forwardRef(function (_, _) {
-          const {
-              stylesheet: __webpack_require__ = _(),
-              pages: _,
-              onPageRequested: _,
-            } = _,
-            _ = _.useId(),
-            _ = null == _.page,
-            [_, _] = _.useState(() =>
-              void 0 === _.startingPage
-                ? -1
-                : _.findIndex(
-                    (_) =>
-                      "object" == typeof _ && _.identifier === _.startingPage,
-                  ),
-            );
-          let _ = _;
-          _ ||
-            (_ = _.findIndex(
-              (_) => "object" == typeof _ && _.identifier === _.page,
-            )),
-            (_ < 0 || _ >= _.length) && (_ = 0);
-          let _ = null;
-          "object" == typeof _[_] && (_ = _[_]);
-          const _ = _.useRef(null),
-            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
-            [_, _] = _.useState(!1),
-            _ = _ ? _ : void 0,
-            _ = _.useCallback((_) => {
-              _ && _(!0);
-            }, []),
-            _ = _.useCallback(
-              (_, _) => {
-                _(!0),
-                  _._.PlayNavSound(_._.PagedNavigation),
-                  _ && _(_.identifier),
-                  _.click ? _.click() : _ && _(_);
-              },
-              [_, _],
-            ),
-            _ = _.useRef(null),
-            _ = _.showTitle ?? !0,
-            _ = (0, _._)(
-              "DialogContentTransition",
-              __webpack_require__.PagedSettingDialog_ContentColumn,
-            );
-          _.useEffect(() => {
-            _.bAutoFocusPageContent && _.current?.TakeFocus();
-          }, []);
-          const { refForPageList: _, refForPage: _ } = (function () {
-            const _ = _.useMemo(() => new _(), []);
-            _.useEffect(
-              () => (
-                _.Get().m_setPagedSettingsInstances.add(_),
-                () => {
-                  _.Get().m_setPagedSettingsInstances.delete(_);
-                }
-              ),
-              [_],
-            );
-            const _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = (0, _._)("scroll", _),
-              _ = (0, _._)("scroll", _),
-              _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _?.scrollTop ?? 0),
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _?.scrollTop ?? 0),
-                [_],
-              ),
-              _ = (0, _._)(_, _),
-              _ = (0, _._)(_, _);
-            return {
-              refForPageList: _,
-              refForPage: _,
-            };
-          })();
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  __webpack_require__.PagedSettingsDialog,
-                  _.className,
-                ),
-                ref: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(
-                    __webpack_require__.PagedSettingsDialog_PageListColumn,
-                    _.hideList && _().Hidden,
-                    "PageListColumn",
-                  ),
-                  navRef: _,
-                  onButtonDown: (_) => {
-                    _.detail.button == _._._ &&
-                      _.current?.TakeFocus(_.detail.button);
-                  },
-                  onFocusWithin: _,
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: __webpack_require__.PagedSettingsDialog_Title,
-                    },
-                    _.title,
-                  ),
-                _.topControls && _.createElement("div", null, _.topControls),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      __webpack_require__.PagedSettingsDialog_PageList,
-                      _.disablePageListScrolling &&
-                        __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                      _ &&
-                        __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
-                      _.bNoHeaderPadding &&
-                        __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
-                    ),
-                    role: "tablist",
-                    "aria-orientation": "vertical",
-                    navEntryPreferPosition: _._.PREFERRED_CHILD,
-                    ref: _,
-                  },
-                  _.createElement(_, {
-                    stylesheet: __webpack_require__,
-                    pages: _,
-                    iActivePage: _,
-                    onPageSelected: _,
-                    PageListItemComponent: _.PageListItemComponent,
-                    PageListSeparatorComponent: _.PageListSeparatorComponent,
-                  }),
-                ),
-                _.bottomControls &&
-                  _.createElement("div", null, _.bottomControls),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _,
-                  onCancelButton: _,
-                  navRef: _,
-                },
-                _.toggleHideList &&
-                  _.createElement(_, {
-                    hideList: _.hideList,
-                    toggleHideList: _.toggleHideList,
-                  }),
-                _.renderPageContent
-                  ? _.renderPageContent(_, _, _)
-                  : _.createElement(_, {
-                      ref: _,
-                      activePage: _,
-                      stylesheet: __webpack_require__,
-                    }),
-              ),
-            ),
-          );
-        });
-      const _ = _.createContext(!1);
-      _.memo(function (_) {
-        const {
-            isActive: _,
-            refForPage: __webpack_require__,
-            page: _,
-            PageComponent: _,
-            stylesheet: _,
-          } = _,
-          _ = _.useContext(_),
-          _ = _.useRef(!1);
-        if (!_ && !_.current) return null;
-        _.current = !0;
-        const _ = _
-          ? void 0
-          : {
-              display: "none",
-            };
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
-            ref: __webpack_require__,
-            style: _,
-            activePage: _,
-            stylesheet: _,
-            role: "tabpanel",
-            "aria-labelledby": _ + _.identifier,
-            _: _ + _.identifier + "_Content",
-          }),
-        );
-      });
-      function _(_) {
-        const { hideList: _, toggleHideList: __webpack_require__ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-            onClick: __webpack_require__,
-          },
-          _
-            ? _.createElement(_.b8_, {
-                direction: "right",
-              })
-            : _.createElement(_.b8_, {
-                direction: "left",
-              }),
-        );
-      }
-      class _ extends _.Component {
-        m_refTextArea = _.createRef();
-        m_nTextAreaPadding;
-        m_cEntryLength = Number.MAX_VALUE;
-        get textarea() {
-          return this.m_refTextArea.current;
-        }
-        get value() {
-          return this.m_refTextArea.current?.value;
-        }
-        focus() {
-          this.m_refTextArea.current?.focus();
-        }
-        InternalOnInput() {
-          const _ = this.m_refTextArea.current,
-            _ = this.GetMinHeight(),
-            _ = this.GetMaxHeight();
-          let _,
-            _ = _.value.length;
-          if (
-            (void 0 === this.m_nTextAreaPadding && this.CalculatePadding(),
-            _ < this.m_cEntryLength &&
-              ((_ = window.scrollY), (_.style.height = _ + "px")),
-            _.scrollHeight > _)
-          )
-            (_.style.height = _ + "px"), (_.style.overflow = "auto");
-          else if (_.scrollHeight != _.clientHeight) {
-            let _ = Math.max(_.scrollHeight, _);
-            (_.style.height = _ - this.m_nTextAreaPadding + "px"),
-              "auto" == _.style.overflow && (_.style.overflow = "hidden");
-          }
-          void 0 !== _ && window.scrollTo(window.scrollX, _),
-            (this.m_cEntryLength = _);
-        }
-        CalculatePadding() {
-          const _ = getComputedStyle(this.m_refTextArea.current);
-          this.m_nTextAreaPadding =
-            "border-box" == _.boxSizing
-              ? 0
-              : parseFloat(_.paddingTop) + parseFloat(_.paddingBottom);
-        }
-        GetMinHeight() {
-          return this.props.nMinHeight || 20;
-        }
-        GetMaxHeight() {
-          return this.props.nMaxHeight || 500;
-        }
-        DeferredInternalOnInput() {
-          window.setTimeout(this.InternalOnInput, 1);
-        }
-        OnKeyUp(_) {
-          this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(_);
-        }
-        OnBlur(_) {
-          this.DeferredInternalOnInput(),
-            this.props.onBlur && this.props.onBlur(_);
-        }
-        OnClick(_) {
-          this.InternalOnInput(), this.props.onClick && this.props.onClick(_);
-        }
-        OnPaste(_) {
-          this.DeferredInternalOnInput(),
-            this.props.onPaste && this.props.onPaste(_);
-        }
-        OnCut(_) {
-          this.InternalOnInput(), this.props.onCut && this.props.onCut(_);
-        }
-        componentDidMount() {
-          (this.m_refTextArea.current.style.overflow = "hidden"),
-            (this.m_refTextArea.current.style.resize = "none"),
-            this.InternalOnInput();
-        }
-        componentDidUpdate(_) {
-          (_.nMinHeight == this.props.nMinHeight &&
-            _.nMaxHeight == this.props.nMaxHeight) ||
-            (this.m_cEntryLength = Number.MAX_VALUE),
-            this.m_refTextArea.current?.value.length != this.m_cEntryLength &&
-              this.InternalOnInput();
-        }
-        render() {
-          const {
-            nMinHeight: _,
-            nMaxHeight: _,
-            ...__webpack_require__
-          } = this.props;
-          return _.createElement(_._, {
-            ...__webpack_require__,
-            ref: this.m_refTextArea,
-            onKeyUp: this.OnKeyUp,
-            onBlur: this.OnBlur,
-            onClick: this.OnClick,
-            onPaste: this.OnPaste,
-            onCut: this.OnCut,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "InternalOnInput", null),
-        (0, _._)([_._], _.prototype, "OnKeyUp", null),
-        (0, _._)([_._], _.prototype, "OnBlur", null),
-        (0, _._)([_._], _.prototype, "OnClick", null),
-        (0, _._)([_._], _.prototype, "OnPaste", null),
-        (0, _._)([_._], _.prototype, "OnCut", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const _ = _().ModalPosition ?? _;
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        let _,
-          _ = {};
-        _.onEscKeypress &&
-          ((_.tabIndex = 0),
-          (_.onKeyDown = (_) => {
-            27 == _.keyCode && _.onEscKeypress();
-          }),
-          (_.onMouseDown = (_) => {
-            _.currentTarget !== _.target ||
-              _.bDisableBackgroundDismiss ||
-              _.onEscKeypress();
-          }),
-          (_ = (_) => {
-            _ && (_._(_, _.ownerDocument.activeElement) || _.focus());
-          }));
-        let _ = ["ModalPosition"];
-        _.className && _.push(_.className),
-          _.bDestructiveWarning && _.push("Destructive");
-        const _ =
-            _.renderContent ||
-            ((_) =>
-              _.createElement("div", {
-                ..._,
-              })),
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            !_.hideTopBar &&
-              _.createElement("div", {
-                className: "ModalPosition_TopBar",
-              }),
-            _.onEscKeypress &&
-              !_.bHideCloseIcon &&
-              _.createElement(
-                "div",
-                {
-                  className: "ModalPosition_Dismiss",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: "closeButton",
-                    onClick: (_) => {
-                      _.stopPropagation(), _.onEscKeypress();
-                    },
-                  },
-                  _.createElement(_.sED, null),
-                ),
-              ),
-            _.createElement(_._, null, _.children),
-          );
-        return _.createElement(
-          "div",
-          {
-            className: _.join(" "),
-            ..._,
-            ref: _,
-          },
-          _({
-            className: "ModalPosition_Content",
-            children: _,
-          }),
-        );
-      }
-      async function _(_, _, _) {
-        const _ = _(_),
-          _ = _?.bForcePopOut || _(_);
-        (0, _._)(
-          !(_ && _?.bNeverPopOut),
-          "Conflicting popout options; will ignore bNeverPopOut",
-        );
-        const _ = !_ && !0 === _?.bNeverPopOut;
-        let _;
-        if (
-          (_(_) || (!_ && _(_, _))) &&
-          !(_ && _?.popupWidth && _?.popupHeight)
-        ) {
-          const _ = _.cloneElement(_, {
-            closeModal: () => {},
-          });
-          _ = await (async function (_, _, _) {
-            return new Promise((_, _) => {
-              _.RequestModalMeasure(_, _, _);
-            });
-          })(_, _, _?.promiseRenderComplete);
-        }
-        const _ =
-          _ && _.height / _.innerHeight < 0.9 && _.width / _.innerWidth < 0.8;
-        if (_ || (!_ && _))
-          return _(_, _, void 0, {
-            fnOnClose: _?.fnOnClose,
-          });
-        {
-          const _ = {
-              strTitle: _?.strTitle || (0, _._)("#Dialog_DefaultWindowTitle"),
-              fnOnClose: _?.fnOnClose,
-              popupWidth: _?.popupWidth || _?.width,
-              popupHeight: _?.popupHeight || _?.height,
-              bHideMainWindowForPopouts: _?.bHideMainWindowForPopouts,
-              className: _?.className,
-            },
-            _ = {
-              bHideActions: _?.bHideActionIcons,
-            },
-            _ = _?.browserContext || _.browserInfo;
-          return _(_, _, _.strTitle, _, _, _, _);
-        }
-      }
-      async function _(_, _, _) {
-        return _(_, _, {
-          bHideMainWindowForPopouts: !0,
-          ..._,
-        });
-      }
-      function _(_, _, _, _, _, _, _) {
-        let _, _;
-        const _ = _.props.closeModal,
-          _ = () => {
-            _ && _.Close(), _ && _(), _?.fnOnClose && _.fnOnClose();
-          },
-          _ = () => {
-            _ && _.Close(), _();
-          },
-          _ = _.cloneElement(_, {
-            closeModal: _,
-          });
-        if (_((_ = _ || _(_)), _) && _ && _) {
-          if (_.bHideMainWindowForPopouts) {
-            const _ = _.createElement(
-              _,
-              {
-                className: "Hidden",
-                onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
-              },
-              _.createElement("div", null),
-            );
-            _ = _.ShowModal(_);
-          }
-          const _ = {
-            ..._,
-            fnOnClose: _,
-            browserContext: _,
-          };
-          _ = _.ShowLegacyPopupModal(_, _, _, _);
-        } else _ = _.ShowModal(_);
-        return _;
-      }
-      function _(_, _) {
-        return (_ = _ || _(_ || window)), _._.USE_POPUPS && _.BUsePopups();
-      }
-      function _(_) {
-        return _.BOnlyPopups && _.BOnlyPopups();
-      }
-      const _ = (0, _._)((_) => {
-        const {
-            onCancel: _,
-            closeModal: __webpack_require__,
-            bOKDisabled: _,
-            onOK: _,
-          } = _,
-          _ = (0, _._)();
-        (0, _._)(
-          __webpack_require__ || _,
-          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_.className} ${_.modalClassName}`,
-        );
-        const _ = _.useCallback(() => {
-            (_ && _()) || (__webpack_require__ && __webpack_require__());
-          }, [_, __webpack_require__]),
-          _ = _.useCallback(async () => {
-            _ ||
-              (_ && (await _()), __webpack_require__ && __webpack_require__());
-          }, [_, _, __webpack_require__]);
-        return _.createElement(
-          _,
-          {
-            onEscKeypress: _,
-            className: _.modalClassName,
-            bDestructiveWarning: _.bDestructiveWarning,
-            bDisableBackgroundDismiss: _.bDisableBackgroundDismiss,
-            bHideCloseIcon: _.bHideCloseIcon,
-          },
-          _.createElement(
-            _,
-            {
-              classNameContent: (0, _._)(
-                "GenericConfirmDialog",
-                _.bAllowFullSize && "DialogContentFullSize",
-                _.className,
-              ),
-              onSubmit: _,
-              bCenterVertically: !_,
-            },
-            _.children,
-          ),
-        );
-      });
-      let _ = class extends _.Component {
-        Cancel(_) {
-          return () => {
-            _ && _(), this.props.closeModal && this.props.closeModal();
-          };
-        }
-        render() {
-          const {
-              strTitle: _,
-              strDescription: _,
-              strOKButtonText: __webpack_require__,
-              strCancelButtonText: _,
-              onGamepadCancel: _,
-              strMiddleButtonText: _,
-              onMiddleButton: _,
-              bAlertDialog: _,
-              children: _,
-              ..._
-            } = this.props,
-            _ = __webpack_require__ || (0, _._)("#Button_Close");
-          let _ = _.createElement(_, {
-            bOKDisabled: this.props.bOKDisabled,
-            bCancelDisabled: this.props.bCancelDisabled,
-            strOKText: __webpack_require__,
-            onCancel: this.Cancel(this.props.onCancel),
-            strCancelText: _,
-          });
-          return (
-            _
-              ? (_ = _.createElement(_, null, _))
-              : _ &&
-                (_ = _.createElement(_, {
-                  bOKDisabled: this.props.bOKDisabled,
-                  bCancelDisabled: this.props.bCancelDisabled,
-                  strOKText: __webpack_require__,
-                  onCancel: this.Cancel(this.props.onCancel),
-                  strCancelText: _,
-                  onUpdate: () => {
-                    _(), this.props.closeModal && this.props.closeModal();
-                  },
-                  strUpdateText: _,
-                  bUpdateDisabled: this.props.bMiddleDisabled,
-                })),
-            _.createElement(
-              _,
-              {
-                ..._,
-              },
-              _.createElement(
-                _,
-                null,
-                " ",
-                _ || _.createElement(_.Fragment, null, " "),
-                " ",
-              ),
-              _.createElement(
-                _,
-                {
-                  onCancelButton: this.Cancel(_ || this.props.onCancel),
-                },
-                _.createElement(_, null, _, _),
-                _.createElement(_, null, _),
-              ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          const _ = {
-            strTitle: (0, _._)("#Error_FailureNotice"),
-            strDescription: (0, _._)("#Error_GenericFailureDescription"),
-            bAlertDialog: !0,
-            bDestructiveWarning: !0,
-            onOK: () => {},
-            onCancel: () => {},
-            ...this.props,
-          };
-          return _.createElement(_, {
-            ..._,
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          let _ = {
-            onOK: () => {},
-            onCancel: () => {},
-            bAlertDialog: !0,
-            ...this.props,
-          };
-          return (
-            (_.strDescription = _.createElement(
-              "span",
-              {
-                style: {
-                  whiteSpace: "pre-line",
-                },
-              },
-              " ",
-              _.strDescription,
-              " ",
-            )),
-            _.createElement(_, {
-              ..._,
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      function _(_) {
-        return _ ? _ + "_Label" : void 0;
-      }
-      function _(_) {
-        return _ ? _ + "_Description" : void 0;
-      }
-      function _(_, _) {
-        const { label: __webpack_require__, description: _ } = _;
-        return {
-          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
-          "aria-describedby": _ ? _(_) : void 0,
-        };
-      }
-      const _ = _.forwardRef(function (_, _) {
-        const {
-            accessibilityId: __webpack_require__,
-            label: _,
-            description: _,
-            icon: _,
-            children: _,
-            childrenLayout: _,
-            inlineWrap: _,
-            childrenContainerWidth: _,
-            spacingBetweenLabelAndChild: _,
-            padding: _,
-            disabled: _,
-            bottomSeparator: _,
-            className: _,
-            highlightOnFocus: _,
-            indentLevel: _,
-            verticalAlignment: _,
-            iconLocation: _,
-            tooltip: _,
-            explainer: _,
-            explainerTitle: _,
-            ..._
-          } = _,
-          _ = (0, _._)(),
-          _ = _ ?? "inline",
-          _ = _ ?? "front",
-          _ = "front" == _ && !!_,
-          _ = "before-children" == _ && !!_,
-          _ = "inline" == _ && !!_,
-          _ = "below" == _ && !!_,
-          _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
-          _ = !!(_.onClick || _.onActivate || _.focusable),
-          _ = (null != _ && _) || null != _ || (_ && null != _),
-          _ = _ ?? "min",
-          _ = _ ?? "standard",
-          _ = _ ?? "standard",
-          _ = _ ?? "standard",
-          _ = _ ?? !0,
-          _ = _ ?? 0,
-          _ = _ ?? "center",
-          _ = (function (_, _) {
-            const _ = _(),
-              _ = _.useCallback(() => {
-                var _, _, _;
-                (_ = _),
-                  (_ = _),
-                  (_ = _.ownerWindow ?? window),
-                  _(
-                    _.createElement(_, {
-                      strTitle: _,
-                      strDescription: _,
-                    }),
-                    _,
-                  );
-              }, [_, _, _]);
-            if (null == _) return {};
-            const _ = (0, _._)("#Field_MoreInfo_Action");
-            return {
-              onOptionsButton: _,
-              onOptionsActionDescription: _,
-            };
-          })(_ ?? _, _),
-          _ = _.useRef(),
-          _ = (0, _._)(_, _.navRef),
-          _ = _.useCallback(
-            (_) => {
-              _.current?.TakeFocus(), _.preventDefault();
-            },
-            [_],
-          );
-        return _.createElement(
-          _._,
-          {
-            focusable: _,
-            noFocusRing: !0,
-            scrollIntoViewWhenChildFocused: !0,
-            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
-            ref: _,
-            onMouseDown: _ ? void 0 : _,
-            ..._,
-            ..._,
-            navRef: _,
-            className: (0, _._)(
-              _,
-              _().Field,
-              _ && _().Disabled,
-              _ && _().WithFirstRow,
-              _ && _().WithChildrenInline,
-              _ && _().WithChildrenBelow,
-              "center" == _ && _().VerticalAlignCenter,
-              "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
-              !!_ && _().WithDescription,
-              "standard" == _ && _().WithBottomSeparatorStandard,
-              "thick" == _ && _().WithBottomSeparatorThick,
-              "fixed" == _ && _().ChildrenWidthFixed,
-              "max" == _ && _().ChildrenWidthGrow,
-              "standard" == _ && _().ExtraPaddingOnChildrenBelow,
-              "standard" == _ && _().StandardPadding,
-              "compact" == _ && _().CompactPadding,
-              _ && _().Clickable,
-              _ && _().HighlightOnFocus,
-            ),
-            style: {
-              "--indent-level": _,
-            },
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().FieldLabelRow,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldLabel,
-                  _: _(__webpack_require__),
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().FieldIcon, _().Front),
-                    },
-                    _,
-                  ),
-                _,
-                _ &&
-                  _.createElement(_, {
-                    tooltip: _,
-                  }),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().FieldChildrenWithIcon,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      },
-                      _,
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().FieldChildrenInner,
-                    },
-                    _,
-                  ),
-                ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().FieldChildrenWithIcon,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().FieldChildrenInner,
-                },
-                _,
-              ),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().FieldDescription,
-                _: _(__webpack_require__),
-              },
-              _,
-            ),
-        );
-      });
-      _.forwardRef(function (_, _) {
-        const {
-            label: __webpack_require__,
-            description: _,
-            explainer: _,
-            icon: _,
-            layout: _,
-            disabled: _,
-            onActivate: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenContainerWidth: _,
-            padding: _,
-            inlineWrap: _,
-            fieldClassName: _,
-            fieldChildren: _,
-            accessibilityNameOrder: _ = ["label", "button"],
-            ..._
-          } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_),
-          _ = _.useId(),
-          _ = (function (_, _, _) {
-            const _ = _.useId(),
-              _ = _(_, _),
-              _ = {
-                _: _,
-                "aria-labelledby": "",
-              };
-            return (
-              (_["aria-labelledby"] = __webpack_require__
-                .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
-                .join(" ")),
-              (_["aria-describedby"] = _["aria-describedby"]),
-              _
-            );
-          })(_, _, _);
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenLayout: _ ?? "inline",
-            childrenContainerWidth: _ ?? "min",
-            onMouseDown: (_) => {
-              _.current?.focus(), _.preventDefault();
-            },
-            padding: _,
-            inlineWrap: _,
-            explainer: _,
-            className: _,
-            disabled: _,
-            onActivate: _ ? _ : void 0,
-          },
-          _.createElement(_, {
-            ..._,
-            ..._,
-            disabled: _,
-            ref: _,
-          }),
-          _,
-        );
-      });
-      const _ = _.forwardRef(function (_, _) {
-        const {
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            layout: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            ..._
-          } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_),
-          _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenLayout: _ ?? "inline",
-            childrenContainerWidth: "fixed",
-            onMouseDown: (_) => {
-              _.current?.element?.focus(), _.preventDefault();
-            },
-          },
-          _.createElement(_, {
-            ..._,
-            ref: _,
-          }),
-        );
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            childrenKey: _,
-            childrenClasses: __webpack_require__,
-            children: _,
-            directionClass: _,
-            animate: _ = !0,
-          } = _,
-          _ = (0, _._)(_().TransitionGroup, _);
-        return _.createElement(
-          _._,
-          {
-            className: _,
-            appear: !1,
-            enter: _,
-            exit: _,
-          },
-          _.createElement(
-            _,
-            {
-              key: _,
-              childrenClasses: __webpack_require__,
-            },
-            _,
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            sizeClass: _,
-            children: __webpack_require__,
-            childrenClasses: _,
-            navKey: _,
-            ..._
-          } = _,
-          [_, _, _, _] = (function () {
-            let _ = _.useRef(null),
-              _ = _.useRef();
-            _.useLayoutEffect(() => {
-              let _ = _.current;
-              if (!_ || _.current) return;
-              _.current = {
-                element: _,
-                activeProps: new Set(),
-                bExiting: !1,
-                fnDone: null,
-              };
-              let _ = _.current,
-                _ = (_) => {
-                  _.target == _ && _.activeProps.add(_.propertyName);
-                };
-              __webpack_require__.addEventListener("transitionrun", _, !1);
-              let _ = (_) => {
-                _.target == _ &&
-                  (_.activeProps.delete(_.propertyName),
-                  _.fnDone &&
-                    0 == _.activeProps.size &&
-                    _.bExiting &&
-                    _.fnDone());
-              };
-              __webpack_require__.addEventListener("transitionend", _, !1),
-                __webpack_require__.addEventListener("transitioncancel", _, !1);
-            }, []);
-            let _ = _.useCallback(
-                (_) => {
-                  _.current ? (_.current.fnDone = _) : _();
-                },
-                [_],
-              ),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !1);
-              }, [_]),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !0);
-              }, [_]);
-            return [_, _, _, _];
-          })(),
-          _ = _.useRef(!0),
-          _ = _.useCallback(() => _.current, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !0), _();
-          }, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !1), _();
-          }, [_]),
-          _ = _.childrenClasses,
-          _ = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
-          };
-        return _.current && !_.current.ownerDocument.defaultView
-          ? null
-          : _.createElement(
-              _._,
-              {
-                nodeRef: _,
-                classNames: _,
-                _: !0,
-                timeout: 1e4,
-                addEndListener: _,
-                onEntering: _,
-                onExiting: _,
-                ..._,
-              },
-              _.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: (0, _._)(_().ContentWrapper, _, _.base),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _,
-                    fnCanTakeFocus: _,
-                    navKey: _,
-                  },
-                  _.children,
-                ),
-              ),
-            );
-      }
-      function _(_, _) {
-        return {
-          base: _,
-          enterStart: _.Enter,
-          enterEnd: _.EnterActive,
-          exitStart: _.Exit,
-          exitEnd: _.ExitActive,
-        };
-      }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Left = 1)] = "Left"),
-          (_[(_.Right = 2)] = "Right"),
-          (_[(_._ = 3)] = "Up"),
-          (_[(_.Down = 4)] = "Down");
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _.useContext(_),
-          _ = (0, _._)().IN_VR,
-          { title: _, icon: _, active: _, ..._ } = _;
-        return _.createElement(
-          _._,
-          {
-            preferredFocus: _,
-            navRef: _ && _ ? _ : void 0,
-            noFocusRing: !0,
-            onActivate: _ ? void 0 : _.onClick,
-            onFocus: _ ? void 0 : _.onClick,
-            ..._,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().PageListItem_Icon,
-              },
-              _,
-            ),
-          _.createElement(
-            "div",
-            {
-              className: _().PageListItem_Title,
-            },
-            _,
-          ),
-        );
-      }
-      function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
-        return _.createElement("div", {
-          className: (0, _._)(__webpack_require__, _().Separator),
-          ..._,
-        });
-      }
-      _.forwardRef(function (_, _) {
-        const {
-            page: __webpack_require__,
-            bAutoFocusPageContent: _,
-            showTitle: _ = !1,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(!0);
-        _.useEffect(() => {
-          (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
-        }, [__webpack_require__, _]);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(_, {
-            ..._,
-            stylesheet: _(),
-            showTitle: _,
-            PageListItemComponent: _,
-            PageListSeparatorComponent: _,
-            renderPageContent:
-              _.renderPageContent ||
-              ((_, _, _) =>
-                _.createElement(_, {
-                  pages: _.pages,
-                  activePage: _,
-                  refForPage: _,
-                  PageComponent: _,
-                })),
-          }),
-        );
-      });
-      function _(_) {
-        const {
-            pages: _,
-            activePage: __webpack_require__,
-            refForPage: _,
-            PageComponent: _,
-          } = _,
-          _ = (function (_) {
-            let _ = _.useRef(_),
-              _ = _.useRef(_.None),
-              _ = _.current;
-            if (_ == _) return _.current;
-            let _ = _.None;
-            _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
-            return (_.current = _), (_.current = _), _;
-          })(
-            _.useMemo(
-              () => _.findIndex((_) => _ == __webpack_require__),
-              [_, __webpack_require__],
-            ),
-          ),
-          _ = (function (_, _) {
-            const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef();
-            _.current = _;
-            const _ = _.useRef();
-            _.current = _;
-            const _ = _.useCallback(
-              (_) => (_) => {
-                __webpack_require__.set(_, _),
-                  _ === _.current && (0, _._)(_.current, _);
-              },
-              [_],
-            );
-            return (
-              _.useEffect(
-                () => (
-                  (0, _._)(_, _ && __webpack_require__.get(_)),
-                  () => (0, _._)(_, void 0)
-                ),
-                [_, _, _],
-              ),
-              _
-            );
-          })(__webpack_require__?.identifier, _);
-        let _ =
-          ((_ = _()),
-          (_ = _) == _.Left
-            ? _.Left
-            : _ == _.Right
-              ? _.Right
-              : _ == _._
-                ? _._
-                : _ == _.Down
-                  ? _.Down
-                  : "");
-        var _, _;
-        return _.createElement(
-          _,
-          {
-            childrenKey: __webpack_require__?.identifier,
-            childrenClasses: _(_(), _().ContentTransition),
-            directionClass: _,
-            animate: _ != _.None,
-          },
-          __webpack_require__ &&
-            _.createElement(_, {
-              ref: _(__webpack_require__.identifier),
-              key: __webpack_require__.identifier,
-              stylesheet: _(),
-              activePage: __webpack_require__,
-            }),
-        );
-      }
-      _.forwardRef(function (_, _) {
-        return _.createElement(_._, {
-          noFocusRing: !0,
-          ..._,
-          ref: _,
-          className: (0, _._)(_().BasicTextInput, _.className),
-          size: _.size ?? 1,
-        });
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      _.forwardRef(function (_, _) {
-        const {
-            className: __webpack_require__,
-            opened: _,
-            arrowClassName: _,
-            "aria-labelledby": _ = "",
-            ..._
-          } = _,
-          _ = _.useId(),
-          _ = _ + " " + _;
-        return _.createElement(
-          _,
-          {
-            _: _,
-            className: (0, _._)(_().DropDownControlButton, __webpack_require__),
-            "aria-labelledby": _,
-            ..._,
-            ref: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DropDownControlButtonContents,
-            },
-            _.createElement(
-              "div",
-              {
-                className: "DialogDropDown_CurrentDisplay",
-              },
-              _.children,
-            ),
-            _.createElement(_.u49, {
-              direction: "down",
-            }),
-          ),
-        );
-      });
-      var _ = __webpack_require__("chunkid");
-      _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, ..._ } = _;
-        let _ = _.useRef(),
-          _ = (0, _._)(_, _);
-        const [_, _] = _.useState(!1),
-          _ = _.useCallback(() => {
-            _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
-          }, []);
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__,
-            onOptionsButton: _,
-            onOptionsActionDescription: (0, _._)(
-              _ ? "#Login_HidePassword" : "#Login_ShowPassword",
-            ),
-          },
-          _.createElement(_, {
-            autoComplete: "off",
-            ref: _,
-            inlineControls: _.createElement(
-              _,
-              {
-                className: _.TogglePasswordVisibilityBtn,
-                onPointerDown: _,
-                onOKButton: _,
-              },
-              _ ? _.createElement(_.rxV, null) : _.createElement(_.ZyV, null),
-            ),
-            ..._,
-            type: _ ? "text" : "password",
-          }),
-        );
-      });
-      _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, value: _, ..._ } = _,
-          _ = _ ?? "";
-        return _.createElement(_, {
-          autoComplete: "off",
-          value: _,
-          ref: _,
-          placeholder: "   .   .   .   ",
-          ..._,
-          onChange: (_) => {
-            !(function (_) {
-              const _ = _.split(".");
-              if (_.length > 4) return !1;
-              for (let _ = 0; _ < _.length; _++) {
-                const _ = _[_];
-                if ("" == _) {
-                  if (_ == _.length - 1) continue;
-                  return !1;
-                }
-                if (!/^[0-9]*$/.test(_)) return !1;
-                const _ = parseInt(_);
-                if (!(_ >= 0 && _ <= 255)) return !1;
-              }
-              return !0;
-            })(_.target.value)
-              ? (_.target.value = _)
-              : _.onChange && _.onChange(_);
-          },
-        });
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _, _) {
-        const _ = `${_}_HistoryValue`,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (_.state && _.state[_]) ?? _,
-          _ = _.useRef(!1),
-          _ = _.useRef(),
-          _ = _.useRef(),
-          _ = _.useCallback(
-            (_) => {
-              if (_.current && ((_.current = _), !_.current)) {
-                const _ = _.location.pathname;
-                _.current = window.setTimeout(() => {
-                  _.location.pathname != _ ||
-                    (_.location.state && _.location.state[_] == _.current) ||
-                    _.replace(_.location.pathname, {
-                      ...(_.location.state || {}),
-                      [_]: _.current,
-                    }),
-                    (_.current = void 0);
-                }, _);
-              }
-            },
-            [_, _, _],
-          );
-        return (
-          _.useEffect(() => {
-            _.current = !0;
-          }, []),
-          [_, _]
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _ = "smooth", _, _) {
-        const _ = (_ ?? 30) / 100,
-          _ = _.useRef(void 0),
-          _ = _.useRef(void 0),
-          _ = _.useCallback(() => {
-            (_.current = void 0), (_.current = void 0);
-          }, []),
-          _ = (function (_, _) {
-            const _ = _.useRef();
-            return _.useCallback(
-              (_, _) => {
-                let _ = "sine";
-                if (
-                  (_.current && (_.current.Cancel(), (_ = "linear")),
-                  !_.current)
-                )
-                  return;
-                void 0 === _ && (_ = _.current.scrollTop),
-                  void 0 === _ && (_ = _.current.scrollLeft);
-                let _ = Math.max(
-                  Math.abs(_.current.scrollTop - _),
-                  Math.abs(_.current.scrollLeft - _),
-                );
-                if (_ > 0) {
-                  let _ = Math.max(Math.min((_ / 1e3) * 200, 500), 300);
-                  (_.current = new _(
-                    _.current,
-                    {
-                      scrollTop: _,
-                      scrollLeft: _,
-                    },
-                    {
-                      msDuration: _,
-                      timing: _,
-                      onComplete: _,
-                    },
-                  )),
-                    _.current.Start();
-                } else _ && _();
-              },
-              [_, _],
-            );
-          })(_, _);
-        return _.useCallback(
-          (_) => {
-            if (_ && !_(_)) return !1;
-            if (_.defaultPrevented) return !1;
-            if (!_.current) return !1;
-            const {
-                scrollTop: _,
-                scrollHeight: _,
-                clientHeight: _,
-                scrollLeft: _,
-                scrollWidth: _,
-                clientWidth: _,
-              } = _.current,
-              _ = _.current ?? _,
-              _ = _.current ?? _;
-            switch (_.detail.button) {
-              case _._.DIR_UP:
-                if (_ <= 2) return !1;
-                _.current = Math.max(0, _ - _ * _);
-                break;
-              case _._.DIR_DOWN:
-                if (_ >= _ - _ - 2) return !1;
-                _.current = Math.min(_ - _, _ + _ * _);
-                break;
-              case _._.DIR_LEFT:
-                if (_ <= 2) return !1;
-                _.current = Math.max(0, _ - _ * _);
-                break;
-              case _._.DIR_RIGHT:
-                if (_ >= _ - _ - 2) return !1;
-                _.current = Math.min(_ - _, _ + _ * _);
-                break;
-              default:
-                return !1;
-            }
-            return (
-              _ && "smooth" != _
-                ? (_.current.scrollTo({
-                    top: _.current,
-                    left: _.current,
-                    behavior: "auto",
-                  }),
-                  _())
-                : _(_.current, _.current),
-              !0
-            );
-          },
-          [_, _, _, _, _, _],
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("FocusNavigation").Debug;
-      function _(_) {
-        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
-          [_, _] = _.useState({
-            bFocusWithin: !1,
-            navTarget: null,
-            prevTarget: null,
-          }),
-          _ = _.useRef(null),
-          _ = _.useMemo(
-            () => ({
-              OnBlur: (_, _, _) => {
-                _({
-                  bFocusWithin: !1,
-                  navTarget: null,
-                  prevTarget: null,
-                });
-              },
-              OnFocus: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: null,
-                });
-              },
-              OnFocusChange: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: _,
-                });
-              },
-              OnForceMeasureFocusRing: () => {
-                _.current?.MeasureElementAndUpdate();
-              },
-            }),
-            [_],
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
-          !__webpack_require__ &&
-            _.createElement(_, {
-              ..._,
-              ..._,
-              refMeasure: _,
-            }),
-          _.createElement(
-            _._.Provider,
-            {
-              value: _,
-            },
-            _,
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            rootClassName: _,
-            className: __webpack_require__,
-            bFocusWithin: _,
-            navTarget: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(!1);
-        return _ || _
-          ? _.createElement(
-              "div",
-              {
-                className: _()(_().FocusRingRoot, _),
-                ref: _,
-              },
-              _.createElement(_, {
-                refMeasure: _,
-                className: _()(__webpack_require__, _ && _().DebugFocusRing),
-                bFocusWithin: _ && (_ || _),
-                navTarget: _,
-                elContainer: _,
-                bDebug: _,
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const {
-            className: _,
-            bFocusWithin: __webpack_require__,
-            navTarget: _,
-            elContainer: _,
-            bDebug: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          [_, _] = _.useReducer((_) => _ + 1, 0),
-          [_, _] = _.useReducer((_) => _ + 1, 0);
-        (0, _._)(
-          _,
-          _.useMemo(
-            () => ({
-              MeasureElementAndUpdate: _,
-            }),
-            [],
-          ),
-        );
-        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
-          _ = _ && !_,
-          _ = (function (_, _) {
-            const [__webpack_require__, _] = _.useState(!1);
-            return (
-              (0, _.useEffect)(() => {
-                if (_ && _) {
-                  let _ = _.GetBoundingRect(),
-                    _ = _.Element;
-                  const _ = _.ownerDocument.defaultView,
-                    _ = (_) =>
-                      "none" == _.getComputedStyle(_).display ||
-                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
-                  for (; _(_) && _?.parentElement; )
-                    (_ = _.parentElement),
-                      (_ = __webpack_require__.getBoundingClientRect());
-                  let _ = _.Element != _;
-                  _(
-                    (_) => (
-                      _ &&
-                        _ != _ &&
-                        _(
-                          "Focused on hidden item: ",
-                          _.Element,
-                          ". Closest visible ancestor: ",
-                          _,
-                        ),
-                      _
-                    ),
-                  );
-                }
-              }, [_, _]),
-              __webpack_require__
-            );
-          })(_, _),
-          _ = _.useCallback(() => {
-            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
-            const _ = _.getBoundingClientRect(),
-              _ = {
-                left: _._ - _._,
-                top: _._ - _._,
-                height: _.height,
-                width: _.width,
-              };
-            _((_) =>
-              _ &&
-              _.left == _.left &&
-              _.top == _.top &&
-              _.height == _.height &&
-              _.width == _.width
-                ? _
-                : _,
-            );
-          }, [_, _, _]);
-        _.useLayoutEffect(() => _(), [_]),
-          _.useLayoutEffect(() => {
-            _();
-          }, [_]);
-        let _ = __webpack_require__;
-        return (
-          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
-          _.useEffect(() => {
-            if (!_) return;
-            const _ = performance.now();
-            let _;
-            const _ = () => {
-              _(),
-                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
-            };
-            return __webpack_require__(), () => cancelAnimationFrame(_);
-          }, [_, _, _, _]),
-          _ && _
-            ? _.createElement(_, {
-                ..._,
-                key: _,
-                className: _()(_, _ && _().FocusRingOnHiddenItem),
-                target: _,
-              })
-            : null
-        );
-      }
-      function _(_) {
-        const {
-            className: _,
-            left: __webpack_require__,
-            top: _,
-            height: _,
-            width: _,
-            target: _,
-          } = _,
-          _ = {
-            left: (__webpack_require__ ?? 0) - 0 + "px",
-            top: (_ ?? 0) - 0 + "px",
-            height: _ + "px",
-            width: _ + "px",
-          };
-        return _.createElement("div", {
-          className: _()(_().FocusRing, _),
-          style: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.forwardRef(function (_, _) {
-          const {
-            scrollDirection: __webpack_require__,
-            scrollPaddingTop: _,
-            scrollPaddingRight: _,
-            scrollPaddingBottom: _,
-            scrollPaddingLeft: _,
-            className: _,
-            children: _,
-            style: _,
-            ..._
-          } = _;
-          let _;
-          switch (__webpack_require__) {
-            case "x":
-              _ = _().ScrollX;
-              break;
-            case "both":
-              _ = _().ScrollBoth;
-              break;
-            default:
-              _ = _().ScrollY;
-          }
-          let _ = {
-            ..._,
-          };
-          (_ || 0 === _) && (_.scrollPaddingTop = _),
-            (_ || 0 === _) && (_.scrollPaddingRight = _),
-            (_ || 0 === _) && (_.scrollPaddingBottom = _),
-            (_ || 0 === _) && (_.scrollPaddingLeft = _);
-          const { ref: _, navRef: _ } = (function () {
-              const _ = _.useRef(null),
-                _ = _.useCallback(
-                  (_) => {
-                    window.requestAnimationFrame(() => {
-                      _.current?.BFocusWithin() &&
-                        _.current
-                          .Node()
-                          ?.GetLastFocusElement()
-                          ?.scrollIntoView({
-                            behavior: "auto",
-                            block: "nearest",
-                          });
-                    });
-                  },
-                  [_],
-                );
-              return {
-                ref: (0, _._)(_),
-                navRef: _,
-              };
-            })(),
-            _ = (0, _._)(_, _.navRef),
-            _ = (0, _._)(_, _);
-          return _.createElement(
-            _._,
-            {
-              ..._,
-              style: _,
-              className: _()(_, _().ScrollPanel, _),
-              ref: _,
-              navRef: _,
-            },
-            _.createElement(_, null, _),
-          );
-        }),
-        _ = _.forwardRef(function (_, _) {
-          const {
-              scrollStepPercent: __webpack_require__,
-              scrollBehavior: _,
-              ..._
-            } = _,
-            _ = _.useRef(null),
-            _ = _(
-              _,
-              _,
-              __webpack_require__,
-              _.useCallback((_) => _.currentTarget != _.target, []),
-            ),
-            _ = (0, _._)(_, _);
-          return _.createElement(_, {
-            ..._,
-            onGamepadDirection: _,
-            ref: _,
-            scrollIntoViewType: _._.NoTransformSparseContent,
-          });
-        });
-      _.forwardRef(function (_, _) {
-        const {
-          name: __webpack_require__,
-          msScrollRestoreDelay: _,
-          onScroll: _,
-          ..._
-        } = _;
-        return _.createElement(
-          _,
-          {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            parentOnScroll: _,
-            refDiv: _,
-          },
-          (_, _) =>
-            _.createElement(_, {
-              ..._,
-              onScroll: _,
-              ref: _,
-            }),
-        );
-      }),
-        _.forwardRef(function (_, _) {
-          const {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            onScroll: _,
-            ..._
-          } = _;
-          return _.createElement(
-            _,
-            {
-              name: __webpack_require__,
-              msScrollRestoreDelay: _,
-              parentOnScroll: _,
-              refDiv: _,
-            },
-            (_, _) =>
-              _.createElement(_, {
-                ..._,
-                onScroll: _,
-                ref: _,
-              }),
-          );
-        });
-      function _(_) {
-        const {
-            name: _,
-            msScrollRestoreDelay: __webpack_require__,
-            parentOnScroll: _,
-            refDiv: _,
-            children: _,
-          } = _,
-          [_, _] = _(`${_}ScrollTop`, 250, 0),
-          [_, _] = _(`${_}ScrollLeft`, 250, 0),
-          _ = _.useRef(0),
-          _ = _.useRef(0),
-          _ = _.useRef();
-        let _ = _.useCallback(
-          (_) => {
-            const { scrollTop: _, scrollLeft: __webpack_require__ } =
-              _.currentTarget;
-            _(_),
-              (_.current = _),
-              _(__webpack_require__),
-              (_.current = __webpack_require__),
-              _ && _(_);
-          },
-          [_, _, _],
-        );
-        _.useLayoutEffect(() => {
-          const _ = function () {
-            _.current &&
-              ((0, _._)(
-                _.current.scrollHeight >= _,
-                `Element is ${_.current.scrollHeight} high but trying to restore scrollTop of ${_}, element may need more time to lay out.`,
-                _.current,
-              ),
-              (_.current = _),
-              (_.current = _),
-              _.current.scrollTo({
-                top: _,
-                left: _,
-                behavior: "auto",
-              }),
-              _.current.dispatchEvent(new UIEvent("scroll")));
-          };
-          (_ == _.current && _ == _.current) ||
-            (__webpack_require__
-              ? window.setTimeout(_, __webpack_require__)
-              : _());
-        }, [_, _, __webpack_require__]);
-        const _ = (0, _._)(_, _);
-        return _.useMemo(() => _(_, _), [_, _, _]);
-      }
-      const _ = _.forwardRef(function (_, _) {
-        const {
-            onExplicitFocusLevelChanged: __webpack_require__,
-            onOKButton: _,
-            onCancelButton: _,
-            navRef: _,
-            focusable: _,
-            ..._
-          } = _,
-          _ = _.useRef(null),
-          { fnOnOKButton: _, fnOnCancelButton: _ } = _({
-            navRefPanel: _,
-            onOKButton: _,
-            onCancelButton: _,
-            onExplicitFocusLevelChanged: __webpack_require__,
-          }),
-          _ = (0, _._)(_, _);
-        return _.createElement(_._, {
-          ..._,
-          onOKButton: _,
-          onCancelButton: _,
-          navRef: _,
-          ref: _,
-          focusable: !1 !== _,
-        });
-      });
-      _.forwardRef(function (_, _) {
-        const {
-            onOKButton: __webpack_require__,
-            onCancelButton: _,
-            navRef: _,
-            focusable: _,
-            ..._
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useCallback((_, _) => _.FocusVisibleChild(), []),
-          { fnOnOKButton: _, fnOnCancelButton: _ } = _({
-            navRefPanel: _,
-            onOKButton: __webpack_require__,
-            onCancelButton: _,
-            fnFocusChildren: _,
-          }),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(_, _);
-        return _.createElement(_, {
-          ..._,
-          onOKButton: (_) => _?.(_),
-          onCancelButton: _,
-          navRef: _,
-          ref: _,
-          focusable: !1 !== _,
-        });
-      });
-      function _(_) {
-        let {
-          navRefPanel: _,
-          onOKButton: __webpack_require__,
-          onCancelButton: _,
-          onExplicitFocusLevelChanged: _,
-          fnFocusChildren: _,
-        } = _;
-        _ = _ ?? _;
-        const _ = _.useCallback(
-            (_) => {
-              const _ = _.current;
-              return _?.BHasFocus() && _(_, _.detail.button)
-                ? (_ && _(!0), !0)
-                : !!__webpack_require__ && __webpack_require__(_);
-            },
-            [_, __webpack_require__, _, _],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _.current;
-              return __webpack_require__?.BFocusWithin() &&
-                !__webpack_require__.BHasFocus() &&
-                __webpack_require__.TakeFocus(_.detail.button)
-                ? (_ && _(!1), !0)
-                : !!_ && _(_);
-            },
-            [_, _, _],
-          );
-        return {
-          fnOnOKButton: _,
-          fnOnCancelButton: _,
-        };
-      }
-      function _(_, _) {
-        return _.ChildTakeFocus(_);
-      }
-      var _, _, _, _, _, _;
-      !(function (_) {
-        (_[(_.Invalid = 0)] = "Invalid"),
-          (_[(_.TrackingSystemName_String = 1e3)] =
-            "TrackingSystemName_String"),
-          (_[(_.ModelNumber_String = 1001)] = "ModelNumber_String"),
-          (_[(_.SerialNumber_String = 1002)] = "SerialNumber_String"),
-          (_[(_.RenderModelName_String = 1003)] = "RenderModelName_String"),
-          (_[(_.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
-          (_[(_.ManufacturerName_String = 1005)] = "ManufacturerName_String"),
-          (_[(_.TrackingFirmwareVersion_String = 1006)] =
-            "TrackingFirmwareVersion_String"),
-          (_[(_.HardwareRevision_String = 1007)] = "HardwareRevision_String"),
-          (_[(_.AllWirelessDongleDescriptions_String = 1008)] =
-            "AllWirelessDongleDescriptions_String"),
-          (_[(_.ConnectedWirelessDongle_String = 1009)] =
-            "ConnectedWirelessDongle_String"),
-          (_[(_.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
-          (_[(_.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
-          (_[(_.DeviceBatteryPercentage_Float = 1012)] =
-            "DeviceBatteryPercentage_Float"),
-          (_[(_.StatusDisplayTransform_Matrix34 = 1013)] =
-            "StatusDisplayTransform_Matrix34"),
-          (_[(_.Firmware_UpdateAvailable_Bool = 1014)] =
-            "Firmware_UpdateAvailable_Bool"),
-          (_[(_.Firmware_ManualUpdate_Bool = 1015)] =
-            "Firmware_ManualUpdate_Bool"),
-          (_[(_.Firmware_ManualUpdateURL_String = 1016)] =
-            "Firmware_ManualUpdateURL_String"),
-          (_[(_.HardwareRevision_Uint64 = 1017)] = "HardwareRevision_Uint64"),
-          (_[(_.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
-          (_[(_.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
-          (_[(_.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
-          (_[(_.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
-          (_[(_.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
-          (_[(_.BlockServerShutdown_Bool = 1023)] = "BlockServerShutdown_Bool"),
-          (_[(_.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
-            "CanUnifyCoordinateSystemWithHmd_Bool"),
-          (_[(_.ContainsProximitySensor_Bool = 1025)] =
-            "ContainsProximitySensor_Bool"),
-          (_[(_.DeviceProvidesBatteryStatus_Bool = 1026)] =
-            "DeviceProvidesBatteryStatus_Bool"),
-          (_[(_.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
-          (_[(_.Firmware_ProgrammingTarget_String = 1028)] =
-            "Firmware_ProgrammingTarget_String"),
-          (_[(_.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
-          (_[(_.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
-          (_[(_.DriverVersion_String = 1031)] = "DriverVersion_String"),
-          (_[(_.Firmware_ForceUpdateRequired_Bool = 1032)] =
-            "Firmware_ForceUpdateRequired_Bool"),
-          (_[(_.ViveSystemButtonFixRequired_Bool = 1033)] =
-            "ViveSystemButtonFixRequired_Bool"),
-          (_[(_.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
-          (_[(_.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
-          (_[(_.RegisteredDeviceType_String = 1036)] =
-            "RegisteredDeviceType_String"),
-          (_[(_.InputProfilePath_String = 1037)] = "InputProfilePath_String"),
-          (_[(_.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
-          (_[(_.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
-          (_[(_.CameraFrameLayout_Int32 = 1040)] = "CameraFrameLayout_Int32"),
-          (_[(_.CameraStreamFormat_Int32 = 1041)] = "CameraStreamFormat_Int32"),
-          (_[(_.AdditionalDeviceSettingsPath_String = 1042)] =
-            "AdditionalDeviceSettingsPath_String"),
-          (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
-          (_[(_.ActualTrackingSystemName_String = 1054)] =
-            "ActualTrackingSystemName_String"),
-          (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
-            "ReportsTimeSinceVSync_Bool"),
-          (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
-            "SecondsFromVsyncToPhotons_Float"),
-          (_[(_.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
-          (_[(_.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
-          (_[(_.CurrentUniverseId_Uint64 = 2004)] = "CurrentUniverseId_Uint64"),
-          (_[(_.PreviousUniverseId_Uint64 = 2005)] =
-            "PreviousUniverseId_Uint64"),
-          (_[(_.DisplayFirmwareVersion_Uint64 = 2006)] =
-            "DisplayFirmwareVersion_Uint64"),
-          (_[(_.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
-          (_[(_.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
-          (_[(_.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
-          (_[(_.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
-          (_[(_.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
-          (_[(_.DisplayMCImageLeft_String = 2012)] =
-            "DisplayMCImageLeft_String"),
-          (_[(_.DisplayMCImageRight_String = 2013)] =
-            "DisplayMCImageRight_String"),
-          (_[(_.DisplayGCBlackClamp_Float = 2014)] =
-            "DisplayGCBlackClamp_Float"),
-          (_[(_.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
-          (_[(_.CameraToHeadTransform_Matrix34 = 2016)] =
-            "CameraToHeadTransform_Matrix34"),
-          (_[(_.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
-          (_[(_.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
-          (_[(_.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
-          (_[(_.DisplayGCPrescale_Float = 2020)] = "DisplayGCPrescale_Float"),
-          (_[(_.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
-          (_[(_.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
-          (_[(_.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
-          (_[(_.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
-          (_[(_.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
-          (_[(_.UserHeadToEyeDepthMeters_Float = 2026)] =
-            "UserHeadToEyeDepthMeters_Float"),
-          (_[(_.CameraFirmwareVersion_Uint64 = 2027)] =
-            "CameraFirmwareVersion_Uint64"),
-          (_[(_.CameraFirmwareDescription_String = 2028)] =
-            "CameraFirmwareDescription_String"),
-          (_[(_.DisplayFPGAVersion_Uint64 = 2029)] =
-            "DisplayFPGAVersion_Uint64"),
-          (_[(_.DisplayBootloaderVersion_Uint64 = 2030)] =
-            "DisplayBootloaderVersion_Uint64"),
-          (_[(_.DisplayHardwareVersion_Uint64 = 2031)] =
-            "DisplayHardwareVersion_Uint64"),
-          (_[(_.AudioFirmwareVersion_Uint64 = 2032)] =
-            "AudioFirmwareVersion_Uint64"),
-          (_[(_.CameraCompatibilityMode_Int32 = 2033)] =
-            "CameraCompatibilityMode_Int32"),
-          (_[(_.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
-            "ScreenshotHorizontalFieldOfViewDegrees_Float"),
-          (_[(_.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
-            "ScreenshotVerticalFieldOfViewDegrees_Float"),
-          (_[(_.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
-          (_[(_.DisplayAllowNightMode_Bool = 2037)] =
-            "DisplayAllowNightMode_Bool"),
-          (_[(_.DisplayMCImageWidth_Int32 = 2038)] =
-            "DisplayMCImageWidth_Int32"),
-          (_[(_.DisplayMCImageHeight_Int32 = 2039)] =
-            "DisplayMCImageHeight_Int32"),
-          (_[(_.DisplayMCImageNumChannels_Int32 = 2040)] =
-            "DisplayMCImageNumChannels_Int32"),
-          (_[(_.DisplayMCImageData_Binary = 2041)] =
-            "DisplayMCImageData_Binary"),
-          (_[(_.SecondsFromPhotonsToVblank_Float = 2042)] =
-            "SecondsFromPhotonsToVblank_Float"),
-          (_[(_.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
-            "DriverDirectModeSendsVsyncEvents_Bool"),
-          (_[(_.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
-          (_[(_.GraphicsAdapterLuid_Uint64 = 2045)] =
-            "GraphicsAdapterLuid_Uint64"),
-          (_[(_.DriverProvidedChaperonePath_String = 2048)] =
-            "DriverProvidedChaperonePath_String"),
-          (_[(_.ExpectedTrackingReferenceCount_Int32 = 2049)] =
-            "ExpectedTrackingReferenceCount_Int32"),
-          (_[(_.ExpectedControllerCount_Int32 = 2050)] =
-            "ExpectedControllerCount_Int32"),
-          (_[(_.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
-            "NamedIconPathControllerLeftDeviceOff_String"),
-          (_[(_.NamedIconPathControllerRightDeviceOff_String = 2052)] =
-            "NamedIconPathControllerRightDeviceOff_String"),
-          (_[(_.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
-            "NamedIconPathTrackingReferenceDeviceOff_String"),
-          (_[(_.DoNotApplyPrediction_Bool = 2054)] =
-            "DoNotApplyPrediction_Bool"),
-          (_[(_.CameraToHeadTransforms_Matrix34_Array = 2055)] =
-            "CameraToHeadTransforms_Matrix34_Array"),
-          (_[(_.DistortionMeshResolution_Int32 = 2056)] =
-            "DistortionMeshResolution_Int32"),
-          (_[(_.DriverIsDrawingControllers_Bool = 2057)] =
-            "DriverIsDrawingControllers_Bool"),
-          (_[(_.DriverRequestsApplicationPause_Bool = 2058)] =
-            "DriverRequestsApplicationPause_Bool"),
-          (_[(_.DriverRequestsReducedRendering_Bool = 2059)] =
-            "DriverRequestsReducedRendering_Bool"),
-          (_[(_.MinimumIpdStepMeters_Float = 2060)] =
-            "MinimumIpdStepMeters_Float"),
-          (_[(_.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
-            "AudioBridgeFirmwareVersion_Uint64"),
-          (_[(_.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
-            "ImageBridgeFirmwareVersion_Uint64"),
-          (_[(_.ImuToHeadTransform_Matrix34 = 2063)] =
-            "ImuToHeadTransform_Matrix34"),
-          (_[(_.ImuFactoryGyroBias_Vector3 = 2064)] =
-            "ImuFactoryGyroBias_Vector3"),
-          (_[(_.ImuFactoryGyroScale_Vector3 = 2065)] =
-            "ImuFactoryGyroScale_Vector3"),
-          (_[(_.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
-            "ImuFactoryAccelerometerBias_Vector3"),
-          (_[(_.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
-            "ImuFactoryAccelerometerScale_Vector3"),
-          (_[(_.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
-            "ConfigurationIncludesLighthouse20Features_Bool"),
-          (_[(_.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
-            "Prop_AdditionalRadioFeatures_Uint64"),
-          (_[(_.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
-            "Prop_CameraWhiteBalance_Vector4_Array"),
-          (_[(_.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
-            "Prop_CameraDistortionFunction_Int32_Array"),
-          (_[(_.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
-            "Prop_CameraDistortionCoefficients_Float_Array"),
-          (_[(_.Prop_ExpectedControllerType_String = 2074)] =
-            "Prop_ExpectedControllerType_String"),
-          (_[(_.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
-          (_[(_.DriverProvidedChaperoneVisibility_Bool = 2076)] =
-            "DriverProvidedChaperoneVisibility_Bool"),
-          (_[(_.HmdColumnCorrectionSettingPrefix_String = 2077)] =
-            "HmdColumnCorrectionSettingPrefix_String"),
-          (_[(_.CameraSupportsCompatibilityModes_Bool = 2078)] =
-            "CameraSupportsCompatibilityModes_Bool"),
-          (_[(_.SupportsRoomViewDepthProjection_Bool = 2079)] =
-            "SupportsRoomViewDepthProjection_Bool"),
-          (_[(_.DisplayAvailableFrameRates_Float_Array = 2080)] =
-            "DisplayAvailableFrameRates_Float_Array"),
-          (_[(_.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
-            "DisplaySupportsRuntimeFramerateChange_Bool"),
-          (_[(_.DisplaySupportsAnalogGain_Bool = 2085)] =
-            "DisplaySupportsAnalogGain_Bool"),
-          (_[(_.DisplayMinAnalogGain_Float = 2086)] =
-            "DisplayMinAnalogGain_Float"),
-          (_[(_.DisplayMaxAnalogGain_Float = 2087)] =
-            "DisplayMaxAnalogGain_Float"),
-          (_[(_.DashboardLinkSupport_Int32 = 2097)] =
-            "DashboardLinkSupport_Int32"),
-          (_[(_.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
-          (_[(_.IpdUIRangeMinMeters_Float = 2100)] =
-            "IpdUIRangeMinMeters_Float"),
-          (_[(_.IpdUIRangeMaxMeters_Float = 2101)] =
-            "IpdUIRangeMaxMeters_Float"),
-          (_[(_.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
-            "Hmd_SupportsHDCP14LegacyCompat_Bool"),
-          (_[(_.Hmd_SupportsMicMonitoring_Bool = 2103)] =
-            "Hmd_SupportsMicMonitoring_Bool"),
-          (_[(_.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
-            "Hmd_SupportsDisplayPortTrainingMode_Bool"),
-          (_[(_.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
-            "Hmd_SupportsRoomViewDirect_Bool"),
-          (_[(_.Hmd_SupportsAppThrottling_Bool = 2106)] =
-            "Hmd_SupportsAppThrottling_Bool"),
-          (_[(_.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
-            "Hmd_SupportsGpuBusMonitoring_Bool"),
-          (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
-            "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
-          (_[(_.Prop_Driver_Reserved_03 = 2111)] = "Prop_Driver_Reserved_03"),
-          (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
-            "DriverRequestedMuraCorrectionMode_Int32"),
-          (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
-            "DriverRequestedMuraFeather_InnerLeft_Int32"),
-          (_[(_.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
-            "DriverRequestedMuraFeather_InnerRight_Int32"),
-          (_[(_.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
-            "DriverRequestedMuraFeather_InnerTop_Int32"),
-          (_[(_.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
-            "DriverRequestedMuraFeather_InnerBottom_Int32"),
-          (_[(_.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
-            "DriverRequestedMuraFeather_OuterLeft_Int32"),
-          (_[(_.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
-            "DriverRequestedMuraFeather_OuterRight_Int32"),
-          (_[(_.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
-            "DriverRequestedMuraFeather_OuterTop_Int32"),
-          (_[(_.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
-            "DriverRequestedMuraFeather_OuterBottom_Int32"),
-          (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
-            "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
-          (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
-          (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
-          (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
-          (_[(_.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
-          (_[(_.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
-          (_[(_.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
-          (_[(_.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
-          (_[(_.ControllerRoleHint_Int32 = 3007)] = "ControllerRoleHint_Int32"),
-          (_[(_.FieldOfViewLeftDegrees_Float = 4e3)] =
-            "FieldOfViewLeftDegrees_Float"),
-          (_[(_.FieldOfViewRightDegrees_Float = 4001)] =
-            "FieldOfViewRightDegrees_Float"),
-          (_[(_.FieldOfViewTopDegrees_Float = 4002)] =
-            "FieldOfViewTopDegrees_Float"),
-          (_[(_.FieldOfViewBottomDegrees_Float = 4003)] =
-            "FieldOfViewBottomDegrees_Float"),
-          (_[(_.TrackingRangeMinimumMeters_Float = 4004)] =
-            "TrackingRangeMinimumMeters_Float"),
-          (_[(_.TrackingRangeMaximumMeters_Float = 4005)] =
-            "TrackingRangeMaximumMeters_Float"),
-          (_[(_.ModeLabel_String = 4006)] = "ModeLabel_String"),
-          (_[(_.IconPathName_String = 5e3)] = "IconPathName_String"),
-          (_[(_.NamedIconPathDeviceOff_String = 5001)] =
-            "NamedIconPathDeviceOff_String"),
-          (_[(_.NamedIconPathDeviceSearching_String = 5002)] =
-            "NamedIconPathDeviceSearching_String"),
-          (_[(_.NamedIconPathDeviceSearchingAlert_String = 5003)] =
-            "NamedIconPathDeviceSearchingAlert_String"),
-          (_[(_.NamedIconPathDeviceReady_String = 5004)] =
-            "NamedIconPathDeviceReady_String"),
-          (_[(_.NamedIconPathDeviceReadyAlert_String = 5005)] =
-            "NamedIconPathDeviceReadyAlert_String"),
-          (_[(_.NamedIconPathDeviceNotReady_String = 5006)] =
-            "NamedIconPathDeviceNotReady_String"),
-          (_[(_.NamedIconPathDeviceStandby_String = 5007)] =
-            "NamedIconPathDeviceStandby_String"),
-          (_[(_.NamedIconPathDeviceAlertLow_String = 5008)] =
-            "NamedIconPathDeviceAlertLow_String"),
-          (_[(_.DisplayHiddenArea_Binary_Start = 5100)] =
-            "DisplayHiddenArea_Binary_Start"),
-          (_[(_.DisplayHiddenArea_Binary_End = 5150)] =
-            "DisplayHiddenArea_Binary_End"),
-          (_[(_.ParentContainer = 5151)] = "ParentContainer"),
-          (_[(_.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
-          (_[(_.InstallPath_String = 6001)] = "InstallPath_String"),
-          (_[(_.HasDisplayComponent_Bool = 6002)] = "HasDisplayComponent_Bool"),
-          (_[(_.HasControllerComponent_Bool = 6003)] =
-            "HasControllerComponent_Bool"),
-          (_[(_.HasCameraComponent_Bool = 6004)] = "HasCameraComponent_Bool"),
-          (_[(_.HasDriverDirectModeComponent_Bool = 6005)] =
-            "HasDriverDirectModeComponent_Bool"),
-          (_[(_.HasVirtualDisplayComponent_Bool = 6006)] =
-            "HasVirtualDisplayComponent_Bool"),
-          (_[(_.HasSpatialAnchorsSupport_Bool = 6007)] =
-            "HasSpatialAnchorsSupport_Bool"),
-          (_[(_.ControllerType_String = 7e3)] = "ControllerType_String"),
-          (_[(_.LegacyInputProfile_String = 7001)] =
-            "LegacyInputProfile_String"),
-          (_[(_.VendorSpecific_Reserved_Start = 1e4)] =
-            "VendorSpecific_Reserved_Start"),
-          (_[(_.VendorSpecific_Reserved_End = 10999)] =
-            "VendorSpecific_Reserved_End"),
-          (_[(_.TrackedDeviceProperty_Max = 1e6)] =
-            "TrackedDeviceProperty_Max");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EButton_System = 0)] = "k_EButton_System"),
-            (_[(_.k_EButton_ApplicationMenu = 1)] =
-              "k_EButton_ApplicationMenu"),
-            (_[(_.k_EButton_Grip = 2)] = "k_EButton_Grip"),
-            (_[(_.k_EButton_DPad_Left = 3)] = "k_EButton_DPad_Left"),
-            (_[(_.k_EButton_DPad_Up = 4)] = "k_EButton_DPad_Up"),
-            (_[(_.k_EButton_DPad_Right = 5)] = "k_EButton_DPad_Right"),
-            (_[(_.k_EButton_DPad_Down = 6)] = "k_EButton_DPad_Down"),
-            (_[(_.k_EButton_A = 7)] = "k_EButton_A"),
-            (_[(_.k_EButton_ProximitySensor = 31)] =
-              "k_EButton_ProximitySensor"),
-            (_[(_.k_EButton_Axis0 = 32)] = "k_EButton_Axis0"),
-            (_[(_.k_EButton_Axis1 = 33)] = "k_EButton_Axis1"),
-            (_[(_.k_EButton_Axis2 = 34)] = "k_EButton_Axis2"),
-            (_[(_.k_EButton_Axis3 = 35)] = "k_EButton_Axis3"),
-            (_[(_.k_EButton_Axis4 = 36)] = "k_EButton_Axis4"),
-            (_[(_.k_EButton_SteamVR_Touchpad = 32)] =
-              "k_EButton_SteamVR_Touchpad"),
-            (_[(_.k_EButton_SteamVR_Trigger = 33)] =
-              "k_EButton_SteamVR_Trigger"),
-            (_[(_.k_EButton_Dashboard_Back = 2)] = "k_EButton_Dashboard_Back"),
-            (_[(_.k_EButton_IndexController_A = 2)] =
-              "k_EButton_IndexController_A"),
-            (_[(_.k_EButton_IndexController_B = 1)] =
-              "k_EButton_IndexController_B"),
-            (_[(_.k_EButton_IndexController_JoyStick = 35)] =
-              "k_EButton_IndexController_JoyStick"),
-            (_[(_.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
-            (_[(_.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
-            (_[(_.k_EButton_Max = 64)] = "k_EButton_Max");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.None = 0)] = "None"),
-            (_[(_.ButtonEnter = 1)] = "ButtonEnter"),
-            (_[(_.ButtonLeave = 2)] = "ButtonLeave"),
-            (_[(_.Snap = 3)] = "Snap"),
-            (_[(_.Sliding = 4)] = "Sliding"),
-            (_[(_.SlidingEdge = 5)] = "SlidingEdge");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Minimal = 1)] = "Minimal"),
-            (_[(_.Modal = 2)] = "Modal"),
-            (_[(_.ShowArrowKeys = 4)] = "ShowArrowKeys"),
-            (_[(_.HideDoneKey = 8)] = "HideDoneKey");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Unknown = -1)] = "Unknown"),
-            (_[(_.Idle = 0)] = "Idle"),
-            (_[(_.UserInteraction = 1)] = "UserInteraction"),
-            (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
-            (_[(_.Standby = 3)] = "Standby"),
-            (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
-            (_[(_.Notification_Hidden = 601)] = "Notification_Hidden"),
-            (_[(_.Notification_BeginInteraction = 602)] =
-              "Notification_BeginInteraction"),
-            (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
-        })(_ || (_ = {}));
-      const _ = 1;
-      !(function (_) {
-        if ("string" != typeof _) return NaN;
-        const _ = !_.includes("ms") && _.includes("s");
-        let _ = Number.parseFloat(_);
-        _ && (_ *= 1e3);
-      })(_()["error-shake-duration"]);
-      function _(_, _) {
-        return _ < 0 ? 0 : _ > 1 ? 1 : 0 == _ ? _ : Math.round(_ / _) * _;
-      }
-      function _(_, _, _) {
-        const _ = _ + _ * (_ - _);
-        return Number.parseFloat(_.toFixed(10));
-      }
-      function _(_, _, _) {
-        return (_ - _) / (_ - _);
-      }
-      var _;
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.MouseDragging = 1)] = "MouseDragging"),
-          (_[(_.TouchStart = 2)] = "TouchStart"),
-          (_[(_.TouchDragging = 3)] = "TouchDragging");
-      })(_ || (_ = {}));
-      class _ extends _.Component {
-        m_refSlider = _.createRef();
-        m_refHandle = _.createRef();
-        m_navRefSlider = _.createRef();
-        m_sliderBounds = void 0;
-        m_handleBounds = void 0;
-        m_fZoom = 1;
-        m_eDragMode = _.None;
-        m_vTouchStartPosition = (0, _._)();
-        m_fStartValue;
-        m_fLatestUserValue;
-        m_fLatestOnChangeValue;
-        m_bInnerSliderHasFocus = !1;
-        m_nRepeatCount = 0;
-        m_fInitalRepeatTime = void 0;
-        get showHandle() {
-          return this.props.showHandle ?? !0;
-        }
-        get isKeyNavTarget() {
-          return this.props.isKeyNavTarget ?? !0;
-        }
-        get validRange() {
-          return this.props.min < this.props.max;
-        }
-        get range() {
-          return this.validRange ? this.props.max - this.props.min : 0;
-        }
-        get step() {
-          return Math.abs(this.props.step ?? _);
-        }
-        get normalizedStep() {
-          return this.step / this.range;
-        }
-        get normalizedDpadStep() {
-          const _ = this.props.dpadStep ?? this.step,
-            _ = _ > 0 ? _ / this.range : 0.01;
-          return Math.max(_, this.normalizedStep);
-        }
-        get normalizedClampedValue() {
-          const _ =
-            null == this.props.value || isNaN(this.props.value)
-              ? this.props.min
-              : (0, _._)(this.props.value, this.props.min, this.props.max);
-          return _(this.props.min, this.props.max, _);
-        }
-        get normalizedDefaultValue() {
-          const _ = this.props.resetValue;
-          if (
-            !(null == _ || isNaN(_) || _ < this.props.min || _ > this.props.max)
-          )
-            return _(this.props.min, this.props.max, _);
-        }
-        get normalizedSliderOrigin() {
-          const _ = (0, _._)(0, this.props.min, this.props.max);
-          return _(this.props.min, this.props.max, _);
-        }
-        get CanResetToDefault() {
-          return (
-            null != this.props.resetValue &&
-            this.props.value != this.props.resetValue
-          );
-        }
-        get SliderChangeSource() {
-          switch (this.m_eDragMode) {
-            case _.MouseDragging:
-              return 1;
-            case _.TouchDragging:
-            case _.TouchStart:
-              return 0;
-            case _.None:
-              return;
-          }
-        }
-        constructor(_) {
-          super(_),
-            (this.m_fStartValue = this.props.value),
-            (this.m_fLatestUserValue = this.props.value),
-            (this.m_fLatestOnChangeValue = this.props.value);
-        }
-        RecomputeSliderBounds() {
-          (this.m_sliderBounds =
-            this.m_refSlider.current?.getBoundingClientRect()),
-            (this.m_handleBounds =
-              this.m_refHandle.current?.getBoundingClientRect());
-        }
-        SetDragMode(_) {
-          if (_ != this.m_eDragMode) {
-            switch (
-              ((this.m_eDragMode = _),
-              this.props.onChangeStart &&
-                this.props.onChangeStart(this.SliderChangeSource),
-              _)
-            ) {
-              case _.MouseDragging:
-              case _.TouchDragging:
-              case _.TouchStart:
-                this.RecomputeSliderBounds(),
-                  (this.m_fStartValue = this.props.value),
-                  (this.m_fLatestUserValue = this.props.value);
-              case _.None:
-            }
-            switch (_) {
-              case _.MouseDragging:
-                this.m_refSlider.current?.ownerDocument?.addEventListener(
-                  "mousemove",
-                  this.OnWindowMouseMove,
-                  {
-                    passive: !1,
-                  },
-                ),
-                  this.m_refSlider.current?.ownerDocument?.addEventListener(
-                    "mouseup",
-                    this.OnWindowMouseUp,
-                    {
-                      passive: !1,
-                    },
-                  );
-                break;
-              case _.TouchStart:
-              case _.TouchDragging:
-                this.m_refSlider.current?.ownerDocument?.addEventListener(
-                  "touchmove",
-                  this.OnWindowTouchMove,
-                  {
-                    passive: !1,
-                  },
-                ),
-                  this.m_refSlider.current?.ownerDocument?.addEventListener(
-                    "touchend",
-                    this.OnWindowTouchEnd,
-                    {
-                      passive: !1,
-                    },
-                  );
-                break;
-              case _.None:
-                this.RemoveDocumentEventListeners();
-            }
-          }
-        }
-        OnGamepadDirection(_) {
-          if (this.props.disabled) return !1;
-          let _ = 0;
-          if (_.detail.button == _._.DIR_LEFT) _ = -1;
-          else {
-            if (_.detail.button != _._.DIR_RIGHT) return !1;
-            _ = 1;
-          }
-          _.detail.is_repeat
-            ? (0 == this.m_nRepeatCount &&
-                (this.m_fInitalRepeatTime = performance.now()),
-              this.m_nRepeatCount++)
-            : ((this.m_nRepeatCount = 0),
-              (this.m_fInitalRepeatTime = performance.now()));
-          const _ = performance.now() - this.m_fInitalRepeatTime,
-            _ = (0, _._)(_, 0, 2e3, 500, 250),
-            _ = Math.pow(2, Math.floor(_ / _)),
-            _ = this.normalizedDpadStep * _,
-            _ = (0, _._)(_, this.normalizedDpadStep, 0.05) * _,
-            _ = _(this.normalizedStep, this.normalizedClampedValue + _);
-          let _ = _(this.props.min, this.props.max, _);
-          if (
-            ((_ = (0, _._)(
-              _,
-              this.props.clampMin ?? this.props.min,
-              this.props.clampMax ?? this.props.max,
-            )),
-            _ != this.props.value)
-          ) {
-            const _ = _ > this.m_fLatestUserValue;
-            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
-              (this.m_fLatestUserValue = _),
-              this.FireOnChange(_, 2);
-          } else _._.PlayNavSound(_._.FailedNav);
-          return !0;
-        }
-        FireOnChange(_, _) {
-          this.m_fLatestOnChangeValue != _ &&
-            ((this.m_fLatestOnChangeValue = _),
-            this.props.onChange && this.props.onChange(_, _));
-        }
-        ComputeNormalizedValueForMousePosition(_) {
-          if (null == this.m_sliderBounds) return 0;
-          const _ = _ / this.m_fZoom,
-            _ = this.m_sliderBounds.right - this.m_sliderBounds.left,
-            _ =
-              null == this.m_handleBounds
-                ? 0
-                : this.m_handleBounds.right - this.m_handleBounds.left,
-            _ = _ - _;
-          return (_ - this.m_sliderBounds.left - _ / 2) / _;
-        }
-        BShouldTriggerHapticOnSnap() {
-          const _ = this.normalizedStep;
-          return _ > 0 && _ >= 1 / 40;
-        }
-        PlayHaptic(_) {
-          this.m_refSlider.current?.ownerDocument.defaultView?.SteamClient?.OpenVR?.TriggerOverlayHapticEffect?.(
-            _,
-            0,
-          );
-        }
-        UpdateSliderValueForPosition(_) {
-          if (this.props.disabled || !this.m_refSlider.current) return;
-          const _ = this.ComputeNormalizedValueForMousePosition(_),
-            _ = _(this.normalizedStep, _);
-          let _ = _(this.props.min, this.props.max, _);
-          const _ = this.props.clampMin ?? this.props.min,
-            _ = this.props.clampMax ?? this.props.max;
-          if (((_ = (0, _._)(_, _, _)), _ != this.props.value)) {
-            const _ = _ > this.props.value,
-              _ = 0 == this.step;
-            if (
-              ((this.m_eDragMode == _.None || !_) &&
-                _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
-              this.m_eDragMode == _.MouseDragging ||
-                this.m_eDragMode == _.TouchDragging)
-            ) {
-              let _ = !1;
-              if (
-                (_ == _ || _ == _) &&
-                this.m_fLatestUserValue > _ &&
-                this.m_fLatestUserValue < _ &&
-                !_
-              )
-                this.PlayHaptic(_.SlidingEdge), (_ = !0);
-              else if (
-                !this.BShouldTriggerHapticOnSnap() &&
-                this.m_fLatestUserValue >= _ &&
-                this.m_fLatestUserValue <= _
-              ) {
-                const _ = 40;
-                Math.floor(((this.m_fLatestUserValue - _) / (_ - _)) * _) ==
-                  Math.floor(((_ - _) / (_ - _)) * _) ||
-                  _ ||
-                  (this.PlayHaptic(_.Sliding), (_ = !0));
-              }
-              _ || _ || (this.PlayHaptic(_.Snap), (_ = !0));
-            }
-            (this.m_fLatestUserValue = _),
-              this.FireOnChange(_, this.SliderChangeSource);
-          }
-        }
-        OnWindowMouseMove(_) {
-          this.UpdateSliderValueForPosition(_.clientX);
-        }
-        OnWindowMouseUp(_) {
-          this.m_eDragMode != _.None && this.Complete();
-        }
-        OnMouseDown(_) {
-          0 == _.button &&
-            (this.props.disabled ||
-              (_.preventDefault(),
-              this.SetDragMode(_.MouseDragging),
-              this.UpdateSliderValueForPosition(_.clientX)));
-        }
-        OnTouchStart(_) {
-          if (this.props.disabled || 1 != _.touches.length) return;
-          _.preventDefault();
-          const _ = this.ComputeNormalizedValueForMousePosition(
-            _.touches[0].clientX,
-          );
-          _ < 0 ||
-            _ > 1 ||
-            (this.SetDragMode(_.TouchStart),
-            (this.m_vTouchStartPosition = {
-              _: _.touches[0].clientX,
-              _: _.touches[0].clientY,
-            }));
-        }
-        OnWindowTouchMove(_) {
-          if (1 == _.touches.length) {
-            switch (this.m_eDragMode) {
-              case _.TouchStart:
-                const _ = {
-                  _: _.touches[0].clientX,
-                  _: _.touches[0].clientY,
-                };
-                if ((0, _._)(this.m_vTouchStartPosition, _) >= 10) {
-                  const _ = (0, _._)(this.m_vTouchStartPosition, _);
-                  Math.abs(_._) > Math.abs(_._)
-                    ? (this.SetDragMode(_.TouchDragging),
-                      this.m_refSlider.current?.focus())
-                    : this.SetDragMode(_.None);
-                }
-                break;
-              case _.TouchDragging:
-                this.UpdateSliderValueForPosition(_.touches[0].clientX);
-            }
-            _.preventDefault();
-          }
-        }
-        OnWindowTouchEnd(_) {
-          this.m_eDragMode != _.None && this.Complete();
-        }
-        Complete() {
-          const _ = this.m_eDragMode != _.None;
-          this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
-            this.props.onChangeComplete &&
-              this.props.onChangeComplete(
-                this.m_fLatestUserValue,
-                this.SliderChangeSource,
-              ),
-            this.SetDragMode(_.None);
-          const _ = 0 == this.step;
-          if (this.m_fLatestUserValue != this.m_fStartValue && _ && _) {
-            const _ = this.m_fLatestUserValue > this.m_fStartValue;
-            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
-          }
-        }
-        RemoveDocumentEventListeners() {
-          this.m_refSlider.current?.ownerDocument?.removeEventListener(
-            "mousemove",
-            this.OnWindowMouseMove,
-          ),
-            this.m_refSlider.current?.ownerDocument?.removeEventListener(
-              "touchmove",
-              this.OnWindowTouchMove,
-            ),
-            this.m_refSlider.current?.ownerDocument?.removeEventListener(
-              "mouseup",
-              this.OnWindowMouseUp,
-            ),
-            this.m_refSlider.current?.ownerDocument?.removeEventListener(
-              "touchend",
-              this.OnWindowTouchEnd,
-            );
-        }
-        componentDidMount() {
-          this.m_fZoom = (0, _._)(this.m_refSlider.current);
-        }
-        componentWillUnmount() {
-          this.RemoveDocumentEventListeners();
-        }
-        BlurInnerSlider() {
-          this.m_navRefSlider.current?.ParentTakeFocus();
-        }
-        OnInnerSliderFocus() {
-          (this.m_bInnerSliderHasFocus = !0),
-            (this.m_fStartValue = this.props.value);
-        }
-        OnInnerSliderBlur() {
-          (this.m_bInnerSliderHasFocus = !1),
-            this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
-        }
-        ResetToDefault() {
-          if (!this.CanResetToDefault || this.m_eDragMode != _.None) return;
-          let _;
-          (this.m_fLatestUserValue = this.props.resetValue),
-            this.FireOnChange(this.props.resetValue, 4),
-            this.m_bInnerSliderHasFocus
-              ? (_ = this.props.resetValue > this.m_fLatestUserValue)
-              : ((_ = this.props.resetValue > this.props.value),
-                this.props.onChangeComplete &&
-                  this.props.onChangeComplete(this.props.resetValue, 4)),
-            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
-        }
-        OnContextMenu(_) {
-          if (null != this.props.resetValue) {
-            const _ = _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                {
-                  disabled: !this.CanResetToDefault,
-                  onSelected: this.ResetToDefault,
-                },
-                (0, _._)("#ResetToDefault"),
-              ),
-            );
-            (0, _._)(_, _);
-          }
-        }
-        render() {
-          const {
-              min: _,
-              max: _,
-              value: __webpack_require__,
-              clampMax: _,
-              clampMin: _,
-              className: _,
-              disabled: _,
-              dpadStep: _,
-              extraNotchPadding: _,
-              focusable: _,
-              handleType: _,
-              innerRef: _,
-              isKeyNavTarget: _,
-              navRef: _,
-              notchCount: _,
-              notchLabels: _,
-              notchTicksVisible: _,
-              onChange: _,
-              onChangeComplete: _,
-              onChangeStart: _,
-              renderNotch: _,
-              renderValue: _,
-              resetValue: _,
-              resetValueAppearance: _ = "top-caret",
-              showBookendLabels: _,
-              showHandle: _,
-              step: _,
-              strValueSuffix: _,
-              trackStyleOverride: _,
-              trackStyleBackground: _,
-              trackForegroundVisible: _ = !0,
-              trackTone: _,
-              ..._
-            } = this.props,
-            _ = _ ?? !1,
-            _ = _ ?? !_,
-            _ = _ ? 2 : _,
-            _ = _
-              ? [
-                  {
-                    notchIndex: 0,
-                    label: `${_}`,
-                  },
-                  {
-                    notchIndex: 1,
-                    label: `${_}`,
-                  },
-                ]
-              : _,
-            _ = _ ?? !0,
-            _ = this.normalizedDefaultValue,
-            _ = this.normalizedSliderOrigin,
-            _ = null != _,
-            _ = "top-caret" == _,
-            _ = !_,
-            _ = _ || _,
-            _ = {};
-          this.CanResetToDefault &&
-            (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
-          let _ = `${_().SliderHandle} SliderHandle`,
-            _ = `${_().SliderHandleContainer} SliderHandleContainer `;
-          "verticalline" == _
-            ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
-              (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
-            : ("leftparen" != _ && "rightparen" != _) ||
-              ((_ = (0, _._)(
-                _().ParenSliderHandle,
-                "leftparen" == _ ? _().Left : _().Right,
-                "SliderHandle",
-              )),
-              (_ = (0, _._)(
-                _().ParenSliderHandleContainer,
-                "leftparen" == _ ? _().Left : _().Right,
-                "SliderHandleContainer",
-              )));
-          const _ = _(__webpack_require__);
-          return _.createElement(
-            _,
-            {
-              noFocusRing: !0,
-              className: (0, _._)(
-                _().SliderControlPanelGroup,
-                "SliderControlPanelGroup",
-                _,
-              ),
-              navRef: _,
-              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
-              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
-              onOKActionDescription: _
-                ? null
-                : (0, _._)("#Slider_AdjustSlider"),
-              focusable: _,
-              childFocusDisabled: _ || !_,
-              onContextMenu: this.OnContextMenu,
-              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
-              onSecondaryButton: this.CanResetToDefault
-                ? this.ResetToDefault
-                : void 0,
-              onSecondaryActionDescription: this.CanResetToDefault
-                ? (0, _._)("#ResetToDefault")
-                : void 0,
-              actionDescriptionMap: _,
-            },
-            _.createElement(
-              _._,
-              {
-                role: "slider",
-                "aria-valuenow": __webpack_require__,
-                "aria-valuetext": _,
-                ..._,
-                className: (0, _._)(
-                  _().SliderControlAndNotches,
-                  _ && _().Disabled,
-                  _ && _().WithDefaultValue,
-                  _ && _ && _().DefaultValueIsColorRange,
-                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
-                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
-                  !_ && _().ForegroundInvisible,
-                ),
-                focusable: this.isKeyNavTarget,
-                noFocusRing: !0,
-                onFocus: this.OnInnerSliderFocus,
-                onBlur: this.OnInnerSliderBlur,
-                style: {
-                  "--normalized-slider-value": this.normalizedClampedValue,
-                  "--normalized-slider-default-value": _,
-                  "--normalized-slider-origin": _,
-                  "--default-value-track-color": _
-                    ? _.trackForegroundColor
-                    : void 0,
-                  "--slider-extra-notch-padding": _ ?? "0px",
-                },
-                ref: (0, _._)(this.m_refSlider, _),
-                navRef: this.m_navRefSlider,
-                onGamepadDirection: this.OnGamepadDirection,
-                onOKButton: this.BlurInnerSlider,
-                onOKActionDescription: null,
-                onCancelButton: this.BlurInnerSlider,
-                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SliderControl, "SliderControl"),
-                },
-                _.createElement("div", {
-                  className: (0, _._)(
-                    _().SliderTrack,
-                    null != _ && _ && _().SliderHasNotches,
-                    {
-                      [_().SliderTrackDark]: "dark" === _,
-                    },
-                    _,
-                    "SliderTrack",
-                  ),
-                  style: this.props.trackStyleOverride,
-                }),
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DefaultValueTickContainer,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DefaultValueTick,
-                      },
-                      _.createElement(_.u49, {
-                        direction: "down",
-                      }),
-                    ),
-                  ),
-                this.validRange &&
-                  null != __webpack_require__ &&
-                  !isNaN(__webpack_require__) &&
-                  this.showHandle &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _,
-                        ref: this.m_refHandle,
-                      },
-                      "leftparen" == _ && _.createElement(_.Epp, null),
-                      "rightparen" == _ && _.createElement(_.jvG, null),
-                    ),
-                  ),
-              ),
-              _.createElement(_, {
-                notchCount: _,
-                notchLabels: _,
-                sliderValue: this.normalizedClampedValue,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
-            ),
-          );
-        }
-      }
-      function _(_) {
-        let {
-            sliderValue: _,
-            notchCount: __webpack_require__,
-            notchLabels: _,
-            notchTicksVisible: _,
-            renderNotch: _,
-          } = _,
-          _ = _ ?? [];
-        if (!__webpack_require__) return null;
-        let _ = !1,
-          _ = [];
-        for (let _ = 0; _ < __webpack_require__; ++_) {
-          let _ = _.find((_) => _.notchIndex == _);
-          _ && (_ = !0),
-            _.push(
-              _.createElement(_, {
-                key: _,
-                notchIndex: _,
-                sliderValue: _,
-                notchLabel: _,
-                notchCount: __webpack_require__,
-                notchTicksVisible: _,
-                renderNotch: _,
-              }),
-            );
-        }
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().SliderNotchContainer),
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const _ = _.notchIndex <= (_.notchCount - 1) * _.sliderValue,
-          _ = _.notchCount <= 3 && !_.notchTicksVisible,
-          _ = _ && 0 == _.notchIndex,
-          _ = _ && _.notchIndex == _.notchCount - 1,
-          _ = {
-            ..._,
-            alignLeftEnd: _,
-            alignRightEnd: _,
-            active: _,
-          };
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
-          },
-          _.renderNotch
-            ? _.renderNotch(_)
-            : _.createElement(_, {
-                ..._,
-              }),
-        );
-      }
-      function _(_) {
-        const {
-          alignLeftEnd: _,
-          alignRightEnd: __webpack_require__,
-          active: _,
-        } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.notchTicksVisible &&
-            _.createElement("div", {
-              className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
-            }),
-          _.notchLabel &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SliderNotchLabel,
-                  _ && _().AlignToLeft,
-                  __webpack_require__ && _().AlignToRight,
-                ),
-              },
-              _.notchLabel?.label,
-            ),
-        );
-      }
-      (0, _._)([_._], _.prototype, "RecomputeSliderBounds", null),
-        (0, _._)([_._], _.prototype, "SetDragMode", null),
-        (0, _._)([_._], _.prototype, "OnGamepadDirection", null),
-        (0, _._)([_._], _.prototype, "UpdateSliderValueForPosition", null),
-        (0, _._)([_._], _.prototype, "OnWindowMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnWindowMouseUp", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnTouchStart", null),
-        (0, _._)([_._], _.prototype, "OnWindowTouchMove", null),
-        (0, _._)([_._], _.prototype, "OnWindowTouchEnd", null),
-        (0, _._)([_._], _.prototype, "Complete", null),
-        (0, _._)([_._], _.prototype, "BlurInnerSlider", null),
-        (0, _._)([_._], _.prototype, "OnInnerSliderFocus", null),
-        (0, _._)([_._], _.prototype, "OnInnerSliderBlur", null),
-        (0, _._)([_._], _.prototype, "ResetToDefault", null),
-        (0, _._)([_._], _.prototype, "OnContextMenu", null);
-      _.forwardRef(function (_, _) {
-        const {
-          label: __webpack_require__,
-          labelIndex: _,
-          xOffset: _,
-          onResize: _,
-          OnMouseDown: _,
-          OnTouchStart: _,
-        } = _;
-        _.useEffect(() => {
-          _(_);
-        }, [_, _]);
-        const _ = _.useCallback(
-            (_) => {
-              _(_);
-            },
-            [_, _],
-          ),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_, _);
-        return _.createElement(
-          "div",
-          {
-            className: _().CompoundSliderSubSliderLabel,
-            ref: _,
-            onMouseDown: _,
-            onTouchStart: _,
-            style: {
-              transform: `translateX(${_}px)`,
-            },
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().CompoundSliderSubSliderLabelInternal,
-            },
-            __webpack_require__,
-          ),
-        );
-      });
-      const _ = _.forwardRef(function (_, _) {
-        const {
-          value: __webpack_require__,
-          onChange: _,
-          disabled: _,
-          className: _,
-          focusable: _,
-          children: _,
-          navRef: _,
-          ..._
-        } = _;
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            noFocusRing: !0,
-            className: (0, _._)(_, _().Toggle, {
-              [_().Disabled]: !!_,
-              [_()._]: !!__webpack_require__,
-            }),
-            onClick: () => {
-              if (!_ && _) {
-                const _ = !__webpack_require__;
-                _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
-              }
-            },
-            ref: _,
-            navRef: _,
-            focusable: _,
-            role: "checkbox",
-            "aria-checked": !!__webpack_require__,
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: _().ToggleSwitch,
-          }),
-          _,
-        );
-      });
-      function _(_) {
-        const _ = !!_.disabled,
-          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
-          _._)(_),
-          _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            className: _.className,
-            disabled: _,
-            label: _.label,
-            icon: _.icon,
-            description: _.description,
-            explainer: _.explainer,
-            explainerTitle: _.explainerTitle,
-            padding: _.padding,
-            bottomSeparator: _.bottomSeparator,
-            highlightOnFocus: _.highlightOnFocus,
-            inlineWrap: "keep-inline",
-            onContextMenu: _.onContextMenu,
-            actionDescriptionMap: __webpack_require__,
-            onClick: _.onClick,
-            indentLevel: _.indentLevel,
-            ..._,
-          },
-          _.createElement(_, {
-            ..._(_, _),
-            onChange: _.OnToggleChange,
-            value: _.checked,
-            disabled: _,
-            navRef: _.navRef,
-          }),
-        );
-      }
-      function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
-          _ = _() || _(window),
-          _ = _.useContext(_).DialogWrapper,
-          [_, _] = _.useState(null),
-          [_, _] = _.useState(!1),
-          _ = _.useRef();
-        if (
-          (_.useEffect(() => {
-            if (_) {
-              const _ = _.ShowPortalModal(),
-                _ = _.OnElementReadyCallbacks.Register(_),
-                _ = _.OnModalActiveCallbacks.Register(_);
-              return (
-                (_.current = _.key),
-                () => {
-                  _(null),
-                    _(!1),
-                    _.Close(),
-                    _.Unregister(),
-                    __webpack_require__.Unregister();
-                }
-              );
-            }
-          }, [_, _]),
-          !_ || !_)
-        )
-          return null;
-        let _ = _.createElement(_, null, __webpack_require__);
-        return (
-          _ &&
-            (_ = _.createElement(
-              _,
-              {
-                active: _,
-                modalKey: _.current,
-              },
-              _,
-            )),
-          _.createPortal(_, _)
-        );
-      }
-      (0, _._)(
-        [_._],
-        class extends _ {
-          OnToggleChange(_) {
-            this.props.disabled || _ === this.checked || this.Toggle();
-          }
-          render() {
-            return _.createElement(_, {
-              ...this.props,
-              OnToggleChange: this.OnToggleChange,
-              checked: this.checked,
-            });
-          }
-        }.prototype,
-        "OnToggleChange",
-        null,
-      );
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { closeModal: _, rgImageURL: __webpack_require__ } = _,
@@ -14857,7 +6328,7 @@
             _ + 1 >= __webpack_require__.length ? _(0) : _(_ + 1);
           }, [_, __webpack_require__.length]);
         return _.createElement(
-          _,
+          _._,
           {
             bAllowFullSize: !0,
             bOKDisabled: !0,
@@ -14966,7 +6437,7 @@
             const [_, _] = _.useState(void 0),
               _ = _.useCallback(() => _(void 0), []),
               _ = _.createElement(
-                _,
+                _._,
                 {
                   active: void 0 !== _,
                 },
@@ -15469,2080 +6940,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = [1, 3, 2],
-        _ = [1, 3],
-        _ = [5, 4],
-        _ = {
-          capsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_eventcapsule: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          spotlight: {
-            width: 2108,
-            height: 460,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight: {
-            width: 1100,
-            height: 240,
-            rgAcceptableTypes: _,
-          },
-          localized_store_app_spotlight_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_title_image: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          background: {
-            width: 1920,
-            height: 622,
-            rgAcceptableTypes: _,
-          },
-          hero: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          email_full: {
-            width: 800,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          email_centered: {
-            width: 644,
-            height: 300,
-            rgAcceptableTypes: _,
-          },
-          broadcast_left: {
-            width: 155,
-            height: 337,
-            rgAcceptableTypes: _,
-          },
-          broadcast_right: {
-            width: 155,
-            height: 337,
-            rgAcceptableTypes: _,
-          },
-          sale_header: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_overlay: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_image_group: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          localized_background_art: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_background: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          sale_section_title: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          link_capsule: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          product_banner: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_banner_override: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          product_mobile_banner_override: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          schedule_track_art: {
-            width: 196,
-            height: 92,
-            rgAcceptableTypes: _,
-          },
-          tab_bar_background: {
-            width: 1500,
-            height: 100,
-            rgAcceptableTypes: _,
-          },
-          sale_logo: {
-            width: 940,
-            height: 460,
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          bestofyear_banner_mobile: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          localized_marketing_message: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [1, 3, 2, 10],
-          },
-          localized_optin_banner: {
-            width: 1e3,
-            height: 150,
-            rgAcceptableTypes: _,
-          },
-          localized_marketingmessage_webm: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [5],
-          },
-          localized_marketingmessage_mp4: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: [4],
-          },
-          localized_partnerevent_webm: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [5],
-          },
-          localized_partnerevent_mp4: {
-            width: 800,
-            height: 450,
-            rgAcceptableTypes: [4],
-          },
-          localized_subtitles: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [6, 7],
-          },
-          localized_marketingmessage_poster: {
-            width: 528,
-            height: 297,
-            rgAcceptableTypes: [1, 3],
-          },
-          localized_marketingmessage_background: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          localized_email_image: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
-          },
-          template_asset: {
-            width: 0,
-            height: 0,
-            bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
-          },
-          spotlight_art: {
-            width: 306,
-            height: 260,
-            rgAcceptableTypes: _,
-          },
-          old_spotlight_art: {
-            width: 306,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          marketingmessage_art_2: {
-            width: 570,
-            height: 600,
-            rgAcceptableTypes: _,
-          },
-          takeover_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [5],
-          },
-          takeover_mp4_art: {
-            width: 1850,
-            height: 450,
-            rgAcceptableTypes: [4],
-          },
-          takeover_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: _,
-          },
-          takeover_webm_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [5],
-          },
-          takeover_mp4_mobile_art: {
-            width: 500,
-            height: 350,
-            rgAcceptableTypes: [4],
-          },
-          takeunder_art: {
-            width: 940,
-            height: 150,
-            rgAcceptableTypes: _,
-          },
-          takeunder_mobile_art: {
-            width: 500,
-            height: 160,
-            rgAcceptableTypes: _,
-          },
-          app_header_capsule: {
-            width: 920,
-            height: 430,
-            rgAcceptableTypes: _,
-          },
-          app_main_capsule: {
-            width: 1232,
-            height: 706,
-            rgAcceptableTypes: _,
-          },
-        };
-      function _(_, _, _) {
-        const _ = _[_];
-        return (
-          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
-        );
-      }
-      function _(_, _, _) {
-        const _ = _[_];
-        return (
-          !!_ &&
-          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
-        );
-      }
-      function _(_, _) {
-        return _.filter((_) => _(_, _));
-      }
-      function _(_, _) {
-        return _[_].rgAcceptableTypes.includes(_);
-      }
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        dataUrl = void 0;
-        width = void 0;
-        height = void 0;
-        status = void 0;
-        message = void 0;
-        language = void 0;
-        file;
-        uploadTime;
-        fileType = 0;
-        constructor(_, _, _, _, _) {
-          (0, _._)(this),
-            (this.file = _),
-            (this.fileType = _.GetExtensionTypeFromURL(_.name)),
-            (this.language = _),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.height = _),
-            (this.width = _),
-            (this.dataUrl = _);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
-        (0, _._)([_._], _.prototype, "language", void 0);
-      var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      !(function (_) {
-        (_.topleft = "topleft"),
-          (_.top = "top"),
-          (_.topright = "topright"),
-          (_.left = "left"),
-          (_.middle = "middle"),
-          (_.right = "right"),
-          (_.bottomleft = "bottomleft"),
-          (_.bottom = "bottom"),
-          (_.bottomright = "bottomright");
-      })(_ || (_ = {}));
-      let _ = class extends _.Component {
-        m_rectLinkRegion;
-        m_elLinkRegionBox;
-        m_nLocalOffsetXPct;
-        m_nLocalOffsetYPct;
-        m_fnMouseUp = null;
-        m_fnMouseMove = null;
-        m_listeners = new _._();
-        m_strDescription = "";
-        m_aspectRatio = 1;
-        componentWillUnmount() {
-          this.m_listeners.Unregister();
-        }
-        constructor(_) {
-          super(_),
-            (this.state = {
-              curLeftPosPct: this.props.xPosPct,
-              curTopPosPct: this.props.yPosPct,
-              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
-              curBottomPosPct:
-                100 - (this.props.yPosPct + this.props.heightPct),
-              curWidthPct: this.props.widthPct,
-              curHeightPct: this.props.heightPct,
-              EdgeDown: null,
-              text_link_url: this.props.link_url,
-              text_link_description: this.props.link_description,
-              bEditingLink: !1,
-              valid_link: this.validateUrl(this.props.link_url),
-            }),
-            (this.m_strDescription = this.props.link_description),
-            (this.m_aspectRatio =
-              this.props.heightPct > 0 && this.props.widthPct > 0
-                ? this.props.widthPct / this.props.heightPct
-                : 1);
-        }
-        LinkRegionBoxRef(_) {
-          this.m_elLinkRegionBox = _;
-        }
-        OnMouseDown(_, _) {
-          (this.m_fnMouseUp = (_) => {
-            this.OnMouseUp(_, _);
-          }),
-            (this.m_fnMouseMove = (_) => {
-              this.OnMouseMove(_, _);
-            }),
-            this.setState({
-              EdgeDown: _,
-            }),
-            (this.m_rectLinkRegion =
-              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
-            (this.m_nLocalOffsetXPct =
-              ((_.clientX - this.m_rectLinkRegion.left) /
-                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-                100 -
-              this.state.curLeftPosPct),
-            (this.m_nLocalOffsetYPct =
-              ((_.clientY - this.m_rectLinkRegion.top) /
-                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-                100 -
-              this.state.curTopPosPct),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mousemove",
-              this.m_fnMouseMove,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elLinkRegionBox.ownerDocument.defaultView,
-              "mouseup",
-              this.m_fnMouseUp,
-            ),
-            _.preventDefault(),
-            _.stopPropagation();
-        }
-        OnMouseMove(_, _) {
-          if (void 0 !== this.state.EdgeDown) {
-            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
-              case _.left:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.right:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.top:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                });
-                break;
-              case _.bottom:
-                this.UpdateState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.topleft:
-                this.UpdateState({
-                  curTopPosPct: this.CalcBottomEdge(_.clientY),
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                });
-                break;
-              case _.topright:
-                this.UpdateState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                });
-                break;
-              case _.bottomleft:
-                this.UpdateState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.bottomright:
-                this.UpdateState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                });
-                break;
-              case _.middle: {
-                const _ = (0, _._)(
-                    this.CalcLeftEdge(_.clientX),
-                    0,
-                    100 - this.state.curWidthPct,
-                  ),
-                  _ = 100 - (_ + this.state.curWidthPct),
-                  _ = (0, _._)(
-                    this.CalcTopEdge(_.clientY),
-                    0,
-                    100 - this.state.curHeightPct,
-                  ),
-                  _ = {
-                    curLeftPosPct: _,
-                    curRightPosPct: _,
-                    curTopPosPct: _,
-                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
-                  };
-                this.setState(_);
-                break;
-              }
-            }
-            _.preventDefault(), _.stopPropagation();
-          }
-        }
-        IsValidPct(_) {
-          return _ >= 0 && _ <= 100;
-        }
-        UpdateState(_) {
-          let _ =
-              void 0 !== _.curTopPosPct
-                ? _.curTopPosPct
-                : this.state.curTopPosPct,
-            _ =
-              void 0 !== _.curBottomPosPct
-                ? _.curBottomPosPct
-                : this.state.curBottomPosPct,
-            _ =
-              void 0 !== _.curLeftPosPct
-                ? _.curLeftPosPct
-                : this.state.curLeftPosPct,
-            _ =
-              void 0 !== _.curRightPosPct
-                ? _.curRightPosPct
-                : this.state.curRightPosPct,
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100,
-            ),
-            _ = (0, _._)(
-              100 - _ - _,
-              this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100,
-            );
-          this.props.bLockAspectRatio &&
-            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
-              ? (_ = _ / this.m_aspectRatio)
-              : (_ = _ * this.m_aspectRatio)),
-            void 0 !== _.curLeftPosPct
-              ? (_ = 100 - _ - _)
-              : (_ = 100 - (_ + _)),
-            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
-          const _ = 100 - _ - _,
-            _ = 100 - _ - _;
-          this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.IsValidPct(_) &&
-            this.setState({
-              curLeftPosPct: _,
-              curRightPosPct: _,
-              curTopPosPct: _,
-              curBottomPosPct: _,
-            });
-        }
-        GetXPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.left) /
-              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-              100 -
-            this.m_nLocalOffsetXPct
-          );
-        }
-        GetYPercent(_) {
-          return (
-            ((_ - this.m_rectLinkRegion.top) /
-              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-              100 -
-            this.m_nLocalOffsetYPct
-          );
-        }
-        CalcLeftEdge(_) {
-          return (0, _._)(this.GetXPercent(_), 0, 100);
-        }
-        CalcRightEdge(_) {
-          return (0, _._)(
-            100 - (this.GetXPercent(_) + this.state.curWidthPct),
-            0,
-            100,
-          );
-        }
-        CalcTopEdge(_) {
-          return (0, _._)(this.GetYPercent(_), 0, 100);
-        }
-        CalcBottomEdge(_) {
-          return (0, _._)(
-            100 - (this.GetYPercent(_) + this.state.curHeightPct),
-            0,
-            100,
-          );
-        }
-        OnMouseUp(_, _) {
-          this.setState({
-            curWidthPct:
-              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
-          }),
-            this.setState({
-              curHeightPct:
-                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
-            }),
-            this.setState({
-              EdgeDown: void 0,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            }),
-            this.m_listeners.Unregister();
-        }
-        async HandleDelete() {
-          this.props.deleteFn && this.props.deleteFn(this.props.index);
-        }
-        OnSetLinkURLChange(_) {
-          this.setState({
-            text_link_url: _.target.value,
-            valid_link: this.validateUrl(_.target.value),
-          });
-        }
-        OnSetLinkDescriptionChange(_) {
-          this.setState({
-            text_link_description: _.target.value,
-          });
-        }
-        validateUrl(_) {
-          return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-            _,
-          );
-        }
-        OnSaveLink() {
-          (this.m_strDescription = this.state.text_link_description),
-            this.setState({
-              bEditingLink: !this.state.bEditingLink,
-            }),
-            this.props.updateFn(this.props.index, {
-              xPosPct: this.state.curLeftPosPct,
-              yPosPct: this.state.curTopPosPct,
-              widthPct: this.state.curWidthPct,
-              heightPct: this.state.curHeightPct,
-              link_url: this.state.text_link_url,
-              link_description: this.state.text_link_description,
-            });
-        }
-        OnEditLink() {
-          this.setState({
-            bEditingLink: !this.state.bEditingLink,
-          });
-        }
-        render() {
-          let _ = {
-              left: this.state.curLeftPosPct + "%",
-              top: this.state.curTopPosPct + "%",
-              right: this.state.curRightPosPct + "%",
-              bottom: this.state.curBottomPosPct + "%",
-            },
-            _ = _().LinkRegionDragBox;
-          return (
-            null !== this.state.EdgeDown &&
-              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                style: _,
-                ref: this.LinkRegionBoxRef,
-                draggable: !1,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().LinkRegionGridBox,
-                },
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Top}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.top);
-                  },
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.topright);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Left}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.left);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: `${_().LinkRegionEdge} ${_().Middle}`,
-                    onMouseDown: (_) => {
-                      this.OnMouseDown(_, _.middle);
-                    },
-                    draggable: !1,
-                  },
-                  this.props.deleteFn &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionDelete,
-                        onClick: this.HandleDelete,
-                      },
-                      _.createElement(_.sED, null),
-                    ),
-                  !this.props.bDisableLink &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().LinkRegionSettings,
-                        onClick: this.OnEditLink,
-                      },
-                      _.createElement(_.xv8, null),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkText,
-                    },
-                    " ",
-                    this.m_strDescription,
-                    " ",
-                  ),
-                ),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Right}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.right);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomleft);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottom);
-                  },
-                  draggable: !1,
-                }),
-                _.createElement("div", {
-                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
-                  onMouseDown: (_) => {
-                    this.OnMouseDown(_, _.bottomright);
-                  },
-                  draggable: !1,
-                }),
-              ),
-              this.state.bEditingLink &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LinkRegionInfo,
-                  },
-                  _.createElement(_, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_url",
-                    value: this.state.text_link_url,
-                    label: (0, _._)("#SteamTV_LinkURL"),
-                    placeholder: "https://www.example.com",
-                    onChange: this.OnSetLinkURLChange,
-                    mustBeURL: !0,
-                  }),
-                  _.createElement(_, {
-                    className: _().LinkRegionInput,
-                    type: "text",
-                    name: "link_description",
-                    value: this.state.text_link_description,
-                    label: (0, _._)("#SteamTV_LinkDescription"),
-                    placeholder: (0, _._)(
-                      "#SteamTV_LinkDescription_Placeholder",
-                    ),
-                    onChange: this.OnSetLinkDescriptionChange,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().LinkRegionButtonContainer,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        disabled: !this.state.valid_link,
-                        onClick: this.OnSaveLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_OK"),
-                      " ",
-                    ),
-                    _.createElement(
-                      _,
-                      {
-                        onClick: this.OnEditLink,
-                      },
-                      " ",
-                      (0, _._)("#Button_Cancel"),
-                    ),
-                  ),
-                ),
-            )
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
-        (0, _._)([_._], _.prototype, "OnMouseDown", null),
-        (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "OnMouseUp", null),
-        (0, _._)([_._], _.prototype, "HandleDelete", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
-        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
-        (0, _._)([_._], _.prototype, "OnSaveLink", null),
-        (0, _._)([_._], _.prototype, "OnEditLink", null),
-        (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          region: {
-            xPosPct: 0,
-            yPosPct: 0,
-            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            heightPct:
-              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-          },
-        };
-        async OnCrop() {
-          await (async function (_, _, _, _, _, _, _, _, _) {
-            return new Promise((_, _) => {
-              const _ = _(_);
-              if (!_) return void _("Invalid format provided");
-              const _ = document.createElement("canvas");
-              (_.width = _), (_.height = _);
-              const _ = 0,
-                _ = 0;
-              _.getContext("2d").drawImage(_, _, _, _, _, _, _, _, _),
-                _.toBlob((_) => {
-                  const _ = _.toDataURL(_);
-                  3 !== _ && __webpack_require__.startsWith("data:image/png")
-                    ? _("Unable to encode into the requested file format")
-                    : ((_.file = (0, _._)(_, _.file.name)),
-                      (_.width = _),
-                      (_.height = _),
-                      (_.dataUrl = _),
-                      (_.uploadTime = Date.now()),
-                      (_.bCropped = !0),
-                      _());
-                });
-            });
-          })(
-            this.props.uploadFile,
-            this.props.uploadFile.GetCanvasImageSource(),
-            (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
-            (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
-            (this.state.region.widthPct / 100) * this.props.uploadFile.width,
-            (this.state.region.heightPct / 100) * this.props.uploadFile.height,
-            this.GetDestWidth(),
-            this.GetDestHeight(),
-            this.props.fileType,
-          ),
-            this.props.closeModal();
-        }
-        UpdateCrop(_, _) {
-          this.setState({
-            region: _,
-          });
-        }
-        GetDestWidth() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.width : _[_.GetCurrentImageOption().artworkType].width;
-        }
-        GetDestHeight() {
-          const { uploadFile: _, forceResolution: _ } = this.props;
-          return _ ? _.height : _[_.GetCurrentImageOption().artworkType].height;
-        }
-        GetLargestBoxThatFits(_, _, _, _) {
-          let _ = _,
-            _ = (_ * _) / Math.max(_, 1);
-          return (
-            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
-        GetPreviewWindowStyle() {
-          const { region: _ } = this.state,
-            _ = this.GetLargestBoxThatFits(
-              this.GetDestWidth(),
-              this.GetDestHeight(),
-              500,
-              150,
-            ),
-            _ = _.width,
-            _ = _.height,
-            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
-            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
-            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
-            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
-          return {
-            width: _,
-            height: _,
-            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * _}% ${100 * _}%`,
-            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
-          };
-        }
-        render() {
-          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
-            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
-            _ = this.GetLargestBoxThatFits(
-              this.props.uploadFile.width,
-              this.props.uploadFile.height,
-              800,
-              500,
-            );
-          return _.createElement(
-            _,
-            {
-              onEscKeypress: this.props.closeModal,
-              bDisableBackgroundDismiss: !0,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
-              },
-              _.createElement(
-                _,
-                null,
-                (0, _._)(
-                  "#ImageUpload_CropModalTitleDims",
-                  this.GetDestWidth(),
-                  this.GetDestHeight(),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("DialogBodyText"),
-                },
-                (0, _._)("#ImageUpload_CropModalDescription"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropImage,
-                  style: {
-                    width: _.width,
-                    height: _.height,
-                  },
-                },
-                _.createElement("img", {
-                  style: {
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain",
-                  },
-                  src: this.props.uploadFile.dataUrl,
-                }),
-                _.createElement(_, {
-                  bLockAspectRatio: !0,
-                  bDisableLink: !0,
-                  index: 0,
-                  updateFn: this.UpdateCrop,
-                  xPosPct: 0,
-                  yPosPct: 0,
-                  widthMinPct: _,
-                  heightMinPct: _,
-                  widthPct: _,
-                  heightPct: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CropPreviewGroup,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CropPreviewLabel,
-                  },
-                  (0, _._)("#ImageUpload_CropPreview"),
-                ),
-                _.createElement("div", {
-                  style: this.GetPreviewWindowStyle(),
-                }),
-              ),
-              _.createElement(
-                _,
-                {
-                  onClick: this.OnCrop,
-                },
-                (0, _._)("#ImageUpload_CropAndContinue"),
-              ),
-            ),
-          );
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case 3:
-            return "image/png";
-          case 1:
-            return "image/jpeg";
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case 1:
-            return ".jpg";
-          case 2:
-            return ".gif";
-          case 3:
-            return ".png";
-          case 5:
-            return ".webm";
-          case 4:
-            return ".mp4";
-          case 7:
-            return ".srt";
-          case 6:
-            return ".vtt";
-          case 10:
-            return ".webp";
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnCrop", null),
-        (0, _._)([_._], _.prototype, "UpdateCrop", null);
-      class _ extends _ {
-        m_rgImageOptions;
-        m_currentImageOption = void 0;
-        m_currentImageOptionKey = void 0;
-        constructor(_, _, _, _, _, _) {
-          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
-        }
-        IsValidAssetType(_, _) {
-          let _ = 0,
-            _ = 0,
-            _ = !1,
-            _ =
-              !this.m_rgImageOptions ||
-              0 === this.m_rgImageOptions.length ||
-              this.m_rgImageOptions.some(
-                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
-              );
-          if (_) (_ = _.width), (_ = _.height), (_ = !0);
-          else if (this.GetCurrentImageOption()) {
-            const _ = _[this.GetCurrentImageOption().artworkType];
-            _ &&
-              ((_ = _.width),
-              (_ = _.height),
-              (_ = !_.bDisableEnforceDimensions));
-          }
-          const _ = this.width >= _ && this.height >= _,
-            _ = _ ? this.width === _ && this.height === _ : _,
-            _ = _ && _ != this.fileType,
-            _ =
-              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
-              0 ==
-                _(
-                  this.fileType,
-                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
-                ).length,
-            _ = Boolean(_(this.fileType));
-          let _ = "",
-            _ = !1;
-          return (
-            _
-              ? _
-                ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
-                : _
-                  ? (_ = (0, _._)("#ImageUpload_InvalidFormat", _(_)))
-                  : _ || _
-                    ? _
-                      ? !_ &&
-                        _ &&
-                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
-                        (_ = !0))
-                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
-                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
-              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
-            {
-              error: _,
-              needsCrop: _,
-              match: this.GetCurrentImageOption(),
-            }
-          );
-        }
-        BSupportsLanguages() {
-          return !0;
-        }
-        ComputeDefaultImageOption() {
-          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
-            return;
-          const _ = _(
-            this.fileType,
-            this.m_rgImageOptions?.map((_) => _.artworkType),
-          );
-          let _ = _(this.width, this.height, _, !1);
-          if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
-            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
-            if (_) return _;
-          }
-          return this.m_rgImageOptions[0];
-        }
-        get ImageOptions() {
-          return this.m_rgImageOptions;
-        }
-        GetCurrentImageOptionKey() {
-          return this.m_currentImageOptionKey;
-        }
-        GetCurrentImageOption() {
-          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
-        }
-        SetCurrentImageOption(_) {
-          (this.m_currentImageOption = _),
-            (this.m_currentImageOptionKey = _?.sKey);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
-        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
-      function _(_) {
-        const _ = _.split(".").pop().toLocaleLowerCase();
-        return "webm" == _ || "mp4" == _;
-      }
-      class _ extends _ {
-        bCropped = !1;
-        localizedImageGroupPrimaryImage;
-        media;
-        constructor(_, _, _, _, _) {
-          super(
-            _,
-            _,
-            _,
-            _.src,
-            _(_.name) ? _.videoWidth : _.width,
-            _(_.name) ? _.videoHeight : _.height,
-          ),
-            (0, _._)(this),
-            (this.media = _),
-            (this.localizedImageGroupPrimaryImage = _);
-        }
-        ResetImage() {
-          (this.height = this.media.height),
-            (this.width = this.media.width),
-            (this.dataUrl = this.media.src);
-        }
-        GetCanvasImageSource() {
-          return this.media;
-        }
-        BIsOriginalMinimumDimensions(_) {
-          return _(this.media.width, this.media.height, _.artworkType);
-        }
-        FileTypeMatchesImageTypes(_) {
-          return _(this.fileType, _.artworkType);
-        }
-        BIsVideo() {
-          return _.includes(this.fileType);
-        }
-        GetResizeDimension() {
-          return (function (_) {
-            if ("background" === _)
-              return [
-                {
-                  width: 960,
-                  height: 311,
-                },
-                {
-                  width: 480,
-                  height: 156,
-                },
-              ];
-            if ("capsule" === _)
-              return [
-                {
-                  width: _[_].width / 2,
-                  height: _[_].height / 2,
-                },
-              ];
-            if ("spotlight" === _)
-              return [
-                {
-                  width: _[_].width / 2,
-                  height: _[_].height / 2,
-                },
-              ];
-            return;
-          })(this.GetCurrentImageOption()?.artworkType);
-        }
-      }
-      (0, _._)([_._], _.prototype, "bCropped", void 0);
-      class _ {}
-      function _(_, _, _) {
-        if (((null != _ && null != _) || (_ = _), !_ || 0 === _.length))
-          return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
-      }
-      class _ extends _ {
-        m_filesToUpload = _._.array();
-        m_filesCompleted = [];
-        m_clanSteamID;
-        m_rgRealmList;
-        m_eDefaultLanguage;
-        m_rgImageOptions;
-        m_allCancelTokens = new Array();
-        m_lastError = void 0;
-        m_fnSetImageURL = null;
-        constructor(_, _, _, _) {
-          var _;
-          super(),
-            (0, _._)(this),
-            (this.m_clanSteamID = _),
-            (this.m_rgRealmList = _),
-            (this.m_eDefaultLanguage = _),
-            (this.m_rgImageOptions =
-              ((_ = _),
-              _?.map((_) => {
-                const _ = _[_];
-                return (
-                  (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
-                  {
-                    sKey: _,
-                    width: _.width,
-                    height: _.height,
-                    bEnforceDimensions: !_.bDisableEnforceDimensions,
-                    artworkType: _,
-                    bHiddenFromDropdown: "hero" === _,
-                    fnGetLabelText() {
-                      return "spotlight" == this.artworkType
-                        ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
-                        : (0, _._)(
-                            "#EventEditor_ArtworkType_" + this.artworkType,
-                          );
-                    },
-                  }
-                );
-              })));
-        }
-        GetClanSteamID() {
-          return this.m_clanSteamID;
-        }
-        SetImageAllUrlFunction(_) {
-          this.m_fnSetImageURL = _;
-        }
-        async AddImage(_, _ = 0, _) {
-          const { language: _ } = (function (_, _ = 0, _ = !0) {
-            let _ = _.lastIndexOf(".");
-            -1 != _ && (_ = _.slice(0, _).toLowerCase());
-            let _ = null,
-              _ = 0;
-            _.endsWith("korean") && ((_ = 4), (_ = 6));
-            for (let _ = 0; _ < 31; ++_) {
-              const _ = (0, _._)(_);
-              if (_.length <= _) continue;
-              if (_.endsWith(_)) {
-                let _ = !_;
-                if (_ && _.length > _.length + 2) {
-                  const _ = _[_.length - _.length - 1];
-                  _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-                }
-                _ && ((_ = _), (_ = _.length));
-              }
-              const _ = (0, _._)(_);
-              _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
-            }
-            return {
-              language: _ ?? _,
-              baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
-            };
-          })(_.name, _);
-          return this.AddImageForLanguage(_, _, _);
-        }
-        async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              const _ = new FileReader();
-              (_.onload = () => {
-                const _ = _.name.split(".").pop().toLowerCase();
-                let _ = null;
-                !_._.is_support || ("webm" != _ && "mp4" != _)
-                  ? ((_ = new Image()),
-                    (_.onload = () => {
-                      const _ = new _(_, _, this.m_rgImageOptions, _, _);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                        (_ = !0),
-                        _();
-                    }))
-                  : ((_ = document.createElement("video")),
-                    (_.onloadeddata = () => {
-                      const _ = new _(_, _, this.m_rgImageOptions, _, _);
-                      (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                        (_ = !0),
-                        _();
-                    })),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CClanImageUploader failed to load the image, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = _.result.toString());
-              }),
-                _.readAsDataURL(_);
-            }),
-            _
-          );
-        }
-        async AddExistingClanImage(_, _ = 0, _) {
-          let _ = _.GetHashAndExt(_),
-            _ = _.GenerateEditableArtworkURLFromHashAndExtension(
-              this.m_clanSteamID,
-              _,
-            ),
-            _ = await _()({
-              url: _,
-              method: "GET",
-              responseType: "blob",
-            }),
-            _ = (0, _._)(_.data, _.file_name);
-          return await this.AddImage(_, _, _);
-        }
-        DeleteUploadImageByIndex(_) {
-          this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]);
-        }
-        DeleteUploadImage(_) {
-          let _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 && this.DeleteUploadImageByIndex(_);
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        GetFilesUploaded() {
-          return this.m_filesCompleted;
-        }
-        GetLastErrorFile() {
-          return this.m_lastError;
-        }
-        GetCompletedFiles() {
-          return this.m_filesCompleted.length;
-        }
-        GetTotalFiles() {
-          return this.m_filesToUpload.length;
-        }
-        GetFilesToUpload() {
-          return this.m_filesToUpload.map((_) => _.file);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        BHasError() {
-          return null != this.m_lastError;
-        }
-        BAllDone() {
-          return (
-            this.m_filesCompleted.length > 0 &&
-            this.m_filesCompleted.length == this.m_filesToUpload.length
-          );
-        }
-        BIsFileCompleted(_) {
-          return -1 != this.m_filesCompleted.indexOf(_);
-        }
-        async UploadAllImages(_, _) {
-          const _ = [];
-          for (let _ of this.m_filesToUpload)
-            if (!this.BIsFileCompleted(_.file)) {
-              const _ = _.IsValidAssetType(_, _);
-              if (_.error || _.needsCrop)
-                _.error &&
-                  (this.m_lastError = {
-                    file: _.file,
-                    message: _.error,
-                    status: 401,
-                  });
-              else {
-                _.status = "uploading";
-                const _ = this.UploadFile({
-                    uploadFile: _.file,
-                    filename: _.file.name,
-                    imageOption: _.match,
-                    resizeRequests: _.GetResizeDimension(),
-                    primaryLocalizeImage: _.localizedImageGroupPrimaryImage,
-                    lang: _.language,
-                    width: _.width,
-                    height: _.height,
-                  }),
-                  _ = {
-                    file: _.file,
-                    promise: _,
-                  };
-                __webpack_require__.push(_);
-              }
-            }
-          await Promise.all(__webpack_require__.map((_) => _.promise));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise;
-            _.push({
-              file: _.file,
-              bSuccess: 1 === _.success,
-              uploadResult: _,
-            });
-            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
-            if (_)
-              if (1 !== _.success)
-                (_.status = "failed"), (_.message = _.message);
-              else if (((_.status = "success"), this.m_fnSetImageURL))
-                if (_.origimagehash) {
-                  const _ = _(
-                    _.language,
-                    this.m_eDefaultLanguage,
-                    this.m_rgRealmList,
-                  );
-                  _.AddLocalizeImageUploaded(_.origimagehash, _);
-                } else {
-                  const _ = _.GetClanImageByImageHash(
-                    this.m_clanSteamID,
-                    _.image_hash,
-                  );
-                  if (_) {
-                    const _ = _(
-                      _.language,
-                      this.m_eDefaultLanguage,
-                      this.m_rgRealmList,
-                    );
-                    this.m_fnSetImageURL(
-                      __webpack_require__.GetCurrentImageOption().artworkType,
-                      _,
-                      _,
-                    );
-                  }
-                }
-          }
-          return _;
-        }
-        CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
-            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
-        }
-        RetryAllFailedUploads() {
-          this.CancelAllUploads(), this.UploadAllImages();
-        }
-        async handleUploadRefresh(_) {
-          await _.LoadClanImages(this.m_clanSteamID, !0, _);
-        }
-        async UploadFile(_) {
-          const {
-            uploadFile: _,
-            filename: __webpack_require__,
-            imageOption: _,
-            resizeRequests: _,
-            primaryLocalizeImage: _,
-            lang: _,
-            width: _,
-            height: _,
-          } = _;
-          let _ = null;
-          const _ = new FormData();
-          _.append("clanimage", _, __webpack_require__),
-            _.append("sessionid", _._.SESSIONID),
-            _?.artworkType && _.append("arttype", _.artworkType),
-            _ &&
-              _.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              );
-          let _ = "/uploadimage/";
-          _ &&
-            ((_ = "/ajaxuploadlocalizedimage/"),
-            _.append("origimagehash", _.image_hash),
-            _.append("thumbhash", _.thumbnail_hash),
-            _.append("extension", "" + _.file_type),
-            _.append("language", "" + _));
-          const _ = __webpack_require__.split(".").pop().toLocaleLowerCase();
-          ("webm" != _ && "mp4" != _) ||
-            (_.append("video_width", "" + _), _.append("video_height", "" + _));
-          const _ = _().CancelToken.source();
-          this.m_allCancelTokens.push(_);
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              this.m_clanSteamID.ConvertTo64BitString() +
-              _,
-            _ = {
-              cancelToken: _.token,
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            };
-          try {
-            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
-          } catch (_) {
-            (this.m_lastError = {
-              file: _,
-              status: _.response ? _.response.status : 500,
-              message: (0, _._)(_).strErrorMsg,
-            }),
-              (_ = _.response);
-          }
-          return _ || (await this.handleUploadRefresh(_)), _.data;
-        }
-        static async SendResizeRequest(_, _, _, _, _) {
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/resizeimage/",
-            _ = new FormData();
-          return (
-            _.append("imagehash", _),
-            _.append("extension", _),
-            _.append(
-              "resize",
-              _.map((_) => _.width + "x" + _.height).join(","),
-            ),
-            _.append("sessionid", _._.SESSIONID),
-            (
-              await _().post(_, _, {
-                cancelToken: _.token,
-              })
-            ).data.count
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
-        (0, _._)([_._], _.prototype, "m_lastError", void 0),
-        (0, _._)([_._], _.prototype, "AddImage", null),
-        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null);
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _;
-      function _(_, _, _, _ = !1) {
-        if (_)
-          for (let _ of _) {
-            if (_ ? _(_, _, _) : _(_, _, _)) return _;
-          }
-      }
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-      class _ {
-        constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
-        }
-        m_mapClanToImages = new Map();
-        m_mapClanImageLoadPromises = new Map();
-        m_imageListChangeCallback = new Map();
-        m_mapClanImageLoadState = new Map();
-        m_mapImageIDToResolution = new Map();
-        m_curLocImageGroup = null;
-        m_curLocImageGroupType = null;
-        BHasImageResolution(_) {
-          return this.m_mapImageIDToResolution.has(_.imageid);
-        }
-        GetImageResolution(_) {
-          return this.m_mapImageIDToResolution.get(_.imageid);
-        }
-        SetImageResolution(_, _) {
-          this.m_mapImageIDToResolution.set(_.imageid, _);
-        }
-        GetImageListCallbackForClanAccountID(_) {
-          return (
-            this.m_imageListChangeCallback.has(_) ||
-              this.m_imageListChangeCallback.set(_, new _._()),
-            this.m_imageListChangeCallback.get(_)
-          );
-        }
-        static GetExtensionString(_) {
-          return _(_.file_type) || ".jpg";
-        }
-        static GetExtensionTypeFromURL(_) {
-          return (function (_) {
-            return (
-              _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-              _.endsWith(".jpg")
-                ? 1
-                : _.endsWith(".png")
-                  ? 3
-                  : _.endsWith(".gif")
-                    ? 2
-                    : _.endsWith(".mp4")
-                      ? 4
-                      : _.endsWith(".webm")
-                        ? 5
-                        : _.endsWith(".vtt")
-                          ? 6
-                          : _.endsWith(".srt")
-                            ? 7
-                            : _.endsWith(".webp")
-                              ? 10
-                              : void 0
-            );
-          })(_);
-        }
-        static GetHashAndExt(_) {
-          return _ ? _.image_hash + _.GetExtensionString(_) : null;
-        }
-        static GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + _.GetExtensionString(_) : null;
-        }
-        m_vecClanImageDragListener = new Array();
-        AddClanImageDragListener(_) {
-          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
-            this.m_vecClanImageDragListener.push(_);
-        }
-        RemoveClanImageDragListener(_) {
-          let _ = this.m_vecClanImageDragListener.indexOf(_);
-          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
-        }
-        GetClanImageDragListener() {
-          return this.m_vecClanImageDragListener;
-        }
-        BHasLoadedClanImages(_) {
-          return this.m_mapClanToImages.has(_.GetAccountID());
-        }
-        async LoadClanImages(_, _, _) {
-          const _ = _.GetAccountID();
-          return (
-            (!_ && this.m_mapClanImageLoadPromises.has(_)) ||
-              this.m_mapClanImageLoadPromises.set(
-                _,
-                this.InternalLoadClanImages(_, _, _),
-              ),
-            this.m_mapClanImageLoadPromises.get(_)
-          );
-        }
-        async InternalLoadClanImages(_, _, _) {
-          let _ = _.GetAccountID();
-          if (
-            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
-            _ && (!this.m_mapClanToImages.has(_) || _))
-          ) {
-            let _ = {},
-              _ = null;
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/getimages/";
-            _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-              cancelToken: _ ? _.token : null,
-            });
-            for (let _ of _.data.images) _.clanAccountID = _;
-            (0, _._)(() => {
-              this.m_mapClanImageLoadState.set(_, {
-                loaded: !0,
-              }),
-                this.m_mapClanToImages.set(_, _.data.images),
-                this.GetImageListCallbackForClanAccountID(_).Dispatch(
-                  _.data.images,
-                );
-            });
-          }
-          return this.m_mapClanToImages.get(_);
-        }
-        GetLoadState(_) {
-          return this.m_mapClanImageLoadState.get(_.GetAccountID());
-        }
-        GetClanImages(_) {
-          return this.GetClanImagesByAccount(_.GetAccountID());
-        }
-        GetClanImagesByAccount(_) {
-          let _ = this.m_mapClanToImages.get(_);
-          return _ || new Array();
-        }
-        GetFilteredClanImages(_, _) {
-          let _ = _.GetClanImages(_);
-          return this.GetFilteredClanImagesList(_, _);
-        }
-        GetFilteredClanImagesList(_, _) {
-          if (_ && _.trim().length > 0) {
-            _ = _.trim().toLowerCase();
-            let _ = new Array();
-            for (let _ of _)
-              _.file_name &&
-                _.file_name.toLowerCase().indexOf(_) >= 0 &&
-                __webpack_require__.push(_);
-            return _;
-          }
-          return _;
-        }
-        GetClanImageByID(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.imageid == _) : null;
-        }
-        GetClanImageByURL(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : null;
-        }
-        GetClanImageByFile(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.file_name == _.name) : null;
-        }
-        GetClanImageByImageHash(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.image_hash == _) : null;
-        }
-        async DeleteClanImageByID(_, _) {
-          let _ = {
-              sessionid: _._.SESSIONID,
-              imageid: _,
-            },
-            _ = _.GetAccountID(),
-            _ = await _().get(
-              _._.COMMUNITY_BASE_URL +
-                "/gid/" +
-                _.ConvertTo64BitString() +
-                "/deleteimage/",
-              {
-                params: _,
-              },
-            );
-          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
-          let _ = this.m_mapClanToImages.get(_),
-            _ = _.findIndex((_, _, _) => _.imageid == _);
-          return (
-            _ >= 0 &&
-              (_.splice(_, 1),
-              this.GetImageListCallbackForClanAccountID(_).Dispatch([..._])),
-            _.data
-          );
-        }
-        async DeleteClanImage(_, _) {
-          return this.DeleteClanImageByID(_, _.imageid);
-        }
-        static GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        }
-        static GetExtensionStringFromHashAndExt(_) {
-          return _.substring(_.lastIndexOf("."));
-        }
-        static GenerateArtworkURLFromHashAndExtensions(
-          _,
-          _,
-          __webpack_require__ = _.full,
-          _,
-          _,
-        ) {
-          if (__webpack_require__ != _.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && "localized_image_group" == _
-              ? (0, _._)() +
-                  _.GetAccountID() +
-                  "/" +
-                  _ +
-                  "/" +
-                  (0, _._)((0, _._)(_)) +
-                  _
-              : (0, _._)() +
-                  _.GetAccountID() +
-                  "/" +
-                  _ +
-                  __webpack_require__ +
-                  _;
-          }
-          return (0, _._)() + _.GetAccountID() + "/" + _;
-        }
-        static GenerateEditableArtworkURLFromHashAndExtension(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        }
-        static GetMimeType(_) {
-          return (function (_) {
-            const _ = _.toLowerCase();
-            return _.endsWith(".jpg")
-              ? "image/jpeg"
-              : _.endsWith(".png")
-                ? "image/png"
-                : _.endsWith(".gif")
-                  ? "image/gif"
-                  : _.endsWith(".mp4")
-                    ? "video/mp4"
-                    : _.endsWith(".webm")
-                      ? "video/webm"
-                      : _.endsWith(".srt")
-                        ? "text/srt"
-                        : _.endsWith(".vtt")
-                          ? "text/vtt"
-                          : _.endsWith(".webp")
-                            ? "image/webp"
-                            : null;
-          })(_);
-        }
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              _.GetExtensionString({
-                file_type: _,
-              }),
-            _ = _.GenerateEditableArtworkURLFromHashAndExtension(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        }
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          let _ = {
-              success: void 0,
-            },
-            _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = 2);
-            }),
-            (_.onload = () => {
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = 1);
-            }),
-            (_.src = _),
-            _.token.promise.catch((_) => {
-              (_.onload = () => {}), (_.success = 52);
-            });
-          let _ = 0;
-          for (; void 0 === _.success && _ < 100; )
-            await (0, _._)(100), (_ += 1);
-          return (
-            _ >= 100 &&
-              ((_.success = 16),
-              (_.err_msg = "We timed out processing images")),
-            _
-          );
-        }
-        async AsyncOverlay(_, _, _, _, _, _) {
-          let _,
-            _,
-            _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              (_ =
-                "Load fail on url " +
-                _ +
-                " with error: " +
-                (0, _._)(_).strErrorMsg),
-                console.error(_);
-            }),
-            (_.onload = () => {
-              let _ = new Image();
-              (_.crossOrigin = "anonymous"),
-                (_.onerror = (_) => {
-                  (_ =
-                    "Load fail on url " +
-                    _ +
-                    " with error: " +
-                    (0, _._)(_).strErrorMsg),
-                    console.error(_);
-                }),
-                (_.onload = () => {
-                  try {
-                    let _ = document.createElement("canvas"),
-                      _ = _.getContext("2d");
-                    (_.width = _),
-                      (_.height = _),
-                      __webpack_require__.drawImage(_, 0, 0, _, _);
-                    let _ = (_ - _.width) / 2,
-                      _ = (_ - _.height) / 2;
-                    __webpack_require__.drawImage(_, _, _),
-                      _.toBlob((_) => (_ = _), "image/jpeg");
-                  } catch (_) {
-                    _ =
-                      "Failed during image processing for " + _ + " with " + _;
-                  }
-                }),
-                (_.src = _);
-            }),
-            (_.src = _);
-          let _ = 0;
-          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
-          if (
-            (_ >= 100 &&
-              void 0 === _ &&
-              (_ = "AsyncOverlay - We timed out processing images"),
-            _)
-          )
-            throw (
-              (console.log(_),
-              {
-                success: 2,
-                err_msg: _,
-              })
-            );
-          let _ = new _(_, null, null, -1),
-            _ = await _.UploadFile({
-              uploadFile: _,
-              filename: _,
-              width: _,
-              height: _,
-            });
-          return _.image_hash + _.GetExtensionString(_);
-        }
-        async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "gid/" +
-              _.ConvertTo64BitString() +
-              "/hasclanimagefile",
-            _ = {
-              image_hash_and_ext: _,
-              lang: "" + _,
-            };
-          return (
-            1 ==
-            (
-              await _().get(_, {
-                params: _,
-                cancelToken: _ && _.token,
-              })
-            ).data.success
-          );
-        }
-        SetPrimaryImageForImageGroup(_, _) {
-          (this.m_curLocImageGroup &&
-            this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
-            _ == this.m_curLocImageGroupType) ||
-            ((this.m_curLocImageGroup = {
-              primaryImage: _,
-              localized_images: [],
-            }),
-            (this.m_curLocImageGroupType = _),
-            (this.m_curLocImageGroup.localized_images = (0, _._)(
-              this.m_curLocImageGroup.localized_images,
-              31,
-              null,
-            )));
-        }
-        GetPrimaryImageForImageGroup() {
-          return this.m_curLocImageGroup?.primaryImage;
-        }
-        ClearImageGroup() {
-          (this.m_curLocImageGroup = null),
-            (this.m_curLocImageGroupType = null);
-        }
-        GetLocalizedImageGroupForEdit() {
-          return this.m_curLocImageGroup;
-        }
-        GetLocalizedImageGroupForEditAsURL(_, _) {
-          if (this.m_curLocImageGroup) {
-            let _ = this.m_curLocImageGroup.primaryImage;
-            return this.m_curLocImageGroup.localized_images[_]
-              ? this.m_curLocImageGroup.localized_images[_]
-              : _.GenerateArtworkURLFromHashAndExtensions(
-                  _,
-                  _.GetHashAndExt(_),
-                );
-          }
-          return null;
-        }
-        GetLocalizedImageGroupForEditAsImgArray(_) {
-          return this.GetAllLocalizedGroupImages();
-        }
-        async DetermineAvailableLocalizationForGroup(_) {
-          let _ = this.m_curLocImageGroup.primaryImage,
-            _ = _._.InitFromClanID(_.clanAccountID),
-            _ = _.GetHashAndExt(_),
-            _ = [];
-          for (let _ = 0; _ < 31; ++_)
-            _.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
-          let _ = await Promise.all(_);
-          (0, _._)(() => {
-            for (let _ = 0; _ < 31; ++_)
-              _[_] &&
-                (this.m_curLocImageGroup.localized_images[_] =
-                  _.GenerateArtworkURLFromHashAndExtensions(
-                    _,
-                    _,
-                    _.full,
-                    _,
-                    this.m_curLocImageGroupType,
-                  ));
-          });
-        }
-        SetLocalizedImageGroupAtLang(_, _, _) {
-          this.m_curLocImageGroup &&
-            (this.m_curLocImageGroup.localized_images[_] = _
-              ? _.GenerateArtworkURLFromHashAndExtensions(
-                  _,
-                  _,
-                  _.full,
-                  _,
-                  this.m_curLocImageGroupType,
-                )
-              : null);
-        }
-        AddLocalizeImageUploaded(_, _) {
-          let _ = this.m_curLocImageGroup.primaryImage;
-          if (_.image_hash == _) {
-            let _ = _._.InitFromClanID(_.clanAccountID),
-              _ = _.GetHashAndExt(_);
-            this.m_curLocImageGroup.localized_images[_] =
-              _.GenerateArtworkURLFromHashAndExtensions(
-                _,
-                _,
-                _.full,
-                _,
-                this.m_curLocImageGroupType,
-              );
-          }
-        }
-        GetAllLocalizedGroupImages() {
-          return (
-            (this.m_curLocImageGroup &&
-              this.m_curLocImageGroup.localized_images) ||
-            []
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
-        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0),
-        (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
-      const _ = new _();
       class _ {
         constructor() {
           (0, _._)(this);
@@ -18006,6 +7407,7 @@
           )
         );
       }
+      var _ = __webpack_require__("chunkid");
       var _,
         _ = __webpack_require__("chunkid");
       !(function (_) {
@@ -18388,7 +7790,9 @@
       })(_ || (_ = {}));
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
@@ -18534,6 +7938,127 @@
         localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
       };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_curLocImageGroup = null;
+        m_curLocImageGroupType = null;
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
+          let _ =
+              _._.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.ConvertTo64BitString() +
+              "/hasclanimagefile",
+            _ = {
+              image_hash_and_ext: _,
+              lang: "" + _,
+            };
+          return (
+            1 ==
+            (
+              await _().get(_, {
+                params: _,
+                cancelToken: _ && _.token,
+              })
+            ).data.success
+          );
+        }
+        SetPrimaryImageForImageGroup(_, _) {
+          (this.m_curLocImageGroup &&
+            this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
+            _ == this.m_curLocImageGroupType) ||
+            ((this.m_curLocImageGroup = {
+              primaryImage: _,
+              localized_images: [],
+            }),
+            (this.m_curLocImageGroupType = _),
+            (this.m_curLocImageGroup.localized_images = (0, _._)(
+              this.m_curLocImageGroup.localized_images,
+              31,
+              null,
+            )));
+        }
+        GetPrimaryImageForImageGroup() {
+          return this.m_curLocImageGroup?.primaryImage;
+        }
+        ClearImageGroup() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null);
+        }
+        GetLocalizedImageGroupForEdit() {
+          return this.m_curLocImageGroup;
+        }
+        GetLocalizedImageGroupForEditAsURL(_, _) {
+          if (this.m_curLocImageGroup) {
+            let _ = this.m_curLocImageGroup.primaryImage;
+            return this.m_curLocImageGroup.localized_images[_]
+              ? this.m_curLocImageGroup.localized_images[_]
+              : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
+          }
+          return null;
+        }
+        async DetermineAvailableLocalizationForGroup(_) {
+          const _ = this.m_curLocImageGroup.primaryImage,
+            _ = _._.InitFromClanID(_.clanAccountID),
+            _ = _._.GetHashAndExt(_),
+            _ = [];
+          for (let _ = 0; _ < 31; ++_)
+            _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
+          const _ = await Promise.all(_);
+          (0, _._)(() => {
+            for (let _ = 0; _ < 31; ++_)
+              _[_] &&
+                (this.m_curLocImageGroup.localized_images[_] =
+                  _._.GenerateURLFromHashAndExtAndLang(
+                    _,
+                    _,
+                    _._.full,
+                    _,
+                    this.m_curLocImageGroupType,
+                  ));
+          });
+        }
+        SetLocalizedImageGroupAtLang(_, _, _) {
+          this.m_curLocImageGroup &&
+            (this.m_curLocImageGroup.localized_images[_] = _
+              ? _._.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _._.full,
+                  _,
+                  this.m_curLocImageGroupType,
+                )
+              : null);
+        }
+        AddLocalizeImageUploaded(_, _) {
+          let _ = this.m_curLocImageGroup.primaryImage;
+          if (_.image_hash == _) {
+            const _ = _._.InitFromClanID(_.clanAccountID),
+              _ = _._.GetHashAndExt(_);
+            this.m_curLocImageGroup.localized_images[_] =
+              _._.GenerateURLFromHashAndExtAndLang(
+                _,
+                _,
+                _._.full,
+                _,
+                this.m_curLocImageGroupType,
+              );
+          }
+        }
+        GetAllLocalizedGroupImages() {
+          return (
+            (this.m_curLocImageGroup &&
+              this.m_curLocImageGroup.localized_images) ||
+            []
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
+      const _ = new _();
       var _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -18595,6 +8120,8 @@
         return _.nOverrideDateNow ?? _;
       }
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       (0, _._)(
         [_._],
         class {
@@ -18982,10 +8509,8 @@
               ? (_ = this.jsondata.localized_sale_logo)
               : "sale_overlay" === _
                 ? (_ = this.jsondata.localized_sale_overlay)
-                : _.includes(_)
-                  ? (_ = _.GetLocalizedImageGroupForEditAsImgArray(
-                      this.clanSteamID,
-                    ))
+                : _._.includes(_)
+                  ? (_ = _.GetAllLocalizedGroupImages())
                   : "product_banner" === _
                     ? (_ = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === _
@@ -19003,13 +8528,13 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = 0, __webpack_require__ = _.full) {
+        GetImageURL(_, _ = 0, __webpack_require__ = _._.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_].startsWith("http")
             ? _[_]
             : _
-              ? _.GenerateArtworkURLFromHashAndExtensions(
+              ? _._.GenerateURLFromHashAndExt(
                   this.clanSteamID,
                   _[_],
                   __webpack_require__,
@@ -19111,13 +8636,13 @@
               let _ = __webpack_require__.indexOf("[/img]", _);
               if (-1 != _) {
                 let _ = __webpack_require__.substring(_, _).trim();
-                if (0 != _.length) return (0, _._)(_);
+                if (0 != _.length) return _._.ReplacementTokenToClanImageURL(_);
               }
             }
           }
           return null;
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _.full) {
+        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full) {
           const _ = this.GetImageURL(_, _, __webpack_require__);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
@@ -19188,7 +8713,8 @@
           let _ = new Array();
           this.BImageNeedScreenshotFallback(_, _) ||
             (_.push(this.GetImageURLWithFallback(_, _, _)),
-            _ != _.full && _.push(this.GetImageURLWithFallback(_, _, _.full)));
+            _ != _._.full &&
+              _.push(this.GetImageURLWithFallback(_, _, _._.full)));
           const _ = this.GetFallbackArtworkScreenshot();
           return _ && !_ && _.push(_), _;
         }
@@ -19436,7 +8962,7 @@
                       ? _._.STORE_BASE_URL + "genre/Free%20to%20Play/"
                       : "earlyaccess" == _.type
                         ? _._.STORE_BASE_URL + "genre/Early%20Access/"
-                        : _._.STATS_BASE_URL + _.type
+                        : _._.STORE_BASE_URL + _.type
               : _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
@@ -19835,6 +9361,7 @@
         (0, _._)([_._], _.prototype, "video_preview_type", void 0),
         (0, _._)([_._], _.prototype, "video_preview_id", void 0),
         (0, _._)([_._], _.prototype, "m_overrideCurrentDay", void 0);
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           (null == _.gid || null == _.gid || "0" == _.gid) &&
@@ -26799,8 +16326,8 @@
             );
           });
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       class _ {
         m_isLoading = !1;
         m_existingRegistrations = new Map();
@@ -26939,10 +16466,12 @@
         (0, _._)([_._], _.prototype, "m_existingRegistrations", void 0),
         (0, _._)([_._], _.prototype, "m_selections", void 0),
         (0, _._)([_._.bound], _.prototype, "SetSelection", null);
+      var _ = __webpack_require__("chunkid");
       const _ =
-          __webpack_require__._ +
-          "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching",
-        _ = __webpack_require__("chunkid")._,
+        __webpack_require__._ +
+        "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid");
+      const _ = __webpack_require__("chunkid")._,
         _ = new _._("Login"),
         _ = _.Info,
         _ = (_.Debug, _.Warning),
@@ -27088,6 +16617,7 @@
         _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -33571,7 +23101,7 @@
       }
       function _(_) {
         return _.createElement(
-          _,
+          _._,
           {
             onClick: _.reset,
             className: _().QRFailure,
@@ -34302,7 +23832,7 @@
           }),
           _
             ? _.createElement(
-                _,
+                _._,
                 {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
@@ -34338,7 +23868,7 @@
       }
       const _ = 700;
       function _(_) {
-        const _ = _(),
+        const _ = (0, _._)(),
           _ = () => _.ownerWindow.screen.width < _,
           [_, _] = (0, _.useState)(__webpack_require__());
         return (
@@ -35688,7 +25218,7 @@
       }
       function _(_) {
         return _.createElement(
-          _,
+          _._,
           {
             onEscKeypress: _.closeModal,
             bDisableBackgroundDismiss: !0,
@@ -36866,6 +26396,7 @@
       _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      __webpack_require__("chunkid");
       function _() {
         return _.createElement(_.rfv, null);
       }
@@ -37729,6 +27260,7 @@
         (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
       let _ = new _();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -37743,7 +27275,7 @@
             _.format("LT"),
             _
               ? _.createElement(
-                  _,
+                  _._,
                   {
                     toolTipContent: _.format("Z") + ", " + _,
                   },
@@ -37826,7 +27358,7 @@
             }),
           );
           return _.createElement(
-            _,
+            _._,
             {
               toolTipContent: _,
               direction: "top",
@@ -38145,6 +27677,7 @@
       };
       _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       _.createContext({
         bCanUseLink: !1,
@@ -38307,6 +27840,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         m_iMenuInstance;
@@ -38352,15 +27886,15 @@
               this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
               _.stopPropagation(),
               _.preventDefault())
-            : _(
-                _.createElement(_, {
+            : (0, _._)(
+                _.createElement(_._, {
                   strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: (0, _._)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
                   ),
                   strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
                   onOK: () => {
-                    _(
+                    (0, _._)(
                       _.createElement(_, {
                         ownerWin: window,
                         redirectURL: window.location.href,
@@ -38553,9 +28087,9 @@
                     : _ === _.k_ENotifyFlagByPush &&
                       this.TrackEventAction(_.k_eReminder_MobilePush));
             } catch (_) {
-              _(
+              (0, _._)(
                 _.createElement(
-                  _,
+                  _._,
                   {
                     strTitle: (0, _._)(
                       _
@@ -38732,7 +28266,7 @@
                   className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
                     className: _.CheckboxWrapper,
                     bTopmost: !0,
@@ -38742,7 +28276,7 @@
                         : "#EventReminder_NotifyByEmail_Missing",
                     ),
                   },
-                  _.createElement(_, {
+                  _.createElement(_._, {
                     label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
                     disabled: !_,
                     checked: _.Get().BFollowsEventAndNotifiedBy(
@@ -38777,7 +28311,7 @@
                   className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
                     className: _.CheckboxWrapper,
                     bTopmost: !0,
@@ -38787,7 +28321,7 @@
                         : "#EventReminder_NotifyByMobile_Missing",
                     ),
                   },
-                  _.createElement(_, {
+                  _.createElement(_._, {
                     label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
                     disabled: !_,
                     checked: _.Get().BFollowsEventAndNotifiedBy(
@@ -39849,6 +29383,33 @@
             },
           ],
         ]);
+      function _(_, _, __webpack_require__ = 0) {
+        if (_ && 0 != _.length) {
+          if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
+          if (_?.startsWith(_._)) {
+            const _ = new Array(),
+              _ = _._.GetBaseURL(),
+              _ = _.substring(_._.length + 1),
+              _ = parseInt(_.substring(0, _.indexOf("/"))),
+              _ = _.substring(_.indexOf("/") + 1),
+              _ = _._.GetHashFromHashAndExt(_),
+              _ = _._.GetExtStringFromHashAndExt(_);
+            if (null != _) {
+              let _ = (0, _._)(_);
+              _.push(
+                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+              ),
+                4 == _ &&
+                  ((_ = (0, _._)((0, _._)(_))),
+                  _.push(
+                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                  ));
+            }
+            return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
+          }
+          return _;
+        }
+      }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
       }
@@ -39875,8 +29436,9 @@
         const { href: _, ...__webpack_require__ } = _;
         let _,
           _ = (0, _._)(_);
-        _(_)
-          ? ((_ = (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)),
+        (0, _._)(_)
+          ? ((_ =
+              (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)),
             (_ = "noopener nofollow"))
           : (_ = (0, _._)(_));
         const _ =
@@ -39887,7 +29449,7 @@
             ? (0, _._)(_)
             : void 0;
         return _.createElement(
-          _,
+          _._,
           {
             toolTipContent: _,
             direction: "top",
@@ -40005,6 +29567,7 @@
           bLoop: _ ? _ : _,
         });
       }
+      __webpack_require__("chunkid");
       const _ = "ː",
         _ = 604800;
       class _ {
@@ -40261,7 +29824,7 @@
         (0, _._)([_._], _.prototype, "TrackEmoticonUsage", null);
       __webpack_require__("chunkid");
       function _(_, _) {
-        return _(
+        return (0, _._)(
           _,
           (function (_) {
             return [
@@ -40297,10 +29860,10 @@
           _ = (0, _._)(_);
         (_ = (function (_, _) {
           return _(_, _)
-            ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _(_)
+            ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)
             : (0, _._)(_);
         })(_, __webpack_require__)),
-          _(_) && (_ = "noopener nofollow");
+          (0, _._)(_) && (_ = "noopener nofollow");
         const _ =
           "string" == typeof _.children &&
           _.children.length > 0 &&
@@ -40309,7 +29872,7 @@
             ? (0, _._)(_)
             : void 0;
         return _.createElement(
-          _,
+          _._,
           {
             toolTipContent: _,
             direction: "top",
@@ -40426,49 +29989,36 @@
               Constructor: function (_) {
                 const { showErrorInfo: _ } = _.context;
                 let _ = _?.children?.toString();
-                if (
-                  (null == _ || null == _ || 0 == _.length) &&
-                  ((_ = _?.args?.[""]), null == _ || null == _ || 0 == _.length)
-                )
-                  return "";
-                const _ = (function (_, _, _ = 0) {
-                  if (_?.startsWith(_._)) return (0, _._)(_);
-                  if (_?.startsWith(_._)) {
-                    const _ = new Array(),
-                      _ = (0, _._)(),
-                      _ = _.substring(_._.length + 1),
-                      _ = _.GetHashFromHashAndExt(_),
-                      _ = _.GetExtensionStringFromHashAndExt(_);
-                    if (null != _) {
-                      let _ = (0, _._)(_);
-                      _.push(_ + _ + "/" + _ + _ + "?t=" + _),
-                        4 == _ &&
-                          ((_ = (0, _._)((0, _._)(_))),
-                          _.push(_ + _ + "/" + _ + _ + "?t=" + _));
-                    }
-                    return _.push(_ + _), _;
-                  }
-                  return _;
-                })(_, _.language);
-                return "string" == typeof _
-                  ? ((_ = _),
-                    _
-                      ? _.createElement(_, {
-                          className: _().FAQImage,
-                          src: _,
-                        })
-                      : ((_ = __webpack_require__.replace(
-                          "http://",
-                          "https://",
-                        )),
-                        _.createElement("img", {
-                          className: _().FAQImage,
-                          src: _,
-                        })))
-                  : _.createElement(_, {
-                      className: _().FAQImage,
-                      rgSources: _,
-                    });
+                (null != _ && null != _ && 0 != _.length) ||
+                  (_ = _?.args?.[""]);
+                const _ = _?.args?.alt,
+                  _ = (function (_, _, _ = 0) {
+                    return _(_, _, _);
+                  })(_, _.language);
+                return null == _
+                  ? null
+                  : "string" == typeof _
+                    ? ((_ = _),
+                      _
+                        ? _.createElement(_, {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })
+                        : ((_ = __webpack_require__.replace(
+                            "http://",
+                            "https://",
+                          )),
+                          _.createElement("img", {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })))
+                    : _.createElement(_, {
+                        className: _().FAQImage,
+                        rgSources: _,
+                        alt: _,
+                      });
               },
               autocloses: !1,
             },
@@ -40572,6 +30122,8 @@
                       "div",
                       {
                         className: _.FAQTitle,
+                        role: "heading",
+                        "aria-level": 1,
                       },
                       _,
                     ),
@@ -40916,7 +30468,9 @@
                 {
                   className: _.LeftCol,
                 },
-                _.createElement(_._VW, null),
+                _.createElement(_._VW, {
+                  role: "presentation",
+                }),
               ),
               _.createElement(
                 "div",
@@ -40962,7 +30516,9 @@
                   {
                     className: _.LeftCol,
                   },
-                  _.createElement(_.ROZ, null),
+                  _.createElement(_.ROZ, {
+                    role: "presentation",
+                  }),
                 ),
                 _.createElement(
                   "div",
@@ -41226,7 +30782,7 @@
                   _,
                   null,
                   _.createElement(
-                    _,
+                    _._,
                     {
                       bRenderOverlayAtRoot: !0,
                       bUsePopups: !1,
@@ -67547,6 +57103,15 @@
 	"join-steam": 62,
 	"successful-login": 63,
 	"successful-joinsteam": 64,
+	"recommendations": 70,
+	"categories": 71,
+	"hardware": 72,
+	"waystoplay": 73,
+	"specialsections": 74,
+	"more": 75,
+	"big-category-link": 76,
+	"small-category-link": 77,
+	"package-purchase-recommendations": 78,
 	"main-cluster": 100,
 	"featured-win-games": 101,
 	"featured-mac-games": 102,
@@ -72688,6 +62253,980 @@
         }
         ReleaseHiddenMenu(_) {
           this.m_setHiddenMenus.delete(_);
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _, _, _, _;
+      !(function (_) {
+        (_[(_.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
+          (_[(_.EBrowserType_OpenVROverlay = 1)] =
+            "EBrowserType_OpenVROverlay"),
+          (_[(_.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+            "EBrowserType_OpenVROverlay_Dashboard"),
+          (_[(_.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+          (_[(_.EBrowserType_DirectHWND_Borderless = 4)] =
+            "EBrowserType_DirectHWND_Borderless"),
+          (_[(_.EBrowserType_ChildHWNDNative = 6)] =
+            "EBrowserType_ChildHWNDNative"),
+          (_[(_.EBrowserType_Offscreen_SteamUI = 12)] =
+            "EBrowserType_Offscreen_SteamUI"),
+          (_[(_.EBrowserType_OpenVROverlay_Subview = 13)] =
+            "EBrowserType_OpenVROverlay_Subview");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.SystemKey0 = 0)] = "SystemKey0"),
+            (_[(_.SystemKey1 = 1)] = "SystemKey1");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Hidden = 0)] = "Hidden"),
+            (_[(_.Notification = 1)] = "Notification"),
+            (_[(_.Overlay = 2)] = "Overlay"),
+            (_[(_.Opaque = 3)] = "Opaque"),
+            (_[(_.OverlayKeyboard = 4)] = "OverlayKeyboard");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.MainGamepadUI = 0)] = "MainGamepadUI"),
+            (_[(_.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
+            (_[(_.Keyboard = 2)] = "Keyboard"),
+            (_[(_.ControllerConfigurator = 3)] = "ControllerConfigurator"),
+            (_[(_._ = 4)] = "VR"),
+            (_[(_.MainDesktopUI = 5)] = "MainDesktopUI"),
+            (_[(_.DesktopLogin = 6)] = "DesktopLogin"),
+            (_[(_.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
+            (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
+        })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        m_unPID: 0,
+        m_nBrowserID: -1,
+      };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_fnRender;
+        m_rgLoadingLinks = [];
+        constructor(_, _, _) {
+          if (((this.m_rgLoadingLinks = []), _))
+            for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
+          else if (_) {
+            let _ = _.getElementsByTagName("link");
+            for (let _ = 0; _ < _.length; _++) {
+              let _ = _[_];
+              this.AddLink(_, !1);
+            }
+          }
+        }
+        AddLink(_, _) {
+          if (_) {
+            let _ = !1;
+            try {
+              (_.sheet && _.sheet.cssRules && 0 != _.sheet.cssRules.length) ||
+                (_ = !0);
+            } catch (_) {}
+            _ &&
+              (_.addEventListener("load", this.OnLinkLoad),
+              this.m_rgLoadingLinks.push(_));
+          } else
+            _.addEventListener("load", this.OnLinkLoad),
+              this.m_rgLoadingLinks.push(_);
+        }
+        SetTarget(_) {
+          (this.m_fnRender = _),
+            0 == this.m_rgLoadingLinks.length &&
+              (this.m_fnRender(), (this.m_fnRender = void 0));
+        }
+        OnLinkLoad(_) {
+          _.currentTarget.removeEventListener("load", this.OnLinkLoad),
+            _._(this.m_rgLoadingLinks, _.currentTarget),
+            0 == this.m_rgLoadingLinks.length &&
+              (this.m_fnRender?.(), (this.m_fnRender = void 0));
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
+      var _,
+        _,
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)() ? _.Composited : _.None;
+      }
+      function _(_) {
+        let _ = _.None;
+        switch (_) {
+          case _.Overlay:
+            return (
+              (_ |= _.AlwaysOnTop),
+              (_ |= _.NoTaskbarIcon),
+              (_ |= _.NotFocusable),
+              (_ |= _.TransparentParentWindow),
+              _
+            );
+          case _.Notification:
+            return (
+              (_ |= _(_.Overlay)),
+              (_ |= _.NoWindowShadow),
+              (_ |= _.NoRoundedCorners),
+              (_ |= _.OverrideRedirect),
+              _
+            );
+          case _.Tooltip:
+            return (
+              (_ |= _(_.Overlay)),
+              (_ |= _.NoRoundedCorners),
+              (_ |= _.NoWindowShadow),
+              (_ |= _.TooltipHint),
+              (_ |= _()),
+              _
+            );
+          case _.PopupContextMenu:
+            return (
+              (_ |= _.NoTaskbarIcon),
+              (_ |= _.NoRoundedCorners),
+              (_ |= _.NoWindowShadow),
+              (_ |= _.PopUpMenuHint),
+              (_ |= _.TransparentParentWindow),
+              (_ |= _()),
+              _
+            );
+          case _.StandaloneContextMenu:
+            return (
+              (_ = _.NoTaskbarIcon),
+              (_ |= _.NoRoundedCorners),
+              (_ |= _.NoWindowShadow),
+              (_ |= _.OverrideRedirect),
+              (_ |= _.TransparentParentWindow),
+              (_ |= _()),
+              _
+            );
+        }
+      }
+      function _() {
+        const { ownerWindow: _ } = _(),
+          _ = _.GetPopupForWindow(_);
+        return _?.browser_info || _;
+      }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Minimized = 1)] = "Minimized"),
+          (_[(_.Hidden = 2)] = "Hidden"),
+          (_[(_.TooltipHint = 4)] = "TooltipHint"),
+          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+          (_[(_.Resizable = 16)] = "Resizable"),
+          (_[(_.ScalePosition = 32)] = "ScalePosition"),
+          (_[(_.ScaleSize = 64)] = "ScaleSize"),
+          (_[(_.Maximized = 128)] = "Maximized"),
+          (_[(_.Composited = 256)] = "Composited"),
+          (_[(_.NotFocusable = 512)] = "NotFocusable"),
+          (_[(_.FullScreen = 1024)] = "FullScreen"),
+          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+            "ApplyBrowserScaleToDimensions"),
+          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+            "IgnoreSteamDisplayScale"),
+          (_[(_.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow"),
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Overlay = 0)] = "Overlay"),
+            (_[(_.Notification = 1)] = "Notification"),
+            (_[(_.Tooltip = 2)] = "Tooltip"),
+            (_[(_.PopupContextMenu = 3)] = "PopupContextMenu"),
+            (_[(_.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
+        })(_ || (_ = {}));
+      const _ = _.createContext({
+          ownerWindow: window,
+        }),
+        _ = () => _.useContext(_);
+      function _(_) {
+        const { ownerWindow: _, children: __webpack_require__ } = _,
+          _ = _.useMemo(
+            () => ({
+              ownerWindow: _,
+            }),
+            [_],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          __webpack_require__,
+        );
+      }
+      class _ {
+        m_strName;
+        m_strTitle;
+        m_rgParams;
+        m_popup;
+        m_element;
+        m_renderWhenReady;
+        m_bCreateHidden;
+        m_bCreated = !1;
+        m_onCreateRender = null;
+        m_bFocused = !1;
+        constructor(_, _) {
+          (0, _._)(this),
+            (0, _._)(
+              _,
+              "Name is required.  This is an internal name, different from title.",
+            ),
+            (this.m_strName = _);
+          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
+          (this.m_rgParams = {
+            ..._,
+            eCreationFlags: _ ?? 0,
+          }),
+            this.m_rgParams.target_browser &&
+              (this.m_strName +=
+                "_uid" + this.m_rgParams.target_browser.m_unPID),
+            (this.m_bCreateHidden = !!(
+              this.m_rgParams.eCreationFlags & _.Hidden
+            )),
+            (this.m_strTitle = __webpack_require__);
+        }
+        UpdateParamsBeforeShow(_) {
+          return _;
+        }
+        OnDrop(_) {
+          console.log("Ignoring drop onto toplevel window", _),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnDragOver(_) {
+          _.preventDefault(),
+            (_.dataTransfer.dropEffect = "none"),
+            _.stopPropagation();
+        }
+        OnMessage(_) {
+          "window_moved" == _.data && this.OnResize(),
+            "popup-created" == _.data && this.OnCreateInternal();
+        }
+        Show(_ = _._.k_EWindowBringToFrontAndForceOS) {
+          let _;
+          (_ =
+            "boolean" == typeof _
+              ? _
+                ? _._.k_EWindowBringToFrontAndForceOS
+                : _._.k_EWindowBringToFrontInvalid
+              : _),
+            window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
+            this.m_rgParams.eCreationFlags & _.NotFocusable &&
+              (_ = _._.k_EWindowBringToFrontInvalid),
+            this.BIsValid() &&
+              (this.BIsClosed()
+                ? ((this.m_popup = void 0), (this.m_element = void 0))
+                : _ != _._.k_EWindowBringToFrontInvalid && this.Focus(_));
+          let _,
+            _,
+            _,
+            _ = _.GetExistingPopup(this.m_strName);
+          (_ && !this.m_rgParams.replace_existing_popup) ||
+            ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
+            _
+              ? ((_ = _.m_element),
+                (_ = _.m_popup),
+                _.ReleasePopup(),
+                (_ = _.m_renderWhenReady),
+                _.RemoveTrackedPopup(_),
+                __webpack_require__?.removeEventListener(
+                  "beforeunload",
+                  _.OnBeforeUnloadEvent,
+                ),
+                __webpack_require__?.removeEventListener("unload", _.OnUnload),
+                __webpack_require__?.removeEventListener(
+                  "resize",
+                  _.OnResizeEvent,
+                ),
+                __webpack_require__?.removeEventListener(
+                  "focus",
+                  this.OnFocusInternal,
+                ),
+                __webpack_require__?.removeEventListener(
+                  "blur",
+                  this.OnBlurInternal,
+                ),
+                __webpack_require__?.removeEventListener("drop", _.OnDrop),
+                __webpack_require__?.removeEventListener(
+                  "dragover",
+                  _.OnDragOver,
+                ),
+                __webpack_require__?.removeEventListener(
+                  "message",
+                  this.OnMessage,
+                ))
+              : (({ popup: _, element: _ } = _.CreatePopup(this.m_strName, {
+                  ...this.m_rgParams,
+                  title: this.m_strTitle,
+                })),
+                (_ = new _(_?.document, _))),
+            _ &&
+              _ &&
+              ((_.document.title = this.m_strTitle),
+              __webpack_require__.addEventListener(
+                "beforeunload",
+                this.OnBeforeUnloadEvent,
+              ),
+              __webpack_require__.addEventListener("unload", this.OnUnload),
+              __webpack_require__.addEventListener(
+                "resize",
+                this.OnResizeEvent,
+              ),
+              __webpack_require__.addEventListener(
+                "focus",
+                this.OnFocusInternal,
+              ),
+              __webpack_require__.addEventListener("blur", this.OnBlurInternal),
+              __webpack_require__.addEventListener("drop", this.OnDrop),
+              __webpack_require__.addEventListener("dragover", this.OnDragOver),
+              __webpack_require__.addEventListener("message", this.OnMessage),
+              _._.LANGUAGE &&
+                _.document.documentElement.setAttribute(
+                  "lang",
+                  (0, _._)() ?? "",
+                ),
+              (this.m_popup = _),
+              (this.m_element = _),
+              (this.m_renderWhenReady = _),
+              this.m_renderWhenReady?.SetTarget(() => {
+                this.m_popup &&
+                  this.m_element &&
+                  this.RenderInternal(this.m_popup, this.m_element, _);
+              })),
+            _.AddTrackedPopup(this),
+            _ &&
+              (this.OnCreateInternal(),
+              _ != _._.k_EWindowBringToFrontInvalid && this.Focus(_)));
+        }
+        RemoveEventListeners() {
+          this.window?.removeEventListener(
+            "beforeunload",
+            this.OnBeforeUnloadEvent,
+          ),
+            this.window?.removeEventListener("unload", this.OnUnload),
+            this.window?.removeEventListener("resize", this.OnResizeEvent),
+            this.window?.removeEventListener("focus", this.OnFocusInternal),
+            this.window?.removeEventListener("blur", this.OnBlurInternal),
+            this.window?.removeEventListener("drop", this.OnDrop),
+            this.window?.removeEventListener("dragover", this.OnDragOver),
+            this.window?.removeEventListener("message", this.OnMessage);
+        }
+        RenderInternal(_, _, _) {
+          var _;
+          this.m_bCreated
+            ? (this.browser_info &&
+                ((_ = this.browser_info.m_eBrowserType) ==
+                  _.EBrowserType_OpenVROverlay ||
+                  _ == _.EBrowserType_OpenVROverlay_Dashboard ||
+                  _ == _.EBrowserType_OpenVROverlay_Subview) &&
+                (_.ownerDocument.body.className += " VR"),
+              this.Render(_, _),
+              this.OnLoad(),
+              _?.SteamClient &&
+                !this.m_bCreateHidden &&
+                (_ != _._.k_EWindowBringToFrontInvalid
+                  ? _.SteamClient.Window.BringToFront(_)
+                  : _.SteamClient.Window.ShowWindow()))
+            : (this.m_onCreateRender = () => this.RenderInternal(_, _, _));
+        }
+        OnCreateInternal() {
+          this.m_bCreated ||
+            ((this.m_bCreated = !0),
+            this.OnCreate(),
+            this.m_onCreateRender &&
+              (this.m_onCreateRender(), (this.m_onCreateRender = null)));
+        }
+        OnCreate() {}
+        OnResizeEvent() {
+          this.OnResize();
+        }
+        OnBeforeUnloadEvent() {
+          this.OnBeforeUnload();
+        }
+        OnUnload(_) {
+          this.RemoveEventListeners(),
+            _.RemoveTrackedPopup(this),
+            this.OnClose(),
+            (this.m_popup = void 0);
+        }
+        get browser_info() {
+          return this.m_rgParams.target_browser;
+        }
+        get window() {
+          return this.m_popup;
+        }
+        get root_element() {
+          return this.m_element;
+        }
+        get title() {
+          return this.m_strTitle;
+        }
+        set title(_) {
+          (this.m_strTitle = _),
+            this.m_popup && (this.m_popup.document.title = this.m_strTitle);
+        }
+        get params() {
+          return this.m_rgParams;
+        }
+        Focus(_ = _._.k_EWindowBringToFrontAndForceOS) {
+          _ != _._.k_EWindowBringToFrontInvalid &&
+            (this.m_popup &&
+            void 0 !== this.m_popup.SteamClient &&
+            void 0 !== this.m_popup.SteamClient.Window
+              ? this.m_popup.SteamClient.Window.BringToFront(_)
+              : this.m_popup && this.m_popup.focus());
+        }
+        Close() {
+          this.m_popup &&
+            ((0, _._)(this.m_popup.window, "Window.Close")
+              ? this.m_popup.window.SteamClient.Window.Close()
+              : this.m_popup.window.close());
+        }
+        GetName() {
+          return this.m_strName;
+        }
+        BIsValid() {
+          return !!this.m_popup;
+        }
+        BIsClosed() {
+          return !this.m_popup || this.m_popup.closed;
+        }
+        BIsVisible() {
+          return !(
+            !this.m_popup ||
+            this.m_popup.closed ||
+            "visible" != this.m_popup.document.visibilityState
+          );
+        }
+        BIsFocused() {
+          return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
+        }
+        OnFocusInternal() {
+          this.m_popup &&
+            this.m_popup.document.body.classList.add("WindowFocus"),
+            (this.m_bFocused = !0),
+            this.OnFocus();
+        }
+        OnBlurInternal() {
+          this.m_popup &&
+            this.m_popup.document.body.classList.remove("WindowFocus"),
+            (this.m_bFocused = !1),
+            this.OnBlur();
+        }
+        get focused() {
+          return this.m_bFocused;
+        }
+        GetWindowRestoreDetails() {
+          return (0, _._)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
+            : Promise.resolve("");
+        }
+        IsMinimized() {
+          return (0, _._)(this.m_popup, "Window.IsWindowMinimized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMinimized()
+            : Promise.resolve(!1);
+        }
+        IsMaximized() {
+          return (0, _._)(this.m_popup, "Window.IsWindowMaximized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMaximized()
+            : Promise.resolve(!1);
+        }
+        ReleasePopup() {
+          this.OnClose(), (this.m_popup = null);
+        }
+        OnResize() {
+          this.IsMaximized().then((_) => {
+            _
+              ? this.m_popup?.document.body.classList.add("Maximized")
+              : this.m_popup?.document.body.classList.remove("Maximized");
+          });
+        }
+        OnBeforeUnload() {}
+        OnFocus() {}
+        OnBlur() {}
+      }
+      (0, _._)([_._], _.prototype, "m_bFocused", void 0),
+        (0, _._)([_._], _.prototype, "OnMessage", null),
+        (0, _._)([_._], _.prototype, "RenderInternal", null),
+        (0, _._)([_._], _.prototype, "OnCreateInternal", null),
+        (0, _._)([_._], _.prototype, "OnResizeEvent", null),
+        (0, _._)([_._], _.prototype, "OnBeforeUnloadEvent", null),
+        (0, _._)([_._], _.prototype, "OnUnload", null),
+        (0, _._)([_._], _.prototype, "OnFocusInternal", null),
+        (0, _._)([_._], _.prototype, "OnBlurInternal", null);
+      (0, _._)(
+        [_._],
+        class extends _ {
+          m_strSavedDimensionsKey;
+          m_strInitialSavedDimensionsKey;
+          m_strInitialRestoreDetails;
+          m_bExpires;
+          constructor(_, _, _, _) {
+            super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
+          }
+          BIsInOverlay() {
+            return (
+              this.browser_info &&
+              0 != this.browser_info.m_unPID &&
+              -1 != this.browser_info.m_nBrowserID
+            );
+          }
+          SetSavedDimensionsKey(_) {
+            this.m_strSavedDimensionsKey = _;
+          }
+          UpdateParamsBeforeShow(_) {
+            return (
+              !this.m_strSavedDimensionsKey ||
+              _.bIgnoreSavedDimensions ||
+              _.strRestoreDetails
+                ? _.strRestoreDetails &&
+                  ((this.m_strInitialSavedDimensionsKey =
+                    this.GetSavedDimensionsKey()),
+                  _.SetRestoreDetails(
+                    this.m_strInitialSavedDimensionsKey,
+                    _.strRestoreDetails,
+                    this.m_bExpires,
+                  ))
+                : ((this.m_strInitialSavedDimensionsKey =
+                    this.GetSavedDimensionsKey()),
+                  (_.strRestoreDetails = _.GetRestoreDetails(
+                    this.m_strInitialSavedDimensionsKey,
+                  ))),
+              _
+            );
+          }
+          OnLoad() {
+            this.GetWindowRestoreDetails().then((_) => {
+              (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
+            });
+          }
+          OnResize() {
+            super.OnResize(), this.QueryAndStoreWindowPosition();
+          }
+          OnResizeComplete(_) {}
+          QueryAndStoreWindowPosition() {
+            if (this.m_strInitialRestoreDetails) {
+              let _ = this.GetSavedDimensionsKey();
+              this.m_popup?.setTimeout(() => {
+                this.GetWindowRestoreDetails().then((_) => {
+                  let _ =
+                    this.m_rgParams.strRestoreDetails == _ &&
+                    _ == this.m_strInitialSavedDimensionsKey;
+                  this.m_popup &&
+                    this.m_strSavedDimensionsKey &&
+                    _ &&
+                    !_ &&
+                    (_.SetRestoreDetails(_, _, this.m_bExpires),
+                    (this.m_rgParams.strRestoreDetails = _),
+                    (this.m_strInitialSavedDimensionsKey = _),
+                    this.OnResizeComplete(_));
+                });
+              }, 30);
+            }
+          }
+          OnBeforeUnload() {
+            this.QueryAndStoreWindowPosition(), super.OnBeforeUnload();
+          }
+          OnClose() {}
+          SaveWindowPosition(_) {
+            _.SetRestoreDetails(this.GetSavedDimensionsKey(), _, !1),
+              (this.m_rgParams.strRestoreDetails = _);
+          }
+        }.prototype,
+        "QueryAndStoreWindowPosition",
+        null,
+      );
+      class _ {
+        m_bShuttingDown = !1;
+        m_mapPopups = _._.map([], {
+          deep: !1,
+        });
+        m_rgShutdownCallbacks = [];
+        m_rgPopupCreatedCallbacks = new _._();
+        m_rgPopupDestroyedCallbacks = new _._();
+        m_unCurrentAccountID = 0;
+        m_mapRestoreDetails = new Map();
+        m_bSaveRequired = !1;
+        m_DynamicCSSObserver;
+        constructor() {
+          if (
+            !{
+              NODE_ENV: "production",
+              STEAM_BUILD: "buildbot",
+            }.MOBILE_BUILD &&
+            "addEventListener" in window
+          ) {
+            window.addEventListener("beforeunload", (_) => {
+              this.m_bShuttingDown = !0;
+              for (let _ of this.m_rgShutdownCallbacks) _();
+              let _ = [];
+              this.m_mapPopups.forEach((_) => {
+                _.BIsValid() && !_.BIsClosed() && _.push(_);
+              });
+              for (let _ of _)
+                _.window?.SteamClient.Browser
+                  ?.SetShouldExitSteamOnBrowserClosed &&
+                  _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
+                    !1,
+                  ),
+                  _.window?.SteamClient.Window.SetHideOnClose &&
+                    _.window?.SteamClient.Window.SetHideOnClose(!1),
+                  _.Close();
+              this.m_bSaveRequired && this.SaveSavedDimensionStore(),
+                this.m_mapPopups.clear();
+            });
+            let _ = document.querySelector("head");
+            (0, _._)(_, "Couldn't find head element"),
+              _ &&
+                ((this.m_DynamicCSSObserver = new MutationObserver(() => {
+                  const _ = _._();
+                  this.m_mapPopups.forEach((_) => {
+                    _._(_.window.document, _, !1);
+                  });
+                })),
+                this.m_DynamicCSSObserver.observe(_, {
+                  childList: !0,
+                }));
+          }
+        }
+        BAnyPopupHasFocus() {
+          for (const _ of this.m_mapPopups.values()) if (_.focused) return !0;
+          return !1;
+        }
+        BAnyMenuHasFocus() {
+          for (const _ of this.m_mapPopups.values())
+            if (_.focused && (_.params.eCreationFlags ?? 0) & _.NoTaskbarIcon)
+              return !0;
+          return !1;
+        }
+        SetCurrentLoggedInAccountID(_) {
+          this.m_unCurrentAccountID != _ &&
+            ((this.m_unCurrentAccountID = _),
+            _
+              ? this.LoadSavedDimensionStore()
+              : this.ClearSavedDimensionStore());
+        }
+        AddShutdownCallback(_) {
+          this.m_rgShutdownCallbacks.push(_);
+        }
+        AddPopupCreatedCallback(_) {
+          return this.m_rgPopupCreatedCallbacks.Register(_);
+        }
+        AddPopupDestroyedCallback(_) {
+          return this.m_rgPopupDestroyedCallbacks.Register(_);
+        }
+        AddTrackedPopup(_) {
+          this.m_mapPopups.set(_.GetName(), _),
+            _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_);
+        }
+        RemoveTrackedPopup(_) {
+          this.m_rgPopupDestroyedCallbacks.Dispatch(_),
+            this.m_mapPopups.delete(_.GetName());
+        }
+        GetExistingPopup(_) {
+          return this.m_mapPopups.get(_);
+        }
+        GetPopups() {
+          return this.m_mapPopups.values();
+        }
+        GetPopupForWindow(_) {
+          for (const _ of this.m_mapPopups.values())
+            if (_.window === _) return _;
+        }
+        ClosePopupsOwnedByBrowser(_) {
+          this.m_mapPopups.forEach((_) => {
+            _.browser_info &&
+              _.browser_info.m_nBrowserID == _.m_nBrowserID &&
+              _.browser_info.m_unPID == _.m_unPID &&
+              _.Close();
+          });
+        }
+        static CreatePopup(_, _) {
+          let _ = _.dimensions || {},
+            _ = _.width || 300,
+            _ = _.height || 300,
+            _ = _.title,
+            _ = "width=" + _ + ",height=" + _;
+          void 0 !== _.left && (_ += ",left=" + _.left),
+            void 0 !== _.top && (_ += ",top=" + _.top),
+            (_ += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
+          let _ = "about:blank",
+            _ = [];
+          _.push("createflags=" + _.eCreationFlags),
+            _.minWidth && _.push("minwidth=" + _.minWidth),
+            _.minHeight && _.push("minheight=" + _.minHeight),
+            _.maxWidth &&
+              _.maxWidth != 1 / 0 &&
+              _.push("maxwidth=" + _.maxWidth),
+            _.maxHeight &&
+              _.maxHeight != 1 / 0 &&
+              _.push("maxheight=" + _.maxHeight),
+            _.target_browser
+              ? (_.push("pid=" + _.target_browser.m_unPID),
+                _.push("browser=" + _.target_browser.m_nBrowserID),
+                _.target_browser.m_eBrowserType
+                  ? _.push("browserType=" + _.target_browser.m_eBrowserType)
+                  : _.browserType && _.push("browserType=" + _.browserType),
+                _.availscreenwidth &&
+                  _.availscreenheight &&
+                  (_.push("screenavailwidth=" + _.availscreenwidth),
+                  _.push("screenavailheight=" + _.availscreenheight)))
+              : _.browserType && _.push("browserType=" + _.browserType),
+            _.strVROverlayKey && _.push("vrOverlayKey=" + _.strVROverlayKey),
+            _.strRestoreDetails &&
+              _.push("restoredetails=" + _.strRestoreDetails),
+            _.window_opener_id && _.push("openerid=" + _.window_opener_id),
+            _.parent_container_popup_id &&
+              _.push("parentcontainerpopupid=" + _.parent_container_popup_id),
+            _.center_on_window &&
+              void 0 === _.left &&
+              void 0 === _.top &&
+              _.push(
+                "centerOnBrowserID=" +
+                  _.center_on_window.SteamClient.Browser.GetBrowserID(),
+              ),
+            _.strUserAgent && _.push("useragent=" + _.strUserAgent),
+            _.hwndParent && _.push("hwndParent=" + _.hwndParent),
+            _.bPinned && _.push("pinned=true"),
+            _.bModal && _.push("modal=true"),
+            _ && (_ += "?" + _.join("&"));
+          let _ = (_.owner_window || window).open(_, _, _);
+          if (!_)
+            return (
+              console.error(
+                `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
+              ),
+              {}
+            );
+          let _ = "";
+          _.html_class && (_ = `class="${_.html_class}"`);
+          let _ = "";
+          _.body_class && (_ = `class="${_.body_class}"`);
+          let _ = "";
+          _.body_role && (_ = `role="${_.body_role}"`);
+          let _ = "";
+          _.popup_class && (_ = `class="${_.popup_class}"`);
+          let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_} ${_}><div id="popup_target" ${_}></div></body></html>`;
+          return (
+            _.document.write(_),
+            (_.document.title = _),
+            _.document.close(),
+            _._(_, _._()),
+            {
+              popup: _,
+              element: _.document.getElementById("popup_target"),
+            }
+          );
+        }
+        BShuttingDown() {
+          return this.m_bShuttingDown;
+        }
+        GetLocalStorageKey() {
+          return "PopupSavedDimensions_" + this.m_unCurrentAccountID;
+        }
+        LoadSavedDimensionStore() {
+          if (!this.m_unCurrentAccountID) return;
+          let _ = this.GetLocalStorageKey();
+          this.m_mapRestoreDetails.clear();
+          let _ = window.localStorage.getItem(_);
+          if (_)
+            try {
+              let _ = JSON.parse(_);
+              this.m_mapRestoreDetails = new Map(_);
+            } catch (_) {}
+        }
+        SaveSavedDimensionStore() {
+          if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
+          let _ = this.GetLocalStorageKey(),
+            _ = JSON.stringify(Array.from(this.m_mapRestoreDetails));
+          try {
+            window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+          } catch (_) {
+            if ("name" in _ && "QuotaExceededError" == _.name) {
+              console.log("Quota exceeded");
+              for (let _ of Object.keys(window.localStorage))
+                _.startsWith("PopupSavedDimensions_") &&
+                  _ != _ &&
+                  window.localStorage.removeItem(_);
+              window.localStorage.setItem(_, _), (this.m_bSaveRequired = !1);
+            }
+          }
+        }
+        DebouncedSaveSavedDimensionStore() {
+          this.SaveSavedDimensionStore();
+        }
+        ClearSavedDimensionStore() {
+          this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
+        }
+        GetRestoreDetails(_) {
+          if (!this.m_mapRestoreDetails?.has(_)) return "";
+          let _ = this.m_mapRestoreDetails.get(_);
+          return (
+            (_.last_used = Date.now()),
+            (this.m_bSaveRequired = !0),
+            _.strRestoreDetails
+          );
+        }
+        SetRestoreDetails(_, _, _) {
+          if (_) {
+            if (_) {
+              if (this.m_mapRestoreDetails.size > 50) {
+                let _ = null,
+                  _ = Date.now();
+                for (let _ of Array.from(this.m_mapRestoreDetails.keys())) {
+                  let _ = this.m_mapRestoreDetails.get(_);
+                  _.last_used < _ && _.bExpires && ((_ = _.last_used), (_ = _));
+                }
+                _ && this.m_mapRestoreDetails.delete(_);
+              }
+              let _ = {
+                strRestoreDetails: _,
+                last_used: Date.now(),
+                bExpires: _,
+              };
+              this.m_mapRestoreDetails.set(_, _);
+            } else this.m_mapRestoreDetails.delete(_);
+            (this.m_bSaveRequired = !0),
+              this.m_bShuttingDown
+                ? this.SaveSavedDimensionStore()
+                : this.DebouncedSaveSavedDimensionStore();
+          }
+        }
+      }
+      (0, _._)(
+        [_._, (0, _._)(100)],
+        _.prototype,
+        "DebouncedSaveSavedDimensionStore",
+        null,
+      );
+      const _ = new _();
+      window.g_PopupManager = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        body_class: "",
+      });
+      function _() {
+        return _.useContext(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = _.useRef(void 0),
+          [_, _] = _.useState(void 0),
+          _ = _();
+        return (
+          _.current ||
+            (_.current = new _(
+              _,
+              (function (_, _) {
+                return {
+                  ..._,
+                  body_class: (0, _._)(_.body_class, _.body_class),
+                };
+              })(_, _),
+              _,
+            )),
+          (_.current.m_callbacks = _),
+          _.useEffect(() => {
+            if (!_.current?.params.bNoInitialShow) {
+              let _ = _.current?.params.bNoFocusOnShow
+                ? _._.k_EWindowBringToFrontWithoutForcingOS
+                : _._.k_EWindowBringToFrontAndForceOS;
+              _.current?.Show(_);
+            }
+            return () => {
+              (_.current.m_callbacks = void 0),
+                _.current.window?.SteamClient.Window.SetHideOnClose &&
+                  _.current.window?.SteamClient.Window.SetHideOnClose(!1),
+                _.current.Close();
+            };
+          }, []),
+          _.useEffect(() => {
+            _.current.window?.SteamClient.Window.SetHideOnClose &&
+              _.current.window?.SteamClient.Window.SetHideOnClose(
+                !!_.bHideOnClose,
+              );
+          }, [_.bHideOnClose]),
+          {
+            popup: _.current.window,
+            element: _,
+            popupObj: _.current,
+          }
+        );
+      }
+      class _ extends _._ {
+        m_callbacks;
+        m_fnReadyToRender;
+        constructor(_, _, _) {
+          super(_, _), (this.m_fnReadyToRender = _);
+        }
+        DoCallback(_) {
+          this.m_callbacks?.[_]?.(this.m_popup, this.m_element);
+        }
+        UpdateParamsBeforeShow(_) {
+          return this.m_callbacks?.updateParamsBeforeShow
+            ? this.m_callbacks.updateParamsBeforeShow(_)
+            : _;
+        }
+        OnCreate() {
+          this.m_callbacks?.onCreate &&
+            this.m_callbacks.onCreate(this.m_popup, this.m_element);
+        }
+        OnBlur() {
+          this.DoCallback("onBlur");
+        }
+        OnFocus() {
+          this.DoCallback("onFocus");
+        }
+        OnLoad() {
+          this.DoCallback("onLoad");
+        }
+        OnResize() {
+          this.DoCallback("onResize");
+        }
+        OnClose() {
+          this.DoCallback("onClose");
+        }
+        Render(_, _) {
+          this.m_fnReadyToRender(_);
         }
       }
     },
@@ -79337,6 +69876,283 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      let _ = class extends _.Component {
+        m_elHover;
+        m_bNoSpace = !1;
+        static defaultProps = {
+          direction: "right",
+          nBodyAlignment: 0.5,
+          nAllowOffscreenPx: 10,
+          nBodyDistance: 8,
+          nMaxLateralMoveOnScreen: void 0,
+        };
+        state = {
+          _: void 0,
+          _: void 0,
+          hoverPositionReady: !1,
+        };
+        bindHover(_) {
+          (this.m_elHover = _ || void 0), this.positionHover();
+        }
+        componentDidUpdate() {
+          this.positionHover();
+        }
+        render() {
+          const {
+            target: _,
+            visibilityObserver: _,
+            className: __webpack_require__,
+            style: _,
+            bEnablePointerEvents: _,
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            children: _,
+            onNoSpace: _,
+            bTopmost: _,
+            ..._
+          } = this.props;
+          let _ = Object.assign(
+              {
+                left: this.state._,
+                top: this.state._,
+              },
+              _,
+            ),
+            _ = !_ || _.visible;
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().HoverPositionOuter,
+                _ && _().HoverAboveModal,
+              ),
+            },
+            _.createElement(
+              "div",
+              {
+                ..._,
+                className: (0, _._)(
+                  _().HoverPosition,
+                  _ && this.state.hoverPositionReady && _().Ready,
+                  this.m_bNoSpace && _().NoSpace,
+                  _ && _().EnablePointerEvents,
+                  __webpack_require__,
+                ),
+                style: _,
+                ref: this.bindHover,
+              },
+              _,
+            ),
+          );
+        }
+        positionHover() {
+          let _ = this.m_elHover,
+            _ = this.props.target;
+          if (!_ || !_) return;
+          if (
+            this.state.hoverPositionReady &&
+            this.props.visibilityObserver &&
+            !this.props.visibilityObserver.visible
+          )
+            return;
+          let _ = _.ownerDocument.defaultView;
+          if (!_ || _.closed) return;
+          const _ = _.querySelector(".hover_arrow.left"),
+            _ = _.querySelector(".hover_arrow.right"),
+            _ = _.querySelector(".hover_arrow.top"),
+            _ = _.querySelector(".hover_arrow.bottom"),
+            _ = _.getBoundingClientRect(),
+            _ = _.getBoundingClientRect(),
+            _ =
+              "overlay" == this.props.direction ||
+              "overlay-center" == this.props.direction;
+          _ && _.setAttribute("style", "display: none;"),
+            _ && _.setAttribute("style", "display: none;"),
+            _ && _.setAttribute("style", "display: none;"),
+            _ && _.setAttribute("style", "display: none;");
+          let {
+              nBodyDistance: _ = 8,
+              direction: _ = "right",
+              nBodyAlignment: _ = 0.5,
+            } = this.props,
+            {
+              nLeft: _,
+              nTop: _,
+              nOverflow: _,
+              nLateralOverflow: _,
+            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+          if (_ > (this.props.nAllowOffscreenPx ?? 10) && !_) {
+            const _ = (function (_) {
+                switch (_) {
+                  case "right":
+                    return "left";
+                  case "left":
+                    return "right";
+                  case "bottom":
+                    return "top";
+                  case "top":
+                    return "bottom";
+                  case "overlay":
+                    return "overlay";
+                  case "overlay-center":
+                    return "overlay-center";
+                }
+              })(this.props.direction ?? "right"),
+              {
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+            if (
+              (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
+              _ > (this.props.nAllowOffscreenPx ?? 10))
+            )
+              return (
+                console.log(
+                  "Not showing hover because it didn't fit in the main or alt direction",
+                ),
+                _.setAttribute("style", "display: none;"),
+                (this.m_bNoSpace = !0),
+                void (this.props.onNoSpace && this.props.onNoSpace())
+              );
+          }
+          0 === this.props.nMaxLateralMoveOnScreen ||
+            _ ||
+            ([_, _] = (function (_, _, _, _, _) {
+              let _ = Math.max(_[0], _[1]);
+              void 0 !== _ && (_ = Math.min(_, _));
+              _ = Math.max(0, _);
+              const _ = _[0] > _[1] ? _ : -_;
+              "left" === _ || "right" === _ ? (_ += _) : (_ += _);
+              return [_, _];
+            })(this.props.nMaxLateralMoveOnScreen, _, _ ?? "right", _, _));
+          let _ = null;
+          switch (_) {
+            case "left":
+              _ = _;
+              break;
+            case "right":
+              _ = _;
+              break;
+            case "top":
+              _ = _;
+              break;
+            case "bottom":
+              _ = _;
+          }
+          _ && _.setAttribute("style", ""),
+            _ != this.state._ &&
+              this.setState({
+                _: _,
+              }),
+            _ != this.state._ &&
+              this.setState({
+                _: _,
+              }),
+            this.state.hoverPositionReady ||
+              this.setState({
+                hoverPositionReady: !0,
+              });
+        }
+      };
+      function _(_, _, _, _, _, _, _) {
+        const _ = _,
+          _ = _;
+        let _, _, _, _;
+        switch (_) {
+          case "right":
+            (_ = _.right + _),
+              (_ = _(_.top, _.height, _.height, _)),
+              (_ = Math.max(0, _ + _.width - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "left":
+            (_ = _.left - _ - _.width),
+              (_ = _(_.top, _.height, _.height, _)),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "bottom":
+            (_ = _(_.left, _.width, _.width, _)),
+              (_ = _.bottom + _),
+              (_ = Math.max(0, _ + _.height - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "top":
+            (_ = _(_.left, _.width, _.width, _)),
+              (_ = _.top - _ - _.height),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "overlay":
+            (_ = _.left), (_ = _.top), (_ = 0), (_ = [0, 0]);
+            break;
+          case "overlay-center":
+            (_ = _.left + 0.5 * _.width - 0.5 * _.width),
+              (_ = _.top + 0.5 * _.height - 0.5 * _.height),
+              (_ = 0),
+              (_ = [0, 0]);
+        }
+        return {
+          nLeft: _,
+          nTop: _,
+          nOverflow: _,
+          nLateralOverflow: _,
+        };
+      }
+      function _(_, _, _, _) {
+        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
+      }
+      (0, _._)([_._], _.prototype, "bindHover", null), (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (
+          _._.COMMUNITY_BASE_URL + "linkfilter/?u=" + encodeURIComponent(_)
+        );
+      }
+      function _(_, _) {
+        if (_.startsWith("steam://")) return !1;
+        if (_.startsWith("/")) return !1;
+        const _ = (0, _._)(_).toLowerCase(),
+          _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
+          _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase(),
+          _ = (0, _._)(_._.HELP_BASE_URL).toLowerCase(),
+          _ = (0, _._)(_._.PARTNER_BASE_URL || "").toLowerCase();
+        return (
+          _ !== _ &&
+          _ !== _ &&
+          _ !== _ &&
+          "support.steampowered.com" !== _ &&
+          _ !== _ &&
+          "www.dota2.com" !== _ &&
+          (!_ || 0 == _.filter((_) => _ == _).length)
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _._,
         _: () => _,
       });
@@ -80362,20 +71178,2069 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = [1, 3, 2],
+        _ = [1, 3],
+        _ = [5, 4],
+        _ = {
+          capsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_2_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          spotlight: {
+            width: 2108,
+            height: 460,
+            rgAcceptableTypes: _,
+          },
+          localized_store_app_spotlight: {
+            width: 1100,
+            height: 240,
+            rgAcceptableTypes: _,
+          },
+          localized_store_app_spotlight_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          localized_title_image: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: _,
+          },
+          background: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: _,
+          },
+          hero: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          email_full: {
+            width: 800,
+            height: 300,
+            rgAcceptableTypes: _,
+          },
+          email_centered: {
+            width: 644,
+            height: 300,
+            rgAcceptableTypes: _,
+          },
+          broadcast_left: {
+            width: 155,
+            height: 337,
+            rgAcceptableTypes: _,
+          },
+          broadcast_right: {
+            width: 155,
+            height: 337,
+            rgAcceptableTypes: _,
+          },
+          sale_header: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_overlay: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          localized_image_group: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          localized_background_art: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_section_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_section_title: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          link_capsule: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          product_banner: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_mobile_banner: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_banner_override: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_mobile_banner_override: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          schedule_track_art: {
+            width: 196,
+            height: 92,
+            rgAcceptableTypes: _,
+          },
+          tab_bar_background: {
+            width: 1500,
+            height: 100,
+            rgAcceptableTypes: _,
+          },
+          sale_logo: {
+            width: 940,
+            height: 460,
+            rgAcceptableTypes: _,
+          },
+          bestofyear_banner: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          bestofyear_banner_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          localized_marketing_message: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [1, 3, 2, 10],
+          },
+          localized_optin_banner: {
+            width: 1e3,
+            height: 150,
+            rgAcceptableTypes: _,
+          },
+          localized_marketingmessage_webm: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [5],
+          },
+          localized_marketingmessage_mp4: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [4],
+          },
+          localized_partnerevent_webm: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          localized_partnerevent_mp4: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
+          localized_subtitles: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [6, 7],
+          },
+          localized_marketingmessage_poster: {
+            width: 528,
+            height: 297,
+            rgAcceptableTypes: [1, 3],
+          },
+          localized_marketingmessage_background: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          localized_email_image: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
+          spotlight_art: {
+            width: 306,
+            height: 260,
+            rgAcceptableTypes: _,
+          },
+          old_spotlight_art: {
+            width: 306,
+            height: 350,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_2: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          takeover_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          takeover_webm_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          takeover_mp4_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
+          takeover_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: _,
+          },
+          takeover_webm_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: [5],
+          },
+          takeover_mp4_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: [4],
+          },
+          takeunder_art: {
+            width: 940,
+            height: 150,
+            rgAcceptableTypes: _,
+          },
+          takeunder_mobile_art: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          app_header_capsule: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: _,
+          },
+          app_main_capsule: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: _,
+          },
+        };
+      function _(_, _, _) {
+        const _ = _[_];
+        return (
+          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
+        );
+      }
+      function _(_, _, _) {
+        const _ = _[_];
+        return (
+          !!_ &&
+          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
+        );
+      }
+      function _(_, _) {
+        return _.filter((_) => _(_, _));
+      }
+      function _(_, _) {
+        return _[_].rgAcceptableTypes.includes(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_originalSize = {
+          width: 0,
+          height: 0,
+        };
+        m_originalDataUrl = "";
+        dataUrl = void 0;
+        width = 0;
+        height = 0;
+        status = "pending";
+        message = "";
+        language = void 0;
+        file;
+        filename;
+        uploadTime;
+        fileType;
+        constructor(_, _, _, _, _) {
+          (0, _._)(this),
+            (this.file = _),
+            (this.filename = _),
+            (this.fileType = _.GetExtensionTypeFromURL(_) ?? 0),
+            (this.language = _),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = _),
+            (this.height = _.height),
+            (this.width = _.width),
+            (this.m_originalDataUrl = _),
+            (this.dataUrl = _);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, _._)([_._], _.prototype, "dataUrl", void 0),
+        (0, _._)([_._], _.prototype, "width", void 0),
+        (0, _._)([_._], _.prototype, "height", void 0),
+        (0, _._)([_._], _.prototype, "status", void 0),
+        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._], _.prototype, "language", void 0);
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new _._();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          super(_),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description ?? ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          this.m_elLinkRegionBox?.parentElement &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (_) => {
+              this.OnMouseUp(_, _);
+            }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (this.m_nLocalOffsetXPct ?? 0)
+            : 0;
+        }
+        GetYPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (this.m_nLocalOffsetYPct ?? 0)
+            : 0;
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return (
+            null != _ &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            )
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description ?? ""),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            _.createElement(
+              "div",
+              {
+                className: _,
+                style: _,
+                ref: this.LinkRegionBoxRef,
+                draggable: !1,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().LinkRegionGridBox,
+                },
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Top}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.top);
+                  },
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topright);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Left}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.left);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: `${_().LinkRegionEdge} ${_().Middle}`,
+                    onMouseDown: (_) => {
+                      this.OnMouseDown(_, _.middle);
+                    },
+                    draggable: !1,
+                  },
+                  this.props.deleteFn &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionDelete,
+                        onClick: this.HandleDelete,
+                      },
+                      _.createElement(_.sED, null),
+                    ),
+                  !this.props.bDisableLink &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionSettings,
+                        onClick: this.OnEditLink,
+                      },
+                      _.createElement(_.xv8, null),
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkText,
+                    },
+                    " ",
+                    this.m_strDescription,
+                    " ",
+                  ),
+                ),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Right}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.right);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottom);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomright);
+                  },
+                  draggable: !1,
+                }),
+              ),
+              this.state.bEditingLink &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LinkRegionInfo,
+                  },
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_url",
+                    value: this.state.text_link_url,
+                    label: (0, _._)("#SteamTV_LinkURL"),
+                    placeholder: "https://www.example.com",
+                    onChange: this.OnSetLinkURLChange,
+                    mustBeURL: !0,
+                  }),
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_description",
+                    value: this.state.text_link_description,
+                    label: (0, _._)("#SteamTV_LinkDescription"),
+                    placeholder: (0, _._)(
+                      "#SteamTV_LinkDescription_Placeholder",
+                    ),
+                    onChange: this.OnSetLinkDescriptionChange,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkRegionButtonContainer,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        disabled: !this.state.valid_link,
+                        onClick: this.OnSaveLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_OK"),
+                      " ",
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: this.OnEditLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
+            )
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
+        (_ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          region: {
+            xPosPct: 0,
+            yPosPct: 0,
+            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            heightPct:
+              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+          },
+        };
+        async OnCrop() {
+          const _ = this.props.uploadFile.GetCanvasImageSource();
+          _ &&
+            (await (async function (_, _, _, _, _, _, _, _, _) {
+              return new Promise((_, _) => {
+                const _ = _(_);
+                if (!_) return void _("Invalid format provided");
+                const _ = document.createElement("canvas");
+                (_.width = _), (_.height = _);
+                const _ = 0,
+                  _ = 0,
+                  _ = _.getContext("2d");
+                _?.drawImage(_, _, _, _, _, _, _, _, _),
+                  _.toBlob((_) => {
+                    const _ = _.toDataURL(_);
+                    3 !== _ && __webpack_require__.startsWith("data:image/png")
+                      ? _("Unable to encode into the requested file format")
+                      : _
+                        ? ((_.file = (0, _._)(_, _.filename)),
+                          (_.width = _),
+                          (_.height = _),
+                          (_.dataUrl = _),
+                          (_.uploadTime = Date.now()),
+                          (_.bCropped = !0),
+                          _())
+                        : _("Unable to apply crop into image");
+                  });
+              });
+            })(
+              this.props.uploadFile,
+              _,
+              (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
+              (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
+              (this.state.region.widthPct / 100) * this.props.uploadFile.width,
+              (this.state.region.heightPct / 100) *
+                this.props.uploadFile.height,
+              this.GetDestWidth(),
+              this.GetDestHeight(),
+              this.props.fileType,
+            )),
+            this.props.closeModal?.();
+        }
+        UpdateCrop(_, _) {
+          this.setState({
+            region: _,
+          });
+        }
+        GetDestWidth() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          if (_) return _.width;
+          const _ = _.GetCurrentImageOption();
+          return _ ? _[_.artworkType].width : 0;
+        }
+        GetDestHeight() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          if (_) return _.width;
+          const _ = _.GetCurrentImageOption();
+          return _ ? _[_.artworkType].height : 0;
+        }
+        GetLargestBoxThatFits(_, _, _, _) {
+          let _ = _,
+            _ = (_ * _) / Math.max(_, 1);
+          return (
+            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
+            {
+              width: _,
+              height: _,
+            }
+          );
+        }
+        GetPreviewWindowStyle() {
+          const { region: _ } = this.state,
+            _ = this.GetLargestBoxThatFits(
+              this.GetDestWidth(),
+              this.GetDestHeight(),
+              500,
+              150,
+            ),
+            _ = _.width,
+            _ = _.height,
+            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
+            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
+            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
+            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
+          return {
+            width: _,
+            height: _,
+            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
+            backgroundSize: `${100 * _}% ${100 * _}%`,
+            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
+          };
+        }
+        render() {
+          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+            _ = this.GetLargestBoxThatFits(
+              this.props.uploadFile.width,
+              this.props.uploadFile.height,
+              800,
+              500,
+            );
+          return _.createElement(
+            _._,
+            {
+              onEscKeypress: this.props.closeModal,
+              bDisableBackgroundDismiss: !0,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
+              },
+              _.createElement(
+                _._,
+                null,
+                (0, _._)(
+                  "#ImageUpload_CropModalTitleDims",
+                  this.GetDestWidth(),
+                  this.GetDestHeight(),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)("DialogBodyText"),
+                },
+                (0, _._)("#ImageUpload_CropModalDescription"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropImage,
+                  style: {
+                    width: _.width,
+                    height: _.height,
+                  },
+                },
+                _.createElement("img", {
+                  style: {
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                  },
+                  src: this.props.uploadFile.dataUrl,
+                }),
+                _.createElement(_, {
+                  bLockAspectRatio: !0,
+                  bDisableLink: !0,
+                  index: 0,
+                  updateFn: this.UpdateCrop,
+                  xPosPct: 0,
+                  yPosPct: 0,
+                  widthMinPct: _,
+                  heightMinPct: _,
+                  widthPct: _,
+                  heightPct: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropPreviewGroup,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CropPreviewLabel,
+                  },
+                  (0, _._)("#ImageUpload_CropPreview"),
+                ),
+                _.createElement("div", {
+                  style: this.GetPreviewWindowStyle(),
+                }),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: this.OnCrop,
+                },
+                (0, _._)("#ImageUpload_CropAndContinue"),
+              ),
+            ),
+          );
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case 3:
+            return "image/png";
+          case 1:
+            return "image/jpeg";
+        }
+      }
+      function _() {
+        let _, _;
+        return {
+          promise: new Promise((_, _) => {
+            (_ = _), (_ = _);
+          }),
+          resolve: _,
+          reject: _,
+        };
+      }
+      function _(_) {
+        switch (_) {
+          case 1:
+            return ".jpg";
+          case 2:
+            return ".gif";
+          case 3:
+            return ".png";
+          case 5:
+            return ".webm";
+          case 4:
+            return ".mp4";
+          case 7:
+            return ".srt";
+          case 6:
+            return ".vtt";
+          case 10:
+            return ".webp";
+        }
+      }
+      function _(_) {
+        const _ = _(),
+          _ = new Image();
+        return (
+          (_.onload = () => _.resolve(_)),
+          (_.onerror = (_) => {
+            console.error("LoadImage failed to load the image, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          _ = document.createElement("video");
+        return (
+          (_.preload = "metadata"),
+          __webpack_require__.addEventListener("loadedmetadata", () =>
+            _.resolve(_),
+          ),
+          (_.onerror = (_) => {
+            console.error("LoadVideo failed to load the video, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      function _(_) {
+        return _.startsWith("video/");
+      }
+      (0, _._)([_._], _.prototype, "OnCrop", null),
+        (0, _._)([_._], _.prototype, "UpdateCrop", null);
+      class _ extends _ {
+        m_rgImageOptions;
+        m_currentImageOption = void 0;
+        m_currentImageOptionKey = void 0;
+        constructor(_, _, _, _, _, _) {
+          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
+        }
+        IsValidAssetType(_, _) {
+          let _ = 0,
+            _ = 0,
+            _ = !1,
+            _ =
+              !this.m_rgImageOptions ||
+              0 === this.m_rgImageOptions.length ||
+              this.m_rgImageOptions.some(
+                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
+              );
+          if (_) (_ = _.width), (_ = _.height), (_ = !0);
+          else if (this.GetCurrentImageOption()) {
+            const _ = _[this.GetCurrentImageOption().artworkType];
+            _ &&
+              ((_ = _.width),
+              (_ = _.height),
+              (_ = !_.bDisableEnforceDimensions));
+          }
+          const _ = this.width >= _ && this.height >= _,
+            _ = _ ? this.width === _ && this.height === _ : _,
+            _ = _ && _ != this.fileType,
+            _ =
+              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
+              0 ==
+                _(
+                  this.fileType,
+                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
+                ).length,
+            _ = Boolean(_(this.fileType));
+          let _ = "",
+            _ = !1;
+          return (
+            _
+              ? _
+                ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
+                : _
+                  ? (_ = (0, _._)("#ImageUpload_InvalidFormat", _(_) ?? ""))
+                  : _ || _
+                    ? _
+                      ? !_ &&
+                        _ &&
+                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
+                        (_ = !0))
+                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
+                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
+              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: _,
+              needsCrop: _,
+              match: this.GetCurrentImageOption(),
+            }
+          );
+        }
+        BSupportsLanguages() {
+          return !0;
+        }
+        ComputeDefaultImageOption() {
+          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
+            return;
+          const _ = _(
+            this.fileType,
+            this.m_rgImageOptions?.map((_) => _.artworkType),
+          );
+          let _ = _(this.width, this.height, _, !1);
+          if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
+            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
+            if (_) return _;
+          }
+          return this.m_rgImageOptions[0];
+        }
+        get ImageOptions() {
+          return this.m_rgImageOptions;
+        }
+        GetCurrentImageOptionKey() {
+          return this.m_currentImageOptionKey;
+        }
+        GetCurrentImageOption() {
+          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
+        }
+        SetCurrentImageOption(_) {
+          (this.m_currentImageOption = _),
+            (this.m_currentImageOptionKey = _?.sKey);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
+        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
+      class _ extends _ {
+        bCropped = !1;
+        localizedImageGroupPrimaryImage;
+        media;
+        constructor(_, _, _, _, _, _, _, _) {
+          super(_, _, _, _, _, _),
+            (0, _._)(this),
+            (this.media = _),
+            (this.localizedImageGroupPrimaryImage = _);
+        }
+        IsValidAssetType(_, _) {
+          return (
+            (_ = _ ?? this.localizedImageGroupPrimaryImage?.file_type),
+            super.IsValidAssetType(_, _)
+          );
+        }
+        GetCanvasImageSource() {
+          return this.media;
+        }
+        BIsOriginalMinimumDimensions(_) {
+          return _(
+            this.media?.width ?? 0,
+            this.media?.height ?? 0,
+            _.artworkType,
+          );
+        }
+        FileTypeMatchesImageTypes(_) {
+          return _(this.fileType, _.artworkType);
+        }
+        BIsVideo() {
+          return _.includes(this.fileType);
+        }
+        GetResizeDimension() {
+          return (function (_) {
+            if ("background" === _)
+              return [
+                {
+                  width: 960,
+                  height: 311,
+                },
+                {
+                  width: 480,
+                  height: 156,
+                },
+              ];
+            if ("capsule" === _)
+              return [
+                {
+                  width: _[_].width / 2,
+                  height: _[_].height / 2,
+                },
+              ];
+            if ("spotlight" === _)
+              return [
+                {
+                  width: _[_].width / 2,
+                  height: _[_].height / 2,
+                },
+              ];
+            return;
+          })(this.GetCurrentImageOption()?.artworkType);
+        }
+      }
+      function _(_, _, _, _ = !1) {
+        if (_)
+          for (let _ of _) {
+            if (_ ? _(_, _, _) : _(_, _, _)) return _;
+          }
+      }
+      (0, _._)([_._], _.prototype, "bCropped", void 0);
+      class _ {}
+      class _ extends _ {
+        m_allCancelTokens = new Array();
+        async UploadAllImages(_, _) {
+          const _ = this.GetUploadImages(),
+            _ = this.BGetUploadsAreInSerial(),
+            _ = __webpack_require__.filter((_) => {
+              const _ = __webpack_require__.IsValidAssetType(_, _);
+              return "pending" === _.status && !_.error && !_.needsCrop;
+            });
+          for (const _ of _) _.status = "uploading";
+          const _ = [];
+          for (const _ of _) {
+            const _ = _().CancelToken.source();
+            this.m_allCancelTokens.push(_);
+            const _ = this.UploadSingleImage(
+              _,
+              _.filename,
+              _.language ?? -1,
+              _.token,
+            );
+            _.push({
+              image: _,
+              promise: _,
+            }),
+              _ && (await _);
+          }
+          _ || (await Promise.all(_.map((_) => _.promise)));
+          const _ = [];
+          for (const _ of _) {
+            const _ = await _.promise,
+              _ = _.image;
+            _.push({
+              bSuccess: _.bSuccess,
+              image: _,
+              uploadResult: _.result,
+            }),
+              _.bSuccess
+                ? (_.status = "success")
+                : ((_.status = "failed"),
+                  (_.message = _.strErrorMessage ?? ""));
+          }
+          return _;
+        }
+        CancelAllUploads() {
+          for (let _ of this.m_allCancelTokens)
+            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
+          this.m_allCancelTokens = new Array();
+        }
+      }
+      var _ = __webpack_require__("chunkid");
+      class _ extends _ {
+        m_filesToUpload = _._.array();
+        m_filesCompleted = _._.array();
+        m_clanImagesV2;
+        m_clanSteamID;
+        m_rgImageOptions;
+        m_localizedImageGroupPrimaryImage;
+        m_lastError = void 0;
+        constructor(_, _, _, _) {
+          var _;
+          super(),
+            (0, _._)(this),
+            (this.m_clanSteamID = _),
+            (this.m_rgImageOptions =
+              ((_ = _),
+              _?.map((_) => {
+                const _ = _[_];
+                return (
+                  (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
+                  {
+                    sKey: _,
+                    width: _.width,
+                    height: _.height,
+                    bEnforceDimensions: !_.bDisableEnforceDimensions,
+                    artworkType: _,
+                    bHiddenFromDropdown: "hero" === _,
+                    fnGetLabelText() {
+                      return "spotlight" == this.artworkType
+                        ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
+                        : (0, _._)(
+                            "#EventEditor_ArtworkType_" + this.artworkType,
+                          );
+                    },
+                  }
+                );
+              }))),
+            (this.m_localizedImageGroupPrimaryImage = _),
+            (this.m_clanImagesV2 = _ ?? !1);
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        async AddImage(_, _ = 0) {
+          const { language: __webpack_require__ } = (function (
+            _,
+            _ = 0,
+            __webpack_require__ = !0,
+          ) {
+            let _ = _.lastIndexOf(".");
+            -1 != _ && (_ = _.slice(0, _).toLowerCase());
+            let _ = null,
+              _ = 0;
+            _.endsWith("korean") && ((_ = 4), (_ = 6));
+            for (let _ = 0; _ < 31; ++_) {
+              const _ = (0, _._)(_);
+              if (_.length <= _) continue;
+              if (_.endsWith(_)) {
+                let _ = !__webpack_require__;
+                if (__webpack_require__ && _.length > _.length + 2) {
+                  const _ = _[_.length - _.length - 1];
+                  _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
+                }
+                _ && ((_ = _), (_ = _.length));
+              }
+              const _ = (0, _._)(_);
+              _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
+            }
+            return {
+              language: _ ?? _,
+              baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
+            };
+          })(_.name, _);
+          return this.AddImageForLanguage(_, __webpack_require__);
+        }
+        async AddImageForLanguage(_, _) {
+          if (
+            !((__webpack_require__ = _.type),
+            __webpack_require__.startsWith("image/") ||
+              (_._.is_support && _(_.type)))
+          )
+            return !1;
+          var _;
+          const _ = await (async function (_, _) {
+            if (_) return _(URL.createObjectURL(_));
+            {
+              const _ = _(),
+                _ = new FileReader();
+              (_.onload = () => _.resolve(_.result ?? void 0)),
+                (_.onerror = () => {
+                  console.error(
+                    "GetMediaElementFromFile failed to load the image, details",
+                    _.error,
+                  ),
+                    _.resolve(void 0);
+                }),
+                __webpack_require__.readAsDataURL(_);
+              const _ = await _.promise;
+              if (!_) return;
+              return _(_.toString());
+            }
+          })(_, _(_.type));
+          if (!_) return !1;
+          const _ = new _(
+            _,
+            _.name,
+            _,
+            this.m_rgImageOptions,
+            _.src,
+            (_ = _)
+              ? _ instanceof HTMLVideoElement
+                ? {
+                    width: _.videoWidth,
+                    height: _.videoHeight,
+                  }
+                : {
+                    width: _.width,
+                    height: _.height,
+                  }
+              : {
+                  width: 0,
+                  height: 0,
+                },
+            _,
+            this.m_localizedImageGroupPrimaryImage,
+          );
+          var _;
+          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+        }
+        async AddExistingClanImage(_, _ = 0) {
+          const _ = _.GetHashAndExt(_);
+          if (!_) return !1;
+          const _ = _.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, _),
+            _ = await _()({
+              url: _,
+              method: "GET",
+              responseType: "blob",
+            }),
+            _ = (0, _._)(_.data, _.file_name);
+          return await this.AddImage(_, _);
+        }
+        DeleteUploadImageByIndex(_) {
+          this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]);
+        }
+        DeleteUploadImage(_) {
+          let _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 && this.DeleteUploadImageByIndex(_);
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        GetFilesUploaded() {
+          return this.m_filesCompleted;
+        }
+        GetLastErrorFile() {
+          return this.m_lastError;
+        }
+        GetCompletedFiles() {
+          return this.m_filesCompleted.length;
+        }
+        GetTotalFiles() {
+          return this.m_filesToUpload.length;
+        }
+        GetFilesToUpload() {
+          return this.m_filesToUpload.map((_) => _.file);
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        BHasError() {
+          return null != this.m_lastError;
+        }
+        BAllDone() {
+          return (
+            this.m_filesCompleted.length > 0 &&
+            this.m_filesCompleted.length == this.m_filesToUpload.length
+          );
+        }
+        BIsFileCompleted(_) {
+          return -1 != this.m_filesCompleted.indexOf(_);
+        }
+        RetryAllFailedUploads() {
+          this.CancelAllUploads(), this.UploadAllImages();
+        }
+        async handleUploadRefresh(_) {
+          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
+        }
+        BGetUploadsAreInSerial() {
+          return !1;
+        }
+        async UploadSingleImage(_, _, _, _) {
+          const _ = _.file,
+            _ = _.GetCurrentImageOption(),
+            _ = _.GetResizeDimension(),
+            _ = new FormData();
+          _.append("clanimage", _, _),
+            _.append("sessionid", _._.SESSIONID),
+            this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
+            _?.artworkType && _.append("arttype", _.artworkType),
+            _ &&
+              _.length > 0 &&
+              _.append(
+                "resize",
+                _.map((_) => _.width + "x" + _.height).join(","),
+              );
+          let _ = "/uploadimage/";
+          const _ = this.m_localizedImageGroupPrimaryImage;
+          _ &&
+            ((_ = "/ajaxuploadlocalizedimage/"),
+            _.append("origimagehash", _.image_hash),
+            _.thumbnail_hash && _.append("thumbhash", _.thumbnail_hash),
+            _.append("extension", "" + _.file_type),
+            _.append("language", "" + _));
+          const _ = _.split(".").pop()?.toLocaleLowerCase();
+          ("webm" != _ && "mp4" != _) ||
+            (_.append("video_width", "" + _.width),
+            _.append("video_height", "" + _.height));
+          let _,
+            _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              this.m_clanSteamID.ConvertTo64BitString() +
+              _,
+            _ = {
+              cancelToken: _,
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            };
+          try {
+            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
+          } catch (_) {
+            (this.m_lastError = {
+              file: _,
+              status: _.response ? _.response.status : 500,
+              message: (0, _._)(_).strErrorMsg,
+            }),
+              (_ = _.response);
+          }
+          return (
+            _ || (await this.handleUploadRefresh(_)),
+            {
+              bSuccess: !0,
+              result: _.data,
+            }
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
+        (0, _._)([_._], _.prototype, "m_lastError", void 0),
+        (0, _._)([_._], _.prototype, "AddImage", null),
+        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null);
+      class _ extends _ {
+        constructor(_, _, _) {
+          super(_, _, _, !1);
+        }
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
+        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
+        ReplacementTokenToClanImageURL(_) {
+          return (_ = _.replace(_._, this.GetBaseURL())).replace(
+            "http://",
+            "https://",
+          );
+        },
+        RegexSearchAndReplaceClanImageURL(_) {
+          return _.replace(/{STEAM_CLAN_IMAGE}/g, this.GetBaseURL());
+        },
+        ExtractHashFromBBCodeURL(_) {
+          const _ =
+            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
+              _,
+            );
+          return _?.groups
+            ? [_.groups.filename, parseInt(_.groups.clanid)]
+            : [void 0, void 0];
+        },
+        GetExtensionString: (_) =>
+          (null != _.file_type ? _(_.file_type) : null) ?? ".jpg",
+        GetExtensionTypeFromURL: (_) =>
+          (function (_) {
+            return (
+              _.indexOf("?") > 0 && (_ = _.split("?")[0]),
+              _.endsWith(".jpg")
+                ? 1
+                : _.endsWith(".png")
+                  ? 3
+                  : _.endsWith(".gif")
+                    ? 2
+                    : _.endsWith(".mp4")
+                      ? 4
+                      : _.endsWith(".webm")
+                        ? 5
+                        : _.endsWith(".vtt")
+                          ? 6
+                          : _.endsWith(".srt")
+                            ? 7
+                            : _.endsWith(".webp")
+                              ? 10
+                              : void 0
+            );
+          })(_),
+        GetHashAndExt(_) {
+          return _ ? _.image_hash + this.GetExtensionString(_) : null;
+        },
+        GetThumbHashAndExt(_) {
+          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+        },
+        GetHashFromHashAndExt(_) {
+          let _ = _.substring(_.lastIndexOf("."));
+          return _.substring(0, _.length - _.length);
+        },
+        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(
+            _,
+            _,
+            __webpack_require__,
+            -1,
+            void 0,
+          );
+        },
+        GenerateURLFromHashAndExtAndLang(
+          _,
+          _,
+          __webpack_require__ = _._.full,
+          _,
+          _,
+        ) {
+          _ instanceof _._ && (_ = _.GetAccountID());
+          let _ = this.GetBaseURL();
+          const _ = null != _ && -1 != _;
+          if (__webpack_require__ != _._.full || _) {
+            let _ = _.substring(_.lastIndexOf(".")),
+              _ = _.substring(0, _.length - _.length);
+            return _ && "localized_image_group" == _
+              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
+              : _ + _ + "/" + _ + __webpack_require__ + _;
+          }
+          return _ + _ + "/" + _;
+        },
+        GenerateEditableURLFromHashAndExt(_, _, _) {
+          let _ =
+            _._.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            _;
+          return _ && (_ += "&lang=" + _), _;
+        },
+        GetMimeType: (_) =>
+          (function (_) {
+            const _ = _.toLowerCase();
+            return _.endsWith(".jpg")
+              ? "image/jpeg"
+              : _.endsWith(".png")
+                ? "image/png"
+                : _.endsWith(".gif")
+                  ? "image/gif"
+                  : _.endsWith(".mp4")
+                    ? "video/mp4"
+                    : _.endsWith(".webm")
+                      ? "video/webm"
+                      : _.endsWith(".srt")
+                        ? "text/srt"
+                        : _.endsWith(".vtt")
+                          ? "text/vtt"
+                          : _.endsWith(".webp")
+                            ? "image/webp"
+                            : void 0;
+          })(_),
+        async AsyncGetImageResolution(_, _, _, _, _) {
+          const _ =
+              _ +
+              this.GetExtensionString({
+                file_type: _,
+              }),
+            _ = this.GenerateEditableURLFromHashAndExt(_, _);
+          return await this.AsyncGetImageResolutionInternal(_, _, _);
+        },
+        async AsyncGetImageResolutionInternal(_, _, _) {
+          let _ = {
+              success: 2,
+            },
+            _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              _ ||
+                ((_.err_msg =
+                  "Load fail on url " +
+                  _ +
+                  " with error: " +
+                  (0, _._)(_).strErrorMsg),
+                console.error(_.err_msg)),
+                (_.success = 2);
+            }),
+            (_.onload = () => {
+              (_.width = _.width),
+                (_.height = _.height),
+                (0, _._)(
+                  _.width > 0 && _.height > 0,
+                  "unexpected image resolution discovered for strURL: " + _,
+                ),
+                (_.success = 1);
+            }),
+            (_.src = _),
+            _.token.promise.catch((_) => {
+              (_.onload = () => {}), (_.success = 52);
+            });
+          let _ = 0;
+          for (; void 0 === _.success && _ < 100; )
+            await (0, _._)(100), (_ += 1);
+          return (
+            _ >= 100 &&
+              ((_.success = 16),
+              (_.err_msg = "We timed out processing images")),
+            _
+          );
+        },
+        async OverlayClanImage(_, _, _, _, _, _) {
+          let _,
+            _ = null,
+            _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              (_ =
+                "Load fail on url " +
+                _ +
+                " with error: " +
+                (0, _._)(_).strErrorMsg),
+                console.error(_);
+            }),
+            (_.onload = () => {
+              let _ = new Image();
+              (_.crossOrigin = "anonymous"),
+                (_.onerror = (_) => {
+                  (_ =
+                    "Load fail on url " +
+                    _ +
+                    " with error: " +
+                    (0, _._)(_).strErrorMsg),
+                    console.error(_);
+                }),
+                (_.onload = () => {
+                  try {
+                    let _ = document.createElement("canvas"),
+                      _ = _.getContext("2d");
+                    (_.width = _),
+                      (_.height = _),
+                      __webpack_require__?.drawImage(_, 0, 0, _, _);
+                    let _ = (_ - _.width) / 2,
+                      _ = (_ - _.height) / 2;
+                    __webpack_require__?.drawImage(_, _, _),
+                      _.toBlob((_) => (_ = _), "image/jpeg");
+                  } catch (_) {
+                    _ =
+                      "Failed during image processing for " + _ + " with " + _;
+                  }
+                }),
+                (_.src = _);
+            }),
+            (_.src = _);
+          let _ = 0;
+          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
+          if (
+            (_ >= 100 &&
+              void 0 === _ &&
+              (_ = "AsyncOverlay - We timed out processing images"),
+            _)
+          )
+            throw (
+              (console.log(_),
+              {
+                success: 2,
+                err_msg: _,
+              })
+            );
+          const _ = new _(_, void 0),
+            _ = new _(
+              _,
+              _,
+              -1,
+              void 0,
+              "",
+              {
+                width: _,
+                height: _,
+              },
+              void 0,
+              void 0,
+            ),
+            _ = await _.UploadSingleImage(_, _, -1, void 0);
+          return _.bSuccess && _.result
+            ? _.result.image_hash +
+                this.GetExtensionString({
+                  file_type: _.fileType,
+                })
+            : void 0;
+        },
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return `${_._.CLAN_CDN_ASSET_URL}images/`;
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      !(function (_) {
+        (_.full = ""),
+          (_.background_main = "_960x311"),
+          (_.background_mini = "_480x156"),
+          (_.capsule_main = "_400x225"),
+          (_.spotlight_main = "_1054x230");
+      })(_ || (_ = {}));
+      const _ = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+        "localized_background_art",
+      ];
+      class _ {
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        m_mapClanToImages = new Map();
+        m_mapClanImageLoadPromises = new Map();
+        m_imageListChangeCallback = new Map();
+        m_mapClanImageLoadState = new Map();
+        m_mapImageIDToResolution = new Map();
+        BHasImageResolution(_) {
+          return this.m_mapImageIDToResolution.has(_.imageid);
+        }
+        GetImageResolution(_) {
+          return this.m_mapImageIDToResolution.get(_.imageid);
+        }
+        SetImageResolution(_, _) {
+          this.m_mapImageIDToResolution.set(_.imageid, _);
+        }
+        GetImageListCallbackForClanAccountIDInternal(_) {
+          return (
+            this.m_imageListChangeCallback.has(_) ||
+              this.m_imageListChangeCallback.set(_, new _._()),
+            this.m_imageListChangeCallback.get(_)
+          );
+        }
+        GetImageListCallbackForClanAccountID(_) {
+          return this.GetImageListCallbackForClanAccountIDInternal(_);
+        }
+        m_vecClanImageDragListener = new Array();
+        AddClanImageDragListener(_) {
+          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
+            this.m_vecClanImageDragListener.push(_);
+        }
+        RemoveClanImageDragListener(_) {
+          let _ = this.m_vecClanImageDragListener.indexOf(_);
+          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
+        }
+        GetClanImageDragListener() {
+          return this.m_vecClanImageDragListener;
+        }
+        BHasLoadedClanImages(_) {
+          return this.m_mapClanToImages.has(_.GetAccountID());
+        }
+        async LoadClanImages(_, _, _) {
+          const _ = _.GetAccountID();
+          if (_ || !this.m_mapClanImageLoadPromises.has(_)) {
+            const _ = this.InternalLoadClanImages(_, _, _);
+            this.m_mapClanImageLoadPromises.set(_, _);
+          }
+          return this.m_mapClanImageLoadPromises.get(_);
+        }
+        async InternalLoadClanImages(_, _, _) {
+          let _ = _.GetAccountID();
+          if (
+            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
+            _ && (!this.m_mapClanToImages.has(_) || _))
+          ) {
+            let _,
+              _ = {};
+            const _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              _.ConvertTo64BitString() +
+              "/getimages/";
+            if (
+              ((_ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+                cancelToken: _,
+              })),
+              _)
+            ) {
+              for (let _ of _.data.images) _.clanAccountID = _;
+              (0, _._)(() => {
+                this.m_mapClanImageLoadState.set(_, {
+                  loaded: !0,
+                }),
+                  this.m_mapClanToImages.set(_, _.data.images),
+                  this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
+                    _.data.images,
+                  );
+              });
+            }
+          }
+          return this.m_mapClanToImages.get(_);
+        }
+        GetLoadState(_) {
+          return this.m_mapClanImageLoadState.get(_.GetAccountID());
+        }
+        GetClanImages(_) {
+          return this.GetClanImagesByAccount(_.GetAccountID());
+        }
+        GetClanImagesByAccount(_) {
+          let _ = this.m_mapClanToImages.get(_);
+          return _ || new Array();
+        }
+        GetFilteredClanImages(_, _) {
+          let _ = _.GetClanImages(_);
+          return this.GetFilteredClanImagesList(_, _);
+        }
+        GetFilteredClanImagesList(_, _) {
+          if (_ && _.trim().length > 0) {
+            _ = _.trim().toLowerCase();
+            let _ = new Array();
+            for (let _ of _)
+              _.file_name &&
+                _.file_name.toLowerCase().indexOf(_) >= 0 &&
+                __webpack_require__.push(_);
+            return _;
+          }
+          return _;
+        }
+        GetClanImageByID(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.imageid == _) : void 0;
+        }
+        GetClanImageByURL(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : void 0;
+        }
+        GetClanImageByFile(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.file_name == _.name) : void 0;
+        }
+        GetClanImageByImageHash(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.image_hash == _) : void 0;
+        }
+        async DeleteClanImageByID(_, _) {
+          let _ = {
+              sessionid: _._.SESSIONID,
+              imageid: _,
+            },
+            _ = _.GetAccountID(),
+            _ = await _().get(
+              _._.COMMUNITY_BASE_URL +
+                "/gid/" +
+                _.ConvertTo64BitString() +
+                "/deleteimage/",
+              {
+                params: _,
+              },
+            );
+          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
+          let _ = this.m_mapClanToImages.get(_);
+          if (_) {
+            let _ = _.findIndex((_, _, _) => _.imageid == _);
+            _ >= 0 &&
+              (_.splice(_, 1),
+              this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch([
+                ..._,
+              ]));
+          }
+          return _.data;
+        }
+        async DeleteClanImage(_, _) {
+          return this.DeleteClanImageByID(_, _.imageid);
+        }
       }
-      function _(_) {
-        return (_ = _.replace(_._, _())).replace("http://", "https://");
-      }
-      function _(_) {
-        return _.replace(/{STEAM_CLAN_IMAGE}/g, _());
-      }
+      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
+        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
+      const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -87924,6 +80789,5655 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return _.forwardRef(function (_, _) {
+          return _.createElement("div", {
+            ..._,
+            ..._,
+            role: _,
+            className: (0, _._)(_, _.className),
+            ref: _,
+          });
+        });
+      }
+      (0, _._)(
+        [_._],
+        class {
+          m_Promise;
+          m_Value = void 0;
+          constructor(_) {
+            (0, _._)(this), (this.promise = _);
+          }
+          set promise(_) {
+            (this.m_Promise = _),
+              (this.m_Value = void 0),
+              _?.then((_) => {
+                this.m_Promise === _ && (this.m_Value = _);
+              });
+          }
+          get promise() {
+            return this.m_Promise;
+          }
+          get value() {
+            return this.m_Value;
+          }
+        }.prototype,
+        "m_Value",
+        void 0,
+      );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.customTooltip ? _._ : _._;
+        return _.createElement(
+          _,
+          {
+            toolTipContent: _.tooltip,
+            className: (0, _._)(_.HelperTooltip, "HelperTooltip", _.className),
+          },
+          " ",
+          _.createElement(_._VW, null),
+        );
+      }
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_, _) {
+        return _()[_] ?? _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = _("ToggleControl", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().Toggle, _ && _().Disabled),
+            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          },
+          _.createElement("div", {
+            className: _().ToggleRail,
+          }),
+          _.createElement("div", {
+            className: (0, _._)(
+              _().ToggleRail,
+              _().Highlight,
+              _ ? _()._ : _().Off,
+            ),
+          }),
+          _.createElement("div", {
+            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
+          }),
+        );
+      }
+      function _(_) {
+        return _.forwardRef(function (_, _) {
+          return _.createElement(_._, {
+            ..._,
+            className: (0, _._)(_, _.className),
+            ref: _,
+          });
+        });
+      }
+      let _ = _("DialogHeader", "heading"),
+        _ = _("DialogSubHeader", "heading", {
+          "aria-level": 3,
+        }),
+        _ =
+          (_("SettingsDialogSubHeader", "heading", {
+            "aria-level": 3,
+          }),
+          _("DialogFooter")),
+        _ = _("DialogLabel _DialogLayout"),
+        _ = _("DialogBodyText"),
+        _ = (_("DialogBody"), _("DialogBody")),
+        _ =
+          (_("DialogInnerBody"),
+          _("DialogControlsSection"),
+          _("DialogControlsSectionHeader", "heading", {
+            "aria-level": 3,
+          }),
+          _("DialogTwoColLayout _DialogColLayout")),
+        _ = _("DialogThreeColLayout _DialogColLayout");
+      _("DialogTwoThirdColLayout _DialogColLayout"),
+        _("DialogColumn _DialogLayout");
+      function _(_) {
+        const _ = _("Content", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        let {
+            children: _,
+            bCenterVertically: __webpack_require__,
+            refElem: _,
+            ..._
+          } = _,
+          _ =
+            "DialogContent _DialogLayout" +
+            (_.className ? " " + _.className : "");
+        return (
+          __webpack_require__ && (_ += " _DialogCenterVertically"),
+          _.createElement(
+            "div",
+            {
+              ..._,
+              ref: _,
+              className: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: "DialogContent_InnerWidth",
+              },
+              _,
+            ),
+          )
+        );
+      }
+      class _ extends _.Component {
+        OnSubmit(_) {
+          _.preventDefault(), this.props.onSubmit && this.props.onSubmit(_);
+        }
+        render() {
+          return _.createElement("form", {
+            ...this.props,
+            onSubmit: this.OnSubmit,
+          });
+        }
+      }
+      function _(_) {
+        const {
+          classNameContent: _,
+          bCenterVertically: __webpack_require__,
+          ..._
+        } = _;
+        return _.createElement(
+          _,
+          {
+            className: _,
+            bCenterVertically: __webpack_require__,
+          },
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+          label: _,
+          tooltip: __webpack_require__,
+          className: _,
+          children: _,
+        } = _;
+        return _.createElement(
+          "label",
+          {
+            className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
+          },
+          _ &&
+            _.createElement(
+              _,
+              null,
+              _,
+              " ",
+              __webpack_require__ &&
+                _.createElement(_, {
+                  tooltip: __webpack_require__,
+                }),
+              " ",
+            ),
+          _,
+        );
+      }
+      (0, _._)([_._], _.prototype, "OnSubmit", null);
+      const _ = _.forwardRef(function (_, _) {
+          const _ = _(),
+            { svgicon: _, ..._ } = _,
+            _ = (0, _._)(
+              _.className,
+              void 0 !== _ && "hasSVGIcon",
+              _.disabled && "Disabled",
+              _.strButtonClassName,
+            ),
+            _ = (_) => {
+              if (!_.disabled && _)
+                return (_) => {
+                  _.stopPropagation(), _(_);
+                };
+            };
+          return _.createElement(
+            _._,
+            {
+              ref: _,
+              onOKActionDescription: _.disabled ? null : void 0,
+              noFocusRing: !!_.strButtonClassName,
+              ..._,
+              className: _,
+              disabled: !1,
+              onClick: _(_.onClick),
+              onPointerDown: _(_.onPointerDown),
+              onPointerUp: _(_.onPointerUp),
+              onPointerCancel: _(_.onPointerCancel),
+              onMouseDown: _(_.onMouseDown),
+              onMouseUp: _(_.onMouseUp),
+              onTouchStart: _(_.onTouchStart),
+              onTouchEnd: _(_.onTouchEnd),
+              onTouchCancel: _(_.onTouchCancel),
+              onSubmit: _(_.onSubmit),
+            },
+            _ && _(),
+            _.children,
+          );
+        }),
+        _ = _.forwardRef(function (_, _) {
+          return _.createElement(_, {
+            preferredFocus: !0,
+            type: _.onClick ? "button" : "submit",
+            ..._,
+            ref: _,
+            className: (0, _._)(
+              _.className,
+              "DialogButton",
+              "_DialogLayout",
+              "Primary",
+            ),
+          });
+        }),
+        _ = _.forwardRef(function (_, _) {
+          return _.createElement(_, {
+            type: "button",
+            ..._,
+            ref: _,
+            className: (0, _._)(
+              _.className,
+              "DialogButton",
+              "_DialogLayout",
+              "Secondary",
+            ),
+          });
+        });
+      _.forwardRef(function (_, _) {
+        return _.createElement(_, {
+          type: "button",
+          ..._,
+          ref: _,
+          className: (0, _._)(
+            _.className,
+            "DialogButton",
+            "_DialogLayout",
+            "EmptyButton",
+          ),
+        });
+      }),
+        _.forwardRef(function (_, _) {
+          return _.createElement(_, {
+            type: "button",
+            ..._,
+            ref: _,
+            className: (0, _._)(
+              _.className,
+              "DialogButton _DialogLayout Small",
+            ),
+          });
+        }),
+        _.forwardRef(function (_, _) {
+          return _.createElement(_, {
+            type: "button",
+            ..._,
+            ref: _,
+            className: (0, _._)(_.className, "TextButton"),
+          });
+        });
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            className: _.className,
+          },
+          _.createElement(
+            _,
+            {
+              onClick: _.onOK,
+              disabled: _.bOKDisabled,
+              autoFocus: "primary" == _.focusButton,
+            },
+            _.strOKText || (0, _._)("#Button_Confirm"),
+            " ",
+          ),
+          _.createElement(
+            _,
+            {
+              onClick: _.onCancel,
+              disabled: _.bCancelDisabled,
+              autoFocus: "secondary" == _.focusButton,
+            },
+            _.strCancelText || (0, _._)("#Button_Cancel"),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = _.bOKDisabled ? _ : _,
+          _ = _.bOKDisabled ? _ : _;
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            {
+              onClick: _.onOK,
+              disabled: _.bOKDisabled,
+            },
+            _.strOKText || (0, _._)("#Button_Confirm"),
+            " ",
+          ),
+          _.createElement(
+            _,
+            {
+              onClick: _.onUpdate,
+              disabled: _.bUpdateDisabled,
+            },
+            _.strUpdateText || (0, _._)("#Button_Update"),
+            " ",
+          ),
+          _.createElement(
+            _,
+            {
+              onClick: _.onCancel,
+              disabled: _.bCancelDisabled,
+            },
+            _.strCancelText || (0, _._)("#Button_Cancel"),
+          ),
+        );
+      }
+      class _ extends _.Component {
+        constructor(_) {
+          super(_),
+            (this.state = {
+              checked: _.checked,
+              disabled: _.disabled,
+            });
+        }
+        componentDidUpdate(_) {
+          this.props.controlled ||
+            (_.checked != this.props.checked &&
+              this.props.checked != this.state.checked &&
+              this.setState({
+                checked: this.props.checked,
+              })),
+            _.disabled != this.props.disabled &&
+              this.props.disabled != this.state.disabled &&
+              this.setState({
+                disabled: this.props.disabled,
+              });
+        }
+        shouldComponentUpdate(_, _) {
+          return (
+            _.label != this.props.label ||
+            _.description != this.props.description ||
+            _.onChange != this.props.onChange ||
+            _.controlled != this.props.controlled ||
+            _.disabled != this.props.disabled ||
+            _.disabled != this.state.disabled ||
+            _.checked != this.checked ||
+            _.checked != this.state.checked
+          );
+        }
+        get checked() {
+          return this.props.controlled
+            ? this.props.checked
+            : this.state.checked;
+        }
+        GetPanelElementProps() {
+          const {
+            onChange: _,
+            checked: _,
+            label: __webpack_require__,
+            description: _,
+            tabIndex: _,
+            disabled: _,
+            className: _,
+            tooltip: _,
+            color: _,
+            highlightColor: _,
+            bottomSeparator: _,
+            controlled: _,
+            ..._
+          } = this.props;
+          return {
+            ..._,
+            tabIndex: _ || 0,
+            onActivate: this.Toggle,
+            onKeyDown: this.KeyDown,
+          };
+        }
+        Toggle() {
+          if (this.props.disabled) return;
+          let _ = !this.checked;
+          this.props.controlled ||
+            this.setState({
+              checked: _,
+            }),
+            this.props.onChange && this.props.onChange(_);
+        }
+        KeyDown(_) {
+          32 == _.keyCode &&
+            (this.Toggle(), _.preventDefault(), _.stopPropagation());
+        }
+        SetChecked(_, _) {
+          this.setState({
+            checked: _,
+          }),
+            _ && this.props.onChange && this.props.onChange(_);
+        }
+      }
+      (0, _._)([_._], _.prototype, "Toggle", null),
+        (0, _._)([_._], _.prototype, "KeyDown", null),
+        (0, _._)([_._], _.prototype, "SetChecked", null);
+      class _ extends _ {
+        render() {
+          let _ = "DialogCheckbox" + (this.checked ? " Active" : "");
+          return (
+            1 == this.state.disabled && (_ += " Disabled"),
+            this.props.label
+              ? _.createElement(
+                  _._,
+                  {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
+                    className:
+                      "DialogCheckbox_Container _DialogLayout " +
+                      (this.props.className ? this.props.className : "") +
+                      (this.state.disabled ? " Disabled" : ""),
+                    ...this.GetPanelElementProps(),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _,
+                    },
+                    _.createElement(_.X4B, {
+                      color: this.props.color,
+                      highlightColor: this.props.highlightColor,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: "DialogToggle_Label",
+                    },
+                    "string" == typeof this.props.label &&
+                      _.createElement("span", null, this.props.label),
+                    "string" != typeof this.props.label && this.props.label,
+                    this.props.tooltip &&
+                      _.createElement(_, {
+                        tooltip: this.props.tooltip,
+                      }),
+                  ),
+                  _.createElement("div", {
+                    style: {
+                      clear: "left",
+                    },
+                  }),
+                  this.props.description &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: "DialogToggle_Description",
+                      },
+                      this.props.description,
+                    ),
+                  this.props.children,
+                )
+              : _.createElement(
+                  _._,
+                  {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
+                    className: _,
+                    ...this.GetPanelElementProps(),
+                  },
+                  _.createElement(_.X4B, null),
+                )
+          );
+        }
+      }
+      _.forwardRef(function (_, _) {
+        const _ = _("ToggleField", _);
+        return _.createElement(_, {
+          ref: _,
+          ..._,
+        });
+      });
+      class _ extends _ {
+        OnOffKeyDown(_) {
+          (37 == _.keyCode && this.checked) ||
+          (39 == _.keyCode && !this.checked)
+            ? (this.Toggle(), _.preventDefault(), _.stopPropagation())
+            : this.KeyDown(_);
+        }
+        OnNewUIToggle(_) {
+          _ !== this.checked && this.Toggle();
+        }
+        render() {
+          let _ =
+            "DialogToggleField _DialogInputContainer _DialogLayout " +
+            (this.props.className ? this.props.className : "");
+          return (
+            this.props.disabled && (_ += " Disabled"),
+            _.createElement(
+              "div",
+              {
+                className: _,
+                tabIndex: this.props.tabIndex || 0,
+                onKeyDown: this.OnOffKeyDown,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "displayColumn alignSelfCenter",
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: "DialogToggle_Label",
+                  },
+                  _.createElement("span", null, this.props.label),
+                  this.props.tooltip &&
+                    _.createElement(_, {
+                      tooltip: this.props.tooltip,
+                    }),
+                ),
+                this.props.description &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: "DialogToggle_Description",
+                    },
+                    this.props.description,
+                  ),
+                this.props.children,
+              ),
+              this.props.useToggleRail
+                ? _.createElement(
+                    "div",
+                    {
+                      className: "DialogToggleField_NewUIContainer",
+                    },
+                    _.createElement(_, {
+                      onChange: this.OnNewUIToggle,
+                      value: this.checked,
+                    }),
+                  )
+                : _.createElement(
+                    "div",
+                    {
+                      className: "DialogToggleField_Control",
+                      onClick: this.Toggle,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        className: "DialogToggleField_OptionPanel",
+                        onOKButton: this.Toggle,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className:
+                            "DialogToggleField_Option Off" +
+                            (this.checked ? "" : " Active"),
+                        },
+                        (0, _._)("#Dialog_Off"),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className:
+                            "DialogToggleField_Option On" +
+                            (this.checked ? " Active" : ""),
+                        },
+                        (0, _._)("#Dialog_On"),
+                      ),
+                    ),
+                  ),
+            )
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnOffKeyDown", null),
+        (0, _._)([_._], _.prototype, "OnNewUIToggle", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_options;
+        m_msStart;
+        m_msEnd;
+        m_bActive = !1;
+        m_fnBoundAnimationFunc = void 0;
+        m_window;
+        constructor(_, _) {
+          (this.m_window = _),
+            (this.m_options = {
+              timing: "sine",
+              ..._,
+            });
+        }
+        Start() {
+          let _;
+          switch (
+            ((this.m_msStart = performance.now()),
+            (this.m_msEnd = this.m_msStart + this.m_options.msDuration),
+            this.m_options.timing)
+          ) {
+            case "linear":
+              _ = function (_) {
+                return _;
+              };
+              break;
+            case "cubic-in-out":
+              _ = function (_) {
+                return _ < 0.5
+                  ? 4 * _ * _ * _
+                  : (_ - 1) * (2 * _ - 2) * (2 * _ - 2) + 1;
+              };
+              break;
+            default:
+              _ = function (_) {
+                return 0.5 - Math.cos(_ * Math._) / 2;
+              };
+          }
+          (this.m_bActive = !0),
+            (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
+            this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+        }
+        BIsActive() {
+          return this.m_bActive;
+        }
+        End() {
+          if (this.m_bActive) {
+            try {
+              this.Update(1);
+            } catch {}
+            this.ClearInterval(), this.FireOnComplete();
+          }
+        }
+        FireOnComplete() {
+          this.m_options.onComplete && this.m_options.onComplete();
+        }
+        Cancel() {
+          this.m_bActive = !1;
+        }
+        OnInterval(_) {
+          if (!this.m_bActive) return;
+          let _ = performance.now() - this.m_msStart;
+          if (_ >= this.m_options.msDuration) return void this.End();
+          let _ = _ / this.m_options.msDuration;
+          try {
+            this.Update(_(_));
+          } catch {}
+          this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+        }
+        ClearInterval() {
+          this.m_bActive = !1;
+        }
+      }
+      class _ extends _ {
+        m_object;
+        m_propTargets;
+        m_props = {};
+        constructor(_, _, _) {
+          super("ownerDocument" in _ ? _._(_) : _, _),
+            (this.m_object = _),
+            (this.m_propTargets = _);
+        }
+        Start() {
+          this.m_props = {};
+          for (let _ in this.m_propTargets) {
+            let _ = parseFloat(this.m_object[_]) || 0,
+              _ = this.m_propTargets[_];
+            _ != _ &&
+              (this.m_props[_] = {
+                start: _,
+                end: _,
+              });
+          }
+          super.Start();
+        }
+        Update(_) {
+          for (let _ in this.m_props) {
+            let _ = this.m_props[_],
+              _ = _.start + (_.end - _.start) * _;
+            this.m_object[_] = _;
+          }
+        }
+      }
+      class _ extends _ {
+        m_component;
+        m_propTargets;
+        m_props = {};
+        m_setStateOnComplete;
+        constructor(_, _, _) {
+          super(_._(_.ref.current), _),
+            (this.m_component = _),
+            (this.m_propTargets = _),
+            (this.m_setStateOnComplete = _.setStateOnComplete);
+        }
+        Start() {
+          this.m_props = {};
+          for (let _ in this.m_propTargets) {
+            let _ = parseFloat(this.m_component.state[_]) || 0,
+              _ = this.m_propTargets[_];
+            _ != _ &&
+              (this.m_props[_] = {
+                start: _,
+                end: _,
+              });
+          }
+          super.Start();
+        }
+        Update(_) {
+          let _ = {};
+          for (let _ in this.m_props) {
+            let _ = this.m_props[_],
+              _ = _.start + (_.end - _.start) * _;
+            _[_] = _;
+          }
+          this.m_component.setState(_);
+        }
+        FireOnComplete() {
+          super.FireOnComplete(),
+            this.m_setStateOnComplete &&
+              this.m_component.setState(this.m_setStateOnComplete);
+        }
+      }
+      const _ = _.forwardRef(function (_, _) {
+        const _ = _("InputElement", _._);
+        return _.createElement(_, {
+          ..._,
+          ref: _,
+        });
+      });
+      class _ extends _.PureComponent {
+        m_CopiedAnimation;
+        ref = _.createRef();
+        constructor(_) {
+          super(_),
+            this.CheckProps(_),
+            (this.state = {
+              m_CopiedYPos: 0,
+              m_bPlayingCopiedAnimation: !1,
+              m_bCompletedCopiedAnimation: !1,
+              m_bNumberBelowMinRange: !1,
+              m_bNumberAboveMaxRange: !1,
+              m_bIsNotNumeric: !1,
+              m_bIsInvalidURL: !1,
+              m_strInvalidURLMessage: null,
+              m_bIsInvalidEmail: !1,
+              m_bAboveMaxChars: !1,
+            });
+        }
+        componentDidUpdate(_) {
+          this.CheckProps(this.props);
+        }
+        m_elInput;
+        OnInputRef(_) {
+          (this.m_elInput = _),
+            this.m_elInput && this.props.focusOnMount && this.m_elInput.focus();
+        }
+        get element() {
+          return this.m_elInput;
+        }
+        get value() {
+          return this.m_elInput && this.m_elInput.value;
+        }
+        Focus() {
+          this.m_elInput?.focus();
+        }
+        static validateUrl(_) {
+          return (
+            null != _ &&
+            (/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            ) ||
+              /^steam:\/\/[-a-zA-Z0-9@:%._\+~#=]{2,256}/i.test(_))
+          );
+        }
+        static validateEmail(_) {
+          return (
+            null != _ &&
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+              _.toLowerCase(),
+            )
+          );
+        }
+        Validate() {
+          this.setState({
+            m_bNumberBelowMinRange:
+              null !== this.props.rangeMin &&
+              void 0 !== this.props.rangeMin &&
+              Number(this.m_elInput?.value) < this.props.rangeMin,
+            m_bNumberAboveMaxRange:
+              null !== this.props.rangeMax &&
+              void 0 !== this.props.rangeMax &&
+              Number(this.m_elInput?.value) > this.props.rangeMax,
+            m_bIsNotNumeric:
+              1 == this.props.mustBeNumeric &&
+              isNaN(Number(this.m_elInput?.value)),
+            m_bIsInvalidURL:
+              1 == this.props.mustBeURL &&
+              !_.validateUrl(this.m_elInput?.value),
+            m_strInvalidURLMessage: this.props.fnStrValidateURL
+              ? this.props.fnStrValidateURL(this.m_elInput?.value)
+              : null,
+            m_bIsInvalidEmail:
+              1 == this.props.mustBeEmail &&
+              !_.validateEmail(this.m_elInput?.value),
+            m_bAboveMaxChars:
+              null != this.props.maxChars &&
+              null != this.m_elInput &&
+              this.m_elInput.value.length > this.props.maxChars,
+          });
+        }
+        OnChanged(_) {
+          this.props.onChange && this.props.onChange(_), this.Validate();
+        }
+        OnCopyClick(_) {
+          if (!this.m_elInput) return;
+          this.m_elInput.select();
+          let _ = this.m_elInput.ownerDocument;
+          if (_.queryCommandEnabled("copy")) {
+            _.execCommand("copy"),
+              _.currentTarget.focus(),
+              this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel();
+            let _ = -4,
+              _ = -24;
+            this.setState({
+              m_bCompletedCopiedAnimation: !1,
+            }),
+              this.setState(
+                {
+                  m_CopiedYPos: _,
+                },
+                () => {
+                  (this.m_CopiedAnimation = new _(
+                    this,
+                    {
+                      m_CopiedYPos: _,
+                    },
+                    {
+                      msDuration: 300,
+                      timing: "sine",
+                      setStateOnComplete: {
+                        m_bCompletedCopiedAnimation: !0,
+                      },
+                    },
+                  )),
+                    this.m_CopiedAnimation.Start();
+                },
+              );
+          }
+        }
+        OnClearClick(_) {
+          if (this.m_elInput && this.m_elInput.value) {
+            Object.getOwnPropertyDescriptor(
+              window.HTMLInputElement.prototype,
+              "value",
+            ).set.call(this.m_elInput, ""),
+              this.m_elInput.dispatchEvent(
+                new Event("input", {
+                  bubbles: !0,
+                }),
+              );
+          }
+        }
+        CheckProps(_) {
+          (0, _._)(
+            !(_.bShowClearAction || _.bAlwaysShowClearAction) || _.onChange,
+            "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input.",
+          );
+        }
+        render() {
+          const {
+            label: _,
+            description: _,
+            requiredLabel: __webpack_require__,
+            bShowCopyAction: _,
+            bShowClearAction: _,
+            bAlwaysShowClearAction: _,
+            rangeMin: _,
+            rangeMax: _,
+            mustBeNumeric: _,
+            mustBeURL: _,
+            fnStrValidateURL: _,
+            mustBeEmail: _,
+            focusOnMount: _,
+            tooltip: _,
+            inlineControls: _,
+            maxChars: _,
+            ..._
+          } = this.props;
+          let _ =
+              "DialogInput DialogInputPlaceholder DialogTextInputBase" +
+              (_.className ? " " + _.className : ""),
+            _ = "copiedAnimation",
+            _ = this.state.m_bCompletedCopiedAnimation;
+          this.m_CopiedAnimation && (_ = "copiedAnimation animationPlaying"),
+            _ && (_ = "copiedAnimation animationComplete");
+          let _ = {};
+          void 0 !== this.state.m_CopiedYPos &&
+            (_.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+          let _ = _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                className: "DialogInput_Wrapper _DialogLayout",
+                "flow-children": "row",
+                ref: this.ref,
+              },
+              _.createElement(_, {
+                type: "text",
+                ..._,
+                className: _,
+                ref: this.OnInputRef,
+                onChange: this.OnChanged,
+              }),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: "displayRow",
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      className: "DialogInput_CopyAction Primary",
+                      onClick: this.OnCopyClick,
+                    },
+                    (0, _._)("#Button_Copy"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      style: _,
+                      className: _,
+                    },
+                    (0, _._)("#Button_Copied"),
+                  ),
+                ),
+              (_ || (_ && _.value)) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: "DialogInput_ClearAction",
+                    onClick: this.OnClearClick,
+                  },
+                  _.createElement(_.sED, null),
+                ),
+              _,
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: "DialogLabelExplainer",
+                },
+                _,
+              ),
+          );
+          return _
+            ? _.createElement(
+                "div",
+                {
+                  className:
+                    "DialogInputLabelGroup _DialogLayout DialogRequirementLabel",
+                },
+                _.createElement(
+                  "label",
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: "DialogLabel",
+                    },
+                    _,
+                    " ",
+                    this.props.tooltip &&
+                      _.createElement(_, {
+                        tooltip: this.props.tooltip,
+                      }),
+                    _.createElement(
+                      "span",
+                      {
+                        className: "DialogInputRequirementLabel",
+                      },
+                      this.props.requiredLabel,
+                    ),
+                    " ",
+                  ),
+                  _,
+                  this.state.m_bNumberBelowMinRange
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_NumberTooSmall"),
+                        " ",
+                      )
+                    : null,
+                  this.state.m_bNumberAboveMaxRange
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_NumberTooLarge"),
+                        " ",
+                      )
+                    : null,
+                  this.state.m_bIsInvalidURL
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_MustBeURL"),
+                        " ",
+                      )
+                    : null,
+                  this.state.m_strInvalidURLMessage
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        this.state.m_strInvalidURLMessage,
+                        " ",
+                      )
+                    : null,
+                  this.state.m_bIsInvalidEmail
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_MustBeEmail"),
+                        " ",
+                      )
+                    : null,
+                  this.state.m_bIsNotNumeric
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_MustBeNumber"),
+                        " ",
+                      )
+                    : null,
+                  this.state.m_bAboveMaxChars
+                    ? _.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, _._)("#Input_Error_TooManyCharacters", _),
+                        " ",
+                      )
+                    : null,
+                ),
+              )
+            : _;
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnInputRef", null),
+        (0, _._)([_._], _.prototype, "OnChanged", null),
+        (0, _._)([_._], _.prototype, "OnCopyClick", null),
+        (0, _._)([_._], _.prototype, "OnClearClick", null);
+      class _ extends _ {
+        m_bFocused = !1;
+        OnBackgroundClick() {
+          this.m_elInput && this.m_elInput.focus();
+        }
+        OnInputFocus(_) {
+          this.m_bFocused || ((this.m_bFocused = !0), this.forceUpdate()),
+            this.props.onFocus && this.props.onFocus(_);
+        }
+        OnInputBlur(_) {
+          this.m_bFocused && ((this.m_bFocused = !1), this.forceUpdate()),
+            this.props.onBlur && this.props.onBlur(_);
+        }
+        render() {
+          const {
+            label: _,
+            description: _,
+            requiredLabel: __webpack_require__,
+            bShowCopyAction: _,
+            bShowClearAction: _,
+            bAlwaysShowClearAction: _,
+            rangeMin: _,
+            rangeMax: _,
+            maxChars: _,
+            mustBeNumeric: _,
+            mustBeURL: _,
+            fnStrValidateURL: _,
+            mustBeEmail: _,
+            focusOnMount: _,
+            tooltip: _,
+            inlineControls: _,
+            className: _,
+            children: _,
+            ..._
+          } = this.props;
+          return _.createElement(
+            "div",
+            {
+              className:
+                "DialogInputLabelGroup _DialogLayout DialogListBuilderInput",
+            },
+            _.createElement(
+              "label",
+              null,
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: "DialogLabel",
+                  },
+                  _,
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    "_DialogInputContainer",
+                    "DialogTextInputBase",
+                    this.m_bFocused && "Active",
+                  ),
+                  onClick: this.OnBackgroundClick,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: "DialogListBuilderInput_List",
+                    "flow-children": "row",
+                  },
+                  _.Children.map(_, (_, _) =>
+                    _.createElement(
+                      "div",
+                      {
+                        className: "DialogListBuilderInput_ListItem",
+                        key: _,
+                      },
+                      _,
+                    ),
+                  ),
+                  _.createElement(_._, {
+                    type: "text",
+                    ..._,
+                    className:
+                      "DialogListBuilderInput_Input DialogInputPlaceholder",
+                    ref: this.OnInputRef,
+                    onFocus: this.OnInputFocus,
+                    onBlur: this.OnInputBlur,
+                    size: 4,
+                  }),
+                ),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: "DialogLabelExplainer",
+                  },
+                  _,
+                ),
+            ),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
+        (0, _._)([_._], _.prototype, "OnInputFocus", null),
+        (0, _._)([_._], _.prototype, "OnInputBlur", null);
+      const _ = (_, _) =>
+        "" + (null != _ ? Number.parseFloat(_.toFixed(3)) : null) + (_ ?? "");
+      class _ extends _.Component {
+        m_flLastSetValue = null;
+        constructor(_) {
+          super(_);
+        }
+        ClampValue(_) {
+          return void 0 === _ || isNaN(_) || _ < this.props.min
+            ? this.props.min
+            : _ > this.props.max
+              ? this.props.max
+              : _;
+        }
+        BPropsValid() {
+          return this.props.max > this.props.min;
+        }
+        m_elSlider;
+        m_rectSlider;
+        OnMouseDown(_) {
+          (this.m_elSlider = _.currentTarget),
+            (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
+            this.props.onChangeStart && this.props.onChangeStart(1),
+            this.AdjustSliderForClientX(_.clientX, 1),
+            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+              "mousemove",
+              this.OnMouseMove,
+            ),
+            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+              "mouseup",
+              this.OnMouseUp,
+            );
+        }
+        OnMouseMove(_) {
+          this.AdjustSliderForClientX(_.clientX, 1);
+        }
+        OnMouseUp(_) {
+          this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+            "mousemove",
+            this.OnMouseMove,
+          ),
+            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+              "mouseup",
+              this.OnMouseUp,
+            ),
+            this.CompleteChange(1);
+        }
+        OnTouchStart(_) {
+          (this.m_elSlider = _.currentTarget),
+            (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
+            this.props.onChangeStart && this.props.onChangeStart(0),
+            this.AdjustSliderForClientX(_.touches[0].clientX, 0),
+            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+              "touchmove",
+              this.OnTouchMove,
+            ),
+            this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+              "touchend",
+              this.OnTouchEnd,
+            );
+        }
+        OnTouchMove(_) {
+          this.AdjustSliderForClientX(_.touches[0].clientX, 0);
+        }
+        OnTouchEnd(_) {
+          this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+            "touchmove",
+            this.OnTouchMove,
+          ),
+            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+              "touchend",
+              this.OnTouchEnd,
+            ),
+            this.CompleteChange(0);
+        }
+        OnKeyDown(_) {
+          let _ = 1;
+          _.ctrlKey &&
+            (_ = Math.max(
+              1,
+              Math.floor(0.1 * (this.props.max - this.props.min) + 0.5),
+            )),
+            37 == _.keyCode
+              ? (this.IncrementValue(-1 * _), _.preventDefault())
+              : 39 == _.keyCode &&
+                (this.IncrementValue(1 * _), _.preventDefault()),
+            this.CompleteChange(2);
+        }
+        AdjustSliderForClientX(_, _) {
+          let _ =
+            ((_ - this.m_rectSlider.left) /
+              (this.m_rectSlider.right - this.m_rectSlider.left)) *
+              (this.props.max - this.props.min) +
+            this.props.min;
+          _ = Math.floor(_ + 0.5);
+          const _ = this.ClampValue(_);
+          _ != this.props.value &&
+            (this.props.onChange && this.props.onChange(_, _),
+            (this.m_flLastSetValue = _));
+        }
+        CompleteChange(_) {
+          null != this.m_flLastSetValue &&
+            (this.props.onChangeComplete &&
+              this.props.onChangeComplete(this.m_flLastSetValue, _),
+            (this.m_flLastSetValue = null));
+        }
+        IncrementValue(_) {
+          let _ = this.ClampValue(this.props.value + _);
+          _ != this.props.value &&
+            (this.props.onChange && this.props.onChange(_, 2),
+            (this.m_flLastSetValue = _));
+        }
+        render() {
+          let _ = {},
+            _ = {};
+          if (this.BPropsValid()) {
+            let _ =
+              (100 * (this.props.value - this.props.min)) /
+                (this.props.max - this.props.min) +
+              "%";
+            (_.width = _), (_.left = _);
+          }
+          const { label: _, description: _, tooltip: _, ..._ } = this.props,
+            _ = this.props.renderValue ?? _;
+          return _.createElement(
+            "div",
+            {
+              className:
+                "DialogSlider_Container _DialogInputContainer _DialogLayout" +
+                (this.props.className ? " " + this.props.className : ""),
+              onKeyDown: this.OnKeyDown,
+              tabIndex: this.props.tabIndex || 0,
+            },
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: "DialogLabel",
+                },
+                _,
+                Boolean(_) &&
+                  _.createElement(_, {
+                    tooltip: _,
+                  }),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: "DialogSlider_Slider",
+                onMouseDown: this.OnMouseDown,
+                onTouchStart: this.OnTouchStart,
+              },
+              _.createElement("div", {
+                className: "DialogSlider_Value",
+                style: _,
+              }),
+              _.createElement("div", {
+                className: "DialogSlider_Grabber",
+                style: _,
+              }),
+            ),
+            this.props.showValue &&
+              _.createElement(
+                "div",
+                {
+                  className: "DialogLabelExplainer",
+                },
+                _(this.props.value, this.props.valueSuffix),
+              ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: "DialogLabelExplainer",
+                },
+                _,
+              ),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "OnTouchStart", null),
+        (0, _._)([_._], _.prototype, "OnTouchMove", null),
+        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
+        (0, _._)([_._], _.prototype, "OnKeyDown", null);
+      __webpack_require__("chunkid");
+      _.createContext({
+        setValue: () => {},
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return "object" == typeof _ && "data" in _;
+      }
+      function _(_) {
+        return "object" == typeof _ && "bIsSeparator" in _;
+      }
+      function _(_) {
+        return "object" == typeof _ && "options" in _;
+      }
+      function _(_, _) {
+        if (_ === _) return !0;
+        if (!Array.isArray(_) || !Array.isArray(_)) return !1;
+        if (_.length != _.length) return !1;
+        for (let _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
+        return !0;
+      }
+      function _(_, _) {
+        return null == _ || null == _
+          ? _ == _
+          : !(!_(_) || !_(_)) ||
+              (!_(_) &&
+                !_(_) &&
+                _.label === _.label &&
+                  _.tooltip === _.tooltip &&
+                    _(_) == _(_) &&
+                      !(_(_) && _(_) && !_(_.options, _.options)) &&
+                (!_(_) || !_(_) || _.data === _.data));
+      }
+      function _(_, _) {
+        if (null != _)
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _[_];
+            if (_(_) && _.data === _) return _;
+            if (_(_)) {
+              const _ = _(_.options, _);
+              if (null != _) return _;
+            }
+          }
+      }
+      function _(_) {
+        const _ = _("DropDownField", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const {
+          label: _,
+          tooltip: __webpack_require__,
+          strClassName: _,
+          dropDownControlRef: _,
+          ..._
+        } = _;
+        return _.createElement(
+          _,
+          {
+            label: _,
+            tooltip: __webpack_require__,
+            className: _,
+          },
+          _.createElement(_, {
+            menuLabel: _,
+            ..._,
+            ref: _,
+          }),
+        );
+      }
+      const _ = _.forwardRef(function (_, _) {
+        return _.createElement(
+          _._,
+          {
+            focusable: _.focusable,
+            className: (0, _._)(
+              _.className,
+              "DialogDropDown",
+              "_DialogInputContainer",
+              {
+                Active: _.opened,
+                Disabled: _.disabled,
+              },
+            ),
+            tabIndex: _.tabIndex,
+            onClick: _.onClick,
+            onKeyDown: _.onKeyDown,
+            disabled: _.disabled,
+            type: "button",
+            ref: _,
+            noFocusRing: _.noFocusRing,
+            role: _.role ?? "combobox",
+            "aria-controls": _["aria-controls"],
+            "aria-expanded": _.opened,
+          },
+          _.createElement(
+            "div",
+            {
+              className: "DialogDropDown_CurrentDisplay",
+            },
+            _.children,
+          ),
+          !_.disabled &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
+              },
+              _.createElement(_.GB9, {
+                role: "presentation",
+              }),
+            ),
+        );
+      });
+      class _ extends _.Component {
+        static contextType = _;
+        m_elInput;
+        m_iMenuInstance;
+        constructor(_) {
+          super(_),
+            (this.state = {
+              value: _(_.rgOptions, _.selectedOption),
+              bOpened: !1,
+            });
+        }
+        SetSelectedOption(_) {
+          if (this.props.controlled) return;
+          const _ = _(this.props.rgOptions, _);
+          _(_, this.value) ||
+            this.setState({
+              value: _,
+            });
+        }
+        get value() {
+          return this.props.controlled
+            ? _(this.props.rgOptions, this.props.selectedOption)
+            : this.state.value;
+        }
+        shouldComponentUpdate(_, _, _) {
+          if (_.selectedOption !== this.props.selectedOption) return !0;
+          if (_.disabled != this.props.disabled) return !0;
+          if (_.bOpened !== this.state.bOpened) return !0;
+          if (!_(this.props.rgOptions, _.rgOptions)) return !0;
+          if (!_(_.value, this.value)) return !0;
+          let _ = ["selectedOption", "tabIndex", "onChange", "strDefaultLabel"];
+          for (let _ of _) if (_[_] !== this.props[_]) return !0;
+          return !1;
+        }
+        componentDidUpdate(_, _) {
+          (0, _._)(
+            this.props.controlled === _.controlled,
+            '"controlled" prop should never change after mount',
+          );
+          const _ = !_(_.rgOptions, this.props.rgOptions),
+            _ = _.selectedOption !== this.props.selectedOption,
+            _ = this.value !== _.value;
+          !this.props.controlled &&
+            (_ || _ || _) &&
+            (_ || null == this.value
+              ? this.SetSelectedOption(this.props.selectedOption)
+              : this.SetSelectedOption(this.value.data)),
+            (_ || _) &&
+              (this.state.bOpened
+                ? (this.m_iMenuInstance?.SetOnHideCallback(void 0),
+                  this.m_iMenuInstance?.Hide(),
+                  (this.m_iMenuInstance = void 0),
+                  this.BuildMenu())
+                : this.m_iMenuInstance &&
+                  (this.m_iMenuInstance.SetOnHideCallback(void 0),
+                  (this.m_iMenuInstance = void 0)));
+        }
+        OnInputRef(_) {
+          _ && (this.m_elInput = _);
+        }
+        get element() {
+          return this.m_elInput;
+        }
+        ToggleMenu() {
+          if (this.state.bOpened) this.HideMenu();
+          else {
+            if (
+              this.props.onMenuWillOpen &&
+              0 == this.props.onMenuWillOpen(this.ShowMenu)
+            )
+              return;
+            this.ShowMenu();
+          }
+        }
+        OnValueSelected(_, _) {
+          this.HideMenu(),
+            this.setState({
+              value: _,
+            }),
+            this.props.onChange && this.props.onChange(_, this, _);
+        }
+        BuildMenu() {
+          let _ = "DialogMenuPosition";
+          this.props.strDropDownClassName &&
+            (_ += " " + this.props.strDropDownClassName);
+          let _ = {
+              bOverlapHorizontal: !0,
+              bMatchWidth: this.props.bMatchWidth ?? !0,
+              bFitToWindow: !0,
+              strClassName: _,
+              bDisableMouseOverlay: this.props.bDisableMouseOverlay,
+              ...this.props.contextMenuPositionOptions,
+            },
+            _ = this.props.contextMenuPositionOptions?.onCancel;
+          (this.m_iMenuInstance = (0, _._)(
+            _.createElement(_, {
+              rgOptions: this.props.rgOptions,
+              onValueSelected: this.OnValueSelected,
+              onCancel: _,
+              selectedValue: this.value?.data,
+              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
+              strDropDownItemClassName: this.props.strDropDownItemClassName,
+              _: `dropdownmenu_${this.m_iMenuInstance?.key}`,
+            }),
+            this.m_elInput,
+            _,
+          )),
+            this.m_iMenuInstance.SetLabel(
+              this.props.menuLabel ??
+                ("string" == typeof this.props.strDefaultLabel &&
+                  this.props.strDefaultLabel),
+            ),
+            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
+        }
+        ShowMenu() {
+          this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
+            this.props.onMenuOpened && this.props.onMenuOpened(),
+            this.setState({
+              bOpened: !0,
+            });
+        }
+        HideMenu() {
+          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+            this.setState(
+              {
+                bOpened: !1,
+              },
+              () => this.m_elInput.focus(),
+            );
+        }
+        OnKeyDown(_) {
+          _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
+            this.OnValueSelected(void 0, _),
+          );
+        }
+        render() {
+          let _ = this.value?.label ?? this.props.strDefaultLabel;
+          null != this.props.renderButtonValue &&
+            (_ = this.props.renderButtonValue(_));
+          const _ = this.props.focusable ?? !0,
+            _ =
+              this.props.renderButton ||
+              this.context.DropDownControlButton ||
+              _;
+          return _.createElement(
+            _,
+            {
+              focusable: _,
+              disabled: this.props.disabled ?? !1,
+              opened: this.state.bOpened,
+              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
+              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
+              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
+              ref: this.OnInputRef,
+              className: this.props.strDropDownButtonClassName,
+              arrowClassName: this.props.arrowClassName,
+              role: "combobox",
+              "aria-controls": this.m_iMenuInstance
+                ? `dropdownmenu_${this.m_iMenuInstance.key}`
+                : void 0,
+              "aria-expanded": this.state.bOpened,
+              "aria-labelledby": this.props["aria-labelledby"],
+              "aria-describedby": this.props["aria-describedby"],
+            },
+            _,
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnInputRef", null),
+        (0, _._)([_._], _.prototype, "ToggleMenu", null),
+        (0, _._)([_._], _.prototype, "OnValueSelected", null),
+        (0, _._)([_._], _.prototype, "ShowMenu", null),
+        (0, _._)([_._], _.prototype, "HideMenu", null),
+        (0, _._)([_._], _.prototype, "OnKeyDown", null);
+      const _ = _.createContext(null);
+      function _(_) {
+        const _ = _("DropDownMenu", _);
+        return _.createElement(
+          _.Provider,
+          {
+            value: {},
+          },
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_, _, _, _) {
+        let _;
+        if ("ArrowDown" === _.key) {
+          _ = (_.findIndex((_) => _.data === _) + 1) % _.length;
+        } else if ("ArrowUp" === _.key) {
+          const _ = _.findIndex((_) => _.data === _);
+          _ = _ <= 0 ? _.length - 1 : _ - 1;
+        }
+        void 0 !== _ && (_(_[_]), _.preventDefault());
+      }
+      function _(_) {
+        const {
+            rgOptions: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            selectedValue: _,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _.useMemo(() => _.filter(_), [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_, _, _, (_) => _(_.data));
+            },
+            [_, _],
+          );
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().DialogDropDownMenu,
+              "_DialogInputContainer",
+              _.strDropDownMenuCtnClass,
+            ),
+            onKeyDown: _,
+          },
+          _.createElement(_, {
+            rgOptions: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            activeValue: _,
+            setActiveValue: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { rgOptions: _, ...__webpack_require__ } = _;
+        return _.map((_, _) =>
+          _(_)
+            ? _.createElement("hr", {
+                key: _,
+                className: (0, _._)(
+                  _().DialogDropDownMenu_Item,
+                  _().DialogDropDownMenu_Separator,
+                ),
+              })
+            : _(_)
+              ? _.createElement(_, {
+                  key: _,
+                  ...__webpack_require__,
+                  rgOptions: _.options,
+                })
+              : _.createElement(_, {
+                  key: _,
+                  ...__webpack_require__,
+                  option: _,
+                }),
+        );
+      }
+      function _(_) {
+        const {
+            option: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            activeValue: _,
+            setActiveValue: _,
+          } = _,
+          _ = _.useCallback((_) => _ && _.focus(), []),
+          _ = _.useCallback(() => {
+            _(_.data);
+          }, [_, _]),
+          _ = _.data === _;
+        return _.createElement(
+          "button",
+          {
+            type: "button",
+            className: (0, _._)(
+              _().DialogDropDownMenu_Item,
+              __webpack_require__,
+              _.strOptionClass,
+              _ && "ContextMenuAutoFocus",
+            ),
+            onClick: (_) => _(_, _),
+            ref: _ ? _ : void 0,
+            onMouseEnter: _,
+            role: "option",
+            "aria-selected": _,
+          },
+          Boolean(_.tooltip)
+            ? _.createElement(
+                _._,
+                {
+                  toolTipContent: _.tooltip,
+                  bTopmost: !0,
+                  className: "TooltipContainer",
+                },
+                _.label,
+              )
+            : _.createElement("div", null, _.label),
+        );
+      }
+      class _ extends _.Component {
+        state = {
+          rgOptions: void 0,
+        };
+        async OnMenuOpened() {
+          if (!this.state.rgOptions) {
+            let _ = await this.props.fnLoadOptions();
+            this.setState({
+              rgOptions: _,
+            });
+          }
+        }
+        render() {
+          const {
+            fnLoadOptions: _,
+            strInitialDisplay: _,
+            initialValue: __webpack_require__,
+            ..._
+          } = this.props;
+          let { rgOptions: _ } = this.state;
+          return (
+            void 0 === _ &&
+              (_ || __webpack_require__
+                ? ((_ = [
+                    {
+                      label: _,
+                      data: __webpack_require__,
+                    },
+                  ]),
+                  (_.selectedOption = __webpack_require__))
+                : (_ = [])),
+            _.createElement(_, {
+              ..._,
+              rgOptions: _,
+              onMenuOpened: this.OnMenuOpened,
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnMenuOpened", null);
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        activeObject;
+        instance;
+        constructor(_) {
+          this.instance = new _(_, !1);
+        }
+      }
+      class _ {
+        m_parent;
+        m_window;
+        m_container = null;
+        iIntervalShow;
+        m_bRemoveOnHide;
+        m_reactRoot;
+        constructor(_, _ = !0) {
+          (this.m_parent = _),
+            (this.m_window = _.ownerDocument.defaultView),
+            (this.m_bRemoveOnHide = _);
+        }
+        Show(_, _) {
+          return (
+            this.CancelShowInterval(),
+            _
+              ? new Promise((_, _) => {
+                  this.iIntervalShow = this.m_window.setTimeout(() => {
+                    let _ = this.m_parent.ownerDocument;
+                    _.defaultView &&
+                      !_.defaultView.closed &&
+                      (this.InternalShow(_), __webpack_require__());
+                  }, _);
+                })
+              : (this.InternalShow(_), Promise.resolve())
+          );
+        }
+        InternalShow(_) {
+          this.m_container ||
+            ((this.m_container =
+              this.m_parent.ownerDocument.createElement("div")),
+            this.m_parent.appendChild(this.m_container)),
+            this.m_reactRoot ||
+              (this.m_reactRoot = _.createRoot(this.m_container)),
+            this.m_reactRoot.render(_);
+        }
+        Hide(_) {
+          this.CancelShowInterval(),
+            _
+              ? (this.iIntervalShow = this.m_window.setTimeout(() => {
+                  this.InternalHide();
+                }, _))
+              : this.InternalHide();
+        }
+        InternalHide() {
+          this.m_reactRoot &&
+            (this.m_reactRoot.unmount(), (this.m_reactRoot = void 0)),
+            this.m_container &&
+              this.m_bRemoveOnHide &&
+              (this.m_parent.removeChild(this.m_container),
+              (this.m_container = null));
+        }
+        CancelShowInterval() {
+          void 0 !== this.iIntervalShow &&
+            (this.m_window.clearInterval(this.iIntervalShow),
+            (this.iIntervalShow = void 0));
+        }
+        BIsChildElement(_) {
+          return this.m_container && _._(this.m_container, _);
+        }
+      }
+      class _ {
+        m_strUniqueID;
+        m_mapEmbeddedHovers = new WeakMap();
+        constructor(_) {
+          this.m_strUniqueID = _;
+        }
+        ShowElementDelayed(_, _, _, _) {
+          let _ = this.GetEmbeddedElement(_);
+          return (_.activeObject = _), _.instance.Show(_, _);
+        }
+        ShowElement(_, _, _) {
+          let _ = this.GetEmbeddedElement(_);
+          (_.activeObject = _), _.instance.Show(_);
+        }
+        HideElement(_, _, _) {
+          let _ = this.GetEmbeddedElement(_);
+          _.activeObject == _ &&
+            ((_.activeObject = void 0), _.instance.Hide(_));
+        }
+        GetEmbeddedElement(_) {
+          let _ = this.m_mapEmbeddedHovers.get(_);
+          return (
+            _ || ((_ = new _(_.body)), this.m_mapEmbeddedHovers.set(_, _)), _
+          );
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("DragDrop").Debug;
+      class _ extends _.Component {
+        m_coordinator = new _();
+        OnDrop(_, _) {
+          _ > _ && _--, _ != _ && this.props.onReorder(_, _);
+        }
+        render() {
+          let _ = [];
+          return (
+            _.push(
+              _.createElement(_, {
+                coordinator: this.m_coordinator,
+                key: "dropregion_top",
+                fnBAcceptDraggable: (_) => 0 != _.props.data,
+                fnOnDrop: (_) => this.OnDrop(_.props.data, 0),
+              }),
+            ),
+            _.Children.forEach(this.props.children, (_, _) => {
+              const _ = _.props._ || "__list_" + _,
+                _ = _ + 1;
+              _.push(
+                _.createElement(
+                  _,
+                  {
+                    coordinator: this.m_coordinator,
+                    data: _,
+                    key: _,
+                  },
+                  _,
+                ),
+              ),
+                _.push(
+                  _.createElement(_, {
+                    coordinator: this.m_coordinator,
+                    key: "dropregion_" + _,
+                    fnBAcceptDraggable: (_) => _.props.data != _,
+                    fnOnDrop: (_) => this.OnDrop(_.props.data, _),
+                  }),
+                );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: "DialogReorderableList",
+              },
+              _,
+            )
+          );
+        }
+      }
+      function _(_, _, _, _) {
+        return _
+          ? _ && _ > _.left && _ < _.right && _ > _.top && _ < _.bottom
+          : _ && _ >= _.left && _ <= _.right && _ >= _.top && _ <= _.bottom;
+      }
+      (0, _._)([_._], _.prototype, "OnDrop", null);
+      class _ {
+        m_embeddedElement = new _("DragGhosts");
+        m_rgDropRegions = [];
+        m_activeDraggable;
+        m_rgActiveDropRegions = [];
+        m_activeDropRegion;
+        m_dropGhost;
+        m_dragGhost;
+        m_dragOffWindowTimer;
+        RegisterDropRegion(_) {
+          this.m_rgDropRegions.push(_),
+            this.m_activeDraggable &&
+              _.BAcceptDraggable(this.m_activeDraggable) &&
+              (_.OnDragStarted(this.m_activeDraggable),
+              this.m_rgActiveDropRegions.push(_));
+        }
+        UnregisterDropRegion(_) {
+          _._(this.m_rgDropRegions, _),
+            _._(this.m_rgActiveDropRegions, _),
+            this.m_activeDropRegion == _ &&
+              ((this.m_activeDropRegion = void 0),
+              this.m_activeDraggable && this.ShowDragGhost());
+        }
+        OnDragGhostRef(_) {
+          this.m_dragGhost = _;
+        }
+        ShowDragGhost() {
+          const _ = this.m_activeDraggable.renderDragGhost(),
+            _ = (0, _._)(
+              _.props.className,
+              !!this.m_activeDropRegion && "DraggedOverActiveDrop",
+            ),
+            _ = _.cloneElement(_, {
+              ref: this.OnDragGhostRef,
+              className: _,
+            });
+          this.m_embeddedElement.ShowElement(
+            this.m_activeDraggable.GetDragDocument(),
+            _,
+            this.m_activeDraggable,
+          );
+        }
+        HideDragGhost() {
+          this.m_embeddedElement.HideElement(
+            this.m_activeDraggable.GetDragDocument(),
+            this.m_activeDraggable,
+          );
+        }
+        m_elCloneContainer;
+        m_elCloneOriginal;
+        m_nodeCloneCopy;
+        MakeDragClone(_) {
+          (0, _._)(
+            !this.m_nodeCloneCopy && !this.m_elCloneOriginal,
+            "Drag already in progress",
+          ),
+            (this.m_elCloneOriginal = _.m_divRef.current),
+            (this.m_nodeCloneCopy = this.m_elCloneOriginal.cloneNode(!0)),
+            _.m_divRef.current.replaceWith(this.m_nodeCloneCopy),
+            this.m_elCloneContainer ||
+              ((this.m_elCloneContainer =
+                _.GetDragDocument().body.ownerDocument.createElement("div")),
+              _.GetDragDocument().body.appendChild(this.m_elCloneContainer)),
+            this.m_elCloneContainer.appendChild(this.m_elCloneOriginal);
+        }
+        ReverseDragClone() {
+          this.m_nodeCloneCopy.parentNode?.replaceChild(
+            this.m_elCloneOriginal,
+            this.m_nodeCloneCopy,
+          ),
+            (this.m_nodeCloneCopy = void 0),
+            (this.m_elCloneOriginal = void 0);
+        }
+        OnDragStart(_) {
+          (this.m_activeDraggable = _), (this.m_rgActiveDropRegions = []);
+          for (let _ of this.m_rgDropRegions)
+            _.BAcceptDraggable(_) &&
+              (_.OnDragStarted(_), this.m_rgActiveDropRegions.push(_));
+          this.MakeDragClone(_), this.ShowDragGhost();
+        }
+        EndDrag() {
+          if (this.m_activeDraggable) {
+            this.ReverseDragClone(),
+              this.HideDragGhost(),
+              this.m_activeDropRegion &&
+                this.m_activeDropRegion.OnDrop(this.m_activeDraggable);
+            for (let _ of this.m_rgActiveDropRegions)
+              _.OnDragEnded(this.m_activeDraggable);
+            (this.m_activeDraggable = void 0),
+              (this.m_dropGhost = void 0),
+              (this.m_rgActiveDropRegions = []);
+          }
+        }
+        FindBestActiveDropRegionForPoint(_, _) {
+          const _ = this.m_activeDraggable.GetDragDocument();
+          let _;
+          if (
+            ("elementsFromPoint" in _ &&
+              (_ = __webpack_require__.elementsFromPoint(_, _)),
+            _)
+          ) {
+            const _ = new Map();
+            this.m_rgActiveDropRegions.forEach((_) => _.set(_.GetElement(), _));
+            for (const _ of _) {
+              const _ = _.get(_);
+              if (_) return _;
+            }
+          } else {
+            if (
+              this.m_activeDropRegion &&
+              this.m_activeDropRegion.BDraggableInRegion(
+                _,
+                _,
+                this.m_activeDraggable,
+              )
+            )
+              return this.m_activeDropRegion;
+            for (let _ = this.m_rgActiveDropRegions.length - 1; _ >= 0; _--) {
+              const _ = this.m_rgActiveDropRegions[_];
+              if (_.BDraggableInRegion(_, _, this.m_activeDraggable)) return _;
+            }
+          }
+        }
+        m_prevClientX = 0;
+        m_prevClientY = 0;
+        OnDrag(_, _, _) {
+          const _ = this.m_prevClientX || _,
+            _ = this.m_prevClientY || _;
+          if (
+            (_.props.bEnableHTMLDrag &&
+              this.m_dragOffWindowTimer &&
+              window.clearTimeout(this.m_dragOffWindowTimer),
+            this.m_dragGhost)
+          ) {
+            const _ =
+                void 0 === _ ? 0 : _ - (this.m_dragGhost.state.clientX ?? 0),
+              _ = void 0 === _ ? 0 : _ - (this.m_dragGhost.state.clientY ?? 0);
+            if (
+              (this.m_dragGhost.setState({
+                clientX: _,
+                clientY: _,
+                clientXDelta: _,
+                clientYDelta: _,
+                bVisible: !0,
+              }),
+              _.props.bEnableHTMLDrag && (_ || _))
+            ) {
+              const _ = _ + _,
+                _ = _ + _,
+                _ = _.GetDragDocument().body.getBoundingClientRect();
+              if (_(_, _, _) && !_(_, _, _, !0)) {
+                const _ = _._(_, _.left, _.right, _.left - 200, _.right + 200),
+                  _ = _._(_, _.top, _.bottom, _.top - 100, _.bottom + 100),
+                  _ = 50;
+                this.m_dragOffWindowTimer = window.setTimeout(() => {
+                  _ == this.m_activeDraggable && this.OnDrag(_, _, _);
+                }, _);
+              }
+            }
+          }
+          const _ = this.FindBestActiveDropRegionForPoint(_, _);
+          (this.m_prevClientX = _),
+            (this.m_prevClientY = _),
+            !!this.m_activeDropRegion != !!_ &&
+              (this.ShowDragGhost(),
+              this.m_dropGhost ||
+                (this.m_dropGhost = this.m_activeDraggable.renderDropGhost())),
+            this.m_activeDropRegion &&
+              this.m_activeDropRegion != _ &&
+              this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
+            _ &&
+              this.m_activeDropRegion != _ &&
+              _.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
+            (this.m_activeDropRegion = _),
+            this.m_activeDropRegion &&
+              this.m_activeDropRegion.OnDragMove(_, _, this.m_activeDraggable);
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnDragGhostRef", null);
+      class _ extends _.Component {
+        constructor(_) {
+          super(_), (0, _._)(this);
+        }
+        m_DragInfo = {
+          bStarted: !1,
+          startClientX: void 0,
+          startClientY: void 0,
+          startOffsetX: void 0,
+          startOffsetY: void 0,
+          startWidth: void 0,
+          startHeight: void 0,
+          ownerWin: void 0,
+        };
+        m_divRef = _.createRef();
+        GetDragDocument() {
+          return this.m_DragInfo.ownerWin?.document;
+        }
+        RecordDragStart(_, _, _) {
+          (this.m_DragInfo.startClientX = _),
+            (this.m_DragInfo.startClientY = _);
+          let _ = _.getBoundingClientRect();
+          (this.m_DragInfo.startOffsetX = _ - _.left),
+            (this.m_DragInfo.startOffsetY = _ - _.top),
+            (this.m_DragInfo.startWidth = _.width),
+            (this.m_DragInfo.startHeight = _.height),
+            (this.m_DragInfo.ownerWin = _.ownerDocument.defaultView);
+        }
+        ProcessDragMove(_) {
+          _("ProcessDragMove", _, this.props.data);
+          const [_, __webpack_require__] = (function (_) {
+            if ("touches" in _) {
+              let _ = _;
+              return [_.touches[0].clientX, _.touches[0].clientY];
+            }
+            return [_.clientX, _.clientY];
+          })(_);
+          if (this.m_DragInfo.bStarted) {
+            if (
+              this.props.bEnableHTMLDrag &&
+              0 == _ &&
+              0 == __webpack_require__
+            )
+              return;
+            this.props.coordinator.OnDrag(this, _, __webpack_require__);
+          } else
+            Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
+              Math.pow(
+                __webpack_require__ - (this.m_DragInfo.startClientY ?? 0),
+                2,
+              ) >=
+              25 &&
+              ((this.m_DragInfo.bStarted = !0),
+              this.forceUpdate(),
+              this.props.fnOnDragStart && this.props.fnOnDragStart(),
+              this.props.coordinator.OnDragStart(this),
+              this.props.coordinator.OnDrag(this, _, __webpack_require__));
+        }
+        OnMouseDown(_) {
+          this.m_DragInfo.bStarted ||
+            0 != _.button ||
+            (this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
+            this.m_DragInfo.ownerWin?.addEventListener(
+              "mousemove",
+              this.ProcessDragMove,
+            ),
+            this.m_DragInfo.ownerWin?.addEventListener(
+              "mouseup",
+              this.OnMouseUp,
+            ));
+        }
+        OnMouseUp(_) {
+          this.m_DragInfo.ownerWin?.removeEventListener(
+            "mousemove",
+            this.ProcessDragMove,
+          ),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "mouseup",
+              this.OnMouseUp,
+            ),
+            this.ResetDragState();
+        }
+        OnTouchStart(_) {
+          this.m_DragInfo.bStarted ||
+            (this.RecordDragStart(
+              _.currentTarget,
+              _.touches[0].clientX,
+              _.touches[0].clientY,
+            ),
+            this.m_DragInfo.ownerWin?.addEventListener(
+              "touchmove",
+              this.ProcessDragMove,
+            ),
+            this.m_DragInfo.ownerWin?.addEventListener(
+              "touchend",
+              this.OnTouchEnd,
+            ));
+        }
+        OnTouchEnd(_) {
+          this.m_DragInfo.ownerWin?.removeEventListener(
+            "touchmove",
+            this.ProcessDragMove,
+          ),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "touchend",
+              this.OnTouchEnd,
+            ),
+            this.ResetDragState();
+        }
+        ResetDragState() {
+          _("ResetDragState", this.props.data),
+            this.m_DragInfo.bStarted &&
+              (this.props.coordinator.EndDrag(),
+              this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
+            (this.m_DragInfo.bStarted = !1),
+            (this.m_DragInfo.startClientX = void 0),
+            (this.m_DragInfo.startClientY = void 0),
+            (this.m_DragInfo.startOffsetX = void 0),
+            (this.m_DragInfo.startOffsetY = void 0),
+            (this.m_DragInfo.ownerWin = void 0),
+            this.forceUpdate();
+        }
+        OnHTMLDragStart(_) {
+          _("HTMLDragStart", _, this.props.data, this.props.strHTMLDragData),
+            (_.dataTransfer.effectAllowed = "copyMove"),
+            this.props.strHTMLDragData &&
+              this.props.strHTMLDragData.forEach((_, _) =>
+                _.dataTransfer.setData(_, _),
+              ),
+            _.dataTransfer.getData("text/plain") ||
+              _.dataTransfer.setData("text/plain", this.props.data.toString());
+          const _ = new Image();
+          _.dataTransfer.setDragImage(_, 0, 0),
+            this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
+            this.m_DragInfo.ownerWin?.addEventListener("drag", this.OnHTMLDrag),
+            this.m_DragInfo.ownerWin?.addEventListener(
+              "dragend",
+              this.OnHTMLDragEnd,
+            );
+        }
+        OnHTMLDrag(_) {
+          _("HTMLDrag", _, _.dataTransfer?.types.length),
+            this.ProcessDragMove(_);
+        }
+        OnHTMLDragEnd(_) {
+          _(
+            "HTMLDragEnd",
+            _,
+            _.dataTransfer?.getData("text/plain") || "NOTHING",
+            this.props.data,
+          ),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "drag",
+              this.OnHTMLDrag,
+            ),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "dragend",
+              this.OnHTMLDragEnd,
+            ),
+            this.ResetDragState();
+        }
+        render() {
+          const {
+            coordinator: _,
+            data: _,
+            bEnableHTMLDrag: __webpack_require__,
+            strHTMLDragData: _,
+            fnOnDragStart: _,
+            fnOnDragEnd: _,
+            fnRenderDragGhost: _,
+            fnRenderDropGhost: _,
+            className: _,
+            strActiveClassName: _,
+            children: _,
+            ..._
+          } = this.props;
+          let _ = {},
+            _ = _ || "DialogDraggable";
+          return (
+            this.m_DragInfo.bStarted
+              ? ((_ = (0, _._)(_, _ || "DraggedOut")),
+                __webpack_require__ &&
+                  (_ = {
+                    onDragEnd: this.OnHTMLDragEnd,
+                  }))
+              : (_ = __webpack_require__
+                  ? {
+                      onDragStart: this.OnHTMLDragStart,
+                    }
+                  : {
+                      onMouseDown: this.OnMouseDown,
+                      onTouchStart: this.OnTouchStart,
+                    }),
+            _.createElement(
+              "div",
+              {
+                ref: this.m_divRef,
+                className: _,
+                ..._,
+                ..._,
+                draggable: __webpack_require__,
+              },
+              _,
+            )
+          );
+        }
+        renderDropGhost() {
+          return this.props.fnRenderDropGhost
+            ? this.props.fnRenderDropGhost()
+            : _.createElement(_, {
+                elContent: this.GetClone(),
+              });
+        }
+        renderDragGhost() {
+          return this.props.fnRenderDragGhost
+            ? this.props.fnRenderDragGhost()
+            : _.createElement(_, {
+                elContent: this.GetClone(),
+                offsetX: this.m_DragInfo.startOffsetX,
+                offsetY: this.m_DragInfo.startOffsetY,
+                width: this.m_DragInfo.startWidth,
+                height: this.m_DragInfo.startHeight,
+              });
+        }
+        GetClone() {
+          const _ = this.m_divRef.current;
+          let _;
+          if (_ && _.childElementCount)
+            if (1 == _.childElementCount) _ = _.firstElementChild.cloneNode(!0);
+            else {
+              _ = document.createElement("div");
+              for (let _ = _.firstChild; _; _ = _.nextSibling)
+                _.appendChild(__webpack_require__.cloneNode(!0));
+            }
+          return _;
+        }
+      }
+      (0, _._)([_._], _.prototype, "ProcessDragMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "OnTouchStart", null),
+        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
+        (0, _._)([_._], _.prototype, "ResetDragState", null),
+        (0, _._)([_._], _.prototype, "OnHTMLDragStart", null),
+        (0, _._)([_._], _.prototype, "OnHTMLDrag", null),
+        (0, _._)([_._], _.prototype, "OnHTMLDragEnd", null);
+      class _ extends _.Component {
+        OnRef(_) {
+          _ && this.props.elContent && _.appendChild(this.props.elContent);
+        }
+        render() {
+          return _.createElement("div", {
+            className: "DialogDraggable_DropGhost",
+            ref: this.OnRef,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnRef", null);
+      class _ extends _.Component {
+        state = {
+          clientX: void 0,
+          clientY: void 0,
+          bVisible: !0,
+          clientXDelta: void 0,
+          clientYDelta: void 0,
+        };
+        OnRef(_) {
+          _ && this.props.elContent && _.appendChild(this.props.elContent);
+        }
+        CalculateRotationDegrees(_) {
+          if (!_ || Math.abs(_) < 4) return 0;
+          return (_ > 0 ? 7.5 : -7.5) * Math.sqrt(Math.abs(_));
+        }
+        render() {
+          if (
+            !this.state.bVisible ||
+            void 0 === this.state.clientX ||
+            void 0 === this.state.clientY
+          )
+            return _.createElement("div", null);
+          let _ = {
+              left: this.state.clientX - (this.props.offsetX || 0),
+              top: this.state.clientY - (this.props.offsetY || 0),
+              width: this.props.width || "auto",
+              height: this.props.height || "auto",
+              perspective: "600px",
+            },
+            _ = _._(
+              this.CalculateRotationDegrees(this.state.clientYDelta),
+              -90,
+              90,
+              2,
+              0,
+            ),
+            _ = {
+              transform: `rotateX(${this.CalculateRotationDegrees(-1 * (this.state.clientYDelta ?? 0))}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
+              transition: "transform .16s ease-out, filter .16s ease-out",
+              filter: "brightness(" + _ + ")",
+            };
+          const _ = this.props.className || "DialogDraggable_DragGhost";
+          return _.createElement(
+            "div",
+            {
+              className: _,
+              style: _,
+            },
+            _.createElement("div", {
+              ref: this.OnRef,
+              style: _,
+            }),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnRef", null);
+      class _ extends _.Component {
+        m_divRef = _.createRef();
+        constructor(_) {
+          super(_), (this.state = {});
+        }
+        componentDidMount() {
+          this.props.coordinator.RegisterDropRegion(this);
+        }
+        componentWillUnmount() {
+          this.props.coordinator.UnregisterDropRegion(this);
+        }
+        OnDragStarted(_) {
+          this.setState({
+            bDraggableActive: !0,
+          });
+        }
+        OnDragEnded(_) {
+          this.setState({
+            bDraggableActive: !1,
+          });
+        }
+        OnDragEnter(_, _) {
+          this.setState({
+            dropGhost: _,
+          }),
+            this.props.fnOnDragEnter && this.props.fnOnDragEnter(_);
+        }
+        OnDragLeave(_) {
+          this.setState({
+            dropGhost: void 0,
+          }),
+            this.props.fnOnDragLeave && this.props.fnOnDragLeave(_);
+        }
+        OnDragMove(_, _, _) {}
+        OnDrop(_) {
+          this.setState({
+            dropGhost: void 0,
+          }),
+            this.props.fnOnDrop(_);
+        }
+        BAcceptDraggable(_) {
+          return (
+            !this.props.fnBAcceptDraggable || this.props.fnBAcceptDraggable(_)
+          );
+        }
+        BDraggableInRegion(_, _, _) {
+          return _(_, _, this.GetClientRect());
+        }
+        GetElement() {
+          return this.m_divRef.current;
+        }
+        GetClientRect() {
+          return (
+            this.m_divRef.current &&
+            this.m_divRef.current.getBoundingClientRect()
+          );
+        }
+        render() {
+          const {
+              coordinator: _,
+              fnBAcceptDraggable: _,
+              fnOnDrop: __webpack_require__,
+              fnOnDragEnter: _,
+              fnOnDragLeave: _,
+              className: _,
+              strActiveClassName: _,
+              children: _,
+              focusable: _,
+              containerRef: _,
+              ..._
+            } = this.props,
+            _ = (0, _._)(
+              _ || "DialogDropRegion",
+              this.state.bDraggableActive && (_ || "Active"),
+            );
+          return _.createElement(
+            _._,
+            {
+              ref: (0, _._)(_, this.m_divRef),
+              className: _,
+              ..._,
+              focusable: void 0 === _ ? !!_.onClick : _,
+            },
+            this.state.dropGhost,
+            _,
+          );
+        }
+      }
+      class _ extends _ {
+        BDraggableInRegion(_, _, _) {
+          let _ = this.GetClientRect();
+          return (
+            !!_ &&
+            _ >= _.left && _ <= _.right && _ >= _.top - 20 &&
+            _ <= _.bottom + 20
+          );
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_flPageListScrollTop = 0;
+        m_flPageScrollTop = 0;
+      }
+      (0, _._)([_._], _.prototype, "m_flPageListScrollTop", void 0),
+        (0, _._)([_._], _.prototype, "m_flPageScrollTop", void 0);
+      class _ {
+        static s_Instance;
+        static Get() {
+          return _.s_Instance || (_.s_Instance = new _()), _.s_Instance;
+        }
+        constructor() {
+          (0, _._)(this);
+        }
+        m_setPagedSettingsInstances = new Set();
+      }
+      function _(_) {
+        const {
+            stylesheet: _,
+            pages: __webpack_require__,
+            iActivePage: _,
+            onPageSelected: _,
+            PageListItemComponent: _ = _,
+            PageListSeparatorComponent: _ = _,
+          } = _,
+          _ = _.useContext(_);
+        return __webpack_require__.map((_, _) => {
+          const _ = _ === _;
+          if ("separator" === _) {
+            const _ = _ === _ + 1 || _ === _ - 1;
+            return _.createElement(_, {
+              role: "separator",
+              key: _,
+              bTransparent: _,
+            });
+          }
+          if ("spacer" === _)
+            return _.createElement("div", {
+              key: _,
+              className: _().PageListSpacer,
+            });
+          {
+            if (!1 === _.visible) return null;
+            const _ = _.identifier || _.title || __webpack_require__.toString(),
+              _ = () => _(_, _);
+            return _.createElement(_, {
+              className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
+                [_.Active]: _,
+              }),
+              key: _,
+              onClick: _,
+              title: _.title,
+              icon: _.icon,
+              active: _,
+              _: _ + _.identifier,
+              role: "tab",
+              "aria-selected": _,
+              "aria-controls": _ + _.identifier + "_Content",
+            });
+          }
+        });
+      }
+      function _(_) {
+        const {
+          title: _,
+          icon: __webpack_require__,
+          active: _,
+          className: _,
+          onClick: _,
+          ..._
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _,
+            onClick: _,
+            ..._,
+          },
+          __webpack_require__
+            ? _.createElement(
+                "div",
+                {
+                  className: _().PageListItem_Icon,
+                },
+                __webpack_require__,
+              )
+            : null,
+          _.createElement(
+            "div",
+            {
+              className: _().PageListItem_Title,
+              ..._,
+            },
+            _,
+          ),
+        );
+      }
+      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
+      const _ = _.forwardRef(function (_, _) {
+        const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
+          _ = _.useContext(_),
+          _ = __webpack_require__?.padding ?? "standard";
+        return _.createElement(
+          _,
+          {
+            style: _,
+            className: (0, _._)(
+              _?.PagedSettingsDialog_PageContent,
+              __webpack_require__?.pageClassName,
+              "none" == _ && _?.NoPadding,
+            ),
+            refElem: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + __webpack_require__?.identifier,
+            _: _ + __webpack_require__?.identifier + "_Content",
+          },
+          __webpack_require__?.header,
+          !__webpack_require__?.hideTitle &&
+            _.createElement(_, null, __webpack_require__?.title),
+          _.createElement(_._, null, __webpack_require__?.content),
+        );
+      });
+      function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        return _.createElement("div", {
+          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+            [_().Transparent]: _,
+          }),
+          ..._,
+        });
+      }
+      const _ = _.createContext(void 0),
+        _ = _.forwardRef(function (_, _) {
+          const {
+              stylesheet: __webpack_require__ = _(),
+              pages: _,
+              onPageRequested: _,
+            } = _,
+            _ = _.useId(),
+            _ = null == _.page,
+            [_, _] = _.useState(() =>
+              void 0 === _.startingPage
+                ? -1
+                : _.findIndex(
+                    (_) =>
+                      "object" == typeof _ && _.identifier === _.startingPage,
+                  ),
+            );
+          let _ = _;
+          _ ||
+            (_ = _.findIndex(
+              (_) => "object" == typeof _ && _.identifier === _.page,
+            )),
+            (_ < 0 || _ >= _.length) && (_ = 0);
+          let _ = null;
+          "object" == typeof _[_] && (_ = _[_]);
+          const _ = _.useRef(null),
+            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
+            [_, _] = _.useState(!1),
+            _ = _ ? _ : void 0,
+            _ = _.useCallback((_) => {
+              _ && _(!0);
+            }, []),
+            _ = _.useCallback(
+              (_, _) => {
+                _(!0),
+                  _._.PlayNavSound(_._.PagedNavigation),
+                  _ && _(_.identifier),
+                  _.click ? _.click() : _ && _(_);
+              },
+              [_, _],
+            ),
+            _ = _.useRef(null),
+            _ = _.showTitle ?? !0,
+            _ = (0, _._)(
+              "DialogContentTransition",
+              __webpack_require__.PagedSettingDialog_ContentColumn,
+            );
+          _.useEffect(() => {
+            _.bAutoFocusPageContent && _.current?.TakeFocus();
+          }, []);
+          const { refForPageList: _, refForPage: _ } = (function () {
+            const _ = _.useMemo(() => new _(), []);
+            _.useEffect(
+              () => (
+                _.Get().m_setPagedSettingsInstances.add(_),
+                () => {
+                  _.Get().m_setPagedSettingsInstances.delete(_);
+                }
+              ),
+              [_],
+            );
+            const _ = _.useCallback(
+                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+                [_],
+              ),
+              _ = (0, _._)("scroll", _),
+              _ = (0, _._)("scroll", _),
+              _ = _.useCallback(
+                (_) => (_.m_flPageListScrollTop = _?.scrollTop ?? 0),
+                [_],
+              ),
+              _ = _.useCallback(
+                (_) => (_.m_flPageScrollTop = _?.scrollTop ?? 0),
+                [_],
+              ),
+              _ = (0, _._)(_, _),
+              _ = (0, _._)(_, _);
+            return {
+              refForPageList: _,
+              refForPage: _,
+            };
+          })();
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  __webpack_require__.PagedSettingsDialog,
+                  _.className,
+                ),
+                ref: _,
+              },
+              _.createElement(
+                _._,
+                {
+                  className: (0, _._)(
+                    __webpack_require__.PagedSettingsDialog_PageListColumn,
+                    _.hideList && _().Hidden,
+                    "PageListColumn",
+                  ),
+                  navRef: _,
+                  onButtonDown: (_) => {
+                    _.detail.button == _._._ &&
+                      _.current?.TakeFocus(_.detail.button);
+                  },
+                  onFocusWithin: _,
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: __webpack_require__.PagedSettingsDialog_Title,
+                    },
+                    _.title,
+                  ),
+                _.topControls && _.createElement("div", null, _.topControls),
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(
+                      __webpack_require__.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ &&
+                        __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                  },
+                  _.createElement(_, {
+                    stylesheet: __webpack_require__,
+                    pages: _,
+                    iActivePage: _,
+                    onPageSelected: _,
+                    PageListItemComponent: _.PageListItemComponent,
+                    PageListSeparatorComponent: _.PageListSeparatorComponent,
+                  }),
+                ),
+                _.bottomControls &&
+                  _.createElement("div", null, _.bottomControls),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _,
+                  onCancelButton: _,
+                  navRef: _,
+                },
+                _.toggleHideList &&
+                  _.createElement(_, {
+                    hideList: _.hideList,
+                    toggleHideList: _.toggleHideList,
+                  }),
+                _.renderPageContent
+                  ? _.renderPageContent(_, _, _)
+                  : _.createElement(_, {
+                      ref: _,
+                      activePage: _,
+                      stylesheet: __webpack_require__,
+                    }),
+              ),
+            ),
+          );
+        });
+      const _ = _.createContext(!1);
+      _.memo(function (_) {
+        const {
+            isActive: _,
+            refForPage: __webpack_require__,
+            page: _,
+            PageComponent: _,
+            stylesheet: _,
+          } = _,
+          _ = _.useContext(_),
+          _ = _.useRef(!1);
+        if (!_ && !_.current) return null;
+        _.current = !0;
+        const _ = _
+          ? void 0
+          : {
+              display: "none",
+            };
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(_, {
+            ref: __webpack_require__,
+            style: _,
+            activePage: _,
+            stylesheet: _,
+            role: "tabpanel",
+            "aria-labelledby": _ + _.identifier,
+            _: _ + _.identifier + "_Content",
+          }),
+        );
+      });
+      function _(_) {
+        const { hideList: _, toggleHideList: __webpack_require__ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
+            onClick: __webpack_require__,
+          },
+          _
+            ? _.createElement(_.b8_, {
+                direction: "right",
+              })
+            : _.createElement(_.b8_, {
+                direction: "left",
+              }),
+        );
+      }
+      class _ extends _.Component {
+        m_refTextArea = _.createRef();
+        m_nTextAreaPadding;
+        m_cEntryLength = Number.MAX_VALUE;
+        get textarea() {
+          return this.m_refTextArea.current;
+        }
+        get value() {
+          return this.m_refTextArea.current?.value;
+        }
+        focus() {
+          this.m_refTextArea.current?.focus();
+        }
+        InternalOnInput() {
+          const _ = this.m_refTextArea.current,
+            _ = this.GetMinHeight(),
+            _ = this.GetMaxHeight();
+          let _,
+            _ = _.value.length;
+          if (
+            (void 0 === this.m_nTextAreaPadding && this.CalculatePadding(),
+            _ < this.m_cEntryLength &&
+              ((_ = window.scrollY), (_.style.height = _ + "px")),
+            _.scrollHeight > _)
+          )
+            (_.style.height = _ + "px"), (_.style.overflow = "auto");
+          else if (_.scrollHeight != _.clientHeight) {
+            let _ = Math.max(_.scrollHeight, _);
+            (_.style.height = _ - this.m_nTextAreaPadding + "px"),
+              "auto" == _.style.overflow && (_.style.overflow = "hidden");
+          }
+          void 0 !== _ && window.scrollTo(window.scrollX, _),
+            (this.m_cEntryLength = _);
+        }
+        CalculatePadding() {
+          const _ = getComputedStyle(this.m_refTextArea.current);
+          this.m_nTextAreaPadding =
+            "border-box" == _.boxSizing
+              ? 0
+              : parseFloat(_.paddingTop) + parseFloat(_.paddingBottom);
+        }
+        GetMinHeight() {
+          return this.props.nMinHeight || 20;
+        }
+        GetMaxHeight() {
+          return this.props.nMaxHeight || 500;
+        }
+        DeferredInternalOnInput() {
+          window.setTimeout(this.InternalOnInput, 1);
+        }
+        OnKeyUp(_) {
+          this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(_);
+        }
+        OnBlur(_) {
+          this.DeferredInternalOnInput(),
+            this.props.onBlur && this.props.onBlur(_);
+        }
+        OnClick(_) {
+          this.InternalOnInput(), this.props.onClick && this.props.onClick(_);
+        }
+        OnPaste(_) {
+          this.DeferredInternalOnInput(),
+            this.props.onPaste && this.props.onPaste(_);
+        }
+        OnCut(_) {
+          this.InternalOnInput(), this.props.onCut && this.props.onCut(_);
+        }
+        componentDidMount() {
+          (this.m_refTextArea.current.style.overflow = "hidden"),
+            (this.m_refTextArea.current.style.resize = "none"),
+            this.InternalOnInput();
+        }
+        componentDidUpdate(_) {
+          (_.nMinHeight == this.props.nMinHeight &&
+            _.nMaxHeight == this.props.nMaxHeight) ||
+            (this.m_cEntryLength = Number.MAX_VALUE),
+            this.m_refTextArea.current?.value.length != this.m_cEntryLength &&
+              this.InternalOnInput();
+        }
+        render() {
+          const {
+            nMinHeight: _,
+            nMaxHeight: _,
+            ...__webpack_require__
+          } = this.props;
+          return _.createElement(_._, {
+            ...__webpack_require__,
+            ref: this.m_refTextArea,
+            onKeyUp: this.OnKeyUp,
+            onBlur: this.OnBlur,
+            onClick: this.OnClick,
+            onPaste: this.OnPaste,
+            onCut: this.OnCut,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "InternalOnInput", null),
+        (0, _._)([_._], _.prototype, "OnKeyUp", null),
+        (0, _._)([_._], _.prototype, "OnBlur", null),
+        (0, _._)([_._], _.prototype, "OnClick", null),
+        (0, _._)([_._], _.prototype, "OnPaste", null),
+        (0, _._)([_._], _.prototype, "OnCut", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ ? _ + "_Label" : void 0;
+      }
+      function _(_) {
+        return _ ? _ + "_Description" : void 0;
+      }
+      function _(_, _) {
+        const { label: __webpack_require__, description: _ } = _;
+        return {
+          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-describedby": _ ? _(_) : void 0,
+        };
+      }
+      const _ = _.forwardRef(function (_, _) {
+        const {
+            accessibilityId: __webpack_require__,
+            label: _,
+            description: _,
+            icon: _,
+            children: _,
+            childrenLayout: _,
+            inlineWrap: _,
+            childrenContainerWidth: _,
+            spacingBetweenLabelAndChild: _,
+            padding: _,
+            disabled: _,
+            bottomSeparator: _,
+            className: _,
+            highlightOnFocus: _,
+            indentLevel: _,
+            verticalAlignment: _,
+            iconLocation: _,
+            tooltip: _,
+            explainer: _,
+            explainerTitle: _,
+            ..._
+          } = _,
+          _ = (0, _._)(),
+          _ = _ ?? "inline",
+          _ = _ ?? "front",
+          _ = "front" == _ && !!_,
+          _ = "before-children" == _ && !!_,
+          _ = "inline" == _ && !!_,
+          _ = "below" == _ && !!_,
+          _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
+          _ = !!(_.onClick || _.onActivate || _.focusable),
+          _ = (null != _ && _) || null != _ || (_ && null != _),
+          _ = _ ?? "min",
+          _ = _ ?? "standard",
+          _ = _ ?? "standard",
+          _ = _ ?? "standard",
+          _ = _ ?? !0,
+          _ = _ ?? 0,
+          _ = _ ?? "center",
+          _ = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = _.useCallback(() => {
+                (0, _._)(_, _, _.ownerWindow ?? window);
+              }, [_, _, _]);
+            if (null == _) return {};
+            const _ = (0, _._)("#Field_MoreInfo_Action");
+            return {
+              onOptionsButton: _,
+              onOptionsActionDescription: _,
+            };
+          })(_ ?? _, _),
+          _ = _.useRef(),
+          _ = (0, _._)(_, _.navRef),
+          _ = _.useCallback(
+            (_) => {
+              _.current?.TakeFocus(), _.preventDefault();
+            },
+            [_],
+          );
+        return _.createElement(
+          _._,
+          {
+            focusable: _,
+            noFocusRing: !0,
+            scrollIntoViewWhenChildFocused: !0,
+            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
+            ref: _,
+            onMouseDown: _ ? void 0 : _,
+            ..._,
+            ..._,
+            navRef: _,
+            className: (0, _._)(
+              _,
+              _().Field,
+              _ && _().Disabled,
+              _ && _().WithFirstRow,
+              _ && _().WithChildrenInline,
+              _ && _().WithChildrenBelow,
+              "center" == _ && _().VerticalAlignCenter,
+              "shift-children-below" == _ && _().InlineWrapShiftsChildrenBelow,
+              !!_ && _().WithDescription,
+              "standard" == _ && _().WithBottomSeparatorStandard,
+              "thick" == _ && _().WithBottomSeparatorThick,
+              "fixed" == _ && _().ChildrenWidthFixed,
+              "max" == _ && _().ChildrenWidthGrow,
+              "standard" == _ && _().ExtraPaddingOnChildrenBelow,
+              "standard" == _ && _().StandardPadding,
+              "compact" == _ && _().CompactPadding,
+              _ && _().Clickable,
+              _ && _().HighlightOnFocus,
+            ),
+            style: {
+              "--indent-level": _,
+            },
+          },
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().FieldLabelRow,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().FieldLabel,
+                  _: _(__webpack_require__),
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().FieldIcon, _().Front),
+                    },
+                    _,
+                  ),
+                _,
+                _ &&
+                  _.createElement(_, {
+                    tooltip: _,
+                  }),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().FieldChildrenWithIcon,
+                  },
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                      },
+                      _,
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().FieldChildrenInner,
+                    },
+                    _,
+                  ),
+                ),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().FieldChildrenWithIcon,
+              },
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                  },
+                  _,
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _().FieldChildrenInner,
+                },
+                _,
+              ),
+            ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().FieldDescription,
+                _: _(__webpack_require__),
+              },
+              _,
+            ),
+        );
+      });
+      _.forwardRef(function (_, _) {
+        const {
+            label: __webpack_require__,
+            description: _,
+            explainer: _,
+            icon: _,
+            layout: _,
+            disabled: _,
+            onActivate: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenContainerWidth: _,
+            padding: _,
+            inlineWrap: _,
+            fieldClassName: _,
+            fieldChildren: _,
+            accessibilityNameOrder: _ = ["label", "button"],
+            ..._
+          } = _,
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId(),
+          _ = (function (_, _, _) {
+            const _ = _.useId(),
+              _ = _(_, _),
+              _ = {
+                _: _,
+                "aria-labelledby": "",
+              };
+            return (
+              (_["aria-labelledby"] = __webpack_require__
+                .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
+                .join(" ")),
+              (_["aria-describedby"] = _["aria-describedby"]),
+              _
+            );
+          })(_, _, _);
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenLayout: _ ?? "inline",
+            childrenContainerWidth: _ ?? "min",
+            onMouseDown: (_) => {
+              _.current?.focus(), _.preventDefault();
+            },
+            padding: _,
+            inlineWrap: _,
+            explainer: _,
+            className: _,
+            disabled: _,
+            onActivate: _ ? _ : void 0,
+          },
+          _.createElement(_, {
+            ..._,
+            ..._,
+            disabled: _,
+            ref: _,
+          }),
+          _,
+        );
+      });
+      const _ = _.forwardRef(function (_, _) {
+        const {
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            layout: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            ..._
+          } = _,
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenLayout: _ ?? "inline",
+            childrenContainerWidth: "fixed",
+            onMouseDown: (_) => {
+              _.current?.element?.focus(), _.preventDefault();
+            },
+          },
+          _.createElement(_, {
+            ..._,
+            ref: _,
+          }),
+        );
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            childrenKey: _,
+            childrenClasses: __webpack_require__,
+            children: _,
+            directionClass: _,
+            animate: _ = !0,
+          } = _,
+          _ = (0, _._)(_().TransitionGroup, _);
+        return _.createElement(
+          _._,
+          {
+            className: _,
+            appear: !1,
+            enter: _,
+            exit: _,
+          },
+          _.createElement(
+            _,
+            {
+              key: _,
+              childrenClasses: __webpack_require__,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            sizeClass: _,
+            children: __webpack_require__,
+            childrenClasses: _,
+            navKey: _,
+            ..._
+          } = _,
+          [_, _, _, _] = (function () {
+            let _ = _.useRef(null),
+              _ = _.useRef();
+            _.useLayoutEffect(() => {
+              let _ = _.current;
+              if (!_ || _.current) return;
+              _.current = {
+                element: _,
+                activeProps: new Set(),
+                bExiting: !1,
+                fnDone: null,
+              };
+              let _ = _.current,
+                _ = (_) => {
+                  _.target == _ && _.activeProps.add(_.propertyName);
+                };
+              __webpack_require__.addEventListener("transitionrun", _, !1);
+              let _ = (_) => {
+                _.target == _ &&
+                  (_.activeProps.delete(_.propertyName),
+                  _.fnDone &&
+                    0 == _.activeProps.size &&
+                    _.bExiting &&
+                    _.fnDone());
+              };
+              __webpack_require__.addEventListener("transitionend", _, !1),
+                __webpack_require__.addEventListener("transitioncancel", _, !1);
+            }, []);
+            let _ = _.useCallback(
+                (_) => {
+                  _.current ? (_.current.fnDone = _) : _();
+                },
+                [_],
+              ),
+              _ = _.useCallback(() => {
+                _.current && (_.current.bExiting = !1);
+              }, [_]),
+              _ = _.useCallback(() => {
+                _.current && (_.current.bExiting = !0);
+              }, [_]);
+            return [_, _, _, _];
+          })(),
+          _ = _.useRef(!0),
+          _ = _.useCallback(() => _.current, [_]),
+          _ = _.useCallback(() => {
+            (_.current = !0), _();
+          }, [_]),
+          _ = _.useCallback(() => {
+            (_.current = !1), _();
+          }, [_]),
+          _ = _.childrenClasses,
+          _ = {
+            enter: _.enterStart,
+            enterActive: _.enterEnd,
+            exit: _.exitStart,
+            exitActive: _.exitEnd,
+          };
+        return _.current && !_.current.ownerDocument.defaultView
+          ? null
+          : _.createElement(
+              _._,
+              {
+                nodeRef: _,
+                classNames: _,
+                _: !0,
+                timeout: 1e4,
+                addEndListener: _,
+                onEntering: _,
+                onExiting: _,
+                ..._,
+              },
+              _.createElement(
+                "div",
+                {
+                  ref: _,
+                  className: (0, _._)(_().ContentWrapper, _, _.base),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _,
+                    fnCanTakeFocus: _,
+                    navKey: _,
+                  },
+                  _.children,
+                ),
+              ),
+            );
+      }
+      function _(_, _) {
+        return {
+          base: _,
+          enterStart: _.Enter,
+          enterEnd: _.EnterActive,
+          exitStart: _.Exit,
+          exitEnd: _.ExitActive,
+        };
+      }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Left = 1)] = "Left"),
+          (_[(_.Right = 2)] = "Right"),
+          (_[(_._ = 3)] = "Up"),
+          (_[(_.Down = 4)] = "Down");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(null);
+      function _(_) {
+        const _ = _.useContext(_),
+          _ = (0, _._)().IN_VR,
+          { title: _, icon: _, active: _, ..._ } = _;
+        return _.createElement(
+          _._,
+          {
+            preferredFocus: _,
+            navRef: _ && _ ? _ : void 0,
+            noFocusRing: !0,
+            onActivate: _ ? void 0 : _.onClick,
+            onFocus: _ ? void 0 : _.onClick,
+            ..._,
+          },
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().PageListItem_Icon,
+              },
+              _,
+            ),
+          _.createElement(
+            "div",
+            {
+              className: _().PageListItem_Title,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        return _.createElement("div", {
+          className: (0, _._)(__webpack_require__, _().Separator),
+          ..._,
+        });
+      }
+      _.forwardRef(function (_, _) {
+        const {
+            page: __webpack_require__,
+            bAutoFocusPageContent: _,
+            showTitle: _ = !1,
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useRef(!0);
+        _.useEffect(() => {
+          (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
+        }, [__webpack_require__, _]);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(_, {
+            ..._,
+            stylesheet: _(),
+            showTitle: _,
+            PageListItemComponent: _,
+            PageListSeparatorComponent: _,
+            renderPageContent:
+              _.renderPageContent ||
+              ((_, _, _) =>
+                _.createElement(_, {
+                  pages: _.pages,
+                  activePage: _,
+                  refForPage: _,
+                  PageComponent: _,
+                })),
+          }),
+        );
+      });
+      function _(_) {
+        const {
+            pages: _,
+            activePage: __webpack_require__,
+            refForPage: _,
+            PageComponent: _,
+          } = _,
+          _ = (function (_) {
+            let _ = _.useRef(_),
+              _ = _.useRef(_.None),
+              _ = _.current;
+            if (_ == _) return _.current;
+            let _ = _.None;
+            _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
+            return (_.current = _), (_.current = _), _;
+          })(
+            _.useMemo(
+              () => _.findIndex((_) => _ == __webpack_require__),
+              [_, __webpack_require__],
+            ),
+          ),
+          _ = (function (_, _) {
+            const _ = _.useMemo(() => new Map(), []),
+              _ = _.useRef();
+            _.current = _;
+            const _ = _.useRef();
+            _.current = _;
+            const _ = _.useCallback(
+              (_) => (_) => {
+                __webpack_require__.set(_, _),
+                  _ === _.current && (0, _._)(_.current, _);
+              },
+              [_],
+            );
+            return (
+              _.useEffect(
+                () => (
+                  (0, _._)(_, _ && __webpack_require__.get(_)),
+                  () => (0, _._)(_, void 0)
+                ),
+                [_, _, _],
+              ),
+              _
+            );
+          })(__webpack_require__?.identifier, _);
+        let _ =
+          ((_ = _()),
+          (_ = _) == _.Left
+            ? _.Left
+            : _ == _.Right
+              ? _.Right
+              : _ == _._
+                ? _._
+                : _ == _.Down
+                  ? _.Down
+                  : "");
+        var _, _;
+        return _.createElement(
+          _,
+          {
+            childrenKey: __webpack_require__?.identifier,
+            childrenClasses: _(_(), _().ContentTransition),
+            directionClass: _,
+            animate: _ != _.None,
+          },
+          __webpack_require__ &&
+            _.createElement(_, {
+              ref: _(__webpack_require__.identifier),
+              key: __webpack_require__.identifier,
+              stylesheet: _(),
+              activePage: __webpack_require__,
+            }),
+        );
+      }
+      _.forwardRef(function (_, _) {
+        return _.createElement(_._, {
+          noFocusRing: !0,
+          ..._,
+          ref: _,
+          className: (0, _._)(_().BasicTextInput, _.className),
+          size: _.size ?? 1,
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      _.forwardRef(function (_, _) {
+        const {
+            className: __webpack_require__,
+            opened: _,
+            arrowClassName: _,
+            "aria-labelledby": _ = "",
+            ..._
+          } = _,
+          _ = _.useId(),
+          _ = _ + " " + _;
+        return _.createElement(
+          _,
+          {
+            _: _,
+            className: (0, _._)(_().DropDownControlButton, __webpack_require__),
+            "aria-labelledby": _,
+            ..._,
+            ref: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().DropDownControlButtonContents,
+            },
+            _.createElement(
+              "div",
+              {
+                className: "DialogDropDown_CurrentDisplay",
+              },
+              _.children,
+            ),
+            _.createElement(_.u49, {
+              direction: "down",
+            }),
+          ),
+        );
+      });
+      var _ = __webpack_require__("chunkid");
+      _.forwardRef(function (_, _) {
+        const { className: __webpack_require__, ..._ } = _;
+        let _ = _.useRef(),
+          _ = (0, _._)(_, _);
+        const [_, _] = _.useState(!1),
+          _ = _.useCallback(() => {
+            _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
+          }, []);
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__,
+            onOptionsButton: _,
+            onOptionsActionDescription: (0, _._)(
+              _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+            ),
+          },
+          _.createElement(_, {
+            autoComplete: "off",
+            ref: _,
+            inlineControls: _.createElement(
+              _,
+              {
+                className: _.TogglePasswordVisibilityBtn,
+                onPointerDown: _,
+                onOKButton: _,
+              },
+              _ ? _.createElement(_.rxV, null) : _.createElement(_.ZyV, null),
+            ),
+            ..._,
+            type: _ ? "text" : "password",
+          }),
+        );
+      });
+      _.forwardRef(function (_, _) {
+        const { className: __webpack_require__, value: _, ..._ } = _,
+          _ = _ ?? "";
+        return _.createElement(_, {
+          autoComplete: "off",
+          value: _,
+          ref: _,
+          placeholder: "   .   .   .   ",
+          ..._,
+          onChange: (_) => {
+            !(function (_) {
+              const _ = _.split(".");
+              if (_.length > 4) return !1;
+              for (let _ = 0; _ < _.length; _++) {
+                const _ = _[_];
+                if ("" == _) {
+                  if (_ == _.length - 1) continue;
+                  return !1;
+                }
+                if (!/^[0-9]*$/.test(_)) return !1;
+                const _ = parseInt(_);
+                if (!(_ >= 0 && _ <= 255)) return !1;
+              }
+              return !0;
+            })(_.target.value)
+              ? (_.target.value = _)
+              : _.onChange && _.onChange(_);
+          },
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = `${_}_HistoryValue`,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (_.state && _.state[_]) ?? _,
+          _ = _.useRef(!1),
+          _ = _.useRef(),
+          _ = _.useRef(),
+          _ = _.useCallback(
+            (_) => {
+              if (_.current && ((_.current = _), !_.current)) {
+                const _ = _.location.pathname;
+                _.current = window.setTimeout(() => {
+                  _.location.pathname != _ ||
+                    (_.location.state && _.location.state[_] == _.current) ||
+                    _.replace(_.location.pathname, {
+                      ...(_.location.state || {}),
+                      [_]: _.current,
+                    }),
+                    (_.current = void 0);
+                }, _);
+              }
+            },
+            [_, _, _],
+          );
+        return (
+          _.useEffect(() => {
+            _.current = !0;
+          }, []),
+          [_, _]
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _ = "smooth", _, _) {
+        const _ = (_ ?? 30) / 100,
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
+          _ = _.useCallback(() => {
+            (_.current = void 0), (_.current = void 0);
+          }, []),
+          _ = (function (_, _) {
+            const _ = _.useRef();
+            return _.useCallback(
+              (_, _) => {
+                let _ = "sine";
+                if (
+                  (_.current && (_.current.Cancel(), (_ = "linear")),
+                  !_.current)
+                )
+                  return;
+                void 0 === _ && (_ = _.current.scrollTop),
+                  void 0 === _ && (_ = _.current.scrollLeft);
+                let _ = Math.max(
+                  Math.abs(_.current.scrollTop - _),
+                  Math.abs(_.current.scrollLeft - _),
+                );
+                if (_ > 0) {
+                  let _ = Math.max(Math.min((_ / 1e3) * 200, 500), 300);
+                  (_.current = new _(
+                    _.current,
+                    {
+                      scrollTop: _,
+                      scrollLeft: _,
+                    },
+                    {
+                      msDuration: _,
+                      timing: _,
+                      onComplete: _,
+                    },
+                  )),
+                    _.current.Start();
+                } else _ && _();
+              },
+              [_, _],
+            );
+          })(_, _);
+        return _.useCallback(
+          (_) => {
+            if (_ && !_(_)) return !1;
+            if (_.defaultPrevented) return !1;
+            if (!_.current) return !1;
+            const {
+                scrollTop: _,
+                scrollHeight: _,
+                clientHeight: _,
+                scrollLeft: _,
+                scrollWidth: _,
+                clientWidth: _,
+              } = _.current,
+              _ = _.current ?? _,
+              _ = _.current ?? _;
+            switch (_.detail.button) {
+              case _._.DIR_UP:
+                if (_ <= 2) return !1;
+                _.current = Math.max(0, _ - _ * _);
+                break;
+              case _._.DIR_DOWN:
+                if (_ >= _ - _ - 2) return !1;
+                _.current = Math.min(_ - _, _ + _ * _);
+                break;
+              case _._.DIR_LEFT:
+                if (_ <= 2) return !1;
+                _.current = Math.max(0, _ - _ * _);
+                break;
+              case _._.DIR_RIGHT:
+                if (_ >= _ - _ - 2) return !1;
+                _.current = Math.min(_ - _, _ + _ * _);
+                break;
+              default:
+                return !1;
+            }
+            return (
+              _ && "smooth" != _
+                ? (_.current.scrollTo({
+                    top: _.current,
+                    left: _.current,
+                    behavior: "auto",
+                  }),
+                  _())
+                : _(_.current, _.current),
+              !0
+            );
+          },
+          [_, _, _, _, _, _],
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("FocusNavigation").Debug;
+      function _(_) {
+        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
+          [_, _] = _.useState({
+            bFocusWithin: !1,
+            navTarget: null,
+            prevTarget: null,
+          }),
+          _ = _.useRef(null),
+          _ = _.useMemo(
+            () => ({
+              OnBlur: (_, _, _) => {
+                _({
+                  bFocusWithin: !1,
+                  navTarget: null,
+                  prevTarget: null,
+                });
+              },
+              OnFocus: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: null,
+                });
+              },
+              OnFocusChange: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: _,
+                });
+              },
+              OnForceMeasureFocusRing: () => {
+                _.current?.MeasureElementAndUpdate();
+              },
+            }),
+            [_],
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          !__webpack_require__ &&
+            _.createElement(_, {
+              ..._,
+              ..._,
+              refMeasure: _,
+            }),
+          _.createElement(
+            _._.Provider,
+            {
+              value: _,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            rootClassName: _,
+            className: __webpack_require__,
+            bFocusWithin: _,
+            navTarget: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(!1);
+        return _ || _
+          ? _.createElement(
+              "div",
+              {
+                className: _()(_().FocusRingRoot, _),
+                ref: _,
+              },
+              _.createElement(_, {
+                refMeasure: _,
+                className: _()(__webpack_require__, _ && _().DebugFocusRing),
+                bFocusWithin: _ && (_ || _),
+                navTarget: _,
+                elContainer: _,
+                bDebug: _,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            className: _,
+            bFocusWithin: __webpack_require__,
+            navTarget: _,
+            elContainer: _,
+            bDebug: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          [_, _] = _.useReducer((_) => _ + 1, 0),
+          [_, _] = _.useReducer((_) => _ + 1, 0);
+        (0, _._)(
+          _,
+          _.useMemo(
+            () => ({
+              MeasureElementAndUpdate: _,
+            }),
+            [],
+          ),
+        );
+        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
+          _ = _ && !_,
+          _ = (function (_, _) {
+            const [__webpack_require__, _] = _.useState(!1);
+            return (
+              (0, _.useEffect)(() => {
+                if (_ && _) {
+                  let _ = _.GetBoundingRect(),
+                    _ = _.Element;
+                  const _ = _.ownerDocument.defaultView,
+                    _ = (_) =>
+                      "none" == _.getComputedStyle(_).display ||
+                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
+                  for (; _(_) && _?.parentElement; )
+                    (_ = _.parentElement),
+                      (_ = __webpack_require__.getBoundingClientRect());
+                  let _ = _.Element != _;
+                  _(
+                    (_) => (
+                      _ &&
+                        _ != _ &&
+                        _(
+                          "Focused on hidden item: ",
+                          _.Element,
+                          ". Closest visible ancestor: ",
+                          _,
+                        ),
+                      _
+                    ),
+                  );
+                }
+              }, [_, _]),
+              __webpack_require__
+            );
+          })(_, _),
+          _ = _.useCallback(() => {
+            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
+            let _ = _.GetBoundingRect();
+            const _ = _.getBoundingClientRect(),
+              _ = {
+                left: _._ - _._,
+                top: _._ - _._,
+                height: _.height,
+                width: _.width,
+              };
+            _((_) =>
+              _ &&
+              _.left == _.left &&
+              _.top == _.top &&
+              _.height == _.height &&
+              _.width == _.width
+                ? _
+                : _,
+            );
+          }, [_, _, _]);
+        _.useLayoutEffect(() => _(), [_]),
+          _.useLayoutEffect(() => {
+            _();
+          }, [_]);
+        let _ = __webpack_require__;
+        return (
+          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
+          _.useEffect(() => {
+            if (!_) return;
+            const _ = performance.now();
+            let _;
+            const _ = () => {
+              _(),
+                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
+            };
+            return __webpack_require__(), () => cancelAnimationFrame(_);
+          }, [_, _, _, _]),
+          _ && _
+            ? _.createElement(_, {
+                ..._,
+                key: _,
+                className: _()(_, _ && _().FocusRingOnHiddenItem),
+                target: _,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            left: __webpack_require__,
+            top: _,
+            height: _,
+            width: _,
+            target: _,
+          } = _,
+          _ = {
+            left: (__webpack_require__ ?? 0) - 0 + "px",
+            top: (_ ?? 0) - 0 + "px",
+            height: _ + "px",
+            width: _ + "px",
+          };
+        return _.createElement("div", {
+          className: _()(_().FocusRing, _),
+          style: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = _.forwardRef(function (_, _) {
+          const {
+            scrollDirection: __webpack_require__,
+            scrollPaddingTop: _,
+            scrollPaddingRight: _,
+            scrollPaddingBottom: _,
+            scrollPaddingLeft: _,
+            className: _,
+            children: _,
+            style: _,
+            ..._
+          } = _;
+          let _;
+          switch (__webpack_require__) {
+            case "x":
+              _ = _().ScrollX;
+              break;
+            case "both":
+              _ = _().ScrollBoth;
+              break;
+            default:
+              _ = _().ScrollY;
+          }
+          let _ = {
+            ..._,
+          };
+          (_ || 0 === _) && (_.scrollPaddingTop = _),
+            (_ || 0 === _) && (_.scrollPaddingRight = _),
+            (_ || 0 === _) && (_.scrollPaddingBottom = _),
+            (_ || 0 === _) && (_.scrollPaddingLeft = _);
+          const { ref: _, navRef: _ } = (function () {
+              const _ = _.useRef(null),
+                _ = _.useCallback(
+                  (_) => {
+                    window.requestAnimationFrame(() => {
+                      _.current?.BFocusWithin() &&
+                        _.current
+                          .Node()
+                          ?.GetLastFocusElement()
+                          ?.scrollIntoView({
+                            behavior: "auto",
+                            block: "nearest",
+                          });
+                    });
+                  },
+                  [_],
+                );
+              return {
+                ref: (0, _._)(_),
+                navRef: _,
+              };
+            })(),
+            _ = (0, _._)(_, _.navRef),
+            _ = (0, _._)(_, _);
+          return _.createElement(
+            _._,
+            {
+              ..._,
+              style: _,
+              className: _()(_, _().ScrollPanel, _),
+              ref: _,
+              navRef: _,
+            },
+            _.createElement(_, null, _),
+          );
+        }),
+        _ = _.forwardRef(function (_, _) {
+          const {
+              scrollStepPercent: __webpack_require__,
+              scrollBehavior: _,
+              ..._
+            } = _,
+            _ = _.useRef(null),
+            _ = _(
+              _,
+              _,
+              __webpack_require__,
+              _.useCallback((_) => _.currentTarget != _.target, []),
+            ),
+            _ = (0, _._)(_, _);
+          return _.createElement(_, {
+            ..._,
+            onGamepadDirection: _,
+            ref: _,
+            scrollIntoViewType: _._.NoTransformSparseContent,
+          });
+        });
+      _.forwardRef(function (_, _) {
+        const {
+          name: __webpack_require__,
+          msScrollRestoreDelay: _,
+          onScroll: _,
+          ..._
+        } = _;
+        return _.createElement(
+          _,
+          {
+            name: __webpack_require__,
+            msScrollRestoreDelay: _,
+            parentOnScroll: _,
+            refDiv: _,
+          },
+          (_, _) =>
+            _.createElement(_, {
+              ..._,
+              onScroll: _,
+              ref: _,
+            }),
+        );
+      }),
+        _.forwardRef(function (_, _) {
+          const {
+            name: __webpack_require__,
+            msScrollRestoreDelay: _,
+            onScroll: _,
+            ..._
+          } = _;
+          return _.createElement(
+            _,
+            {
+              name: __webpack_require__,
+              msScrollRestoreDelay: _,
+              parentOnScroll: _,
+              refDiv: _,
+            },
+            (_, _) =>
+              _.createElement(_, {
+                ..._,
+                onScroll: _,
+                ref: _,
+              }),
+          );
+        });
+      function _(_) {
+        const {
+            name: _,
+            msScrollRestoreDelay: __webpack_require__,
+            parentOnScroll: _,
+            refDiv: _,
+            children: _,
+          } = _,
+          [_, _] = _(`${_}ScrollTop`, 250, 0),
+          [_, _] = _(`${_}ScrollLeft`, 250, 0),
+          _ = _.useRef(0),
+          _ = _.useRef(0),
+          _ = _.useRef();
+        let _ = _.useCallback(
+          (_) => {
+            const { scrollTop: _, scrollLeft: __webpack_require__ } =
+              _.currentTarget;
+            _(_),
+              (_.current = _),
+              _(__webpack_require__),
+              (_.current = __webpack_require__),
+              _ && _(_);
+          },
+          [_, _, _],
+        );
+        _.useLayoutEffect(() => {
+          const _ = function () {
+            _.current &&
+              ((0, _._)(
+                _.current.scrollHeight >= _,
+                `Element is ${_.current.scrollHeight} high but trying to restore scrollTop of ${_}, element may need more time to lay out.`,
+                _.current,
+              ),
+              (_.current = _),
+              (_.current = _),
+              _.current.scrollTo({
+                top: _,
+                left: _,
+                behavior: "auto",
+              }),
+              _.current.dispatchEvent(new UIEvent("scroll")));
+          };
+          (_ == _.current && _ == _.current) ||
+            (__webpack_require__
+              ? window.setTimeout(_, __webpack_require__)
+              : _());
+        }, [_, _, __webpack_require__]);
+        const _ = (0, _._)(_, _);
+        return _.useMemo(() => _(_, _), [_, _, _]);
+      }
+      const _ = _.forwardRef(function (_, _) {
+        const {
+            onExplicitFocusLevelChanged: __webpack_require__,
+            onOKButton: _,
+            onCancelButton: _,
+            navRef: _,
+            focusable: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          { fnOnOKButton: _, fnOnCancelButton: _ } = _({
+            navRefPanel: _,
+            onOKButton: _,
+            onCancelButton: _,
+            onExplicitFocusLevelChanged: __webpack_require__,
+          }),
+          _ = (0, _._)(_, _);
+        return _.createElement(_._, {
+          ..._,
+          onOKButton: _,
+          onCancelButton: _,
+          navRef: _,
+          ref: _,
+          focusable: !1 !== _,
+        });
+      });
+      _.forwardRef(function (_, _) {
+        const {
+            onOKButton: __webpack_require__,
+            onCancelButton: _,
+            navRef: _,
+            focusable: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useCallback((_, _) => _.FocusVisibleChild(), []),
+          { fnOnOKButton: _, fnOnCancelButton: _ } = _({
+            navRefPanel: _,
+            onOKButton: __webpack_require__,
+            onCancelButton: _,
+            fnFocusChildren: _,
+          }),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_, _);
+        return _.createElement(_, {
+          ..._,
+          onOKButton: (_) => _?.(_),
+          onCancelButton: _,
+          navRef: _,
+          ref: _,
+          focusable: !1 !== _,
+        });
+      });
+      function _(_) {
+        let {
+          navRefPanel: _,
+          onOKButton: __webpack_require__,
+          onCancelButton: _,
+          onExplicitFocusLevelChanged: _,
+          fnFocusChildren: _,
+        } = _;
+        _ = _ ?? _;
+        const _ = _.useCallback(
+            (_) => {
+              const _ = _.current;
+              return _?.BHasFocus() && _(_, _.detail.button)
+                ? (_ && _(!0), !0)
+                : !!__webpack_require__ && __webpack_require__(_);
+            },
+            [_, __webpack_require__, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _.current;
+              return __webpack_require__?.BFocusWithin() &&
+                !__webpack_require__.BHasFocus() &&
+                __webpack_require__.TakeFocus(_.detail.button)
+                ? (_ && _(!1), !0)
+                : !!_ && _(_);
+            },
+            [_, _, _],
+          );
+        return {
+          fnOnOKButton: _,
+          fnOnCancelButton: _,
+        };
+      }
+      function _(_, _) {
+        return _.ChildTakeFocus(_);
+      }
+      var _, _, _, _, _, _;
+      !(function (_) {
+        (_[(_.Invalid = 0)] = "Invalid"),
+          (_[(_.TrackingSystemName_String = 1e3)] =
+            "TrackingSystemName_String"),
+          (_[(_.ModelNumber_String = 1001)] = "ModelNumber_String"),
+          (_[(_.SerialNumber_String = 1002)] = "SerialNumber_String"),
+          (_[(_.RenderModelName_String = 1003)] = "RenderModelName_String"),
+          (_[(_.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+          (_[(_.ManufacturerName_String = 1005)] = "ManufacturerName_String"),
+          (_[(_.TrackingFirmwareVersion_String = 1006)] =
+            "TrackingFirmwareVersion_String"),
+          (_[(_.HardwareRevision_String = 1007)] = "HardwareRevision_String"),
+          (_[(_.AllWirelessDongleDescriptions_String = 1008)] =
+            "AllWirelessDongleDescriptions_String"),
+          (_[(_.ConnectedWirelessDongle_String = 1009)] =
+            "ConnectedWirelessDongle_String"),
+          (_[(_.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+          (_[(_.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+          (_[(_.DeviceBatteryPercentage_Float = 1012)] =
+            "DeviceBatteryPercentage_Float"),
+          (_[(_.StatusDisplayTransform_Matrix34 = 1013)] =
+            "StatusDisplayTransform_Matrix34"),
+          (_[(_.Firmware_UpdateAvailable_Bool = 1014)] =
+            "Firmware_UpdateAvailable_Bool"),
+          (_[(_.Firmware_ManualUpdate_Bool = 1015)] =
+            "Firmware_ManualUpdate_Bool"),
+          (_[(_.Firmware_ManualUpdateURL_String = 1016)] =
+            "Firmware_ManualUpdateURL_String"),
+          (_[(_.HardwareRevision_Uint64 = 1017)] = "HardwareRevision_Uint64"),
+          (_[(_.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+          (_[(_.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+          (_[(_.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+          (_[(_.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+          (_[(_.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+          (_[(_.BlockServerShutdown_Bool = 1023)] = "BlockServerShutdown_Bool"),
+          (_[(_.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+            "CanUnifyCoordinateSystemWithHmd_Bool"),
+          (_[(_.ContainsProximitySensor_Bool = 1025)] =
+            "ContainsProximitySensor_Bool"),
+          (_[(_.DeviceProvidesBatteryStatus_Bool = 1026)] =
+            "DeviceProvidesBatteryStatus_Bool"),
+          (_[(_.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+          (_[(_.Firmware_ProgrammingTarget_String = 1028)] =
+            "Firmware_ProgrammingTarget_String"),
+          (_[(_.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+          (_[(_.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+          (_[(_.DriverVersion_String = 1031)] = "DriverVersion_String"),
+          (_[(_.Firmware_ForceUpdateRequired_Bool = 1032)] =
+            "Firmware_ForceUpdateRequired_Bool"),
+          (_[(_.ViveSystemButtonFixRequired_Bool = 1033)] =
+            "ViveSystemButtonFixRequired_Bool"),
+          (_[(_.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+          (_[(_.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+          (_[(_.RegisteredDeviceType_String = 1036)] =
+            "RegisteredDeviceType_String"),
+          (_[(_.InputProfilePath_String = 1037)] = "InputProfilePath_String"),
+          (_[(_.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+          (_[(_.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+          (_[(_.CameraFrameLayout_Int32 = 1040)] = "CameraFrameLayout_Int32"),
+          (_[(_.CameraStreamFormat_Int32 = 1041)] = "CameraStreamFormat_Int32"),
+          (_[(_.AdditionalDeviceSettingsPath_String = 1042)] =
+            "AdditionalDeviceSettingsPath_String"),
+          (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+          (_[(_.ActualTrackingSystemName_String = 1054)] =
+            "ActualTrackingSystemName_String"),
+          (_[(_.IsDedicatedVRHeadset_Bool = 1058)] =
+            "IsDedicatedVRHeadset_Bool"),
+          (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
+            "ReportsTimeSinceVSync_Bool"),
+          (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
+            "SecondsFromVsyncToPhotons_Float"),
+          (_[(_.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+          (_[(_.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+          (_[(_.CurrentUniverseId_Uint64 = 2004)] = "CurrentUniverseId_Uint64"),
+          (_[(_.PreviousUniverseId_Uint64 = 2005)] =
+            "PreviousUniverseId_Uint64"),
+          (_[(_.DisplayFirmwareVersion_Uint64 = 2006)] =
+            "DisplayFirmwareVersion_Uint64"),
+          (_[(_.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+          (_[(_.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+          (_[(_.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+          (_[(_.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+          (_[(_.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+          (_[(_.DisplayMCImageLeft_String = 2012)] =
+            "DisplayMCImageLeft_String"),
+          (_[(_.DisplayMCImageRight_String = 2013)] =
+            "DisplayMCImageRight_String"),
+          (_[(_.DisplayGCBlackClamp_Float = 2014)] =
+            "DisplayGCBlackClamp_Float"),
+          (_[(_.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+          (_[(_.CameraToHeadTransform_Matrix34 = 2016)] =
+            "CameraToHeadTransform_Matrix34"),
+          (_[(_.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+          (_[(_.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+          (_[(_.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+          (_[(_.DisplayGCPrescale_Float = 2020)] = "DisplayGCPrescale_Float"),
+          (_[(_.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+          (_[(_.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+          (_[(_.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+          (_[(_.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+          (_[(_.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+          (_[(_.UserHeadToEyeDepthMeters_Float = 2026)] =
+            "UserHeadToEyeDepthMeters_Float"),
+          (_[(_.CameraFirmwareVersion_Uint64 = 2027)] =
+            "CameraFirmwareVersion_Uint64"),
+          (_[(_.CameraFirmwareDescription_String = 2028)] =
+            "CameraFirmwareDescription_String"),
+          (_[(_.DisplayFPGAVersion_Uint64 = 2029)] =
+            "DisplayFPGAVersion_Uint64"),
+          (_[(_.DisplayBootloaderVersion_Uint64 = 2030)] =
+            "DisplayBootloaderVersion_Uint64"),
+          (_[(_.DisplayHardwareVersion_Uint64 = 2031)] =
+            "DisplayHardwareVersion_Uint64"),
+          (_[(_.AudioFirmwareVersion_Uint64 = 2032)] =
+            "AudioFirmwareVersion_Uint64"),
+          (_[(_.CameraCompatibilityMode_Int32 = 2033)] =
+            "CameraCompatibilityMode_Int32"),
+          (_[(_.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+            "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+          (_[(_.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+            "ScreenshotVerticalFieldOfViewDegrees_Float"),
+          (_[(_.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+          (_[(_.DisplayAllowNightMode_Bool = 2037)] =
+            "DisplayAllowNightMode_Bool"),
+          (_[(_.DisplayMCImageWidth_Int32 = 2038)] =
+            "DisplayMCImageWidth_Int32"),
+          (_[(_.DisplayMCImageHeight_Int32 = 2039)] =
+            "DisplayMCImageHeight_Int32"),
+          (_[(_.DisplayMCImageNumChannels_Int32 = 2040)] =
+            "DisplayMCImageNumChannels_Int32"),
+          (_[(_.DisplayMCImageData_Binary = 2041)] =
+            "DisplayMCImageData_Binary"),
+          (_[(_.SecondsFromPhotonsToVblank_Float = 2042)] =
+            "SecondsFromPhotonsToVblank_Float"),
+          (_[(_.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+            "DriverDirectModeSendsVsyncEvents_Bool"),
+          (_[(_.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+          (_[(_.GraphicsAdapterLuid_Uint64 = 2045)] =
+            "GraphicsAdapterLuid_Uint64"),
+          (_[(_.DriverProvidedChaperonePath_String = 2048)] =
+            "DriverProvidedChaperonePath_String"),
+          (_[(_.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+            "ExpectedTrackingReferenceCount_Int32"),
+          (_[(_.ExpectedControllerCount_Int32 = 2050)] =
+            "ExpectedControllerCount_Int32"),
+          (_[(_.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+            "NamedIconPathControllerLeftDeviceOff_String"),
+          (_[(_.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+            "NamedIconPathControllerRightDeviceOff_String"),
+          (_[(_.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+            "NamedIconPathTrackingReferenceDeviceOff_String"),
+          (_[(_.DoNotApplyPrediction_Bool = 2054)] =
+            "DoNotApplyPrediction_Bool"),
+          (_[(_.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+            "CameraToHeadTransforms_Matrix34_Array"),
+          (_[(_.DistortionMeshResolution_Int32 = 2056)] =
+            "DistortionMeshResolution_Int32"),
+          (_[(_.DriverIsDrawingControllers_Bool = 2057)] =
+            "DriverIsDrawingControllers_Bool"),
+          (_[(_.DriverRequestsApplicationPause_Bool = 2058)] =
+            "DriverRequestsApplicationPause_Bool"),
+          (_[(_.DriverRequestsReducedRendering_Bool = 2059)] =
+            "DriverRequestsReducedRendering_Bool"),
+          (_[(_.MinimumIpdStepMeters_Float = 2060)] =
+            "MinimumIpdStepMeters_Float"),
+          (_[(_.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+            "AudioBridgeFirmwareVersion_Uint64"),
+          (_[(_.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+            "ImageBridgeFirmwareVersion_Uint64"),
+          (_[(_.ImuToHeadTransform_Matrix34 = 2063)] =
+            "ImuToHeadTransform_Matrix34"),
+          (_[(_.ImuFactoryGyroBias_Vector3 = 2064)] =
+            "ImuFactoryGyroBias_Vector3"),
+          (_[(_.ImuFactoryGyroScale_Vector3 = 2065)] =
+            "ImuFactoryGyroScale_Vector3"),
+          (_[(_.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+            "ImuFactoryAccelerometerBias_Vector3"),
+          (_[(_.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+            "ImuFactoryAccelerometerScale_Vector3"),
+          (_[(_.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+            "ConfigurationIncludesLighthouse20Features_Bool"),
+          (_[(_.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+            "Prop_AdditionalRadioFeatures_Uint64"),
+          (_[(_.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+            "Prop_CameraWhiteBalance_Vector4_Array"),
+          (_[(_.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+            "Prop_CameraDistortionFunction_Int32_Array"),
+          (_[(_.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+            "Prop_CameraDistortionCoefficients_Float_Array"),
+          (_[(_.Prop_ExpectedControllerType_String = 2074)] =
+            "Prop_ExpectedControllerType_String"),
+          (_[(_.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+          (_[(_.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+            "DriverProvidedChaperoneVisibility_Bool"),
+          (_[(_.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+            "HmdColumnCorrectionSettingPrefix_String"),
+          (_[(_.CameraSupportsCompatibilityModes_Bool = 2078)] =
+            "CameraSupportsCompatibilityModes_Bool"),
+          (_[(_.SupportsRoomViewDepthProjection_Bool = 2079)] =
+            "SupportsRoomViewDepthProjection_Bool"),
+          (_[(_.DisplayAvailableFrameRates_Float_Array = 2080)] =
+            "DisplayAvailableFrameRates_Float_Array"),
+          (_[(_.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+            "DisplaySupportsRuntimeFramerateChange_Bool"),
+          (_[(_.DisplaySupportsAnalogGain_Bool = 2085)] =
+            "DisplaySupportsAnalogGain_Bool"),
+          (_[(_.DisplayMinAnalogGain_Float = 2086)] =
+            "DisplayMinAnalogGain_Float"),
+          (_[(_.DisplayMaxAnalogGain_Float = 2087)] =
+            "DisplayMaxAnalogGain_Float"),
+          (_[(_.DashboardLinkSupport_Int32 = 2097)] =
+            "DashboardLinkSupport_Int32"),
+          (_[(_.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+          (_[(_.IpdUIRangeMinMeters_Float = 2100)] =
+            "IpdUIRangeMinMeters_Float"),
+          (_[(_.IpdUIRangeMaxMeters_Float = 2101)] =
+            "IpdUIRangeMaxMeters_Float"),
+          (_[(_.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+            "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+          (_[(_.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+            "Hmd_SupportsMicMonitoring_Bool"),
+          (_[(_.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+            "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+          (_[(_.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+            "Hmd_SupportsRoomViewDirect_Bool"),
+          (_[(_.Hmd_SupportsAppThrottling_Bool = 2106)] =
+            "Hmd_SupportsAppThrottling_Bool"),
+          (_[(_.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+            "Hmd_SupportsGpuBusMonitoring_Bool"),
+          (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
+            "DriverProvidedIPDVisibility_Bool"),
+          (_[(_.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
+          (_[(_.Prop_Driver_Reserved_03 = 2111)] = "Prop_Driver_Reserved_03"),
+          (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+            "DriverRequestedMuraCorrectionMode_Int32"),
+          (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+            "DriverRequestedMuraFeather_InnerLeft_Int32"),
+          (_[(_.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+            "DriverRequestedMuraFeather_InnerRight_Int32"),
+          (_[(_.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+            "DriverRequestedMuraFeather_InnerTop_Int32"),
+          (_[(_.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+            "DriverRequestedMuraFeather_InnerBottom_Int32"),
+          (_[(_.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+            "DriverRequestedMuraFeather_OuterLeft_Int32"),
+          (_[(_.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+            "DriverRequestedMuraFeather_OuterRight_Int32"),
+          (_[(_.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+            "DriverRequestedMuraFeather_OuterTop_Int32"),
+          (_[(_.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+            "DriverRequestedMuraFeather_OuterBottom_Int32"),
+          (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+            "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+          (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
+          (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
+          (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+          (_[(_.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+          (_[(_.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+          (_[(_.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+          (_[(_.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+          (_[(_.ControllerRoleHint_Int32 = 3007)] = "ControllerRoleHint_Int32"),
+          (_[(_.FieldOfViewLeftDegrees_Float = 4e3)] =
+            "FieldOfViewLeftDegrees_Float"),
+          (_[(_.FieldOfViewRightDegrees_Float = 4001)] =
+            "FieldOfViewRightDegrees_Float"),
+          (_[(_.FieldOfViewTopDegrees_Float = 4002)] =
+            "FieldOfViewTopDegrees_Float"),
+          (_[(_.FieldOfViewBottomDegrees_Float = 4003)] =
+            "FieldOfViewBottomDegrees_Float"),
+          (_[(_.TrackingRangeMinimumMeters_Float = 4004)] =
+            "TrackingRangeMinimumMeters_Float"),
+          (_[(_.TrackingRangeMaximumMeters_Float = 4005)] =
+            "TrackingRangeMaximumMeters_Float"),
+          (_[(_.ModeLabel_String = 4006)] = "ModeLabel_String"),
+          (_[(_.IconPathName_String = 5e3)] = "IconPathName_String"),
+          (_[(_.NamedIconPathDeviceOff_String = 5001)] =
+            "NamedIconPathDeviceOff_String"),
+          (_[(_.NamedIconPathDeviceSearching_String = 5002)] =
+            "NamedIconPathDeviceSearching_String"),
+          (_[(_.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+            "NamedIconPathDeviceSearchingAlert_String"),
+          (_[(_.NamedIconPathDeviceReady_String = 5004)] =
+            "NamedIconPathDeviceReady_String"),
+          (_[(_.NamedIconPathDeviceReadyAlert_String = 5005)] =
+            "NamedIconPathDeviceReadyAlert_String"),
+          (_[(_.NamedIconPathDeviceNotReady_String = 5006)] =
+            "NamedIconPathDeviceNotReady_String"),
+          (_[(_.NamedIconPathDeviceStandby_String = 5007)] =
+            "NamedIconPathDeviceStandby_String"),
+          (_[(_.NamedIconPathDeviceAlertLow_String = 5008)] =
+            "NamedIconPathDeviceAlertLow_String"),
+          (_[(_.DisplayHiddenArea_Binary_Start = 5100)] =
+            "DisplayHiddenArea_Binary_Start"),
+          (_[(_.DisplayHiddenArea_Binary_End = 5150)] =
+            "DisplayHiddenArea_Binary_End"),
+          (_[(_.ParentContainer = 5151)] = "ParentContainer"),
+          (_[(_.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+          (_[(_.InstallPath_String = 6001)] = "InstallPath_String"),
+          (_[(_.HasDisplayComponent_Bool = 6002)] = "HasDisplayComponent_Bool"),
+          (_[(_.HasControllerComponent_Bool = 6003)] =
+            "HasControllerComponent_Bool"),
+          (_[(_.HasCameraComponent_Bool = 6004)] = "HasCameraComponent_Bool"),
+          (_[(_.HasDriverDirectModeComponent_Bool = 6005)] =
+            "HasDriverDirectModeComponent_Bool"),
+          (_[(_.HasVirtualDisplayComponent_Bool = 6006)] =
+            "HasVirtualDisplayComponent_Bool"),
+          (_[(_.HasSpatialAnchorsSupport_Bool = 6007)] =
+            "HasSpatialAnchorsSupport_Bool"),
+          (_[(_.ControllerType_String = 7e3)] = "ControllerType_String"),
+          (_[(_.LegacyInputProfile_String = 7001)] =
+            "LegacyInputProfile_String"),
+          (_[(_.VendorSpecific_Reserved_Start = 1e4)] =
+            "VendorSpecific_Reserved_Start"),
+          (_[(_.VendorSpecific_Reserved_End = 10999)] =
+            "VendorSpecific_Reserved_End"),
+          (_[(_.TrackedDeviceProperty_Max = 1e6)] =
+            "TrackedDeviceProperty_Max");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EButton_System = 0)] = "k_EButton_System"),
+            (_[(_.k_EButton_ApplicationMenu = 1)] =
+              "k_EButton_ApplicationMenu"),
+            (_[(_.k_EButton_Grip = 2)] = "k_EButton_Grip"),
+            (_[(_.k_EButton_DPad_Left = 3)] = "k_EButton_DPad_Left"),
+            (_[(_.k_EButton_DPad_Up = 4)] = "k_EButton_DPad_Up"),
+            (_[(_.k_EButton_DPad_Right = 5)] = "k_EButton_DPad_Right"),
+            (_[(_.k_EButton_DPad_Down = 6)] = "k_EButton_DPad_Down"),
+            (_[(_.k_EButton_A = 7)] = "k_EButton_A"),
+            (_[(_.k_EButton_ProximitySensor = 31)] =
+              "k_EButton_ProximitySensor"),
+            (_[(_.k_EButton_Axis0 = 32)] = "k_EButton_Axis0"),
+            (_[(_.k_EButton_Axis1 = 33)] = "k_EButton_Axis1"),
+            (_[(_.k_EButton_Axis2 = 34)] = "k_EButton_Axis2"),
+            (_[(_.k_EButton_Axis3 = 35)] = "k_EButton_Axis3"),
+            (_[(_.k_EButton_Axis4 = 36)] = "k_EButton_Axis4"),
+            (_[(_.k_EButton_SteamVR_Touchpad = 32)] =
+              "k_EButton_SteamVR_Touchpad"),
+            (_[(_.k_EButton_SteamVR_Trigger = 33)] =
+              "k_EButton_SteamVR_Trigger"),
+            (_[(_.k_EButton_Dashboard_Back = 2)] = "k_EButton_Dashboard_Back"),
+            (_[(_.k_EButton_IndexController_A = 2)] =
+              "k_EButton_IndexController_A"),
+            (_[(_.k_EButton_IndexController_B = 1)] =
+              "k_EButton_IndexController_B"),
+            (_[(_.k_EButton_IndexController_JoyStick = 35)] =
+              "k_EButton_IndexController_JoyStick"),
+            (_[(_.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
+            (_[(_.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
+            (_[(_.k_EButton_Max = 64)] = "k_EButton_Max");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.ButtonEnter = 1)] = "ButtonEnter"),
+            (_[(_.ButtonLeave = 2)] = "ButtonLeave"),
+            (_[(_.Snap = 3)] = "Snap"),
+            (_[(_.Sliding = 4)] = "Sliding"),
+            (_[(_.SlidingEdge = 5)] = "SlidingEdge");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Minimal = 1)] = "Minimal"),
+            (_[(_.Modal = 2)] = "Modal"),
+            (_[(_.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+            (_[(_.HideDoneKey = 8)] = "HideDoneKey");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Unknown = -1)] = "Unknown"),
+            (_[(_.Idle = 0)] = "Idle"),
+            (_[(_.UserInteraction = 1)] = "UserInteraction"),
+            (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (_[(_.Standby = 3)] = "Standby"),
+            (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
+            (_[(_.Notification_Hidden = 601)] = "Notification_Hidden"),
+            (_[(_.Notification_BeginInteraction = 602)] =
+              "Notification_BeginInteraction"),
+            (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
+        })(_ || (_ = {}));
+      const _ = 1;
+      !(function (_) {
+        if ("string" != typeof _) return NaN;
+        const _ = !_.includes("ms") && _.includes("s");
+        let _ = Number.parseFloat(_);
+        _ && (_ *= 1e3);
+      })(_()["error-shake-duration"]);
+      function _(_, _) {
+        return _ < 0 ? 0 : _ > 1 ? 1 : 0 == _ ? _ : Math.round(_ / _) * _;
+      }
+      function _(_, _, _) {
+        const _ = _ + _ * (_ - _);
+        return Number.parseFloat(_.toFixed(10));
+      }
+      function _(_, _, _) {
+        return (_ - _) / (_ - _);
+      }
+      var _;
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.MouseDragging = 1)] = "MouseDragging"),
+          (_[(_.TouchStart = 2)] = "TouchStart"),
+          (_[(_.TouchDragging = 3)] = "TouchDragging");
+      })(_ || (_ = {}));
+      class _ extends _.Component {
+        m_refSlider = _.createRef();
+        m_refHandle = _.createRef();
+        m_navRefSlider = _.createRef();
+        m_sliderBounds = void 0;
+        m_handleBounds = void 0;
+        m_fZoom = 1;
+        m_eDragMode = _.None;
+        m_vTouchStartPosition = (0, _._)();
+        m_fStartValue;
+        m_fLatestUserValue;
+        m_fLatestOnChangeValue;
+        m_bInnerSliderHasFocus = !1;
+        m_nRepeatCount = 0;
+        m_fInitalRepeatTime = void 0;
+        get showHandle() {
+          return this.props.showHandle ?? !0;
+        }
+        get isKeyNavTarget() {
+          return this.props.isKeyNavTarget ?? !0;
+        }
+        get validRange() {
+          return this.props.min < this.props.max;
+        }
+        get range() {
+          return this.validRange ? this.props.max - this.props.min : 0;
+        }
+        get step() {
+          return Math.abs(this.props.step ?? _);
+        }
+        get normalizedStep() {
+          return this.step / this.range;
+        }
+        get normalizedDpadStep() {
+          const _ = this.props.dpadStep ?? this.step,
+            _ = _ > 0 ? _ / this.range : 0.01;
+          return Math.max(_, this.normalizedStep);
+        }
+        get normalizedClampedValue() {
+          const _ =
+            null == this.props.value || isNaN(this.props.value)
+              ? this.props.min
+              : (0, _._)(this.props.value, this.props.min, this.props.max);
+          return _(this.props.min, this.props.max, _);
+        }
+        get normalizedDefaultValue() {
+          const _ = this.props.resetValue;
+          if (
+            !(null == _ || isNaN(_) || _ < this.props.min || _ > this.props.max)
+          )
+            return _(this.props.min, this.props.max, _);
+        }
+        get normalizedSliderOrigin() {
+          const _ = (0, _._)(0, this.props.min, this.props.max);
+          return _(this.props.min, this.props.max, _);
+        }
+        get CanResetToDefault() {
+          return (
+            null != this.props.resetValue &&
+            this.props.value != this.props.resetValue
+          );
+        }
+        get SliderChangeSource() {
+          switch (this.m_eDragMode) {
+            case _.MouseDragging:
+              return 1;
+            case _.TouchDragging:
+            case _.TouchStart:
+              return 0;
+            case _.None:
+              return;
+          }
+        }
+        constructor(_) {
+          super(_),
+            (this.m_fStartValue = this.props.value),
+            (this.m_fLatestUserValue = this.props.value),
+            (this.m_fLatestOnChangeValue = this.props.value);
+        }
+        RecomputeSliderBounds() {
+          (this.m_sliderBounds =
+            this.m_refSlider.current?.getBoundingClientRect()),
+            (this.m_handleBounds =
+              this.m_refHandle.current?.getBoundingClientRect());
+        }
+        SetDragMode(_) {
+          if (_ != this.m_eDragMode) {
+            switch (
+              ((this.m_eDragMode = _),
+              this.props.onChangeStart &&
+                this.props.onChangeStart(this.SliderChangeSource),
+              _)
+            ) {
+              case _.MouseDragging:
+              case _.TouchDragging:
+              case _.TouchStart:
+                this.RecomputeSliderBounds(),
+                  (this.m_fStartValue = this.props.value),
+                  (this.m_fLatestUserValue = this.props.value);
+              case _.None:
+            }
+            switch (_) {
+              case _.MouseDragging:
+                this.m_refSlider.current?.ownerDocument?.addEventListener(
+                  "mousemove",
+                  this.OnWindowMouseMove,
+                  {
+                    passive: !1,
+                  },
+                ),
+                  this.m_refSlider.current?.ownerDocument?.addEventListener(
+                    "mouseup",
+                    this.OnWindowMouseUp,
+                    {
+                      passive: !1,
+                    },
+                  );
+                break;
+              case _.TouchStart:
+              case _.TouchDragging:
+                this.m_refSlider.current?.ownerDocument?.addEventListener(
+                  "touchmove",
+                  this.OnWindowTouchMove,
+                  {
+                    passive: !1,
+                  },
+                ),
+                  this.m_refSlider.current?.ownerDocument?.addEventListener(
+                    "touchend",
+                    this.OnWindowTouchEnd,
+                    {
+                      passive: !1,
+                    },
+                  );
+                break;
+              case _.None:
+                this.RemoveDocumentEventListeners();
+            }
+          }
+        }
+        OnGamepadDirection(_) {
+          if (this.props.disabled) return !1;
+          let _ = 0;
+          if (_.detail.button == _._.DIR_LEFT) _ = -1;
+          else {
+            if (_.detail.button != _._.DIR_RIGHT) return !1;
+            _ = 1;
+          }
+          _.detail.is_repeat
+            ? (0 == this.m_nRepeatCount &&
+                (this.m_fInitalRepeatTime = performance.now()),
+              this.m_nRepeatCount++)
+            : ((this.m_nRepeatCount = 0),
+              (this.m_fInitalRepeatTime = performance.now()));
+          const _ = performance.now() - this.m_fInitalRepeatTime,
+            _ = (0, _._)(_, 0, 2e3, 500, 250),
+            _ = Math.pow(2, Math.floor(_ / _)),
+            _ = this.normalizedDpadStep * _,
+            _ = (0, _._)(_, this.normalizedDpadStep, 0.05) * _,
+            _ = _(this.normalizedStep, this.normalizedClampedValue + _);
+          let _ = _(this.props.min, this.props.max, _);
+          if (
+            ((_ = (0, _._)(
+              _,
+              this.props.clampMin ?? this.props.min,
+              this.props.clampMax ?? this.props.max,
+            )),
+            _ != this.props.value)
+          ) {
+            const _ = _ > this.m_fLatestUserValue;
+            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
+              (this.m_fLatestUserValue = _),
+              this.FireOnChange(_, 2);
+          } else _._.PlayNavSound(_._.FailedNav);
+          return !0;
+        }
+        FireOnChange(_, _) {
+          this.m_fLatestOnChangeValue != _ &&
+            ((this.m_fLatestOnChangeValue = _),
+            this.props.onChange && this.props.onChange(_, _));
+        }
+        ComputeNormalizedValueForMousePosition(_) {
+          if (null == this.m_sliderBounds) return 0;
+          const _ = _ / this.m_fZoom,
+            _ = this.m_sliderBounds.right - this.m_sliderBounds.left,
+            _ =
+              null == this.m_handleBounds
+                ? 0
+                : this.m_handleBounds.right - this.m_handleBounds.left,
+            _ = _ - _;
+          return (_ - this.m_sliderBounds.left - _ / 2) / _;
+        }
+        BShouldTriggerHapticOnSnap() {
+          const _ = this.normalizedStep;
+          return _ > 0 && _ >= 1 / 40;
+        }
+        PlayHaptic(_) {
+          this.m_refSlider.current?.ownerDocument.defaultView?.SteamClient?.OpenVR?.TriggerOverlayHapticEffect?.(
+            _,
+            0,
+          );
+        }
+        UpdateSliderValueForPosition(_) {
+          if (this.props.disabled || !this.m_refSlider.current) return;
+          const _ = this.ComputeNormalizedValueForMousePosition(_),
+            _ = _(this.normalizedStep, _);
+          let _ = _(this.props.min, this.props.max, _);
+          const _ = this.props.clampMin ?? this.props.min,
+            _ = this.props.clampMax ?? this.props.max;
+          if (((_ = (0, _._)(_, _, _)), _ != this.props.value)) {
+            const _ = _ > this.props.value,
+              _ = 0 == this.step;
+            if (
+              ((this.m_eDragMode == _.None || !_) &&
+                _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
+              this.m_eDragMode == _.MouseDragging ||
+                this.m_eDragMode == _.TouchDragging)
+            ) {
+              let _ = !1;
+              if (
+                (_ == _ || _ == _) &&
+                this.m_fLatestUserValue > _ &&
+                this.m_fLatestUserValue < _ &&
+                !_
+              )
+                this.PlayHaptic(_.SlidingEdge), (_ = !0);
+              else if (
+                !this.BShouldTriggerHapticOnSnap() &&
+                this.m_fLatestUserValue >= _ &&
+                this.m_fLatestUserValue <= _
+              ) {
+                const _ = 40;
+                Math.floor(((this.m_fLatestUserValue - _) / (_ - _)) * _) ==
+                  Math.floor(((_ - _) / (_ - _)) * _) ||
+                  _ ||
+                  (this.PlayHaptic(_.Sliding), (_ = !0));
+              }
+              _ || _ || (this.PlayHaptic(_.Snap), (_ = !0));
+            }
+            (this.m_fLatestUserValue = _),
+              this.FireOnChange(_, this.SliderChangeSource);
+          }
+        }
+        OnWindowMouseMove(_) {
+          this.UpdateSliderValueForPosition(_.clientX);
+        }
+        OnWindowMouseUp(_) {
+          this.m_eDragMode != _.None && this.Complete();
+        }
+        OnMouseDown(_) {
+          0 == _.button &&
+            (this.props.disabled ||
+              (_.preventDefault(),
+              this.SetDragMode(_.MouseDragging),
+              this.UpdateSliderValueForPosition(_.clientX)));
+        }
+        OnTouchStart(_) {
+          if (this.props.disabled || 1 != _.touches.length) return;
+          _.preventDefault();
+          const _ = this.ComputeNormalizedValueForMousePosition(
+            _.touches[0].clientX,
+          );
+          _ < 0 ||
+            _ > 1 ||
+            (this.SetDragMode(_.TouchStart),
+            (this.m_vTouchStartPosition = {
+              _: _.touches[0].clientX,
+              _: _.touches[0].clientY,
+            }));
+        }
+        OnWindowTouchMove(_) {
+          if (1 == _.touches.length) {
+            switch (this.m_eDragMode) {
+              case _.TouchStart:
+                const _ = {
+                  _: _.touches[0].clientX,
+                  _: _.touches[0].clientY,
+                };
+                if ((0, _._)(this.m_vTouchStartPosition, _) >= 10) {
+                  const _ = (0, _._)(this.m_vTouchStartPosition, _);
+                  Math.abs(_._) > Math.abs(_._)
+                    ? (this.SetDragMode(_.TouchDragging),
+                      this.m_refSlider.current?.focus())
+                    : this.SetDragMode(_.None);
+                }
+                break;
+              case _.TouchDragging:
+                this.UpdateSliderValueForPosition(_.touches[0].clientX);
+            }
+            _.preventDefault();
+          }
+        }
+        OnWindowTouchEnd(_) {
+          this.m_eDragMode != _.None && this.Complete();
+        }
+        Complete() {
+          const _ = this.m_eDragMode != _.None;
+          this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
+            this.props.onChangeComplete &&
+              this.props.onChangeComplete(
+                this.m_fLatestUserValue,
+                this.SliderChangeSource,
+              ),
+            this.SetDragMode(_.None);
+          const _ = 0 == this.step;
+          if (this.m_fLatestUserValue != this.m_fStartValue && _ && _) {
+            const _ = this.m_fLatestUserValue > this.m_fStartValue;
+            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
+          }
+        }
+        RemoveDocumentEventListeners() {
+          this.m_refSlider.current?.ownerDocument?.removeEventListener(
+            "mousemove",
+            this.OnWindowMouseMove,
+          ),
+            this.m_refSlider.current?.ownerDocument?.removeEventListener(
+              "touchmove",
+              this.OnWindowTouchMove,
+            ),
+            this.m_refSlider.current?.ownerDocument?.removeEventListener(
+              "mouseup",
+              this.OnWindowMouseUp,
+            ),
+            this.m_refSlider.current?.ownerDocument?.removeEventListener(
+              "touchend",
+              this.OnWindowTouchEnd,
+            );
+        }
+        componentDidMount() {
+          this.m_fZoom = (0, _._)(this.m_refSlider.current);
+        }
+        componentWillUnmount() {
+          this.RemoveDocumentEventListeners();
+        }
+        BlurInnerSlider() {
+          this.m_navRefSlider.current?.ParentTakeFocus();
+        }
+        OnInnerSliderFocus() {
+          (this.m_bInnerSliderHasFocus = !0),
+            (this.m_fStartValue = this.props.value);
+        }
+        OnInnerSliderBlur() {
+          (this.m_bInnerSliderHasFocus = !1),
+            this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
+        }
+        ResetToDefault() {
+          if (!this.CanResetToDefault || this.m_eDragMode != _.None) return;
+          let _;
+          (this.m_fLatestUserValue = this.props.resetValue),
+            this.FireOnChange(this.props.resetValue, 4),
+            this.m_bInnerSliderHasFocus
+              ? (_ = this.props.resetValue > this.m_fLatestUserValue)
+              : ((_ = this.props.resetValue > this.props.value),
+                this.props.onChangeComplete &&
+                  this.props.onChangeComplete(this.props.resetValue, 4)),
+            _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
+        }
+        OnContextMenu(_) {
+          if (null != this.props.resetValue) {
+            const _ = _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                {
+                  disabled: !this.CanResetToDefault,
+                  onSelected: this.ResetToDefault,
+                },
+                (0, _._)("#ResetToDefault"),
+              ),
+            );
+            (0, _._)(_, _);
+          }
+        }
+        render() {
+          const {
+              min: _,
+              max: _,
+              value: __webpack_require__,
+              clampMax: _,
+              clampMin: _,
+              className: _,
+              disabled: _,
+              dpadStep: _,
+              extraNotchPadding: _,
+              focusable: _,
+              handleType: _,
+              innerRef: _,
+              isKeyNavTarget: _,
+              navRef: _,
+              notchCount: _,
+              notchLabels: _,
+              notchTicksVisible: _,
+              onChange: _,
+              onChangeComplete: _,
+              onChangeStart: _,
+              renderNotch: _,
+              renderValue: _,
+              resetValue: _,
+              resetValueAppearance: _ = "top-caret",
+              showBookendLabels: _,
+              showHandle: _,
+              step: _,
+              strValueSuffix: _,
+              trackStyleOverride: _,
+              trackStyleBackground: _,
+              trackForegroundVisible: _ = !0,
+              trackTone: _,
+              ..._
+            } = this.props,
+            _ = _ ?? !1,
+            _ = _ ?? !_,
+            _ = _ ? 2 : _,
+            _ = _
+              ? [
+                  {
+                    notchIndex: 0,
+                    label: `${_}`,
+                  },
+                  {
+                    notchIndex: 1,
+                    label: `${_}`,
+                  },
+                ]
+              : _,
+            _ = _ ?? !0,
+            _ = this.normalizedDefaultValue,
+            _ = this.normalizedSliderOrigin,
+            _ = null != _,
+            _ = "top-caret" == _,
+            _ = !_,
+            _ = _ || _,
+            _ = {};
+          this.CanResetToDefault &&
+            (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
+          let _ = `${_().SliderHandle} SliderHandle`,
+            _ = `${_().SliderHandleContainer} SliderHandleContainer `;
+          "verticalline" == _
+            ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
+              (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+            : ("leftparen" != _ && "rightparen" != _) ||
+              ((_ = (0, _._)(
+                _().ParenSliderHandle,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandle",
+              )),
+              (_ = (0, _._)(
+                _().ParenSliderHandleContainer,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandleContainer",
+              )));
+          const _ = _(__webpack_require__);
+          return _.createElement(
+            _,
+            {
+              noFocusRing: !0,
+              className: (0, _._)(
+                _().SliderControlPanelGroup,
+                "SliderControlPanelGroup",
+                _,
+              ),
+              navRef: _,
+              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
+              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
+              onOKActionDescription: _
+                ? null
+                : (0, _._)("#Slider_AdjustSlider"),
+              focusable: _,
+              childFocusDisabled: _ || !_,
+              onContextMenu: this.OnContextMenu,
+              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
+              onSecondaryButton: this.CanResetToDefault
+                ? this.ResetToDefault
+                : void 0,
+              onSecondaryActionDescription: this.CanResetToDefault
+                ? (0, _._)("#ResetToDefault")
+                : void 0,
+              actionDescriptionMap: _,
+              "aria-labelledby": _["aria-labelledby"],
+            },
+            _.createElement(
+              _._,
+              {
+                role: "slider",
+                "aria-valuenow": __webpack_require__,
+                "aria-valuetext": _,
+                ..._,
+                className: (0, _._)(
+                  _().SliderControlAndNotches,
+                  _ && _().Disabled,
+                  _ && _().WithDefaultValue,
+                  _ && _ && _().DefaultValueIsColorRange,
+                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
+                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
+                  !_ && _().ForegroundInvisible,
+                ),
+                focusable: this.isKeyNavTarget,
+                noFocusRing: !0,
+                onFocus: this.OnInnerSliderFocus,
+                onBlur: this.OnInnerSliderBlur,
+                style: {
+                  "--normalized-slider-value": this.normalizedClampedValue,
+                  "--normalized-slider-default-value": _,
+                  "--normalized-slider-origin": _,
+                  "--default-value-track-color": _
+                    ? _.trackForegroundColor
+                    : void 0,
+                  "--slider-extra-notch-padding": _ ?? "0px",
+                },
+                ref: (0, _._)(this.m_refSlider, _),
+                navRef: this.m_navRefSlider,
+                onGamepadDirection: this.OnGamepadDirection,
+                onOKButton: this.BlurInnerSlider,
+                onOKActionDescription: null,
+                onCancelButton: this.BlurInnerSlider,
+                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().SliderControl, "SliderControl"),
+                },
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().SliderTrack,
+                    null != _ && _ && _().SliderHasNotches,
+                    {
+                      [_().SliderTrackDark]: "dark" === _,
+                    },
+                    _,
+                    "SliderTrack",
+                  ),
+                  style: this.props.trackStyleOverride,
+                }),
+                _ &&
+                  _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().DefaultValueTickContainer,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().DefaultValueTick,
+                      },
+                      _.createElement(_.u49, {
+                        direction: "down",
+                      }),
+                    ),
+                  ),
+                this.validRange &&
+                  null != __webpack_require__ &&
+                  !isNaN(__webpack_require__) &&
+                  this.showHandle &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _,
+                        ref: this.m_refHandle,
+                      },
+                      "leftparen" == _ && _.createElement(_.Epp, null),
+                      "rightparen" == _ && _.createElement(_.jvG, null),
+                    ),
+                  ),
+              ),
+              _.createElement(_, {
+                notchCount: _,
+                notchLabels: _,
+                sliderValue: this.normalizedClampedValue,
+                notchTicksVisible: _,
+                renderNotch: _,
+              }),
+            ),
+          );
+        }
+      }
+      function _(_) {
+        let {
+            sliderValue: _,
+            notchCount: __webpack_require__,
+            notchLabels: _,
+            notchTicksVisible: _,
+            renderNotch: _,
+          } = _,
+          _ = _ ?? [];
+        if (!__webpack_require__) return null;
+        let _ = !1,
+          _ = [];
+        for (let _ = 0; _ < __webpack_require__; ++_) {
+          let _ = _.find((_) => _.notchIndex == _);
+          _ && (_ = !0),
+            _.push(
+              _.createElement(_, {
+                key: _,
+                notchIndex: _,
+                sliderValue: _,
+                notchLabel: _,
+                notchCount: __webpack_require__,
+                notchTicksVisible: _,
+                renderNotch: _,
+              }),
+            );
+        }
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(_().SliderNotchContainer),
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const _ = _.notchIndex <= (_.notchCount - 1) * _.sliderValue,
+          _ = _.notchCount <= 3 && !_.notchTicksVisible,
+          _ = _ && 0 == _.notchIndex,
+          _ = _ && _.notchIndex == _.notchCount - 1,
+          _ = {
+            ..._,
+            alignLeftEnd: _,
+            alignRightEnd: _,
+            active: _,
+          };
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().SliderNotch, _ && _().AlignToEnds),
+          },
+          _.renderNotch
+            ? _.renderNotch(_)
+            : _.createElement(_, {
+                ..._,
+              }),
+        );
+      }
+      function _(_) {
+        const {
+          alignLeftEnd: _,
+          alignRightEnd: __webpack_require__,
+          active: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.notchTicksVisible &&
+            _.createElement("div", {
+              className: (0, _._)(_().SliderNotchTick, _ && _().TickActive),
+            }),
+          _.notchLabel &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().SliderNotchLabel,
+                  _ && _().AlignToLeft,
+                  __webpack_require__ && _().AlignToRight,
+                ),
+              },
+              _.notchLabel?.label,
+            ),
+        );
+      }
+      (0, _._)([_._], _.prototype, "RecomputeSliderBounds", null),
+        (0, _._)([_._], _.prototype, "SetDragMode", null),
+        (0, _._)([_._], _.prototype, "OnGamepadDirection", null),
+        (0, _._)([_._], _.prototype, "UpdateSliderValueForPosition", null),
+        (0, _._)([_._], _.prototype, "OnWindowMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnWindowMouseUp", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnTouchStart", null),
+        (0, _._)([_._], _.prototype, "OnWindowTouchMove", null),
+        (0, _._)([_._], _.prototype, "OnWindowTouchEnd", null),
+        (0, _._)([_._], _.prototype, "Complete", null),
+        (0, _._)([_._], _.prototype, "BlurInnerSlider", null),
+        (0, _._)([_._], _.prototype, "OnInnerSliderFocus", null),
+        (0, _._)([_._], _.prototype, "OnInnerSliderBlur", null),
+        (0, _._)([_._], _.prototype, "ResetToDefault", null),
+        (0, _._)([_._], _.prototype, "OnContextMenu", null);
+      _.forwardRef(function (_, _) {
+        const {
+          label: __webpack_require__,
+          labelIndex: _,
+          xOffset: _,
+          onResize: _,
+          OnMouseDown: _,
+          OnTouchStart: _,
+        } = _;
+        _.useEffect(() => {
+          _(_);
+        }, [_, _]);
+        const _ = _.useCallback(
+            (_) => {
+              _(_);
+            },
+            [_, _],
+          ),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_, _);
+        return _.createElement(
+          "div",
+          {
+            className: _().CompoundSliderSubSliderLabel,
+            ref: _,
+            onMouseDown: _,
+            onTouchStart: _,
+            style: {
+              transform: `translateX(${_}px)`,
+            },
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().CompoundSliderSubSliderLabelInternal,
+            },
+            __webpack_require__,
+          ),
+        );
+      });
+      const _ = _.forwardRef(function (_, _) {
+        const {
+          value: __webpack_require__,
+          onChange: _,
+          disabled: _,
+          className: _,
+          focusable: _,
+          children: _,
+          navRef: _,
+          ..._
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            noFocusRing: !0,
+            className: (0, _._)(_, _().Toggle, {
+              [_().Disabled]: !!_,
+              [_()._]: !!__webpack_require__,
+            }),
+            onClick: () => {
+              if (!_ && _) {
+                const _ = !__webpack_require__;
+                _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
+              }
+            },
+            ref: _,
+            navRef: _,
+            focusable: _,
+            role: "checkbox",
+            "aria-checked": !!__webpack_require__,
+          },
+          _.createElement("div", {
+            className: _().ToggleRail,
+          }),
+          _.createElement("div", {
+            className: _().ToggleSwitch,
+          }),
+          _,
+        );
+      });
+      function _(_) {
+        const _ = !!_.disabled,
+          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
+          _._)(_),
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            className: _.className,
+            disabled: _,
+            label: _.label,
+            icon: _.icon,
+            description: _.description,
+            explainer: _.explainer,
+            explainerTitle: _.explainerTitle,
+            padding: _.padding,
+            bottomSeparator: _.bottomSeparator,
+            highlightOnFocus: _.highlightOnFocus,
+            inlineWrap: "keep-inline",
+            onContextMenu: _.onContextMenu,
+            actionDescriptionMap: __webpack_require__,
+            onClick: _.onClick,
+            indentLevel: _.indentLevel,
+            ..._,
+          },
+          _.createElement(_, {
+            ..._(_, _),
+            onChange: _.OnToggleChange,
+            value: _.checked,
+            disabled: _,
+            navRef: _.navRef,
+          }),
+        );
+      }
+      (0, _._)(
+        [_._],
+        class extends _ {
+          OnToggleChange(_) {
+            this.props.disabled || _ === this.checked || this.Toggle();
+          }
+          render() {
+            return _.createElement(_, {
+              ...this.props,
+              OnToggleChange: this.OnToggleChange,
+              checked: this.checked,
+            });
+          }
+        }.prototype,
+        "OnToggleChange",
+        null,
+      );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -88395,6 +86909,1505 @@
             fill: "white",
           }),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!0);
+        return (
+          (0, _.useEffect)(() => {
+            (0, _.startTransition)(() => {
+              __webpack_require__(!0);
+            });
+          }, []),
+          _ ? _.children : (_.fallback ?? null)
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { Modal: _ } = _,
+          { name: __webpack_require__, modalProps: _, options: _ } = _,
+          _ = (0, _._)().ownerWindow,
+          { popup: _, element: _ } = (0, _._)(
+            __webpack_require__,
+            {
+              title: _.strTitle,
+              html_class:
+                "client_chat_frame fullheight ModalDialogPopup LegacyPopup " +
+                (_.className || ""),
+              body_class: "fullheight ModalDialogBody",
+              popup_class: "fullheight popup_chat_frame",
+              owner_window: void 0,
+              replace_existing_popup: !0,
+              target_browser: _.browserContext,
+              availscreenwidth: _.screen.availWidth,
+              availscreenheight: _.screen.availHeight,
+              bModal: _.bHideMainWindowForPopouts,
+            },
+            {
+              updateParamsBeforeShow: (_) =>
+                (function (_, _, _, _) {
+                  let _,
+                    _,
+                    _,
+                    _ = _.popupWidth || 500,
+                    _ = _.popupHeight || 400;
+                  if (_._.IN_CLIENT && _?.SteamClient?.Browser?.GetBrowserID)
+                    _ = _.SteamClient.Browser.GetBrowserID();
+                  else {
+                    let _ = _.screen;
+                    (_ = (_.availWidth - _) / 2), (_ = (_.availHeight - _) / 2);
+                    let _ = _;
+                    void 0 !== _.availLeft &&
+                      void 0 !== _.availTop &&
+                      ((_ += _.availLeft), (_ += _.availTop));
+                  }
+                  return {
+                    ..._,
+                    dimensions: {
+                      width: _,
+                      height: _,
+                      left: _,
+                      top: _,
+                    },
+                    center_on_window: _.bCenterOnWindow ? _ : void 0,
+                    window_opener_id: _,
+                  };
+                })(_, _, _, _),
+              onClose: () => _.fnOnClose && _.fnOnClose(),
+            },
+          );
+        (0, _._)(_, "click", () => _?.SteamClient.Window.BringToFront());
+        const _ = _?.bHideActions,
+          _ =
+            "number" == typeof _?.nDragAreaHeight
+              ? {
+                  height: _.nDragAreaHeight,
+                }
+              : void 0;
+        return _
+          ? _.createPortal(
+              _.createElement(
+                _._,
+                {
+                  ownerWindow: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: "PopupFullWindow",
+                    onContextMenu: _._,
+                  },
+                  _.createElement(_._, {
+                    hideMin: !0,
+                    hideMax: !0,
+                    popup: _,
+                    hideActions: _,
+                    style: _,
+                  }),
+                  _.createElement(
+                    _._,
+                    {
+                      browserInfo: _.browserContext,
+                      bCenterPopupsOnWindow: _.bCenterOnWindow,
+                    },
+                    _.element,
+                  ),
+                ),
+              ),
+              _,
+            )
+          : null;
+      }
+      function _(_) {
+        const { ModalManager: _ } = _,
+          [__webpack_require__, _] = _.useState(void 0),
+          [_, _] = _.useState(!0),
+          _ = _.useRef(0),
+          _ = _.useCallback(() => {
+            _.startTransition(() => {
+              _(!0);
+            });
+          }, []);
+        _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
+          _.useLayoutEffect(() => {
+            __webpack_require__ ||
+              _.startTransition(() => {
+                _(_.TakeMeasureModalRequest()), _(!1);
+              });
+          }, [_, __webpack_require__, _]);
+        const _ = _.useCallback((_) => {
+          _.current++,
+            _.startTransition(() => {
+              _((_) => (_ === _ ? void 0 : _));
+            });
+        }, []);
+        return __webpack_require__
+          ? _.createElement(_, {
+              key: _.current,
+              onMeasureComplete: _,
+              request: __webpack_require__,
+            })
+          : null;
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(),
+          _ = (0, _._)().ownerWindow;
+        return (
+          _.useLayoutEffect(() => {
+            const _ = _.document.body,
+              _ = _.document.createElement("div");
+            return (
+              (_.style.position = "absolute"),
+              (_.style.visibility = "hidden"),
+              _.appendChild(_),
+              __webpack_require__(_),
+              () => {
+                _.removeChild(_);
+              }
+            );
+          }, [_]),
+          _
+            ? _.createPortal(
+                _.createElement(_, {
+                  ..._,
+                  elContainer: _,
+                }),
+                _,
+              )
+            : null
+        );
+      }
+      function _(_) {
+        const {
+          elContainer: _,
+          onMeasureComplete: __webpack_require__,
+          request: _,
+        } = _;
+        return (
+          _.useEffect(() => {
+            let _ = !1;
+            const _ = (_) => {
+              _ || (_.fnResults(_), __webpack_require__(_), (_ = !0));
+            };
+            return (
+              (async function (_, _) {
+                _ && (await _);
+                let _ = document;
+                _._.IN_STEAMUI && _.fonts && (await _.fonts.ready);
+                const _ = _.getBoundingClientRect(),
+                  _ = Math.ceil(_.height),
+                  _ = Math.ceil(_.width);
+                return {
+                  height: _,
+                  width: _,
+                };
+              })(_, _.promiseContentReady).then(_),
+              () => _(void 0)
+            );
+          }, [_, __webpack_require__, _]),
+          _.createElement(_._, null, _.rctToMeasure)
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        _.useEffect(() => {
+          if (_)
+            return (
+              document.body.classList.add(_.BodyNoScrollDialog),
+              () => document.body.classList.remove(_.BodyNoScrollDialog)
+            );
+        }, [_]);
+      }
+      function _(_) {
+        let {
+          ModalManager: _,
+          bRegisterModalManager: __webpack_require__ = !0,
+          DialogWrapper: _,
+          rctActiveContextMenus: _,
+          bUseDialogElement: _ = !0,
+          style: _,
+          ..._
+        } = _;
+        const _ = _.modals,
+          _ = _ && !!_.length,
+          _ = _.active_modal;
+        _(_),
+          (function (_) {
+            const _ = (0, _._)().ownerWindow,
+              _ = (0, _._)(),
+              _ = _.useCallback(() => {
+                _?.SteamClient?.Window && _.SteamClient.Window.BringToFront();
+              }, [_]);
+            _.useEffect(() => _.RegisterOverlay(_), [_, _]),
+              _.useEffect(
+                () => _.RegisterOnModalShownCallback(_).Unregister,
+                [_, _],
+              );
+          })(_);
+        const _ = (function (_, _) {
+          return (0, _._)(
+            (_) => {
+              if (!_ || !_) return;
+              const _ = _.ownerDocument.defaultView;
+              return _._.RegisterModalManager(_, _);
+            },
+            [_],
+          );
+        })(_, __webpack_require__);
+        let _ = null,
+          _ = !_;
+        return (
+          _ && _.length
+            ? (_ = _.map((_) => {
+                const _ = _ == _,
+                  _ = {
+                    key: _.key,
+                    active: _,
+                    rctActiveContextMenus: _ && _ ? _ : void 0,
+                  };
+                return _ instanceof _._
+                  ? _.createElement(_, {
+                      ..._,
+                      modal: _,
+                      Component: _ ?? _,
+                    })
+                  : _ instanceof _._
+                    ? _.createElement(_, {
+                        ..._,
+                        modal: _,
+                        bUseDialogElement: _,
+                      })
+                    : void 0;
+              }))
+            : ((_ = !0),
+              (_ = {
+                ..._,
+                display: "none",
+              })),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _,
+              null,
+              _.createElement(
+                "div",
+                {
+                  ..._,
+                  style: _,
+                  ref: _,
+                  className: (0, _._)(_.className, "FullModalOverlay"),
+                },
+                _.createElement("div", {
+                  className: "ModalOverlayContent ModalOverlayBackground",
+                }),
+                _,
+              ),
+              _ && _,
+            ),
+            _.createElement(_, {
+              ModalManager: _,
+            }),
+            _.createElement(_, {
+              ModalManager: _,
+            }),
+          )
+        );
+      }
+      function _(_) {
+        const {
+          modal: _,
+          rctActiveContextMenus: __webpack_require__,
+          active: _,
+          bUseDialogElement: _,
+        } = _;
+        _.useEffect(() => {
+          if (_)
+            return (
+              _.SetActive(_),
+              () => {
+                _.SetActive(!1);
+              }
+            );
+        }, [_, _]);
+        const _ = _.createElement(
+          _._,
+          null,
+          _.createElement("div", {
+            className: (0, _._)(
+              "ModalOverlayContent",
+              _ ? "active" : "inactive",
+            ),
+            ref: _.RefModalElement,
+          }),
+          __webpack_require__,
+        );
+        return _
+          ? _.createElement(
+              _,
+              {
+                active: _,
+              },
+              _,
+            )
+          : _;
+      }
+      function _(_) {
+        const {
+            modal: _,
+            active: __webpack_require__,
+            rctActiveContextMenus: _,
+            Component: _,
+          } = _,
+          _ = (0, _._)();
+        return (
+          (0, _._)(_.ModalUpdatedCallback, _),
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _,
+              {
+                className: (0, _._)(
+                  "ModalOverlayContent",
+                  __webpack_require__ ? "active" : "inactive",
+                ),
+                active: __webpack_require__,
+                modalKey: _.key,
+              },
+              _,
+              _.element,
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { className: _, active: __webpack_require__, children: _ } = _;
+        return _.createElement(
+          _,
+          {
+            active: __webpack_require__,
+          },
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _,
+                tabIndex: -1,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { active: _, children: __webpack_require__ } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            _ && (_ && !_ ? (_.showModal(), _(!0)) : !_ && _ && _.close());
+          }, [_, _]),
+          _.createElement(
+            "dialog",
+            {
+              ref: _,
+              className: _.ModalDialog,
+              onClose: () => _(!1),
+              onCancel: (_) => _.preventDefault(),
+            },
+            _.children,
+          )
+        );
+      }
+      function _(_) {
+        const { ModalManager: _ } = _,
+          _ = (0, _._)();
+        return (
+          (0, _._)(_.LegacyPopupModalCountChangedCallbacks, _),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.legacy_popup_modals.map((_) =>
+              _.createElement(_, {
+                key: _.key,
+                Modal: _,
+              }),
+            ),
+          )
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = class extends _.Component {
+        Cancel(_) {
+          return () => {
+            _ && _(), this.props.closeModal && this.props.closeModal();
+          };
+        }
+        render() {
+          const {
+              strTitle: _,
+              strDescription: _,
+              strOKButtonText: __webpack_require__,
+              strCancelButtonText: _,
+              onGamepadCancel: _,
+              strMiddleButtonText: _,
+              onMiddleButton: _,
+              bAlertDialog: _,
+              children: _,
+              ..._
+            } = this.props,
+            _ = __webpack_require__ || (0, _._)("#Button_Close");
+          let _ = _.createElement(_._, {
+            bOKDisabled: this.props.bOKDisabled,
+            bCancelDisabled: this.props.bCancelDisabled,
+            strOKText: __webpack_require__,
+            onCancel: this.Cancel(this.props.onCancel),
+            strCancelText: _,
+          });
+          return (
+            _
+              ? (_ = _.createElement(_._, null, _))
+              : _ &&
+                (_ = _.createElement(_._, {
+                  bOKDisabled: this.props.bOKDisabled,
+                  bCancelDisabled: this.props.bCancelDisabled,
+                  strOKText: __webpack_require__,
+                  onCancel: this.Cancel(this.props.onCancel),
+                  strCancelText: _,
+                  onUpdate: () => {
+                    _(), this.props.closeModal && this.props.closeModal();
+                  },
+                  strUpdateText: _,
+                  bUpdateDisabled: this.props.bMiddleDisabled,
+                })),
+            _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.createElement(
+                _._,
+                null,
+                " ",
+                _ || _.createElement(_.Fragment, null, " "),
+                " ",
+              ),
+              _.createElement(
+                _._,
+                {
+                  onCancelButton: this.Cancel(_ || this.props.onCancel),
+                },
+                _.createElement(_._, null, _, _),
+                _.createElement(_._, null, _),
+              ),
+            )
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        render() {
+          const _ = {
+            strTitle: (0, _._)("#Error_FailureNotice"),
+            strDescription: (0, _._)("#Error_GenericFailureDescription"),
+            bAlertDialog: !0,
+            bDestructiveWarning: !0,
+            onOK: () => {},
+            onCancel: () => {},
+            ...this.props,
+          };
+          return _.createElement(_, {
+            ..._,
+          });
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        render() {
+          let _ = {
+            onOK: () => {},
+            onCancel: () => {},
+            bAlertDialog: !0,
+            ...this.props,
+          };
+          return (
+            (_.strDescription = _.createElement(
+              "span",
+              {
+                style: {
+                  whiteSpace: "pre-line",
+                },
+              },
+              " ",
+              _.strDescription,
+              " ",
+            )),
+            _.createElement(_, {
+              ..._,
+            })
+          );
+        }
+      };
+      function _(_, _, _) {
+        (0, _._)(
+          _.createElement(_, {
+            strTitle: _,
+            strDescription: _,
+          }),
+          _,
+        );
+      }
+      _ = (0, _._)([_._], _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            onCancel: _,
+            closeModal: __webpack_require__,
+            bOKDisabled: _,
+            onOK: _,
+          } = _,
+          _ = (0, _._)();
+        (0, _._)(
+          __webpack_require__ || _,
+          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_.className} ${_.modalClassName}`,
+        );
+        const _ = _.useCallback(() => {
+            (_ && _()) || (__webpack_require__ && __webpack_require__());
+          }, [_, __webpack_require__]),
+          _ = _.useCallback(async () => {
+            _ ||
+              (_ && (await _()), __webpack_require__ && __webpack_require__());
+          }, [_, _, __webpack_require__]);
+        return _.createElement(
+          _._,
+          {
+            onEscKeypress: _,
+            className: _.modalClassName,
+            bDestructiveWarning: _.bDestructiveWarning,
+            bDisableBackgroundDismiss: _.bDisableBackgroundDismiss,
+            bHideCloseIcon: _.bHideCloseIcon,
+          },
+          _.createElement(
+            _._,
+            {
+              classNameContent: (0, _._)(
+                "GenericConfirmDialog",
+                _.bAllowFullSize && "DialogContentFullSize",
+                _.className,
+              ),
+              onSubmit: _,
+              bCenterVertically: !_,
+            },
+            _.children,
+          ),
+        );
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { active: _, children: __webpack_require__ } = _,
+          _ = (0, _._)() || (0, _._)(window),
+          _ = (0, _._)(),
+          [_, _] = _.useState(null),
+          [_, _] = _.useState(!1),
+          _ = _.useRef();
+        if (
+          (_.useEffect(() => {
+            if (_) {
+              const _ = _.ShowPortalModal(),
+                _ = _.OnElementReadyCallbacks.Register(_),
+                _ = _.OnModalActiveCallbacks.Register(_);
+              return (
+                (_.current = _.key),
+                () => {
+                  _(null),
+                    _(!1),
+                    _.Close(),
+                    _.Unregister(),
+                    __webpack_require__.Unregister();
+                }
+              );
+            }
+          }, [_, _]),
+          !_ || !_)
+        )
+          return null;
+        let _ = _.createElement(_._, null, __webpack_require__);
+        return (
+          _ &&
+            (_ = _.createElement(
+              _,
+              {
+                active: _,
+                modalKey: _.current,
+              },
+              _,
+            )),
+          _.createPortal(_, _)
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        key;
+        static sm_lastKey = 0;
+        constructor() {
+          this.key = "Modal_" + _.sm_lastKey++;
+        }
+      }
+      class _ extends _ {
+        element;
+        ModalUpdatedCallback = new _._();
+        constructor(_) {
+          super(), (this.element = _);
+        }
+        UpdateModal(_) {
+          (this.element = _), this.ModalUpdatedCallback.Dispatch();
+        }
+      }
+      class _ extends _ {
+        m_OnElementReadyCallbacks = new _._();
+        m_OnActiveModalCallbacks = new _._();
+        constructor() {
+          super();
+        }
+        get OnElementReadyCallbacks() {
+          return this.m_OnElementReadyCallbacks;
+        }
+        get OnModalActiveCallbacks() {
+          return this.m_OnActiveModalCallbacks;
+        }
+        RefModalElement(_) {
+          _ && this.m_OnElementReadyCallbacks.Dispatch(_);
+        }
+        SetActive(_) {
+          this.m_OnActiveModalCallbacks.Dispatch(_);
+        }
+      }
+      (0, _._)([_._], _.prototype, "RefModalElement", null);
+      class _ extends _ {
+        m_strName;
+        m_modalProps;
+        m_options;
+        constructor(_, _, _, _) {
+          super(_),
+            (this.m_strName = _),
+            (this.m_modalProps = _),
+            (this.m_options = _);
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get modalProps() {
+          return this.m_modalProps;
+        }
+        get options() {
+          return this.m_options;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(null);
+      function _(_) {
+        const {
+            refContextMenuManager: _,
+            bRegisterMenuManager: __webpack_require__ = !0,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _?.ownerWindow || window,
+          _ = _.useRef();
+        return (
+          _.current || (_.current = new _._()),
+          _.useLayoutEffect(() => {
+            if (__webpack_require__)
+              return (
+                _._.SetMenuManager(_, _.current),
+                () => _._.SetMenuManager(_, void 0)
+              );
+          }, [_, __webpack_require__]),
+          _.useLayoutEffect(
+            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
+            [_],
+          ),
+          _.createElement(
+            _.Provider,
+            {
+              value: _.current,
+            },
+            _,
+          )
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            managerOverride: _,
+            bSuppressMouseOverlay: __webpack_require__,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.useContext(_),
+          _ = _ ?? _;
+        (0, _._)(_.OnMenusChanged, _);
+        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
+          _ = _.GetAllMenus();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ && _.createElement(_._, null),
+          _.map((_) =>
+            _.createElement(
+              _._,
+              {
+                key: _.key,
+              },
+              _.createElement(_, {
+                instance: _,
+                browserInfo: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            instance: _,
+            browserInfo: __webpack_require__,
+            children: _,
+          } = _,
+          _ = _(),
+          _ = (0, _._)().ownerWindow,
+          _ = _.useRef(void 0);
+        void 0 === _.current &&
+          (_.current =
+            (_.options.bForcePopup || _.innerWidth < 400 || _?.BOnlyPopups()) &&
+            !!_.SteamClient?.Window);
+        const _ = _.useMemo(
+            () => ({
+              instance: _,
+              styles: _(),
+              presentation: 0,
+            }),
+            [_],
+          ),
+          _ = _ || _.ReactElement;
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.current
+            ? _.createElement(_, {
+                instance: _,
+                browserInfo: __webpack_require__,
+                children: _,
+              })
+            : _.createElement(_, {
+                instance: _,
+                children: _,
+              }),
+        );
+      }
+      function _(_) {
+        const { instance: _, children: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            ..._.position,
+          },
+          __webpack_require__,
+        );
+      }
+      function _(_) {
+        const {
+            instance: _,
+            browserInfo: __webpack_require__,
+            children: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = (0, _._)().ownerWindow,
+          _ = _.SteamClient.Browser.GetBrowserID(),
+          _ = _.useCallback(
+            (_) => {
+              const { options: __webpack_require__, position: _ } = _,
+                _ = _.element;
+              if (__webpack_require__.bScreenCoordinates)
+                _.dimensions = {
+                  left: _.clientX,
+                  top: _.clientY,
+                  width: 2,
+                  height: 1,
+                };
+              else {
+                let _ = _._(_, _.getBoundingClientRect());
+                (_.dimensions = {
+                  left: _.right,
+                  top: _.top,
+                  width: 2,
+                  height: 1,
+                }),
+                  (_.availscreenwidth = _.screen.availWidth),
+                  (_.availscreenheight = _.screen.availHeight);
+              }
+              return _;
+            },
+            [_, _],
+          );
+        let _ = _.options.bStandalone
+          ? (0, _._)(_._.StandaloneContextMenu)
+          : (0, _._)(_._.PopupContextMenu);
+        _.options.bCreateHidden && (_ |= _._.Hidden),
+          _.options.bAlwaysOnTop && (_ |= _._.AlwaysOnTop);
+        const { popupObj: _, element: _ } = (0, _._)(
+          "contextmenu_" + _.key,
+          {
+            title: _.options.title || "Menu",
+            html_class: _().ContextMenuPopup + " client_chat_frame",
+            body_class: "ContextMenuPopupBody",
+            replace_existing_popup: !1,
+            target_browser: __webpack_require__,
+            window_opener_id: _,
+            bHideOnClose: !0,
+            eCreationFlags: _,
+          },
+          {
+            updateParamsBeforeShow: _,
+          },
+        );
+        return (
+          (0, _.useEffect)(() => {
+            if (_)
+              if (_.visible) {
+                _.current && _.current.PositionMenu(),
+                  _.current && _.current.PositionPopupWindow();
+                let _ = _.options.bNoFocusWhenShown
+                  ? _._.k_EWindowBringToFrontWithoutForcingOS
+                  : _._.k_EWindowBringToFrontAndForceOS;
+                _.TakeFocus(_);
+              } else
+                _.options.bRetainOnHide &&
+                  window.setTimeout(() => {
+                    _.window?.SteamClient.Window.HideWindow();
+                  }, 30);
+          }, [_, _, _.visible]),
+          _(_.window),
+          _.useEffect(() => {
+            _.SetPopup(_);
+          }, [_, _]),
+          _
+            ? _.createPortal(
+                _.createElement(
+                  _._,
+                  {
+                    ref: _,
+                    ..._.position,
+                    parentWin: _,
+                    popup: _,
+                  },
+                  _,
+                ),
+                _,
+              )
+            : null
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({}),
+        _ = _.memo(function (_) {
+          const {
+              children: _,
+              bRenderOverlayAtRoot: __webpack_require__,
+              refModalManager: _,
+              DialogWrapper: _,
+              bUseDialogElement: _ = !0,
+              ContextMenuComponent: _ = _,
+              refContextMenuManager: _,
+              browserInfo: _,
+              bUsePopups: _,
+              bOnlyPopups: _,
+              bCenterPopupsOnWindow: _,
+              bRegisterManagersWithWindow: _ = !0,
+              ..._
+            } = _,
+            _ = _.useRef();
+          _.current || (_.current = new _._());
+          let _ = _.createElement(_._, {
+            ..._,
+            DialogWrapper: _,
+            ModalManager: _.current,
+            bUseDialogElement: _,
+            bRegisterModalManager: _,
+            rctActiveContextMenus: _.createElement(_, null),
+          });
+          _.bRenderOverlayAtRoot &&
+            "undefined" != typeof document &&
+            "body" in document &&
+            (_ = _.createPortal(_, document.body)),
+            (0, _._)(_, _.current),
+            void 0 !== _ && _.current?.SetUsePopups(_),
+            void 0 !== _ && _.current?.SetCenterPopupsOnWindow(_),
+            void 0 !== _ && _.current?.SetOnlyPopups(_),
+            _.current.SetBrowserInfo(_);
+          const _ = _.useMemo(
+            () => ({
+              ModalManager: _.current,
+              DialogWrapper: _,
+            }),
+            [_],
+          );
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(
+              _,
+              {
+                refContextMenuManager: _,
+                bRegisterMenuManager: _,
+              },
+              _.createElement(_._, null, _),
+              _.children,
+            ),
+          );
+        });
+      function _() {
+        return _.useContext(_).ModalManager;
+      }
+      function _() {
+        return _.useContext(_).DialogWrapper;
+      }
+      function _(_) {
+        const _ = _();
+        _.useEffect(() => {
+          if (_) return _._.RegisterModalManager(_, _);
+        }, [_, _]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
+      class _ {
+        m_bUsePopups = !0;
+        m_bOnlyPopups = !1;
+        m_bCenterPopupsOnWindow = !1;
+        m_rgModals = [];
+        m_OnModalCountChangedCallbacks = new _._();
+        m_OnModalShownCallbacks = new _._();
+        m_OnModalHiddenCallbacks = new _._();
+        m_cMountedOverlays = 0;
+        m_rgMeasureModalRequests = [];
+        m_OnMeasureModal = new _._();
+        m_rgLegacyPopupModals = [];
+        m_OnLegacyPopupModalCountChanged = new _._();
+        m_browserInfo;
+        get ModalCountChangedCallbacks() {
+          return this.m_OnModalCountChangedCallbacks;
+        }
+        get LegacyPopupModalCountChangedCallbacks() {
+          return this.m_OnLegacyPopupModalCountChanged;
+        }
+        RegisterOnModalShownCallback(_) {
+          return this.m_OnModalShownCallbacks.Register(_);
+        }
+        RegisterOnModalHiddenCallback(_) {
+          return this.m_OnModalHiddenCallbacks.Register(_);
+        }
+        RegisterMeasureModalCallback(_) {
+          return this.m_OnMeasureModal.Register(_);
+        }
+        TakeMeasureModalRequest() {
+          return this.m_rgMeasureModalRequests.length
+            ? this.m_rgMeasureModalRequests.shift()
+            : void 0;
+        }
+        RegisterOverlay(_) {
+          (0, _._)(
+            0 == this.m_cMountedOverlays,
+            "Duplicate modal DialogOverlay; modals will appear in both",
+          ),
+            this.m_cMountedOverlays++;
+          const _ = this.m_OnModalCountChangedCallbacks.Register(_);
+          return () => {
+            this.m_cMountedOverlays--, _.Unregister();
+          };
+        }
+        OnModalCountChanged(_) {
+          "show" == _ &&
+            0 == this.m_cMountedOverlays &&
+            window.setTimeout(() => {
+              (0, _._)(
+                this.m_cMountedOverlays > 0,
+                "Modal was shown but ModalManager has no associated DialogOverlay",
+              );
+            }, 50),
+            this.m_OnModalCountChangedCallbacks.Dispatch(
+              this.m_rgModals.length,
+            ),
+            "show" == _
+              ? this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length)
+              : "hide" == _ &&
+                this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length);
+        }
+        get modals() {
+          return this.m_rgModals;
+        }
+        get active_modal() {
+          return this.m_rgModals.length
+            ? this.m_rgModals[this.m_rgModals.length - 1]
+            : void 0;
+        }
+        ShowModal(_) {
+          return this.ShowModalInternal(_);
+        }
+        RemoveModal(_) {
+          let _ = this.m_rgModals.indexOf(_);
+          -1 != _ && this.m_rgModals.splice(_, 1),
+            this.OnModalCountChanged("hide");
+        }
+        ShowModalInternal(_) {
+          (0, _._)(
+            !this.m_bOnlyPopups,
+            "Attempting to show modal in popup-only modal manager; will not display.",
+          );
+          const _ = new _._(_);
+          this.m_rgModals.push(_);
+          const _ = {
+            Close: () => {
+              this.RemoveModal(_);
+            },
+            Update: (_) => {
+              _.UpdateModal(_);
+            },
+          };
+          return this.OnModalCountChanged("show"), _;
+        }
+        ShowPortalModal() {
+          (0, _._)(
+            !this.m_bOnlyPopups,
+            "Attempting to show modal in popup-only modal manager; will not display.",
+          );
+          const _ = new _._();
+          return (
+            this.m_rgModals.push(_),
+            this.OnModalCountChanged("show"),
+            {
+              key: _.key,
+              Close: () => {
+                this.RemoveModal(_);
+              },
+              OnElementReadyCallbacks: _.OnElementReadyCallbacks,
+              OnModalActiveCallbacks: _.OnModalActiveCallbacks,
+            }
+          );
+        }
+        SetUsePopups(_) {
+          this.m_bUsePopups = _;
+        }
+        BUsePopups() {
+          return this.m_bUsePopups || this.m_bOnlyPopups;
+        }
+        SetOnlyPopups(_) {
+          this.m_bOnlyPopups = _;
+        }
+        BOnlyPopups() {
+          return this.m_bOnlyPopups;
+        }
+        SetBrowserInfo(_) {
+          this.m_browserInfo = _;
+        }
+        GetBrowserInfo() {
+          return this.m_browserInfo;
+        }
+        SetCenterPopupsOnWindow(_) {
+          this.m_bCenterPopupsOnWindow = _;
+        }
+        BCenterPopupsOnWindow() {
+          return this.m_bCenterPopupsOnWindow;
+        }
+        RequestModalMeasure(_, _, _) {
+          this.m_rgMeasureModalRequests.push({
+            rctToMeasure: _,
+            fnResults: _,
+            promiseContentReady: _,
+          }),
+            this.m_OnMeasureModal.Dispatch();
+        }
+        get legacy_popup_modals() {
+          return this.m_rgLegacyPopupModals;
+        }
+        ShowLegacyPopupModal(_, _, _, _) {
+          const _ = () => {
+              let _ = this.m_rgLegacyPopupModals.indexOf(_);
+              -1 != _ && this.m_rgLegacyPopupModals.splice(_, 1),
+                this.m_OnLegacyPopupModalCountChanged.Dispatch(
+                  this.m_rgLegacyPopupModals.length,
+                ),
+                _.fnOnClose && __webpack_require__.fnOnClose();
+            },
+            _ = new _._(
+              _,
+              _,
+              {
+                ..._,
+                fnOnClose: _,
+              },
+              {
+                bCenterOnWindow: this.m_bCenterPopupsOnWindow,
+                ..._,
+              },
+            );
+          return (
+            this.m_rgLegacyPopupModals.push(_),
+            this.m_OnLegacyPopupModalCountChanged.Dispatch(
+              this.m_rgLegacyPopupModals.length,
+            ),
+            {
+              Close: _,
+              Update: (_) => {
+                _.UpdateModal(_);
+              },
+            }
+          );
+        }
+      }
+      const _ = new (class {
+        m_mapModalManager = new WeakMap();
+        GetModalManager(_) {
+          let _ = this.m_mapModalManager.get(_);
+          return (
+            _ ||
+              (console.assert(
+                !1,
+                `Early access to modal manager, creating one for ${_.document.title}`,
+              ),
+              (_ = new _()),
+              this.m_mapModalManager.set(_, _)),
+            _
+          );
+        }
+        RegisterModalManager(_, _) {
+          (0, _._)(
+            !this.m_mapModalManager.has(_) || _ == window,
+            `Stomping CModalManager for ${_.document.title}!`,
+          );
+          const _ = this.m_mapModalManager.get(_);
+          return (
+            this.m_mapModalManager.set(_, _),
+            () => {
+              _
+                ? this.m_mapModalManager.set(_, _)
+                : this.m_mapModalManager.delete(_);
+            }
+          );
+        }
+        UnregisterModalManager(_) {
+          this.m_mapModalManager.delete(_);
+        }
+      })();
+      function _(_) {
+        return _.GetModalManager(_);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_) {
+        const _ = _().ModalPosition ?? _;
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        let _,
+          _ = {};
+        _.onEscKeypress &&
+          ((_.tabIndex = 0),
+          (_.onKeyDown = (_) => {
+            27 == _.keyCode && _.onEscKeypress();
+          }),
+          (_.onMouseDown = (_) => {
+            _.currentTarget !== _.target ||
+              _.bDisableBackgroundDismiss ||
+              _.onEscKeypress();
+          }),
+          (_ = (_) => {
+            _ && (_._(_, _.ownerDocument.activeElement) || _.focus());
+          }));
+        let _ = ["ModalPosition"];
+        _.className && _.push(_.className),
+          _.bDestructiveWarning && _.push("Destructive");
+        const _ =
+            _.renderContent ||
+            ((_) =>
+              _.createElement("div", {
+                ..._,
+              })),
+          _ = _.createElement(
+            _.Fragment,
+            null,
+            !_.hideTopBar &&
+              _.createElement("div", {
+                className: "ModalPosition_TopBar",
+              }),
+            _.onEscKeypress &&
+              !_.bHideCloseIcon &&
+              _.createElement(
+                "div",
+                {
+                  className: "ModalPosition_Dismiss",
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: "closeButton",
+                    onClick: (_) => {
+                      _.stopPropagation(), _.onEscKeypress();
+                    },
+                  },
+                  _.createElement(_.sED, null),
+                ),
+              ),
+            _.createElement(_._, null, _.children),
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _.join(" "),
+            ..._,
+            ref: _,
+          },
+          _({
+            className: "ModalPosition_Content",
+            children: _,
+          }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _) {
+        const _ = (0, _._)(_),
+          _ = _?.bForcePopOut || _(_);
+        (0, _._)(
+          !(_ && _?.bNeverPopOut),
+          "Conflicting popout options; will ignore bNeverPopOut",
+        );
+        const _ = !_ && !0 === _?.bNeverPopOut;
+        let _;
+        if (
+          (_(_) || (!_ && _(_, _))) &&
+          !(_ && _?.popupWidth && _?.popupHeight)
+        ) {
+          const _ = _.cloneElement(_, {
+            closeModal: () => {},
+          });
+          _ = await (async function (_, _, _) {
+            return new Promise((_, _) => {
+              _.RequestModalMeasure(_, _, _);
+            });
+          })(_, _, _?.promiseRenderComplete);
+        }
+        const _ =
+          _ && _.height / _.innerHeight < 0.9 && _.width / _.innerWidth < 0.8;
+        if (_ || (!_ && _))
+          return _(_, _, void 0, {
+            fnOnClose: _?.fnOnClose,
+          });
+        {
+          const _ = {
+              strTitle: _?.strTitle || (0, _._)("#Dialog_DefaultWindowTitle"),
+              fnOnClose: _?.fnOnClose,
+              popupWidth: _?.popupWidth || _?.width,
+              popupHeight: _?.popupHeight || _?.height,
+              bHideMainWindowForPopouts: _?.bHideMainWindowForPopouts,
+              className: _?.className,
+            },
+            _ = {
+              bHideActions: _?.bHideActionIcons,
+            },
+            _ = _?.browserContext || _.browserInfo;
+          return _(_, _, _.strTitle, _, _, _, _);
+        }
+      }
+      async function _(_, _, _) {
+        return _(_, _, {
+          bHideMainWindowForPopouts: !0,
+          ..._,
+        });
+      }
+      function _(_, _, _, _, _, _, _) {
+        let _, _;
+        const _ = _.props.closeModal,
+          _ = () => {
+            _ && _.Close(), _ && _(), _?.fnOnClose && _.fnOnClose();
+          },
+          _ = () => {
+            _ && _.Close(), _();
+          },
+          _ = _.cloneElement(_, {
+            closeModal: _,
+          });
+        if (_((_ = _ || (0, _._)(_)), _) && _ && _) {
+          if (_.bHideMainWindowForPopouts) {
+            const _ = _.createElement(
+              _._,
+              {
+                className: "Hidden",
+                onEscKeypress: _.props.bDisableBackgroundDismiss ? void 0 : _,
+              },
+              _.createElement("div", null),
+            );
+            _ = _.ShowModal(_);
+          }
+          const _ = {
+            ..._,
+            fnOnClose: _,
+            browserContext: _,
+          };
+          _ = _.ShowLegacyPopupModal(_, _, _, _);
+        } else _ = _.ShowModal(_);
+        return _;
+      }
+      function _(_, _) {
+        return (
+          (_ = _ || (0, _._)(_ || window)), _._.USE_POPUPS && _.BUsePopups()
+        );
+      }
+      function _(_) {
+        return _.BOnlyPopups && _.BOnlyPopups();
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -89378,7 +89391,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -89389,6 +89402,7 @@
             _: "0px",
             _: "0px",
             viewBox: "0 0 64 64",
+            role: "presentation",
           },
           _.createElement(
             "g",
@@ -89548,7 +89562,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -89556,6 +89570,7 @@
             viewBox: "0 0 100 100",
             _: "0px",
             _: "0px",
+            ..._,
           },
           _.createElement("path", {
             _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
@@ -89703,6 +89718,378 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
+          _ = (0, _._)(_),
+          _ = _.useCallback(() => {
+            __webpack_require__
+              ? __webpack_require__()
+              : (0, _._)(_, "Window.ToggleMaximize") &&
+                _.SteamClient.Window.ToggleMaximize();
+          }, [_, __webpack_require__]);
+        return _.createElement(
+          _,
+          {
+            className: (0, _._)(
+              _ ? "restoreButton" : "maximizeButton",
+              "windowControlButton",
+            ),
+            onClick: _,
+          },
+          !_ &&
+            (_ ? _.createElement(_.ZWw, null) : _.createElement(_.hz4, null)),
+        );
+      }
+      function _(_) {
+        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
+          _ = _.useCallback(() => {
+            _.SteamClient.Window.Minimize();
+          }, [_]);
+        return _.createElement(
+          _,
+          {
+            className: "minimizeButton windowControlButton",
+            onClick: __webpack_require__ ?? _,
+          },
+          !_ && _.createElement(_.Xjb, null),
+        );
+      }
+      function _(_) {
+        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
+          _ = _.useCallback(() => {
+            _ &&
+              ((0, _._)(_, "Window.Close")
+                ? _.SteamClient.Window.Close()
+                : _.close());
+          }, [_]);
+        return _.createElement(
+          _,
+          {
+            className: "closeButton windowControlButton",
+            onClick: __webpack_require__ ?? _,
+          },
+          !_ && _.createElement(_.sED, null),
+        );
+      }
+      function _(_) {
+        const { className: _, onClick: __webpack_require__, children: _ } = _,
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__ &&
+                (_.stopPropagation(), __webpack_require__(_));
+            },
+            [__webpack_require__],
+          );
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)("title-area-icon", _),
+            onClick: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: "title-area-icon-inner",
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            style: __webpack_require__,
+            hideActions: _,
+            hideClose: _,
+            hideMin: _,
+            hideMax: _,
+            bOSX: _ = (0, _._)(),
+            bForceWindowFocused: _,
+            onMinimize: _,
+            onMaximize: _,
+            onClose: _,
+            extraActions: _,
+            popup: _,
+            children: _,
+          } = _,
+          _ = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              "TitleBar",
+              "title-area",
+              _ && "OSX",
+              (_ || _) && "WindowFocus",
+              _,
+            ),
+            style: __webpack_require__,
+          },
+          _.createElement("div", {
+            className: "title-area-highlight",
+          }),
+          _.createElement(
+            "div",
+            {
+              className: "title-area-children",
+            },
+            _,
+          ),
+          !_ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: "title-bar-actions extra-actions",
+                  },
+                  _,
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: "title-bar-actions window-controls",
+                },
+                !_ &&
+                  _.createElement(_, {
+                    popup: _,
+                    onClose: _,
+                    bOSX: _,
+                  }),
+                !_ &&
+                  _.createElement(_, {
+                    popup: _,
+                    onMaximize: _,
+                    bOSX: _,
+                  }),
+                !_ &&
+                  _.createElement(_, {
+                    popup: _,
+                    onMinimize: _,
+                    bOSX: _,
+                  }),
+              ),
+            ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(null),
+          _ = _.useMemo(
+            () => ({
+              targetElement: _,
+            }),
+            [_],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement("div", {
+            ref: __webpack_require__,
+          }),
+          _.children,
+        );
+      }
+      function _(_) {
+        const { divProps: _, tooltipProps: __webpack_require__ } = _({
+          ..._,
+          toolTipContent: _.toolTipContent
+            ? _.createElement(_, null, _(_.toolTipContent))
+            : null,
+        });
+        return _.createElement(
+          _._,
+          {
+            className: "tool-tip-source",
+            noFocusRing: !0,
+            focusable: _.bNavStop ?? !!_.onClick,
+            ..._,
+          },
+          _.createElement(_, {
+            ...__webpack_require__,
+          }),
+          _.children,
+        );
+      }
+      function _(_) {
+        const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
+        return _.createElement(
+          _._,
+          {
+            className: "tool-tip-source",
+            noFocusRing: !0,
+            focusable: _.bNavStop ?? !!_.onClick,
+            ..._,
+          },
+          _.createElement(_, {
+            ...__webpack_require__,
+          }),
+          _.children,
+        );
+      }
+      function _(_) {
+        const { children: _ } = _,
+          { divProps: __webpack_require__, tooltipProps: _ } = _({
+            ..._,
+            toolTipContent: _.toolTipContent
+              ? _.createElement(_, null, _(_.toolTipContent))
+              : null,
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.cloneElement(_, {
+            ...__webpack_require__,
+            ..._.props,
+          }),
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            toolTipContent: _,
+            nDelayShowMS: __webpack_require__ = 300,
+            bDisabled: _,
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            strTooltipClassname: _,
+            bNavStop: _,
+            bTopmost: _,
+            usePointerEvents: _,
+            children: _,
+            onMouseLeave: _,
+            ..._
+          } = _,
+          _ = {
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            className: _,
+            bTopmost: _,
+          },
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(),
+          _ = _.useCallback(
+            (_) => {
+              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
+                (_(!0), _(_.currentTarget));
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => {
+            _(!1);
+          }, []),
+          _ = {
+            active: _ && !_,
+            target: _,
+            nDelayShowMS: __webpack_require__,
+            hoverPositionProps: _,
+            children: _,
+          };
+        let _ = {
+          ..._,
+        };
+        return (
+          _
+            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
+            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
+          {
+            divProps: _,
+            stateHandlers: {
+              setTarget: _,
+              setHovered: _,
+            },
+            tooltipProps: _,
+          }
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? (0, _._)(_) : _;
+      }
+      function _(_) {
+        return _.createElement("div", {
+          ..._,
+          className: (0, _._)(_().TextToolTip, _.className),
+        });
+      }
+      function _(_) {
+        const {
+            active: _,
+            target: __webpack_require__,
+            nDelayShowMS: _ = 300,
+            hoverPositionProps: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _();
+        if (
+          (_.useEffect(() => {
+            if (_) {
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
+                return () => window.clearTimeout(_);
+              }
+              _(!0);
+            } else _(!1);
+          }, [_]),
+          !_)
+        )
+          return null;
+        if (!_ || !__webpack_require__) return null;
+        const { targetElement: _ } = _;
+        return _.createPortal(
+          _.createElement(
+            _._,
+            {
+              target: __webpack_require__,
+              ..._,
+            },
+            _,
+          ),
+          _ ?? __webpack_require__.ownerDocument.body,
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -89748,21 +90135,6 @@
         const _ = _(_, _);
         return Math.sqrt(_(_, _));
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(_, _, ...__webpack_require__) {
-        try {
-          console.assert
-            ? 0 == __webpack_require__.length
-              ? console.assert(!!_, _)
-              : console.assert(!!_, _, ...__webpack_require__)
-            : _ || console.warn(_, ...__webpack_require__);
-        } catch (_) {}
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -91155,7 +91527,7 @@
               /{MEDIA_CDN_COMMUNITY_URL}/g,
               _._.MEDIA_CDN_COMMUNITY_URL,
             )).replace(/{COMMUNITY_CDN_URL}/g, _._.COMMUNITY_CDN_URL)),
-            (_ = (0, _._)(_)))
+            (_ = _._.RegexSearchAndReplaceClanImageURL(_)))
           : _;
       }
       function _(_) {
@@ -91192,6 +91564,56 @@
             !_.startsWith("steam://") &&
             (_ = `steam://openurl/${_}`),
           _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = _.useCallback(() => {
+            (0, _._)(_, "Window.IsWindowMaximized")
+              ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
+                  __webpack_require__(_);
+                })
+              : _?.screen &&
+                __webpack_require__(
+                  _.screen.availWidth == _.innerWidth &&
+                    _.screen.availHeight == _.innerHeight,
+                );
+          }, [_]);
+        return (
+          _.useEffect(_, [_, _]),
+          (0, _._)(_, "resize", _),
+          (0, _._)(_, ["window_moved"], _),
+          _
+        );
+      }
+      function _(_, _ = 100) {
+        const [__webpack_require__, _] = _.useState(!1),
+          _ = _.useCallback(() => _(!0), [_]),
+          _ = _.useCallback(() => _(!1), [_]);
+        return (
+          _.useEffect(
+            () =>
+              _
+                ? (_.addEventListener("focus", _),
+                  _.addEventListener("blur", _),
+                  () => {
+                    _.removeEventListener("focus", _),
+                      _.removeEventListener("blur", _);
+                  })
+                : void 0,
+            [_, _, _],
+          ),
+          (0, _._)(__webpack_require__, _)
         );
       }
     },
@@ -91556,7 +91978,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 5518), _((_._ = _));
+      return (_ = 6081), _((_._ = _));
       var _;
     });
     _._();
