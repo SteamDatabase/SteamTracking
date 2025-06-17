@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
 	"files": {
 		"maxSize": 100000000
 	},
@@ -8,5 +8,8 @@
 		"formatWithErrors": true,
 		"indentWidth": 2,
 		"indentStyle": "space"
+	},
+	"linter": {
+		"enabled": false
 	}
 }
