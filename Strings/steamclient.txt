@@ -15621,7 +15621,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42,5U
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -42553,6 +42553,7 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c@IEJ
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -57919,7 +57920,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 12 2025 18:28:52
+steam Jun 16 2025 21:30:27
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -15,9 +15,12 @@
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
+ GHz
+ MHz
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
  ReadToken overflow
+ THz
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [clone 
@@ -371,6 +374,7 @@ $\nY8O
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%1.1f
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
 %Y-%m-%d %H:%M:%S
@@ -445,6 +449,7 @@ $\nY8O
 %s:hscroll
 %s:vscroll
 %sSeperator
+%sUnits
 %s_avail
 %s_collapsed
 %s_hidden
@@ -1239,7 +1244,10 @@ $\nY8O
 16HTMLComboBoxHost
 16ListPanelDragger
 17CFileWriterThread
+17CIngameFPSCPUInfo
+17CIngameFPSGPUInfo
 17CIngameFPSGameFPS
+17CIngameFPSRAMInfo
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -1253,7 +1261,6 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
-18:28:53
 18CJSCallbackPromise
 18CMsgBlockedRequest
 18CMsgBrowserResized
@@ -1310,6 +1317,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:30:02
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1570,7 +1578,6 @@ Accounts not friends
 AchievementUnlocked
 Activate
 ActivateItem
-ActivateModule
 Active
 AddActionSignalTarget
 AddAllocatedMessage
@@ -1659,6 +1666,8 @@ AutoDeny
 AutoResize
 Avatar Image
 Avestan
+AvgNumber
+AvgSep
 Away
 Azerbaijani
 BBVA Continental
@@ -1680,7 +1689,9 @@ B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackButton
 BackUp() can only be called after a successful Next().
 BackgroundHighContrast
+BackgroundHighContrastClassic
 BackgroundLowContrast
+BackgroundLowContrastClassic
 Backspace
 Backup Running
 Bad Access flag on shared mem create: %s: %u\n
@@ -2030,9 +2041,12 @@ CH\f1
 CIMEPanel
 CIPAndPort::GetIPv4 called on IPv6 address
 CIngameFPSBanner
+CIngameFPSCPUInfo
+CIngameFPSGPUInfo
 CIngameFPSGameFPS
 CIngameFPSGraph
 CIngameFPSPresentationFPS
+CIngameFPSRAMInfo
 CJSMethodArgs::AddProtobufAsBinary
 CJSMethodArgs::AddProtobufAsObject
 CLIENTENGINE_INTERFACE_VERSION005
@@ -2191,6 +2205,15 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
+CPU 
+CPUInfoAvg
+CPULabel
+CPUSpeed
+CPUSpeedMax
+CPUSpeedUnits
+CPUUtilization
+CPUUtilizationMax
+CPUUtilizationSep
 CPanelKeyBindingMapDictionary
 CPathString
 CRLF)
@@ -2932,7 +2955,6 @@ Failed to initialize server address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd: %d\n
 Failed to load menu file %s\n
 Failed to load optional module %s\n
-Failed to load platform modules (friends, server browser, etc...)\n
 Failed to parse input
 Failed to provide options
 Failed to receive shared FD\n
@@ -3074,7 +3096,6 @@ Friend
 Friend-only
 FriendAdded
 Friends
-FriendsUIInterfaceV001
 Full
 FullPathEdit
 Fully Installed
@@ -3100,6 +3121,12 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GPU 
+GPUInfo
+GPULabel
+GPUUtilization
+GPUVRam
+GPUVRamWarning
 GROUPACHIEVEMENTS
 Galician
 Game
@@ -3458,7 +3485,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun 12 2025
+Jun 16 2025
 June
 K'iche'
 KEY_0
@@ -4482,11 +4509,14 @@ Pending Gift
 Pending Log Request Active
 Pending Refund
 PendingApproval
-PerfHighContrast
-PerfLowContrast
+PerfHighContrastClassic
+PerfLowContrastClassic
 PerfTextLarge
+PerfTextLargeClassic
 PerfTextMedium
+PerfTextMediumClassic
 PerfTextSmall
+PerfTextSmallClassic
 Permanent
 Permanent Redirect
 Persian
@@ -4549,6 +4579,8 @@ Prefetch
 Prefetching Info
 PrepareBuffer( nNewLength ) == pstrNew
 PresentationFPS
+PresentationFPSLabel
+PresentationFPSNumber
 PressButton
 Priority Auto Update
 Priority Down
@@ -4600,6 +4632,13 @@ QueryBox
 QuickAccess
 Quit
 R1h58
+RAM 
+RAMInfo
+RAMLabel
+RAMMax
+RAMSep
+RAMUnits
+RAMUsed
 RESOURCE_EXHAUSTED
 RGBA: %.2X %.2X %.2X %.2X
 RackSystem
@@ -4607,6 +4646,7 @@ RadioButton
 RadioButton::OnThink()
 RadioButtonChecked
 Raid
+RamUsed
 Ran out of IPC SharedObjectManager entries!\n
 RankedByAveragePlaytimeTrend
 RankedByBanContentCheck
@@ -4788,6 +4828,8 @@ Sending of an email failed
 SentenceMode
 SentenceModeMenu
 Seperator
+SeperatorBack
+SeperatorFront
 September
 Serbian
 SerialNumber
@@ -5355,11 +5397,14 @@ VGUI_Setup001
 VGUI_Surface039
 VGUI_System011
 VGUI_ivgui007
-VGuiModuleLoader004
 VISTA
 VPanel
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
+VRAMMax
+VRAMSep
+VRAMUnits
+VRAMUsed
 VRModeBegin\n
 VRModeEnd after %d seconds\n
 VRModeEnd with no matching begin.\n
@@ -6605,10 +6650,7 @@ g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
-g_pFriendsUI
 g_pMemAllocSteam
-g_pVGuiModuleLoader
-g_pVGuiModuleLoader->RunFrame()
 g_vecTempTextBuffer
 galician
 game
@@ -7636,7 +7678,6 @@ modf
 modified
 modified64
 modifiers
-moduleIndex
 mold 1.10.1 (compatible with GNU ld)
 mongolian
 month
@@ -8044,9 +8085,12 @@ resource/layout/%s.layout
 resource/layout/%s_%s.layout
 resource/layout/htmlfindbar.layout
 resource/layout/htmlpopup.layout
+resource/layout/ingamecpuinfo.layout
 resource/layout/ingamefpsbanner.layout
 resource/layout/ingamegamefps.layout
+resource/layout/ingamegpuinfo.layout
 resource/layout/ingamepresentationfps.layout
+resource/layout/ingameraminfo.layout
 resource/layout/layoutdebugdialog.layout
 resource/layout/layoutdebugdialog_details.layout
 resource/layout/pagedragframe.layout
@@ -8698,7 +8742,6 @@ xhosa
 xhotspot
 xpos
 y9*O
-y_Ai
 y_local
 year
 yhotspot

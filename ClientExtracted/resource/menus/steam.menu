@@ -111,7 +111,7 @@
 		Legal							{	text="#steam_menu_LegalInformation"			shellcmd="steam://url/LegalInformation" }
 		SSA								{	text="#steam_menu_SteamSubscriberAgreement"	shellcmd="steam://url/SSA" }
 		Divider							{}
-		SystemReport					{	text="#steam_menu_systemreport"				shellcmd="steam://open/systemreport" }
+		SystemReport		[!$OSX]		{	text="#steam_menu_systemreport"				shellcmd="steam://open/systemreport" }
 		SystemInfo						{	text="#steam_menu_systeminfo"				shellcmd="steam://open/systeminfo" }
 		About							{	text="#steam_about"							shellcmd="steam://open/about" }
 	}

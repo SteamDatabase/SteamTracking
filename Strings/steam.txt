@@ -2329,8 +2329,6 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
-18:28:40
-18:28:49
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2409,6 +2407,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:29:47
+21:29:58
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -6529,7 +6529,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 12 2025
+Jun 16 2025
 June
 K'iche'
 K(\f]C15
@@ -8745,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 12 2025 18:28:49
+Startup - updater built Jun 16 2025 21:29:58
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

@@ -5,7 +5,10 @@
 		PresentationFPS { controlname=CIngameFPSPresentationFPS }
 		GameFPS { controlname="CIngameFPSGameFPS" }
 	
-		IngameFPSGraph { controlname=CIngameFPSGraph wide="0" tall="24" }
+		IngameFPSGraph { controlname=CIngameFPSGraph wide="0" tall="24" visble="0" }
+		CPUInfoAvg { controlname=CIngameCPUInfo visible="0" }
+		GPUIno { controlname="CIngameGPUInfo" visible="0" }
+		RAMInfo { controlname=CIngameRAMInfo visible="0" }
 	}
 
 	colors
@@ -13,9 +16,9 @@
 		FPSGraph.ColorFPSAvg "0 212 53 255"
 		FPSGraph.ColorFPSBad "218 100 100 255"  // Code will adjust alpha for intensity depending on actual bad frame count in the second
 		FPSGraph.ColorLegend "0 212 53 255"
-		FPSGraph.HeightSmall "23"
-		FPSGraph.HeightMedium "26"
-		FPSGraph.HeightLarge "28"
+		FPSGraph.HeightSmall "18"
+		FPSGraph.HeightMedium "21"
+		FPSGraph.HeightLarge "23"
 	}
    	
 	styles
@@ -24,22 +27,26 @@
 		{
 			font-family="Motiva"
 		}
+
 		GraphSmall
 		{
 			font-family="Motiva"
-			font-size="14"
+			font-weight="700"
+			font-size="12"
 		}
 
 		GraphMedium
 		{
 			font-family="Motiva"
-			font-size="15"
+			font-weight="700"
+			font-size="13"
 		}
 
 		GraphLarge
 		{
 			font-family="Motiva"
-			font-size="16"
+			font-weight="700"
+			font-size="14"
 		}
 
 		BackgroundHighContrast
@@ -49,13 +56,23 @@
 
 		BackgroundLowContrast
 		{
-			bgcolor="0 0 0 90"
+			bgcolor="0 0 0 65"
 		}
-		
+
+		BackgroundHighContrastClassic
+		{
+			bgcolor="0 0 0 60"
+		}
+
+		BackgroundLowContrastClassic
+		{
+			bgcolor="0 0 0 0"
+		}
+	
 	}
 	
 	layout
 	{
-		place { control="PresentationFPS,GameFPS,IngameFPSGraph" align=left-center spacing=0 }
+		place { control="PresentationFPS,GameFPS,IngameFPSGraph,CPUInfoAvg,GPUInfo,RAMInfo" align=left-center spacing=0 }
 	}
 }

@@ -3,6 +3,8 @@
 	controls
 	{
 		FPSLabel { controlname=Label }
+		AvgNumber { controlname=Label labeltext="" }
+		AvgSep { controlname=Label labeltext=" " }
 		MinLabel { controlname=Label }
 		MinFPSNumber { controlname=Label labeltext="" }
 		MaxLabel { controlname=Label }
@@ -40,6 +42,6 @@
 	
 	layout
 	{
-		place { control="FPSLabel,MinLabel,MinFPSNumber,MaxLabel,MaxFPSNumber,Seperator" dir="right" align="left-center" spacing=0 }
+		place { control="FPSLabel,AvgNumber,AvgSep,MinLabel,MinFPSNumber,MaxLabel,MaxFPSNumber,Seperator" dir="right" align="left-center" spacing=0 }
 	}
 }

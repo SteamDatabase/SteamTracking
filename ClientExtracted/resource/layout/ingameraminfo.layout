@@ -1,0 +1,40 @@
+"resource/layout/ingameraminfo.layout"
+{
+	controls
+	{
+		RAMLabel { controlname=Label text="RAM " style="RAMLabel" }
+		RAMUsed { controlname=Label text="" style="RAMUtilization" }
+		RAMSep { controlname=Label  text="/" style="RAMUtilization" }
+		RAMMax { controlname=Label text="" style="RAMUtilization" }
+		RAMUnits { controlname=Label text="" style="RAMUtilization" }
+
+		SeperatorBack { controlname=Label style="PerfSeperator" text=" | " }
+	}
+
+	styles
+	{
+		Label
+		{
+			font-family="Motiva"
+		}
+
+		RAMLabel
+		{
+			font-family="Motiva"
+			font-weight="700"
+
+			textcolor="165 115 226 255"
+		}
+
+		RAMUtilization
+		{
+			font-family="Motiva"
+			textcolor="220 220 220 255"
+		}
+	}
+	
+	layout
+	{
+		place { control="RAMLabel,RAMUsed,RAMSep,RAMMax,RAMUnits,SeperatorBack" dir="right" align="left-center" spacing=0 }
+	}
+}
