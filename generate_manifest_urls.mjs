@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
+import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 const files = [
 	{

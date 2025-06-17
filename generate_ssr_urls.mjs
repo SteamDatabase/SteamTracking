@@ -2,6 +2,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { extname, join } from "node:path";
+import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 const folders = [
 	{

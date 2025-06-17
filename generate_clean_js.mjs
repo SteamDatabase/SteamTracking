@@ -30,6 +30,7 @@ import fs from "node:fs";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { generate } from "astring";
+import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 // Process command line arguments
 const inputFile = process.argv[2];

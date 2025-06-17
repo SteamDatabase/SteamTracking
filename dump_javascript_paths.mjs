@@ -1,5 +1,10 @@
 import { join as pathJoin, resolve as pathResolve } from "node:path";
 import { readdir as readDir } from "node:fs/promises";
+import { Syntax, VisitorKeys } from "estraverse";
+
+// https://github.com/estools/estraverse/pull/120
+Syntax.StaticBlock = "StaticBlock";
+VisitorKeys.StaticBlock = ["body"];
 
 const pathsToRecurse = [
 	"./Scripts/",
