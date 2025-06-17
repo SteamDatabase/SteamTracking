@@ -24426,7 +24426,11 @@
           if (_ && g && h) {
             const e =
               1 === _?.GetAppType() ? _.GetAppID() : _.GetDemoAppIDs()[0];
-            return i.createElement(q, { appid: e });
+            return i.createElement(
+              "div",
+              { className: r },
+              i.createElement(q, { appid: e }),
+            );
           }
           return null;
         }

@@ -18211,16 +18211,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
-        return (
-          (_.BIsVisibleEvent() && _ && 12 == _.type) ||
-          (!_ &&
-            (13 == _.type ||
-              14 == _.type ||
-              28 == _.type ||
-              35 == _.type ||
-              26 == _.type ||
-              21 == _.type))
-        );
+        if (!_.BIsVisibleEvent()) return !1;
+        return _ == (12 == _.type);
       }
       const _ = (0, _._)((_) => {
         const _ = (0, _._)(),

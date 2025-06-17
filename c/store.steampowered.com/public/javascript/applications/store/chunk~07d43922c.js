@@ -15093,7 +15093,7 @@
                 },
                 !_ &&
                   !_ &&
-                  _.BHasDemo() &&
+                  (_.BHasDemo() || 1 == _.GetAppType()) &&
                   _.createElement(_._, {
                     info: {
                       _: _.GetAppID(),

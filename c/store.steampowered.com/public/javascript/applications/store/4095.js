@@ -26272,9 +26272,15 @@
           if (_ && _ && _) {
             const _ =
               1 === _?.GetAppType() ? _.GetAppID() : _.GetDemoAppIDs()[0];
-            return _.createElement(_, {
-              appid: _,
-            });
+            return _.createElement(
+              "div",
+              {
+                className: __webpack_require__,
+              },
+              _.createElement(_, {
+                appid: _,
+              }),
+            );
           }
           return null;
         }

@@ -13456,7 +13456,7 @@
                 { className: ga().ButtonsRowWrap },
                 !u &&
                   !r &&
-                  c.BHasDemo() &&
+                  (c.BHasDemo() || 1 == c.GetAppType()) &&
                   n.createElement(ut.j, {
                     info: {
                       id: c.GetAppID(),
