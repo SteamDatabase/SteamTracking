@@ -16,7 +16,6 @@
 
 		PresentationFPSLabel
 		{
-			font-family="Motiva"
 			font-weight="700"
 
 			textcolor="218 100 100 255"
@@ -25,7 +24,6 @@
 
 		PresentationFPSNumber
 		{
-			font-family="Motiva"
 			textcolor="220 220 220 255"
 		}
 	}

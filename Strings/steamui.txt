@@ -1632,6 +1632,7 @@ $ffn
 $google/protobuf/source_context.proto"
 $steammessages_parental_objects.proto"
 $system\InGameOverlayScreenshotHotKey
+$system\InGameOverlayShowFPSBGOpacity
 ${LANGUAGE}
 %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 %'%1%=%C%K%O%s%
@@ -2249,6 +2250,7 @@ ${LANGUAGE}
 %store%
 %storehttps%
 %system\EnableSCTenFootOverlayCheckNew
+%system\InGameOverlayShowFPSSaturation
 %u.%u.%u.%u:%i
 %u/config/
 %u/config/%s.vdf
@@ -2491,6 +2493,7 @@ ${LANGUAGE}
 &session->aob.framebufs == bufs
 &steammessages_clientserver_video.proto"
 &system\InGameOverlayRestoreBrowserTabs
+&system\InGameOverlayShowFPSDetailLevel
 &ut8
 &webuimessages_gamerecordingfiles.proto"3\n1CGameRecording_GetAppsWithBackgroundVideo_Request"
 &yLrG
@@ -8165,7 +8168,6 @@ ${LANGUAGE}
 16CDeleteCursorMsg
 16CDownloadClipJob
 16CEconItem_Action
-16CGameStreamAudio
 16CHTMLProtoBufMsgI10CMsgGoBackE
 16CHTMLProtoBufMsgI10CMsgReloadE
 16CHTMLProtoBufMsgI11CMsgKeyCharE
@@ -20676,6 +20678,7 @@ I444ToARGBRow_C
 I5=T
 I9xq
 I<OXb<^
+I@16CGameStreamAudio
 IA5STRING
 IANA
 IB;4e^WP
@@ -20886,6 +20889,9 @@ In dispute
 In order to pair, please put the Steam client in developer mode (Settings -> System -> Enable Developer Mode)\nThen navigate to Settings -> Developer and press 'Pair New Host' before trying again.
 InGameOverlayScreenshotHotKey
 InGameOverlayShortcutKey
+InGameOverlayShowFPSBGOpacity
+InGameOverlayShowFPSContrast
+InGameOverlayShowFPSSaturation
 InList
 InQueue
 Inappropriate
@@ -21448,7 +21454,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 16 2025 21:30:25
+Jun 18 2025 00:25:39
 June
 K'iche'
 K(\f]C15
@@ -32362,6 +32368,7 @@ Zulu
 ]XWRILCFup
 ][QWECIOmkagusy
 ]\n gamescope_game_resolution_global
+]\n overlay_fps_counter_detail_level
 ]\n"accessibility_screen_reader_volume
 ]\n\fCanSubscribe
 ]\n\fFactoryReset
@@ -32607,6 +32614,7 @@ a5j_5W
 a8Bk
 a?wSa?\
 aDSS
+aE< N
 aECDSA
 aGOST
 aGOST01
@@ -34125,6 +34133,7 @@ can_view_history
 cancel_pairing_request
 cancel_pairing_response
 cancelable
+canceled
 canceled the join request
 candidate
 candidate_generation
@@ -35403,6 +35412,7 @@ dSAQuality
 dV22tN::
 dZ!2.
 dZK<),F8
+d\n%overlay_fps_counter_saturation_factor
 da_DK
 daisywheel
 damaged LZ stream
@@ -37455,7 +37465,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenR
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -44475,8 +44485,11 @@ outputitemdefid
 overall_estimated_time_remaining_sec
 overall_percent_complete
 overflow error
+overlay_fps_counter_bgopacity
 overlay_fps_counter_corner
+overlay_fps_counter_detail_level
 overlay_fps_counter_high_contrast
+overlay_fps_counter_saturation_factor
 overlay_key
 overlay_restore_browser_tabs
 overlay_scale_interface
@@ -46914,6 +46927,7 @@ silent
 simpleSecurityObject
 simultaneous_gamepad_mouse
 sindhi
+sinf
 singleExtensions
 singleLevelQuality
 singleRequestExtensions

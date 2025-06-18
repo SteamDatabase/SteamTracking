@@ -23,7 +23,6 @@
 
 		CPULabel
 		{
-			font-family="Motiva"
 			font-weight="700"
 
 			textcolor="218 218 100 255"
@@ -31,13 +30,11 @@
 
 		CPUUtilization
 		{
-			font-family="Motiva"
 			textcolor="220 220 220 255"
 		}
 	
 		CPUSpeed
 		{
-			font-family="Motiva"
 			textcolor="190 190 190 255"
 		}
 	}

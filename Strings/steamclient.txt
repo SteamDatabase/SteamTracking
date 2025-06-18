@@ -3298,7 +3298,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1fTQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -15621,7 +15620,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42,5U
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -18030,6 +18029,7 @@ CCSRequestProcessorJob : Unexpected result %u
 CCacheOffSingleManifestSteamPlayStateJob %u starting.
 CCacheOffSteamPlayStateJob %llu complete
 CCacheOffSteamPlayStateJob %llu processing all compat lists..
+CCacheOffSteamPlayStateJob: queuing to execute when idle, reason: %s
 CCacheOffSteamPlayStateJob: start job, reason: %s
 CCacheOffSteamPlayStateJob: will queue job again, reason: %s
 CCacheOffSteamPlayStateJob::BYieldingRunClientJob
@@ -30610,6 +30610,7 @@ OnLocalCandidateDiscovered
 OnMessage
 OnNetworkConfigFetchCompleted
 OnNewGroupChatMsgAdded
+OnNoGameOrServiceAppRunning
 OnNotificationsRequested
 OnOutputDescription
 OnOutputDone
@@ -42553,7 +42554,6 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
-c@IEJ
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -42686,6 +42686,7 @@ can_view_history
 cancel
 cancel_pairing_request
 cancel_pairing_response
+canceled
 canceled the join request
 cancelled
 candidate
@@ -46258,7 +46259,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenR
 ghjkl
 gidlist
 gidparentcomment
@@ -50687,7 +50688,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2554
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3964
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3984
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
@@ -57920,7 +57921,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 16 2025 21:30:27
+steam Jun 18 2025 00:25:35
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

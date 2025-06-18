@@ -20,7 +20,6 @@
 
 		RAMLabel
 		{
-			font-family="Motiva"
 			font-weight="700"
 
 			textcolor="165 115 226 255"
@@ -28,7 +27,6 @@
 
 		RAMUtilization
 		{
-			font-family="Motiva"
 			textcolor="220 220 220 255"
 		}
 	}

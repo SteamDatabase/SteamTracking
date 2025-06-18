@@ -127,6 +127,9 @@ message CMsgClientSettings {
 	optional bool overlay_scale_interface = 4022 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\OverlayScaleInterface", (setting_default_bool) = true];
 	optional bool overlay_restore_browser_tabs = 4023 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayRestoreBrowserTabs", (setting_default_bool) = true];
 	optional bool enable_avif_screenshots = 4024 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotEnableAVIF"];
+	optional int32 overlay_fps_counter_detail_level = 4025 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSDetailLevel", (setting_default_int) = 1];
+	optional float overlay_fps_counter_saturation_factor = 4026 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSSaturation", (setting_default_float) = 1];
+	optional float overlay_fps_counter_bgopacity = 4027 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSBGOpacity", (setting_default_float) = 0.8];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];

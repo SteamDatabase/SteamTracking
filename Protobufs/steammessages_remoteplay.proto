@@ -542,6 +542,7 @@ message CInputTouchFingerUpMsg {
 	optional uint64 fingerid = 2;
 	optional float x_normalized = 3;
 	optional float y_normalized = 4;
+	optional bool canceled = 5;
 }
 
 message CInputMouseMotionMsg {

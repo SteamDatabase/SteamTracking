@@ -22,21 +22,21 @@
 
 		GameFPSLabel
 		{
-			font-family="Motiva"
 			font-weight="700"
-
 			textcolor="190 190 190 255"
 		}
 
 		GameFPSValue
 		{
-			font-family="Motiva"
 			textcolor="190 190 190 255"
 		}
 		GameFPSValueWarning
 		{
-			font-family="Motiva"
 			textcolor="218 100 100 255"
+		}
+		GameFPSValueWarningDesaturated
+		{
+			textcolor="220 2200 220 255"
 		}
 	}
 	

@@ -2621,6 +2621,7 @@ https://help.steampowered.com/agents/processrefund/${ticket_id}/${strRefCode}
 https://help.steampowered.com/agents/releaseclaimedtickets/
 https://help.steampowered.com/agents/ticketdetails/${ticket_id}
 https://help.steampowered.com/agents/ticketlisting/
+https://help.steampowered.com/en/faqs/view/3462-CD4C-36BD-5767
 https://help.steampowered.com/en/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A
 https://help.steampowered.com/en/ticketmaster/ticket/

@@ -16,9 +16,9 @@
 		FPSGraph.ColorFPSAvg "0 212 53 255"
 		FPSGraph.ColorFPSBad "218 100 100 255"  // Code will adjust alpha for intensity depending on actual bad frame count in the second
 		FPSGraph.ColorLegend "0 212 53 255"
-		FPSGraph.HeightSmall "18"
-		FPSGraph.HeightMedium "21"
-		FPSGraph.HeightLarge "23"
+		FPSGraph.HeightSmall "17"
+		FPSGraph.HeightMedium "18"
+		FPSGraph.HeightLarge "20"
 	}
    	
 	styles
@@ -32,42 +32,23 @@
 		{
 			font-family="Motiva"
 			font-weight="700"
-			font-size="12"
+			font-size="11"
 		}
 
 		GraphMedium
 		{
 			font-family="Motiva"
 			font-weight="700"
-			font-size="13"
+			font-size="12"
 		}
 
 		GraphLarge
 		{
 			font-family="Motiva"
 			font-weight="700"
-			font-size="14"
+			font-size="13"
 		}
 
-		BackgroundHighContrast
-		{
-			bgcolor="0 0 0 90"
-		}
-
-		BackgroundLowContrast
-		{
-			bgcolor="0 0 0 65"
-		}
-
-		BackgroundHighContrastClassic
-		{
-			bgcolor="0 0 0 60"
-		}
-
-		BackgroundLowContrastClassic
-		{
-			bgcolor="0 0 0 0"
-		}
 	
 	}
 	

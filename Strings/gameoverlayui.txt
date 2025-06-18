@@ -892,6 +892,7 @@ $\nY8O
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:25:35
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1317,7 +1318,6 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
-21:30:02
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1688,10 +1688,6 @@ BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackButton
 BackUp() can only be called after a successful Next().
-BackgroundHighContrast
-BackgroundHighContrastClassic
-BackgroundLowContrast
-BackgroundLowContrastClassic
 Backspace
 Backup Running
 Bad Access flag on shared mem create: %s: %u\n
@@ -3124,9 +3120,14 @@ GLIBC_2.8
 GPU 
 GPUInfo
 GPULabel
+GPUTemp
+GPUTempSpace
+GPUTempSpaceAfter
+GPUTempUnits
 GPUUtilization
 GPUVRam
 GPUVRamWarning
+GPUVRamWarningDesaturated
 GROUPACHIEVEMENTS
 Galician
 Game
@@ -3140,6 +3141,7 @@ GameFPS
 GameFPSLabel
 GameFPSValue
 GameFPSValueWarning
+GameFPSValueWarningDesaturated
 GameManagedItems
 GameOverlay exiting due to missing PID argument\n
 GameOverlay exiting due to missing manuallyclearframes argument\n
@@ -3343,8 +3345,10 @@ InGameOverlayScreenshotEnableAVIF
 InGameOverlayScreenshotHotKey
 InGameOverlayScreenshotSaveUncompressed
 InGameOverlayShortcutKey
-InGameOverlayShowFPSContrast
+InGameOverlayShowFPSBGOpacity
 InGameOverlayShowFPSCorner
+InGameOverlayShowFPSDetailLevel
+InGameOverlayShowFPSSaturation
 Inappropriate
 Incompatible
 IncompatibleCheat
@@ -3485,7 +3489,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun 16 2025
+Jun 18 2025
 June
 K'iche'
 KEY_0
@@ -4510,7 +4514,6 @@ Pending Log Request Active
 Pending Refund
 PendingApproval
 PerfHighContrastClassic
-PerfLowContrastClassic
 PerfTextLarge
 PerfTextLargeClassic
 PerfTextMedium
