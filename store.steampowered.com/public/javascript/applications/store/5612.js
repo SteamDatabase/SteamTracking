@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9699],
+  [5612],
   {
     43047: (e) => {
       e.exports = {
@@ -309,7 +309,7 @@
     },
     10622: (e, t, s) => {
       "use strict";
-      s.d(t, { Z: () => u, dV: () => l.d, rO: () => c });
+      s.d(t, { Z: () => u, dV: () => l.d, rO: () => A });
       var a = s(34629),
         r = s(14947),
         n = s(31561),
@@ -317,7 +317,7 @@
         o = s(61859),
         m = s(78327),
         l = s(85044);
-      function c(e) {
+      function A(e) {
         let t = "offline";
         return (
           e &&
@@ -613,13 +613,13 @@
         o = s(52038),
         m = s(78327),
         l = s(3088);
-      const c =
+      const A =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
         u =
           s.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var A = s(43047),
-        h = s.n(A),
+      var c = s(43047),
+        h = s.n(c),
         p = s(81393);
       const g = r.memo(function (e) {
         const {
@@ -629,7 +629,7 @@
             statusStyle: n,
             statusPosition: i,
             children: m,
-            ...A
+            ...c
           } = e,
           g = r.useMemo(() => {
             const e = [];
@@ -643,13 +643,13 @@
                       return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
                     case "Medium":
                     case "MediumLarge":
-                      return c;
+                      return A;
                     case "Large":
                     case "X-Large":
                     case "FillArea":
                       return u;
                     default:
-                      return (0, p.z)(e, `Unhandled size ${e}`), c;
+                      return (0, p.z_)(e, `Unhandled size ${e}`), A;
                   }
                 })(s),
               ),
@@ -666,7 +666,7 @@
               s,
               a,
             ),
-            ...A,
+            ...c,
           },
           r.createElement("div", {
             className: (0, o.A)(h().avatarStatus, "avatarStatus", i),
@@ -818,7 +818,7 @@
     },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => c, f1: () => p, s4: () => g, sB: () => h });
+      s.d(t, { HD: () => A, f1: () => p, s4: () => g, sB: () => h });
       var a = s(34629),
         r = s(14947),
         n = s(19367),
@@ -877,109 +877,19 @@
         }
       }
       (0, a.Cg)([r.sH], l.prototype, "nOverrideDateNow", void 0);
-      const c = new l();
-      window.g_EventCalendarDevFeatures = c;
+      const A = new l();
+      window.g_EventCalendarDevFeatures = A;
       const u = new Date(),
-        A = Math.floor(u.getTime() / 1e3);
+        c = Math.floor(u.getTime() / 1e3);
       function h() {
-        return c.nOverrideDateNow ?? A;
+        return A.nOverrideDateNow ?? c;
       }
       function p() {
         return o.useMemo(() => h(), []);
       }
       function g() {
-        return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
+        return o.useMemo(() => A.GetTimeNowWithOverrideAsDate(), []);
       }
-    },
-    51706: (e, t, s) => {
-      "use strict";
-      s.d(t, {
-        mt: () => m,
-        Qs: () => p,
-        o0: () => g.o0,
-        eV: () => d.e,
-        KG: () => g.KG,
-        Ee: () => g.Ee,
-        x_: () => i.x_,
-        of: () => l,
-        pY: () => g.pY,
-        EN: () => n.E,
-      });
-      var a = s(90626),
-        r = s(10981),
-        n = s(21869),
-        i = s(2654),
-        o =
-          (s(72739),
-          s(48902),
-          s(60155),
-          s(25118),
-          s(84933),
-          s(52745),
-          s(13871),
-          s(78327));
-      s(28460);
-      const m = ({
-        active: e,
-        onDismiss: t,
-        className: s,
-        modalClassName: o,
-        children: m,
-      }) =>
-        a.createElement(
-          n.E,
-          { active: e },
-          a.createElement(
-            i.x_,
-            { onEscKeypress: t, className: o },
-            a.createElement(r.UC, { className: s }, m),
-          ),
-        );
-      function l(e) {
-        const { className: t, children: s } = e;
-        return a.createElement(
-          n.E,
-          { active: !0 },
-          a.createElement("div", { className: t }, s),
-        );
-      }
-      s(81194);
-      var c = s(85585),
-        u = s(7445),
-        A = s(76217),
-        h = s(88843);
-      function p(e) {
-        const { children: t, navID: s, closeModal: r } = e,
-          n = a.createRef(),
-          i = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, o.Qn)() && !o.TS.IN_STEAMUI
-          ? a.createElement(
-              c.B2,
-              {
-                navID: s,
-                navTreeRef: n,
-                onCancelButton: r,
-                className: h.GamepadOnlyModalWrapper,
-              },
-              a.createElement(
-                u.q,
-                null,
-                a.createElement(
-                  A.Z,
-                  {
-                    className: h.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: i,
-                    focusableIfNoChildren: !0,
-                  },
-                  t,
-                ),
-              ),
-            )
-          : a.createElement(a.Fragment, null, t);
-      }
-      var g = s(78395),
-        d = s(10411);
-      s(76222);
     },
     3088: (e, t, s) => {
       "use strict";
@@ -1046,23 +956,6 @@
         }
       }
       (0, a.Cg)([n.oI], i.prototype, "OnImageError", null);
-    },
-    4434: (e, t, s) => {
-      "use strict";
-      s.d(t, { m: () => i });
-      var a = s(41735),
-        r = s.n(a),
-        n = s(90626);
-      function i(e) {
-        const t = n.useRef(r().CancelToken.source());
-        return (
-          n.useEffect(() => {
-            const s = t.current;
-            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
     },
   },
 ]);
