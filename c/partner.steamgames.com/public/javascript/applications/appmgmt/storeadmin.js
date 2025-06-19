@@ -126,6 +126,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CreatorNameCtn: "_38XTY1uRQtSGN-NA3nbbGg",
+        CreatorCtn: "_2Z2NpZBAp01VIPZcHEkMvW",
+        HoverCtn: "-TMA8muDrEsq9vwMsGs8Z",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CapsuleCtn: "c-RZpHTXb06OJeUNz4WEW",
         MissingCapsuleCtn: "_364X0fngRQGCfxG4VyRk_D",
         AppRowCtn: "_2VXPIaz6YEo5TPJqSn_yE5",
@@ -14735,6 +14742,7 @@
             bOnlyShowReleaseDLC: _,
             strLocalizedLabel: _,
             strLocalizedTooltip: _,
+            fnResetAppID: _,
           } = _,
           _ = _(_.parentAppID),
           _ = (0, _.useMemo)(
@@ -14766,13 +14774,25 @@
                 },
                 (0, _._)("#SeasonPass_NoDLC"),
               )
-            : _.createElement(_._, {
-                label: _ || (0, _._)("#SeasonPass_ShipDLC"),
-                tooltip: _ || (0, _._)("#SeasonPass_ShipDLC_ttip"),
-                selectedOption: _,
-                onChange: (_) => __webpack_require__(_.data),
-                rgOptions: _,
-              })
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_._, {
+                  label: _ || (0, _._)("#SeasonPass_ShipDLC"),
+                  tooltip: _ || (0, _._)("#SeasonPass_ShipDLC_ttip"),
+                  selectedOption: _,
+                  onChange: (_) => __webpack_require__(_.data),
+                  rgOptions: _,
+                }),
+                Boolean(_ && _) &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                    },
+                    (0, _._)("#SeasonPass_CustomerComingSoonDLC_clear"),
+                  ),
+              )
           : _.createElement(_._, {
               size: "small",
               position: "center",
@@ -15273,42 +15293,34 @@
             ),
           Boolean(_.completed_appid) &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "a",
-                {
-                  href: `${_._.STORE_BASE_URL}app/${_.completed_appid}`,
-                  target: "_blank",
-                },
-                _?.GetName() || "",
-                " (",
-                _.completed_appid,
-                ")",
-              ),
-              _.createElement("input", {
-                type: "hidden",
-                name: `app[seasonpass][commitments][${_}][completed_appid]`,
-                value: _.completed_appid,
-              }),
+              "a",
+              {
+                href: `${_._.STORE_BASE_URL}app/${_.completed_appid}`,
+                target: "_blank",
+              },
+              _?.GetName() || "",
+              " (",
+              _.completed_appid,
+              ")",
             ),
+          _.createElement("input", {
+            type: "hidden",
+            name: `app[seasonpass][commitments][${_}][completed_appid]`,
+            value: _.completed_appid ? _.completed_appid : "",
+          }),
+          _.createElement("input", {
+            type: "hidden",
+            name: `app[seasonpass][commitments][${_}][completed_event_gid]`,
+            value: _.completed_event_gid ? "" + _.completed_event_gid : "",
+          }),
           Boolean(_.completed_event_gid) &&
             _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "a",
-                {
-                  href: `${_._.STORE_BASE_URL}news/app/${_.parentAppID}/view/${_.completed_event_gid}`,
-                  target: "_blank",
-                },
-                (0, _._)("#SeasonPass_ViewLaunchEvent"),
-              ),
-              _.createElement("input", {
-                type: "hidden",
-                name: `app[seasonpass][commitments][${_}][completed_event_gid]`,
-                value: "" + _.completed_event_gid,
-              }),
+              "a",
+              {
+                href: `${_._.STORE_BASE_URL}news/app/${_.parentAppID}/view/${_.completed_event_gid}`,
+                target: "_blank",
+              },
+              (0, _._)("#SeasonPass_ViewLaunchEvent"),
             ),
           Boolean(!_) &&
             _.createElement(
@@ -15508,6 +15520,9 @@
                     rgExcludeAppIDs: _,
                     seasonPassID: _,
                     bOnlyShowReleaseDLC: !0,
+                    fnResetAppID: () => {
+                      _(!1), _(void 0);
+                    },
                   }),
                 ),
               _ &&
@@ -15565,7 +15580,13 @@
               "tbody",
               null,
               _?.commitments
-                ?.sort((_, _) => _.expected_delivery - _.expected_delivery)
+                ?.sort((_, _) =>
+                  _.includes(_.milestone_id) && !_.includes(_.milestone_id)
+                    ? -1
+                    : !_.includes(_.milestone_id) && _.includes(_.milestone_id)
+                      ? 1
+                      : _.expected_delivery - _.expected_delivery,
+                )
                 .map((_, _) =>
                   _.createElement(_, {
                     key: "row" + _.milestone_id,
@@ -18757,6 +18778,27 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = "useCreatorHomeClanLinksByApp";
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)({
+            queryKey: [_, _],
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_appid(_);
+              const _ = await _._.GetDevPageLinks(_, _);
+              return 1 == _.GetEResult()
+                ? _.Body()
+                    .links()
+                    .map((_) => _.toObject())
+                : (console.error(
+                    `useCreatorHomeClanLinksByApp on AppID ${_} failed with ${_.GetEResult()}`,
+                  ),
+                  []);
+            },
+            enabled: _ > 0,
+          });
+        return _.isLoading ? null : _.data;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -19138,27 +19180,7 @@
               __webpack_require__
             );
           })(_, __webpack_require__),
-          _ = (function (_) {
-            const _ = (0, _._)(),
-              _ = (0, _._)({
-                queryKey: [_, _],
-                queryFn: async () => {
-                  const _ = _._.Init(_._);
-                  __webpack_require__.Body().set_appid(_);
-                  const _ = await _._.GetDevPageLinks(_, _);
-                  return 1 == _.GetEResult()
-                    ? _.Body()
-                        .links()
-                        .map((_) => _.toObject())
-                    : (console.error(
-                        `useCreatorHomeClanLinksByApp on AppID ${_} failed with ${_.GetEResult()}`,
-                      ),
-                      []);
-                },
-                enabled: _ > 0,
-              });
-            return _.isLoading ? null : _.data;
-          })(_),
+          _ = _(_),
           _ = _?.find(
             (_) =>
               _.linkname.trim().toLocaleLowerCase() ==
@@ -19214,26 +19236,40 @@
           minWidth: "350px",
         },
       };
-      function _(_) {
-        const { pageLink: _, strKvTargetName: __webpack_require__ } = _,
-          _ = (0, _.useMemo)(() => new _._(_.clan_steamid).GetAccountID(), [_]),
+      function _(_, _) {
+        const _ = (0, _.useMemo)(
+            () => new _._(_.clan_steamid).GetAccountID(),
+            [_],
+          ),
           _ = (0, _._)(_),
           [_, _] = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
             let _ = "developer";
             return (
-              __webpack_require__.includes("[publisher")
+              _.includes("[publisher")
                 ? (_ = "publisher")
-                : __webpack_require__.includes("[franchise") &&
-                  (_ = "franchise"),
+                : _.includes("[franchise") && (_ = "franchise"),
               {
                 clan_account_id: _,
                 name: _?.group_name,
                 type: _,
               }
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           _ = _?.GetCreatorHomeURL(_.type);
+        return {
+          clanAccountID: _,
+          clanInfo: _,
+          strURL: _,
+        };
+      }
+      function _(_) {
+        const { pageLink: _, strKvTargetName: __webpack_require__ } = _,
+          {
+            clanAccountID: _,
+            clanInfo: _,
+            strURL: _,
+          } = _(_, __webpack_require__);
         return _.createElement(
           "div",
           {
@@ -19246,39 +19282,11 @@
             },
             (0, _._)(
               "#AppLanding_CreatorLinked",
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    href: _,
-                    target: "_blank",
-                  },
-                  _?.group_name || _,
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _().HoverCtn,
-                    hoverProps: _,
-                    hoverContent: _.createElement(_._, {
-                      clanInfo: _,
-                    }),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      href: _,
-                      target: "_blank",
-                    },
-                    _.createElement("img", {
-                      className: _().Avatar,
-                      src: _?.avatar_full_url,
-                    }),
-                  ),
-                ),
-              ),
+              _.createElement(_, {
+                clanAccountID: _,
+                strURL: _,
+                clanInfo: _,
+              }),
             ),
           ),
           _.createElement(_, {
@@ -19286,6 +19294,46 @@
             clanAccountID: _,
             clanName: _?.group_name || "" + _,
           }),
+        );
+      }
+      function _(_) {
+        const {
+          clanAccountID: _,
+          clanInfo: __webpack_require__,
+          strURL: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              href: _,
+              target: "_blank",
+            },
+            __webpack_require__?.group_name || _,
+          ),
+          _.createElement(
+            _._,
+            {
+              className: _().HoverCtn,
+              hoverProps: _,
+              hoverContent: _.createElement(_._, {
+                clanInfo: __webpack_require__,
+              }),
+            },
+            _.createElement(
+              _._,
+              {
+                href: _,
+                target: "_blank",
+              },
+              _.createElement("img", {
+                className: _().Avatar,
+                src: __webpack_require__?.avatar_full_url,
+              }),
+            ),
+          ),
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -19402,6 +19450,90 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            nAppID: _,
+            rgAllCreatorHomeNames: __webpack_require__,
+            nPrimaryPartnerID: _,
+          } = _,
+          _ = _(_),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? _.filter(
+                    (_) =>
+                      !__webpack_require__.some(
+                        (_) =>
+                          _.linkname.trim().toLocaleLowerCase() ==
+                          _.trim().toLocaleLowerCase(),
+                      ),
+                  ).sort((_, _) =>
+                    _.linkname.localeCompare(_.linkname, void 0, {
+                      sensitivity: "base",
+                    }),
+                  )
+                : [],
+            [_, __webpack_require__],
+          );
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "h3",
+                null,
+                (0, _._)("#AppLinding_Creator_Broken"),
+              ),
+              _.createElement(
+                "p",
+                null,
+                (0, _._)("#AppLinding_Creator_Broken_desc"),
+              ),
+              _.map((_) =>
+                _.createElement(_, {
+                  pageLink: _,
+                  key: "dp_" + _.linkname,
+                }),
+              ),
+            );
+      }
+      function _(_) {
+        const { pageLink: _ } = _,
+          {
+            clanAccountID: __webpack_require__,
+            clanInfo: _,
+            strURL: _,
+          } = _(_, "developer");
+        return _.createElement(
+          "div",
+          {
+            className: _().CreatorNameCtn,
+          },
+          _.createElement(_, {
+            pageLink: _,
+            clanAccountID: __webpack_require__,
+            clanName: _?.group_name || "" + __webpack_require__,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().CreatorCtn,
+            },
+            (0, _._)(
+              "#AppLanding_Creator_Broken_Link",
+              _.createElement(_.Fragment, null, _.linkname),
+              _.createElement(_, {
+                clanAccountID: __webpack_require__,
+                strURL: _,
+                clanInfo: _,
+              }),
+            ),
+          ),
+        );
+      }
       const _ = _.lazy(async () => ({
         default: (
           await __webpack_require__
@@ -19485,6 +19617,10 @@
                       ..._,
                     }),
                   "storeadmin-app-screenshot-alttext": (_) =>
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  "storeadmin-creator-home-fixup": (_) =>
                     _.createElement(_, {
                       ..._,
                     }),
