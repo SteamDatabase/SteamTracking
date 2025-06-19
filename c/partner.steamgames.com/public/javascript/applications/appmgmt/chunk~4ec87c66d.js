@@ -55916,6 +55916,21 @@
         GetAssetCount() {
           return (0, _._)(this.m_oSpotlight.image);
         }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_oSpotlight.accessibility_label ||
+              (this.m_oSpotlight.accessibility_label = {}),
+            this.GetKVLang(this.m_oSpotlight.accessibility_label, _)
+          );
+        }
+        GetAssetParams() {
+          let _ = {};
+          return (
+            this.m_oSpotlight.accessibility_label &&
+              (_.accessibility_label = this.m_oSpotlight.accessibility_label),
+            _
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oSpotlight.asset_mtime;
         }
@@ -55970,6 +55985,11 @@
           this.m_oSpotlight.image?.[_] &&
             (delete this.m_oSpotlight.image[_], this.Dispatch());
         }
+        SetLocalizedAltText(_, _) {
+          this.m_oSpotlight.accessibility_label ||
+            (this.m_oSpotlight.accessibility_label = {}),
+            this.SetKVLang(this.m_oSpotlight.accessibility_label, _, _);
+        }
         SetKVLang(_, _, _) {
           (0, _._)(_, _, _) && this.SetDirty(!0);
         }
@@ -55988,10 +56008,12 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+        (0, _._)([_._], _.prototype, "GetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "SetCurImage", null),
         (0, _._)([_._.bound], _.prototype, "SetImage", null),
         (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
         (0, _._)([_._], _.prototype, "DeleteAssetObjectLang", null),
+        (0, _._)([_._], _.prototype, "SetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -56066,6 +56088,7 @@
         return _;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -56177,6 +56200,10 @@
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
             _.createElement(_._, {
+              fnGetAltText: _.GetLocalizedAltText,
+              fnSetAltText: _.SetLocalizedAltText,
+            }),
+            _.createElement(_._, {
               rgSupportArtwork: _,
               rgRealmList: _,
               strOverrideDragAndDropText:
@@ -56267,7 +56294,7 @@
             _.createElement(
               "a",
               {
-                href: `${_._.PARTNER_BASE_URL}promotion/spotlight/edit/${_.GetID()}`,
+                href: `${_._.PARTNER_BASE_URL}admin/store/spotlight/${_.GetID()}`,
                 target: "_blank",
               },
               "Open Spotlight Editor",
@@ -56292,18 +56319,23 @@
       function _(_) {
         const { oEditableSpotlight: _ } = _,
           { fnSaveClusterAssets: __webpack_require__ } = (0, _._)(),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetID(),
             _.GetModel(),
             _.GetAssetCount(),
+            _.GetAssetParams(),
           ]);
         return _.createElement(_, {
           bIsDirty: _,
           bSaveDisabled: 0 == _,
           fnOnRevert: () => _.RevertChanges(),
           fnOnSave: async () => {
-            const _ = await __webpack_require__(_._.k_ConfigPage_Spotlight, _);
+            const _ = await __webpack_require__(
+              _._.k_ConfigPage_Spotlight,
+              _,
+              _,
+            );
             return _ && _.Reset((0, _._)(_._.k_ConfigPage_Spotlight, _)), _;
           },
         });
@@ -56365,9 +56397,9 @@
         }
         GetLocalizedAltText(_) {
           return (
-            this.m_oTakeover.localized_alt_text ||
-              (this.m_oTakeover.localized_alt_text = {}),
-            this.GetKVLang(this.m_oTakeover.localized_alt_text, _)
+            this.m_oTakeover.accessibility_label ||
+              (this.m_oTakeover.accessibility_label = {}),
+            this.GetKVLang(this.m_oTakeover.accessibility_label, _)
           );
         }
         GetAssetCount() {
@@ -56396,8 +56428,8 @@
               (_.page_bg_color_left = this.m_oTakeover.page_bg_color_left),
             this.m_oTakeover.page_bg_color_right &&
               (_.page_bg_color_right = this.m_oTakeover.page_bg_color_right),
-            this.m_oTakeover.localized_alt_text &&
-              (_.localized_alt_text = this.m_oTakeover.localized_alt_text),
+            this.m_oTakeover.accessibility_label &&
+              (_.accessibility_label = this.m_oTakeover.accessibility_label),
             _
           );
         }
@@ -56493,9 +56525,9 @@
             ((this.m_oTakeover.page_bg_color_right = _), this.Dispatch());
         }
         SetLocalizedAltText(_, _) {
-          this.m_oTakeover.localized_alt_text ||
-            (this.m_oTakeover.localized_alt_text = {}),
-            this.SetKVLang(this.m_oTakeover.localized_alt_text, _, _);
+          this.m_oTakeover.accessibility_label ||
+            (this.m_oTakeover.accessibility_label = {}),
+            this.SetKVLang(this.m_oTakeover.accessibility_label, _, _);
         }
         SetKVLang(_, _, _) {
           (0, _._)(_, _, _) && this.SetDirty(!0);
@@ -56589,7 +56621,6 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             bShowInternalControls: _,
@@ -57152,6 +57183,21 @@
             _._.forEach((_) => (_ += (0, _._)(this.GetAssetsObject(_)))), _
           );
         }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_oTakeunder.accessibility_label ||
+              (this.m_oTakeunder.accessibility_label = {}),
+            this.GetKVLang(this.m_oTakeunder.accessibility_label, _)
+          );
+        }
+        GetAssetParams() {
+          let _ = {};
+          return (
+            this.m_oTakeunder.accessibility_label &&
+              (_.accessibility_label = this.m_oTakeunder.accessibility_label),
+            _
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oTakeunder.promo_mtime;
         }
@@ -57182,6 +57228,11 @@
             this.SetKVLang(this.m_oTakeunder[_], _, _),
             this.Dispatch();
         }
+        SetLocalizedAltText(_, _) {
+          this.m_oTakeunder.accessibility_label ||
+            (this.m_oTakeunder.accessibility_label = {}),
+            this.SetKVLang(this.m_oTakeunder.accessibility_label, _, _);
+        }
         ClearAllAssetObjects(_) {
           (this.m_oTakeunder[_] = {}), this.Dispatch();
         }
@@ -57208,8 +57259,10 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+        (0, _._)([_._], _.prototype, "GetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "SetCurImage", null),
         (0, _._)([_._.bound], _.prototype, "SetImage", null),
+        (0, _._)([_._], _.prototype, "SetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
         (0, _._)([_._], _.prototype, "DeleteAssetObjectLang", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
@@ -57407,6 +57460,10 @@
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
             _.createElement(_._, {
+              fnGetAltText: _.GetLocalizedAltText,
+              fnSetAltText: _.SetLocalizedAltText,
+            }),
+            _.createElement(_._, {
               rgSupportArtwork: _,
               rgRealmList: _,
               strOverrideDragAndDropText:
@@ -57572,18 +57629,23 @@
       function _(_) {
         const { oEditableTakeunder: _ } = _,
           { fnSaveClusterAssets: __webpack_require__ } = (0, _._)(),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetID(),
             _.GetModel(),
             _.GetAssetCount(),
+            _.GetAssetParams(),
           ]);
         return _.createElement(_, {
           bIsDirty: _,
           bSaveDisabled: 0 == _,
           fnOnRevert: () => _.RevertChanges(),
           fnOnSave: async () => {
-            const _ = await __webpack_require__(_._.k_ConfigPage_Takeunder, _);
+            const _ = await __webpack_require__(
+              _._.k_ConfigPage_Takeunder,
+              _,
+              _,
+            );
             return _ && _.Reset((0, _._)(_._.k_ConfigPage_Takeunder, _)), _;
           },
         });

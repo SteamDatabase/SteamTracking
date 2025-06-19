@@ -50186,6 +50186,21 @@
         GetAssetCount() {
           return (0, Se.Uh)(this.m_oSpotlight.image);
         }
+        GetLocalizedAltText(e) {
+          return (
+            this.m_oSpotlight.accessibility_label ||
+              (this.m_oSpotlight.accessibility_label = {}),
+            this.GetKVLang(this.m_oSpotlight.accessibility_label, e)
+          );
+        }
+        GetAssetParams() {
+          let e = {};
+          return (
+            this.m_oSpotlight.accessibility_label &&
+              (e.accessibility_label = this.m_oSpotlight.accessibility_label),
+            e
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oSpotlight.asset_mtime;
         }
@@ -50240,6 +50255,11 @@
           this.m_oSpotlight.image?.[t] &&
             (delete this.m_oSpotlight.image[t], this.Dispatch());
         }
+        SetLocalizedAltText(e, t) {
+          this.m_oSpotlight.accessibility_label ||
+            (this.m_oSpotlight.accessibility_label = {}),
+            this.SetKVLang(this.m_oSpotlight.accessibility_label, e, t);
+        }
         SetKVLang(e, t, a) {
           (0, Se.pV)(e, t, a) && this.SetDirty(!0);
         }
@@ -50258,10 +50278,12 @@
         }
       }
       (0, ge.Cg)([he.sH], ve.prototype, "m_bDirty", void 0),
+        (0, ge.Cg)([Ee.o], ve.prototype, "GetLocalizedAltText", null),
         (0, ge.Cg)([Ee.o], ve.prototype, "SetCurImage", null),
         (0, ge.Cg)([he.XI.bound], ve.prototype, "SetImage", null),
         (0, ge.Cg)([Ee.o], ve.prototype, "ClearAllAssetObjects", null),
         (0, ge.Cg)([Ee.o], ve.prototype, "DeleteAssetObjectLang", null),
+        (0, ge.Cg)([Ee.o], ve.prototype, "SetLocalizedAltText", null),
         (0, ge.Cg)([Ee.o], ve.prototype, "RevertChanges", null);
       var fe = a(97843);
       class be {
@@ -50335,8 +50357,9 @@
       }
       var Ce = a(1305),
         Ie = a(56330),
-        Be = a(17083);
-      function Te(e) {
+        Be = a(17083),
+        Te = a(2851);
+      function Me(e) {
         const { promotionPlanID: t, id: a } = e,
           n = we(a);
         return void 0 === n
@@ -50361,9 +50384,9 @@
                   l.createElement(
                     "div",
                     { className: c().LeftCol },
-                    l.createElement(Me, { oEditableSpotlight: n }),
+                    l.createElement(ke, { oEditableSpotlight: n }),
                   ),
-                  l.createElement(Ae, {
+                  l.createElement(Re, {
                     oEditableSpotlight: n,
                     promotionPlanID: t,
                   }),
@@ -50381,7 +50404,7 @@
                 ),
               );
       }
-      function Me(e) {
+      function ke(e) {
         const { oEditableSpotlight: t } = e,
           a = (0, l.useMemo)(() => ["spotlight_art"], []),
           n = (0, l.useMemo)(() => [W.TU.k_ESteamRealmGlobal], []),
@@ -50422,6 +50445,10 @@
                 { className: Ie.WarningStylesWithIcon },
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
+            l.createElement(Te.y, {
+              fnGetAltText: t.GetLocalizedAltText,
+              fnSetAltText: t.SetLocalizedAltText,
+            }),
             l.createElement(te.a, {
               rgSupportArtwork: a,
               rgRealmList: n,
@@ -50441,13 +50468,13 @@
                 l.createElement("span", null, "306px x 260px"),
                 " (.jpg,.png,.gif)",
               ),
-              l.createElement(ke, { oEditableSpotlight: t }),
+              l.createElement(Ae, { oEditableSpotlight: t }),
             ),
           ),
-          l.createElement(Re, { oEditableSpotlight: t }),
+          l.createElement(Pe, { oEditableSpotlight: t }),
         );
       }
-      function ke(e) {
+      function Ae(e) {
         const { oEditableSpotlight: t } = e,
           [a, n, r] = (0, s.q3)(() => [
             t.GetAssetsObject(),
@@ -50482,7 +50509,7 @@
           }),
         );
       }
-      function Ae(e) {
+      function Re(e) {
         const { oEditableSpotlight: t, promotionPlanID: a } = e,
           n = De(t)?.get("spotlight_art");
         return l.createElement(
@@ -50500,7 +50527,7 @@
             l.createElement(
               "a",
               {
-                href: `${B.TS.PARTNER_BASE_URL}promotion/spotlight/edit/${t.GetID()}`,
+                href: `${B.TS.PARTNER_BASE_URL}admin/store/spotlight/${t.GetID()}`,
                 target: "_blank",
               },
               "Open Spotlight Editor",
@@ -50522,27 +50549,28 @@
           ),
         );
       }
-      function Re(e) {
+      function Pe(e) {
         const { oEditableSpotlight: t } = e,
           { fnSaveClusterAssets: a } = (0, Ce.Bx)(),
-          [r, i, o, c] = (0, s.q3)(() => [
+          [r, i, o, c, m] = (0, s.q3)(() => [
             t.BIsDirty(),
             t.GetID(),
             t.GetModel(),
             t.GetAssetCount(),
+            t.GetAssetParams(),
           ]);
         return l.createElement(le, {
           bIsDirty: r,
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: async () => {
-            const e = await a(n.ii.k_ConfigPage_Spotlight, o);
+            const e = await a(n.ii.k_ConfigPage_Spotlight, o, m);
             return e && t.Reset((0, Ce.S0)(n.ii.k_ConfigPage_Spotlight, i)), e;
           },
         });
       }
-      var Pe = a(92391);
-      class Ne {
+      var Ne = a(92391);
+      class Ge {
         m_oTakeover = null;
         m_originalTakeover = null;
         m_type = null;
@@ -50598,15 +50626,15 @@
         }
         GetLocalizedAltText(e) {
           return (
-            this.m_oTakeover.localized_alt_text ||
-              (this.m_oTakeover.localized_alt_text = {}),
-            this.GetKVLang(this.m_oTakeover.localized_alt_text, e)
+            this.m_oTakeover.accessibility_label ||
+              (this.m_oTakeover.accessibility_label = {}),
+            this.GetKVLang(this.m_oTakeover.accessibility_label, e)
           );
         }
         GetAssetCount() {
           let e = 0;
           return (
-            Pe.lQ.forEach((t) => (e += (0, Se.Uh)(this.GetAssetsObject(t)))), e
+            Ne.lQ.forEach((t) => (e += (0, Se.Uh)(this.GetAssetsObject(t)))), e
           );
         }
         GetAssetParams() {
@@ -50629,8 +50657,8 @@
               (e.page_bg_color_left = this.m_oTakeover.page_bg_color_left),
             this.m_oTakeover.page_bg_color_right &&
               (e.page_bg_color_right = this.m_oTakeover.page_bg_color_right),
-            this.m_oTakeover.localized_alt_text &&
-              (e.localized_alt_text = this.m_oTakeover.localized_alt_text),
+            this.m_oTakeover.accessibility_label &&
+              (e.accessibility_label = this.m_oTakeover.accessibility_label),
             e
           );
         }
@@ -50726,9 +50754,9 @@
             ((this.m_oTakeover.page_bg_color_right = e), this.Dispatch());
         }
         SetLocalizedAltText(e, t) {
-          this.m_oTakeover.localized_alt_text ||
-            (this.m_oTakeover.localized_alt_text = {}),
-            this.SetKVLang(this.m_oTakeover.localized_alt_text, e, t);
+          this.m_oTakeover.accessibility_label ||
+            (this.m_oTakeover.accessibility_label = {}),
+            this.SetKVLang(this.m_oTakeover.accessibility_label, e, t);
         }
         SetKVLang(e, t, a) {
           (0, Se.pV)(e, t, a) && this.SetDirty(!0);
@@ -50747,20 +50775,20 @@
             this.m_callback.Dispatch(this);
         }
       }
-      (0, ge.Cg)([he.sH], Ne.prototype, "m_bDirty", void 0),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "GetLocalizedAltText", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetCurImage", null),
-        (0, ge.Cg)([he.XI.bound], Ne.prototype, "SetImage", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "ClearAllAssetObjects", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "DeleteAssetObjectLang", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetBackgroundOffset", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetBackgroundMobileOffset", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetBackgroundImageHeight", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetColorLeft", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetColorRight", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "SetLocalizedAltText", null),
-        (0, ge.Cg)([Ee.o], Ne.prototype, "RevertChanges", null);
-      class Ge {
+      (0, ge.Cg)([he.sH], Ge.prototype, "m_bDirty", void 0),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "GetLocalizedAltText", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetCurImage", null),
+        (0, ge.Cg)([he.XI.bound], Ge.prototype, "SetImage", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "ClearAllAssetObjects", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "DeleteAssetObjectLang", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetBackgroundOffset", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetBackgroundMobileOffset", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetBackgroundImageHeight", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetColorLeft", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetColorRight", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "SetLocalizedAltText", null),
+        (0, ge.Cg)([Ee.o], Ge.prototype, "RevertChanges", null);
+      class Oe {
         m_mapEditModel = new Map();
         m_callback = new Map();
         InitTakeoverToEdit(e, t, a, n = !1) {
@@ -50768,7 +50796,7 @@
           if (this.m_mapEditModel.has(r) && !n)
             this.m_mapEditModel.get(r).Reset(a, e);
           else {
-            const i = new Ne(a, e);
+            const i = new Ge(a, e);
             this.m_mapEditModel.set(r, i),
               i.GetCallback().Register((e) => this.GetCallback(t).Dispatch(e)),
               n && this.GetCallback(r).Dispatch(i);
@@ -50796,33 +50824,32 @@
         static s_Singleton;
         static Get() {
           return (
-            Ge.s_Singleton ||
-              ((Ge.s_Singleton = new Ge()),
+            Oe.s_Singleton ||
+              ((Oe.s_Singleton = new Oe()),
               "dev" == B.TS.WEB_UNIVERSE &&
-                (window.g_TakeoverEditStore = Ge.s_Singleton)),
-            Ge.s_Singleton
+                (window.g_TakeoverEditStore = Oe.s_Singleton)),
+            Oe.s_Singleton
           );
         }
         constructor() {}
       }
-      function Oe(e, t) {
+      function Fe(e, t) {
         const a = (0, Y.CH)(),
-          [n, r] = l.useState(() => Ge.Get().GetTakeoverToEdit(e, t)),
+          [n, r] = l.useState(() => Oe.Get().GetTakeoverToEdit(e, t)),
           i = (0, Ce.TR)(e, t);
         return (
           l.useEffect(() => {
             i &&
-              !Ge.Get().BHasTakeoverToEdit(e, t) &&
-              Ge.Get().InitTakeoverToEdit(e, t, i),
-              r(Ge.Get().GetTakeoverToEdit(e, t));
+              !Oe.Get().BHasTakeoverToEdit(e, t) &&
+              Oe.Get().InitTakeoverToEdit(e, t, i),
+              r(Oe.Get().GetTakeoverToEdit(e, t));
           }, [i, e, t]),
-          (0, Y.hL)(Ge.Get().GetCallback(t), (e) => {
+          (0, Y.hL)(Oe.Get().GetCallback(t), (e) => {
             r(e), a();
           }),
           n
         );
       }
-      var Fe = a(2851);
       function Le(e) {
         const {
             bShowInternalControls: t,
@@ -50831,7 +50858,7 @@
             type: i,
             id: s,
           } = e,
-          o = Oe(i, s);
+          o = Fe(i, s);
         return void 0 === o
           ? l.createElement(ne.t, {
               size: "medium",
@@ -51042,7 +51069,7 @@
                 { className: Ie.WarningStylesWithIcon },
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
-            l.createElement(Fe.y, {
+            l.createElement(Te.y, {
               fnGetAltText: t.GetLocalizedAltText,
               fnSetAltText: t.SetLocalizedAltText,
             }),
@@ -51204,7 +51231,7 @@
           r = (0, s.q3)(() => {
             const e = new Map();
             return (
-              Pe.lQ.forEach((a) => {
+              Ne.lQ.forEach((a) => {
                 let n = 0;
                 const r = t.GetAssetsObject(a);
                 for (let e = 0; e < 31; ++e) r && r[(0, _e.Lg)(e)] && (n += 1);
@@ -51220,13 +51247,13 @@
             "div",
             { className: c().SectionCtn },
             l.createElement(m.JU, null, "Asset Progress"),
-            Pe.lQ
+            Ne.lQ
               .filter((e) => r.has(e) && ze(e, a))
               .map((e) =>
                 l.createElement(
                   "div",
                   { key: "as_" + e },
-                  (0, Pe.$U)(e),
+                  (0, Ne.$U)(e),
                   ": ",
                   r.get(e),
                   " / 29",
@@ -51343,6 +51370,21 @@
             He.rk.forEach((t) => (e += (0, Se.Uh)(this.GetAssetsObject(t)))), e
           );
         }
+        GetLocalizedAltText(e) {
+          return (
+            this.m_oTakeunder.accessibility_label ||
+              (this.m_oTakeunder.accessibility_label = {}),
+            this.GetKVLang(this.m_oTakeunder.accessibility_label, e)
+          );
+        }
+        GetAssetParams() {
+          let e = {};
+          return (
+            this.m_oTakeunder.accessibility_label &&
+              (e.accessibility_label = this.m_oTakeunder.accessibility_label),
+            e
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oTakeunder.promo_mtime;
         }
@@ -51373,6 +51415,11 @@
             this.SetKVLang(this.m_oTakeunder[e], t, a),
             this.Dispatch();
         }
+        SetLocalizedAltText(e, t) {
+          this.m_oTakeunder.accessibility_label ||
+            (this.m_oTakeunder.accessibility_label = {}),
+            this.SetKVLang(this.m_oTakeunder.accessibility_label, e, t);
+        }
         ClearAllAssetObjects(e) {
           (this.m_oTakeunder[e] = {}), this.Dispatch();
         }
@@ -51399,8 +51446,10 @@
         }
       }
       (0, ge.Cg)([he.sH], Ve.prototype, "m_bDirty", void 0),
+        (0, ge.Cg)([Ee.o], Ve.prototype, "GetLocalizedAltText", null),
         (0, ge.Cg)([Ee.o], Ve.prototype, "SetCurImage", null),
         (0, ge.Cg)([he.XI.bound], Ve.prototype, "SetImage", null),
+        (0, ge.Cg)([Ee.o], Ve.prototype, "SetLocalizedAltText", null),
         (0, ge.Cg)([Ee.o], Ve.prototype, "ClearAllAssetObjects", null),
         (0, ge.Cg)([Ee.o], Ve.prototype, "DeleteAssetObjectLang", null),
         (0, ge.Cg)([Ee.o], Ve.prototype, "RevertChanges", null);
@@ -51571,6 +51620,10 @@
                 { className: Ie.WarningStylesWithIcon },
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
+            l.createElement(Te.y, {
+              fnGetAltText: t.GetLocalizedAltText,
+              fnSetAltText: t.SetLocalizedAltText,
+            }),
             l.createElement(te.a, {
               rgSupportArtwork: n,
               rgRealmList: r,
@@ -51725,18 +51778,19 @@
       function et(e) {
         const { oEditableTakeunder: t } = e,
           { fnSaveClusterAssets: a } = (0, Ce.Bx)(),
-          [r, i, o, c] = (0, s.q3)(() => [
+          [r, i, o, c, m] = (0, s.q3)(() => [
             t.BIsDirty(),
             t.GetID(),
             t.GetModel(),
             t.GetAssetCount(),
+            t.GetAssetParams(),
           ]);
         return l.createElement(le, {
           bIsDirty: r,
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: async () => {
-            const e = await a(n.ii.k_ConfigPage_Takeunder, o);
+            const e = await a(n.ii.k_ConfigPage_Takeunder, o, m);
             return e && t.Reset((0, Ce.S0)(n.ii.k_ConfigPage_Takeunder, i)), e;
           },
         });
@@ -52597,7 +52651,7 @@
             {
               rgType: Q.PL,
               component: () =>
-                l.createElement(Te, { promotionPlanID: i, id: s }),
+                l.createElement(Me, { promotionPlanID: i, id: s }),
             },
             {
               rgType: Q.Hj,
@@ -52667,15 +52721,15 @@
             const a = new Map();
             if (!e) return a;
             let n = t
-              ? t?.filter((e) => Pe.lQ.includes((0, Pe.A8)(e)))
-              : Pe.lQ.map((e) => (0, Pe.QT)(e));
+              ? t?.filter((e) => Ne.lQ.includes((0, Ne.A8)(e)))
+              : Ne.lQ.map((e) => (0, Ne.QT)(e));
             return (
               n?.forEach((t) => {
-                a?.set(t, (0, Se.Uh)(e.GetAssetsObject((0, Pe.A8)(t))));
+                a?.set(t, (0, Se.Uh)(e.GetAssetsObject((0, Ne.A8)(t))));
               }),
               a
             );
-          })(Oe(a, n), t);
+          })(Fe(a, n), t);
         return l.createElement(Gt, { rgAssetCounts: r });
       }
       function At(e) {

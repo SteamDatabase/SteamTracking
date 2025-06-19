@@ -1281,7 +1281,6 @@ ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
 ${PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${}
 ${PARTNER_BASE_URL}promotion/sales/ajaxuploadasset/${}
-${PARTNER_BASE_URL}promotion/spotlight/edit/${}
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
