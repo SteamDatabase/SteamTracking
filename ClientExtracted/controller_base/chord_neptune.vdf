@@ -345,6 +345,16 @@
 		{
 			"button_menu"
 			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action sr_enable"
+						}
+					}
+				}
 			}
 			"left_bumper"
 			{

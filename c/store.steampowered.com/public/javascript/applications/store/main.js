@@ -44391,7 +44391,8 @@
             (this.m_rgIncludedAppIDs = _.included_appids()),
             (this.m_bIsFree = !!_.is_free()),
             (this.m_bIsFreeTemporary = !!_.is_free_temporarily()),
-            (this.m_bIsComingSoon = !!_.is_coming_soon()),
+            (this.m_bIsComingSoon =
+              !!_.is_coming_soon() || _.release()?.is_coming_soon()),
             (this.m_bIsEarlyAccess = !!_.is_early_access()),
             (this.m_RelatedItems = _.related_items()?.toObject()),
             (this.m_ContentDescriptorIDs = _.content_descriptorids()),

@@ -260,6 +260,13 @@ enum EHDRVisualization {
 	k_EHDRVisualization_HeatmapClassic = 4;
 }
 
+enum EColorFilter {
+	k_EColorFilter_None = 0;
+	k_EColorFilter_InvertBrightness = 1;
+	k_EColorFilter_InvertColors = 2;
+	k_EColorFilter_Grayscale = 3;
+}
+
 enum EHDRToneMapOperator {
 	k_EHDRToneMapOperator_Invalid = 0;
 	k_EHDRToneMapOperator_Uncharted = 1;

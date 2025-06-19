@@ -279,8 +279,11 @@ message CMsgClientSettings {
 	optional bool hardware_updater_enabled = 24001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/HardwareUpdater/Enabled", (setting_default_bool) = false];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
-	optional bool accessibility_screen_reader_enabled = 26001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderEnabled", (setting_default_bool) = false];
+	optional bool accessibility_screen_reader_enabled = 26001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderEnabled", (setting_default_bool) = false];
 	optional float accessibility_screen_reader_rate = 26002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderPitch", (setting_default_float) = 0.5];
 	optional float accessibility_screen_reader_pitch = 26003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderRate", (setting_default_float) = 0.5];
 	optional float accessibility_screen_reader_volume = 26004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderVolume", (setting_default_float) = 1];
+	optional bool accessibility_high_contrast_mode = 26005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/HighContrastMode", (setting_default_bool) = false];
+	optional bool accessibility_reduce_motion = 26006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ReduceMotion", (setting_default_bool) = false];
+	optional .EColorFilter accessibility_color_filter = 26007 [default = k_EColorFilter_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilter", (setting_default_int) = 0];
 }

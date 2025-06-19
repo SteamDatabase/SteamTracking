@@ -365,7 +365,9 @@
         Name: "_1e4No10_bpJEyqWGdzhAs9",
         PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
         PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",
+        PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
+        PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
       };
     },
     74662: (e) => {
@@ -7980,23 +7982,27 @@
             n.createElement(
               "div",
               { className: L.PurchaseOnlyCtn },
-              n.createElement("div", { className: L.Name }, t.GetName()),
-              Boolean(!i && 10 != t.GetAppType()) &&
-                n.createElement(
-                  "div",
-                  { className: L.OS },
-                  n.createElement(B.Q, { item: a }),
-                  Boolean(
-                    o && 0 == t?.GetStoreItemType() && t.GetPlatforms(),
-                  ) &&
-                    n.createElement(R.$o, {
-                      className: L.DeckCompatIcon,
-                      category: t.GetPlatforms().steam_deck_compat_category,
-                    }),
-                ),
               n.createElement(
                 "div",
-                { className: L.Purchase },
+                { className: L.PurchaseOnlyNameCtn },
+                n.createElement("div", { className: L.Name }, t.GetName()),
+              ),
+              n.createElement(
+                "div",
+                { className: L.PurchaseAndPlatformCtn },
+                Boolean(!i && 10 != t.GetAppType()) &&
+                  n.createElement(
+                    "div",
+                    { className: L.OS },
+                    n.createElement(B.Q, { item: a }),
+                    Boolean(
+                      o && 0 == t?.GetStoreItemType() && t.GetPlatforms(),
+                    ) &&
+                      n.createElement(R.$o, {
+                        className: L.DeckCompatIcon,
+                        category: t.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
                 n.createElement(g.wD, {
                   info: a,
                   className: L.PurchaseOnlyActionCtn,

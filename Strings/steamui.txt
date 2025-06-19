@@ -1035,6 +1035,7 @@
 #2=IVanw
 #3CScs
 #:*S8,}gNzl
+#<20CJSMethodCallHandlerI23CSteamUIMusicControllerJEE
 #CInstallSteamServiceDialog
 #ControllerBinding_Incompatible_Save
 #ControllerBinding_Offline_Save
@@ -2625,6 +2626,7 @@ ${LANGUAGE}
 '\n#k_EBanContentCheckResult_NotScanned
 '\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EBroadcastWatchLocation_SalesPage
+'\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChatRoomMemberStateChange_Banned
@@ -4124,6 +4126,7 @@ ${LANGUAGE}
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN13CSteamStartup12ExecSteamURLE19EShellExecuteSourcePKcEUl7EResultS2_E_
+*ZN15CSteamOSManager27OnControllerActionTriggeredEP27ControllerActionTriggered_tEUlvE_
 *ZN15CWebUITransport16StartHealthCheckEvEUlvE_
 *ZN15CWebUITransport23ThreadedRequestShutdownEvEUlvE_
 *ZN15CWebUITransport29ThreadedBroadcastNotificationEPKcRN6google8protobuf11MessageLiteEEUlvE_
@@ -4141,6 +4144,8 @@ ${LANGUAGE}
 *ZN18CX11WindowPropertyC4E10StringViewSt8functionIFvvEEmEUlmmE_
 *ZN19CFactoryResetHelper22ThreadedUpdateProgressEiEUlvE_
 *ZN19CSettingsController14UpdateSettingsEvEUlvE_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUlbE0_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUlbE_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
 *ZN20CUserLoginController13GetLoginUsersE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN20CUserLoginController20ResumeSuspendedGamesEb9CSmartPtrI18CJSCallbackPromiseEEUlP19ResumeGamesResult_tbS2_E_
@@ -4323,6 +4328,7 @@ ${LANGUAGE}
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE3_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE4_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE5_
+*ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE6_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUlvE0_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUlvE2_
@@ -5677,6 +5683,7 @@ ${LANGUAGE}
 .ControllerVector3
 .ControllerVector3"
 .DetectedAppContent"K\n:CDepotContentDetection_GetDetectedContentSingleApp_Request
+.EAccessibilityContrastMode*
 .EAgreementType
 .EAppAntiCheatType
 .EAppContentDetectionType"P\n
@@ -6489,7 +6496,7 @@ ${LANGUAGE}
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:562
+/data/src/steamUI/steamosmanager.cpp:564
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -6700,6 +6707,7 @@ ${LANGUAGE}
 /usr/sbin/lsof
 /usr/share/applications/steam.desktop
 /usr/share/applications/steambeta.desktop
+/usr/share/gamescope/looks
 /var
 /var/lib/dbus/machine-id
 /var/lib/flatpak/app/%s/current/active/export/share/applications/%s.desktop
@@ -8924,7 +8932,6 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjiiEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI23CSteamUIMusicControllerJEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJbEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJiEE
 20CJSMethodCallHandlerI23CSteamUIStatsControllerJPKcS2_EE
@@ -9355,6 +9362,7 @@ ${LANGUAGE}
 24CMsgNetworkDeviceConnect
 24CMsgNotifyUserActivation
 24CMsgSelectOSBranchParams
+24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgSteamUIBrowserWindow
@@ -9580,6 +9588,7 @@ ${LANGUAGE}
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
 27CMsgSetControllerSourceMode
+27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgSystemAudioManagerState
 27CMsgSystemUpdateApplyParams
@@ -9796,6 +9805,7 @@ ${LANGUAGE}
 2\n\vpreferences
 2\r.EAudioFormat
 2\r.ECPUGovernor
+2\r.EColorFilterB%
 2\r.EExportCodec"
 2\r.EExportCodecB!
 2\r.EGpuDriverId
@@ -11705,6 +11715,7 @@ ${LANGUAGE}
 5\n\vsale_filter
 5\tuy
 5ceTk
+5hhu
 5i]lX
 5mF\tfE
 5mmQ
@@ -12489,6 +12500,7 @@ ${LANGUAGE}
 >w^23
 >wcv
 >wcv?uj
+>zbh
 ? * + invalid
 ?%s/controller_configs/%s
 ?(MZct
@@ -12533,6 +12545,7 @@ ${LANGUAGE}
 @.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 @.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 @0pp
+@?N15CBitrateAdapter21CBitrateAdapterThreadE
 @AppMRUSize
 @B26CGameStreamVideoStageNVENC
 @EnableUDPHistory
@@ -13102,7 +13115,10 @@ Acceptable OCSP Responses
 Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
+Accessibility/ColorFilter
 Accessibility/DebugVisualizer
+Accessibility/HighContrastMode
+Accessibility/ReduceMotion
 Accessibility/ScreenReaderPitch
 Accessibility/ScreenReaderRate
 Account Disabled
@@ -14866,6 +14882,8 @@ CGameStreamVideoStageYV12::ProcessData
 CGamescopeController: %s
 CGamescopeController: %s: mode:%d radius:%d duration:%d
 CGamescopeController: commit app target refresh cycle: framerate: %u control: %p enabled: %d supported: %d - skipped
+CGamescopeController: error opening hdr color filter %s
+CGamescopeController: error opening sdr color filter %s
 CGamescopeController: external display populate workaround generating values for: %d
 CGamescopeController: failed to find a default refresh rate for the display. Defaulting to: %d
 CGamescopeController: initalized implementation: linux
@@ -15665,7 +15683,7 @@ CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
 CMsgResponseCurve
-CMsgRestartJSContext*
+CMsgRestartJSContext".\n
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
@@ -15686,7 +15704,9 @@ CMsgSetLocalFileRequestMapping
 CMsgSetModeShiftButton
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
+CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
+CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetTargetFrameRate
@@ -16154,6 +16174,8 @@ CSteamDoc::OnSteamLogon
 CSteamDoc::OnUnlockH264Result
 CSteamDoc::SetCurrentLanguage: invalid ELanguage %u
 CSteamGamesUIModule::LoadSteamClient
+CSteamOSManager::OnControllerActionTriggered
+CSteamOSManager::YldProcessControllerAction
 CSteamOSManagerLegacy: using session bus
 CSteamOSManagerLegacy: using system bus
 CSteamOSManagerState
@@ -18039,6 +18061,7 @@ EAFNOSUPPORT
 EALREADY
 EARLY_EXPORTER_SECRET
 EAbuseReportType
+EAccessibilityContrastMode
 EAccountFlags
 EAccountServed
 EAccountType
@@ -18801,6 +18824,7 @@ Error: %s: failed to connect to steamos telemetry daemon - telemetry will not be
 Error: %s: failed to create IFileChooserDialog
 Error: %s: failed to create skeleton\n
 Error: %s: failed to create system report file path
+Error: %s: failed to emit screen reader action: %d - %s
 Error: %s: failed to export agent: %s\n
 Error: %s: failed to find home directory
 Error: %s: failed to find root device for drive: 0x%c
@@ -18849,6 +18873,8 @@ Error: %s: invalid device path
 Error: %s: invalid dialog in file dialog resolver
 Error: %s: invalid drive object
 Error: %s: invalid drive: 0x%x
+Error: %s: invalid screen reader action: %d
+Error: %s: invalid screen reader mode: %d
 Error: %s: no options provided
 Error: %s: not a valid directory: %s
 Error: %s: only accessible in gamescope session
@@ -18858,6 +18884,7 @@ Error: %s: steamos-priv-write failed %s: %s\n
 Error: %s: timed out
 Error: %s: timed out waiting for drive eject result
 Error: %s: timed out waiting for filesystem unmount result
+Error: %s: timed out while emitting screen reader action: %d
 Error: %s: timed out while setting adapter discovery mode
 Error: %s: timed out while setting wifi debug mode
 Error: %s: unsupported platform
@@ -19850,6 +19877,7 @@ Gamepad
 GamepadGuideButtonWatcher::OnGamepadButtonsPressedChanged
 GamepadGuideButtonWatcher::OnLogonStateChange
 Games
+Gamescope version does not support looks
 Gamescope.GetState#1
 Gamescope.NotifyStateChanged#1
 Gamescope.ReArmMuraCalibration#1
@@ -21454,7 +21482,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 18 2025 00:25:39
+Jun 18 2025 22:40:38
 June
 K'iche'
 K(\f]C15
@@ -23181,13 +23209,13 @@ N14CUpdateManager46CCallbackInternal_OnRemoteClientStreamLifetimeE
 N14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tE
 N14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tE
 N14CUtlHashMapLRUIjb10CDefEqualsIjE11HashFunctorIjEE15ElementBucket_tE
-N15CBitrateAdapter21CBitrateAdapterThreadE
 N15CGameInfoDialog38CCallbackInternal_OnPersonaStateChangeE
 N15CInstallManager32CCallbackInternal_OnAppInstalledE
 N15CInstallManager34CCallbackInternal_OnAppUninstalledE
 N15CInstallManager36CCallbackInternal_OnAppUpdateStoppedE
 N15CInstallManager38CCallbackInternal_OnAppUninstallFailedE
 N15CInstallManager39CCallbackInternal_OnAppEventStateChangeE
+N15CSteamOSManager45CCallbackInternal_OnControllerActionTriggeredE
 N15CVRStreamThread14CCaptureThreadE
 N16CCookieContainer11CCookieInfoE
 N16CProtoBufMsgBase20IProtoBufSendHandlerE
@@ -27709,6 +27737,7 @@ SteamOSManager1WifiPowerManagement1
 SteamOSManager1WifiPowerManagement1Proxy
 SteamOSManager: connected to SteamOSManager
 SteamOSManager: connecting to SteamOSManager legacy interface
+SteamOSManager: controller action - %d (%s)
 SteamOSManager: daemon not present
 SteamOSManager: detected invalid steamos-manager version
 SteamOSManagerLegacy
@@ -28804,6 +28833,7 @@ Tried to send microphone data using unknown codec %d\n
 Tried to set read-only setting %s
 Tried to use encrypted OpenSSH private key
 Trigger
+TriggerAction
 TriggerAsync
 TriggerSyntheticEvents
 Trim supported: %d - %s
@@ -29116,6 +29146,7 @@ Unknown audio codec: %d
 Unknown bind type
 Unknown capture type: %d
 Unknown cipher suite! using k_ESSLCipherSuiteMaxSecurity
+Unknown color filer %d
 Unknown colorspace
 Unknown compression method in IHDR
 Unknown connection type: %u
@@ -29426,6 +29457,7 @@ VTC Pay Online Banking
 VTC Pay Wallet
 VTT for 
 VYHGjet{
+V\n accessibility_high_contrast_mode
 V\n$steamos_platform_performance_profile
 V\n\rAddRoleToUser
 V\n\rGetEULAStatus
@@ -30276,6 +30308,7 @@ YldSetDiscovering
 YldSetEnabled
 YldSetPlatformPerformanceProfile
 YldSetPluginEnabled
+YldSetScreenReaderMode
 YldSetTrusted
 YldSetWakeAllowed
 YldSetWifiDebug
@@ -30285,6 +30318,7 @@ YldStopDiscovering
 YldSubmitSystemReport
 YldTakeScreenshot
 YldTakeScreenshotGamescopeControl
+YldTriggerScreenReaderAction
 YldTrimAll
 YldUnmount
 YldUpdateDownloadSourceList
@@ -30983,6 +31017,7 @@ Zulu
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
+\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fELobbyStatus
 \n\fEUpdaterType
@@ -32550,6 +32585,7 @@ _clickableTextPanels
 _double < (double)(1ULL << 53 )
 _exit
 _fini
+_g22.cube
 _g@Cg
 _gamepad_fps
 _gamepad_joystick
@@ -32564,6 +32600,7 @@ _logo
 _longjmp
 _new
 _panelDar
+_pq.cube
 _rDd
 _rightCaption
 _setjmp
@@ -32614,7 +32651,6 @@ a5j_5W
 a8Bk
 a?wSa?\
 aDSS
-aE< N
 aECDSA
 aGOST
 aGOST01
@@ -32667,7 +32703,10 @@ access
 access denied
 access-control-allow-origi
 access-control-allow-origin
+accessibility_color_filter
 accessibility_debug_visualizer
+accessibility_high_contrast_mode
+accessibility_reduce_motion
 accessibility_screen_reader_enabled
 accessibility_screen_reader_pitch
 accessibility_screen_reader_rate
@@ -35795,6 +35834,7 @@ display_nightmode_uiexp
 display_refresh_manual_hz
 display_refresh_manual_hz_max
 display_refresh_manual_hz_min
+display_sleep
 display_status
 displayratesasbits
 displays
@@ -37465,7 +37505,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen2\fo
 ghost_
 gidlist
 gidparentcomment
@@ -37763,6 +37803,7 @@ gray+alpha color-map: too few entries
 gray-alpha color-map: too few entries
 gray[16] color-map: too few entries
 gray[8] color-map: too few entries
+grayscale
 greek
 greeting
 group
@@ -37954,6 +37995,7 @@ handle-stop
 handle-stop-discovery
 handle-throttle
 handle-trigger
+handle-trigger-action
 handle-trigger-async
 handle-trim-devices
 handle-un-inhibit
@@ -39065,6 +39107,8 @@ inventory_items
 inventory_response
 inventoryservicepricesheet
 inventoryvalvegcpricesheet
+invertbrightness
+invertcolors
 invitation_code
 invitation_url
 invite
@@ -39158,6 +39202,7 @@ is_hdr_visualization_supported
 is_invalid_os_type
 is_large()
 is_live
+is_look_supported
 is_low_latency_mode_enabled
 is_mandatory_update_available
 is_manual_gpu_clock_available
@@ -39477,6 +39522,8 @@ k_EBroadcastImageType_Standby
 k_EBroadcastImageType_Summary
 k_EBroadcastPermissionDisabled
 k_EBroadcastPermissionPublic
+k_EBrowserContrastMode_Less
+k_EBrowserContrastMode_More
 k_EBrowserFeatureStatus_Enabled
 k_EBrowserFeatureStatus_Invalid
 k_EBrowserFeatureStatus_Unknown
@@ -39569,6 +39616,10 @@ k_ECodecUsageReasonBroadcasting
 k_ECodecUsageReasonGameVideo
 k_ECodecUsageReasonRemotePlay
 k_ECodecUsageReasonUnknown
+k_EColorFilter_Grayscale
+k_EColorFilter_InvertBrightness
+k_EColorFilter_InvertColors
+k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -39604,7 +39655,7 @@ k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic
 k_EContentReportReason_Other
-k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
+k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_ScreenReader_Disablek_EControllerAction_ScreenReader_Enablek_EControllerAction_ScreenReader_NextHeadingk_EControllerAction_ScreenReader_NextItemk_EControllerAction_ScreenReader_NextLandmarkk_EControllerAction_ScreenReader_NextWordk_EControllerAction_ScreenReader_PrevHeadingk_EControllerAction_ScreenReader_PrevItemk_EControllerAction_ScreenReader_PrevLandmarkk_EControllerAction_ScreenReader_PrevWordk_EControllerAction_ScreenReader_StopTalkingk_EControllerAction_ScreenReader_ToggleModek_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
 k_EControllerActivationType_Analogk_EControllerActivationType_Chordk_EControllerActivationType_Countk_EControllerActivationType_DoublePressk_EControllerActivationType_FullPressk_EControllerActivationType_LongPressk_EControllerActivationType_Nonek_EControllerActivationType_Releasek_EControllerActivationType_SoftPressk_EControllerActivationType_StartPress
 k_EControllerDigitalInput_BatteryLowk_EControllerDigitalInput_Button1k_EControllerDigitalInput_Button2k_EControllerDigitalInput_Button3k_EControllerDigitalInput_Button4k_EControllerDigitalInput_ButtonAk_EControllerDigitalInput_ButtonAlwaysOnk_EControllerDigitalInput_ButtonAncillary1k_EControllerDigitalInput_ButtonBk_EControllerDigitalInput_ButtonBackLeftk_EControllerDigitalInput_ButtonBackLeft2k_EControllerDigitalInput_ButtonBackRightk_EControllerDigitalInput_ButtonBackRight2k_EControllerDigitalInput_ButtonDownk_EControllerDigitalInput_ButtonEscapek_EControllerDigitalInput_ButtonLeftk_EControllerDigitalInput_ButtonLeftBumperk_EControllerDigitalInput_ButtonLeftJoystickClickk_EControllerDigitalInput_ButtonLeftTriggerk_EControllerDigitalInput_ButtonMacro0k_EControllerDigitalInput_ButtonMacro1k_EControllerDigitalInput_ButtonMacro1Fingerk_EControllerDigitalInput_ButtonMacro2k_EControllerDigitalInput_ButtonMacro2Fingerk_EControllerDigitalInput_ButtonMacro3k_EControllerDigitalInput_ButtonMacro4k_EControllerDigitalInput_ButtonMacro5k_EControllerDigitalInput_ButtonMacro6k_EControllerDigitalInput_ButtonMacro7k_EControllerDigitalInput_ButtonMenuk_EControllerDigitalInput_ButtonNonek_EControllerDigitalInput_ButtonRightk_EControllerDigitalInput_ButtonRightBumperk_EControllerDigitalInput_ButtonRightJoystickClickk_EControllerDigitalInput_ButtonRightTriggerk_EControllerDigitalInput_ButtonSteamk_EControllerDigitalInput_ButtonUpk_EControllerDigitalInput_ButtonXk_EControllerDigitalInput_ButtonYk_EControllerDigitalInput_Countk_EControllerDigitalInput_LeftAuxCapSensek_EControllerDigitalInput_LeftTrackPadTouchk_EControllerDigitalInput_LeftTrackpadClickk_EControllerDigitalInput_LeftTrackpadDoubleTapk_EControllerDigitalInput_LeftTrackpadEk_EControllerDigitalInput_LeftTrackpadNk_EControllerDigitalInput_LeftTrackpadNek_EControllerDigitalInput_LeftTrackpadNwk_EControllerDigitalInput_LeftTrackpadOuterRadiusk_EControllerDigitalInput_LeftTrackpadSk_EControllerDigitalInput_LeftTrackpadSek_EControllerDigitalInput_LeftTrackpadSwk_EControllerDigitalInput_LeftTrackpadWk_EControllerDigitalInput_LeftTriggerThresholdk_EControllerDigitalInput_RightAuxCapSensek_EControllerDigitalInput_RightTrackPadTouchk_EControllerDigitalInput_RightTrackpadClickk_EControllerDigitalInput_RightTrackpadDoubleTapk_EControllerDigitalInput_RightTrackpadEk_EControllerDigitalInput_RightTrackpadNk_EControllerDigitalInput_RightTrackpadNek_EControllerDigitalInput_RightTrackpadNwk_EControllerDigitalInput_RightTrackpadOuterRadiusk_EControllerDigitalInput_RightTrackpadSk_EControllerDigitalInput_RightTrackpadSek_EControllerDigitalInput_RightTrackpadSwk_EControllerDigitalInput_RightTrackpadWk_EControllerDigitalInput_RightTriggerThresholdk_EControllerDigitalInput_StickDownk_EControllerDigitalInput_StickLeftk_EControllerDigitalInput_StickRightk_EControllerDigitalInput_StickUpk_EControllerDigitalInput_Touch1k_EControllerDigitalInput_Touch2k_EControllerDigitalInput_Touch3k_EControllerDigitalInput_Touch4
 k_EControllerElementTypeButtonA
@@ -41729,6 +41780,7 @@ local://controller_base/chord%s
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf
+local://controller_base/screenreader.vdf
 localKeyID
 localPrivateKey.IsValid()
 local_cache_version
@@ -45310,6 +45362,7 @@ prediction resistance not supported
 preferred-device
 preferredDeliveryMethod
 preferred_appids
+preferred_contrast
 preferred_monitor
 preload
 preloaded
@@ -46359,6 +46412,7 @@ schinese
 score
 scots
 screen-reader0
+screenreader.vdf
 screenshot
 screenshot_full
 screenshot_handle
@@ -46667,6 +46721,7 @@ set_app_target_refresh_cycle
 set_client_ciphersuite
 set_description
 set_dist_point_name
+set_look
 set_pairing_info_request
 set_pairing_info_response
 set_spew
@@ -49290,6 +49345,7 @@ unregister_status_update
 unregistered scheme
 unsafe legacy renegotiation disabled
 unset
+unset_look
 unsigned
 unsigned __int128
 unsigned char

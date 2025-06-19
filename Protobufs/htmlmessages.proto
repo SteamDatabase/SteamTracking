@@ -10,6 +10,12 @@ enum EJSRegisterMethodType {
 	k_EJSRegisterMethodType_Promise = 3;
 }
 
+enum EAccessibilityContrastMode {
+	k_EBrowserContrastMode_NoPreference = 0;
+	k_EBrowserContrastMode_More = 1;
+	k_EBrowserContrastMode_Less = 2;
+}
+
 message CMsgKeyUp {
 	optional uint32 browser_handle = 1;
 	optional uint32 keyCode = 2;
@@ -1042,4 +1048,12 @@ message CMsgSetVRKeyboardVisibility {
 }
 
 message CMsgRestartJSContext {
+}
+
+message CMsgSetReducedMotionEnabled {
+	optional bool enabled = 1;
+}
+
+message CMsgSetPreferredContrast {
+	optional .EAccessibilityContrastMode preferred_contrast = 1 [default = k_EBrowserContrastMode_NoPreference];
 }

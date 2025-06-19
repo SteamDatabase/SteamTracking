@@ -367,7 +367,9 @@
         Name: "_1e4No10_bpJEyqWGdzhAs9",
         PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
         PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",
+        PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
+        PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
       };
     },
     chunkid: (module) => {
@@ -9045,32 +9047,38 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Name,
+                  className: _.PurchaseOnlyNameCtn,
                 },
-                _.GetName(),
-              ),
-              Boolean(!_ && 10 != _.GetAppType()) &&
                 _.createElement(
                   "div",
                   {
-                    className: _._,
+                    className: _.Name,
                   },
-                  _.createElement(_._, {
-                    item: __webpack_require__,
-                  }),
-                  Boolean(
-                    _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
-                  ) &&
-                    _.createElement(_._, {
-                      className: _.DeckCompatIcon,
-                      category: _.GetPlatforms().steam_deck_compat_category,
-                    }),
+                  _.GetName(),
                 ),
+              ),
               _.createElement(
                 "div",
                 {
-                  className: _.Purchase,
+                  className: _.PurchaseAndPlatformCtn,
                 },
+                Boolean(!_ && 10 != _.GetAppType()) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _._,
+                    },
+                    _.createElement(_._, {
+                      item: __webpack_require__,
+                    }),
+                    Boolean(
+                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
+                    ) &&
+                      _.createElement(_._, {
+                        className: _.DeckCompatIcon,
+                        category: _.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
                 _.createElement(_._, {
                   info: __webpack_require__,
                   className: _.PurchaseOnlyActionCtn,

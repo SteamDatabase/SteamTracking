@@ -12559,9 +12559,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 17 2025 : 17:38:21",
-                BUILD_TIME_UTC: "Jun 18 2025 : 00:38:21",
-                BUILD_RTIME_UTC: 1750207101,
+                BUILD_TIME_LOCAL: "Jun 18 2025 : 15:40:07",
+                BUILD_TIME_UTC: "Jun 18 2025 : 22:40:07",
+                BUILD_RTIME_UTC: 1750286407,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -12712,8 +12712,10 @@ var CLSTAMP = "steamdb";
             let _ = "";
             _.body_class && (_ = `class="${_.body_class}"`);
             let _ = "";
+            _.body_role && (_ = `role="${_.body_role}"`);
+            let _ = "";
             _.popup_class && (_ = `class="${_.popup_class}"`);
-            let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_}><div id="popup_target" ${_}></div></body></html>`;
+            let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_} ${_}><div id="popup_target" ${_}></div></body></html>`;
             return (
               _.document.write(_),
               (_.document.title = _),
@@ -26882,9 +26884,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 17 2025 : 17:38:21",
-                    BUILD_TIME_UTC: "Jun 18 2025 : 00:38:21",
-                    BUILD_RTIME_UTC: 1750207101,
+                    BUILD_TIME_LOCAL: "Jun 18 2025 : 15:40:07",
+                    BUILD_TIME_UTC: "Jun 18 2025 : 22:40:07",
+                    BUILD_RTIME_UTC: 1750286407,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27554,7 +27556,7 @@ var CLSTAMP = "steamdb";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "5854ad132884cbc8d12f",
-        3569: "6dc9776af73e5cd43f9a",
+        3569: "73e88a5fadf8c0099add",
         3583: "f831ab7edbd9ffa591ac",
         3594: "6773526db05f74dd2672",
         3714: "ab7010eec823473536d8",
@@ -27632,7 +27634,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "7a1eb865cb2bf0a516b1",
+        9858: "44a70f8edff60f36651f",
         9869: "e0e020c0bad905ce16af",
         9887: "e51f90d2f92bc26f642e",
       }[_]),

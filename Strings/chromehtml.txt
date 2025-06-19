@@ -335,6 +335,7 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_EStorageDriveMediaType_Removable
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\ngpu_status
+'\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
@@ -661,6 +662,7 @@ $\n k_SystemAudioPortDirection_Input
 .CHistoryEntry"c\n\rCMsgLoadError
 .CMsgFileLoadDialog.Filter
 .CMsgJSValue.JSObjectProperty
+.EAccessibilityContrastMode*
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
@@ -872,6 +874,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI23CMsgCanGoBackAndForwardE
 16CHTMLProtoBufMsgI23CMsgSetForegroundWindowE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
+16CHTMLProtoBufMsgI24CMsgSetPreferredContrastE
 16CHTMLProtoBufMsgI25CMsgAckSharedPaintBuffersE
 16CHTMLProtoBufMsgI25CMsgBrowserCreateResponseE
 16CHTMLProtoBufMsgI25CMsgMaximizeRestoreWindowE
@@ -884,6 +887,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
 16CHTMLProtoBufMsgI27CMsgNeedsSharedTexturePaintE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
+16CHTMLProtoBufMsgI27CMsgSetReducedMotionEnabledE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
 16CHTMLProtoBufMsgI30CMsgImeCompositionRangeChangedE
@@ -993,6 +997,7 @@ $\n k_SystemAudioPortDirection_Input
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
+24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -1015,6 +1020,7 @@ $\n k_SystemAudioPortDirection_Input
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
+27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 28CMsgGetCookiesForURLResponse
@@ -1624,7 +1630,7 @@ CMsgProcessInfoNotification
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext*
+CMsgRestartJSContext".\n
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
@@ -1638,7 +1644,9 @@ CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
+CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
+CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetTargetFrameRate
@@ -1934,6 +1942,7 @@ Duplicated Request
 Dutch
 EACState
 EAbuseReportType
+EAccessibilityContrastMode
 EAccountFlags
 EAccountServed
 EAccountType
@@ -2604,6 +2613,7 @@ Items
 Items_Mtx
 Items_ReadyToUse
 JArray
+JF\MdK
 JSObjectProperty
 JSType
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
@@ -3862,6 +3872,7 @@ Zulu
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \nParsing attempt:  
+\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -4504,6 +4515,7 @@ el_GR
 elementtagname
 embedded_unknown
 en_US
+enabled
 enables CEF usage of the Chromium keyring
 enables Chromium remote debugging, defaulting to localhost:8080
 enables full crash dumps
@@ -4899,6 +4911,8 @@ k_EBatteryState_Unknown
 k_EBroadcastEncoderBestQuality
 k_EBroadcastPermissionDisabled
 k_EBroadcastPermissionPublic
+k_EBrowserContrastMode_Less
+k_EBrowserContrastMode_More
 k_EBrowserFeatureStatus_Enabled
 k_EBrowserFeatureStatus_Invalid
 k_EBrowserFeatureStatus_Unknown
@@ -4912,6 +4926,10 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
+k_EColorFilter_Grayscale
+k_EColorFilter_InvertBrightness
+k_EColorFilter_InvertColors
+k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -5412,6 +5430,7 @@ posix_fadvise
 post
 postData
 pread64
+preferred_contrast
 preloadonly
 prerelease
 print

@@ -484,6 +484,7 @@ $\nY8O
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\ngpu_status
 &bzi
+'\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
@@ -740,6 +741,7 @@ $\nY8O
 .CHistoryEntry"c\n\rCMsgLoadError
 .CMsgFileLoadDialog.Filter
 .CMsgJSValue.JSObjectProperty
+.EAccessibilityContrastMode*
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
@@ -892,7 +894,6 @@ $\nY8O
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:25:35
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1331,6 +1332,7 @@ $\nY8O
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:40:34
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1353,6 +1355,7 @@ $\nY8O
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
+24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -1380,6 +1383,7 @@ $\nY8O
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
+27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 27CScreenshotProcessingThread
@@ -2144,7 +2148,7 @@ CMsgProcessInfoNotification
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext*
+CMsgRestartJSContext".\n
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
@@ -2158,7 +2162,9 @@ CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
+CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
+CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetTargetFrameRate
@@ -2634,6 +2640,7 @@ Duplicated Request
 Dutch
 EACState
 EAbuseReportType
+EAccessibilityContrastMode
 EAccountFlags
 EAccountServed
 EAccountType
@@ -5645,6 +5652,7 @@ Zulu
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nParsing attempt:  
 \nYg:a
+\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -7066,6 +7074,8 @@ k_EBatteryState_Unknown
 k_EBroadcastEncoderBestQuality
 k_EBroadcastPermissionDisabled
 k_EBroadcastPermissionPublic
+k_EBrowserContrastMode_Less
+k_EBrowserContrastMode_More
 k_EBrowserFeatureStatus_Enabled
 k_EBrowserFeatureStatus_Invalid
 k_EBrowserFeatureStatus_Unknown
@@ -7080,6 +7090,10 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
+k_EColorFilter_Grayscale
+k_EColorFilter_InvertBrightness
+k_EColorFilter_InvertColors
+k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -7967,6 +7981,7 @@ postData
 postdata
 powf
 pread64
+preferred_contrast
 preloadonly
 prepend
 prerelease

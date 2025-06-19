@@ -517,6 +517,7 @@ $\nY8O
 '\n"k_EStreamControlDisableNeptuneData
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
+'\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
@@ -895,6 +896,7 @@ $\nY8O
 .CStreamingKeymap"
 .CStreamingKeymapEntry"2\n\rCSetKeymapMsg
 .CStreamingServerHandshakeInfo"]\n
+.EAccessibilityContrastMode*
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
@@ -1725,6 +1727,7 @@ $\nY8O
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
+24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -1768,6 +1771,7 @@ $\nY8O
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
+27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 27CSharedConnectionController
@@ -2576,7 +2580,7 @@ CMsgProcessInfoNotification
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext*
+CMsgRestartJSContext".\n
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
@@ -2590,7 +2594,9 @@ CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
+CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
+CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetTargetFrameRate
@@ -2984,6 +2990,7 @@ Duplicate property %s in object
 Dutch
 E=FZGrH
 EACState
+EAccessibilityContrastMode
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
 EBluetoothDeviceType
@@ -5121,6 +5128,7 @@ Zulu
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
+\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -6587,6 +6595,8 @@ k_EBatteryState_Unknown
 k_EBroadcastEncoderBestQuality
 k_EBroadcastPermissionDisabled
 k_EBroadcastPermissionPublic
+k_EBrowserContrastMode_Less
+k_EBrowserContrastMode_More
 k_EBrowserFeatureStatus_Enabled
 k_EBrowserFeatureStatus_Invalid
 k_EBrowserFeatureStatus_Unknown
@@ -6601,6 +6611,10 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
+k_EColorFilter_Grayscale
+k_EColorFilter_InvertBrightness
+k_EColorFilter_InvertColors
+k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -7563,6 +7577,7 @@ post
 postData
 postdata
 pread64
+preferred_contrast
 prepend
 preserveAspectRatio
 pressed
