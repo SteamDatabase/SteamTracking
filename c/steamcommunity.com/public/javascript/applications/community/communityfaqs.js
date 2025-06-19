@@ -7938,7 +7938,7 @@
             _ = _
               ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
               : null,
-            { data: _ } = (0, _._)(_.GetAccountID()),
+            { data: _ } = (0, _._)(null == _ ? void 0 : _.GetAccountID()),
             _ = _
               ? (0, _._)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",

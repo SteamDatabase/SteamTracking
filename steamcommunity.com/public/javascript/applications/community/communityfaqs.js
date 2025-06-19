@@ -7825,7 +7825,7 @@
             p = r
               ? N.b.InitFromAccountID(Number.parseInt(r.author_account_id))
               : null,
-            { data: d } = (0, Y.js)(p.GetAccountID()),
+            { data: d } = (0, Y.js)(null == p ? void 0 : p.GetAccountID()),
             h = r
               ? (0, q.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
