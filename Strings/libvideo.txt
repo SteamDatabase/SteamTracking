@@ -1005,6 +1005,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1Vr
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1655,6 +1656,7 @@ $ffn
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_uv.cc
 /index.html
+/j.mg
 /proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
@@ -1705,6 +1707,7 @@ $ffn
 0.8.3
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:38:50
 01/01/00
 0123456789
 0123456789.
@@ -2231,7 +2234,6 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21VideoRepresentation_t
-22:40:25
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2462,6 +2464,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9HDF
 9IGv
 9IMemAlloc
 9PE,$
@@ -6388,7 +6391,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 18 2025
+Jun 20 2025
 June
 K'iche'
 K(\f]C15
@@ -15819,6 +15822,9 @@ macos1017
 macos1018
 macos1019
 macos1020
+macos1021
+macos1022
+macos1023
 macos104
 macos105
 macos1058
@@ -15839,6 +15845,9 @@ macos12
 macos13
 macos14
 macos15
+macos26
+macos27
+macos28
 made clan invite only and private
 made group private
 made group public

@@ -748,6 +748,7 @@ $\nY8O
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
 +\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_EClientNotificationType_FriendMessage
++\n'k_EClientNotificationType_TradeReversal
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground

@@ -948,6 +948,7 @@
 "r\n;CMarketingMessages_GetMarketingMessageClickedStats_Response
 "shift"\t"1"\n
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
+"system\InGameOverlayShowFPSScaling
 "t\n%CSiteLicense_LCSAssociateUser_Request
 "t\n\rCMsgAddHeader
 "t\n\vCardinality
@@ -4678,6 +4679,7 @@ ${LANGUAGE}
 +\n'k_EChatroomNotificationLevel_MentionAll
 +\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_EClientNotificationType_FriendMessage
++\n'k_EClientNotificationType_TradeReversal
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -5515,6 +5517,7 @@ ${LANGUAGE}
 .CMsgNetworkDeviceIP6Address
 .CMsgNetworkDeviceIP6Config
 .CMsgNetworkDevicesData.Device
+.CMsgShortcutInfo"$\n
 .CMsgSteamUIBrowserWindow2
 .CMsgStorageDevicesData.Drive
 .CMsgSystemAudioManagerDevice
@@ -8321,6 +8324,7 @@ ${LANGUAGE}
 17CMsgMouseDblClick
 17CMsgResponseCurve
 17CMsgSearchResults
+17CMsgShortcutInfos
 17CMsgStartDownload
 17CMsgSystemDisplay
 17CMsgUpdateToolTip
@@ -10087,6 +10091,7 @@ ${LANGUAGE}
 3333
 333333
 3333UUUU
+333?
 33554432
 33CAdditionalParentalBlocksListener
 33CBluetoothManager_Connect_Request
@@ -12500,7 +12505,6 @@ ${LANGUAGE}
 >w^23
 >wcv
 >wcv?uj
->zbh
 ? * + invalid
 ?%s/controller_configs/%s
 ?(MZct
@@ -14082,6 +14086,7 @@ Buffer passed to JPEG library is too small
 Buginese
 Bugs
 Buhid
+BuildCompleteAppOverviewChange
 BuildGroup::ValidateGlobals
 Building new pipeline
 Builtin
@@ -15720,6 +15725,7 @@ CMsgSetZoomLevel
 CMsgSettingVariant
 CMsgShortcutAppIds
 CMsgShortcutInfo
+CMsgShortcutInfos
 CMsgShowBrowserContextMenu
 CMsgShowToolTip
 CMsgShowWindow
@@ -16154,6 +16160,7 @@ CSteamApp::GetShortcutInfo
 CSteamApp::GetShortcutInfo - fetch
 CSteamApp::GetSupportedELanguages
 CSteamApp::InitializeAsShortcut
+CSteamApp::InitializeAsShortcutFromInfoMsg
 CSteamApp::LoadUserSettings
 CSteamApp::RefreshShortcutData
 CSteamAuthHandler::OnCredentialsChanged
@@ -16266,7 +16273,6 @@ CSteamUIAppController::RefreshAllDynamicConfigs
 CSteamUIAppController::RefreshAllDynamicConfigs - Process App KV
 CSteamUIAppController::RefreshAllLaunchOptions
 CSteamUIAppController::RefreshApplication
-CSteamUIAppController::RefreshShortcuts
 CSteamUIController::OnGamepadUIIdleThresholdReached
 CSteamUIController::OnUIModeChanged
 CSteamUICurrentUserController::OnClanInfoChanged
@@ -21482,7 +21488,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 18 2025 22:40:38
+Jun 20 2025 00:39:05
 June
 K'iche'
 K(\f]C15
@@ -30480,6 +30486,7 @@ Zulu
 \U%08x
 \W%08lX
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\n overlay_fps_counter_scale_factor
 \\n#accessibility_screen_reader_enabled
 \\n\rGetDLCForApps
 \\n\rGetPriceStops
@@ -37505,7 +37512,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen2\fo
+ggenr
 ghost_
 gidlist
 gidparentcomment
@@ -43108,6 +43115,9 @@ macos1017
 macos1018
 macos1019
 macos1020
+macos1021
+macos1022
+macos1023
 macos104
 macos105
 macos1058
@@ -43128,6 +43138,9 @@ macos12
 macos13
 macos14
 macos15
+macos26
+macos27
+macos28
 made clan invite only and private
 made group private
 made group public
@@ -44542,6 +44555,7 @@ overlay_fps_counter_corner
 overlay_fps_counter_detail_level
 overlay_fps_counter_high_contrast
 overlay_fps_counter_saturation_factor
+overlay_fps_counter_scale_factor
 overlay_key
 overlay_restore_browser_tabs
 overlay_scale_interface
@@ -46919,6 +46933,7 @@ shmat
 shmctl
 shmdt
 shmget
+shorcuts
 short
 short header
 short line

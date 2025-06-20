@@ -60,6 +60,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_GameRecordingUserMarkerAdded = 57;
 	k_EClientNotificationType_GameRecordingInstantClip = 58;
 	k_EClientNotificationType_PlaytestInvite = 59;
+	k_EClientNotificationType_TradeReversal = 60;
 }
 
 enum ESystemUpdateNotificationType {

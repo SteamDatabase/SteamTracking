@@ -2,13 +2,13 @@
 {
 	controls
 	{
-		FPSLabel { controlname=Label }
-		AvgNumber { controlname=Label labeltext="" }
-		AvgSep { controlname=Label labeltext=" " }
-		MinLabel { controlname=Label }
-		MinFPSNumber { controlname=Label labeltext="" }
-		MaxLabel { controlname=Label }
-		MaxFPSNumber { controlname=Label labeltext="" }
+		FPSLabel { controlname=CPerfLabel }
+		AvgNumber { controlname=CPerfLabel }
+		AvgSep { controlname=CPerfLabel }
+		MinLabel { controlname=CPerfLabel }
+		MinFPSNumber { controlname=CPerfLabel }
+		MaxLabel { controlname=CPerfLabel }
+		MaxFPSNumber { controlname=CPerfLabel }
 
 		Seperator { controlname=Label visible=0 style="PerfSeperator" }
 	}

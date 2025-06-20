@@ -15,12 +15,9 @@
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
- GHz
- MHz
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
  ReadToken overflow
- THz
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [clone 
@@ -374,7 +371,6 @@ $\nY8O
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
-%1.1f
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
 %Y-%m-%d %H:%M:%S
@@ -894,6 +890,7 @@ $\nY8O
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:39:00
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -914,6 +911,7 @@ $\nY8O
 10CHintLabel
 10CMsgGoBack
 10CMsgReload
+10CPerfLabel
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
@@ -1332,7 +1330,6 @@ $\nY8O
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:40:34
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -2207,7 +2204,6 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
-CPU 
 CPUInfoAvg
 CPULabel
 CPUSpeed
@@ -2218,6 +2214,7 @@ CPUUtilizationMax
 CPUUtilizationSep
 CPanelKeyBindingMapDictionary
 CPathString
+CPerfLabel
 CRLF)
 CSPAuth
 CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.\n
@@ -2918,13 +2915,10 @@ FATAL
 FCVAR_NEVER_AS_STRING
 FCZ&
 FLOAT
-FPS 
 FPSGraph.ColorFPSAvg
 FPSGraph.ColorFPSBad
 FPSGraph.ColorLegend
 FPSGraph.HeightLarge
-FPSGraph.HeightMedium
-FPSGraph.HeightSmall
 FPSLabel
 FPSNumber
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
@@ -3124,7 +3118,6 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
-GPU 
 GPUInfo
 GPULabel
 GPUTemp
@@ -3234,9 +3227,7 @@ Gothic
 GpuTopology
 GrabPay
 GraphLarge
-GraphMedium
 GraphPanel
-GraphSmall
 Greek
 Greenlight Items
 GreenlightItems
@@ -3356,6 +3347,7 @@ InGameOverlayShowFPSBGOpacity
 InGameOverlayShowFPSCorner
 InGameOverlayShowFPSDetailLevel
 InGameOverlayShowFPSSaturation
+InGameOverlayShowFPSScaling
 Inappropriate
 Incompatible
 IncompatibleCheat
@@ -3496,7 +3488,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun 18 2025
+Jun 20 2025
 June
 K'iche'
 KEY_0
@@ -4523,10 +4515,6 @@ PendingApproval
 PerfHighContrastClassic
 PerfTextLarge
 PerfTextLargeClassic
-PerfTextMedium
-PerfTextMediumClassic
-PerfTextSmall
-PerfTextSmallClassic
 Permanent
 Permanent Redirect
 Persian
@@ -4642,7 +4630,6 @@ QueryBox
 QuickAccess
 Quit
 R1h58
-RAM 
 RAMInfo
 RAMLabel
 RAMMax
@@ -7601,6 +7588,9 @@ macos1017
 macos1018
 macos1019
 macos1020
+macos1021
+macos1022
+macos1023
 macos104
 macos105
 macos1058
@@ -7621,6 +7611,9 @@ macos12
 macos13
 macos14
 macos15
+macos26
+macos27
+macos28
 made clan invite only and private
 made group private
 made group public

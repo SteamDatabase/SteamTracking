@@ -2,17 +2,18 @@
 {
 	controls
 	{
-		GPULabel { controlname=Label text="GPU " style="GPULabel" }
-		GPUUtilization { controlname=Label text="" style="GPUUtilization" }
-		GPUTempSpace { controlname=Label text=" " style="GPUVRam" }
-		GPUTemp { controlname=Label text="" style="GPUVRam" }
-		GPUTempUnits { controlname=Label text="" style="GPUVRam" }
-		VRAMUsed { controlname=Label text="" style="GPUVRam" }
-		VRAMSep { controlname=Label  text="/" style="GPUVRam" }
-		VRAMMax { controlname=Label text="" style="GPUVRam" }
-		VRAMUnits { controlname=Label text="" style="GPUVRam" }
+		GPULabel { controlname=CPerfLabel style="GPULabel" }
+		GPUUtilization { controlname=CPerfLabel style="GPUUtilization" }
+		GPUTempSpace { controlname=CPerfLabel style="GPUVRam" }
+		GPUTemp { controlname=CPerfLabel style="GPUVRam" }
+		GPUTempUnits { controlname=CPerfLabel style="GPUVRam" }
+		GPUTempSpaceAfter { controlname=CPerfLabel sytle="GPUVRAM" }
+		VRAMUsed { controlname=CPerfLabel style="GPUVRam" }
+		VRAMSep { controlname=CPerfLabel style="GPUVRam" }
+		VRAMMax { controlname=CPerfLabel style="GPUVRam" }
+		VRAMUnits { controlname=CPerfLabel style="GPUVRam" }
 
-		SeperatorBack { controlname=Label style="PerfSeperator" text=" | " }
+		SeperatorBack { controlname=CPerfLabel style="PerfSeperator" }
 	}
 
 	styles
@@ -53,6 +54,6 @@
 	
 	layout
 	{
-		place { control="GPULabel,GPUUtilization,GPUTempSpace,GPUTemp,GPUTempUnits,VRAMUsed,VRAMSep,VRAMMax,VRAMUnits,SeperatorBack" dir="right" align="left-center" spacing=0 }
+		place { control="GPULabel,GPUUtilization,GPUTempSpace,GPUTemp,GPUTempUnits,GPUTempSpaceAfter,GPUVRAMSpace,VRAMUsed,VRAMSep,VRAMMax,VRAMUnits,SeperatorBack" dir="right" align="left-center" spacing=0 }
 	}
 }

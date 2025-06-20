@@ -506,6 +506,7 @@ $\n k_SystemAudioPortDirection_Input
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
+--disable-component-update
 --disable-ffmpeg-hevc
 --disable-gpu
 --disable-gpu-compositing
@@ -2613,7 +2614,6 @@ Items
 Items_Mtx
 Items_ReadyToUse
 JArray
-JF\MdK
 JSObjectProperty
 JSType
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
@@ -3839,6 +3839,7 @@ WorkshopShowcase
 Write Failed
 Wrong Price
 Xhosa
+Xs/h\ft
 Yandex
 Yapi Kredi
 YooMoney
@@ -5251,6 +5252,9 @@ macos1017
 macos1018
 macos1019
 macos1020
+macos1021
+macos1022
+macos1023
 macos104
 macos105
 macos1058
@@ -5271,6 +5275,9 @@ macos12
 macos13
 macos14
 macos15
+macos26
+macos27
+macos28
 made clan invite only and private
 made group private
 made group public

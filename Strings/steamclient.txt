@@ -3299,7 +3299,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1&VQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -5413,6 +5412,7 @@ $steammessages_parental_objects.proto"
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
+--disable-component-update
 --disable-ffmpeg-hevc
 --disable-gpu
 --disable-gpu-compositing
@@ -6066,6 +6066,7 @@ $steammessages_parental_objects.proto"
 .CMsgNetworkDeviceIP6Address
 .CMsgNetworkDeviceIP6Config
 .CMsgNetworkDevicesData.Device
+.CMsgShortcutInfo"$\n
 .CMsgSteamDatagramCertificateB
 .CMsgSteamNetworkingIPAddress
 .CMsgSteamUIBrowserWindow2
@@ -10375,6 +10376,7 @@ $steammessages_parental_objects.proto"
 17CMsgMouseDblClick
 17CMsgResponseCurve
 17CMsgSearchResults
+17CMsgShortcutInfos
 17CMsgStartDownload
 17CMsgSystemDisplay
 17CMsgUpdateToolTip
@@ -15625,7 +15627,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42,(U
+;MO42\
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -19668,6 +19670,7 @@ CMsgSetWindowVisibility
 CMsgSetZoomLevel
 CMsgShortcutAppIds
 CMsgShortcutInfo
+CMsgShortcutInfos
 CMsgShowBrowserContextMenu
 CMsgShowToolTip
 CMsgShowWindow
@@ -21702,7 +21705,6 @@ ControllerBindings
 ControllerConfigResponse
 ControllerConfigUsage
 ControllerData.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
-ControllerGyroCal\%s
 ControllerGyroEulerAngles
 ControllerOverlayHotkey
 ControllerPersonalization
@@ -24868,6 +24870,7 @@ GetAppDownloadQueueIndex
 GetAppFileChangelist
 GetAppForInstallation
 GetAppID
+GetAppIDByExeName
 GetAppIDForGameID
 GetAppIdForPid
 GetAppInstallDir
@@ -25666,6 +25669,7 @@ GetShortcutAppIds
 GetShortcutDisplayName
 GetShortcutInfoByAppID
 GetShortcutInfoByIndex
+GetShortcutInfos
 GetSignedParentalSettings
 GetSingleSharedClip
 GetSizeInCloud
@@ -42563,7 +42567,6 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
-c@I8J
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -52925,6 +52928,9 @@ macos1017
 macos1018
 macos1019
 macos1020
+macos1021
+macos1022
+macos1023
 macos104
 macos105
 macos1058
@@ -52945,6 +52951,9 @@ macos12
 macos13
 macos14
 macos15
+macos26
+macos27
+macos28
 macos64
 macosapplesilicon
 made clan invite only and private
@@ -57417,6 +57426,7 @@ shm_unlink
 shmat
 shmdt
 shmget
+shorcuts
 short
 short header
 short line
@@ -57951,7 +57961,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 18 2025 22:40:34
+steam Jun 20 2025 00:39:00
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

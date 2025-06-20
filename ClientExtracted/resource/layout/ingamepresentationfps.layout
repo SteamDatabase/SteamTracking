@@ -2,9 +2,9 @@
 {
 	controls
 	{
-		FPSLabel { controlname=Label labeltext="" }
-		FPSNumber { controlname=Label labeltext="" }
-		Seperator { controlname=Label labeltext="" visible=0 style="PerfSeperator" }
+		FPSLabel { controlname=CPerfLabel }
+		FPSNumber { controlname=CPerfLabel }
+		Seperator { controlname=CPerfLabel visible=0 style="PerfSeperator" }
 	}
 
 	styles

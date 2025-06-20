@@ -34,55 +34,21 @@ gameoverlay.styles
 			render {}
 		}
 
-		PerfTextSmall
-		{
-			font-size="14"
-		}
-		
-		PerfTextMedium
-		{
-			font-size="15"
-		}
-		
 		PerfTextLarge
 		{
-			font-size="17"
-		}
-		
-		PerfTextSmallClassic
-		{
-			font-size="12"
-		}
-		
-		PerfTextMediumClassic
-		{
-			font-size="13"
-		}
-		
-		PerfTextLargeClassic
-		{
-			font-size="16"
-		}
-	
-		PerfTextSmallUnits
-		{
-			inset="0 -2 0 0"
-			font-weight=700
-			font-size="10"
-		}
-		
-		PerfTextMediumUnits
-		{
-			inset="0 -2 0 0"
-			font-weight="700"
-			font-size="12"
+			font-size="32"
 		}
 		
 		PerfTextLargeUnits
 		{
-			inset="0 -3 0 0"
 			font-weight="700"
-			font-size="14"
+			font-size="19"
+			padding-bottom=6
+		}
+
+		PerfTextLargeClassic
+		{
+			font-size="24"
 		}
 
 		PerfHighContrastClassic
@@ -96,25 +62,11 @@ gameoverlay.styles
 			textcolor="128 128 128 255"
 		}
 
-		PerfTextSmallSeperator
-		{
-			font-family="Motiva"
-			textcolor="100 100 100 255"
-			font-size="13"
-		}
-
-		PerfTextMediumSeperator
-		{
-			font-family="Motiva"
-			textcolor="100 100 100 255"
-			font-size="14"
-		}
-
 		PerfTextLargeSeperator
 		{
-			font-family="Motiva"
 			textcolor="100 100 100 255"
-			font-size="16"
+			font-size="22"
+			padding-bottom=3
 		}
 
 	}

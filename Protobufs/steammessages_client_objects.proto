@@ -615,6 +615,10 @@ message CMsgShortcutInfo {
 	optional string devkit_gameid = 19;
 }
 
+message CMsgShortcutInfos {
+	repeated .CMsgShortcutInfo shorcuts = 1;
+}
+
 message CMsgShortcutAppIds {
 	repeated uint32 appids = 1;
 }

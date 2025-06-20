@@ -2,16 +2,16 @@
 {
 	controls
 	{
-		SeperatorFront { controlname=Label style="PerfSeperator" text=" | " }
-		CPULabel { controlname=Label text="CPU " style="CPULabel" }
-		CPUUtilization { controlname=Label text="0%" style="CPUUtilization" }
-		CPUUtilizationSep { controlname=Label  text="" style="CPUUtilization" }
-		CPUUtilizationMax { controlname=Label text="" style="CPUUtilization" }
-		CPUSpeed { controlname=Label style="CPUSpeed" }
-		CPUSpeedMax { controlname=Label style="CPUSpeed" }
-		CPUSpeedUnits { controlname=Label style="CPUSpeed" }
+		SeperatorFront { controlname=CPerfLabel style="PerfSeperator" }
+		CPULabel { controlname=CPerfLabel style="CPULabel" }
+		CPUUtilization { controlname=CPerfLabel style="CPUUtilization" }
+		CPUUtilizationSep { controlname=CPerfLabel style="CPUUtilization" }
+		CPUUtilizationMax { controlname=CPerfLabel style="CPUUtilization" }
+		CPUSpeed { controlname=CPerfLabel style="CPUSpeed" }
+		CPUSpeedMax { controlname=CPerfLabel style="CPUSpeed" }
+		CPUSpeedUnits { controlname=CPerfLabel style="CPUSpeed" }
 
-		SeperatorBack { controlname=Label style="PerfSeperator" text=" | " }
+		SeperatorBack { controlname=CPerfLabel style="PerfSeperator" }
 	}
 
 	styles
@@ -24,7 +24,6 @@
 		CPULabel
 		{
 			font-weight="700"
-
 			textcolor="218 218 100 255"
 		}
 

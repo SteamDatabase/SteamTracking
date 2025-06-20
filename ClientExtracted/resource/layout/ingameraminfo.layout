@@ -2,13 +2,13 @@
 {
 	controls
 	{
-		RAMLabel { controlname=Label text="RAM " style="RAMLabel" }
-		RAMUsed { controlname=Label text="" style="RAMUtilization" }
-		RAMSep { controlname=Label  text="/" style="RAMUtilization" }
-		RAMMax { controlname=Label text="" style="RAMUtilization" }
-		RAMUnits { controlname=Label text="" style="RAMUtilization" }
+		RAMLabel { controlname=CPerfLabel style="RAMLabel" }
+		RAMUsed { controlname=CPerfLabel style="RAMUtilization" }
+		RAMSep { controlname=CPerfLabel style="RAMUtilization" }
+		RAMMax { controlname=CPerfLabel style="RAMUtilization" }
+		RAMUnits { controlname=CPerfLabel style="RAMUtilization" }
 
-		SeperatorBack { controlname=Label style="PerfSeperator" text=" | " }
+		SeperatorBack { controlname=CPerfLabel style="PerfSeperator" }
 	}
 
 	styles
