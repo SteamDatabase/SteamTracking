@@ -1104,7 +1104,7 @@ CInventory.prototype.LoadCompleteInventory = function()
 	if ( !this.m_promiseLoadCompleteInventory )
 	{
 		var _this = this;
-		this.m_promiseLoadCompleteInventory = this.LoadUntilConditionMet( function() { return _this.m_bFullyLoaded; }, 5000 /* a lot at a time */ );
+				this.m_promiseLoadCompleteInventory = this.LoadUntilConditionMet( function() { return _this.m_bFullyLoaded; }, 2500 /* batch size */ );
 	}
 
 	return this.m_promiseLoadCompleteInventory;
