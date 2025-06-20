@@ -2809,6 +2809,10 @@ body.recommendgame #review_create h2  {
 .review_language_outlier .cell {
 	display: flex;
 	flex: 1;
+	flex-wrap: wrap;
+}
+.review_language_outlier .cell.languages {
+	flex-grow: 2;
 }
 
 /* review histogram */
