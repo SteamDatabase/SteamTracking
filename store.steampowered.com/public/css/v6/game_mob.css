@@ -744,7 +744,7 @@
 	}
 	html.responsive #shareBtn a,
 	html.responsive #reportBtn a,
-	html.responsive #queueBtnFollow > div {
+	html.responsive #queueBtnFollow > button {
 		width: 100%;
 		text-align: center;
 	}
