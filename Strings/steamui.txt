@@ -465,6 +465,7 @@
 !sm_pMemPoolPendingMsg
 !sm_pMemPoolReceivedPkt
 !system\InGameOverlayShowFPSCorner
+!system\InGameOverlayShowFPSHotKey
 !tI)i
 !tX)i
 !vecEntryFields.IsEmpty()
@@ -3656,6 +3657,7 @@ ${LANGUAGE}
 (\v2\v.CMsgHotkeyB
 (\v2\v.CMsgHotkeyB%
 (\v2\v.CMsgHotkeyB,
+(\v2\v.CMsgHotkeyB4
 (\v2\v.CMsgHotkeyB6
 (\v2\v.CMsgHotkeyB7
 (\v2\v.CMsgHotkeyB8
@@ -21488,7 +21490,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 20 2025 00:39:05
+Jun 20 2025 20:34:14
 June
 K'iche'
 K(\f]C15
@@ -37512,7 +37514,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen2
 ghost_
 gidlist
 gidparentcomment
@@ -44554,6 +44556,7 @@ overlay_fps_counter_bgopacity
 overlay_fps_counter_corner
 overlay_fps_counter_detail_level
 overlay_fps_counter_high_contrast
+overlay_fps_counter_key
 overlay_fps_counter_saturation_factor
 overlay_fps_counter_scale_factor
 overlay_key

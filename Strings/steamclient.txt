@@ -5470,6 +5470,7 @@ $steammessages_parental_objects.proto"
 --timeout-seconds
 --type
 --use-angle=vulkan
+--valve-enable-accessibility
 --valve-enable-site-isolation
 --valve-initial-threadpool-size=%d
 -.CAuthentication_MigrateMobileSession_Request
@@ -57961,7 +57962,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 20 2025 00:39:00
+steam Jun 20 2025 20:33:57
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

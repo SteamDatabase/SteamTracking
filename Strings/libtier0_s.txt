@@ -94,10 +94,10 @@ $ORIGIN
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
-00:38:52
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
+20:33:48
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>

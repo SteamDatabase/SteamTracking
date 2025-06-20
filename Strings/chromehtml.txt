@@ -311,6 +311,7 @@ $\n k_SystemAudioPortDirection_Input
 %s_mutex
 %s_server
 %s_written
+&U\aH
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
@@ -538,6 +539,7 @@ $\n k_SystemAudioPortDirection_Input
 --remote-debugging-port=%s
 --renderer-cmd-prefix='konsole -title renderer -e gdb --args'
 --use-angle=vulkan
+--valve-enable-accessibility
 --valve-enable-site-isolation
 --valve-initial-threadpool-size=%d
 -0123456789
@@ -3839,7 +3841,6 @@ WorkshopShowcase
 Write Failed
 Wrong Price
 Xhosa
-Xs/h\ft
 Yandex
 Yapi Kredi
 YooMoney
