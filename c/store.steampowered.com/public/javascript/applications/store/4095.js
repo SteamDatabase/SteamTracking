@@ -7473,7 +7473,11 @@
               _ &&
                 _.rgRepresentations.length > 0 &&
                 (_ = _.rgRepresentations[0].strCodecs);
-            return _ && _ && _ ? `${_}; codecs="${_}, ${_}` : "";
+            return _ && _
+              ? _
+                ? `${_}; codecs="${_}, ${_}`
+                : `${_}; codecs="${_}`
+              : "";
           })(this.m_mpd);
           if (
             !_ ||

@@ -6791,7 +6791,11 @@
               i &&
                 i.rgRepresentations.length > 0 &&
                 (a = i.rgRepresentations[0].strCodecs);
-            return t && r && a ? `${t}; codecs="${r}, ${a}` : "";
+            return t && r
+              ? a
+                ? `${t}; codecs="${r}, ${a}`
+                : `${t}; codecs="${r}`
+              : "";
           })(this.m_mpd);
           if (
             !n ||
