@@ -2347,6 +2347,9 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:29:38
+19:29:45
+19:29:46
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -2394,8 +2397,6 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:33:45
-20:33:53
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -6530,7 +6531,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 20 2025
+Jun 21 2025
 June
 K'iche'
 K(\f]C15
@@ -8746,7 +8747,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 20 2025 20:33:53
+Startup - updater built Jun 21 2025 19:29:45
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -10293,7 +10294,6 @@ Zulu
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \t*** %s - %s - (had more work last frame!!) ***\n
-\t-Zpz
 \t-f3F2
 \t6trF
 \tHAI8xpH\f
