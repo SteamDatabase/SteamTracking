@@ -16276,6 +16276,7 @@ CSteamUIAppController::RefreshAllDynamicConfigs
 CSteamUIAppController::RefreshAllDynamicConfigs - Process App KV
 CSteamUIAppController::RefreshAllLaunchOptions
 CSteamUIAppController::RefreshApplication
+CSteamUIAppController::RefreshShortcuts
 CSteamUIController::OnGamepadUIIdleThresholdReached
 CSteamUIController::OnUIModeChanged
 CSteamUICurrentUserController::OnClanInfoChanged
@@ -21491,7 +21492,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 21 2025 19:29:52
+Jun 22 2025 05:28:08
 June
 K'iche'
 K(\f]C15
@@ -26900,6 +26901,7 @@ Screenshots.GetTotalDiskSpaceUsage
 Screenshots.ShowScreenshotInSystemViewer
 Screenshots.ShowScreenshotsOnDisk
 Screenshots.UploadLocalScreenshot
+Screenshots: tried to read them while they are still being loaded\n
 Scroll Lock
 Scroll Lock Toggle
 ScrollBar
@@ -37515,7 +37517,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen2
+ggen
 ghost_
 gidlist
 gidparentcomment

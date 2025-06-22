@@ -1901,6 +1901,8 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+05:27:55
+05:28:02
 08bX
 0?0L
 0A/8
@@ -2347,9 +2349,6 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:29:38
-19:29:45
-19:29:46
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -6531,7 +6530,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 21 2025
+Jun 22 2025
 June
 K'iche'
 K(\f]C15
@@ -8747,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 21 2025 19:29:45
+Startup - updater built Jun 22 2025 05:28:02
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
