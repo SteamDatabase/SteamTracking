@@ -2780,32 +2780,21 @@
         );
       }
       function _(_) {
-        const {
-            bExtraAssetsV2: _,
-            bExtraAssetsV2Allowed: __webpack_require__,
-            setExtraAssetsV2: _,
-          } = (0, _._)(),
+        const { bExtraAssetsV2: _ } = (0, _._)(),
           {
-            bExtraAssetsV2Videos: _,
+            bExtraAssetsV2Videos: __webpack_require__,
             bExtraAssetsV2VideosAllowed: _,
             setExtraAssetsV2Videos: _,
           } = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
-          __webpack_require__ &&
-            _.createElement(_._, {
-              className: _.EnableExtraAssetsV2,
-              label: "New media conversion",
-              checked: _,
-              onChange: (_) => _(_),
-            }),
           _ &&
             _ &&
             _.createElement(_._, {
               className: _.EnableExtraAssetsV2,
               label: "Videos allowed",
-              checked: _,
+              checked: __webpack_require__,
               onChange: (_) => _(_),
             }),
         );
@@ -6113,12 +6102,10 @@
         return _.useContext(_).onExtraAssetsUpdated;
       }
       function _() {
-        const _ = _.useContext(_),
-          _ = _._.is_support;
         return {
-          bExtraAssetsV2: _.bExtraAssetsV2 && _,
-          bExtraAssetsV2Allowed: _,
-          setExtraAssetsV2: _.setExtraAssetsV2,
+          bExtraAssetsV2: !0,
+          bExtraAssetsV2Allowed: !0,
+          setExtraAssetsV2: (_) => {},
         };
       }
       function _() {
