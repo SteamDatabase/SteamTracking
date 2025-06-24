@@ -2028,21 +2028,22 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-            event: _,
-            dateRangeLayout: __webpack_require__ = "horizontal",
+            _: _,
+            event: __webpack_require__,
+            dateRangeLayout: _ = "horizontal",
           } = _,
           [_, _, _] = (0, _._)(() => [
-            _.GetStartTimeAndDateUnixSeconds(),
-            _.GetEndTimeAndDateUnixSeconds(),
-            _.type,
+            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
+            __webpack_require__.GetEndTimeAndDateUnixSeconds(),
+            __webpack_require__.type,
           ]),
           _ = {};
         return (
-          "vertical" == __webpack_require__ &&
-            (_.ShortDateRange = _().VerticalLocalDateAndTime),
+          "vertical" == _ && (_.ShortDateRange = _().VerticalLocalDateAndTime),
           _.createElement(
             "div",
             {
+              _: _,
               className: _().EventDetailTimeInfo,
             },
             _.createElement(_._, {

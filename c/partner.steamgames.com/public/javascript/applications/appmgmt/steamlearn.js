@@ -13529,18 +13529,25 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_, _, _) {
-        return await (0, _._)(_, _, {
-          upgrade(_) {
-            _.objectStoreNames.contains(_) ||
-              _.createObjectStore(_, {
-                keyPath: "strKey",
-              });
-          },
-        });
+      async function _(_, _) {
+        let _ = await (0, _._)(_);
+        if (_.objectStoreNames.contains(_)) return _;
+        const _ = _.version + 1;
+        return (
+          __webpack_require__.close(),
+          (_ = await (0, _._)(_, _, {
+            upgrade(_) {
+              _.objectStoreNames.contains(_) ||
+                _.createObjectStore(_, {
+                  keyPath: "strKey",
+                });
+            },
+          })),
+          _
+        );
       }
       async function _(_, _, _, _, _) {
-        const _ = (await _(_, _, _)).transaction(_, "readwrite");
+        const _ = (await _(_, _)).transaction(_, "readwrite");
         await _.objectStore(_).put({
           strKey: _,
           data: _,
@@ -13548,12 +13555,12 @@
           await _.done;
       }
       async function _(_, _, _, _) {
-        const _ = (await _(_, _, _)).transaction(_, "readonly"),
+        const _ = (await _(_, _)).transaction(_, "readonly"),
           _ = await _.objectStore(_).get(_);
         return await _.done, _?.data;
       }
       async function _(_, _, _, _) {
-        const _ = (await _(_, _, _)).transaction(_, "readwrite");
+        const _ = (await _(_, _)).transaction(_, "readwrite");
         await _.objectStore(_).delete(_), await _.done;
       }
       var _ = __webpack_require__("chunkid"),
@@ -13585,8 +13592,8 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = "SteamLearnDB",
-        _ = 1,
-        _ = "SteamLearnProjects";
+        _ = "SteamLearnProjects",
+        _ = "SteamLearnProjectConfig";
       function _(_) {
         return `handle_${_}`;
       }
@@ -13605,12 +13612,26 @@
       const _ = "SteamLearnDataSource",
         _ = "SteamLearnProjectList",
         _ = "SteamLearnProject",
-        _ = "SteamLearnFetchStatusVersions",
-        _ = "SteamLearnTrainStatusVersions",
         _ = "SteamLearnFetchStatus",
         _ = "SteamLearnTrainStatus";
+      function _(_, _) {
+        return ["SteamLearnProjectConfig", _, _];
+      }
+      function _(_, _) {
+        return _
+          ? ["SteamLearnFetchStatusVersions", _, _]
+          : ["SteamLearnFetchStatusVersions", _];
+      }
+      function _(_, _) {
+        return _
+          ? ["SteamLearnTrainStatusVersions", _, _]
+          : ["SteamLearnTrainStatusVersions", _];
+      }
       function _(_) {
         return `SteamLearnWorkingProject_Universe${_._.EUNIVERSE}_Project${_}`;
+      }
+      function _(_, _) {
+        return `SteamLearnWorkingProject_Universe${_._.EUNIVERSE}_Project${_}_Version${_}`;
       }
       function _() {
         return (0, _._)({
@@ -13683,9 +13704,9 @@
             throw `Failed FetchProject ${_}`;
           })(_),
           _ = _(_);
-        (await _(_, _, _, _)) ||
-          (await _(_, _, _, _, _.serializeBase64String()));
-        const _ = await _(_, _, _, _),
+        (await _(_, 0, _, _)) ||
+          (await _(_, 0, _, _, _.serializeBase64String()));
+        const _ = await _(_, 0, _, _),
           _ = _.deserializeBinary(Uint8Array.from(_._.from(_, "base64")));
         for (const _ of _.published_configs())
           for (const _ of _.published_configs())
@@ -13708,6 +13729,23 @@
           staleTime: 1 / 0,
         });
       }
+      function _() {
+        return (0, _._)({
+          queryKey: ["SteamLearnProjectConfigList"],
+          queryFn: () =>
+            (async function () {
+              let _ = _._.Init(_);
+              const _ = await _.ListProjectConfigs(
+                _.Get().GetServiceTransport(),
+                _,
+              );
+              if (_.BIsValid() && 1 == _.GetEResult())
+                return _.Body().project_config_infos();
+              throw "Failed FetchProjectList";
+            })(),
+          staleTime: 1 / 0,
+        });
+      }
       function _(_) {
         return (0, _._)({
           queryKey: [_, _],
@@ -13723,6 +13761,41 @@
               return __webpack_require__.project_name();
           return `Project ${_}`;
         }
+      }
+      async function _(_, _) {
+        let _ = _._.Init(_);
+        __webpack_require__.Body().set_project_id(_),
+          __webpack_require__.Body().set_published_version(_);
+        const _ = await _.GetProjectConfig(_.Get().GetServiceTransport(), _);
+        if (_.BIsValid() && 1 == _.GetEResult())
+          return _.Body().project_config();
+        throw `Failed FetchProjectConfig ${_} ${_}`;
+      }
+      function _(_, _) {
+        return (0, _._)({
+          queryKey: _(_, _),
+          queryFn: async () =>
+            (async function (_, _) {
+              const _ = await _(_, _),
+                _ = _(_, _);
+              (await _(_, 0, _, _)) ||
+                (await _(
+                  _,
+                  0,
+                  _,
+                  _,
+                  __webpack_require__.serializeBase64String(),
+                ));
+              const _ = await _(_, 0, _, _),
+                _ = _.deserializeBinary(Uint8Array.from(_._.from(_, "base64")));
+              return (
+                _.set_fetch_infos(__webpack_require__.fetch_infos()),
+                _.set_train_infos(__webpack_require__.train_infos()),
+                [_, _]
+              );
+            })(_, _),
+          staleTime: 1 / 0,
+        });
       }
       function _(_, _) {
         const _ = (function (_, _) {
@@ -13756,7 +13829,7 @@
       }
       function _(_, _) {
         return (0, _._)({
-          queryKey: [_, _, _],
+          queryKey: _(_, _),
           queryFn: () =>
             (async function (_, _) {
               let _ = _._.Init(_);
@@ -13774,7 +13847,7 @@
       }
       function _(_, _) {
         return (0, _._)({
-          queryKey: [_, _, _],
+          queryKey: _(_, _),
           queryFn: () =>
             (async function (_, _) {
               let _ = _._.Init(_);
@@ -13924,31 +13997,30 @@
           [_.Body().result(), _.Body().project().project_id()]
         );
       }
-      async function _(_, _) {
+      async function _(_) {
         let _ = _._.Init(_);
-        __webpack_require__.Body().set_project(_),
-          __webpack_require__.Body().set_published_version(_);
-        const _ = await _.EditProject(_.Get().GetServiceTransport(), _);
+        _.Body().set_project_config(_);
+        const _ = await _.EditProjectConfig(_.Get().GetServiceTransport(), _);
         return (
           _ &&
-            1 == _.GetEResult() &&
-            (await _(_, _, _, _(_.project_id())),
+            1 == __webpack_require__.GetEResult() &&
+            (await _(_, 0, _, _(_.project_id(), _.published_version())),
             _._.invalidateQueries({
-              queryKey: [_, _.project_id()],
+              queryKey: _(_.project_id(), _.published_version()),
             })),
-          _.Body().result()
+          __webpack_require__.Body().result()
         );
       }
-      async function _(_) {
-        await _(_, _, _, _(_)),
-          await _._.removeQueries({
-            queryKey: [_, _],
+      async function _(_, _) {
+        await _(_, 0, _, _(_, _)),
+          await _._.invalidateQueries({
+            queryKey: _(_, _),
           }),
-          _._.removeQueries({
-            queryKey: [_, _],
+          _._.invalidateQueries({
+            queryKey: _(_),
           }),
-          _._.removeQueries({
-            queryKey: [_, _],
+          _._.invalidateQueries({
+            queryKey: _(_),
           });
       }
       function _(_, _) {
@@ -13988,7 +14060,7 @@
       function _(_) {
         return _(_, 1)[0];
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _) {
         let _ = _.project_nodes().find((_) => _.node_id() == _),
           _ = _.project_nodes().find((_) => _.node_id() == _);
         if (
@@ -14468,7 +14540,7 @@
         }
         return _;
       }
-      function _(_, _, _) {
+      function _(_, _) {
         const _ = _.project_nodes().findIndex((_) => _.node_id() == _);
         if (-1 == _) return;
         const _ = _.project_nodes()
@@ -14552,9 +14624,23 @@
       function _(_) {
         _(_.unpublished_config());
         for (const _ of _.published_configs()) _(_);
-        _(_, _, _, _(_.project_id()), _.serializeBase64String()),
+        _(_, 0, _, _(_.project_id()), _.serializeBase64String()),
           _._.invalidateQueries({
             queryKey: [_, _.project_id()],
+          });
+      }
+      function _(_) {
+        console.log("SetWorkingProject"),
+          _(_),
+          _(
+            _,
+            0,
+            _,
+            _(_.project_id(), _.published_version()),
+            _.serializeBase64String(),
+          ),
+          _._.invalidateQueries({
+            queryKey: _(_.project_id(), _.published_version()),
           });
       }
       function _(_, _) {
@@ -14562,9 +14648,13 @@
           return _._.getQueryData([_, _]);
         })(_);
         if (!_) return !1;
+        if (0 != _.published_version())
+          return (
+            console.error("Attempt to add datasource to published project!"), !1
+          );
         for (const _ of __webpack_require__.structure().elements())
-          _(_.unpublished_config(), "", _, _);
-        return _.unpublished_config().add_data_source_ids(_), !0;
+          _(_, "", _, _);
+        return _.add_data_source_ids(_), !0;
       }
       function _(_, _, _, _) {
         for (let _ = 0; _ < _.count(); _++) {
@@ -14588,17 +14678,20 @@
         }
       }
       function _(_, _) {
-        const _ = _.unpublished_config().data_source_ids().indexOf(_);
+        const _ = _.data_source_ids().indexOf(_);
         if (-1 == _) return !1;
-        let _ = _.unpublished_config()
-          .data_source_element_usages()
-          .filter((_) => _.data_source_id() != _);
+        if (0 != _.published_version())
+          return (
+            console.error("Attempt to remove datasource to published project!"),
+            !1
+          );
+        let _ = _.data_source_element_usages().filter(
+          (_) => _.data_source_id() != _,
+        );
         return (
-          (_.unpublished_config().data_source_element_usages().length = 0),
-          _.unpublished_config()
-            .data_source_element_usages()
-            .push(..._),
-          _.unpublished_config().data_source_ids().splice(_, 1),
+          (_.data_source_element_usages().length = 0),
+          _.data_source_element_usages().push(..._),
+          _.data_source_ids().splice(_, 1),
           !0
         );
       }
@@ -14693,7 +14786,7 @@
             return _.Keras;
         }
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _) {
         let _ = _.project_nodes().find((_) => _.node_id() == _),
           _ = _.project_nodes().find((_) => _.node_id() == _);
         if (
@@ -14758,7 +14851,8 @@
         );
       }
       const _ = (_) => {
-          const _ = _(_.nProjectID);
+          const _ = _(_.nProjectID, _.nPublishedVersion),
+            _ = _();
           if (!_.nProjectID)
             return _.createElement(
               _,
@@ -14767,29 +14861,24 @@
               },
               _.children,
             );
-          const [__webpack_require__, _] = _.data || [void 0, void 0];
-          let _;
-          return (
-            _ &&
-              (_ =
-                0 == _.nPublishedVersion
-                  ? _.unpublished_config()
-                  : _.published_configs().find(
-                      (_) => _.published_version() == _.nPublishedVersion,
-                    )),
-            _.createElement(
-              _,
-              {
-                steamLearnContext: {
-                  nProjectID: _.nProjectID,
-                  nPublishedVersion: _.nPublishedVersion,
-                  msgProject: __webpack_require__,
-                  msgWorkingProject: _,
-                  msgWorkingProjectConfig: _,
-                },
+          const [_, _] = _.data || [void 0, void 0],
+            _ = _.data;
+          let _ =
+            _?.find(
+              (_) => _.project_id() == _.nProjectID,
+            )?.published_versions() || [];
+          return _.createElement(
+            _,
+            {
+              steamLearnContext: {
+                nProjectID: _.nProjectID,
+                nPublishedVersion: _.nPublishedVersion,
+                arrOtherPublishedVersions: _,
+                msgProjectConfig: _,
+                msgWorkingProjectConfig: _,
               },
-              _.children,
-            )
+            },
+            _.children,
           );
         },
         _ = (_) => {
@@ -14833,11 +14922,8 @@
         let _ = _;
         if (-1 == _) {
           const _ = _.find((_) => _.project_id() == _);
-          if (_ && _.published_configs().length > 0) {
-            const _ = _.published_configs().reduce((_, _) =>
-              !_ || _.published_version() < _.published_version() ? _ : _,
-            );
-            _ && (_ = _.published_version());
+          if (_ && _.published_versions().length > 0) {
+            _ = _.published_versions().reduce((_, _) => (_ < _ ? _ : _));
           }
         }
         -1 == _ && (_ = 0),
@@ -14859,11 +14945,24 @@
             _.push(_.SteamLearnProjectInferenceTester(_, _));
       }
       const _ = (_) => {
-          const { msgProject: _, msgWorkingProject: __webpack_require__ } = _(),
-            _ = _
-              ? _.published_configs().map((_) => _.published_version())
-              : [],
-            [_, _] = _.useState(_.length > 0 ? _[0] : 0);
+          const {
+              nProjectID: _,
+              arrOtherPublishedVersions: __webpack_require__,
+              msgProjectConfig: _,
+            } = _(),
+            [_, _] = _.useState(
+              __webpack_require__.length > 0 ? __webpack_require__[0] : 0,
+            ),
+            [_, _] = _.useState(!1),
+            _ = async (_) => {
+              _(!0),
+                await (async function (_, _, _) {
+                  const _ = (await _(_, _)).cloneMessage();
+                  _.set_published_version(_), _(_);
+                })(_, _, 0),
+                _(!1),
+                _.fnClosePopup();
+            };
           return _.createElement(
             _._,
             {
@@ -14892,7 +14991,7 @@
                 {
                   onChange: (_) => _(parseInt(_.target.value)),
                 },
-                _.map((_) =>
+                __webpack_require__.map((_) =>
                   _.createElement(
                     "option",
                     {
@@ -14908,29 +15007,19 @@
                 null,
                 _.createElement(_._, {
                   onCancel: () => _.fnClosePopup(),
-                  onOK: () =>
-                    ((_) => {
-                      const _ = __webpack_require__
-                        .published_configs()
-                        .find((_) => _.published_version() == _);
-                      _ &&
-                        (__webpack_require__.set_unpublished_config(
-                          _.cloneMessage(),
-                        ),
-                        __webpack_require__
-                          .unpublished_config()
-                          .set_published_version(0),
-                        _(__webpack_require__),
-                        _(__webpack_require__, 0)),
-                        _.fnClosePopup();
-                    })(_),
+                  onOK: () => _(_),
+                  bOKDisabled: _,
                 }),
               ),
             ),
           );
         },
         _ = (_) => {
-          const { msgProject: _, msgWorkingProject: __webpack_require__ } = _(),
+          const {
+              msgProjectConfig: _,
+              msgWorkingProjectConfig: __webpack_require__,
+            } = _(),
+            [_, _] = _.useState(!1),
             [_, _] = _.useState(!1);
           _.useEffect(() => {
             _(!1);
@@ -14941,73 +15030,82 @@
             showModifications: !0,
             arrayDiffMethod: "lcs",
           });
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: _.fnClosePopup,
-              modalClassName: "DiscardChangesPopup",
-            },
-            _.createElement(
-              _._,
-              null,
-              " ",
-              (0, _._)("#SteamLearn_Project_Discard") ||
-                _.createElement(_.Fragment, null, " "),
-              " ",
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
+          return _ && __webpack_require__
+            ? _.createElement(
                 _._,
-                null,
-                _ &&
+                {
+                  active: _.bVisible,
+                  onDismiss: _.fnClosePopup,
+                  modalClassName: "DiscardChangesPopup",
+                },
+                _.createElement(
+                  _._,
+                  null,
+                  " ",
+                  (0, _._)("#SteamLearn_Project_Discard") ||
+                    _.createElement(_.Fragment, null, " "),
+                  " ",
+                ),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(
+                    _._,
+                    null,
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.DiffTableContainer,
+                        },
+                        _.createElement(_._, {
+                          diff: _.diff(
+                            _?.toObject(),
+                            __webpack_require__?.toObject(),
+                          ),
+                          hideUnchangedLines: !0,
+                          highlightInlineDiff: !0,
+                          lineNumbers: !0,
+                          inlineDiffOptions: {
+                            mode: "word",
+                            wordSeparator: " ",
+                          },
+                        }),
+                      ),
+                    !_ && (0, _._)("#SteamLearn_Project_Discard_Warning"),
+                    !_ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ShowChangesButton,
+                          onClick: () => _(!0),
+                        },
+                        (0, _._)("#SteamLEarn_Project_DiscardShowDiff"),
+                      ),
+                  ),
                   _.createElement(
                     "div",
                     {
-                      className: _.DiffTableContainer,
+                      className: _.Buttons,
                     },
                     _.createElement(_._, {
-                      diff: _.diff(
-                        _?.toObject(),
-                        __webpack_require__?.toObject(),
-                      ),
-                      hideUnchangedLines: !0,
-                      highlightInlineDiff: !0,
-                      lineNumbers: !0,
-                      inlineDiffOptions: {
-                        mode: "word",
-                        wordSeparator: " ",
+                      onCancel: () => _.fnClosePopup(),
+                      onOK: async () => {
+                        _(!0),
+                          await _(
+                            __webpack_require__.project_id(),
+                            __webpack_require__.published_version(),
+                          ),
+                          _(!1),
+                          _.incrementDiscardCounter(),
+                          _.fnClosePopup();
                       },
+                      bOKDisabled: _,
                     }),
                   ),
-                !_ && (0, _._)("#SteamLearn_Project_Discard_Warning"),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ShowChangesButton,
-                      onClick: () => _(!0),
-                    },
-                    (0, _._)("#SteamLEarn_Project_DiscardShowDiff"),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Buttons,
-                },
-                _.createElement(_._, {
-                  onCancel: () => _.fnClosePopup(),
-                  onOK: async () => {
-                    const _ = __webpack_require__.project_id();
-                    await _(_), _.incrementDiscardCounter(), _.fnClosePopup();
-                  },
-                }),
-              ),
-            ),
-          );
+                ),
+              )
+            : null;
         };
       var _;
       !(function (_) {
@@ -15016,26 +15114,24 @@
           (_[(_.Edit = 2)] = "Edit");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const {
-              msgProject: _,
-              msgWorkingProject: __webpack_require__,
-              msgWorkingProjectConfig: _,
-              nProjectID: _,
-              nPublishedVersion: _,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
+            _ = _(_?.project_id()),
             [_, _] = _.useState(""),
             [_, _] = _.useState(""),
             [_, _] = _.useState(!0),
             [_, _] = _.useState(""),
-            _ = (0, _._)();
-          _.useEffect(() => {
-            _.eState == _.Edit
-              ? (_(__webpack_require__.project_name()),
-                _(__webpack_require__.project_description()),
-                _(!0))
-              : _.eState == _.Create && (_(""), _(""), _(!1)),
-              _("");
-          }, [_.eState, __webpack_require__]);
+            _ = (0, _._)(),
+            [_, _] = _.data || [void 0, void 0];
+          if (
+            (_.useEffect(() => {
+              _.eState == _.Edit
+                ? _ && (_(_.project_name()), _(_.project_description()), _(!0))
+                : _.eState == _.Create && (_(""), _(""), _(!1)),
+                _("");
+            }, [_.eState, _]),
+            !_)
+          )
+            return null;
           let _ = "",
             _ = "",
             _ = "";
@@ -15117,16 +15213,11 @@
                   disabled: !_,
                   onClick: async () => {
                     if ((_(!1), _.eState == _.Create)) {
-                      const [_, __webpack_require__] = await _(_, _);
+                      const [_, _] = await _(_, _);
                       switch (_) {
                         case 1:
                           _.fnSetPopupState(_.Hidden),
-                            _.push(
-                              _.SteamLearnProjectDataSources(
-                                __webpack_require__,
-                                0,
-                              ),
-                            );
+                            _.push(_.SteamLearnProjectDataSources(_, 0));
                           break;
                         case 2:
                           _((0, _._)("#SteamLearn_Project_Create_BadName"));
@@ -15135,10 +15226,26 @@
                           _((0, _._)("#SteamLearn_Project_Create_Error"));
                       }
                     } else {
-                      __webpack_require__.set_project_name(_),
-                        __webpack_require__.set_project_description(_),
-                        _(__webpack_require__);
-                      switch (await _(__webpack_require__, _)) {
+                      _.set_project_name(_), _.set_project_description(_), _(_);
+                      const _ = await (async function (_, _) {
+                        let _ = _._.Init(_);
+                        __webpack_require__.Body().set_project(_),
+                          __webpack_require__.Body().set_published_version(_);
+                        const _ = await _.EditProject(
+                          _.Get().GetServiceTransport(),
+                          _,
+                        );
+                        return (
+                          _ &&
+                            1 == _.GetEResult() &&
+                            (await _(_, 0, _, _(_.project_id())),
+                            _._.invalidateQueries({
+                              queryKey: [_, _.project_id()],
+                            })),
+                          _.Body().result()
+                        );
+                      })(_, _.published_version());
+                      switch (_) {
                         case 1:
                           _(""), _(""), _(""), _.fnSetPopupState(_.Hidden);
                           break;
@@ -15165,50 +15272,49 @@
         },
         _ = (_) => {
           const {
-              msgProject: _,
-              msgWorkingProject: __webpack_require__,
-              msgWorkingProjectConfig: _,
               nProjectID: _,
-              nPublishedVersion: _,
+              nPublishedVersion: __webpack_require__,
+              msgProjectConfig: _,
+              msgWorkingProjectConfig: _,
             } = _(),
             _ = (0, _._)(),
             _ = (0, _._)(),
             [_, _, _] = (0, _._)(),
             [_, _, _] = (0, _._)(),
-            [_, _] = _.useState(_.Hidden);
+            [_, _] = _.useState(_.Hidden),
+            [_, _] = _.useState(!1);
           let _ = [];
-          for (const _ of _.arrMsgProjects)
-            _.hidden() ||
-              _.push({
-                label: `${_.project_name()} (${_.project_id()})`,
-                value: _.project_id(),
-              });
+          for (const _ of _.arrMsgProjectConfigInfos)
+            _.push({
+              label: `${_.project_name()} (${_.project_id()})`,
+              value: _.project_id(),
+            });
           (_ = _.sort((_, _) => (_.label > _.label ? 1 : -1))),
             _.push({
               label: (0, _._)("#SteamLearn_CreateNew"),
               value: 0,
             });
+          const _ =
+              _.arrMsgProjectConfigInfos
+                .find((_) => _.project_id() == _)
+                ?.published_versions() || [],
+            _ =
+              _.arrMsgProjectConfigInfos
+                .find((_) => _.project_id() == _)
+                ?.project_description() || "";
           let _ = [
             {
               label: (0, _._)("#SteamLearn_Header_Version_Unpublished"),
               value: 0,
             },
           ];
-          if (__webpack_require__)
-            for (const _ of __webpack_require__.published_configs())
-              _.hidden() ||
-                _.push({
-                  label: (0, _._)(
-                    "#SteamLearn_Header_Version_PublishedVersion",
-                    _.published_version(),
-                  ),
-                  value: _.published_version(),
-                });
+          for (const _ of _)
+            _.push({
+              label: (0, _._)("#SteamLearn_Header_Version_PublishedVersion", _),
+              value: _,
+            });
           const _ =
-              _ &&
-              __webpack_require__ &&
-              __webpack_require__.serializeBase64String() !=
-                _.serializeBase64String(),
+              _ && _ && _.serializeBase64String() != _.serializeBase64String(),
             _ = () => {
               (0, _._)(
                 _.createElement(_._, {
@@ -15217,29 +15323,30 @@
                     "#SteamLearn_Project_Publish_Warning",
                   ),
                   onOK: async () => {
-                    const _ =
-                        Math.max(
-                          0,
-                          ..._.published_configs().map((_) =>
-                            _.published_version(),
-                          ),
-                        ) + 1,
-                      _ = await (async function (_) {
-                        let _ = _._.Init(_);
-                        _.Body().set_project_id(_);
-                        const _ = await _.PublishProject(
-                          _.Get().GetServiceTransport(),
-                          _,
-                        );
-                        return __webpack_require__.BIsValid() &&
-                          1 == __webpack_require__.GetEResult()
-                          ? (1 == __webpack_require__.Body().result() &&
-                              (await _(_)),
-                            __webpack_require__.Body().result())
-                          : 3;
-                      })(__webpack_require__.project_id());
-                    1 == _ &&
-                      setTimeout(() => _(_, _, _, _, _.arrMsgProjects), 500);
+                    const [__webpack_require__, _] = await (async function (_) {
+                      let _ = _._.Init(_);
+                      _.Body().set_project_id(_);
+                      const _ = await _.PublishProject(
+                        _.Get().GetServiceTransport(),
+                        _,
+                      );
+                      return __webpack_require__.BIsValid() &&
+                        1 == __webpack_require__.GetEResult()
+                        ? (_._.invalidateQueries({
+                            queryKey: ["SteamLearnProjectConfigList"],
+                          }),
+                          [
+                            __webpack_require__.Body().result(),
+                            __webpack_require__.Body().new_published_version(),
+                          ])
+                        : [3, 0];
+                    })(_);
+                    1 == __webpack_require__ &&
+                      (console.log("switching to version", _),
+                      setTimeout(
+                        () => _(_, _, _, _, _.arrMsgProjectConfigInfos),
+                        500,
+                      ));
                   },
                 }),
                 window,
@@ -15271,7 +15378,9 @@
                     value: _,
                     onChange: (_) =>
                       ((_) => {
-                        0 != _ ? _(_, _, _, -1, _.arrMsgProjects) : _(_.Create);
+                        0 != _
+                          ? _(_, _, _, -1, _.arrMsgProjectConfigInfos)
+                          : _(_.Create);
                       })(parseInt(_.target.value)),
                   },
                   _.map((_) =>
@@ -15285,14 +15394,20 @@
                     ),
                   ),
                 ),
-                __webpack_require__ &&
+                _ &&
                   _.createElement(
                     "select",
                     {
                       className: _.PublishedVersionInput,
-                      value: _,
+                      value: __webpack_require__,
                       onChange: (_) =>
-                        _(_, _, _, parseInt(_.target.value), _.arrMsgProjects),
+                        _(
+                          _,
+                          _,
+                          _,
+                          parseInt(_.target.value),
+                          _.arrMsgProjectConfigInfos,
+                        ),
                     },
                     _.map((_) =>
                       _.createElement(
@@ -15314,15 +15429,15 @@
                   (0, _._)("#SteamLearn_Edit"),
                 ),
               ),
-              __webpack_require__ &&
+              _ &&
                 _.createElement(
                   "div",
                   {
                     className: _.Description,
                   },
-                  __webpack_require__.project_description(),
+                  _,
                 ),
-              __webpack_require__ &&
+              _ &&
                 _.createElement(
                   "div",
                   {
@@ -15336,17 +15451,20 @@
               {
                 className: _.StatusSection,
               },
-              (_ || 0 != _) &&
+              (_ || 0 != __webpack_require__) &&
                 _.createElement(
                   _._,
                   {
-                    disabled: !_,
-                    onClick: (_) => _(__webpack_require__, _),
+                    disabled: !_ || _,
+                    onClick: (_) =>
+                      (async () => {
+                        _(!0), await _(_), _(!1);
+                      })(),
                   },
                   (0, _._)("#SteamLearn_Project_Save"),
                 ),
               !_ &&
-                0 == _ &&
+                0 == __webpack_require__ &&
                 _.createElement(
                   _._,
                   {
@@ -15374,9 +15492,9 @@
                 bVisible: _,
                 fnClosePopup: _,
               }),
-              0 == _ &&
-                __webpack_require__ &&
-                __webpack_require__.published_configs().length > 0 &&
+              0 == __webpack_require__ &&
+                _ &&
+                _.length > 0 &&
                 !_ &&
                 _.createElement(
                   _._,
@@ -15406,7 +15524,7 @@
             ),
           _ &&
             _.createElement(_, {
-              arrMsgProjects: _,
+              arrMsgProjectConfigInfos: _,
               incrementDiscardCounter: _.incrementDiscardCounter,
             }),
         );
@@ -16073,13 +16191,8 @@
         let _;
       })(_, 200);
       const _ = () => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: _,
-              nProjectID: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _, nPublishedVersion: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _(),
             _ = 0 == _,
             _ = (_) => {
@@ -16176,7 +16289,7 @@
                   }),
                 ),
                 _.createElement(_, {
-                  bShowPopup: _,
+                  bShowPopup: __webpack_require__,
                   fnSetShowPopup: _,
                   fnAddSelectedDataSources: (_) => {
                     for (const _ of _) _(_, _);
@@ -16250,7 +16363,7 @@
         _ = (_) => {
           const [_, __webpack_require__] = _.useState([]),
             _ = _(_.nDataSourceID),
-            { msgWorkingProject: _, msgWorkingProjectConfig: _ } = _();
+            { msgWorkingProjectConfig: _ } = _();
           if (!_.isSuccess) return null;
           const _ = (_) => {
               __webpack_require__([..._, _]);
@@ -16346,9 +16459,8 @@
         },
         _ = (_) => {
           const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
+              msgWorkingProjectConfig: _,
+              nPublishedVersion: __webpack_require__,
             } = _(),
             _ = _(
               _.rgSettings.nDataSourceID,
@@ -16356,23 +16468,19 @@
             ),
             _ = [
               ...new Set(
-                __webpack_require__
-                  .data_source_element_usages()
-                  .map((_) => _.input()),
+                _.data_source_element_usages().map((_) => _.input()),
               ).values(),
             ],
             _ = Math.max(..._);
           let _ = (0, _._)(1, _),
             _ = _.filter((_) => !_.includes(_));
           0 == _.length && _.push(_ + 1);
-          let _ = __webpack_require__
-            .data_source_element_usages()
-            .find(
-              (_) =>
-                _.data_element_path() ==
-                  _.rgSettings.arrDataElementUsagePathNames[0] &&
-                _.data_source_id() == _.rgSettings.nDataSourceID,
-            );
+          let _ = _.data_source_element_usages().find(
+            (_) =>
+              _.data_element_path() ==
+                _.rgSettings.arrDataElementUsagePathNames[0] &&
+              _.data_source_id() == _.rgSettings.nDataSourceID,
+          );
           const [_, _] = _.useState(_?.input()),
             [_, _] = _.useState(_?.preprocessing_type()),
             [_, _] = _.useState(_?.min_range().toFixed(2)),
@@ -16404,14 +16512,11 @@
           _.useEffect(() => {
             let _ = !1;
             _.rgSettings.arrDataElementUsagePathNames.forEach((_) => {
-              let _ = __webpack_require__
-                .data_source_element_usages()
-                .find(
-                  (_) =>
-                    __webpack_require__.data_element_path() == _ &&
-                    __webpack_require__.data_source_id() ==
-                      _.rgSettings.nDataSourceID,
-                );
+              let _ = _.data_source_element_usages().find(
+                (_) =>
+                  _.data_element_path() == _ &&
+                  _.data_source_id() == _.rgSettings.nDataSourceID,
+              );
               _ &&
                 ((_ = _(_, _.input(), _.set_input.bind(_)) || _),
                 (_ =
@@ -16466,27 +16571,8 @@
                   ) || _));
             }),
               _ && _(_);
-          }, [
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            __webpack_require__,
-            _,
-          ]);
-          const _ = 0 == _,
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+          const _ = 0 == __webpack_require__,
             _ = (_, _, _) => {
               _(_),
                 /^-?[\d]*\.?[\d]{0,2}$/.test(_)
@@ -17514,13 +17600,8 @@
         };
       var _ = __webpack_require__("chunkid");
       const _ = () => {
-        const {
-            msgWorkingProject: _,
-            msgWorkingProjectConfig: _,
-            nProjectID: __webpack_require__,
-            nPublishedVersion: _,
-          } = _(),
-          [_, _] = _.useState({}),
+        const { nProjectID: _, msgWorkingProjectConfig: _ } = _(),
+          [__webpack_require__, _] = _.useState({}),
           [_, _] = _.useState(_.createElement("div", null)),
           [_, _] = _.useState("10"),
           [_, _] = _.useState(0),
@@ -17561,7 +17642,7 @@
                 [_.data_element_path()]: "0",
               }));
           }, [_]);
-        return 0 == Object.keys(_).length
+        return 0 == Object.keys(__webpack_require__).length
           ? null
           : _.createElement(
               "div",
@@ -17619,10 +17700,10 @@
                         _.createElement("input", {
                           type: "text",
                           className: _.ValueInput,
-                          value: _[_.data_element_path()],
+                          value: __webpack_require__[_.data_element_path()],
                           onChange: (_) =>
                             _({
-                              ..._,
+                              ...__webpack_require__,
                               [_.data_element_path()]: _.target.value,
                             }),
                         }),
@@ -17677,25 +17758,21 @@
                     onClick: () =>
                       (async () => {
                         let _ = _._.Init(_);
-                        __webpack_require__
-                          .Body()
-                          .set_project_id(_.project_id());
+                        _.Body().set_project_id(_);
                         const _ = _.split(",").map((_) => parseInt(_));
-                        __webpack_require__.Body().set_additional_data(_);
+                        _.Body().set_additional_data(_);
                         const _ =
                           _.train_infos()
                             .find((_) => _.train_id() == _)
                             ?.fetch_id() || 0;
                         if (
-                          (__webpack_require__.Body().set_fetch_id(_),
-                          __webpack_require__.Body().set_train_id(_),
-                          _.length > 0 &&
-                            __webpack_require__.Body().set_named_inference(_),
+                          (_.Body().set_fetch_id(_),
+                          _.Body().set_train_id(_),
+                          _.length > 0 && _.Body().set_named_inference(_),
                           _.length > 0)
                         ) {
                           const _ = _.split(",");
-                          for (const _ of _)
-                            __webpack_require__.Body().add_keys(_);
+                          for (const _ of _) _.Body().add_keys(_);
                         } else {
                           const _ = _.sort(
                             (_, _) => _.sql_column() - _.sql_column(),
@@ -17703,12 +17780,16 @@
                           for (const _ of _) {
                             if (0 == _.input()) continue;
                             const _ = new _();
-                            isNaN(+_[_.data_element_path()])
-                              ? _.set_string_value(_[_.data_element_path()])
+                            isNaN(+__webpack_require__[_.data_element_path()])
+                              ? _.set_string_value(
+                                  __webpack_require__[_.data_element_path()],
+                                )
                               : _.set_float_value(
-                                  parseFloat(_[_.data_element_path()]),
+                                  parseFloat(
+                                    __webpack_require__[_.data_element_path()],
+                                  ),
                                 ),
-                              __webpack_require__.Body().add_data(_);
+                              _.Body().add_data(_);
                           }
                         }
                         const _ = await _.InferenceBackend(
@@ -17834,7 +17915,7 @@
             );
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17847,30 +17928,30 @@
               }),
         _ = (_) => {
           const {
-              msgWorkingProject: _,
-              nProjectID: __webpack_require__,
-              nPublishedVersion: _,
+              nProjectID: _,
+              nPublishedVersion: __webpack_require__,
+              msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
             [_, _] = _.useState(_.fnGetInitialValue()),
             [_, _] = _.useState(
               !_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue()),
             ),
-            [_, _] = _.useState(__webpack_require__),
-            [_, _] = _.useState(_);
+            [_, _] = _.useState(_),
+            [_, _] = _.useState(__webpack_require__);
           _.useEffect(() => {
             const _ = _.digitCount && _.digitCount > 0;
             ((!_ && parseInt(_.fnGetInitialValue()) != parseInt(_)) ||
               (_ &&
                 parseFloat(_.fnGetInitialValue()).toFixed(_.digitCount) !=
                   parseFloat(_).toFixed(_.digitCount)) ||
-              _ != __webpack_require__ ||
-              _ != _) &&
+              _ != _ ||
+              _ != __webpack_require__) &&
               (_(_.fnGetInitialValue()),
               _(!_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue())),
-              _(__webpack_require__),
-              _(_));
-          }, [_, _, __webpack_require__, _, _, _]);
+              _(_),
+              _(__webpack_require__));
+          }, [_, _, _, _, __webpack_require__, _]);
           return _.createElement(
             "div",
             {
@@ -17912,7 +17993,7 @@
           );
         },
         _ = (_) => {
-          const { msgWorkingProject: _ } = _();
+          const { msgWorkingProjectConfig: _ } = _();
           return _.hidden
             ? null
             : _.createElement(
@@ -17955,20 +18036,20 @@
         },
         _ = (_) => {
           const {
-              msgWorkingProject: _,
-              nProjectID: __webpack_require__,
-              nPublishedVersion: _,
+              nProjectID: _,
+              nPublishedVersion: __webpack_require__,
+              msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
-            [_, _] = _.useState(__webpack_require__),
-            [_, _] = _.useState(_);
+            [_, _] = _.useState(_),
+            [_, _] = _.useState(__webpack_require__);
           return (
             _.useEffect(() => {
               (_.fnGetInitialValue() != _ ||
-                _ != __webpack_require__ ||
-                _ != _) &&
-                (_(_.fnGetInitialValue()), _(__webpack_require__), _(_));
-            }, [_, _, __webpack_require__, _, _, _]),
+                _ != _ ||
+                _ != __webpack_require__) &&
+                (_(_.fnGetInitialValue()), _(_), _(__webpack_require__));
+            }, [_, _, _, _, __webpack_require__, _]),
             _.hidden
               ? null
               : _.createElement(
@@ -18001,12 +18082,1236 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.BatchNormalizationNode,
+                _.Keras,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_BatchNormalization"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+          _.useEffect(() => {
+            _(_.msgNode.comment());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_BatchNormalization"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_BatchNormalization"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          let _ = "";
+          switch (_.bert_finetune().bert_model()) {
+            case 0:
+              _ = "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased";
+              break;
+            case 1:
+              _ = "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased";
+              break;
+            case 2:
+              _ = "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased";
+              break;
+            case 3:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEn";
+              break;
+            case 4:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased";
+              break;
+            case 5:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseMulti";
+          }
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.BertFinetuneNode, _.Keras),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  toolTipContent: (0, _._)(
+                    `#SteamLearn_Config_Node_Bert_Finetune_Input_${_}`,
+                  ),
+                  direction: "top",
+                },
+                _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_BertFinetune"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    (0, _._)(_),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.bert_finetune().unfrozen_layers(),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.bert_finetune().bert_model()),
+            [_, _] = _.useState(
+              _.msgNode.bert_finetune().unfrozen_layers()?.toString() || "0",
+            );
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.bert_finetune().bert_model()),
+              _(_.msgNode.bert_finetune().unfrozen_layers().toString());
+          }, [_.bVisible, _.msgNode]);
+          let _ = [
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased",
+              ),
+              value: 0,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased",
+              ),
+              value: 1,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased",
+              ),
+              value: 2,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseEn"),
+              value: 3,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased",
+              ),
+              value: 4,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseMulti"),
+              value: 5,
+            },
+          ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_BertFinetune"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_BertFinetune"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_ModelDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayersDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  width: 200,
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 0, void 0),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.bert_finetune().set_bert_model(_),
+                      _.msgNode
+                        .bert_finetune()
+                        .set_unfrozen_layers(parseInt(_)),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.BertNode, _.Preprocessing),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Bert"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+          _.useEffect(() => {
+            _(_.msgNode.comment());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_Bert"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Bert"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          let _ = "";
+          switch (_.bert_tokenizer().bert_model()) {
+            case 0:
+              _ = "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased";
+              break;
+            case 1:
+              _ = "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased";
+              break;
+            case 2:
+              _ = "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased";
+              break;
+            case 3:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEn";
+              break;
+            case 4:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased";
+              break;
+            case 5:
+              _ = "#SteamLearn_Config_Node_Bert_Model_BaseMulti";
+          }
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.BertTokenizerNode,
+                _.Preprocessing,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_BertTokenizer"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    (0, _._)(_),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.bert_tokenizer().sequence_length(),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  toolTipContent: (0, _._)(
+                    `#SteamLearn_Config_Node_Bert_Tokenizer_Output_${_}`,
+                  ),
+                  direction: "top",
+                },
+                _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "source",
+                    position: _._.Bottom,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model()),
+            [_, _] = _.useState(
+              _.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
+            );
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.bert_tokenizer().bert_model()),
+              _(_.msgNode.bert_tokenizer().sequence_length()?.toString());
+          }, [_.bVisible, _.msgNode]);
+          let _ = [
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased",
+              ),
+              value: 0,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased",
+              ),
+              value: 1,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased",
+              ),
+              value: 2,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseEn"),
+              value: 3,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased",
+              ),
+              value: 4,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseMulti"),
+              value: 5,
+            },
+          ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_BertTokenizer"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_BertTokenizer"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_ModelDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLengthDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 16, 512),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.bert_tokenizer().set_bert_model(_),
+                      _.msgNode
+                        .bert_tokenizer()
+                        .set_sequence_length(parseInt(_)),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -18018,17 +19323,17 @@
           return (
             _.useEffect(() => {
               setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
+                for (const _ of _.project_nodes())
                   15 == _.type() && _(_(_.node_id()));
               }, 0.1);
-            }, [__webpack_require__, _]),
+            }, [_, _]),
             _.createElement(
               "div",
               {
                 className: (0, _._)(_.FlowNode, _.CombineNode, _.Preprocessing),
               },
               _.createElement(_, {
-                bVisible: _,
+                bVisible: __webpack_require__,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -18091,7 +19396,7 @@
                         strDescription: (0, _._)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => _(_, __webpack_require__, _.node_id()),
+                        onOK: () => _(_, _.node_id()),
                       }),
                       window,
                     ),
@@ -18149,17 +19454,14 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
             _ = _.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.toString());
+            [_, _] = _.useState(__webpack_require__.toString());
           _.useEffect(() => {
-            _(_.msgNode.comment()), _(_.toString());
+            _(_.msgNode.comment()), _(__webpack_require__.toString());
           }, [_.bVisible, _.msgNode, _]);
           return _.createElement(
             _._,
@@ -18261,11 +19563,11 @@
                       const _ = parseInt(_);
                       if (_ > _) {
                         const _ = _ - _,
-                          _ = _(__webpack_require__, _);
+                          _ = _(_, _);
                         for (let _ = 0; _ < _; _++) {
                           let _ = new _();
-                          _.set_connector_id(_[_]),
-                            _.set_is_input_connector(!0),
+                          __webpack_require__.set_connector_id(_[_]),
+                            __webpack_require__.set_is_input_connector(!0),
                             _.msgNode.add_connectors(_);
                         }
                       } else if (_ < _) {
@@ -18274,12 +19576,12 @@
                           .filter((_) => _.is_input_connector())
                           .slice(_)
                           .map((_) => _.connector_id());
-                        for (let _ of __webpack_require__.project_nodes())
+                        for (let _ of _.project_nodes())
                           for (let _ of _.connectors())
-                            __webpack_require__.set_linked_connector_ids(
-                              __webpack_require__
-                                .linked_connector_ids()
-                                .filter((_) => !_.includes(_)),
+                            _.set_linked_connector_ids(
+                              _.linked_connector_ids().filter(
+                                (_) => !__webpack_require__.includes(_),
+                              ),
                             );
                         _.msgNode.set_connectors([
                           ..._.msgNode
@@ -18308,12 +19610,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -18325,17 +19623,17 @@
           return (
             _.useEffect(() => {
               setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
+                for (const _ of _.project_nodes())
                   8 == _.type() && _(_(_.node_id()));
               }, 0.1);
-            }, [__webpack_require__, _]),
+            }, [_, _]),
             _.createElement(
               "div",
               {
                 className: (0, _._)(_.FlowNode, _.ConcatNode, _.Keras),
               },
               _.createElement(_, {
-                bVisible: _,
+                bVisible: __webpack_require__,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -18398,7 +19696,7 @@
                         strDescription: (0, _._)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => _(_, __webpack_require__, _.node_id()),
+                        onOK: () => _(_, _.node_id()),
                       }),
                       window,
                     ),
@@ -18476,15 +19774,12 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
             _ = _.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.toString()),
+            [_, _] = _.useState(__webpack_require__.toString()),
             [_, _] = _.useState(
               _.msgNode.concatenate().axis()?.toString() || "0",
             );
@@ -18492,7 +19787,7 @@
             _.useEffect(() => {
               _(_.msgNode.comment()),
                 _(_.msgNode.concatenate().axis()?.toString() || "1"),
-                _(_.toString());
+                _(__webpack_require__.toString());
             }, [_.bVisible, _.msgNode, _]),
             _.createElement(
               _._,
@@ -18621,11 +19916,11 @@
                       const _ = parseInt(_);
                       if (_ > _) {
                         const _ = _ - _,
-                          _ = _(__webpack_require__, _);
+                          _ = _(_, _);
                         for (let _ = 0; _ < _; _++) {
                           let _ = new _();
-                          _.set_connector_id(_[_]),
-                            _.set_is_input_connector(!0),
+                          __webpack_require__.set_connector_id(_[_]),
+                            __webpack_require__.set_is_input_connector(!0),
                             _.msgNode.add_connectors(_);
                         }
                       } else if (_ < _) {
@@ -18634,12 +19929,12 @@
                           .filter((_) => _.is_input_connector())
                           .slice(_)
                           .map((_) => _.connector_id());
-                        for (let _ of __webpack_require__.project_nodes())
+                        for (let _ of _.project_nodes())
                           for (let _ of _.connectors())
-                            __webpack_require__.set_linked_connector_ids(
-                              __webpack_require__
-                                .linked_connector_ids()
-                                .filter((_) => !_.includes(_)),
+                            _.set_linked_connector_ids(
+                              _.linked_connector_ids().filter(
+                                (_) => !__webpack_require__.includes(_),
+                              ),
                             );
                         _.msgNode.set_connectors([
                           ..._.msgNode
@@ -18671,12 +19966,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -18685,10 +19976,10 @@
             _ = _.filter((_, _) => _ % 2 == 1);
           _.useEffect(() => {
             setTimeout(() => {
-              for (const _ of __webpack_require__.project_nodes())
+              for (const _ of _.project_nodes())
                 7 == _.type() && _(_(_.node_id()));
             }, 0.1);
-          }, [__webpack_require__, _]);
+          }, [_, _]);
           const _ = Math.max(78, 20 * _.length);
           let _ = "";
           switch (_.conditional_extract().extract_filter_type()) {
@@ -18725,7 +20016,7 @@
               ),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -18786,7 +20077,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -19040,15 +20331,12 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
             _ = _.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.toString()),
+            [_, _] = _.useState(__webpack_require__.toString()),
             [_, _] = _.useState(
               _.msgNode.conditional_extract().extract_filter_type(),
             ),
@@ -19091,7 +20379,7 @@
             );
           _.useEffect(() => {
             _(_.msgNode.comment()),
-              _(_.toString()),
+              _(__webpack_require__.toString()),
               _(_.msgNode.conditional_extract().extract_filter_type()),
               _(_.msgNode.conditional_extract().extract_weight_type()),
               _(
@@ -19447,7 +20735,7 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(__webpack_require__, _),
+                    fnValidateValue: (_) => _(_, _),
                     fnSetValue: (_) => _(_),
                   }),
                   _.createElement(_, {
@@ -19460,8 +20748,7 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
-                    fnValidateValue: (_) =>
-                      !_(__webpack_require__, _, _.msgNode),
+                    fnValidateValue: (_) => !_(_, _, _.msgNode),
                     fnSetValue: (_) => _(_),
                   }),
                 ),
@@ -19481,7 +20768,7 @@
                     const _ = parseInt(_);
                     if (_ > _) {
                       const _ = 3 * (_ - _),
-                        _ = _(__webpack_require__, _);
+                        _ = _(_, _);
                       for (let _ = 0; _ < _; _++) {
                         const _ = _ % 3 != 0;
                         let _ = new _();
@@ -19495,23 +20782,26 @@
                         .filter((_) => _.is_input_connector())
                         .slice(_)
                         .map((_) => _.connector_id());
-                      _.push(
+                      __webpack_require__.push(
                         ..._.msgNode
                           .connectors()
                           .filter((_) => !_.is_input_connector())
                           .slice(2 * _)
                           .map((_) => _.connector_id()),
                       );
-                      for (let _ of __webpack_require__.project_nodes())
+                      for (let _ of _.project_nodes())
                         for (let _ of _.connectors())
-                          __webpack_require__.set_linked_connector_ids(
-                            __webpack_require__
-                              .linked_connector_ids()
-                              .filter((_) => !_.includes(_)),
+                          _.set_linked_connector_ids(
+                            _.linked_connector_ids().filter(
+                              (_) => !__webpack_require__.includes(_),
+                            ),
                           );
                       let _ = _.msgNode
                         .connectors()
-                        .filter((_) => !_.includes(_.connector_id()));
+                        .filter(
+                          (_) =>
+                            !__webpack_require__.includes(_.connector_id()),
+                        );
                       _.msgNode.set_connectors(_);
                     }
                     _.msgNode.set_comment(_),
@@ -19558,12 +20848,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -19578,7 +20864,7 @@
               ),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -19657,7 +20943,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -19714,11 +21000,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
           return _.createElement(
             _._,
             {
@@ -19771,7 +21054,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -19787,7 +21070,9 @@
                   _._,
                   {
                     onClick: () => {
-                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(__webpack_require__),
+                        _(_),
+                        _.fnSetPopupVisible(!1);
                     },
                   },
                   (0, _._)("#SteamLearn_Confirm"),
@@ -19833,11 +21118,8 @@
       }
       const _ = (_) => {
           const _ = _.data.msgNode,
-            {
-              msgWorkingProject: __webpack_require__,
-              msgWorkingProjectConfig: _,
-              nPublishedVersion: _,
-            } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            { msgWorkingProjectConfig: _ } = _(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
@@ -19845,6 +21127,11 @@
             {
               className: (0, _._)(_.FlowNode, _.DenseNode, _.Keras),
             },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
             _.map((_, _) => {
               const _ = Math.floor(
                   ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
@@ -19891,14 +21178,7 @@
               ),
               _.createElement("div", {
                 className: _.EditGear,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      msgNode: _,
-                      msgWorkingProject: __webpack_require__,
-                    }),
-                    window,
-                  ),
+                onClick: () => _(!0),
               }),
               _.createElement("div", {
                 className: _.Delete,
@@ -19909,7 +21189,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(__webpack_require__, _, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -20029,11 +21309,17 @@
           );
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dense().width().toString()),
-            [_, _] = _.useState(!0),
             [_, _] = _.useState(_.msgNode.dense().activation()),
             [_, _] = _.useState(_.msgNode.dense().regularization());
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.dense().width().toString()),
+              _(_.msgNode.dense().activation()),
+              _(_.msgNode.dense().regularization());
+          }, [_]);
           let _ = [
               {
                 label: (0, _._)(
@@ -20129,11 +21415,12 @@
                   },
                   (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                _.createElement("input", {
-                  type: "text",
-                  className: (0, _._)(_.OptionInput, _.VeryWide),
-                  value: _,
-                  onChange: (_) => __webpack_require__(_.target.value),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
                 }),
               ),
               _.createElement(
@@ -20155,14 +21442,11 @@
                   },
                   (0, _._)("#SteamLearn_Config_Node_Dense_WidthDesc"),
                 ),
-                _.createElement("input", {
-                  type: "text",
-                  className: (0, _._)(_.OptionInput, !_ && _.Invalid),
-                  value: _,
-                  onChange: (_) => {
-                    return (_ = _.target.value), _(_(_, 1, 8096)), void _(_);
-                    var _;
-                  },
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 8196),
+                  fnSetValue: (_) => _(_),
                 }),
               ),
               _.createElement(
@@ -20279,28 +21563,493 @@
               {
                 className: _.ButtonsContainer,
               },
-              _.createElement(_._, {
-                bOKDisabled: !_,
-                onOK: () => (
-                  _.msgNode.dense().set_width(parseInt(_)),
-                  _.msgNode.dense().set_activation(_),
-                  _.msgNode.dense().set_regularization(_),
-                  _.msgNode.set_comment(_),
-                  _(_.msgWorkingProject),
-                  void _.closeModal()
-                ),
-                onCancel: () => _.closeModal(),
-              }),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.dense().set_width(parseInt(_)),
+                      _.msgNode.dense().set_activation(_),
+                      _.msgNode.dense().set_regularization(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
             ),
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.Conv1DNode, _.Keras),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Conv1D"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.conv_1d().filters(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.conv_1d().kernel_size(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Conv1D_Strides"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.conv_1d().strides(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _(_.conv_1d().activation()),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.conv_1d().filters().toString()),
+            [_, _] = _.useState(_.msgNode.conv_1d().kernel_size().toString()),
+            [_, _] = _.useState(
+              _.msgNode.conv_1d()?.strides().toString() || "1",
+            ),
+            [_, _] = _.useState(_.msgNode.conv_1d().activation());
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.conv_1d().filters().toString()),
+              _(_.msgNode.conv_1d().kernel_size().toString()),
+              _(_.msgNode.conv_1d().strides().toString());
+          }, [_]);
+          let _ = [
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_RELU"),
+              value: 1,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_ELU"),
+              value: 2,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_TANH"),
+              value: 3,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Train_Activation_SIGMOID",
+              ),
+              value: 4,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Train_Activation_LINEAR",
+              ),
+              value: 5,
+            },
+          ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_Conv1D"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Conv1D"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_FiltersDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSizeDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_Strides"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Conv1D_StridesDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, void 0),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Option,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.OptionTitle,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.OptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
+                ),
+                _.createElement(
+                  "select",
+                  {
+                    className: _.InputSelect,
+                    value: _,
+                    onChange: (_) => _(parseInt(_.target.value)),
+                  },
+                  _.map((_) =>
+                    _.createElement(
+                      "option",
+                      {
+                        key: _.value,
+                        value: _.value,
+                      },
+                      _.label,
+                    ),
+                  ),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.conv_1d().set_filters(parseInt(_)),
+                      _.msgNode.conv_1d().set_kernel_size(parseInt(_)),
+                      _.msgNode.conv_1d().set_strides(parseInt(_)),
+                      _.msgNode.conv_1d().set_activation(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -20310,7 +22059,7 @@
               className: (0, _._)(_.FlowNode, _.DenseStackNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -20371,7 +22120,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -20517,11 +22266,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.dense_stack().width().length.toString(),
             ),
@@ -20645,7 +22391,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -20835,7 +22581,7 @@
                       _.msgNode.dense_stack().set_dropout_pct(parseInt(_)),
                       _.msgNode.dense_stack().set_activation(_),
                       _.msgNode.dense_stack().set_regularization(_),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -20853,12 +22599,295 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.DotNode, _.Keras),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Dot"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.dot().normalize()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.dot().normalize());
+          _.useEffect(() => {
+            _(_.msgNode.comment()), _(_.msgNode.dot().normalize());
+          }, [_]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_Dot"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Dot"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Dot_NormalizeDesc"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editnormalize",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editnormalize",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.dot().set_normalize(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -20868,7 +22897,7 @@
               className: (0, _._)(_.FlowNode, _.DropoutNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -20929,7 +22958,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -21006,11 +23035,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dropout().dropout_pct().toString());
           _.useEffect(() => {
             _(_.msgNode.comment()),
@@ -21068,7 +23094,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -21115,7 +23141,7 @@
                 {
                   onClick: () => {
                     _.msgNode.dropout().set_dropout_pct(parseInt(_)),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -21133,12 +23159,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -21149,7 +23171,7 @@
               className: (0, _._)(_.FlowNode, _.EmbeddingNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -21210,7 +23232,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -21352,11 +23374,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.embedding().compact_table().length > 0
                 ? _.msgNode.embedding().compact_table()
@@ -21431,7 +23450,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -21490,7 +23509,7 @@
                 _.createElement(_, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1) || _(__webpack_require__, _),
+                  fnValidateValue: (_) => _(_, 1) || _(_, _),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -21607,7 +23626,7 @@
                 {
                   onClick: () => {
                     const _ = _(_, 1),
-                      _ = _(__webpack_require__, _);
+                      _ = _(_, _);
                     _
                       ? (_.msgNode
                           .embedding()
@@ -21620,7 +23639,7 @@
                       _.msgNode.embedding().set_flatten(_),
                       _.msgNode.embedding().set_export_name(_),
                       _.msgNode.embedding().set_embed_name(_),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -21638,12 +23657,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)();
           _.useEffect(() => {
@@ -21655,23 +23670,23 @@
                 !1,
                 `No input connector on node ${_.toObject()}`,
               );
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-                __webpack_require__,
-                _,
-              ),
+            const {
+                msgIncomingNode: __webpack_require__,
+                nIncomingConnectorID: _,
+              } = _(_, _),
               _ = _.connectors().filter((_) => !_.is_input_connector()).length;
             let _ = _;
-            if (_) {
-              const _ = _(__webpack_require__, _, _);
+            if (__webpack_require__) {
+              const _ = _(_, __webpack_require__, _);
               (0, _._)(
                 _.length <= 1,
-                `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${_.length} ) (node ${_.node_id()}, connector ${_}`,
+                `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${_.length} ) (node ${__webpack_require__.node_id()}, connector ${_}`,
               ),
                 1 == _.length && (_ = Math.min(9, _[0]));
             } else _ = 0;
             if (_ > _) {
               const _ = _ - _,
-                _ = _(__webpack_require__, _);
+                _ = _(_, _);
               for (let _ = 0; _ < _; _++) {
                 let _ = new _();
                 _.set_connector_id(_[_]),
@@ -21686,12 +23701,10 @@
                   .slice(_)
                   .map((_) => _.connector_id()),
               );
-              for (let _ of __webpack_require__.project_nodes())
-                for (let _ of _.connectors())
-                  __webpack_require__.set_linked_connector_ids(
-                    __webpack_require__
-                      .linked_connector_ids()
-                      .filter((_) => !_.includes(_)),
+              for (let _ of _.project_nodes())
+                for (let _ of __webpack_require__.connectors())
+                  _.set_linked_connector_ids(
+                    _.linked_connector_ids().filter((_) => !_.includes(_)),
                   );
               _.set_connectors([
                 ..._.connectors().filter((_) => _.is_input_connector()),
@@ -21702,10 +23715,10 @@
             }
             _ != _ && _(_),
               setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
+                for (const _ of _.project_nodes())
                   12 == _.type() && _(_(_.node_id()));
               }, 0.1);
-          }, [_, __webpack_require__, _, _]);
+          }, [_, _, _]);
           const _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
@@ -21714,7 +23727,7 @@
               className: (0, _._)(_.FlowNode, _.ExplodeNode, _.Preprocessing),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -21775,7 +23788,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -21832,11 +23845,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -21892,7 +23902,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -21908,7 +23918,9 @@
                   _._,
                   {
                     onClick: () => {
-                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(__webpack_require__),
+                        _(_),
+                        _.fnSetPopupVisible(!1);
                     },
                   },
                   (0, _._)("#SteamLearn_Confirm"),
@@ -21925,330 +23937,615 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProjectConfig: _,
-              msgWorkingProject: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
-            _ = _(__webpack_require__, _.input().input_num()),
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          let _ = 0,
-            _ = [],
-            _ = !1;
-          for (const _ of _.data_source_element_usages())
-            _.input() == _.input().input_num() &&
-              ((_ += 1),
-              _.push(_.data_element_path()),
-              6 == _.preprocessing_type() && (_ = !0));
-          return (
-            _ && (_ = 1),
+            _ =
+              ((0, _._)(),
+              _.data.msgNode
+                .connectors()
+                .filter((_) => _.is_input_connector())),
+            _ = _.data.msgNode
+              .connectors()
+              .filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.ExternalEmbeddingNode,
+                _.Preprocessing,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
             _.createElement(
               "div",
               {
-                className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
+                className: _.Title,
               },
-              _.createElement(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _.data.msgNode,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                );
-              }),
               _.createElement(
                 "div",
                 {
-                  className: _.Title,
+                  className: _.TitleText,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TitleText,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Title_Input",
-                    _.data.msgNode.input().input_num(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeID,
-                  },
-                  _.node_id(),
-                ),
-                _.createElement("div", {
-                  className: _.EditGear,
-                  onClick: () => _(!0),
-                }),
+                (0, _._)("#SteamLearn_Config_Node_Title_ExternalEmbedding"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
               ),
               _.createElement("div", {
-                className: _.TitleUnderBar,
+                className: _.EditGear,
+                onClick: () => _(!0),
               }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
               _.createElement(
                 "div",
                 {
-                  className: _.Body,
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().project_id(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().fetch_id(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().train_id(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalEmbedding_Name"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().embedding_name(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTable",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().compact_table(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.external_embedding().exclude_missing()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.CenterSection,
+                    className: _.ConnectorID,
                   },
-                  _.comment() &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Comment,
-                      },
-                      _.comment(),
-                    ),
-                  !_.comment() &&
-                    _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Comment,
-                      },
-                      _,
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_Width"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _,
-                    ),
-                  ),
-                  _.input().inference_iterate() &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LabelValue,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Label,
-                        },
-                        (0, _._)(
-                          "#SteamLearn_Config_Node_Input_InferenceIterate",
-                        ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Value,
-                        },
-                        (0, _._)("#SteamLearn_Yes"),
-                      ),
-                    ),
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] =
+              (_.msgNode.connectors().filter((_) => _.is_input_connector())
+                .length,
+              _.msgNode.connectors().filter((_) => !_.is_input_connector())
+                .length,
+              _.useState(_.msgNode.comment())),
+            [_, _] = _.useState(
+              _.msgNode.external_embedding().project_id()?.toString() || "0",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.external_embedding().fetch_id()?.toString() || "0",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.external_embedding().train_id()?.toString() || "0",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.external_embedding().embedding_name() || "",
+            ),
+            [_, _] = _.useState(_.msgNode.external_embedding().compact_table()),
+            [_, _] = _.useState(
+              _.msgNode.external_embedding().exclude_missing(),
+            );
+          return (
+            _.useEffect(() => {
+              _(_.msgNode.comment()),
+                _(
+                  _.msgNode.external_embedding().project_id().toString() || "0",
+                ),
+                _(_.msgNode.external_embedding().train_id().toString() || "0"),
+                _(_.msgNode.external_embedding().embedding_name() || ""),
+                _(_.msgNode.external_embedding().compact_table()),
+                _(_.msgNode.external_embedding().exclude_missing());
+            }, [_.bVisible, _.msgNode]),
+            _.createElement(
+              _._,
+              {
+                active: _.bVisible,
+                onDismiss: () => _.fnSetPopupVisible(!1),
+                modalClassName: "NodeEditDialog",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_ExternalEmbedding"),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SubHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Tooltip_ExternalEmbedding"),
                 ),
               ),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeBody,
+                },
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  "div",
                   {
-                    key: _,
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
+                    className: _.NodeOptionBlock,
                   },
                   _.createElement(
                     "div",
                     {
-                      className: _.ConnectorID,
+                      className: _.NodeOptionHeader,
                     },
-                    _.connector_id(),
+                    (0, _._)("#SteamLearn_Config_Node_Comment"),
                   ),
-                );
-              }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                  ),
+                  _.createElement(_, {
+                    isText: !0,
+                    dontUpdateProject: !0,
+                    width: 200,
+                    fnGetInitialValue: () => __webpack_require__,
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectIDDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchIDDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainID",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainIDDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalEmbedding_Name"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_NameDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    width: 200,
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTable",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTableDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    width: 200,
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissingDesc",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.CheckboxWithLabel,
+                    },
+                    _.createElement("input", {
+                      type: "checkbox",
+                      _: "editexcludemissing",
+                      checked: _,
+                      onChange: () => _(!_),
+                    }),
+                    _.createElement(
+                      "label",
+                      {
+                        htmlFor: "editexcludemissing",
+                      },
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
+                      ),
+                    ),
+                  ),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Buttons,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => {
+                      _.msgNode
+                        .external_embedding()
+                        .set_project_id(parseInt(_)),
+                        _.msgNode
+                          .external_embedding()
+                          .set_fetch_id(parseInt(_)),
+                        _.msgNode
+                          .external_embedding()
+                          .set_train_id(parseInt(_)),
+                        _.msgNode.external_embedding().set_embedding_name(_),
+                        _.msgNode.external_embedding().set_compact_table(_),
+                        _.msgNode.external_embedding().set_exclude_missing(_),
+                        _.msgNode.set_comment(__webpack_require__),
+                        _(_),
+                        _.fnSetPopupVisible(!1);
+                    },
+                  },
+                  (0, _._)("#SteamLearn_Confirm"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => _.fnSetPopupVisible(!1),
+                  },
+                  (0, _._)("#SteamLearn_Cancel"),
+                ),
+              ),
             )
           );
         },
         _ = (_) => {
-          const { msgWorkingProject: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.input().inference_iterate());
-          _.useEffect(() => {
-            _(_.msgNode.comment()), _(_.msgNode.input().inference_iterate());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)(
-                "#SteamLearn_Config_Node_Title_Input",
-                _.msgNode.input().input_num(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 300,
-                  fnGetInitialValue: () => __webpack_require__,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Input_InferenceIterate"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Input_InferenceIterateDesc",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editinferenceiterate",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editinferenceiterate",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Input_InferenceIterate"),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(__webpack_require__),
-                      _.msgNode.input().set_inference_iterate(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
+            _ = _(_.data.msgNode.external_model().project_id()),
             _ = _.data.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()),
@@ -22258,17 +24555,17 @@
           return (
             _.useEffect(() => {
               setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
-                  14 == _.type() && _(_(_.node_id()));
+                for (const _ of _.project_nodes())
+                  8 == _.type() && _(_(_.node_id()));
               }, 0.1);
-            }, [__webpack_require__, _]),
+            }, [_, _]),
             _.createElement(
               "div",
               {
-                className: (0, _._)(_.FlowNode, _.KMeansNode, _.Preprocessing),
+                className: (0, _._)(_.FlowNode, _.ExternalModelNode, _.Keras),
               },
               _.createElement(_, {
-                bVisible: _,
+                bVisible: __webpack_require__,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22307,7 +24604,7 @@
                   {
                     className: _.TitleText,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Title_KMeans"),
+                  (0, _._)("#SteamLearn_Config_Node_Title_ExternalModel"),
                 ),
                 _.createElement(
                   "div",
@@ -22331,7 +24628,7 @@
                         strDescription: (0, _._)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => _(_, __webpack_require__, _.node_id()),
+                        onOK: () => _(_, _.node_id()),
                       }),
                       window,
                     ),
@@ -22358,7 +24655,7 @@
                       },
                       _.comment(),
                     ),
-                  _.kmeans().generate_clusters() &&
+                  _ &&
                     _.createElement(
                       "div",
                       {
@@ -22369,14 +24666,16 @@
                         {
                           className: _.Label,
                         },
-                        (0, _._)("#SteamLearn_Config_Node_KMeans_NumClusters"),
+                        (0, _._)(
+                          "#SteamLearn_Config_Node_ExternalModel_ProjectName",
+                        ),
                       ),
                       _.createElement(
                         "div",
                         {
                           className: _.Value,
                         },
-                        _.kmeans().num_clusters(),
+                        _,
                       ),
                     ),
                   _.createElement(
@@ -22389,16 +24688,103 @@
                       {
                         className: _.Label,
                       },
-                      (0, _._)("#SteamLearn_Config_Node_KMeans_Name"),
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_ExternalModel_ProjectID",
+                      ),
                     ),
                     _.createElement(
                       "div",
                       {
                         className: _.Value,
                       },
-                      _.kmeans().name(),
+                      _.external_model().project_id(),
                     ),
                   ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_TrainID"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _.external_model().train_id(),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Name"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _.external_model().named_inference_name(),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _.external_model().freeze_weights()
+                        ? (0, _._)("#SteamLearn_Yes")
+                        : (0, _._)("#SteamLearn_No"),
+                    ),
+                  ),
+                  _.external_model().freeze_weights() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.LabelValue,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Label,
+                        },
+                        (0, _._)(
+                          "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Value,
+                        },
+                        _.external_model().unfrozen_layers(),
+                      ),
+                    ),
                 ),
               ),
               _.map((_, _) => {
@@ -22430,1773 +24816,71 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.kmeans()?.num_clusters().toString() || "0",
-            ),
-            [_, _] = _.useState(_.msgNode.kmeans()?.generate_clusters()),
-            [_, _] = _.useState(_.msgNode.kmeans()?.name() || "");
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.kmeans()?.num_clusters().toString()),
-              _(_.msgNode.kmeans()?.generate_clusters()),
-              _(_.msgNode.kmeans()?.name());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_KMeans"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_KMeans"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 300,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_KMeans_Name"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_KMeans_NameDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_KMeans_GenerateClusters"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_KMeans_GenerateClustersDesc",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editflatten",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editflatten",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_KMeans_GenerateClusters"),
-                  ),
-                ),
-                _ &&
-                  _.createElement(_, {
-                    label: (0, _._)(
-                      "#SteamLearn_Config_Node_KMeans_NumClusters",
-                    ),
-                    labelTooltip: (0, _._)(
-                      "#SteamLearn_Config_Node_KMeans_NumClustersDesc",
-                    ),
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 1, 1e4),
-                    fnSetValue: (_) => _(_),
-                  }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_),
-                      _.msgNode.kmeans().set_num_clusters(parseInt(_)),
-                      _.msgNode.kmeans().set_name(_),
-                      _.msgNode.kmeans().set_generate_clusters(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector()),
-            _ = _.onehot().compact_table()?.length > 0;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.OnehotNode, _.Preprocessing),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Onehot"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Onehot_Width"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _ ? _.onehot().compact_table() : _.onehot().width(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.onehot().multi_hot()
-                      ? (0, _._)("#SteamLearn_Yes")
-                      : (0, _._)("#SteamLearn_No"),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.onehot().compact_table().length > 0
-                ? _.msgNode.onehot().compact_table()
-                : _.msgNode.onehot().width().toString(),
-            ),
-            [_, _] = _.useState(_.msgNode.onehot().multi_hot());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(
-                _.msgNode.onehot().compact_table().length > 0
-                  ? _.msgNode.onehot().compact_table()
-                  : _.msgNode.onehot().width().toString(),
-              ),
-              _(_.msgNode.onehot().multi_hot());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Onehot"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Onehot"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Onehot_Width"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Onehot_WidthDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  isText: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) =>
-                    _(_, 1, 8096) || _(__webpack_require__, _),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHotDesc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editmultihot",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editmultihot",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    const _ = _(_, 1, 8096),
-                      _ = _(__webpack_require__, _);
-                    _
-                      ? (_.msgNode.onehot().set_width(parseInt(_)),
-                        _.msgNode.onehot().set_compact_table(""))
-                      : _ &&
-                        (_.msgNode.onehot().set_compact_table(_),
-                        _.msgNode.onehot().set_width(0)),
-                      _.msgNode.onehot().set_multi_hot(_),
-                      _.msgNode.set_comment(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.ShuffleNode, _.Preprocessing),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Shuffle"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.shuffle().exclude_zeroes()
-                      ? (0, _._)("#SteamLearn_Yes")
-                      : (0, _._)("#SteamLearn_No"),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.shuffle().exclude_zeroes());
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Shuffle"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Shuffle"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editflatten",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editflatten",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_),
-                      _.msgNode.shuffle().set_exclude_zeroes(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = (0, _._)();
-          _.useEffect(() => {
-            setTimeout(() => {
-              for (const _ of __webpack_require__.project_nodes())
-                10 == _.type() && _(_(_.node_id()));
-            }, 0.1);
-          }, [__webpack_require__, _]);
-          const _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.SyncedShuffleNode,
-                _.Preprocessing,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.synced_shuffle().exclude_zeroes()
-                      ? (0, _._)("#SteamLearn_Yes")
-                      : (0, _._)("#SteamLearn_No"),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
             _ = _.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()).length,
+            _ = _.msgNode
+              .connectors()
+              .filter((_) => !_.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(__webpack_require__.toString()),
             [_, _] = _.useState(_.toString()),
-            [_, _] = _.useState(_.msgNode.synced_shuffle().exclude_zeroes());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.toString()),
-              _(_.msgNode.synced_shuffle().exclude_zeroes());
-          }, [_.bVisible, _.msgNode, _]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_SyncedShuffle"),
-              ),
+            [_, _] = _.useState(
+              _.msgNode.external_model().project_id()?.toString() || "0",
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_Count"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_CountDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 10),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editflatten",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editflatten",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
+            [_, _] = _.useState(
+              _.msgNode.external_model().train_id()?.toString() || "0",
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    const _ = parseInt(_),
-                      _ = _;
-                    if (_ > _) {
-                      const _ = _ - _,
-                        _ = _,
-                        _ = _(__webpack_require__, _ + _);
-                      for (let _ = 0; _ < _; _++) {
-                        let _ = new _();
-                        _.set_connector_id(_[_]),
-                          _.set_is_input_connector(!0),
-                          _.msgNode.add_connectors(_);
-                      }
-                      for (let _ = 0; _ < _; _++) {
-                        let _ = new _();
-                        _.set_connector_id(_[_ + _]),
-                          _.set_is_input_connector(!1),
-                          _.msgNode.add_connectors(_);
-                      }
-                    } else if (_ < _) {
-                      let _ = [];
-                      _.push(
-                        ..._.msgNode
-                          .connectors()
-                          .filter((_) => _.is_input_connector())
-                          .slice(_)
-                          .map((_) => _.connector_id()),
-                      ),
-                        _.push(
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => !_.is_input_connector())
-                            .slice(_)
-                            .map((_) => _.connector_id()),
-                        );
-                      for (let _ of __webpack_require__.project_nodes())
-                        for (let _ of _.connectors())
-                          __webpack_require__.set_linked_connector_ids(
-                            __webpack_require__
-                              .linked_connector_ids()
-                              .filter((_) => !_.includes(_)),
-                          );
-                      _.msgNode.set_connectors([
-                        ..._.msgNode
-                          .connectors()
-                          .filter((_) => _.is_input_connector())
-                          .slice(0, _),
-                        ..._.msgNode
-                          .connectors()
-                          .filter((_) => !_.is_input_connector())
-                          .slice(0, _),
-                      ]);
-                    }
-                    _.msgNode.set_comment(_),
-                      _.msgNode.synced_shuffle().set_exclude_zeroes(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
+            [_, _] = _.useState(
+              _.msgNode.external_model().named_inference_name() || "",
             ),
-          );
-        };
-      const _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = (0, _._)();
-          _.useEffect(() => {
-            setTimeout(() => {
-              for (const _ of _.project_nodes())
-                6 == _.type() && _(_(_.node_id()));
-            }, 0.1);
-          }, [_, _]);
-          const _ = Math.max(150, 40 + 22 * (_.length - 1));
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.TrainNode, _.Trainer),
-              style: {
-                height: _,
-              },
-            },
-            _.createElement(_, {
-              bVisible: __webpack_require__,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = _.train().uses_weight_mask() ? 2 : 1,
-                _ = _.length - _,
-                _ = _ >= _,
-                _ = _ ? _ - _ : _,
-                _ = _ ? _ : _,
-                _ = Math.floor(((_ + 1) / (_ + 1)) * (_ - 24)),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _ ? _._.Right : _._.Left,
-                  _: _,
-                  style: {
-                    top: _ + 24,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Train"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.SideSection, _.Left),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SideInput,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_Input"),
-                ),
-                _.train().uses_weight_mask() &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.SideSection, _.Left),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SideInput,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_Train_WeightMask"),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_Activation"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "Sigmoid";
-                        case 1:
-                          return "Softmax";
-                        case 3:
-                          return "Linear";
-                      }
-                      return console.error("Invalid activation", _), "";
-                    })(_.train().activation()),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_Loss"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    (function (_) {
-                      switch (_) {
-                        case 1:
-                          return "Binary Crossentropy";
-                        case 2:
-                          return "Categorical Crossentropy";
-                        case 3:
-                          return "Sparse Categorical Crossentropy";
-                        case 4:
-                          return "Regression";
-                      }
-                      return console.error("Invalid loss", _), "";
-                    })(_.train().loss()),
-                  ),
-                ),
-                _.train().compact_table().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_Train_CompactTable"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.train().compact_table(),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.SideSection, _.Right),
-                },
-                (0, _._)(1, _.train().input_count()).map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _,
-                      className: _.SideInput,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_Label", _),
-                  ),
-                ),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.train().input_count().toString()),
-            [_, _] = _.useState(_.msgNode.train().activation()),
-            [_, _] = _.useState(_.msgNode.train().loss()),
-            [_, _] = _.useState(_.msgNode.train().uses_weight_mask() || !1),
-            [_, _] = _.useState(_.msgNode.train().compact_table());
-          _.useEffect(() => {
-            _(_.msgNode.train().input_count().toString()),
-              _(_.msgNode.train().activation()),
-              _(_.msgNode.train().loss()),
-              _(_.msgNode.train().compact_table()),
-              _(_.msgNode.train().uses_weight_mask() || !1);
-          }, [_.bVisible, _.msgNode]);
-          let _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Activation_Sigmoid",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Activation_Softmax",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Activation_Linear",
-                ),
-                value: 3,
-              },
-            ],
-            _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Loss_BinaryCrossEntropy",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Loss_CategoricalCrossEntropy",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Loss_SparseCategoricalCrossEntropy",
-                ),
-                value: 3,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_Train_Loss_Regression",
-                ),
-                value: 4,
-              },
-            ],
-            _ = !1;
-          for (let _ = 1; _ < _.msgNode.connectors().length; _ += 2) {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              __webpack_require__,
-              _.msgNode.connectors()[_].connector_id(),
+            [_, _] = _.useState(_.msgNode.external_model().freeze_weights()),
+            [_, _] = _.useState(
+              _.msgNode.external_model().unfrozen_layers()?.toString() || "0",
             );
-            if (_) {
-              const _ = _(__webpack_require__, _, _);
-              if (_.length > 1)
-                return (
-                  (0, _._)(
-                    !1,
-                    `Incoming node/connector ${_.node_id()}, ${_} have a shape with a primary dimension of ${_.length}: ${_}!`,
-                  ),
-                  null
+          return (
+            _.useEffect(() => {
+              _(_.msgNode.comment()),
+                _(_.msgNode.external_model().project_id().toString() || "0"),
+                _(_.msgNode.external_model().train_id().toString() || "0"),
+                _(_.msgNode.external_model().named_inference_name() || ""),
+                _(__webpack_require__.toString()),
+                _(_.msgNode.external_model().freeze_weights()),
+                _(
+                  _.msgNode.external_model().unfrozen_layers()?.toString() ||
+                    "0",
                 );
-              if (_.length > 0 && (_[0] > 1 || void 0 === _[0])) {
-                _ = !0;
-                break;
-              }
-            }
-          }
-          const _ = 3 == _ || (1 == _ && _);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
+            }, [_.bVisible, _.msgNode, _, _]),
             _.createElement(
-              "div",
+              _._,
               {
-                className: _.NodeHeader,
+                active: _.bVisible,
+                onDismiss: () => _.fnSetPopupVisible(!1),
+                modalClassName: "NodeEditDialog",
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_Train"),
               _.createElement(
                 "div",
                 {
-                  className: _.SubHeader,
+                  className: _.NodeHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Train"),
+                (0, _._)("#SteamLearn_Config_Node_Title_ExternalModel"),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SubHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Tooltip_ExternalModel"),
+                ),
               ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
               _.createElement(
                 "div",
                 {
-                  className: _.NodeOptionBlock,
+                  className: _.NodeBody,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_Count"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_CountDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 9),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_Activation"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
-                }),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_Train_ActivationDescSub1",
-                    ),
-                  ),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_Train_ActivationDescSub2",
-                    ),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_Train_ActivationDescSub3",
-                    ),
-                  ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_Loss"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_LossDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
-                }),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub1"),
-                  ),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub2"),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub3"),
-                  ),
-                4 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub4"),
-                  ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMask"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMaskDesc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editusesweightmask",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editusesweightmask",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMask"),
-                  ),
-                ),
-              ),
-              _ &&
                 _.createElement("div", {
                   className: _.Separator,
                 }),
-              _ &&
                 _.createElement(
                   "div",
                   {
@@ -24207,2097 +24891,348 @@
                     {
                       className: _.NodeOptionHeader,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_Train_CompactTable"),
+                    (0, _._)("#SteamLearn_Config_Node_Comment"),
                   ),
                   _.createElement(
                     "div",
                     {
                       className: _.NodeOptionDesc,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_Train_CompactTableDesc"),
+                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                  ),
+                  _.createElement(_, {
+                    isText: !0,
+                    dontUpdateProject: !0,
+                    width: 200,
+                    fnGetInitialValue: () => _,
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_NumInputs"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_NumInputsDesc",
+                    ),
                   ),
                   _.createElement(_, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
-                    fnValidateValue: (_) =>
-                      _(__webpack_require__, _) ||
-                      (function (_, _) {
-                        for (const _ of _.project_nodes())
-                          if (
-                            14 == __webpack_require__.type() &&
-                            __webpack_require__.kmeans().name() == _
-                          )
-                            return !0;
-                        return !1;
-                      })(__webpack_require__, _) ||
-                      _(__webpack_require__, _),
+                    fnValidateValue: (_) => _(_, 1, 8),
                     fnSetValue: (_) => _(_),
                   }),
                 ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_NumOutputs",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_NumOutputsDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 1, 8),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_ProjectID"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_ProjectIDDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_TrainID"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_TrainIDDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_Name"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_NameDesc"),
+                  ),
+                  _.createElement(_, {
+                    width: 200,
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_FreezeDesc",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.CheckboxWithLabel,
+                    },
+                    _.createElement("input", {
+                      type: "checkbox",
+                      _: "editfreeze",
+                      checked: _,
+                      onChange: () => _(!_),
+                    }),
+                    _.createElement(
+                      "label",
+                      {
+                        htmlFor: "editfreeze",
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayersDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    width: 200,
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 0, void 0),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+              ),
               _.createElement(
-                _._,
+                "div",
                 {
-                  onClick: () => {
-                    const _ = _ && !_.msgNode.train().uses_weight_mask(),
-                      _ = !_ && _.msgNode.train().uses_weight_mask(),
-                      _ = Math.floor(
-                        _.msgNode
-                          .connectors()
-                          .filter((_) => _.is_input_connector()).length,
-                      ),
-                      _ = parseInt(_) + (_ ? 2 : 1);
-                    if (_ > _) {
-                      const _ = _ - _,
-                        _ = _(__webpack_require__, _);
-                      for (let _ = 0; _ < _; _++) {
-                        let _ = new _();
-                        _.set_connector_id(_[_]),
-                          _.set_is_input_connector(!0),
-                          _.msgNode.add_connectors(_);
-                      }
-                      if (_) {
-                        for (
-                          let _ = _.msgNode.connectors().length - 1;
-                          _ > 1;
-                          _--
-                        ) {
-                          const _ = _.msgNode
-                              .connectors()
-                              [_ - 1].connector_id(),
-                            _ = _.msgNode.connectors()[_].connector_id();
-                          for (let _ of __webpack_require__.project_nodes())
-                            for (let _ of _.connectors())
-                              _.linked_connector_ids().includes(_) &&
-                                (_.set_linked_connector_ids(
-                                  _.linked_connector_ids().filter(
-                                    (_) => _ != _,
-                                  ),
-                                ),
-                                _.add_linked_connector_ids(_));
+                  className: _.Buttons,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => {
+                      const _ = parseInt(_),
+                        _ = parseInt(_);
+                      if (_ > _) {
+                        const _ = _ - _,
+                          _ = _(_, _);
+                        for (let _ = 0; _ < _; _++) {
+                          let _ = new _();
+                          __webpack_require__.set_connector_id(_[_]),
+                            __webpack_require__.set_is_input_connector(!0),
+                            _.msgNode.add_connectors(_);
                         }
-                        _.msgNode.connectors()[1].set_linked_connector_ids([]);
-                      }
-                    } else if (_ < _) {
-                      if (_)
-                        for (
-                          let _ = _.msgNode.connectors().length - 1;
-                          _ > 1;
-                          _--
-                        ) {
-                          const _ = _.msgNode.connectors()[_].connector_id(),
-                            _ = _.msgNode.connectors()[_ - 1].connector_id();
-                          for (let _ of __webpack_require__.project_nodes())
-                            for (let _ of _.connectors())
-                              __webpack_require__
-                                .linked_connector_ids()
-                                .includes(
-                                  _.msgNode.connectors()[1].connector_id(),
-                                ) &&
-                                __webpack_require__.set_linked_connector_ids(
-                                  __webpack_require__
-                                    .linked_connector_ids()
-                                    .filter(
-                                      (_) =>
-                                        _ !=
-                                        _.msgNode
-                                          .connectors()[1]
-                                          .connector_id(),
-                                    ),
-                                ),
-                                __webpack_require__
-                                  .linked_connector_ids()
-                                  .includes(_) &&
-                                  (__webpack_require__.set_linked_connector_ids(
-                                    __webpack_require__
-                                      .linked_connector_ids()
-                                      .filter((_) => _ != _),
-                                  ),
-                                  __webpack_require__.add_linked_connector_ids(
-                                    _,
-                                  ));
-                        }
-                      const _ = _.msgNode
-                        .connectors()
-                        .filter((_) => _.is_input_connector())
-                        .slice(_)
-                        .map((_) => _.connector_id());
-                      for (let _ of __webpack_require__.project_nodes())
-                        for (let _ of _.connectors())
-                          __webpack_require__.set_linked_connector_ids(
-                            __webpack_require__
-                              .linked_connector_ids()
-                              .filter((_) => !_.includes(_)),
-                          );
-                      _.msgNode.set_connectors([
-                        ..._.msgNode
-                          .connectors()
-                          .filter((_) => !_.is_input_connector()),
-                        ..._.msgNode
+                      } else if (_ < _) {
+                        const _ = _.msgNode
                           .connectors()
                           .filter((_) => _.is_input_connector())
-                          .slice(0, _),
-                      ]);
-                    }
-                    _.msgNode.train().set_input_count(parseInt(_)),
-                      _.msgNode.train().set_activation(_),
-                      _.msgNode.train().set_loss(_),
-                      _.msgNode.train().set_compact_table(_),
-                      _.msgNode.train().set_uses_weight_mask(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
+                          .slice(_)
+                          .map((_) => _.connector_id());
+                        for (let _ of _.project_nodes())
+                          for (let _ of _.connectors())
+                            _.set_linked_connector_ids(
+                              _.linked_connector_ids().filter(
+                                (_) => !__webpack_require__.includes(_),
+                              ),
+                            );
+                        _.msgNode.set_connectors([
+                          ..._.msgNode
+                            .connectors()
+                            .filter((_) => !_.is_input_connector()),
+                          ..._.msgNode
+                            .connectors()
+                            .filter((_) => _.is_input_connector())
+                            .slice(0, _),
+                        ]);
+                      }
+                      if ((_(_), _ > _)) {
+                        const _ = _ - _,
+                          _ = _(_, _);
+                        for (let _ = 0; _ < _; _++) {
+                          let _ = new _();
+                          __webpack_require__.set_connector_id(_[_]),
+                            __webpack_require__.set_is_input_connector(!1),
+                            _.msgNode.add_connectors(_);
+                        }
+                      } else if (_ < _) {
+                        const _ = _.msgNode
+                          .connectors()
+                          .filter((_) => !_.is_input_connector())
+                          .slice(_)
+                          .map((_) => _.connector_id());
+                        for (let _ of _.project_nodes())
+                          for (let _ of _.connectors())
+                            _.set_linked_connector_ids(
+                              _.linked_connector_ids().filter(
+                                (_) => !__webpack_require__.includes(_),
+                              ),
+                            );
+                        _.msgNode.set_connectors([
+                          ..._.msgNode
+                            .connectors()
+                            .filter((_) => !_.is_input_connector())
+                            .slice(0, _),
+                          ..._.msgNode
+                            .connectors()
+                            .filter((_) => _.is_input_connector()),
+                        ]);
+                      }
+                      _.msgNode.external_model().set_project_id(parseInt(_)),
+                        _.msgNode.external_model().set_train_id(parseInt(_)),
+                        _.msgNode.external_model().set_named_inference_name(_),
+                        _.msgNode.external_model().set_freeze_weights(_),
+                        _.msgNode
+                          .external_model()
+                          .set_unfrozen_layers(parseInt(_)),
+                        _.msgNode.set_comment(_),
+                        _(_),
+                        _.fnSetPopupVisible(!1);
+                    },
                   },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
+                  (0, _._)("#SteamLearn_Confirm"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => _.fnSetPopupVisible(!1),
+                  },
+                  (0, _._)("#SteamLearn_Cancel"),
+                ),
               ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
+            )
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _(_.text_vectorization().other_project_id()),
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.TextVectorizationNode,
-                _.Preprocessing,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_TextVectorization"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.text_vectorization().vocabulary_size(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Standardize",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    0 == _.text_vectorization().standardize() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
-                      ),
-                    1 == _.text_vectorization().standardize() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Standardize_1",
-                      ),
-                    2 == _.text_vectorization().standardize() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Standardize_2",
-                      ),
-                    3 == _.text_vectorization().standardize() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Standardize_3",
-                      ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Output",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    0 == _.text_vectorization().output() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Output_0",
-                      ),
-                    1 == _.text_vectorization().output() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Output_1",
-                      ),
-                    2 == _.text_vectorization().output() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Output_2",
-                      ),
-                    3 == _.text_vectorization().output() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Output_3",
-                      ),
-                  ),
-                ),
-                0 == _.text_vectorization().output() &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_SeqLen",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.text_vectorization().sequence_length(),
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_TextVectorization_Split"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    0 == _.text_vectorization().split() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Split_0",
-                      ),
-                    1 == _.text_vectorization().split() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Split_1",
-                      ),
-                    2 == _.text_vectorization().split() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Split_2",
-                      ),
-                    3 == _.text_vectorization().split() &&
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorization_Split_3",
-                      ),
-                  ),
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_TextVectorizationOtherProjectName",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _,
-                    ),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_NGrams",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    0 == _.text_vectorization().ngrams()
-                      ? "None"
-                      : _.text_vectorization().ngrams(),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.text_vectorization().vocabulary_size().toString(),
-            ),
-            [_, _] = _.useState(_.msgNode.text_vectorization().standardize()),
-            [_, _] = _.useState(_.msgNode.text_vectorization().output()),
-            [_, _] = _.useState(
-              _.msgNode.text_vectorization().vocabulary_size().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.text_vectorization().other_project_id()?.toString() ||
-                "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.text_vectorization().other_fetch_id()?.toString() ||
-                "0",
-            ),
-            [_, _] = _.useState(_.msgNode.text_vectorization().split()),
-            [_, _] = _.useState(
-              _.msgNode.text_vectorization().ngrams().toString(),
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.text_vectorization().vocabulary_size().toString()),
-              _(_.msgNode.text_vectorization().standardize()),
-              _(_.msgNode.text_vectorization().output()),
-              _(_.msgNode.text_vectorization().sequence_length().toString()),
-              _(_.msgNode.text_vectorization().split()),
-              _(_.msgNode.text_vectorization().ngrams().toString()),
-              _(
-                _.msgNode.text_vectorization().other_project_id()?.toString() ||
-                  "0",
-              ),
-              _(
-                _.msgNode.text_vectorization().other_fetch_id()?.toString() ||
-                  "0",
-              );
-          }, [_.bVisible, _.msgNode]);
-          const _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
-                ),
-                value: 0,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Standardize_1",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Standardize_2",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Standardize_3",
-                ),
-                value: 3,
-              },
-            ],
-            _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Output_0",
-                ),
-                value: 0,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Output_1",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Output_2",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Output_3",
-                ),
-                value: 3,
-              },
-            ],
-            _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Split_0",
-                ),
-                value: 0,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Split_1",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Split_2",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_TextVectorization_Split_3",
-                ),
-                value: 3,
-              },
-            ];
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_TextVectorization"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_TextVectorization"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_VocabularySizeDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  isText: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 1e6),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_Standardize",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_StandardizeDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
-                }),
-                0 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc0",
-                    ),
-                  ),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc1",
-                    ),
-                  ),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc2",
-                    ),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc3",
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_Output"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_OutputDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
-                }),
-                0 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc0",
-                    ),
-                  ),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc1",
-                    ),
-                  ),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc2",
-                    ),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc3",
-                    ),
-                  ),
-              ),
-              0 == _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_SeqLen",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_SeqLenDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    isText: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 1, 1e4),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_Split"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_SplitDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
-                }),
-                0 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc0",
-                    ),
-                  ),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc1",
-                    ),
-                  ),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc2",
-                    ),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc3",
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorizationOtherProjectID",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorizationOtherProjectIDDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  isText: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 0),
-                  fnSetValue: (_) => _(_),
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorizationOtherFetchIDDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  isText: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 0),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_NGrams"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_TextVectorization_NGramsDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  isText: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 0, 100),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode
-                      .text_vectorization()
-                      .set_vocabulary_size(parseInt(_)),
-                      _.msgNode.text_vectorization().set_standardize(_),
-                      _.msgNode.text_vectorization().set_output(_),
-                      _.msgNode
-                        .text_vectorization()
-                        .set_sequence_length(parseInt(_)),
-                      _.msgNode.text_vectorization().set_split(_),
-                      _.msgNode.text_vectorization().set_ngrams(parseInt(_)),
-                      _.msgNode
-                        .text_vectorization()
-                        .set_other_project_id(parseInt(_)),
-                      _.msgNode
-                        .text_vectorization()
-                        .set_other_fetch_id(parseInt(_)),
-                      _.msgNode.set_comment(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        };
-      var _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.BatchNormalizationNode,
-                _.Keras,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_BatchNormalization"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
-          _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_BatchNormalization"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_BatchNormalization"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.NormalizeNode, _.Preprocessing),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Normalize"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
-          _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Normalize"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Normalize"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.NamedInferenceNode, _.Keras),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_NamedInference"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_NamedInference_Name"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.named_inference().name(),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const { msgWorkingProject: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.named_inference().name());
-          _.useEffect(() => {
-            _(_.msgNode.comment()), _(_.msgNode.named_inference().name());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_DenseStack"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_DenseStack"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => __webpack_require__,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_NamedInference_Name"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.named_inference().set_name(_),
-                      _.msgNode.set_comment(__webpack_require__),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.DotNode, _.Keras),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Dot"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.dot().normalize()
-                      ? (0, _._)("#SteamLearn_Yes")
-                      : (0, _._)("#SteamLearn_No"),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.dot().normalize());
-          _.useEffect(() => {
-            _(_.msgNode.comment()), _(_.msgNode.dot().normalize());
-          }, [_]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Dot"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Dot"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Dot_NormalizeDesc"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CheckboxWithLabel,
-                  },
-                  _.createElement("input", {
-                    type: "checkbox",
-                    _: "editnormalize",
-                    checked: _,
-                    onChange: () => _(!_),
-                  }),
-                  _.createElement(
-                    "label",
-                    {
-                      htmlFor: "editnormalize",
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Dot_Normalize"),
-                  ),
-                ),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.dot().set_normalize(_),
-                      _.msgNode.set_comment(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = 1 == _.extract().mode(),
@@ -26308,10 +25243,10 @@
             _ = _.filter((_, _) => _ && 0 == _);
           _.useEffect(() => {
             setTimeout(() => {
-              for (const _ of __webpack_require__.project_nodes())
+              for (const _ of _.project_nodes())
                 21 == _.type() && _(_(_.node_id()));
             }, 0.1);
-          }, [__webpack_require__, _]);
+          }, [_, _]);
           const _ = Math.max(78, 20 * _.length);
           return _.createElement(
             "div",
@@ -26319,7 +25254,7 @@
               className: (0, _._)(_.FlowNode, _.ExtractNode, _.Preprocessing),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -26388,7 +25323,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -26743,15 +25678,12 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
             _ = _.msgNode
               .connectors()
               .filter((_) => _.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.toString()),
+            [_, _] = _.useState(__webpack_require__.toString()),
             [_, _] = _.useState(_.msgNode.extract().input_type()),
             [_, _] = _.useState(_.msgNode.extract().mode()),
             [_, _] = _.useState(_.msgNode.extract().exclusion()),
@@ -26775,7 +25707,7 @@
             [_, _] = _.useState(_.msgNode.extract().extracted_compact_table());
           _.useEffect(() => {
             _(_.msgNode.comment()),
-              _(_.toString()),
+              _(__webpack_require__.toString()),
               _(_.msgNode.extract().input_type()),
               _(_.msgNode.extract().mode()),
               _(_.msgNode.extract().exclusion()),
@@ -27216,7 +26148,7 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(__webpack_require__, _),
+                    fnValidateValue: (_) => _(_, _),
                     fnSetValue: (_) => _(_),
                   }),
                   _.createElement(_, {
@@ -27230,8 +26162,7 @@
                     hidden: 0 == _,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
-                    fnValidateValue: (_) =>
-                      !_(__webpack_require__, _, _.msgNode),
+                    fnValidateValue: (_) => !_(_, _, _.msgNode),
                     fnSetValue: (_) => _(_),
                   }),
                   _.createElement("div", {
@@ -27258,7 +26189,7 @@
                       _ = [];
                     const _ = parseInt(_);
                     if ((_ > _ && (_ += 3 * (_ - _)), _ > 0)) {
-                      const _ = _(__webpack_require__, _);
+                      const _ = _(_, _);
                       for (let _ = 0; _ < _; _++) {
                         const _ = _ % 3 == 0;
                         let _ = new _();
@@ -27274,7 +26205,7 @@
                           _.push(_[2 * _ + 1].connector_id()),
                           _.push(_[2 * _ + 2].connector_id()));
                     if (_.length > 0) {
-                      for (let _ of __webpack_require__.project_nodes())
+                      for (let _ of _.project_nodes())
                         for (let _ of _.connectors())
                           _.set_linked_connector_ids(
                             _.linked_connector_ids().filter(
@@ -27323,21 +26254,18 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlowNode, _.Conv1DNode, _.Keras),
+              className: (0, _._)(_.FlowNode, _.FlattenNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -27376,7 +26304,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_Conv1D"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Flatten"),
               ),
               _.createElement(
                 "div",
@@ -27398,7 +26326,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -27425,86 +26353,6 @@
                     },
                     _.comment(),
                   ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Conv1D_Filters"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.conv_1d().filters(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.conv_1d().kernel_size(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Conv1D_Strides"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.conv_1d().strides(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _(_.conv_1d().activation()),
-                  ),
-                ),
               ),
             ),
             _.map((_, _) => {
@@ -27535,49 +26383,11 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.conv_1d().filters().toString()),
-            [_, _] = _.useState(_.msgNode.conv_1d().kernel_size().toString()),
-            [_, _] = _.useState(
-              _.msgNode.conv_1d()?.strides().toString() || "1",
-            ),
-            [_, _] = _.useState(_.msgNode.conv_1d().activation());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.conv_1d().filters().toString()),
-              _(_.msgNode.conv_1d().kernel_size().toString()),
-              _(_.msgNode.conv_1d().strides().toString());
-          }, [_]);
-          let _ = [
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_RELU"),
-              value: 1,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_ELU"),
-              value: 2,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_TANH"),
-              value: 3,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Activation_SIGMOID",
-              ),
-              value: 4,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Activation_LINEAR",
-              ),
-              value: 5,
-            },
-          ];
+            _(_.msgNode.comment());
+          }, [_.bVisible, _.msgNode]);
           return _.createElement(
             _._,
             {
@@ -27590,13 +26400,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_Conv1D"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Flatten"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Conv1D"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Flatten"),
               ),
             ),
             _.createElement(
@@ -27630,133 +26440,13 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
               _.createElement("div", {
                 className: _.Separator,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_Filters"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_FiltersDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_KernelSizeDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_Strides"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Conv1D_StridesDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, void 0),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Option,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OptionTitle,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
-                ),
-                _.createElement(
-                  "select",
-                  {
-                    className: _.InputSelect,
-                    value: _,
-                    onChange: (_) => _(parseInt(_.target.value)),
-                  },
-                  _.map((_) =>
-                    _.createElement(
-                      "option",
-                      {
-                        key: _.value,
-                        value: _.value,
-                      },
-                      _.label,
-                    ),
-                  ),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-              ),
             ),
             _.createElement(
               "div",
@@ -27767,11 +26457,7 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.conv_1d().set_filters(parseInt(_)),
-                      _.msgNode.conv_1d().set_kernel_size(parseInt(_)),
-                      _.msgNode.conv_1d().set_strides(parseInt(_)),
-                      _.msgNode.conv_1d().set_activation(_),
-                      _.msgNode.set_comment(_),
+                    _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -27789,11 +26475,1375 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.GlobalAvgPooling1DNode,
+                _.Keras,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_GlobalAvgPooling1D"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+          _.useEffect(() => {
+            _(_.msgNode.comment());
+          }, [_]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_GlobalAvgPooling1D"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_GlobalAvgPooling1D"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.GlobalMaxPooling1DNode,
+                _.Keras,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_GlobalMaxPooling1D"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+          _.useEffect(() => {
+            _(_.msgNode.comment());
+          }, [_]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_GlobalMaxPooling1D"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_GlobalMaxPooling1D"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _(_, _.input().input_num()),
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          let _ = 0,
+            _ = [],
+            _ = !1;
+          for (const _ of _.data_source_element_usages())
+            _.input() == _.input().input_num() &&
+              ((_ += 1),
+              _.push(_.data_element_path()),
+              6 == _.preprocessing_type() && (_ = !0));
+          return (
+            _ && (_ = 1),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
+              },
+              _.createElement(_, {
+                bVisible: __webpack_require__,
+                fnSetPopupVisible: _,
+                msgNode: _.data.msgNode,
+              }),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Title,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.TitleText,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Title_Input",
+                    _.data.msgNode.input().input_num(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeID,
+                  },
+                  _.node_id(),
+                ),
+                _.createElement("div", {
+                  className: _.EditGear,
+                  onClick: () => _(!0),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.TitleUnderBar,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Body,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CenterSection,
+                  },
+                  _.comment() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Comment,
+                      },
+                      _.comment(),
+                    ),
+                  !_.comment() &&
+                    _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Comment,
+                      },
+                      _,
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_Width"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _,
+                    ),
+                  ),
+                  _.input().inference_iterate() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.LabelValue,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Label,
+                        },
+                        (0, _._)(
+                          "#SteamLearn_Config_Node_Input_InferenceIterate",
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Value,
+                        },
+                        (0, _._)("#SteamLearn_Yes"),
+                      ),
+                    ),
+                ),
+              ),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "source",
+                    position: _._.Bottom,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
+            )
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.input().inference_iterate());
+          _.useEffect(() => {
+            _(_.msgNode.comment()), _(_.msgNode.input().inference_iterate());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)(
+                "#SteamLearn_Config_Node_Title_Input",
+                _.msgNode.input().input_num(),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 300,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Input_InferenceIterate"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Input_InferenceIterateDesc",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editinferenceiterate",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editinferenceiterate",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Input_InferenceIterate"),
+                  ),
+                ),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.input().set_inference_iterate(_),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = (0, _._)(),
+            _ = _.data.msgNode
+              .connectors()
+              .filter((_) => _.is_input_connector()),
+            _ = _.data.msgNode
+              .connectors()
+              .filter((_) => !_.is_input_connector());
+          return (
+            _.useEffect(() => {
+              setTimeout(() => {
+                for (const _ of _.project_nodes())
+                  14 == _.type() && _(_(_.node_id()));
+              }, 0.1);
+            }, [_, _]),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.FlowNode, _.KMeansNode, _.Preprocessing),
+              },
+              _.createElement(_, {
+                bVisible: __webpack_require__,
+                fnSetPopupVisible: _,
+                msgNode: _,
+              }),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Title,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.TitleText,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Title_KMeans"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeID,
+                  },
+                  _.node_id(),
+                ),
+                _.createElement("div", {
+                  className: _.EditGear,
+                  onClick: () => _(!0),
+                }),
+                _.createElement("div", {
+                  className: _.Delete,
+                  onClick: () =>
+                    (0, _._)(
+                      _.createElement(_._, {
+                        strTitle: (0, _._)(
+                          "#SteamLearn_Config_Node_Delete_Node",
+                        ),
+                        strDescription: (0, _._)(
+                          "#SteamLearn_Config_Node_Delete_NodeDetails",
+                        ),
+                        onOK: () => _(_, _.node_id()),
+                      }),
+                      window,
+                    ),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.TitleUnderBar,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Body,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CenterSection,
+                  },
+                  _.comment().length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Comment,
+                      },
+                      _.comment(),
+                    ),
+                  _.kmeans().generate_clusters() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.LabelValue,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Label,
+                        },
+                        (0, _._)("#SteamLearn_Config_Node_KMeans_NumClusters"),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.Value,
+                        },
+                        _.kmeans().num_clusters(),
+                      ),
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_KMeans_Name"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _.kmeans().name(),
+                    ),
+                  ),
+                ),
+              ),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "source",
+                    position: _._.Bottom,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
+            )
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(
+              _.msgNode.kmeans()?.num_clusters().toString() || "0",
+            ),
+            [_, _] = _.useState(_.msgNode.kmeans()?.generate_clusters()),
+            [_, _] = _.useState(_.msgNode.kmeans()?.name() || "");
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.kmeans()?.num_clusters().toString()),
+              _(_.msgNode.kmeans()?.generate_clusters()),
+              _(_.msgNode.kmeans()?.name());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_KMeans"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_KMeans"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 300,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_KMeans_Name"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_KMeans_NameDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_KMeans_GenerateClusters"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_KMeans_GenerateClustersDesc",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editflatten",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editflatten",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_KMeans_GenerateClusters"),
+                  ),
+                ),
+                _ &&
+                  _.createElement(_, {
+                    label: (0, _._)(
+                      "#SteamLearn_Config_Node_KMeans_NumClusters",
+                    ),
+                    labelTooltip: (0, _._)(
+                      "#SteamLearn_Config_Node_KMeans_NumClustersDesc",
+                    ),
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 1, 1e4),
+                    fnSetValue: (_) => _(_),
+                  }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.kmeans().set_num_clusters(parseInt(_)),
+                      _.msgNode.kmeans().set_name(_),
+                      _.msgNode.kmeans().set_generate_clusters(_),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.MaskedHeadNode, _.Keras),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  toolTipContent: (0, _._)(
+                    `#SteamLearn_Config_Node_MaskedHead_Input_${_}`,
+                  ),
+                  direction: "top",
+                },
+                _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_MaskedHead"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+          _.useEffect(() => {
+            _(_.msgNode.comment());
+          }, [_]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_MaskedHead"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_MaskedHead"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27803,7 +27853,7 @@
               className: (0, _._)(_.FlowNode, _.MaxPooling1DNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -27864,7 +27914,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -27961,11 +28011,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.max_pooling_1d().pool_size().toString(),
             ),
@@ -28029,7 +28076,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -28102,7 +28149,7 @@
                   onClick: () => {
                     _.msgNode.max_pooling_1d().set_pool_size(parseInt(_)),
                       _.msgNode.max_pooling_1d().set_strides(parseInt(_)),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -28120,22 +28167,18 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlowNode, _.FlattenNode, _.Keras),
+              className: (0, _._)(_.FlowNode, _.NamedInferenceNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -28174,7 +28217,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_Flatten"),
+                (0, _._)("#SteamLearn_Config_Node_Title_NamedInference"),
               ),
               _.createElement(
                 "div",
@@ -28196,7 +28239,271 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_NamedInference_Name"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.named_inference().name(),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.named_inference().name());
+          _.useEffect(() => {
+            _(_.msgNode.comment()), _(_.msgNode.named_inference().name());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_DenseStack"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_DenseStack"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_NamedInference_Name"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.named_inference().set_name(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.NormalizeNode, _.Preprocessing),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Normalize"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -28253,11 +28560,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -28273,13 +28577,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_Flatten"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Normalize"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Flatten"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Normalize"),
               ),
             ),
             _.createElement(
@@ -28313,13 +28617,10 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
             ),
             _.createElement(
               "div",
@@ -28330,7 +28631,9 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
+                    _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
                   },
                 },
                 (0, _._)("#SteamLearn_Confirm"),
@@ -28346,25 +28649,19 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
+            _ = _.connectors().filter((_) => !_.is_input_connector()),
+            _ = _.onehot().compact_table()?.length > 0;
           return _.createElement(
             "div",
             {
-              className: (0, _._)(
-                _.FlowNode,
-                _.GlobalMaxPooling1DNode,
-                _.Keras,
-              ),
+              className: (0, _._)(_.FlowNode, _.OnehotNode, _.Preprocessing),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -28403,7 +28700,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_GlobalMaxPooling1D"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Onehot"),
               ),
               _.createElement(
                 "div",
@@ -28425,7 +28722,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -28452,6 +28749,48 @@
                     },
                     _.comment(),
                   ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Onehot_Width"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _ ? _.onehot().compact_table() : _.onehot().width(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.onehot().multi_hot()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
+                  ),
+                ),
               ),
             ),
             _.map((_, _) => {
@@ -28482,14 +28821,23 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(
+              _.msgNode.onehot().compact_table().length > 0
+                ? _.msgNode.onehot().compact_table()
+                : _.msgNode.onehot().width().toString(),
+            ),
+            [_, _] = _.useState(_.msgNode.onehot().multi_hot());
           _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_]);
+            _(_.msgNode.comment()),
+              _(
+                _.msgNode.onehot().compact_table().length > 0
+                  ? _.msgNode.onehot().compact_table()
+                  : _.msgNode.onehot().width().toString(),
+              ),
+              _(_.msgNode.onehot().multi_hot());
+          }, [_.bVisible, _.msgNode]);
           return _.createElement(
             _._,
             {
@@ -28502,13 +28850,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_GlobalMaxPooling1D"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Onehot"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_GlobalMaxPooling1D"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Onehot"),
               ),
             ),
             _.createElement(
@@ -28542,9 +28890,81 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Onehot_Width"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Onehot_WidthDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 8096) || _(_, _),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHotDesc"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editmultihot",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editmultihot",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Onehot_MultiHot"),
+                  ),
+                ),
               ),
               _.createElement("div", {
                 className: _.Separator,
@@ -28559,7 +28979,18 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
+                    const _ = _(_, 1, 8096),
+                      _ = _(_, _);
+                    _
+                      ? (_.msgNode.onehot().set_width(parseInt(_)),
+                        _.msgNode.onehot().set_compact_table(""))
+                      : _ &&
+                        (_.msgNode.onehot().set_compact_table(_),
+                        _.msgNode.onehot().set_width(0)),
+                      _.msgNode.onehot().set_multi_hot(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
                   },
                 },
                 (0, _._)("#SteamLearn_Confirm"),
@@ -28575,25 +29006,18 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
-              className: (0, _._)(
-                _.FlowNode,
-                _.GlobalAvgPooling1DNode,
-                _.Keras,
-              ),
+              className: (0, _._)(_.FlowNode, _.Reshape2DNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -28632,7 +29056,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_GlobalAvgPooling1D"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Reshape2D"),
               ),
               _.createElement(
                 "div",
@@ -28654,7 +29078,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -28681,6 +29105,26 @@
                     },
                     _.comment(),
                   ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Reshape2D_Dimension"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.reshape_2d().dimension(),
+                  ),
+                ),
               ),
             ),
             _.map((_, _) => {
@@ -28711,14 +29155,15 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(
+              _.msgNode.reshape_2d().dimension()?.toString() || "1",
+            );
           _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_]);
+            _(_.msgNode.comment()),
+              _(_.msgNode.reshape_2d().dimension().toString());
+          }, [_.bVisible, _.msgNode]);
           return _.createElement(
             _._,
             {
@@ -28731,13 +29176,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_GlobalAvgPooling1D"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Reshape2D"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_GlobalAvgPooling1D"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Reshape2D"),
               ),
             ),
             _.createElement(
@@ -28771,7 +29216,36 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Reshape2D_Dimension"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Reshape2D_DimensionDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
                   fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, void 0),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -28788,7 +29262,10 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.reshape_2d().set_dimension(parseInt(_)),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
                   },
                 },
                 (0, _._)("#SteamLearn_Confirm"),
@@ -28804,193 +29281,119 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.TransformerNode, _.Keras),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
+            _ = (0, _._)(),
+            _ = _.data.msgNode
+              .connectors()
+              .filter((_) => _.is_input_connector()),
+            _ = _.data.msgNode
+              .connectors()
+              .filter((_) => !_.is_input_connector());
+          return (
+            _.useEffect(() => {
+              setTimeout(() => {
+                for (const _ of _.project_nodes())
+                  8 == _.type() && _(_(_.node_id()));
+              }, 0.1);
+            }, [_, _]),
             _.createElement(
               "div",
               {
-                className: _.Title,
+                className: (0, _._)(_.FlowNode, _.RowExtractNode, _.Keras),
               },
+              _.createElement(_, {
+                bVisible: __webpack_require__,
+                fnSetPopupVisible: _,
+                msgNode: _,
+              }),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
               _.createElement(
                 "div",
                 {
-                  className: _.TitleText,
+                  className: _.Title,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_Transformer"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.TitleText,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Title_RowExtract"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeID,
+                  },
+                  _.node_id(),
+                ),
+                _.createElement("div", {
+                  className: _.EditGear,
+                  onClick: () => _(!0),
+                }),
+                _.createElement("div", {
+                  className: _.Delete,
+                  onClick: () =>
+                    (0, _._)(
+                      _.createElement(_._, {
+                        strTitle: (0, _._)(
+                          "#SteamLearn_Config_Node_Delete_Node",
+                        ),
+                        strDescription: (0, _._)(
+                          "#SteamLearn_Config_Node_Delete_NodeDetails",
+                        ),
+                        onOK: () => _(_, _.node_id()),
+                      }),
+                      window,
+                    ),
+                }),
               ),
               _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
+                className: _.TitleUnderBar,
               }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
               _.createElement(
                 "div",
                 {
-                  className: _.CenterSection,
+                  className: _.Body,
                 },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
                 _.createElement(
                   "div",
                   {
-                    className: _.LabelValue,
+                    className: _.CenterSection,
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeads"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.transformer().num_heads(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
+                  _.comment().length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Comment,
+                      },
+                      _.comment(),
                     ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.transformer().feedforward_size(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    `${_.transformer().dropout_pct()}%`,
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_Transformer_InternalBlocks",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    `${_.transformer().num_internal_blocks()}`,
-                  ),
-                ),
-                0 != _.transformer().regularization() &&
                   _.createElement(
                     "div",
                     {
@@ -29001,761 +29404,183 @@
                       {
                         className: _.Label,
                       },
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_DenseStack_Regularization",
-                      ),
+                      (0, _._)("#SteamLearn_Config_Node_RowExtract_Row"),
                     ),
                     _.createElement(
                       "div",
                       {
                         className: _.Value,
                       },
-                      _(_.transformer().regularization()),
-                    ),
-                  ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.transformer().num_heads().toString()),
-            [_, _] = _.useState(
-              _.msgNode.transformer().feedforward_size()?.toString() || "1024",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.transformer().dropout_pct()?.toString() || "30",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.transformer().num_internal_blocks()?.toString() || "2",
-            ),
-            [_, _] = _.useState(_.msgNode.transformer().regularization());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.transformer().num_heads().toString()),
-              _(
-                _.msgNode.transformer().feedforward_size()?.toString() ||
-                  "1024",
-              ),
-              _(_.msgNode.transformer().dropout_pct()?.toString() || "30"),
-              _(
-                _.msgNode.transformer().num_internal_blocks()?.toString() ||
-                  "2",
-              ),
-              _(_.msgNode.transformer().regularization());
-          }, [_]);
-          let _ = [
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_None",
-              ),
-              value: 0,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_L1",
-              ),
-              value: 1,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_L2",
-              ),
-              value: 2,
-            },
-          ];
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Transformer"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Transformer"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeads"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeadsDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 20),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Transformer_FeedforwardSizeDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 16, 10240),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Transformer_DropoutPctDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 99),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Transformer_InternalBlocks",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_Transformer_InternalBlocksDesc",
-                  ),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 16),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Option,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OptionTitle,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_DenseStack_Regularization"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.OptionDesc,
-                  },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_DenseStack_RegularizationDesc",
-                  ),
-                ),
-                _.createElement(
-                  "select",
-                  {
-                    className: _.InputSelect,
-                    value: _,
-                    onChange: (_) => _(parseInt(_.target.value)),
-                  },
-                  _.map((_) =>
-                    _.createElement(
-                      "option",
-                      {
-                        key: _.value,
-                        value: _.value,
-                      },
-                      _.label,
+                      _.row_extract().row(),
                     ),
                   ),
                 ),
               ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.transformer().set_num_heads(parseInt(_)),
-                      _.msgNode.transformer().set_feedforward_size(parseInt(_)),
-                      _.msgNode.transformer().set_dropout_pct(parseInt(_)),
-                      _.msgNode
-                        .transformer()
-                        .set_num_internal_blocks(parseInt(_)),
-                      _.msgNode.transformer().set_regularization(_),
-                      _.msgNode.set_comment(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return _.createElement(
+                  _._,
+                  {
+                    key: _,
+                    type: "source",
+                    position: _._.Bottom,
+                    _: _,
+                    style: {
+                      left: _,
+                    },
                   },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ConnectorID,
+                    },
+                    _.connector_id(),
+                  ),
+                );
+              }),
+            )
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.TimeDistributedDenseNode,
-                _.Keras,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_TimeDistributedDense"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Dense_Width"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.time_distributed_dense().width(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _(_.time_distributed_dense().activation()),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _ } = _(),
+            _ = _.msgNode
+              .connectors()
+              .filter((_) => _.is_input_connector()).length,
+            _ = _.msgNode
+              .connectors()
+              .filter((_) => !_.is_input_connector()).length,
             [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
-              _.msgNode.time_distributed_dense().width().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.time_distributed_dense().activation(),
+              _.msgNode.row_extract().row()?.toString() || "0",
             );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.time_distributed_dense().width().toString()),
-              _(_.msgNode.time_distributed_dense().activation());
-          }, [_]);
-          let _ = [
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_RELU"),
-              value: 1,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_ELU"),
-              value: 2,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_TANH"),
-              value: 3,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Activation_SIGMOID",
-              ),
-              value: 4,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Activation_LINEAR",
-              ),
-              value: 5,
-            },
-          ];
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
+          return (
+            _.useEffect(() => {
+              _(_.msgNode.comment()),
+                _(_.msgNode.row_extract().row()?.toString() || "0");
+            }, [_.bVisible, _.msgNode, _, _]),
             _.createElement(
-              "div",
+              _._,
               {
-                className: _.NodeHeader,
+                active: _.bVisible,
+                onDismiss: () => _.fnSetPopupVisible(!1),
+                modalClassName: "NodeEditDialog",
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_TimeDistributedDense"),
               _.createElement(
                 "div",
                 {
-                  className: _.SubHeader,
+                  className: _.NodeHeader,
                 },
-                (0, _._)(
-                  "#SteamLearn_Config_Node_Tooltip_TimeDistributedDense",
+                (0, _._)("#SteamLearn_Config_Node_Title_RowExtract"),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SubHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Tooltip_RowExtract"),
                 ),
               ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
               _.createElement(
                 "div",
                 {
-                  className: _.NodeOptionBlock,
+                  className: _.NodeBody,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
+                _.createElement("div", {
+                  className: _.Separator,
                 }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
                 _.createElement(
                   "div",
                   {
-                    className: _.NodeOptionHeader,
+                    className: _.NodeOptionBlock,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Dense_Width"),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Comment"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                  ),
+                  _.createElement(_, {
+                    isText: !0,
+                    dontUpdateProject: !0,
+                    width: 200,
+                    fnGetInitialValue: () => _,
+                    fnSetValue: (_) => _(_),
+                  }),
                 ),
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
                 _.createElement(
                   "div",
                   {
-                    className: _.NodeOptionDesc,
+                    className: _.NodeOptionBlock,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Dense_Width"),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_RowExtract_Row"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_RowExtract_RowDesc"),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_),
+                    fnSetValue: (_) => _(_),
+                  }),
                 ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, 10240),
-                  fnSetValue: (_) => _(_),
+                _.createElement("div", {
+                  className: _.Separator,
                 }),
               ),
               _.createElement(
                 "div",
                 {
-                  className: _.Option,
+                  className: _.Buttons,
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   {
-                    className: _.OptionTitle,
+                    onClick: () => {
+                      _.msgNode.row_extract().set_row(parseInt(_)),
+                        _.msgNode.set_comment(_),
+                        _(_),
+                        _.fnSetPopupVisible(!1);
+                    },
                   },
-                  (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
+                  (0, _._)("#SteamLearn_Confirm"),
                 ),
                 _.createElement(
-                  "div",
+                  _._,
                   {
-                    className: _.OptionDesc,
+                    onClick: () => _.fnSetPopupVisible(!1),
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
+                  (0, _._)("#SteamLearn_Cancel"),
                 ),
-                _.createElement(
-                  "select",
-                  {
-                    className: _.InputSelect,
-                    value: _,
-                    onChange: (_) => _(parseInt(_.target.value)),
-                  },
-                  _.map((_) =>
-                    _.createElement(
-                      "option",
-                      {
-                        key: _.value,
-                        value: _.value,
-                      },
-                      _.label,
-                    ),
-                  ),
-                ),
-                1 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_DenseStack_ActivationDescSub1",
-                    ),
-                  ),
-                2 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_DenseStack_ActivationDescSub2",
-                    ),
-                  ),
-                3 == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.OptionDescSub,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_DenseStack_ActivationDescSub3",
-                    ),
-                  ),
               ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.time_distributed_dense().set_width(parseInt(_)),
-                      _.msgNode.time_distributed_dense().set_activation(_),
-                      _.msgNode.set_comment(_),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
+            )
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -29769,7 +29594,7 @@
               ),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -29830,7 +29655,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -29999,11 +29824,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.sequence_split().head_split_chance().toString(),
             ),
@@ -30079,7 +29901,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -30213,7 +30035,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(__webpack_require__, _),
+                  fnValidateValue: (_) => _(_, _),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -30245,7 +30067,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(__webpack_require__, _),
+                  fnValidateValue: (_) => _(_, _),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -30259,7 +30081,7 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_),
+                    _.msgNode.set_comment(__webpack_require__),
                       _.msgNode
                         .sequence_split()
                         .set_head_split_chance(parseInt(_)),
@@ -30288,27 +30110,22 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlowNode, _.WeightedAverageNode, _.Keras),
+              className: (0, _._)(_.FlowNode, _.ShuffleNode, _.Preprocessing),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
             _.map((_, _) => {
-              if (1 == _ && !_.weighted_average().use_weights()) return null;
               const _ = Math.floor(
                   ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
                 ),
@@ -30343,7 +30160,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_WeightedAverage"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Shuffle"),
               ),
               _.createElement(
                 "div",
@@ -30365,7 +30182,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -30402,14 +30219,16 @@
                     {
                       className: _.Label,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_WeightedAverage_Axis"),
+                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                   ),
                   _.createElement(
                     "div",
                     {
                       className: _.Value,
                     },
-                    _.weighted_average().axis(),
+                    _.shuffle().exclude_zeroes()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
                   ),
                 ),
               ),
@@ -30442,18 +30261,9 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.weighted_average().axis().toString()),
-            [_, _] = _.useState(_.msgNode.weighted_average().use_weights());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.weighted_average().axis().toString()),
-              _(_.msgNode.weighted_average().use_weights());
-          }, [_.bVisible, _.msgNode]);
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.shuffle().exclude_zeroes());
           return _.createElement(
             _._,
             {
@@ -30466,13 +30276,317 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_WeightedAverage"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Shuffle"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_WeightedAverage"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Shuffle"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editflatten",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editflatten",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.shuffle().set_exclude_zeroes(_),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = (0, _._)();
+          _.useEffect(() => {
+            setTimeout(() => {
+              for (const _ of _.project_nodes())
+                10 == _.type() && _(_(_.node_id()));
+            }, 0.1);
+          }, [_, _]);
+          const _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.SyncedShuffleNode,
+                _.Preprocessing,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.synced_shuffle().exclude_zeroes()
+                      ? (0, _._)("#SteamLearn_Yes")
+                      : (0, _._)("#SteamLearn_No"),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            _ = _.msgNode
+              .connectors()
+              .filter((_) => _.is_input_connector()).length,
+            [_, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(__webpack_require__.toString()),
+            [_, _] = _.useState(_.msgNode.synced_shuffle().exclude_zeroes());
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(__webpack_require__.toString()),
+              _(_.msgNode.synced_shuffle().exclude_zeroes());
+          }, [_.bVisible, _.msgNode, _]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_SyncedShuffle"),
               ),
             ),
             _.createElement(
@@ -30523,23 +30637,25 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_WeightedAverage_Axis"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_Count"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_WeightedAverage_AxisDesc"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_CountDesc"),
                 ),
                 _.createElement(_, {
                   dontUpdateProject: !0,
-                  isText: !0,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 0, void 0),
+                  fnValidateValue: (_) => _(_, 1, 10),
                   fnSetValue: (_) => _(_),
                 }),
               ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
               _.createElement(
                 "div",
                 {
@@ -30550,18 +30666,14 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
-                  ),
+                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)(
-                    "#SteamLearn_Config_Node_WeightedAverage_UseWeightsDesc",
-                  ),
+                  (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc"),
                 ),
                 _.createElement(
                   "div",
@@ -30570,18 +30682,16 @@
                   },
                   _.createElement("input", {
                     type: "checkbox",
-                    _: "useweights",
+                    _: "editflatten",
                     checked: _,
                     onChange: () => _(!_),
                   }),
                   _.createElement(
                     "label",
                     {
-                      htmlFor: "useweights",
+                      htmlFor: "editflatten",
                     },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
-                    ),
+                    (0, _._)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                   ),
                 ),
               ),
@@ -30598,9 +30708,60 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.weighted_average().set_axis(parseInt(_)),
-                      _.msgNode.weighted_average().set_use_weights(_),
-                      _.msgNode.set_comment(_),
+                    const _ = parseInt(_),
+                      _ = _;
+                    if (_ > _) {
+                      const _ = _ - _,
+                        _ = _,
+                        _ = _(_, _ + _);
+                      for (let _ = 0; _ < _; _++) {
+                        let _ = new _();
+                        __webpack_require__.set_connector_id(_[_]),
+                          __webpack_require__.set_is_input_connector(!0),
+                          _.msgNode.add_connectors(_);
+                      }
+                      for (let _ = 0; _ < _; _++) {
+                        let _ = new _();
+                        __webpack_require__.set_connector_id(_[_ + _]),
+                          __webpack_require__.set_is_input_connector(!1),
+                          _.msgNode.add_connectors(_);
+                      }
+                    } else if (_ < _) {
+                      let _ = [];
+                      __webpack_require__.push(
+                        ..._.msgNode
+                          .connectors()
+                          .filter((_) => _.is_input_connector())
+                          .slice(_)
+                          .map((_) => _.connector_id()),
+                      ),
+                        __webpack_require__.push(
+                          ..._.msgNode
+                            .connectors()
+                            .filter((_) => !_.is_input_connector())
+                            .slice(_)
+                            .map((_) => _.connector_id()),
+                        );
+                      for (let _ of _.project_nodes())
+                        for (let _ of _.connectors())
+                          _.set_linked_connector_ids(
+                            _.linked_connector_ids().filter(
+                              (_) => !__webpack_require__.includes(_),
+                            ),
+                          );
+                      _.msgNode.set_connectors([
+                        ..._.msgNode
+                          .connectors()
+                          .filter((_) => _.is_input_connector())
+                          .slice(0, _),
+                        ..._.msgNode
+                          .connectors()
+                          .filter((_) => !_.is_input_connector())
+                          .slice(0, _),
+                      ]);
+                    }
+                    _.msgNode.set_comment(_),
+                      _.msgNode.synced_shuffle().set_exclude_zeroes(_),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -30618,12 +30779,911 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _(_.text_vectorization().other_project_id()),
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlowNode,
+                _.TextVectorizationNode,
+                _.Preprocessing,
+              ),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_TextVectorization"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.text_vectorization().vocabulary_size(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Standardize",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    0 == _.text_vectorization().standardize() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
+                      ),
+                    1 == _.text_vectorization().standardize() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Standardize_1",
+                      ),
+                    2 == _.text_vectorization().standardize() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Standardize_2",
+                      ),
+                    3 == _.text_vectorization().standardize() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Standardize_3",
+                      ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Output",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    0 == _.text_vectorization().output() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Output_0",
+                      ),
+                    1 == _.text_vectorization().output() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Output_1",
+                      ),
+                    2 == _.text_vectorization().output() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Output_2",
+                      ),
+                    3 == _.text_vectorization().output() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Output_3",
+                      ),
+                  ),
+                ),
+                0 == _.text_vectorization().output() &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_SeqLen",
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _.text_vectorization().sequence_length(),
+                    ),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_TextVectorization_Split"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    0 == _.text_vectorization().split() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Split_0",
+                      ),
+                    1 == _.text_vectorization().split() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Split_1",
+                      ),
+                    2 == _.text_vectorization().split() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Split_2",
+                      ),
+                    3 == _.text_vectorization().split() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorization_Split_3",
+                      ),
+                  ),
+                ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_TextVectorizationOtherProjectName",
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _,
+                    ),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_NGrams",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    0 == _.text_vectorization().ngrams()
+                      ? "None"
+                      : _.text_vectorization().ngrams(),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(
+              _.msgNode.text_vectorization().vocabulary_size().toString(),
+            ),
+            [_, _] = _.useState(_.msgNode.text_vectorization().standardize()),
+            [_, _] = _.useState(_.msgNode.text_vectorization().output()),
+            [_, _] = _.useState(
+              _.msgNode.text_vectorization().vocabulary_size().toString(),
+            ),
+            [_, _] = _.useState(
+              _.msgNode.text_vectorization().other_project_id()?.toString() ||
+                "0",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.text_vectorization().other_fetch_id()?.toString() ||
+                "0",
+            ),
+            [_, _] = _.useState(_.msgNode.text_vectorization().split()),
+            [_, _] = _.useState(
+              _.msgNode.text_vectorization().ngrams().toString(),
+            );
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.text_vectorization().vocabulary_size().toString()),
+              _(_.msgNode.text_vectorization().standardize()),
+              _(_.msgNode.text_vectorization().output()),
+              _(_.msgNode.text_vectorization().sequence_length().toString()),
+              _(_.msgNode.text_vectorization().split()),
+              _(_.msgNode.text_vectorization().ngrams().toString()),
+              _(
+                _.msgNode.text_vectorization().other_project_id()?.toString() ||
+                  "0",
+              ),
+              _(
+                _.msgNode.text_vectorization().other_fetch_id()?.toString() ||
+                  "0",
+              );
+          }, [_.bVisible, _.msgNode]);
+          const _ = [
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
+                ),
+                value: 0,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Standardize_1",
+                ),
+                value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Standardize_2",
+                ),
+                value: 2,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Standardize_3",
+                ),
+                value: 3,
+              },
+            ],
+            _ = [
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Output_0",
+                ),
+                value: 0,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Output_1",
+                ),
+                value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Output_2",
+                ),
+                value: 2,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Output_3",
+                ),
+                value: 3,
+              },
+            ],
+            _ = [
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Split_0",
+                ),
+                value: 0,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Split_1",
+                ),
+                value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Split_2",
+                ),
+                value: 2,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_TextVectorization_Split_3",
+                ),
+                value: 3,
+              },
+            ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_TextVectorization"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_TextVectorization"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_VocabularySizeDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 1e6),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_Standardize",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_StandardizeDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+                0 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc0",
+                    ),
+                  ),
+                1 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc1",
+                    ),
+                  ),
+                2 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc2",
+                    ),
+                  ),
+                3 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc3",
+                    ),
+                  ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_Output"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_OutputDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+                0 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc0",
+                    ),
+                  ),
+                1 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc1",
+                    ),
+                  ),
+                2 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc2",
+                    ),
+                  ),
+                3 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Output_Desc3",
+                    ),
+                  ),
+              ),
+              0 == _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_SeqLen",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_SeqLenDesc",
+                    ),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    isText: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) => _(_, 1, 1e4),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_Split"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_SplitDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+                0 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc0",
+                    ),
+                  ),
+                1 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc1",
+                    ),
+                  ),
+                2 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc2",
+                    ),
+                  ),
+                3 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_TextVectorization_Split_Desc3",
+                    ),
+                  ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorizationOtherProjectID",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorizationOtherProjectIDDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 0),
+                  fnSetValue: (_) => _(_),
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorizationOtherFetchIDDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 0),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_TextVectorization_NGrams"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_TextVectorization_NGramsDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 0, 100),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode
+                      .text_vectorization()
+                      .set_vocabulary_size(parseInt(_)),
+                      _.msgNode.text_vectorization().set_standardize(_),
+                      _.msgNode.text_vectorization().set_output(_),
+                      _.msgNode
+                        .text_vectorization()
+                        .set_sequence_length(parseInt(_)),
+                      _.msgNode.text_vectorization().set_split(_),
+                      _.msgNode.text_vectorization().set_ngrams(parseInt(_)),
+                      _.msgNode
+                        .text_vectorization()
+                        .set_other_project_id(parseInt(_)),
+                      _.msgNode
+                        .text_vectorization()
+                        .set_other_fetch_id(parseInt(_)),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -30633,7 +31693,7 @@
               className: (0, _._)(_.FlowNode, _.TokenMaskNode, _.Preprocessing),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -30694,7 +31754,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -30841,11 +31901,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_mask().mask_pct().toString() || "10",
             ),
@@ -30917,7 +31974,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -31053,7 +32110,7 @@
                       _.msgNode.token_mask().set_mask_count_limit(parseInt(_)),
                       _.msgNode.token_mask().set_random_pct(parseInt(_)),
                       _.msgNode.token_mask().set_keep_pct(parseInt(_)),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -31071,12 +32128,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -31086,7 +32139,7 @@
               className: (0, _._)(_.FlowNode, _.TokenTransformerNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -31157,7 +32210,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -31392,11 +32445,8 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_transformer().compact_table()?.length > 0
                 ? _.msgNode.token_transformer().compact_table()
@@ -31501,7 +32551,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -31536,7 +32586,7 @@
                   dontUpdateProject: !0,
                   width: 200,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1) || _(__webpack_require__, _),
+                  fnValidateValue: (_) => _(_, 1) || _(_, _),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -31790,7 +32840,7 @@
                 {
                   onClick: () => {
                     const _ = _(_, 1),
-                      _ = _(__webpack_require__, _);
+                      _ = _(_, _);
                     _
                       ? (_.msgNode
                           .token_transformer()
@@ -31820,7 +32870,7 @@
                         .token_transformer()
                         .set_transformer_dropout_pct(parseInt(_)),
                       _.msgNode.token_transformer().set_is_causal(_),
-                      _.msgNode.set_comment(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -31835,1587 +32885,51 @@
                 (0, _._)("#SteamLearn_Cancel"),
               ),
             ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.MaskedHeadNode, _.Keras),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  toolTipContent: (0, _._)(
-                    `#SteamLearn_Config_Node_MaskedHead_Input_${_}`,
-                  ),
-                  direction: "top",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_MaskedHead"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
-          _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_MaskedHead"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_MaskedHead"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = (0, _._)(),
-            _ = _(_.data.msgNode.external_model().project_id()),
-            _ = _.data.msgNode
-              .connectors()
-              .filter((_) => _.is_input_connector()),
-            _ = _.data.msgNode
-              .connectors()
-              .filter((_) => !_.is_input_connector());
-          return (
-            _.useEffect(() => {
-              setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
-                  8 == _.type() && _(_(_.node_id()));
-              }, 0.1);
-            }, [__webpack_require__, _]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.FlowNode, _.ExternalModelNode, _.Keras),
-              },
-              _.createElement(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                );
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TitleText,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Title_ExternalModel"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeID,
-                  },
-                  _.node_id(),
-                ),
-                _.createElement("div", {
-                  className: _.EditGear,
-                  onClick: () => _(!0),
-                }),
-                _.createElement("div", {
-                  className: _.Delete,
-                  onClick: () =>
-                    (0, _._)(
-                      _.createElement(_._, {
-                        strTitle: (0, _._)(
-                          "#SteamLearn_Config_Node_Delete_Node",
-                        ),
-                        strDescription: (0, _._)(
-                          "#SteamLearn_Config_Node_Delete_NodeDetails",
-                        ),
-                        onOK: () => _(_, __webpack_require__, _.node_id()),
-                      }),
-                      window,
-                    ),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.TitleUnderBar,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Body,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CenterSection,
-                  },
-                  _.comment().length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Comment,
-                      },
-                      _.comment(),
-                    ),
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LabelValue,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Label,
-                        },
-                        (0, _._)(
-                          "#SteamLearn_Config_Node_ExternalModel_ProjectName",
-                        ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Value,
-                        },
-                        _,
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_ExternalModel_ProjectID",
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.external_model().project_id(),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_TrainID"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.external_model().train_id(),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Name"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.external_model().named_inference_name(),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LabelValue,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Label,
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Value,
-                      },
-                      _.external_model().freeze_weights()
-                        ? (0, _._)("#SteamLearn_Yes")
-                        : (0, _._)("#SteamLearn_No"),
-                    ),
-                  ),
-                  _.external_model().freeze_weights() &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.LabelValue,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Label,
-                        },
-                        (0, _._)(
-                          "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
-                        ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.Value,
-                        },
-                        _.external_model().unfrozen_layers(),
-                      ),
-                    ),
-                ),
-              ),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                );
-              }),
-            )
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            _ = _.msgNode
-              .connectors()
-              .filter((_) => _.is_input_connector()).length,
-            _ = _.msgNode
-              .connectors()
-              .filter((_) => !_.is_input_connector()).length,
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.toString()),
-            [_, _] = _.useState(_.toString()),
-            [_, _] = _.useState(
-              _.msgNode.external_model().project_id()?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.external_model().train_id()?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.external_model().named_inference_name() || "",
-            ),
-            [_, _] = _.useState(_.msgNode.external_model().freeze_weights()),
-            [_, _] = _.useState(
-              _.msgNode.external_model().unfrozen_layers()?.toString() || "0",
-            );
-          return (
-            _.useEffect(() => {
-              _(_.msgNode.comment()),
-                _(_.msgNode.external_model().project_id().toString() || "0"),
-                _(_.msgNode.external_model().train_id().toString() || "0"),
-                _(_.msgNode.external_model().named_inference_name() || ""),
-                _(_.toString()),
-                _(_.msgNode.external_model().freeze_weights()),
-                _(
-                  _.msgNode.external_model().unfrozen_layers()?.toString() ||
-                    "0",
-                );
-            }, [_.bVisible, _.msgNode, _, _]),
-            _.createElement(
-              _._,
-              {
-                active: _.bVisible,
-                onDismiss: () => _.fnSetPopupVisible(!1),
-                modalClassName: "NodeEditDialog",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_ExternalModel"),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Tooltip_ExternalModel"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeBody,
-                },
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Comment"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                  ),
-                  _.createElement(_, {
-                    isText: !0,
-                    dontUpdateProject: !0,
-                    width: 200,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_NumInputs"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_NumInputsDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 1, 8),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_NumOutputs",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_NumOutputsDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 1, 8),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_ProjectID"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_ProjectIDDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_TrainID"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_TrainIDDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_Name"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_NameDesc"),
-                  ),
-                  _.createElement(_, {
-                    width: 200,
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_FreezeDesc",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CheckboxWithLabel,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      _: "editfreeze",
-                      checked: _,
-                      onChange: () => _(!_),
-                    }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "editfreeze",
-                      },
-                      (0, _._)("#SteamLearn_Config_Node_ExternalModel_Freeze"),
-                    ),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayersDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    width: 200,
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Buttons,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      const _ = parseInt(_),
-                        _ = parseInt(_);
-                      if (_ > _) {
-                        const _ = _ - _,
-                          _ = _(__webpack_require__, _);
-                        for (let _ = 0; _ < _; _++) {
-                          let _ = new _();
-                          _.set_connector_id(_[_]),
-                            _.set_is_input_connector(!0),
-                            _.msgNode.add_connectors(_);
-                        }
-                      } else if (_ < _) {
-                        const _ = _.msgNode
-                          .connectors()
-                          .filter((_) => _.is_input_connector())
-                          .slice(_)
-                          .map((_) => _.connector_id());
-                        for (let _ of __webpack_require__.project_nodes())
-                          for (let _ of _.connectors())
-                            __webpack_require__.set_linked_connector_ids(
-                              __webpack_require__
-                                .linked_connector_ids()
-                                .filter((_) => !_.includes(_)),
-                            );
-                        _.msgNode.set_connectors([
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => !_.is_input_connector()),
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => _.is_input_connector())
-                            .slice(0, _),
-                        ]);
-                      }
-                      if ((_(_), _ > _)) {
-                        const _ = _ - _,
-                          _ = _(_, _);
-                        for (let _ = 0; _ < _; _++) {
-                          let _ = new _();
-                          _.set_connector_id(_[_]),
-                            _.set_is_input_connector(!1),
-                            _.msgNode.add_connectors(_);
-                        }
-                      } else if (_ < _) {
-                        const _ = _.msgNode
-                          .connectors()
-                          .filter((_) => !_.is_input_connector())
-                          .slice(_)
-                          .map((_) => _.connector_id());
-                        for (let _ of __webpack_require__.project_nodes())
-                          for (let _ of _.connectors())
-                            __webpack_require__.set_linked_connector_ids(
-                              __webpack_require__
-                                .linked_connector_ids()
-                                .filter((_) => !_.includes(_)),
-                            );
-                        _.msgNode.set_connectors([
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => !_.is_input_connector())
-                            .slice(0, _),
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => _.is_input_connector()),
-                        ]);
-                      }
-                      _.msgNode.external_model().set_project_id(parseInt(_)),
-                        _.msgNode.external_model().set_train_id(parseInt(_)),
-                        _.msgNode.external_model().set_named_inference_name(_),
-                        _.msgNode.external_model().set_freeze_weights(_),
-                        _.msgNode
-                          .external_model()
-                          .set_unfrozen_layers(parseInt(_)),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                  },
-                  (0, _._)("#SteamLearn_Confirm"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                  },
-                  (0, _._)("#SteamLearn_Cancel"),
-                ),
-              ),
-            )
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ =
-              ((0, _._)(),
-              _.data.msgNode
-                .connectors()
-                .filter((_) => _.is_input_connector())),
-            _ = _.data.msgNode
-              .connectors()
-              .filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.ExternalEmbeddingNode,
-                _.Preprocessing,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_ExternalEmbedding"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().project_id(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().fetch_id(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().train_id(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalEmbedding_Name"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().embedding_name(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTable",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().compact_table(),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.external_embedding().exclude_missing()
-                      ? (0, _._)("#SteamLearn_Yes")
-                      : (0, _._)("#SteamLearn_No"),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] =
-              (_.msgNode.connectors().filter((_) => _.is_input_connector())
-                .length,
-              _.msgNode.connectors().filter((_) => !_.is_input_connector())
-                .length,
-              _.useState(_.msgNode.comment())),
-            [_, _] = _.useState(
-              _.msgNode.external_embedding().project_id()?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.external_embedding().fetch_id()?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.external_embedding().train_id()?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.external_embedding().embedding_name() || "",
-            ),
-            [_, _] = _.useState(_.msgNode.external_embedding().compact_table()),
-            [_, _] = _.useState(
-              _.msgNode.external_embedding().exclude_missing(),
-            );
-          return (
-            _.useEffect(() => {
-              _(_.msgNode.comment()),
-                _(
-                  _.msgNode.external_embedding().project_id().toString() || "0",
-                ),
-                _(_.msgNode.external_embedding().train_id().toString() || "0"),
-                _(_.msgNode.external_embedding().embedding_name() || ""),
-                _(_.msgNode.external_embedding().compact_table()),
-                _(_.msgNode.external_embedding().exclude_missing());
-            }, [_.bVisible, _.msgNode]),
-            _.createElement(
-              _._,
-              {
-                active: _.bVisible,
-                onDismiss: () => _.fnSetPopupVisible(!1),
-                modalClassName: "NodeEditDialog",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_ExternalEmbedding"),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Tooltip_ExternalEmbedding"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeBody,
-                },
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Comment"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                  ),
-                  _.createElement(_, {
-                    isText: !0,
-                    dontUpdateProject: !0,
-                    width: 200,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ProjectIDDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_FetchIDDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainID",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_TrainIDDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_, 0, void 0),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_ExternalEmbedding_Name"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_NameDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    width: 200,
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTable",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_CompactTableDesc",
-                    ),
-                  ),
-                  _.createElement(_, {
-                    width: 200,
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissingDesc",
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.CheckboxWithLabel,
-                    },
-                    _.createElement("input", {
-                      type: "checkbox",
-                      _: "editexcludemissing",
-                      checked: _,
-                      onChange: () => _(!_),
-                    }),
-                    _.createElement(
-                      "label",
-                      {
-                        htmlFor: "editexcludemissing",
-                      },
-                      (0, _._)(
-                        "#SteamLearn_Config_Node_ExternalEmbedding_ExcludeMissing",
-                      ),
-                    ),
-                  ),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Buttons,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      _.msgNode
-                        .external_embedding()
-                        .set_project_id(parseInt(_)),
-                        _.msgNode
-                          .external_embedding()
-                          .set_fetch_id(parseInt(_)),
-                        _.msgNode
-                          .external_embedding()
-                          .set_train_id(parseInt(_)),
-                        _.msgNode.external_embedding().set_embedding_name(_),
-                        _.msgNode.external_embedding().set_compact_table(_),
-                        _.msgNode.external_embedding().set_exclude_missing(_),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                  },
-                  (0, _._)("#SteamLearn_Confirm"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                  },
-                  (0, _._)("#SteamLearn_Cancel"),
-                ),
-              ),
-            )
           );
         };
-      __webpack_require__("chunkid");
       const _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
+            _ = (0, _._)();
+          _.useEffect(() => {
+            setTimeout(() => {
+              for (const _ of _.project_nodes())
+                6 == _.type() && _(_(_.node_id()));
+            }, 0.1);
+          }, [_, _]);
+          const _ = Math.max(150, 40 + 22 * (_.length - 1));
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlowNode, _.Reshape2DNode, _.Keras),
+              className: (0, _._)(_.FlowNode, _.TrainNode, _.Trainer),
+              style: {
+                height: _,
+              },
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
             _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
+              const _ = _.train().uses_weight_mask() ? 2 : 1,
+                _ = _.length - _,
+                _ = _ >= _,
+                _ = _ ? _ - _ : _,
+                _ = _ ? _ : _,
+                _ = Math.floor(((_ + 1) / (_ + 1)) * (_ - 24)),
                 _ = _(_.connector_id());
               return _.createElement(
                 _._,
                 {
                   key: _,
                   type: "target",
-                  position: _._.Top,
+                  position: _ ? _._.Right : _._.Left,
                   _: _,
                   style: {
-                    left: _,
+                    top: _ + 24,
                   },
                 },
                 _.createElement(
@@ -33437,7 +32951,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_Reshape2D"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Train"),
               ),
               _.createElement(
                 "div",
@@ -33449,20 +32963,6 @@
               _.createElement("div", {
                 className: _.EditGear,
                 onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
               }),
             ),
             _.createElement("div", {
@@ -33476,16 +32976,35 @@
               _.createElement(
                 "div",
                 {
-                  className: _.CenterSection,
+                  className: (0, _._)(_.SideSection, _.Left),
                 },
-                _.comment().length > 0 &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SideInput,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Train_Input"),
+                ),
+                _.train().uses_weight_mask() &&
                   _.createElement(
                     "div",
                     {
-                      className: _.Comment,
+                      className: (0, _._)(_.SideSection, _.Left),
                     },
-                    _.comment(),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.SideInput,
+                      },
+                      (0, _._)("#SteamLearn_Config_Node_Train_WeightMask"),
+                    ),
                   ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
                 _.createElement(
                   "div",
                   {
@@ -33496,292 +33015,59 @@
                     {
                       className: _.Label,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_Reshape2D_Dimension"),
+                    (0, _._)("#SteamLearn_Config_Node_Train_Activation"),
                   ),
                   _.createElement(
                     "div",
                     {
                       className: _.Value,
                     },
-                    _.reshape_2d().dimension(),
+                    (function (_) {
+                      switch (_) {
+                        case 2:
+                          return "Sigmoid";
+                        case 1:
+                          return "Softmax";
+                        case 3:
+                          return "Linear";
+                      }
+                      return console.error("Invalid activation", _), "";
+                    })(_.train().activation()),
                   ),
                 ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
                 _.createElement(
                   "div",
                   {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.reshape_2d().dimension()?.toString() || "1",
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.reshape_2d().dimension().toString());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Reshape2D"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Reshape2D"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Reshape2D_Dimension"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Reshape2D_DimensionDesc"),
-                ),
-                _.createElement(_, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 1, void 0),
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_),
-                      _.msgNode.reshape_2d().set_dimension(parseInt(_)),
-                      _(_),
-                      _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = (0, _._)(),
-            _ = _.data.msgNode
-              .connectors()
-              .filter((_) => _.is_input_connector()),
-            _ = _.data.msgNode
-              .connectors()
-              .filter((_) => !_.is_input_connector());
-          return (
-            _.useEffect(() => {
-              setTimeout(() => {
-                for (const _ of __webpack_require__.project_nodes())
-                  8 == _.type() && _(_(_.node_id()));
-              }, 0.1);
-            }, [__webpack_require__, _]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.FlowNode, _.RowExtractNode, _.Keras),
-              },
-              _.createElement(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
+                    className: _.LabelValue,
                   },
                   _.createElement(
                     "div",
                     {
-                      className: _.ConnectorID,
+                      className: _.Label,
                     },
-                    _.connector_id(),
+                    (0, _._)("#SteamLearn_Config_Node_Train_Loss"),
                   ),
-                );
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.TitleText,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Title_RowExtract"),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    (function (_) {
+                      switch (_) {
+                        case 1:
+                          return "Binary Crossentropy";
+                        case 2:
+                          return "Categorical Crossentropy";
+                        case 3:
+                          return "Sparse Categorical Crossentropy";
+                        case 4:
+                          return "Regression";
+                      }
+                      return console.error("Invalid loss", _), "";
+                    })(_.train().loss()),
+                  ),
                 ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeID,
-                  },
-                  _.node_id(),
-                ),
-                _.createElement("div", {
-                  className: _.EditGear,
-                  onClick: () => _(!0),
-                }),
-                _.createElement("div", {
-                  className: _.Delete,
-                  onClick: () =>
-                    (0, _._)(
-                      _.createElement(_._, {
-                        strTitle: (0, _._)(
-                          "#SteamLearn_Config_Node_Delete_Node",
-                        ),
-                        strDescription: (0, _._)(
-                          "#SteamLearn_Config_Node_Delete_NodeDetails",
-                        ),
-                        onOK: () => _(_, __webpack_require__, _.node_id()),
-                      }),
-                      window,
-                    ),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.TitleUnderBar,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.Body,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CenterSection,
-                  },
-                  _.comment().length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.Comment,
-                      },
-                      _.comment(),
-                    ),
+                _.train().compact_table().length > 0 &&
                   _.createElement(
                     "div",
                     {
@@ -33792,665 +33078,121 @@
                       {
                         className: _.Label,
                       },
-                      (0, _._)("#SteamLearn_Config_Node_RowExtract_Row"),
+                      (0, _._)("#SteamLearn_Config_Node_Train_CompactTable"),
                     ),
                     _.createElement(
                       "div",
                       {
                         className: _.Value,
                       },
-                      _.row_extract().row(),
+                      _.train().compact_table(),
                     ),
                   ),
-                ),
-              ),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                );
-              }),
-            )
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            _ = _.msgNode
-              .connectors()
-              .filter((_) => _.is_input_connector()).length,
-            _ = _.msgNode
-              .connectors()
-              .filter((_) => !_.is_input_connector()).length,
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.row_extract().row()?.toString() || "0",
-            );
-          return (
-            _.useEffect(() => {
-              _(_.msgNode.comment()),
-                _(_.msgNode.row_extract().row()?.toString() || "0");
-            }, [_.bVisible, _.msgNode, _, _]),
-            _.createElement(
-              _._,
-              {
-                active: _.bVisible,
-                onDismiss: () => _.fnSetPopupVisible(!1),
-                modalClassName: "NodeEditDialog",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_RowExtract"),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Tooltip_RowExtract"),
-                ),
               ),
               _.createElement(
                 "div",
                 {
-                  className: _.NodeBody,
+                  className: (0, _._)(_.SideSection, _.Right),
                 },
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
+                (0, _._)(1, _.train().input_count()).map((_) =>
                   _.createElement(
                     "div",
                     {
-                      className: _.NodeOptionHeader,
+                      key: _,
+                      className: _.SideInput,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_Comment"),
+                    (0, _._)("#SteamLearn_Config_Node_Train_Label", _),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                  ),
-                  _.createElement(_, {
-                    isText: !0,
-                    dontUpdateProject: !0,
-                    width: 200,
-                    fnGetInitialValue: () => _,
-                    fnSetValue: (_) => _(_),
-                  }),
                 ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionBlock,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionHeader,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_RowExtract_Row"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.NodeOptionDesc,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_RowExtract_RowDesc"),
-                  ),
-                  _.createElement(_, {
-                    dontUpdateProject: !0,
-                    fnGetInitialValue: () => _,
-                    fnValidateValue: (_) => _(_),
-                    fnSetValue: (_) => _(_),
-                  }),
-                ),
-                _.createElement("div", {
-                  className: _.Separator,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Buttons,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      _.msgNode.row_extract().set_row(parseInt(_)),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                  },
-                  (0, _._)("#SteamLearn_Confirm"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                  },
-                  (0, _._)("#SteamLearn_Cancel"),
-                ),
-              ),
-            )
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlowNode, _.BertNode, _.Preprocessing),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_Bert"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
               ),
             ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "source",
-                  position: _._.Bottom,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(
+              _.msgNode.train().input_count().toString(),
+            ),
+            [_, _] = _.useState(_.msgNode.train().activation()),
+            [_, _] = _.useState(_.msgNode.train().loss()),
+            [_, _] = _.useState(_.msgNode.train().uses_weight_mask() || !1),
+            [_, _] = _.useState(_.msgNode.train().compact_table());
           _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_.bVisible, _.msgNode]);
-          return _.createElement(
-            _._,
-            {
-              active: _.bVisible,
-              onDismiss: () => _.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.NodeHeader,
-              },
-              (0, _._)("#SteamLearn_Config_Node_Title_Bert"),
-              _.createElement(
-                "div",
-                {
-                  className: _.SubHeader,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_Bert"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.NodeBody,
-              },
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeOptionBlock,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionHeader,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.NodeOptionDesc,
-                  },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                _.createElement(_, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => _,
-                  fnSetValue: (_) => _(_),
-                }),
-              ),
-              _.createElement("div", {
-                className: _.Separator,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => {
-                    _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, _._)("#SteamLearn_Confirm"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _.fnSetPopupVisible(!1),
-                },
-                (0, _._)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          let _ = "";
-          switch (_.bert_tokenizer().bert_model()) {
-            case 0:
-              _ = "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased";
-              break;
-            case 1:
-              _ = "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased";
-              break;
-            case 2:
-              _ = "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased";
-              break;
-            case 3:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEn";
-              break;
-            case 4:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased";
-              break;
-            case 5:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseMulti";
-          }
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FlowNode,
-                _.BertTokenizerNode,
-                _.Preprocessing,
-              ),
-            },
-            _.createElement(_, {
-              bVisible: _,
-              fnSetPopupVisible: _,
-              msgNode: _,
-            }),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  type: "target",
-                  position: _._.Top,
-                  _: _,
-                  style: {
-                    left: _,
-                  },
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ConnectorID,
-                  },
-                  _.connector_id(),
-                ),
-              );
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Title,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.TitleText,
-                },
-                (0, _._)("#SteamLearn_Config_Node_Title_BertTokenizer"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.NodeID,
-                },
-                _.node_id(),
-              ),
-              _.createElement("div", {
-                className: _.EditGear,
-                onClick: () => _(!0),
-              }),
-              _.createElement("div", {
-                className: _.Delete,
-                onClick: () =>
-                  (0, _._)(
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
-                      strDescription: (0, _._)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            _.createElement("div", {
-              className: _.TitleUnderBar,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Body,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.CenterSection,
-                },
-                _.comment().length > 0 &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Comment,
-                    },
-                    _.comment(),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    (0, _._)(_),
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.LabelValue,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Label,
-                    },
-                    (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Value,
-                    },
-                    _.bert_tokenizer().sequence_length(),
-                  ),
-                ),
-              ),
-            ),
-            _.map((_, _) => {
-              const _ = Math.floor(
-                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                ),
-                _ = _(_.connector_id());
-              return _.createElement(
-                _._,
-                {
-                  key: _,
-                  toolTipContent: (0, _._)(
-                    `#SteamLearn_Config_Node_Bert_Tokenizer_Output_${_}`,
-                  ),
-                  direction: "top",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    key: _,
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
-                ),
-              );
-            }),
-          );
-        },
-        _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model()),
-            [_, _] = _.useState(
-              _.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.bert_tokenizer().bert_model()),
-              _(_.msgNode.bert_tokenizer().sequence_length()?.toString());
+            _(_.msgNode.train().input_count().toString()),
+              _(_.msgNode.train().activation()),
+              _(_.msgNode.train().loss()),
+              _(_.msgNode.train().compact_table()),
+              _(_.msgNode.train().uses_weight_mask() || !1);
           }, [_.bVisible, _.msgNode]);
           let _ = [
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased",
-              ),
-              value: 0,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased",
-              ),
-              value: 1,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased",
-              ),
-              value: 2,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseEn"),
-              value: 3,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased",
-              ),
-              value: 4,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseMulti"),
-              value: 5,
-            },
-          ];
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Activation_Sigmoid",
+                ),
+                value: 2,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Activation_Softmax",
+                ),
+                value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Activation_Linear",
+                ),
+                value: 3,
+              },
+            ],
+            _ = [
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Loss_BinaryCrossEntropy",
+                ),
+                value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Loss_CategoricalCrossEntropy",
+                ),
+                value: 2,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Loss_SparseCategoricalCrossEntropy",
+                ),
+                value: 3,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Loss_Regression",
+                ),
+                value: 4,
+              },
+            ],
+            _ = !1;
+          for (let _ = 1; _ < _.msgNode.connectors().length; _ += 2) {
+            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
+              _,
+              _.msgNode.connectors()[_].connector_id(),
+            );
+            if (_) {
+              const _ = _(_, _, _);
+              if (_.length > 1)
+                return (
+                  (0, _._)(
+                    !1,
+                    `Incoming node/connector ${_.node_id()}, ${_} have a shape with a primary dimension of ${_.length}: ${_}!`,
+                  ),
+                  null
+                );
+              if (_.length > 0 && (_[0] > 1 || void 0 === _[0])) {
+                _ = !0;
+                break;
+              }
+            }
+          }
+          const _ = 3 == _ || (1 == _ && _);
           return _.createElement(
             _._,
             {
@@ -34463,13 +33205,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_BertTokenizer"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Train"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_BertTokenizer"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Train"),
               ),
             ),
             _.createElement(
@@ -34490,20 +33232,19 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_Count"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_CountDesc"),
                 ),
                 _.createElement(_, {
-                  isText: !0,
                   dontUpdateProject: !0,
-                  width: 200,
                   fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 9),
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -34520,14 +33261,14 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_Activation"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_ModelDesc"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
                 ),
                 _.createElement(_, {
                   dontUpdateProject: !0,
@@ -34535,7 +33276,40 @@
                   fnSetValue: (_) => _(parseInt(_)),
                   options: _,
                 }),
+                2 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_Train_ActivationDescSub1",
+                    ),
+                  ),
+                1 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_Train_ActivationDescSub2",
+                    ),
+                  ),
+                3 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_Train_ActivationDescSub3",
+                    ),
+                  ),
               ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
               _.createElement(
                 "div",
                 {
@@ -34546,22 +33320,141 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLength"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_Loss"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_SequenceLengthDesc"),
+                  (0, _._)("#SteamLearn_Config_Node_Train_LossDesc"),
                 ),
                 _.createElement(_, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => _,
-                  fnValidateValue: (_) => _(_, 16, 512),
-                  fnSetValue: (_) => _(_),
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
                 }),
+                1 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub1"),
+                  ),
+                2 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub2"),
+                  ),
+                3 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub3"),
+                  ),
+                4 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_LossDescSub4"),
+                  ),
               ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMask"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMaskDesc"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "editusesweightmask",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "editusesweightmask",
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_UsesWeightMask"),
+                  ),
+                ),
+              ),
+              _ &&
+                _.createElement("div", {
+                  className: _.Separator,
+                }),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionHeader,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_CompactTable"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.NodeOptionDesc,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Train_CompactTableDesc"),
+                  ),
+                  _.createElement(_, {
+                    dontUpdateProject: !0,
+                    fnGetInitialValue: () => _,
+                    fnValidateValue: (_) =>
+                      _(_, _) ||
+                      (function (_, _) {
+                        for (const _ of _.project_nodes())
+                          if (
+                            14 == __webpack_require__.type() &&
+                            __webpack_require__.kmeans().name() == _
+                          )
+                            return !0;
+                        return !1;
+                      })(_, _) ||
+                      _(_, _),
+                    fnSetValue: (_) => _(_),
+                  }),
+                ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
             ),
             _.createElement(
               "div",
@@ -34572,11 +33465,101 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_),
-                      _.msgNode.bert_tokenizer().set_bert_model(_),
-                      _.msgNode
-                        .bert_tokenizer()
-                        .set_sequence_length(parseInt(_)),
+                    const _ = _ && !_.msgNode.train().uses_weight_mask(),
+                      _ = !_ && _.msgNode.train().uses_weight_mask(),
+                      _ = Math.floor(
+                        _.msgNode
+                          .connectors()
+                          .filter((_) => _.is_input_connector()).length,
+                      ),
+                      _ = parseInt(_) + (_ ? 2 : 1);
+                    if (_ > _) {
+                      const _ = _ - _,
+                        _ = _(_, _);
+                      for (let _ = 0; _ < _; _++) {
+                        let _ = new _();
+                        __webpack_require__.set_connector_id(_[_]),
+                          __webpack_require__.set_is_input_connector(!0),
+                          _.msgNode.add_connectors(_);
+                      }
+                      if (_) {
+                        for (
+                          let _ = _.msgNode.connectors().length - 1;
+                          _ > 1;
+                          _--
+                        ) {
+                          const _ = _.msgNode
+                              .connectors()
+                              [_ - 1].connector_id(),
+                            _ = _.msgNode.connectors()[_].connector_id();
+                          for (let _ of _.project_nodes())
+                            for (let _ of _.connectors())
+                              _.linked_connector_ids().includes(_) &&
+                                (_.set_linked_connector_ids(
+                                  _.linked_connector_ids().filter(
+                                    (_) => _ != _,
+                                  ),
+                                ),
+                                _.add_linked_connector_ids(_));
+                        }
+                        _.msgNode.connectors()[1].set_linked_connector_ids([]);
+                      }
+                    } else if (_ < _) {
+                      if (_)
+                        for (
+                          let _ = _.msgNode.connectors().length - 1;
+                          _ > 1;
+                          _--
+                        ) {
+                          const _ = _.msgNode.connectors()[_].connector_id(),
+                            _ = _.msgNode.connectors()[_ - 1].connector_id();
+                          for (let _ of _.project_nodes())
+                            for (let _ of __webpack_require__.connectors())
+                              _.linked_connector_ids().includes(
+                                _.msgNode.connectors()[1].connector_id(),
+                              ) &&
+                                _.set_linked_connector_ids(
+                                  _.linked_connector_ids().filter(
+                                    (_) =>
+                                      _ !=
+                                      _.msgNode.connectors()[1].connector_id(),
+                                  ),
+                                ),
+                                _.linked_connector_ids().includes(_) &&
+                                  (_.set_linked_connector_ids(
+                                    _.linked_connector_ids().filter(
+                                      (_) => _ != _,
+                                    ),
+                                  ),
+                                  _.add_linked_connector_ids(_));
+                        }
+                      const _ = _.msgNode
+                        .connectors()
+                        .filter((_) => _.is_input_connector())
+                        .slice(_)
+                        .map((_) => _.connector_id());
+                      for (let _ of _.project_nodes())
+                        for (let _ of _.connectors())
+                          _.set_linked_connector_ids(
+                            _.linked_connector_ids().filter(
+                              (_) => !__webpack_require__.includes(_),
+                            ),
+                          );
+                      _.msgNode.set_connectors([
+                        ..._.msgNode
+                          .connectors()
+                          .filter((_) => !_.is_input_connector()),
+                        ..._.msgNode
+                          .connectors()
+                          .filter((_) => _.is_input_connector())
+                          .slice(0, _),
+                      ]);
+                    }
+                    _.msgNode.train().set_input_count(parseInt(_)),
+                      _.msgNode.train().set_activation(_),
+                      _.msgNode.train().set_loss(_),
+                      _.msgNode.train().set_compact_table(_),
+                      _.msgNode.train().set_uses_weight_mask(_),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -34594,42 +33577,18 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-              nPublishedVersion: _,
-            } = _(),
-            [_, _] = _.useState(!1),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
-          let _ = "";
-          switch (_.bert_finetune().bert_model()) {
-            case 0:
-              _ = "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased";
-              break;
-            case 1:
-              _ = "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased";
-              break;
-            case 2:
-              _ = "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased";
-              break;
-            case 3:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEn";
-              break;
-            case 4:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased";
-              break;
-            case 5:
-              _ = "#SteamLearn_Config_Node_Bert_Model_BaseMulti";
-          }
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlowNode, _.BertFinetuneNode, _.Keras),
+              className: (0, _._)(_.FlowNode, _.TransformerNode, _.Keras),
             },
             _.createElement(_, {
-              bVisible: _,
+              bVisible: __webpack_require__,
               fnSetPopupVisible: _,
               msgNode: _,
             }),
@@ -34642,29 +33601,19 @@
                 _._,
                 {
                   key: _,
-                  toolTipContent: (0, _._)(
-                    `#SteamLearn_Config_Node_Bert_Finetune_Input_${_}`,
-                  ),
-                  direction: "top",
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
                 },
                 _.createElement(
-                  _._,
+                  "div",
                   {
-                    key: _,
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
+                    className: _.ConnectorID,
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ConnectorID,
-                    },
-                    _.connector_id(),
-                  ),
+                  _.connector_id(),
                 ),
               );
             }),
@@ -34678,7 +33627,7 @@
                 {
                   className: _.TitleText,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Title_BertFinetune"),
+                (0, _._)("#SteamLearn_Config_Node_Title_Transformer"),
               ),
               _.createElement(
                 "div",
@@ -34700,7 +33649,7 @@
                       strDescription: (0, _._)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => _(_, __webpack_require__, _.node_id()),
+                      onOK: () => _(_, _.node_id()),
                     }),
                     window,
                   ),
@@ -34737,14 +33686,14 @@
                     {
                       className: _.Label,
                     },
-                    (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                    (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeads"),
                   ),
                   _.createElement(
                     "div",
                     {
                       className: _.Value,
                     },
-                    (0, _._)(_),
+                    _.transformer().num_heads(),
                   ),
                 ),
                 _.createElement(
@@ -34758,7 +33707,7 @@
                       className: _.Label,
                     },
                     (0, _._)(
-                      "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                      "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
                     ),
                   ),
                   _.createElement(
@@ -34766,9 +33715,74 @@
                     {
                       className: _.Value,
                     },
-                    _.bert_finetune().unfrozen_layers(),
+                    _.transformer().feedforward_size(),
                   ),
                 ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    `${_.transformer().dropout_pct()}%`,
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_Transformer_InternalBlocks",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    `${_.transformer().num_internal_blocks()}`,
+                  ),
+                ),
+                0 != _.transformer().regularization() &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LabelValue,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_DenseStack_Regularization",
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Value,
+                      },
+                      _(_.transformer().regularization()),
+                    ),
+                  ),
               ),
             ),
             _.map((_, _) => {
@@ -34799,52 +33813,51 @@
           );
         },
         _ = (_) => {
-          const {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.bert_finetune().bert_model()),
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.transformer().num_heads().toString()),
             [_, _] = _.useState(
-              _.msgNode.bert_finetune().unfrozen_layers()?.toString() || "0",
-            );
+              _.msgNode.transformer().feedforward_size()?.toString() || "1024",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.transformer().dropout_pct()?.toString() || "30",
+            ),
+            [_, _] = _.useState(
+              _.msgNode.transformer().num_internal_blocks()?.toString() || "2",
+            ),
+            [_, _] = _.useState(_.msgNode.transformer().regularization());
           _.useEffect(() => {
             _(_.msgNode.comment()),
-              _(_.msgNode.bert_finetune().bert_model()),
-              _(_.msgNode.bert_finetune().unfrozen_layers().toString());
-          }, [_.bVisible, _.msgNode]);
+              _(_.msgNode.transformer().num_heads().toString()),
+              _(
+                _.msgNode.transformer().feedforward_size()?.toString() ||
+                  "1024",
+              ),
+              _(_.msgNode.transformer().dropout_pct()?.toString() || "30"),
+              _(
+                _.msgNode.transformer().num_internal_blocks()?.toString() ||
+                  "2",
+              ),
+              _(_.msgNode.transformer().regularization());
+          }, [_]);
           let _ = [
             {
               label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_TinyEnUncased",
+                "#SteamLearn_Config_Node_Train_Regularization_None",
               ),
               value: 0,
             },
             {
               label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_SmallEnUncased",
+                "#SteamLearn_Config_Node_Train_Regularization_L1",
               ),
               value: 1,
             },
             {
               label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_MediumEnUncased",
+                "#SteamLearn_Config_Node_Train_Regularization_L2",
               ),
               value: 2,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseEn"),
-              value: 3,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Bert_Model_BaseEnUncased",
-              ),
-              value: 4,
-            },
-            {
-              label: (0, _._)("#SteamLearn_Config_Node_Bert_Model_BaseMulti"),
-              value: 5,
             },
           ];
           return _.createElement(
@@ -34859,13 +33872,13 @@
               {
                 className: _.NodeHeader,
               },
-              (0, _._)("#SteamLearn_Config_Node_Title_BertFinetune"),
+              (0, _._)("#SteamLearn_Config_Node_Title_Transformer"),
               _.createElement(
                 "div",
                 {
                   className: _.SubHeader,
                 },
-                (0, _._)("#SteamLearn_Config_Node_Tooltip_BertFinetune"),
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Transformer"),
               ),
             ),
             _.createElement(
@@ -34899,7 +33912,7 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => _,
+                  fnGetInitialValue: () => __webpack_require__,
                   fnSetValue: (_) => _(_),
                 }),
               ),
@@ -34916,20 +33929,20 @@
                   {
                     className: _.NodeOptionHeader,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_Model"),
+                  (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeads"),
                 ),
                 _.createElement(
                   "div",
                   {
                     className: _.NodeOptionDesc,
                   },
-                  (0, _._)("#SteamLearn_Config_Node_Bert_ModelDesc"),
+                  (0, _._)("#SteamLearn_Config_Node_Transformer_NumHeadsDesc"),
                 ),
                 _.createElement(_, {
                   dontUpdateProject: !0,
-                  fnGetValue: () => _,
-                  fnSetValue: (_) => _(parseInt(_)),
-                  options: _,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 20),
+                  fnSetValue: (_) => _(_),
                 }),
               ),
               _.createElement(
@@ -34943,7 +33956,7 @@
                     className: _.NodeOptionHeader,
                   },
                   (0, _._)(
-                    "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayers",
+                    "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
                   ),
                 ),
                 _.createElement(
@@ -34952,17 +33965,445 @@
                     className: _.NodeOptionDesc,
                   },
                   (0, _._)(
-                    "#SteamLearn_Config_Node_ExternalModel_UnfrozenLayersDesc",
+                    "#SteamLearn_Config_Node_Transformer_FeedforwardSizeDesc",
                   ),
                 ),
                 _.createElement(_, {
-                  width: 200,
                   dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 16, 10240),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Transformer_DropoutPctDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 99),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Transformer_InternalBlocks",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Transformer_InternalBlocksDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => _,
+                  fnValidateValue: (_) => _(_, 1, 16),
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Option,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.OptionTitle,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_DenseStack_Regularization"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.OptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_DenseStack_RegularizationDesc",
+                  ),
+                ),
+                _.createElement(
+                  "select",
+                  {
+                    className: _.InputSelect,
+                    value: _,
+                    onChange: (_) => _(parseInt(_.target.value)),
+                  },
+                  _.map((_) =>
+                    _.createElement(
+                      "option",
+                      {
+                        key: _.value,
+                        value: _.value,
+                      },
+                      _.label,
+                    ),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.transformer().set_num_heads(parseInt(_)),
+                      _.msgNode.transformer().set_feedforward_size(parseInt(_)),
+                      _.msgNode.transformer().set_dropout_pct(parseInt(_)),
+                      _.msgNode
+                        .transformer()
+                        .set_num_internal_blocks(parseInt(_)),
+                      _.msgNode.transformer().set_regularization(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.WeightedAverageNode, _.Keras),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              if (1 == _ && !_.weighted_average().use_weights()) return null;
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_WeightedAverage"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_WeightedAverage_Axis"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.weighted_average().axis(),
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.weighted_average().axis().toString()),
+            [_, _] = _.useState(_.msgNode.weighted_average().use_weights());
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.weighted_average().axis().toString()),
+              _(_.msgNode.weighted_average().use_weights());
+          }, [_.bVisible, _.msgNode]);
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_WeightedAverage"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_WeightedAverage"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_WeightedAverage_Axis"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_WeightedAverage_AxisDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
                   fnGetInitialValue: () => _,
                   fnValidateValue: (_) => _(_, 0, void 0),
                   fnSetValue: (_) => _(_),
                 }),
               ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_WeightedAverage_UseWeightsDesc",
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CheckboxWithLabel,
+                  },
+                  _.createElement("input", {
+                    type: "checkbox",
+                    _: "useweights",
+                    checked: _,
+                    onChange: () => _(!_),
+                  }),
+                  _.createElement(
+                    "label",
+                    {
+                      htmlFor: "useweights",
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
+                    ),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
             ),
             _.createElement(
               "div",
@@ -34973,11 +34414,9 @@
                 _._,
                 {
                   onClick: () => {
-                    _.msgNode.set_comment(_),
-                      _.msgNode.bert_finetune().set_bert_model(_),
-                      _.msgNode
-                        .bert_finetune()
-                        .set_unfrozen_layers(parseInt(_)),
+                    _.msgNode.weighted_average().set_axis(parseInt(_)),
+                      _.msgNode.weighted_average().set_use_weights(_),
+                      _.msgNode.set_comment(__webpack_require__),
                       _(_),
                       _.fnSetPopupVisible(!1);
                   },
@@ -34993,21 +34432,16 @@
               ),
             ),
           );
-        },
-        _ = () => {
-          const {
-            msgWorkingProject: _,
-            msgWorkingProjectConfig: _,
-            nPublishedVersion: __webpack_require__,
-          } = _();
-          return _.createElement(
+        };
+      var _ = __webpack_require__("chunkid");
+      const _ = () =>
+          _.createElement(
             "div",
             {
               className: _.ProjectModelPage,
             },
             _.createElement(_, null),
-          );
-        },
+          ),
         _ = (_) =>
           _.createElement(
             _._,
@@ -35029,11 +34463,7 @@
         _ = () => {
           const _ = _.useRef(null),
             [_, __webpack_require__] = _.useState(null),
-            {
-              msgWorkingProject: _,
-              msgWorkingProjectConfig: _,
-              nPublishedVersion: _,
-            } = _(),
+            { msgWorkingProjectConfig: _ } = _(),
             [_, _] = _(_),
             [_, _, _] = (0, _._)(_),
             [_, _, _] = (0, _._)(_),
@@ -35068,7 +34498,6 @@
                 nodeGlobalMaxPooling1D: _,
                 nodeGlobalAvgPooling1D: _,
                 nodeTransformer: _,
-                nodeTimeDistributedDense: _,
                 nodeSequenceSplit: _,
                 nodeWeightedAverage: _,
                 nodeTokenMask: _,
@@ -35087,7 +34516,7 @@
           _.useEffect(() => {
             const [_, _] = _(_);
             _(_), _(_);
-          }, [_, _, _, _]);
+          }, [_, _, _]);
           const _ = _.useCallback((_, _) => {
               _.dataTransfer.setData("application/reactflow", _.toString()),
                 (_.dataTransfer.effectAllowed = "move");
@@ -35106,7 +34535,7 @@
                   _: _.clientX,
                   _: _.clientY,
                 });
-                !(function (_, _, _, _, _) {
+                !(function (_, _, _, _) {
                   let _ = new _();
                   _.set_node_id(_(_)),
                     _.set_location_x(Math.floor(_)),
@@ -35393,9 +34822,9 @@
                       }
                   }
                   _.add_project_nodes(_), _(_);
-                })(_, _, _, _._, _._);
+                })(_, _, _._, _._);
               },
-              [_, _, _],
+              [_, _],
             ),
             _ = _.useCallback(
               (_) => {
@@ -35412,7 +34841,7 @@
                   _.set_location_y(Math.floor(_.position._)),
                   _(_));
               },
-              [_, _],
+              [_],
             ),
             _ = _.useCallback(
               (_) => {
@@ -35429,9 +34858,9 @@
                   _ = _(_.sourceHandle),
                   _ = _(_.target),
                   _ = _(_.targetHandle);
-                _(_, _, _, _, _, _);
+                _(_, _, _, _, _);
               },
-              [_, _],
+              [_],
             ),
             _ = _.useCallback(
               (_, _) => {
@@ -35439,7 +34868,7 @@
                   _ = _(_.sourceHandle),
                   _ = _(_.target),
                   _ = _(_.targetHandle);
-                !(function (_, _, _, _, _, _) {
+                !(function (_, _, _, _, _) {
                   let _ = _.project_nodes().find((_) => _.node_id() == _),
                     _ = _.project_nodes().find((_) => _.node_id() == _);
                   if (
@@ -35472,9 +34901,9 @@
                       _.linked_connector_ids().filter((_) => _ != _),
                     ),
                     _(_);
-                })(_, _, _, _, _, _);
+                })(_, _, _, _, _);
               },
-              [_, _],
+              [_],
             ),
             _ = _.useCallback(
               (_) => {
@@ -35482,9 +34911,9 @@
                   _ = _(_.sourceHandle),
                   _ = _(_.target),
                   _ = _(_.targetHandle);
-                _(_, _, _, _, _, _);
+                _(_, _, _, _, _);
               },
-              [_, _],
+              [_],
             ),
             _ = _.useCallback(
               (_) => {
@@ -35492,9 +34921,9 @@
                   _ = _(_.sourceHandle),
                   _ = _(_.target),
                   _ = _(_.targetHandle);
-                return _(0, _, _, _, _, _);
+                return _(_, _, _, _, _);
               },
-              [_, _],
+              [_],
             );
           return _.createElement(
             "div",
@@ -36029,8 +35458,6 @@
             return "nodeGlobalAvgPooling1D";
           case 26:
             return "nodeTransformer";
-          case 28:
-            return "nodeTimeDistributedDense";
           case 29:
             return "nodeSequenceSplit";
           case 30:
@@ -37194,7 +36621,7 @@
         };
       var _ = __webpack_require__("chunkid");
       const _ = () => {
-        const { msgWorkingProject: _, msgWorkingProjectConfig: _ } = _(),
+        const { msgWorkingProjectConfig: _ } = _(),
           _ = [
             {
               label: (0, _._)("#SteamLearn_Config_Node_Train_Optimizer_None"),
@@ -37247,8 +36674,6 @@
               value: 4,
             },
           ];
-        (0, _._)("#SteamLearn_SnapshotFilter_SnapshotLocation_0"),
-          (0, _._)("#SteamLearn_SnapshotFilter_SnapshotLocation_1");
         return _.createElement(
           "div",
           {
@@ -38429,9 +37854,8 @@
       const _ = (_) => {
           const {
               nPublishedVersion: _,
-              msgProject: __webpack_require__,
-              msgWorkingProjectConfig: _,
-              msgWorkingProject: _,
+              msgWorkingProjectConfig: __webpack_require__,
+              msgProjectConfig: _,
             } = _(),
             _ = _(_.nProjectID, _.nTrainID),
             [_, _] = _.useState(-1),
@@ -38477,9 +37901,9 @@
                     queryKey: [_, _],
                   }),
                   _.Body().result();
-              })(_.project_id(), _, _, _);
+              })(__webpack_require__.project_id(), _, _, _);
             },
-            [_, _],
+            [__webpack_require__, _],
           );
           if (0 == _)
             return _.createElement(
@@ -38785,8 +38209,8 @@
             _ =
               _ &&
               _ &&
-              _.serializeBase64String() !=
-                __webpack_require__.serializeBase64String();
+              __webpack_require__.serializeBase64String() !=
+                _.serializeBase64String();
           let _ = [
             {
               label: (0, _._)("#SteamLearn_Status_Train_AllEpochs"),
@@ -39216,9 +38640,8 @@
               ),
           );
         },
-        _ = () => {
-          const { nProjectID: _ } = _();
-          return _.createElement(
+        _ = () =>
+          _.createElement(
             "div",
             {
               className: _.ProjectTrainStatusPage,
@@ -39231,7 +38654,6 @@
               _.createElement(_, null),
             ),
           );
-        };
       var _;
       !(function (_) {
         (_[(_.NONE = 0)] = "NONE"),
@@ -39240,8 +38662,7 @@
           (_[(_.GPU = 3)] = "GPU");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const { nProjectID: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.NONE);
+          const [_, __webpack_require__] = _.useState(_.NONE);
           return _.createElement(
             "div",
             {
@@ -39256,10 +38677,10 @@
                 _._,
                 {
                   onClick: () =>
-                    _(__webpack_require__ == _.MAIN ? _.NONE : _.MAIN),
+                    __webpack_require__(_ == _.MAIN ? _.NONE : _.MAIN),
                 },
                 (0, _._)(
-                  __webpack_require__ == _.MAIN
+                  _ == _.MAIN
                     ? "#SteamLearn_Status_LogMain_Hide"
                     : "#SteamLearn_Status_LogMain_Show",
                 ),
@@ -39268,14 +38689,12 @@
                 _._,
                 {
                   onClick: () =>
-                    _(
-                      __webpack_require__ == _.FETCH_WORKERS
-                        ? _.NONE
-                        : _.FETCH_WORKERS,
+                    __webpack_require__(
+                      _ == _.FETCH_WORKERS ? _.NONE : _.FETCH_WORKERS,
                     ),
                 },
                 (0, _._)(
-                  __webpack_require__ == _.FETCH_WORKERS
+                  _ == _.FETCH_WORKERS
                     ? "#SteamLearn_Status_LogFetchWorkers_Hide"
                     : "#SteamLearn_Status_LogFetchWorkers_Show",
                 ),
@@ -39284,26 +38703,26 @@
                 _._,
                 {
                   onClick: () =>
-                    _(__webpack_require__ == _.GPU ? _.NONE : _.GPU),
+                    __webpack_require__(_ == _.GPU ? _.NONE : _.GPU),
                 },
                 (0, _._)(
-                  __webpack_require__ == _.GPU
+                  _ == _.GPU
                     ? "#SteamLearn_Status_LogTrain_Hide"
                     : "#SteamLearn_Status_LogTrain_Show",
                 ),
               ),
             ),
-            __webpack_require__ == _.MAIN &&
+            _ == _.MAIN &&
               _.createElement(_, {
                 nFetchID: _.nFetchID,
                 nTrainID: _.nTrainID,
               }),
-            __webpack_require__ == _.FETCH_WORKERS &&
+            _ == _.FETCH_WORKERS &&
               _.createElement(_, {
                 nFetchID: _.nFetchID,
                 nTrainID: _.nTrainID,
               }),
-            __webpack_require__ == _.GPU &&
+            _ == _.GPU &&
               _.createElement(_, {
                 nFetchID: _.nFetchID,
                 nTrainID: _.nTrainID,
@@ -39489,11 +38908,10 @@
         _ = __webpack_require__("chunkid");
       const _ = () => {
         const {
-            msgProject: _,
-            msgWorkingProject: _,
-            msgWorkingProjectConfig: __webpack_require__,
             nProjectID: _,
             nPublishedVersion: _,
+            msgProjectConfig: __webpack_require__,
+            msgWorkingProjectConfig: _,
           } = _(),
           [_, _] = _.useState(0),
           [_, _] = _.useState(0),
@@ -39504,7 +38922,11 @@
           _ = _.data,
           _ = _.isLoading || _.isLoading,
           _ = _ > 0,
-          _ = _ && _ && _.serializeBase64String() == _.serializeBase64String(),
+          _ =
+            __webpack_require__ &&
+            _ &&
+            _.serializeBase64String() ==
+              __webpack_require__.serializeBase64String(),
           _ = [
             {
               label: (0, _._)("#SteamLearn_ScheduledTrain_IntervalNone"),
@@ -39557,12 +38979,10 @@
               value: 6,
             },
           ],
+          _ = 0 != _.scheduled_train_config().scheduled_type(),
           _ =
-            0 != __webpack_require__.scheduled_train_config().scheduled_type(),
-          _ =
-            0 !=
-              __webpack_require__.scheduled_train_config().scheduled_type() &&
-            1 != __webpack_require__.scheduled_train_config().scheduled_type();
+            0 != _.scheduled_train_config().scheduled_type() &&
+            1 != _.scheduled_train_config().scheduled_type();
         return _.createElement(
           "div",
           {
@@ -39671,26 +39091,6 @@
                 _._,
                 {
                   onClick: async () => {
-                    let _ = _;
-                    if (0 == _) {
-                      for (const _ of _.published_configs())
-                        _ = Math.max(
-                          _,
-                          ...__webpack_require__
-                            .fetch_infos()
-                            .map((_) => _.fetch_id()),
-                        );
-                      _ += 1;
-                    }
-                    let _ = _;
-                    if (0 == _) {
-                      for (const _ of _.published_configs())
-                        _ = Math.max(
-                          _,
-                          ..._.train_infos().map((_) => _.train_id()),
-                        );
-                      _ += 1;
-                    }
                     let _ = _._.Init(_);
                     _.Body().set_project_config(_),
                       _.Body().fetch().set_fetch_id(_),
@@ -39700,13 +39100,13 @@
                     const _ = await _.Train(_.Get().GetServiceTransport(), _);
                     _(_, _),
                       _(_, _),
-                      _.BIsValid() &&
-                        1 == _.GetEResult() &&
-                        (await _(_.project_id()),
+                      __webpack_require__.BIsValid() &&
+                        1 == __webpack_require__.GetEResult() &&
+                        (await _(_.project_id(), _.published_version()),
                         _.push(
                           _.SteamLearnProjectTrainStatus(
-                            __webpack_require__.project_id(),
-                            __webpack_require__.published_version(),
+                            _.project_id(),
+                            _.published_version(),
                           ),
                         ));
                   },
@@ -39746,89 +39146,67 @@
             ),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_Frequency"),
-              fnGetValue: () =>
-                __webpack_require__.scheduled_train_config().scheduled_type(),
+              fnGetValue: () => _.scheduled_train_config().scheduled_type(),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_scheduled_type(parseInt(_)),
+                _.scheduled_train_config().set_scheduled_type(parseInt(_)),
               options: _,
             }),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_DayOfMonth"),
-              hidden:
-                4 !=
-                __webpack_require__.scheduled_train_config().scheduled_type(),
+              hidden: 4 != _.scheduled_train_config().scheduled_type(),
               fnGetInitialValue: () =>
-                __webpack_require__
-                  .scheduled_train_config()
+                _.scheduled_train_config()
                   .scheduled_day_of_month()
                   ?.toString() || "1",
               fnValidateValue: (_) => _(_, 1, 31),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_scheduled_day_of_month(parseInt(_)),
+                _.scheduled_train_config().set_scheduled_day_of_month(
+                  parseInt(_),
+                ),
             }),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_DayOfWeek"),
-              hidden:
-                3 !=
-                __webpack_require__.scheduled_train_config().scheduled_type(),
+              hidden: 3 != _.scheduled_train_config().scheduled_type(),
               fnGetValue: () =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .scheduled_day_of_week(),
+                _.scheduled_train_config().scheduled_day_of_week(),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_scheduled_day_of_week(parseInt(_)),
+                _.scheduled_train_config().set_scheduled_day_of_week(
+                  parseInt(_),
+                ),
               options: _,
             }),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_Hour"),
               hidden: !_,
               fnGetInitialValue: () =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .scheduled_hour()
-                  ?.toString() || "0",
+                _.scheduled_train_config().scheduled_hour()?.toString() || "0",
               fnValidateValue: (_) => _(_, 0, 23),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_scheduled_hour(parseInt(_)),
+                _.scheduled_train_config().set_scheduled_hour(parseInt(_)),
             }),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_Minute"),
               hidden: !_,
               fnGetInitialValue: () =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .scheduled_minute()
-                  ?.toString() || "0",
+                _.scheduled_train_config().scheduled_minute()?.toString() ||
+                "0",
               fnValidateValue: (_) => _(_, 0, 59),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_scheduled_minute(parseInt(_)),
+                _.scheduled_train_config().set_scheduled_minute(parseInt(_)),
             }),
             _.createElement(_, {
               label: (0, _._)("#SteamLearn_ScheduledTrain_ActivateThreshold"),
-              hidden:
-                0 ==
-                __webpack_require__.scheduled_train_config().scheduled_type(),
+              hidden: 0 == _.scheduled_train_config().scheduled_type(),
               digitCount: 2,
               fnGetInitialValue: () =>
-                __webpack_require__
-                  .scheduled_train_config()
+                _.scheduled_train_config()
                   .auto_activate_accuracy_threshold()
                   ?.toFixed(2) || "0.00",
               fnValidateValue: (_) => _(_, 0, 1),
               fnSetValue: (_) =>
-                __webpack_require__
-                  .scheduled_train_config()
-                  .set_auto_activate_accuracy_threshold(parseFloat(_)),
+                _.scheduled_train_config().set_auto_activate_accuracy_threshold(
+                  parseFloat(_),
+                ),
             }),
           ),
         );
@@ -40274,19 +39652,16 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          {
-            msgWorkingProject: __webpack_require__,
-            msgWorkingProjectConfig: _,
-          } = _();
-        return !_(_.pathname) || (__webpack_require__ && _)
-          ? _.createElement(
+          { msgWorkingProjectConfig: __webpack_require__ } = _();
+        return _(_.pathname) && !__webpack_require__
+          ? null
+          : _.createElement(
               "div",
               {
                 className: _.MainAppContainer,
               },
               _.children,
-            )
-          : null;
+            );
       }
       function _() {
         const _ = (0, _._)(),

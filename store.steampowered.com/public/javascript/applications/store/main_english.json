@@ -384,6 +384,7 @@
     "accountpreferences_authorized_devices_recent_heading": "Signed In and Recently Online",
     "accountpreferences_authorized_devices_loc_unknown": "",
     "accountpreferences_authorized_devices_last_seen_title": "Last active: ",
+    "accountpreferences_authorized_devices_last_seen_max": "more than 90 days ago",
     "accountpreferences_authorized_devices_other_heading": "Other Signed In Devices",
     "accountpreferences_authorized_devices_recentseen_heading": "Recently seen devices",
     "accountpreferences_authorized_device_active_now": "Active now",

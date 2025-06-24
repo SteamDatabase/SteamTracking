@@ -4483,6 +4483,21 @@ img.category_icon {
 .DeveloperWarningSingleWarningBody {
 }
 
+.depot_scan_clean {
+	color: green;
+	text-transform:uppercase;
+}
+
+.depot_scan_suspicious {
+	color: orange;
+	text-transform:uppercase;
+}
+
+.depot_scan_malicious {
+	color: red;
+	text-transform:uppercase;
+}
+
 .section.key_generate_ctn .formrow_large {
     padding: 4px 0;
 }

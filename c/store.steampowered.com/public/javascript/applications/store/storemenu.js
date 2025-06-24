@@ -31,6 +31,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        searchBarMinWidth: "350px",
         SearchBar: "WFyPwmwIjPaI784fImRbi",
         SearchInput: "_2tlUAG6WNyYFlk9caIiLj5",
         SearchIcon: "_1Yo-ZsBr-KbVMyAMXEYszd",
@@ -152,6 +153,7 @@
         HideMenu: "_2gv6G2MeBRAI0FqxejcYS8",
         Hidden: "_234vIwVerIU5MqgZwrEcd8",
         Show: "_22kVz2i2PscI9OSO_WhNry",
+        MenuButtonAndSearchContainer: "_1u2HkRz_FnAfR5OjfjexgF",
         MenuButtonContainer: "_315CcpqsgdwaAwR3WiSlOq",
         DynamicMenuButtons: "_3CtcPWgZYR05CldoJ0Jkrx",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
@@ -3899,7 +3901,7 @@
           "images/applications/store/steam_deck.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/steam_deck_dock.png?v=valveisgoodatcaching",
+          "images/applications/store/dockingstation02.png?v=valveisgoodatcaching",
         _ = {
           appid: 1675200,
         },
@@ -4743,24 +4745,27 @@
                 role: "navigation",
                 "aria-label": _("#Menu_Label"),
               },
-              _.createElement(_, {
-                openPopover: _,
-                activeSection: __webpack_require__,
-                visibleSections: _,
-                setVisibleSections: _,
-                refPopover: _,
-                refActiveButton: _,
-              }),
-              !_ &&
-                _.createElement(_, {
-                  bSearchVisible: _,
-                  openSearch: _,
-                  closeSearch: _,
-                }),
-              _ &&
-                _.createElement("div", {
-                  className: _.NoSearchBarSpacer,
-                }),
+              _.createElement(
+                _,
+                {
+                  openPopover: _,
+                  activeSection: __webpack_require__,
+                  visibleSections: _,
+                  setVisibleSections: _,
+                  refPopover: _,
+                  refActiveButton: _,
+                },
+                !_ &&
+                  _.createElement(_, {
+                    bSearchVisible: _,
+                    openSearch: _,
+                    closeSearch: _,
+                  }),
+                _ &&
+                  _.createElement("div", {
+                    className: _.NoSearchBarSpacer,
+                  }),
+              ),
               _.createElement(_, null),
               _.createElement(_, null),
             ),
@@ -4782,6 +4787,7 @@
             setVisibleSections: _,
             refPopover: _,
             refActiveButton: _,
+            children: _,
           } = _,
           _ = _.useRef([]),
           _ = _.useMemo(() => _(), []);
@@ -4797,7 +4803,7 @@
           _.useLayoutEffect(() => {
             if (_) return;
             const _ = [];
-            for (let _ = 0; _ < _.length - 1; _++)
+            for (let _ = 0; _ < _.length; _++)
               _[_].current
                 ? __webpack_require__.push(_[_].current.clientWidth)
                 : console.assert(!1, `Missing ref button ${_}`);
@@ -4817,12 +4823,14 @@
         let _;
         _.useLayoutEffect(() => {
           if (!_ || void 0 === _) return;
-          const _ = _.slice();
-          let _ = _ + 20;
+          const _ = parseInt(_.searchBarMinWidth),
+            _ = _[_.length - 1],
+            _ = _.slice(0, -1);
+          let _ = _ - _ - _;
           const _ = [];
           for (let _ = 0; _ < _.length && _[_] < _; _++)
-            (_ -= _[_]), __webpack_require__.push(_[_][0]);
-          __webpack_require__.push(_[_.length - 1][0]), _(new Set(_));
+            (_ -= _[_]), _.push(_[_][0]);
+          _.push(_[_.length - 1][0]), _(new Set(_));
         }, [_, _, _, _]),
           (0, _.useEffect)(() => {
             if (__webpack_require__) {
@@ -4852,17 +4860,24 @@
         return _.createElement(
           "div",
           {
-            className: _.MenuButtonContainer,
+            className: _.MenuButtonAndSearchContainer,
+            ref: _,
           },
           _.createElement(
             "div",
             {
-              className: _.DynamicMenuButtons,
-              ref: _,
+              className: _.MenuButtonContainer,
             },
-            _.slice(0, -1).map(_),
+            _.createElement(
+              "div",
+              {
+                className: _.DynamicMenuButtons,
+              },
+              _.slice(0, -1).map(_),
+            ),
+            _(_, _.length - 1),
           ),
-          _(_, _.length - 1),
+          _,
         );
       }
       function _(_) {
@@ -5362,6 +5377,239 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnIntersection", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.filter((_) => !_.includes(_));
+      }
+      var _ = class extends _._ {
+          #e;
+          #t;
+          #n;
+          #r;
+          #i;
+          #a;
+          #s;
+          #o;
+          constructor(_, _, _) {
+            super(),
+              (this.#e = _),
+              (this.#r = _),
+              (this.#n = []),
+              (this.#i = []),
+              (this.#t = []),
+              this.setQueries(_);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#i.forEach((_) => {
+                _.subscribe((_) => {
+                  this.#c(_, _);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#i.forEach((_) => {
+                _.destroy();
+              });
+          }
+          setQueries(_, _, _) {
+            (this.#n = _),
+              (this.#r = _),
+              _._.batch(() => {
+                const _ = this.#i,
+                  _ = this.#l(this.#n);
+                _.forEach((_) =>
+                  _.observer.setOptions(_.defaultedQueryOptions, _),
+                );
+                const _ = _.map((_) => _.observer),
+                  _ = _.map((_) => _.getCurrentResult()),
+                  _ = _.some((_, _) => _ !== _[_]);
+                (_.length !== _.length || _) &&
+                  ((this.#i = _),
+                  (this.#t = _),
+                  this.hasListeners() &&
+                    (_(_, _).forEach((_) => {
+                      _.destroy();
+                    }),
+                    _(_, _).forEach((_) => {
+                      _.subscribe((_) => {
+                        this.#c(_, _);
+                      });
+                    }),
+                    this.#u()));
+              });
+          }
+          getCurrentResult() {
+            return this.#t;
+          }
+          getQueries() {
+            return this.#i.map((_) => _.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#i;
+          }
+          getOptimisticResult(_, _) {
+            const _ = this.#l(_).map((_) =>
+              _.observer.getOptimisticResult(_.defaultedQueryOptions),
+            );
+            return [_, (_) => this.#m(_ ?? _, _), () => this.#d(_, _)];
+          }
+          #d(_, _) {
+            const _ = this.#l(_);
+            return __webpack_require__.map((_, _) => {
+              const _ = _[_];
+              return _.defaultedQueryOptions.notifyOnChangeProps
+                ? _
+                : _.observer.trackResult(_, (_) => {
+                    __webpack_require__.forEach((_) => {
+                      _.observer.trackProp(_);
+                    });
+                  });
+            });
+          }
+          #m(_, _) {
+            return _
+              ? ((this.#a && this.#t === this.#o && _ === this.#s) ||
+                  ((this.#s = _),
+                  (this.#o = this.#t),
+                  (this.#a = (0, _._)(this.#a, _(_)))),
+                this.#a)
+              : _;
+          }
+          #l(_) {
+            const _ = new Map(this.#i.map((_) => [_.options.queryHash, _])),
+              _ = [];
+            return (
+              _.forEach((_) => {
+                const _ = this.#e.defaultQueryOptions(_),
+                  _ = _.get(_.queryHash);
+                if (_)
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _,
+                  });
+                else {
+                  const _ = this.#i.find(
+                    (_) => _.options.queryHash === _.queryHash,
+                  );
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _ ?? new _._(this.#e, _),
+                  });
+                }
+              }),
+              __webpack_require__.sort(
+                (_, _) =>
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ) -
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ),
+              )
+            );
+          }
+          #c(_, _) {
+            const _ = this.#i.indexOf(_);
+            -1 !== _ &&
+              ((this.#t = (function (_, _, _) {
+                const _ = _.slice(0);
+                return (_[_] = _), _;
+              })(this.#t, _, _)),
+              this.#u());
+          }
+          #u() {
+            if (this.hasListeners()) {
+              this.#a !==
+                this.#m(this.#d(this.#t, this.#n), this.#r?.combine) &&
+                _._.batch(() => {
+                  this.listeners.forEach((_) => {
+                    _(this.#t);
+                  });
+                });
+            }
+          }
+        },
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ queries: _, ..._ }, _) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => {
+                const _ = _.defaultQueryOptions(_);
+                return (
+                  (_._optimisticResults = _ ? "isRestoring" : "optimistic"), _
+                );
+              }),
+            [_, _, _],
+          );
+        _.forEach((_) => {
+          (0, _._)(_), (0, _._)(_, _);
+        }),
+          (0, _._)(_);
+        const [_] = _.useState(() => new _(_, _, _)),
+          [_, _, _] = _.getOptimisticResult(_, _.combine);
+        _.useSyncExternalStore(
+          _.useCallback(
+            (_) => (_ ? _._ : _.subscribe(_._.batchCalls(_))),
+            [_, _],
+          ),
+          () => _.getCurrentResult(),
+          () => _.getCurrentResult(),
+        ),
+          _.useEffect(() => {
+            _.setQueries(_, _, {
+              listeners: !1,
+            });
+          }, [_, _, _]);
+        const _ = _.some((_, _) => (0, _._)(_[_], _))
+          ? _.flatMap((_, _) => {
+              const _ = _[_];
+              if (_) {
+                const _ = new _._(_, _);
+                if ((0, _._)(_, _)) return (0, _._)(_, _, _);
+                (0, _._)(_, _) && (0, _._)(_, _, _);
+              }
+              return [];
+            })
+          : [];
+        if (_.length > 0) throw Promise.all(_);
+        const _ = _.find((_, _) => {
+          const _ = _[_];
+          return (
+            _ &&
+            (0, _._)({
+              result: _,
+              errorResetBoundary: _,
+              throwOnError: _.throwOnError,
+              query: _.getQueryCache().get(_.queryHash),
+            })
+          );
+        });
+        if (_?.error) throw _.error;
+        return _(_());
+      }
     },
   },
 ]);

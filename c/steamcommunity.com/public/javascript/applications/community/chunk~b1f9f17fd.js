@@ -1146,7 +1146,9 @@
         Name: "_1e4No10_bpJEyqWGdzhAs9",
         PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
         PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",
+        PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
+        PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
       };
     },
     chunkid: (module) => {
@@ -1183,6 +1185,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
         TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
         TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
@@ -1385,6 +1389,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         Container: "_2DwHnbQk_PGfGThmz17qKu",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
         RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
@@ -22633,16 +22639,27 @@
                   _._,
                   {
                     key: "title_" + _ + "_" + _,
-                    onClick: (_) => {
-                      var _;
-                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                        void 0 === _ ||
-                        _.focus(),
-                        _(_ == __webpack_require__ ? void 0 : _);
-                    },
-                    toggled: _ == __webpack_require__,
+                    toolTipContent: _(_),
+                    direction: "bottom",
                   },
-                  (0, _._)("#Template_Section_Header_" + _),
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: (_) => {
+                          var _;
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _ ||
+                            _.focus(),
+                            _(_ == __webpack_require__ ? void 0 : _);
+                        },
+                        toggled: _ == __webpack_require__,
+                      },
+                      (0, _._)("#Template_Section_Header_" + _),
+                    ),
+                  ),
                 ),
               ),
               _.createElement(_._, null),
@@ -22651,6 +22668,18 @@
       }
       const _ = [_._.k_Left, _._.k_Center, _._.k_Right],
         _ = [_._.k_Top, _._.k_Center, _._.k_Bottom];
+      function _(_) {
+        switch (_) {
+          case _._.k_Header1:
+            return (0, _._)("#Template_Section_Header_Large_Tooltip");
+          case _._.k_Header2:
+            return (0, _._)("#Template_Section_Header_Medium_Tooltip");
+          case _._.k_Header3:
+            return (0, _._)("#Template_Section_Header_Small_Tooltip");
+          default:
+            return;
+        }
+      }
       function _(_) {
         const {
           uniqueID: _,
@@ -22669,20 +22698,31 @@
                   _._,
                   {
                     key: _ + _,
-                    onClick: (_) => {
-                      var _;
-                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                        void 0 === _ ||
-                        __webpack_require__.focus(),
-                        _(_);
-                    },
-                    toggled: _ == __webpack_require__,
+                    toolTipContent: _(_, _, _),
+                    direction: "bottom",
                   },
-                  _.createElement(_, {
-                    alignment: _,
-                    bVertical: _,
-                    bText: _,
-                  }),
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: (_) => {
+                          var _;
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _ ||
+                            __webpack_require__.focus(),
+                            _(_);
+                        },
+                        toggled: _ == __webpack_require__,
+                      },
+                      _.createElement(_, {
+                        alignment: _,
+                        bVertical: _,
+                        bText: _,
+                      }),
+                    ),
+                  ),
                 ),
               ),
             )
@@ -22704,17 +22744,58 @@
           switch (_) {
             case _._.k_Left:
               return _
-                ? _.createElement(_.nhL, null)
+                ? _.createElement(_.K6w, null)
                 : _.createElement(_.p71, null);
             case _._.k_Center:
               return _
-                ? _.createElement(_.J67, null)
+                ? _.createElement(_.q8c, null)
                 : _.createElement(_.vsW, null);
             case _._.k_Right:
             default:
               return _
-                ? _.createElement(_.Er9, null)
+                ? _.createElement(_.dWO, null)
                 : _.createElement(_.o5t, null);
+          }
+      }
+      function _(_, _, _) {
+        if (_)
+          switch (_) {
+            case _._.k_Top:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Top",
+              );
+            case _._.k_Center:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Center",
+              );
+            case _._.k_Bottom:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Bottom",
+              );
+          }
+        else if (_)
+          switch (_) {
+            case _._.k_Left:
+              return (0, _._)("#Template_Section_Align_Text_Left");
+            case _._.k_Center:
+              return (0, _._)("#Template_Section_Align_Text_Center");
+            case _._.k_Right:
+              return (0, _._)("#Template_Section_Align_Text_Right");
+          }
+        else
+          switch (_) {
+            case _._.k_Left:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Left",
+              );
+            case _._.k_Center:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Center",
+              );
+            case _._.k_Right:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Right",
+              );
           }
       }
       function _(_) {
@@ -25976,7 +26057,7 @@
           } = _,
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.localized_media_title[_] || "",
-            __webpack_require__.eTitleDisplaySize || _._.k_Header1,
+            __webpack_require__.eTitleDisplaySize,
             __webpack_require__.title_alignment || _._.k_Left,
           ]);
         return _.createElement(
@@ -26007,9 +26088,10 @@
                 uniqueID: "title_vert_" + _,
                 eTitleDisplaySize: _,
                 fnUpdateTitleDisplaySize: (_) => {
-                  _ != __webpack_require__.eTitleDisplaySize &&
+                  _ !== __webpack_require__.eTitleDisplaySize &&
                     ((__webpack_require__.eTitleDisplaySize = _), _());
                 },
+                bForceDisplay: !0,
               }),
               _.createElement(_, {
                 uniqueID: "title_horiz_" + _,
@@ -30647,6 +30729,7 @@
                 _: (0, _._)(__webpack_require__),
                 className: (0, _._)({
                   [_.SaleSection]: !0,
+                  [_.InEditor]: !0,
                   [_.InEditor]: !0,
                   [_.LivePreview]: _,
                   [_.JumpedTo]: _,
@@ -59525,34 +59608,40 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Name,
+                  className: _.PurchaseOnlyNameCtn,
                 },
-                _.GetName(),
-              ),
-              Boolean(!_ && 10 != _.GetAppType()) &&
                 _.createElement(
                   "div",
                   {
-                    className: _._,
+                    className: _.Name,
                   },
-                  _.createElement(_._, {
-                    item: __webpack_require__,
-                  }),
-                  Boolean(
-                    _ &&
-                      0 == (null == _ ? void 0 : _.GetStoreItemType()) &&
-                      _.GetPlatforms(),
-                  ) &&
-                    _.createElement(_._, {
-                      className: _.DeckCompatIcon,
-                      category: _.GetPlatforms().steam_deck_compat_category,
-                    }),
+                  _.GetName(),
                 ),
+              ),
               _.createElement(
                 "div",
                 {
-                  className: _.Purchase,
+                  className: _.PurchaseAndPlatformCtn,
                 },
+                Boolean(!_ && 10 != _.GetAppType()) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _._,
+                    },
+                    _.createElement(_._, {
+                      item: __webpack_require__,
+                    }),
+                    Boolean(
+                      _ &&
+                        0 == (null == _ ? void 0 : _.GetStoreItemType()) &&
+                        _.GetPlatforms(),
+                    ) &&
+                      _.createElement(_._, {
+                        className: _.DeckCompatIcon,
+                        category: _.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
                 _.createElement(_._, {
                   info: __webpack_require__,
                   className: _.PurchaseOnlyActionCtn,

@@ -393,8 +393,10 @@
             _ = await _._.ReadFile(_),
             _ = _.parseFromString(_.toString(), "application/xml");
           for (let _ = 0; _ < _.documentElement.children.length; ++_) {
-            const _ = _.documentElement.children.item(_),
-              _ = _.getAttribute("id").toLocaleLowerCase(),
+            const _ = _.documentElement.children.item(_);
+            if (!_.getAttribute("id"))
+              throw "Can not find id for element. Probably malformed XML";
+            const _ = _.getAttribute("id").toLocaleLowerCase(),
               _ = _.textContent;
             __webpack_require__.SetLocalization(_, _, _);
           }

@@ -21,18 +21,18 @@
         a = t.n(n),
         s = t(89068),
         o = t(56545);
-      class l extends n.Message {
+      class d extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            l.prototype.recommendationid || s.Sg(l.M()),
+            d.prototype.recommendationid || s.Sg(d.M()),
             n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
                 fields: {
                   recommendationid: {
                     n: 1,
@@ -69,57 +69,20 @@
                   },
                 },
               }),
-            l.sm_m
+            d.sm_m
           );
         }
         static MBF() {
-          return l.sm_mbf || (l.sm_mbf = s.w0(l.M())), l.sm_mbf;
-        }
-        toObject(e = !1) {
-          return l.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return s.BT(l.M(), e, r);
-        }
-        static fromObject(e) {
-          return s.Uq(l.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (a().BinaryReader)(e),
-            t = new l();
-          return l.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return s.zj(l.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          s.i0(l.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserReviews_Update_Request";
-        }
-      }
-      class d extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), n.Message.initialize(this, e, 0, -1, void 0, null);
+          return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
         }
         toObject(e = !1) {
           return d.toObject(e, this);
         }
         static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
+          return s.BT(d.M(), e, r);
         }
         static fromObject(e) {
-          return new d();
+          return s.Uq(d.M(), e);
         }
         static deserializeBinary(e) {
           let r = new (a().BinaryReader)(e),
@@ -127,16 +90,53 @@
           return d.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return e;
+          return s.zj(d.MBF(), e, r);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
           return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {}
+        static serializeBinaryToWriter(e, r) {
+          s.i0(d.M(), e, r);
+        }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Update_Request";
+        }
+      }
+      class l extends n.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), n.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return l.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new l();
+        }
+        static deserializeBinary(e) {
+          let r = new (a().BinaryReader)(e),
+            t = new l();
+          return l.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_Update_Response";
@@ -206,7 +206,7 @@
         constructor(e = null) {
           super(),
             m.prototype.recommendationid || s.Sg(m.M()),
-            n.Message.initialize(this, e, 0, -1, [27, 40], null);
+            n.Message.initialize(this, e, 0, -1, [27, 40, 52], null);
         }
         static M() {
           return (
@@ -439,6 +439,14 @@
                     n: 51,
                     br: s.qM.readUint32,
                     bw: s.gp.writeUint32,
+                  },
+                  tags: {
+                    n: 52,
+                    r: !0,
+                    q: !0,
+                    br: s.qM.readUint32,
+                    pbr: s.qM.readPackedUint32,
+                    bw: s.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -768,7 +776,7 @@
       }
       !(function (e) {
         (e.Update = function (e, r) {
-          return e.SendMsg("UserReviews.Update#1", (0, o.I8)(l, r), d, {
+          return e.SendMsg("UserReviews.Update#1", (0, o.I8)(d, r), l, {
             ePrivilege: 3,
           });
         }),
@@ -810,11 +818,11 @@
       const o = ({ nPercent: e, size: r = 120, strokeWidth: t = 20 }) => {
         const s = (r - t) / 2,
           o = 2 * Math.PI * s,
-          l = o - (e / 100) * o,
-          d = 100 == e;
+          d = o - (e / 100) * o,
+          l = 100 == e;
         return i.createElement(
           "div",
-          { className: (0, n.A)({ [a.Circular]: !0, [a.Full]: d }) },
+          { className: (0, n.A)({ [a.Circular]: !0, [a.Full]: l }) },
           i.createElement(
             "svg",
             { width: r, height: r, style: { transform: "rotate(-90deg)" } },
@@ -834,7 +842,7 @@
               strokeWidth: t,
               fill: "none",
               strokeDasharray: o,
-              strokeDashoffset: l,
+              strokeDashoffset: d,
               style: { transition: "stroke-dashoffset 0.3s ease-in-out" },
             }),
           ),

@@ -246,6 +246,7 @@
       _.Message;
       _.Message;
       _.Message;
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {

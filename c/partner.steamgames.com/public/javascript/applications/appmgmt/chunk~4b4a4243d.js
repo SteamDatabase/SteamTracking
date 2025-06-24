@@ -4,34 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
-        AppDashboard: "_3AZIiEfg9ySoDT99t5sFmp",
-        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
-        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
-        DashStatsContainer: "_2pZUWz9doUUVgJTIiA_5qb",
-        Chart: "_2z00NeTIYdtaDdJPVZrLm2",
-        Stats: "_2jxzC1AyBA_xxpsnV5l1uW",
-        StatsTitle: "UzSNxw8oOZZcgW8SXBp54",
-        StatSubtitle: "_24k9yBmCwJ4zrfjtg4_A3D",
-        Concurrent: "_3W_8ES3hX7fVooWDlaL9Q-",
-        Now: "_2QJ6AbiOJ3XddtA1cOYnCp",
-        CurrentStats: "_4ImisFVqyptwO9u0G6-0g",
-        TooltipPartnerSummary: "_2WuiD5rL3fQXyAI5CXaOiX",
-        LineItemsCtn: "_2Vj424_xUjyMnNmBpDenLi",
-        ToolTipTable: "_1CBlLckQLSqavhG2S5qNYb",
-        ToolTipTableRow: "_1hcQcqAFKPCYQUGtHIcGn4",
-        TotalRow: "_1esRSJn8rPckHux_JS4iQg",
-        ToolTipTableCell: "iIyyn73ITYmBOzqghT5NY",
-        LeftAlign: "mgkgnb7LlDnVJwX6L29YM",
-        ModuleTitle: "_1_qWSYHWj0MC9ivPG5LNEJ",
-        ViewDetailLink: "_3LC92YRlgqBty5woF3CakT",
-        StatGroup: "_2H61dmCW7zg12hj9OKWviV",
-        Header: "gpt4bNGeQpWFC9R3TR6gU",
-        Numerals: "_1aa9BSk_Qolo1ZpNuEGUqD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Results: "_3mK1PrFPrbrn2M-BbAWsmL",
         LoadingContainer: "K7yNfrxTJs0QuoFtUfy0z",
         ResultRow: "_1QyQulOsH0dGeFUVgSa9ki",
@@ -45,14 +17,56 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
-        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
+        Bold: "_3cln317VYhwhE1fSeMCG48",
+        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
+        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
+        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
+        Header2: "_6-VR2WCBCDupCcUN5INQM",
+        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
+        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
+        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
+        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
+        SmallText: "WBzrd438Bd8Z3J-j_iglW",
+        Underline: "GrhFWtBdrSZP611s1UqqT",
+        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
+        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
+        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
+        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
+        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
+        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
+        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
+        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
+        Code: "_2ODaX8lO7DKLKke76c2Wya",
+        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
+        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
+        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
+        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
+        _: "-xPK0REpludHjRG8xQfih",
+        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
+        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
+        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
+        TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
+        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
+        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
+        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
+        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
+        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
+        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
+        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
+        Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
+        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
+        CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
+        CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
+        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
     },
     chunkid: (module) => {
@@ -268,95 +282,6 @@
         include_basic_info: !0,
         include_release: !0,
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_steamInterface;
-        GetPromotionTransport() {
-          return this.m_steamInterface;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-            _.s_Singleton
-          );
-        }
-        Init() {
-          const _ = (0, _._)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          (0, _._)(Boolean(_), "require partnerbrowse_webapi_token"),
-            (this.m_steamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
-      }
-      function _(_) {
-        const _ = _.Get().GetPromotionTransport().GetServiceTransport(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        return _._.getQueryData(["StoreItemCountryRestriction", (0, _._)(_)]);
-      }
-      const _ = _.createContext({
-        loadStoreItemCountryRestriction: async (_, _) =>
-          await (function (_) {
-            _ ||
-              (_ = new (_())(
-                async (_) => {
-                  const _ = _._.Init(_._);
-                  __webpack_require__
-                    .Body()
-                    .set_ids(_.map((_) => _._.fromObject(_)));
-                  const _ = await _._.GetCountryRestrictions(_, _);
-                  if (!_.BSuccess())
-                    throw `Failed to call store Item Country Restriction with details: ${_.GetErrorMessage()}`;
-                  const _ = new Map();
-                  return (
-                    _.Body()
-                      .results()
-                      .forEach((_) => {
-                        const _ = _.toObject();
-                        _.set((0, _._)(_._), _);
-                      }),
-                    _.map((_) => _.get((0, _._)(_)) ?? null)
-                  );
-                },
-                {
-                  maxBatchSize: 100,
-                  cache: !1,
-                },
-              ));
-            return _;
-          })(_).load(_),
-      });
-      function _(_, _, _) {
-        return {
-          queryKey: ["StoreItemCountryRestriction", (0, _._)(_)],
-          queryFn: () => _.loadStoreItemCountryRestriction(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -686,49 +611,6 @@
         for (let _ = 0; _ < _.length; _++) _ = _.charCodeAt(_) + ((_ << 5) - _);
         return `hsl(${_ % 360}, ${50 + (_ % 50)}%, ${40 + (_ % 30)}%, 0.25)`;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(_, _) {
-        const _ = new Date(1e3 * _),
-          _ = _ ? new Date(1e3 * _) : new Date(_);
-        _ || _.setDate(__webpack_require__.getDate() + 6);
-        const _ = __webpack_require__.toLocaleString("en-US", {
-            month: "short",
-          }),
-          _ = __webpack_require__.getDate(),
-          _ = _.toLocaleString("en-US", {
-            month: "short",
-          }),
-          _ = _.getDate();
-        return _ === _ ? `${_} ${_} - ${_}` : `${_} ${_} - ${_} ${_}`;
-      }
-      function _(_) {
-        let _ = _(_);
-        return _.endsWith("M") || _.endsWith("K")
-          ? `$${_}`
-          : new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-            }).format(Number(_));
-      }
-      function _(_) {
-        let _;
-        return (
-          (_ =
-            Math.abs(_) >= 1e6
-              ? (_ / 1e6).toFixed(1) + "M"
-              : Math.abs(_) >= 1e3
-                ? (_ / 1e3).toFixed(1) + "K"
-                : _.toFixed(2)),
-          _
-        );
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1724,88 +1606,6 @@
           })
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          color: this.props.color || "rgba(255, 255, 255, 1)",
-        };
-        static GetColorString(_) {
-          return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-        }
-        OnColorChange(_) {
-          const _ = _.GetColorString(_);
-          this.setState({
-            color: _,
-          }),
-            this.props.onChange(_);
-        }
-        async OnEyedropperClick() {
-          if ("EyeDropper" in window)
-            try {
-              const _ = new window.EyeDropper(),
-                _ = (await _.open()).sRGBHex,
-                _ = this.hexToRgba(_);
-              this.setState({
-                color: _,
-              }),
-                this.props.onChange(_);
-            } catch (_) {
-              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
-            }
-          else alert((0, _._)("#Sale_EyeDropperError"));
-        }
-        hexToRgba(_) {
-          const _ = parseInt(_.slice(1), 16);
-          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
-        }
-        render() {
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(_._, {
-              onChange: this.OnColorChange,
-              color: this.state.color,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().EyeDropperCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().EyeDropperBtn,
-                    onClick: this.OnEyedropperClick,
-                  },
-                  _.createElement(_.O7b, null),
-                ),
-              ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnColorChange", null),
-        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

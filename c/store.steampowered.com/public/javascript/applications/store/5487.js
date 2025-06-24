@@ -2196,6 +2196,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  review_score_outliers_preference: {
+                    _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m

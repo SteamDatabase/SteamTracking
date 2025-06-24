@@ -1658,9 +1658,32 @@ body.v6 .game_description_column h2.gradientbg {
 	margin-bottom: 6px;
 }
 
-.game_area_description img.bb_img,
-.game_area_description video.bb_img {
+.game_area_description .bb_img_ctn {
+	position: relative;
+}
+
+.game_area_description .bb_img {
 	max-width: 100%;
+}
+
+/* default hidden play icon */
+.game_area_description .bb_img_ctn::after {
+	content: '▶';
+	display: none;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 20px;
+	padding: 6px 6px 6px 10px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+/* show when paused class is applied */
+.game_area_description .bb_img_ctn.paused::after {
+	display: block;
 }
 
 body.v6 .game_area_description h2.bb_tag {
@@ -6567,8 +6590,7 @@ a.open_in_steam_body:hover {
     height: 10px;
 }
 
-.mask_images .game_area_description img.bb_img
-.mask_images .game_area_description video.bb_img {
+.mask_images .game_area_description .bb_img {
 	filter: blur(30px);
 	clip-path: inset(0);	}
 
@@ -6648,6 +6670,7 @@ a.open_in_steam_body:hover {
 
 .widestore img.game_header_image_full {
 	width: 375px;
+	height: unset;
 }
 
 .widestore .game_description_snippet {

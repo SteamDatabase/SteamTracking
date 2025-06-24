@@ -1217,7 +1217,7 @@
         (0, _.Cg)([ae.oI], _e.prototype, "GotoDiscussion", null),
         (0, _.Cg)([ae.oI], _e.prototype, "OpenRepostDialogs", null),
         (_e = (0, _.Cg)([E.PA], _e));
-      var ge = n(72811),
+      var ge = n(20688),
         Se = n(65946),
         ve = n(36148),
         Ce = n(12247),
@@ -1849,23 +1849,23 @@
         Le = n(76684),
         Pe = n(27543);
       function ke(e) {
-        const { event: t, dateRangeLayout: n = "horizontal" } = e,
-          [a, o, s] = (0, Se.q3)(() => [
-            t.GetStartTimeAndDateUnixSeconds(),
-            t.GetEndTimeAndDateUnixSeconds(),
-            t.type,
+        const { id: t, event: n, dateRangeLayout: a = "horizontal" } = e,
+          [o, s, i] = (0, Se.q3)(() => [
+            n.GetStartTimeAndDateUnixSeconds(),
+            n.GetEndTimeAndDateUnixSeconds(),
+            n.type,
           ]),
-          i = {};
+          l = {};
         return (
-          "vertical" == n && (i.ShortDateRange = Ge().VerticalLocalDateAndTime),
+          "vertical" == a && (l.ShortDateRange = Ge().VerticalLocalDateAndTime),
           r.createElement(
             "div",
-            { className: Ge().EventDetailTimeInfo },
+            { id: t, className: Ge().EventDetailTimeInfo },
             r.createElement(Le.u1, {
-              startDateAndTime: a,
-              endDateAndTime: o,
-              bHideEndTime: !(0, Pe.JS)(s),
-              stylesmodule: i,
+              startDateAndTime: o,
+              endDateAndTime: s,
+              bHideEndTime: !(0, Pe.JS)(i),
+              stylesmodule: l,
             }),
           )
         );

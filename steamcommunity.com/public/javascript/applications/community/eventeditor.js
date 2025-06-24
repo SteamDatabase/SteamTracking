@@ -3527,7 +3527,7 @@
         Ut = a(65946),
         qt = a(31561),
         Vt = a(67165),
-        Qt = a(87010),
+        Qt = a(26161),
         Wt = a(84106),
         Yt = a(9449),
         Jt = a(2472),
@@ -12914,7 +12914,7 @@
             so.O.HintLoad();
           }, []);
           if (!P.KN.Get().BShowEmailEditorTab(t.GetEventModel())) return null;
-          const a = (0, Qt.H7)() !== t.GetClanAccountID();
+          const a = (0, Qt.H)() !== t.GetClanAccountID();
           return c.createElement(
             c.Fragment,
             null,
@@ -12975,7 +12975,7 @@
                 c.createElement(
                   tt.tH,
                   null,
-                  Boolean((0, Qt.H7)() === t.GetClanAccountID())
+                  Boolean((0, Qt.H)() === t.GetClanAccountID())
                     ? c.createElement(_o, { editModel: t })
                     : c.createElement(
                         c.Fragment,
@@ -14773,7 +14773,7 @@
           (0, w.pg)(
             c.createElement(Ze.i, {
               editModel: t,
-              bUnlistedMode: r.GetAccountID() == (0, Qt.H7)(),
+              bUnlistedMode: r.GetAccountID() == (0, Qt.H)(),
               OnPublishSuccess: () => o(!0),
               partnerEventEditorStore: l.mh,
             }),
@@ -14847,7 +14847,7 @@
                     }),
                   ),
                 ),
-                Boolean((0, Qt.H7)() != t.GetClanAccountID()) &&
+                Boolean((0, Qt.H)() != t.GetClanAccountID()) &&
                   c.createElement(
                     x.$n,
                     {
@@ -15884,7 +15884,7 @@
               name: (0, I.we)("#Broadcast_tab"),
               key: "broadcast",
               hidden:
-                !G.UF.CAN_UPLOAD_IMAGES || i.GetClanAccountID() == (0, Qt.H7)(),
+                !G.UF.CAN_UPLOAD_IMAGES || i.GetClanAccountID() == (0, Qt.H)(),
               vo_warning: o() && (0, I.we)("#EventEditor_CuratorImageWarning"),
               contents: c.createElement(
                 tt.tH,
@@ -15900,7 +15900,7 @@
               key: "email",
               hidden: d,
               status:
-                i.GetClanAccountID() == (0, Qt.H7)()
+                i.GetClanAccountID() == (0, Qt.H)()
                   ? c.createElement(lr, { fnGetStatus: zt.ER })
                   : void 0,
               contents: c.createElement(

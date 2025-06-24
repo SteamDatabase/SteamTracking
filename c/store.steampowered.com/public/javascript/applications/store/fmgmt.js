@@ -18,6 +18,24 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
+        ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
+        MeBadge: "_2W_HQa5Rhf-hHITgV5H0bu",
+        PlayerName: "AdQYbMq7HHJ3Jgljib9UX",
+        RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
+        RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
+        FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
+        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
+        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
+        ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
+        Selected: "r0ToHd0tmv46GM00Lr0a_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         strBarForegroundColor: "#1a9fff",
@@ -446,6 +464,226 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(_.d1w, null);
+      }
+      function _(_) {
+        return _.createElement(_.Bir, null);
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.RoleIcon, _.className),
+          },
+          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
+        );
+      }
+      function _(_) {
+        const { steamid: _ } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.data?.get(new _._(_).GetAccountID()),
+          _ = _.data?.preferences().parenthesize_nicknames();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.data?.m_strPlayerName || " ",
+          " ",
+          _ &&
+            _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.playerNickname,
+              },
+              "(",
+              _,
+              ")",
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            strSteamID: _,
+            role: __webpack_require__,
+            persona: _,
+            isSelf: _,
+          } = _,
+          _ = new _._(_);
+        let _ = _.size || "Large";
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.data?.get(_.GetAccountID()),
+          _ = _.data?.preferences().parenthesize_nicknames();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "a",
+            {
+              className: _.ProfileLink,
+              href: _.GetCommunityProfileURL(),
+              onClick: (_) => {
+                _.stopPropagation();
+              },
+            },
+            _.createElement(_._, {
+              className: _.Avatar,
+              persona: _,
+              size: _,
+              statusPosition: "right",
+            }),
+            _.createElement(_._, {
+              className: _.PlayerName,
+              bIsSelf: _,
+              bHideStatus: !1,
+              bHidePersona: !1,
+              bParenthesizeNicknames: _,
+              bCompactView: !1,
+              persona: _,
+              strNickname: _,
+              eFriendRelationship: 3,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.RoleAndIcon,
+            },
+            _.createElement(_, {
+              className: _.ProfileRoleIcon,
+              role: __webpack_require__,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.RoleName,
+              },
+              (0, _._)(`#FamilyManagement_Role_${__webpack_require__}`),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = (0, _.useContext)(_._);
+        return _.errorMessage
+          ? _.createElement(
+              "div",
+              {
+                className: _.FamilyErrorDisplay,
+              },
+              _.errorMessage,
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            strSteamID: _,
+            role: __webpack_require__,
+            bInvitePending: _,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = _ == _,
+          _ = (0, _._)(_);
+        if (
+          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          !_.isSuccess)
+        )
+          return null;
+        const _ = _.data;
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(
+              _.FamilyMemberRow,
+              _ && _.ActiveFamilyMemberRow,
+            ),
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.FamilyMemberRowTop,
+              onActivate: _ ? () => _(!_) : void 0,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.Left,
+              },
+              _.createElement(_, {
+                strSteamID: _,
+                role: __webpack_require__,
+                persona: _,
+                isSelf: _,
+              }),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.InvitePending,
+                  },
+                  (0, _._)("#FamilyManagement_InvitePending"),
+                ),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.MeBadge,
+                  },
+                  (0, _._)("#FamilyManagement_Me"),
+                ),
+            ),
+            _ &&
+              _.createElement(_, {
+                bExpanded: _,
+                setExpanded: _,
+              }),
+          ),
+          _ && _,
+        );
+      }
+      function _(_) {
+        const { bExpanded: _, setExpanded: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
+            onClick: () => __webpack_require__(!_),
+          },
+          _.createElement(_.b8_, {
+            direction: "down",
+          }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -568,6 +806,31 @@
             );
           }, [__webpack_require__]);
         return _ ? null : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["communitypreferences"],
+          queryFn: async () => {
+            const _ = _._.Init(_._),
+              _ = await _._.GetCommunityPreferences(_, _);
+            if (1 != __webpack_require__.GetEResult())
+              throw new Error(
+                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+              );
+            return __webpack_require__.Body();
+          },
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

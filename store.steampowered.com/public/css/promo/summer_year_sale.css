@@ -11,7 +11,7 @@ body.v6.sale_summer2025 .responsive_page_template_content {
             }
 
 body.v6.sale_summer2025 .home_page_takeover_sizer {
-                max-height: 520px;
+                max-height: 420px;
                 height: 55vw;
             }
 
@@ -600,7 +600,7 @@ body.v6.sale_summer2025 .sale_capsule_carousel .carousel_items > * {
 /* ================================================= */
 /* FOR HOMEPAGE SECTIONS WITH A BACKGROUND */
 .home_pagecontent_ctn .ctn_background .home_section_title {
-	padding: 12px 24px 0 24px;
+	padding: 24px 24px 0 24px;
 }
 
 .home_pagecontent_ctn .ctn_background .home_section_button {

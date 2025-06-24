@@ -750,6 +750,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -787,146 +788,175 @@
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_A"),
             });
           case _._._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_B"),
             });
           case _._._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_X"),
             });
           case _._._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_Y"),
             });
           case _._.Left:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_DpadLeft"),
             });
           case _._.Right:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_DpadRight"),
             });
           case _._._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_DpadUp"),
             });
           case _._.Down:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_DpadDown"),
             });
           case _._.HomeMenu:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_Steam"),
             });
           case _._.QuickMenu:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_QAM"),
             });
           case _._.Select:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_View"),
             });
           case _._.Start:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_Menu"),
             });
           case _._.LeftBumper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_L1"),
             });
           case _._.RightBumper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_R1"),
             });
           case _._.LeftTrigger:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_L2"),
             });
           case _._.RightTrigger:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_R2"),
             });
           case _._.LeftStick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_LS"),
             });
           case _._.RightStick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_RS"),
             });
           case _._.LeftStickClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_L3"),
             });
           case _._.RightStickClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_R3"),
             });
           case _._.LeftTrackpad:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_LPad"),
             });
           case _._.RightTrackpad:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_RPad"),
             });
           case _._.LeftTrackpadClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_LPad_Click"),
             });
           case _._.RightTrackpadClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_RPad_Click"),
             });
           case _._.RearLeftUpper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_L4"),
             });
           case _._.RearRightUpper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_R4"),
             });
           case _._.RearLeftLower:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_L5"),
             });
           case _._.RearRightLower:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_R5"),
             });
           default:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
+              "aria-label": (0, _._)("#ControllerButton_Default"),
             });
         }
       }

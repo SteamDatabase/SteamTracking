@@ -3176,7 +3176,6 @@ https://store.steampowered.com/account/languagepreferences/
 https://store.steampowered.com/account/preferences
 https://store.steampowered.com/account/preferences/
 https://store.steampowered.com/account/savesearchpreferences
-https://store.steampowered.com/account/saveuserreviewscorepreference
 https://store.steampowered.com/account/setlanguage/
 https://store.steampowered.com/account/updateshippingaddress/
 https://store.steampowered.com/actions/ReportAbuse/

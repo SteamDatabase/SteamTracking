@@ -9,8 +9,8 @@
         DeviceGroup: "_2mir-ym1kKS06jV0W7mtUx",
         AuthorizedDevicesRecentHeader: "_35lIIoiD4gnKLmNL3H9zAo",
         RememberedDevice: "_2gQ1ywJDhv3qFFjvjtt39w",
-        RevokedDevice: "_22EU1rJVczbjFuV39qprXh",
         DeviceLogo: "_3u6D3tBNr6Pd8scEAu0WHh",
+        RevokedDevice: "_22EU1rJVczbjFuV39qprXh",
         DeviceContainer: "_173r5KvavKBUk01FwZftvC",
         ActiveDevice: "_2eItHkwsCAtMw7E-EF_YG_",
         ThisDevice: "_3o3paJd8GOTYKXh7Rd3Br8",
@@ -152,6 +152,103 @@
         }
         return _.createElement(_.Fragment, null, _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _._.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)({
+          queries: _.map((_) => _(_, _, _)),
+        });
+      }
+      const _ = _.createContext({
+        loadPersonaState: async (_, _) => {
+          if (null == _) return null;
+          const _ = await (function (_) {
+            return (_ ??= _(_));
+          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
+          return (function (_, _) {
+            let _ = new _._(_);
+            const _ = _?.public_data,
+              _ = _?.private_data;
+            (_.m_bInitialized = !!_),
+              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_strAvatarHash = _?.sha_digest_avatar
+                ? (0, _._)(_.sha_digest_avatar)
+                : _._),
+              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
+              (_.m_strAccountName = _?.account_name),
+              _?.persona_state_flags &&
+                (_.m_unPersonaStateFlags = _?.persona_state_flags);
+            _?.game_id && (_.m_gameid = _?.game_id);
+            _?.game_server_ip_address &&
+              (_.m_unGameServerIP = _?.game_server_ip_address);
+            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
+            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
+            _?.profile_url && (_.m_strProfileURL = _.profile_url);
+            return _;
+          })(_._.InitFromAccountID(_), _);
+        },
+      });
+      function _() {
+        return _.useContext(_);
+      }
+      function _(_, _, _) {
+        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
+        return {
+          queryKey: ["PlayerSummary", _],
+          queryFn: () => _.loadPersonaState(_, _),
+          enabled: !!_,
+        };
+      }
+      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1597,10 +1694,7 @@
           _ = [];
         for (const _ of _.GetActiveDevices()) {
           const _ = _.logged_in && _.last_seen?.time > _ - 900,
-            _ =
-              5 == _.effective_token_state
-                ? _.RememberedDevice
-                : _.CurrentlyAuthorizedDevice,
+            _ = 5 == _.effective_token_state ? _.RememberedDevice : null,
             _ = _.createElement(_, {
               className: _,
               device: _,
@@ -2038,12 +2132,20 @@
             _.first_seen?.time &&
             _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3,
           _ = 5 == _.effective_token_state;
-        return _.createElement(
-          "div",
-          {
-            className: _.LastSeenRow,
-          },
-          !!_.last_seen?.time &&
+        let _ = (0, _._)(
+          "#accountpreferences_authorized_devices_last_seen_max",
+        );
+        return (
+          _.last_seen?.time
+            ? (_ = (0, _._)(_.last_seen.time))
+            : _.time_updated &&
+              _.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
+              (_ = (0, _._)(_.time_updated)),
+          _.createElement(
+            "div",
+            {
+              className: _.LastSeenRow,
+            },
             _.createElement(
               "div",
               null,
@@ -2056,7 +2158,7 @@
                   "#accountpreferences_authorized_devices_last_seen_title",
                 ),
               ),
-              (0, _._)(_.last_seen.time),
+              _,
               _ &&
                 _.createElement(
                   "span",
@@ -2069,22 +2171,23 @@
                   ),
                 ),
             ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _.NewDevice,
-              },
-              (0, _._)(
-                "#accountpreferences_authorized_devices_new_device",
-                _.createElement("a", {
-                  href: _._.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
-                  onClick: (_) => {
-                    _.stopPropagation();
-                  },
-                }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.NewDevice,
+                },
+                (0, _._)(
+                  "#accountpreferences_authorized_devices_new_device",
+                  _.createElement("a", {
+                    href: _._.HELP_BASE_URL + "wizard/HelpWithAccountStolen",
+                    onClick: (_) => {
+                      _.stopPropagation();
+                    },
+                  }),
+                ),
               ),
-            ),
+          )
         );
       }
       function _(_) {
@@ -2775,6 +2878,7 @@
       })(_ || (_ = {}));
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

@@ -235,6 +235,7 @@
       p.Message;
       p.Message;
       p.Message;
+      p.Message;
       class M extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {

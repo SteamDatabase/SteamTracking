@@ -4,29 +4,29 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2156],
   {
-    82715: (t, e, n) => {
-      n.d(e, { tH: () => Q });
-      const s = "8.27.0",
-        o = globalThis;
-      function i(t, e, n) {
-        const i = n || o,
-          r = (i.__SENTRY__ = i.__SENTRY__ || {}),
-          c = (r[s] = r[s] || {});
-        return c[t] || (c[t] = e());
+    82715: (t, e, s) => {
+      s.d(e, { tH: () => J });
+      const n = "8.27.0",
+        i = globalThis;
+      function r(t, e, s) {
+        const r = s || i,
+          o = (r.__SENTRY__ = r.__SENTRY__ || {}),
+          a = (o[n] = o[n] || {});
+        return a[t] || (a[t] = e());
       }
-      function r() {
-        return c(o), o;
+      function o() {
+        return a(i), i;
       }
-      function c(t) {
+      function a(t) {
         const e = (t.__SENTRY__ = t.__SENTRY__ || {});
-        return (e.version = e.version || s), (e[s] = e[s] || {});
+        return (e.version = e.version || n), (e[n] = e[n] || {});
       }
-      const a = Object.prototype.toString;
-      function u(t, e) {
-        return a.call(t) === `[object ${e}]`;
+      const c = Object.prototype.toString;
+      function h(t, e) {
+        return c.call(t) === `[object ${e}]`;
       }
-      function h(t) {
-        return u(t, "Object");
+      function u(t) {
+        return h(t, "Object");
       }
       function p(t, e) {
         try {
@@ -35,71 +35,71 @@
           return !1;
         }
       }
-      function _() {
-        const t = o,
+      function l() {
+        const t = i,
           e = t.crypto || t.msCrypto;
-        let n = () => 16 * Math.random();
+        let s = () => 16 * Math.random();
         try {
           if (e && e.randomUUID) return e.randomUUID().replace(/-/g, "");
           e &&
             e.getRandomValues &&
-            (n = () => {
+            (s = () => {
               const t = new Uint8Array(1);
               return e.getRandomValues(t), t[0];
             });
         } catch (t) {}
         return ([1e7] + 1e3 + 4e3 + 8e3 + 1e11).replace(/[018]/g, (t) =>
-          (t ^ ((15 & n()) >> (t / 4))).toString(16),
+          (t ^ ((15 & s()) >> (t / 4))).toString(16),
         );
       }
-      function l() {
-        return { traceId: _(), spanId: _().substring(16) };
+      function d() {
+        return { traceId: l(), spanId: l().substring(16) };
       }
-      const d = 1e3;
+      const _ = 1e3;
       function f() {
-        return Date.now() / d;
+        return Date.now() / _;
       }
       const g = (function () {
-        const { performance: t } = o;
+        const { performance: t } = i;
         if (!t || !t.now) return f;
         const e = Date.now() - t.now(),
-          n = null == t.timeOrigin ? e : t.timeOrigin;
-        return () => (n + t.now()) / d;
+          s = null == t.timeOrigin ? e : t.timeOrigin;
+        return () => (s + t.now()) / _;
       })();
       let m;
       (() => {
-        const { performance: t } = o;
+        const { performance: t } = i;
         if (!t || !t.now) return void (m = "none");
         const e = 36e5,
-          n = t.now(),
-          s = Date.now(),
-          i = t.timeOrigin ? Math.abs(t.timeOrigin + n - s) : e,
-          r = i < e,
-          c = t.timing && t.timing.navigationStart,
-          a = "number" == typeof c ? Math.abs(c + n - s) : e;
-        r || a < e
-          ? i <= a
+          s = t.now(),
+          n = Date.now(),
+          r = t.timeOrigin ? Math.abs(t.timeOrigin + s - n) : e,
+          o = r < e,
+          a = t.timing && t.timing.navigationStart,
+          c = "number" == typeof a ? Math.abs(a + s - n) : e;
+        o || c < e
+          ? r <= c
             ? ((m = "timeOrigin"), t.timeOrigin)
             : (m = "navigationStart")
           : (m = "dateNow");
       })();
       const S = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__,
         v = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-        y = {};
-      function b(t) {
-        if (!("console" in o)) return t();
-        const e = o.console,
-          n = {},
-          s = Object.keys(y);
-        s.forEach((t) => {
-          const s = y[t];
-          (n[t] = e[t]), (e[t] = s);
+        b = {};
+      function y(t) {
+        if (!("console" in i)) return t();
+        const e = i.console,
+          s = {},
+          n = Object.keys(b);
+        n.forEach((t) => {
+          const n = b[t];
+          (s[t] = e[t]), (e[t] = n);
         });
         try {
           return t();
         } finally {
-          s.forEach((t) => {
-            e[t] = n[t];
+          n.forEach((t) => {
+            e[t] = s[t];
           });
         }
       }
@@ -116,11 +116,11 @@
         };
         return (
           S
-            ? v.forEach((n) => {
-                e[n] = (...e) => {
+            ? v.forEach((s) => {
+                e[s] = (...e) => {
                   t &&
-                    b(() => {
-                      o.console[n](`Sentry Logger [${n}]:`, ...e);
+                    y(() => {
+                      i.console[s](`Sentry Logger [${s}]:`, ...e);
                     });
                 };
               })
@@ -130,7 +130,7 @@
           e
         );
       })();
-      function x(t, e = {}) {
+      function w(t, e = {}) {
         if (
           (e.user &&
             (!t.ipAddress &&
@@ -142,7 +142,7 @@
           (t.timestamp = e.timestamp || g()),
           e.abnormal_mechanism && (t.abnormal_mechanism = e.abnormal_mechanism),
           e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration),
-          e.sid && (t.sid = 32 === e.sid.length ? e.sid : _()),
+          e.sid && (t.sid = 32 === e.sid.length ? e.sid : l()),
           void 0 !== e.init && (t.init = e.init),
           !t.did && e.did && (t.did = `${e.did}`),
           "number" == typeof e.started && (t.started = e.started),
@@ -161,26 +161,26 @@
           "number" == typeof e.errors && (t.errors = e.errors),
           e.status && (t.status = e.status);
       }
-      function w(t, e, n) {
+      function x(t, e, s) {
         try {
           Object.defineProperty(t, e, {
-            value: n,
+            value: s,
             writable: !0,
             configurable: !0,
           });
-        } catch (n) {
+        } catch (s) {
           S &&
             E.log(`Failed to add non-enumerable property "${e}" to object`, t);
         }
       }
-      const I = "_sentrySpan";
-      function k(t, e) {
-        e ? w(t, I, e) : delete t[I];
+      const k = "_sentrySpan";
+      function I(t, e) {
+        e ? x(t, k, e) : delete t[k];
       }
-      function C(t) {
-        return t[I];
+      function O(t) {
+        return t[k];
       }
-      class $ {
+      class C {
         constructor() {
           (this._notifyingListeners = !1),
             (this._scopeListeners = []),
@@ -192,10 +192,10 @@
             (this._extra = {}),
             (this._contexts = {}),
             (this._sdkProcessingMetadata = {}),
-            (this._propagationContext = l());
+            (this._propagationContext = d());
         }
         clone() {
-          const t = new $();
+          const t = new C();
           return (
             (t._breadcrumbs = [...this._breadcrumbs]),
             (t._tags = { ...this._tags }),
@@ -213,7 +213,7 @@
             (t._propagationContext = { ...this._propagationContext }),
             (t._client = this._client),
             (t._lastEventId = this._lastEventId),
-            k(t, C(this)),
+            I(t, O(this)),
             t
           );
         }
@@ -243,7 +243,7 @@
               ip_address: void 0,
               username: void 0,
             }),
-            this._session && x(this._session, { user: t }),
+            this._session && w(this._session, { user: t }),
             this._notifyScopeListeners(),
             this
           );
@@ -316,30 +316,30 @@
         update(t) {
           if (!t) return this;
           const e = "function" == typeof t ? t(this) : t,
-            [n, s] =
-              e instanceof D
+            [s, n] =
+              e instanceof P
                 ? [e.getScopeData(), e.getRequestSession()]
-                : h(e)
+                : u(e)
                   ? [t, t.requestSession]
                   : [],
             {
-              tags: o,
-              extra: i,
-              user: r,
-              contexts: c,
-              level: a,
-              fingerprint: u = [],
+              tags: i,
+              extra: r,
+              user: o,
+              contexts: a,
+              level: c,
+              fingerprint: h = [],
               propagationContext: p,
-            } = n || {};
+            } = s || {};
           return (
-            (this._tags = { ...this._tags, ...o }),
-            (this._extra = { ...this._extra, ...i }),
-            (this._contexts = { ...this._contexts, ...c }),
-            r && Object.keys(r).length && (this._user = r),
-            a && (this._level = a),
-            u.length && (this._fingerprint = u),
+            (this._tags = { ...this._tags, ...i }),
+            (this._extra = { ...this._extra, ...r }),
+            (this._contexts = { ...this._contexts, ...a }),
+            o && Object.keys(o).length && (this._user = o),
+            c && (this._level = c),
+            h.length && (this._fingerprint = h),
             p && (this._propagationContext = p),
-            s && (this._requestSession = s),
+            n && (this._requestSession = n),
             this
           );
         }
@@ -355,21 +355,21 @@
             (this._fingerprint = void 0),
             (this._requestSession = void 0),
             (this._session = void 0),
-            k(this, void 0),
+            I(this, void 0),
             (this._attachments = []),
-            (this._propagationContext = l()),
+            (this._propagationContext = d()),
             this._notifyScopeListeners(),
             this
           );
         }
         addBreadcrumb(t, e) {
-          const n = "number" == typeof e ? e : 100;
-          if (n <= 0) return this;
-          const s = { timestamp: f(), ...t },
-            o = this._breadcrumbs;
+          const s = "number" == typeof e ? e : 100;
+          if (s <= 0) return this;
+          const n = { timestamp: f(), ...t },
+            i = this._breadcrumbs;
           return (
-            o.push(s),
-            (this._breadcrumbs = o.length > n ? o.slice(-n) : o),
+            i.push(n),
+            (this._breadcrumbs = i.length > s ? i.slice(-s) : i),
             this._notifyScopeListeners(),
             this
           );
@@ -400,7 +400,7 @@
             propagationContext: this._propagationContext,
             sdkProcessingMetadata: this._sdkProcessingMetadata,
             transactionName: this._transactionName,
-            span: C(this),
+            span: O(this),
           };
         }
         setSDKProcessingMetadata(t) {
@@ -419,47 +419,22 @@
           return this._propagationContext;
         }
         captureException(t, e) {
-          const n = e && e.event_id ? e.event_id : _();
+          const s = e && e.event_id ? e.event_id : l();
           if (!this._client)
             return (
               E.warn(
                 "No client configured on scope - will not capture exception!",
               ),
-              n
+              s
             );
-          const s = new Error("Sentry syntheticException");
+          const n = new Error("Sentry syntheticException");
           return (
             this._client.captureException(
               t,
               {
                 originalException: t,
-                syntheticException: s,
+                syntheticException: n,
                 ...e,
-                event_id: n,
-              },
-              this,
-            ),
-            n
-          );
-        }
-        captureMessage(t, e, n) {
-          const s = n && n.event_id ? n.event_id : _();
-          if (!this._client)
-            return (
-              E.warn(
-                "No client configured on scope - will not capture message!",
-              ),
-              s
-            );
-          const o = new Error(t);
-          return (
-            this._client.captureMessage(
-              t,
-              e,
-              {
-                originalException: t,
-                syntheticException: o,
-                ...n,
                 event_id: s,
               },
               this,
@@ -467,14 +442,39 @@
             s
           );
         }
+        captureMessage(t, e, s) {
+          const n = s && s.event_id ? s.event_id : l();
+          if (!this._client)
+            return (
+              E.warn(
+                "No client configured on scope - will not capture message!",
+              ),
+              n
+            );
+          const i = new Error(t);
+          return (
+            this._client.captureMessage(
+              t,
+              e,
+              {
+                originalException: t,
+                syntheticException: i,
+                ...s,
+                event_id: n,
+              },
+              this,
+            ),
+            n
+          );
+        }
         captureEvent(t, e) {
-          const n = e && e.event_id ? e.event_id : _();
+          const s = e && e.event_id ? e.event_id : l();
           return this._client
-            ? (this._client.captureEvent(t, { ...e, event_id: n }, this), n)
+            ? (this._client.captureEvent(t, { ...e, event_id: s }, this), s)
             : (E.warn(
                 "No client configured on scope - will not capture event!",
               ),
-              n);
+              s);
         }
         _notifyScopeListeners() {
           this._notifyingListeners ||
@@ -485,35 +485,35 @@
             (this._notifyingListeners = !1));
         }
       }
-      const D = $;
-      class L {
+      const P = C;
+      class R {
         constructor(t, e) {
-          let n, s;
-          (n = t || new D()),
-            (s = e || new D()),
-            (this._stack = [{ scope: n }]),
-            (this._isolationScope = s);
+          let s, n;
+          (s = t || new P()),
+            (n = e || new P()),
+            (this._stack = [{ scope: s }]),
+            (this._isolationScope = n);
         }
         withScope(t) {
           const e = this._pushScope();
-          let n;
+          let s;
           try {
-            n = t(e);
+            s = t(e);
           } catch (t) {
             throw (this._popScope(), t);
           }
           return (
-            (s = n),
-            Boolean(s && s.then && "function" == typeof s.then)
-              ? n.then(
+            (n = s),
+            Boolean(n && n.then && "function" == typeof n.then)
+              ? s.then(
                   (t) => (this._popScope(), t),
                   (t) => {
                     throw (this._popScope(), t);
                   },
                 )
-              : (this._popScope(), n)
+              : (this._popScope(), s)
           );
-          var s;
+          var n;
         }
         getClient() {
           return this.getStackTop().client;
@@ -535,54 +535,54 @@
           return !(this._stack.length <= 1) && !!this._stack.pop();
         }
       }
-      function R() {
-        const t = c(r());
+      function $() {
+        const t = a(o());
         return (t.stack =
           t.stack ||
-          new L(
-            i("defaultCurrentScope", () => new D()),
-            i("defaultIsolationScope", () => new D()),
+          new R(
+            r("defaultCurrentScope", () => new P()),
+            r("defaultIsolationScope", () => new P()),
           ));
       }
-      function N(t) {
-        return R().withScope(t);
+      function L(t) {
+        return $().withScope(t);
       }
       function j(t, e) {
-        const n = R();
-        return n.withScope(() => ((n.getStackTop().scope = t), e(t)));
+        const s = $();
+        return s.withScope(() => ((s.getStackTop().scope = t), e(t)));
       }
-      function U(t) {
-        return R().withScope(() => t(R().getIsolationScope()));
+      function D(t) {
+        return $().withScope(() => t($().getIsolationScope()));
       }
-      function T(t) {
-        const e = c(t);
+      function M(t) {
+        const e = a(t);
         return e.acs
           ? e.acs
           : {
-              withIsolationScope: U,
-              withScope: N,
+              withIsolationScope: D,
+              withScope: L,
               withSetScope: j,
-              withSetIsolationScope: (t, e) => U(e),
-              getCurrentScope: () => R().getScope(),
-              getIsolationScope: () => R().getIsolationScope(),
+              withSetIsolationScope: (t, e) => D(e),
+              getCurrentScope: () => $().getScope(),
+              getIsolationScope: () => $().getIsolationScope(),
             };
       }
-      function M() {
-        return T(r()).getCurrentScope();
+      function q() {
+        return M(o()).getCurrentScope();
       }
       new WeakMap();
-      function P(t) {
+      function N(t) {
         if (t)
           return (function (t) {
-            return t instanceof D || "function" == typeof t;
+            return t instanceof P || "function" == typeof t;
           })(t) ||
             (function (t) {
-              return Object.keys(t).some((t) => O.includes(t));
+              return Object.keys(t).some((t) => V.includes(t));
             })(t)
             ? { captureContext: t }
             : t;
       }
-      const O = [
+      const V = [
         "user",
         "level",
         "extra",
@@ -592,12 +592,12 @@
         "requestSession",
         "propagationContext",
       ];
-      function A() {
-        return T(r()).getIsolationScope().lastEventId();
+      function U() {
+        return M(o()).getIsolationScope().lastEventId();
       }
-      const B =
+      const K =
         /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
-      function q(t) {
+      function T(t) {
         return {
           protocol: t.protocol,
           publicKey: t.publicKey || "",
@@ -608,147 +608,147 @@
           projectId: t.projectId,
         };
       }
-      function Y(t) {
+      function Q(t) {
         const e =
           "string" == typeof t
             ? (function (t) {
-                const e = B.exec(t);
+                const e = K.exec(t);
                 if (!e)
-                  return void b(() => {
+                  return void y(() => {
                     console.error(`Invalid Sentry Dsn: ${t}`);
                   });
-                const [n, s, o = "", i = "", r = "", c = ""] = e.slice(1);
-                let a = "",
-                  u = c;
-                const h = u.split("/");
+                const [s, n, i = "", r = "", o = "", a = ""] = e.slice(1);
+                let c = "",
+                  h = a;
+                const u = h.split("/");
                 if (
-                  (h.length > 1 &&
-                    ((a = h.slice(0, -1).join("/")), (u = h.pop())),
-                  u)
+                  (u.length > 1 &&
+                    ((c = u.slice(0, -1).join("/")), (h = u.pop())),
+                  h)
                 ) {
-                  const t = u.match(/^\d+/);
-                  t && (u = t[0]);
+                  const t = h.match(/^\d+/);
+                  t && (h = t[0]);
                 }
-                return q({
-                  host: i,
-                  pass: o,
-                  path: a,
-                  projectId: u,
-                  port: r,
-                  protocol: n,
-                  publicKey: s,
+                return T({
+                  host: r,
+                  pass: i,
+                  path: c,
+                  projectId: h,
+                  port: o,
+                  protocol: s,
+                  publicKey: n,
                 });
               })(t)
-            : q(t);
+            : T(t);
         if (
           e &&
           (function (t) {
             if (!S) return !0;
-            const { port: e, projectId: n, protocol: s } = t;
+            const { port: e, projectId: s, protocol: n } = t;
             return !(
               ["protocol", "publicKey", "host", "projectId"].find(
                 (e) =>
                   !t[e] && (E.error(`Invalid Sentry Dsn: ${e} missing`), !0),
               ) ||
-              (n.match(/^\d+$/)
+              (s.match(/^\d+$/)
                 ? (function (t) {
                     return "http" === t || "https" === t;
-                  })(s)
+                  })(n)
                   ? e &&
                     isNaN(parseInt(e, 10)) &&
                     (E.error(`Invalid Sentry Dsn: Invalid port ${e}`), 1)
-                  : (E.error(`Invalid Sentry Dsn: Invalid protocol ${s}`), 1)
-                : (E.error(`Invalid Sentry Dsn: Invalid projectId ${n}`), 1))
+                  : (E.error(`Invalid Sentry Dsn: Invalid protocol ${n}`), 1)
+                : (E.error(`Invalid Sentry Dsn: Invalid projectId ${s}`), 1))
             );
           })(e)
         )
           return e;
       }
-      function G(t) {
+      function B(t) {
         const e = t.protocol ? `${t.protocol}:` : "",
-          n = t.port ? `:${t.port}` : "";
-        return `${e}//${t.host}${n}${t.path ? `/${t.path}` : ""}/api/`;
+          s = t.port ? `:${t.port}` : "";
+        return `${e}//${t.host}${s}${t.path ? `/${t.path}` : ""}/api/`;
       }
       const H = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__,
-        K = o;
-      function F(t = {}) {
-        if (!K.document)
+        W = i;
+      function A(t = {}) {
+        if (!W.document)
           return void (
             H && E.error("Global document not defined in showReportDialog call")
           );
-        const e = M(),
-          n = e.getClient(),
-          s = n && n.getDsn();
-        if (!s)
+        const e = q(),
+          s = e.getClient(),
+          n = s && s.getDsn();
+        if (!n)
           return void (
             H && E.error("DSN not configured for showReportDialog call")
           );
         if ((e && (t.user = { ...e.getUser(), ...t.user }), !t.eventId)) {
-          const e = A();
+          const e = U();
           e && (t.eventId = e);
         }
-        const o = K.document.createElement("script");
-        (o.async = !0),
-          (o.crossOrigin = "anonymous"),
-          (o.src = (function (t, e) {
-            const n = Y(t);
-            if (!n) return "";
-            const s = `${G(n)}embed/error-page/`;
-            let o = `dsn=${(function (t, e = !1) {
+        const i = W.document.createElement("script");
+        (i.async = !0),
+          (i.crossOrigin = "anonymous"),
+          (i.src = (function (t, e) {
+            const s = Q(t);
+            if (!s) return "";
+            const n = `${B(s)}embed/error-page/`;
+            let i = `dsn=${(function (t, e = !1) {
               const {
-                host: n,
-                path: s,
-                pass: o,
-                port: i,
-                projectId: r,
-                protocol: c,
-                publicKey: a,
+                host: s,
+                path: n,
+                pass: i,
+                port: r,
+                projectId: o,
+                protocol: a,
+                publicKey: c,
               } = t;
-              return `${c}://${a}${e && o ? `:${o}` : ""}@${n}${i ? `:${i}` : ""}/${s ? `${s}/` : s}${r}`;
-            })(n)}`;
+              return `${a}://${c}${e && i ? `:${i}` : ""}@${s}${r ? `:${r}` : ""}/${n ? `${n}/` : n}${o}`;
+            })(s)}`;
             for (const t in e)
               if ("dsn" !== t && "onClose" !== t)
                 if ("user" === t) {
                   const t = e.user;
                   if (!t) continue;
-                  t.name && (o += `&name=${encodeURIComponent(t.name)}`),
-                    t.email && (o += `&email=${encodeURIComponent(t.email)}`);
+                  t.name && (i += `&name=${encodeURIComponent(t.name)}`),
+                    t.email && (i += `&email=${encodeURIComponent(t.email)}`);
                 } else
-                  o += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
-            return `${s}?${o}`;
-          })(s, t)),
-          t.onLoad && (o.onload = t.onLoad);
-        const { onClose: i } = t;
-        if (i) {
+                  i += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
+            return `${n}?${i}`;
+          })(n, t)),
+          t.onLoad && (i.onload = t.onLoad);
+        const { onClose: r } = t;
+        if (r) {
           const t = (e) => {
             if ("__sentry_reportdialog_closed__" === e.data)
               try {
-                i();
+                r();
               } finally {
-                K.removeEventListener("message", t);
+                W.removeEventListener("message", t);
               }
           };
-          K.addEventListener("message", t);
+          W.addEventListener("message", t);
         }
-        const r = K.document.head || K.document.body;
-        r
-          ? r.appendChild(o)
+        const o = W.document.head || W.document.body;
+        o
+          ? o.appendChild(i)
           : H &&
             E.error(
               "Not injecting report dialog. No injection point found in HTML",
             );
       }
-      n(904);
-      var V = n(90626);
-      const W = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-      function z(t, { componentStack: e }, n) {
+      s(904);
+      var F = s(90626);
+      const Y = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+      function G(t, { componentStack: e }, s) {
         if (
           (function (t) {
             const e = t.match(/^([^.]+)/);
             return null !== e && parseInt(e[0]) >= 17;
-          })(V.version) &&
+          })(F.version) &&
           (function (t) {
-            switch (a.call(t)) {
+            switch (c.call(t)) {
               case "[object Error]":
               case "[object Exception]":
               case "[object DOMException]":
@@ -759,34 +759,34 @@
           })(t) &&
           e
         ) {
-          const n = new Error(t.message);
-          (n.name = `React ErrorBoundary ${t.name}`),
-            (n.stack = e),
+          const s = new Error(t.message);
+          (s.name = `React ErrorBoundary ${t.name}`),
+            (s.stack = e),
             (function (t, e) {
-              const n = new WeakSet();
-              !(function t(e, s) {
-                if (!n.has(e))
+              const s = new WeakSet();
+              !(function t(e, n) {
+                if (!s.has(e))
                   return e.cause
-                    ? (n.add(e), t(e.cause, s))
-                    : void (e.cause = s);
+                    ? (s.add(e), t(e.cause, n))
+                    : void (e.cause = n);
               })(t, e);
-            })(t, n);
+            })(t, s);
         }
         return (function (t, e) {
-          return M().captureException(t, P(e));
+          return q().captureException(t, N(e));
         })(t, {
-          ...n,
+          ...s,
           captureContext: { contexts: { react: { componentStack: e } } },
         });
       }
-      const J = { componentStack: null, error: null, eventId: null };
-      class Q extends V.Component {
+      const z = { componentStack: null, error: null, eventId: null };
+      class J extends F.Component {
         constructor(t) {
           super(t),
-            Q.prototype.__init.call(this),
-            (this.state = J),
+            J.prototype.__init.call(this),
+            (this.state = z),
             (this._openFallbackReportDialog = !0);
-          const e = M().getClient();
+          const e = q().getClient();
           e &&
             t.showDialog &&
             ((this._openFallbackReportDialog = !1),
@@ -794,35 +794,35 @@
               !e.type &&
                 this._lastEventId &&
                 e.event_id === this._lastEventId &&
-                F({ ...t.dialogOptions, eventId: this._lastEventId });
+                A({ ...t.dialogOptions, eventId: this._lastEventId });
             })));
         }
         componentDidCatch(t, e) {
-          const { componentStack: n } = e,
-            s = null == n ? void 0 : n,
+          const { componentStack: s } = e,
+            n = null == s ? void 0 : s,
             {
-              beforeCapture: o,
-              onError: i,
-              showDialog: c,
-              dialogOptions: a,
+              beforeCapture: i,
+              onError: r,
+              showDialog: a,
+              dialogOptions: c,
             } = this.props;
           !(function (...t) {
-            const e = T(r());
+            const e = M(o());
             if (2 === t.length) {
-              const [n, s] = t;
-              return n ? e.withSetScope(n, s) : e.withScope(s);
+              const [s, n] = t;
+              return s ? e.withSetScope(s, n) : e.withScope(n);
             }
             e.withScope(t[0]);
-          })((r) => {
-            o && o(r, t, s);
-            const u = z(t, e, {
+          })((o) => {
+            i && i(o, t, n);
+            const h = G(t, e, {
               mechanism: { handled: !!this.props.fallback },
             });
-            i && i(t, s, u),
-              c &&
-                ((this._lastEventId = u),
-                this._openFallbackReportDialog && F({ ...a, eventId: u })),
-              this.setState({ error: t, componentStack: n, eventId: u });
+            r && r(t, n, h),
+              a &&
+                ((this._lastEventId = h),
+                this._openFallbackReportDialog && A({ ...c, eventId: h })),
+              this.setState({ error: t, componentStack: s, eventId: h });
           });
         }
         componentDidMount() {
@@ -830,44 +830,397 @@
           t && t();
         }
         componentWillUnmount() {
-          const { error: t, componentStack: e, eventId: n } = this.state,
-            { onUnmount: s } = this.props;
-          s && s(t, e, n),
+          const { error: t, componentStack: e, eventId: s } = this.state,
+            { onUnmount: n } = this.props;
+          n && n(t, e, s),
             this._cleanupHook &&
               (this._cleanupHook(), (this._cleanupHook = void 0));
         }
         __init() {
           this.resetErrorBoundary = () => {
             const { onReset: t } = this.props,
-              { error: e, componentStack: n, eventId: s } = this.state;
-            t && t(e, n, s), this.setState(J);
+              { error: e, componentStack: s, eventId: n } = this.state;
+            t && t(e, s, n), this.setState(z);
           };
         }
         render() {
           const { fallback: t, children: e } = this.props,
-            n = this.state;
-          if (n.error) {
+            s = this.state;
+          if (s.error) {
             let e;
             return (
               (e =
                 "function" == typeof t
-                  ? V.createElement(t, {
-                      error: n.error,
-                      componentStack: n.componentStack,
+                  ? F.createElement(t, {
+                      error: s.error,
+                      componentStack: s.componentStack,
                       resetError: this.resetErrorBoundary,
-                      eventId: n.eventId,
+                      eventId: s.eventId,
                     })
                   : t),
-              V.isValidElement(e)
+              F.isValidElement(e)
                 ? e
                 : (t &&
-                    W &&
+                    Y &&
                     E.warn("fallback did not produce a valid ReactElement"),
                   null)
             );
           }
           return "function" == typeof e ? e() : e;
         }
+      }
+    },
+    30724: (t, e, s) => {
+      s.d(e, { q: () => a });
+      var n = s(48767),
+        i = s(45995),
+        r = class extends n.$ {
+          constructor(t, e) {
+            super(t, e);
+          }
+          bindMethods() {
+            super.bindMethods(),
+              (this.fetchNextPage = this.fetchNextPage.bind(this)),
+              (this.fetchPreviousPage = this.fetchPreviousPage.bind(this));
+          }
+          setOptions(t, e) {
+            super.setOptions({ ...t, behavior: (0, i.PL)() }, e);
+          }
+          getOptimisticResult(t) {
+            return (t.behavior = (0, i.PL)()), super.getOptimisticResult(t);
+          }
+          fetchNextPage(t) {
+            return this.fetch({
+              ...t,
+              meta: { fetchMore: { direction: "forward" } },
+            });
+          }
+          fetchPreviousPage(t) {
+            return this.fetch({
+              ...t,
+              meta: { fetchMore: { direction: "backward" } },
+            });
+          }
+          createResult(t, e) {
+            var s, n;
+            const { state: r } = t,
+              o = super.createResult(t, e),
+              {
+                isFetching: a,
+                isRefetching: c,
+                isError: h,
+                isRefetchError: u,
+              } = o,
+              p =
+                null == (n = null == (s = r.fetchMeta) ? void 0 : s.fetchMore)
+                  ? void 0
+                  : n.direction,
+              l = h && "forward" === p,
+              d = a && "forward" === p,
+              _ = h && "backward" === p,
+              f = a && "backward" === p;
+            return {
+              ...o,
+              fetchNextPage: this.fetchNextPage,
+              fetchPreviousPage: this.fetchPreviousPage,
+              hasNextPage: (0, i.rB)(e, r.data),
+              hasPreviousPage: (0, i.RQ)(e, r.data),
+              isFetchNextPageError: l,
+              isFetchingNextPage: d,
+              isFetchPreviousPageError: _,
+              isFetchingPreviousPage: f,
+              isRefetchError: u && !l && !_,
+              isRefetching: c && !d && !f,
+            };
+          }
+        },
+        o = s(25081);
+      function a(t, e) {
+        return (0, o.t)(t, r, e);
+      }
+    },
+    33861: (t, e, s) => {
+      s.d(e, { E: () => M });
+      var n,
+        i,
+        r,
+        o,
+        a,
+        c,
+        h,
+        u,
+        p,
+        l,
+        d,
+        _,
+        f,
+        g,
+        m,
+        S,
+        v,
+        b,
+        y = s(90626),
+        E = s(86843),
+        w = s(6561),
+        x = s(48767),
+        k = s(57152),
+        I = s(57956);
+      function O(t, e) {
+        return t.filter((t) => !e.includes(t));
+      }
+      var C = class extends k.Q {
+        constructor(t, e, s) {
+          super(),
+            (0, E.VK)(this, p),
+            (0, E.VK)(this, d),
+            (0, E.VK)(this, f),
+            (0, E.VK)(this, m),
+            (0, E.VK)(this, v),
+            (0, E.VK)(this, n, void 0),
+            (0, E.VK)(this, i, void 0),
+            (0, E.VK)(this, r, void 0),
+            (0, E.VK)(this, o, void 0),
+            (0, E.VK)(this, a, void 0),
+            (0, E.VK)(this, c, void 0),
+            (0, E.VK)(this, h, void 0),
+            (0, E.VK)(this, u, void 0),
+            (0, E.OV)(this, n, t),
+            (0, E.OV)(this, o, s),
+            (0, E.OV)(this, r, []),
+            (0, E.OV)(this, a, []),
+            (0, E.OV)(this, i, []),
+            this.setQueries(e);
+        }
+        onSubscribe() {
+          1 === this.listeners.size &&
+            (0, E.S7)(this, a).forEach((t) => {
+              t.subscribe((e) => {
+                (0, E.jq)(this, m, S).call(this, t, e);
+              });
+            });
+        }
+        onUnsubscribe() {
+          this.listeners.size || this.destroy();
+        }
+        destroy() {
+          (this.listeners = new Set()),
+            (0, E.S7)(this, a).forEach((t) => {
+              t.destroy();
+            });
+        }
+        setQueries(t, e, s) {
+          (0, E.OV)(this, r, t),
+            (0, E.OV)(this, o, e),
+            w.j.batch(() => {
+              const t = (0, E.S7)(this, a),
+                e = (0, E.jq)(this, f, g).call(this, (0, E.S7)(this, r));
+              e.forEach((t) =>
+                t.observer.setOptions(t.defaultedQueryOptions, s),
+              );
+              const n = e.map((t) => t.observer),
+                o = n.map((t) => t.getCurrentResult()),
+                c = n.some((e, s) => e !== t[s]);
+              (t.length !== n.length || c) &&
+                ((0, E.OV)(this, a, n),
+                (0, E.OV)(this, i, o),
+                this.hasListeners() &&
+                  (O(t, n).forEach((t) => {
+                    t.destroy();
+                  }),
+                  O(n, t).forEach((t) => {
+                    t.subscribe((e) => {
+                      (0, E.jq)(this, m, S).call(this, t, e);
+                    });
+                  }),
+                  (0, E.jq)(this, v, b).call(this)));
+            });
+        }
+        getCurrentResult() {
+          return (0, E.S7)(this, i);
+        }
+        getQueries() {
+          return (0, E.S7)(this, a).map((t) => t.getCurrentQuery());
+        }
+        getObservers() {
+          return (0, E.S7)(this, a);
+        }
+        getOptimisticResult(t, e) {
+          const s = (0, E.jq)(this, f, g)
+            .call(this, t)
+            .map((t) =>
+              t.observer.getOptimisticResult(t.defaultedQueryOptions),
+            );
+          return [
+            s,
+            (t) => (0, E.jq)(this, d, _).call(this, t ?? s, e),
+            () => (0, E.jq)(this, p, l).call(this, s, t),
+          ];
+        }
+      };
+      (n = new WeakMap()),
+        (i = new WeakMap()),
+        (r = new WeakMap()),
+        (o = new WeakMap()),
+        (a = new WeakMap()),
+        (c = new WeakMap()),
+        (h = new WeakMap()),
+        (u = new WeakMap()),
+        (p = new WeakSet()),
+        (l = function (t, e) {
+          const s = (0, E.jq)(this, f, g).call(this, e);
+          return s.map((e, n) => {
+            const i = t[n];
+            return e.defaultedQueryOptions.notifyOnChangeProps
+              ? i
+              : e.observer.trackResult(i, (t) => {
+                  s.forEach((e) => {
+                    e.observer.trackProp(t);
+                  });
+                });
+          });
+        }),
+        (d = new WeakSet()),
+        (_ = function (t, e) {
+          return e
+            ? (((0, E.S7)(this, c) &&
+                (0, E.S7)(this, i) === (0, E.S7)(this, u) &&
+                e === (0, E.S7)(this, h)) ||
+                ((0, E.OV)(this, h, e),
+                (0, E.OV)(this, u, (0, E.S7)(this, i)),
+                (0, E.OV)(this, c, (0, I.BH)((0, E.S7)(this, c), e(t)))),
+              (0, E.S7)(this, c))
+            : t;
+        }),
+        (f = new WeakSet()),
+        (g = function (t) {
+          const e = new Map(
+              (0, E.S7)(this, a).map((t) => [t.options.queryHash, t]),
+            ),
+            s = [];
+          return (
+            t.forEach((t) => {
+              const i = (0, E.S7)(this, n).defaultQueryOptions(t),
+                r = e.get(i.queryHash);
+              if (r) s.push({ defaultedQueryOptions: i, observer: r });
+              else {
+                const t = (0, E.S7)(this, a).find(
+                  (t) => t.options.queryHash === i.queryHash,
+                );
+                s.push({
+                  defaultedQueryOptions: i,
+                  observer: t ?? new x.$((0, E.S7)(this, n), i),
+                });
+              }
+            }),
+            s.sort(
+              (e, s) =>
+                t.findIndex(
+                  (t) => t.queryHash === e.defaultedQueryOptions.queryHash,
+                ) -
+                t.findIndex(
+                  (t) => t.queryHash === s.defaultedQueryOptions.queryHash,
+                ),
+            )
+          );
+        }),
+        (m = new WeakSet()),
+        (S = function (t, e) {
+          const s = (0, E.S7)(this, a).indexOf(t);
+          -1 !== s &&
+            ((0, E.OV)(
+              this,
+              i,
+              (function (t, e, s) {
+                const n = t.slice(0);
+                return (n[e] = s), n;
+              })((0, E.S7)(this, i), s, e),
+            ),
+            (0, E.jq)(this, v, b).call(this));
+        }),
+        (v = new WeakSet()),
+        (b = function () {
+          var t;
+          if (this.hasListeners()) {
+            (0, E.S7)(this, c) !==
+              (0, E.jq)(this, d, _).call(
+                this,
+                (0, E.jq)(this, p, l).call(
+                  this,
+                  (0, E.S7)(this, i),
+                  (0, E.S7)(this, r),
+                ),
+                null == (t = (0, E.S7)(this, o)) ? void 0 : t.combine,
+              ) &&
+              w.j.batch(() => {
+                this.listeners.forEach((t) => {
+                  t((0, E.S7)(this, i));
+                });
+              });
+          }
+        });
+      var P = s(29385),
+        R = s(85010),
+        $ = s(8184),
+        L = s(33478),
+        j = s(99583),
+        D = s(61314);
+      function M({ queries: t, ...e }, s) {
+        const n = (0, P.jE)(s),
+          i = (0, R.w)(),
+          r = (0, $.h)(),
+          o = y.useMemo(
+            () =>
+              t.map((t) => {
+                const e = n.defaultQueryOptions(t);
+                return (
+                  (e._optimisticResults = i ? "isRestoring" : "optimistic"), e
+                );
+              }),
+            [t, n, i],
+          );
+        o.forEach((t) => {
+          (0, j.jv)(t), (0, L.LJ)(t, r);
+        }),
+          (0, L.wZ)(r);
+        const [a] = y.useState(() => new C(n, o, e)),
+          [c, h, u] = a.getOptimisticResult(o, e.combine);
+        y.useSyncExternalStore(
+          y.useCallback(
+            (t) => (i ? D.l : a.subscribe(w.j.batchCalls(t))),
+            [a, i],
+          ),
+          () => a.getCurrentResult(),
+          () => a.getCurrentResult(),
+        ),
+          y.useEffect(() => {
+            a.setQueries(o, e, { listeners: !1 });
+          }, [o, e, a]);
+        const p = c.some((t, e) => (0, j.EU)(o[e], t))
+          ? c.flatMap((t, e) => {
+              const s = o[e];
+              if (s) {
+                const e = new x.$(n, s);
+                if ((0, j.EU)(s, t)) return (0, j.iL)(s, e, r);
+                (0, j.nE)(t, i) && (0, j.iL)(s, e, r);
+              }
+              return [];
+            })
+          : [];
+        if (p.length > 0) throw Promise.all(p);
+        const l = c.find((t, e) => {
+          const s = o[e];
+          return (
+            s &&
+            (0, L.$1)({
+              result: t,
+              errorResetBoundary: r,
+              throwOnError: s.throwOnError,
+              query: n.getQueryCache().get(s.queryHash),
+            })
+          );
+        });
+        if (null == l ? void 0 : l.error) throw l.error;
+        return h(u());
       }
     },
   },

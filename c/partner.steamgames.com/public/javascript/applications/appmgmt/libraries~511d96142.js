@@ -15724,65 +15724,6 @@
       };
       _.displayName = "Viewer";
     },
-    chunkid: (_, _) => {
-      "use strict";
-      var _,
-        _ = Symbol.for("react.element"),
-        _ = Symbol.for("react.portal"),
-        _ = Symbol.for("react.fragment"),
-        _ = Symbol.for("react.strict_mode"),
-        _ = Symbol.for("react.profiler"),
-        _ = Symbol.for("react.provider"),
-        _ = Symbol.for("react.context"),
-        _ = Symbol.for("react.server_context"),
-        _ = Symbol.for("react.forward_ref"),
-        _ = Symbol.for("react.suspense"),
-        _ = Symbol.for("react.suspense_list"),
-        _ = Symbol.for("react.memo"),
-        _ = Symbol.for("react.lazy"),
-        _ = Symbol.for("react.offscreen");
-      function _(_) {
-        if ("object" == typeof _ && null !== _) {
-          var _ = _.$$typeof;
-          switch (_) {
-            case _:
-              switch ((_ = _.type)) {
-                case _:
-                case _:
-                case _:
-                case _:
-                case _:
-                  return _;
-                default:
-                  switch ((_ = _ && _.$$typeof)) {
-                    case _:
-                    case _:
-                    case _:
-                    case _:
-                    case _:
-                    case _:
-                      return _;
-                    default:
-                      return _;
-                  }
-              }
-            case _:
-              return _;
-          }
-        }
-      }
-      (_ = Symbol.for("react.module.reference")),
-        (_.isForwardRef = function (_) {
-          return _(_) === _;
-        }),
-        (_.isFragment = function (_) {
-          return _(_) === _;
-        });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      module.exports = __webpack_require__("chunkid");
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {

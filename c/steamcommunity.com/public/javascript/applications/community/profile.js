@@ -7408,5 +7408,406 @@
         );
       }
     },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        let _ = "offline";
+        return (
+          _ &&
+            (_.is_ingame
+              ? (_ = "ingame")
+              : _.m_broadcastAccountId
+                ? (_ = "watchingbroadcast")
+                : _.is_online && (_ = "online"),
+            _.is_awayOrSnooze && (_ += " awayOrSnooze")),
+          _
+        );
+      }
+      class _ {
+        constructor(_) {
+          (this.m_bInitialized = !1),
+            (this.m_ePersonaState = 0),
+            (this.m_unGamePlayedAppID = 0),
+            (this.m_gameid = "0"),
+            (this.m_unPersonaStateFlags = 0),
+            (this.m_strPlayerName = ""),
+            (this.m_strAvatarHash = _._),
+            (this.m_strAccountName = ""),
+            (this.m_rtLastSeenOnline = 0),
+            (this.m_strGameExtraInfo = ""),
+            (this.m_unGameServerIP = 0),
+            (this.m_unGameServerPort = 0),
+            (this.m_game_lobby_id = ""),
+            (this.m_bPlayerNamePending = !1),
+            (this.m_bAvatarPending = !1),
+            (this.m_broadcastId = void 0),
+            (this.m_broadcastAccountId = void 0),
+            (this.m_broadcastAppId = void 0),
+            (this.m_broadcastViewerCount = void 0),
+            (this.m_strBroadcastTitle = void 0),
+            (this.m_bCommunityBanned = void 0),
+            (this.m_bOnSteamDeck = !1),
+            (this.m_mapRichPresence = _._.map()),
+            (this.m_bNameInitialized = !1),
+            (this.m_bStatusInitialized = !1),
+            (this.m_strProfileURL = void 0),
+            (0, _._)(this),
+            (this.m_steamid = _);
+        }
+        Reset() {
+          (this.m_ePersonaState = 0),
+            (this.m_unGamePlayedAppID = 0),
+            (this.m_gameid = "0"),
+            (this.m_strGameExtraInfo = ""),
+            (this.m_unGameServerIP = 0),
+            (this.m_unGameServerPort = 0),
+            (this.m_game_lobby_id = ""),
+            this.m_mapRichPresence.clear(),
+            (this.m_broadcastId = void 0),
+            (this.m_broadcastAccountId = void 0),
+            (this.m_broadcastAppId = void 0),
+            (this.m_broadcastViewerCount = void 0),
+            (this.m_strBroadcastTitle = void 0),
+            (this.m_bOnSteamDeck = !1);
+        }
+        GetAccountID() {
+          return this.m_steamid.GetAccountID();
+        }
+        get is_online() {
+          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
+        }
+        get is_ingame() {
+          return (
+            this.is_online &&
+            (0 != this.m_unGamePlayedAppID || "0" != this.m_gameid)
+          );
+        }
+        get is_watchingbroadcast() {
+          return !!this.m_broadcastAccountId;
+        }
+        get is_in_nonsteam_game() {
+          return 0 == this.m_unGamePlayedAppID && "0" != this.m_gameid;
+        }
+        get is_in_joinable_game() {
+          return (
+            this.has_joinable_game_flag ||
+            this.is_in_valid_lobby ||
+            this.has_server_ip
+          );
+        }
+        get has_joinable_game_flag() {
+          var _;
+          return (
+            0 !=
+            (2 &
+              (null !== (_ = this.m_unPersonaStateFlags) && void 0 !== _
+                ? _
+                : 0))
+          );
+        }
+        get connect_string() {
+          return this.m_mapRichPresence.get("connect");
+        }
+        get is_in_valid_lobby() {
+          return null != this.m_game_lobby_id && "0" != this.m_game_lobby_id;
+        }
+        get has_server_ip() {
+          return 0 != this.m_unGameServerIP;
+        }
+        get is_awayOrSnooze() {
+          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
+        }
+        HasStateFlag(_) {
+          var _;
+          return (
+            0 !=
+            ((null !== (_ = this.m_unPersonaStateFlags) && void 0 !== _
+              ? _
+              : 0) &
+              _)
+          );
+        }
+        get last_seen_online() {
+          return this.m_rtLastSeenOnline;
+        }
+        ClearStateOnDisconnect() {
+          0 != this.m_ePersonaState && this.Reset();
+        }
+        get is_golden() {
+          return this.HasStateFlag(4);
+        }
+        IsOnSteamDeck() {
+          return this.m_bOnSteamDeck;
+        }
+        GetCurrentGameName() {
+          return this.m_strGameExtraInfo
+            ? this.m_strGameExtraInfo
+            : this.m_unGamePlayedAppID
+              ? _._.GetAppInfo(this.m_unGamePlayedAppID).name
+              : "";
+        }
+        GetCurrentGameIconURL() {
+          return this.m_unGamePlayedAppID
+            ? _._.GetAppInfo(this.m_unGamePlayedAppID).icon_url
+            : "";
+        }
+        BIsAppInfoReady() {
+          return (
+            !this.m_unGamePlayedAppID ||
+            _._.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
+          );
+        }
+        HasCurrentGameRichPresence() {
+          return this.m_mapRichPresence.has("steam_display");
+        }
+        HasRichPresenceForViewGameInfo() {
+          return !!(
+            this.m_mapRichPresence.has("status") ||
+            this.m_mapRichPresence.has("connect") ||
+            this.m_mapRichPresence.has("connect_private")
+          );
+        }
+        GetCurrentGameRichPresence() {
+          if (this.HasCurrentGameRichPresence()) {
+            let _ = _._.GetRichPresenceLoc(this.m_unGamePlayedAppID);
+            if (_) {
+              let _ = this.m_mapRichPresence.get("steam_display");
+              return _.Localize(_, this.m_mapRichPresence);
+            }
+          } else if (this.HasStateFlag(8))
+            return (0, _._)("#PersonaStateRemotePlayTogether");
+          return "";
+        }
+        GetCurrentGameStatus() {
+          return (
+            this.GetCurrentGameRichPresence() ||
+            this.m_mapRichPresence.get("status") ||
+            ""
+          );
+        }
+        GetOfflineStatusUpdateRate() {
+          if (0 == this.last_seen_online) return 3e4;
+          const _ = 3600;
+          let _ = 1e3;
+          const _ = _._.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return (_ *= _ > 86400 ? _ : _ > 7200 ? 60 : 15), _;
+        }
+        GetOfflineStatusTime() {
+          if (0 == this.last_seen_online)
+            return (0, _._)("#PersonaStateOffline");
+          let _ = this.GetOfflineStatusUpdateRate();
+          (!_._.IN_MOBILE || _ <= 60) && (0, _._)(_);
+          let _ = _._.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return _ < 60
+            ? (0, _._)("#PersonaStateLastSeen_JustNow")
+            : (0, _._)("#PersonaStateLastSeen", (0, _._)(_));
+        }
+        GetLocalizedOnlineStatus() {
+          switch (this.m_ePersonaState) {
+            case 0:
+            case 7:
+              return this.GetOfflineStatusTime();
+            case 1:
+              return (0, _._)("#PersonaStateOnline");
+            case 2:
+              return (0, _._)("#PersonaStateBusy");
+            case 3:
+              return (0, _._)("#PersonaStateAway");
+            case 4:
+              return (0, _._)("#PersonaStateSnooze");
+            case 5:
+              return (0, _._)("#PersonaStateLookingToTrade");
+            case 6:
+              return (0, _._)("#PersonaStateLookingToPlay");
+            default:
+              return "";
+          }
+        }
+        get has_public_party_beacon() {
+          return this.m_mapRichPresence.has("__beacon") && this.is_ingame;
+        }
+        get player_group() {
+          return this.m_mapRichPresence.has("steam_player_group")
+            ? this.m_mapRichPresence.get("steam_player_group")
+            : "";
+        }
+        get player_group_size() {
+          return this.m_mapRichPresence.has("steam_player_group_size")
+            ? Number.parseInt(
+                this.m_mapRichPresence.get("steam_player_group_size"),
+              )
+            : 0;
+        }
+        get online_state() {
+          return this.is_online
+            ? this.is_ingame
+              ? "in-game"
+              : this.m_broadcastAccountId
+                ? "watchingbroadcast"
+                : "online"
+            : "offline";
+        }
+        BHasAvatarSet() {
+          return this.m_strAvatarHash != _._;
+        }
+        get avatar_url() {
+          return (0, _._)(this.m_strAvatarHash);
+        }
+        get avatar_url_medium() {
+          return (0, _._)(this.m_strAvatarHash, "medium");
+        }
+        get avatar_url_full() {
+          return (0, _._)(this.m_strAvatarHash, "full");
+        }
+        static SortStatusComparator(_, _, _) {
+          if (_.has_public_party_beacon) {
+            if (!_.has_public_party_beacon) return -1;
+          } else {
+            if (_.has_public_party_beacon) return 1;
+            if (_.is_ingame) {
+              if (!_.is_ingame) return -1;
+              if (!_) return 0;
+              if (_.is_awayOrSnooze) {
+                if (!_.is_awayOrSnooze) return 1;
+              } else if (_.is_awayOrSnooze) return -1;
+            } else if (_.is_ingame) return 1;
+          }
+          if (_.is_online) {
+            if (!_.is_online) return -1;
+          } else if (_.is_online) return 1;
+          if (_)
+            if (_.is_awayOrSnooze) {
+              if (!_.is_awayOrSnooze) return 1;
+            } else if (_.is_awayOrSnooze) return -1;
+          return 0;
+        }
+        GetCommunityProfileURL() {
+          return this.m_strProfileURL
+            ? `${_._.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${_._.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
+        (0, _._)([_._], _.prototype, "m_ePersonaState", void 0),
+        (0, _._)([_._], _.prototype, "m_unGamePlayedAppID", void 0),
+        (0, _._)([_._], _.prototype, "m_gameid", void 0),
+        (0, _._)([_._], _.prototype, "m_unPersonaStateFlags", void 0),
+        (0, _._)([_._], _.prototype, "m_strPlayerName", void 0),
+        (0, _._)([_._], _.prototype, "m_strAvatarHash", void 0),
+        (0, _._)([_._], _.prototype, "m_strAccountName", void 0),
+        (0, _._)([_._], _.prototype, "m_rtLastSeenOnline", void 0),
+        (0, _._)([_._], _.prototype, "m_strGameExtraInfo", void 0),
+        (0, _._)([_._], _.prototype, "m_unGameServerIP", void 0),
+        (0, _._)([_._], _.prototype, "m_unGameServerPort", void 0),
+        (0, _._)([_._], _.prototype, "m_game_lobby_id", void 0),
+        (0, _._)([_._], _.prototype, "m_bPlayerNamePending", void 0),
+        (0, _._)([_._], _.prototype, "m_bAvatarPending", void 0),
+        (0, _._)([_._], _.prototype, "m_broadcastId", void 0),
+        (0, _._)([_._], _.prototype, "m_broadcastAccountId", void 0),
+        (0, _._)([_._], _.prototype, "m_broadcastAppId", void 0),
+        (0, _._)([_._], _.prototype, "m_broadcastViewerCount", void 0),
+        (0, _._)([_._], _.prototype, "m_strBroadcastTitle", void 0),
+        (0, _._)([_._], _.prototype, "m_bCommunityBanned", void 0),
+        (0, _._)([_._], _.prototype, "m_bOnSteamDeck", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = class extends _._ {
+          constructor(_, _) {
+            super(_, _);
+          }
+          bindMethods() {
+            super.bindMethods(),
+              (this.fetchNextPage = this.fetchNextPage.bind(this)),
+              (this.fetchPreviousPage = this.fetchPreviousPage.bind(this));
+          }
+          setOptions(_, _) {
+            super.setOptions(
+              {
+                ..._,
+                behavior: (0, _._)(),
+              },
+              _,
+            );
+          }
+          getOptimisticResult(_) {
+            return (_.behavior = (0, _._)()), super.getOptimisticResult(_);
+          }
+          fetchNextPage(_) {
+            return this.fetch({
+              ..._,
+              meta: {
+                fetchMore: {
+                  direction: "forward",
+                },
+              },
+            });
+          }
+          fetchPreviousPage(_) {
+            return this.fetch({
+              ..._,
+              meta: {
+                fetchMore: {
+                  direction: "backward",
+                },
+              },
+            });
+          }
+          createResult(_, _) {
+            var _, _;
+            const { state: _ } = _,
+              _ = super.createResult(_, _),
+              {
+                isFetching: _,
+                isRefetching: _,
+                isError: _,
+                isRefetchError: _,
+              } = _,
+              _ =
+                null == (_ = null == (_ = _.fetchMeta) ? void 0 : _.fetchMore)
+                  ? void 0
+                  : _.direction,
+              _ = _ && "forward" === _,
+              _ = _ && "forward" === _,
+              _ = _ && "backward" === _,
+              _ = _ && "backward" === _;
+            return {
+              ..._,
+              fetchNextPage: this.fetchNextPage,
+              fetchPreviousPage: this.fetchPreviousPage,
+              hasNextPage: (0, _._)(_, _.data),
+              hasPreviousPage: (0, _._)(_, _.data),
+              isFetchNextPageError: _,
+              isFetchingNextPage: _,
+              isFetchPreviousPageError: _,
+              isFetchingPreviousPage: _,
+              isRefetchError: _ && !_ && !_,
+              isRefetching: _ && !_ && !_,
+            };
+          }
+        },
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(_, _, _);
+      }
+    },
   },
 ]);

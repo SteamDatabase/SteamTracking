@@ -767,33 +767,6 @@ function EditUserReviewScorePreference()
 	});
 }
 
-function SetUserReviewScorePreference( pref )
-{
-	if ( g_AccountID == 0 )
-	{
-		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
-		return;
-	}
-
-	var rgData = {
-		preference: pref,
-		sessionid : g_sessionID
-	};
-	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
-		function( json )
-		{
-			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
-			window.location.href = h + '#app_reviews_hash';
-			window.location.reload( true );
-		}
-	).fail(
-		function( json )
-		{
-			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
-		}
-	);
-}
-
 function IntervalDistance( min1, max1, min2, max2 )
 {
 	return Math.max( 0, Math.max( min2 - max1, min1 - max2 ) );

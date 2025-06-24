@@ -3,14 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         DiscoveryQueueWidgetCtn: "_1LXqxVtAL8Lmy7J7rLSVit",
         WidgetText: "co4IP1iV1813n9UgG3h5f",
@@ -52,6 +44,103 @@
         }
         return _.createElement(_.Fragment, null, _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _._.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)({
+          queries: _.map((_) => _(_, _, _)),
+        });
+      }
+      const _ = _.createContext({
+        loadPersonaState: async (_, _) => {
+          if (null == _) return null;
+          const _ = await (function (_) {
+            return (_ ??= _(_));
+          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
+          return (function (_, _) {
+            let _ = new _._(_);
+            const _ = _?.public_data,
+              _ = _?.private_data;
+            (_.m_bInitialized = !!_),
+              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_strAvatarHash = _?.sha_digest_avatar
+                ? (0, _._)(_.sha_digest_avatar)
+                : _._),
+              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
+              (_.m_strAccountName = _?.account_name),
+              _?.persona_state_flags &&
+                (_.m_unPersonaStateFlags = _?.persona_state_flags);
+            _?.game_id && (_.m_gameid = _?.game_id);
+            _?.game_server_ip_address &&
+              (_.m_unGameServerIP = _?.game_server_ip_address);
+            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
+            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
+            _?.profile_url && (_.m_strProfileURL = _.profile_url);
+            return _;
+          })(_._.InitFromAccountID(_), _);
+        },
+      });
+      function _() {
+        return _.useContext(_);
+      }
+      function _(_, _, _) {
+        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
+        return {
+          queryKey: ["PlayerSummary", _],
+          queryFn: () => _.loadPersonaState(_, _),
+          enabled: !!_,
+        };
+      }
+      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -410,64 +499,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { gidEvent: _ } = _,
-          _ = (0, _._)(_),
-          [_, _] = (0, _.useMemo)(() => {
-            if (
-              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
-            ) {
-              const _ = (0, _._)(_._.LANGUAGE),
-                _ = _._.GetWithFallback(
-                  _.jsondata.localized_sale_product_banner,
-                  _,
-                ),
-                _ = _._.GetWithFallback(
-                  _.jsondata.localized_sale_product_mobile_banner,
-                  _,
-                );
-              if (_?.length > 0 && _?.length > 0)
-                return [
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                ];
-            }
-            return [null, null];
-          }, [_]);
-        return _?.length > 0 && _?.length > 0
-          ? _.createElement(
-              "a",
-              {
-                href: (0, _._)(__webpack_require__.GetSaleURL()),
-                className: _.Link,
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Big),
-              }),
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Mobile),
-              }),
-            )
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -757,25 +788,25 @@
           #e;
           #t;
           #i;
-          #s;
           #r;
+          #s;
           #a;
           #n;
           #l;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
-              (this.#s = _),
+              (this.#r = _),
               (this.#i = []),
-              (this.#r = []),
+              (this.#s = []),
               (this.#t = []),
               this.setQueries(_);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#r.forEach((_) => {
+              this.#s.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#m(_, _);
+                  this.#o(_, _);
                 });
               });
           }
@@ -784,16 +815,16 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#r.forEach((_) => {
+              this.#s.forEach((_) => {
                 _.destroy();
               });
           }
           setQueries(_, _, _) {
             (this.#i = _),
-              (this.#s = _),
+              (this.#r = _),
               _._.batch(() => {
-                const _ = this.#r,
-                  _ = this.#o(this.#i);
+                const _ = this.#s,
+                  _ = this.#m(this.#i);
                 _.forEach((_) =>
                   _.observer.setOptions(_.defaultedQueryOptions, _),
                 );
@@ -801,7 +832,7 @@
                   _ = _.map((_) => _.getCurrentResult()),
                   _ = _.some((_, _) => _ !== _[_]);
                 (_.length !== _.length || _) &&
-                  ((this.#r = _),
+                  ((this.#s = _),
                   (this.#t = _),
                   this.hasListeners() &&
                     (_(_, _).forEach((_) => {
@@ -809,7 +840,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#m(_, _);
+                        this.#o(_, _);
                       });
                     }),
                     this.#c()));
@@ -819,19 +850,19 @@
             return this.#t;
           }
           getQueries() {
-            return this.#r.map((_) => _.getCurrentQuery());
+            return this.#s.map((_) => _.getCurrentQuery());
           }
           getObservers() {
-            return this.#r;
+            return this.#s;
           }
           getOptimisticResult(_, _) {
-            const _ = this.#o(_).map((_) =>
+            const _ = this.#m(_).map((_) =>
               _.observer.getOptimisticResult(_.defaultedQueryOptions),
             );
             return [_, (_) => this.#u(_ ?? _, _), () => this.#d(_, _)];
           }
           #d(_, _) {
-            const _ = this.#o(_);
+            const _ = this.#m(_);
             return __webpack_require__.map((_, _) => {
               const _ = _[_];
               return _.defaultedQueryOptions.notifyOnChangeProps
@@ -852,8 +883,8 @@
                 this.#a)
               : _;
           }
-          #o(_) {
-            const _ = new Map(this.#r.map((_) => [_.options.queryHash, _])),
+          #m(_) {
+            const _ = new Map(this.#s.map((_) => [_.options.queryHash, _])),
               _ = [];
             return (
               _.forEach((_) => {
@@ -865,7 +896,7 @@
                     observer: _,
                   });
                 else {
-                  const _ = this.#r.find(
+                  const _ = this.#s.find(
                     (_) => _.options.queryHash === _.queryHash,
                   );
                   __webpack_require__.push({
@@ -885,8 +916,8 @@
               )
             );
           }
-          #m(_, _) {
-            const _ = this.#r.indexOf(_);
+          #o(_, _) {
+            const _ = this.#s.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {
                 const _ = _.slice(0);
@@ -897,7 +928,7 @@
           #c() {
             if (this.hasListeners()) {
               this.#a !==
-                this.#u(this.#d(this.#t, this.#i), this.#s?.combine) &&
+                this.#u(this.#d(this.#t, this.#i), this.#r?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {
                     _(this.#t);
