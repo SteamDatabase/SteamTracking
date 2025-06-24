@@ -5728,6 +5728,7 @@ $steammessages_parental_objects.proto"
 -noshaders
 -opendevtools
 -out-file
+-overlay-gpu-pri-delay
 -overlaylogging
 -overlaytestmode
 -pid
@@ -33681,6 +33682,7 @@ Set gpu performance level: %s -> %s
 Set graphics profiling enabled: %d
 Set initial value for net_fake_state
 Set low latency mode: %d
+Set ms delay between overlay GPU priority changes
 Set preferred lender %u for AppID %u response %s
 Set scaling filter: %d
 Set scaling mode: %d
@@ -34142,6 +34144,7 @@ Shopping Cart Not Found
 ShortcutChanged_t
 ShortcutPath
 ShortcutRemoved_t
+ShortcutsLoaded_t
 Shortcuts\%s\%s
 Should be called through a gameserver's ISteamSocketNetworking
 Should not be called before calling SteamDatagramServer_Init.
@@ -51765,6 +51768,7 @@ m_nSDR_LISTEN_PORT == bindAddr.m_port
 m_nSamples > 0
 m_nSecondsLeft
 m_nServiceDataCenterID
+m_nShorctuts
 m_nStreamingBigPictureRefCount > 0
 m_nStreamingRecentGamesRefCount > 0
 m_nSupressStateChangeCallbacks >= 0
@@ -57962,7 +57966,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 22 2025 05:28:05
+steam Jun 23 2025 23:26:46
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -59580,6 +59584,7 @@ uint
 uint32
 uint32_c2i
 uint32_new
+uint32_t
 uint64
 uint64_c2i
 uint64_new

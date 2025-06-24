@@ -2735,7 +2735,7 @@
     "ImageUpload_ImageGroup_ttip": "将此图片上传后，图片会包含在此图片组中。我们会试图通过图片文件名（如 myimage_english.jpg）的词尾自动检测图片语言。您可以使用下拉菜单替代此图片所在的图片组。",
     "ImageDisplay_NoAssetUploaded": "未上传资产",
     "ImageDisplay_ShowAllAssets": "显示所有 %1$s 个语言资产",
-    "ImageDisplay_EditAltText": "替代文字：请为使用屏幕阅读器的玩家描述图片上显示的画面。",
+    "ImageDisplay_EditAltText": "替代文字：请为使用屏幕朗读器的玩家描述图片上显示的画面。",
     "ImageUpload_DeleteAll_Confirm": "此操作将会移除此类型下所有已本地化的艺术作品。之后必须保存活动才能将其应用。是否确定？",
     "UserGameNotes_UntitledNote_Title": "未命名笔记",
     "UserGameNotes_NewNote": "新笔记",

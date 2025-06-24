@@ -95,9 +95,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
-05:27:58
 12CStdMemAlloc
 16CAdHocValidation
+23:25:01
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -295,7 +295,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun 22 2025
+Jun 23 2025
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n

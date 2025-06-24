@@ -813,7 +813,7 @@
     "FriendGroup_Search_NoResults": "Keine Ergebnisse für „%1$s“ gefunden",
     "FriendGroup_Search_CantFind": "Nicht gefunden, wonach Sie suchen?",
     "FriendGroup_Search_Link": "Ganz Steam durchsuchen",
-    "FriendsList_Favorites_Hint": "Ziehen Sie Freunde & Chats hier für einfachen Zugriff",
+    "FriendsList_Favorites_Hint": "Ziehen Sie Freunde & Chat hier für einfachen Zugriff",
     "Tooltip_FriendsListUpdate": "Eine neue Version von Steam-Freunde ist fertig",
     "Tooltip_FriendsListUpdate_VeryOld": "Eine neue Version von Steam-Freunde ist fertig; diese Version ist mehr als eine Woche alt",
     "Friends_ConfirmUpdate_Title": "Steam-Freunde aktualisieren",

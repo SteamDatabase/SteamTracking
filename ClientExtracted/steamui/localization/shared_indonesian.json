@@ -2414,7 +2414,7 @@
     "SteamDeckVerified_TestResult_DefaultConfigurationIsPerformant": "Konfigurasi grafis default game ini berfungsi dengan baik di Steam Deck",
     "SteamDeckVerified_TestResult_InterfaceTextIsLegible": "Teks antarmuka dalam game dapat dibaca di Steam Deck",
     "SteamDeckVerified_TestResult_DefaultControllerConfigNotFullyFunctional": "Beberapa fungsi tidak dapat diakses saat menggunakan konfigurasi default kontroler; membutuhkan penggunaan layar sentuh atau keyboard virtual atau konfigurasi dari komunitas",
-    "SteamDeckVerified_TestResult_ControllerGlyphsDoNotMatchDeckDevice": "Game ini terkadang menunjukkan mouse, keyboard, atau kontroler non-Steam Deck",
+    "SteamDeckVerified_TestResult_ControllerGlyphsDoNotMatchDeckDevice": "Game ini terkadang menunjukkan ikon mouse, keyboard, atau kontroler non-Steam Deck",
     "SteamDeckVerified_TestResult_DefaultConfigurationIsNotPerformant": "Game ini membutuhkan pengaturan grafis manual untuk dapat berfungsi dengan baik di Steam Deck",
     "SteamDeckVerified_TestResult_TextInputDoesNotAutomaticallyInvokesKeyboard": "Untuk memasukkan teks, dibutuhkan pengaktifan keyboard di layar secara manual",
     "SteamDeckVerified_TestResult_InterfaceTextIsNotLegible": "Beberapa teks di dalam game berukuran kecil dan mungkin sulit dibaca",

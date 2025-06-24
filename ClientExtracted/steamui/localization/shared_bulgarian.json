@@ -2745,7 +2745,7 @@
     "UserGameNotes_NotesForGame": "Бележки за %1$s",
     "UserGameNotes_PinWindow": "Закачане на прозорец към игра",
     "UserGameNotes_FlipWindow": "Преобръщане на прозореца така, че заглавната лента да е в дъното",
-    "UserGameNotes_WindowOpacity": "Задаване на прозрачност за прозорец",
+    "UserGameNotes_WindowOpacity": "Задаване на непрозрачност за прозорец",
     "UserGameNotes_NotesListView": "Списък с бележки",
     "UserGameNotes_ClickToOpenLink": "Кликване със средния бутон, за да отворите",
     "UserGameNotes_ImageTooLarge": "Поставеното изображение беше твърде голямо",

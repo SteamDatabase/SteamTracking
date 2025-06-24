@@ -12208,7 +12208,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Ht{}
+9H4{}
 9IGv
 9Inventory
 9PE,$
@@ -12270,6 +12270,7 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
+:UYj
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
@@ -16263,6 +16264,7 @@ CSteamUIAppController::OnPostLogonState
 CSteamUIAppController::OnRemoteClientStreamingEnabledChanged
 CSteamUIAppController::OnScreenshotDeleted
 CSteamUIAppController::OnScreenshotWritten
+CSteamUIAppController::OnShorcutsLoaded
 CSteamUIAppController::OnShortcutChanged
 CSteamUIAppController::OnShortcutRemoved
 CSteamUIAppController::OnTimedTrialStatus
@@ -21492,7 +21494,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 22 2025 05:28:08
+Jun 23 2025 23:25:38
 June
 K'iche'
 K(\f]C15
@@ -23419,6 +23421,7 @@ N21CSteamUIAppController33CCallbackInternal_OnItemInstalledE
 N21CSteamUIAppController33CCallbackInternal_OnVRModeChangedE
 N21CSteamUIAppController34CCallbackInternal_OnAppDataChangedE
 N21CSteamUIAppController34CCallbackInternal_OnPostLogonStateE
+N21CSteamUIAppController34CCallbackInternal_OnShorcutsLoadedE
 N21CSteamUIAppController35CCallbackInternal_OnAppBackupStatusE
 N21CSteamUIAppController35CCallbackInternal_OnExecuteSteamURLE
 N21CSteamUIAppController35CCallbackInternal_OnShortcutChangedE
@@ -26901,7 +26904,6 @@ Screenshots.GetTotalDiskSpaceUsage
 Screenshots.ShowScreenshotInSystemViewer
 Screenshots.ShowScreenshotsOnDisk
 Screenshots.UploadLocalScreenshot
-Screenshots: tried to read them while they are still being loaded\n
 Scroll Lock
 Scroll Lock Toggle
 ScrollBar
