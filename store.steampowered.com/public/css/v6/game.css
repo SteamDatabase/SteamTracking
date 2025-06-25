@@ -1660,6 +1660,7 @@ body.v6 .game_description_column h2.gradientbg {
 
 .game_area_description .bb_img_ctn {
 	position: relative;
+	display: inline-block;
 }
 
 .game_area_description .bb_img {
@@ -1667,23 +1668,47 @@ body.v6 .game_description_column h2.gradientbg {
 }
 
 /* default hidden play icon */
-.game_area_description .bb_img_ctn::after {
-	content: '▶';
-	display: none;
+.game_area_description .bb_img_play_pause {
 	position: absolute;
+	display: flex;
 	top: 8px;
 	right: 8px;
-	font-size: 20px;
-	padding: 6px 6px 6px 10px;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	line-height: 1;
+	font-size: 18px;
+	font-weight: bold;
 	background: rgba(0, 0, 0, 0.5);
 	color: white;
 	border-radius: 50%;
-	pointer-events: none;
+	user-select: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
 }
 
-/* show when paused class is applied */
-.game_area_description .bb_img_ctn.paused::after {
-	display: block;
+.game_area_description .bb_img_play_pause.paused {
+	opacity: 1;
+	text-indent: 3px; /* nudge to center */
+}
+
+.game_area_description .bb_img_ctn:hover .bb_img_play_pause.playing {
+	opacity: 1;
+}
+
+.game_area_description .bb_img_play_pause[data-tooltip][data-tooltip-visible="true"]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 body.v6 .game_area_description h2.bb_tag {
