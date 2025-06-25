@@ -1489,6 +1489,7 @@
               _.append("action", "upload"),
               _.append("extra_asset_v2", _.file),
               _.append("name", _),
+              _.width > 0 && _.append("width", _.width.toString()),
               -1 != _ && _.append("language", (0, _._)(_));
           } else {
             const _ = new File([_.file], _, {
@@ -1511,6 +1512,7 @@
           } catch (_) {
             "response" in _ &&
             "data" in _.response &&
+            "object" == typeof _.response.data &&
             "errors" in _.response.data
               ? (_ = _.response.data.errors)
               : console.error(
@@ -2870,14 +2872,15 @@
         if (_) return _(_) ? _.name : _.extra_asset_name;
       }
       function _(_, _) {
-        if (_) {
-          const _ = _.encodings?.find((_) =>
-            (function (_) {
-              const _ = _.extension.split(".").pop().toLocaleLowerCase();
-              return "webm" == _ || "mp4" == _;
-            })(_),
-          );
-          if (_)
+        if (!_?.encodings) return null;
+        if (_.encodings.some((_) => _.extension.startsWith("poster."))) {
+          let _;
+          if (
+            ((_ = _
+              ? _.encodings.find((_) => !_.extension.startsWith("poster."))
+              : _.encodings.find((_) => _.extension.startsWith("poster."))),
+            _)
+          )
             return {
               url: _.url,
               usage: _(_.extension),
