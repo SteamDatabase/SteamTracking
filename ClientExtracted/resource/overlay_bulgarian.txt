@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "Предаване — чат ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbp/сек., %videosendfps% к/сек."
 
+"PerfMon_FPS" "FPS"
+"PerfMon_CPU" "CPU"
+"PerfMon_RAM" "RAM"
+"PerfMon_GPU" "GPU"
+"PerfMon_Units_MHz" "MHz"
+"PerfMon_Units_GHz" "GHz"
+"PerfMon_Units_THz" "THz"
+"PerfMon_Units_TB" "TB"
+"PerfMon_Units_GB" "GB"
+"PerfMon_Units_MB" "MB"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"Играли сте един час."
 "SteamChina_Overlay_DurationControl_MessageB"		"Играли сте три часа.\nОбмислете да си починете."
 "SteamChina_Overlay_DurationControl_MessageC"		"Играли сте над три часа.\nОпитът/Напредъкът Ви е намален наполовина."

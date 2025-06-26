@@ -1425,6 +1425,8 @@
 #steam_menu_friend_activity
 #steam_multiple_games
 #system\InGameOverlayShowFPSContrast
+#system\InGameOverlayShowFPSGraphCPU
+#system\InGameOverlayShowFPSGraphFPS
 #tDq
 #var_%s
 #vgui_Cancel
@@ -3040,7 +3042,7 @@ ${LANGUAGE}
 (\r"/\n\fProfileTheme
 (\r"1\n/CCommunity_PartnerEventsShowLessForApp_Response"8\n6CCommunity_ClearUserPartnerEventsAppPriorities_Request"9\n7CCommunity_ClearUserPartnerEventsAppPriorities_Response"6\n4CCommunity_GetUserPartnerEventsAppPriorities_Request"O\n#CCommunity_PartnerEventsAppPriority
 (\r"1\n/CCommunity_PartnerEventsShowMoreForApp_Response"?\n.CCommunity_PartnerEventsShowLessForApp_Request
-(\r"1\n/CSteamInputService_ControllerStateFlow_Response2
+(\r"1\n/CSteamInputService_ControllerStateFlow_Response"h\n
 (\r"2\n!CTimedTrial_ResetPlaytime_Request
 (\r"2\n0CAccountHardware_SetPersonalizationFile_Response"[\n/CAccountHardware_GetPersonalizationFile_Request
 (\r"2\n0CPlayer_UpdateSteamAnnouncementLastRead_Response"$\n"CPlayer_GetPrivacySettings_Request"
@@ -3238,6 +3240,7 @@ ${LANGUAGE}
 (\t":\n\rCLogUploadMsg
 (\t";\n)CCredentials_ValidateEmailAddress_Request
 (\t";\n9CRemoteClient_DeleteRemotePlayTogetherInvitation_Response"S\n8CRemoteClient_LookupRemotePlayTogetherInvitation_Request
+(\t";\n9CSteamInputService_ControllerAccessibilityStrings_Request"n\n:CSteamInputService_ControllerAccessibilityStrings_Response
 (\t"<\n,CTransportValidation_NotifyText_Notification
 (\t"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response
 (\t"?\n"CBroadcast_StartBuildClip_Response
@@ -5410,6 +5413,8 @@ ${LANGUAGE}
 .CCommunity_GetApps_Request
 .CCommunity_GetApps_Response"
 .CCommunity_PartnerEventResult"
+.CControllerAccessibilityString2
+.CControllerOriginKey
 .CCookie"
 .CDisplayMarketingMessage"
 .CDisplayMarketingMessage"R\n0CMarketingMessages_PartnerPublishMessage_Request
@@ -8710,6 +8715,7 @@ ${LANGUAGE}
 20CChatRoomGroupInvite
 20CChatRoomSummaryPair
 20CControllerConfigMsg
+20CControllerOriginKey
 20CConvertToJPEGThread
 20CDesktopCaptureX11GL
 20CDesktopStreamThread
@@ -9888,6 +9894,7 @@ ${LANGUAGE}
 30CCloud_BeginUGCUpload_Response
 30CCloud_CommitUGCUpload_Request
 30CCloud_GetFileDetails_Response
+30CControllerAccessibilityString
 30CGameBroadcastThumbnailSession
 30CGameNotes_UploadImage_Request
 30CGameRecordingTimelineMetadata
@@ -11640,6 +11647,7 @@ ${LANGUAGE}
 57CRemoteClient_CreateRemotePlayTogetherInvitation_Response
 57CRemoteClient_DeleteRemotePlayTogetherInvitation_Response
 57CRemoteClient_LookupRemotePlayTogetherInvitation_Response
+57CSteamInputService_ControllerAccessibilityStrings_Request
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
@@ -11658,6 +11666,7 @@ ${LANGUAGE}
 58CMarketingMessages_GetMarketingMessageViewerStats_Response
 58CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response
 58CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
+58CSteamInputService_ControllerAccessibilityStrings_Response
 58CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig
 58CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 58CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
@@ -12208,7 +12217,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H4{}
 9IGv
 9Inventory
 9PE,$
@@ -12257,6 +12265,7 @@ ${LANGUAGE}
 :.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
 :.CRemoteClient_CreateRemotePlayTogetherInvitation_Response"
 :.CRemoteClient_DeleteRemotePlayTogetherInvitation_Response"
+:.CSteamInputService_ControllerAccessibilityStrings_Request
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
@@ -12270,7 +12279,6 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
-:UYj
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
@@ -12315,6 +12323,7 @@ ${LANGUAGE}
 ;.CMarketingMessages_GetMarketingMessageClickedStats_Request
 ;.CMarketingMessages_GetMarketingMessageViewerStats_Response"
 ;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
+;.CSteamInputService_ControllerAccessibilityStrings_Response
 ;.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 ;.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 ;22dV::tN\n\n
@@ -14527,7 +14536,9 @@ CCommunity_PartnerEventResult
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting\n
 CConnectDeviceJob
 CConsoleHistory
+CControllerAccessibilityString
 CControllerConfigMsg
+CControllerOriginKey
 CCookie
 CCopyableUtlVector()  - copycons
 CCrossProcessPipe
@@ -21494,7 +21505,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 23 2025 23:25:38
+Jun 26 2025 16:03:21
 June
 K'iche'
 K(\f]C15
@@ -22506,6 +22517,7 @@ Method GetCommunityBadgeProgress() not implemented.
 Method GetCommunityPreferences() not implemented.
 Method GetContentDescriptors() not implemented.
 Method GetContentHubConfig() not implemented.
+Method GetControllerAccessibilityStrings() not implemented.
 Method GetControllerPersonalizationFile() not implemented.
 Method GetCredentialChangeTimeDetails() not implemented.
 Method GetDLCForApps() not implemented.
@@ -30578,6 +30590,7 @@ Zulu
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n!GetAllReservationPositionMessages
+\n!GetControllerAccessibilityStrings
 \n!GetDisplayMarketingMessageForUser
 \n!GetInventoryItemsWithDescriptions
 \n!GetPurchasedProfileCustomizations
@@ -34894,6 +34907,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_style
 controller_subtype
 controller_support
 controller_support_%s
@@ -44559,7 +44573,9 @@ overall_percent_complete
 overflow error
 overlay_fps_counter_bgopacity
 overlay_fps_counter_corner
+overlay_fps_counter_cpu_graph
 overlay_fps_counter_detail_level
+overlay_fps_counter_fps_graph
 overlay_fps_counter_high_contrast
 overlay_fps_counter_key
 overlay_fps_counter_saturation_factor
@@ -47629,6 +47645,8 @@ steamid_to_cancel
 steamid_to_remove
 steamids
 steamids_top_friends
+steaminput_config_switch_pro.vdf
+steaminput_config_switchpro.vdf
 steaminputglyphs/
 steaminputmanifestpath
 steaminputuservirtualmenuicon/
@@ -47970,6 +47988,7 @@ string too long
 string too short
 string=
 string_value
+strings
 strings::Substitute format string invalid: asked for "$
 strip_description_bbcode
 strlen

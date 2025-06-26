@@ -960,7 +960,7 @@
     "FriendSettings_Notification_ChatRoomNotificationDesc": "그룹 채팅의 모든 푸시 알림을 끕니다.",
     "FriendSettings_DisableRoomEffects": "채팅방 효과 사용 안 함",
     "FriendSettings_AnimatedAvatars": "움직이는 아바타 및 아바타 액자를 친구 및 채팅에서 사용",
-    "FriendSettings_ChatFontSize": "채팅 글꼴 크기",
+    "FriendSettings_ChatFontSize": "채팅 텍스트 크기",
     "FriendSetting_ChatFontSmall": "작게",
     "FriendSetting_ChatFontDefault": "기본",
     "FriendSetting_ChatFontLarge": "크게",

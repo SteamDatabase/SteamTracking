@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "Suoratoisto - Keskustelu ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbit/s, %videosendfps% FPS"
 
+"PerfMon_FPS" "FPS"
+"PerfMon_CPU" "CPU"
+"PerfMon_RAM" "RAM"
+"PerfMon_GPU" "GPU"
+"PerfMon_Units_MHz" "MHz"
+"PerfMon_Units_GHz" "GHz"
+"PerfMon_Units_THz" "THz"
+"PerfMon_Units_TB" "Tt"
+"PerfMon_Units_GB" "Gt"
+"PerfMon_Units_MB" "Mt"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."

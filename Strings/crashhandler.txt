@@ -332,6 +332,7 @@ $ORIGIN
 13CCrashHandler
 13ICrashHandler
 14CUtlLinkedListI10CUtlStringiE
+16:03:07
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
@@ -342,7 +343,6 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-23:24:58
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -526,7 +526,7 @@ IsValidIndex(elem)
 JArray
 January
 July
-Jun 23 2025
+Jun 26 2025
 June
 LOCK_EX
 LOCK_SH
@@ -602,6 +602,7 @@ QkkXa
 Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
+SE2e
 STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 Saturday

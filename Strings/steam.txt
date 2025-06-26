@@ -2292,6 +2292,8 @@ $ffn
 15IMetricsFactory
 15ISSLCertificate
 15IUpdateStatusUI
+16:03:07
+16:03:14
 16CAdHocValidation
 16CBilling_Address
 16CConsoleUpdateUI
@@ -2424,9 +2426,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:24:58
-23:25:19
-23:25:24
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -6530,7 +6529,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun 23 2025
+Jun 26 2025
 June
 K'iche'
 K(\f]C15
@@ -8746,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 23 2025 23:25:10
+Startup - updater built Jun 26 2025 16:03:14
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -12081,7 +12080,6 @@ d2i_SSL_SESSION
 d2i_ocsp_nonce
 d=%-2d hl=%ld l=%4ld 
 d=%-2d hl=%ld l=inf  
-dCkK
 dITRedirect
 dNSDomain
 dPH/

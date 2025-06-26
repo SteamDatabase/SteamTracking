@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "實況直播 - 聊天室（%numviewers% 位觀眾）"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
+"PerfMon_FPS" "FPS"
+"PerfMon_CPU" "CPU"
+"PerfMon_RAM" "RAM"
+"PerfMon_GPU" "GPU"
+"PerfMon_Units_MHz" "MHz"
+"PerfMon_Units_GHz" "GHz"
+"PerfMon_Units_THz" "THz"
+"PerfMon_Units_TB" "TB"
+"PerfMon_Units_GB" "GB"
+"PerfMon_Units_MB" "MB"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"您已在線上玩了 1 小時。"
 "SteamChina_Overlay_DurationControl_MessageB"		"您已在線上玩了 3 小時。\n可以考慮休息一下。"
 "SteamChina_Overlay_DurationControl_MessageC"		"您已在線上玩了超過 3 小時。\n您的經驗值 / 進度值已降為正常值的一半。"

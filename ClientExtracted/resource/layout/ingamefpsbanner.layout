@@ -17,6 +17,11 @@
 		FPSGraph.ColorFPSBad "218 100 100 255"  // Code will adjust alpha for intensity depending on actual bad frame count in the second
 		FPSGraph.ColorLegend "0 212 53 255"
 		FPSGraph.HeightLarge "28"
+
+		CPUCoreGraph.ColorGreen "0 212 53 255"
+		CPUCoreGraph.ColorOrange "255 20 10 255"
+		CPUCoreGraph.ColorYellow "218 218 0 255"
+		CPUCoreGraph.HeightLarge "28"
 	}
    	
 	styles

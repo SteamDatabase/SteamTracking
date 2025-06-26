@@ -1667,12 +1667,20 @@ body.v6 .game_description_column h2.gradientbg {
 	max-width: 100%;
 }
 
-/* default hidden play icon */
-.game_area_description .bb_img_play_pause {
+.game_area_description .bb_img_icons {
 	position: absolute;
 	display: flex;
+	flex-direction: row;
 	top: 8px;
 	right: 8px;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+/* default hidden play icon */
+.game_area_description .bb_img_play_pause {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 32px;
@@ -1698,17 +1706,41 @@ body.v6 .game_description_column h2.gradientbg {
 }
 
 .game_area_description .bb_img_play_pause[data-tooltip][data-tooltip-visible="true"]:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 120%;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
-  white-space: nowrap;
-  z-index: 10;
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 120%;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 4px 8px;
+	font-size: 12px;
+	border-radius: 4px;
+	white-space: nowrap;
+	z-index: 10;
+}
+
+/* default hidden play icon */
+.game_area_description .bb_img_expand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	line-height: 1;
+	font-size: 18px;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 50%;
+	user-select: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	cursor: pointer;
+}
+
+.game_area_description .bb_img_ctn:hover .bb_img_expand {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 body.v6 .game_area_description h2.bb_tag {

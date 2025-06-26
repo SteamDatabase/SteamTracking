@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "Трансляція — чат ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% кбіт/с, %videosendfps% FPS"
 
+"PerfMon_FPS" "К/с"
+"PerfMon_CPU" "ЦП"
+"PerfMon_RAM" "ОП"
+"PerfMon_GPU" "ГП"
+"PerfMon_Units_MHz" "МГц"
+"PerfMon_Units_GHz" "ГГц"
+"PerfMon_Units_THz" "ТГц"
+"PerfMon_Units_TB" "ТБ"
+"PerfMon_Units_GB" "ГБ"
+"PerfMon_Units_MB" "МБ"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"Ви граєте вже одну годину."
 "SteamChina_Overlay_DurationControl_MessageB"		"Ви граєте вже три години.\nПодумайте щодо перерви."
 "SteamChina_Overlay_DurationControl_MessageC"		"Ви граєте вже більше трьох годин.\nВаш досвід / прогрес буде зменшено наполовину."

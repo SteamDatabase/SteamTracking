@@ -4636,7 +4636,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 3412320;
+          return 3812610;
         }
         async GetLoyaltyRewardsSummary() {
           if (!this.BIsLoggedIn()) return;
@@ -8160,6 +8160,7 @@
                 props: {
                   iconComponent: _.Exy,
                   children: (0, _._)("#ShopNav_SeasonalBadgeLink"),
+                  iconCallout: _._,
                   _: _._.LoyaltySteamBadge(),
                 },
               }),
@@ -8385,6 +8386,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -9070,6 +9072,25 @@
           _.createElement("path", {
             _: "M63.189 4.402H5.813a1 1 0 00-1 1L4.81 62.598H2.46a1 1 0 100 2h64.08a1 1 0 100-2h-2.35l-.001-57.196a1 1 0 00-1-1zm-56.376 2h55.376v39.426H43.584v-5.854h-7.556l2.448-2.48a.999.999 0 00.288-.702V18.915h2.062a1 1 0 100-2h-3.508v-3.775h1.32a1 1 0 100-2h-3.584v-.917a1 1 0 10-2 0v.917H29.47a1 1 0 100 2h1.32v3.775h-3.508a1 1 0 100 2h2.061v17.875c0 .242.087.474.245.656l2.195 2.527h-6.365v5.854H6.813V6.402zm25.977 6.74h2.528v3.774H32.79v-3.775zm-1.447 5.774h1.711v14.642a1 1 0 102 0V18.916h1.71v17.465l-2.9 2.94-2.52-2.904v-17.5zm10.241 23.058v3.834H27.418v-3.834h14.166zM6.81 62.598v-14.77h55.38v14.77H6.81z",
           }),
+        );
+      }
+      function _(_) {
+        const { className: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            className: _,
+            height: 100,
+            width: 100,
+            fill: "currentColor",
+            stroke: "currentColor",
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 69 69",
+          },
+          _.createElement("path", {
+            _: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
+          }),
+          "  ",
         );
       }
       function _(_) {

@@ -3528,7 +3528,7 @@ $steammessages_parental_objects.proto"
 (\r"/\n\fProfileTheme
 (\r"1\n/CCommunity_PartnerEventsShowLessForApp_Response"8\n6CCommunity_ClearUserPartnerEventsAppPriorities_Request"9\n7CCommunity_ClearUserPartnerEventsAppPriorities_Response"6\n4CCommunity_GetUserPartnerEventsAppPriorities_Request"O\n#CCommunity_PartnerEventsAppPriority
 (\r"1\n/CCommunity_PartnerEventsShowMoreForApp_Response"?\n.CCommunity_PartnerEventsShowLessForApp_Request
-(\r"1\n/CSteamInputService_ControllerStateFlow_Response2
+(\r"1\n/CSteamInputService_ControllerStateFlow_Response"h\n
 (\r"2\n!CTimedTrial_ResetPlaytime_Request
 (\r"2\n0CAccountHardware_SetPersonalizationFile_Response"[\n/CAccountHardware_GetPersonalizationFile_Request
 (\r"2\n0CPlayer_UpdateSteamAnnouncementLastRead_Response"$\n"CPlayer_GetPrivacySettings_Request"
@@ -3737,6 +3737,7 @@ $steammessages_parental_objects.proto"
 (\t":\n\rCLogUploadMsg
 (\t";\n)CCredentials_ValidateEmailAddress_Request
 (\t";\n9CRemoteClient_DeleteRemotePlayTogetherInvitation_Response"S\n8CRemoteClient_LookupRemotePlayTogetherInvitation_Request
+(\t";\n9CSteamInputService_ControllerAccessibilityStrings_Request"n\n:CSteamInputService_ControllerAccessibilityStrings_Response
 (\t"<\n,CTransportValidation_NotifyText_Notification
 (\t"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response
 (\t"?\n"CBroadcast_StartBuildClip_Response
@@ -4617,6 +4618,7 @@ $steammessages_parental_objects.proto"
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerWriteFileJob32CSystemManager_WriteFile_Request33CSystemManager_WriteFile_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob57CSteamInputService_ControllerAccessibilityStrings_Request58CSteamInputService_ControllerAccessibilityStrings_ResponseE
 *20SteamClientJobLambdaIZL30DisconnectBTDeviceOnMainThreadPKcEUlvE_E
 *20SteamClientJobLambdaIZN12CUserFriends25GetLocalizedDisplayStringEjP10ClFriend_tEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager20StopStreamingSessionEjEUlvE_E
@@ -4756,8 +4758,10 @@ $steammessages_parental_objects.proto"
 *ZN16CSteamController20SetGyroAutoCalibrateEjbEUlP22IControllerAbstractionE_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE0_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK57CSteamInputService_ControllerAccessibilityStrings_RequestR58CSteamInputService_ControllerAccessibilityStrings_ResponseE1_
 *ZN18CControllerMapping20CreateDigitalBindingEPK15BindingAction_tPKcP17IconBindingData_tEUlR22ControllerActionData_tE_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE0_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE1_
@@ -5624,6 +5628,7 @@ $steammessages_parental_objects.proto"
 -\t47Cd1z
 -allowbrowserviewunderlay
 -allowremotediscovery
+-arch
 -batterytestmode
 -bootreserve
 -bootreservesizemb
@@ -5940,6 +5945,8 @@ $steammessages_parental_objects.proto"
 .CCommunity_GetApps_Request
 .CCommunity_GetApps_Response"
 .CCommunity_PartnerEventResult"
+.CControllerAccessibilityString2
+.CControllerOriginKey
 .CCookie"
 .CDisplayMarketingMessage"
 .CDisplayMarketingMessage"R\n0CMarketingMessages_PartnerPublishMessage_Request
@@ -10954,6 +10961,7 @@ $steammessages_parental_objects.proto"
 20CClientJobUnlockH264
 20CClientNetworkingAPI
 20CControllerConfigMsg
+20CControllerOriginKey
 20CDepotReconstructCtx
 20CDisconnectDeviceJob
 20CECSigningPrivateKey
@@ -12572,6 +12580,7 @@ $steammessages_parental_objects.proto"
 30CCloud_BeginUGCUpload_Response
 30CCloud_CommitUGCUpload_Request
 30CCloud_GetFileDetails_Response
+30CControllerAccessibilityString
 30CGameNotes_UploadImage_Request
 30CGameRecordingTimelineMetadata
 30CGameRecording_GetTags_Request
@@ -14827,6 +14836,7 @@ $steammessages_parental_objects.proto"
 57CRemoteClient_CreateRemotePlayTogetherInvitation_Response
 57CRemoteClient_DeleteRemotePlayTogetherInvitation_Response
 57CRemoteClient_LookupRemotePlayTogetherInvitation_Response
+57CSteamInputService_ControllerAccessibilityStrings_Request
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
@@ -14844,6 +14854,7 @@ $steammessages_parental_objects.proto"
 58CMarketingMessages_GetMarketingMessageViewerStats_Response
 58CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response
 58CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
+58CSteamInputService_ControllerAccessibilityStrings_Response
 58CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig
 58CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 58CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
@@ -15564,6 +15575,7 @@ $steammessages_parental_objects.proto"
 :.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
 :.CRemoteClient_CreateRemotePlayTogetherInvitation_Response"
 :.CRemoteClient_DeleteRemotePlayTogetherInvitation_Response"
+:.CSteamInputService_ControllerAccessibilityStrings_Request
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
@@ -15622,6 +15634,7 @@ $steammessages_parental_objects.proto"
 ;.CMarketingMessages_GetMarketingMessageClickedStats_Request
 ;.CMarketingMessages_GetMarketingMessageViewerStats_Response"
 ;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
+;.CSteamInputService_ControllerAccessibilityStrings_Response
 ;.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 ;.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 ;22dV::tN\n\n
@@ -15629,7 +15642,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42\f
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -18527,7 +18540,9 @@ CContentUpdateContext::ThreadedWritePatchFile
 CContentUpdateContext::m_pCPUThreadPool
 CContentUpdateContext::m_pIOThreadPool
 CContentUpdateContext_AllocateDiskSpace
+CControllerAccessibilityString
 CControllerConfigMsg
+CControllerOriginKey
 CCookie
 CCopyableUtlVector()  - copycons
 CCrossProcessPipe
@@ -28409,6 +28424,7 @@ Method GetCommunityBadgeProgress() not implemented.
 Method GetCommunityPreferences() not implemented.
 Method GetContentDescriptors() not implemented.
 Method GetContentHubConfig() not implemented.
+Method GetControllerAccessibilityStrings() not implemented.
 Method GetControllerPersonalizationFile() not implemented.
 Method GetCredentialChangeTimeDetails() not implemented.
 Method GetDLCForApps() not implemented.
@@ -35228,6 +35244,7 @@ SteamInput005
 SteamInput006
 SteamInputManager
 SteamInputManager.EndControllerStateFlow#1
+SteamInputManager.GetControllerAccessibilityStrings#1
 SteamInputManager.NotifyAxesStateChanged#1
 SteamInputManager.NotifyButtonStateChanged#1
 SteamInputManager.NotifyGyroAccelerometerStateChanged#1
@@ -38902,6 +38919,7 @@ Zulu
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n!GetAllReservationPositionMessages
+\n!GetControllerAccessibilityStrings
 \n!GetDisplayMarketingMessageForUser
 \n!GetInventoryItemsWithDescriptions
 \n!GetPurchasedProfileCustomizations
@@ -43590,6 +43608,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_style
 controller_subtype
 controller_switch_joycon_left
 controller_switch_joycon_pair
@@ -46276,7 +46295,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen2
 ghjkl
 gidlist
 gidparentcomment
@@ -57966,7 +57985,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 23 2025 23:26:46
+steam Jun 26 2025 16:03:17
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

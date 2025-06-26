@@ -311,7 +311,6 @@ $\n k_SystemAudioPortDirection_Input
 %s_mutex
 %s_server
 %s_written
-&U\aH
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
@@ -555,6 +554,7 @@ $\n k_SystemAudioPortDirection_Input
 -\n\rsecurity_info
 -\n\rskia_graphite
 -allowbrowserviewunderlay
+-arch
 -buildid=%u
 -cachedir=%s
 -cef-allow-browser-underlay

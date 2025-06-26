@@ -8743,5 +8743,10 @@
     "PhaseList_Recording_SaveAsClip": "Opslaan als clip",
     "TimelineDialog_ClipPhase": "Fase opslaan als clip",
     "ClipManager_Explainer_Header_NoGR": "Hier vind je de screenshots die je in het spel hebt gemaakt",
-    "steamui_dummy": "DO NOT USE ME"
+    "steamui_dummy": "DO NOT USE ME",
+    "ContentManagement_TotalSize": "Totaal: %1$s",
+    "AppControllerConfiguration_Settings": "Instellingen",
+    "ControllerConfigurator_ChooseConfiguration_SearchResults": "Zoekresultaten",
+    "AppControllerConfiguration_Upvotes": "%1$s vind-ik-leuk",
+    "AppControllerConfiguration_Upvotes_Plural": "%1$s vind-ik-leuks"
 }

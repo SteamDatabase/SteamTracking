@@ -119,6 +119,25 @@ message CSteamInputService_ControllerStateFlow_Request {
 message CSteamInputService_ControllerStateFlow_Response {
 }
 
+message CControllerOriginKey {
+	optional int32 controller_type = 1;
+	optional int32 controller_style = 2;
+	optional int32 source = 3;
+	optional int32 input = 4;
+}
+
+message CControllerAccessibilityString {
+	optional .CControllerOriginKey key = 1;
+	optional string localized_string = 2;
+}
+
+message CSteamInputService_ControllerAccessibilityStrings_Request {
+}
+
+message CSteamInputService_ControllerAccessibilityStrings_Response {
+	repeated .CControllerAccessibilityString strings = 1;
+}
+
 service SteamInputManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
@@ -130,4 +149,5 @@ service SteamInputManager {
 	rpc NotifyGyroCalibrationStateChanged (.CSteamInputService_GyroCalibration_Notification) returns (.WebUINoResponse);
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
+	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
 }

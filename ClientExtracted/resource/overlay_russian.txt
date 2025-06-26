@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "Трансляция - чат (%numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% кбит/с, %videosendfps% FPS"
 
+"PerfMon_FPS" "К/с"
+"PerfMon_CPU" "ЦП"
+"PerfMon_RAM" "ОП"
+"PerfMon_GPU" "ГП"
+"PerfMon_Units_MHz" "МГц"
+"PerfMon_Units_GHz" "ГГц"
+"PerfMon_Units_THz" "ТГц"
+"PerfMon_Units_TB" "Тб"
+"PerfMon_Units_GB" "Гб"
+"PerfMon_Units_MB" "Мб"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."

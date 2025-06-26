@@ -7,6 +7,7 @@
 		CPUUtilization { controlname=CPerfLabel style="CPUUtilization" }
 		CPUUtilizationSep { controlname=CPerfLabel style="CPUUtilization" }
 		CPUUtilizationMax { controlname=CPerfLabel style="CPUUtilization" }
+		CPUCoreGraph { controlname=CIngameCPUCoreGraph visible=1}
 		CPUSpeed { controlname=CPerfLabel style="CPUSpeed" }
 		CPUSpeedMax { controlname=CPerfLabel style="CPUSpeed" }
 		CPUSpeedUnits { controlname=CPerfLabel style="CPUSpeed" }
@@ -40,6 +41,6 @@
 	
 	layout
 	{
-		place { control="SeperatorFront,CPULabel,CPUUtilization,CPUUtilizationSep,CPUUtilizationMax,CPUSpeed,CPUSpeedMax,CPUSpeedUnits,SeperatorBack" dir="right" align="left-center" spacing=0 }
+		place { control="SeperatorFront,CPULabel,CPUUtilization,CPUUtilizationSep,CPUUtilizationMax,CPUCoreGraph,CPUSpeed,CPUSpeedMax,CPUSpeedUnits,SeperatorBack" dir="right" align="left-center" spacing=0 }
 	}
 }

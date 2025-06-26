@@ -254,6 +254,17 @@
 "Overlay_Broadcast_Chat_Title" "Übertragung - Chat ( %numviewers%)"
 "Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
 
+"PerfMon_FPS" "FPS"
+"PerfMon_CPU" "CPU"
+"PerfMon_RAM" "RAM"
+"PerfMon_GPU" "GPU"
+"PerfMon_Units_MHz" "MHz"
+"PerfMon_Units_GHz" "GHz"
+"PerfMon_Units_THz" "THz"
+"PerfMon_Units_TB" "TB"
+"PerfMon_Units_GB" "GB"
+"PerfMon_Units_MB" "MB"
+
 "SteamChina_Overlay_DurationControl_MessageA"		"Sie haben eine Stunde lang gespielt."
 "SteamChina_Overlay_DurationControl_MessageB"		"Sie haben drei Stunden lang gespielt.\nErwägen Sie eine Pause."
 "SteamChina_Overlay_DurationControl_MessageC"		"Sie haben mehr als drei Stunden lang gespielt.\nIhre XP und Ihr Fortschritt wurden halbiert."

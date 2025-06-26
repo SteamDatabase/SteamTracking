@@ -242,6 +242,16 @@
 #Panorama_Selection_Turkish
 #Panorama_Selection_Ukrainian
 #Panorama_Selection_Vietnamese
+#PerfMon_CPU
+#PerfMon_FPS
+#PerfMon_GPU
+#PerfMon_RAM
+#PerfMon_Units_GB
+#PerfMon_Units_GHz
+#PerfMon_Units_MB
+#PerfMon_Units_MHz
+#PerfMon_Units_TB
+#PerfMon_Units_THz
 #QueryBox_Cancel
 #SteamUI_Selection_Arabic
 #SteamUI_Selection_Brazilian
@@ -1169,6 +1179,7 @@ $\nY8O
 15CStringProperty
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IOverlayOSPumps
+16:03:17
 16AppModalQueryBox
 16CHTMLProtoBufMsgI10CMsgGoBackE
 16CHTMLProtoBufMsgI10CMsgReloadE
@@ -1274,6 +1285,7 @@ $\nY8O
 18CTextureIdProperty
 18CUtlCharConversion
 19CDirContentsWatcher
+19CIngameCPUCoreGraph
 19CMsgBrowserPosition
 19CMsgClearAllCookies
 19CMsgComboNeedsPaint
@@ -1338,7 +1350,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:25:22
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1517,7 +1528,6 @@ $\nY8O
 > or is NULL
 >= or is NULL
 ?456789:;<=
-?86Y
 ???\f???????\n???\r?\t?\v
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 @bEnableLogTearOff
@@ -2038,6 +2048,7 @@ CHTMLPageSecurityInfo
 CH\f1
 CIMEPanel
 CIPAndPort::GetIPv4 called on IPv6 address
+CIngameCPUCoreGraph
 CIngameFPSBanner
 CIngameFPSCPUInfo
 CIngameFPSGPUInfo
@@ -2205,6 +2216,11 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
+CPUCoreGraph
+CPUCoreGraph.ColorGreen
+CPUCoreGraph.ColorOrange
+CPUCoreGraph.ColorYellow
+CPUCoreGraph.HeightLarge
 CPUInfoAvg
 CPULabel
 CPUSpeed
@@ -3348,6 +3364,8 @@ InGameOverlayShowFPSBGOpacity
 InGameOverlayShowFPSCorner
 InGameOverlayShowFPSCornerLastUsed
 InGameOverlayShowFPSDetailLevel
+InGameOverlayShowFPSGraphCPU
+InGameOverlayShowFPSGraphFPS
 InGameOverlayShowFPSHotKey
 InGameOverlayShowFPSSaturation
 InGameOverlayShowFPSScaling
@@ -3491,7 +3509,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun 23 2025
+Jun 26 2025
 June
 K'iche'
 KEY_0
