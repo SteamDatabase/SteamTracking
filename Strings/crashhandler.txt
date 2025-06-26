@@ -332,12 +332,12 @@ $ORIGIN
 13CCrashHandler
 13ICrashHandler
 14CUtlLinkedListI10CUtlStringiE
-16:03:07
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
 17CFileWriterThread
 17CStreamReaderBase
+18:16:15
 18CUtlCharConversion
 19CUtlNoEscConversion
 20CUniformRandomStream
@@ -602,7 +602,6 @@ QkkXa
 Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
-SE2e
 STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 Saturday

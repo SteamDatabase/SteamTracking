@@ -3520,6 +3520,7 @@
           ? _.createElement(
               _,
               null,
+              _.createElement(_, null),
               _._.logged_in
                 ? _.createElement(_, {
                     ..._,
@@ -3605,7 +3606,6 @@
               bDisableAnimation: _,
               className: _().DiscoveryQueueWidget,
             },
-            _.createElement(_, null),
             !_ &&
               _.createElement(_, {
                 _: _,
@@ -3688,7 +3688,6 @@
             onClick: _,
             arrDiscoveryApps: _,
           },
-          _.createElement(_, null),
           _.createElement(
             "div",
             {

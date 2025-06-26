@@ -2292,8 +2292,6 @@ $ffn
 15IMetricsFactory
 15ISSLCertificate
 15IUpdateStatusUI
-16:03:07
-16:03:14
 16CAdHocValidation
 16CBilling_Address
 16CConsoleUpdateUI
@@ -2331,6 +2329,9 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:16:15
+18:16:22
+18:16:24
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -8745,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 26 2025 16:03:14
+Startup - updater built Jun 26 2025 18:16:22
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

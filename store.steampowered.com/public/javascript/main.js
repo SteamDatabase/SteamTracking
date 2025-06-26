@@ -783,7 +783,10 @@ function InitVideoFocusWatcher()
 		}
 
 		nBlurTimeoutId = undefined;
-		$J( k_strVideoSelector ).trigger( 'play' );
+		if ( !window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches )
+		{
+			$J( k_strVideoSelector ).trigger( 'play' );
+		}
 	}
 
 	$J( window ).on( 'blur' , onWindowBlur );

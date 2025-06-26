@@ -96,8 +96,8 @@ $ORIGIN
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
 12CStdMemAlloc
-16:03:09
 16CAdHocValidation
+18:16:17
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -1274,7 +1274,6 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
-uKv(m
 uname
 unknown
 unlink

@@ -3109,6 +3109,7 @@
           ? s.createElement(
               f,
               null,
+              s.createElement(M, null),
               m.iA.logged_in
                 ? s.createElement(C, { ...e })
                 : s.createElement(E, { ...e }),
@@ -3168,7 +3169,6 @@
               bDisableAnimation: c,
               className: g().DiscoveryQueueWidget,
             },
-            s.createElement(M, null),
             !h && s.createElement(w, { id: b, strQueueDescriptionOverride: n }),
           ),
           d &&
@@ -3224,7 +3224,6 @@
         return s.createElement(
           y.g,
           { onClick: r, arrDiscoveryApps: t },
-          s.createElement(M, null),
           s.createElement(
             "div",
             { className: (0, u.A)(g().WidgetHeaderCtn, "WidgetHeaderCtn") },
