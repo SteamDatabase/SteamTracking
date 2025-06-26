@@ -119,6 +119,7 @@ GHomepage = {
 		{
 			var tracker = InitUsabilityTracker( "https:\/\/store.steampowered.com\/default\/usabilitytracking\/" );
 			tracker.SetPostCallback( this.UsabilityTrackerPostCallback );
+			tracker.IncrementStat( "prefersReducedMotion", window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches ? 1 : 0 )
 		}
 	},
 
