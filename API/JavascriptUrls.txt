@@ -2812,6 +2812,7 @@ https://partner.steamgames.com/doc/store/assets/promos
 https://partner.steamgames.com/doc/store/creator_homepage
 https://partner.steamgames.com/doc/store/localization#supported_languages
 https://partner.steamgames.com/doc/store/news/rss
+https://partner.steamgames.com/doc/store/page/assets#error
 https://partner.steamgames.com/doc/store/pricing
 https://partner.steamgames.com/doc/store/promo/midweek
 https://partner.steamgames.com/doc/store/promo/weekend

@@ -960,6 +960,7 @@
     "StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename": "This filename will be used: %1$s",
     "StoreAdmin_ExtraAssetUpload_LocalizeGroup": "%2$s (Group of %1$s)",
     "StoreAdmin_ExtraAssetUpload_LocalizeGroup_Plural": "%2$s (Group of %1$s)",
+    "StoreAdmin_ExtraAssetUpload_UnknownUploadFailure": "(additional info)",
     "StoreAdmin_ExtraAssetUpload_LocalizeAsset_Title": "Asset Localization",
     "StoreAdmin_ExtraAssetUpload_LocalizeAsset_Desc": "Provide language-specific versions of this asset.",
     "StoreAdmin_ExtraAssetUpload_LocalizeAsset_Instructions": "Drag here to upload localized versions of this asset.",

@@ -1514,7 +1514,19 @@
             "data" in _.response &&
             "object" == typeof _.response.data &&
             "errors" in _.response.data
-              ? (_ = _.response.data.errors)
+              ? (_ = [
+                  ..._.response.data.errors,
+                  _.createElement("br"),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://partner.steamgames.com/doc/store/page/assets#error",
+                    },
+                    (0, _._)(
+                      "#StoreAdmin_ExtraAssetUpload_UnknownUploadFailure",
+                    ),
+                  ),
+                ])
               : console.error(
                   "CExtraAssetsImageUploader.UploadSingleImage failed with unknown error",
                   _,
@@ -1532,7 +1544,7 @@
               ),
               {
                 bSuccess: !1,
-                strErrorMessage: _?.join("\n"),
+                strErrorMessage: _,
                 result: null,
               });
         }
