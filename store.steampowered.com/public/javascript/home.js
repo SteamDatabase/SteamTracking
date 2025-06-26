@@ -1346,6 +1346,11 @@ GHomepage = {
 	RenderSpotlightSection: function()
 	{
 		var $Spotlights = $J('#spotlight_carousel');
+		if ( $Spotlights.length == 0 )
+		{
+			return;
+		}
+
 		var $Pages = $J('#spotlight_carousel > .carousel_items .home_special_offers_group');
 
 		var oShownItems = {};
@@ -1727,6 +1732,11 @@ GHomepage = {
 
 	RenderUnder10: function()
 	{
+		let $elUnder10 = $J('.specials_under10');
+		if ( $elUnder10.length == 0 )
+		{
+			return;
+		}
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.oDisplayLists.under10, 'home', 4, 28, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
@@ -1739,7 +1749,7 @@ GHomepage = {
 			);
 		}
 
-		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $J('.specials_under10'), function( oItem, strFeature, rgOptions, nDepth ) {
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $elUnder10, function( oItem, strFeature, rgOptions, nDepth ) {
 			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 		} , 'under10', 4 );
 	},
