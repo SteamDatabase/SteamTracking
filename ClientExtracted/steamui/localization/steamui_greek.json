@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Εμφάνιση της παρακολούθησης επιδόσεων",
     "Settings_InGame_PerfOverlayDetailLevel": "Επίπεδο λεπτομερειών επιδόσεων",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Μεμονωμένη τιμή FPS",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Λεπτομέρειες και γράφημα FPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Λεπτομέρειες FPS",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Λεπτομέρειες FPS, χρήση CPU και GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Λεπτομέρειες και γράφημα FPS, λεπτομέρειες CPU, GPU και RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Πλήρεις λεπτομέρειες FPS, CPU, GPU και RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Προσαρμογή μεγέθους κειμένου",
     "Settings_InGame_PerfOverlay_Saturation": "Αντίθεση/κορεσμός κειμένου",
     "Settings_InGame_PerfOverlay_BGOpacity": "Αδιαφάνεια φόντου",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Εικόνα εργαλείου %1$s",
     "TouchMenuIcon_Vehice": "Εικόνα οχήματος %1$s",
     "TouchMenuIcon_Weapons": "Εικόνα όπλου %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Επιλογή εικονιδίου δέσμευσης"
+    "ControllerConfigurator_Activator_PickIcon": "Επιλογή εικονιδίου δέσμευσης",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Εμφάνιση γραφήματος Avg/Min FPS",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Εμφάνιση γραφήματος χρήσης CPU ανά πυρήνα"
 }

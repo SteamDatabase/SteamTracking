@@ -2302,9 +2302,9 @@
     "Settings_Hotkey_TogglePerfMonitor": "Aktifkan/nonaktifkan monitor kinerja",
     "Settings_InGame_PerfOverlayDetailLevel": "Rincian Kinerja",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Nilai Tunggal FPS",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Rincian & Grafik FPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Rincian FPS",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Rincian FPS, Pemanfaatan CPU & GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Rincian & Grafik FPS, Rincian CPU, GPU & RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Rincian Lengkap FPS, CPU, GPU & RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Penskalaan ukuran teks",
     "Settings_InGame_PerfOverlay_Saturation": "Kontras/saturasi teks",
     "Settings_InGame_PerfOverlay_BGOpacity": "Opasitas latar",
@@ -8766,5 +8766,7 @@
     "TouchMenuIcon_Utility": "Gambar Utilitas %1$s",
     "TouchMenuIcon_Vehice": "Gambar Kendaraan %1$s",
     "TouchMenuIcon_Weapons": "Gambar Senjata %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Pilih Ikon Pengikatan"
+    "ControllerConfigurator_Activator_PickIcon": "Pilih Ikon Pengikatan",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Tampilkan Grafik FPS Rata-rata/Min.",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Tampilkan Grafik Pemanfaatan CPU Per-Core"
 }

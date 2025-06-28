@@ -1395,6 +1395,7 @@ $\nY8O
 14CMsgMouseWheel
 14CMsgNeedsPaint
 14CMsgOpenNewTab
+14CMsgSetSteamID
 14CMsgShowWindow
 14CMsgStatusText
 14CMsgURLChanged
@@ -2600,6 +2601,7 @@ CMsgSetProtocolBlockList
 CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
+CMsgSetSteamID
 CMsgSetTargetFrameRate
 CMsgSetTouchGesturesToCancel
 CMsgSetVRKeyboardVisibility
@@ -6005,7 +6007,6 @@ extension_range
 extra compressed data
 f.N%H
 fP~V
-fQ\td
 faccessat
 facebook.com
 fallocate64
@@ -7916,6 +7917,7 @@ steam://openurlforpid/%u/%s
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steam_beta_name
+steam_id
 steambeta://
 steamchina.com
 steamchina://

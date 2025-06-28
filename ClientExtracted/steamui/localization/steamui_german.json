@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Leistungsüberwachung anzeigen",
     "Settings_InGame_PerfOverlayDetailLevel": "Detailgrad der Leistung",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS-Einzelwert",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-Details und -Graph",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS-Detailgrad, CPU- und GPU-Auslastung",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS-Detailgrad und Graph, Informationen zur CPU, GPU und dem Arbeitsspeicher",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-Details",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS-Details, CPU- und GPU-Auslastung",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Vollständige Details zu FPS, CPU, GPU und RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Textgrößenskalierung",
     "Settings_InGame_PerfOverlay_Saturation": "Kontrast/Sättigung von Texten",
     "Settings_InGame_WebBrowserHome": "Startseite des Webbrowsers",
@@ -2677,7 +2677,7 @@
     "Settings_Updates_TimeRemaining_MinuteAbbr": "Min.",
     "Settings_Updates_TimeRemaining_Unknown": "Unbekannte Dauer",
     "Settings_Updates_PatchNotes": "Patchnotizen",
-    "Settings_Updates_UpToDate": "Aktuell: letzte Prüfung am %1$s",
+    "Settings_Updates_UpToDate": "Aktuell – Letzte Prüfung: %1$s",
     "Settings_Updates_InsufficientBattery": "Ihr Akku muss zu mindestens 20 % aufgeladen sein, um dieses Update durchführen zu können.",
     "Settings_Updates_UpdateErrorTitle": "Fehler beim Aktualisieren",
     "Settings_Updates_UpdateErrorOK": "Verwerfen",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Werkzeugbild %1$s",
     "TouchMenuIcon_Vehice": "Fahrzeugbild %1$s",
     "TouchMenuIcon_Weapons": "Waffenbild %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Symbol für Tastenzuordnung auswählen"
+    "ControllerConfigurator_Activator_PickIcon": "Symbol für Tastenzuordnung auswählen",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Graph für FPS-Durchschnitt/-Minimum anzeigen",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Graph zur CPU-Auslastung pro Kern anzeigen"
 }

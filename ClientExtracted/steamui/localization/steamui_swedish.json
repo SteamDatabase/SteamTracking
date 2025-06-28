@@ -2298,10 +2298,10 @@
     "Settings_InGame_FPSFAQHere": "Läs mer om siffrorna i prestandaövervakaren här.",
     "Settings_InGame_PerformanceMonitor": "Visa prestandaövervakare",
     "Settings_InGame_PerfOverlayDetailLevel": "Detaljnivå för prestandaövervakare",
-    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS – enkelvärde",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS – detaljer och graf",
+    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS-enkelvärde",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-detaljer",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS-detaljer, CPU- och GPU-användning",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS-detaljer och -graf, CPU-, GPU- och RAM-detaljer",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Fullständiga detaljer om FPS, CPU, GPU och RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Textstorlek",
     "Settings_InGame_PerfOverlay_Saturation": "Textens kontrast/mättnad",
     "Settings_InGame_WebBrowserHome": "Webbläsarens startsida",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Verktyg – bild %1$s",
     "TouchMenuIcon_Vehice": "Fordon – bild %1$s",
     "TouchMenuIcon_Weapons": "Vapen – bild %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Välj bindningsikon"
+    "ControllerConfigurator_Activator_PickIcon": "Välj bindningsikon",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Visa graf över genomsnittlig/lägsta FPS",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Visa graf över CPU-användning per kärna"
 }

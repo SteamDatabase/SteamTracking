@@ -2300,9 +2300,9 @@
     "Settings_InGame_PerformanceMonitor": "Mostrar monitor de desempenho",
     "Settings_InGame_PerfOverlayDetailLevel": "Nível de detalhe de desempenho",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Valor de FPS",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Taxa de FPS (detalhes e gráfico)",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Taxa de FPS (detalhes) + utilização da CPU e GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Taxa de FPS (detalhes e gráfico) + detalhes da CPU, GPU e RAM",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detalhes de FPS",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Detalhes de FPS + utilização da CPU e GPU",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detalhes completos de FPS, CPU, GPU e RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Dimensionamento do texto",
     "Settings_InGame_PerfOverlay_Saturation": "Contraste e saturação do texto",
     "Settings_InGame_PerfOverlay_BGOpacity": "Opacidade do fundo",
@@ -8767,5 +8767,7 @@
     "TouchMenuIcon_Utility": "Imagem - Utilitários %1$s",
     "TouchMenuIcon_Vehice": "Imagem - Veículo %1$s",
     "TouchMenuIcon_Weapons": "Imagem - Armas %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Seleciona o ícone da designação"
+    "ControllerConfigurator_Activator_PickIcon": "Seleciona o ícone da designação",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Mostrar gráfico de taxa média/mín. de FPS",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostrar gráfico de utilização da CPU por núcleo"
 }

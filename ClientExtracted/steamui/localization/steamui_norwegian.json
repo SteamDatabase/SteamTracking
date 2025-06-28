@@ -2300,9 +2300,9 @@
     "Settings_Hotkey_TogglePerfMonitor": "Veksle ytelsesmåling",
     "Settings_InGame_PerfOverlayDetailLevel": "Ytelsesdetaljnivå",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Kun bildefrekvens",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detaljer om bildefrekvens (med graf)",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detaljer om bildefrekvens",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Detaljer om bildefrekvens og utnyttelse av CPU og GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detaljer om bildefrekvens (med graf), CPU, GPU og RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Fullstendige detaljer om bildefrekvens, CPU, GPU og RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Tekststørrelse",
     "Settings_InGame_PerfOverlay_Saturation": "Tekstens kontrast/metning",
     "Settings_InGame_WebBrowserHome": "Nettleserens startside",
@@ -8766,5 +8766,7 @@
     "TouchMenuIcon_Utility": "Hjelpemiddel – bilde %1$s",
     "TouchMenuIcon_Vehice": "Kjøretøy – bilde %1$s",
     "TouchMenuIcon_Weapons": "Våpen – bilde %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Velg bindingens ikon"
+    "ControllerConfigurator_Activator_PickIcon": "Velg bindingens ikon",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Vis graf over gjennomsnittlig/min. bildefrekvens",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Vis graf over CPU-utnyttelse per kjerne"
 }

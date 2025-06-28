@@ -2298,12 +2298,12 @@
     "Settings_InGame_FPSFAQHere": "เรียนรู้เพิ่มเติมเกี่ยวกับตัวเลขในโอเวอร์เลย์ตรวจสอบประสิทธิภาพที่นี่",
     "Settings_InGame_PerformanceMonitor": "แสดงโอเวอร์เลย์ตรวจสอบประสิทธิภาพ",
     "Settings_InGame_PerfOverlayDetailLevel": "ระดับรายละเอียดประสิทธิภาพ",
-    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS ค่าเดียว",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "รายละเอียดและกราฟ FPS",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "รายละเอียด FPS, การใช้งาน CPU และ GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "รายละเอียดและกราฟ FPS, รายละเอียดเกี่ยวกับ CPU, GPU และ RAM",
+    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS แบบค่าเดียว",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "รายละเอียด FPS",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "รายละเอียด FPS พร้อมการใช้งาน CPU และ GPU",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "รายละเอียดทั้งหมดเกี่ยวกับ FPS, CPU, GPU และ RAM",
     "Settings_InGame_PerfOverlay_TextSize": "การปรับขนาดข้อความ",
-    "Settings_InGame_PerfOverlay_Saturation": "ความเปรียบต่าง/ความเข้มของข้อความ",
+    "Settings_InGame_PerfOverlay_Saturation": "ความคมชัด/ความเข้มของข้อความ",
     "Settings_InGame_WebBrowserHome": "หน้าเริ่มต้นของเว็บเบราว์เซอร์",
     "Settings_InGame_WebBrowserAutoLoginHeader": "เข้าสู่ระบบโดยอัตโนมัติบนไซต์ต่าง ๆ ของ Steam",
     "Settings_InGame_WebBrowserAutoLoginDesc": "อนุญาตให้โอเวอร์เลย์เว็บเบราว์เซอร์เข้าสู่ระบบในไซต์ต่าง ๆ ของ Steam ได้โดยอัตโนมัติ (ต้องรีสตาร์ทเพื่อให้การเปลี่ยนแปลงมีผลใช้)",
@@ -8766,5 +8766,7 @@
     "TouchMenuIcon_Utility": "ภาพยูทิลิตี้ %1$s",
     "TouchMenuIcon_Vehice": "ภาพยานพาหนะ %1$s",
     "TouchMenuIcon_Weapons": "ภาพอาวุธ %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "เลือกไอคอนการกำหนดปุ่ม"
+    "ControllerConfigurator_Activator_PickIcon": "เลือกไอคอนการกำหนดปุ่ม",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "แสดงกราฟค่า FPS เฉลี่ย/นาที",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "แสดงกราฟการใช้งาน CPU ต่อแกน"
 }

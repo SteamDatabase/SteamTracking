@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Mostrar el monitor de rendimiento",
     "Settings_InGame_PerfOverlayDetailLevel": "Nivel de detalle de rendimiento",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Valor único de FPS",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detalles y gráfico de FPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detalles de FPS",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Detalles de FPS y uso de CPU y GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detalles y gráfico de FPS, y detalles de CPU, GPU y RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detalles completos de FPS, CPU, GPU y RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Escalado del tamaño del texto",
     "Settings_InGame_PerfOverlay_Saturation": "Contraste/saturación del texto",
     "Settings_InGame_WebBrowserHome": "Página de inicio del navegador",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Imagen de utilidad %1$s",
     "TouchMenuIcon_Vehice": "Imagen de vehículo %1$s",
     "TouchMenuIcon_Weapons": "Imagen de arma %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Elige icono de asignación"
+    "ControllerConfigurator_Activator_PickIcon": "Elige icono de asignación",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Mostrar gráfica de FPS mín./med.",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostrar gráfica de uso de CPU por núcleo"
 }

@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Показувати монітор продуктивності",
     "Settings_InGame_PerfOverlayDetailLevel": "Рівень деталізації продуктивності",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Значення к/с",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Значення та графік к/с",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Значення к/с, використання ЦП та ГП",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Значення та графік к/с, використання ЦП, ГП та оперативної пам’яті",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Детальніший показ к/с",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Детальніший показ к/с, використання ЦП та ГП",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Повний показ к/с, використання ЦП, ГП та оперативної пам’яті",
     "Settings_InGame_PerfOverlay_TextSize": "Зміна розміру тексту",
     "Settings_InGame_PerfOverlay_Saturation": "Контраст/насиченість тексту",
     "Settings_InGame_WebBrowserHome": "Домашня сторінка браузера",
@@ -8764,5 +8764,7 @@
     "TouchMenuIcon_Utility": "Зображення утиліти %1$s",
     "TouchMenuIcon_Vehice": "Зображення засобу пересування %1$s",
     "TouchMenuIcon_Weapons": "Зображення зброї %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Вибір піктограму для прив’язки"
+    "ControllerConfigurator_Activator_PickIcon": "Вибір піктограму для прив’язки",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Показувати графік сер./мін. значення к/c",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показувати графік використання ЦП за окремим ядром"
 }

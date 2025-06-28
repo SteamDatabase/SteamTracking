@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Показване на монитор за производителността",
     "Settings_InGame_PerfOverlayDetailLevel": "Ниво на подробност за производителността",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Единствено стойност на к/сек.",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Подробности и графика на к/сек.",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Подробни к/сек.; оползотворяване на процесор и видеокарта",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Подробни к/сек. и графика; подробности за процесор, видеокарта и оперативна памет",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Подробности на к/сек.",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Подробности за к/сек., оползотворяване на процесора и видеокартата",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Пълни подробности за к/сек., процесор, видеокарта и оперативна памет",
     "Settings_InGame_PerfOverlay_TextSize": "Мащаб за размера на шрифта",
     "Settings_InGame_PerfOverlay_Saturation": "Контраст/наситеност на текста",
     "Settings_InGame_WebBrowserHome": "Начална страница на уеб браузъра",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Изображение за приспособление %1$s",
     "TouchMenuIcon_Vehice": "Изображение за превозно средство %1$s",
     "TouchMenuIcon_Weapons": "Изображение за оръжие %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Избиране на икона за обвързване"
+    "ControllerConfigurator_Activator_PickIcon": "Избиране на икона за обвързване",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Показване на графика за средни/мин. к/сек.",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показване на графика за оползотворяване на процесора за отделни ядра"
 }

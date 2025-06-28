@@ -270,6 +270,7 @@
 ! "There was a problem with your Steam installation.\n" "Please reinstall steam.\n"
 !! Controller %u attributes%s:\n  Type: %u\n  ProductID: %u\n  Serial: %s\n  Capabilities: %016llx\n  Firmware Version: %u\n
 !!!Invalid
+!!VKWO
 !"Chrome interface missing"
 !"Don't poll on UDP sockets dude"
 !"Emptying callback queue because client didn't process them in a timely manner"
@@ -8027,6 +8028,7 @@ ${LANGUAGE}
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgPowerCurve
+14CMsgSetSteamID
 14CMsgShowWindow
 14CMsgStatusText
 14CMsgURLChanged
@@ -15729,6 +15731,7 @@ CMsgSetProtocolBlockList
 CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
+CMsgSetSteamID
 CMsgSetTargetFrameRate
 CMsgSetTouchGesturesToCancel
 CMsgSetVRKeyboardVisibility
@@ -21505,7 +21508,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 26 2025 19:04:15
+Jun 28 2025 01:07:33
 June
 K'iche'
 K(\f]C15

@@ -2301,9 +2301,9 @@
     "Settings_Hotkey_TogglePerfMonitor": "Prestatiemeter in-/uitschakelen",
     "Settings_InGame_PerfOverlayDetailLevel": "Detailniveau prestaties",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS, enkele waarde",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-details en -grafiek",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-details",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS-details, CPU- en GPU-gebruik",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS-details en -grafiek, CPU-, GPU- en RAM-details",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Alle details over FPS, CPU, GPU en RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Schaal tekstgrootte",
     "Settings_InGame_PerfOverlay_Saturation": "Tekstcontrast/-verzadiging",
     "Settings_InGame_PerfOverlay_BGOpacity": "Doorzichtigheid achtergrond",
@@ -8748,5 +8748,8 @@
     "AppControllerConfiguration_Settings": "Instellingen",
     "ControllerConfigurator_ChooseConfiguration_SearchResults": "Zoekresultaten",
     "AppControllerConfiguration_Upvotes": "%1$s vind-ik-leuk",
-    "AppControllerConfiguration_Upvotes_Plural": "%1$s vind-ik-leuks"
+    "AppControllerConfiguration_Upvotes_Plural": "%1$s vind-ik-leuks",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Grafiek weergeven van gem./min. FPS",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Grafiek weergeven van CPU-gebruik per kern",
+    "ControllerConfigurator_Options": "Opties"
 }

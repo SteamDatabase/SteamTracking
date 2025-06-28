@@ -2302,9 +2302,9 @@
     "Settings_Hotkey_TogglePerfMonitor": "Activer le moniteur de performances",
     "Settings_InGame_PerfOverlayDetailLevel": "Niveau de détail des performances",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Valeur d'IPS uniquement",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Détails et graphique d'IPS",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Détails d'IPS, d'utilisation du processeur et de la carte graphique",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Détails d'IPS et graphique, détails d'utilisation du processeur, de la carte graphique et de la mémoire vive",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Détails d'IPS",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Détails d'IPS, d'utilisation du processeur (CPU) et de la carte graphique (GPU)",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Détails d'IPS, d'utilisation du processeur (CPU), de la carte graphique (GPU) et de la mémoire vive (RAM)",
     "Settings_InGame_PerfOverlay_TextSize": "Mise à l'échelle du texte",
     "Settings_InGame_PerfOverlay_Saturation": "Contraste et saturation du texte",
     "Settings_InGame_PerfOverlay_BGOpacity": "Opacité de l'arrière-plan",
@@ -8767,5 +8767,7 @@
     "TouchMenuIcon_Utility": "Image : utilitaire %1$s",
     "TouchMenuIcon_Vehice": "Image : véhicule %1$s",
     "TouchMenuIcon_Weapons": "Image : arme %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Choisir l'icône d'association"
+    "ControllerConfigurator_Activator_PickIcon": "Choisir l'icône d'association",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Afficher le graphique d'IPS moy./min.",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Afficher le graphique d'utilisation du processeur (divisé par cœur)"
 }

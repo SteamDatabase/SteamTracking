@@ -2298,10 +2298,10 @@
     "Settings_InGame_FPSFAQHere": "Află mai multe despre datele afișate de monitorul de performanță.",
     "Settings_InGame_PerformanceMonitor": "Afișează monitorul de performanță",
     "Settings_InGame_PerfOverlayDetailLevel": "Nivelul de detalii de performanță",
-    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "CPS - doar valoarea",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "CPS - detalii și grafic",
+    "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Doar valoarea CPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detalii despre CPS",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Detalii despre CPS și utilizarea CPU și GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detalii și grafice despre CPS și detalii despre CPU, GPU și RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Detalii complete despre CPS, CPU, GPU și RAM",
     "Settings_InGame_PerfOverlay_Saturation": "Contrastul/saturația textului",
     "Settings_InGame_WebBrowserHome": "Pagina principală a browserului web",
     "Settings_InGame_WebBrowserAutoLoginHeader": "Conectare automată pe site-urile Steam",
@@ -8764,5 +8764,8 @@
     "TouchMenuIcon_Utility": "Imagine - utilitar %1$s",
     "TouchMenuIcon_Vehice": "Imagine - vehicul %1$s",
     "TouchMenuIcon_Weapons": "Imagine - armă %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Alege pictograma asocierii"
+    "ControllerConfigurator_Activator_PickIcon": "Alege pictograma asocierii",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Afișează graficul cu media/minimul de CPS",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Afișează graficul cu utilizarea CPU per nucleu",
+    "Settings_InGame_PerfOverlay_TextSize": "Dimensiunea textului"
 }

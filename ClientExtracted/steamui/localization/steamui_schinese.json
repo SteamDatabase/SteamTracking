@@ -2302,9 +2302,9 @@
     "Settings_InGame_PerformanceMonitor": "显示性能监视器",
     "Settings_InGame_PerfOverlayDetailLevel": "性能详情等级",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS 单个值",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 详情与图表",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 详情",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS 详情、CPU 及 GPU 利用率",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS 详情及图表、CPU、GPU 和 RAM 详情",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS、CPU、GPU 和 RAM 完整详情",
     "Settings_InGame_PerfOverlay_TextSize": "文字大小缩放",
     "Settings_InGame_PerfOverlay_Saturation": "文字对比度/饱和度",
     "Settings_InGame_WebBrowserHome": "网页浏览器主页",
@@ -8777,5 +8777,7 @@
     "TouchMenuIcon_Utility": "实用工具图片 %1$s",
     "TouchMenuIcon_Vehice": "载具图片 %1$s",
     "TouchMenuIcon_Weapons": "武器图片 %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "选择绑定图标"
+    "ControllerConfigurator_Activator_PickIcon": "选择绑定图标",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "显示 FPS 平均值/最小值图",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "显示 CPU 每个内核利用率图"
 }

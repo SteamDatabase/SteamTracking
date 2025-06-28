@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Показать монитор производительности",
     "Settings_InGame_PerfOverlayDetailLevel": "Детализация данных о производительности",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Только значение частоты кадров",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Частота кадров с детализацией и графиком",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Частота кадров с детализацией, загруженность центрального и графического процессоров",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Частота кадров с детализацией и графиком, данные о центральном/графическом процессорах и оперативной памяти",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Частота кадров с детализацией",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Частота кадров с детализацией, загруженность ЦП и ГП",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Частота кадров, загруженность ЦП, ГП и ОП с детализацией",
     "Settings_InGame_PerfOverlay_TextSize": "Масштаб текста",
     "Settings_InGame_PerfOverlay_Saturation": "Контрастность и насыщенность текста",
     "Settings_InGame_WebBrowserHome": "Домашняя страница браузера",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Изображение категории «Вспомогательное» %1$s",
     "TouchMenuIcon_Vehice": "Изображение транспорта %1$s",
     "TouchMenuIcon_Weapons": "Изображение оружия %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Выберите иконку привязки"
+    "ControllerConfigurator_Activator_PickIcon": "Выберите иконку привязки",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Показывать график средней/минимальной частоты кадров",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показывать график загруженности каждого ядра ЦП"
 }

@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Exibir monitor de desempenho",
     "Settings_InGame_PerfOverlayDetailLevel": "Nível de detalhes",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Apenas QPS atual",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Detalhes e gráfico de QPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "QPS em detalhes",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "QPS em detalhes + uso de CPU e GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "QPS em detalhes e gráfico + detalhes de CPU, GPU e RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "QPS, CPU, GPU e RAM em detalhes",
     "Settings_InGame_PerfOverlay_TextSize": "Dimensionamento do texto",
     "Settings_InGame_PerfOverlay_Saturation": "Contraste e saturação do texto",
     "Settings_InGame_WebBrowserHome": "Página inicial do navegador",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Imagem de utilitário %1$s",
     "TouchMenuIcon_Vehice": "Imagem de veículo %1$s",
     "TouchMenuIcon_Weapons": "Imagem de arma %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Escolher ícone do comando"
+    "ControllerConfigurator_Activator_PickIcon": "Escolher ícone do comando",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Exibir gráfico com QPS médio e mínimo",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Exibir gráfico de uso do processador por núcleo"
 }

@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Hiện giám sát hiệu suất",
     "Settings_InGame_PerfOverlayDetailLevel": "Độ chi tiết hiệu suất",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Giá trị FPS đơn",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Chi tiết & đồ thị FPS",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Chi tiết FPS",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Chi tiết FPS, mức sử dụng CPU & GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Chi tiết & đồ thị FPS, mức sử dụng CPU, GPU & RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Đầy đủ chi tiết FPS, CPU, GPU & RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Tỉ lệ kích thước chữ",
     "Settings_InGame_PerfOverlay_Saturation": "Độ tương phản/bão hòa cho văn bản",
     "Settings_InGame_WebBrowserHome": "Trang chủ trình duyệt web",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Hình ảnh tiện ích %1$s",
     "TouchMenuIcon_Vehice": "Hình ảnh phương tiện %1$s",
     "TouchMenuIcon_Weapons": "Hình ảnh vũ khí %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Chọn biểu tượng gán"
+    "ControllerConfigurator_Activator_PickIcon": "Chọn biểu tượng gán",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Hiện đồ thị FPS trung bình/tối thiểu (AVG/MIN)",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Hiện đồ thị mức sử dụng CPU theo lõi"
 }

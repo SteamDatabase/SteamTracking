@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "パフォーマンスモニターを表示",
     "Settings_InGame_PerfOverlayDetailLevel": "パフォーマンス詳細レベル",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS（単一値）",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPSの詳細とグラフ",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPSの詳細",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPSの詳細、CPUとGPUの使用率",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPSの詳細とグラフ、CPU、GPU、RAMの詳細",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPSの詳細、CPU、GPU、RAMの詳細",
     "Settings_InGame_PerfOverlay_TextSize": "テキストサイズの拡大縮小",
     "Settings_InGame_PerfOverlay_Saturation": "テキストのコントラスト／彩度",
     "Settings_InGame_WebBrowserHome": "Webブラウザーホームページ",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "ユーティリティ画像%1$s",
     "TouchMenuIcon_Vehice": "車両画像%1$s",
     "TouchMenuIcon_Weapons": "武器画像%1$s",
-    "ControllerConfigurator_Activator_PickIcon": "バインドアイコンを選択"
+    "ControllerConfigurator_Activator_PickIcon": "バインドアイコンを選択",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "FPS平均／最小値グラフを表示",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "コアごとのCPU使用率グラフを表示"
 }

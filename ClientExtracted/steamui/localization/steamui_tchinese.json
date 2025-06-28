@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "顯示效能監測器",
     "Settings_InGame_PerfOverlayDetailLevel": "效能詳情等級",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS 數值",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 詳情與圖表",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 詳情",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS 詳情、CPU 與 GPU 使用率",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS 詳情與圖表、CPU、GPU 與 RAM 詳情",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS、CPU、GPU 與 RAM 完整詳情",
     "Settings_InGame_PerfOverlay_TextSize": "文字大小縮放",
     "Settings_InGame_PerfOverlay_Saturation": "文字對比 / 飽和度",
     "Settings_InGame_WebBrowserHome": "網頁瀏覽器首頁",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "工具圖片 %1$s",
     "TouchMenuIcon_Vehice": "載具圖片 %1$s",
     "TouchMenuIcon_Weapons": "武器圖片 %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "選擇綁定圖示"
+    "ControllerConfigurator_Activator_PickIcon": "選擇綁定圖示",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "顯示 FPS 平均值 / 最小值圖表",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "顯示 CPU 各核心使用率圖表"
 }

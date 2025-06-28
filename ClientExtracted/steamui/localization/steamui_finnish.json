@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Näytä suorituskyvyn seuranta",
     "Settings_InGame_PerfOverlayDetailLevel": "Suorituskykytietojen taso",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Yksittäinen kuvataajuusarvo",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Kuvataajuuden tarkat tiedot ja käyrä",
-    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS-tiedot, suorittimen ja grafiikkasuorittimen käyttöaste",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS-tiedot ja -kaavio, suorittimen, grafiikkasuorittimen ja RAM-muistin tiedot",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Kuvataajuuden tiedot",
+    "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Kuvataajuuden tiedot sekä suorittimen ja grafiikkasuorittimen käyttöaste",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Kuvataajuuden, suorittimen, grafiikkasuorittimen ja RAM-muistin tarkat tiedot",
     "Settings_InGame_PerfOverlay_TextSize": "Tekstin koon skaalaus",
     "Settings_InGame_PerfOverlay_Saturation": "Tekstin kontrasti ja kylläisyys",
     "Settings_InGame_WebBrowserHome": "Verkkoselaimen aloitussivu",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Työkalukuva %1$s",
     "TouchMenuIcon_Vehice": "Ajoneuvokuva %1$s",
     "TouchMenuIcon_Weapons": "Asekuva %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Valitse määrityskuvake"
+    "ControllerConfigurator_Activator_PickIcon": "Valitse määrityskuvake",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Näytä kuvataajuuden keskiarvo- ja minimikaavio",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Näytä suorittimen ydinkohtainen käyttöastekaavio"
 }

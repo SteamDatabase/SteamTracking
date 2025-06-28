@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "Pokaż monitor wydajności",
     "Settings_InGame_PerfOverlayDetailLevel": "Poziom szczegółowości wydajności",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Pojedyncza wartość płynności obrazu",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Szczegóły i wykres płynności obrazu",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Szczegóły płynności obrazu",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Szczegóły płynności obrazu oraz wykorzystanie CPU i GPU",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Szczegóły i wykres płynności obrazu oraz szczegóły CPU, GPU i pamięci RAM",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Pełne szczegóły płynności obrazu, CPU, GPU i pamięci RAM",
     "Settings_InGame_PerfOverlay_TextSize": "Skalowanie rozmiaru tekstu",
     "Settings_InGame_PerfOverlay_Saturation": "Kontrast/nasycenie tekstu",
     "Settings_InGame_WebBrowserHome": "Strona główna przeglądarki",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "Obraz użytkowych %1$s",
     "TouchMenuIcon_Vehice": "Obraz pojazdu %1$s",
     "TouchMenuIcon_Weapons": "Obraz broni %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Wybierz ikonę przypisania"
+    "ControllerConfigurator_Activator_PickIcon": "Wybierz ikonę przypisania",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "Pokaż wykres średniej/minimalnej płynności obrazu",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Pokaż wykres wykorzystania CPU na rdzeń"
 }

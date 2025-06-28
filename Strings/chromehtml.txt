@@ -808,6 +808,7 @@ $\n k_SystemAudioPortDirection_Input
 14CMsgMouseWheel
 14CMsgNeedsPaint
 14CMsgOpenNewTab
+14CMsgSetSteamID
 14CMsgShowWindow
 14CMsgStatusText
 14CMsgURLChanged
@@ -831,6 +832,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI14CMsgHideWindowE
 16CHTMLProtoBufMsgI14CMsgNeedsPaintE
 16CHTMLProtoBufMsgI14CMsgOpenNewTabE
+16CHTMLProtoBufMsgI14CMsgSetSteamIDE
 16CHTMLProtoBufMsgI14CMsgShowWindowE
 16CHTMLProtoBufMsgI14CMsgStatusTextE
 16CHTMLProtoBufMsgI14CMsgURLChangedE
@@ -1652,6 +1654,7 @@ CMsgSetProtocolBlockList
 CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
+CMsgSetSteamID
 CMsgSetTargetFrameRate
 CMsgSetTouchGesturesToCancel
 CMsgSetVRKeyboardVisibility
@@ -5628,6 +5631,7 @@ stdin
 stdout
 steam
 steam_beta_name
+steam_id
 steambeta
 steamchina
 steamclient

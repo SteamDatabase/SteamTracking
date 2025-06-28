@@ -2299,9 +2299,9 @@
     "Settings_InGame_PerformanceMonitor": "성능 모니터 표시",
     "Settings_InGame_PerfOverlayDetailLevel": "성능 세부 정보 수준",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS 값",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 세부 정보 및 그래프",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS 세부 정보",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "FPS 세부 정보, CPU 및 GPU 사용률",
-    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS 세부 정보 및 그래프, CPU, GPU 및 RAM 세부 정보",
+    "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS, CPU, GPU 및 RAM 세부 정보",
     "Settings_InGame_PerfOverlay_TextSize": "텍스트 크기",
     "Settings_InGame_PerfOverlay_Saturation": "텍스트 대비/채도",
     "Settings_InGame_WebBrowserHome": "웹 브라우저 홈 페이지",
@@ -8765,5 +8765,7 @@
     "TouchMenuIcon_Utility": "유틸리티 이미지 %1$s",
     "TouchMenuIcon_Vehice": "탈것 이미지 %1$s",
     "TouchMenuIcon_Weapons": "무기 이미지 %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "바인딩 아이콘 선택"
+    "ControllerConfigurator_Activator_PickIcon": "바인딩 아이콘 선택",
+    "Settings_InGame_PerfOverlayShowFPSGraph": "FPS 평균/최소 그래프 표시",
+    "Settings_InGame_PerfOverlayShowCPUGraph": "코어당 CPU 사용률 그래프 표시"
 }
