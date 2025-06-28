@@ -11462,6 +11462,7 @@
               strOKButtonText: (0, r.we)(
                 o ? "#Button_Update" : "#Button_Create",
               ),
+              bOKDisabled: A.english.length < 3,
               onOK: () => {
                 const e = {};
                 d.forEach((t, n) => {
@@ -11489,7 +11490,6 @@
                 }),
                   t();
               },
-              bOKDisabled: (!D && h < g) || A.english.length < 3,
             },
             a.createElement(
               "div",
