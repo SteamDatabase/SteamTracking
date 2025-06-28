@@ -1562,7 +1562,7 @@ GHomepage = {
 				var $image = $J( '<img/>', {
 					'src': "https://store.cloudflare.steamstatic.com/public/images/blank.gif",
 					"alt": '',	// intentionally blank, there is text overlaid on top of the image
-					"data-image-url": "https://store.cloudflare.steamstatic.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l,
+					"data-image-url": "https://store.cloudflare.steamstatic.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l + "&v=2",
 				} );
 				$capsule.append( $image );
 
