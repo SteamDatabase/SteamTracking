@@ -1,14 +1,14 @@
 "osx"
 {
-	"version"		"1751074541"
+	"version"		"1751317872"
 	"ostype"		"macos1015"
 	"steamchina_steamui_websrc_all"
 	{
-		"file"		"steamchina_steamui_websrc_all.zip.889bac19482fc7c959125df9eae39817d2447af8"
-		"size"		"29847250"
-		"sha2"		"ae8b904a8e91115d3ce2668c39dc689ce4dc044465fe2d8b17ef76f9dccde746"
-		"zipvz"		"steamchina_steamui_websrc_all.zip.vz.6480de200f9a00762a07e8b59e96e59fc2acd935_24463852"
-		"sha2vz"		"37184ad0bfea070ca5033bdf574ec3758a7a09476dc8f54d7d6baf3edcbe5f01"
+		"file"		"steamchina_steamui_websrc_all.zip.dee7df677a5fd4be35ede4ba83f99f576702fbe7"
+		"size"		"29855752"
+		"sha2"		"61494b0b2cfc57cb6a0682f428754802f69e210d2f8e5264b3e276cf82b7ca09"
+		"zipvz"		"steamchina_steamui_websrc_all.zip.vz.6eb280f04b16ec97e3ea14b21e0c1a1c60d458bc_24467856"
+		"sha2vz"		"f8e71721cbdf6897ef50496ca0c67a3beff88bb4c977704be9f607cf4d54ad77"
 	}
 	"steamchina_resources_misc_all"
 	{
@@ -42,11 +42,11 @@
 	}
 	"steamchina_strings_all"
 	{
-		"file"		"steamchina_strings_all.zip.19d3e035b404648773954b45eee051adb1c09fa4"
-		"size"		"3876048"
-		"sha2"		"55da18006341586c6775b7606d186c2cf607cf5161f0496572f90b68eb6cc4a9"
-		"zipvz"		"steamchina_strings_all.zip.vz.d4974a1d5a5c00df230149dd12d4e9dc9a8ac48c_2013211"
-		"sha2vz"		"32f9ba66dfb09475395dd3bce360b473705110f26e54a5c7aa8ac3407a48e2d7"
+		"file"		"steamchina_strings_all.zip.b3d1a61eab04a8c7777e9801262db7beef0a9dba"
+		"size"		"3876047"
+		"sha2"		"6e8cdc55d48038cfa24411348b4f86c49ed5307d97abb6cec32c5573d72c3f0e"
+		"zipvz"		"steamchina_strings_all.zip.vz.67dc22b628f359d28fd6791a76f4d8a693aa6121_2013193"
+		"sha2vz"		"9c952829c8b9bb89554f2a41d5d3d5eb954e8bdbccbb55e3390135cacf1e445b"
 	}
 	"steamchina_public_all"
 	{
@@ -195,9 +195,9 @@
 }
 "kvsign2"
 {
-	"osx"		"4b7633e07b038462190a3c250f45d5e6abd14cda8228500ba216aee25633bf508dbdad0cc60a96e33039abbbd1e575723987d88bb17a7e0d70682f730330210e"
+	"osx"		"ba76c156aead662c751630c5828fb3808a8c962d870908c228f4bc14bbbc1e71e2d8767c39eb34c8eb333f8e5bdb0274c3e56b1e3059149e68b7c8df79bd6805"
 }
 "kvsignatures"
 {
-	"osx"		"78ff19b4bbfc48ec7b9a310239426cf5a9d8c24fd53675e3fe02fabcf34c3a648beb89c5936b2e0ba50234162217cbb9d3c52d5dabff273c71e5db143f2854513f227205a5ce2122a38569c898d2af67d1c70af02250f20526be883a1fa7042cb508a8e9fdec5beef2a2daef4beebc8deb92c91ba46b5d00999a0429353cbb88"
+	"osx"		"859f2bf9868bf10da264a6b2f38db04c9b377dc42792e2d5635e4c601ad39bb799799bcf226bd2421c7fe868bc7d759d9b0e3d90519c20e6203868de2524917eb118d41bf9695660143197e2471b18a866782aaf292ed1f31197c083bf4e4d620f484fe11dcdc5e063c0358497ee0f70d77d47573e95cbbe44dbc2b584beaa23"
 }
