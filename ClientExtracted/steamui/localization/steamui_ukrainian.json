@@ -2302,7 +2302,7 @@
     "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Детальніший показ к/с",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Детальніший показ к/с, використання ЦП та ГП",
     "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Повний показ к/с, використання ЦП, ГП та оперативної пам’яті",
-    "Settings_InGame_PerfOverlay_TextSize": "Зміна розміру тексту",
+    "Settings_InGame_PerfOverlay_TextSize": "Розмір тексту",
     "Settings_InGame_PerfOverlay_Saturation": "Контраст/насиченість тексту",
     "Settings_InGame_WebBrowserHome": "Домашня сторінка браузера",
     "Settings_InGame_WebBrowserAutoLoginHeader": "Автоматично входити на сайтах Steam",

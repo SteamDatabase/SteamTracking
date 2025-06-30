@@ -8751,5 +8751,22 @@
     "AppControllerConfiguration_Upvotes_Plural": "%1$s vind-ik-leuks",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Grafiek weergeven van gem./min. FPS",
     "Settings_InGame_PerfOverlayShowCPUGraph": "Grafiek weergeven van CPU-gebruik per kern",
-    "ControllerConfigurator_Options": "Opties"
+    "ControllerConfigurator_Options": "Opties",
+    "TouchMenuIcon_Actions": "Actie-afbeelding %1$s",
+    "TouchMenuIcon_Ammo": "Munitie-afbeelding %1$s",
+    "TouchMenuIcon_Game": "Uit spel afkomstige afbeelding %1$s",
+    "TouchMenuIcon_Input": "Input-afbeelding %1$s",
+    "TouchMenuIcon_Inventory": "Inventaris-afbeelding %1$s",
+    "TouchMenuIcon_Magic": "Magie-afbeelding %1$s",
+    "TouchMenuIcon_Media": "Media-afbeelding %1$s",
+    "TouchMenuIcon_Menu": "Menu-afbeelding %1$s",
+    "TouchMenuIcon_Movement": "Bewegingsafbeelding %1$s",
+    "TouchMenuIcon_Other": "Overige afbeelding %1$s",
+    "TouchMenuIcon_Social": "Afbeelding voor sociale functie %1$s",
+    "TouchMenuIcon_Targets": "Doel-afbeelding %1$s",
+    "TouchMenuIcon_User": "Van gebruiker afkomstige afbeelding %1$s",
+    "TouchMenuIcon_Utility": "Hulpprogramma-afbeelding %1$s",
+    "TouchMenuIcon_Vehice": "Voertuig-afbeelding %1$s",
+    "TouchMenuIcon_Weapons": "Wapen-afbeelding %1$s",
+    "ControllerConfigurator_Activator_PickIcon": "Sneltoetspictogram kiezen"
 }
