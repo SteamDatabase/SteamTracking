@@ -286,7 +286,7 @@
     "GamepadHome_PlayNext": "В какую игру из библиотеки сыграть?",
     "GamepadHome_PlayNextSubHead": "Эти игры из вашей библиотеки, которые вы пока не запускали, отлично работают на Steam Deck.",
     "GamepadHome_GoToLibrary": "Открыть библиотеку",
-    "GamepadHome_GoToStore": "Показать больше в магазине",
+    "GamepadHome_GoToStore": "Ещё в магазине",
     "LibraryHome_InGameFriends_Additional": "и ещё %1$s в игре",
     "LibraryHome_OnlineFriends_Additional": "и ещё %1$s в сети",
     "LibraryHome_NewUpdates_LoweredPriority": "Теперь отображается меньше новостей о %1$s.",
@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский",
     "SteamUI_Selection_Thai": "ไทย (тайский)",
     "SteamUI_Selection_Japanese": "日本語 (японский)",
-    "SteamUI_Selection_Portuguese": "Português (португальский)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (португальский)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (браз. португальский)",
     "SteamUI_Selection_Polish": "Polski (польский)",
     "SteamUI_Selection_Danish": "Dansk (датский)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Показать запись целиком",
     "PhaseList_Recording_SaveAsClip": "Сохранить как ролик",
     "TimelineDialog_ClipPhase": "Сохранить этап как ролик",
-    "ClipManager_Explainer_Header_NoGR": "Здесь вы найдёте скриншоты, сделанные во время игры",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Всего: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Переключение монитора производительности",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Изображение оружия %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Выберите иконку привязки",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Показывать график средней/минимальной частоты кадров",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Показывать график загруженности каждого ядра ЦП"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показывать график загруженности каждого ядра ЦП",
+    "Settings_InGame_PerfOverlayShortcut": "Клавиши для переключения монитора производительности",
+    "ControllerConfigurator_Layer": "Слой"
 }

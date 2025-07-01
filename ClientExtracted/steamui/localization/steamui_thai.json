@@ -8110,7 +8110,7 @@
     "SteamUI_Selection_Russian": "Русский (รัสเซีย)",
     "SteamUI_Selection_Thai": "ไทย (Thai)",
     "SteamUI_Selection_Japanese": "日本語 (ญี่ปุ่น)",
-    "SteamUI_Selection_Portuguese": "Português (โปรตุเกส - โปรตุเกส)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (โปรตุเกส-โปรตุเกส)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (โปรตุเกส-บราซิล)",
     "SteamUI_Selection_Polish": "Polski (โปแลนด์)",
     "SteamUI_Selection_Danish": "Dansk (เดนมาร์ก)",
@@ -8738,7 +8738,6 @@
     "PhaseList_ShowAllLabel": "แสดงการบันทึกทั้งหมด",
     "PhaseList_Recording_SaveAsClip": "บันทึกเป็นคลิป",
     "TimelineDialog_ClipPhase": "บันทึกเฟสเป็นคลิป",
-    "ClipManager_Explainer_Header_NoGR": "นี่คือที่ที่คุณจะเห็นภาพหน้าจอที่คุณบันทึกไว้ขณะอยู่ในเกม",
     "steamui_dummy": "อย่าใช้ฉัน",
     "ContentManagement_TotalSize": "รวมทั้งหมด %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "เปิด/ปิดโอเวอร์เลย์ตรวจสอบประสิทธิภาพ",
@@ -8768,5 +8767,7 @@
     "TouchMenuIcon_Weapons": "ภาพอาวุธ %1$s",
     "ControllerConfigurator_Activator_PickIcon": "เลือกไอคอนการกำหนดปุ่ม",
     "Settings_InGame_PerfOverlayShowFPSGraph": "แสดงกราฟค่า FPS เฉลี่ย/นาที",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "แสดงกราฟการใช้งาน CPU ต่อแกน"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "แสดงกราฟการใช้งาน CPU ต่อแกน",
+    "Settings_InGame_PerfOverlayShortcut": "เปิด/ปิดรหัสโอเวอร์เลย์ตรวจสอบประสิทธิภาพ",
+    "ControllerConfigurator_Layer": "เลเยอร์"
 }

@@ -8114,7 +8114,7 @@
     "SteamUI_Selection_Russian": "Русский (Rusça)",
     "SteamUI_Selection_Thai": "ไทย (Tayca)",
     "SteamUI_Selection_Japanese": "日本語 (Japonca)",
-    "SteamUI_Selection_Portuguese": "Português (Portekizce - Portekiz)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (Portekizce-Portekiz)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Portekizce-Brezilya)",
     "SteamUI_Selection_Polish": "Polski (Lehçe)",
     "SteamUI_Selection_Danish": "Dansk (Danca)",
@@ -8742,7 +8742,6 @@
     "PhaseList_ShowAllLabel": "Tüm Kaydı Göster",
     "PhaseList_Recording_SaveAsClip": "Klip Olarak Kaydet",
     "TimelineDialog_ClipPhase": "Aşamayı Klip Olarak Kaydet",
-    "ClipManager_Explainer_Header_NoGR": "Oyunda kaydettiğiniz ekran görüntülerini burada bulabilirsiniz",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Toplam: %1$s",
     "ControllerConfigurator_Options": "Seçenekler",
@@ -8768,5 +8767,6 @@
     "TouchMenuIcon_Weapons": "Silah Görseli %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Atama Simgesini Seç",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Ortalama/Minumum FPS Grafiğini Göster",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Çekirdek Başına CPU Kullanımı Grafiğini Göster"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Çekirdek Başına CPU Kullanımı Grafiğini Göster",
+    "ControllerConfigurator_Layer": "Katman"
 }

@@ -8114,7 +8114,7 @@
     "SteamUI_Selection_Russian": "Русский (Russisch)",
     "SteamUI_Selection_Thai": "ไทย (Thai)",
     "SteamUI_Selection_Japanese": "日本語 (Japans)",
-    "SteamUI_Selection_Portuguese": "Português (Portugees - Portugal)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (Portugees-Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Braziliaans-Portugees)",
     "SteamUI_Selection_Polish": "Polski (Pools)",
     "SteamUI_Selection_Danish": "Dansk (Deens)",
@@ -8742,7 +8742,6 @@
     "PhaseList_ShowAllLabel": "Gehele opname weergeven",
     "PhaseList_Recording_SaveAsClip": "Opslaan als clip",
     "TimelineDialog_ClipPhase": "Fase opslaan als clip",
-    "ClipManager_Explainer_Header_NoGR": "Hier vind je de screenshots die je in het spel hebt gemaakt",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Totaal: %1$s",
     "AppControllerConfiguration_Settings": "Instellingen",
@@ -8768,5 +8767,6 @@
     "TouchMenuIcon_Utility": "Hulpprogramma-afbeelding %1$s",
     "TouchMenuIcon_Vehice": "Voertuig-afbeelding %1$s",
     "TouchMenuIcon_Weapons": "Wapen-afbeelding %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Sneltoetspictogram kiezen"
+    "ControllerConfigurator_Activator_PickIcon": "Sneltoetspictogram kiezen",
+    "ControllerConfigurator_Layer": "Laag"
 }

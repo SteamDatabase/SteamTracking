@@ -8108,7 +8108,7 @@
     "SteamUI_Selection_Russian": "Русский (російська)",
     "SteamUI_Selection_Thai": "ไทย (тайська)",
     "SteamUI_Selection_Japanese": "日本語 (японська)",
-    "SteamUI_Selection_Portuguese": "Português (португальська — Португалія)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (португальська — Португалія)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (португальська — Бразилія)",
     "SteamUI_Selection_Polish": "Polski (польська)",
     "SteamUI_Selection_Danish": "Dansk (данська)",
@@ -8736,7 +8736,6 @@
     "PhaseList_ShowAllLabel": "Показати повний запис",
     "PhaseList_Recording_SaveAsClip": "Зберегти як кліп",
     "TimelineDialog_ClipPhase": "Зберегти фазу як кліп",
-    "ClipManager_Explainer_Header_NoGR": "Тут будуть всі знімки екрана, зроблені під час гри",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Усього %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Перемкнути монітор продуктивності",
@@ -8766,5 +8765,7 @@
     "TouchMenuIcon_Weapons": "Зображення зброї %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Вибір піктограму для прив’язки",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Показувати графік сер./мін. значення к/c",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Показувати графік використання ЦП за окремим ядром"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показувати графік використання ЦП за окремим ядром",
+    "Settings_InGame_PerfOverlayShortcut": "Клавіші для перемикання монітора продуктивності",
+    "ControllerConfigurator_Layer": "Шар"
 }

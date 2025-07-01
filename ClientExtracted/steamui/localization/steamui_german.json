@@ -8108,7 +8108,7 @@
     "SteamUI_Selection_Russian": "Русский (Russisch)",
     "SteamUI_Selection_Thai": "ไทย (Thailändisch)",
     "SteamUI_Selection_Japanese": "日本語 (Japanisch)",
-    "SteamUI_Selection_Portuguese": "Português – Portugal (Portugiesisch – Portugal)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (Portugiesisch/Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Portugiesisch/Brasilien)",
     "SteamUI_Selection_Polish": "Polski (Polnisch)",
     "SteamUI_Selection_Danish": "Dansk (Dänisch)",
@@ -8736,7 +8736,6 @@
     "PhaseList_ShowAllLabel": "Gesamte Aufnahme anzeigen",
     "PhaseList_Recording_SaveAsClip": "Als Clip speichern",
     "TimelineDialog_ClipPhase": "Sequenz als Clip speichern",
-    "ClipManager_Explainer_Header_NoGR": "Hier finden Sie Ihre im Spiel aufgenommenen Screenshots",
     "steamui_dummy": "NICHT VERWENDEN",
     "ContentManagement_TotalSize": "Insgesamt %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Leistungsüberwachung umschalten",
@@ -8766,5 +8765,7 @@
     "TouchMenuIcon_Weapons": "Waffenbild %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Symbol für Tastenzuordnung auswählen",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Graph für FPS-Durchschnitt/-Minimum anzeigen",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Graph zur CPU-Auslastung pro Kern anzeigen"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Graph zur CPU-Auslastung pro Kern anzeigen",
+    "Settings_InGame_PerfOverlayShortcut": "Taste(n) der Leistungsüberwachung umschalten",
+    "ControllerConfigurator_Layer": "Ebene"
 }

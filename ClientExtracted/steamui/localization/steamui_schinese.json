@@ -8122,7 +8122,7 @@
     "SteamUI_Selection_Russian": "Русский（俄语）",
     "SteamUI_Selection_Thai": "ไทย（泰语）",
     "SteamUI_Selection_Japanese": "日本語（日语）",
-    "SteamUI_Selection_Portuguese": "Português（葡萄牙语 - 葡萄牙）",
+    "SteamUI_Selection_Portuguese": "Português-Portugal（葡萄牙语 - 葡萄牙）",
     "SteamUI_Selection_Brazilian": "Português-Brasil（葡萄牙语 - 巴西）",
     "SteamUI_Selection_Polish": "Polski（波兰语）",
     "SteamUI_Selection_Danish": "Dansk（丹麦语）",
@@ -8750,7 +8750,6 @@
     "PhaseList_ShowAllLabel": "显示完整录像",
     "PhaseList_Recording_SaveAsClip": "保存为剪辑",
     "TimelineDialog_ClipPhase": "将阶段保存为剪辑",
-    "ClipManager_Explainer_Header_NoGR": "您可以在这里找到您在游戏中捕获的截图。",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "总大小：%1$s",
     "Settings_Hotkey_TogglePerfMonitor": "启用/禁用性能监视器",
@@ -8779,5 +8778,7 @@
     "TouchMenuIcon_Weapons": "武器图片 %1$s",
     "ControllerConfigurator_Activator_PickIcon": "选择绑定图标",
     "Settings_InGame_PerfOverlayShowFPSGraph": "显示 FPS 平均值/最小值图",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "显示 CPU 每个内核利用率图"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "显示 CPU 每个内核利用率图",
+    "Settings_InGame_PerfOverlayShortcut": "启用/禁用性能监视器键",
+    "ControllerConfigurator_Layer": "操作层"
 }

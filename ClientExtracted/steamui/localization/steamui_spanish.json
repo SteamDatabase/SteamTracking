@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский (ruso)",
     "SteamUI_Selection_Thai": "ไทย (tailandés)",
     "SteamUI_Selection_Japanese": "日本語 (japonés)",
-    "SteamUI_Selection_Portuguese": "Português (portugués de Portugal)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (portugués de Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (portugués de Brasil)",
     "SteamUI_Selection_Polish": "Polski (polaco)",
     "SteamUI_Selection_Danish": "Dansk (danés)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Mostrar grabación completa",
     "PhaseList_Recording_SaveAsClip": "Guardar como clip",
     "TimelineDialog_ClipPhase": "Guardar fase como clip",
-    "ClipManager_Explainer_Header_NoGR": "Aquí encontrarás las capturas de pantalla que realizaste mientras jugabas",
     "steamui_dummy": "NO USAR",
     "ContentManagement_TotalSize": "Total: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Activar/desctivar el monitor de rendimiento",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Imagen de arma %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Elige icono de asignación",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Mostrar gráfica de FPS mín./med.",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostrar gráfica de uso de CPU por núcleo"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostrar gráfica de uso de CPU por núcleo",
+    "Settings_InGame_PerfOverlayShortcut": "Activar/desactivar la(s) tecla(s) del monitor de rendimiento",
+    "ControllerConfigurator_Layer": "Capa"
 }

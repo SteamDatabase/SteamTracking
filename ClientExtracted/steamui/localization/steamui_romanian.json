@@ -8108,7 +8108,7 @@
     "SteamUI_Selection_Russian": "Русский (rusă)",
     "SteamUI_Selection_Thai": "ไทย (thailandeză)",
     "SteamUI_Selection_Japanese": "日本語 (japoneză)",
-    "SteamUI_Selection_Portuguese": "Português (Portugheză - Portugalia)",
+    "SteamUI_Selection_Portuguese": "Português - Portugal (portugheză - Portugalia)",
     "SteamUI_Selection_Brazilian": "Português - Brasil (portugheză - Brazilia)",
     "SteamUI_Selection_Polish": "Polski (poloneză)",
     "SteamUI_Selection_Danish": "Dansk (daneză)",
@@ -8736,7 +8736,6 @@
     "PhaseList_ShowAllLabel": "Afișează toate înregistrările",
     "PhaseList_Recording_SaveAsClip": "Salvează clipul",
     "TimelineDialog_ClipPhase": "Salvează faza sub formă de clip",
-    "ClipManager_Explainer_Header_NoGR": "Aici vei găsi capturile de ecran pe care le-ai realizat în joc",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Total: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Comută monitorul de performanță",
@@ -8767,5 +8766,7 @@
     "ControllerConfigurator_Activator_PickIcon": "Alege pictograma asocierii",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Afișează graficul cu media/minimul de CPS",
     "Settings_InGame_PerfOverlayShowCPUGraph": "Afișează graficul cu utilizarea CPU per nucleu",
-    "Settings_InGame_PerfOverlay_TextSize": "Dimensiunea textului"
+    "Settings_InGame_PerfOverlay_TextSize": "Dimensiunea textului",
+    "Settings_InGame_PerfOverlayShortcut": "Taste pentru comutarea monitorului de performanță",
+    "ControllerConfigurator_Layer": "Strat"
 }

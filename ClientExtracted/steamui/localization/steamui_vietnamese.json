@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский (Tiếng Nga)",
     "SteamUI_Selection_Thai": "ไทย (Tiếng Thái)",
     "SteamUI_Selection_Japanese": "日本語 (Tiếng Nhật)",
-    "SteamUI_Selection_Portuguese": "Português (Tiếng Bồ Đào Nha-BĐN)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (Tiếng Bồ Đào Nha-BĐN)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Tiếng Bồ Đào Nha-Brazil)",
     "SteamUI_Selection_Polish": "Polski (Tiếng Ba Lan)",
     "SteamUI_Selection_Danish": "Dansk (Tiếng Đan Mạch)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Hiện tất cả bản ghi hình",
     "PhaseList_Recording_SaveAsClip": "Lưu thành clip",
     "TimelineDialog_ClipPhase": "Lưu giai đoạn thành clip",
-    "ClipManager_Explainer_Header_NoGR": "Đây là nơi bạn sẽ tìm thấy ảnh chụp màn hình của mình trong trò chơi",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Tổng: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Bật/tắt giám sát hiệu suất",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Hình ảnh vũ khí %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Chọn biểu tượng gán",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Hiện đồ thị FPS trung bình/tối thiểu (AVG/MIN)",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Hiện đồ thị mức sử dụng CPU theo lõi"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Hiện đồ thị mức sử dụng CPU theo lõi",
+    "Settings_InGame_PerfOverlayShortcut": "Phím bật/tắt giám sát hiệu suất",
+    "ControllerConfigurator_Layer": "Lớp"
 }

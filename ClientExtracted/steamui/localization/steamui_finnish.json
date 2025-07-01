@@ -2299,7 +2299,7 @@
     "Settings_InGame_PerformanceMonitor": "Näytä suorituskyvyn seuranta",
     "Settings_InGame_PerfOverlayDetailLevel": "Suorituskykytietojen taso",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Yksittäinen kuvataajuusarvo",
-    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "Kuvataajuuden tiedot",
+    "Settings_InGame_PerfOverlay_FPSDetailsAndGraph": "FPS-tiedot",
     "Settings_InGame_PerfOverlay_FPSCPUGPUSummary": "Kuvataajuuden tiedot sekä suorittimen ja grafiikkasuorittimen käyttöaste",
     "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "Kuvataajuuden, suorittimen, grafiikkasuorittimen ja RAM-muistin tarkat tiedot",
     "Settings_InGame_PerfOverlay_TextSize": "Tekstin koon skaalaus",
@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский (venäjä)",
     "SteamUI_Selection_Thai": "ไทย (thai)",
     "SteamUI_Selection_Japanese": "日本語 (japani)",
-    "SteamUI_Selection_Portuguese": "Português (portugali – Portugali)",
+    "SteamUI_Selection_Portuguese": "Português – Portugal (portugali – Portugali)",
     "SteamUI_Selection_Brazilian": "Português – Brasil (portugali – Brasilia)",
     "SteamUI_Selection_Polish": "Polski (puola)",
     "SteamUI_Selection_Danish": "Dansk (tanska)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Näytä koko tallenne",
     "PhaseList_Recording_SaveAsClip": "Tallenna leikkeenä",
     "TimelineDialog_ClipPhase": "Tallenna jakso leikkeenä",
-    "ClipManager_Explainer_Header_NoGR": "Täältä löytyvät pelin aikana ottamasi kuvakaappaukset",
     "steamui_dummy": "ÄLÄ KÄYTÄ TÄTÄ",
     "ContentManagement_TotalSize": "Yhteensä %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Suorituskyvyn seuranta päälle tai pois",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Asekuva %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Valitse määrityskuvake",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Näytä kuvataajuuden keskiarvo- ja minimikaavio",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Näytä suorittimen ydinkohtainen käyttöastekaavio"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Näytä suorittimen ydinkohtainen käyttöastekaavio",
+    "Settings_InGame_PerfOverlayShortcut": "Suorituskyvyn seurantanäppäimet päälle tai pois",
+    "ControllerConfigurator_Layer": "Taso"
 }

@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Показване на целия запис",
     "PhaseList_Recording_SaveAsClip": "Запазване като клип",
     "TimelineDialog_ClipPhase": "Запазване на фазата като клип",
-    "ClipManager_Explainer_Header_NoGR": "Тук ще намерите снимките, които сте направили в играта",
     "steamui_dummy": "НЕ МЕ ИЗПОЛЗВАЙТЕ",
     "ContentManagement_TotalSize": "Общо %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Превключване на монитор за производителността",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Изображение за оръжие %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Избиране на икона за обвързване",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Показване на графика за средни/мин. к/сек.",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Показване на графика за оползотворяване на процесора за отделни ядра"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Показване на графика за оползотворяване на процесора за отделни ядра",
+    "Settings_InGame_PerfOverlayShortcut": "Клавиш(и) за превключване на монитора за производителност",
+    "ControllerConfigurator_Layer": "Слой"
 }

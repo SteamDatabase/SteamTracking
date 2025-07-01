@@ -8115,7 +8115,7 @@
     "SteamUI_Selection_Russian": "Русский (orosz)",
     "SteamUI_Selection_Thai": "ไทย (thai)",
     "SteamUI_Selection_Japanese": "日本語 (japán)",
-    "SteamUI_Selection_Portuguese": "Português (portugáliai portugál)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (portugáliai portugál)",
     "SteamUI_Selection_Brazilian": "Português - Brasil (brazíliai portugál)",
     "SteamUI_Selection_Polish": "Polski (lengyel)",
     "SteamUI_Selection_Danish": "Dansk (dán)",
@@ -8743,7 +8743,6 @@
     "PhaseList_ShowAllLabel": "Összes felvétel mutatása",
     "PhaseList_Recording_SaveAsClip": "Mentés klipként",
     "TimelineDialog_ClipPhase": "Fázis mentése klipként",
-    "ClipManager_Explainer_Header_NoGR": "Itt találod majd a játékban rögzített képernyőmentéseket",
     "steamui_dummy": "DO NOT USE ME",
     "ControllerConfigurator_Options": "Beállítások",
     "AppControllerConfiguration_Settings": "Beállítások",
@@ -8768,5 +8767,6 @@
     "TouchMenuIcon_Weapons": "%1$s. fegyver kép",
     "ControllerConfigurator_Activator_PickIcon": "Válassz kiosztási ikont",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Átlag/min. FPS-grafikon mutatása",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Magonkénti CPU-kihasználtság grafikon mutatása"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Magonkénti CPU-kihasználtság grafikon mutatása",
+    "ControllerConfigurator_Layer": "Réteg"
 }

@@ -8115,7 +8115,7 @@
     "SteamUI_Selection_Russian": "Русский (russo)",
     "SteamUI_Selection_Thai": "ไทย (tailandese)",
     "SteamUI_Selection_Japanese": "日本語 (giapponese)",
-    "SteamUI_Selection_Portuguese": "Português (portoghese - Portogallo)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (portoghese - Portogallo)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (portoghese brasiliano)",
     "SteamUI_Selection_Polish": "Polski (polacco)",
     "SteamUI_Selection_Danish": "Dansk (danese)",
@@ -8743,7 +8743,6 @@
     "PhaseList_ShowAllLabel": "Mostra tutta la registrazione",
     "PhaseList_Recording_SaveAsClip": "Salva come filmato",
     "TimelineDialog_ClipPhase": "Salva la fase come filmato",
-    "ClipManager_Explainer_Header_NoGR": "Ecco dove troverai gli screenshot che hai scattato in gioco",
     "steamui_dummy": "DO NOT USE ME",
     "ControllerConfigurator_Options": "Opzioni",
     "AppControllerConfiguration_Settings": "Impostazioni",
@@ -8768,5 +8767,6 @@
     "TouchMenuIcon_Weapons": "Immagine dell'arma %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Scegli icona di associazione",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Mostra grafico FPS medi/minimi",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostra grafico di utilizzo della CPU per core"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Mostra grafico di utilizzo della CPU per core",
+    "ControllerConfigurator_Layer": "Layer"
 }

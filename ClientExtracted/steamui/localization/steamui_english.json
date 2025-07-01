@@ -2302,7 +2302,7 @@
     "Settings_InGame_FPSPerfOverlay_desc": "The In-Game overlay is designed to help you understand your game and PC performance.  It can render a variety of game and hardware performance information over a running game.  %1$s",
     "Settings_InGame_FPSFAQHere": "Learn about the performance monitor numbers here.",
     "Settings_InGame_PerformanceMonitor": "Show performance monitor",
-    "Settings_InGame_PerfOverlayShortcut": "Toggle peformance monitor key(s)",
+    "Settings_InGame_PerfOverlayShortcut": "Toggle performance monitor key(s)",
     "Settings_Hotkey_TogglePerfMonitor": "Toggle performance monitor",
     "Settings_InGame_PerfOverlayDetailLevel": "Performance detail level",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "FPS Single Value",
@@ -4423,6 +4423,7 @@
     "ControllerConfigurator_Section_Gyros": "Gyro",
     "ControllerConfigurator_Section_VirtualMenus": "Virtual Menus",
     "ControllerConfigurator_ActionSet": "Action Set",
+    "ControllerConfigurator_Layer": "Layer",
     "ControllerConfigurator_Header_Title": "Controller Settings",
     "ControllerConfigurator_Header_TitleWithApp": "%1$s Controller Settings",
     "ControllerConfigurator_ChooseBinding_GameActions": "Game Actions",
@@ -8138,7 +8139,7 @@
     "SteamUI_Selection_Russian": "Русский (Russian)",
     "SteamUI_Selection_Thai": "ไทย (Thai)",
     "SteamUI_Selection_Japanese": "日本語 (Japanese)",
-    "SteamUI_Selection_Portuguese": "Português (Portuguese-Portugal)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (Portuguese-Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Portuguese-Brazil)",
     "SteamUI_Selection_Polish": "Polski (Polish)",
     "SteamUI_Selection_Danish": "Dansk (Danish)",
@@ -8783,6 +8784,5 @@
     "PhaseList_ShowAllLabel": "Show All Recording",
     "PhaseList_Recording_SaveAsClip": "Save as Clip",
     "TimelineDialog_ClipPhase": "Save Phase as Clip",
-    "ClipManager_Explainer_Header_NoGR": "Here's where you'll find the screenshots you've taken in game",
     "steamui_dummy": "DO NOT USE ME"
 }

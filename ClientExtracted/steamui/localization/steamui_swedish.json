@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский (ryska)",
     "SteamUI_Selection_Thai": "ไทย (thailändska)",
     "SteamUI_Selection_Japanese": "日本語 (japanska)",
-    "SteamUI_Selection_Portuguese": "Português (portugisiska – Portugal)",
+    "SteamUI_Selection_Portuguese": "Português – Portugal (portugisiska – Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (portugisiska – Brasilien)",
     "SteamUI_Selection_Polish": "Polski (polska)",
     "SteamUI_Selection_Danish": "Dansk (danska)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Visa alla inspelningar",
     "PhaseList_Recording_SaveAsClip": "Spara som klipp",
     "TimelineDialog_ClipPhase": "Spara fas som klipp",
-    "ClipManager_Explainer_Header_NoGR": "Här hittar du de skärmbilder du tagit i spelet",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Totalt: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Växla prestandaövervakare",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Vapen – bild %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Välj bindningsikon",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Visa graf över genomsnittlig/lägsta FPS",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Visa graf över CPU-användning per kärna"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Visa graf över CPU-användning per kärna",
+    "Settings_InGame_PerfOverlayShortcut": "Tangent för prestandaövervakare",
+    "ControllerConfigurator_Layer": "Lager"
 }

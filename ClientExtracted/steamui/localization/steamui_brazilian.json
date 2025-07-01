@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "Exibir toda a gravação",
     "PhaseList_Recording_SaveAsClip": "Salvar como clipe",
     "TimelineDialog_ClipPhase": "Salvar fase como clipe",
-    "ClipManager_Explainer_Header_NoGR": "Aqui você encontrará as capturas de tela dos seus jogos.",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Total: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "(Des)ativar monitor de desempenho",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Imagem de arma %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Escolher ícone do comando",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Exibir gráfico com QPS médio e mínimo",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Exibir gráfico de uso do processador por núcleo"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Exibir gráfico de uso do processador por núcleo",
+    "Settings_InGame_PerfOverlayShortcut": "Atalho do monitor de desempenho",
+    "ControllerConfigurator_Layer": "Camada"
 }

@@ -8115,7 +8115,7 @@
     "SteamUI_Selection_Russian": "Русский (Bahasa Rusia)",
     "SteamUI_Selection_Thai": "ไทย (Bahasa Thai)",
     "SteamUI_Selection_Japanese": "日本語 (Bahasa Jepang)",
-    "SteamUI_Selection_Portuguese": "Português (Portugis - Portugal)",
+    "SteamUI_Selection_Portuguese": "Português - Portugal (Bahasa Portugis - Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Bahasa Portugis-Brasil)",
     "SteamUI_Selection_Polish": "Polski (Bahasa Polandia)",
     "SteamUI_Selection_Danish": "Dansk (Bahasa Denmark)",
@@ -8743,7 +8743,6 @@
     "PhaseList_ShowAllLabel": "Tampilkan Semua Rekaman",
     "PhaseList_Recording_SaveAsClip": "Simpan sebagai Klip",
     "TimelineDialog_ClipPhase": "Simpan Fase sebagai Klip",
-    "ClipManager_Explainer_Header_NoGR": "Di sini, kamu akan menemukan screenshot yang sudah kamu ambil dalam game",
     "steamui_dummy": "DO NOT USE ME",
     "ControllerConfigurator_Options": "Opsi",
     "AppControllerConfiguration_Settings": "Pengaturan",
@@ -8768,5 +8767,6 @@
     "TouchMenuIcon_Weapons": "Gambar Senjata %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Pilih Ikon Pengikatan",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Tampilkan Grafik FPS Rata-rata/Min.",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Tampilkan Grafik Pemanfaatan CPU Per-Core"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Tampilkan Grafik Pemanfaatan CPU Per-Core",
+    "ControllerConfigurator_Layer": "Layer"
 }

@@ -2298,7 +2298,7 @@
     "Settings_InGame_FPSPerfOverlay_desc": "L'overlay en jeu est conçu pour vous aider à comprendre les performances de votre jeu et de votre PC. Il peut afficher diverses informations sur les performances du jeu et du matériel pendant une partie en cours. %1$s",
     "Settings_InGame_FPSFAQHere": "En savoir plus sur les données du moniteur de performances de l'overlay ici.",
     "Settings_InGame_PerformanceMonitor": "Afficher le moniteur de performances",
-    "Settings_InGame_PerfOverlayShortcut": "Activer la ou les touche(s) du moniteur de performance",
+    "Settings_InGame_PerfOverlayShortcut": "Activer la ou les touche(s) du moniteur de performances",
     "Settings_Hotkey_TogglePerfMonitor": "Activer le moniteur de performances",
     "Settings_InGame_PerfOverlayDetailLevel": "Niveau de détail des performances",
     "Settings_InGame_PerfOverlay_ClassicFPSOnly": "Valeur d'IPS uniquement",
@@ -8115,7 +8115,7 @@
     "SteamUI_Selection_Russian": "Русский (russe)",
     "SteamUI_Selection_Thai": "ไทย (thaï)",
     "SteamUI_Selection_Japanese": "日本語 (japonais)",
-    "SteamUI_Selection_Portuguese": "Português (portugais du Portugal)",
+    "SteamUI_Selection_Portuguese": "Português - Portugal (portugais du Portugal)",
     "SteamUI_Selection_Brazilian": "Português - Brasil (portugais du Brésil)",
     "SteamUI_Selection_Polish": "Polski (polonais)",
     "SteamUI_Selection_Danish": "Dansk (danois)",
@@ -8743,7 +8743,6 @@
     "PhaseList_ShowAllLabel": "Afficher l'enregistrement complet",
     "PhaseList_Recording_SaveAsClip": "Sauvegarder en tant qu'extrait",
     "TimelineDialog_ClipPhase": "Sauvegarder la phase en tant qu'extrait",
-    "ClipManager_Explainer_Header_NoGR": "Ici, vous trouverez les captures d'écran prises en jeu",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Total : %1$s",
     "ControllerConfigurator_Options": "Options",
@@ -8769,5 +8768,6 @@
     "TouchMenuIcon_Weapons": "Image : arme %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Choisir l'icône d'association",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Afficher le graphique d'IPS moy./min.",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Afficher le graphique d'utilisation du processeur (divisé par cœur)"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Afficher le graphique d'utilisation du processeur (divisé par cœur)",
+    "ControllerConfigurator_Layer": "Couche"
 }

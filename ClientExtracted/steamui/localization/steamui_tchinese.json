@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский（俄文）",
     "SteamUI_Selection_Thai": "ไทย（泰文）",
     "SteamUI_Selection_Japanese": "日本語（日文）",
-    "SteamUI_Selection_Portuguese": "Português（葡萄牙文 - 葡萄牙）",
+    "SteamUI_Selection_Portuguese": "Português-Portugal（葡萄牙文 - 葡萄牙）",
     "SteamUI_Selection_Brazilian": "Português-Brasil（葡萄牙文 - 巴西）",
     "SteamUI_Selection_Polish": "Polski（波蘭文）",
     "SteamUI_Selection_Danish": "Dansk（丹麥文）",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "顯示完整影片",
     "PhaseList_Recording_SaveAsClip": "儲存為短片",
     "TimelineDialog_ClipPhase": "將階段儲存為短片",
-    "ClipManager_Explainer_Header_NoGR": "您可在此找到您在遊戲內擷取的螢幕擷圖",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "總計：%1$s",
     "Settings_Hotkey_TogglePerfMonitor": "開關效能監測器",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "武器圖片 %1$s",
     "ControllerConfigurator_Activator_PickIcon": "選擇綁定圖示",
     "Settings_InGame_PerfOverlayShowFPSGraph": "顯示 FPS 平均值 / 最小值圖表",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "顯示 CPU 各核心使用率圖表"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "顯示 CPU 各核心使用率圖表",
+    "Settings_InGame_PerfOverlayShortcut": "開關效能監測器按鍵",
+    "ControllerConfigurator_Layer": "階層"
 }

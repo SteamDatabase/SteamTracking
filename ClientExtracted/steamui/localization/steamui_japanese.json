@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский（ロシア語）",
     "SteamUI_Selection_Thai": "ไทย（タイ語）",
     "SteamUI_Selection_Japanese": "日本語（Japanese）",
-    "SteamUI_Selection_Portuguese": "Português（ポルトガル語－ポルトガル）",
+    "SteamUI_Selection_Portuguese": "Português-Portugal（ポルトガル語－ポルトガル）",
     "SteamUI_Selection_Brazilian": "Português - Brasil（ポルトガル語－ブラジル）",
     "SteamUI_Selection_Polish": "Polski（ポーランド語）",
     "SteamUI_Selection_Danish": "Dansk（デンマーク語）",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "録画全体を表示",
     "PhaseList_Recording_SaveAsClip": "クリップとして保存",
     "TimelineDialog_ClipPhase": "フェーズをクリップとして保存",
-    "ClipManager_Explainer_Header_NoGR": "ゲーム内で撮影したスクリーンショットはここで確認できます",
     "steamui_dummy": "使用しないでください",
     "ContentManagement_TotalSize": "合計：%1$s",
     "Settings_Hotkey_TogglePerfMonitor": "パフォーマンスモニターを切り替える",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "武器画像%1$s",
     "ControllerConfigurator_Activator_PickIcon": "バインドアイコンを選択",
     "Settings_InGame_PerfOverlayShowFPSGraph": "FPS平均／最小値グラフを表示",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "コアごとのCPU使用率グラフを表示"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "コアごとのCPU使用率グラフを表示",
+    "Settings_InGame_PerfOverlayShortcut": "パフォーマンスモニターキーを切り替える",
+    "ControllerConfigurator_Layer": "レイヤー"
 }

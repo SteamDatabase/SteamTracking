@@ -8107,7 +8107,7 @@
     "SteamUI_Selection_Russian": "Русский (russisk)",
     "SteamUI_Selection_Thai": "ไทย (thai)",
     "SteamUI_Selection_Japanese": "日本語 (japansk)",
-    "SteamUI_Selection_Portuguese": "Português (portugisisk – Portugal)",
+    "SteamUI_Selection_Portuguese": "Português-Portugal (portugisisk – Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (portugisisk-Brasilien)",
     "SteamUI_Selection_Polish": "Polski (polsk)",
     "SteamUI_Selection_Danish": "Dansk",
@@ -8735,7 +8735,6 @@
     "PhaseList_ShowAllLabel": "Vis hele optagelsen",
     "PhaseList_Recording_SaveAsClip": "Gem som et klip",
     "TimelineDialog_ClipPhase": "Gem fase som et klip",
-    "ClipManager_Explainer_Header_NoGR": "Her finder du de skærmbilleder, du har taget i spillet",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "I alt: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Slå ydeevnemåling til/fra",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Utility": "Hjælpeværktøj – billede %1$s",
     "TouchMenuIcon_Vehice": "Køretøj – billede %1$s",
     "TouchMenuIcon_Weapons": "Våben – billede %1$s",
-    "ControllerConfigurator_Activator_PickIcon": "Vælg bindingsikon"
+    "ControllerConfigurator_Activator_PickIcon": "Vælg bindingsikon",
+    "Settings_InGame_PerfOverlayShortcut": "Genvejstast til at slå ydeevnemåling til/fra",
+    "ControllerConfigurator_Layer": "Lag"
 }

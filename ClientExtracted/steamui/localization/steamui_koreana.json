@@ -3006,7 +3006,7 @@
     "QuickAccess_Tab_Perf_Section_Settings_Title": "설정",
     "QuickAccess_Tab_Perf_Section_Diagnostics_Title": "진단",
     "QuickAccess_Tab_Perf_Overlay": "성능 오버레이",
-    "QuickAccess_Tab_Perf_Overlay_Level": "성능 오버레이 레벨",
+    "QuickAccess_Tab_Perf_Overlay_Level": "성능 오버레이 수준",
     "QuickAccess_Tab_Perf_Overlay_Level_OFF": "끄기",
     "QuickAccess_Tab_Perf_GPU_Performance_Level": "GPU 성능 수준",
     "QuickAccess_Tab_Perf_GPU_Performance_Manual_Clock": "GPU 수동 클럭",
@@ -3099,7 +3099,7 @@
     "QuickAccess_Tab_Perf_FSR": "FSR 업스케일링 필터",
     "QuickAccess_Tab_Perf_FSRDescription": "업스케일링 적용 시 더욱 선명한 화질이 구현됩니다.",
     "QuickAccess_Tab_Perf_Sharpness": "선명도",
-    "QuickAccess_Tab_Perf_PerfOverlayOverSteam": "Steam에서 성능 오버레이 보기",
+    "QuickAccess_Tab_Perf_PerfOverlayOverSteam": "Steam에서 성능 오버레이 표시",
     "QuickAccess_Tab_Perf_PerfOverlayOverVR": "VR에서 성능 오버레이 보기",
     "QuickAccess_Tab_Perf_ScalingFilter": "스케일링 필터",
     "QuickAccess_Tab_Perf_ScalingFilter_Linear": "선형",
@@ -8109,7 +8109,7 @@
     "SteamUI_Selection_Russian": "Русский(러시아어)",
     "SteamUI_Selection_Thai": "ไทย(태국어)",
     "SteamUI_Selection_Japanese": "日本語(일본어)",
-    "SteamUI_Selection_Portuguese": "Português(포르투갈어 - 포르투갈)",
+    "SteamUI_Selection_Portuguese": "Português - Portugal(포르투갈어 - 포르투갈)",
     "SteamUI_Selection_Brazilian": "Português-Brasil(포르투갈어 - 브라질)",
     "SteamUI_Selection_Polish": "Polski(폴란드어)",
     "SteamUI_Selection_Danish": "Dansk(덴마크어)",
@@ -8737,7 +8737,6 @@
     "PhaseList_ShowAllLabel": "모든 녹화 영상 보기",
     "PhaseList_Recording_SaveAsClip": "클립으로 저장",
     "TimelineDialog_ClipPhase": "선택한 구간을 클립으로 저장",
-    "ClipManager_Explainer_Header_NoGR": "게임에서 찍은 스크린샷을 여기에서 확인하세요.",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "합계: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "성능 모니터 전환",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "무기 이미지 %1$s",
     "ControllerConfigurator_Activator_PickIcon": "바인딩 아이콘 선택",
     "Settings_InGame_PerfOverlayShowFPSGraph": "FPS 평균/최소 그래프 표시",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "코어당 CPU 사용률 그래프 표시"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "코어당 CPU 사용률 그래프 표시",
+    "Settings_InGame_PerfOverlayShortcut": "성능 모니터 단축키 전환",
+    "ControllerConfigurator_Layer": "레이어"
 }

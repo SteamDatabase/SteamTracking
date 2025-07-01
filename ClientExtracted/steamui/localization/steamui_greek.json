@@ -8110,7 +8110,7 @@
     "SteamUI_Selection_Russian": "Русский (Ρωσικά)",
     "SteamUI_Selection_Thai": "ไทย (Ταϊλανδικά)",
     "SteamUI_Selection_Japanese": "日本語 (Ιαπωνικά)",
-    "SteamUI_Selection_Portuguese": "Português (Πορτογαλικά – Πορτογαλία)",
+    "SteamUI_Selection_Portuguese": "Português – Portugal (Πορτογαλικά – Πορτογαλία)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (Πορτογαλικά – Βραζιλία)",
     "SteamUI_Selection_Polish": "Polski (Πολωνικά)",
     "SteamUI_Selection_Danish": "Dansk (Δανικά)",
@@ -8738,7 +8738,6 @@
     "PhaseList_ShowAllLabel": "Εμφάνιση ολόκληρης της καταγραφής",
     "PhaseList_Recording_SaveAsClip": "Αποθήκευση ως απόσπασμα",
     "TimelineDialog_ClipPhase": "Αποθήκευση φάσης ως απόσπασμα",
-    "ClipManager_Explainer_Header_NoGR": "Εδώ θα βρείτε τα στιγμιότυπα οθόνης που βγάλατε εντός παιχνιδιού",
     "steamui_dummy": "DO NOT USE ME",
     "ContentManagement_TotalSize": "Σύνολο: %1$s",
     "Settings_Hotkey_TogglePerfMonitor": "Εναλλαγή παρακολούθησης επιδόσεων",
@@ -8767,5 +8766,7 @@
     "TouchMenuIcon_Weapons": "Εικόνα όπλου %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Επιλογή εικονιδίου δέσμευσης",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Εμφάνιση γραφήματος Avg/Min FPS",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Εμφάνιση γραφήματος χρήσης CPU ανά πυρήνα"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Εμφάνιση γραφήματος χρήσης CPU ανά πυρήνα",
+    "Settings_InGame_PerfOverlayShortcut": "Πλήκτρο/-α εναλλαγής παρακολούθησης επιδόσεων",
+    "ControllerConfigurator_Layer": "Στρώμα"
 }

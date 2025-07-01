@@ -8113,7 +8113,7 @@
     "SteamUI_Selection_Russian": "Русский (russisk)",
     "SteamUI_Selection_Thai": "ไทย (thai)",
     "SteamUI_Selection_Japanese": "日本語 (japansk)",
-    "SteamUI_Selection_Portuguese": "Português (portugisisk – Portugal)",
+    "SteamUI_Selection_Portuguese": "Português – Portugal (portugisisk – Portugal)",
     "SteamUI_Selection_Brazilian": "Português-Brasil (brasiliansk-portugisisk)",
     "SteamUI_Selection_Polish": "Polski (polsk)",
     "SteamUI_Selection_Danish": "Dansk (dansk)",
@@ -8741,7 +8741,6 @@
     "PhaseList_ShowAllLabel": "Vis hele opptaket",
     "PhaseList_Recording_SaveAsClip": "Lagre som klipp",
     "TimelineDialog_ClipPhase": "Lagre periode som klipp",
-    "ClipManager_Explainer_Header_NoGR": "Her finner du skjermbildene du har tatt i spillet",
     "steamui_dummy": "IKKE BRUK MEG",
     "ContentManagement_TotalSize": "Totalt %1$s",
     "Settings_InGame_PerfOverlay_BGOpacity": "Bakgrunnens ugjennomsiktighet",
@@ -8768,5 +8767,7 @@
     "TouchMenuIcon_Weapons": "Våpen – bilde %1$s",
     "ControllerConfigurator_Activator_PickIcon": "Velg bindingens ikon",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Vis graf over gjennomsnittlig/min. bildefrekvens",
-    "Settings_InGame_PerfOverlayShowCPUGraph": "Vis graf over CPU-utnyttelse per kjerne"
+    "Settings_InGame_PerfOverlayShowCPUGraph": "Vis graf over CPU-utnyttelse per kjerne",
+    "Settings_InGame_PerfOverlayShortcut": "Hurtigtast for ytelsesmåling",
+    "ControllerConfigurator_Layer": "Lag"
 }
