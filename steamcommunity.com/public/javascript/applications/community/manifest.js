@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9856267";
+var CLSTAMP = "9870827";
 (() => {
   "use strict";
   var a,
@@ -383,7 +383,7 @@ var CLSTAMP = "9856267";
         9617: "3e5cb211c045c9e969c2",
         9638: "6b199d33060f7cec4be8",
         9743: "b2d9587e4009a994b616",
-        9774: "b2b669bf86c3cd11837e",
+        9774: "f404d6e6a139893cc87e",
         9783: "3b98b086463ee12ac6e0",
         9855: "d8c556facc9be5fe8f98",
         9857: "9b9f51695c2e5d6be58d",
@@ -460,7 +460,7 @@ var CLSTAMP = "9856267";
         9118: "b6ef7bbd3b0010d9d796",
         9129: "e0ae5f099a75f693e3de",
         9505: "38fbd48d93238aa239f0",
-        9774: "1650aa38b7c0531a8e43",
+        9774: "98614276c31f580b0b09",
       }[a]),
     (f.g = (function () {
       if ("object" == typeof globalThis) return globalThis;

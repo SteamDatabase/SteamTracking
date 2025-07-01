@@ -176,6 +176,7 @@
         Visible: "_3WTs5L7ce_Du4_KNac_sXd",
         "confirm-panel-intro": "_1zMMdC3loRunAeI72QvaDX",
         ExpanderRow: "_3y3yND3p_J6RNdjtcaEBMA",
+        FAQDisplay: "_2Sh_QTT9mWNhPZHHqdj1gN",
         SingleDayCtn: "_2Oiew_rwCOmnTk99m8bzBP",
         ScheduleTopDate: "_1-WKvbi_KTTmHoHJWC0BfO",
         ScheduleRow: "_3LI8YqHLQvj-FrIQyGTC30",
@@ -13294,7 +13295,9 @@
                 _.sessions.some(
                   (_) => _.Get().GetRegistrationStatus(_.group_id, _._) == _,
                 ),
-              ).map((_) => _.group_id),
+              )
+                .filter((_) => Boolean(_.ask_registration_question))
+                .map((_) => _.group_id),
             ));
         var _, _;
         return _ && 0 != _.length
@@ -13302,7 +13305,7 @@
               "div",
               null,
               _.createElement(
-                "h1",
+                "h3",
                 null,
                 (0, _._)("#MeetSteam_Reg_Question_title"),
               ),
@@ -13366,13 +13369,23 @@
           "div",
           null,
           _.createElement(_._, null, _),
-          _.createElement("textarea", {
-            value: _,
-            cols: 80,
-            rows: 3,
-            placeholder: (0, _._)("#MeetSteam_Reg_Question_placeholder"),
-            onChange: (_) => _(_.currentTarget.value),
-          }),
+          _.createElement(
+            "div",
+            {
+              className: "DialogInput_Wrapper",
+            },
+            _.createElement("textarea", {
+              value: _,
+              className: (0, _._)(
+                "DialogTextInputBase",
+                "_DialogInputContainer",
+              ),
+              cols: 80,
+              rows: 3,
+              placeholder: (0, _._)("#MeetSteam_Reg_Question_placeholder"),
+              onChange: (_) => _(_.currentTarget.value),
+            }),
+          ),
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -13598,7 +13611,14 @@
                   },
                   _,
                 ),
-              Boolean(_) && _.createElement("div", null, _),
+              Boolean(_) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SessionAudience,
+                  },
+                  (0, _._)("#MeetSteam_Session_Audience", _),
+                ),
               Boolean(_) &&
                 _.createElement(
                   _.Fragment,
@@ -13612,9 +13632,19 @@
                       bExpanded: _,
                       setExpanded: _,
                     }),
-                    _.createElement("div", null, "FAQ"),
+                    _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
                   ),
-                  _ && _.createElement("div", null, _),
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().FAQDisplay,
+                      },
+                      _.createElement(_._, {
+                        text: _,
+                        event: null,
+                      }),
+                    ),
                 ),
               _.createElement(
                 "div",
@@ -13772,7 +13802,7 @@
           {
             className: _().InstanceDivider,
           },
-          (0, _._)("#MeetSteam_Or"),
+          "◆",
         );
       }
       function _(_) {
