@@ -5007,20 +5007,11 @@
                           return (
                             (await Promise.all(s)).forEach((e) => {
                               if (
-                                200 == e?.status &&
-                                1 == e?.data?.success &&
-                                e?.data?.map
+                                200 != e?.status ||
+                                1 != e?.data?.success ||
+                                !e?.data?.map
                               )
-                                for (let t in e.data.map) {
-                                  const a = Number.parseInt(t);
-                                  a &&
-                                    n.set(a, {
-                                      storeItem: a,
-                                      discountSetting: e.data.map[a],
-                                    });
-                                }
-                              else
-                                console.log(
+                                throw new Error(
                                   "Error: Failed on FetchDiscountByApp request " +
                                     e?.status +
                                     " " +
@@ -5028,6 +5019,14 @@
                                     " " +
                                     e?.data?.success,
                                 );
+                              for (let t in e.data.map) {
+                                const a = Number.parseInt(t);
+                                a &&
+                                  n.set(a, {
+                                    storeItem: a,
+                                    discountSetting: e.data.map[a],
+                                  });
+                              }
                             }),
                             t.map((e) => n.get(e) ?? null)
                           );
