@@ -55330,6 +55330,7 @@
       "use strict";
       r.d(t, {
         md: () => s.md,
+        Fd: () => s.Fd,
         XB: () => n.XB,
         oI: () => c.o,
         cZ: () => n.cZ,
@@ -55510,7 +55511,7 @@
     },
     30600: (e, t, r) => {
       "use strict";
-      r.d(t, { BL: () => l, md: () => c, wY: () => o });
+      r.d(t, { BL: () => l, Fd: () => c, md: () => u, wY: () => o });
       var i = r(90626),
         n = r(81393),
         s = r(8871);
@@ -55550,6 +55551,10 @@
         );
       }
       function c(e, ...t) {
+        const r = new e.ownerDocument.defaultView.ResizeObserver(...t);
+        return r.observe(e), r;
+      }
+      function u(e, ...t) {
         const r = new e.ownerDocument.defaultView.IntersectionObserver(...t);
         return r.observe(e), r;
       }

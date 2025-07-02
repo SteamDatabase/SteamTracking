@@ -646,6 +646,17 @@
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
 }
+.-qTM6xbWp6f2qNHBAuaxc._1j3xlARgSMe58myZErKUzW:not(._1Cnj-9auRb41WwwRA3hS18) {
+  animation: _3n201iHmh_Qzklo3iedCSy 2s forwards;
+}
+@keyframes _3n201iHmh_Qzklo3iedCSy {
+  from {
+    cursor: auto;
+  }
+  to {
+    cursor: none;
+  }
+}
 ._3kSXQEoQMr_lWPTqJoSG1I {
   position: absolute;
   top: 4px;
@@ -887,7 +898,7 @@
   left: 0;
 }
 ._2eh4iDod50HkFNh5C0fVW6 ._3f4Y1kM_nEtTF4DINVZ_rx {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 ._2eh4iDod50HkFNh5C0fVW6 ._3ezyMaw8mNCokAmQuZDbj1 {
   background-color: #1a9fff;

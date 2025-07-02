@@ -226,6 +226,8 @@
         LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
         BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
         ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
+        Fullscreen: "_1j3xlARgSMe58myZErKUzW",
+        DelayHideCursor: "_3n201iHmh_Qzklo3iedCSy",
         ButtonRow: "_2gDbG9frVoBgp4J9N1vA7I",
         LeftGroup: "ppGte6hTuxkoYS4d0ffwc",
         RightGroup: "_2iPvkLeM34oiIhYNFbtIaL",
@@ -1540,9 +1542,9 @@
         P = n(75844),
         k = n(22837),
         L = n(68033),
-        R = n(41550),
-        M = n(56011),
-        B = n(76684),
+        B = n(41550),
+        R = n(56011),
+        M = n(76684),
         D = n(738),
         G = n(6019),
         x = n(30786),
@@ -1628,14 +1630,14 @@
                           className: G.TileActionInner,
                           onClick: (e) => {
                             (0, D.pg)(
-                              a.createElement(R.AD, {
+                              a.createElement(B.AD, {
                                 initialEvent: o,
                                 bShowOnlyInitialEvent: !1,
                                 partnerEventStore: m.O3,
                                 emoticonStore: L.A,
                                 showAppHeader: !0,
                               }),
-                              M.uX(e),
+                              R.uX(e),
                             );
                           },
                         },
@@ -1647,7 +1649,7 @@
                         a.createElement(
                           "div",
                           { className: G.TileActionInnerText },
-                          a.createElement(B.K4, {
+                          a.createElement(M.K4, {
                             dateAndTime: o.GetStartTimeAndDateUnixSeconds(),
                             bSingleLine: !0,
                           }),
@@ -2017,7 +2019,7 @@
       }
       var ge = n(27283),
         Ee = n.n(ge),
-        ve = n(47831),
+        ve = n(48333),
         fe = n(6144);
       const Ce = (0, a.createContext)({});
       function ye(e) {
@@ -2064,6 +2066,7 @@
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
+        m_nBufferedEndTime = 0;
         constructor(e) {
           (0, me.Gn)(this), (this.m_persistState = e || {});
         }
@@ -2075,6 +2078,9 @@
         }
         GetPlaybackTime() {
           return this.m_nPlaybackTime;
+        }
+        GetBufferedEndTime() {
+          return this.m_nBufferedEndTime;
         }
         GetTimelineDuration() {
           return this.m_nVideoDuration;
@@ -2156,7 +2162,8 @@
             (this.m_bUserInputNeeded = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_nVideoStartTime = 0),
-            (this.m_nVideoDuration = 0);
+            (this.m_nVideoDuration = 0),
+            (this.m_nBufferedEndTime = 0);
         }
         IsInitialized() {
           return !!this.m_player;
@@ -2172,7 +2179,9 @@
             (this.m_nVideoDuration =
               this.m_player.GetBufferedLiveEdgeTime() - this.m_nVideoStartTime),
             (this.m_nPlaybackTime =
-              this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime);
+              this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime),
+            (this.m_nBufferedEndTime =
+              this.m_player.GetBufferedEndTime() - this.m_nVideoStartTime);
         }
         OnVideoEnd() {
           console.log("video ended");
@@ -2289,9 +2298,10 @@
         (0, o.Cg)([me.sH], Se.prototype, "m_nPlaybackTime", void 0),
         (0, o.Cg)([me.sH], Se.prototype, "m_nVideoStartTime", void 0),
         (0, o.Cg)([me.sH], Se.prototype, "m_nVideoDuration", void 0),
+        (0, o.Cg)([me.sH], Se.prototype, "m_nBufferedEndTime", void 0),
         (0, o.Cg)([g.oI], Se.prototype, "OnVideoPlaying", null),
         (0, o.Cg)([g.oI], Se.prototype, "OnVideoPause", null),
-        (0, o.Cg)([g.oI], Se.prototype, "OnVideoTimeUpdate", null),
+        (0, o.Cg)([me.XI.bound], Se.prototype, "OnVideoTimeUpdate", null),
         (0, o.Cg)([g.oI], Se.prototype, "OnVideoEnd", null),
         (0, o.Cg)([g.oI], Se.prototype, "OnVideoValveEnded", null),
         (0, o.Cg)([g.oI], Se.prototype, "OnDownloadFailed", null),
@@ -2328,9 +2338,9 @@
             o = (0, ke.Ue)(l, t);
           return a.createElement("div", { ref: o, ...r }, n);
         }),
-        Re = 2e3,
-        Me = 500,
-        Be = 4e3,
+        Be = 2e3,
+        Re = 500,
+        Me = 4e3,
         De = a.createContext(null);
       function Ge() {
         return (0, a.useContext)(De);
@@ -2369,7 +2379,7 @@
             ),
             i = (0, a.useCallback)(
               (e) => {
-                "touch" != e.pointerType && 0 == r.current && t(!0, Me);
+                "touch" != e.pointerType && 0 == r.current && t(!0, Re);
               },
               [t],
             ),
@@ -2408,7 +2418,7 @@
         return [t || e, n];
       }
       function Fe(e) {
-        return "touch" == e.pointerType ? Be : Re;
+        return "touch" == e.pointerType ? Me : Be;
       }
       function Oe(e) {
         let t = e.target,
@@ -2487,7 +2497,11 @@
         return [t, n, r, l];
       }
       function Ze(e) {
-        return (0, Ie.q3)(() => [e.GetPlaybackTime(), e.GetTimelineDuration()]);
+        return (0, Ie.q3)(() => [
+          e.GetPlaybackTime(),
+          e.GetTimelineDuration(),
+          e.GetBufferedEndTime(),
+        ]);
       }
       function qe(e) {
         return (0, Ie.q3)(() => e.IsPaused());
@@ -2602,8 +2616,8 @@
             (e) => {
               if (((l.current = e), !e)) return;
               let t = (t) => {
-                let a = (0, M.id)(e, t.target),
-                  l = (0, M.id)(n.current, t.target);
+                let a = (0, R.id)(e, t.target),
+                  l = (0, R.id)(n.current, t.target);
                 a || l || r();
               };
               return (
@@ -2669,8 +2683,8 @@
       function dt(e) {
         let { player: t, showHoverThumb: n, onTouchSeek: r } = e,
           l = (0, a.useRef)(null),
-          [o, i] = Ze(t),
-          [s, c] = (function (e, t) {
+          [o, i, s] = Ze(t),
+          [c, u] = (function (e, t) {
             let [n, r] = a.useState(null),
               l = (0, a.useRef)(null),
               o = (0, a.useRef)(null),
@@ -2750,8 +2764,8 @@
               n,
             ];
           })(t, r);
-        He() && (c = null);
-        let u = (function (e) {
+        He() && (u = null);
+        let m = (function (e) {
           return a.useCallback(
             (t) => {
               let n = t.currentTarget.getBoundingClientRect(),
@@ -2763,45 +2777,49 @@
             [e],
           );
         })(t);
-        c || (u = void 0);
-        let m = { display: "none" };
-        c && ((m.left = c.nTickOffset), (m.display = "block"));
-        let d = { width: `${Ke.Fu(o, 0, i, 0, 100).toFixed(1)}%` },
-          p = (0, U.A)(Qe().Timeline, c && Qe().Hovered);
+        u || (m = void 0);
+        let d = { display: "none" };
+        u && ((d.left = u.nTickOffset), (d.display = "block"));
+        let p = Ke.Fu(o, 0, i, 0, 100),
+          h = Ke.Fu(s, 0, i, 0, 100),
+          _ = { width: `${p.toFixed(1)}%` },
+          g = { width: `${h.toFixed(1)}%` },
+          E = (0, U.A)(Qe().Timeline, u && Qe().Hovered);
         return a.createElement(
           "div",
           {
-            className: p,
-            "data-keepcontrols": !!c,
-            onClick: u,
-            onPointerMove: s.onPointerMove,
-            onPointerLeave: s.onPointerLeave,
-            onPointerDown: s.onPointerDown,
-            onPointerUp: s.onPointerUp,
-            onLostPointerCapture: s.onLostPointerCapture,
+            className: E,
+            "data-keepcontrols": !!u,
+            onClick: m,
+            onPointerMove: c.onPointerMove,
+            onPointerLeave: c.onPointerLeave,
+            onPointerDown: c.onPointerDown,
+            onPointerUp: c.onPointerUp,
+            onLostPointerCapture: c.onLostPointerCapture,
           },
           a.createElement(
             "div",
             {
               ref: l,
               className: Qe().TimelineBar,
-              onPointerEnter: s.onPointerEnter,
+              onPointerEnter: c.onPointerEnter,
             },
             a.createElement("div", {
               className: (0, U.A)(Qe().Bar, Qe().Buffered),
+              style: g,
             }),
             a.createElement("div", {
               className: (0, U.A)(Qe().Bar, Qe().Played),
-              style: d,
+              style: _,
             }),
             a.createElement("div", {
               className: (0, U.A)(Qe().HoverTick),
-              style: m,
+              style: d,
             }),
           ),
           a.createElement(pt, {
             refTimeline: l,
-            hoverState: c,
+            hoverState: u,
             showHoverThumb: n,
           }),
         );
@@ -2909,7 +2927,11 @@
           [s, c] = (0, a.useState)(!1),
           u = xe(s, c, r);
         o = o || s;
-        let m = (0, U.A)(Pe().PlayerControls, o && Pe().ShowControls);
+        let m = (0, U.A)(
+          Pe().PlayerControls,
+          o && Pe().ShowControls,
+          n.bFullscreen && Pe().Fullscreen,
+        );
         return a.createElement(
           "div",
           { className: m, ...i },
@@ -3219,9 +3241,9 @@
         );
       }
       var Lt = n(73750),
-        Rt = n.n(Lt),
-        Mt = n(88006);
-      const Bt = 3e3,
+        Bt = n.n(Lt),
+        Rt = n(88006);
+      const Mt = 3e3,
         Dt = 1500;
       function Gt(e) {
         let { player: t } = e,
@@ -3234,7 +3256,7 @@
               (l.current = !1), (!e || o) && r(!0, o ? 0 : Dt);
             }, [o, r, l]);
             let i = (0, a.useCallback)(() => {
-              r(!0, Bt);
+              r(!0, Mt);
             }, [r]);
             return [n, i];
           })(t),
@@ -3242,13 +3264,13 @@
           o = (function (e, t) {
             let n = (0, a.useCallback)(
               (n) => {
-                if (n.detail.button == Mt.pR.TRIGGER_LEFT && e) {
+                if (n.detail.button == Rt.pR.TRIGGER_LEFT && e) {
                   let a = Math.max(0, e.GetPlaybackTime() - 10);
                   return (
                     e.Seek(a), t(), n.preventDefault(), void n.stopPropagation()
                   );
                 }
-                if (n.detail.button == Mt.pR.TRIGGER_RIGHT && e) {
+                if (n.detail.button == Rt.pR.TRIGGER_RIGHT && e) {
                   let a = Math.min(
                     e.GetTimelineDuration(),
                     e.GetPlaybackTime() + 10,
@@ -3276,7 +3298,7 @@
           C = l
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          y = (0, U.A)(Rt().PlayerControls, n && Rt().ShowControls);
+          y = (0, U.A)(Bt().PlayerControls, n && Bt().ShowControls);
         return a.createElement(
           s.Z,
           {
@@ -3294,30 +3316,30 @@
             a.createElement(xt, null),
             a.createElement(
               "div",
-              { className: Rt().LowerControls },
+              { className: Bt().LowerControls },
               a.createElement(dt, { player: t, showHoverThumb: !1 }),
               a.createElement(
                 "div",
-                { className: Rt().ButtonRow },
+                { className: Bt().ButtonRow },
                 a.createElement(
                   "div",
-                  { className: Rt().LeftGroup },
+                  { className: Bt().LeftGroup },
                   a.createElement(Et, { player: t }),
                   a.createElement(it, { player: t }),
                 ),
                 a.createElement(
                   "div",
-                  { className: Rt().RightGroup },
+                  { className: Bt().RightGroup },
                   a.createElement(gt, { player: t }),
                 ),
               ),
             ),
-            a.createElement("div", { ref: h, className: Rt().MenuLayer }),
+            a.createElement("div", { ref: h, className: Bt().MenuLayer }),
           ),
         );
       }
       function xt(e) {
-        return a.createElement("div", { className: Rt().BehindControlsFade });
+        return a.createElement("div", { className: Bt().BehindControlsFade });
       }
       const Ht = 500;
       function Vt(e) {
@@ -4669,9 +4691,9 @@
         };
       var kn = n(61723),
         Ln = n.n(kn),
-        Rn = n(30470),
-        Mn = n(88340),
-        Bn = n(60014);
+        Bn = n(30470),
+        Rn = n(88340),
+        Mn = n(60014);
       const Dn = new Map([
           [
             1245620,
@@ -4820,9 +4842,9 @@
         const { appid: t, appBannerDef: n, app_name: r } = e,
           l = ((o = n.strBannerType), Gn.get(o));
         var o;
-        const i = (0, Bn.aL)(
-          Rn.TS.STORE_BASE_URL +
-            `app/${Mn.wy}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
+        const i = (0, Mn.aL)(
+          Bn.TS.STORE_BASE_URL +
+            `app/${Rn.wy}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
           "topplayed_app_banner",
           t,
         );
@@ -4873,7 +4895,7 @@
       function qn(e) {
         const { appid: t } = e,
           [n] = (0, T.t7)(t, { include_assets: !0 }),
-          r = (0, Bn.n9)();
+          r = (0, Mn.n9)();
         if (!n) return null;
         const l = (0, Wn.wJ)(n.GetStorePageURL(), r);
         return a.createElement(
@@ -5084,11 +5106,11 @@
           d = (0, a.useCallback)(
             (e) => {
               let t = n.current;
-              return e.detail.button == Mt.pR.TRIGGER_LEFT && t
+              return e.detail.button == Rt.pR.TRIGGER_LEFT && t
                 ? ((t.currentTime = Math.max(0, t.currentTime - 10)),
                   e.preventDefault(),
                   void e.stopPropagation())
-                : e.detail.button == Mt.pR.TRIGGER_RIGHT && t
+                : e.detail.button == Rt.pR.TRIGGER_RIGHT && t
                   ? ((t.currentTime = Math.min(t.duration, t.currentTime + 10)),
                     e.preventDefault(),
                     void e.stopPropagation())
@@ -5468,9 +5490,9 @@
         P = n(12155),
         k = n(82477),
         L = n(92757),
-        R = n(39256),
-        M = n(99487),
-        B = n(7193),
+        B = n(39256),
+        R = n(99487),
+        M = n(7193),
         D = n(39199),
         G = n(96971),
         x = n(53677),
@@ -5511,7 +5533,7 @@
             return e?.length > 0 ? e[0] : null;
           }, [t]),
           { storePageFilter: o, eStoreDiscoveryQueueType: i } = r.useMemo(
-            () => (0, B.lx)(t, l),
+            () => (0, M.lx)(t, l),
             [t, l],
           ),
           s = (0, D.Uf)(i, o),
@@ -5586,7 +5608,7 @@
               r.createElement(W, {
                 event: n,
                 section: n.jsondata.sale_sections[l],
-                activeTab: new M.y(null, t),
+                activeTab: new R.y(null, t),
                 language: e.language,
                 nSaleDayIndex: t,
                 promotionName: "",
@@ -5600,7 +5622,7 @@
           if (a)
             return r.createElement(
               "div",
-              { className: R.ErrorDiv },
+              { className: B.ErrorDiv },
               "Error could not find sale section ",
               t,
             );

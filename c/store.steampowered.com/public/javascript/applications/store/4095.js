@@ -955,10 +955,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = new (__webpack_require__("chunkid")._)("video"),
-        _ = (_.Info, _.Debug);
-      _.Error, _.Warning;
+        _ = (_.Info, _.Debug),
+        _ = _.Error;
+      _.Warning;
       function _(_) {
         let _ = Math.floor(_ / 3600),
           _ = Math.floor(_ / 60) % 60,
@@ -996,7 +998,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -1116,9 +1119,13 @@
           : (_.nDuration / _.nTimeScale) * 1e3;
       }
       function _(_, _, _) {
+        _ -= _.GetStartTime();
         let _ = _(_),
           _ = _(_, _, _);
         return Math.floor(_ / _) + _.segmentTemplate.nStartNumber;
+      }
+      function _(_, _) {
+        return (_ - _.segmentTemplate.nStartNumber) * (_(_) / 1e3);
       }
       function _(_, _, _) {
         return _ + ((1e3 * _.GetStartTime()) % _);
@@ -1610,27 +1617,109 @@
           );
         }
       }
-      var _;
       !(function (_) {
         (_[(_.None = 0)] = "None"),
           (_[(_.Append = 1)] = "Append"),
           (_[(_.Remove = 2)] = "Remove");
       })(_ || (_ = {}));
       class _ {
+        m_eBufferUpdate = _.None;
+        m_sourceBuffer = null;
+        Attach(_) {
+          (this.m_sourceBuffer = _), (this.m_eBufferUpdate = _.None);
+        }
+        Detach() {
+          (this.m_sourceBuffer = null), (this.m_eBufferUpdate = _.None);
+        }
+        HasAttachedBuffer() {
+          return null != this.m_sourceBuffer;
+        }
+        GetBufferState() {
+          return this.m_eBufferUpdate;
+        }
+        GetSourceBufferTimeRanges() {
+          return this.m_sourceBuffer.buffered;
+        }
+        GetBufferedStartSec() {
+          return this.m_sourceBuffer &&
+            this.m_sourceBuffer.buffered &&
+            0 != this.m_sourceBuffer.buffered.length
+            ? this.m_sourceBuffer.buffered.start(0)
+            : 0;
+        }
+        GetBufferedEndSec() {
+          return this.m_sourceBuffer &&
+            this.m_sourceBuffer.buffered &&
+            0 != this.m_sourceBuffer.buffered.length
+            ? this.m_sourceBuffer.buffered.end(0)
+            : 0;
+        }
+        BufferUpdateComplete() {
+          this.m_eBufferUpdate = _.None;
+        }
+        MarkAsRemoving() {
+          this.m_eBufferUpdate = _.Remove;
+        }
+        GetAmountBufferedInPlayerMS(_) {
+          if (!this.m_sourceBuffer) return 0;
+          let _ = this.m_sourceBuffer.buffered;
+          if (0 == _.length) return 0;
+          _ < _.start(0) && (_ = _.start(0)), _ > _.end(0) && (_ = _.end(0));
+          let _ = _.end(0) - _;
+          return Math.floor(1e3 * _);
+        }
+        AppendBuffer(_) {
+          (0, _._)(null != this.m_sourceBuffer, "Invalid source buffer"),
+            (0, _._)(
+              this.m_eBufferUpdate == _.None,
+              "Appending to source buffer with operation in flight",
+            );
+          try {
+            this.m_sourceBuffer.appendBuffer(_),
+              (this.m_eBufferUpdate = _.Append);
+          } catch (_) {
+            return _;
+          }
+          return null;
+        }
+        Remove(_, _) {
+          (0, _._)(null != this.m_sourceBuffer, "Invalid source buffer"),
+            (0, _._)(
+              this.m_eBufferUpdate == _.None,
+              "Removing from source buffer with operation in flight",
+            ),
+            this.m_sourceBuffer.remove(_, _),
+            (this.m_eBufferUpdate = _.Remove);
+        }
+        RemoveAll() {
+          let _ = 0;
+          if (this.m_sourceBuffer) {
+            let _ = this.m_sourceBuffer.buffered;
+            for (let _ = 0; _ < _.length; _++) _ < _.end(_) && (_ = _.end(_));
+          }
+          return (
+            0 != _ &&
+            (this.m_sourceBuffer.remove(0, _ + 1),
+            (this.m_eBufferUpdate = _.Remove),
+            !0)
+          );
+        }
+      }
+      class _ {
         m_callbacks = null;
         m_mpd = null;
         m_adaptation = null;
         m_mediaSource = null;
-        m_sourceBuffer = null;
+        m_sourceBuffer = new _();
         m_nTrackBufferMS = 0;
         m_representation = null;
-        m_eBufferUpdate = _.None;
         m_rgBufferedSegments = [];
-        m_bNeedInitSegment = !0;
+        m_mapInitSegments = new Map();
+        m_strLastFedInitSegmentRep = "";
         m_nNextSegment = 0;
         m_bRemoveBufferState = !1;
         m_bSeekInProgress = !1;
-        m_tsLastBufferRemove = 0;
+        m_bSourceBufferQuotaExceeded = !1;
         m_schNextDownload = new _._();
         m_xhrDownload = null;
         m_listeners = new _._();
@@ -1684,7 +1773,7 @@
           return _ && _.strID == this.m_representation.strID;
         }
         GetSourceBufferTimeRanges() {
-          return this.m_sourceBuffer.buffered;
+          return this.m_sourceBuffer.GetSourceBufferTimeRanges();
         }
         GetEstimatedAudioRate() {
           return this.m_representation && this.ContainsAudio()
@@ -1711,66 +1800,79 @@
             return Math.ceil(_ / _) + _.segmentTemplate.nStartNumber - 1;
           })(this.m_mpd, this.m_representation);
         }
-        GetAmountBufferedInPlayerMS(_) {
-          if (!this.m_sourceBuffer) return 0;
-          let _ = this.m_sourceBuffer.buffered;
-          if (0 == _.length) return 0;
-          _ < _.start(0) && (_ = _.start(0)), _ > _.end(0) && (_ = _.end(0));
-          let _ = _.end(0) - _;
-          return Math.floor(1e3 * _);
+        GetBufferedStart() {
+          return this.m_sourceBuffer.GetBufferedStartSec();
+        }
+        GetBufferedEnd() {
+          let _ = this.m_rgBufferedSegments.length;
+          if (0 == _) return 0;
+          let _ = this.m_rgBufferedSegments[_ - 1];
+          return _.nStartPTS + _.nDurationMS / 1e3;
         }
         GetAmountBufferedMS(_) {
-          let _ = this.GetAmountBufferedInPlayerMS(_);
-          for (let _ of this.m_rgBufferedSegments) _ += _.nDurationMS;
+          let _ = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(_);
+          for (let _ of this.m_rgBufferedSegments)
+            !_.data || _.nStartPTS < _ || (_ += _.nDurationMS);
           return _;
         }
-        ChangeRepresentation(_) {
-          if (this.m_adaptation.rgRepresentations.indexOf(_) < 0) return null;
-          if (this.m_representation == _) return null;
-          if (
-            (this.ContainsVideo() &&
-              (0, _._)(
-                `${this.GetDebugName()} changing representation to ${_.nHeight || 0}p at ${Math.ceil(_.nBandwidth / 1e3)}KB for segment ${this.m_nNextSegment}`,
-              ),
-            (this.m_representation = _),
-            (this.m_bNeedInitSegment = !0),
-            this.m_stats.SetRepresentation(_),
-            !this.m_sourceBuffer)
-          ) {
-            const _ = _.strMimeType + ";codecs=" + _.strCodecs;
-            try {
-              (this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer(_)),
-                (0, _._)(_),
-                this.m_listeners.AddEventListener(
-                  this.m_sourceBuffer,
-                  "updateend",
-                  this.OnSourceBufferUpdateEnd,
-                ),
-                this.m_listeners.AddEventListener(
-                  this.m_sourceBuffer,
-                  "error",
-                  this.OnSourceBufferError,
-                ),
-                this.m_listeners.AddEventListener(
-                  this.m_sourceBuffer,
-                  "abort",
-                  this.OnSourceBufferAbort,
+        IsSegmentBuffered(_) {
+          return (
+            this.m_rgBufferedSegments.findIndex((_) => _.nSegmentIndex == _) >=
+            0
+          );
+        }
+        ChangeRepresentation(_, _) {
+          if (!(this.m_adaptation.rgRepresentations.indexOf(_) < 0)) {
+            if (this.m_representation != _) {
+              if (this.ContainsVideo()) {
+                let _ = _.nHeight || 0,
+                  _ = Math.ceil(_.nBandwidth / 1e3);
+                (0, _._)(
+                  `${this.GetDebugName()} changing representation to ${_}p at ${_}KB for segment ${this.m_nNextSegment}`,
                 );
-            } catch (_) {
-              if (
-                !(_ instanceof DOMException && "NotSupportedError" === _.name)
-              )
-                throw _;
-              this.OnMediaUnsupportedError(_);
+              }
+              (this.m_representation = _),
+                this.m_stats.SetRepresentation(_),
+                this.CreateSourceBuffferIfNeeded(_);
             }
+            _ && this.UpgradeBufferedVideo();
           }
-          return _;
+        }
+        CreateSourceBuffferIfNeeded(_) {
+          if (this.m_sourceBuffer.HasAttachedBuffer()) return;
+          const _ = _.strMimeType + ";codecs=" + _.strCodecs;
+          try {
+            let _ = this.m_mediaSource.addSourceBuffer(_);
+            this.m_sourceBuffer.Attach(_),
+              (0, _._)(_),
+              this.m_listeners.AddEventListener(
+                _,
+                "updateend",
+                this.OnSourceBufferUpdateEnd,
+              ),
+              this.m_listeners.AddEventListener(
+                _,
+                "error",
+                this.OnSourceBufferError,
+              ),
+              this.m_listeners.AddEventListener(
+                _,
+                "abort",
+                this.OnSourceBufferAbort,
+              );
+          } catch (_) {
+            if (!(_ instanceof DOMException && "NotSupportedError" === _.name))
+              throw _;
+            this.OnMediaUnsupportedError(_);
+          }
         }
         Close() {
           this.m_listeners.Unregister(),
-            (this.m_sourceBuffer = null),
+            this.m_sourceBuffer.Detach(),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = _.None),
+            this.m_mapInitSegments.clear(),
+            (this.m_strLastFedInitSegmentRep = ""),
+            (this.m_bSourceBufferQuotaExceeded = !1),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -1779,10 +1881,8 @@
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
             (this.m_rgBufferedSegments = []),
-            (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
             (this.m_bSeekInProgress = !1),
-            (this.m_tsLastBufferRemove = 0),
             (this.m_rgDownloadLog = []),
             (this.m_stats = null);
         }
@@ -1794,33 +1894,41 @@
         }
         OnSourceBufferUpdateEnd(_) {
           let _ = this.m_callbacks.GetCurrentPlayTime(),
-            _ = this.GetAmountBufferedInPlayerMS(_);
+            _ = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(_);
           (0, _._)(
-            `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${_}][buffered=${_}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`,
+            `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${_}][remaining=${_}][start=${this.m_sourceBuffer.GetBufferedStartSec()}][end=${this.m_sourceBuffer.GetBufferedEndSec()}]`,
           );
-          let _ = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = _.None),
-            _ == _.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          let _ = this.m_sourceBuffer.GetBufferState();
+          this.m_sourceBuffer.BufferUpdateComplete(),
+            _ == _.Append && this.m_callbacks.OnSegmentBuffered(this),
             this.m_bSeekInProgress &&
               _ == _.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
         }
+        DebugSpewBufferedSegments() {
+          let _ = this.m_callbacks.GetCurrentPlayTime(),
+            _ = "[",
+            _ = _(this.m_mpd, this.m_representation, 1e3 * _);
+          for (let _ of this.m_rgBufferedSegments)
+            (_ += _.representation.strID),
+              _.nSegmentIndex == _ && (_ += "|"),
+              (_ += ",");
+          (_ += "]"), console.warn(_);
+        }
         OnMediaUnsupportedError(_) {
           console.log("OnMediaUnsupportedError", this.GetDebugName(), _),
-            this.m_callbacks &&
-              this.m_callbacks.OnMediaUnsupportedError(this, _);
+            this.m_callbacks.OnMediaUnsupportedError(this, _);
         }
         OnSourceBufferError(_) {
           console.log("OnSourceBufferError", this.GetDebugName(), _),
-            this.m_callbacks && this.m_callbacks.OnMediaSourceError(this);
+            this.m_callbacks.OnMediaSourceError(this);
         }
         OnSourceBufferAbort(_) {
           console.log("OnSourceBufferAbort", this.GetDebugName(), _);
         }
         ScheduleNextDownload() {
-          if (this.m_bNeedInitSegment) return void this.DownloadNextSegment();
           if ((this.m_schNextDownload.Cancel(), this.m_xhrDownload))
             return void (0, _._)(
               `${this.GetDebugName()} ScheduleNextDownload - download already going`,
@@ -1833,16 +1941,21 @@
             return void (0, _._)(
               `${this.GetDebugName()} ScheduleNextDownload - reached max segment`,
             );
-          let _ = this.m_callbacks.GetCurrentPlayTime(),
-            _ = this.m_callbacks.GetPlaybackRate(),
-            _ = (function (_, _, _) {
-              if (!_.IsLiveContent()) return 0;
-              let _ = _(_);
-              return (
-                (_ - _.segmentTemplate.nStartNumber + 1) * _ -
-                _.GetDurationSinceStarted()
-              );
-            })(this.m_mpd, this.m_representation, this.m_nNextSegment);
+          if (!this.m_mapInitSegments.has(this.m_representation.strID))
+            return (
+              (0, _._)(
+                `${this.GetDebugName()} ScheduleNextDownload - downloading init segment for ${this.m_representation.strID}`,
+              ),
+              void this.DownloadInitSegment(this.m_representation)
+            );
+          let _ = (function (_, _, _) {
+            if (!_.IsLiveContent()) return 0;
+            let _ = _(_);
+            return (
+              (_ - _.segmentTemplate.nStartNumber + 1) * _ -
+              _.GetDurationSinceStarted()
+            );
+          })(this.m_mpd, this.m_representation, this.m_nNextSegment);
           if (_ > 0)
             return (
               (0, _._)(
@@ -1850,16 +1963,25 @@
               ),
               void this.m_schNextDownload.Schedule(_, this.ScheduleNextDownload)
             );
-          let _ = this.GetAmountBufferedMS(_);
-          if ((_ > 1 && (_ /= _), _ < 4e4))
+          let _ = this.m_callbacks.GetCurrentPlayTime(),
+            _ = this.m_callbacks.GetPlaybackRate();
+          if (this.IsSegmentBuffered(this.m_nNextSegment))
             return (
               (0, _._)(
-                `${this.GetDebugName()} ScheduleNextDownload - have ${_} buffered, desire 40000 - downloading now`,
+                `${this.GetDebugName()} ScheduleNextDownload - buffered segment upgrade - downloading now`,
+              ),
+              void this.DownloadNextSegment()
+            );
+          let _ = this.GetAmountBufferedMS(_);
+          if ((_ > 1 && (_ /= _), _ < 3e4))
+            return (
+              (0, _._)(
+                `${this.GetDebugName()} ScheduleNextDownload - have ${_} buffered, desire 30000 - downloading now`,
               ),
               void this.DownloadNextSegment()
             );
           let _ = 1.1 * _(this.m_representation),
-            _ = this.GetAmountBufferedInPlayerMS(
+            _ = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(
               this.m_callbacks.GetCurrentPlayTime(),
             );
           (0, _._)(
@@ -1867,27 +1989,29 @@
           ),
             this.m_schNextDownload.Schedule(_, this.ScheduleNextDownload);
         }
-        DownloadNextSegment() {
+        DownloadInitSegment(_) {
           this.m_schNextDownload.Cancel();
-          let _ = "",
-            _ = 0,
-            _ = !1;
-          if (this.m_bNeedInitSegment)
-            (_ = _(this.m_representation)), (_ = 0), (_ = !0);
-          else {
-            if (this.m_nNextSegment < 0)
-              return void console.error(
-                "Attempting to download negative segment:",
-                this.m_nNextSegment,
-              );
-            (_ = this.m_representation),
-              (_ = this.m_nNextSegment),
-              (_ = _(_.segmentTemplate.strMedia, _.strID, _)),
-              (_ = _(this.m_representation)),
-              this.m_nNextSegment++;
-          }
+          let _ = _(_);
+          this.DownloadSegment(_, -1, _, 0);
+        }
+        DownloadNextSegment() {
+          if ((this.m_schNextDownload.Cancel(), this.m_nNextSegment < 0))
+            return void console.error(
+              "Attempting to download negative segment:",
+              this.m_nNextSegment,
+            );
+          let _ =
+            ((_ = this.m_representation),
+            (__webpack_require__ = this.m_nNextSegment),
+            _(_.segmentTemplate.strMedia, _.strID, __webpack_require__));
           var _, _;
-          this.DownloadSegment(this.m_representation.strID, _, _, _);
+          let _ = _(this.m_representation);
+          this.DownloadSegment(
+            this.m_representation,
+            this.m_nNextSegment,
+            _,
+            _,
+          );
         }
         async DownloadSegment(_, _, _, _, _ = performance.now()) {
           (0, _._)(
@@ -1952,20 +2076,54 @@
                       this.DownloadSegment(_, _, _, _, _),
                     )
             );
-          (this.m_nNumConsecutiveDownloadGones = 0),
-            _ && (this.m_bNeedInitSegment = !1);
+          this.m_nNumConsecutiveDownloadGones = 0;
           let _ = new Uint8Array(_.data);
-          this.m_rgBufferedSegments.push({
-            nDurationMS: _,
-            data: _,
-            representationStrID: _,
-          }),
+          if (-1 == _) this.m_mapInitSegments.set(_.strID, _);
+          else {
+            let _ = this.m_rgBufferedSegments.find((_) => _.nSegmentIndex == _);
+            if (!this.BAdvanceNextSegment(_, _))
+              return (
+                (0, _._)(
+                  `${this.GetDebugName()} Downloaded unexpected segment compared to buffers.. stopping playback`,
+                ),
+                void this.DownloadFailed()
+              );
+            if (_) (_.representation = _), (_.data = _);
+            else {
+              let _ = _(this.m_representation, _);
+              this.m_rgBufferedSegments.push({
+                representation: _,
+                nSegmentIndex: _,
+                nStartPTS: _,
+                nDurationMS: _,
+                data: _,
+              });
+            }
             this.LogDownload(_, _.length),
-            this.UpdateBuffer(),
-            (0, _._)(
-              `HTTP ${_} (${_}ms, ${Math.floor(_.length / 1e3)}k): ${_}`,
-            ),
+              this.UpdateBuffer(),
+              this.m_callbacks.OnSegmentDownloaded(this);
+          }
+          (0, _._)(`HTTP ${_} (${_}ms, ${Math.floor(_.length / 1e3)}k): ${_}`),
             this.ScheduleNextDownload();
+        }
+        BAdvanceNextSegment(_, _) {
+          let _ = this.m_rgBufferedSegments.length;
+          if (0 == _ && _) return !1;
+          if (
+            !_ &&
+            _ > 0 &&
+            this.m_rgBufferedSegments[_ - 1].nSegmentIndex != _ - 1
+          )
+            return !1;
+          if (!_) return (this.m_nNextSegment = _ + 1), !0;
+          let _ = this.m_rgBufferedSegments.find(
+            (_) => _.nSegmentIndex > _ && this.BCanUpgradeBufferedSegment(_),
+          );
+          return _
+            ? ((this.m_nNextSegment = _.nSegmentIndex), !0)
+            : ((this.m_nNextSegment =
+                this.m_rgBufferedSegments[_ - 1].nSegmentIndex + 1),
+              !0);
         }
         DownloadFailed() {
           this.m_callbacks.OnSegmentDownloadFailed(this);
@@ -1973,67 +2131,77 @@
         DownloadGone() {
           this.m_callbacks.OnSegmentDownloadGone(this);
         }
+        CurrentTimeChanged() {
+          this.UpdateBuffer();
+        }
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != _.None) return;
+          if (this.m_sourceBuffer.GetBufferState() != _.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
-          if (!this.m_sourceBuffer) return void (0, _._)("No source buffer?");
-          if (this.m_rgBufferedSegments.length > 0) {
-            try {
-              this.m_eBufferUpdate = _.Append;
-              let _ = this.m_rgBufferedSegments[0];
-              this.m_sourceBuffer.appendBuffer(_.data),
-                this.m_rgBufferedSegments.splice(0, 1);
-            } catch (_) {
-              "QuotaExceededError" === _.name
-                ? ((this.m_eBufferUpdate = _.None),
+          if (!this.m_sourceBuffer.HasAttachedBuffer())
+            return void (0, _._)("No source buffer?");
+          let _ = this.m_callbacks.GetCurrentPlayTime(),
+            _ = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(_) / 1e3,
+            _ = _(this.m_mpd, this.m_representation, 1e3 * _),
+            _ = this.m_rgBufferedSegments.find(
+              (_) => _.data && _.nSegmentIndex >= _,
+            ),
+            _ = _ && (_ < 6 || _.nStartPTS - _ < 6);
+          if (!this.m_bSourceBufferQuotaExceeded && _) {
+            let _ = _.data,
+              _ = _.representation.strID;
+            if (this.m_strLastFedInitSegmentRep != _) {
+              let _ = this.m_mapInitSegments.get(_);
+              if (!_)
+                return (
                   (0, _._)(
-                    `${this.GetDebugName()} Buffer - QuotaExceededError`,
-                  ))
-                : (0, _._)(`${this.GetDebugName()} Buffer - Exception`, _);
+                    `${this.GetDebugName()} Missing init segment for representation=${_}`,
+                  ),
+                  void this.m_callbacks.OnMediaSourceError(this)
+                );
+              (_ = _), (_ = null);
             }
-            return;
-          }
-          let _ = performance.now();
-          if (!this.m_bSeekInProgress && _ - this.m_tsLastBufferRemove > 1e4) {
-            let _ = this.GetBufferedStart(),
-              _ = this.m_callbacks.GetCurrentPlayTime() - 40;
-            if (_ < _) {
-              let _ = Math.min(this.GetBufferedEnd(), _);
-              return void (
-                _ != _ &&
-                ((this.m_eBufferUpdate = _.Remove),
-                this.m_sourceBuffer.remove(_, _),
-                (this.m_tsLastBufferRemove = _))
+            let _ = this.m_sourceBuffer.AppendBuffer(_);
+            if (
+              ((this.m_bSourceBufferQuotaExceeded =
+                (_ = _) && "QuotaExceededError" == _.name),
+              _ && !this.m_bSourceBufferQuotaExceeded)
+            )
+              return void (0, _._)(
+                `${this.GetDebugName()} MSE Buffer - Exception`,
+                _,
               );
-            }
+            if (!_)
+              return void (_
+                ? (_.data = null)
+                : (this.m_strLastFedInitSegmentRep = _));
+          }
+          var _;
+          let _ = this.m_bSourceBufferQuotaExceeded ? 1 : 10,
+            _ = this.m_sourceBuffer.GetBufferedStartSec();
+          if (this.m_sourceBuffer.GetBufferedEndSec() - _ && _ - _ >= _) {
+            let _ = _(this.m_mpd, this.m_representation, 1e3 * (_ - _)),
+              _ = _(this.m_representation, _) - 0.01;
+            if (_ > _)
+              return (
+                this.m_sourceBuffer.Remove(0, _),
+                (this.m_rgBufferedSegments = this.m_rgBufferedSegments.filter(
+                  (_) => _.nSegmentIndex >= _,
+                )),
+                (this.m_bSourceBufferQuotaExceeded = !1),
+                void (0, _._)(
+                  `${this.GetDebugName()} Trim MSE buffer before ${_} (segment=${_})`,
+                )
+              );
           }
         }
         RemoveAllBuffers() {
-          this.m_rgBufferedSegments = [];
-          let _ = 0;
-          if (this.m_sourceBuffer) {
-            let _ = this.m_sourceBuffer.buffered;
-            for (let _ = 0; _ < _.length; _++) _ < _.end(_) && (_ = _.end(_));
-          }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = _.Remove),
-            0 != _
-              ? this.m_sourceBuffer.remove(0, _ + 1)
-              : this.OnSourceBufferUpdateEnd(null);
-        }
-        GetBufferedStart() {
-          return this.m_sourceBuffer &&
-            this.m_sourceBuffer.buffered &&
-            0 != this.m_sourceBuffer.buffered.length
-            ? this.m_sourceBuffer.buffered.start(0)
-            : 0;
-        }
-        GetBufferedEnd() {
-          return this.m_sourceBuffer &&
-            this.m_sourceBuffer.buffered &&
-            0 != this.m_sourceBuffer.buffered.length
-            ? this.m_sourceBuffer.buffered.end(0)
-            : 0;
+            (this.m_bSourceBufferQuotaExceeded = !1);
+          let _ = !1;
+          this.m_sourceBuffer.HasAttachedBuffer() &&
+            (_ = this.m_sourceBuffer.RemoveAll()),
+            this.m_sourceBuffer.MarkAsRemoving(),
+            _ || this.OnSourceBufferUpdateEnd(null);
         }
         ForceStopDownloads() {
           this.m_schNextDownload.Cancel(),
@@ -2044,50 +2212,92 @@
           this.ForceStopDownloads(), this.ScheduleNextDownload();
         }
         Seek(_) {
-          let _ = this.GetBufferedStart(),
-            _ = this.GetBufferedEnd(),
-            _ = _ < _ || _ > _;
+          let _ = this.m_sourceBuffer.GetBufferedStartSec(),
+            _ = this.m_sourceBuffer.GetBufferedEndSec(),
+            _ = _ >= _ && _ < _;
           if (
-            (0 == _ && 0 == _ && (_ = !0),
+            (0 == _ && 0 == _ && (_ = !1),
             (0, _._)(
-              `${this.GetDebugName()} making an ${_ ? "unbuffered" : "buffered"} seek to ${_}`,
+              `${this.GetDebugName()} making an ${_ ? "source buffer" : "out of source buffer"} seek to ${_}`,
             ),
-            !this.m_bSeekInProgress && !_ && !this.m_bNeedInitSegment)
+            !this.m_bSeekInProgress && _)
           )
             return void this.ScheduleNextDownload();
-          (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
-          const _ = _ - this.m_mpd.GetStartTime();
-          let _ = _(this.m_mpd, this.m_representation, 1e3 * _);
-          (this.m_nNextSegment = Math.min(_, this.GetMaxSegment())),
-            (0, _._)(
-              "Seek To Next Segment: " +
-                this.m_nNextSegment +
-                " at approx. " +
-                (0, _._)(
-                  ((this.m_nNextSegment - 1) *
-                    this.GetCurrentSegmentDurationMS()) /
-                    1e3,
-                ) +
-                " seconds.",
-            ),
+          let _ = _(this.m_mpd, this.m_representation, 1e3 * _),
+            _ = this.m_rgBufferedSegments.findIndex(
+              (_) => _.data && _.nSegmentIndex == _,
+            );
+          if (_ >= 0)
+            (this.m_rgBufferedSegments = this.m_rgBufferedSegments.slice(_)),
+              (0, _._)(
+                "Partially buffered seek To Next Segment: " +
+                  this.m_nNextSegment +
+                  " at approx. " +
+                  (0, _._)(
+                    ((this.m_nNextSegment - 1) *
+                      this.GetCurrentSegmentDurationMS()) /
+                      1e3,
+                  ) +
+                  " seconds.",
+              );
+          else {
+            this.ForceStopDownloads(), (this.m_rgBufferedSegments = []);
+            let _ = _(this.m_mpd, this.m_representation, 1e3 * _);
+            (this.m_nNextSegment = Math.min(_, this.GetMaxSegment())),
+              (0, _._)(
+                "Seek To Next Segment: " +
+                  this.m_nNextSegment +
+                  " at approx. " +
+                  (0, _._)(
+                    ((this.m_nNextSegment - 1) *
+                      this.GetCurrentSegmentDurationMS()) /
+                      1e3,
+                  ) +
+                  " seconds.",
+              );
+          }
+          (this.m_bSeekInProgress = !0),
             (this.m_bRemoveBufferState = !0),
             this.UpdateBuffer();
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == _.Remove ||
+            (this.m_sourceBuffer.GetBufferState() == _.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
+        UpgradeBufferedVideo() {
+          let _ = _(this.m_representation),
+            _ = 1e3 * this.m_callbacks.GetCurrentPlayTime(),
+            _ = _(this.m_mpd, this.m_representation, _ + _),
+            _ = this.m_rgBufferedSegments.find(
+              (_) => _.nSegmentIndex >= _ && this.BCanUpgradeBufferedSegment(_),
+            );
+          _ &&
+            this.m_nNextSegment != _.nSegmentIndex &&
+            ((0, _._)(
+              `Upgrading buffered segment ${_.nSegmentIndex} from rep ${_.representation.strID} to ${this.m_representation.strID}`,
+            ),
+            this.ForceStopDownloads(),
+            (this.m_nNextSegment = _.nSegmentIndex),
+            this.ScheduleNextDownload());
+        }
+        BCanUpgradeBufferedSegment(_) {
+          let _ = this.m_representation.nHeight;
+          return _.representation.nHeight < _;
+        }
         BHasEnoughBuffered(_) {
           if (this.m_bSeekInProgress) return !1;
-          let _ =
+          if (
             !this.m_xhrDownload &&
             !this.m_schNextDownload.IsScheduled() &&
-            this.m_nNextSegment > this.GetMaxSegment();
-          return (
-            this.GetAmountBufferedInPlayerMS(_) >= this.m_nTrackBufferMS || _
-          );
+            this.m_nNextSegment > this.GetMaxSegment()
+          )
+            return !0;
+          let _ = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(_);
+          if (_ > this.m_nTrackBufferMS) return !0;
+          let _ = this.GetAmountBufferedMS(_);
+          return _ >= 6e3 && _ >= this.m_nTrackBufferMS;
         }
         LogDownload(_, _) {
           this.m_rgDownloadLog.length >= 4 && this.m_rgDownloadLog.shift();
@@ -2113,15 +2323,21 @@
               : 0
             : (8 * _ * 1e3) / _;
         }
+        GetAvgDownloadRateSampleCount() {
+          return this.m_rgDownloadLog.length;
+        }
       }
       (0, _._)([_._], _.prototype, "OnSourceBufferUpdateEnd", null),
         (0, _._)([_._], _.prototype, "OnMediaUnsupportedError", null),
         (0, _._)([_._], _.prototype, "OnSourceBufferError", null),
         (0, _._)([_._], _.prototype, "OnSourceBufferAbort", null),
         (0, _._)([_._], _.prototype, "ScheduleNextDownload", null),
+        (0, _._)([_._], _.prototype, "DownloadInitSegment", null),
         (0, _._)([_._], _.prototype, "DownloadNextSegment", null),
         (0, _._)([_._], _.prototype, "DownloadFailed", null),
-        (0, _._)([_._], _.prototype, "DownloadGone", null);
+        (0, _._)([_._], _.prototype, "DownloadGone", null),
+        (0, _._)([_._], _.prototype, "CurrentTimeChanged", null);
+      var _ = __webpack_require__("chunkid");
       const _ = 5,
         _ = "auto";
       var _, _, _;
@@ -2160,8 +2376,12 @@
         m_bIsBuffering = !0;
         m_seekingToTime = null;
         m_listeners = new _._();
+        m_resizeObserver = null;
+        m_schPlayerResizeDelay = new _._();
+        m_nPlayerHeightForAuto = 0;
         m_bFirstPlay = !0;
         m_bPlaybackStarted = !1;
+        m_nLastPlaytimeLoaders = 0;
         m_nTimedText = 0;
         m_schReportPlayerTrigger = new _._();
         m_bStatsViewVisible = !1;
@@ -2338,6 +2558,11 @@
           if (
             ((this.m_bClosing = !0),
             this.m_listeners.Unregister(),
+            this.m_schPlayerResizeDelay.Cancel(),
+            (this.m_nPlayerHeightForAuto = 0),
+            this.m_resizeObserver &&
+              (this.m_resizeObserver.disconnect(),
+              (this.m_resizeObserver = null)),
             this.StopDownloads(),
             this.m_elVideo && this.m_elVideo.pause(),
             this.m_mediaSource)
@@ -2363,7 +2588,8 @@
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
-            (this.m_bPlaybackStarted = !1);
+            (this.m_bPlaybackStarted = !1),
+            (this.m_nLastPlaytimeLoaders = 0);
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
@@ -2531,7 +2757,20 @@
               this.m_elVideo,
               "play",
               this.OnPlayAction,
-            );
+            ),
+            (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
+            (this.m_resizeObserver = (0, _._)(
+              this.m_elVideo,
+              this.OnPlayerResize,
+            ));
+        }
+        OnPlayerResize(_, _) {
+          this.m_schPlayerResizeDelay.Cancel(),
+            this.m_schPlayerResizeDelay.Schedule(250, () => {
+              this.GetVideoPlayerHeight() != this.m_nPlayerHeightForAuto &&
+                ((this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
+                this.UpdateVideoRepresentation(!0));
+            });
         }
         OnMediaSourceOpen(_) {
           (0, _._)("OnMediaSourceOpen");
@@ -2604,7 +2843,7 @@
                 );
                 _ &&
                   !_.BIsCurrentRepresentation(_) &&
-                  (_.ChangeRepresentation(_),
+                  (_.ChangeRepresentation(_, !1),
                   (0, _._)(
                     "OnVideoWaiting - Stalled, forced restart download at resolution: " +
                       _.nWidth +
@@ -2622,15 +2861,12 @@
                   "OnVideoWaiting - Stalled, already at lowest resolution. No action taken. BHasLoader: " +
                     (null != _),
                 );
-            } else
+            } else {
+              let _ = this.m_videoRepSelected;
               (0, _._)(
-                "OnVideoWaiting - Stalled, user explicitly chose a resolution: " +
-                  this.m_videoRepSelected.nWidth +
-                  "x" +
-                  this.m_videoRepSelected.nHeight +
-                  "@" +
-                  this.m_videoRepSelected.nFrameRate,
+                `OnVideoWaiting - Stalled, user explicitly chose a resolution: ${_.nWidth}x${_.nHeight}@${_.nFrameRate}`,
               );
+            }
           }
         }
         OnVideoPause(_) {
@@ -2640,16 +2876,6 @@
         }
         OnVideoResize(_) {
           this.m_stats.GetFPSMonitor().SetWindowResized();
-        }
-        OnDebugPrintEventInfoAndAvailableBuffer(_) {
-          let _ = -1,
-            _ = this.GetVideoLoader();
-          this.m_elVideo &&
-            _ &&
-            (_ = __webpack_require__.GetAmountBufferedInPlayerMS(
-              this.m_elVideo.currentTime,
-            )),
-            (0, _._)("DebugMessage - Stats: " + _.type + " BufferedMS: " + _);
         }
         OnVideoError(_) {
           (0, _._)("OnVideoError");
@@ -2682,32 +2908,46 @@
               this.m_elVideo.currentTime + this.m_hlsTimeOffset)
             : this.m_elVideo.currentTime;
         }
+        GetBufferedEndTime() {
+          if (0 == this.m_rgLoaders.length) return 0;
+          let _ = Number.MAX_SAFE_INTEGER;
+          for (let _ of this.m_rgLoaders) _ = Math.min(_.GetBufferedEnd(), _);
+          return _;
+        }
         OnVideoTimeUpdate() {
-          if (this?.m_elVideo)
-            if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
-              let _ = this.GetBufferedLiveEdgeTime();
-              if (
-                1 == this.m_elVideo.playbackRate &&
-                this.m_elVideo.currentTime <= _ - 4.5 &&
-                this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, _)
-              ) {
-                let _ = _ - this.m_elVideo.currentTime;
-                (this.m_elVideo.playbackRate = 1.1),
-                  (0, _._)(
-                    "User is behind by " +
-                      _.toFixed(2) +
-                      " seconds, increasing playback speed to catch-up to live edge.",
-                  );
-              } else
-                1.1 == this.m_elVideo.playbackRate &&
-                  this.m_elVideo.currentTime >= _ - 1 &&
-                  ((this.m_elVideo.playbackRate = 1),
-                  (0, _._)("User is caught up, returning to normal playrate"));
-            } else {
-              const _ = this.GetAvailableVideoStartTime(),
-                _ = this.GetBufferedLiveEdgeTime() - _;
-              this.GetCurrentPlayTime() - _ >= _ && this.Pause();
-            }
+          if (!this?.m_elVideo) return;
+          let _ = this.m_elVideo.currentTime;
+          if (
+            _ < this.m_nLastPlaytimeLoaders ||
+            _ - this.m_nLastPlaytimeLoaders > 0.5
+          ) {
+            for (let _ of this.m_rgLoaders) _.CurrentTimeChanged();
+            this.m_nLastPlaytimeLoaders = _;
+          }
+          if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
+            let _ = this.GetBufferedLiveEdgeTime();
+            if (
+              1 == this.m_elVideo.playbackRate &&
+              this.m_elVideo.currentTime <= _ - 4.5 &&
+              this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, _)
+            ) {
+              let _ = _ - this.m_elVideo.currentTime;
+              (this.m_elVideo.playbackRate = 1.1),
+                (0, _._)(
+                  "User is behind by " +
+                    _.toFixed(2) +
+                    " seconds, increasing playback speed to catch-up to live edge.",
+                );
+            } else
+              1.1 == this.m_elVideo.playbackRate &&
+                this.m_elVideo.currentTime >= _ - 1 &&
+                ((this.m_elVideo.playbackRate = 1),
+                (0, _._)("User is caught up, returning to normal playrate"));
+          } else {
+            const _ = this.GetAvailableVideoStartTime(),
+              _ = this.GetBufferedLiveEdgeTime() - _;
+            this.GetCurrentPlayTime() - _ >= _ && this.Pause();
+          }
         }
         SetBookmarkAdapter(_) {
           this.m_bookMarkAdapter = _;
@@ -2812,10 +3052,13 @@
         }
         OnSegmentDownloaded(_) {
           (0, _._)(_.GetDebugName() + " OnSegmentDownloaded"),
-            this.UpdateVideoRepresentation(this.m_videoRepSelected),
+            this.UpdateVideoRepresentation(!1),
             this.OnVideoBufferProgress(),
             _ == this.GetVideoLoader() &&
               this.m_stats.SetCurrentVideoBandwidth(_.GetAvgDownloadRate());
+        }
+        OnSegmentBuffered(_) {
+          this.OnVideoBufferProgress();
         }
         async PlayOnElement() {
           const _ = this.m_bFirstPlay;
@@ -2913,10 +3156,10 @@
         }
         BeginPlayback() {
           if (!this.m_bUseHLSManifest) {
-            let _ = this.PickStartingVideoRepresentation();
+            let _ = this.DetermineBestVideoRepresentation();
             for (let _ of this.m_rgLoaders)
               if (_.ContainsVideo()) {
-                _.ChangeRepresentation(_);
+                _.ChangeRepresentation(_, !1);
                 let _ = _.GetCurrentSegmentDurationMS();
                 this.m_schFirstFrameThrottler.Schedule(
                   _ / 2,
@@ -2927,7 +3170,7 @@
                   _.GetAdaptation().rgRepresentations.length > 0
                     ? _.GetAdaptation().rgRepresentations[0]
                     : null;
-                _.ChangeRepresentation(_);
+                _.ChangeRepresentation(_, !1);
               }
           }
           this.m_bPlaybackStarted = !0;
@@ -2972,14 +3215,14 @@
           if (
             null === this.m_videoRepSelected &&
             _ &&
-            _.GetDownloadHistory().length <= 1 &&
+            0 == _.GetDownloadHistory().length &&
             _.GetActiveDownloads() > 0 &&
             _.GetActiveDownloadProgress() < 0.55
           ) {
             let _ = this.DetermineBestVideoRepresentation();
             _ &&
               !_.BIsCurrentRepresentation(_) &&
-              (_.ChangeRepresentation(_),
+              (_.ChangeRepresentation(_, !1),
               _.ForceRestartDownload(),
               (0, _._)(
                 "Video download progressing too slowly, choosing " +
@@ -2992,33 +3235,29 @@
               ));
           }
         }
-        PickStartingVideoRepresentation() {
-          let _ = this.GetVideoLoader();
-          if (!_) return null;
-          let _ = _.GetAdaptation(),
-            _ = null;
-          for (let _ = _.GetRepresentationsCount() - 1; _ >= 0; _--) {
-            let _ = _.rgRepresentations[_],
-              _ = _.nFrameRate ? _.nFrameRate : 0;
-            if (
-              !(this.m_nLimitFPS > 0 && _ > this.m_nLimitFPS) &&
-              ((_ = _), this.GetVideoPlayerHeight() <= _.nHeight)
-            )
-              break;
-          }
-          return _;
-        }
         DetermineBestVideoRepresentation() {
           let _ = this.GetVideoLoader(),
             _ = this.GetAudioLoader(),
             _ = _ && _ != _ ? _.GetEstimatedAudioRate() : 0,
-            _ = this.GetAvgLoaderDownloadRate(),
-            _ = _.GetRepresentationsCount() - 1,
+            _ =
+              _.GetAvgDownloadRateSampleCount() > 0
+                ? _.GetAvgDownloadRate()
+                : -1,
+            _ =
+              (_ = this.m_nPlayerHeightForAuto) < 410
+                ? 480
+                : _ < 600
+                  ? 720
+                  : _ < 910
+                    ? 1080
+                    : Number.MAX_SAFE_INTEGER;
+          var _;
+          let _ = _.GetRepresentationsCount() - 1,
             _ = _.GetAdaptation().rgRepresentations[_];
           for (let _ = _ - 1; _ >= 0; _--) {
             let _ = _.GetAdaptation().rgRepresentations[_],
               _ = (_.nBandwidth + _) * this.m_elVideo.playbackRate * 1.15;
-            if (_ < _) {
+            if (_ > 0 && _ < _) {
               (0, _._)(
                 `Video select: Skipping ${_} due to rate: [avg=${_}][required=${_}]`,
               );
@@ -3026,11 +3265,9 @@
             }
             let _ = _.nFrameRate || 0;
             if (this.IsLiveContent() && _ > 30) {
-              let _ = this.m_stats.GetFPSMonitor();
-              if (
-                _.BIsDroppingFrames() ||
-                (_.BHasCurrentFPS() && Math.ceil(_.GetCurrentFPS()) < 29)
-              ) {
+              let _ = this.m_stats.GetFPSMonitor(),
+                _ = _.BHasCurrentFPS() && Math.ceil(_.GetCurrentFPS()) < 29;
+              if (_.BIsDroppingFrames() || _) {
                 (0, _._)(
                   `Video select: Skipping ${_} due to dropping frames and high FPS representation: [fps:${_}]`,
                 );
@@ -3042,22 +3279,24 @@
               continue;
             }
             let _ = _.nHeight || 0,
-              _ = _.nHeight || 0,
-              _ = this.GetVideoPlayerHeight();
-            if (_ > 0 && _ > 0) {
-              if (_ > _(_)) break;
+              _ = _.nHeight || 0;
+            if (_ > 0 && _ > 0 && _ > 0 && _ > _) {
+              (0, _._)(
+                `Video select: Stopped at ${_} due to player dimensions`,
+              );
+              break;
             }
             _ = _;
           }
           return _;
         }
         UpdateVideoRepresentation(_) {
-          if (_ && this.m_videoRepSelected == _) return null;
+          if (this.m_videoRepSelected) return;
           let _ = this.GetVideoLoader();
-          if (!_) return null;
-          if (this.IsBuffering()) return null;
+          if (!_) return;
+          if (this.IsBuffering()) return;
           let _ = this.DetermineBestVideoRepresentation();
-          return (this.m_videoRepSelected = null), _.ChangeRepresentation(_);
+          _.ChangeRepresentation(_, _);
         }
         GetPlaybackStartTime(_) {
           if (!this.m_seekingToTime) return _;
@@ -3115,13 +3354,6 @@
         }
         GetVideoPlayerHeight() {
           return this.m_elVideo.clientHeight;
-        }
-        GetAvgLoaderDownloadRate() {
-          let _ = 0,
-            _ = 0,
-            _ = [this.GetVideoLoader()];
-          for (let _ of _) _ && ((_ += _.GetAvgDownloadRate()), _++);
-          return 0 == _ ? 0 : _ / _;
         }
         DispatchEvent(_, _ = null) {
           let _ = new CustomEvent(_, {
@@ -3231,13 +3463,16 @@
               (null !== this.m_videoRepSelected &&
                 this.m_videoRepSelected.strID == _.strID) ||
                 ((this.m_videoRepSelected = _),
-                __webpack_require__.ChangeRepresentation(_),
+                __webpack_require__.ChangeRepresentation(_, !0),
                 this.Seek(this.GetCurrentPlayTime())));
           }
           _ && (this.m_videoRepSelected = null);
         }
         GetThumbnail(_) {
-          return this.m_mpd.GetThumbnail(1e3 * _);
+          return (
+            (_ += this.GetAvailableVideoStartTime()),
+            this.m_mpd.GetThumbnail(1e3 * _)
+          );
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;
@@ -3255,9 +3490,6 @@
         }
       }
       function _(_) {
-        return _ < 360 ? 480 : _ < 480 ? 720 : 4320;
-      }
-      function _(_) {
         return _._ == _;
       }
       (0, _._)([_._], _.prototype, "m_nTimedText", void 0),
@@ -3266,6 +3498,7 @@
         (0, _._)([_._], _.prototype, "OnVisibilityChangeForHLS", null),
         (0, _._)([_._], _.prototype, "OnEndedForHLS", null),
         (0, _._)([_._], _.prototype, "UpdateMPD", null),
+        (0, _._)([_._], _.prototype, "OnPlayerResize", null),
         (0, _._)([_._], _.prototype, "OnMediaSourceOpen", null),
         (0, _._)([_._], _.prototype, "HandleMediaSourceError", null),
         (0, _._)([_._], _.prototype, "OnMediaSourceEnded", null),
@@ -3273,15 +3506,10 @@
         (0, _._)([_._], _.prototype, "OnVideoWaiting", null),
         (0, _._)([_._], _.prototype, "OnVideoPause", null),
         (0, _._)([_._], _.prototype, "OnVideoResize", null),
-        (0, _._)(
-          [_._],
-          _.prototype,
-          "OnDebugPrintEventInfoAndAvailableBuffer",
-          null,
-        ),
         (0, _._)([_._], _.prototype, "OnVideoError", null),
         (0, _._)([_._], _.prototype, "OnVideoCanPlay", null),
         (0, _._)([_._], _.prototype, "GetCurrentPlayTime", null),
+        (0, _._)([_._], _.prototype, "GetBufferedEndTime", null),
         (0, _._)([_._], _.prototype, "OnVideoTimeUpdate", null),
         (0, _._)(
           [_._],
@@ -3293,6 +3521,7 @@
         (0, _._)([_._], _.prototype, "GetPlaybackRate", null),
         (0, _._)([_._], _.prototype, "GetCDNAuthURLParameter", null),
         (0, _._)([_._], _.prototype, "OnSegmentDownloaded", null),
+        (0, _._)([_._], _.prototype, "OnSegmentBuffered", null),
         (0, _._)([_._], _.prototype, "PlayOnElement", null),
         (0, _._)([_._], _.prototype, "OnSegmentDownloadFailed", null),
         (0, _._)([_._], _.prototype, "OnSegmentDownloadGone", null),

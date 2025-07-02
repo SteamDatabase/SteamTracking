@@ -61276,6 +61276,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -61464,6 +61465,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -61502,6 +61504,10 @@
           _,
           _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
         );
+      }
+      function _(_, ..._) {
+        const _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
+        return __webpack_require__.observe(_), _;
       }
       function _(_, ..._) {
         const _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);

@@ -226,6 +226,8 @@
         LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
         BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
         ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
+        Fullscreen: "_1j3xlARgSMe58myZErKUzW",
+        DelayHideCursor: "_3n201iHmh_Qzklo3iedCSy",
         ButtonRow: "_2gDbG9frVoBgp4J9N1vA7I",
         LeftGroup: "ppGte6hTuxkoYS4d0ffwc",
         RightGroup: "_2iPvkLeM34oiIhYNFbtIaL",
@@ -2352,6 +2354,7 @@
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
+        m_nBufferedEndTime = 0;
         constructor(_) {
           (0, _._)(this), (this.m_persistState = _ || {});
         }
@@ -2363,6 +2366,9 @@
         }
         GetPlaybackTime() {
           return this.m_nPlaybackTime;
+        }
+        GetBufferedEndTime() {
+          return this.m_nBufferedEndTime;
         }
         GetTimelineDuration() {
           return this.m_nVideoDuration;
@@ -2444,7 +2450,8 @@
             (this.m_bUserInputNeeded = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_nVideoStartTime = 0),
-            (this.m_nVideoDuration = 0);
+            (this.m_nVideoDuration = 0),
+            (this.m_nBufferedEndTime = 0);
         }
         IsInitialized() {
           return !!this.m_player;
@@ -2460,7 +2467,9 @@
             (this.m_nVideoDuration =
               this.m_player.GetBufferedLiveEdgeTime() - this.m_nVideoStartTime),
             (this.m_nPlaybackTime =
-              this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime);
+              this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime),
+            (this.m_nBufferedEndTime =
+              this.m_player.GetBufferedEndTime() - this.m_nVideoStartTime);
         }
         OnVideoEnd() {
           console.log("video ended");
@@ -2577,9 +2586,10 @@
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
+        (0, _._)([_._], _.prototype, "m_nBufferedEndTime", void 0),
         (0, _._)([_._], _.prototype, "OnVideoPlaying", null),
         (0, _._)([_._], _.prototype, "OnVideoPause", null),
-        (0, _._)([_._], _.prototype, "OnVideoTimeUpdate", null),
+        (0, _._)([_._.bound], _.prototype, "OnVideoTimeUpdate", null),
         (0, _._)([_._], _.prototype, "OnVideoEnd", null),
         (0, _._)([_._], _.prototype, "OnVideoValveEnded", null),
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
@@ -2785,7 +2795,11 @@
         return [_, __webpack_require__, _, _];
       }
       function _(_) {
-        return (0, _._)(() => [_.GetPlaybackTime(), _.GetTimelineDuration()]);
+        return (0, _._)(() => [
+          _.GetPlaybackTime(),
+          _.GetTimelineDuration(),
+          _.GetBufferedEndTime(),
+        ]);
       }
       function _(_) {
         return (0, _._)(() => _.IsPaused());
@@ -3010,7 +3024,7 @@
             onTouchSeek: _,
           } = _,
           _ = (0, _.useRef)(null),
-          [_, _] = _(_),
+          [_, _, _] = _(_),
           [_, _] = (function (_, _) {
             let [__webpack_require__, _] = _.useState(null),
               _ = (0, _.useRef)(null),
@@ -3109,8 +3123,13 @@
           display: "none",
         };
         _ && ((_.left = _.nTickOffset), (_.display = "block"));
-        let _ = {
-            width: `${_._(_, 0, _, 0, 100).toFixed(1)}%`,
+        let _ = _._(_, 0, _, 0, 100),
+          _ = _._(_, 0, _, 0, 100),
+          _ = {
+            width: `${_.toFixed(1)}%`,
+          },
+          _ = {
+            width: `${_.toFixed(1)}%`,
           },
           _ = (0, _._)(_().Timeline, _ && _().Hovered);
         return _.createElement(
@@ -3134,6 +3153,7 @@
             },
             _.createElement("div", {
               className: (0, _._)(_().Bar, _().Buffered),
+              style: _,
             }),
             _.createElement("div", {
               className: (0, _._)(_().Bar, _().Played),
@@ -3289,7 +3309,11 @@
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
         _ = _ || _;
-        let _ = (0, _._)(_().PlayerControls, _ && _().ShowControls);
+        let _ = (0, _._)(
+          _().PlayerControls,
+          _ && _().ShowControls,
+          __webpack_require__.bFullscreen && _().Fullscreen,
+        );
         return _.createElement(
           "div",
           {
