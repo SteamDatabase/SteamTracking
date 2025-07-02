@@ -4969,73 +4969,77 @@
           c = (0, o.E)({
             queries: i.map((e) => ({
               queryKey: ["useAppWithDiscounts", n, e],
-              queryFn: () =>
-                (function (e) {
-                  const t = JSON.stringify(e);
-                  y.get(t) ||
-                    y.set(
-                      t,
-                      new (s())(
-                        async (t) => {
-                          const a =
-                              m.TS.PARTNER_BASE_URL +
-                              "discounts/ajaxgetdiscountbyapp",
-                            n = new Map();
-                          if (!t || 0 == t.length) return [];
-                          const i = [...t],
-                            s = [];
-                          for (; i.length > 0; ) {
-                            const t = new FormData(),
-                              n = i.splice(0, 250);
-                            t.append("sessionid", m.TS.SESSIONID),
-                              t.append("rgAppIDs", n.join(",")),
-                              t.append(
-                                "bExcludeExpired",
-                                e.bExcludeExpired ? "1" : "0",
-                              ),
-                              t.append(
-                                "bExcludeCommercial",
-                                e.bExcludeCommercial ? "1" : "0",
-                              ),
-                              e.nPartnerID &&
+              queryFn: async () => {
+                const t = await (function (e) {
+                    const t = JSON.stringify(e);
+                    y.get(t) ||
+                      y.set(
+                        t,
+                        new (s())(
+                          async (t) => {
+                            const a =
+                                m.TS.PARTNER_BASE_URL +
+                                "discounts/ajaxgetdiscountbyapp",
+                              n = new Map();
+                            if (!t || 0 == t.length) return [];
+                            const i = [...t],
+                              s = [];
+                            for (; i.length > 0; ) {
+                              const t = new FormData(),
+                                n = i.splice(0, 250);
+                              t.append("sessionid", m.TS.SESSIONID),
+                                t.append("rgAppIDs", n.join(",")),
                                 t.append(
-                                  "publisherid",
-                                  e.nPartnerID.toString(),
+                                  "bExcludeExpired",
+                                  e.bExcludeExpired ? "1" : "0",
                                 ),
-                              s.push(r().post(a, t, { withCredentials: !0 }));
-                          }
-                          return (
-                            (await Promise.all(s)).forEach((e) => {
-                              if (
-                                200 != e?.status ||
-                                1 != e?.data?.success ||
-                                !e?.data?.map
-                              )
-                                throw new Error(
-                                  "Error: Failed on FetchDiscountByApp request " +
-                                    e?.status +
-                                    " " +
-                                    e?.statusText +
-                                    " " +
-                                    e?.data?.success,
-                                );
-                              for (let t in e.data.map) {
-                                const a = Number.parseInt(t);
-                                a &&
-                                  n.set(a, {
-                                    storeItem: a,
-                                    discountSetting: e.data.map[a],
-                                  });
-                              }
-                            }),
-                            t.map((e) => n.get(e) ?? null)
-                          );
-                        },
-                        { maxBatchSize: 100 },
-                      ),
-                    );
-                  return y.get(t);
-                })(n).loadMany(e),
+                                t.append(
+                                  "bExcludeCommercial",
+                                  e.bExcludeCommercial ? "1" : "0",
+                                ),
+                                e.nPartnerID &&
+                                  t.append(
+                                    "publisherid",
+                                    e.nPartnerID.toString(),
+                                  ),
+                                s.push(r().post(a, t, { withCredentials: !0 }));
+                            }
+                            return (
+                              (await Promise.all(s)).forEach((e) => {
+                                if (
+                                  200 != e?.status ||
+                                  1 != e?.data?.success ||
+                                  !e?.data?.map
+                                )
+                                  throw new Error(
+                                    "Error: Failed on FetchDiscountByApp request " +
+                                      e?.status +
+                                      " " +
+                                      e?.statusText +
+                                      " " +
+                                      e?.data?.success,
+                                  );
+                                for (let t in e.data.map) {
+                                  const a = Number.parseInt(t);
+                                  a &&
+                                    n.set(a, {
+                                      storeItem: a,
+                                      discountSetting: e.data.map[a],
+                                    });
+                                }
+                              }),
+                              t.map((e) => n.get(e) ?? null)
+                            );
+                          },
+                          { maxBatchSize: 100 },
+                        ),
+                      );
+                    return y.get(t);
+                  })(n).loadMany(e),
+                  a = t.find((e) => e instanceof Error);
+                if (a) throw a;
+                return t;
+              },
             })),
           }),
           u = c.some((e) => e.isLoading);
@@ -5141,20 +5145,11 @@
                     return (
                       (await Promise.all(s)).forEach((e) => {
                         if (
-                          200 == e?.status &&
-                          1 == e?.data?.success &&
-                          e?.data?.map
+                          200 != e?.status ||
+                          1 != e?.data?.success ||
+                          !e?.data?.map
                         )
-                          for (let t in e.data.map) {
-                            const a = Number.parseInt(t);
-                            a &&
-                              n.set(a, {
-                                storeItem: a,
-                                discountSetting: e.data.map[a],
-                              });
-                          }
-                        else
-                          console.log(
+                          throw new Error(
                             "Error: Failed on FetchDiscountByBundle request " +
                               e?.status +
                               " " +
@@ -5162,6 +5157,14 @@
                               " " +
                               e?.data?.success,
                           );
+                        for (let t in e.data.map) {
+                          const a = Number.parseInt(t);
+                          a &&
+                            n.set(a, {
+                              storeItem: a,
+                              discountSetting: e.data.map[a],
+                            });
+                        }
                       }),
                       t.map((e) => n.get(e) ?? null)
                     );
