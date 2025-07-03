@@ -2439,7 +2439,9 @@
         PlayWebRTC(e, t, a, n, i) {}
         OnLoadedMetadataForHLS() {
           this.m_bUseHLSManifest &&
-            ((this.m_bIsBuffering = !1), this.BeginPlayback());
+            ((this.m_bIsBuffering = !1),
+            this.BeginPlayback(),
+            this.DispatchEvent("valve-bufferupdate"));
         }
         OnVisibilityChangeForHLS() {
           this.m_bUseHLSManifest &&

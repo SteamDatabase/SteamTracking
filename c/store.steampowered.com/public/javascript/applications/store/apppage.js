@@ -211,7 +211,10 @@
     chunkid: (module) => {
       module.exports = {
         TrailerPlayer: "ByTa3bBdyJMzBnwuLJ64v",
+        LoadingThrobber: "_36zgLKcKD8iDyluIpswf6L",
+        FadeIn: "_3wB3kse3W5Hv1pyFlYyMTl",
         UserInputNeeded: "_1Y1AAYPHLnSZog32foUuw",
+        UserInputGlass: "_2VuwTaKaCTFvDQc3LSPIM0",
         Animate: "_9eb3EIMlhnYG8YdJci9e",
       };
     },
@@ -2351,6 +2354,7 @@
         m_nVolume = 1;
         m_eFailureReason = _._.Invalid;
         m_maxDimensions = null;
+        m_bPlaybackStarted = !1;
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
@@ -2381,6 +2385,9 @@
         }
         GetMaxVideoDimensions() {
           return this.m_maxDimensions;
+        }
+        HasPlaybackStarted() {
+          return this.m_bPlaybackStarted;
         }
         Start(_, _, _) {
           this.Stop(),
@@ -2457,10 +2464,10 @@
           return !!this.m_player;
         }
         OnVideoPlaying() {
-          (this.m_bPaused = !1), console.log("video playing");
+          (this.m_bPaused = !1), (this.m_bUserInputNeeded = !1);
         }
         OnVideoPause() {
-          (this.m_bPaused = !0), console.log("video paused");
+          this.m_bPaused = !0;
         }
         OnVideoTimeUpdate() {
           (this.m_nVideoStartTime = this.m_player.GetAvailableVideoStartTime()),
@@ -2469,14 +2476,12 @@
             (this.m_nPlaybackTime =
               this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime),
             (this.m_nBufferedEndTime =
-              this.m_player.GetBufferedEndTime() - this.m_nVideoStartTime);
+              this.m_player.GetBufferedEndTime() - this.m_nVideoStartTime),
+            this.m_player.IsBuffering() || (this.m_bPlaybackStarted = !0);
         }
-        OnVideoEnd() {
-          console.log("video ended");
-        }
+        OnVideoEnd() {}
         OnVideoValveEnded() {
-          console.log("video end detected"),
-            this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
+          this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
         }
         OnDownloadFailed(_) {
           console.log("video download failed", _.detail),
@@ -2583,11 +2588,12 @@
         (0, _._)([_._], _.prototype, "m_nVolume", void 0),
         (0, _._)([_._], _.prototype, "m_eFailureReason", void 0),
         (0, _._)([_._], _.prototype, "m_maxDimensions", void 0),
+        (0, _._)([_._], _.prototype, "m_bPlaybackStarted", void 0),
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
         (0, _._)([_._], _.prototype, "m_nBufferedEndTime", void 0),
-        (0, _._)([_._], _.prototype, "OnVideoPlaying", null),
+        (0, _._)([_._.bound], _.prototype, "OnVideoPlaying", null),
         (0, _._)([_._], _.prototype, "OnVideoPause", null),
         (0, _._)([_._.bound], _.prototype, "OnVideoTimeUpdate", null),
         (0, _._)([_._], _.prototype, "OnVideoEnd", null),
@@ -3875,6 +3881,7 @@
           className: _().BehindControlsFade,
         });
       }
+      var _ = __webpack_require__("chunkid");
       const _ = 500;
       function _(_) {
         let {
@@ -3974,13 +3981,15 @@
               style: _,
               controls: !1,
               playsInline: !0,
-              poster: _,
               "aria-label": _,
             }),
             _.createElement(_, {
               player: _,
               fullscreen: _,
               uiMode: _,
+            }),
+            _.createElement(_, {
+              player: _,
             }),
             !_ &&
               _.createElement(_, {
@@ -4016,6 +4025,37 @@
         );
       }
       function _(_) {
+        let { player: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(() => _.HasPlaybackStarted());
+        if (
+          ((0, _.useEffect)(() => {
+            _(!0);
+          }, [_]),
+          (0, _.useEffect)(() => {
+            if (!_) return;
+            let _ = window.setTimeout(() => _(!0), 250);
+            return () => window.clearTimeout(_);
+          }, [_, _]),
+          _)
+        )
+          return null;
+        let _ = __webpack_require__ && !_,
+          _ = (0, _._)(_().LoadingThrobber, _ && _().FadeIn);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+          },
+          _.createElement(_._, {
+            size: "large",
+            position: "center",
+          }),
+          ";",
+        );
+      }
+      function _(_) {
         let { player: _, screenshot: __webpack_require__ } = _,
           _ = (0, _._)(() => _.GetUserInputNeeded()),
           _ = (0, _._)(_, _),
@@ -4040,10 +4080,16 @@
             "div",
             {
               style: _,
-              className: (0, _._)(_().UserInputNeeded, _ && _().Animate),
+              className: _().UserInputNeeded,
               onClick: _,
             },
-            _.createElement(_, null),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().UserInputGlass, _ && _().Animate),
+              },
+              _.createElement(_, null),
+            ),
           )
         );
       }
@@ -4572,7 +4618,6 @@
         (0, _._)([_._.deep], _.prototype, "m_mapReactionConfiguration", void 0),
         (0, _._)([_._.deep], _.prototype, "m_mapExistingReactions", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
