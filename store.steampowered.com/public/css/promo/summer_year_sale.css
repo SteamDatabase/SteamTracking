@@ -3608,3 +3608,6 @@ html.tablet body.v6.sale_summer2025 .franchise_capsule.active .franchise_games {
 	top: 10%;
 }
 
+html.tablet body.v6.sale_summer2025 .sale_capsule_carousel .carousel_items {
+	justify-content: unset;
+}
