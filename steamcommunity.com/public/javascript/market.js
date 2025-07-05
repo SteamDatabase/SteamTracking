@@ -753,6 +753,11 @@ BuyItemDialog = {
 	m_sAddFundsReturnURL: null,
 	m_modal: null,
 
+	m_confirmation: 0,
+	m_confirmationTimeout: 0,
+	m_confirmationTries: 0,
+	m_confirmationDialog: null,
+
 	Initialize: function() {
 		$('market_buynow_dialog_purchase').observe( 'click', this.OnAccept.bindAsEventListener(this) );
 		$('market_buynow_dialog_addfunds').observe( 'click', this.OnAddFunds.bindAsEventListener(this) );
@@ -997,7 +1002,40 @@ BuyItemDialog = {
 		this.m_bPurchaseClicked = true;
 		$('market_buynow_dialog_error').hide();
 
-		$('market_buynow_dialog_purchase_throbber').clonePosition( $('market_buynow_dialog_purchase') );
+		this.BuyListing();
+	},
+
+	ShowConfirmationModal: function( ) {
+		var deferred = new jQuery.Deferred();
+		var fnOK = function() { deferred.resolve(); };
+
+		var container = $J('<div/>', {'class': 'waiting_dialog_container'} );
+		var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
+		container.append( throbber );
+		switch( g_nConfType )
+		{
+			case 2:
+				container.append( 'You must confirm this purchase via your Steam Mobile Authenticator. Do not close this window.' );
+				break;
+			case 1:
+				container.append( 'This purchase requires confirmation. Please see your email to confirm this purchase. Do not close this window.' );
+				break;
+			default:
+				container.append( 'This purchase requires confirmation. Please see your email or mobile device to confirm this purchase. Do not close this window.' );
+		}
+
+		var Modal = _BuildDialog( 'Additional confirmation step required', container, [], fnOK, {} );
+		deferred.always( function() { Modal.Dismiss(); } );
+		Modal.Show();
+
+		// attach the deferred's events to the modal
+		deferred.promise( Modal );
+
+		return Modal;
+	},
+
+	BuyListing: function(data) {
+		$('market_buynow_dialog_purchase_throbber').clonePosition($('market_buynow_dialog_purchase') );
 		$('market_buynow_dialog_purchase').fade({ duration: 0.25 });
 		$('market_buynow_dialog_purchase_throbber').show();
 		$('market_buynow_dialog_purchase_throbber').fade({ duration: 0.25, from: 0, to: 1 });
@@ -1010,11 +1048,13 @@ BuyItemDialog = {
 		var billing_address_two = $J('#billing_address_two_buynow') ? $J('#billing_address_two_buynow').val() : '';
 		var billing_country = $J('#billing_country_buynow') ? $J('#billing_country_buynow').val() : '';
 		var billing_city = $J('#billing_city_buynow') ? $J('#billing_city_buynow').val() : '';
-		var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select_buynow') ? $J('#billing_state_select_buynow').val() : '' ) : '';
+		var billing_state = g_bHasBillingStates ? ($J('#billing_state_select_buynow') ? $J('#billing_state_select_buynow').val() : '' ) : '';
 		var billing_postal_code = $J('#billing_postal_code_buynow') ? $J('#billing_postal_code_buynow').val() : '';
 		var save_my_address = $J('#save_my_address_buynow') ? $J('#save_my_address_buynow').prop('checked'): false;
+		var sent_confirmation = !!( this.m_confirmation );
+		var buyItemDialog = this;
 
-		$J.ajax( {
+		$J.ajax({
 			url: 'https://steamcommunity.com/market/buylisting/' + listingid,
 			type: 'POST',
 			data: {
@@ -1032,17 +1072,40 @@ BuyItemDialog = {
 				billing_city: billing_city,
 				billing_state: billing_state,
 				billing_postal_code: billing_postal_code,
-				save_my_address: save_my_address ? '1' : '0'
+				save_my_address: save_my_address ? '1' : '0',
+				confirmation: this.m_confirmation
 			},
 			crossDomain: true,
-			xhrFields: { withCredentials: true }
-		} ).done( function ( data ) {
-			BuyItemDialog.OnSuccess( { responseJSON: data } );
-		} ).fail( function( jqxhr ) {
+			xhrFields: {withCredentials: true}
+		}).done(function (data) {
+			BuyItemDialog.OnSuccess({responseJSON: data});
+		}).fail(function (jqxhr) {
 			// jquery doesn't parse json on fail
-			var data = $J.parseJSON( jqxhr.responseText );
-			BuyItemDialog.OnFailure( { responseJSON: data } );
-		} );
+			var data = $J.parseJSON(jqxhr.responseText);
+			if ( data.need_confirmation )
+			{
+				buyItemDialog.m_confirmation = data.confirmation.confirmation_id;
+				if ( !buyItemDialog.m_confirmationDialog )
+				{
+					buyItemDialog.m_confirmationDialog = buyItemDialog.ShowConfirmationModal();
+					buyItemDialog.m_confirmationDialog.SetDismissOnBackgroundClick( false );
+					buyItemDialog.m_confirmationDialog.OnDismiss( function() { buyItemDialog.CancelConfirmation(); } );
+				}
+
+				if ( buyItemDialog.m_confirmation )
+				{
+					buyItemDialog.m_confirmationTimeout = setTimeout(function () { buyItemDialog.GetConfirmationState(); }, 1500);
+				}
+			}
+			else if ( buyItemDialog.m_confirmation )
+			{
+				buyItemDialog.CancelConfirmation();
+			}
+			else
+			{
+				BuyItemDialog.OnFailure({responseJSON: data});
+			}
+		});
 	},
 
 	OnCancel: function( event ) {
@@ -1078,6 +1141,11 @@ BuyItemDialog = {
 
 	OnSuccess: function( transport ) {
 		this.m_bPurchaseSuccess = true;
+		if ( this.m_confirmationDialog )
+		{
+			this.m_confirmation = 0;
+			this.m_confirmationDialog.Dismiss();
+		}
 
 		if ( transport.responseJSON )
 		{
@@ -1121,6 +1189,25 @@ BuyItemDialog = {
 		{
 			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
 		}
+	},
+
+	CancelConfirmation: function() {
+		this.m_confirmationTries = 0;
+		if ( this.m_confirmationDialog ) {
+			this.m_confirmationDialog.Dismiss();
+			this.m_confirmationDialog = null;
+		}
+		if ( this.m_confirmationTimeout ) { clearTimeout( this.m_confirmationTimeout ); }
+		if ( !this.m_bPurchaseSuccess )
+		{
+			BuyItemDialog.OnFailure({responseJSON: {message: "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again."}});
+			this.m_confirmation = 0;
+		}
+	},
+
+	GetConfirmationState: function() {
+		this.m_confirmationTries++;
+		this.BuyListing();
 	},
 
 	OnDocumentKeyPress: function( event ) {
