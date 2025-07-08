@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Botão Y1"
 	"origin_legion_go_y2"							"Botão Y2"
+
+	"origin_generic_PL"							"Botão PL"
+	"origin_generic_PR"							"Botão PR"
+	"origin_generic_C"							"Botão C"
+	"origin_generic_Z"							"Botão Z"
+	"origin_generic_MISC1"						"Botão Extra 1"
+	"origin_generic_MISC2"						"Botão Extra 2"
+	"origin_generic_MISC3"						"Botão Extra 3"
+	"origin_generic_MISC4"						"Botão Extra 4"
+	"origin_generic_MISC5"						"Botão Extra 5"
+	"origin_generic_MISC6"						"Botão Extra 6"
+	"origin_generic_MISC7"						"Botão Extra 7"
+	"origin_generic_MISC8"						"Botão Extra 8"
+
 }

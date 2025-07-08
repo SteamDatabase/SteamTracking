@@ -4,6 +4,26 @@ import "enums.proto";
 
 option cc_generic_services = true;
 
+enum EClanImageGroup {
+	k_EClanImageGroup_None = 0;
+	k_EClanImageGroup_Announcement = 1;
+	k_EClanImageGroup_Curator = 2;
+}
+
+enum EClanImageFileType {
+	k_EClanImageFileType_Unknown = 0;
+	k_EClanImageFileType_JPEG = 1;
+	k_EClanImageFileType_GIF = 2;
+	k_EClanImageFileType_PNG = 3;
+	k_EClanImageFileType_MP4 = 4;
+	k_EClanImageFileType_WEBM = 5;
+	k_EClanImageFileType_VTT = 6;
+	k_EClanImageFileType_SRT = 7;
+	k_EClanImageFileType_SVG = 8;
+	k_EClanImageFileType_XML = 9;
+	k_EClanImageFileType_WEBP = 10;
+}
+
 enum EPartnerEventDisplayLocation {
 	k_EPartnerEventDisplayLocation_Invalid = 0;
 	k_EPartnerEventDisplayLocation_AppDetailsSpotlight = 1;
@@ -186,6 +206,28 @@ message CCommunity_GetClanAnnouncementVoteForUser_Request {
 message CCommunity_GetClanAnnouncementVoteForUser_Response {
 	optional bool voted_up = 1;
 	optional bool voted_down = 2;
+}
+
+message CCommunity_GetClanLocGroupImages_Request {
+	optional uint64 steamid = 1;
+	optional .EClanImageGroup group = 2 [default = k_EClanImageGroup_None];
+	optional uint32 language = 3;
+	repeated uint64 loc_group_ids = 4;
+}
+
+message CCommunity_ClanLocGroupImage {
+	optional uint64 loc_group_id = 1;
+	optional string image_hash = 2;
+	optional string thumbnail_hash = 3;
+	optional .EClanImageFileType file_type = 4 [default = k_EClanImageFileType_Unknown];
+	optional .EClanImageGroup group = 5 [default = k_EClanImageGroup_None];
+	optional uint32 width = 6;
+	optional uint32 height = 7;
+	optional string extensions = 8;
+}
+
+message CCommunity_GetClanLocGroupImages_Response {
+	repeated .CCommunity_ClanLocGroupImage images = 1;
 }
 
 message CCommunity_GetAvatarHistory_Request {
@@ -373,7 +415,7 @@ message CCommunity_SetRecommendationBotReviewStatus_Response {
 
 message CCommunity_GetBotReviewScoreForRecommendation_Request {
 	repeated uint64 recommendation_ids = 1;
-	optional bool force_rerun = 2;
+	optional uint32 app_id = 2;
 }
 
 message CCommunity_GetBotReviewScoreForRecommendation_Response {
@@ -395,6 +437,7 @@ service Community {
 	rpc GetCommentThreadRatings (.CCommunity_GetCommentThreadRatings_Request) returns (.CCommunity_GetCommentThreadRatings_Response);
 	rpc RateClanAnnouncement (.CCommunity_RateClanAnnouncement_Request) returns (.CCommunity_RateClanAnnouncement_Response);
 	rpc GetClanAnnouncementVoteForUser (.CCommunity_GetClanAnnouncementVoteForUser_Request) returns (.CCommunity_GetClanAnnouncementVoteForUser_Response);
+	rpc GetClanLocGroupImages (.CCommunity_GetClanLocGroupImages_Request) returns (.CCommunity_GetClanLocGroupImages_Response);
 	rpc GetAvatarHistory (.CCommunity_GetAvatarHistory_Request) returns (.CCommunity_GetAvatarHistory_Response);
 	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
 	rpc GetClanCrowdInMetadata (.CCommunity_GetClanCrowdInMetadata_Request) returns (.CCommunity_GetClanCrowdInMetadata_Response);

@@ -4126,7 +4126,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "SteamUI_InstallUnder" "Asenna kansioon %s1"
 "SteamUI_CreateNewDrive" "Luo uusi Steam-kirjasto asemalle %s1"
 
-"Steam_GamePropertiesOpenFolder" "Selaa paikallisia tiedostoja..."
+"Steam_GamePropertiesOpenFolder" "Selaa paikallisia tiedostoja"
 "Steam_GamePropertiesMoveFolder" "Siirrä asennuskansio..."
 "SteamUI_ChooseInstallFolder" "Valitse asennuskansio:"
 

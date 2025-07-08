@@ -1,0 +1,18 @@
+﻿"lang"
+{
+"Language" "indonesian" 
+"Tokens"
+{
+"PerfMon_FPS" "FPS"
+"PerfMon_CPU" "CPU"
+"PerfMon_RAM" "RAM"
+"PerfMon_GPU" "GPU"
+"PerfMon_Units_MHz" "MHz"
+"PerfMon_Units_GHz" "GHz"
+"PerfMon_Units_THz" "THz"
+"PerfMon_Units_TB" "TB"
+"PerfMon_Units_GB" "GB"
+"PerfMon_Units_MB" "MB"
+
+}
+}  

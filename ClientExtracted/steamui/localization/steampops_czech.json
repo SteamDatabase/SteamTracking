@@ -1,9 +1,9 @@
 {
     "language": "czech",
-    "sdrpop_bl2": "Bellevue, Washington, USA|Valve|Bellevue 2 – pouze relé",
-    "sdrpop_blv": "Bellevue, Washington, USA|Valve|Bellevue 1 – relé a herní servery",
-    "sdrpop_blv1": "Bellevue, Washington, USA|Valve|Bellevue 1 – relé a herní servery",
-    "sdrpop_blv2": "Bellevue, Washington, USA|Valve|Bellevue 2 – pouze relé",
+    "sdrpop_bl2": "Bellevue, Washington, USA|Valve|Bellevue 2 – pouze převaděče",
+    "sdrpop_blv": "Bellevue, Washington, USA|Valve|Bellevue 1 – převaděče a herní servery",
+    "sdrpop_blv1": "Bellevue, Washington, USA|Valve|Bellevue 1 – převaděče a herní servery",
+    "sdrpop_blv2": "Bellevue, Washington, USA|Valve|Bellevue 2 – pouze převaděče",
     "sdrpop_chi": "Ne-Čína|Perfect World|",
     "sdrpop_dumy": "Nikde|Valve|",
     "sdrpop_aae1": "Hongkong|Amazon|ap-east-1",

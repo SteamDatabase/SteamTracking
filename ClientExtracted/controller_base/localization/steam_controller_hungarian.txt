@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 gomb"
 	"origin_legion_go_y2"							"Y2 gomb"
+
+	"origin_generic_PL"							"„PL” gomb"
+	"origin_generic_PR"							"„PR” gomb"
+	"origin_generic_C"							"„C” gomb"
+	"origin_generic_Z"							"„Z” gomb"
+	"origin_generic_MISC1"						"1. extra gomb"
+	"origin_generic_MISC2"						"2. extra gomb"
+	"origin_generic_MISC3"						"3. extra gomb"
+	"origin_generic_MISC4"						"4. extra gomb"
+	"origin_generic_MISC5"						"5. extra gomb"
+	"origin_generic_MISC6"						"6. extra gomb"
+	"origin_generic_MISC7"						"7. extra gomb"
+	"origin_generic_MISC8"						"8. extra gomb"
+
 }

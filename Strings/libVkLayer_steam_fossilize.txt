@@ -439,6 +439,7 @@ addressModeW
 alignof 
 allocation failed
 allocator
+allowClusterAccelerationStructure
 alnum
 alpha
 alphaBlendOp
@@ -740,6 +741,7 @@ maxAnisotropy
 maxDepth
 maxDepthBounds
 maxDepthClamp
+maxFragmentDensityMapLayers
 maxLod
 maxPipelineRayHitAttributeSize
 maxPipelineRayPayloadSize

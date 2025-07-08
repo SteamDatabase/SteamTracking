@@ -99,4 +99,5 @@
 
 	"origin_legion_go_y1"							"Y1-knop"
 	"origin_legion_go_y2"							"Y2-knop"
-}
+
+	}

@@ -561,7 +561,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
@@ -731,7 +730,6 @@
           );
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -751,8 +749,7 @@
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, "dummy", [_._.k_ESteamRealmGlobal], _),
+          _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
             async (_) => {
               if (
@@ -856,10 +853,14 @@
                             _[0].bSuccess)
                           ) {
                             const _ = _[0].uploadResult,
-                              _ = (0, _._)() + _.GetAccountID() + "/",
-                              _ = (0, _._)(_.file_type),
-                              _ = _ + _.image_hash + _,
-                              _ = _ + _.thumbnail_hash + _,
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetHashAndExt(_),
+                              ),
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetThumbHashAndExt(_),
+                              ),
                               _ = {
                                 imageid: -11231412,
                                 image_hash: _.image_hash,
@@ -870,8 +871,6 @@
                                 url: _,
                                 thumb_url: _,
                                 uploaded_time: Date.now() / 1e3,
-                                loc_languages: void 0,
-                                is_loc_group: !1,
                               };
                             _(_), _(_);
                           }
@@ -1024,13 +1023,13 @@
             _.dataTransfer.items && _.dataTransfer.items[0])
           ) {
             let _ = _.dataTransfer.getData("text");
-            if (_ && _.length > 0) {
-              let _ = (0, _._)();
-              if (_.startsWith(_)) {
-                let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
-                _.replaceSelection(this.GetTextAreaRef().current, _);
-              }
-            }
+            if (_ && _.length > 0)
+              for (let _ of [_._.GetBaseURL(), _._.GetBaseURLV2()])
+                if (_.startsWith(_)) {
+                  let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
+                  _.replaceSelection(this.GetTextAreaRef().current, _);
+                  break;
+                }
           }
         }
         GetTextAreaRef() {

@@ -4062,7 +4062,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_Login_ErrorTitle"			"Steam – Fehler"
 "Steam_Login_DisabledTitle"			"Steam – Kontakt aufnehmen"
-"Steam_ErrorAccountDisabled"		"Dieser Account wurde vom Steam-Support gesperrt.\n\nAccounts werden normalerweise dann gesperrt, wenn ein\nunbefugter Zugriff oder ein Zahlungskonflikt vorliegt."
+"Steam_ErrorAccountDisabled"		"Dieser Account wurde vom Steam-Support gesperrt.\n\nAccounts werden normalerweise dann gesperrt, wenn ein\nunbefugter Zugriff oder eine Zahlungsstreitigkeit vorliegt."
 "Steam_Login_ContactSupport"		"Bitte kontaktieren Sie den Steam-Support, um dieses Problem zu lösen."
 "Steam_ErrorAccountIPLoginRestricted"		"Auf diesen Account kann von diesem Standort aus nicht zugegriffen werden.\n"
 

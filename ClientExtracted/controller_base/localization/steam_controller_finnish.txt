@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1-painike"
 	"origin_legion_go_y2"							"Y2-painike"
+
+	"origin_generic_PL"							"Vasen takapainike"
+	"origin_generic_PR"							"Oikea takapainike"
+	"origin_generic_C"							"C-painike"
+	"origin_generic_Z"							"Z-painike"
+	"origin_generic_MISC1"						"Muu painike 1"
+	"origin_generic_MISC2"						"Muu painike 2"
+	"origin_generic_MISC3"						"Muu painike 3"
+	"origin_generic_MISC4"						"Muu painike 4"
+	"origin_generic_MISC5"						"Muu painike 5"
+	"origin_generic_MISC6"						"Muu painike 6"
+	"origin_generic_MISC7"						"Muu painike 7"
+	"origin_generic_MISC8"						"Muu painike 8"
+
 }

@@ -15,6 +15,7 @@ message CEcon_GetInventoryItemsWithDescriptions_Request {
 	optional uint32 appid = 2;
 	optional uint64 contextid = 3;
 	optional bool get_descriptions = 4;
+	optional bool get_asset_properties = 11;
 	optional bool for_trade_offer_verification = 10;
 	optional string language = 5;
 	optional .CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions filters = 6;
@@ -90,10 +91,24 @@ message CEconItem_Tag {
 	optional string color = 6;
 }
 
+message CEconItem_AssetProperty {
+	optional uint32 propertyid = 1;
+	optional int64 int_value = 2;
+	optional float float_value = 3;
+}
+
+message CEconItem_AssetProperties {
+	optional uint32 appid = 1;
+	optional uint64 contextid = 2;
+	optional uint64 assetid = 3;
+	repeated .CEconItem_AssetProperty asset_properties = 4;
+}
+
 message CEcon_GetInventoryItemsWithDescriptions_Response {
 	repeated .CEcon_Asset assets = 1;
 	repeated .CEconItem_Description descriptions = 2;
 	repeated .CEcon_Asset missing_assets = 3;
+	repeated .CEconItem_AssetProperties asset_properties = 7;
 	optional bool more_items = 4;
 	optional uint64 last_assetid = 5;
 	optional uint32 total_inventory_count = 6;

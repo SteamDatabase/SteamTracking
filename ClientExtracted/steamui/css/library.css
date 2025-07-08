@@ -526,6 +526,14 @@ div.ModalPosition_TopBar {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
 }
+@media (prefers-contrast: more) {
+  .DialogTextInputBase,
+  ._DialogInputContainer {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
@@ -816,6 +824,11 @@ button.TextButton.gpfocus {
   font-size: 13px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 8px;
+}
+@media (prefers-contrast: more) {
+  .DialogToggle_Description {
+    color: #bbbdc0;
+  }
 }
 .DialogToggleField_Option.Active {
   color: #dfe3e6;
@@ -2348,6 +2361,11 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 .WUOrULWKkGLl3ZUQdDXg8.WUOrULWKkGLl3ZUQdDXg8 + ._1n7Wloe5jZ6fSuvV18NNWI {
   border-top: 1px solid dimgray;
 }
+@media (prefers-contrast: more) {
+  .WUOrULWKkGLl3ZUQdDXg8.WUOrULWKkGLl3ZUQdDXg8 + ._1n7Wloe5jZ6fSuvV18NNWI {
+    border-color: #fff;
+  }
+}
 ._1n7Wloe5jZ6fSuvV18NNWI._3hRb6_cI8QWlZX-eZmRbXc {
   border-top-color: transparent;
   border-bottom-color: transparent;
@@ -2433,6 +2451,13 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   background: #3d4450;
   -webkit-app-region: no-drag;
 }
+@media (prefers-contrast: more) {
+  .DesktopUI .PP7LM0Ow1K5qkR8WElLpt,
+  ._3qIuY9S_vXm3IQS-uE9SRS .PP7LM0Ow1K5qkR8WElLpt {
+    background: #000;
+    box-sizing: border-box;
+  }
+}
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI,
 ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI {
   padding: 8px 18px;
@@ -2447,9 +2472,30 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-top: none;
   border-bottom: none;
 }
+@media (prefers-contrast: more) {
+  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI,
+  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI {
+    box-sizing: border-box;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding-right: 0;
+  }
+}
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:first-child,
 ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:first-child {
   border-top: none;
+}
+@media (prefers-contrast: more) {
+  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:first-child,
+  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:first-child {
+    border-top: 1px solid #fff;
+  }
+}
+@media (prefers-contrast: more) {
+  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:last-child,
+  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:last-child {
+    border-bottom: 1px solid #fff;
+  }
 }
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:hover,
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI._18z-3vkWndCBO5WJgFldRK,

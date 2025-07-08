@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"ปุ่ม Y1"
 	"origin_legion_go_y2"							"ปุ่ม Y2"
+
+	"origin_generic_PL"							"ปุ่ม PL"
+	"origin_generic_PR"							"ปุ่ม PR"
+	"origin_generic_C"							"ปุ่ม C"
+	"origin_generic_Z"							"ปุ่ม Z"
+	"origin_generic_MISC1"						"ปุ่ม MISC1"
+	"origin_generic_MISC2"						"ปุ่ม MISC2"
+	"origin_generic_MISC3"						"ปุ่ม MISC3"
+	"origin_generic_MISC4"						"ปุ่ม MISC4"
+	"origin_generic_MISC5"						"ปุ่ม MISC5"
+	"origin_generic_MISC6"						"ปุ่ม MISC6"
+	"origin_generic_MISC7"						"ปุ่ม MISC7"
+	"origin_generic_MISC8"						"ปุ่ม MISC8"
+
 }

@@ -100,13 +100,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, ...__webpack_require__) {
-        try {
-          console.assert
-            ? 0 == __webpack_require__.length
-              ? console.assert(!!_, _)
-              : console.assert(!!_, _, ...__webpack_require__)
-            : _ || console.warn(_, ...__webpack_require__);
-        } catch (_) {}
+        console.assert
+          ? 0 == __webpack_require__.length
+            ? console.assert(!!_, _)
+            : console.assert(!!_, _, ...__webpack_require__)
+          : _ || console.warn(_, ...__webpack_require__);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6549,7 +6547,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 4749), _((_._ = _));
+      return (_ = 837), _((_._ = _));
       var _;
     });
     _._();

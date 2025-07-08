@@ -128,7 +128,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_ForgottenPassword_EmailCode_Incorrect" "Le code e-mail que vous avez saisi est incorrect."
 
 "Steam_Login_Title"		"Connexion à Steam"
-"Steam_RefreshLogin_Title"		"Actualiser la page de connexion à Steam"
+"Steam_RefreshLogin_Title"		"Connectez-vous à nouveau à Steam"
 "Steam_Login_CreateNewAccount"	"Créer un compte..."
 "Steam_Login_RetrievePassword"	"Je ne peux pas me connecter..."
 "Steam_Login_NoAccount"		"Pas de compte Steam ?"
@@ -1769,7 +1769,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "steam_menu_account_details" "Détails du compte"
 "steam_menu_account_view_profile" "Afficher mon profil"
 "steam_menu_account_preferences" "Préférences du magasin"
-"steam_menu_account_wallet" "Afficher mon portemonnaie"
+"steam_menu_account_wallet" "Afficher mon portemonnaie :"
 "steam_menu_account_logout" "Se déconnecter du compte :"
 
 

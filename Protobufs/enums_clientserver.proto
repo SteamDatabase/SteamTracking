@@ -1378,6 +1378,7 @@ enum EMsg {
 	k_EMsgRemoteClientAuthorizationConfirmed = 9520;
 	k_EMsgRemoteClientProofRequest = 9521;
 	k_EMsgRemoteClientProofResponse = 9522;
+	k_EMsgRemoteClientWifiAPStatus = 9523;
 	k_EMsgClientConcurrentSessionsBase = 9600;
 	k_EMsgClientPlayingSessionState = 9600;
 	k_EMsgClientKickPlayingSession = 9601;

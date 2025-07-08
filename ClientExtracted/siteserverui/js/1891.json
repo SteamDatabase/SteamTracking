@@ -187,7 +187,7 @@
     "ClientStatus_NoClients": "이 네트워크에서 Steam 클라이언트를 찾을 수 없습니다.",
     "ClientStatus_Troubleshoot": "서버 설정은 다음 가이드라인을 따르세요",
     "ClientStatus_Troubleshoot1": "사업장 서버와 Steam 클라이언트가 공유기가 없는 동일한 실제 네트워크에서 실행되고 있는지 확인하세요. 서버는 공유기가 간섭할 수 있는 포트 27036 및 27037에서 브로드 캐스트 프로토콜을 통해 클라이언트를 찾아냅니다.",
-    "ClientStatus_Troubleshoot2": "Steam 클라이언트의 올바른 통신을 위해 시스템에 필요한 모든 포트가 열려 있는지 확인하세요. 자세한 사항은 %1$s에서 확인하세요.",
+    "ClientStatus_Troubleshoot2": "Steam 클라이언트의 올바른 통신을 위해 시스템에 필요한 모든 포트가 열려 있는지 확인하세요. 자세한 정보는 %1$s에서 확인하세요.",
     "ClientStatus_Action": "작업",
     "ClientStatus_Account": "계정",
     "ClientStatus_Amount": "수량",

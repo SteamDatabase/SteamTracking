@@ -18,6 +18,7 @@ message CMsgChildProcessQueryGpuTopology {
 		optional int32 driver_version_major = 5;
 		optional int32 driver_version_minor = 6;
 		optional int32 driver_version_patch = 7;
+		optional uint64 luid = 8;
 	}
 
 	repeated .CMsgChildProcessQueryGpuTopology.GpuInfo gpus = 1;

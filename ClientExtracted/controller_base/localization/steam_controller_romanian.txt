@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Butonul Y1"
 	"origin_legion_go_y2"							"Butonul Y2"
+
+	"origin_generic_PL"							"Butonul PL"
+	"origin_generic_PR"							"Butonul PR"
+	"origin_generic_C"							"Butonul C"
+	"origin_generic_Z"							"Butonul Z"
+	"origin_generic_MISC1"						"Butonul AUXILIAR #1"
+	"origin_generic_MISC2"						"Butonul AUXILIAR #2"
+	"origin_generic_MISC3"						"Butonul AUXILIAR #3"
+	"origin_generic_MISC4"						"Butonul AUXILIAR #4"
+	"origin_generic_MISC5"						"Butonul AUXILIAR #5"
+	"origin_generic_MISC6"						"Butonul AUXILIAR #6"
+	"origin_generic_MISC7"						"Butonul AUXILIAR #7"
+	"origin_generic_MISC8"						"Butonul AUXILIAR #8"
+
 }

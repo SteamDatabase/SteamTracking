@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1ボタン"
 	"origin_legion_go_y2"							"Y2ボタン"
+
+	"origin_generic_PL"							"PLボタン"
+	"origin_generic_PR"							"PRボタン"
+	"origin_generic_C"							"Cボタン"
+	"origin_generic_Z"							"Zボタン"
+	"origin_generic_MISC1"						"その他1ボタン"
+	"origin_generic_MISC2"						"その他2ボタン"
+	"origin_generic_MISC3"						"その他3ボタン"
+	"origin_generic_MISC4"						"その他4ボタン"
+	"origin_generic_MISC5"						"その他5ボタン"
+	"origin_generic_MISC6"						"その他6ボタン"
+	"origin_generic_MISC7"						"その他7ボタン"
+	"origin_generic_MISC8"						"その他8ボタン"
+
 }

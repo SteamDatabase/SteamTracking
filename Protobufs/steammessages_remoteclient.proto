@@ -98,3 +98,9 @@ message CMsgRemoteClientGetControllerConfigResponse {
 message CMsgRemoteClientStreamingEnabled {
 	required bool enabled = 1;
 }
+
+message CMsgRemoteClientWifiAPStatus {
+	optional string ssid = 1;
+	optional string password = 2;
+	optional bool wpa2 = 3;
+}

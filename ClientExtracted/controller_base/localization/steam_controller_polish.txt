@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Przycisk Y1"
 	"origin_legion_go_y2"							"Przycisk Y2"
+
+	"origin_generic_PL"							"Przycisk lewej łopatki"
+	"origin_generic_PR"							"Przycisk prawej łopatki"
+	"origin_generic_C"							"Przycisk C"
+	"origin_generic_Z"							"Przycisk Z"
+	"origin_generic_MISC1"						"1. przycisk dodatkowy"
+	"origin_generic_MISC2"						"2. przycisk dodatkowy"
+	"origin_generic_MISC3"						"3. przycisk dodatkowy"
+	"origin_generic_MISC4"						"4. przycisk dodatkowy"
+	"origin_generic_MISC5"						"5. przycisk dodatkowy"
+	"origin_generic_MISC6"						"6. przycisk dodatkowy"
+	"origin_generic_MISC7"						"7. przycisk dodatkowy"
+	"origin_generic_MISC8"						"8. przycisk dodatkowy"
+
 }

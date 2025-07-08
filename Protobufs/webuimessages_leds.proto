@@ -1,0 +1,59 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CMsgLEDColor {
+	optional float color_red = 1;
+	optional float color_green = 2;
+	optional float color_blue = 3;
+}
+
+message CLEDManagerDevice {
+	optional int32 id = 1;
+	optional bool enabled = 2;
+	optional float brightness = 3;
+	repeated string effects_available = 4;
+	optional string effect = 5;
+	repeated string modes_available = 7;
+	optional string mode = 8;
+	optional .CMsgLEDColor color = 9;
+	optional float speed = 10;
+}
+
+message CLEDManagerState {
+	optional bool is_service_available = 1;
+	repeated .CLEDManagerDevice devices = 2;
+}
+
+message CLEDManager_GetState_Request {
+	repeated .CLEDManagerState state = 1;
+}
+
+message CLEDManager_GetState_Response {
+}
+
+message CLEDManager_StateChanged_Notification {
+}
+
+message CLEDManager_SetDeviceOptions_Request {
+	optional int32 device_id = 1;
+	optional string effect = 2;
+	optional string mode = 3;
+	optional .CMsgLEDColor color = 4;
+	optional float brightness = 5;
+	optional float speed = 6;
+}
+
+message CLEDManager_SetDeviceOptions_Response {
+}
+
+service LEDManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetState (.CLEDManager_GetState_Request) returns (.CLEDManager_GetState_Response);
+	rpc NotifyStateChanged (.CLEDManager_StateChanged_Notification) returns (.WebUINoResponse);
+	rpc SetDeviceOptions (.CLEDManager_SetDeviceOptions_Request) returns (.CLEDManager_SetDeviceOptions_Response);
+}

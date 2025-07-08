@@ -2353,11 +2353,9 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_ctime
-Plat_daylight
 Plat_gmtime
 Plat_localtime
 Plat_timegm
-Plat_timezone
 Platform
 Platform Error: bad module '%s', not loading\n
 Platform Error: module '%s' failed to initialize\n
@@ -2503,7 +2501,7 @@ SetRepeatedInt64
 SetRepeatedString
 SetRepeatedUInt32
 SetRepeatedUInt64
-SetScreenSize from (%d, %d) to ( %d, %d ) with pixel size (%d, %d)\n
+SetScreenSize from (%d, %d) to ( %d, %d ) with DPI scale factor %1.2f\n
 SetString
 SetTimezone
 SetTopLevelFocus

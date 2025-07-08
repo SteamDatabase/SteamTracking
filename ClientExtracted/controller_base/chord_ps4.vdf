@@ -30,31 +30,21 @@
 							"binding"		"controller_action controller_poweroff"
 						}
 					}
-				}
-			}
-			"button_b"
-			{
-				"activators"
-				{
 					"Long_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action quit_application"
-						}
-						"settings"
-						{
-							"long_press_time"		"2400"
-						}
-					}
-					"Start_Press"
 					{
 						"bindings"
 						{
 							"binding"		"controller_action empty_binding"
 						}
+						"settings"
+						{
+							"long_press_time"		"2000"
+						}
 					}
 				}
+			}
+			"button_b"
+			{
 			}
 			"button_x"
 			{
@@ -65,6 +55,17 @@
 						"bindings"
 						{
 							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+						"settings"
+						{
+							"long_press_time"		"2000"
 						}
 					}
 				}
@@ -78,6 +79,17 @@
 						"bindings"
 						{
 							"binding"		"controller_action system_key_1"
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+						"settings"
+						{
+							"long_press_time"		"2000"
 						}
 					}
 				}

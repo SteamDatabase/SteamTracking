@@ -411,6 +411,7 @@ message CMsgPopupHTMLWindow {
 	optional string name = 9;
 	optional uint64 hwnd = 10;
 	optional uint32 parent_popup_index = 11;
+	optional uint32 creation_flags = 12;
 }
 
 message CMsgPopupHTMLWindowResponse {
@@ -978,8 +979,8 @@ message CMsgImeCancelComposition {
 
 message CMsgImeCompositionRangeChanged {
 	optional uint32 browser_handle = 1;
-	optional uint32 x = 2;
-	optional uint32 y = 3;
+	optional double x = 2;
+	optional double y = 3;
 }
 
 message CMsgInspectElement {
@@ -1054,10 +1055,8 @@ message CMsgSetVRKeyboardVisibility {
 message CMsgRestartJSContext {
 }
 
-message CMsgSetReducedMotionEnabled {
-	optional bool enabled = 1;
-}
-
-message CMsgSetPreferredContrast {
-	optional .EAccessibilityContrastMode preferred_contrast = 1 [default = k_EBrowserContrastMode_NoPreference];
+message CMsgSetAccessibilitySettings {
+	optional bool reduced_motion_enabled = 1;
+	optional .EAccessibilityContrastMode preferred_contrast = 2 [default = k_EBrowserContrastMode_NoPreference];
+	optional uint32 minimum_font_size = 3;
 }

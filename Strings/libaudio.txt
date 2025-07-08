@@ -182,7 +182,6 @@ $ORIGIN
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapI10CUtlSymbolPvi8CDefLessE
 9IValidate
-=gM5
 AIL_allocate_sample_handle
 AIL_close_digital_driver
 AIL_digital_latency

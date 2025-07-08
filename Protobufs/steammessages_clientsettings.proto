@@ -199,7 +199,7 @@ message CMsgClientSettings {
 	optional bool controller_generic_support = 14007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_GenericGamepadSupport"];
 	optional int32 controller_power_off_timeout = 14008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.Timeout", (setting_default_int) = 15];
 	optional bool turn_off_controller_on_exit = 14009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "CSettingsPanelGameController.TurnOff"];
-	optional bool controller_combine_nintendo_joycons = 14010 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool controller_combine_nintendo_joycons = 14010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/CombinedJoycons"];
 	optional bool controller_enable_chord = 140011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Enable_Chord", (setting_default_bool) = true];
 	optional bool controller_poll_rate = 140012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Poll_Rate", (setting_default_int) = 2];
 	optional uint64 startup_movie_id = 16000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/MovieID", (setting_pre_login) = true];
@@ -208,17 +208,16 @@ message CMsgClientSettings {
 	optional bool startup_movie_used_for_resume = 16003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Customization/StartupMovie/UsedForResume"];
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
 	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
-	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_default_string) = "120min"];
-	optional int32 g_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string gamerecording_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string gamerecording_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\BackgroundMaxKeep", (setting_default_string) = "120min"];
+	optional int32 gamerecording_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\BackgroundTimeResolution", (setting_default_float) = 60000];
+	optional .CMsgHotkey gamerecording_background_mk = 18207 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MarkerKey", (setting_default_string) = "Ctrl\tKEY_F12"];
+	optional .CMsgHotkey gamerecording_background_tg = 18208 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ToggleKey", (setting_default_string) = "Ctrl\tKEY_F11"];
+	optional bool gamerecording_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\Audio_Mic", (setting_default_bool) = false];
 	optional string gamerecording_video_bitrate = 18210 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\VideoBitRate", (setting_default_string) = "preset_default"];
-	optional bool g_background_a_s = 18211 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
-	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];
-	optional int32 g_max_fps = 18214 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MaxFPS", (setting_default_int) = 60, (setting_clamp_min) = 24, (setting_clamp_max) = 120];
+	optional .EGRMode gamerecording_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\BackgroundRecordMode", (setting_default_int) = 0];
+	optional .EGRAudio gamerecording_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\Recording_Audio_Option", (setting_default_int) = 0];
+	optional int32 gamerecording_max_fps = 18214 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MaxFPS", (setting_default_int) = 60, (setting_clamp_min) = 24, (setting_clamp_max) = 120];
 	optional .CMsgHotkey gamerecording_hotkey_ic = 18215 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipKey", (setting_default_string) = "None"];
 	optional float gamerecording_ic_seconds = 18216 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipDuration", (setting_default_float) = 30];
 	optional .EGRExportLimitType gamerecording_export_limit_type = 18217 [default = k_EGRExportLimitType_Native, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ExportLimitType"];
@@ -289,5 +288,6 @@ message CMsgClientSettings {
 	optional float accessibility_screen_reader_volume = 26004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ScreenReaderVolume", (setting_default_float) = 1];
 	optional bool accessibility_high_contrast_mode = 26005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/HighContrastMode", (setting_default_bool) = false];
 	optional bool accessibility_reduce_motion = 26006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ReduceMotion", (setting_default_bool) = false];
-	optional .EColorFilter accessibility_color_filter = 26007 [default = k_EColorFilter_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilter", (setting_default_int) = 0];
+	optional uint32 accessibility_minimum_font_size = 26008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/MinimumFontSize", (setting_default_int) = 0];
+	optional string accessibility_color_filter_name = 26009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilterName", (setting_default_string) = ""];
 }

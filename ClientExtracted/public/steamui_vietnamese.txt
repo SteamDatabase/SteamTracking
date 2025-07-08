@@ -3929,7 +3929,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_editcontroller"	"Thiết lập tay cầm"
 "steam_menu_media" "Media"
 "steam_menu_tools" "Công cụ"
-"steam_menu_friends" "Bạn bè & trò chuyện"
+"steam_menu_friends" "Chat & bạn bè"
 "steam_menu_servers" "Máy chủ trò chơi"
 "steam_menu_settings" "Thiết lập"
 "steam_menu_view_friends" "Xem danh sách bạn bè (%friends_online% người trên mạng)"
@@ -4322,8 +4322,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_inbox_tradeoffer"	"1 đề nghị trao đổi đang chờ"
 "steam_inbox_tradeoffers"	"%count% đề nghị trao đổi đang chờ"
 
-"steam_inbox_moderatormessage"	"1 tin nhắn từ cộng đồng"
-"steam_inbox_moderatormessages"	"%count% tin nhắn từ cộng đồng"
+"steam_inbox_moderatormessage"	"1 tin nhắn cộng đồng"
+"steam_inbox_moderatormessages"	"%count% tin nhắn cộng đồng"
 
 "steam_inbox_helprequestreply"		"1 trả lời từ đội hỗ trợ Steam"
 "steam_inbox_helprequestreplies"	"%count% trả lời từ đội hỗ trợ Steam"

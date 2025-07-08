@@ -392,6 +392,8 @@ $\nY8O
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
 %\n!k_ECompromiseDetectionType_Manual
+%\n!k_EContentModeratedReason_Invalid
+%\n!k_EContentModeratedReason_Unknown
 %\n!k_EContentReportReason_Commercial
 %\n!k_EContentReportReason_Prohibited
 %\n!k_EExternalSaleEventType_Showcase
@@ -472,6 +474,7 @@ $\nY8O
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
+&\n"k_EContentReportResolution_Removed
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -495,6 +498,8 @@ $\nY8O
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportSubjectType_Invalid
+'\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
 '\n#k_EHDRVisualization_HeatmapExtended
 '\n#k_EPersonaStateFlag_HasRichPresence
@@ -523,6 +528,8 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
+(\n$k_EContentModeratedReason_AnimalHarm
+(\n$k_EContentReportResolution_Acquitted
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -598,6 +605,9 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
 )\n%k_EProfileCustomizationTypeGreenlight
@@ -627,6 +637,7 @@ $\nY8O
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
+*\n&k_EContentReportSubjectType_UGCComment
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_ESystemDisplayCompatibilityMode_None
@@ -747,7 +758,7 @@ $\nY8O
 .CHistoryEntry"c\n\rCMsgLoadError
 .CMsgFileLoadDialog.Filter
 .CMsgJSValue.JSObjectProperty
-.EAccessibilityContrastMode*
+.EAccessibilityContrastMode
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
@@ -904,7 +915,6 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-01:06:09
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1342,6 +1352,7 @@ $\nY8O
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:32:17
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1364,7 +1375,6 @@ $\nY8O
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
-24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -1392,7 +1402,6 @@ $\nY8O
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
-27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 27CScreenshotProcessingThread
@@ -1402,6 +1411,7 @@ $\nY8O
 28CMsgJSValue_JSObjectProperty
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
+28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
 2\n.k_ECommentThreadTypePublishedFile_Announcement
 2\n.k_EPublishedFileInappropriateResult_NotScanned
@@ -1416,7 +1426,6 @@ $\nY8O
 30CMsgSetLocalFileRequestMapping
 30CMsgSetNetFakeLocalSystemState
 31CMsgDisableBackgroundThrottling
-32767
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
@@ -2158,13 +2167,14 @@ CMsgProcessInfoNotification
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext".\n
+CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
+CMsgSetAccessibilitySettings
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
 CMsgSetHTMLTitle
@@ -2172,9 +2182,7 @@ CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
-CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
-CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetSteamID
@@ -2713,8 +2721,11 @@ EContentCheckProvider
 EContentCorruptionType
 EContentDownloadSourceType
 EContentDownloadType
+EContentModeratedReason
 EContentModeratorLevel
 EContentReportReason
+EContentReportResolution
+EContentReportSubjectType
 EControlledLegalCategoryStatus
 EControllerConfigFeature
 EControllerType
@@ -3510,8 +3521,8 @@ Japanese
 Javanese
 JoinedGroup
 Joystick
+Jul  7 2025
 July
-Jun 28 2025
 June
 K'iche'
 KEY_0
@@ -4578,11 +4589,9 @@ Plat_RelativeTickFrequency
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_ctime
-Plat_daylight
 Plat_gmtime
 Plat_localtime
 Plat_timegm
-Plat_timezone
 Platform
 Player Name History
 Polish
@@ -5662,7 +5671,6 @@ Zulu
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nParsing attempt:  
 \nYg:a
-\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -6374,7 +6382,6 @@ crashhandler004
 crc_header_mismatch
 created
 created64
-createflags
 creation_flags
 croatian
 crypto
@@ -7100,10 +7107,6 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
-k_EColorFilter_Grayscale
-k_EColorFilter_InvertBrightness
-k_EColorFilter_InvertColors
-k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -7123,6 +7126,8 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
+k_EContentModeratedReason_MAX
+k_EContentModeratedReason_None
 k_EContentModeratorLevel_Any
 k_EContentModeratorLevel_MAX
 k_EContentModeratorLevel_Valve
@@ -7132,6 +7137,8 @@ k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic
 k_EContentReportReason_Other
+k_EContentReportResolution_MAX
+k_EContentReportSubjectType_MAX
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -7661,9 +7668,7 @@ maxHeight
 maxWidth
 maxWidth >= width
 maxchars
-maxheight
 maximizebuttonvisible
-maxwidth
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -7689,9 +7694,8 @@ mileweb
 minHeight
 minWidth
 minWidth <= width
-minheight
+minimum_font_size
 minute
-minwidth
 missing )
 missing ) after comment
 missing opening brace after \o
@@ -8076,6 +8080,7 @@ recursive call could loop indefinitely
 recvfrom
 recvmsg
 reddit.com
+reduced_motion_enabled
 reference temporary #
 reference to non-existent subpattern
 referrer

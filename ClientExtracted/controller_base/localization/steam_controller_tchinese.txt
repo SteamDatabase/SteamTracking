@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 鍵"
 	"origin_legion_go_y2"							"Y2 鍵"
+
+	"origin_generic_PL"							"左背面按鍵"
+	"origin_generic_PR"							"右背面按鍵"
+	"origin_generic_C"							"C 按鍵"
+	"origin_generic_Z"							"Z 按鍵"
+	"origin_generic_MISC1"						"MISC1 按鍵"
+	"origin_generic_MISC2"						"MISC2 按鍵"
+	"origin_generic_MISC3"						"MISC3 按鍵"
+	"origin_generic_MISC4"						"MISC4 按鍵"
+	"origin_generic_MISC5"						"MISC5 按鍵"
+	"origin_generic_MISC6"						"MISC6 按鍵"
+	"origin_generic_MISC7"						"MISC7 按鍵"
+	"origin_generic_MISC8"						"MISC8 按鍵"
+
 }

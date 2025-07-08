@@ -21,7 +21,7 @@
 	"origin_switch_stick_r_move"				"Mișcare a stickului drept"
 	"origin_switch_stick_r_click"				"Clic al stickului drept"
 	"origin_switch_stick_r_dpad_n"				"Mișcare în sus a stickului drept"
-	"origin_switch_stick_r_dpad_s"				"Împingere jos cu stickul drept"
+	"origin_switch_stick_r_dpad_s"				"Mișcare în jos a stickului drept"
 	"origin_switch_stick_r_dpad_w"				"Mișcare la stânga a stickului drept"
 	"origin_switch_stick_r_dpad_e"				"Mișcare la dreapta a stickului drept"
 	"origin_switch_button_dpad_n"				"D-Pad sus"

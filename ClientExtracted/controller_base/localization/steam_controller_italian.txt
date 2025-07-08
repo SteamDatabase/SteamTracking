@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Pulsante Y1"
 	"origin_legion_go_y2"							"Pulsante Y2"
+
+	"origin_generic_PL"							"Pulsante PL"
+	"origin_generic_PR"							"Pulsante PR"
+	"origin_generic_C"							"Pulsante C"
+	"origin_generic_Z"							"Pulsante Z"
+	"origin_generic_MISC1"						"Pulsante MISC1"
+	"origin_generic_MISC2"						"Pulsante MISC2"
+	"origin_generic_MISC3"						"Pulsante MISC3"
+	"origin_generic_MISC4"						"Pulsante MISC4"
+	"origin_generic_MISC5"						"Pulsante MISC5"
+	"origin_generic_MISC6"						"Pulsante MISC6"
+	"origin_generic_MISC7"						"Pulsante MISC7"
+	"origin_generic_MISC8"						"Pulsante MISC8"
+
 }

@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 Butonu"
 	"origin_legion_go_y2"							"Y2 Butonu"
+
+	"origin_generic_PL"							"PL Butonu"
+	"origin_generic_PR"							"PR Butonu"
+	"origin_generic_C"							"C Butonu"
+	"origin_generic_Z"							"Z Butonu"
+	"origin_generic_MISC1"						"Ek Buton 1"
+	"origin_generic_MISC2"						"Ek Buton 2"
+	"origin_generic_MISC3"						"Ek Buton 3"
+	"origin_generic_MISC4"						"Ek Buton 4"
+	"origin_generic_MISC5"						"Ek Buton 5"
+	"origin_generic_MISC6"						"Ek Buton 6"
+	"origin_generic_MISC7"						"Ek Buton 7"
+	"origin_generic_MISC8"						"Ek Buton 8"
+
 }

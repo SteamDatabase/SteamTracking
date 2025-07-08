@@ -93,18 +93,16 @@
       }
       (n.keys = () => Object.keys(a)), (n.id = 8042), (e.exports = n);
     },
-    4749: (e, t, r) => {
+    837: (e, t, r) => {
       "use strict";
       var a = r(626),
         n = r(4844);
       function s(e, t, ...r) {
-        try {
-          console.assert
-            ? 0 == r.length
-              ? console.assert(!!e, t)
-              : console.assert(!!e, t, ...r)
-            : e || console.warn(t, ...r);
-        } catch (e) {}
+        console.assert
+          ? 0 == r.length
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...r)
+          : e || console.warn(t, ...r);
       }
       var i = r(4629),
         o = r(3288);
@@ -5630,7 +5628,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 4749), e((e.s = t));
+      return (t = 837), e((e.s = t));
       var t;
     });
     e.O();

@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Tlačítko Y1"
 	"origin_legion_go_y2"							"Tlačítko Y2"
+
+	"origin_generic_PL"							"Tlačítko PL"
+	"origin_generic_PR"							"Tlačítko PR"
+	"origin_generic_C"							"Tlačítko C"
+	"origin_generic_Z"							"Tlačítko Z"
+	"origin_generic_MISC1"						"1. dodatečné tlačítko"
+	"origin_generic_MISC2"						"2. dodatečné tlačítko"
+	"origin_generic_MISC3"						"3. dodatečné tlačítko"
+	"origin_generic_MISC4"						"4. dodatečné tlačítko"
+	"origin_generic_MISC5"						"5. dodatečné tlačítko"
+	"origin_generic_MISC6"						"6. dodatečné tlačítko"
+	"origin_generic_MISC7"						"7. dodatečné tlačítko"
+	"origin_generic_MISC8"						"8. dodatečné tlačítko"
+
 }

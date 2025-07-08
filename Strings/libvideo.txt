@@ -1005,7 +1005,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1Vr
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1713,7 +1712,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:04:52
 08bX
 0?0L
 0A/8
@@ -2233,6 +2231,7 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21VideoRepresentation_t
+22:32:08
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2463,7 +2462,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9HDF
 9IGv
 9IMemAlloc
 9PE,$
@@ -6389,8 +6387,8 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
+Jul  7 2025
 July
-Jun 28 2025
 June
 K'iche'
 K(\f]C15
@@ -13004,7 +13002,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenB
 givenName
 global constructors keyed to 
 global destructors keyed to 
@@ -15065,6 +15063,7 @@ k_EMsgRemoteClientProofResponse
 k_EMsgRemoteClientStartStream
 k_EMsgRemoteClientStartStreamResponse
 k_EMsgRemoteClientStatusRequest
+k_EMsgRemoteClientWifiAPStatus
 k_EMsgReqChallenge
 k_EMsgReqChallengeTest
 k_EMsgRequestFullStatsBlock

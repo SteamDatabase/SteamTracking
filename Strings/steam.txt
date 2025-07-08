@@ -1901,9 +1901,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:04:52
-01:05:05
-01:05:06
 08bX
 0?0L
 0A/8
@@ -2420,6 +2417,9 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:32:08
+22:32:14
+22:32:15
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2605,7 +2605,6 @@ $ffn
 5mmQ
 5nsfZ
 5q\teH
-5tz$
 6 PQ
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
@@ -6530,8 +6529,8 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
+Jul  7 2025
 July
-Jun 28 2025
 June
 K'iche'
 K(\f]C15
@@ -8747,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 28 2025 01:05:05
+Startup - updater built Jul  7 2025 22:32:14
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -13010,7 +13009,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenZ
+ggen
 givenName
 glBegin
 glBindTexture
@@ -15155,6 +15154,7 @@ k_EMsgRemoteClientProofResponse
 k_EMsgRemoteClientStartStream
 k_EMsgRemoteClientStartStreamResponse
 k_EMsgRemoteClientStatusRequest
+k_EMsgRemoteClientWifiAPStatus
 k_EMsgReqChallenge
 k_EMsgReqChallengeTest
 k_EMsgRequestFullStatsBlock

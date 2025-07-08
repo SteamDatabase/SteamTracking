@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1-knapp"
 	"origin_legion_go_y2"							"Y2-knapp"
+
+	"origin_generic_PL"							"Vänster paddel"
+	"origin_generic_PR"							"Höger paddel"
+	"origin_generic_C"							"C-knapp"
+	"origin_generic_Z"							"Z-knapp"
+	"origin_generic_MISC1"						"Extraknapp 1"
+	"origin_generic_MISC2"						"Extraknapp 2"
+	"origin_generic_MISC3"						"Extraknapp 3"
+	"origin_generic_MISC4"						"Extraknapp 4"
+	"origin_generic_MISC5"						"Extraknapp 5"
+	"origin_generic_MISC6"						"Extraknapp 6"
+	"origin_generic_MISC7"						"Extraknapp 7"
+	"origin_generic_MISC8"						"Extraknapp 8"
+
 }

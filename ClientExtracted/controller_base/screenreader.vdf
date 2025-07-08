@@ -24,16 +24,6 @@
 		{
 			"button_b"
 			{
-				"activators"
-				{
-					"full_press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action sr_disable"
-						}
-					}
-				}
 			}
 			"button_x"
 			{

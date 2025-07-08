@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1-knapp"
 	"origin_legion_go_y2"							"Y2-knapp"
+
+	"origin_generic_PL"							"PL-knapp"
+	"origin_generic_PR"							"PR-knapp"
+	"origin_generic_C"							"C-knapp"
+	"origin_generic_Z"							"Z-knapp"
+	"origin_generic_MISC1"						"Tilleggsknapp 1"
+	"origin_generic_MISC2"						"Tilleggsknapp 2"
+	"origin_generic_MISC3"						"Tilleggsknapp 3"
+	"origin_generic_MISC4"						"Tilleggsknapp 4"
+	"origin_generic_MISC5"						"Tilleggsknapp 5"
+	"origin_generic_MISC6"						"Tilleggsknapp 6"
+	"origin_generic_MISC7"						"Tilleggsknapp 7"
+	"origin_generic_MISC8"						"Tilleggsknapp 8"
+
 }

@@ -162,7 +162,6 @@ Voffset
 VulkanSteamOverlayBeginRendering
 VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDrawTexturedRect
-VulkanSteamOverlayGetScaleFactors
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
 VulkanSteamOverlayStartCaptureFrame

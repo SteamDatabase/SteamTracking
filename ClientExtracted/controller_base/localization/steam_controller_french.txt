@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Bouton Y1"
 	"origin_legion_go_y2"							"Bouton Y2"
+
+	"origin_generic_PL"							"Touche arrière gauche"
+	"origin_generic_PR"							"Touche arrière droite"
+	"origin_generic_C"							"Bouton C"
+	"origin_generic_Z"							"Bouton Z"
+	"origin_generic_MISC1"						"Bouton DIVERS1"
+	"origin_generic_MISC2"						"Bouton DIVERS2"
+	"origin_generic_MISC3"						"Bouton DIVERS3"
+	"origin_generic_MISC4"						"Bouton DIVERS4"
+	"origin_generic_MISC5"						"Bouton DIVERS5"
+	"origin_generic_MISC6"						"Bouton DIVERS6"
+	"origin_generic_MISC7"						"Bouton DIVERS7"
+	"origin_generic_MISC8"						"Bouton DIVERS8"
+
 }

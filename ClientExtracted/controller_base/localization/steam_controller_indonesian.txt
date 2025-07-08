@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Tombol Y1"
 	"origin_legion_go_y2"							"Tombol Y2"
+
+	"origin_generic_PL"							"Tombol PL"
+	"origin_generic_PR"							"Tombol PR"
+	"origin_generic_C"							"Tombol C"
+	"origin_generic_Z"							"Tombol Z"
+	"origin_generic_MISC1"						"Tombol MISC1"
+	"origin_generic_MISC2"						"Tombol MISC2"
+	"origin_generic_MISC3"						"Tombol MISC3"
+	"origin_generic_MISC4"						"Tombol MISC4"
+	"origin_generic_MISC5"						"Tombol MISC5"
+	"origin_generic_MISC6"						"Tombol MISC6"
+	"origin_generic_MISC7"						"Tombol MISC7"
+	"origin_generic_MISC8"						"Tombol MISC8"
+
 }

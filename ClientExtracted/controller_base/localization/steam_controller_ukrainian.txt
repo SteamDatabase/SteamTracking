@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Кнопка Y1"
 	"origin_legion_go_y2"							"Кнопка Y2"
+
+	"origin_generic_PL"							"Кнопка PL"
+	"origin_generic_PR"							"Кнопка PR"
+	"origin_generic_C"							"Кнопка C"
+	"origin_generic_Z"							"Кнопка Z"
+	"origin_generic_MISC1"						"Кнопка MISC1"
+	"origin_generic_MISC2"						"Кнопка MISC2"
+	"origin_generic_MISC3"						"Кнопка MISC3"
+	"origin_generic_MISC4"						"Кнопка MISC4"
+	"origin_generic_MISC5"						"Кнопка MISC5"
+	"origin_generic_MISC6"						"Кнопка MISC6"
+	"origin_generic_MISC7"						"Кнопка MISC7"
+	"origin_generic_MISC8"						"Кнопка MISC8"
+
 }

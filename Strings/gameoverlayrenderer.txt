@@ -356,7 +356,6 @@ Video memory stream reader destroyed with frame lock!\n
 Video memory stream writer destroyed with frame lock!\n
 Video stream full!\n
 Video stream full.. couldn't get buffer!\n
-VulkanSteamOverlayGetScaleFactors
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
 Waiting for shared fd client failed\n

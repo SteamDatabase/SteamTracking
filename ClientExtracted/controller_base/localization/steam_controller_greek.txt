@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Κουμπί Y1"
 	"origin_legion_go_y2"							"Κουμπί Y2"
+
+	"origin_generic_PL"							"Κουμπί αριστερού paddle"
+	"origin_generic_PR"							"Κουμπί δεξιού paddle"
+	"origin_generic_C"							"Κουμπί C"
+	"origin_generic_Z"							"Κουμπί Z"
+	"origin_generic_MISC1"						"Κουμπί MISC1"
+	"origin_generic_MISC2"						"Κουμπί MISC2"
+	"origin_generic_MISC3"						"Κουμπί MISC3"
+	"origin_generic_MISC4"						"Κουμπί MISC4"
+	"origin_generic_MISC5"						"Κουμπί MISC5"
+	"origin_generic_MISC6"						"Κουμπί MISC6"
+	"origin_generic_MISC7"						"Κουμπί MISC7"
+	"origin_generic_MISC8"						"Κουμπί MISC8"
+
 }

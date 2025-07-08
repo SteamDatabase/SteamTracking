@@ -420,6 +420,8 @@ $\nY8O
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
 %\n!k_ECompromiseDetectionType_Manual
+%\n!k_EContentModeratedReason_Invalid
+%\n!k_EContentModeratedReason_Unknown
 %\n!k_EContentReportReason_Commercial
 %\n!k_EContentReportReason_Prohibited
 %\n!k_EExternalSaleEventType_Showcase
@@ -488,6 +490,7 @@ $\nY8O
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
+&\n"k_EContentReportResolution_Removed
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -524,6 +527,8 @@ $\nY8O
 '\n#k_EClientNotificationType_AsyncGame
 '\n#k_EClientNotificationType_MajorSale
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportSubjectType_Invalid
+'\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EFrameStatClientBitrateKbitPerSec
 '\n#k_EFrameStatLinkBandwidthKbitPerSec
 '\n#k_EFrameStatServerBitrateKbitPerSec
@@ -559,6 +564,8 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
+(\n$k_EContentModeratedReason_AnimalHarm
+(\n$k_EContentReportResolution_Acquitted
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -673,6 +680,9 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
 )\n%k_EProfileCustomizationTypeGreenlight
@@ -727,6 +737,7 @@ $\nY8O
 *\n&k_EClientNotificationType_TimerExpired
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
+*\n&k_EContentReportSubjectType_UGCComment
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EStreamControlAuthenticationResponse
@@ -897,7 +908,7 @@ $\nY8O
 .CStreamingKeymap"
 .CStreamingKeymapEntry"2\n\rCSetKeymapMsg
 .CStreamingServerHandshakeInfo"]\n
-.EAccessibilityContrastMode*
+.EAccessibilityContrastMode
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
@@ -1729,7 +1740,6 @@ $\nY8O
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
 24CMsgNotifyUserActivation
-24CMsgSetPreferredContrast
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -1773,7 +1783,6 @@ $\nY8O
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
-27CMsgSetReducedMotionEnabled
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 27CSharedConnectionController
@@ -1784,6 +1793,7 @@ $\nY8O
 28CMsgJSValue_JSObjectProperty
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
+28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
 28CParentalSettingsInterpreter
 28CTouchActionSetLayerAddedMsg
@@ -2582,13 +2592,14 @@ CMsgProcessInfoNotification
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
-CMsgRestartJSContext".\n
+CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
+CMsgSetAccessibilitySettings
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
 CMsgSetHTMLTitle
@@ -2596,9 +2607,7 @@ CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
 CMsgSetNetFakeLocalSystemState
 CMsgSetPIDShuttingDown
-CMsgSetPreferredContrast
 CMsgSetProtocolBlockList
-CMsgSetReducedMotionEnabled
 CMsgSetSharedPaintBuffers
 CMsgSetSteamBetaName
 CMsgSetSteamID
@@ -2668,6 +2677,7 @@ CRemotePlayController::OnRemoteClientRemotePlayQualityOverride
 CRemotePlayController::OnRemoteClientStreamLifetime
 CRemotePlayController::OnRemoteClientStreamSessionUpdateNetworkUtilization
 CRemotePlayController::OnRemoteClientStreamingEnabledChanged
+CRemotePlayController::OnRemoteClientVRStreamingInvitation
 CRemotePlayController::OnRemoteDeviceAuthorizationCancelled
 CRemotePlayController::OnRemoteDeviceAuthorizationRequested
 CRemotePlayController::OnRemoteDevicePairingPINChanged
@@ -3011,8 +3021,11 @@ ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
 EContentCheckProvider
+EContentModeratedReason
 EContentModeratorLevel
 EContentReportReason
+EContentReportResolution
+EContentReportSubjectType
 EControlledLegalCategoryStatus
 EExternalSaleEventType
 EFrameAccumulatedStat
@@ -3972,6 +3985,7 @@ N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
 N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
 N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
+N21CRemotePlayController53CCallbackInternal_OnRemoteClientVRStreamingInvitationE
 N21CRemotePlayController54CCallbackInternal_OnRemoteDeviceAuthorizationCancelledE
 N21CRemotePlayController54CCallbackInternal_OnRemoteDeviceAuthorizationRequestedE
 N21CRemotePlayController55CCallbackInternal_OnRemoteClientStreamingEnabledChangedE
@@ -4353,11 +4367,9 @@ Plat_RelativeTickFrequency
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_ctime
-Plat_daylight
 Plat_gmtime
 Plat_localtime
 Plat_timegm
-Plat_timezone
 Player
 Polish
 PopulateDriveList
@@ -4452,6 +4464,7 @@ RemotePlay.RegisterForSessionJoined
 RemotePlay.RegisterForSessionStarted
 RemotePlay.RegisterForSessionStopped
 RemotePlay.RegisterForSettingsChanges
+RemotePlay.RegisterForVRStreamingInvitation
 RemotePlay.SetClientStreamingBitrate
 RemotePlay.SetClientStreamingQuality
 RemotePlay.SetGameSystemVolume
@@ -5131,7 +5144,6 @@ Zulu
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
 \n\fCStopRequest"
-\n\fEColorFilter
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -6614,10 +6626,6 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
-k_EColorFilter_Grayscale
-k_EColorFilter_InvertBrightness
-k_EColorFilter_InvertColors
-k_EColorFilter_None
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -6637,6 +6645,8 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
+k_EContentModeratedReason_MAX
+k_EContentModeratedReason_None
 k_EContentModeratorLevel_Any
 k_EContentModeratorLevel_MAX
 k_EContentModeratorLevel_Valve
@@ -6646,6 +6656,8 @@ k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_OffTopic
 k_EContentReportReason_Other
+k_EContentReportResolution_MAX
+k_EContentReportSubjectType_MAX
 k_EExportCodec_Default
 k_EExportCodec_H264
 k_EExportCodec_H265
@@ -7311,6 +7323,7 @@ microsoft.com
 minHeight
 minWidth
 minWidth <= width
+minimum_font_size
 miniprofile_location
 missing IHDR
 missing LZ dictionary
@@ -7326,6 +7339,7 @@ mode
 modf
 modified
 modified64
+modifiers
 mold 1.10.1 (compatible with GNU ld)
 mongolian
 mount
@@ -7642,6 +7656,7 @@ recovery_email
 rects
 recursion_budget_ < recursion_limit_
 reddit.com
+reduced_motion_enabled
 reference temporary #
 referrer
 refresh_rate_denominator

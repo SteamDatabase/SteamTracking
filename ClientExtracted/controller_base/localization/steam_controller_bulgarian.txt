@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Бутон Y1"
 	"origin_legion_go_y2"							"Бутон Y2"
+
+	"origin_generic_PL"							"Бутон PL"
+	"origin_generic_PR"							"Бутон PR"
+	"origin_generic_C"							"Бутон C"
+	"origin_generic_Z"							"Бутон Z"
+	"origin_generic_MISC1"						"Бутон РАЗНИ 1"
+	"origin_generic_MISC2"						"Бутон РАЗНИ 2"
+	"origin_generic_MISC3"						"Бутон РАЗНИ 3"
+	"origin_generic_MISC4"						"Бутон РАЗНИ 4"
+	"origin_generic_MISC5"						"Бутон РАЗНИ 5"
+	"origin_generic_MISC6"						"Бутон РАЗНИ 6"
+	"origin_generic_MISC7"						"Бутон РАЗНИ 7"
+	"origin_generic_MISC8"						"Бутон РАЗНИ 8"
+
 }

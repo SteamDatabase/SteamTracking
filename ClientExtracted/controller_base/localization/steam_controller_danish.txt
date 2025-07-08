@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1-knap"
 	"origin_legion_go_y2"							"Y2-knap"
+
+	"origin_generic_PL"							"Venstre bagsideknap"
+	"origin_generic_PR"							"Højre bagsideknap"
+	"origin_generic_C"							"C-knap"
+	"origin_generic_Z"							"Z-knap"
+	"origin_generic_MISC1"						"Ekstra knap 1"
+	"origin_generic_MISC2"						"Ekstra knap 2"
+	"origin_generic_MISC3"						"Ekstra knap 3"
+	"origin_generic_MISC4"						"Ekstra knap 4"
+	"origin_generic_MISC5"						"Ekstra knap 5"
+	"origin_generic_MISC6"						"Ekstra knap 6"
+	"origin_generic_MISC7"						"Ekstra knap 7"
+	"origin_generic_MISC8"						"Ekstra knap 8"
+
 }

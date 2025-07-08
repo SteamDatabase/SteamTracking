@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Nút Y1"
 	"origin_legion_go_y2"							"Nút Y2"
+
+	"origin_generic_PL"							"Nút PL"
+	"origin_generic_PR"							"Nút PR"
+	"origin_generic_C"							"Nút C"
+	"origin_generic_Z"							"Nút Z"
+	"origin_generic_MISC1"						"Nút Misc 1"
+	"origin_generic_MISC2"						"Nút Misc 2"
+	"origin_generic_MISC3"						"Nút Misc 3"
+	"origin_generic_MISC4"						"Nút Misc 4"
+	"origin_generic_MISC5"						"Nút Misc 5"
+	"origin_generic_MISC6"						"Nút Misc 6"
+	"origin_generic_MISC7"						"Nút Misc 7"
+	"origin_generic_MISC8"						"Nút Misc 8"
+
 }

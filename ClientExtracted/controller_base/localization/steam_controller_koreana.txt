@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 버튼"
 	"origin_legion_go_y2"							"Y2 버튼"
+
+	"origin_generic_PL"							"왼쪽 패들"
+	"origin_generic_PR"							"오른쪽 패들"
+	"origin_generic_C"							"C 버튼"
+	"origin_generic_Z"							"Z 버튼"
+	"origin_generic_MISC1"						"기타 버튼 1"
+	"origin_generic_MISC2"						"기타 버튼 2"
+	"origin_generic_MISC3"						"기타 버튼 3"
+	"origin_generic_MISC4"						"기타 버튼 4"
+	"origin_generic_MISC5"						"기타 버튼 5"
+	"origin_generic_MISC6"						"기타 버튼 6"
+	"origin_generic_MISC7"						"기타 버튼 7"
+	"origin_generic_MISC8"						"기타 버튼 8"
+
 }

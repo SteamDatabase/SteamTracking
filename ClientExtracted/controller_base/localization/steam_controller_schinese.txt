@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1 键"
 	"origin_legion_go_y2"							"Y2 键"
+
+	"origin_generic_PL"							"PL 键"
+	"origin_generic_PR"							"PR 键"
+	"origin_generic_C"							"C 键"
+	"origin_generic_Z"							"Z 键"
+	"origin_generic_MISC1"						"杂项按键 1"
+	"origin_generic_MISC2"						"杂项按键 2"
+	"origin_generic_MISC3"						"杂项按键 3"
+	"origin_generic_MISC4"						"杂项按键 4"
+	"origin_generic_MISC5"						"杂项按键 5"
+	"origin_generic_MISC6"						"杂项按键 6"
+	"origin_generic_MISC7"						"杂项按键 7"
+	"origin_generic_MISC8"						"杂项按键 8"
+
 }

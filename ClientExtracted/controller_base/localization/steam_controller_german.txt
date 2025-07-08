@@ -99,4 +99,18 @@
 
 	"origin_legion_go_y1"							"Y1-Taste"
 	"origin_legion_go_y2"							"Y2-Taste"
+
+	"origin_generic_PL"							"Linke Rücktaste"
+	"origin_generic_PR"							"Rechte Rücktaste"
+	"origin_generic_C"							"C-Taste"
+	"origin_generic_Z"							"Z-Taste"
+	"origin_generic_MISC1"						"Andere Taste 1"
+	"origin_generic_MISC2"						"Andere Taste 2"
+	"origin_generic_MISC3"						"Andere Taste 3"
+	"origin_generic_MISC4"						"Andere Taste 4"
+	"origin_generic_MISC5"						"Andere Taste 5"
+	"origin_generic_MISC6"						"Andere Taste 6"
+	"origin_generic_MISC7"						"Andere Taste 7"
+	"origin_generic_MISC8"						"Andere Taste 8"
+
 }

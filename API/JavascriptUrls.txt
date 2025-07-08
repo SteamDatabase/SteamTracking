@@ -2887,10 +2887,11 @@ https://rd.playstation.com/controller/fwupdater/
 https://reactflow.dev
 https://reactjs.org/docs/error-decoder.html?invariant=${}
 https://s.team/chat/${}
-https://s.team/deck/setup
+https://s.team/deck
 https://s.team/join
 https://s.team/remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 https://s.team/remoteplay/connect/${}?appid=${}&${}
+https://s.team/steamos
 https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}
 https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/${}
 https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/header_292x136.jpg?t=1487329718
