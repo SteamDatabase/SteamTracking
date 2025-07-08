@@ -336,7 +336,7 @@ a.market_listing_row_link:hover {
 
 .market_listing_purchase_message {
 	color: #EBEBEB;
-	margin: 30px 5px 0;
+	margin: 30px 5px 30px 5px;
 	line-height: 16px;
 
 	overflow: hidden;

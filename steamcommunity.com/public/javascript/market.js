@@ -756,7 +756,6 @@ BuyItemDialog = {
 	m_confirmation: 0,
 	m_confirmationTimeout: 0,
 	m_confirmationTries: 0,
-	m_confirmationDialog: null,
 
 	Initialize: function() {
 		$('market_buynow_dialog_purchase').observe( 'click', this.OnAccept.bindAsEventListener(this) );
@@ -784,7 +783,6 @@ BuyItemDialog = {
 		$('market_buynow_dialog_error').hide();
 
 		$('market_buynow_dialog_title').update( 'Buy an item' );
-		$('market_buynow_dialog_purchasecomplete_message').hide();
 		$('market_buynow_dialog_purchase').show();
 		$('market_buynow_dialog_purchase_throbber').hide();
 		$('market_buynow_dialog_paymentinfo_frame_container').show();
@@ -792,6 +790,9 @@ BuyItemDialog = {
 
 		$('market_buynow_dialog_cancel').show();
 		$('market_buynow_dialog_cancel_close').hide();
+
+		$J('#market_buynow_confirmation_required').hide();
+		$J('#market_buynow_purchase_successful').hide();
 
 		var sCurrentURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
 		this.m_sAddFundsReturnURL = encodeURIComponent( sCurrentURL + '#buy' + sElementPrefix + '|' + listingid + '|' + item['appid'] + '|' + item['contextid'] + '|'  + item['id'] );
@@ -1005,35 +1006,6 @@ BuyItemDialog = {
 		this.BuyListing();
 	},
 
-	ShowConfirmationModal: function( ) {
-		var deferred = new jQuery.Deferred();
-		var fnOK = function() { deferred.resolve(); };
-
-		var container = $J('<div/>', {'class': 'waiting_dialog_container'} );
-		var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
-		container.append( throbber );
-		switch( g_nConfType )
-		{
-			case 2:
-				container.append( 'You must confirm this purchase via your Steam Mobile Authenticator. Do not close this window.' );
-				break;
-			case 1:
-				container.append( 'This purchase requires confirmation. Please see your email to confirm this purchase. Do not close this window.' );
-				break;
-			default:
-				container.append( 'This purchase requires confirmation. Please see your email or mobile device to confirm this purchase. Do not close this window.' );
-		}
-
-		var Modal = _BuildDialog( 'Additional confirmation step required', container, [], fnOK, {} );
-		deferred.always( function() { Modal.Dismiss(); } );
-		Modal.Show();
-
-		// attach the deferred's events to the modal
-		deferred.promise( Modal );
-
-		return Modal;
-	},
-
 	BuyListing: function(data) {
 		$('market_buynow_dialog_purchase_throbber').clonePosition($('market_buynow_dialog_purchase') );
 		$('market_buynow_dialog_purchase').fade({ duration: 0.25 });
@@ -1084,14 +1056,10 @@ BuyItemDialog = {
 			var data = $J.parseJSON(jqxhr.responseText);
 			if ( data.need_confirmation )
 			{
-				buyItemDialog.m_confirmation = data.confirmation.confirmation_id;
-				if ( !buyItemDialog.m_confirmationDialog )
-				{
-					buyItemDialog.m_confirmationDialog = buyItemDialog.ShowConfirmationModal();
-					buyItemDialog.m_confirmationDialog.SetDismissOnBackgroundClick( false );
-					buyItemDialog.m_confirmationDialog.OnDismiss( function() { buyItemDialog.CancelConfirmation(); } );
-				}
+				new Effect.BlindUp( 'market_buynow_dialog_paymentinfo_frame_container', { duration: 0.25 } );
+				$J('#market_buynow_confirmation_required').show();
 
+				buyItemDialog.m_confirmation = data.confirmation.confirmation_id;
 				if ( buyItemDialog.m_confirmation )
 				{
 					buyItemDialog.m_confirmationTimeout = setTimeout(function () { buyItemDialog.GetConfirmationState(); }, 1500);
@@ -1110,6 +1078,7 @@ BuyItemDialog = {
 
 	OnCancel: function( event ) {
 		this.Dismiss();
+		if ( this.m_confirmationTimeout ) { clearTimeout( this.m_confirmationTimeout ); }
 		event.stop();
 	},
 
@@ -1119,7 +1088,8 @@ BuyItemDialog = {
 
 		$('market_buynow_dialog_purchase_throbber').fade({ duration: 0.25 });
 		new Effect.BlindUp( 'market_buynow_dialog_paymentinfo_frame_container', { duration: 0.25 } );
-		new Effect.BlindDown( 'market_buynow_dialog_purchasecomplete_message', { duration: 0.25 } );
+		new Effect.BlindUp( 'market_buynow_confirmation_required', { duration: 0.25 } );
+		new Effect.BlindDown( 'market_buynow_purchase_successful', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_buynow_dialog_bottom_buttons', { duration: 0.25 } );
 
 		// Replace the listing row with a message that says this was purchased
@@ -1141,11 +1111,7 @@ BuyItemDialog = {
 
 	OnSuccess: function( transport ) {
 		this.m_bPurchaseSuccess = true;
-		if ( this.m_confirmationDialog )
-		{
-			this.m_confirmation = 0;
-			this.m_confirmationDialog.Dismiss();
-		}
+		this.m_confirmation = 0;
 
 		if ( transport.responseJSON )
 		{
@@ -1193,10 +1159,6 @@ BuyItemDialog = {
 
 	CancelConfirmation: function() {
 		this.m_confirmationTries = 0;
-		if ( this.m_confirmationDialog ) {
-			this.m_confirmationDialog.Dismiss();
-			this.m_confirmationDialog = null;
-		}
 		if ( this.m_confirmationTimeout ) { clearTimeout( this.m_confirmationTimeout ); }
 		if ( !this.m_bPurchaseSuccess )
 		{

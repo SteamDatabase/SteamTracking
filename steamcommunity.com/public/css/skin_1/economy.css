@@ -623,6 +623,41 @@ body.compact_trading_ui .appselect {
     margin-top: 20px;
 }
 
+.market_buynow_confirmation_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 50px;
+	gap: 10px;
+}
+
+.market_buynow_confirmation_header {
+	font-size: 22px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.market_dialog_purchase_confirmation_inner {
+	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+	margin: 10px 50px 0px 50px;
+	padding: 20px 50px 0px 20px;
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	max-width: 60%;
+}
+
+.market_dialog_purchase_confirmation_inner_image {
+	width: 94px;
+	height: 136px;
+}
+
+.market_dialog_purchase_confirmation_inner_text {
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+}}
+
 .market_dialog_topwarning {
 	border: 1px solid #4C4C4C;
 	color: white;

@@ -2216,7 +2216,10 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)(_().FlexColumnContainer),
+              className: (0, _._)({
+                [_().FlexColumnContainer]: !0,
+                [_().UploadPreviewError]: "failed" == _.status,
+              }),
             },
             _,
             Boolean("uploading" == _.status) &&

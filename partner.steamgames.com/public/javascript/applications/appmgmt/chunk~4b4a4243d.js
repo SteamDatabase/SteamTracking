@@ -1971,7 +1971,12 @@
             ),
           s.createElement(
             "div",
-            { className: (0, d.A)(A().FlexColumnContainer) },
+            {
+              className: (0, d.A)({
+                [A().FlexColumnContainer]: !0,
+                [k().UploadPreviewError]: "failed" == t.status,
+              }),
+            },
             f,
             Boolean("uploading" == t.status) &&
               s.createElement(

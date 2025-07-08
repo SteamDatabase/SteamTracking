@@ -101964,18 +101964,20 @@
                 "Invalid file extension, cannot determine mimetype",
             };
           i.append("mimetype", o);
+          let m = !1;
           try {
-            r = await l().post(this.m_strUploadPath, i, {
+            (r = await l().post(this.m_strUploadPath, i, {
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
               cancelToken: n,
-            });
+            })),
+              200 == r?.status && (m = !0);
           } catch (e) {
             const t = (0, c.H)(e);
             console.log("CCloudImageUploader.UploadFile failed ", t, e),
               (r = e.response);
           }
-          return { bSuccess: !0, result: r?.data };
+          return { bSuccess: m, result: r?.data };
         }
       }
       (0, i.Cg)([o.sH], y.prototype, "m_filesToUpload", void 0),
