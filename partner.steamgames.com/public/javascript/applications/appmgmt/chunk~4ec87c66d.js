@@ -50383,7 +50383,9 @@
           let e = {};
           return (
             this.m_oSpotlight.accessibility_label &&
-              (e.accessibility_label = this.m_oSpotlight.accessibility_label),
+              (e.accessibility_label = {
+                ...this.m_oSpotlight.accessibility_label,
+              }),
             e
           );
         }
@@ -50444,7 +50446,8 @@
         SetLocalizedAltText(e, t) {
           this.m_oSpotlight.accessibility_label ||
             (this.m_oSpotlight.accessibility_label = {}),
-            this.SetKVLang(this.m_oSpotlight.accessibility_label, e, t);
+            this.SetKVLang(this.m_oSpotlight.accessibility_label, e, t),
+            this.Dispatch();
         }
         SetKVLang(e, t, a) {
           (0, Se.pV)(e, t, a) && this.SetDirty(!0);
@@ -50469,7 +50472,7 @@
         (0, ge.Cg)([he.XI.bound], be.prototype, "SetImage", null),
         (0, ge.Cg)([ye.o], be.prototype, "ClearAllAssetObjects", null),
         (0, ge.Cg)([ye.o], be.prototype, "DeleteAssetObjectLang", null),
-        (0, ge.Cg)([ye.o], be.prototype, "SetLocalizedAltText", null),
+        (0, ge.Cg)([he.XI.bound], be.prototype, "SetLocalizedAltText", null),
         (0, ge.Cg)([ye.o], be.prototype, "RevertChanges", null);
       var fe = a(97843);
       class ve {
@@ -50738,19 +50741,22 @@
       function Pe(e) {
         const { oEditableSpotlight: t } = e,
           { fnSaveClusterAssets: a } = (0, De.Bx)(),
-          [r, i, o, c, m] = (0, s.q3)(() => [
+          [r, i, o, c] = (0, s.q3)(() => [
             t.BIsDirty(),
             t.GetID(),
             t.GetModel(),
             t.GetAssetCount(),
-            t.GetAssetParams(),
           ]);
         return l.createElement(le, {
           bIsDirty: r,
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: async () => {
-            const e = await a(n.ii.k_ConfigPage_Spotlight, o, m);
+            const e = await a(
+              n.ii.k_ConfigPage_Spotlight,
+              o,
+              t.GetAssetParams(),
+            );
             return e && t.Reset((0, De.S0)(n.ii.k_ConfigPage_Spotlight, i)), e;
           },
         });
@@ -50844,7 +50850,9 @@
             this.m_oTakeover.page_bg_color_right &&
               (e.page_bg_color_right = this.m_oTakeover.page_bg_color_right),
             this.m_oTakeover.accessibility_label &&
-              (e.accessibility_label = this.m_oTakeover.accessibility_label),
+              (e.accessibility_label = {
+                ...this.m_oTakeover.accessibility_label,
+              }),
             e
           );
         }
@@ -51477,20 +51485,19 @@
       function je(e) {
         const { oEditableTakeover: t } = e,
           { fnSaveClusterAssets: a } = (0, De.Bx)(),
-          [n, r, i, o, c, m] = (0, s.q3)(() => [
+          [n, r, i, o, c] = (0, s.q3)(() => [
             t.BIsDirty(),
             t.GetType(),
             t.GetID(),
             t.GetModel(),
             t.GetAssetCount(),
-            t.GetAssetParams(),
           ]);
         return l.createElement(le, {
           bIsDirty: n,
           fnOnRevert: () => t.RevertChanges(),
           bSaveDisabled: 0 == c,
           fnOnSave: async () => {
-            const e = await a(r, o, m);
+            const e = await a(r, o, t.GetAssetParams());
             return e && t.Reset((0, De.S0)(r, i), r), e;
           },
         });
@@ -51567,7 +51574,9 @@
           let e = {};
           return (
             this.m_oTakeunder.accessibility_label &&
-              (e.accessibility_label = this.m_oTakeunder.accessibility_label),
+              (e.accessibility_label = {
+                ...this.m_oTakeunder.accessibility_label,
+              }),
             e
           );
         }
@@ -51964,19 +51973,22 @@
       function et(e) {
         const { oEditableTakeunder: t } = e,
           { fnSaveClusterAssets: a } = (0, De.Bx)(),
-          [r, i, o, c, m] = (0, s.q3)(() => [
+          [r, i, o, c] = (0, s.q3)(() => [
             t.BIsDirty(),
             t.GetID(),
             t.GetModel(),
             t.GetAssetCount(),
-            t.GetAssetParams(),
           ]);
         return l.createElement(le, {
           bIsDirty: r,
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: async () => {
-            const e = await a(n.ii.k_ConfigPage_Takeunder, o, m);
+            const e = await a(
+              n.ii.k_ConfigPage_Takeunder,
+              o,
+              t.GetAssetParams(),
+            );
             return e && t.Reset((0, De.S0)(n.ii.k_ConfigPage_Takeunder, i)), e;
           },
         });

@@ -688,31 +688,22 @@
         c = o(57053),
         i = o(81393);
       class d {
-        constructor(e, t) {
+        constructor(e, t, o) {
+          var r;
           (this.m_nodes = []),
             (this.m_schema = e),
-            (this.m_bConvertNewlinesToBR = t);
+            (this.m_bConvertNewlinesToBR =
+              null !== (r = null == t ? void 0 : t.bConvertNewlinesToBR) &&
+              void 0 !== r &&
+              r);
+          const n = o && "mark" in o;
+          this.m_fnProcessText = n || null == t ? void 0 : t.fnProcessText;
         }
         AppendText(e, t) {
           e.length &&
             (this.m_bConvertNewlinesToBR
-              ? this.m_nodes.push(
-                  ...(function (e, t) {
-                    const o = [];
-                    let r = 0;
-                    for (
-                      let n = e.indexOf("\n", r);
-                      -1 !== n;
-                      n = e.indexOf("\n", r)
-                    )
-                      r != n && o.push(t.text(e.substring(r, n))),
-                        o.push(t.nodes.hard_break.createChecked()),
-                        (r = n + 1);
-                    r < e.length && o.push(t.text(e.substring(r)));
-                    return o;
-                  })(e, this.m_schema),
-                )
-              : this.m_nodes.push(this.m_schema.text(e)));
+              ? this.m_nodes.push(...this.GenerateBreaksForNewlines(e))
+              : this.m_nodes.push(...this.TextNode(e)));
         }
         AppendNode(e) {
           this.m_nodes.push(e);
@@ -720,11 +711,31 @@
         GetElements() {
           return this.m_nodes;
         }
+        GenerateBreaksForNewlines(e) {
+          const t = [];
+          let o = 0;
+          for (let r = e.indexOf("\n", o); -1 !== r; r = e.indexOf("\n", o))
+            o != r && t.push(...this.TextNode(e.substring(o, r))),
+              t.push(this.m_schema.nodes.hard_break.createChecked()),
+              (o = r + 1);
+          return o < e.length && t.push(...this.TextNode(e.substring(o))), t;
+        }
+        TextNode(e) {
+          const t = this.m_fnProcessText && this.m_fnProcessText(e);
+          return t || [this.m_schema.text(e)];
+        }
       }
       class u extends l.Al {
         constructor(e, t) {
-          const { bConvertNewlinesToBR: o = !1 } = t;
-          super(e.bbcode_dictionary, () => new d(e.pm_schema, o)),
+          super(e.bbcode_dictionary, (o) => {
+            const r =
+              (null == o ? void 0 : o.tag) && e.bbcode_dictionary.get(o.tag);
+            return new d(
+              e.pm_schema,
+              t,
+              r && "Constructor" in r ? r.Constructor : void 0,
+            );
+          }),
             (this.m_mapPMBBNodes = new Map()),
             (this.m_schemaConfig = e),
             this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
@@ -758,12 +769,21 @@
                 `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
               ),
                 (o = n
-                  ? [this.TryCreateNode(n, r, void 0)]
-                  : [e.acceptNode.create(void 0, r)]);
+                  ? this.TryCreateNode(n, r, void 0)
+                  : e.acceptNode.create(void 0, r));
             }
             r = c.FK.from(o);
           }
-          return e.node.createAndFill(o, r) || e.node.create(o, r);
+          try {
+            return e.node.createAndFill(o, r) || e.node.createChecked(o, r);
+          } catch (o) {
+            return (
+              console.error(
+                `Invalid content for node type ${e.node.name}, removing and promoting children.`,
+              ),
+              t
+            );
+          }
         }
         BBNodeToPMNode(e, t, ...o) {
           let r = e.BBArgsToAttrs ? e.BBArgsToAttrs(t.args || {}) : void 0;
@@ -1771,7 +1791,7 @@
           })(w),
           M = (0, k.Ue)(S, C);
         if (!t) return null;
-        const { schemaConfig: O, bbcodeParser: F } = t;
+        const { schemaConfig: O, bbcodeParser: N } = t;
         return u.createElement(
           l.Ot,
           { view: w, pmState: t },
@@ -1791,7 +1811,7 @@
             schema: O.pm_schema,
             bSingleLine: h,
           }),
-          u.createElement(B, { parser: F, schema: O.pm_schema }),
+          u.createElement(B, { parser: N, schema: O.pm_schema }),
           u.createElement(v, { schema: O.pm_schema }),
           p,
         );

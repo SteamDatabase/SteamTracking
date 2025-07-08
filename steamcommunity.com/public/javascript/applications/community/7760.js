@@ -57,7 +57,7 @@
     },
     49158: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => jt });
+      n.r(t), n.d(t, { default: () => Kt });
       var a = n(90286),
         o = n(26555),
         l = n(22145),
@@ -72,14 +72,14 @@
         E = n(27666),
         _ = n(86355),
         g = n(68255),
-        v = n(2805),
-        h = n(36509),
+        h = n(2805),
+        v = n(36509),
         f = n(28015),
         b = n(71696),
         C = n(61859),
         w = n(27650),
-        I = n(73745),
-        k = n(30470),
+        k = n(73745),
+        I = n(30470),
         S = n(21134),
         M = n(84106),
         T = n(6941),
@@ -207,8 +207,8 @@
       }
       var O = n(12155),
         R = n(88997),
-        F = n(60155),
-        L = n(5068),
+        L = n(60155),
+        F = n(5068),
         P = n(9154),
         V = n(62490),
         H = n(84811),
@@ -244,17 +244,17 @@
             );
           }, [n, a, t]),
           g = m.useCallback((e) => i((0, r.M)(e)), [i]),
-          v = "true" === t.attrs.autoadvance,
-          [h, f] = Y(g, {
-            autoAdvance: v,
+          h = "true" === t.attrs.autoadvance,
+          [v, f] = Y(g, {
+            autoAdvance: h,
             clanSteamID: E,
             imageNodeType: n,
             videoNodeType: a,
             carouselNodeType: t.type,
           }),
           b = m.useCallback(() => {
-            h(_);
-          }, [h, _]);
+            v(_);
+          }, [v, _]);
         return m.createElement(
           m.Fragment,
           null,
@@ -364,7 +364,7 @@
             e.destination &&
               c((t) => V.yY(t.slice(), e.source.index, e.destination.index));
           }, []),
-          { showInsertImageModal: v, imageModal: h } = oe({
+          { showInsertImageModal: h, imageModal: v } = oe({
             clanSteamID: l,
             imageNodeType: r,
             videoNodeType: s,
@@ -373,7 +373,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          h,
+          v,
           m.createElement(
             P.mt,
             { active: !0, onDismiss: n },
@@ -400,7 +400,7 @@
                     m.createElement(
                       "div",
                       {
-                        className: L.CarouselList,
+                        className: F.CarouselList,
                         ...e.droppableProps,
                         ref: e.innerRef,
                       },
@@ -436,8 +436,8 @@
                 },
                 m.createElement(
                   g.$n,
-                  { type: "button", className: L.AddButton, onClick: v },
-                  m.createElement(D.OMN, { className: L.PlusIcon }),
+                  { type: "button", className: F.AddButton, onClick: h },
+                  m.createElement(D.OMN, { className: F.PlusIcon }),
                 ),
               ),
             ),
@@ -463,26 +463,26 @@
         return m.createElement(
           "div",
           {
-            className: d()(L.ListItem, L.DraggableItem),
+            className: d()(F.ListItem, F.DraggableItem),
             ref: t.innerRef,
             ...t.draggableProps,
             ...t.dragHandleProps,
           },
           m.createElement(
             "div",
-            { className: L.ImagePreview },
+            { className: F.ImagePreview },
             m.createElement("img", {
               src: E.z.ReplacementTokenToClanImageURL(n.node.attrs.src),
             }),
             m.createElement(
               "div",
-              { className: L.Controls },
+              { className: F.Controls },
               m.createElement(
                 "div",
-                { className: L.Control },
+                { className: F.Control },
                 m.createElement(
                   y.ff,
-                  { onClick: r, className: L.Button },
+                  { onClick: r, className: F.Button },
                   m.createElement(D.sED, null),
                 ),
               ),
@@ -504,13 +504,13 @@
             removeNode: u,
             update: p,
           } = e,
-          [E, _, g] = (0, I.uD)(),
-          v = ee(n);
-        let h = m.createElement(ne, {
+          [E, _, g] = (0, k.uD)(),
+          h = ee(n);
+        let v = m.createElement(ne, {
           schemaConfig: t,
           event: a.GetEventModel(),
           node: n,
-          nodeAttrs: v,
+          nodeAttrs: h,
         });
         const f = m.useCallback(() => {
             d(), g();
@@ -522,17 +522,17 @@
             videoNodeType: l,
             carouselNodeType: s,
           }),
-          k = m.useCallback(() => {
+          I = m.useCallback(() => {
             C([n]);
           }, [n, C]),
-          M = { createCarousel: s ? k : void 0, src: te(v) };
+          M = { createCarousel: s ? I : void 0, src: te(h) };
         return m.createElement(
           m.Fragment,
           null,
           E &&
             m.createElement(le, {
               bIsEdit: !0,
-              nodeAttrs: v,
+              nodeAttrs: h,
               hideModal: f,
               imageNodeType: o,
               videoNodeType: l,
@@ -550,7 +550,7 @@
                 contextMenuProps: M,
               }),
             },
-            h,
+            v,
           ),
         );
       }
@@ -584,16 +584,16 @@
             window.open(n);
           }, [n]);
         return m.createElement(
-          F.tz,
+          L.tz,
           null,
           t &&
             m.createElement(
-              F.kt,
+              L.kt,
               { onSelected: t },
               (0, C.we)("#EventEditor_CarouselEditor_CreateACarousel"),
             ),
           m.createElement(
-            F.kt,
+            L.kt,
             { onSelected: a },
             (0, C.we)("#EventEditor_ImageEdit_PreviewImage"),
           ),
@@ -709,13 +709,13 @@
               ? "uploaded"
               : "hotlink",
           ),
-          v = m.useCallback(
+          h = m.useCallback(
             (e) => {
               l({ src: e }, r), a();
             },
             [l, a, r],
           ),
-          h = m.useCallback(
+          v = m.useCallback(
             (e) => {
               l({ ...u, ...e }, s), a();
             },
@@ -723,13 +723,13 @@
           ),
           b = m.useId();
         let w,
-          I = null;
+          k = null;
         if ("image" == c)
-          (I = m.createElement(re, {
+          (k = m.createElement(re, {
             active: "hotlink" == E,
             bIsEdit: t,
             hideModal: a,
-            onImageSelected: v,
+            onImageSelected: h,
             src: u.src,
           })),
             (w = t
@@ -737,7 +737,7 @@
               : (0, C.we)("#EventEditor_InsertImage_Title"));
         else {
           if ("video" != c) return (0, i.z_)(c, "Unhandled type"), null;
-          (I = m.createElement(se, {
+          (k = m.createElement(se, {
             active: "hotlink" == E,
             bIsEdit: t,
             hideModal: a,
@@ -764,8 +764,8 @@
             m.createElement(ie, {
               bIsEdit: t,
               hideModal: a,
-              onImageSelected: v,
-              onVideoSelected: s && h,
+              onImageSelected: h,
+              onVideoSelected: s && v,
               clanSteamID: o,
               selectedImage: p,
             }),
@@ -775,7 +775,7 @@
             {
               className: d()(S.ClanImageModalMode, "hotlink" == E && S.Active),
             },
-            I,
+            k,
           ),
         );
       }
@@ -830,10 +830,10 @@
           [i, c] = m.useState(o.webm),
           [d, u] = m.useState(o.poster),
           [p, E] = m.useState(!!o.autoplay),
-          [_, v] = m.useState(!!o.controls),
-          h = m.useRef();
+          [_, h] = m.useState(!!o.controls),
+          v = m.useRef();
         m.useEffect(() => {
-          t && h.current.Focus();
+          t && v.current.Focus();
         }, [t]);
         return m.createElement(
           g.lV,
@@ -854,7 +854,7 @@
             g.nB,
             null,
             m.createElement(g.pd, {
-              ref: h,
+              ref: v,
               value: r,
               onChange: (e) => s(e.currentTarget.value),
               label: (0, C.we)("#EventEditor_InsertVideo_InputMP4"),
@@ -876,7 +876,7 @@
             }),
             m.createElement(g.Yh, {
               checked: _,
-              onChange: v,
+              onChange: h,
               label: (0, C.we)("#EventEditor_InsertVideo_InputShowControls"),
             }),
           ),
@@ -927,11 +927,11 @@
           m.createElement(
             g.lV,
             { onSubmit: () => i && p(i), className: S.ClanImageGridForm },
-            m.createElement(h.g, { fnSetImageSearch: s }),
+            m.createElement(v.g, { fnSetImageSearch: s }),
             m.createElement(
               "div",
               { className: S.ClanImageGridContainer },
-              m.createElement(v.ge, {
+              m.createElement(h.ge, {
                 clanAccountID: l.GetAccountID(),
                 fileNameSearch: r,
                 onImageSelected: E,
@@ -1006,8 +1006,8 @@
         Ee = n(74410),
         _e = n(72421),
         ge = n(52038),
-        ve = n(63226);
-      function he(e) {
+        he = n(63226);
+      function ve(e) {
         const {
             videoID: t,
             align: n,
@@ -1016,7 +1016,7 @@
             setAttrs: l,
             focusView: r,
           } = e,
-          [s, i, c] = (0, I.uD)(),
+          [s, i, c] = (0, k.uD)(),
           d = m.useCallback(() => {
             c(), r();
           }, [c, r]),
@@ -1039,13 +1039,13 @@
             }),
           m.createElement(
             G,
-            { className: (0, ge.A)(ve.PreviewYoutubeEditor, o && ve.Selected) },
+            { className: (0, ge.A)(he.PreviewYoutubeEditor, o && he.Selected) },
             m.createElement(B, {
               onEditClick: i,
               onDeleteClick: e.removeNode,
               bStrongShadows: !0,
             }),
-            o && m.createElement("div", { className: ve.SelectionOverlay }),
+            o && m.createElement("div", { className: he.SelectionOverlay }),
             m.createElement(M.B, {
               event: a.GetEventModel(),
               strTag: "previewyoutube",
@@ -1088,7 +1088,7 @@
                 : (0, C.we)("#EventEditor_InsertYouTube"),
               onOK: p,
             },
-            d && m.createElement("div", { className: ve.Error }, d),
+            d && m.createElement("div", { className: he.Error }, d),
             m.createElement(g.pd, {
               label: (0, C.we)("#EventEditor_InsertYouTube_URL"),
               placeholder: (0, C.we)("#EventEditor_InsertYouTube_Placholder"),
@@ -1121,8 +1121,8 @@
       var be = n(69001),
         Ce = n(25918),
         we = n(65946),
-        Ie = n(26161),
-        ke = n(87010),
+        ke = n(26161),
+        Ie = n(87010),
         Se = n(78395),
         Me = n(21869),
         Te = n(1397),
@@ -1137,8 +1137,8 @@
         ze = n(61819),
         Oe = n(88942),
         Re = n(78327),
-        Fe = n(41735),
-        Le = n.n(Fe),
+        Le = n(41735),
+        Fe = n.n(Le),
         Pe = n(26408);
       function Ve(e) {
         const { hideModal: t, fnUpdateSession: n } = e,
@@ -1404,7 +1404,7 @@
         for (let e = 0; e < 4; ++e) c.push({ data: e, label: e });
         const d = Math.max(0, Math.floor((o - a) / 60)),
           u = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          p = "in_person" === s ? (null != i ? i : ke.hh) : u;
+          p = "in_person" === s ? (null != i ? i : Ie.hh) : u;
         return m.createElement(
           m.Fragment,
           null,
@@ -1469,10 +1469,10 @@
       }
       function Qe(e) {
         const { rtime_start: t, rtime_end: n, sDisplayTimeZone: a } = e,
-          o = Ue.unix(t).tz(ke.hh),
+          o = Ue.unix(t).tz(Ie.hh),
           l = Ue.unix(t).tz(a),
           r = l.utcOffset() - o.utcOffset(),
-          s = Ue.unix(n).tz(ke.hh),
+          s = Ue.unix(n).tz(Ie.hh),
           i = Ue.unix(n).tz(a),
           c = i.utcOffset() - s.utcOffset();
         return m.createElement(
@@ -1508,7 +1508,7 @@
               queryFn: async () => {
                 const e = `${Re.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   t = {},
-                  n = await Le().get(e, { params: t });
+                  n = await Fe().get(e, { params: t });
                 return null == n ? void 0 : n.data.timezones;
               },
             });
@@ -1568,7 +1568,7 @@
               defaultMenuIsOpen: !1,
               value: a
                 ? { label: r(a), value: a }
-                : { label: r(ke.hh), value: ke.hh },
+                : { label: r(Ie.hh), value: Ie.hh },
               onChange: (e) => n(t, e.value),
             }),
         );
@@ -1676,7 +1676,7 @@
           if (a.schedule_id == e) return { schedule: a, scheduleIndex: n };
         }
         return (
-          "dev" == k.TS.WEB_UNIVERSE &&
+          "dev" == I.TS.WEB_UNIVERSE &&
             console.log(`Error: HelperFindMeetSteamSchedule ${e} is missing`),
           null
         );
@@ -1693,15 +1693,15 @@
               ? void 0
               : e.find((e) => e.group_id == o);
           }),
-          [s, i, c] = (0, I.uD)(),
+          [s, i, c] = (0, k.uD)(),
           d = m.useCallback(() => {
             n(), c();
           }, [n, c]),
-          [u, p, E] = (0, I.uD)(),
+          [u, p, E] = (0, k.uD)(),
           _ = m.useCallback(() => {
             n(), E();
           }, [n, E]);
-        return r && l.GetClanAccountID() == (0, Ie.H)()
+        return r && l.GetClanAccountID() == (0, ke.H)()
           ? m.createElement(
               "div",
               { className: ye().EditorCtn },
@@ -1784,13 +1784,13 @@
       function at(e) {
         const { groupData: t, focusView: n } = e,
           a = (0, we.q3)(() => t.sessions || []),
-          [o, l, r] = (0, I.uD)(),
+          [o, l, r] = (0, k.uD)(),
           s = m.useCallback(() => {
             n(), r();
           }, [n, r]);
         return t
           ? m.createElement(
-              ke.jr,
+              Ie.jr,
               { groupData: t },
               a.map((e, o) =>
                 m.createElement(ot, {
@@ -1826,17 +1826,17 @@
       }
       function ot(e) {
         const { sessionID: t, bShowOR: n, focusView: a } = e,
-          [o, l] = (0, I.OP)(),
+          [o, l] = (0, k.OP)(),
           r = (0, we.q3)(() => {
             const { groupIndex: e, sessionIndex: n } = Je(t);
             return Ce.mh.GetEditModel().GetEventModel().jsondata
               .meet_steam_groups[e].sessions[n];
           }),
-          [s, i, c] = (0, I.uD)(),
+          [s, i, c] = (0, k.uD)(),
           d = m.useCallback(() => {
             a(), c();
           }, [a, c]),
-          [u, p, E] = (0, I.uD)(),
+          [u, p, E] = (0, k.uD)(),
           _ = m.useCallback(() => {
             a(), E();
           }, [a, E]);
@@ -1846,7 +1846,7 @@
           m.createElement(
             "div",
             { className: ye().Column, ...l },
-            m.createElement(ke.Tn, { sessionData: r }),
+            m.createElement(Ie.Tn, { sessionData: r }),
             Boolean(o) &&
               m.createElement(
                 "div",
@@ -1906,7 +1906,7 @@
                 }),
               ),
           ),
-          n && m.createElement(ke.w3, null),
+          n && m.createElement(Ie.w3, null),
         );
       }
       var lt = n(36969),
@@ -1957,7 +1957,7 @@
           { callbacks: a, view: o } = (0, y.wU)(),
           [l, r] = m.useState(() => !!t.nodes.table && rt.aH(o.state));
         return (
-          (0, I.hL)(
+          (0, k.hL)(
             a,
             m.useCallback((e) => r(!!t.nodes.table && rt.aH(e.state)), []),
           ),
@@ -2130,7 +2130,7 @@
                 fnUpdateLocationAndTZ: (e, t) =>
                   s({ ...r, location_type: e, in_person_time_zone: t }),
               }),
-              m.createElement(vt, {
+              m.createElement(ht, {
                 inputScheduleModel: r,
                 fnUpdateSession: (e) => s(e),
                 rtBreakStartingTime: u,
@@ -2139,7 +2139,7 @@
           ),
         );
       }
-      function vt(e) {
+      function ht(e) {
         const {
             fnUpdateSession: t,
             inputScheduleModel: n,
@@ -2147,7 +2147,7 @@
           } = e,
           [o, l] = (0, we.q3)(() => [
             n.session_breaks || [],
-            n.in_person_time_zone || ke.hh,
+            n.in_person_time_zone || Ie.hh,
           ]),
           r = (0, m.useCallback)(
             (e, a) => {
@@ -2169,7 +2169,7 @@
           o
             .sort((e, t) => t.rtime_start - e.rtime_start)
             .map((e, t) =>
-              m.createElement(ht, {
+              m.createElement(vt, {
                 key: "breakedit" + e.break_id,
                 sDisplayTimeZone: l,
                 index: t,
@@ -2203,7 +2203,7 @@
           ),
         );
       }
-      function ht(e) {
+      function vt(e) {
         const {
             breakSession: t,
             fnOnUpdate: n,
@@ -2269,19 +2269,19 @@
               ? void 0
               : e.find((e) => e.schedule_id == a);
           }),
-          [r, s, i] = (0, I.uD)(),
+          [r, s, i] = (0, k.uD)(),
           c = m.useCallback(() => {
             t(), i();
           }, [t, i]),
-          [d, u, p] = (0, I.uD)(),
+          [d, u, p] = (0, k.uD)(),
           E = m.useCallback(() => {
             t(), p();
           }, [t, p]);
-        return l && o.GetClanAccountID() == (0, Ie.H)()
+        return l && o.GetClanAccountID() == (0, ke.H)()
           ? m.createElement(
               "div",
               { className: Et().EditorCtn },
-              m.createElement(ke.fs, {
+              m.createElement(Ie.fs, {
                 eventModel: o.GetEventModel(),
                 scheduleData: l,
               }),
@@ -2340,8 +2340,8 @@
       var bt = n(10820),
         Ct = n(68033),
         wt = n(30193),
-        It = n(14947);
-      function kt(e) {
+        kt = n(14947);
+      function It(e) {
         const { schema: t } = e,
           { callbacks: n, view: a } = (0, y.wU)(),
           [o, l] = m.useState(!1),
@@ -2363,7 +2363,7 @@
               const t = (0, R.lX)(m.createElement(St, { OnSelected: r }), e, {
                 bOverlapHorizontal: !0,
               });
-              (0, It.z7)(
+              (0, kt.z7)(
                 () => !t.visible,
                 () => l(!1),
               );
@@ -2413,7 +2413,7 @@
               m.createElement(lt.Hz, { schema: n }),
               m.createElement(lt.WJ, { schema: n, levels: 3 }),
               m.createElement(y.XQ, null),
-              m.createElement(kt, { schema: n }),
+              m.createElement(It, { schema: n }),
               m.createElement(yt, { schema: n, clanSteamID: l }),
               m.createElement(it, { schema: n }),
               m.createElement(lt.C$, {
@@ -2549,7 +2549,7 @@
             },
             [t, a, i, o],
           );
-        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Ie.H)())
+        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, ke.H)())
           return m.createElement(
             m.Fragment,
             null,
@@ -2586,7 +2586,7 @@
             },
             [t, a, i, o],
           );
-        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Ie.H)())
+        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, ke.H)())
           return m.createElement(
             m.Fragment,
             null,
@@ -2618,7 +2618,7 @@
         (0, wt.k3)(n),
           (0, l.c$)(
             m.useMemo(
-              () => (0, ue.sM)({ rules: [Ft(/:([a-zA-Z0-9_]+):$/, a, n)] }),
+              () => (0, ue.sM)({ rules: [Lt(/:([a-zA-Z0-9_]+):$/, a, n)] }),
               [a, n],
             ),
           );
@@ -2649,7 +2649,7 @@
         }
         return `:${a}:`;
       }
-      function Ft(e, t, n) {
+      function Lt(e, t, n) {
         return new ue.fV(e, (e, a, o, l) => {
           const r = a[1];
           if (!n.BHasEmoticon(r)) return null;
@@ -2657,13 +2657,13 @@
           return e.tr.replaceWith(o, l, s);
         });
       }
-      var Lt = n(73560),
+      var Ft = n(73560),
         Pt = n(91254);
       function Vt(e) {
-        const { editModel: t, href: n, setAttrs: a } = e,
-          o = (0, Lt.W7)(n);
-        if (o) {
-          const a = o.fnBBComponent(n, {
+        const { editModel: t, href: n } = e,
+          a = (0, Ft.W7)(n);
+        if (a) {
+          const o = a.fnBBComponent(n, {
             partnerEventStore: Pt.O3,
             event: t.GetEventModel(),
           });
@@ -2671,17 +2671,19 @@
             x,
             {
               toolbar: m.createElement(Ht, {
-                removeNode: e.removeNode,
                 href: n,
+                removeNode: e.removeNode,
+                update: e.update,
+                schema: e.schema,
               }),
             },
-            a,
+            o,
           );
         }
         return m.createElement("a", { href: n }, n);
       }
       function Ht(e) {
-        const { href: t, removeNode: n } = e;
+        const { href: t, removeNode: n, update: a, schema: o } = e;
         return m.createElement(
           B,
           { onDeleteClick: n },
@@ -2693,177 +2695,204 @@
             },
             m.createElement(D.YNO, null),
           ),
+          m.createElement(
+            z,
+            {
+              onClick: () =>
+                a((0, r.M)(o.text(t, [o.marks.link.create({ href: t })]))),
+              description: (0, C.we)(
+                "#EventEditor_DynamicLink_ConvertToTextLink",
+              ),
+            },
+            m.createElement(D.Rkk, null),
+          ),
         );
       }
-      const jt = (0, At.PA)(function (e) {
+      var jt = n(42714);
+      const Kt = (0, At.PA)(function (e) {
         const { editModel: t } = e,
           n = t.GetEventModel().loadedAllLanguages,
           a = t.GetCurEditLanguage();
         return n
-          ? m.createElement(Kt, { ...e, eCurrentEditLanguage: a })
+          ? m.createElement(qt, { ...e, eCurrentEditLanguage: a })
           : null;
       });
-      const Kt = m.memo(function (e) {
-          const {
-              editModel: t,
-              refOnInsertImage: n,
-              limitBBCode: l,
-              eCurrentEditLanguage: r,
-            } = e,
-            [s, c] = m.useState(),
-            d = m.useMemo(() => (0, me.u)(l), [l]),
-            [p, E] = m.useState();
-          m.useEffect(() => {
-            E(
-              (function (e, t, n) {
-                let o = t.GetDescription(n);
-                return (
-                  (o =
-                    null == o
-                      ? void 0
-                      : o.replace(
-                          wt.pN.GetUnvalidatedEmoticonReplaceRegex(),
-                          "[emoticon]$1[/emoticon]",
-                        )),
-                  new a.n(e, o, (e) => t.SetDescription(n, e))
+      const qt = m.memo(function (e) {
+        const {
+            editModel: t,
+            refOnInsertImage: n,
+            limitBBCode: l,
+            eCurrentEditLanguage: r,
+          } = e,
+          [s, c] = m.useState(),
+          d = m.useMemo(() => (0, me.u)(l), [l]),
+          [p, E] = m.useState(),
+          g = (function (e, t) {
+            const { nodes: n } = t.pm_schema,
+              a = (function (e, t, n) {
+                const a = m.useCallback(
+                  (a) => {
+                    const o = `^https?://${I.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
+                      l = a.match(o);
+                    if (
+                      l &&
+                      l.groups.clanid == e.GetClanAccountID().toString()
+                    ) {
+                      const a = _.pU.GetClanImageByImageHash(
+                        e.GetClanSteamID(),
+                        l.groups.filename,
+                      );
+                      let o = a && de(a, t, n);
+                      if (o) return o;
+                    }
+                    return "default";
+                  },
+                  [e, t, n],
                 );
-              })(d, t, r),
-            );
-          }, [d, t, r]);
-          const _ = m.useRef(void 0);
-          (0, o.i)(p, { msAutosaveTimeout: 1e3 });
-          const { nodes: g, marks: v } = d.pm_schema;
-          return (
-            (function (e, t, n, a, o) {
-              m.useEffect(() => {
-                if (!o || !t) return;
-                const l = (e, l) => {
-                  let r;
-                  switch (l) {
-                    case u._o.k_eInsertFullImage:
-                      r = t.create({ src: (0, u.fw)(e) });
-                      break;
-                    case u._o.k_eInsertThumbnail:
-                      r = t.create({ src: (0, u.fw)(e, !0) }, null, [
-                        a.create({ href: (0, u.fw)(e) }),
-                      ]);
-                      break;
-                    case u._o.k_eInsertVideo:
-                      let o;
-                      4 == e.file_type
-                        ? (o = { mp4: (0, u.fw)(e) })
-                        : 5 == e.file_type && (o = { webm: (0, u.fw)(e) }),
-                        o && n && (r = n.create(o));
-                      break;
-                    case u._o.k_eShowImageGroup:
-                      break;
-                    default:
-                      (0, i.z_)(l, `Unhandled insert type ${l}`);
-                  }
-                  if (r) {
-                    const e = o.state.tr;
-                    e.selection.replaceWith(e, r), o.dispatch(e);
-                  }
-                };
-                return (
-                  (e.current = l),
-                  () => {
-                    e.current == l && (e.current = void 0);
-                  }
+                return t ? a : void 0;
+              })(e, n.image, n.video),
+              o = (function (e, t) {
+                const n = m.useCallback(
+                  (e) => ((0, Ft.yO)(e) ? t.create({ href: e }) : "default"),
+                  [t],
                 );
-              }, [e, t, n, a, o]);
-            })(n, g.image, g.video, v.link, s),
-            m.createElement(
-              ce,
-              { editModel: t, imageNode: g.image, videoNode: g.video },
-              m.createElement(
-                "div",
-                { className: Bt().EventDescriptionContainer },
-                m.createElement(Mt, {
-                  view: s,
-                  schema: d.pm_schema,
-                  refUpdateToolbar: _,
-                  className: Bt().ToolBar,
-                  clanSteamID: t.GetClanSteamID(),
-                }),
-                m.createElement(
-                  "div",
-                  { className: Bt().EventDescriptionArea },
-                  m.createElement(
-                    Ut.l,
-                    {
-                      pmState: p,
-                      className: (0, ge.A)(
-                        Bt().EventDescriptionRichField,
-                        Bt().EventDetailsBody,
-                      ),
-                      refOnUpdate: _,
-                      refView: c,
-                      panelProps: { onBlur: () => p.CommitChanges() },
-                    },
-                    m.createElement(qt, { eventSchemaConfig: d, editModel: t }),
-                  ),
-                ),
-              ),
-            )
-          );
-        }),
-        qt = m.memo(function (e) {
-          const { eventSchemaConfig: t, editModel: n } = e,
-            { marks: a, nodes: o } = t.pm_schema,
-            l = (function (e, t, n) {
-              const a = m.useCallback(
-                (a) => {
-                  const o = `^https?://${k.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
-                    l = a.match(o);
-                  if (l && l.groups.clanid == e.GetClanAccountID().toString()) {
-                    const a = _.pU.GetClanImageByImageHash(
-                      e.GetClanSteamID(),
-                      l.groups.filename,
-                    );
-                    let o = a && de(a, t, n);
-                    if (o) return o;
-                  }
-                  return "default";
-                },
-                [e, t, n],
-              );
-              return t ? a : void 0;
-            })(n, o.image, o.video),
-            r = (function (e, t) {
-              const n = m.useCallback(
-                (e) => ((0, Lt.yO)(e) ? t.create({ href: e }) : "default"),
-                [t],
-              );
-              return t ? n : void 0;
-            })(0, o.dynamiclink),
-            i = m.useCallback(
+                return t ? n : void 0;
+              })(0, n.dynamiclink);
+            return m.useCallback(
               (...e) => {
                 let t = "default";
                 return (
-                  l && (t = l(...e)), "default" == t && r && (t = r(...e)), t
+                  a && (t = a(...e)), "default" == t && o && (t = o(...e)), t
                 );
               },
-              [l, r],
+              [a, o],
             );
-          return m.createElement(
-            m.Fragment,
-            null,
-            m.createElement(s.W, {
-              linkMarkType: a.link,
-              onURLPasted: i,
-              schema: t.pm_schema,
-            }),
-            o.image && m.createElement(b.pw, { nodeType: o.image }),
-            m.createElement(Yt, {
-              schemaConfig: t,
-              editModel: n,
-              clanSteamID: n.GetClanSteamID(),
-            }),
-            m.createElement(Ot, { emoticonStore: Ct.A, schema: t.pm_schema }),
+          })(t, d);
+        m.useEffect(() => {
+          E(
+            (function (e, t, n, o) {
+              let l = t.GetDescription(n);
+              return (
+                (l =
+                  null == l
+                    ? void 0
+                    : l.replace(
+                        wt.pN.GetUnvalidatedEmoticonReplaceRegex(),
+                        "[emoticon]$1[/emoticon]",
+                      )),
+                new a.n(e, l, (e) => t.SetDescription(n, e), {
+                  parser: {
+                    fnProcessText: (t) =>
+                      (0, jt.F)(e.pm_schema, t, e.pm_schema.marks.link, o),
+                  },
+                })
+              );
+            })(d, t, r, g),
           );
-        });
-      function Yt(e) {
+        }, [d, g, t, r]);
+        const h = m.useRef(void 0);
+        (0, o.i)(p, { msAutosaveTimeout: 1e3 });
+        const { nodes: v, marks: f } = d.pm_schema;
+        return (
+          (function (e, t, n, a, o) {
+            m.useEffect(() => {
+              if (!o || !t) return;
+              const l = (e, l) => {
+                let r;
+                switch (l) {
+                  case u._o.k_eInsertFullImage:
+                    r = t.create({ src: (0, u.fw)(e) });
+                    break;
+                  case u._o.k_eInsertThumbnail:
+                    r = t.create({ src: (0, u.fw)(e, !0) }, null, [
+                      a.create({ href: (0, u.fw)(e) }),
+                    ]);
+                    break;
+                  case u._o.k_eInsertVideo:
+                    let o;
+                    4 == e.file_type
+                      ? (o = { mp4: (0, u.fw)(e) })
+                      : 5 == e.file_type && (o = { webm: (0, u.fw)(e) }),
+                      o && n && (r = n.create(o));
+                    break;
+                  case u._o.k_eShowImageGroup:
+                    break;
+                  default:
+                    (0, i.z_)(l, `Unhandled insert type ${l}`);
+                }
+                if (r) {
+                  const e = o.state.tr;
+                  e.selection.replaceWith(e, r), o.dispatch(e);
+                }
+              };
+              return (
+                (e.current = l),
+                () => {
+                  e.current == l && (e.current = void 0);
+                }
+              );
+            }, [e, t, n, a, o]);
+          })(n, v.image, v.video, f.link, s),
+          m.createElement(
+            ce,
+            { editModel: t, imageNode: v.image, videoNode: v.video },
+            m.createElement(
+              "div",
+              { className: Bt().EventDescriptionContainer },
+              m.createElement(Mt, {
+                view: s,
+                schema: d.pm_schema,
+                refUpdateToolbar: h,
+                className: Bt().ToolBar,
+                clanSteamID: t.GetClanSteamID(),
+              }),
+              m.createElement(
+                "div",
+                { className: Bt().EventDescriptionArea },
+                m.createElement(
+                  Ut.l,
+                  {
+                    pmState: p,
+                    className: (0, ge.A)(
+                      Bt().EventDescriptionRichField,
+                      Bt().EventDetailsBody,
+                    ),
+                    refOnUpdate: h,
+                    refView: c,
+                    panelProps: { onBlur: () => p.CommitChanges() },
+                  },
+                  m.createElement(Yt, {
+                    eventSchemaConfig: d,
+                    editModel: t,
+                    onURLPasted: g,
+                  }),
+                ),
+              ),
+            ),
+          )
+        );
+      });
+      const Yt = m.memo(function (e) {
+        const { eventSchemaConfig: t, editModel: n, onURLPasted: a } = e,
+          { marks: o, nodes: l } = t.pm_schema;
+        return m.createElement(
+          m.Fragment,
+          null,
+          m.createElement(s.W, {
+            linkMarkType: o.link,
+            onURLPasted: a,
+            schema: t.pm_schema,
+          }),
+          l.image && m.createElement(b.pw, { nodeType: l.image }),
+          m.createElement(Qt, {
+            schemaConfig: t,
+            editModel: n,
+            clanSteamID: n.GetClanSteamID(),
+          }),
+          m.createElement(Ot, { emoticonStore: Ct.A, schema: t.pm_schema }),
+        );
+      });
+      function Qt(e) {
         const { schemaConfig: t, editModel: n, clanSteamID: a } = e,
           o = t.pm_schema,
           s = m.useMemo(
@@ -2894,7 +2923,7 @@
             () => [
               i.previewyoutube && {
                 type: i.previewyoutube,
-                component: he,
+                component: ve,
                 readProps: (e) => ({
                   videoID: e.attrs.videoID,
                   align: e.attrs.align,
@@ -2916,7 +2945,11 @@
               i.dynamiclink && {
                 type: i.dynamiclink,
                 component: Vt,
-                readProps: (e) => ({ editModel: n, href: e.attrs.href }),
+                readProps: (e) => ({
+                  editModel: n,
+                  href: e.attrs.href,
+                  schema: t.pm_schema,
+                }),
               },
               i.carousel && {
                 type: i.carousel,

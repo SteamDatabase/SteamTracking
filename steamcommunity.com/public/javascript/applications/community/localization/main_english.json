@@ -583,6 +583,7 @@
     "EventEditor_CarouselEditor_AutoAdvance": "Auto-advance",
     "EventEditor_CarouselEditor_AddAnotherItem": "Add another image",
     "EventEditor_CarouselEditor_CreateACarousel": "Create a carousel of images...",
+    "EventEditor_DynamicLink_ConvertToTextLink": "Convert to text link",
     "EventEditor_ImageEdit_PreviewImage": "Preview image",
     "EventEdit_Error_PublishingDesc": "The following errors with the current event prevent publishing this event. Please correct them and retry to publish.",
     "EventEdit_Error_StartTimeNotSet": "The event start time is not set.",

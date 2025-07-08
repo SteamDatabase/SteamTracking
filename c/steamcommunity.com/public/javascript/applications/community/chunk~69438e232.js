@@ -16685,11 +16685,15 @@
         render() {
           return (
             this.m_parser.UpdateOverrideLanguage(this.props.languageOverride),
-            this.m_parser.ParseBBCode(this.props.text, {
-              showErrorInfo: this.props.showErrorInfo,
-              event: this.props.event,
-              bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
-            })
+            this.m_parser.ParseBBCode(
+              this.props.text,
+              {
+                showErrorInfo: this.props.showErrorInfo,
+                event: this.props.event,
+                bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
+              },
+              !0,
+            )
           );
         }
       }

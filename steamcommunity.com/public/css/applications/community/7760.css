@@ -65,7 +65,7 @@
   transition: opacity .25s;
   display: flex;
   flex-direction: row-reverse;
-  z-index: 1;
+  z-index: 10;
   gap: 12px;
 }
 ._2Lz0NGsqaU7fnOxrrftZMG .KsGqILWyUj2YuFJK_Zy7D {

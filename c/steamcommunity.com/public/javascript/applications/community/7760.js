@@ -3157,7 +3157,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { editModel: _, href: __webpack_require__, setAttrs: _ } = _,
+        const { editModel: _, href: __webpack_require__ } = _,
           _ = (0, _._)(__webpack_require__);
         if (_) {
           const _ = _.fnBBComponent(__webpack_require__, {
@@ -3168,8 +3168,10 @@
             _,
             {
               toolbar: _.createElement(_, {
-                removeNode: _.removeNode,
                 href: __webpack_require__,
+                removeNode: _.removeNode,
+                update: _.update,
+                schema: _.schema,
               }),
             },
             _,
@@ -3184,7 +3186,12 @@
         );
       }
       function _(_) {
-        const { href: _, removeNode: __webpack_require__ } = _;
+        const {
+          href: _,
+          removeNode: __webpack_require__,
+          update: _,
+          schema: _,
+        } = _;
         return _.createElement(
           _,
           {
@@ -3198,8 +3205,28 @@
             },
             _.createElement(_.YNO, null),
           ),
+          _.createElement(
+            _,
+            {
+              onClick: () =>
+                _(
+                  (0, _._)(
+                    _.text(_, [
+                      _.marks.link.create({
+                        href: _,
+                      }),
+                    ]),
+                  ),
+                ),
+              description: (0, _._)(
+                "#EventEditor_DynamicLink_ConvertToTextLink",
+              ),
+            },
+            _.createElement(_.Rkk, null),
+          ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
         const { editModel: _ } = _,
           _ = _.GetEventModel().loadedAllLanguages,
@@ -3212,175 +3239,52 @@
           : null;
       });
       const _ = _.memo(function (_) {
-          const {
-              editModel: _,
-              refOnInsertImage: __webpack_require__,
-              limitBBCode: _,
-              eCurrentEditLanguage: _,
-            } = _,
-            [_, _] = _.useState(),
-            _ = _.useMemo(() => (0, _._)(_), [_]),
-            [_, _] = _.useState();
-          _.useEffect(() => {
-            _(
-              (function (_, _, _) {
-                let _ = _.GetDescription(_);
-                return (
-                  (_ =
-                    null == _
-                      ? void 0
-                      : _.replace(
-                          _._.GetUnvalidatedEmoticonReplaceRegex(),
-                          "[emoticon]$1[/emoticon]",
-                        )),
-                  new _._(_, _, (_) => _.SetDescription(_, _))
-                );
-              })(_, _, _),
-            );
-          }, [_, _, _]);
-          const _ = _.useRef(void 0);
-          (0, _._)(_, {
-            msAutosaveTimeout: 1e3,
-          });
-          const { nodes: _, marks: _ } = _.pm_schema;
-          return (
-            (function (_, _, _, _, _) {
-              _.useEffect(() => {
-                if (!_ || !_) return;
-                const _ = (_, _) => {
-                  let _;
-                  switch (_) {
-                    case _._.k_eInsertFullImage:
-                      _ = _.create({
-                        src: (0, _._)(_),
-                      });
-                      break;
-                    case _._.k_eInsertThumbnail:
-                      _ = _.create(
-                        {
-                          src: (0, _._)(_, !0),
-                        },
-                        null,
-                        [
-                          _.create({
-                            href: (0, _._)(_),
-                          }),
-                        ],
+        const {
+            editModel: _,
+            refOnInsertImage: __webpack_require__,
+            limitBBCode: _,
+            eCurrentEditLanguage: _,
+          } = _,
+          [_, _] = _.useState(),
+          _ = _.useMemo(() => (0, _._)(_), [_]),
+          [_, _] = _.useState(),
+          _ = (function (_, _) {
+            const { nodes: __webpack_require__ } = _.pm_schema,
+              _ = (function (_, _, _) {
+                const _ = _.useCallback(
+                  (_) => {
+                    const _ = `^https?://${_._.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
+                      _ = _.match(_);
+                    if (
+                      _ &&
+                      _.groups.clanid == _.GetClanAccountID().toString()
+                    ) {
+                      const _ = _._.GetClanImageByImageHash(
+                        _.GetClanSteamID(),
+                        _.groups.filename,
                       );
-                      break;
-                    case _._.k_eInsertVideo:
-                      let _;
-                      4 == _.file_type
-                        ? (_ = {
-                            mp4: (0, _._)(_),
-                          })
-                        : 5 == _.file_type &&
-                          (_ = {
-                            webm: (0, _._)(_),
-                          }),
-                        _ && _ && (_ = __webpack_require__.create(_));
-                      break;
-                    case _._.k_eShowImageGroup:
-                      break;
-                    default:
-                      (0, _._)(_, `Unhandled insert type ${_}`);
-                  }
-                  if (_) {
-                    const _ = _.state._;
-                    _.selection.replaceWith(_, _), _.dispatch(_);
-                  }
-                };
-                return (
-                  (_.current = _),
-                  () => {
-                    _.current == _ && (_.current = void 0);
-                  }
-                );
-              }, [_, _, _, _, _]);
-            })(__webpack_require__, _.image, _.video, _.link, _),
-            _.createElement(
-              _,
-              {
-                editModel: _,
-                imageNode: _.image,
-                videoNode: _.video,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EventDescriptionContainer,
-                },
-                _.createElement(_, {
-                  view: _,
-                  schema: _.pm_schema,
-                  refUpdateToolbar: _,
-                  className: _().ToolBar,
-                  clanSteamID: _.GetClanSteamID(),
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventDescriptionArea,
+                      let _ = _ && _(_, _, _);
+                      if (_) return _;
+                    }
+                    return "default";
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      pmState: _,
-                      className: (0, _._)(
-                        _().EventDescriptionRichField,
-                        _().EventDetailsBody,
-                      ),
-                      refOnUpdate: _,
-                      refView: _,
-                      panelProps: {
-                        onBlur: () => _.CommitChanges(),
-                      },
-                    },
-                    _.createElement(_, {
-                      eventSchemaConfig: _,
-                      editModel: _,
-                    }),
-                  ),
-                ),
-              ),
-            )
-          );
-        }),
-        _ = _.memo(function (_) {
-          const { eventSchemaConfig: _, editModel: __webpack_require__ } = _,
-            { marks: _, nodes: _ } = _.pm_schema,
-            _ = (function (_, _, _) {
-              const _ = _.useCallback(
-                (_) => {
-                  const _ = `^https?://${_._.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
-                    _ = _.match(_);
-                  if (_ && _.groups.clanid == _.GetClanAccountID().toString()) {
-                    const _ = _._.GetClanImageByImageHash(
-                      _.GetClanSteamID(),
-                      _.groups.filename,
-                    );
-                    let _ = _ && _(_, _, _);
-                    if (_) return _;
-                  }
-                  return "default";
-                },
-                [_, _, _],
-              );
-              return _ ? _ : void 0;
-            })(__webpack_require__, _.image, _.video),
-            _ = (function (_, _) {
-              const _ = _.useCallback(
-                (_) =>
-                  (0, _._)(_)
-                    ? _.create({
-                        href: _,
-                      })
-                    : "default",
-                [_],
-              );
-              return _ ? _ : void 0;
-            })(0, _.dynamiclink),
-            _ = _.useCallback(
+                  [_, _, _],
+                );
+                return _ ? _ : void 0;
+              })(_, __webpack_require__.image, __webpack_require__.video),
+              _ = (function (_, _) {
+                const _ = _.useCallback(
+                  (_) =>
+                    (0, _._)(_)
+                      ? _.create({
+                          href: _,
+                        })
+                      : "default",
+                  [_],
+                );
+                return _ ? _ : void 0;
+              })(0, __webpack_require__.dynamiclink);
+            return _.useCallback(
               (..._) => {
                 let _ = "default";
                 return (
@@ -3389,29 +3293,168 @@
               },
               [_, _],
             );
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, {
-              linkMarkType: _.link,
-              onURLPasted: _,
-              schema: _.pm_schema,
-            }),
-            _.image &&
-              _.createElement(_._, {
-                nodeType: _.image,
-              }),
-            _.createElement(_, {
-              schemaConfig: _,
-              editModel: __webpack_require__,
-              clanSteamID: __webpack_require__.GetClanSteamID(),
-            }),
-            _.createElement(_, {
-              emoticonStore: _._,
-              schema: _.pm_schema,
-            }),
+          })(_, _);
+        _.useEffect(() => {
+          _(
+            (function (_, _, _, _) {
+              let _ = _.GetDescription(_);
+              return (
+                (_ =
+                  null == _
+                    ? void 0
+                    : _.replace(
+                        _._.GetUnvalidatedEmoticonReplaceRegex(),
+                        "[emoticon]$1[/emoticon]",
+                      )),
+                new _._(_, _, (_) => _.SetDescription(_, _), {
+                  parser: {
+                    fnProcessText: (_) =>
+                      (0, _._)(_.pm_schema, _, _.pm_schema.marks.link, _),
+                  },
+                })
+              );
+            })(_, _, _, _),
           );
+        }, [_, _, _, _]);
+        const _ = _.useRef(void 0);
+        (0, _._)(_, {
+          msAutosaveTimeout: 1e3,
         });
+        const { nodes: _, marks: _ } = _.pm_schema;
+        return (
+          (function (_, _, _, _, _) {
+            _.useEffect(() => {
+              if (!_ || !_) return;
+              const _ = (_, _) => {
+                let _;
+                switch (_) {
+                  case _._.k_eInsertFullImage:
+                    _ = _.create({
+                      src: (0, _._)(_),
+                    });
+                    break;
+                  case _._.k_eInsertThumbnail:
+                    _ = _.create(
+                      {
+                        src: (0, _._)(_, !0),
+                      },
+                      null,
+                      [
+                        _.create({
+                          href: (0, _._)(_),
+                        }),
+                      ],
+                    );
+                    break;
+                  case _._.k_eInsertVideo:
+                    let _;
+                    4 == _.file_type
+                      ? (_ = {
+                          mp4: (0, _._)(_),
+                        })
+                      : 5 == _.file_type &&
+                        (_ = {
+                          webm: (0, _._)(_),
+                        }),
+                      _ && _ && (_ = __webpack_require__.create(_));
+                    break;
+                  case _._.k_eShowImageGroup:
+                    break;
+                  default:
+                    (0, _._)(_, `Unhandled insert type ${_}`);
+                }
+                if (_) {
+                  const _ = _.state._;
+                  _.selection.replaceWith(_, _), _.dispatch(_);
+                }
+              };
+              return (
+                (_.current = _),
+                () => {
+                  _.current == _ && (_.current = void 0);
+                }
+              );
+            }, [_, _, _, _, _]);
+          })(__webpack_require__, _.image, _.video, _.link, _),
+          _.createElement(
+            _,
+            {
+              editModel: _,
+              imageNode: _.image,
+              videoNode: _.video,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().EventDescriptionContainer,
+              },
+              _.createElement(_, {
+                view: _,
+                schema: _.pm_schema,
+                refUpdateToolbar: _,
+                className: _().ToolBar,
+                clanSteamID: _.GetClanSteamID(),
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().EventDescriptionArea,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    pmState: _,
+                    className: (0, _._)(
+                      _().EventDescriptionRichField,
+                      _().EventDetailsBody,
+                    ),
+                    refOnUpdate: _,
+                    refView: _,
+                    panelProps: {
+                      onBlur: () => _.CommitChanges(),
+                    },
+                  },
+                  _.createElement(_, {
+                    eventSchemaConfig: _,
+                    editModel: _,
+                    onURLPasted: _,
+                  }),
+                ),
+              ),
+            ),
+          )
+        );
+      });
+      const _ = _.memo(function (_) {
+        const {
+            eventSchemaConfig: _,
+            editModel: __webpack_require__,
+            onURLPasted: _,
+          } = _,
+          { marks: _, nodes: _ } = _.pm_schema;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            linkMarkType: _.link,
+            onURLPasted: _,
+            schema: _.pm_schema,
+          }),
+          _.image &&
+            _.createElement(_._, {
+              nodeType: _.image,
+            }),
+          _.createElement(_, {
+            schemaConfig: _,
+            editModel: __webpack_require__,
+            clanSteamID: __webpack_require__.GetClanSteamID(),
+          }),
+          _.createElement(_, {
+            emoticonStore: _._,
+            schema: _.pm_schema,
+          }),
+        );
+      });
       function _(_) {
         const {
             schemaConfig: _,
@@ -3486,6 +3529,7 @@
                 readProps: (_) => ({
                   editModel: __webpack_require__,
                   href: _.attrs.href,
+                  schema: _.pm_schema,
                 }),
               },
               _.carousel && {

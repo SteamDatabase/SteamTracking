@@ -13,6 +13,33 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        let _,
+          _ = [];
+        for (; (_ = _.match(_._)); ) {
+          _.index > 0 && _.push(_.text(_.substring(0, _.index)));
+          const _ = (0, _._)(_[0]),
+            _ = _ && _(_);
+          _ && "default" !== _
+            ? "remove" !== _ && _.push(_)
+            : _.push(
+                _.text(_[0], [
+                  __webpack_require__.create({
+                    href: _,
+                  }),
+                ]),
+              ),
+            (_ = _.substring(_.index + _[0].length));
+        }
+        if (0 != _.length) return _.length && _.push(_.text(_)), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -60,7 +87,7 @@
                       _.altKey
                     ) && (_(_), !0),
                   clipboardTextParser(_, _, _, _) {
-                    const _ = _(_, _, _, __webpack_require__);
+                    const _ = (0, _._)(_, _, _, __webpack_require__);
                     return _ && new _._(_._.from(_), _.start(), _.end());
                   },
                   handlePaste(_, _, _) {
@@ -68,7 +95,7 @@
                     if (
                       (_.content.descendants((_, _) => {
                         if (_.isText) {
-                          const _ = _(_, _.text, _, __webpack_require__);
+                          const _ = (0, _._)(_, _.text, _, __webpack_require__);
                           _ &&
                             _.push({
                               node: _,
@@ -139,26 +166,6 @@
           _.createElement(_.Fragment, null, _, _)
         );
       });
-      function _(_, _, _, _) {
-        let _,
-          _ = [];
-        for (; (_ = _.match(_._)); ) {
-          _.index > 0 && _.push(_.text(_.substring(0, _.index)));
-          const _ = (0, _._)(_[0]),
-            _ = _ && _(_);
-          _ && "default" !== _
-            ? "remove" !== _ && _.push(_)
-            : _.push(
-                _.text(_[0], [
-                  __webpack_require__.create({
-                    href: _,
-                  }),
-                ]),
-              ),
-            (_ = _.substring(_.index + _[0].length));
-        }
-        if (0 != _.length) return _.length && _.push(_.text(_)), _;
-      }
       function _(_) {
         const { top: _, left: __webpack_require__, href: _ } = _,
           [_, _] = _.useState(0),

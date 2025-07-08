@@ -10,33 +10,52 @@
         LinkHelp: "_3Vn5X8bzPjWx5p545nkB6k",
       };
     },
+    42714: (e, t, n) => {
+      "use strict";
+      n.d(t, { F: () => r });
+      var o = n(26205);
+      function r(e, t, n, r) {
+        let s,
+          i = [];
+        for (; (s = t.match(o.O)); ) {
+          s.index > 0 && i.push(e.text(t.substring(0, s.index)));
+          const l = (0, o.S)(s[0]),
+            a = r && r(l);
+          a && "default" !== a
+            ? "remove" !== a && i.push(a)
+            : i.push(e.text(s[0], [n.create({ href: l })])),
+            (t = t.substring(s.index + s[0].length));
+        }
+        if (0 != i.length) return t.length && i.push(e.text(t)), i;
+      }
+    },
     28106: (e, t, n) => {
       "use strict";
       n.d(t, { W: () => u });
-      var o = n(26205),
-        r = n(57053),
-        s = n(52893),
-        i = n(90626),
-        l = n(61859),
-        a = n(17558),
-        c = n(22145),
-        d = n(59722);
-      const u = i.memo(function (e) {
+      var o = n(57053),
+        r = n(52893),
+        s = n(90626),
+        i = n(61859),
+        l = n(17558),
+        a = n(22145),
+        c = n(59722),
+        d = n(42714);
+      const u = s.memo(function (e) {
         const {
             linkMarkType: t,
             onURLPasted: n,
-            schema: o,
-            onClickURL: l = p,
+            schema: i,
+            onClickURL: c = h,
           } = e,
-          d = i.useRef(l);
-        d.current = l;
-        const [u, f] = i.useState(),
-          [g, v] = i.useState(),
-          [w, P] = i.useState(),
-          [E, _] = (0, a.E)(o),
-          y = i.useMemo(
+          u = s.useRef(c);
+        u.current = c;
+        const [p, f] = s.useState(),
+          [g, v] = s.useState(),
+          [w, P] = s.useState(),
+          [E, _] = (0, l.E)(i),
+          y = s.useMemo(
             () =>
-              new s.k_({
+              new r.k_({
                 props: {
                   handleClickOn(e, n, o, r, s, i) {
                     if (i && (s.ctrlKey || 1 == s.button)) {
@@ -46,7 +65,7 @@
                         .find((e) => e.type == t);
                       if (e)
                         return (
-                          d.current(e.attrs.href, s.view),
+                          u.current(e.attrs.href, s.view),
                           s.preventDefault(),
                           !0
                         );
@@ -60,17 +79,17 @@
                       t.shiftKey ||
                       t.altKey
                     ) && (E(e), !0),
-                  clipboardTextParser(e, s, i, l) {
-                    const a = m(o, e, t, n);
-                    return a && new r.Ji(r.FK.from(a), s.start(), s.end());
+                  clipboardTextParser(e, r, s, l) {
+                    const a = (0, d.F)(i, e, t, n);
+                    return a && new o.Ji(o.FK.from(a), r.start(), r.end());
                   },
-                  handlePaste(e, s, i) {
+                  handlePaste(e, r, s) {
                     let l = [];
                     if (
-                      (i.content.descendants((e, r) => {
+                      (s.content.descendants((e, o) => {
                         if (e.isText) {
-                          const s = m(o, e.text, t, n);
-                          s && l.push({ node: e, pos: r, rgNodes: s });
+                          const r = (0, d.F)(i, e.text, t, n);
+                          r && l.push({ node: e, pos: o, rgNodes: r });
                         }
                       }),
                       !l.length)
@@ -79,14 +98,14 @@
                     let a = e.state.tr;
                     a.selection.empty || a.deleteSelection();
                     let c = a.selection.from,
-                      d = 0;
+                      u = 0;
                     for (const e of l) {
-                      const { node: t, pos: n, rgNodes: o } = e,
-                        s = i.content.cut(d, n).append(r.FK.from(o));
-                      a.insert(c, s), (c += s.size + 2), (d = n + t.nodeSize);
+                      const { node: t, pos: n, rgNodes: r } = e,
+                        i = s.content.cut(u, n).append(o.FK.from(r));
+                      a.insert(c, i), (c += i.size + 2), (u = n + t.nodeSize);
                     }
                     return (
-                      a.insert(c, i.content.cut(d)),
+                      a.insert(c, s.content.cut(u)),
                       a.scrollIntoView(),
                       e.dispatch(a),
                       !0
@@ -111,56 +130,42 @@
                   },
                 },
               }),
-            [t, E, n, o],
+            [t, E, n, i],
           );
-        (0, c.c$)(y);
+        (0, a.c$)(y);
         let k = null;
         return (
           w &&
-            u &&
+            p &&
             g &&
-            (k = i.createElement(h, {
+            (k = s.createElement(m, {
               top: g,
-              left: u,
+              left: p,
               href: w.getAttribute("href"),
             })),
-          i.createElement(i.Fragment, null, k, _)
+          s.createElement(s.Fragment, null, k, _)
         );
       });
-      function m(e, t, n, r) {
-        let s,
-          i = [];
-        for (; (s = t.match(o.O)); ) {
-          s.index > 0 && i.push(e.text(t.substring(0, s.index)));
-          const l = (0, o.S)(s[0]),
-            a = r && r(l);
-          a && "default" !== a
-            ? "remove" !== a && i.push(a)
-            : i.push(e.text(s[0], [n.create({ href: l })])),
-            (t = t.substring(s.index + s[0].length));
-        }
-        if (0 != i.length) return t.length && i.push(e.text(t)), i;
-      }
-      function h(e) {
+      function m(e) {
         const { top: t, left: n, href: o } = e,
-          [r, s] = i.useState(0),
-          a = i.useRef(null);
-        i.useLayoutEffect(() => {
-          s(a.current.getBoundingClientRect().width);
+          [r, l] = s.useState(0),
+          a = s.useRef(null);
+        s.useLayoutEffect(() => {
+          l(a.current.getBoundingClientRect().width);
         }, [t, n, o]);
-        const c = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
-        return i.createElement(
+        const d = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
+        return s.createElement(
           "div",
-          { className: d.Hover, style: c, ref: a },
-          i.createElement("div", { className: d.Link }, o),
-          i.createElement(
+          { className: c.Hover, style: d, ref: a },
+          s.createElement("div", { className: c.Link }, o),
+          s.createElement(
             "div",
-            { className: d.LinkHelp },
-            (0, l.we)("#UserGameNotes_ClickToOpenLink"),
+            { className: c.LinkHelp },
+            (0, i.we)("#UserGameNotes_ClickToOpenLink"),
           ),
         );
       }
-      function p(e, t) {
+      function h(e, t) {
         t.open(e);
       }
     },

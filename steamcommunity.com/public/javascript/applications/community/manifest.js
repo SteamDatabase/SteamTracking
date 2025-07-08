@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9879855";
+var CLSTAMP = "9884117";
 (() => {
   "use strict";
   var a,
@@ -293,7 +293,7 @@ var CLSTAMP = "9879855";
         4922: "953a0f2e92fa7c404c03",
         4952: "a27a5710496debd6c359",
         5043: "445cbb7f84e9897c7848",
-        5052: "833ab8a1ddff7382af63",
+        5052: "925f950e73c438199607",
         5082: "8ffb3c43812397edea97",
         5103: "27b62fc86a628faa9228",
         5184: "b8d78da8dcdd224ff0ea",
@@ -310,7 +310,7 @@ var CLSTAMP = "9879855";
         5876: "fd880cd25b65ad6bf338",
         5955: "05e72d6282624b349b27",
         6120: "0d679bbdcb367301a3fa",
-        6200: "7dcb0ec47d708a7a1dca",
+        6200: "633e3a61e73ec434a19b",
         6209: "6c1fa0406e660401098c",
         6295: "6459987be818472ed2b1",
         6428: "49b99045e09b7539d7c6",
@@ -341,14 +341,14 @@ var CLSTAMP = "9879855";
         7679: "78cb0557705b33f3188c",
         7696: "18aa50e93c145e6cb99e",
         7724: "2f3ddbc633845bf50afc",
-        7760: "50342a7b937afee862bd",
+        7760: "02eebba5f9005f61558d",
         7933: "5e11ec92831c72d5c079",
         7958: "bc1c416358ae578661ae",
         8021: "4e2ed7b651dd48a27668",
         8024: "7a40bbc393af55a4704d",
         8026: "e04d8dd96d444e4ebc92",
         8064: "aeac389cea466657bd10",
-        8104: "b76131478e71af40196a",
+        8104: "969340440bbca99d5006",
         8138: "d4befe19eab4b50063dd",
         8239: "0a024b96b79e82807956",
         8291: "38ed8b79797dcad7490e",
@@ -383,7 +383,7 @@ var CLSTAMP = "9879855";
         9617: "3e5cb211c045c9e969c2",
         9638: "6b199d33060f7cec4be8",
         9743: "b2d9587e4009a994b616",
-        9774: "f404d6e6a139893cc87e",
+        9774: "1a8d7cf282431918b06c",
         9783: "3b98b086463ee12ac6e0",
         9855: "d8c556facc9be5fe8f98",
         9857: "9b9f51695c2e5d6be58d",
@@ -451,7 +451,7 @@ var CLSTAMP = "9879855";
         6966: "a66289e969ece5d1faad",
         7561: "789dd1fbdb6c6b5c773d",
         7634: "1a410fef2253df6a0a34",
-        7760: "f7f32c445744d4afc333",
+        7760: "f4738f3ea12191e1ddd6",
         7933: "9befb5322fa18d2c9184",
         8138: "fc73abfe79a665f196e8",
         8396: "e53dd7f5e3feba02531b",
