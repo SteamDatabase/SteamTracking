@@ -754,7 +754,6 @@ BuyItemDialog = {
 	m_modal: null,
 
 	m_confirmation: 0,
-	m_confirmationTimeout: 0,
 	m_confirmationTries: 0,
 
 	Initialize: function() {
@@ -797,6 +796,8 @@ BuyItemDialog = {
 		var sCurrentURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
 		this.m_sAddFundsReturnURL = encodeURIComponent( sCurrentURL + '#buy' + sElementPrefix + '|' + listingid + '|' + item['appid'] + '|' + item['contextid'] + '|'  + item['id'] );
 		this.m_oListingOriginalRow = $(sElementPrefix + '_' + listingid);
+		if ( window.m_confirmationTimeout ) { clearTimeout( window.m_confirmationTimeout ); }
+		window.m_confirmationTimeout = 0;
 
 		var bNoWallet = g_rgWalletInfo['wallet_currency'] == 0;
 		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
@@ -939,6 +940,8 @@ BuyItemDialog = {
 	},
 
 	Dismiss: function() {
+		if ( window.m_confirmationTimeout ) { clearTimeout( window.m_confirmationTimeout ); }
+		window.m_confirmationTimeout = 0;
 		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
 		if ( this.m_modal )
 		{
@@ -1062,7 +1065,7 @@ BuyItemDialog = {
 				buyItemDialog.m_confirmation = data.confirmation.confirmation_id;
 				if ( buyItemDialog.m_confirmation )
 				{
-					buyItemDialog.m_confirmationTimeout = setTimeout(function () { buyItemDialog.GetConfirmationState(); }, 1500);
+					window.m_confirmationTimeout = setTimeout(function () { buyItemDialog.GetConfirmationState(); }, 1500);
 				}
 			}
 			else if ( buyItemDialog.m_confirmation )
@@ -1078,7 +1081,6 @@ BuyItemDialog = {
 
 	OnCancel: function( event ) {
 		this.Dismiss();
-		if ( this.m_confirmationTimeout ) { clearTimeout( this.m_confirmationTimeout ); }
 		event.stop();
 	},
 
@@ -1159,7 +1161,8 @@ BuyItemDialog = {
 
 	CancelConfirmation: function() {
 		this.m_confirmationTries = 0;
-		if ( this.m_confirmationTimeout ) { clearTimeout( this.m_confirmationTimeout ); }
+		if ( window.m_confirmationTimeout ) { clearTimeout( window.m_confirmationTimeout ); }
+		window.m_confirmationTimeout = 0;
 		if ( !this.m_bPurchaseSuccess )
 		{
 			BuyItemDialog.OnFailure({responseJSON: {message: "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again."}});

@@ -639,8 +639,8 @@ body.compact_trading_ui .appselect {
 
 .market_dialog_purchase_confirmation_inner {
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
-	margin: 10px 50px 0px 50px;
-	padding: 20px 50px 0px 20px;
+	margin: 0px 50px 0px 50px;
+	padding: 0px 50px 0px 20px;
 	display: flex;
 	align-items: center;
 	gap: 25px;
@@ -650,6 +650,11 @@ body.compact_trading_ui .appselect {
 .market_dialog_purchase_confirmation_inner_image {
 	width: 94px;
 	height: 136px;
+	padding-top: 15px;
+}
+
+.market_dialog_purchase_confirmation_inner_image_small {
+	padding: 20px 0px;
 }
 
 .market_dialog_purchase_confirmation_inner_text {
