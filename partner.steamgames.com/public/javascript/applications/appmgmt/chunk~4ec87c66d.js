@@ -41131,7 +41131,7 @@
     },
     2851: (e, t, a) => {
       "use strict";
-      a.d(t, { y: () => u });
+      a.d(t, { y: () => p });
       var n = a(22837),
         r = a(63556),
         i = a(1909),
@@ -41140,15 +41140,18 @@
         o = a(16676),
         c = a(75026),
         m = a.n(c),
-        d = a(26408);
-      function u(e) {
+        d = a(26408),
+        u = a(22797);
+      function p(e) {
         const { fnGetAltText: t, fnSetAltText: a } = e,
           c = (0, r.E)(),
-          u = (0, l.q3)(() => t(c)),
-          p = (0, s.useCallback)(
+          p = (0, l.q3)(() => t(c)),
+          [_, g] = (0, s.useState)(!1),
+          h = (0, s.useCallback)(
             (e) => {
               const t = e.target.files?.[0];
               if (!t) return;
+              g(!0);
               const r = new FileReader();
               (r.onload = (e) => {
                 try {
@@ -41164,46 +41167,69 @@
                   });
                 } catch (e) {
                   console.error("Failed to read or parse JSON:", e);
+                } finally {
+                  g(!1);
                 }
               }),
                 r.readAsText(t);
             },
             [a],
           );
-        return s.createElement(
-          s.Fragment,
-          null,
-          s.createElement(i.yk, {
-            fnLangHasData: (e) => t(e)?.trim().length > 0,
-          }),
-          s.createElement(
-            "div",
-            { className: m().Ctn },
-            s.createElement(i.iN, null),
-            s.createElement(
-              o.JU,
+        return _
+          ? s.createElement(u.t, { string: "Loading" })
+          : s.createElement(
+              s.Fragment,
               null,
-              "Or import json ",
-              s.createElement(d.o, {
-                tooltip:
-                  'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
+              s.createElement(i.yk, {
+                fnLangHasData: (e) => t(e)?.trim().length > 0,
               }),
-            ),
-            s.createElement("input", {
-              type: "file",
-              accept: ".json",
-              onChange: p,
-            }),
-          ),
-          s.createElement(o.pd, {
-            type: "text",
-            value: u,
-            onChange: (e) => a(c, e.currentTarget.value),
-            label: "Alternative Text",
-            tooltip:
-              "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
-          }),
-        );
+              s.createElement(
+                "div",
+                { className: m().Ctn },
+                s.createElement(i.iN, null),
+                s.createElement(
+                  o.JU,
+                  null,
+                  "Or import json ",
+                  s.createElement(d.o, {
+                    tooltip:
+                      'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
+                  }),
+                ),
+                s.createElement("input", {
+                  type: "file",
+                  accept: ".json",
+                  onChange: h,
+                }),
+                s.createElement(
+                  o.$n,
+                  {
+                    onClick: () => {
+                      let e = {};
+                      for (let a = 0; a < 30; ++a)
+                        t(a)?.trim().length > 0 && (e[(0, n.Lg)(a)] = t(a));
+                      const a = JSON.stringify(e, null, 2),
+                        r = new Blob([a], { type: "application/json" }),
+                        i = URL.createObjectURL(r),
+                        s = document.createElement("a");
+                      (s.href = i),
+                        (s.download = "export.json"),
+                        s.click(),
+                        URL.revokeObjectURL(i);
+                    },
+                  },
+                  "Export JSON",
+                ),
+              ),
+              s.createElement(o.pd, {
+                type: "text",
+                value: p,
+                onChange: (e) => a(c, e.currentTarget.value),
+                label: "Alternative Text",
+                tooltip:
+                  "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+              }),
+            );
       }
     },
     27429: (e, t, a) => {
