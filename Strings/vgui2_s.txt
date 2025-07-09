@@ -646,7 +646,7 @@ $\nY8O
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN4vgui6Size_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj6Size_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
@@ -703,7 +703,7 @@ $\nY8O
 10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIjN4vgui6Size_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIj6Size_ti8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
@@ -853,7 +853,7 @@ $\nY8O
 7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE
 7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE
 7CUtlMapIPKcbi22CDefStringLessFilenameE
-7CUtlMapIjN4vgui6Size_tEi8CDefLessE
+7CUtlMapIj6Size_ti8CDefLessE
 7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
 7CUtlMapIjss8CDefLessE
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
@@ -1989,13 +1989,13 @@ LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
 LANG
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lsb_release -d -s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lspci -mm -n
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" steamos-session-select %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
 LINUX
 LINUX32
 LINUX64

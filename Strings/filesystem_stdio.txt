@@ -787,6 +787,7 @@ ioctl
 isspace
 java Class for 
 java resource 
+l?aP
 lchown
 ld-linux.so.2
 len <= INT_MAX

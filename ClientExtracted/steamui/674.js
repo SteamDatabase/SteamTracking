@@ -2092,17 +2092,11 @@
               : o.createElement(
                   C.eV,
                   {
+                    title: (0, m.we)("#EventEditor_ImportFromHTML"),
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
                     className: ie().BBCodeEditorInputStyles,
                   },
-                  o.createElement(
-                    X.Y9,
-                    null,
-                    " ",
-                    (0, m.we)("#EventEditor_ImportFromHTML"),
-                    " ",
-                  ),
                   o.createElement(
                     X.nB,
                     null,

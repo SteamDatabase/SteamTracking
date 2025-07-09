@@ -552,6 +552,7 @@ $\nY8O
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"^\n#CMsgZoomToElementAtPositionResponse
+(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -560,7 +561,6 @@ $\nY8O
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
-(\t"k\n\vCMsgPostURL
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2$.google.protobuf.EnumDescriptorProto
@@ -1352,7 +1352,6 @@ $\nY8O
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:32:17
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1362,6 +1361,7 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
+23:55:31
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -3521,7 +3521,7 @@ Japanese
 Javanese
 JoinedGroup
 Joystick
-Jul  7 2025
+Jul  8 2025
 July
 June
 K'iche'
@@ -3741,7 +3741,7 @@ LABEL_REPEATED
 LABEL_REQUIRED
 LANCache
 LANPeer
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
 LIMIT_MATCH=
 LIMIT_RECURSION=
 LINUX
@@ -5742,6 +5742,7 @@ Zulu
 \n\rcombobox_tall
 \n\rcombobox_wide
 \n\rdefault_value
+\n\rdisplay_width
 \n\rinitial_width
 \n\ris_system_key
 \n\rk_EAppTypeDLC
@@ -6459,6 +6460,7 @@ disconnected
 disk
 disk-free command failed\n
 diskSize
+display_height
 divider
 dl_iterate_phdr
 dlclose

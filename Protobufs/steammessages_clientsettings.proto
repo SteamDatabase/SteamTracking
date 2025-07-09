@@ -290,4 +290,5 @@ message CMsgClientSettings {
 	optional bool accessibility_reduce_motion = 26006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/ReduceMotion", (setting_default_bool) = false];
 	optional uint32 accessibility_minimum_font_size = 26008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/MinimumFontSize", (setting_default_int) = 0];
 	optional string accessibility_color_filter_name = 26009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilterName", (setting_default_string) = ""];
+	optional float accessibility_desktop_ui_scale = 26010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/DesktopUIScale", (setting_default_float) = 1];
 }

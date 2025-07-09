@@ -3307,6 +3307,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1*rQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3350,6 +3351,7 @@ $steammessages_parental_objects.proto"
 (\f"[\n&CMsgRemoteDeviceAuthorizationConfirmed
 (\f"g\n CMsgTrading_InitiateTradeRequest
 (\n OBSOLETE_supports_package_tokens
+(\n accessibility_high_contrast_mode
 (\n can_create_rename_delete_channel
 (\n count_new_comments_subscriptions
 (\n disable_nvidia_hardware_encoding
@@ -3670,6 +3672,7 @@ $steammessages_parental_objects.proto"
 (\r"k\n$CMsgClientWorkshopItemChangesRequest
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
+(\r"k\n\vCMsgPostURL
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n'CMsgClientGetDepotDecryptionKeyResponse
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
@@ -3813,7 +3816,6 @@ $steammessages_parental_objects.proto"
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
 (\t"j\n'CClientMetrics_AppInterfaceMethodCounts
-(\t"k\n\vCMsgPostURL
 (\t"l\n7CDepotContentDetection_GetAllDetectedAppContent_Request
 (\t"m\n'CSteamTV_GetBroadcastChannelID_Response
 (\t"m\n9CAccountHardware_QueryAccountsRegisteredToSerial_Accounts
@@ -5048,6 +5050,7 @@ $steammessages_parental_objects.proto"
 +HpXhE
 +QQ 3K%
 +\n total_non_steam_controller_count
++\n#accessibility_screen_reader_enabled
 +\n#content_descriptorids_including_dlc
 +\n#default_email_change_probation_days
 +\n#display_adaptive_brightness_enabled
@@ -14641,7 +14644,6 @@ $steammessages_parental_objects.proto"
 4h\4
 4i5U6B738%9
 4tpD
-4veX7
 4}<YB
 5'54h:
 5-535;5A5Q5e5o5q5w5{5}5
@@ -15677,7 +15679,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42PkT
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -16437,6 +16439,11 @@ Access-Control-Allow-Origin
 Access-Control-Expose-Headers
 AccessControllerInputGeneratorMouseButton
 AccessToken
+Accessibility/ColorFilterName
+Accessibility/DesktopUIScale
+Accessibility/HighContrastMode
+Accessibility/ReduceMotion
+Accessibility/ScreenReaderEnabled
 Account %s %s invalid double password in logon message, protocol %x, cch1=%llu cch2=%u
 Account Disabled
 Account Locked Down
@@ -27637,23 +27644,23 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" amixer -c acp5x contents
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lsb_release -d -s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lspci -mm -n
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" steamos-select-branch -c
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" steamos-select-branch -l
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" steamos-session-select %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" amixer -c acp5x contents
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-select-branch -c
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-select-branch -l
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
 LD_PRELOAD
 LEFT
 LEFT_ALT
@@ -40148,6 +40155,7 @@ Zulu
 \n\rdevice_serial
 \n\rdevkit_gameid
 \n\rdisplay_index
+\n\rdisplay_width
 \n\rdup_pkts_recv
 \n\rdx_video_card
 \n\recho_sent_tos
@@ -41365,6 +41373,9 @@ access denied
 access-control-allow-origi
 access-control-allow-origin
 access_code
+accessibility_color_filter_name
+accessibility_desktop_ui_scale
+accessibility_reduce_motion
 accessor_ == other.accessor_
 account
 account flags changed
@@ -42667,6 +42678,7 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c@m{I
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -44658,6 +44670,7 @@ display_colortemp
 display_colortemp_default
 display_colortemp_enabled
 display_diagnostics_enabled
+display_height
 display_location
 display_name
 display_nightmode_blend
@@ -58099,7 +58112,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul  7 2025 22:32:17
+steam Jul  8 2025 23:55:31
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

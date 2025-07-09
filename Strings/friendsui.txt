@@ -602,6 +602,7 @@ $\nY8O
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
+(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -619,7 +620,6 @@ $\nY8O
 (\t"Y\n#CClientNotificationItemAnnouncement
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"d\n,CClientNotificationStreamingClientConnection
-(\t"k\n\vCMsgPostURL
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2".CTransportSignalMsg.WebRTCMessage
@@ -3745,7 +3745,7 @@ Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
 LINUX
 LINUX32
 LINUX64
@@ -5243,6 +5243,7 @@ Zulu
 \n\rcombobox_tall
 \n\rcombobox_wide
 \n\rdefault_value
+\n\rdisplay_width
 \n\rduration_secs
 \n\rinitial_width
 \n\ris_system_key
@@ -5926,6 +5927,7 @@ disable_steam_store
 disabled
 disk-free command failed\n
 diskSize
+display_height
 divider
 dl_iterate_phdr
 dlclose

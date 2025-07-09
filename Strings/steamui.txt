@@ -2877,6 +2877,7 @@ ${LANGUAGE}
 (\f"Q\n(CFovasVideo_ClientGetOPFSettings_Request
 (\f"V\n)CContentBuilder_FinishDepotUpload_Request
 (\f"[\n&CMsgRemoteDeviceAuthorizationConfirmed
+(\n accessibility_high_contrast_mode
 (\n can_create_rename_delete_channel
 (\n disable_nvidia_hardware_encoding
 (\n include_assets_without_overrides
@@ -3186,6 +3187,7 @@ ${LANGUAGE}
 (\r"j\n:CMarketingMessages_GetMarketingMessageViewerStats_Response
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
+(\r"k\n\vCMsgPostURL
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
 (\r"o\n(CBroadcast_GetBroadcastChatInfo_Response
@@ -3325,7 +3327,6 @@ ${LANGUAGE}
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
 (\t"j\n'CClientMetrics_AppInterfaceMethodCounts
-(\t"k\n\vCMsgPostURL
 (\t"l\n7CDepotContentDetection_GetAllDetectedAppContent_Request
 (\t"m\n'CSteamTV_GetBroadcastChannelID_Response
 (\t"m\n9CAccountHardware_QueryAccountsRegisteredToSerial_Accounts
@@ -4180,6 +4181,7 @@ ${LANGUAGE}
 *ZN19CSettingsController14UpdateSettingsEvEUlvE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE0_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUlfE2_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE1_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
 *ZN20CUserLoginController13GetLoginUsersE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
@@ -4674,6 +4676,7 @@ ${LANGUAGE}
 +HpXhE
 +QQ 3K%
 +U2L
++\n#accessibility_screen_reader_enabled
 +\n#content_descriptorids_including_dlc
 +\n#display_adaptive_brightness_enabled
 +\n#is_refresh_rate_switching_supported
@@ -7915,7 +7918,7 @@ ${LANGUAGE}
 12CUtlDelegateIFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEE
 12CUtlDelegateIFvP11IHTMLWindowEE
 12CUtlDelegateIFvPN11IHTMLWindow14ErrorStrings_tEEE
-12CUtlDelegateIFviiiiddPKcEE
+12CUtlDelegateIFviiiiddPKciiEE
 12CVideoFormat
 12CWebUIMsgJob
 12FamilyGroups
@@ -12272,7 +12275,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H(l}
+9HHh}
 9IGv
 9Inventory
 9PE,$
@@ -12333,7 +12336,6 @@ ${LANGUAGE}
 :BAD INTEGER
 :BAD OBJECT
 :EXTERNAL TYPE %s\n
-:IPj
 :LBN
 :L\n\rsetting_store
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
@@ -12358,6 +12360,7 @@ ${LANGUAGE}
 :authorit
 :authority
 :eaI
+:iAj
 :metho
 :method
 :oc\ve
@@ -13189,6 +13192,7 @@ AcceptedForGameRankedByAcceptanceDate
 Access Denied
 Accessibility/ColorFilterName
 Accessibility/DebugVisualizer
+Accessibility/DesktopUIScale
 Accessibility/HighContrastMode
 Accessibility/MinimumFontSize
 Accessibility/ReduceMotion
@@ -20106,6 +20110,7 @@ GetCopyCount
 GetCredentialChangeTimeDetails
 GetCubBody() == 0 && m_eStatusCode >= 400 && (int)m_eStatusCode <= 600
 GetCurrentClientBeta
+GetCurrentScaleFactor() called without a valid UI mode
 GetDLCForAppsSolr
 GetDepotBuildResult
 GetDepotPatchInfo
@@ -21571,7 +21576,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul  7 2025 22:32:20
+Jul  8 2025 23:55:34
 July
 JumpList
 Jumplist
@@ -21890,26 +21895,26 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" 
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" %s %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" jupiter-initial-firmware-update
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" jupiter-initial-firmware-update check
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lsb_release -d -s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lspci -mm -n
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" steamos-session-select %s
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" sudo -n jupiter-biosupdate
-LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" xdg-icon-resource forceupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" %s %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" jupiter-initial-firmware-update
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" jupiter-initial-firmware-update check
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" xdg-icon-resource forceupdate
 LEDManager.NotifyStateChanged#1
 LEGACY_GOST_PKCS12
 LIBAVCODEC_61
@@ -23921,12 +23926,12 @@ N6detail10ClosurePtrIMNS_12GenericClassEFP14IHTMLResponsesPKcS5_iiiijbEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFvP11IHTMLWindowEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFvPN11IHTMLWindow14ErrorStrings_tEEEE
-N6detail10ClosurePtrIMNS_12GenericClassEFviiiiddPKcEEE
+N6detail10ClosurePtrIMNS_12GenericClassEFviiiiddPKciiEEE
 N6detail13FastDelegateNIP14IHTMLResponsesJPKcS4_iiiijbEEE
 N6detail13FastDelegateNIbJRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
 N6detail13FastDelegateNIvJP11IHTMLWindowEEE
 N6detail13FastDelegateNIvJPN11IHTMLWindow14ErrorStrings_tEEEE
-N6detail13FastDelegateNIvJiiiiddPKcEEE
+N6detail13FastDelegateNIvJiiiiddPKciiEEE
 N6google8protobuf10BytesValueE
 N6google8protobuf10FloatValueE
 N6google8protobuf10Int32ValueE
@@ -29956,8 +29961,8 @@ WifiDebugModeState
 WifiDisabled
 WifiPowerManagementState
 Window title set to %s\n
-Window.SetAutoDisplayScale
-Window.SetManualDisplayScaleFactor
+Window.SetGamepadUIAutoDisplayScale
+Window.SetGamepadUIManualDisplayScaleFactor
 WindowMaximized
 WindowRestored
 Windows
@@ -31654,6 +31659,7 @@ Zulu
 \n\rdevice_serial
 \n\rdevkit_gameid
 \n\rdisplay_index
+\n\rdisplay_width
 \n\rduration_secs
 \n\rdx_video_card
 \n\renable_replay
@@ -32759,7 +32765,6 @@ a5<p
 a5j_5W
 a8Bk
 a?wSa?\
-aD1k.
 aDSS
 aECDSA
 aGOST
@@ -32815,6 +32820,7 @@ access-control-allow-origi
 access-control-allow-origin
 accessibility_color_filter_name
 accessibility_debug_visualizer
+accessibility_desktop_ui_scale
 accessibility_high_contrast_mode
 accessibility_minimum_font_size
 accessibility_reduce_motion
@@ -35936,6 +35942,7 @@ display_colortemp
 display_colortemp_default
 display_colortemp_enabled
 display_diagnostics_enabled
+display_height
 display_location
 display_name
 display_nightmode_blend

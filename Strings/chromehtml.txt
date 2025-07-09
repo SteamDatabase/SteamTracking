@@ -390,6 +390,7 @@ $\n k_SystemAudioPortDirection_Input
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"^\n#CMsgZoomToElementAtPositionResponse
+(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -398,7 +399,6 @@ $\n k_SystemAudioPortDirection_Input
 (\t"5\n\fCMsgSetFocus
 (\t"6\n\vCMsgJSAlert
 (\t"8\n\rCMsgJSConfirm
-(\t"k\n\vCMsgPostURL
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2$.google.protobuf.EnumDescriptorProto
@@ -3959,6 +3959,7 @@ Zulu
 \n\rcombobox_tall
 \n\rcombobox_wide
 \n\rdefault_value
+\n\rdisplay_width
 \n\rinitial_width
 \n\ris_system_key
 \n\rk_EAppTypeDLC
@@ -4504,6 +4505,7 @@ disconnected
 disk
 disk-free command failed\n
 diskSize
+display_height
 dl_iterate_phdr
 dlclose
 dlerror

@@ -199,6 +199,11 @@ message CClientMetrics_ReportClientArgs_Notification {
 	optional bool library_low_bandwidth_mode_enabled = 8;
 	optional bool library_low_perf_mode_enabled = 9;
 	optional int32 gr_mode = 10;
+	optional float accessibility_desktop_ui_scale = 11;
+	optional bool accessibility_screen_reader_enabled = 12;
+	optional bool accessibility_high_contrast_mode = 13;
+	optional bool accessibility_reduce_motion = 14;
+	optional string accessibility_color_filter_name = 15;
 }
 
 message CClientMetrics_ReportLinuxStats_Notification {
