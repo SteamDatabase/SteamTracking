@@ -1392,3 +1392,6 @@ span.disown_button {
 	font-size: 14px;
 }
 
+.confirmed_email_verified_text a {
+	text-decoration: underline;
+}

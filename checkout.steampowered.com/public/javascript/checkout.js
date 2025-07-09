@@ -3513,6 +3513,7 @@ function UpdatePaymentInfoForm()
 		var bShowMobileForm = false;
 		var bShowBankAccountIDForm = false;
 		var bShowPaymentSpecificNote = false;
+		var bShowPaymentDisabledApp = false;
 		var bShowStoredPayPalDetails = false;
 		var bDisabledPaymentMethod = false;
 		var bShowBankSelection = false;
@@ -3557,7 +3558,16 @@ function UpdatePaymentInfoForm()
 
 				g_bShowAddressForm = g_bRequireBillingInfo;
 
-		if ( BIsStoredCreditCard() )
+		if ( g_mapPaymentDisabledApp && g_mapPaymentDisabledApp.hasOwnProperty( method.value ) )
+		{
+			var paymentDisabledApp = g_mapPaymentDisabledApp[ method.value ];
+
+			g_bShowAddressForm = false;
+			bShowPaymentDisabledApp = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_disabled_app').innerHTML = '<b>%1$s</b> cannot be purchased using %2$s.<br><br>Please select a different payment method.'.replace( /%1\$s/, paymentDisabledApp.package ).replace( /%2\$s/, paymentDisabledApp.text );
+		}
+		else if ( BIsStoredCreditCard() )
 		{
 			g_bShowAddressForm = false;
 		}
@@ -3787,7 +3797,7 @@ function UpdatePaymentInfoForm()
 		var strCountryVerificationDisplay = bShowCountryVerification ? 'block' : 'none';
 		$('payment_row_country_verification').style.display = strCountryVerificationDisplay;
 
-		var strPaymentMethodSpecificNote = bShowPaymentSpecificNote ? 'list-item' : 'none';
+		var strPaymentMethodSpecificNote = bShowPaymentSpecificNote && !bShowPaymentDisabledApp ? 'list-item' : 'none';
 		$('payment_method_specific_note').style.display = strPaymentMethodSpecificNote;
 
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
@@ -3801,19 +3811,22 @@ function UpdatePaymentInfoForm()
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
 
-		var strPaymentMethodCanBeSplit = !bCanBeSplit ? 'list-item' : 'none';
+		var strPaymentMethodCanBeSplit = !bCanBeSplit && !bShowPaymentDisabledApp ? 'list-item' : 'none';
 		$('payment_method_unable_to_split' ).style.display = strPaymentMethodCanBeSplit;
 
-		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'list-item' : 'none';
+		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable && !bShowPaymentDisabledApp ? 'list-item' : 'none';
 		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
 
-		var strPaymentMethodDelayInProcessing = bPaymentMethodDelaysInProcessing ? 'list-item' : 'none';
+		var strPaymentMethodDelayInProcessing = bPaymentMethodDelaysInProcessing && !bShowPaymentDisabledApp ? 'list-item' : 'none';
 		$('payment_method_delays_in_processing' ).style.display = strPaymentMethodDelayInProcessing;
 
-		var strCafeFundedInstructions = bShowCafeFundedInstructions ? 'list-item' : 'none';
+		var strCafeFundedInstructions = bShowCafeFundedInstructions && !bShowPaymentDisabledApp ? 'list-item' : 'none';
 		$('payment_method_cafe_funded' ).style.display = strCafeFundedInstructions;
 
-		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions || bPaymentMethodDelaysInProcessing ? 'block': 'none';
+		var strPaymethMethodDisabledApp = bShowPaymentDisabledApp ? 'block' : 'none';
+		$('payment_method_disabled_app' ).style.display = strPaymethMethodDisabledApp;
+
+		var strPaymentMethodNotes = bShowPaymentDisabledApp || !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions || bPaymentMethodDelaysInProcessing ? 'block': 'none';
 		$('payment_method_notes' ).style.display = strPaymentMethodNotes;
 	}
 	catch( e )
