@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9884117";
+var CLSTAMP = "9890529";
 (() => {
   var e,
     t,
@@ -31,7 +31,7 @@ var CLSTAMP = "9884117";
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
-          "./friendsui_russian.json": [36786, 2945],
+          "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
           "./friendsui_spanish.json": [86700, 9808],
@@ -77,7 +77,7 @@ var CLSTAMP = "9884117";
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
-          "./friendsui_russian.json": [36786, 2945],
+          "./friendsui_russian.json": [30757, 2945],
           "./friendsui_sc_schinese.json": [69423, 43],
           "./friendsui_schinese.json": [5184, 9746],
           "./friendsui_spanish.json": [86700, 9808],
@@ -100,9 +100,9 @@ var CLSTAMP = "9884117";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      46868: (e, t, n) => {
+      30229: (e, t, n) => {
         "use strict";
-        n(74266);
+        n(20690);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -170,13 +170,13 @@ var CLSTAMP = "9884117";
           const _ = m("event", e);
           return (
             _ && (Object.assign(S, _), (t.eventConfig = !0)),
-            (u = !0),
-            d.forEach((e) => e()),
+            (d = !0),
+            u.forEach((e) => e()),
             t
           );
         }
-        let d = new Set(),
-          u = !1;
+        let u = new Set(),
+          d = !1;
         function m(e, t = o) {
           return h(e, t, !0);
         }
@@ -318,7 +318,7 @@ var CLSTAMP = "9884117";
         s.createContext({});
         let I = { success: !0, result: 1 };
         class C {
-          m_connection = new v();
+          m_connection = new b();
           FailureResult(e = 2) {
             let t = { success: !1, result: e };
             return (
@@ -404,7 +404,7 @@ var CLSTAMP = "9884117";
               .catch(() => this.FailureResult());
           }
         }
-        class v {
+        class b {
           m_mapWaitingCallbacks = new Map();
           m_socket;
           m_iCallSeq = 1;
@@ -520,8 +520,8 @@ var CLSTAMP = "9884117";
             );
           }
         }
-        let b = new C();
-        window.ClientConnectionAPI = b;
+        let v = new C();
+        window.ClientConnectionAPI = v;
         n(83957), n(22386);
         new Map();
         const T = 2147483647;
@@ -1456,7 +1456,7 @@ var CLSTAMP = "9884117";
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              b
+              v
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode(), e)
                 .then((e) => {
                   (0, ne.h5)(() => {
@@ -1474,13 +1474,13 @@ var CLSTAMP = "9884117";
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? s.createElement(de, { controller: this.props.controller })
-                : s.createElement(ue, { controller: this.props.controller }),
+                ? s.createElement(ue, { controller: this.props.controller })
+                : s.createElement(de, { controller: this.props.controller }),
             );
           }
         };
         le = $([se.PA], le);
-        let de = class extends s.Component {
+        let ue = class extends s.Component {
           constructor(e) {
             super(e), (0, ne.Gn)(this);
           }
@@ -1639,12 +1639,12 @@ var CLSTAMP = "9884117";
             );
           }
         };
-        $([ne.sH], de.prototype, "m_bTriedToLaunchSteam", void 0),
-          $([Y], de.prototype, "LaunchWebChat", null),
-          $([Y], de.prototype, "OpenInSteamIgnoreAccount", null),
-          $([Y], de.prototype, "LaunchSteamClient", null),
-          (de = $([se.PA], de));
-        class ue extends s.Component {
+        $([ne.sH], ue.prototype, "m_bTriedToLaunchSteam", void 0),
+          $([Y], ue.prototype, "LaunchWebChat", null),
+          $([Y], ue.prototype, "OpenInSteamIgnoreAccount", null),
+          $([Y], ue.prototype, "LaunchSteamClient", null),
+          (ue = $([se.PA], ue));
+        class de extends s.Component {
           render() {
             return s.createElement(
               "div",
@@ -1726,7 +1726,7 @@ var CLSTAMP = "9884117";
               })();
           });
       },
-      74266: (e, t, n) => {
+      20690: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1959,18 +1959,18 @@ var CLSTAMP = "9884117";
       {
         43: "2d1569711644a97b27c9",
         762: "2019df6784866b26b05b",
-        976: "1dacbaa89a33bab529ce",
-        1225: "1a92934b618a5bfaf82d",
-        1449: "0ef6d7e69a8e07d025dc",
+        976: "bacb22c74aff8bf42bdd",
+        1225: "16713e38fe6676c0925f",
+        1449: "eba79481ecd57c8f0dd5",
         1499: "cefa656df7e2d6ae84d6",
-        1973: "d04dee93d44bca3d9653",
-        2256: "213f2cc4ae13572f3a5c",
-        2320: "5664c2b36cfec1e3259d",
-        2435: "c2d4b1489b9562d0ed11",
-        2632: "03014e233a4d4cc53e16",
-        2749: "e8d1a9d1d9744dd7d96b",
-        2945: "9e614474c1d013c55507",
-        2954: "51528af36cb139848e7c",
+        1973: "24869427b81e8a20fae6",
+        2256: "57546e03b3a78a874199",
+        2320: "6b433152ed11a04adf21",
+        2435: "04975c7c854e9d660a3d",
+        2632: "bc7a17d701de62c447db",
+        2749: "abf14414ff6cb94d3ffd",
+        2945: "dd03b7d733838961d056",
+        2954: "f6999393e170d9f9b336",
         3e3: "6004590238b9f5880c3d",
         3016: "2448400178e0f135048c",
         3232: "fb96857b792f2a5908cd",
@@ -1978,45 +1978,45 @@ var CLSTAMP = "9884117";
         3485: "9330bbb64afbf14bd78d",
         3710: "357f6ded3ff9007f8dcb",
         3789: "3ed5874917cade6fd27a",
-        3912: "fe0af7b05754d08b7a4f",
+        3912: "796d84b838f69cf824eb",
         4154: "80963e36fe1168a8df1c",
         4302: "007fb103f98af096e099",
         4434: "b2f6555748a2890bd101",
         4488: "ce0c6462dbb2bd38582a",
         4776: "532ef2d0a4fb7ad695c8",
         4787: "8481349b6c1cb4d4de38",
-        5018: "4d031face57bb8d34849",
-        5110: "4f2add8e5048bca977ec",
-        5241: "4fddcb061343c060d539",
+        5018: "6bc132999fd6b66e5546",
+        5110: "5431ccdb90e2bb185c56",
+        5241: "bdc3d4b57e9b50c7d72d",
         5341: "5fb4b098cadd2d7e9fad",
         5480: "ded8c56b48a39dd15fe5",
-        6031: "844a039f56aa32d1d580",
+        6031: "513d84f3bbee2f95053f",
         6127: "4bdce6fd99ff19efdafe",
-        6149: "c192ffbd9867516b4743",
-        6165: "82f2c419609c742c1890",
-        6208: "4acc85e02d8f6c5e49cc",
-        6239: "d48ee0074f710bb00720",
+        6149: "34fd5ea4b66165e96f00",
+        6165: "98ca64df0738d5c1f8cc",
+        6208: "cfc3cf5d19a24e8eda1b",
+        6239: "1025800aab05cbe7d6c5",
         6385: "1395ba0fd8ffe41f5b5a",
         6518: "8cd538c22d2143bbefe7",
-        6523: "464cc1206db0064a14a7",
-        6562: "34cd05ec14d4870b11d4",
+        6523: "d143b03cb2456016524d",
+        6562: "215992e517409c03a9a1",
         6609: "65a39cd9ab90302d6588",
         6888: "862e8c49b5e66a6e4cfc",
-        6971: "c26f6538342c3649a977",
+        6971: "fc3da740355d9cf99aa5",
         7487: "9de4d810b40e23e73b26",
-        7539: "59955c9d0ea5f662372c",
-        7591: "bb19df748ac4d1cb0291",
-        7786: "960b6667f446d840fed1",
+        7539: "4df689fd2b529bd8ad1c",
+        7591: "7f08533912d8e7cdecd9",
+        7786: "a5e8dffb2317a4bfd956",
         7861: "f4bcb59387c8bf41af1d",
-        8025: "9f10906af6e0a30fe57e",
+        8025: "2dbfb4bd1d0a665f5c83",
         8194: "2a96bd8606a182431ba6",
-        8306: "077fc5bef8ea9b00cf80",
+        8306: "cc379027224853b7d5e7",
         8759: "58acff5edc9bd067e5b3",
         8766: "e77af3c6267c9fbc33ce",
-        8967: "c15eb9a3e1c9940bc39f",
+        8967: "7fbf0ec6c5f86d10d5fd",
         9027: "ea9c7d7754fa995b186c",
-        9152: "b6ce7bb666b80f493c3c",
-        9712: "332d3f551d5601bbffb7",
+        9152: "424af689a30b9d9ef360",
+        9712: "938b614b9c7fcff793db",
         9746: "b2d5ee0df27ec7fc5f3d",
         9808: "2236518d6c984fd37a4f",
       }[e]),
@@ -2042,12 +2042,12 @@ var CLSTAMP = "9884117";
             l < _.length;
             l++
           ) {
-            var d = _[l];
+            var u = _[l];
             if (
-              d.getAttribute("src") == e ||
-              d.getAttribute("data-webpack") == i + n
+              u.getAttribute("src") == e ||
+              u.getAttribute("data-webpack") == i + n
             ) {
-              a = d;
+              a = u;
               break;
             }
           }
@@ -2059,7 +2059,7 @@ var CLSTAMP = "9884117";
           a.setAttribute("data-webpack", i + n),
           (a.src = e)),
           (s[e] = [t]);
-        var u = (t, n) => {
+        var d = (t, n) => {
             (a.onerror = a.onload = null), clearTimeout(m);
             var i = s[e];
             if (
@@ -2071,11 +2071,11 @@ var CLSTAMP = "9884117";
               return t(n);
           },
           m = setTimeout(
-            u.bind(null, void 0, { type: "timeout", target: a }),
+            d.bind(null, void 0, { type: "timeout", target: a }),
             12e4,
           );
-        (a.onerror = u.bind(null, a.onerror)),
-          (a.onload = u.bind(null, a.onload)),
+        (a.onerror = d.bind(null, a.onerror)),
+          (a.onload = d.bind(null, a.onload)),
           c && document.head.appendChild(a);
       }
     }),
@@ -2155,6 +2155,6 @@ var CLSTAMP = "9884117";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(46868));
+  var c = o.O(void 0, [1068], () => o(30229));
   c = o.O(c);
 })();

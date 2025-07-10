@@ -568,7 +568,7 @@
     },
     94743: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => m, r: () => d });
+      n.d(t, { l: () => p, r: () => m });
       var a = n(90626),
         r = n(26296),
         o = n(12155),
@@ -576,8 +576,9 @@
         s = n(52038),
         i = n(61859),
         c = n(70758),
-        u = n.n(c);
-      const d = (e) => {
+        u = n.n(c),
+        d = n(61949);
+      const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
             [n, o] = a.useState(0);
           a.useEffect(() => o(0), [e.video]);
@@ -610,15 +611,12 @@
             });
           }
         },
-        m = (e) => {
+        p = (e) => {
           const [t, n] = a.useState(!1);
-          if (
-            (a.useEffect(() => {
-              e.preloadYoutubeScripts && (0, l.o)(() => {});
-            }, [e.preloadYoutubeScripts]),
-            t)
-          )
-            return a.createElement(l.N, {
+          (0, l.VC)(!!e.preloadYoutubeScripts);
+          const r = (0, d.Rp)("youtube");
+          if (t && r)
+            return a.createElement(l.N1, {
               ...e,
               classnames: (0, s.A)(u().YoutubePlayer, e.classnames),
             });
@@ -637,24 +635,29 @@
                   u().YoutubePreviewImage,
                   e.imageClassnames,
                 ),
-                onClick: t,
+                onClick: r ? t : void 0,
               },
-              a.createElement(d, {
+              a.createElement(m, {
                 className: "YoutubePreviewImage",
                 altImgWithFallback: e.altImgWithFallback,
                 altImg: e.altImg,
                 video: e.video,
               }),
-              a.createElement(
-                "div",
-                { className: "YoutubePreviewPlay" },
-                a.createElement(o.IOc, null),
-              ),
-              a.createElement(
-                "div",
-                { className: "VideoHintText" },
-                (0, i.we)("#EventCalendar_WatchYouTubeVideo"),
-              ),
+              r &&
+                a.createElement(
+                  a.Fragment,
+                  null,
+                  a.createElement(
+                    "div",
+                    { className: "YoutubePreviewPlay" },
+                    a.createElement(o.IOc, null),
+                  ),
+                  a.createElement(
+                    "div",
+                    { className: "VideoHintText" },
+                    (0, i.we)("#EventCalendar_WatchYouTubeVideo"),
+                  ),
+                ),
             );
           }
         };

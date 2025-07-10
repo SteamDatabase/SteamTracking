@@ -70,31 +70,30 @@
     },
     85215: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => U });
+      n.r(t), n.d(t, { default: () => k });
       var a = n(45699),
         i = n(12447),
-        r = n(76217),
-        s = n(37788),
+        s = n(76217),
+        r = n(37788),
         o = n(84143),
         m = n(8527),
         l = n(84518),
         c = n(60014),
         _ = n(90626),
         d = n(24484);
-      var u = n(91336),
-        p = n(55263),
-        g = n(25706),
-        I = n(31011),
-        f = n(52038),
-        E = n(61859),
-        h = n(91675),
-        v = n(73745),
-        y = n(49395),
-        S = n.n(y),
-        C = n(85427),
-        w = n.n(C),
-        N = n(62490);
-      function T(e) {
+      var u = n(55263),
+        p = n(25706),
+        g = n(31011),
+        I = n(52038),
+        f = n(61859),
+        E = n(91675),
+        h = n(73745),
+        v = n(49395),
+        y = n.n(v),
+        S = n(85427),
+        C = n.n(S),
+        w = n(62490);
+      function N(e) {
         const {
             oRewardDefinition: t,
             rgRewardItems: n,
@@ -137,39 +136,39 @@
             );
           }, [n, i, l]);
         return _.createElement(
-          s.YZ,
+          r.YZ,
           {
             navEntryPreferPosition: o.iU.LAST,
             preferredFocus: !0,
-            className: w().FreeQuestCtn,
+            className: C().FreeQuestCtn,
           },
           _.createElement(
             "div",
-            { className: w().HowToGet },
-            (0, E.we)("#ItemCollection_ForFree_Title"),
+            { className: C().HowToGet },
+            (0, f.we)("#ItemCollection_ForFree_Title"),
           ),
           _.createElement(
-            r.Z,
+            s.Z,
             null,
             _.createElement(
               "div",
-              { className: w().QuestInstructions },
+              { className: C().QuestInstructions },
               _.createElement(
                 "div",
-                { className: w().QuestName },
-                (0, E.we)("#ItemCollection_ForFree_Discovery"),
+                { className: C().QuestName },
+                (0, f.we)("#ItemCollection_ForFree_Discovery"),
               ),
               _.createElement(
                 "p",
                 null,
-                (0, h.nR)(t.rtime_start_time, t.rtime_end_time),
+                (0, E.nR)(t.rtime_start_time, t.rtime_end_time),
               ),
               _.createElement(
                 "p",
                 null,
-                (0, E.we)("#ItemCollection_ForFree_Discovery_desc"),
+                (0, f.we)("#ItemCollection_ForFree_Discovery_desc"),
                 _.createElement("br", null),
-                (0, E.oW)(
+                (0, f.oW)(
                   "#ItemCollection_ForFree_Discovery_desc2",
                   _.createElement(a.Ii, {
                     href: `${m.TS.STORE_BASE_URL}explore?dq=widget`,
@@ -178,7 +177,7 @@
               ),
             ),
             Array.from(d.keys()).map((e) =>
-              _.createElement(D, {
+              _.createElement(T, {
                 key: "free_item_class_" + e,
                 bViewingOwnProfile: c,
                 nAppID: t.appid,
@@ -190,7 +189,7 @@
           ),
         );
       }
-      function D(e) {
+      function T(e) {
         const {
             rgItems: t,
             itemClass: n,
@@ -203,180 +202,179 @@
           ),
           l = t.length ? Math.floor((100 * m) / t.length) : 0;
         return _.createElement(
-          s.YZ,
+          r.YZ,
           {
             navEntryPreferPosition: o.iU.LAST,
             preferredFocus: !0,
-            className: (0, f.A)(w().ItemSection),
+            className: (0, I.A)(C().ItemSection),
           },
-          _.createElement(P, { ...e }),
+          _.createElement(D, { ...e }),
           _.createElement(
-            r.Z,
-            { className: w().ItemCategoryCtn },
+            s.Z,
+            { className: C().ItemCategoryCtn },
             _.createElement(
-              r.Z,
-              { className: w().CategoryName },
-              (0, E.we)("#Sale_Section_PointShop_class_" + n),
+              s.Z,
+              { className: C().CategoryName },
+              (0, f.we)("#Sale_Section_PointShop_class_" + n),
             ),
-            _.createElement("div", { className: w().SectionLine }),
-            _.createElement(A, { ...e }),
+            _.createElement("div", { className: C().SectionLine }),
+            _.createElement(P, { ...e }),
           ),
           _.createElement(
-            r.Z,
-            { className: w().ItemCtn },
+            s.Z,
+            { className: C().ItemCtn },
             _.createElement(
-              r.Z,
-              { className: w().ProgressIndicationCtn },
-              _.createElement(I.A, { nPercent: l }),
+              s.Z,
+              { className: C().ProgressIndicationCtn },
+              _.createElement(g.A, { nPercent: l }),
               _.createElement(
                 "div",
-                { className: w().ProgressText },
+                { className: C().ProgressText },
                 _.createElement(
                   "div",
                   null,
-                  (0, E.we)("#ItemCollection_Collected_Item", m, t.length),
+                  (0, f.we)("#ItemCollection_Collected_Item", m, t.length),
                 ),
                 _.createElement(
                   "div",
                   null,
-                  (0, E.we)("#ItemCollection_Collected_Line"),
+                  (0, f.we)("#ItemCollection_Collected_Line"),
                 ),
               ),
             ),
             t.map((e) =>
-              _.createElement(M, { key: "item_" + e.item_type, item: e }),
+              _.createElement(A, { key: "item_" + e.item_type, item: e }),
             ),
           ),
         );
       }
-      function P(e) {
+      function D(e) {
         const { itemClass: t, nAppID: n } = e;
         return 2 !== t
           ? null
           : _.createElement(
-              r.Z,
-              { className: w().HowToGet },
-              (0, E.we)("#ItemCollection_GameCards_Title"),
+              s.Z,
+              { className: C().HowToGet },
+              (0, f.we)("#ItemCollection_GameCards_Title"),
             );
       }
-      function A(e) {
+      function P(e) {
         const {
           itemClass: t,
           nAppID: n,
           bViewingOwnProfile: i,
-          bHideItemStore: r,
+          bHideItemStore: s,
         } = e;
         return 2 == t && i
           ? _.createElement(
               a.Ii,
               {
                 href: `${m.TS.COMMUNITY_BASE_URL}my/gamecards/${n}`,
-                className: w().PointShopLink,
+                className: C().PointShopLink,
               },
-              (0, E.we)("#ItemCollection_Visit_Badge"),
+              (0, f.we)("#ItemCollection_Visit_Badge"),
             )
-          : r
+          : s
             ? null
             : _.createElement(
                 a.Ii,
                 {
                   href: `${m.TS.STORE_BASE_URL}points/shop/app/${n}`,
-                  className: w().PointShopLink,
+                  className: C().PointShopLink,
                 },
-                (0, E.we)("#ItemCollection_Visit"),
+                (0, f.we)("#ItemCollection_Visit"),
               );
       }
-      function M(e) {
+      function A(e) {
         const { item: t } = e,
-          [n, a] = (0, v.OP)(),
+          [n, a] = (0, h.OP)(),
           i = t.user_has_item || n,
-          s = !i,
+          r = !i,
           o =
             (!i && 2 != t.item_class && 8 != t.item_class) || 4 == t.item_class
               ? void 0
               : t.item_image_small;
         return _.createElement(
-          r.Z,
+          s.Z,
           {
             ...a,
             onFocus: a.onMouseEnter,
             onBlur: a.onMouseLeave,
             focusable: !0,
-            className: w().ItemBackground,
+            className: C().ItemBackground,
           },
-          _.createElement(g.Qc, {
+          _.createElement(p.Qc, {
             appid: t.appid,
             item_image_large: t.item_image_large,
             item_image_small: o,
             item_title: t.item_title,
             item_movie_mp4: i ? t.item_movie_mp4_small : void 0,
             item_movie_webm: i ? t.item_movie_webm_small : void 0,
-            className: (0, f.A)({ [w().ImgCtn]: !0, [w().ImgGrey]: s }),
-            videoClassName: w().ImgCtn,
+            className: (0, I.A)({ [C().ImgCtn]: !0, [C().ImgGrey]: r }),
+            videoClassName: C().ImgCtn,
           }),
         );
       }
-      const b = { include_assets: !0 };
-      function k(e) {
+      const M = { include_assets: !0 };
+      function b(e) {
         const { nAppID: t } = e,
-          [n] = (0, p.t7)(t, b);
+          [n] = (0, u.t7)(t, M);
         return n
           ? _.createElement(
-              r.Z,
-              { className: w().AppHeaderCtn },
+              s.Z,
+              { className: C().AppHeaderCtn },
               _.createElement(
-                r.Z,
+                s.Z,
                 null,
                 _.createElement(
-                  r.Z,
-                  { className: w().AppHeaderRow },
-                  _.createElement(r.Z, { className: w().AppName }, n.GetName()),
+                  s.Z,
+                  { className: C().AppHeaderRow },
+                  _.createElement(s.Z, { className: C().AppName }, n.GetName()),
                   _.createElement(
-                    r.Z,
-                    { className: w().PageName },
-                    (0, E.we)("#ItemCollection_Title"),
+                    s.Z,
+                    { className: C().PageName },
+                    (0, f.we)("#ItemCollection_Title"),
                   ),
                 ),
                 _.createElement(
-                  r.Z,
+                  s.Z,
                   null,
-                  (0, E.we)("#ItemCollection_EventSubTitle"),
+                  (0, f.we)("#ItemCollection_EventSubTitle"),
                 ),
               ),
             )
           : null;
       }
-      const U = function (e) {
+      const k = function (e) {
         const {
             strProfileName: t,
             strSteamId: n,
             bViewingOwnProfile: a,
-            rgCommunityItemDefs: s,
+            rgCommunityItemDefs: r,
             rgUserCommunityItems: o,
-            nAppID: p,
-            rgRewardItems: g,
-            rgUserItemRewarded: h,
-            oRewardDefinition: v,
+            nAppID: u,
+            rgRewardItems: p,
+            rgUserItemRewarded: E,
+            oRewardDefinition: h,
           } = (function () {
             const [e, t] = (0, _.useState)(() =>
               (0, d.Tc)("profile-itemcollection", "itemcollection_config"),
             );
             return e;
           })(),
-          y = (0, u.A)(),
-          C = (0, _.useMemo)(() => {
+          v = (0, _.useMemo)(() => {
             const e = new Set();
             o.forEach((t) => {
               e.add(`${t.appid}_${t.item_type}`);
             });
             const t = new Set();
-            null == g ||
-              g.forEach((e) => {
+            null == p ||
+              p.forEach((e) => {
                 t.add(e.community_item_type);
               });
             const n = new Map();
             return (
-              s
+              r
                 .filter(
                   (e) =>
                     e.active &&
@@ -404,59 +402,59 @@
                 }),
               n
             );
-          }, [s, g, o]),
-          P = (0, _.useMemo)(() => {
-            if (C.has(3)) {
-              const e = C.get(3).filter((e) => {
+          }, [r, p, o]),
+          S = (0, _.useMemo)(() => {
+            if (v.has(3)) {
+              const e = v.get(3).filter((e) => {
                 JSON.parse(e.item_key_values);
                 return e.item_movie_webm && e.item_movie_mp4;
               });
-              if (e.length) return (0, N.fW)(e), e[0];
+              if (e.length) return (0, w.fW)(e), e[0];
             }
             return null;
-          }, [C]),
-          A = (0, _.useMemo)(() => {
+          }, [v]),
+          D = (0, _.useMemo)(() => {
             let e = new Map();
             return (
-              s.forEach((t) => {
+              r.forEach((t) => {
                 e.set(t.item_type, t);
               }),
               e
             );
-          }, [s]),
-          M = (0, _.useMemo)(
-            () => Array.from(C.keys()).sort((e, t) => t - e),
-            [C],
+          }, [r]),
+          P = (0, _.useMemo)(
+            () => Array.from(v.keys()).sort((e, t) => t - e),
+            [v],
           ),
-          [b, U, B] = _.useMemo(() => {
+          [A, M, k] = _.useMemo(() => {
             const e =
                 null == o
                   ? void 0
                   : o.filter((e) => {
-                      const t = A.get(e.item_type);
+                      const t = D.get(e.item_type);
                       return !t || (2 != t.item_class && 1 != t.item_class);
                     }),
-              t = s.filter((e) => 2 != e.item_class && 1 != e.item_class),
+              t = r.filter((e) => 2 != e.item_class && 1 != e.item_class),
               n = e.length || 0,
               a = t.length || 0;
             return [a ? Math.floor((100 * n) / a) : 0, a, n];
-          }, [A, s, o]);
+          }, [D, r, o]);
         return _.createElement(
           i.u,
-          { navID: "ItemCollection", NavigationManager: y },
+          { navID: "ItemCollection" },
           _.createElement(
             c.nn,
             { feature: "itemcollections" },
             _.createElement(
               l.A,
-              { appID: p },
+              { appID: u },
               _.createElement(
-                r.Z,
-                { className: S().ProfileSubPageContainer },
-                P &&
+                s.Z,
+                { className: y().ProfileSubPageContainer },
+                S &&
                   _.createElement(
                     "div",
-                    { className: w().PageBackground },
+                    { className: C().PageBackground },
                     _.createElement(
                       "video",
                       {
@@ -465,72 +463,72 @@
                         muted: !0,
                         autoPlay: !0,
                         loop: !0,
-                        poster: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${P.item_image_large}`,
+                        poster: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${S.item_image_large}`,
                       },
                       _.createElement("source", {
-                        src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${P.item_movie_webm}`,
+                        src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${S.item_movie_webm}`,
                         type: "video/webm",
                       }),
                       Boolean(!m.TS.IN_CLIENT) &&
                         _.createElement("source", {
-                          src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${P.item_movie_mp4}`,
+                          src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${S.item_movie_mp4}`,
                           type: "video/mp4",
                         }),
                     ),
                   ),
-                _.createElement(k, { nAppID: p }),
+                _.createElement(b, { nAppID: u }),
                 _.createElement(
                   "div",
-                  { className: w().PageSection },
+                  { className: C().PageSection },
                   _.createElement(
                     "span",
                     null,
-                    (0, E.we)("#ItemCollection_Collected", B, U),
+                    (0, f.we)("#ItemCollection_Collected", k, M),
                   ),
-                  _.createElement(I.z, {
-                    className: w().ProgressBar,
+                  _.createElement(g.z, {
+                    className: C().ProgressBar,
                     animate: !0,
-                    nPercent: b,
+                    nPercent: A,
                     indeterminate: !1,
                   }),
                 ),
-                Boolean(v) &&
+                Boolean(h) &&
                   _.createElement(
                     "div",
                     {
-                      className: (0, f.A)(
-                        w().PageSection,
-                        w().BackgroundGradient,
-                        w().Highlight,
+                      className: (0, I.A)(
+                        C().PageSection,
+                        C().BackgroundGradient,
+                        C().Highlight,
                       ),
                     },
-                    _.createElement(T, {
-                      oRewardDefinition: v,
+                    _.createElement(N, {
+                      oRewardDefinition: h,
                       bViewingOwnProfile: a,
-                      rgRewardItems: g,
-                      rgUserItemRewarded: h,
-                      rgCommunityItemDefs: s,
+                      rgRewardItems: p,
+                      rgUserItemRewarded: E,
+                      rgCommunityItemDefs: r,
                     }),
                   ),
                 _.createElement(
                   "div",
                   {
-                    className: (0, f.A)(
-                      w().PageSection,
-                      w().BackgroundGradient,
+                    className: (0, I.A)(
+                      C().PageSection,
+                      C().BackgroundGradient,
                     ),
                   },
                   _.createElement(
                     "div",
-                    { className: w().HowToGet },
-                    (0, E.we)("#ItemCollection_ForPoints_Title"),
+                    { className: C().HowToGet },
+                    (0, f.we)("#ItemCollection_ForPoints_Title"),
                   ),
-                  M.map((e) =>
-                    _.createElement(D, {
+                  P.map((e) =>
+                    _.createElement(T, {
                       key: "item_class_" + e,
-                      nAppID: p,
+                      nAppID: u,
                       itemClass: e,
-                      rgItems: C.get(e),
+                      rgItems: v.get(e),
                       bViewingOwnProfile: a,
                       bHideItemStore: 2 == e,
                     }),
@@ -544,39 +542,44 @@
     },
     12447: (e, t, n) => {
       "use strict";
-      n.d(t, { u: () => m });
+      n.d(t, { u: () => l });
       var a = n(8871),
         i = n(90626),
-        r = n(78327),
-        s = n(85585),
-        o = n(7445);
-      function m(e) {
-        const { children: t, navTreeRef: n, NavigationManager: m, ...l } = e,
-          c = i.useRef(),
-          _ = (0, a.Ue)(c, n);
-        if ((0, r.Qn)()) {
-          const e = window.__nav_tree_root;
-          return i.createElement(
-            s.B2,
-            { ...l, navTreeRef: _, parentEmbeddedNavTree: e },
-            i.createElement(o.q, null, t),
-          );
-        }
-        return i.createElement(i.Fragment, null, t);
-      }
+        s = n(78327),
+        r = n(85585),
+        o = n(7445),
+        m = n(43899);
+      const l = i.forwardRef(function (e, t) {
+        const { children: n, navTreeRef: l, ...c } = e,
+          _ = i.useRef(),
+          d = (0, a.Ue)(_, l),
+          u = (0, s.Qn)(),
+          p = (0, m.AO)("__nav_tree_root");
+        return i.createElement(
+          r.B2,
+          {
+            ...c,
+            navTreeRef: d,
+            ref: t,
+            parentEmbeddedNavTree: p,
+            disabledRoot: !u,
+          },
+          i.createElement(o.q, { disableFocusRing: !u }, n),
+        );
+      });
     },
     84518: (e, t, n) => {
       "use strict";
       n.d(t, { A: () => m });
       var a = n(60014),
         i = n(90626),
-        r = n(62093),
-        s = n(30600),
+        s = n(62093),
+        r = n(30600),
         o = n(8871);
       function m(e) {
         const { appID: t, feature: n, depth: m, children: l } = e,
           c = (0, a.ru)(n, m),
-          _ = (0, r.b)(),
+          _ = (0, s.b)(),
           [d, u] = i.useState(void 0),
           p = i.useCallback(
             (e) => {
@@ -593,7 +596,7 @@
         (0, i.useEffect)(() => {
           d && null != d.appID && _.AddImpression(d.appID, d.snr);
         }, [_, d]);
-        const g = (0, s.BL)(p),
+        const g = (0, r.BL)(p),
           I = t && (!d || (d.appID != t && d.snr != c)),
           f = (0, o.Ue)(l.ref, I ? g : void 0);
         return i.cloneElement(l, { ref: f });
@@ -601,7 +604,7 @@
     },
     62093: (e, t, n) => {
       "use strict";
-      n.d(t, { b: () => r });
+      n.d(t, { b: () => s });
       var a = n(90626);
       const i = a.createContext({
         AddImpression: () => {
@@ -609,7 +612,7 @@
         },
         BIsValid: () => !1,
       });
-      function r() {
+      function s() {
         return a.useContext(i);
       }
     },
@@ -618,8 +621,8 @@
       n.d(t, { d2: () => _ });
       var a = n(41735),
         i = n.n(a),
-        r = n(90626),
-        s = n(68797),
+        s = n(90626),
+        r = n(68797),
         o = n(6144),
         m = n(73745),
         l = n(78327);
@@ -654,7 +657,7 @@
         }
         async InternalLoadAppCommunityItems(e, t) {
           var n, a;
-          let r = null;
+          let s = null;
           try {
             const o =
                 l.TS.COMMUNITY_BASE_URL +
@@ -685,9 +688,9 @@
                 ),
                 1
               );
-            r = (0, s.H)(c);
+            s = (0, r.H)(c);
           } catch (e) {
-            r = (0, s.H)(e);
+            s = (0, r.H)(e);
           }
           return (
             console.error(
@@ -696,8 +699,8 @@
                 " edit? " +
                 t +
                 " error: " +
-                (null == r ? void 0 : r.strErrorMsg),
-              r,
+                (null == s ? void 0 : s.strErrorMsg),
+              s,
             ),
             2
           );
@@ -721,9 +724,9 @@
       }
       function _(e, t, n) {
         const a = (function (e, t) {
-            const [n, a] = (0, r.useState)(c.Get().GetItemDefForAppID(e));
+            const [n, a] = (0, s.useState)(c.Get().GetItemDefForAppID(e));
             return (
-              (0, r.useEffect)(() => {
+              (0, s.useEffect)(() => {
                 e &&
                   !c.Get().BHasLoadedDef(e) &&
                   c.Get().LoadAppCommunityItems(e, t);
@@ -732,14 +735,14 @@
               n
             );
           })(e, n),
-          [i, s] = (0, r.useState)(null);
+          [i, r] = (0, s.useState)(null);
         return (
-          (0, r.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (e && a && null == i) {
               const i = a.find(
                 (a) => (n || a.active) && a.appid == e && a.item_type == t,
               );
-              i && s(i);
+              i && r(i);
             }
           }, [i, a, e, t, n]),
           i
@@ -751,8 +754,8 @@
       n.d(t, { Qc: () => c, Zx: () => d, f8: () => _ });
       var a = n(65946),
         i = n(90626),
-        r = n(24216),
-        s = n(22797),
+        s = n(24216),
+        r = n(22797),
         o = n(61859),
         m = n(78327),
         l = n(56330);
@@ -761,17 +764,17 @@
           appid: t,
           item_image_small: n,
           item_image_large: a,
-          item_movie_mp4: r,
-          item_movie_webm: s,
+          item_movie_mp4: s,
+          item_movie_webm: r,
           item_title: o,
         } = e;
         if (
-          (null == r ? void 0 : r.length) > 0 &&
-          (null == s ? void 0 : s.length) > 0
+          (null == s ? void 0 : s.length) > 0 &&
+          (null == r ? void 0 : r.length) > 0
         ) {
           const a = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`,
-            o = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`,
-            l = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${r}`;
+            o = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${r}`,
+            l = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${s}`;
           return i.createElement(
             i.Fragment,
             null,
@@ -792,17 +795,17 @@
           );
         }
         {
-          const r = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n || a}`;
+          const s = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n || a}`;
           return i.createElement("img", {
             className: e.className,
-            src: r,
+            src: s,
             alt: o,
           });
         }
       }
       function _(e) {
         const { appid: t, community_item_type: n, bForEdit: a } = e,
-          m = (0, r.d2)(t, n, a),
+          m = (0, s.d2)(t, n, a),
           _ =
             m && !m.active
               ? i.createElement(
@@ -813,14 +816,14 @@
               : void 0;
         return m
           ? i.createElement(i.Fragment, null, i.createElement(c, { ...m }), _)
-          : i.createElement(s.t, {
+          : i.createElement(r.t, {
               size: "small",
               string: (0, o.we)("#Loading"),
             });
       }
       function d(e) {
-        const { section: t, rewardDef: n, language: s } = e,
-          o = (0, r.d2)(n.appid, n.community_item_type),
+        const { section: t, rewardDef: n, language: r } = e,
+          o = (0, s.d2)(n.appid, n.community_item_type),
           [l] = (0, a.q3)(() => {
             var e;
             return [
@@ -864,36 +867,36 @@
     },
     31011: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => o, z: () => s });
+      n.d(t, { A: () => o, z: () => r });
       var a = n(90626),
         i = n(52038),
-        r = n(40594);
-      function s({ nPercent: e, indeterminate: t, animate: n, className: s }) {
+        s = n(40594);
+      function r({ nPercent: e, indeterminate: t, animate: n, className: r }) {
         return a.createElement("div", {
           className: (0, i.A)(
-            r.ProgressBar,
-            n && r.AnimateProgress,
-            t && r.Indeterminate,
-            s,
+            s.ProgressBar,
+            n && s.AnimateProgress,
+            t && s.Indeterminate,
+            r,
           ),
           style: { "--percent": e / 100 },
         });
       }
       const o = ({ nPercent: e, size: t = 120, strokeWidth: n = 20 }) => {
-        const s = (t - n) / 2,
-          o = 2 * Math.PI * s,
+        const r = (t - n) / 2,
+          o = 2 * Math.PI * r,
           m = o - (e / 100) * o,
           l = 100 == e;
         return a.createElement(
           "div",
-          { className: (0, i.A)({ [r.Circular]: !0, [r.Full]: l }) },
+          { className: (0, i.A)({ [s.Circular]: !0, [s.Full]: l }) },
           a.createElement(
             "svg",
             { width: t, height: t, style: { transform: "rotate(-90deg)" } },
             a.createElement("circle", {
               cx: t / 2,
               cy: t / 2,
-              r: s,
+              r,
               stroke: "#0c131d",
               strokeWidth: n,
               fill: "none",
@@ -901,7 +904,7 @@
             a.createElement("circle", {
               cx: t / 2,
               cy: t / 2,
-              r: s,
+              r,
               stroke: "#1a9fff",
               strokeWidth: n,
               fill: "none",

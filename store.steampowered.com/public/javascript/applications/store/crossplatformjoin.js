@@ -19,9 +19,99 @@
         Explanation: "_1isyHy9nKabM8wUFKUu-lm",
       };
     },
+    51706: (e, t, s) => {
+      "use strict";
+      s.d(t, {
+        mt: () => l,
+        Qs: () => p,
+        o0: () => E.o0,
+        eV: () => f.eV,
+        KG: () => E.KG,
+        Ee: () => E.Ee,
+        x_: () => a.x_,
+        of: () => c,
+        pY: () => E.pY,
+        EN: () => i.E,
+      });
+      var n = s(90626),
+        r = s(10981),
+        i = s(21869),
+        a = s(2654),
+        o =
+          (s(72739),
+          s(48902),
+          s(60155),
+          s(25118),
+          s(84933),
+          s(52745),
+          s(13871),
+          s(78327));
+      s(28460);
+      const l = ({
+        active: e,
+        onDismiss: t,
+        className: s,
+        modalClassName: o,
+        children: l,
+      }) =>
+        n.createElement(
+          i.E,
+          { active: e },
+          n.createElement(
+            a.x_,
+            { onEscKeypress: t, className: o },
+            n.createElement(r.UC, { className: s }, l),
+          ),
+        );
+      function c(e) {
+        const { className: t, children: s } = e;
+        return n.createElement(
+          i.E,
+          { active: !0 },
+          n.createElement("div", { className: t }, s),
+        );
+      }
+      s(81194);
+      var u = s(85585),
+        m = s(7445),
+        h = s(76217),
+        d = s(88843);
+      function p(e) {
+        const { children: t, navID: s, closeModal: r } = e,
+          i = n.createRef(),
+          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+        return (0, o.Qn)() && !o.TS.IN_STEAMUI
+          ? n.createElement(
+              u.B2,
+              {
+                navID: s,
+                navTreeRef: i,
+                onCancelButton: r,
+                className: d.GamepadOnlyModalWrapper,
+              },
+              n.createElement(
+                m.q,
+                null,
+                n.createElement(
+                  h.Z,
+                  {
+                    className: d.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: a,
+                    focusableIfNoChildren: !0,
+                  },
+                  t,
+                ),
+              ),
+            )
+          : n.createElement(n.Fragment, null, t);
+      }
+      var E = s(78395),
+        f = s(10411);
+      s(76222);
+    },
     40917: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => q });
+      s.r(t), s.d(t, { default: () => M });
       var n = s(90626),
         r = s(9054),
         i = s.n(r),
@@ -30,29 +120,29 @@
         l = s(41762),
         c = s(58632),
         u = s.n(c),
-        h = s(20194),
-        m = s(56545),
+        m = s(20194),
+        h = s(56545),
         d = s(37403),
         p = s(30470),
-        f = s(22837);
-      let b;
-      const E = 864e5;
+        E = s(22837);
+      let f;
+      const b = 864e5;
       function v(e) {
         return `appinfo_${e}_${p.TS.LANGUAGE}`;
       }
       function y(e) {
-        return Boolean(e && Date.now() - e.timeCached < E);
+        return Boolean(e && Date.now() - e.timeCached < b);
       }
       function g(e) {
         const t = (0, o.KV)(),
           s = (0, o.rX)();
-        return (0, h.I)({
+        return (0, m.I)({
           queryKey: ["appinfo", e],
           queryFn: async () =>
             (function (e, t) {
               return (
-                b ||
-                  (b = new (u())(
+                f ||
+                  (f = new (u())(
                     async (s) => {
                       const n = new Map();
                       (await Promise.all(s.map((e) => t.GetObject(v(e)))))
@@ -60,8 +150,8 @@
                         .forEach(({ value: e }) => n.set(e.appid, e));
                       const r = s.slice().filter((e) => !n.has(e));
                       if (r.length) {
-                        const s = m.w.Init(d._z);
-                        s.Body().set_language((0, f.sf)(p.TS.LANGUAGE)),
+                        const s = h.w.Init(d._z);
+                        s.Body().set_language((0, E.sf)(p.TS.LANGUAGE)),
                           s.Body().set_appids(r);
                         const i = await d.BE.GetApps(e, s);
                         if (1 != i.GetEResult()) throw i.GetErrorMessage();
@@ -79,25 +169,25 @@
                     },
                     { cache: !1 },
                   )),
-                b
+                f
               );
             })(t, s).load(e),
-          staleTime: E,
+          staleTime: b,
           enabled: !!e,
         }).data;
       }
-      var S = s(79908),
-        C = s(61859),
-        N = s(82477),
-        O = s(10981),
-        _ = s(22797),
-        w = s(78327);
+      var N = s(79908),
+        S = s(61859),
+        C = s(82477),
+        _ = s(10981),
+        O = s(22797),
+        I = s(78327);
       function R(e) {
         return `?joinsessionid=${e}`;
       }
-      function I(e) {
+      function w(e) {
         return n.createElement(
-          O.$n,
+          _.$n,
           {
             className: i().JoinSessionButton,
             onClick: () =>
@@ -108,7 +198,7 @@
         );
       }
       function L(e) {
-        const t = (0, S.Vc)(),
+        const t = (0, N.Vc)(),
           s = (0, o.KV)();
         return t.isSuccess
           ? t.data?.sessions?.length > 0
@@ -116,7 +206,7 @@
                 n.Fragment,
                 null,
                 n.createElement(
-                  O.JU,
+                  _.JU,
                   { className: i().AvailableSessionsText },
                   "Available Steam Sessions:",
                 ),
@@ -138,11 +228,11 @@
                         t.os_name,
                       ),
                       n.createElement(
-                        O.$n,
+                        _.$n,
                         {
                           className: i().JoinSessionButton,
                           onClick: () =>
-                            (0, S.o6)(
+                            (0, N.o6)(
                               s,
                               t.client_instanceid,
                               e.steamAppId,
@@ -161,7 +251,7 @@
                 "No logged in sessions",
               )
           : t.isFetching || t.isRefetching
-            ? n.createElement(_.t, null)
+            ? n.createElement(O.t, null)
             : n.createElement(
                 "div",
                 { className: i().Error },
@@ -169,7 +259,7 @@
                 t.error.message,
               );
       }
-      function k(e) {
+      function q(e) {
         const t = g(e.steamAppId);
         return t
           ? n.createElement(
@@ -192,11 +282,11 @@
                 { className: i().SessionInfoCtr },
                 n.createElement("iframe", { src: e.sessionLiveDataUrl }),
               ),
-              w.TS.IN_CLIENT
+              I.TS.IN_CLIENT
                 ? n.createElement(
                     "div",
                     { className: i().SectionCtr },
-                    n.createElement(I, { ...e }, "Launch Game"),
+                    n.createElement(w, { ...e }, "Launch Game"),
                   )
                 : n.createElement(
                     n.Fragment,
@@ -204,37 +294,37 @@
                     n.createElement(
                       "div",
                       { className: i().SectionCtr },
-                      w.iA.logged_in
+                      I.iA.logged_in
                         ? n.createElement(L, { ...e })
                         : n.createElement(
                             n.Fragment,
                             null,
                             n.createElement(
-                              O.JU,
+                              _.JU,
                               null,
                               "Login to join on another device",
                             ),
                             n.createElement(
-                              O.$n,
-                              { onClick: N.vg },
-                              (0, C.we)("#Login_SignIn"),
+                              _.$n,
+                              { onClick: C.vg },
+                              (0, S.we)("#Login_SignIn"),
                             ),
                           ),
                     ),
-                    !w.TS.IN_MOBILE &&
-                      !w.TS.IN_MOBILE_WEBVIEW &&
+                    !I.TS.IN_MOBILE &&
+                      !I.TS.IN_MOBILE_WEBVIEW &&
                       n.createElement(
                         "div",
                         { className: i().SectionCtr },
-                        n.createElement(O.JU, null, "Or launch on this PC"),
-                        n.createElement(I, { ...e }, "Launch Game Here"),
+                        n.createElement(_.JU, null, "Or launch on this PC"),
+                        n.createElement(w, { ...e }, "Launch Game Here"),
                       ),
                   ),
             )
-          : n.createElement(_.t, null);
+          : n.createElement(O.t, null);
       }
-      function q() {
-        const e = (0, w.Tc)("multiplayersession_join", "application_config"),
+      function M() {
+        const e = (0, I.Tc)("multiplayersession_join", "application_config"),
           t = new URLSearchParams((0, a.zy)().search).get("jws"),
           { header: s, body: r } = (0, l.I3)(t) || { header: {}, body: {} };
         let { steamAppId: o } = r;
@@ -246,7 +336,7 @@
             "div",
             { className: i().JoinApp },
             o && u && u
-              ? n.createElement(k, {
+              ? n.createElement(q, {
                   steamAppId: o,
                   sessionLiveDataUrl: u,
                   sessionID: c,
@@ -259,7 +349,7 @@
     },
     54806: (e, t, s) => {
       "use strict";
-      s.d(t, { E: () => b });
+      s.d(t, { E: () => f });
       var n = s(90626),
         r = s(86709),
         i = s(45747),
@@ -343,9 +433,9 @@
             const s = this.#c(e).map((e) =>
               e.observer.getOptimisticResult(e.defaultedQueryOptions),
             );
-            return [s, (e) => this.#h(e ?? s, t), () => this.#m(s, e)];
+            return [s, (e) => this.#m(e ?? s, t), () => this.#h(s, e)];
           }
-          #m(e, t) {
+          #h(e, t) {
             const s = this.#c(t);
             return s.map((t, n) => {
               const r = e[n];
@@ -358,7 +448,7 @@
                   });
             });
           }
-          #h(e, t) {
+          #m(e, t) {
             return t
               ? ((this.#i && this.#t === this.#o && t === this.#a) ||
                   ((this.#a = t),
@@ -408,7 +498,7 @@
           #u() {
             if (this.hasListeners()) {
               this.#i !==
-                this.#h(this.#m(this.#t, this.#s), this.#n?.combine) &&
+                this.#m(this.#h(this.#t, this.#s), this.#n?.combine) &&
                 r.j.batch(() => {
                   this.listeners.forEach((e) => {
                     e(this.#t);
@@ -418,16 +508,16 @@
           }
         },
         u = s(75233),
-        h = s(22730),
-        m = s(43424),
+        m = s(22730),
+        h = s(43424),
         d = s(19086),
         p = s(44407),
-        f = s(19866);
-      function b({ queries: e, ...t }, s) {
+        E = s(19866);
+      function f({ queries: e, ...t }, s) {
         const a = (0, u.jE)(s),
-          o = (0, h.w)(),
-          l = (0, m.h)(),
-          b = n.useMemo(
+          o = (0, m.w)(),
+          l = (0, h.h)(),
+          f = n.useMemo(
             () =>
               e.map((e) => {
                 const t = a.defaultQueryOptions(e);
@@ -437,26 +527,26 @@
               }),
             [e, a, o],
           );
-        b.forEach((e) => {
+        f.forEach((e) => {
           (0, p.jv)(e), (0, d.LJ)(e, l);
         }),
           (0, d.wZ)(l);
-        const [E] = n.useState(() => new c(a, b, t)),
-          [v, y, g] = E.getOptimisticResult(b, t.combine);
+        const [b] = n.useState(() => new c(a, f, t)),
+          [v, y, g] = b.getOptimisticResult(f, t.combine);
         n.useSyncExternalStore(
           n.useCallback(
-            (e) => (o ? f.l : E.subscribe(r.j.batchCalls(e))),
-            [E, o],
+            (e) => (o ? E.l : b.subscribe(r.j.batchCalls(e))),
+            [b, o],
           ),
-          () => E.getCurrentResult(),
-          () => E.getCurrentResult(),
+          () => b.getCurrentResult(),
+          () => b.getCurrentResult(),
         ),
           n.useEffect(() => {
-            E.setQueries(b, t, { listeners: !1 });
-          }, [b, t, E]);
-        const S = v.some((e, t) => (0, p.EU)(b[t], e))
+            b.setQueries(f, t, { listeners: !1 });
+          }, [f, t, b]);
+        const N = v.some((e, t) => (0, p.EU)(f[t], e))
           ? v.flatMap((e, t) => {
-              const s = b[t];
+              const s = f[t];
               if (s) {
                 const t = new i.$(a, s);
                 if ((0, p.EU)(s, e)) return (0, p.iL)(s, t, l);
@@ -465,9 +555,9 @@
               return [];
             })
           : [];
-        if (S.length > 0) throw Promise.all(S);
-        const C = v.find((e, t) => {
-          const s = b[t];
+        if (N.length > 0) throw Promise.all(N);
+        const S = v.find((e, t) => {
+          const s = f[t];
           return (
             s &&
             (0, d.$1)({
@@ -478,7 +568,7 @@
             })
           );
         });
-        if (C?.error) throw C.error;
+        if (S?.error) throw S.error;
         return y(g());
       }
     },

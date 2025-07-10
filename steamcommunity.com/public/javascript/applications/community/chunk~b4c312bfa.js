@@ -206,7 +206,7 @@
         constructor(e = null) {
           super(),
             m.prototype.recommendationid || s.Sg(m.M()),
-            n.Message.initialize(this, e, 0, -1, [27, 40, 52], null);
+            n.Message.initialize(this, e, 0, -1, [27, 40, 53], null);
         }
         static M() {
           return (
@@ -441,12 +441,12 @@
                     bw: s.gp.writeUint32,
                   },
                   tags: {
-                    n: 52,
+                    n: 53,
                     r: !0,
                     q: !0,
-                    br: s.qM.readUint32,
-                    pbr: s.qM.readPackedUint32,
-                    bw: s.gp.writeRepeatedUint32,
+                    br: s.qM.readUint64String,
+                    pbr: s.qM.readPackedUint64String,
+                    bw: s.gp.writeRepeatedUint64String,
                   },
                 },
               }),

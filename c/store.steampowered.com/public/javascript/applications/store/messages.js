@@ -178,6 +178,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(..._) {
+        return _.join(" ");
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -3789,6 +3798,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           include_trailers: !0,
@@ -4112,7 +4122,9 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _?.GetAllTrailers().GetHighlightTrailers(_),
-          _ = _?.length > 0 && _[0];
+          _ = _?.length > 0 && _[0],
+          _ = _.useId(),
+          _ = _.useId();
         if (!_) return null;
         const _ = (
             _ ? _.GetTrailer480p().strWebMURL : _.GetTrailerMax().strWebMURL
@@ -4128,6 +4140,7 @@
           _.createElement(
             _._,
             {
+              "aria-labelledby": (0, _._)(_, _),
               bAllowFullSize: !0,
               bOKDisabled: !0,
               closeModal: _,
@@ -4155,6 +4168,26 @@
                     type: "video/mp4",
                   }),
               ),
+            ),
+            _.createElement(
+              "div",
+              {
+                _: _,
+                style: {
+                  display: "none",
+                },
+              },
+              _.GetName(),
+            ),
+            _.createElement(
+              "div",
+              {
+                _: _,
+                style: {
+                  display: "none",
+                },
+              },
+              _.GetName(),
             ),
           ),
         );
@@ -5998,10 +6031,9 @@
         );
       }
       const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { message: _, active: __webpack_require__, preview: _ } = _,

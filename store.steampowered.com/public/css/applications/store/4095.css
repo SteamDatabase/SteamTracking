@@ -1590,6 +1590,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   display: flex;
   padding: 0px;
   height: 38px;
+  position: relative;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN._1ZlGJxv-xQaABSvaVvMlNq ._3NhLu7mTdty7JufpSpz6Re {
   flex-direction: row;
@@ -1653,7 +1654,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   margin: unset;
   column-gap: 6px;
   padding-right: 8px;
-  height: unset;
+  height: 100%;
 }
 .kW6m4Sjqacp5hykrj5LEo {
   position: absolute;
@@ -1782,7 +1783,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   line-height: unset;
   text-shadow: unset;
   color: #fff;
-  background-color: var(--gpColor-Green);
+  background-color: #5ba32b;
   padding: 0px 4px;
   border-radius: 1px;
 }
@@ -1817,7 +1818,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   letter-spacing: unset;
   line-height: unset;
   margin-top: unset;
-  color: var(--gpStore-LightestGrey);
+  color: #ccd8e3;
   opacity: 0.6;
   text-decoration: line-through;
 }
@@ -1849,13 +1850,14 @@ a._1g4l95V_TTLLrQ2u-hYASr {
 ._1Fru-E7WQMr8G_aR2sMg5F {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   color: #b5df20;
   position: absolute;
   top: -14px;
   left: 0;
   right: 0;
   font-size: 11px;
+  white-space: nowrap;
 }
 ._1Fru-E7WQMr8G_aR2sMg5F span {
   margin: 0 auto;
@@ -1865,7 +1867,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
   box-shadow: 1px 1px 3px #000;
 }
 .BasicUI ._1Fru-E7WQMr8G_aR2sMg5F {
-  color: var(--gpColor-GreenHi);
+  color: #59bf40;
 }
 ._1g0B-RjwkUV0_MDURgy3Bi {
   position: relative;
@@ -1891,7 +1893,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
 }
 .BasicUI ._1g0B-RjwkUV0_MDURgy3Bi ._3mInDnGL3LlUC7uPs1CfOP {
   padding: unset;
-  color: var(--gpColor-GreenHi);
+  color: #59bf40;
   font-size: unset;
   font-weight: 500;
   text-decoration: line-through;
@@ -3897,6 +3899,12 @@ html.touch
   align-items: center;
   background: #4c6b22;
   padding: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+}
+._3Qt9S4lxTBuJqoY2PidC5h svg {
+  height: 100%;
 }
 ._3Qt9S4lxTBuJqoY2PidC5h svg path {
   fill: #beee11;
@@ -4947,6 +4955,7 @@ span._1P__hyqsgd049GH0Bn007_ {
   background-color: #000;
   position: relative;
   padding: 4px 24px;
+  margin-top: var(--store-menu-overlap-height, 0px);
   z-index: 10;
   align-items: center;
 }

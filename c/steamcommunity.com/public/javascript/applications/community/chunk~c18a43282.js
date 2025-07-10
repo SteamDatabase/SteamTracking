@@ -3104,7 +3104,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
@@ -3132,7 +3131,6 @@
             ? _
             : ".jpg";
         },
-        GetExtensionTypeFromURL: (_) => (0, _._)(_),
         GetHashAndExt(_) {
           return _ ? _.image_hash + this.GetExtensionString(_) : null;
         },
@@ -3343,9 +3341,7 @@
             (this.file = _),
             (this.filename = _),
             (this.fileType =
-              null !== (_ = _._.GetExtensionTypeFromURL(_)) && void 0 !== _
-                ? _
-                : 0),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : 0),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),

@@ -895,7 +895,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return new URLSearchParams(_.search).get(_);
@@ -979,13 +978,11 @@
               _.createElement(
                 _._,
                 {
+                  title: (0, _._)(
+                    `#FamilyManagement_RoleDescriptionLongHeader_${_}`,
+                  ),
                   closeModal: _,
                 },
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)(`#FamilyManagement_RoleDescriptionLongHeader_${_}`),
-                ),
                 1 === _ ? _.createElement(_, null) : _.createElement(_, null),
                 _.createElement(
                   _._,
@@ -1028,13 +1025,9 @@
               _.createElement(
                 _._,
                 {
+                  title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
                   closeModal: _,
                 },
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
-                ),
                 _.createElement(
                   "div",
                   {
@@ -1073,13 +1066,9 @@
               _.createElement(
                 _._,
                 {
+                  title: (0, _._)("#FamilyManagement_AlreadyAccepted_Header"),
                   closeModal: _,
                 },
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)("#FamilyManagement_AlreadyAccepted_Header"),
-                ),
                 _.createElement(
                   "div",
                   {
@@ -2095,14 +2084,10 @@
             _.createElement(
               _._,
               {
+                title: (0, _._)("#FamilyManagement_InviteMethodFriend"),
                 className: _.SelectFriendModal,
                 onCancel: () => _(!1),
               },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#FamilyManagement_InviteMethodFriend"),
-              ),
               _.createElement(_, {
                 setSelectedFriendSteamID: __webpack_require__,
                 excludeSteamIDs: _,
@@ -5147,13 +5132,9 @@
           _.createElement(
             _._,
             {
+              title: (0, _._)("#ContentDescriptor_ExampleProductsHeader"),
               closeModal: () => __webpack_require__(null),
             },
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#ContentDescriptor_ExampleProductsHeader"),
-            ),
             !_.data && _.createElement(_._, null),
             0 === _.data?.length &&
               _.createElement(
@@ -6943,8 +6924,7 @@
         );
       }
       const _ = function () {
-        const _ = (0, _._)(),
-          [_, __webpack_require__] = (0, _.useState)(null),
+        const [_, _] = (0, _.useState)(null),
           _ = (0, _._)(),
           _ = (0, _._)();
         if (_.isError) return null;
@@ -6954,7 +6934,6 @@
           _._,
           {
             navID: "StoreFamilyManagement",
-            NavigationManager: _,
           },
           _.createElement(
             _._,
@@ -6966,7 +6945,7 @@
               {
                 value: {
                   errorMessage: _,
-                  setErrorMessage: __webpack_require__,
+                  setErrorMessage: _,
                 },
               },
               _.createElement(_._, null),

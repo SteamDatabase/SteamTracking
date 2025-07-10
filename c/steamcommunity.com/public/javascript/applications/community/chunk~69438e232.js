@@ -13131,6 +13131,7 @@
             _.createElement(
               _._,
               {
+                "aria-label": _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
                 bOKDisabled: !0,
                 bHideCloseIcon: !0,
                 onCancel: () => !1,
@@ -15235,6 +15236,7 @@
                       "down" == this.state.myVote ? _().VoteButtonSelected : "",
                     ),
                     onActivate: this.OnVoteDown,
+                    "aria-label": (0, _._)("#Button_RateDown"),
                   },
                   _.createElement(_.bfp, {
                     className:
@@ -16573,41 +16575,43 @@
           } = _,
           _ = _(_),
           [_, _] = _.useState(Boolean(_.fnAction));
-        return (
-          _.useEffect(() => {
-            _.fnAction && (_(!0), _.fnAction().finally(() => _(!1)));
-          }, [_]),
+        _.useEffect(() => {
+          _.fnAction && (_(!0), _.fnAction().finally(() => _(!1)));
+        }, [_]);
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            bDisableBackgroundDismiss: !0,
+            closeModal: _,
+            onCancel: _,
+            className: "CSSActionDialogDialog",
+            "aria-labelledby": _,
+          },
           _.createElement(
             _._,
             {
-              bDisableBackgroundDismiss: !0,
-              closeModal: _,
-              onCancel: _,
-              className: "CSSActionDialogDialog",
+              _: _,
             },
+            Boolean(_.bInitialState) && (0, _._)(_),
+            Boolean(_.bSuccessState) && (0, _._)(_),
+            Boolean(_.bFailedState) && (0, _._)(_),
+          ),
+          _.createElement(
+            _._,
+            null,
             _.createElement(
               _._,
               null,
-              Boolean(_.bInitialState) && (0, _._)(_),
-              Boolean(_.bSuccessState) && (0, _._)(_),
-              Boolean(_.bFailedState) && (0, _._)(_),
+              _
+                ? _.createElement(_._, {
+                    size: "medium",
+                    position: "center",
+                    string: (0, _._)("#Loading"),
+                  })
+                : __webpack_require__,
             ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                null,
-                _
-                  ? _.createElement(_._, {
-                      size: "medium",
-                      position: "center",
-                      string: (0, _._)("#Loading"),
-                    })
-                  : __webpack_require__,
-              ),
-            ),
-          )
+          ),
         );
       }
       function _(_) {

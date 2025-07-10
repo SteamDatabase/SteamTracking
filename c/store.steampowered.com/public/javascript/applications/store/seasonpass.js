@@ -127,7 +127,7 @@
               __webpack_require__,
             ),
           );
-        return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}));
+        return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}, !0));
       }
       function _(_) {
         const { showErrorInfo: _ } = _.context;

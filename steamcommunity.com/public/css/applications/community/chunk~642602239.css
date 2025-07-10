@@ -1454,6 +1454,7 @@ html:not(.touch)
   font-size: 13px;
   font-style: italic;
   padding-bottom: 4px;
+  flex-basis: 100%;
 }
 ._2wUk7QR9TZiiKB4bX_9EgD a {
   color: #4297f8;

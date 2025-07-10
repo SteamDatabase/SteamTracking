@@ -780,12 +780,12 @@
         return _.createElement(
           _._,
           {
+            title: _,
             onOK: _,
             onCancel: _.closeModal,
             bDestructiveWarning: _,
             closeModal: _,
           },
-          _.createElement(_._, null, " ", _, " "),
           _.createElement(
             _._,
             {

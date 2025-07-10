@@ -16,7 +16,7 @@
                     ? _
                     : {},
             _ = !_.document && !!_.postMessage,
-            _ = _ && /blob:/i.test((_.location || {}).protocol),
+            _ = _.IS_PAPA_WORKER || !1,
             _ = {},
             _ = 0,
             _ = {
@@ -37,9 +37,17 @@
                         (_ = _.toString()),
                         _.BLOB_URL ||
                           (_.BLOB_URL = __webpack_require__.createObjectURL(
-                            new Blob(["(", _, ")();"], {
-                              type: "text/javascript",
-                            }),
+                            new Blob(
+                              [
+                                "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
+                                "(",
+                                _,
+                                ")();",
+                              ],
+                              {
+                                type: "text/javascript",
+                              },
+                            ),
                           ))),
                       _ = new _.Worker(_);
                     return (_.onmessage = _), (_._ = _++), (_[_._] = _);
@@ -65,7 +73,10 @@
                 return (
                   _.NODE_STREAM_INPUT,
                   "string" == typeof _
-                    ? (_ = _.download ? new _(_) : new _(_))
+                    ? ((_ = (function (_) {
+                        return 65279 === _.charCodeAt(0) ? _.slice(1) : _;
+                      })(_)),
+                      (_ = _.download ? new _(_) : new _(_)))
                     : !0 === _.readable && _(_.read) && _(_._)
                       ? (_ = new _(_))
                       : ((_.File && _ instanceof File) ||
@@ -82,7 +93,8 @@
                   _ = '"',
                   _ = _ + _,
                   _ = !1,
-                  _ = null;
+                  _ = null,
+                  _ = !1;
                 !(function () {
                   if ("object" == typeof _) {
                     if (
@@ -92,6 +104,7 @@
                         }).length ||
                         (_ = _.delimiter),
                       ("boolean" == typeof _.quotes ||
+                        "function" == typeof _.quotes ||
                         Array.isArray(_.quotes)) &&
                         (_ = _.quotes),
                       ("boolean" != typeof _.skipEmptyLines &&
@@ -106,7 +119,13 @@
                         throw new Error("Option columns is empty");
                       _ = _.columns;
                     }
-                    void 0 !== _.escapeChar && (_ = _.escapeChar + _);
+                    void 0 !== _.escapeChar && (_ = _.escapeChar + _),
+                      ("boolean" == typeof _.escapeFormulae ||
+                        _.escapeFormulae instanceof RegExp) &&
+                        (_ =
+                          _.escapeFormulae instanceof RegExp
+                            ? _.escapeFormulae
+                            : /^[=+\-@\t\r].*$/);
                   }
                 })();
                 var _ = new RegExp(_(_), "g");
@@ -115,28 +134,25 @@
                   Array.isArray(_))
                 ) {
                   if (!_.length || Array.isArray(_[0])) return _(null, _, _);
-                  if ("object" == typeof _[0]) return _(_ || _(_[0]), _, _);
+                  if ("object" == typeof _[0])
+                    return _(_ || Object.keys(_[0]), _, _);
                 } else if ("object" == typeof _)
                   return (
                     "string" == typeof _.data && (_.data = JSON.parse(_.data)),
                     Array.isArray(_.data) &&
-                      (_.fields || (_.fields = _.meta && _.meta.fields),
+                      (_.fields || (_.fields = (_.meta && _.meta.fields) || _),
                       _.fields ||
                         (_.fields = Array.isArray(_.data[0])
                           ? _.fields
-                          : _(_.data[0])),
+                          : "object" == typeof _.data[0]
+                            ? Object.keys(_.data[0])
+                            : []),
                       Array.isArray(_.data[0]) ||
                         "object" == typeof _.data[0] ||
                         (_.data = [_.data])),
                     _(_.fields || [], _.data || [], _)
                   );
                 throw new Error("Unable to serialize unrecognized input");
-                function _(_) {
-                  if ("object" != typeof _) return [];
-                  var _ = [];
-                  for (var _ in _) _.push(_);
-                  return _;
-                }
                 function _(_, _, _) {
                   var _ = "";
                   "string" == typeof _ && (_ = JSON.parse(_)),
@@ -184,9 +200,16 @@
                   if (null == _) return "";
                   if (_.constructor === Date)
                     return JSON.stringify(_).slice(1, 25);
-                  _ = _.toString().replace(_, _);
-                  var _ =
-                    ("boolean" == typeof _ && _) ||
+                  var _ = !1;
+                  _ &&
+                    "string" == typeof _ &&
+                    _.test(_) &&
+                    ((_ = "'" + _), (_ = !0));
+                  var _ = _.toString().replace(_, _);
+                  return (_ =
+                    _ ||
+                    !0 === _ ||
+                    ("function" == typeof _ && __webpack_require__(_, _)) ||
                     (Array.isArray(_) && _[_]) ||
                     (function (_, _) {
                       for (var _ = 0; _ < _.length; _++)
@@ -195,8 +218,9 @@
                     })(_, _.BAD_DELIMITERS) ||
                     -1 < _.indexOf(_) ||
                     " " === _.charAt(0) ||
-                    " " === _.charAt(_.length - 1);
-                  return _ ? _ + _ + _ : _;
+                    " " === _.charAt(_.length - 1))
+                    ? _ + _ + _
+                    : _;
                 }
               },
             };
@@ -406,7 +430,11 @@
                     _ ||
                       ((_.onload = _(this._chunkLoaded, this)),
                       (_.onerror = _(this._chunkError, this))),
-                    _.open("GET", this._input, !_),
+                    _.open(
+                      this._config.downloadRequestBody ? "POST" : "GET",
+                      this._input,
+                      !_,
+                    ),
                     this._config.downloadRequestHeaders)
                   ) {
                     var _ = this._config.downloadRequestHeaders;
@@ -420,27 +448,28 @@
                     );
                   }
                   try {
-                    _.send();
+                    _.send(this._config.downloadRequestBody);
                   } catch (_) {
                     this._chunkError(_.message);
                   }
-                  _ && 0 === _.status
-                    ? this._chunkError()
-                    : (this._start += this._config.chunkSize);
+                  _ && 0 === _.status && this._chunkError();
                 }
               }),
               (this._chunkLoaded = function () {
                 4 === _.readyState &&
                   (_.status < 200 || 400 <= _.status
                     ? this._chunkError()
-                    : ((this._finished =
+                    : ((this._start += this._config.chunkSize
+                        ? this._config.chunkSize
+                        : _.responseText.length),
+                      (this._finished =
                         !this._config.chunkSize ||
-                        this._start >
+                        this._start >=
                           (function (_) {
                             var _ = _.getResponseHeader("Content-Range");
                             return null === _
                               ? -1
-                              : parseInt(_.substr(_.lastIndexOf("/") + 1));
+                              : parseInt(_.substring(_.lastIndexOf("/") + 1));
                           })(_)),
                       this.parseChunk(_.responseText)));
               }),
@@ -507,10 +536,12 @@
               }),
               (this._nextChunk = function () {
                 if (!this._finished) {
-                  var _ = this._config.chunkSize,
-                    _ = _ ? _.substr(0, _) : _;
+                  var _,
+                    _ = this._config.chunkSize;
                   return (
-                    (_ = _ ? _.substr(_) : ""),
+                    _
+                      ? ((_ = _.substring(0, _)), (_ = _.substring(_)))
+                      : ((_ = _), (_ = "")),
                     (this._finished = !_),
                     this.parseChunk(_)
                   );
@@ -572,9 +603,11 @@
             var _,
               _,
               _,
-              _ = /^\s*-?(\d*\.?\d+|\d+\.?\d*)(e[-+]?\d+)?\s*$/i,
+              _ = Math.pow(2, 53),
+              _ = -_,
+              _ = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
               _ =
-                /(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))/,
+                /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
               _ = this,
               _ = 0,
               _ = 0,
@@ -595,7 +628,7 @@
                   (_ += _.data.length),
                     _.preview && _ > _.preview
                       ? __webpack_require__.abort()
-                      : _(_, _);
+                      : ((_.data = _.data[0]), _(_, _));
                 }
               };
             }
@@ -605,8 +638,8 @@
                 : 1 === _.length && 0 === _[0].length;
             }
             function _() {
-              if (
-                (_ &&
+              return (
+                _ &&
                   _ &&
                   (_(
                     "Delimiter",
@@ -616,11 +649,10 @@
                       "'",
                   ),
                   (_ = !1)),
-                _.skipEmptyLines)
-              )
-                for (var _ = 0; _ < _.data.length; _++)
-                  _(_.data[_]) && _.data.splice(_--, 1);
-              return (
+                _.skipEmptyLines &&
+                  (_.data = _.data.filter(function (_) {
+                    return !_(_);
+                  })),
                 _() &&
                   (function () {
                     if (_)
@@ -629,8 +661,8 @@
                           _.data[_].forEach(_);
                         _.data.splice(0, 1);
                       } else _.data.forEach(_);
-                    function _(_) {
-                      _(_.transformHeader) && (_ = _.transformHeader(_)),
+                    function _(_, _) {
+                      _(_.transformHeader) && (_ = _.transformHeader(_, _)),
                         _.push(_);
                     }
                   })(),
@@ -677,7 +709,7 @@
                   }
                   var _ = 1;
                   return (
-                    !_.data[0] || Array.isArray(_.data[0])
+                    !_.data.length || Array.isArray(_.data[0])
                       ? ((_.data = _.data.map(_)), (_ = _.data.length))
                       : (_.data = _(_.data, 0)),
                     _.header && _.meta && (_.meta.fields = _),
@@ -701,7 +733,13 @@
                     "TRUE" === _ ||
                     ("false" !== _ &&
                       "FALSE" !== _ &&
-                      (_.test(_)
+                      ((function (_) {
+                        if (_.test(_)) {
+                          var _ = parseFloat(_);
+                          if (_ < _ && _ < _) return !0;
+                        }
+                        return !1;
+                      })(_)
                         ? parseFloat(_)
                         : _.test(_)
                           ? new Date(_)
@@ -713,19 +751,19 @@
               var _;
             }
             function _(_, _, _, _) {
-              _.errors.push({
+              var _ = {
                 type: _,
                 code: _,
                 message: _,
-                row: _,
-              });
+              };
+              void 0 !== _ && (_.row = _), _.errors.push(_);
             }
             (this.parse = function (_, _, _) {
               var _ = _.quoteChar || '"';
               if (
                 (_.newline ||
                   (_.newline = (function (_, _) {
-                    _ = _.substr(0, 1048576);
+                    _ = _.substring(0, 1048576);
                     var _ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"),
                       _ = (_ = _.replace(_, "")).split("\r"),
                       _ = _.split("\n"),
@@ -818,12 +856,14 @@
               (this.pause = function () {
                 (_ = !0),
                   __webpack_require__.abort(),
-                  (_ = _.substr(__webpack_require__.getCharIndex()));
+                  (_ = _(_.chunk)
+                    ? ""
+                    : _.substring(__webpack_require__.getCharIndex()));
               }),
               (this.resume = function () {
                 _.streamer._halted
                   ? ((_ = !1), _.streamer.parseChunk(_, !0))
-                  : setTimeout(this.resume, 3);
+                  : setTimeout(_.resume, 3);
               }),
               (this.aborted = function () {
                 return _;
@@ -847,7 +887,10 @@
               _ = _.step,
               _ = _.preview,
               _ = _.fastMode,
-              _ = (_ = void 0 === _.quoteChar ? '"' : _.quoteChar);
+              _ = (_ =
+                void 0 === _.quoteChar || null === _.quoteChar
+                  ? '"'
+                  : _.quoteChar);
             if (
               (void 0 !== _.escapeChar && (_ = _.escapeChar),
               ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
@@ -875,12 +918,34 @@
                 _ = [],
                 _ = (_ = 0);
               if (!_) return _();
+              if (_.header && !_) {
+                var _ = _.split(_)[0].split(_),
+                  _ = [],
+                  _ = {},
+                  _ = !1;
+                for (var _ in _) {
+                  var _ = _[_];
+                  _(_.transformHeader) && (_ = _.transformHeader(_, _));
+                  var _ = _,
+                    _ = _[_] || 0;
+                  for (
+                    0 < _ && ((_ = !0), (_ = _ + "_" + _)), _[_] = _ + 1;
+                    _.includes(_);
+                  )
+                    _ = _ + "_" + _;
+                  _.push(_);
+                }
+                if (_) {
+                  var _ = _.split(_);
+                  (_[0] = _.join(_)), (_ = _.join(_));
+                }
+              }
               if (_ || (!1 !== _ && -1 === _.indexOf(_))) {
                 for (var _ = _.split(_), _ = 0; _ < _.length; _++) {
                   if (((_ = _[_]), (_ += _.length), _ !== _.length - 1))
                     _ += _.length;
                   else if (_) return _();
-                  if (!_ || _.substr(0, _) !== _) {
+                  if (!_ || _.substring(0, _) !== _) {
                     if (_) {
                       if (((_ = []), _(_.split(_)), _(), _)) return _();
                     } else _(_.split(_));
@@ -897,27 +962,14 @@
                 ;
               )
                 if (_[_] !== _)
-                  if (_ && 0 === _.length && _.substr(_, _) === _) {
+                  if (_ && 0 === _.length && _.substring(_, _ + _) === _) {
                     if (-1 === _) return _();
                     (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
-                  } else {
-                    if (-1 !== _ && (_ < _ || -1 === _)) {
-                      if (-1 === _) {
-                        _.push(_.substring(_, _)),
-                          (_ = _ + _),
-                          (_ = _.indexOf(_, _));
-                        continue;
-                      }
-                      var _ = _(_, _, _);
-                      if (_ && _.nextDelim) {
-                        (_ = _.nextDelim),
-                          (_ = _.quoteSearch),
-                          _.push(_.substring(_, _)),
-                          (_ = _ + _),
-                          (_ = _.indexOf(_, _));
-                        continue;
-                      }
-                    }
+                  } else if (-1 !== _ && (_ < _ || -1 === _))
+                    _.push(_.substring(_, _)),
+                      (_ = _ + _),
+                      (_ = _.indexOf(_, _));
+                  else {
                     if (-1 === _) break;
                     if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
                       return _();
@@ -940,8 +992,10 @@
                     if (_ === _ - 1) return _(_.substring(_, _).replace(_, _));
                     if (_ !== _ || _[_ + 1] !== _) {
                       if (_ === _ || 0 === _ || _[_ - 1] !== _) {
+                        -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1)),
+                          -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
                         var _ = _(-1 === _ ? _ : Math.min(_, _));
-                        if (_[_ + 1 + _] === _) {
+                        if (_.substr(_ + 1 + _, _) === _) {
                           _.push(_.substring(_, _).replace(_, _)),
                             _[(_ = _ + 1 + _ + _)] !== _ &&
                               (_ = _.indexOf(_, _)),
@@ -950,7 +1004,7 @@
                           break;
                         }
                         var _ = _(_);
-                        if (_.substr(_ + 1 + _, _) === _) {
+                        if (_.substring(_ + 1 + _, _ + 1 + _ + _) === _) {
                           if (
                             (_.push(_.substring(_, _).replace(_, _)),
                             _(_ + 1 + _ + _),
@@ -982,14 +1036,14 @@
                 var _ = 0;
                 if (-1 !== _) {
                   var _ = _.substring(_ + 1, _);
-                  _ && "" === _.trim() && (_ = _.length);
+                  _ && "" === __webpack_require__.trim() && (_ = _.length);
                 }
                 return _;
               }
               function _(_) {
                 return (
                   _ ||
-                    (void 0 === _ && (_ = _.substr(_)),
+                    (void 0 === _ && (_ = _.substring(_)),
                     _.push(_),
                     (_ = _),
                     _(_),
@@ -1000,9 +1054,9 @@
               function _(_) {
                 (_ = _), _(_), (_ = []), (_ = _.indexOf(_, _));
               }
-              function _(_, _) {
+              function _(_) {
                 return {
-                  data: _ ? _[0] : _,
+                  data: _,
                   errors: _,
                   meta: {
                     delimiter: _,
@@ -1014,24 +1068,7 @@
                 };
               }
               function _() {
-                _(_(void 0, !0)), (_ = []), (_ = []);
-              }
-              function _(_, _, _) {
-                var _ = {
-                    nextDelim: void 0,
-                    quoteSearch: void 0,
-                  },
-                  _ = _.indexOf(_, _ + 1);
-                if (_ < _ && _ < _ && (_ < _ || -1 === _)) {
-                  var _ = _.indexOf(_, _);
-                  if (-1 === _) return _;
-                  _ < _ && (_ = _.indexOf(_, _ + 1)), (_ = _(_, _, _));
-                } else
-                  _ = {
-                    nextDelim: _,
-                    quoteSearch: _,
-                  };
-                return _;
+                _(_()), (_ = []), (_ = []);
               }
             }),
               (this.abort = function () {

@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Store Home",
 	"Menu_Popover_FreeToPlay": "Free to Play",
 	"Menu_Popover_SteamCharts": "Steam Charts",
+	"Menu_Popover_Upcoming": "Upcoming Releases",
 	"Menu_Popover_PointsShop": "Points Shop",
 	"Menu_Popover_GiftCards": "Gift Cards",
 	"Menu_Popover_NewsAndUpdates": "News & Updates",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "New Releases",
 	"Menu_Section_Browse_Discounts": "Discounts & Events",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Your Wishlist",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s discounts",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Special Events",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Popular Titles",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Special Offers",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Search Results",
 	"Menu_SearchBar_YourTopGenres": "Your top genres",
 	"Menu_SearchBar_BrowseBy": "Browse by...",
+	"Menu_SearchBar_NoMatches": "No items match your query.",
+	"Menu_SearchBar_AdvancedSearch": "Advanced Search",
 	"Menu_Search": "Search",
 	"Menu_Label": "Store menu"
 }`);

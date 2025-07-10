@@ -2600,11 +2600,6 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  review_score_outliers_preference: {
-                    _: 14,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
                 },
               }),
             _.sm_m
@@ -9102,8 +9097,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ = _.createContext({
           bForceShowCompatInfo: !1,
           bSteamOS: !1,
@@ -9118,7 +9113,7 @@
         } = _();
         return __webpack_require__ && !_
           ? [!0, 2]
-          : __webpack_require__ || _
+          : __webpack_require__ || _ || _._.ON_DECK
             ? [!0, 1]
             : [!1, 0];
       }
@@ -14226,6 +14221,8 @@
         var _;
         const {
           results: __webpack_require__,
+          titleId: _,
+          descriptionId: _,
           appName: _,
           buttonProps: _,
           autoFocus: _,
@@ -14270,6 +14267,7 @@
                 ),
             _ = _
               ? _.createElement(_, {
+                  _: _,
                   category: __webpack_require__.steamos_resolved_category,
                   appName: _,
                 })
@@ -14293,6 +14291,7 @@
               _.createElement(
                 "div",
                 {
+                  _: _,
                   className: _().DialogHeader,
                 },
                 _.createElement(
@@ -14380,8 +14379,9 @@
       }
       function _(_) {
         const {
-            title: _,
-            autoFocus: __webpack_require__,
+            titleId: _,
+            title: __webpack_require__,
+            autoFocus: _,
             buttonProps: _,
             ratingIcon: _,
             ratingSummary: _,
@@ -14419,6 +14419,7 @@
               _.createElement(
                 "div",
                 {
+                  _: _,
                   className: _().DialogHeader,
                 },
                 _.createElement(
@@ -14426,7 +14427,7 @@
                   {
                     className: _().DialogTitle,
                   },
-                  _,
+                  __webpack_require__,
                 ),
                 _.createElement(
                   "div",
@@ -14450,8 +14451,8 @@
               _.createElement(
                 _._,
                 {
-                  autoFocus: __webpack_require__,
-                  focusableIfNoChildren: __webpack_require__ || _(),
+                  autoFocus: _,
+                  focusableIfNoChildren: _ || _(),
                   noFocusRing: !0,
                 },
                 _,
@@ -14462,13 +14463,14 @@
       }
       function _(_) {
         var _, _, _, _, _;
-        const { results: _, appName: _ } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ =
             -1 !==
             (null === (_ = _.steamos_resolved_items) || void 0 === _
               ? void 0
               : _.findIndex((_) => 1 == _.display_type)),
           _ = _.createElement(_, {
+            _: _,
             category:
               null !== (_ = _.steamos_resolved_category) && void 0 !== _
                 ? _
@@ -14488,6 +14490,7 @@
         return _.createElement(
           _,
           {
+            titleId: _,
             title: (0, _._)(
               "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
             ),
@@ -14545,13 +14548,14 @@
       }
       function _(_) {
         var _, _;
-        const { results: _, appName: _ } = _,
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
           _ =
             -1 !==
             (null === (_ = _.resolved_items) || void 0 === _
               ? void 0
               : _.findIndex((_) => 1 == _.display_type)),
           _ = _.createElement(_, {
+            _: _,
             category: _.resolved_category,
             appName: _,
           }),
@@ -14565,6 +14569,7 @@
         return _.createElement(
           _,
           {
+            titleId: _,
             title: (0, _._)(
               "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
             ),
@@ -14777,10 +14782,12 @@
               }, [_]),
               _
             );
-          })(_);
+          })(_),
+          _ = _.useId();
         return _.createElement(
           _._,
           {
+            "aria-labelledby": _,
             modalClassName: "DeckVerifiedModalDialog",
             closeModal: __webpack_require__,
             onCancel: __webpack_require__,
@@ -14796,6 +14803,7 @@
               },
               Boolean(_)
                 ? _.createElement(_, {
+                    titleId: _,
                     results: _,
                   })
                 : _.createElement(_._, {
@@ -14854,26 +14862,28 @@
       }
       function _(_) {
         const {
-          category: _,
-          appName: __webpack_require__,
+          _: _,
+          category: __webpack_require__,
+          appName: _,
           descriptionToken: _,
         } = _;
-        if (0 == _)
+        if (0 == __webpack_require__)
           return _.createElement(
             "div",
             {
+              _: _,
               className: _().CompatibilityDetailRatingSummary,
             },
-            __webpack_require__
+            _
               ? (0, _._)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                  _.createElement("b", null, (0, _._)(_)),
                 )
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_Unknown"),
           );
         let _ = "",
           _ = null;
-        switch (_) {
+        switch (__webpack_require__) {
           case 3:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
@@ -14891,7 +14901,7 @@
             {
               className: _,
             },
-            (0, _._)(_(_)),
+            (0, _._)(_(__webpack_require__)),
           ),
           _ = _.createElement(
             "span",
@@ -14900,10 +14910,10 @@
             },
             (0, _._)(_ || _),
           ),
-          _ = __webpack_require__
+          _ = _
             ? (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _.createElement("b", null, (0, _._)(_)),
                 _,
                 _,
               )
@@ -14911,6 +14921,7 @@
         return _.createElement(
           "div",
           {
+            _: _,
             className: _().CompatibilityDetailRatingSummary,
           },
           _,
@@ -14918,26 +14929,27 @@
       }
       function _(_) {
         const {
-          category: _,
-          appName: __webpack_require__,
+          _: _,
+          category: __webpack_require__,
+          appName: _,
           descriptionToken: _,
         } = _;
-        if (0 == _)
+        if (0 == __webpack_require__)
           return _.createElement(
             "div",
             {
               className: _().CompatibilityDetailRatingSummary,
             },
-            __webpack_require__
+            _
               ? (0, _._)(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
-                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                  _.createElement("b", null, (0, _._)(_)),
                 )
               : (0, _._)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           );
         let _ = "",
           _ = null;
-        switch (_) {
+        switch (__webpack_require__) {
           case 2:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
@@ -14951,7 +14963,7 @@
             {
               className: _,
             },
-            (0, _._)(_(_)),
+            (0, _._)(_(__webpack_require__)),
           ),
           _ = _.createElement(
             "span",
@@ -14960,10 +14972,10 @@
             },
             (0, _._)(_ || _),
           ),
-          _ = __webpack_require__
+          _ = _
             ? (0, _._)(
                 "#SteamOSCompatibility_DescriptionHeader_WithAppName",
-                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _.createElement("b", null, (0, _._)(_)),
                 _,
                 _,
               )
@@ -14971,6 +14983,7 @@
         return _.createElement(
           "div",
           {
+            _: _,
             className: _().CompatibilityDetailRatingSummary,
           },
           _,
@@ -17895,6 +17908,10 @@
               "div",
               {
                 className: _().ReviewScoreLabel,
+                "aria-label": (0, _._)(
+                  "#ReviewScore_UserReviewScoreAria",
+                  _.review_score_label,
+                ),
               },
               _.review_score_label,
             ),
@@ -17902,6 +17919,10 @@
               "div",
               {
                 className: _().ReviewScoreCount,
+                "aria-label": (0, _._)(
+                  "#GameHover_UserReviewCount",
+                  _.review_count.toLocaleString(),
+                ),
               },
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
@@ -20139,97 +20160,105 @@
             bShowNewFlag: _,
           } = _,
           _ = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().StoreSalePriceWidgetContainer]: !0,
-              [_().SingleLineMode]: _,
-              StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(__webpack_require__),
-              Discounted: Boolean(__webpack_require__),
-              [_().PrePurchase]: Boolean(_),
-              [_().NewItem]: Boolean(_),
-            }),
-          },
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().StoreSalePrepurchaseLabel),
-              },
+        let _;
+        return (
+          __webpack_require__ &&
+            (_ = _
+              ? (0, _._)("#Discount_ARIA_Label_SpecialPrice", _)
+              : (0, _._)("#Discount_ARIA_Label", __webpack_require__, _, _)),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().StoreSalePriceWidgetContainer]: !0,
+                [_().SingleLineMode]: _,
+                StoreSalePriceWidgetContainer: !0,
+                [_().Discounted]: Boolean(__webpack_require__),
+                Discounted: Boolean(__webpack_require__),
+                [_().PrePurchase]: Boolean(_),
+                [_().NewItem]: Boolean(_),
+              }),
+              "aria-label": _,
+            },
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
+                },
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#EventDisplay_CallToAction_Prepurchase_Short"),
+                ),
+              ),
+            Boolean(!_ && _) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().StoreSaleNewItem,
+                },
+                (0, _._)("#Flag_New"),
+              ),
+            Boolean(_ && __webpack_require__ && !_) &&
               _.createElement(
                 "span",
-                null,
-                (0, _._)("#EventDisplay_CallToAction_Prepurchase_Short"),
+                {
+                  className: (0, _._)(_().BaseDiscount),
+                },
+                `-${_}%`,
               ),
-            ),
-          Boolean(!_ && _) &&
-            _.createElement(
-              "div",
-              {
-                className: _().StoreSaleNewItem,
-              },
-              (0, _._)("#Flag_New"),
-            ),
-          Boolean(_ && __webpack_require__ && !_) &&
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().BaseDiscount),
-              },
-              `-${_}%`,
-            ),
-          Boolean(__webpack_require__ && !_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().StoreSaleDiscountBox,
-              },
-              `-${__webpack_require__}%`,
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().DiscountIconCtn,
-              },
-              _.createElement(_.XH_, null),
-            ),
-          Boolean(__webpack_require__ && _ && !_)
-            ? _.createElement(
+            Boolean(__webpack_require__ && !_) &&
+              _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
+                  className: _().StoreSaleDiscountBox,
                 },
-                _.createElement(
+                `-${__webpack_require__}%`,
+              ),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().DiscountIconCtn,
+                },
+                _.createElement(_.XH_, null),
+              ),
+            Boolean(__webpack_require__ && _ && !_)
+              ? _.createElement(
                   "div",
                   {
-                    className: (0, _._)({
-                      [_().SingleLineOriginalPrice]: _,
-                      [_().StoreOriginalPrice]: !_,
-                    }),
+                    className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_().SingleLineOriginalPrice]: _,
+                        [_().StoreOriginalPrice]: !_,
+                      }),
+                    },
+                    _,
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_().StoreSalePriceBox]: !0,
+                        [_().SingleLineMode]: _,
+                      }),
+                    },
+                    _,
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSalePriceBox,
                   },
                   _,
                 ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().StoreSalePriceBox]: !0,
-                      [_().SingleLineMode]: _,
-                    }),
-                  },
-                  _,
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().StoreSalePriceBox,
-                },
-                _,
-              ),
+          )
         );
       }
     },
@@ -20845,6 +20874,7 @@
         return _.createElement(
           _._,
           {
+            "aria-label": null,
             bAllowFullSize: !0,
             bOKDisabled: !0,
             closeModal: _,

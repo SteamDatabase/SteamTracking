@@ -2970,7 +2970,7 @@
     },
     27666: (e, t, n) => {
       "use strict";
-      n.d(t, { z: () => _ });
+      n.d(t, { z: () => p });
       var i = n(12611),
         a = n(30470),
         s = n(22837),
@@ -2981,9 +2981,8 @@
         c = n(14771),
         m = n(32396),
         u = n(86355),
-        h = n(82705),
-        p = n(40521);
-      const _ = {
+        h = n(40521);
+      const p = {
         GetBaseURL: () => `${a.TS.CLAN_CDN_ASSET_URL}images/`,
         GetBaseURLV2: () => `${a.TS.CLAN_CDN_ASSET_URL}locimages/`,
         ReplacementTokenToClanImageURL(e) {
@@ -3009,7 +3008,6 @@
             ? t
             : ".jpg";
         },
-        GetExtensionTypeFromURL: (e) => (0, h.yh)(e),
         GetHashAndExt(e) {
           return e ? e.image_hash + this.GetExtensionString(e) : null;
         },
@@ -3141,8 +3139,8 @@
             o)
           )
             throw (console.log(o), { success: 2, err_msg: o });
-          const h = new r.VE(e, void 0),
-            _ = new p.M7(
+          const p = new r.VE(e, void 0),
+            _ = new h.M7(
               l,
               i,
               -1,
@@ -3152,7 +3150,7 @@
               void 0,
               void 0,
             ),
-            g = await h.UploadSingleImage(_, i, -1, void 0);
+            g = await p.UploadSingleImage(_, i, -1, void 0);
           return g.bSuccess && g.result
             ? g.result.image_hash +
                 this.GetExtensionString({ file_type: _.fileType })
@@ -3168,7 +3166,7 @@
         a = n(14947),
         s = n(73744),
         o = n(61859),
-        r = n(27666);
+        r = n(82705);
       class l {
         constructor(e, t, n, i, s) {
           var o;
@@ -3184,9 +3182,7 @@
             (this.file = e),
             (this.filename = t),
             (this.fileType =
-              null !== (o = r.z.GetExtensionTypeFromURL(t)) && void 0 !== o
-                ? o
-                : 0),
+              null !== (o = (0, r.yh)(t)) && void 0 !== o ? o : 0),
             (this.language = n),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),

@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Áruház főoldal",
 	"Menu_Popover_FreeToPlay": "Ingyenesen játszható",
 	"Menu_Popover_SteamCharts": "Steam Kimutatások",
+	"Menu_Popover_Upcoming": "Közelgő megjelenések",
 	"Menu_Popover_PointsShop": "Pontbolt",
 	"Menu_Popover_GiftCards": "Ajándékkártyák",
 	"Menu_Popover_NewsAndUpdates": "Hírek és frissítések",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Új megjelenések",
 	"Menu_Section_Browse_Discounts": "Leárazások és események",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Kívánságlistád",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s kedvezmény",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Különleges események",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Népszerű játékok",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Különleges ajánlatok",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Keresési eredmények",
 	"Menu_SearchBar_YourTopGenres": "Legjobb műfajaid",
 	"Menu_SearchBar_BrowseBy": "Böngészési elv...",
+	"Menu_SearchBar_NoMatches": "Nincs a keresésednek megfelelő elem.",
+	"Menu_SearchBar_AdvancedSearch": "Bővített keresés",
 	"Menu_Search": "Keresés",
 	"Menu_Label": "Áruházi menü"
 }`);

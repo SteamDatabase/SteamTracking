@@ -370,7 +370,6 @@ var CLSTAMP = "steamdb";
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -824,6 +823,7 @@ var CLSTAMP = "steamdb";
             (0, _._)(_, _),
             _,
             {
+              bConstMethod: !0,
               ePrivilege: 1,
             },
           );
@@ -29215,6 +29215,31 @@ var CLSTAMP = "steamdb";
                     _: 10,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  accessibility_desktop_ui_scale: {
+                    _: 11,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  accessibility_screen_reader_enabled: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_high_contrast_mode: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_reduce_motion: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_color_filter_name: {
+                    _: 15,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -65228,11 +65253,6 @@ var CLSTAMP = "steamdb";
                     _: 13,
                     _: _._.readString,
                     _: _._.writeString,
-                  },
-                  review_score_outliers_preference: {
-                    _: 14,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
                   },
                 },
               }),

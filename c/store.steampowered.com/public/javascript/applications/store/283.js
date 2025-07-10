@@ -437,7 +437,7 @@
           },
           _.createElement(_._, {
             type: "text",
-            placeholder: "Search...",
+            placeholder: (0, _._)("#AddonPicker_Search"),
             className: _.FilterInput,
             value: _,
             onChange: (_) => __webpack_require__(_.target.value),

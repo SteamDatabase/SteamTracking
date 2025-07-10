@@ -3210,39 +3210,37 @@
         m_nodes = [];
         m_schema;
         m_bConvertNewlinesToBR;
-        constructor(_, _) {
-          (this.m_schema = _), (this.m_bConvertNewlinesToBR = _);
+        m_fnProcessText;
+        constructor(_, _, _) {
+          (this.m_schema = _),
+            (this.m_bConvertNewlinesToBR = _?.bConvertNewlinesToBR ?? !1);
+          const _ = _ && "mark" in _;
+          this.m_fnProcessText = _ ? void 0 : _?.fnProcessText;
         }
         AppendText(_, _) {
           _.length &&
             (this.m_bConvertNewlinesToBR
-              ? this.m_nodes.push(
-                  ...(function (_, _) {
-                    const _ = [];
-                    let _ = 0;
-                    for (
-                      let _ = _.indexOf("\n", _);
-                      -1 !== _;
-                      _ = _.indexOf("\n", _)
-                    )
-                      _ != _ &&
-                        __webpack_require__.push(_.text(_.substring(_, _))),
-                        __webpack_require__.push(
-                          _.nodes.hard_break.createChecked(),
-                        ),
-                        (_ = _ + 1);
-                    _ < _.length &&
-                      __webpack_require__.push(_.text(_.substring(_)));
-                    return _;
-                  })(_, this.m_schema),
-                )
-              : this.m_nodes.push(this.m_schema.text(_)));
+              ? this.m_nodes.push(...this.GenerateBreaksForNewlines(_))
+              : this.m_nodes.push(...this.TextNode(_)));
         }
         AppendNode(_) {
           this.m_nodes.push(_);
         }
         GetElements() {
           return this.m_nodes;
+        }
+        GenerateBreaksForNewlines(_) {
+          const _ = [];
+          let _ = 0;
+          for (let _ = _.indexOf("\n", _); -1 !== _; _ = _.indexOf("\n", _))
+            _ != _ && _.push(...this.TextNode(_.substring(_, _))),
+              _.push(this.m_schema.nodes.hard_break.createChecked()),
+              (_ = _ + 1);
+          return _ < _.length && _.push(...this.TextNode(_.substring(_))), _;
+        }
+        TextNode(_) {
+          const _ = this.m_fnProcessText && this.m_fnProcessText(_);
+          return _ || [this.m_schema.text(_)];
         }
       }
       function _(_) {
@@ -3254,11 +3252,14 @@
         m_schemaConfig;
         m_mapPMBBNodes = new Map();
         constructor(_, _) {
-          const { bConvertNewlinesToBR: __webpack_require__ = !1 } = _;
-          super(
-            _.bbcode_dictionary,
-            () => new _(_.pm_schema, __webpack_require__),
-          ),
+          super(_.bbcode_dictionary, (_) => {
+            const _ = _?.tag && _.bbcode_dictionary.get(_.tag);
+            return new _(
+              _.pm_schema,
+              _,
+              _ && "Constructor" in _ ? _.Constructor : void 0,
+            );
+          }),
             (this.m_schemaConfig = _),
             this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
               "node" in _.Constructor &&
@@ -3291,12 +3292,22 @@
                 `Indicated acceptNode type ${_.acceptNode.name} for ${_.node.name} missing`,
               ),
                 (_ = _
-                  ? [this.TryCreateNode(_, _, void 0)]
-                  : [_.acceptNode.create(void 0, _)]);
+                  ? this.TryCreateNode(_, _, void 0)
+                  : _.acceptNode.create(void 0, _));
             }
             _ = _._.from(_);
           }
-          return _.node.createAndFill(_, _) || _.node.create(_, _);
+          try {
+            return _.node.createAndFill(_, _) || _.node.createChecked(_, _);
+          } catch (_) {
+            return (
+              (0, _._)(
+                !1,
+                `Invalid content for node type ${_.node.name}, removing and promoting children.`,
+              ),
+              _
+            );
+          }
         }
         BBNodeToPMNode(_, _, ...__webpack_require__) {
           let _ = _.BBArgsToAttrs ? _.BBArgsToAttrs(_.args || {}) : void 0;
@@ -9096,10 +9107,10 @@
         return _.createElement(
           _._,
           {
+            title: (0, _._)("#StoreAdmin_Add_DLC"),
             closeModal: _,
             className: _.AddDLCDialog,
           },
-          _.createElement(_._, null, (0, _._)("#StoreAdmin_Add_DLC")),
           _.createElement(
             _._,
             null,

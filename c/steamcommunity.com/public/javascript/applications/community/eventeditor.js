@@ -1908,10 +1908,10 @@
           return _.createElement(
             _._,
             {
+              title: (0, _._)("#EventEditor_Loc_Export"),
               onCancel: _,
               closeModal: _,
             },
-            _.createElement(_._, null, (0, _._)("#EventEditor_Loc_Export")),
             _.createElement(
               _._,
               null,

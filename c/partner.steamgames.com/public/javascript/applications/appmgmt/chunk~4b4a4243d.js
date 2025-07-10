@@ -71,6 +71,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        StatusLineItemCtn: "V5SWm2fiBKJqCbPn7bpC0",
+        StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
+        StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
+        StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
         DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
         ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
@@ -1408,7 +1416,74 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgAssetURL: _, rgLang: __webpack_require__, bIsImage: _ } = _,
+          [_, _] = (0, _.useState)([]);
+        if (
+          ((0, _.useEffect)(() => {
+            let _ = !1;
+            const _ = _ ? _ : _;
+            return (
+              Promise.all(_.map((_) => __webpack_require__(_))).then((_) => {
+                _ || _(_);
+              }),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _]),
+          !_)
+        )
+          return _.createElement(_._, {
+            size: "small",
+            string: "Checking Assets...",
+          });
+        const _ = _.map((_, _) => (_ ? -1 : _)).filter((_) => -1 !== _);
+        return 0 === _.length
+          ? _.createElement(_._, {
+              bDone: !0,
+              name: "Uploaded assets verified",
+              tooltip:
+                "In the background we verified the assets by downloading from the CDN to verify they are present",
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                bDone: !1,
+                name: `${_.length} Asset(s) uploaded failed to fetch`,
+              }),
+              _.map((_) => ({
+                url: _[_],
+                lang: __webpack_require__[_],
+              })).map((_) =>
+                _.createElement(_._, {
+                  key: _.url,
+                  bDone: !1,
+                  name: `${(0, _._)(_.lang)} - Not found`,
+                  tooltip: `${_.url} not downloadable from the CDN`,
+                }),
+              ),
+            );
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = new Image();
+          (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
+        });
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = document.createElement("video");
+          (_.preload = "metadata"),
+            (_.onloadedmetadata = () => _(!0)),
+            (_.onerror = () => _(!1)),
+            (_.src = _);
+        });
+      }
       function _(_) {
         const {
             rgAssetLangs: _,
@@ -1418,6 +1493,7 @@
             imageClassname: _,
             fnDeleteAllAssets: _,
             showDeleteAll: _ = !0,
+            bVerifyAssets: _,
           } = _,
           [_, _] = _.useState(
             __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
@@ -1428,6 +1504,7 @@
           const _ = _(_);
           _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
         }, [_, _, _]);
+        const _ = (0, _.useMemo)(() => _.map((_) => _(_)), [_]);
         return _.createElement(
           "div",
           {
@@ -1488,6 +1565,12 @@
                   },
                   (0, _._)("#Button_DeleteAll"),
                 ),
+              Boolean(_) &&
+                _.createElement(_, {
+                  rgAssetURL: _,
+                  rgLang: _,
+                  bIsImage: !0,
+                }),
             ),
           ),
         );
@@ -1604,6 +1687,44 @@
             readOnly: !0,
             rows: 20,
           })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { bDone: _, name: __webpack_require__, tooltip: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().StatusLineItemCtn,
+          },
+          _.createElement(
+            "span",
+            {
+              className: (0, _._)(
+                _().StatusIcon,
+                _ ? _().StatusIconDone : _().StatusNotDone,
+              ),
+            },
+            _ ? _.createElement(_.Jlk, null) : _.createElement(_._, null),
+          ),
+          _.createElement(
+            _._,
+            {
+              toolTipContent: _,
+            },
+            __webpack_require__,
+          ),
         );
       }
     },

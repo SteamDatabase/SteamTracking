@@ -1933,13 +1933,7 @@
                 ),
               );
         }, [_, _, _]);
-        const _ = !1;
-        if (
-          (_.useEffect(() => {
-            __webpack_require__ && (0, _._)(() => {});
-          }, [__webpack_require__, _]),
-          _)
-        ) {
+        if (((0, _._)(__webpack_require__ && !0), _)) {
           const _ = _.title,
             _ = _.views,
             _ = _.description;
@@ -1987,26 +1981,32 @@
           );
         }
         return _.createElement(
-          "div",
+          _._,
           {
-            className: (0, _._)(_().PreviewYouTubeVideo, _, _),
-            _: _,
-          },
-          _.createElement("img", {
-            className: _().PlaceholderImg,
-            src:
-              _._.COMMUNITY_CDN_URL +
-              "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-          }),
-          _.createElement(_._, {
             video: _,
-            autoplay: _ ?? !1,
-            startSeconds: _,
-            controls: !0,
-            playsInline: !0,
-            autopause: !0,
-            showFullscreenBtn: !0,
-          }),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().PreviewYouTubeVideo, _, _),
+              _: _,
+            },
+            _.createElement("img", {
+              className: _().PlaceholderImg,
+              src:
+                _._.COMMUNITY_CDN_URL +
+                "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+            }),
+            _.createElement(_._, {
+              video: _,
+              autoplay: _ ?? !1,
+              startSeconds: _,
+              controls: !0,
+              playsInline: !0,
+              autopause: !0,
+              showFullscreenBtn: !0,
+            }),
+          ),
         );
       }
     },
@@ -3694,215 +3694,6 @@
         }
       };
       _ = (0, _._)([_._], _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.NotLoaded = 0)] = "NotLoaded"),
-          (_[(_.Loading = 1)] = "Loading"),
-          (_[(_.Loaded = 2)] = "Loaded");
-      })(_ || (_ = {}));
-      let _ = _.NotLoaded,
-        _ = [];
-      function _(_) {
-        if (_ == _.Loaded) return void _();
-        if (_ == _.NotLoaded) {
-          let _ = document.createElement("script");
-          _.src = "https://www.youtube.com/iframe_api";
-          let _ = document.getElementsByTagName("script")[0];
-          _.parentNode.insertBefore(_, _), (window.onYouTubeIframeAPIReady = _);
-        }
-        _.findIndex((_) => _ == _) < 0 && _.push(_);
-      }
-      function _() {
-        _ = _.Loaded;
-        for (let _ of _) _();
-        _ = [];
-      }
-      class _ extends _.Component {
-        m_strPlayerID = "";
-        m_player = null;
-        m_playerContainer = null;
-        m_bPlayerReady = !1;
-        static s_nPlayerIndex = 0;
-        constructor(_) {
-          super(_),
-            (this.m_strPlayerID = "YoutubePlayer_" + _.s_nPlayerIndex++),
-            (this.state = {
-              bYoutubeLoaded: !1,
-            });
-        }
-        componentWillUnmount() {
-          var _;
-          this.DestroyPlayer(), (_ = this.OnYoutubeScriptsReady), _._(_, _);
-        }
-        shouldComponentUpdate(_, _) {
-          if (!this.m_player) return !1;
-          const _ = this.props;
-          return _.autoplay != _.autoplay ||
-            _.controls != _.controls ||
-            _.showInfo != _.showInfo ||
-            _.video != _.video
-            ? (this.CreatePlayer(_), !1)
-            : ((_.width == _.width && _.height == _.height) ||
-                (this.m_bPlayerReady &&
-                  _.width &&
-                  _.height &&
-                  this.m_player.setSize(_.width, _.height)),
-              _.forcePause != _.forcePause);
-        }
-        componentDidUpdate(_) {
-          _.forcePause != this.props.forcePause &&
-            (this.props.forcePause
-              ? this.m_player.pauseVideo()
-              : this.m_player.playVideo());
-        }
-        DestroyPlayer() {
-          if (this.m_player)
-            try {
-              this.m_player.stopVideo && this.m_player.stopVideo(),
-                this.m_player.destroy && this.m_player.destroy();
-            } catch (_) {
-            } finally {
-              this.m_player = null;
-            }
-        }
-        BindPlayerContainer(_) {
-          this.m_playerContainer != _ &&
-            ((this.m_playerContainer = _),
-            this.DestroyPlayer(),
-            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
-        }
-        OnYoutubeScriptsReady() {
-          this.CreatePlayer(this.props);
-        }
-        CreatePlayer(_) {
-          if ((this.DestroyPlayer(), !this.m_playerContainer)) return;
-          const _ = !1 === _.autoplay ? 0 : 1,
-            _ = !0 === _.showInfo ? 1 : 0,
-            _ = !0 === _.controls ? 1 : 0,
-            _ = !0 === _.showFullscreenBtn ? 1 : 0,
-            _ = !0 === _.playsInline ? 1 : 0;
-          let _ = {
-              width: void 0 !== _.width ? String(_.width) : void 0,
-              height: void 0 !== _.height ? String(_.height) : void 0,
-              videoId: _.video,
-              host: "https://www.youtube-nocookie.com",
-              playerVars: {
-                autoplay: _,
-                showinfo: _,
-                autohide: 1,
-                _: _,
-                modestbranding: 1,
-                rel: 0,
-                playsinline: _,
-                iv_load_policy: 3,
-                controls: _,
-                start: _.startSeconds,
-              },
-              events: {
-                onReady: this.OnPlayerReady,
-                onStateChange: this.OnPlayerStateChange,
-                onError: this.OnError,
-              },
-            },
-            _ = this.m_playerContainer.firstElementChild;
-          (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
-        }
-        OnPlayerReady(_) {
-          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
-            let _ = this.m_player.getVideoData(),
-              _ = {
-                strAuthor: "",
-                strTitle: "",
-                strVideoID: "",
-              };
-            _.author && (_.strAuthor = _.author),
-              _.title && (_.strTitle = _.title),
-              _.video_id && (_.strVideoID = _.video_id),
-              this.props.onVideoInfoChanged(_);
-          }
-          this.props.width &&
-            this.props.height &&
-            this.m_player.setSize(this.props.width, this.props.height),
-            this.props.autoplay && this.m_player.playVideo(),
-            this.props.onPlayerReady && this.props.onPlayerReady();
-        }
-        OnPlayerStateChange(_) {
-          switch (_.data) {
-            case _.PlayerState.UNSTARTED:
-              break;
-            case _.PlayerState.BUFFERING:
-              this.props.onBuffering && this.props.onBuffering();
-              break;
-            case _.PlayerState.PLAYING:
-              this.props.onPlaying && this.props.onPlaying();
-              break;
-            case _.PlayerState.PAUSED:
-              this.props.onPaused && this.props.onPaused();
-              break;
-            case _.PlayerState.ENDED:
-              this.props.onMovieEnd && this.props.onMovieEnd();
-          }
-        }
-        OnError(_) {
-          console.log("Youtube: Playback failed", _),
-            this.props.onError && this.props.onError(_);
-        }
-        OnPlayerLeftView() {
-          this.props.autopause &&
-            this.m_player &&
-            this.m_bPlayerReady &&
-            this.m_player.pauseVideo();
-        }
-        PlayVideo(_) {
-          this.m_player &&
-            this.m_bPlayerReady &&
-            (_ && this.m_player.seekTo(0, !0), this.m_player.playVideo());
-        }
-        render() {
-          const _ = _.createElement(
-            "div",
-            {
-              key: this.m_strPlayerID,
-              ref: this.BindPlayerContainer,
-              className: (0, _._)("YoutubePlayer", this.props.classnames),
-            },
-            _.createElement(_._, {
-              className: "YoutubePlayerThrobber",
-            }),
-          );
-          return this.props.autopause
-            ? _.createElement(
-                _._,
-                {
-                  onLeave: this.OnPlayerLeftView,
-                },
-                _,
-              )
-            : _;
-        }
-      }
-      (0, _._)([_._], _.prototype, "BindPlayerContainer", null),
-        (0, _._)([_._], _.prototype, "OnYoutubeScriptsReady", null),
-        (0, _._)([_._], _.prototype, "CreatePlayer", null),
-        (0, _._)([_._], _.prototype, "OnPlayerReady", null),
-        (0, _._)([_._], _.prototype, "OnPlayerStateChange", null),
-        (0, _._)([_._], _.prototype, "OnError", null),
-        (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
-        (0, _._)([_._], _.prototype, "PlayVideo", null);
     },
   },
 ]);

@@ -494,28 +494,24 @@
             bParentHovered: o,
             ...m
           } = this.props;
-          return (
-            m.onClick && (i = { ...i, cursor: "pointer" }),
-            this.state.bAnimate || (t = null),
+          m.onClick && (i = { ...i, cursor: "pointer" });
+          const A = this.state.bAnimate ? (t ?? null) : null;
+          return s.createElement(
+            "div",
+            {
+              onMouseEnter: () =>
+                this.setState({ bAnimate: "None" != this.props.loopDuration }),
+              onMouseLeave: () => this.SetupAnimationTimer(),
+            },
             s.createElement(
-              "div",
-              {
-                onMouseEnter: () =>
-                  this.setState({
-                    bAnimate: "None" != this.props.loopDuration,
-                  }),
-                onMouseLeave: () => this.SetupAnimationTimer(),
-              },
-              s.createElement(
-                g,
-                { animatedAvatar: t, ...m },
-                r,
-                s.createElement(d, {
-                  profileItem: a,
-                  bDisableAnimation: n && !this.state.bAnimate,
-                }),
-              ),
-            )
+              g,
+              { animatedAvatar: A, ...m },
+              r,
+              s.createElement(d, {
+                profileItem: a,
+                bDisableAnimation: n && !this.state.bAnimate,
+              }),
+            ),
           );
         }
       };

@@ -2365,17 +2365,11 @@
               : _.createElement(
                   _._,
                   {
+                    title: (0, _._)("#EventEditor_ImportFromHTML"),
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: _,
                     className: _().BBCodeEditorInputStyles,
                   },
-                  _.createElement(
-                    _._,
-                    null,
-                    " ",
-                    (0, _._)("#EventEditor_ImportFromHTML"),
-                    " ",
-                  ),
                   _.createElement(
                     _._,
                     null,

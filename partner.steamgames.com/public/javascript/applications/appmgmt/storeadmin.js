@@ -1028,7 +1028,7 @@
         c = n(29655),
         u = n(90626),
         d = n(32396),
-        m = n(42508),
+        m = n(71725),
         p = n(16676),
         _ = n(84811),
         g = n(42027),
@@ -2914,35 +2914,37 @@
         m_nodes = [];
         m_schema;
         m_bConvertNewlinesToBR;
-        constructor(e, t) {
-          (this.m_schema = e), (this.m_bConvertNewlinesToBR = t);
+        m_fnProcessText;
+        constructor(e, t, n) {
+          (this.m_schema = e),
+            (this.m_bConvertNewlinesToBR = t?.bConvertNewlinesToBR ?? !1);
+          const a = n && "mark" in n;
+          this.m_fnProcessText = a ? void 0 : t?.fnProcessText;
         }
         AppendText(e, t) {
           e.length &&
             (this.m_bConvertNewlinesToBR
-              ? this.m_nodes.push(
-                  ...(function (e, t) {
-                    const n = [];
-                    let a = 0;
-                    for (
-                      let r = e.indexOf("\n", a);
-                      -1 !== r;
-                      r = e.indexOf("\n", a)
-                    )
-                      a != r && n.push(t.text(e.substring(a, r))),
-                        n.push(t.nodes.hard_break.createChecked()),
-                        (a = r + 1);
-                    a < e.length && n.push(t.text(e.substring(a)));
-                    return n;
-                  })(e, this.m_schema),
-                )
-              : this.m_nodes.push(this.m_schema.text(e)));
+              ? this.m_nodes.push(...this.GenerateBreaksForNewlines(e))
+              : this.m_nodes.push(...this.TextNode(e)));
         }
         AppendNode(e) {
           this.m_nodes.push(e);
         }
         GetElements() {
           return this.m_nodes;
+        }
+        GenerateBreaksForNewlines(e) {
+          const t = [];
+          let n = 0;
+          for (let a = e.indexOf("\n", n); -1 !== a; a = e.indexOf("\n", n))
+            n != a && t.push(...this.TextNode(e.substring(n, a))),
+              t.push(this.m_schema.nodes.hard_break.createChecked()),
+              (n = a + 1);
+          return n < e.length && t.push(...this.TextNode(e.substring(n))), t;
+        }
+        TextNode(e) {
+          const t = this.m_fnProcessText && this.m_fnProcessText(e);
+          return t || [this.m_schema.text(e)];
         }
       }
       function d(e) {
@@ -2955,8 +2957,14 @@
         m_schemaConfig;
         m_mapPMBBNodes = new Map();
         constructor(e, t) {
-          const { bConvertNewlinesToBR: n = !1 } = t;
-          super(e.bbcode_dictionary, () => new u(e.pm_schema, n)),
+          super(e.bbcode_dictionary, (n) => {
+            const a = n?.tag && e.bbcode_dictionary.get(n.tag);
+            return new u(
+              e.pm_schema,
+              t,
+              a && "Constructor" in a ? a.Constructor : void 0,
+            );
+          }),
             (this.m_schemaConfig = e),
             this.m_schemaConfig.bbcode_dictionary.forEach((e) => {
               "node" in e.Constructor &&
@@ -2989,12 +2997,22 @@
                 `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
               ),
                 (n = r
-                  ? [this.TryCreateNode(r, a, void 0)]
-                  : [e.acceptNode.create(void 0, a)]);
+                  ? this.TryCreateNode(r, a, void 0)
+                  : e.acceptNode.create(void 0, a));
             }
             a = i.FK.from(n);
           }
-          return e.node.createAndFill(n, a) || e.node.create(n, a);
+          try {
+            return e.node.createAndFill(n, a) || e.node.createChecked(n, a);
+          } catch (n) {
+            return (
+              (0, c.wT)(
+                !1,
+                `Invalid content for node type ${e.node.name}, removing and promoting children.`,
+              ),
+              t
+            );
+          }
         }
         BBNodeToPMNode(e, t, ...n) {
           let a = e.BBArgsToAttrs ? e.BBArgsToAttrs(t.args || {}) : void 0;
@@ -7907,8 +7925,11 @@
           );
         return a.createElement(
           b.eV,
-          { closeModal: t, className: Tt.AddDLCDialog },
-          a.createElement(k.Y9, null, (0, r.we)("#StoreAdmin_Add_DLC")),
+          {
+            title: (0, r.we)("#StoreAdmin_Add_DLC"),
+            closeModal: t,
+            className: Tt.AddDLCDialog,
+          },
           a.createElement(
             k.nB,
             null,

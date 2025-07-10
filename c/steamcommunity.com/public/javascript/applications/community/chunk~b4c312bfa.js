@@ -229,7 +229,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.recommendationid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [27, 40, 52], null);
+            _.Message.initialize(this, _, 0, -1, [27, 40, 53], null);
         }
         static M() {
           return (
@@ -497,12 +497,12 @@
                     _: _._.writeUint32,
                   },
                   tags: {
-                    _: 52,
+                    _: 53,
                     _: !0,
                     _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
+                    _: _._.readUint64String,
+                    pbr: _._.readPackedUint64String,
+                    _: _._.writeRepeatedUint64String,
                   },
                 },
               }),

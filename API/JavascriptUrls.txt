@@ -1546,6 +1546,7 @@ ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
+${STORE_BASE_URL}explore/upcoming
 ${STORE_BASE_URL}explore?dq=widget
 ${STORE_BASE_URL}feeds/${}${_ ? _ : _}/?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_BASE_URL}forgeyourfate
@@ -1744,7 +1745,9 @@ ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
+${STORE_CDN_URL}categories/image/category/${handle}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
+${STORE_CDN_URL}categories/image/creator/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
@@ -2135,6 +2138,7 @@ ${szBaseUrl}/marketing/updatedemoquit
 ${thumb_url}${url}
 ${thumb_url}${}
 ${url}
+${url} not downloadable from the CDN
 ${url}${g_strActiveURL}
 ${url}${location}
 ${url}${m_URL}
@@ -2538,7 +2542,6 @@ https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=englis
 https://community.cloudflare.steamstatic.com/economy/emoticon/${strEmoticonName}
 https://community.cloudflare.steamstatic.com/economy/image/${icon_url_hash}/128fx128f
 https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}
-https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}?allow_animated=1
 https://community.cloudflare.steamstatic.com/economy/image/${}/96fx96f
 https://community.cloudflare.steamstatic.com/economy/profilebackground/${strBackgroundImage}?size=${strSize}&v=2
 https://community.cloudflare.steamstatic.com/public/images/${newImg}
@@ -3000,7 +3003,6 @@ https://steamcommunity.com/groups/${url}
 https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
-https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke
 https://steamcommunity.com/login/dologin/
@@ -3008,10 +3010,8 @@ https://steamcommunity.com/login/getrsakey/
 https://steamcommunity.com/login/logout/
 https://steamcommunity.com/market/appfilters/${unAppId}
 https://steamcommunity.com/market/buylisting/${listingid}
-https://steamcommunity.com/market/canbuyback/
 https://steamcommunity.com/market/cancelbuyorder/
 https://steamcommunity.com/market/createbuyorder/
-https://steamcommunity.com/market/dobuyback/
 https://steamcommunity.com/market/getbuyorderstatus/
 https://steamcommunity.com/market/gettradefeetaxrate/
 https://steamcommunity.com/market/itemordersactivity
@@ -3179,6 +3179,7 @@ https://store.steampowered.com/account/languagepreferences/
 https://store.steampowered.com/account/preferences
 https://store.steampowered.com/account/preferences/
 https://store.steampowered.com/account/savesearchpreferences
+https://store.steampowered.com/account/saveuserreviewscorepreference
 https://store.steampowered.com/account/setlanguage/
 https://store.steampowered.com/account/updateshippingaddress/
 https://store.steampowered.com/actions/ReportAbuse/

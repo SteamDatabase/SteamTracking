@@ -466,6 +466,10 @@ a.home_block_footer_btn:hover {
     box-shadow: none;
     padding: 1px;
 }
+.home_tab.active:focus {
+	outline: none;
+	border: 1px solid white;
+}
 .home_tab.active .tab_content {
 	line-height: 29px;
 	font-size: 14px;
@@ -2063,6 +2067,9 @@ body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn
 		display: flex;
 		flex-wrap: nowrap;
 	}
+	html.responsive .carousel_container.maincap .carousel_items:focus-within {
+		outline: none;
+	}
 
 	html.responsive .recommended_by_steam_labs_ctn .lower_left_block {
 		padding-top: 0;
@@ -2405,6 +2412,9 @@ html.responsive .store_main_capsule,
 		display: -webkit-flex; /* Old webkit */
 		display: flex;
 		flex-wrap: nowrap;
+	}
+	html.responsive.tablet .carousel_container.maincap .carousel_items:focus-within {
+		outline: none;
 	}
 
 	html.responsive.tablet .recommended_by_steam_labs_ctn .lower_left_block {
@@ -3485,6 +3495,9 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 	background-color: none;
 	overflow: hidden;
 }
+.community_recommendation_app:has(.community_recommendation_capsule:focus) {
+	overflow: visible;
+}
 .focus > .community_recommendation_app {
 	display: flex;
 	width: 100%;
@@ -3495,10 +3508,15 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 	margin-right: 0px;
 	box-shadow: 0 0 4px #000;
 	background: #000;
+	outline: none;
 }
 
 .community_recommendation_app > .community_recommendation_capsule > .capsule {
 	height: 350px;
+}
+.community_recommendation_app > .community_recommendation_capsule:focus > .capsule {
+	outline: auto Highlight;
+	outline: auto -webkit-focus-ring-color;
 }
 .community_recommendation_app > .community_recommendation_capsule > .capsule > img {
 	width: 100%;
@@ -3638,9 +3656,14 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 	overflow: hidden;
 	margin-top: -2px;
 }
+.community_recommendations_block > .review_box .persona_name:focus-within {
+	outline: auto Highlight;
+	outline: auto -webkit-focus-ring-color;
+}
 .community_recommendations_block > .review_box .persona_name a {
 	color: #c1dbf4;
 	font-size: 13px;
+	outline: none;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
@@ -4378,6 +4401,11 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	height: 353px;
 	overflow: hidden;
 	box-shadow: 0 0 7px 0px #000;
+}
+
+.carousel_container.maincap .carousel_items:focus-within {
+	outline: auto Highlight;
+	outline: auto -webkit-focus-ring-color;
 }
 
 .carousel_container.maincap .arrow {

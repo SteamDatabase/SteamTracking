@@ -71,6 +71,14 @@
         ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
     },
+    48576: (e) => {
+      e.exports = {
+        StatusLineItemCtn: "V5SWm2fiBKJqCbPn7bpC0",
+        StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
+        StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
+        StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
+      };
+    },
     71647: (e) => {
       e.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
@@ -671,8 +679,8 @@
             bFilterOutDrafts: w,
           } = e,
           I = (0, d.f1)(),
-          { clanInfo: C, bLoadingClanInfo: y } = (0, l.vF)(t),
-          b = (function (e, t) {
+          { clanInfo: C, bLoadingClanInfo: b } = (0, l.vF)(t),
+          y = (function (e, t) {
             const a = (0, c.a)(),
               n = (0, s.useMemo)(() => o.b.InitFromClanID(e), [e]),
               r = (0, u.I)({
@@ -711,8 +719,8 @@
             );
           })(C?.clanAccountID, I - 2592e3),
           T = (0, s.useMemo)(
-            () => (w ? b?.filter((e) => !e.hidden) : b),
-            [b, w],
+            () => (w ? y?.filter((e) => !e.hidden) : y),
+            [y, w],
           ),
           S = (0, s.useMemo)(
             () =>
@@ -744,7 +752,7 @@
               P,
               P?.gid,
             ),
-          T || (!y && !C?.appid)
+          T || (!b && !C?.appid)
             ? T && 0 != T.length
               ? s.createElement(
                   s.Fragment,
@@ -825,14 +833,14 @@
             rgParentAppIDs: D,
           } = e,
           [w, I] = s.useState(""),
-          [C, y] = s.useState(!1),
-          [b, T] = s.useState(!1),
+          [C, b] = s.useState(!1),
+          [y, T] = s.useState(!1),
           [S] = s.useState(new i.LU()),
           [P, k] = s.useState(new Array()),
           [B, N] = s.useState(new Array()),
           [x, L] = s.useState(new Array()),
-          F = s.createRef(),
-          U = s.createRef();
+          U = s.createRef(),
+          F = s.createRef();
         const R = (0, s.useCallback)(
             async (e, t) => {
               T(!0);
@@ -872,18 +880,18 @@
           ),
           M = (0, s.useCallback)(
             (e) => {
-              y(e), R(F.current?.value, e);
+              b(e), R(U.current?.value, e);
             },
-            [R, F],
+            [R, U],
           ),
           G = (0, s.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
               I(t);
-              const a = U.current?.checked;
+              const a = F.current?.checked;
               S.Schedule(1e3, () => R(t, a));
             },
-            [R, S, U],
+            [R, S, F],
           );
         let O;
         switch (
@@ -910,7 +918,7 @@
             { className: d.AppSearchInputContainer },
             s.createElement(l.pd, {
               type: "text",
-              ref: F,
+              ref: U,
               className: d.SearchInput,
               label: a,
               tooltip: g,
@@ -922,7 +930,7 @@
             }),
             W &&
               s.createElement(l.Yh, {
-                ref: U,
+                ref: F,
                 checked: C,
                 onChange: M,
                 className: d.AppSearchDLCCheckbox,
@@ -932,7 +940,7 @@
           s.createElement(
             "div",
             { className: d.Results },
-            b &&
+            y &&
               s.createElement(
                 "div",
                 { className: d.LoadingContainer },
@@ -1289,9 +1297,9 @@
         return t;
       }
     },
-    42508: (e, t, a) => {
+    71725: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => h });
+      a.d(t, { z: () => D });
       var n = a(41735),
         r = a.n(n),
         s = a(90626),
@@ -1304,8 +1312,74 @@
         d = a(12155),
         p = a(61859),
         g = a(8743),
-        f = a.n(g);
-      function h(e) {
+        f = a.n(g),
+        h = a(22797),
+        E = a(28865);
+      function _(e) {
+        const { rgAssetURL: t, rgLang: a, bIsImage: n } = e,
+          [r, l] = (0, s.useState)([]);
+        if (
+          ((0, s.useEffect)(() => {
+            let e = !1;
+            const a = n ? A : v;
+            return (
+              Promise.all(t.map((e) => a(e))).then((t) => {
+                e || l(t);
+              }),
+              () => {
+                e = !0;
+              }
+            );
+          }, [t, n]),
+          !r)
+        )
+          return s.createElement(h.t, {
+            size: "small",
+            string: "Checking Assets...",
+          });
+        const i = r.map((e, t) => (e ? -1 : t)).filter((e) => -1 !== e);
+        return 0 === i.length
+          ? s.createElement(E._, {
+              bDone: !0,
+              name: "Uploaded assets verified",
+              tooltip:
+                "In the background we verified the assets by downloading from the CDN to verify they are present",
+            })
+          : s.createElement(
+              s.Fragment,
+              null,
+              s.createElement(E._, {
+                bDone: !1,
+                name: `${i.length} Asset(s) uploaded failed to fetch`,
+              }),
+              i
+                .map((e) => ({ url: t[e], lang: a[e] }))
+                .map((e) =>
+                  s.createElement(E._, {
+                    key: e.url,
+                    bDone: !1,
+                    name: `${(0, o.Lg)(e.lang)} - Not found`,
+                    tooltip: `${e.url} not downloadable from the CDN`,
+                  }),
+                ),
+            );
+      }
+      function A(e) {
+        return new Promise((t) => {
+          const a = new Image();
+          (a.onload = () => t(!0)), (a.onerror = () => t(!1)), (a.src = e);
+        });
+      }
+      function v(e) {
+        return new Promise((t) => {
+          const a = document.createElement("video");
+          (a.preload = "metadata"),
+            (a.onloadedmetadata = () => t(!0)),
+            (a.onerror = () => t(!1)),
+            (a.src = e);
+        });
+      }
+      function D(e) {
         const {
             rgAssetLangs: t,
             initialLang: a,
@@ -1314,21 +1388,23 @@
             imageClassname: o,
             fnDeleteAllAssets: l,
             showDeleteAll: i = !0,
+            bVerifyAssets: m,
           } = e,
-          [m, d] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
-          [g, f] = s.useState(n(m)),
-          h = s.useMemo(() => [...t].sort(), [t]);
+          [d, g] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
+          [f, h] = s.useState(n(d)),
+          E = s.useMemo(() => [...t].sort(), [t]);
         s.useEffect(() => {
-          const e = n(m);
-          e ? f(e) : h.length > 0 ? d(h[0]) : f(null);
-        }, [m, n, h]);
+          const e = n(d);
+          e ? h(e) : E.length > 0 ? g(E[0]) : h(null);
+        }, [d, n, E]);
+        const A = (0, s.useMemo)(() => t.map((e) => n(e)), [t]);
         return s.createElement(
           "div",
           { className: u().UploadedImageDisplayCtn },
           s.createElement(
             "div",
             { className: u().UploaderLeftCol },
-            s.createElement(_, { curAssetURL: g, imageClassname: o }),
+            s.createElement(I, { curAssetURL: f, imageClassname: o }),
           ),
           s.createElement(
             "div",
@@ -1344,34 +1420,36 @@
               s.createElement(
                 "div",
                 { className: u().LangSelectCtn },
-                h.map((e) =>
-                  s.createElement(E, {
+                E.map((e) =>
+                  s.createElement(w, {
                     key: e,
                     language: e,
-                    selectedLanguage: m,
-                    setSelectedLanguage: d,
+                    selectedLanguage: d,
+                    setSelectedLanguage: g,
                     deleteLanguage: r,
                   }),
                 ),
               ),
               i &&
-                Boolean(h.length) &&
+                Boolean(E.length) &&
                 s.createElement(
                   "a",
                   {
                     href: "#",
                     className: u().DeleteAll,
                     onClick: (e) => {
-                      l ? l() : h.forEach((e) => r(e)), e.preventDefault();
+                      l ? l() : E.forEach((e) => r(e)), e.preventDefault();
                     },
                   },
                   (0, p.we)("#Button_DeleteAll"),
                 ),
+              Boolean(m) &&
+                s.createElement(_, { rgAssetURL: A, rgLang: t, bIsImage: !0 }),
             ),
           ),
         );
       }
-      function E(e) {
+      function w(e) {
         const {
             language: t,
             selectedLanguage: a,
@@ -1406,7 +1484,7 @@
           ),
         );
       }
-      function _(e) {
+      function I(e) {
         const { curAssetURL: t, imageClassname: a } = e;
         if (!t)
           return s.createElement(
@@ -1416,9 +1494,9 @@
           );
         const n = (0, i.yh)(t);
         return l.Ho.includes(n)
-          ? s.createElement(A, { ...e })
+          ? s.createElement(C, { ...e })
           : l.x.includes(n)
-            ? s.createElement(v, {
+            ? s.createElement(b, {
                 className: a || f().ArtPreview,
                 strTextURL: t,
               })
@@ -1427,7 +1505,7 @@
                 src: t,
               });
       }
-      function A(e) {
+      function C(e) {
         const { curAssetURL: t, imageClassname: a } = e,
           n = s.useRef();
         return (
@@ -1448,7 +1526,7 @@
           )
         );
       }
-      function v(e) {
+      function b(e) {
         const { strTextURL: t, className: a } = e,
           [n, o] = s.useState("");
         return (
@@ -1468,6 +1546,34 @@
             readOnly: !0,
             rows: 20,
           })
+        );
+      }
+    },
+    28865: (e, t, a) => {
+      "use strict";
+      a.d(t, { _: () => c });
+      var n = a(90626),
+        r = a(32754),
+        s = a(48576),
+        o = a.n(s),
+        l = a(52038),
+        i = a(12155);
+      function c(e) {
+        const { bDone: t, name: a, tooltip: s } = e;
+        return n.createElement(
+          "div",
+          { className: o().StatusLineItemCtn },
+          n.createElement(
+            "span",
+            {
+              className: (0, l.A)(
+                o().StatusIcon,
+                t ? o().StatusIconDone : o().StatusNotDone,
+              ),
+            },
+            t ? n.createElement(i.Jlk, null) : n.createElement(i.X, null),
+          ),
+          n.createElement(r.he, { toolTipContent: s }, a),
         );
       }
     },
@@ -1510,8 +1616,8 @@
             bMinimalDisplay: I,
           } = e,
           C = (0, s.FV)(t.clan_account_id),
-          [y] = (0, o.L2)();
-        if (y || !C)
+          [b] = (0, o.L2)();
+        if (b || !C)
           return n.createElement(
             "div",
             { className: _.DevSummaryWidgetCtn },
@@ -1521,14 +1627,14 @@
               position: "center",
             }),
           );
-        const b = t.type,
+        const y = t.type,
           T =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          S = C.GetCreatorHomeURL(b),
+          S = C.GetCreatorHomeURL(y),
           P = C.GetNumFollowers();
         return n.createElement(
           f.tH,
@@ -1685,7 +1791,7 @@
     },
     42027: (e, t, a) => {
       "use strict";
-      a.d(t, { Gr: () => U, O9: () => B });
+      a.d(t, { Gr: () => F, O9: () => B });
       var n = a(65946),
         r = a(75844),
         s = a(90626),
@@ -1758,8 +1864,8 @@
         w = a(64641),
         I = a.n(w),
         C = a(12155),
-        y = a(22797),
-        b = a(68797),
+        b = a(22797),
+        y = a(68797),
         T = a(56011),
         S = a(66331),
         P = a(27344),
@@ -1804,7 +1910,7 @@
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, b.H)(e);
+                  let t = (0, y.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
                     t,
@@ -1914,7 +2020,7 @@
             failed: (0, p.we)("#ImageUpload_Failed"),
           },
           c = t.BSupportsLanguages()
-            ? U(p.A0.GetLanguageListForRealms(n ?? [l.TU.k_ESteamRealmGlobal]))
+            ? F(p.A0.GetLanguageListForRealms(n ?? [l.TU.k_ESteamRealmGlobal]))
             : null,
           m = t.IsValidAssetType(e.forceResolution, e.forceFileType),
           g = "pending" == t.status;
@@ -1982,7 +2088,7 @@
               s.createElement(
                 "div",
                 { className: I().FlexCenter },
-                s.createElement(y.t, { size: "small" }),
+                s.createElement(b.t, { size: "small" }),
               ),
           ),
           s.createElement(
@@ -2036,7 +2142,7 @@
               {
                 className: k().PreviewImgCtn,
                 onClick: (e) => {
-                  (0, D.pg)(s.createElement(F, { asset: t }), (0, T.uX)(e));
+                  (0, D.pg)(s.createElement(U, { asset: t }), (0, T.uX)(e));
                 },
               },
               s.createElement(
@@ -2073,7 +2179,7 @@
               ),
             );
       }
-      function F(e) {
+      function U(e) {
         const { asset: t, closeModal: a } = e;
         return s.createElement(
           v.o0,
@@ -2085,7 +2191,7 @@
           ),
         );
       }
-      function U(e) {
+      function F(e) {
         const t = [],
           a = new Array();
         for (const t of e) {
@@ -2130,8 +2236,8 @@
           bNoDefaultDate: A,
           className: I,
           strDescToolTip: C,
-          strDescription: y,
-          bShowTimeZone: b,
+          strDescription: b,
+          bShowTimeZone: y,
           strInvalidDateTimeLocalizedMsg: T,
           fnIsValidDateTime: S,
           bWeekdaysOnly: P,
@@ -2146,8 +2252,8 @@
             ? _
             : E;
         const x = r(),
-          [L, F] = n.useState(x > 0 ? h()(1e3 * x) : null),
-          [U, R] = n.useState(),
+          [L, U] = n.useState(x > 0 ? h()(1e3 * x) : null),
+          [F, R] = n.useState(),
           [M, G] = n.useState(),
           O = (function (e, t, a, r, s) {
             const o = r && r(),
@@ -2169,7 +2275,7 @@
               }, [c, s]),
               c
             );
-          })(U, M, T, S, i),
+          })(F, M, T, S, i),
           W = !i && O;
         let H, Y;
         if (t && a && t == a && a > l.HD.GetTimeNowWithOverride()) {
@@ -2188,8 +2294,8 @@
           Q = !!p && V != p && h().unix(x).tz(p),
           {
             fnOnInput: J,
-            fnOnInputBlur: q,
-            fnOnChange: X,
+            fnOnInputBlur: X,
+            fnOnChange: q,
           } = v(
             D,
             (e) => {
@@ -2201,7 +2307,7 @@
                 e.minute(a.minute()),
                 e.second(0),
                 k(e.unix()),
-                F(e);
+                U(e);
             },
             G,
           ),
@@ -2228,7 +2334,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              k(n), F(h().unix(n));
+              k(n), U(h().unix(n));
             },
             R,
           );
@@ -2241,7 +2347,7 @@
             n.createElement(
               d.he,
               { toolTipContent: C, direction: "top" },
-              Boolean(y) && n.createElement("span", null, y),
+              Boolean(b) && n.createElement("span", null, b),
             ),
             W &&
               n.createElement(
@@ -2258,7 +2364,7 @@
               "div",
               { className: (0, m.A)(c().InputBorder, g().TimeBlock) },
               n.createElement(s(), {
-                onChange: X,
+                onChange: q,
                 timeFormat: !1,
                 value: null != M ? M : L,
                 isValidDate: (e) =>
@@ -2285,7 +2391,7 @@
                   ),
                   disabled: f,
                   onChange: (e) => J(e.currentTarget.value),
-                  onBlur: (e) => q(e.currentTarget.value),
+                  onBlur: (e) => X(e.currentTarget.value),
                 },
               }),
               !!Q &&
@@ -2303,7 +2409,7 @@
                 dateFormat: !1,
                 timeFormat: N,
                 timeConstraints: H,
-                value: null != U ? U : L,
+                value: null != F ? F : L,
                 inputProps: {
                   placeholder: (0, u.we)("#DateTimePicker_Enter_Time"),
                   className: (0, m.A)(
@@ -2323,7 +2429,7 @@
                   Q.format("LT"),
                 ),
             ),
-            b &&
+            y &&
               n.createElement(
                 "div",
                 null,
@@ -2459,12 +2565,12 @@
           } = e,
           [D, w] = n.useState(!1),
           [I, C] = n.useState(void 0),
-          [y, b] = n.useState(void 0),
+          [b, y] = n.useState(void 0),
           [T, S] = n.useState(-1),
           [P, k] = n.useState(void 0),
           [B, N] = n.useState(0),
           [x, L] = n.useState(0),
-          [F, U] = n.useState(void 0),
+          [U, F] = n.useState(void 0),
           [R, M] = n.useState(""),
           G = n.useRef(),
           O = n.useMemo(() => new Array(), []),
@@ -2492,11 +2598,11 @@
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                w(!0), S(e), U(void 0), k(e);
+                w(!0), S(e), F(void 0), k(e);
                 const n = t.clientX - a.getBoundingClientRect().left;
                 C(n);
                 const r = t.clientY - a.getBoundingClientRect().top;
-                b(r),
+                y(r),
                   (a.style.position = "fixed"),
                   (a.style.left = t.clientX - n + "px"),
                   (a.style.top = t.clientY - r + "px"),
@@ -2518,7 +2624,7 @@
                   : console.error("end element drag missing element"),
                   w(!1),
                   S(-1),
-                  U(void 0),
+                  F(void 0),
                   k(void 0);
               })(),
               z(T, P));
@@ -2543,7 +2649,7 @@
                 const t = O[T]?.current;
                 t
                   ? ((t.style.left = e.clientX - I + "px"),
-                    (t.style.top = e.clientY - y + "px"))
+                    (t.style.top = e.clientY - b + "px"))
                   : console.error("update grab element missing element");
               })(e);
           };
@@ -2553,15 +2659,15 @@
             for (let e = O.length; e < t.length; e++)
               O.push(n.createRef()), W.push(n.createRef());
           }, [t.length, O, W]);
-        const q = (e) => {
-            U(void 0);
+        const X = (e) => {
+            F(void 0);
             const t = R?.trim(),
               a = Number.parseInt(t);
             if (0 == t.length || isNaN(a)) return;
             const n = a - 1;
             e != n && z(e, n);
           },
-          [X, K] = n.useState(void 0);
+          [q, K] = n.useState(void 0);
         return n.createElement(
           "div",
           { className: c().WhitelistCtn, ref: G },
@@ -2602,7 +2708,7 @@
                     v,
                     D && c().DragActive,
                     r == T && c().BeingDragged,
-                    X == r && c().Dropped,
+                    q == r && c().Dropped,
                   ),
                   onAnimationEnd: () => K(void 0),
                 },
@@ -2618,17 +2724,17 @@
                 n.createElement("input", {
                   className: (0, h.A)(c().WhitelistNumber, A && c().Disabled),
                   type: "text",
-                  value: F == r ? R : r + 1,
+                  value: U == r ? R : r + 1,
                   disabled: A || r == T,
                   onChange: (e) => M(e.target.value),
                   onKeyDown: (e) =>
                     ((e, t) => {
-                      "Enter" === e.key && (q(t), e.currentTarget.blur());
+                      "Enter" === e.key && (X(t), e.currentTarget.blur());
                     })(e, r),
                   onFocus: (e) => {
-                    U(r), M(e.target.value);
+                    F(r), M(e.target.value);
                   },
-                  onBlur: () => q(r),
+                  onBlur: () => X(r),
                 }),
                 a(e, r),
                 Boolean(r != T) &&

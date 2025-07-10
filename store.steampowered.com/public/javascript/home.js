@@ -956,9 +956,11 @@ GHomepage = {
 
 						$el.siblings().removeClass('focus');
 						$elInfoDiv.siblings().removeClass('focus');
+						$elInfoDiv.siblings().attr('inert', true);
 
 						$el.addClass('focus');
 						$elInfoDiv.addClass('focus');
+						$elInfoDiv.removeAttr('inert');
 					};
 
 					if ( $elInfoDiv )
@@ -1927,9 +1929,10 @@ GHomepage = {
 	{
 		var relatedReview = $J( "#Review" + appContainer.data( 'recommendationid_' + reviewIdx ) );
 		relatedReview.siblings().removeClass( "focus" );
+		relatedReview.siblings().attr( "inert", true );
 		relatedReview.siblings().attr( "aria-hidden", true );
 		relatedReview.addClass( "focus" );
-		relatedReview.attr( "aria-hidden", undefined );
+		relatedReview.removeAttr( "inert" );
 
 		appContainer.data( "currentreviewidx", reviewIdx );
 	},
@@ -2067,6 +2070,7 @@ GHomepage = {
 				else
 				{
 					$Review.attr( "aria-hidden", true );
+					$Review.attr( "inert", true );
 				}
 			}
 

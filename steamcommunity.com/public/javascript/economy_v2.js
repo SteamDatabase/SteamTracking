@@ -555,6 +555,7 @@ function CInventory( owner, appid, contextid, rgContextData )
 	this.m_rgAssets = [];
 	this.m_rgCurrencies = [];
 	this.m_rgDescriptions = {};
+	this.m_rgAssetProperties = {};
 
 	this.m_strCompositeID = this.m_steamid + '_' + this.appid + '_' + this.contextid;
 
@@ -735,6 +736,20 @@ CInventory.prototype.AddInventoryData = function( data )
 		}
 	}
 
+	if ( data.asset_properties )
+	{
+		for ( var i = 0; i < data.asset_properties.length; i++ )
+		{
+			var asset_properties = data.asset_properties[i];
+			var key = asset_properties.assetid;
+
+			if ( !this.m_rgAssetProperties[ key ] )
+			{
+				this.m_rgAssetProperties[ key ] = asset_properties.asset_properties;
+			}
+		}
+	}
+
 	// make sure we have enough element containers for the total number of items
 	if ( data.total_inventory_count != this.m_cItems )
 	{
@@ -774,6 +789,11 @@ CInventory.prototype.AddInventoryData = function( data )
 
 			asset.description = description;
 			asset.description.use_count++;
+
+			if ( this.m_rgAssetProperties[ asset.assetid ] )
+			{
+				asset.asset_properties = this.m_rgAssetProperties[ asset.assetid ];
+			}
 
 			if ( asset.is_currency )
 				this.m_rgCurrencies[ asset.currencyid ] = asset;
@@ -3302,6 +3322,14 @@ function BuildHover( prefix, item, owner )
 		PopulateTags( elTags, elTagsContent, description.tags );
 	}
 
+	var elAssetProperties = $(prefix+'_item_asset_properties');
+	var elAssetPropertiesContent = $(prefix+'_item_asset_properties_content');
+
+	if ( elAssetProperties && elAssetPropertiesContent )
+	{
+		PopulateAssetProperties( elAssetProperties, elAssetPropertiesContent, item.asset_properties );
+	}
+
 	var elMarketActions = $(prefix+'_item_market_actions');
 	if ( elMarketActions )
 	{
@@ -3472,6 +3500,68 @@ function PopulateTags( elTags, elTagsContent, rgTags )
 	else
 	{
 		elTags.hide();
+	}
+}
+
+function PopulateAssetProperties( elAssetProperties, elAssetPropertiesContent, asset_properties )
+{
+	elAssetPropertiesContent.update('');
+
+	if ( !asset_properties )
+	{
+		elAssetProperties.hide();
+		return;
+	}
+
+	var sAssetProperties = "";
+	for ( var i = 0; i < asset_properties.length; i++ )
+	{
+		var property = asset_properties[i];
+
+		if ( !Object.hasOwn( property, 'name' ) )
+			continue;
+
+		if ( sAssetProperties != "" )
+			sAssetProperties += "<BR>";
+
+		sAssetProperties += property.name;
+		sAssetProperties += ": ";
+
+		if ( Object.hasOwn( property, 'float_value' ) )
+		{
+			<!-- // replicating the uh, very detailed, CS display logic -->
+			<!-- // CS does it for both 0 and 1 but in reality only 0 has this crazy precision near it -->
+			<!-- // This is pretty specific to CS but probably doesn't hurt to do for other games as well to keep it uniform -->
+			var floatValue = parseFloat( property.float_value );
+			var maxFractionDigits = 9;
+
+			if ( floatValue > 0 )
+			{
+				if ( floatValue < 0.0000000000000000000000000001 )
+					maxFractionDigits = 47;
+				else if ( floatValue < 0.000000000000000001 )
+					maxFractionDigits = 35;
+				else if ( floatValue < 0.000000000001 )
+					maxFractionDigits = 21;
+				else if ( floatValue < 0.00001 )
+					maxFractionDigits = 15;
+			}
+
+			sAssetProperties += floatValue.toLocaleString( undefined, { maximumFractionDigits: maxFractionDigits, } );
+		}
+
+		if ( Object.hasOwn( property, 'int_value' ) )
+			sAssetProperties += property.int_value;
+	}
+
+	if ( sAssetProperties != "" )
+	{
+		elAssetProperties.show();
+		$J(elAssetPropertiesContent).html( sAssetProperties );
+	}
+	else
+	{
+		elAssetProperties.hide();
 	}
 }
 

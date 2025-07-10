@@ -91,7 +91,7 @@
     },
     63556: (e, t, n) => {
       "use strict";
-      n.d(t, { E: () => h, O: () => m });
+      n.d(t, { E: () => m, O: () => h });
       var a = n(34629),
         r = n(14947),
         o = n(65946),
@@ -100,7 +100,7 @@
         l = n(6419),
         c = n(78327),
         p = n(91986);
-      class m {
+      class h {
         GetCallback() {
           return this.m_callback;
         }
@@ -130,11 +130,11 @@
         }
         static Get() {
           return (
-            m.s_globalSingletonStore ||
-              ((m.s_globalSingletonStore = new m()),
+            h.s_globalSingletonStore ||
+              ((h.s_globalSingletonStore = new h()),
               "dev" == c.TS.WEB_UNIVERSE &&
-                (window.DUS = m.s_globalSingletonStore)),
-            m.s_globalSingletonStore
+                (window.DUS = h.s_globalSingletonStore)),
+            h.s_globalSingletonStore
           );
         }
         constructor() {
@@ -145,16 +145,16 @@
             (0, r.Gn)(this);
         }
       }
-      function h() {
-        return (0, o.q3)(() => m.Get().GetCurEditLanguage());
+      function m() {
+        return (0, o.q3)(() => h.Get().GetCurEditLanguage());
       }
-      (0, a.Cg)([r.sH], m.prototype, "m_eCurLang", void 0),
-        (0, a.Cg)([r.sH], m.prototype, "m_rgHasData", void 0),
-        (0, a.Cg)([r.sH], m.prototype, "m_bHasLocalizationContext", void 0),
-        (0, a.Cg)([l.o], m.prototype, "GetCurEditLanguage", null),
-        (0, a.Cg)([l.o], m.prototype, "SetCurEditLanguage", null),
-        (0, a.Cg)([r.XI.bound], m.prototype, "SetHasLanguage", null),
-        (0, a.Cg)([l.o], m.prototype, "BHasLanguageData", null);
+      (0, a.Cg)([r.sH], h.prototype, "m_eCurLang", void 0),
+        (0, a.Cg)([r.sH], h.prototype, "m_rgHasData", void 0),
+        (0, a.Cg)([r.sH], h.prototype, "m_bHasLocalizationContext", void 0),
+        (0, a.Cg)([l.o], h.prototype, "GetCurEditLanguage", null),
+        (0, a.Cg)([l.o], h.prototype, "SetCurEditLanguage", null),
+        (0, a.Cg)([r.XI.bound], h.prototype, "SetHasLanguage", null),
+        (0, a.Cg)([l.o], h.prototype, "BHasLanguageData", null);
     },
     9239: (e, t, n) => {
       "use strict";
@@ -167,8 +167,8 @@
         l = n(79821),
         c = n(88997),
         p = n(70995),
-        m = n(17720),
-        h = n(27666),
+        h = n(17720),
+        m = n(27666),
         u = n(86355),
         d = n(73745),
         g = n(81962),
@@ -811,13 +811,13 @@
                             n[0].bSuccess)
                           ) {
                             const e = n[0].uploadResult,
-                              a = h.z.GenerateURLFromHashAndExt(
+                              a = m.z.GenerateURLFromHashAndExt(
                                 t,
-                                h.z.GetHashAndExt(e),
+                                m.z.GetHashAndExt(e),
                               ),
-                              r = h.z.GenerateURLFromHashAndExt(
+                              r = m.z.GenerateURLFromHashAndExt(
                                 t,
-                                h.z.GetThumbHashAndExt(e),
+                                m.z.GetThumbHashAndExt(e),
                               ),
                               s = {
                                 imageid: -11231412,
@@ -844,7 +844,7 @@
             B.$n,
             {
               onClick: (e) => {
-                const t = new m.b(P.UF.CLANSTEAMID);
+                const t = new h.b(P.UF.CLANSTEAMID);
                 (0, N.pg)(
                   i.createElement($.z, {
                     clanSteamID: t,
@@ -958,7 +958,7 @@
           e && e.target.select();
         }
         InsertText(e) {
-          me.replaceSelection(this.GetTextAreaRef().current, e);
+          he.replaceSelection(this.GetTextAreaRef().current, e);
         }
         OnTextAreaDropListener(e) {
           if (
@@ -968,10 +968,10 @@
           ) {
             let t = e.dataTransfer.getData("text");
             if (t && t.length > 0)
-              for (let e of [h.z.GetBaseURL(), h.z.GetBaseURLV2()])
+              for (let e of [m.z.GetBaseURL(), m.z.GetBaseURLV2()])
                 if (t.startsWith(e)) {
                   let n = "[img]" + ie.lw + "/" + t.substr(e.length) + "[/img]";
-                  me.replaceSelection(this.GetTextAreaRef().current, n);
+                  he.replaceSelection(this.GetTextAreaRef().current, n);
                   break;
                 }
           }
@@ -985,7 +985,7 @@
           return i.createElement(
             i.Fragment,
             null,
-            i.createElement(he, {
+            i.createElement(me, {
               pathToImages:
                 P.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
@@ -1038,7 +1038,7 @@
         (0, a.Cg)([d.oI], pe.prototype, "OnTextAreaDropListener", null),
         (0, a.Cg)([d.oI], pe.prototype, "GetTextAreaRef", null),
         (pe = (0, a.Cg)([s.PA], pe));
-      class me {
+      class he {
         static BIsFireFox() {
           return Boolean(
             new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -1049,7 +1049,7 @@
         static replaceSelection(e, t) {
           let n = e.selectionStart;
           e.focus(),
-            me.InsertTextAtSelect(t, e),
+            he.InsertTextAtSelect(t, e),
             e.setSelectionRange(n, n + t.length);
         }
         static getSelectedString(e) {
@@ -1059,19 +1059,19 @@
           );
         }
         static wrapBBCode(e, t, n) {
-          let a = me.getSelectedString(n),
+          let a = he.getSelectedString(n),
             r = "";
           (r =
             0 == a.indexOf(e) && a.lastIndexOf(t) == a.length - t.length
               ? a.substr(e.length, a.length - e.length - t.length)
               : e + a + t),
-            me.replaceSelection(n, r);
+            he.replaceSelection(n, r);
         }
         static append(e, t) {
           t &&
             (t.focus(),
             t.setSelectionRange(t.value.length, t.value.length),
-            me.InsertTextAtSelect(e, t));
+            he.InsertTextAtSelect(e, t));
         }
         static ClearTextArea(e) {
           if (e) {
@@ -1089,7 +1089,7 @@
           }
         }
         static overwrite(e, t) {
-          t && (me.ClearTextArea(t), me.InsertTextAtSelect(e, t));
+          t && (he.ClearTextArea(t), he.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
           const n = t.selectionStart,
@@ -1105,34 +1105,34 @@
           t.focus();
         }
       }
-      let he = class extends i.Component {
+      let me = class extends i.Component {
         constructor() {
           super(...arguments), (this.m_linkPopupRef = i.createRef());
         }
         onBold() {
-          me.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
         }
         onItalics() {
-          me.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
         }
         onUnderline() {
-          me.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
         }
         onStrikeThrough() {
-          me.wrapBBCode(
+          he.wrapBBCode(
             "[strike]",
             "[/strike]",
             this.props.fnTextareaRef().current,
           );
         }
         onHeader() {
-          me.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
         }
         onHeader2() {
-          me.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
         }
         onHeader3() {
-          me.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          he.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
         }
         onUnorderedList() {
           this.handleList("list");
@@ -1145,18 +1145,18 @@
             n = "[" + e + "]\n",
             a = "[/" + e + "]";
           if (t.selectionStart == t.selectionEnd)
-            me.wrapBBCode(n + "[*]", "\n" + a, t);
+            he.wrapBBCode(n + "[*]", "\n" + a, t);
           else {
             let e =
               n +
-              me
+              he
                 .getSelectedString(t)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
               a;
-            me.replaceSelection(t, e);
+            he.replaceSelection(t, e);
           }
         }
         OnAddLink(e) {
@@ -1209,7 +1209,7 @@
         }
         OnEmoticonSelected(e, t = !1) {
           let n = `ː${e}ː`;
-          me.replaceSelection(this.props.fnTextareaRef().current, n),
+          he.replaceSelection(this.props.fnTextareaRef().current, n),
             this.props.fnTextareaRef().current.focus();
         }
         BSupports(e) {
@@ -1400,23 +1400,23 @@
           ),
         );
       }
-      (0, a.Cg)([d.oI], he.prototype, "onBold", null),
-        (0, a.Cg)([d.oI], he.prototype, "onItalics", null),
-        (0, a.Cg)([d.oI], he.prototype, "onUnderline", null),
-        (0, a.Cg)([d.oI], he.prototype, "onStrikeThrough", null),
-        (0, a.Cg)([d.oI], he.prototype, "onHeader", null),
-        (0, a.Cg)([d.oI], he.prototype, "onHeader2", null),
-        (0, a.Cg)([d.oI], he.prototype, "onHeader3", null),
-        (0, a.Cg)([d.oI], he.prototype, "onUnorderedList", null),
-        (0, a.Cg)([d.oI], he.prototype, "onOrderedList", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnAddLink", null),
-        (0, a.Cg)([d.oI], he.prototype, "ShowHelpDialog", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnOpenYoutubeDialog", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnOpenImageDialog", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnOpenSpeakerDialog", null),
-        (0, a.Cg)([d.oI], he.prototype, "OnEmoticonSelected", null),
-        (he = (0, a.Cg)([s.PA], he));
+      (0, a.Cg)([d.oI], me.prototype, "onBold", null),
+        (0, a.Cg)([d.oI], me.prototype, "onItalics", null),
+        (0, a.Cg)([d.oI], me.prototype, "onUnderline", null),
+        (0, a.Cg)([d.oI], me.prototype, "onStrikeThrough", null),
+        (0, a.Cg)([d.oI], me.prototype, "onHeader", null),
+        (0, a.Cg)([d.oI], me.prototype, "onHeader2", null),
+        (0, a.Cg)([d.oI], me.prototype, "onHeader3", null),
+        (0, a.Cg)([d.oI], me.prototype, "onUnorderedList", null),
+        (0, a.Cg)([d.oI], me.prototype, "onOrderedList", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnAddLink", null),
+        (0, a.Cg)([d.oI], me.prototype, "ShowHelpDialog", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnOpenYoutubeDialog", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnOpenImageDialog", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnOpenSpeakerDialog", null),
+        (0, a.Cg)([d.oI], me.prototype, "OnEmoticonSelected", null),
+        (me = (0, a.Cg)([s.PA], me));
       let de = class extends i.Component {
         constructor() {
           super(...arguments),
@@ -1431,7 +1431,7 @@
                 "https://www.youtube.com/watch?v=" +
                 e.strVideoID +
                 (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-              me.wrapBBCode(t, "", this.props.textareaRef.current);
+              he.wrapBBCode(t, "", this.props.textareaRef.current);
             } else {
               let t =
                 "[previewyoutube=" +
@@ -1439,7 +1439,7 @@
                 ";" +
                 this.state.alignment +
                 "]";
-              me.wrapBBCode(
+              he.wrapBBCode(
                 t,
                 "[/previewyoutube]",
                 this.props.textareaRef.current,
@@ -1631,7 +1631,7 @@
         LoadFromTextArea() {
           const { textareaRef: e } = this.props;
           if (e && e.current) {
-            let t = me.getSelectedString(e.current),
+            let t = he.getSelectedString(e.current),
               n = se.m_regExp.exec(t);
             n
               ? this.setState({ strURL: n[1], textToDisplay: n[2] })
@@ -1650,7 +1650,7 @@
         onInsertLink() {
           const { strURL: e, textToDisplay: t } = this.state;
           let n = "[url=" + e + "]" + t + "[/url]";
-          me.replaceSelection(this.props.textareaRef.current, n);
+          he.replaceSelection(this.props.textareaRef.current, n);
         }
         render() {
           return i.createElement(
@@ -1736,7 +1736,7 @@
           e && e.length > 0 && ((n += "[url=" + e + "]"), (a = "[/url]" + a)),
             (n += "[img]" + t),
             (a = "[/img]" + a),
-            me.wrapBBCode(n, a, this.props.textareaRef.current);
+            he.wrapBBCode(n, a, this.props.textareaRef.current);
         }
         OnImageURLChange(e) {
           this.state.imgURL != e.target.value &&
@@ -1855,11 +1855,11 @@
                 o.trim().length > 0 && (n += ` company="${o}"`),
                 u)
               ) {
-                n += ` photo="${ie.lw + "/" + u.clanAccountID + "/" + h.z.GetHashAndExt(u)}"`;
+                n += ` photo="${ie.lw + "/" + u.clanAccountID + "/" + m.z.GetHashAndExt(u)}"`;
               }
               g && (n += ` steamid="${g.ConvertTo64BitString()}"`),
                 (n += `]${l}[/speaker]`),
-                me.replaceSelection(e.textareaRef.current, n);
+                he.replaceSelection(e.textareaRef.current, n);
             },
             className: Q().BBCodeEditorInputStyles,
           },
@@ -1934,7 +1934,7 @@
                 { className: Q().AssociateRowCtn },
                 i.createElement(
                   B.$n,
-                  { onClick: () => E(new m.b(P.iA.steamid)) },
+                  { onClick: () => E(new h.b(P.iA.steamid)) },
                   (0, w.we)("#EventEditor_SteamAccount_addme"),
                 ),
                 i.createElement(
@@ -2024,7 +2024,7 @@
           { data: a } = (0, V.js)(t);
         return i.createElement(
           K.kt,
-          { onSelected: () => n(new m.b(t)) },
+          { onSelected: () => n(new h.b(t)) },
           i.createElement(
             "div",
             { style: { display: "flex", alignItems: "center" } },
@@ -2077,8 +2077,8 @@
               .then((e) => {
                 this.m_isMounted &&
                   (this.m_bAppend
-                    ? me.append(e, this.props.textareaRef.current)
-                    : me.overwrite(e, this.props.textareaRef.current),
+                    ? he.append(e, this.props.textareaRef.current)
+                    : he.overwrite(e, this.props.textareaRef.current),
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
@@ -2136,17 +2136,11 @@
               : i.createElement(
                   H.eV,
                   {
+                    title: (0, w.we)("#EventEditor_ImportFromHTML"),
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
                     className: Q().BBCodeEditorInputStyles,
                   },
-                  i.createElement(
-                    B.Y9,
-                    null,
-                    " ",
-                    (0, w.we)("#EventEditor_ImportFromHTML"),
-                    " ",
-                  ),
                   i.createElement(
                     B.nB,
                     null,
@@ -2240,7 +2234,7 @@
     },
     29347: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => u, z: () => m });
+      n.d(t, { r: () => u, z: () => h });
       var a = n(90626),
         r = n(86355),
         o = n(68255),
@@ -2249,12 +2243,12 @@
         l = n(61859),
         c = n(22797),
         p = n(17618);
-      const m = (e) => {
+      const h = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
-            [m, u] = (0, a.useState)(""),
+            [h, u] = (0, a.useState)(""),
             d = (0, r.mr)(e.clanSteamID.GetAccountID()),
             g = () => e.closeModal && e.closeModal(),
-            E = r.pU.GetFilteredClanImages(t, m),
+            E = r.pU.GetFilteredClanImages(t, h),
             C = (e) => {
               n(e), g();
             };
@@ -2285,7 +2279,7 @@
                     ),
                     a.createElement(o.pd, {
                       placeholder: (0, l.we)("#ClanImageChooser_Search"),
-                      value: m,
+                      value: h,
                       onChange: (e) => u(e.currentTarget.value),
                     }),
                     a.createElement(
@@ -2298,14 +2292,14 @@
                           })
                         : Boolean(E.length > 0)
                           ? E.map((e) =>
-                              a.createElement(h, {
+                              a.createElement(m, {
                                 key: "ci" + e.image_hash,
                                 clanImage: e,
-                                searchStringHilight: m,
+                                searchStringHilight: h,
                                 fnImageClick: C,
                               }),
                             )
-                          : Boolean(0 == m.trim().length)
+                          : Boolean(0 == h.trim().length)
                             ? a.createElement(
                                 "div",
                                 null,
@@ -2334,7 +2328,7 @@
             ),
           );
         },
-        h = (e) => {
+        m = (e) => {
           const { clanImage: t, searchStringHilight: n, fnImageClick: r } = e;
           let o = t.file_name ? t.file_name : "",
             s = u(n, o, String(t.imageid), p.Hilight);
@@ -2397,8 +2391,8 @@
         l = (n(63556), n(95695)),
         c = n.n(l),
         p = n(52038),
-        m = n(61859),
-        h = n(91675),
+        h = n(61859),
+        m = n(91675),
         u = n(73745),
         d = n(32754);
       let g = class extends o.Component {
@@ -2415,15 +2409,15 @@
               o.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
-                (0, m.we)("#language_selection_none"),
+                (0, h.we)("#language_selection_none"),
               ),
             );
           let l = new Array();
           const u = this.props.realms || [i.TU.k_ESteamRealmGlobal];
-          for (const e of m.A0.GetLanguageListForRealms(u)) {
+          for (const e of h.A0.GetLanguageListForRealms(u)) {
             if (t && !t(e)) continue;
             const n = (0, s.Lg)(e),
-              a = (0, m.we)("#Language_" + n),
+              a = (0, h.we)("#Language_" + n),
               o = Boolean(r) && r(e);
             l.push({ eLang: e, sLocName: a, bSupported: o });
           }
@@ -2445,7 +2439,7 @@
                     className: c().SupportedGroupLabel,
                     disabled: !0,
                   },
-                  (0, m.we)(
+                  (0, h.we)(
                     t.bSupported
                       ? "#LanguageGroup_Supported"
                       : "#LanguageGroup_Unsupported",
@@ -2459,9 +2453,9 @@
             s &&
               0 !== s &&
               ((i += " "),
-              (i += (0, m.we)(
+              (i += (0, h.we)(
                 "#Language_Last_Update",
-                (0, m.$z)(s) + " @ " + (0, h.KC)(s, { bForce24HourClock: !1 }),
+                (0, h.$z)(s) + " @ " + (0, m.KC)(s, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 o.createElement(

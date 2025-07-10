@@ -2036,11 +2036,12 @@ span._11TnLmbm2QkVVfCckvEXbJ {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
-  grid-template-rows: 1fr 50px 50px auto 50px 1fr;
+  grid-template-rows: 1fr 50px 50px auto 50px 50px 1fr;
   grid-template-areas: "spacer spacer spacer" "leftArrow name rightArrow" "leftArrow controls rightArrow" "leftArrow content rightArrow" "leftArrow pips rightArrow" "bottomspacer bottomspacer bottomspacer";
   margin: auto 0px;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   animation-name: brzQbY6Z8TH8Ww-rFL4E0;
   animation-duration: .4s;
   animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
@@ -2168,7 +2169,8 @@ span._11TnLmbm2QkVVfCckvEXbJ {
 }
 .BasicUI ._2Zwt2P5vy4W9Ha5ePOv54U ._3TkhdqIi1gqwMzexQDS8Ab {
   padding: 12px;
-  grid-template-areas: "capsule capsule" "appInfo appInfo" "tags tags" "review review";
+  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-areas: "capsule capsule" "appInfo appInfo" "tags tags" "review review" "relevance relevance";
 }
 @media screen and (max-aspect-ratio: 10 / 9) {
   ._2Zwt2P5vy4W9Ha5ePOv54U ._3TkhdqIi1gqwMzexQDS8Ab {
@@ -2676,9 +2678,6 @@ span._11TnLmbm2QkVVfCckvEXbJ {
 ._367qBdIRU4xAYHt5cqhPVa {
   grid-area: relevance;
 }
-.BasicUI ._367qBdIRU4xAYHt5cqhPVa {
-  display: none;
-}
 ._29ReJunMtLbnxbnixF6VdE {
   font-size: 12px;
   color: var(--gpStoreLighterGrey);
@@ -2811,6 +2810,7 @@ span._11TnLmbm2QkVVfCckvEXbJ {
   opacity: 0.7;
   transition: opacity .2s ease-in-out;
   width: fit-content;
+  color: #fff;
 }
 .u42zSEWdGrvBDimhV4QNI ._2C1i6xEuF431h_KHPB53zS a:hover {
   opacity: 1;
@@ -5754,22 +5754,6 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 ._2Bw2oyBgXlb8EZ4HHbE8Ye {
   margin-bottom: 20px;
 }
-._2h8s6LCid-ECW3NhDIBaFX {
-  font-size: 14px;
-  color: #fff;
-  display: flex;
-  margin-bottom: 4px;
-}
-._2h8s6LCid-ECW3NhDIBaFX ._3dYtRWTacFdf4BVwqGSgcd {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
-}
-._2h8s6LCid-ECW3NhDIBaFX ._3dYtRWTacFdf4BVwqGSgcd._1tiAc3o7NUJsBdgLS6vCl_ svg {
-  fill: #8bc53f;
-  stroke: #8bc53f;
-}
 ._1_JRuj6yAJovBDZE8IMSob {
   margin-top: 12px;
   display: flex;
@@ -5909,6 +5893,26 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 textarea._3793xvP87t1rZYbAQDC1pG {
   background: #202227;
   color: #a1acb5;
+}
+.V5SWm2fiBKJqCbPn7bpC0 {
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  margin-bottom: 4px;
+}
+.V5SWm2fiBKJqCbPn7bpC0 ._1DFlt9vB8DfZc84ZeQcrgT {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+.V5SWm2fiBKJqCbPn7bpC0 ._1DFlt9vB8DfZc84ZeQcrgT.K_JWTc7pXC9lechbL_JMT svg {
+  fill: #8bc53f;
+  stroke: #8bc53f;
+}
+.V5SWm2fiBKJqCbPn7bpC0 ._1DFlt9vB8DfZc84ZeQcrgT.zl6s26pUkMfMXmoMlJstY svg {
+  fill: #c5483f;
+  stroke: #c5483f;
 }
 ._3MDBcJnVnwjccSnGOTjmD3,
 .jhUsK0y96Y3i5NkiDdYYv {

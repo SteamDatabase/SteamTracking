@@ -128,30 +128,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            children: _,
-            navTreeRef: __webpack_require__,
-            NavigationManager: _,
-            ..._
-          } = _,
+      const _ = _.forwardRef(function (_, _) {
+        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(),
-          _ = (0, _._)(_, __webpack_require__);
-        if ((0, _._)()) {
-          const _ = window.__nav_tree_root;
-          return _.createElement(
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            navTreeRef: _,
+            ref: _,
+            parentEmbeddedNavTree: _,
+            disabledRoot: !_,
+          },
+          _.createElement(
             _._,
             {
-              ..._,
-              navTreeRef: _,
-              parentEmbeddedNavTree: _,
+              disableFocusRing: !_,
             },
-            _.createElement(_._, null, _),
-          );
-        }
-        return _.createElement(_.Fragment, null, _);
-      }
+            __webpack_require__,
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -419,7 +421,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _;
       const _ = (0, _._)(() => {
@@ -430,8 +431,7 @@
             }
             return _;
           })();
-          const _ = (0, _._)(),
-            _ = (0, _.useCallback)(() => {
+          const _ = (0, _.useCallback)(() => {
               _.SetPreferenceState(1);
             }, [_]),
             _ = (0, _.useCallback)(() => {
@@ -441,7 +441,6 @@
             _._,
             {
               navID: "StoreCookiesSettings",
-              NavigationManager: _,
             },
             _.createElement(
               "div",
@@ -974,11 +973,10 @@
         return _;
       }
       const _ = (0, _._)(() => {
-          let _ = _();
-          const _ = (0, _._)();
-          let _ = [];
+          let _ = _(),
+            _ = [];
           for (const _ of _.GetPreferences())
-            __webpack_require__.push(
+            _.push(
               _.createElement(_, {
                 preferenceSetting: _,
               }),
@@ -987,7 +985,6 @@
             _._,
             {
               navID: "StoreNotificationSettings",
-              NavigationManager: _,
             },
             _.createElement(
               "div",
@@ -1148,7 +1145,6 @@
       const _ = 1422450;
       function _(_) {
         const { bShowPlaytestOverview: _ } = _,
-          _ = (0, _._)(),
           _ = (function () {
             const _ = (0, _._)();
             return (0, _._)({
@@ -1184,7 +1180,6 @@
             _._,
             {
               navID: "StorePlaytestInvites",
-              NavigationManager: _,
             },
             _.createElement(
               "div",
@@ -1518,12 +1513,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const _ = (0, _._)();
         return _.createElement(
           _._,
           {
             navID: "StorePlaytests",
-            NavigationManager: _,
           },
           _.createElement(_, {
             bShowPlaytestOverview: !1,

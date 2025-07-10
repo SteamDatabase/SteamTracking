@@ -808,7 +808,7 @@
   text-transform: unset;
   margin: 8px 0px;
   font: var(--gpText-BodyMedium);
-  color: var(--gpStoreLightestGrey);
+  color: #ccd8e3;
 }
 .X9bYNT3rKpg6L1Cgq45pG {
   font-weight: normal;
@@ -915,7 +915,7 @@
 }
 .BasicUI ._1HjkZ3ooQw-4TV518YPtvp ._2772E6skxrFIemLRdp0EKv {
   font: var(--gpText-BodyLarge);
-  background: var(--gpColor-Blue);
+  background: #1a9fff;
   border-radius: var(--gpCorner-Medium);
   letter-spacing: unset;
   text-transform: unset;
@@ -925,10 +925,10 @@
   color: #fff;
 }
 .BasicUI ._1HjkZ3ooQw-4TV518YPtvp ._2772E6skxrFIemLRdp0EKv:hover {
-  background: var(--gpColor-BlueHi);
+  background: #0bf;
 }
 .BasicUI ._1HjkZ3ooQw-4TV518YPtvp ._2772E6skxrFIemLRdp0EKv:active {
-  background: var(--gpColor-Blue) !important;
+  background: #1a9fff !important;
   color: #fff !important;
 }
 .BasicUI ._1HjkZ3ooQw-4TV518YPtvp ._2772E6skxrFIemLRdp0EKv.gpfocus {

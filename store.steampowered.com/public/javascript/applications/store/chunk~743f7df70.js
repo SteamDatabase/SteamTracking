@@ -7308,7 +7308,12 @@
           R &&
             s.createElement(
               we.eV,
-              { bOKDisabled: !0, bHideCloseIcon: !0, onCancel: () => !1 },
+              {
+                "aria-label": u ? (0, w.we)("#Saving") : (0, w.we)("#Loading"),
+                bOKDisabled: !0,
+                bHideCloseIcon: !0,
+                onCancel: () => !1,
+              },
               s.createElement(Se.t, {
                 size: "medium",
                 position: "center",
@@ -9134,6 +9139,7 @@
             r.e(9063),
             r.e(4095),
             r.e(6883),
+            r.e(3846),
             r.e(9105),
             r.e(283),
             r.e(177),
@@ -9680,41 +9686,41 @@
           } = e,
           o = $r(t),
           [m, c] = s.useState(Boolean(o.fnAction));
-        return (
-          s.useEffect(() => {
-            o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
-          }, [o]),
+        s.useEffect(() => {
+          o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
+        }, [o]);
+        const u = s.useId();
+        return s.createElement(
+          we.eV,
+          {
+            bDisableBackgroundDismiss: !0,
+            closeModal: i,
+            onCancel: i,
+            className: "CSSActionDialogDialog",
+            "aria-labelledby": u,
+          },
           s.createElement(
-            we.eV,
-            {
-              bDisableBackgroundDismiss: !0,
-              closeModal: i,
-              onCancel: i,
-              className: "CSSActionDialogDialog",
-            },
+            I.Y9,
+            { id: u },
+            Boolean(o.bInitialState) && (0, w.we)(a),
+            Boolean(o.bSuccessState) && (0, w.we)(n),
+            Boolean(o.bFailedState) && (0, w.we)(l),
+          ),
+          s.createElement(
+            I.nB,
+            null,
             s.createElement(
-              I.Y9,
+              I.a3,
               null,
-              Boolean(o.bInitialState) && (0, w.we)(a),
-              Boolean(o.bSuccessState) && (0, w.we)(n),
-              Boolean(o.bFailedState) && (0, w.we)(l),
+              m
+                ? s.createElement(Se.t, {
+                    size: "medium",
+                    position: "center",
+                    string: (0, w.we)("#Loading"),
+                  })
+                : r,
             ),
-            s.createElement(
-              I.nB,
-              null,
-              s.createElement(
-                I.a3,
-                null,
-                m
-                  ? s.createElement(Se.t, {
-                      size: "medium",
-                      position: "center",
-                      string: (0, w.we)("#Loading"),
-                    })
-                  : r,
-              ),
-            ),
-          )
+          ),
         );
       }
       function Kr(e) {
@@ -9791,11 +9797,15 @@
         render() {
           return (
             this.m_parser.UpdateOverrideLanguage(this.props.languageOverride),
-            this.m_parser.ParseBBCode(this.props.text, {
-              showErrorInfo: this.props.showErrorInfo,
-              event: this.props.event,
-              bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
-            })
+            this.m_parser.ParseBBCode(
+              this.props.text,
+              {
+                showErrorInfo: this.props.showErrorInfo,
+                event: this.props.event,
+                bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
+              },
+              !0,
+            )
           );
         }
       }

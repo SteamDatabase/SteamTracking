@@ -2326,7 +2326,7 @@ function PreloadImages( elElement )
 var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnClickThumb, bNoWrap )
 {
 	this.$elContainer = $elContainer;
-	this.nSpeed = nSpeed;
+	this.nSpeed = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? undefined : nSpeed;
 	this.fnOnFocus = fnOnFocus;
 	this.fnOnBlur = fnOnBlur;
 	this.fnClickThumb = fnClickThumb;

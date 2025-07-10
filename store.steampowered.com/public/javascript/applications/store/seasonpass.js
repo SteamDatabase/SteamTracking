@@ -109,7 +109,7 @@
               n,
             ),
           );
-        return s.createElement(s.Fragment, null, a.ParseBBCode(t, {}));
+        return s.createElement(s.Fragment, null, a.ParseBBCode(t, {}, !0));
       }
       function T(e) {
         const { showErrorInfo: t } = e.context;

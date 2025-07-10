@@ -2103,6 +2103,8 @@
 	"big-category-link": 76,
 	"small-category-link": 77,
 	"package-purchase-recommendations": 78,
+	"popular": 79,
+	"recent": 80,
 	"main-cluster": 100,
 	"featured-win-games": 101,
 	"featured-mac-games": 102,
@@ -7891,7 +7893,7 @@
           (0, _._)(this),
             (this.file = _),
             (this.filename = _),
-            (this.fileType = _._.GetExtensionTypeFromURL(_) ?? 0),
+            (this.fileType = (0, _._)(_) ?? 0),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -8159,7 +8161,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
@@ -8181,7 +8182,6 @@
         },
         GetExtensionString: (_) =>
           (null != _.file_type ? (0, _._)(_.file_type) : null) ?? ".jpg",
-        GetExtensionTypeFromURL: (_) => (0, _._)(_),
         GetHashAndExt(_) {
           return _ ? _.image_hash + this.GetExtensionString(_) : null;
         },
@@ -19891,6 +19891,10 @@
               "div",
               {
                 className: _().ReviewScoreLabel,
+                "aria-label": (0, _._)(
+                  "#ReviewScore_UserReviewScoreAria",
+                  _.review_score_label,
+                ),
               },
               _.review_score_label,
             ),
@@ -19898,6 +19902,10 @@
               "div",
               {
                 className: _().ReviewScoreCount,
+                "aria-label": (0, _._)(
+                  "#GameHover_UserReviewCount",
+                  _.review_count.toLocaleString(),
+                ),
               },
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
@@ -22121,97 +22129,105 @@
             bShowNewFlag: _,
           } = _,
           _ = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().StoreSalePriceWidgetContainer]: !0,
-              [_().SingleLineMode]: _,
-              StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(__webpack_require__),
-              Discounted: Boolean(__webpack_require__),
-              [_().PrePurchase]: Boolean(_),
-              [_().NewItem]: Boolean(_),
-            }),
-          },
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().StoreSalePrepurchaseLabel),
-              },
+        let _;
+        return (
+          __webpack_require__ &&
+            (_ = _
+              ? (0, _._)("#Discount_ARIA_Label_SpecialPrice", _)
+              : (0, _._)("#Discount_ARIA_Label", __webpack_require__, _, _)),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().StoreSalePriceWidgetContainer]: !0,
+                [_().SingleLineMode]: _,
+                StoreSalePriceWidgetContainer: !0,
+                [_().Discounted]: Boolean(__webpack_require__),
+                Discounted: Boolean(__webpack_require__),
+                [_().PrePurchase]: Boolean(_),
+                [_().NewItem]: Boolean(_),
+              }),
+              "aria-label": _,
+            },
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().StoreSalePrepurchaseLabel),
+                },
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#EventDisplay_CallToAction_Prepurchase_Short"),
+                ),
+              ),
+            Boolean(!_ && _) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().StoreSaleNewItem,
+                },
+                (0, _._)("#Flag_New"),
+              ),
+            Boolean(_ && __webpack_require__ && !_) &&
               _.createElement(
                 "span",
-                null,
-                (0, _._)("#EventDisplay_CallToAction_Prepurchase_Short"),
+                {
+                  className: (0, _._)(_().BaseDiscount),
+                },
+                `-${_}%`,
               ),
-            ),
-          Boolean(!_ && _) &&
-            _.createElement(
-              "div",
-              {
-                className: _().StoreSaleNewItem,
-              },
-              (0, _._)("#Flag_New"),
-            ),
-          Boolean(_ && __webpack_require__ && !_) &&
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().BaseDiscount),
-              },
-              `-${_}%`,
-            ),
-          Boolean(__webpack_require__ && !_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().StoreSaleDiscountBox,
-              },
-              `-${__webpack_require__}%`,
-            ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              {
-                className: _().DiscountIconCtn,
-              },
-              _.createElement(_.XH_, null),
-            ),
-          Boolean(__webpack_require__ && _ && !_)
-            ? _.createElement(
+            Boolean(__webpack_require__ && !_) &&
+              _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
+                  className: _().StoreSaleDiscountBox,
                 },
-                _.createElement(
+                `-${__webpack_require__}%`,
+              ),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().DiscountIconCtn,
+                },
+                _.createElement(_.XH_, null),
+              ),
+            Boolean(__webpack_require__ && _ && !_)
+              ? _.createElement(
                   "div",
                   {
-                    className: (0, _._)({
-                      [_().SingleLineOriginalPrice]: _,
-                      [_().StoreOriginalPrice]: !_,
-                    }),
+                    className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_().SingleLineOriginalPrice]: _,
+                        [_().StoreOriginalPrice]: !_,
+                      }),
+                    },
+                    _,
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_().StoreSalePriceBox]: !0,
+                        [_().SingleLineMode]: _,
+                      }),
+                    },
+                    _,
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSalePriceBox,
                   },
                   _,
                 ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().StoreSalePriceBox]: !0,
-                      [_().SingleLineMode]: _,
-                    }),
-                  },
-                  _,
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().StoreSalePriceBox,
-                },
-                _,
-              ),
+          )
         );
       }
     },
@@ -22928,6 +22944,7 @@
         return _.createElement(
           _._,
           {
+            "aria-label": null,
             bAllowFullSize: !0,
             bOKDisabled: !0,
             closeModal: _,

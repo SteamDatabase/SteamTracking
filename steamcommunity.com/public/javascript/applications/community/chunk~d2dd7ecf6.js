@@ -363,8 +363,12 @@
           F = G.z.GenerateURLFromHashAndExt(s, G.z.GetHashAndExt(o));
         return i.createElement(
           w.eV,
-          { bAllowFullSize: !0, onCancel: t, closeModal: t },
-          i.createElement(c.Y9, null, (0, S.we)("#ImagePickerLoc_Title")),
+          {
+            bAllowFullSize: !0,
+            title: (0, S.we)("#ImagePickerLoc_Title"),
+            onCancel: t,
+            closeModal: t,
+          },
           i.createElement(
             c.nB,
             null,
@@ -2188,7 +2192,12 @@
                 )),
           r.createElement(
             "div",
-            { className: (0, A.A)(E().FlexColumnContainer) },
+            {
+              className: (0, A.A)({
+                [E().FlexColumnContainer]: !0,
+                [D().UploadPreviewError]: "failed" == m.status,
+              }),
+            },
             L,
             Boolean("uploading" == m.status) &&
               r.createElement(
@@ -3793,7 +3802,7 @@
     9161: (e, t, a) => {
       "use strict";
       a.d(t, { g: () => r });
-      var n = a(94649),
+      var n = a(40323),
         l = a.n(n);
       class r {
         static ParseCSVFile(e) {

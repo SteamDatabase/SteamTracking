@@ -11623,7 +11623,7 @@
             );
           });
       })(w || (w = {}));
-      var qe = r(98485),
+      var qe = r(41872),
         xe = r(88942),
         Pe = r(26161),
         Le = r(14771);
@@ -11991,7 +11991,12 @@
           N &&
             m.createElement(
               et.eV,
-              { bOKDisabled: !0, bHideCloseIcon: !0, onCancel: () => !1 },
+              {
+                "aria-label": b ? (0, _.we)("#Saving") : (0, _.we)("#Loading"),
+                bOKDisabled: !0,
+                bHideCloseIcon: !0,
+                onCancel: () => !1,
+              },
               m.createElement(rt.t, {
                 size: "medium",
                 position: "center",
@@ -13829,6 +13834,7 @@
                       "down" == this.state.myVote ? T().VoteButtonSelected : "",
                     ),
                     onActivate: this.OnVoteDown,
+                    "aria-label": (0, v.we)("#Button_RateDown"),
                   },
                   c.createElement(b.bfp, {
                     className:
@@ -15033,41 +15039,41 @@
           } = e,
           l = fe(t),
           [c, m] = s.useState(Boolean(l.fnAction));
-        return (
-          s.useEffect(() => {
-            l.fnAction && (m(!0), l.fnAction().finally(() => m(!1)));
-          }, [l]),
+        s.useEffect(() => {
+          l.fnAction && (m(!0), l.fnAction().finally(() => m(!1)));
+        }, [l]);
+        const d = s.useId();
+        return s.createElement(
+          te.eV,
+          {
+            bDisableBackgroundDismiss: !0,
+            closeModal: i,
+            onCancel: i,
+            className: "CSSActionDialogDialog",
+            "aria-labelledby": d,
+          },
           s.createElement(
-            te.eV,
-            {
-              bDisableBackgroundDismiss: !0,
-              closeModal: i,
-              onCancel: i,
-              className: "CSSActionDialogDialog",
-            },
+            v.Y9,
+            { id: d },
+            Boolean(l.bInitialState) && (0, g.we)(n),
+            Boolean(l.bSuccessState) && (0, g.we)(a),
+            Boolean(l.bFailedState) && (0, g.we)(o),
+          ),
+          s.createElement(
+            v.nB,
+            null,
             s.createElement(
-              v.Y9,
+              v.a3,
               null,
-              Boolean(l.bInitialState) && (0, g.we)(n),
-              Boolean(l.bSuccessState) && (0, g.we)(a),
-              Boolean(l.bFailedState) && (0, g.we)(o),
+              c
+                ? s.createElement(F.t, {
+                    size: "medium",
+                    position: "center",
+                    string: (0, g.we)("#Loading"),
+                  })
+                : r,
             ),
-            s.createElement(
-              v.nB,
-              null,
-              s.createElement(
-                v.a3,
-                null,
-                c
-                  ? s.createElement(F.t, {
-                      size: "medium",
-                      position: "center",
-                      string: (0, g.we)("#Loading"),
-                    })
-                  : r,
-              ),
-            ),
-          )
+          ),
         );
       }
       function we(e) {

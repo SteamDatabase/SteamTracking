@@ -336,8 +336,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
+            _: _,
+            role: __webpack_require__,
             visible: _ = !0,
-            className: __webpack_require__,
+            className: _,
             keepMounted: _ = !1,
             expandDirection: _ = "height",
             msAnimationDuration: _ = 250,
@@ -351,7 +353,14 @@
             const _ = _.useRef(null),
               _ = _.useRef(!0),
               [_, _] = _.useState("idle"),
-              [_, _] = _.useState({}),
+              [_, _] = _.useState(
+                _
+                  ? {}
+                  : {
+                      [_]: "0px",
+                      overflow: "hidden",
+                    },
+              ),
               [_, _] = _.useState(_);
             _.useLayoutEffect(() => {
               _.current || _("start"), _ && _(_);
@@ -370,7 +379,16 @@
                   _ = "height" == _ ? "scrollHeight" : "scrollWidth",
                   _ = () => {
                     _.unstable_batchedUpdates(() => {
-                      _({}), _("idle"), _(_);
+                      _(
+                        _
+                          ? {}
+                          : {
+                              [_]: "0px",
+                              overflow: "hidden",
+                            },
+                      ),
+                        _("idle"),
+                        _(_);
                     });
                   };
                 if ("start" == _) {
@@ -415,7 +433,9 @@
           ? _.createElement(
               "div",
               {
-                className: __webpack_require__,
+                _: _,
+                role: __webpack_require__,
+                className: _,
                 ref: _,
                 style: _,
               },

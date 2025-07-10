@@ -212,7 +212,7 @@
         P = n(9154),
         V = n(62490),
         H = n(84811),
-        j = n(74005);
+        j = n(32728);
       function K(e, t) {
         const n = ee(t);
         if (n) return { node: t, nodeAttrs: n, clanImage: ae(e, n) };

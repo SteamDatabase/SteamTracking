@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Pagina principală a magazinului",
 	"Menu_Popover_FreeToPlay": "Gratuite",
 	"Menu_Popover_SteamCharts": "Clasamente Steam",
+	"Menu_Popover_Upcoming": "Lansări viitoare",
 	"Menu_Popover_PointsShop": "Magazinul cu puncte",
 	"Menu_Popover_GiftCards": "Carduri cadou",
 	"Menu_Popover_NewsAndUpdates": "Știri și actualizări",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Lansări noi",
 	"Menu_Section_Browse_Discounts": "Reduceri și evenimente",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Lista ta de dorințe",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s reduceri",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Evenimente speciale",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Titluri populare",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Oferte speciale",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Rezultatele căutării",
 	"Menu_SearchBar_YourTopGenres": "Genurile tale preferate",
 	"Menu_SearchBar_BrowseBy": "Caută după...",
+	"Menu_SearchBar_NoMatches": "Nu a fost găsit niciun rezultat.",
+	"Menu_SearchBar_AdvancedSearch": "Căutare avansată",
 	"Menu_Search": "Căutare",
 	"Menu_Label": "Meniul de magazin"
 }`);

@@ -584,7 +584,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const _ = ["maxresdefault", "mqdefault", "default"],
             [__webpack_require__, _] = _.useState(0);
@@ -625,12 +626,9 @@
         },
         _ = (_) => {
           const [_, __webpack_require__] = _.useState(!1);
-          if (
-            (_.useEffect(() => {
-              _.preloadYoutubeScripts && (0, _._)(() => {});
-            }, [_.preloadYoutubeScripts]),
-            _)
-          )
+          (0, _._)(!!_.preloadYoutubeScripts);
+          const _ = (0, _._)("youtube");
+          if (_ && _)
             return _.createElement(_._, {
               ..._,
               classnames: (0, _._)(_().YoutubePlayer, _.classnames),
@@ -650,7 +648,7 @@
                   _().YoutubePreviewImage,
                   _.imageClassnames,
                 ),
-                onClick: _,
+                onClick: _ ? _ : void 0,
               },
               _.createElement(_, {
                 className: "YoutubePreviewImage",
@@ -658,20 +656,25 @@
                 altImg: _.altImg,
                 video: _.video,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: "YoutubePreviewPlay",
-                },
-                _.createElement(_.IOc, null),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "VideoHintText",
-                },
-                (0, _._)("#EventCalendar_WatchYouTubeVideo"),
-              ),
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: "YoutubePreviewPlay",
+                    },
+                    _.createElement(_.IOc, null),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: "VideoHintText",
+                    },
+                    (0, _._)("#EventCalendar_WatchYouTubeVideo"),
+                  ),
+                ),
             );
           }
         };

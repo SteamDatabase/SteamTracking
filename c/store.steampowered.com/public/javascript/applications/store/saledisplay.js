@@ -243,30 +243,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            children: _,
-            navTreeRef: __webpack_require__,
-            NavigationManager: _,
-            ..._
-          } = _,
+      const _ = _.forwardRef(function (_, _) {
+        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(),
-          _ = (0, _._)(_, __webpack_require__);
-        if ((0, _._)()) {
-          const _ = window.__nav_tree_root;
-          return _.createElement(
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            navTreeRef: _,
+            ref: _,
+            parentEmbeddedNavTree: _,
+            disabledRoot: !_,
+          },
+          _.createElement(
             _._,
             {
-              ..._,
-              navTreeRef: _,
-              parentEmbeddedNavTree: _,
+              disableFocusRing: !_,
             },
-            _.createElement(_._, null, _),
-          );
-        }
-        return _.createElement(_.Fragment, null, _);
-      }
+            __webpack_require__,
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1976,7 +1978,10 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)(_().FlexColumnContainer),
+              className: (0, _._)({
+                [_().FlexColumnContainer]: !0,
+                [_().UploadPreviewError]: "failed" == _.status,
+              }),
             },
             _,
             Boolean("uploading" == _.status) &&
@@ -4135,6 +4140,7 @@
               }),
             );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             clanSteamID: _,
@@ -4206,7 +4212,7 @@
                     {
                       image_hash: _(_),
                       clanAccountID: _,
-                      file_type: _._.GetExtensionTypeFromURL(_),
+                      file_type: (0, _._)(_),
                       imageid: void 0,
                     },
                     _,
@@ -5750,7 +5756,8 @@
       function _(_) {
         const { eventModel: _ } = _,
           _ = (0, _._)(_.clanSteamID.GetAccountID());
-        if (!_ || (!_.can_edit && !_.support_user)) return;
+        if (!_ || (!_.can_edit && !_.support_user) || "store" != (0, _._)())
+          return;
         const _ = _.GetAllTags(),
           _ = [];
         return (
@@ -5917,7 +5924,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_rgSections;
@@ -6029,12 +6035,11 @@
       const _ = function () {
         const { sections: _ } = (function () {
             const _ = _.Get(),
-              [_, _] = (0, _.useState)(_.GetSections());
+              [_, __webpack_require__] = (0, _.useState)(_.GetSections());
             return {
               sections: _,
             };
           })(),
-          _ = (0, _._)(),
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => _.current?.Activate(!0), []),
@@ -6042,7 +6047,6 @@
             _._,
             {
               navID: "CategoriesApp",
-              NavigationManager: _,
               navTreeRef: _,
             },
             _.createElement(

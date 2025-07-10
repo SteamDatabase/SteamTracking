@@ -2022,7 +2022,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2538,7 +2537,11 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _;
+      function _(_) {
+        return _ === _.k_ESteamRealmChina;
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       }),
         (function (_) {
@@ -3126,29 +3129,34 @@
             ..._
           } = _,
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
-        return _.createElement(
-          _,
-          {
-            navID: __webpack_require__,
-            onActivated: _,
-            onDeactivated: _,
-            navTreeRef: _,
-            enabled: _,
-            modal: _,
-            virtualFocus: _,
-            parentEmbeddedNavTree: _,
-            onGlobalButtonDown: _,
-            disableFocusClasses: _,
-            disabledRoot: _,
-            "flow-children": _,
-            ..._,
-            ..._,
-          },
-          _.createElement("div", {
-            ..._,
-            ref: _,
-          }),
-        );
+        return (0, _._)()
+          ? _.createElement(
+              _,
+              {
+                navID: __webpack_require__,
+                onActivated: _,
+                onDeactivated: _,
+                navTreeRef: _,
+                enabled: _,
+                modal: _,
+                virtualFocus: _,
+                parentEmbeddedNavTree: _,
+                onGlobalButtonDown: _,
+                disableFocusClasses: _,
+                disabledRoot: _,
+                "flow-children": _,
+                ..._,
+                ..._,
+              },
+              _.createElement("div", {
+                ..._,
+                ref: _,
+              }),
+            )
+          : _.createElement("div", {
+              ..._,
+              ref: _,
+            });
       });
       function _(_) {
         const {
@@ -10772,6 +10780,31 @@
                     _: 10,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  accessibility_desktop_ui_scale: {
+                    _: 11,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  accessibility_screen_reader_enabled: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_high_contrast_mode: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_reduce_motion: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  accessibility_color_filter_name: {
+                    _: 15,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -20251,7 +20284,7 @@
             _.stopPropagation();
         }
         OnMessage(_) {
-          "window_moved" == _.data && this.OnResize(),
+          "window_resized" == _.data && this.OnResize(),
             "popup-created" == _.data && this.OnCreateInternal();
         }
         Show(_ = _._.k_EWindowBringToFrontAndForceOS) {
@@ -20278,9 +20311,9 @@
             _
               ? ((_ = _.m_element),
                 (_ = _.m_popup),
-                _.ReleasePopup(),
                 (_ = _.m_renderWhenReady),
                 _.RemoveTrackedPopup(_),
+                _.ReleasePopup(),
                 __webpack_require__?.removeEventListener(
                   "beforeunload",
                   _.OnBeforeUnloadEvent,
@@ -23218,6 +23251,9 @@
                 _.menuRight &&
                   (_.menuRight +=
                     _.document.body.clientWidth - _.scrollX - _.innerWidth)),
+            _.menuWidth &&
+              window.matchMedia("(prefers-contrast: more)") &&
+              (_.menuWidth += 1),
             (_ ||
               _.menuLeft !== this.state.menuLeft ||
               _.menuRight !== this.state.menuRight ||
@@ -23298,7 +23334,7 @@
           this.props.popup
             ? (this.PositionPopupWindow(),
               void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = this.state.menuMinWidth))
+                (_.minWidth = Math.floor(this.state.menuMinWidth)))
             : (void 0 !== this.state.menuTop
                 ? (_.top = this.state.menuTop)
                 : void 0 !== this.state.menuBottom &&
@@ -23632,8 +23668,8 @@
         _ = ((0, _._)("DialogInnerBody"), (0, _._)("DialogControlsSection")),
         _ = (0, _._)("DialogControlsSectionHeader", "heading", {
           "aria-level": 3,
-        }),
-        _ = _("DialogTwoColLayout _DialogColLayout"),
+        });
+      let _ = _("DialogTwoColLayout _DialogColLayout"),
         _ = _("DialogThreeColLayout _DialogColLayout"),
         _ =
           (_("DialogTwoThirdColLayout _DialogColLayout"),
@@ -24218,14 +24254,16 @@
         _: () => _,
         _: () => _,
         _: () => _._,
-        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _,
+        _: () => _._,
+        _: () => _,
         _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -26652,7 +26690,7 @@
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
             (_) => {
-              _.current?.TakeFocus(), _.preventDefault();
+              _.current && (_.current?.TakeFocus(), _.preventDefault());
             },
             [_],
           );
@@ -26783,6 +26821,7 @@
             layout: _,
             disabled: _,
             onActivate: _,
+            indentLevel: _,
             bottomSeparator: _,
             highlightOnFocus: _,
             childrenContainerWidth: _,
@@ -26794,27 +26833,13 @@
             ..._
           } = _,
           { refWithValue: _, refForElement: _ } = (0, _._)(_),
-          _ = _.useId(),
-          _ = (function (_, _, __webpack_require__ = ["label", "button"]) {
-            const _ = _.useId(),
-              _ = _(_, _),
-              _ = {
-                _: _,
-                "aria-labelledby": "",
-              };
-            return (
-              (_["aria-labelledby"] = __webpack_require__
-                .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
-                .join(" ")),
-              (_["aria-describedby"] = _["aria-describedby"]),
-              _
-            );
-          })(_, _, _);
+          _ = _.useId();
         return _.createElement(
           _,
           {
             accessibilityId: _,
             label: __webpack_require__,
+            indentLevel: _,
             description: _,
             icon: _,
             bottomSeparator: _,
@@ -26831,48 +26856,91 @@
             disabled: _,
             onActivate: _ ? _ : void 0,
           },
-          _.createElement(_._, {
+          _.createElement(_, {
+            accessibilityId: _,
             ..._,
-            ..._,
-            disabled: _,
             ref: _,
           }),
           _,
         );
       });
       const _ = _.forwardRef(function (_, _) {
-        const {
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            layout: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            ..._
-          } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_),
-          _ = _.useId();
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            label: __webpack_require__,
-            description: _,
-            icon: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            childrenLayout: _ ?? "inline",
-            childrenContainerWidth: "fixed",
-            onMouseDown: (_) => {
-              _.current?.element?.focus(), _.preventDefault();
-            },
-          },
-          _.createElement(_, {
+          const {
+              accessibilityId: __webpack_require__,
+              label: _,
+              description: _,
+              explainer: _,
+              icon: _,
+              layout: _,
+              disabled: _,
+              onActivate: _,
+              indentLevel: _,
+              bottomSeparator: _,
+              highlightOnFocus: _,
+              childrenContainerWidth: _,
+              padding: _,
+              inlineWrap: _,
+              fieldClassName: _,
+              fieldChildren: _,
+              accessibilityNameOrder: _,
+              ..._
+            } = _,
+            _ = (function (_, _, __webpack_require__ = ["label", "button"]) {
+              const _ = _.useId(),
+                _ = _(_, _),
+                _ = {
+                  _: _,
+                  "aria-labelledby": "",
+                };
+              return (
+                (_["aria-labelledby"] = __webpack_require__
+                  .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
+                  .join(" ")),
+                (_["aria-describedby"] = _["aria-describedby"]),
+                _
+              );
+            })(__webpack_require__, _, _);
+          return _.createElement(_._, {
             ..._,
+            ..._,
+            disabled: _,
             ref: _,
-          }),
-        );
-      });
+          });
+        }),
+        _ = _.forwardRef(function (_, _) {
+          const {
+              label: __webpack_require__,
+              description: _,
+              icon: _,
+              layout: _,
+              bottomSeparator: _,
+              highlightOnFocus: _,
+              ..._
+            } = _,
+            { refWithValue: _, refForElement: _ } = (0, _._)(_),
+            _ = _.useId();
+          return _.createElement(
+            _,
+            {
+              accessibilityId: _,
+              label: __webpack_require__,
+              description: _,
+              icon: _,
+              bottomSeparator: _,
+              highlightOnFocus: _,
+              childrenLayout: _ ?? "inline",
+              childrenContainerWidth: "fixed",
+              onMouseDown: (_) => {
+                _.current?.element?.focus(), _.preventDefault();
+              },
+            },
+            _.createElement(_, {
+              ..._(_, _),
+              ..._,
+              ref: _,
+            }),
+          );
+        });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -27237,7 +27305,7 @@
         );
       });
       var _ = __webpack_require__("chunkid");
-      _.forwardRef(function (_, _) {
+      const _ = _.forwardRef(function (_, _) {
         const { className: __webpack_require__, ..._ } = _;
         let _ = _.useRef(),
           _ = (0, _._)(_, _);
@@ -27260,6 +27328,9 @@
             inlineControls: _.createElement(
               _._,
               {
+                "aria-label": (0, _._)(
+                  _ ? "#Login_HidePassword" : "#Login_ShowPassword",
+                ),
                 className: _.TogglePasswordVisibilityBtn,
                 onPointerDown: _,
                 onOKButton: _,
@@ -27268,6 +27339,36 @@
             ),
             ..._,
             type: _ ? "text" : "password",
+          }),
+        );
+      });
+      _.forwardRef(function (_, _) {
+        const {
+            label: __webpack_require__,
+            className: _,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            ..._
+          } = _,
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            className: _,
+            label: __webpack_require__,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenContainerWidth: "fixed",
+          },
+          _.createElement(_, {
+            ..._(_, _),
+            ..._,
+            ref: _,
           }),
         );
       });
@@ -28279,7 +28380,9 @@
                 ? (0, _._)("#ResetToDefault")
                 : void 0,
               actionDescriptionMap: _,
+              "aria-roledescription": (0, _._)("#Slider_Button"),
               "aria-labelledby": _["aria-labelledby"],
+              "aria-label": _["aria-label"],
             },
             _.createElement(
               _._,
@@ -28570,7 +28673,8 @@
         const _ = !!_.disabled,
           { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
           _._)(_),
-          _ = _.useId();
+          _ = _.useId(),
+          { "aria-expanded": _, "aria-controls": _ } = _;
         return _.createElement(
           _,
           {
@@ -28593,6 +28697,8 @@
             ..._,
           },
           _.createElement(_, {
+            "aria-expanded": _,
+            "aria-controls": _,
             ..._(_, _),
             onChange: _.OnToggleChange,
             value: _.checked,
@@ -30921,8 +31027,11 @@
                 })(_, _, _, _),
               onClose: () => _.fnOnClose && _.fnOnClose(),
             },
-          );
-        (0, _._)(_, "click", () => _?.SteamClient.Window.BringToFront());
+          ),
+          _ = _.useCallback(() => {
+            _.bHideMainWindowForPopouts && _?.SteamClient.Window.BringToFront();
+          }, [_.bHideMainWindowForPopouts, _]);
+        (0, _._)(_, "click", _);
         const _ = _?.bHideActions,
           _ =
             "number" == typeof _?.nDragAreaHeight
@@ -31301,123 +31410,120 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        Cancel(_) {
+      function _(_) {
+        function _(_) {
           return () => {
-            _ && _(), this.props.closeModal && this.props.closeModal();
+            _ && _(), _.closeModal && _.closeModal();
           };
         }
-        render() {
-          const {
-              strTitle: _,
-              strDescription: _,
-              strOKButtonText: __webpack_require__,
-              strCancelButtonText: _,
-              onGamepadCancel: _,
-              strMiddleButtonText: _,
-              onMiddleButton: _,
-              bAlertDialog: _,
-              children: _,
-              ..._
-            } = this.props,
-            _ = __webpack_require__ || (0, _._)("#Button_Close");
-          let _ = _.createElement(_._, {
-            bOKDisabled: this.props.bOKDisabled,
-            bCancelDisabled: this.props.bCancelDisabled,
-            strOKText: __webpack_require__,
-            onCancel: this.Cancel(this.props.onCancel),
-            strCancelText: _,
-          });
-          return (
-            _
-              ? (_ = _.createElement(_._, null, _))
-              : _ &&
-                (_ = _.createElement(_._, {
-                  bOKDisabled: this.props.bOKDisabled,
-                  bCancelDisabled: this.props.bCancelDisabled,
-                  strOKText: __webpack_require__,
-                  onCancel: this.Cancel(this.props.onCancel),
-                  strCancelText: _,
-                  onUpdate: () => {
-                    _(), this.props.closeModal && this.props.closeModal();
-                  },
-                  strUpdateText: _,
-                  bUpdateDisabled: this.props.bMiddleDisabled,
-                })),
+        const {
+            strTitle: __webpack_require__,
+            strDescription: _,
+            strOKButtonText: _,
+            strCancelButtonText: _,
+            onGamepadCancel: _,
+            strMiddleButtonText: _,
+            onMiddleButton: _,
+            bAlertDialog: _,
+            children: _,
+            ..._
+          } = _,
+          _ = _ || (0, _._)("#Button_Close");
+        let _ = _.createElement(_._, {
+          bOKDisabled: _.bOKDisabled,
+          bCancelDisabled: _.bCancelDisabled,
+          strOKText: _,
+          onCancel: _(_.onCancel),
+          strCancelText: _,
+        });
+        _
+          ? (_ = _.createElement(_._, null, _))
+          : _ &&
+            (_ = _.createElement(_._, {
+              bOKDisabled: _.bOKDisabled,
+              bCancelDisabled: _.bCancelDisabled,
+              strOKText: _,
+              onCancel: _(_.onCancel),
+              strCancelText: _,
+              onUpdate: () => {
+                _(), _.closeModal && _.closeModal();
+              },
+              strUpdateText: _,
+              bUpdateDisabled: _.bMiddleDisabled,
+            }));
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            title:
+              __webpack_require__ || _.createElement(_.Fragment, null, " "),
+            "aria-describedby": _,
+          },
+          _.createElement(
+            _._,
+            {
+              onCancelButton: _(_ || _.onCancel),
+            },
             _.createElement(
               _._,
-              {
-                ..._,
-              },
+              null,
               _.createElement(
-                _._,
-                null,
-                " ",
-                _ || _.createElement(_.Fragment, null, " "),
-                " ",
-              ),
-              _.createElement(
-                _._,
+                "div",
                 {
-                  onCancelButton: this.Cancel(_ || this.props.onCancel),
+                  _: _,
+                  style: {
+                    display: "contents",
+                  },
                 },
-                _.createElement(_._, null, _, _),
-                _.createElement(_._, null, _),
+                _,
               ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          const _ = {
-            strTitle: (0, _._)("#Error_FailureNotice"),
-            strDescription: (0, _._)("#Error_GenericFailureDescription"),
-            bAlertDialog: !0,
-            bDestructiveWarning: !0,
-            onOK: () => {},
-            onCancel: () => {},
-            ...this.props,
-          };
-          return _.createElement(_, {
-            ..._,
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          let _ = {
-            onOK: () => {},
-            onCancel: () => {},
-            bAlertDialog: !0,
-            ...this.props,
-          };
-          return (
-            (_.strDescription = _.createElement(
-              "span",
-              {
-                style: {
-                  whiteSpace: "pre-line",
-                },
+              _,
+            ),
+            _.createElement(_._, null, _),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = {
+          strTitle: (0, _._)("#Error_FailureNotice"),
+          strDescription: (0, _._)("#Error_GenericFailureDescription"),
+          bAlertDialog: !0,
+          bDestructiveWarning: !0,
+          onOK: () => {},
+          onCancel: () => {},
+          ..._,
+        };
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        let _ = {
+          onOK: () => {},
+          onCancel: () => {},
+          strDescription: _.createElement(
+            "span",
+            {
+              style: {
+                whiteSpace: "pre-line",
               },
-              " ",
-              _.strDescription,
-              " ",
-            )),
-            _.createElement(_, {
-              ..._,
-            })
-          );
-        }
-      };
+            },
+            " ",
+            _.strDescription,
+            " ",
+          ),
+          bAlertDialog: !0,
+          ..._,
+        };
+        return _.createElement(_, {
+          ..._,
+        });
+      }
       function _(_, _, _) {
         (0, _._)(
           _.createElement(_, {
@@ -31427,7 +31533,6 @@
           _,
         );
       }
-      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -31439,51 +31544,81 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
+      function _(_) {
         const {
+            className: _,
+            modalClassName: __webpack_require__,
             onCancel: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             bOKDisabled: _,
             onOK: _,
+            bAllowFullSize: _,
+            bDestructiveWarning: _,
+            bDisableBackgroundDismiss: _,
+            bHideCloseIcon: _,
+            children: _,
+            "aria-labelledby": _,
+            ..._
           } = _,
           _ = (0, _._)();
         (0, _._)(
-          __webpack_require__ || _,
-          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_.className} ${_.modalClassName}`,
+          _ || _,
+          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${__webpack_require__}`,
         );
         const _ = _.useCallback(() => {
-            (_ && _()) || (__webpack_require__ && __webpack_require__());
-          }, [_, __webpack_require__]),
+            (_ && _()) || (_ && _());
+          }, [_, _]),
           _ = _.useCallback(async () => {
-            _ ||
-              (_ && (await _()), __webpack_require__ && __webpack_require__());
-          }, [_, _, __webpack_require__]);
+            _ || (_ && (await _()), _ && _());
+          }, [_, _, _]);
         return _.createElement(
           _._,
           {
             onEscKeypress: _,
-            className: _.modalClassName,
-            bDestructiveWarning: _.bDestructiveWarning,
-            bDisableBackgroundDismiss: _.bDisableBackgroundDismiss,
-            bHideCloseIcon: _.bHideCloseIcon,
+            className: __webpack_require__,
+            bDestructiveWarning: _,
+            bDisableBackgroundDismiss: _,
+            bHideCloseIcon: _,
           },
           _.createElement(
             _._,
             {
+              role: "dialog",
+              "aria-labelledby": _ || void 0,
+              ..._,
               classNameContent: (0, _._)(
                 "GenericConfirmDialog",
-                _.bAllowFullSize && "DialogContentFullSize",
-                _.className,
+                _ && "DialogContentFullSize",
+                _,
               ),
               onSubmit: _,
               bCenterVertically: !_,
             },
-            _.children,
+            _,
           ),
         );
-      });
+      }
+      function _(_) {
+        const { title: _, children: __webpack_require__, ..._ } = _,
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            "aria-labelledby": _ ? _ : "",
+            ..._,
+          },
+          _ &&
+            _.createElement(
+              _._,
+              {
+                _: _,
+              },
+              _,
+            ),
+          __webpack_require__,
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -34807,8 +34942,6 @@
         return _.createElement(
           "svg",
           {
-            width: "26",
-            height: "26",
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 26 26",
             fill: "none",
@@ -38066,6 +38199,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38133,6 +38267,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38171,6 +38306,10 @@
           _,
           _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
         );
+      }
+      function _(_, ..._) {
+        const _ = new _.ownerDocument.defaultView.ResizeObserver(..._);
+        return __webpack_require__.observe(_), _;
       }
       function _(_, ..._) {
         const _ = new _.ownerDocument.defaultView.IntersectionObserver(..._);
@@ -38437,7 +38576,7 @@
         return (
           _.useEffect(_, [_, _]),
           (0, _._)(_, "resize", _),
-          (0, _._)(_, ["window_moved"], _),
+          (0, _._)(_, ["window_resized"], _),
           _
         );
       }

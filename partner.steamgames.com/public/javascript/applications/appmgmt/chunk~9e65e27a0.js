@@ -1218,8 +1218,12 @@
           n = (0, S.CH)();
         return r.createElement(
           u.eV,
-          { bAllowFullSize: !0, onCancel: s, closeModal: s },
-          r.createElement(i.Y9, null, "Edit Category (ID ", t.id, ")"),
+          {
+            title: `Edit Category (ID ${t.id})`,
+            bAllowFullSize: !0,
+            onCancel: s,
+            closeModal: s,
+          },
           r.createElement(
             i.nB,
             null,

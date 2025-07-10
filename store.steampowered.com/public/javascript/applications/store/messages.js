@@ -178,6 +178,13 @@
         ButtonContainer: "_10sC9pDV-gUZWLDMtbWFpZ",
       };
     },
+    92834: (e, t, r) => {
+      "use strict";
+      function a(...e) {
+        return e.join(" ");
+      }
+      r.d(t, { q: () => a });
+    },
     51433: (e, t, r) => {
       "use strict";
       r.d(t, {
@@ -3427,7 +3434,7 @@
     },
     2921: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => W, Y: () => F });
+      r.d(t, { q: () => G, Y: () => W });
       var a = r(76217),
         s = r(64753),
         i = r(90626),
@@ -3514,24 +3521,25 @@
       }
       var E = r(99956),
         z = r(46253),
-        R = r(38535);
-      const C = { include_trailers: !0, include_screenshots: !0 },
-        I = {
+        R = r(38535),
+        C = r(92834);
+      const I = { include_trailers: !0, include_screenshots: !0 },
+        k = {
           include_trailers: !0,
           include_screenshots: !0,
           include_basic_info: !0,
           include_tag_count: 10,
         },
-        k = {
+        F = {
           include_trailers: !0,
           include_screenshots: !0,
           include_basic_info: !0,
           include_tag_count: 10,
           include_assets_without_overrides: !0,
         };
-      function F(e) {
+      function W(e) {
         const { info: t, bPopOutTrailerPlayback: r } = e,
-          [a] = (0, l.G6)(t.id, (0, n.SW)(t.type), C),
+          [a] = (0, l.G6)(t.id, (0, n.SW)(t.type), I),
           [s, o] = (0, i.useState)(!1),
           [c, m] = (0, i.useState)(!1),
           d = (0, R.dy)(),
@@ -3541,7 +3549,7 @@
             B && (r ? m(!0) : o((e) => !e));
           }, [B, r]),
           b = B
-            ? i.createElement(A, {
+            ? i.createElement(j, {
                 trailer: B,
                 bPlayVideo: s,
                 fnTogglePlayTrailer: y,
@@ -3552,14 +3560,14 @@
             ? i.createElement(
                 "div",
                 { className: (0, u.A)(_().HilightGrid, _().MediaContainer) },
-                i.createElement(G, { elFeaturedInCenter: b, storeItem: a }),
+                i.createElement(O, { elFeaturedInCenter: b, storeItem: a }),
                 Boolean(r)
-                  ? i.createElement(N, {
+                  ? i.createElement(A, {
                       storeItem: a,
                       bShowModal: c,
                       hideModal: () => m(!1),
                     })
-                  : i.createElement(O, {
+                  : i.createElement(P, {
                       name: a.GetName(),
                       trailer: B,
                       bPlayVideo: s,
@@ -3579,20 +3587,20 @@
               i.createElement(M.t, { size: "medium" }),
             );
       }
-      function W(e) {
+      function G(e) {
         const {
             info: t,
             fnOnClickButton: r,
             bLowBandwidthMode: a,
             bUseAssetWithoutOverride: s,
           } = e,
-          [o] = (0, l.G6)(t.id, (0, n.SW)(t.type), s ? k : I);
+          [o] = (0, l.G6)(t.id, (0, n.SW)(t.type), s ? F : k);
         return o
           ? i.createElement(
               "div",
               { className: (0, u.A)(_().HilightGrid, _().MediaContainerMM) },
-              i.createElement(G, {
-                elFeaturedInCenter: i.createElement(j, {
+              i.createElement(O, {
+                elFeaturedInCenter: i.createElement(q, {
                   storeItem: o,
                   bUseAssetWithoutOverride: s,
                   fnOnClickButton: r,
@@ -3609,7 +3617,7 @@
               i.createElement(M.t, { size: "medium" }),
             );
       }
-      function G(e) {
+      function O(e) {
         const {
             elFeaturedInCenter: t,
             storeItem: r,
@@ -3630,7 +3638,7 @@
             t = e?.length > 0 && e[0];
           t &&
             (b.push(
-              i.createElement(A, {
+              i.createElement(j, {
                 key: "trail_thumb_",
                 trailer: t,
                 bPlayVideo: !1,
@@ -3643,7 +3651,7 @@
               }),
             ),
             f.push(
-              i.createElement(O, {
+              i.createElement(P, {
                 key: "trail_inline",
                 ref: M,
                 name: r.GetName(),
@@ -3660,8 +3668,8 @@
         return (
           w.forEach((e, r) => {
             if ((t || r > 0) && b.length < 3) {
-              const t = P(e, ".600x338").replace("http://", "https://"),
-                a = P(e, ".800x600").replace("http://", "https://"),
+              const t = N(e, ".600x338").replace("http://", "https://"),
+                a = N(e, ".800x600").replace("http://", "https://"),
                 s = b.length;
               b.push(
                 i.createElement(
@@ -3721,7 +3729,7 @@
           )
         );
       }
-      const O = (0, i.forwardRef)(
+      const P = (0, i.forwardRef)(
         (
           {
             name: e,
@@ -3798,21 +3806,23 @@
           );
         },
       );
-      function P(e, t) {
+      function N(e, t) {
         const r = e.replace(/\.[^\.]+$/g, "");
         return r + t + e.slice(r.length);
       }
-      function N(e) {
+      function A(e) {
         const { storeItem: t, bShowModal: r, hideModal: a } = e,
           s = (0, m.zI)(),
           n = (0, R.dy)(),
           l = t?.GetAllTrailers().GetHighlightTrailers(n),
-          o = l?.length > 0 && l[0];
+          o = l?.length > 0 && l[0],
+          c = i.useId(),
+          u = i.useId();
         if (!o) return null;
-        const c = (
+        const M = (
             s ? o.GetTrailer480p().strWebMURL : o.GetTrailerMax().strWebMURL
           )?.replace("http://", "https://"),
-          u = (
+          p = (
             s ? o.GetTrailer480p().strMP4URL : o.GetTrailerMax().strMP4URL
           )?.replace("http://", "https://");
         return i.createElement(
@@ -3820,7 +3830,12 @@
           { active: r },
           i.createElement(
             d.eV,
-            { bAllowFullSize: !0, bOKDisabled: !0, closeModal: a },
+            {
+              "aria-labelledby": (0, C.q)(c, u),
+              bAllowFullSize: !0,
+              bOKDisabled: !0,
+              closeModal: a,
+            },
             i.createElement(
               "div",
               { className: _().VideoPopupContainers },
@@ -3832,15 +3847,25 @@
                   autoPlay: !0,
                   poster: o.GetScreenshot(),
                 },
-                i.createElement("source", { src: c, type: "video/webm" }),
+                i.createElement("source", { src: M, type: "video/webm" }),
                 Boolean(!g.TS.IN_CLIENT) &&
-                  i.createElement("source", { src: u, type: "video/mp4" }),
+                  i.createElement("source", { src: p, type: "video/mp4" }),
               ),
+            ),
+            i.createElement(
+              "div",
+              { id: c, style: { display: "none" } },
+              t.GetName(),
+            ),
+            i.createElement(
+              "div",
+              { id: u, style: { display: "none" } },
+              o.GetName(),
             ),
           ),
         );
       }
-      function A(e) {
+      function j(e) {
         const {
           trailer: t,
           fnTogglePlayTrailer: r,
@@ -3868,7 +3893,7 @@
           ),
         );
       }
-      function j(e) {
+      function q(e) {
         const {
             storeItem: t,
             fnOnClickButton: r,
@@ -3913,7 +3938,7 @@
           ),
         );
       }
-      O.displayName = "InlineTrailer";
+      P.displayName = "InlineTrailer";
     },
     46416: (e, t, r) => {
       "use strict";
@@ -5286,9 +5311,7 @@
           )
         );
       }
-      const Ie = s.lazy(() =>
-        Promise.all([r.e(5976), r.e(8287)]).then(r.bind(r, 79194)),
-      );
+      const Ie = s.lazy(() => r.e(8287).then(r.bind(r, 79194)));
       function ke(e) {
         const { message: t, active: r, preview: n } = e,
           c = (0, a.sf)(l.TS.LANGUAGE),

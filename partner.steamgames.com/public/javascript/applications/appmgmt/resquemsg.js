@@ -44,9 +44,6 @@
         DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
         FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
         MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
-        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
-        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
         UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
         UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
         MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
@@ -347,23 +344,23 @@
           null,
         );
       var E = n(82359),
-        S = n(65285),
-        v = n(16676);
+        v = n(65285),
+        S = n(16676);
       function M(e) {
         const [t, n] = (0, a.useState)(null),
           { fnAddProductID: r } = f();
         return a.createElement(
           "div",
           null,
-          a.createElement(v.JU, null, "Add Product SKU:"),
+          a.createElement(S.JU, null, "Add Product SKU:"),
           a.createElement(
             "p",
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          a.createElement(C, { selected: t, setSelected: n }),
+          a.createElement(T, { selected: t, setSelected: n }),
           a.createElement(
-            v.$n,
+            S.$n,
             {
               disabled: !t,
               onClick: () => {
@@ -376,7 +373,7 @@
           ),
         );
       }
-      function C(e) {
+      function T(e) {
         const { selected: t, setSelected: n } = e,
           r = (0, a.useRef)(void 0),
           s = (function () {
@@ -418,7 +415,7 @@
           ref: r,
           isMulti: !1,
           isClearable: !0,
-          className: S.ItemSelect,
+          className: v.ItemSelect,
           options: l,
           value: c,
           onChange: (e) => {
@@ -426,11 +423,11 @@
           },
         });
       }
-      var T = n(71298),
+      var C = n(71298),
         b = n(99637),
         w = n(8905),
-        A = n(9154),
-        y = n(738),
+        y = n(9154),
+        A = n(738),
         P = n(48479),
         R = n(56011),
         D = n(61859),
@@ -528,7 +525,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(v.JU, null, "instructions:"),
+          a.createElement(S.JU, null, "instructions:"),
           a.createElement(
             "p",
             null,
@@ -546,7 +543,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(v.JU, null, "Force update:"),
+          a.createElement(S.JU, null, "Force update:"),
           a.createElement(
             "p",
             null,
@@ -558,9 +555,9 @@
             "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
           ),
           a.createElement(
-            v.$n,
+            S.$n,
             {
-              onClick: (e) => (0, y.pg)(a.createElement(W, null), (0, R.uX)(e)),
+              onClick: (e) => (0, A.pg)(a.createElement(W, null), (0, R.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
@@ -590,16 +587,16 @@
             tooltip: `distributor enum: ${n.edistributor}, part number: ${n.part_number}, product identifier: ${n.product_identifier}`,
           },
           a.createElement(
-            v.$n,
+            S.$n,
             {
               onClick: (e) =>
-                (0, y.pg)(a.createElement(O, { productID: t }), (0, R.uX)(e)),
+                (0, A.pg)(a.createElement(O, { productID: t }), (0, R.uX)(e)),
             },
             "Add new start position",
           ),
           a.createElement(
             "table",
-            { className: S.ItemTable },
+            { className: v.ItemTable },
             a.createElement(
               "thead",
               null,
@@ -661,10 +658,10 @@
             "td",
             null,
             a.createElement(
-              v.$n,
+              S.$n,
               {
                 onClick: (e) =>
-                  (0, y.pg)(
+                  (0, A.pg)(
                     a.createElement(O, {
                       productID: t,
                       existingPositionMsg: t,
@@ -675,10 +672,10 @@
               "Update",
             ),
             a.createElement(
-              v.$n,
+              S.$n,
               {
                 onClick: (e) =>
-                  (0, y.pg)(
+                  (0, A.pg)(
                     a.createElement(q, { positionMsg: t }),
                     (0, R.uX)(e),
                   ),
@@ -700,15 +697,15 @@
             n?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           g = n ? "Update Queue Range" : "Create Queue Range",
-          _ = (0, T.vs)();
+          _ = (0, C.vs)();
         return _.bLoading
-          ? a.createElement(T.Hh, {
+          ? a.createElement(C.Hh, {
               state: _,
               strDialogTitle: g,
               closeModal: r,
             })
           : a.createElement(
-              A.o0,
+              y.o0,
               {
                 bDisableBackgroundDismiss: !0,
                 strTitle: g,
@@ -734,7 +731,7 @@
               },
               a.createElement(
                 "div",
-                { className: S.NewEntryCtn },
+                { className: v.NewEntryCtn },
                 a.createElement(
                   "p",
                   null,
@@ -742,7 +739,7 @@
                   a.createElement("i", null, "n"),
                   ", show those users a date they can anticipate to recieve an invite to purchase.",
                 ),
-                a.createElement(v.pd, {
+                a.createElement(S.pd, {
                   type: "number",
                   min: "0",
                   value: o,
@@ -760,7 +757,7 @@
                   fnSetTimeToUpdate: u,
                 }),
                 a.createElement("br", null),
-                a.createElement(H, {
+                a.createElement(V, {
                   strToken: d,
                   fnSetToken: m,
                   rtEstimateDate: c,
@@ -772,14 +769,14 @@
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: r } = f(),
           i = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          s = (0, T.vs)();
+          s = (0, C.vs)();
         return s.bLoading
-          ? a.createElement(T.Hh, {
+          ? a.createElement(C.Hh, {
               state: s,
               strDialogTitle: i,
               closeModal: n,
             })
-          : a.createElement(A.o0, {
+          : a.createElement(y.o0, {
               strTitle: i,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
@@ -805,7 +802,7 @@
           (0, a.useEffect)(() => {
             n().then(() => i(!0));
           }, [n]),
-          a.createElement(A.o0, {
+          a.createElement(y.o0, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: r
@@ -815,7 +812,7 @@
           })
         );
       }
-      const V = [
+      const H = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -827,11 +824,11 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function H(e) {
+      function V(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: r } = e,
           i = (0, a.useMemo)(
             () =>
-              V.map((e) => ({
+              H.map((e) => ({
                 label: a.createElement(G, {
                   strToken: e,
                   rtEstimatedNotifcationDate: r,
@@ -843,7 +840,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(v.m, {
+          a.createElement(S.m, {
             strDropDownClassName: k.DropDownScroll,
             label: "Date Format",
             rgOptions: i,
@@ -858,7 +855,7 @@
             a.createElement("h3", null, "This will display to users as: "),
             a.createElement(
               "div",
-              { className: S.DatePreview },
+              { className: v.DatePreview },
               a.createElement(
                 "div",
                 null,
@@ -878,7 +875,7 @@
       function J(e) {
         return a.createElement(
           "div",
-          { className: (0, K.A)(S.ctn, j().AdminPageCtn) },
+          { className: (0, K.A)(v.ctn, j().AdminPageCtn) },
           a.createElement(
             "h1",
             { className: j().PageTitle },
@@ -918,7 +915,7 @@
               a.createElement(
                 "div",
                 { className: j().SectionCtn },
-                a.createElement(v.JU, null, "Useful Links:"),
+                a.createElement(S.JU, null, "Useful Links:"),
                 a.createElement(
                   "ul",
                   null,
@@ -943,7 +940,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => C, CF: () => T, KM: () => E, KT: () => M });
+      n.d(t, { B3: () => T, CF: () => C, KM: () => E, KT: () => M });
       var a = n(41735),
         r = n.n(a),
         i = n(58632),
@@ -979,7 +976,7 @@
           });
         return n ? n.get(e) : null;
       }
-      const S = new (s())(
+      const v = new (s())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -1024,23 +1021,23 @@
             })(e),
           { cache: !1 },
         ),
-        v = "avatarandpersonas";
+        S = "avatarandpersonas";
       function M(e) {
         const { data: t, isLoading: n } = (0, l.I)({
-          queryKey: [v, e],
-          queryFn: () => S.load(e),
+          queryKey: [S, e],
+          queryFn: () => v.load(e),
         });
         return [t, n];
       }
-      function C(e) {
+      function T(e) {
         const t = (0, c.jE)(),
           { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [v, e],
+            queryKey: [S, e],
             queryFn: async () => {
-              const n = await S.loadMany(e);
+              const n = await v.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [v, new u.b(e.steamid).GetAccountID()];
+                  const n = [S, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -1059,13 +1056,13 @@
           }, [n]);
         return a ? null : r;
       }
-      function T(e) {
-        return h.L.getQueryData([v, e]);
+      function C(e) {
+        return h.L.getQueryData([S, e]);
       }
     },
     99637: (e, t, n) => {
       "use strict";
-      n.d(t, { K: () => S });
+      n.d(t, { K: () => v });
       var a = n(90626),
         r = n(92298),
         i = n.n(r),
@@ -1082,7 +1079,7 @@
         h = n.n(p);
       const f = "hh:mm a",
         E = "HH:mm";
-      function S(e) {
+      function v(e) {
         const {
           nLatestTime: t,
           nEarliestTime: n,
@@ -1090,12 +1087,12 @@
           onError: l,
           strAlsoShowTimeZone: g,
           disabled: p,
-          bNoDefaultDate: S,
-          className: T,
+          bNoDefaultDate: v,
+          className: C,
           strDescToolTip: b,
           strDescription: w,
-          bShowTimeZone: A,
-          strInvalidDateTimeLocalizedMsg: y,
+          bShowTimeZone: y,
+          strInvalidDateTimeLocalizedMsg: A,
           fnIsValidDateTime: P,
           bWeekdaysOnly: R,
           fnSetTimeToUpdate: D,
@@ -1115,7 +1112,7 @@
           Y = (function (e, t, n, r, i) {
             const s = r && r(),
               o = t && !M(t).isValid(),
-              l = e && !C(e).isValid();
+              l = e && !T(e).isValid();
             let c = null;
             (l || o || "string" == typeof s || !1 === s) &&
               ((c = (0, d.we)(
@@ -1132,7 +1129,7 @@
               }, [c, i]),
               c
             );
-          })(G, F, y, P, l),
+          })(G, F, A, P, l),
           z = !l && Y;
         let O, q;
         if (t && n && t == n && n > o.HD.GetTimeNowWithOverride()) {
@@ -1145,15 +1142,15 @@
           }),
             (I = E);
         }
-        N || !n || S || (q = h().unix(n));
+        N || !n || v || (q = h().unix(n));
         const W = h().tz.guess(),
-          V = h().unix(N).tz(W),
-          H = !!g && W != g && h().unix(N).tz(g),
+          H = h().unix(N).tz(W),
+          V = !!g && W != g && h().unix(N).tz(g),
           {
             fnOnInput: K,
             fnOnInputBlur: Q,
             fnOnChange: j,
-          } = v(
+          } = S(
             M,
             (e) => {
               if (p) return;
@@ -1172,8 +1169,8 @@
             fnOnInput: J,
             fnOnInputBlur: Z,
             fnOnChange: X,
-          } = v(
-            C,
+          } = S(
+            T,
             (e) => {
               if (p) return;
               x(null);
@@ -1197,7 +1194,7 @@
           );
         return a.createElement(
           "div",
-          { className: (0, u.A)(_().EventTimeSection, T) },
+          { className: (0, u.A)(_().EventTimeSection, C) },
           a.createElement(
             "div",
             { className: (0, u.A)(_().EventTimeTitle, "DialogLabel") },
@@ -1251,11 +1248,11 @@
                   onBlur: (e) => Q(e.currentTarget.value),
                 },
               }),
-              !!H &&
+              !!V &&
                 a.createElement(
                   "div",
                   { className: _().PacificTimeHint },
-                  H.format("L"),
+                  V.format("L"),
                 ),
             ),
             a.createElement(
@@ -1279,27 +1276,27 @@
                   onBlur: (e) => Z(e.currentTarget.value),
                 },
               }),
-              !!H &&
+              !!V &&
                 a.createElement(
                   "div",
                   { className: _().PacificTimeHint },
-                  H.format("LT"),
+                  V.format("LT"),
                 ),
             ),
-            A &&
+            y &&
               a.createElement(
                 "div",
                 null,
                 a.createElement(
                   "div",
                   { className: _().TimeZone },
-                  V.zoneAbbr(),
+                  H.zoneAbbr(),
                 ),
-                !!H &&
+                !!V &&
                   a.createElement(
                     "div",
                     { className: _().TimeZone },
-                    H.zoneAbbr(),
+                    V.zoneAbbr(),
                   ),
               ),
           ),
@@ -1311,7 +1308,7 @@
             ),
         );
       }
-      function v(e, t, n) {
+      function S(e, t, n) {
         const [r, i] = a.useState(!1);
         return {
           fnOnInput: (e) => {
@@ -1346,7 +1343,7 @@
           !1,
         );
       }
-      function C(e) {
+      function T(e) {
         return h()(e, [f, E], !1);
       }
     },

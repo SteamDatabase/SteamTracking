@@ -599,9 +599,6 @@
         DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
         FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
         MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
-        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
-        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
         UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
         UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
         MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
@@ -630,6 +627,14 @@
       module.exports = {
         ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
         ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        StatusLineItemCtn: "V5SWm2fiBKJqCbPn7bpC0",
+        StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
+        StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
+        StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
       };
     },
     chunkid: (module) => {
@@ -7954,18 +7959,14 @@
             return _.createElement(
               _._,
               {
+                title: (0, _._)(
+                  _ ? "#EventEdit_Replacing_Title" : "#EventEdit_Saving_Title",
+                ),
                 bDisableBackgroundDismiss: !0,
                 bOKDisabled: !0,
                 bHideCloseIcon: !0,
                 closeModal: () => {},
               },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)(
-                  _ ? "#EventEdit_Replacing_Title" : "#EventEdit_Saving_Title",
-                ),
-              ),
               _.createElement(
                 _._,
                 null,
@@ -9884,13 +9885,13 @@
             _.createElement(
               _._,
               {
+                title: (0, _._)("#Sale_ImportItems"),
                 onCancel: _,
                 closeModal: _,
                 bDisableBackgroundDismiss: !0,
                 bAllowFullSize: !0,
                 bHideCloseIcon: this.state.bImporting,
               },
-              _.createElement(_._, null, (0, _._)("#Sale_ImportItems")),
               _.createElement(
                 _._,
                 null,
@@ -10687,13 +10688,13 @@
           return _.createElement(
             _._,
             {
+              title: (0, _._)("#Sale_EditRaw_Title"),
               onCancel: _,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               bHideCloseIcon: this.state.bImporting,
             },
-            _.createElement(_._, null, (0, _._)("#Sale_EditRaw_Title")),
             _.createElement(
               _._,
               null,
@@ -12382,14 +12383,10 @@
         return _.createElement(
           _._,
           {
+            title: (0, _._)("#FacetedBrowseEditor_AutoGenerate"),
             onCancel: _,
             closeModal: _,
           },
-          _.createElement(
-            _._,
-            null,
-            (0, _._)("#FacetedBrowseEditor_AutoGenerate"),
-          ),
           _.createElement(
             _._,
             null,
@@ -25457,21 +25454,23 @@
                 "Invalid file extension, cannot determine mimetype",
             };
           _.append("mimetype", _);
+          let _ = !1;
           try {
-            _ = await _().post(this.m_strUploadPath, _, {
+            (_ = await _().post(this.m_strUploadPath, _, {
               withCredentials: !0,
               headers: {
                 "Content-Type": "multipart/form-data",
               },
               cancelToken: _,
-            });
+            })),
+              200 == (null == _ ? void 0 : _.status) && (_ = !0);
           } catch (_) {
             const _ = (0, _._)(_);
             console.log("CCloudImageUploader.UploadFile failed ", _, _),
               (_ = _.response);
           }
           return {
-            bSuccess: !0,
+            bSuccess: _,
             result: null == _ ? void 0 : _.data,
           };
         }
@@ -25549,7 +25548,100 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_) {
+        const { bDone: _, name: __webpack_require__, tooltip: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().StatusLineItemCtn,
+          },
+          _.createElement(
+            "span",
+            {
+              className: (0, _._)(
+                _().StatusIcon,
+                _ ? _().StatusIconDone : _().StatusNotDone,
+              ),
+            },
+            _ ? _.createElement(_.Jlk, null) : _.createElement(_._, null),
+          ),
+          _.createElement(
+            _._,
+            {
+              toolTipContent: _,
+            },
+            __webpack_require__,
+          ),
+        );
+      }
+      function _(_) {
+        const { rgAssetURL: _, rgLang: __webpack_require__, bIsImage: _ } = _,
+          [_, _] = (0, _.useState)([]);
+        if (
+          ((0, _.useEffect)(() => {
+            let _ = !1;
+            const _ = _ ? _ : _;
+            return (
+              Promise.all(_.map((_) => __webpack_require__(_))).then((_) => {
+                _ || _(_);
+              }),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _]),
+          !_)
+        )
+          return _.createElement(_._, {
+            size: "small",
+            string: "Checking Assets...",
+          });
+        const _ = _.map((_, _) => (_ ? -1 : _)).filter((_) => -1 !== _);
+        return 0 === _.length
+          ? _.createElement(_, {
+              bDone: !0,
+              name: "Uploaded assets verified",
+              tooltip:
+                "In the background we verified the assets by downloading from the CDN to verify they are present",
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                bDone: !1,
+                name: `${_.length} Asset(s) uploaded failed to fetch`,
+              }),
+              _.map((_) => ({
+                url: _[_],
+                lang: __webpack_require__[_],
+              })).map((_) =>
+                _.createElement(_, {
+                  key: _.url,
+                  bDone: !1,
+                  name: `${(0, _._)(_.lang)} - Not found`,
+                  tooltip: `${_.url} not downloadable from the CDN`,
+                }),
+              ),
+            );
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = new Image();
+          (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
+        });
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = document.createElement("video");
+          (_.preload = "metadata"),
+            (_.onloadedmetadata = () => _(!0)),
+            (_.onerror = () => _(!1)),
+            (_.src = _);
+        });
+      }
       function _(_) {
         var _;
         const {
@@ -25560,6 +25652,7 @@
             imageClassname: _,
             fnDeleteAllAssets: _,
             showDeleteAll: _ = !0,
+            bVerifyAssets: _,
           } = _,
           [_, _] = _.useState(
             null !== (_ = null != _ ? _ : _._.Get().GetCurEditLanguage()) &&
@@ -25576,6 +25669,10 @@
           const _ = _(_);
           _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
         }, [_, _, _]);
+        const _ = (0, _.useMemo)(
+          () => __webpack_require__.map((_) => _(_)),
+          [__webpack_require__],
+        );
         return _.createElement(
           "div",
           {
@@ -25636,6 +25733,12 @@
                   },
                   (0, _._)("#Button_DeleteAll"),
                 ),
+              Boolean(_) &&
+                _.createElement(_, {
+                  rgAssetURL: _,
+                  rgLang: __webpack_require__,
+                  bIsImage: !0,
+                }),
             ),
           ),
         );
@@ -32544,21 +32647,21 @@
           return _.createElement(
             _._,
             {
+              title: _.createElement(
+                "div",
+                {
+                  className: _.EditTagsTitle,
+                },
+                _.createElement(_._, {
+                  capsule: _.capsule,
+                }),
+              ),
               onCancel: _,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               className: _.NotTooWideModal,
             },
-            _.createElement(
-              _._,
-              {
-                className: _.EditTagsTitle,
-              },
-              _.createElement(_._, {
-                capsule: _.capsule,
-              }),
-            ),
             _.createElement(
               _._,
               null,
@@ -32931,6 +33034,7 @@
           return _.createElement(
             _._,
             {
+              "aria-label": (0, _._)("#Sale_EditTags_BatchItemTitle"),
               onCancel: _,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
@@ -33786,12 +33890,12 @@
           return _.createElement(
             _._,
             {
+              title: __webpack_require__,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               className: _.NotTooWideModal,
             },
-            _.createElement(_._, null, __webpack_require__),
             _.createElement(
               _._,
               null,
@@ -34045,13 +34149,13 @@
           return _.createElement(
             _._,
             {
+              title: (0, _._)("#Sale_EditRaw_Title"),
               onCancel: _,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               bHideCloseIcon: this.state.bImporting,
             },
-            _.createElement(_._, null, (0, _._)("#Sale_EditRaw_Title")),
             _.createElement(
               _._,
               null,
@@ -34441,12 +34545,12 @@
           return _.createElement(
             _._,
             {
+              title: (0, _._)("#Sale_EditAutoTags_Title"),
               onCancel: _,
               closeModal: _,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
             },
-            _.createElement(_._, null, (0, _._)("#Sale_EditAutoTags_Title")),
             _.createElement(
               _._,
               null,
@@ -34623,12 +34727,12 @@
             _.createElement(
               _._,
               {
+                title: "Update Solr Tagging",
                 onOK: __webpack_require__,
                 onCancel: __webpack_require__,
                 closeModal: __webpack_require__,
                 bDisableBackgroundDismiss: !0,
               },
-              _.createElement(_._, null, "Update Solr Tagging"),
               _.createElement(
                 _._,
                 null,
@@ -36258,6 +36362,15 @@
         const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
         return (0, _._)(_, __webpack_require__) || String(_);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(..._) {
+        return _.join(" ");
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -48860,6 +48973,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -48933,7 +49047,7 @@
                     {
                       image_hash: (0, _._)(_),
                       clanAccountID: _,
-                      file_type: _._.GetExtensionTypeFromURL(_),
+                      file_type: (0, _._)(_),
                       imageid: void 0,
                     },
                     _,
@@ -53299,7 +53413,8 @@
       function _(_) {
         const { eventModel: _ } = _,
           _ = (0, _._)(_.clanSteamID.GetAccountID());
-        if (!_ || (!_.can_edit && !_.support_user)) return;
+        if (!_ || (!_.can_edit && !_.support_user) || "store" != (0, _._)())
+          return;
         const _ = _.GetAllTags(),
           _ = [];
         return (
@@ -54992,6 +55107,7 @@
       _.g_Self = null;
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_trailers: !0,
@@ -55274,7 +55390,9 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = null == _ ? void 0 : _.GetAllTrailers().GetHighlightTrailers(_),
-          _ = (null == _ ? void 0 : _.length) > 0 && _[0];
+          _ = (null == _ ? void 0 : _.length) > 0 && _[0],
+          _ = _.useId(),
+          _ = _.useId();
         if (!_) return null;
         const _ =
             null ===
@@ -55298,6 +55416,7 @@
           _.createElement(
             _._,
             {
+              "aria-labelledby": (0, _._)(_, _),
               bAllowFullSize: !0,
               bOKDisabled: !0,
               closeModal: _,
@@ -55325,6 +55444,26 @@
                     type: "video/mp4",
                   }),
               ),
+            ),
+            _.createElement(
+              "div",
+              {
+                _: _,
+                style: {
+                  display: "none",
+                },
+              },
+              _.GetName(),
+            ),
+            _.createElement(
+              "div",
+              {
+                _: _,
+                style: {
+                  display: "none",
+                },
+              },
+              _.GetName(),
             ),
           ),
         );
@@ -56328,6 +56467,7 @@
                 _.createElement(
                   "div",
                   {
+                    role: "list",
                     className: _().RelevantCtn,
                   },
                   _ &&
@@ -56439,14 +56579,17 @@
                   }),
                 ),
               ),
-            (!_ || 0 == _) &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().AppDescription, _ && _().Divider),
-                },
-                _.GetShortDescription(),
-              ),
+            _ && 0 != _
+              ? _.createElement("div", {
+                  "aria-label": _.GetShortDescription(),
+                })
+              : _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().AppDescription, _ && _().Divider),
+                  },
+                  _.GetShortDescription(),
+                ),
           )
         );
       }
@@ -56523,6 +56666,7 @@
             },
             _.createElement("img", {
               className: _().SimilarAppImg,
+              alt: __webpack_require__.GetName(),
               src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
             }),
           ),
@@ -56668,6 +56812,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       new _._("DiscoveryQueueApp").Debug;
       function _(_) {
@@ -56682,6 +56827,7 @@
             bPreferDemoStorePage: _,
             elVideo: _,
             elDetails: _,
+            appAriaIDs: _,
           } = _,
           [_] = (0, _._)(_, _._),
           _ = (0, _._)(),
@@ -56709,6 +56855,13 @@
         return _.createElement(
           _._,
           {
+            "aria-labelledby": (0, _._)(
+              _.nameId,
+              _.tagsId,
+              _.reviewId,
+              _.relevanceId,
+              _.buttonsId,
+            ),
             ref: _,
             style: _,
             className: (0, _._)(_().DiscoveryQueueApp, _ && _().Selected),
@@ -56787,6 +56940,7 @@
             eStoreDiscoveryQueueType: _,
             storePageFilter: _,
             bPreferDemoStorePage: _,
+            appAriaIDs: _,
           } = _,
           [_] = (0, _._)(_, _._),
           { bIsIgnored: _, fnUpdateIgnored: _ } = (0, _._)(_),
@@ -56827,6 +56981,7 @@
             _.createElement(
               "div",
               {
+                _: _.nameId,
                 className: _().RightColumn,
               },
               _.createElement(
@@ -56847,11 +57002,13 @@
             ),
             _.createElement(_, {
               rgTagIDs: _.GetTagIDs(),
+              ariaLabelID: _.tagsId,
             }),
             _.createElement(
               "div",
               {
                 className: _().AppReviews,
+                _: _.reviewId,
               },
               _.createElement(_._, {
                 bShowTooltip: !0,
@@ -56865,9 +57022,11 @@
             _.createElement(
               "div",
               {
+                _: _.relevanceId,
                 className: _().AppRelevanceCtn,
               },
               _.createElement(_, {
+                bHideDescription: _,
                 bShowAvatars: !__webpack_require__,
                 storeItem: _,
                 appID: _,
@@ -56883,6 +57042,7 @@
               _.createElement(
                 "div",
                 {
+                  _: _.buttonsId,
                   className: _().AppActionJustButtonsCtn,
                 },
                 _.createElement(
@@ -56928,6 +57088,9 @@
                     _.createElement(
                       _._,
                       {
+                        "aria-label": _
+                          ? (0, _._)("#Sale_RemoveFromWishlist")
+                          : (0, _._)("#Sale_AddToWishlist"),
                         focusable: !0,
                         className: (0, _._)(_().QueueButton, _ && _().Active),
                         onClick: _,
@@ -56954,6 +57117,7 @@
                     _.createElement(
                       _._,
                       {
+                        "aria-label": (0, _._)("#DiscoveryQueue_IgnoreLink"),
                         focusable: !0,
                         className: (0, _._)(_().QueueButton, _ && _().Active),
                         onClick: _,
@@ -56967,18 +57131,21 @@
         );
       }
       function _(_) {
-        const { rgTagIDs: _ } = _,
-          _ = (0, _._)(_);
+        const { rgTagIDs: _, ariaLabelID: __webpack_require__ } = _,
+          _ = [...(0, _._)(_)].slice(0, 8);
         return _.createElement(
           "div",
           {
+            _: __webpack_require__,
+            role: "list",
             className: _().AppTagsCtn,
           },
-          __webpack_require__.map((_) =>
+          _.map((_) =>
             _.createElement(
               "div",
               {
                 key: _,
+                role: "listitem",
                 className: _().TagEntry,
               },
               _.createElement(_._, {
@@ -57176,7 +57343,9 @@
             _.createElement(
               _._,
               {
+                role: "dialog",
                 focusable: !1,
+                "flow-children": "column",
                 className: _().DiscoveryQueueCarouselCtn,
                 navEntryPreferPosition: _._.LAST,
                 onCancelButton: () => (null == _ ? void 0 : _()),
@@ -57191,14 +57360,15 @@
                       (null == _ || _(), _.stopPropagation());
                   },
                 },
-                _.createElement(
-                  _._,
-                  {
-                    "flow-children": "row",
-                    className: _().DiscoveryQueueName,
-                  },
-                  _,
-                ),
+                _.length > 0 &&
+                  _.createElement(
+                    _._,
+                    {
+                      "flow-children": "row",
+                      className: _().DiscoveryQueueName,
+                    },
+                    _,
+                  ),
                 _.createElement(
                   _._,
                   {
@@ -57229,6 +57399,7 @@
                         focusable: !0,
                         className: _().QueueButton,
                         onClick: _,
+                        "aria-label": (0, _._)("#Button_Close"),
                         onActivate: () => _ && _(),
                       },
                       _.createElement(_._, null),
@@ -57238,6 +57409,8 @@
                 _.createElement(
                   _._,
                   {
+                    role: "button",
+                    "aria-label": (0, _._)("#Carousel_Next"),
                     onClick: () => _(!1),
                     className: (0, _._)(
                       _().QueueNavArrow,
@@ -57252,6 +57425,8 @@
                 _.createElement(
                   _._,
                   {
+                    role: "button",
+                    "aria-label": (0, _._)("#Carousel_Previous"),
                     onClick: () => _(!0),
                     className: (0, _._)(
                       _().QueueNavArrow,
@@ -57340,6 +57515,13 @@
             showAOAutoPlayWarning: _,
           } = _,
           [_, _] = _.useState(!1),
+          _ = {
+            nameId: _.useId(),
+            tagsId: _.useId(),
+            reviewId: _.useId(),
+            relevanceId: _.useId(),
+            buttonsId: _.useId(),
+          },
           _ = () => {
             _ != _ && _(_ > _);
           },
@@ -57389,6 +57571,7 @@
         }
         const _ = _ || _.current || _;
         return _.createElement(_, {
+          appAriaIDs: _,
           eStoreDiscoveryQueueType: _,
           storePageFilter: __webpack_require__,
           selected: _,
@@ -57406,6 +57589,7 @@
             eStoreDiscoveryQueueType: _,
             storePageFilter: __webpack_require__,
             bPreferDemoStorePage: _,
+            appAriaIDs: _,
           }),
         });
       }
@@ -57425,46 +57609,37 @@
             fnAdvance: _,
             bSkipAppRequestPending: _,
           } = _,
-          [_, _] = _.useState([]),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(2, _._.LANGUAGE, !1);
+          _ = (0, _._)(2, _._.LANGUAGE, !1),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
         _.useEffect(() => {
           _ &&
-            !_.length &&
             !_ &&
-            (_(!0),
             _._.Get()
               .HintLoad()
               .then(() => {
                 _._.Get()
                   .LoadSkippedApps(__webpack_require__, _)
                   .then((_) => {
-                    _(_), _(!1);
+                    _(
+                      _.reduce(
+                        (_, _) => (_._.Get().BIsGameWishlisted(_) ? _ + 1 : _),
+                        0,
+                      ),
+                    ),
+                      _(
+                        _.reduce(
+                          (_, _) => (_._.Get().BIsGameIgnored(_) ? _ + 1 : _),
+                          0,
+                        ),
+                      ),
+                      _(!0);
                   });
-              }));
-        }, [_, __webpack_require__, _.length, _, _]);
-        const _ = _.useMemo(
-            () =>
-              (null == _
-                ? void 0
-                : _.reduce(
-                    (_, _) => (_._.Get().BIsGameWishlisted(_) ? _ + 1 : _),
-                    0,
-                  )) || 0,
-            [_],
-          ),
-          _ = _.useMemo(
-            () =>
-              (null == _
-                ? void 0
-                : _.reduce(
-                    (_, _) => (_._.Get().BIsGameIgnored(_) ? _ + 1 : _),
-                    0,
-                  )) || 0,
-            [_],
-          ),
-          [_, _] = _.useState(!1),
+              });
+        }, [_, __webpack_require__, _, _]);
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(__webpack_require__, _),
           _ = (0, _._)("DiscoveryQueueSummary"),
           _ = async () => {
@@ -57485,6 +57660,7 @@
             fnFocused: _,
             fnOnContinue: _,
             fnCloseModal: _,
+            bLoaded: _,
           },
           _.createElement(
             "div",
@@ -57645,6 +57821,7 @@
             fnOnContinue: _,
             fnCloseModal: _,
             fnFocused: _,
+            bLoaded: _,
           } = _,
           _ = (0, _._)(_._.STORE_BASE_URL + "wishlist"),
           _ = (0, _._)(),
@@ -57662,6 +57839,7 @@
             _._,
             {
               ref: _,
+              "aria-live": "polite",
               className: (0, _._)(
                 _().SummaryCtn,
                 _().DiscoveryQueueApp,
@@ -57681,7 +57859,14 @@
               onCancelButton: () => _ && _(),
               fnScrollIntoViewHandler: () => (_(), !0),
             },
-            _,
+            _
+              ? _
+              : _.createElement(_._, {
+                  className: _().DiscoveryQueueThrobber,
+                  msDelayAppear: 200,
+                  size: "large",
+                  position: "center",
+                }),
           )
         );
       }
@@ -57721,7 +57906,8 @@
               ? void 0
               : _.appid,
             {},
-          );
+          ),
+          _ = (0, _._)();
         if (
           !(null === (_ = null == _ ? void 0 : _.data) || void 0 === _
             ? void 0
@@ -57771,13 +57957,14 @@
                   _.GetName(),
                 ),
               ),
-            _.createElement(
-              "a",
-              {
-                href: (0, _._)(_._.COMMUNITY_BASE_URL + "my/itemcollection"),
-              },
-              (0, _._)("#DiscoveryQueue_SaleStatus_Link"),
-            ),
+            !_ &&
+              _.createElement(
+                "a",
+                {
+                  href: (0, _._)(_._.COMMUNITY_BASE_URL + "my/itemcollection"),
+                },
+                (0, _._)("#DiscoveryQueue_SaleStatus_Link"),
+              ),
           ),
         );
       }
@@ -57892,9 +58079,9 @@
                       appID: _,
                     }),
                   ),
-                  [..._, ..._].slice(0, 3).map((_) =>
+                  [..._, ..._].slice(0, 3).map((_, _) =>
                     _.createElement(_, {
-                      key: "Capsule2_" + _,
+                      key: `Capsule2_${_}_${_}`,
                       appID: _,
                     }),
                   ),
@@ -58003,6 +58190,7 @@
           ? _.createElement(
               _,
               null,
+              _.createElement(_, null),
               _._.logged_in
                 ? _.createElement(_, {
                     ..._,
@@ -58092,7 +58280,6 @@
               bDisableAnimation: _,
               className: _().DiscoveryQueueWidget,
             },
-            _.createElement(_, null),
             !_ &&
               _.createElement(_, {
                 _: _,
@@ -58175,7 +58362,6 @@
             onClick: _,
             arrDiscoveryApps: _,
           },
-          _.createElement(_, null),
           _.createElement(
             "div",
             {
@@ -58207,7 +58393,8 @@
       }
       function _() {
         var _, _;
-        const _ = (0, _._)(2, _._.LANGUAGE, !0);
+        const _ = (0, _._)(2, _._.LANGUAGE, !0),
+          _ = (0, _._)();
         if (
           !(null === (_ = _.data) || void 0 === _ ? void 0 : _.definition) ||
           !(null === (_ = _.data) || void 0 === _
@@ -58221,6 +58408,7 @@
         let _ = null;
         return (
           _._.logged_in &&
+            !_ &&
             (_ = _.createElement(
               _.Fragment,
               null,
@@ -68877,10 +69065,12 @@
           _.useEffect(() => __webpack_require__(!0), []);
           const _ = `${_._.MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${_.bIsFirstOpen ? "" : "#t=5,6"}`,
             _ = `${_._.MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${_.bIsFirstOpen ? "" : "#t=5,6"}`,
-            _ = _.iDoorIndex == _._.Get().GetDoorCount() - 1;
+            _ = _.iDoorIndex == _._.Get().GetDoorCount() - 1,
+            _ = _.useId();
           return _.createElement(
             _._,
             {
+              "aria-labelledby": _,
               className: _().LunarNewYearOpenEnvelopeVideoDialog,
               closeModal: _.closeModal,
             },
@@ -68897,6 +69087,7 @@
                 _.createElement(
                   "div",
                   {
+                    _: _,
                     className: _().StoryHeader,
                   },
                   (0, _._)("#Lunar2020_StoryTitle"),
@@ -75560,11 +75751,13 @@
               null
             );
           const _ = async (_) => {
-            (_ && _ != _) || _(!0), _ || (await _(_));
-          };
+              (_ && _ != _) || _(!0), _ || (await _(_));
+            },
+            _ = _.useId();
           return _.createElement(
             _._,
             {
+              "aria-labelledby": _,
               className: (0, _._)(_().StoryDialog, (0, _._)(_)),
               closeModal: _,
               bHideCloseIcon: !0,
@@ -75606,6 +75799,7 @@
                     _.createElement(
                       "div",
                       {
+                        _: _,
                         className: _().PageTitle,
                       },
                       (0, _._)(_.strPageTitle),
@@ -80976,6 +81170,7 @@
         include_release: !0,
         include_platforms: !0,
         include_screenshots: !0,
+        include_reviews: !0,
       };
       function _(_) {
         const {

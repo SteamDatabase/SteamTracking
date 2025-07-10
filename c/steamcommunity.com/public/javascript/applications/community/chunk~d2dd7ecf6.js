@@ -394,10 +394,10 @@
           _._,
           {
             bAllowFullSize: !0,
+            title: (0, _._)("#ImagePickerLoc_Title"),
             onCancel: _,
             closeModal: _,
           },
-          _.createElement(_._, null, (0, _._)("#ImagePickerLoc_Title")),
           _.createElement(
             _._,
             null,
@@ -2491,7 +2491,10 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)(_().FlexColumnContainer),
+              className: (0, _._)({
+                [_().FlexColumnContainer]: !0,
+                [_().UploadPreviewError]: "failed" == _.status,
+              }),
             },
             _,
             Boolean("uploading" == _.status) &&

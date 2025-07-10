@@ -1615,6 +1615,12 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenu_PP7LM {
 html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuContents_2EstN {
   padding: 4px;
 }
+@media (prefers-contrast: more) {
+  html.contextmenu_ContextMenuPopup_14wqd
+    .contextmenu_contextMenuContents_2EstN {
+    padding: 0;
+  }
+}
 html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   min-width: fit-content;
   white-space: nowrap;
@@ -1631,6 +1637,12 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   padding: 0px;
   font-size: 14px;
   -webkit-app-region: no-drag;
+  box-sizing: border-box;
+}
+@media (prefers-contrast: more) {
+  .contextmenu_contextMenuContents_2EstN {
+    border: 1px solid #fff;
+  }
 }
 .contextmenu_contextMenu_PP7LM:not(.visible) {
   opacity: 0;
@@ -1683,6 +1695,12 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_ContextMenuSeparator_WUOrU.contextmenu_ContextMenuSeparator_WUOrU
   + .contextmenu_contextMenuItem_1n7Wl {
   border-top: 1px solid dimgray;
+}
+@media (prefers-contrast: more) {
+  .contextmenu_ContextMenuSeparator_WUOrU.contextmenu_ContextMenuSeparator_WUOrU
+    + .contextmenu_contextMenuItem_1n7Wl {
+    border-color: #fff;
+  }
 }
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_NoSeparation_3hRb6 {
   border-top-color: transparent;
@@ -1771,6 +1789,13 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
   -webkit-app-region: no-drag;
+}
+@media (prefers-contrast: more) {
+  .DesktopUI .contextmenu_contextMenu_PP7LM,
+  .contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenu_PP7LM {
+    background: #000;
+    box-sizing: border-box;
+  }
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl,
 .contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl {
@@ -1887,6 +1912,13 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media (prefers-contrast: more) {
+  .tooltip_TextToolTip_2FxbH {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 .tooltip_ToolTipCustom_3XGRk {
   box-sizing: border-box;
   font-size: 13px;
@@ -1907,6 +1939,13 @@ dialog.modals_ModalDialog_32QRv::backdrop {
 .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipInsetContent_i4LuY {
   color: #aaacb6;
   margin: 6px 4px;
+}
+@media (prefers-contrast: more) {
+  .tooltip_ToolTipCustom_3XGRk {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 .partnereventshared_PartnerEventFont_LK4bX {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -3026,6 +3065,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   padding: 24px 0px 0px 24px;
   background: #171d25;
 }
+@media (prefers-contrast: more) {
+  .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI,
+  .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
+    background: #000;
+  }
+}
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI.pagedsettings_NoPadding_qvR0K,
 .DesktopUI
   .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.pagedsettings_NoPadding_qvR0K {
@@ -3074,6 +3119,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+@media (prefers-contrast: more) {
+  .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
+    background: #000;
+    border-right: 1px solid #fff;
+  }
 }
 @media screen and (max-width: 500px) {
   .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
@@ -3151,6 +3202,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-transform: none;
   cursor: pointer;
   user-select: none;
+}
+@media (prefers-contrast: more) {
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
+    color: #fff;
+  }
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
@@ -9885,6 +9941,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 13px;
   font-style: italic;
   padding-bottom: 4px;
+  flex-basis: 100%;
 }
 .addonpicker_AddonPickerMessage_2wUk7 a {
   color: #4297f8;
@@ -26554,11 +26611,23 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .reorderablelist_Selected_3HlFd svg.reorderablelist_ReorderArrow_1jEeo {
   visibility: visible;
 }
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_ReorderableListItem_ZO8-r.gpfocuswithin
+  svg.reorderablelist_ReorderArrow_1jEeo {
+  visibility: visible;
+}
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_ReorderableListItem_ZO8-r:not(
+    .reorderablelist_Selected_3HlFd
+  )
+  svg.reorderablelist_ReorderArrow_1jEeo {
+  color: #b8bcbf;
+}
 .reorderablelist_ReorderableListIndex_3ZoWp {
   background: #fff;
   border-radius: 1000px;
   min-width: 20px;
-  height: 20px;
+  aspect-ratio: 1;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -26587,11 +26656,20 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .reorderablelist_Selected_3HlFd.gpfocus
   .reorderablelist_ReorderableListIndex_3ZoWp {
-  background: #0e141b;
-  color: #fff;
+  background-color: #0e141b !important;
+  color: #fff !important;
 }
 .reorderablelist_ReorderableListIndex_3ZoWp:empty {
   visibility: hidden;
+}
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_ReorderableListIndex_3ZoWp {
+  background-color: #b8bcbf;
+}
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_ReorderableListIndexCtr_bu2nP.gpfocus
+  .reorderablelist_ReorderableListIndex_3ZoWp {
+  background-color: #fff;
 }
 .reorderablelist_ReorderableListItemLabel_2HB1m {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -26613,6 +26691,9 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   width: 100%;
 }
 .reorderablelist_Selected_3HlFd.gpfocus
+  .reorderablelist_ReorderableListItemLabel_2HB1m,
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_Selected_3HlFd.gpfocuswithin
   .reorderablelist_ReorderableListItemLabel_2HB1m {
   color: #000;
 }
@@ -26620,8 +26701,10 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   .reorderablelist_ReorderableListItemLabel_2HB1m {
   color: #67707b;
 }
-.reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd.gpfocus {
-  background: #fff;
+.reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd.gpfocus,
+.reorderablelist_IconsFocusable_hXltD
+  .reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd.gpfocuswithin {
+  background-color: #fff;
   color: #000;
 }
 .reorderablelist_ReorderableListItem_ZO8-r.reorderablelist_Selected_3HlFd:not(
@@ -30641,7 +30724,7 @@ div:hover > .BBCodeCollapseControl {
   text-transform: unset;
   margin: 8px 0px;
   font: var(--gpText-BodyMedium);
-  color: var(--gpStoreLightestGrey);
+  color: #ccd8e3;
 }
 .managefriends_HeaderBlock_X9bYN {
   font-weight: normal;
@@ -30748,7 +30831,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E {
   font: var(--gpText-BodyLarge);
-  background: var(--gpColor-Blue);
+  background: #1a9fff;
   border-radius: var(--gpCorner-Medium);
   letter-spacing: unset;
   text-transform: unset;
@@ -30758,10 +30841,10 @@ div:hover > .BBCodeCollapseControl {
   color: #fff;
 }
 .BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E:hover {
-  background: var(--gpColor-BlueHi);
+  background: #0bf;
 }
 .BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E:active {
-  background: var(--gpColor-Blue) !important;
+  background: #1a9fff !important;
   color: #fff !important;
 }
 .BasicUI
@@ -38937,6 +39020,14 @@ div.ModalPosition_TopBar {
   border-radius: 3px;
   box-shadow: inset 0px 0px 0px #0000;
 }
+@media (prefers-contrast: more) {
+  .DialogTextInputBase,
+  ._DialogInputContainer {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
@@ -39227,6 +39318,11 @@ button.TextButton.gpfocus {
   font-size: 13px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding-top: 8px;
+}
+@media (prefers-contrast: more) {
+  .DialogToggle_Description {
+    color: #bbbdc0;
+  }
 }
 .DialogToggleField_Option.Active {
   color: #dfe3e6;

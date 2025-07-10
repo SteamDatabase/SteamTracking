@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "상점 홈",
 	"Menu_Popover_FreeToPlay": "무료 플레이",
 	"Menu_Popover_SteamCharts": "Steam 차트",
+	"Menu_Popover_Upcoming": "출시 예정 게임",
 	"Menu_Popover_PointsShop": "포인트 상점",
 	"Menu_Popover_GiftCards": "기프트 카드",
 	"Menu_Popover_NewsAndUpdates": "뉴스 및 업데이트",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "신규 출시 게임",
 	"Menu_Section_Browse_Discounts": "할인 및 이벤트",
 	"Menu_Section_Browse_Discounts_YourWishlist": "찜 목록",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s개 할인 중",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "특별 이벤트",
 	"Menu_Section_Browse_Discounts_PopularTitles": "인기 게임",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "특별 할인",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "검색 결과",
 	"Menu_SearchBar_YourTopGenres": "주로 플레이하는 장르",
 	"Menu_SearchBar_BrowseBy": "검색 기준...",
+	"Menu_SearchBar_NoMatches": "일치하는 검색 결과가 없습니다.",
+	"Menu_SearchBar_AdvancedSearch": "고급 검색",
 	"Menu_Search": "검색",
 	"Menu_Label": "상점 메뉴"
 }`);

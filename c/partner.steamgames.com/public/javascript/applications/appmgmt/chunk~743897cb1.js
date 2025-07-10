@@ -205,6 +205,47 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      const _ = {
+          name: "cookieSettings",
+          options: {
+            secure: !0,
+            httpOnly: !1,
+            path: "/",
+            sameSite: "none",
+            maxAge: 31536e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          name: "steamLoginSpoofSteamID",
+          options: {
+            path: "/",
+            secure: !0,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (!document.cookie) return;
+        const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
+        return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -5575,16 +5616,8 @@
       function _(_) {
         return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
       }
-      const _ = {
-        name: "steamLoginSpoofSteamID",
-        options: {
-          path: "/",
-          secure: !0,
-        },
-        preferenceControls: {
-          isTechnicallyNecessary: !0,
-        },
-      };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_ServiceTransport;
         m_AnonymousServiceTransport;
@@ -5620,11 +5653,7 @@
               }),
               MakeReady: this.MakeReady.bind(this),
             });
-          const _ = (function (_) {
-            if (!document.cookie) return;
-            const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
-            return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
-          })(_);
+          const _ = (0, _._)(_._);
           _ && /[0-9]+/g.test(_) && (this.m_strSpoofedSteamID = _);
         }
         WaitUntilLoggedOn() {
@@ -5655,7 +5684,8 @@
           return this.m_AnonymousServiceTransport;
         }
         async SendMsgAndAwaitResponse(_, _, _, _, _) {
-          let _;
+          let _,
+            _ = 0;
           try {
             if (this.m_bJWTToken && _.bSendAuth) {
               const _ = Date.now() / 1e3;
@@ -5683,38 +5713,43 @@
                     (this.m_refreshAccessTokenPromise = void 0)));
             }
             const _ = await this.Send(_, _, _, _);
-            if (200 != _.status) throw new Error("Request Error");
-            if (
-              ((_ = _._.Init(_, 147)),
-              _.headers &&
-                (_.headers.get("x-eresult") &&
-                  _.Hdr().set_eresult(parseInt(_.headers.get("x-eresult"))),
-                _.headers.get("x-error_message") &&
-                  _.Hdr().set_error_message(_.headers.get("x-error_message"))),
-              this.m_bJsonMode)
-            )
-              _.SetBodyJSON(await _.json());
-            else {
-              const _ = new _._(await _.arrayBuffer());
-              _.ReadBodyFromBuffer(_, _);
-            }
+            if (((_ = _.status), 200 == _))
+              if (
+                ((_ = _._.Init(_, 147)),
+                _.headers &&
+                  (_.headers.get("x-eresult") &&
+                    _.Hdr().set_eresult(parseInt(_.headers.get("x-eresult"))),
+                  _.headers.get("x-error_message") &&
+                    _.Hdr().set_error_message(
+                      _.headers.get("x-error_message"),
+                    )),
+                this.m_bJsonMode)
+              )
+                _.SetBodyJSON(await _.json());
+              else {
+                const _ = new _._(await _.arrayBuffer());
+                _.ReadBodyFromBuffer(_, _);
+              }
             0;
-          } catch (_) {
-            const _ = 401 === _?.response?.status,
-              _ = _ ? "Unauthorized" : void 0;
-            (_ = this.CreateFailedMsgProtobuf(_, 3, _)),
-              _ &&
-                !this.m_refreshAccessTokenPromise &&
-                this.m_bJWTToken &&
-                _.bSendAuth &&
-                this.m_fnRequestNewAccessToken &&
-                ((this.m_refreshAccessTokenPromise =
-                  this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-                (this.m_webApiAccessToken =
-                  await this.m_refreshAccessTokenPromise),
-                (this.m_refreshAccessTokenPromise = void 0));
+          } catch (_) {}
+          const _ = 401 === _;
+          if (!_) {
+            const _ = _ ? "Unauthorized" : void 0;
+            _ = this.CreateFailedMsgProtobuf(_, 3, _);
           }
-          return _;
+          return (
+            _ &&
+              !this.m_refreshAccessTokenPromise &&
+              this.m_bJWTToken &&
+              _.bSendAuth &&
+              this.m_fnRequestNewAccessToken &&
+              ((this.m_refreshAccessTokenPromise =
+                this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
+              (this.m_webApiAccessToken =
+                await this.m_refreshAccessTokenPromise),
+              (this.m_refreshAccessTokenPromise = void 0)),
+            _
+          );
         }
         SendNotification(_, _, _, _) {
           return this.Send(_, _, _, _), !0;

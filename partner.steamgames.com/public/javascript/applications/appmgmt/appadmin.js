@@ -347,7 +347,7 @@
               ),
             ),
             D &&
-              a.createElement(N, {
+              a.createElement(b, {
                 demoAppID: t,
                 parentAppId: n,
                 bSendEmailsSucceeded: o,
@@ -355,7 +355,7 @@
               }),
             D && w && a.createElement("hr", { className: d.BothSeparator }),
             w &&
-              a.createElement(b, {
+              a.createElement(N, {
                 parentAppId: n,
                 timeStaged: s,
                 noticeVisibleToDate: T,
@@ -363,7 +363,7 @@
           );
         }
       }
-      function N(e) {
+      function b(e) {
         const {
             demoAppID: t,
             parentAppId: n,
@@ -473,7 +473,7 @@
                 });
             return { bLoading: !1, rgWarnings: p };
           })(n, t),
-          N = v.every((e) => !e.bCritical);
+          b = v.every((e) => !e.bCritical);
         return a.createElement(
           a.Fragment,
           null,
@@ -520,7 +520,7 @@
                             "btn_green_steamui btn_border_2px btn_medium",
                             d.ButtonDemoWishlistEmails,
                           ),
-                          disabled: s || !N,
+                          disabled: s || !b,
                           onClick: () => c(!0),
                         },
                         a.createElement(
@@ -605,7 +605,7 @@
             ),
         );
       }
-      function b(e) {
+      function N(e) {
         const { parentAppId: t, timeStaged: n, noticeVisibleToDate: i } = e,
           r = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
@@ -1161,6 +1161,7 @@
             e.nBasePackageId,
           );
         }
+        const S = a.useId();
         return a.createElement(
           a.Fragment,
           null,
@@ -1168,8 +1169,8 @@
             ie.E,
             { active: "editor" === t || "alert" === t },
             a.createElement(
-              re.e,
-              { closeModal: () => n("closed") },
+              re.eV,
+              { "aria-labelledby": S, closeModal: () => n("closed") },
               "editor" === t &&
                 a.createElement(
                   a.Fragment,
@@ -1179,7 +1180,7 @@
                     { className: ae.EditionsEditorContents },
                     a.createElement(
                       "h2",
-                      null,
+                      { id: S },
                       (0, m.we)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
                     g.isPending && a.createElement(E.t, null),
@@ -1992,7 +1993,7 @@
             return (
               n.forEach((t, n) =>
                 e.push(
-                  a.createElement(Ne, {
+                  a.createElement(be, {
                     name: n,
                     category: t,
                     checkedState: i,
@@ -2012,13 +2013,13 @@
           ...s,
         );
       }
-      function Ne(e) {
+      function be(e) {
         const { name: t, category: n, checkedState: i, setChecked: r } = e,
           s = Object.entries(n.components).map(([e, t]) =>
             a.createElement(
               "li",
               { key: t },
-              a.createElement(be, {
+              a.createElement(Ne, {
                 name: e,
                 depotID: t,
                 checked: i.get(t),
@@ -2033,7 +2034,7 @@
           a.createElement("ul", null, ...s),
         );
       }
-      function be(e) {
+      function Ne(e) {
         const { name: t, depotID: n, checked: i, setChecked: r } = e,
           s = (228987 == n || 228986 == n) && !i;
         return a.createElement(
@@ -2194,8 +2195,8 @@
             include_full_description: C,
             include_included_items: w,
             include_assets_without_overrides: v,
-            apply_user_filters: N,
-            include_links: b,
+            apply_user_filters: b,
+            include_links: N,
           } = n;
         if (
           ((0, r.useEffect)(() => {
@@ -2214,8 +2215,8 @@
               include_full_description: C,
               include_included_items: w,
               include_assets_without_overrides: v,
-              apply_user_filters: N,
-              include_links: b,
+              apply_user_filters: b,
+              include_links: N,
             };
             let r = null;
             return (
@@ -2232,7 +2233,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, m, p, _, E, g, h, f, S, y, A, D, T, C, w, v, N, b, d]),
+          }, [e, t, a, m, p, _, E, g, h, f, S, y, A, D, T, C, w, v, b, N, d]),
           !e)
         )
           return [null, 2];
@@ -2446,8 +2447,8 @@
           strDescToolTip: C,
           strDescription: w,
           bShowTimeZone: v,
-          strInvalidDateTimeLocalizedMsg: N,
-          fnIsValidDateTime: b,
+          strInvalidDateTimeLocalizedMsg: b,
+          fnIsValidDateTime: N,
           bWeekdaysOnly: I,
           fnSetTimeToUpdate: k,
           bForce24HourFormat: P,
@@ -2483,7 +2484,7 @@
               }, [c, r]),
               c
             );
-          })(W, F, N, b, o),
+          })(W, F, b, N, o),
           U = !o && O;
         let V, H;
         if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {

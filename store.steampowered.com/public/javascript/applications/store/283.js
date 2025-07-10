@@ -305,12 +305,12 @@
           c.createElement(
             _,
             null,
-            c.createElement(P, { title: t }, c.createElement(I, { ...i })),
+            c.createElement(v, { title: t }, c.createElement(I, { ...i })),
           ),
           c.createElement(N, { value: r, onChange: n, onSubmit: o }),
         );
       }
-      function v(e) {
+      function P(e) {
         const { onFilterChange: t, filter: n, sections: r, title: o } = e;
         return c.createElement(
           c.Fragment,
@@ -321,7 +321,7 @@
             o && c.createElement("div", { className: C.SectionedPageTitle }, o),
             r.map(({ title: e, ...t }) =>
               c.createElement(
-                P,
+                v,
                 { title: e, key: e },
                 c.createElement(I, { ...t }),
               ),
@@ -330,7 +330,7 @@
           c.createElement(N, { value: n, onChange: t }),
         );
       }
-      function P(e) {
+      function v(e) {
         return c.createElement(
           "div",
           { className: C.Section },
@@ -345,7 +345,7 @@
           { className: C.FilterInputContainer },
           c.createElement(p.pd, {
             type: "text",
-            placeholder: "Search...",
+            placeholder: (0, d.we)("#AddonPicker_Search"),
             className: C.FilterInput,
             value: t,
             onChange: (e) => n(e.target.value),
@@ -716,7 +716,7 @@
                         ),
                   ),
               }),
-            c.createElement(v, {
+            c.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: o,
@@ -899,7 +899,7 @@
                         ),
                   ),
               }),
-            c.createElement(v, {
+            c.createElement(P, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: [
@@ -930,7 +930,7 @@
         render() {
           const { store: e, onItemSelect: t, flairGroupID: n } = this.props,
             { filter: r } = this.state;
-          return c.createElement(v, {
+          return c.createElement(P, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: r,
             sections: [

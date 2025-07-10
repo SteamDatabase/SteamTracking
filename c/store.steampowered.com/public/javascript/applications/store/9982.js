@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "ストアホーム",
 	"Menu_Popover_FreeToPlay": "無料プレイ",
 	"Menu_Popover_SteamCharts": "Steamチャート",
+	"Menu_Popover_Upcoming": "近日登場",
 	"Menu_Popover_PointsShop": "ポイントショップ",
 	"Menu_Popover_GiftCards": "ギフトカード",
 	"Menu_Popover_NewsAndUpdates": "ニュース＆アップデート",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "新作",
 	"Menu_Section_Browse_Discounts": "割引＆イベント",
 	"Menu_Section_Browse_Discounts_YourWishlist": "ウィッシュリスト",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s個のアイテムが割引中",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "スペシャルイベント",
 	"Menu_Section_Browse_Discounts_PopularTitles": "人気タイトル",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "スペシャル",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "検索結果",
 	"Menu_SearchBar_YourTopGenres": "あなたのトップジャンル",
 	"Menu_SearchBar_BrowseBy": "絞り込み検索...",
+	"Menu_SearchBar_NoMatches": "検索条件に一致するアイテムはありません。",
+	"Menu_SearchBar_AdvancedSearch": "高度な検索",
 	"Menu_Search": "検索",
 	"Menu_Label": "ストアメニュー"
 }`);

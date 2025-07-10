@@ -701,12 +701,12 @@
         return i.createElement(
           h.eV,
           {
+            title: d,
             onOK: j,
             onCancel: e.closeModal,
             bDestructiveWarning: u,
             closeModal: t,
           },
-          i.createElement(c.Y9, null, " ", d, " "),
           i.createElement(
             c.nB,
             { className: B().SaveDialogBody },

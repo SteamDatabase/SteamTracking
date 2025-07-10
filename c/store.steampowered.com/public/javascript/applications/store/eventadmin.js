@@ -2940,8 +2940,9 @@
             default:
               return _.createElement(
                 _._,
-                null,
-                _.createElement(_._, null, " ", this.GetStrTitle(), " "),
+                {
+                  title: this.GetStrTitle(),
+                },
                 _.createElement(
                   _._,
                   null,
@@ -3039,8 +3040,9 @@
             case "create_post":
               return _.createElement(
                 _._,
-                null,
-                _.createElement(_._, null, " ", this.GetStrTitle(), " "),
+                {
+                  title: this.GetStrTitle(),
+                },
                 _.createElement(
                   _._,
                   null,
@@ -3089,8 +3091,9 @@
             case "update_post":
               return _.createElement(
                 _._,
-                null,
-                _.createElement(_._, null, " ", this.GetStrTitle(), " "),
+                {
+                  title: this.GetStrTitle(),
+                },
                 _.createElement(
                   _._,
                   null,
@@ -4702,6 +4705,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         m_cancelSignal = _().CancelToken.source();
@@ -4746,7 +4750,7 @@
               });
         }
         async GetImageInfo(_, _, __webpack_require__ = "") {
-          const _ = _._.GetExtensionTypeFromURL(_),
+          const _ = (0, _._)(_),
             _ = _._.GetHashFromHashAndExt(_) + __webpack_require__;
           return _._.AsyncGetImageResolution(_, _, _, this.m_cancelSignal, !0);
         }
@@ -4768,7 +4772,7 @@
           for (let _ = 0; _ < _.length && _ < 31; ++_)
             if (_[_] && _[_].length > 0) {
               let _ = _[_],
-                _ = _._.GetExtensionTypeFromURL(_);
+                _ = (0, _._)(_);
               const _ = new _._(_.clan_steamid);
               if (_) {
                 let _ = await this.GetImageInfo(_, _).catch(

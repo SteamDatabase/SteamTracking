@@ -1382,6 +1382,7 @@
             _.nBasePackageId,
           );
         }
+        const _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
@@ -1393,6 +1394,7 @@
             _.createElement(
               _._,
               {
+                "aria-labelledby": _,
                 closeModal: () => __webpack_require__("closed"),
               },
               "editor" === _ &&
@@ -1406,7 +1408,9 @@
                     },
                     _.createElement(
                       "h2",
-                      null,
+                      {
+                        _: _,
+                      },
                       (0, _._)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
                     _.isPending && _.createElement(_._, null),

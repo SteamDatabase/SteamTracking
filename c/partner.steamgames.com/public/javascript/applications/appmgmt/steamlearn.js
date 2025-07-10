@@ -16156,14 +16156,16 @@
         _ = (_) => {
           (0, _._)();
           const _ = () => {
-            _.strRedirect &&
-              (console.log(`Pushing ${_.strRedirect}`),
-              (window.location.href = _.strRedirect)),
-              _.closeModal();
-          };
+              _.strRedirect &&
+                (console.log(`Pushing ${_.strRedirect}`),
+                (window.location.href = _.strRedirect)),
+                _.closeModal();
+            },
+            _ = _.useId();
           return _.createElement(
             _._,
             {
+              "aria-labelledby": _,
               className: _.CreateProjectResultDialog,
               onCancel: _,
               closeModal: _,
@@ -16171,6 +16173,7 @@
             _.createElement(
               "div",
               {
+                _: _,
                 className: _.CreateProjectResultDialogContents,
               },
               _.strResult,
@@ -21376,12 +21379,17 @@
                 value: 3,
               },
             ];
+          const _ = _.useId();
           return _.createElement(
             _._,
-            null,
+            {
+              "aria-labelledby": _,
+            },
             _.createElement(
               _._,
-              null,
+              {
+                _: _,
+              },
               (0, _._)("#SteamLearn_Config_Node_Title_DenseStack"),
               _.createElement(
                 "div",

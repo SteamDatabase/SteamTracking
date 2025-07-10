@@ -14607,21 +14607,23 @@
         Cn = (e) => {
           (0, s.W6)();
           const t = () => {
-            e.strRedirect &&
-              (console.log(`Pushing ${e.strRedirect}`),
-              (window.location.href = e.strRedirect)),
-              e.closeModal();
-          };
+              e.strRedirect &&
+                (console.log(`Pushing ${e.strRedirect}`),
+                (window.location.href = e.strRedirect)),
+                e.closeModal();
+            },
+            a = i.useId();
           return i.createElement(
-            yn.e,
+            yn.eV,
             {
+              "aria-labelledby": a,
               className: hn.CreateProjectResultDialog,
               onCancel: t,
               closeModal: t,
             },
             i.createElement(
               "div",
-              { className: hn.CreateProjectResultDialogContents },
+              { id: a, className: hn.CreateProjectResultDialogContents },
               e.strResult,
               i.createElement(rn.$n, { onClick: t }, (0, l.we)("#Button_OK")),
             ),
@@ -18984,12 +18986,13 @@
                 value: 3,
               },
             ];
+          const p = i.useId();
           return i.createElement(
-            yn.e,
-            null,
+            yn.eV,
+            { "aria-labelledby": p },
             i.createElement(
               rn.Y9,
-              null,
+              { id: p },
               (0, l.we)("#SteamLearn_Config_Node_Title_DenseStack"),
               i.createElement(
                 "div",

@@ -1920,8 +1920,11 @@
             a = P.KN.Get().GetPartnerEventPermissions(t.GetClanSteamID());
           return c.createElement(
             b.eV,
-            { onCancel: e, closeModal: e },
-            c.createElement(x.Y9, null, (0, I.we)("#EventEditor_Loc_Export")),
+            {
+              title: (0, I.we)("#EventEditor_Loc_Export"),
+              onCancel: e,
+              closeModal: e,
+            },
             c.createElement(
               x.nB,
               null,
@@ -3811,7 +3814,7 @@
         da = a(96971),
         ma = a(30294),
         ua = a(56654),
-        _a = a(82386);
+        _a = a(16741);
       function Ea(e) {
         const { editModel: t } = e,
           a = t.GetEventModel(),

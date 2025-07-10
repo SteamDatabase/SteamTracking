@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Начална страница на магазина",
 	"Menu_Popover_FreeToPlay": "Безплатни",
 	"Menu_Popover_SteamCharts": "Steam диаграми",
+	"Menu_Popover_Upcoming": "Предстоящи издания",
 	"Menu_Popover_PointsShop": "Точковият магазин",
 	"Menu_Popover_GiftCards": "Подаръчни карти",
 	"Menu_Popover_NewsAndUpdates": "Новини и обновления",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Новоиздадени",
 	"Menu_Section_Browse_Discounts": "Отстъпки и събития",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Списъкът Ви с желания",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s отстъпки",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Специални събития",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Популярни заглавия",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Специални оферти",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Резултати от търсене",
 	"Menu_SearchBar_YourTopGenres": "Върховите Ви жанрове",
 	"Menu_SearchBar_BrowseBy": "Преглед по…",
+	"Menu_SearchBar_NoMatches": "Няма съответстващи артикули за текущото Ви запитване.",
+	"Menu_SearchBar_AdvancedSearch": "Разширено търсене",
 	"Menu_Search": "Търсачка",
 	"Menu_Label": "Меню за магазина"
 }`);

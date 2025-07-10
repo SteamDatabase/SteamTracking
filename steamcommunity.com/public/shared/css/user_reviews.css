@@ -206,6 +206,24 @@ select {
 	min-height: 16px;
 }
 
+.reviewTags {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.reviewTags .reviewTag {
+	padding: 4px;
+	border: solid 1px darkblue;
+	background-color: #000035;
+	text-transform: uppercase;
+}
+
+.review_topic_menu_item {
+	display: block;
+}
+
 #ReviewEdit {
 	margin-right: 6px;
 }

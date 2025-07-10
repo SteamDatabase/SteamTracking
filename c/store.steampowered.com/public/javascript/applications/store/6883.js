@@ -312,6 +312,7 @@
         return _.createElement(
           _._,
           {
+            "aria-label": null,
             bAllowFullSize: !0,
             bOKDisabled: !0,
             closeModal: _,

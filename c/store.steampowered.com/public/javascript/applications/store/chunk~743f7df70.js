@@ -7954,6 +7954,7 @@
             _.createElement(
               _._,
               {
+                "aria-label": _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
                 bOKDisabled: !0,
                 bHideCloseIcon: !0,
                 onCancel: () => !1,
@@ -10104,6 +10105,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) => {
@@ -10833,41 +10835,43 @@
           } = _,
           _ = _(_),
           [_, _] = _.useState(Boolean(_.fnAction));
-        return (
-          _.useEffect(() => {
-            _.fnAction && (_(!0), _.fnAction().finally(() => _(!1)));
-          }, [_]),
+        _.useEffect(() => {
+          _.fnAction && (_(!0), _.fnAction().finally(() => _(!1)));
+        }, [_]);
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            bDisableBackgroundDismiss: !0,
+            closeModal: _,
+            onCancel: _,
+            className: "CSSActionDialogDialog",
+            "aria-labelledby": _,
+          },
           _.createElement(
             _._,
             {
-              bDisableBackgroundDismiss: !0,
-              closeModal: _,
-              onCancel: _,
-              className: "CSSActionDialogDialog",
+              _: _,
             },
+            Boolean(_.bInitialState) && (0, _._)(_),
+            Boolean(_.bSuccessState) && (0, _._)(_),
+            Boolean(_.bFailedState) && (0, _._)(_),
+          ),
+          _.createElement(
+            _._,
+            null,
             _.createElement(
               _._,
               null,
-              Boolean(_.bInitialState) && (0, _._)(_),
-              Boolean(_.bSuccessState) && (0, _._)(_),
-              Boolean(_.bFailedState) && (0, _._)(_),
+              _
+                ? _.createElement(_._, {
+                    size: "medium",
+                    position: "center",
+                    string: (0, _._)("#Loading"),
+                  })
+                : __webpack_require__,
             ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                _._,
-                null,
-                _
-                  ? _.createElement(_._, {
-                      size: "medium",
-                      position: "center",
-                      string: (0, _._)("#Loading"),
-                    })
-                  : __webpack_require__,
-              ),
-            ),
-          )
+          ),
         );
       }
       function _(_) {
@@ -10948,11 +10952,15 @@
         render() {
           return (
             this.m_parser.UpdateOverrideLanguage(this.props.languageOverride),
-            this.m_parser.ParseBBCode(this.props.text, {
-              showErrorInfo: this.props.showErrorInfo,
-              event: this.props.event,
-              bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
-            })
+            this.m_parser.ParseBBCode(
+              this.props.text,
+              {
+                showErrorInfo: this.props.showErrorInfo,
+                event: this.props.event,
+                bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
+              },
+              !0,
+            )
           );
         }
       }

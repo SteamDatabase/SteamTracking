@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Início",
 	"Menu_Popover_FreeToPlay": "Grátis para Jogar",
 	"Menu_Popover_SteamCharts": "Tabelas Steam",
+	"Menu_Popover_Upcoming": "Próximos lançamentos",
 	"Menu_Popover_PointsShop": "Loja de Pontos",
 	"Menu_Popover_GiftCards": "Cartões-presente",
 	"Menu_Popover_NewsAndUpdates": "Notícias e atualizações",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Novos lançamentos",
 	"Menu_Section_Browse_Discounts": "Descontos e eventos",
 	"Menu_Section_Browse_Discounts_YourWishlist": "A tua lista de desejos",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s descontos",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Eventos especiais",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Jogos populares",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Promoções especiais",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Resultados de pesquisa",
 	"Menu_SearchBar_YourTopGenres": "Os teus géneros mais jogados",
 	"Menu_SearchBar_BrowseBy": "Ver por...",
+	"Menu_SearchBar_NoMatches": "Nenhum item correspondeu à pesquisa.",
+	"Menu_SearchBar_AdvancedSearch": "Pesquisa avançada",
 	"Menu_Search": "Pesquisar",
 	"Menu_Label": "Menu da loja"
 }`);

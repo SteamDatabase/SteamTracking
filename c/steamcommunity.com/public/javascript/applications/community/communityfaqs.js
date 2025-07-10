@@ -8008,14 +8008,10 @@
         return _.createElement(
           _._,
           {
+            title: (0, _._)("#FAQDashboard_CrowdinToolTitle"),
             ..._,
             onCancel: () => _.cancel("CrowdinImportDialog cancelled"),
           },
-          _.createElement(
-            _._,
-            null,
-            (0, _._)("#FAQDashboard_CrowdinToolTitle"),
-          ),
           _.createElement(
             _._,
             null,
@@ -9326,88 +9322,90 @@
           const { draft: _, closeModal: __webpack_require__ } = _,
             [_, _] = _.useState(!0),
             [_, _] = _.useState(void 0);
-          return (
-            _.useEffect(() => {
-              (async () => {
-                _(!0);
-                try {
-                  const _ = await _.SaveDrafts();
-                  _(_);
-                } catch (_) {
-                  _(2),
-                    console.log(
-                      "FAQSaveProgressDialog hit exception " +
-                        (0, _._)(_).strErrorMsg,
-                    );
-                } finally {
-                  _(!1);
-                }
-              })();
-            }, [_]),
+          _.useEffect(() => {
+            (async () => {
+              _(!0);
+              try {
+                const _ = await _.SaveDrafts();
+                _(_);
+              } catch (_) {
+                _(2),
+                  console.log(
+                    "FAQSaveProgressDialog hit exception " +
+                      (0, _._)(_).strErrorMsg,
+                  );
+              } finally {
+                _(!1);
+              }
+            })();
+          }, [_]);
+          const _ = _.useId();
+          return _.createElement(
+            _._,
+            {
+              "aria-labelledby": _,
+              bAllowFullSize: !0,
+              onCancel: __webpack_require__,
+              closeModal: __webpack_require__,
+            },
             _.createElement(
               _._,
               {
-                bAllowFullSize: !0,
-                onCancel: __webpack_require__,
-                closeModal: __webpack_require__,
+                _: _,
               },
-              _.createElement(
-                _._,
-                null,
-                _
-                  ? _.createElement("div", null, (0, _._)("#FAQSave_Saving"))
-                  : _.createElement(
-                      "div",
-                      null,
-                      (0, _._)(
-                        Boolean(1 == _)
-                          ? "#FAQSave_SaveSuccess"
-                          : "#FAQSave_Error",
-                      ),
-                      " ",
-                    ),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _
-                  ? _.createElement(_._, {
-                      size: "medium",
-                      position: "center",
-                    })
-                  : _.createElement(
-                      "div",
-                      null,
+              _
+                ? _.createElement("div", null, (0, _._)("#FAQSave_Saving"))
+                : _.createElement(
+                    "div",
+                    null,
+                    (0, _._)(
                       Boolean(1 == _)
-                        ? _.createElement(
-                            "div",
-                            null,
-                            (0, _._)("#FAQSave_SaveSuccess_desc"),
-                          )
-                        : _.createElement(
-                            "div",
-                            null,
-                            (0, _._)(
-                              "#Error_Description",
-                              _,
-                              (0, _._)("#Error_GenericFailureDescription"),
-                            ),
-                          ),
+                        ? "#FAQSave_SaveSuccess"
+                        : "#FAQSave_Error",
                     ),
-              ),
-              _.createElement(
-                _._,
-                null,
-                !_ &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: __webpack_require__,
-                    },
-                    (0, _._)("#Button_OK"),
+                    " ",
                   ),
-              ),
-            )
+            ),
+            _.createElement(
+              _._,
+              null,
+              _
+                ? _.createElement(_._, {
+                    size: "medium",
+                    position: "center",
+                  })
+                : _.createElement(
+                    "div",
+                    null,
+                    Boolean(1 == _)
+                      ? _.createElement(
+                          "div",
+                          null,
+                          (0, _._)("#FAQSave_SaveSuccess_desc"),
+                        )
+                      : _.createElement(
+                          "div",
+                          null,
+                          (0, _._)(
+                            "#Error_Description",
+                            _,
+                            (0, _._)("#Error_GenericFailureDescription"),
+                          ),
+                        ),
+                  ),
+            ),
+            _.createElement(
+              _._,
+              null,
+              !_ &&
+                _.createElement(
+                  _._,
+                  {
+                    onClick: __webpack_require__,
+                  },
+                  (0, _._)("#Button_OK"),
+                ),
+            ),
           );
         };
       var _ = __webpack_require__("chunkid"),
@@ -9511,15 +9509,11 @@
           return _.createElement(
             _._,
             {
+              title: (0, _._)("#FAQEditor_ChangeInternalName"),
               bAllowFullSize: !0,
               onCancel: _,
               closeModal: _,
             },
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#FAQEditor_ChangeInternalName"),
-            ),
             _.createElement(
               _._,
               null,

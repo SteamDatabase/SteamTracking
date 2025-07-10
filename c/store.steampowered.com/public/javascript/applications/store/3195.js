@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Mağaza Ana Sayfası",
 	"Menu_Popover_FreeToPlay": "Oynaması Ücretsiz",
 	"Menu_Popover_SteamCharts": "Steam Sıralamaları",
+	"Menu_Popover_Upcoming": "Pek Yakında Çıkacaklar",
 	"Menu_Popover_PointsShop": "Puan Dükkânı",
 	"Menu_Popover_GiftCards": "Hediye Kartları",
 	"Menu_Popover_NewsAndUpdates": "Haberler ve Güncellemeler",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Yeni Çıkanlar",
 	"Menu_Section_Browse_Discounts": "İndirimler ve Etkinlikler",
 	"Menu_Section_Browse_Discounts_YourWishlist": "İstek Listeniz",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s indirim",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Özel Etkinlikler",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Popüler Ürünler",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Özel Teklifler",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Arama Sonuçları",
 	"Menu_SearchBar_YourTopGenres": "En sevdiğiniz türler",
 	"Menu_SearchBar_BrowseBy": "Göz at...",
+	"Menu_SearchBar_NoMatches": "Sorgunuzla eşleşen öğe bulunamadı.",
+	"Menu_SearchBar_AdvancedSearch": "Gelişmiş Arama",
 	"Menu_Search": "Ara",
 	"Menu_Label": "Mağaza menüsü"
 }`);

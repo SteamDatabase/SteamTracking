@@ -361,12 +361,11 @@
 	opacity: 0.3;
 }
 
-.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule,
-.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img {
-	opacity: 0.05;
+.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule {
+	filter: blur(10px);
+	opacity: 0.3;
 }
 .search_result_row.ds_flagged.ds_excluded_by_preferences .responsive_search_name_combined {
-	opacity: 0.0;
 }
 
 .search_result_row.ds_flagged.ds_excluded_blur .col.search_capsule {

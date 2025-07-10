@@ -539,35 +539,33 @@
             bParentHovered: _,
             ..._
           } = this.props;
-          return (
-            _.onClick &&
-              (_ = {
-                ..._,
-                cursor: "pointer",
-              }),
-            this.state.bAnimate || (_ = null),
-            _.createElement(
-              "div",
-              {
-                onMouseEnter: () =>
-                  this.setState({
-                    bAnimate: "None" != this.props.loopDuration,
-                  }),
-                onMouseLeave: () => this.SetupAnimationTimer(),
-              },
-              _.createElement(
-                _,
-                {
-                  animatedAvatar: _,
-                  ..._,
-                },
-                _,
-                _.createElement(_, {
-                  profileItem: __webpack_require__,
-                  bDisableAnimation: _ && !this.state.bAnimate,
+          _.onClick &&
+            (_ = {
+              ..._,
+              cursor: "pointer",
+            });
+          const _ = this.state.bAnimate ? (_ ?? null) : null;
+          return _.createElement(
+            "div",
+            {
+              onMouseEnter: () =>
+                this.setState({
+                  bAnimate: "None" != this.props.loopDuration,
                 }),
-              ),
-            )
+              onMouseLeave: () => this.SetupAnimationTimer(),
+            },
+            _.createElement(
+              _,
+              {
+                animatedAvatar: _,
+                ..._,
+              },
+              _,
+              _.createElement(_, {
+                profileItem: __webpack_require__,
+                bDisableAnimation: _ && !this.state.bAnimate,
+              }),
+            ),
           );
         }
       };

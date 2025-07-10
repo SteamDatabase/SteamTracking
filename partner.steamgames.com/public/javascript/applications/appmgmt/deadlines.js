@@ -75,9 +75,6 @@
         DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
         FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
         MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
-        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
-        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
         UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
         UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
         MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
@@ -2484,11 +2481,11 @@
                 n.createElement(
                   n.Fragment,
                   null,
-                  h && n.createElement(D, { strTemplate: y }),
+                  h && n.createElement(q, { strTemplate: y }),
                   v &&
                     f.length > 0 &&
                     f.map((e, t) =>
-                      n.createElement(q, {
+                      n.createElement(D, {
                         key: "update_" + t,
                         requirement: {
                           deadline: e,
@@ -2564,7 +2561,7 @@
           ),
         );
       }
-      function D(e) {
+      function q(e) {
         const { strTemplate: t } = e,
           [a, i] = n.useState(t || "Renewal-W8-Initial"),
           [r, o] = n.useState(!0),
@@ -2601,7 +2598,7 @@
               ),
             ),
             n.createElement("br", null),
-            n.createElement(q, {
+            n.createElement(D, {
               requirement: {
                 deadline: c,
                 index: 0,
@@ -2612,7 +2609,7 @@
           )
         );
       }
-      function q(e) {
+      function D(e) {
         const { requirement: t } = e,
           a = JSON.parse(t.deadline.data.description_jsondata),
           [, i] = P(),

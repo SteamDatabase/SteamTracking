@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Domovská stránka",
 	"Menu_Popover_FreeToPlay": "Free to play",
 	"Menu_Popover_SteamCharts": "Žebříčky",
+	"Menu_Popover_Upcoming": "Nadcházející vydání",
 	"Menu_Popover_PointsShop": "Věrnostní obchod",
 	"Menu_Popover_GiftCards": "Dárkové kupony",
 	"Menu_Popover_NewsAndUpdates": "Novinky a aktualizace",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Nově vydané",
 	"Menu_Section_Browse_Discounts": "Slevy a výprodeje",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Váš seznam přání",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s slev",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Speciální události",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Populární",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Momentálně zlevněné",
@@ -87,6 +89,8 @@
 	"Menu_SearchBar_SearchResults": "Výsledky vyhledávání",
 	"Menu_SearchBar_YourTopGenres": "Vaše nejhranější žánry",
 	"Menu_SearchBar_BrowseBy": "Procházet podle...",
+	"Menu_SearchBar_NoMatches": "Vašemu zadání neodpovídají žádné produkty.",
+	"Menu_SearchBar_AdvancedSearch": "Pokročilé vyhledávání",
 	"Menu_Search": "Vyhledávání",
 	"Menu_Label": "Nabídka obchodu"
 }`);

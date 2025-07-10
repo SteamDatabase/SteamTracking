@@ -1348,6 +1348,12 @@ div#global_header .content {
 	z-index: 402;
 }
 
+body.v7menu div#global_header .content {
+	width: auto;
+	min-width: 940px;
+	max-width: 1100px;
+}
+
 div#global_actions {
 	position: absolute;
 	right: 0px;
@@ -1425,6 +1431,19 @@ div#global_header .menuitem {
     font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
+}
+div#global_header .menuitem:focus {
+	outline: none;
+}
+div#global_header .menuitem:focus::before {
+	outline: auto Highlight;
+	outline: auto -webkit-focus-ring-color;
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
 }
 
 div#global_header .menuitem.active, div#global_header .menuitem:hover {

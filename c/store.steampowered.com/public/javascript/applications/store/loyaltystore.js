@@ -1417,30 +1417,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            children: _,
-            navTreeRef: __webpack_require__,
-            NavigationManager: _,
-            ..._
-          } = _,
+      const _ = _.forwardRef(function (_, _) {
+        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
           _ = _.useRef(),
-          _ = (0, _._)(_, __webpack_require__);
-        if ((0, _._)()) {
-          const _ = window.__nav_tree_root;
-          return _.createElement(
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            navTreeRef: _,
+            ref: _,
+            parentEmbeddedNavTree: _,
+            disabledRoot: !_,
+          },
+          _.createElement(
             _._,
             {
-              ..._,
-              navTreeRef: _,
-              parentEmbeddedNavTree: _,
+              disableFocusRing: !_,
             },
-            _.createElement(_._, null, _),
-          );
-        }
-        return _.createElement(_.Fragment, null, _);
-      }
+            __webpack_require__,
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1982,11 +1984,14 @@
         return (0, _.useContext)(_);
       }
       function _(_) {
+        return "number" == typeof _ ? `${_}px` : _;
+      }
+      function _(_) {
         return {
-          top: _.vertical || _.top || 0,
-          bottom: _.vertical || _.bottom || 0,
-          left: _.horizontal || _.left || 0,
-          right: _.horizontal || _.right || 0,
+          top: _(_.vertical || _.top || "0"),
+          bottom: _(_.vertical || _.bottom || "0"),
+          left: _(_.horizontal || _.left || "0"),
+          right: _(_.horizontal || _.right || "0"),
         };
       }
       function _(_) {
@@ -1994,17 +1999,17 @@
         const { top: _, bottom: __webpack_require__, left: _, right: _ } = _,
           _ = {};
         return (
-          _ && (_.marginTop = `-${_}px`),
-          __webpack_require__ && (_.marginBottom = `-${__webpack_require__}px`),
-          _ && (_.marginLeft = `-${_}px`),
-          _ && (_.marginRight = `-${_}px`),
+          _ && (_.marginTop = `-${_}`),
+          __webpack_require__ && (_.marginBottom = `-${__webpack_require__}`),
+          _ && (_.marginLeft = `-${_}`),
+          _ && (_.marginRight = `-${_}`),
           _
         );
       }
       function _() {
         const _ = _();
         if (!_) return;
-        const _ = `${_.top}px ${_.right}px ${_.bottom}px ${_.left}px`;
+        const _ = `${_(_.top)} ${_(_.right)} ${_(_.bottom)} ${_(_.left)}`;
         return {
           padding: _,
           scrollPadding: _,
@@ -15765,11 +15770,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
-          _ = (0, _._)(),
           _ = _.useRef(void 0);
         _.useEffect(() => _.current?.Activate(!0), []);
         const _ = (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI;
@@ -15780,8 +15783,8 @@
             _._,
             {
               navID: "LoyaltyShell",
-              NavigationManager: _,
               navTreeRef: _,
+              className: (0, _._)(_.Shell),
             },
             _.createElement(
               _._,

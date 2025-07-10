@@ -778,7 +778,8 @@
             return e.node.createAndFill(o, r) || e.node.createChecked(o, r);
           } catch (o) {
             return (
-              console.error(
+              (0, i.wT)(
+                !1,
                 `Invalid content for node type ${e.node.name}, removing and promoting children.`,
               ),
               t

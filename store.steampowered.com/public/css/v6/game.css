@@ -1658,9 +1658,93 @@ body.v6 .game_description_column h2.gradientbg {
 	margin-bottom: 6px;
 }
 
-.game_area_description img.bb_img,
-.game_area_description video.bb_img {
+.game_area_description .bb_img_ctn {
+	position: relative;
+	display: inline-block;
+}
+
+.game_area_description .bb_img {
 	max-width: 100%;
+}
+
+.game_area_description .bb_img_icons {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 8px;
+	right: 8px;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+/* default hidden play icon */
+.game_area_description .bb_img_play_pause {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	line-height: 1;
+	font-size: 18px;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 50%;
+	user-select: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.game_area_description .bb_img_play_pause.paused {
+	opacity: 1;
+	text-indent: 3px; /* nudge to center */
+}
+
+.game_area_description .bb_img_ctn:hover .bb_img_play_pause.playing {
+	opacity: 1;
+}
+
+.game_area_description .bb_img_play_pause[data-tooltip][data-tooltip-visible="true"]:hover::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 120%;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 4px 8px;
+	font-size: 12px;
+	border-radius: 4px;
+	white-space: nowrap;
+	max-width: 600px;
+	min-width: 300px;
+	white-space: normal;
+	word-wrap: break-word;
+	z-index: 10;
+}
+
+/* default hidden play icon */
+.game_area_description .bb_img_expand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	line-height: 1;
+	font-size: 18px;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 50%;
+	user-select: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	cursor: pointer;
+}
+
+.game_area_description .bb_img_ctn:hover .bb_img_expand {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 body.v6 .game_area_description h2.bb_tag {
@@ -3455,10 +3539,11 @@ img.agegate_img_package {
 	max-width: 550px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 20px;
 }
 
 h2.forbiddenbyfamily_header {
-	font-size: 24px;
+	font-size: 28px;
 }
 
 .forbiddenbyfamily_capsule_img {
@@ -3473,7 +3558,7 @@ h2.forbiddenbyfamily_header {
 }
 
 .forbiddenbyfamily_capsule_img > img {
-
+    max-width: 100%;
 }
 
 .forbiddenbyfamily_text {
@@ -6567,8 +6652,7 @@ a.open_in_steam_body:hover {
     height: 10px;
 }
 
-.mask_images .game_area_description img.bb_img
-.mask_images .game_area_description video.bb_img {
+.mask_images .game_area_description .bb_img {
 	filter: blur(30px);
 	clip-path: inset(0);	}
 
@@ -6648,6 +6732,7 @@ a.open_in_steam_body:hover {
 
 .widestore img.game_header_image_full {
 	width: 375px;
+	height: unset;
 }
 
 .widestore .game_description_snippet {

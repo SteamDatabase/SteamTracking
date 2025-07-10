@@ -1383,11 +1383,11 @@
         return _.createElement(
           _._,
           {
+            title: `Edit Category (ID ${_._})`,
             bAllowFullSize: !0,
             onCancel: _,
             closeModal: _,
           },
-          _.createElement(_._, null, "Edit Category (ID ", _._, ")"),
           _.createElement(
             _._,
             null,

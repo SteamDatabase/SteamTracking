@@ -7882,12 +7882,11 @@
           y = t[o].internal_name;
         return s.createElement(
           A.eV,
-          { ...e, onCancel: () => m.cancel("CrowdinImportDialog cancelled") },
-          s.createElement(
-            _.Y9,
-            null,
-            (0, q.we)("#FAQDashboard_CrowdinToolTitle"),
-          ),
+          {
+            title: (0, q.we)("#FAQDashboard_CrowdinToolTitle"),
+            ...e,
+            onCancel: () => m.cancel("CrowdinImportDialog cancelled"),
+          },
           s.createElement(
             _.nB,
             null,
@@ -9017,79 +9016,79 @@
           const { draft: t, closeModal: a } = e,
             [o, i] = s.useState(!0),
             [n, r] = s.useState(void 0);
-          return (
-            s.useEffect(() => {
-              (async () => {
-                i(!0);
-                try {
-                  const e = await t.SaveDrafts();
-                  r(e);
-                } catch (e) {
-                  r(2),
-                    console.log(
-                      "FAQSaveProgressDialog hit exception " +
-                        (0, g.H)(e).strErrorMsg,
-                    );
-                } finally {
-                  i(!1);
-                }
-              })();
-            }, [t]),
+          s.useEffect(() => {
+            (async () => {
+              i(!0);
+              try {
+                const e = await t.SaveDrafts();
+                r(e);
+              } catch (e) {
+                r(2),
+                  console.log(
+                    "FAQSaveProgressDialog hit exception " +
+                      (0, g.H)(e).strErrorMsg,
+                  );
+              } finally {
+                i(!1);
+              }
+            })();
+          }, [t]);
+          const l = s.useId();
+          return s.createElement(
+            A.eV,
+            {
+              "aria-labelledby": l,
+              bAllowFullSize: !0,
+              onCancel: a,
+              closeModal: a,
+            },
             s.createElement(
-              A.eV,
-              { bAllowFullSize: !0, onCancel: a, closeModal: a },
-              s.createElement(
-                _.Y9,
-                null,
-                o
-                  ? s.createElement("div", null, (0, q.we)("#FAQSave_Saving"))
-                  : s.createElement(
-                      "div",
-                      null,
-                      (0, q.we)(
-                        Boolean(1 == n)
-                          ? "#FAQSave_SaveSuccess"
-                          : "#FAQSave_Error",
-                      ),
-                      " ",
-                    ),
-              ),
-              s.createElement(
-                _.nB,
-                null,
-                o
-                  ? s.createElement(P.t, { size: "medium", position: "center" })
-                  : s.createElement(
-                      "div",
-                      null,
+              _.Y9,
+              { id: l },
+              o
+                ? s.createElement("div", null, (0, q.we)("#FAQSave_Saving"))
+                : s.createElement(
+                    "div",
+                    null,
+                    (0, q.we)(
                       Boolean(1 == n)
-                        ? s.createElement(
-                            "div",
-                            null,
-                            (0, q.we)("#FAQSave_SaveSuccess_desc"),
-                          )
-                        : s.createElement(
-                            "div",
-                            null,
-                            (0, q.we)(
-                              "#Error_Description",
-                              n,
-                              (0, q.we)("#Error_GenericFailureDescription"),
-                            ),
-                          ),
+                        ? "#FAQSave_SaveSuccess"
+                        : "#FAQSave_Error",
                     ),
-              ),
-              s.createElement(
-                _.wi,
-                null,
-                !o &&
-                  s.createElement(
-                    _.jn,
-                    { onClick: a },
-                    (0, q.we)("#Button_OK"),
+                    " ",
                   ),
-              ),
-            )
+            ),
+            s.createElement(
+              _.nB,
+              null,
+              o
+                ? s.createElement(P.t, { size: "medium", position: "center" })
+                : s.createElement(
+                    "div",
+                    null,
+                    Boolean(1 == n)
+                      ? s.createElement(
+                          "div",
+                          null,
+                          (0, q.we)("#FAQSave_SaveSuccess_desc"),
+                        )
+                      : s.createElement(
+                          "div",
+                          null,
+                          (0, q.we)(
+                            "#Error_Description",
+                            n,
+                            (0, q.we)("#Error_GenericFailureDescription"),
+                          ),
+                        ),
+                  ),
+            ),
+            s.createElement(
+              _.wi,
+              null,
+              !o &&
+                s.createElement(_.jn, { onClick: a }, (0, q.we)("#Button_OK")),
+            ),
           );
         };
       var Xe = a(66444),
@@ -9180,12 +9179,12 @@
             [h, c] = s.useState(!1);
           return s.createElement(
             A.eV,
-            { bAllowFullSize: !0, onCancel: t, closeModal: t },
-            s.createElement(
-              _.Y9,
-              null,
-              (0, q.we)("#FAQEditor_ChangeInternalName"),
-            ),
+            {
+              title: (0, q.we)("#FAQEditor_ChangeInternalName"),
+              bAllowFullSize: !0,
+              onCancel: t,
+              closeModal: t,
+            },
             s.createElement(
               _.nB,
               null,

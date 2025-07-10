@@ -26,6 +26,7 @@
 	"Menu_Popover_StoreHome": "Beranda Toko",
 	"Menu_Popover_FreeToPlay": "F2P",
 	"Menu_Popover_SteamCharts": "Grafik Steam",
+	"Menu_Popover_Upcoming": "Rilisan Mendatang",
 	"Menu_Popover_PointsShop": "Toko Poin",
 	"Menu_Popover_GiftCards": "Kartu Hadiah",
 	"Menu_Popover_NewsAndUpdates": "Berita & Pembaruan",
@@ -53,6 +54,7 @@
 	"Menu_Section_Browse_NewReleases": "Rilisan Terbaru",
 	"Menu_Section_Browse_Discounts": "Diskon & Event",
 	"Menu_Section_Browse_Discounts_YourWishlist": "Wishlist-mu",
+	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s Diskon",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Event Spesial",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Produk Populer",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Penawaran Spesial",
@@ -87,6 +89,7 @@
 	"Menu_SearchBar_SearchResults": "Hasil Pencarian",
 	"Menu_SearchBar_YourTopGenres": "Genre teratasmu",
 	"Menu_SearchBar_BrowseBy": "Telusuri berdasarkan...",
+	"Menu_SearchBar_AdvancedSearch": "Pencarian Lebih Lanjut",
 	"Menu_Search": "Cari",
 	"Menu_Label": "Menu Toko"
 }`);

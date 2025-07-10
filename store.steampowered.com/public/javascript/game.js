@@ -552,6 +552,11 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	var playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
 	var playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
 	var playtimeType = $J( 'input[name="review_playtime_type"]:checked' ).val();
+	var topics = [];
+	$J( 'input[name="review_topic"]:checked' ).each( ( index, elem ) =>
+	{
+		topics.push( $J( elem ).val() );
+	});
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -571,6 +576,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 		'playtime_filter_min' : playtimeFilterMin,
 		'playtime_filter_max' : playtimeFilterMax,
 		'playtime_type' : playtimeType,
+		'topics' : topics,
 		'filter_offtopic_activity' : filterOfftopicActivity,
 		'summary_num_positive_reviews' : summaryNumPositiveReviews,
 		'summary_num_reviews' : summaryNumReviews
@@ -765,6 +771,33 @@ function EditUserReviewScorePreference()
 		var dialogContent = $J( response.html );
 		var dialog = ShowAlertDialog( 'Review Score Settings', dialogContent, 'Cancel' );
 	});
+}
+
+function SetUserReviewScorePreference( pref )
+{
+	if ( g_AccountID == 0 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		return;
+	}
+
+	var rgData = {
+		preference: pref,
+		sessionid : g_sessionID
+	};
+	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
+		function( json )
+		{
+			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
+			window.location.href = h + '#app_reviews_hash';
+			window.location.reload( true );
+		}
+	).fail(
+		function( json )
+		{
+			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
+		}
+	);
 }
 
 function IntervalDistance( min1, max1, min2, max2 )
@@ -1503,6 +1536,13 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_deck_playtime" ).hide();
 	}
 
+	// topic
+	$J( ".review_topic_filter" ).hide();
+	$J( 'input[name="review_topic"]:checked' ).each( ( index, elem ) =>
+	{
+		$J( "#review_topic_filter" + $J( elem ).val() ).show();
+	} );
+
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
 }
 
@@ -1576,6 +1616,13 @@ function ClearDeckPlaytimeFilter()
 {
 	$J('#review_playtime_type_all').attr( 'checked', true );
 	SelectPlaytimeFilterPreset( 0 );
+}
+
+function SetReviewTopicFilter( strTopicId, bSet )
+{
+	$J('input[name="review_topic"][value="' + strTopicId + '"]').prop( 'checked', bSet ); // check the menu item (or not)
+	$J('input[name="review_topic"][value="' + strTopicId + '"]').parent().show(); // make sure we're showing the menu item
+	ShowFilteredReviews();
 }
 
 function CollapseLongReviews()
@@ -2384,5 +2431,12 @@ function SetupReviewFilterMenus()
 			}
 		} );
 	} );
+
+	// $J( 'input[name="review_topic"]' ).not( '[always-show]' ).each( function()
+	// {
+	// 	$J(this).hide();
+	// 	$J('label[for="' + this.id + '"]').hide();
+	// } );
+
 }
 

@@ -19,6 +19,115 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
+      const _ = ({
+        active: _,
+        onDismiss: _,
+        className: __webpack_require__,
+        modalClassName: _,
+        children: _,
+      }) =>
+        _.createElement(
+          _._,
+          {
+            active: _,
+          },
+          _.createElement(
+            _._,
+            {
+              onEscKeypress: _,
+              className: _,
+            },
+            _.createElement(
+              _._,
+              {
+                className: __webpack_require__,
+              },
+              _,
+            ),
+          ),
+        );
+      function _(_) {
+        const { className: _, children: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _,
+            },
+            __webpack_require__,
+          ),
+        );
+      }
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
+          _ = _.createRef(),
+          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
+        return (0, _._)() && !_._.IN_STEAMUI
+          ? _.createElement(
+              _._,
+              {
+                navID: __webpack_require__,
+                navTreeRef: _,
+                onCancelButton: _,
+                className: _.GamepadOnlyModalWrapper,
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    className: _.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: _,
+                    focusableIfNoChildren: !0,
+                  },
+                  _,
+                ),
+              ),
+            )
+          : _.createElement(_.Fragment, null, _);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -406,9 +515,9 @@
             const _ = this.#c(_).map((_) =>
               _.observer.getOptimisticResult(_.defaultedQueryOptions),
             );
-            return [_, (_) => this.#h(_ ?? _, _), () => this.#m(_, _)];
+            return [_, (_) => this.#m(_ ?? _, _), () => this.#h(_, _)];
           }
-          #m(_, _) {
+          #h(_, _) {
             const _ = this.#c(_);
             return __webpack_require__.map((_, _) => {
               const _ = _[_];
@@ -421,7 +530,7 @@
                   });
             });
           }
-          #h(_, _) {
+          #m(_, _) {
             return _
               ? ((this.#i && this.#t === this.#o && _ === this.#a) ||
                   ((this.#a = _),
@@ -475,7 +584,7 @@
           #u() {
             if (this.hasListeners()) {
               this.#i !==
-                this.#h(this.#m(this.#t, this.#s), this.#n?.combine) &&
+                this.#m(this.#h(this.#t, this.#s), this.#n?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {
                     _(this.#t);

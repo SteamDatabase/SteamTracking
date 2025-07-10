@@ -336,26 +336,31 @@
     },
     12447: (e, t, n) => {
       "use strict";
-      n.d(t, { u: () => s });
+      n.d(t, { u: () => c });
       var a = n(8871),
         r = n(90626),
         l = n(78327),
         o = n(85585),
-        i = n(7445);
-      function s(e) {
-        const { children: t, navTreeRef: n, NavigationManager: s, ...c } = e,
-          u = r.useRef(),
-          m = (0, a.Ue)(u, n);
-        if ((0, l.Qn)()) {
-          const e = window.__nav_tree_root;
-          return r.createElement(
-            o.B2,
-            { ...c, navTreeRef: m, parentEmbeddedNavTree: e },
-            r.createElement(i.q, null, t),
-          );
-        }
-        return r.createElement(r.Fragment, null, t);
-      }
+        i = n(7445),
+        s = n(87133);
+      const c = r.forwardRef(function (e, t) {
+        const { children: n, navTreeRef: c, ...u } = e,
+          m = r.useRef(),
+          d = (0, a.Ue)(m, c),
+          p = (0, l.Qn)(),
+          h = (0, s.AO)("__nav_tree_root");
+        return r.createElement(
+          o.B2,
+          {
+            ...u,
+            navTreeRef: d,
+            ref: t,
+            parentEmbeddedNavTree: h,
+            disabledRoot: !p,
+          },
+          r.createElement(i.q, { disableFocusRing: !p }, n),
+        );
+      });
     },
     94057: (e, t, n) => {
       "use strict";
@@ -1545,8 +1550,8 @@
         A = n(75844),
         k = n(22837),
         L = n(68033),
-        B = n(41550),
-        R = n(56011),
+        R = n(41550),
+        B = n(56011),
         M = n(76684),
         D = n(738),
         G = n(6019),
@@ -1633,14 +1638,14 @@
                           className: G.TileActionInner,
                           onClick: (e) => {
                             (0, D.pg)(
-                              a.createElement(B.AD, {
+                              a.createElement(R.AD, {
                                 initialEvent: o,
                                 bShowOnlyInitialEvent: !1,
                                 partnerEventStore: m.O3,
                                 emoticonStore: L.A,
                                 showAppHeader: !0,
                               }),
-                              R.uX(e),
+                              B.uX(e),
                             );
                           },
                         },
@@ -2344,8 +2349,8 @@
             o = (0, ke.Ue)(l, t);
           return a.createElement("div", { ref: o, ...r }, n);
         }),
-        Be = 2e3,
-        Re = 500,
+        Re = 2e3,
+        Be = 500,
         Me = 4e3,
         De = a.createContext(null);
       function Ge() {
@@ -2385,7 +2390,7 @@
             ),
             i = (0, a.useCallback)(
               (e) => {
-                "touch" != e.pointerType && 0 == r.current && t(!0, Re);
+                "touch" != e.pointerType && 0 == r.current && t(!0, Be);
               },
               [t],
             ),
@@ -2424,7 +2429,7 @@
         return [t || e, n];
       }
       function Fe(e) {
-        return "touch" == e.pointerType ? Me : Be;
+        return "touch" == e.pointerType ? Me : Re;
       }
       function Oe(e) {
         let t = e.target,
@@ -2622,8 +2627,8 @@
             (e) => {
               if (((l.current = e), !e)) return;
               let t = (t) => {
-                let a = (0, R.id)(e, t.target),
-                  l = (0, R.id)(n.current, t.target);
+                let a = (0, B.id)(e, t.target),
+                  l = (0, B.id)(n.current, t.target);
                 a || l || r();
               };
               return (
@@ -3247,8 +3252,8 @@
         );
       }
       var Lt = n(73750),
-        Bt = n.n(Lt),
-        Rt = n(88006);
+        Rt = n.n(Lt),
+        Bt = n(88006);
       const Mt = 3e3,
         Dt = 1500;
       function Gt(e) {
@@ -3270,13 +3275,13 @@
           o = (function (e, t) {
             let n = (0, a.useCallback)(
               (n) => {
-                if (n.detail.button == Rt.pR.TRIGGER_LEFT && e) {
+                if (n.detail.button == Bt.pR.TRIGGER_LEFT && e) {
                   let a = Math.max(0, e.GetPlaybackTime() - 10);
                   return (
                     e.Seek(a), t(), n.preventDefault(), void n.stopPropagation()
                   );
                 }
-                if (n.detail.button == Rt.pR.TRIGGER_RIGHT && e) {
+                if (n.detail.button == Bt.pR.TRIGGER_RIGHT && e) {
                   let a = Math.min(
                     e.GetTimelineDuration(),
                     e.GetPlaybackTime() + 10,
@@ -3304,7 +3309,7 @@
           C = l
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          y = (0, U.A)(Bt().PlayerControls, n && Bt().ShowControls);
+          y = (0, U.A)(Rt().PlayerControls, n && Rt().ShowControls);
         return a.createElement(
           s.Z,
           {
@@ -3322,30 +3327,30 @@
             a.createElement(xt, null),
             a.createElement(
               "div",
-              { className: Bt().LowerControls },
+              { className: Rt().LowerControls },
               a.createElement(dt, { player: t, showHoverThumb: !1 }),
               a.createElement(
                 "div",
-                { className: Bt().ButtonRow },
+                { className: Rt().ButtonRow },
                 a.createElement(
                   "div",
-                  { className: Bt().LeftGroup },
+                  { className: Rt().LeftGroup },
                   a.createElement(Et, { player: t }),
                   a.createElement(it, { player: t }),
                 ),
                 a.createElement(
                   "div",
-                  { className: Bt().RightGroup },
+                  { className: Rt().RightGroup },
                   a.createElement(gt, { player: t }),
                 ),
               ),
             ),
-            a.createElement("div", { ref: h, className: Bt().MenuLayer }),
+            a.createElement("div", { ref: h, className: Rt().MenuLayer }),
           ),
         );
       }
       function xt(e) {
-        return a.createElement("div", { className: Bt().BehindControlsFade });
+        return a.createElement("div", { className: Rt().BehindControlsFade });
       }
       var Ht = n(22797);
       const Vt = 500;
@@ -4722,8 +4727,8 @@
           );
         };
       var Ln = n(61723),
-        Bn = n.n(Ln),
-        Rn = n(30470),
+        Rn = n.n(Ln),
+        Bn = n(30470),
         Mn = n(88340),
         Dn = n(60014);
       const Gn = new Map([
@@ -4842,26 +4847,26 @@
           ],
         ]),
         xn = new Map([
-          ["adventurer", { className: Bn().Adventurer }],
-          ["anime", { className: Bn().Anime }],
-          ["apocalypse", { className: Bn().Apocalypse }],
-          ["astronaut", { className: Bn().Astronaut }],
-          ["beach", { className: Bn().Beach }],
-          ["bed", { className: Bn().Bed }],
-          ["bus", { className: Bn().Bus }],
-          ["busstop", { className: Bn().BusStop }],
-          ["campfire", { className: Bn().Campfire }],
-          ["car", { className: Bn().Car }],
-          ["city", { className: Bn().City }],
-          ["family", { className: Bn().Family }],
-          ["farmer", { className: Bn().Farmer }],
-          ["knight", { className: Bn().Knight }],
-          ["miner", { className: Bn().Miner }],
-          ["porch", { className: Bn().Porch }],
-          ["robot", { className: Bn().Robot }],
-          ["superhero", { className: Bn().Superhero }],
-          ["woodsman", { className: Bn().Woodsman }],
-          ["zombies", { className: Bn().Zombies }],
+          ["adventurer", { className: Rn().Adventurer }],
+          ["anime", { className: Rn().Anime }],
+          ["apocalypse", { className: Rn().Apocalypse }],
+          ["astronaut", { className: Rn().Astronaut }],
+          ["beach", { className: Rn().Beach }],
+          ["bed", { className: Rn().Bed }],
+          ["bus", { className: Rn().Bus }],
+          ["busstop", { className: Rn().BusStop }],
+          ["campfire", { className: Rn().Campfire }],
+          ["car", { className: Rn().Car }],
+          ["city", { className: Rn().City }],
+          ["family", { className: Rn().Family }],
+          ["farmer", { className: Rn().Farmer }],
+          ["knight", { className: Rn().Knight }],
+          ["miner", { className: Rn().Miner }],
+          ["porch", { className: Rn().Porch }],
+          ["robot", { className: Rn().Robot }],
+          ["superhero", { className: Rn().Superhero }],
+          ["woodsman", { className: Rn().Woodsman }],
+          ["zombies", { className: Rn().Zombies }],
         ]);
       function Hn(e) {
         const { appid: t } = e,
@@ -4875,7 +4880,7 @@
           l = ((o = n.strBannerType), xn.get(o));
         var o;
         const i = (0, Dn.aL)(
-          Rn.TS.STORE_BASE_URL +
+          Bn.TS.STORE_BASE_URL +
             `app/${Mn.wy}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
           "topplayed_app_banner",
           t,
@@ -4883,30 +4888,30 @@
         return l
           ? a.createElement(
               "div",
-              { className: Bn().BannerWrapper },
+              { className: Rn().BannerWrapper },
               a.createElement(
                 "div",
-                { className: Bn().BannerTitle },
-                a.createElement("div", { className: Bn().DeckLogo }),
+                { className: Rn().BannerTitle },
+                a.createElement("div", { className: Rn().DeckLogo }),
                 (0, _.we)("#DeckTopPlayedAppBanner_Title"),
               ),
               a.createElement(
                 "a",
                 {
                   href: i,
-                  className: (0, U.A)(Bn().TopPlayedBannerCtn, l.className),
+                  className: (0, U.A)(Rn().TopPlayedBannerCtn, l.className),
                 },
                 a.createElement(
                   "div",
-                  { className: Bn().BannerRightContent },
+                  { className: Rn().BannerRightContent },
                   a.createElement(
                     "div",
-                    { className: Bn().BannerHeader },
+                    { className: Rn().BannerHeader },
                     (0, _.we)("#DeckTopPlayedAppBanner_Header"),
                   ),
                   a.createElement(
                     "div",
-                    { className: Bn().BannerGameText },
+                    { className: Rn().BannerGameText },
                     (0, _.PP)(
                       "#DeckTopPlayedAppBanner_GameText",
                       a.createElement("span", null, r),
@@ -5138,11 +5143,11 @@
           d = (0, a.useCallback)(
             (e) => {
               let t = n.current;
-              return e.detail.button == Rt.pR.TRIGGER_LEFT && t
+              return e.detail.button == Bt.pR.TRIGGER_LEFT && t
                 ? ((t.currentTime = Math.max(0, t.currentTime - 10)),
                   e.preventDefault(),
                   void e.stopPropagation())
-                : e.detail.button == Rt.pR.TRIGGER_RIGHT && t
+                : e.detail.button == Bt.pR.TRIGGER_RIGHT && t
                   ? ((t.currentTime = Math.min(t.duration, t.currentTime + 10)),
                     e.preventDefault(),
                     void e.stopPropagation())
@@ -5231,9 +5236,10 @@
             n.e(4860),
             n.e(1677),
             n.e(2761),
+            n.e(3846),
             n.e(9105),
             n.e(6850),
-            n.e(1406),
+            n.e(7911),
             n.e(3027),
           ]).then(n.bind(n, 64940)),
         ),
@@ -5277,6 +5283,7 @@
             n.e(9063),
             n.e(4095),
             n.e(6883),
+            n.e(3846),
             n.e(9105),
             n.e(283),
             n.e(177),
@@ -5522,8 +5529,8 @@
         A = n(12155),
         k = n(82477),
         L = n(92757),
-        B = n(39256),
-        R = n(99487),
+        R = n(39256),
+        B = n(99487),
         M = n(7193),
         D = n(39199),
         G = n(96971),
@@ -5640,7 +5647,7 @@
               r.createElement(W, {
                 event: n,
                 section: n.jsondata.sale_sections[l],
-                activeTab: new R.y(null, t),
+                activeTab: new B.y(null, t),
                 language: e.language,
                 nSaleDayIndex: t,
                 promotionName: "",
@@ -5654,7 +5661,7 @@
           if (a)
             return r.createElement(
               "div",
-              { className: B.ErrorDiv },
+              { className: R.ErrorDiv },
               "Error could not find sale section ",
               t,
             );

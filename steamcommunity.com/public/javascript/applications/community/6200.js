@@ -280,22 +280,24 @@
         r = n(72739);
       function s(e) {
         const {
-            visible: t = !0,
-            className: n,
-            keepMounted: s = !1,
-            expandDirection: i = "height",
-            msAnimationDuration: l = 250,
-            children: a,
+            id: t,
+            role: n,
+            visible: s = !0,
+            className: i,
+            keepMounted: l = !1,
+            expandDirection: a = "height",
+            msAnimationDuration: c = 250,
+            children: d,
           } = e,
           {
-            style: c,
-            active: d,
-            refDiv: u,
+            style: u,
+            active: m,
+            refDiv: h,
           } = (function (e, t = "height", n = 250) {
             const s = o.useRef(null),
               i = o.useRef(!0),
               [l, a] = o.useState("idle"),
-              [c, d] = o.useState({}),
+              [c, d] = o.useState(e ? {} : { [t]: "0px", overflow: "hidden" }),
               [u, m] = o.useState(e);
             o.useLayoutEffect(() => {
               i.current || a("start"), e && m(e);
@@ -314,7 +316,9 @@
                   o = "height" == t ? "scrollHeight" : "scrollWidth",
                   i = () => {
                     r.unstable_batchedUpdates(() => {
-                      d({}), a("idle"), m(e);
+                      d(e ? {} : { [t]: "0px", overflow: "hidden" }),
+                        a("idle"),
+                        m(e);
                     });
                   };
                 if ("start" == l) {
@@ -341,9 +345,13 @@
               }, [l, e]);
             const h = { ...c, transition: `${t} ${n}ms` };
             return { style: h, active: u, refDiv: s };
-          })(t, i, l);
-        return t || d || s
-          ? o.createElement("div", { className: n, ref: u, style: c }, a)
+          })(s, a, c);
+        return s || m || l
+          ? o.createElement(
+              "div",
+              { id: t, role: n, className: i, ref: h, style: u },
+              d,
+            )
           : null;
       }
     },

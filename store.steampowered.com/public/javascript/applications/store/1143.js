@@ -446,7 +446,7 @@
         h = n(34629),
         u = n(88997),
         d = n(70995),
-        g = n(51641),
+        g = n(27666),
         E = n(86355),
         S = n(84933),
         C = n(81962),
@@ -2412,17 +2412,11 @@
               : s.createElement(
                   G.eV,
                   {
+                    title: (0, O.we)("#EventEditor_ImportFromHTML"),
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
                     className: q().BBCodeEditorInputStyles,
                   },
-                  s.createElement(
-                    R.Y9,
-                    null,
-                    " ",
-                    (0, O.we)("#EventEditor_ImportFromHTML"),
-                    " ",
-                  ),
                   s.createElement(
                     R.nB,
                     null,

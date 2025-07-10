@@ -224,6 +224,12 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
 .BasicUI .HNbe3eZf6H7dtJ042x1vM.HSQWw9HUAP6jtA2OZjS-u {
   height: 100%;
 }
+@media (prefers-contrast: more) {
+  .HNbe3eZf6H7dtJ042x1vM._3_IUVzR9tpG_JKEjhwXEAb,
+  .HNbe3eZf6H7dtJ042x1vM.HSQWw9HUAP6jtA2OZjS-u {
+    opacity: 0;
+  }
+}
 .HNbe3eZf6H7dtJ042x1vM._3_IUVzR9tpG_JKEjhwXEAb {
   height: 200%;
   opacity: 0.2;

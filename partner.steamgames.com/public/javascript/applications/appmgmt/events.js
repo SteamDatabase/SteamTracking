@@ -1069,6 +1069,7 @@
                         : "",
                     ),
                     onActivate: this.OnVoteDown,
+                    "aria-label": (0, P.we)("#Button_RateDown"),
                   },
                   r.createElement(b.bfp, {
                     className:

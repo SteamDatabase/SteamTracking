@@ -1147,6 +1147,7 @@
                       "down" == this.state.myVote ? _().VoteButtonSelected : "",
                     ),
                     onActivate: this.OnVoteDown,
+                    "aria-label": (0, _._)("#Button_RateDown"),
                   },
                   _.createElement(_.bfp, {
                     className:

@@ -81,8 +81,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ = _.createContext({
           bForceShowCompatInfo: !1,
           bSteamOS: !1,
@@ -97,7 +97,7 @@
         } = _();
         return __webpack_require__ && !_
           ? [!0, 2]
-          : __webpack_require__ || _
+          : __webpack_require__ || _ || _._.ON_DECK
             ? [!0, 1]
             : [!1, 0];
       }
@@ -516,10 +516,12 @@
               }, [_]),
               _
             );
-          })(_);
+          })(_),
+          _ = _.useId();
         return _.createElement(
           _._,
           {
+            "aria-labelledby": _,
             modalClassName: "DeckVerifiedModalDialog",
             closeModal: __webpack_require__,
             onCancel: __webpack_require__,
@@ -535,6 +537,7 @@
               },
               Boolean(_)
                 ? _.createElement(_.default, {
+                    titleId: _,
                     results: _,
                   })
                 : _.createElement(_._, {
@@ -593,26 +596,28 @@
       }
       function _(_) {
         const {
-          category: _,
-          appName: __webpack_require__,
+          _: _,
+          category: __webpack_require__,
+          appName: _,
           descriptionToken: _,
         } = _;
-        if (0 == _)
+        if (0 == __webpack_require__)
           return _.createElement(
             "div",
             {
+              _: _,
               className: _().CompatibilityDetailRatingSummary,
             },
-            __webpack_require__
+            _
               ? (0, _._)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                  _.createElement("b", null, (0, _._)(_)),
                 )
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_Unknown"),
           );
         let _ = "",
           _ = null;
-        switch (_) {
+        switch (__webpack_require__) {
           case 3:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
@@ -630,7 +635,7 @@
             {
               className: _,
             },
-            (0, _._)(_(_)),
+            (0, _._)(_(__webpack_require__)),
           ),
           _ = _.createElement(
             "span",
@@ -639,10 +644,10 @@
             },
             (0, _._)(_ || _),
           ),
-          _ = __webpack_require__
+          _ = _
             ? (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _.createElement("b", null, (0, _._)(_)),
                 _,
                 _,
               )
@@ -650,6 +655,7 @@
         return _.createElement(
           "div",
           {
+            _: _,
             className: _().CompatibilityDetailRatingSummary,
           },
           _,
@@ -657,26 +663,27 @@
       }
       function _(_) {
         const {
-          category: _,
-          appName: __webpack_require__,
+          _: _,
+          category: __webpack_require__,
+          appName: _,
           descriptionToken: _,
         } = _;
-        if (0 == _)
+        if (0 == __webpack_require__)
           return _.createElement(
             "div",
             {
               className: _().CompatibilityDetailRatingSummary,
             },
-            __webpack_require__
+            _
               ? (0, _._)(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
-                  _.createElement("b", null, (0, _._)(__webpack_require__)),
+                  _.createElement("b", null, (0, _._)(_)),
                 )
               : (0, _._)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           );
         let _ = "",
           _ = null;
-        switch (_) {
+        switch (__webpack_require__) {
           case 2:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
@@ -690,7 +697,7 @@
             {
               className: _,
             },
-            (0, _._)(_(_)),
+            (0, _._)(_(__webpack_require__)),
           ),
           _ = _.createElement(
             "span",
@@ -699,10 +706,10 @@
             },
             (0, _._)(_ || _),
           ),
-          _ = __webpack_require__
+          _ = _
             ? (0, _._)(
                 "#SteamOSCompatibility_DescriptionHeader_WithAppName",
-                _.createElement("b", null, (0, _._)(__webpack_require__)),
+                _.createElement("b", null, (0, _._)(_)),
                 _,
                 _,
               )
@@ -710,6 +717,7 @@
         return _.createElement(
           "div",
           {
+            _: _,
             className: _().CompatibilityDetailRatingSummary,
           },
           _,
@@ -2283,7 +2291,9 @@
       function _(_) {
         const {
           results: _,
-          appName: __webpack_require__,
+          titleId: __webpack_require__,
+          descriptionId: _,
+          appName: _,
           buttonProps: _,
           autoFocus: _,
           onOpenBlogPost: _,
@@ -2321,12 +2331,13 @@
                 ),
             _ = _
               ? _.createElement(_._, {
+                  _: _,
                   category: _.steamos_resolved_category,
-                  appName: __webpack_require__,
+                  appName: _,
                 })
               : _.createElement(_._, {
                   category: _.resolved_category,
-                  appName: __webpack_require__,
+                  appName: _,
                 }),
             _ = _ ? _ : _;
           return _.createElement(
@@ -2344,6 +2355,7 @@
               _.createElement(
                 "div",
                 {
+                  _: __webpack_require__,
                   className: _().DialogHeader,
                 },
                 _.createElement(
@@ -2431,8 +2443,9 @@
       }
       function _(_) {
         const {
-            title: _,
-            autoFocus: __webpack_require__,
+            titleId: _,
+            title: __webpack_require__,
+            autoFocus: _,
             buttonProps: _,
             ratingIcon: _,
             ratingSummary: _,
@@ -2462,6 +2475,7 @@
               _.createElement(
                 "div",
                 {
+                  _: _,
                   className: _().DialogHeader,
                 },
                 _.createElement(
@@ -2469,7 +2483,7 @@
                   {
                     className: _().DialogTitle,
                   },
-                  _,
+                  __webpack_require__,
                 ),
                 _.createElement(
                   "div",
@@ -2493,8 +2507,8 @@
               _.createElement(
                 _._,
                 {
-                  autoFocus: __webpack_require__,
-                  focusableIfNoChildren: __webpack_require__ || _(),
+                  autoFocus: _,
+                  focusableIfNoChildren: _ || _(),
                   noFocusRing: !0,
                 },
                 _,
@@ -2504,13 +2518,19 @@
         );
       }
       function _(_) {
-        const { results: _, appName: __webpack_require__ } = _,
+        const {
+            titleId: _,
+            descriptionId: __webpack_require__,
+            results: _,
+            appName: _,
+          } = _,
           _ =
             -1 !==
             _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = _.createElement(_._, {
+            _: __webpack_require__,
             category: _.steamos_resolved_category ?? 0,
-            appName: __webpack_require__,
+            appName: _,
           }),
           _ = _.createElement(_._, {
             category: _.steamos_resolved_category ?? 0,
@@ -2519,6 +2539,7 @@
         return _.createElement(
           _,
           {
+            titleId: _,
             title: (0, _._)(
               "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
             ),
@@ -2575,11 +2596,17 @@
         );
       }
       function _(_) {
-        const { results: _, appName: __webpack_require__ } = _,
+        const {
+            titleId: _,
+            descriptionId: __webpack_require__,
+            results: _,
+            appName: _,
+          } = _,
           _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
           _ = _.createElement(_._, {
+            _: __webpack_require__,
             category: _.resolved_category,
-            appName: __webpack_require__,
+            appName: _,
           }),
           _ = _.createElement(_._, {
             category: _.resolved_category,
@@ -2588,6 +2615,7 @@
         return _.createElement(
           _,
           {
+            titleId: _,
             title: (0, _._)(
               "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
             ),
