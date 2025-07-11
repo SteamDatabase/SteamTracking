@@ -273,12 +273,13 @@
             s = (0, r.lm)(e.nHeroID),
             i = (0, r.qK)(e.nHeroID),
             d = (0, m.R7)().ownerWindow;
-          o.useEffect(() => {
-            if (0 == e.nHeroID && l.data) {
-              const t = (0, p.Tg)(0, l.data.heroes.length - 1);
-              e.fnSetSelectedHero(l.data.heroes[t].id);
-            }
-          }, [e, l]),
+          console.log(e.nHeroID, i.data),
+            o.useEffect(() => {
+              if (0 == e.nHeroID && l.data) {
+                const t = (0, p.Tg)(0, l.data.heroes.length - 1);
+                e.fnSetSelectedHero(l.data.heroes[t].id);
+              }
+            }, [e, l]),
             o.useEffect(() => {
               i.data &&
                 null == i.data.facets.find((t) => t.index + 1 == e.nFacet) &&
@@ -591,7 +592,7 @@
               o.createElement("option", { value: 13 }, "Hero Pool"),
             ),
           ),
-        R = (e) => {
+        D = (e) => {
           const [t, a] = o.useState(e.strMMR);
           return (
             o.useEffect(() => {
@@ -612,7 +613,7 @@
             )
           );
         };
-      function D(e) {
+      function R(e) {
         const t = new URLSearchParams();
         return (
           Object.keys(e).forEach((a) => {
@@ -664,7 +665,7 @@
                 nGameMode: f,
                 arrSkilledAbilities: E,
               };
-              a.push(l.J.dotaplustester(e.strFeature, D(t)));
+              a.push(l.J.dotaplustester(e.strFeature, R(t)));
             },
             N = (e) => {
               console.log("2"), (c = e), g();
@@ -812,7 +813,7 @@
                     console.log("9"), (f = e), g();
                   },
                 }),
-                o.createElement(R, {
+                o.createElement(D, {
                   strMMR: y,
                   fnSetMMR: (e) => {
                     console.log("8"), (y = e), g();
@@ -910,7 +911,7 @@
                 nAverageMMR: parseInt(y),
                 nGameMode: f,
               };
-              a.push(l.J.dotaplustester(e.strFeature, D(t)));
+              a.push(l.J.dotaplustester(e.strFeature, R(t)));
             },
             I = (0, r.MT)(n, c, m, d, u, p, E, parseInt(y), f, !0).data,
             A = (0, r.MT)(n, c, m, d, u, p, E, parseInt(y), f, !1).data;
@@ -1099,7 +1100,7 @@
                     (f = e), g();
                   },
                 }),
-                o.createElement(R, {
+                o.createElement(D, {
                   strMMR: y,
                   fnSetMMR: (e) => {
                     (y = e), g();
@@ -1187,7 +1188,7 @@
                 nAverageMMR: parseInt(y),
                 nGameMode: f,
               };
-              a.push(l.J.dotaplustester(e.strFeature, D(t)));
+              a.push(l.J.dotaplustester(e.strFeature, R(t)));
             },
             I = (0, r.Iu)(n, c, m, d, u, p, E, parseInt(y), f, !0).data,
             A = (0, r.Iu)(n, c, m, d, u, p, E, parseInt(y), f, !1).data;
@@ -1376,7 +1377,7 @@
                     (f = e), g();
                   },
                 }),
-                o.createElement(R, {
+                o.createElement(D, {
                   strMMR: y,
                   fnSetMMR: (e) => {
                     (y = e), g();
@@ -1462,7 +1463,7 @@
             [H, w] = o.useState(!1),
             [P, G] = o.useState(50),
             $ = () => {
-              const t = D({
+              const t = R({
                 nHeroID: n,
                 nFacet: c,
                 nPosition: m,
@@ -1744,7 +1745,7 @@
                         (I = e), $();
                       },
                     }),
-                    o.createElement(R, {
+                    o.createElement(D, {
                       strMMR: g,
                       fnSetMMR: (e) => {
                         (g = e), $();
@@ -2105,7 +2106,7 @@
             [M, L] = o.useState(3),
             [C, H] = o.useState(3),
             w = () => {
-              const t = D({
+              const t = R({
                 nHeroID: n,
                 nFacet: c,
                 nPosition: m,
@@ -2344,7 +2345,7 @@
                         (g = e), w();
                       },
                     }),
-                    o.createElement(R, {
+                    o.createElement(D, {
                       strMMR: f,
                       fnSetMMR: (e) => {
                         (f = e), w();
@@ -2640,7 +2641,7 @@
             T = (t.get("arrLikedItems") || "0,0").split(",").map(Number),
             b = (t.get("arrDislikedItems") || "0,0").split(",").map(Number);
           const O = () => {
-            const t = D({
+            const t = R({
               nHeroID: n,
               nFacet: c,
               nPosition: m,
@@ -2850,7 +2851,7 @@
                         (y = e), O();
                       },
                     }),
-                    o.createElement(R, {
+                    o.createElement(D, {
                       strMMR: E,
                       fnSetMMR: (e) => {
                         (E = e), O();
@@ -3186,7 +3187,7 @@
       function F(e) {
         return 570 === e ? "public" : "beta";
       }
-      function R(e) {
+      function D(e) {
         switch (e) {
           case v.Fk.DOTA_GAMEMODE_NONE:
             return "-";
@@ -3244,7 +3245,7 @@
             return "Unknown";
         }
       }
-      function D(e) {
+      function R(e) {
         switch (e) {
           case v.AP.CASUAL_MATCH:
             return "Unranked";
@@ -4098,8 +4099,8 @@
             [Ne, Ae] = (0, o.useState)(!0),
             [he, ke] = (0, o.useState)(!0),
             [ve, Te] = (0, o.useState)(!1),
-            [Fe, Re] = (0, o.useState)(!0),
-            [De, be] = (0, o.useState)(!0),
+            [Fe, De] = (0, o.useState)(!0),
+            [Re, be] = (0, o.useState)(!0),
             [Oe, Me] = (0, o.useState)(!1),
             Le = k.B5.Get().getHeroList(),
             Ce = k.B5.Get().getItemList();
@@ -4173,10 +4174,10 @@
                       ].includes(e.lobbytype)
                     ) &&
                       !(!Fe && e.rankwassolo) &&
-                  !(!De && !e.rankwassolo),
+                  !(!Re && !e.rankwassolo),
               )),
                 B(e);
-            }, [L, Ne, he, ve, Fe, De]);
+            }, [L, Ne, he, ve, Fe, Re]);
           let He = null;
           if (
             (a
@@ -4258,7 +4259,7 @@
                   return o.createElement(
                     "span",
                     { style: { color: q } },
-                    D(v.AP.PRACTICE),
+                    R(v.AP.PRACTICE),
                   );
                 let t = e.cellData;
                 if ((t in v.rM || (t = 0), t <= 0)) return b(v.rM.UNKNOWN);
@@ -4364,7 +4365,7 @@
                   t == v.AP.CASUAL_MATCH
                     ? (a = j)
                     : t == v.AP.COMPETITIVE_MATCH && (a = V),
-                  o.createElement("span", { style: { color: a } }, D(t))
+                  o.createElement("span", { style: { color: a } }, R(t))
                 );
               },
               headerRenderer: (e) =>
@@ -4432,7 +4433,7 @@
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => Re(!Fe),
+                      onChange: () => De(!Fe),
                       checked: Fe,
                     }),
                     o.createElement(
@@ -4448,8 +4449,8 @@
                       type: "checkbox",
                       name: "party",
                       id: "party",
-                      onChange: () => be(!De),
-                      checked: De,
+                      onChange: () => be(!Re),
+                      checked: Re,
                     }),
                     o.createElement(
                       "label",
@@ -4471,7 +4472,7 @@
                     "SD (LP)",
                   );
                 const t = `DOTA_GAMEMODE_${e.cellData}`;
-                return t in v.Fk ? R(v.Fk[t]) : R(v.Fk.DOTA_GAMEMODE_NONE);
+                return t in v.Fk ? D(v.Fk[t]) : D(v.Fk.DOTA_GAMEMODE_NONE);
               },
             },
             {
@@ -6270,7 +6271,7 @@
               N.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
-        R = [
+        D = [
           { key: "workshop_account_id", displayName: "Workshop Account ID" },
           {
             key: "comment",
@@ -6294,7 +6295,7 @@
               e ? new Date(1e3 * e).toLocaleString() : "",
           },
         ],
-        D = [
+        R = [
           { key: "series_id", displayName: "Series ID" },
           {
             key: "scheduled_time",
@@ -7110,7 +7111,7 @@
               c.createElement(
                 "div",
                 { className: y().WorkshopStatusGrid },
-                R.map((e) =>
+                D.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-workshop-status-row` },
@@ -7138,7 +7139,7 @@
                 "div",
                 {
                   className: y().MatchesGrid,
-                  style: { gridTemplateColumns: `repeat(${D.length}, auto)` },
+                  style: { gridTemplateColumns: `repeat(${R.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
@@ -7152,13 +7153,13 @@
                             "h3",
                             {
                               key: `league-name-row-${a}`,
-                              style: { gridColumn: `span ${D.length}` },
+                              style: { gridColumn: `span ${R.length}` },
                             },
                             c.createElement("b", null, t),
                           ),
                         ),
                           e.push(
-                            D.map((e) =>
+                            R.map((e) =>
                               c.createElement(
                                 "div",
                                 {
@@ -7174,7 +7175,7 @@
                           );
                         for (let a of P[t])
                           e.push(
-                            D.map((e) =>
+                            R.map((e) =>
                               c.createElement(
                                 "div",
                                 {

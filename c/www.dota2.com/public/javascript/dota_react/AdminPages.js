@@ -295,12 +295,13 @@
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)().ownerWindow;
-          _.useEffect(() => {
-            if (0 == _.nHeroID && _.data) {
-              const _ = (0, _._)(0, _.data.heroes.length - 1);
-              _.fnSetSelectedHero(_.data.heroes[_]._);
-            }
-          }, [_, _]),
+          console.log(_.nHeroID, _.data),
+            _.useEffect(() => {
+              if (0 == _.nHeroID && _.data) {
+                const _ = (0, _._)(0, _.data.heroes.length - 1);
+                _.fnSetSelectedHero(_.data.heroes[_]._);
+              }
+            }, [_, _]),
             _.useEffect(() => {
               _.data &&
                 null == _.data.facets.find((_) => _.index + 1 == _.nFacet) &&

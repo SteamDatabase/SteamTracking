@@ -1483,6 +1483,7 @@
         Title: "_361ZxhXdKZMe4CWySx5j_G",
         Standings: "aAnDuSEGvQOaEp1d4k5cN",
         NoTeams: "_1rkgtd1dejecYtWZmb78l",
+        DPCStandingsSwiss: "_3aCsaktdJTlOf0tYwE_b4z",
       };
     },
     chunkid: (module) => {
@@ -20190,7 +20191,7 @@
                 let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg )`;
                 (0, _._)(_)
                   ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png )`)
-                  : _ == _._.INTERNATIONAL_2024 &&
+                  : _ == _._.INTERNATIONAL_2025 &&
                     (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png )`);
                 let _ = null;
                 if ((0, _._)(_)) {
@@ -21278,7 +21279,7 @@
             );
           }, []);
           const _ = _.is_event_completed && _.event_type != _._.EXTERNAL,
-            _ = _.event == _._.INTERNATIONAL_2024,
+            _ = _.event == _._.INTERNATIONAL_2025,
             _ = _(1725260400);
           let { days: _ } = _;
           return _.createElement(
@@ -24892,6 +24893,14 @@
           if (null == _) return null;
           const _ = (function (_, _) {
             switch (`${_}_${_}`) {
+              case `${_._.BRACKET_DOUBLE_ALL_WINNER}_8`:
+                return {
+                  nLeftOffset: _._ + _._,
+                  nWidth: 1160,
+                  nHeight: 860,
+                  arrBracketNodeLocations: _._,
+                  arrBracketNodeConnectors: _._,
+                };
               case `${_._.BRACKET_DOUBLE_SEED_LOSER}_12`:
                 return {
                   nLeftOffset: _._ + _._,
@@ -25087,12 +25096,11 @@
             }
           });
           const _ = Array.from(_.values()).sort(),
-            _ = 0 != _,
-            _ = _._.Get().GetEventTeams(_).length > 0;
+            _ = 0 != _;
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_().DPCStandingsBracket, !_ && _().NoData),
+              className: (0, _._)(_().DPCStandingsBracket),
             },
             _.createElement(
               "div",
@@ -25277,7 +25285,7 @@
           let _ =
             Math.max(_?.results.length, _?.points.length, _?.dollars.length) ||
             0;
-          _ == _._.INTERNATIONAL_2024 && (_ = 16);
+          _ == _._.INTERNATIONAL_2025 && (_ = 16);
           const _ = _ && _.results.length > 0 ? _?.results[0].standing : _ + 1;
           let _ = 0;
           return _.createElement(
@@ -25740,119 +25748,143 @@
                 _,
               ),
               _ = _._.Get().GetTeamStanding(_.nLeagueID, _?.node_group_id, _);
-            return _?.standing - _?.standing;
+            return _?.standing < _?.standing
+              ? -1
+              : _?.standing > _?.standing ||
+                  _?.tiebreak_game_win_pct < _?.tiebreak_game_win_pct
+                ? 1
+                : _?.tiebreak_game_win_pct > _?.tiebreak_game_win_pct
+                  ? -1
+                  : _?.tiebreak_opponent_match_wins <
+                      _?.tiebreak_opponent_match_wins
+                    ? 1
+                    : _?.tiebreak_opponent_match_wins >
+                        _?.tiebreak_opponent_match_wins
+                      ? -1
+                      : _?.tiebreak_opponent_game_win_pct <
+                          _?.tiebreak_opponent_game_win_pct
+                        ? 1
+                        : _?.tiebreak_opponent_game_win_pct >
+                            _?.tiebreak_opponent_game_win_pct
+                          ? -1
+                          : _?.tiebreak_coinflip < _?.tiebreak_coinflip
+                            ? 1
+                            : _?.tiebreak_coinflip > _?.tiebreak_coinflip
+                              ? -1
+                              : 0;
           });
-          _ &&
-            (_ = _.sort((_, _) => {
-              const _ = _._.Get().GetTeamNames(_),
-                _ = _._.Get().GetTeamNames(_);
-              return _.name.localeCompare(_.name);
-            }));
-          const _ = _.length > 0;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().DPCStandingsTeamList,
-                !_ && _().NoData,
-                _.bNarrow && _().Narrow,
-              ),
-            },
+          return (
+            _ &&
+              (_ = _.sort((_, _) => {
+                const _ = _._.Get().GetTeamNames(_),
+                  _ = _._.Get().GetTeamNames(_);
+                return _.name.localeCompare(_.name);
+              })),
             _.createElement(
               "div",
               {
-                className: _().Teams,
+                className: (0, _._)(
+                  _().DPCStandingsTeamList,
+                  _.bNarrow && _().Narrow,
+                ),
               },
-              _.createElement(_, {
-                key: `${_.eDivision}_${_.eRegion}_header`,
-                bHeader: !0,
-                nLeagueID: _.nLeagueID,
-                nNodeGroupID: _?.node_group_id,
-                nTeamID: 0,
-                bNarrow: _.bNarrow,
-                bHideRank: _?.node_group_type == _._.PLACEMENT,
-              }),
-              _.map((_) =>
-                _.createElement(_, {
-                  key: `${_.eDivision}_${_.eRegion}_${_}`,
-                  nLeagueID: _.nLeagueID,
-                  nNodeGroupID: _?.node_group_id,
-                  nTeamID: _,
-                  bNarrow: _.bNarrow,
-                  bHideRank: _?.node_group_type == _._.PLACEMENT,
-                }),
-              ),
-              !_ &&
-                _.arrHighlights?.map((_) => {
-                  let _ = 40,
-                    _ = 40;
-                  for (const _ of _) {
-                    const _ = _._.Get().GetTeamStanding(
-                        _.nLeagueID,
-                        _?.node_group_id,
-                        _,
-                      ),
-                      _ = 70;
-                    _?.standing < _.nMin && (_ += _),
-                      _?.standing <= _.nMax && (_ += _);
-                  }
-                  return _ == _
-                    ? null
-                    : _.createElement("div", {
-                        key: `h${_}_${_}`,
-                        className: _().HighlightOverlay,
-                        style: {
-                          background: `linear-gradient( ${_.strColor}33, ${_.strColor}0F )`,
-                          borderTop: `1px solid ${_.strColor}`,
-                          top: _,
-                          height: _ - _,
-                        },
-                      });
-                }),
-            ),
-            !_ &&
-              _?.node_group_type != _._.PLACEMENT &&
-              _.length > 0 &&
-              _.bShowLegend &&
               _.createElement(
                 "div",
                 {
-                  className: _().LegendContainer,
+                  className: _().Teams,
                 },
+                _.createElement(_, {
+                  key: `${_.eDivision}_${_.eRegion}_header`,
+                  bHeader: !0,
+                  nLeagueID: _.nLeagueID,
+                  nNodeGroupID: _?.node_group_id,
+                  nTeamID: 0,
+                  bNarrow: _.bNarrow,
+                  bHideRank: _?.node_group_type == _._.PLACEMENT || _.bHideRank,
+                }),
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: `${_.eDivision}_${_.eRegion}_${_}`,
+                    nLeagueID: _.nLeagueID,
+                    nNodeGroupID: _?.node_group_id,
+                    nTeamID: _,
+                    bNarrow: _.bNarrow,
+                    bHideRank:
+                      _?.node_group_type == _._.PLACEMENT || _.bHideRank,
+                  }),
+                ),
+                !_ &&
+                  _.arrHighlights?.map((_) => {
+                    let _ = 40,
+                      _ = 40;
+                    for (const _ of _) {
+                      const _ = _._.Get().GetTeamStanding(
+                          _.nLeagueID,
+                          _?.node_group_id,
+                          _,
+                        ),
+                        _ = 70;
+                      _.wins + _.losses != 0 &&
+                        (_?.standing < _.nMin && (_ += _),
+                        _?.standing <= _.nMax && (_ += _));
+                    }
+                    return _ == _
+                      ? null
+                      : _.createElement("div", {
+                          key: `h${_}_${_}`,
+                          className: _().HighlightOverlay,
+                          style: {
+                            background: `linear-gradient( ${_.strColor}33, ${_.strColor}0F )`,
+                            borderTop: `1px solid ${_.strColor}`,
+                            top: _,
+                            height: _ - _,
+                          },
+                        });
+                  }),
+              ),
+              !_ &&
+                _.length > 0 &&
+                _.bShowLegend &&
                 _.createElement(
                   "div",
                   {
-                    className: _().LegendCenter,
+                    className: _().LegendContainer,
                   },
-                  _.arrHighlights.map((_, _) =>
-                    _.createElement(
-                      "div",
-                      {
-                        key: `hl${_}`,
-                        className: _().LegendItem,
-                      },
-                      _.createElement("div", {
-                        className: _().ColorSquare,
-                        style: {
-                          background: `linear-gradient( ${_.strColor}30, ${_.strColor}08 )`,
-                          borderTop: `1px solid ${_.strColor}`,
-                        },
-                      }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LegendCenter,
+                    },
+                    _.arrHighlights.map((_, _) =>
                       _.createElement(
                         "div",
                         {
-                          className: _().Description,
+                          key: `hl${_}`,
+                          className: _().LegendItem,
                         },
-                        (0, _._)(
-                          _ || !_.strDescriptionInProgress
-                            ? _.strDescription
-                            : _.strDescriptionInProgress,
+                        _.createElement("div", {
+                          className: _().ColorSquare,
+                          style: {
+                            background: `linear-gradient( ${_.strColor}30, ${_.strColor}08 )`,
+                            borderTop: `1px solid ${_.strColor}`,
+                          },
+                        }),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)(
+                            _ || !_.strDescriptionInProgress
+                              ? _.strDescription
+                              : _.strDescriptionInProgress,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
+            )
           );
         }),
         _ = (0, _._)((_) => {
@@ -25963,6 +25995,92 @@
                     _ ? "" : _?.losses,
                   ),
               );
+        }),
+        _ = (0, _._)((_) => {
+          const _ = _(),
+            { nLeagueID: __webpack_require__, nNodeGroupID: _ } =
+              _._.Get().GetEventPhaseNodeGroupID(
+                _,
+                _.ePhase,
+                _.eDivision,
+                _.eRegion,
+              );
+          let _ = "";
+          switch (_._.Get().GetEventType(_)) {
+            case _._.LEAGUE:
+              _ = _._.Get().GetRegionString(_.eRegion, !1);
+              break;
+            case _._.MAJOR:
+            case _._.INTERNATIONAL:
+            case _._.INTERNATIONAL_QUALIFIERS:
+              _ = _._.Get().GetEventPhaseString(_.ePhase);
+          }
+          const _ =
+            _._.Get()
+              .GetLeagueNodeGroupTeams(__webpack_require__, _)
+              ?.filter(
+                (_) =>
+                  null != _._.Get().GetTeamStanding(__webpack_require__, _, _),
+              ).length > 0;
+          let _ = [];
+          if (_) {
+            const _ = _._.Get().GetLeagueNodeGroupTeams(__webpack_require__, _);
+            let _ = 0,
+              _ = _.length;
+            for (const _ of _._.Get().GetLeagueNodeGroupTeams(
+              __webpack_require__,
+              _,
+            )) {
+              const _ = _._.Get().GetTeamStanding(__webpack_require__, _, _);
+              _ &&
+                (_.wins >= _.nMaxWinsLosses && (_ = Math.max(_, _.standing)),
+                _.losses >= _.nMaxWinsLosses && (_ = Math.min(_, _.standing)));
+            }
+            _ &&
+              _.push({
+                nMin: 1,
+                nMax: _,
+                strColor: "#117C30",
+                strDescription: "#dpc_advance_to_main_event",
+              }),
+              _ &&
+                _.push({
+                  nMin: _,
+                  nMax: _.length,
+                  strColor: "#922820",
+                  strDescription: "#dpc_eliminated",
+                });
+          }
+          return _.createElement(
+            "div",
+            {
+              className: _().DPCStandingsSwiss,
+            },
+            _.bShowHeader &&
+              _.createElement(
+                "div",
+                {
+                  className: _().Title,
+                },
+                (0, _._)(_),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _().Standings,
+              },
+              _ &&
+                _.createElement(_, {
+                  ePhase: _.ePhase,
+                  eRegion: _.eRegion,
+                  eDivision: _.eDivision,
+                  arrHighlights: _,
+                  bShowLegend: _.bShowLegend,
+                  bNarrow: !1,
+                  bHideRank: !0,
+                }),
+            ),
+          );
         }),
         _ = (0, _._)((_) => {
           const _ = _(),
@@ -26663,46 +26781,54 @@
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = [
-              {
-                nMin: 1,
-                nMax: 8,
-                strColor: "#117C30",
-                strDescription: "#dpc_advance_to_upper_bracket",
-              },
-              {
-                nMin: 9,
-                nMax: 16,
-                strColor: "#929820",
-                strDescription: "#dpc_advance_to_lower_bracket",
-              },
-            ],
-            _ = [
               _ === _._.INTERNATIONAL_2022 || _ === _._.INTERNATIONAL_2023
                 ? {
                     value: _._.DPC_POINT_STANDINGS,
                     strLabel: "#dpc_point_standings",
                   }
                 : void 0,
-              {
-                value: _._.GROUP_A,
-                strLabel: "#dpc_group_a",
-              },
-              {
-                value: _._.GROUP_B,
-                strLabel: "#dpc_group_b",
-              },
-              {
-                value: _._.GROUP_C,
-                strLabel: "#dpc_group_c",
-              },
-              {
-                value: _._.GROUP_D,
-                strLabel: "#dpc_group_d",
-              },
-              {
-                value: _._.PLACEMENT,
-                strLabel: "#dpc_placement",
-              },
+              _ === _._.INTERNATIONAL_2024
+                ? {
+                    value: _._.GROUP_A,
+                    strLabel: "#dpc_group_a",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2024
+                ? {
+                    value: _._.GROUP_B,
+                    strLabel: "#dpc_group_b",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2024
+                ? {
+                    value: _._.GROUP_C,
+                    strLabel: "#dpc_group_c",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2024
+                ? {
+                    value: _._.GROUP_D,
+                    strLabel: "#dpc_group_d",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2024
+                ? {
+                    value: _._.PLACEMENT,
+                    strLabel: "#dpc_placement",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2025
+                ? {
+                    value: _._.GROUP_STAGE,
+                    strLabel: "#dpc_group_stage",
+                  }
+                : void 0,
+              _ === _._.INTERNATIONAL_2025
+                ? {
+                    value: _._.ELIMINATION,
+                    strLabel: "#dpc_elimination",
+                  }
+                : void 0,
               {
                 value: _._.PLAYOFF,
                 strLabel: "#dpc_playoff",
@@ -26713,110 +26839,155 @@
               },
             ],
             _ = (0, _._)(_.strPhase);
-          return _._.Get().GetEventType(_) != _._.INTERNATIONAL
-            ? null
-            : _._[_] && _ != _._.INVALID
-              ? _.createElement(
-                  "div",
+          if (_._.Get().GetEventType(_) != _._.INTERNATIONAL) return null;
+          if (!_._[_] || _ == _._.INVALID)
+            return new Date().getTime() < 1725696e6
+              ? _.createElement(_._, {
+                  _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.GROUP_A)),
+                })
+              : _.createElement(_._, {
+                  _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.PLAYOFF)),
+                });
+          const _ = [
+            {
+              nMin: 1,
+              nMax: 8,
+              strColor: "#117C30",
+              strDescription: "#dpc_advance_to_upper_bracket",
+            },
+            {
+              nMin: 9,
+              nMax: 16,
+              strColor: "#929820",
+              strDescription: "#dpc_advance_to_lower_bracket",
+            },
+          ];
+          return _.createElement(
+            "div",
+            {
+              className: _().DPCStandingsPageMajor,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().Header,
+              },
+              _.createElement(_, {
+                eStyle: _.NORMAL,
+                options: _,
+                selectedOption: _,
+                setOption: (_) => {
+                  _.push(_._.dpc_standings((0, _._)(_), (0, _._)(_)));
+                },
+              }),
+            ),
+            _ == _._.DPC_POINT_STANDINGS && _.createElement(_, null),
+            _ == _._.GROUP_A &&
+              _.createElement(_, {
+                ePhase: _._.GROUP_A,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                arrHighlights: _,
+                bShowLegend: !1,
+                bShowHeader: !1,
+                bShowList: !0,
+                bShowGrid: !0,
+                bNarrowList: !1,
+                bShowTiebreakers: !0,
+              }),
+            _ == _._.GROUP_B &&
+              _.createElement(_, {
+                ePhase: _._.GROUP_B,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                arrHighlights: _,
+                bShowLegend: !1,
+                bShowHeader: !1,
+                bShowList: !0,
+                bShowGrid: !0,
+                bNarrowList: !1,
+                bShowTiebreakers: !0,
+              }),
+            _ == _._.GROUP_C &&
+              _.createElement(_, {
+                ePhase: _._.GROUP_C,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                arrHighlights: _,
+                bShowLegend: !1,
+                bShowHeader: !1,
+                bShowList: !0,
+                bShowGrid: !0,
+                bNarrowList: !1,
+                bShowTiebreakers: !0,
+              }),
+            _ == _._.GROUP_D &&
+              _.createElement(_, {
+                ePhase: _._.GROUP_D,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                arrHighlights: _,
+                bShowLegend: !1,
+                bShowHeader: !1,
+                bShowList: !0,
+                bShowGrid: !0,
+                bNarrowList: !1,
+                bShowTiebreakers: !0,
+              }),
+            _ == _._.PLACEMENT &&
+              _.createElement(_, {
+                ePhase: _._.PLACEMENT,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                arrHighlights: _,
+                bShowLegend: !0,
+                bNarrow: !1,
+              }),
+            _ == _._.GROUP_STAGE &&
+              _.createElement(_, {
+                ePhase: _._.GROUP_STAGE,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                bShowLegend: !0,
+                bShowHeader: !1,
+                bShowList: !0,
+                nMaxWinsLosses: 4,
+              }),
+            _ == _._.ELIMINATION &&
+              _.createElement(_, {
+                ePhase: _._.ELIMINATION,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                bShowLegend: !0,
+                arrHighlights: [
                   {
-                    className: _().DPCStandingsPageMajor,
+                    nMin: 1,
+                    nMax: 1,
+                    strColor: "#117C30",
+                    strDescription: "#dpc_advance_to_main_event",
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Header,
-                    },
-                    _.createElement(_, {
-                      eStyle: _.NORMAL,
-                      options: _,
-                      selectedOption: _,
-                      setOption: (_) => {
-                        _.push(_._.dpc_standings((0, _._)(_), (0, _._)(_)));
-                      },
-                    }),
-                  ),
-                  _ == _._.DPC_POINT_STANDINGS && _.createElement(_, null),
-                  _ == _._.GROUP_A &&
-                    _.createElement(_, {
-                      ePhase: _._.GROUP_A,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      arrHighlights: _,
-                      bShowLegend: !1,
-                      bShowHeader: !1,
-                      bShowList: !0,
-                      bShowGrid: !0,
-                      bNarrowList: !1,
-                      bShowTiebreakers: !0,
-                    }),
-                  _ == _._.GROUP_B &&
-                    _.createElement(_, {
-                      ePhase: _._.GROUP_B,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      arrHighlights: _,
-                      bShowLegend: !1,
-                      bShowHeader: !1,
-                      bShowList: !0,
-                      bShowGrid: !0,
-                      bNarrowList: !1,
-                      bShowTiebreakers: !0,
-                    }),
-                  _ == _._.GROUP_C &&
-                    _.createElement(_, {
-                      ePhase: _._.GROUP_C,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      arrHighlights: _,
-                      bShowLegend: !1,
-                      bShowHeader: !1,
-                      bShowList: !0,
-                      bShowGrid: !0,
-                      bNarrowList: !1,
-                      bShowTiebreakers: !0,
-                    }),
-                  _ == _._.GROUP_D &&
-                    _.createElement(_, {
-                      ePhase: _._.GROUP_D,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      arrHighlights: _,
-                      bShowLegend: !1,
-                      bShowHeader: !1,
-                      bShowList: !0,
-                      bShowGrid: !0,
-                      bNarrowList: !1,
-                      bShowTiebreakers: !0,
-                    }),
-                  _ == _._.PLACEMENT &&
-                    _.createElement(_, {
-                      ePhase: _._.PLACEMENT,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      arrHighlights: _,
-                      bShowLegend: !0,
-                      bNarrow: !1,
-                    }),
-                  _ == _._.PLAYOFF &&
-                    _.createElement(_, {
-                      ePhase: _._.PLAYOFF,
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                    }),
-                  _ == _._.RESULTS &&
-                    _.createElement(_, {
-                      eRegion: _._.UNSET,
-                      eDivision: _._.UNSET,
-                      bStyleTopThree: !0,
-                    }),
-                )
-              : new Date().getTime() < 1725696e6
-                ? _.createElement(_._, {
-                    _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.GROUP_A)),
-                  })
-                : _.createElement(_._, {
-                    _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.PLAYOFF)),
-                  });
+                  {
+                    nMin: 2,
+                    nMax: 2,
+                    strColor: "#922820",
+                    strDescription: "#dpc_eliminated",
+                  },
+                ],
+                bNarrow: !1,
+              }),
+            _ == _._.PLAYOFF &&
+              _.createElement(_, {
+                ePhase: _._.PLAYOFF,
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+              }),
+            _ == _._.RESULTS &&
+              _.createElement(_, {
+                eRegion: _._.UNSET,
+                eDivision: _._.UNSET,
+                bStyleTopThree: !0,
+              }),
+          );
         }),
         _ = (0, _._)(() =>
           _.createElement(
@@ -36389,99 +36560,250 @@
             ),
           );
         }),
-        _ = (0, _._)(() => {
-          const _ = _();
-          let _ = "#212026",
-            _ = "#212026";
-          switch (_) {
-            case _._.SPRING_2021_LEAGUE:
-              (_ = "#0E4830"), (_ = "#142030");
-              break;
-            case _._.SPRING_2021_MAJOR:
-              (_ = "#081121"), (_ = "#081121");
-              break;
-            case _._.INTERNATIONAL_2021_QUALIFIERS:
-            case _._.INTERNATIONAL_2021:
-              (_ = "#141416"), (_ = "#141416");
-              break;
-            case _._.WINTER_2021_LEAGUE:
-            case _._.WINTER_2021_LEAGUE_FINALS:
-              (_ = "#39445a"), (_ = "#39445a");
-              break;
-            case _._.SPRING_2022_LEAGUE:
-              (_ = "#456462"), (_ = "#42605e");
-              break;
-            case _._.SPRING_2022_MAJOR:
-              (_ = "#bbde04"), (_ = "#c2cdcf");
-              break;
-            case _._.CHINA_SPRING_2022_LEAGUE_FINALS:
-              (_ = "#456462"), (_ = "#42605e");
-              break;
-            case _._.SUMMER_2022_LEAGUE:
-              (_ = "#c0317d"), (_ = "#439594");
-              break;
-            case _._.SUMMER_2022_MAJOR:
-              (_ = "#ffa800"), (_ = "#d9d9d9");
-              break;
-            case _._.INTERNATIONAL_2022_LASTCHANCE:
-            case _._.INTERNATIONAL_2022:
-              (_ = "#101216"), (_ = "#101216");
-              break;
-            case _._.WINTER_2023_MAJOR:
-              (_ = "#000000"), (_ = "#000000");
-              break;
-            case _._.WINTER_2023_LEAGUE:
-            case _._.SPRING_2023_LEAGUE:
-            case _._.SPRING_2023_MAJOR:
-            case _._.SUMMER_2023_LEAGUE:
-            case _._.SUMMER_2023_MAJOR:
-              (_ = "#10033F"), (_ = "#10033F");
-              break;
-            case _._.INTERNATIONAL_2023_QUALIFIERS:
-            case _._.INTERNATIONAL_2023:
-            case _._.INTERNATIONAL_2024:
-              (_ = "#222127"), (_ = "#222127");
-          }
-          let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg ), linear-gradient( to right, ${_} 49%, ${_} 51% )`;
-          return (
-            (0, _._)(_)
-              ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`)
-              : _ == _._.INTERNATIONAL_2024 &&
-                (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`),
-            _.createElement(
+        _ =
+          ((0, _._)(() => {
+            const _ = _();
+            if (_ != _._.INTERNATIONAL_2025) return null;
+            const _ = _._.Get().GetEventInfo(_);
+            if (_.event != _._.INTERNATIONAL_2025) return null;
+            const _ = _._.Get().GetLeagueData(_, _.leagues[0].league_id),
+              _ = _?.prize_pool?.total_prize_pool || 0;
+            return _.createElement(
               "div",
               {
-                className: _().DPCHeaderImage,
-                style: {
-                  height: 400,
-                  backgroundImage: _,
-                },
+                className: _().DPCHeaderTI2024,
               },
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-            )
-          );
-        }),
+              _.createElement(
+                "div",
+                {
+                  className: _().TI13BannerContainer,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().TI13BannerContent,
+                    "data-aos": "zoom-out",
+                    "data-aos-duration": "1500",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EventPhaseBox,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().EventPhase,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseTitle,
+                        },
+                        (0, _._)("#dpc_playoff"),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseDates,
+                        },
+                        _.createElement(_(), {
+                          date: 17256096e5,
+                          format: "MMM DD",
+                        }),
+                        " - ",
+                        _.createElement(_(), {
+                          date: 17259912e5,
+                          format: "DD",
+                        }),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseVenue,
+                        },
+                        (0, _._)("#ti13_online"),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().EventPhase,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseTitle,
+                        },
+                        (0, _._)("#dpc_finals"),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseDates,
+                        },
+                        _.createElement(_(), {
+                          date: 17262144e5,
+                          format: "MMM DD",
+                        }),
+                        " - ",
+                        _.createElement(_(), {
+                          date: 17264232e5,
+                          format: "DD",
+                        }),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().EventPhaseVenue,
+                        },
+                        (0, _._)("#ti13_main_event_venue"),
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().TI13CenterBox,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        _: {
+                          state: {
+                            bAutoScroll: !0,
+                          },
+                          pathname: _._.dpc_watch((0, _._)(_)),
+                        },
+                        className: _().CenterContent,
+                        "data-aos": "zoom-out",
+                        "data-aos-duration": "1500",
+                      },
+                      _.createElement("img", {
+                        className: _().TILogo,
+                        src: `${_._.IMG_URL}international2024/esports_site/logo_ti_gold.png`,
+                      }),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().TI13PrizePoolBox,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().PrizePoolTitle,
+                      },
+                      (0, _._)("#dpc_prizepool"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().PrizePoolValue,
+                      },
+                      _ > 0 ? "$" + _.toLocaleString() : "",
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+          (0, _._)(() => {
+            const _ = _();
+            let _ = "#212026",
+              _ = "#212026";
+            switch (_) {
+              case _._.SPRING_2021_LEAGUE:
+                (_ = "#0E4830"), (_ = "#142030");
+                break;
+              case _._.SPRING_2021_MAJOR:
+                (_ = "#081121"), (_ = "#081121");
+                break;
+              case _._.INTERNATIONAL_2021_QUALIFIERS:
+              case _._.INTERNATIONAL_2021:
+                (_ = "#141416"), (_ = "#141416");
+                break;
+              case _._.WINTER_2021_LEAGUE:
+              case _._.WINTER_2021_LEAGUE_FINALS:
+                (_ = "#39445a"), (_ = "#39445a");
+                break;
+              case _._.SPRING_2022_LEAGUE:
+                (_ = "#456462"), (_ = "#42605e");
+                break;
+              case _._.SPRING_2022_MAJOR:
+                (_ = "#bbde04"), (_ = "#c2cdcf");
+                break;
+              case _._.CHINA_SPRING_2022_LEAGUE_FINALS:
+                (_ = "#456462"), (_ = "#42605e");
+                break;
+              case _._.SUMMER_2022_LEAGUE:
+                (_ = "#c0317d"), (_ = "#439594");
+                break;
+              case _._.SUMMER_2022_MAJOR:
+                (_ = "#ffa800"), (_ = "#d9d9d9");
+                break;
+              case _._.INTERNATIONAL_2022_LASTCHANCE:
+              case _._.INTERNATIONAL_2022:
+                (_ = "#101216"), (_ = "#101216");
+                break;
+              case _._.WINTER_2023_MAJOR:
+                (_ = "#000000"), (_ = "#000000");
+                break;
+              case _._.WINTER_2023_LEAGUE:
+              case _._.SPRING_2023_LEAGUE:
+              case _._.SPRING_2023_MAJOR:
+              case _._.SUMMER_2023_LEAGUE:
+              case _._.SUMMER_2023_MAJOR:
+                (_ = "#10033F"), (_ = "#10033F");
+                break;
+              case _._.INTERNATIONAL_2023_QUALIFIERS:
+              case _._.INTERNATIONAL_2023:
+              case _._.INTERNATIONAL_2024:
+              case _._.INTERNATIONAL_2025:
+                (_ = "#222127"), (_ = "#222127");
+            }
+            let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg ), linear-gradient( to right, ${_} 49%, ${_} 51% )`;
+            return (
+              (0, _._)(_)
+                ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`)
+                : (_ == _._.INTERNATIONAL_2024 ||
+                    _ == _._.INTERNATIONAL_2025) &&
+                  (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`),
+              _.createElement(
+                "div",
+                {
+                  className: _().DPCHeaderImage,
+                  style: {
+                    height: 400,
+                    backgroundImage: _,
+                  },
+                },
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+              )
+            );
+          })),
         _ = (0, _._)(() => {
           const _ = _();
           return _._.Get().GetSpoilerBlockState(_) != _._.UNKNOWN
@@ -44818,6 +45140,8 @@
               return "#dpc_placement";
             case _._.PLAYOFF:
               return "#dpc_playoff";
+            case _._.ELIMINATION:
+              return "#dpc_elimination";
           }
           return "";
         }
@@ -44852,6 +45176,7 @@
                 _ == _._.GROUP_C ||
                 _ == _._.GROUP_D ||
                 _ == _._.PLACEMENT ||
+                _ == _._.ELIMINATION ||
                 41 == _ ||
                 42 == _ ||
                 43 == _ ||
@@ -44911,7 +45236,7 @@
           return _;
         }
         GetEventType(_) {
-          if (_ > 23) return _._.EXTERNAL;
+          if (_ > _._.INTERNATIONAL_2025) return _._.EXTERNAL;
           const _ = this.GetEventInfo(_);
           return _ ? _.event_type : _._.UNKNOWN;
         }
@@ -45931,7 +46256,8 @@
             (_[(_.INTERNATIONAL_2023 = 21)] = "INTERNATIONAL_2023"),
             (_[(_.INTERNATIONAL_2023_QUALIFIERS = 22)] =
               "INTERNATIONAL_2023_QUALIFIERS"),
-            (_[(_.INTERNATIONAL_2024 = 23)] = "INTERNATIONAL_2024");
+            (_[(_.INTERNATIONAL_2024 = 23)] = "INTERNATIONAL_2024"),
+            (_[(_.INTERNATIONAL_2025 = 24)] = "INTERNATIONAL_2025");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.INVALID = 0)] = "INVALID"),
@@ -45945,7 +46271,8 @@
             (_[(_.DPC_POINT_STANDINGS = 8)] = "DPC_POINT_STANDINGS"),
             (_[(_.GROUP_C = 9)] = "GROUP_C"),
             (_[(_.GROUP_D = 10)] = "GROUP_D"),
-            (_[(_.PLACEMENT = 11)] = "PLACEMENT");
+            (_[(_.PLACEMENT = 11)] = "PLACEMENT"),
+            (_[(_.ELIMINATION = 12)] = "ELIMINATION");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
@@ -45995,6 +46322,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = 150,
         _ = 90,
@@ -46010,6 +46339,149 @@
           "#19bc42",
           "#1942bc",
           "#bcbc19",
+        ],
+        _ = [
+          {
+            strLabel: "#dpc_bracket_ub_quarter",
+            nPosX: 1 * (_ + _),
+            nPosY: 0 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_quarter",
+            nPosX: 1 * (_ + _),
+            nPosY: 1 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_quarter",
+            nPosX: 1 * (_ + _),
+            nPosY: 2 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_quarter",
+            nPosX: 1 * (_ + _),
+            nPosY: 3 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_semi",
+            nPosX: 2 * (_ + _),
+            nPosY: 0.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_semi",
+            nPosX: 2 * (_ + _),
+            nPosY: 2.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_ub_final",
+            nPosX: 4 * (_ + _),
+            nPosY: 1.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_grand_final",
+            nPosX: 5 * (_ + _),
+            nPosY: 3.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round1",
+            nPosX: 1 * (_ + _),
+            nPosY: 5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round1",
+            nPosX: 1 * (_ + _),
+            nPosY: 6 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round2",
+            nPosX: 2 * (_ + _),
+            nPosY: 5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round2",
+            nPosX: 2 * (_ + _),
+            nPosY: 6 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round3",
+            nPosX: 3 * (_ + _),
+            nPosY: 5.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_round4",
+            nPosX: 4 * (_ + _),
+            nPosY: 5.5 * (_ + _),
+          },
+          {
+            strLabel: "#dpc_bracket_lb_final",
+            nPosX: 5 * (_ + _),
+            nPosY: 6.5 * (_ + _),
+          },
+        ],
+        _ = [
+          {
+            nPosX: _ + 1 * (_ + _),
+            nPosY: 0 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 1 * (_ + _),
+            bStraight: !1,
+            arrIncomingNodeIndices: [0, 1],
+          },
+          {
+            nPosX: _ + 1 * (_ + _),
+            nPosY: 2 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 1 * (_ + _),
+            bStraight: !1,
+            arrIncomingNodeIndices: [2, 3],
+          },
+          {
+            nPosX: _ + 2 * (_ + _),
+            nPosY: 0.5 * (_ + _),
+            nWidth: _ + 1 * (_ + _),
+            nHeight: _ + 2 * (_ + _),
+            bStraight: !1,
+            arrIncomingNodeIndices: [4, 5],
+          },
+          {
+            nPosX: _ + 4 * (_ + _),
+            nPosY: 1.5 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 4 * (_ + _),
+            bStraight: !1,
+            arrIncomingNodeIndices: [6, 13],
+          },
+          {
+            nPosX: _ + 1 * (_ + _),
+            nPosY: 5 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 1 * (_ + _),
+            bStraight: !0,
+            arrIncomingNodeIndices: [8],
+          },
+          {
+            nPosX: _ + 1 * (_ + _),
+            nPosY: 6 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 1 * (_ + _),
+            bStraight: !0,
+            arrIncomingNodeIndices: [9],
+          },
+          {
+            nPosX: _ + 2 * (_ + _),
+            nPosY: 5 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 1 * (_ + _),
+            bStraight: !1,
+            arrIncomingNodeIndices: [10, 11],
+          },
+          {
+            nPosX: _ + 3 * (_ + _),
+            nPosY: 5.5 * (_ + _),
+            nWidth: _ + 0 * (_ + _),
+            nHeight: _ + 0 * (_ + _),
+            bStraight: !0,
+            arrIncomingNodeIndices: [12],
+          },
         ],
         _ = [
           {
@@ -46844,6 +47316,8 @@
             return _._.OVERALL;
           case "playoff":
             return _._.PLAYOFF;
+          case "elimination":
+            return _._.ELIMINATION;
           case "results":
             return _._.RESULTS;
           case "tistandings":
@@ -46871,6 +47345,8 @@
             return "overall";
           case _._.PLAYOFF:
             return "playoff";
+          case _._.ELIMINATION:
+            return "elimination";
           case _._.RESULTS:
             return "results";
           case _._.DPC_POINT_STANDINGS:
@@ -46926,6 +47402,8 @@
             return _._.INTERNATIONAL_2023;
           case "ti13":
             return _._.INTERNATIONAL_2024;
+          case "ti14":
+            return _._.INTERNATIONAL_2025;
         }
         return parseInt(_);
       }
@@ -46977,6 +47455,8 @@
             return "ti12";
           case _._.INTERNATIONAL_2024:
             return "ti13";
+          case _._.INTERNATIONAL_2025:
+            return "ti14";
         }
         return _.toString();
       }
