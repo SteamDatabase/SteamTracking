@@ -12360,7 +12360,6 @@ ${LANGUAGE}
 :authorit
 :authority
 :eaI
-:iAj
 :metho
 :method
 :oc\ve
@@ -20110,6 +20109,7 @@ GetCopyCount
 GetCredentialChangeTimeDetails
 GetCubBody() == 0 && m_eStatusCode >= 400 && (int)m_eStatusCode <= 600
 GetCurrentClientBeta
+GetCurrentDisplayDPI() called without a valid UI mode
 GetCurrentScaleFactor() called without a valid UI mode
 GetDLCForAppsSolr
 GetDepotBuildResult
@@ -21576,7 +21576,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul  8 2025 23:55:34
+Jul 10 2025 23:57:12
 July
 JumpList
 Jumplist
@@ -37629,7 +37629,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenF
 ghost_
 gidlist
 gidparentcomment

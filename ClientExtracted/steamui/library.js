@@ -1,4 +1,4 @@
-var CLSTAMP = "9883656";
+var CLSTAMP = "9889733";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -186,8 +186,8 @@ var CLSTAMP = "9883656";
           ak: () => M,
           ck: () => O,
           cw: () => l,
-          ey: () => D,
-          fL: () => F,
+          ey: () => F,
+          fL: () => D,
           g5: () => h,
           iE: () => X,
           im: () => o,
@@ -468,7 +468,7 @@ var CLSTAMP = "9883656";
           }
           return !1;
         }
-        function D(e) {
+        function F(e) {
           switch (e) {
             case 0:
               return "invalid";
@@ -484,7 +484,7 @@ var CLSTAMP = "9883656";
               return "push";
           }
         }
-        function F(e) {
+        function D(e) {
           switch (e) {
             case 0:
               return "vgui";
@@ -9202,12 +9202,12 @@ var CLSTAMP = "9883656";
         "use strict";
         n.d(t, {
           $$: () => l,
-          AX: () => D,
+          AX: () => F,
           CH: () => p,
           DF: () => k,
           L$: () => m,
           ML: () => _,
-          OP: () => F,
+          OP: () => D,
           Qi: () => C,
           SK: () => d,
           Sz: () => x,
@@ -9520,7 +9520,7 @@ var CLSTAMP = "9883656";
               (n.current = Math.max(n.current, e - t)),
               n.current);
         }
-        function D(e) {
+        function F(e) {
           const t = r.useRef();
           t.current = e;
           const n = r.useRef(!1),
@@ -9533,7 +9533,7 @@ var CLSTAMP = "9883656";
             a = [w("mousedown", s), w("touchstart", o)];
           return (0, i.Ue)(...a);
         }
-        function F() {
+        function D() {
           const [e, t] = r.useState(!1);
           return [
             e,
@@ -10827,7 +10827,7 @@ var CLSTAMP = "9883656";
               e.stopPropagation();
           }
           OnMessage(e) {
-            "window_moved" == e.data && this.OnResize(),
+            "window_resized" == e.data && this.OnResize(),
               "popup-created" == e.data && this.OnCreateInternal();
           }
           Show(e = o.iE.k_EWindowBringToFrontAndForceOS) {
@@ -11148,9 +11148,9 @@ var CLSTAMP = "9883656";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 8 2025 : 11:22:35",
-                BUILD_TIME_UTC: "Jul 8 2025 : 18:22:35",
-                BUILD_RTIME_UTC: 1751998955,
+                BUILD_TIME_LOCAL: "Jul 10 2025 : 13:09:24",
+                BUILD_TIME_UTC: "Jul 10 2025 : 20:09:24",
+                BUILD_RTIME_UTC: 1752178164,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -13536,7 +13536,7 @@ var CLSTAMP = "9883656";
           P: () => M,
           Vs: () => k,
           Y8: () => z,
-          aE: () => D,
+          aE: () => F,
           ai: () => I,
           fd: () => W,
           il: () => T,
@@ -14121,6 +14121,9 @@ var CLSTAMP = "9883656";
                   g.menuRight &&
                     (g.menuRight +=
                       s.document.body.clientWidth - s.scrollX - s.innerWidth)),
+              g.menuWidth &&
+                window.matchMedia("(prefers-contrast: more)") &&
+                (g.menuWidth += 1),
               (e ||
                 g.menuLeft !== this.state.menuLeft ||
                 g.menuRight !== this.state.menuRight ||
@@ -14241,7 +14244,7 @@ var CLSTAMP = "9883656";
             className: v().ContextMenuMouseOverlay,
           });
         }
-        function D(e) {
+        function F(e) {
           let t = [],
             n = f.uX(e),
             r = n.getSelection(),
@@ -14394,10 +14397,10 @@ var CLSTAMP = "9883656";
           (0, r.Cg)([w.oI], I.prototype, "OnBlur", null),
           (0, r.Cg)([w.oI], I.prototype, "OnKeyDown", null),
           (I = (0, r.Cg)([c.PA], I));
-        const F = "EnableContextMenuBlurDelay3";
+        const D = "EnableContextMenuBlurDelay3";
         function O() {
           return (
-            "true" === (window.localStorage && window.localStorage.getItem(F))
+            "true" === (window.localStorage && window.localStorage.getItem(D))
           );
         }
         function A() {
@@ -14409,11 +14412,11 @@ var CLSTAMP = "9883656";
             l.useCallback((e) => {
               if (!window.localStorage)
                 return void console.error(
-                  `Attempt to change setting with no localStorage available: ${F}`,
+                  `Attempt to change setting with no localStorage available: ${D}`,
                 );
               n(e);
               const t = e ? "true" : "false";
-              window.localStorage.setItem(F, t);
+              window.localStorage.setItem(D, t);
             }, []),
           ];
         }
@@ -14883,10 +14886,14 @@ var CLSTAMP = "9883656";
                   })(e, i, o, p),
                 onClose: () => i.fnOnClose && i.fnOnClose(),
               },
-            );
-          (0, c.l6)(p, "click", () => g?.SteamClient.Window.BringToFront());
-          const _ = o?.bHideActions,
-            w =
+            ),
+            _ = r.useCallback(() => {
+              i.bHideMainWindowForPopouts &&
+                g?.SteamClient.Window.BringToFront();
+            }, [i.bHideMainWindowForPopouts, g]);
+          (0, c.l6)(p, "click", _);
+          const w = o?.bHideActions,
+            b =
               "number" == typeof o?.nDragAreaHeight
                 ? { height: o.nDragAreaHeight }
                 : void 0;
@@ -14902,8 +14909,8 @@ var CLSTAMP = "9883656";
                       hideMin: !0,
                       hideMax: !0,
                       popup: g,
-                      hideActions: _,
-                      style: w,
+                      hideActions: w,
+                      style: b,
                     }),
                     r.createElement(
                       m.EO,
@@ -15635,7 +15642,7 @@ var CLSTAMP = "9883656";
           OWN: () => O,
           OeC: () => te,
           OiG: () => tt,
-          P7C: () => De,
+          P7C: () => Fe,
           P7r: () => Xe,
           PN3: () => T,
           PRY: () => Ee,
@@ -15644,7 +15651,7 @@ var CLSTAMP = "9883656";
           QHH: () => oe,
           QQ4: () => Ue,
           QcV: () => dt,
-          Qte: () => Fe,
+          Qte: () => De,
           RO3: () => G,
           ROZ: () => Ae,
           Rkk: () => p,
@@ -15670,7 +15677,7 @@ var CLSTAMP = "9883656";
           YNO: () => x,
           Yb3: () => rn,
           YuU: () => $e,
-          ZPc: () => Ft,
+          ZPc: () => Dt,
           ZWw: () => Me,
           ZjT: () => Zt,
           ZnA: () => pn,
@@ -15680,7 +15687,7 @@ var CLSTAMP = "9883656";
           _h6: () => St,
           _r0: () => yt,
           a3E: () => it,
-          aPd: () => D,
+          aPd: () => F,
           aVR: () => Yt,
           aeP: () => be,
           agV: () => Ln,
@@ -15728,7 +15735,7 @@ var CLSTAMP = "9883656";
           lMJ: () => Be,
           lRD: () => qt,
           m59: () => _,
-          mrd: () => F,
+          mrd: () => D,
           nGC: () => ee,
           nm_: () => dn,
           o5Q: () => $t,
@@ -15754,7 +15761,7 @@ var CLSTAMP = "9883656";
           vRz: () => ie,
           vdG: () => un,
           vjL: () => ut,
-          vrn: () => Dt,
+          vrn: () => Ft,
           wB_: () => g,
           wVV: () => Rt,
           wbc: () => f,
@@ -16474,7 +16481,7 @@ var CLSTAMP = "9883656";
             }),
           );
         }
-        function D(e) {
+        function F(e) {
           const { className: t } = e,
             [n, i] = (0, l.l)();
           return r.createElement(
@@ -16509,7 +16516,7 @@ var CLSTAMP = "9883656";
             ),
           );
         }
-        function F(e) {
+        function D(e) {
           return r.createElement(
             "svg",
             {
@@ -18478,7 +18485,7 @@ var CLSTAMP = "9883656";
             }),
           );
         }
-        function De() {
+        function Fe() {
           const [e, t] = (0, l.l)(),
             [n, i] = (0, l.l)();
           return r.createElement(
@@ -18589,7 +18596,7 @@ var CLSTAMP = "9883656";
             ),
           );
         }
-        function Fe(e) {
+        function De(e) {
           const t = (0, i.A)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -20190,7 +20197,7 @@ var CLSTAMP = "9883656";
             }),
           );
         }
-        function Dt(e) {
+        function Ft(e) {
           const { className: t, ...n } = e,
             [i, s] = (0, l.l)(),
             [o, a] = (0, l.l)(),
@@ -20367,7 +20374,7 @@ var CLSTAMP = "9883656";
             ),
           );
         }
-        function Ft() {
+        function Dt() {
           return r.createElement(
             "svg",
             {
@@ -23477,11 +23484,11 @@ var CLSTAMP = "9883656";
                       )
           );
         }
-        function D(e, t, n) {
+        function F(e, t, n) {
           for (; e.length < t; ) e = n + e;
           return e;
         }
-        function F(e) {
+        function D(e) {
           return (
             (void 0 === e || isNaN(e)) && (e = 0),
             {
@@ -23494,7 +23501,7 @@ var CLSTAMP = "9883656";
         }
         function O(e, t, n) {
           let r = e < 0;
-          const i = F((e = r ? 0 - e : e)),
+          const i = D((e = r ? 0 - e : e)),
             o = i.fraction.toFixed(2).split(".")[1],
             a = t ?? !0;
           let c = !a || "00" == o;
@@ -23507,15 +23514,15 @@ var CLSTAMP = "9883656";
           let l = "";
           if (i.hours) {
             const e = i.hours.toString(),
-              t = D(i.minutes.toString(), 2, "0"),
-              n = D(i.seconds.toString(), 2, "0"),
+              t = F(i.minutes.toString(), 2, "0"),
+              n = F(i.seconds.toString(), 2, "0"),
               r = a
                 ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
                 : "#Duration_Abbreviation_HourMinuteSecond";
             l = (0, s.we)(r, e, t, n, o);
           } else if (i.minutes) {
             const e = i.minutes.toString(),
-              t = D(i.seconds.toString(), 2, "0"),
+              t = F(i.seconds.toString(), 2, "0"),
               n = a
                 ? "#Duration_Abbreviation_MinuteSecondMillisecond"
                 : "#Duration_Abbreviation_MinuteSecond";
@@ -23534,8 +23541,8 @@ var CLSTAMP = "9883656";
         }
         function A(e, t, n) {
           let r = e < 0;
-          const i = F((e = r ? 0 - e : e)),
-            o = D(i.seconds.toString(), 2, "0"),
+          const i = D((e = r ? 0 - e : e)),
+            o = F(i.seconds.toString(), 2, "0"),
             a = i.fraction.toFixed(2).split(".")[1],
             c = t ?? !0;
           let l = !c || "00" == a;
@@ -23547,7 +23554,7 @@ var CLSTAMP = "9883656";
             (r = !1);
           let u = "";
           if (i.hours) {
-            const e = D(i.minutes.toString(), 2, "0"),
+            const e = F(i.minutes.toString(), 2, "0"),
               t = c
                 ? "#Duration_HourMinuteSecondMillisecond"
                 : "#Duration_HourMinuteSecond";
@@ -24275,7 +24282,7 @@ var CLSTAMP = "9883656";
           return (
             r.useEffect(o, [o, e]),
             (0, s.l6)(e, "resize", o),
-            (0, s.Qi)(e, ["window_moved"], o),
+            (0, s.Qi)(e, ["window_resized"], o),
             t
           );
         }
@@ -24656,9 +24663,9 @@ var CLSTAMP = "9883656";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 8 2025 : 11:22:35",
-                    BUILD_TIME_UTC: "Jul 8 2025 : 18:22:35",
-                    BUILD_RTIME_UTC: 1751998955,
+                    BUILD_TIME_LOCAL: "Jul 10 2025 : 13:09:24",
+                    BUILD_TIME_UTC: "Jul 10 2025 : 20:09:24",
+                    BUILD_RTIME_UTC: 1752178164,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24889,7 +24896,7 @@ var CLSTAMP = "9883656";
             ),
           );
         }
-        function D(e) {
+        function F(e) {
           const { cm: t } = e;
           let n = null;
           return (
@@ -24927,11 +24934,11 @@ var CLSTAMP = "9883656";
             r.createElement(
               b.s,
               { debug: !0, steamUI: !0 },
-              r.createElement(F, { cm: t }, n),
+              r.createElement(D, { cm: t }, n),
             )
           );
         }
-        function F(e) {
+        function D(e) {
           const { cm: t, children: n } = e,
             i = r.useCallback(() => t, [t]),
             o = (0, M.bs)(() => new S.A()),
@@ -24993,7 +25000,7 @@ var CLSTAMP = "9883656";
               sessionStorage.setItem(R, e ? "true" : "false");
             })();
           const e = document.getElementById("root");
-          i.H(e).render(r.createElement(D, { cm: window.cm }));
+          i.H(e).render(r.createElement(F, { cm: window.cm }));
         })();
       },
     },
@@ -25232,7 +25239,7 @@ var CLSTAMP = "9883656";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "3076a4bb4fed859d9897",
         2646: "67e34019da53c1662907",
-        2664: "f99917d0bd31d5160271",
+        2664: "909b952ea15a6d4bfd44",
         2761: "f08574fadd52f7aae840",
         2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
@@ -25324,7 +25331,7 @@ var CLSTAMP = "9883656";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "f67bfa2e55f51547c361",
+        9858: "a2f635d69986e88ce310",
         9869: "aee6966412f9d2a9bf7b",
         9887: "b3e18a3b56733822ec70",
       }[e]),

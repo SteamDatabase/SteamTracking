@@ -2304,7 +2304,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     padding-top: 1px;
 }
 
-.spotlight_img:focus-within {
+.spotlight_img:has(:focus-visible) {
 	outline: auto Highlight;
 	outline: auto -webkit-focus-ring-color;
 }

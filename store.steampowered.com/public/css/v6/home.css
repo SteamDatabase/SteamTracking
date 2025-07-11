@@ -3514,7 +3514,7 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 .community_recommendation_app > .community_recommendation_capsule > .capsule {
 	height: 350px;
 }
-.community_recommendation_app > .community_recommendation_capsule:focus > .capsule {
+.community_recommendation_app > .community_recommendation_capsule:focus-visible > .capsule {
 	outline: auto Highlight;
 	outline: auto -webkit-focus-ring-color;
 }
@@ -3656,7 +3656,7 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 	overflow: hidden;
 	margin-top: -2px;
 }
-.community_recommendations_block > .review_box .persona_name:focus-within {
+.community_recommendations_block > .review_box .persona_name:has(:focus-visible) {
 	outline: auto Highlight;
 	outline: auto -webkit-focus-ring-color;
 }
@@ -4403,7 +4403,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	box-shadow: 0 0 7px 0px #000;
 }
 
-.carousel_container.maincap .carousel_items:focus-within {
+.carousel_container.maincap .carousel_items:has(:focus-visible) {
 	outline: auto Highlight;
 	outline: auto -webkit-focus-ring-color;
 }

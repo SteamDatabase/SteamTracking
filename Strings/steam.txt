@@ -2424,8 +2424,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:55:21
-23:55:28
+23:56:56
+23:57:03
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -6528,7 +6528,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul  8 2025
+Jul 10 2025
 July
 June
 K'iche'
@@ -8745,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul  8 2025 23:55:28
+Startup - updater built Jul 10 2025 23:57:03
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

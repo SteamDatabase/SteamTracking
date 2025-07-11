@@ -2293,6 +2293,11 @@ html._14wqdluDeDnnEcg3OSLEmd .PP7LM0Ow1K5qkR8WElLpt {
 html._14wqdluDeDnnEcg3OSLEmd ._2EstNjFIIZm_WUSKm5Wt7n {
   padding: 4px;
 }
+@media (prefers-contrast: more) {
+  html._14wqdluDeDnnEcg3OSLEmd ._2EstNjFIIZm_WUSKm5Wt7n {
+    padding: 0;
+  }
+}
 html._14wqdluDeDnnEcg3OSLEmd ._1n7Wloe5jZ6fSuvV18NNWI {
   min-width: fit-content;
   white-space: nowrap;
@@ -2309,6 +2314,12 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   padding: 0px;
   font-size: 14px;
   -webkit-app-region: no-drag;
+  box-sizing: border-box;
+}
+@media (prefers-contrast: more) {
+  ._2EstNjFIIZm_WUSKm5Wt7n {
+    border: 1px solid #fff;
+  }
 }
 .PP7LM0Ow1K5qkR8WElLpt:not(.visible) {
   opacity: 0;
@@ -2472,30 +2483,9 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-top: none;
   border-bottom: none;
 }
-@media (prefers-contrast: more) {
-  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI,
-  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI {
-    box-sizing: border-box;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    padding-right: 0;
-  }
-}
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:first-child,
 ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:first-child {
   border-top: none;
-}
-@media (prefers-contrast: more) {
-  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:first-child,
-  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:first-child {
-    border-top: 1px solid #fff;
-  }
-}
-@media (prefers-contrast: more) {
-  .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:last-child,
-  ._3qIuY9S_vXm3IQS-uE9SRS ._1n7Wloe5jZ6fSuvV18NNWI:last-child {
-    border-bottom: 1px solid #fff;
-  }
 }
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI:hover,
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI._18z-3vkWndCBO5WJgFldRK,
@@ -2675,6 +2665,13 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media (prefers-contrast: more) {
+  ._2FxbHJzYoH024ko7zqcJOf {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 ._3XGRklQrZMakU2xaYB0cLD {
   box-sizing: border-box;
   font-size: 13px;
@@ -2695,5 +2692,12 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._3XGRklQrZMakU2xaYB0cLD .i4LuYcvtfPgYKx3qqvKUq {
   color: #aaacb6;
   margin: 6px 4px;
+}
+@media (prefers-contrast: more) {
+  ._3XGRklQrZMakU2xaYB0cLD {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 /*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/css/library.css.map*/
