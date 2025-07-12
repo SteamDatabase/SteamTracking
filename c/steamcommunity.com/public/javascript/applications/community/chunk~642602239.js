@@ -2685,13 +2685,13 @@
           const _ = (await _.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
-          if (_ && 0 != _.version) return _;
+          if (_ && void 0 !== _.version && 0 != _.version) return _;
         }
         try {
           const _ = (0, _._)(_._);
           if (_) {
             const _ = JSON.parse(_);
-            if (_ && 0 != _.version) return _;
+            if (_ && void 0 !== _.version && 0 != _.version) return _;
           }
         } catch (_) {}
         const _ = _._.COUNTRY;

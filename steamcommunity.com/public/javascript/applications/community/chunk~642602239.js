@@ -2137,13 +2137,13 @@
           const t = (await n.GetCookiePreferences(e, {}))
             .Body()
             .toObject().preferences;
-          if (t && 0 != t.version) return t;
+          if (t && void 0 !== t.version && 0 != t.version) return t;
         }
         try {
           const e = (0, y.j_)(f.J_);
           if (e) {
             const t = JSON.parse(e);
-            if (t && 0 != t.version) return t;
+            if (t && void 0 !== t.version && 0 != t.version) return t;
           }
         } catch (e) {}
         const t = E.TS.COUNTRY;
@@ -2202,7 +2202,7 @@
       r.d(t, {
         $A: () => W,
         B8: () => F,
-        Er: () => v,
+        Er: () => C,
         N2: () => A,
         Pk: () => L,
         Sz: () => k,
@@ -2214,7 +2214,7 @@
         _J: () => z,
         ck: () => U,
         j$: () => T,
-        z5: () => C,
+        z5: () => v,
       });
       var n = r(33645),
         i = r.n(n),
@@ -2675,11 +2675,11 @@
                   b = `${E}${f}${y}T${S}${B}00Z`,
                   w = new Date(u),
                   A = w.getUTCFullYear(),
-                  C = ("0" + (w.getUTCMonth() + 1)).slice(-2),
-                  v = ("0" + w.getUTCDate()).slice(-2),
+                  v = ("0" + (w.getUTCMonth() + 1)).slice(-2),
+                  C = ("0" + w.getUTCDate()).slice(-2),
                   M = ("0" + w.getUTCHours()).slice(-2),
                   I = ("0" + w.getUTCMinutes()).slice(-2),
-                  N = `${A}${C}${v}T${M}${I}00Z`;
+                  N = `${A}${v}${C}T${M}${I}00Z`;
                 let R;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
@@ -2838,10 +2838,10 @@
           ["youtubeorvideo", { Constructor: p.Eo, autocloses: !1 }],
           ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
         ]);
-      function C(e, t, r = 0) {
+      function v(e, t, r = 0) {
         return M(e, t, r);
       }
-      async function v(e, t, r = 0) {
+      async function C(e, t, r = 0) {
         return M(e, t, r);
       }
       function M(e, t, r = 0) {
@@ -4078,9 +4078,9 @@
           s.createElement(
             S,
             null,
-            s.createElement(C, { title: t }, s.createElement(b, { ...a })),
+            s.createElement(v, { title: t }, s.createElement(b, { ...a })),
           ),
-          s.createElement(v, { value: n, onChange: r, onSubmit: i }),
+          s.createElement(C, { value: n, onChange: r, onSubmit: i }),
         );
       }
       function A(e) {
@@ -4094,16 +4094,16 @@
             i && s.createElement("div", { className: f.SectionedPageTitle }, i),
             n.map(({ title: e, ...t }) =>
               s.createElement(
-                C,
+                v,
                 { title: e, key: e },
                 s.createElement(b, { ...t }),
               ),
             ),
           ),
-          s.createElement(v, { value: r, onChange: t }),
+          s.createElement(C, { value: r, onChange: t }),
         );
       }
-      function C(e) {
+      function v(e) {
         return s.createElement(
           "div",
           { className: f.Section },
@@ -4111,7 +4111,7 @@
           s.createElement("div", { className: f.SectionContent }, e.children),
         );
       }
-      function v(e) {
+      function C(e) {
         const { value: t, onChange: r, onSubmit: n } = e;
         return s.createElement(
           "div",
@@ -5084,8 +5084,8 @@
         b = r(22797),
         w = r(32754),
         A = r(68797),
-        C = r(52038),
-        v = r(61859),
+        v = r(52038),
+        C = r(61859),
         M = r(73745),
         T = r(14771),
         I = r(61336),
@@ -5145,11 +5145,11 @@
               e.preventDefault())
             : (0, S.pg)(
                 s.createElement(y.o0, {
-                  strTitle: (0, v.we)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, v.we)(
+                  strTitle: (0, C.we)("#EventDisplay_Share_NotLoggedIn"),
+                  strDescription: (0, C.we)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
                   ),
-                  strOKButtonText: (0, v.we)("#MobileLogin_SignIn"),
+                  strOKButtonText: (0, C.we)("#MobileLogin_SignIn"),
                   onOK: () => (0, F.vg)(),
                 }),
                 window,
@@ -5166,7 +5166,7 @@
               bOverlapVertical: !0,
               bDisablePopTop: !0,
               bMatchWidth: !0,
-              strClassName: (0, C.A)(
+              strClassName: (0, v.A)(
                 P.ReminderDialog,
                 P.ReminderOptions,
                 E.contextMenu,
@@ -5215,7 +5215,7 @@
             : s.createElement(
                 "div",
                 {
-                  className: (0, C.A)({
+                  className: (0, v.A)({
                     [P.ReminderCheckBox]: !0,
                     [k().ReminderCtn]: !0,
                     [P.IconMode]: e,
@@ -5241,7 +5241,7 @@
                 s.createElement(
                   "div",
                   { className: P.ReminderDefault },
-                  (0, v.we)("#EventDisplay_Reminder_SetReminder"),
+                  (0, C.we)("#EventDisplay_Reminder_SetReminder"),
                 ),
                 s.createElement("div", { className: P.ReminderOptions }),
               );
@@ -5255,7 +5255,7 @@
             ? s.createElement(
                 "div",
                 { className: z.ErrorDiv },
-                (0, v.we)("#EventDidplay_Reminder_EventNotVisible", r),
+                (0, C.we)("#EventDidplay_Reminder_EventNotVisible", r),
               )
             : null;
         const a = (0, o.sf)(N.TS.LANGUAGE);
@@ -5295,12 +5295,12 @@
                 s.createElement(
                   y.KG,
                   {
-                    strTitle: (0, v.we)(
+                    strTitle: (0, C.we)(
                       t
                         ? "#EventDisplay_Reminder_IgnoreEvent_Error"
                         : "#EventDisplay_Reminder_FollowEvent_Error",
                     ),
-                    strDescription: (0, v.we)(
+                    strDescription: (0, C.we)(
                       t
                         ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
                         : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
@@ -5380,7 +5380,7 @@
             s.createElement(
               "div",
               {
-                className: (0, C.A)(
+                className: (0, v.A)(
                   P.ReminderCheckBox,
                   n ? P.IconMode : P.TextMode,
                   "RemindMeWidget",
@@ -5402,14 +5402,14 @@
               s.createElement(
                 "div",
                 { className: P.ReminderDefault },
-                (0, v.we)("#EventDisplay_Reminder_SetReminder"),
+                (0, C.we)("#EventDisplay_Reminder_SetReminder"),
               ),
               s.createElement("div", { className: P.ReminderOpennedOptions }),
             ),
             s.createElement(
               "div",
               {
-                className: (0, C.A)(
+                className: (0, v.A)(
                   P.FlexColumnContainer,
                   P.ReminderBackground,
                   r && P.ReminderExpandsLeft,
@@ -5425,9 +5425,9 @@
                 s.createElement(
                   "div",
                   { className: P.FullStartTime },
-                  (0, v.PP)(
+                  (0, C.PP)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    (0, v.TW)(
+                    (0, C.TW)(
                       c,
                       (0, T.Ct)(
                         new Date(1e3 * c),
@@ -5440,24 +5440,24 @@
               s.createElement(
                 "div",
                 { className: P.ReminderOptionsHeader },
-                (0, v.we)("#EventDisplay_Reminder_GetNotification_Via"),
+                (0, C.we)("#EventDisplay_Reminder_GetNotification_Via"),
               ),
               s.createElement(
                 "div",
-                { className: (0, C.A)(P.ReminderOption, !o && P.Unverified) },
+                { className: (0, v.A)(P.ReminderOption, !o && P.Unverified) },
                 s.createElement(
                   w.he,
                   {
                     className: P.CheckboxWrapper,
                     bTopmost: !0,
-                    toolTipContent: (0, v.we)(
+                    toolTipContent: (0, C.we)(
                       o
                         ? "#EventReminder_NotifyByEmail_ttip"
                         : "#EventReminder_NotifyByEmail_Missing",
                     ),
                   },
                   s.createElement(f.Yh, {
-                    label: (0, v.we)("#EventDisplay_Reminder_ViaEmail"),
+                    label: (0, C.we)("#EventDisplay_Reminder_ViaEmail"),
                     disabled: !o,
                     checked: h.KN.Get().BFollowsEventAndNotifiedBy(
                       e.clanSteamID,
@@ -5481,26 +5481,26 @@
                             d.E.k_eReminder_EmailUnverified,
                           ),
                       },
-                      (0, v.we)("#EventReminder_NotifyByEmail_Missing_Add"),
+                      (0, C.we)("#EventReminder_NotifyByEmail_Missing_Add"),
                     ),
                   ),
               ),
               s.createElement(
                 "div",
-                { className: (0, C.A)(P.ReminderOption, !l && P.Unverified) },
+                { className: (0, v.A)(P.ReminderOption, !l && P.Unverified) },
                 s.createElement(
                   w.he,
                   {
                     className: P.CheckboxWrapper,
                     bTopmost: !0,
-                    toolTipContent: (0, v.we)(
+                    toolTipContent: (0, C.we)(
                       l
                         ? "#EventReminder_NotifyByMobile_ttip"
                         : "#EventReminder_NotifyByMobile_Missing",
                     ),
                   },
                   s.createElement(f.Yh, {
-                    label: (0, v.we)("#EventDisplay_Reminder_ViaMobileApp"),
+                    label: (0, C.we)("#EventDisplay_Reminder_ViaMobileApp"),
                     disabled: !l,
                     checked: h.KN.Get().BFollowsEventAndNotifiedBy(
                       e.clanSteamID,
@@ -5524,7 +5524,7 @@
                             d.E.k_eReminder_MobilePushMissing,
                           ),
                       },
-                      (0, v.we)("#EventReminder_NotifyByMobile_Install"),
+                      (0, C.we)("#EventReminder_NotifyByMobile_Install"),
                     ),
                   ),
               ),
@@ -5534,7 +5534,7 @@
                 s.createElement(
                   "div",
                   { className: P.ReminderOptionsHeader },
-                  (0, v.we)("#EventDisplay_Reminder_AddToCalendar"),
+                  (0, C.we)("#EventDisplay_Reminder_AddToCalendar"),
                 ),
                 s.createElement(
                   "div",
@@ -5547,7 +5547,7 @@
                       onClick: () =>
                         this.TrackEventAction(d.E.k_eReminder_CalendarApple),
                     },
-                    (0, v.we)("#EventDisplay_Reminder_AppleCalendar_Short"),
+                    (0, C.we)("#EventDisplay_Reminder_AppleCalendar_Short"),
                   ),
                   s.createElement(
                     "a",
@@ -5558,7 +5558,7 @@
                       onClick: () =>
                         this.TrackEventAction(d.E.k_eReminder_CalendarGoogle),
                     },
-                    (0, v.we)("#EventDisplay_Reminder_GoogleCalendar_Short"),
+                    (0, C.we)("#EventDisplay_Reminder_GoogleCalendar_Short"),
                   ),
                   s.createElement(
                     "a",
@@ -5568,7 +5568,7 @@
                       onClick: () =>
                         this.TrackEventAction(d.E.k_eReminder_CalendarOutlook),
                     },
-                    (0, v.we)("#EventDisplay_Reminder_OutlookCalendar_Short"),
+                    (0, C.we)("#EventDisplay_Reminder_OutlookCalendar_Short"),
                   ),
                 ),
               ),
