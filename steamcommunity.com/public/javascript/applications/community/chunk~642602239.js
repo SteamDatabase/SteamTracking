@@ -6414,7 +6414,7 @@
           ? r
           : a.createElement(
               "a",
-              { href: `https://www.youtube-nocookie.com/watch/?v=${t}` },
+              { href: `https://www.youtube.com/watch?v=${t}` },
               (0, d.we)("#EventCalendar_WatchYouTubeVideo"),
             );
       }

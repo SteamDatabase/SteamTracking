@@ -3695,7 +3695,7 @@
                   r.createElement($e, {
                     bSearchVisible: o,
                     openSearch: h,
-                    closeSearch: h,
+                    closeSearch: u,
                   }),
                 !d &&
                   r.createElement("div", { className: m.NoSearchBarSpacer }),

@@ -9723,7 +9723,7 @@
                     type: "video/mp4",
                   }),
               )
-            : t?.strPageBackgroundWebM?.length
+            : !(0, Z.c5)() && t?.strPageBackgroundWebM?.length
               ? n.createElement(
                   "video",
                   {

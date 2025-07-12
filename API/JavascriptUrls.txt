@@ -471,7 +471,6 @@ ${IMG_URL}${}/icons/scroll_arrow.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${}
-${IMG_URL}/checkout/computer.png
 ${IMG_URL}/cs2/audio.png
 ${IMG_URL}/cs2/header_ctt.png
 ${IMG_URL}/cs2/logo_cs2_header.svg
@@ -1464,7 +1463,6 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
-${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
 ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
@@ -1640,7 +1638,6 @@ ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
-${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
@@ -1757,8 +1754,6 @@ ${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_$
 ${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
-${STORE_CHECKOUT_BASE_URL}checkout/
-${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}${}/
@@ -3000,7 +2995,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/invites/ajaxcreate

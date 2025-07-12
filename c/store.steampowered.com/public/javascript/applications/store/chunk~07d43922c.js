@@ -10986,7 +10986,7 @@
                     type: "video/mp4",
                   }),
               )
-            : _?.strPageBackgroundWebM?.length
+            : !(0, _._)() && _?.strPageBackgroundWebM?.length
               ? _.createElement(
                   "video",
                   {
