@@ -755,24 +755,30 @@
         }
         TryCreateNode(e, t, o) {
           let r = c.FK.from(t);
-          if (!e.node.validContent(r) && e.acceptNode) {
-            let o = t.filter((t) => t.type == e.acceptNode);
-            if (!o.length) {
-              let r = t;
-              e.acceptNode.isBlock &&
-                r.length > 1 &&
-                r[r.length - 1].type == this.schema.nodes.hard_break &&
-                (r = r.slice(0, -1));
-              const n = this.m_mapPMBBNodes.get(e.acceptNode.name);
-              (0, i.wT)(
-                n,
-                `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
-              ),
-                (o = n
-                  ? this.TryCreateNode(n, r, void 0)
-                  : e.acceptNode.create(void 0, r));
+          if (!e.node.validContent(r)) {
+            if (e.acceptNode) {
+              let o = t.filter((t) => t.type == e.acceptNode);
+              if (!o.length) {
+                let r = t;
+                e.acceptNode.isBlock &&
+                  r.length > 1 &&
+                  r[r.length - 1].type == this.schema.nodes.hard_break &&
+                  (r = r.slice(0, -1));
+                const n = this.m_mapPMBBNodes.get(e.acceptNode.name);
+                (0, i.wT)(
+                  n,
+                  `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
+                ),
+                  (o = n
+                    ? this.TryCreateNode(n, r, void 0)
+                    : e.acceptNode.create(void 0, r));
+              }
+              r = c.FK.from(o);
             }
-            r = c.FK.from(o);
+            e.node.isInline ||
+              (r = c.FK.from(
+                t.filter((e) => !e.isText || !e.text.match(/^\s*$/)),
+              ));
           }
           try {
             return e.node.createAndFill(o, r) || e.node.createChecked(o, r);

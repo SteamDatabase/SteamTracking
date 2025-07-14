@@ -1008,24 +1008,30 @@
         }
         TryCreateNode(_, _, _) {
           let _ = _._.from(_);
-          if (!_.node.validContent(_) && _.acceptNode) {
-            let _ = _.filter((_) => _.type == _.acceptNode);
-            if (!_.length) {
-              let _ = _;
-              _.acceptNode.isBlock &&
-                _.length > 1 &&
-                _[_.length - 1].type == this.schema.nodes.hard_break &&
-                (_ = _.slice(0, -1));
-              const _ = this.m_mapPMBBNodes.get(_.acceptNode.name);
-              (0, _._)(
-                _,
-                `Indicated acceptNode type ${_.acceptNode.name} for ${_.node.name} missing`,
-              ),
-                (_ = _
-                  ? this.TryCreateNode(_, _, void 0)
-                  : _.acceptNode.create(void 0, _));
+          if (!_.node.validContent(_)) {
+            if (_.acceptNode) {
+              let _ = _.filter((_) => _.type == _.acceptNode);
+              if (!_.length) {
+                let _ = _;
+                _.acceptNode.isBlock &&
+                  _.length > 1 &&
+                  _[_.length - 1].type == this.schema.nodes.hard_break &&
+                  (_ = _.slice(0, -1));
+                const _ = this.m_mapPMBBNodes.get(_.acceptNode.name);
+                (0, _._)(
+                  _,
+                  `Indicated acceptNode type ${_.acceptNode.name} for ${_.node.name} missing`,
+                ),
+                  (_ = _
+                    ? this.TryCreateNode(_, _, void 0)
+                    : _.acceptNode.create(void 0, _));
+              }
+              _ = _._.from(_);
             }
-            _ = _._.from(_);
+            _.node.isInline ||
+              (_ = _._.from(
+                _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
+              ));
           }
           try {
             return _.node.createAndFill(_, _) || _.node.createChecked(_, _);
