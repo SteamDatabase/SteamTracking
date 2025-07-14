@@ -38991,7 +38991,7 @@
             else {
               (_ = `${"dev" === _._.WEB_UNIVERSE ? "https://cdn.beta.steampowered.com/" : _._.CDN_URL}apps/${_._.DOTA_APP_ID}/teamautographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`),
                 "public" === _._.WEB_UNIVERSE &&
-                  (_ = `https://cdn.dota2.com/apps/dota2/teamautographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`);
+                  (_ = `https://shared.steamstatic.com/dota_leagues/autographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`);
             }
             return _.createElement(
               "div",
