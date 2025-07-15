@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    476: (e, t, n) => {
+    124: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => V });
       var o = n(669),
         a = n.n(o),
-        s = n(324),
-        i = n(184),
-        r = n(359),
-        c = n(822),
-        l = n(307),
-        u = n(887),
-        d = n(607),
-        g = n(195),
-        b = n(71),
-        h = n(790),
+        s = n(868),
+        i = n(32),
+        r = n(319),
+        c = n(118),
+        l = n(206),
+        u = n(7),
+        d = n(427),
+        g = n(419),
+        h = n(107),
+        b = n(214),
         m = n(382),
         _ = n.n(m);
       function f(e) {
@@ -77,15 +77,15 @@
                         d(t, n);
                     }
                   })(e, t));
-              let b = window.setInterval(s, 200),
-                h = e.Tree.OnActiveStateChangedCallbacks.Register((e) => {
+              let h = window.setInterval(s, 200),
+                b = e.Tree.OnActiveStateChangedCallbacks.Register((e) => {
                   e ? t.show() : t.hide();
                 });
               o = () => {
-                window.clearInterval(b),
+                window.clearInterval(h),
                   t.remove(),
                   (s = void 0),
-                  h.Unregister();
+                  b.Unregister();
               };
             }
           };
@@ -96,25 +96,25 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var p = n(628),
-        S = n(741),
-        E = n(326);
-      function w(e) {
+      var p = n(179),
+        S = n(685),
+        w = n(758);
+      function E(e) {
         return e ? Function("event", e) : null;
       }
       function I() {
         return !0;
       }
-      function v(e) {
+      function L(e) {
         return "BlockMovement" == e
           ? I
           : "RepeatNavigationBoundary" == e
-            ? E.W7
+            ? w.W7
             : e
               ? Function("detail", e)
               : null;
       }
-      function L(e) {
+      function v(e) {
         this.click(), e.stopPropagation();
       }
       function N(e) {
@@ -133,23 +133,23 @@
         switch (e.detail.button) {
           case p.pR.DIR_UP:
             if (s.scrollY > 3)
-              return (0, b.BA)(s, { top: -s.innerHeight / n, behavior: o }), !0;
+              return (0, h.BA)(s, { top: -s.innerHeight / n, behavior: o }), !0;
             break;
           case p.pR.DIR_RIGHT:
             if (s.scrollX + s.innerWidth < a.body.clientWidth - 3)
-              return (0, b.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return (0, h.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
             break;
           case p.pR.DIR_DOWN:
             if (s.scrollY + s.innerHeight < a.body.clientHeight - 3)
-              return (0, b.BA)(s, { top: s.innerHeight / n, behavior: o }), !0;
+              return (0, h.BA)(s, { top: s.innerHeight / n, behavior: o }), !0;
             break;
           case p.pR.DIR_LEFT:
             if (s.scrollX > 3)
-              return (0, b.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return (0, h.BA)(s, { left: s.innerWidth / n, behavior: o }), !0;
         }
         return !1;
       }
-      var T = n(381);
+      var T = n(461);
       const D = !1;
       function A(e) {
         const { name: t, root: n, navState: o } = e;
@@ -164,20 +164,21 @@
         const n = window.history.state;
         return { name: e, root: t, navState: n?.[e] };
       }
-      const k = new (n(557).wd)("FocusNavigation").Debug;
+      const k = new (n(316).wd)("FocusNavigation").Debug;
       var O;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.NotNeeded = 1)] = "NotNeeded"),
           (e[(e.InReactTree = 2)] = "InReactTree");
       })(O || (O = {}));
-      const M = new h.r();
+      const M = new b.r();
       let B,
         U = !1,
         P = null;
       function V(e) {
         U ||
           ((P = new l.t()),
+          (window.legacyWebFocusNavController = P),
           (B = new i.T(P)),
           B.RegisterForFocusChanged(P.GetDefaultContext()),
           M.Init(window),
@@ -204,11 +205,8 @@
                 const t = o.GetLastFocusedNode();
                 t?.Element && R(t.Element, e);
               }),
-              Object.assign(window, {
-                legacyWebFocusNavController: P,
-                __nav_tree_root: o,
-                __virtual_keyboard_client: M,
-              }),
+              (window.__nav_tree_root = o),
+              (window.__virtual_keyboard_client = M),
               F.set(document.body, o.Root),
               x(document.body, o.Root),
               X(void 0, !0),
@@ -223,7 +221,7 @@
               childList: !0,
               subtree: !0,
             }),
-              (0, b.y1)(!0),
+              (0, h.y1)(!0),
               (function (e, t) {
                 if (
                   (t.Tree.DeferredFocus.SuppressFocus(),
@@ -335,12 +333,10 @@
         const t = a()(e.Element);
         return (
           !t.data("gpFocusDisabled") &&
-          !(!t.is(":visible") || "hidden" == t.css("visibility")) &&
-          !(
-            t.outerWidth() > 0 &&
-            t.outerHeight() > 0 &&
-            "hidden" === t.css("overflow")
-          )
+          t.is(":visible") &&
+          "hidden" != t.css("visibility") &&
+          ((t.outerWidth() > 0 && t.outerHeight() > 0) ||
+            "hidden" !== t.css("overflow"))
         );
       }
       function q(e) {
@@ -350,11 +346,10 @@
           return x(e, O.InReactTree), O.InReactTree;
         const o = n.Tree;
         let i,
-          r = t.data("panel") || {},
-          l = J;
+          r = t.data("panel") || {};
         if (
-          (t.attr("data-nav-modal")
-            ? (i = (function (e, t) {
+          ((i = t.attr("data-nav-modal")
+            ? (function (e, t) {
                 const n = P.NewGamepadNavigationTree(
                     P.GetDefaultContext(),
                     "modal_dialog",
@@ -369,10 +364,10 @@
                   x(t, n.Root),
                   n.Root
                 );
-              })(o, e))
+              })(o, e)
             : t.data("reactNavRoot")
-              ? ((i = new c.O(t.data("reactNavRoot"), n)), (l = void 0))
-              : (i = o.CreateNode(n, n.m_FocusRing)),
+              ? new c.O(t.data("reactNavRoot"), n)
+              : o.CreateNode(n, n.m_FocusRing)),
           "A" == e.tagName || "BUTTON" == e.tagName || "LABEL" == e.tagName)
         )
           (r.focusable = r.focusable ?? !0),
@@ -391,43 +386,43 @@
           "TEXTAREA" == e.tagName &&
             ((r.focusable = r.focusable ?? !0),
             (r.enableVirtualKeyboard = r.enableVirtualKeyboard ?? !0));
-        const u = r["flow-children"];
+        const l = r["flow-children"];
         delete r["flow-children"];
         let {
-            clickOnActivate: b,
+            clickOnActivate: u,
             maintainX: h,
-            maintainY: m,
-            enableVirtualKeyboard: _,
-            preferredChild: p,
-            onOKActionDescription: S,
-            onCancelActionDescription: E,
-            onSecondaryActionDescription: I,
-            onOptionsActionDescription: C,
-            onMenuActionDescription: T,
-            actionDescriptionMap: D,
-            onOKButton: A,
-            onCancelButton: y,
-            onSecondaryButton: k,
-            onOptionsButton: B,
-            onMenuButton: U,
-            onMoveUp: V,
-            onMoveRight: G,
-            onMoveDown: F,
-            onMoveLeft: W,
-            onGamepadDirection: K,
-            bFocusRingRoot: j,
-            type: Y,
-            ...$
+            maintainY: b,
+            enableVirtualKeyboard: m,
+            preferredChild: _,
+            onOKActionDescription: p,
+            onCancelActionDescription: S,
+            onSecondaryActionDescription: w,
+            onOptionsActionDescription: I,
+            onMenuActionDescription: C,
+            actionDescriptionMap: T,
+            onOKButton: D,
+            onCancelButton: A,
+            onSecondaryButton: y,
+            onOptionsButton: k,
+            onMenuButton: B,
+            onMoveUp: U,
+            onMoveRight: V,
+            onMoveDown: G,
+            onMoveLeft: F,
+            onGamepadDirection: W,
+            bFocusRingRoot: K,
+            type: j,
+            ...Y
           } = r,
-          X = w(A),
-          q = w(y),
-          Z = w(k),
-          Q = w(B),
-          ee = w(U),
-          te = w(K);
-        Y || (Y = "Panel"),
-          "PanelGroup" == Y &&
-            ({ onOKButtonHandler: X, onCancelButtonHandler: q } = (function (
+          $ = E(D),
+          X = E(A),
+          q = E(y),
+          Z = E(k),
+          Q = E(B),
+          ee = E(W);
+        j || (j = "Panel"),
+          "PanelGroup" == j &&
+            ({ onOKButtonHandler: $, onCancelButtonHandler: X } = (function (
               e,
               t,
             ) {
@@ -455,41 +450,41 @@
                 }
               );
             })(
-              { onOKButtonHandler: X, onCancelButtonHandler: q, navNode: i },
-              $,
+              { onOKButtonHandler: $, onCancelButtonHandler: X, navNode: i },
+              Y,
             )),
-          X && H(t[0], (0, s.VX)(t[0], X)),
-          q && H(t[0], (0, s.hr)(t[0], q)),
-          Z && I && H(t[0], (0, s.f)(t[0], Z)),
-          Q && C && H(t[0], (0, s.Ro)(t[0], Q)),
-          ee && T && H(t[0], (0, s.cR)(t[0], ee)),
-          te && H(t[0], (0, s.u8)(t[0], te));
-        const ne = (function (e, t, n, o) {
+          $ && H(t[0], (0, s.VX)(t[0], $)),
+          X && H(t[0], (0, s.hr)(t[0], X)),
+          q && w && H(t[0], (0, s.f)(t[0], q)),
+          Z && I && H(t[0], (0, s.Ro)(t[0], Z)),
+          Q && C && H(t[0], (0, s.cR)(t[0], Q)),
+          ee && H(t[0], (0, s.u8)(t[0], ee));
+        const te = (function (e, t, n, o) {
             const a = {};
             return (
-              e && (a.onMoveUp = v(e)),
-              t && (a.onMoveRight = v(t)),
-              n && (a.onMoveDown = v(n)),
-              o && (a.onMoveLeft = v(o)),
+              e && (a.onMoveUp = L(e)),
+              t && (a.onMoveRight = L(t)),
+              n && (a.onMoveDown = L(n)),
+              o && (a.onMoveLeft = L(o)),
               a
             );
-          })(V, G, F, W),
-          oe = u ? (0, g.O)(u) : d.xj.NONE;
-        oe != d.xj.NONE && ($.layout = oe),
+          })(U, V, G, F),
+          ne = l ? (0, g.O)(l) : d.xj.NONE;
+        ne != d.xj.NONE && (Y.layout = ne),
           h
-            ? ($.navEntryPreferPosition = d.iU.MAINTAIN_X)
-            : m
-              ? ($.navEntryPreferPosition = d.iU.MAINTAIN_Y)
-              : p && ($.navEntryPreferPosition = d.iU.PREFERRED_CHILD),
-          b &&
-            (!1 !== $.focusable && ($.focusable = !0),
-            t.on("vgp_onok", "firstChild" === b ? N : L),
+            ? (Y.navEntryPreferPosition = d.iU.MAINTAIN_X)
+            : b
+              ? (Y.navEntryPreferPosition = d.iU.MAINTAIN_Y)
+              : _ && (Y.navEntryPreferPosition = d.iU.PREFERRED_CHILD),
+          u &&
+            (!1 !== Y.focusable && (Y.focusable = !0),
+            t.on("vgp_onok", "firstChild" === u ? N : v),
             t.attr("role") ||
               ("A" !== t.prop("tagName") && t.attr("role", "button")),
             H(e, () => {
               t.off("vgp_onok");
             })),
-          _ &&
+          m &&
             (t.on("vgp_onok.vkbindings", () => M.ShowVirtualKeyboard()),
             t.on("click.vkbindings", () => M.ShowVirtualKeyboard()),
             t.on("blur.vkbindings", () => {
@@ -500,25 +495,25 @@
             H(e, () => {
               t.off(".vkbindings");
             })),
-          $.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
-          $.focusable && i.FocusCallbackList.Register((t) => R(e, t)),
-          j &&
+          Y.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
+          Y.focusable && i.FocusCallbackList.Register((t) => R(e, t)),
+          K &&
             ((i.m_FocusRing = f(t)),
             "static" == t.css("position") && t.css("position", "relative"));
-        const ae = {
-          fnCanTakeFocus: l,
+        const oe = {
+          fnCanTakeFocus: J,
           actionDescriptionMap: (0, s.Y3)({
-            onOKActionDescription: S,
-            onCancelActionDescription: E,
-            onSecondaryActionDescription: I,
-            onOptionsActionDescription: C,
-            onMenuActionDescription: T,
-            actionDescriptionMap: D,
+            onOKActionDescription: p,
+            onCancelActionDescription: S,
+            onSecondaryActionDescription: w,
+            onOptionsActionDescription: I,
+            onMenuActionDescription: C,
+            actionDescriptionMap: T,
           }),
-          ...ne,
-          ...$,
+          ...te,
+          ...Y,
         };
-        return i.SetProperties(ae), x(e, i), i;
+        return i.SetProperties(oe), x(e, i), i;
       }
       function z(e) {
         const t = e.parentElement;
@@ -595,11 +590,11 @@
         },
       };
     },
-    328: (e, t, n) => {
+    920: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(481),
-        s = n(962);
+        a = n(305),
+        s = n(258);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -666,16 +661,16 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    775: (e, t, n) => {
+    935: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    770: (e, t, n) => {
+    114: (e, t, n) => {
       n.d(t, { Jc: () => c, LU: () => d, YX: () => u, e0: () => g });
       var o = n(629),
-        a = n(208),
-        s = n(481),
-        i = n(912);
+        a = n(184),
+        s = n(305),
+        i = n(640);
       class r {
         m_callbacks;
         m_currentValue;
@@ -778,7 +773,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    741: (e, t, n) => {
+    685: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -848,10 +843,10 @@
         }
       }
     },
-    557: (e, t, n) => {
+    316: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(481);
+        a = n(305);
       class s {
         async GetObject(e, t) {
           try {
@@ -877,7 +872,7 @@
         }
       }
       var r,
-        c = n(912);
+        c = n(640);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1061,9 +1056,9 @@
         const d =
             s.length >= 1 && "string" == typeof s[0] && s[0].includes("%c"),
           g = d && s.shift();
-        let b;
+        let h;
         if (
-          ((b = t
+          ((h = t
             ? [
                 `%c${u}%c:${d ? " %c" + g : ""}`,
                 `color: ${c ? "black" : "white"}; background: rgb(${i.join(",")}); padding: 0 1ch; border-radius: 3px;`,
@@ -1074,32 +1069,32 @@
             : s),
           n)
         )
-          console.groupCollapsed(...b),
+          console.groupCollapsed(...h),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case r.Debug:
             case r.Info:
-              console.log(...b);
+              console.log(...h);
               break;
             case r.Warning:
-              console.warn(...b);
+              console.warn(...h);
               break;
             case r.Error:
               console.clogerror
-                ? console.clogerror(3, ...b)
-                : console.error(...b);
+                ? console.clogerror(3, ...h)
+                : console.error(...h);
           }
       }
       const g = () => [...u.Get().LogNames].sort(),
-        b = (e, t) => {
+        h = (e, t) => {
           u.Get().IsLogName(e)
             ? u.Get().SetDebugLogEnabled(e, t)
             : console.warn(`No log named "${e}", available logs:`, g());
         };
-      (window.DebugLogEnable = (...e) => e.forEach((e) => b(e, !0))),
-        (window.DebugLogDisable = (...e) => e.forEach((e) => b(e, !1))),
+      (window.DebugLogEnable = (...e) => e.forEach((e) => h(e, !0))),
+        (window.DebugLogDisable = (...e) => e.forEach((e) => h(e, !1))),
         (window.DebugLogEnableAll = () => u.Get().SetAllDebugLogsEnabled(!0)),
         (window.DebugLogDisableAll = () => u.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
@@ -1110,7 +1105,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    662: (e, t, n) => {
+    534: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1121,9 +1116,9 @@
       }
       n.d(t, { e: () => o });
     },
-    37: (e, t, n) => {
+    218: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(591);
+      var o = n(959);
       function a() {
         return !!window.document;
       }
