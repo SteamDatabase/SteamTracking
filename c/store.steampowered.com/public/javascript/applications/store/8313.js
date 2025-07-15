@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Laboratório Steam",
 	"Menu_Section_SpecialSections_DLCForYou": "Conteúdos adicionais",
 	"Menu_Section_SpecialSections_SaleEvents": "EVENTOS PROMOCIONAIS",
-	"Menu_SearchBar_RecentlyViewed": "Vistos recentemente",
-	"Menu_SearchBar_PopularItems": "Itens populares",
-	"Menu_SearchBar_SearchResults": "Resultados da busca",
+	"Menu_SearchBar_RecentlyViewed": "Recém-acessados",
+	"Menu_SearchBar_PopularSearches": "Buscas populares",
+	"Menu_SearchBar_SearchResults": "Resultados de busca",
 	"Menu_SearchBar_YourTopGenres": "Seus principais gêneros",
 	"Menu_SearchBar_BrowseBy": "Navegar por...",
+	"Menu_SearchBar_NoMatches": "Nenhum item corresponde à busca.",
+	"Menu_SearchBar_AdvancedSearch": "Busca avançada",
 	"Menu_Search": "Busca",
 	"Menu_Label": "Menu da loja"
 }`);

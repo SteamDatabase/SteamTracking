@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "Lisämateriaali",
 	"Menu_Section_SpecialSections_SaleEvents": "ALETAPAHTUMAT",
 	"Menu_SearchBar_RecentlyViewed": "Viimeksi katsotut",
-	"Menu_SearchBar_PopularItems": "Suositut esineet",
+	"Menu_SearchBar_PopularSearches": "Suositut haut",
 	"Menu_SearchBar_SearchResults": "Hakutulokset",
 	"Menu_SearchBar_YourTopGenres": "Omat suosikkilajityypit",
 	"Menu_SearchBar_BrowseBy": "Selaa",
+	"Menu_SearchBar_NoMatches": "Haku ei tuottanut tuloksia.",
+	"Menu_SearchBar_AdvancedSearch": "Tarkennettu haku",
 	"Menu_Search": "Haku",
 	"Menu_Label": "Kaupan valikko"
 }`);

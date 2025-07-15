@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "Зав. вміст",
 	"Menu_Section_SpecialSections_SaleEvents": "РОЗПРОДАЖІ",
 	"Menu_SearchBar_RecentlyViewed": "Нещодавно переглянуте",
-	"Menu_SearchBar_PopularItems": "Популярні товари",
+	"Menu_SearchBar_PopularSearches": "Популярні пошукові запити",
 	"Menu_SearchBar_SearchResults": "Результати пошуку",
 	"Menu_SearchBar_YourTopGenres": "Ваші улюблені жанри",
 	"Menu_SearchBar_BrowseBy": "Переглянути...",
+	"Menu_SearchBar_NoMatches": "За вашим запитом нічого не знайдено.",
+	"Menu_SearchBar_AdvancedSearch": "Розширений пошук",
 	"Menu_Search": "Пошук",
 	"Menu_Label": "Меню крамниці"
 }`);

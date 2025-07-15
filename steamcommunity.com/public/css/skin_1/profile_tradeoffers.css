@@ -446,6 +446,75 @@ div.gray_bevel.newurl_updated {
 }
 
 
+
+.trade_protection_modal_container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.trade_protection_header {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #d1d1d1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.trade_protection_explainer {
+	color: white;
+	padding-left: 8px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.trade_protection_explainer img {
+	width: 24px;
+	height: 24px;
+}
+
+.trade_protection_example {
+	background-color: rgba( 0, 0, 0, 0.2);
+	border-radius: 2px;
+	border: none;
+
+	display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+    gap: 6px;
+	margin: 10px 0px;
+}
+
+.trade_protection_description {
+	font-size: 14px;
+	padding: 8px 0px;
+
+	a {
+		color: #acb2b8;
+		text-decoration: underline;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	.callout {
+		color: #F6BD1C;
+	}
+}
+
+}
+
 .responsive_createtradeoffer {
 	margin: 16px 0;
 }

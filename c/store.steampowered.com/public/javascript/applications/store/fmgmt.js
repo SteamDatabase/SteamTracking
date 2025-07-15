@@ -3477,27 +3477,17 @@
                 _.createElement(
                   _._,
                   {
-                    className: _.ButtonCtn,
+                    fieldClassName: _.ButtonCtn,
                     bottomSeparator: "none",
                     label: (0, _._)(
                       "#Parental_CopySettingsFrom",
                       _[0].data.m_strPlayerName,
                     ),
+                    className: _.Button,
+                    onClick: () => _(!0),
+                    accessibilityNameOrder: ["label"],
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ButtonWrapper,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        className: _.Button,
-                        onClick: () => _(!0),
-                      },
-                      (0, _._)("#Button_Copy"),
-                    ),
-                  ),
+                  (0, _._)("#Button_Copy"),
                 ),
               __webpack_require__.length > 1 &&
                 _.createElement(

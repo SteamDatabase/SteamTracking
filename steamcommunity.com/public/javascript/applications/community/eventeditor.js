@@ -3531,7 +3531,7 @@
         qt = a(31561),
         Vt = a(67165),
         Qt = a(26161),
-        Wt = a(84106),
+        Wt = a(86261),
         Yt = a(9449),
         Jt = a(2472),
         Kt = a(25359),
@@ -16028,7 +16028,7 @@
                     Yn().EventDetailsBody,
                   ),
                 },
-                c.createElement(Wt.f, {
+                c.createElement(Wt.fh, {
                   text: a || "",
                   languageOverride: e.GetCurEditLanguage(),
                   event: e.GetEventModel(),
@@ -16996,7 +16996,7 @@
             _r.Vw.Init(new ur.D(G.TS.WEBAPI_BASE_URL)),
               Er.O3.Init(),
               l.mh.Init(),
-              Wt.f.AddDictionary(
+              Wt.us.AddDictionary(
                 (null == $r &&
                   ($r = new Map([
                     [

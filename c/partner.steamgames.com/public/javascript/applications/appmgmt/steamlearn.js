@@ -21091,6 +21091,7 @@
             ),
           );
         };
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
           case 1:
@@ -21379,16 +21380,18 @@
                 value: 3,
               },
             ];
-          const _ = _.useId();
+          _.useId();
           return _.createElement(
             _._,
             {
-              "aria-labelledby": _,
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
             },
             _.createElement(
-              _._,
+              "div",
               {
-                _: _,
+                className: _.NodeHeader,
               },
               (0, _._)("#SteamLearn_Config_Node_Title_DenseStack"),
               _.createElement(
@@ -21402,24 +21405,24 @@
             _.createElement(
               "div",
               {
-                className: _.EditOptions,
+                className: _.NodeBody,
               },
               _.createElement(
                 "div",
                 {
-                  className: _.Option,
+                  className: _.NodeOptionBlock,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionTitle,
+                    className: _.NodeOptionHeader,
                   },
                   (0, _._)("#SteamLearn_Config_Node_Comment"),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionDesc,
+                    className: _.NodeOptionDesc,
                   },
                   (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
@@ -21434,19 +21437,19 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Option,
+                  className: _.NodeOptionBlock,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionTitle,
+                    className: _.NodeOptionHeader,
                   },
                   (0, _._)("#SteamLearn_Config_Node_Dense_Width"),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionDesc,
+                    className: _.NodeOptionDesc,
                   },
                   (0, _._)("#SteamLearn_Config_Node_Dense_WidthDesc"),
                 ),
@@ -21460,19 +21463,19 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Option,
+                  className: _.NodeOptionBlock,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionTitle,
+                    className: _.NodeOptionHeader,
                   },
                   (0, _._)("#SteamLearn_Config_Node_DenseStack_Activation"),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionDesc,
+                    className: _.NodeOptionDesc,
                   },
                   (0, _._)("#SteamLearn_Config_Node_Train_ActivationDesc"),
                 ),
@@ -21528,19 +21531,19 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Option,
+                  className: _.NodeOptionBlock,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionTitle,
+                    className: _.NodeOptionHeader,
                   },
                   (0, _._)("#SteamLearn_Config_Node_DenseStack_Regularization"),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: _.OptionDesc,
+                    className: _.NodeOptionDesc,
                   },
                   (0, _._)(
                     "#SteamLearn_Config_Node_DenseStack_RegularizationDesc",
@@ -21569,7 +21572,7 @@
             _.createElement(
               "div",
               {
-                className: _.ButtonsContainer,
+                className: _.Buttons,
               },
               _.createElement(
                 _._,

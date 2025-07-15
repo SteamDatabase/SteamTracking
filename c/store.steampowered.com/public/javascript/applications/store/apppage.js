@@ -225,12 +225,15 @@
         Icon: "_2U9kjREHwWCzFv6jHeN7en",
         BackgroundClickAnimation: "_2XYeZn3KijB2PUnLY0II7_",
         PlayerControls: "-qTM6xbWp6f2qNHBAuaxc",
-        UpperControls: "_3kSXQEoQMr_lWPTqJoSG1I",
-        LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
-        BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
-        ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
         Fullscreen: "_1j3xlARgSMe58myZErKUzW",
+        ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
         DelayHideCursor: "_3n201iHmh_Qzklo3iedCSy",
+        ControlGroup: "_39Fc5ujNP-wz5RbY-mJb--",
+        BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
+        TitleRow: "_2WpHhLTZgfpt1cIY1tId60",
+        RowLimit: "lwXhsx3Bz3Dob4Wu6sanX",
+        BehindTitleFade: "_2lPvoPPzmLDNezX-ypCwXd",
+        LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
         ButtonRow: "_2gDbG9frVoBgp4J9N1vA7I",
         LeftGroup: "ppGte6hTuxkoYS4d0ffwc",
         RightGroup: "_2iPvkLeM34oiIhYNFbtIaL",
@@ -245,7 +248,10 @@
     chunkid: (module) => {
       module.exports = {
         PlayerControls: "_3tW3QF7-Dmrb384nDe1UtA",
+        ControlGroup: "_3rbHwY_FOcAwhfb8gTwQET",
         ShowControls: "_3ysE_txkWJmWE_dMgvhGEs",
+        TitleRow: "_3-16p-ITDbqTqIQ-NkXk0q",
+        RowLimit: "_1Og_QMcM6h_bJKMYrgtF5-",
         LowerControls: "_3fTNY9SEeL0C8N9R6jMHn7",
         ButtonRow: "_3AhvKJXkOBGurfFyFL_4IL",
         LeftGroup: "L1I7aRgg3342fEsyw1Fz",
@@ -277,14 +283,22 @@
         HoverImage: "_2ZYpYXOs7Rs6UqKCGlQffu",
         HoverTime: "qSkn0N2OLSYYw4IxDl6LF",
         FatalErrorMessage: "_1pJhZ_qwY_Idku2_lkVQZM",
+        TitleRow: "_3CLbNz7OTHT4gT5HkumZQA",
+        Category: "_18O6pUE9bOMkMQXRPHunN0",
+        Separator: "_2T8HGXJpXSDoSvvPwF9uXd",
+        Title: "plWqYRThWTIY1q6aN9Gd9",
       };
     },
     chunkid: (module) => {
       module.exports = {
         PlayerControls: "_2vG-2gXab6W-z35SIH9R3e",
+        ControlGroup: "_2tyeapb_CiDNPj6mbOF0lG",
         GlassBackground: "_3Gg0KvfCct51O3L9T5Y7Zb",
         ShowControls: "_1-uJmZae5aIz-hnJFoGEAM",
         SeekThumbnail: "Ngi4I8hsTuASK1ZqGU7QU",
+        TitleRow: "WqIiyZVtvjA4JxjEADfoA",
+        ControlsVisible: "_2rhiB3AUKPHcTKY33rZhUx",
+        FadeIn: "_38rU1NgNCaNq5oN_O8mGML",
         CenterControls: "e9VoqX_mFdhBgMsntP0NR",
         Hide: "_2WyZa1F8jTCVpsx7hED5nU",
         CenteredPlayToggle: "_1-CqXG-KggjG0ABX36Nq2M",
@@ -2823,6 +2837,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = parseInt(_().nContextMenuEdgePadding),
         _ = parseInt(_().nContextMenuVerticalGap),
@@ -3310,7 +3325,60 @@
         );
       }
       function _(_) {
-        let { player: _, fullscreen: __webpack_require__ } = _,
+        let { category: _, title: __webpack_require__ } = _,
+          _ = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().TitleRow,
+          },
+          _.createElement(
+            "span",
+            {
+              className: _().Category,
+            },
+            _,
+          ),
+          _.createElement("span", {
+            className: _().Separator,
+          }),
+          _.createElement(
+            "span",
+            {
+              className: _().Title,
+            },
+            __webpack_require__,
+          ),
+        );
+      }
+      function _(_, _) {
+        let _ = (function (_) {
+            return (0, _._)(() => _.HasPlaybackStarted());
+          })(_),
+          [_, _] = (0, _.useState)(""),
+          _ = (0, _.useRef)(0);
+        return (
+          (0, _.useEffect)(() => {
+            _ &&
+              !_ &&
+              "" == _ &&
+              (_("active"),
+              (_.current = window.setTimeout(() => _("complete"), 4e3)));
+          }, [_, _, _, _, _]),
+          (0, _.useEffect)(() => {
+            _ && (_("complete"), window.clearTimeout(_.current));
+          }, [_]),
+          (0, _.useEffect)(() => () => window.clearTimeout(_.current), []),
+          "active" == _
+        );
+      }
+      function _(_) {
+        let {
+            player: _,
+            fullscreen: __webpack_require__,
+            category: _,
+            title: _,
+          } = _,
           _ = (0, _.useRef)(),
           _ = (0, _.useRef)(),
           [_, _] = _(_),
@@ -3318,77 +3386,117 @@
           _ = _(_, _, _);
         _ = _ || _;
         let _ = (0, _._)(
-          _().PlayerControls,
-          _ && _().ShowControls,
-          __webpack_require__.bFullscreen && _().Fullscreen,
+            _().PlayerControls,
+            __webpack_require__.bFullscreen && _().Fullscreen,
+          ),
+          _ = (0, _._)(_().ControlGroup, _ && _().ShowControls);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _,
+              },
+              _.createElement(_, {
+                player: _,
+                enabled: _ && !_,
+              }),
+              _.createElement(_, null),
+              _.createElement(
+                _,
+                {
+                  ref: _,
+                  className: _().LowerControls,
+                },
+                _.createElement(_, {
+                  player: _,
+                  showHoverThumb: !0,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ButtonRow,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LeftGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                    _.createElement(_, {
+                      player: _,
+                      refControlsHover: _,
+                    }),
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().RightGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                    _.createElement(_, {
+                      fullscreen: __webpack_require__,
+                    }),
+                  ),
+                ),
+              ),
+            ),
+            _.createElement(_, {
+              player: _,
+              controlsVisible: _,
+              category: _,
+              title: _,
+            }),
+            _.createElement("div", {
+              ref: _,
+              className: _().MenuLayer,
+            }),
+          ),
         );
+      }
+      function _(_) {
+        let {
+            player: _,
+            controlsVisible: __webpack_require__,
+            category: _,
+            title: _,
+          } = _,
+          _ = _(_, __webpack_require__);
+        if (0 == _ || !_) return null;
+        let _ = _ || __webpack_require__,
+          _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return _.createElement(
           "div",
           {
             className: _,
-            ..._,
           },
+          _.createElement("div", {
+            className: _().BehindTitleFade,
+          }),
           _.createElement(
-            _.Provider,
+            "div",
             {
-              value: _,
+              className: _().RowLimit,
             },
             _.createElement(_, {
-              player: _,
-              enabled: _ && !_,
-            }),
-            _.createElement(_, {
-              className: _().UpperControls,
-            }),
-            _.createElement(_, null),
-            _.createElement(
-              _,
-              {
-                ref: _,
-                className: _().LowerControls,
-              },
-              _.createElement(_, {
-                player: _,
-                showHoverThumb: !0,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ButtonRow,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LeftGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                    refControlsHover: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().RightGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    fullscreen: __webpack_require__,
-                  }),
-                ),
-              ),
-            ),
-            _.createElement("div", {
-              ref: _,
-              className: _().MenuLayer,
+              category: _,
+              title: _,
             }),
           ),
         );
@@ -3541,7 +3649,12 @@
       const _ = 3e3,
         _ = 1e3;
       function _(_) {
-        let { player: _, fullscreen: __webpack_require__ } = _,
+        let {
+            player: _,
+            fullscreen: __webpack_require__,
+            category: _,
+            title: _,
+          } = _,
           _ = (0, _.useRef)(),
           [_, _] = (function (_, _, _) {
             let [_, _] = (function (_, _) {
@@ -3607,82 +3720,119 @@
             return [_, _];
           })(_),
           _ = _.useCallback((_) => {
-            _.stopPropagation();
+            _.stopPropagation(), _.preventDefault();
           }, []),
-          _ = (0, _._)(_().PlayerControls, _ && _().ShowControls),
+          _ = (0, _._)(_().ControlGroup, _ && _().ShowControls),
           _ = (0, _._)(_().CenterControls, !!_ && _().Hide);
         return _.createElement(
-          "div",
+          _.Provider,
           {
-            ref: _,
-            className: _,
-            ..._,
-            onTouchStart: _,
+            value: _,
           },
           _.createElement(
-            _.Provider,
+            "div",
             {
-              value: _,
+              ref: _,
+              className: _().PlayerControls,
+              ..._,
+              onTouchStart: _,
             },
-            _.createElement(_, {
-              thumbnail: _,
-            }),
-            _.createElement(_, null),
             _.createElement(
               "div",
               {
                 className: _,
               },
               _.createElement(_, {
-                player: _,
+                thumbnail: _,
               }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().LowerControls,
-              },
-              _.createElement(_, {
-                player: _,
-                onTouchSeek: _,
-                showHoverThumb: !1,
-              }),
+              _.createElement(_, null),
               _.createElement(
                 "div",
                 {
-                  className: _().ButtonRow,
+                  className: _,
                 },
+                _.createElement(_, {
+                  player: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().LowerControls,
+                },
+                _.createElement(_, {
+                  player: _,
+                  onTouchSeek: _,
+                  showHoverThumb: !1,
+                }),
                 _.createElement(
                   "div",
                   {
-                    className: _().LeftGroup,
+                    className: _().ButtonRow,
                   },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().RightGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    fullscreen: __webpack_require__,
-                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LeftGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().RightGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                    _.createElement(_, {
+                      fullscreen: __webpack_require__,
+                    }),
+                  ),
                 ),
               ),
             ),
+            _.createElement(_, {
+              player: _,
+              controlsVisible: _,
+              category: _,
+              title: _,
+            }),
             _.createElement("div", {
               ref: _,
               className: _().MenuLayer,
             }),
           ),
+        );
+      }
+      function _(_) {
+        let {
+            player: _,
+            controlsVisible: __webpack_require__,
+            category: _,
+            title: _,
+          } = _,
+          _ = _(_, __webpack_require__);
+        if (0 == _ || !_) return null;
+        let _ = (0, _._)(
+          _().TitleRow,
+          _ && _().FadeIn,
+          __webpack_require__ && _().ControlsVisible,
+        );
+        return _.createElement(
+          "div",
+          {
+            className: _,
+          },
+          _.createElement(_, {
+            category: _,
+            title: _,
+          }),
         );
       }
       function _(_) {
@@ -3755,8 +3905,8 @@
       const _ = 3e3,
         _ = 1500;
       function _(_) {
-        let { player: _ } = _,
-          [__webpack_require__, _] = (function (_, _) {
+        let { player: _, category: __webpack_require__, title: _ } = _,
+          [_, _] = (function (_, _) {
             let [__webpack_require__, _] = _(),
               _ = (0, _.useRef)(!0),
               _ = _(_);
@@ -3813,67 +3963,104 @@
           _ = _
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          _ = (0, _._)(
-            _().PlayerControls,
-            __webpack_require__ && _().ShowControls,
-          );
+          _ = (0, _._)(_().ControlGroup, _ && _().ShowControls);
         return _.createElement(
-          _._,
+          _.Provider,
           {
-            className: _,
-            focusable: !0,
-            onActivate: _,
-            onOKActionDescription: (0, _._)(_),
-            onSecondaryButton: _,
-            onSecondaryActionDescription: (0, _._)(_),
-            onButtonDown: _,
+            value: _,
           },
           _.createElement(
-            _.Provider,
+            _._,
             {
-              value: _,
+              className: _().PlayerControls,
+              focusable: !0,
+              onActivate: _,
+              onOKActionDescription: (0, _._)(_),
+              onSecondaryButton: _,
+              onSecondaryActionDescription: (0, _._)(_),
+              onButtonDown: _,
             },
-            _.createElement(_, null),
             _.createElement(
               "div",
               {
-                className: _().LowerControls,
+                className: _,
               },
-              _.createElement(_, {
-                player: _,
-                showHoverThumb: !1,
-              }),
+              _.createElement(_, null),
               _.createElement(
                 "div",
                 {
-                  className: _().ButtonRow,
+                  className: _().LowerControls,
                 },
+                _.createElement(_, {
+                  player: _,
+                  showHoverThumb: !1,
+                }),
                 _.createElement(
                   "div",
                   {
-                    className: _().LeftGroup,
+                    className: _().ButtonRow,
                   },
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                  _.createElement(_, {
-                    player: _,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().RightGroup,
-                  },
-                  _.createElement(_, {
-                    player: _,
-                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LeftGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().RightGroup,
+                    },
+                    _.createElement(_, {
+                      player: _,
+                    }),
+                  ),
                 ),
               ),
             ),
+            _.createElement(_, {
+              player: _,
+              controlsVisible: _,
+              category: __webpack_require__,
+              title: _,
+            }),
             _.createElement("div", {
               ref: _,
               className: _().MenuLayer,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let {
+            player: _,
+            controlsVisible: __webpack_require__,
+            category: _,
+            title: _,
+          } = _,
+          _ = _(_, __webpack_require__);
+        if (0 == _ || !_) return null;
+        let _ = _ || __webpack_require__,
+          _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().RowLimit,
+            },
+            _.createElement(_, {
+              category: _,
+              title: _,
             }),
           ),
         );
@@ -3887,15 +4074,18 @@
       const _ = 500;
       function _(_) {
         let {
-            dashManifest: _,
-            hlsManifest: __webpack_require__,
-            screenshot: _,
-            forcePause: _,
-            onPlaybackEnd: _,
-            uiMode: _,
-            altText: _,
-          } = _,
-          [_, _] = (0, _._)(!0),
+          dashManifest: _,
+          hlsManifest: __webpack_require__,
+          screenshot: _,
+          forcePause: _,
+          onPlaybackEnd: _,
+          uiMode: _,
+          altText: _,
+          title: _,
+          category: _,
+        } = _;
+        (_ = _ || ""), (_ = _ || 0);
+        let [_, _] = (0, _._)(!0),
           [_, _] = _(_, __webpack_require__, _),
           [_, _] = (function (_) {
             let _ = (0, _.useRef)(null),
@@ -3989,6 +4179,8 @@
               player: _,
               fullscreen: _,
               uiMode: _,
+              category: _,
+              title: _,
             }),
             _.createElement(_, {
               player: _,
@@ -4006,7 +4198,13 @@
         );
       }
       function _(_) {
-        let { player: _, fullscreen: __webpack_require__, uiMode: _ } = _,
+        let {
+            player: _,
+            fullscreen: __webpack_require__,
+            uiMode: _,
+            category: _,
+            title: _,
+          } = _,
           _ = (0, _._)();
         return (
           (_ && "auto" != _) ||
@@ -4015,14 +4213,20 @@
             ? _.createElement(_, {
                 player: _,
                 fullscreen: __webpack_require__,
+                category: _,
+                title: _,
               })
             : "gamepad" == _
               ? _.createElement(_, {
                   player: _,
+                  category: _,
+                  title: _,
                 })
               : _.createElement(_, {
                   player: _,
                   fullscreen: __webpack_require__,
+                  category: _,
+                  title: _,
                 })
         );
       }
@@ -4054,7 +4258,6 @@
             size: "large",
             position: "center",
           }),
-          ";",
         );
       }
       function _(_) {
@@ -4102,6 +4305,7 @@
             hlsManifest: _,
             screenshot: _,
             title: _,
+            category: _,
           } = _,
           _ = (function () {
             _ ||
@@ -4145,6 +4349,8 @@
                 forcePause: _,
                 onPlaybackEnd: _,
                 altText: _,
+                title: _,
+                category: _,
               }),
             )
           : null;
@@ -6297,6 +6503,8 @@
               altText: _.title,
               forcePause: !__webpack_require__,
               onPlaybackEnd: null,
+              title: _.title,
+              category: _.category,
             }),
           ),
         );

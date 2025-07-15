@@ -322,7 +322,14 @@ var kStandardTag_Unmarketable =
 	localized_category_name: 'Misc'
 };
 
-
+	var kStandardTag_Sealed =
+		{
+			localized_tag_name: 'Trade Protected',
+			internal_name: "sealed",
+			category: "misc",
+			localized_category_name: 'Misc'
+		};
+	
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
 	// add the context menu
@@ -713,7 +720,9 @@ CInventory.prototype.AddInventoryData = function( data )
 				if ( !description.tags )
 					description.tags = [];
 
-								if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
+									if ( description.sealed )
+						description.tags.push( kStandardTag_Sealed );
+									if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 				{
 					if ( description.tradable )
 						description.tags.push( kStandardTag_Tradable );
@@ -1187,7 +1196,17 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	$Item.append( $Link );
 	this.BindMouseEvents( $Link, $Item, asset );
 
-	
+			if ( description.sealed )
+		{
+			$Item.addClass('provisional_item');
+
+			var $SealedItemBadge = $J( '<div />', {'class': 'provisional_item_badge', 'data-tooltip-text': 'Trade protected items cannot be modified, consumed, or transferred.' } );
+			$Item.append( $SealedItemBadge );
+
+			// InitInventoryPage runs DisableTooltipMutationObserver, so bind the tooltip manually
+			BindTooltips( $Item, { tooltipCSSClass: 'community_tooltip'} );
+		}
+		
 	if ( description.fraudwarnings )
 	{
 		var $FraudWarningIcon = $J( '<div/>', {'class': 'slot_app_fraudwarning' } );
@@ -2565,6 +2584,12 @@ var CUser = Class.create( {
 				rgContext.trade_permissions = appTradePermissions;
 				rgContext.inventory = null;
 				this.rgContexts[appid][contextid] = rgContext;
+								if ( rgContext.hide_context ?? false )
+				{
+					rgContextIds.splice( 0, 0, contextid );
+					this.m_bSingleContext = true;
+				}
+				else
 								{
 					rgContextIds.push(contextid);
 				}
@@ -3315,6 +3340,13 @@ function BuildHover( prefix, item, owner )
 	}
 
 	
+	var elTradeProtected = $( prefix + '_provisional_badge' );
+	if ( elTradeProtected )
+	{
+		PopulateTradeProtected( elTradeProtected, description );
+	}
+
+	
 	var elTags = $(prefix+'_item_tags');
 	var elTagsContent = $(prefix+'_item_tags_content');
 	if ( elTags && elTagsContent )
@@ -3404,6 +3436,19 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		}
 
 		elDescriptions.appendChild( elDescription );
+	}
+}
+
+
+function PopulateTradeProtected( elTradeProtected, description )
+{
+	if ( description.sealed )
+	{
+		$J( elTradeProtected ).show();
+	}
+	else
+	{
+		$J( elTradeProtected ).hide();
 	}
 }
 
@@ -3529,10 +3574,7 @@ function PopulateAssetProperties( elAssetProperties, elAssetPropertiesContent, a
 
 		if ( Object.hasOwn( property, 'float_value' ) )
 		{
-			<!-- // replicating the uh, very detailed, CS display logic -->
-			<!-- // CS does it for both 0 and 1 but in reality only 0 has this crazy precision near it -->
-			<!-- // This is pretty specific to CS but probably doesn't hurt to do for other games as well to keep it uniform -->
-			var floatValue = parseFloat( property.float_value );
+												var floatValue = parseFloat( property.float_value );
 			var maxFractionDigits = 9;
 
 			if ( floatValue > 0 )

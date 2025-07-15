@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "UITVERKOPEN",
 	"Menu_SearchBar_RecentlyViewed": "Onlangs bekeken",
-	"Menu_SearchBar_PopularItems": "Populaire artikelen",
+	"Menu_SearchBar_PopularSearches": "Populaire zoekopdrachten",
 	"Menu_SearchBar_SearchResults": "Zoekresultaten",
 	"Menu_SearchBar_YourTopGenres": "Je favoriete genres",
 	"Menu_SearchBar_BrowseBy": "Sorteren op ...",
+	"Menu_SearchBar_NoMatches": "Er zijn geen resultaten voor je zoekopdracht.",
+	"Menu_SearchBar_AdvancedSearch": "Geavanceerd zoeken",
 	"Menu_Search": "Zoeken",
 	"Menu_Label": "Winkelmenu"
 }`);

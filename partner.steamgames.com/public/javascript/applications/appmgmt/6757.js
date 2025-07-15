@@ -46,7 +46,7 @@
         O = a(6205),
         U = a(68797),
         h = a(22797),
-        v = a(20688),
+        v = a(71219),
         B = a(86244),
         b = a.n(B),
         Q = a(14336);
@@ -213,7 +213,7 @@
                   M.createElement(
                     "div",
                     { className: b().ShareLink },
-                    M.createElement(v.f, {
+                    M.createElement(v.fh, {
                       text: a,
                       event: null,
                       partnerEventStore: e.partnerEventStore,

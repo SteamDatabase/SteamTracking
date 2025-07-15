@@ -5642,7 +5642,7 @@
         C = a(78327),
         w = a(51706),
         A = a(738),
-        I = a(71367),
+        I = a(90335),
         T = a(96971),
         B = a(82477),
         D = a(78603),
@@ -5832,7 +5832,7 @@
             "div",
             { className: (0, y.A)(D.expecteddate, "ReservationBuyNow") },
             Boolean(m)
-              ? i.createElement(I.f, {
+              ? i.createElement(I.fh, {
                   text: m,
                   partnerEventStore: d.O3,
                   showErrorInfo: l,
@@ -5867,7 +5867,7 @@
               ),
             },
             Boolean(m)
-              ? i.createElement(I.f, {
+              ? i.createElement(I.fh, {
                   text: m,
                   partnerEventStore: d.O3,
                   showErrorInfo: l,
@@ -13808,7 +13808,7 @@
         Oa = a(19267),
         xa = a(83284),
         Ha = a.n(xa),
-        Ua = a(71367),
+        Ua = a(90335),
         za = a(77291),
         Wa = a(44165),
         qa = a(78603);
@@ -13915,7 +13915,7 @@
                     n.createElement(
                       "div",
                       { className: qa.description },
-                      n.createElement(Ua.f, {
+                      n.createElement(Ua.fh, {
                         text: g,
                         partnerEventStore: yt.O3,
                         showErrorInfo: i,
@@ -13928,7 +13928,7 @@
                     n.createElement(
                       "div",
                       { className: qa.description2 },
-                      n.createElement(Ua.f, {
+                      n.createElement(Ua.fh, {
                         text: S,
                         partnerEventStore: yt.O3,
                         showErrorInfo: i,
@@ -14029,7 +14029,7 @@
                 n.createElement(
                   "div",
                   { className: qa.reservecopy },
-                  n.createElement(Ua.f, {
+                  n.createElement(Ua.fh, {
                     text: c,
                     partnerEventStore: yt.O3,
                     showErrorInfo: m,
@@ -14749,7 +14749,7 @@
               },
               c,
             ),
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: m,
               partnerEventStore: yt.O3,
               showErrorInfo: i,
@@ -14869,7 +14869,7 @@
               },
               u,
             ),
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: d,
               partnerEventStore: yt.O3,
               showErrorInfo: c,
@@ -14928,7 +14928,7 @@
               },
               m,
             ),
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: u,
               partnerEventStore: yt.O3,
               showErrorInfo: l,
@@ -15042,7 +15042,7 @@
               n.createElement(
                 "div",
                 { className: Nn.description },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: _,
                   partnerEventStore: yt.O3,
                   showErrorInfo: d,
@@ -15076,7 +15076,7 @@
               n.createElement(
                 "div",
                 { className: Nn.description2 },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: g,
                   partnerEventStore: yt.O3,
                   showErrorInfo: d,
@@ -15116,7 +15116,7 @@
           ? n.createElement(
               "div",
               { className: Nn.questCtn, style: { background: u } },
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 text: l,
                 partnerEventStore: yt.O3,
                 showErrorInfo: r,
@@ -15253,7 +15253,7 @@
               n.createElement(
                 "div",
                 { className: Vn.description },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: I,
                   partnerEventStore: yt.O3,
                   showErrorInfo: s,
@@ -15291,7 +15291,7 @@
                 n.createElement(
                   "div",
                   { className: Vn.description2 },
-                  n.createElement(Ua.f, {
+                  n.createElement(Ua.fh, {
                     text: B,
                     partnerEventStore: yt.O3,
                     showErrorInfo: s,
@@ -15355,7 +15355,7 @@
           n.createElement(
             "div",
             { className: (0, f.A)("questions") },
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: u,
               partnerEventStore: yt.O3,
               showErrorInfo: r,
@@ -15526,7 +15526,7 @@
           ? n.createElement(
               "div",
               { className: (0, f.A)(Vn.answerCtn, "answers") },
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 text: o,
                 partnerEventStore: yt.O3,
                 showErrorInfo: r,
@@ -15808,7 +15808,7 @@
                   n.createElement(
                     "div",
                     { className: "reward_def_desc" },
-                    n.createElement(Ua.f, {
+                    n.createElement(Ua.fh, {
                       text:
                         a.localized_reward_description[r] ||
                         a.localized_reward_description[o] ||
@@ -17645,7 +17645,7 @@
           n.createElement(
             "div",
             { className: (0, f.A)(Wn().SaleSectionContainer, "SaleTextCtn") },
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: a.GetDescriptionWithFallback(r),
               partnerEventStore: yt.O3,
               showErrorInfo: i,
@@ -17700,7 +17700,7 @@
           n.createElement(
             "div",
             { className: (0, f.A)(Wn().SaleSectionContainer, "SaleTextCtn") },
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: h,
               partnerEventStore: yt.O3,
               showErrorInfo: g,
@@ -17793,7 +17793,7 @@
           "div",
           { className: (0, f.A)(Yr().DoorOption, "DoorLinkedOption") },
           l &&
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: l,
               partnerEventStore: yt.O3,
               showErrorInfo: r,
@@ -21511,7 +21511,7 @@
               n.createElement(
                 "div",
                 { className: qa.description },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: d,
                   partnerEventStore: yt.O3,
                   showErrorInfo: o,
@@ -21541,7 +21541,7 @@
               n.createElement(
                 "div",
                 { className: qa.description2 },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: _,
                   partnerEventStore: yt.O3,
                   showErrorInfo: o,
@@ -21566,7 +21566,7 @@
               n.createElement(
                 "div",
                 { className: qa.reservecopy },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: l,
                   partnerEventStore: yt.O3,
                   showErrorInfo: i,
@@ -21679,7 +21679,7 @@
                 setTargetVideo: i,
                 refIsVideoVisible: o,
               }),
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 event: t,
                 text:
                   e.localized_media_desc[r] || e.localized_media_desc[c] || "",
@@ -22269,7 +22269,7 @@
                   [fo().TemplateMediaTitle]: !0,
                 }),
               },
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 text: a,
                 partnerEventStore: yt.O3,
                 showErrorInfo: o,
@@ -22309,7 +22309,7 @@
                   [fo().TemplateMediaTitle]: !0,
                 }),
               },
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 text: a,
                 partnerEventStore: yt.O3,
                 showErrorInfo: l,
@@ -22343,7 +22343,7 @@
                   [fo().TemplateMediaDescription]: !0,
                 }),
               },
-              n.createElement(Ua.f, {
+              n.createElement(Ua.fh, {
                 text: a,
                 partnerEventStore: yt.O3,
                 showErrorInfo: o,
@@ -22485,7 +22485,7 @@
             {
               className: (0, f.A)({ [yo().Question]: !0, [fo().Question]: !0 }),
             },
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: c,
               partnerEventStore: yt.O3,
               showErrorInfo: r,
@@ -22496,7 +22496,7 @@
           n.createElement(
             "div",
             { className: (0, f.A)({ [yo().Answer]: !0, [fo().Answer]: !0 }) },
-            n.createElement(Ua.f, {
+            n.createElement(Ua.fh, {
               text: m,
               partnerEventStore: yt.O3,
               showErrorInfo: r,
@@ -22537,7 +22537,7 @@
               n.createElement(
                 "div",
                 { className: Vo().description },
-                n.createElement(Ua.f, {
+                n.createElement(Ua.fh, {
                   text: u,
                   partnerEventStore: yt.O3,
                   showErrorInfo: s,

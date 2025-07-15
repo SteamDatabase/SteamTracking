@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Steam 实验室",
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "特卖活动",
-	"Menu_SearchBar_RecentlyViewed": "最近查看过的",
-	"Menu_SearchBar_PopularItems": "热门物品",
+	"Menu_SearchBar_RecentlyViewed": "最近查看过",
+	"Menu_SearchBar_PopularSearches": "热门搜索",
 	"Menu_SearchBar_SearchResults": "搜索结果",
 	"Menu_SearchBar_YourTopGenres": "您最喜欢的类型",
 	"Menu_SearchBar_BrowseBy": "浏览关键词：",
+	"Menu_SearchBar_NoMatches": "没有符合您查询条件的物品。",
+	"Menu_SearchBar_AdvancedSearch": "高级搜索",
 	"Menu_Search": "搜索",
 	"Menu_Label": "商店菜单"
 }`);

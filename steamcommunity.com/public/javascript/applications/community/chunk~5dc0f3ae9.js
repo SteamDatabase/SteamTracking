@@ -20829,8 +20829,6 @@
                 "ul",
                 null,
                 i.createElement("li", null, (0, a.we)("#Image_Error_msg1")),
-                i.createElement("li", null, (0, a.we)("#Image_Error_msg2")),
-                i.createElement("li", null, (0, a.we)("#Image_Error_msg3")),
               ),
               i.createElement("p", null, (0, a.we)("#Image_Error_suggestion")),
             )

@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "เนื้อหาดาวน์โหลด",
 	"Menu_Section_SpecialSections_SaleEvents": "กิจกรรมการลดราคา",
 	"Menu_SearchBar_RecentlyViewed": "เพิ่งดูล่าสุด",
-	"Menu_SearchBar_PopularItems": "ไอเท็มยอดนิยม",
+	"Menu_SearchBar_PopularSearches": "การค้นหายอดนิยม",
 	"Menu_SearchBar_SearchResults": "ผลลัพธ์การค้นหา",
 	"Menu_SearchBar_YourTopGenres": "แนวยอดนิยมของคุณ",
 	"Menu_SearchBar_BrowseBy": "เปิดหาตาม...",
+	"Menu_SearchBar_NoMatches": "ไม่มีไอเท็มใดตรงกับคิวรีของคุณ",
+	"Menu_SearchBar_AdvancedSearch": "การค้นหาขั้นสูง",
 	"Menu_Search": "ค้นหา",
 	"Menu_Label": "เมนูร้านค้า"
 }`);

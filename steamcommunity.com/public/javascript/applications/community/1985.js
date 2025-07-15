@@ -119,7 +119,7 @@
         k = n(9239),
         A = n(68797),
         h = n(22797),
-        U = n(84106),
+        U = n(86261),
         b = n(86244),
         _ = n.n(b),
         Q = n(14336);
@@ -295,7 +295,7 @@
                   M.createElement(
                     "div",
                     { className: _().ShareLink },
-                    M.createElement(U.f, {
+                    M.createElement(U.fh, {
                       text: n,
                       event: null,
                       partnerEventStore: e.partnerEventStore,

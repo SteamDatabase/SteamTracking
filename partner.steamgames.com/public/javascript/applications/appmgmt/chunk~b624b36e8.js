@@ -219,7 +219,7 @@
           : (t.nDuration / t.nTimeScale) * 1e3;
       }
       function V(e, t, i) {
-        i -= e.GetStartTime();
+        i -= 1e3 * e.GetStartTime();
         let n = G(t),
           r = L(e, n, i);
         return Math.floor(r / n) + t.segmentTemplate.nStartNumber;

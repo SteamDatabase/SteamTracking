@@ -5135,7 +5135,7 @@
                   s.Z,
                   {
                     role: "button",
-                    "aria-label": (0, b.we)("#Carousel_Previous"),
+                    "aria-label": (0, b.we)("#Carousel_Prev"),
                     onClick: () => H(!0),
                     className: (0, y.A)(
                       ue().QueueNavArrow,
@@ -6232,62 +6232,69 @@
     },
     46253: (e, t, r) => {
       "use strict";
-      r.d(t, { h: () => l });
+      r.d(t, { h: () => c });
       var n = r(90626),
         s = r(52038),
         a = r(61859),
         i = r(828),
-        o = r.n(i);
-      function l(e) {
+        o = r.n(i),
+        l = r(33917);
+      function c(e) {
         const {
             name: t,
             trailerCategory: r,
             trailerDisplay: i,
-            mouseOver: l,
+            mouseOver: c,
           } = e,
-          [c, u] = n.useState(!1);
+          [u, d] = n.useState(!1);
         if (
           (n.useEffect(() => {
-            0 != i && u(!0);
+            0 != i && d(!0);
           }, [i]),
           n.useEffect(() => {
-            if (l) return void u(!0);
-            if (!c) return;
-            const e = setTimeout(() => u(!1), 3e3);
+            if (c) return void d(!0);
+            if (!u) return;
+            const e = setTimeout(() => d(!1), 3e3);
             return () => clearTimeout(e);
-          }, [c, l]),
+          }, [u, c]),
           null == r || 0 == i)
         )
           return;
-        const d =
+        const m =
           1 == i
             ? (0, a.we)("#StoreTrailer_Title_TrailerPreview")
-            : (function (e) {
-                switch (e) {
-                  case 1:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Gameplay");
-                  case 2:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Teaser");
-                  case 3:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Cinematic");
-                  case 4:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Update");
-                  case 5:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Accolades");
-                  case 6:
-                    return (0, a.we)("#StoreTrailer_Title_Category_Interview");
-                }
-                return (0, a.we)("#StoreTrailer_Title_Category_Unknown");
-              })(r);
+            : (0, l.e)(r);
         return n.createElement(
           "div",
-          { className: (0, s.A)({ [o().TrailerTitle]: !0, [o().Visible]: c }) },
+          { className: (0, s.A)({ [o().TrailerTitle]: !0, [o().Visible]: u }) },
           (0, a.PP)(
             "#StoreTrailer_Title_Combiner",
-            n.createElement("span", { className: o().Category }, d),
+            n.createElement("span", { className: o().Category }, m),
             t,
           ),
         );
+      }
+    },
+    33917: (e, t, r) => {
+      "use strict";
+      r.d(t, { e: () => s });
+      var n = r(61859);
+      function s(e) {
+        switch (e) {
+          case 1:
+            return (0, n.we)("#StoreTrailer_Title_Category_Gameplay");
+          case 2:
+            return (0, n.we)("#StoreTrailer_Title_Category_Teaser");
+          case 3:
+            return (0, n.we)("#StoreTrailer_Title_Category_Cinematic");
+          case 4:
+            return (0, n.we)("#StoreTrailer_Title_Category_Update");
+          case 5:
+            return (0, n.we)("#StoreTrailer_Title_Category_Accolades");
+          case 6:
+            return (0, n.we)("#StoreTrailer_Title_Category_Interview");
+        }
+        return (0, n.we)("#StoreTrailer_Title_Category_Unknown");
       }
     },
   },

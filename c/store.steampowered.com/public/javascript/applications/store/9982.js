@@ -85,7 +85,7 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "セールイベント",
 	"Menu_SearchBar_RecentlyViewed": "最近閲覧したアイテム",
-	"Menu_SearchBar_PopularItems": "人気アイテム",
+	"Menu_SearchBar_PopularSearches": "人気の検索条件",
 	"Menu_SearchBar_SearchResults": "検索結果",
 	"Menu_SearchBar_YourTopGenres": "あなたのトップジャンル",
 	"Menu_SearchBar_BrowseBy": "絞り込み検索...",

@@ -1218,7 +1218,7 @@
         (0, _.Cg)([ae.oI], _e.prototype, "GotoDiscussion", null),
         (0, _.Cg)([ae.oI], _e.prototype, "OpenRepostDialogs", null),
         (_e = (0, _.Cg)([E.PA], _e));
-      var ge = n(20688),
+      var ge = n(71219),
         Se = n(65946),
         ve = n(36148),
         Ce = n(12247),
@@ -1900,7 +1900,7 @@
         return r.createElement(
           "div",
           { className: Ue().ReferencedApps },
-          r.createElement(ge.f, { text: i, event: t }),
+          r.createElement(ge.fh, { text: i, event: t }),
         );
       }
       var We = n(75204);
@@ -2655,7 +2655,7 @@
                     ),
                     onContextMenu: h.TS.IN_CLIENT ? I.aE : void 0,
                   },
-                  r.createElement(ge.f, {
+                  r.createElement(ge.fh, {
                     text: E,
                     partnerEventStore: n,
                     event: e,

@@ -271,15 +271,15 @@
     },
     1078: (e, r, t) => {
       "use strict";
-      t.d(r, { XC: () => o, _G: () => m });
+      t.d(r, { XC: () => l, _G: () => m });
       var n = t(90626),
         a = t(12155),
         s = t(52038),
         c = t(44691),
         i = t(51706),
         u = t(39449),
-        l = t.n(u);
-      function o() {
+        o = t.n(u);
+      function l() {
         const [e, r] = n.useState(void 0),
           t = n.useCallback(() => r(void 0), []),
           a = n.createElement(
@@ -306,7 +306,7 @@
             bOKDisabled: !0,
             closeModal: r,
             bHideCloseIcon: !0,
-            modalClassName: l().PopupScreenshotModal,
+            modalClassName: o().PopupScreenshotModal,
           },
           n.createElement(m, {
             index: a,
@@ -318,9 +318,9 @@
           }),
           n.createElement(
             "div",
-            { className: l().PopupScreenshotContainer },
+            { className: o().PopupScreenshotContainer },
             n.createElement("img", {
-              className: l().PopupScreenshot,
+              className: o().PopupScreenshot,
               src: t[a],
             }),
           ),
@@ -332,19 +332,19 @@
           numElements: t,
           fnForward: i,
           fnBackwards: u,
-          fnClose: o,
+          fnClose: l,
           bCircular: d,
         } = e;
         (0, c.E)("ArrowLeft", u, !0, !0),
           (0, c.E)("Left", u, !0, !0),
           (0, c.E)("ArrowRight", i, !0, !0),
           (0, c.E)("Right", i, !0, !0),
-          (0, c.E)("Escape", () => o && o(), !0, !0),
-          (0, c.E)("Esc", () => o && o(), !0, !0);
+          (0, c.E)("Escape", () => l && l(), !0, !0),
+          (0, c.E)("Esc", () => l && l(), !0, !0);
         let m = t > 1;
         return n.createElement(
           "div",
-          { className: l().ButtonCtn },
+          { className: o().ButtonCtn },
           m &&
             n.createElement(
               n.Fragment,
@@ -353,8 +353,8 @@
                 "div",
                 {
                   className: (0, s.A)(
-                    l().ButtonIcon,
-                    0 !== r || d ? null : l().Disabled,
+                    o().ButtonIcon,
+                    0 !== r || d ? null : o().Disabled,
                   ),
                   onClick: u,
                 },
@@ -364,8 +364,8 @@
                 "div",
                 {
                   className: (0, s.A)(
-                    l().ButtonIcon,
-                    r !== t - 1 || d ? null : l().Disabled,
+                    o().ButtonIcon,
+                    r !== t - 1 || d ? null : o().Disabled,
                   ),
                   onClick: i,
                 },
@@ -374,7 +374,7 @@
             ),
           n.createElement(
             "div",
-            { className: l().ButtonIcon, onClick: o },
+            { className: o().ButtonIcon, onClick: l },
             n.createElement(a.X, null),
           ),
         );
@@ -397,11 +397,11 @@
             alt: i,
             crossOrigin: u,
           } = e,
-          [l, o] = n.useState(t.length),
+          [o, l] = n.useState(t.length),
           [d, m] = n.useState(0);
         n.useEffect(() => {
-          l != t.length && (o(t.length), m(0));
-        }, [l, t.length]);
+          o != t.length && (l(t.length), m(0));
+        }, [o, t.length]);
         const E = n.useCallback(() => {
           e.onImageError && e.onImageError(e.srcs[d]),
             d + 1 < e.srcs.length && m(d + 1);
@@ -424,8 +424,8 @@
           {
             className: i,
             src: u,
-            lazyLoad: l,
-            width: o,
+            lazyLoad: o,
+            width: l,
             height: d,
             alt: m,
             crossOrigin: E,
@@ -439,8 +439,6 @@
                 "ul",
                 null,
                 n.createElement("li", null, (0, a.we)("#Image_Error_msg1")),
-                n.createElement("li", null, (0, a.we)("#Image_Error_msg2")),
-                n.createElement("li", null, (0, a.we)("#Image_Error_msg3")),
               ),
               n.createElement("p", null, (0, a.we)("#Image_Error_suggestion")),
             )
@@ -449,8 +447,8 @@
               src: u,
               onError: () => t(!0),
               crossOrigin: E,
-              loading: l ? "lazy" : void 0,
-              width: o,
+              loading: o ? "lazy" : void 0,
+              width: l,
               height: d,
               alt: m,
             });
@@ -465,8 +463,8 @@
         c = t(1078),
         i = t(10224),
         u = t(21038);
-      const l = 1.3,
-        o = 3,
+      const o = 1.3,
+        l = 3,
         d = 256;
       function m(e) {
         const [r, t] = (0, n.useState)(!1),
@@ -481,11 +479,11 @@
         return (
           (0, n.useEffect)(() => {
             if (
-              m.naturalWidth > m.displayWidth * l &&
-              m.naturalHeight > m.displayHeight * l &&
+              m.naturalWidth > m.displayWidth * o &&
+              m.naturalHeight > m.displayHeight * o &&
               m.naturalWidth > d
             ) {
-              m.naturalWidth / m.naturalHeight < o && t(!0);
+              m.naturalWidth / m.naturalHeight < l && t(!0);
             }
           }, [m]),
           r

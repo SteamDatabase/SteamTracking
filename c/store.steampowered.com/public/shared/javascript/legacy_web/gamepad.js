@@ -211,7 +211,6 @@
       function _(_) {
         _ ||
           ((_ = new _._()),
-          (window.legacyWebFocusNavController = _),
           (_ = new _._(_)),
           _.RegisterForFocusChanged(_.GetDefaultContext()),
           _.Init(window),
@@ -240,8 +239,11 @@
                 const _ = _.GetLastFocusedNode();
                 _?.Element && _(_.Element, _);
               }),
-              (window.__nav_tree_root = _),
-              (window.__virtual_keyboard_client = _),
+              Object.assign(window, {
+                legacyWebFocusNavController: _,
+                __nav_tree_root: _,
+                __virtual_keyboard_client: _,
+              }),
               _.set(document.body, _.Root),
               _(document.body, _.Root),
               _(void 0, !0),
@@ -372,10 +374,12 @@
         const _ = _()(_.Element);
         return (
           !_.data("gpFocusDisabled") &&
-          _._(":visible") &&
-          "hidden" != _.css("visibility") &&
-          ((_.outerWidth() > 0 && _.outerHeight() > 0) ||
-            "hidden" !== _.css("overflow"))
+          !(!_._(":visible") || "hidden" == _.css("visibility")) &&
+          !(
+            _.outerWidth() > 0 &&
+            _.outerHeight() > 0 &&
+            "hidden" === _.css("overflow")
+          )
         );
       }
       function _(_) {
@@ -385,10 +389,11 @@
           return _(_, _.InReactTree), _.InReactTree;
         const _ = _.Tree;
         let _,
-          _ = _.data("panel") || {};
+          _ = _.data("panel") || {},
+          _ = _;
         if (
-          ((_ = _.attr("data-nav-modal")
-            ? (function (_, _) {
+          (_.attr("data-nav-modal")
+            ? (_ = (function (_, _) {
                 const _ = _.NewGamepadNavigationTree(
                     _.GetDefaultContext(),
                     "modal_dialog",
@@ -405,10 +410,10 @@
                   _(_, _.Root),
                   _.Root
                 );
-              })(_, _)
+              })(_, _))
             : _.data("reactNavRoot")
-              ? new _._(_.data("reactNavRoot"), _)
-              : _.CreateNode(_, _.m_FocusRing)),
+              ? ((_ = new _._(_.data("reactNavRoot"), _)), (_ = void 0))
+              : (_ = _.CreateNode(_, _.m_FocusRing)),
           "A" == _.tagName || "BUTTON" == _.tagName || "LABEL" == _.tagName)
         )
           (_.focusable = _.focusable ?? !0),

@@ -81,7 +81,7 @@
         k = n(73745),
         I = n(30470),
         S = n(21134),
-        M = n(84106),
+        M = n(86261),
         T = n(6941),
         y = n(30175),
         D = n(4869),
@@ -93,7 +93,7 @@
           ...n,
         });
       }
-      function A(e) {
+      function x(e) {
         const {
             toolbar: t,
             top: n,
@@ -125,7 +125,7 @@
           )
         );
       }
-      function x(e) {
+      function A(e) {
         const { className: t, toolbar: n, children: a } = e,
           [o, l] = (0, N.OP)(),
           [r, s] = m.useState({ top: 0, left: 0, width: 0, height: 0 }),
@@ -152,7 +152,7 @@
                 className: d()(t, T.EditableComponentInlineContainer),
                 ...l,
               },
-              m.createElement(A, {
+              m.createElement(x, {
                 ...r,
                 toolbar: n,
                 visible: o && r.width > 0,
@@ -276,7 +276,7 @@
               H.tH,
               null,
               m.createElement(
-                M.B,
+                M.Bm,
                 { strTag: "carousel", args: {}, event: o.GetEventModel() },
                 _.map((e, t) =>
                   m.createElement(ne, {
@@ -427,18 +427,16 @@
                 ),
               ),
               m.createElement(
-                g.D0,
+                g.xh,
                 {
                   bottomSeparator: "none",
                   label: (0, C.we)(
                     "#EventEditor_CarouselEditor_AddAnotherItem",
                   ),
+                  className: F.AddButton,
+                  onClick: h,
                 },
-                m.createElement(
-                  g.$n,
-                  { type: "button", className: F.AddButton, onClick: h },
-                  m.createElement(D.OMN, { className: F.PlusIcon }),
-                ),
+                m.createElement(D.OMN, { className: F.PlusIcon }),
               ),
             ),
             m.createElement(
@@ -541,7 +539,7 @@
             }),
           w,
           m.createElement(
-            x,
+            A,
             {
               className: S.ClanImageContainer,
               toolbar: m.createElement(J, {
@@ -619,14 +617,14 @@
           { type: l, attrs: r } = o,
           s = t.ConvertAttrToBBCodeArgs(a, r);
         return "image" == l
-          ? m.createElement(M.B, {
+          ? m.createElement(M.Bm, {
               strTag: "img",
               args: s,
               event: n,
               showErrorInfo: !0,
             })
           : "video" == l
-            ? m.createElement(M.B, {
+            ? m.createElement(M.Bm, {
                 key: `${r.mp4}_${r.webm}`,
                 strTag: "video",
                 args: s,
@@ -1046,7 +1044,7 @@
               bStrongShadows: !0,
             }),
             o && m.createElement("div", { className: he.SelectionOverlay }),
-            m.createElement(M.B, {
+            m.createElement(M.Bm, {
               event: a.GetEventModel(),
               strTag: "previewyoutube",
               args: { "": `${t};${n}` },
@@ -1130,8 +1128,8 @@
         De = n(63556),
         Ne = n(44165),
         Ge = n(95695),
-        Ae = n(99637),
-        xe = n(91675),
+        xe = n(99637),
+        Ae = n(91675),
         Be = n(14771),
         Ue = n(87937),
         ze = n(61819),
@@ -1415,7 +1413,7 @@
             in_person_time_zone: i,
           }),
           m.createElement("br", null),
-          m.createElement(Ae.K, {
+          m.createElement(xe.K, {
             strDescription: (0, C.we)("#MeetSteam_edit_start"),
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => a,
@@ -1483,7 +1481,7 @@
             null,
             (0, C.we)("#MeetSteam_edit_displayed_start"),
             ": ",
-            (0, xe.P0)(l.unix() + 60 * r, !1, l.format("z")),
+            (0, Ae.P0)(l.unix() + 60 * r, !1, l.format("z")),
             " ",
           ),
           m.createElement(
@@ -1491,7 +1489,7 @@
             null,
             (0, C.we)("#MeetSteam_edit_displayed_end"),
             ": ",
-            (0, xe.P0)(i.unix() + 60 * c, !1, i.format("z")),
+            (0, Ae.P0)(i.unix() + 60 * c, !1, i.format("z")),
             " ",
           ),
         );
@@ -2222,7 +2220,7 @@
           null,
           m.createElement("div", null, "Break # ", a + 1),
           m.createElement("br", null),
-          m.createElement(Ae.K, {
+          m.createElement(xe.K, {
             strDescription: "Break Start Time",
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => r,
@@ -2607,9 +2605,9 @@
             ),
           );
       }
-      var At = n(75844),
-        xt = n(90316),
-        Bt = n.n(xt),
+      var xt = n(75844),
+        At = n(90316),
+        Bt = n.n(At),
         Ut = n(1805),
         zt = n(81962);
       function Ot(e) {
@@ -2668,7 +2666,7 @@
             event: t.GetEventModel(),
           });
           return m.createElement(
-            x,
+            A,
             {
               toolbar: m.createElement(Ht, {
                 href: n,
@@ -2709,7 +2707,7 @@
         );
       }
       var jt = n(42714);
-      const Kt = (0, At.PA)(function (e) {
+      const Kt = (0, xt.PA)(function (e) {
         const { editModel: t } = e,
           n = t.GetEventModel().loadedAllLanguages,
           a = t.GetCurEditLanguage();

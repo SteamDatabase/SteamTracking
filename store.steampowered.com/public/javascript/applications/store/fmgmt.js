@@ -3007,24 +3007,19 @@
               { className: Fe.ParentalCopySelector },
               1 == a.length &&
                 n.createElement(
-                  i.D0,
+                  i.xh,
                   {
-                    className: Fe.ButtonCtn,
+                    fieldClassName: Fe.ButtonCtn,
                     bottomSeparator: "none",
                     label: (0, d.we)(
                       "#Parental_CopySettingsFrom",
                       r[0].data.m_strPlayerName,
                     ),
+                    className: Fe.Button,
+                    onClick: () => o(!0),
+                    accessibilityNameOrder: ["label"],
                   },
-                  n.createElement(
-                    "div",
-                    { className: Fe.ButtonWrapper },
-                    n.createElement(
-                      i.$n,
-                      { className: Fe.Button, onClick: () => o(!0) },
-                      (0, d.we)("#Button_Copy"),
-                    ),
-                  ),
+                  (0, d.we)("#Button_Copy"),
                 ),
               a.length > 1 &&
                 n.createElement(

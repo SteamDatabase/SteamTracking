@@ -8868,8 +8868,28 @@
           });
         });
       }
-      let _ = _("DialogHeader", "heading"),
-        _ = _("DialogSubHeader", "heading", {
+      const _ = _.createContext(null),
+        _ = _.forwardRef(function (_, _) {
+          const { _: __webpack_require__, className: _, ..._ } = _,
+            _ = _.useContext(_),
+            _ = _?.setHeaderId,
+            _ = _.useId(),
+            _ = __webpack_require__ || _;
+          return (
+            _.useEffect(() => {
+              _ && _(_);
+            }, [_, _]),
+            _.createElement("div", {
+              _: _,
+              role: "heading",
+              "aria-level": 2,
+              ..._,
+              className: (0, _._)("DialogHeader", _),
+              ref: _,
+            })
+          );
+        });
+      let _ = _("DialogSubHeader", "heading", {
           "aria-level": 3,
         }),
         _ =
@@ -10246,6 +10266,7 @@
         return _.createElement(
           _._,
           {
+            _: _._,
             focusable: _.focusable,
             className: (0, _._)(
               _.className,
@@ -10266,6 +10287,9 @@
             role: _.role ?? "combobox",
             "aria-controls": _["aria-controls"],
             "aria-expanded": _.opened,
+            "aria-label": _["aria-label"],
+            "aria-labelledby": _["aria-labelledby"],
+            "aria-describedby": _["aria-describedby"],
           },
           _.createElement(
             "div",
@@ -12044,6 +12068,7 @@
               "aria-labelledby": _ || void 0,
               ..._,
               classNameContent: (0, _._)(
+                "GenericDialogBase",
                 "GenericConfirmDialog",
                 _ && "DialogContentFullSize",
                 _,
@@ -15079,8 +15104,6 @@
                 "ul",
                 null,
                 _.createElement("li", null, (0, _._)("#Image_Error_msg1")),
-                _.createElement("li", null, (0, _._)("#Image_Error_msg2")),
-                _.createElement("li", null, (0, _._)("#Image_Error_msg3")),
               ),
               _.createElement("p", null, (0, _._)("#Image_Error_suggestion")),
             )
@@ -18793,7 +18816,7 @@
           const _ = (await _.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
-          if (_ && 0 != _.version) return _;
+          if (_ && void 0 !== _.version && 0 != _.version) return _;
         }
         try {
           const _ = (function (_) {
@@ -18803,7 +18826,7 @@
           })(_);
           if (_) {
             const _ = JSON.parse(_);
-            if (_ && 0 != _.version) return _;
+            if (_ && void 0 !== _.version && 0 != _.version) return _;
           }
         } catch (_) {}
         const _ = _._.COUNTRY;
@@ -19053,7 +19076,7 @@
           : _.createElement(
               "a",
               {
-                href: `https://www.youtube-nocookie.com/watch/?v=${_}`,
+                href: `https://www.youtube.com/watch?v=${_}`,
               },
               (0, _._)("#EventCalendar_WatchYouTubeVideo"),
             );
@@ -71970,7 +71993,7 @@
                   (_.menuRight +=
                     _.document.body.clientWidth - _.scrollX - _.innerWidth)),
             _.menuWidth &&
-              window.matchMedia("(prefers-contrast: more)") &&
+              window.matchMedia("(prefers-contrast: more)").matches &&
               (_.menuWidth += 1),
             (_ ||
               _.menuLeft !== this.state.menuLeft ||

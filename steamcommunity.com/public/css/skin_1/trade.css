@@ -108,6 +108,35 @@ body.tutorial_mode .pagecontent {
 }
 
 
+/* trade protection explainer, or warning about intermixing items */
+.trade_protected_status_callout,.trade_protected_potential_conflict {
+	display: none; /* .active class will show */
+
+	font-size: 12px;
+	background-color: #a6801b;
+	margin-bottom: 12px;
+	padding: 8px;
+	color: white;
+	text-align: left;
+	align-items: center;
+
+	a {
+		text-decoration: underline;
+		color: white;
+	}
+}
+
+.trade_protected_status_callout.active,.trade_protected_potential_conflict.active {
+	display: flex;
+	gap: 5px;
+}
+
+.trade_protected_status_callout img,.trade_protected_potential_conflict img {
+	width: 30px;
+	height: 30px;
+}
+
+
 /* trade partner header */
 .trade_partner_header {
 	background-color: #324056;

@@ -1138,8 +1138,8 @@
           n,
         );
       }
-      var f = n(96971),
-        S = n(12155),
+      var S = n(96971),
+        f = n(12155),
         C = n(52393),
         k = n.n(C),
         D = n(64641),
@@ -1444,8 +1444,8 @@
         be = n(75844),
         we = n(2160),
         he = n(40521),
-        fe = n(72739);
-      function Se(e) {
+        Se = n(72739);
+      function fe(e) {
         e.preventDefault();
       }
       var Ce = n(71647),
@@ -1471,7 +1471,7 @@
                   K.NO(e) && n(!1);
                 }, []),
                 onDragEnd: r.useCallback(() => n(!1), []),
-                onDragOver: t ? Se : void 0,
+                onDragOver: t ? fe : void 0,
                 onDrop: r.useCallback(
                   (t) => {
                     t.dataTransfer.files?.length &&
@@ -1497,10 +1497,10 @@
               ),
               o = r.useCallback(() => n.current.click(), []);
             return [
-              fe.createPortal(
+              Se.createPortal(
                 r.createElement(
                   "form",
-                  { onSubmit: Se, style: { display: "none" } },
+                  { onSubmit: fe, style: { display: "none" } },
                   r.createElement("input", {
                     ...t,
                     type: "file",
@@ -1742,7 +1742,7 @@
           r.createElement(
             "div",
             { className: Te().UploadPreviewDelete, onClick: () => n(t) },
-            r.createElement(S.sED, null),
+            r.createElement(f.sED, null),
           ),
           r.createElement(Be, { asset: t }),
           i &&
@@ -2034,7 +2034,7 @@
           I = l && !s && !v,
           w = l && !s && !v,
           h = l && !s && v,
-          f = l && !s && !v;
+          S = l && !s && !v;
         return r.createElement(
           Oe.K,
           {
@@ -2092,7 +2092,7 @@
                 },
                 (0, p.we)("#ImagePicker_Thumbnail"),
               ),
-            f &&
+            S &&
               i &&
               r.createElement(Ve, {
                 bDeleting: s,
@@ -2339,7 +2339,7 @@
         $e = n(68033),
         et = n(55263),
         tt = n(41550),
-        nt = n(71367),
+        nt = n(90335),
         at = n(35685),
         rt = n(9709),
         ot = n(25359),
@@ -2491,7 +2491,7 @@
                 r.createElement(
                   G.he,
                   { toolTipContent: (0, p.we)("#selectimage_viewimage_ttip") },
-                  S.YNO(),
+                  f.YNO(),
                 ),
               ),
             i && r.createElement(_t, { langData: n, ...e }),
@@ -2590,7 +2590,7 @@
         bt = n(10224),
         wt = n(15496),
         ht = n.n(wt);
-      function ft(e) {
+      function St(e) {
         const {
             event: t,
             spotlightURLOverride: n,
@@ -2706,7 +2706,7 @@
           ),
         );
       }
-      const St =
+      const ft =
         "https://partner.steamgames.com/doc/store/localization#supported_languages";
       var Ct;
       function kt(e) {
@@ -2924,7 +2924,7 @@
                                     r.createElement(
                                       "a",
                                       {
-                                        href: St,
+                                        href: ft,
                                         target: M.TS.IN_CLIENT
                                           ? void 0
                                           : "_blank",
@@ -3117,8 +3117,8 @@
                       ),
                     },
                     e.bIsMinimized
-                      ? r.createElement(S.hz4, null)
-                      : r.createElement(S.Xjb, null),
+                      ? r.createElement(f.hz4, null)
+                      : r.createElement(f.Xjb, null),
                   ),
                 ),
             ),
@@ -3380,7 +3380,7 @@
             n.AnnouncementGID,
           ]);
         let m = i
-          ? r.createElement(nt.f, {
+          ? r.createElement(nt.fh, {
               text: i || "",
               partnerEventStore: o,
               showErrorInfo: !1,
@@ -3475,7 +3475,7 @@
           return r.createElement(
             "div",
             { className: lt().SpotlightExample },
-            r.createElement(ft, {
+            r.createElement(St, {
               event: e.event,
               strDisplayName: n,
               gameIconUrl: a,
@@ -4620,7 +4620,7 @@
           ),
           [h],
         );
-        const S = (0, a.q3)(() => n.jsondata.sale_header_disable_top_margin),
+        const f = (0, a.q3)(() => n.jsondata.sale_header_disable_top_margin),
           C = (function (e, t) {
             const [n] = (0, m.QD)(i.jD, void 0);
             return r.useMemo(() => {
@@ -4712,7 +4712,7 @@
               an.EU,
               { eventModel: n, language: l },
               r.createElement(
-                f.Cs,
+                S.Cs,
                 { location: o ? 2 : 0 },
                 r.createElement(
                   O,
@@ -4730,7 +4730,7 @@
                     {
                       className: (0, B.A)({
                         [k().SaleOuterContainer]: !0,
-                        [k().SaleOuterTopMargin]: S,
+                        [k().SaleOuterTopMargin]: f,
                         [k().SaleNewSizing]: p,
                         [k()[`CustomStyle_${n.jsondata.sale_vanity_id}`]]: !0,
                         SaleOuterContainer: !0,
@@ -4800,7 +4800,7 @@
           h = (e, t) => {
             (0, m.ip)(b, { ...(t || {}), [i.jD]: e.toString() });
           },
-          [f, S] = (0, m.QD)("controller"),
+          [S, f] = (0, m.QD)("controller"),
           [C, D] = (0, a.q3)(() => {
             const e = t.GetSaleSectionIncludingFooterSections();
             return [
@@ -4853,8 +4853,8 @@
                 selectedTab: g,
                 setTabUniqueIDQueryParam: h,
                 expanded: c,
-                controllerCategory: f,
-                setControllerCategory: S,
+                controllerCategory: S,
+                setControllerCategory: f,
               }));
           }
           gn.TU.Get().BIsConnected() &&
@@ -5049,7 +5049,7 @@
                     className: k().JumpToButton,
                     onClick: () => gn.TU.Get().JumpToSection(t),
                   },
-                  r.createElement(S.ffu, null),
+                  r.createElement(f.ffu, null),
                 ),
               ),
             n,
@@ -5387,14 +5387,14 @@
         b = n(28188),
         w = n(22797),
         h = n(6878),
-        f = n(94057),
-        S = n(29868);
+        S = n(94057),
+        f = n(29868);
       function C(e) {
         return e < 10 ? "0" + e : e;
       }
       function k(e) {
         const { giveawayid: t } = e,
-          n = (0, f.w)(t),
+          n = (0, S.w)(t),
           {
             bLoadingGiveawayInfo: a,
             winner_count: o,
@@ -5405,11 +5405,11 @@
           ? null
           : r.createElement(
               "div",
-              { className: S.countdownCtn },
+              { className: f.countdownCtn },
               Boolean(l) &&
                 r.createElement(
                   "div",
-                  { className: S.Closed },
+                  { className: f.Closed },
                   o > 0
                     ? (0, c.we)("#Giveaway_Closed", o.toLocaleString())
                     : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
@@ -5421,7 +5421,7 @@
                   Boolean(i <= 0)
                     ? r.createElement(
                         "div",
-                        { className: S.Throbber },
+                        { className: f.Throbber },
                         r.createElement(w.t, { size: "small" }),
                         r.createElement(
                           "div",
@@ -5431,15 +5431,15 @@
                       )
                     : r.createElement(
                         "div",
-                        { className: S.CountDownCtn },
+                        { className: f.CountDownCtn },
                         r.createElement(
                           "div",
-                          { className: S.CountDownTime },
+                          { className: f.CountDownTime },
                           C(Math.floor(i / 60)) + ":" + C(i % 60),
                         ),
                         r.createElement(
                           "div",
-                          { className: S.CountDownText },
+                          { className: f.CountDownText },
                           (0, c.we)("#Giveaway_CountDown2"),
                           " ",
                           (0, c.we)("#Giveaway_KeepWatching"),
@@ -5448,15 +5448,15 @@
                   Boolean(o > 0) &&
                     r.createElement(
                       "div",
-                      { className: S.WinnerInfo },
+                      { className: f.WinnerInfo },
                       r.createElement(
                         "div",
-                        { className: S.WinnerCount },
+                        { className: f.WinnerCount },
                         o.toLocaleString(),
                       ),
                       r.createElement(
                         "div",
-                        { className: S.WinnerText },
+                        { className: f.WinnerText },
                         (0, c.we)("#Giveaway_Congratulation"),
                       ),
                     ),
@@ -5839,7 +5839,7 @@
         }
         return r.createElement(r.Fragment, null);
       }
-      var Ie = n(71367);
+      var Ie = n(90335);
       function be(e) {
         const { bSalePage: t } = e,
           [n, m] = r.useState(i.KN.IsInitialized());
@@ -5848,7 +5848,7 @@
             l.Vw.Init(new o.D(u.TS.WEBAPI_BASE_URL)),
               s.O3.Init(),
               t &&
-                Ie.f.AddDictionary(
+                Ie.us.AddDictionary(
                   (null == ie &&
                     (ie = new Map([
                       [
@@ -5971,7 +5971,7 @@
             o.N,
             { timeoutMS: 1e3 },
             a.createElement(
-              f,
+              S,
               { eventModel: u },
               a.createElement(
                 b.oJ,
@@ -5987,7 +5987,7 @@
           ),
         );
       }
-      function f(e) {
+      function S(e) {
         const { eventModel: t, children: n } = e,
           r = "adultonly" == t.GetContentHubType();
         return a.createElement(

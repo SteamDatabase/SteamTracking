@@ -1595,6 +1595,13 @@ dialog .contextmenu_ContextMenuPosition_2yAm5 {
   user-select: none;
   padding: 4px;
 }
+@media (prefers-contrast: more) {
+  .GreenEnvelopeMenu,
+  .contextmenu_contextMenu_PP7LM {
+    background: #000;
+    padding: 0;
+  }
+}
 .web_chat_frame .contextmenu_contextMenu_PP7LM {
   max-height: calc(100% - 128px);
   overflow-y: auto;
@@ -38729,6 +38736,12 @@ div.ModalPosition_TopBar {
     ), #25282e;
   user-select: none;
 }
+@media (prefers-contrast: more) {
+  .DialogContent,
+  .DialogContentTransition {
+    background: #000;
+  }
+}
 .DialogContent .DialogControlsSection:not(:first-child),
 .DialogContent .DialogControlsSectionHeader:not(:first-child),
 .DialogContent .DialogHeader:not(:first-child),
@@ -42288,6 +42301,11 @@ html.web_chat_frame body {
   );
   min-height: 32px;
 }
+@media (prefers-contrast: more) {
+  .friendlistListContainer {
+    background: #000;
+  }
+}
 .listContentContainer {
   position: relative;
 }
@@ -42314,6 +42332,11 @@ body.in_global_drag .friendlist_titlebar {
   user-select: none;
   cursor: default;
   flex-shrink: 0;
+}
+@media (prefers-contrast: more) {
+  .friendListHeaderContainer {
+    background-color: #000;
+  }
 }
 .statusHeaderGlow {
   position: absolute;
@@ -42682,6 +42705,14 @@ body.in_global_drag .friendlist_titlebar {
   padding: 0;
   position: relative;
 }
+@media (prefers-contrast: more) {
+  .friendsListSectionTitle {
+    background: #000;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+}
 .compactView .friendsListSectionTitle {
   height: 26px;
   padding: 0;
@@ -42791,12 +42822,22 @@ body.in_global_drag .friendlist_titlebar {
   cursor: pointer;
   border-radius: 2px;
 }
+@media (prefers-contrast: more) {
+  .TabSearchButton {
+    border: 1px solid transparent;
+  }
+}
 .compactView .TabSearchButton {
   margin-top: 0;
   height: 22px;
 }
 .TabSearchButton:hover {
   background-color: rgba(44, 48, 54, 0.5);
+}
+@media (prefers-contrast: more) {
+  .TabSearchButton:hover {
+    border: 1px solid #fff;
+  }
 }
 .TabSearchButton .searchIconButton {
   width: 22px;
@@ -43320,6 +43361,17 @@ body.in_global_drag .friendlist_titlebar {
   color: #67707b;
   font-size: 16px;
 }
+@media (prefers-contrast: more) {
+  .friendSearchInput[type="text"] {
+    color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+  }
+  .friendSearchInput[type="text"]::placeholder {
+    font-style: italic;
+    color: #fff;
+  }
+}
 .friendSearchInput[type="text"]:focus {
   background-color: #2c3036;
   box-shadow: inset 0px 1px 4px #000000aa;
@@ -43336,6 +43388,12 @@ body.in_global_drag .friendlist_titlebar {
 .friendSearchInput:hover::placeholder,
 .friendSearchInput:focus::placeholder {
   color: #5a5c61;
+}
+@media (prefers-contrast: more) {
+  .friendSearchInput:hover::placeholder,
+  .friendSearchInput:focus::placeholder {
+    color: #fff;
+  }
 }
 .friendSearchInput::placeholder {
   color: rgba(76, 84, 89, 0.5);
@@ -43429,6 +43487,11 @@ body.in_global_drag .friendlist_titlebar {
   opacity: 0.4;
   pointer-events: auto;
 }
+@media (prefers-contrast: more) {
+  .SearchActive .friendSearchClear {
+    opacity: 0.8;
+  }
+}
 .compactView .SearchActive .friendSearchClear {
   margin-top: -1px;
 }
@@ -43440,6 +43503,14 @@ body.in_global_drag .friendlist_titlebar {
   box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.05), 4px -1px 1px 0px
     rgba(0, 0, 0, 0.05);
   color: #b7ccd5;
+}
+@media (prefers-contrast: more) {
+  .activeTab {
+    background-color: #000;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
 }
 .groupTab {
   border-top-right-radius: 0px;
@@ -45142,6 +45213,11 @@ body.in_global_drag .friendlist_titlebar {
     #1c1d22 100%
   );
   font-size: 14px;
+}
+@media (prefers-contrast: more) {
+  .chatWindow {
+    background: #000;
+  }
 }
 .ChatRoomGroupDialog_contents {
   position: relative;
@@ -51068,6 +51144,11 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   overflow-y: auto;
   overflow-x: hidden;
   transition: all .2s ease-in-out;
+}
+@media (prefers-contrast: more) {
+  .chatRoomListContainer {
+    background: #111000;
+  }
 }
 .ChatListResizing .chatRoomListContainer {
   transition-duration: 0s;

@@ -3797,9 +3797,6 @@ function UpdatePaymentInfoForm()
 		var strCountryVerificationDisplay = bShowCountryVerification ? 'block' : 'none';
 		$('payment_row_country_verification').style.display = strCountryVerificationDisplay;
 
-		var strPaymentMethodSpecificNote = bShowPaymentSpecificNote && !bShowPaymentDisabledApp ? 'list-item' : 'none';
-		$('payment_method_specific_note').style.display = strPaymentMethodSpecificNote;
-
 		var strMobileVerificationDisplay = bShowMobileForm ? 'block' : 'none';
 		$('mobile_number_row').style.display = strMobileVerificationDisplay;
 
@@ -3811,23 +3808,35 @@ function UpdatePaymentInfoForm()
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
 
-		var strPaymentMethodCanBeSplit = !bCanBeSplit && !bShowPaymentDisabledApp ? 'list-item' : 'none';
-		$('payment_method_unable_to_split' ).style.display = strPaymentMethodCanBeSplit;
+				var rgPaymentNotes = [];
+		var rgAllSections = ['payment_method_disabled_app', 'payment_method_unable_to_split', 'payment_row_not_refundable', 'payment_method_delays_in_processing', 'payment_method_cafe_funded', 'payment_method_specific_note'];
+		if ( bShowPaymentDisabledApp )
+		{
+			rgPaymentNotes.push( 'payment_method_disabled_app' );
+		}
+		else
+		{
+			if ( !bCanBeSplit )
+				rgPaymentNotes.push( 'payment_method_unable_to_split' );
+			if ( !bPaymentMethodRefundable )
+				rgPaymentNotes.push( 'payment_row_not_refundable' );
+			if ( bPaymentMethodDelaysInProcessing )
+				rgPaymentNotes.push( 'payment_method_delays_in_processing' );
+			if ( bShowCafeFundedInstructions )
+				rgPaymentNotes.push( 'payment_method_cafe_funded' );
+			if ( bShowPaymentSpecificNote )
+				rgPaymentNotes.push( 'payment_method_specific_note' );
+		}
 
-		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable && !bShowPaymentDisabledApp ? 'list-item' : 'none';
-		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
+		var strPaymentNoteStyle = ( rgPaymentNotes.length > 1 ) ? 'list-item' : 'block';
+		for ( var i = 0; i < rgAllSections.length; i++ )
+		{
+			var strPaymentNoteSectionName = rgAllSections[ i ];
+			var bVisiblePaymentNote = rgPaymentNotes.indexOf( strPaymentNoteSectionName ) !== -1;
+			$( strPaymentNoteSectionName ).style.display = bVisiblePaymentNote ? strPaymentNoteStyle : 'none';
+		}
 
-		var strPaymentMethodDelayInProcessing = bPaymentMethodDelaysInProcessing && !bShowPaymentDisabledApp ? 'list-item' : 'none';
-		$('payment_method_delays_in_processing' ).style.display = strPaymentMethodDelayInProcessing;
-
-		var strCafeFundedInstructions = bShowCafeFundedInstructions && !bShowPaymentDisabledApp ? 'list-item' : 'none';
-		$('payment_method_cafe_funded' ).style.display = strCafeFundedInstructions;
-
-		var strPaymethMethodDisabledApp = bShowPaymentDisabledApp ? 'block' : 'none';
-		$('payment_method_disabled_app' ).style.display = strPaymethMethodDisabledApp;
-
-		var strPaymentMethodNotes = bShowPaymentDisabledApp || !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions || bPaymentMethodDelaysInProcessing ? 'block': 'none';
-		$('payment_method_notes' ).style.display = strPaymentMethodNotes;
+		$('payment_method_notes' ).style.display = ( rgPaymentNotes.length > 0 ) ? 'block' : 'none';
 	}
 	catch( e )
 	{

@@ -85,7 +85,7 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC-uri",
 	"Menu_Section_SpecialSections_SaleEvents": "EVENIMENTE PROMOȚIONALE",
 	"Menu_SearchBar_RecentlyViewed": "Vizualizate recent",
-	"Menu_SearchBar_PopularItems": "Articole populare",
+	"Menu_SearchBar_PopularSearches": "Căutări populare",
 	"Menu_SearchBar_SearchResults": "Rezultatele căutării",
 	"Menu_SearchBar_YourTopGenres": "Genurile tale preferate",
 	"Menu_SearchBar_BrowseBy": "Caută după...",

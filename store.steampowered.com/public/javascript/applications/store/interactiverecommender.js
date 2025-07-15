@@ -395,15 +395,15 @@
     51706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        mt: () => r,
-        Qs: () => g,
-        o0: () => _.o0,
-        eV: () => h.eV,
-        KG: () => _.KG,
-        Ee: () => _.Ee,
+        mt: () => c,
+        Qs: () => _,
+        o0: () => h.o0,
+        eV: () => E.eV,
+        KG: () => h.KG,
+        Ee: () => h.Ee,
         x_: () => o.x_,
-        of: () => c,
-        pY: () => _.pY,
+        of: () => d,
+        pY: () => h.pY,
         EN: () => n.E,
       });
       var s = a(90626),
@@ -420,23 +420,43 @@
           a(13871),
           a(78327));
       a(28460);
-      const r = ({
-        active: e,
-        onDismiss: t,
-        className: a,
-        modalClassName: l,
-        children: r,
-      }) =>
-        s.createElement(
-          n.E,
-          { active: e },
+      function r(e) {
+        const { labelledBy: t } = e || {},
+          [a, i] = s.useState(null);
+        return {
+          headerId: t || a,
+          context: s.useMemo(() => ({ setHeaderId: i }), []),
+        };
+      }
+      function c(e) {
+        const {
+            active: t,
+            onDismiss: a,
+            className: l,
+            modalClassName: c,
+            children: d,
+            ...u
+          } = e,
+          { headerId: m, context: p } = r({ labelledBy: e["aria-labelledby"] });
+        return s.createElement(
+          i.t6.Provider,
+          { value: p },
           s.createElement(
-            o.x_,
-            { onEscKeypress: t, className: l },
-            s.createElement(i.UC, { className: a }, r),
+            n.E,
+            { active: t },
+            s.createElement(
+              o.x_,
+              { onEscKeypress: a, className: c },
+              s.createElement(
+                i.UC,
+                { role: "dialog", "aria-labelledby": m, className: l, ...u },
+                d,
+              ),
+            ),
           ),
         );
-      function c(e) {
+      }
+      function d(e) {
         const { className: t, children: a } = e;
         return s.createElement(
           n.E,
@@ -445,30 +465,30 @@
         );
       }
       a(81194);
-      var d = a(85585),
-        u = a(7445),
-        m = a(76217),
-        p = a(88843);
-      function g(e) {
+      var u = a(85585),
+        m = a(7445),
+        p = a(76217),
+        g = a(88843);
+      function _(e) {
         const { children: t, navID: a, closeModal: i } = e,
           n = s.createRef(),
           o = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, l.Qn)() && !l.TS.IN_STEAMUI
           ? s.createElement(
-              d.B2,
+              u.B2,
               {
                 navID: a,
                 navTreeRef: n,
                 onCancelButton: i,
-                className: p.GamepadOnlyModalWrapper,
+                className: g.GamepadOnlyModalWrapper,
               },
               s.createElement(
-                u.q,
+                m.q,
                 null,
                 s.createElement(
-                  m.Z,
+                  p.Z,
                   {
-                    className: p.GamepadOnlyPanelWrapper,
+                    className: g.GamepadOnlyPanelWrapper,
                     onGamepadDirection: o,
                     focusableIfNoChildren: !0,
                   },
@@ -478,8 +498,8 @@
             )
           : s.createElement(s.Fragment, null, t);
       }
-      var _ = a(78395),
-        h = a(10411);
+      var h = a(78395),
+        E = a(10411);
       a(76222);
     },
     52069: (e, t, a) => {
@@ -1083,7 +1103,7 @@
             )
           );
         };
-      let L = class extends r.Component {
+      let P = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -1131,8 +1151,8 @@
           );
         }
       };
-      L = (0, i.Cg)([o.PA], L);
-      const P = ({
+      P = (0, i.Cg)([o.PA], P);
+      const L = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
@@ -1317,7 +1337,7 @@
           r.createElement(
             "div",
             { className: (0, u.A)(g.Row, g.FirstRow) },
-            r.createElement(P, {
+            r.createElement(L, {
               minLabel: (0, m.we)("#Popularity_Popular"),
               titleLabel: (0, m.we)("#Popularity_Title"),
               maxLabel: (0, m.we)("#Popularity_Niche"),
@@ -1326,7 +1346,7 @@
               value: T.m_fQueuedPopularityValue,
               onChange: T.onPopularityChanged,
             }),
-            r.createElement(P, {
+            r.createElement(L, {
               minLabel: (0, m.we)("#Recency_Older"),
               titleLabel: (0, m.we)("#Recency_Title"),
               maxLabel: (0, m.we)("#Recency_Newer"),
@@ -1471,8 +1491,8 @@
             A = "",
             N = "",
             D = 0,
-            L = "",
-            P = !1,
+            P = "",
+            L = !1,
             b = !0;
           if (f) {
             const e = T.getDetails(this.props.appID);
@@ -1486,17 +1506,17 @@
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
                 ? T.shouldUseMicrotrailers() && e.microtrailer_webm
-                  ? ((L = e.microtrailer_webm), (P = !0), (b = !1))
-                  : (L = e.video_webm)
+                  ? ((P = e.microtrailer_webm), (L = !0), (b = !1))
+                  : (P = e.video_webm)
                 : T.shouldUseMicrotrailers() && e.microtrailer_mp4
-                  ? ((L = e.microtrailer_mp4), (P = !0), (b = !1))
-                  : (L = e.video_mp4),
+                  ? ((P = e.microtrailer_mp4), (L = !0), (b = !1))
+                  : (P = e.video_mp4),
               (C = `-${e.discount_pct}%`),
               (w = e.base_price),
               (A = R ? (0, m.we)("#FreeToPlay") : e.discount_price),
               (N = e.description));
           }
-          const M = L && L.length > 0;
+          const M = P && P.length > 0;
           return r.createElement(
             c.A,
             { appID: e },
@@ -1536,8 +1556,8 @@
                     playsInline: !0,
                     autoPlay: !0,
                     muted: b && T.shouldMute(),
-                    src: L,
-                    loop: P,
+                    src: P,
+                    loop: L,
                   }),
                   b &&
                     r.createElement(
@@ -1927,7 +1947,7 @@
                     r.createElement(
                       "div",
                       { className: g.BottomSection },
-                      r.createElement(L, { accountID: n.iA.accountid }),
+                      r.createElement(P, { accountID: n.iA.accountid }),
                       r.createElement("div", { className: g.VerticalBar }),
                       r.createElement(O, { width: this.state.width }),
                     ),

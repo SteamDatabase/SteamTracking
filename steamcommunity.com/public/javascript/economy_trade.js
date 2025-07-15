@@ -12,6 +12,7 @@ var g_bWarnOnReady = false;
 var g_dateEscrowEnd = null;
 var g_bWarnedAboutPlaytime = false;
 var g_bWarnedAboutUnvettedApp = false;
+var g_bTradeProtected = undefined;      // undefined: indeterminate (no items). false or true: actual status
 
 function BeginTrading( bShowTutorial )
 {
@@ -681,6 +682,99 @@ function MoveItemToTrade( elItem )
 	}
 }
 
+
+
+// returns the trade protection status of the proposed trade -
+// true means trade protected, false means not, undefined means
+// the trade is empty so it's not yet determined
+function GetTradeProtectedStatusFromTrade( rgTradeStatus )
+{
+	if ( !rgTradeStatus )
+	{
+		return undefined;
+	}
+
+	if ( g_dateEscrowEnd != null )
+	{
+		return undefined;
+	}
+
+	// examine all slots in both participants' inventories;
+	// figure out the trade protection status of each item's app.
+	// complain if we see inconsistent data, otherwise just return
+	// the computed status.
+
+	var rgrgAsset = [ rgTradeStatus.me.assets, rgTradeStatus.them.assets ];
+	var bSeenTradeProtected = false;
+	var bSeenNonTradeProtected = false;
+
+	for ( let rgAsset of rgrgAsset )
+	{
+		for ( let asset of rgAsset )
+		{
+			if ( g_rgAppContextData[ asset.appid ].secure_trades )
+			{
+				bSeenTradeProtected = true;
+			}
+			else
+			{
+				bSeenNonTradeProtected = true;
+			}
+		}
+	}
+
+	if ( bSeenTradeProtected && bSeenNonTradeProtected )
+	{
+		console.log( "Error: both trade protected and non trade protected items in trade" );
+		// try to be safe
+		return true;
+	}
+	else if ( bSeenTradeProtected )
+	{
+		return true;
+	}
+	else if ( bSeenNonTradeProtected )
+	{
+		return false;
+	}
+	else
+	{
+		return undefined;
+	}
+}
+
+
+// updates UI for specified trade protected status
+function ApplyTradeProtectedStatus( statusNew )
+{
+	if ( statusNew != g_bTradeProtected )
+	{
+		g_bTradeProtected = statusNew;
+		$J('.trade_protected_status_callout').toggleClass( 'active', !!g_bTradeProtected );
+	}
+
+	// Show or hide a warning about intermixing, if applicable:
+	// - must have an active inventory to figure out whether it has trade protection
+	// - trade protection status of the trade must be defined already
+	// - trade protection status of the inventory must differ from that of the trade
+	// - if all are true, show warning, otherwise hide it
+	var bWarn = g_ActiveInventory && g_ActiveInventory.appid && g_ActiveInventory.appid != -1 &&
+		g_bTradeProtected != undefined &&
+		g_rgAppContextData[ g_ActiveInventory.appid ].secure_trades != g_bTradeProtected;
+
+	bWarn = !!bWarn;
+	$J( '.trade_protected_potential_conflict' ).toggleClass( 'active', bWarn );
+}
+
+
+// updates UI to match trade protected status of current roster of items
+function RecomputeTradeProtectedStatus( rgTradeStatus )
+{
+	var statusNew = GetTradeProtectedStatusFromTrade( rgTradeStatus );
+	ApplyTradeProtectedStatus( statusNew );
+}
+
+
 function FindSlotAndSetItem( item, xferAmount )
 {
 	var elItem = item.element;
@@ -697,6 +791,16 @@ function FindSlotAndSetItem( item, xferAmount )
 			GTradeStateManager.RemoveItemFromTrade( item );
 			return;
 		}
+	}
+
+	
+	if ( g_bTradeProtected != undefined && g_rgAppContextData[item.appid].secure_trades != g_bTradeProtected )
+	{
+		// the user is trying to intermingle trade protected items and non trade protected items.
+        // FUTURE we could show an error here if just failing the drop proves to be confusing due to the user
+        // not noticing the intermixing warning.
+		GTradeStateManager.RemoveItemFromTrade( item );
+		return;
 	}
 
 	
@@ -1311,6 +1415,7 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 
 		UpdateSlots( rgTradeStatusForSlots.them.assets, rgTradeStatusForSlots.them.currency, false, UserThem, rgTradeStatusForSlots.version );
 
+				RecomputeTradeProtectedStatus( rgTradeStatus );
 		
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;

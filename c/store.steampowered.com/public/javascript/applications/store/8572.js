@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "WYDARZENIA WYPRZEDAŻOWE",
 	"Menu_SearchBar_RecentlyViewed": "Ostatnio oglądane",
-	"Menu_SearchBar_PopularItems": "Popularne produkty",
+	"Menu_SearchBar_PopularSearches": "Popularne wyszukiwania",
 	"Menu_SearchBar_SearchResults": "Wyniki wyszukiwania",
 	"Menu_SearchBar_YourTopGenres": "Twoje najczęstsze gatunki",
 	"Menu_SearchBar_BrowseBy": "Przeglądaj według…",
+	"Menu_SearchBar_NoMatches": "Żadne elementy nie pasują do twojego zapytania.",
+	"Menu_SearchBar_AdvancedSearch": "Wyszukiwanie zaawansowane",
 	"Menu_Search": "Szukaj",
 	"Menu_Label": "Menu sklepu"
 }`);

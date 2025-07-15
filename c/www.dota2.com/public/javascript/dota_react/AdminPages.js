@@ -215,7 +215,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(""),
@@ -295,13 +294,12 @@
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)().ownerWindow;
-          console.log(_.nHeroID, _.data),
-            _.useEffect(() => {
-              if (0 == _.nHeroID && _.data) {
-                const _ = (0, _._)(0, _.data.heroes.length - 1);
-                _.fnSetSelectedHero(_.data.heroes[_]._);
-              }
-            }, [_, _]),
+          _.useEffect(() => {
+            if (0 == _.nHeroID && _.data) {
+              const _ = (0, _._)(0, _.data.heroes.length - 1);
+              _.fnSetSelectedHero(_.data.heroes[_]._);
+            }
+          }, [_, _]),
             _.useEffect(() => {
               _.data &&
                 null == _.data.facets.find((_) => _.index + 1 == _.nFacet) &&
@@ -421,7 +419,7 @@
             _.createElement("div", {
               className: _().ItemIcon,
               style: {
-                backgroundImage: `url( ${_._.IMG_URL}items/${_?.name?.replace("item_", "")}.png`,
+                backgroundImage: `url( ${_._.IMG_URL}items/${_?.name?.replace("item_", "").replace("recipe_", "")}.png`,
               },
             }),
           );
@@ -660,49 +658,6 @@
               {
                 className: _().Name,
               },
-              "Lane",
-            ),
-            _.createElement(
-              "select",
-              {
-                className: _().LaneSelector,
-                value: _.nLane,
-                onChange: (_) => _.fnSetLane(parseInt(_.target.value)),
-              },
-              _.createElement(
-                "option",
-                {
-                  value: 1,
-                },
-                "Safe",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 2,
-                },
-                "Off",
-              ),
-              _.createElement(
-                "option",
-                {
-                  value: 3,
-                },
-                "Mid",
-              ),
-            ),
-          ),
-        _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().Option,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Name,
-              },
               "Game Mode",
             ),
             _.createElement(
@@ -804,7 +759,6 @@
         );
       }
       const _ = "pregameitems",
-        _ = "maingameitems",
         _ = "maingameitemsequence",
         _ = "abilities",
         _ = (_) => {
@@ -1104,7 +1058,7 @@
             _ = (0, _._)();
           let _ = parseInt(_.get("nHeroID") || "0"),
             _ = parseInt(_.get("nFacet") || "1"),
-            _ = parseInt(_.get("nLane") || "0"),
+            _ = parseInt(_.get("nPosition") || "0"),
             _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
             _ = (_.get("arrAlliedHeroFacets") || "1,1,1,1")
               .split(",")
@@ -1113,313 +1067,6 @@
               .split(",")
               .map(Number),
             _ = (_.get("arrEnemyHeroFacets") || "1,1,1,1,1")
-              .split(",")
-              .map(Number),
-            _ = _.get("nAverageMMR") || "2000",
-            _ = parseInt(_.get("nGameMode") || "22");
-          const _ = () => {
-              const _ = {
-                nHeroID: _,
-                nFacet: _,
-                nLane: _,
-                arrAlliedHeroIDs: _,
-                arrAlliedHeroFacets: _,
-                arrEnemyHeroIDs: _,
-                arrEnemyHeroFacets: _,
-                nAverageMMR: parseInt(_),
-                nGameMode: _,
-              };
-              __webpack_require__.push(_._.dotaplustester(_.strFeature, _(_)));
-            },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0).data,
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !1).data;
-          let _ = [];
-          if (
-            _ &&
-            _ &&
-            _.backend_response.outputs.length > 0 &&
-            _.backend_response.outputs.length > 0
-          )
-            for (
-              let _ = 0;
-              _ <
-              _.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence.length;
-              _++
-            ) {
-              let _ = {
-                arrItemSequence:
-                  _.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[_].value,
-                fScore:
-                  _.backend_response.outputs[0].categorical_crossentropy.weight[
-                    _
-                  ],
-                fWinLossAdjust: 0,
-                nSequenceID:
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ],
-              };
-              for (
-                let _ = 0;
-                _ <
-                _.backend_response.outputs[0].categorical_crossentropy.value
-                  .length;
-                _++
-              )
-                if (
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ] ==
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ]
-                ) {
-                  const _ =
-                    10 *
-                    (_.backend_response.outputs[0].categorical_crossentropy
-                      .weight[_] -
-                      _.backend_response.outputs[0].categorical_crossentropy
-                        .weight[_]);
-                  (_.fScore += _), (_.fWinLossAdjust += _);
-                }
-              _.push(_);
-            }
-          _.sort((_, _) => _.fScore - _.fScore);
-          const _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (0, _._)(),
-            _ = (0, _._)();
-          if (!_.data || !_.data)
-            return _.createElement(
-              "div",
-              {
-                className: _().Loading,
-              },
-              "Loading hero and item data...",
-            );
-          return _.createElement(
-            "div",
-            {
-              className: _().DotaPlusTesterSubPage,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().HeroList,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().YourHero,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Your Hero",
-                    nHeroID: _,
-                    nFacet: _,
-                    fnSetSelectedHero: (_) => ((_ = _), void _()),
-                    fnSetSelectedFacet: (_) => _(_),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Allies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Ally #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Ally #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Enemies,
-                  },
-                  _.createElement(_, {
-                    strLabel: "Enemy #1",
-                    nHeroID: _[0],
-                    nFacet: _[0],
-                    fnSetSelectedHero: (_) => _(0, _),
-                    fnSetSelectedFacet: (_) => _(0, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #2",
-                    nHeroID: _[1],
-                    nFacet: _[1],
-                    fnSetSelectedHero: (_) => _(1, _),
-                    fnSetSelectedFacet: (_) => _(1, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #3",
-                    nHeroID: _[2],
-                    nFacet: _[2],
-                    fnSetSelectedHero: (_) => _(2, _),
-                    fnSetSelectedFacet: (_) => _(2, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #4",
-                    nHeroID: _[3],
-                    nFacet: _[3],
-                    fnSetSelectedHero: (_) => _(3, _),
-                    fnSetSelectedFacet: (_) => _(3, _),
-                  }),
-                  _.createElement(_, {
-                    strLabel: "Enemy #5",
-                    nHeroID: _[4],
-                    nFacet: _[4],
-                    fnSetSelectedHero: (_) => _(4, _),
-                    fnSetSelectedFacet: (_) => _(4, _),
-                  }),
-                ),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().MiscInfo,
-                },
-                _.createElement(_, {
-                  nLane: _,
-                  fnSetLane: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-                _.createElement(_, {
-                  nGameMode: _,
-                  fnSetGameMode: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-                _.createElement(_, {
-                  strMMR: _,
-                  fnSetMMR: (_) => {
-                    (_ = _), _();
-                  },
-                }),
-              ),
-              _.createElement("div", {
-                className: _().Separator,
-              }),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Results,
-                  },
-                  _.map((_, _) =>
-                    _ >= 5
-                      ? null
-                      : _.createElement(
-                          "div",
-                          {
-                            className: _().Result,
-                            key: `InferenceResult_${_}`,
-                          },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().Weight,
-                            },
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().Score,
-                              },
-                              `${(100 * _.fScore).toFixed(2)}%`,
-                            ),
-                            _.createElement(
-                              _._,
-                              {
-                                toolTipContent:
-                                  "Amount score was adjusted by comparing winning and losing teams",
-                                direction: "top",
-                                strTooltipClassname: _().ToolTip,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ScoreAdjust,
-                                },
-                                `${_.fWinLossAdjust > 0 ? "+" : ""}${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                              ),
-                            ),
-                          ),
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().ItemList,
-                            },
-                            _.arrItemSequence.map((_, _) =>
-                              _.createElement(_, {
-                                nItemID: _,
-                                key: `InferenceReuslt_${_}_Item_${_}`,
-                              }),
-                            ),
-                          ),
-                        ),
-                  ),
-                ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const _ = new URLSearchParams(_.strConfig),
-            _ = (0, _._)();
-          let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "0"),
-            _ = parseInt(_.get("nPosition") || "0"),
-            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0")
               .split(",")
               .map(Number),
             _ = _.get("nAverageMMR") || "2000",
@@ -1438,62 +1085,25 @@
               };
               __webpack_require__.push(_._.dotaplustester(_.strFeature, _(_)));
             },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0).data,
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !1).data;
+            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0).data;
           let _ = [];
           if (
             _ &&
-            _ &&
             _.backend_response.outputs.length > 0 &&
-            _.backend_response.outputs.length > 0
+            _.backend_response.outputs[0].categorical_crossentropy
+              .value_sequence.length > 0
           )
             for (
               let _ = 0;
               _ <
               _.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence.length;
+                .value_sequence[0].value.length;
               _++
-            ) {
-              let _ = {
-                arrItemSequence:
-                  _.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[_].value,
-                fScore:
-                  _.backend_response.outputs[0].categorical_crossentropy.weight[
-                    _
-                  ],
-                fWinLossAdjust: 0,
-                nSequenceID:
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ],
-              };
-              for (
-                let _ = 0;
-                _ <
-                _.backend_response.outputs[0].categorical_crossentropy.value
-                  .length;
-                _++
-              )
-                if (
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ] ==
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ]
-                ) {
-                  const _ =
-                    10 *
-                    (_.backend_response.outputs[0].categorical_crossentropy
-                      .weight[_] -
-                      _.backend_response.outputs[0].categorical_crossentropy
-                        .weight[_]);
-                  (_.fScore += _), (_.fWinLossAdjust += _);
-                }
-              _.push(_);
-            }
-          _.sort((_, _) => _.fScore - _.fScore);
+            )
+              _.push(
+                _.backend_response.outputs[0].categorical_crossentropy
+                  .value_sequence[0].value[_],
+              );
           const _ = (_) => {
               (_ = _), _();
             },
@@ -1511,6 +1121,311 @@
             },
             _ = (0, _._)(),
             _ = (0, _._)();
+          return _.data && _.data
+            ? _.createElement(
+                "div",
+                {
+                  className: _().DotaPlusTesterSubPage,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Content,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().HeroList,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().YourHero,
+                      },
+                      _.createElement(_, {
+                        strLabel: "Your Hero",
+                        nHeroID: _,
+                        nFacet: _,
+                        fnSetSelectedHero: (_) => ((_ = _), void _()),
+                        fnSetSelectedFacet: (_) => _(_),
+                      }),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Allies,
+                      },
+                      _.createElement(_, {
+                        strLabel: "Ally #1",
+                        nHeroID: _[0],
+                        nFacet: _[0],
+                        fnSetSelectedHero: (_) => _(0, _),
+                        fnSetSelectedFacet: (_) => _(0, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Ally #2",
+                        nHeroID: _[1],
+                        nFacet: _[1],
+                        fnSetSelectedHero: (_) => _(1, _),
+                        fnSetSelectedFacet: (_) => _(1, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Ally #3",
+                        nHeroID: _[2],
+                        nFacet: _[2],
+                        fnSetSelectedHero: (_) => _(2, _),
+                        fnSetSelectedFacet: (_) => _(2, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Ally #4",
+                        nHeroID: _[3],
+                        nFacet: _[3],
+                        fnSetSelectedHero: (_) => _(3, _),
+                        fnSetSelectedFacet: (_) => _(3, _),
+                      }),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Enemies,
+                      },
+                      _.createElement(_, {
+                        strLabel: "Enemy #1",
+                        nHeroID: _[0],
+                        nFacet: _[0],
+                        fnSetSelectedHero: (_) => _(0, _),
+                        fnSetSelectedFacet: (_) => _(0, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Enemy #2",
+                        nHeroID: _[1],
+                        nFacet: _[1],
+                        fnSetSelectedHero: (_) => _(1, _),
+                        fnSetSelectedFacet: (_) => _(1, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Enemy #3",
+                        nHeroID: _[2],
+                        nFacet: _[2],
+                        fnSetSelectedHero: (_) => _(2, _),
+                        fnSetSelectedFacet: (_) => _(2, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Enemy #4",
+                        nHeroID: _[3],
+                        nFacet: _[3],
+                        fnSetSelectedHero: (_) => _(3, _),
+                        fnSetSelectedFacet: (_) => _(3, _),
+                      }),
+                      _.createElement(_, {
+                        strLabel: "Enemy #5",
+                        nHeroID: _[4],
+                        nFacet: _[4],
+                        fnSetSelectedHero: (_) => _(4, _),
+                        fnSetSelectedFacet: (_) => _(4, _),
+                      }),
+                    ),
+                  ),
+                  _.createElement("div", {
+                    className: _().Separator,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().MiscInfo,
+                    },
+                    _.createElement(_, {
+                      nPosition: _,
+                      fnSetPosition: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    _.createElement(_, {
+                      nGameMode: _,
+                      fnSetGameMode: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    _.createElement(_, {
+                      strMMR: _,
+                      fnSetMMR: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                  ),
+                  _.createElement("div", {
+                    className: _().Separator,
+                  }),
+                  _.length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Results,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().ItemList,
+                        },
+                        _.map((_, _) =>
+                          _.createElement(_, {
+                            nItemID: _,
+                            key: `InferenceReuslt_Item_${_}`,
+                          }),
+                        ),
+                      ),
+                    ),
+                ),
+              )
+            : _.createElement(
+                "div",
+                {
+                  className: _().Loading,
+                },
+                "Loading hero and item data...",
+              );
+        };
+      const _ = (_) => {
+          const _ = new URLSearchParams(_.strConfig),
+            _ = (0, _._)();
+          let _ = parseInt(_.get("nHeroID") || "0"),
+            _ = parseInt(_.get("nFacet") || "0"),
+            _ = parseInt(_.get("nPosition") || "0"),
+            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
+            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
+              .split(",")
+              .map(Number),
+            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
+              .split(",")
+              .map(Number),
+            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0,0")
+              .split(",")
+              .map(Number),
+            _ = _.get("nAverageMMR") || "2000",
+            _ = parseInt(_.get("nGameMode") || "22"),
+            _ = parseInt(_.get("nLobbyType") || "7"),
+            _ = (
+              _.get("arrInventoryItems") ||
+              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            )
+              .split(",")
+              .map(Number),
+            _ = (
+              _.get("arrPurchasedItems") ||
+              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            )
+              .split(",")
+              .map(Number),
+            _ = parseFloat(_.get("fRepeatWeight") || "0.2"),
+            _ = (_.get("arrLikedItems") || "0,0").split(",").map(Number),
+            _ = (_.get("arrDislikedItems") || "0,0").split(",").map(Number);
+          const _ = () => {
+            const _ = _({
+              nHeroID: _,
+              nFacet: _,
+              nPosition: _,
+              arrAlliedHeroIDs: _,
+              arrAlliedHeroFacets: _,
+              arrEnemyHeroIDs: _,
+              arrEnemyHeroFacets: _,
+              nAverageMMR: parseInt(_),
+              nGameMode: _,
+              nLobbyType: _,
+              arrPurchasedItems: _,
+              arrInventoryItems: _,
+              fRepeatWeight: _,
+              arrLikedItems: _,
+              arrDislikedItems: _,
+            });
+            _.strConfig != _ &&
+              __webpack_require__.push(_._.dotaplustester(_.strFeature, _));
+          };
+          let _ = new Map(),
+            _ = [],
+            _ = [];
+          for (const _ of _) 0 != _ && _.set(_, 3e5);
+          for (const _ of _) 0 != _ && _.set(_, -1e6);
+          const _ = (0, _._)(
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            parseInt(_),
+            _,
+            _,
+            _,
+            [],
+            _,
+          ).data;
+          if (
+            _ &&
+            _.backend_response.outputs.length > 0 &&
+            _.backend_response.outputs[0].categorical_crossentropy
+              .value_sequence
+          ) {
+            for (
+              let _ = 0;
+              _ <
+              _.backend_response.outputs[0].categorical_crossentropy
+                .value_sequence[0].value.length;
+              _++
+            )
+              _.push({
+                nItemID:
+                  _.backend_response.outputs[0].categorical_crossentropy
+                    .value_sequence[0].value[_],
+                fScore: 0,
+              });
+            for (
+              let _ = 0;
+              _ <
+              _.backend_response.outputs[0].categorical_crossentropy.value
+                .length;
+              _++
+            ) {
+              const _ =
+                  _.backend_response.outputs[0].categorical_crossentropy.value[
+                    _
+                  ],
+                _ =
+                  _.backend_response.outputs[0].categorical_crossentropy.weight[
+                    _
+                  ];
+              _.push({
+                nItemID: _,
+                fScore: _,
+              });
+            }
+          }
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (_) => {
+              (_ = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_) => {
+              (_[_.indexOf(0)] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            };
           if (!_.data || !_.data)
             return _.createElement(
               "div",
@@ -1519,6 +1434,12 @@
               },
               "Loading hero and item data...",
             );
+          const _ = (function (_, _) {
+            const _ = [];
+            for (let _ = 0; _ < _.length; _ += _)
+              __webpack_require__.push(_.slice(_, _ + _));
+            return _;
+          })(_, 5);
           return _.createElement(
             "div",
             {
@@ -1649,1974 +1570,347 @@
                     (_ = _), _();
                   },
                 }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Option,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Name,
+                    },
+                    "Repeat Weight",
+                  ),
+                  _.createElement(
+                    "select",
+                    {
+                      className: _().WeightSelector,
+                      value: _,
+                      onChange: (_) => {
+                        return (
+                          (_ = parseFloat(_.target.value)), (_ = _), void _()
+                        );
+                        var _;
+                      },
+                    },
+                    _.createElement(
+                      "option",
+                      {
+                        value: 1,
+                      },
+                      "1.0",
+                    ),
+                    _.createElement(
+                      "option",
+                      {
+                        value: 0.8,
+                      },
+                      "0.8",
+                    ),
+                    _.createElement(
+                      "option",
+                      {
+                        value: 0.6,
+                      },
+                      "0.6",
+                    ),
+                    _.createElement(
+                      "option",
+                      {
+                        value: 0.4,
+                      },
+                      "0.4",
+                    ),
+                    _.createElement(
+                      "option",
+                      {
+                        value: 0.2,
+                      },
+                      "0.2",
+                    ),
+                    _.createElement(
+                      "option",
+                      {
+                        value: 0,
+                      },
+                      "0.0",
+                    ),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().IncludExcludeItemOption,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ItemOptionTitle,
+                  },
+                  "Preferred Items",
+                ),
+                _.createElement(_, {
+                  nItemID: _[0],
+                  fnSetSelectedItem: (_) => _(0, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[1],
+                  fnSetSelectedItem: (_) => _(1, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[2],
+                  fnSetSelectedItem: (_) => _(2, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[3],
+                  fnSetSelectedItem: (_) => _(3, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().IncludExcludeItemOption,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ItemOptionTitle,
+                  },
+                  "Disliked Items",
+                ),
+                _.createElement(_, {
+                  nItemID: _[0],
+                  fnSetSelectedItem: (_) => _(0, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[1],
+                  fnSetSelectedItem: (_) => _(1, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[2],
+                  fnSetSelectedItem: (_) => _(2, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
+                _.createElement(_, {
+                  nItemID: _[3],
+                  fnSetSelectedItem: (_) => _(3, _),
+                  bShowName: !1,
+                  bAllowEmpty: !0,
+                  eItemFilter: _.ITEM_OPTIONS_ALL,
+                }),
               ),
               _.createElement("div", {
                 className: _().Separator,
               }),
-              _.length > 0 &&
+              _.createElement(
+                "div",
+                {
+                  className: _().PurchasedItemList,
+                },
+                _.map((_, _) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: `${_}_${_}`,
+                      onClick: () => {
+                        _.splice(_, 1), _.push(0), _();
+                      },
+                    },
+                    _.createElement(_, {
+                      nItemID: _,
+                    }),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ClearSkilledAbilities,
+                  onClick: () => (
+                    (_ = [
+                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    ]),
+                    void _()
+                  ),
+                },
+                "Clear",
+              ),
+              _.createElement("div", {
+                className: _().Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().Header,
+                },
+                "Recommended Build Sequence",
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ItemList,
+                },
+                _.map((_, _) =>
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Item,
+                      onClick: () => _(_.nItemID),
+                      key: `${_.nItemID}_${_}`,
+                    },
+                    _.createElement(_, {
+                      nItemID: _.nItemID,
+                    }),
+                    _.fScore > 0 &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().Weight,
+                        },
+                        `${(100 * _.fScore).toFixed(2)}%`,
+                      ),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _().Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().Header,
+                },
+                "Variant 1",
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ItemList,
+                },
+                [].map((_, _) =>
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Item,
+                      onClick: () => _(_.nItemID),
+                      key: `${_.nItemID}_${_}`,
+                    },
+                    _.createElement(_, {
+                      nItemID: _.nItemID,
+                    }),
+                    _.fScore > 0 &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().Weight,
+                        },
+                        `${(100 * _.fScore).toFixed(2)}%`,
+                      ),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _().Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().Header,
+                },
+                "Variant 2",
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ItemList,
+                },
+                [].map((_, _) =>
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Item,
+                      onClick: () => _(_.nItemID),
+                      key: `${_.nItemID}_${_}`,
+                    },
+                    _.createElement(_, {
+                      nItemID: _.nItemID,
+                    }),
+                    _.fScore > 0 &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().Weight,
+                        },
+                        `${(100 * _.fScore).toFixed(2)}%`,
+                      ),
+                  ),
+                ),
+              ),
+              _.createElement("div", {
+                className: _().Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().Header,
+                },
+                "Next Item Options",
+              ),
+              _.map((_, _) =>
                 _.createElement(
                   "div",
                   {
-                    className: _().Results,
+                    className: _().ItemList,
+                    key: `Step_${_}`,
                   },
                   _.map((_, _) =>
-                    _ >= 5
-                      ? null
-                      : _.createElement(
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Item,
+                        onClick: () => _(_.nItemID),
+                        key: `${_.nItemID}_${_}`,
+                      },
+                      _.createElement(_, {
+                        nItemID: _.nItemID,
+                      }),
+                      _.fScore > 0 &&
+                        _.createElement(
                           "div",
                           {
-                            className: _().Result,
-                            key: `InferenceResult_${_}`,
+                            className: _().Weight,
                           },
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().Weight,
-                            },
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().Score,
-                              },
-                              `${(100 * _.fScore).toFixed(2)}%`,
-                            ),
-                            _.createElement(
-                              _._,
-                              {
-                                toolTipContent:
-                                  "Amount score was adjusted by comparing winning and losing teams",
-                                direction: "top",
-                                strTooltipClassname: _().ToolTip,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ScoreAdjust,
-                                },
-                                `${_.fWinLossAdjust > 0 ? "+" : ""}${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                              ),
-                            ),
-                          ),
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().ItemList,
-                            },
-                            _.arrItemSequence.map((_, _) =>
-                              _.createElement(_, {
-                                nItemID: _,
-                                key: `InferenceReuslt_${_}_Item_${_}`,
-                              }),
-                            ),
-                          ),
+                          `${(100 * _.fScore).toFixed(2)}%`,
                         ),
+                    ),
                   ),
                 ),
+              ),
             ),
           );
-        },
-        _ = (_) => {
-          const _ = new URLSearchParams(_.strConfig),
-            _ = (0, _._)();
-          let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "0"),
-            _ = parseInt(_.get("nPosition") || "0"),
-            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = _.get("nAverageMMR") || "2000",
-            _ = parseInt(_.get("nGameMode") || "22"),
-            _ = (_.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrLikedItems") || "0,0").split(",").map(Number),
-            _ = (_.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const [_, _] = _.useState(10),
-            [_, _] = _.useState(3),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(50),
-            _ = () => {
-              const _ = _({
-                nHeroID: _,
-                nFacet: _,
-                nPosition: _,
-                arrAlliedHeroIDs: _,
-                arrAlliedHeroFacets: _,
-                arrEnemyHeroIDs: _,
-                arrEnemyHeroFacets: _,
-                nAverageMMR: parseInt(_),
-                nGameMode: _,
-                arrLikedItems: _,
-                arrDislikedItems: _,
-                arrPurchasedItems: _,
-              });
-              _.strConfig != _ &&
-                __webpack_require__.push(_._.dotaplustester(_.strFeature, _));
-            },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0, _).data,
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !1, _).data;
-          let _ = [];
-          if (
-            _ &&
-            _ &&
-            _.backend_response.outputs.length > 0 &&
-            _.backend_response.outputs.length > 0
-          )
-            for (
-              let _ = 0;
-              _ <
-              _.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence.length;
-              _++
-            ) {
-              let _ = {
-                arrItemSequence:
-                  _.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[_].value,
-                fScore:
-                  _.backend_response.outputs[0].categorical_crossentropy.weight[
-                    _
-                  ],
-                fWinLossAdjust: 0,
-                nSequenceID:
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ],
-              };
-              for (
-                let _ = 0;
-                _ <
-                _.backend_response.outputs[0].categorical_crossentropy.value
-                  .length;
-                _++
-              )
-                if (
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ] ==
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ]
-                ) {
-                  const _ =
-                    10 *
-                    (_.backend_response.outputs[0].categorical_crossentropy
-                      .weight[_] -
-                      _.backend_response.outputs[0].categorical_crossentropy
-                        .weight[_]);
-                  (_.fScore = Math.max(0, _.fScore + _ + 0.01)),
-                    (_.fWinLossAdjust += _);
-                }
-              _.push(_);
-            }
-          for (let _ of _)
-            0 != _[0] &&
-              _.arrItemSequence.includes(_[0]) &&
-              (_.fScore = Math.pow(_.fScore, 3)),
-              0 != _[1] &&
-                _.arrItemSequence.includes(_[1]) &&
-                (_.fScore = Math.pow(_.fScore, 3));
-          for (let _ of _)
-            0 != _[0] &&
-              _.arrItemSequence.includes(_[0]) &&
-              (_.fScore = Math.pow(_.fScore, 1 / 3)),
-              0 != _[1] &&
-                _.arrItemSequence.includes(_[1]) &&
-                (_.fScore = Math.pow(_.fScore, 1 / 3));
-          _.sort((_, _) => _.fScore - _.fScore);
-          let _ = structuredClone(_);
-          if (_.length > 0)
-            if (_) {
-              let _ = [],
-                _ = [];
-              for (; _.length < _; ) {
-                let _ = [];
-                for (let _ = 0; _ < 10; _++)
-                  __webpack_require__.push(new Map());
-                for (const _ of _)
-                  for (let _ = 0; _ < _.arrItemSequence.length; _++) {
-                    const _ = _.arrItemSequence[_];
-                    0 != _ && _[_].set(_, (_[_].get(_) || 0) + 1);
-                  }
-                let _ = structuredClone(_);
-                for (let _ of _) {
-                  if (_.includes(_.nSequenceID)) {
-                    _.fScore = 0;
-                    continue;
-                  }
-                  let _ = 1;
-                  for (let _ = 0; _ < _.arrItemSequence.length; _++) {
-                    const _ = _.arrItemSequence[_];
-                    0 != _ &&
-                      _ != _[0] &&
-                      _ != _[1] &&
-                      (_ *= Math.pow(_ / 100, _[_].get(_) || 0));
-                  }
-                  (_.fScore *= _), (_.fWinLossAdjust = _);
-                }
-                _.sort((_, _) => _.fScore - _.fScore),
-                  _.push(structuredClone(_[0])),
-                  _.push(_[0].nSequenceID);
-              }
-              _ = _;
-            } else {
-              let _ = [],
-                _ = [];
-              for (; _.length < _; ) {
-                let _ = new Map();
-                for (const _ of _)
-                  for (const _ of _.arrItemSequence)
-                    0 != _ &&
-                      __webpack_require__.set(
-                        _,
-                        (__webpack_require__.get(_) || 0) + 1,
-                      );
-                let _ = structuredClone(_);
-                for (let _ of _) {
-                  if (_.includes(_.nSequenceID)) {
-                    _.fScore = 0;
-                    continue;
-                  }
-                  let _ = 1;
-                  for (const _ of _.arrItemSequence)
-                    0 != _ &&
-                      _ != _[0] &&
-                      _ != _[1] &&
-                      (_ *= Math.pow(_ / 100, __webpack_require__.get(_) || 0));
-                  (_.fScore *= _), (_.fWinLossAdjust = _);
-                }
-                _.sort((_, _) => _.fScore - _.fScore),
-                  _.push(structuredClone(_[0])),
-                  _.push(_[0].nSequenceID);
-              }
-              _ = _;
-            }
-          _.sort((_, _) => _.fScore - _.fScore);
-          const _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (0, _._)(),
-            _ = (0, _._)();
-          return _.data && _.data
-            ? _.createElement(
-                "div",
-                {
-                  className: _().DotaPlusTesterSubPage,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Content,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HeroList,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().YourHero,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Your Hero",
-                        nHeroID: _,
-                        nFacet: _,
-                        fnSetSelectedHero: (_) => ((_ = _), void _()),
-                        fnSetSelectedFacet: (_) => _(_),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Allies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Ally #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Enemies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Enemy #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #5",
-                        nHeroID: _[4],
-                        nFacet: _[4],
-                        fnSetSelectedHero: (_) => _(4, _),
-                        fnSetSelectedFacet: (_) => _(4, _),
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().MiscInfo,
-                    },
-                    _.createElement(_, {
-                      nPosition: _,
-                      fnSetPosition: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      nGameMode: _,
-                      fnSetGameMode: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      strMMR: _,
-                      fnSetMMR: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Disliked Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Liked Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Purchased Items",
-                    ),
-                    (0, _._)(0, 9).map((_) =>
-                      _.createElement(_, {
-                        key: `PurchasedItem_${_}`,
-                        nItemID: _[_],
-                        fnSetSelectedItem: (_) => {
-                          return (_ = _), (_[_] = _), void _();
-                          var _;
-                        },
-                        bShowName: !1,
-                        bAllowEmpty: !0,
-                        eItemFilter: _.ITEM_OPTIONS_LATE,
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ResultHeader,
-                    },
-                    "Top Variants",
-                  ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().VariantTypes,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent: "Avoid repeated items in any order",
-                          direction: "top",
-                          strTooltipClassname: _().ToolTip,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: (0, _._)(
-                              _().VariantType,
-                              !_ && _().Selected,
-                            ),
-                            onClick: () => _(!1),
-                          },
-                          "More Item Variety",
-                        ),
-                      ),
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent:
-                            "Avoid repeated items in the same purchase slot",
-                          direction: "top",
-                          strTooltipClassname: _().ToolTip,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: (0, _._)(
-                              _().VariantType,
-                              _ && _().Selected,
-                            ),
-                            onClick: () => _(!0),
-                          },
-                          "More Order Variety",
-                        ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().PenaltySelector,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent:
-                            "Multiplier penalty for repeat items to try to create variation (lower percentages are harsher penalties)",
-                          direction: "top",
-                          strTooltipClassname: _().ToolTip,
-                        },
-                        "Repeat Penalty Multiplier",
-                      ),
-                      _.createElement(
-                        "select",
-                        {
-                          className: _().PenaltyDropdown,
-                          value: _,
-                          onChange: (_) => _(parseInt(_.target.value)),
-                        },
-                        _.createElement(
-                          "option",
-                          {
-                            key: 90,
-                            value: 90,
-                          },
-                          "90%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 80,
-                            value: 80,
-                          },
-                          "80%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 70,
-                            value: 70,
-                          },
-                          "70%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 60,
-                            value: 60,
-                          },
-                          "60%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 50,
-                            value: 50,
-                          },
-                          "50%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 40,
-                            value: 40,
-                          },
-                          "40%",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 30,
-                            value: 30,
-                          },
-                          "30%",
-                        ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Results,
-                      },
-                      _.map((_, _) =>
-                        _ >= _
-                          ? null
-                          : _.createElement(
-                              "div",
-                              {
-                                className: _().Result,
-                                key: `InferenceResult_${_}`,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().Weight,
-                                },
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().Score,
-                                  },
-                                  `${(100 * _.fScore).toFixed(2)}%`,
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().ScoreAdjust,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "Score multiplier due to repeated items",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    `${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                                  ),
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().SequenceID,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "The Sequence ID of this particular sequence of purchases",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    _.nSequenceID,
-                                  ),
-                                ),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ItemList,
-                                },
-                                _.arrItemSequence.map((_, _) =>
-                                  _.createElement(_, {
-                                    nItemID: _,
-                                    key: `InferenceReuslt_${_}_Item_${_}`,
-                                  }),
-                                ),
-                              ),
-                            ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ShowMore,
-                        onClick: () => _(_ + 3),
-                      },
-                      "Show More",
-                    ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ResultHeader,
-                    },
-                    "Raw Results",
-                  ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Results,
-                      },
-                      _.map((_, _) =>
-                        _ >= _
-                          ? null
-                          : _.createElement(
-                              "div",
-                              {
-                                className: _().Result,
-                                key: `InferenceResult_${_}`,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().Weight,
-                                },
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().Score,
-                                  },
-                                  `${(100 * _.fScore).toFixed(2)}%`,
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().ScoreAdjust,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "Amount score was adjusted by comparing winning and losing teams",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    `${_.fWinLossAdjust > 0 ? "+" : ""}${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                                  ),
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().SequenceID,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "The Sequence ID of this particular sequence of purchases",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    _.nSequenceID,
-                                  ),
-                                ),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ItemList,
-                                },
-                                _.arrItemSequence.map((_, _) =>
-                                  _.createElement(_, {
-                                    nItemID: _,
-                                    key: `InferenceReuslt_${_}_Item_${_}`,
-                                  }),
-                                ),
-                              ),
-                            ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ShowMore,
-                        onClick: () => _(_ + 10),
-                      },
-                      "Show More",
-                    ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().Loading,
-                },
-                "Loading hero and item data...",
-              );
-        },
-        _ = (_) => {
-          const _ = new URLSearchParams(_.strConfig),
-            _ = (0, _._)();
-          let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "0"),
-            _ = parseInt(_.get("nPosition") || "0"),
-            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = _.get("nAverageMMR") || "2000",
-            _ = parseInt(_.get("nGameMode") || "22"),
-            _ = (_.get("arrPurchasedItems") || "0,0,0,0,0,0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrLikedItems") || "0,0").split(",").map(Number),
-            _ = (_.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const [_, _] = _.useState(10),
-            [_, _] = _.useState(3),
-            [_, _] = _.useState(3),
-            _ = () => {
-              const _ = _({
-                nHeroID: _,
-                nFacet: _,
-                nPosition: _,
-                arrAlliedHeroIDs: _,
-                arrAlliedHeroFacets: _,
-                arrEnemyHeroIDs: _,
-                arrEnemyHeroFacets: _,
-                nAverageMMR: parseInt(_),
-                nGameMode: _,
-                arrLikedItems: _,
-                arrDislikedItems: _,
-                arrPurchasedItems: _,
-              });
-              _.strConfig != _ &&
-                __webpack_require__.push(_._.dotaplustester(_.strFeature, _));
-            },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0, _).data,
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !1, _).data;
-          let _ = [];
-          if (
-            _ &&
-            _ &&
-            _.backend_response.outputs.length > 0 &&
-            _.backend_response.outputs.length > 0
-          )
-            for (
-              let _ = 0;
-              _ <
-              _.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence.length;
-              _++
-            ) {
-              let _ = {
-                arrItemSequence:
-                  _.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[_].value,
-                fScore:
-                  _.backend_response.outputs[0].categorical_crossentropy.weight[
-                    _
-                  ],
-                fWinLossAdjust: 0,
-                nSequenceID:
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ],
-              };
-              for (
-                let _ = 0;
-                _ <
-                _.backend_response.outputs[0].categorical_crossentropy.value
-                  .length;
-                _++
-              )
-                if (
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ] ==
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ]
-                ) {
-                  const _ =
-                    10 *
-                    (_.backend_response.outputs[0].categorical_crossentropy
-                      .weight[_] -
-                      _.backend_response.outputs[0].categorical_crossentropy
-                        .weight[_]);
-                  (_.fScore = Math.max(0, _.fScore + _ + 0.01)),
-                    (_.fWinLossAdjust += _);
-                }
-              _.push(_);
-            }
-          for (let _ of _)
-            0 != _[0] &&
-              _.arrItemSequence.includes(_[0]) &&
-              (_.fScore = Math.pow(_.fScore, 3)),
-              0 != _[1] &&
-                _.arrItemSequence.includes(_[1]) &&
-                (_.fScore = Math.pow(_.fScore, 3));
-          for (let _ of _)
-            0 != _[0] &&
-              _.arrItemSequence.includes(_[0]) &&
-              (_.fScore = Math.pow(_.fScore, 1 / 3)),
-              0 != _[1] &&
-                _.arrItemSequence.includes(_[1]) &&
-                (_.fScore = Math.pow(_.fScore, 1 / 3));
-          _.sort((_, _) => _.fScore - _.fScore);
-          for (let _ of _)
-            _.arrItemSequence = _.arrItemSequence.filter((_) => 0 != _);
-          const _ = (0, _._)(),
-            _ = (0, _._)();
-          let _ = [];
-          if (_.length > 0 && (_.push(_[0]), _.data)) {
-            let _ = new Map();
-            for (const _ of _[0].arrItemSequence) _.set(_, 1);
-            for (let _ = 1; _ < _.length; _++) {
-              let _ = 0;
-              for (const _ of _[_].arrItemSequence)
-                _.data.itemabilities.find((_) => _._ == _)
-                  ?.is_lategame_suggested &&
-                  (_.has(_) || _++);
-              if (_ >= _) {
-                _.push(_[_]);
-                for (const _ of _[_].arrItemSequence)
-                  _.set(_, (_.get(_) || 0) + 1);
-                if (_.length >= _) break;
-              }
-            }
-          }
-          const _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            };
-          return _.data && _.data
-            ? _.createElement(
-                "div",
-                {
-                  className: _().DotaPlusTesterSubPage,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Content,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HeroList,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().YourHero,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Your Hero",
-                        nHeroID: _,
-                        nFacet: _,
-                        fnSetSelectedHero: (_) => ((_ = _), void _()),
-                        fnSetSelectedFacet: (_) => _(_),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Allies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Ally #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Enemies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Enemy #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #5",
-                        nHeroID: _[4],
-                        nFacet: _[4],
-                        fnSetSelectedHero: (_) => _(4, _),
-                        fnSetSelectedFacet: (_) => _(4, _),
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().MiscInfo,
-                    },
-                    _.createElement(_, {
-                      nPosition: _,
-                      fnSetPosition: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      nGameMode: _,
-                      fnSetGameMode: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      strMMR: _,
-                      fnSetMMR: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Disliked Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Liked Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_LATE,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Purchased Items",
-                    ),
-                    (0, _._)(0, 9).map((_) =>
-                      _.createElement(_, {
-                        key: `PurchasedItem_${_}`,
-                        nItemID: _[_],
-                        fnSetSelectedItem: (_) => {
-                          return (_ = _), (_[_] = _), void _();
-                          var _;
-                        },
-                        bShowName: !1,
-                        bAllowEmpty: !0,
-                        eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ResultHeader,
-                    },
-                    "Top Variants",
-                  ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().PenaltySelector,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent:
-                            "Number of new late-game items in variants",
-                          direction: "top",
-                          strTooltipClassname: _().ToolTip,
-                        },
-                        "Num New Items",
-                      ),
-                      _.createElement(
-                        "select",
-                        {
-                          className: _().PenaltyDropdown,
-                          value: _,
-                          onChange: (_) => _(parseInt(_.target.value)),
-                        },
-                        _.createElement(
-                          "option",
-                          {
-                            key: 1,
-                            value: 1,
-                          },
-                          "1",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 2,
-                            value: 2,
-                          },
-                          "2",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 3,
-                            value: 3,
-                          },
-                          "3",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            key: 4,
-                            value: 4,
-                          },
-                          "4",
-                        ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Results,
-                      },
-                      _.map((_, _) =>
-                        _ >= _
-                          ? null
-                          : _.createElement(
-                              "div",
-                              {
-                                className: _().Result,
-                                key: `InferenceResult_${_}`,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().Weight,
-                                },
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().Score,
-                                  },
-                                  `${(100 * _.fScore).toFixed(2)}%`,
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().ScoreAdjust,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "Score multiplier due to repeated items",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    `${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                                  ),
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().SequenceID,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "The Sequence ID of this particular sequence of purchases",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    _.nSequenceID,
-                                  ),
-                                ),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ItemList,
-                                },
-                                _.arrItemSequence.map((_, _) =>
-                                  _.createElement(_, {
-                                    nItemID: _,
-                                    key: `InferenceReuslt_${_}_Item_${_}`,
-                                  }),
-                                ),
-                              ),
-                            ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ShowMore,
-                        onClick: () => _(_ + 3),
-                      },
-                      "Show More",
-                    ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ResultHeader,
-                    },
-                    "Raw Results",
-                  ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Results,
-                      },
-                      _.map((_, _) =>
-                        _ >= _
-                          ? null
-                          : _.createElement(
-                              "div",
-                              {
-                                className: _().Result,
-                                key: `InferenceResult_${_}`,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().Weight,
-                                },
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().Score,
-                                  },
-                                  `${(100 * _.fScore).toFixed(2)}%`,
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().ScoreAdjust,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "Amount score was adjusted by comparing winning and losing teams",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    `${_.fWinLossAdjust > 0 ? "+" : ""}${(100 * _.fWinLossAdjust).toFixed(2)}%`,
-                                  ),
-                                ),
-                                _.createElement(
-                                  "div",
-                                  {
-                                    className: _().SequenceID,
-                                  },
-                                  _.createElement(
-                                    _._,
-                                    {
-                                      toolTipContent:
-                                        "The Sequence ID of this particular sequence of purchases",
-                                      direction: "top",
-                                      strTooltipClassname: _().ToolTip,
-                                    },
-                                    _.nSequenceID,
-                                  ),
-                                ),
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().ItemList,
-                                },
-                                _.arrItemSequence.map((_, _) =>
-                                  _.createElement(_, {
-                                    nItemID: _,
-                                    key: `InferenceReuslt_${_}_Item_${_}`,
-                                  }),
-                                ),
-                              ),
-                            ),
-                      ),
-                    ),
-                  _.length > 0 &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ShowMore,
-                        onClick: () => _(_ + 10),
-                      },
-                      "Show More",
-                    ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().Loading,
-                },
-                "Loading hero and item data...",
-              );
-        },
-        _ = (_) => {
-          const _ = new URLSearchParams(_.strConfig),
-            _ = (0, _._)();
-          let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "0"),
-            _ = parseInt(_.get("nPosition") || "0"),
-            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = _.get("nAverageMMR") || "2000",
-            _ = parseInt(_.get("nGameMode") || "22"),
-            _ = parseInt(_.get("nLobbyType") || "7"),
-            _ = (
-              _.get("arrInventoryItems") ||
-              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            )
-              .split(",")
-              .map(Number),
-            _ = (
-              _.get("arrPurchasedItems") ||
-              "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            )
-              .split(",")
-              .map(Number),
-            _ = parseFloat(_.get("fRepeatWeight") || "0.2"),
-            _ = (_.get("arrLikedItems") || "0,0").split(",").map(Number),
-            _ = (_.get("arrDislikedItems") || "0,0").split(",").map(Number);
-          const _ = () => {
-            const _ = _({
-              nHeroID: _,
-              nFacet: _,
-              nPosition: _,
-              arrAlliedHeroIDs: _,
-              arrAlliedHeroFacets: _,
-              arrEnemyHeroIDs: _,
-              arrEnemyHeroFacets: _,
-              nAverageMMR: parseInt(_),
-              nGameMode: _,
-              nLobbyType: _,
-              arrPurchasedItems: _,
-              arrInventoryItems: _,
-              fRepeatWeight: _,
-              arrLikedItems: _,
-              arrDislikedItems: _,
-            });
-            _.strConfig != _ &&
-              __webpack_require__.push(_._.dotaplustester(_.strFeature, _));
-          };
-          let _ = new Map(),
-            _ = [],
-            _ = [];
-          for (const _ of _) _.set(_, 200);
-          for (const _ of _) _.set(_, -1e6);
-          const _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, _, _, _).data;
-          if (
-            _ &&
-            _.backend_response.outputs.length > 0 &&
-            _.backend_response.outputs[0].categorical_crossentropy
-              .value_sequence
-          ) {
-            for (
-              let _ = 0;
-              _ <
-              _.backend_response.outputs[0].categorical_crossentropy
-                .value_sequence[0].value.length;
-              _++
-            )
-              _.push({
-                nItemID:
-                  _.backend_response.outputs[0].categorical_crossentropy
-                    .value_sequence[0].value[_],
-                fScore: 0,
-              });
-            for (
-              let _ = 0;
-              _ <
-              _.backend_response.outputs[0].categorical_crossentropy.value
-                .length;
-              _++
-            ) {
-              const _ =
-                  _.backend_response.outputs[0].categorical_crossentropy.value[
-                    _
-                  ],
-                _ =
-                  _.backend_response.outputs[0].categorical_crossentropy.weight[
-                    _
-                  ];
-              _.push({
-                nItemID: _,
-                fScore: _,
-              });
-            }
-          }
-          const _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_) => {
-              (_[_.indexOf(0)] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            };
-          return _.data && _.data
-            ? _.createElement(
-                "div",
-                {
-                  className: _().DotaPlusTesterSubPage,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Content,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HeroList,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().YourHero,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Your Hero",
-                        nHeroID: _,
-                        nFacet: _,
-                        fnSetSelectedHero: (_) => ((_ = _), void _()),
-                        fnSetSelectedFacet: (_) => _(_),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Allies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Ally #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Ally #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Enemies,
-                      },
-                      _.createElement(_, {
-                        strLabel: "Enemy #1",
-                        nHeroID: _[0],
-                        nFacet: _[0],
-                        fnSetSelectedHero: (_) => _(0, _),
-                        fnSetSelectedFacet: (_) => _(0, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #2",
-                        nHeroID: _[1],
-                        nFacet: _[1],
-                        fnSetSelectedHero: (_) => _(1, _),
-                        fnSetSelectedFacet: (_) => _(1, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #3",
-                        nHeroID: _[2],
-                        nFacet: _[2],
-                        fnSetSelectedHero: (_) => _(2, _),
-                        fnSetSelectedFacet: (_) => _(2, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #4",
-                        nHeroID: _[3],
-                        nFacet: _[3],
-                        fnSetSelectedHero: (_) => _(3, _),
-                        fnSetSelectedFacet: (_) => _(3, _),
-                      }),
-                      _.createElement(_, {
-                        strLabel: "Enemy #5",
-                        nHeroID: _[4],
-                        nFacet: _[4],
-                        fnSetSelectedHero: (_) => _(4, _),
-                        fnSetSelectedFacet: (_) => _(4, _),
-                      }),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().MiscInfo,
-                    },
-                    _.createElement(_, {
-                      nPosition: _,
-                      fnSetPosition: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      nGameMode: _,
-                      fnSetGameMode: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(_, {
-                      strMMR: _,
-                      fnSetMMR: (_) => {
-                        (_ = _), _();
-                      },
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().Option,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Name,
-                        },
-                        "Repeat Weight",
-                      ),
-                      _.createElement(
-                        "select",
-                        {
-                          className: _().WeightSelector,
-                          value: _,
-                          onChange: (_) => {
-                            return (
-                              (_ = parseFloat(_.target.value)),
-                              (_ = _),
-                              void _()
-                            );
-                            var _;
-                          },
-                        },
-                        _.createElement(
-                          "option",
-                          {
-                            value: 1,
-                          },
-                          "1.0",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            value: 0.8,
-                          },
-                          "0.8",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            value: 0.6,
-                          },
-                          "0.6",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            value: 0.4,
-                          },
-                          "0.4",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            value: 0.2,
-                          },
-                          "0.2",
-                        ),
-                        _.createElement(
-                          "option",
-                          {
-                            value: 0,
-                          },
-                          "0.0",
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Preferred Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[2],
-                      fnSetSelectedItem: (_) => _(2, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[3],
-                      fnSetSelectedItem: (_) => _(3, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().IncludExcludeItemOption,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ItemOptionTitle,
-                      },
-                      "Disliked Items",
-                    ),
-                    _.createElement(_, {
-                      nItemID: _[0],
-                      fnSetSelectedItem: (_) => _(0, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[1],
-                      fnSetSelectedItem: (_) => _(1, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[2],
-                      fnSetSelectedItem: (_) => _(2, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                    _.createElement(_, {
-                      nItemID: _[3],
-                      fnSetSelectedItem: (_) => _(3, _),
-                      bShowName: !1,
-                      bAllowEmpty: !0,
-                      eItemFilter: _.ITEM_OPTIONS_EARLY_LATE,
-                    }),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().PurchasedItemList,
-                    },
-                    _.map((_, _) =>
-                      _.createElement(
-                        "div",
-                        {
-                          key: `${_}_${_}`,
-                          onClick: () => {
-                            _.splice(_, 1), _.push(0), _();
-                          },
-                        },
-                        _.createElement(_, {
-                          nItemID: _,
-                        }),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ClearSkilledAbilities,
-                      onClick: () => (
-                        (_ = [
-                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        ]),
-                        void _()
-                      ),
-                    },
-                    "Clear",
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Header,
-                    },
-                    "Recommended Build Sequence",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ItemList,
-                    },
-                    _.map((_, _) =>
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Item,
-                          onClick: () => _(_.nItemID),
-                          key: `${_.nItemID}_${_}`,
-                        },
-                        _.createElement(_, {
-                          nItemID: _.nItemID,
-                        }),
-                        _.fScore > 0 &&
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().Weight,
-                            },
-                            `${(100 * _.fScore).toFixed(2)}%`,
-                          ),
-                      ),
-                    ),
-                  ),
-                  _.createElement("div", {
-                    className: _().Separator,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Header,
-                    },
-                    "Next Item Options",
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ItemList,
-                    },
-                    _.map((_, _) =>
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().Item,
-                          onClick: () => _(_.nItemID),
-                          key: `${_.nItemID}_${_}`,
-                        },
-                        _.createElement(_, {
-                          nItemID: _.nItemID,
-                        }),
-                        _.fScore > 0 &&
-                          _.createElement(
-                            "div",
-                            {
-                              className: _().Weight,
-                            },
-                            `${(100 * _.fScore).toFixed(2)}%`,
-                          ),
-                      ),
-                    ),
-                  ),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _().Loading,
-                },
-                "Loading hero and item data...",
-              );
         },
         _ = () => {
           const _ = (0, _._)(),
@@ -3624,24 +1918,6 @@
           let _;
           switch (_.strFeature) {
             case _:
-              _ = _.createElement(_, {
-                strFeature: _.strFeature,
-                strConfig: _.strConfig,
-              });
-              break;
-            case _:
-              _ = _.createElement(_, {
-                strFeature: _.strFeature,
-                strConfig: _.strConfig,
-              });
-              break;
-            case "earlygameitems":
-              _ = _.createElement(_, {
-                strFeature: _.strFeature,
-                strConfig: _.strConfig,
-              });
-              break;
-            case "lategameitems":
               _ = _.createElement(_, {
                 strFeature: _.strFeature,
                 strConfig: _.strConfig,
@@ -3711,17 +1987,6 @@
                   onClick: () => _(_),
                 },
                 "Main Game Items",
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().Option,
-                    _.strFeature == _ && _().Selected,
-                  ),
-                  onClick: () => _(_),
-                },
-                "Main Game Item Sequence",
               ),
             ),
             _,

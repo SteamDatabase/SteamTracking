@@ -484,15 +484,15 @@
     51706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        mt: () => o,
-        Qs: () => h,
-        o0: () => _.o0,
-        eV: () => g.eV,
-        KG: () => _.KG,
-        Ee: () => _.Ee,
+        mt: () => c,
+        Qs: () => _,
+        o0: () => g.o0,
+        eV: () => f.eV,
+        KG: () => g.KG,
+        Ee: () => g.Ee,
         x_: () => i.x_,
-        of: () => c,
-        pY: () => _.pY,
+        of: () => m,
+        pY: () => g.pY,
         EN: () => n.E,
       });
       var r = a(90626),
@@ -509,23 +509,43 @@
           a(13871),
           a(78327));
       a(28460);
-      const o = ({
-        active: e,
-        onDismiss: t,
-        className: a,
-        modalClassName: l,
-        children: o,
-      }) =>
-        r.createElement(
-          n.E,
-          { active: e },
+      function o(e) {
+        const { labelledBy: t } = e || {},
+          [a, s] = r.useState(null);
+        return {
+          headerId: t || a,
+          context: r.useMemo(() => ({ setHeaderId: s }), []),
+        };
+      }
+      function c(e) {
+        const {
+            active: t,
+            onDismiss: a,
+            className: l,
+            modalClassName: c,
+            children: m,
+            ...p
+          } = e,
+          { headerId: d, context: u } = o({ labelledBy: e["aria-labelledby"] });
+        return r.createElement(
+          s.t6.Provider,
+          { value: u },
           r.createElement(
-            i.x_,
-            { onEscKeypress: t, className: l },
-            r.createElement(s.UC, { className: a }, o),
+            n.E,
+            { active: t },
+            r.createElement(
+              i.x_,
+              { onEscKeypress: a, className: c },
+              r.createElement(
+                s.UC,
+                { role: "dialog", "aria-labelledby": d, className: l, ...p },
+                m,
+              ),
+            ),
           ),
         );
-      function c(e) {
+      }
+      function m(e) {
         const { className: t, children: a } = e;
         return r.createElement(
           n.E,
@@ -534,30 +554,30 @@
         );
       }
       a(81194);
-      var m = a(85585),
-        p = a(7445),
-        d = a(76217),
-        u = a(88843);
-      function h(e) {
+      var p = a(85585),
+        d = a(7445),
+        u = a(76217),
+        h = a(88843);
+      function _(e) {
         const { children: t, navID: a, closeModal: s } = e,
           n = r.createRef(),
           i = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, l.Qn)() && !l.TS.IN_STEAMUI
           ? r.createElement(
-              m.B2,
+              p.B2,
               {
                 navID: a,
                 navTreeRef: n,
                 onCancelButton: s,
-                className: u.GamepadOnlyModalWrapper,
+                className: h.GamepadOnlyModalWrapper,
               },
               r.createElement(
-                p.q,
+                d.q,
                 null,
                 r.createElement(
-                  d.Z,
+                  u.Z,
                   {
-                    className: u.GamepadOnlyPanelWrapper,
+                    className: h.GamepadOnlyPanelWrapper,
                     onGamepadDirection: i,
                     focusableIfNoChildren: !0,
                   },
@@ -567,8 +587,8 @@
             )
           : r.createElement(r.Fragment, null, t);
       }
-      var _ = a(78395),
-        g = a(10411);
+      var g = a(78395),
+        f = a(10411);
       a(76222);
     },
     21820: (e, t, a) => {

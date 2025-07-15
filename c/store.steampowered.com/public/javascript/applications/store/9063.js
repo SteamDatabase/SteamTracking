@@ -404,33 +404,61 @@
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
-      const _ = ({
-        active: _,
-        onDismiss: _,
-        className: __webpack_require__,
-        modalClassName: _,
-        children: _,
-      }) =>
-        _.createElement(
-          _._,
-          {
+      function _(_) {
+        const { labelledBy: _ } = _ || {},
+          [__webpack_require__, _] = _.useState(null);
+        return {
+          headerId: _ || __webpack_require__,
+          context: _.useMemo(
+            () => ({
+              setHeaderId: _,
+            }),
+            [],
+          ),
+        };
+      }
+      function _(_) {
+        const {
             active: _,
+            onDismiss: __webpack_require__,
+            className: _,
+            modalClassName: _,
+            children: _,
+            ..._
+          } = _,
+          { headerId: _, context: _ } = _({
+            labelledBy: _["aria-labelledby"],
+          });
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
           },
           _.createElement(
             _._,
             {
-              onEscKeypress: _,
-              className: _,
+              active: _,
             },
             _.createElement(
               _._,
               {
-                className: __webpack_require__,
+                onEscKeypress: __webpack_require__,
+                className: _,
               },
-              _,
+              _.createElement(
+                _._,
+                {
+                  role: "dialog",
+                  "aria-labelledby": _,
+                  className: _,
+                  ..._,
+                },
+                _,
+              ),
             ),
           ),
         );
+      }
       function _(_) {
         const { className: _, children: __webpack_require__ } = _;
         return _.createElement(

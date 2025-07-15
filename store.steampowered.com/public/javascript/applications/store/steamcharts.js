@@ -2903,7 +2903,7 @@
         $e = a(68033),
         et = a(55263),
         tt = a(41550),
-        at = a(71367),
+        at = a(90335),
         nt = a(35685),
         rt = a(9709),
         lt = a(25359),
@@ -3944,7 +3944,7 @@
             a.AnnouncementGID,
           ]);
         let u = s
-          ? r.createElement(at.f, {
+          ? r.createElement(at.fh, {
               text: s || "",
               partnerEventStore: l,
               showErrorInfo: !1,

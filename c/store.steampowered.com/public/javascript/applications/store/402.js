@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "特賣活動",
 	"Menu_SearchBar_RecentlyViewed": "近期瀏覽過",
-	"Menu_SearchBar_PopularItems": "熱門項目",
+	"Menu_SearchBar_PopularSearches": "熱門搜尋",
 	"Menu_SearchBar_SearchResults": "搜尋結果",
 	"Menu_SearchBar_YourTopGenres": "近期感興趣的類型",
 	"Menu_SearchBar_BrowseBy": "瀏覽依據…",
+	"Menu_SearchBar_NoMatches": "沒有符合您查詢條件的項目。",
+	"Menu_SearchBar_AdvancedSearch": "進階搜尋",
 	"Menu_Search": "搜尋",
 	"Menu_Label": "商店選單"
 }`);

@@ -1877,6 +1877,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -2751,6 +2752,20 @@
                   }
               }
             })(_, _)
+          : void 0;
+      }
+      function _() {
+        const { data: _ } = _();
+        return _
+          ? !(function (_) {
+              switch (_.preference_state) {
+                case 0:
+                case 1:
+                  return !1;
+                default:
+                  return !0;
+              }
+            })(_)
           : void 0;
       }
     },

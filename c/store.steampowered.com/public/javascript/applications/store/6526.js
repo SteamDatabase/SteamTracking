@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Steam Labs",
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "SỰ KIỆN ƯU ĐÃI",
-	"Menu_SearchBar_RecentlyViewed": "Đã xem gần đây",
-	"Menu_SearchBar_PopularItems": "Vật phẩm phổ biến",
+	"Menu_SearchBar_RecentlyViewed": "Gần đây xem",
+	"Menu_SearchBar_PopularSearches": "Tìm kiếm phổ biến",
 	"Menu_SearchBar_SearchResults": "Kết quả tìm kiếm",
 	"Menu_SearchBar_YourTopGenres": "Thể loại hàng đầu của bạn",
 	"Menu_SearchBar_BrowseBy": "Duyệt theo...",
+	"Menu_SearchBar_NoMatches": "Không có sản phẩm nào khớp với truy vấn.",
+	"Menu_SearchBar_AdvancedSearch": "Tìm kiếm nâng cao",
 	"Menu_Search": "Tìm kiếm",
 	"Menu_Label": "Menu cửa hàng"
 }`);

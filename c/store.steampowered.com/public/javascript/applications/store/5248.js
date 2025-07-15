@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "UDSALGSBEGIVENHEDER",
 	"Menu_SearchBar_RecentlyViewed": "Set for nylig",
-	"Menu_SearchBar_PopularItems": "Populære emner",
+	"Menu_SearchBar_PopularSearches": "Populære søgninger",
 	"Menu_SearchBar_SearchResults": "Søgeresultater",
 	"Menu_SearchBar_YourTopGenres": "Dine topgenrer",
 	"Menu_SearchBar_BrowseBy": "Søg efter...",
+	"Menu_SearchBar_NoMatches": "Ingen emner matchede forespørgslen.",
+	"Menu_SearchBar_AdvancedSearch": "Avanceret søgning",
 	"Menu_Search": "Søg",
 	"Menu_Label": "Butiksmenu"
 }`);

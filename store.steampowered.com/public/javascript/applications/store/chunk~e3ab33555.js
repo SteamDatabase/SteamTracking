@@ -379,7 +379,7 @@
         A = a(41550),
         C = a(32541),
         I = a(42011),
-        N = a(71367),
+        N = a(90335),
         f = a(75113),
         B = a(43667),
         P = a(64940),
@@ -1224,7 +1224,7 @@
                           L().EventDetailsBody,
                         ),
                       },
-                      c.createElement(N.f, {
+                      c.createElement(N.fh, {
                         text: w || "",
                         partnerEventStore: n,
                         showErrorInfo: v,

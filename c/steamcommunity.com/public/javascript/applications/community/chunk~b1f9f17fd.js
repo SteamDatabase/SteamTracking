@@ -141,11 +141,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        DropDown: "u_cLtpeDRLhuCIb1YZzZD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         RadioButtons: "_3gOI2Om8NIab7UNJ7F2E7t",
         RadioButtonCtn: "_2AokjG6N1tt-HGd0mhBgrN",
         ImageFit: "_9zCKtf5oUzA2xMaX1jCeD",
@@ -23221,7 +23216,6 @@
       function _(_) {
         return "unknown ECommunityItemClass ( " + _ + " )";
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _;
         (0, _.useEffect)(() => {
@@ -23260,8 +23254,8 @@
           _.createElement("hr", null),
           _.createElement(_._, {
             type: "text",
-            label: (0, _._)("#Sale_Section_PointStop_Tag"),
-            tooltip: (0, _._)("#Sale_Section_PointStop_Tag_ttip"),
+            label: (0, _._)("#Sale_Section_PointShop_Tag"),
+            tooltip: (0, _._)("#Sale_Section_PointShop_Tag_ttip"),
             value: _,
             onChange: (_) => {
               _.point_shop_smart_data.point_shop_category_tag !=
@@ -23271,28 +23265,17 @@
                 __webpack_require__.SetDirty(_._.jsondata_sales));
             },
           }),
-          _.createElement(
-            _._,
-            {
-              label: (0, _._)("#Sale_Section_PointStop_Class"),
-              tooltip: (0, _._)("#Sale_Section_PointStop_Class_ttip"),
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Section_PointShop_Class"),
+            tooltip: (0, _._)("#Sale_Section_PointShop_Class_ttip"),
+            rgOptions: _,
+            selectedOption: _,
+            onChange: (_) => {
+              _.data != _.point_shop_smart_data.community_item_class &&
+                ((_.point_shop_smart_data.community_item_class = _.data),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
             },
-            _.createElement(
-              "div",
-              {
-                className: _.DropDown,
-              },
-              _.createElement(_._, {
-                rgOptions: _,
-                selectedOption: _,
-                onChange: (_) => {
-                  _.data != _.point_shop_smart_data.community_item_class &&
-                    ((_.point_shop_smart_data.community_item_class = _.data),
-                    __webpack_require__.SetDirty(_._.jsondata_sales));
-                },
-              }),
-            ),
-          ),
+          }),
         );
       }
       function _(_) {
@@ -57426,7 +57409,7 @@
                   _._,
                   {
                     role: "button",
-                    "aria-label": (0, _._)("#Carousel_Previous"),
+                    "aria-label": (0, _._)("#Carousel_Prev"),
                     onClick: () => _(!0),
                     className: (0, _._)(
                       _().QueueNavArrow,
@@ -63097,12 +63080,11 @@
                     type: "video/mp4",
                   }),
               )
-            : (
-                  null === (_ = null == _ ? void 0 : _.strPageBackgroundWebM) ||
-                  void 0 === _
-                    ? void 0
-                    : _.length
-                )
+            : !(0, _._)() &&
+                (null === (_ = null == _ ? void 0 : _.strPageBackgroundWebM) ||
+                void 0 === _
+                  ? void 0
+                  : _.length)
               ? _.createElement(
                   "video",
                   {
@@ -64558,7 +64540,7 @@
           let _, _;
           (null == _ ? void 0 : _.menu) ||
             (_ = {
-              background: _,
+              ..._,
               color: _ || "white",
             }),
             (null == _ ? void 0 : _.menuTitle) ||
@@ -65104,7 +65086,7 @@
             _.highlighted_facet_color,
           ]),
           _ = (0, _._)(),
-          _ = (0, _._)(_, __webpack_require__, _).background;
+          _ = (0, _._)(_, __webpack_require__, _);
         return _.createElement(_, {
           labelColor: _,
           headingColor: _,

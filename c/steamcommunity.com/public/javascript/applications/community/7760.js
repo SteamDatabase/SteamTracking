@@ -479,18 +479,12 @@
                 {
                   bottomSeparator: "none",
                   label: (0, _._)("#EventEditor_CarouselEditor_AddAnotherItem"),
+                  className: _.AddButton,
+                  onClick: _,
                 },
-                _.createElement(
-                  _._,
-                  {
-                    type: "button",
-                    className: _.AddButton,
-                    onClick: _,
-                  },
-                  _.createElement(_.OMN, {
-                    className: _.PlusIcon,
-                  }),
-                ),
+                _.createElement(_.OMN, {
+                  className: _.PlusIcon,
+                }),
               ),
             ),
             _.createElement(

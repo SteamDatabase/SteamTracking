@@ -1193,7 +1193,7 @@
         }
         return r.createElement(r.Fragment, null);
       }
-      var Ee = n(71367);
+      var Ee = n(90335);
       function Ce(e) {
         const { bSalePage: t } = e,
           [n, d] = r.useState(s.KN.IsInitialized());
@@ -1202,7 +1202,7 @@
             l.Vw.Init(new o.D(u.TS.WEBAPI_BASE_URL)),
               i.O3.Init(),
               t &&
-                Ee.f.AddDictionary(
+                Ee.us.AddDictionary(
                   (null == se &&
                     (se = new Map([
                       [

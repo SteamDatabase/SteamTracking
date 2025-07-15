@@ -1119,7 +1119,7 @@
           : (_.nDuration / _.nTimeScale) * 1e3;
       }
       function _(_, _, _) {
-        _ -= _.GetStartTime();
+        _ -= 1e3 * _.GetStartTime();
         let _ = _(_),
           _ = _(_, _, _);
         return Math.floor(_ / _) + _.segmentTemplate.nStartNumber;

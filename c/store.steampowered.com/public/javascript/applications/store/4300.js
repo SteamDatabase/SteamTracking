@@ -85,7 +85,7 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "VÝPRODEJE",
 	"Menu_SearchBar_RecentlyViewed": "Nedávno zobrazené",
-	"Menu_SearchBar_PopularItems": "Populární produkty",
+	"Menu_SearchBar_PopularSearches": "Populární hledání",
 	"Menu_SearchBar_SearchResults": "Výsledky vyhledávání",
 	"Menu_SearchBar_YourTopGenres": "Vaše nejhranější žánry",
 	"Menu_SearchBar_BrowseBy": "Procházet podle...",

@@ -85,7 +85,7 @@
 	"Menu_Section_SpecialSections_DLCForYou": "DLC-K",
 	"Menu_Section_SpecialSections_SaleEvents": "VÁSÁRESEMÉNYEK",
 	"Menu_SearchBar_RecentlyViewed": "Nemrég megnézett",
-	"Menu_SearchBar_PopularItems": "Népszerű tételek",
+	"Menu_SearchBar_PopularSearches": "Népszerű keresések",
 	"Menu_SearchBar_SearchResults": "Keresési eredmények",
 	"Menu_SearchBar_YourTopGenres": "Legjobb műfajaid",
 	"Menu_SearchBar_BrowseBy": "Böngészési elv...",

@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Steam Laboratorien",
 	"Menu_Section_SpecialSections_DLCForYou": "Zusatzinhalt",
 	"Menu_Section_SpecialSections_SaleEvents": "RABATTAKTIONEN",
-	"Menu_SearchBar_RecentlyViewed": "Kürzlich angesehen",
-	"Menu_SearchBar_PopularItems": "Beliebte Artikel",
+	"Menu_SearchBar_RecentlyViewed": "Zuletzt angesehen",
+	"Menu_SearchBar_PopularSearches": "Beliebte Suchanfragen",
 	"Menu_SearchBar_SearchResults": "Suchergebnisse",
 	"Menu_SearchBar_YourTopGenres": "Ihre Top-Genres",
 	"Menu_SearchBar_BrowseBy": "Durchsuchen nach …",
+	"Menu_SearchBar_NoMatches": "Keine Suchergebnisse entsprechen dieser Anfrage.",
+	"Menu_SearchBar_AdvancedSearch": "Erweiterte Suche",
 	"Menu_Search": "Suchen",
 	"Menu_Label": "Shop-Menü"
 }`);

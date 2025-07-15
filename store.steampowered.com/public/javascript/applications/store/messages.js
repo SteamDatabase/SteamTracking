@@ -4251,62 +4251,69 @@
     },
     46253: (e, t, r) => {
       "use strict";
-      r.d(t, { h: () => o });
+      r.d(t, { h: () => c });
       var a = r(90626),
         s = r(52038),
         i = r(61859),
         n = r(828),
-        l = r.n(n);
-      function o(e) {
+        l = r.n(n),
+        o = r(33917);
+      function c(e) {
         const {
             name: t,
             trailerCategory: r,
             trailerDisplay: n,
-            mouseOver: o,
+            mouseOver: c,
           } = e,
-          [c, m] = a.useState(!1);
+          [m, u] = a.useState(!1);
         if (
           (a.useEffect(() => {
-            0 != n && m(!0);
+            0 != n && u(!0);
           }, [n]),
           a.useEffect(() => {
-            if (o) return void m(!0);
-            if (!c) return;
-            const e = setTimeout(() => m(!1), 3e3);
+            if (c) return void u(!0);
+            if (!m) return;
+            const e = setTimeout(() => u(!1), 3e3);
             return () => clearTimeout(e);
-          }, [c, o]),
+          }, [m, c]),
           null == r || 0 == n)
         )
           return;
-        const u =
+        const g =
           1 == n
             ? (0, i.we)("#StoreTrailer_Title_TrailerPreview")
-            : (function (e) {
-                switch (e) {
-                  case 1:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Gameplay");
-                  case 2:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Teaser");
-                  case 3:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Cinematic");
-                  case 4:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Update");
-                  case 5:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Accolades");
-                  case 6:
-                    return (0, i.we)("#StoreTrailer_Title_Category_Interview");
-                }
-                return (0, i.we)("#StoreTrailer_Title_Category_Unknown");
-              })(r);
+            : (0, o.e)(r);
         return a.createElement(
           "div",
-          { className: (0, s.A)({ [l().TrailerTitle]: !0, [l().Visible]: c }) },
+          { className: (0, s.A)({ [l().TrailerTitle]: !0, [l().Visible]: m }) },
           (0, i.PP)(
             "#StoreTrailer_Title_Combiner",
-            a.createElement("span", { className: l().Category }, u),
+            a.createElement("span", { className: l().Category }, g),
             t,
           ),
         );
+      }
+    },
+    33917: (e, t, r) => {
+      "use strict";
+      r.d(t, { e: () => s });
+      var a = r(61859);
+      function s(e) {
+        switch (e) {
+          case 1:
+            return (0, a.we)("#StoreTrailer_Title_Category_Gameplay");
+          case 2:
+            return (0, a.we)("#StoreTrailer_Title_Category_Teaser");
+          case 3:
+            return (0, a.we)("#StoreTrailer_Title_Category_Cinematic");
+          case 4:
+            return (0, a.we)("#StoreTrailer_Title_Category_Update");
+          case 5:
+            return (0, a.we)("#StoreTrailer_Title_Category_Accolades");
+          case 6:
+            return (0, a.we)("#StoreTrailer_Title_Category_Interview");
+        }
+        return (0, a.we)("#StoreTrailer_Title_Category_Unknown");
       }
     },
     46773: (e, t, r) => {

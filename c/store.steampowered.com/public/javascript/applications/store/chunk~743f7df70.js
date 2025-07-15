@@ -125,6 +125,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ImageBlocked: "_1q2rpNyMVSrPH9vV02Dtrp",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "_2L6sVk9vOgKcXO6DgZHpJ9",
       };
     },
@@ -5753,9 +5758,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5850,6 +5855,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -10391,7 +10397,39 @@
           _.children,
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { strURL: _, children: __webpack_require__ } = _;
+        return (
+          "string" == typeof _
+            ? !(0, _._)(_)
+            : _.some((_) => !(0, _._)(_))
+        )
+          ? _.createElement(_, {
+              children: __webpack_require__,
+            })
+          : _.createElement(_.Fragment, null, __webpack_require__);
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _._)()
+          ? _.createElement(_.Fragment, null, _)
+          : _.createElement(
+              "div",
+              {
+                className: _().ImageBlocked,
+              },
+              (0, _._)(
+                "#Image_Externally_Hosted_Hidden",
+                _.createElement("a", {
+                  href: _._.STORE_BASE_URL + "account/cookiepreferences",
+                }),
+              ),
+            );
+      }
       let _ = null;
       function _() {
         return (
@@ -10605,25 +10643,35 @@
           let _;
           return (
             (_ = _),
-            (_ =
-              (!__webpack_require__ ||
-                !__webpack_require__.BHasTag("auto_rssfeed")) &&
-              !(0, _._)(_)),
-            _ || (_ = (0, _._)(_)),
+            (_ = !(0, _._)(_)),
+            __webpack_require__?.BHasTag("auto_rssfeed") && (_ = !1),
             _
               ? _.createElement(_._, {
                   src: _,
                   crossOrigin: _ ? "anonymous" : void 0,
                 })
-              : _.createElement(_._, {
-                  src: _,
-                  crossOrigin: _ ? "anonymous" : void 0,
-                })
+              : ((_ = (0, _._)(_)),
+                _.createElement(
+                  _,
+                  {
+                    strURL: _,
+                  },
+                  _.createElement(_._, {
+                    src: _,
+                    crossOrigin: _ ? "anonymous" : void 0,
+                  }),
+                ))
           );
         }
-        return _.createElement(_._, {
-          rgSources: _,
-        });
+        return _.createElement(
+          _,
+          {
+            strURL: _,
+          },
+          _.createElement(_._, {
+            rgSources: _,
+          }),
+        );
       }
       function _(_) {
         const _ = (0, _._)(_.args);
@@ -10918,27 +10966,7 @@
             ? _.createElement("div", null, (0, _._)("#CloudUpload_NotSupport"))
             : null;
       }
-      class _ extends _.Component {
-        m_parser;
-        constructor(_) {
-          super(_),
-            (this.m_parser = new _._(
-              _.sm_BBCodeDictionary,
-              this.ElementAccumulator,
-              _.languageOverride,
-            ));
-        }
-        ElementAccumulator(_) {
-          return new _(
-            new _(
-              new _(new _._(new _._(), 0), _, _(), {
-                partnerEventStore: this.props.partnerEventStore,
-                event: this.props.event,
-              }),
-            ),
-            _,
-          );
-        }
+      class _ {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(_._.entries()),
           ...Array.from(_().entries()),
@@ -10949,22 +10977,49 @@
             ...Array.from(_.entries()),
           ]);
         }
-        render() {
-          return (
-            this.m_parser.UpdateOverrideLanguage(this.props.languageOverride),
-            this.m_parser.ParseBBCode(
-              this.props.text,
+      }
+      function _(_) {
+        const {
+            text: _,
+            partnerEventStore: __webpack_require__,
+            languageOverride: _,
+            event: _,
+            showErrorInfo: _,
+            bShowShortSpeakerInfo: _,
+          } = _,
+          _ = _.useCallback(
+            (_) =>
+              new _(
+                new _(
+                  new _(new _._(new _._(), 0), _, _(), {
+                    partnerEventStore: __webpack_require__,
+                    event: _,
+                  }),
+                ),
+                _,
+              ),
+            [__webpack_require__, _],
+          ),
+          _ = (0, _._)(() => new _._(_.sm_BBCodeDictionary, _, _));
+        return (
+          _.useEffect(() => {
+            _.UpdateOverrideLanguage(_);
+          }, [_, _]),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.ParseBBCode(
+              _,
               {
-                showErrorInfo: this.props.showErrorInfo,
-                event: this.props.event,
-                bShowShortSpeakerInfo: this.props.bShowShortSpeakerInfo,
+                showErrorInfo: _,
+                event: _,
+                bShowShortSpeakerInfo: _,
               },
               !0,
-            )
-          );
-        }
+            ),
+          )
+        );
       }
-      (0, _._)([_._], _.prototype, "ElementAccumulator", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

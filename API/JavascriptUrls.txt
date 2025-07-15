@@ -2537,6 +2537,7 @@ https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=englis
 https://community.cloudflare.steamstatic.com/economy/emoticon/${strEmoticonName}
 https://community.cloudflare.steamstatic.com/economy/image/${icon_url_hash}/128fx128f
 https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}
+https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}?allow_animated=1
 https://community.cloudflare.steamstatic.com/economy/image/${}/96fx96f
 https://community.cloudflare.steamstatic.com/economy/profilebackground/${strBackgroundImage}?size=${strSize}&v=2
 https://community.cloudflare.steamstatic.com/public/images/${newImg}
@@ -2997,6 +2998,7 @@ https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
+https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke
 https://steamcommunity.com/login/dologin/
@@ -3004,8 +3006,10 @@ https://steamcommunity.com/login/getrsakey/
 https://steamcommunity.com/login/logout/
 https://steamcommunity.com/market/appfilters/${unAppId}
 https://steamcommunity.com/market/buylisting/${listingid}
+https://steamcommunity.com/market/canbuyback/
 https://steamcommunity.com/market/cancelbuyorder/
 https://steamcommunity.com/market/createbuyorder/
+https://steamcommunity.com/market/dobuyback/
 https://steamcommunity.com/market/getbuyorderstatus/
 https://steamcommunity.com/market/gettradefeetaxrate/
 https://steamcommunity.com/market/itemordersactivity

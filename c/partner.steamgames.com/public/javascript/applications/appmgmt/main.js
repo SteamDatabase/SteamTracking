@@ -17431,6 +17431,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17577,6 +17579,20 @@
           [_],
         );
       }
+      function _(_) {
+        const _ = _.useRef({
+          value: void 0,
+          bConstructed: !1,
+        });
+        return (
+          _.current.bConstructed ||
+            (_.current = {
+              value: _(),
+              bConstructed: !0,
+            }),
+          _.current.value
+        );
+      }
       function _() {
         const [_, _] = _.useState(!1);
         return [
@@ -17586,6 +17602,32 @@
             onMouseLeave: _.useCallback(() => _(!1), []),
           },
         ];
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            if (!_.current) return;
+            let _ = !1;
+            const _ = (_) => {
+                const _ = _.current?.contains(_.target);
+                __webpack_require__(!!_),
+                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
+              },
+              _ = () => {
+                __webpack_require__(!0),
+                  _ || (window.addEventListener("pointermove", _), (_ = !0));
+              };
+            return (
+              _.current.addEventListener("pointerenter", _),
+              () => {
+                window.removeEventListener("pointerenter", _),
+                  _ && window.removeEventListener("pointermove", _);
+              }
+            );
+          }, [_]),
+          _
+        );
       }
       function _(_) {
         const _ = _.useRef(_);
@@ -23252,7 +23294,7 @@
                   (_.menuRight +=
                     _.document.body.clientWidth - _.scrollX - _.innerWidth)),
             _.menuWidth &&
-              window.matchMedia("(prefers-contrast: more)") &&
+              window.matchMedia("(prefers-contrast: more)").matches &&
               (_.menuWidth += 1),
             (_ ||
               _.menuLeft !== this.state.menuLeft ||
@@ -23630,6 +23672,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -23652,8 +23695,28 @@
           });
         });
       }
-      let _ = (0, _._)("DialogHeader", "heading"),
-        _ = (0, _._)("DialogSubHeader", "heading", {
+      const _ = _.createContext(null),
+        _ = _.forwardRef(function (_, _) {
+          const { _: __webpack_require__, className: _, ..._ } = _,
+            _ = _.useContext(_),
+            _ = _?.setHeaderId,
+            _ = _.useId(),
+            _ = __webpack_require__ || _;
+          return (
+            _.useEffect(() => {
+              _ && _(_);
+            }, [_, _]),
+            _.createElement("div", {
+              _: _,
+              role: "heading",
+              "aria-level": 2,
+              ..._,
+              className: (0, _._)("DialogHeader", _),
+              ref: _,
+            })
+          );
+        });
+      let _ = (0, _._)("DialogSubHeader", "heading", {
           "aria-level": 3,
         }),
         _ =
@@ -24251,6 +24314,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _._,
@@ -25115,6 +25179,7 @@
         return _.createElement(
           _._,
           {
+            _: _._,
             focusable: _.focusable,
             className: (0, _._)(
               _.className,
@@ -25135,6 +25200,9 @@
             role: _.role ?? "combobox",
             "aria-controls": _["aria-controls"],
             "aria-expanded": _.opened,
+            "aria-label": _["aria-label"],
+            "aria-labelledby": _["aria-labelledby"],
+            "aria-describedby": _["aria-describedby"],
           },
           _.createElement(
             "div",
@@ -30905,33 +30973,61 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
-      const _ = ({
-        active: _,
-        onDismiss: _,
-        className: __webpack_require__,
-        modalClassName: _,
-        children: _,
-      }) =>
-        _.createElement(
-          _._,
-          {
+      function _(_) {
+        const { labelledBy: _ } = _ || {},
+          [__webpack_require__, _] = _.useState(null);
+        return {
+          headerId: _ || __webpack_require__,
+          context: _.useMemo(
+            () => ({
+              setHeaderId: _,
+            }),
+            [],
+          ),
+        };
+      }
+      function _(_) {
+        const {
             active: _,
+            onDismiss: __webpack_require__,
+            className: _,
+            modalClassName: _,
+            children: _,
+            ..._
+          } = _,
+          { headerId: _, context: _ } = _({
+            labelledBy: _["aria-labelledby"],
+          });
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
           },
           _.createElement(
             _._,
             {
-              onEscKeypress: _,
-              className: _,
+              active: _,
             },
             _.createElement(
               _._,
               {
-                className: __webpack_require__,
+                onEscKeypress: __webpack_require__,
+                className: _,
               },
-              _,
+              _.createElement(
+                _._,
+                {
+                  role: "dialog",
+                  "aria-labelledby": _,
+                  className: _,
+                  ..._,
+                },
+                _,
+              ),
             ),
           ),
         );
+      }
       function _(_) {
         const { className: _, children: __webpack_require__ } = _;
         return _.createElement(
@@ -31588,6 +31684,7 @@
               "aria-labelledby": _ || void 0,
               ..._,
               classNameContent: (0, _._)(
+                "GenericDialogBase",
                 "GenericConfirmDialog",
                 _ && "DialogContentFullSize",
                 _,
@@ -38180,6 +38277,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,

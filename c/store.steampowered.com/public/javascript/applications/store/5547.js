@@ -85,10 +85,12 @@
 	"Menu_Section_SpecialSections_DLCForYou": "Nedlastbart innhold",
 	"Menu_Section_SpecialSections_SaleEvents": "SALGSBEGIVENHETER",
 	"Menu_SearchBar_RecentlyViewed": "Nylig vist",
-	"Menu_SearchBar_PopularItems": "Populære gjenstander",
+	"Menu_SearchBar_PopularSearches": "Populære søk",
 	"Menu_SearchBar_SearchResults": "Søkeresultater",
 	"Menu_SearchBar_YourTopGenres": "Sjangere for deg",
 	"Menu_SearchBar_BrowseBy": "Bla etter …",
+	"Menu_SearchBar_NoMatches": "Ingen treff på søket.",
+	"Menu_SearchBar_AdvancedSearch": "Avansert søk",
 	"Menu_Search": "Søk",
 	"Menu_Label": "Butikkmeny"
 }`);

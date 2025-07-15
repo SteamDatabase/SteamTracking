@@ -296,4 +296,32 @@ a.history_item:hover .history_item_name {
 }
 
 
+.inventory_history_unsettled
+{
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	align-items: center;
+
+	height: 24px;
+	padding: 8px;
+	margin-bottom: 15px;
+	margin-right: 8px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+	background-color: #a6801b;
+}
+
+.inventory_history_unsettled img
+{
+	height: 24px;
+}
+
+.inventory_history_unsettled_faq
+{
+	text-decoration: underline;
+}
+
+
 

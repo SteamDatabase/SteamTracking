@@ -199,7 +199,7 @@ function InitImageTypes( type )
 		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
 
 		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_capsule|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
 		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
 		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true, tab: 'library' },
 

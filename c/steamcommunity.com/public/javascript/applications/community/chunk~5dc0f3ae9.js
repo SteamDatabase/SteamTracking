@@ -22700,8 +22700,6 @@
                 "ul",
                 null,
                 _.createElement("li", null, (0, _._)("#Image_Error_msg1")),
-                _.createElement("li", null, (0, _._)("#Image_Error_msg2")),
-                _.createElement("li", null, (0, _._)("#Image_Error_msg3")),
               ),
               _.createElement("p", null, (0, _._)("#Image_Error_suggestion")),
             )

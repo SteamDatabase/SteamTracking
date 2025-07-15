@@ -22,15 +22,15 @@
     51706: (e, t, s) => {
       "use strict";
       s.d(t, {
-        mt: () => l,
-        Qs: () => p,
-        o0: () => E.o0,
-        eV: () => f.eV,
-        KG: () => E.KG,
-        Ee: () => E.Ee,
+        mt: () => c,
+        Qs: () => E,
+        o0: () => f.o0,
+        eV: () => b.eV,
+        KG: () => f.KG,
+        Ee: () => f.Ee,
         x_: () => a.x_,
-        of: () => c,
-        pY: () => E.pY,
+        of: () => u,
+        pY: () => f.pY,
         EN: () => i.E,
       });
       var n = s(90626),
@@ -47,23 +47,43 @@
           s(13871),
           s(78327));
       s(28460);
-      const l = ({
-        active: e,
-        onDismiss: t,
-        className: s,
-        modalClassName: o,
-        children: l,
-      }) =>
-        n.createElement(
-          i.E,
-          { active: e },
+      function l(e) {
+        const { labelledBy: t } = e || {},
+          [s, r] = n.useState(null);
+        return {
+          headerId: t || s,
+          context: n.useMemo(() => ({ setHeaderId: r }), []),
+        };
+      }
+      function c(e) {
+        const {
+            active: t,
+            onDismiss: s,
+            className: o,
+            modalClassName: c,
+            children: u,
+            ...m
+          } = e,
+          { headerId: h, context: d } = l({ labelledBy: e["aria-labelledby"] });
+        return n.createElement(
+          r.t6.Provider,
+          { value: d },
           n.createElement(
-            a.x_,
-            { onEscKeypress: t, className: o },
-            n.createElement(r.UC, { className: s }, l),
+            i.E,
+            { active: t },
+            n.createElement(
+              a.x_,
+              { onEscKeypress: s, className: c },
+              n.createElement(
+                r.UC,
+                { role: "dialog", "aria-labelledby": h, className: o, ...m },
+                u,
+              ),
+            ),
           ),
         );
-      function c(e) {
+      }
+      function u(e) {
         const { className: t, children: s } = e;
         return n.createElement(
           i.E,
@@ -72,30 +92,30 @@
         );
       }
       s(81194);
-      var u = s(85585),
-        m = s(7445),
-        h = s(76217),
-        d = s(88843);
-      function p(e) {
+      var m = s(85585),
+        h = s(7445),
+        d = s(76217),
+        p = s(88843);
+      function E(e) {
         const { children: t, navID: s, closeModal: r } = e,
           i = n.createRef(),
           a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, o.Qn)() && !o.TS.IN_STEAMUI
           ? n.createElement(
-              u.B2,
+              m.B2,
               {
                 navID: s,
                 navTreeRef: i,
                 onCancelButton: r,
-                className: d.GamepadOnlyModalWrapper,
+                className: p.GamepadOnlyModalWrapper,
               },
               n.createElement(
-                m.q,
+                h.q,
                 null,
                 n.createElement(
-                  h.Z,
+                  d.Z,
                   {
-                    className: d.GamepadOnlyPanelWrapper,
+                    className: p.GamepadOnlyPanelWrapper,
                     onGamepadDirection: a,
                     focusableIfNoChildren: !0,
                   },
@@ -105,13 +125,13 @@
             )
           : n.createElement(n.Fragment, null, t);
       }
-      var E = s(78395),
-        f = s(10411);
+      var f = s(78395),
+        b = s(10411);
       s(76222);
     },
     40917: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => M });
+      s.r(t), s.d(t, { default: () => q });
       var n = s(90626),
         r = s(9054),
         i = s.n(r),
@@ -180,8 +200,8 @@
         S = s(61859),
         C = s(82477),
         _ = s(10981),
-        O = s(22797),
-        I = s(78327);
+        I = s(22797),
+        O = s(78327);
       function R(e) {
         return `?joinsessionid=${e}`;
       }
@@ -251,7 +271,7 @@
                 "No logged in sessions",
               )
           : t.isFetching || t.isRefetching
-            ? n.createElement(O.t, null)
+            ? n.createElement(I.t, null)
             : n.createElement(
                 "div",
                 { className: i().Error },
@@ -259,7 +279,7 @@
                 t.error.message,
               );
       }
-      function q(e) {
+      function M(e) {
         const t = g(e.steamAppId);
         return t
           ? n.createElement(
@@ -282,7 +302,7 @@
                 { className: i().SessionInfoCtr },
                 n.createElement("iframe", { src: e.sessionLiveDataUrl }),
               ),
-              I.TS.IN_CLIENT
+              O.TS.IN_CLIENT
                 ? n.createElement(
                     "div",
                     { className: i().SectionCtr },
@@ -294,7 +314,7 @@
                     n.createElement(
                       "div",
                       { className: i().SectionCtr },
-                      I.iA.logged_in
+                      O.iA.logged_in
                         ? n.createElement(L, { ...e })
                         : n.createElement(
                             n.Fragment,
@@ -311,8 +331,8 @@
                             ),
                           ),
                     ),
-                    !I.TS.IN_MOBILE &&
-                      !I.TS.IN_MOBILE_WEBVIEW &&
+                    !O.TS.IN_MOBILE &&
+                      !O.TS.IN_MOBILE_WEBVIEW &&
                       n.createElement(
                         "div",
                         { className: i().SectionCtr },
@@ -321,10 +341,10 @@
                       ),
                   ),
             )
-          : n.createElement(O.t, null);
+          : n.createElement(I.t, null);
       }
-      function M() {
-        const e = (0, I.Tc)("multiplayersession_join", "application_config"),
+      function q() {
+        const e = (0, O.Tc)("multiplayersession_join", "application_config"),
           t = new URLSearchParams((0, a.zy)().search).get("jws"),
           { header: s, body: r } = (0, l.I3)(t) || { header: {}, body: {} };
         let { steamAppId: o } = r;
@@ -336,7 +356,7 @@
             "div",
             { className: i().JoinApp },
             o && u && u
-              ? n.createElement(q, {
+              ? n.createElement(M, {
                   steamAppId: o,
                   sessionLiveDataUrl: u,
                   sessionID: c,

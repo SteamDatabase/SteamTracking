@@ -2086,7 +2086,8 @@
             controls: a = !0,
             primaryLanguage: r,
           } = e,
-          [l, c] = (0, o.OP)(),
+          l = u.useRef(),
+          c = (0, o.BZ)(l),
           [d, m, p] = (0, o.uD)(),
           _ = (0, s.Un)(),
           g = (0, i.q3)(t);
@@ -2125,12 +2126,12 @@
           u.createElement(
             "div",
             {
+              ref: l,
               className: (0, v.A)(
                 I.ExtraAssetStack,
                 I.ExtraAssetControlsContainer,
-                l && I.Hovered,
+                c && I.Hovered,
               ),
-              ...c,
               title: g,
             },
             d && u.createElement(le, { extraAsset: t, hideModal: p }),
@@ -2983,24 +2984,30 @@
         }
         TryCreateNode(e, t, n) {
           let a = i.FK.from(t);
-          if (!e.node.validContent(a) && e.acceptNode) {
-            let n = t.filter((t) => t.type == e.acceptNode);
-            if (!n.length) {
-              let a = t;
-              e.acceptNode.isBlock &&
-                a.length > 1 &&
-                a[a.length - 1].type == this.schema.nodes.hard_break &&
-                (a = a.slice(0, -1));
-              const r = this.m_mapPMBBNodes.get(e.acceptNode.name);
-              (0, c.wT)(
-                r,
-                `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
-              ),
-                (n = r
-                  ? this.TryCreateNode(r, a, void 0)
-                  : e.acceptNode.create(void 0, a));
+          if (!e.node.validContent(a)) {
+            if (e.acceptNode) {
+              let n = t.filter((t) => t.type == e.acceptNode);
+              if (!n.length) {
+                let a = t;
+                e.acceptNode.isBlock &&
+                  a.length > 1 &&
+                  a[a.length - 1].type == this.schema.nodes.hard_break &&
+                  (a = a.slice(0, -1));
+                const r = this.m_mapPMBBNodes.get(e.acceptNode.name);
+                (0, c.wT)(
+                  r,
+                  `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
+                ),
+                  (n = r
+                    ? this.TryCreateNode(r, a, void 0)
+                    : e.acceptNode.create(void 0, a));
+              }
+              a = i.FK.from(n);
             }
-            a = i.FK.from(n);
+            e.node.isInline ||
+              (a = i.FK.from(
+                t.filter((e) => !e.isText || !e.text.match(/^\s*$/)),
+              ));
           }
           try {
             return e.node.createAndFill(n, a) || e.node.createChecked(n, a);

@@ -43953,9 +43953,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -43971,8 +43968,6 @@
         _ = ["DotaGameDataAbilityListItem"],
         _ = "AbilitiesQueryKey",
         _ = "PregameItemQueryKey",
-        _ = "EarlygameItemQueryKey",
-        _ = "LategameItemQueryKeyV2",
         _ = "MaingameItemQueryKey";
       function _() {
         const _ = (0, _._)();
@@ -44131,7 +44126,7 @@
       function _(_, _, _, _, _, _, _, _, _, _, _) {
         const _ = {
           project_id: 2,
-          published_version: 11,
+          published_version: 12,
           additional_data: [10],
           data: {
             data: [
@@ -44147,113 +44142,35 @@
                 },
               },
               {
-                data_source_id: 3835464906,
+                data_source_id: 1123751809,
                 data_object: {
                   elements: [
                     {
-                      name: "hero_id",
-                      data_int32s: [_],
+                      name: "hero_and_facet",
+                      data_int32s: [(_ << 16) | _],
                     },
                     {
-                      name: "hero_facet",
-                      data_int32s: [_],
+                      name: "allied_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                      ],
                     },
                     {
                       name: "position",
                       data_int32s: [_],
                     },
                     {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: [0, 0, 0, 0],
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_herofacets",
-                      data_int32s: [0, 0, 0, 0, 0],
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 2197406710,
-                data_object: {
-                  elements: [
-                    {
-                      name: "player_mmr",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "game_mode",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "team_won",
-                      data_bools: [_],
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        };
-        return console.log("Inferencing abilities with", _), (0, _._)(_(_, _));
-      }
-      function _(_, _, _, _, _, _, _, _, _, _) {
-        const _ = {
-          project_id: 29,
-          published_version: 2,
-          additional_data: [100],
-          data: {
-            data: [
-              {
-                data_source_id: 1274659518,
-                data_object: {
-                  elements: [
-                    {
-                      name: "item_ids",
-                      data_int32s: [],
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 3835464906,
-                data_object: {
-                  elements: [
-                    {
-                      name: "hero_id",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "hero_facet",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "lane",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_facets",
-                      data_int32s: _,
+                      name: "enemy_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                        (_[4] << 16) | _[4],
+                      ],
                     },
                   ],
                 },
@@ -44284,53 +44201,52 @@
       }
       function _(_, _, _, _, _, _, _, _, _, _) {
         const _ = {
-          project_id: 27,
-          published_version: 2,
-          additional_data: [100],
+          project_id: 54,
+          published_version: 1,
+          additional_data: [1],
           data: {
             data: [
               {
-                data_source_id: 2217558308,
+                data_source_id: 1664448369,
                 data_object: {
                   elements: [
                     {
-                      name: "item_ids",
+                      name: "purchase_history",
                       data_int32s: [],
                     },
                   ],
                 },
               },
               {
-                data_source_id: 3835464906,
+                data_source_id: 1123751809,
                 data_object: {
                   elements: [
                     {
-                      name: "hero_id",
-                      data_int32s: [_],
+                      name: "hero_and_facet",
+                      data_int32s: [(_ << 16) | _],
                     },
                     {
-                      name: "hero_facet",
-                      data_int32s: [_],
+                      name: "allied_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                      ],
                     },
                     {
                       name: "position",
                       data_int32s: [_],
                     },
                     {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_facets",
-                      data_int32s: _,
+                      name: "enemy_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                        (_[4] << 16) | _[4],
+                      ],
                     },
                   ],
                 },
@@ -44356,62 +44272,63 @@
               },
             ],
           },
+          iterate_beam_search: {
+            beam_length: 10,
+            item_sequence_end: 1809,
+            repeat_multiplier: 1,
+          },
         };
         return (0, _._)(_(_, _));
       }
-      function _(_, _, _, _, _, _, _, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _, _, _, _, _, _) {
         const _ = {
           project_id: 50,
-          published_version: 7,
+          published_version: 10,
           additional_data: [100],
+          debug_spew: 1,
           data: {
             data: [
               {
-                data_source_id: 3616116112,
+                data_source_id: 181151528,
                 data_object: {
                   elements: [
                     {
                       name: "purchase_history",
                       data_int32s: _,
                     },
-                    {
-                      name: "inventory_items",
-                      data_int32s: _,
-                    },
                   ],
                 },
               },
               {
-                data_source_id: 3835464906,
+                data_source_id: 1123751809,
                 data_object: {
                   elements: [
                     {
-                      name: "hero_id",
-                      data_int32s: [_],
+                      name: "hero_and_facet",
+                      data_int32s: [(_ << 16) | _],
                     },
                     {
-                      name: "hero_facet",
-                      data_int32s: [_],
+                      name: "allied_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                      ],
                     },
                     {
                       name: "position",
                       data_int32s: [_],
                     },
                     {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_facets",
-                      data_int32s: _,
+                      name: "enemy_hero_and_facet",
+                      data_int32s: [
+                        (_[0] << 16) | _[0],
+                        (_[1] << 16) | _[1],
+                        (_[2] << 16) | _[2],
+                        (_[3] << 16) | _[3],
+                        (_[4] << 16) | _[4],
+                      ],
                     },
                   ],
                 },
@@ -44438,180 +44355,43 @@
             ],
           },
           iterate_beam_search: {
-            beam_length: 15,
-            beam_width: 20,
+            beam_length: 50,
+            beam_width: _.size > 0 ? 20 : 0,
             item_decay: 1,
             next_item_count: 5,
             item_scalars: [],
+            item_sequence_end: 1809,
+            repeat_multiplier: 0.2,
           },
         };
-        return (
-          _.forEach((_, _) => {
-            _.iterate_beam_search.item_scalars.push({
-              item: _,
-              scale: _,
-            });
-          }),
-          (0, _._)(_(_, _))
-        );
-      }
-      function _(_, _, _, _, _, _, _, _, _, _, _) {
-        const _ = {
-          project_id: 32,
-          published_version: 1,
-          additional_data: [1e3],
-          data: {
-            data: [
-              {
-                data_source_id: 66620735,
-                data_object: {
-                  elements: [
-                    {
-                      name: "item_ids",
-                      data_int32s: _,
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 3835464906,
-                data_object: {
-                  elements: [
-                    {
-                      name: "hero_id",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "hero_facet",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "position",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_facets",
-                      data_int32s: _,
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 2197406710,
-                data_object: {
-                  elements: [
-                    {
-                      name: "player_mmr",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "game_mode",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "team_won",
-                      data_bools: [_],
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        };
-        return (0, _._)(_(_, _));
-      }
-      function _(_, _, _, _, _, _, _, _, _, _, _) {
-        const _ = {
-          project_id: 28,
-          published_version: 2,
-          additional_data: [1e3],
-          data: {
-            data: [
-              {
-                data_source_id: 1871385336,
-                data_object: {
-                  elements: [
-                    {
-                      name: "item_ids",
-                      data_int32s: [],
-                    },
-                    {
-                      name: "other_item_ids",
-                      data_int32s: _,
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 3835464906,
-                data_object: {
-                  elements: [
-                    {
-                      name: "hero_id",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "hero_facet",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "position",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "allied_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "allied_hero_facets",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_ids",
-                      data_int32s: _,
-                    },
-                    {
-                      name: "enemy_hero_facets",
-                      data_int32s: _,
-                    },
-                  ],
-                },
-              },
-              {
-                data_source_id: 2197406710,
-                data_object: {
-                  elements: [
-                    {
-                      name: "player_mmr",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "game_mode",
-                      data_int32s: [_],
-                    },
-                    {
-                      name: "team_won",
-                      data_bools: [_],
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        };
-        return (0, _._)(_(_, _));
+        _.forEach((_, _) => {
+          _.iterate_beam_search.item_scalars.push({
+            item: _,
+            scale: _,
+          });
+        });
+        for (const _ of _)
+          for (
+            let _ = 0;
+            _ <
+            _?.backend_response.outputs[0]?.categorical_crossentropy
+              .value_sequence[0]?.value.length;
+            _++
+          ) {
+            const _ =
+                _.backend_response.outputs[0].categorical_crossentropy
+                  .value_sequence[0].value[_],
+              _ = _.iterate_beam_search.item_scalars.findIndex(
+                (_) => _.item == _,
+              );
+            -1 == _
+              ? _.iterate_beam_search.item_scalars.push({
+                  item: _,
+                  scale: _,
+                })
+              : (_.iterate_beam_search.item_scalars[_].scale *= _);
+          }
+        return console.log(_), (0, _._)(_(_, _));
       }
       class _ {
         m_asyncHeroList = new _._();

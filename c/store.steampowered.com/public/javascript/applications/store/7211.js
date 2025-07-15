@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Κέντρο Έρευνας Steam",
 	"Menu_Section_SpecialSections_DLCForYou": "DLC",
 	"Menu_Section_SpecialSections_SaleEvents": "ΣΥΜΒΑΝΤΑ ΕΚΠΤΩΣΕΩΝ",
-	"Menu_SearchBar_RecentlyViewed": "Προβλήθηκαν πρόσφατα",
-	"Menu_SearchBar_PopularItems": "Δημοφιλή αντικείμενα",
+	"Menu_SearchBar_RecentlyViewed": "Είδατε πρόσφατα",
+	"Menu_SearchBar_PopularSearches": "Δημοφιλείς αναζητήσεις",
 	"Menu_SearchBar_SearchResults": "Αποτελέσματα αναζήτησης",
 	"Menu_SearchBar_YourTopGenres": "Τα κορυφαία είδη σας",
 	"Menu_SearchBar_BrowseBy": "Περιήγηση ανά…",
+	"Menu_SearchBar_NoMatches": "Κανένα στοιχείο δεν ταιριάζει με την αναζήτησή σας.",
+	"Menu_SearchBar_AdvancedSearch": "Σύνθετη αναζήτηση",
 	"Menu_Search": "Αναζήτηση",
 	"Menu_Label": "Μενού Καταστήματος"
 }`);

@@ -2507,7 +2507,7 @@
         (0, h.Cg)([S.oI], Te.prototype, "OnCheckboxChange", null),
         (0, h.Cg)([S.oI], Te.prototype, "OnTextAreaChange", null),
         (Te = (0, h.Cg)([o.PA], Te));
-      var fe = n(71367),
+      var fe = n(90335),
         Le = n(86244),
         be = n.n(Le);
       const xe = (0, o.PA)((e) => {
@@ -2676,7 +2676,7 @@
                   s.createElement(
                     "div",
                     { className: be().ShareLink },
-                    s.createElement(fe.f, {
+                    s.createElement(fe.fh, {
                       text: n,
                       event: null,
                       partnerEventStore: e.partnerEventStore,

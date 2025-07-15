@@ -4669,7 +4669,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             name: _,
@@ -4694,23 +4695,7 @@
         const _ =
           1 == _
             ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
-            : (function (_) {
-                switch (_) {
-                  case 1:
-                    return (0, _._)("#StoreTrailer_Title_Category_Gameplay");
-                  case 2:
-                    return (0, _._)("#StoreTrailer_Title_Category_Teaser");
-                  case 3:
-                    return (0, _._)("#StoreTrailer_Title_Category_Cinematic");
-                  case 4:
-                    return (0, _._)("#StoreTrailer_Title_Category_Update");
-                  case 5:
-                    return (0, _._)("#StoreTrailer_Title_Category_Accolades");
-                  case 6:
-                    return (0, _._)("#StoreTrailer_Title_Category_Interview");
-                }
-                return (0, _._)("#StoreTrailer_Title_Category_Unknown");
-              })(__webpack_require__);
+            : (0, _._)(__webpack_require__);
         return _.createElement(
           "div",
           {
@@ -4731,6 +4716,30 @@
             _,
           ),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_) {
+          case 1:
+            return (0, _._)("#StoreTrailer_Title_Category_Gameplay");
+          case 2:
+            return (0, _._)("#StoreTrailer_Title_Category_Teaser");
+          case 3:
+            return (0, _._)("#StoreTrailer_Title_Category_Cinematic");
+          case 4:
+            return (0, _._)("#StoreTrailer_Title_Category_Update");
+          case 5:
+            return (0, _._)("#StoreTrailer_Title_Category_Accolades");
+          case 6:
+            return (0, _._)("#StoreTrailer_Title_Category_Interview");
+        }
+        return (0, _._)("#StoreTrailer_Title_Category_Unknown");
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

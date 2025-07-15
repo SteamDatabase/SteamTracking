@@ -1451,16 +1451,14 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
 .doWjXy-F7LwBxlzCUBAGC {
   position: relative;
   border: 1px solid transparent;
-  max-height: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: end;
-  min-height: 60px;
   flex-direction: column;
-  width: 100%;
   padding: 8px;
   box-sizing: border-box;
-  aspect-ratio: 1;
+  min-width: 0;
 }
 .doWjXy-F7LwBxlzCUBAGC:hover {
   border-color: #444b55;
@@ -1506,8 +1504,7 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: center;
-  max-width: 20vw;
-  flex-shrink: 0;
+  max-width: 100%;
   margin-top: 2px;
 }
 .eeKg-l7aZaopjLwnTg0pT {

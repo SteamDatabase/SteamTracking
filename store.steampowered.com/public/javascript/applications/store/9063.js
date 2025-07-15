@@ -300,7 +300,7 @@
     },
     44165: (e, s, t) => {
       "use strict";
-      t.d(s, { HD: () => c, f1: () => v, s4: () => h, sB: () => d });
+      t.d(s, { HD: () => c, f1: () => v, s4: () => h, sB: () => m });
       var n = t(34629),
         r = t(14947),
         a = t(19367),
@@ -362,12 +362,12 @@
       const c = new i();
       window.g_EventCalendarDevFeatures = c;
       const u = new Date(),
-        m = Math.floor(u.getTime() / 1e3);
-      function d() {
-        return c.nOverrideDateNow ?? m;
+        d = Math.floor(u.getTime() / 1e3);
+      function m() {
+        return c.nOverrideDateNow ?? d;
       }
       function v() {
-        return o.useMemo(() => d(), []);
+        return o.useMemo(() => m(), []);
       }
       function h() {
         return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
@@ -376,15 +376,15 @@
     51706: (e, s, t) => {
       "use strict";
       t.d(s, {
-        mt: () => l,
-        Qs: () => v,
-        o0: () => h.o0,
+        mt: () => i,
+        Qs: () => h,
+        o0: () => b.o0,
         eV: () => f.eV,
-        KG: () => h.KG,
-        Ee: () => h.Ee,
+        KG: () => b.KG,
+        Ee: () => b.Ee,
         x_: () => j.x_,
-        of: () => i,
-        pY: () => h.pY,
+        of: () => c,
+        pY: () => b.pY,
         EN: () => a.E,
       });
       var n = t(90626),
@@ -401,23 +401,43 @@
           t(13871),
           t(78327));
       t(28460);
-      const l = ({
-        active: e,
-        onDismiss: s,
-        className: t,
-        modalClassName: o,
-        children: l,
-      }) =>
-        n.createElement(
-          a.E,
-          { active: e },
+      function l(e) {
+        const { labelledBy: s } = e || {},
+          [t, r] = n.useState(null);
+        return {
+          headerId: s || t,
+          context: n.useMemo(() => ({ setHeaderId: r }), []),
+        };
+      }
+      function i(e) {
+        const {
+            active: s,
+            onDismiss: t,
+            className: o,
+            modalClassName: i,
+            children: c,
+            ...u
+          } = e,
+          { headerId: d, context: m } = l({ labelledBy: e["aria-labelledby"] });
+        return n.createElement(
+          r.t6.Provider,
+          { value: m },
           n.createElement(
-            j.x_,
-            { onEscKeypress: s, className: o },
-            n.createElement(r.UC, { className: t }, l),
+            a.E,
+            { active: s },
+            n.createElement(
+              j.x_,
+              { onEscKeypress: t, className: i },
+              n.createElement(
+                r.UC,
+                { role: "dialog", "aria-labelledby": d, className: o, ...u },
+                c,
+              ),
+            ),
           ),
         );
-      function i(e) {
+      }
+      function c(e) {
         const { className: s, children: t } = e;
         return n.createElement(
           a.E,
@@ -426,30 +446,30 @@
         );
       }
       t(81194);
-      var c = t(85585),
-        u = t(7445),
+      var u = t(85585),
+        d = t(7445),
         m = t(76217),
-        d = t(88843);
-      function v(e) {
+        v = t(88843);
+      function h(e) {
         const { children: s, navID: t, closeModal: r } = e,
           a = n.createRef(),
           j = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, o.Qn)() && !o.TS.IN_STEAMUI
           ? n.createElement(
-              c.B2,
+              u.B2,
               {
                 navID: t,
                 navTreeRef: a,
                 onCancelButton: r,
-                className: d.GamepadOnlyModalWrapper,
+                className: v.GamepadOnlyModalWrapper,
               },
               n.createElement(
-                u.q,
+                d.q,
                 null,
                 n.createElement(
                   m.Z,
                   {
-                    className: d.GamepadOnlyPanelWrapper,
+                    className: v.GamepadOnlyPanelWrapper,
                     onGamepadDirection: j,
                     focusableIfNoChildren: !0,
                   },
@@ -459,7 +479,7 @@
             )
           : n.createElement(n.Fragment, null, s);
       }
-      var h = t(78395),
+      var b = t(78395),
         f = t(10411);
       t(76222);
     },

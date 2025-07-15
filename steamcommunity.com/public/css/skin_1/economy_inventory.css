@@ -63,6 +63,118 @@
 }
 
 
+.provisional_trades_hl {
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	background-color: #a6801b;
+	color: #ffffff;
+
+	padding: 20px 12px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.provisional_trades_badge
+{
+	height: 38px;
+}
+
+.provisional_trades_hl .ttip
+{
+	flex-basis: 20%;
+	text-align: right;
+}
+
+.provisional_trades_hl a {
+	text-decoration: underline;
+}
+
+
+.provisional_item
+{
+}
+
+.provisional_item_badge
+{
+	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/protected_items_badge2.png' );
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: 36px 36px;
+
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0px;
+	bottom: 0px;
+	transform: translate( -3px, 6px );
+
+	/* sadly, .inventory_item_link defines a z-index, so we have to as well */
+	z-index: 3;
+}
+
+.provisional_item_badge_ctn
+{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 40px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.provisional_item_caption
+{
+	background-color: #c99810;
+	border-color: #f6bd1c;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+
+	/* move the left edge to the center of the badge */
+	margin-left: 20px;
+
+	/* push down to match the image */
+	transform: translate( 0px, 6px );
+
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	/* pad out the rest of the width of the badge */
+	padding: 2px 8px 2px 20px;
+}
+
+.provisional_item_help_link_ctn
+{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 12px;
+	margin-bottom: 15px;
+
+	background-color: #a6801b;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.provisional_item_help_link_ctn img
+{
+	width: 30px;
+	height: 30px;
+}
+
+.provisional_item_help_link_ctn a
+{
+	text-decoration: underline;
+}
+
+
+
 .inventory_rightnav {
 	float: right;
 	margin-right: 16px;

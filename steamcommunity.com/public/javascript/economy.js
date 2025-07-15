@@ -2375,6 +2375,11 @@ function SelectInventoryFromUser( user, appid, contextid, bForceSelect )
 	}
 
 	
+	// before activating inventory, compute trade protection status, so we can know whether the items
+	// should be draggable
+	RecomputeTradeProtectedStatus( g_rgCurrentTradeStatus );
+
+	
 	inventory.MakeActive();
 
 	return true;

@@ -2324,7 +2324,7 @@
         E = a(55263),
         p = a(68255),
         v = a(27658),
-        I = a(84106),
+        I = a(86261),
         _ = a(35685),
         w = a(9709),
         h = a(25359),
@@ -3137,7 +3137,7 @@
             a.AnnouncementGID,
           ]);
         let g = r
-          ? c.createElement(I.f, {
+          ? c.createElement(I.fh, {
               text: r || "",
               partnerEventStore: n,
               showErrorInfo: !1,
