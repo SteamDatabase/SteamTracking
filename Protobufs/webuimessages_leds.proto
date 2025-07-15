@@ -6,48 +6,78 @@ option optimize_for = SPEED;
 option cc_generic_services = true;
 
 message CMsgLEDColor {
-	optional float color_red = 1;
-	optional float color_green = 2;
-	optional float color_blue = 3;
+	optional float r = 1;
+	optional float g = 2;
+	optional float b = 3;
 }
 
-message CLEDManagerDevice {
+message CMsgLEDManagerDevice {
 	optional int32 id = 1;
 	optional bool enabled = 2;
-	optional float brightness = 3;
+	optional string name = 3;
 	repeated string effects_available = 4;
 	optional string effect = 5;
-	repeated string modes_available = 7;
-	optional string mode = 8;
-	optional .CMsgLEDColor color = 9;
-	optional float speed = 10;
+	optional bool supports_color = 9;
+	optional .CMsgLEDColor color = 10;
+	optional bool supports_speed = 11;
+	optional float speed = 12;
+	optional bool supports_brightness = 13;
+	optional float brightness = 14;
 }
 
-message CLEDManagerState {
+message CMsgLEDManagerState {
 	optional bool is_service_available = 1;
-	repeated .CLEDManagerDevice devices = 2;
+	repeated .CMsgLEDManagerDevice devices = 2;
 }
 
 message CLEDManager_GetState_Request {
-	repeated .CLEDManagerState state = 1;
 }
 
 message CLEDManager_GetState_Response {
+	optional .CMsgLEDManagerState state = 1;
 }
 
 message CLEDManager_StateChanged_Notification {
 }
 
-message CLEDManager_SetDeviceOptions_Request {
+message CLEDManager_SetColor_Request {
 	optional int32 device_id = 1;
-	optional string effect = 2;
-	optional string mode = 3;
-	optional .CMsgLEDColor color = 4;
-	optional float brightness = 5;
-	optional float speed = 6;
+	optional .CMsgLEDColor color = 2;
 }
 
-message CLEDManager_SetDeviceOptions_Response {
+message CLEDManager_SetColor_Response {
+}
+
+message CLEDManager_SetEnabled_Request {
+	optional int32 device_id = 1;
+	optional bool enabled = 2;
+}
+
+message CLEDManager_SetEnabled_Response {
+}
+
+message CLEDManager_SetEffect_Request {
+	optional int32 device_id = 1;
+	optional string effect = 2;
+}
+
+message CLEDManager_SetEffect_Response {
+}
+
+message CLEDManager_SetSpeed_Request {
+	optional int32 device_id = 1;
+	optional float speed = 2;
+}
+
+message CLEDManager_SetSpeed_Response {
+}
+
+message CLEDManager_SetBrightness_Request {
+	optional int32 device_id = 1;
+	optional float brightness = 2;
+}
+
+message CLEDManager_SetBrightness_Response {
 }
 
 service LEDManager {
@@ -55,5 +85,9 @@ service LEDManager {
 
 	rpc GetState (.CLEDManager_GetState_Request) returns (.CLEDManager_GetState_Response);
 	rpc NotifyStateChanged (.CLEDManager_StateChanged_Notification) returns (.WebUINoResponse);
-	rpc SetDeviceOptions (.CLEDManager_SetDeviceOptions_Request) returns (.CLEDManager_SetDeviceOptions_Response);
+	rpc SetEnabled (.CLEDManager_SetEnabled_Request) returns (.CLEDManager_SetEnabled_Response);
+	rpc SetColor (.CLEDManager_SetColor_Request) returns (.CLEDManager_SetColor_Response);
+	rpc SetEffect (.CLEDManager_SetEffect_Request) returns (.CLEDManager_SetEffect_Response);
+	rpc SetSpeed (.CLEDManager_SetSpeed_Request) returns (.CLEDManager_SetSpeed_Response);
+	rpc SetBrightness (.CLEDManager_SetBrightness_Request) returns (.CLEDManager_SetBrightness_Response);
 }

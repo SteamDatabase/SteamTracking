@@ -206,6 +206,7 @@
  .CInventory_ExchangeItem_Request
  .CInventory_GetInventory_Request
  .CInventory_PurchaseInit_Request
+ .CLEDManager_SetEnabled_Response
  .CMsgTest_TestClientCall_Request
  .CParental_ValidateToken_Request
  .CParties_DestroyBeacon_Response"
@@ -783,6 +784,7 @@
 "$\n"CChatRoom_ReorderChatRoom_Response"t\n!CChatRoom_SendChatMessage_Request
 "$\n"CChatRoom_SetUserBanState_Response"H\n
 "$\n"CGameRecording_ExportClip_Response"
+"$\n"CLEDManager_SetBrightness_Response2
 "$\n"CParental_ApprovePlaytime_Response"[\n
 "$\n"CPlayer_SetAnimatedAvatar_Response"M\n(CPlayer_GetSteamDeckKeyboardSkin_Request
 "$\n"CSteamTV_AddChatModerator_Response"B\n"CSteamTV_GetChatModerators_Request
@@ -797,7 +799,6 @@
 "'\n%CChatRoom_DeleteRoleFromUser_Response"b\n#CChatRoom_JoinChatRoomGroup_Request
 "'\n%CChatRoom_GetMyChatRoomGroups_Request"
 "'\n%CChatRoom_LeaveChatRoomGroup_Response"\\n CChatRoom_CreateChatRoom_Request
-"'\n%CLEDManager_SetDeviceOptions_Response2
 "'\n%CPlayer_SetProfileBackground_Response"M\n(CPlayer_GetMiniProfileBackground_Request
 "'\n%CSteamOSManager_FactoryReset_Response"Y\n
 "'\n%CSteamOSSLS_SetPluginEnabled_Response2
@@ -882,6 +883,7 @@
 ".CInventory_DevSetNextDrop_Request
 ".CInventory_GetItemDefMeta_Request
 ".CInventory_SplitItemStack_Request
+".CLEDManager_SetBrightness_Request
 ".CMsgTest_MessageToClient_Response
 ".CMsgTest_MessageToServer_Response
 ".CParental_ApprovePlaytime_Request
@@ -1236,6 +1238,7 @@
 #.CGameServers_QueryByFakeIP_Request
 #.CInventory_ConsumePlaytime_Request
 #.CInventory_GetItemDefMeta_Response"
+#.CLEDManager_SetBrightness_Response
 #.CMsgTest_NotifyClient_Notification
 #.CMsgTest_NotifyServer_Notification
 #.CParental_ApprovePlaytime_Response
@@ -1956,7 +1959,6 @@ $steammessages_parental_objects.proto"
 %.CGameRecording_StopRecording_Request
 %.CGamescope_StateChanged_Notification
 %.CInventory_CombineItemStacks_Request
-%.CLEDManager_SetDeviceOptions_Request
 %.CParties_ChangeNumOpenSlots_Response"
 %.CPartnerApps_FindDRMUploads_Response
 %.CPlayer_GetGameAchievements_Response"
@@ -2758,7 +2760,6 @@ $steammessages_parental_objects.proto"
 &.CGameRecording_TakeScreenshot_Request
 &.CGameServers_GameServerQuery_Response"
 &.CGameServers_IPsWithSteamIDs_Response"
-&.CLEDManager_SetDeviceOptions_Response
 &.CLEDManager_StateChanged_Notification
 &.CParental_GetParentalSettings_Request
 &.CParental_ParentalUnlock_Notification
@@ -3307,7 +3308,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1*rQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -4248,6 +4248,7 @@ $steammessages_parental_objects.proto"
 (\v2\n.StoreItem"R\n'CStoreBrowse_GetStoreCategories_Request
 (\v2\r.CAppPriority
 (\v2\r.CMsgLEDColor
+(\v2\r.CMsgLEDColor"
 (\v2\r.CTimelineTag
 (\v2\r.CTimelineTag"+\n)CGameRecording_GetEnoughDiskSpace_Request"B\n*CGameRecording_GetEnoughDiskSpace_Response
 (\v2\r.PlayerResult"8\n6CQueuedMatchmakingGameHost_SubmitPlayerResult_Response"L\n*CQueuedMatchmakingGameHost_EndGame_Request
@@ -6037,10 +6038,15 @@ $steammessages_parental_objects.proto"
 .CKeyEscrow_Request
 .CKeyEscrow_Response"
 .CKeyEscrow_Ticket*7\n
-.CLEDManagerDevice"@\n
-.CLEDManagerState"
 .CLEDManager_GetState_Request
 .CLEDManager_GetState_Response
+.CLEDManager_SetColor_Request
+.CLEDManager_SetColor_Response
+.CLEDManager_SetEffect_Request
+.CLEDManager_SetEffect_Response
+.CLEDManager_SetEnabled_Request
+.CLEDManager_SetSpeed_Request
+.CLEDManager_SetSpeed_Response
 .CMarketingMessageHourlyStats
 .CMarketingMessageHourlyStats"m\n?CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 .CMarketingMessageProto
@@ -6092,6 +6098,8 @@ $steammessages_parental_objects.proto"
 .CMsgJSValue.JSObjectProperty
 .CMsgKeyValuePair"
 .CMsgKubeRPCPacket.Hdr
+.CMsgLEDManagerDevice"
+.CMsgLEDManagerState"'\n%CLEDManager_StateChanged_Notification"O\n
 .CMsgMonitorInfo.MonitorInfo
 .CMsgNetworkDeviceIP4Address
 .CMsgNetworkDeviceIP4Config
@@ -10100,7 +10108,6 @@ $steammessages_parental_objects.proto"
 16CIPRangeListBaseIvE
 16CInputKeyDownMsg
 16CInputMouseUpMsg
-16CLEDManagerState
 16CMsgAMUnlockH264
 16CMsgAckScreenDPI
 16CMsgBrowserReady
@@ -10399,7 +10406,6 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI5CUser33RemoteStorageConflictResolution_tE
 17CInternalCallbackI9CBaseUser23SteamServersConnected_tE
 17CKeyEscrow_Ticket
-17CLEDManagerDevice
 17CLoadAppStatesJob
 17CModeShiftBinding
 17CMsgBrowserCreate
@@ -10752,6 +10758,7 @@ $steammessages_parental_objects.proto"
 19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgIPAddressBucket
+19CMsgLEDManagerState
 19CMsgLinearListCurve
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -11016,6 +11023,7 @@ $steammessages_parental_objects.proto"
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
+20CMsgLEDManagerDevice
 20CMsgLoadLocalization
 20CMsgRemoteClientPing
 20CMsgRestartJSContext
@@ -12220,6 +12228,8 @@ $steammessages_parental_objects.proto"
 28CGamescope_GetState_Response
 28CHTTPDisabledRedirectHandler
 28CLEDManager_GetState_Request
+28CLEDManager_SetColor_Request
+28CLEDManager_SetSpeed_Request
 28CMarketingMessageHourlyStats
 28CMsgBadgeCraftedNotification
 28CMsgClientActivateOEMLicense
@@ -12365,6 +12375,9 @@ $steammessages_parental_objects.proto"
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
 29CLEDManager_GetState_Response
+29CLEDManager_SetColor_Response
+29CLEDManager_SetEffect_Request
+29CLEDManager_SetSpeed_Response
 29CLoadControllerConfigWorkItem
 29CMsgClientEmoticonList_Effect
 29CMsgClientLANP2PRequestChunks
@@ -12631,6 +12644,8 @@ $steammessages_parental_objects.proto"
 30CInventory_InspectItem_Request
 30CInventory_ModifyItems_Request
 30CJobEnumerateGameNotifications
+30CLEDManager_SetEffect_Response
+30CLEDManager_SetEnabled_Request
 30CModeGameActionOriginGenerator
 30CMsgBluetoothManagerDeviceInfo
 30CMsgCREItemVoteSummaryResponse
@@ -12766,6 +12781,7 @@ $steammessages_parental_objects.proto"
 31CInventory_ExchangeItem_Request
 31CInventory_GetInventory_Request
 31CInventory_PurchaseInit_Request
+31CLEDManager_SetEnabled_Response
 31CMsgBluetoothDevicesData_Device
 31CMsgBluetoothManagerAdapterInfo
 31CMsgClientEmoticonList_Emoticon
@@ -13016,6 +13032,7 @@ $steammessages_parental_objects.proto"
 33CInventory_DevSetNextDrop_Request
 33CInventory_GetItemDefMeta_Request
 33CInventory_SplitItemStack_Request
+33CLEDManager_SetBrightness_Request
 33CLoadCompatibilityToolManifestJob
 33CMobileTouchControllerAbstraction
 33CMsgBluetoothManagerDeviceDetails
@@ -13149,6 +13166,7 @@ $steammessages_parental_objects.proto"
 34CInventoryClientJob_NotifyNewItems
 34CInventory_ConsumePlaytime_Request
 34CInventory_GetItemDefMeta_Response
+34CLEDManager_SetBrightness_Response
 34CMsgBluetoothManagerAdapterDetails
 34CMsgCREUpdateUserPublishedItemVote
 34CMsgClientAddFriendToGroupResponse
@@ -13383,7 +13401,6 @@ $steammessages_parental_objects.proto"
 36CGenericGamepadControllerAbstraction
 36CHIDMessageToRemote_DeviceDisconnect
 36CInventory_CombineItemStacks_Request
-36CLEDManager_SetDeviceOptions_Request
 36CMsgClientCheckFileSignatureResponse
 36CMsgClientCreateFriendsGroupResponse
 36CMsgClientDeleteFriendsGroupResponse
@@ -13494,7 +13511,6 @@ $steammessages_parental_objects.proto"
 37CHIDDevicePipeSharedMemStreamToRemote
 37CHIDMessageFromRemote_CloseAllDevices
 37CHIDMessageFromRemote_RequestResponse
-37CLEDManager_SetDeviceOptions_Response
 37CLEDManager_StateChanged_Notification
 37CMsgClientAuthorizeLocalDeviceRequest
 37CMsgClientChatGetFriendMessageHistory
@@ -15679,7 +15695,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42PkT
+;MO42pmT
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -15841,6 +15857,7 @@ $steammessages_parental_objects.proto"
 ?CDisplayColorManager: Unexpected ALS sensor index
 ?HAI\t81\t9dcG'
 ?IsValid()
+?MiG
 ?N6TagLib4MPEG4FileE
 ?QfZ
 ?Software\Valve\Steam\System\DisplayColorGamut
@@ -19205,10 +19222,16 @@ CJobUploadDownloadRates
 CKeyEscrow_Request
 CKeyEscrow_Response
 CKeyEscrow_Ticket
-CLEDManagerDevice
-CLEDManagerState
-CLEDManager_GetState_Request
-CLEDManager_GetState_Response"'\n%CLEDManager_StateChanged_Notification"
+CLEDManager_GetState_Request"D\n
+CLEDManager_GetState_Response
+CLEDManager_SetColor_Request
+CLEDManager_SetColor_Response"D\n
+CLEDManager_SetEffect_Request
+CLEDManager_SetEffect_Response"@\n
+CLEDManager_SetEnabled_Request
+CLEDManager_SetEnabled_Response"B\n
+CLEDManager_SetSpeed_Request
+CLEDManager_SetSpeed_Response"J\n!CLEDManager_SetBrightness_Request
 CLIENTENGINE_INTERFACE_VERSION005
 CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
@@ -19647,6 +19670,8 @@ CMsgJSReleaseCallback
 CMsgKeyValuePair
 CMsgKeyValueSet
 CMsgKubeRPCPacket
+CMsgLEDManagerDevice
+CMsgLEDManagerState
 CMsgLinearCurve
 CMsgLinearListCurve
 CMsgLinkAtPosition
@@ -27644,23 +27669,23 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" amixer -c acp5x contents
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-select-branch -c
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-select-branch -l
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" amixer -c acp5x contents
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-select-branch -c
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-select-branch -l
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LD_PRELOAD
 LEFT
 LEFT_ALT
@@ -27716,6 +27741,7 @@ LV=%zu n=%zu\n
 LYRICIST
 LYRICS
 LYRICS:
+L\n\tSetEffect
 L\n\vGetPlayNext
 L\rUw]\nevm
 Label
@@ -28888,6 +28914,7 @@ Method SetAppChatRoomGroupForceActive() not implemented.
 Method SetAppChatRoomGroupStopForceActive() not implemented.
 Method SetAvatarFrame() not implemented.
 Method SetBlurParams() not implemented.
+Method SetBrightness() not implemented.
 Method SetBroadcastChannelImage() not implemented.
 Method SetBroadcastChannelLinkRegions() not implemented.
 Method SetBroadcastChannelProfile() not implemented.
@@ -28897,12 +28924,13 @@ Method SetChatRoomGroupWatchingBroadcast() not implemented.
 Method SetClanChatRoomPrivate() not implemented.
 Method SetClipDetails() not implemented.
 Method SetCollectionChildren() not implemented.
+Method SetColor() not implemented.
 Method SetCommunityPreferences() not implemented.
 Method SetCompatibilityFeedback() not implemented.
 Method SetControllerPersonalizationFile() not implemented.
 Method SetDesiredControllerConfigForApp() not implemented.
-Method SetDeviceOptions() not implemented.
 Method SetDiscovering() not implemented.
+Method SetEffect() not implemented.
 Method SetEnabled() not implemented.
 Method SetEquippedProfileItemFlags() not implemented.
 Method SetFamilyCooldownOverrides() not implemented.
@@ -28922,6 +28950,7 @@ Method SetRTMPInfo() not implemented.
 Method SetRecommendationBotReviewStatus() not implemented.
 Method SetReservationPositionMessage() not implemented.
 Method SetSessionActiveChatRoomGroups() not implemented.
+Method SetSpeed() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
 Method SetSteamTVUserSettings() not implemented.
 Method SetSubscriptionListFromCollection() not implemented.
@@ -33846,6 +33875,7 @@ SetCloudEnabledForApp
 SetCloudFileNameFilter
 SetCloudSyncOnSuspendEnabledForApp
 SetCollectionChildren
+SetColor
 SetCommunityPreference
 SetCommunityPreferences
 SetCompatibilityFeedback
@@ -33890,7 +33920,6 @@ SetDebugInstallDir
 SetDedicatedServer
 SetDefaultConfig
 SetDefaultNintendoButtonLayout
-SetDeviceOptions
 SetDevkitShortcut
 SetDisableOverlayScaling
 SetDiscovering
@@ -34123,6 +34152,7 @@ SetShortcutIcon
 SetShortcutStartDir
 SetSpectatorPort
 SetSpectatorServerName
+SetSpeed
 SetSpew
 SetStat
 SetState
@@ -38019,6 +38049,7 @@ XTestFakeMotionEvent
 XTestFakeRelativeMotionEvent
 XTestQueryExtension
 XXXX
+X\n\rSetBrightness
 X\n\rWebRTCStopped
 X\n\vAllocateSDR
 X\n\vQueryPhases
@@ -39088,7 +39119,6 @@ Zulu
 \n$CFriendMessages_SendMessage_Response
 \n$CGameRecording_GetThumbnails_Request
 \n$CInventory_CombineItemStacks_Request
-\n$CLEDManager_SetDeviceOptions_Request
 \n$CMsgClientCheckFileSignatureResponse
 \n$CMsgRemoteDeviceAuthorizationRequest
 \n$CMsgSteamNetworkingICESessionSummary
@@ -39889,7 +39919,6 @@ Zulu
 \n\nclient_ids
 \n\nclose_time
 \n\ncodec_data
-\n\ncolor_blue
 \n\ncommand_id
 \n\ncompressed
 \n\nconfig_vdf
@@ -40442,7 +40471,6 @@ Zulu
 \n\tclass_500
 \n\tclient_id
 \n\tclient_ip
-\n\tcolor_red
 \n\tcommodity
 \n\tcompleted
 \n\tcomponent
@@ -40700,7 +40728,6 @@ Zulu
 \n\vclient_args
 \n\vclient_cell
 \n\vclient_stat
-\n\vcolor_green
 \n\vcoming_soon
 \n\vcomparision
 \n\vcompat_tool
@@ -42678,7 +42705,6 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
-c@m{I
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -53453,7 +53479,6 @@ modem-no-dialtone
 modem-not-found
 moderator_steamid
 modes
-modes_available
 modeshift
 modf
 modified
@@ -58112,7 +58137,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 10 2025 23:57:06
+steam Jul 14 2025 18:55:29
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58577,9 +58602,12 @@ supported_services
 supported_transport
 supported_video_codecs
 supports_batches
+supports_brightness
+supports_color
 supports_os_updates
 supports_rate_limit_response
 supports_remote_hid
+supports_speed
 supports_touch_input
 supports_video_hevc_OBSOLETE
 suppress_gpu_chrome
@@ -60573,11 +60601,11 @@ webuimessages_base.proto""\n CHardwareUpdate_GetState_Request"_\n!CHardwareUpdat
 webuimessages_base.proto""\n CSystemManager_Hibernate_Request"#\n!CSystemManager_Hibernate_Response">\n CSystemManager_WriteFile_Request
 webuimessages_base.proto"$\n"CBluetoothManager_GetState_Request"-\n
 webuimessages_base.proto"/\n
+webuimessages_base.proto"/\n\fCMsgLEDColor
 webuimessages_base.proto"2\n0CStorageDeviceManager_IsServiceAvailable_Request"I\n1CStorageDeviceManager_IsServiceAvailable_Response
 webuimessages_base.proto"3\n1CSharedJSContext_GetDesiredSteamUIWindows_Request"
 webuimessages_base.proto"7\n#CTransportAuth_Authenticate_Request
 webuimessages_base.proto"E\n+CTransportValidation_AppendToString_Request
-webuimessages_base.proto"J\n\fCMsgLEDColor
 webuimessages_base.proto"V\n
 webuimessages_base.proto"V\n4CSteamEngine_UpdateTextFilterDictionary_Notification
 webuimessages_base.proto"}\n

@@ -10629,7 +10629,7 @@
             [m, u] = (0, n.useState)(""),
             { data: d } = (0, Ee.Fv)((0, _e.Lg)(t));
           let _, p;
-          i?.menu || (_ = { background: s, color: a || "white" }),
+          i?.menu || (_ = { ...s, color: a || "white" }),
             i?.menuTitle ||
               (p = {
                 borderBottom: "0px solid " + (a || "white"),
@@ -11074,7 +11074,7 @@
             t.highlighted_facet_color,
           ]),
           o = (0, v.Qn)(),
-          l = (0, c.Vb)(t, a, o).background;
+          l = (0, c.Vb)(t, a, o);
         return n.createElement(Ne, {
           labelColor: r,
           headingColor: s,

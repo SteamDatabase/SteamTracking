@@ -11979,7 +11979,7 @@
           let _, _;
           _?.menu ||
             (_ = {
-              background: _,
+              ..._,
               color: __webpack_require__ || "white",
             }),
             _?.menuTitle ||
@@ -12490,7 +12490,7 @@
             _.highlighted_facet_color,
           ]),
           _ = (0, _._)(),
-          _ = (0, _._)(_, __webpack_require__, _).background;
+          _ = (0, _._)(_, __webpack_require__, _);
         return _.createElement(_, {
           labelColor: _,
           headingColor: _,

@@ -1989,13 +1989,13 @@ LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
 LANG
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LINUX
 LINUX32
 LINUX64
@@ -4403,6 +4403,7 @@ menuname
 message
 message_set_wire_format
 method
+me|v
 minimum-height
 minimum-width
 minutes

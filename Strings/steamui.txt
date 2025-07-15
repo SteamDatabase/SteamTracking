@@ -139,6 +139,7 @@
  .CInventory_ExchangeItem_Request
  .CInventory_GetInventory_Request
  .CInventory_PurchaseInit_Request
+ .CLEDManager_SetEnabled_Response
  .CMsgTest_TestClientCall_Request
  .CParental_ValidateToken_Request
  .CParties_DestroyBeacon_Response"
@@ -534,6 +535,7 @@
 "$\n"CChatRoom_ReorderChatRoom_Response"t\n!CChatRoom_SendChatMessage_Request
 "$\n"CChatRoom_SetUserBanState_Response"H\n
 "$\n"CGameRecording_ExportClip_Response"
+"$\n"CLEDManager_SetBrightness_Response2
 "$\n"CParental_ApprovePlaytime_Response"[\n
 "$\n"CPlayer_SetAnimatedAvatar_Response"M\n(CPlayer_GetSteamDeckKeyboardSkin_Request
 "$\n"CSteamTV_AddChatModerator_Response"B\n"CSteamTV_GetChatModerators_Request
@@ -549,7 +551,6 @@
 "'\n%CChatRoom_DeleteRoleFromUser_Response"b\n#CChatRoom_JoinChatRoomGroup_Request
 "'\n%CChatRoom_GetMyChatRoomGroups_Request"
 "'\n%CChatRoom_LeaveChatRoomGroup_Response"\\n CChatRoom_CreateChatRoom_Request
-"'\n%CLEDManager_SetDeviceOptions_Response2
 "'\n%CPlayer_SetProfileBackground_Response"M\n(CPlayer_GetMiniProfileBackground_Request
 "'\n%CSteamOSManager_FactoryReset_Response"Y\n
 "'\n%CSteamOSSLS_SetPluginEnabled_Response2
@@ -634,6 +635,7 @@
 ".CInventory_DevSetNextDrop_Request
 ".CInventory_GetItemDefMeta_Request
 ".CInventory_SplitItemStack_Request
+".CLEDManager_SetBrightness_Request
 ".CMsgTest_MessageToClient_Response
 ".CMsgTest_MessageToServer_Response
 ".CParental_ApprovePlaytime_Request
@@ -1003,6 +1005,7 @@
 #.CGameServers_QueryByFakeIP_Request
 #.CInventory_ConsumePlaytime_Request
 #.CInventory_GetItemDefMeta_Response"
+#.CLEDManager_SetBrightness_Response
 #.CMsgTest_NotifyClient_Notification
 #.CMsgTest_NotifyServer_Notification
 #.CParental_ApprovePlaytime_Response
@@ -1068,6 +1071,7 @@
 #GameRecording_RecordingFailed
 #INVALID
 #Io^x
+#LED_JoystickRing
 #Library_ControllerSaveDefaultDescription
 #Library_ControllerSaveDefaultTitle
 #Library_Controller_ControllerBindingSavedFailedPublish
@@ -1734,7 +1738,6 @@ ${LANGUAGE}
 %.CGameRecording_StopRecording_Request
 %.CGamescope_StateChanged_Notification
 %.CInventory_CombineItemStacks_Request
-%.CLEDManager_SetDeviceOptions_Request
 %.CParties_ChangeNumOpenSlots_Response"
 %.CPartnerApps_FindDRMUploads_Response
 %.CPlayer_GetGameAchievements_Response"
@@ -2312,7 +2315,6 @@ ${LANGUAGE}
 &.CGameRecording_TakeScreenshot_Request
 &.CGameServers_GameServerQuery_Response"
 &.CGameServers_IPsWithSteamIDs_Response"
-&.CLEDManager_SetDeviceOptions_Response
 &.CLEDManager_StateChanged_Notification
 &.CParental_GetParentalSettings_Request
 &.CParental_ParentalUnlock_Notification
@@ -3674,6 +3676,7 @@ ${LANGUAGE}
 (\v2\r.CAppOverview
 (\v2\r.CAppPriority
 (\v2\r.CMsgLEDColor
+(\v2\r.CMsgLEDColor"
 (\v2\r.CTimelineTag
 (\v2\r.CTimelineTag"+\n)CGameRecording_GetEnoughDiskSpace_Request"B\n*CGameRecording_GetEnoughDiskSpace_Response
 (\v2\r.PlayerResult"8\n6CQueuedMatchmakingGameHost_SubmitPlayerResult_Response"L\n*CQueuedMatchmakingGameHost_EndGame_Request
@@ -4026,6 +4029,12 @@ ${LANGUAGE}
 *.webm
 *0fT
 *0vlBXsiG]
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE27CWebUILEDManagerGetStateJob28CLEDManager_GetState_Request29CLEDManager_GetState_ResponseE
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE27CWebUILEDManagerSetColorJob28CLEDManager_SetColor_Request29CLEDManager_SetColor_ResponseE
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE27CWebUILEDManagerSetSpeedJob28CLEDManager_SetSpeed_Request29CLEDManager_SetSpeed_ResponseE
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE28CWebUILEDManagerSetEffectJob29CLEDManager_SetEffect_Request30CLEDManager_SetEffect_ResponseE
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE29CWebUILEDManagerSetEnabledJob30CLEDManager_SetEnabled_Request31CLEDManager_SetEnabled_ResponseE
+*18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE32CWebUILEDManagerSetBrightnessJob33CLEDManager_SetBrightness_Request34CLEDManager_SetBrightness_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE27CWebUISteamOSSLSGetStateJob28CSteamOSSLS_GetState_Request29CSteamOSSLS_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE29CWebUISteamOSSLSSetEnabledJob30CSteamOSSLS_SetEnabled_Request31CSteamOSSLS_SetEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE35CWebUISteamOSSLSSetPluginEnabledJob36CSteamOSSLS_SetPluginEnabled_Request37CSteamOSSLS_SetPluginEnabled_ResponseE
@@ -4106,6 +4115,8 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZ31YieldingResolveHostNameWithPortPKcbEUlvE0_vE
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
 *23CInternalLambdaWorkItemIZN12CUDisksDrive8YldAdoptEPKcS2_bEUlvE_iE
+*23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs15YldReadPropertyE10StringViewS1_EUlvE_10CUtlStringE
+*23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs16YldWritePropertyE10StringViewS1_EUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN18CLibraryAssetCache26BYldMoveFileAndUpdateCacheEj17ELibraryAssetTypePKcS3_EUlvE_bE
 *23CInternalLambdaWorkItemIZN19CFactoryResetHelper15YldFactoryResetEbbEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSMandatoryUpdate14YldApplyUpdateEvEUlvE_7EResultE
@@ -4160,6 +4171,18 @@ ${LANGUAGE}
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN13CSteamStartup12ExecSteamURLE19EShellExecuteSourcePKcEUl7EResultS2_E_
+*ZN14CLEDController10InitializeEvE27CWebUILEDManagerGetStateJob
+*ZN14CLEDController10InitializeEvE27CWebUILEDManagerSetColorJob
+*ZN14CLEDController10InitializeEvE27CWebUILEDManagerSetSpeedJob
+*ZN14CLEDController10InitializeEvE28CWebUILEDManagerSetEffectJob
+*ZN14CLEDController10InitializeEvE29CWebUILEDManagerSetEnabledJob
+*ZN14CLEDController10InitializeEvE32CWebUILEDManagerSetBrightnessJob
+*ZN14CLEDController10InitializeEvEUlRK28CLEDManager_GetState_RequestR29CLEDManager_GetState_ResponseE_
+*ZN14CLEDController10InitializeEvEUlRK28CLEDManager_SetColor_RequestR29CLEDManager_SetColor_ResponseE1_
+*ZN14CLEDController10InitializeEvEUlRK28CLEDManager_SetSpeed_RequestR29CLEDManager_SetSpeed_ResponseE2_
+*ZN14CLEDController10InitializeEvEUlRK29CLEDManager_SetEffect_RequestR30CLEDManager_SetEffect_ResponseE3_
+*ZN14CLEDController10InitializeEvEUlRK30CLEDManager_SetEnabled_RequestR31CLEDManager_SetEnabled_ResponseE0_
+*ZN14CLEDController10InitializeEvEUlRK33CLEDManager_SetBrightness_RequestR34CLEDManager_SetBrightness_ResponseE4_
 *ZN14CLEDController23RequestEnumerateDevicesEvEUlvE_
 *ZN15CSteamOSManager27OnControllerActionTriggeredEP27ControllerActionTriggered_tEUlvE_
 *ZN15CWebUITransport16StartHealthCheckEvEUlvE_
@@ -5268,6 +5291,7 @@ ${LANGUAGE}
 -steamos
 -system-composer
 -tenfoot
+-testled
 -testoobe
 -testssa
 -teststoragedata
@@ -5522,10 +5546,15 @@ ${LANGUAGE}
 .CKeyEscrow_Request
 .CKeyEscrow_Response"
 .CKeyEscrow_Ticket*7\n
-.CLEDManagerDevice"@\n
-.CLEDManagerState"
 .CLEDManager_GetState_Request
 .CLEDManager_GetState_Response
+.CLEDManager_SetColor_Request
+.CLEDManager_SetColor_Response
+.CLEDManager_SetEffect_Request
+.CLEDManager_SetEffect_Response
+.CLEDManager_SetEnabled_Request
+.CLEDManager_SetSpeed_Request
+.CLEDManager_SetSpeed_Response
 .CMarketingMessageHourlyStats
 .CMarketingMessageHourlyStats"m\n?CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 .CMarketingMessageProto
@@ -5558,6 +5587,8 @@ ${LANGUAGE}
 .CMsgJSValue.JSObjectProperty
 .CMsgKeyValuePair"
 .CMsgKubeRPCPacket.Hdr
+.CMsgLEDManagerDevice"
+.CMsgLEDManagerState"'\n%CLEDManager_StateChanged_Notification"O\n
 .CMsgMonitorInfo.MonitorInfo
 .CMsgNetworkDeviceIP4Address
 .CMsgNetworkDeviceIP4Config
@@ -6534,6 +6565,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp:238
 /data/src/steamUI/installfoldercontroller.cpp
+/data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
 /data/src/steamUI/modmanager.cpp
 /data/src/steamUI/remoteplaycontroller.cpp
@@ -6708,6 +6740,7 @@ ${LANGUAGE}
 /sys/class/drm/card0/device/power_dpm_force_performance_level
 /sys/class/drm/card0/device/pp_od_clk_voltage
 /sys/class/hwmon
+/sys/class/leds/go_s:rgb:joystick_rings
 /sys/class/leds/status:white/led_brightness_multiplier
 /sys/devices/virtual/dmi/id/product_name
 /sys/devices/virtual/dmi/id/product_serial
@@ -6799,6 +6832,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0-100
 0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -7078,6 +7112,7 @@ ${LANGUAGE}
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj20CControllerConfigMsgi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj23ERemoteStorageSyncStatei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj8CAutoPtrI10ILEDDeviceEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN15CWebUITransport12ClientInfo_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN18CRemoteSteamAppMgr13BestClients_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -7425,6 +7460,7 @@ ${LANGUAGE}
 10CUtlRBTreeIN7CUtlMapIj20CControllerConfigMsgi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj23ERemoteStorageSyncStatei8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIj8CAutoPtrI10ILEDDeviceEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjN15CWebUITransport12ClientInfo_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjN18CRemoteSteamAppMgr13BestClients_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -7667,6 +7703,7 @@ ${LANGUAGE}
 10EconMarket
 10FovasVideo
 10IAppSystem
+10ILEDDevice
 10IMemStream
 10IVREncoder
 10LEDManager
@@ -8068,6 +8105,7 @@ ${LANGUAGE}
 14CInputKeyUpMsg
 14CJobFutureBase
 14CLEDController
+14CLEDDeviceTest
 14CMetricsString
 14CMsgAuthTicket
 14CMsgGameAction
@@ -8177,6 +8215,7 @@ ${LANGUAGE}
 15CInstallManager
 15CJSCallbackFunc
 15CJobPromiseBase
+15CLEDDeviceSysfs
 15CMemberFunctor0IP24CGameRecordingControllerMS0_FvvE18CFuncMemPolicyNoneE
 15CMemberFunctor1IP24CGameRecordingControllerMS0_F7EResultNS0_13PendingClip_tEES3_18CFuncMemPolicyNoneE
 15CMetricsFactory
@@ -8300,7 +8339,6 @@ ${LANGUAGE}
 16CInputKeyDownMsg
 16CInputMouseUpMsg
 16CJSCallbackFuncs
-16CLEDManagerState
 16CMsgAckScreenDPI
 16CMsgBrowserReady
 16CMsgClearHistory
@@ -8373,7 +8411,6 @@ ${LANGUAGE}
 17CHTTPRequestCache
 17CHTTPRequestParam
 17CKeyEscrow_Ticket
-17CLEDManagerDevice
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCellList_Cell
@@ -8570,6 +8607,7 @@ ${LANGUAGE}
 19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgIPAddressBucket
+19CMsgLEDManagerState
 19CMsgLinearListCurve
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -9108,6 +9146,7 @@ ${LANGUAGE}
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
+20CMsgLEDManagerDevice
 20CMsgLoadLocalization
 20CMsgRemoteClientPing
 20CMsgRestartJSContext
@@ -9478,6 +9517,7 @@ ${LANGUAGE}
 24StoreItem_PurchaseOption
 24TransportValidation_Stub
 25.CMsgRemoteDeviceAuthorizationRequest.EKeyEscrowUsage
+255 0 0
 256 Kbps
 256K
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
@@ -9696,6 +9736,8 @@ ${LANGUAGE}
 28CCommunity_ClanLocGroupImage
 28CGamescope_GetState_Response
 28CLEDManager_GetState_Request
+28CLEDManager_SetColor_Request
+28CLEDManager_SetSpeed_Request
 28CMarketingMessageHourlyStats
 28CMsgClientCreateFriendsGroup
 28CMsgClientDeleteFriendsGroup
@@ -9779,6 +9821,9 @@ ${LANGUAGE}
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
 29CLEDManager_GetState_Response
+29CLEDManager_SetColor_Response
+29CLEDManager_SetEffect_Request
+29CLEDManager_SetSpeed_Response
 29CMsgChildProcessQueryResponse
 29CMsgClientEmoticonList_Effect
 29CMsgClientLANP2PRequestChunks
@@ -9966,6 +10011,8 @@ ${LANGUAGE}
 30CInventory_ConsumeItem_Request
 30CInventory_InspectItem_Request
 30CInventory_ModifyItems_Request
+30CLEDManager_SetEffect_Response
+30CLEDManager_SetEnabled_Request
 30CMsgBluetoothManagerDeviceInfo
 30CMsgClientEmoticonList_Sticker
 30CMsgGameServerPlayersQueryData
@@ -10042,6 +10089,7 @@ ${LANGUAGE}
 31CInventory_ExchangeItem_Request
 31CInventory_GetInventory_Request
 31CInventory_PurchaseInit_Request
+31CLEDManager_SetEnabled_Response
 31CMsgBluetoothDevicesData_Device
 31CMsgBluetoothManagerAdapterInfo
 31CMsgClientEmoticonList_Emoticon
@@ -10191,6 +10239,7 @@ ${LANGUAGE}
 33CInventory_DevSetNextDrop_Request
 33CInventory_GetItemDefMeta_Request
 33CInventory_SplitItemStack_Request
+33CLEDManager_SetBrightness_Request
 33CMsgBluetoothManagerDeviceDetails
 33CMsgDuplicateControllerSourceMode
 33CMsgGameServerRulesQueryData_Rule
@@ -10264,6 +10313,7 @@ ${LANGUAGE}
 34CGameStreamVideoStageUpdateBitRate
 34CInventory_ConsumePlaytime_Request
 34CInventory_GetItemDefMeta_Response
+34CLEDManager_SetBrightness_Response
 34CMsgBluetoothManagerAdapterDetails
 34CMsgClientAddFriendToGroupResponse
 34CMsgRemoteClientBroadcastDiscovery
@@ -10424,7 +10474,6 @@ ${LANGUAGE}
 36CGamescope_StateChanged_Notification
 36CHIDMessageToRemote_DeviceDisconnect
 36CInventory_CombineItemStacks_Request
-36CLEDManager_SetDeviceOptions_Request
 36CMsgClientCreateFriendsGroupResponse
 36CMsgClientDeleteFriendsGroupResponse
 36CMsgClientManageFriendsGroupResponse
@@ -10517,7 +10566,6 @@ ${LANGUAGE}
 37CHIDDevicePipeSharedMemStreamToRemote
 37CHIDMessageFromRemote_CloseAllDevices
 37CHIDMessageFromRemote_RequestResponse
-37CLEDManager_SetDeviceOptions_Response
 37CLEDManager_StateChanged_Notification
 37CMsgClientLANP2PRequestChunksResponse
 37CMsgClientSiteLicenseCheckoutResponse
@@ -11980,6 +12028,7 @@ ${LANGUAGE}
 7CUtlMapIj20CControllerConfigMsgi8CDefLessE
 7CUtlMapIj23ERemoteStorageSyncStatei8CDefLessE
 7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE
+7CUtlMapIj8CAutoPtrI10ILEDDeviceEi8CDefLessE
 7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE
 7CUtlMapIjN15CWebUITransport12ClientInfo_tEi8CDefLessE
 7CUtlMapIjN18CRemoteSteamAppMgr13BestClients_tEi8CDefLessE
@@ -12084,6 +12133,7 @@ ${LANGUAGE}
 8Bitdo SF30 Controller
 8Bitdo SN30 Controller
 8Bitdo Ultimate 2 Wireless Controller
+8CAutoPtrI10ILEDDeviceE
 8CAutoPtrI11CHTTPServerE
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI18CJSServerListQueryE
@@ -12275,7 +12325,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9HHh}
 9IGv
 9Inventory
 9PE,$
@@ -12336,6 +12385,7 @@ ${LANGUAGE}
 :BAD INTEGER
 :BAD OBJECT
 :EXTERNAL TYPE %s\n
+:IDj
 :LBN
 :L\n\rsetting_store
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
@@ -14098,6 +14148,7 @@ Branch
 Brazilian
 Break
 Breaking '%s' in '%s'\n
+Brightness
 Bringing streamed game to foreground - failed
 Bringing streamed game to foreground - success
 Broadcast
@@ -15428,10 +15479,19 @@ CJoinGameController::LaunchGame() video app %u
 CKeyEscrow_Request
 CKeyEscrow_Response
 CKeyEscrow_Ticket
-CLEDManagerDevice
-CLEDManagerState
-CLEDManager_GetState_Request
-CLEDManager_GetState_Response"'\n%CLEDManager_StateChanged_Notification"
+CLEDController[%x]: set enabled: %d
+CLEDDeviceSysfs::ThreadedReadProperty
+CLEDDeviceSysfs::ThreadedWriteProperty
+CLEDManager_GetState_Request"D\n
+CLEDManager_GetState_Response
+CLEDManager_SetColor_Request
+CLEDManager_SetColor_Response"D\n
+CLEDManager_SetEffect_Request
+CLEDManager_SetEffect_Response"@\n
+CLEDManager_SetEnabled_Request
+CLEDManager_SetEnabled_Response"B\n
+CLEDManager_SetSpeed_Request
+CLEDManager_SetSpeed_Response"J\n!CLEDManager_SetBrightness_Request
 CLIENT: %s
 CLIENTENGINE_INTERFACE_VERSION005
 CLIENT_EARLY_TRAFFIC_SECRET
@@ -15719,6 +15779,8 @@ CMsgJSReleaseCallback
 CMsgKeyValuePair
 CMsgKeyValueSet
 CMsgKubeRPCPacket
+CMsgLEDManagerDevice
+CMsgLEDManagerState
 CMsgLinearCurve
 CMsgLinearListCurve
 CMsgLinkAtPosition
@@ -17524,6 +17586,7 @@ CountOrderedBytes
 Coupon has expired
 CpuScalingGovernor
 Create
+Create a test LED device
 Create process failed
 CreateAudioEncoder
 CreateAudioResampler
@@ -18907,6 +18970,7 @@ Error: %s: attempt to add pending library folder without pending data: %s
 Error: %s: attempt to set telemetry plugin state, plugin unavailable: %d
 Error: %s: attempt to update unknown adapter: 0x%x
 Error: %s: block device does not have an associated filesystem: 0x%x
+Error: %s: called without device_id
 Error: %s: empty address field
 Error: %s: failed eject drive: %s
 Error: %s: failed to add event listener for gamescope-control: %d
@@ -18967,6 +19031,8 @@ Error: %s: invalid address
 Error: %s: invalid block device: 0x%x
 Error: %s: invalid block object
 Error: %s: invalid device path
+Error: %s: invalid device_id (null): %d
+Error: %s: invalid device_id: %d
 Error: %s: invalid dialog in file dialog resolver
 Error: %s: invalid drive object
 Error: %s: invalid drive: 0x%x
@@ -18986,6 +19052,7 @@ Error: %s: timed out while setting adapter discovery mode
 Error: %s: timed out while setting wifi debug mode
 Error: %s: unsupported platform
 Error: %s: version query error\n
+Error: CLEDDeviceSysfs: failed to write property: %s -> %s
 Error: CX11WindowProperty: failed to parse array property: key:%s format:%d index:%d
 Error: CX11WindowProperty: failed to parse property: key:%s format:%d
 Error: CX11WindowProperty: failed to read window property: %s
@@ -19294,6 +19361,7 @@ Failed to initiate device connect operation
 Failed to initiate removable storage format
 Failed to initiate update apply
 Failed to initiate update check
+Failed to insert LED device to map: possible id collision
 Failed to launch executable %s\n
 Failed to load "%s"
 Failed to load SteamUI localization file.\n
@@ -19469,6 +19537,7 @@ FindBar
 FindCount
 FindDRMUploads
 FindDefaultButton
+FindDevice
 FindEntry
 FindMarketingMessages
 FinishDepotUpload
@@ -21064,6 +21133,7 @@ Initialized CSystemDisplayController: %d
 Initialized CSystemDockManagerController: %d
 Initialized CSystemPerfController: %d
 Initialized CSystemReportController
+Initialized LED device: %s
 Initialized SSL context with certificate %s\n
 Initializing bluetooth manager: stub
 InitiateAssociation
@@ -21576,7 +21646,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 10 2025 23:57:12
+Jul 14 2025 18:55:34
 July
 JumpList
 Jumplist
@@ -21895,27 +21965,34 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" 
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" %s %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" jupiter-initial-firmware-update
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" jupiter-initial-firmware-update check
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lsb_release -d -s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" lspci -mm -n
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" steamos-session-select %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" sudo -n jupiter-biosupdate
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH:-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH:-${PATH}}" xdg-icon-resource forceupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" %s %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" jupiter-initial-firmware-update
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" jupiter-initial-firmware-update check
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lsb_release -d -s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" xdg-icon-resource forceupdate
+LEDManager.GetState#1
 LEDManager.NotifyStateChanged#1
+LEDManager.SetBrightness#1
+LEDManager.SetColor#1
+LEDManager.SetEffect#1
+LEDManager.SetEnabled#1
+LEDManager.SetSpeed#1
+LEDManager/%x/%s
 LEGACY_GOST_PKCS12
 LIBAVCODEC_61
 LIBAVUTIL_59
@@ -21936,6 +22013,7 @@ LPth
 LRpn
 LU~g(1
 LV=%zu n=%zu\n
+L\n\tSetEffect
 L\n\vGetPlayNext
 Label
 Label::Paint()
@@ -23000,6 +23078,7 @@ Method SetAppChatRoomGroupForceActive() not implemented.
 Method SetAppChatRoomGroupStopForceActive() not implemented.
 Method SetAvatarFrame() not implemented.
 Method SetBlurParams() not implemented.
+Method SetBrightness() not implemented.
 Method SetBroadcastChannelImage() not implemented.
 Method SetBroadcastChannelLinkRegions() not implemented.
 Method SetBroadcastChannelProfile() not implemented.
@@ -23009,12 +23088,13 @@ Method SetChatRoomGroupWatchingBroadcast() not implemented.
 Method SetClanChatRoomPrivate() not implemented.
 Method SetClipDetails() not implemented.
 Method SetCollectionChildren() not implemented.
+Method SetColor() not implemented.
 Method SetCommunityPreferences() not implemented.
 Method SetCompatibilityFeedback() not implemented.
 Method SetControllerPersonalizationFile() not implemented.
 Method SetDesiredControllerConfigForApp() not implemented.
-Method SetDeviceOptions() not implemented.
 Method SetDiscovering() not implemented.
+Method SetEffect() not implemented.
 Method SetEnabled() not implemented.
 Method SetEquippedProfileItemFlags() not implemented.
 Method SetFamilyCooldownOverrides() not implemented.
@@ -23034,6 +23114,7 @@ Method SetRTMPInfo() not implemented.
 Method SetRecommendationBotReviewStatus() not implemented.
 Method SetReservationPositionMessage() not implemented.
 Method SetSessionActiveChatRoomGroups() not implemented.
+Method SetSpeed() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
 Method SetSteamTVUserSettings() not implemented.
 Method SetSubscriptionListFromCollection() not implemented.
@@ -27173,12 +27254,12 @@ SetClanChatRoomPrivate
 SetClientBeta
 SetClipDetails
 SetCollectionChildren
+SetColor
 SetCommunityPreferences
 SetCompatibilityFeedback
 SetConfiguration
 SetCursor
 SetDefaultDevice: %d -> %d
-SetDeviceOptions
 SetDevkitServiceState
 SetDiscovering
 SetDiscoveryFilter
@@ -27240,6 +27321,7 @@ SetScreenReaderRate
 SetScreenReaderVolume
 SetSessionActiveChatRoomGroups
 SetSortColumn
+SetSpeed
 SetState
 SetSteamDeckKeyboardSkin
 SetSteamInfo
@@ -27519,6 +27601,7 @@ Speakers
 Special Cause
 Special survey needs to be implemented in React! Requested surveyid: %u
 Specified maxSymbolValue is too small
+Speed
 Spending limit exceeded
 SpewAndLogActivate
 SpewAndLogChangeIfStillDefault
@@ -28712,6 +28795,8 @@ Tesla
 Test
 Test CD-Key
 Test Default Value
+Test LED
+Test LED Fail
 Test Notification
 Test Pattern
 Test Steam service
@@ -30308,6 +30393,7 @@ XTestQueryExtension
 XVisualIDFromVisual
 XWarpPointer
 XWindowManagerName
+X\n\rSetBrightness
 X\n\rWebRTCStopped
 X\n\vAllocateSDR
 X\n\vQueryPhases
@@ -30749,7 +30835,6 @@ Zulu
 \n$CFriendMessages_SendMessage_Response
 \n$CGameRecording_GetThumbnails_Request
 \n$CInventory_CombineItemStacks_Request
-\n$CLEDManager_SetDeviceOptions_Request
 \n$CMsgRemoteDeviceAuthorizationRequest
 \n$CMsgVideoGameRecordingRepresentation
 \n$CPlayer_GetGameAchievements_Response
@@ -31437,7 +31522,6 @@ Zulu
 \n\nchunk_size
 \n\nclient_ids
 \n\ncodec_data
-\n\ncolor_blue
 \n\ncommand_id
 \n\ncompressed
 \n\nconfig_vdf
@@ -31894,7 +31978,6 @@ Zulu
 \n\tclass_500
 \n\tclient_id
 \n\tclient_ip
-\n\tcolor_red
 \n\tcommodity
 \n\tcompleted
 \n\tcomponent
@@ -32132,7 +32215,6 @@ Zulu
 \n\vclient_args
 \n\vclient_cell
 \n\vclient_name
-\n\vcolor_green
 \n\vcoming_soon
 \n\vcompat_tool
 \n\vcount_after
@@ -34025,6 +34107,7 @@ branch
 branch_password_hash
 brave
 brazilian
+breathe
 bremoval
 bridge
 brightness
@@ -34544,6 +34627,7 @@ chord.vdf
 chord_neptune.vdf
 chose_local_files
 chown
+chroma
 chrome
 chromeos_
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
@@ -36373,6 +36457,7 @@ editable
 ee key too small
 eeX=
 effect
+effect_index
 effective_token_state
 effects
 effects_available
@@ -37629,7 +37714,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenF
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -42405,6 +42490,7 @@ m_mapConVarCallbacks.IsValidIndex( iMap )
 m_mapConnectionInfo
 m_mapConnections
 m_mapCustomImageTimes
+m_mapDevices
 m_mapDialogs
 m_mapDownloadItems
 m_mapEntriesInProgress
@@ -43380,6 +43466,7 @@ maxWidth >= width
 max_achievements
 max_age_seconds
 max_apps
+max_brightness
 max_early_data
 max_friend_count
 max_protocol
@@ -43604,7 +43691,6 @@ model
 moderator_messages
 moderator_steamid
 modes
-modes_available
 modf
 modified
 modified64
@@ -43628,6 +43714,7 @@ mongolian
 monitor_device_name
 monitor_display_name
 monitors
+monocolor
 month
 mopay
 more_available
@@ -43673,6 +43760,7 @@ mstring not universal
 mstring wrong tag
 msync
 mu?B0u?A
+multi_intensity
 multipart/form-data
 multipart/form-data; boundary=%s
 multipart/signed
@@ -45909,6 +45997,7 @@ rack
 rackspace
 radius
 raid
+rainbow
 rand
 rand_drbg_enable_locking
 rand_drbg_get_entropy
@@ -47334,6 +47423,7 @@ specifycompattool
 spectator_port
 spectator_server_name
 speed
+speed_range
 spew
 spew active panel stats
 spew_type
@@ -48215,8 +48305,11 @@ supported_refresh_rates
 supported_services
 supported_transport
 supported_video_codecs
+supports_brightness
+supports_color
 supports_os_updates
 supports_remote_hid
+supports_speed
 supports_touch_input
 supports_video_hevc_OBSOLETE
 suppress_gpu_chrome
@@ -50170,11 +50263,11 @@ webuimessages_base.proto""\n CHardwareUpdate_GetState_Request"_\n!CHardwareUpdat
 webuimessages_base.proto""\n CSystemManager_Hibernate_Request"#\n!CSystemManager_Hibernate_Response">\n CSystemManager_WriteFile_Request
 webuimessages_base.proto"$\n"CBluetoothManager_GetState_Request"-\n
 webuimessages_base.proto"/\n
+webuimessages_base.proto"/\n\fCMsgLEDColor
 webuimessages_base.proto"2\n0CStorageDeviceManager_IsServiceAvailable_Request"I\n1CStorageDeviceManager_IsServiceAvailable_Response
 webuimessages_base.proto"3\n1CSharedJSContext_GetDesiredSteamUIWindows_Request"
 webuimessages_base.proto"7\n#CTransportAuth_Authenticate_Request
 webuimessages_base.proto"E\n+CTransportValidation_AppendToString_Request
-webuimessages_base.proto"J\n\fCMsgLEDColor
 webuimessages_base.proto"V\n
 webuimessages_base.proto"V\n4CSteamEngine_UpdateTextFilterDictionary_Notification
 webuimessages_base.proto"}\n

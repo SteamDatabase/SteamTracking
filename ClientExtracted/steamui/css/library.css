@@ -235,6 +235,12 @@ div.ModalPosition_TopBar {
     ), #25282e;
   user-select: none;
 }
+@media (prefers-contrast: more) {
+  .DialogContent,
+  .DialogContentTransition {
+    background: #000;
+  }
+}
 .DialogContent .DialogControlsSection:not(:first-child),
 .DialogContent .DialogControlsSectionHeader:not(:first-child),
 .DialogContent .DialogHeader:not(:first-child),
@@ -2272,6 +2278,13 @@ dialog ._2yAm5LY_eu-Vg_52l0HFlM {
   z-index: 1600;
   user-select: none;
   padding: 4px;
+}
+@media (prefers-contrast: more) {
+  .GreenEnvelopeMenu,
+  .PP7LM0Ow1K5qkR8WElLpt {
+    background: #000;
+    padding: 0;
+  }
 }
 .web_chat_frame .PP7LM0Ow1K5qkR8WElLpt {
   max-height: calc(100% - 128px);
