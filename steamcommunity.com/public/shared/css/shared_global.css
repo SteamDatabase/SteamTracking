@@ -1432,10 +1432,10 @@ div#global_header .menuitem {
     font-weight: 500;
     text-transform: uppercase;
 }
-div#global_header .menuitem:focus {
+div#global_header .menuitem:focus-visible {
 	outline: none;
 }
-div#global_header .menuitem:focus::before {
+div#global_header .menuitem:focus-visible::before {
 	outline: auto Highlight;
 	outline: auto -webkit-focus-ring-color;
 	content: "";
