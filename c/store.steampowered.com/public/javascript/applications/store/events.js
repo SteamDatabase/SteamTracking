@@ -3807,7 +3807,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+      };
       function _(_) {
         const {
             eventModel: _,
@@ -3818,12 +3822,13 @@
             fnOnClicked: _,
           } = _,
           [_, _] = _.useState(!1);
-        _.useEffect(() => {
-          if (__webpack_require__.clanInfo) {
-            let _ = _._.InitFromClanID(__webpack_require__.clanInfo.clanid);
-            _._.LoadClanInfoForClanSteamID(_);
-          }
-        }, [__webpack_require__.clanInfo]);
+        (0, _._)(_.GetAppIDOrReferenceAppID(), _),
+          _.useEffect(() => {
+            if (__webpack_require__.clanInfo) {
+              let _ = _._.InitFromClanID(__webpack_require__.clanInfo.clanid);
+              _._.LoadClanInfoForClanSteamID(_);
+            }
+          }, [__webpack_require__.clanInfo]);
         const _ = _._.Get(),
           _ = (0, _._)(_._.LANGUAGE),
           _ = "capsule",
@@ -3843,10 +3848,11 @@
           [_, _] = _.useState(() =>
             (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
           ),
+          _ = (0, _._)(),
           _ = (0, _._)(() =>
             Boolean(_ && _)
               ? _.GetFallbackArtworkScreenshot()
-              : _.GetImageURLWithFallback(_, _, _),
+              : _.GetImageURLWithFallback(_, _, _, _),
           ),
           _ =
             "upcoming" !== _ &&

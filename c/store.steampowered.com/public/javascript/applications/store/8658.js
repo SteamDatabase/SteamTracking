@@ -84,11 +84,13 @@
 	"Menu_Section_SpecialSections_SteamLabs": "Лаборатории Steam",
 	"Menu_Section_SpecialSections_DLCForYou": "Доп. контент",
 	"Menu_Section_SpecialSections_SaleEvents": "РАСПРОДАЖИ",
-	"Menu_SearchBar_RecentlyViewed": "Просмотренное недавно",
-	"Menu_SearchBar_PopularItems": "Популярное",
+	"Menu_SearchBar_RecentlyViewed": "Недавно просмотренные",
+	"Menu_SearchBar_PopularSearches": "Часто ищут",
 	"Menu_SearchBar_SearchResults": "Результаты поиска",
 	"Menu_SearchBar_YourTopGenres": "Ваши любимые жанры",
 	"Menu_SearchBar_BrowseBy": "Просмотреть...",
+	"Menu_SearchBar_NoMatches": "По вашему запросу ничего не нашлось.",
+	"Menu_SearchBar_AdvancedSearch": "Расширенный поиск",
 	"Menu_Search": "Поиск",
 	"Menu_Label": "Меню магазина"
 }`);

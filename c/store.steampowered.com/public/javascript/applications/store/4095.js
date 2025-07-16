@@ -5026,6 +5026,7 @@
         "GetEventStartTime",
         null,
       );
+      var _ = __webpack_require__("chunkid");
       const _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function _(_) {
         return (
@@ -5674,7 +5675,12 @@
           }
           return null;
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full) {
+        GetAppIDOrReferenceAppID() {
+          return this.appid
+            ? this.appid
+            : this.jsondata?.referenced_appids?.[0];
+        }
+        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full, _ = !0) {
           const _ = this.GetImageURL(_, _, __webpack_require__);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
@@ -5690,7 +5696,7 @@
               _,
               Number.MAX_VALUE,
             );
-            if (_) return _;
+            if (_ && (_ || (0, _._)(_))) return _;
             let _ = this.appid;
             if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
               if (!this.jsondata?.referenced_appids?.length)
@@ -5698,9 +5704,11 @@
               _ = this.jsondata.referenced_appids[0];
             }
             const _ = _._.Get().GetApp(_);
-            return _
-              ? _.GetAssets().GetMainCapsuleURL()
-              : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
+            return _ && _.GetAssets()
+              ? _.GetAssets()?.GetMainCapsuleURL()
+              : _?.avatar_full_url
+                ? _.avatar_full_url
+                : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
           }
           return "background" == _ &&
             _ &&
