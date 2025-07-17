@@ -2657,6 +2657,7 @@
     "MediaConvert_FailToCreatePoster": "Failed to create poster image for your animation or video.",
     "MediaConvert_FailToCreate_All": "Media processing failed. Please check your file and try again.",
     "MediaConvert_InputError_NonAudio_Input": "The input file does not contain any audio stream. Please provide a file with an audio track.",
+    "MediaConvert_InputError_DimensionsDontMatchRequirements": "Input media doesn't match require dimensions",
     "ResetToDefault": "Reset to Default",
     "ActionButtonLabelMenu": "Menu",
     "ActionButtonLabelSelect": "Select",
