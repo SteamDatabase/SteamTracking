@@ -1508,7 +1508,8 @@
           l = n ? m.O3.GetClanEventFromAnnouncementGID(n) : null,
           o = (e) => {
             r?.(), e.stopPropagation(), e.preventDefault();
-          };
+          },
+          i = window.screen.width > 500 ? p.kH : p.uY;
         return a.createElement(
           "div",
           null,
@@ -1534,7 +1535,7 @@
                 "flow-children": "column",
                 navEntryPreferPosition: c.iU.PREFERRED_CHILD,
               },
-              a.createElement(p.kH, { event: l, onClick: o }),
+              a.createElement(i, { event: l, onClick: o }),
             ),
         );
       }

@@ -10107,20 +10107,24 @@
         return (
           e.length > 0 &&
             e.forEach((e) => {
-              e.rtConflictStart <= a && e.rtConflictEnd > a
-                ? (t?.appid || t?.packageid) &&
+              if (e.rtConflictStart <= a && e.rtConflictEnd > a)
+                if (
+                  (t?.appid || t?.packageid) &&
                   e.rtDiscountStart <= a &&
                   d <= e.rtDiscountEnd
-                  ? (!r || e.nHighestDiscount > r) &&
+                )
+                  (!r || e.nHighestDiscount > r) &&
                     ((r = e.nHighestDiscount),
                     (i = e.strDiscountName),
                     (s = e.bMajorSale),
-                    (l = e.discountEventID))
-                  : (o && (o += ", "),
-                    (o += t?.bundleid
-                      ? (0, m.we)("#DailyDeals_BundleCooldownConflict")
-                      : e.description))
-                : !c && e.rtConflictStart > a && (c = e);
+                    (l = e.discountEventID));
+                else {
+                  const a = t?.bundleid
+                    ? (0, m.we)("#DailyDeals_BundleCooldownConflict")
+                    : e.description;
+                  o.includes(a) || (o && (o += ", "), (o += a));
+                }
+              else !c && e.rtConflictStart > a && (c = e);
             }),
           {
             strConflict: o,
@@ -10134,39 +10138,38 @@
       }
       function g(e, t) {
         let a = new Array();
-        const n = (s.a4 - 1) * u.Kp.PerDay,
-          r = n + l.T1 * u.Kp.PerDay,
-          i = l.T1 * u.Kp.PerDay,
-          c = Number.parseInt(
+        const n = (l.T1 + (s.a4 - 1)) * u.Kp.PerDay,
+          r = l.T1 * u.Kp.PerDay,
+          i = Number.parseInt(
             "" + (0, d.Tc)("most_recent_price_increase", "application_config"),
           );
         return (
-          (0, o.TQ)(Math.floor(Date.now() / 1e3)) < c + l.nu &&
+          (0, o.TQ)(Math.floor(Date.now() / 1e3)) < i + l.nu &&
             a.push({
-              rtConflictStart: c - r,
-              rtConflictEnd: c + i,
+              rtConflictStart: i - n,
+              rtConflictEnd: i + r,
               description: (0, m.we)("#DailyDeals_PriceIncrease"),
               bMajorSale: !1,
             }),
           e && !e.is_free && e.discounts && 0 != e.discounts.length
             ? (e.discounts.forEach((e) => {
-                const s =
+                const i =
                   e.strDiscountName ??
                   (0, m.we)("#Existing_Discount", (0, m.TW)(e.rtStartDate));
-                let l = !1;
+                let s = !1;
                 if (e.discountEventID && t) {
                   const a = t.find((t) => t.id == e.discountEventID);
-                  a && (l = "unique" == a.collision_type);
+                  a && (s = "unique" == a.collision_type);
                 }
                 a.push({
-                  rtConflictStart: l ? e.rtStartDate - n : e.rtStartDate - r,
-                  rtConflictEnd: l ? e.rtEndDate : e.rtEndDate + i,
-                  description: s,
+                  rtConflictStart: s ? e.rtStartDate : e.rtStartDate - n,
+                  rtConflictEnd: s ? e.rtEndDate : e.rtEndDate + r,
+                  description: i,
                   rtDiscountStart: e.rtStartDate,
                   rtDiscountEnd: e.rtEndDate,
                   nHighestDiscount: e.nDiscountPct,
                   strDiscountName: e.strDiscountName,
-                  bMajorSale: l,
+                  bMajorSale: s,
                   discountEventID: e.discountEventID,
                 });
               }),

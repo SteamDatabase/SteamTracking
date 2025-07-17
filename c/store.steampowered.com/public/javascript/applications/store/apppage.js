@@ -1691,7 +1691,8 @@
             : null,
           _ = (_) => {
             _?.(), _.stopPropagation(), _.preventDefault();
-          };
+          },
+          _ = window.screen.width > 500 ? _._ : _._;
         return _.createElement(
           "div",
           null,
@@ -1722,7 +1723,7 @@
                 "flow-children": "column",
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
               },
-              _.createElement(_._, {
+              _.createElement(_, {
                 event: _,
                 onClick: _,
               }),
