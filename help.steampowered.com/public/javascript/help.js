@@ -1737,15 +1737,36 @@ HelpWizard = {
 	RefreshCaptcha: function( nUsage )
 	{
 		var _wizard = this;
-		if ( typeof nUsage === 'undefined' )
-			nUsage = 1;
-		$J.ajax({
-			type: "POST",
-			url: "https://help.steampowered.com/wizard/RefreshCaptcha",
-			data: $J.extend( {}, g_rgDefaultWizardPageParams, { usage: nUsage } )
-		}).done( function( data ) {
-			_wizard.UpdateCaptcha( data );
-		});
+		return new Promise( ( resolve ) => {
+			const fnRefreshCaptchaWhenReady = () => {
+				// Wait for captcha JS to be initialized before attempting to refresh it. The HelpWizard pulls pages in via ajax conditionally can load scripts in different ways depending on the scenario.
+				if ( ( typeof hcaptcha === 'undefined' || typeof hcaptcha.render === 'undefined' ) && ( typeof grecaptcha === 'undefined' || typeof grecaptcha.enterprise === 'undefined' || typeof grecaptcha.enterprise.render === 'undefined' ) )
+				{
+					setTimeout( fnRefreshCaptchaWhenReady, 100 );
+					return;
+				}
+
+				if ( typeof nUsage === 'undefined' )
+					nUsage = 1;
+
+				let hCaptcha = 0;
+				if ( nUsage == 3 && typeof hcaptcha !== 'undefined' )
+					hCaptcha = 1;
+
+				$J.ajax({
+					type: "POST",
+					url: "https://help.steampowered.com/wizard/RefreshCaptcha",
+					data: $J.extend( {}, g_rgDefaultWizardPageParams, { usage: nUsage, hCaptcha: hCaptcha } )
+				}).done( function( data ) {
+					_wizard.UpdateCaptcha( data );
+
+					// Resolve after rendering the captcha so we can steal focus back or do other post-captcha work
+					resolve();
+				});
+			};
+
+			fnRefreshCaptchaWhenReady();
+		} );
 	},
 
 		RenderRecaptcha: function( parent_sel, gid, sitekey, s )
@@ -1758,6 +1779,18 @@ HelpWizard = {
 			'theme': 'dark',
 			'callback': function(n){},
 			's': s
+		});
+	},
+
+	RenderHCaptcha: function( parent_sel, gid, sitekey )
+	{
+		var render_div_id = 'recaptcha_render_' + gid;
+		$J( parent_sel ).empty();
+		$J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+		g_hcaptchaInstance = hcaptcha.render( render_div_id, {
+			'sitekey': sitekey,
+			'theme': 'dark',
+			'callback': function(n){}
 		});
 	},
 
@@ -1776,7 +1809,12 @@ HelpWizard = {
 				$J( '#captcha_entry_text' ).hide();
 				$J( '#captcha_entry_recaptcha' ).show();
 				_wizard.RenderRecaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey, data.s );
+			} else if ( data.type == 3 ) {
+				$J( '#captcha_entry_text' ).hide();
+				$J( '#captcha_entry_recaptcha' ).show();
+				_wizard.RenderHCaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey );
 			}
+
 			$J( '#input_captcha_gid' ).val( data.gid );
 		}
 		else
@@ -2637,7 +2675,9 @@ HelpRequestPage = {
 			if ( $J( '#create_help_request_form' ).data( 'allow-anonymous' ) )
 			{
 				// Initialize the captcha for anonymous tickets.
-				HelpWizard.RefreshCaptcha(3);
+				HelpWizard.RefreshCaptcha(3).then( () => {
+					$J('#create_help_request_issue_text').focus();
+				} );
 			}
 			else
 			{
