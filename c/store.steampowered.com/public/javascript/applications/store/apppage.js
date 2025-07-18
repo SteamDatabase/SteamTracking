@@ -2593,9 +2593,8 @@
             this.m_strStatsURL &&
             (!(function (_, _) {
               if (!navigator || void 0 === navigator.sendBeacon) return;
-              let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary();
-              if (0 == _.nBytesReceived) return;
-              let _ = _.GetAndCloseWatchedIntervals();
+              let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary(),
+                _ = _.GetAndCloseWatchedIntervals();
               if (_.reduce((_, _) => _ + (_[1] - _[0]), 0) < 5) return;
               let _ = {
                   strManifest: _.IsPlayingHLS() ? _.GetHLSURL() : _.GetMPDURL(),
@@ -3418,10 +3417,10 @@
           _ = _(_, _, _);
         _ = _ || _;
         let _ = (0, _._)(
-            _().PlayerControls,
-            __webpack_require__.bFullscreen && _().Fullscreen,
-          ),
-          _ = (0, _._)(_().ControlGroup, _ && _().ShowControls);
+          _().PlayerControls,
+          __webpack_require__.bFullscreen && _().Fullscreen,
+          _ && _().ShowControls,
+        );
         return _.createElement(
           _.Provider,
           {
@@ -3436,7 +3435,7 @@
             _.createElement(
               "div",
               {
-                className: _,
+                className: _().ControlGroup,
               },
               _.createElement(_, {
                 player: _,

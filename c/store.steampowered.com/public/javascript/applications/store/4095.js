@@ -2497,8 +2497,8 @@
               ),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
-                "ended",
-                this.OnEndedForHLS,
+                "canplay",
+                this.OnVideoCanPlayHLS,
               ),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
@@ -2515,10 +2515,15 @@
                 "seeked",
                 this.OnVideoSeeked,
               ),
-              void this.m_listeners.AddEventListener(
+              this.m_listeners.AddEventListener(
                 this.m_elVideo,
                 "pause",
                 this.OnVideoPause,
+              ),
+              void this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "ended",
+                this.OnEndedForHLS,
               )
             );
           this.BCreateLoaders()
@@ -2934,6 +2939,9 @@
           this.m_bIsBuffering ||
             (this.m_bUserPlayChoice && this.PlayOnElement()),
             this.m_stats.LogVideoOnCanPlay();
+        }
+        OnVideoCanPlayHLS() {
+          this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
           if (this.m_seekingToTime) {
@@ -3573,6 +3581,7 @@
         (0, _._)([_._], _.prototype, "OnVideoResize", null),
         (0, _._)([_._], _.prototype, "OnVideoError", null),
         (0, _._)([_._], _.prototype, "OnVideoCanPlay", null),
+        (0, _._)([_._], _.prototype, "OnVideoCanPlayHLS", null),
         (0, _._)([_._], _.prototype, "GetCurrentPlayTime", null),
         (0, _._)([_._], _.prototype, "GetBufferedEndTime", null),
         (0, _._)([_._], _.prototype, "OnVideoTimeUpdate", null),
