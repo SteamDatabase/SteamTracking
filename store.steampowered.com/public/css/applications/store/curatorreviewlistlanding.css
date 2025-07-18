@@ -900,7 +900,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) .widestore ._78Qv2C95AM2DNCuLD5o8U {
+  html.responsive .widestore ._78Qv2C95AM2DNCuLD5o8U {
     width: 220px;
   }
 }

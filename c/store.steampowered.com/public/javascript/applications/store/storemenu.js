@@ -57,6 +57,7 @@
         BrowseLinkGridLarge: "JWPtoi9esADBpUUkODq1z",
         CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
         CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
+        BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
       };
     },
     chunkid: (module) => {
@@ -123,6 +124,7 @@
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        narrowWidth: "500px",
         Section: "_2ihG7DC0YPrw01ComUbKnY",
         Wide: "JeKLaTDB6BY1_KxkPBi7y",
         SectionTitle: "_3wkp8GaMeHBsrImd61r1X-",
@@ -2374,6 +2376,148 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        return {
+          queryKey: ["StoreQuery", _],
+          queryFn: () =>
+            (async function (_, _, _, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
+              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
+              const _ = await _._.Query(_, _);
+              if (1 != _.GetEResult())
+                throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
+              _ &&
+                _.Body()
+                  .store_items()
+                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
+              return {
+                rgItemIDs: _.Body().ids().map(_._),
+                metadata: _.Body().metadata().toObject(),
+              };
+            })(_, _, _, _, _),
+          staleTime: 6e5,
+        };
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        const {
+          count: _ = 40,
+          name: _ = "TopGrossing",
+          discounts_only: _ = !1,
+        } = _ ?? {};
+        return _(
+          _,
+          _,
+          _,
+          {
+            sort: 10,
+            start: 0,
+            count: _,
+            filters: {
+              type_filters: {
+                include_apps: !0,
+              },
+              price_filters: _
+                ? {
+                    min_discount_percent: 15,
+                  }
+                : void 0,
+              exclude_from: [2],
+              content_descriptors_excluded: _,
+            },
+          },
+          _,
+        );
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _, dataPreload: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)();
+        return (0, _._)({
+          ..._(_, _, _, _, _),
+          enabled: void 0 !== _,
+        });
+      }
+      function _(_, _) {
+        return _(
+          {
+            ...(_ ?? {}),
+            discounts_only: !0,
+          },
+          _,
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return {
+          queryKey: ["GetWishlistItemsOnSale"],
+          queryFn: () =>
+            (async function (_, _, _) {
+              const _ = _._.Init(_._);
+              _.Body().set_steamid(_._.steamid),
+                (0, _._)(_, _),
+                _ &&
+                  ((0, _._)(_, _.data_request),
+                  _.Body().set_sort_order(5),
+                  _.Body().set_page_size(_.item_count)),
+                _.Body().filters(!0).set_min_discount_percent(10);
+              const _ = await _._.GetWishlistSortedFiltered(_, _);
+              if (!_.BSuccess())
+                throw `Error from WishlistService.GetWishlistSortedFiltered: ${_.GetErrorMessage()}`;
+              return (
+                _ &&
+                  _.Body()
+                    .items()
+                    .forEach((_) => {
+                      const _ = _.store_item();
+                      _ &&
+                        __webpack_require__.cacheStoreItemData(
+                          _,
+                          _.data_request,
+                        );
+                    }),
+                {
+                  appids: _
+                    ? _.Body()
+                        .items()
+                        .slice(0, _.item_count)
+                        .map((_) => _.appid())
+                    : [],
+                  total_items_on_sale: _.Body().items().length,
+                }
+              );
+            })(_, _, _),
+          staleTime: 9e5,
+          enabled: _._.logged_in,
+        };
+      }
+      function _() {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _ } = (0, _._)({
+            include_assets: !0,
+          });
+        return (0, _._)({
+          ..._(_, _),
+          select: (_) => _.total_items_on_sale,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _();
@@ -2605,148 +2749,6 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return {
-          queryKey: ["GetWishlistItemsOnSale"],
-          queryFn: () =>
-            (async function (_, _, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_steamid(_._.steamid),
-                (0, _._)(_, _),
-                _ &&
-                  ((0, _._)(_, _.data_request),
-                  _.Body().set_sort_order(5),
-                  _.Body().set_page_size(_.item_count)),
-                _.Body().filters(!0).set_min_discount_percent(10);
-              const _ = await _._.GetWishlistSortedFiltered(_, _);
-              if (!_.BSuccess())
-                throw `Error from WishlistService.GetWishlistSortedFiltered: ${_.GetErrorMessage()}`;
-              return (
-                _ &&
-                  _.Body()
-                    .items()
-                    .forEach((_) => {
-                      const _ = _.store_item();
-                      _ &&
-                        __webpack_require__.cacheStoreItemData(
-                          _,
-                          _.data_request,
-                        );
-                    }),
-                {
-                  appids: _
-                    ? _.Body()
-                        .items()
-                        .slice(0, _.item_count)
-                        .map((_) => _.appid())
-                    : [],
-                  total_items_on_sale: _.Body().items().length,
-                }
-              );
-            })(_, _, _),
-          staleTime: 9e5,
-          enabled: _._.logged_in,
-        };
-      }
-      function _() {
-        const _ = (0, _._)(),
-          { storeBrowseContext: _ } = (0, _._)({
-            include_assets: !0,
-          });
-        return (0, _._)({
-          ..._(_, _),
-          select: (_) => _.total_items_on_sale,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
-        return {
-          queryKey: ["StoreQuery", _],
-          queryFn: () =>
-            (async function (_, _, _, _, _) {
-              const _ = _._.Init(_._);
-              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
-              _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
-              const _ = await _._.Query(_, _);
-              if (1 != _.GetEResult())
-                throw `Error executing StoreQuery "${_}": ${_.GetErrorMessage()}`;
-              _ &&
-                _.Body()
-                  .store_items()
-                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
-              return {
-                rgItemIDs: _.Body().ids().map(_._),
-                metadata: _.Body().metadata().toObject(),
-              };
-            })(_, _, _, _, _),
-          staleTime: 6e5,
-        };
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
-        const {
-          count: _ = 40,
-          name: _ = "TopGrossing",
-          discounts_only: _ = !1,
-        } = _ ?? {};
-        return _(
-          _,
-          _,
-          _,
-          {
-            sort: 10,
-            start: 0,
-            count: _,
-            filters: {
-              type_filters: {
-                include_apps: !0,
-              },
-              price_filters: _
-                ? {
-                    min_discount_percent: 15,
-                  }
-                : void 0,
-              exclude_from: [2],
-              content_descriptors_excluded: _,
-            },
-          },
-          _,
-        );
-      }
-      function _(_, _) {
-        const _ = (0, _._)(),
-          { storeBrowseContext: _, dataPreload: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)();
-        return (0, _._)({
-          ..._(_, _, _, _, _),
-          enabled: void 0 !== _,
-        });
-      }
-      function _(_, _) {
-        return _(
-          {
-            ...(_ ?? {}),
-            discounts_only: !0,
-          },
-          _,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _() {
         return _.createElement(
           _,
@@ -2865,9 +2867,6 @@
                   {
                     className: _.ButtonLabel,
                   },
-                  _.createElement(_, {
-                    "aria-label": (0, _._)("#Menu_Section_Browse_NewReleases"),
-                  }),
                   (0, _._)("#Menu_Section_Browse_NewReleases"),
                 ),
               ),
@@ -2883,9 +2882,6 @@
                     {
                       className: _.ButtonLabel,
                     },
-                    _.createElement(_, {
-                      "aria-label": (0, _._)("#Menu_Section_Browse_FreeToPlay"),
-                    }),
                     (0, _._)("#Menu_Section_Browse_FreeToPlay"),
                   ),
                 ),
@@ -2900,9 +2896,6 @@
                     {
                       className: _.ButtonLabel,
                     },
-                    _.createElement(_, {
-                      "aria-label": _.display_name,
-                    }),
                     _.display_name,
                   ),
                 ),
@@ -3002,7 +2995,13 @@
         );
       }
       function _() {
-        const { data: _ } = _();
+        const { data: _ } = _(),
+          { data: _ } = _(
+            {
+              count: 10,
+            },
+            _,
+          );
         return _.createElement(
           _,
           {
@@ -3013,11 +3012,6 @@
             {
               className: _.ButtonLabel,
             },
-            _.createElement(_, {
-              "aria-label": (0, _._)(
-                "#Menu_Section_Browse_Discounts_YourWishlist",
-              ),
-            }),
             _.createElement(
               "div",
               null,
@@ -3082,6 +3076,43 @@
             ),
         );
       }
+      function _(_) {
+        const { label: _, href: __webpack_require__, children: _ } = _,
+          { data: _ } = _(
+            {
+              count: 10,
+            },
+            _,
+          ),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
+        return _.createElement(
+          _._,
+          {
+            className: _.BrowseLinkButton,
+            href: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.BrowseButtonGrid,
+            },
+            " ",
+            _ &&
+              _.createElement(_, {
+                rgItemIDs: _.rgItemIDs,
+              }),
+          ),
+          _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.Label,
+              },
+              _,
+            ),
+        );
+      }
       function _() {
         return _.createElement(
           "div",
@@ -3117,22 +3148,22 @@
           ),
         );
       }
-      const _ = _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 31 30",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              _: "M11.8667 20.8749L14.0834 17.7416V28.3749H5.75004V20.8749H11.8667ZM19.6167 20.8749L17.4167 17.7416V28.3749H25.75V20.8749H19.6167ZM21.575 17.5416H29.9167L25.75 11.7083H17.4167L21.575 17.5416ZM14.075 11.7083H5.75004L1.58337 17.5416H9.91671L14.075 11.7083ZM16.9917 1.70825H14.4917V5.45825C14.4917 5.62311 14.5243 5.78634 14.5876 5.93854C14.651 6.09074 14.7438 6.22891 14.8608 6.3451C14.9777 6.46128 15.1165 6.55318 15.2691 6.6155C15.4217 6.67783 15.5852 6.70935 15.75 6.70825C16.0816 6.70825 16.3995 6.57656 16.6339 6.34214C16.8683 6.10772 17 5.78977 17 5.45825L16.9917 1.70825ZM23.825 5.38325L21.825 3.86659L19.975 6.31658C19.8744 6.44714 19.8005 6.59633 19.7577 6.75555C19.715 6.91477 19.7041 7.08088 19.7258 7.24431C19.7475 7.40774 19.8013 7.56527 19.8841 7.70782C19.9669 7.85037 20.0771 7.97513 20.2084 8.07492C20.4739 8.27518 20.8079 8.36218 21.1374 8.31689C21.4669 8.27161 21.765 8.09772 21.9667 7.83325L23.825 5.38325ZM11.5084 6.31658L9.65837 3.86659L7.65837 5.38325L9.51671 7.83325C9.71836 8.09772 10.0165 8.27161 10.346 8.31689C10.6755 8.36218 11.0095 8.27518 11.275 8.07492C11.4063 7.97513 11.5165 7.85037 11.5993 7.70782C11.6821 7.56527 11.7359 7.40774 11.7576 7.24431C11.7793 7.08088 11.7684 6.91477 11.7257 6.75555C11.6829 6.59633 11.609 6.44714 11.5084 6.31658Z",
-            }),
-          );
-        }),
-        _ = _.memo(function (_) {
+      _.memo(function (_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 31 30",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M11.8667 20.8749L14.0834 17.7416V28.3749H5.75004V20.8749H11.8667ZM19.6167 20.8749L17.4167 17.7416V28.3749H25.75V20.8749H19.6167ZM21.575 17.5416H29.9167L25.75 11.7083H17.4167L21.575 17.5416ZM14.075 11.7083H5.75004L1.58337 17.5416H9.91671L14.075 11.7083ZM16.9917 1.70825H14.4917V5.45825C14.4917 5.62311 14.5243 5.78634 14.5876 5.93854C14.651 6.09074 14.7438 6.22891 14.8608 6.3451C14.9777 6.46128 15.1165 6.55318 15.2691 6.6155C15.4217 6.67783 15.5852 6.70935 15.75 6.70825C16.0816 6.70825 16.3995 6.57656 16.6339 6.34214C16.8683 6.10772 17 5.78977 17 5.45825L16.9917 1.70825ZM23.825 5.38325L21.825 3.86659L19.975 6.31658C19.8744 6.44714 19.8005 6.59633 19.7577 6.75555C19.715 6.91477 19.7041 7.08088 19.7258 7.24431C19.7475 7.40774 19.8013 7.56527 19.8841 7.70782C19.9669 7.85037 20.0771 7.97513 20.2084 8.07492C20.4739 8.27518 20.8079 8.36218 21.1374 8.31689C21.4669 8.27161 21.765 8.09772 21.9667 7.83325L23.825 5.38325ZM11.5084 6.31658L9.65837 3.86659L7.65837 5.38325L9.51671 7.83325C9.71836 8.09772 10.0165 8.27161 10.346 8.31689C10.6755 8.36218 11.0095 8.27518 11.275 8.07492C11.4063 7.97513 11.5165 7.85037 11.5993 7.70782C11.6821 7.56527 11.7359 7.40774 11.7576 7.24431C11.7793 7.08088 11.7684 6.91477 11.7257 6.75555C11.6829 6.59633 11.609 6.44714 11.5084 6.31658Z",
+          }),
+        );
+      }),
+        _.memo(function (_) {
           return _.createElement(
             "svg",
             {
@@ -3149,7 +3180,7 @@
             }),
           );
         }),
-        _ = _.memo(function (_) {
+        _.memo(function (_) {
           return _.createElement(
             "svg",
             {
@@ -3166,7 +3197,7 @@
             }),
           );
         }),
-        _ = _.memo(function (_) {
+        _.memo(function (_) {
           return _.createElement(
             "svg",
             {
@@ -5944,7 +5975,7 @@
           #a;
           #i;
           #s;
-          #o;
+          #c;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
@@ -5958,7 +5989,7 @@
             1 === this.listeners.size &&
               this.#a.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#c(_, _);
+                  this.#o(_, _);
                 });
               });
           }
@@ -5992,7 +6023,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#c(_, _);
+                        this.#o(_, _);
                       });
                     }),
                     this.#u()));
@@ -6028,9 +6059,9 @@
           }
           #m(_, _) {
             return _
-              ? ((this.#i && this.#t === this.#o && _ === this.#s) ||
+              ? ((this.#i && this.#t === this.#c && _ === this.#s) ||
                   ((this.#s = _),
-                  (this.#o = this.#t),
+                  (this.#c = this.#t),
                   (this.#i = (0, _._)(this.#i, _(_)))),
                 this.#i)
               : _;
@@ -6068,7 +6099,7 @@
               )
             );
           }
-          #c(_, _) {
+          #o(_, _) {
             const _ = this.#a.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {

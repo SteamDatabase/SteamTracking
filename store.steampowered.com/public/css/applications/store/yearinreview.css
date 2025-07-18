@@ -73,7 +73,7 @@ html.responsive.touch ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
   top: 62px;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
+  html.responsive ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
     top: 62px;
   }
 }

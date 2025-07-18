@@ -864,7 +864,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin: 0;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+  html.responsive .SaleSectionCarousel .carousel__slider {
     margin: 0;
   }
 }

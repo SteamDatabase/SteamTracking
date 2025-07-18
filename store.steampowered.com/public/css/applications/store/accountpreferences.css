@@ -1013,7 +1013,7 @@ html.responsive.touch .FPQ9JppMamYmV0bS3zfDK {
   grid-template-columns: 1fr;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) .FPQ9JppMamYmV0bS3zfDK {
+  html.responsive .FPQ9JppMamYmV0bS3zfDK {
     grid-template-columns: 1fr;
   }
 }
@@ -1027,7 +1027,7 @@ html.responsive.touch .FPQ9JppMamYmV0bS3zfDK ._2DEfsEp7B2EWcj-wsoNnhc {
   display: none;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) .FPQ9JppMamYmV0bS3zfDK ._2DEfsEp7B2EWcj-wsoNnhc {
+  html.responsive .FPQ9JppMamYmV0bS3zfDK ._2DEfsEp7B2EWcj-wsoNnhc {
     display: none;
   }
 }
@@ -1133,7 +1133,7 @@ html.responsive.touch ._1UZaReJ5vqaDDNrR92LUfB {
   flex-direction: column;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) ._1UZaReJ5vqaDDNrR92LUfB {
+  html.responsive ._1UZaReJ5vqaDDNrR92LUfB {
     flex-direction: column;
   }
 }
@@ -1169,7 +1169,7 @@ html.responsive.touch ._1UZaReJ5vqaDDNrR92LUfB .owjpvFLO7gx4wTw_RofLx {
   margin-left: 10px;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) ._1UZaReJ5vqaDDNrR92LUfB .owjpvFLO7gx4wTw_RofLx {
+  html.responsive ._1UZaReJ5vqaDDNrR92LUfB .owjpvFLO7gx4wTw_RofLx {
     margin-left: 10px;
   }
 }
@@ -1189,7 +1189,7 @@ html.responsive.touch ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
   flex-direction: column;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
+  html.responsive ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
     align-items: center;
     flex-direction: column;
   }
@@ -1199,7 +1199,7 @@ html.responsive.touch ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
   flex-direction: column;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
+  html.responsive ._1UZaReJ5vqaDDNrR92LUfB ._1aj-IQUPvF3Cq-lE1msSiJ {
     align-items: normal;
     flex-direction: column;
   }
@@ -1220,7 +1220,7 @@ html.responsive.touch
   margin-left: -10px;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop)
+  html.responsive
     ._1UZaReJ5vqaDDNrR92LUfB
     ._1aj-IQUPvF3Cq-lE1msSiJ
     ._273YCymOUtX4V13BJ6p2uZ {
