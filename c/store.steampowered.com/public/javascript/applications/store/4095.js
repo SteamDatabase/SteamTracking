@@ -2418,7 +2418,8 @@
           return this.m_bUseHLSManifest;
         }
         async PlayMPD(_, _, _, _) {
-          (this.m_strMPD = _),
+          this.m_stats.StartingPlayback(),
+            (this.m_strMPD = _),
             (this.m_strHLS = _),
             (this.m_strCDNAuthURLParameters = _);
           let _ = await this.DownloadMPD();
@@ -2931,8 +2932,8 @@
         }
         OnVideoCanPlay(_) {
           this.m_bIsBuffering ||
-            (this.m_bUserPlayChoice && this.PlayOnElement(),
-            this.m_stats.LogVideoOnCanPlay(_));
+            (this.m_bUserPlayChoice && this.PlayOnElement()),
+            this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
           if (this.m_seekingToTime) {
@@ -3761,10 +3762,14 @@
         m_audioBufferedRanges = null;
         m_nSegmentDurationMS = 0;
         m_nPlaybackRate = 0;
+        m_nPerfTimeCreated = 0;
         m_nTimeToFirstFrameMS = -1;
         m_fpsMonitor = new _();
         constructor() {
           (0, _._)(this);
+        }
+        StartingPlayback() {
+          this.m_nPerfTimeCreated = performance.now();
         }
         GetBytesReceivedToDisplay() {
           return (0, _._)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -4012,10 +4017,11 @@
             this.LogDownload(0, _);
         }
         LogVideoError(_) {}
-        LogVideoOnCanPlay(_) {
+        LogVideoOnCanPlay() {
           -1 === this.m_nTimeToFirstFrameMS &&
-            (this.m_nTimeToFirstFrameMS =
-              Date.now() - this.m_allTimeSnapshot.m_timeMS);
+            (this.m_nTimeToFirstFrameMS = Math.ceil(
+              performance.now() - this.m_nPerfTimeCreated,
+            ));
         }
         LogErrorEvent(_, _) {}
         ReportVideoStalled(_, _) {
