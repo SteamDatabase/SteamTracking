@@ -13919,27 +13919,19 @@
             _.createElement(
               "tbody",
               null,
-              _?.commitments
-                ?.sort((_, _) =>
-                  _.includes(_.milestone_id) && !_.includes(_.milestone_id)
-                    ? -1
-                    : !_.includes(_.milestone_id) && _.includes(_.milestone_id)
-                      ? 1
-                      : _.expected_delivery - _.expected_delivery,
-                )
-                .map((_, _) =>
-                  _.createElement(_, {
-                    key: "row" + _.milestone_id,
-                    inputMilestone: _,
-                    index: _,
-                    seasonPassID: __webpack_require__,
-                    rgAllMilestones: _.commitments,
-                    bAppHasSteamChinaToolsEnabled: _,
-                    rgPublishedMilestoneIDs: _,
-                    rgShippedMilestoneIDs: _,
-                    fnDeleteMilestone: () => _(_.milestone_id),
-                  }),
-                ),
+              _?.commitments?.map((_, _) =>
+                _.createElement(_, {
+                  key: "row" + _.milestone_id,
+                  inputMilestone: _,
+                  index: _,
+                  seasonPassID: __webpack_require__,
+                  rgAllMilestones: _.commitments,
+                  bAppHasSteamChinaToolsEnabled: _,
+                  rgPublishedMilestoneIDs: _,
+                  rgShippedMilestoneIDs: _,
+                  fnDeleteMilestone: () => _(_.milestone_id),
+                }),
+              ),
             ),
           ),
         );

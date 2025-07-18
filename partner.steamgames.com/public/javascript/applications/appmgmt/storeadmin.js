@@ -12091,27 +12091,19 @@
             a.createElement(
               "tbody",
               null,
-              t?.commitments
-                ?.sort((e, t) =>
-                  i.includes(e.milestone_id) && !i.includes(t.milestone_id)
-                    ? -1
-                    : !i.includes(e.milestone_id) && i.includes(t.milestone_id)
-                      ? 1
-                      : e.expected_delivery - t.expected_delivery,
-                )
-                .map((e, r) =>
-                  a.createElement(Tr, {
-                    key: "row" + e.milestone_id,
-                    inputMilestone: e,
-                    index: r,
-                    seasonPassID: n,
-                    rgAllMilestones: t.commitments,
-                    bAppHasSteamChinaToolsEnabled: l,
-                    rgPublishedMilestoneIDs: o,
-                    rgShippedMilestoneIDs: i,
-                    fnDeleteMilestone: () => s(e.milestone_id),
-                  }),
-                ),
+              t?.commitments?.map((e, r) =>
+                a.createElement(Tr, {
+                  key: "row" + e.milestone_id,
+                  inputMilestone: e,
+                  index: r,
+                  seasonPassID: n,
+                  rgAllMilestones: t.commitments,
+                  bAppHasSteamChinaToolsEnabled: l,
+                  rgPublishedMilestoneIDs: o,
+                  rgShippedMilestoneIDs: i,
+                  fnDeleteMilestone: () => s(e.milestone_id),
+                }),
+              ),
             ),
           ),
         );
