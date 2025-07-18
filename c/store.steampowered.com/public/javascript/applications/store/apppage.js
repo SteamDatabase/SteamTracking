@@ -2365,6 +2365,8 @@
         m_listeners = new _._();
         m_persistState = {};
         m_fnOnPlaybackEnd;
+        m_strStatsURL = "";
+        m_bSentStats = !1;
         m_bPaused = !1;
         m_bUserInputNeeded = !1;
         m_bMuted = !1;
@@ -2406,8 +2408,9 @@
         HasPlaybackStarted() {
           return this.m_bPlaybackStarted;
         }
-        Start(_, _, _) {
+        Start(_, _, _, _) {
           this.Stop(),
+            (this.m_strStatsURL = _),
             (this.m_elVideo = _),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
@@ -2454,6 +2457,11 @@
               "valve-metadatachanged",
               this.OnMetadataChanged,
             ),
+            this.m_listeners.AddEventListener(
+              window,
+              "pagehide",
+              this.SendStats,
+            ),
             (this.m_player = new _._(this.m_elVideo));
           let _ =
             void 0 !== this.m_persistState.m_bAudioMuted &&
@@ -2466,7 +2474,8 @@
           this.SetVolume(_, !0), this.m_player.PlayMPD(_, null, _, !1);
         }
         Stop() {
-          this.m_listeners.Unregister(),
+          this.SendStats(),
+            this.m_listeners.Unregister(),
             this.m_player && this.m_player.Close(),
             (this.m_elVideo = null),
             (this.m_player = null),
@@ -2578,16 +2587,37 @@
         GetFailureReason() {
           return this.m_eFailureReason;
         }
+        SendStats() {
+          !this.m_bSentStats &&
+            this.m_player &&
+            this.m_strStatsURL &&
+            (!(function (_, _) {
+              if (!navigator || void 0 === navigator.sendBeacon) return;
+              let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary();
+              if (0 == _.nBytesReceived) return;
+              let _ = _.GetAndCloseWatchedIntervals();
+              if (_.reduce((_, _) => _ + (_[1] - _[0]), 0) < 5) return;
+              let _ = {
+                  strManifest: _.IsPlayingHLS() ? _.GetHLSURL() : _.GetMPDURL(),
+                  watched: _,
+                  ..._,
+                },
+                _ = JSON.stringify(_),
+                _ = new FormData();
+              _.append("stats", _), navigator.sendBeacon(_, _);
+            })(this.m_player, this.m_strStatsURL),
+            (this.m_bSentStats = !0));
+        }
       }
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         let _ = (0, _.useContext)(_),
           _ = _.useRef();
         _.current || (_.current = new _(_));
         let _ = (0, _._)(
           (_) => {
-            if (_) return _.current.Start(_, _, _), () => _.current.Stop();
+            if (_) return _.current.Start(_, _, _, _), () => _.current.Stop();
           },
-          [_, _, _],
+          [_, _, _, _],
         );
         return (
           (0, _.useEffect)(() => {
@@ -2618,7 +2648,8 @@
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
         (0, _._)([_._], _.prototype, "OnUserInputNeeded", null),
         (0, _._)([_._.bound], _.prototype, "OnMetadataChanged", null),
-        (0, _._)([_._], _.prototype, "UserInputReceived", null);
+        (0, _._)([_._], _.prototype, "UserInputReceived", null),
+        (0, _._)([_._], _.prototype, "SendStats", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4084,10 +4115,11 @@
           altText: _,
           title: _,
           category: _,
+          statsURL: _,
         } = _;
         (_ = _ || ""), (_ = _ || 0);
         let [_, _] = (0, _._)(!0),
-          [_, _] = _(_, __webpack_require__, _),
+          [_, _] = _(_, __webpack_require__, _, _),
           [_, _] = (function (_) {
             let _ = (0, _.useRef)(null),
               _ = (0, _.useRef)(null),
@@ -4307,6 +4339,7 @@
             screenshot: _,
             title: _,
             category: _,
+            statsURL: _,
           } = _,
           _ = (function () {
             _ ||
@@ -4352,6 +4385,7 @@
                 altText: _,
                 title: _,
                 category: _,
+                statsURL: _,
               }),
             )
           : null;

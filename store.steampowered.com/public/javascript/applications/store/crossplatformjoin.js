@@ -131,7 +131,7 @@
     },
     40917: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => q });
+      s.r(t), s.d(t, { default: () => M });
       var n = s(90626),
         r = s(9054),
         i = s.n(r),
@@ -279,7 +279,7 @@
                 t.error.message,
               );
       }
-      function M(e) {
+      function q(e) {
         const t = g(e.steamAppId);
         return t
           ? n.createElement(
@@ -331,8 +331,7 @@
                             ),
                           ),
                     ),
-                    !O.TS.IN_MOBILE &&
-                      !O.TS.IN_MOBILE_WEBVIEW &&
+                    !O.TS.IN_MOBILE_WEBVIEW &&
                       n.createElement(
                         "div",
                         { className: i().SectionCtr },
@@ -343,7 +342,7 @@
             )
           : n.createElement(I.t, null);
       }
-      function q() {
+      function M() {
         const e = (0, O.Tc)("multiplayersession_join", "application_config"),
           t = new URLSearchParams((0, a.zy)().search).get("jws"),
           { header: s, body: r } = (0, l.I3)(t) || { header: {}, body: {} };
@@ -356,7 +355,7 @@
             "div",
             { className: i().JoinApp },
             o && u && u
-              ? n.createElement(M, {
+              ? n.createElement(q, {
                   steamAppId: o,
                   sessionLiveDataUrl: u,
                   sessionID: c,

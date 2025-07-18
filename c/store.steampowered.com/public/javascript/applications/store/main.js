@@ -117,6 +117,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        storeMenuResponsiveModeWidth: "730px",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         HoverPosition: "_3vg1vYU7iTWqONciv9cuJN",
         Ready: "_1Ye_0niF2UqB8uQTbm8B6B",
         NoSpace: "pxVZHRCaftc2xXduMp7bg",
@@ -31538,6 +31543,107 @@
             _ = 4294967295 & _;
           this.m_ulSteamID = new _._(_, _, !0);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (
+          (function (_) {
+            const _ = "function" == typeof matchMedia ? matchMedia : _,
+              _ = (0, _.useMemo)(() => _(_), [_, _]),
+              [_, _] = (0, _.useState)(!!_ && _.matches);
+            return (
+              (0, _.useEffect)(() => {
+                if (!_) return () => {};
+                function _(_) {
+                  _(_.matches);
+                }
+                return (
+                  _(_.matches),
+                  __webpack_require__.addEventListener("change", _),
+                  () => __webpack_require__.removeEventListener("change", _)
+                );
+              }, [_]),
+              _
+            );
+          })(`(max-width: ${_.storeMenuResponsiveModeWidth})`) ||
+          _._.IN_MOBILE_WEBVIEW
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 12 12",
+            fill: "none",
+            role: "presentation",
+            className: _.className,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M5.81026 6.36084L8.50899 3.66211L9.6875 4.84062L5.81026 8.71786L1.93302 4.84062L3.11153 3.66211L5.81026 6.36084Z",
+          }),
+        );
+      }
+      const _ = _.createContext({
+        nBackdropHeight: void 0,
+        bBackdropActive: !1,
+      });
+      function _() {
+        return _.useContext(_);
+      }
+      const _ = _.createContext(void 0);
+      function _() {}
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(""),
+          [_, _] = _.useState(() => _),
+          [_, _] = _.useState(!1),
+          [_, _, _] = (0, _._)(),
+          _ = `searchSuggestions_${_.useId()}`,
+          _ = _.useMemo(
+            () => ({
+              term: _,
+              setTerm: __webpack_require__,
+              onInputKeyDown: _,
+              setInputKeyDown: (_) => _(() => _ ?? _),
+              suggestionsId: _,
+              bEverActive: _,
+              onActive: () => _(!0),
+              bSearchVisible: _,
+              openSearch: _,
+              closeSearch: _,
+            }),
+            [_, _, _, _, _, _, _],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _() {
+        return _.useContext(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -64729,7 +64835,8 @@
             : null
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -65467,6 +65574,13 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         );
       const _ = function (_) {
         return _.createElement(
@@ -66138,64 +66252,76 @@
           _.Fragment,
           null,
           _.createElement(_, null),
-          _.createElement(_._, {
-            config: {
-              "green-envelope": () =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, {
-                    bResponsiveHeader: !1,
-                    notifications: (0, _._)(
-                      "steam_notifications",
-                      "application_config",
-                    ),
-                  }),
-                ),
-              "green-envelope-responsive": () =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, {
-                    bResponsiveHeader: !0,
-                    notifications: (0, _._)(
-                      "steam_notifications",
-                      "application_config",
-                    ),
-                  }),
-                ),
-              parentalunlock: (_) =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, {
-                    ..._,
-                  }),
-                ),
-              "open-in-desktop-client": () =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, null),
-                ),
-              "store-menu-v7": () =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, null),
-                ),
-            },
-          }),
+          _.createElement(
+            _._,
+            null,
+            _.createElement(_._, {
+              config: {
+                "green-envelope": () =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, {
+                      bResponsiveHeader: !1,
+                      notifications: (0, _._)(
+                        "steam_notifications",
+                        "application_config",
+                      ),
+                    }),
+                  ),
+                "green-envelope-responsive": () =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, {
+                      bResponsiveHeader: !0,
+                      notifications: (0, _._)(
+                        "steam_notifications",
+                        "application_config",
+                      ),
+                    }),
+                  ),
+                parentalunlock: (_) =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  ),
+                "open-in-desktop-client": () =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, null),
+                  ),
+                "store-menu-v7": () =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, null),
+                  ),
+                "store-menu-responsive-search": () =>
+                  _.createElement(
+                    _.Suspense,
+                    {
+                      fallback: null,
+                    },
+                    _.createElement(_, null),
+                  ),
+              },
+            }),
+          ),
           _.createElement(_._, {
             config: {
               parentalfeaturerequest: (_) =>

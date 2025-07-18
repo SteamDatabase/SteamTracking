@@ -51373,7 +51373,12 @@
                 : null;
             },
             [i, o, r, m],
-          );
+          ),
+          p =
+            "mp4_page_bg" == a ||
+            "mp4_page_bg_mobile" == a ||
+            "webm_page_bg" == a ||
+            "webm_page_bg_mobile" == a;
         return l.createElement(
           "div",
           { className: c().MarketingMessage },
@@ -51383,6 +51388,7 @@
             fnDeletAssetLang: (e) => t.DeleteAssetObjectLang(a, e),
             fnDeleteAllAssets: () => t.ClearAllAssetObjects(a),
             bVerifyAssets: !0,
+            bVideoAsset: p,
           }),
         );
       }
@@ -53705,6 +53711,7 @@
             fnDeletAssetLang: (e) => t.DeleteAssetObjectLang(a, e),
             fnDeleteAllAssets: () => t.ClearAllAssetObjects(a),
             bVerifyAssets: !0,
+            bVideoAsset: "mp4" == a || "webm" == a,
           }),
         );
       }

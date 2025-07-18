@@ -683,6 +683,11 @@ function MoveItemToTrade( elItem )
 }
 
 
+function IsTradeProtected( appid )
+{
+	if ( typeof( g_rgAppContextData[appid] ) != 'undefined' ) { return g_rgAppContextData[appid].secure_trades; }
+	if ( typeof( UserThem.rgAppInfo[appid] ) != 'undefined' ) { return UserThem.rgAppInfo[appid].secure_trades; }
+}
 
 // returns the trade protection status of the proposed trade -
 // true means trade protected, false means not, undefined means
@@ -712,7 +717,7 @@ function GetTradeProtectedStatusFromTrade( rgTradeStatus )
 	{
 		for ( let asset of rgAsset )
 		{
-			if ( g_rgAppContextData[ asset.appid ].secure_trades )
+			if ( IsTradeProtected( asset.appid ) )
 			{
 				bSeenTradeProtected = true;
 			}
@@ -760,7 +765,7 @@ function ApplyTradeProtectedStatus( statusNew )
 	// - if all are true, show warning, otherwise hide it
 	var bWarn = g_ActiveInventory && g_ActiveInventory.appid && g_ActiveInventory.appid != -1 &&
 		g_bTradeProtected != undefined &&
-		g_rgAppContextData[ g_ActiveInventory.appid ].secure_trades != g_bTradeProtected;
+		IsTradeProtected( g_ActiveInventory.appid ) != g_bTradeProtected;
 
 	bWarn = !!bWarn;
 	$J( '.trade_protected_potential_conflict' ).toggleClass( 'active', bWarn );
@@ -794,7 +799,7 @@ function FindSlotAndSetItem( item, xferAmount )
 	}
 
 	
-	if ( g_bTradeProtected != undefined && g_rgAppContextData[item.appid].secure_trades != g_bTradeProtected )
+	if ( g_bTradeProtected != undefined && IsTradeProtected( item.appid ) != g_bTradeProtected )
 	{
 		// the user is trying to intermingle trade protected items and non trade protected items.
         // FUTURE we could show an error here if just failing the drop proves to be confusing due to the user

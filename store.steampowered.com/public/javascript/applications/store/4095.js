@@ -2291,6 +2291,7 @@
         m_schFirstFrameThrottler = new m.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new m.LU();
+        m_watchedIntervals = new Z();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -2304,6 +2305,12 @@
         }
         GetMPDURL() {
           return this.m_strMPD;
+        }
+        GetHLSURL() {
+          return this.m_strHLS;
+        }
+        IsPlayingHLS() {
+          return this.m_bUseHLSManifest;
         }
         async PlayMPD(e, t, a, n) {
           (this.m_strMPD = e),
@@ -2367,6 +2374,7 @@
                   this.UpdateMPD,
                 ),
               this.CalcVideoStartRelativeToSystemClock(i.headers.date)),
+            this.IsLiveContent() || this.m_watchedIntervals.Enable(),
             this.m_bUseHLSManifest)
           )
             return (
@@ -2381,10 +2389,30 @@
                 "visibilitychange",
                 this.OnVisibilityChangeForHLS,
               ),
-              void this.m_listeners.AddEventListener(
+              this.m_listeners.AddEventListener(
                 this.m_elVideo,
                 "ended",
                 this.OnEndedForHLS,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "play",
+                this.OnVideoPlay,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "seeking",
+                this.OnVideoSeeking,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "seeked",
+                this.OnVideoSeeked,
+              ),
+              void this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "pause",
+                this.OnVideoPause,
               )
             );
           this.BCreateLoaders()
@@ -2449,7 +2477,14 @@
             (this.m_elVideo.src = this.m_strHLS);
         }
         OnEndedForHLS() {
-          this.m_bUseHLSManifest && this.DispatchEvent("valve-ended");
+          this.m_bUseHLSManifest &&
+            (this.m_watchedIntervals.OnEnded(this.m_elVideo),
+            this.DispatchEvent("valve-ended"));
+        }
+        EndPlayback() {
+          this.Pause(),
+            this.m_watchedIntervals.OnEnded(this.m_elVideo),
+            this.DispatchEvent("valve-ended");
         }
         Close() {
           if (
@@ -2486,7 +2521,8 @@
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
-            (this.m_nLastPlaytimeLoaders = 0);
+            (this.m_nLastPlaytimeLoaders = 0),
+            this.m_watchedIntervals.Clear();
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
@@ -2651,7 +2687,17 @@
             this.m_listeners.AddEventListener(
               this.m_elVideo,
               "play",
-              this.OnPlayAction,
+              this.OnVideoPlay,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "seeking",
+              this.OnVideoSeeking,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "seeked",
+              this.OnVideoSeeked,
             ),
             (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
             (this.m_resizeObserver = (0, N.Fd)(
@@ -2689,8 +2735,7 @@
               (0, g.q_)(
                 `pausing playback due to OnVideoWaiting (endTime=${this.m_mpd.GetEndTime()}, currentPlaytime=${this.GetCurrentPlayTime()} )`,
               ),
-              this.Pause(),
-              void this.DispatchEvent("valve-ended")
+              void this.EndPlayback()
             );
           if (
             !this.BIsPlayerBufferedBetween(
@@ -2765,9 +2810,11 @@
           }
         }
         OnVideoPause(e) {
-          this.OnVideoBufferProgress(),
+          this.m_bUseHLSManifest ||
+            (this.OnVideoBufferProgress(),
             this.m_stats.GetFPSMonitor().Close(),
-            this.SendUpdateToBookmarkServiceIfNeeded();
+            this.SendUpdateToBookmarkServiceIfNeeded()),
+            this.m_watchedIntervals.OnPause(this.m_elVideo);
         }
         OnVideoResize(e) {
           this.m_stats.GetFPSMonitor().SetWindowResized();
@@ -2841,7 +2888,7 @@
           } else {
             const e = this.GetAvailableVideoStartTime(),
               t = this.GetBufferedLiveEdgeTime() - e;
-            this.GetCurrentPlayTime() - e >= t && this.Pause();
+            this.GetCurrentPlayTime() - e >= t && this.EndPlayback();
           }
         }
         SetBookmarkAdapter(e) {
@@ -2868,13 +2915,21 @@
         GetCurrentTimedTextRepresentation() {
           return this.m_timedTextRepSelected;
         }
-        OnPlayAction() {
-          this.SendUpdateToBookmarkServiceIfNeeded(),
+        OnVideoPlay() {
+          this.m_bUseHLSManifest ||
+            (this.SendUpdateToBookmarkServiceIfNeeded(),
             this.m_stats
               .GetFPSMonitor()
               .StartTracking(() =>
                 this.m_stats.ExtractFrameInfo(this.m_elVideo),
-              );
+              )),
+            this.m_watchedIntervals.OnPlay(this.m_elVideo);
+        }
+        OnVideoSeeking() {
+          this.m_watchedIntervals.OnSeeking(this.m_elVideo);
+        }
+        OnVideoSeeked() {
+          this.m_watchedIntervals.OnSeeked(this.m_elVideo);
         }
         BIsPlayerBufferedBetween(e, t) {
           return (
@@ -3269,6 +3324,13 @@
         GetDASHPlayerStats() {
           return this.m_stats;
         }
+        GetAndCloseWatchedIntervals() {
+          return (
+            this.m_elVideo &&
+              this.m_watchedIntervals.CloseCurrentInterval(this.m_elVideo),
+            this.m_watchedIntervals.GetIntervals()
+          );
+        }
         ReportPlayerStats() {
           this.m_stats.ReportPlayerStats(this.m_rgLoaders, this.m_elVideo),
             this.m_schReportPlayerTrigger.Schedule(3e5, this.ReportPlayerStats);
@@ -3400,7 +3462,9 @@
           "SendUpdateToBookmarkServiceIfNeeded",
           null,
         ),
-        (0, i.Cg)([p.o], z.prototype, "OnPlayAction", null),
+        (0, i.Cg)([p.o], z.prototype, "OnVideoPlay", null),
+        (0, i.Cg)([p.o], z.prototype, "OnVideoSeeking", null),
+        (0, i.Cg)([p.o], z.prototype, "OnVideoSeeked", null),
         (0, i.Cg)([p.o], z.prototype, "GetPlaybackRate", null),
         (0, i.Cg)([p.o], z.prototype, "GetCDNAuthURLParameter", null),
         (0, i.Cg)([p.o], z.prototype, "OnSegmentDownloaded", null),
@@ -3418,6 +3482,71 @@
         ),
         (0, i.Cg)([p.o], z.prototype, "ReportPlayerStats", null),
         (0, i.Cg)([o.XI.bound], z.prototype, "CaptureStatsForDisplay", null);
+      class Z {
+        m_bEnabled = !1;
+        m_rgIntervals = [];
+        m_nWatchStart = void 0;
+        Enable() {
+          this.m_bEnabled = !0;
+        }
+        GetIntervals() {
+          return this.m_rgIntervals;
+        }
+        CloseCurrentInterval(e) {
+          this.StopInterval(e);
+        }
+        Clear() {
+          (this.m_bEnabled = !1),
+            (this.m_rgIntervals = []),
+            (this.m_nWatchStart = void 0);
+        }
+        OnPlay(e) {
+          this.StartInterval(e);
+        }
+        OnPause(e) {
+          this.StopInterval(e);
+        }
+        OnSeeking(e) {
+          this.StopInterval(e);
+        }
+        OnSeeked(e) {
+          e.paused || this.StartInterval(e);
+        }
+        OnEnded(e) {
+          this.StopInterval(e);
+        }
+        StartInterval(e) {
+          this.m_bEnabled &&
+            void 0 === this.m_nWatchStart &&
+            ((this.m_nWatchStart = e.currentTime),
+            console.log("start interval", this.m_nWatchStart));
+        }
+        StopInterval(e) {
+          if (!this.m_bEnabled || void 0 === this.m_nWatchStart) return;
+          let t = e.currentTime;
+          console.log("stop interval", this.m_nWatchStart, t),
+            this.MergeInterval([this.m_nWatchStart, t]),
+            (this.m_nWatchStart = void 0);
+        }
+        MergeInterval(e) {
+          let t;
+          for (
+            e[0] = Math.floor(e[0]), e[1] = Math.ceil(e[1]), t = 0;
+            t < this.m_rgIntervals.length &&
+            !(e[0] <= this.m_rgIntervals[t][1]);
+            t++
+          );
+          let a,
+            [n, i] = e;
+          for (a = t; a < this.m_rgIntervals.length; a++) {
+            let e = this.m_rgIntervals[a];
+            if (e[0] > i) break;
+            (n = Math.min(n, e[0])), (i = Math.max(i, e[1]));
+          }
+          let r = a - t;
+          this.m_rgIntervals.splice(t, r, [n, i]);
+        }
+      }
     },
     34374: (e, t, a) => {
       "use strict";
@@ -3494,7 +3623,6 @@
         m_videoResolution = 0;
         m_audioRate = 0;
         m_audioChannel = 0;
-        m_frameRate = 0;
         m_strBufferingVideoResolution = "0x0@0";
         m_nPlaybackVideoResolution = 0;
         m_strPlaybackVideoResolution = "0x0";
@@ -3690,24 +3818,22 @@
               this.m_rgSnapShots.length - 1
             ].m_nInitialVideoResolution = t)),
             (this.m_strBufferingVideoResolution = e + "x" + t + "@" + a),
-            (this.m_videoResolution = t),
-            (this.m_frameRate = a);
+            (this.m_videoResolution = t);
         }
         SetRepresentation(e) {
-          e &&
-            (e.nAudioSamplingRate
-              ? ((this.m_audioRate = Math.round(e.nBandwidth / 1e3)),
+          if (e) {
+            if (e.nAudioSamplingRate)
+              (this.m_audioRate = Math.round(e.nBandwidth / 1e3)),
                 (this.m_audioChannel = e.nAudioChannels),
-                (this.m_nAudioBandwidth = e.nBandwidth))
-              : e.nFrameRate &&
-                (this.SetVideoPlaybackResolution(
-                  e.nWidth,
-                  e.nHeight,
-                  e.nFrameRate,
-                ),
-                (this.m_nVideoBandwidth = e.nBandwidth)),
-            (this.m_nBandwidthRequired =
-              this.m_nAudioBandwidth + this.m_nVideoBandwidth));
+                (this.m_nAudioBandwidth = e.nBandwidth);
+            else if (e.nWidth) {
+              let t = e.nFrameRate || 0;
+              this.SetVideoPlaybackResolution(e.nWidth, e.nHeight, t),
+                (this.m_nVideoBandwidth = e.nBandwidth || 0);
+            }
+            this.m_nBandwidthRequired =
+              this.m_nAudioBandwidth + this.m_nVideoBandwidth;
+          }
         }
         SetCurrentVideoBandwidth(e) {
           this.m_nCurBandwidthVideo = e;
@@ -3911,6 +4037,22 @@
             ),
             this.CreateNewEmptySnapshot(t.videoHeight),
             this.SendReportToServer(n, this.m_strStatsLink);
+        }
+        GetPlayerStatsSummary() {
+          return {
+            nTimeToFirstFrameMS: this.m_nTimeToFirstFrameMS,
+            nBytesReceived: this.m_allTimeSnapshot.m_nBytesReceived,
+            nAvgBandwidthBitSec: Math.round(
+              this.m_allTimeSnapshot.GetAverageBandwidth(),
+            ),
+            nAvgSegmentDownloadMS: Math.ceil(
+              this.m_allTimeSnapshot.GetAverageDownloadTime(),
+            ),
+            nFailedSegmentDownloads: this.m_allTimeSnapshot.m_nFailedSegments,
+            nPlaybackStalls: this.m_allTimeSnapshot.m_nStallEvents,
+            nFramesDropped: this.m_allTimeSnapshot.m_nFramesDropped,
+            nLastVideoHeight: this.m_videoResolution,
+          };
         }
         async SendReportToServer(e, t) {
           let a = new URL(t),

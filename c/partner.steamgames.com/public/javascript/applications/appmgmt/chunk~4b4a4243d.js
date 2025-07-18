@@ -1494,6 +1494,7 @@
             fnDeleteAllAssets: _,
             showDeleteAll: _ = !0,
             bVerifyAssets: _,
+            bVideoAsset: _,
           } = _,
           [_, _] = _.useState(
             __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
@@ -1504,7 +1505,7 @@
           const _ = _(_);
           _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
         }, [_, _, _]);
-        const _ = (0, _.useMemo)(() => _.map((_) => _(_)), [_]);
+        const _ = (0, _.useMemo)(() => _.map((_) => _(_)), [_, _]);
         return _.createElement(
           "div",
           {
@@ -1569,7 +1570,7 @@
                 _.createElement(_, {
                   rgAssetURL: _,
                   rgLang: _,
-                  bIsImage: !0,
+                  bIsImage: !_,
                 }),
             ),
           ),

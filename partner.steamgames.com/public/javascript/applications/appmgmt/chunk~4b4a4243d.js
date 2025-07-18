@@ -1389,22 +1389,23 @@
             fnDeleteAllAssets: l,
             showDeleteAll: i = !0,
             bVerifyAssets: m,
+            bVideoAsset: d,
           } = e,
-          [d, g] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
-          [f, h] = s.useState(n(d)),
-          E = s.useMemo(() => [...t].sort(), [t]);
+          [g, f] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
+          [h, E] = s.useState(n(g)),
+          A = s.useMemo(() => [...t].sort(), [t]);
         s.useEffect(() => {
-          const e = n(d);
-          e ? h(e) : E.length > 0 ? g(E[0]) : h(null);
-        }, [d, n, E]);
-        const A = (0, s.useMemo)(() => t.map((e) => n(e)), [t]);
+          const e = n(g);
+          e ? E(e) : A.length > 0 ? f(A[0]) : E(null);
+        }, [g, n, A]);
+        const v = (0, s.useMemo)(() => t.map((e) => n(e)), [n, t]);
         return s.createElement(
           "div",
           { className: u().UploadedImageDisplayCtn },
           s.createElement(
             "div",
             { className: u().UploaderLeftCol },
-            s.createElement(I, { curAssetURL: f, imageClassname: o }),
+            s.createElement(I, { curAssetURL: h, imageClassname: o }),
           ),
           s.createElement(
             "div",
@@ -1420,31 +1421,31 @@
               s.createElement(
                 "div",
                 { className: u().LangSelectCtn },
-                E.map((e) =>
+                A.map((e) =>
                   s.createElement(w, {
                     key: e,
                     language: e,
-                    selectedLanguage: d,
-                    setSelectedLanguage: g,
+                    selectedLanguage: g,
+                    setSelectedLanguage: f,
                     deleteLanguage: r,
                   }),
                 ),
               ),
               i &&
-                Boolean(E.length) &&
+                Boolean(A.length) &&
                 s.createElement(
                   "a",
                   {
                     href: "#",
                     className: u().DeleteAll,
                     onClick: (e) => {
-                      l ? l() : E.forEach((e) => r(e)), e.preventDefault();
+                      l ? l() : A.forEach((e) => r(e)), e.preventDefault();
                     },
                   },
                   (0, p.we)("#Button_DeleteAll"),
                 ),
               Boolean(m) &&
-                s.createElement(_, { rgAssetURL: A, rgLang: t, bIsImage: !0 }),
+                s.createElement(_, { rgAssetURL: v, rgLang: t, bIsImage: !d }),
             ),
           ),
         );

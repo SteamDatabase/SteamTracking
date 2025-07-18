@@ -2313,7 +2313,7 @@
       }
       function Ke(e) {
         const t = me.Get(),
-          a = i.TS.IN_MOBILE || i.TS.IN_MOBILE_WEBVIEW;
+          a = i.TS.IN_MOBILE_WEBVIEW;
         return n.createElement(
           "div",
           { className: xe.AccountDetailsSubBlock },
@@ -2339,7 +2339,7 @@
           a = me.Get(),
           c = t.email_validated,
           r = t.steamguard_scheme == Me.k_ETwoFactorTokenSteamguardScheme_Email,
-          s = i.TS.IN_MOBILE || i.TS.IN_MOBILE_WEBVIEW;
+          s = i.TS.IN_MOBILE_WEBVIEW;
         return n.createElement(
           "div",
           { className: xe.AccountDetailsSubBlock },

@@ -2704,7 +2704,7 @@
       }
       function _(_) {
         const _ = _.Get(),
-          _ = _._.IN_MOBILE || _._.IN_MOBILE_WEBVIEW;
+          _ = _._.IN_MOBILE_WEBVIEW;
         return _.createElement(
           "div",
           {
@@ -2732,7 +2732,7 @@
           _ = _.Get(),
           _ = _.email_validated,
           _ = _.steamguard_scheme == _.k_ETwoFactorTokenSteamguardScheme_Email,
-          _ = _._.IN_MOBILE || _._.IN_MOBILE_WEBVIEW;
+          _ = _._.IN_MOBILE_WEBVIEW;
         return _.createElement(
           "div",
           {

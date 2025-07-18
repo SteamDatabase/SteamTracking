@@ -406,8 +406,7 @@
                             ),
                           ),
                     ),
-                    !_._.IN_MOBILE &&
-                      !_._.IN_MOBILE_WEBVIEW &&
+                    !_._.IN_MOBILE_WEBVIEW &&
                       _.createElement(
                         "div",
                         {

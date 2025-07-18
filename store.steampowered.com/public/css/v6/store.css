@@ -4720,7 +4720,7 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	min-width: 972px;
 }
 
-body.v7menu .game_page_background {
+html:not(.rn_mobile_app) body.v7menu .game_page_background {
 	padding-top: var( --store-menu-overlap-height, 46px );
 }
 
@@ -6348,7 +6348,7 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	overflow: visible;
 }
 
-.StoreMenuLoadingPlaceholder .PlaceholderInner {
+html:not(.rn_mobile_app) .StoreMenuLoadingPlaceholder .PlaceholderInner {
 	border-bottom: 1px solid rgba(126, 126, 126, 0.17);
 	background: rgba(12, 26, 36, 0.75);
 	backdrop-filter: blur(50px);
@@ -6365,7 +6365,7 @@ body.v7menu .responsive_page_template_content {
 	display: flow-root; /* create a block formatting context so margins don't extend outside of this element */
 }
 
-body.v7menu:not(.menu_background_overlap):not(.sale_page_background) .responsive_page_template_content {
+html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap):not(.sale_page_background) .responsive_page_template_content {
 	padding-top: var( --store-menu-overlap-height, 46px );
 }
 
