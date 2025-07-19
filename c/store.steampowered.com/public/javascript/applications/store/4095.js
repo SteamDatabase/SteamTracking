@@ -3647,14 +3647,12 @@
         StartInterval(_) {
           this.m_bEnabled &&
             void 0 === this.m_nWatchStart &&
-            ((this.m_nWatchStart = _.currentTime),
-            console.log("start interval", this.m_nWatchStart));
+            (this.m_nWatchStart = _.currentTime);
         }
         StopInterval(_) {
           if (!this.m_bEnabled || void 0 === this.m_nWatchStart) return;
           let _ = _.currentTime;
-          console.log("stop interval", this.m_nWatchStart, _),
-            this.MergeInterval([this.m_nWatchStart, _]),
+          this.MergeInterval([this.m_nWatchStart, _]),
             (this.m_nWatchStart = void 0);
         }
         MergeInterval(_) {

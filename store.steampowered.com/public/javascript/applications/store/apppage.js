@@ -5389,6 +5389,7 @@
               onPlaybackEnd: null,
               title: t.title,
               category: t.category,
+              statsURL: t.statsURL,
             }),
           ),
         );

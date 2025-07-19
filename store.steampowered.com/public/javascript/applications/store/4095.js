@@ -3528,14 +3528,12 @@
         StartInterval(e) {
           this.m_bEnabled &&
             void 0 === this.m_nWatchStart &&
-            ((this.m_nWatchStart = e.currentTime),
-            console.log("start interval", this.m_nWatchStart));
+            (this.m_nWatchStart = e.currentTime);
         }
         StopInterval(e) {
           if (!this.m_bEnabled || void 0 === this.m_nWatchStart) return;
           let t = e.currentTime;
-          console.log("stop interval", this.m_nWatchStart, t),
-            this.MergeInterval([this.m_nWatchStart, t]),
+          this.MergeInterval([this.m_nWatchStart, t]),
             (this.m_nWatchStart = void 0);
         }
         MergeInterval(e) {
