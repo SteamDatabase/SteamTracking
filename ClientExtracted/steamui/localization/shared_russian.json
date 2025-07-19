@@ -3683,5 +3683,9 @@
     "Accessibility_Group_Gameplay": "Игровой процесс",
     "Accessibility_Group_Visual": "Изображение",
     "Accessibility_Group_Audio": "Звук",
-    "Accessibility_Group_Input": "Ввод"
+    "Accessibility_Group_Input": "Ввод",
+    "SteamNotifications_TradeReversal_Title": "Защита от обмена",
+    "SteamNotifications_TradeReversal_Body": "Операция отменена",
+    "SteamNotifications_TradeReversal_Body_Short": "Операция отменена",
+    "SteamNotifications_TradeReversal_Description": "Одна из ваших недавних операций обмена была отменена другим участником."
 }

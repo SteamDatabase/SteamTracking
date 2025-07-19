@@ -11,6 +11,9 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ --enable-duplicate-detection
+ --force
+ --label '%s'
  2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
@@ -56,6 +59,7 @@
  was modified concurrently during serialization.
  with type 
 !"Not implemented"
+!"Unable to get home directory"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !("Invalid number of parameters")
@@ -344,6 +348,7 @@ $0message $1
 $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
+$HOME/
 $ORIGIN
 $\n k_BluetoothDeviceType_Headphones
 $\n k_BluetoothDeviceType_OtherAudio
@@ -429,7 +434,14 @@ $\nY8O
 %i.%i.%i.%i:%i
 %lld
 %llu
+%llx
+%s %s %s %s
+%s %s >%s %s
 %s (%d,%d,%d,%d)
+%s --device %s
+%s --slot %d
+%s --supports-duplicate-detection
+%s -P -F upnR -i TCP@%s
 %s [%s]%-*s
 %s call had invalid argument (arg %d): %s
 %s is currently read-only.\nDid you wish to check out file from P4?\n
@@ -445,6 +457,7 @@ $\nY8O
 %s.%u.tmp
 %s.async%u.tmp
 %s.current.txt
+%s/.local/share/applications
 %s/.steam/%s
 %s/.steam/steam
 %s/chromehtml
@@ -454,6 +467,17 @@ $\nY8O
 %s/steamXXXXXX
 %s/vgui2_s
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: command exited unexpectedly: %s\n
+%s: command exited unexpectedly\n
+%s: command failed: %d\n
+%s: failed to run command: %s\n
+%s: lseek %s: %s\n
+%s: lseek start failed: %s\n
+%s: mkstemp %s: errno %s\n
+%s: read failed: %s\n
+%s: set hostname to %s\n
+%s: set timezone to %s\n
+%s: system() failed, errno %d\n
 %s:hscroll
 %s:vscroll
 %sSeperator
@@ -593,6 +617,7 @@ $\nY8O
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
 (elem == Count()) || IsValidIndex(elem)
+(home_dir != NULL) && (home_dir[0] != '\0')
 (merge 
 (null)
 (unsigned)elem <= (unsigned)m_Size
@@ -626,6 +651,7 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
+*ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN17CScreenshotThread3RunEvEUlP10CUtlBufferiiE_
 *ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
 *ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
@@ -700,6 +726,8 @@ $\nY8O
 -------------------\n
 -----CJSArray-----\n
 -----CJSObject-----\n
+--disable
+--enable
 -0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
@@ -763,6 +791,7 @@ $\nY8O
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
 .EJSRegisterMethodType"
+.LTRS
 .PLACEHOLDER_VALUE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
@@ -810,13 +839,16 @@ $\nY8O
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_PublishedFileQueryType_RankedByTextSearch
+/bin/lsof
 /data/src/common/../common/clientdirectories.h
 /data/src/common/enum_names.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/friendsuihelpers.cpp
 /data/src/common/html_jstypes.cpp
 /data/src/common/language.cpp
+/data/src/common/linuxhelpers.cpp
 /data/src/common/logger.cpp
+/data/src/common/platformhelpers.cpp
 /data/src/common/steam/client_api.cpp
 /data/src/common/steamid.cpp
 /data/src/common/steamui/urlmanager.cpp
@@ -833,6 +865,7 @@ $\nY8O
 /data/src/public/rtime.cpp
 /data/src/public/tier0/tslist.h
 /data/src/public/tier1/bitstring.h
+/data/src/public/tier1/interface.h
 /data/src/public/tier1/netadr.h
 /data/src/public/tier1/refcount.h
 /data/src/public/tier1/smartptr.h
@@ -893,8 +926,22 @@ $\nY8O
 /dev/disk/by-uuid
 /dev/null
 /etc/mtab
+/name
+/proc/meminfo
 /proc/mounts
+/proc/stat
+/sbin/lsof
+/sys/bus/iio/devices
+/sys/class/drm
+/sys/class/drm/card0/card0-eDP-1/edid
+/sys/class/hwmon
+/sys/devices/system/cpu/cpu%d/cpufreq/%s
+/sys/devices/virtual/dmi/id/product_name
+/sys/devices/virtual/dmi/id/product_serial
+/sys/devices/virtual/dmi/id/sys_vendor
 /tmp
+/tmp/cmd-stderr.XXXXXX
+/tmp/cmd-stdout.XXXXXX
 /tmp/disk-free.XXXXXX
 /tmp/gameoverlayui.log
 /tmp/gameoverlayui.log.last
@@ -903,7 +950,29 @@ $\nY8O
 /ubuntu12_32
 /ubuntu12_64/disk-free 
 /usr/bin/crosdisk %s
+/usr/bin/lsof
+/usr/bin/steam_serialnumber.sh
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
+/usr/bin/steamos-polkit-helpers/jupiter-check-support
+/usr/bin/steamos-polkit-helpers/jupiter-dock-updater
+/usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
+/usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
+/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
+/usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
+/usr/bin/steamos-polkit-helpers/steamos-format-device
+/usr/bin/steamos-polkit-helpers/steamos-format-sdcard
+/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
+/usr/bin/steamos-polkit-helpers/steamos-reboot-other
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-trim-devices
+/usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
+/usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
+/usr/sbin/lsof
+/usr/share/applications/steam.desktop
+/usr/share/applications/steambeta.desktop
+/var/run/reboot-required
 0 != m_rgchPrefixFileName[0]
 0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
 0 == sm_ThreadSafeQueueLogEvents.Count()
@@ -1116,6 +1185,13 @@ $\nY8O
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11KeyValuesAD
 12CAutoReleaseI15CJSCallbackFuncE
+12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_st27nvmlTemperatureSensors_enumPjEE
+12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_stP13nvmlMemory_stEE
+12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_stP18nvmlUtilization_stEE
+12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_stPcjEE
+12CDynamicFuncIPF15nvmlReturn_enumPjEE
+12CDynamicFuncIPF15nvmlReturn_enumjPP13nvmlDevice_stEE
+12CDynamicFuncIPF15nvmlReturn_enumvEE
 12CIntProperty
 12CLogInstance
 12CMsgSetFocus
@@ -1177,6 +1253,7 @@ $\nY8O
 14ConCommandBase
 14IBaseInterface
 14IHTMLResponses
+14IHWMonitorImpl
 14IRunGameEngine
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
@@ -1190,6 +1267,7 @@ $\nY8O
 15CSavedMemStream
 15CStringProperty
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
+15IGPUStatsReader
 15IOverlayOSPumps
 16AppModalQueryBox
 16CHTMLProtoBufMsgI10CMsgGoBackE
@@ -1263,6 +1341,7 @@ $\nY8O
 16CMsgTouchGesture
 16CSharedMemStream
 16HTMLComboBoxHost
+16IDynamicFunction
 16ListPanelDragger
 17CFileWriterThread
 17CIngameFPSCPUInfo
@@ -1282,7 +1361,7 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
-18:55:30
+18CGPUStatsReaderDrm
 18CJSCallbackPromise
 18CMsgBlockedRequest
 18CMsgBrowserResized
@@ -1297,6 +1376,7 @@ $\nY8O
 18CTextureIdProperty
 18CUtlCharConversion
 19CDirContentsWatcher
+19CGPUStatsReaderNvml
 19CIngameCPUCoreGraph
 19CMsgBrowserPosition
 19CMsgClearAllCookies
@@ -1353,6 +1433,7 @@ $\nY8O
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:21:18
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1395,6 +1476,7 @@ $\nY8O
 26CMsgToggleFindInPageDialog
 26CPanelMessageMapDictionary
 26CProportionalFloatProperty
+27CLinuxSystemHWMonitorThread
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
 27CMsgForcePopupsToDirectHWND
@@ -1413,6 +1495,7 @@ $\nY8O
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
+2>/dev/null
 2\n.k_ECommentThreadTypePublishedFile_Announcement
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
@@ -1485,6 +1568,10 @@ $\nY8O
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
 7\n\tenum_type
 7~8A
+83L3
+83N6
+83Q2
+83Q3
 8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
 8CJSArray
@@ -1536,6 +1623,7 @@ $\nY8O
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
 > or is NULL
+>/dev/null
 >= or is NULL
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
@@ -1563,6 +1651,7 @@ AKST
 ALREADY_EXISTS
 AMD OpenSource
 AMD RADV
+AMDGPU
 ANDROID
 ANDROID32
 ANDROID64
@@ -1705,6 +1794,8 @@ BSR_ANYCRLF)
 BSR_UNICODE)
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BWriteValueToFileAsUser
+BWriteValuetoFileAsRoot
 BWritingFatalMiniDump
 BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
@@ -2069,6 +2160,8 @@ CIngameFPSRAMInfo
 CJSMethodArgs::AddProtobufAsBinary
 CJSMethodArgs::AddProtobufAsObject
 CLIENTENGINE_INTERFACE_VERSION005
+CLinuxSystemHWMonitorThread
+CLinuxSystemHWMonitorThread::Frame
 CLogEvent
 CLogInstance::EmitEventNow
 CLogInstance::WriteToLog
@@ -2553,9 +2646,12 @@ DEADLINE_EXCEEDED
 DEFINE
 DEFINE group contains more than one branch
 DELETE
+DESKTOP
 DLOPEN Error:%s\n
 DLSS
 DO NOT PARSE: fields may be stripped and missing.\n
+DOCUMENTS
+DOWNLOAD
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 D\vvf:
 Dana
@@ -2591,6 +2687,7 @@ Deseret
 Destroying a held mutex\n
 Details
 Detected file change in %s\n
+Detected leaked fd
 Detected possibly crashed/killed game, exiting\n
 Devanagari
 Device Corrupt
@@ -2785,6 +2882,8 @@ EPublishedFileStorageSystem
 EPurchaseResultDetail
 EPurchaseStatus
 ERROR
+ERROR: %s: failed to set hostname\n
+ERROR: %s: failed to set timezone\n
 ERegKeyRoot
 ERemoteStoragePlatform
 EResult
@@ -2816,6 +2915,9 @@ ESystemAudioPortType
 ESystemDisplayCompatibilityMode
 ESystemFanControlMode
 ESystemServiceState
+ETWBegin
+ETWEnd
+ETWIsTracingEnabled
 ETW_Steamworks_DispatchCallback_End_
 ETW_Steamworks_DispatchCallback_Start
 ETW_Steamworks_RunCallbacks_End_
@@ -2892,6 +2994,25 @@ Error reporting not implemented.
 Error text not found (please report)
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
+Error: %s: empty address field
+Error: %s: failed to enumerate GPU devices\n
+Error: %s: failed to get NVML device by index: %d\n
+Error: %s: failed to get NVML device count: %d\n
+Error: %s: failed to initialize CPU stats parser\n
+Error: %s: failed to initialize GPU device: %s\n
+Error: %s: failed to initialize NVML stats reader for: %p\n
+Error: %s: failed to initialize memory stats parser\n
+Error: %s: failed to make file writeable %s\n
+Error: %s: failed to parse cpu core stats: %s\n
+Error: %s: failed to parse cpu total stats: %s\n
+Error: %s: failed to write to %s: %s\n
+Error: %s: invalid address
+Error: %s: popen failed
+Error: %s: steamos-priv-write failed %s: %s\n
+Error: CLinuxSystemHWMonitorThread: failed to initialize\n
+Error: CLinuxSystemHWMonitorThread: frame error, exiting\n
+Error: failed to disable wireless power management: %d\n
+Error: failed to open: %s\n
 Errors
 Escape
 Estonian
@@ -2980,9 +3101,11 @@ Failed to finish encoder: %u
 Failed to initialize client address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd: %d\n
+Failed to load "%s"
 Failed to load menu file %s\n
 Failed to load optional module %s\n
 Failed to parse input
+Failed to parse lsof source port
 Failed to provide options
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
@@ -3211,6 +3334,7 @@ GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 GetFloat
 GetFloatFromString() did not get correct peCS parameter
+GetIPCConnectionDetails
 GetInt32
 GetInt64
 GetInt64FromString() did not get correct peCS parameter
@@ -3297,6 +3421,7 @@ HTMLPopup
 HTTP Version not supported
 HTTPMirror
 HWID Set
+HWMonitorThread
 Halkbank
 Handheld
 Handshake Failed
@@ -3471,6 +3596,7 @@ Invalid socket name parameters for shared fd\n
 Invalid spew group
 Invalid strings::Substitute() format string: "
 Invalid symbol name: 
+Invalid system directory %d
 Invalid tax address
 Invalid time value
 Invalid value for boolean field "
@@ -3521,7 +3647,7 @@ Japanese
 Javanese
 JoinedGroup
 Joystick
-Jul 14 2025
+Jul 18 2025
 July
 June
 K'iche'
@@ -3742,6 +3868,9 @@ LABEL_REQUIRED
 LANCache
 LANPeer
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LIMIT_MATCH=
 LIMIT_RECURSION=
 LINUX
@@ -3871,6 +4000,7 @@ MOUSE_RIGHT
 MP4 Media File (*.mp4)
 MPEG Media File (*.mpeg)
 MPEG Media File (*.mpg)
+MUSIC
 MacOS
 Macedonian
 Maestro
@@ -3930,6 +4060,8 @@ Maximum family size exceeded
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
+MemAvailable
+MemTotal
 Member
 Members
 Memory leak: mempool blocks left in memory: %d\n
@@ -4466,6 +4598,7 @@ Owner
 PATCH
 PCRE does not support \L, \l, \N{name}, \U, or \u
 PERMISSION_DENIED
+PICTURES
 PLACEHOLDER_VALUE
 PLATFORM
 PNG Image (*.png)
@@ -4477,6 +4610,7 @@ POSIX named classes are supported only within a class
 POST
 PRUNE
 PSN Ticket is invalid
+Package id 0
 Package requires an invitation for a reservation to purchase
 Page
 PageChanged
@@ -4581,6 +4715,9 @@ Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
+Plat_IsSteamDeck
+Plat_IsSteamOS
+Plat_IsSteamOS3
 Plat_MSTime
 Plat_MSTime64
 Plat_OutputDebugString
@@ -4662,6 +4799,7 @@ QueryBox
 QuickAccess
 Quit
 R1h58
+RADV_FORCE_VRS_CONFIG_FILE
 RAMInfo
 RAMLabel
 RAMMax
@@ -4786,6 +4924,8 @@ RichTextReceivedUnneededFocus
 Right
 Romanian
 RuPay
+RunCommand
+RunCommandGetOutput
 RunGameEngine007
 Runic
 Running Script
@@ -4802,6 +4942,8 @@ SPEED
 SPEI
 STEAM_
 STEAM_CLIENT_LOG_FOLDER
+STEAM_ENABLE_DYNAMIC_BACKLIGHT
+STEAM_USE_DYNAMIC_VRS
 STRING
 SafeMode
 SafetyPay
@@ -4885,6 +5027,7 @@ SetEvent failed for paint event\n
 SetFloat
 SetFocus
 SetFont
+SetHostname
 SetInt32
 SetInt64
 SetMiniDumpBuildID
@@ -4904,6 +5047,7 @@ SetState
 SetString
 SetText
 SetTexture
+SetTimezone
 SetTitle
 SetUInt32
 SetUInt64
@@ -5060,6 +5204,7 @@ Steam pid that launched us
 Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
+SteamBootstrapper_GetEUniverse
 SteamBox
 SteamCache
 SteamChina_SChinese
@@ -5143,6 +5288,7 @@ Swap
 SwappingStreamBuffers
 Swedish
 Switch
+SwitchToUser
 Switching Protocols
 Syloti_Nagri
 Symbol name "
@@ -5181,6 +5327,8 @@ Tajik
 Takri
 Tamil
 Tatar
+Tctl
+Tdie
 Telugu
 Temporary Redirect
 Tenpay
@@ -5221,10 +5369,13 @@ This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means 
 This program requires version 
 This program was compiled against version 
 This shouldn't be called if all the sizes are equal.
+ThreadEnumerateGpusDrm
+ThreadEnumerateGpusNvml
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadInMainThread
 ThreadInMainThread()
+ThreadInit
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange
@@ -5232,6 +5383,7 @@ ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
+ThreadInterlockedExchangePointer
 ThreadInterlockedIncrement
 ThreadIsProcessIdActive
 ThreadShellExecute
@@ -5342,6 +5494,8 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unexpected end of string.
 Unexpected error
 Unexpected failure while serializing option submessage 
+Unexpected number of glibc version components
+Unexpected number of glibc version components: %d
 Unhandled serialized input msg(%d)\n
 Unimplemented type: 
 Uninitialized
@@ -5388,6 +5542,7 @@ Update Running
 Update Started
 Update required
 UpdateIMECandidates
+UpdateStats
 Updated Disabled by app
 Upgrade Required
 Upload Disconnected
@@ -5426,6 +5581,7 @@ VGUI_Setup001
 VGUI_Surface039
 VGUI_System011
 VGUI_ivgui007
+VIDEOS
 VISTA
 VPanel
 VProfInternalEnterScopeCurrentThread
@@ -5457,6 +5613,7 @@ V_MakeAbsolutePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
+V_SplitNumbers
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 V_StrSubstInPlace
 V_StrTrim
@@ -5481,6 +5638,7 @@ V_atoui64
 V_binarytohex
 V_hextobinary
 V_isbreakablewspace
+V_isnumeric
 V_isvalidhex
 V_memcpy_nocache
 V_pretifymem
@@ -5545,6 +5703,13 @@ Visa (BoaCompra)
 Visa Electron (BoaCompra)
 WARNING
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WARNING: using plain als gain get\n
+WARNING: using plain factory reset\n
+WARNING: using plain jupiter-biosupdate\n
+WARNING: using plain reboot other\n
+WARNING: using plain set-hostname\n
+WARNING: using plain set-timezone\n
+WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -5561,6 +5726,8 @@ Wallet
 Wallet (Nodwin)
 Warning
 Warning parsing text-format 
+Warning: %s: lsof is required to run steam and it may not be available - please install
+Warning: %s: unexpected number of address fields
 Warning: Blocking wait on mutex failed in Clear: %d\n
 Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
 Warning: Game claimed to have rendered after extra time, but render stream is not empty.\n
@@ -5615,6 +5782,8 @@ WrapPanelItemVisibility
 Write Failed
 Wrong Price
 X360
+XDG_
+XDG_CONFIG_HOME
 Xhosa
 YYYY
 Yandex
@@ -5833,6 +6002,7 @@ Zulu
 ] is an invalid data character in JavaScript compatibility mode
 ]JldN
 _Accum
+_DIR
 _DMsg
 _Fract
 _GLOBAL_
@@ -5952,7 +6122,9 @@ _fini
 _imageDar
 _imageDar.IsValidIndex( index )
 _init
+_input
 _internal.RegisterForStyleChanges
+_label
 _leftCaption
 _new
 _panelDar
@@ -6029,6 +6201,7 @@ ascii
 assamese
 assertion expected after (?(
 associate
+asusec
 attributes
 au PAY
 audio
@@ -6157,6 +6330,7 @@ canceled the join request
 candidate
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
+card*
 catalan
 category_1
 category_10
@@ -6323,6 +6497,7 @@ construction vtable for
 container
 containerlabel
 content
+content_adaptive_brightness
 contenthubs
 contentregionsandsources
 contentserver
@@ -6374,11 +6549,16 @@ coord_y
 copy
 copylink
 copyurl
+core[%d]: %u%% cur: %u MHz base: %u MHz\n
+coretemp
 count
 count >= 0
 countrycodes
 covalensolutions.com
 covariant return thunk to 
+cpu %llu %llu %llu %llu %llu %llu %llu %llu %llu %llu
+cpu%d %llu %llu %llu %llu %llu %llu %llu %llu %llu %llu
+cpuinfo_min_freq
 crashhandler004
 crc_header_mismatch
 created
@@ -6443,6 +6623,7 @@ desktopoverlay
 details
 details_tab
 developer
+device
 dfxp
 dgettext
 different KV data types in a single list column
@@ -6477,6 +6658,7 @@ dota2.com
 double
 downarrow
 dpi_horizontal
+dpkg-query -s steamos-updatelevel | grep Version | cut -d' ' -f2
 driver
 drophoverdelay
 droppable
@@ -6492,6 +6674,8 @@ eRet != k_ESteamRealmUnknown
 east
 ebay.com
 echar >= schar
+echo "%s" | sudo -n tee "%s"
+echo %s | tee %s
 edgenext
 edgio
 edit %s
@@ -6572,6 +6756,7 @@ feof
 ferror
 fflush
 fgcolor
+fgetc
 fgets
 fi_FI
 field
@@ -6599,6 +6784,7 @@ find
 findactive
 findcount
 finnish
+firmware_node/path
 fixed32
 fixed64
 flags
@@ -6683,6 +6869,7 @@ g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 g_vecTempTextBuffer
 galician
+galileo
 game
 gameoverlayrenderer.so
 gameoverlayui
@@ -6722,6 +6909,7 @@ gizmodo.com
 global constructors keyed to 
 global destructors keyed to 
 gmtime
+gnu_get_libc_version
 good
 google
 google.fr
@@ -6834,6 +7022,7 @@ google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
 google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
 google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
+gpu_busy_percent
 gpu_compositing
 gradientEnd
 gradientStart
@@ -6940,6 +7129,8 @@ https?\:
 httpserver
 hu_HU
 hungarian
+hwmon
+hwmon*
 hwnd
 i < length_
 iDEAL
@@ -6958,6 +7149,7 @@ identifier_value
 ig,o
 igbo
 ign.com
+iio:device*
 image
 image-height-only
 image-width-only
@@ -6968,6 +7160,7 @@ imaginary
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
+in_illuminance_raw
 inconsistent NEWLINE options
 index
 index > 0
@@ -7050,7 +7243,9 @@ json
 json_name = "
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
+jupiter
 justify
+k10temp
 k2U\v
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
@@ -7330,6 +7525,7 @@ lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
+led_brightness
 left
 left the group
 leftGrip
@@ -7338,12 +7534,14 @@ leftText
 len > 0 || HasError()
 len >= input_len
 length_ >= n
+lenovo
 level3
 libaudio.so
 libavif.so.16
 libc.so.6
 libdl.so.2
 libm.so.6
+libnvidia-ml.so.1
 libpthread.so.0
 library
 librt.so.1
@@ -7401,8 +7599,13 @@ lookbehind assertion is not fixed length
 loopback
 lowRange < highRange
 lower
+lsb_release -d -s
 lseek
 lseek64
+lsof
+lsof reported an empty address field
+lsof reported an unexpected address: %s
+ltrf216a
 lumen
 luxembourgish
 lzma_dict_valve
@@ -7678,6 +7881,10 @@ mbtowc
 media
 medium
 megaupload.com
+mem_info_gtt_total
+mem_info_gtt_used
+mem_info_vram_total
+mem_info_vram_used
 memchr
 memcmp
 memcpy
@@ -7800,6 +8007,14 @@ number after (?C is > 255
 number is too big
 number too big in {} quantifier
 numbers out of order in {} quantifier
+nvmlDeviceGetCount_v2
+nvmlDeviceGetHandleByIndex_v2
+nvmlDeviceGetMemoryInfo
+nvmlDeviceGetName
+nvmlDeviceGetTemperature
+nvmlDeviceGetUtilizationRates
+nvmlInit_v2
+nvmlShutdown
 nytimes.com
 oauthclient
 objc_class_prefix
@@ -7830,6 +8045,8 @@ operand of unlimited repeat could match the empty string
 operator
 operator 
 operator"" 
+operator()
+opt3001
 option json_name is not allowed on extension fields.
 optional
 options
@@ -8010,6 +8227,8 @@ prerelease
 preserveAspectRatio
 previous
 print
+privileged write polkit:%s -> %s\n
+privileged write: %s -> %s\n
 progress
 promise_handle
 promoted to moderator
@@ -8187,6 +8406,7 @@ sc_schinese
 scale
 scaleImage
 scaling
+scaling_cur_freq
 scandir
 scandir64
 sched_yield
@@ -8252,6 +8472,7 @@ showDownArrow
 showbar
 showhotkey
 showticks
+shred --remove %s
 signal
 signed char
 sindhi
@@ -8363,12 +8584,15 @@ steamclient.so
 steamcmd
 steamcommunity.com
 steamconsole.so
+steamdeck-hwmon
+steamdeck_hwmon
 steamdeck_stable
 steamgames.com
 steamglobal
 steamhdl
 steamlink://
 steamloopback.host
+steamos-update: using duplicate detection: %d\n
 steampipe
 steampipepeering
 steampowered.com
@@ -8380,6 +8604,7 @@ stop using I64/I32, use lld or d respectively
 stopanimation
 stopevent
 store
+stpcpy
 strFileTypeName
 strInitialFile
 strOut.BEndsWith( "/" )
@@ -8430,6 +8655,15 @@ subtabposition
 subtitles
 subtype mismatch
 success
+sudo -n /usr/bin/steam_serialnumber.sh
+sudo -n /usr/lib/hwsupport/format-sdcard.sh
+sudo -n chmod a+w "%s"
+sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
+sudo -n hostnamectl set-hostname
+sudo -n steamos-factory-reset-config
+sudo -n steamos-reboot --reboot-other
+sudo -n steamos-update
+sudo -n timedatectl set-timezone
 support changed ownership
 support cleared content
 support for \P, \p, and \X has not been compiled
@@ -8467,6 +8701,8 @@ teamfortress.com
 teliasonera
 telugu
 telus
+temp*
+temp1_input
 template parameter object for 
 tencent
 terminate called after throwing an instance of '
@@ -8624,6 +8860,7 @@ vector::_M_default_append
 vector::_M_range_insert
 vector::_M_realloc_insert
 vector::reserve
+vendor
 veoh.com
 vertical-align
 vfat
@@ -8732,6 +8969,7 @@ week
 welsh
 west
 wheelpct
+which lsof >/dev/null 2>&1
 wide
 wide > 0
 width
@@ -8778,6 +9016,7 @@ wrong submessage type
 www.
 x_local
 xbox.com
+xdg-user-dir %s
 xdigit
 xfire.com
 xhosa
@@ -8791,6 +9030,7 @@ yoruba
 youtube.com
 ypos
 zC`G;
+zenpower
 zh-cn
 zh-tw
 zh-xc

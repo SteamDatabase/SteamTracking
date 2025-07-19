@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Spillopplegg",
     "Accessibility_Group_Visual": "Visuelt",
     "Accessibility_Group_Audio": "Lyd",
-    "Accessibility_Group_Input": "Inndata"
+    "Accessibility_Group_Input": "Inndata",
+    "SteamNotifications_TradeReversal_Title": "Byttebeskyttelse",
+    "SteamNotifications_TradeReversal_Body": "En byttehandel ble omgjort",
+    "SteamNotifications_TradeReversal_Body_Short": "En byttehandel ble omgjort",
+    "SteamNotifications_TradeReversal_Description": "En nylig byttehandel ble omgjort av den andre parten."
 }

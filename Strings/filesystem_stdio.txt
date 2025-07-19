@@ -32,6 +32,7 @@ $ORIGIN
 %d:00
 %lld
 %llu
+%llx
 %s has %i files
 %s is not a packfile
 %s overflow!\n
@@ -787,7 +788,6 @@ ioctl
 isspace
 java Class for 
 java resource 
-l?aP
 lchown
 ld-linux.so.2
 len <= INT_MAX

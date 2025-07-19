@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Rozgrywka",
     "Accessibility_Group_Visual": "Elementy wizualne",
     "Accessibility_Group_Audio": "Dźwięk",
-    "Accessibility_Group_Input": "Sterowanie"
+    "Accessibility_Group_Input": "Sterowanie",
+    "SteamNotifications_TradeReversal_Title": "Ochrona wymiany",
+    "SteamNotifications_TradeReversal_Body": "Wymiana została cofnięta",
+    "SteamNotifications_TradeReversal_Body_Short": "Wymiana została cofnięta",
+    "SteamNotifications_TradeReversal_Description": "Jedna z twoich ostatnich wymian została cofnięta przez twojego partnera wymiany."
 }

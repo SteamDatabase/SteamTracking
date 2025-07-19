@@ -3683,5 +3683,9 @@
     "Accessibility_Group_Gameplay": "Expérience de jeu",
     "Accessibility_Group_Visual": "Visuels",
     "Accessibility_Group_Audio": "Audio",
-    "Accessibility_Group_Input": "Entrées"
+    "Accessibility_Group_Input": "Entrées",
+    "SteamNotifications_TradeReversal_Title": "Protection contre les échanges",
+    "SteamNotifications_TradeReversal_Body": "Un échange a été annulé",
+    "SteamNotifications_TradeReversal_Body_Short": "Un échange a été annulé",
+    "SteamNotifications_TradeReversal_Description": "Un de vos échanges récents a été annulé par l'autre partie."
 }

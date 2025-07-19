@@ -3684,5 +3684,9 @@
     "Accessibility_Group_Visual": "Visuellt",
     "Accessibility_Group_Audio": "Ljud",
     "Accessibility_Group_Input": "Inmatning",
+    "SteamNotifications_TradeReversal_Title": "Bytesskydd",
+    "SteamNotifications_TradeReversal_Body": "Ett byte återställdes",
+    "SteamNotifications_TradeReversal_Body_Short": "Ett byte återställdes",
+    "SteamNotifications_TradeReversal_Description": "Ett av dina senaste byten ångrades av bytespartnern.",
     "shared_dummy": "dont translate"
 }

@@ -3686,5 +3686,9 @@
     "Accessibility_Group_Visual": "Visuaaliset ominaisuudet",
     "Accessibility_Group_Audio": "Ääni",
     "Accessibility_Group_Input": "Syöte",
+    "SteamNotifications_TradeReversal_Title": "Vaihtosuojaus",
+    "SteamNotifications_TradeReversal_Body": "Vaihto peruttiin",
+    "SteamNotifications_TradeReversal_Body_Short": "Vaihto peruttiin",
+    "SteamNotifications_TradeReversal_Description": "Toinen osapuoli perui yhden viimeaikaisista vaihtokaupoistasi.",
     "shared_dummy": "dont translate"
 }

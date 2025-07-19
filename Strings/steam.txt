@@ -702,6 +702,7 @@ $ffn
 %llX\n
 %lld
 %llu
+%llx
 %lu:%s:%s:%d:%s\n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
@@ -2329,8 +2330,6 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
-18:55:12
-18:55:25
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2419,6 +2418,9 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:21:02
+22:21:10
+22:21:11
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6528,7 +6530,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 14 2025
+Jul 18 2025
 July
 June
 K'iche'
@@ -8745,7 +8747,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 14 2025 18:55:25
+Startup - updater built Jul 18 2025 22:21:11
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

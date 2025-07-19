@@ -3684,5 +3684,9 @@
     "Accessibility_Group_Gameplay": "Gameplay",
     "Accessibility_Group_Visual": "Sehvermögen",
     "Accessibility_Group_Audio": "Audio",
-    "Accessibility_Group_Input": "Eingabe"
+    "Accessibility_Group_Input": "Eingabe",
+    "SteamNotifications_TradeReversal_Title": "Handelsgeschützt",
+    "SteamNotifications_TradeReversal_Body": "Ein Handel wurde rückgängig gemacht",
+    "SteamNotifications_TradeReversal_Body_Short": "Ein Handel wurde rückgängig gemacht",
+    "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht."
 }

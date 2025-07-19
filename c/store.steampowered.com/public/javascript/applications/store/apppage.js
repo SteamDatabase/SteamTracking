@@ -2591,7 +2591,7 @@
           !this.m_bSentStats &&
             this.m_player &&
             this.m_strStatsURL &&
-            (!(function (_, _) {
+            (!(function (_, _, _) {
               if (!navigator || void 0 === navigator.sendBeacon) return;
               let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary(),
                 _ = _.GetAndCloseWatchedIntervals();
@@ -2599,12 +2599,13 @@
               let _ = {
                   strManifest: _.IsPlayingHLS() ? _.GetHLSURL() : _.GetMPDURL(),
                   watched: _,
+                  eFailureReason: _,
                   ..._,
                 },
                 _ = JSON.stringify(_),
                 _ = new FormData();
               _.append("stats", _), navigator.sendBeacon(_, _);
-            })(this.m_player, this.m_strStatsURL),
+            })(this.m_player, this.m_strStatsURL, this.m_eFailureReason),
             (this.m_bSentStats = !0));
         }
       }

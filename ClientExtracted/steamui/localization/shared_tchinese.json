@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "遊戲過程",
     "Accessibility_Group_Visual": "視覺",
     "Accessibility_Group_Audio": "音效",
-    "Accessibility_Group_Input": "輸入"
+    "Accessibility_Group_Input": "輸入",
+    "SteamNotifications_TradeReversal_Title": "交易保護",
+    "SteamNotifications_TradeReversal_Body": "一筆交易已撤銷",
+    "SteamNotifications_TradeReversal_Body_Short": "一筆交易已撤銷",
+    "SteamNotifications_TradeReversal_Description": "您有一筆近期交易已被您的交易夥伴撤銷。"
 }

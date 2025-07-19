@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Oynanış",
     "Accessibility_Group_Visual": "Görsel",
     "Accessibility_Group_Audio": "Ses",
-    "Accessibility_Group_Input": "Girdi"
+    "Accessibility_Group_Input": "Girdi",
+    "SteamNotifications_TradeReversal_Title": "Takas Koruması",
+    "SteamNotifications_TradeReversal_Body": "Bir takas iptal edildi",
+    "SteamNotifications_TradeReversal_Body_Short": "Bir takas iptal edildi",
+    "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi."
 }

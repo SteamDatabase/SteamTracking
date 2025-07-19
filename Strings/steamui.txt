@@ -8003,7 +8003,6 @@ ${LANGUAGE}
 13CCallbackImplILi39EE
 13CCallbackImplILi408EE
 13CCallbackImplILi40EE
-13CCallbackImplILi4100EE
 13CCallbackImplILi4108EE
 13CCallbackImplILi4161EE
 13CCallbackImplILi416EE
@@ -11701,6 +11700,7 @@ ${LANGUAGE}
 55CBroadcast_GetBroadcastViewerStats_Response_ViewerStats
 55CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 55CClientMetrics_ClipRange_Notification_RelativeRangeEdge
+55CClientMetrics_ReportAccessibilitySettings_Notification
 55CClientMetrics_ReportReactUsage_Notification_ActionData
 55CCommunity_ClearSinglePartnerEventsAppPriority_Response
 55CCommunity_ClearUserPartnerEventsAppPriorities_Response
@@ -12097,6 +12097,7 @@ ${LANGUAGE}
 8$plHT
 8.CAuthentication_BeginAuthSessionViaCredentials_Response"
 8.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
+8.CClientMetrics_ReportAccessibilitySettings_Notification
 8.CCommunity_ClearSinglePartnerEventsAppPriority_Response"
 8.CCommunity_ClearUserPartnerEventsAppPriorities_Response"
 8.CContentServerDirectory_GetManifestRequestCode_Response"
@@ -12385,7 +12386,6 @@ ${LANGUAGE}
 :BAD INTEGER
 :BAD OBJECT
 :EXTERNAL TYPE %s\n
-:IDj
 :LBN
 :L\n\rsetting_store
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
@@ -17267,6 +17267,7 @@ ClientJobSiteLicenseGetAvailableSeats
 ClientLogUploadCheck
 ClientLogUploadComplete
 ClientLogUploadRequest
+ClientMetrics.ReportAccessibilitySettings#1
 ClientMetrics.ReportEndGameRecording#1
 ClientName
 ClientSeatCheckout
@@ -21646,7 +21647,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 14 2025 18:55:34
+Jul 18 2025 22:23:06
 July
 JumpList
 Jumplist
@@ -23022,6 +23023,7 @@ Method RenameRole() not implemented.
 Method ReorderChatRoom() not implemented.
 Method ReorderRole() not implemented.
 Method ReplaceRoleActions() not implemented.
+Method ReportAccessibilitySettings() not implemented.
 Method ReportApp() not implemented.
 Method ReportBroadcastChannel() not implemented.
 Method ReportClientArgs() not implemented.
@@ -25088,6 +25090,7 @@ PDP Metallic Controller
 PDP Mirror's Edge Controller
 PDP Mortal Kombat Controller
 PDP NFL Face-Off Controller
+PDP REALMz Wireless Controller
 PDP Titanfall 2 Controller
 PDP Victrix Pro Fight Stick
 PDP Xbox 360 Afterglow
@@ -26276,6 +26279,7 @@ Repeated
 Repeated fields can't have default values.
 Repeated map key: '
 ReplaceRoleActions
+ReportAccessibilitySettings
 ReportBroadcastChannel
 ReportClientArgs
 ReportClientError
@@ -31170,6 +31174,7 @@ Zulu
 \n6CMarketingMessages_GetMarketingMessagesForUser_Request
 \n6CPublishedFile_SetPlaytimeForControllerConfigs_Request
 \n7CAuthentication_BeginAuthSessionViaCredentials_Response
+\n7CClientMetrics_ReportAccessibilitySettings_Notification
 \n7CContentServerDirectory_GetServersForSteamPipe_Response
 \n7CMarketingMessages_GetMarketingMessagesForUser_Response
 \n8CContentServerDirectory_RequestPeerContentServer_Request
@@ -35052,6 +35057,7 @@ controller_enabled
 controller_front_panel_board
 controller_generic
 controller_generic_support
+controller_guide_button_focus_steam
 controller_hori_steam
 controller_index
 controller_keyboard_generic
@@ -36029,6 +36035,7 @@ display_diagnostics_enabled
 display_height
 display_location
 display_name
+display_name_elanguage
 display_nightmode_blend
 display_nightmode_enabled
 display_nightmode_maxhue

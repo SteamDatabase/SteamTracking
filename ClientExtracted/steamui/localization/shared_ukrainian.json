@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Ігролад",
     "Accessibility_Group_Visual": "Візуальна складова",
     "Accessibility_Group_Audio": "Звук",
-    "Accessibility_Group_Input": "Введення"
+    "Accessibility_Group_Input": "Введення",
+    "SteamNotifications_TradeReversal_Title": "Захищений обмін",
+    "SteamNotifications_TradeReversal_Body": "Обмін було скасовано",
+    "SteamNotifications_TradeReversal_Body_Short": "Обмін було скасовано",
+    "SteamNotifications_TradeReversal_Description": "Ваш партнер по обміну скасував один із нещодавніх обмінів."
 }

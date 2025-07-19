@@ -3684,5 +3684,9 @@
     "Accessibility_Group_Gameplay": "Lối chơi",
     "Accessibility_Group_Visual": "Hình ảnh",
     "Accessibility_Group_Audio": "Âm thanh",
-    "Accessibility_Group_Input": "Đầu vào"
+    "Accessibility_Group_Input": "Đầu vào",
+    "SteamNotifications_TradeReversal_Title": "Bảo hộ trao đổi",
+    "SteamNotifications_TradeReversal_Body": "Giao dịch đã hoàn tác",
+    "SteamNotifications_TradeReversal_Body_Short": "Giao dịch đã hoàn tác",
+    "SteamNotifications_TradeReversal_Description": "Một trong những trao đổi gần đây của bạn đã được hoàn tác bởi đối tác trao đổi."
 }

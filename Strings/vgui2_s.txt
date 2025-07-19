@@ -315,6 +315,7 @@ $\nY8O
 %language%
 %lld
 %llu
+%llx
 %s %s %s %s
 %s %s >%s %s
 %s --device %s
@@ -4403,7 +4404,6 @@ menuname
 message
 message_set_wire_format
 method
-me|v
 minimum-height
 minimum-width
 minutes

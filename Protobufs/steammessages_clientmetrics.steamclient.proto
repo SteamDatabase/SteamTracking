@@ -199,11 +199,6 @@ message CClientMetrics_ReportClientArgs_Notification {
 	optional bool library_low_bandwidth_mode_enabled = 8;
 	optional bool library_low_perf_mode_enabled = 9;
 	optional int32 gr_mode = 10;
-	optional float accessibility_desktop_ui_scale = 11;
-	optional bool accessibility_screen_reader_enabled = 12;
-	optional bool accessibility_high_contrast_mode = 13;
-	optional bool accessibility_reduce_motion = 14;
-	optional string accessibility_color_filter_name = 15;
 }
 
 message CClientMetrics_ReportLinuxStats_Notification {
@@ -213,6 +208,14 @@ message CClientMetrics_ReportLinuxStats_Notification {
 	optional int32 launcher_type = 4;
 	optional int32 game_server_appid = 5;
 	optional string process_name = 6;
+}
+
+message CClientMetrics_ReportAccessibilitySettings_Notification {
+	optional float accessibility_desktop_ui_scale = 1;
+	optional bool accessibility_screen_reader_enabled = 2;
+	optional bool accessibility_high_contrast_mode = 3;
+	optional bool accessibility_reduce_motion = 4;
+	optional string accessibility_color_filter_name = 5;
 }
 
 message CClientMetrics_ClipShare_Notification {
@@ -275,6 +278,7 @@ service ClientMetrics {
 	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
 	rpc ReportLinuxStats (.CClientMetrics_ReportLinuxStats_Notification) returns (.NoResponse);
+	rpc ReportAccessibilitySettings (.CClientMetrics_ReportAccessibilitySettings_Notification) returns (.NoResponse);
 	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
 	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
 	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);

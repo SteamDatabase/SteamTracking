@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Gameplay",
     "Accessibility_Group_Visual": "Visuale",
     "Accessibility_Group_Audio": "Audio",
-    "Accessibility_Group_Input": "Input"
+    "Accessibility_Group_Input": "Input",
+    "SteamNotifications_TradeReversal_Title": "Protezione degli scambi",
+    "SteamNotifications_TradeReversal_Body": "Uno scambio è stato annullato",
+    "SteamNotifications_TradeReversal_Body_Short": "Uno scambio è stato annullato",
+    "SteamNotifications_TradeReversal_Description": "Uno dei tuoi scambi recenti è stato annullato dal tuo partner di scambio."
 }

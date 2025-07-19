@@ -298,6 +298,7 @@ $\n k_SystemAudioPortDirection_Input
 %d:00
 %lld
 %llu
+%llx
 %s overflow!\n
 %s%c.temp_write_%x
 %s.%u.tmp

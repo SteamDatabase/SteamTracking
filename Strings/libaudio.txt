@@ -32,6 +32,7 @@ $ORIGIN
 %d:00
 %lld
 %llu
+%llx
 %s overflow!\n
 %s%c.temp_write_%x
 %s.%u.tmp
@@ -841,7 +842,6 @@ guard variable for
 half
 hdmi
 hidden alias for 
-hvMkeQhE
 iconv
 iconv_close
 iconv_open

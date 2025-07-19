@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Jugabilidad",
     "Accessibility_Group_Visual": "Visión",
     "Accessibility_Group_Audio": "Audición",
-    "Accessibility_Group_Input": "Entrada"
+    "Accessibility_Group_Input": "Entrada",
+    "SteamNotifications_TradeReversal_Title": "Protección contra intercambios",
+    "SteamNotifications_TradeReversal_Body": "Se revirtió un intercambio",
+    "SteamNotifications_TradeReversal_Body_Short": "Se revirtió un intercambio",
+    "SteamNotifications_TradeReversal_Description": "La persona con la que realizaste intercambios revirtió uno de tus intercambios recientes."
 }

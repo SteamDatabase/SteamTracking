@@ -3684,5 +3684,9 @@
     "Accessibility_Group_Gameplay": "Játékmenet",
     "Accessibility_Group_Visual": "Látvány",
     "Accessibility_Group_Audio": "Hang",
-    "Accessibility_Group_Input": "Bevitel"
+    "Accessibility_Group_Input": "Bevitel",
+    "SteamNotifications_TradeReversal_Title": "Cserevédelem",
+    "SteamNotifications_TradeReversal_Body": "Egy csere vissza lett vonva.",
+    "SteamNotifications_TradeReversal_Body_Short": "Egy csere vissza lett vonva.",
+    "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet."
 }

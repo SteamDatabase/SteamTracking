@@ -3471,6 +3471,7 @@
     "Settings_GameRecording_ToggleRecording": "Start/stop recording",
     "Settings_GameRecording_ToggleRecording_Clip": "Start/stop saving a clip",
     "Settings_GameRecording_InstantClip": "Save the last <1></1> seconds of gameplay as a clip",
+    "Settings_GameRecording_InstantClip_Label": "Clip duration in seconds",
     "Settings_GameRecording_TimelineMarker": "Timeline Markers",
     "Settings_GameRecording_TimelineMarker_Description": "You can annotate your recordings with Timeline Markers. These can be used to reference moments to revisit and/or automatically save footage within a specified time range.",
     "Settings_GameRecording_BackgroundSettings": "Background recording disk space",
@@ -3698,5 +3699,9 @@
     "Accessibility_Group_Visual": "Visual",
     "Accessibility_Group_Audio": "Audio",
     "Accessibility_Group_Input": "Input",
+    "SteamNotifications_TradeReversal_Title": "Trade Protection",
+    "SteamNotifications_TradeReversal_Body": "A trade was reversed",
+    "SteamNotifications_TradeReversal_Body_Short": "A trade was reversed",
+    "SteamNotifications_TradeReversal_Description": "One of your recent trades was reversed by your trade partner.",
     "shared_dummy": "dont translate"
 }

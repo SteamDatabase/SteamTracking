@@ -2306,20 +2306,21 @@
           !this.m_bSentStats &&
             this.m_player &&
             this.m_strStatsURL &&
-            (!(function (e, t) {
+            (!(function (e, t, n) {
               if (!navigator || void 0 === navigator.sendBeacon) return;
-              let n = e.GetDASHPlayerStats().GetPlayerStatsSummary(),
-                a = e.GetAndCloseWatchedIntervals();
-              if (a.reduce((e, t) => e + (t[1] - t[0]), 0) < 5) return;
-              let r = {
+              let a = e.GetDASHPlayerStats().GetPlayerStatsSummary(),
+                r = e.GetAndCloseWatchedIntervals();
+              if (r.reduce((e, t) => e + (t[1] - t[0]), 0) < 5) return;
+              let l = {
                   strManifest: e.IsPlayingHLS() ? e.GetHLSURL() : e.GetMPDURL(),
-                  watched: a,
-                  ...n,
+                  watched: r,
+                  eFailureReason: n,
+                  ...a,
                 },
-                l = JSON.stringify(r),
-                o = new FormData();
-              o.append("stats", l), navigator.sendBeacon(t, o);
-            })(this.m_player, this.m_strStatsURL),
+                o = JSON.stringify(l),
+                i = new FormData();
+              i.append("stats", o), navigator.sendBeacon(t, i);
+            })(this.m_player, this.m_strStatsURL, this.m_eFailureReason),
             (this.m_bSentStats = !0));
         }
       }

@@ -3686,5 +3686,9 @@
     "Accessibility_Group_Visual": "Визуално",
     "Accessibility_Group_Audio": "Аудио",
     "Accessibility_Group_Input": "Въвеждане",
+    "SteamNotifications_TradeReversal_Title": "Защитено от търговия",
+    "SteamNotifications_TradeReversal_Body": "Дадена търговия беше върната обратно",
+    "SteamNotifications_TradeReversal_Body_Short": "Дадена търговия беше върната обратно",
+    "SteamNotifications_TradeReversal_Description": "Една от скорошните Ви търговии беше върната обратно от Вашия търговски партньор.",
     "shared_dummy": "dont translate"
 }

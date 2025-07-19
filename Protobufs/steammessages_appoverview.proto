@@ -144,6 +144,7 @@ message CAppOverview {
 	optional uint32 number_of_copies = 72 [default = 1];
 	optional uint32 steam_hw_compat_category_packed = 73 [default = 0];
 	optional string album_cover_hash = 74;
+	optional int32 display_name_elanguage = 75 [default = -1];
 }
 
 message CAppOverview_Change {

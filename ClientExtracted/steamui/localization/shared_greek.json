@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Τρόπος παιχνιδιού",
     "Accessibility_Group_Visual": "Οπτικό περιεχόμενο",
     "Accessibility_Group_Audio": "Ήχος",
-    "Accessibility_Group_Input": "Είσοδος"
+    "Accessibility_Group_Input": "Είσοδος",
+    "SteamNotifications_TradeReversal_Title": "Προστασία Ανταλλαγών",
+    "SteamNotifications_TradeReversal_Body": "Μια ανταλλαγή αντιστράφηκε",
+    "SteamNotifications_TradeReversal_Body_Short": "Μια ανταλλαγή αντιστράφηκε",
+    "SteamNotifications_TradeReversal_Description": "Μία από τις πρόσφατες ανταλλαγές σας αντιστράφηκε από τον χρήστη με τον οποίο κάνατε την ανταλλαγή."
 }

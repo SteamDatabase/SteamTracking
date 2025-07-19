@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Hratelnost",
     "Accessibility_Group_Visual": "Obraz",
     "Accessibility_Group_Audio": "Zvuk",
-    "Accessibility_Group_Input": "Ovládání"
+    "Accessibility_Group_Input": "Ovládání",
+    "SteamNotifications_TradeReversal_Title": "Ochrana po výměně",
+    "SteamNotifications_TradeReversal_Body": "Obchod byl vzat zpět",
+    "SteamNotifications_TradeReversal_Body_Short": "Obchod byl vzat zpět",
+    "SteamNotifications_TradeReversal_Description": "Jeden z Vašich nedávných obchodů vzal druhý uživatel zpět."
 }

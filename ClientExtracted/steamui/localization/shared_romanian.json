@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Experiență de joc",
     "Accessibility_Group_Visual": "Elemente vizuale",
     "Accessibility_Group_Audio": "Audio",
-    "Accessibility_Group_Input": "Input"
+    "Accessibility_Group_Input": "Input",
+    "SteamNotifications_TradeReversal_Title": "Protecție impusă de schimb",
+    "SteamNotifications_TradeReversal_Body": "Un schimb a fost anulat",
+    "SteamNotifications_TradeReversal_Body_Short": "Un schimb a fost anulat",
+    "SteamNotifications_TradeReversal_Description": "Unul dintre schimburile tale recente a fost anulat de partenerul tău de schimb."
 }

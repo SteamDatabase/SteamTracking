@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "Gameplay",
     "Accessibility_Group_Visual": "Visual",
     "Accessibility_Group_Audio": "Audio",
-    "Accessibility_Group_Input": "Input"
+    "Accessibility_Group_Input": "Input",
+    "SteamNotifications_TradeReversal_Title": "Perlindungan Pertukaran",
+    "SteamNotifications_TradeReversal_Body": "Sebuah pertukaran telah dikembalikan",
+    "SteamNotifications_TradeReversal_Body_Short": "Sebuah pertukaran telah dikembalikan",
+    "SteamNotifications_TradeReversal_Description": "Salah satu pertukaran terkinimu dikembalikan oleh rekan bertukarmu."
 }

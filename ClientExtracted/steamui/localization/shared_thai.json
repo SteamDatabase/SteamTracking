@@ -3685,5 +3685,9 @@
     "Accessibility_Group_Gameplay": "เกมเพลย์",
     "Accessibility_Group_Visual": "ภาพ",
     "Accessibility_Group_Audio": "เสียง",
-    "Accessibility_Group_Input": "อินพุต"
+    "Accessibility_Group_Input": "อินพุต",
+    "SteamNotifications_TradeReversal_Title": "การป้องกันการแลกเปลี่ยน",
+    "SteamNotifications_TradeReversal_Body": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
+    "SteamNotifications_TradeReversal_Body_Short": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
+    "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว"
 }

@@ -3308,6 +3308,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1jpQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -14831,6 +14832,7 @@ $steammessages_parental_objects.proto"
 55CBroadcast_GetBroadcastViewerStats_Response_ViewerStats
 55CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 55CClientMetrics_ClipRange_Notification_RelativeRangeEdge
+55CClientMetrics_ReportAccessibilitySettings_Notification
 55CClientMetrics_ReportReactUsage_Notification_ActionData
 55CCommunity_ClearSinglePartnerEventsAppPriority_Response
 55CCommunity_ClearUserPartnerEventsAppPriorities_Response
@@ -15385,6 +15387,7 @@ $steammessages_parental_objects.proto"
 8 bit raw midi
 8.CAuthentication_BeginAuthSessionViaCredentials_Response"
 8.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
+8.CClientMetrics_ReportAccessibilitySettings_Notification
 8.CCommunity_ClearSinglePartnerEventsAppPriority_Response"
 8.CCommunity_ClearUserPartnerEventsAppPriorities_Response"
 8.CContentServerDirectory_GetManifestRequestCode_Response"
@@ -15584,6 +15587,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9HXM]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -15695,7 +15699,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42pmT
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -15857,7 +15861,6 @@ $steammessages_parental_objects.proto"
 ?CDisplayColorManager: Unexpected ALS sensor index
 ?HAI\t81\t9dcG'
 ?IsValid()
-?MiG
 ?N6TagLib4MPEG4FileE
 ?QfZ
 ?Software\Valve\Steam\System\DisplayColorGamut
@@ -16456,11 +16459,6 @@ Access-Control-Allow-Origin
 Access-Control-Expose-Headers
 AccessControllerInputGeneratorMouseButton
 AccessToken
-Accessibility/ColorFilterName
-Accessibility/DesktopUIScale
-Accessibility/HighContrastMode
-Accessibility/ReduceMotion
-Accessibility/ScreenReaderEnabled
 Account %s %s invalid double password in logon message, protocol %x, cch1=%llu cch2=%u
 Account Disabled
 Account Locked Down
@@ -24052,7 +24050,6 @@ Failed to create a mousewheel binding for unknown wheel value %d
 Failed to create connection for FakeIP to %s
 Failed to create connection to '%s' for new messages session
 Failed to create controller mode %s
-Failed to create digital binding '%s' for %u
 Failed to create digital binding for '%s'
 Failed to create first worker thread in AddWorkItem()
 Failed to create output folder %s
@@ -28858,6 +28855,7 @@ Method RenameRole() not implemented.
 Method ReorderChatRoom() not implemented.
 Method ReorderRole() not implemented.
 Method ReplaceRoleActions() not implemented.
+Method ReportAccessibilitySettings() not implemented.
 Method ReportApp() not implemented.
 Method ReportBroadcastChannel() not implemented.
 Method ReportClientArgs() not implemented.
@@ -31025,6 +31023,7 @@ PDP Metallic Controller
 PDP Mirror's Edge Controller
 PDP Mortal Kombat Controller
 PDP NFL Face-Off Controller
+PDP REALMz Wireless Controller
 PDP Titanfall 2 Controller
 PDP Victrix Pro Fight Stick
 PDP Xbox 360 Afterglow
@@ -32512,6 +32511,7 @@ ReplacePlaylistWithSoundtrackAlbum
 ReplaceRoleActions
 Replay currently disabled on NVIDIA.\n
 ReplyToFriendMessage
+ReportAccessibilitySettings
 ReportBroadcastChannel
 ReportChatDeclined
 ReportClientArgs
@@ -39503,6 +39503,7 @@ Zulu
 \n6CMarketingMessages_GetMarketingMessagesForUser_Request
 \n6CPublishedFile_SetPlaytimeForControllerConfigs_Request
 \n7CAuthentication_BeginAuthSessionViaCredentials_Response
+\n7CClientMetrics_ReportAccessibilitySettings_Notification
 \n7CContentServerDirectory_GetServersForSteamPipe_Response
 \n7CMarketingMessages_GetMarketingMessagesForUser_Response
 \n8CContentServerDirectory_RequestPeerContentServer_Request
@@ -58137,7 +58138,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 14 2025 18:55:29
+steam Jul 18 2025 22:23:53
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

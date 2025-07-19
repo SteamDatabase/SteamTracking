@@ -3686,5 +3686,9 @@
     "Accessibility_Group_Visual": "시각",
     "Accessibility_Group_Audio": "청각",
     "Accessibility_Group_Input": "입력",
+    "SteamNotifications_TradeReversal_Title": "거래 보호",
+    "SteamNotifications_TradeReversal_Body": "거래를 되돌렸습니다.",
+    "SteamNotifications_TradeReversal_Body_Short": "거래를 되돌렸습니다.",
+    "SteamNotifications_TradeReversal_Description": "최근 거래 중 하나를 거래 상대가 되돌렸습니다.",
     "shared_dummy": "dont translate"
 }

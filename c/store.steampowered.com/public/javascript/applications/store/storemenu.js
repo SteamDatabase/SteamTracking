@@ -146,16 +146,19 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         menuHeight: "46px",
         accordionMenuScreenWidth: "730px",
         StoreMenuLegacyWrapper: "_2QlYKhF-leHfMXFSiSshZC",
         StoreMenuNavWrapper: "_2MzjSFlY9PHeDbUgNhjlOa",
         StoreMenuContainer: "pzuGfMA6MeGlV2I3yY60c",
         GamepadUI: "_2cz9ufAQLjlNOwbp2JCJST",
+        BackdropVisible: "_1TqaEZH4pd8k4LJDCTVmBo",
         StoreMenuBackdropContainer: "h2B3SGR_w4RWdrnsRZEcD",
         Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
-        BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
+        Active: "_2IyR9WyPwYb15ILBjPvLR9",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
+        BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
         MobileWebview: "_3yYpWFO_3ReYuGtMqbygx",
         HideTransition: "YNdpuNoh9QiKr4kpbAIwZ",
@@ -171,7 +174,6 @@
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
-        Active: "_2IyR9WyPwYb15ILBjPvLR9",
         FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
         MenuLabel: "vj9hwW9u0MpjH7MVjjNw0",
         MenuUnderscoreCtn: "_1-hPfsxjynE3demuqGmqf0",
@@ -183,8 +185,10 @@
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        PopoverContainer: "oeCR-_-EhS8CaxEaFAqDZ",
         Popover: "_2RyPu-qJzs6novxZiGSDf-",
         PopoverContent: "_2t1IMWc-EYYJD-dsioJxSp",
+        MobileWebview: "_30QvK0vvP-U2VkgmU-oOBQ",
         StaticMenu: "_1XjtpBn93p5fSXOBFU6T4R",
         MenuItem: "_3HgY-dL5S3-fJeU9WwcyJ8",
       };
@@ -2309,6 +2313,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2349,13 +2354,17 @@
         return _.createElement(
           _._,
           {
+            className: _.PopoverContainer,
             visible: _,
             msAnimationDuration: 100,
           },
           _.createElement(
             "div",
             {
-              className: _.Popover,
+              className: _()(
+                _.Popover,
+                _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
+              ),
             },
             _.createElement(
               _._,
@@ -2372,7 +2381,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4551,25 +4559,27 @@
           _ = (0, _._)(),
           [_, _] = _.useState("visible"),
           [_, _] = _.useState(),
+          [_, _] = _.useState(_),
           _ = _.useRef();
         _.current || (_.current = new WeakMap()),
           (0, _.useLayoutEffect)(() => {
             (_.current = new WeakMap()), _("visible");
           }, [_]);
-        const _ = _.useCallback((_) => {
-          const _ = _.current,
-            _ = _.get(_),
-            _ = "scrollTop" in _ ? _.scrollTop : _.scrollY;
-          if (void 0 !== _) {
-            const _ = _ - _;
-            if (_ > 90 && _ > 400) _((_) => ("hidden" != _ ? "hide" : _));
-            else {
-              if (!(_ < -30)) return;
-              _((_) => ("visible" != _ ? "show" : _));
+        const _ = _.useCallback(() => _(_), [_]),
+          _ = _.useCallback((_) => {
+            const _ = _.current,
+              _ = _.get(_),
+              _ = "scrollTop" in _ ? _.scrollTop : _.scrollY;
+            if (void 0 !== _) {
+              const _ = _ - _;
+              if (_ > 90 && _ > 400) _((_) => ("hidden" != _ ? "hide" : _));
+              else {
+                if (!(_ < -30)) return;
+                _((_) => ("visible" != _ ? "show" : _));
+              }
             }
-          }
-          _.set(_, _);
-        }, []);
+            _.set(_, _);
+          }, []);
         (0, _._)(
           window,
           "scroll",
@@ -4648,7 +4658,11 @@
         return _.createElement(
           "div",
           {
-            className: _()(_.StoreMenuContainer, _ && _.GamepadUI),
+            className: _()(
+              _.StoreMenuContainer,
+              (_ || _) && _.BackdropVisible,
+              _ && _.GamepadUI,
+            ),
             ref: _,
           },
           _.createElement(
@@ -4656,7 +4670,7 @@
             {
               className: _()(
                 _.StoreMenuBackdropContainer,
-                _ && _.BackdropActive,
+                (_ || _) && _.BackdropVisible,
               ),
             },
             _.createElement(
@@ -4676,7 +4690,8 @@
               ),
             ),
             _.createElement("div", {
-              className: _.Backdrop,
+              className: _()(_.Backdrop, _ && _.Active),
+              onTransitionEnd: _,
               ref: _,
               onClick: __webpack_require__,
             }),
@@ -5975,7 +5990,7 @@
           #a;
           #i;
           #s;
-          #c;
+          #o;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
@@ -5989,7 +6004,7 @@
             1 === this.listeners.size &&
               this.#a.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#o(_, _);
+                  this.#c(_, _);
                 });
               });
           }
@@ -6023,7 +6038,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#o(_, _);
+                        this.#c(_, _);
                       });
                     }),
                     this.#u()));
@@ -6059,9 +6074,9 @@
           }
           #m(_, _) {
             return _
-              ? ((this.#i && this.#t === this.#c && _ === this.#s) ||
+              ? ((this.#i && this.#t === this.#o && _ === this.#s) ||
                   ((this.#s = _),
-                  (this.#c = this.#t),
+                  (this.#o = this.#t),
                   (this.#i = (0, _._)(this.#i, _(_)))),
                 this.#i)
               : _;
@@ -6099,7 +6114,7 @@
               )
             );
           }
-          #o(_, _) {
+          #c(_, _) {
             const _ = this.#a.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {

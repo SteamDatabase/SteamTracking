@@ -23,6 +23,7 @@ var CLSTAMP = "steamdb";
           ContextMenuPosition: "_2yAm5LY_eu-Vg_52l0HFlM",
           contextMenu: "PP7LM0Ow1K5qkR8WElLpt",
           ContextMenuPopup: "_14wqdluDeDnnEcg3OSLEmd",
+          Standalone: "_3LWn7aXGP9rDmP1jNWhOK",
           contextMenuContents: "_2EstNjFIIZm_WUSKm5Wt7n",
           contextMenuItem: "_1n7Wloe5jZ6fSuvV18NNWI",
           active: "_18z-3vkWndCBO5WJgFldRK",
@@ -12577,9 +12578,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 14 2025 : 15:31:01",
-                BUILD_TIME_UTC: "Jul 14 2025 : 22:31:01",
-                BUILD_RTIME_UTC: 1752532261,
+                BUILD_TIME_LOCAL: "Jul 18 2025 : 16:00:32",
+                BUILD_TIME_UTC: "Jul 18 2025 : 23:00:32",
+                BUILD_RTIME_UTC: 1752879632,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -15110,7 +15111,6 @@ var CLSTAMP = "steamdb";
         let _ = class extends _.Component {
           static contextType = _;
           m_navRef = (0, _._)();
-          m_divRef = _.createRef();
           get instance() {
             return this.context.instance;
           }
@@ -15149,6 +15149,8 @@ var CLSTAMP = "steamdb";
               footer: _,
               role: _ = "menu",
               labelId: _,
+              style: _ = {},
+              refScrollable: _,
               ..._
             } = this.props;
             const _ = this.context.styles ?? _();
@@ -15157,8 +15159,9 @@ var CLSTAMP = "steamdb";
               return _.createElement(
                 "div",
                 {
+                  ref: _,
+                  style: _,
                   ..._,
-                  ref: this.m_divRef,
                   className: (0, _._)(
                     {
                       [_.contextMenuContents]: !0,
@@ -15174,64 +15177,65 @@ var CLSTAMP = "steamdb";
               const _ = () => {
                 _ && _(), this.instance.Hide();
               };
-              return _.createElement(
-                _._,
-                {
-                  ..._,
-                  className: (0, _._)(
-                    _.contextMenuContents,
-                    {
-                      [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    },
-                    _,
-                  ),
-                  "flow-children": "column",
-                  onMoveLeft: this.HideIfSubmenu,
-                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
-                  style: {
-                    overflowY: this.instance.BIsSubMenuVisible()
-                      ? "hidden"
-                      : void 0,
-                  },
-                  navEntryPreferPosition: _._.PREFERRED_CHILD,
-                  navRef: this.m_navRef,
-                  ref: this.m_divRef,
-                  role: _,
-                  "aria-labelledby": _ ? _ : void 0,
-                  ..._._,
-                },
-                _,
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      _: _,
-                      style: {
-                        display: "none",
-                      },
-                    },
-                    _,
-                  ),
-                !this.instance.BIsSubMenu() &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(_, null),
-                    _.createElement(
-                      _,
+              return (
+                (_.overflowY = this.instance.BIsSubMenuVisible()
+                  ? "hidden"
+                  : void 0),
+                _.createElement(
+                  _._,
+                  {
+                    ..._,
+                    className: (0, _._)(
+                      _.contextMenuContents,
                       {
-                        className: _.Cancel,
-                        onSelected: _,
+                        [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
                       },
-                      (0, _._)(_),
+                      _,
                     ),
-                    _,
-                  ),
-                this.instance.BIsSubMenuVisible() &&
-                  _.createElement("div", {
-                    className: _.contextMenuFade,
-                    onClick: () => this.instance.HideSubMenu(),
-                  }),
+                    "flow-children": "column",
+                    onMoveLeft: this.HideIfSubmenu,
+                    onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
+                    style: _,
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    navRef: this.m_navRef,
+                    ref: _,
+                    role: _,
+                    "aria-labelledby": _ ? _ : void 0,
+                    ..._._,
+                  },
+                  _,
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        _: _,
+                        style: {
+                          display: "none",
+                        },
+                      },
+                      _,
+                    ),
+                  !this.instance.BIsSubMenu() &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(_, null),
+                      _.createElement(
+                        _,
+                        {
+                          className: _.Cancel,
+                          onSelected: _,
+                        },
+                        (0, _._)(_),
+                      ),
+                      _,
+                    ),
+                  this.instance.BIsSubMenuVisible() &&
+                    _.createElement("div", {
+                      className: _.contextMenuFade,
+                      onClick: () => this.instance.HideSubMenu(),
+                    }),
+                )
               );
             }
           }
@@ -15819,6 +15823,7 @@ var CLSTAMP = "steamdb";
                 (this.props.instance.visible && this.state.ready)) &&
                 (_ += " visible"),
               (_ += " " + _().ContextMenuPosition),
+              this.props.options.bStandalone && (_ += " " + _().Standalone),
               _.createElement(
                 "div",
                 {
@@ -26894,9 +26899,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 14 2025 : 15:31:01",
-                    BUILD_TIME_UTC: "Jul 14 2025 : 22:31:01",
-                    BUILD_RTIME_UTC: 1752532261,
+                    BUILD_TIME_LOCAL: "Jul 18 2025 : 16:00:32",
+                    BUILD_TIME_UTC: "Jul 18 2025 : 23:00:32",
+                    BUILD_RTIME_UTC: 1752879632,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27517,21 +27522,21 @@ var CLSTAMP = "steamdb";
         48: "6c8b8d906ea798b78f78",
         89: "518b89b708126afaf165",
         106: "17c835d18476d09ca24f",
-        129: "44b8c612a30e869d5df9",
-        139: "c6aef5bfa4638e20771c",
+        129: "b277cb018d0e7f92c8ef",
+        139: "05e2b0e4e12b7d675f10",
         297: "a61ccc8264a3e6202b9a",
         674: "b07f5346f25e6f893118",
         740: "9b642b52e9e6a5204002",
         786: "45ea218a07e68e7300e5",
-        823: "52df3c587a28388f9d57",
+        823: "3d443516118978b911ec",
         901: "14182a2109e029ba8a22",
         1005: "6683a0cbf495384fcf34",
         1012: "cded7344104308eb77a6",
         1093: "7bd044ddebc026b54f90",
         1220: "267d5635590d2b12d141",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "b3b8e498ff82d795eac9",
-        1423: "9e5b37900143d8a02329",
+        1389: "7a60f1ae97168a2d6875",
+        1423: "82505c34be6910a8638d",
         1463: "8e1efc1ccc3826232280",
         1478: "debd73bf1ad2d5935cdf",
         1511: "3f37c1735b705e9e6b0e",
@@ -27539,20 +27544,20 @@ var CLSTAMP = "steamdb";
         1648: "6f606ba2c6eae2600b53",
         1822: "3246ce9901ecb38272c6",
         1879: "62d6403013b08cb655c3",
-        2021: "c8df08b885ee8d9b0255",
+        2021: "916e9385a8d128eb3784",
         2056: "acad628a1efe48c33d19",
-        2199: "3dd3e2c07a0eab3a9cc5",
+        2199: "d615ee040436e3a40b33",
         2225: "dc3d09d21b6992daad2e",
         2263: "75e7c03a4e544519908e",
         2266: "eea6d65831676709717e",
         2320: "64ee85cb1171ed9a0a8c",
         2438: "8f65974f3b158c8c2d8e",
         2448: "c1f0b015f00cac957233",
-        2481: "307365e816a026f7c3f3",
+        2481: "66f55470397856651e8f",
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "3076a4bb4fed859d9897",
         2646: "67e34019da53c1662907",
-        2664: "909b952ea15a6d4bfd44",
+        2664: "118b4744b544f09daeae",
         2761: "f08574fadd52f7aae840",
         2783: "a486f3c0fd2b77f5d286",
         2862: "6d6dfd8b8af302f8846e",
@@ -27560,7 +27565,7 @@ var CLSTAMP = "steamdb";
         2880: "a80dcf1017385ba89471",
         2889: "b9abff4f1a3a1f07e514",
         2952: "5cc53fdb04ed91186e12",
-        2959: "de61e2ee04795ceae19d",
+        2959: "9e101ce0148fcb195977",
         2984: "cdb6f5e43526a559784c",
         3087: "45593c8c88eef3dbb35e",
         3180: "8e8aa27ac0cac69a5efc",
@@ -27568,7 +27573,7 @@ var CLSTAMP = "steamdb";
         3366: "e918a13ca146f6e8dec5",
         3569: "3a07c2668451771990d3",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "297b84e6ee0cdf2d9f00",
+        3594: "8cd7c1d152a632ee7a02",
         3714: "ab7010eec823473536d8",
         3869: "580308058d472f4189ca",
         4026: "f3d756cb30a6f6fa6263",
@@ -27580,24 +27585,24 @@ var CLSTAMP = "steamdb";
         4481: "4922c5a7f9c178713230",
         4839: "b1ca14b72a083777a78d",
         4842: "ad9e809fb763ba707c7a",
-        4952: "1b2ace70cad81d4b2b24",
+        4952: "3a8d99c86fd00ab460f4",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "88a696772fc7415e02f8",
+        5553: "749ece8b1de9c48e4620",
         5592: "63a2098129389ae7b8f4",
         5704: "379467b643925dea1061",
         5716: "b488375824b011334817",
-        5803: "f491db8049799de5fd3a",
+        5803: "6c5a5047cc435c7f6dbd",
         5864: "09a44219ac651a3ff1f8",
-        6120: "8b18199b28431aa8dea6",
+        6120: "578582ed7b71c1f65d4b",
         6197: "f99054e447f1f935c7e4",
         6345: "fef99a42fdc175f05941",
         6409: "cd54d036f7a9bb3d6a7b",
-        6430: "dd096a5b19de709e8c2f",
-        6472: "2abf4b3bb55d1f5ac697",
-        6577: "a325f422c177ccf9a5c3",
-        6752: "fdf43b971395844d356c",
+        6430: "671e62b67f81bfc2b062",
+        6472: "9248710faa6fd78723e7",
+        6577: "eab9222599262d93259a",
+        6752: "6d23c928449b5e197416",
         6785: "69a9f0b91f21affb7342",
-        6888: "f9645fcbca56af0e1689",
+        6888: "ac9c7e9d63d846aa7544",
         6890: "7c6c2c3915e1549098a3",
         6896: "f18f04bfef098a57e289",
         7151: "45f70eb6851f2ac45f0d",
@@ -27605,12 +27610,12 @@ var CLSTAMP = "steamdb";
         7314: "9549b4c2bbcd41c7dade",
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
-        7442: "56f71a07216fdeea2038",
+        7442: "8f479413773373746417",
         7462: "52ace9199689821be1eb",
         7533: "184d55fbe3a86515002e",
         7569: "5c6a8bfaf01e13e9762b",
         7653: "aed4c0fda5b9b4db2dd3",
-        7696: "c9c583fdceefb40a3d45",
+        7696: "6ae57e5810f4b3c7c9cb",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
         7836: "bcbbf94afe66d0d24cb8",
@@ -27620,32 +27625,32 @@ var CLSTAMP = "steamdb";
         8263: "b24751f2ee6b3f9a1cfa",
         8280: "3ac92a197517e25c86d4",
         8286: "1f5be36130bf4017cada",
-        8291: "f5767d6ca604a77c9c19",
+        8291: "59331db3ea47186f735a",
         8396: "32e5eb4a4e5a546da28d",
         8443: "14576c5b8a2b6ac79ecd",
         8445: "ae709c6c6dcbaa934ce2",
         8478: "6a43580d5abdab6866bc",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "e8a618872ebb8898fbb7",
+        8522: "8fbdd341a0bf01ab821c",
         8534: "49065718c6b70eaa6a00",
         8545: "1aa2273a0a3161924d55",
-        8674: "3f3ccec875ddd6a736b1",
+        8674: "6a2e38cf43f6984c5665",
         8699: "43afd6e96d56692322f9",
         8732: "b68ca2e9514d9297f110",
         8830: "f44f40d7bf4e86ef4219",
-        8872: "978367e16e4e3489730c",
-        9053: "a376f77f1648aa684099",
+        8872: "9f9a2bd705bd1722c9c9",
+        9053: "4a8497ddc7b681d1f93a",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
         9171: "ccca6f038711ad9adaca",
-        9298: "502f6d95abc71386c330",
+        9298: "e0e7b46b8164092b2201",
         9368: "5e67ca9a473e101e748c",
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "5383745d3d9ace3cc73c",
-        9869: "aee6966412f9d2a9bf7b",
+        9858: "1e0bc54a8189296ab3a5",
+        9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[_]),
     (_.miniCssF = (_) =>

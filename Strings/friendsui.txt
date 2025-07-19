@@ -454,6 +454,7 @@ $\nY8O
 %i.%i.%i.%i:%i
 %lld
 %llu
+%llx
 %s (%d,%d,%d,%d)
 %s [%s]%-*s
 %s call had invalid argument (arg %d): %s
