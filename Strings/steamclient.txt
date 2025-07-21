@@ -15699,7 +15699,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42pVT
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -15882,6 +15882,7 @@ $steammessages_parental_objects.proto"
 ?fff?
 ?fuP=
 ?jOb
+?mPG
 ?m_pRegisteredWithMgr != nullptr
 ?pLTT
 ?rJRTS\Rg>`H`CeIkHq7v4}4v4u7
@@ -24050,6 +24051,7 @@ Failed to create a mousewheel binding for unknown wheel value %d
 Failed to create connection for FakeIP to %s
 Failed to create connection to '%s' for new messages session
 Failed to create controller mode %s
+Failed to create digital binding '%s' for %u
 Failed to create digital binding for '%s'
 Failed to create first worker thread in AddWorkItem()
 Failed to create output folder %s
@@ -42706,6 +42708,7 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c@mfI
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -58138,7 +58141,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 18 2025 22:23:53
+steam Jul 21 2025 01:58:29
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
