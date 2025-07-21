@@ -473,6 +473,22 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _() {
+        let _, _;
+        return {
+          promise: new Promise((_, _) => {
+            (_ = _), (_ = _);
+          }),
+          resolve: _,
+          reject: _,
+        };
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1516,7 +1532,7 @@
               : "sale_overlay" === _
                 ? (_ = this.jsondata.localized_sale_overlay)
                 : _._.includes(_)
-                  ? (_ = _._.GetAllLocalizedGroupImages())
+                  ? (_ = _._.GetAllLocalizedGroupImageHashAndExts())
                   : "product_banner" === _
                     ? (_ = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === _
@@ -3104,6 +3120,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
@@ -3164,11 +3181,19 @@
           if (__webpack_require__ != _._.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
-            return _ && "localized_image_group" == _
+            return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
               : _ + _ + "/" + _ + __webpack_require__ + _;
           }
           return _ + _ + "/" + _;
+        },
+        GetHashAndExtFromURL(_) {
+          let _ = this.GetBaseURL();
+          return (null == _ ? void 0 : _.startsWith(_))
+            ? -1 == (_ = _.substring(_.length)).indexOf("/")
+              ? null
+              : (_ = _.substring(_.indexOf("/") + 1))
+            : null;
         },
         GenerateEditableURLFromHashAndExt(_, _, _) {
           let _ =
@@ -3190,12 +3215,13 @@
           return await this.AsyncGetImageResolutionInternal(_, _, _);
         },
         async AsyncGetImageResolutionInternal(_, _, _) {
-          let _ = {
-              success: 2,
-            },
-            _ = new Image();
+          const _ = (0, _._)();
+          let _ = new Image();
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
+              const _ = {
+                success: 2,
+              };
               _ ||
                 ((_.err_msg =
                   "Load fail on url " +
@@ -3203,26 +3229,36 @@
                   " with error: " +
                   (0, _._)(_).strErrorMsg),
                 console.error(_.err_msg)),
-                (_.success = 2);
+                (_.success = 2),
+                _.resolve(_);
             }),
             (_.onload = () => {
+              const _ = {
+                success: 2,
+              };
               (_.width = _.width),
                 (_.height = _.height),
                 (0, _._)(
                   _.width > 0 && _.height > 0,
                   "unexpected image resolution discovered for strURL: " + _,
                 ),
-                (_.success = 1);
+                (_.success = 1),
+                _.resolve(_);
             }),
             (_.src = _),
-            _.token.promise.catch((_) => {
-              (_.onload = () => {}), (_.success = 52);
+            _.token.promise.catch(() => {
+              const _ = {
+                success: 2,
+              };
+              return (_.onload = () => {}), (_.success = 52), _;
             });
-          let _ = 0;
-          for (; void 0 === _.success && _ < 100; )
-            await (0, _._)(100), (_ += 1);
+          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          let _;
+          try {
+            _ = await Promise.race([_, _.promise]);
+          } catch {}
           return (
-            _ >= 100 &&
+            _ ||
               ((_.success = 16),
               (_.err_msg = "We timed out processing images")),
             _
@@ -3838,6 +3874,11 @@
             (this.m_curLocImageGroup &&
               this.m_curLocImageGroup.localized_images) ||
             []
+          );
+        }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages().map((_) =>
+            _._.GetHashAndExtFromURL(_),
           );
         }
       }
@@ -6559,16 +6600,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _() {
-        let _, _;
-        return {
-          promise: new Promise((_, _) => {
-            (_ = _), (_ = _);
-          }),
-          resolve: _,
-          reject: _,
-        };
-      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.toLowerCase();
         return _.endsWith(".jpg")
@@ -6610,7 +6650,7 @@
         }
       }
       function _(_) {
-        const _ = _(),
+        const _ = (0, _._)(),
           _ = new Image();
         return (
           (_.onload = () => _.resolve(_)),
@@ -6623,7 +6663,7 @@
         );
       }
       function _(_) {
-        const _ = _(),
+        const _ = (0, _._)(),
           _ = document.createElement("video");
         return (
           (_.preload = "metadata"),
@@ -6647,7 +6687,7 @@
       async function _(_, _) {
         if (_) return _(URL.createObjectURL(_));
         {
-          const _ = _(),
+          const _ = (0, _._)(),
             _ = new FileReader();
           (_.onload = () => {
             var _;
@@ -6684,14 +6724,6 @@
               height: 0,
             };
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
