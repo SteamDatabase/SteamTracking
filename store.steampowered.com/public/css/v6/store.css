@@ -6376,6 +6376,10 @@ body.v7menu .v7menu_spacer.cartonly {
 	height: 29px;
 }
 
+html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_spacer {
+	height: 0;
+}
+
 /* 2025 Game Page Widening */
 
 body.v6.widestore .page_content {

@@ -64,6 +64,8 @@
     },
     7802: (e) => {
       e.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         TopCategories: "_1_Cs2jL-zQHuz1FSXBASEL",
         CategoryLink: "_1-cbd4jE7Y3ZRkLFocvEDW",
         CategoryTileImage: "_2zLGA-bpYZoQ1tlrxdC0bl",
@@ -149,6 +151,7 @@
     37245: (e) => {
       e.exports = {
         narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         menuHeight: "46px",
         accordionMenuScreenWidth: "730px",
         StoreMenuLegacyWrapper: "_2QlYKhF-leHfMXFSiSshZC",
@@ -173,6 +176,7 @@
         DynamicMenuButtons: "_3CtcPWgZYR05CldoJ0Jkrx",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
+        ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
@@ -1173,8 +1177,8 @@
       function L(e) {
         return { content_descriptors_excluded: e };
       }
-      var M = n(78329),
-        w = n(54806),
+      var w = n(78329),
+        M = n(54806),
         B = n(62490);
       var T = n(75233),
         I = n(26940),
@@ -1208,10 +1212,11 @@
         };
       }
       var O = n(69345),
-        P = n(46870);
-      const D = { include_assets: !0 },
-        H = { include_tags: !0, include_creators: !0 };
-      function U(e) {
+        P = n(46870),
+        D = n(51941);
+      const H = { include_assets: !0 },
+        U = { include_tags: !0, include_creators: !0 };
+      function z(e) {
         const {
           list: t,
           iActiveIndex: n,
@@ -1225,7 +1230,7 @@
                 q,
                 { title: t.strMainTitle },
                 t.rgMainItems.map(({ item_id: e }, t) =>
-                  i.createElement(G, {
+                  i.createElement(j, {
                     key: (0, l.ER)(e),
                     itemid: e,
                     index: t,
@@ -1239,10 +1244,10 @@
               (s = i.createElement(
                 q,
                 { title: t.strMainTitle },
-                i.createElement(K, null),
+                i.createElement(Q, null),
               )),
           t.rgTextItems?.length &&
-            (o = i.createElement(F, {
+            (o = i.createElement(Z, {
               title: t.strTextLinks,
               items: t.rgTextItems,
             })),
@@ -1251,7 +1256,7 @@
               q,
               { title: t.strSubSectionTitle, horizontal: !0 },
               t.rgSubSectionItems.map(({ item_id: e }, t) =>
-                i.createElement(j, {
+                i.createElement($, {
                   key: (0, l.ER)(e),
                   itemid: e,
                   index: t,
@@ -1282,13 +1287,13 @@
           i.createElement(R.Ay, { feature: u ?? m }, s),
           o,
           c,
-          i.createElement($, {
+          i.createElement(K, {
             active: "advancedsearch" == r,
             getMouseHandlers: a,
           }),
         );
       }
-      function z(e = !0) {
+      function W(e = !0) {
         return (function (e = 10, t = {}, n = !0) {
           const r = (0, T.jE)(),
             a = (0, _.KV)(),
@@ -1327,9 +1332,9 @@
             staleTime: 3e5,
             enabled: n,
           });
-        })(10, D, e);
+        })(10, H, e);
       }
-      function W(e, t, n, a = !0) {
+      function V(e, t, n, a = !0) {
         const o = b(e),
           c = (function () {
             const { data: e } = (0, y.lx)();
@@ -1344,14 +1349,14 @@
                   ...e,
                   filters: { ...(t ?? {}), ...(e.filters ?? {}) },
                 };
-              })(H, c),
+              })(U, c),
             [c],
           ),
           u = (function (e, t = 5, n) {
             const r = (0, _.KV)(),
               { storeBrowseContext: a, dataPreload: s } = (0, f.W)(e);
             return i.useCallback((e) => h(r, a, e, s, t, n), [r, a, s, t, n]);
-          })(D, 5, l),
+          })(H, 5, l),
           m = (function (e, ...t) {
             const [n, r] = i.useState([]);
             (0, i.useEffect)(() => {
@@ -1361,7 +1366,7 @@
                   : [...n, { args: t, query: e(...t) }],
               );
             }, [t]);
-            const [a, s] = (0, w.E)({
+            const [a, s] = (0, M.E)({
               queries: n.map(({ query: e }) => e),
               combine: (e) => {
                 for (let t = e.length - 1; t >= 0; t--)
@@ -1377,12 +1382,12 @@
             );
           })(u, void 0 === c ? "" : o),
           d = t && "" == e,
-          { data: C } = z(d),
-          { data: S } = (0, M.XL)(d),
-          { data: R } = (0, M.yd)(d && a);
+          { data: C } = W(d),
+          { data: S } = (0, w.XL)(d),
+          { data: R } = (0, w.yd)(d && a);
         i.useMemo(() => B.fW((0, I.Z)().slice()), []);
         return (function (e) {
-          const [t, n] = i.useState(e || V),
+          const [t, n] = i.useState(e || F),
             [a, s] = i.useState({
               activeSection: "apps",
               iActiveIndex: void 0,
@@ -1405,7 +1410,7 @@
               );
             })();
           i.useEffect(() => {
-            n(e || V);
+            n(e || F);
           }, [e]);
           const c = t.rgMainItems.length,
             l = t.rgSubSectionItems?.length || 0,
@@ -1601,7 +1606,7 @@
           }, [m, C, S, R, n, a]),
         );
       }
-      const V = { eListType: "suggestions", strMainTitle: "", rgMainItems: [] };
+      const F = { eListType: "suggestions", strMainTitle: "", rgMainItems: [] };
       function q(e) {
         const { title: t, children: n, horizontal: r } = e;
         return i.createElement(
@@ -1611,7 +1616,7 @@
           i.createElement("div", { className: a.SuggestionList }, n),
         );
       }
-      function F(e) {
+      function Z(e) {
         const { title: t, items: n } = e;
         return i.createElement(
           "div",
@@ -1621,7 +1626,7 @@
             { className: a.SuggestionTextList },
             i.createElement("div", { className: a.SectionTitle }, t),
             n.map(({ item_id: e }, t) =>
-              i.createElement(Z, {
+              i.createElement(G, {
                 key: (0, l.ER)(e),
                 itemid: e,
                 first: 0 == t,
@@ -1630,7 +1635,7 @@
           ),
         );
       }
-      function Z(e) {
+      function G(e) {
         const { itemid: t, first: n } = e,
           { data: r } = (0, E.J$)(t);
         return i.createElement(
@@ -1644,7 +1649,7 @@
           ),
         );
       }
-      const G = i.memo(function (e) {
+      const j = i.memo(function (e) {
           const {
               itemid: t,
               index: n,
@@ -1654,7 +1659,7 @@
             s = i.useMemo(() => r("apps", n), [r, n]);
           return i.createElement(k.RK, { itemid: t, active: a, ...s });
         }),
-        j = i.memo(function (e) {
+        $ = i.memo(function (e) {
           const { itemid: t, index: n, getMouseHandlers: s, active: o } = e,
             { data: c } = (0, E.J$)(t),
             l = (0, v.aL)(`${r.TS.STORE_BASE_URL}${c?.store_url_path || "/"}`);
@@ -1678,13 +1683,14 @@
             ),
           );
         });
-      function $(e) {
-        const { getMouseHandlers: t, active: n } = e;
+      function K(e) {
+        const { getMouseHandlers: t, active: n } = e,
+          r = (0, D.$4)();
         return i.createElement(
-          "button",
+          "a",
           {
             className: S()(a.AdvancedSearch, n && a.Active),
-            type: "submit",
+            href: r,
             ...t("advancedsearch", 0),
           },
           i.createElement(
@@ -1694,17 +1700,16 @@
           ),
         );
       }
-      function K() {
+      function Q() {
         return i.createElement(
           "div",
           { className: a.NoMatches },
           (0, s.g)("#Menu_SearchBar_NoMatches"),
         );
       }
-      var Q = n(51941);
       const Y = i.memo(function () {
-        const { bBackdropActive: e } = (0, Q.Hi)(),
-          t = (0, Q.dn)();
+        const { bBackdropActive: e } = (0, D.Hi)(),
+          t = (0, D.dn)();
         return i.createElement(
           "div",
           { className: a.SearchBar },
@@ -1738,8 +1743,17 @@
             bSearchVisible: d,
             openSearch: _,
             closeSearch: g,
-          } = (0, Q.kM)(),
-          f = J(g);
+          } = (0, D.kM)(),
+          f = J(g),
+          h = i.useCallback(() => {
+            m(), _();
+          }, [m, _]),
+          p = i.useCallback(
+            (e) => {
+              c(e.currentTarget.value), h();
+            },
+            [c, h],
+          );
         return i.createElement(
           "form",
           {
@@ -1755,13 +1769,12 @@
             name: "term",
             placeholder: (0, s.g)("#Menu_SearchPlaceholder"),
             value: o,
-            onChange: (e) => c(e.currentTarget.value),
-            onFocus: () => {
-              m(), _();
-            },
             autoFocus: n,
-            onKeyDown: l,
             autoComplete: "off",
+            onChange: p,
+            onFocus: m,
+            onClick: h,
+            onKeyDown: l,
             role: "combobox",
             "aria-expanded": d,
             "aria-autocomplete": "list",
@@ -1783,15 +1796,19 @@
             bSearchVisible: s,
             openSearch: c,
             closeSearch: l,
-          } = (0, Q.kM)(),
-          { nBackdropHeight: u } = (0, Q.Hi)(),
+          } = (0, D.kM)(),
+          { nBackdropHeight: u } = (0, D.Hi)(),
           m = u && u < 480 ? 3 : 4,
           d = !(u && u < 450),
-          { onKeyDown: _, ...g } = W(e, r, m, d),
+          { onKeyDown: _, ...g } = V(e, r, m, d),
           f = J(l),
           h = i.useCallback(
             (e) => {
-              s && _(e) ? e.preventDefault() : "Escape" === e.key ? l() : c();
+              s && _(e)
+                ? e.preventDefault()
+                : "Escape" === e.key
+                  ? l()
+                  : "Tab" !== e.key && c();
             },
             [s, l, c, _],
           );
@@ -1811,7 +1828,7 @@
               i.createElement(
                 "div",
                 { className: a.Suggestions, id: n },
-                i.createElement(U, { ...g }),
+                i.createElement(z, { ...g }),
               ),
             ),
           )
@@ -1930,8 +1947,8 @@
           ),
         );
       }
-      var M = n(23310),
-        w = n(30142),
+      var w = n(23310),
+        M = n(30142),
         B = n(62490),
         T = n(7338),
         I = n(39777),
@@ -2002,7 +2019,7 @@
         return z({ ...(e ?? {}), discounts_only: !0 }, t);
       }
       var V = n(20629);
-      function q(e, t, n) {
+      function F(e, t, n) {
         return {
           queryKey: ["GetWishlistItemsOnSale"],
           queryFn: () =>
@@ -2043,10 +2060,10 @@
           enabled: y.iA.logged_in,
         };
       }
-      function F() {
+      function q() {
         const e = (0, D.KV)(),
           { storeBrowseContext: t } = (0, H.W)({ include_assets: !0 });
-        return (0, P.I)({ ...q(e, t), select: (e) => e.total_items_on_sale });
+        return (0, P.I)({ ...F(e, t), select: (e) => e.total_items_on_sale });
       }
       var Z = n(75233),
         G = n(32754),
@@ -2100,7 +2117,7 @@
           E.Z,
           {
             "flow-children": "column",
-            navEntryPreferPosition: M.iU.MAINTAIN_Y,
+            navEntryPreferPosition: w.iU.MAINTAIN_Y,
             className: Q.LinkColumn,
           },
           e.children,
@@ -2144,7 +2161,7 @@
           E.Z,
           {
             "flow-children": "column",
-            navEntryPreferPosition: M.iU.MAINTAIN_Y,
+            navEntryPreferPosition: w.iU.MAINTAIN_Y,
             className: o()(Q.SectionContent, Q.GridSection),
           },
           e.children,
@@ -2155,7 +2172,7 @@
           E.Z,
           {
             "flow-children": "row",
-            navEntryPreferPosition: M.iU.MAINTAIN_X,
+            navEntryPreferPosition: w.iU.MAINTAIN_X,
             className: Q.Row,
           },
           e.children,
@@ -2267,10 +2284,10 @@
       }
       function be() {
         return (
-          (0, $.ci)(), z({ count: 10 }, Ce), W({ count: 10 }, Ce), F(), null
+          (0, $.ci)(), z({ count: 10 }, Ce), W({ count: 10 }, Ce), q(), null
         );
       }
-      const ye = w.m();
+      const ye = M.m();
       function Le() {
         const { data: e } = (0, $.ci)(),
           t = e?.get("freetoplay"),
@@ -2325,8 +2342,8 @@
           ),
         );
       }
-      const Me = 3,
-        we = 3;
+      const we = 3,
+        Me = 3;
       function Be(e) {
         const { rgItemIDs: t } = e,
           n = (0, Z.jE)(),
@@ -2341,13 +2358,13 @@
           s = r.useMemo(() => {
             if (!i || !i.length) return;
             const e = i.map((e) => (0, j.b0)(e, "header")).filter(Boolean),
-              t = Me * we,
+              t = we * Me,
               n = [],
-              r = w.A(ye);
+              r = M.A(ye);
             for (; n.length < t; )
               n.push(...B.fW(e.slice(0, t - n.length), 0, r));
             const a = [];
-            for (let e = 0; e < Me; e++) a.push(n.slice(e * we, (e + 1) * we));
+            for (let e = 0; e < we; e++) a.push(n.slice(e * Me, (e + 1) * Me));
             return a;
           }, [i]);
         return s
@@ -2389,7 +2406,7 @@
         );
       }
       function Re() {
-        const { data: e } = F(),
+        const { data: e } = q(),
           { data: t } = z({ count: 10 }, Ce);
         return r.createElement(
           xe,
@@ -2421,7 +2438,7 @@
           E.Z,
           {
             "flow-children": "column",
-            navEntryPreferPosition: M.iU.MAINTAIN_Y,
+            navEntryPreferPosition: w.iU.MAINTAIN_Y,
             className: o()(K.BrowseLinkGrid, K.BrowseLinkGridLarge),
           },
           t,
@@ -2433,7 +2450,7 @@
           E.Z,
           {
             "flow-children": "grid",
-            navEntryPreferPosition: M.iU.MAINTAIN_Y,
+            navEntryPreferPosition: w.iU.MAINTAIN_Y,
             className: o()(K.BrowseLinkGrid, K.BrowseLinkGridSmall),
           },
           t,
@@ -2581,14 +2598,14 @@
               y.iA.logged_in
                 ? r.createElement(Ge, null)
                 : r.createElement(je, null),
-              r.createElement(qe, null),
+              r.createElement(Fe, null),
             ),
             r.createElement(Ve, null),
           ),
         );
       }
       function We() {
-        return (0, He.RK)(Fe), (0, De.jZ)(), null;
+        return (0, He.RK)(qe), (0, De.jZ)(), null;
       }
       function Ve() {
         const e = he();
@@ -2633,7 +2650,7 @@
           ),
         );
       }
-      function qe() {
+      function Fe() {
         return he()
           ? r.createElement(
               m.Ii,
@@ -2686,16 +2703,16 @@
             )
           : null;
       }
-      const Fe = { include_assets: !0 },
+      const qe = { include_assets: !0 },
         Ze = Math.floor(Date.now() / 6e5);
       function Ge(e) {
         const { rgRecentApps: t } = e,
-          { data: n } = (0, He.RK)(Fe),
+          { data: n } = (0, He.RK)(qe),
           a = r.useMemo(() => {
             if (!n) return [];
             const e = new Set(t?.map(A.ER) || []),
               r = n.slice(0, 10).filter((t) => !e.has((0, A.ER)(t)));
-            return B.fW(r, 0, w.A(Ze)).slice(0, 3);
+            return B.fW(r, 0, M.A(Ze)).slice(0, 3);
           }, [n, t]);
         return r.createElement(
           h.Ay,
@@ -2715,7 +2732,7 @@
       function je() {
         const { data: e } = z(
           { count: 3, name: "Store Menu Top Grossing" },
-          Fe,
+          qe,
         );
         return r.createElement(
           h.Ay,
@@ -2804,9 +2821,9 @@
               { data: t } = et(),
               n = a(rt.T),
               { data: i } = (0, Je.Fv)(y.TS.LANGUAGE),
-              s = r.useMemo(() => B.fW((0, nt.Z)().slice(), 0, w.A(lt)), []),
+              s = r.useMemo(() => B.fW((0, nt.Z)().slice(), 0, M.A(lt)), []),
               o = he(),
-              c = o ? 8 : 5,
+              c = o ? 6 : 4,
               l = o ? 12 : 8;
             return r.useMemo(() => {
               if (null == e || null == t || !n || !i) return [null, null];
@@ -2899,7 +2916,7 @@
                 ),
               );
         }),
-        lt = w.m();
+        lt = M.m();
       function ut(e) {
         const { featuredCategory: t } = e,
           { strHandle: n, strURLPath: a, strName: i } = t,
@@ -3035,7 +3052,7 @@
           r.createElement(ce, { handle: "controller" }),
         );
       }
-      function Mt() {
+      function wt() {
         return r.createElement(
           ee,
           null,
@@ -3044,11 +3061,11 @@
             re,
             null,
             r.createElement(Bt, null),
-            r.createElement(wt, null),
+            r.createElement(Mt, null),
           ),
         );
       }
-      function wt() {
+      function Mt() {
         return r.createElement(
           ie,
           null,
@@ -3307,7 +3324,7 @@
             E.Z,
             {
               "flow-children": "row",
-              navEntryPreferPosition: M.iU.MAINTAIN_Y,
+              navEntryPreferPosition: w.iU.MAINTAIN_Y,
               className: Dt.DynamicMenu,
             },
             r.createElement(
@@ -3339,10 +3356,10 @@
             r.createElement(
               fe,
               null,
-              r.createElement(Ft, { rgSections: t, section: n }),
+              r.createElement(qt, { rgSections: t, section: n }),
             ),
           ),
-          r.createElement(qt, { rgSections: t }),
+          r.createElement(Ft, { rgSections: t }),
         );
       }
       function Wt(e) {
@@ -3387,11 +3404,11 @@
           ),
         );
       }
-      const qt = r.memo(function (e) {
+      const Ft = r.memo(function (e) {
         const { rgSections: t } = e;
         return t.map((e) => r.createElement(Jt, { key: e[0], section: e[0] }));
       });
-      const Ft = r.memo(function (e) {
+      const qt = r.memo(function (e) {
           const { rgSections: t, section: n } = e,
             [a, i] = r.useState(n),
             [s, o] = r.useState(void 0);
@@ -3515,7 +3532,7 @@
               case "hardware":
                 return r.createElement(St, null);
               case "waystoplay":
-                return r.createElement(Mt, null);
+                return r.createElement(wt, null);
               case "specialsections":
                 return r.createElement(At, null);
               case "more":
@@ -3673,7 +3690,7 @@
             },
             [n],
           ),
-          M = (function (e, t) {
+          w = (function (e, t) {
             const [n, a] = r.useState(),
               i = r.useCallback((e) => {
                 a(
@@ -3703,7 +3720,7 @@
               (0, Xt.wY)(i)
             );
           })(a, s),
-          w = (0, Xt.wY)(
+          M = (0, Xt.wY)(
             r.useCallback((e) => {
               _(e.contentBoxSize[0].blockSize);
             }, []),
@@ -3745,13 +3762,13 @@
             },
             r.createElement(
               E.Z,
-              { className: T, ref: M, onAnimationEnd: I, onFocusWithin: L },
+              { className: T, ref: w, onAnimationEnd: I, onFocusWithin: L },
               r.createElement(X.LK.Provider, { value: R }, i),
             ),
             r.createElement("div", {
               className: o()(c.Backdrop, t && c.Active),
               onTransitionEnd: p,
-              ref: w,
+              ref: M,
               onClick: n,
             }),
           ),
@@ -3892,6 +3909,7 @@
           m.fu,
           {
             className: o()(c.MenuButton, i && c.Active),
+            focusClassName: c.ButtonFocus,
             onMouseEnter: f,
             onClick: g,
             ref: l,
@@ -3919,7 +3937,11 @@
         return e
           ? r.createElement(
               m.Ii,
-              { className: o()(c.MenuButton, c.WishlistButton), href: n },
+              {
+                className: o()(c.MenuButton, c.WishlistButton),
+                focusClassName: c.ButtonFocus,
+                href: n,
+              },
               r.createElement(mn, { role: "presentation" }),
               i.d.Localize("#Menu_Wishlist"),
               t > 0 && r.createElement(ln, null, t),
@@ -3935,7 +3957,11 @@
         return e
           ? r.createElement(
               m.Ii,
-              { className: o()(c.MenuButton, c.CartButton), href: t },
+              {
+                className: o()(c.MenuButton, c.CartButton),
+                focusClassName: c.ButtonFocus,
+                href: t,
+              },
               r.createElement(dn, null),
               i.d.Localize("#Menu_Cart"),
               e > 0 && r.createElement(ln, null, e),
@@ -4003,8 +4029,10 @@
                     case "toggle_header_menu":
                       t();
                       break;
-                    case "set_search_query":
                     case "show_search_results":
+                      window.location.href = (0, X.Sy)(r.term);
+                      break;
+                    case "set_search_query":
                       i(), n(r.term), a();
                   }
               } catch (e) {}
@@ -4637,13 +4665,16 @@
             const _ = { ...l, transition: `${t} ${n}ms` };
             return { style: _, active: m, refDiv: i };
           })(i, c, l);
-        return i || d || o
-          ? r.createElement(
-              "div",
-              { id: t, role: n, className: s, ref: _, style: m },
-              u,
-            )
-          : null;
+        if (!i && !d && !o) return null;
+        const g = {};
+        return (
+          i || (g.inert = "inert"),
+          r.createElement(
+            "div",
+            { id: t, role: n, className: s, ref: _, style: m, ...g },
+            u,
+          )
+        );
       }
     },
     54806: (e, t, n) => {

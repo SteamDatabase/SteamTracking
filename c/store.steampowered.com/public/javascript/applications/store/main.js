@@ -31554,6 +31554,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -31644,6 +31646,16 @@
       }
       function _() {
         return _.useContext(_);
+      }
+      function _(_) {
+        const _ = new URLSearchParams({
+          term: _,
+        });
+        return `${_._.STORE_BASE_URL}search/?${_.toString()}`;
+      }
+      function _() {
+        const { term: _ } = _();
+        return (0, _.useMemo)(() => _(_), [_]);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

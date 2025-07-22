@@ -150,6 +150,9 @@ html.client ._16jZ3HEbtaJTl80pQINN2Y {
   flex-direction: row;
   min-width: 0;
 }
+.BasicUI ._315CcpqsgdwaAwR3WiSlOq {
+  padding-left: 5px;
+}
 ._315CcpqsgdwaAwR3WiSlOq ._3CtcPWgZYR05CldoJ0Jkrx {
   flex: 1;
   min-width: 0;
@@ -190,6 +193,21 @@ button._175B12uOwmeGBNcSaQFe-Z {
   transition-duration: .2s;
   transition-timing-function: ease-out;
 }
+.BasicUI a._175B12uOwmeGBNcSaQFe-Z,
+.BasicUI button._175B12uOwmeGBNcSaQFe-Z {
+  margin: 8px 0px;
+  transition-property: none;
+}
+.BasicUI a._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD,
+.BasicUI button._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD {
+  background: #fff;
+  color: #000;
+  transition: none;
+}
+.BasicUI a._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD svg,
+.BasicUI button._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD svg {
+  transform: translateY(2px);
+}
 a._175B12uOwmeGBNcSaQFe-Z._234vIwVerIU5MqgZwrEcd8,
 button._175B12uOwmeGBNcSaQFe-Z._234vIwVerIU5MqgZwrEcd8 {
   display: none;
@@ -206,6 +224,23 @@ button._175B12uOwmeGBNcSaQFe-Z .BReXgOZvJY6u4htWQn1aF {
 a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN:hover svg,
 button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN:hover svg {
   transform: none;
+}
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD {
+  background: #fff;
+  color: #000;
+  transition: none;
+  outline-offset: -10px;
+}
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD
+  .BReXgOZvJY6u4htWQn1aF,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD
+  .BReXgOZvJY6u4htWQn1aF {
+  color: #000;
 }
 a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5,
 button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5 {
@@ -228,14 +263,35 @@ a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover,
 button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover {
   background: #45acff;
   text-shadow: 1px 1px 1px #0281bb;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover svg,
 button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover svg {
   transform: none;
 }
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD {
+  background: #fff;
+  color: #000;
+  outline-offset: -10px;
+}
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD
+  .BReXgOZvJY6u4htWQn1aF,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD
+  .BReXgOZvJY6u4htWQn1aF {
+  color: #000;
+}
 a._175B12uOwmeGBNcSaQFe-Z:hover,
 button._175B12uOwmeGBNcSaQFe-Z:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.BasicUI a._175B12uOwmeGBNcSaQFe-Z:hover,
+.BasicUI button._175B12uOwmeGBNcSaQFe-Z:hover {
+  text-shadow: none;
 }
 a._175B12uOwmeGBNcSaQFe-Z:hover svg,
 button._175B12uOwmeGBNcSaQFe-Z:hover svg {
@@ -245,6 +301,20 @@ a._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9,
 button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9 {
   color: #51b6ff;
   text-shadow: 1px 1px 1px #002f51;
+}
+.BasicUI a._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9,
+.BasicUI button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9 {
+  background: var(--gpBackground-LightSoft);
+  text-shadow: none;
+  color: #fff;
+}
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9._1ixhfnnWgdzGwSwNhUAitD,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9._1ixhfnnWgdzGwSwNhUAitD {
+  background: #fff;
+  text-shadow: none;
+  color: #000;
 }
 a._175B12uOwmeGBNcSaQFe-Z svg,
 button._175B12uOwmeGBNcSaQFe-Z svg {
@@ -269,6 +339,16 @@ button._175B12uOwmeGBNcSaQFe-Z .vj9hwW9u0MpjH7MVjjNw0 ._1-hPfsxjynE3demuqGmqf0 {
   right: 0;
   bottom: -3px;
   height: 3px;
+}
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z
+  .vj9hwW9u0MpjH7MVjjNw0
+  ._1-hPfsxjynE3demuqGmqf0,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z
+  .vj9hwW9u0MpjH7MVjjNw0
+  ._1-hPfsxjynE3demuqGmqf0 {
+  display: none;
 }
 a._175B12uOwmeGBNcSaQFe-Z
   .vj9hwW9u0MpjH7MVjjNw0
@@ -477,9 +557,12 @@ html.client ._1Yo-ZsBr-KbVMyAMXEYszd svg {
   a._3HgV0usLjzxByxBF2zvGYj:hover {
   text-decoration: underline;
 }
-button._2Cp17yynz2h_StEQZcNnqB {
+a._2Cp17yynz2h_StEQZcNnqB {
   border-radius: 2px;
   background: rgba(163, 186, 211, 0.2);
+  display: block;
+  align-self: stretch;
+  text-align: center;
   padding: 6px;
   color: #f7f8f8;
   font-size: 13px;
@@ -488,7 +571,7 @@ button._2Cp17yynz2h_StEQZcNnqB {
   text-decoration: none;
   transition: background .2s ease-in;
 }
-button._2Cp17yynz2h_StEQZcNnqB.vHnThqOPQZvwPy0YyMOyR {
+a._2Cp17yynz2h_StEQZcNnqB.vHnThqOPQZvwPy0YyMOyR {
   background: #555b6c;
 }
 ._2tdhUFMMsjGr_BI7uMcoWy {
@@ -861,6 +944,7 @@ html.touch ._2RyPu-qJzs6novxZiGSDf- {
   justify-self: stretch;
   display: flex;
   flex-direction: column;
+  gap: 4px;
   min-height: 206px;
 }
 ._2ihG7DC0YPrw01ComUbKnY.JeKLaTDB6BY1_KxkPBi7y {
@@ -1164,20 +1248,28 @@ div._21F52O1eUPKz37HniCe3kj > div {
 }
 ._1_Cs2jL-zQHuz1FSXBASEL {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: flex-start;
   flex-direction: row;
-  gap: 8px;
+  gap: 10px;
   max-width: 100%;
+  max-height: 150px;
   margin-bottom: 21px;
 }
 ._1-cbd4jE7Y3ZRkLFocvEDW {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  width: 126px;
-  height: 126px;
+  max-width: 175px;
+  max-height: 150px;
   min-width: 0;
   box-shadow: 2px 2px 2px rgba(43, 43, 43, 0.1);
+}
+.BasicUI ._1-cbd4jE7Y3ZRkLFocvEDW {
+  max-width: 155px;
+  max-height: 140px;
+  border-radius: 2px;
 }
 ._1-cbd4jE7Y3ZRkLFocvEDW ._2zLGA-bpYZoQ1tlrxdC0bl {
   display: block;
@@ -1268,10 +1360,10 @@ div._21F52O1eUPKz37HniCe3kj > div {
   margin: 0 auto;
   text-transform: uppercase;
   background: #fff;
-  padding: 0 3px;
-  border-radius: 1.25px;
+  padding: 4px 8px;
+  border-radius: 2px;
   color: var(--Blues-darkestGrey, #000f18);
-  font-size: 10px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1372,7 +1464,7 @@ div._21F52O1eUPKz37HniCe3kj > div {
   ._11IYP42PAMrnzCjJnoaZAH {
   display: inline-block;
   padding: 10px 15px;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #fff;
   color: #000;
   font-size: 14px;

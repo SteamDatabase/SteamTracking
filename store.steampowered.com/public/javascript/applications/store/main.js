@@ -28662,9 +28662,11 @@
     51941: (e, t, r) => {
       "use strict";
       r.d(t, {
+        Sy: () => h,
         d6: () => c,
         LK: () => u,
         zw: () => g,
+        $4: () => f,
         Hi: () => m,
         dn: () => l,
         kM: () => _,
@@ -28752,6 +28754,14 @@
       }
       function _() {
         return n.useContext(d);
+      }
+      function h(e) {
+        const t = new URLSearchParams({ term: e });
+        return `${o.TS.STORE_BASE_URL}search/?${t.toString()}`;
+      }
+      function f() {
+        const { term: e } = _();
+        return (0, n.useMemo)(() => h(e), [e]);
       }
     },
     62093: (e, t, r) => {

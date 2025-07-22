@@ -62,6 +62,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         TopCategories: "_1_Cs2jL-zQHuz1FSXBASEL",
         CategoryLink: "_1-cbd4jE7Y3ZRkLFocvEDW",
         CategoryTileImage: "_2zLGA-bpYZoQ1tlrxdC0bl",
@@ -147,6 +149,7 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         menuHeight: "46px",
         accordionMenuScreenWidth: "730px",
         StoreMenuLegacyWrapper: "_2QlYKhF-leHfMXFSiSshZC",
@@ -171,6 +174,7 @@
         DynamicMenuButtons: "_3CtcPWgZYR05CldoJ0Jkrx",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
+        ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
@@ -1540,6 +1544,7 @@
         };
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           include_assets: !0,
@@ -2103,12 +2108,13 @@
           );
         });
       function _(_) {
-        const { getMouseHandlers: _, active: __webpack_require__ } = _;
+        const { getMouseHandlers: _, active: __webpack_require__ } = _,
+          _ = (0, _._)();
         return _.createElement(
-          "button",
+          "a",
           {
             className: _()(_.AdvancedSearch, __webpack_require__ && _.Active),
-            type: "submit",
+            href: _,
             ..._("advancedsearch", 0),
           },
           _.createElement(
@@ -2129,7 +2135,6 @@
           (0, _._)("#Menu_SearchBar_NoMatches"),
         );
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.memo(function () {
         const { bBackdropActive: _ } = (0, _._)(),
           _ = (0, _._)();
@@ -2172,7 +2177,16 @@
             openSearch: _,
             closeSearch: _,
           } = (0, _._)(),
-          _ = _(_);
+          _ = _(_),
+          _ = _.useCallback(() => {
+            _(), _();
+          }, [_, _]),
+          _ = _.useCallback(
+            (_) => {
+              _(_.currentTarget.value), _();
+            },
+            [_, _],
+          );
         return _.createElement(
           "form",
           {
@@ -2188,13 +2202,12 @@
             name: "term",
             placeholder: (0, _._)("#Menu_SearchPlaceholder"),
             value: _,
-            onChange: (_) => _(_.currentTarget.value),
-            onFocus: () => {
-              _(), _();
-            },
             autoFocus: __webpack_require__,
-            onKeyDown: _,
             autoComplete: "off",
+            onChange: _,
+            onFocus: _,
+            onClick: _,
+            onKeyDown: _,
             role: "combobox",
             "aria-expanded": _,
             "aria-autocomplete": "list",
@@ -2230,7 +2243,11 @@
           _ = _(_),
           _ = _.useCallback(
             (_) => {
-              _ && _(_) ? _.preventDefault() : "Escape" === _.key ? _() : _();
+              _ && _(_)
+                ? _.preventDefault()
+                : "Escape" === _.key
+                  ? _()
+                  : "Tab" !== _.key && _();
             },
             [_, _, _, _],
           );
@@ -3517,7 +3534,7 @@
               { data: _ } = (0, _._)(_._.LANGUAGE),
               _ = _.useMemo(() => _._((0, _._)().slice(), 0, _._(_)), []),
               _ = _(),
-              _ = _ ? 8 : 5,
+              _ = _ ? 6 : 4,
               _ = _ ? 12 : 8;
             return _.useMemo(() => {
               if (null == _ || null == _ || !_ || !_) return [null, null];
@@ -4843,6 +4860,7 @@
           _._,
           {
             className: _()(_.MenuButton, _ && _.Active),
+            focusClassName: _.ButtonFocus,
             onMouseEnter: _,
             onClick: _,
             ref: _,
@@ -4881,6 +4899,7 @@
               _._,
               {
                 className: _()(_.MenuButton, _.WishlistButton),
+                focusClassName: _.ButtonFocus,
                 href: _,
               },
               _.createElement(_, {
@@ -4908,6 +4927,7 @@
               _._,
               {
                 className: _()(_.MenuButton, _.CartButton),
+                focusClassName: _.ButtonFocus,
                 href: _,
               },
               _.createElement(_, null),
@@ -4981,8 +5001,10 @@
                     case "toggle_header_menu":
                       _();
                       break;
-                    case "set_search_query":
                     case "show_search_results":
+                      window.location.href = (0, _._)(_.term);
+                      break;
+                    case "set_search_query":
                       _(), __webpack_require__(_.term), _();
                   }
               } catch (_) {}
@@ -5954,19 +5976,23 @@
               refDiv: _,
             };
           })(_, _, _);
-        return _ || _ || _
-          ? _.createElement(
-              "div",
-              {
-                _: _,
-                role: __webpack_require__,
-                className: _,
-                ref: _,
-                style: _,
-              },
-              _,
-            )
-          : null;
+        if (!_ && !_ && !_) return null;
+        const _ = {};
+        return (
+          _ || (_.inert = "inert"),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              role: __webpack_require__,
+              className: _,
+              ref: _,
+              style: _,
+              ..._,
+            },
+            _,
+          )
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
