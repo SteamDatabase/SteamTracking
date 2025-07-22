@@ -225,14 +225,11 @@
         Icon: "_2U9kjREHwWCzFv6jHeN7en",
         BackgroundClickAnimation: "_2XYeZn3KijB2PUnLY0II7_",
         PlayerControls: "-qTM6xbWp6f2qNHBAuaxc",
-        Fullscreen: "_1j3xlARgSMe58myZErKUzW",
         ShowControls: "_1Cnj-9auRb41WwwRA3hS18",
         DelayHideCursor: "_3n201iHmh_Qzklo3iedCSy",
         ControlGroup: "_39Fc5ujNP-wz5RbY-mJb--",
         BehindControlsFade: "_2vmUyLDMaO2vC2rz3cKPLt",
         TitleRow: "_2WpHhLTZgfpt1cIY1tId60",
-        RowLimit: "lwXhsx3Bz3Dob4Wu6sanX",
-        BehindTitleFade: "_2lPvoPPzmLDNezX-ypCwXd",
         LowerControls: "aKceKkwAmCX8Ar8qWcJ7T",
         ButtonRow: "_2gDbG9frVoBgp4J9N1vA7I",
         LeftGroup: "ppGte6hTuxkoYS4d0ffwc",
@@ -2374,6 +2371,7 @@
         m_eFailureReason = _._.Invalid;
         m_maxDimensions = null;
         m_bPlaybackStarted = !1;
+        m_bBuffering = !0;
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
@@ -2407,6 +2405,9 @@
         }
         HasPlaybackStarted() {
           return this.m_bPlaybackStarted;
+        }
+        IsBuffering() {
+          return this.m_bBuffering;
         }
         Start(_, _, _, _) {
           this.Stop(),
@@ -2462,7 +2463,8 @@
               "pagehide",
               this.SendStats,
             ),
-            (this.m_player = new _._(this.m_elVideo));
+            (this.m_player = new _._(this.m_elVideo)),
+            this.m_player.SetTimeoutAfterFailedDownload(!1);
           let _ =
             void 0 !== this.m_persistState.m_bAudioMuted &&
             this.m_persistState.m_bAudioMuted;
@@ -2503,7 +2505,8 @@
               this.m_player.GetCurrentPlayTime() - this.m_nVideoStartTime),
             (this.m_nBufferedEndTime =
               this.m_player.GetBufferedEndTime() - this.m_nVideoStartTime),
-            this.m_player.IsBuffering() || (this.m_bPlaybackStarted = !0);
+            (this.m_bBuffering = this.m_player.IsBuffering()),
+            this.m_bBuffering || (this.m_bPlaybackStarted = !0);
         }
         OnVideoEnd() {}
         OnVideoValveEnded() {
@@ -2636,6 +2639,7 @@
         (0, _._)([_._], _.prototype, "m_eFailureReason", void 0),
         (0, _._)([_._], _.prototype, "m_maxDimensions", void 0),
         (0, _._)([_._], _.prototype, "m_bPlaybackStarted", void 0),
+        (0, _._)([_._], _.prototype, "m_bBuffering", void 0),
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
@@ -2707,30 +2711,48 @@
       function _() {
         return _().m_bMenuVisible;
       }
-      function _(_) {
-        let [_, __webpack_require__] = (function () {
-          let [_, _] = _(),
+      function _(_, _) {
+        let [__webpack_require__, _] = (function (_) {
+          let [_, __webpack_require__] = _(),
             _ = (0, _.useRef)(void 0),
-            _ = (0, _.useRef)(0),
+            _ = _(_),
             _ = (0, _.useCallback)(
               (_) => {
-                "touch" != _.pointerType &&
-                  (_(_) ? _(!0, 0) : 0 == _.current && _(!0, _(_)));
+                __webpack_require__(!0, _ ? 0 : _);
               },
-              [_, _],
+              [__webpack_require__],
+            );
+          !(function (_, _) {
+            let _ = (0, _.useRef)(!0),
+              _ = _(_);
+            (0, _.useEffect)(() => {
+              let _ = _.current;
+              (_.current = !1), (_ && !_) || _(_);
+            }, [_, _, _]);
+          })(_, _);
+          let _ = (0, _.useCallback)(
+              (_) => {
+                "touch" != _.pointerType &&
+                  (_(_) || _
+                    ? __webpack_require__(!0, 0)
+                    : __webpack_require__(!0, _(_)));
+              },
+              [__webpack_require__, _],
             ),
             _ = (0, _.useCallback)(
               (_) => {
                 "touch" != _.pointerType &&
-                  (_(_) ? _(!0, 0) : 0 == _.current && _(!0, _(_)));
+                  (_(_) || _
+                    ? __webpack_require__(!0, 0)
+                    : __webpack_require__(!0, _(_)));
               },
-              [_, _],
+              [__webpack_require__, _],
             ),
             _ = (0, _.useCallback)(
               (_) => {
-                "touch" != _.pointerType && 0 == _.current && _(!0, _);
+                "touch" != _.pointerType && (_ || __webpack_require__(!0, _));
               },
-              [_],
+              [__webpack_require__, _],
             ),
             _ = (0, _.useCallback)(
               (_) => {
@@ -2748,9 +2770,9 @@
               (_) => {
                 let _ = _.current;
                 (_.current = void 0),
-                  _.currentTarget == _ && 0 == _.current && _(!0, _(_));
+                  _.currentTarget == _ && (_ || __webpack_require__(!0, _(_)));
               },
-              [_],
+              [__webpack_require__, _],
             );
           return [
             _,
@@ -2763,8 +2785,8 @@
               onPointerCancel: _,
             },
           ];
-        })();
-        return [_ || _, __webpack_require__];
+        })(_);
+        return [__webpack_require__ || _, _];
       }
       function _(_) {
         return "touch" == _.pointerType ? _ : _;
@@ -3383,25 +3405,27 @@
           ),
         );
       }
-      function _(_, _) {
+      function _(_, _, _) {
         let _ = (function (_) {
             return (0, _._)(() => _.HasPlaybackStarted());
           })(_),
           [_, _] = (0, _.useState)(""),
           _ = (0, _.useRef)(0);
-        return (
-          (0, _.useEffect)(() => {
-            _ &&
-              !_ &&
-              "" == _ &&
-              (_("active"),
-              (_.current = window.setTimeout(() => _("complete"), 4e3)));
-          }, [_, _, _, _, _]),
+        (0, _.useEffect)(() => {
+          _ &&
+            !_ &&
+            "" == _ &&
+            (_("active"),
+            (_.current = window.setTimeout(() => _("complete"), 4e3)));
+        }, [_, _, _, _, _]),
           (0, _.useEffect)(() => {
             _ && (_("complete"), window.clearTimeout(_.current));
           }, [_]),
-          (0, _.useEffect)(() => () => window.clearTimeout(_.current), []),
-          "active" == _
+          (0, _.useEffect)(() => () => window.clearTimeout(_.current), []);
+        let _ = (0, _.useRef)(!1);
+        return (
+          "complete" != _ || _ || (_.current = !0),
+          ("once" != _ || !_.current) && ("active" == _ || _)
         );
       }
       function _(_) {
@@ -3413,7 +3437,7 @@
           } = _,
           _ = (0, _.useRef)(),
           _ = (0, _.useRef)(),
-          [_, _] = _(_),
+          [_, _] = _(_, _),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
         _ = _ || _;
@@ -3509,28 +3533,18 @@
             category: _,
             title: _,
           } = _,
-          _ = _(_, __webpack_require__);
+          _ = _("once", _, __webpack_require__);
         if (0 == _ || !_) return null;
-        let _ = _ || __webpack_require__,
-          _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
+        let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return _.createElement(
           "div",
           {
             className: _,
           },
-          _.createElement("div", {
-            className: _().BehindTitleFade,
+          _.createElement(_, {
+            category: _,
+            title: _,
           }),
-          _.createElement(
-            "div",
-            {
-              className: _().RowLimit,
-            },
-            _.createElement(_, {
-              category: _,
-              title: _,
-            }),
-          ),
         );
       }
       function _(_) {
@@ -3849,11 +3863,11 @@
             category: _,
             title: _,
           } = _,
-          _ = _(_, __webpack_require__);
+          _ = _("standard", _, __webpack_require__);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(
           _().TitleRow,
-          _ && _().FadeIn,
+          _ && !__webpack_require__ && _().FadeIn,
           __webpack_require__ && _().ControlsVisible,
         );
         return _.createElement(
@@ -4076,10 +4090,9 @@
             category: _,
             title: _,
           } = _,
-          _ = _(_, __webpack_require__);
+          _ = _("standard", _, __webpack_require__);
         if (0 == _ || !_) return null;
-        let _ = _ || __webpack_require__,
-          _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
+        let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return _.createElement(
           "div",
           {
@@ -4265,32 +4278,36 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(() => _.HasPlaybackStarted());
-        if (
-          ((0, _.useEffect)(() => {
-            _(!0);
-          }, [_]),
+          [__webpack_require__, _] = (0, _.useState)("norender"),
+          _ = (0, _._)(() => _.IsBuffering());
+        (0, _.useEffect)(() => {
+          if (!_) return;
+          let _ = window.setTimeout(() => _("fadein"), 1e3);
+          return () => {
+            _ && window.clearTimeout(_);
+          };
+        }, [_, _]),
           (0, _.useEffect)(() => {
-            if (!_) return;
-            let _ = window.setTimeout(() => _(!0), 250);
+            if (_) return;
+            _("fadeout");
+            let _ = window.setTimeout(() => _("norender"), 300);
             return () => window.clearTimeout(_);
-          }, [_, _]),
-          _)
-        )
-          return null;
-        let _ = __webpack_require__ && !_,
-          _ = (0, _._)(_().LoadingThrobber, _ && _().FadeIn);
+          }, [_, _]);
+        let _ = "norender" != __webpack_require__,
+          _ = (0, _._)(
+            _().LoadingThrobber,
+            "fadein" == __webpack_require__ && _().FadeIn,
+          );
         return _.createElement(
           "div",
           {
             className: _,
           },
-          _.createElement(_._, {
-            size: "large",
-            position: "center",
-          }),
+          _ &&
+            _.createElement(_._, {
+              size: "large",
+              position: "center",
+            }),
         );
       }
       function _(_) {

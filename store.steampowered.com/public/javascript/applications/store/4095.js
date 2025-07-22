@@ -1956,24 +1956,29 @@
               ),
               void this.ContinueSeek()
             );
-          if (!l || 200 != l.status)
-            return (
-              this.m_stats.LogSegmentDownloadFailure(p, l ? l.status : 444),
-              u - i > 9e3
-                ? ((0, g.q_)(
+          if (!l || 200 != l.status) {
+            this.m_stats.LogSegmentDownloadFailure(p, l ? l.status : 444);
+            let r = 500;
+            if (u - i > 9e3) {
+              if (this.m_callbacks.GetTimeoutAfterFailedDownload())
+                return (
+                  (0, g.q_)(
                     `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - i}ms`,
                   ),
-                  void this.DownloadFailed())
-                : 410 == h
-                  ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                    (0, g.q_)(
-                      `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - i}ms`,
-                    ),
-                    void this.DownloadGone())
-                  : void this.m_schNextDownload.Schedule(500, () =>
-                      this.DownloadSegment(e, t, a, n, i),
-                    )
-            );
+                  void this.DownloadFailed()
+                );
+              r = 3e3;
+            }
+            return 410 == h
+              ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                (0, g.q_)(
+                  `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - i}ms`,
+                ),
+                void this.DownloadGone())
+              : void this.m_schNextDownload.Schedule(r, () =>
+                  this.DownloadSegment(e, t, a, n, i),
+                );
+          }
           this.m_nNumConsecutiveDownloadGones = 0;
           let _ = new Uint8Array(l.data);
           if (-1 == t) this.m_mapInitSegments.set(e.strID, _);
@@ -2258,6 +2263,7 @@
         m_strMPD = "";
         m_strHLS = "";
         m_strCDNAuthURLParameters = null;
+        m_bTimeoutAfterFailedDownload = !0;
         m_schUpdateMPD = new m.LU();
         m_xhrUpdateMPD;
         m_mpd;
@@ -2311,6 +2317,9 @@
         }
         IsPlayingHLS() {
           return this.m_bUseHLSManifest;
+        }
+        SetTimeoutAfterFailedDownload(e) {
+          this.m_bTimeoutAfterFailedDownload = e;
         }
         async PlayMPD(e, t, a, n) {
           this.m_stats.StartingPlayback(),
@@ -2779,6 +2788,8 @@
                 this.m_rgLoaders,
                 this.m_elVideo,
               ),
+              (this.m_bIsBuffering = !0),
+              this.DispatchEvent("valve-bufferupdate"),
               null === this.m_videoRepSelected)
             ) {
               let e = !0,
@@ -3005,6 +3016,9 @@
         }
         GetPlaybackRate() {
           return this.m_elVideo.paused ? 0 : this.m_elVideo.playbackRate;
+        }
+        GetTimeoutAfterFailedDownload() {
+          return this.m_bTimeoutAfterFailedDownload;
         }
         GetCDNAuthURLParameter() {
           return this.m_strCDNAuthURLParameters;
@@ -3476,6 +3490,7 @@
         (0, i.Cg)([p.o], z.prototype, "OnVideoSeeking", null),
         (0, i.Cg)([p.o], z.prototype, "OnVideoSeeked", null),
         (0, i.Cg)([p.o], z.prototype, "GetPlaybackRate", null),
+        (0, i.Cg)([p.o], z.prototype, "GetTimeoutAfterFailedDownload", null),
         (0, i.Cg)([p.o], z.prototype, "GetCDNAuthURLParameter", null),
         (0, i.Cg)([p.o], z.prototype, "OnSegmentDownloaded", null),
         (0, i.Cg)([p.o], z.prototype, "OnSegmentBuffered", null),
@@ -3911,15 +3926,17 @@
         }
         LogErrorEvent(e, t) {}
         ReportVideoStalled(e, t) {
-          if (0 == this.m_strStalledLink.length) return;
+          if (
+            ((this.m_allTimeSnapshot.m_nStallEvents += 1),
+            0 == this.m_strStalledLink.length)
+          )
+            return;
           let a = this.FindBehindSegmentLoader(e, t);
           if (!a)
             return void (0, l.q_)(
               "DASHStats: Did not find any audio or video loaders",
             );
-          (this.m_allTimeSnapshot.m_nStallEvents += 1),
-            (this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents +=
-              1);
+          this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents += 1;
           let n = new g();
           this.GatherCommonStats(
             n,
