@@ -1902,8 +1902,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:58:17
-01:58:26
 08bX
 0?0L
 0A/8
@@ -2397,6 +2395,9 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:18:23
+20:19:01
+20:19:04
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -8746,7 +8747,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 21 2025 01:58:26
+Startup - updater built Jul 21 2025 20:19:01
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

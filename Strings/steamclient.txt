@@ -15699,7 +15699,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42pVT
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -15882,7 +15882,6 @@ $steammessages_parental_objects.proto"
 ?fff?
 ?fuP=
 ?jOb
-?mPG
 ?m_pRegisteredWithMgr != nullptr
 ?pLTT
 ?rJRTS\Rg>`H`CeIkHq7v4}4v4u7
@@ -25903,7 +25902,6 @@ GetWildcardMapping: Invalid unAppID k_nAppIdAll
 GetWin32Stats
 GetWishlistDemoEmailStatus
 GetWorkshopEULAStatus
-Getting serial number for unexpected controller type: %d
 Getting touch control config for %s\n
 Gift
 GiftMessage
@@ -42708,7 +42706,6 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
-c@mfI
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -58141,7 +58138,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 21 2025 01:58:29
+steam Jul 21 2025 20:21:39
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
