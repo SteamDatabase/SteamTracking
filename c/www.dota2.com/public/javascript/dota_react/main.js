@@ -38745,640 +38745,660 @@
       );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = () => {
-        const [_, _] = (0, _.useState)([]),
-          [__webpack_require__, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)([]);
-        async function _() {
-          const _ = await _().get(
-            _._.BASE_URL + _._.proregistration_getautographs(),
-            {
-              params: {
-                season: _._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON,
+      const _ = [
+          9467224, 8255888, 7732977, 8599101, 9303484, 36, 7554697, 9572001,
+          9247354, 2163, 9691969, 7119388, 9640842, 8291895, 9651185, 8261500,
+        ],
+        _ = [
+          134513080, 1479611086, 102822329, 70473277, 70210046, 111750003,
+          113439358, 870350113, 238146811, 82262664, 92647162, 172234089,
+          341358028, 40547474, 92253768, 39128794, 60943014, 182672432,
+          89269794, 113863940, 250056809, 191966736, 192154945, 94439767,
+          1202001315, 186301610, 98887913,
+        ],
+        _ = () => {
+          const [_, _] = (0, _.useState)([]),
+            [__webpack_require__, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)(!1),
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]);
+          async function _() {
+            const _ = await _().get(
+              _._.BASE_URL + _._.proregistration_getautographs(),
+              {
+                params: {
+                  season: _._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON,
+                },
               },
-            },
-          );
-          if (_ && _.data && (_(_.data), _.data.team_autographs)) {
-            const _ = _.data.team_autographs
-              .map((_) => _.autographs)
-              .flat()
-              .map((_) => (_.account_id ? _.account_id.toString() : ""));
-            _.length && _(_);
-          }
-        }
-        (0, _.useEffect)(() => {
-          try {
-            _();
-          } catch (_) {
-            console.log("Could not fetch get autographs.");
-          }
-        }, []);
-        (0, _.useEffect)(() => {
-          const _ = [],
-            _ = [],
-            _ = [],
-            _ = [],
-            _ = [];
-          let _ = 0,
-            _ = !1;
-          return (
-            _.length &&
-              _.forEach((_) => {
-                ((_) => {
-                  const _ = _.substr(0, _.lastIndexOf(".")) || _;
-                  return !(
-                    "string" != typeof _ ||
-                    !/^-?\d+$/.test(_) ||
-                    (_.length > 0 && !_.includes(_))
-                  );
-                })(_.name) || __webpack_require__.push(_.name);
-                const _ = new FileReader();
-                _.push(_),
-                  (_.onerror = function () {
-                    _++,
-                      _.push(_.name),
-                      _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
-                  }),
-                  (_.onload = (_) => {
-                    const _ = new Image();
-                    (_.crossOrigin = "Anonymous"),
-                      (_.src = _.target.result.toString()),
-                      (_.onload = () => {
-                        _++,
-                          (1024 === _.width && 512 === _.height) ||
-                            _.push(_.name),
-                          _(_) && _.push(_.name),
-                          _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
-                      }),
-                      (_.onerror = () => {
-                        _++,
-                          _.push(_.name),
-                          _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
-                      });
-                  }),
-                  _.readAsDataURL(_);
-              }),
-            () => {
-              (_ = !0),
-                _.forEach((_) => {
-                  1 === _.readyState && _.abort();
-                });
+            );
+            if (_ && _.data && (_(_.data), _.data.team_autographs)) {
+              const _ = _.data.team_autographs
+                .map((_) => _.autographs)
+                .flat()
+                .map((_) => (_.account_id ? _.account_id.toString() : ""));
+              _.length && _(_);
             }
-          );
-        }, [_, _]);
-        const _ = (_) => {
-            const _ = document.querySelector("canvas"),
-              _ = _.getContext("2d");
-            (_.width = _.width),
-              (_.height = _.height),
-              __webpack_require__.drawImage(_, 0, 0);
+          }
+          (0, _.useEffect)(() => {
+            try {
+              _();
+            } catch (_) {
+              console.log("Could not fetch get autographs.");
+            }
+          }, []);
+          (0, _.useEffect)(() => {
+            const _ = [],
+              _ = [],
+              _ = [],
+              _ = [],
+              _ = [];
+            let _ = 0,
+              _ = !1;
             return (
-              __webpack_require__.getImageData(0, 0, _.width, _.height)
-                .data[3] > 0
+              _.length &&
+                _.forEach((_) => {
+                  ((_) => {
+                    const _ = _.substr(0, _.lastIndexOf(".")) || _;
+                    return !(
+                      "string" != typeof _ ||
+                      !/^-?\d+$/.test(_) ||
+                      (_.length > 0 && !_.includes(_))
+                    );
+                  })(_.name) || __webpack_require__.push(_.name);
+                  const _ = new FileReader();
+                  _.push(_),
+                    (_.onerror = function () {
+                      _++,
+                        _.push(_.name),
+                        _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
+                    }),
+                    (_.onload = (_) => {
+                      const _ = new Image();
+                      (_.crossOrigin = "Anonymous"),
+                        (_.src = _.target.result.toString()),
+                        (_.onload = () => {
+                          _++,
+                            (1024 === _.width && 512 === _.height) ||
+                              _.push(_.name),
+                            _(_) && _.push(_.name),
+                            _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
+                        }),
+                        (_.onerror = () => {
+                          _++,
+                            _.push(_.name),
+                            _ === _.length && (_(_), _(_), _(_), _(_), _(!0));
+                        });
+                    }),
+                    _.readAsDataURL(_);
+                }),
+              () => {
+                (_ = !0),
+                  _.forEach((_) => {
+                    1 === _.readyState && _.abort();
+                  });
+              }
             );
-          },
-          _ =
-            "Image files must be named <friend id>.png, and the id must be a valid id",
-          _ = "Image dimensions must be 1024x512 pixels",
-          _ = "Image must be a compatible .png file",
-          _ = "Image must have a transparent background",
-          _ = [_, _, _, _],
-          _ = (() => {
-            const _ = [];
-            return (
-              __webpack_require__.length > 0 &&
-                (_.length > 1 &&
+          }, [_, _]);
+          const _ = (_) => {
+              const _ = document.querySelector("canvas"),
+                _ = _.getContext("2d");
+              (_.width = _.width),
+                (_.height = _.height),
+                __webpack_require__.drawImage(_, 0, 0);
+              return (
+                __webpack_require__.getImageData(0, 0, _.width, _.height)
+                  .data[3] > 0
+              );
+            },
+            _ =
+              "Image files must be named <friend id>.png, and the id must be a valid id",
+            _ = "Image dimensions must be 1024x512 pixels",
+            _ = "Image must be a compatible .png file",
+            _ = "Image must have a transparent background",
+            _ = [_, _, _, _],
+            _ = (() => {
+              const _ = [];
+              return (
+                __webpack_require__.length > 0 &&
+                  (_.length > 1 &&
+                    _.push(
+                      _.createElement(
+                        "div",
+                        {
+                          key: "IncorrectFileNames",
+                        },
+                        "Incorrect file name for: ",
+                        __webpack_require__.join(", "),
+                      ),
+                    ),
                   _.push(
                     _.createElement(
                       "div",
                       {
-                        key: "IncorrectFileNames",
+                        key: "FileNameWarning",
                       },
-                      "Incorrect file name for: ",
-                      __webpack_require__.join(", "),
+                      _.createElement("b", null, _),
+                      " ",
                     ),
-                  ),
-                _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      key: "FileNameWarning",
-                    },
-                    _.createElement("b", null, _),
-                    " ",
-                  ),
-                  _.createElement("br", {
-                    key: "FileNameWarningBreak",
-                  }),
-                )),
-              _.length > 0 &&
-                (_.length > 1 &&
+                    _.createElement("br", {
+                      key: "FileNameWarningBreak",
+                    }),
+                  )),
+                _.length > 0 &&
+                  (_.length > 1 &&
+                    _.push(
+                      _.createElement(
+                        "div",
+                        {
+                          key: "IncorrectFileDimensions",
+                        },
+                        "Incorrect dimensions for: ",
+                        _.join(", "),
+                      ),
+                    ),
                   _.push(
                     _.createElement(
                       "div",
                       {
-                        key: "IncorrectFileDimensions",
+                        key: "FileDimensionsWarning",
                       },
-                      "Incorrect dimensions for: ",
-                      _.join(", "),
+                      _.createElement("b", null, _),
+                      " ",
                     ),
-                  ),
-                _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      key: "FileDimensionsWarning",
-                    },
-                    _.createElement("b", null, _),
-                    " ",
-                  ),
-                  _.createElement("br", {
-                    key: "FileDimensionsWarningBreak",
-                  }),
-                )),
-              _.length > 0 &&
-                (_.length > 1 &&
+                    _.createElement("br", {
+                      key: "FileDimensionsWarningBreak",
+                    }),
+                  )),
+                _.length > 0 &&
+                  (_.length > 1 &&
+                    _.push(
+                      _.createElement(
+                        "div",
+                        {
+                          key: "FileLoadingErrors",
+                        },
+                        "Could not load: ",
+                        _.join(", "),
+                      ),
+                    ),
                   _.push(
                     _.createElement(
                       "div",
                       {
-                        key: "FileLoadingErrors",
+                        key: "FileLoadingWarning",
                       },
-                      "Could not load: ",
-                      _.join(", "),
+                      _.createElement("b", null, _),
+                      " ",
                     ),
-                  ),
-                _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      key: "FileLoadingWarning",
-                    },
-                    _.createElement("b", null, _),
-                    " ",
-                  ),
-                  _.createElement("br", {
-                    key: "FileLoadingWarningBreak",
-                  }),
-                )),
-              _.length > 0 &&
-                (_.length > 1 &&
+                    _.createElement("br", {
+                      key: "FileLoadingWarningBreak",
+                    }),
+                  )),
+                _.length > 0 &&
+                  (_.length > 1 &&
+                    _.push(
+                      _.createElement(
+                        "div",
+                        {
+                          key: "IncorrectFileTransparency",
+                        },
+                        "Incorrect transparency for: ",
+                        _.join(", "),
+                      ),
+                    ),
                   _.push(
                     _.createElement(
                       "div",
                       {
-                        key: "IncorrectFileTransparency",
+                        key: "FileTransparencyWarning",
                       },
-                      "Incorrect transparency for: ",
-                      _.join(", "),
+                      _.createElement("b", null, _),
+                      " ",
                     ),
-                  ),
+                    _.createElement("br", {
+                      key: "FileTransparencyWarningBreak",
+                    }),
+                  )),
+                _.pop(),
+                _
+              );
+            })(),
+            _ = (() => {
+              if (0 === _.length) return null;
+              const _ = [
+                _.createElement("br", {
+                  key: "AutographResponseDescriptionsBreak",
+                }),
+              ];
+              for (let _ = 0; _ < _.length; _++) {
+                const _ = _[_].error,
+                  _ = _ ? `Error: ${_}` : "";
                 _.push(
                   _.createElement(
                     "div",
                     {
-                      key: "FileTransparencyWarning",
+                      key: `autographResponse${_}`,
                     },
-                    _.createElement("b", null, _),
-                    " ",
+                    `Filename: ${_[_].name}.\t${_ ? _ : "Upload success!"}`,
                   ),
-                  _.createElement("br", {
-                    key: "FileTransparencyWarningBreak",
-                  }),
-                )),
-              _.pop(),
-              _
-            );
-          })(),
-          _ = (() => {
-            if (0 === _.length) return null;
-            const _ = [
-              _.createElement("br", {
-                key: "AutographResponseDescriptionsBreak",
-              }),
-            ];
-            for (let _ = 0; _ < _.length; _++) {
-              const _ = _[_].error,
-                _ = _ ? `Error: ${_}` : "";
-              _.push(
+                );
+              }
+              return _;
+            })(),
+            _ = ({
+              proName: _,
+              accountId: _,
+              pos: __webpack_require__,
+              fileName: _,
+              timestamp: _,
+            }) => {
+              const _ = !_;
+              let _;
+              if (_) _ = `${_._.IMG_URL}teams_override/team_unknown_web.png`;
+              else {
+                "dev" === _._.WEB_UNIVERSE || _._.CDN_URL;
+                (_ = `https://shared.steamstatic.com/dota_leagues/autographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`),
+                  "public" === _._.WEB_UNIVERSE &&
+                    (_ = `https://shared.steamstatic.com/dota_leagues/autographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`);
+              }
+              return _.createElement(
+                "div",
+                {
+                  className: _().PlayerAutographContainer,
+                },
                 _.createElement(
                   "div",
                   {
-                    key: `autographResponse${_}`,
+                    className: _ ? _().NoZoom : _().ClickZoom,
                   },
-                  `Filename: ${_[_].name}.\t${_ ? _ : "Upload success!"}`,
+                  _.createElement(
+                    "label",
+                    null,
+                    _.createElement("input", {
+                      type: "checkbox",
+                      value: _,
+                      onChange: (_) =>
+                        ((_) => {
+                          Array.from(
+                            document.querySelectorAll("input:checked"),
+                          ).forEach((_) => {
+                            _.target.value !== _.value && (_.checked = !1);
+                          });
+                        })(_),
+                    }),
+                    _.createElement("img", {
+                      src: _,
+                      className: _
+                        ? _().AutographImagePlaceholder
+                        : (0, _._)(_().AutographImage, _().Checkered),
+                      alt: "Checkbox",
+                    }),
+                  ),
+                ),
+                _.createElement(
+                  "span",
+                  {
+                    className: _().PlayerProName,
+                  },
+                  _ || "(missing pro name)",
+                ),
+                _.createElement(
+                  "span",
+                  {
+                    className: _().PlayerAccountId,
+                  },
+                  _ ? `(${_})` : "(missing account id)",
                 ),
               );
-            }
-            return _;
-          })(),
-          _ = ({
-            proName: _,
-            accountId: _,
-            pos: __webpack_require__,
-            fileName: _,
-            timestamp: _,
-          }) => {
-            const _ = !_;
-            let _;
-            if (_) _ = `${_._.IMG_URL}teams_override/team_unknown_web.png`;
-            else {
-              (_ = `${"dev" === _._.WEB_UNIVERSE ? "https://cdn.beta.steampowered.com/" : _._.CDN_URL}apps/${_._.DOTA_APP_ID}/teamautographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`),
-                "public" === _._.WEB_UNIVERSE &&
-                  (_ = `https://shared.steamstatic.com/dota_leagues/autographs/${_._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${_}.png?v=${_}`);
-            }
-            return _.createElement(
-              "div",
-              {
-                className: _().PlayerAutographContainer,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _ ? _().NoZoom : _().ClickZoom,
-                },
-                _.createElement(
-                  "label",
-                  null,
-                  _.createElement("input", {
-                    type: "checkbox",
-                    value: _,
-                    onChange: (_) =>
-                      ((_) => {
-                        Array.from(
-                          document.querySelectorAll("input:checked"),
-                        ).forEach((_) => {
-                          _.target.value !== _.value && (_.checked = !1);
-                        });
-                      })(_),
-                  }),
-                  _.createElement("img", {
-                    src: _,
-                    className: _
-                      ? _().AutographImagePlaceholder
-                      : (0, _._)(_().AutographImage, _().Checkered),
-                    alt: "Checkbox",
-                  }),
-                ),
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().PlayerProName,
-                },
-                _ || "(missing pro name)",
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().PlayerAccountId,
-                },
-                _ ? `(${_})` : "(missing account id)",
-              ),
-            );
-          },
-          _ = (_, _) =>
-            _.hasUploadedAutograph && !_.hasUploadedAutograph
-              ? -1
-              : (!_.hasUploadedAutograph && _.hasUploadedAutograph) ||
-                  _?.name.toLowerCase() > _?.name.toLowerCase()
-                ? 1
-                : _?.name.toLowerCase() < _?.name.toLowerCase()
-                  ? -1
-                  : 0,
-          _ = 0 == _._.ACCOUNT_ID && !_._.VALVE_INTERNAL;
-        return _.createElement(
-          "div",
-          {
-            className: _().MajorsRegistrationAutographsPage,
-          },
-          _.createElement(_._, {
-            bOverlapping: !1,
-          }),
-          _.createElement(
-            _._,
-            null,
-            _.createElement("title", null, "Dota 2 - Pro Registration"),
-          ),
-          _.createElement(_._, null),
-          _.createElement(
+            },
+            _ = (_, _) => {
+              if (12 == _._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) {
+                if (_.includes(_?.team_id) && !_.includes(_?.team_id))
+                  return -1;
+                if (!_.includes(_?.team_id) && _.includes(_?.team_id)) return 1;
+              }
+              return _.hasUploadedAutograph && !_.hasUploadedAutograph
+                ? -1
+                : (!_.hasUploadedAutograph && _.hasUploadedAutograph) ||
+                    _?.name.toLowerCase() > _?.name.toLowerCase()
+                  ? 1
+                  : _?.name.toLowerCase() < _?.name.toLowerCase()
+                    ? -1
+                    : 0;
+            },
+            _ = 0 == _._.ACCOUNT_ID && !_._.VALVE_INTERNAL;
+          return _.createElement(
             "div",
             {
-              className: _().Background,
+              className: _().MajorsRegistrationAutographsPage,
             },
+            _.createElement(_._, {
+              bOverlapping: !1,
+            }),
+            _.createElement(
+              _._,
+              null,
+              _.createElement("title", null, "Dota 2 - Pro Registration"),
+            ),
+            _.createElement(_._, null),
             _.createElement(
               "div",
               {
-                className: _().ContentFrame,
+                className: _().Background,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().PageTop,
+                  className: _().ContentFrame,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _().Title,
+                    className: _().PageTop,
                   },
-                  `${(0, _._)("#home_title")} ${(0, _._)("#dpc_event_2024season")}`,
-                  _.createElement("br", null),
-                  "Dota Pro Registration",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().Header),
-                  },
-                  "Player Autographs",
-                ),
-                _ &&
                   _.createElement(
                     "div",
                     {
-                      className: _().NeedToLogin,
+                      className: _().Title,
                     },
+                    `${(0, _._)("#home_title")} ${(0, _._)("#dpc_event_2024season")}`,
+                    _.createElement("br", null),
+                    "Dota Pro Registration",
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().Header),
+                    },
+                    "Player Autographs",
+                  ),
+                  _ &&
                     _.createElement(
                       "div",
                       {
-                        className: _().SignInMessage,
+                        className: _().NeedToLogin,
                       },
-                      "Please sign in to your Steam account",
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().SignInMessage,
+                        },
+                        "Please sign in to your Steam account",
+                      ),
+                      _.createElement(
+                        "a",
+                        {
+                          href: `${_._.COMMUNITY_URL}oauth/login?client_id=${_._.CLIENT_ID}&response_type=token&state=${_._.proregistration_autographs().substr(1)}`,
+                          className: _().SignInButton,
+                        },
+                        "Sign in",
+                      ),
                     ),
+                  !_ &&
                     _.createElement(
-                      "a",
+                      "div",
                       {
-                        href: `${_._.COMMUNITY_URL}oauth/login?client_id=${_._.CLIENT_ID}&response_type=token&state=${_._.proregistration_autographs().substr(1)}`,
-                        className: _().SignInButton,
+                        className: _().SubmitAutographs,
                       },
-                      "Sign in",
+                      _.createElement(
+                        "div",
+                        null,
+                        _.createElement(
+                          "h3",
+                          {
+                            className: _().Requirements,
+                          },
+                          "Requirements",
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.map((_, _) =>
+                            _.createElement(
+                              "li",
+                              {
+                                key: `specification-${_}`,
+                              },
+                              _,
+                            ),
+                          ),
+                          _.createElement(
+                            "li",
+                            null,
+                            "Examples and additional guidelines can be found ",
+                            _.createElement(
+                              "a",
+                              {
+                                href: `${_._.BASE_URL}${_._.autographguidelines().substr(1)}`,
+                              },
+                              "here",
+                            ),
+                          ),
+                        ),
+                        _.createElement(
+                          "h3",
+                          {
+                            className: _().Notes,
+                          },
+                          "Notes",
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            "Upload multiple images at once by using ",
+                            _.createElement("i", null, "SHIFT"),
+                            " or ",
+                            _.createElement("i", null, "CTRL+click"),
+                            " when selecting images",
+                          ),
+                          _.createElement(
+                            "li",
+                            null,
+                            "Click on an autograph image below to zoom in",
+                          ),
+                        ),
+                      ),
+                      _.createElement("div", {
+                        className: _().SmoothLine,
+                      }),
+                      _.createElement(
+                        "h3",
+                        {
+                          className: _().ImageUploadHeader,
+                        },
+                        "Image Upload",
+                      ),
+                      _.createElement(
+                        "form",
+                        {
+                          onSubmit: async (_) => {
+                            __webpack_require__.preventDefault();
+                            const _ = [];
+                            new FormData();
+                            for (let _ = 0; _ < _.length; _++) {
+                              const _ = new FormData();
+                              __webpack_require__.append("autograph", _[_]),
+                                __webpack_require__.append(
+                                  "sessionid",
+                                  _._.SESSION_ID.toString(),
+                                );
+                              const _ = await _().post(
+                                _._.BASE_URL +
+                                  _._.proregistration_submitautograph(),
+                                _,
+                              );
+                              (_[_] = _.data), (_[_].name = _[_].name);
+                            }
+                            _(_), _([]), setTimeout(() => _(), 1500);
+                          },
+                        },
+                        _.createElement("input", {
+                          className: _().FileInput,
+                          type: "file",
+                          name: "autograph",
+                          _: "autographFiles",
+                          accept: ".png",
+                          multiple: !0,
+                          onChange: (_) => {
+                            _([]), _(!1);
+                            const _ = _.target.files,
+                              _ = [];
+                            for (let _ = 0; _ < _.length; _++) {
+                              const _ = _[_];
+                              _.push(_);
+                            }
+                            _(_);
+                          },
+                        }),
+                        _.length > 0 &&
+                          _ &&
+                          _.createElement(
+                            "div",
+                            null,
+                            _.createElement("br", null),
+                            0 === _.length &&
+                              _.createElement(
+                                "div",
+                                {
+                                  className: _().FileInput,
+                                },
+                                "Ready to upload",
+                                _.createElement("img", {
+                                  className: _().CheckmarkIcon,
+                                  src: `${_._.IMG_URL}international2020/icon_check.png`,
+                                }),
+                              ),
+                            0 === _.length && _.createElement("br", null),
+                            _.length > 0 &&
+                              _.createElement(
+                                "div",
+                                null,
+                                "Fix the following errors:",
+                                _.createElement("img", {
+                                  className: _().XIcon,
+                                  src: `${_._.IMG_URL}international2020/icon_x.png`,
+                                }),
+                                " ",
+                              ),
+                            _.length > 0 &&
+                              _.createElement(
+                                "div",
+                                {
+                                  className: _().FileErrors,
+                                },
+                                _.createElement("br", null),
+                                _,
+                              ),
+                          ),
+                        _.createElement(
+                          "div",
+                          null,
+                          _.createElement("input", {
+                            type:
+                              0 === _.length || _.length > 0 || !_
+                                ? "hidden"
+                                : "submit",
+                            value: "Upload Files",
+                            className: (0, _._)(_().SubmitButton),
+                          }),
+                        ),
+                      ),
+                      _.createElement("div", null, _),
+                      _.createElement("br", null),
+                      _.createElement("div", {
+                        className: _().SmoothLine,
+                      }),
                     ),
-                  ),
+                  _.createElement("canvas", {
+                    _: "canvas",
+                    hidden: !0,
+                  }),
+                ),
                 !_ &&
                   _.createElement(
                     "div",
                     {
-                      className: _().SubmitAutographs,
+                      className: _().ViewAutographs,
                     },
+                    _.createElement("br", null),
                     _.createElement(
                       "div",
                       null,
-                      _.createElement(
-                        "h3",
-                        {
-                          className: _().Requirements,
-                        },
-                        "Requirements",
-                      ),
-                      _.createElement(
-                        "ul",
-                        null,
-                        _.map((_, _) =>
-                          _.createElement(
-                            "li",
-                            {
-                              key: `specification-${_}`,
-                            },
-                            _,
-                          ),
-                        ),
-                        _.createElement(
-                          "li",
-                          null,
-                          "Examples and additional guidelines can be found ",
-                          _.createElement(
-                            "a",
-                            {
-                              href: `${_._.BASE_URL}${_._.autographguidelines().substr(1)}`,
-                            },
-                            "here",
-                          ),
-                        ),
-                      ),
-                      _.createElement(
-                        "h3",
-                        {
-                          className: _().Notes,
-                        },
-                        "Notes",
-                      ),
-                      _.createElement(
-                        "ul",
-                        null,
-                        _.createElement(
-                          "li",
-                          null,
-                          "Upload multiple images at once by using ",
-                          _.createElement("i", null, "SHIFT"),
-                          " or ",
-                          _.createElement("i", null, "CTRL+click"),
-                          " when selecting images",
-                        ),
-                        _.createElement(
-                          "li",
-                          null,
-                          "Click on an autograph image below to zoom in",
-                        ),
-                      ),
-                    ),
-                    _.createElement("div", {
-                      className: _().SmoothLine,
-                    }),
-                    _.createElement(
-                      "h3",
-                      {
-                        className: _().ImageUploadHeader,
-                      },
-                      "Image Upload",
-                    ),
-                    _.createElement(
-                      "form",
-                      {
-                        onSubmit: async (_) => {
-                          __webpack_require__.preventDefault();
-                          const _ = [];
-                          new FormData();
-                          for (let _ = 0; _ < _.length; _++) {
-                            const _ = new FormData();
-                            __webpack_require__.append("autograph", _[_]),
-                              __webpack_require__.append(
-                                "sessionid",
-                                _._.SESSION_ID.toString(),
-                              );
-                            const _ = await _().post(
-                              _._.BASE_URL +
-                                _._.proregistration_submitautograph(),
-                              _,
-                            );
-                            (_[_] = _.data), (_[_].name = _[_].name);
-                          }
-                          _(_), _([]), setTimeout(() => _(), 1500);
-                        },
-                      },
-                      _.createElement("input", {
-                        className: _().FileInput,
-                        type: "file",
-                        name: "autograph",
-                        _: "autographFiles",
-                        accept: ".png",
-                        multiple: !0,
-                        onChange: (_) => {
-                          _([]), _(!1);
-                          const _ = _.target.files,
-                            _ = [];
-                          for (let _ = 0; _ < _.length; _++) {
-                            const _ = _[_];
-                            _.push(_);
-                          }
-                          _(_);
-                        },
-                      }),
-                      _.length > 0 &&
-                        _ &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _.createElement("br", null),
-                          0 === _.length &&
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().FileInput,
-                              },
-                              "Ready to upload",
-                              _.createElement("img", {
-                                className: _().CheckmarkIcon,
-                                src: `${_._.IMG_URL}international2020/icon_check.png`,
-                              }),
-                            ),
-                          0 === _.length && _.createElement("br", null),
-                          _.length > 0 &&
-                            _.createElement(
+                      (() => {
+                        let _;
+                        return _ && _.team_autographs
+                          ? ((_ = _.team_autographs),
+                            _.forEach((_, _) => {
+                              const _ = _.autographs;
+                              let _ = !1;
+                              for (let _ = 0; _ < _.length; _++)
+                                _[_].file && (_ = !0);
+                              _[_].hasUploadedAutograph = _;
+                            }),
+                            (_ = _.filter((_) => _?.autographs?.length >= 4)),
+                            _.sort(_),
+                            _.map((_, _) =>
+                              _.createElement(
+                                "div",
+                                {
+                                  key: `${_.team_id}Container`,
+                                },
+                                _.createElement(
+                                  "div",
+                                  {
+                                    className: _().TeamName,
+                                  },
+                                  _.name || "(Team name)",
+                                  _.team_id ? ` (${_.team_id})` : "",
+                                ),
+                                _.createElement(
+                                  "div",
+                                  {
+                                    key: `${_.team_id}Row`,
+                                    className: _().TeamAutographRow,
+                                  },
+                                  _.autographs.map((_, _) => {
+                                    const {
+                                      name: __webpack_require__,
+                                      pro_name: _,
+                                      account_id: _,
+                                      file: _,
+                                      timestamp: _,
+                                    } = _;
+                                    return _.includes(_)
+                                      ? null
+                                      : _.createElement(_, {
+                                          key: _,
+                                          proName: _,
+                                          accountId: _,
+                                          pos: null,
+                                          fileName: _,
+                                          timestamp: _,
+                                        });
+                                  }),
+                                ),
+                              ),
+                            ))
+                          : _.createElement(
                               "div",
                               null,
-                              "Fix the following errors:",
-                              _.createElement("img", {
-                                className: _().XIcon,
-                                src: `${_._.IMG_URL}international2020/icon_x.png`,
-                              }),
-                              " ",
-                            ),
-                          _.length > 0 &&
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().FileErrors,
-                              },
-                              _.createElement("br", null),
-                              _,
-                            ),
-                        ),
-                      _.createElement(
-                        "div",
-                        null,
-                        _.createElement("input", {
-                          type:
-                            0 === _.length || _.length > 0 || !_
-                              ? "hidden"
-                              : "submit",
-                          value: "Upload Files",
-                          className: (0, _._)(_().SubmitButton),
-                        }),
-                      ),
+                              "Could not load autographs",
+                            );
+                      })(),
                     ),
-                    _.createElement("div", null, _),
-                    _.createElement("br", null),
-                    _.createElement("div", {
-                      className: _().SmoothLine,
-                    }),
                   ),
-                _.createElement("canvas", {
-                  _: "canvas",
-                  hidden: !0,
-                }),
               ),
-              !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ViewAutographs,
-                  },
-                  _.createElement("br", null),
-                  _.createElement(
-                    "div",
-                    null,
-                    (() => {
-                      let _;
-                      return _ && _.team_autographs
-                        ? ((_ = _.team_autographs),
-                          _.forEach((_, _) => {
-                            const _ = _.autographs;
-                            let _ = !1;
-                            for (let _ = 0; _ < _.length; _++)
-                              _[_].file && (_ = !0);
-                            _[_].hasUploadedAutograph = _;
-                          }),
-                          (_ = _.filter((_) => _?.autographs?.length >= 4)),
-                          _.sort(_),
-                          _.map((_, _) =>
-                            _.createElement(
-                              "div",
-                              {
-                                key: `${_.team_id}Container`,
-                              },
-                              _.createElement(
-                                "div",
-                                {
-                                  className: _().TeamName,
-                                },
-                                _.name || "(Team name)",
-                                _.team_id ? ` (${_.team_id})` : "",
-                              ),
-                              _.createElement(
-                                "div",
-                                {
-                                  key: `${_.team_id}Row`,
-                                  className: _().TeamAutographRow,
-                                },
-                                _.autographs.map((_, _) => {
-                                  const {
-                                    name: __webpack_require__,
-                                    pro_name: _,
-                                    account_id: _,
-                                    file: _,
-                                    timestamp: _,
-                                  } = _;
-                                  return _.createElement(_, {
-                                    key: _,
-                                    proName: _,
-                                    accountId: _,
-                                    pos: null,
-                                    fileName: _,
-                                    timestamp: _,
-                                  });
-                                }),
-                              ),
-                            ),
-                          ))
-                        : _.createElement(
-                            "div",
-                            null,
-                            "Could not load autographs",
-                          );
-                    })(),
-                  ),
-                ),
             ),
-          ),
-          _.createElement(_._, null),
-        );
-      };
+            _.createElement(_._, null),
+          );
+        };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = [

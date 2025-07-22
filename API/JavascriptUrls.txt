@@ -2282,7 +2282,6 @@ https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg
-https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/capsule_sm_120.jpg
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/attacks.json
