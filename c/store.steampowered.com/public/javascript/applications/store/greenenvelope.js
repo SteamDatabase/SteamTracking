@@ -1191,6 +1191,53 @@
               ),
             );
       }
+      const _ = (_) => {
+        let {
+          location: _,
+          icon: __webpack_require__,
+          timestamp: _,
+          fnRenderTimestamp: _,
+          onHide: _,
+        } = _;
+        const _ = _(_),
+          _ = (0, _._)("#SteamNotifications_TradeReversal_Title"),
+          _ = _
+            ? (0, _._)("#SteamNotifications_TradeReversal_Body_Short")
+            : (0, _._)("#SteamNotifications_TradeReversal_Body"),
+          _ = (0, _._)("#SteamNotifications_TradeReversal_Description");
+        return _
+          ? _.createElement(_, {
+              ..._,
+              logo: _.logo,
+              icon: _.icon,
+              title: _,
+              body: _,
+            })
+          : _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                {
+                  ..._,
+                },
+                _.createElement(_, {
+                  icon: __webpack_require__,
+                  title: _,
+                  timestamp: _,
+                  location: _,
+                  fnRenderTimestamp: _,
+                }),
+                _.createElement(_, null, _),
+                _.createElement(_, null, _),
+                _
+                  ? _.createElement(_, {
+                      onHide: _,
+                    })
+                  : null,
+              ),
+            );
+      };
       function _(_) {
         let {
           senderName: _,
@@ -2484,7 +2531,35 @@
             }),
           );
         },
-        chunkid: () => null,
+        chunkid: (module) => {
+          const {
+              rollup: _,
+              onNotificationClick: _,
+              location: _,
+              uimode: _,
+              onHide: _,
+            } = module,
+            _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
+          return _.createElement(
+            "a",
+            {
+              href: _,
+              onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+            },
+            _.createElement(_, {
+              logo: _.createElement(_.Qte, null),
+              icon: _.createElement(_.h20, null),
+              onActivate: () =>
+                __webpack_require__(() => window.location.assign(_), _.item),
+              location: _,
+              eUIMode: _,
+              timestamp: _.timestamp,
+              nUnread: _.rgunread.length,
+              bNewIndicator: (0, _._)(_.item),
+              onHide: _,
+            }),
+          );
+        },
       };
       var _ = __webpack_require__("chunkid");
       const _ = new _._(),

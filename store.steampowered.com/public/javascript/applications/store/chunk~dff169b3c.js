@@ -919,7 +919,7 @@
         hr: () => oe,
         IC: () => P,
         V4: () => $,
-        sR: () => G,
+        sR: () => L,
         jb: () => be,
         Rl: () => Me,
         XT: () => Se,
@@ -927,7 +927,7 @@
         tM: () => ie,
         K9: () => x,
         bP: () => pe,
-        aq: () => D,
+        aq: () => G,
         u5: () => ue,
         IL: () => ne,
       });
@@ -2267,12 +2267,7 @@
       function P(e) {
         return !!x(e);
       }
-      E[29] = {
-        titleLoc: (e) => e.title,
-        bodyLoc: (e) => e.body,
-        link: (e) => W.TS.COMMUNITY_BASE_URL + "my/tradehistory",
-      };
-      const L = {
+      const D = {
         16: {
           steamidAttribute: "inviter",
           titleLoc: "#SteamNotifications_FamilyInviteTitle",
@@ -2340,11 +2335,11 @@
             `${W.TS.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
       };
-      function D(e) {
-        if (void 0 !== e) return L[e];
-      }
       function G(e) {
-        return !!D(e);
+        if (void 0 !== e) return D[e];
+      }
+      function L(e) {
+        return !!G(e);
       }
       const H = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function $(e) {
@@ -2353,7 +2348,7 @@
       function X(e) {
         return (
           !e.hidden &&
-          (P((t = e.notification_type)) || G(t) || $(t)) &&
+          (P((t = e.notification_type)) || L(t) || $(t)) &&
           ue(e.body_data)
         );
         var t;
@@ -2366,10 +2361,10 @@
       })(J || (J = {}));
       const V = 172800,
         Q = 600,
-        Y = new O.wd("SteamNotificationStore"),
-        K = Y.Debug,
-        Z = Y.Error,
-        ee = Y.Warning;
+        K = new O.wd("SteamNotificationStore"),
+        Y = K.Debug,
+        Z = K.Error,
+        ee = K.Warning;
       class te {
         constructor() {
           (0, q.Gn)(this);
@@ -2570,17 +2565,17 @@
         }
         ApplyNotificationsUpdate(e) {
           if (
-            (K("ApplyNotificationsUpdate", e),
+            (Y("ApplyNotificationsUpdate", e),
             !e ||
               (!e.notifications?.length &&
                 void 0 === e.pending_friend_count &&
                 void 0 === e.pending_gift_count))
           )
-            return void K(
+            return void Y(
               "Error: ApplyNotificationsUpdate was called with no data",
             );
           if (!this.m_currentNotificationsData)
-            return void K(
+            return void Y(
               "Error: ApplyNotificationsUpdate was called before this.m_currentNotificationsData was set",
             );
           const t = this.m_currentNotificationsData;
@@ -2921,7 +2916,7 @@
         try {
           return JSON.parse(e);
         } catch (t) {
-          K("Steam notification in invalid format:", e);
+          Y("Steam notification in invalid format:", e);
         }
         return null;
       }
@@ -2953,7 +2948,7 @@
             };
           case 12:
             return !i.appid || !i.state || (1 != i.state && 2 != i.state)
-              ? (K("Async game notification invalid data", t), null)
+              ? (Y("Async game notification invalid data", t), null)
               : { appid: parseInt(i.appid), state: parseInt(i.state) };
           case 3:
             let r = {
@@ -3009,7 +3004,7 @@
             };
           default:
             return (
-              K(
+              Y(
                 "GetCustomNotificationDataByType called with unexpected type:" +
                   e,
                 t,
@@ -3029,7 +3024,7 @@
             default:
               return !1;
           }
-        return K("notification contained unexpected boolean value"), !1;
+        return Y("notification contained unexpected boolean value"), !1;
       }
       const ye = {
         0: { rollup_field: void 0, eFeature: void 0 },

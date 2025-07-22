@@ -637,6 +637,7 @@
     "FamilyManagement_WishlistLink": "Wishlist",
     "FamilyManagement_InviteeAlreadyMember": "Friend code %1$s is already a member of the family.",
     "FamilyManagement_InviteeAlreadyInvited": "Friend code %1$s already has a pending invitation to the family.",
+    "FamilyManagement_ErrorCanOnlyInviteFriends": "You must be Steam friends with this user to invite them to the family.",
     "FamilyManagement_NoCurrentRequests": "Your family has no current requests. Purchase and access requests from children will appear here.",
     "PurchaseRequestBanner_PendingRequest": "%1$s pending purchase request",
     "PurchaseRequestBanner_PendingRequest_Plural": "%1$s pending purchase requests",

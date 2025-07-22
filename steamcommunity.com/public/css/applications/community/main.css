@@ -33,8 +33,8 @@ dialog ._2yAm5LY_eu-Vg_52l0HFlM {
 @media (prefers-contrast: more) {
   .GreenEnvelopeMenu,
   .PP7LM0Ow1K5qkR8WElLpt {
-    background: #000;
-    padding: 0;
+    background: #fff;
+    padding: 1px;
   }
 }
 .web_chat_frame .PP7LM0Ow1K5qkR8WElLpt {
@@ -54,12 +54,19 @@ html._14wqdluDeDnnEcg3OSLEmd .PP7LM0Ow1K5qkR8WElLpt {
   display: inline-block;
   padding: 0;
 }
+@media (prefers-contrast: more) {
+  html._14wqdluDeDnnEcg3OSLEmd .PP7LM0Ow1K5qkR8WElLpt {
+    padding: 2px;
+    box-sizing: border-box;
+  }
+}
 html._14wqdluDeDnnEcg3OSLEmd ._2EstNjFIIZm_WUSKm5Wt7n {
   padding: 4px;
 }
 @media (prefers-contrast: more) {
   html._14wqdluDeDnnEcg3OSLEmd ._2EstNjFIIZm_WUSKm5Wt7n {
-    padding: 0;
+    padding: 2px;
+    background-color: #000;
   }
 }
 html._14wqdluDeDnnEcg3OSLEmd ._1n7Wloe5jZ6fSuvV18NNWI {
@@ -72,6 +79,11 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   margin: 0;
   overflow: hidden;
 }
+@media (prefers-contrast: more) {
+  html._14wqdluDeDnnEcg3OSLEmd body {
+    background: #fff;
+  }
+}
 ._2EstNjFIIZm_WUSKm5Wt7n {
   display: flex;
   flex-direction: column;
@@ -79,11 +91,6 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   font-size: 14px;
   -webkit-app-region: no-drag;
   box-sizing: border-box;
-}
-@media (prefers-contrast: more) {
-  ._2EstNjFIIZm_WUSKm5Wt7n {
-    border: 1px solid #fff;
-  }
 }
 .PP7LM0Ow1K5qkR8WElLpt:not(.visible) {
   opacity: 0;
@@ -102,6 +109,12 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   align-items: center;
   flex-direction: row;
   --color-text-secondary: rgba(211, 213, 217, 0.5);
+}
+@media (prefers-contrast: more) {
+  ._1n7Wloe5jZ6fSuvV18NNWI {
+    background-color: #000;
+    color: #fff;
+  }
 }
 ._1n7Wloe5jZ6fSuvV18NNWI:first-child {
   border-top: 1px solid rgba(80, 87, 94, 0);
@@ -229,8 +242,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 @media (prefers-contrast: more) {
   .DesktopUI .PP7LM0Ow1K5qkR8WElLpt,
   ._3qIuY9S_vXm3IQS-uE9SRS .PP7LM0Ow1K5qkR8WElLpt {
-    background: #000;
-    box-sizing: border-box;
+    background: #fff;
   }
 }
 .DesktopUI ._1n7Wloe5jZ6fSuvV18NNWI,

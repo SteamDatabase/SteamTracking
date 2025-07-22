@@ -9398,7 +9398,7 @@ html.responsive.touch
   flex-wrap: nowrap;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop)
+  html.responsive
     ._18byEIHFiivSklOwKqIx2b
     ._1edLKYpcJyTYC7ku9fYI1_
     .Eh-ow8RpArn1HQyPR8RFY {
@@ -9473,7 +9473,7 @@ html.responsive.touch
   text-transform: initial;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop)
+  html.responsive
     ._18byEIHFiivSklOwKqIx2b
     ._1edLKYpcJyTYC7ku9fYI1_
     .Eh-ow8RpArn1HQyPR8RFY

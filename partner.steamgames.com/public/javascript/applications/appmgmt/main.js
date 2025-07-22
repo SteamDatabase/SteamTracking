@@ -1042,7 +1042,8 @@
         StoreGameAdminRoot: () => "/admin/game/",
         StoreAdminRoot: () => "/admin/store/",
         StoreAdminReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
-        AppCommunityItems: (e = ":appid") => `/apps/communityitems/${e}`,
+        AppCommunityItem: (e = ":appid", t = ":itemtype") =>
+          `/apps/communityitems/${e}/${t}`,
         AppLandingPage: (e = ":appid") => `/apps/landing/${e}`,
         AppInstallerPage: (e = ":appid") => `/apps/installer/${e}`,
         AppEconomyPage: (e = ":appid") => `/apps/economy/${e}`,
@@ -1620,10 +1621,10 @@
         ),
         oe = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(9954),
-            r.e(4414),
+            r.e(5859),
             r.e(9017),
             r.e(725),
             r.e(8713),
@@ -1636,132 +1637,140 @@
         ),
         le = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 39682)),
         ),
         ce = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 28502)),
         ),
         ue = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 90197)),
         ),
         me = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(4268),
           ]).then(r.bind(r, 63554)),
@@ -1771,73 +1780,79 @@
         ),
         pe = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
+            r.e(3874),
+            r.e(5344),
+            r.e(462),
+            r.e(5859),
+            r.e(3388),
+            r.e(7267),
+            r.e(3506),
+            r.e(4017),
+            r.e(9433),
+          ]).then(r.bind(r, 97472)),
+        ),
+        he = u.lazy(() =>
+          Promise.all([
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(6995),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(8758),
-            r.e(4086),
+            r.e(4017),
             r.e(2455),
           ]).then(r.bind(r, 51669)),
-        ),
-        he = u.lazy(() =>
-          Promise.all([
-            r.e(7248),
-            r.e(8495),
-            r.e(1228),
-            r.e(5344),
-            r.e(462),
-            r.e(4414),
-            r.e(5628),
-            r.e(4086),
-            r.e(9433),
-          ]).then(r.bind(r, 82399)),
         ),
         ge = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         _e = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(8523),
           ]).then(r.bind(r, 53724)),
@@ -1853,60 +1868,63 @@
         ),
         be = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(7383),
           ]).then(r.bind(r, 38603)),
         ),
         Ce = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(5841),
-            r.e(1228),
-            r.e(5628),
+            r.e(3874),
+            r.e(3388),
             r.e(725),
             r.e(4985),
           ]).then(r.bind(r, 43709)),
         ),
         we = u.lazy(() =>
           Promise.all([
-            r.e(7248),
+            r.e(1348),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(2012),
             r.e(7352),
             r.e(3025),
@@ -1914,56 +1932,59 @@
         ),
         Me = u.lazy(() =>
           Promise.all([
-            r.e(7248),
-            r.e(8495),
+            r.e(1348),
+            r.e(6401),
             r.e(316),
             r.e(5841),
             r.e(1134),
-            r.e(1228),
+            r.e(3874),
             r.e(5344),
             r.e(9954),
             r.e(462),
             r.e(1084),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
             r.e(4160),
+            r.e(3506),
             r.e(4440),
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(8758),
             r.e(7352),
+            r.e(8758),
             r.e(8350),
             r.e(5136),
           ]).then(r.bind(r, 16340)),
         ),
         Se = u.lazy(() =>
-          Promise.all([r.e(4414), r.e(3350)]).then(r.bind(r, 92513)),
+          Promise.all([r.e(5859), r.e(3350)]).then(r.bind(r, 92513)),
         ),
         ve = u.lazy(() =>
-          Promise.all([r.e(4414), r.e(3350)]).then(r.bind(r, 2203)),
+          Promise.all([r.e(5859), r.e(3350)]).then(r.bind(r, 2203)),
         ),
         ye = u.lazy(() =>
           Promise.all([
-            r.e(7248),
+            r.e(1348),
             r.e(316),
             r.e(1134),
             r.e(9954),
-            r.e(4414),
-            r.e(5628),
+            r.e(5859),
+            r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
             r.e(7224),
             r.e(4298),
+            r.e(7267),
             r.e(8713),
             r.e(2012),
             r.e(8129),
@@ -2077,39 +2098,39 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreGameAdminRoot(),
-                          component: pe,
+                          component: he,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreAdminReviewPriceProposals(),
-                          component: pe,
+                          component: he,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.PackageLanding(),
-                          component: pe,
+                          component: he,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreAdminRoot(),
-                          component: pe,
+                          component: he,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.BundlesEditor(),
+                          component: he,
+                        }),
+                        u.createElement(S.qh, {
+                          path: a.B.AppCommunityItem(),
                           component: pe,
                         }),
                         u.createElement(S.qh, {
-                          path: a.B.AppCommunityItems(),
-                          component: he,
-                        }),
-                        u.createElement(S.qh, {
                           path: a.B.AppLandingPage(),
-                          component: he,
+                          component: pe,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppInstallerPage(),
-                          component: he,
+                          component: pe,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.AppEconomyPage(),
-                          component: he,
+                          component: pe,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.SteamML(),
@@ -9879,31 +9900,6 @@
                     bw: a.gp.writeBool,
                   },
                   gr_mode: { n: 10, br: a.qM.readInt32, bw: a.gp.writeInt32 },
-                  accessibility_desktop_ui_scale: {
-                    n: 11,
-                    br: a.qM.readFloat,
-                    bw: a.gp.writeFloat,
-                  },
-                  accessibility_screen_reader_enabled: {
-                    n: 12,
-                    br: a.qM.readBool,
-                    bw: a.gp.writeBool,
-                  },
-                  accessibility_high_contrast_mode: {
-                    n: 13,
-                    br: a.qM.readBool,
-                    bw: a.gp.writeBool,
-                  },
-                  accessibility_reduce_motion: {
-                    n: 14,
-                    br: a.qM.readBool,
-                    bw: a.gp.writeBool,
-                  },
-                  accessibility_color_filter_name: {
-                    n: 15,
-                    br: a.qM.readString,
-                    bw: a.gp.writeString,
-                  },
                 },
               }),
             N.sm_m
@@ -9948,7 +9944,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            P.prototype.glibc_version_major || a.Sg(P.M()),
+            P.prototype.accessibility_desktop_ui_scale || a.Sg(P.M()),
             i.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -9959,33 +9955,28 @@
               (P.sm_m = {
                 proto: P,
                 fields: {
-                  glibc_version_major: {
+                  accessibility_desktop_ui_scale: {
                     n: 1,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
+                    br: a.qM.readFloat,
+                    bw: a.gp.writeFloat,
                   },
-                  glibc_version_minor: {
+                  accessibility_screen_reader_enabled: {
                     n: 2,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
                   },
-                  account_type: {
+                  accessibility_high_contrast_mode: {
                     n: 3,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
                   },
-                  launcher_type: {
+                  accessibility_reduce_motion: {
                     n: 4,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
                   },
-                  game_server_appid: {
+                  accessibility_color_filter_name: {
                     n: 5,
-                    br: a.qM.readInt32,
-                    bw: a.gp.writeInt32,
-                  },
-                  process_name: {
-                    n: 6,
                     br: a.qM.readString,
                     bw: a.gp.writeString,
                   },
@@ -10024,6 +10015,91 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ReportAccessibilitySettings_Notification";
+        }
+      }
+      class W extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.glibc_version_major || a.Sg(W.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  glibc_version_major: {
+                    n: 1,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  glibc_version_minor: {
+                    n: 2,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  account_type: {
+                    n: 3,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  launcher_type: {
+                    n: 4,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  game_server_appid: {
+                    n: 5,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
+                  },
+                  process_name: {
+                    n: 6,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
+                  },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = a.w0(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportLinuxStats_Notification";
@@ -10110,6 +10186,13 @@
           (e.ReportLinuxStats = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportLinuxStats#1",
+              (0, o.I8)(W, t),
+              { ePrivilege: 1 },
+            );
+          }),
+          (e.ReportAccessibilitySettings = function (e, t) {
+            return e.SendNotification(
+              "ClientMetrics.ReportAccessibilitySettings#1",
               (0, o.I8)(P, t),
               { ePrivilege: 1 },
             );
@@ -15042,11 +15125,6 @@
                     br: a.qM.readBool,
                     bw: a.gp.writeBool,
                   },
-                  prefilter_creators: {
-                    n: 10,
-                    br: a.qM.readBool,
-                    bw: a.gp.writeBool,
-                  },
                 },
               }),
             w.sm_m
@@ -19334,224 +19412,194 @@
     },
     6336: (e, t, r) => {
       "use strict";
-      r.d(t, { g: () => u });
-      var n = r(34629),
-        i = r(75844),
-        s = r(90626),
-        a = r(52038),
-        o = r(73745),
-        l = r(37739),
-        c = r.n(l);
-      let u = class extends s.Component {
-        m_elHover;
-        m_bNoSpace = !1;
-        static defaultProps = {
-          direction: "right",
-          nBodyAlignment: 0.5,
-          nAllowOffscreenPx: 10,
-          nBodyDistance: 8,
-          nMaxLateralMoveOnScreen: void 0,
-        };
-        state = { x: void 0, y: void 0, hoverPositionReady: !1 };
-        bindHover(e) {
-          (this.m_elHover = e || void 0), this.positionHover();
-        }
-        componentDidUpdate() {
-          this.positionHover();
-        }
-        render() {
-          const {
-            target: e,
-            visibilityObserver: t,
-            className: r,
-            style: n,
-            bEnablePointerEvents: i,
-            direction: o,
-            nBodyAlignment: l,
-            nBodyDistance: u,
-            nAllowOffscreenPx: m,
-            nMaxLateralMoveOnScreen: d,
-            children: p,
-            onNoSpace: h,
-            bTopmost: g,
-            ..._
-          } = this.props;
-          let f = Object.assign({ left: this.state.x, top: this.state.y }, n),
-            b = !t || t.visible;
-          return s.createElement(
+      r.d(t, { g: () => o });
+      var n = r(90626),
+        i = r(52038),
+        s = r(37739),
+        a = r.n(s);
+      function o(e) {
+        const {
+            target: t,
+            visibilityObserver: r,
+            className: s,
+            style: o,
+            bEnablePointerEvents: c,
+            direction: u = "right",
+            nBodyAlignment: m = 0.5,
+            nBodyDistance: d = 8,
+            nAllowOffscreenPx: p = 10,
+            nMaxLateralMoveOnScreen: h,
+            onNoSpace: g,
+            bTopmost: _,
+            children: f,
+            ...b
+          } = e,
+          [C, w] = n.useState(void 0),
+          [M, S] = n.useState(void 0),
+          [v, y] = n.useState(!1),
+          [B, E] = n.useState(!1),
+          [R, I] = n.useState(null),
+          T = n.useCallback(() => {
+            let e = t;
+            if (!R || !e) return;
+            if (v && r && !r.visible) return;
+            let n = e.ownerDocument.defaultView;
+            if (!n || n.closed) return;
+            const i = R.querySelector(".hover_arrow.left"),
+              s = R.querySelector(".hover_arrow.right"),
+              a = R.querySelector(".hover_arrow.top"),
+              o = R.querySelector(".hover_arrow.bottom"),
+              c = e.getBoundingClientRect(),
+              _ = R.getBoundingClientRect(),
+              f = "overlay" == u || "overlay-center" == u;
+            i && i.setAttribute("style", "display: none;"),
+              s && s.setAttribute("style", "display: none;"),
+              a && a.setAttribute("style", "display: none;"),
+              o && o.setAttribute("style", "display: none;");
+            let b = u,
+              {
+                nLeft: B,
+                nTop: I,
+                nOverflow: T,
+                nLateralOverflow: D,
+              } = l(u, m, d, c, _, n.innerWidth, n.innerHeight);
+            if (T > (p ?? 10) && !f) {
+              const e = (function (e) {
+                  switch (e) {
+                    case "right":
+                      return "left";
+                    case "left":
+                      return "right";
+                    case "bottom":
+                      return "top";
+                    case "top":
+                      return "bottom";
+                    case "overlay":
+                      return "overlay";
+                    case "overlay-center":
+                      return "overlay-center";
+                  }
+                })(u ?? "right"),
+                {
+                  nLeft: t,
+                  nTop: r,
+                  nOverflow: i,
+                  nLateralOverflow: s,
+                } = l(e, m, d, c, _, n.innerWidth, n.innerHeight);
+              if (
+                (i < T && ((b = e), (B = t), (I = r), (T = i), (D = s)),
+                T > (p ?? 10))
+              )
+                return (
+                  console.log(
+                    "Not showing hover because it didn't fit in the main or alt direction",
+                  ),
+                  R.setAttribute("style", "display: none;"),
+                  E(!0),
+                  void g?.()
+                );
+            }
+            0 === h ||
+              f ||
+              ([I, B] = (function (e, t, r, n, i) {
+                let s = Math.max(t[0], t[1]);
+                void 0 !== e && (s = Math.min(e, s));
+                s = Math.max(0, s);
+                const a = t[0] > t[1] ? s : -s;
+                "left" === r || "right" === r ? (n += a) : (i += a);
+                return [n, i];
+              })(h, D, b ?? "right", I, B));
+            let L = null;
+            switch (b) {
+              case "left":
+                L = s;
+                break;
+              case "right":
+                L = i;
+                break;
+              case "top":
+                L = o;
+                break;
+              case "bottom":
+                L = a;
+            }
+            L && L.setAttribute("style", ""),
+              B != C && w(B),
+              I != M && S(I),
+              v || y(!0);
+          }, [t, R, v, r, u, m, d, p, h, C, M, g]);
+        n.useEffect(() => T(), [T]);
+        let D = Object.assign({ left: C, top: M }, o),
+          L = !r || r.visible;
+        return n.createElement(
+          "div",
+          {
+            className: (0, i.A)(
+              a().HoverPositionOuter,
+              _ && a().HoverAboveModal,
+            ),
+          },
+          n.createElement(
             "div",
             {
-              className: (0, a.A)(
-                c().HoverPositionOuter,
-                g && c().HoverAboveModal,
+              ...b,
+              className: (0, i.A)(
+                a().HoverPosition,
+                L && v && a().Ready,
+                B && a().NoSpace,
+                c && a().EnablePointerEvents,
+                s,
               ),
+              style: D,
+              ref: I,
             },
-            s.createElement(
-              "div",
-              {
-                ..._,
-                className: (0, a.A)(
-                  c().HoverPosition,
-                  b && this.state.hoverPositionReady && c().Ready,
-                  this.m_bNoSpace && c().NoSpace,
-                  i && c().EnablePointerEvents,
-                  r,
-                ),
-                style: f,
-                ref: this.bindHover,
-              },
-              p,
-            ),
-          );
-        }
-        positionHover() {
-          let e = this.m_elHover,
-            t = this.props.target;
-          if (!e || !t) return;
-          if (
-            this.state.hoverPositionReady &&
-            this.props.visibilityObserver &&
-            !this.props.visibilityObserver.visible
-          )
-            return;
-          let r = t.ownerDocument.defaultView;
-          if (!r || r.closed) return;
-          const n = e.querySelector(".hover_arrow.left"),
-            i = e.querySelector(".hover_arrow.right"),
-            s = e.querySelector(".hover_arrow.top"),
-            a = e.querySelector(".hover_arrow.bottom"),
-            o = t.getBoundingClientRect(),
-            l = e.getBoundingClientRect(),
-            c =
-              "overlay" == this.props.direction ||
-              "overlay-center" == this.props.direction;
-          n && n.setAttribute("style", "display: none;"),
-            i && i.setAttribute("style", "display: none;"),
-            s && s.setAttribute("style", "display: none;"),
-            a && a.setAttribute("style", "display: none;");
-          let {
-              nBodyDistance: u = 8,
-              direction: d = "right",
-              nBodyAlignment: p = 0.5,
-            } = this.props,
-            {
-              nLeft: h,
-              nTop: g,
-              nOverflow: _,
-              nLateralOverflow: f,
-            } = m(d, p, u, o, l, r.innerWidth, r.innerHeight);
-          if (_ > (this.props.nAllowOffscreenPx ?? 10) && !c) {
-            const t = (function (e) {
-                switch (e) {
-                  case "right":
-                    return "left";
-                  case "left":
-                    return "right";
-                  case "bottom":
-                    return "top";
-                  case "top":
-                    return "bottom";
-                  case "overlay":
-                    return "overlay";
-                  case "overlay-center":
-                    return "overlay-center";
-                }
-              })(this.props.direction ?? "right"),
-              {
-                nLeft: n,
-                nTop: i,
-                nOverflow: s,
-                nLateralOverflow: a,
-              } = m(t, p, u, o, l, r.innerWidth, r.innerHeight);
-            if (
-              (s < _ && ((d = t), (h = n), (g = i), (_ = s), (f = a)),
-              _ > (this.props.nAllowOffscreenPx ?? 10))
-            )
-              return (
-                console.log(
-                  "Not showing hover because it didn't fit in the main or alt direction",
-                ),
-                e.setAttribute("style", "display: none;"),
-                (this.m_bNoSpace = !0),
-                void (this.props.onNoSpace && this.props.onNoSpace())
-              );
-          }
-          0 === this.props.nMaxLateralMoveOnScreen ||
-            c ||
-            ([g, h] = (function (e, t, r, n, i) {
-              let s = Math.max(t[0], t[1]);
-              void 0 !== e && (s = Math.min(e, s));
-              s = Math.max(0, s);
-              const a = t[0] > t[1] ? s : -s;
-              "left" === r || "right" === r ? (n += a) : (i += a);
-              return [n, i];
-            })(this.props.nMaxLateralMoveOnScreen, f, d ?? "right", g, h));
-          let b = null;
-          switch (d) {
-            case "left":
-              b = i;
-              break;
-            case "right":
-              b = n;
-              break;
-            case "top":
-              b = a;
-              break;
-            case "bottom":
-              b = s;
-          }
-          b && b.setAttribute("style", ""),
-            h != this.state.x && this.setState({ x: h }),
-            g != this.state.y && this.setState({ y: g }),
-            this.state.hoverPositionReady ||
-              this.setState({ hoverPositionReady: !0 });
-        }
-      };
-      function m(e, t, r, n, i, s, a) {
+            f,
+          ),
+        );
+      }
+      function l(e, t, r, n, i, s, a) {
         const o = s,
           l = a;
-        let c, u, m, p;
+        let u, m, d, p;
         switch (e) {
           case "right":
-            (c = n.right + r),
-              (u = d(n.top, n.height, i.height, t)),
-              (m = Math.max(0, c + i.width - o)),
-              (p = [Math.max(0, 0 - u), Math.max(0, u + i.height - l)]);
+            (u = n.right + r),
+              (m = c(n.top, n.height, i.height, t)),
+              (d = Math.max(0, u + i.width - o)),
+              (p = [Math.max(0, 0 - m), Math.max(0, m + i.height - l)]);
             break;
           case "left":
-            (c = n.left - r - i.width),
-              (u = d(n.top, n.height, i.height, t)),
-              (m = Math.max(0, 0 - c)),
-              (p = [Math.max(0, 0 - u), Math.max(0, u + i.height - l)]);
+            (u = n.left - r - i.width),
+              (m = c(n.top, n.height, i.height, t)),
+              (d = Math.max(0, 0 - u)),
+              (p = [Math.max(0, 0 - m), Math.max(0, m + i.height - l)]);
             break;
           case "bottom":
-            (c = d(n.left, n.width, i.width, t)),
-              (u = n.bottom + r),
-              (m = Math.max(0, u + i.height - l)),
-              (p = [Math.max(0, 0 - c), Math.max(0, c + i.width - o)]);
+            (u = c(n.left, n.width, i.width, t)),
+              (m = n.bottom + r),
+              (d = Math.max(0, m + i.height - l)),
+              (p = [Math.max(0, 0 - u), Math.max(0, u + i.width - o)]);
             break;
           case "top":
-            (c = d(n.left, n.width, i.width, t)),
-              (u = n.top - r - i.height),
-              (m = Math.max(0, 0 - u)),
-              (p = [Math.max(0, 0 - c), Math.max(0, c + i.width - o)]);
+            (u = c(n.left, n.width, i.width, t)),
+              (m = n.top - r - i.height),
+              (d = Math.max(0, 0 - m)),
+              (p = [Math.max(0, 0 - u), Math.max(0, u + i.width - o)]);
             break;
           case "overlay":
-            (c = n.left), (u = n.top), (m = 0), (p = [0, 0]);
+            (u = n.left), (m = n.top), (d = 0), (p = [0, 0]);
             break;
           case "overlay-center":
-            (c = n.left + 0.5 * n.width - 0.5 * i.width),
-              (u = n.top + 0.5 * n.height - 0.5 * i.height),
-              (m = 0),
+            (u = n.left + 0.5 * n.width - 0.5 * i.width),
+              (m = n.top + 0.5 * n.height - 0.5 * i.height),
+              (d = 0),
               (p = [0, 0]);
         }
-        return { nLeft: c, nTop: u, nOverflow: m, nLateralOverflow: p };
+        return { nLeft: u, nTop: m, nOverflow: d, nLateralOverflow: p };
       }
-      function d(e, t, r, n) {
+      function c(e, t, r, n) {
         return Math.max(0, Math.min(1, n)) * (t - r) + e;
       }
-      (0, n.Cg)([o.oI], u.prototype, "bindHover", null),
-        (u = (0, n.Cg)([i.PA], u));
     },
     42248: (e, t, r) => {
       "use strict";
@@ -20627,7 +20675,6 @@
       let B = class extends m.Component {
         static contextType = y;
         m_navRef = (0, i.b$)();
-        m_divRef = m.createRef();
         get instance() {
           return this.context.instance;
         }
@@ -20664,21 +20711,24 @@
             footer: u,
             role: d = "menu",
             labelId: p,
-            ...h
+            style: h = {},
+            refScrollable: g,
+            ...f
           } = this.props;
-          const g = this.context.styles ?? v();
-          let f = i ?? "#Button_Cancel";
+          const b = this.context.styles ?? v();
+          let w = i ?? "#Button_Cancel";
           if (1 != this.context.presentation || c)
             return m.createElement(
               "div",
               {
-                ...h,
-                ref: this.m_divRef,
+                ref: g,
+                style: h,
+                ...f,
                 className: (0, _.A)(
                   {
-                    [g.contextMenuContents]: !0,
-                    [g.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [g.ForceDesktop]: c,
+                    [b.contextMenuContents]: !0,
+                    [b.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                    [b.ForceDesktop]: c,
                   },
                   t,
                 ),
@@ -20689,54 +20739,55 @@
             const i = () => {
               n && n(), this.instance.Hide();
             };
-            return m.createElement(
-              s.Z,
-              {
-                ...h,
-                className: (0, _.A)(
-                  g.contextMenuContents,
-                  { [g.hasSubMenu]: this.instance.BIsSubMenuVisible() },
-                  t,
-                ),
-                "flow-children": "column",
-                onMoveLeft: this.HideIfSubmenu,
-                onCancel: this.instance.BIsSubMenu() ? this.HideMenu : i,
-                style: {
-                  overflowY: this.instance.BIsSubMenuVisible()
-                    ? "hidden"
-                    : void 0,
-                },
-                navEntryPreferPosition: a.iU.PREFERRED_CHILD,
-                navRef: this.m_navRef,
-                ref: this.m_divRef,
-                role: d,
-                "aria-labelledby": r ? p : void 0,
-                ...l,
-              },
-              e,
-              r &&
-                m.createElement(
-                  "div",
-                  { id: p, style: { display: "none" } },
-                  r,
-                ),
-              !this.instance.BIsSubMenu() &&
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(T, null),
-                  m.createElement(
-                    R,
-                    { className: g.Cancel, onSelected: i },
-                    (0, C.we)(f),
+            return (
+              (h.overflowY = this.instance.BIsSubMenuVisible()
+                ? "hidden"
+                : void 0),
+              m.createElement(
+                s.Z,
+                {
+                  ...f,
+                  className: (0, _.A)(
+                    b.contextMenuContents,
+                    { [b.hasSubMenu]: this.instance.BIsSubMenuVisible() },
+                    t,
                   ),
-                  u,
-                ),
-              this.instance.BIsSubMenuVisible() &&
-                m.createElement("div", {
-                  className: g.contextMenuFade,
-                  onClick: () => this.instance.HideSubMenu(),
-                }),
+                  "flow-children": "column",
+                  onMoveLeft: this.HideIfSubmenu,
+                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : i,
+                  style: h,
+                  navEntryPreferPosition: a.iU.PREFERRED_CHILD,
+                  navRef: this.m_navRef,
+                  ref: g,
+                  role: d,
+                  "aria-labelledby": r ? p : void 0,
+                  ...l,
+                },
+                e,
+                r &&
+                  m.createElement(
+                    "div",
+                    { id: p, style: { display: "none" } },
+                    r,
+                  ),
+                !this.instance.BIsSubMenu() &&
+                  m.createElement(
+                    m.Fragment,
+                    null,
+                    m.createElement(T, null),
+                    m.createElement(
+                      R,
+                      { className: b.Cancel, onSelected: i },
+                      (0, C.we)(w),
+                    ),
+                    u,
+                  ),
+                this.instance.BIsSubMenuVisible() &&
+                  m.createElement("div", {
+                    className: b.contextMenuFade,
+                    onClick: () => this.instance.HideSubMenu(),
+                  }),
+              )
             );
           }
         }
@@ -21159,9 +21210,6 @@
                 g.menuRight &&
                   (g.menuRight +=
                     s.document.body.clientWidth - s.scrollX - s.innerWidth)),
-            g.menuWidth &&
-              window.matchMedia("(prefers-contrast: more)").matches &&
-              (g.menuWidth += 1),
             (e ||
               g.menuLeft !== this.state.menuLeft ||
               g.menuRight !== this.state.menuRight ||
@@ -21193,12 +21241,12 @@
               e?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
                 this.state.menuTop,
-                r,
+                r ?? !0,
               ),
               void e?.SteamClient.Window.ResizeTo(
                 this.state.menuWidth,
                 this.state.menuHeight,
-                r,
+                r ?? !0,
               )
             );
           }
@@ -21260,7 +21308,9 @@
             (this.props.options.bCreateHidden ||
               (this.props.instance.visible && this.state.ready)) &&
               (t += " visible"),
+            this.props.instance.visible && this.state.ready && (t += " ready"),
             (t += " " + v().ContextMenuPosition),
+            this.props.options.bStandalone && (t += " " + v().Standalone),
             m.createElement(
               "div",
               {
@@ -28864,7 +28914,7 @@
     },
     97348: (e, t, r) => {
       "use strict";
-      r.d(t, { EO: () => E, uH: () => T, oJ: () => I, yk: () => R });
+      r.d(t, { EO: () => R, uH: () => D, oJ: () => T, yk: () => I });
       var n = r(8871),
         i = r(90626),
         s = r(72739),
@@ -28904,8 +28954,9 @@
         g = r(40650),
         _ = r.n(g),
         f = r(84811),
-        b = r(56011);
-      function C(e) {
+        b = r(52038),
+        C = r(56011);
+      function w(e) {
         const { managerOverride: t, bSuppressMouseOverlay: r } = e,
           n = (0, c.CH)(),
           s = (0, l.k5)(),
@@ -28922,14 +28973,14 @@
             i.createElement(
               f.tH,
               { key: e.key },
-              i.createElement(w, { instance: e, browserInfo: s }),
+              i.createElement(M, { instance: e, browserInfo: s }),
             ),
           ),
         );
       }
-      function w(e) {
+      function M(e) {
         const { instance: t, browserInfo: r, children: n } = e,
-          s = R(),
+          s = I(),
           a = (0, l.R7)().ownerWindow,
           o = i.useRef(void 0);
         void 0 === o.current &&
@@ -28945,15 +28996,15 @@
           h.P.Provider,
           { value: c },
           o.current
-            ? i.createElement(S, { instance: t, browserInfo: r, children: u })
-            : i.createElement(M, { instance: t, children: u }),
+            ? i.createElement(v, { instance: t, browserInfo: r, children: u })
+            : i.createElement(S, { instance: t, children: u }),
         );
       }
-      function M(e) {
+      function S(e) {
         const { instance: t, children: r } = e;
         return i.createElement(h.ai, { ...t.position }, r);
       }
-      function S(e) {
+      function v(e) {
         const { instance: t, browserInfo: r, children: n } = e,
           a = i.useRef(null),
           o = (0, l.R7)().ownerWindow,
@@ -28970,7 +29021,7 @@
                   height: 1,
                 };
               else {
-                let t = b.pd(o, i.getBoundingClientRect());
+                let t = C.pd(o, i.getBoundingClientRect());
                 (e.dimensions = {
                   left: t.right,
                   top: t.top,
@@ -28993,8 +29044,16 @@
           "contextmenu_" + t.key,
           {
             title: t.options.title || "Menu",
-            html_class: _().ContextMenuPopup + " client_chat_frame",
-            body_class: "ContextMenuPopupBody",
+            html_class: (0, b.A)(
+              _().ContextMenuPopup,
+              "client_chat_frame",
+              t.options.bStandalone && _().Standalone,
+            ),
+            popup_class: _().PopupTarget,
+            body_class: (0, b.A)(
+              _().ContextMenuPopupBody,
+              "ContextMenuPopupBody",
+            ),
             replace_existing_popup: !1,
             target_browser: r,
             window_opener_id: c,
@@ -29019,7 +29078,7 @@
                     g.window?.SteamClient.Window.HideWindow();
                   }, 30);
           }, [g, t, t.visible]),
-          T(g.window),
+          D(g.window),
           i.useEffect(() => {
             t.SetPopup(g);
           }, [t, g]),
@@ -29035,17 +29094,17 @@
             : null
         );
       }
-      var v = r(81194),
-        y = r(76222);
-      const B = i.createContext({}),
-        E = i.memo(function (e) {
+      var y = r(81194),
+        B = r(76222);
+      const E = i.createContext({}),
+        R = i.memo(function (e) {
           const {
               children: t,
               bRenderOverlayAtRoot: r,
               refModalManager: a,
               DialogWrapper: o,
               bUseDialogElement: l = !0,
-              ContextMenuComponent: c = C,
+              ContextMenuComponent: c = w,
               refContextMenuManager: u,
               browserInfo: d,
               bUsePopups: p,
@@ -29054,12 +29113,12 @@
               bRegisterManagersWithWindow: _ = !0,
               ...b
             } = e,
-            w = i.useRef();
-          w.current || (w.current = new y.SZ());
-          let M = i.createElement(v.L, {
+            C = i.useRef();
+          C.current || (C.current = new B.SZ());
+          let M = i.createElement(y.L, {
             ...b,
             DialogWrapper: o,
-            ModalManager: w.current,
+            ModalManager: C.current,
             bUseDialogElement: l,
             bRegisterModalManager: _,
             rctActiveContextMenus: i.createElement(c, null),
@@ -29068,17 +29127,17 @@
             "undefined" != typeof document &&
             "body" in document &&
             (M = s.createPortal(M, document.body)),
-            (0, n.D5)(a, w.current),
-            void 0 !== p && w.current?.SetUsePopups(p),
-            void 0 !== g && w.current?.SetCenterPopupsOnWindow(g),
-            void 0 !== h && w.current?.SetOnlyPopups(h),
-            w.current.SetBrowserInfo(d);
+            (0, n.D5)(a, C.current),
+            void 0 !== p && C.current?.SetUsePopups(p),
+            void 0 !== g && C.current?.SetCenterPopupsOnWindow(g),
+            void 0 !== h && C.current?.SetOnlyPopups(h),
+            C.current.SetBrowserInfo(d);
           const S = i.useMemo(
-            () => ({ ModalManager: w.current, DialogWrapper: o }),
+            () => ({ ModalManager: C.current, DialogWrapper: o }),
             [o],
           );
           return i.createElement(
-            B.Provider,
+            E.Provider,
             { value: S },
             i.createElement(
               m,
@@ -29088,16 +29147,16 @@
             ),
           );
         });
-      function R() {
-        return i.useContext(B).ModalManager;
-      }
       function I() {
-        return i.useContext(B).DialogWrapper;
+        return i.useContext(E).ModalManager;
       }
-      function T(e) {
-        const t = R();
+      function T() {
+        return i.useContext(E).DialogWrapper;
+      }
+      function D(e) {
+        const t = I();
         i.useEffect(() => {
-          if (e) return y.BR.RegisterModalManager(t, e);
+          if (e) return B.BR.RegisterModalManager(t, e);
         }, [e, t]);
       }
     },

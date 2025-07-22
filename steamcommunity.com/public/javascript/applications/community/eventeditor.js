@@ -14205,7 +14205,7 @@
                   c.createElement(
                     "a",
                     {
-                      href: "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810",
+                      href: "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B",
                       target: G.TS.IN_CLIENT ? void 0 : "_blank",
                     },
                     (0, I.we)("#EventEditor_Options_Show_WarningLink"),

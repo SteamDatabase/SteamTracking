@@ -1598,8 +1598,8 @@ dialog .contextmenu_ContextMenuPosition_2yAm5 {
 @media (prefers-contrast: more) {
   .GreenEnvelopeMenu,
   .contextmenu_contextMenu_PP7LM {
-    background: #000;
-    padding: 0;
+    background: #fff;
+    padding: 1px;
   }
 }
 .web_chat_frame .contextmenu_contextMenu_PP7LM {
@@ -1619,13 +1619,20 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenu_PP7LM {
   display: inline-block;
   padding: 0;
 }
+@media (prefers-contrast: more) {
+  html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenu_PP7LM {
+    padding: 2px;
+    box-sizing: border-box;
+  }
+}
 html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuContents_2EstN {
   padding: 4px;
 }
 @media (prefers-contrast: more) {
   html.contextmenu_ContextMenuPopup_14wqd
     .contextmenu_contextMenuContents_2EstN {
-    padding: 0;
+    padding: 2px;
+    background-color: #000;
   }
 }
 html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
@@ -1638,6 +1645,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   margin: 0;
   overflow: hidden;
 }
+@media (prefers-contrast: more) {
+  html.contextmenu_ContextMenuPopup_14wqd body {
+    background: #fff;
+  }
+}
 .contextmenu_contextMenuContents_2EstN {
   display: flex;
   flex-direction: column;
@@ -1645,11 +1657,6 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   font-size: 14px;
   -webkit-app-region: no-drag;
   box-sizing: border-box;
-}
-@media (prefers-contrast: more) {
-  .contextmenu_contextMenuContents_2EstN {
-    border: 1px solid #fff;
-  }
 }
 .contextmenu_contextMenu_PP7LM:not(.visible) {
   opacity: 0;
@@ -1668,6 +1675,12 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   align-items: center;
   flex-direction: row;
   --color-text-secondary: rgba(211, 213, 217, 0.5);
+}
+@media (prefers-contrast: more) {
+  .contextmenu_contextMenuItem_1n7Wl {
+    background-color: #000;
+    color: #fff;
+  }
 }
 .contextmenu_contextMenuItem_1n7Wl:first-child {
   border-top: 1px solid rgba(80, 87, 94, 0);
@@ -1800,8 +1813,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 @media (prefers-contrast: more) {
   .DesktopUI .contextmenu_contextMenu_PP7LM,
   .contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenu_PP7LM {
-    background: #000;
-    box-sizing: border-box;
+    background: #fff;
   }
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl,
@@ -41997,6 +42009,12 @@ html.web_chat_frame body {
   min-height: 100%;
   margin: 0;
   overflow: hidden;
+}
+@media (prefers-contrast: more) {
+  html.client_chat_frame body.ContextMenuPopupBody:has(.ready),
+  html.web_chat_frame body.ContextMenuPopupBody:has(.ready) {
+    background: #fff;
+  }
 }
 .friendsui-container .SVGIcon_Notification .topFlap,
 .friendsui-container .SVGIcon_Notification .baseEnvelope,

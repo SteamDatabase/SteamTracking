@@ -2488,7 +2488,9 @@
             imageUploader: _,
             fnOnUploadImageRequested: __webpack_require__,
           } = _,
-          [_] = (0, _._)(() => [_.GetUploadImages()]);
+          [_] = (0, _._)(() => [_.GetUploadImages()]),
+          _ = _.some((_) => "pending" == _.status),
+          _ = _.some((_) => "uploading" == _.status);
         return _.createElement(
           "div",
           {
@@ -2505,6 +2507,7 @@
                   margin: "8px",
                 },
                 onClick: __webpack_require__,
+                disabled: !_,
               },
               (0, _._)("#ImageUpload_Upload"),
             ),
@@ -2516,6 +2519,7 @@
                   margin: "8px",
                 },
                 onClick: _.ClearImages,
+                disabled: _,
               },
               (0, _._)("#ImageUpload_Clear"),
             ),

@@ -19,6 +19,10 @@ span.motd {
 	color: #ca5029;
 }
 
+#landing_sales_graph {
+	min-height: 288px;
+}
+
 #pageContainer {
 	position: relative;
 	min-height: calc( 100vh - 388px );

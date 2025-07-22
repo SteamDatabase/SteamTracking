@@ -4,6 +4,16 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9433],
   {
+    89925: (e) => {
+      e.exports = {
+        AssetEditorContainer: "_4-JJjL9KGe2duRZ5rEz3U",
+        AssetUploadSection: "_1VEMIFHP70MbNWbb4u8tg1",
+        AssetTypesCtn: "_20JMdaklg0nftyTQuo9sIj",
+        AssetEntryCtn: "_3WKFF37v6B8RkdWSwoMKm8",
+        AssetPreview: "vbwNI7DB9YCpONKEKNJdz",
+        PlaceholderAsset: "_1dBf1uIxpYFOh3qoJO5pbm",
+      };
+    },
     19976: (e) => {
       e.exports = {
         DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
@@ -110,46 +120,41 @@
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
       };
     },
-    12916: (e) => {
+    64641: (e) => {
       e.exports = {
-        EventTimeSection: "_3HyTVTASSmLacvaM964sgu",
-        EventTimeTitle: "_2lG5hFYhu9PGPn6RoFeQOL",
-        EventVisibilityItem: "_1she-lvNiCP3ASjTnl4q7x",
-        EventEditorInputPaneContainer: "_1fCy4cz5Hyj9wDivcVseuc",
-        TimeWidth: "_3JGsBe8Ou5QGqfihv0OPed",
-        EventPublishTimeCtn: "_2QIVvn2p9gUwsAlifi-nkM",
-        DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
-        PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
-        TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
-        InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
-        TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
-        TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
-        TimeRowDropDown: "_3ECiyuGLUqPzuS1hKCdfDm",
-        EndDateAmountCtn: "_1BIlZEGSO_4tw5Lmc1Kkbf",
-        EndRound: "jwuNowbLB28M6nkqFkF_C",
-        VisibilityItemList: "_3B0QM3cOEqER2AD2Y85NFy",
-        VisibilityItems: "_1WleIEEiF-9nJ57tLWkRmS",
-        EventEditorVisibilityCtn: "_4gWwydbAbp2t1NCeW9LLV",
-        DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
+        v6: "_2LxgdMcpWJRjkxZKbmeEEb",
+        SubText: "vg0EOhKTLB3tLvshHMr7l",
+        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+        Small: "_3M4j828iWSVEZZAkypcBi1",
+        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
-    82829: (e, t, n) => {
+    82829: (e, t, a) => {
       "use strict";
-      n.d(t, { y5: () => f, c2: () => h });
-      var a = n(56545),
-        i = n(59411),
-        r = n(15161),
-        s = n(58632),
-        l = n.n(s),
-        o = n(90626),
-        c = n(20194),
-        d = n(62792),
-        m = n(7860),
-        u = n(81393),
-        p = n(96059),
-        _ = n(30470),
-        E = n(24484);
-      class g {
+      a.d(t, { y5: () => y, c2: () => h });
+      var n = a(56545),
+        i = a(59411),
+        r = a(15161),
+        s = a(58632),
+        o = a.n(s),
+        l = a(90626),
+        c = a(20194),
+        m = a(62792),
+        d = a(7860),
+        p = a(81393),
+        u = a(96059),
+        _ = a(30470),
+        g = a(24484);
+      class E {
         m_steamInterface;
         GetPromotionTransport() {
           return this.m_steamInterface;
@@ -157,579 +162,579 @@
         static s_Singleton;
         static Get() {
           return (
-            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
-            g.s_Singleton
+            E.s_Singleton || ((E.s_Singleton = new E()), E.s_Singleton.Init()),
+            E.s_Singleton
           );
         }
         Init() {
-          const e = (0, E.Tc)(
+          const e = (0, g.Tc)(
             "partnerbrowse_webapi_token",
             "application_config",
           );
-          (0, u.wT)(Boolean(e), "require partnerbrowse_webapi_token"),
-            (this.m_steamInterface = new p.D(_.TS.WEBAPI_BASE_URL, e));
+          (0, p.wT)(Boolean(e), "require partnerbrowse_webapi_token"),
+            (this.m_steamInterface = new u.D(_.TS.WEBAPI_BASE_URL, e));
         }
       }
       function h(e) {
-        const t = g.Get().GetPromotionTransport().GetServiceTransport(),
-          n = o.useContext(S);
-        return (0, c.I)(y(n, t, e));
+        const t = E.Get().GetPromotionTransport().GetServiceTransport(),
+          a = l.useContext(f);
+        return (0, c.I)(S(a, t, e));
       }
-      function f(e) {
-        return m.L.getQueryData(["StoreItemCountryRestriction", (0, d.wD)(e)]);
+      function y(e) {
+        return d.L.getQueryData(["StoreItemCountryRestriction", (0, m.wD)(e)]);
       }
-      const S = o.createContext({
+      const f = l.createContext({
         loadStoreItemCountryRestriction: async (e, t) =>
           await (function (e) {
-            A ||
-              (A = new (l())(
+            C ||
+              (C = new (o())(
                 async (t) => {
-                  const n = a.w.Init(i.zo);
-                  n.Body().set_ids(t.map((e) => r.O4.fromObject(e)));
-                  const s = await i.BT.GetCountryRestrictions(e, n);
+                  const a = n.w.Init(i.zo);
+                  a.Body().set_ids(t.map((e) => r.O4.fromObject(e)));
+                  const s = await i.BT.GetCountryRestrictions(e, a);
                   if (!s.BSuccess())
                     throw `Failed to call store Item Country Restriction with details: ${s.GetErrorMessage()}`;
-                  const l = new Map();
+                  const o = new Map();
                   return (
                     s
                       .Body()
                       .results()
                       .forEach((e) => {
                         const t = e.toObject();
-                        l.set((0, d.wD)(t.id), t);
+                        o.set((0, m.wD)(t.id), t);
                       }),
-                    t.map((e) => l.get((0, d.wD)(e)) ?? null)
+                    t.map((e) => o.get((0, m.wD)(e)) ?? null)
                   );
                 },
                 { maxBatchSize: 100, cache: !1 },
               ));
-            return A;
+            return C;
           })(t).load(e),
       });
-      function y(e, t, n) {
+      function S(e, t, a) {
         return {
-          queryKey: ["StoreItemCountryRestriction", (0, d.wD)(n)],
-          queryFn: () => e.loadStoreItemCountryRestriction(n, t),
-          enabled: !!n,
+          queryKey: ["StoreItemCountryRestriction", (0, m.wD)(a)],
+          queryFn: () => e.loadStoreItemCountryRestriction(a, t),
+          enabled: !!a,
         };
       }
-      let A;
+      let C;
     },
-    82399: (e, t, n) => {
+    97472: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Pe });
-      var a = n(90626),
-        i = n(64046),
-        r = n(88997);
+      a.r(t), a.d(t, { default: () => ct });
+      var n = a(90626),
+        i = a(64046),
+        r = a(88997);
       function s(e) {
         const { rgGameProfileColorDefs: t } = e,
-          n = t.map((e) =>
-            a.createElement(
+          a = t.map((e) =>
+            n.createElement(
               "div",
               { key: e.strProfileColorKey, className: "form_row_flex" },
-              a.createElement(
+              n.createElement(
                 "div",
                 { className: "form_label_flex" },
                 "*",
                 e.strProfileColorLabel,
               ),
-              a.createElement(
+              n.createElement(
                 "div",
                 { className: "form_data_flex" },
                 (function (e) {
-                  let [t, n] = a.useState(e.strCurrentColor);
-                  const s = a.useRef(void 0),
-                    l = (e) => {
+                  let [t, a] = n.useState(e.strCurrentColor);
+                  const s = n.useRef(void 0),
+                    o = (e) => {
                       const s = (e) => {
-                        n(e);
+                        a(e);
                       };
                       (0, r.lX)(
-                        a.createElement(i.s, { onChange: s, color: t }),
+                        n.createElement(i.s, { onChange: s, color: t }),
                         e,
                         { bDisablePopTop: !0 },
                       );
                     },
-                    o = () => {
-                      n(s.current.value);
+                    l = () => {
+                      a(s.current.value);
                     };
-                  return a.createElement(
-                    a.Fragment,
+                  return n.createElement(
+                    n.Fragment,
                     null,
-                    a.createElement("input", {
+                    n.createElement("input", {
                       ref: s,
                       type: "text",
                       name: `item[profile_colors][${e.strProfileColorKey}]`,
-                      onChange: o,
+                      onChange: l,
                       placeholder: "rgba(255, 255, 255, .5)",
                       size: 20,
                       value: t,
                     }),
-                    a.createElement("div", {
+                    n.createElement("div", {
                       className: "profile_color_preview",
                       style: { backgroundColor: `${t}` },
-                      onClick: l,
+                      onClick: o,
                     }),
                   );
                 })(e),
               ),
             ),
           );
-        return a.createElement("div", { className: "profile_colors_ctn" }, n);
+        return n.createElement("div", { className: "profile_colors_ctn" }, a);
       }
-      var l = n(92757),
-        o = n(6813),
-        c = n(78327),
-        d = n(94794),
-        m = n(61859),
-        u = n(16676),
-        p = n(75487),
-        _ = n(56545),
-        E = n(22797),
-        g = n(52038),
-        h = n(23809),
-        f = n(6144),
-        S = n(9154),
-        y = n(14771),
-        A = n(55263),
-        D = n(82829),
-        T = n(62490);
-      const C = 7,
+      var o = a(92757),
+        l = a(6813),
+        c = a(78327),
+        m = a(94794),
+        d = a(61859),
+        p = a(16676),
+        u = a(75487),
+        _ = a(56545),
+        g = a(22797),
+        E = a(52038),
+        h = a(23809),
+        y = a(6144),
+        f = a(9154),
+        S = a(14771),
+        C = a(55263),
+        D = a(82829),
+        v = a(62490);
+      const I = 7,
         w = 7;
-      function v(e) {
-        const { demoAppID: t, parentAppId: n } = e,
-          [i, r] = a.useState(!1),
-          [s, l] = a.useState(void 0),
-          [o, u] = a.useState(void 0),
-          [E, g] = a.useState(0),
-          S = a.useCallback(() => g((e) => e + 1), []),
-          A = (0, h.KV)();
-        a.useEffect(() => {
+      function A(e) {
+        const { demoAppID: t, parentAppId: a } = e,
+          [i, r] = n.useState(!1),
+          [s, o] = n.useState(void 0),
+          [l, p] = n.useState(void 0),
+          [g, E] = n.useState(0),
+          f = n.useCallback(() => E((e) => e + 1), []),
+          C = (0, h.KV)();
+        n.useEffect(() => {
           const e = new AbortController();
           return (
             (async () => {
-              r(!1), l(void 0);
-              const a = _.w.Init(p.J6);
-              a.Body().set_demo_appid(t), a.Body().set_appid(n);
-              const i = await p.nd.GetWishlistDemoEmailStatus(A, a);
+              r(!1), o(void 0);
+              const n = _.w.Init(u.J6);
+              n.Body().set_demo_appid(t), n.Body().set_appid(a);
+              const i = await u.nd.GetWishlistDemoEmailStatus(C, n);
               e.signal.aborted ||
                 (i.BSuccess() &&
-                  (r(i.Body().can_fire()), l(i.Body().time_staged())));
+                  (r(i.Body().can_fire()), o(i.Body().time_staged())));
             })(),
             () => e.abort()
           );
-        }, [A, t, n, E]),
-          a.useEffect(() => {
+        }, [C, t, a, g]),
+          n.useEffect(() => {
             let e = window.AppLandingRefreshCallbacks;
-            e || ((e = new f.lu()), (window.AppLandingRefreshCallbacks = e));
-            const t = e.Register(S);
+            e || ((e = new y.lu()), (window.AppLandingRefreshCallbacks = e));
+            const t = e.Register(f);
             return () => t.Unregister();
-          }, [S]);
-        const D = i || void 0 !== o,
-          T = s + C * y.Kp.PerDay,
-          w = !i && s && new Date(1e3 * T) > new Date();
+          }, [f]);
+        const D = i || void 0 !== l,
+          v = s + I * S.Kp.PerDay,
+          w = !i && s && new Date(1e3 * v) > new Date();
         if (D || w) {
           const e = `${c.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
-          return a.createElement(
+          return n.createElement(
             "div",
-            { className: d.DemoWishlistCtn },
-            a.createElement(
+            { className: m.DemoWishlistCtn },
+            n.createElement(
               "div",
-              { className: d.Header },
-              a.createElement(
+              { className: m.Header },
+              n.createElement(
                 "h2",
                 null,
-                (0, m.we)("#App_Landing_DemoWishlist_Title"),
+                (0, d.we)("#App_Landing_DemoWishlist_Title"),
               ),
-              a.createElement(
+              n.createElement(
                 "a",
-                { className: d.DocumentationLink, href: e },
-                (0, m.we)("#App_Landing_DemoWishlist_Link"),
+                { className: m.DocumentationLink, href: e },
+                (0, d.we)("#App_Landing_DemoWishlist_Link"),
               ),
             ),
             D &&
-              a.createElement(b, {
+              n.createElement(T, {
                 demoAppID: t,
-                parentAppId: n,
-                bSendEmailsSucceeded: o,
-                setSendEmailsSucceeded: u,
+                parentAppId: a,
+                bSendEmailsSucceeded: l,
+                setSendEmailsSucceeded: p,
               }),
-            D && w && a.createElement("hr", { className: d.BothSeparator }),
+            D && w && n.createElement("hr", { className: m.BothSeparator }),
             w &&
-              a.createElement(N, {
-                parentAppId: n,
+              n.createElement(b, {
+                parentAppId: a,
                 timeStaged: s,
-                noticeVisibleToDate: T,
+                noticeVisibleToDate: v,
               }),
           );
         }
       }
-      function b(e) {
+      function T(e) {
         const {
             demoAppID: t,
-            parentAppId: n,
+            parentAppId: a,
             bSendEmailsSucceeded: i,
             setSendEmailsSucceeded: r,
           } = e,
-          [s, l] = a.useState(!1),
-          [o, c] = a.useState(!1),
-          f = (0, h.KV)(),
-          C = a.useCallback(async () => {
-            c(!1), l(!0);
+          [s, o] = n.useState(!1),
+          [l, c] = n.useState(!1),
+          y = (0, h.KV)(),
+          I = n.useCallback(async () => {
+            c(!1), o(!0);
             try {
-              const e = _.w.Init(p.KP);
-              e.Body().set_demo_appid(t), e.Body().set_appid(n);
-              const a = await p.nd.QueueWishlistDemoEmailToFire(f, e);
-              r(a.BSuccess());
+              const e = _.w.Init(u.KP);
+              e.Body().set_demo_appid(t), e.Body().set_appid(a);
+              const n = await u.nd.QueueWishlistDemoEmailToFire(y, e);
+              r(n.BSuccess());
             } finally {
-              l(!1);
+              o(!1);
             }
-          }, [t, n, f, r]),
-          { bLoading: w, rgWarnings: v } = (function (e, t) {
-            const n = (0, D.c2)({ appid: e }),
+          }, [t, a, y, r]),
+          { bLoading: w, rgWarnings: A } = (function (e, t) {
+            const a = (0, D.c2)({ appid: e }),
               i = (0, D.c2)({ appid: t }),
-              [r] = (0, A.t7)(e, { include_release: !0 }),
-              s = n.isLoading || i.isLoading,
-              l = n.isSuccess && i.isSuccess,
-              [o, c, d, u] = a.useMemo(() => {
-                if (!l) return [];
+              [r] = (0, C.t7)(e, { include_release: !0 }),
+              s = a.isLoading || i.isLoading,
+              o = a.isSuccess && i.isSuccess,
+              [l, c, m, p] = n.useMemo(() => {
+                if (!o) return [];
                 const e = (e) =>
-                  T.lf(
+                  v.lf(
                     e?.map((e) => e.toUpperCase()),
                     !0,
                   );
                 return [
-                  e(n.data.allowed_countries),
-                  e(n.data.restricted_countries)?.filter((e) => "XC" != e),
+                  e(a.data.allowed_countries),
+                  e(a.data.restricted_countries)?.filter((e) => "XC" != e),
                   e(i.data.allowed_countries),
                   e(i.data.restricted_countries)?.filter((e) => "XC" != e),
                 ];
-              }, [l, i, n]);
+              }, [o, i, a]);
             if (s) return { bLoading: !0, rgWarnings: [] };
-            if (!l)
+            if (!o)
               return {
                 bLoading: !1,
                 rgWarnings: [
                   {
-                    sText: (0, m.we)(
+                    sText: (0, d.we)(
                       "#App_Landing_DemoWishlist_CountryLoad_Failed",
                     ),
                     bCritical: !0,
                   },
                 ],
               };
-            const p = [],
+            const u = [],
               _ = r && r.GetReleaseDateRTime(!0);
             _ &&
               _ > new Date().getTime() / 1e3 &&
-              _ < new Date().getTime() / 1e3 + 14 * y.Kp.PerDay &&
-              p.push({
-                sText: (0, m.we)(
+              _ < new Date().getTime() / 1e3 + 14 * S.Kp.PerDay &&
+              u.push({
+                sText: (0, d.we)(
                   "#App_Landing_DemoWishlist_ParentAppWarning",
                   r.GetFormattedSteamReleaseDate(),
                 ),
               });
-            const E = (e, t) =>
+            const g = (e, t) =>
                 0 == e.length && 0 == t.length
                   ? "unrestricted"
                   : e.length > 0
                     ? "allow"
                     : "deny",
-              g = E(o, c),
-              h = E(d, u),
-              f = (e, t) =>
+              E = g(l, c),
+              h = g(m, p),
+              y = (e, t) =>
                 0 == e.length && 0 == t.length
-                  ? (0, m.we)(
+                  ? (0, d.we)(
                       "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Unrestricted",
                     )
                   : e.length > 0
-                    ? (0, m.we)(
+                    ? (0, d.we)(
                         "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Allow",
                         e.join(", "),
                       )
-                    : (0, m.we)(
+                    : (0, d.we)(
                         "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Deny",
                         t.join(", "),
                       ),
-              S = f(o, c),
-              C = f(d, u);
-            "unrestricted" != g &&
+              f = y(l, c),
+              I = y(m, p);
+            "unrestricted" != E &&
             "unrestricted" != h &&
-            o.length > 0 != d.length > 0
-              ? p.push({
-                  sText: (0, m.we)(
+            l.length > 0 != m.length > 0
+              ? u.push({
+                  sText: (0, d.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictionTypes_Mismatch",
-                    S,
-                    C,
+                    f,
+                    I,
                   ),
                   bCritical: !0,
                 })
-              : S != C &&
-                p.push({
-                  sText: (0, m.we)(
+              : f != I &&
+                u.push({
+                  sText: (0, d.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch",
-                    S,
-                    C,
+                    f,
+                    I,
                   ),
                 });
-            return { bLoading: !1, rgWarnings: p };
-          })(n, t),
-          b = v.every((e) => !e.bCritical);
-        return a.createElement(
-          a.Fragment,
+            return { bLoading: !1, rgWarnings: u };
+          })(a, t),
+          T = A.every((e) => !e.bCritical);
+        return n.createElement(
+          n.Fragment,
           null,
-          a.createElement(
+          n.createElement(
             "div",
-            { className: d.SubTitle },
-            (0, m.we)("#App_Landing_DemoWishlist_SubTitle"),
+            { className: m.SubTitle },
+            (0, d.we)("#App_Landing_DemoWishlist_SubTitle"),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: d.Description },
-            a.createElement(
+            { className: m.Description },
+            n.createElement(
               "p",
               null,
-              (0, m.we)("#App_Landing_DemoWishlist_Desc"),
+              (0, d.we)("#App_Landing_DemoWishlist_Desc"),
             ),
           ),
           w
-            ? a.createElement(E.t, null)
-            : a.createElement(
-                a.Fragment,
+            ? n.createElement(g.t, null)
+            : n.createElement(
+                n.Fragment,
                 null,
-                v.map((e) =>
-                  a.createElement(
+                A.map((e) =>
+                  n.createElement(
                     "div",
                     {
                       key: e.sText,
-                      className: (0, g.A)(d.Warning, e.bCritical && d.Critical),
+                      className: (0, E.A)(m.Warning, e.bCritical && m.Critical),
                     },
-                    a.createElement("p", null, e.sText),
+                    n.createElement("p", null, e.sText),
                   ),
                 ),
                 void 0 === i &&
-                  a.createElement(
-                    a.Fragment,
+                  n.createElement(
+                    n.Fragment,
                     null,
-                    a.createElement(
+                    n.createElement(
                       "div",
-                      { className: d.ButtonRow },
-                      a.createElement(
-                        u.$n,
+                      { className: m.ButtonRow },
+                      n.createElement(
+                        p.$n,
                         {
-                          className: (0, g.A)(
+                          className: (0, E.A)(
                             "btn_green_steamui btn_border_2px btn_medium",
-                            d.ButtonDemoWishlistEmails,
+                            m.ButtonDemoWishlistEmails,
                           ),
-                          disabled: s || !b,
+                          disabled: s || !T,
                           onClick: () => c(!0),
                         },
-                        a.createElement(
+                        n.createElement(
                           "span",
                           null,
-                          (0, m.we)(
+                          (0, d.we)(
                             "#App_Landing_DemoWishlist_SendEmailsButton",
                           ),
                         ),
                       ),
                       s &&
-                        a.createElement(E.t, {
-                          className: d.InProgressThrobber,
+                        n.createElement(g.t, {
+                          className: m.InProgressThrobber,
                           size: "small",
                         }),
                     ),
                   ),
                 void 0 !== i &&
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: d.ButtonRow },
+                    { className: m.ButtonRow },
                     i &&
-                      a.createElement(
+                      n.createElement(
                         "div",
-                        { className: d.DemoWishlistSendSucceeded },
-                        (0, m.we)(
+                        { className: m.DemoWishlistSendSucceeded },
+                        (0, d.we)(
                           "#App_Landing_DemoWishlist_SendEmails_Succeeded",
                         ),
                       ),
                     !i &&
-                      a.createElement(
+                      n.createElement(
                         "div",
-                        { className: d.DemoWishlistSendFailed },
-                        (0, m.we)(
+                        { className: m.DemoWishlistSendFailed },
+                        (0, d.we)(
                           "#App_Landing_DemoWishlist_SendEmails_Failed",
                         ),
                       ),
                   ),
               ),
-          o &&
-            a.createElement(
-              S.mt,
-              { active: !0, className: d.ControllerWizardModal },
-              a.createElement(
+          l &&
+            n.createElement(
+              f.mt,
+              { active: !0, className: m.ControllerWizardModal },
+              n.createElement(
                 "h1",
                 null,
-                (0, m.we)("#App_Landing_DemoWishlist_Dialog_Header"),
+                (0, d.we)("#App_Landing_DemoWishlist_Dialog_Header"),
               ),
-              a.createElement(
-                u.nB,
-                { className: d.WizardBody },
-                a.createElement(
+              n.createElement(
+                p.nB,
+                { className: m.WizardBody },
+                n.createElement(
                   "div",
                   null,
-                  (0, m.we)("#App_Landing_DemoWishlist_Dialog_Desc"),
+                  (0, d.we)("#App_Landing_DemoWishlist_Dialog_Desc"),
                 ),
-                a.createElement(
+                n.createElement(
                   "h2",
                   null,
-                  (0, m.we)("#App_Landing_DemoWishlist_Dialog_ListTitle"),
+                  (0, d.we)("#App_Landing_DemoWishlist_Dialog_ListTitle"),
                 ),
-                a.createElement(
+                n.createElement(
                   "ul",
                   null,
-                  (0, m.oW)(
+                  (0, d.oW)(
                     "#App_Landing_DemoWishlist_Dialog_List",
-                    a.createElement("li", null),
-                    a.createElement("b", null),
+                    n.createElement("li", null),
+                    n.createElement("b", null),
                   ),
                 ),
               ),
-              a.createElement(u.CB, {
-                onOK: C,
-                strOKText: (0, m.we)(
+              n.createElement(p.CB, {
+                onOK: I,
+                strOKText: (0, d.we)(
                   "#App_Landing_DemoWishlist_Dialog_Confirm",
                 ),
                 onCancel: () => c(!1),
-                strCancelText: (0, m.we)(
+                strCancelText: (0, d.we)(
                   "#App_Landing_DemoWishlist_Dialog_Cancel",
                 ),
               }),
             ),
         );
       }
-      function N(e) {
-        const { parentAppId: t, timeStaged: n, noticeVisibleToDate: i } = e,
+      function b(e) {
+        const { parentAppId: t, timeStaged: a, noticeVisibleToDate: i } = e,
           r = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
-          s = r(new Date(1e3 * (n - w * y.Kp.PerDay))),
-          l = r(new Date()),
-          o = new Intl.DateTimeFormat(navigator.language, {
+          s = r(new Date(1e3 * (a - w * S.Kp.PerDay))),
+          o = r(new Date()),
+          l = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
             day: "numeric",
-          }).format(1e3 * n),
-          u = new Intl.DateTimeFormat(navigator.language, {
+          }).format(1e3 * a),
+          p = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
             day: "numeric",
           }).format(1e3 * i),
-          p = `${c.TS.STATS_BASE_URL}app/wishlist/${t}/?dateStart=${s}&dateEnd=${l}`;
-        return a.createElement(
+          u = `${c.TS.STATS_BASE_URL}app/wishlist/${t}/?dateStart=${s}&dateEnd=${o}`;
+        return n.createElement(
           "div",
-          { className: d.Description },
-          a.createElement(
+          { className: m.Description },
+          n.createElement(
             "p",
             null,
-            (0, m.we)("#App_Landing_DemoWishlist_SentRecently_Desc", o),
+            (0, d.we)("#App_Landing_DemoWishlist_SentRecently_Desc", l),
           ),
-          a.createElement(
+          n.createElement(
             "p",
             null,
-            a.createElement(
+            n.createElement(
               "a",
-              { href: p },
-              (0, m.we)("#App_Landing_DemoWishlist_SentRecently_ViewStats"),
+              { href: u },
+              (0, d.we)("#App_Landing_DemoWishlist_SentRecently_ViewStats"),
             ),
           ),
-          a.createElement(
+          n.createElement(
             "p",
-            { className: d.Notice },
-            (0, m.we)("#App_Landing_DemoWishlist_SentRecently_Notice", u),
+            { className: m.Notice },
+            (0, d.we)("#App_Landing_DemoWishlist_SentRecently_Notice", p),
           ),
         );
       }
-      var I = n(75493),
-        k = n(41735),
-        P = n.n(k),
-        x = n(20194),
-        R = n(30470);
-      var B = n(69235),
-        L = n(56555),
-        W = n(49953),
-        M = n(55241),
-        F = n(85010),
-        G = n(62059),
-        O = n(36058),
-        U = n(84811),
-        V = n(32754),
-        H = n(27429),
-        j = n(19976);
-      function z(e) {
-        const { nPartnerID: t, nAppID: n } = e;
-        return R.iA.is_support
-          ? a.createElement(q, { nPartnerID: t, nAppID: n })
+      var N = a(75493),
+        P = a(41735),
+        k = a.n(P),
+        R = a(20194),
+        x = a(30470);
+      var B = a(69235),
+        L = a(56555),
+        M = a(49953),
+        F = a(55241),
+        U = a(85010),
+        G = a(62059),
+        O = a(36058),
+        W = a(84811),
+        H = a(32754),
+        $ = a(27429),
+        V = a(19976);
+      function K(e) {
+        const { nPartnerID: t, nAppID: a } = e;
+        return x.iA.is_support
+          ? n.createElement(q, { nPartnerID: t, nAppID: a })
           : null;
       }
       function q(e) {
-        const { nPartnerID: t, nAppID: n } = e,
-          [i, r] = (0, a.useState)(90),
-          s = (function (e, t, n) {
-            const { isLoading: a, data: i } = (0, x.I)({
-              queryKey: ["usePartnerFinancialDailySummary", e, t, n],
+        const { nPartnerID: t, nAppID: a } = e,
+          [i, r] = (0, n.useState)(90),
+          s = (function (e, t, a) {
+            const { isLoading: n, data: i } = (0, R.I)({
+              queryKey: ["usePartnerFinancialDailySummary", e, t, a],
               queryFn: async () => {
-                const a = { partnerid: e, pastdays: t, appid: n },
-                  i = `${R.TS.PARTNER_BASE_URL}financial/ajaxgetpartnersummary`,
-                  r = await P().get(i, { params: a, withCredentials: !0 });
+                const n = { partnerid: e, pastdays: t, appid: a },
+                  i = `${x.TS.PARTNER_BASE_URL}financial/ajaxgetpartnersummary`,
+                  r = await k().get(i, { params: n, withCredentials: !0 });
                 return 1 != r?.data?.success
                   ? { daily_sales: [], summary_sales: {} }
                   : r.data.data;
               },
               enabled: !!e && t >= 1,
             });
-            return a ? null : i;
-          })(t, i, n);
+            return n ? null : i;
+          })(t, i, a);
         return s && 0 != s.daily_sales?.length
-          ? a.createElement(
+          ? n.createElement(
               "div",
-              { className: (0, g.A)(j.AppDashboard, "valveOutline padded") },
-              a.createElement("p", { className: "valveh2" }, "Valve Only:"),
-              a.createElement(Y, { nDaysInThePast: i, fnUpdateDaysInPast: r }),
-              a.createElement(Q, { stats: s }),
-              a.createElement(K, { stats: s }),
+              { className: (0, E.A)(V.AppDashboard, "valveOutline padded") },
+              n.createElement("p", { className: "valveh2" }, "Valve Only:"),
+              n.createElement(z, { nDaysInThePast: i, fnUpdateDaysInPast: r }),
+              n.createElement(Z, { stats: s }),
+              n.createElement(J, { stats: s }),
             )
           : null;
       }
-      const Z = [
-        { label: (0, m.we)("#PartnerStats_DayWeek"), data: 7 },
-        { label: (0, m.we)("#PartnerStats_DayMonth"), data: 30 },
-        { label: (0, m.we)("#PartnerStats_DayPeriod"), data: 90 },
+      const j = [
+        { label: (0, d.we)("#PartnerStats_DayWeek"), data: 7 },
+        { label: (0, d.we)("#PartnerStats_DayMonth"), data: 30 },
+        { label: (0, d.we)("#PartnerStats_DayPeriod"), data: 90 },
       ];
-      function Y(e) {
-        const { nDaysInThePast: t, fnUpdateDaysInPast: n } = e;
-        return a.createElement(
+      function z(e) {
+        const { nDaysInThePast: t, fnUpdateDaysInPast: a } = e;
+        return n.createElement(
           "div",
-          { className: j.ModuleCtn },
-          a.createElement(
+          { className: V.ModuleCtn },
+          n.createElement(
             "div",
-            { className: j.LeftAlign },
-            a.createElement(
+            { className: V.LeftAlign },
+            n.createElement(
               "div",
-              { className: j.ModuleTitle },
-              (0, m.we)("#PartnerStats_DayLabel"),
+              { className: V.ModuleTitle },
+              (0, d.we)("#PartnerStats_DayLabel"),
             ),
-            a.createElement(u.m, {
+            n.createElement(p.m, {
               layout: "inline",
               label: null,
-              rgOptions: Z,
+              rgOptions: j,
               selectedOption: t,
-              onChange: (e) => n(e.data),
+              onChange: (e) => a(e.data),
             }),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: j.ViewDetailLink },
-            a.createElement(
+            { className: V.ViewDetailLink },
+            n.createElement(
               "a",
               { href: "#" },
-              (0, m.we)("#PartnerStats_ViewDetail"),
+              (0, d.we)("#PartnerStats_ViewDetail"),
             ),
           ),
         );
@@ -740,22 +745,22 @@
         maximumFractionDigits: 0,
         minimumFractionDigits: 0,
       });
-      function Q(e) {
+      function Z(e) {
         const { stats: t } = e;
-        return a.createElement(
+        return n.createElement(
           "div",
-          { className: j.HeaderCtn },
-          a.createElement(
+          { className: V.HeaderCtn },
+          n.createElement(
             "div",
-            { className: j.StatGroup },
-            a.createElement(
+            { className: V.StatGroup },
+            n.createElement(
               "div",
-              { className: j.Header },
-              (0, m.we)("#PartnerStats_Header_Revenue"),
+              { className: V.Header },
+              (0, d.we)("#PartnerStats_Header_Revenue"),
             ),
-            a.createElement(
+            n.createElement(
               "div",
-              { className: j.Numerals },
+              { className: V.Numerals },
               (function (...e) {
                 let t = 0;
                 return (
@@ -767,17 +772,17 @@
               })(t.summary_sales.total_gross_sales_usdx100),
             ),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: j.StatGroup },
-            a.createElement(
+            { className: V.StatGroup },
+            n.createElement(
               "div",
-              { className: j.Header },
-              (0, m.we)("#PartnerStats_Header_Units"),
+              { className: V.Header },
+              (0, d.we)("#PartnerStats_Header_Units"),
             ),
-            a.createElement(
+            n.createElement(
               "div",
-              { className: j.Numerals },
+              { className: V.Numerals },
               Number.parseInt(
                 t.summary_sales.steam_gross_units_sold || "0",
               ).toLocaleString(),
@@ -785,123 +790,123 @@
           ),
         );
       }
-      function K(e) {
+      function J(e) {
         const { stats: t } = e,
-          n = "total_gross_sales_usdx100",
-          [i, r, s] = (0, a.useMemo)(() => {
+          a = "total_gross_sales_usdx100",
+          [i, r, s] = (0, n.useMemo)(() => {
             if (!t || 0 == t.daily_sales?.length) return [0, 0, []];
             const e = (function (e, t) {
-              const n = new Map();
+              const a = new Map();
               return (
                 e.forEach((e) => {
-                  const a = e.rtime_date,
+                  const n = e.rtime_date,
                     i = Number.parseInt(e.daily_summary_sales[t]);
                   i &&
-                    n.set(a, {
+                    a.set(n, {
                       partner_stats_value: t.includes("usd") ? i / 1e4 : i,
-                      rtime: a,
+                      rtime: n,
                       top_app_sales: e.top_app_sales,
                     });
                 }),
-                Array.from(n.values())
+                Array.from(a.values())
               );
-            })(t.daily_sales, n);
-            let a = 0,
+            })(t.daily_sales, a);
+            let n = 0,
               i = 0;
             return (
               e.forEach((e) => {
-                e.partner_stats_value > a && (a = e.partner_stats_value),
+                e.partner_stats_value > n && (n = e.partner_stats_value),
                   (i += e.partner_stats_value);
               }),
-              [a, i, e.sort((e, t) => e.rtime - t.rtime)]
+              [n, i, e.sort((e, t) => e.rtime - t.rtime)]
             );
-          }, [t, n]);
+          }, [t, a]);
         return t && 0 != s.length
-          ? a.createElement(
+          ? n.createElement(
               "div",
-              { className: j.DashStatsContainer },
-              a.createElement(
+              { className: V.DashStatsContainer },
+              n.createElement(
                 "div",
-                { className: j.Chart },
-                a.createElement(
-                  U.tH,
+                { className: V.Chart },
+                n.createElement(
+                  W.tH,
                   null,
-                  a.createElement($, { Data: s, nPeak: i }),
+                  n.createElement(Q, { Data: s, nPeak: i }),
                 ),
               ),
             )
           : null;
       }
-      const $ = a.memo((e) => {
-        const { Data: t, nPeak: n } = e,
-          i = (0, a.useCallback)(
-            (e, n) =>
+      const Q = n.memo((e) => {
+        const { Data: t, nPeak: a } = e,
+          i = (0, n.useCallback)(
+            (e, a) =>
               t.length > 20
-                ? t[n]?.partner_stats_value && n % 7 == 0
-                  ? new Date(1e3 * t[n].rtime).toLocaleDateString(
-                      m.pf.GetPreferredLocales(),
+                ? t[a]?.partner_stats_value && a % 7 == 0
+                  ? new Date(1e3 * t[a].rtime).toLocaleDateString(
+                      d.pf.GetPreferredLocales(),
                       { month: "short", day: "numeric" },
                     )
                   : ""
-                : t[n]?.partner_stats_value
-                  ? new Date(1e3 * t[n].rtime).toLocaleDateString(
-                      m.pf.GetPreferredLocales(),
+                : t[a]?.partner_stats_value
+                  ? new Date(1e3 * t[a].rtime).toLocaleDateString(
+                      d.pf.GetPreferredLocales(),
                       { month: "short", day: "numeric" },
                     )
                   : "",
             [t],
           );
-        return a.createElement(
+        return n.createElement(
           B.u,
           { width: "100%", height: "100%" },
-          a.createElement(
+          n.createElement(
             L.X,
             {
               data: t,
               margin: { top: 25, left: 0, right: 0, bottom: 0 },
               barGap: 10,
             },
-            a.createElement(
+            n.createElement(
               "defs",
               null,
-              a.createElement(
+              n.createElement(
                 "linearGradient",
                 { id: "bar_linear", x1: "0", x2: "0", y1: "0", y2: "1" },
-                a.createElement("stop", { stopColor: "#1A9FFF" }),
-                a.createElement("stop", {
+                n.createElement("stop", { stopColor: "#1A9FFF" }),
+                n.createElement("stop", {
                   offset: "1",
                   stopColor: "#1A9FFF",
                   stopOpacity: "1",
                 }),
               ),
             ),
-            a.createElement(W.d, { vertical: !1, stroke: "#a0aab6" }),
-            a.createElement(M.h, {
-              tickFormatter: H.Z2,
+            n.createElement(M.d, { vertical: !1, stroke: "#a0aab6" }),
+            n.createElement(F.h, {
+              tickFormatter: $.Z2,
               tick: { fill: "white" },
               axisLine: !1,
               orientation: "right",
             }),
-            a.createElement(F.m, { content: a.createElement(ee, null) }),
-            a.createElement(G.y, {
+            n.createElement(U.m, { content: n.createElement(ee, null) }),
+            n.createElement(G.y, {
               dataKey: "partner_stats_value",
               fill: "url( #bar_linear )",
             }),
-            a.createElement(O.W, {
+            n.createElement(O.W, {
               interval: 0,
-              tick: a.createElement(J, null),
+              tick: n.createElement(Y, null),
               tickFormatter: i,
             }),
           ),
         );
       });
-      function J(e) {
-        const { x: t, y: n, payload: i } = e,
+      function Y(e) {
+        const { x: t, y: a, payload: i } = e,
           r = e.tickFormatter(i.value, i.index);
-        return a.createElement(
+        return n.createElement(
           "g",
-          { transform: `translate(${t},${n})` },
-          a.createElement(
+          { transform: `translate(${t},${a})` },
+          n.createElement(
             "text",
             {
               x: 0,
@@ -919,37 +924,37 @@
       function ee({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload,
-            n = e.partner_stats_value;
-          let i = n;
+            a = e.partner_stats_value;
+          let i = a;
           return (
             e.top_app_sales.forEach((e) => {
               i -=
                 Number.parseInt(e.app_summary_sales.total_gross_sales_usdx100) /
                 1e4;
             }),
-            a.createElement(
-              V.t1,
-              { className: j.TooltipPartnerSummary },
-              a.createElement(
+            n.createElement(
+              H.t1,
+              { className: V.TooltipPartnerSummary },
+              n.createElement(
                 "div",
                 null,
-                (0, m.we)("#PartnerStats_Tooltip_Date", (0, m.TW)(e.rtime)),
+                (0, d.we)("#PartnerStats_Tooltip_Date", (0, d.TW)(e.rtime)),
               ),
-              a.createElement(
+              n.createElement(
                 "div",
-                { className: j.LineItemsCtn },
-                a.createElement(
+                { className: V.LineItemsCtn },
+                n.createElement(
                   "div",
-                  { className: j.ToolTipTable },
+                  { className: V.ToolTipTable },
                   e.top_app_sales.map((e) => {
                     const t =
                       (Number.parseInt(
                         e.app_summary_sales.total_gross_sales_usdx100,
                       ) /
                         1e4 /
-                        n) *
+                        a) *
                       100;
-                    return a.createElement(te, {
+                    return n.createElement(te, {
                       key: "app" + e.appid,
                       appid: e.appid,
                       usdRevenue:
@@ -960,40 +965,40 @@
                     });
                   }),
                   Boolean(i > 2) &&
-                    a.createElement(
+                    n.createElement(
                       "div",
-                      { className: j.ToolTipTableRow },
-                      a.createElement(
+                      { className: V.ToolTipTableRow },
+                      n.createElement(
                         "div",
-                        { className: j.ToolTipTableCell },
-                        (0, m.we)("#PartnerStats_Tooltip_Remaining"),
+                        { className: V.ToolTipTableCell },
+                        (0, d.we)("#PartnerStats_Tooltip_Remaining"),
                       ),
-                      a.createElement(
+                      n.createElement(
                         "div",
-                        { className: j.ToolTipTableCell },
-                        (0, H.Z2)(i),
+                        { className: V.ToolTipTableCell },
+                        (0, $.Z2)(i),
                       ),
-                      a.createElement(
+                      n.createElement(
                         "div",
-                        { className: j.ToolTipTableCell },
-                        Math.round((i / n) * 100),
+                        { className: V.ToolTipTableCell },
+                        Math.round((i / a) * 100),
                         "%",
                       ),
                     ),
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: (0, g.A)(j.ToolTipTableRow, j.TotalRow) },
-                    a.createElement(
+                    { className: (0, E.A)(V.ToolTipTableRow, V.TotalRow) },
+                    n.createElement(
                       "div",
-                      { className: j.ToolTipTableCell },
-                      (0, m.we)("#PartnerStats_Tooltip_Total"),
+                      { className: V.ToolTipTableCell },
+                      (0, d.we)("#PartnerStats_Tooltip_Total"),
                     ),
-                    a.createElement(
+                    n.createElement(
                       "div",
-                      { className: j.ToolTipTableCell },
-                      (0, H.Z2)(n),
+                      { className: V.ToolTipTableCell },
+                      (0, $.Z2)(a),
                     ),
-                    a.createElement("div", { className: j.ToolTipTableCell }),
+                    n.createElement("div", { className: V.ToolTipTableCell }),
                   ),
                 ),
               ),
@@ -1003,49 +1008,49 @@
         return null;
       }
       function te(e) {
-        const { appid: t, usdRevenue: n, nPercentage: i } = e,
-          [r] = (0, A.t7)(t, {});
-        return a.createElement(
+        const { appid: t, usdRevenue: a, nPercentage: i } = e,
+          [r] = (0, C.t7)(t, {});
+        return n.createElement(
           "div",
-          { className: j.ToolTipTableRow },
-          a.createElement(
+          { className: V.ToolTipTableRow },
+          n.createElement(
             "div",
-            { className: j.ToolTipTableCell },
+            { className: V.ToolTipTableCell },
             r?.GetName() || t,
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: j.ToolTipTableCell },
-            (0, H.Z2)(n),
+            { className: V.ToolTipTableCell },
+            (0, $.Z2)(a),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: j.ToolTipTableCell },
+            { className: V.ToolTipTableCell },
             Math.round(i),
             "%",
           ),
         );
       }
-      function ne(e) {
-        const { nAppId: t, nParentAppId: n, strAppType: i } = e,
-          r = (0, I.V)(),
+      function ae(e) {
+        const { nAppId: t, nParentAppId: a, strAppType: i } = e,
+          r = (0, N.V)(),
           s = "Game" == i || "Application" == i || "DLC" == i || "Music" == i,
-          l = "Demo" == i;
-        return a.createElement(
-          a.Fragment,
+          o = "Demo" == i;
+        return n.createElement(
+          n.Fragment,
           null,
-          s && a.createElement(z, { nPartnerID: r, nAppID: t }),
-          l && a.createElement(v, { demoAppID: t, parentAppId: n }),
+          s && n.createElement(K, { nPartnerID: r, nAppID: t }),
+          o && n.createElement(A, { demoAppID: t, parentAppId: a }),
         );
       }
-      var ae = n(93542),
-        ie = n(21869),
-        re = n(10411),
-        se = n(51614),
-        le = n(12155);
-      const oe = 748,
+      var ne = a(93542),
+        ie = a(21869),
+        re = a(10411),
+        se = a(51614),
+        oe = a(12155);
+      const le = 748,
         ce = 896;
-      class de {
+      class me {
         rgSet = new Set();
         constructor(e) {
           for (const t of e) this.rgSet.add(JSON.stringify(t));
@@ -1069,195 +1074,195 @@
           for (const e of this.rgSet) yield JSON.parse(e);
         }
       }
-      function me(e) {
-        const [t, n] = (0, a.useState)("closed"),
+      function de(e) {
+        const [t, a] = (0, n.useState)("closed"),
           i = e.rgEditions,
-          [r, s] = (0, a.useState)(new de(i)),
-          l = new Map();
+          [r, s] = (0, n.useState)(new me(i)),
+          o = new Map();
         for (const t of Object.keys(e.rgEditionsComparisonGraphics))
-          l.set(t, e.rgEditionsComparisonGraphics[t]);
-        const [o, d] = (0, a.useState)(() => {
+          o.set(t, e.rgEditionsComparisonGraphics[t]);
+        const [l, m] = (0, n.useState)(() => {
             const t = new Map();
-            for (const n of Object.keys(e.rgEditionsAltText))
-              t.set(n, e.rgEditionsAltText[n]);
+            for (const a of Object.keys(e.rgEditionsAltText))
+              t.set(a, e.rgEditionsAltText[a]);
             return t;
           }),
-          [u, p] = (0, a.useState)(l),
+          [p, u] = (0, n.useState)(o),
           _ = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-          g = (function (e, t) {
+          E = (function (e, t) {
             return (0, se.n)({
-              mutationFn: async (n) => {
+              mutationFn: async (a) => {
                 const {
-                    rgEditionsToSave: a,
+                    rgEditionsToSave: n,
                     rgGraphicsToDelete: i,
                     mapGraphicsToUpload: r,
                     mapAltText: s,
-                  } = n,
-                  l = new FormData();
-                l.append("sessionid", c.TS.SESSIONID);
-                const o = Math.max(t.length, a.length);
-                for (let e = 0; e < o; e++)
-                  e >= a.length
-                    ? (l.append(
+                  } = a,
+                  o = new FormData();
+                o.append("sessionid", c.TS.SESSIONID);
+                const l = Math.max(t.length, n.length);
+                for (let e = 0; e < l; e++)
+                  e >= n.length
+                    ? (o.append(
                         `app[related_items][editions][${e}][packageid]`,
                         "",
                       ),
-                      l.append(
+                      o.append(
                         `app[related_items][editions][${e}][bundleid]`,
                         "",
                       ))
-                    : a[e].packageid
-                      ? (l.append(
+                    : n[e].packageid
+                      ? (o.append(
                           `app[related_items][editions][${e}][packageid]`,
-                          "" + a[e].packageid,
+                          "" + n[e].packageid,
                         ),
-                        l.append(
+                        o.append(
                           `app[related_items][editions][${e}][bundleid]`,
                           "",
                         ))
-                      : a[e].bundleid
-                        ? (l.append(
+                      : n[e].bundleid
+                        ? (o.append(
                             `app[related_items][editions][${e}][packageid]`,
                             "",
                           ),
-                          l.append(
+                          o.append(
                             `app[related_items][editions][${e}][bundleid]`,
-                            "" + a[e].bundleid,
+                            "" + n[e].bundleid,
                           ))
                         : console.log(
                             "Tried to save an edition with neither packageid or bundleid.",
                           );
                 r.forEach((e, t) => {
-                  l.append(
+                  o.append(
                     `edition_comparison|edition_comparision|assets|edition_comparison|image|${t}`,
                     e,
                   );
                 });
                 for (const e of i)
-                  l.append(`app[assets][edition_comparison][image][${e}]`, "");
+                  o.append(`app[assets][edition_comparison][image][${e}]`, "");
                 s.forEach((e, t) => {
-                  l.append(
+                  o.append(
                     `app[assets][edition_comparison][image_alt_text][${t}]`,
                     e,
                   );
                 });
-                const d = `${c.TS.PARTNER_BASE_URL}admin/game/quickupdateajax/${e}`;
-                return P().post(d, l);
+                const m = `${c.TS.PARTNER_BASE_URL}admin/game/quickupdateajax/${e}`;
+                return k().post(m, o);
               },
             });
           })(e.nItemId, i),
           h = new Map();
         for (const t of e.rgCandidates) h.set(t.nId, t);
-        let f = null;
+        let y = null;
         if (
           r.size > 0 &&
           -1 !== e.nBasePackageId &&
           !r.has({ packageid: e.nBasePackageId })
         ) {
           const t = e.rgCandidates.find((t) => t.nId === e.nBasePackageId);
-          f = (0, m.we)(
+          y = (0, d.we)(
             "#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError",
             t?.strName,
             e.nBasePackageId,
           );
         }
-        const S = a.useId();
-        return a.createElement(
-          a.Fragment,
+        const f = n.useId();
+        return n.createElement(
+          n.Fragment,
           null,
-          a.createElement(
+          n.createElement(
             ie.E,
             { active: "editor" === t || "alert" === t },
-            a.createElement(
+            n.createElement(
               re.eV,
-              { "aria-labelledby": S, closeModal: () => n("closed") },
+              { "aria-labelledby": f, closeModal: () => a("closed") },
               "editor" === t &&
-                a.createElement(
-                  a.Fragment,
+                n.createElement(
+                  n.Fragment,
                   null,
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: ae.EditionsEditorContents },
-                    a.createElement(
+                    { className: ne.EditionsEditorContents },
+                    n.createElement(
                       "h2",
-                      { id: S },
-                      (0, m.we)("#StoreAdmin_EditEditions_DialogTitle"),
+                      { id: f },
+                      (0, d.we)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
-                    g.isPending && a.createElement(E.t, null),
-                    !g.isPending &&
-                      a.createElement(
-                        a.Fragment,
+                    E.isPending && n.createElement(g.t, null),
+                    !E.isPending &&
+                      n.createElement(
+                        n.Fragment,
                         null,
-                        null !== f &&
-                          a.createElement(
+                        null !== y &&
+                          n.createElement(
                             "div",
-                            { className: ae.ErrorBox },
-                            a.createElement(le.X, null),
-                            a.createElement("div", null, f),
+                            { className: ne.ErrorBox },
+                            n.createElement(oe.X, null),
+                            n.createElement("div", null, y),
                           ),
-                        a.createElement(pe, {
+                        n.createElement(ue, {
                           rgEditions: r,
                           rgCandidates: e.rgCandidates,
                           setEditions: s,
                         }),
-                        a.createElement("div", {
-                          className: ae.EditionPickerHr,
+                        n.createElement("div", {
+                          className: ne.EditionPickerHr,
                         }),
-                        a.createElement(_e, {
-                          mapOriginalImages: l,
-                          mapImages: u,
-                          setImages: p,
-                          mapAltText: o,
-                          setAltText: d,
+                        n.createElement(_e, {
+                          mapOriginalImages: o,
+                          mapImages: p,
+                          setImages: u,
+                          mapAltText: l,
+                          setAltText: m,
                           bAppHasSteamChinaToolsEnabled:
                             e.bAppHasSteamChinaToolsEnabled,
                         }),
                       ),
                   ),
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: ae.EditionsEditorDialogButtons },
-                    a.createElement(
+                    { className: ne.EditionsEditorDialogButtons },
+                    n.createElement(
                       "button",
                       {
                         className: "btn_green_white_innerfade",
-                        disabled: null !== f,
+                        disabled: null !== y,
                         onClick: async () => {
                           const e = new Map();
-                          u.forEach((t, n) => {
-                            t instanceof File && e.set(n, t);
+                          p.forEach((t, a) => {
+                            t instanceof File && e.set(a, t);
                           });
                           const t = [];
-                          l.forEach((e, n) => {
-                            u.has(n) || t.push(n);
+                          o.forEach((e, a) => {
+                            p.has(a) || t.push(a);
                           }),
-                            g.mutate({
+                            E.mutate({
                               rgEditionsToSave: Array.from(r),
                               mapGraphicsToUpload: e,
-                              mapAltText: o,
+                              mapAltText: l,
                               rgGraphicsToDelete: t,
                             }),
-                            n("alert");
+                            a("alert");
                         },
                       },
-                      (0, m.we)("#StoreAdmin_EditEditions_SaveButton"),
+                      (0, d.we)("#StoreAdmin_EditEditions_SaveButton"),
                     ),
-                    a.createElement(
+                    n.createElement(
                       "button",
                       {
                         onClick: () => {
-                          s(new de(i)), n("closed");
+                          s(new me(i)), a("closed");
                         },
                       },
-                      (0, m.we)("#StoreAdmin_EditEditions_CancelButton"),
+                      (0, d.we)("#StoreAdmin_EditEditions_CancelButton"),
                     ),
                   ),
-                  a.createElement(
+                  n.createElement(
                     "p",
-                    { className: ae.NeedToPublishNotification },
-                    (0, m.oW)(
+                    { className: ne.NeedToPublishNotification },
+                    (0, d.oW)(
                       "#StoreAdmin_EditEditions_NeedToPublishNotice",
-                      a.createElement("a", {
+                      n.createElement("a", {
                         target: "_blank",
                         href: `${c.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
                       }),
@@ -1265,57 +1270,57 @@
                   ),
                 ),
               "alert" === t &&
-                a.createElement(
-                  a.Fragment,
+                n.createElement(
+                  n.Fragment,
                   null,
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: ae.EditionEditorContents },
-                    a.createElement(
+                    { className: ne.EditionEditorContents },
+                    n.createElement(
                       "h2",
                       null,
-                      (0, m.we)("#StoreAdmin_EditEditions_SavingTitle"),
+                      (0, d.we)("#StoreAdmin_EditEditions_SavingTitle"),
                     ),
-                    a.createElement(
+                    n.createElement(
                       "div",
-                      { className: ae.EditionsEditorSaveStatus },
-                      g.isPending &&
-                        a.createElement(
-                          a.Fragment,
+                      { className: ne.EditionsEditorSaveStatus },
+                      E.isPending &&
+                        n.createElement(
+                          n.Fragment,
                           null,
-                          a.createElement(E.t, null),
+                          n.createElement(g.t, null),
                           " ",
-                          (0, m.we)("#StoreAdmin_EditEditions_Saving"),
+                          (0, d.we)("#StoreAdmin_EditEditions_Saving"),
                         ),
-                      !g.isPending &&
-                        a.createElement(
+                      !E.isPending &&
+                        n.createElement(
                           "span",
                           null,
-                          (0, m.we)("#StoreAdmin_EditEditions_Saved"),
+                          (0, d.we)("#StoreAdmin_EditEditions_Saved"),
                         ),
                     ),
-                    a.createElement(
+                    n.createElement(
                       "span",
-                      { className: ae.PublishReminder },
-                      (0, m.oW)(
+                      { className: ne.PublishReminder },
+                      (0, d.oW)(
                         "#StoreAdmin_EditEditions_NeedToPublishAlert",
-                        a.createElement("a", {
+                        n.createElement("a", {
                           target: "_blank",
                           href: `${c.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
                         }),
                       ),
                     ),
-                    a.createElement(
+                    n.createElement(
                       "div",
-                      { className: ae.EditionsEditorDialogButtons },
-                      a.createElement(
+                      { className: ne.EditionsEditorDialogButtons },
+                      n.createElement(
                         "button",
                         {
                           onClick: () => {
-                            n("refreshing"), window.location.reload();
+                            a("refreshing"), window.location.reload();
                           },
                         },
-                        (0, m.we)("#StoreAdmin_EditEditions_OK"),
+                        (0, d.we)("#StoreAdmin_EditEditions_OK"),
                       ),
                     ),
                   ),
@@ -1323,46 +1328,46 @@
             ),
           ),
           e.rgCandidates.length > 1 &&
-            a.createElement(
-              a.Fragment,
+            n.createElement(
+              n.Fragment,
               null,
-              a.createElement(
+              n.createElement(
                 "div",
-                { className: ae.EditionsEditorRow },
+                { className: ne.EditionsEditorRow },
                 "closed" === t &&
-                  a.createElement(
-                    a.Fragment,
+                  n.createElement(
+                    n.Fragment,
                     null,
-                    a.createElement(
+                    n.createElement(
                       "button",
                       {
-                        className: ae.OpenEditorButton,
-                        onClick: () => n("editor"),
+                        className: ne.OpenEditorButton,
+                        onClick: () => a("editor"),
                       },
-                      (0, m.we)(
+                      (0, d.we)(
                         "#StoreAdmin_EditEditions_ManageEditionsButton",
                       ),
                     ),
                     r?.size > 0
-                      ? a.createElement(
+                      ? n.createElement(
                           "span",
                           null,
-                          (0, m.we)(
+                          (0, d.we)(
                             "#StoreAdmin_EditEditions_ManageEditionsDescription",
                             r.size,
                           ),
                         )
-                      : a.createElement(
+                      : n.createElement(
                           "span",
                           null,
-                          (0, m.we)(
+                          (0, d.we)(
                             "#StoreAdmin_EditEditions_GroupEditionsDescription",
                           ),
                         ),
-                    a.createElement(
+                    n.createElement(
                       "span",
                       null,
-                      (0, m.we)(
+                      (0, d.we)(
                         _
                           ? "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic"
                           : "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
@@ -1370,128 +1375,128 @@
                     ),
                   ),
                 "refreshing" === t &&
-                  a.createElement(
-                    a.Fragment,
+                  n.createElement(
+                    n.Fragment,
                     null,
-                    a.createElement(E.t, { size: "small" }),
+                    n.createElement(g.t, { size: "small" }),
                   ),
               ),
             ),
         );
       }
-      const ue = (e) =>
+      const pe = (e) =>
         "bundle" === e.eType ? { bundleid: e.nId } : { packageid: e.nId };
-      function pe(e) {
-        const { rgEditions: t, rgCandidates: n, setEditions: i } = e,
+      function ue(e) {
+        const { rgEditions: t, rgCandidates: a, setEditions: i } = e,
           r = new Map();
         for (const t of e.rgCandidates) r.set(t.nId, t);
-        const [s, l] = (0, a.useState)(""),
-          o = n.filter(
+        const [s, o] = (0, n.useState)(""),
+          l = a.filter(
             (e) => -1 !== e.strName.toLowerCase().indexOf(s.toLowerCase()),
           );
-        return a.createElement(
+        return n.createElement(
           "div",
-          { className: ae.EditionPicker },
-          a.createElement(
+          { className: ne.EditionPicker },
+          n.createElement(
             "p",
             null,
-            (0, m.we)("#StoreAdmin_EditEditions_SelectEditionsDescription"),
+            (0, d.we)("#StoreAdmin_EditEditions_SelectEditionsDescription"),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: ae.EditionPickerFilterBox },
-            a.createElement("input", {
+            { className: ne.EditionPickerFilterBox },
+            n.createElement("input", {
               type: "text",
-              placeholder: (0, m.we)(
+              placeholder: (0, d.we)(
                 "#StoreAdmin_EditEditions_FilterDescription",
               ),
               value: s,
               onChange: (e) => {
                 const t = e.target.value;
-                l(t);
+                o(t);
               },
             }),
           ),
-          a.createElement(
+          n.createElement(
             "table",
             null,
-            a.createElement(
+            n.createElement(
               "thead",
               null,
-              a.createElement(
+              n.createElement(
                 "tr",
                 null,
-                a.createElement(
+                n.createElement(
                   "td",
                   null,
-                  (0, m.we)("#StoreAdmin_EditEditions_ColumnEdition"),
+                  (0, d.we)("#StoreAdmin_EditEditions_ColumnEdition"),
                 ),
-                a.createElement(
+                n.createElement(
                   "td",
                   null,
-                  (0, m.we)("#StoreAdmin_EditEditions_ColumnPackageTitle"),
+                  (0, d.we)("#StoreAdmin_EditEditions_ColumnPackageTitle"),
                 ),
-                a.createElement(
+                n.createElement(
                   "td",
                   null,
-                  (0, m.we)("#StoreAdmin_EditEditions_ColumnState"),
+                  (0, d.we)("#StoreAdmin_EditEditions_ColumnState"),
                 ),
-                a.createElement(
+                n.createElement(
                   "td",
                   null,
-                  (0, m.we)("#StoreAdmin_EditEditions_ColumnPrice"),
+                  (0, d.we)("#StoreAdmin_EditEditions_ColumnPrice"),
                 ),
               ),
             ),
-            a.createElement(
+            n.createElement(
               "tbody",
               null,
-              o.map((e) => {
-                const n = t.has(ue(e));
-                let r = ae.HiddenColor;
+              l.map((e) => {
+                const a = t.has(pe(e));
+                let r = ne.HiddenColor;
                 return (
                   "Released" === e.strReleaseState
-                    ? (r = ae.ReleasedColor)
+                    ? (r = ne.ReleasedColor)
                     : "Prepurchase" === e.strReleaseState
-                      ? (r = ae.PrepurchaseColor)
-                      : "Beta" === e.strReleaseState && (r = ae.BetaColor),
-                  a.createElement(
+                      ? (r = ne.PrepurchaseColor)
+                      : "Beta" === e.strReleaseState && (r = ne.BetaColor),
+                  n.createElement(
                     "tr",
-                    { key: e.nId, className: (0, g.A)(r, ae.EditionPickerRow) },
-                    a.createElement(
+                    { key: e.nId, className: (0, E.A)(r, ne.EditionPickerRow) },
+                    n.createElement(
                       "td",
                       null,
-                      a.createElement("input", {
+                      n.createElement("input", {
                         type: "checkbox",
                         onChange:
                           ((s = e.eType),
-                          (l = e.nId),
+                          (o = e.nId),
                           (e) => {
-                            const n = new de(t);
+                            const a = new me(t);
                             e.target.checked
-                              ? n.add(
+                              ? a.add(
                                   "package" === s
-                                    ? { packageid: l }
-                                    : { bundleid: l },
+                                    ? { packageid: o }
+                                    : { bundleid: o },
                                 )
-                              : n.delete(
+                              : a.delete(
                                   "package" === s
-                                    ? { packageid: l }
-                                    : { bundleid: l },
+                                    ? { packageid: o }
+                                    : { bundleid: o },
                                 ),
-                              i(n);
+                              i(a);
                           }),
-                        checked: n,
+                        checked: a,
                       }),
                     ),
-                    a.createElement("td", null, e.strName),
-                    a.createElement("td", null, e.strLocalizedReleaseState),
-                    a.createElement("td", {
+                    n.createElement("td", null, e.strName),
+                    n.createElement("td", null, e.strLocalizedReleaseState),
+                    n.createElement("td", {
                       dangerouslySetInnerHTML: { __html: e.strPricing },
                     }),
                   )
                 );
-                var s, l;
+                var s, o;
               }),
             ),
           ),
@@ -1500,78 +1505,78 @@
       function _e(e) {
         const {
             mapOriginalImages: t,
-            mapImages: n,
+            mapImages: a,
             setImages: i,
             mapAltText: r,
             setAltText: s,
-            bAppHasSteamChinaToolsEnabled: l,
+            bAppHasSteamChinaToolsEnabled: o,
           } = e,
-          [o, c] = (0, a.useState)(null),
-          d = (0, m.O9)(e.bAppHasSteamChinaToolsEnabled),
-          [u, p] = (0, a.useState)("english"),
-          _ = (0, a.useRef)(null);
-        let E = null,
-          g = "missing";
-        if (n.has(u)) {
-          const e = n.get(u);
+          [l, c] = (0, n.useState)(null),
+          m = (0, d.O9)(e.bAppHasSteamChinaToolsEnabled),
+          [p, u] = (0, n.useState)("english"),
+          _ = (0, n.useRef)(null);
+        let g = null,
+          E = "missing";
+        if (a.has(p)) {
+          const e = a.get(p);
           e instanceof File
-            ? ((E = URL.createObjectURL(e)), (g = "uploaded"))
-            : ((E = e), (g = "exists"));
+            ? ((g = URL.createObjectURL(e)), (E = "uploaded"))
+            : ((g = e), (E = "exists"));
         }
         const h = (e) =>
-          n.has(e) && n.get(e) instanceof File
-            ? ae.UploadedImageOption
-            : n.has(e)
-              ? ae.ExistsImageOption
-              : ae.MissingImageOption;
-        return a.createElement(
+          a.has(e) && a.get(e) instanceof File
+            ? ne.UploadedImageOption
+            : a.has(e)
+              ? ne.ExistsImageOption
+              : ne.MissingImageOption;
+        return n.createElement(
           "div",
-          { className: ae.LocalizedImageSelector },
-          a.createElement(
+          { className: ne.LocalizedImageSelector },
+          n.createElement(
             "p",
             null,
-            (0, m.we)(
+            (0, d.we)(
               "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-              oe,
+              le,
               ce,
             ),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: ae.Header },
-            a.createElement("input", {
+            { className: ne.Header },
+            n.createElement("input", {
               type: "file",
               ref: _,
               onChange: async (e) => {
                 if (e.target.files && e.target.files[0]) {
                   const t = e.target.files[0],
-                    a = await createImageBitmap(t);
-                  if (a.width !== oe || a.height !== ce)
+                    n = await createImageBitmap(t);
+                  if (n.width !== le || n.height !== ce)
                     return void c(
-                      (0, m.we)(
+                      (0, d.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        oe,
+                        le,
                         ce,
-                        a.width,
-                        a.height,
+                        n.width,
+                        n.height,
                       ),
                     );
-                  const r = new Map(n);
-                  r.set(u, t), i(r), c(null);
+                  const r = new Map(a);
+                  r.set(p, t), i(r), c(null);
                 }
               },
               style: { display: "none" },
             }),
-            a.createElement(
+            n.createElement(
               "select",
               {
                 onChange: (e) => {
-                  p(e.target.value), c(null);
+                  u(e.target.value), c(null);
                 },
-                className: h(u),
+                className: h(p),
               },
-              (0, m.vR)(d, (e, t) =>
-                a.createElement(
+              (0, d.vR)(m, (e, t) =>
+                n.createElement(
                   "option",
                   { key: t, value: t, className: h(t) },
                   e,
@@ -1579,16 +1584,16 @@
               ),
             ),
           ),
-          a.createElement(
+          n.createElement(
             "p",
-            { className: ae.ErrorBox },
-            null !== o &&
-              a.createElement(a.Fragment, null, a.createElement(le.X, null), o),
+            { className: ne.ErrorBox },
+            null !== l &&
+              n.createElement(n.Fragment, null, n.createElement(oe.X, null), l),
           ),
-          a.createElement(
+          n.createElement(
             "div",
             {
-              className: ae.ImageDropPane,
+              className: ne.ImageDropPane,
               onClick: () => _.current?.click(),
               onDragOver: (e) => e.preventDefault(),
               onDrop: async (e) => {
@@ -1597,81 +1602,81 @@
                   e.dataTransfer.files && e.dataTransfer.files[0])
                 ) {
                   const t = e.dataTransfer.files[0],
-                    a = await createImageBitmap(t);
-                  if (a.width !== oe || a.height !== ce)
+                    n = await createImageBitmap(t);
+                  if (n.width !== le || n.height !== ce)
                     return void c(
-                      (0, m.we)(
+                      (0, d.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        oe,
+                        le,
                         ce,
-                        a.width,
-                        a.height,
+                        n.width,
+                        n.height,
                       ),
                     );
-                  const r = new Map(n);
-                  r.set(u, t), i(r), c(null);
+                  const r = new Map(a);
+                  r.set(p, t), i(r), c(null);
                 }
               },
             },
-            E
-              ? a.createElement(
-                  a.Fragment,
+            g
+              ? n.createElement(
+                  n.Fragment,
                   null,
-                  a.createElement(
+                  n.createElement(
                     "div",
-                    { className: ae.DragAndDropDescriptionWithImage },
-                    (0, m.we)("#StoreAdmin_EditEditions_DragAndDropToReplace"),
+                    { className: ne.DragAndDropDescriptionWithImage },
+                    (0, d.we)("#StoreAdmin_EditEditions_DragAndDropToReplace"),
                   ),
-                  a.createElement("img", { src: E }),
-                  a.createElement(
+                  n.createElement("img", { src: g }),
+                  n.createElement(
                     "div",
-                    { className: ae.DeleteLink },
-                    a.createElement(
+                    { className: ne.DeleteLink },
+                    n.createElement(
                       "a",
                       {
                         onClick: () => {
-                          if (n.has(u)) {
-                            const e = new Map(n);
-                            e.delete(u), i(e), c(null);
+                          if (a.has(p)) {
+                            const e = new Map(a);
+                            e.delete(p), i(e), c(null);
                           }
                         },
                       },
-                      (0, m.we)("#StoreAdmin_EditEditions_Delete"),
+                      (0, d.we)("#StoreAdmin_EditEditions_Delete"),
                     ),
                   ),
                 )
-              : a.createElement(
+              : n.createElement(
                   "div",
-                  { className: ae.DragAndDropDescriptionWithoutImage },
-                  (0, m.we)("#StoreAdmin_EditEditions_DragAndDropHere"),
+                  { className: ne.DragAndDropDescriptionWithoutImage },
+                  (0, d.we)("#StoreAdmin_EditEditions_DragAndDropHere"),
                 ),
           ),
-          a.createElement(
+          n.createElement(
             "label",
             { htmlFor: "altTextArea" },
-            a.createElement(
+            n.createElement(
               "p",
               null,
-              (0, m.we)("#StoreAdmin_EditEditions_AltTextDescription"),
+              (0, d.we)("#StoreAdmin_EditEditions_AltTextDescription"),
             ),
           ),
-          a.createElement("textarea", {
+          n.createElement("textarea", {
             id: "altTextArea",
-            className: ae.AltTextArea,
+            className: ne.AltTextArea,
             onChange: (e) => {
               const t = new Map(r);
-              t.set(u, e.target.value), s(t);
+              t.set(p, e.target.value), s(t);
             },
-            value: r.get(u) ?? "",
+            value: r.get(p) ?? "",
           }),
         );
       }
-      var Ee = n(85325),
-        ge = n(45699);
+      var ge = a(85325),
+        Ee = a(45699);
       function he(e) {
-        const { rgAssetProperties: t, appid: n } = e,
-          [i, r] = (0, a.useState)(""),
-          [s, l] = (0, a.useState)(
+        const { rgAssetProperties: t, appid: a } = e,
+          [i, r] = (0, n.useState)(""),
+          [s, o] = (0, n.useState)(
             (function (e) {
               return e
                 ? e.map((e) => ({
@@ -1684,87 +1689,87 @@
                 : [];
             })(t),
           );
-        return a.createElement(
+        return n.createElement(
           "div",
           null,
-          a.createElement(
+          n.createElement(
             "div",
             null,
             s.map((e, t) =>
-              a.createElement(fe, {
+              n.createElement(ye, {
                 schema: e,
                 index: t,
                 onUpdateID: (e) => {
                   ((e, t) => {
-                    const n = s.map((n, a) => (a === e ? { ...n, id: t } : n));
-                    l(n);
+                    const a = s.map((a, n) => (n === e ? { ...a, id: t } : a));
+                    o(a);
                   })(t, e);
                 },
                 onUpdateName: (e) => {
                   ((e, t) => {
-                    const n = s.map((n, a) =>
-                      a === e ? { ...n, name: t } : n,
+                    const a = s.map((a, n) =>
+                      n === e ? { ...a, name: t } : a,
                     );
-                    l(n);
+                    o(a);
                   })(t, e);
                 },
                 onUpdateType: (e) => {
                   ((e, t) => {
-                    const n = s.map((n, a) =>
-                      a === e ? { ...n, type: t } : n,
+                    const a = s.map((a, n) =>
+                      n === e ? { ...a, type: t } : a,
                     );
-                    l(n);
+                    o(a);
                   })(t, e);
                 },
                 onUpdateRangeMin: (e) => {
                   ((e, t) => {
-                    const n = s.map((n, a) => (a === e ? { ...n, min: t } : n));
-                    l(n);
+                    const a = s.map((a, n) => (n === e ? { ...a, min: t } : a));
+                    o(a);
                   })(t, e);
                 },
                 onUpdateRangeMax: (e) => {
                   ((e, t) => {
-                    const n = s.map((n, a) => (a === e ? { ...n, max: t } : n));
-                    l(n);
+                    const a = s.map((a, n) => (n === e ? { ...a, max: t } : a));
+                    o(a);
                   })(t, e);
                 },
                 onRemove: (e) =>
                   ((e) => {
                     const t = s.slice();
-                    t.splice(e, 1), l(t);
+                    t.splice(e, 1), o(t);
                   })(e),
                 key: t,
               }),
             ),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: Ee.AddPropertyButton },
-            a.createElement(
-              u.$n,
+            { className: ge.AddPropertyButton },
+            n.createElement(
+              p.$n,
               {
                 onClick: () => {
                   const e = s.slice();
                   e.push({ id: 0, name: "", type: 0, min: null, max: null }),
-                    l(e);
+                    o(e);
                 },
               },
               "Add Property",
             ),
           ),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: Ee.SaveButton },
-            a.createElement(
-              u.$n,
+            { className: ge.SaveButton },
+            n.createElement(
+              p.$n,
               {
                 onClick: async () => {
                   r("");
                   const e = new FormData();
-                  e.append("sessionid", R.TS.SESSIONID),
+                  e.append("sessionid", x.TS.SESSIONID),
                     e.append("asset_properties", JSON.stringify(s));
                   const t = await fetch(
-                    `${R.TS.PARTNER_BASE_URL}apps/setassetpropertyschema/${n}`,
+                    `${x.TS.PARTNER_BASE_URL}apps/setassetpropertyschema/${a}`,
                     { method: "POST", body: e, credentials: "same-origin" },
                   );
                   if (!t || !t.ok) return void r("Failed to save properties");
@@ -1776,26 +1781,26 @@
               "Save",
             ),
           ),
-          a.createElement("div", { className: Ee.StatusMessage }, i),
+          n.createElement("div", { className: ge.StatusMessage }, i),
         );
       }
-      function fe(e) {
+      function ye(e) {
         const {
           schema: t,
-          index: n,
+          index: a,
           onUpdateID: i,
           onUpdateName: r,
           onUpdateType: s,
-          onUpdateRangeMin: l,
-          onUpdateRangeMax: o,
+          onUpdateRangeMin: o,
+          onUpdateRangeMax: l,
           onRemove: c,
         } = e;
-        return a.createElement(
+        return n.createElement(
           "div",
-          { className: Ee.AssetPropertyRow },
-          a.createElement("div", null, "ID"),
-          a.createElement(ge.BA, {
-            className: Ee.PropertyID,
+          { className: ge.AssetPropertyRow },
+          n.createElement("div", null, "ID"),
+          n.createElement(Ee.BA, {
+            className: ge.PropertyID,
             type: "number",
             value: 0 !== t.id ? t.id : "",
             placeholder: "Property id",
@@ -1803,9 +1808,9 @@
               i(e.target.valueAsNumber);
             },
           }),
-          a.createElement("div", null, "Name"),
-          a.createElement(ge.BA, {
-            className: Ee.PropertyName,
+          n.createElement("div", null, "Name"),
+          n.createElement(Ee.BA, {
+            className: ge.PropertyName,
             type: "text",
             value: t.name,
             placeholder: "Property name",
@@ -1813,49 +1818,49 @@
               r(e.target.value);
             },
           }),
-          a.createElement("div", null, "Type"),
-          a.createElement(Se, { propertyType: t.type, onUpdateType: s }),
-          a.createElement(
+          n.createElement("div", null, "Type"),
+          n.createElement(fe, { propertyType: t.type, onUpdateType: s }),
+          n.createElement(
             "div",
-            { className: Ee.PropertyRangeMinLabel },
+            { className: ge.PropertyRangeMinLabel },
             "Min",
           ),
-          a.createElement(ge.BA, {
-            className: Ee.PropertyRangeMin,
+          n.createElement(Ee.BA, {
+            className: ge.PropertyRangeMin,
             type: "number",
             value: t.min ?? "",
             placeholder: "Min value",
             onChange: (e) => {
-              l(e.target.valueAsNumber);
+              o(e.target.valueAsNumber);
             },
           }),
-          a.createElement(
+          n.createElement(
             "div",
-            { className: Ee.PropertyRangeMaxLabel },
+            { className: ge.PropertyRangeMaxLabel },
             "Max",
           ),
-          a.createElement(ge.BA, {
-            className: Ee.PropertyRangeMax,
+          n.createElement(Ee.BA, {
+            className: ge.PropertyRangeMax,
             type: "number",
             value: t.max ?? "",
             placeholder: "Max value",
             onChange: (e) => {
-              o(e.target.valueAsNumber);
+              l(e.target.valueAsNumber);
             },
           }),
-          a.createElement(
-            u.$n,
-            { className: Ee.RemoveButton, onClick: () => c(n) },
+          n.createElement(
+            p.$n,
+            { className: ge.RemoveButton, onClick: () => c(a) },
             "Remove",
           ),
         );
       }
-      function Se(e) {
-        const { propertyType: t, onUpdateType: n } = e;
-        return a.createElement(
+      function fe(e) {
+        const { propertyType: t, onUpdateType: a } = e;
+        return n.createElement(
           "div",
-          { className: Ee.PropertyType },
-          a.createElement(u.ZU, {
+          { className: ge.PropertyType },
+          n.createElement(p.ZU, {
             strDefaultLabel: "Choose property type",
             controlled: !0,
             rgOptions: [
@@ -1863,138 +1868,138 @@
               { label: "Floating point", data: 1 },
             ],
             onChange: (e) => {
-              n(e.data);
+              a(e.data);
             },
             selectedOption: t,
           }),
         );
       }
-      var ye = n(65038),
-        Ae = n(64238),
-        De = n.n(Ae);
-      function Te(e, t, n) {
-        let a = !1;
+      var Se = a(65038),
+        Ce = a(64238),
+        De = a.n(Ce);
+      function ve(e, t, a) {
+        let n = !1;
         t.forEach((t) => {
-          e.get(t) && (a = !0);
+          e.get(t) && (n = !0);
         });
         let i = !1;
         return (
-          n.forEach((t) => {
+          a.forEach((t) => {
             e.get(t) && (i = !0);
           }),
-          a && i
+          n && i
         );
       }
-      function Ce(e) {
+      function Ie(e) {
         const {
             rgCommonRedistAllPlatforms: t,
-            rgCommonRedistWindows: n,
+            rgCommonRedistWindows: a,
             rgCheckedDepots: i,
             nDetectedGameEngine: r,
           } = e,
-          s = (0, a.useMemo)(() => new Map(t), [t]),
-          l = (0, a.useMemo)(() => new Map(n), [n]),
-          [o, c] = (0, a.useState)(
-            (function (e, t, n) {
-              const a = new Map();
+          s = (0, n.useMemo)(() => new Map(t), [t]),
+          o = (0, n.useMemo)(() => new Map(a), [a]),
+          [l, c] = (0, n.useState)(
+            (function (e, t, a) {
+              const n = new Map();
               return (
                 e.forEach((e) => {
                   Object.entries(e.components).forEach(([e, t]) => {
-                    a.set(t, !1);
+                    n.set(t, !1);
                   });
                 }),
                 t.forEach((e) => {
                   Object.entries(e.components).forEach(([e, t]) => {
-                    a.set(t, !1);
+                    n.set(t, !1);
                   });
                 }),
-                n.forEach((e, t) => {
-                  a.has(t) && a.set(t, e);
+                a.forEach((e, t) => {
+                  n.has(t) && n.set(t, e);
                 }),
-                a
+                n
               );
-            })(s, l, new Map(i)),
+            })(s, o, new Map(i)),
           ),
-          [d, u] = (0, a.useMemo)(() => {
+          [m, p] = (0, n.useMemo)(() => {
             const e = [],
               t = [];
             return (
-              l.forEach((n) => {
-                "directx" == n.category
-                  ? Object.entries(n.components).forEach(([t, n]) => {
-                      e.push(n);
+              o.forEach((a) => {
+                "directx" == a.category
+                  ? Object.entries(a.components).forEach(([t, a]) => {
+                      e.push(a);
                     })
-                  : "vc" == n.category &&
-                    Object.entries(n.components).forEach(([e, n]) => {
-                      t.push(n);
+                  : "vc" == a.category &&
+                    Object.entries(a.components).forEach(([e, a]) => {
+                      t.push(a);
                     });
               }),
               [e, t]
             );
-          }, [l]),
-          [p, _] = (0, a.useState)(Te(o, d, u)),
-          E = (e, t) => {
-            const n = new Map(o);
-            n.set(e, t), c(n), _(Te(n, d, u));
-            const a = {};
-            n.forEach((e, t) => {
-              a[t] = e ? 1 : 0;
+          }, [o]),
+          [u, _] = (0, n.useState)(ve(l, m, p)),
+          g = (e, t) => {
+            const a = new Map(l);
+            a.set(e, t), c(a), _(ve(a, m, p));
+            const n = {};
+            a.forEach((e, t) => {
+              n[t] = e ? 1 : 0;
             }),
-              window.UpdateCommonRedistsReact(a);
+              window.UpdateCommonRedistsReact(n);
           },
-          g = s.size > 0,
+          E = s.size > 0,
           h = 1 == r;
-        return a.createElement(
+        return n.createElement(
           "div",
           null,
-          g &&
-            a.createElement(ve, {
-              name: (0, m.we)("#StoreAdmin_Platform_AllPlatforms"),
+          E &&
+            n.createElement(Ae, {
+              name: (0, d.we)("#StoreAdmin_Platform_AllPlatforms"),
               categories: s,
-              checkedState: o,
-              setChecked: E,
+              checkedState: l,
+              setChecked: g,
             }),
-          h && a.createElement(we, { checked: p }),
-          a.createElement(ve, {
-            name: (0, m.we)("#StoreAdmin_Platform_Windows"),
-            categories: l,
-            checkedState: o,
-            setChecked: E,
+          h && n.createElement(we, { checked: u }),
+          n.createElement(Ae, {
+            name: (0, d.we)("#StoreAdmin_Platform_Windows"),
+            categories: o,
+            checkedState: l,
+            setChecked: g,
           }),
         );
       }
       function we(e) {
         const { checked: t } = e;
-        return a.createElement(
+        return n.createElement(
           "div",
-          { className: ye.DXVCNotice },
+          { className: Se.DXVCNotice },
           !t &&
-            a.createElement("div", { className: ye.DXVCNoticeIconUnchecked }),
-          t && a.createElement("div", { className: ye.DXVCNoticeIconChecked }),
-          a.createElement(
+            n.createElement("div", { className: Se.DXVCNoticeIconUnchecked }),
+          t && n.createElement("div", { className: Se.DXVCNoticeIconChecked }),
+          n.createElement(
             "div",
             {
               className: De()(
-                ye.DXVCNoticeText,
-                t ? ye.DXVCNoticeTextChecked : ye.DXVCNoticeTextUnchecked,
+                Se.DXVCNoticeText,
+                t ? Se.DXVCNoticeTextChecked : Se.DXVCNoticeTextUnchecked,
               ),
             },
-            (0, m.we)(
+            (0, d.we)(
               "#StoreAdmin_Game_Engine_Requires_DirectX_VC",
-              (0, m.we)("#StoreAdmin_GameEngine_Type_unreal"),
+              (0, d.we)("#StoreAdmin_GameEngine_Type_unreal"),
             ),
           ),
         );
       }
-      function ve(e) {
-        const { name: t, categories: n, checkedState: i, setChecked: r } = e,
-          s = (0, a.useMemo)(() => {
+      function Ae(e) {
+        const { name: t, categories: a, checkedState: i, setChecked: r } = e,
+          s = (0, n.useMemo)(() => {
             let e = [];
             return (
-              n.forEach((t, n) =>
+              a.forEach((t, a) =>
                 e.push(
-                  a.createElement(be, {
-                    name: n,
+                  n.createElement(Te, {
+                    name: a,
                     category: t,
                     checkedState: i,
                     key: t.category,
@@ -2004,22 +2009,22 @@
               ),
               e
             );
-          }, [n, i, r]);
-        return a.createElement(
+          }, [a, i, r]);
+        return n.createElement(
           "div",
           { className: "section" },
-          a.createElement("h2", null, t),
-          a.createElement("div", { className: "grayRule" }),
+          n.createElement("h2", null, t),
+          n.createElement("div", { className: "grayRule" }),
           ...s,
         );
       }
-      function be(e) {
-        const { name: t, category: n, checkedState: i, setChecked: r } = e,
-          s = Object.entries(n.components).map(([e, t]) =>
-            a.createElement(
+      function Te(e) {
+        const { name: t, category: a, checkedState: i, setChecked: r } = e,
+          s = Object.entries(a.components).map(([e, t]) =>
+            n.createElement(
               "li",
               { key: t },
-              a.createElement(Ne, {
+              n.createElement(be, {
                 name: e,
                 depotID: t,
                 checked: i.get(t),
@@ -2027,97 +2032,622 @@
               }),
             ),
           );
-        return a.createElement(
+        return n.createElement(
           "div",
           null,
-          a.createElement("div", null, t),
-          a.createElement("ul", null, ...s),
+          n.createElement("div", null, t),
+          n.createElement("ul", null, ...s),
         );
       }
-      function Ne(e) {
-        const { name: t, depotID: n, checked: i, setChecked: r } = e,
-          s = (228987 == n || 228986 == n) && !i;
-        return a.createElement(
-          a.Fragment,
+      function be(e) {
+        const { name: t, depotID: a, checked: i, setChecked: r } = e,
+          s = (228987 == a || 228986 == a) && !i;
+        return n.createElement(
+          n.Fragment,
           null,
-          a.createElement("input", {
-            id: n.toString(),
+          n.createElement("input", {
+            id: a.toString(),
             type: "checkbox",
             checked: i,
             disabled: s,
-            onChange: (e) => r(n, e.currentTarget.checked),
+            onChange: (e) => r(a, e.currentTarget.checked),
           }),
-          a.createElement("label", { htmlFor: n.toString() }, t),
+          n.createElement("label", { htmlFor: a.toString() }, t),
         );
       }
-      var Ie = n(67045);
-      const ke = {
-        CommunityItems: (e) => `/apps/communityitems/${e}`,
+      var Ne = a(67045),
+        Pe = a(34629),
+        ke = a(7860),
+        Re = a(14947),
+        xe = a(24484);
+      class Be {
+        itemDefinition = null;
+        constructor(e) {
+          (0, Re.Gn)(this), this.SetCommunityItemDefinitionFromProto(e);
+        }
+        SetCommunityItemDefinitionFromProto(e) {
+          this.itemDefinition = {
+            name: e.item_name,
+            active: e.active,
+            title: e.item_title,
+            appid: e.appid,
+            itemid: e.item_type,
+            deleted: e.deleted,
+            image_small: e.item_image_small,
+            image_large: e.item_image_large,
+            movie_large_mp4: e.item_movie_mp4,
+            movie_large_webm: e.item_movie_webm,
+            movie_small_mp4: e.item_movie_mp4_small,
+            movie_small_webm: e.item_movie_webm_small,
+            item_class: e.item_class,
+          };
+        }
+        get AppID() {
+          return this.itemDefinition.appid;
+        }
+        get BIsActive() {
+          return this.itemDefinition.active;
+        }
+        get ItemID() {
+          return this.itemDefinition.itemid;
+        }
+        get BIsDeleted() {
+          return this.itemDefinition.deleted;
+        }
+        get ItemClass() {
+          return this.itemDefinition.item_class;
+        }
+        GetSourcesForAssetType(e) {
+          let t = [];
+          switch (e) {
+            case "image_large":
+              this.itemDefinition.image_large &&
+                t.push(this.itemDefinition.image_large);
+              break;
+            case "image_small":
+              this.itemDefinition.image_small &&
+                t.push(this.itemDefinition.image_small);
+              break;
+            case "movie_large":
+              this.itemDefinition.movie_large_webm &&
+                t.push(this.itemDefinition.movie_large_webm),
+                this.itemDefinition.movie_large_mp4 &&
+                  t.push(this.itemDefinition.movie_large_mp4);
+          }
+          return t;
+        }
+      }
+      function Le(e, t) {
+        return [`InProgressItemDefinition_${e}_${t}`];
+      }
+      function Me(e, t) {
+        return `${x.TS.BASE_URL_SHARED_CDN}community_assets/images/items/${e}/${t}`;
+      }
+      (0, Pe.Cg)([Re.sH], Be.prototype, "itemDefinition", void 0);
+      var Fe = a(6419),
+        Ue = a(69343),
+        Ge = a(68797),
+        Oe = a(82817),
+        We = a(73744),
+        He = a(78511);
+      class $e extends He.q {
+        m_rgAssetRequirements = [];
+        m_currentImageOptionKey = void 0;
+        m_bDuplicateAssetType = !1;
+        constructor(e, t, a, n, i) {
+          const r = (0, Oe.II)(a);
+          super(e, e.name, t, a.src, r),
+            (0, Re.Gn)(this),
+            (this.m_rgAssetRequirements = n),
+            (this.m_bDuplicateAssetType = i);
+        }
+        IsValidAssetType(e, t) {
+          const a = t && t != this.fileType,
+            n = this.IsFileTypeSupported(this.fileType),
+            i = this.GetCurrentImageOption();
+          let r = "";
+          return (
+            n
+              ? a &&
+                (r = (0, d.we)("#ImageUpload_InvalidFormat", (0, Oe.EG)(t)))
+              : (r = (0, d.we)("#ImageUpload_InvalidFormatSelected")),
+            i || (r = "No valid asset provided"),
+            this.m_bDuplicateAssetType &&
+              (r =
+                "This asset type is already provided. Please delete the old asset first."),
+            { error: r, needsCrop: !1 }
+          );
+        }
+        BIsOriginalMinimumDimensions(e) {
+          return !0;
+        }
+        BIsVideo() {
+          return We.Ho.includes(this.fileType);
+        }
+        GetResizeDimension() {}
+        BSupportsLanguages() {
+          return !1;
+        }
+        get ImageOptions() {
+          let e = [];
+          return (
+            this.m_rgAssetRequirements.forEach((t) => {
+              t.width === this.width &&
+                t.height === this.height &&
+                t.accepted_filetypes.includes(this.fileType) &&
+                e.push({
+                  asset_type: t.asset_type,
+                  sKey: this.filename,
+                  fnGetLabelText: () => t.label,
+                  width: this.width,
+                  height: this.height,
+                  bEnforceDimensions: !1,
+                  bHiddenFromDropdown: !1,
+                });
+            }),
+            e
+          );
+        }
+        GetCurrentImageOptionKey() {
+          return this.m_currentImageOptionKey;
+        }
+        GetCurrentImageOption() {
+          return this.GetCurrentImageOptionKey()
+            ? this.ImageOptions.find(
+                (e) => e.sKey === this.GetCurrentImageOptionKey(),
+              )
+            : this.ImageOptions.length
+              ? this.ImageOptions[0]
+              : null;
+        }
+        SetCurrentImageOption(e) {
+          this.m_currentImageOptionKey = e?.sKey;
+        }
+        FileTypeMatchesImageTypes(e) {
+          switch (this.fileType) {
+            case 1:
+            case 3:
+            case 10:
+              return !0;
+            default:
+              return !1;
+          }
+        }
+        IsFileTypeSupported(e) {
+          switch (e) {
+            case 1:
+            case 3:
+            case 10:
+            case 2:
+            case 4:
+            case 5:
+              return !0;
+            default:
+              return !1;
+          }
+        }
+      }
+      (0, Pe.Cg)([Re.sH], $e.prototype, "m_rgAssetRequirements", void 0),
+        (0, Pe.Cg)([Re.sH], $e.prototype, "m_currentImageOptionKey", void 0),
+        (0, Pe.Cg)([Re.sH], $e.prototype, "m_bDuplicateAssetType", void 0),
+        (0, Pe.Cg)([Re.EW], $e.prototype, "ImageOptions", null),
+        (0, Pe.Cg)([Re.XI], $e.prototype, "SetCurrentImageOption", null);
+      class Ve extends Ue.Vr {
+        m_filesToUpload = Re.sH.array();
+        m_strUploadPath = null;
+        m_bSynchronousUpload = !1;
+        m_rgAssetRequirements = [];
+        constructor(e, t, a) {
+          super(),
+            (0, Re.Gn)(this),
+            (this.m_strUploadPath = e),
+            (this.m_bSynchronousUpload = t),
+            (this.m_rgAssetRequirements = a);
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(e) {
+          this.m_strUploadPath = e;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = Re.sH.array();
+        }
+        DeleteUploadImage(e) {
+          const t = this.m_filesToUpload.findIndex(
+            (t) => e.file == t.file && e.uploadTime == t.uploadTime,
+          );
+          t >= 0 &&
+            (this.m_filesToUpload.splice(t, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        BGetUploadsAreInSerial() {
+          return this.m_bSynchronousUpload;
+        }
+        async AddImageForLanguage(e, t) {
+          if ((0, Oe.aL)(e.type) || (0, Oe.Uz)(e.type)) {
+            const a = await (0, Oe.zB)(e, (0, Oe.Uz)(e.type));
+            if (a) {
+              const n = new $e(e, t, a, this.m_rgAssetRequirements, !1);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, n]), !0;
+            }
+          } else
+            console.error(
+              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
+              e,
+              e.type,
+            );
+          return !1;
+        }
+        async UploadSingleImage(e, t, a, n) {
+          let i = null;
+          const r = new FormData();
+          r.append("assetfile", e.file, t),
+            r.append("sessionid", x.TS.SESSIONID);
+          const s = e.GetCurrentImageOption();
+          r.append("strAssetType", s.asset_type);
+          const o = (0, Oe.ab)(t);
+          if (!o)
+            return {
+              bSuccess: !1,
+              elErrorMessage:
+                "Invalid file extension, cannot determine mimetype",
+            };
+          r.append("mimetype", o);
+          try {
+            i = await k().post(this.m_strUploadPath, r, {
+              withCredentials: !0,
+              headers: { "Content-Type": "multipart/form-data" },
+              cancelToken: n,
+            });
+          } catch (e) {
+            (0, Ge.H)(e);
+            i = e.response;
+          }
+          return { bSuccess: !0, result: i?.data };
+        }
+      }
+      (0, Pe.Cg)([Re.sH], Ve.prototype, "m_filesToUpload", void 0),
+        (0, Pe.Cg)([Fe.o], Ve.prototype, "GetUploadImages", null),
+        (0, Pe.Cg)([Fe.o], Ve.prototype, "ClearImages", null),
+        (0, Pe.Cg)([Fe.o], Ve.prototype, "DeleteUploadImage", null),
+        (0, Pe.Cg)([Fe.o], Ve.prototype, "AddImageForLanguage", null);
+      var Ke = a(8527),
+        qe = a(42027),
+        je = a(2160);
+      function ze(e) {
+        const { appID: t, unItemType: a, rgAssetDefinitions: i } = e,
+          r = n.useMemo(() => {
+            const e =
+              Ke.TS.PARTNER_BASE_URL +
+              `communityitems/ajaxuploadasset/${t}/${a}`;
+            return new Ve(e, !0, i);
+          }, [t, a, i]);
+        return n.createElement(
+          "div",
+          null,
+          n.createElement(qe.O9, {
+            imageUploader: r,
+            rgRealmList: [je.TU.k_ESteamRealmGlobal],
+            fnUploadComplete: (e) => {
+              for (const t of e) {
+                if (!t.bSuccess) continue;
+                t.uploadResult;
+              }
+              var n, i;
+              (n = t), (i = a), ke.L.invalidateQueries({ queryKey: Le(n, i) });
+            },
+          }),
+        );
+      }
+      var Xe = a(89925);
+      const Ze = [
+          {
+            asset_type: "movie_large",
+            label: (0, d.we)("#CommunityItems_StartupMovie_Label_Video"),
+            width: 1920,
+            height: 1200,
+            accepted_filetypes: [4, 5],
+            is_video: !0,
+            guidelines: [
+              {
+                strHeader: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineVideo_Header",
+                ),
+                strIntro: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineVideo_Intro",
+                ),
+                rgBulletPoints: [
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_1",
+                  ),
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_2",
+                  ),
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_3",
+                  ),
+                ],
+              },
+              {
+                strHeader: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineAudio_Header",
+                ),
+                strIntro: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineAudio_Intro",
+                ),
+                rgBulletPoints: [
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_1",
+                  ),
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_2",
+                  ),
+                  (0, d.we)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_3",
+                  ),
+                ],
+              },
+            ],
+          },
+          {
+            asset_type: "image_large",
+            label: (0, d.we)("#CommunityItems_StartupMovie_Label_Poster"),
+            width: 1920,
+            height: 1200,
+            accepted_filetypes: [1, 3, 10],
+            guidelines: [
+              {
+                strHeader: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineImage_Header",
+                ),
+                strIntro: (0, d.we)(
+                  "#CommunityItems_StartupMovie_GuidelineImage_Intro",
+                ),
+              },
+            ],
+          },
+        ],
+        Je = n.createContext(null),
+        Qe = ({ communityItem: e, assetDefs: t, children: a }) =>
+          n.createElement(
+            Je.Provider,
+            { value: { communityItem: e, assetDefs: t } },
+            a,
+          );
+      function Ye(e) {
+        const { appID: t, unItemType: a } = e,
+          i = (function (e, t) {
+            const a = (0, R.I)({
+              queryKey: Le(e, t),
+              queryFn: async () => {
+                const a = `${x.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
+                  n = new FormData();
+                n.append("sessionid", x.TS.SESSIONID);
+                const i = await k().post(a, n, { withCredentials: !0 });
+                return 200 == i?.status && 1 == i.data?.success
+                  ? i.data.def
+                  : (console.error(
+                      "useGetInProgressCommunityItemDefinition:",
+                      i?.data.error,
+                    ),
+                    null);
+              },
+              staleTime: 1 / 0,
+              initialData: (0, xe.Tc)("item_def", "application_config"),
+            });
+            return a.isLoading ? null : a.data;
+          })(t, a);
+        if (!i) return null;
+        const r = new Be(i),
+          s = 17 === r.ItemClass ? Ze : null;
+        if (!s) return null;
+        const o = (!r.BIsActive || Ke.iA.is_support) && !r.BIsDeleted;
+        return n.createElement(
+          Qe,
+          { communityItem: r, assetDefs: s },
+          n.createElement(
+            "div",
+            { className: Xe.AssetEditorContainer },
+            o && n.createElement(et, null),
+            n.createElement(nt, null),
+          ),
+        );
+      }
+      function et() {
+        const { communityItem: e, assetDefs: t } = n.useContext(Je),
+          a = t
+            .flatMap((e) => e.guidelines)
+            .map((e, t) =>
+              n.createElement(tt, { key: `guideline_${t}`, guideline: e }),
+            );
+        return n.createElement(
+          "div",
+          { className: Xe.AssetUploadSection },
+          n.createElement("div", { className: Xe.AssetGuidelinesSection }, a),
+          n.createElement(ze, {
+            appID: e.AppID,
+            unItemType: e.ItemID,
+            rgAssetDefinitions: t,
+          }),
+        );
+      }
+      function tt(e) {
+        const { guideline: t } = e;
+        return n.createElement(
+          "div",
+          { className: Xe.GuidelineContainer },
+          n.createElement(
+            "div",
+            { className: Xe.GuidelineHeader },
+            t.strHeader,
+          ),
+          n.createElement("div", { className: Xe.GuidelineIntro }, t.strIntro),
+          t.rgBulletPoints?.length > 0 &&
+            n.createElement(at, { rgBulletPoints: t.rgBulletPoints }),
+        );
+      }
+      function at(e) {
+        const { rgBulletPoints: t } = e,
+          a = t.map((e, t) =>
+            n.createElement("li", { key: `bulletpoint_${t}` }, e),
+          );
+        return n.createElement("ul", null, a);
+      }
+      function nt() {
+        const { communityItem: e, assetDefs: t } = n.useContext(Je),
+          a = t.map((e) =>
+            n.createElement(it, { key: e.asset_type, assetDef: e }),
+          );
+        return n.createElement("div", { className: Xe.AssetTypesCtn }, a);
+      }
+      function it(e) {
+        const { assetDef: t } = e,
+          { communityItem: a, assetDefs: i } = n.useContext(Je);
+        return n.createElement(
+          "div",
+          { className: Xe.AssetEntryCtn },
+          n.createElement("div", { className: Xe.AssetTitle }, t.label),
+          n.createElement(
+            "div",
+            { className: Xe.AssetPreviewCtn },
+            t.is_video
+              ? n.createElement(ot, {
+                  rgSources: a.GetSourcesForAssetType(t.asset_type),
+                  unAppID: a.AppID,
+                })
+              : n.createElement(st, {
+                  rgSources: a.GetSourcesForAssetType(t.asset_type),
+                  unAppID: a.AppID,
+                }),
+          ),
+        );
+      }
+      function rt() {
+        return n.createElement(
+          "div",
+          { className: Xe.PlaceholderAsset },
+          n.createElement(
+            "div",
+            null,
+            (0, d.we)("#CommunityItems_PlaceholderAsset_Missing"),
+          ),
+        );
+      }
+      function st(e) {
+        const { rgSources: t, unAppID: a } = e;
+        return t.length
+          ? n.createElement("img", {
+              className: Xe.AssetPreview,
+              src: Me(a, t[0]),
+            })
+          : n.createElement(rt, null);
+      }
+      function ot(e) {
+        const { rgSources: t, unAppID: a } = e,
+          i = n.useRef();
+        if (
+          (n.useEffect(() => {
+            i.current && i.current.load();
+          }, [t]),
+          !t.length)
+        )
+          return n.createElement(rt, null);
+        const r = t.map((e, t) =>
+          n.createElement("source", {
+            key: `video_${t}`,
+            src: Me(a, e),
+            type: (0, Oe.ab)(e),
+          }),
+        );
+        return n.createElement(
+          "video",
+          {
+            ref: i,
+            className: Xe.AssetPreview,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            playsInline: !0,
+            controls: !0,
+          },
+          r,
+        );
+      }
+      const lt = {
+        CommunityItem: (e, t) => `/apps/communityitems/${e}/${t}`,
         AppLanding: (e) => `/apps/landing/${e}`,
         AppInstaller: (e) => `/apps/installer/${e}`,
         AppEconomy: (e) => `/apps/economy/${e}`,
       };
-      function Pe(e) {
-        return a.createElement(
-          l.dO,
+      function ct(e) {
+        return n.createElement(
+          o.dO,
           null,
-          a.createElement(l.qh, {
-            path: ke.CommunityItems(":appid"),
+          n.createElement(o.qh, {
+            path: lt.CommunityItem(":appid", ":itemtype"),
             render: (e) =>
-              a.createElement(o.X, {
+              n.createElement(l.X, {
                 config: {
-                  "storeadmin-profilecolors": (e) =>
-                    a.createElement(s, { ...e }),
+                  "appadmin-profilecolors": (e) => n.createElement(s, { ...e }),
+                  "appadmin-communityitemassets": () =>
+                    n.createElement(Ye, {
+                      appID: Number.parseInt(e.match.params.appid),
+                      unItemType: Number.parseInt(e.match.params.itemtype),
+                    }),
                 },
               }),
           }),
-          a.createElement(l.qh, {
-            path: ke.AppLanding(":appid"),
+          n.createElement(o.qh, {
+            path: lt.AppLanding(":appid"),
             render: (e) =>
-              a.createElement(o.X, {
+              n.createElement(l.X, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
-                    a.createElement(Ie.M, { ...e }),
-                  "storeadmin-applanding": (e) => a.createElement(ne, { ...e }),
+                    n.createElement(Ne.M, { ...e }),
+                  "storeadmin-applanding": (e) => n.createElement(ae, { ...e }),
                   "storeadmin-editions-editor": (e) =>
-                    a.createElement(me, { ...e }),
+                    n.createElement(de, { ...e }),
                 },
               }),
           }),
-          a.createElement(l.qh, {
-            path: ke.AppInstaller(":appid"),
+          n.createElement(o.qh, {
+            path: lt.AppInstaller(":appid"),
             render: (e) =>
-              a.createElement(o.X, {
+              n.createElement(l.X, {
                 config: {
                   "storeadmin-steamworksredist-edit": (e) =>
-                    a.createElement(Ce, { ...e }),
+                    n.createElement(Ie, { ...e }),
                 },
               }),
           }),
-          a.createElement(l.qh, {
-            path: ke.AppEconomy(":appid"),
+          n.createElement(o.qh, {
+            path: lt.AppEconomy(":appid"),
             render: (e) =>
-              a.createElement(o.X, {
+              n.createElement(l.X, {
                 config: {
                   "storeadmin-steamworkseconomy-propertyedit": (e) =>
-                    a.createElement(he, { ...e }),
+                    n.createElement(he, { ...e }),
                 },
               }),
           }),
         );
       }
     },
-    27429: (e, t, n) => {
+    27429: (e, t, a) => {
       "use strict";
-      function a(e, t) {
-        const n = new Date(1e3 * e),
-          a = t ? new Date(1e3 * t) : new Date(n);
-        t || a.setDate(n.getDate() + 6);
-        const i = n.toLocaleString("en-US", { month: "short" }),
-          r = n.getDate(),
-          s = a.toLocaleString("en-US", { month: "short" }),
-          l = a.getDate();
-        return i === s ? `${i} ${r} - ${l}` : `${i} ${r} - ${s} ${l}`;
+      function n(e, t) {
+        const a = new Date(1e3 * e),
+          n = t ? new Date(1e3 * t) : new Date(a);
+        t || n.setDate(a.getDate() + 6);
+        const i = a.toLocaleString("en-US", { month: "short" }),
+          r = a.getDate(),
+          s = n.toLocaleString("en-US", { month: "short" }),
+          o = n.getDate();
+        return i === s ? `${i} ${r} - ${o}` : `${i} ${r} - ${s} ${o}`;
       }
       function i(e) {
         let t = r(e);
@@ -2140,14 +2670,14 @@
           t
         );
       }
-      n.d(t, { E8: () => a, Z2: () => i, ct: () => r });
+      a.d(t, { E8: () => n, Z2: () => i, ct: () => r });
     },
-    70986: (e, t, n) => {
+    70986: (e, t, a) => {
       "use strict";
-      n.d(t, { M: () => i, o: () => a });
-      const a = "America/Los_Angeles";
+      a.d(t, { M: () => i, o: () => n });
+      const n = "America/Los_Angeles";
       function i(e) {
-        const t = n(87937).unix(e).tz(a);
+        const t = a(87937).unix(e).tz(n);
         return (
           t.seconds(0),
           t.minutes(0),
@@ -2157,216 +2687,26 @@
         );
       }
     },
-    55263: (e, t, n) => {
+    64046: (e, t, a) => {
       "use strict";
-      n.d(t, {
-        G6: () => o,
-        Gg: () => m,
-        MS: () => E,
-        Ow: () => d,
-        gF: () => g,
-        mZ: () => u,
-        t7: () => c,
-        zX: () => _,
-      });
-      var a = n(41735),
-        i = n.n(a),
-        r = n(90626),
-        s = n(73745),
-        l = n(82097);
-      function o(e, t, n, a) {
-        const o = (0, r.useRef)(),
-          c = (0, r.useRef)(void 0),
-          d = (0, s.CH)();
-        o.current = e;
-        const [m, u] = (0, r.useState)(void 0),
-          {
-            include_assets: p,
-            include_release: _,
-            include_platforms: E,
-            include_all_purchase_options: g,
-            include_screenshots: h,
-            include_trailers: f,
-            include_ratings: S,
-            include_tag_count: y,
-            include_reviews: A,
-            include_basic_info: D,
-            include_supported_languages: T,
-            include_full_description: C,
-            include_included_items: w,
-            include_assets_without_overrides: v,
-            apply_user_filters: b,
-            include_links: N,
-          } = n;
-        if (
-          ((0, r.useEffect)(() => {
-            const n = {
-              include_assets: p,
-              include_release: _,
-              include_platforms: E,
-              include_all_purchase_options: g,
-              include_screenshots: h,
-              include_trailers: f,
-              include_ratings: S,
-              include_tag_count: y,
-              include_reviews: A,
-              include_basic_info: D,
-              include_supported_languages: T,
-              include_full_description: C,
-              include_included_items: w,
-              include_assets_without_overrides: v,
-              apply_user_filters: b,
-              include_links: N,
-            };
-            let r = null;
-            return (
-              !e ||
-                e < 0 ||
-                l.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== m && a && a == c.current) ||
-                (a !== c.current && (u(void 0), (c.current = a)),
-                (r = i().CancelToken.source()),
-                l.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    r?.token.reason || o.current !== e || u(1 == t), d();
-                  })),
-              () => r?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [e, t, a, m, p, _, E, g, h, f, S, y, A, D, T, C, w, v, b, N, d]),
-          !e)
-        )
-          return [null, 2];
-        if (!1 === m) return [void 0, 2];
-        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!l.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const I = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return I ? [I, 3] : [null, 2];
-      }
-      function c(e, t, n) {
-        return o(e, 0, t, n);
-      }
-      function d(e, t, n) {
-        return o(e, 2, t, n);
-      }
-      function m(e, t, n) {
-        return o(e, 1, t, n);
-      }
-      function u(e, t, n) {
-        const [a, i] = o(e, t, n);
-        let r;
-        1 != a?.GetStoreItemType() ||
-          a.GetAssets()?.GetHeaderURL() ||
-          1 != a?.GetIncludedAppIDs().length ||
-          (r = a.GetIncludedAppIDs()[0]);
-        const [s, l] = c(r, n);
-        return r && s?.BIsVisible() ? [s, l] : [a, i];
-      }
-      function p(e, t, n, a) {
-        const o = (0, s.CH)(),
-          {
-            include_assets: c,
-            include_release: d,
-            include_platforms: m,
-            include_all_purchase_options: u,
-            include_screenshots: p,
-            include_trailers: _,
-            include_ratings: E,
-            include_tag_count: g,
-            include_reviews: h,
-            include_basic_info: f,
-            include_supported_languages: S,
-            include_full_description: y,
-            include_included_items: A,
-            include_assets_without_overrides: D,
-            apply_user_filters: T,
-            include_links: C,
-          } = n;
-        if (
-          ((0, r.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: c,
-                include_release: d,
-                include_platforms: m,
-                include_all_purchase_options: u,
-                include_screenshots: p,
-                include_trailers: _,
-                include_ratings: E,
-                include_tag_count: g,
-                include_reviews: h,
-                include_basic_info: f,
-                include_supported_languages: S,
-                include_full_description: y,
-                include_included_items: A,
-                include_assets_without_overrides: D,
-                apply_user_filters: T,
-                include_links: C,
-              },
-              a = e.filter(
-                (e) =>
-                  !(
-                    l.A.Get().BHasStoreItem(e, t, n) ||
-                    l.A.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == a.length) return;
-            const r = i().CancelToken.source(),
-              s = a.map((e) => l.A.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(s).then(() => {
-                r.token.reason || o();
-              }),
-              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, a, o, c, d, m, u, p, _, E, g, h, f, S, y, A, D, T, C]),
-          !e)
-        )
-          return 2;
-        if (
-          !e.every(
-            (e) =>
-              l.A.Get().BHasStoreItem(e, t, n) ||
-              l.A.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return 1;
-        return e.every((e) =>
-          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? 3
-          : 2;
-      }
-      function _(e, t, n) {
-        return p(e, 0, t, n);
-      }
-      function E(e, t, n) {
-        return p(e, 2, t, n);
-      }
-      function g(e, t, n) {
-        return p(e, 1, t, n);
-      }
-    },
-    64046: (e, t, n) => {
-      "use strict";
-      n.d(t, { s: () => p });
-      var a = n(34629),
-        i = n(90626),
-        r = n(43465),
-        s = n(73745),
-        l = n(57361),
-        o = n.n(l),
-        c = n(4869),
-        d = n(61859),
-        m = n(16676),
-        u = n(32754);
-      class p extends i.Component {
+      a.d(t, { s: () => u });
+      var n = a(34629),
+        i = a(90626),
+        r = a(43465),
+        s = a(73745),
+        o = a(57361),
+        l = a.n(o),
+        c = a(4869),
+        m = a(61859),
+        d = a(16676),
+        p = a(32754);
+      class u extends i.Component {
         state = { color: this.props.color || "rgba(255, 255, 255, 1)" };
         static GetColorString(e) {
           return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
         }
         OnColorChange(e) {
-          const t = p.GetColorString(e);
+          const t = u.GetColorString(e);
           this.setState({ color: t }), this.props.onChange(t);
         }
         async OnEyedropperClick() {
@@ -2374,12 +2714,12 @@
             try {
               const e = new window.EyeDropper(),
                 t = (await e.open()).sRGBHex,
-                n = this.hexToRgba(t);
-              this.setState({ color: n }), this.props.onChange(n);
+                a = this.hexToRgba(t);
+              this.setState({ color: a }), this.props.onChange(a);
             } catch (e) {
-              console.warn((0, d.we)("#Sale_EyeDropperFailed"), e);
+              console.warn((0, m.we)("#Sale_EyeDropperFailed"), e);
             }
-          else alert((0, d.we)("#Sale_EyeDropperError"));
+          else alert((0, m.we)("#Sale_EyeDropperError"));
         }
         hexToRgba(e) {
           const t = parseInt(e.slice(1), 16);
@@ -2395,14 +2735,14 @@
             }),
             i.createElement(
               "div",
-              { className: o().EyeDropperCtn },
+              { className: l().EyeDropperCtn },
               i.createElement(
-                u.Gq,
-                { toolTipContent: (0, d.we)("#Sale_BackgroundColorPicker") },
+                p.Gq,
+                { toolTipContent: (0, m.we)("#Sale_BackgroundColorPicker") },
                 i.createElement(
-                  m.$n,
+                  d.$n,
                   {
-                    className: o().EyeDropperBtn,
+                    className: l().EyeDropperBtn,
                     onClick: this.OnEyedropperClick,
                   },
                   i.createElement(c.O7b, null),
@@ -2412,301 +2752,8 @@
           );
         }
       }
-      (0, a.Cg)([s.oI], p.prototype, "OnColorChange", null),
-        (0, a.Cg)([s.oI], p.prototype, "OnEyedropperClick", null);
-    },
-    99637: (e, t, n) => {
-      "use strict";
-      n.d(t, { K: () => S });
-      var a = n(90626),
-        i = n(92298),
-        r = n.n(i),
-        s = n(44894),
-        l = n(44165),
-        o = n(95695),
-        c = n.n(o),
-        d = n(52038),
-        m = n(61859),
-        u = n(32754),
-        p = n(12916),
-        _ = n.n(p),
-        E = n(87937),
-        g = n.n(E);
-      const h = "hh:mm a",
-        f = "HH:mm";
-      function S(e) {
-        const {
-          nLatestTime: t,
-          nEarliestTime: n,
-          fnGetTimeToUpdate: i,
-          onError: o,
-          strAlsoShowTimeZone: p,
-          disabled: E,
-          bNoDefaultDate: S,
-          className: T,
-          strDescToolTip: C,
-          strDescription: w,
-          bShowTimeZone: v,
-          strInvalidDateTimeLocalizedMsg: b,
-          fnIsValidDateTime: N,
-          bWeekdaysOnly: I,
-          fnSetTimeToUpdate: k,
-          bForce24HourFormat: P,
-        } = e;
-        let x =
-          (function () {
-            const e = g()("2025-01-14T13:00:00");
-            return e.format("LT").toLowerCase().includes("13");
-          })() || P
-            ? f
-            : h;
-        const R = i(),
-          [B, L] = a.useState(R > 0 ? g()(1e3 * R) : null),
-          [W, M] = a.useState(),
-          [F, G] = a.useState(),
-          O = (function (e, t, n, i, r) {
-            const s = i && i(),
-              l = t && !A(t).isValid(),
-              o = e && !D(e).isValid();
-            let c = null;
-            (o || l || "string" == typeof s || !1 === s) &&
-              ((c = (0, m.we)(
-                n || "#DateTimePicker_Fallback_Invalid_DateTime",
-              )),
-              o
-                ? (c = (0, m.we)("#DateTimePicker_Time_CannotParse"))
-                : l
-                  ? (c = (0, m.we)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof s && (c = s));
-            return (
-              a.useEffect(() => {
-                r && r(c);
-              }, [c, r]),
-              c
-            );
-          })(W, F, b, N, o),
-          U = !o && O;
-        let V, H;
-        if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {
-          const e = g().unix(n);
-          (V = {
-            hours: { max: e.hour(), min: e.hour(), step: 0 },
-            minutes: { max: e.minute(), min: e.minute(), step: 0 },
-            seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
-            milliseconds: { max: 0, min: 0, step: 0 },
-          }),
-            (x = f);
-        }
-        R || !n || S || (H = g().unix(n));
-        const j = g().tz.guess(),
-          z = g().unix(R).tz(j),
-          q = !!p && j != p && g().unix(R).tz(p),
-          {
-            fnOnInput: Z,
-            fnOnInputBlur: Y,
-            fnOnChange: X,
-          } = y(
-            A,
-            (e) => {
-              if (E) return;
-              G(null);
-              const t = i(),
-                n = g().unix(t || l.HD.GetTimeNowWithOverride());
-              (e = e.clone()).hour(n.hour()),
-                e.minute(n.minute()),
-                e.second(0),
-                k(e.unix()),
-                L(e);
-            },
-            G,
-          ),
-          {
-            fnOnInput: Q,
-            fnOnInputBlur: K,
-            fnOnChange: $,
-          } = y(
-            D,
-            (e) => {
-              if (E) return;
-              M(null);
-              let t = i(),
-                a = 0;
-              if (t) {
-                const n = g().unix(t);
-                (e = e.clone()).year(n.year()),
-                  e.month(n.month()),
-                  e.date(n.date()),
-                  (a = e.unix());
-              } else {
-                a =
-                  g().unix(n).hour(0).second(0).minutes(0).unix() +
-                  3600 * e.hour() +
-                  60 * e.minutes();
-              }
-              k(a), L(g().unix(a));
-            },
-            M,
-          );
-        return a.createElement(
-          "div",
-          { className: (0, d.A)(_().EventTimeSection, T) },
-          a.createElement(
-            "div",
-            { className: (0, d.A)(_().EventTimeTitle, "DialogLabel") },
-            a.createElement(
-              u.he,
-              { toolTipContent: C, direction: "top" },
-              Boolean(w) && a.createElement("span", null, w),
-            ),
-            U &&
-              a.createElement(
-                "span",
-                { className: _().DateErrorCtn },
-                a.createElement("img", { src: s.A }),
-                U,
-              ),
-          ),
-          a.createElement(
-            "div",
-            { className: c().FlexRowContainer },
-            a.createElement(
-              "div",
-              { className: (0, d.A)(c().InputBorder, _().TimeBlock) },
-              a.createElement(r(), {
-                onChange: X,
-                timeFormat: !1,
-                value: null != F ? F : B,
-                isValidDate: (e) =>
-                  !E &&
-                  (function (e, t, n, a) {
-                    const i = g().unix(e).hour(0).seconds(0).minute(0);
-                    let r = a.unix() >= i.unix();
-                    if (r && t && t >= e) {
-                      const e = g().unix(t).hour(23).minute(59).seconds(59);
-                      r = a.unix() <= e.unix();
-                    }
-                    r &&
-                      n &&
-                      ((0 != a.weekday() && 6 != a.weekday()) || (r = !1));
-                    return r;
-                  })(n, t, I, e),
-                initialValue: H,
-                inputProps: {
-                  placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
-                  className: (0, d.A)(
-                    _().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: E,
-                  onChange: (e) => Z(e.currentTarget.value),
-                  onBlur: (e) => Y(e.currentTarget.value),
-                },
-              }),
-              !!q &&
-                a.createElement(
-                  "div",
-                  { className: _().PacificTimeHint },
-                  q.format("L"),
-                ),
-            ),
-            a.createElement(
-              "div",
-              { className: (0, d.A)(c().InputBorder, _().TimeBlock) },
-              a.createElement(r(), {
-                onChange: $,
-                dateFormat: !1,
-                timeFormat: x,
-                timeConstraints: V,
-                value: null != W ? W : B,
-                inputProps: {
-                  placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
-                  className: (0, d.A)(
-                    _().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: E,
-                  onChange: (e) => Q(e.currentTarget.value),
-                  onBlur: (e) => K(e.currentTarget.value),
-                },
-              }),
-              !!q &&
-                a.createElement(
-                  "div",
-                  { className: _().PacificTimeHint },
-                  q.format("LT"),
-                ),
-            ),
-            v &&
-              a.createElement(
-                "div",
-                null,
-                a.createElement(
-                  "div",
-                  { className: _().TimeZone },
-                  z.zoneAbbr(),
-                ),
-                !!q &&
-                  a.createElement(
-                    "div",
-                    { className: _().TimeZone },
-                    q.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(V) &&
-            a.createElement(
-              "div",
-              null,
-              (0, m.we)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
-      }
-      function y(e, t, n) {
-        const [i, r] = a.useState(!1);
-        return {
-          fnOnInput: (e) => {
-            n(e), r(!0);
-          },
-          fnOnInputBlur: (n) => {
-            if (i) {
-              const a = e(n);
-              a.isValid() && t(a);
-            }
-            r(!1);
-          },
-          fnOnChange: (n) => {
-            if (!i)
-              if ("string" == typeof n) {
-                const a = e(n);
-                a.isValid() && t(a);
-              } else t(n);
-          },
-        };
-      }
-      function A(e) {
-        return g()(
-          e,
-          (function () {
-            const e = g()("2025-01-14").format("L").split(/[-/.]/),
-              t = e.indexOf("14");
-            return e.indexOf("01") < t;
-          })()
-            ? "M/D/YYYY"
-            : "D/M/YYYY",
-          !1,
-        );
-      }
-      function D(e) {
-        return g()(e, [h, f], !1);
-      }
-    },
-    44894: (e, t, n) => {
-      "use strict";
-      n.d(t, { A: () => a });
-      const a =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
+      (0, n.Cg)([s.oI], u.prototype, "OnColorChange", null),
+        (0, n.Cg)([s.oI], u.prototype, "OnEyedropperClick", null);
     },
   },
 ]);

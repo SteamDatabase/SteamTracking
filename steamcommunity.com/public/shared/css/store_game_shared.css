@@ -495,7 +495,11 @@ table.game_language_options {
 	width: 100%;
 }
 
-.package_landing_page_item_list {
+.package_landing_page_item_list_scrolling {
+	scroll-padding-bottom: -12px;
 	max-height: 360px;
-	overflow-y: scroll;
+	min-height: 276px;
+	scrollbar-gutter: stable;
+	overflow-y: auto;
+	overflow-x: hidden;
 }

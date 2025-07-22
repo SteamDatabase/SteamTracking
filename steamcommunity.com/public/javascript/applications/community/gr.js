@@ -2302,6 +2302,11 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
+              "valve-ended",
+              this.OnVideoEnd,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
               "valve-bufferupdate",
               this.OnVideoTimeUpdate,
             ),
@@ -2406,10 +2411,7 @@
         OnVideoTimeUpdate() {
           (this.m_nVideoStartTime = this.m_player.GetAvailableVideoStartTime()),
             (this.m_nVideoDuration = this.m_player.GetBufferedLiveEdgeTime()),
-            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
-            this.m_nPlaybackTime >= this.m_nVideoDuration &&
-              this.m_bVideoElementPlaying &&
-              ((this.m_bVideoElementPlaying = !1), (this.m_bAtEnd = !0));
+            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime());
         }
         OnVideoEnd() {
           (this.m_bVideoElementPlaying = !1),
@@ -2419,9 +2421,8 @@
         OnSeeking() {
           (0, X.tG)("video on seeking"),
             (this.m_bVideoElementPlaying = !1),
-            this.m_nVideoDuration - this.m_nPlaybackTime < 1
-              ? (this.m_bAtEnd = !0)
-              : ((this.m_bIsWaiting = !0), (this.m_bAtEnd = !1));
+            (this.m_bIsWaiting = !0),
+            (this.m_bAtEnd = !1);
         }
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;

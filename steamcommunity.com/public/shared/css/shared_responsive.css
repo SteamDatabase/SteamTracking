@@ -353,21 +353,18 @@ html.responsive body.movescrolltocontent {
 	}
 }
 
+.responsive_header_content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 #responsive_menu_logo,
 #responsive_header_search_btn {
-	position: absolute;
-	top: 9px;
+	position: relative;
 	cursor: pointer;
 	width: 36px;
 	height: 31px;
-}
-
-#responsive_menu_logo {
-	left: 8px;
-}
-
-#responsive_header_search_btn {
-	right: 8px;
 }
 
 .responsive_header_notification_badge_ctn {
@@ -390,6 +387,18 @@ html.responsive body.movescrolltocontent {
 
 .responsive_header_notification_badge.no_notifications {
 	display: none;
+}
+
+.responsive_header_logo {
+	flex: 1;
+}
+
+.responsive_header_react_target {
+	display: contents;
+}
+
+.responsive_header_react_placeholder {
+	width: 34px;
 }
 
 .responsive_header .responsive_header_logo img {
@@ -536,7 +545,7 @@ html.responsive body.movescrolltocontent {
 @media screen and (max-width: 910px)
 {
 
-	html.responsive {
+	html.responsive .responsive_page_frame.with_header {
 		--responsive-menu-floating-height: 62px;
 	}
 
@@ -592,7 +601,7 @@ html.responsive body.movescrolltocontent {
 
 }
 
-	html.responsive.touch {
+	html.responsive.touch .responsive_page_frame.with_header {
 		--responsive-menu-floating-height: 62px;
 	}
 

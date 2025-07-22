@@ -22,6 +22,8 @@
         MenuActive: "_1u5lJbV7kBEJq4lH6V2RzL",
         SearchForm: "_1KU9eASfov1GnFQRbyLIdR",
         SearchInput: "_2tlUAG6WNyYFlk9caIiLj5",
+        SearchInputContainer: "_2AD2O_FEWy7izR8sZZjjI6",
+        ClearSearch: "_1YhdoyGYkUB4JuW0yFSbS7",
         SearchIcon: "_1Yo-ZsBr-KbVMyAMXEYszd",
         SuggestionsPosition: "HWDmfh8Td_a8zxJu6tP0h",
         InnerPosition: "SWL3uBHWmdcYwUXE9yD0y",
@@ -135,15 +137,22 @@
         SectionWithLinkColumn: "_2dL6ap-BkfhXkVntihe2KS",
         SectionContent: "wX6LdxJgqoPyuPTGpQRC0",
         LinkColumn: "_39xRzOagrnlvU_DbiDnzVW",
+        SpecialsLinkColumn: "uFo6ZH-WIdg9ODnJDbl45",
         Link: "_3xfL7u7e8rFk4XeOpKN0oC",
         HorizontalRule: "_1tOe1a5sCJUgvbHanH8BmV",
         GridSection: "_1ECtb6W4gvvCrevAbzsKq_",
         Row: "_3jXeonOfw-RB-1PDdJqSUx",
         Button: "_1vPyDoJDpPKIAmF1YMCtY0",
-        WithIcon: "_38ngLpACn1zS6vXvyaDLDM",
-        Icon: "_1-3HkXvDUXTzJg8JfSFCwI",
         Label: "_3nohIP2x4JypyTk3gtBog0",
+        Icon: "_1-3HkXvDUXTzJg8JfSFCwI",
+        WithIcon: "_38ngLpACn1zS6vXvyaDLDM",
         ViewAllLink: "_1PuyX9P-ZPobFUE_2scw0_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SpecialSectionsRight: "_221NQfJgfl3Z4c4ZQ1Ojwd",
+        SpecialSectionsLeft: "_3BIVruKhtKrpeYQkzZjahy",
       };
     },
     chunkid: (module) => {
@@ -2135,6 +2144,7 @@
           (0, _._)("#Menu_SearchBar_NoMatches"),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.memo(function () {
         const { bBackdropActive: _ } = (0, _._)(),
           _ = (0, _._)();
@@ -2186,6 +2196,15 @@
               _(_.currentTarget.value), _();
             },
             [_, _],
+          ),
+          _ = _.useCallback(() => {
+            _(""), _();
+          }, [_, _]),
+          _ = _.useCallback(
+            (_) => {
+              _(), _.preventDefault();
+            },
+            [_],
           );
         return _.createElement(
           "form",
@@ -2197,22 +2216,41 @@
             action: `${_._.STORE_BASE_URL}search`,
             onBlur: _,
           },
-          _.createElement("input", {
-            className: _.SearchInput,
-            name: "term",
-            placeholder: (0, _._)("#Menu_SearchPlaceholder"),
-            value: _,
-            autoFocus: __webpack_require__,
-            autoComplete: "off",
-            onChange: _,
-            onFocus: _,
-            onClick: _,
-            onKeyDown: _,
-            role: "combobox",
-            "aria-expanded": _,
-            "aria-autocomplete": "list",
-            "aria-controls": _ ? _ : void 0,
-          }),
+          _.createElement(
+            "div",
+            {
+              className: _.SearchInputContainer,
+            },
+            _.createElement("input", {
+              className: _.SearchInput,
+              name: "term",
+              placeholder: (0, _._)("#Menu_SearchPlaceholder"),
+              value: _,
+              autoFocus: __webpack_require__,
+              autoComplete: "off",
+              type: "text",
+              onChange: _,
+              onFocus: _,
+              onClick: _,
+              onKeyDown: _,
+              role: "combobox",
+              "aria-expanded": _,
+              "aria-autocomplete": "list",
+              "aria-controls": _ ? _ : void 0,
+            }),
+            _ &&
+              _.createElement(
+                "button",
+                {
+                  className: _.ClearSearch,
+                  type: "button",
+                  onMouseDown: _,
+                  onClick: _,
+                  "aria-label": (0, _._)("#Menu_ClearSearchTerm"),
+                },
+                _.createElement(_._, null),
+              ),
+          ),
           _.createElement(
             "button",
             {
@@ -2603,12 +2641,13 @@
         );
       }
       function _(_) {
+        const { className: _, children: __webpack_require__ } = _;
         return _.createElement(
           _._,
           {
             "flow-children": "column",
             navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _.LinkColumn,
+            className: _()(_.LinkColumn, _),
           },
           _.children,
         );
@@ -4008,6 +4047,7 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _() {
         return _.createElement(
           _,
@@ -4025,7 +4065,9 @@
       function _() {
         return _.createElement(
           _,
-          null,
+          {
+            className: _.SpecialSectionsLeft,
+          },
           _.createElement(_, {
             handle: "software",
           }),
@@ -4053,7 +4095,9 @@
       function _() {
         return _.createElement(
           _,
-          null,
+          {
+            className: _.SpecialSectionsRight,
+          },
           _.createElement(
             _,
             {
@@ -4093,10 +4137,12 @@
             null,
             _.createElement(_, {
               handle: "demos",
+              icon: _.createElement(_, null),
             }),
             _.createElement(_, {
               href: `${_._.STORE_BASE_URL}dlcforyou/`,
               name: (0, _._)("#Menu_Section_SpecialSections_DLCForYou"),
+              icon: _.createElement(_, null),
             }),
           ),
           _.createElement(
@@ -4105,10 +4151,59 @@
             _.createElement(_, {
               href: `${_._.STORE_BASE_URL}specials/`,
               name: (0, _._)("#Menu_Section_SpecialSections_SaleEvents"),
+              icon: _.createElement(_, null),
             }),
           ),
         );
       }
+      const _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              preserveAspectRatio: "xMidYMid meet",
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
+            }),
+          );
+        }),
+        _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M10.8344 3.69379C18.7351 -0.263479 28.3486 2.93369 32.306 10.8344C36.2633 18.7352 33.0661 28.3486 25.1654 32.3061C17.2646 36.2633 7.65117 33.0662 3.69373 25.1655C-0.263515 17.2647 2.93364 7.65123 10.8344 3.69379ZM20.3236 23.5307C19.7603 23.768 19.1784 23.9101 18.5961 23.9682L19.2933 30.9379C20.667 30.8009 22.0391 30.4411 23.3597 29.8422L20.3236 23.5307ZM23.4447 20.5131C22.9403 21.6077 22.1064 22.5573 20.9945 23.1967L24.0336 29.5121C26.671 28.1311 28.6404 25.9659 29.8011 23.4467L23.4447 20.5131ZM20.682 16.6567C20.0778 15.4504 18.7708 14.8291 17.5062 15.0405L17.5052 15.0395C17.2171 15.0877 16.9315 15.1802 16.6566 15.3178C15.3964 15.9491 14.7773 17.3469 15.0765 18.6625C15.0888 18.7162 15.1016 18.7701 15.1166 18.8227H15.1146C15.1651 18.9991 15.2326 19.1732 15.3177 19.3432C15.5654 19.8377 15.933 20.2313 16.3656 20.5121C16.46 20.5738 16.5583 20.6292 16.6595 20.6801C17.4756 21.0874 18.4649 21.1219 19.3431 20.6821C20.0538 20.3261 20.5589 19.7252 20.8129 19.0336C20.8344 18.9756 20.8535 18.9165 20.8715 18.8569C20.8841 18.8145 20.8958 18.7719 20.9066 18.7289C20.9133 18.7026 20.9211 18.6765 20.9271 18.6498C21.0718 17.9999 21.0034 17.2984 20.682 16.6567ZM12.0912 6.42133C9.68701 7.64774 7.82707 9.52186 6.6156 11.7241L12.7455 15.103C13.28 14.1315 14.0879 13.2978 15.1273 12.7319L12.0912 6.42133ZM15.8588 5.17426C14.8144 5.34895 13.7774 5.65575 12.7689 6.10004L15.808 12.4174C16.2033 12.2617 16.6062 12.1503 17.0121 12.0825L15.8588 5.17426Z",
+            }),
+          );
+        }),
+        _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 30 30",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
+            }),
+          );
+        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -4990,6 +5085,7 @@
             setTerm: __webpack_require__,
             openSearch: _,
             onActive: _,
+            closeSearch: _,
           } = (0, _._)(),
           _ = _.useCallback(
             (_) => {
@@ -5006,10 +5102,13 @@
                       break;
                     case "set_search_query":
                       _(), __webpack_require__(_.term), _();
+                      break;
+                    case "close_search_results":
+                      _();
                   }
               } catch (_) {}
             },
-            [_, _, __webpack_require__, _],
+            [_, _, __webpack_require__, _, _],
           );
         return (
           _.useEffect(

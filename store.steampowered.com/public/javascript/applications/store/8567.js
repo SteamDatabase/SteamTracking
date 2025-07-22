@@ -347,6 +347,7 @@
           queryFn: async () => {
             const t = a.w.Init(m),
               r = await i.GetPrivateAppList(e, t);
+            if (!r.BSuccess()) throw r.GetErrorMessage();
             return new Set(r.Body().private_apps(!0).appids());
           },
           enabled: !!b.iA.accountid,

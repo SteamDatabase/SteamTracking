@@ -886,7 +886,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_area_purchase_game_wrapper .game_area_purchase_game {
 	margin-bottom: 0px;
 }
-.game_area_purchase_game_wrapper .game_area_purchase_game p {
+.game_area_purchase_game_wrapper .game_area_purchase_game p:last-of-type {
 	margin-bottom: 8px;
 }
 .game_area_purchase_game_wrapper.bundle .bundleTag,

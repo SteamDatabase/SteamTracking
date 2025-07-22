@@ -23779,7 +23779,7 @@
         St = a.n(yt),
         Et = a(99637),
         bt = a(2160),
-        ft = a(32396),
+        ft = a(82817),
         vt = a(68212),
         wt = a(81393),
         Bt = a(30470),
@@ -42115,7 +42115,7 @@
       }
       var E = a(48479),
         b = a(2160),
-        f = a(32396),
+        f = a(82817),
         v = a(68212),
         w = a(81393),
         B = a(95034);
@@ -43930,7 +43930,14 @@
                 title: (0, h.we)("#AssetRequest_UpdateAnnouncement"),
                 bRequired: !0,
               },
-              (0, h.we)("#AssetRequest_UpdateAnnouncement_desc"),
+              (0, h.oW)(
+                "#AssetRequest_UpdateAnnouncement_desc",
+                i.createElement("a", {
+                  href:
+                    J.TS.PARTNER_BASE_URL +
+                    "doc/store/assets/promos#popup_update",
+                }),
+              ),
               Boolean(0 == G) &&
                 i.createElement(
                   "a",
@@ -49953,7 +49960,7 @@
       }
       var X = a(73744),
         Z = a(27666),
-        ee = a(32396),
+        ee = a(82817),
         te = a(68212),
         ae = a(71725),
         ne = a(22797),
@@ -53105,7 +53112,7 @@
         s = a(65946),
         l = a(90626),
         o = a(73744),
-        c = a(32396),
+        c = a(82817),
         m = a(56186),
         u = a(45737),
         d = a.n(u),
@@ -102341,7 +102348,7 @@
         d = a(28954),
         p = a(64953),
         _ = a(69343),
-        g = a(32396),
+        g = a(82817),
         h = a(64753);
       class y extends _.Vr {
         m_filesToUpload = o.sH.array();
@@ -102443,24 +102450,27 @@
           if (!o)
             return {
               bSuccess: !1,
-              strErrorMessage:
+              elErrorMessage:
                 "Invalid file extension, cannot determine mimetype",
             };
           i.append("mimetype", o);
-          let m = !1;
+          let m,
+            d = !1;
           try {
             (r = await l().post(this.m_strUploadPath, i, {
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
               cancelToken: n,
             })),
-              200 == r?.status && (m = !0);
+              200 == r?.status && 1 == r?.data.success
+                ? (d = !0)
+                : (m = r?.data?.message);
           } catch (e) {
             const t = (0, c.H)(e);
             console.log("CCloudImageUploader.UploadFile failed ", t, e),
               (r = e.response);
           }
-          return { bSuccess: m, result: r?.data };
+          return { bSuccess: d, elErrorMessage: m, result: r?.data };
         }
       }
       (0, i.Cg)([o.sH], y.prototype, "m_filesToUpload", void 0),

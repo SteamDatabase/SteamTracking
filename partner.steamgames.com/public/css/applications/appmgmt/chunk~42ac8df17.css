@@ -718,7 +718,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   font-size: 12px;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) ._3lJb_YN8uykqLcm4eG1jRF {
+  html.responsive ._3lJb_YN8uykqLcm4eG1jRF {
     font-size: 12px;
   }
 }
@@ -4791,7 +4791,7 @@ html.responsive.touch .ContentHubSalePage {
   position: relative;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) .ContentHubSalePage {
+  html.responsive .ContentHubSalePage {
     width: auto;
     position: relative;
   }
@@ -4845,7 +4845,7 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
   scrollbar-color: rgba(255, 255, 255, 0.35) rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) ._1cOoCFwafBlSkwllIMf3XM {
+  html.responsive ._1cOoCFwafBlSkwllIMf3XM {
     scrollbar-color: rgba(255, 255, 255, 0.35) rgba(0, 0, 0, 0);
   }
 }

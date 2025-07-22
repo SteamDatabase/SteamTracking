@@ -7102,8 +7102,16 @@
           "contextmenu_" + _.key,
           {
             title: _.options.title || "Menu",
-            html_class: _().ContextMenuPopup + " client_chat_frame",
-            body_class: "ContextMenuPopupBody",
+            html_class: (0, _._)(
+              _().ContextMenuPopup,
+              "client_chat_frame",
+              _.options.bStandalone && _().Standalone,
+            ),
+            popup_class: _().PopupTarget,
+            body_class: (0, _._)(
+              _().ContextMenuPopupBody,
+              "ContextMenuPopupBody",
+            ),
             replace_existing_popup: !1,
             target_browser: __webpack_require__,
             window_opener_id: _,
@@ -7833,191 +7841,159 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        m_elHover;
-        m_bNoSpace = !1;
-        static defaultProps = {
-          direction: "right",
-          nBodyAlignment: 0.5,
-          nAllowOffscreenPx: 10,
-          nBodyDistance: 8,
-          nMaxLateralMoveOnScreen: void 0,
-        };
-        state = {
-          _: void 0,
-          _: void 0,
-          hoverPositionReady: !1,
-        };
-        bindHover(_) {
-          (this.m_elHover = _ || void 0), this.positionHover();
-        }
-        componentDidUpdate() {
-          this.positionHover();
-        }
-        render() {
-          const {
+      function _(_) {
+        const {
             target: _,
-            visibilityObserver: _,
-            className: __webpack_require__,
+            visibilityObserver: __webpack_require__,
+            className: _,
             style: _,
             bEnablePointerEvents: _,
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
+            direction: _ = "right",
+            nBodyAlignment: _ = 0.5,
+            nBodyDistance: _ = 8,
+            nAllowOffscreenPx: _ = 10,
             nMaxLateralMoveOnScreen: _,
-            children: _,
             onNoSpace: _,
             bTopmost: _,
+            children: _,
             ..._
-          } = this.props;
-          let _ = Object.assign(
-              {
-                left: this.state._,
-                top: this.state._,
-              },
-              _,
-            ),
-            _ = !_ || _.visible;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().HoverPositionOuter,
-                _ && _().HoverAboveModal,
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                ..._,
-                className: (0, _._)(
-                  _().HoverPosition,
-                  _ && this.state.hoverPositionReady && _().Ready,
-                  this.m_bNoSpace && _().NoSpace,
-                  _ && _().EnablePointerEvents,
-                  __webpack_require__,
-                ),
-                style: _,
-                ref: this.bindHover,
-              },
-              _,
-            ),
-          );
-        }
-        positionHover() {
-          let _ = this.m_elHover,
-            _ = this.props.target;
-          if (!_ || !_) return;
-          if (
-            this.state.hoverPositionReady &&
-            this.props.visibilityObserver &&
-            !this.props.visibilityObserver.visible
-          )
-            return;
-          let _ = _.ownerDocument.defaultView;
-          if (!_ || _.closed) return;
-          const _ = _.querySelector(".hover_arrow.left"),
-            _ = _.querySelector(".hover_arrow.right"),
-            _ = _.querySelector(".hover_arrow.top"),
-            _ = _.querySelector(".hover_arrow.bottom"),
-            _ = _.getBoundingClientRect(),
-            _ = _.getBoundingClientRect(),
-            _ =
-              "overlay" == this.props.direction ||
-              "overlay-center" == this.props.direction;
-          _ && _.setAttribute("style", "display: none;"),
+          } = _,
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          _ = _.useCallback(() => {
+            let _ = _;
+            if (!_ || !_) return;
+            if (_ && __webpack_require__ && !__webpack_require__.visible)
+              return;
+            let _ = _.ownerDocument.defaultView;
+            if (!_ || _.closed) return;
+            const _ = _.querySelector(".hover_arrow.left"),
+              _ = _.querySelector(".hover_arrow.right"),
+              _ = _.querySelector(".hover_arrow.top"),
+              _ = _.querySelector(".hover_arrow.bottom"),
+              _ = _.getBoundingClientRect(),
+              _ = _.getBoundingClientRect(),
+              _ = "overlay" == _ || "overlay-center" == _;
             _ && _.setAttribute("style", "display: none;"),
-            _ && _.setAttribute("style", "display: none;"),
-            _ && _.setAttribute("style", "display: none;");
-          let {
-              nBodyDistance: _ = 8,
-              direction: _ = "right",
-              nBodyAlignment: _ = 0.5,
-            } = this.props,
-            {
-              nLeft: _,
-              nTop: _,
-              nOverflow: _,
-              nLateralOverflow: _,
-            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-          if (_ > (this.props.nAllowOffscreenPx ?? 10) && !_) {
-            const _ = (function (_) {
-                switch (_) {
-                  case "right":
-                    return "left";
-                  case "left":
-                    return "right";
-                  case "bottom":
-                    return "top";
-                  case "top":
-                    return "bottom";
-                  case "overlay":
-                    return "overlay";
-                  case "overlay-center":
-                    return "overlay-center";
-                }
-              })(this.props.direction ?? "right"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;");
+            let _ = _,
               {
                 nLeft: _,
                 nTop: _,
                 nOverflow: _,
                 nLateralOverflow: _,
               } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-            if (
-              (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
-              _ > (this.props.nAllowOffscreenPx ?? 10))
-            )
-              return (
-                console.log(
-                  "Not showing hover because it didn't fit in the main or alt direction",
-                ),
-                _.setAttribute("style", "display: none;"),
-                (this.m_bNoSpace = !0),
-                void (this.props.onNoSpace && this.props.onNoSpace())
-              );
-          }
-          0 === this.props.nMaxLateralMoveOnScreen ||
-            _ ||
-            ([_, _] = (function (_, _, _, _, _) {
-              let _ = Math.max(_[0], _[1]);
-              void 0 !== _ && (_ = Math.min(_, _));
-              _ = Math.max(0, _);
-              const _ = _[0] > _[1] ? _ : -_;
-              "left" === _ || "right" === _ ? (_ += _) : (_ += _);
-              return [_, _];
-            })(this.props.nMaxLateralMoveOnScreen, _, _ ?? "right", _, _));
-          let _ = null;
-          switch (_) {
-            case "left":
-              _ = _;
-              break;
-            case "right":
-              _ = _;
-              break;
-            case "top":
-              _ = _;
-              break;
-            case "bottom":
-              _ = _;
-          }
-          _ && _.setAttribute("style", ""),
-            _ != this.state._ &&
-              this.setState({
-                _: _,
-              }),
-            _ != this.state._ &&
-              this.setState({
-                _: _,
-              }),
-            this.state.hoverPositionReady ||
-              this.setState({
-                hoverPositionReady: !0,
-              });
-        }
-      };
+            if (_ > (_ ?? 10) && !_) {
+              const _ = (function (_) {
+                  switch (_) {
+                    case "right":
+                      return "left";
+                    case "left":
+                      return "right";
+                    case "bottom":
+                      return "top";
+                    case "top":
+                      return "bottom";
+                    case "overlay":
+                      return "overlay";
+                    case "overlay-center":
+                      return "overlay-center";
+                  }
+                })(_ ?? "right"),
+                {
+                  nLeft: _,
+                  nTop: __webpack_require__,
+                  nOverflow: _,
+                  nLateralOverflow: _,
+                } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+              if (
+                (_ < _ &&
+                  ((_ = _),
+                  (_ = _),
+                  (_ = __webpack_require__),
+                  (_ = _),
+                  (_ = _)),
+                _ > (_ ?? 10))
+              )
+                return (
+                  console.log(
+                    "Not showing hover because it didn't fit in the main or alt direction",
+                  ),
+                  _.setAttribute("style", "display: none;"),
+                  _(!0),
+                  void _?.()
+                );
+            }
+            0 === _ ||
+              _ ||
+              ([_, _] = (function (_, _, _, _, _) {
+                let _ = Math.max(_[0], _[1]);
+                void 0 !== _ && (_ = Math.min(_, _));
+                _ = Math.max(0, _);
+                const _ = _[0] > _[1] ? _ : -_;
+                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
+                return [_, _];
+              })(_, _, _ ?? "right", _, _));
+            let _ = null;
+            switch (_) {
+              case "left":
+                _ = _;
+                break;
+              case "right":
+                _ = _;
+                break;
+              case "top":
+                _ = _;
+                break;
+              case "bottom":
+                _ = _;
+            }
+            _ && _.setAttribute("style", ""),
+              _ != _ && _(_),
+              _ != _ && _(_),
+              _ || _(!0);
+          }, [_, _, _, __webpack_require__, _, _, _, _, _, _, _, _]);
+        _.useEffect(() => _(), [_]);
+        let _ = Object.assign(
+            {
+              left: _,
+              top: _,
+            },
+            _,
+          ),
+          _ = !__webpack_require__ || __webpack_require__.visible;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().HoverPositionOuter,
+              _ && _().HoverAboveModal,
+            ),
+          },
+          _.createElement(
+            "div",
+            {
+              ..._,
+              className: (0, _._)(
+                _().HoverPosition,
+                _ && _ && _().Ready,
+                _ && _().NoSpace,
+                _ && _().EnablePointerEvents,
+                _,
+              ),
+              style: _,
+              ref: _,
+            },
+            _,
+          ),
+        );
+      }
       function _(_, _, _, _, _, _, _) {
         const _ = _,
           _ = _;
@@ -8066,7 +8042,6 @@
       function _(_, _, _, _) {
         return Math.max(0, Math.min(1, _)) * (_ - _) + _;
       }
-      (0, _._)([_._], _.prototype, "bindHover", null), (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext({}),
@@ -16069,6 +16044,7 @@
         (0, _._)([_._], _.prototype, "language", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       !(function (_) {
         (_.topleft = "topleft"),
@@ -17033,8 +17009,7 @@
             }),
               _.bSuccess
                 ? (_.status = "success")
-                : ((_.status = "failed"),
-                  (_.message = _.strErrorMessage ?? ""));
+                : ((_.status = "failed"), (_.message = _.elErrorMessage ?? ""));
           }
           return _;
         }
@@ -17362,11 +17337,19 @@
           if (__webpack_require__ != _.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
-            return _ && "localized_image_group" == _
+            return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
               : _ + _ + "/" + _ + __webpack_require__ + _;
           }
           return _ + _ + "/" + _;
+        },
+        GetHashAndExtFromURL(_) {
+          let _ = this.GetBaseURL();
+          return _?.startsWith(_)
+            ? -1 == (_ = _.substring(_.length)).indexOf("/")
+              ? null
+              : (_ = _.substring(_.indexOf("/") + 1))
+            : null;
         },
         GenerateEditableURLFromHashAndExt(_, _, _) {
           let _ =
@@ -17408,12 +17391,13 @@
           return await this.AsyncGetImageResolutionInternal(_, _, _);
         },
         async AsyncGetImageResolutionInternal(_, _, _) {
-          let _ = {
-              success: 2,
-            },
-            _ = new Image();
+          const _ = _();
+          let _ = new Image();
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
+              const _ = {
+                success: 2,
+              };
               _ ||
                 ((_.err_msg =
                   "Load fail on url " +
@@ -17421,26 +17405,36 @@
                   " with error: " +
                   (0, _._)(_).strErrorMsg),
                 console.error(_.err_msg)),
-                (_.success = 2);
+                (_.success = 2),
+                _.resolve(_);
             }),
             (_.onload = () => {
+              const _ = {
+                success: 2,
+              };
               (_.width = _.width),
                 (_.height = _.height),
                 (0, _._)(
                   _.width > 0 && _.height > 0,
                   "unexpected image resolution discovered for strURL: " + _,
                 ),
-                (_.success = 1);
+                (_.success = 1),
+                _.resolve(_);
             }),
             (_.src = _),
-            _.token.promise.catch((_) => {
-              (_.onload = () => {}), (_.success = 52);
+            _.token.promise.catch(() => {
+              const _ = {
+                success: 2,
+              };
+              return (_.onload = () => {}), (_.success = 52), _;
             });
-          let _ = 0;
-          for (; void 0 === _.success && _ < 100; )
-            await (0, _._)(100), (_ += 1);
+          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          let _;
+          try {
+            _ = await Promise.race([_, _.promise]);
+          } catch {}
           return (
-            _ >= 100 &&
+            _ ||
               ((_.success = 16),
               (_.err_msg = "We timed out processing images")),
             _
@@ -19545,6 +19539,11 @@
             []
           );
         }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages().map((_) =>
+            _.GetHashAndExtFromURL(_),
+          );
+        }
       }
       (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
       const _ = new _();
@@ -19997,7 +19996,7 @@
               : "sale_overlay" === _
                 ? (_ = this.jsondata.localized_sale_overlay)
                 : _.includes(_)
-                  ? (_ = _.GetAllLocalizedGroupImages())
+                  ? (_ = _.GetAllLocalizedGroupImageHashAndExts())
                   : "product_banner" === _
                     ? (_ = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === _
@@ -20129,7 +20128,12 @@
           }
           return null;
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _.full) {
+        GetAppIDOrReferenceAppID() {
+          return this.appid
+            ? this.appid
+            : this.jsondata?.referenced_appids?.[0];
+        }
+        GetImageURLWithFallback(_, _, __webpack_require__ = _.full, _ = !0) {
           const _ = this.GetImageURL(_, _, __webpack_require__);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
@@ -20145,7 +20149,7 @@
               _,
               Number.MAX_VALUE,
             );
-            if (_) return _;
+            if (_ && (_ || (0, _._)(_))) return _;
             let _ = this.appid;
             if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
               if (!this.jsondata?.referenced_appids?.length)
@@ -20153,9 +20157,11 @@
               _ = this.jsondata.referenced_appids[0];
             }
             const _ = _._.Get().GetApp(_);
-            return _
-              ? _.GetAssets().GetMainCapsuleURL()
-              : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
+            return _ && _.GetAssets()
+              ? _.GetAssets()?.GetMainCapsuleURL()
+              : _?.avatar_full_url
+                ? _.avatar_full_url
+                : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
           }
           return "background" == _ &&
             _ &&
@@ -60815,11 +60821,6 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  prefilter_creators: {
-                    _: 10,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
                 },
               }),
             _.sm_m
@@ -68686,28 +68687,83 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ReportClientArgs_Notification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accessibility_desktop_ui_scale || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
                   accessibility_desktop_ui_scale: {
-                    _: 11,
+                    _: 1,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   accessibility_screen_reader_enabled: {
-                    _: 12,
+                    _: 2,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   accessibility_high_contrast_mode: {
-                    _: 13,
+                    _: 3,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   accessibility_reduce_motion: {
-                    _: 14,
+                    _: 4,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   accessibility_color_filter_name: {
-                    _: 15,
+                    _: 5,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -68748,7 +68804,7 @@
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
-          return "CClientMetrics_ReportClientArgs_Notification";
+          return "CClientMetrics_ReportAccessibilitySettings_Notification";
         }
       }
       class _ extends _.Message {
@@ -68941,6 +68997,15 @@
           (_.ReportLinuxStats = function (_, _) {
             return _.SendNotification(
               "ClientMetrics.ReportLinuxStats#1",
+              (0, _._)(_, _),
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.ReportAccessibilitySettings = function (_, _) {
+            return _.SendNotification(
+              "ClientMetrics.ReportAccessibilitySettings#1",
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
@@ -71434,7 +71499,6 @@
       let _ = class extends _.Component {
         static contextType = _;
         m_navRef = (0, _._)();
-        m_divRef = _.createRef();
         get instance() {
           return this.context.instance;
         }
@@ -71471,6 +71535,8 @@
             footer: _,
             role: _ = "menu",
             labelId: _,
+            style: _ = {},
+            refScrollable: _,
             ..._
           } = this.props;
           const _ = this.context.styles ?? _();
@@ -71479,8 +71545,9 @@
             return _.createElement(
               "div",
               {
+                ref: _,
+                style: _,
                 ..._,
-                ref: this.m_divRef,
                 className: (0, _._)(
                   {
                     [_.contextMenuContents]: !0,
@@ -71496,64 +71563,65 @@
             const _ = () => {
               _ && _(), this.instance.Hide();
             };
-            return _.createElement(
-              _._,
-              {
-                ..._,
-                className: (0, _._)(
-                  _.contextMenuContents,
-                  {
-                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                  },
-                  _,
-                ),
-                "flow-children": "column",
-                onMoveLeft: this.HideIfSubmenu,
-                onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
-                style: {
-                  overflowY: this.instance.BIsSubMenuVisible()
-                    ? "hidden"
-                    : void 0,
-                },
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                navRef: this.m_navRef,
-                ref: this.m_divRef,
-                role: _,
-                "aria-labelledby": __webpack_require__ ? _ : void 0,
-                ..._,
-              },
-              _,
-              __webpack_require__ &&
-                _.createElement(
-                  "div",
-                  {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                  },
-                  __webpack_require__,
-                ),
-              !this.instance.BIsSubMenu() &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, null),
-                  _.createElement(
-                    _,
+            return (
+              (_.overflowY = this.instance.BIsSubMenuVisible()
+                ? "hidden"
+                : void 0),
+              _.createElement(
+                _._,
+                {
+                  ..._,
+                  className: (0, _._)(
+                    _.contextMenuContents,
                     {
-                      className: _.Cancel,
-                      onSelected: _,
+                      [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
                     },
-                    (0, _._)(_),
+                    _,
                   ),
-                  _,
-                ),
-              this.instance.BIsSubMenuVisible() &&
-                _.createElement("div", {
-                  className: _.contextMenuFade,
-                  onClick: () => this.instance.HideSubMenu(),
-                }),
+                  "flow-children": "column",
+                  onMoveLeft: this.HideIfSubmenu,
+                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : _,
+                  style: _,
+                  navEntryPreferPosition: _._.PREFERRED_CHILD,
+                  navRef: this.m_navRef,
+                  ref: _,
+                  role: _,
+                  "aria-labelledby": __webpack_require__ ? _ : void 0,
+                  ..._,
+                },
+                _,
+                __webpack_require__ &&
+                  _.createElement(
+                    "div",
+                    {
+                      _: _,
+                      style: {
+                        display: "none",
+                      },
+                    },
+                    __webpack_require__,
+                  ),
+                !this.instance.BIsSubMenu() &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(_, null),
+                    _.createElement(
+                      _,
+                      {
+                        className: _.Cancel,
+                        onSelected: _,
+                      },
+                      (0, _._)(_),
+                    ),
+                    _,
+                  ),
+                this.instance.BIsSubMenuVisible() &&
+                  _.createElement("div", {
+                    className: _.contextMenuFade,
+                    onClick: () => this.instance.HideSubMenu(),
+                  }),
+              )
             );
           }
         }
@@ -71992,9 +72060,6 @@
                 _.menuRight &&
                   (_.menuRight +=
                     _.document.body.clientWidth - _.scrollX - _.innerWidth)),
-            _.menuWidth &&
-              window.matchMedia("(prefers-contrast: more)").matches &&
-              (_.menuWidth += 1),
             (_ ||
               _.menuLeft !== this.state.menuLeft ||
               _.menuRight !== this.state.menuRight ||
@@ -72026,12 +72091,12 @@
               _?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
                 this.state.menuTop,
-                _,
+                _ ?? !0,
               ),
               void _?.SteamClient.Window.ResizeTo(
                 this.state.menuWidth,
                 this.state.menuHeight,
-                _,
+                _ ?? !0,
               )
             );
           }
@@ -72095,7 +72160,9 @@
             (this.props.options.bCreateHidden ||
               (this.props.instance.visible && this.state.ready)) &&
               (_ += " visible"),
+            this.props.instance.visible && this.state.ready && (_ += " ready"),
             (_ += " " + _().ContextMenuPosition),
+            this.props.options.bStandalone && (_ += " " + _().Standalone),
             _.createElement(
               "div",
               {

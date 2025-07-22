@@ -62,7 +62,7 @@ html.responsive.touch ._1uSw_aqus0W7yb3vT9_-22 {
   display: none;
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) ._1uSw_aqus0W7yb3vT9_-22 {
+  html.responsive ._1uSw_aqus0W7yb3vT9_-22 {
     display: none;
   }
 }

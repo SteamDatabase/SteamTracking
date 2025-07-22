@@ -2517,11 +2517,11 @@
         }
       }
       (_.k_strPersonaNameCooldownSupportURL =
-        "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+        "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (_.k_strProfileSummaryCooldownSupportURL =
-          "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+          "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (_.k_strAvatarCooldownSupportURL =
-          "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+          "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (_.k_strNameFilteredSupportURL =
           "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415"),
         (0, _._)([_._], _.prototype, "m_strPersonaName", void 0),

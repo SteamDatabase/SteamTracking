@@ -4579,3 +4579,59 @@ select#package_included_app_list > option[disabled] {
 .store_localization_download_format_select {
 	width: 60px;
 }
+
+.image_type_section {
+	display: flex;
+	align-items: start;
+}
+
+.image_language_col {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	row-gap: 5px;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.image_grid_row {
+	display: contents;
+
+}
+
+.image_grid_col {
+	background-color: #23262E;
+	padding: 5px;
+}
+
+.image_grid_col:last-child {
+	text-align: right;
+}
+
+.image_preview_col {
+	max-width: 50%;
+	margin-right: 20px;
+}
+
+.image_preview_col > img {
+	max-width: 100%;
+}
+
+.image_preview_badge {
+	padding: 2px 4px;
+	border-radius: 3px;
+	margin-left: 3px;
+	color: #000000;
+	font-size: 12px;
+}
+
+.image_preview_badge.newasset {
+	background: #22e640;
+}
+
+.image_preview_badge.old {
+	background: #e3dfa2;
+}
+
+.image_preview_badge.warning {
+	background: #e67122;
+}

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9915127";
+var CLSTAMP = "9919064";
 (() => {
   var e,
     t,
@@ -100,9 +100,9 @@ var CLSTAMP = "9915127";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      29283: (e, t, n) => {
+      96236: (e, t, n) => {
         "use strict";
-        n(19063);
+        n(97543);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -151,18 +151,18 @@ var CLSTAMP = "9915127";
         function l(e = o) {
           const t = {},
             n = m("config", e);
-          n && (delete n.SESSIONID, Object.assign(f, n), (t.config = !0));
+          n && (delete n.SESSIONID, Object.assign(g, n), (t.config = !0));
           const s = m("userinfo", e);
           s &&
-            (Object.assign(g, s),
+            (Object.assign(f, s),
             (t.userConfig = !0),
-            g.is_support &&
+            f.is_support &&
               (function () {
                 let e = null;
                 a() && (e = r(p));
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
-              (g.is_support = !1));
+              (f.is_support = !1));
           const i = m("broadcast", e);
           i && (Object.assign(E, i), (t.broadcastConfig = !0));
           const c = m("community", e);
@@ -203,7 +203,7 @@ var CLSTAMP = "9915127";
             } catch (e) {
               console.error(
                 "Failed to parse config for " +
-                  g.steamid +
+                  f.steamid +
                   " (" +
                   window.location.href +
                   ")",
@@ -213,7 +213,7 @@ var CLSTAMP = "9915127";
           else n && console.error("Missing config element #", t);
         }
         const p = "presentation_mode";
-        const f = {
+        const g = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -285,7 +285,7 @@ var CLSTAMP = "9915127";
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
         };
-        const g = {
+        const f = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -385,8 +385,8 @@ var CLSTAMP = "9915127";
           }
           BClientAccountMatches() {
             return (
-              !g.logged_in ||
-              g.accountid == this.m_connection.ClientInfo.unAccountID
+              !f.logged_in ||
+              f.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
           GenericEResultCall(e, t = !1) {
@@ -449,8 +449,8 @@ var CLSTAMP = "9915127";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             let n = Object.assign({}, e, {
-              universe: f.EUNIVERSE,
-              accountid: g.accountid,
+              universe: g.EUNIVERSE,
+              accountid: f.accountid,
             });
             void 0 !== t && (n.sequenceid = t);
             try {
@@ -1026,9 +1026,9 @@ var CLSTAMP = "9915127";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(A(f.LANGUAGE)),
-              (f.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != f.LANGUAGE && t.push(A(e.value));
+              (t.push(A(g.LANGUAGE)),
+              (g.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != g.LANGUAGE && t.push(A(e.value));
               }),
               e)
             ) {
@@ -1064,7 +1064,7 @@ var CLSTAMP = "9915127";
               n ||
               X.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${f.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                  `Unable to find localization token '${e}' for language '${g.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
                 { bIncludeMessageInIdentifier: !0 },
               );
@@ -1076,7 +1076,7 @@ var CLSTAMP = "9915127";
           }
           static GetTokenWithFallback(e) {
             if (!e) return "";
-            const t = A(f.LANGUAGE),
+            const t = A(g.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
             const s = X.GetELanguageFallback(t),
@@ -1160,9 +1160,9 @@ var CLSTAMP = "9915127";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == f.WEB_UNIVERSE
+                "public" == g.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${f.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${g.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -1206,10 +1206,10 @@ var CLSTAMP = "9915127";
                       : re.A.UZERO);
           }
           static InitFromAccountID(e) {
-            return new ae(Number(e), f.EUNIVERSE, 1, 1);
+            return new ae(Number(e), g.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ae(Number(e), f.EUNIVERSE, 7, 0);
+            return new ae(Number(e), g.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1426,20 +1426,20 @@ var CLSTAMP = "9915127";
               if (n) {
                 if (e) {
                   let n = function (s) {
-                    let i = f.COMMUNITY_BASE_URL.replace(
+                    let i = g.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
                     s.source == t &&
                       "FriendsUIReady" == s.data &&
                       s.origin == i &&
-                      (t.postMessage(e, f.COMMUNITY_BASE_URL),
+                      (t.postMessage(e, g.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", n));
                   };
                   window.addEventListener("message", n);
                 }
-                t.location.href = f.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, f.COMMUNITY_BASE_URL);
+                t.location.href = g.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, g.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -1519,7 +1519,7 @@ var CLSTAMP = "9915127";
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              n = (f.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              n = (g.COMMUNITY_BASE_URL, this.IsMobileDevice()),
               i = "inviteButton inviteButtonJoinChat";
             return (
               t.BIsVoiceChatInvite() && (i += " inviteButtonJoinVoice"),
@@ -1713,7 +1713,7 @@ var CLSTAMP = "9915127";
                     s ? {} : n(48516)(`./friendsui_${t}.json`),
                   ]);
                 te.AddTokens({ ...i, ...r }, { ...a, ...o });
-              })(f.LANGUAGE),
+              })(g.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".ChatReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -1726,7 +1726,7 @@ var CLSTAMP = "9915127";
               })();
           });
       },
-      19063: (e, t, n) => {
+      97543: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1959,18 +1959,18 @@ var CLSTAMP = "9915127";
       {
         43: "2d1569711644a97b27c9",
         762: "2019df6784866b26b05b",
-        976: "ee1f9ab89308f5806780",
-        1225: "01791287b28c146025e6",
-        1449: "35d5068388235afaa845",
+        976: "781c35e9dafae83a1b5c",
+        1225: "a0ed0a28affac123f2f7",
+        1449: "162b996067a440a1b4ba",
         1499: "cefa656df7e2d6ae84d6",
-        1973: "d4aef0a67540d9bf902b",
-        2256: "3db32a571412f85bfc8b",
-        2320: "1cf1b5b8ab726f9e289b",
-        2435: "5716959ec4c9a1e82a6b",
-        2632: "0e0bded2cba29bb36f27",
-        2749: "a94062d4fdf4738c1650",
-        2945: "dd03b7d733838961d056",
-        2954: "212bd71dee90059cae7f",
+        1973: "2e0726294b617ce61e39",
+        2256: "f9e0009c39c3622b034c",
+        2320: "3f01dd8ef342a8fa5bdd",
+        2435: "abb533fd4c7195e94b70",
+        2632: "375f61c96d79231816d3",
+        2749: "2a95d55dc74ef504c634",
+        2945: "93322acb94769e3d43b6",
+        2954: "4a7db47a632643a0e223",
         3e3: "6004590238b9f5880c3d",
         3016: "2448400178e0f135048c",
         3232: "fb96857b792f2a5908cd",
@@ -1978,45 +1978,45 @@ var CLSTAMP = "9915127";
         3485: "9330bbb64afbf14bd78d",
         3710: "357f6ded3ff9007f8dcb",
         3789: "3ed5874917cade6fd27a",
-        3912: "0efeb479bde61435618b",
+        3912: "4c6cc41e81003e1edd6b",
         4154: "80963e36fe1168a8df1c",
         4302: "007fb103f98af096e099",
         4434: "b2f6555748a2890bd101",
         4488: "ce0c6462dbb2bd38582a",
         4776: "532ef2d0a4fb7ad695c8",
         4787: "8481349b6c1cb4d4de38",
-        5018: "53df0339d5ac35a7fefb",
-        5110: "ba0b8a9f35a65936e378",
-        5241: "f825ac18d318af7d4106",
+        5018: "9d4583d1e2b61ef7db0a",
+        5110: "ce420d2b377219e1d175",
+        5241: "bc569ac27e4f8869e505",
         5341: "5fb4b098cadd2d7e9fad",
         5480: "ded8c56b48a39dd15fe5",
-        6031: "3a08c4747591a4f9de51",
+        6031: "8917d0479d91968532ac",
         6127: "4bdce6fd99ff19efdafe",
-        6149: "664191e95207dc8a901a",
-        6165: "09185f14ddac56d69205",
-        6208: "0d34a6d96441feabe62e",
-        6239: "6db5d3144a1acad50675",
+        6149: "adccd330308a0b4a0db6",
+        6165: "6d9dc328dcb8ad45231a",
+        6208: "e61d3df987a711d36b2c",
+        6239: "5a91dca6715418022f57",
         6385: "1395ba0fd8ffe41f5b5a",
         6518: "8cd538c22d2143bbefe7",
-        6523: "91d2216e84447216b452",
-        6562: "195ea5c94755f128ee5c",
+        6523: "691e20d1fa1cf9839b54",
+        6562: "4b77c8279856853b4dad",
         6609: "65a39cd9ab90302d6588",
         6888: "862e8c49b5e66a6e4cfc",
-        6971: "fc3da740355d9cf99aa5",
+        6971: "2c83c705da0385ecfe8a",
         7487: "9de4d810b40e23e73b26",
-        7539: "48c039250c988997161a",
-        7591: "befd0114307a53e5940e",
-        7786: "74553c518b8bf200303c",
+        7539: "eae25dff3ee4f62930db",
+        7591: "9ecec30d1993398a83e8",
+        7786: "675416daebbf020e35d9",
         7861: "f4bcb59387c8bf41af1d",
-        8025: "8538ace319af3b3c6c10",
+        8025: "574e56126ae79fee247b",
         8194: "2a96bd8606a182431ba6",
-        8306: "96a89d7e26ca7edbd734",
+        8306: "ac0aa90cb28dc9610da7",
         8759: "58acff5edc9bd067e5b3",
         8766: "e77af3c6267c9fbc33ce",
-        8967: "50a036fad8506178e6c9",
+        8967: "74cb7788998467974155",
         9027: "ea9c7d7754fa995b186c",
-        9152: "21fd0b4bd6c1253012ec",
-        9712: "16d30a2ab7f649b51026",
+        9152: "560df4a1b9131bb9a84d",
+        9712: "5944b0b87c03f78e565e",
         9746: "b2d5ee0df27ec7fc5f3d",
         9808: "2236518d6c984fd37a4f",
       }[e]),
@@ -2155,6 +2155,6 @@ var CLSTAMP = "9915127";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(29283));
+  var c = o.O(void 0, [1068], () => o(96236));
   c = o.O(c);
 })();

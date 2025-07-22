@@ -1451,6 +1451,7 @@ function UpdateActiveFilters()
 	}
 
 	// language
+	var selectedLanguage = $J('input[name="review_language"]:checked').val();
 	if ( $J( "#review_language_mine" ).attr( "checked" ) )
 	{
 		bAnyActiveFilters = true;
@@ -1462,6 +1463,12 @@ function UpdateActiveFilters()
 		bAnyActiveFilters = true;
 		$J( "#reviews_filter_language" ).show();
 		$J( "#reviews_filter_language" ).text( 'Simplified Chinese' );
+	}
+	else if ( selectedLanguage != 'all' )
+	{
+		$J( "#reviews_filter_language" ).show();
+		var strDisplay = $J('input[name="review_language"]:checked').data( 'language' );
+		$J( "#reviews_filter_language" ).text( strDisplay );
 	}
 	else
 	{

@@ -1162,24 +1162,29 @@
               ),
               void this.ContinueSeek()
             );
-          if (!_ || 200 != _.status)
-            return (
-              this.m_stats.LogSegmentDownloadFailure(_, _ ? _.status : 444),
-              _ - _ > 9e3
-                ? ((0, _._)(
+          if (!_ || 200 != _.status) {
+            this.m_stats.LogSegmentDownloadFailure(_, _ ? _.status : 444);
+            let _ = 500;
+            if (_ - _ > 9e3) {
+              if (this.m_callbacks.GetTimeoutAfterFailedDownload())
+                return (
+                  (0, _._)(
                     `${this.GetDebugName()} HTTP download failed.. stopping loader: ${_ - _}ms`,
                   ),
-                  void this.DownloadFailed())
-                : 410 == _
-                  ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                    (0, _._)(
-                      `${this.GetDebugName()} HTTP download gone.. informing the player: ${_ - _}ms`,
-                    ),
-                    void this.DownloadGone())
-                  : void this.m_schNextDownload.Schedule(500, () =>
-                      this.DownloadSegment(_, _, _, _, _),
-                    )
-            );
+                  void this.DownloadFailed()
+                );
+              _ = 3e3;
+            }
+            return 410 == _
+              ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                (0, _._)(
+                  `${this.GetDebugName()} HTTP download gone.. informing the player: ${_ - _}ms`,
+                ),
+                void this.DownloadGone())
+              : void this.m_schNextDownload.Schedule(_, () =>
+                  this.DownloadSegment(_, _, _, _, _),
+                );
+          }
           this.m_nNumConsecutiveDownloadGones = 0;
           let _ = new Uint8Array(_.data);
           if (-1 == _) this.m_mapInitSegments.set(_.strID, _);
@@ -1467,6 +1472,7 @@
         m_strMPD = "";
         m_strHLS = "";
         m_strCDNAuthURLParameters = null;
+        m_bTimeoutAfterFailedDownload = !0;
         m_schUpdateMPD = new _._();
         m_xhrUpdateMPD;
         m_mpd;
@@ -1500,6 +1506,7 @@
         m_schFirstFrameThrottler = new _._();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new _._();
+        m_watchedIntervals = new _();
         constructor(_) {
           (0, _._)(this),
             (this.m_elVideo = _),
@@ -1514,8 +1521,18 @@
         GetMPDURL() {
           return this.m_strMPD;
         }
+        GetHLSURL() {
+          return this.m_strHLS;
+        }
+        IsPlayingHLS() {
+          return this.m_bUseHLSManifest;
+        }
+        SetTimeoutAfterFailedDownload(_) {
+          this.m_bTimeoutAfterFailedDownload = _;
+        }
         async PlayMPD(_, _, _, _) {
-          (this.m_strMPD = _),
+          this.m_stats.StartingPlayback(),
+            (this.m_strMPD = _),
             (this.m_strHLS = _),
             (this.m_strCDNAuthURLParameters = _);
           let _ = await this.DownloadMPD();
@@ -1576,6 +1593,7 @@
                   this.UpdateMPD,
                 ),
               this.CalcVideoStartRelativeToSystemClock(_.headers.date)),
+            this.IsLiveContent() || this.m_watchedIntervals.Enable(),
             this.m_bUseHLSManifest)
           )
             return (
@@ -1589,6 +1607,31 @@
                 document,
                 "visibilitychange",
                 this.OnVisibilityChangeForHLS,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "canplay",
+                this.OnVideoCanPlayHLS,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "play",
+                this.OnVideoPlay,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "seeking",
+                this.OnVideoSeeking,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "seeked",
+                this.OnVideoSeeked,
+              ),
+              this.m_listeners.AddEventListener(
+                this.m_elVideo,
+                "pause",
+                this.OnVideoPause,
               ),
               void this.m_listeners.AddEventListener(
                 this.m_elVideo,
@@ -1658,7 +1701,14 @@
             (this.m_elVideo.src = this.m_strHLS);
         }
         OnEndedForHLS() {
-          this.m_bUseHLSManifest && this.DispatchEvent("valve-ended");
+          this.m_bUseHLSManifest &&
+            (this.m_watchedIntervals.OnEnded(this.m_elVideo),
+            this.DispatchEvent("valve-ended"));
+        }
+        EndPlayback() {
+          this.Pause(),
+            this.m_watchedIntervals.OnEnded(this.m_elVideo),
+            this.DispatchEvent("valve-ended");
         }
         Close() {
           if (
@@ -1695,7 +1745,8 @@
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
-            (this.m_nLastPlaytimeLoaders = 0);
+            (this.m_nLastPlaytimeLoaders = 0),
+            this.m_watchedIntervals.Clear();
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
@@ -1862,7 +1913,17 @@
             this.m_listeners.AddEventListener(
               this.m_elVideo,
               "play",
-              this.OnPlayAction,
+              this.OnVideoPlay,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "seeking",
+              this.OnVideoSeeking,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "seeked",
+              this.OnVideoSeeked,
             ),
             (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
             (this.m_resizeObserver = (0, _._)(
@@ -1900,8 +1961,7 @@
               (0, _._)(
                 `pausing playback due to OnVideoWaiting (endTime=${this.m_mpd.GetEndTime()}, currentPlaytime=${this.GetCurrentPlayTime()} )`,
               ),
-              this.Pause(),
-              void this.DispatchEvent("valve-ended")
+              void this.EndPlayback()
             );
           if (
             !this.BIsPlayerBufferedBetween(
@@ -1939,6 +1999,8 @@
                 this.m_rgLoaders,
                 this.m_elVideo,
               ),
+              (this.m_bIsBuffering = !0),
+              this.DispatchEvent("valve-bufferupdate"),
               null === this.m_videoRepSelected)
             ) {
               let _ = !0,
@@ -1976,9 +2038,11 @@
           }
         }
         OnVideoPause(_) {
-          this.OnVideoBufferProgress(),
+          this.m_bUseHLSManifest ||
+            (this.OnVideoBufferProgress(),
             this.m_stats.GetFPSMonitor().Close(),
-            this.SendUpdateToBookmarkServiceIfNeeded();
+            this.SendUpdateToBookmarkServiceIfNeeded()),
+            this.m_watchedIntervals.OnPause(this.m_elVideo);
         }
         OnVideoResize(_) {
           this.m_stats.GetFPSMonitor().SetWindowResized();
@@ -1988,8 +2052,11 @@
         }
         OnVideoCanPlay(_) {
           this.m_bIsBuffering ||
-            (this.m_bUserPlayChoice && this.PlayOnElement(),
-            this.m_stats.LogVideoOnCanPlay(_));
+            (this.m_bUserPlayChoice && this.PlayOnElement()),
+            this.m_stats.LogVideoOnCanPlay();
+        }
+        OnVideoCanPlayHLS() {
+          this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
           if (this.m_seekingToTime) {
@@ -2052,7 +2119,7 @@
           } else {
             const _ = this.GetAvailableVideoStartTime(),
               _ = this.GetBufferedLiveEdgeTime() - _;
-            this.GetCurrentPlayTime() - _ >= _ && this.Pause();
+            this.GetCurrentPlayTime() - _ >= _ && this.EndPlayback();
           }
         }
         SetBookmarkAdapter(_) {
@@ -2079,13 +2146,21 @@
         GetCurrentTimedTextRepresentation() {
           return this.m_timedTextRepSelected;
         }
-        OnPlayAction() {
-          this.SendUpdateToBookmarkServiceIfNeeded(),
+        OnVideoPlay() {
+          this.m_bUseHLSManifest ||
+            (this.SendUpdateToBookmarkServiceIfNeeded(),
             this.m_stats
               .GetFPSMonitor()
               .StartTracking(() =>
                 this.m_stats.ExtractFrameInfo(this.m_elVideo),
-              );
+              )),
+            this.m_watchedIntervals.OnPlay(this.m_elVideo);
+        }
+        OnVideoSeeking() {
+          this.m_watchedIntervals.OnSeeking(this.m_elVideo);
+        }
+        OnVideoSeeked() {
+          this.m_watchedIntervals.OnSeeked(this.m_elVideo);
         }
         BIsPlayerBufferedBetween(_, _) {
           return (
@@ -2152,6 +2227,9 @@
         }
         GetPlaybackRate() {
           return this.m_elVideo.paused ? 0 : this.m_elVideo.playbackRate;
+        }
+        GetTimeoutAfterFailedDownload() {
+          return this.m_bTimeoutAfterFailedDownload;
         }
         GetCDNAuthURLParameter() {
           return this.m_strCDNAuthURLParameters;
@@ -2489,6 +2567,13 @@
         GetDASHPlayerStats() {
           return this.m_stats;
         }
+        GetAndCloseWatchedIntervals() {
+          return (
+            this.m_elVideo &&
+              this.m_watchedIntervals.CloseCurrentInterval(this.m_elVideo),
+            this.m_watchedIntervals.GetIntervals()
+          );
+        }
         ReportPlayerStats() {
           this.m_stats.ReportPlayerStats(this.m_rgLoaders, this.m_elVideo),
             this.m_schReportPlayerTrigger.Schedule(3e5, this.ReportPlayerStats);
@@ -2570,7 +2655,8 @@
                 this.m_videoRepSelected.strID == _.strID) ||
                 ((this.m_videoRepSelected = _),
                 __webpack_require__.ChangeRepresentation(_, !0),
-                this.Seek(this.GetCurrentPlayTime())));
+                this.Seek(this.GetCurrentPlayTime()),
+                this.m_stats.MarkAtLeastOneUserRepresentation()));
           }
           _ && (this.m_videoRepSelected = null);
         }
@@ -2611,6 +2697,7 @@
         (0, _._)([_._], _.prototype, "OnVideoResize", null),
         (0, _._)([_._], _.prototype, "OnVideoError", null),
         (0, _._)([_._], _.prototype, "OnVideoCanPlay", null),
+        (0, _._)([_._], _.prototype, "OnVideoCanPlayHLS", null),
         (0, _._)([_._], _.prototype, "GetCurrentPlayTime", null),
         (0, _._)([_._], _.prototype, "GetBufferedEndTime", null),
         (0, _._)([_._], _.prototype, "OnVideoTimeUpdate", null),
@@ -2620,8 +2707,11 @@
           "SendUpdateToBookmarkServiceIfNeeded",
           null,
         ),
-        (0, _._)([_._], _.prototype, "OnPlayAction", null),
+        (0, _._)([_._], _.prototype, "OnVideoPlay", null),
+        (0, _._)([_._], _.prototype, "OnVideoSeeking", null),
+        (0, _._)([_._], _.prototype, "OnVideoSeeked", null),
         (0, _._)([_._], _.prototype, "GetPlaybackRate", null),
+        (0, _._)([_._], _.prototype, "GetTimeoutAfterFailedDownload", null),
         (0, _._)([_._], _.prototype, "GetCDNAuthURLParameter", null),
         (0, _._)([_._], _.prototype, "OnSegmentDownloaded", null),
         (0, _._)([_._], _.prototype, "OnSegmentBuffered", null),
@@ -2638,6 +2728,69 @@
         ),
         (0, _._)([_._], _.prototype, "ReportPlayerStats", null),
         (0, _._)([_._.bound], _.prototype, "CaptureStatsForDisplay", null);
+      class _ {
+        m_bEnabled = !1;
+        m_rgIntervals = [];
+        m_nWatchStart = void 0;
+        Enable() {
+          this.m_bEnabled = !0;
+        }
+        GetIntervals() {
+          return this.m_rgIntervals;
+        }
+        CloseCurrentInterval(_) {
+          this.StopInterval(_);
+        }
+        Clear() {
+          (this.m_bEnabled = !1),
+            (this.m_rgIntervals = []),
+            (this.m_nWatchStart = void 0);
+        }
+        OnPlay(_) {
+          this.StartInterval(_);
+        }
+        OnPause(_) {
+          this.StopInterval(_);
+        }
+        OnSeeking(_) {
+          this.StopInterval(_);
+        }
+        OnSeeked(_) {
+          _.paused || this.StartInterval(_);
+        }
+        OnEnded(_) {
+          this.StopInterval(_);
+        }
+        StartInterval(_) {
+          this.m_bEnabled &&
+            void 0 === this.m_nWatchStart &&
+            (this.m_nWatchStart = _.currentTime);
+        }
+        StopInterval(_) {
+          if (!this.m_bEnabled || void 0 === this.m_nWatchStart) return;
+          let _ = _.currentTime;
+          this.MergeInterval([this.m_nWatchStart, _]),
+            (this.m_nWatchStart = void 0);
+        }
+        MergeInterval(_) {
+          let _;
+          for (
+            _[0] = Math.floor(_[0]), _[1] = Math.ceil(_[1]), _ = 0;
+            _ < this.m_rgIntervals.length &&
+            !(_[0] <= this.m_rgIntervals[_][1]);
+            _++
+          );
+          let _,
+            [_, _] = _;
+          for (_ = _; _ < this.m_rgIntervals.length; _++) {
+            let _ = this.m_rgIntervals[_];
+            if (_[0] > _) break;
+            (_ = Math.min(_, _[0])), (_ = Math.max(_, _[1]));
+          }
+          let _ = _ - _;
+          this.m_rgIntervals.splice(_, _, [_, _]);
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2713,10 +2866,10 @@
         m_strEventLogLink = "";
         m_allTimeSnapshot = new _(0);
         m_rgSnapShots = new Array(new _(0));
+        m_bAtLeastOneUserRepresentation = !1;
         m_videoResolution = 0;
         m_audioRate = 0;
         m_audioChannel = 0;
-        m_frameRate = 0;
         m_strBufferingVideoResolution = "0x0@0";
         m_nPlaybackVideoResolution = 0;
         m_strPlaybackVideoResolution = "0x0";
@@ -2734,10 +2887,14 @@
         m_audioBufferedRanges = null;
         m_nSegmentDurationMS = 0;
         m_nPlaybackRate = 0;
+        m_nPerfTimeCreated = 0;
         m_nTimeToFirstFrameMS = -1;
         m_fpsMonitor = new _();
         constructor() {
           (0, _._)(this);
+        }
+        StartingPlayback() {
+          this.m_nPerfTimeCreated = performance.now();
         }
         GetBytesReceivedToDisplay() {
           return (0, _._)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -2912,24 +3069,25 @@
               this.m_rgSnapShots.length - 1
             ].m_nInitialVideoResolution = _)),
             (this.m_strBufferingVideoResolution = _ + "x" + _ + "@" + _),
-            (this.m_videoResolution = _),
-            (this.m_frameRate = _);
+            (this.m_videoResolution = _);
         }
         SetRepresentation(_) {
-          _ &&
-            (_.nAudioSamplingRate
-              ? ((this.m_audioRate = Math.round(_.nBandwidth / 1e3)),
+          if (_) {
+            if (_.nAudioSamplingRate)
+              (this.m_audioRate = Math.round(_.nBandwidth / 1e3)),
                 (this.m_audioChannel = _.nAudioChannels),
-                (this.m_nAudioBandwidth = _.nBandwidth))
-              : _.nFrameRate &&
-                (this.SetVideoPlaybackResolution(
-                  _.nWidth,
-                  _.nHeight,
-                  _.nFrameRate,
-                ),
-                (this.m_nVideoBandwidth = _.nBandwidth)),
-            (this.m_nBandwidthRequired =
-              this.m_nAudioBandwidth + this.m_nVideoBandwidth));
+                (this.m_nAudioBandwidth = _.nBandwidth);
+            else if (_.nWidth) {
+              let _ = _.nFrameRate || 0;
+              this.SetVideoPlaybackResolution(_.nWidth, _.nHeight, _),
+                (this.m_nVideoBandwidth = _.nBandwidth || 0);
+            }
+            this.m_nBandwidthRequired =
+              this.m_nAudioBandwidth + this.m_nVideoBandwidth;
+          }
+        }
+        MarkAtLeastOneUserRepresentation() {
+          this.m_bAtLeastOneUserRepresentation = !0;
         }
         SetCurrentVideoBandwidth(_) {
           this.m_nCurBandwidthVideo = _;
@@ -2987,22 +3145,25 @@
             this.LogDownload(0, _);
         }
         LogVideoError(_) {}
-        LogVideoOnCanPlay(_) {
+        LogVideoOnCanPlay() {
           -1 === this.m_nTimeToFirstFrameMS &&
-            (this.m_nTimeToFirstFrameMS =
-              Date.now() - this.m_allTimeSnapshot.m_timeMS);
+            (this.m_nTimeToFirstFrameMS = Math.ceil(
+              performance.now() - this.m_nPerfTimeCreated,
+            ));
         }
         LogErrorEvent(_, _) {}
         ReportVideoStalled(_, _) {
-          if (0 == this.m_strStalledLink.length) return;
+          if (
+            ((this.m_allTimeSnapshot.m_nStallEvents += 1),
+            0 == this.m_strStalledLink.length)
+          )
+            return;
           let _ = this.FindBehindSegmentLoader(_, _);
           if (!_)
             return void (0, _._)(
               "DASHStats: Did not find any audio or video loaders",
             );
-          (this.m_allTimeSnapshot.m_nStallEvents += 1),
-            (this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents +=
-              1);
+          this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents += 1;
           let _ = new _();
           this.GatherCommonStats(
             _,
@@ -3138,6 +3299,23 @@
             ),
             this.CreateNewEmptySnapshot(_.videoHeight),
             this.SendReportToServer(_, this.m_strStatsLink);
+        }
+        GetPlayerStatsSummary() {
+          return {
+            nTimeToFirstFrameMS: this.m_nTimeToFirstFrameMS,
+            nBytesReceived: this.m_allTimeSnapshot.m_nBytesReceived,
+            nAvgBandwidthBitSec: Math.round(
+              this.m_allTimeSnapshot.GetAverageBandwidth(),
+            ),
+            nAvgSegmentDownloadMS: Math.ceil(
+              this.m_allTimeSnapshot.GetAverageDownloadTime(),
+            ),
+            nFailedSegmentDownloads: this.m_allTimeSnapshot.m_nFailedSegments,
+            nPlaybackStalls: this.m_allTimeSnapshot.m_nStallEvents,
+            nFramesDropped: this.m_allTimeSnapshot.m_nFramesDropped,
+            nLastVideoHeight: this.m_videoResolution,
+            bUserSelectedRepresentation: this.m_bAtLeastOneUserRepresentation,
+          };
         }
         async SendReportToServer(_, _) {
           let _ = new URL(_),

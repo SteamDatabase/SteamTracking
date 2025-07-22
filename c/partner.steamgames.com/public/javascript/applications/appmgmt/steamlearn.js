@@ -17820,6 +17820,21 @@
                                   ),
                                 );
                             }
+                            if (_.named_inference().value().length > 0) {
+                              _.push(_.createElement("div", null, "OUTPUT"));
+                              for (
+                                let _ = 0;
+                                _ < _.named_inference().value().length;
+                                _++
+                              )
+                                _.push(
+                                  _.createElement(
+                                    "div",
+                                    null,
+                                    `${_.named_inference().value()[_]}`,
+                                  ),
+                                );
+                            }
                             if (
                               _.multi_binary_crossentropy().value().length > 0
                             ) {

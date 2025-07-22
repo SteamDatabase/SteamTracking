@@ -567,6 +567,20 @@
       }
       a.d(t, { f: () => n });
     },
+    3577: (e, t, a) => {
+      "use strict";
+      function n() {
+        let e, t;
+        return {
+          promise: new Promise((a, n) => {
+            (e = a), (t = n);
+          }),
+          resolve: e,
+          reject: t,
+        };
+      }
+      a.d(t, { x: () => n });
+    },
     84518: (e, t, a) => {
       "use strict";
       a.d(t, { A: () => l });
@@ -3435,7 +3449,8 @@
                 this.m_videoRepSelected.strID == n.strID) ||
                 ((this.m_videoRepSelected = n),
                 a.ChangeRepresentation(n, !0),
-                this.Seek(this.GetCurrentPlayTime())));
+                this.Seek(this.GetCurrentPlayTime()),
+                this.m_stats.MarkAtLeastOneUserRepresentation()));
           }
           t && (this.m_videoRepSelected = null);
         }
@@ -3643,6 +3658,7 @@
         m_strEventLogLink = "";
         m_allTimeSnapshot = new S(0);
         m_rgSnapShots = new Array(new S(0));
+        m_bAtLeastOneUserRepresentation = !1;
         m_videoResolution = 0;
         m_audioRate = 0;
         m_audioChannel = 0;
@@ -3861,6 +3877,9 @@
             this.m_nBandwidthRequired =
               this.m_nAudioBandwidth + this.m_nVideoBandwidth;
           }
+        }
+        MarkAtLeastOneUserRepresentation() {
+          this.m_bAtLeastOneUserRepresentation = !0;
         }
         SetCurrentVideoBandwidth(e) {
           this.m_nCurBandwidthVideo = e;
@@ -4082,6 +4101,7 @@
             nPlaybackStalls: this.m_allTimeSnapshot.m_nStallEvents,
             nFramesDropped: this.m_allTimeSnapshot.m_nFramesDropped,
             nLastVideoHeight: this.m_videoResolution,
+            bUserSelectedRepresentation: this.m_bAtLeastOneUserRepresentation,
           };
         }
         async SendReportToServer(e, t) {
@@ -5487,7 +5507,7 @@
               : "sale_overlay" === e
                 ? (t = this.jsondata.localized_sale_overlay)
                 : m.pb.includes(e)
-                  ? (t = c.R.GetAllLocalizedGroupImages())
+                  ? (t = c.R.GetAllLocalizedGroupImageHashAndExts())
                   : "product_banner" === e
                     ? (t = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === e
@@ -8780,7 +8800,7 @@
         g = a(69343),
         f = a(81393),
         S = a(64753),
-        C = a(32396),
+        C = a(82817),
         v = a(27666);
       class y extends g.Vr {
         m_filesToUpload = o.sH.array();
@@ -8998,7 +9018,7 @@
     },
     27666: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => h });
+      a.d(t, { z: () => _ });
       var n = a(12611),
         i = a(30470),
         r = a(22837),
@@ -9007,10 +9027,11 @@
         l = a(81393),
         d = a(68797),
         m = a(14771),
-        c = a(32396),
+        c = a(82817),
         u = a(86355),
-        p = a(40521);
-      const h = {
+        p = a(40521),
+        h = a(3577);
+      const _ = {
         GetBaseURL: () => `${i.TS.CLAN_CDN_ASSET_URL}images/`,
         GetBaseURLV2: () => `${i.TS.CLAN_CDN_ASSET_URL}locimages/`,
         ReplacementTokenToClanImageURL(e) {
@@ -9051,11 +9072,19 @@
           if (a != u.wI.full || l) {
             let s = t.substring(t.lastIndexOf(".")),
               d = t.substring(0, t.length - s.length);
-            return l && "localized_image_group" == i
+            return l && 0 != n && "localized_image_group" == i
               ? o + e + "/" + d + "/" + (0, r.x6)((0, r.Lg)(n)) + s
               : o + e + "/" + d + a + s;
           }
           return o + e + "/" + t;
+        },
+        GetHashAndExtFromURL(e) {
+          let t = this.GetBaseURL();
+          return e?.startsWith(t)
+            ? -1 == (e = e.substring(t.length)).indexOf("/")
+              ? null
+              : (e = e.substring(e.indexOf("/") + 1))
+            : null;
         },
         GenerateEditableURLFromHashAndExt(e, t, a) {
           let n =
@@ -9073,40 +9102,47 @@
           return await this.AsyncGetImageResolutionInternal(s, n, i);
         },
         async AsyncGetImageResolutionInternal(e, t, a) {
-          let n = { success: 2 },
-            i = new Image();
+          const n = (0, h.x)();
+          let i = new Image();
           (i.crossOrigin = "anonymous"),
             (i.onerror = (t) => {
+              const i = { success: 2 };
               a ||
-                ((n.err_msg =
+                ((i.err_msg =
                   "Load fail on url " +
                   e +
                   " with error: " +
                   (0, d.H)(t).strErrorMsg),
-                console.error(n.err_msg)),
-                (n.success = 2);
+                console.error(i.err_msg)),
+                (i.success = 2),
+                n.resolve(i);
             }),
             (i.onload = () => {
-              (n.width = i.width),
-                (n.height = i.height),
+              const t = { success: 2 };
+              (t.width = i.width),
+                (t.height = i.height),
                 (0, l.wT)(
-                  n.width > 0 && n.height > 0,
+                  t.width > 0 && t.height > 0,
                   "unexpected image resolution discovered for strURL: " + e,
                 ),
-                (n.success = 1);
+                (t.success = 1),
+                n.resolve(t);
             }),
             (i.src = e),
-            t.token.promise.catch((e) => {
-              (i.onload = () => {}), (n.success = 52);
+            t.token.promise.catch(() => {
+              const e = { success: 2 };
+              return (i.onload = () => {}), (e.success = 52), e;
             });
-          let r = 0;
-          for (; void 0 === n.success && r < 100; )
-            await (0, m.IP)(100), (r += 1);
+          const r = new Promise((e, t) => setTimeout(() => t(), 1e4));
+          let s;
+          try {
+            s = await Promise.race([r, n.promise]);
+          } catch {}
           return (
-            r >= 100 &&
-              ((n.success = 16),
-              (n.err_msg = "We timed out processing images")),
-            n
+            s ||
+              ((s.success = 16),
+              (s.err_msg = "We timed out processing images")),
+            s
           );
         },
         async OverlayClanImage(e, t, a, n, i, r) {
@@ -9228,7 +9264,7 @@
         (0, n.Cg)([i.sH], l.prototype, "message", void 0),
         (0, n.Cg)([i.sH], l.prototype, "language", void 0);
       var d = a(66331),
-        m = a(32396);
+        m = a(82817);
       const c = 960,
         u = 311,
         p = 480,
@@ -9422,8 +9458,7 @@
             s.push({ bSuccess: t.bSuccess, image: a, uploadResult: t.result }),
               t.bSuccess
                 ? (a.status = "success")
-                : ((a.status = "failed"),
-                  (a.message = t.strErrorMessage ?? ""));
+                : ((a.status = "failed"), (a.message = t.elErrorMessage ?? ""));
           }
           return s;
         }
@@ -9585,6 +9620,11 @@
             (this.m_curLocImageGroup &&
               this.m_curLocImageGroup.localized_images) ||
             []
+          );
+        }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages().map((e) =>
+            c.z.GetHashAndExtFromURL(e),
           );
         }
       }
@@ -13365,18 +13405,17 @@
       }
       a.d(t, { v: () => n });
     },
-    32396: (e, t, a) => {
+    82817: (e, t, a) => {
       "use strict";
-      function n() {
-        let e, t;
-        return {
-          promise: new Promise((a, n) => {
-            (e = a), (t = n);
-          }),
-          resolve: e,
-          reject: t,
-        };
-      }
+      a.d(t, {
+        EG: () => r,
+        II: () => c,
+        Uz: () => d,
+        aL: () => l,
+        ab: () => i,
+        zB: () => m,
+      });
+      var n = a(3577);
       function i(e) {
         const t = e.toLowerCase();
         return t.endsWith(".jpg")
@@ -13418,7 +13457,7 @@
         }
       }
       function s(e) {
-        const t = n(),
+        const t = (0, n.x)(),
           a = new Image();
         return (
           (a.onload = () => t.resolve(a)),
@@ -13431,7 +13470,7 @@
         );
       }
       function o(e) {
-        const t = n(),
+        const t = (0, n.x)(),
           a = document.createElement("video");
         return (
           (a.preload = "metadata"),
@@ -13453,7 +13492,7 @@
       async function m(e, t) {
         if (t) return o(URL.createObjectURL(e));
         {
-          const t = n(),
+          const t = (0, n.x)(),
             a = new FileReader();
           (a.onload = () => t.resolve(a.result ?? void 0)),
             (a.onerror = () => {
@@ -13476,14 +13515,6 @@
             : { width: e.width, height: e.height }
           : { width: 0, height: 0 };
       }
-      a.d(t, {
-        aL: () => l,
-        Uz: () => d,
-        ab: () => i,
-        EG: () => r,
-        zB: () => m,
-        II: () => c,
-      });
     },
     6469: (e, t, a) => {
       "use strict";

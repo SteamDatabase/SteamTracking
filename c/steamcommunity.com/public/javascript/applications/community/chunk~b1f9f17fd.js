@@ -25420,6 +25420,7 @@
           return !1;
         }
         async UploadSingleImage(_, _, _, _) {
+          var _;
           let _ = null;
           const _ = new FormData();
           _.append("assetfile", _.file, _),
@@ -25433,11 +25434,12 @@
           if (!_)
             return {
               bSuccess: !1,
-              strErrorMessage:
+              elErrorMessage:
                 "Invalid file extension, cannot determine mimetype",
             };
           _.append("mimetype", _);
-          let _ = !1;
+          let _,
+            _ = !1;
           try {
             (_ = await _().post(this.m_strUploadPath, _, {
               withCredentials: !0,
@@ -25446,7 +25448,13 @@
               },
               cancelToken: _,
             })),
-              200 == (null == _ ? void 0 : _.status) && (_ = !0);
+              200 == (null == _ ? void 0 : _.status) &&
+              1 == (null == _ ? void 0 : _.data.success)
+                ? (_ = !0)
+                : (_ =
+                    null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.message);
           } catch (_) {
             const _ = (0, _._)(_);
             console.log("CCloudImageUploader.UploadFile failed ", _, _),
@@ -25454,6 +25462,7 @@
           }
           return {
             bSuccess: _,
+            elErrorMessage: _,
             result: null == _ ? void 0 : _.data,
           };
         }
@@ -25636,6 +25645,7 @@
             fnDeleteAllAssets: _,
             showDeleteAll: _ = !0,
             bVerifyAssets: _,
+            bVideoAsset: _,
           } = _,
           [_, _] = _.useState(
             null !== (_ = null != _ ? _ : _._.Get().GetCurEditLanguage()) &&
@@ -25654,7 +25664,7 @@
         }, [_, _, _]);
         const _ = (0, _.useMemo)(
           () => __webpack_require__.map((_) => _(_)),
-          [__webpack_require__],
+          [_, __webpack_require__],
         );
         return _.createElement(
           "div",
@@ -25720,7 +25730,7 @@
                 _.createElement(_, {
                   rgAssetURL: _,
                   rgLang: __webpack_require__,
-                  bIsImage: !0,
+                  bIsImage: !_,
                 }),
             ),
           ),

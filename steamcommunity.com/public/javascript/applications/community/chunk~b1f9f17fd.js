@@ -23131,37 +23131,49 @@
           return !1;
         }
         async UploadSingleImage(e, t, a, n) {
-          let i = null;
-          const r = new FormData();
-          r.append("assetfile", e.file, t),
-            r.append("sessionid", Za.TS.SESSIONID),
-            r.append("elangauge", "" + a),
-            r.append("originalname", t);
-          const o = e.GetCurrentImageOption();
-          (null == o ? void 0 : o.artworkType) &&
-            r.append("arttype", o.artworkType);
-          const l = (0, yi.ab)(t);
-          if (!l)
+          var i;
+          let r = null;
+          const o = new FormData();
+          o.append("assetfile", e.file, t),
+            o.append("sessionid", Za.TS.SESSIONID),
+            o.append("elangauge", "" + a),
+            o.append("originalname", t);
+          const l = e.GetCurrentImageOption();
+          (null == l ? void 0 : l.artworkType) &&
+            o.append("arttype", l.artworkType);
+          const s = (0, yi.ab)(t);
+          if (!s)
             return {
               bSuccess: !1,
-              strErrorMessage:
+              elErrorMessage:
                 "Invalid file extension, cannot determine mimetype",
             };
-          r.append("mimetype", l);
-          let s = !1;
+          o.append("mimetype", s);
+          let c,
+            d = !1;
           try {
-            (i = await Y().post(this.m_strUploadPath, r, {
+            (r = await Y().post(this.m_strUploadPath, o, {
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
               cancelToken: n,
             })),
-              200 == (null == i ? void 0 : i.status) && (s = !0);
+              200 == (null == r ? void 0 : r.status) &&
+              1 == (null == r ? void 0 : r.data.success)
+                ? (d = !0)
+                : (c =
+                    null === (i = null == r ? void 0 : r.data) || void 0 === i
+                      ? void 0
+                      : i.message);
           } catch (e) {
             const t = (0, Ae.H)(e);
             console.log("CCloudImageUploader.UploadFile failed ", t, e),
-              (i = e.response);
+              (r = e.response);
           }
-          return { bSuccess: s, result: null == i ? void 0 : i.data };
+          return {
+            bSuccess: d,
+            elErrorMessage: c,
+            result: null == r ? void 0 : r.data,
+          };
         }
       }
       function wi(e) {
@@ -23333,27 +23345,28 @@
             fnDeleteAllAssets: l,
             showDeleteAll: s = !0,
             bVerifyAssets: d,
+            bVideoAsset: u,
           } = e,
-          [u, m] = c.useState(
+          [m, _] = c.useState(
             null !== (t = null != n ? n : x.O.Get().GetCurEditLanguage()) &&
               void 0 !== t
               ? t
               : a[0],
           ),
-          [_, p] = c.useState(i(u)),
-          g = c.useMemo(() => [...a].sort(), [a]);
+          [p, g] = c.useState(i(m)),
+          h = c.useMemo(() => [...a].sort(), [a]);
         c.useEffect(() => {
-          const e = i(u);
-          e ? p(e) : g.length > 0 ? m(g[0]) : p(null);
-        }, [u, i, g]);
-        const h = (0, c.useMemo)(() => a.map((e) => i(e)), [a]);
+          const e = i(m);
+          e ? g(e) : h.length > 0 ? _(h[0]) : g(null);
+        }, [m, i, h]);
+        const v = (0, c.useMemo)(() => a.map((e) => i(e)), [i, a]);
         return c.createElement(
           "div",
           { className: Mi().UploadedImageDisplayCtn },
           c.createElement(
             "div",
             { className: Mi().UploaderLeftCol },
-            c.createElement(Hi, { curAssetURL: _, imageClassname: o }),
+            c.createElement(Hi, { curAssetURL: p, imageClassname: o }),
           ),
           c.createElement(
             "div",
@@ -23369,31 +23382,31 @@
               c.createElement(
                 "div",
                 { className: Mi().LangSelectCtn },
-                g.map((e) =>
+                h.map((e) =>
                   c.createElement(Ui, {
                     key: e,
                     language: e,
-                    selectedLanguage: u,
-                    setSelectedLanguage: m,
+                    selectedLanguage: m,
+                    setSelectedLanguage: _,
                     deleteLanguage: r,
                   }),
                 ),
               ),
               s &&
-                Boolean(g.length) &&
+                Boolean(h.length) &&
                 c.createElement(
                   "a",
                   {
                     href: "#",
                     className: Mi().DeleteAll,
                     onClick: (e) => {
-                      l ? l() : g.forEach((e) => r(e)), e.preventDefault();
+                      l ? l() : h.forEach((e) => r(e)), e.preventDefault();
                     },
                   },
                   (0, M.we)("#Button_DeleteAll"),
                 ),
               Boolean(d) &&
-                c.createElement(Oi, { rgAssetURL: h, rgLang: a, bIsImage: !0 }),
+                c.createElement(Oi, { rgAssetURL: v, rgLang: a, bIsImage: !u }),
             ),
           ),
         );

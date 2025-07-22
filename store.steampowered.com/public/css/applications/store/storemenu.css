@@ -360,7 +360,7 @@ button._175B12uOwmeGBNcSaQFe-Z
   ._3gaaE-cRfFWJdZcC8XMi0x {
   border-radius: 3px;
   background: #1a9fff;
-  height: 3px;
+  height: 2.5px;
   margin: 0 auto;
   width: 0;
   opacity: 0;
@@ -426,6 +426,21 @@ button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9
 }
 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL ._2tlUAG6WNyYFlk9caIiLj5 {
   border: 1px solid #42464aa3;
+}
+._2AD2O_FEWy7izR8sZZjjI6 {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+._1YhdoyGYkUB4JuW0yFSbS7 {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  bottom: 8px;
+  border: none;
+  background: transparent;
+  aspect-ratio: 1;
+  cursor: pointer;
 }
 ._2tlUAG6WNyYFlk9caIiLj5 {
   color: #fff;
@@ -1013,6 +1028,9 @@ html.responsive.touch ._39xRzOagrnlvU_DbiDnzVW {
     line-height: 24px;
   }
 }
+._39xRzOagrnlvU_DbiDnzVW.uFo6ZH-WIdg9ODnJDbl45 {
+  min-width: 20%;
+}
 ._2ihG7DC0YPrw01ComUbKnY.JeKLaTDB6BY1_KxkPBi7y ._39xRzOagrnlvU_DbiDnzVW {
   min-width: 15%;
 }
@@ -1054,6 +1072,7 @@ html.responsive.touch ._39xRzOagrnlvU_DbiDnzVW {
   gap: 10px;
   flex: 1;
   align-self: stretch;
+  justify-content: center;
   min-width: 0;
   overflow: hidden;
   border-radius: 2px;
@@ -1072,6 +1091,16 @@ html.responsive.touch ._39xRzOagrnlvU_DbiDnzVW {
 }
 ._1ECtb6W4gvvCrevAbzsKq_
   ._3jXeonOfw-RB-1PDdJqSUx
+  ._1vPyDoJDpPKIAmF1YMCtY0:hover
+  span._3nohIP2x4JypyTk3gtBog0,
+._1ECtb6W4gvvCrevAbzsKq_
+  ._3jXeonOfw-RB-1PDdJqSUx
+  ._1vPyDoJDpPKIAmF1YMCtY0:hover
+  span._1-3HkXvDUXTzJg8JfSFCwI {
+  transform: translateY(5px);
+}
+._1ECtb6W4gvvCrevAbzsKq_
+  ._3jXeonOfw-RB-1PDdJqSUx
   ._1vPyDoJDpPKIAmF1YMCtY0:not(._38ngLpACn1zS6vXvyaDLDM) {
   text-align: center;
 }
@@ -1082,12 +1111,12 @@ html.responsive.touch ._39xRzOagrnlvU_DbiDnzVW {
   width: 46px;
   height: 46px;
   display: flex;
+  transition: transform .1s ease;
 }
 ._1ECtb6W4gvvCrevAbzsKq_
   ._3jXeonOfw-RB-1PDdJqSUx
   ._1vPyDoJDpPKIAmF1YMCtY0
   span._3nohIP2x4JypyTk3gtBog0 {
-  flex: 1;
   display: block;
   min-width: 0;
   font-size: 14px;
@@ -1095,6 +1124,8 @@ html.responsive.touch ._39xRzOagrnlvU_DbiDnzVW {
   font-weight: 800;
   line-height: 16px;
   text-transform: uppercase;
+  transform: translateY(0px);
+  transition: transform .2s ease;
 }
 @media screen and (max-width: 1024px) {
   ._1ECtb6W4gvvCrevAbzsKq_ ._3jXeonOfw-RB-1PDdJqSUx ._1vPyDoJDpPKIAmF1YMCtY0 {
@@ -1472,6 +1503,12 @@ div._21F52O1eUPKz37HniCe3kj > div {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+}
+._221NQfJgfl3Z4c4ZQ1Ojwd {
+  background: #f0f;
+}
+._3BIVruKhtKrpeYQkzZjahy {
+  background: aqua;
 }
 ._2ULEyYgHBHtbdS-UzA2CMo {
   flex: 1;

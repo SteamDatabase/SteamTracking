@@ -347,7 +347,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   font-size: 12px;
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop) ._3lJb_YN8uykqLcm4eG1jRF {
+  html.responsive ._3lJb_YN8uykqLcm4eG1jRF {
     font-size: 12px;
   }
 }

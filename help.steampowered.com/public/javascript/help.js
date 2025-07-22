@@ -1787,7 +1787,7 @@ HelpWizard = {
 		var render_div_id = 'recaptcha_render_' + gid;
 		$J( parent_sel ).empty();
 		$J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
-		g_hcaptchaInstance = hcaptcha.render( render_div_id, {
+		hcaptcha.render( render_div_id, {
 			'sitekey': sitekey,
 			'theme': 'dark',
 			'callback': function(n){}

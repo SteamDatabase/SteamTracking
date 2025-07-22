@@ -2041,7 +2041,9 @@
       }
       function N(e) {
         const { imageUploader: t, fnOnUploadImageRequested: a } = e,
-          [l] = (0, n.q3)(() => [t.GetUploadImages()]);
+          [l] = (0, n.q3)(() => [t.GetUploadImages()]),
+          o = l.some((e) => "pending" == e.status),
+          i = l.some((e) => "uploading" == e.status);
         return r.createElement(
           "div",
           {
@@ -2051,13 +2053,13 @@
           Boolean(l.length) &&
             r.createElement(
               g.$n,
-              { style: { margin: "8px" }, onClick: a },
+              { style: { margin: "8px" }, onClick: a, disabled: !o },
               (0, k.we)("#ImageUpload_Upload"),
             ),
           Boolean(l.length) &&
             r.createElement(
               g.$n,
-              { style: { margin: "8px" }, onClick: t.ClearImages },
+              { style: { margin: "8px" }, onClick: t.ClearImages, disabled: i },
               (0, k.we)("#ImageUpload_Clear"),
             ),
         );

@@ -1020,6 +1020,7 @@
         "GetEventStartTime",
         null,
       );
+      var _ = __webpack_require__("chunkid");
       const _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function _(_) {
         return (
@@ -1664,8 +1665,20 @@
           }
           return null;
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full) {
+        GetAppIDOrReferenceAppID() {
           var _, _;
+          return this.appid
+            ? this.appid
+            : null ===
+                  (_ =
+                    null === (_ = this.jsondata) || void 0 === _
+                      ? void 0
+                      : _.referenced_appids) || void 0 === _
+              ? void 0
+              : _[0];
+        }
+        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full, _ = !0) {
+          var _, _, _;
           const _ = this.GetImageURL(_, _, __webpack_require__);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
@@ -1681,7 +1694,7 @@
               _,
               Number.MAX_VALUE,
             );
-            if (_) return _;
+            if (_ && (_ || (0, _._)(_))) return _;
             let _ = this.appid;
             if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
               if (
@@ -1697,9 +1710,13 @@
               _ = this.jsondata.referenced_appids[0];
             }
             const _ = _._.Get().GetApp(_);
-            return _
-              ? _.GetAssets().GetMainCapsuleURL()
-              : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
+            return _ && _.GetAssets()
+              ? null === (_ = _.GetAssets()) || void 0 === _
+                ? void 0
+                : _.GetMainCapsuleURL()
+              : (null == _ ? void 0 : _.avatar_full_url)
+                ? _.avatar_full_url
+                : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
           }
           return "background" == _ &&
             _ &&
@@ -3700,7 +3717,7 @@
                 ? (_.status = "success")
                 : ((_.status = "failed"),
                   (_.message =
-                    null !== (_ = _.strErrorMessage) && void 0 !== _ ? _ : ""));
+                    null !== (_ = _.elErrorMessage) && void 0 !== _ ? _ : ""));
           }
           return _;
         }

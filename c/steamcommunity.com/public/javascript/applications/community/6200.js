@@ -429,19 +429,23 @@
               refDiv: _,
             };
           })(_, _, _);
-        return _ || _ || _
-          ? _.createElement(
-              "div",
-              {
-                _: _,
-                role: __webpack_require__,
-                className: _,
-                ref: _,
-                style: _,
-              },
-              _,
-            )
-          : null;
+        if (!_ && !_ && !_) return null;
+        const _ = {};
+        return (
+          _ || (_.inert = "inert"),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              role: __webpack_require__,
+              className: _,
+              ref: _,
+              style: _,
+              ..._,
+            },
+            _,
+          )
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

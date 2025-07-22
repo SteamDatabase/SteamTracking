@@ -4,6 +4,7 @@ var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
 var g_parentalConsentDialog = null;
 var g_recaptchaInstance = null;
+var g_hcaptchaInstance = null;
 
 function CaptchaText()
 {
@@ -13,10 +14,13 @@ function CaptchaText()
 
 	if ( typeof hcaptcha !== 'undefined' )
 	{
-		return hcaptcha.getResponse()
+		// Pass the instance so we get the response from the right one if we've refreshed hcaptcha due to captcha failures
+		return hcaptcha.getResponse( g_hcaptchaInstance );
 	}
 	else if ( typeof grecaptcha !== 'undefined' )
-		return grecaptcha.enterprise.getResponse(g_recaptchaInstance);
+	{
+		return grecaptcha.enterprise.getResponse( g_recaptchaInstance );
+	}
 
 	return null;
 }

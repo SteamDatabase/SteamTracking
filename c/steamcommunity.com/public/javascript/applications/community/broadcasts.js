@@ -1054,7 +1054,7 @@
                 onClick: (_) =>
                   (0, _._)(
                     _,
-                    "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497",
+                    "https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8",
                   ),
               },
               _.createElement(

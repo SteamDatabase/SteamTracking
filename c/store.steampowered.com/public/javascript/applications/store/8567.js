@@ -383,6 +383,8 @@
           queryFn: async () => {
             const _ = _._.Init(_),
               _ = await _.GetPrivateAppList(_, _);
+            if (!__webpack_require__.BSuccess())
+              throw __webpack_require__.GetErrorMessage();
             return new Set(
               __webpack_require__.Body().private_apps(!0).appids(),
             );

@@ -232,9 +232,9 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          GreenEnvelope: () => hn,
-          default: () => Nn,
-          useSteamNotifications: () => Rn,
+          GreenEnvelope: () => Rn,
+          default: () => Pn,
+          useSteamNotifications: () => Fn,
         });
       var i,
         a,
@@ -11050,11 +11050,6 @@
       function Kr(e) {
         return !!Qr(e);
       }
-      Hr[29] = {
-        titleLoc: (e) => e.title,
-        bodyLoc: (e) => e.body,
-        link: (e) => at.TS.COMMUNITY_BASE_URL + "my/tradehistory",
-      };
       const $r = {
         16: {
           steamidAttribute: "inviter",
@@ -12962,7 +12957,7 @@
           [y, B] = o.useState(!1),
           f = () => B(!0);
         let b = null;
-        if (m) b = La(r, t, _);
+        if (m) b = ka(r, t, _);
         else {
           const e = _ ? Wa().ShortLogoDimensions : Wa().StandardLogoDimensions;
           b =
@@ -12977,7 +12972,7 @@
         return _
           ? o.createElement(Ta, { ...e, logo: b, icon: n, title: u, body: d })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -12991,7 +12986,7 @@
                 }),
                 o.createElement(wa, { multiline: !g }, d),
                 !!g && o.createElement(Sa, null, g),
-                c ? o.createElement(ka, { onHide: c }) : null,
+                c ? o.createElement(Da, { onHide: c }) : null,
               ),
             );
       }
@@ -13020,7 +13015,7 @@
               body: m,
             })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -13034,11 +13029,52 @@
                 }),
                 o.createElement(wa, null, m),
                 o.createElement(Sa, null, u),
-                s ? o.createElement(ka, { onHide: s }) : null,
+                s ? o.createElement(Da, { onHide: s }) : null,
               ),
             );
       }
-      function Ua(e) {
+      const Ua = (e) => {
+        let {
+          location: t,
+          icon: r,
+          timestamp: i,
+          fnRenderTimestamp: a,
+          onHide: n,
+        } = e;
+        const s = Ra(t),
+          l = (0, fr.we)("#SteamNotifications_TradeReversal_Title"),
+          c = s
+            ? (0, fr.we)("#SteamNotifications_TradeReversal_Body_Short")
+            : (0, fr.we)("#SteamNotifications_TradeReversal_Body"),
+          m = (0, fr.we)("#SteamNotifications_TradeReversal_Description");
+        return s
+          ? o.createElement(Ta, {
+              ...e,
+              logo: e.logo,
+              icon: e.icon,
+              title: l,
+              body: c,
+            })
+          : o.createElement(
+              Ha,
+              null,
+              o.createElement(
+                ya,
+                { ...e },
+                o.createElement(fa, {
+                  icon: r,
+                  title: l,
+                  timestamp: i,
+                  location: t,
+                  fnRenderTimestamp: a,
+                }),
+                o.createElement(wa, null, c),
+                o.createElement(Sa, null, m),
+                n ? o.createElement(Da, { onHide: n }) : null,
+              ),
+            );
+      };
+      function Na(e) {
         let {
           senderName: t,
           location: r,
@@ -13065,7 +13101,7 @@
               body: c,
             })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -13079,11 +13115,11 @@
                 }),
                 o.createElement(wa, { multiline: !m }, c),
                 !!m && o.createElement(Sa, null, m),
-                s ? o.createElement(ka, { onHide: s }) : null,
+                s ? o.createElement(Da, { onHide: s }) : null,
               ),
             );
       }
-      function Na(e) {
+      function Pa(e) {
         let {
           requestorName: t,
           requestorAvatarURL: r,
@@ -13132,7 +13168,7 @@
               body: B,
             })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -13146,11 +13182,11 @@
                 }),
                 o.createElement(wa, { multiline: !d }, B),
                 !!d && o.createElement(Sa, null, d),
-                m ? o.createElement(ka, { onHide: m }) : null,
+                m ? o.createElement(Da, { onHide: m }) : null,
               ),
             );
       }
-      function Pa(e) {
+      function Ea(e) {
         let {
           itemState: t,
           fallbackLogo: r,
@@ -13226,7 +13262,7 @@
           );
         }
         return o.createElement(
-          Da,
+          Ha,
           null,
           o.createElement(
             ya,
@@ -13240,11 +13276,11 @@
             }),
             o.createElement(wa, { multiline: !B }, f),
             !!B && o.createElement(Sa, null, B),
-            m ? o.createElement(ka, { onHide: m }) : null,
+            m ? o.createElement(Da, { onHide: m }) : null,
           ),
         );
       }
-      function Ea(e) {
+      function xa(e) {
         let {
           fallbackLogo: t,
           app: r,
@@ -13256,7 +13292,7 @@
           onHide: c,
         } = e;
         const m = Ra(a),
-          u = La(r, t, m),
+          u = ka(r, t, m),
           d = !r;
         let g = "";
         return (
@@ -13285,7 +13321,7 @@
                 body: g,
               })
             : o.createElement(
-                Da,
+                Ha,
                 null,
                 o.createElement(
                   ya,
@@ -13299,12 +13335,12 @@
                   }),
                   o.createElement(wa, null, g),
                   o.createElement(Sa, null, r?.GetName()),
-                  c ? o.createElement(ka, { onHide: c }) : null,
+                  c ? o.createElement(Da, { onHide: c }) : null,
                 ),
               )
         );
       }
-      function xa(e) {
+      function Ga(e) {
         const {
             title: t,
             body: r,
@@ -13339,7 +13375,7 @@
               personaStatus: d,
             })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -13352,11 +13388,11 @@
                   fnRenderTimestamp: m,
                 }),
                 o.createElement(wa, { multiline: !0 }, r),
-                s ? o.createElement(ka, { onHide: s }) : null,
+                s ? o.createElement(Da, { onHide: s }) : null,
               ),
             );
       }
-      function Ga(e) {
+      function Aa(e) {
         let {
             currentUserSteamID: t,
             fallbackLogo: r,
@@ -13466,7 +13502,7 @@
               body: B,
             })
           : o.createElement(
-              Da,
+              Ha,
               null,
               o.createElement(
                 ya,
@@ -13481,11 +13517,11 @@
                 o.createElement(wa, null, B),
                 F,
                 T,
-                _ ? o.createElement(ka, { onHide: _ }) : null,
+                _ ? o.createElement(Da, { onHide: _ }) : null,
               ),
             );
       }
-      function Aa(e) {
+      function La(e) {
         let {
           app: t,
           fallbackLogo: r,
@@ -13497,7 +13533,7 @@
           onHide: c,
         } = e;
         const m = Ra(a),
-          u = La(t, r, m),
+          u = ka(t, r, m),
           d = i.appid && !t;
         let g = "",
           _ = null;
@@ -13552,7 +13588,7 @@
                 body: g,
               })
             : o.createElement(
-                Da,
+                Ha,
                 null,
                 o.createElement(
                   ya,
@@ -13566,12 +13602,12 @@
                   }),
                   o.createElement(wa, { multiline: !_ }, g),
                   !!_ && o.createElement(Sa, null, _),
-                  c ? o.createElement(ka, { onHide: c }) : null,
+                  c ? o.createElement(Da, { onHide: c }) : null,
                 ),
               )
         );
       }
-      function La(e, t, r = !1) {
+      function ka(e, t, r = !1) {
         const [i, a] = o.useState(!1),
           n = () => a(!0);
         return !e || i
@@ -13607,7 +13643,7 @@
                 }),
               );
       }
-      function ka(e) {
+      function Da(e) {
         return o.createElement(
           "div",
           {
@@ -13622,84 +13658,17 @@
           o.createElement(Fi.zHo, null),
         );
       }
-      function Da(e) {
+      function Ha(e) {
         return o.createElement(
           "div",
           { className: Wa().SteamNotificationWrapper },
           e.children,
         );
       }
-      var Ha,
-        Qa = r(1944),
-        Ka = r(8812),
-        $a = r(1920);
-      class Ya extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ya.prototype.language || _.Sg(Ya.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ya.sm_m ||
-              (Ya.sm_m = {
-                proto: Ya,
-                fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: _.qM.readString,
-                    bw: _.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: _.qM.readString,
-                    bw: _.gp.writeString,
-                  },
-                },
-              }),
-            Ya.sm_m
-          );
-        }
-        static MBF() {
-          return Ya.sm_mbf || (Ya.sm_mbf = _.w0(Ya.M())), Ya.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ya.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return _.BT(Ya.M(), e, t);
-        }
-        static fromObject(e) {
-          return _.Uq(Ya.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (g().BinaryReader)(e),
-            r = new Ya();
-          return Ya.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return _.zj(Ya.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (g().BinaryWriter)();
-          return Ya.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          _.i0(Ya.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (g().BinaryWriter)();
-          return Ya.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
-        }
-      }
+      var Qa,
+        Ka = r(1944),
+        $a = r(8812),
+        Ya = r(1920);
       class Va extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -13764,14 +13733,14 @@
           return Va.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Request";
+          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
         }
       }
       class Xa extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Xa.prototype.dictionary || _.Sg(Xa.M()),
+            Xa.prototype.language || _.Sg(Xa.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13782,8 +13751,15 @@
               (Xa.sm_m = {
                 proto: Xa,
                 fields: {
-                  dictionary: {
+                  language: {
                     n: 1,
+                    q: !0,
+                    br: _.qM.readString,
+                    bw: _.gp.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
                     br: _.qM.readString,
                     bw: _.gp.writeString,
                   },
@@ -13824,14 +13800,14 @@
           return Xa.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Response";
+          return "CSteamEngine_GetTextFilterDictionary_Request";
         }
       }
       class Ja extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ja.prototype.language || _.Sg(Ja.M()),
+            Ja.prototype.dictionary || _.Sg(Ja.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13842,15 +13818,8 @@
               (Ja.sm_m = {
                 proto: Ja,
                 fields: {
-                  language: {
+                  dictionary: {
                     n: 1,
-                    q: !0,
-                    br: _.qM.readString,
-                    bw: _.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
                     br: _.qM.readString,
                     bw: _.gp.writeString,
                   },
@@ -13891,14 +13860,14 @@
           return Ja.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
+          return "CSteamEngine_GetTextFilterDictionary_Response";
         }
       }
       class Za extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Za.prototype.pid || _.Sg(Za.M()),
+            Za.prototype.language || _.Sg(Za.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13909,7 +13878,18 @@
               (Za.sm_m = {
                 proto: Za,
                 fields: {
-                  pid: { n: 1, br: _.qM.readUint32, bw: _.gp.writeUint32 },
+                  language: {
+                    n: 1,
+                    q: !0,
+                    br: _.qM.readString,
+                    bw: _.gp.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
+                    br: _.qM.readString,
+                    bw: _.gp.writeString,
+                  },
                 },
               }),
             Za.sm_m
@@ -13947,14 +13927,14 @@
           return Za.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetGameIDForPID_Request";
+          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
         }
       }
       class en extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            en.prototype.gameid || _.Sg(en.M()),
+            en.prototype.pid || _.Sg(en.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13965,11 +13945,7 @@
               (en.sm_m = {
                 proto: en,
                 fields: {
-                  gameid: {
-                    n: 1,
-                    br: _.qM.readUint64String,
-                    bw: _.gp.writeUint64String,
-                  },
+                  pid: { n: 1, br: _.qM.readUint32, bw: _.gp.writeUint32 },
                 },
               }),
             en.sm_m
@@ -14007,7 +13983,7 @@
           return en.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetGameIDForPID_Response";
+          return "CSteamEngine_GetGameIDForPID_Request";
         }
       }
       class tn extends d.Message {
@@ -14027,15 +14003,8 @@
                 fields: {
                   gameid: {
                     n: 1,
-                    q: !0,
                     br: _.qM.readUint64String,
                     bw: _.gp.writeUint64String,
-                  },
-                  should_handle: {
-                    n: 2,
-                    q: !0,
-                    br: _.qM.readBool,
-                    bw: _.gp.writeBool,
                   },
                 },
               }),
@@ -14074,14 +14043,14 @@
           return tn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
+          return "CSteamEngine_GetGameIDForPID_Response";
         }
       }
       class rn extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            rn.prototype.search_term || _.Sg(rn.M()),
+            rn.prototype.gameid || _.Sg(rn.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -14092,15 +14061,17 @@
               (rn.sm_m = {
                 proto: rn,
                 fields: {
-                  search_term: {
+                  gameid: {
                     n: 1,
-                    br: _.qM.readString,
-                    bw: _.gp.writeString,
+                    q: !0,
+                    br: _.qM.readUint64String,
+                    bw: _.gp.writeUint64String,
                   },
-                  max_results: {
+                  should_handle: {
                     n: 2,
-                    br: _.qM.readUint32,
-                    bw: _.gp.writeUint32,
+                    q: !0,
+                    br: _.qM.readBool,
+                    bw: _.gp.writeBool,
                   },
                 },
               }),
@@ -14139,15 +14110,15 @@
           return rn.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
+          return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
         }
       }
       class an extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            an.prototype.appids || _.Sg(an.M()),
-            d.Message.initialize(this, e, 0, -1, [1], null);
+            an.prototype.search_term || _.Sg(an.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -14157,13 +14128,15 @@
               (an.sm_m = {
                 proto: an,
                 fields: {
-                  appids: {
+                  search_term: {
                     n: 1,
-                    r: !0,
-                    q: !0,
+                    br: _.qM.readString,
+                    bw: _.gp.writeString,
+                  },
+                  max_results: {
+                    n: 2,
                     br: _.qM.readUint32,
-                    pbr: _.qM.readPackedUint32,
-                    bw: _.gp.writeRepeatedUint32,
+                    bw: _.gp.writeUint32,
                   },
                 },
               }),
@@ -14202,16 +14175,79 @@
           return an.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
+        }
+      }
+      class nn extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            nn.prototype.appids || _.Sg(nn.M()),
+            d.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            nn.sm_m ||
+              (nn.sm_m = {
+                proto: nn,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: _.qM.readUint32,
+                    pbr: _.qM.readPackedUint32,
+                    bw: _.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            nn.sm_m
+          );
+        }
+        static MBF() {
+          return nn.sm_mbf || (nn.sm_mbf = _.w0(nn.M())), nn.sm_mbf;
+        }
+        toObject(e = !1) {
+          return nn.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.BT(nn.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.Uq(nn.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (g().BinaryReader)(e),
+            r = new nn();
+          return nn.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.zj(nn.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (g().BinaryWriter)();
+          return nn.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.i0(nn.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (g().BinaryWriter)();
+          return nn.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Response";
         }
       }
       !(function (e) {
         (e.UpdateTextFilterDictionaryHandler = {
           name: "SteamEngine.UpdateTextFilterDictionary#1",
-          request: Ya,
+          request: Va,
         }),
           (e.RegisterForUpdateTextFilterDictionary = function (t, r) {
-            return null == (r = r || (0, $a.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, Ya.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -14222,36 +14258,36 @@
                 );
           }),
           (e.UpdateTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.UpdateTextFilterDictionary#1",
-                  (0, m.I8)(Ya, e),
+                  (0, m.I8)(Va, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgUpdateTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.UpdateTextFilterDictionary#1",
-                  (0, m.I8)(Ya, e),
+                  (0, m.I8)(Va, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.GetTextFilterDictionaryHandler = {
             name: "SteamEngine.GetTextFilterDictionary#1",
-            request: Va,
-            response: Xa,
+            request: Xa,
+            response: Ja,
           }),
           (e.GetTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14260,13 +14296,13 @@
                 })
               : t.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
-                  (0, m.I8)(Va, e),
-                  Xa,
+                  (0, m.I8)(Xa, e),
+                  Ja,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgGetTextFilterDictionary = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14275,17 +14311,17 @@
                 })
               : t.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
-                  (0, m.I8)(Va, e),
-                  Xa,
+                  (0, m.I8)(Xa, e),
+                  Ja,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.NotifyTextFilterDictionaryChangedHandler = {
             name: "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-            request: Ja,
+            request: Za,
           }),
           (e.RegisterForNotifyTextFilterDictionaryChanged = function (t, r) {
-            return null == (r = r || (0, $a.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, Ya.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -14296,36 +14332,36 @@
                 );
           }),
           (e.NotifyTextFilterDictionaryChanged = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                  (0, m.I8)(Ja, e),
+                  (0, m.I8)(Za, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                  (0, m.I8)(Ja, e),
+                  (0, m.I8)(Za, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.GetGameIDForPIDHandler = {
             name: "SteamEngine.GetGameIDForPID#1",
-            request: Za,
-            response: en,
+            request: en,
+            response: tn,
           }),
           (e.GetGameIDForPID = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14334,13 +14370,13 @@
                 })
               : t.SendMsg(
                   "SteamEngine.GetGameIDForPID#1",
-                  (0, m.I8)(Za, e),
-                  en,
+                  (0, m.I8)(en, e),
+                  tn,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgGetGameIDForPID = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14349,17 +14385,17 @@
                 })
               : t.SendMsg(
                   "SteamEngine.GetGameIDForPID#1",
-                  (0, m.I8)(Za, e),
-                  en,
+                  (0, m.I8)(en, e),
+                  tn,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SetOverlayEscapeKeyHandlingHandler = {
             name: "SteamEngine.SetOverlayEscapeKeyHandling#1",
-            request: tn,
+            request: rn,
           }),
           (e.RegisterForSetOverlayEscapeKeyHandling = function (t, r) {
-            return null == (r = r || (0, $a.OI)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, Ya.OI)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -14370,36 +14406,36 @@
                 );
           }),
           (e.SetOverlayEscapeKeyHandling = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.SetOverlayEscapeKeyHandling#1",
-                  (0, m.I8)(tn, e),
+                  (0, m.I8)(rn, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgSetOverlayEscapeKeyHandling = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamEngine.SetOverlayEscapeKeyHandling#1",
-                  (0, m.I8)(tn, e),
+                  (0, m.I8)(rn, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SearchAppDataCacheByStoreKeywordsHandler = {
             name: "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-            request: rn,
-            response: an,
+            request: an,
+            response: nn,
           }),
           (e.SearchAppDataCacheByStoreKeywords = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14408,13 +14444,13 @@
                 })
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-                  (0, m.I8)(rn, e),
-                  an,
+                  (0, m.I8)(an, e),
+                  nn,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgSearchAppDataCacheByStoreKeywords = function (e, t) {
-            return null == (t = t || (0, $a.OI)().GetDefaultTransport())
+            return null == (t = t || (0, Ya.OI)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -14423,19 +14459,19 @@
                 })
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-                  (0, m.I8)(rn, e),
-                  an,
+                  (0, m.I8)(an, e),
+                  nn,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           });
-      })(Ha || (Ha = {}));
-      var nn = r(2865),
-        sn = r(6419);
-      function on() {
+      })(Qa || (Qa = {}));
+      var sn = r(2865),
+        on = r(6419);
+      function ln() {
         return ne.TS.IN_MOBILE ? ne.NQ : (0, ne.xv)();
       }
-      const ln = "(1)";
-      class cn {
+      const cn = "(1)";
+      class mn {
         m_WebUIServiceTransport;
         m_unAccountID;
         m_Transport = null;
@@ -14465,7 +14501,7 @@
         }
         async Init(e = 0, t = null, r = null) {
           (this.m_bInitialized = !1),
-            (this.m_WebUIServiceTransport = nn.N),
+            (this.m_WebUIServiceTransport = sn.N),
             (this.m_unAccountID = e),
             (this.m_Transport = t),
             (this.m_Storage = r),
@@ -14484,7 +14520,7 @@
         InitSteamEngineLanguages() {
           this.m_WebUIServiceTransport.BIsValid() &&
             (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
-              Ha.NotifyTextFilterDictionaryChangedHandler,
+              Qa.NotifyTextFilterDictionaryChangedHandler,
               this.OnTextFilterDictionaryChanged,
             ),
             this.InitSteamEngineLanguage(ne.TS.LANGUAGE),
@@ -14500,25 +14536,25 @@
           );
         }
         InitSteamEngineLanguage(e) {
-          const t = m.w.Init(Ya);
+          const t = m.w.Init(Va);
           t.Body().set_language(e),
             t.Body().set_type("profanity"),
-            Ha.SendMsgUpdateTextFilterDictionary(
+            Qa.SendMsgUpdateTextFilterDictionary(
               t,
               this.m_WebUIServiceTransport,
             ),
             t.Body().set_type("banned"),
-            Ha.SendMsgUpdateTextFilterDictionary(
+            Qa.SendMsgUpdateTextFilterDictionary(
               t,
               this.m_WebUIServiceTransport,
             );
         }
         GetSteamEngineTextFilterDictionary(e, t) {
-          const r = m.w.Init(Va);
+          const r = m.w.Init(Xa);
           return (
             r.Body().set_language(e),
             r.Body().set_type(t),
-            Ha.SendMsgGetTextFilterDictionary(r, this.m_WebUIServiceTransport)
+            Qa.SendMsgGetTextFilterDictionary(r, this.m_WebUIServiceTransport)
           );
         }
         GetStorageKey(e) {
@@ -14541,17 +14577,17 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(ln + e);
-            return Qa.iI(t);
+            const t = new TextEncoder().encode(cn + e);
+            return Ka.iI(t);
           } catch (e) {
             return "";
           }
         }
         DeobfuscateString(e) {
           try {
-            const t = Qa.bg(e);
+            const t = Ka.bg(e);
             let r = new TextDecoder().decode(t);
-            return r.startsWith(ln)
+            return r.startsWith(cn)
               ? ((r = r.slice(3)), r)
               : (console.log(
                   "DeobfuscateString given invalid base64 data, ignoring: " + e,
@@ -14622,7 +14658,7 @@
                   .Body()
                   .preferences();
               } else {
-                let t = { sessionid: ne.TS.SESSIONID, origin: on() };
+                let t = { sessionid: ne.TS.SESSIONID, origin: ln() };
                 const r = await Ci().get(
                   ne.TS.COMMUNITY_BASE_URL +
                     "textfilter/ajaxgetcommunitypreferences",
@@ -14645,7 +14681,7 @@
                     .Body()
                     .words();
                 } else {
-                  let e = { sessionid: ne.TS.SESSIONID, origin: on() };
+                  let e = { sessionid: ne.TS.SESSIONID, origin: ln() };
                   const r = await Ci().get(
                     ne.TS.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgettextfiltercustomwords",
@@ -14730,18 +14766,18 @@
               console.warn("LoadLanguage caught while loading from cache:", e);
             }
           if (!r) {
-            t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${on()}`;
+            t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${ln()}`;
             {
               const e = await Ci().get(t);
               this.m_strBannedWords += e.data;
             }
-            t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${on()}`;
+            t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${ln()}`;
             {
               const e = await Ci().get(t);
               this.m_strProfanityWords += e.data;
             }
           }
-          t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${on()}`;
+          t = `${ne.TS.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${ln()}`;
           {
             const e = await Ci().get(t);
             this.m_strCleanWords += e.data;
@@ -14806,7 +14842,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                (0, Ka.aj)().ReportError(
+                (0, $a.aj)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`,
                   ),
@@ -14822,7 +14858,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                (0, Ka.aj)().ReportError(
+                (0, $a.aj)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`,
                   ),
@@ -14862,11 +14898,11 @@
               );
         }
       }
-      let mn;
-      function un() {
-        if (!mn) {
+      let un;
+      function dn() {
+        if (!un) {
           const e = new Set();
-          let t = { sessionid: ne.TS.SESSIONID, origin: on() };
+          let t = { sessionid: ne.TS.SESSIONID, origin: ln() };
           Ci()
             .get(ne.TS.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
@@ -14877,41 +14913,41 @@
                 (0, n.S$)(r.efriendrelationship) &&
                   e.add(new ce.b(r.ulfriendid).GetAccountID());
             }),
-            (mn = (t) => e.has(t));
+            (un = (t) => e.has(t));
         }
-        return mn;
+        return un;
       }
-      (0, we.Cg)([et.sH], cn.prototype, "m_TextFilterPreferences", void 0),
-        (0, we.Cg)([et.sH], cn.prototype, "m_mapPlayerCache", void 0),
-        (0, we.Cg)([et.sH], cn.prototype, "m_regexBannedWords", void 0),
-        (0, we.Cg)([et.sH], cn.prototype, "m_regexCleanWords", void 0),
-        (0, we.Cg)([et.sH], cn.prototype, "m_bInitialized", void 0),
-        (0, we.Cg)([et.XI], cn.prototype, "Init", null),
-        (0, we.Cg)([sn.o], cn.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, we.Cg)([et.XI], cn.prototype, "UpdateCommunityPreferences", null),
-        (0, we.Cg)([et.XI], cn.prototype, "BRebuildFilter", null);
-      let dn = null,
-        gn = !1;
-      function _n() {
+      (0, we.Cg)([et.sH], mn.prototype, "m_TextFilterPreferences", void 0),
+        (0, we.Cg)([et.sH], mn.prototype, "m_mapPlayerCache", void 0),
+        (0, we.Cg)([et.sH], mn.prototype, "m_regexBannedWords", void 0),
+        (0, we.Cg)([et.sH], mn.prototype, "m_regexCleanWords", void 0),
+        (0, we.Cg)([et.sH], mn.prototype, "m_bInitialized", void 0),
+        (0, we.Cg)([et.XI], mn.prototype, "Init", null),
+        (0, we.Cg)([on.o], mn.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, we.Cg)([et.XI], mn.prototype, "UpdateCommunityPreferences", null),
+        (0, we.Cg)([et.XI], mn.prototype, "BRebuildFilter", null);
+      let gn = null,
+        _n = !1;
+      function pn() {
         const e = (0, u.KV)(),
           t = (0, u.rX)(),
           r = (0, s.q3)(
-            () => (dn || (dn = new cn({ BIsFriend: un() })), dn).m_bInitialized,
+            () => (gn || (gn = new mn({ BIsFriend: dn() })), gn).m_bInitialized,
           );
         return (
           r ||
-            gn ||
-            ((gn = !0),
-            dn.Init(ne.iA.accountid, e, t).finally(() => (gn = !1))),
-          [r, dn]
+            _n ||
+            ((_n = !0),
+            gn.Init(ne.iA.accountid, e, t).finally(() => (_n = !1))),
+          [r, gn]
         );
       }
-      function pn(e) {
+      function yn(e) {
         const { rollup: t, uimode: r, location: i } = e,
           a = (function (e) {
             let t = null;
             return (
-              Vr(e) ? (t = fn) : Kr(e) ? (t = yn) : Mn[e] && (t = Mn[e]), t
+              Vr(e) ? (t = bn) : Kr(e) ? (t = Bn) : wn[e] && (t = wn[e]), t
             );
           })(t.type);
         return a
@@ -14926,7 +14962,7 @@
             )
           : null;
       }
-      function yn(e) {
+      function Bn(e) {
         const {
             rollup: t,
             onNotificationClick: r,
@@ -14996,7 +15032,7 @@
           }),
         );
       }
-      function Bn(e) {
+      function fn(e) {
         const {
             steamid: t,
             url: r,
@@ -15016,7 +15052,7 @@
         return o.createElement(
           "a",
           { href: r, onMouseDown: (e) => s(() => {}, n.item, e) },
-          o.createElement(xa, {
+          o.createElement(Ga, {
             title: g,
             body: _,
             bDataLoading: d,
@@ -15032,7 +15068,7 @@
           }),
         );
       }
-      function fn(e) {
+      function bn(e) {
         const t =
           ((r = e.rollup.type),
           (i = e.rollup.item.body_data),
@@ -15059,7 +15095,7 @@
         if (!t) return null;
         const { strTitleLoc: a, strBodyLoc: n, strUrl: s, steamid: l } = t;
         return l && a && n
-          ? o.createElement(Bn, {
+          ? o.createElement(fn, {
               steamid: l,
               url: s,
               strTitleLoc: a,
@@ -15068,7 +15104,7 @@
             })
           : null;
       }
-      function bn(e) {
+      function Mn(e) {
         const { url: t, count: r, icon: i, strLocToken: a, eFeature: n } = e,
           s = (function (e) {
             const t = (0, l.LH)(),
@@ -15092,7 +15128,7 @@
               )
           : null;
       }
-      const Mn = {
+      const wn = {
         3: function (e) {
           const {
               rollup: t,
@@ -15117,7 +15153,7 @@
               : null,
             { data: _ } = aa(g),
             [p] = Pi(s.json_data?.app_id, { include_assets: !0 }),
-            [y, B] = _n(),
+            [y, B] = pn(),
             f = y
               ? B.FilterText(s.account_steam_id.GetAccountID(), s.title)
               : "",
@@ -15132,7 +15168,7 @@
                 r(() => {}, t.item, e);
               },
             },
-            o.createElement(Ga, {
+            o.createElement(Aa, {
               fallbackLogo: o.createElement(Fi.Qte, null),
               icon: o.createElement(Fi.MwB, null),
               onActivate: () => r(() => window.location.assign(m), t.item),
@@ -15183,7 +15219,7 @@
             o.createElement(
               "a",
               { href: m, onMouseDown: (e) => r(() => {}, t.item, e) },
-              o.createElement(Aa, {
+              o.createElement(La, {
                 fallbackLogo: o.createElement(Fi.Qte, null),
                 icon: o.createElement(Fi.ilR, null),
                 onActivate: () => r(() => window.location.assign(m), t.item),
@@ -15214,7 +15250,7 @@
           return o.createElement(
             "a",
             { href: c, onMouseDown: (e) => r(() => {}, t.item, e) },
-            o.createElement(Na, {
+            o.createElement(Pa, {
               fallbackLogo: o.createElement(Fi.Gv$, null),
               icon: o.createElement(Fi.sdo, null),
               onActivate: () => r(() => window.location.assign(c), t.item),
@@ -15246,7 +15282,7 @@
           return o.createElement(
             "a",
             { href: g, onMouseDown: (e) => r(() => {}, t.item, e) },
-            o.createElement(Pa, {
+            o.createElement(Ea, {
               icon: o.createElement(Fi.rI_, null),
               fallbackLogo: o.createElement(Fi.Qte, null),
               onActivate: () => r(() => window.location.assign(g), t.item),
@@ -15277,7 +15313,7 @@
           return o.createElement(
             "a",
             { href: c, onMouseDown: (e) => r(() => {}, t.item, e) },
-            o.createElement(Ua, {
+            o.createElement(Na, {
               logo: o.createElement(Fi.Qte, null),
               icon: o.createElement(Fi.pD, null),
               onActivate: () => r(() => window.location.assign(c), t.item),
@@ -15335,7 +15371,7 @@
           return o.createElement(
             "a",
             { href: s, onMouseDown: (e) => r(() => {}, t.item, e) },
-            o.createElement(Ea, {
+            o.createElement(xa, {
               icon: o.createElement(Fi.Qte, null),
               fallbackLogo: o.createElement(Fi.wC1, null),
               onActivate: () => r(() => window.location.assign(s), t.item),
@@ -15385,7 +15421,7 @@
           return o.createElement(
             "a",
             { href: g, onMouseDown: (e) => r(() => {}, t.item, e) },
-            o.createElement(xa, {
+            o.createElement(Ga, {
               title: p,
               body: y,
               bDataLoading: _,
@@ -15401,10 +15437,34 @@
             }),
           );
         },
-        29: () => null,
+        29: (e) => {
+          const {
+              rollup: t,
+              onNotificationClick: r,
+              location: i,
+              uimode: a,
+              onHide: n,
+            } = e,
+            s = `${at.TS.COMMUNITY_BASE_URL}my/tradehistory`;
+          return o.createElement(
+            "a",
+            { href: s, onMouseDown: (e) => r(() => {}, t.item, e) },
+            o.createElement(Ua, {
+              logo: o.createElement(Fi.Qte, null),
+              icon: o.createElement(Fi.h20, null),
+              onActivate: () => r(() => window.location.assign(s), t.item),
+              location: i,
+              eUIMode: a,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              bNewIndicator: zi(t.item),
+              onHide: n,
+            }),
+          );
+        },
       };
-      var wn = r(6011);
-      class Sn extends o.Component {
+      var Sn = r(6011);
+      class zn extends o.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";
         }
@@ -15461,14 +15521,14 @@
             (this.m_observer.observe(t), (this.m_elTracked = t));
         }
         FindScrollableAncestor(e) {
-          return wn.Kf(e, (e) => {
+          return Sn.Kf(e, (e) => {
             const t = this.props.bHorizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(Sn.GetScrollableClassname())
+              !!e.classList.contains(zn.GetScrollableClassname())
             );
           });
         }
@@ -15499,16 +15559,16 @@
           );
         }
       }
-      (0, we.Cg)([Ui.oI], Sn.prototype, "OnIntersection", null);
-      const zn = new oi(),
-        hn = (0, Ti.Nr)(function (e) {
+      (0, we.Cg)([Ui.oI], zn.prototype, "OnIntersection", null);
+      const hn = new oi(),
+        Rn = (0, Ti.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: r } = e;
           o.useEffect(() => {
-            r && !zn.m_bLoaded && zn.ProcessNewNotificationPayload(r);
+            r && !hn.m_bLoaded && hn.ProcessNewNotificationPayload(r);
           }, [r]);
           const i = (0, u.KV)();
           (0, o.useEffect)(() => {
-            zn.setTransport(i),
+            hn.setTransport(i),
               (window.RefreshSteamNotifications = () =>
                 (async function (e) {
                   let t = null;
@@ -15550,44 +15610,44 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && zn.ProcessNewNotificationPayload(t);
+                  t && hn.ProcessNewNotificationPayload(t);
                 })(i));
           }, [i]);
-          const a = Rn();
+          const a = Fn();
           return t
             ? o.createElement(
                 o.Fragment,
                 null,
-                o.createElement(Cn, null),
-                o.createElement(Wn, null),
+                o.createElement(Un, null),
+                o.createElement(jn, null),
               )
-            : o.createElement(vn, { nTotalUnviewed: a.nUnviewed });
+            : o.createElement(Tn, { nTotalUnviewed: a.nUnviewed });
         });
-      function Rn() {
+      function Fn() {
         return (0, s.q3)(() => ({
-          notifications: zn.m_rgNotificationRollups,
-          summary: zn.m_summary,
-          loaded: zn.m_bLoaded,
-          nUnviewed: zn.m_nUnviewed,
+          notifications: hn.m_rgNotificationRollups,
+          summary: hn.m_summary,
+          loaded: hn.m_bLoaded,
+          nUnviewed: hn.m_nUnviewed,
         }));
       }
-      function Fn() {
-        const e = Rn(),
+      function vn() {
+        const e = Fn(),
           t = (0, l.LH)(),
           { data: r } = ge(t),
           i = pe(),
           a = r?.settings;
         return e.notifications.filter((e) => !wi(e.type, a, i) && !hi(e.item));
       }
-      function vn(e) {
+      function Tn(e) {
         const { nTotalUnviewed: t } = e,
           r = o.useRef(null),
-          i = Fn(),
+          i = vn(),
           [a, n] = o.useState(Wi().AnimateBell);
         o.useEffect(() => {
           r.current ||
             ((r.current = (0, Me.lX)(
-              o.createElement(Tn, { popupRef: r }),
+              o.createElement(In, { popupRef: r }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -15607,7 +15667,7 @@
           [r],
         );
         return o.createElement(
-          Sn,
+          zn,
           { trigger: "repeated", onVisibilityChange: s },
           o.createElement(
             "button",
@@ -15616,7 +15676,7 @@
                 if (!r.current?.visible) {
                   r.current?.Show();
                   -1 != i.findIndex((e) => !e.item.viewed) &&
-                    zn.MarkAllItemsViewed();
+                    hn.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -15633,7 +15693,7 @@
           ),
         );
       }
-      const Tn = (e) => {
+      const In = (e) => {
           const { popupRef: t } = e,
             r = o.useRef(null),
             [i, a] = o.useState(!1);
@@ -15650,20 +15710,20 @@
               className: Wi().NotificationsMenu,
               onClick: () => t?.current?.Hide(),
             },
-            o.createElement(In, null),
+            o.createElement(Wn, null),
             o.createElement(
               "div",
               {
                 className: (0, vi.A)(Wi().NotificationsMenuScrollable, n),
                 ref: r,
               },
-              o.createElement(Cn, null),
-              o.createElement(qn, null),
               o.createElement(Un, null),
+              o.createElement(On, null),
+              o.createElement(Nn, null),
             ),
           );
         },
-        In = () => {
+        Wn = () => {
           const e = `${at.TS.COMMUNITY_BASE_URL}profiles/${at.iA.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -15684,7 +15744,7 @@
             ),
           );
         },
-        Wn = () => {
+        jn = () => {
           const e = `${at.TS.COMMUNITY_BASE_URL}profiles/${at.iA.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -15705,32 +15765,32 @@
             ),
           );
         };
-      function jn(e, t, r) {
+      function qn(e, t, r) {
         t.read ||
           (r && 0 != r.button && 1 != r.button) ||
           !t.notification_id ||
-          zn.MarkItemRead(t.notification_id),
+          hn.MarkItemRead(t.notification_id),
           e();
       }
-      function qn() {
-        const e = Fn();
+      function On() {
+        const e = vn();
         return 0 == e.length
           ? null
           : o.createElement(
               "div",
               { className: Wi().NotificationsMenuEntriesContainer },
               e.map((e, t) =>
-                o.createElement(pn, {
+                o.createElement(yn, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: jn,
+                  onNotificationClick: qn,
                   uimode: 3,
                   location: 3,
                 }),
               ),
             );
       }
-      const On = [
+      const Cn = [
         {
           fnUrl: () =>
             `${at.TS.COMMUNITY_BASE_URL}profiles/${at.iA.steamid}/inventory/#pending_gifts`,
@@ -15799,13 +15859,13 @@
           strLocToken: "#Notification_FamilyInvitePinned_Body",
         },
       ];
-      function Cn() {
-        const e = Rn();
+      function Un() {
+        const e = Fn();
         return o.createElement(
           o.Fragment,
           null,
-          On.map((t) =>
-            o.createElement(bn, {
+          Cn.map((t) =>
+            o.createElement(Mn, {
               key: t.countItem,
               url: t.fnUrl(),
               count: e.summary[t.countItem],
@@ -15816,7 +15876,7 @@
           ),
         );
       }
-      function Un() {
+      function Nn() {
         return o.createElement(
           "div",
           { className: Wi().EmptyNotificationsCtn },
@@ -15832,7 +15892,7 @@
           ),
         );
       }
-      const Nn = hn;
+      const Pn = Rn;
     },
   },
 ]);

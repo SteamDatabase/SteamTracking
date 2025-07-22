@@ -853,52 +853,52 @@
     70078: (e, t, n) => {
       "use strict";
       n.d(t, {
-        A4: () => A,
-        iy: () => T,
-        ZA: () => z,
-        g8: () => k,
-        Dn: () => N,
-        Ay: () => se,
-        ye: () => ie,
-        Fo: () => ae,
-        G$: () => oe,
-        DJ: () => me,
-        G6: () => re,
-        p6: () => le,
-        zv: () => V,
-        IS: () => Q,
-        GE: () => Y,
-        yX: () => K,
-        w: () => de,
-        EE: () => $,
-        Zf: () => X,
-        jR: () => Z,
-        Ac: () => Ee,
-        lh: () => ye,
-        mz: () => te,
-        qQ: () => J,
-        MW: () => ee,
-        qR: () => ne,
-        _B: () => W,
-        sj: () => ce,
-        j3: () => be,
-        Yw: () => q,
-        zK: () => P,
-        WN: () => x,
-        Pd: () => _e,
-        p$: () => ge,
-        dm: () => pe,
-        DU: () => L,
-        qF: () => B,
-        mW: () => F,
-        wv: () => O,
-        GU: () => R,
-        bv: () => j,
-        Kd: () => U,
-        RZ: () => H,
-        cB: () => ue,
-        Te: () => he,
-        Yz: () => we,
+        A4: () => D,
+        iy: () => A,
+        ZA: () => N,
+        g8: () => L,
+        Dn: () => V,
+        Ay: () => ae,
+        ye: () => se,
+        Fo: () => oe,
+        G$: () => re,
+        DJ: () => ue,
+        G6: () => le,
+        p6: () => de,
+        zv: () => W,
+        IS: () => X,
+        GE: () => K,
+        yX: () => Q,
+        w: () => ce,
+        EE: () => Y,
+        Zf: () => Z,
+        jR: () => J,
+        Ac: () => fe,
+        lh: () => we,
+        mz: () => ne,
+        qQ: () => ee,
+        MW: () => te,
+        qR: () => ie,
+        _B: () => q,
+        sj: () => me,
+        j3: () => Se,
+        Yw: () => $,
+        zK: () => R,
+        WN: () => H,
+        Pd: () => ge,
+        p$: () => ve,
+        dm: () => _e,
+        DU: () => B,
+        qF: () => P,
+        mW: () => O,
+        wv: () => x,
+        GU: () => j,
+        bv: () => U,
+        Kd: () => F,
+        RZ: () => M,
+        cB: () => he,
+        Te: () => pe,
+        Yz: () => be,
       });
       var i = n(34629),
         s = n(79821),
@@ -938,38 +938,39 @@
         "GetEventStartTime",
         null,
       );
-      const G = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function T(e) {
+      var G = n(61336);
+      const T = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
+      function A(e) {
         return (
-          G.some((t) => t == e.GetEventType()) &&
+          T.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
       }
       const C = [20, 31, 34];
-      function A(e) {
+      function D(e) {
         return !C.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
-      const D = [12, 34];
-      function k(e) {
-        return !D.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+      const k = [12, 34];
+      function L(e) {
+        return !k.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      const L = 593110,
-        B = 1675200,
-        P = [L, 766, 221410],
-        R = 39049601,
-        j = 41316928,
-        U = 4,
-        F = 20,
-        O = 45559995,
-        x = [4145017, 35143931, R, U, j],
-        H = 9e4,
-        M = [12, 34];
-      function z(e) {
-        return !M.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
-      }
+      const B = 593110,
+        P = 1675200,
+        R = [B, 766, 221410],
+        j = 39049601,
+        U = 41316928,
+        F = 4,
+        O = 20,
+        x = 45559995,
+        H = [4145017, 35143931, j, F, U],
+        M = 9e4,
+        z = [12, 34];
       function N(e) {
+        return !z.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+      }
+      function V(e) {
         const t = 60 * w.Kp.PerDay;
         return (
           e.BIsVisibleEvent() &&
@@ -982,8 +983,8 @@
           })(e)
         );
       }
-      var V;
-      function W(e) {
+      var W;
+      function q(e) {
         switch (e) {
           case "links":
           case "itemdef":
@@ -999,16 +1000,16 @@
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
           (e[(e.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
-      })(V || (V = {}));
-      const q = "bordered";
-      var $, Y, K, Q, X, Z;
-      function J(e) {
+      })(W || (W = {}));
+      const $ = "bordered";
+      var Y, K, Q, X, Z, J;
+      function ee(e) {
         return e.carousel_rows || 1;
       }
-      function ee(e) {
+      function te(e) {
         return e.cap_item_count || 0;
       }
-      function te(e) {
+      function ne(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : "trailercarousel" == e.section_type
@@ -1017,23 +1018,23 @@
               ? 4
               : 0;
       }
-      function ne(e) {
+      function ie(e) {
         return Boolean(null == e ? void 0 : e.store_filter)
           ? JSON.stringify(e.store_filter)
           : void 0;
       }
-      function ie(e) {
+      function se(e) {
         return (
           "items" === e ||
           "trailercarousel" === e ||
           "crosspromotesalepage" == e
         );
       }
-      function se(e) {
+      function ae(e) {
         return "items" === e || "crosspromotesalepage" == e;
       }
-      function ae(e, t) {
-        if (!e.BIsNextFest() || ie(t.section_type) || t.smart_section)
+      function oe(e, t) {
+        if (!e.BIsNextFest() || se(t.section_type) || t.smart_section)
           return !1;
         return (
           (e.jsondata.sale_ml_recommender_delay_hours &&
@@ -1042,8 +1043,8 @@
               new Date().getTime() / 1e3) > 0
         );
       }
-      function oe(e, t) {
-        return !!t.use_random_order || !!ae(e, t);
+      function re(e, t) {
+        return !!t.use_random_order || !!oe(e, t);
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -1061,7 +1062,7 @@
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })($ || ($ = {})),
+      })(Y || (Y = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -1069,29 +1070,29 @@
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(Y || (Y = {})),
+        })(K || (K = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(K || (K = {})),
+        })(Q || (Q = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(Q || (Q = {})),
+        })(X || (X = {})),
         (function (e) {
           (e.Steam = "Steam"),
             (e.Facebook = "Facebook"),
             (e.Twitter = "Twitter"),
             (e.Reddit = "Reddit");
-        })(X || (X = {})),
+        })(Z || (Z = {})),
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(Z || (Z = {}));
-      const re = {
+        })(J || (J = {}));
+      const le = {
           capsules: [],
           events: [],
           links: [],
@@ -1100,9 +1101,9 @@
           default_label: "#Sale_default_label",
           section_type: "unselected_empty",
         },
-        le = { internal_type: "subscription_pricing" };
-      var de;
-      function ce(e, t) {
+        de = { internal_type: "subscription_pricing" };
+      var ce;
+      function me(e, t) {
         (e.library_spotlight = void 0),
           e.email_setting &&
             ((e.email_setting.locked = void 0),
@@ -1132,8 +1133,8 @@
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(de || (de = {}));
-      const me = {
+      })(ce || (ce = {}));
+      const ue = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -1158,12 +1159,12 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        ue = "old_announce_",
-        he = "_summary",
-        pe = 80,
-        _e = 120,
-        ge = 180,
-        ve = [
+        he = "old_announce_",
+        pe = "_summary",
+        _e = 80,
+        ge = 120,
+        ve = 180,
+        Ee = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -1179,7 +1180,7 @@
           "betachannel",
           "previewchannel",
         ],
-        Ee = [
+        fe = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -1193,9 +1194,9 @@
           "curator_public",
           "audience_followers",
         ],
-        fe = [20, 31, 34],
-        Ie = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
-      class ye {
+        Ie = [20, 31, 34],
+        ye = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class we {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1212,9 +1213,9 @@
             (this.m_nBuildID = void 0),
             (this.m_strBuildBranch = void 0),
             (this.postTime = void 0),
-            (this.visibility_state = V.k_EEventStateUnpublished),
+            (this.visibility_state = W.k_EEventStateUnpublished),
             (this.broadcaster = void 0),
-            (this.jsondata = me),
+            (this.jsondata = ue),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
             (this.nVotesDown = 0),
@@ -1238,7 +1239,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new ye(),
+          let t = new we(),
             n = JSON.parse(e);
           return (
             Object.assign(t, n),
@@ -1274,7 +1275,7 @@
           );
         }
         clone(e = !1) {
-          let t = new ye();
+          let t = new we();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -1326,7 +1327,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  ve.includes(e) && t.vecTags.push(e);
+                  Ee.includes(e) && t.vecTags.push(e);
                 }),
             t.jsondata.email_setting)
           ) {
@@ -1568,16 +1569,28 @@
           }
           return null;
         }
-        GetImageURLWithFallback(e, t, n = c.wI.full) {
-          var i, s;
-          const a = this.GetImageURL(e, t, n);
-          if (a && a.trim().length > 0) return a;
-          const o = v.A0.GetELanguageFallback(t);
-          if (t != o) {
-            const t = this.GetImageURL(e, o, n);
+        GetAppIDOrReferenceAppID() {
+          var e, t;
+          return this.appid
+            ? this.appid
+            : null ===
+                  (t =
+                    null === (e = this.jsondata) || void 0 === e
+                      ? void 0
+                      : e.referenced_appids) || void 0 === t
+              ? void 0
+              : t[0];
+        }
+        GetImageURLWithFallback(e, t, n = c.wI.full, i = !0) {
+          var s, a, o;
+          const r = this.GetImageURL(e, t, n);
+          if (r && r.trim().length > 0) return r;
+          const l = v.A0.GetELanguageFallback(t);
+          if (t != l) {
+            const t = this.GetImageURL(e, l, n);
             if (t && t.trim().length > 0) return t;
           }
-          const r = u.ac.GetClanInfoByClanAccountID(
+          const d = u.ac.GetClanInfoByClanAccountID(
             this.clanSteamID.GetAccountID(),
           );
           if ("capsule" == e) {
@@ -1585,30 +1598,34 @@
               t,
               Number.MAX_VALUE,
             );
-            if (e) return e;
+            if (e && (i || (0, G.ZF)(e))) return e;
             let n = this.appid;
-            if (!n && r && ((r.is_creator_home && !r.is_ogg) || r.is_curator)) {
+            if (!n && d && ((d.is_creator_home && !d.is_ogg) || d.is_curator)) {
               if (
                 !(null ===
-                  (s =
-                    null === (i = this.jsondata) || void 0 === i
+                  (a =
+                    null === (s = this.jsondata) || void 0 === s
                       ? void 0
-                      : i.referenced_appids) || void 0 === s
+                      : s.referenced_appids) || void 0 === a
                   ? void 0
-                  : s.length)
+                  : a.length)
               )
-                return r.avatar_full_url;
+                return d.avatar_full_url;
               n = this.jsondata.referenced_appids[0];
             }
-            const a = _.A.Get().GetApp(n);
-            return a
-              ? a.GetAssets().GetMainCapsuleURL()
-              : b.TS.STORE_ICON_BASE_URL + n + "/header.jpg";
+            const r = _.A.Get().GetApp(n);
+            return r && r.GetAssets()
+              ? null === (o = r.GetAssets()) || void 0 === o
+                ? void 0
+                : o.GetMainCapsuleURL()
+              : (null == d ? void 0 : d.avatar_full_url)
+                ? d.avatar_full_url
+                : b.TS.STORE_ICON_BASE_URL + n + "/header.jpg";
           }
           return "background" == e &&
-            r &&
-            ((r.is_creator_home && !r.is_ogg) || r.is_curator)
-            ? r.creator_page_bg_url
+            d &&
+            ((d.is_creator_home && !d.is_ogg) || d.is_curator)
+            ? d.creator_page_bg_url
             : this.GetFallbackArtworkScreenshot();
         }
         GetFallbackArtworkScreenshot() {
@@ -1679,17 +1696,17 @@
         BIsVisibleEvent() {
           let e = Math.floor(p.HD.GetTimeNowWithOverride());
           return (
-            this.visibility_state == V.k_EEventStateUnlisted ||
-            (this.visibility_state == V.k_EEventStateVisible &&
+            this.visibility_state == W.k_EEventStateUnlisted ||
+            (this.visibility_state == W.k_EEventStateVisible &&
               e > this.visibilityStartTime &&
               (this.visibilityEndTime < 10 || e < this.visibilityEndTime))
           );
         }
         BIsStagedEvent() {
-          return this.visibility_state == V.k_EEventStateStaged;
+          return this.visibility_state == W.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == V.k_EEventStateUnlisted;
+          return this.visibility_state == W.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -1744,7 +1761,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || ye.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -1756,7 +1773,7 @@
                 : n.localized_summary,
               e,
             ) ||
-            ye.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -1787,7 +1804,7 @@
               ])),
               (e = (0, s.zV)(e)),
               (e = (0, y.aX)(e)),
-              (0, y.bC)(e, t || ge))
+              (0, y.bC)(e, t || ve))
             : "";
         }
         BHasTag(e) {
@@ -1802,10 +1819,10 @@
         BShowLibrarySpotlight(e) {
           if (!e) return Boolean(this.jsondata.library_spotlight);
           if (!this.jsondata.library_spotlight) return !1;
-          if (fe.includes(this.type)) return !1;
+          if (Ie.includes(this.type)) return !1;
           const t = new Date().getTime() / 1e3;
           return (
-            !(Ie.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(ye.includes(this.type) && this.endTime && t > this.endTime) &&
             !(this.startTime && t > this.startTime + 60 * w.Kp.PerDay)
           );
         }
@@ -1957,20 +1974,20 @@
               s.push({
                 ...a,
                 section_type: "footer_self_creator_home",
-                unique_id: H + 10,
+                unique_id: M + 10,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             n &&
               s.push({
                 ...a,
                 section_type: "footer_browse_more",
-                unique_id: H + 12,
+                unique_id: M + 12,
               }),
             i &&
               s.push({
                 ...a,
                 section_type: "footer_default_social_share",
-                unique_id: H + 13,
+                unique_id: M + 13,
               }),
             s
           );
@@ -1995,7 +2012,7 @@
         }
         GetSaleSectionByID(e) {
           var t;
-          if (e > H) {
+          if (e > M) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (t) => t.unique_id == e,
             );
@@ -2051,14 +2068,14 @@
             null === (n = this.jsondata.tagged_items) ||
               void 0 === n ||
               n.forEach((e) => {
-                ye.AccumulateCapsuleListIDs([e.capsule], i, s, t);
+                we.AccumulateCapsuleListIDs([e.capsule], i, s, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
-              if (ie(e.section_type))
-                ye.AccumulateCapsuleListIDs(e.capsules, i, s, t);
+              if (se(e.section_type))
+                we.AccumulateCapsuleListIDs(e.capsules, i, s, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const n of e.tabs)
-                  ye.AccumulateCapsuleListIDs(n.capsules, i, s, t);
+                  we.AccumulateCapsuleListIDs(n.capsules, i, s, t);
             }),
             s
           );
@@ -2202,7 +2219,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === de.k_EContentHub &&
+            this.jsondata.item_source_type === ce.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2298,62 +2315,62 @@
         BIsNextFest() {
           const e = this.jsondata.sale_vanity_id;
           return (
-            new l.b(this.clanSteamID).GetAccountID() == R &&
+            new l.b(this.clanSteamID).GetAccountID() == j &&
             e &&
             e.toLowerCase().startsWith("nextfest")
           );
         }
       }
-      (0, i.Cg)([o.sH], ye.prototype, "GID", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "AnnouncementGID", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "forumTopicGID", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "type", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "appid", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "name", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "description", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "timestamp_loc_updated", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "startTime", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "endTime", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "visibilityStartTime", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "visibilityEndTime", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "m_nBuildID", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "m_strBuildBranch", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "postTime", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "visibility_state", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "broadcaster", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "jsondata", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "nCommentCount", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "nVotesUp", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "nVotesDown", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "bOldAnnouncement", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "announcementClanSteamID", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "loadedAllLanguages", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "bLoaded", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "deleteInProgress", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "vecTags", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "last_update_steamid", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "rtime32_last_modified", void 0),
+      (0, i.Cg)([o.sH], we.prototype, "GID", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "AnnouncementGID", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "forumTopicGID", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "type", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "appid", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "name", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "description", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "timestamp_loc_updated", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "startTime", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "endTime", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "visibilityStartTime", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "visibilityEndTime", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "m_nBuildID", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "m_strBuildBranch", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "postTime", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "visibility_state", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "broadcaster", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "jsondata", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "nCommentCount", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "nVotesUp", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "nVotesDown", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "bOldAnnouncement", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "announcementClanSteamID", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "loadedAllLanguages", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "bLoaded", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "deleteInProgress", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "vecTags", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "last_update_steamid", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "rtime32_last_modified", void 0),
         (0, i.Cg)(
           [o.sH],
-          ye.prototype,
+          we.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, i.Cg)(
           [o.sH],
-          ye.prototype,
+          we.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, i.Cg)([o.sH], ye.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "video_preview_type", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "video_preview_id", void 0),
-        (0, i.Cg)([o.sH], ye.prototype, "m_overrideCurrentDay", void 0);
-      const we = (e) => {
+        (0, i.Cg)([o.sH], we.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "video_preview_type", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "video_preview_id", void 0),
+        (0, i.Cg)([o.sH], we.prototype, "m_overrideCurrentDay", void 0);
+      const be = (e) => {
         const t = (0, I.K)(e.appid);
         return e.appid ? t : b.UF.IS_ALLOWED_SC;
       };
-      function be(e) {
+      function Se(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
@@ -3504,7 +3521,7 @@
                 ? (n.status = "success")
                 : ((n.status = "failed"),
                   (n.message =
-                    null !== (i = t.strErrorMessage) && void 0 !== i ? i : ""));
+                    null !== (i = t.elErrorMessage) && void 0 !== i ? i : ""));
           }
           return d;
         }
@@ -6400,7 +6417,7 @@
       n.d(t, {
         PH: () => c,
         _: () => m,
-        tj: () => C,
+        tj: () => A,
         IQ: () => d,
         qT: () => S,
         Hx: () => T,
@@ -6618,7 +6635,7 @@
         const i = y(e, t, !1);
         return "admin" === n ? i + "partnerevents" : "";
       }
-      function C(e) {
+      function A(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: n } = i.useContext(d),
           a = (0, p.n9)(),

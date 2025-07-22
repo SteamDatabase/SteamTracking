@@ -4,6 +4,16 @@
   {
     chunkid: (module) => {
       module.exports = {
+        AssetEditorContainer: "_4-JJjL9KGe2duRZ5rEz3U",
+        AssetUploadSection: "_1VEMIFHP70MbNWbb4u8tg1",
+        AssetTypesCtn: "_20JMdaklg0nftyTQuo9sIj",
+        AssetEntryCtn: "_3WKFF37v6B8RkdWSwoMKm8",
+        AssetPreview: "vbwNI7DB9YCpONKEKNJdz",
+        PlaceholderAsset: "_1dBf1uIxpYFOh3qoJO5pbm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
         AppDashboard: "_3AZIiEfg9ySoDT99t5sFmp",
         ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
@@ -110,25 +120,20 @@
     },
     chunkid: (module) => {
       module.exports = {
-        EventTimeSection: "_3HyTVTASSmLacvaM964sgu",
-        EventTimeTitle: "_2lG5hFYhu9PGPn6RoFeQOL",
-        EventVisibilityItem: "_1she-lvNiCP3ASjTnl4q7x",
-        EventEditorInputPaneContainer: "_1fCy4cz5Hyj9wDivcVseuc",
-        TimeWidth: "_3JGsBe8Ou5QGqfihv0OPed",
-        EventPublishTimeCtn: "_2QIVvn2p9gUwsAlifi-nkM",
-        DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
-        PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
-        TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
-        InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
-        TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
-        TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
-        TimeRowDropDown: "_3ECiyuGLUqPzuS1hKCdfDm",
-        EndDateAmountCtn: "_1BIlZEGSO_4tw5Lmc1Kkbf",
-        EndRound: "jwuNowbLB28M6nkqFkF_C",
-        VisibilityItemList: "_3B0QM3cOEqER2AD2Y85NFy",
-        VisibilityItems: "_1WleIEEiF-9nJ57tLWkRmS",
-        EventEditorVisibilityCtn: "_4gWwydbAbp2t1NCeW9LLV",
-        DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
+        _: "_2LxgdMcpWJRjkxZKbmeEEb",
+        SubText: "vg0EOhKTLB3tLvshHMr7l",
+        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+        Small: "_3M4j828iWSVEZZAkypcBi1",
+        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2460,9 +2465,614 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        itemDefinition = null;
+        constructor(_) {
+          (0, _._)(this), this.SetCommunityItemDefinitionFromProto(_);
+        }
+        SetCommunityItemDefinitionFromProto(_) {
+          this.itemDefinition = {
+            name: _.item_name,
+            active: _.active,
+            title: _.item_title,
+            appid: _.appid,
+            itemid: _.item_type,
+            deleted: _.deleted,
+            image_small: _.item_image_small,
+            image_large: _.item_image_large,
+            movie_large_mp4: _.item_movie_mp4,
+            movie_large_webm: _.item_movie_webm,
+            movie_small_mp4: _.item_movie_mp4_small,
+            movie_small_webm: _.item_movie_webm_small,
+            item_class: _.item_class,
+          };
+        }
+        get AppID() {
+          return this.itemDefinition.appid;
+        }
+        get BIsActive() {
+          return this.itemDefinition.active;
+        }
+        get ItemID() {
+          return this.itemDefinition.itemid;
+        }
+        get BIsDeleted() {
+          return this.itemDefinition.deleted;
+        }
+        get ItemClass() {
+          return this.itemDefinition.item_class;
+        }
+        GetSourcesForAssetType(_) {
+          let _ = [];
+          switch (_) {
+            case "image_large":
+              this.itemDefinition.image_large &&
+                _.push(this.itemDefinition.image_large);
+              break;
+            case "image_small":
+              this.itemDefinition.image_small &&
+                _.push(this.itemDefinition.image_small);
+              break;
+            case "movie_large":
+              this.itemDefinition.movie_large_webm &&
+                _.push(this.itemDefinition.movie_large_webm),
+                this.itemDefinition.movie_large_mp4 &&
+                  _.push(this.itemDefinition.movie_large_mp4);
+          }
+          return _;
+        }
+      }
+      function _(_, _) {
+        return [`InProgressItemDefinition_${_}_${_}`];
+      }
+      function _(_, _) {
+        return `${_._.BASE_URL_SHARED_CDN}community_assets/images/items/${_}/${_}`;
+      }
+      (0, _._)([_._], _.prototype, "itemDefinition", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _._ {
+        m_rgAssetRequirements = [];
+        m_currentImageOptionKey = void 0;
+        m_bDuplicateAssetType = !1;
+        constructor(_, _, _, _, _) {
+          const _ = (0, _._)(_);
+          super(_, _.name, _, _.src, _),
+            (0, _._)(this),
+            (this.m_rgAssetRequirements = _),
+            (this.m_bDuplicateAssetType = _);
+        }
+        IsValidAssetType(_, _) {
+          const _ = _ && _ != this.fileType,
+            _ = this.IsFileTypeSupported(this.fileType),
+            _ = this.GetCurrentImageOption();
+          let _ = "";
+          return (
+            _
+              ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
+              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            _ || (_ = "No valid asset provided"),
+            this.m_bDuplicateAssetType &&
+              (_ =
+                "This asset type is already provided. Please delete the old asset first."),
+            {
+              error: _,
+              needsCrop: !1,
+            }
+          );
+        }
+        BIsOriginalMinimumDimensions(_) {
+          return !0;
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
+        }
+        GetResizeDimension() {}
+        BSupportsLanguages() {
+          return !1;
+        }
+        get ImageOptions() {
+          let _ = [];
+          return (
+            this.m_rgAssetRequirements.forEach((_) => {
+              _.width === this.width &&
+                _.height === this.height &&
+                _.accepted_filetypes.includes(this.fileType) &&
+                _.push({
+                  asset_type: _.asset_type,
+                  sKey: this.filename,
+                  fnGetLabelText: () => _.label,
+                  width: this.width,
+                  height: this.height,
+                  bEnforceDimensions: !1,
+                  bHiddenFromDropdown: !1,
+                });
+            }),
+            _
+          );
+        }
+        GetCurrentImageOptionKey() {
+          return this.m_currentImageOptionKey;
+        }
+        GetCurrentImageOption() {
+          return this.GetCurrentImageOptionKey()
+            ? this.ImageOptions.find(
+                (_) => _.sKey === this.GetCurrentImageOptionKey(),
+              )
+            : this.ImageOptions.length
+              ? this.ImageOptions[0]
+              : null;
+        }
+        SetCurrentImageOption(_) {
+          this.m_currentImageOptionKey = _?.sKey;
+        }
+        FileTypeMatchesImageTypes(_) {
+          switch (this.fileType) {
+            case 1:
+            case 3:
+            case 10:
+              return !0;
+            default:
+              return !1;
+          }
+        }
+        IsFileTypeSupported(_) {
+          switch (_) {
+            case 1:
+            case 3:
+            case 10:
+            case 2:
+            case 4:
+            case 5:
+              return !0;
+            default:
+              return !1;
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_rgAssetRequirements", void 0),
+        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0),
+        (0, _._)([_._], _.prototype, "m_bDuplicateAssetType", void 0),
+        (0, _._)([_._], _.prototype, "ImageOptions", null),
+        (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
+      class _ extends _._ {
+        m_filesToUpload = _._.array();
+        m_strUploadPath = null;
+        m_bSynchronousUpload = !1;
+        m_rgAssetRequirements = [];
+        constructor(_, _, _) {
+          super(),
+            (0, _._)(this),
+            (this.m_strUploadPath = _),
+            (this.m_bSynchronousUpload = _),
+            (this.m_rgAssetRequirements = _);
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(_) {
+          this.m_strUploadPath = _;
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        BGetUploadsAreInSerial() {
+          return this.m_bSynchronousUpload;
+        }
+        async AddImageForLanguage(_, _) {
+          if ((0, _._)(_.type) || (0, _._)(_.type)) {
+            const _ = await (0, _._)(_, (0, _._)(_.type));
+            if (_) {
+              const _ = new _(_, _, _, this.m_rgAssetRequirements, !1);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else
+            console.error(
+              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          return !1;
+        }
+        async UploadSingleImage(_, _, _, _) {
+          let _ = null;
+          const _ = new FormData();
+          _.append("assetfile", _.file, _),
+            _.append("sessionid", _._.SESSIONID);
+          const _ = _.GetCurrentImageOption();
+          _.append("strAssetType", _.asset_type);
+          const _ = (0, _._)(_);
+          if (!_)
+            return {
+              bSuccess: !1,
+              elErrorMessage:
+                "Invalid file extension, cannot determine mimetype",
+            };
+          _.append("mimetype", _);
+          try {
+            _ = await _().post(this.m_strUploadPath, _, {
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+              cancelToken: _,
+            });
+          } catch (_) {
+            (0, _._)(_);
+            _ = _.response;
+          }
+          return {
+            bSuccess: !0,
+            result: _?.data,
+          };
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            appID: _,
+            unItemType: __webpack_require__,
+            rgAssetDefinitions: _,
+          } = _,
+          _ = _.useMemo(() => {
+            const _ =
+              _._.PARTNER_BASE_URL +
+              `communityitems/ajaxuploadasset/${_}/${__webpack_require__}`;
+            return new _(_, !0, _);
+          }, [_, __webpack_require__, _]);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, {
+            imageUploader: _,
+            rgRealmList: [_._.k_ESteamRealmGlobal],
+            fnUploadComplete: (_) => {
+              for (const _ of _) {
+                if (!_.bSuccess) continue;
+                _.uploadResult;
+              }
+              var _, _;
+              (_ = _),
+                (_ = __webpack_require__),
+                _._.invalidateQueries({
+                  queryKey: _(_, _),
+                });
+            },
+          }),
+        );
+      }
       var _ = __webpack_require__("chunkid");
+      const _ = [
+          {
+            asset_type: "movie_large",
+            label: (0, _._)("#CommunityItems_StartupMovie_Label_Video"),
+            width: 1920,
+            height: 1200,
+            accepted_filetypes: [4, 5],
+            is_video: !0,
+            guidelines: [
+              {
+                strHeader: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineVideo_Header",
+                ),
+                strIntro: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineVideo_Intro",
+                ),
+                rgBulletPoints: [
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_1",
+                  ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_2",
+                  ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_3",
+                  ),
+                ],
+              },
+              {
+                strHeader: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineAudio_Header",
+                ),
+                strIntro: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineAudio_Intro",
+                ),
+                rgBulletPoints: [
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_1",
+                  ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_2",
+                  ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineAudio_BulletPoint_3",
+                  ),
+                ],
+              },
+            ],
+          },
+          {
+            asset_type: "image_large",
+            label: (0, _._)("#CommunityItems_StartupMovie_Label_Poster"),
+            width: 1920,
+            height: 1200,
+            accepted_filetypes: [1, 3, 10],
+            guidelines: [
+              {
+                strHeader: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineImage_Header",
+                ),
+                strIntro: (0, _._)(
+                  "#CommunityItems_StartupMovie_GuidelineImage_Intro",
+                ),
+              },
+            ],
+          },
+        ],
+        _ = _.createContext(null),
+        _ = ({
+          communityItem: _,
+          assetDefs: _,
+          children: __webpack_require__,
+        }) =>
+          _.createElement(
+            _.Provider,
+            {
+              value: {
+                communityItem: _,
+                assetDefs: _,
+              },
+            },
+            __webpack_require__,
+          );
+      function _(_) {
+        const { appID: _, unItemType: __webpack_require__ } = _,
+          _ = (function (_, _) {
+            const _ = (0, _._)({
+              queryKey: _(_, _),
+              queryFn: async () => {
+                const _ = `${_._.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${_}/${_}`,
+                  _ = new FormData();
+                _.append("sessionid", _._.SESSIONID);
+                const _ = await _().post(_, _, {
+                  withCredentials: !0,
+                });
+                return 200 == _?.status && 1 == _.data?.success
+                  ? _.data.def
+                  : (console.error(
+                      "useGetInProgressCommunityItemDefinition:",
+                      _?.data.error,
+                    ),
+                    null);
+              },
+              staleTime: 1 / 0,
+              initialData: (0, _._)("item_def", "application_config"),
+            });
+            return _.isLoading ? null : _.data;
+          })(_, __webpack_require__);
+        if (!_) return null;
+        const _ = new _(_),
+          _ = 17 === _.ItemClass ? _ : null;
+        if (!_) return null;
+        const _ = (!_.BIsActive || _._.is_support) && !_.BIsDeleted;
+        return _.createElement(
+          _,
+          {
+            communityItem: _,
+            assetDefs: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.AssetEditorContainer,
+            },
+            _ && _.createElement(_, null),
+            _.createElement(_, null),
+          ),
+        );
+      }
+      function _() {
+        const { communityItem: _, assetDefs: _ } = _.useContext(_),
+          _ = _.flatMap((_) => _.guidelines).map((_, _) =>
+            _.createElement(_, {
+              key: `guideline_${_}`,
+              guideline: _,
+            }),
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _.AssetUploadSection,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.AssetGuidelinesSection,
+            },
+            _,
+          ),
+          _.createElement(_, {
+            appID: _.AppID,
+            unItemType: _.ItemID,
+            rgAssetDefinitions: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { guideline: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.GuidelineContainer,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.GuidelineHeader,
+            },
+            _.strHeader,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.GuidelineIntro,
+            },
+            _.strIntro,
+          ),
+          _.rgBulletPoints?.length > 0 &&
+            _.createElement(_, {
+              rgBulletPoints: _.rgBulletPoints,
+            }),
+        );
+      }
+      function _(_) {
+        const { rgBulletPoints: _ } = _,
+          _ = _.map((_, _) =>
+            _.createElement(
+              "li",
+              {
+                key: `bulletpoint_${_}`,
+              },
+              _,
+            ),
+          );
+        return _.createElement("ul", null, _);
+      }
+      function _() {
+        const { communityItem: _, assetDefs: _ } = _.useContext(_),
+          _ = _.map((_) =>
+            _.createElement(_, {
+              key: _.asset_type,
+              assetDef: _,
+            }),
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _.AssetTypesCtn,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { assetDef: _ } = _,
+          { communityItem: __webpack_require__, assetDefs: _ } =
+            _.useContext(_);
+        return _.createElement(
+          "div",
+          {
+            className: _.AssetEntryCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.AssetTitle,
+            },
+            _.label,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.AssetPreviewCtn,
+            },
+            _.is_video
+              ? _.createElement(_, {
+                  rgSources: __webpack_require__.GetSourcesForAssetType(
+                    _.asset_type,
+                  ),
+                  unAppID: __webpack_require__.AppID,
+                })
+              : _.createElement(_, {
+                  rgSources: __webpack_require__.GetSourcesForAssetType(
+                    _.asset_type,
+                  ),
+                  unAppID: __webpack_require__.AppID,
+                }),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.PlaceholderAsset,
+          },
+          _.createElement(
+            "div",
+            null,
+            (0, _._)("#CommunityItems_PlaceholderAsset_Missing"),
+          ),
+        );
+      }
+      function _(_) {
+        const { rgSources: _, unAppID: __webpack_require__ } = _;
+        return _.length
+          ? _.createElement("img", {
+              className: _.AssetPreview,
+              src: _(__webpack_require__, _[0]),
+            })
+          : _.createElement(_, null);
+      }
+      function _(_) {
+        const { rgSources: _, unAppID: __webpack_require__ } = _,
+          _ = _.useRef();
+        if (
+          (_.useEffect(() => {
+            _.current && _.current.load();
+          }, [_]),
+          !_.length)
+        )
+          return _.createElement(_, null);
+        const _ = _.map((_, _) =>
+          _.createElement("source", {
+            key: `video_${_}`,
+            src: _(__webpack_require__, _),
+            type: (0, _._)(_),
+          }),
+        );
+        return _.createElement(
+          "video",
+          {
+            ref: _,
+            className: _.AssetPreview,
+            autoPlay: !0,
+            loop: !0,
+            muted: !0,
+            playsInline: !0,
+            controls: !0,
+          },
+          _,
+        );
+      }
       const _ = {
-        CommunityItems: (_) => `/apps/communityitems/${_}`,
+        CommunityItem: (_, _) => `/apps/communityitems/${_}/${_}`,
         AppLanding: (_) => `/apps/landing/${_}`,
         AppInstaller: (_) => `/apps/installer/${_}`,
         AppEconomy: (_) => `/apps/economy/${_}`,
@@ -2472,13 +3082,18 @@
           _._,
           null,
           _.createElement(_._, {
-            path: _.CommunityItems(":appid"),
+            path: _.CommunityItem(":appid", ":itemtype"),
             render: (_) =>
               _.createElement(_._, {
                 config: {
-                  "storeadmin-profilecolors": (_) =>
+                  "appadmin-profilecolors": (_) =>
                     _.createElement(_, {
                       ..._,
+                    }),
+                  "appadmin-communityitemassets": () =>
+                    _.createElement(_, {
+                      appID: Number.parseInt(_.match.params.appid),
+                      unItemType: Number.parseInt(_.match.params.itemtype),
                     }),
                 },
               }),
@@ -2595,196 +3210,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        const _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(void 0),
-          _ = (0, _._)();
-        _.current = _;
-        const [_, _] = (0, _.useState)(void 0),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = {
-              include_assets: _,
-              include_release: _,
-              include_platforms: _,
-              include_all_purchase_options: _,
-              include_screenshots: _,
-              include_trailers: _,
-              include_ratings: _,
-              include_tag_count: _,
-              include_reviews: _,
-              include_basic_info: _,
-              include_supported_languages: _,
-              include_full_description: _,
-              include_included_items: _,
-              include_assets_without_overrides: _,
-              apply_user_filters: _,
-              include_links: _,
-            };
-            let _ = null;
-            return (
-              !_ ||
-                _ < 0 ||
-                _._.Get().BHasStoreItem(_, _, _) ||
-                (void 0 !== _ && _ && _ == _.current) ||
-                (_ !== _.current && (_(void 0), (_.current = _)),
-                (_ = _().CancelToken.source()),
-                _._.Get()
-                  .QueueStoreItemRequest(_, _, _)
-                  .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
-                  })),
-              () => _?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
-        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
-      }
-      function _(_, _, _) {
-        return _(_, 0, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, 2, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, 1, _, _);
-      }
-      function _(_, _, _) {
-        const [_, _] = _(_, _, _);
-        let _;
-        1 != _?.GetStoreItemType() ||
-          _.GetAssets()?.GetHeaderURL() ||
-          1 != _?.GetIncludedAppIDs().length ||
-          (_ = _.GetIncludedAppIDs()[0]);
-        const [_, _] = _(_, _);
-        return _ && _?.BIsVisible() ? [_, _] : [_, _];
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            if (!_ || 0 == _.length) return;
-            const _ = {
-                include_assets: _,
-                include_release: _,
-                include_platforms: _,
-                include_all_purchase_options: _,
-                include_screenshots: _,
-                include_trailers: _,
-                include_ratings: _,
-                include_tag_count: _,
-                include_reviews: _,
-                include_basic_info: _,
-                include_supported_languages: _,
-                include_full_description: _,
-                include_included_items: _,
-                include_assets_without_overrides: _,
-                apply_user_filters: _,
-                include_links: _,
-              },
-              _ = _.filter(
-                (_) =>
-                  !(
-                    _._.Get().BHasStoreItem(_, _, _) ||
-                    _._.Get().BIsStoreItemMissing(_, _)
-                  ),
-              );
-            if (0 == _.length) return;
-            const _ = _().CancelToken.source(),
-              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
-            return (
-              Promise.all(_).then(() => {
-                _.token.reason || _();
-              }),
-              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return 2;
-        if (
-          !_.every(
-            (_) =>
-              _._.Get().BHasStoreItem(_, _, _) ||
-              _._.Get().BIsStoreItemMissing(_, _),
-          )
-        )
-          return 1;
-        return _.every((_) =>
-          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
-        )
-          ? 3
-          : 2;
-      }
-      function _(_, _, _) {
-        return _(_, 0, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, 2, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, 1, _, _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2862,347 +3287,6 @@
       }
       (0, _._)([_._], _.prototype, "OnColorChange", null),
         (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = "hh:mm a",
-        _ = "HH:mm";
-      function _(_) {
-        const {
-          nLatestTime: _,
-          nEarliestTime: __webpack_require__,
-          fnGetTimeToUpdate: _,
-          onError: _,
-          strAlsoShowTimeZone: _,
-          disabled: _,
-          bNoDefaultDate: _,
-          className: _,
-          strDescToolTip: _,
-          strDescription: _,
-          bShowTimeZone: _,
-          strInvalidDateTimeLocalizedMsg: _,
-          fnIsValidDateTime: _,
-          bWeekdaysOnly: _,
-          fnSetTimeToUpdate: _,
-          bForce24HourFormat: _,
-        } = _;
-        let _ =
-          (function () {
-            const _ = _()("2025-01-14T13:00:00");
-            return _.format("LT").toLowerCase().includes("13");
-          })() || _
-            ? _
-            : _;
-        const _ = _(),
-          [_, _] = _.useState(_ > 0 ? _()(1e3 * _) : null),
-          [_, _] = _.useState(),
-          [_, _] = _.useState(),
-          _ = (function (_, _, _, _, _) {
-            const _ = _ && _(),
-              _ = _ && !_(_).isValid(),
-              _ = _ && !_(_).isValid();
-            let _ = null;
-            (_ || _ || "string" == typeof _ || !1 === _) &&
-              ((_ = (0, _._)(_ || "#DateTimePicker_Fallback_Invalid_DateTime")),
-              _
-                ? (_ = (0, _._)("#DateTimePicker_Time_CannotParse"))
-                : _
-                  ? (_ = (0, _._)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof _ && (_ = _));
-            return (
-              _.useEffect(() => {
-                _ && _(_);
-              }, [_, _]),
-              _
-            );
-          })(_, _, _, _, _),
-          _ = !_ && _;
-        let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
-          (_ = {
-            hours: {
-              max: _.hour(),
-              min: _.hour(),
-              step: 0,
-            },
-            minutes: {
-              max: _.minute(),
-              min: _.minute(),
-              step: 0,
-            },
-            seconds: {
-              max: _.seconds(),
-              min: _.seconds(),
-              step: 0,
-            },
-            milliseconds: {
-              max: 0,
-              min: 0,
-              step: 0,
-            },
-          }),
-            (_ = _);
-        }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
-        const _ = _()._.guess(),
-          _ = _().unix(_)._(_),
-          _ = !!_ && _ != _ && _().unix(_)._(_),
-          {
-            fnOnInput: _,
-            fnOnInputBlur: _,
-            fnOnChange: _,
-          } = _(
-            _,
-            (_) => {
-              if (_) return;
-              _(null);
-              const _ = _(),
-                _ = _().unix(_ || _._.GetTimeNowWithOverride());
-              (_ = _.clone()).hour(__webpack_require__.hour()),
-                _.minute(__webpack_require__.minute()),
-                _.second(0),
-                _(_.unix()),
-                _(_);
-            },
-            _,
-          ),
-          {
-            fnOnInput: _,
-            fnOnInputBlur: _,
-            fnOnChange: _,
-          } = _(
-            _,
-            (_) => {
-              if (_) return;
-              _(null);
-              let _ = _(),
-                _ = 0;
-              if (_) {
-                const _ = _().unix(_);
-                (_ = _.clone()).year(__webpack_require__.year()),
-                  _.month(__webpack_require__.month()),
-                  _.date(__webpack_require__.date()),
-                  (_ = _.unix());
-              } else {
-                _ =
-                  _().unix(_).hour(0).second(0).minutes(0).unix() +
-                  3600 * _.hour() +
-                  60 * _.minutes();
-              }
-              _(_), _(_().unix(_));
-            },
-            _,
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().EventTimeSection, _),
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().EventTimeTitle, "DialogLabel"),
-            },
-            _.createElement(
-              _._,
-              {
-                toolTipContent: _,
-                direction: "top",
-              },
-              Boolean(_) && _.createElement("span", null, _),
-            ),
-            _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().DateErrorCtn,
-                },
-                _.createElement("img", {
-                  src: _._,
-                }),
-                _,
-              ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().FlexRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                timeFormat: !1,
-                value: null != _ ? _ : _,
-                isValidDate: (_) =>
-                  !_ &&
-                  (function (_, _, _, _) {
-                    const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                    let _ = _.unix() >= _.unix();
-                    if (_ && _ && _ >= _) {
-                      const _ = _().unix(_).hour(23).minute(59).seconds(59);
-                      _ = _.unix() <= _.unix();
-                    }
-                    _ &&
-                      _ &&
-                      ((0 != _.weekday() && 6 != _.weekday()) || (_ = !1));
-                    return _;
-                  })(__webpack_require__, _, _, _),
-                initialValue: _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                  className: (0, _._)(
-                    _().DateWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
-              }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("L"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().InputBorder, _().TimeBlock),
-              },
-              _.createElement(_(), {
-                onChange: _,
-                dateFormat: !1,
-                timeFormat: _,
-                timeConstraints: _,
-                value: null != _ ? _ : _,
-                inputProps: {
-                  placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                  className: (0, _._)(
-                    _().TimeWidth,
-                    "DialogInput",
-                    "DialogTextInputBase",
-                  ),
-                  disabled: _,
-                  onChange: (_) => _(_.currentTarget.value),
-                  onBlur: (_) => _(_.currentTarget.value),
-                },
-              }),
-              !!_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PacificTimeHint,
-                  },
-                  _.format("LT"),
-                ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().TimeZone,
-                  },
-                  _.zoneAbbr(),
-                ),
-                !!_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TimeZone,
-                    },
-                    _.zoneAbbr(),
-                  ),
-              ),
-          ),
-          Boolean(_) &&
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DateTimePicker_DateTime_Fixed"),
-            ),
-        );
-      }
-      function _(_, _, _) {
-        const [_, _] = _.useState(!1);
-        return {
-          fnOnInput: (_) => {
-            __webpack_require__(_), _(!0);
-          },
-          fnOnInputBlur: (_) => {
-            if (_) {
-              const _ = _(_);
-              _.isValid() && _(_);
-            }
-            _(!1);
-          },
-          fnOnChange: (_) => {
-            if (!_)
-              if ("string" == typeof _) {
-                const _ = _(_);
-                _.isValid() && _(_);
-              } else _(_);
-          },
-        };
-      }
-      function _(_) {
-        return _()(
-          _,
-          (function () {
-            const _ = _()("2025-01-14").format("L").split(/[-/.]/),
-              _ = _.indexOf("14");
-            return _.indexOf("01") < _;
-          })()
-            ? "M/D/YYYY"
-            : "D/M/YYYY",
-          !1,
-        );
-      }
-      function _(_) {
-        return _()(_, [_, _], !1);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

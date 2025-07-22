@@ -363,7 +363,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 		if ( typeof GDynamicStore != 'undefined' )
 		{
 			strUrlTarget += '?review_score_preference=' + ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
-		}
+		}		
 
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );
@@ -375,7 +375,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 
 		if ( !$HoverData.length && !oElemState.bAjaxRequestMade )
 		{
-			var rgAjaxParams = { u: accountId };
+			var rgAjaxParams = { u: accountId, l: 'english' };
 			if ( bPublic )
 			{
 				// is cc needed?

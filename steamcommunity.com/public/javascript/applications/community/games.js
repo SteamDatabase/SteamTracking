@@ -7783,6 +7783,7 @@
           queryFn: async () => {
             const t = a.w.Init(rr),
               r = await Qt.GetPrivateAppList(e, t);
+            if (!r.BSuccess()) throw r.GetErrorMessage();
             return new Set(r.Body().private_apps(!0).appids());
           },
           enabled: !!sr.iA.accountid,

@@ -2,6 +2,7 @@ ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
+${BASE_URL_SHARED_CDN}community_assets/images/items/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
 ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
@@ -1074,6 +1075,8 @@ ${PARTNER_BASE_URL}cluster/ajaxloadcluster
 ${PARTNER_BASE_URL}cluster/ajaxsaveclusterassets
 ${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=${}
 ${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=spotlights
+${PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${}/${}
+${PARTNER_BASE_URL}communityitems/ajaxuploadasset/${}/${}
 ${PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser
 ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
@@ -1110,6 +1113,7 @@ ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/assets/promos
+${PARTNER_BASE_URL}doc/store/assets/promos#popup_update
 ${PARTNER_BASE_URL}doc/store/assets/rules
 ${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/creator_homepage
@@ -2192,14 +2196,8 @@ http://qr.weibo.cn/g/7kla92
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGGo7VWk-kzO_V91empDlVz7ORGAWDqHhbR1TfHLen4wgZiPcIqcBn0kpYb7cAXB9ZJHRPUDQ
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGHorVWwb1mbacg0bL6DV136-dDUDPhGBHXgmacLef8nQM0MpF8IBukyM1M7cAXB9aR2qBKFA
 http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
-http://steamcommunity.com/sharedfiles/filedetails/?id=143962136
-http://steamcommunity.com/sharedfiles/filedetails/?id=402492882
-http://steamcommunity.com/tradingcards/faq/
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
-http://store.steampowered.com/about/
-http://store.steampowered.com/notifications
-http://store.steampowered.com/steam_refunds/
 http://twitter.com/steam
 http://weixin.qq.com/r/LC-K0i3EunDFrWmx93o_
 http://www.dota2.com
@@ -2241,7 +2239,6 @@ http://www.steampowered.com/steamworks/
 http://www.valvesoftware.com
 http://www.valvesoftware.com/legal.htm
 http://www.w3.org/1998/Math/MathML
-http://www.w3.org/1998/Math/MathML${}
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xhtml${}
 http://www.w3.org/1999/xlink
@@ -2599,7 +2596,6 @@ https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
-https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
@@ -2609,9 +2605,6 @@ https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
 https://help.steampowered.com
 https://help.steampowered.com/
-https://help.steampowered.com/#HelpWithEconTrading
-https://help.steampowered.com/#HelpWithLimitedAccount
-https://help.steampowered.com/#HelpWithLogin
 https://help.steampowered.com/${hash}
 https://help.steampowered.com//wizard/HelpWithPurchase
 https://help.steampowered.com/agents/assignhelprequest/
@@ -2624,18 +2617,17 @@ https://help.steampowered.com/agents/ticketlisting/
 https://help.steampowered.com/en/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A
 https://help.steampowered.com/en/ticketmaster/ticket/
-https://help.steampowered.com/en/wizard/HelpValveMerch
-https://help.steampowered.com/en/wizard/HelpWithEconMarket
-https://help.steampowered.com/en/wizard/HelpWithLogin
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=927
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
-https://help.steampowered.com/en/wizard/HelpWithPurchase
-https://help.steampowered.com/en/wizard/HelpWithUnknownCharges
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
+https://help.steampowered.com/faqs/view/1E45-57ED-9153-7EF4
 https://help.steampowered.com/faqs/view/3462-CD4C-36BD-5767
+https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8
+https://help.steampowered.com/faqs/view/6639-EB3C-EC79-FF60
+https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B
 https://help.steampowered.com/login${}
 https://help.steampowered.com/login/getmenuactions/
 https://help.steampowered.com/login/getrsakey/
@@ -2707,8 +2699,6 @@ https://help.steampowered.com/wizard/AjaxUpdateShippingAddress
 https://help.steampowered.com/wizard/AjaxVerifyAccountRecoveryCode/
 https://help.steampowered.com/wizard/AjaxVerifySerialNumber
 https://help.steampowered.com/wizard/AjaxVerifyShippingAddress
-https://help.steampowered.com/wizard/HelpDeleteAccount
-https://help.steampowered.com/wizard/HelpWithLogin
 https://help.steampowered.com/wizard/HelpWithLogin/
 https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=${strSessionID}&account=${accountid}&reset=${eReset}&lost=${nLost}
 https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415
@@ -2805,8 +2795,6 @@ https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
 https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales
 https://partner.steamgames.com/doc/resources/Sales_Feature_Beta
-https://partner.steamgames.com/doc/sitelicense/licensees/gettingstarted/licensemodelpc
-https://partner.steamgames.com/doc/sitelicense/licensees/signup
 https://partner.steamgames.com/doc/store/assets/eventassets
 https://partner.steamgames.com/doc/store/assets/promos
 https://partner.steamgames.com/doc/store/creator_homepage
@@ -3301,7 +3289,6 @@ https://store.steampowered.com/widget/${nAppId}/
 https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
-https://support.steampowered.com/kb_article.php?ref=${strRef}
 https://support.steampowered.com/kb_article.php?ref=1055-ISJM-8568
 https://support.steampowered.com/kb_article.php?ref=1266-OAFV-8478
 https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114

@@ -358,7 +358,7 @@
         }
       }
       (0, i.Cg)([o.sH], A.prototype, "m_communityData", void 0);
-      let I = class extends d.Component {
+      let w = class extends d.Component {
         render() {
           const { community_data: e } = this.props;
           let t = e && e.favorite_badge;
@@ -402,8 +402,8 @@
             : null;
         }
       };
-      I = (0, i.Cg)([c.PA], I);
-      let w = class extends d.Component {
+      w = (0, i.Cg)([c.PA], w);
+      let I = class extends d.Component {
         render() {
           const { community_data: e, className: t } = this.props;
           return e
@@ -432,7 +432,7 @@
             : null;
         }
       };
-      w = (0, i.Cg)([c.PA], w);
+      I = (0, i.Cg)([c.PA], I);
       let G = class extends d.Component {
         render() {
           var e;
@@ -734,8 +734,8 @@
                         y && g().miniProfileBackdropBlur,
                       ),
                     },
-                    d.createElement(I, { community_data: C }),
                     d.createElement(w, { community_data: C }),
+                    d.createElement(I, { community_data: C }),
                   ),
                   P,
                   d.createElement(
@@ -2389,11 +2389,11 @@
         }
       }
       (me.k_strPersonaNameCooldownSupportURL =
-        "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+        "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (me.k_strProfileSummaryCooldownSupportURL =
-          "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+          "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (me.k_strAvatarCooldownSupportURL =
-          "https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810"),
+          "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
         (me.k_strNameFilteredSupportURL =
           "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415"),
         (0, i.Cg)([o.sH], me.prototype, "m_strPersonaName", void 0),
@@ -2639,14 +2639,14 @@
               d.Fragment,
               null,
               d.createElement(Ae, { rgAnimatedAvatars: e, onSelected: r }),
-              d.createElement(Ie, { rgAvatars: n, onSelected: s }),
-              d.createElement(we, {
+              d.createElement(we, { rgAvatars: n, onSelected: s }),
+              d.createElement(Ie, {
                 rgAvatars: o,
                 onSelected: i,
                 title: (0, p.we)("#Profile_Edit_YourGameAvatars"),
               }),
               o.length < 20 &&
-                d.createElement(we, {
+                d.createElement(Ie, {
                   rgAvatars: t.GetOtherGameAvatars(),
                   onSelected: i,
                   title: (0, p.we)("#Profile_Edit_MoreGameAvatars"),
@@ -2677,7 +2677,7 @@
                 ),
               )
             : null,
-        Ie = (0, c.PA)(({ rgAvatars: e, onSelected: t }) =>
+        we = (0, c.PA)(({ rgAvatars: e, onSelected: t }) =>
           e.length
             ? d.createElement(
                 "div",
@@ -2701,7 +2701,7 @@
               )
             : null,
         ),
-        we = ({ rgAvatars: e, onSelected: t, title: a }) =>
+        Ie = ({ rgAvatars: e, onSelected: t, title: a }) =>
           e.length
             ? d.createElement(
                 "div",
@@ -4183,7 +4183,7 @@
               (0, p.we)("#Profile_Edit_Badge_Instructions"),
             ),
             d.createElement(Ue, { strHTMLError: a }),
-            r && d.createElement(wt, { badge: r }),
+            r && d.createElement(It, { badge: r }),
             !r && d.createElement(Gt, { count: e.Badges.length }),
             d.createElement(xe, {
               getSearchFields: Nt,
@@ -4204,8 +4204,8 @@
       (0, i.Cg)([_e.oI], At.prototype, "CommitFavoriteBadge", null),
         (0, i.Cg)([_e.oI], At.prototype, "RevertFavoriteBadge", null),
         (At = (0, i.Cg)([c.PA], At));
-      const It = At,
-        wt = ({ badge: e, children: t }) =>
+      const wt = At,
+        It = ({ badge: e, children: t }) =>
           d.createElement(
             "div",
             { className: (0, u.A)(St.Badge, St.FavoriteBadge) },
@@ -5627,7 +5627,7 @@
             d.createElement(
               "div",
               { className: Sa.Shell },
-              d.createElement(Ia, {
+              d.createElement(wa, {
                 root: e,
                 currentPath: t,
                 linksAvailable: a,
@@ -5641,39 +5641,39 @@
           );
         }
       }
-      const Ia = ({ root: e, currentPath: t, linksAvailable: a }) => {
+      const wa = ({ root: e, currentPath: t, linksAvailable: a }) => {
           const r = { root: e, currentPath: t },
             i = $a;
           return d.createElement(
             "div",
             { className: Sa.Navigation },
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Info() },
               (0, p.we)("#Profile_Edit_BasicInfo"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Avatar() },
               (0, p.we)("#Profile_FieldAvatar"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Background() },
               (0, p.we)("#Profile_FieldProfileBackground"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.MiniProfile() },
               (0, p.we)("#Profile_Edit_MiniProfile"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Theme() },
               (0, p.we)("#Profile_Edit_Theme"),
             ),
             d.createElement(
-              wa,
+              Ia,
               {
                 ...r,
                 to: i.ProfileModifier(),
@@ -5682,23 +5682,23 @@
               (0, p.we)("#Profile_Edit_ProfileModifier"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.FavoriteBadge(), fnVisible: a.BadgesAvailable },
               (0, p.we)("#Profile_Edit_FavoriteBadge"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.FavoriteGroup(), fnVisible: a.GroupsAvailable },
               (0, p.we)("#Profile_Edit_FavoriteGroup"),
             ),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Showcases(), fnVisible: a.ShowcasesAvailable },
               (0, p.we)("#Profile_Edit_FeaturedShowcase"),
             ),
             d.createElement("div", { className: Sa.ProfileEditLine }),
             d.createElement(
-              wa,
+              Ia,
               { ...r, to: i.Privacy() },
               (0, p.we)("#Profile_EditPrivacySettings"),
             ),
@@ -5716,7 +5716,7 @@
             ),
           );
         },
-        wa = (0, c.PA)(
+        Ia = (0, c.PA)(
           ({
             root: e,
             currentPath: t,
@@ -6257,7 +6257,7 @@
                 d.createElement(
                   ce.qh,
                   { path: `${s}${h.FavoriteBadge()}` },
-                  d.createElement(It, { Badges: n.ProfileBadges }),
+                  d.createElement(wt, { Badges: n.ProfileBadges }),
                 ),
               !(0, de.nA)(y.TS.EREALM) &&
                 d.createElement(

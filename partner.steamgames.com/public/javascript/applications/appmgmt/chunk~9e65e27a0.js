@@ -50,15 +50,35 @@
         DashDescription: "_16bPPRfJgTdFDNoMeEHx96",
       };
     },
+    41609: (e) => {
+      e.exports = {
+        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
+        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
+        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
+        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
+        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
+        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
+        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
+        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
+        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
+        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
+        Grabbable: "riuelIz655g_IBddWfLQ-",
+        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
+        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
+        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
+        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
+        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
+      };
+    },
     1814: (e, t, a) => {
       "use strict";
-      a.d(t, { Q: () => m });
+      a.d(t, { Q: () => i });
       var s = a(41735),
         n = a.n(s),
         r = a(68797),
         o = a(6144),
         l = a(30470);
-      class m {
+      class i {
         m_rtStartTime;
         m_rtEndTime;
         m_totalSummary;
@@ -214,9 +234,9 @@
         XL: () => E,
         fT: () => _,
         fs: () => p,
-        k: () => f,
+        k: () => T,
         lY: () => h,
-        tV: () => T,
+        tV: () => A,
         vv: () => C,
       });
       var s = a(34629),
@@ -224,8 +244,8 @@
         r = a.n(n),
         o = a(90626),
         l = a(68797),
-        m = a(78327),
-        i = a(14947),
+        i = a(78327),
+        m = a(14947),
         u = a(65946),
         c = a(6419);
       class p {
@@ -233,7 +253,7 @@
         m_promise;
         static s_singleton;
         constructor() {
-          "dev" === m.TS.WEB_UNIVERSE &&
+          "dev" === i.TS.WEB_UNIVERSE &&
             (window.g_ContentHubCategoriesStore = this);
         }
         BIsLoaded() {
@@ -249,9 +269,9 @@
         }
         async Load() {
           const e =
-              m.TS.PARTNER_BASE_URL +
+              i.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetcontenthubcategories",
-            t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+            t = { origin: self.origin, sessionid: i.TS.SESSIONID };
           let a = null;
           try {
             const s = await r().get(e, { params: t });
@@ -306,9 +326,9 @@
       }
       async function d() {
         const e =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
         let a = null;
         try {
           const s = await r().get(e, { params: t, withCredentials: !0 });
@@ -403,10 +423,10 @@
             1 === t[a.handle].replaces_tags?.length &&
               (t[a.handle].replaces_tags = t[a.handle].replaces_tags[0]);
         const a =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
           s = new FormData();
-        s.append("sessionid", m.TS.SESSIONID),
+        s.append("sessionid", i.TS.SESSIONID),
           s.append("origin", self.origin),
           s.append("json", JSON.stringify(t));
         let n = null;
@@ -422,9 +442,9 @@
       }
       async function S() {
         const e =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
         try {
           const a = await r().get(e, { params: t, withCredentials: !0 });
           if (200 !== a.status || 1 !== a.data?.success) return (0, l.H)(a);
@@ -435,8 +455,8 @@
       }
       class y {
         constructor() {
-          (0, i.Gn)(this),
-            "dev" === m.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, m.Gn)(this),
+            "dev" === i.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
         }
         m_rgTags;
         m_rgCategories;
@@ -476,12 +496,12 @@
         }
         async Load() {
           const e =
-              m.TS.PARTNER_BASE_URL +
+              i.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetstoretagsandcategories",
             t = {
               origin: self.origin,
-              sessionid: m.TS.SESSIONID,
-              l: m.TS.LANGUAGE,
+              sessionid: i.TS.SESSIONID,
+              l: i.TS.LANGUAGE,
             };
           let a = null;
           try {
@@ -499,7 +519,7 @@
                   this.m_mapStoreCategories.set(e.categoryid, e),
                 ),
                 void (
-                  "dev" === m.TS.WEB_UNIVERSE &&
+                  "dev" === i.TS.WEB_UNIVERSE &&
                   console.log(
                     "tags " +
                       this.m_rgTags.length +
@@ -527,7 +547,7 @@
       function C() {
         return { fnSetDirty: y.Get().SetDirty };
       }
-      function T() {
+      function A() {
         return y.Get().BIsDirty();
       }
       function b() {
@@ -546,7 +566,7 @@
           { rgTags: e, rgCategories: a }
         );
       }
-      function f() {
+      function T() {
         const [e, t] = o.useState(y.Get().GetStoreTagMap()),
           [a, s] = o.useState(y.Get().GetStoreCategoryMap());
         return (
@@ -562,7 +582,7 @@
           { mapStoreTags: e, mapStoreCategories: a }
         );
       }
-      (0, s.Cg)([i.sH], y.prototype, "m_bDirty", void 0),
+      (0, s.Cg)([m.sH], y.prototype, "m_bDirty", void 0),
         (0, s.Cg)([c.o], y.prototype, "SetDirty", null);
     },
     31376: (e, t, a) => {
@@ -570,12 +590,12 @@
       a.d(t, {
         AY: () => v,
         CU: () => _,
-        Iw: () => f,
+        Iw: () => T,
         Th: () => b,
         _E: () => g,
         eX: () => C,
-        hl: () => A,
-        mg: () => T,
+        hl: () => f,
+        mg: () => A,
         p$: () => E,
         tt: () => d,
       });
@@ -584,8 +604,8 @@
         r = a.n(n),
         o = a(1814),
         l = a(14947),
-        m = a(90626),
-        i = a(20194),
+        i = a(90626),
+        m = a(20194),
         u = a(6144),
         c = a(73745),
         p = a(30470);
@@ -768,21 +788,21 @@
               topApps: s,
               appCount: n,
             },
-            m = new FormData();
-          m.append("sessionid", p.TS.SESSIONID),
-            m.append(
+            i = new FormData();
+          i.append("sessionid", p.TS.SESSIONID),
+            i.append(
               "rtStartTime",
               "" + this.m_appAndPackagesSummuries.GetRTStartTime(),
             ),
-            m.append(
+            i.append(
               "rtEndTime",
               "" + this.m_appAndPackagesSummuries.GetRTEndTime(),
             ),
-            m.append("bClear", "false"),
-            m.append("key", this.GetKey(e)),
-            m.append("rgStats", JSON.stringify(o));
-          const i = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
-            u = await r().post(i, m, { withCredentials: !0 });
+            i.append("bClear", "false"),
+            i.append("key", this.GetKey(e)),
+            i.append("rgStats", JSON.stringify(o));
+          const m = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
+            u = await r().post(m, i, { withCredentials: !0 });
           200 != u.status &&
             console.error("SaveToCacheSaleSummary failed to save " + l.HP, u);
         }
@@ -802,7 +822,7 @@
           data: t,
           isLoading: a,
           isError: s,
-        } = (0, i.I)({
+        } = (0, m.I)({
           queryKey: ["contenthubsummary", e.type, e.handle],
           queryFn: async () => {
             const t = {
@@ -852,9 +872,9 @@
           } = S(e, t, a),
           {
             data: l,
-            isLoading: m,
+            isLoading: i,
             isError: u,
-          } = (0, i.I)({
+          } = (0, m.I)({
             queryKey: ["useContentHubCategoryEditorFullAppList", s, n, o],
             queryFn: async () => {
               const e = {
@@ -875,7 +895,7 @@
       }
       function C(e, t, a) {
         const s = E(e, t, a),
-          n = (0, m.useMemo)(() => {
+          n = (0, i.useMemo)(() => {
             const {
               musthaveall: s,
               musthaveany: n,
@@ -883,9 +903,9 @@
             } = S(e, t, a);
             return { type: "category_editor", handle: s + "_" + n + "_" + r };
           }, [e, t, a]),
-          [r, o] = (0, m.useState)(h.Get().GetContentHubSaleSummary(n));
+          [r, o] = (0, i.useState)(h.Get().GetContentHubSaleSummary(n));
         return (
-          (0, m.useEffect)(() => {
+          (0, i.useEffect)(() => {
             s?.all_appid?.length &&
               !r &&
               h.Get().LoadContentHubSaleSummary(n, s.all_appid);
@@ -894,8 +914,8 @@
           r
         );
       }
-      function T(e, t, a) {
-        const s = (0, m.useMemo)(() => {
+      function A(e, t, a) {
+        const s = (0, i.useMemo)(() => {
             const {
               musthaveall: s,
               musthaveany: n,
@@ -903,7 +923,7 @@
             } = S(e, t, a);
             return { type: "category_editor", handle: s + "_" + n + "_" + r };
           }, [e, t, a]),
-          [n, r] = (0, m.useState)(h.Get().GetTopAppSummary(s));
+          [n, r] = (0, i.useState)(h.Get().GetTopAppSummary(s));
         return (
           (0, c.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(s), r),
           n
@@ -915,7 +935,7 @@
               data: t,
               isLoading: a,
               isError: s,
-            } = (0, i.I)({
+            } = (0, m.I)({
               queryKey: ["contenthubapplist", e.type, e.handle],
               queryFn: async () => {
                 const t = {
@@ -932,17 +952,17 @@
             });
             return t?.apps || null;
           })(e),
-          [a, s] = (0, m.useState)(h.Get().GetContentHubSaleSummary(e));
+          [a, s] = (0, i.useState)(h.Get().GetContentHubSaleSummary(e));
         return (
-          (0, m.useEffect)(() => {
+          (0, i.useEffect)(() => {
             t?.length && !a && h.Get().LoadContentHubSaleSummary(e, t);
           }, [e, e.type, e.handle, t, a]),
           (0, c.hL)(h.Get().GetContentHubSummaryChangeCallback(e), s),
           a
         );
       }
-      function f(e) {
-        const [t, a] = (0, m.useState)(
+      function T(e) {
+        const [t, a] = (0, i.useState)(
           h.Get().GetAppSummaryObject().GetAppSaleSummary(e),
         );
         return (
@@ -953,17 +973,17 @@
           t
         );
       }
-      function A(e) {
-        const [t, a] = (0, m.useState)(h.Get().GetTopAppSummary(e));
+      function f(e) {
+        const [t, a] = (0, i.useState)(h.Get().GetTopAppSummary(e));
         return (
           (0, c.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), a),
           t
         );
       }
       function v() {
-        const [e, t] = (0, m.useState)(h.Get().GetSummaryAnalysis());
+        const [e, t] = (0, i.useState)(h.Get().GetSummaryAnalysis());
         return (
-          (0, m.useEffect)(() => {
+          (0, i.useEffect)(() => {
             h.Get().LoadCachedSaleSummaries();
           }, []),
           (0, c.hL)(h.Get().GetSummaryAnalysisChange(), t),
@@ -973,14 +993,14 @@
     },
     65213: (e, t, a) => {
       "use strict";
-      a.d(t, { A: () => A });
+      a.d(t, { A: () => f });
       var s = a(562),
         n = a(31376),
         r = a(90626),
         o = a(82359),
         l = a(45737),
-        m = a.n(l),
-        i = a(16676),
+        i = a.n(l),
+        m = a(16676),
         u = a(9154),
         c = a(738),
         p = a(56654),
@@ -992,10 +1012,10 @@
         y = a(30470),
         E = a(74810),
         C = a(92237),
-        T = a(4940),
-        b = a.n(T),
-        f = a(95034);
-      function A() {
+        A = a(4940),
+        b = a.n(A),
+        T = a(95034);
+      function f() {
         const [e, t] = r.useState(),
           [a, n] = r.useState(!1),
           o = (0, s.XL)(),
@@ -1011,10 +1031,10 @@
           a
             ? r.createElement(
                 "div",
-                { className: m().AdminPageCtn },
+                { className: i().AdminPageCtn },
                 r.createElement(
                   "div",
-                  { className: m().PageTitle },
+                  { className: i().PageTitle },
                   "Content Hub Categories",
                 ),
                 r.createElement("hr", { className: b().TitleHR }),
@@ -1040,7 +1060,7 @@
                 ),
                 r.createElement(
                   "div",
-                  { className: m().PageSubTitle },
+                  { className: i().PageSubTitle },
                   "Categories",
                 ),
                 h &&
@@ -1054,11 +1074,11 @@
                   "div",
                   { className: b().ActionButtonCtn },
                   r.createElement(
-                    i.$n,
+                    m.$n,
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(R, {
+                          r.createElement(B, {
                             onImport: (e) => {
                               t(e), p(!0);
                             },
@@ -1069,11 +1089,11 @@
                     "Import From PHP",
                   ),
                   r.createElement(
-                    i.jn,
+                    m.jn,
                     {
                       onClick: () =>
                         (0, c.pg)(
-                          r.createElement(B, {
+                          r.createElement(L, {
                             categories: e,
                             onSave: () => {
                               p(!1), _(!0);
@@ -1092,7 +1112,7 @@
                         ),
                   ),
                   r.createElement(
-                    i.$n,
+                    m.$n,
                     {
                       onClick: () =>
                         (0, c.pg)(
@@ -1110,7 +1130,7 @@
       function v(e) {
         const { categories: t, onUpdate: a } = e,
           { rgTags: n, rgCategories: o } = (0, s.DT)(),
-          [l] = (0, f.QD)("edit");
+          [l] = (0, T.QD)("edit");
         if (!t) return r.createElement("div", null, "No categories defined.");
         return r.createElement(
           "div",
@@ -1131,7 +1151,7 @@
               }),
           }),
           r.createElement(
-            i.$n,
+            m.$n,
             {
               onClick: () => {
                 let e = 0;
@@ -1162,7 +1182,7 @@
       }
       function w(e) {
         const { item: t, rgTags: a, onUpdate: s, bOpenEditor: n } = e,
-          [o, l, m] = (0, S.uD)(n);
+          [o, l, i] = (0, S.uD)(n);
         return r.createElement(
           "div",
           { className: b().CategoryCtn },
@@ -1208,7 +1228,7 @@
             r.createElement(
               u.EN,
               { active: o },
-              r.createElement(N, { category: t, onUpdate: s, closeModal: m }),
+              r.createElement(N, { category: t, onUpdate: s, closeModal: i }),
             ),
           ),
         );
@@ -1225,12 +1245,12 @@
             closeModal: s,
           },
           r.createElement(
-            i.nB,
+            m.nB,
             null,
             r.createElement(
               "div",
               { className: b().CategoryEditor },
-              r.createElement(i.pd, {
+              r.createElement(m.pd, {
                 label: "Handle",
                 tooltip: "This forms the end of the URL. It must be unique",
                 value: t.handle,
@@ -1241,7 +1261,7 @@
               r.createElement(
                 "div",
                 { className: b().CategoryCtn },
-                r.createElement(i.pd, {
+                r.createElement(m.pd, {
                   label: "Loc Token",
                   tooltip:
                     "Token only needed if we wish to expose this hub to customers",
@@ -1252,7 +1272,7 @@
                 }),
                 t.loc_token ? (0, _.we)(t.loc_token) : "",
               ),
-              r.createElement(i.Yh, {
+              r.createElement(m.Yh, {
                 label: "Use As A Heading ",
                 tooltip:
                   "Only used for establishing headings used on the main store drop-down menu",
@@ -1261,7 +1281,7 @@
                   (t.heading = e), n();
                 },
               }),
-              r.createElement(i.Yh, {
+              r.createElement(m.Yh, {
                 label: "Exclude from search ",
                 tooltip: "Do not show this category in store search",
                 checked: t.exclude_from_search,
@@ -1269,7 +1289,7 @@
                   (t.exclude_from_search = e), n();
                 },
               }),
-              r.createElement(i.pd, {
+              r.createElement(m.pd, {
                 label: "Search aliases",
                 tooltip: "Comma separated search aliases",
                 value: t.search_alias,
@@ -1277,7 +1297,7 @@
                   (t.search_alias = e.target.value), n();
                 },
               }),
-              r.createElement(i.m, {
+              r.createElement(m.m, {
                 label: "Type",
                 rgOptions: [
                   { data: "tagids", label: "Tag Hub" },
@@ -1292,14 +1312,14 @@
               ("tagids" === t.type ||
                 "category" === t.type ||
                 "contenthub" == t.type) &&
-                r.createElement(k, { category: t }),
+                r.createElement(D, { category: t }),
             ),
           ),
           r.createElement(
-            i.wi,
+            m.wi,
             null,
             r.createElement(
-              i.jn,
+              m.jn,
               {
                 onClick: () => {
                   a && a(), s && s();
@@ -1310,7 +1330,7 @@
           ),
         );
       }
-      function k(e) {
+      function D(e) {
         const { category: t } = e,
           [a, s] = (0, r.useState)(!1),
           [n, o] = (0, r.useState)(0);
@@ -1324,17 +1344,17 @@
               r.createElement(
                 "div",
                 { className: b().Category },
-                r.createElement(L, {
+                r.createElement(R, {
                   category: t,
                   list: "must",
                   title: "Must have all of these tags",
                 }),
-                r.createElement(L, {
+                r.createElement(R, {
                   category: t,
                   list: "any",
                   title: "Must have one of these tags",
                 }),
-                r.createElement(L, {
+                r.createElement(R, {
                   category: t,
                   list: "mustnot",
                   title: "Must not have any of these tags",
@@ -1347,7 +1367,7 @@
             r.createElement(
               "div",
               { className: b().CategoryCtn },
-              r.createElement(L, {
+              r.createElement(R, {
                 category: t,
                 list: "replaces_tags",
                 title:
@@ -1364,13 +1384,13 @@
                 r.Fragment,
                 null,
                 r.createElement(
-                  i.$n,
+                  m.$n,
                   { onClick: () => o(n + 1) },
                   "Refresh Stats",
                 ),
-                r.createElement(H, { category: t }),
+                r.createElement(k, { category: t }),
               )
-            : r.createElement(i.Yh, {
+            : r.createElement(m.Yh, {
                 checked: a,
                 onChange: (e) => s(e),
                 label: "Show Category Sale Stats",
@@ -1378,7 +1398,7 @@
               }),
         );
       }
-      function H(e) {
+      function k(e) {
         const { category: t } = e,
           a = (0, n.p$)(t.must, t.any, t.mustnot);
         if (!a)
@@ -1392,7 +1412,7 @@
           r.Fragment,
           null,
           r.createElement(
-            i.$n,
+            m.$n,
             {
               onClick: () => {
                 const e = [];
@@ -1407,7 +1427,7 @@
             "Download Top 100 Games",
           ),
           r.createElement(
-            i.$n,
+            m.$n,
             {
               onClick: () => {
                 const e = [];
@@ -1429,7 +1449,7 @@
               { className: C.ThemeDefinitionCtn },
               "Summary: ",
               r.createElement(E.KU, { nTotalGames: a.total_games }),
-              Boolean(s) && r.createElement(D, { category: t }),
+              Boolean(s) && r.createElement(H, { category: t }),
             ),
             r.createElement(
               "div",
@@ -1453,15 +1473,15 @@
           ),
         );
       }
-      function D(e) {
+      function H(e) {
         const { category: t } = e,
           a = (0, n.eX)(t.must, t.any, t.mustnot),
           s = (0, n.mg)(t.must, t.any, t.mustnot);
         return r.createElement(E.ny, { saleSummary: a, topAppSummary: s });
       }
-      function L(e) {
+      function R(e) {
         const { category: t, list: a, title: n } = e,
-          { rgTags: l, rgCategories: m } = (0, s.DT)(),
+          { rgTags: l, rgCategories: i } = (0, s.DT)(),
           u = (0, S.CH)(),
           c =
             l?.map((e) => ({
@@ -1469,14 +1489,14 @@
               label: `${e.name} (${e.tagid})`,
             })) || [],
           d =
-            m?.map((e) => ({
+            i?.map((e) => ({
               value: e.categoryid,
               label: `${e.name} (${e.categoryid})`,
             })) || [];
         return r.createElement(
           "div",
           { className: b().TagOrCategoryList },
-          r.createElement(i.JU, null, n),
+          r.createElement(m.JU, null, n),
           r.createElement(p.A, {
             bDisabled: !0,
             items: t[a] || [],
@@ -1488,7 +1508,7 @@
                 ? r.createElement(
                     "div",
                     { className: b().IDSelector },
-                    r.createElement(i.pd, {
+                    r.createElement(m.pd, {
                       value: e.id,
                       onChange: (t) => {
                         (e.id = Number(t.target.value)), u();
@@ -1523,7 +1543,7 @@
                   : null,
           }),
           r.createElement(
-            i.$n,
+            m.$n,
             {
               onClick: () => {
                 t[a] || (t[a] = []), t[a].push({ id: 0 }), u();
@@ -1533,7 +1553,7 @@
           ),
         );
       }
-      function R(e) {
+      function B(e) {
         const { onImport: t, closeModal: a } = e;
         return (
           r.useEffect(() => {
@@ -1556,7 +1576,7 @@
           )
         );
       }
-      function B(e) {
+      function L(e) {
         const { categories: t, onSave: a, closeModal: n } = e,
           [o, l] = r.useState();
         return (
@@ -1583,12 +1603,12 @@
       function I(e) {
         const { onPublish: t, closeModal: a } = e,
           [n, o] = r.useState(!1),
-          [l, m] = r.useState();
+          [l, i] = r.useState();
         return (
           r.useEffect(() => {
             n &&
               (0, s.LD)().then((e) => {
-                e ? m(e.strErrorMsg) : (t(), o(!1), a && a());
+                e ? i(e.strErrorMsg) : (t(), o(!1), a && a());
               });
           }, [n, a, t]),
           r.createElement(
@@ -1626,20 +1646,20 @@
     74810: (e, t, a) => {
       "use strict";
       a.d(t, {
-        KU: () => f,
-        Ke: () => T,
+        KU: () => T,
+        Ke: () => A,
         W7: () => v,
         hp: () => E,
         iT: () => C,
-        ny: () => k,
+        ny: () => D,
       });
       var s = a(562),
         n = a(31376),
         r = a(40323),
         o = a.n(r),
         l = a(90626),
-        m = a(55263),
-        i = a(16676),
+        i = a(55263),
+        m = a(16676),
         u = a(29863),
         c = a(96236),
         p = a(22797),
@@ -1651,7 +1671,7 @@
       const y = "0px 0px 100% 0px",
         E = 5e3,
         C = 500;
-      function T(e) {
+      function A(e) {
         const [t, a] = (0, l.useState)(!0),
           r = (0, s.lY)(),
           o = (0, l.useMemo)(
@@ -1674,13 +1694,13 @@
                     { className: S.ButtonGroup },
                     Boolean(!t) &&
                       l.createElement(
-                        i.$n,
+                        m.$n,
                         { onClick: () => a(!0) },
                         "Load ",
                         n.tt,
                         " Days of Sale Summaries",
                       ),
-                    l.createElement(D, null),
+                    l.createElement(H, null),
                   ),
                 ),
                 l.createElement(
@@ -1733,10 +1753,10 @@
         return l.createElement(
           c.K,
           { placeholderHeight: 250, rootMargin: y },
-          l.createElement(A, { category: t, bSaleSummary: a }),
+          l.createElement(f, { category: t, bSaleSummary: a }),
         );
       }
-      function f(e) {
+      function T(e) {
         const { nTotalGames: t } = e;
         let a, s;
         return (
@@ -1755,7 +1775,7 @@
           )
         );
       }
-      function A(e) {
+      function f(e) {
         const { category: t, bSaleSummary: a } = e,
           { rgTopApps: s, nTotalGames: r } = (0, n.CU)(t),
           o = r > 500 && r <= E;
@@ -1773,11 +1793,11 @@
               },
               t.loc_token ? (0, g.we)(t.loc_token) : t.handle,
             ),
-            l.createElement(f, { nTotalGames: r }),
+            l.createElement(T, { nTotalGames: r }),
             l.createElement(
               "div",
               { className: S.SaleStats },
-              Boolean(a && o) && l.createElement(H, { category: t }),
+              Boolean(a && o) && l.createElement(k, { category: t }),
             ),
           ),
           l.createElement(
@@ -1810,7 +1830,7 @@
       }
       function v(e) {
         const { info: t, bSaleSummary: a } = e,
-          [s] = (0, m.t7)(t.appid, { include_assets: !0 });
+          [s] = (0, i.t7)(t.appid, { include_assets: !0 });
         return s
           ? l.createElement(
               "div",
@@ -1945,7 +1965,7 @@
               ", ",
             );
       }
-      function k(e) {
+      function D(e) {
         const { saleSummary: t, topAppSummary: a } = e;
         return t
           ? l.createElement(
@@ -2030,13 +2050,13 @@
               string: "Loading Sale Info",
             });
       }
-      function H(e) {
+      function k(e) {
         const { category: t } = e,
           a = (0, n.Th)(t),
           s = (0, n.hl)(t);
-        return l.createElement(k, { saleSummary: a, topAppSummary: s });
+        return l.createElement(D, { saleSummary: a, topAppSummary: s });
       }
-      function D(e) {
+      function H(e) {
         const t = (0, n.AY)();
         return l.createElement(
           "a",
@@ -2045,6 +2065,247 @@
             download: "theme_sale_stats.csv",
           },
           "Export CSV",
+        );
+      }
+    },
+    56654: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => S });
+      var s = a(90626),
+        n = a(73745);
+      const r =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
+      var o = a(44894),
+        l = a(62490),
+        i = a(41609),
+        m = a.n(i),
+        u = a(64641),
+        c = a.n(u),
+        p = a(12155),
+        d = a(41735),
+        g = a.n(d),
+        h = a(25489),
+        _ = a(52038);
+      function S(e) {
+        const {
+            items: t,
+            render: a,
+            onDelete: i,
+            onEdit: u,
+            onReorder: d,
+            onMove: S,
+            bDisabled: E,
+            rowClassName: C,
+          } = e,
+          [A, b] = s.useState(!1),
+          [T, f] = s.useState(void 0),
+          [v, G] = s.useState(void 0),
+          [w, N] = s.useState(-1),
+          [D, k] = s.useState(void 0),
+          [H, R] = s.useState(0),
+          [B, L] = s.useState(0),
+          [I, M] = s.useState(void 0),
+          [P, U] = s.useState(""),
+          x = s.useRef(),
+          O = s.useMemo(() => new Array(), []),
+          j = s.useMemo(() => new Array(), []),
+          F = s.useMemo(() => g().CancelToken.source(), []),
+          W = () => {
+            x.current?.firstElementChild &&
+              (R(x.current.firstElementChild.getBoundingClientRect().height),
+              L(x.current.firstElementChild.getBoundingClientRect().width));
+          };
+        s.useEffect(() => {
+          W();
+        }, []),
+          s.useEffect(() => () => F.cancel("ReorderableList unmounting"), [F]);
+        const z = (e, t) => {
+            F.token.reason ||
+              (x.current.firstElementChild?.getBoundingClientRect().height >
+                0 &&
+                H !=
+                  x.current.firstElementChild.getBoundingClientRect().height &&
+                W(),
+              ((e, t) => {
+                const a = O[e]?.current;
+                if (!a)
+                  return void console.error(
+                    "start element grab missing element at index " + e,
+                  );
+                b(!0), N(e), M(void 0), k(e);
+                const s = t.clientX - a.getBoundingClientRect().left;
+                f(s);
+                const n = t.clientY - a.getBoundingClientRect().top;
+                G(n),
+                  (a.style.position = "fixed"),
+                  (a.style.left = t.clientX - s + "px"),
+                  (a.style.top = t.clientY - n + "px"),
+                  (a.style.zIndex = "1");
+              })(t, e),
+              e.preventDefault());
+          },
+          Y = (e, a) => {
+            const s = h.OQ(a > e ? a - 1 : a, 0, t.length - 1);
+            e != s && (S ? S(e, s) : (0, l.yY)(t, e, s), $(s), d && d(t));
+          },
+          K = (e) => {
+            A &&
+              !F.token.reason &&
+              ((() => {
+                const e = O[w]?.current;
+                e
+                  ? ((e.style.position = ""), (e.style.zIndex = ""))
+                  : console.error("end element drag missing element"),
+                  b(!1),
+                  N(-1),
+                  M(void 0),
+                  k(void 0);
+              })(),
+              Y(w, D));
+          },
+          V = (e) => {
+            if (!A || F.token.reason) return;
+            const a = e.clientY;
+            let s;
+            for (let e = 0; e < t.length; e++) {
+              if (
+                a <
+                (j[e].current.getBoundingClientRect().top +
+                  2 * j[e].current.getBoundingClientRect().bottom) /
+                  3
+              ) {
+                s = e;
+                break;
+              }
+            }
+            k(s ?? t.length),
+              ((e) => {
+                const t = O[w]?.current;
+                t
+                  ? ((t.style.left = e.clientX - T + "px"),
+                    (t.style.top = e.clientY - v + "px"))
+                  : console.error("update grab element missing element");
+              })(e);
+          };
+        (0, n.l6)(window, "mousemove", (e) => V(e)),
+          (0, n.l6)(window, "mouseup", (e) => K()),
+          s.useEffect(() => {
+            for (let e = O.length; e < t.length; e++)
+              O.push(s.createRef()), j.push(s.createRef());
+          }, [t.length, O, j]);
+        const X = (e) => {
+            M(void 0);
+            const t = P?.trim(),
+              a = Number.parseInt(t);
+            if (0 == t.length || isNaN(a)) return;
+            const s = a - 1;
+            e != s && Y(e, s);
+          },
+          [Q, $] = s.useState(void 0);
+        return s.createElement(
+          "div",
+          { className: m().WhitelistCtn, ref: x },
+          t.map((e, n) =>
+            s.createElement(
+              "div",
+              { key: n, ref: j[n] },
+              n == D && s.createElement(y, { width: B }),
+              s.createElement(
+                "div",
+                { ref: O[n], className: m().DragGhost },
+                n == w &&
+                  s.createElement(
+                    "div",
+                    { className: (0, _.A)(m().WhitelistRow, C) },
+                    s.createElement("img", {
+                      className: (0, _.A)(m().WhitelistAvatar, m().Grabbing),
+                      src: r,
+                    }),
+                    s.createElement("input", {
+                      className: (0, _.A)(
+                        m().WhitelistNumber,
+                        m().Disabled,
+                        m().Grabbing,
+                      ),
+                      type: "text",
+                      value: (D > n ? D - 1 : D) + 1,
+                      disabled: !0,
+                    }),
+                    a(e, n),
+                  ),
+              ),
+              s.createElement(
+                "div",
+                {
+                  className: (0, _.A)(
+                    m().WhitelistRow,
+                    C,
+                    A && m().DragActive,
+                    n == w && m().BeingDragged,
+                    Q == n && m().Dropped,
+                  ),
+                  onAnimationEnd: () => $(void 0),
+                },
+                s.createElement("img", {
+                  className: (0, _.A)(
+                    m().WhitelistAvatar,
+                    m().Grabbable,
+                    E && m().DisabledGrab,
+                  ),
+                  src: r,
+                  onMouseDown: Boolean(E) ? void 0 : (e) => z(e, n),
+                }),
+                s.createElement("input", {
+                  className: (0, _.A)(m().WhitelistNumber, E && m().Disabled),
+                  type: "text",
+                  value: I == n ? P : n + 1,
+                  disabled: E || n == w,
+                  onChange: (e) => U(e.target.value),
+                  onKeyDown: (e) =>
+                    ((e, t) => {
+                      "Enter" === e.key && (X(t), e.currentTarget.blur());
+                    })(e, n),
+                  onFocus: (e) => {
+                    M(n), U(e.target.value);
+                  },
+                  onBlur: () => X(n),
+                }),
+                a(e, n),
+                Boolean(n != w) &&
+                  Boolean(u || i) &&
+                  s.createElement(
+                    "div",
+                    { className: m().ButtonCtn },
+                    Boolean(u) &&
+                      s.createElement(
+                        "div",
+                        { className: c().RemoveIcon, onClick: (e) => u(n, e) },
+                        s.createElement(p.ffu, null),
+                      ),
+                    Boolean(i) &&
+                      s.createElement("img", {
+                        className: c().RemoveIcon,
+                        src: o.A,
+                        onClick: (e) => i(n, e),
+                      }),
+                  ),
+              ),
+              D == t.length &&
+                n == t.length - 1 &&
+                s.createElement(y, { width: B }),
+            ),
+          ),
+        );
+      }
+      function y(e) {
+        const { width: t } = e;
+        return s.createElement(
+          "div",
+          { className: m().DragHighlightContainer },
+          s.createElement("div", {
+            className: m().DragHighlight,
+            style: { width: t },
+          }),
         );
       }
     },

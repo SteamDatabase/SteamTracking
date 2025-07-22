@@ -16035,6 +16035,21 @@
                                   ),
                                 );
                             }
+                            if (t.named_inference().value().length > 0) {
+                              e.push(i.createElement("div", null, "OUTPUT"));
+                              for (
+                                let a = 0;
+                                a < t.named_inference().value().length;
+                                a++
+                              )
+                                e.push(
+                                  i.createElement(
+                                    "div",
+                                    null,
+                                    `${t.named_inference().value()[a]}`,
+                                  ),
+                                );
+                            }
                             if (
                               t.multi_binary_crossentropy().value().length > 0
                             ) {

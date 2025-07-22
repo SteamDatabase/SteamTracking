@@ -1669,7 +1669,9 @@
       }
       function Ne(e) {
         const { imageUploader: t, fnOnUploadImageRequested: n } = e,
-          [o] = (0, a.q3)(() => [t.GetUploadImages()]);
+          [o] = (0, a.q3)(() => [t.GetUploadImages()]),
+          l = o.some((e) => "pending" == e.status),
+          i = o.some((e) => "uploading" == e.status);
         return r.createElement(
           "div",
           {
@@ -1679,13 +1681,13 @@
           Boolean(o.length) &&
             r.createElement(
               Y.$n,
-              { style: { margin: "8px" }, onClick: n },
+              { style: { margin: "8px" }, onClick: n, disabled: !l },
               (0, p.we)("#ImageUpload_Upload"),
             ),
           Boolean(o.length) &&
             r.createElement(
               Y.$n,
-              { style: { margin: "8px" }, onClick: t.ClearImages },
+              { style: { margin: "8px" }, onClick: t.ClearImages, disabled: i },
               (0, p.we)("#ImageUpload_Clear"),
             ),
         );

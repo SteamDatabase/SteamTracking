@@ -2657,6 +2657,7 @@
     "MediaConvert_FailToCreatePoster": "Failed to create poster image for your animation or video.",
     "MediaConvert_FailToCreate_All": "Media processing failed. Please check your file and try again.",
     "MediaConvert_InputError_NonAudio_Input": "The input file does not contain any audio stream. Please provide a file with an audio track.",
+    "MediaConvert_InputError_DimensionsDontMatchRequirements": "Input media doesn't match require dimensions",
     "ResetToDefault": "Reset to Default",
     "ActionButtonLabelMenu": "Menu",
     "ActionButtonLabelSelect": "Select",
@@ -3704,5 +3705,9 @@
     "Accessibility_Group_Visual": "Visual",
     "Accessibility_Group_Audio": "Audio",
     "Accessibility_Group_Input": "Input",
+    "SteamNotifications_TradeReversal_Title": "Trade Protection",
+    "SteamNotifications_TradeReversal_Body": "A trade was reversed",
+    "SteamNotifications_TradeReversal_Body_Short": "A trade was reversed",
+    "SteamNotifications_TradeReversal_Description": "One of your recent trades was reversed by your trade partner.",
     "shared_dummy": "dont translate"
 }

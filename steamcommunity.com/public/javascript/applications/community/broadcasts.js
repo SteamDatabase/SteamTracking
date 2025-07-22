@@ -285,8 +285,8 @@
         h = a(53120),
         C = a.n(h),
         g = a(34010),
-        b = a(4796),
-        B = a(91254),
+        B = a(4796),
+        b = a(91254),
         I = a(68255),
         f = a(84811),
         w = a(35685),
@@ -737,8 +737,8 @@
       };
       var X = a(65946),
         Y = a(55263),
-        K = a(82477),
-        j = a(12155),
+        j = a(82477),
+        K = a(12155),
         Q = a(51272),
         Z = a(61336),
         J = a(46699),
@@ -849,7 +849,7 @@
                               "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
                             strOKButtonText: (0, H.we)("#MobileLogin_SignIn"),
-                            onOK: () => (0, K.vg)(),
+                            onOK: () => (0, j.vg)(),
                           }),
                           (0, k.uX)(e),
                         );
@@ -858,7 +858,7 @@
                 n.createElement(
                   $.he,
                   { toolTipContent: (0, H.we)("#Broadcast_User_Report_ttip") },
-                  n.createElement(j.lNU, null),
+                  n.createElement(K.lNU, null),
                 ),
               ),
             n.createElement(
@@ -867,13 +867,13 @@
                 onClick: (e) =>
                   (0, Q.EP)(
                     e,
-                    "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497",
+                    "https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8",
                   ),
               },
               n.createElement(
                 $.he,
                 { toolTipContent: (0, H.we)("#Broadcast_User_FAQ_ttip") },
-                n.createElement(j.$$j, null),
+                n.createElement(K.$$j, null),
               ),
             ),
           );
@@ -1242,7 +1242,7 @@
             (0, n.useEffect)(() => {
               de(o) &&
                 (async () => {
-                  let e = await b.ac.LoadOGGClanInfoForAppID(o);
+                  let e = await B.ac.LoadOGGClanInfoForAppID(o);
                   l(e);
                 })();
             }, [o]),
@@ -1300,7 +1300,7 @@
                   n.createElement(w.rN, {
                     clanAccountID: r.clanAccountID,
                     trackingLocation: 6,
-                    partnerEventStore: B.O3,
+                    partnerEventStore: b.O3,
                     bViewAllShowInfiniteScroll: !0,
                   }),
                 ),
@@ -1474,8 +1474,8 @@
         h = a(55263),
         C = a(8107),
         g = a(3919),
-        b = a(95695),
-        B = a.n(b),
+        B = a(95695),
+        b = a.n(B),
         I = a(72860),
         f = a(76684),
         w = a(12155),
@@ -1505,7 +1505,7 @@
             i = (0, c.useRef)(null),
             [u, E] = (0, c.useState)(null),
             [p, h] = (0, c.useState)(!0),
-            [b, I] = (0, c.useState)(!1);
+            [B, I] = (0, c.useState)(!1);
           if (
             ((0, c.useEffect)(
               () => (
@@ -1583,12 +1583,12 @@
               { className: (0, D.A)(H().OtherEventsCtn, "OtherEventsCtn") },
               c.createElement(
                 "div",
-                { className: B().EventSectionTitleCtn },
+                { className: b().EventSectionTitleCtn },
                 c.createElement(
                   "div",
                   {
                     className: (0, D.A)(
-                      B().EventSectionTitle,
+                      b().EventSectionTitle,
                       "EventSectionTitle",
                     ),
                   },
@@ -1597,14 +1597,14 @@
                 ),
                 c.createElement(
                   "div",
-                  { className: B().EventSectionSpacer },
+                  { className: b().EventSectionSpacer },
                   " ",
                 ),
                 o
                   ? c.createElement(
                       "div",
                       {
-                        className: B().EventSectionMoreBtn,
+                        className: b().EventSectionMoreBtn,
                         onClick: () => I(!0),
                       },
                       (0, T.we)("#EventBrowse_MoreEventsBtn"),
@@ -1614,7 +1614,7 @@
                       {
                         eventModel: u[0],
                         route: g.PH.k_eViewWebSiteHub,
-                        className: B().EventSectionMoreBtn,
+                        className: b().EventSectionMoreBtn,
                       },
                       (0, T.we)("#EventBrowse_MoreEventsBtn"),
                     ),
@@ -1630,7 +1630,7 @@
                   c.createElement(V, { key: e.AnnouncementGID, event: e }),
                 ),
               ),
-              Boolean(b) &&
+              Boolean(B) &&
                 c.createElement(C.N, {
                   appid: u[0].appid,
                   clanSteamID: s,
@@ -1653,7 +1653,7 @@
             bHidePrices: m,
           } = e,
           d = (0, L.Zj)(t.appid),
-          [_, v, S, h, C, b] = (0, s.q3)(() => {
+          [_, v, S, h, C, B] = (0, s.q3)(() => {
             const e = l || (0, n.sf)(G.TS.LANGUAGE),
               r = Boolean(void 0 !== a)
                 ? a
@@ -1670,20 +1670,20 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [B, I] = (0, c.useState)(void 0),
+          [b, I] = (0, c.useState)(void 0),
           w =
-            !B || (_ !== B && C !== B)
+            !b || (_ !== b && C !== b)
               ? { src: _, onLoad: () => I(_), onError: () => I(C) }
-              : { src: B };
+              : { src: b };
         if (!t)
           return c.createElement("div", {
             className: H().OtherEvents_EventCtn,
           });
         const N = (0, p.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
           A = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let T = b;
+        let T = B;
         return (
-          b && (b.length > x || v.length > x) && (T = void 0),
+          B && (B.length > x || v.length > x) && (T = void 0),
           c.createElement(
             c.Fragment,
             null,
@@ -1710,7 +1710,7 @@
                 className: H().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: B ? `url(${(0, u.j3)(B)})` : "none",
+                  backgroundImage: b ? `url(${(0, u.j3)(b)})` : "none",
                 },
               }),
               c.createElement(

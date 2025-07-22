@@ -2537,11 +2537,6 @@
       function _(_) {
         return !!_(_);
       }
-      _[29] = {
-        titleLoc: (_) => _.title,
-        bodyLoc: (_) => _.body,
-        link: (_) => _._.COMMUNITY_BASE_URL + "my/tradehistory",
-      };
       const _ = {
         16: {
           steamidAttribute: "inviter",
