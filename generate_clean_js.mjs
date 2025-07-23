@@ -377,6 +377,19 @@ function normalizeAst(ast) {
 				}
 			}
 
+			// Handle string literals with chunk hashes (imports and variable assignments) - only for SSR files
+			if (node.type === Syntax.Literal && typeof node.value === "string" && inputFile.includes("/ssr/")) {
+				const stringValue = node.value;
+				// Replace hash patterns in file paths
+				if (stringValue.includes("-") && (stringValue.endsWith(".json") || stringValue.endsWith(".js"))) {
+					const normalizedPath = stringValue.replace(/-[A-Z0-9]{8}\./g, "-XXXXXXXX.");
+					if (normalizedPath !== stringValue) {
+						node.value = normalizedPath;
+						node.raw = `"${normalizedPath}"`;
+					}
+				}
+			}
+
 			// Handle JSON.parse calls with string literals
 			if (
 				node.type === Syntax.CallExpression &&

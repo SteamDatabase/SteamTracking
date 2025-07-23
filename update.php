@@ -136,7 +136,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->UpdateSSRUrls && !empty( $this->CurrentSSRFiles ) )
 			{
-/*
 				do
 				{
 					$this->URLsToFetch = $this->ProcessSSRFiles();
@@ -157,7 +156,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 				}
 				while( true );
-*/
 
 				$this->DeleteOldSSRFiles();
 			}
@@ -196,7 +194,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				system( 'node dump_javascript_urls.mjs' );
 			}
 
-			if( $this->SyncProtobufs )
+			if( $this->SyncProtobufs && DIRECTORY_SEPARATOR === '/' )
 			{
 				$this->Log( '{lightblue}Syncing protobufs' );
 
@@ -592,7 +590,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					{
 						$this->UpdateManifestUrls = true;
 					}
-					else if( !$IsSSR && !str_contains( $OriginalFile, '/localization/' ) )
+					else if( !str_contains( $OriginalFile, '/localization/' ) )
 					{
 						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
 						$CleanFolder = dirname( $CleanFile );
@@ -669,17 +667,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$Code = 200;
 					}
 
-					if( isset( $Done[ 'error' ] ) )
-					{
-						$this->Log( '{yellow}cURL Error: {yellow}' . $Done[ 'error' ] . '{normal} - ' . $URL );
-
-						$this->URLsToFetch[ ] =
-						[
-							'URL'  => $URL,
-							'File' => $Request
-						];
-					}
-					else if( $Code === 304 )
+					if( $Code === 304 )
 					{
 						$this->Log( '{green}HTTP Cache  {normal} - ' . $URL );
 					}
@@ -960,7 +948,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			foreach( $Folders as $Folder => $NewChunks )
 			{
 				$FullFolderPath = __DIR__ . '/' . $Folder . '/';
-				
+
 				foreach( new DirectoryIterator( $FullFolderPath ) as $FileInfo )
 				{
 					if( $FileInfo->isDot() )
@@ -977,7 +965,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
 
 						unlink( $FilepathOnDisk );
-						
+
 						// Also delete the corresponding file in the clean directory if it exists
 						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
 
@@ -1074,6 +1062,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						unset( $this->ETags[ $File ] );
 
 						unlink( $FilepathOnDisk );
+
+						// Also delete the corresponding file in the clean directory if it exists
+						$CleanFilepath = __DIR__ . '/c/' . $File;
+
+						if( file_exists( $CleanFilepath ) )
+						{
+							$this->Log( 'Deleting clean file ' . $CleanFilepath );
+							unlink( $CleanFilepath );
+						}
 					}
 				}
 			}

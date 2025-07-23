@@ -116,6 +116,7 @@ foreach( $FoundUrls as $Url )
 	}
 }
 
+/** @return array<string, true> */
 function ParseUrls() : array
 {
 	$Data = file_get_contents( __DIR__ . '/urls.txt' );
