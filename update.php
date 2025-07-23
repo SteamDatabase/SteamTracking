@@ -949,6 +949,12 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$FullFolderPath = __DIR__ . '/' . $Folder . '/';
 
+				if( !is_dir( $FullFolderPath ) )
+				{
+					$this->Log( $FullFolderPath . ' does not exist' );
+					continue;
+				}
+
 				foreach( new DirectoryIterator( $FullFolderPath ) as $FileInfo )
 				{
 					if( $FileInfo->isDot() )
