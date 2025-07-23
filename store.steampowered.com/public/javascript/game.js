@@ -896,9 +896,6 @@ function BuildReviewHistogram()
 
 		var bCountAllReviews = data.count_all_reviews;
 		var bExpandGraph = data.expand_graph;
-		// language
-		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
-
 		var numTotalDays = ( data.results.end_date - data.results.start_date ) / 86400;
 		var numReviewsRecent = 0;
 		for ( var i = 0; i < data.results.recent.length; ++i )

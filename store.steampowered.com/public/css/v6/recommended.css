@@ -1612,11 +1612,23 @@ html.touch .similar_grid_item .buttons {
 
 
 body.v6 h2.user_reviews_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	padding-bottom: 4px;
     margin-top: 40px;
     background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
+}
+
+body.v6 h2.user_reviews_header .header_links a {
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 12px;
+	padding: 0;
+	color: white;
+	text-decoration: underline;
 }
 
 .user_reviews_sub_header {
@@ -2410,10 +2422,13 @@ html.tablet .friend_reviews .review_box .leftcol {
 
 .user_reviews_filter_options
 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	font-size: 12px;
-	padding: 10px;
 	margin-bottom: 30px;
-	background-color: #1f2f42;
+	background: radial-gradient(199.76% 71.77% at 28.23% 50%, #3F4E5F 0%, #313C4A 100%);
+	box-shadow: 0 0 5px #000;
 }
 
 .user_reviews_filter_title {
@@ -2480,21 +2495,8 @@ html.tablet .friend_reviews .review_box .leftcol {
 	margin-left: 2px;
 }
 
-.user_reviews_customize_language a {
-	text-transform: uppercase;
-	color: #67c1f5;
-	font-size: 10px;
-	background: rgba(0, 0, 0, 0.5);
-	padding: 3px 5px;
-	border-radius: 2px;
-}
-.user_reviews_customize_language a:hover {
-	text-transform: uppercase;
-	color: #fff;
-	font-size: 10px;
-	background: #67c1f5;
-	padding: 2px 4px;
-	border-radius: 2px;
+.user_reviews_customize_language span {
+	text-shadow: none;
 }
 .user_reviews_offtopic_activity_explanation a {
 	color: #556772;
@@ -2779,107 +2781,17 @@ body.recommendgame #review_create h2  {
 	padding-bottom: 10px;
 }
 
-.review_language_outliers_dialog {
-	color: #ffffff;
-	max-width: 800px;
-}
-
-.review_language_outliers_groups
-{
-	margin-top: 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-.review_language_outliers_group_languages {
-	display: flex;
-	flex-direction: row;
-	background-color: #474C57;
-	padding: 10px;
-	margin-bottom: 30px;
-}
-.review_language_outliers_group_languages:hover {
-	background-color: #5E6572;
-}
-.review_language_outliers_group_category {
-	text-transform: capitalize;
-	margin-bottom: 5px;
-	font-size: 20px;
-}
-.review_language_outliers_group_category_desc {
-	margin-bottom: 5px;
-}
-.review_language_outliers_your_language_group {
-	display: inline-block;
-	text-transform: unset;
-	color: #474C57;
-	background-color: #E4E6E9;
-	margin-left: 20px;
-	padding: 0px 6px;
-	border-radius: 3px;
-	font-size: 12px;
-}
-.review_language_outliers_group_languages > .languages {
-	flex: 1;
-	flex-wrap: wrap;
-	display: flex;
-}
-.review_language_outliers_group_languages > .score {
-}
-
-.review_language_outliers {
-	box-shadow: 0 0 5px #000;
-	display: flex;
-	position: relative;
-
-	padding: 10px 15px;
-	margin-bottom: 3px;
-	background-color: #2a475e;
-}
-.review_language_outliers.vo {
-	border: 2px solid #ff6f6f;
-	display: block;
-}
-.review_language_outliers .explanation {
-	margin-left: 10px;
-	flex: 1;
-}
-.review_language_outliers > div {
-	align-content: center;
-}
-.review_language_outliers_table {
-	display: flex;
-	flex-flow: column nowrap;
-}
-.review_language_outlier {
-	display: flex;
-	justify-content: space-between;
-	padding: 5px;
-	margin-bottom: 5px;
-	background: rgba(0, 0, 0, 0.2);
-}
-.review_language_outlier:hover {
-	background: rgba(255, 255, 255, 0.1);
-}
-.review_language_outlier.header {
-	font-weight: bold;
-	background: rgba(255, 255, 255, 0.1);
-}
-.review_language_outlier .cell {
-	display: flex;
-	flex: 1;
-	flex-wrap: wrap;
-}
-.review_language_outlier .cell.languages {
-	flex-grow: 2;
-}
 
 /* review histogram */
 
-#review_histograms_container {
-	background-color: #2a475e;
-	box-shadow: 0 0 5px #000;
+#review_histograms_container.has_data {
+	display: block;
 	position: relative;
+	background-color: #2a475e;
+}
+
+#review_histograms_container.has_data.collapsed {
+	display: none;
 }
 
 #review_graph_canvas {
@@ -2927,7 +2839,7 @@ body.recommendgame #review_create h2  {
 #review_histogram_recent_section {
 	width: 335px;
 	background: rgba( 148, 217, 255, 0.2 );
-	min-height: 350px;
+	min-height: 280px;
 }
 #review_histogram_rollup {
 	width: 100%;
@@ -2941,6 +2853,9 @@ body.recommendgame #review_create h2  {
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
+	padding-top: 20px;
+	display: inline-block;
+	width: calc( 100% - 20px );
 }
 
 .review_histogram .flot-x-axis {
@@ -2985,6 +2900,11 @@ body.recommendgame #review_create h2  {
 #review_hide_graph_button {
 }
 
+.graph_expander_btn {
+	margin-left: auto;
+	margin-right: 8px;
+}
+
 .review_graph_toggle>span {
 	display: inline;
 }
@@ -3017,33 +2937,24 @@ div.graph_toggle_icon.down {
 }
 
 /* review filter flyout menu */
-.user_reviews_filter_options.flyout {
-	padding: 0px;
-}
-.user_reviews_filter_options.flyout input {
-	vertical-align: text-top;
-}
 .user_reviews_filter_menu {
-	border-left: 1px solid #2a475e;
 	position: relative;
-	float: left;
 	padding-right: 10px;
 }
 .user_reviews_filter_menu:hover,
 .user_reviews_filter_menu:has(button[aria-expanded=true]) {
-	background-color: #c6d4df;
+	background-color: #eef0f1;
 }
 .user_reviews_filter_menu .title {
 	background: unset;
 	text-align: inherit;
 	border: none;
-	text-transform: uppercase;
-	font-size: 10px;
-	color: #4582a5;
+	font-size: 13px;
+	color: #fff;
 	padding: 10px;
 	padding-right: 20px;
 	cursor: pointer;
-	background-image: url(/public/images/v6/btn_arrow_down_padded.png);
+	background-image: url(/public/images/v6/btn_arrow_down_padded_white.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-position-x: right;
@@ -3052,6 +2963,7 @@ div.graph_toggle_icon.down {
 .title[aria-expanded=true],
 .user_reviews_filter_menu_flyout:hover .user_reviews_filter_menu .title {
 	background-image: url(/public/images/v6/btn_arrow_down_padded_black.png);
+	color: black;
 }
 .user_reviews_filter_menu.beta .title span {
 	background: #a3cf06;
@@ -3069,6 +2981,7 @@ div.graph_toggle_icon.down {
 	display: none;
 	padding: 10px;
 	color: #556772;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 	line-height: 20px;
 	z-index: 10;
 }
@@ -3076,7 +2989,7 @@ div.graph_toggle_icon.down {
 .user_reviews_filter_menu_flyout:hover,
 [aria-expanded=true] ~ .user_reviews_filter_menu_flyout {
 	display: block;
-	background-color: #c6d4df;
+	background-color: #eef0f1;
 }
 .user_reviews_filter_menu_flyout_content {
 	position: relative;
@@ -3342,6 +3255,167 @@ body.v6 h2.morelike_section_divider
 		min-width: 48%;
 	}
 }
+
+/* ============= Review summary update 2025 ================== */
+.review_score_summaries {
+	margin: 30px 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+
+.summary_rule {
+	height: 1px;
+	flex-grow: 1;
+	background-color: #415063;
+
+}
+
+.review_summary_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 30px;
+	border-radius: 4px;
+	background: radial-gradient(83.77% 83.75% at 50.23% 16.25%, #283039 0%, #4D5C6C 100%);
+}
+
+.review_summary_ctn .title {
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #9ba3ab;
+	letter-spacing: 1px;
+	line-height: 17px;
+}
+
+.review_summary_ctn .app_reviews_count {
+	font-size: 12px;
+	color: #8BA6B6;
+}
+
+.review_summary_ctn .game_review_summary {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+
+.review_language_outliers_dialog {
+	color: #ffffff;
+	max-width: 800px;
+}
+
+.review_language_outliers_groups
+{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.review_language_outliers_group_languages {
+	display: flex;
+	flex-direction: row;
+	background-color: #474C57;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+.review_language_outliers_group_languages:hover {
+	background-color: #5E6572;
+}
+.review_language_outliers_group_category {
+	text-transform: capitalize;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.review_language_outliers_group_category_desc {
+	margin-bottom: 5px;
+}
+.review_language_outliers_your_language_group {
+	display: inline-block;
+	text-transform: unset;
+	color: #474C57;
+	background-color: #E4E6E9;
+	margin-left: 20px;
+	padding: 0px 6px;
+	border-radius: 3px;
+	font-size: 12px;
+}
+.review_language_outliers_group_languages > .languages {
+	flex: 1;
+	flex-wrap: wrap;
+	display: flex;
+}
+.review_language_outliers_group_languages > .score {
+}
+
+.review_language_outliers {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			max-width: 85%;
+	box-sizing: border-box;
+	margin: 0 auto 3px auto;
+	box-shadow: 0 0 5px #000;
+	display: flex;
+	position: relative;
+
+	padding: 10px 16px 10px 10px;
+	border-radius: 13px;
+	background: #515C68;
+}
+.outlier_title {
+	font-size: 19px;
+	line-height: 1.1;
+	font-weight: 300;
+	color: white;
+}
+.outlier_subtitle {
+	font-size: 13px;
+	color: rgba( 255,255,255,0.8);
+}
+.review_language_outliers img {
+	margin-bottom: -10px;
+}
+.review_language_outliers.vo {
+	border: 2px solid #ff6f6f;
+	display: block;
+}
+.review_language_outliers .explanation {
+	margin-left: 10px;
+	flex: 1;
+}
+.review_language_outliers > div {
+	align-content: center;
+}
+.review_language_outliers_table {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.review_language_outlier {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.review_language_outlier:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier.header {
+	font-weight: bold;
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier .cell {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+}
+.review_language_outlier .cell.languages {
+	flex-grow: 2;
+}
+
 
 /* 2025 Game Page Widening */
 .widestore .review_box .rightcol {
