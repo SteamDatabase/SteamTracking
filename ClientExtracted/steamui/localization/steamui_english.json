@@ -1895,6 +1895,7 @@
     "AppProperties_Shortcut_ChooseStartDirectoryDialogTitle": "Choose Start Directory",
     "AppProperties_Privacy_MarkAppPrivate": "Mark as Private",
     "AppProperties_Privacy_MarkAppPrivate_Description": "Hide your activity in this game from others.  Your In-Game status will not be visible to anyone else, the game will not show on your Steam Community profile, and any activity in the game will not show in friends' activity feeds.",
+    "AppProperties_Privacy_MarkAppPrivate_Offline": "Go online to change this setting.",
     "AppProperties_Privacy_MarkAppHidden": "Hide in library",
     "AppProperties_Privacy_MarkAppHidden_Description": "Hide this game in the Steam Library.  You can access the game by selecting the \"Hidden Games\" option on the \"View\" menu.",
     "AppProperties_Privacy_DialogDescription": "Marking a game as private will hide it everywhere outside of your Library.\n\nYour ownership, in-game status, playtime, and activity will not be visible to other people.",

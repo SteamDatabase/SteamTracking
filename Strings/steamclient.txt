@@ -3308,7 +3308,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1jpQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -15587,7 +15586,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HXM]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -15699,7 +15697,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42 WT
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -40545,7 +40543,6 @@ Zulu
 \n\tis_openvr
 \n\tis_paired
 \n\tis_public
-\n\tis_remote
 \n\tis_replay
 \n\tis_report
 \n\tis_secure
@@ -46415,7 +46412,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenV
 ghjkl
 gidlist
 gidparentcomment
@@ -56520,6 +56517,7 @@ remote_client_id
 remote_clients
 remote_connections
 remote_host
+remote_launch_available
 remote_play_together
 remote_steamcmd
 remote_user
@@ -58138,7 +58136,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 21 2025 20:21:39
+steam Jul 22 2025 23:29:40
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -604,7 +604,7 @@ message CMsgShortcutInfo {
 	optional uint32 override_appid = 8;
 	optional string flatpak_appid = 9;
 	repeated string tags = 10;
-	optional bool is_remote = 11;
+	optional uint64 remote_client_id = 11;
 	optional bool is_hidden = 12;
 	optional bool is_temporary = 13;
 	optional bool is_openvr = 14;
@@ -613,6 +613,7 @@ message CMsgShortcutInfo {
 	optional uint32 rt_last_played_time = 17;
 	optional bool is_devkit_shortcut = 18;
 	optional string devkit_gameid = 19;
+	optional bool remote_launch_available = 20;
 }
 
 message CMsgShortcutInfos {

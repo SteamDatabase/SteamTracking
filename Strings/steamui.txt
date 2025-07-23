@@ -21577,7 +21577,6 @@ J422ToARGB
 J444ToABGR
 J444ToARGB
 J8Y+
-J:9K
 J:xrG
 JA\Wfmp{
 JArray
@@ -21648,7 +21647,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 21 2025 20:21:04
+Jul 22 2025 23:29:03
 July
 JumpList
 Jumplist
@@ -26526,6 +26525,7 @@ SDL_DisableScreenSaver
 SDL_EnableScreenSaver
 SDL_GAMECONTROLLERCONFIG
 SDL_GAMECONTROLLER_USE_BUTTON_LABELS
+SDL_GAMECONTROLLER_USE_GAMECUBE_LABELS
 SDL_GL_CreateContext
 SDL_GL_DestroyContext
 SDL_GL_GetAttribute
@@ -26557,15 +26557,12 @@ SDL_GetGamepadTypeForID
 SDL_GetGamepads
 SDL_GetGlobalMouseState
 SDL_GetHint
-SDL_GetHintBoolean
 SDL_GetJoystickAxisInitialState
 SDL_GetJoystickGUID
 SDL_GetJoystickGUIDForID
 SDL_GetJoystickGUIDInfo
 SDL_GetJoystickNameForID
-SDL_GetJoystickProduct
 SDL_GetJoystickTypeForID
-SDL_GetJoystickVendor
 SDL_GetJoysticks
 SDL_GetLogOutputFunction
 SDL_GetNumJoystickAxes
@@ -26587,7 +26584,6 @@ SDL_JOYSTICK_HIDAPI_GIP
 SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED
 SDL_JOYSTICK_HIDAPI_STEAM
 SDL_JOYSTICK_HIDAPI_STEAMXBOX
-SDL_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS
 SDL_JOYSTICK_LINUX_DEADZONES
 SDL_JOYSTICK_RAWINPUT
 SDL_JOYSTICK_ROG_CHAKRAM
@@ -32053,7 +32049,6 @@ Zulu
 \n\tis_openvr
 \n\tis_paired
 \n\tis_public
-\n\tis_remote
 \n\tis_replay
 \n\tis_report
 \n\tis_shader
@@ -33647,6 +33642,7 @@ bHasAnyVACBans
 bHasBattery
 bHasCaptureButton
 bHasDifferentCopies
+bHasGameCubeLayout
 bHasInput
 bHasLockedPrivateBetas
 bHasMultipleInputs
@@ -36827,6 +36823,8 @@ f\n\rFilterOptions
 f\n\rSearchForGame
 fabs( flXDelta ) > 0
 faccessat
+face:axby
+face:bayx
 facebook.com
 facsimileTelephoneNumber
 factory-reset1
@@ -38338,6 +38336,7 @@ hint-partitionable
 hint-symbolic-icon-name
 hint-system
 hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS:=1,
+hint:SDL_GAMECONTROLLER_USE_GAMECUBE_LABELS:=1,
 hintText
 hint_probe_frequency_seconds
 history
@@ -42881,6 +42880,7 @@ m_sDeviceName
 m_sDevicePath
 m_sDeviceRequestingRegistration
 m_sDragURL
+m_sExtraMapping
 m_sFailureInfo
 m_sFlatpakAppID
 m_sFrameCur.m_pubPayload
@@ -43626,8 +43626,6 @@ minutes_played_forever
 minutes_playtime_forever
 minutes_playtime_last_two_weeks
 minutes_remaining
-misc2:b12,
-misc2:b15,misc3:b16,
 missing
 missing "gameid" argument\n
 missing "gameid" parameter\n
@@ -45074,14 +45072,6 @@ packet_size_received
 packet_size_requested
 packets
 padding check failed
-paddle1:b11,paddle2:b12,paddle3:b13,paddle4:b14,
-paddle1:b12,paddle2:b11,paddle3:b14,paddle4:b13,
-paddle1:b12,paddle2:b13,paddle3:b14,paddle4:b15,
-paddle1:b12,paddle3:b14,
-paddle1:b14,paddle2:b13,
-paddle1:b15,paddle2:b17,paddle3:b16,paddle4:b18,
-paddle1:b20,paddle2:b19,paddle3:b18,paddle4:b17,
-paddle2:b13,paddle4:b15,
 page
 page->m_pToolWindow == this
 page_background
@@ -46165,6 +46155,7 @@ remember_password
 remotePublicKey.IsValid()
 remote_address
 remote_client_id
+remote_launch_available
 remote_play_together
 remoteplay
 remoteplay/
@@ -49116,7 +49107,6 @@ total_queue_size
 total_seconds_watched
 total_unique_viewers
 totaltime
-touchpad:b12,misc2:b13,misc3:b14,
 toupper
 towerattack
 tpBasis
