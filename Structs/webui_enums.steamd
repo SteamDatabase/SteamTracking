@@ -1458,6 +1458,14 @@ enum UnnamedEnum103c46b6e6314ec9
 	k_ECompleted = 11;
 }
 
+enum UnnamedEnum10fca4e49733d28f
+{
+	k_ECanRequest = 0;
+	k_EIsNotChild = 1;
+	k_EInvalidCartType = 2;
+	k_ENonGiftableItemPresent = 3;
+}
+
 enum UnnamedEnum12487a88f7459bbf
 {
 	Line = 1;
