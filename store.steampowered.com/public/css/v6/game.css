@@ -5235,7 +5235,7 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 @media screen and (max-width: 910px )
 {
 
-	html.responsive #game_highlights a:not(.app_tag):not(#appReviewsAll_responsive) {
+	html.responsive #game_highlights .highlight_screenshot_link {
 		height: 100%;
 		position: relative;
 	}
