@@ -362,7 +362,7 @@ body.clientNews .content {
 body.clientNews .extImg {
 	float: right;
 	margin:10px;
-	background-image: url('https://community.cloudflare.steamstatic.com/public/images/skin_1/extImg_1.png');
+	background-image: url('https://community.fastly.steamstatic.com/public/images/skin_1/extImg_1.png');
     background-repeat: no-repeat;
 }
 body.clientNews .linky {

@@ -871,7 +871,7 @@ CInventory.prototype.AddInventoryData = function( data )
 
 CInventory.prototype.CreateEmptyItemHolder = function( iPage )
 {
-	var $ret = $J('<div class="itemHolder"><div class="item pendingItem app' + this.m_appid + ' context' + this.m_contextid + '"><img src="https://community.cloudflare.steamstatic.com/public/images/trans.gif"></div></div>');
+	var $ret = $J('<div class="itemHolder"><div class="item pendingItem app' + this.m_appid + ' context' + this.m_contextid + '"><img src="https://community.fastly.steamstatic.com/public/images/trans.gif"></div></div>');
 	$ret.data('iPage', iPage );
 
 	return $ret;
@@ -1034,7 +1034,7 @@ CInventory.prototype.ShowInventoryLoadError = function()
 		/*
 				*/
 
-		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t<div class=\"message\">This inventory is not available at this time.  Please try again later.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\n\t\t\t\t\t\t<span>Try Again<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\n\t\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/login\/throbber.gif\">\n\t\t\t\t\t<\/span>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
+		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.fastly.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t<div class=\"message\">This inventory is not available at this time.  Please try again later.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\n\t\t\t\t\t\t<span>Try Again<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\n\t\t\t\t\t\t<img src=\"https:\/\/community.fastly.steamstatic.com\/public\/images\/login\/throbber.gif\">\n\t\t\t\t\t<\/span>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
 
 		var _this = this;
 		this.m_$ErrorDisplay.find( '.retry_load_btn').click( function() { _this.RetryLoad(); } );
@@ -1070,7 +1070,7 @@ CInventory.prototype.ShowInventoryReloadMessage = function()
 		/*
 				*/
 
-		this.m_$ReloadDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t <div class=\"message\">Items in this inventory may be out of date and displaying old data.  For performance reasons, automatic refresh has been disabled.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small reload_btn\">\n\t\t\t\t\t\t<span>Refresh<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
+		this.m_$ReloadDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\n\t\t\t\t<div class=\"inventory_load_error_header\">\n\t\t\t\t\t<img src=\"https:\/\/community.fastly.steamstatic.com\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\n\t\t\t\t\t <div class=\"message\">Items in this inventory may be out of date and displaying old data.  For performance reasons, automatic refresh has been disabled.<\/div>\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small reload_btn\">\n\t\t\t\t\t\t<span>Refresh<\/span>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t" ).hide();
 
 		var _this = this;
 		this.m_$ReloadDisplay.find( '.reload_btn').click( function() { _this.ReloadIfNeeded() } );
@@ -1250,7 +1250,7 @@ CInventory.prototype.ShowTags = function()
 
 	if ( !this.m_bFullyLoaded )
 	{
-		this.m_$TagContainer.html( '<div class="inventory_loading_indicator "><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>');
+		this.m_$TagContainer.html( '<div class="inventory_loading_indicator "><img src="https://community.fastly.steamstatic.com/public/images/login/throbber.gif"></div>');
 	}
 
 	this.LoadCompleteInventory().done( function() {
@@ -1929,7 +1929,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 	if ( g_ActiveInventory && g_ActiveInventory != this && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
 		g_ActiveInventory.selectedItem = rgItem;
 
-	elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://community.cloudflare.steamstatic.com/public/images/trans.gif'; }, 200 );
+	elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://community.fastly.steamstatic.com/public/images/trans.gif'; }, 200 );
 
 	iActiveSelectView = iNewSelect;
 };
@@ -2931,7 +2931,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 				if ( !bAlreadyInitialized )
 				{
 					// explicitly blank logo to prevent it from showing as the old logo until load is complete
-					$('inventory_applogo').src = 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';
+					$('inventory_applogo').src = 'https://community.fastly.steamstatic.com/public/images/trans.gif';
 					var fnUpdate= function() {$('inventory_applogo').src = oEconomyDisplay.inventory_logo };
 					fnUpdate.defer();
 				}
@@ -3095,7 +3095,7 @@ function SelectInventoryFromUser( user, appid, contextid, bForceSelect )
 }
 
 /* special display rules for economy apps, logos, special messages, etc */
-var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/community.cloudflare.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"}};
+var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/community.fastly.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/community.fastly.steamstatic.com\/public\/images\/economy\/applogos\/99900.png"}};
 function GetEconomyDisplay( appid, contextid )
 {
 	var oDisplay = {};
@@ -3133,10 +3133,10 @@ function ImageURL( imageName, x, y, bEnableHighDPI )
 			if ( bEnableHighDPI && window.devicePixelRatio >= 2 && g_bAllowHighDPIItemImages )
 				strSize += 'dpx2x';
 		}
-		return 'https://community.cloudflare.steamstatic.com/economy/image/' + v_trim(imageName) + strSize + '?allow_animated=1';
+		return 'https://community.fastly.steamstatic.com/economy/image/' + v_trim(imageName) + strSize + '?allow_animated=1';
 	}
 	else
-		return 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';
+		return 'https://community.fastly.steamstatic.com/public/images/trans.gif';
 }
 
 
@@ -3262,7 +3262,7 @@ function BuildHover( prefix, item, owner )
 				for ( var i=0; i < description.fraudwarnings.length; i++ )
 				{
 					var warning = $J( '<div/>', { class: 'fraud_warning_box' } );
-					var warningImage = $J( '<img>', { class: 'fraud_warning_image', src: 'https://community.cloudflare.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png' } );
+					var warningImage = $J( '<img>', { class: 'fraud_warning_image', src: 'https://community.fastly.steamstatic.com/public/images/sharedfiles/icons/icon_warning.png' } );
 					warning.append( warningImage );
 					var warningText = $J( '<span/>' );
 					warningText.text( description.fraudwarnings[i] );
@@ -3699,7 +3699,7 @@ function PopulateMarketActions( elActions, item )
 		elPriceInfo.appendChild( elPriceInfoHeader );
 
 		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
-		elPriceInfoContent.update( '<img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif" alt="Working...">' );
+		elPriceInfoContent.update( '<img src="https://community.fastly.steamstatic.com/public/images/login/throbber.gif" alt="Working...">' );
 		elPriceInfo.appendChild( elPriceInfoContent );
 
 		new Ajax.Request( 'https://steamcommunity.com/market/priceoverview/', {
@@ -5188,7 +5188,7 @@ function AddItemHoverToElement( element, rgItem )
 			ShowItemHoverAsPopup( $Content, function() {
 				bInTouch = false;
 				$J('#hover').append( $Content );
-				$J('#hover_item_icon' ).attr('src', 'https://community.cloudflare.steamstatic.com/public/images/trans.gif');
+				$J('#hover_item_icon' ).attr('src', 'https://community.fastly.steamstatic.com/public/images/trans.gif');
 			} );
 		}
 	});

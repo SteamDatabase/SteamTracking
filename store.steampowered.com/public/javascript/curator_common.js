@@ -130,7 +130,7 @@ function ReportAbuse( strAbuseID )
 
 function GetCuratorAvatarURLFromHash( hash, size )
 {
-    var strURL = 'https://avatars.cloudflare.steamstatic.com/' + hash;
+    var strURL = 'https://avatars.fastly.steamstatic.com/' + hash;
 
 	if ( size == 'full' )
 		strURL += '_full.jpg';

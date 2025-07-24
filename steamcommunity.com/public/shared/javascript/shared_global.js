@@ -1404,7 +1404,7 @@ CEmoticonDelayedAJAXData.prototype.constructor = CEmoticonDelayedAJAXData;
 CEmoticonDelayedAJAXData.prototype.GetAJAXParams = function()
 {
 	return {
-		url: 'https://community.cloudflare.steamstatic.com/' + this.m_strURL,
+		url: 'https://community.fastly.steamstatic.com/' + this.m_strURL,
 		dataType: 'jsonp',
 		jsonpCallback: 'OnLoadEmoticon_' + this.m_strEmoticonName,	//consistent name for cachability
 		cache: true,

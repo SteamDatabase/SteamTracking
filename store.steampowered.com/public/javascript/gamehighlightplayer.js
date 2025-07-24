@@ -792,12 +792,12 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 		$Title.text( 'View full-size version in browser' );
 	else
 		$Title.text( 'Download full-size version' );
-	$Title.append( ' ', $J('<img/>', {src: 'https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif',  alt: 'External' } ) );
+	$Title.append( ' ', $J('<img/>', {src: 'https://store.fastly.steamstatic.com/public/images/v5/ico_external_link.gif',  alt: 'External' } ) );
 
 	var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
 
 	var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
-	var $ImgPreload = $J('<img/>', {'src': 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'style': 'display: none;' } );
+	var $ImgPreload = $J('<img/>', {'src': 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'style': 'display: none;' } );
 	var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img, $ImgPreload );
 
 	var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );

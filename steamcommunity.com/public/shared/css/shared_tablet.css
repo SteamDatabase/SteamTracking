@@ -251,7 +251,7 @@ html.tablet .pill_tab_menu_item {
 
 html.tablet .pill_tab_menu_item.deck_search_steam {
 	padding-left: 32px;
-	background:	no-repeat 8px center / 18px 18px url('https://community.cloudflare.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
+	background:	no-repeat 8px center / 18px 18px url('https://community.fastly.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
 }
 
 html.tablet .tablet_header_glyph {
@@ -807,8 +807,8 @@ html.tablet .responsive_local_menu_tab.active {
 
 	/* TODO - Reconsider how we display on screen glyphs */
 	background:
-		no-repeat 8px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
-		no-repeat 40px center / 24px 24px url('https://community.cloudflare.steamstatic.com/public/shared/images/glyphs/Rows.svg');
+		no-repeat 8px center / 24px 24px url('https://community.fastly.steamstatic.com/public/shared/images/glyphs/shared_button_y.svg'),
+		no-repeat 40px center / 24px 24px url('https://community.fastly.steamstatic.com/public/shared/images/glyphs/Rows.svg');
 }
 
 /* Setting responsive_page_menu_ctn display to none to exlude hidden elements from focus navigation */

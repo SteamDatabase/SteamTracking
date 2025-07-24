@@ -2756,7 +2756,7 @@ html.responsive.tablet .store_main_capsule,
 
 .market_escrow_sale_banner {
 	display: block;
-	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/twofactor/escrow_market_sale_banner.png' ) center top no-repeat;
+	background: url( 'https://cdn.fastly.steamstatic.com/store/promo/twofactor/escrow_market_sale_banner.png' ) center top no-repeat;
 	max-width: 941px;
 	height: 137px;
 	margin: 0 auto 40px auto;
@@ -5191,7 +5191,7 @@ body.v6 .discovery_queue_ctn h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/newstore2016/home_takeover_mini.jpg' );
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/promo/newstore2016/home_takeover_mini.jpg' );
 	background-repeat: no-repeat;
 	background-position: top left;
 
@@ -5199,7 +5199,7 @@ body.v6 .discovery_queue_ctn h2 {
 	box-shadow: 0 0 4px #000;
 }
 .home_page_content.takeover_mini .takeover_mini_ctn:hover {
-	background-image: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/newstore2016/home_takeover_mini.jpg' );
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/promo/newstore2016/home_takeover_mini.jpg' );
 	box-shadow: 0 0 4px #fff;
 	background-position-y: -60px;
 }

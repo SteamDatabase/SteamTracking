@@ -631,9 +631,9 @@ GHomepage = {
 			{
 				$ImgCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
 					.append(
-						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
-						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } ),
-						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } )
+						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://store.fastly.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
+						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } ),
+						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': strImageURL } )
 					)
 				);
 			}
@@ -1562,9 +1562,9 @@ GHomepage = {
 				}
 
 				var $image = $J( '<img/>', {
-					'src': "https://store.cloudflare.steamstatic.com/public/images/blank.gif",
+					'src': "https://store.fastly.steamstatic.com/public/images/blank.gif",
 					"alt": '',	// intentionally blank, there is text overlaid on top of the image
-					"data-image-url": "https://store.cloudflare.steamstatic.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l + "&v=2",
+					"data-image-url": "https://store.fastly.steamstatic.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l + "&v=2",
 				} );
 				$capsule.append( $image );
 
@@ -1967,7 +1967,7 @@ GHomepage = {
 		var $ImageCapsule = $J ( '<div/>' );
 		$ImageCapsule.addClass('capsule');
 
-		var $Image = $J('<img/>', { src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
+		var $Image = $J('<img/>', { src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
 		if ( !rgItemData.main_capsule )
 		{
 			$Image.css({'height': '288px' });
@@ -2014,7 +2014,7 @@ GHomepage = {
 				}
 			);
 
-			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
+			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="https://store.fastly.steamstatic.com/public/images/blank.gif" data-image-url="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
 			$ItemLink.append( $TinyCap );
 		}
 
@@ -2083,7 +2083,7 @@ GHomepage = {
 			if ( reviewer )
 			{
 				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
-				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s" alt="%4$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid).replace(/\%4\$s/g, reviewer.name) );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.fastly.steamstatic.com/public/images/blank.gif" data-image-url="%2$s" alt="%4$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid).replace(/\%4\$s/g, reviewer.name) );
 				$AuthorBlock.append( $AvatarCap );
 
 				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
@@ -2333,15 +2333,15 @@ CHomeSettings.prototype.DismissPopup = function()
 
 function GetAvatarURL( strAvatarHash, sizeStr )
 {
-    return 'https://avatars.cloudflare.steamstatic.com/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
+    return 'https://avatars.fastly.steamstatic.com/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://shared.fastly.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://shared.fastly.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 GSteamCurators = {
@@ -2530,7 +2530,7 @@ GSteamCurators = {
 
         var $StatusAndDate = $J('<div/>', {'class': 'date_row'} );
 
-        var $Thumb = $J('<img/>', {'class': 'recommendation_thumb', src: 'https://store.cloudflare.steamstatic.com/public/images/recommended_thumb.png', 'alt': ''});
+        var $Thumb = $J('<img/>', {'class': 'recommendation_thumb', src: 'https://store.fastly.steamstatic.com/public/images/recommended_thumb.png', 'alt': ''});
         var $Status = $J('<div/>', {'class': 'recommendation_status recommended'}).text( "Recommended" );
         var $Date = $J('<div/>', {'class': 'recommendation_date'}).text( new Date( rgRecommendation.time_recommended * 1000 ).toLocaleDateString( undefined, { month: 'long', day: 'numeric' } ) );
         $StatusAndDate.append( $Thumb );

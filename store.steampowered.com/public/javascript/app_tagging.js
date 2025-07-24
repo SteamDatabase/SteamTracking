@@ -288,7 +288,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 		if ( rgYourPopularTags === null )
 		{
-			$YourTags.html( '<div class="yourtags_throbber"><img src="https://store.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );
+			$YourTags.html( '<div class="yourtags_throbber"><img src="https://store.fastly.steamstatic.com/public/images/login/throbber.gif"></div>' );
 			if ( !bYourPopularTagsRequested )
 			{
 				bYourPopularTagsRequested = true;
@@ -951,7 +951,7 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 			// some pending info
 			var $GamesElement = $J('<div/>', {'class':'browse_tag_games'});
 			$GamesElement.append($J('<h3/>').text( strTagName ) );
-			$GamesElement.append( $J('<div/>', {'class': 'browse_tag_loading' }).html( '<img src="https://store.cloudflare.steamstatic.com/public/images/login/throbber.gif">' ) );
+			$GamesElement.append( $J('<div/>', {'class': 'browse_tag_loading' }).html( '<img src="https://store.fastly.steamstatic.com/public/images/login/throbber.gif">' ) );
 
 			$Element.append( $GamesElement );
 			$Element.append( $J('<div/>', {'class':'browse_tag_game_total'}).html( '&nbsp;' ) );

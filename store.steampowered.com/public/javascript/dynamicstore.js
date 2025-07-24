@@ -2716,15 +2716,15 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 
 function GetAvatarURL( strHash, strSize )
 {
-	return "https:\/\/avatars.cloudflare.steamstatic.com\/" + strHash + strSize + '.jpg';
+	return "https:\/\/avatars.fastly.steamstatic.com\/" + strHash + strSize + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://shared.fastly.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://shared.fastly.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 
@@ -2785,7 +2785,7 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 			<div class="sparkleStar star3"></div> \
 		</div> \
 		</div> \
-		<div class="lunar_sale_title"><img src="https://store.cloudflare.steamstatic.com/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
+		<div class="lunar_sale_title"><img src="https://store.fastly.steamstatic.com/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
 		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
 		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
 		<div class="lunar_sale_spacer lunar_rightspacer">\
@@ -2877,7 +2877,7 @@ function BuildCreatorCapsuleToAppend( oItem )
 	$FollowLink.bind('updateFollowState', function () {
 		if ( $FollowLink.data('ds-following') )
 		{
-			$FollowLink.html( '<span><img src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_selected_green.png">Following</span>' );
+			$FollowLink.html( '<span><img src="https://store.fastly.steamstatic.com/public/images/v6/ico/ico_selected_green.png">Following</span>' );
 			$FollowLink.addClass( "following_button" );
 			$FollowLink.removeClass( "follow_button" );
 		}

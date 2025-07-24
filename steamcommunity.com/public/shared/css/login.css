@@ -39,7 +39,7 @@
 	width: 67px;
 	height: 48px;
 
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/emailauth_icons2.png');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/emailauth_icons2.png');
 	background-repeat: no-repeat;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .auth_icon.ipt_icon {
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/ipt_lockout_icon.png');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/ipt_lockout_icon.png');
 	height: 62px;
 	width: 53px;
 
@@ -100,7 +100,7 @@
 }
 
 .authcode_entry_box, .twofactorauthcode_entry_box {
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/code_box.png?v=1');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/code_box.png?v=1');
 	background-repeat: no-repeat;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -113,7 +113,7 @@
 
 .friendly_name_box
 {
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/friendlyname_box.png?v=1');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/friendlyname_box.png?v=1');
 	background-repeat: no-repeat;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -159,7 +159,7 @@ input.authcode_entry_input, input.twofactorauthcode_entry_input {
 #auth_buttonset_waiting, #login_twofactorauth_buttonset_waiting {
 	height: 85px;
 
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/throbber.gif');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/throbber.gif');
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -237,7 +237,7 @@ input.authcode_entry_input, input.twofactorauthcode_entry_input {
 }
 
 #loginIPTModal .modal_box {
-	background-image: url('https://community.cloudflare.steamstatic.com/public/shared/images/login/ipt_lockout_bg.png');
+	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/login/ipt_lockout_bg.png');
 	width: 466px;
 	height: 231px;
 }
@@ -541,11 +541,11 @@ body.login .page_content {
 }
 
 body.login.china .page_content {
-	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china.jpg' ) center top no-repeat, #181A21;
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.fastly.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china.jpg' ) center top no-repeat, #181A21;
 }
 
 body.login.global .page_content {
-	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;}
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.fastly.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;}
 }
 
 .login #checkout_steam_logo {
@@ -952,11 +952,11 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	}
 
 	html.responsive body.login.global .page_content {
-		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.fastly.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 
 	html.responsive body.login.china .page_content {
-		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg' ) center top no-repeat, #181A21;
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.fastly.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 }
 

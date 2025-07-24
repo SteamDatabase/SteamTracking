@@ -2,7 +2,7 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
@@ -10,7 +10,7 @@
 	margin: 0px auto;
 }
 #BG_bottom {
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.fastly.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -100,7 +100,7 @@
 
 .provisional_item_badge
 {
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/protected_items_badge2.png' );
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/protected_items_badge2.png' );
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	background-size: 36px 36px;
@@ -324,7 +324,7 @@
 	width: 2px;
 	height: 54px;
 
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/game_button_separator.png');
+	background-image:url('https://community.fastly.steamstatic.com/public/images/economy/game_button_separator.png');
 	background-repeat:no-repeat;
 }
 
@@ -424,7 +424,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover {
 	background-position: -1px -197px;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 }
 
@@ -487,7 +487,7 @@ html.responsive .responsive_fixonscroll_ctn #contextselect {
 
 #contextselect {
 	background-color: #000000;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/context_arrow.png' );
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/context_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: right top;
 	border: 1px solid #676767;
@@ -690,7 +690,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	border: 1px solid #4d4d4e;
 	border-radius: 2px;
 	background-color: #262d37;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/pendinggift_bg.jpg?v=2' );
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/pendinggift_bg.jpg?v=2' );
 	background-repeat: no-repeat;
 	background-position: bottom right;
 
@@ -700,7 +700,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .pending_gift_template_1
 {
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/promo/lny2019/bg_gift_pending.jpg' ) !important;
+	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/promo/lny2019/bg_gift_pending.jpg' ) !important;
 	background-position: 0% 0% !important;
 	background-size: cover;
 }
@@ -978,7 +978,7 @@ p.pending_gifts_none {
 }
 
 .alertbox_header, .alertbox_header .leftcap, .alertbox_header .rightcap {
-	background-image: url( https://community.cloudflare.steamstatic.com/public/images/economy/alertbox_header.png );
+	background-image: url( https://community.fastly.steamstatic.com/public/images/economy/alertbox_header.png );
 }
 
 .alertbox_header {
@@ -1045,7 +1045,7 @@ p.pending_gifts_none {
 	text-align: center;
 	color: #b4b4b4;
 
-	background-image: url( https://community.cloudflare.steamstatic.com/public/images/economy/alertbox_scrollcontrol_shadow.png );
+	background-image: url( https://community.fastly.steamstatic.com/public/images/economy/alertbox_scrollcontrol_shadow.png );
 	background-repeat: repeat-y;
 }
 

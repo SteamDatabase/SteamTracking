@@ -70,6 +70,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			CURLOPT_SSL_VERIFYHOST => 0,
 		];
 
+		private CurlShareHandle $CurlShareHandle;
+
 		public function __construct( string $Option )
 		{
 			$this->AppStart = microtime( true );
@@ -105,6 +107,10 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$KnownUrls[ $Url[ 'URL' ] ] = true;
 			}
 
+			$this->CurlShareHandle = curl_share_init();
+			curl_share_setopt( $this->CurlShareHandle, CURLSHOPT_SHARE, CURL_LOCK_DATA_PSL );
+			curl_share_setopt( $this->CurlShareHandle, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS );
+
 			$Tries = 5;
 			$WindowSize = 10;
 
@@ -121,6 +127,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->UpdateManifestUrls )
 			{
+				$Tries = 5;
 				$this->URLsToFetch = $this->ProcessManifests( $KnownUrls );
 
 				do
@@ -136,8 +143,12 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->UpdateSSRUrls && !empty( $this->CurrentSSRFiles ) )
 			{
+				$Tries = 5;
+
 				do
 				{
+					$this->DeleteOldSSRFiles();
+
 					$this->URLsToFetch = $this->ProcessSSRFiles();
 
 					if( empty( $this->URLsToFetch ) )
@@ -155,7 +166,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					}
 					while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 				}
-				while( true );
+				while( $Tries >= 0 );
 
 				$this->DeleteOldSSRFiles();
 			}
@@ -220,7 +231,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				[
 					'key=' . $this->APIKey,
 					'_=' . $this->CurrentTime,
-					'_cdn=cloudflare',
+					'_cdn=fastly',
 				],
 				$URL
 			);
@@ -770,6 +781,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			$File  = $URL[ 'File' ];
 
 			$Options = $this->Options;
+			$Options[ CURLOPT_SHARE ] = $this->CurlShareHandle;
 			$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
 
 			$this->Requests[ (int)$Handle ] = $File;
@@ -972,6 +984,9 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 						unlink( $FilepathOnDisk );
 
+						$TagFile = $Folder . '/' . $Filename;
+						unset( $this->ETags[ $TagFile ], $this->ETags[ $TagFile . '.unmodified' ] );
+
 						// Also delete the corresponding file in the clean directory if it exists
 						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
 
@@ -1065,7 +1080,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists' );
 
 						$File = substr( dirname( $FileInfo->getPathname() ), strlen( __DIR__ . '/' ) ) . '/' . $Filename;
-						unset( $this->ETags[ $File ] );
+						unset( $this->ETags[ $File ], $this->ETags[ $File . '.unmodified' ] );
 
 						unlink( $FilepathOnDisk );
 

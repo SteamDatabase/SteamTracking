@@ -388,7 +388,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 
 	g_rgAppsInLists.push( appid );
 
-	var strHTML = "\n\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
+	var strHTML = "\n\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
 		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
@@ -497,21 +497,21 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 		switch( recommendationInfo.recommendation.recommendation_state )
 		{
 			case 0:
-				strRecommendationIcon = "<img src='https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_curator_up.png'>";
+				strRecommendationIcon = "<img src='https://store.fastly.steamstatic.com/public/images/v6/ico/ico_curator_up.png'>";
 				strRecommendationString = "<span class='color_recommended'>Recommended<span>";
 				break;
 			case 1:
-				strRecommendationIcon = "<img src='https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_curator_dn.png'>";
+				strRecommendationIcon = "<img src='https://store.fastly.steamstatic.com/public/images/v6/ico/ico_curator_dn.png'>";
 				strRecommendationString = "<span class='color_not_recommended'>steam_curator_notrecommended<span>";
 				break;
 			case 2:
-				strRecommendationIcon = "<img src='https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_curator_info.png'>";
+				strRecommendationIcon = "<img src='https://store.fastly.steamstatic.com/public/images/v6/ico/ico_curator_info.png'>";
 				strRecommendationString = "<span class='color_informational'>Informational<span>";
 				break;
 		}
 
 
-		elContainer.innerHTML = "\n\t\t\t<div>\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\n\t\t\t<\/div>\n\t\t\t<div class=\"desc\">\n\t\t\t\t<h3>%4$s %2$s<\/h3>\n\t\t\t\t<p>%3$s<\/p>\n\t\t\t<\/div>\n\t\t\t<div class=\"controls\">\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-tooltip-text=\"Edit this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\"><\/a>\n\t\t\t\t<a class=\"delete_btn ttip\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<\/div>\n\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
+		elContainer.innerHTML = "\n\t\t\t<div>\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\n\t\t\t<\/div>\n\t\t\t<div class=\"desc\">\n\t\t\t\t<h3>%4$s %2$s<\/h3>\n\t\t\t\t<p>%3$s<\/p>\n\t\t\t<\/div>\n\t\t\t<div class=\"controls\">\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-tooltip-text=\"Edit this list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\"><\/a>\n\t\t\t\t<a class=\"delete_btn ttip\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<\/div>\n\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
 			.replace(/%3\$s/, V_EscapeHTML( recommendationInfo.recommendation.blurb ) )
 			.replace(/%4\$s/, strRecommendationIcon );
 
@@ -1053,7 +1053,7 @@ function ReviewsCreate_Load()
 				for( var i=0; i<data.length; i++ )
 				{
 					rgFormattedResults.push({
-						html: '<img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
+						html: '<img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
 						key: data[i].id
 					});
 					rgNameToAppMap[data[i].name] = data[i].id
@@ -1225,7 +1225,7 @@ function ListManage_UpdateSort( elContainer )
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\n\t\t\t\t\t<div><img class=\"curator_grabber_img\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/wishlist\/handle.png\"><\/div>\n\t\t\t\t\t<div>%2$s<\/div>\n\t\t\t\t\t<div>%3$s<\/div>\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\n\t\t\t\t\t<div class=\"action_ctn\">\n\t\t\t\t\t\t<a class=\"view_list_icon ttip\" target=\"_blank\" href=\"..\/list\/%1$s\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_view_section.png\" data-tooltip-text=\"View this list\"><\/a>\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, %2$s ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>";
+	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\n\t\t\t\t\t<div><img class=\"curator_grabber_img\" src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/wishlist\/handle.png\"><\/div>\n\t\t\t\t\t<div>%2$s<\/div>\n\t\t\t\t\t<div>%3$s<\/div>\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\n\t\t\t\t\t<div class=\"action_ctn\">\n\t\t\t\t\t\t<a class=\"view_list_icon ttip\" target=\"_blank\" href=\"..\/list\/%1$s\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_view_section.png\" data-tooltip-text=\"View this list\"><\/a>\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, %2$s ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();

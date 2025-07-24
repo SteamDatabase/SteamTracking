@@ -3127,6 +3127,9 @@ div.game_hover {
 	display: inline-block;
 	max-height: 12px; /* Restrict height to the text around it to not push down content below it */
 }
+.hover_body .review_anomaly_icon {
+	color: #c6d4df;
+}
 
 .review_score_icon.positive {
 	background-image: url( '/public/images/v6/user_reviews_positive.png' );
@@ -6374,6 +6377,10 @@ body.v7menu .v7menu_spacer {
 }
 body.v7menu .v7menu_spacer.cartonly {
 	height: 29px;
+}
+
+html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_spacer {
+	height: 0;
 }
 
 /* 2025 Game Page Widening */

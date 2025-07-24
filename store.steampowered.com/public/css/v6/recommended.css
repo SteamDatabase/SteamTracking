@@ -1612,6 +1612,7 @@ html.touch .similar_grid_item .buttons {
 
 
 body.v6 h2.user_reviews_header {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -1623,12 +1624,51 @@ body.v6 h2.user_reviews_header {
 }
 
 body.v6 h2.user_reviews_header .header_links a {
+	position: relative;
 	text-transform: none;
 	letter-spacing: 0;
 	font-size: 12px;
 	padding: 0;
 	color: white;
 	text-decoration: underline;
+}
+body.v6 h2.user_reviews_header .header_links a:not( :first-child ) {
+	border-left: 1px solid #9fb4c9;
+	padding-left: 8px;
+	margin-left: 8px;
+}
+
+body.v6 h2.user_reviews_header .header_links a.partner_help_link {
+	color: rgb(201, 47, 17);
+}
+
+body.v6 h2.user_reviews_header .header_links .partner_help_note {
+	position: absolute;
+	text-transform: none;
+	top: -32px;
+	right: 8px;
+	background: rgba(138, 51, 33, 1);
+	background: -webkit-linear-gradient(top, rgba(138, 51, 33, 1) 5%, rgba(92, 37, 23, 1) 95%);
+	background: linear-gradient(to bottom, rgba(138, 51, 33, 1) 5%, rgba(92, 37, 23, 1) 95%);
+	color: #d38686;
+	font-size: 12px;
+	padding: 4px 6px;
+	border-radius: 2px;
+}
+
+body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
+	top: 100%;
+	right: 20px;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: rgba(92, 37, 23, 1);
+	border-width: 10px;
+	margin-left: -10px;
 }
 
 .user_reviews_sub_header {
@@ -2692,17 +2732,18 @@ body.recommendgame #review_create h2  {
 
 /* review events */
 
-.review_recent_events {
-	box-shadow: 0 0 5px #000;
+#review_recent_events_container.review_recent_events {
 	display: none;
-	position: relative;
-
-	padding: 10px 15px;
-	margin-bottom: 3px;
-	background-color: #2a475e;
 }
-.review_recent_events.has_events, .review_recent_events.can_edit_app {
-	display: block;
+
+.review_recent_events.has_events {
+	display: flex;
+}
+
+.partner_help_button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 .review_recent_events.csgo {
 	display: block;
@@ -2716,7 +2757,9 @@ body.recommendgame #review_create h2  {
 	color: #fff;
 	float: left;
     cursor: default;
-    line-height: 73px;
+	line-height: 62px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .review_anomalous_events_dialog .review_anomalous_events_icon
@@ -2729,11 +2772,10 @@ body.recommendgame #review_create h2  {
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-left: 51px;
-	color: #d3dade;
-    font-size: 15px;
-    line-height: 17px;
+			margin-left: 10px;
+	flex: 1;
 }
+
 .review_recent_events.csgo .review_anomalous_events_title
 {
 	margin-left: 0px;
@@ -3307,6 +3349,10 @@ body.v6 h2.morelike_section_divider
 	max-width: 800px;
 }
 
+.review_language_outliers_dialog p a {
+	text-decoration: underline;
+}
+
 .review_language_outliers_groups
 {
 	margin-top: 30px;
@@ -3319,25 +3365,30 @@ body.v6 h2.morelike_section_divider
 	flex-direction: row;
 	background-color: #474C57;
 	padding: 10px;
+	font-size: 13px;
 	margin-bottom: 30px;
+	border-radius: 4px;
 }
-.review_language_outliers_group_languages:hover {
-	background-color: #5E6572;
-}
+
 .review_language_outliers_group_category {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	text-transform: capitalize;
 	margin-bottom: 5px;
 	font-size: 20px;
 }
 .review_language_outliers_group_category_desc {
 	margin-bottom: 5px;
+	font-size: 13px;
+	color: #acb2b8;
 }
 .review_language_outliers_your_language_group {
 	display: inline-block;
 	text-transform: unset;
 	color: #474C57;
 	background-color: #E4E6E9;
-	margin-left: 20px;
+	margin-left: 12px;
 	padding: 0px 6px;
 	border-radius: 3px;
 	font-size: 12px;
@@ -3346,11 +3397,26 @@ body.v6 h2.morelike_section_divider
 	flex: 1;
 	flex-wrap: wrap;
 	display: flex;
+	margin-right: 30px;
+	color: #acb2b8;
+	gap: 4px;
+}
+.review_language_outliers_group_languages > .languages span {
+	background: rgba(255,255,255,0.1);
+	border-radius: 2px;
+	padding: 2px 6px;
+	cursor: default;
+	white-space: nowrap;
+}
+.review_language_outliers_group_languages > .languages span:hover {
+	background: rgba(255,255,255,0.25);
 }
 .review_language_outliers_group_languages > .score {
+	color: #acb2b8;
 }
 
-.review_language_outliers {
+.review_language_outliers,
+.review_recent_events {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -3380,7 +3446,7 @@ body.v6 h2.morelike_section_divider
 }
 .review_language_outliers.vo {
 	border: 2px solid #ff6f6f;
-	display: block;
+	display: none;
 }
 .review_language_outliers .explanation {
 	margin-left: 10px;
