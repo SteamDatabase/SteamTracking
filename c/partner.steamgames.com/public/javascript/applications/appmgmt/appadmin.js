@@ -2718,8 +2718,9 @@
               cancelToken: _,
             });
           } catch (_) {
-            (0, _._)(_);
-            _ = _.response;
+            const _ = (0, _._)(_);
+            console.log("CCommunityItemAssetUploader.UploadFile failed", _, _),
+              (_ = _.response);
           }
           return {
             bSuccess: !0,

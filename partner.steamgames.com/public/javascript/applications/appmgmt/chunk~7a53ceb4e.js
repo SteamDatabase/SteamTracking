@@ -55,7 +55,10 @@
           reject: t,
         };
       }
-      i.d(t, { x: () => s });
+      function n(e) {
+        return new Promise((t) => setTimeout(t, e));
+      }
+      i.d(t, { x0: () => s, yI: () => n });
     },
     73744: (e, t, i) => {
       "use strict";
@@ -349,11 +352,14 @@
     },
     78511: (e, t, i) => {
       "use strict";
-      i.d(t, { q: () => r });
+      i.d(t, { o: () => r, q: () => a });
       var s = i(34629),
         n = i(14947),
         o = i(82705);
-      class r {
+      function r(e) {
+        return "waiting" == e || "uploading" == e || "processing" == e;
+      }
+      class a {
         m_originalSize = { width: 0, height: 0 };
         m_originalDataUrl = "";
         dataUrl = void 0;
@@ -387,12 +393,12 @@
         }
         GetImageOptionLabel() {}
       }
-      (0, s.Cg)([n.sH], r.prototype, "dataUrl", void 0),
-        (0, s.Cg)([n.sH], r.prototype, "width", void 0),
-        (0, s.Cg)([n.sH], r.prototype, "height", void 0),
-        (0, s.Cg)([n.sH], r.prototype, "status", void 0),
-        (0, s.Cg)([n.sH], r.prototype, "message", void 0),
-        (0, s.Cg)([n.sH], r.prototype, "language", void 0);
+      (0, s.Cg)([n.sH], a.prototype, "dataUrl", void 0),
+        (0, s.Cg)([n.sH], a.prototype, "width", void 0),
+        (0, s.Cg)([n.sH], a.prototype, "height", void 0),
+        (0, s.Cg)([n.sH], a.prototype, "status", void 0),
+        (0, s.Cg)([n.sH], a.prototype, "message", void 0),
+        (0, s.Cg)([n.sH], a.prototype, "language", void 0);
     },
     64953: (e, t, i) => {
       "use strict";
@@ -600,7 +606,7 @@
         a = i.n(r);
       class c {}
       class l extends c {
-        m_allCancelTokens = new Array();
+        m_cancelToken = void 0;
         async UploadAllImages(e, t) {
           const i = this.GetUploadImages(),
             s = this.BGetUploadsAreInSerial(),
@@ -608,35 +614,55 @@
               const s = i.IsValidAssetType(e, t);
               return "pending" === i.status && !s.error && !s.needsCrop;
             });
-          for (const e of n) e.status = "uploading";
-          const o = [];
-          for (const e of n) {
-            const t = a().CancelToken.source();
-            this.m_allCancelTokens.push(t);
-            const i = this.UploadSingleImage(
+          for (const e of n) e.status = "waiting";
+          const o = [],
+            r = a().CancelToken.source();
+          this.m_cancelToken = r;
+          const c = async (e) => {
+            e.status = "uploading";
+            const t = await this.UploadSingleImage(
               e,
               e.filename,
               e.language ?? -1,
-              t.token,
+              r.token,
             );
-            o.push({ image: e, promise: i }), s && (await i);
+            return (
+              (e.status = t.bSuccess ? "success" : "failed"),
+              (e.message =
+                !t.bSuccess && t.elErrorMessage ? t.elErrorMessage : ""),
+              t
+            );
+          };
+          if (s)
+            for (const e of n) {
+              const t = await c(e);
+              o.push({ image: e, uploadResult: t });
+            }
+          else {
+            let e = 0;
+            const t = async () => {
+                for (; e < n.length; ) {
+                  const t = e++,
+                    i = n[t],
+                    s = await c(i);
+                  o[t] = { image: i, uploadResult: s };
+                }
+              },
+              i = 4,
+              s = Array.from({ length: i }, () => t());
+            await Promise.all(s);
           }
-          s || (await Promise.all(o.map((e) => e.promise)));
-          const r = [];
-          for (const e of o) {
-            const t = await e.promise,
-              i = e.image;
-            r.push({ bSuccess: t.bSuccess, image: i, uploadResult: t.result }),
-              t.bSuccess
-                ? (i.status = "success")
-                : ((i.status = "failed"), (i.message = t.elErrorMessage ?? ""));
-          }
-          return r;
+          const l = [];
+          for (const e of o)
+            l.push({
+              bSuccess: e.uploadResult.bSuccess,
+              image: e.image,
+              uploadResult: e.uploadResult.result,
+            });
+          return l;
         }
         CancelAllUploads() {
-          for (let e of this.m_allCancelTokens)
-            e.cancel((0, o.we)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
+          this.m_cancelToken?.cancel((0, o.we)("#ImageUpload_CancelRequest"));
         }
       }
       function h(e, t, i) {
@@ -737,8 +763,8 @@
             include_full_description: L,
             include_included_items: T,
             include_assets_without_overrides: I,
-            apply_user_filters: C,
-            include_links: D,
+            apply_user_filters: D,
+            include_links: R,
           } = i;
         if (
           ((0, o.useEffect)(() => {
@@ -757,8 +783,8 @@
               include_full_description: L,
               include_included_items: T,
               include_assets_without_overrides: I,
-              apply_user_filters: C,
-              include_links: D,
+              apply_user_filters: D,
+              include_links: R,
             };
             let o = null;
             return (
@@ -775,7 +801,7 @@
                   })),
               () => o?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, p, d, u, m, _, w, f, P, b, k, y, v, L, T, I, C, D, h]),
+          }, [e, t, s, p, d, u, m, _, w, f, P, b, k, y, v, L, T, I, D, R, h]),
           !e)
         )
           return [null, 2];
@@ -967,7 +993,7 @@
         }
       }
       function a(e) {
-        const t = (0, s.x)(),
+        const t = (0, s.x0)(),
           i = new Image();
         return (
           (i.onload = () => t.resolve(i)),
@@ -980,7 +1006,7 @@
         );
       }
       function c(e) {
-        const t = (0, s.x)(),
+        const t = (0, s.x0)(),
           i = document.createElement("video");
         return (
           (i.preload = "metadata"),
@@ -1005,7 +1031,7 @@
       async function g(e, t) {
         if (t) return c(URL.createObjectURL(e));
         {
-          const t = (0, s.x)(),
+          const t = (0, s.x0)(),
             i = new FileReader();
           (i.onload = () => t.resolve(i.result ?? void 0)),
             (i.onerror = () => {

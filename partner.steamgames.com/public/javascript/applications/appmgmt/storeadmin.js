@@ -1852,7 +1852,7 @@
     },
     56560: (e, t, n) => {
       "use strict";
-      n.d(t, { L: () => A });
+      n.d(t, { L: () => y });
       var a = n(90626),
         r = n(22837),
         o = n(14947),
@@ -1862,8 +1862,9 @@
         c = n(61859),
         u = n(81393),
         d = n(62490),
-        m = n(82817);
-      class p extends i.Vr {
+        m = n(82817),
+        p = n(78511);
+      class _ extends i.Vr {
         m_filesToUpload = o.sH.array();
         m_fnCreateUploadImage;
         m_onlyAssetGroup = void 0;
@@ -1922,7 +1923,7 @@
             }),
             t = [];
           for (const n of this.m_filesToUpload.filter(
-            (e) => "pending" == e.status || "uploading" == e.status,
+            (e) => "pending" == e.status || (0, p.o)(e.status),
           ))
             if (this.m_onlyAssetGroup)
               t.push(
@@ -2010,21 +2011,20 @@
           );
         }
       }
-      (0, l.Cg)([o.sH], p.prototype, "m_filesToUpload", void 0),
-        (0, l.Cg)([o.sH], p.prototype, "m_onlyAssetGroup", void 0),
-        (0, l.Cg)([o.sH], p.prototype, "m_rgExistingAssetGroups", void 0),
-        (0, l.Cg)([o.sH], p.prototype, "m_rgImageSizes", void 0),
-        (0, l.Cg)([s.o], p.prototype, "GetUploadImages", null),
-        (0, l.Cg)([s.o], p.prototype, "ClearImages", null),
-        (0, l.Cg)([s.o], p.prototype, "DeleteUploadImage", null),
-        (0, l.Cg)([o.XI], p.prototype, "SetExistingAssetGroups", null),
-        (0, l.Cg)([o.XI], p.prototype, "SetOnlyAssetGroup", null),
-        (0, l.Cg)([s.o], p.prototype, "AddImageForLanguage", null);
-      var _ = n(78327),
-        g = n(73744),
-        E = n(78511),
+      (0, l.Cg)([o.sH], _.prototype, "m_filesToUpload", void 0),
+        (0, l.Cg)([o.sH], _.prototype, "m_onlyAssetGroup", void 0),
+        (0, l.Cg)([o.sH], _.prototype, "m_rgExistingAssetGroups", void 0),
+        (0, l.Cg)([o.sH], _.prototype, "m_rgImageSizes", void 0),
+        (0, l.Cg)([s.o], _.prototype, "GetUploadImages", null),
+        (0, l.Cg)([s.o], _.prototype, "ClearImages", null),
+        (0, l.Cg)([s.o], _.prototype, "DeleteUploadImage", null),
+        (0, l.Cg)([o.XI], _.prototype, "SetExistingAssetGroups", null),
+        (0, l.Cg)([o.XI], _.prototype, "SetOnlyAssetGroup", null),
+        (0, l.Cg)([s.o], _.prototype, "AddImageForLanguage", null);
+      var g = n(78327),
+        E = n(73744),
         C = n(26408);
-      class h extends E.q {
+      class h extends p.q {
         m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
@@ -2088,7 +2088,7 @@
           return !0;
         }
         BIsVideo() {
-          return g.Ho.includes(this.fileType);
+          return E.Ho.includes(this.fileType);
         }
         BSupportsLanguages() {
           return !0;
@@ -2162,8 +2162,9 @@
         (0, l.Cg)([o.XI], h.prototype, "SetCurrentImageOption", null);
       var S = n(41735),
         f = n.n(S),
-        b = n(29655);
-      class k extends p {
+        b = n(29655),
+        k = n(3577);
+      class A extends _ {
         m_strBeginUploadUrl;
         m_strCompleteUploadUrl;
         constructor(e, t, n) {
@@ -2205,16 +2206,16 @@
           let l;
           {
             const t = new FormData();
-            t.append("sessionid", _.TS.SESSIONID),
+            t.append("sessionid", g.TS.SESSIONID),
               t.append("asset_type", "extra_asset_v2"),
               t.append("file", e.file);
             try {
-              const e = await f().post(this.m_strBeginUploadUrl, t, {
+              const n = await f().post(this.m_strBeginUploadUrl, t, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
                 cancelToken: a,
               });
-              if (!(200 == e.status && e.data.request_id > 0))
+              if (!(200 == n.status && n.data.request_id > 0))
                 return (
                   console.warn(
                     "CExtraAssetsImageUploader.UploadSingleImage failed",
@@ -2222,7 +2223,7 @@
                   ),
                   { bSuccess: !1, elErrorMessage: null, result: null }
                 );
-              l = e.data.request_id;
+              (l = n.data.request_id), (e.status = "processing");
             } catch (e) {
               const t = this.GetErrorsFromErrorResponse(e);
               return (
@@ -2239,7 +2240,7 @@
           for (; Date.now() - s < 3e5; ) {
             const e = new FormData();
             let t;
-            e.append("sessionid", _.TS.SESSIONID),
+            e.append("sessionid", g.TS.SESSIONID),
               e.append("request_id", l.toString()),
               e.append("name", o),
               e.append("asset_type", "extra_asset_v2"),
@@ -2275,6 +2276,7 @@
                 elErrorMessage: null,
                 result: t.rgExtraAssets,
               };
+            await (0, k.yI)(Math.floor(1e3 * Math.random()));
           }
           return {
             bSuccess: !1,
@@ -2282,11 +2284,11 @@
           };
         }
       }
-      function A() {
+      function y() {
         const { bExtraAssetsV2Videos: e } = (0, b.vh)(),
           t = (0, b.Z3)("ajaxbeginuploadassetasync"),
           n = (0, b.Z3)("ajaxtrytocompleteuploadasset");
-        return a.useMemo(() => new k(t, n, e), [t, n, e]);
+        return a.useMemo(() => new A(t, n, e), [t, n, e]);
       }
     },
     87706: (e, t, n) => {

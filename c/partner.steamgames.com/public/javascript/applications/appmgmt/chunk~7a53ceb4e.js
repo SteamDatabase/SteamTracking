@@ -53,7 +53,11 @@
           reject: _,
         };
       }
+      function _(_) {
+        return new Promise((_) => setTimeout(_, _));
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
     },
@@ -419,10 +423,14 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "waiting" == _ || "uploading" == _ || "processing" == _;
+      }
       class _ {
         m_originalSize = {
           width: 0,
@@ -700,7 +708,7 @@
         _ = __webpack_require__._(_);
       class _ {}
       class _ extends _ {
-        m_allCancelTokens = new Array();
+        m_cancelToken = void 0;
         async UploadAllImages(_, _) {
           const _ = this.GetUploadImages(),
             _ = this.BGetUploadsAreInSerial(),
@@ -708,43 +716,66 @@
               const _ = __webpack_require__.IsValidAssetType(_, _);
               return "pending" === _.status && !_.error && !_.needsCrop;
             });
-          for (const _ of _) _.status = "uploading";
-          const _ = [];
-          for (const _ of _) {
-            const _ = _().CancelToken.source();
-            this.m_allCancelTokens.push(_);
-            const _ = this.UploadSingleImage(
+          for (const _ of _) _.status = "waiting";
+          const _ = [],
+            _ = _().CancelToken.source();
+          this.m_cancelToken = _;
+          const _ = async (_) => {
+            _.status = "uploading";
+            const _ = await this.UploadSingleImage(
               _,
               _.filename,
               _.language ?? -1,
               _.token,
             );
-            _.push({
-              image: _,
-              promise: _,
-            }),
-              _ && (await _);
+            return (
+              (_.status = _.bSuccess ? "success" : "failed"),
+              (_.message =
+                !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
+              _
+            );
+          };
+          if (_)
+            for (const _ of _) {
+              const _ = await _(_);
+              _.push({
+                image: _,
+                uploadResult: _,
+              });
+            }
+          else {
+            let _ = 0;
+            const _ = async () => {
+                for (; _ < _.length; ) {
+                  const _ = _++,
+                    _ = _[_],
+                    _ = await _(_);
+                  _[_] = {
+                    image: _,
+                    uploadResult: _,
+                  };
+                }
+              },
+              _ = 4,
+              _ = Array.from(
+                {
+                  length: _,
+                },
+                () => _(),
+              );
+            await Promise.all(_);
           }
-          _ || (await Promise.all(_.map((_) => _.promise)));
           const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise,
-              _ = _.image;
+          for (const _ of _)
             _.push({
-              bSuccess: _.bSuccess,
-              image: _,
-              uploadResult: _.result,
-            }),
-              _.bSuccess
-                ? (_.status = "success")
-                : ((_.status = "failed"), (_.message = _.elErrorMessage ?? ""));
-          }
+              bSuccess: _.uploadResult.bSuccess,
+              image: _.image,
+              uploadResult: _.uploadResult.result,
+            });
           return _;
         }
         CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
-            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
+          this.m_cancelToken?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
       }
       function _(_, _, _) {

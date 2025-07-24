@@ -6734,7 +6734,7 @@
           return await this.AsyncGetImageResolutionInternal(s, r, n);
         },
         async AsyncGetImageResolutionInternal(e, t, a) {
-          const r = (0, _.x)();
+          const r = (0, _.x0)();
           let n = new Image();
           (n.crossOrigin = "anonymous"),
             (n.onerror = (t) => {

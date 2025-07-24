@@ -2054,6 +2054,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_filesToUpload = _._.array();
@@ -2117,7 +2118,7 @@
             }),
             _ = [];
           for (const _ of this.m_filesToUpload.filter(
-            (_) => "pending" == _.status || "uploading" == _.status,
+            (_) => "pending" == _.status || (0, _._)(_.status),
           ))
             if (this.m_onlyAssetGroup)
               _.push(
@@ -2208,7 +2209,6 @@
         (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
@@ -2349,6 +2349,7 @@
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _ {
         m_strBeginUploadUrl;
@@ -2415,7 +2416,7 @@
                     result: null,
                   }
                 );
-              _ = _.data.request_id;
+              (_ = _.data.request_id), (_.status = "processing");
             } catch (_) {
               const _ = this.GetErrorsFromErrorResponse(_);
               return (
@@ -2480,6 +2481,7 @@
                 elErrorMessage: null,
                 result: _.rgExtraAssets,
               };
+            await (0, _._)(Math.floor(1e3 * Math.random()));
           }
           return {
             bSuccess: !1,

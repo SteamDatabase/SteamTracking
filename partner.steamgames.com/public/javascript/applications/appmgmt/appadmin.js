@@ -2304,8 +2304,9 @@
               cancelToken: n,
             });
           } catch (e) {
-            (0, Ue.H)(e);
-            i = e.response;
+            const t = (0, Ue.H)(e);
+            console.log("CCommunityItemAssetUploader.UploadFile failed", t, e),
+              (i = e.response);
           }
           return { bSuccess: !0, result: i?.data };
         }
