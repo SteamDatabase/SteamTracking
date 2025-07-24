@@ -15697,7 +15697,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42 WT
+;MO420WT
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -31507,7 +31507,7 @@ Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamConsoleMode
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -37250,8 +37250,8 @@ V_SplitNumbers
 V_SplitNumbersUint
 V_SplitStringInternal
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
-V_StrSubst
 V_StrSubstInPlace
+V_StrSubstN
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
@@ -42703,6 +42703,7 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c@-gI
 cACertificate
 cARD
 cActualReplacements == cReplacements
@@ -58136,7 +58137,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 22 2025 23:29:40
+steam Jul 24 2025 00:34:39
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

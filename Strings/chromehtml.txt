@@ -3138,7 +3138,7 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS3
 Plat_MSTime
 Plat_OutputDebugString

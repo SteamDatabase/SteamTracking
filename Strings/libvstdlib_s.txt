@@ -1177,8 +1177,8 @@ V_StrReplaceChar
 V_StrRight
 V_StrSkipArticles
 V_StrSlice
-V_StrSubst
 V_StrSubstInPlace
+V_StrSubstN
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripAndPreserveHTML
@@ -1408,7 +1408,6 @@ YOKOHAMA
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 ZONE
 Zjz\v
-Zq\w\
 [abi:
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nYg:a

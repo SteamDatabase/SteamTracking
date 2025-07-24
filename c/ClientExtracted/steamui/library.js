@@ -12577,9 +12577,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 22 2025 : 16:28:26",
-                BUILD_TIME_UTC: "Jul 22 2025 : 23:28:26",
-                BUILD_RTIME_UTC: 1753226906,
+                BUILD_TIME_LOCAL: "Jul 23 2025 : 17:35:40",
+                BUILD_TIME_UTC: "Jul 24 2025 : 00:35:40",
+                BUILD_RTIME_UTC: 1753317340,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -15613,7 +15613,6 @@ var CLSTAMP = "steamdb";
               _ = 0,
               _ = _.innerWidth,
               _ = _.innerHeight,
-              _ = 1,
               _ = _?.getBoundingClientRect();
             if (_)
               if (
@@ -15624,8 +15623,7 @@ var CLSTAMP = "steamdb";
                 _ && (_ = _._(_, _)),
                 _.targetMonitor)
               )
-                (_ = _.targetMonitor.flMonitorScale),
-                  (_ = _.targetMonitor.nScreenLeft),
+                (_ = _.targetMonitor.nScreenLeft),
                   (_ = _.targetMonitor.nScreenTop),
                   (_ = _.targetMonitor.nScreenWidth),
                   (_ = _.targetMonitor.nScreenHeight);
@@ -15641,11 +15639,7 @@ var CLSTAMP = "steamdb";
                   (_ = _.availHeight);
               }
             (_.bOverlapHorizontal || _.bOverlapVertical) && (_ = _ = void 0);
-            let _ = __webpack_require__.getBoundingClientRect();
-            if (_.flGamepadScale && _.flGamepadScale > 0) {
-              const _ = _.flGamepadScale;
-              _ = new DOMRect(_._ * _, _._ * _, _.width * _, _.height * _);
-            }
+            const _ = __webpack_require__.getBoundingClientRect();
             let _ = {
                 menuLeft: void 0,
                 menuRight: void 0,
@@ -15742,21 +15736,19 @@ var CLSTAMP = "steamdb";
             const _ = this.props.popup?.window,
               _ = this.props.options;
             if (_.bScreenCoordinates) {
-              let _ = this.parentWin?.devicePixelRatio;
-              if (_.targetMonitor) {
-                let _ = _.flGamepadScale || 1;
-                _ = (_.targetMonitor.flMonitorScale ?? 1) / _;
-              }
+              const _ =
+                _.targetMonitor?.flScaleToTargetMonitor ??
+                this.parentWin?.devicePixelRatio;
               return (
                 _?.SteamClient.Window.MoveTo(
                   this.state.menuLeft,
                   this.state.menuTop,
-                  _,
+                  _ ?? !0,
                 ),
                 void _?.SteamClient.Window.ResizeTo(
                   this.state.menuWidth,
                   this.state.menuHeight,
-                  _,
+                  _ ?? !0,
                 )
               );
             }
@@ -15782,40 +15774,27 @@ var CLSTAMP = "steamdb";
             let _ = {
               visibility: this.state.ready ? "visible" : "hidden",
             };
-            if (
-              this.props.options.flGamepadScale &&
-              this.props.options.flGamepadScale > 0
-            )
-              _.zoom = this.props.options.flGamepadScale;
-            else if (
-              this.props.options.bScreenCoordinates &&
-              this.props.options.targetMonitor &&
-              this.m_elMenu?.ownerDocument?.defaultView
-            ) {
-              const _ =
-                this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-              1 != _ &&
-                (_.zoom =
-                  (this.props.options.targetMonitor.flMonitorScale ?? 1) / _);
-            }
-            this.props.popup
-              ? (this.PositionPopupWindow(),
-                void 0 !== this.state.menuMinWidth &&
-                  (_.minWidth = Math.floor(this.state.menuMinWidth)))
-              : (void 0 !== this.state.menuTop
-                  ? (_.top = this.state.menuTop)
-                  : void 0 !== this.state.menuBottom &&
-                    (_.bottom = this.state.menuBottom),
-                void 0 !== this.state.menuLeft
-                  ? (_.left = this.state.menuLeft)
-                  : void 0 !== this.state.menuRight &&
-                    (_.right = this.state.menuRight),
-                void 0 !== this.state.menuHeight &&
-                  (_.height = this.state.menuHeight),
-                void 0 !== this.state.menuWidth &&
-                  (_.width = this.state.menuWidth),
-                void 0 !== this.state.menuMinWidth &&
-                  (_.minWidth = this.state.menuMinWidth));
+            this.props.options.flElementZoom &&
+              this.props.options.flElementZoom > 0 &&
+              (_.zoom = this.props.options.flElementZoom),
+              this.props.popup
+                ? (this.PositionPopupWindow(),
+                  void 0 !== this.state.menuMinWidth &&
+                    (_.minWidth = Math.floor(this.state.menuMinWidth)))
+                : (void 0 !== this.state.menuTop
+                    ? (_.top = this.state.menuTop)
+                    : void 0 !== this.state.menuBottom &&
+                      (_.bottom = this.state.menuBottom),
+                  void 0 !== this.state.menuLeft
+                    ? (_.left = this.state.menuLeft)
+                    : void 0 !== this.state.menuRight &&
+                      (_.right = this.state.menuRight),
+                  void 0 !== this.state.menuHeight &&
+                    (_.height = this.state.menuHeight),
+                  void 0 !== this.state.menuWidth &&
+                    (_.width = this.state.menuWidth),
+                  void 0 !== this.state.menuMinWidth &&
+                    (_.minWidth = this.state.menuMinWidth));
             let _ = this.props.options.strClassName || _().contextMenu;
             return (
               (this.props.options.bCreateHidden ||
@@ -26898,9 +26877,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 22 2025 : 16:28:26",
-                    BUILD_TIME_UTC: "Jul 22 2025 : 23:28:26",
-                    BUILD_RTIME_UTC: 1753226906,
+                    BUILD_TIME_LOCAL: "Jul 23 2025 : 17:35:40",
+                    BUILD_TIME_UTC: "Jul 24 2025 : 00:35:40",
+                    BUILD_RTIME_UTC: 1753317340,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27648,7 +27627,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "05855e26ebca39204101",
+        9858: "0cc8de2b535676fc7f04",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[_]),

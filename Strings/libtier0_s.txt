@@ -94,10 +94,10 @@ $ORIGIN
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
+00:34:29
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:26:52
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -295,7 +295,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jul 22 2025
+Jul 24 2025
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -361,7 +361,7 @@ Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamConsoleMode
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -937,7 +937,6 @@ new
 new[]
 non-transaction clone for 
 non-virtual thunk to 
-nuG 
 open
 open64
 opendir

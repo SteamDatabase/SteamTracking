@@ -12326,6 +12326,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9Hh_}
 9IGv
 9Inventory
 9PE,$
@@ -21647,7 +21648,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 22 2025 23:29:03
+Jul 24 2025 00:34:41
 July
 JumpList
 Jumplist
@@ -25552,7 +25553,7 @@ Plat_IsGamescope
 Plat_IsGamescope()
 Plat_IsInDebugSession
 Plat_IsSteamConsoleMode
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -31949,7 +31950,7 @@ Zulu
 \n\tStatsInfo
 \n\tTwoFactor
 \n\tVideoClip
-\n\t\t{\n\t\t\t"position": { "x": %d, "y": %d },\n\t\t\t"monitorLeft": %d,\n\t\t\t"monitorRight": %d,\n\t\t\t"monitorTop": %d,\n\t\t\t"monitorBottom": %d,\n\t\t\t"monitorScale": %f,\n\t\t\t"gamepadScale": %f\n\t\t}\n\t
+\n\t\t{\n\t\t\t"position": { "x": %d, "y": %d },\n\t\t\t"monitorLeft": %d,\n\t\t\t"monitorTop": %d,\n\t\t\t"monitorRight": %d,\n\t\t\t"monitorBottom": %d,\n\t\t\t"scaleToMonitor": %f,\n\t\t\t"elementZoom": %f\n\t\t}\n\t
 \n\taccountid
 \n\tadminonly
 \n\tapp_state
@@ -38963,6 +38964,7 @@ image-width-only
 image/gif
 image/jpeg
 image/png
+image2x
 imageAlignment
 imageSelected
 image_path
@@ -48073,6 +48075,7 @@ strGameID
 strGameName
 strHeaderFilename
 strHeaderImage
+strHeaderImage_2x
 strHeroBlurImage
 strHeroImage
 strHomepageURL

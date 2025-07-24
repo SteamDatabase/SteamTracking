@@ -2344,7 +2344,7 @@ Plat_CommandLineParamValue
 Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
-Plat_IsSteamDeck
+Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsWSL
