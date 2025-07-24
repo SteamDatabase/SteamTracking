@@ -440,7 +440,17 @@ button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9
   border: none;
   background: transparent;
   aspect-ratio: 1;
+  padding: 0;
   cursor: pointer;
+}
+._1YhdoyGYkUB4JuW0yFSbS7:hover svg {
+  color: #fff;
+  transform: scale(1);
+}
+._1YhdoyGYkUB4JuW0yFSbS7 svg {
+  color: #ffffff33;
+  transform: scale(0.8);
+  transition: transform .2s ease-out;
 }
 ._2tlUAG6WNyYFlk9caIiLj5 {
   color: #fff;
@@ -448,7 +458,7 @@ button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9
   min-width: 0;
   background-color: unset;
   padding: 0 10px;
-  border-radius: 2px;
+  border-radius: 2px 0px 0px 2px;
   border: 1px solid #ffffff24;
 }
 ._2tlUAG6WNyYFlk9caIiLj5:hover {
@@ -471,10 +481,12 @@ button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9
   background: #242931;
 }
 ._1Yo-ZsBr-KbVMyAMXEYszd {
-  border-radius: 1px;
+  border-radius: 0px 1px 1px 0px;
   background: #1a9fff;
   width: 34px;
-  justify-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -488,13 +500,9 @@ button._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9
   transform: scale(1);
   transition: transform .2s ease-out;
 }
-html.client ._1Yo-ZsBr-KbVMyAMXEYszd svg {
-  display: unset;
-  margin-top: 4px;
-}
 ._1Yo-ZsBr-KbVMyAMXEYszd:hover {
   background: #45acff;
-  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 ._1Yo-ZsBr-KbVMyAMXEYszd:hover svg {
   transform: scale(1.2);
@@ -1458,6 +1466,8 @@ div._21F52O1eUPKz37HniCe3kj > div {
   overflow: hidden;
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 ._3CCxBBbZTQS6eTjcQD5W-D
   ._23ZVj5bpOrPKV-d5CWG7lu:hover
@@ -1471,15 +1481,10 @@ div._21F52O1eUPKz37HniCe3kj > div {
   background: linear-gradient(90deg, #44a5dd 28.48%, #4275d3 93.87%);
 }
 ._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu ._2YW7iSUhkhAU2OZIFBgSbN {
-  position: absolute;
   display: block;
   height: 110px;
-  top: 0;
-  left: 0;
-  right: 0;
   max-width: 100%;
   object-fit: cover;
-  justify-self: center;
 }
 ._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu ._2Cc-FLjIFWZwBaGz0TSrW8 {
   position: absolute;
@@ -1505,10 +1510,10 @@ div._21F52O1eUPKz37HniCe3kj > div {
   text-transform: uppercase;
 }
 ._221NQfJgfl3Z4c4ZQ1Ojwd {
-  background: #f0f;
+  min-width: 20%;
 }
 ._3BIVruKhtKrpeYQkzZjahy {
-  background: aqua;
+  min-width: 20%;
 }
 ._2ULEyYgHBHtbdS-UzA2CMo {
   flex: 1;

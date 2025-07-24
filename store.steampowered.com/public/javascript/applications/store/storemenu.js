@@ -1099,7 +1099,7 @@
     },
     79689: (e, t, n) => {
       "use strict";
-      n.d(t, { I: () => J, B: () => ee });
+      n.d(t, { I: () => Y, B: () => X });
       var r = n(8527),
         a = n(40458),
         i = n(90626),
@@ -1496,9 +1496,7 @@
                               ? (r = "apps")
                               : l > 0 && (r = "categories")
                             : "apps" == e &&
-                              (l > 0
-                                ? (r = "categories")
-                                : c > 0 && (r = "apps")),
+                              (r = l > 0 ? "categories" : "advancedsearch"),
                         (n = 0)),
                       {
                         activeSection: r,
@@ -1520,7 +1518,7 @@
                         }
                       : e,
                   ),
-                  !0
+                  "categories" == a.activeSection
                 );
               case "ArrowRight":
                 return (
@@ -1533,7 +1531,7 @@
                         }
                       : e,
                   ),
-                  !0
+                  "categories" == a.activeSection
                 );
               case "Enter": {
                 const {
@@ -1715,18 +1713,17 @@
           (0, s.g)("#Menu_SearchBar_NoMatches"),
         );
       }
-      var Y = n(12155);
-      const J = i.memo(function () {
+      const Y = i.memo(function () {
         const { bBackdropActive: e } = (0, H.Hi)(),
           t = (0, H.dn)();
         return i.createElement(
           "div",
           { className: a.SearchBar },
-          !t && i.createElement(ee, { bBackdropActive: e }),
-          i.createElement(te, null),
+          !t && i.createElement(X, { bBackdropActive: e }),
+          i.createElement(ee, null),
         );
       });
-      function X(e) {
+      function J(e) {
         return i.useCallback(
           (t) => {
             c.id(t.currentTarget, t.relatedTarget) ||
@@ -1741,7 +1738,7 @@
           [e],
         );
       }
-      const ee = i.memo(function (e) {
+      const X = i.memo(function (e) {
         const { bBackdropActive: t, autoFocus: n } = e,
           {
             term: o,
@@ -1753,7 +1750,7 @@
             openSearch: g,
             closeSearch: _,
           } = (0, H.kM)(),
-          f = X(_),
+          f = J(_),
           h = i.useCallback(() => {
             m(), g();
           }, [m, g]),
@@ -1812,17 +1809,17 @@
                   onClick: E,
                   "aria-label": (0, s.g)("#Menu_ClearSearchTerm"),
                 },
-                i.createElement(Y.X, null),
+                i.createElement(ne, null),
               ),
           ),
           i.createElement(
             "button",
             { className: a.SearchIcon, type: "submit", onClick: _ },
-            i.createElement(ne, { "aria-label": (0, s.g)("#Menu_Search") }),
+            i.createElement(te, { "aria-label": (0, s.g)("#Menu_Search") }),
           ),
         );
       });
-      function te() {
+      function ee() {
         const {
             term: e,
             setInputKeyDown: t,
@@ -1836,7 +1833,7 @@
           m = u && u < 480 ? 3 : 4,
           d = !(u && u < 450),
           { onKeyDown: g, ..._ } = V(e, r, m, d),
-          f = X(l),
+          f = J(l),
           h = i.useCallback(
             (e) => {
               s && g(e)
@@ -1869,21 +1866,36 @@
           )
         );
       }
-      const ne = i.memo(function (e) {
-        return i.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 18 18",
-            fill: "none",
-            ...e,
-          },
-          i.createElement("path", {
-            fill: "currentColor",
-            d: "M13.8296 12.0786C14.8347 10.6321 15.2623 8.86133 15.0284 7.11496C14.7945 5.36859 13.9159 3.77313 12.5656 2.64269C11.2153 1.51224 9.49114 0.928708 7.73254 1.00696C5.97394 1.08522 4.30831 1.8196 3.06357 3.06552C1.81882 4.31144 1.08514 5.97864 1.00696 7.7389C0.928776 9.49916 1.51176 11.2249 2.64114 12.5765C3.77052 13.9281 5.36446 14.8075 7.10919 15.0417C8.85391 15.2758 10.623 14.8477 12.0682 13.8417L15.2185 17L15.3997 16.8187L16.8188 15.3982L17 15.2168L13.8296 12.0786ZM8.04222 12.5824C7.14643 12.5824 6.27075 12.3165 5.52593 11.8183C4.7811 11.3202 4.20058 10.6122 3.85777 9.78376C3.51497 8.95538 3.42528 8.04384 3.60004 7.16443C3.7748 6.28502 4.20616 5.47723 4.83958 4.84321C5.47301 4.20919 6.28004 3.77742 7.15862 3.60249C8.0372 3.42757 8.94787 3.51734 9.77548 3.86047C10.6031 4.2036 11.3104 4.78467 11.8081 5.5302C12.3058 6.27573 12.5714 7.15223 12.5714 8.04887C12.5714 9.25123 12.0943 10.4043 11.2449 11.2545C10.3955 12.1047 9.24344 12.5824 8.04222 12.5824V12.5824Z",
-          }),
-        );
-      });
+      const te = i.memo(function (e) {
+          return i.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 18 18",
+              fill: "none",
+              ...e,
+            },
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M13.8296 12.0786C14.8347 10.6321 15.2623 8.86133 15.0284 7.11496C14.7945 5.36859 13.9159 3.77313 12.5656 2.64269C11.2153 1.51224 9.49114 0.928708 7.73254 1.00696C5.97394 1.08522 4.30831 1.8196 3.06357 3.06552C1.81882 4.31144 1.08514 5.97864 1.00696 7.7389C0.928776 9.49916 1.51176 11.2249 2.64114 12.5765C3.77052 13.9281 5.36446 14.8075 7.10919 15.0417C8.85391 15.2758 10.623 14.8477 12.0682 13.8417L15.2185 17L15.3997 16.8187L16.8188 15.3982L17 15.2168L13.8296 12.0786ZM8.04222 12.5824C7.14643 12.5824 6.27075 12.3165 5.52593 11.8183C4.7811 11.3202 4.20058 10.6122 3.85777 9.78376C3.51497 8.95538 3.42528 8.04384 3.60004 7.16443C3.7748 6.28502 4.20616 5.47723 4.83958 4.84321C5.47301 4.20919 6.28004 3.77742 7.15862 3.60249C8.0372 3.42757 8.94787 3.51734 9.77548 3.86047C10.6031 4.2036 11.3104 4.78467 11.8081 5.5302C12.3058 6.27573 12.5714 7.15223 12.5714 8.04887C12.5714 9.25123 12.0943 10.4043 11.2449 11.2545C10.3955 12.1047 9.24344 12.5824 8.04222 12.5824V12.5824Z",
+            }),
+          );
+        }),
+        ne = i.memo(function (e) {
+          return i.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...e,
+            },
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M32.12 7.41L28.59 3.88L18 14.46L7.41 3.88L3.88 7.41L14.46 18L3.88 28.59L7.41 32.12L18 21.54L28.59 32.12L32.12 28.59L21.54 18L32.12 7.41Z",
+            }),
+          );
+        });
     },
     28388: (e, t, n) => {
       "use strict";
