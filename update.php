@@ -305,24 +305,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				unset( $Test, $Archive, $Hash, $Index );
 			}
-			// Convert group members to JSON
-			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' || $File === 'Random/SteamDevs.json' )
-			{
-				libxml_use_internal_errors( true );
-
-				$Data = simplexml_load_string( $Data );
-
-				if( $Data === false || empty( $Data->members->steamID64 ) )
-				{
-					return false;
-				}
-
-				$Data = array_values( (array)$Data->members->steamID64 );
-
-				sort( $Data );
-
-				$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
-			}
 			// Prettify
 			else if( $File === 'Random/Jobs.json' )
 			{
