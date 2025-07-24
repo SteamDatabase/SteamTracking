@@ -45,6 +45,65 @@
         Table: "_2JSoC65mCQdxh-B_srjUjf",
       };
     },
+    chunkid: (_, _) => {
+      "use strict";
+      var _,
+        _ = Symbol.for("react.element"),
+        _ = Symbol.for("react.portal"),
+        _ = Symbol.for("react.fragment"),
+        _ = Symbol.for("react.strict_mode"),
+        _ = Symbol.for("react.profiler"),
+        _ = Symbol.for("react.provider"),
+        _ = Symbol.for("react.context"),
+        _ = Symbol.for("react.server_context"),
+        _ = Symbol.for("react.forward_ref"),
+        _ = Symbol.for("react.suspense"),
+        _ = Symbol.for("react.suspense_list"),
+        _ = Symbol.for("react.memo"),
+        _ = Symbol.for("react.lazy"),
+        _ = Symbol.for("react.offscreen");
+      function _(_) {
+        if ("object" == typeof _ && null !== _) {
+          var _ = _.$$typeof;
+          switch (_) {
+            case _:
+              switch ((_ = _.type)) {
+                case _:
+                case _:
+                case _:
+                case _:
+                case _:
+                  return _;
+                default:
+                  switch ((_ = _ && _.$$typeof)) {
+                    case _:
+                    case _:
+                    case _:
+                    case _:
+                    case _:
+                    case _:
+                      return _;
+                    default:
+                      return _;
+                  }
+              }
+            case _:
+              return _;
+          }
+        }
+      }
+      (_ = Symbol.for("react.module.reference")),
+        (_.isForwardRef = function (_) {
+          return _(_) === _;
+        }),
+        (_.isFragment = function (_) {
+          return _(_) === _;
+        });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      module.exports = __webpack_require__("chunkid");
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports),
@@ -1445,7 +1504,10 @@
         });
         return _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const _ = _._.InitFromClanID((0, _._)()),
           _ = (function () {
@@ -1975,6 +2037,11 @@
         let _ = Math.min((_?.guest_count / _.max_capacity) * 100, 100),
           _ = _?.guest_count > 0 ? `${_}%` : "0%",
           _ = _?.guest_count >= _.max_capacity;
+        const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          _ =
+            "in_person" === _.location_type
+              ? (_.in_person_time_zone ?? _._)
+              : _;
         return _.createElement(
           _.Fragment,
           null,
@@ -1995,8 +2062,14 @@
             _.createElement(
               "span",
               null,
-              (0, _._)(_.rtime_start) + "@" + (0, _._)(_.rtime_start),
-              " (local time)",
+              (function (_, _) {
+                const _ = _().unix(_),
+                  _ = _().unix(_)._(_),
+                  _ = _.utcOffset() - __webpack_require__.utcOffset(),
+                  _ = new Date(1e3 * (_ + 60 * _)),
+                  _ = new Date();
+                return `${_.getFullYear() == _.getFullYear() ? ((0, _._))(_, !1, !1) : ((0, _._))(_, !1, !1)} ${(0, _._)(_ + 60 * _)} ${_.format("z")}`;
+              })(_.rtime_start, _),
             ),
           ),
           _.createElement("td", null, (0, _._)(_.rtime_end - _.rtime_start)),
@@ -3734,77 +3807,6 @@
           )
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
-        m_bHasLocalizationContext = !1;
-        m_callback = new _._();
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetCurEditLanguage() {
-          return this.m_eCurLang;
-        }
-        SetCurEditLanguage(_) {
-          return (
-            this.m_eCurLang != _ &&
-            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
-          );
-        }
-        SetHasLanguage(_) {
-          _.forEach((_, _) => {
-            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
-          });
-        }
-        BHasLanguageData(_) {
-          return this.m_rgHasData[_];
-        }
-        GetHasLocalizationContext() {
-          return this.m_bHasLocalizationContext;
-        }
-        SetHasLocalizationContext(_) {
-          _ != this.m_bHasLocalizationContext &&
-            (this.m_bHasLocalizationContext = _);
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().GetCurEditLanguage());
-      }
-      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
-        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
-        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
-        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
-        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
-        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
     },
   },
 ]);

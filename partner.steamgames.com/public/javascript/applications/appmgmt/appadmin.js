@@ -177,13 +177,13 @@
       }
       function h(e) {
         const t = E.Get().GetPromotionTransport().GetServiceTransport(),
-          a = l.useContext(f);
-        return (0, c.I)(S(a, t, e));
+          a = l.useContext(S);
+        return (0, c.I)(f(a, t, e));
       }
       function y(e) {
         return d.L.getQueryData(["StoreItemCountryRestriction", (0, m.wD)(e)]);
       }
-      const f = l.createContext({
+      const S = l.createContext({
         loadStoreItemCountryRestriction: async (e, t) =>
           await (function (e) {
             C ||
@@ -211,7 +211,7 @@
             return C;
           })(t).load(e),
       });
-      function S(e, t, a) {
+      function f(e, t, a) {
         return {
           queryKey: ["StoreItemCountryRestriction", (0, m.wD)(a)],
           queryFn: () => e.loadStoreItemCountryRestriction(a, t),
@@ -293,20 +293,20 @@
         E = a(52038),
         h = a(23809),
         y = a(6144),
-        f = a(9154),
-        S = a(14771),
+        S = a(9154),
+        f = a(14771),
         C = a(55263),
         D = a(82829),
         v = a(62490);
       const I = 7,
         w = 7;
-      function A(e) {
+      function b(e) {
         const { demoAppID: t, parentAppId: a } = e,
           [i, r] = n.useState(!1),
           [s, o] = n.useState(void 0),
           [l, p] = n.useState(void 0),
           [g, E] = n.useState(0),
-          f = n.useCallback(() => E((e) => e + 1), []),
+          S = n.useCallback(() => E((e) => e + 1), []),
           C = (0, h.KV)();
         n.useEffect(() => {
           const e = new AbortController();
@@ -326,11 +326,11 @@
           n.useEffect(() => {
             let e = window.AppLandingRefreshCallbacks;
             e || ((e = new y.lu()), (window.AppLandingRefreshCallbacks = e));
-            const t = e.Register(f);
+            const t = e.Register(S);
             return () => t.Unregister();
-          }, [f]);
+          }, [S]);
         const D = i || void 0 !== l,
-          v = s + I * S.Kp.PerDay,
+          v = s + I * f.Kp.PerDay,
           w = !i && s && new Date(1e3 * v) > new Date();
         if (D || w) {
           const e = `${c.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
@@ -352,7 +352,7 @@
               ),
             ),
             D &&
-              n.createElement(T, {
+              n.createElement(A, {
                 demoAppID: t,
                 parentAppId: a,
                 bSendEmailsSucceeded: l,
@@ -360,7 +360,7 @@
               }),
             D && w && n.createElement("hr", { className: m.BothSeparator }),
             w &&
-              n.createElement(b, {
+              n.createElement(T, {
                 parentAppId: a,
                 timeStaged: s,
                 noticeVisibleToDate: v,
@@ -368,7 +368,7 @@
           );
         }
       }
-      function T(e) {
+      function A(e) {
         const {
             demoAppID: t,
             parentAppId: a,
@@ -389,7 +389,7 @@
               o(!1);
             }
           }, [t, a, y, r]),
-          { bLoading: w, rgWarnings: A } = (function (e, t) {
+          { bLoading: w, rgWarnings: b } = (function (e, t) {
             const a = (0, D.c2)({ appid: e }),
               i = (0, D.c2)({ appid: t }),
               [r] = (0, C.t7)(e, { include_release: !0 }),
@@ -426,7 +426,7 @@
               _ = r && r.GetReleaseDateRTime(!0);
             _ &&
               _ > new Date().getTime() / 1e3 &&
-              _ < new Date().getTime() / 1e3 + 14 * S.Kp.PerDay &&
+              _ < new Date().getTime() / 1e3 + 14 * f.Kp.PerDay &&
               u.push({
                 sText: (0, d.we)(
                   "#App_Landing_DemoWishlist_ParentAppWarning",
@@ -455,7 +455,7 @@
                         "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Deny",
                         t.join(", "),
                       ),
-              f = y(l, c),
+              S = y(l, c),
               I = y(m, p);
             "unrestricted" != E &&
             "unrestricted" != h &&
@@ -463,22 +463,22 @@
               ? u.push({
                   sText: (0, d.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictionTypes_Mismatch",
-                    f,
+                    S,
                     I,
                   ),
                   bCritical: !0,
                 })
-              : f != I &&
+              : S != I &&
                 u.push({
                   sText: (0, d.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch",
-                    f,
+                    S,
                     I,
                   ),
                 });
             return { bLoading: !1, rgWarnings: u };
           })(a, t),
-          T = A.every((e) => !e.bCritical);
+          A = b.every((e) => !e.bCritical);
         return n.createElement(
           n.Fragment,
           null,
@@ -501,7 +501,7 @@
             : n.createElement(
                 n.Fragment,
                 null,
-                A.map((e) =>
+                b.map((e) =>
                   n.createElement(
                     "div",
                     {
@@ -525,7 +525,7 @@
                             "btn_green_steamui btn_border_2px btn_medium",
                             m.ButtonDemoWishlistEmails,
                           ),
-                          disabled: s || !T,
+                          disabled: s || !A,
                           onClick: () => c(!0),
                         },
                         n.createElement(
@@ -567,7 +567,7 @@
               ),
           l &&
             n.createElement(
-              f.mt,
+              S.mt,
               { active: !0, className: m.ControllerWizardModal },
               n.createElement(
                 "h1",
@@ -610,11 +610,11 @@
             ),
         );
       }
-      function b(e) {
+      function T(e) {
         const { parentAppId: t, timeStaged: a, noticeVisibleToDate: i } = e,
           r = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
-          s = r(new Date(1e3 * (a - w * S.Kp.PerDay))),
+          s = r(new Date(1e3 * (a - w * f.Kp.PerDay))),
           o = r(new Date()),
           l = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
@@ -654,14 +654,14 @@
       var N = a(75493),
         P = a(41735),
         k = a.n(P),
-        R = a(20194),
-        x = a(30470);
-      var B = a(69235),
-        L = a(56555),
+        L = a(20194),
+        R = a(30470);
+      var x = a(69235),
+        B = a(56555),
         M = a(49953),
         F = a(55241),
-        U = a(85010),
-        G = a(62059),
+        G = a(85010),
+        U = a(62059),
         O = a(36058),
         W = a(84811),
         H = a(32754),
@@ -669,7 +669,7 @@
         V = a(19976);
       function K(e) {
         const { nPartnerID: t, nAppID: a } = e;
-        return x.iA.is_support
+        return R.iA.is_support
           ? n.createElement(q, { nPartnerID: t, nAppID: a })
           : null;
       }
@@ -677,11 +677,11 @@
         const { nPartnerID: t, nAppID: a } = e,
           [i, r] = (0, n.useState)(90),
           s = (function (e, t, a) {
-            const { isLoading: n, data: i } = (0, R.I)({
+            const { isLoading: n, data: i } = (0, L.I)({
               queryKey: ["usePartnerFinancialDailySummary", e, t, a],
               queryFn: async () => {
                 const n = { partnerid: e, pastdays: t, appid: a },
-                  i = `${x.TS.PARTNER_BASE_URL}financial/ajaxgetpartnersummary`,
+                  i = `${R.TS.PARTNER_BASE_URL}financial/ajaxgetpartnersummary`,
                   r = await k().get(i, { params: n, withCredentials: !0 });
                 return 1 != r?.data?.success
                   ? { daily_sales: [], summary_sales: {} }
@@ -857,10 +857,10 @@
             [t],
           );
         return n.createElement(
-          B.u,
+          x.u,
           { width: "100%", height: "100%" },
           n.createElement(
-            L.X,
+            B.X,
             {
               data: t,
               margin: { top: 25, left: 0, right: 0, bottom: 0 },
@@ -887,8 +887,8 @@
               axisLine: !1,
               orientation: "right",
             }),
-            n.createElement(U.m, { content: n.createElement(ee, null) }),
-            n.createElement(G.y, {
+            n.createElement(G.m, { content: n.createElement(ee, null) }),
+            n.createElement(U.y, {
               dataKey: "partner_stats_value",
               fill: "url( #bar_linear )",
             }),
@@ -1040,7 +1040,7 @@
           n.Fragment,
           null,
           s && n.createElement(K, { nPartnerID: r, nAppID: t }),
-          o && n.createElement(A, { demoAppID: t, parentAppId: a }),
+          o && n.createElement(b, { demoAppID: t, parentAppId: a }),
         );
       }
       var ne = a(93542),
@@ -1166,7 +1166,7 @@
             e.nBasePackageId,
           );
         }
-        const f = n.useId();
+        const S = n.useId();
         return n.createElement(
           n.Fragment,
           null,
@@ -1175,7 +1175,7 @@
             { active: "editor" === t || "alert" === t },
             n.createElement(
               re.eV,
-              { "aria-labelledby": f, closeModal: () => a("closed") },
+              { "aria-labelledby": S, closeModal: () => a("closed") },
               "editor" === t &&
                 n.createElement(
                   n.Fragment,
@@ -1185,7 +1185,7 @@
                     { className: ne.EditionsEditorContents },
                     n.createElement(
                       "h2",
-                      { id: f },
+                      { id: S },
                       (0, d.we)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
                     E.isPending && n.createElement(g.t, null),
@@ -1766,10 +1766,10 @@
                 onClick: async () => {
                   r("");
                   const e = new FormData();
-                  e.append("sessionid", x.TS.SESSIONID),
+                  e.append("sessionid", R.TS.SESSIONID),
                     e.append("asset_properties", JSON.stringify(s));
                   const t = await fetch(
-                    `${x.TS.PARTNER_BASE_URL}apps/setassetpropertyschema/${a}`,
+                    `${R.TS.PARTNER_BASE_URL}apps/setassetpropertyschema/${a}`,
                     { method: "POST", body: e, credentials: "same-origin" },
                   );
                   if (!t || !t.ok) return void r("Failed to save properties");
@@ -1819,7 +1819,7 @@
             },
           }),
           n.createElement("div", null, "Type"),
-          n.createElement(fe, { propertyType: t.type, onUpdateType: s }),
+          n.createElement(Se, { propertyType: t.type, onUpdateType: s }),
           n.createElement(
             "div",
             { className: ge.PropertyRangeMinLabel },
@@ -1855,7 +1855,7 @@
           ),
         );
       }
-      function fe(e) {
+      function Se(e) {
         const { propertyType: t, onUpdateType: a } = e;
         return n.createElement(
           "div",
@@ -1874,7 +1874,7 @@
           }),
         );
       }
-      var Se = a(65038),
+      var fe = a(65038),
         Ce = a(64238),
         De = a.n(Ce);
       function ve(e, t, a) {
@@ -1953,14 +1953,14 @@
           "div",
           null,
           E &&
-            n.createElement(Ae, {
+            n.createElement(be, {
               name: (0, d.we)("#StoreAdmin_Platform_AllPlatforms"),
               categories: s,
               checkedState: l,
               setChecked: g,
             }),
           h && n.createElement(we, { checked: u }),
-          n.createElement(Ae, {
+          n.createElement(be, {
             name: (0, d.we)("#StoreAdmin_Platform_Windows"),
             categories: o,
             checkedState: l,
@@ -1972,16 +1972,16 @@
         const { checked: t } = e;
         return n.createElement(
           "div",
-          { className: Se.DXVCNotice },
+          { className: fe.DXVCNotice },
           !t &&
-            n.createElement("div", { className: Se.DXVCNoticeIconUnchecked }),
-          t && n.createElement("div", { className: Se.DXVCNoticeIconChecked }),
+            n.createElement("div", { className: fe.DXVCNoticeIconUnchecked }),
+          t && n.createElement("div", { className: fe.DXVCNoticeIconChecked }),
           n.createElement(
             "div",
             {
               className: De()(
-                Se.DXVCNoticeText,
-                t ? Se.DXVCNoticeTextChecked : Se.DXVCNoticeTextUnchecked,
+                fe.DXVCNoticeText,
+                t ? fe.DXVCNoticeTextChecked : fe.DXVCNoticeTextUnchecked,
               ),
             },
             (0, d.we)(
@@ -1991,14 +1991,14 @@
           ),
         );
       }
-      function Ae(e) {
+      function be(e) {
         const { name: t, categories: a, checkedState: i, setChecked: r } = e,
           s = (0, n.useMemo)(() => {
             let e = [];
             return (
               a.forEach((t, a) =>
                 e.push(
-                  n.createElement(Te, {
+                  n.createElement(Ae, {
                     name: a,
                     category: t,
                     checkedState: i,
@@ -2018,13 +2018,13 @@
           ...s,
         );
       }
-      function Te(e) {
+      function Ae(e) {
         const { name: t, category: a, checkedState: i, setChecked: r } = e,
           s = Object.entries(a.components).map(([e, t]) =>
             n.createElement(
               "li",
               { key: t },
-              n.createElement(be, {
+              n.createElement(Te, {
                 name: e,
                 depotID: t,
                 checked: i.get(t),
@@ -2039,7 +2039,7 @@
           n.createElement("ul", null, ...s),
         );
       }
-      function be(e) {
+      function Te(e) {
         const { name: t, depotID: a, checked: i, setChecked: r } = e,
           s = (228987 == a || 228986 == a) && !i;
         return n.createElement(
@@ -2058,12 +2058,12 @@
       var Ne = a(67045),
         Pe = a(34629),
         ke = a(7860),
-        Re = a(14947),
-        xe = a(24484);
-      class Be {
+        Le = a(14947),
+        Re = a(24484);
+      class xe {
         itemDefinition = null;
         constructor(e) {
-          (0, Re.Gn)(this), this.SetCommunityItemDefinitionFromProto(e);
+          (0, Le.Gn)(this), this.SetCommunityItemDefinitionFromProto(e);
         }
         SetCommunityItemDefinitionFromProto(e) {
           this.itemDefinition = {
@@ -2117,16 +2117,16 @@
           return t;
         }
       }
-      function Le(e, t) {
+      function Be(e, t) {
         return [`InProgressItemDefinition_${e}_${t}`];
       }
       function Me(e, t) {
-        return `${x.TS.BASE_URL_SHARED_CDN}community_assets/images/items/${e}/${t}`;
+        return `${R.TS.BASE_URL_SHARED_CDN}community_assets/images/items/${e}/${t}`;
       }
-      (0, Pe.Cg)([Re.sH], Be.prototype, "itemDefinition", void 0);
+      (0, Pe.Cg)([Le.sH], xe.prototype, "itemDefinition", void 0);
       var Fe = a(6419),
-        Ue = a(69343),
-        Ge = a(68797),
+        Ge = a(69343),
+        Ue = a(68797),
         Oe = a(82817),
         We = a(73744),
         He = a(78511);
@@ -2137,7 +2137,7 @@
         constructor(e, t, a, n, i) {
           const r = (0, Oe.II)(a);
           super(e, e.name, t, a.src, r),
-            (0, Re.Gn)(this),
+            (0, Le.Gn)(this),
             (this.m_rgAssetRequirements = n),
             (this.m_bDuplicateAssetType = i);
         }
@@ -2227,19 +2227,19 @@
           }
         }
       }
-      (0, Pe.Cg)([Re.sH], $e.prototype, "m_rgAssetRequirements", void 0),
-        (0, Pe.Cg)([Re.sH], $e.prototype, "m_currentImageOptionKey", void 0),
-        (0, Pe.Cg)([Re.sH], $e.prototype, "m_bDuplicateAssetType", void 0),
-        (0, Pe.Cg)([Re.EW], $e.prototype, "ImageOptions", null),
-        (0, Pe.Cg)([Re.XI], $e.prototype, "SetCurrentImageOption", null);
-      class Ve extends Ue.Vr {
-        m_filesToUpload = Re.sH.array();
+      (0, Pe.Cg)([Le.sH], $e.prototype, "m_rgAssetRequirements", void 0),
+        (0, Pe.Cg)([Le.sH], $e.prototype, "m_currentImageOptionKey", void 0),
+        (0, Pe.Cg)([Le.sH], $e.prototype, "m_bDuplicateAssetType", void 0),
+        (0, Pe.Cg)([Le.EW], $e.prototype, "ImageOptions", null),
+        (0, Pe.Cg)([Le.XI], $e.prototype, "SetCurrentImageOption", null);
+      class Ve extends Ge.Vr {
+        m_filesToUpload = Le.sH.array();
         m_strUploadPath = null;
         m_bSynchronousUpload = !1;
         m_rgAssetRequirements = [];
         constructor(e, t, a) {
           super(),
-            (0, Re.Gn)(this),
+            (0, Le.Gn)(this),
             (this.m_strUploadPath = e),
             (this.m_bSynchronousUpload = t),
             (this.m_rgAssetRequirements = a);
@@ -2254,7 +2254,7 @@
           return this.m_filesToUpload;
         }
         ClearImages() {
-          this.m_filesToUpload = Re.sH.array();
+          this.m_filesToUpload = Le.sH.array();
         }
         DeleteUploadImage(e) {
           const t = this.m_filesToUpload.findIndex(
@@ -2286,7 +2286,7 @@
           let i = null;
           const r = new FormData();
           r.append("assetfile", e.file, t),
-            r.append("sessionid", x.TS.SESSIONID);
+            r.append("sessionid", R.TS.SESSIONID);
           const s = e.GetCurrentImageOption();
           r.append("strAssetType", s.asset_type);
           const o = (0, Oe.ab)(t);
@@ -2304,13 +2304,13 @@
               cancelToken: n,
             });
           } catch (e) {
-            (0, Ge.H)(e);
+            (0, Ue.H)(e);
             i = e.response;
           }
           return { bSuccess: !0, result: i?.data };
         }
       }
-      (0, Pe.Cg)([Re.sH], Ve.prototype, "m_filesToUpload", void 0),
+      (0, Pe.Cg)([Le.sH], Ve.prototype, "m_filesToUpload", void 0),
         (0, Pe.Cg)([Fe.o], Ve.prototype, "GetUploadImages", null),
         (0, Pe.Cg)([Fe.o], Ve.prototype, "ClearImages", null),
         (0, Pe.Cg)([Fe.o], Ve.prototype, "DeleteUploadImage", null),
@@ -2338,7 +2338,7 @@
                 t.uploadResult;
               }
               var n, i;
-              (n = t), (i = a), ke.L.invalidateQueries({ queryKey: Le(n, i) });
+              (n = t), (i = a), ke.L.invalidateQueries({ queryKey: Be(n, i) });
             },
           }),
         );
@@ -2421,12 +2421,12 @@
       function Ye(e) {
         const { appID: t, unItemType: a } = e,
           i = (function (e, t) {
-            const a = (0, R.I)({
-              queryKey: Le(e, t),
+            const a = (0, L.I)({
+              queryKey: Be(e, t),
               queryFn: async () => {
-                const a = `${x.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
+                const a = `${R.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
                   n = new FormData();
-                n.append("sessionid", x.TS.SESSIONID);
+                n.append("sessionid", R.TS.SESSIONID);
                 const i = await k().post(a, n, { withCredentials: !0 });
                 return 200 == i?.status && 1 == i.data?.success
                   ? i.data.def
@@ -2437,12 +2437,12 @@
                     null);
               },
               staleTime: 1 / 0,
-              initialData: (0, xe.Tc)("item_def", "application_config"),
+              initialData: (0, Re.Tc)("item_def", "application_config"),
             });
             return a.isLoading ? null : a.data;
           })(t, a);
         if (!i) return null;
-        const r = new Be(i),
+        const r = new xe(i),
           s = 17 === r.ItemClass ? Ze : null;
         if (!s) return null;
         const o = (!r.BIsActive || Ke.iA.is_support) && !r.BIsDeleted;
@@ -2686,6 +2686,74 @@
           t.unix()
         );
       }
+    },
+    63556: (e, t, a) => {
+      "use strict";
+      a.d(t, { E: () => p, O: () => d });
+      var n = a(34629),
+        i = a(14947),
+        r = a(65946),
+        s = a(22837),
+        o = a(62490),
+        l = a(6419),
+        c = a(78327),
+        m = a(91986);
+      class d {
+        m_eCurLang = (0, s.sf)(c.TS.LANGUAGE);
+        m_rgHasData = (0, o.$Y)([], 31, !1);
+        m_bHasLocalizationContext = !1;
+        m_callback = new m.l();
+        GetCallback() {
+          return this.m_callback;
+        }
+        GetCurEditLanguage() {
+          return this.m_eCurLang;
+        }
+        SetCurEditLanguage(e) {
+          return (
+            this.m_eCurLang != e &&
+            ((this.m_eCurLang = e), this.GetCallback().Dispatch(e), !0)
+          );
+        }
+        SetHasLanguage(e) {
+          e.forEach((e, t) => {
+            this.m_rgHasData[t] != e && (this.m_rgHasData[t] = e);
+          });
+        }
+        BHasLanguageData(e) {
+          return this.m_rgHasData[e];
+        }
+        GetHasLocalizationContext() {
+          return this.m_bHasLocalizationContext;
+        }
+        SetHasLocalizationContext(e) {
+          e != this.m_bHasLocalizationContext &&
+            (this.m_bHasLocalizationContext = e);
+        }
+        static s_globalSingletonStore;
+        static Get() {
+          return (
+            d.s_globalSingletonStore ||
+              ((d.s_globalSingletonStore = new d()),
+              "dev" == c.TS.WEB_UNIVERSE &&
+                (window.DUS = d.s_globalSingletonStore)),
+            d.s_globalSingletonStore
+          );
+        }
+        constructor() {
+          (0, i.Gn)(this);
+        }
+      }
+      function p() {
+        return (0, r.q3)(() => d.Get().GetCurEditLanguage());
+      }
+      (0, n.Cg)([i.sH], d.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([i.sH], d.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([i.sH], d.prototype, "m_bHasLocalizationContext", void 0),
+        (0, n.Cg)([l.o], d.prototype, "GetCurEditLanguage", null),
+        (0, n.Cg)([l.o], d.prototype, "SetCurEditLanguage", null),
+        (0, n.Cg)([i.XI.bound], d.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([l.o], d.prototype, "BHasLanguageData", null);
     },
     64046: (e, t, a) => {
       "use strict";

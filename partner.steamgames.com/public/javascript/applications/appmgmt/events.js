@@ -1218,7 +1218,7 @@
         (0, _.Cg)([ae.oI], _e.prototype, "GotoDiscussion", null),
         (0, _.Cg)([ae.oI], _e.prototype, "OpenRepostDialogs", null),
         (_e = (0, _.Cg)([E.PA], _e));
-      var ge = n(71219),
+      var ge = n(91151),
         Se = n(65946),
         ve = n(36148),
         Ce = n(12247),
@@ -2066,7 +2066,9 @@
         }
       }
       var nt = n(38535);
-      const at = r.lazy(() => n.e(8396).then(n.bind(n, 22862)));
+      const at = r.lazy(() =>
+        Promise.all([n.e(1747), n.e(8396)]).then(n.bind(n, 22862)),
+      );
       function ot(e) {
         const [t, n] = (0, y.t7)(e.appid, { include_assets: !0 }),
           [a, o] = (0, f.TB)(e.clanID);

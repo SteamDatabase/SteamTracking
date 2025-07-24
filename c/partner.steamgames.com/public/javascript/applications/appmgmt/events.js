@@ -2329,9 +2329,10 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const [_, __webpack_require__] = (0, _._)(_.appid, {

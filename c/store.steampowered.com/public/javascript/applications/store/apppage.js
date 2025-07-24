@@ -3778,7 +3778,6 @@
           _.createElement(
             "div",
             {
-              ref: _,
               className: _().PlayerControls,
               ..._,
               onTouchStart: _,
@@ -3786,6 +3785,7 @@
             _.createElement(
               "div",
               {
+                ref: _,
                 className: _,
               },
               _.createElement(_, {

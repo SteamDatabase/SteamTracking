@@ -4,6 +4,54 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Bold: "_3cln317VYhwhE1fSeMCG48",
+        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
+        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        TemplateMediaTitle: "_DE_6XhnSqABczbJ55rNJ",
+        Question: "_2Hj1tfDjpLvBVTHTqAVcYB",
+        Answer: "syKgzmlrcUIJHIBfWsn4h",
+        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
+        Header2: "_6-VR2WCBCDupCcUN5INQM",
+        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
+        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
+        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
+        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
+        SmallText: "WBzrd438Bd8Z3J-j_iglW",
+        Underline: "GrhFWtBdrSZP611s1UqqT",
+        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
+        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
+        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
+        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
+        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
+        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
+        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
+        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
+        Code: "_2ODaX8lO7DKLKke76c2Wya",
+        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
+        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
+        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
+        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
+        _: "-xPK0REpludHjRG8xQfih",
+        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
+        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
+        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
+        TableCell: "_3rLIt0O8F7iG6B2RmC3cYa",
+        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
+        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
+        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
+        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
+        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
+        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
+        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
+        Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
+        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
+        CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
+        CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
         SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
@@ -207,6 +255,331 @@
         return _.Get().LoadPartnerInfo(_);
       }
       (0, _._)([_._], _.prototype, "FindPartnerByName", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      class _ {
+        type = 0;
+        text = "";
+        tag;
+        args;
+        ConvertMalformedNodeToText() {
+          3 == this.type
+            ? (this.text = "[/" + this.text)
+            : 2 == this.type && (this.text = "[" + this.text),
+            (this.type = 1);
+        }
+      }
+      class _ {
+        m_fnAccumulatorFactory;
+        m_dictComponents;
+        constructor(_, _) {
+          (this.m_dictComponents = _), (this.m_fnAccumulatorFactory = _);
+        }
+        Parse(_, _, __webpack_require__ = !1) {
+          const _ = (function (_, _) {
+            const _ = [];
+            let _ = new _(),
+              _ = !1,
+              _ = !1,
+              _ = !1;
+            for (let _ = 0; _ < _.length; _++) {
+              const _ = _[_];
+              switch (_.type) {
+                case 0:
+                  "[" == _
+                    ? ((_.type = 2), (_ = !0))
+                    : ((_.type = 1), "\\" == _ && _ ? (_ = !_) : (_.text += _));
+                  break;
+                case 2:
+                case 3:
+                  if ("/" == _ && _) (_.type = 3), (_.text = ""), (_ = !1);
+                  else if ("[" != _ || _)
+                    if ("]" != _ || _)
+                      "\\" == _ && _
+                        ? ((_.text += _), (_ = !_), (_ = !1))
+                        : ((_.text += _), (_ = !1), (_ = !1));
+                    else {
+                      const _ =
+                          2 == _.type &&
+                          "noparse" == _.text.toLocaleLowerCase(),
+                        _ =
+                          3 == _.type &&
+                          "noparse" == _.text.toLocaleLowerCase();
+                      _ || (_ && !_)
+                        ? (_.ConvertMalformedNodeToText(), (_.text += _))
+                        : _
+                          ? (_ = !0)
+                          : _ && (_ = !1),
+                        (_ = _(_, _)),
+                        (_ = !1);
+                    }
+                  else
+                    _.ConvertMalformedNodeToText(), (_ = _(_, _, 2)), (_ = !0);
+                  break;
+                case 1:
+                  "[" != _ || _
+                    ? "\\" == _ && _
+                      ? (_ && (_.text += _), (_ = !_))
+                      : ((_.text += _), (_ = !1))
+                    : ((_ = _(_, _, 2)), (_ = !0));
+              }
+            }
+            0 != _.type &&
+              ((2 != _.type && 3 != _.type) || _.ConvertMalformedNodeToText(),
+              __webpack_require__.push(_));
+            return _;
+          })(_ || "", __webpack_require__);
+          return this.Parse_BuildElements(_, _);
+        }
+        Parse_BuildElements(_, _) {
+          let _ = this.m_fnAccumulatorFactory(void 0);
+          const _ = [],
+            _ = () => (_.length < 1 ? void 0 : _[_.length - 1]),
+            _ = this.m_dictComponents,
+            _ = (_) => !(!_.tag || !_.get(_.tag)?.autocloses);
+          let _ = !1,
+            _ = !0;
+          const _ = (_, _) => {
+            if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
+              const _ = _.get(_.node.tag),
+                _ = _.map((_) => _.node.tag),
+                _ = {
+                  parentTags: _,
+                  tagname: _.node.tag,
+                  args: _.node.args,
+                },
+                _ = _(_.Constructor, _, ...__webpack_require__.GetElements());
+              (_ = _.accumulator),
+                Array.isArray(_)
+                  ? _.forEach((_) => __webpack_require__.AppendNode(_))
+                  : __webpack_require__.AppendNode(_),
+                (_ = !!_.skipFollowingNewline),
+                (_ = _.bWrapTextForCopying);
+            } else if (_) {
+              const _ = _.accumulator;
+              _.AppendText("[" + _.node.text + "]", !1),
+                __webpack_require__
+                  .GetElements()
+                  .forEach((_) => _.AppendNode(_)),
+                _.AppendText("[/" + _.text + "]", !1),
+                (_ = _),
+                (_ = _.bWrapTextForCopying);
+            }
+          };
+          for (
+            _.forEach((_, _) => {
+              if (1 == _.type) {
+                const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
+                __webpack_require__.AppendText(_, _), (_ = !1);
+              } else if (2 == _.type) {
+                const _ = _.get(_.tag);
+                if (_) {
+                  const _ = _();
+                  if (void 0 !== _) {
+                    const _ = _.get(_.node.tag);
+                    _ &&
+                      _.autocloses &&
+                      _.tag === _.node.tag &&
+                      _(_.pop(), _.node);
+                  }
+                  _.push({
+                    accumulator: _,
+                    node: _,
+                    bWrapTextForCopying: _,
+                  }),
+                    (_ = this.m_fnAccumulatorFactory(_)),
+                    (_ = !!_.skipInternalNewline),
+                    (_ = _.allowWrapTextForCopying ?? !1);
+                } else
+                  __webpack_require__.AppendText(
+                    "[" + _.text + "]",
+                    0 == _.length,
+                  );
+              } else if (3 == _.type) {
+                for (; _() && _().node.tag !== _.text && _(_().node); ) {
+                  const _ = _.pop();
+                  _(_, _.node);
+                }
+                if (_()?.node.tag == _.text) {
+                  const _ = _.pop();
+                  _(_, _);
+                } else
+                  __webpack_require__.AppendText(
+                    "[/" + _.text + "]",
+                    0 == _.length,
+                  );
+              }
+            });
+            _.length > 0;
+          ) {
+            const _ = _.pop();
+            _(_, _.node);
+          }
+          return __webpack_require__.GetElements();
+        }
+      }
+      function _(_, _) {
+        let _ = "[" + _;
+        _?.[""] && (_ += `=${_("" + _[""])}`);
+        for (const _ in _)
+          "" !== _ &&
+            (_ += ` ${((_ = _), _.replace(/(\\| |\])/g, "\\$1"))}=${_("" + _[_])}`);
+        var _;
+        return (_ += "]"), _;
+      }
+      function _(_) {
+        return `"${_.replace(/(\\|"|\])/g, "\\$1")}"`;
+      }
+      function _(_) {
+        return `[/${_}]`;
+      }
+      function _(_) {
+        return _.replace(/(\\|\[)/g, "\\$1");
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (2 == _.type) {
+          let _ = _.text.indexOf("=");
+          const _ = _.text.indexOf(" ");
+          if ((-1 != _ && (-1 == _ || _ < _) && (_ = _), _ > 0)) {
+            _.tag = _.text.substr(0, _).toLocaleLowerCase();
+            const _ = _.text.substr(_);
+            _.args = (function (_) {
+              if (!_ || _.length < 1) return {};
+              const _ = {};
+              let _ = "",
+                _ = "",
+                _ = 0,
+                _ = 0;
+              "=" == _[0] && (_ = 2);
+              let _ = !1;
+              for (_++; _ < _.length; _++) {
+                const _ = _[_];
+                let _ = !0,
+                  _ = !1;
+                switch (_) {
+                  case 0:
+                    if ("=" == _) return {};
+                    if (" " == _) continue;
+                    _ = 1;
+                    break;
+                  case 1:
+                    ("=" != _ && " " != _) ||
+                      _ ||
+                      (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
+                    break;
+                  case 2:
+                    " " == _
+                      ? ((_ = 0), (_ = !1), (_ = !0))
+                      : '"' == _
+                        ? ((_ = 4), (_ = !1))
+                        : (_ = 3);
+                    break;
+                  case 3:
+                  case 4:
+                    ((" " == _ && 4 != _ && !_) ||
+                      ('"' == _ && 4 == _ && !_)) &&
+                      ((_ = 0), (_ = !1), (_ = !0));
+                }
+                if (_)
+                  if ("\\" != _ || _)
+                    if (((_ = !1), 1 == _)) _ += _;
+                    else {
+                      if (3 != _ && 4 != _)
+                        throw new Error(
+                          "Not expecting to accumulate buffer in state " + _,
+                        );
+                      _ += _;
+                    }
+                  else _ = !0;
+                _ && ((_[_] = _), (_ = ""), (_ = ""));
+              }
+              0 != _ && (_[_] = _);
+              return _;
+            })(_);
+          } else (_.args = {}), (_.tag = _.text.toLocaleLowerCase());
+        }
+        _.push(_);
+        const _ = new _();
+        return (_.type = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_eCurLang = (0, _._)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], 31, !1);
+        m_bHasLocalizationContext = !1;
+        m_callback = new _._();
+        GetCallback() {
+          return this.m_callback;
+        }
+        GetCurEditLanguage() {
+          return this.m_eCurLang;
+        }
+        SetCurEditLanguage(_) {
+          return (
+            this.m_eCurLang != _ &&
+            ((this.m_eCurLang = _), this.GetCallback().Dispatch(_), !0)
+          );
+        }
+        SetHasLanguage(_) {
+          _.forEach((_, _) => {
+            this.m_rgHasData[_] != _ && (this.m_rgHasData[_] = _);
+          });
+        }
+        BHasLanguageData(_) {
+          return this.m_rgHasData[_];
+        }
+        GetHasLocalizationContext() {
+          return this.m_bHasLocalizationContext;
+        }
+        SetHasLocalizationContext(_) {
+          _ != this.m_bHasLocalizationContext &&
+            (this.m_bHasLocalizationContext = _);
+        }
+        static s_globalSingletonStore;
+        static Get() {
+          return (
+            _.s_globalSingletonStore ||
+              ((_.s_globalSingletonStore = new _()),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.DUS = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore
+          );
+        }
+        constructor() {
+          (0, _._)(this);
+        }
+      }
+      function _() {
+        return (0, _._)(() => _.Get().GetCurEditLanguage());
+      }
+      (0, _._)([_._], _.prototype, "m_eCurLang", void 0),
+        (0, _._)([_._], _.prototype, "m_rgHasData", void 0),
+        (0, _._)([_._], _.prototype, "m_bHasLocalizationContext", void 0),
+        (0, _._)([_._], _.prototype, "GetCurEditLanguage", null),
+        (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
+        (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
+        (0, _._)([_._], _.prototype, "BHasLanguageData", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [6401],
+  [2300],
   {
     87937: (M, z, b) => {
       (M.exports = b(5193)).tz.load(b(9933));

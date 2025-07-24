@@ -3285,10 +3285,10 @@
           { value: d },
           a.createElement(
             "div",
-            { ref: o, className: At().PlayerControls, ...s, onTouchStart: _ },
+            { className: At().PlayerControls, ...s, onTouchStart: _ },
             a.createElement(
               "div",
-              { className: g },
+              { ref: o, className: g },
               a.createElement(Gt, { thumbnail: p }),
               a.createElement(Bt, null),
               a.createElement(
