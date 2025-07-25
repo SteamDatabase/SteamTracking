@@ -2008,7 +2008,7 @@
         DownloadInitSegment(_) {
           this.m_schNextDownload.Cancel();
           let _ = _(_);
-          this.DownloadSegment(_, -1, _, 0);
+          this.DownloadSegment(_, -1, _);
         }
         DownloadNextSegment() {
           if ((this.m_schNextDownload.Cancel(), this.m_nNextSegment < 0))
@@ -2021,15 +2021,9 @@
             (__webpack_require__ = this.m_nNextSegment),
             _(_.segmentTemplate.strMedia, _.strID, __webpack_require__));
           var _, _;
-          let _ = _(this.m_representation);
-          this.DownloadSegment(
-            this.m_representation,
-            this.m_nNextSegment,
-            _,
-            _,
-          );
+          this.DownloadSegment(this.m_representation, this.m_nNextSegment, _);
         }
-        async DownloadSegment(_, _, _, _, _ = performance.now()) {
+        async DownloadSegment(_, _, _, _ = performance.now()) {
           (0, _._)(
             null === this.m_xhrDownload,
             "Trying to download another segment while a download is already in flight",
@@ -2094,7 +2088,7 @@
                 ),
                 void this.DownloadGone())
               : void this.m_schNextDownload.Schedule(_, () =>
-                  this.DownloadSegment(_, _, _, _, _),
+                  this.DownloadSegment(_, _, _, _),
                 );
           }
           this.m_nNumConsecutiveDownloadGones = 0;
@@ -2111,14 +2105,17 @@
               );
             if (_) (_.representation = _), (_.data = _);
             else {
-              let _ = _(this.m_representation, _);
-              this.m_rgBufferedSegments.push({
-                representation: _,
-                nSegmentIndex: _,
-                nStartPTS: _,
-                nDurationMS: _,
-                data: _,
-              });
+              let _ = _(_, _),
+                _ = this.m_mpd.GetEndTime(),
+                _ = _(_);
+              (_ = Math.min(1e3 * (_ - _), _)),
+                this.m_rgBufferedSegments.push({
+                  representation: _,
+                  nSegmentIndex: _,
+                  nStartPTS: _,
+                  nDurationMS: _,
+                  data: _,
+                });
             }
             this.LogDownload(_, _.length),
               this.UpdateBuffer(),

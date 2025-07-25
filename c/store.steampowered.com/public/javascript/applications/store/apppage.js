@@ -236,9 +236,6 @@
         RightGroup: "_2iPvkLeM34oiIhYNFbtIaL",
         VolumeControls: "_1j6rW_OLdrZ-Erj3ayEBt5",
         VolumeSlider: "mowMYhLYBK1wWoarutOvd",
-        AutoplayVideos: "_2c_UJEbgUpffRJKe0P6DIi",
-        Label: "trYH1VYj_SMBV9GHepK7j",
-        Checkbox: "Lk-_bLcrHp-e-nHnscuEU",
         MenuLayer: "_3eOkjP_BsIDVjKSn4xGkHW",
       };
     },
@@ -269,6 +266,7 @@
         SettingsMenu: "fXwjI_9jYSPc7xMajGzGb",
         MenuItem: "_1-NP1PnZ92z74rDyvBaNbu",
         Checked: "_2BiCJYRxhSB_zncLEq9uuM",
+        Separator: "_2T8HGXJpXSDoSvvPwF9uXd",
         Timeline: "_2eh4iDod50HkFNh5C0fVW6",
         Hovered: "_1p3RPu0yCTtqWEwIZT6FNV",
         TimelineBar: "_3ezjd4FAgey-Olcl2qvfD4",
@@ -282,7 +280,6 @@
         FatalErrorMessage: "_1pJhZ_qwY_Idku2_lkVQZM",
         TitleRow: "_3CLbNz7OTHT4gT5HkumZQA",
         Category: "_18O6pUE9bOMkMQXRPHunN0",
-        Separator: "_2T8HGXJpXSDoSvvPwF9uXd",
         Title: "plWqYRThWTIY1q6aN9Gd9",
       };
     },
@@ -2350,6 +2347,9 @@
           _,
         );
       }
+      function _() {
+        return (0, _.useContext)(_);
+      }
       var _;
       !(function (_) {
         (_[(_.None = 0)] = "None"),
@@ -2611,26 +2611,6 @@
             })(this.m_player, this.m_strStatsURL, this.m_eFailureReason),
             (this.m_bSentStats = !0));
         }
-      }
-      function _(_, _, _, _) {
-        let _ = (0, _.useContext)(_),
-          _ = _.useRef();
-        _.current || (_.current = new _(_));
-        let _ = (0, _._)(
-          (_) => {
-            if (_) return _.current.Start(_, _, _, _), () => _.current.Stop();
-          },
-          [_, _, _, _],
-        );
-        return (
-          (0, _.useEffect)(() => {
-            _.current.UpdatePersistState(_);
-          }, [_]),
-          (0, _.useEffect)(() => {
-            _.current.SetPlaybackEndCallback(_);
-          }, [_]),
-          [_, _.current]
-        );
       }
       (0, _._)([_._], _.prototype, "m_bPaused", void 0),
         (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
@@ -3013,6 +2993,7 @@
               _.m_refMenuLayer
             );
           })(),
+          _ = _(),
           _ = (0, _._)(
             (_) => {
               if (((_.current = _), !_)) return;
@@ -3066,6 +3047,7 @@
               _,
             );
           }),
+          _ = !!_.m_fnSetAutoplayEnabled,
           _ = {
             left: _.nLeft,
             top: _.nTop,
@@ -3078,20 +3060,57 @@
               className: _().SettingsMenu,
             },
             _,
+            _ &&
+              _.createElement("div", {
+                className: _().Separator,
+              }),
+            _ &&
+              _.createElement(_, {
+                onClose: _,
+              }),
           );
         return _.createPortal(_, _.current);
       }
       function _(_) {
-        let { onClick: _, checked: __webpack_require__, children: _ } = _,
-          _ = (0, _._)(_().MenuItem, __webpack_require__ && _().Checked);
+        let { onClose: _ } = _,
+          _ = _(),
+          _ = 1 == _.m_bAutoplayEnabled,
+          _ = (0, _.useCallback)(() => {
+            _.m_fnSetAutoplayEnabled &&
+              __webpack_require__.m_fnSetAutoplayEnabled(!_),
+              _();
+          }, [_, _, _]);
         return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-          },
           _,
-          __webpack_require__ && _.createElement(_.X4B, null),
+          {
+            onClick: _,
+            checked: _,
+          },
+          (0, _._)("#StoreTrailer_AutoPlayVideos"),
+        );
+      }
+      function _(_) {
+        let { onClick: _, checked: __webpack_require__, children: _ } = _,
+          [_, _] = (0, _._)(),
+          _ = (0, _._)(_().MenuItem, __webpack_require__ && _().Checked),
+          _ = "#2d73ff",
+          _ = "#00ccff";
+        return (
+          _ && ((_ = "#eeeeee"), (_ = "#ffffff")),
+          _.createElement(
+            "div",
+            {
+              className: _,
+              onClick: _,
+              ..._,
+            },
+            _,
+            __webpack_require__ &&
+              _.createElement(_.X4B, {
+                color: _,
+                highlightColor: _,
+              }),
+          )
         );
       }
       function _(_) {
@@ -4132,7 +4151,27 @@
         } = _;
         (_ = _ || ""), (_ = _ || 0);
         let [_, _] = (0, _._)(!0),
-          [_, _] = _(_, __webpack_require__, _, _),
+          [_, _] = (function (_, _, _, _) {
+            let _ = _(),
+              _ = _.useRef();
+            _.current || (_.current = new _(_));
+            let _ = (0, _._)(
+              (_) => {
+                if (_)
+                  return _.current.Start(_, _, _, _), () => _.current.Stop();
+              },
+              [_, _, _, _],
+            );
+            return (
+              (0, _.useEffect)(() => {
+                _.current.UpdatePersistState(_);
+              }, [_]),
+              (0, _.useEffect)(() => {
+                _.current.SetPlaybackEndCallback(_);
+              }, [_]),
+              [_, _.current]
+            );
+          })(_, __webpack_require__, _, _),
           [_, _] = (function (_) {
             let _ = (0, _.useRef)(null),
               _ = (0, _.useRef)(null),
