@@ -369,9 +369,6 @@ html.tablet .review_recent_events.has_events .review_anomalous_events_title {
 	margin-left: 0px;
 	margin-bottom: 10px;
 }
-html.tablet .review_recent_events.has_events .review_anomalous_events_icon {
-	display: none;
-}
 html.tablet .review_recent_events.has_events .review_anomalous_events_title,
 html.tablet .review_recent_events.has_events .review_anomalous_events_des {
 	font-size: 14px;
@@ -647,7 +644,10 @@ html.tablet .game_area_offsite_purchase {
 
 html.tablet .game_area_purchase_platform {
 	height: 20px;
-	margin-left: 5px;
+	margin-left: 0;
+	opacity: 0.6;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 html.tablet .game_area_purchase_game:focus-within {
@@ -928,6 +928,25 @@ html.tablet .review_settings_popup_content {
 	background-color: #1B2838;
 }
 
+html.tablet .user_reviews_filter_options {
+	flex-wrap: wrap;
+}
+
+html.tablet .review_score_summaries {
+	display: none;
+}
+html.tablet .review_language_outliers,
+html.tablet .review_recent_events {
+	max-width: 100%;
+}
+html.tablet .outlier_title {
+	font-size: 15px;
+}
+html.tablet body.v6 #app_reviews_hash h2.user_reviews_header {
+	display: flex;
+	flex-direction: column;
+}
+
 /* remove horizontal borders */
 html.tablet .review_ctn {
 	border-top: unset;
@@ -936,6 +955,7 @@ html.tablet .review_ctn {
 html.tablet .reviews_info_ctn {
 	border-bottom: unset;
 	padding-bottom: 10px;
+	margin-top: 12px;
 }
 
 html.tablet .user_reviews_sub_header span {
@@ -1435,6 +1455,13 @@ html.tablet .game_area_comingsoon {
 
 html.tablet .game_area_purchase_game {
 	margin-bottom: 4px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+html.tablet .game_area_purchase_game h2.title.title {
+	order: -1;
 }
 
 html.tablet .game_area_purchase_game .game_purchase_action,
@@ -1936,11 +1963,14 @@ html.tablet .game_area_dlc_bubble {
 
 
 /* Heading dividers */
-html.tablet #aboutThisGame h2:not(h2.bb_tag),
-html.tablet #app_reviews_hash h2 {
+html.tablet #aboutThisGame h2:not(h2.bb_tag) {
 	border-top: 1px solid #54748C66;
 	padding-top: var(--gpSpace-Gutter);
 	display: block;
+}
+
+html.tablet #app_reviews_hash h2 {
+	margin-top: 0;
 }
 
 

@@ -887,6 +887,21 @@
 		padding: 5px;
 		background-color: #1B2838;
 	}
+	html.responsive .user_reviews_filter_options {
+		flex-wrap: wrap;
+	}
+	html.responsive .review_score_summaries {
+		display: none;
+	}
+	html.responsive .review_language_outliers {
+		max-width: 100%;
+	}
+	html.responsive .outlier_title {
+		font-size: 15px;
+	}
+	html.responsive body.v6 h2.user_reviews_header {
+		flex-direction: column;
+	}
 
 	/* remove horizontal borders */
 	html.responsive .review_ctn {

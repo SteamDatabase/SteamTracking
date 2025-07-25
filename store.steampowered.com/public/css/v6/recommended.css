@@ -3366,7 +3366,13 @@ body.v6 h2.morelike_section_divider
 	background-color: #474C57;
 	padding: 10px;
 	font-size: 13px;
-	margin-bottom: 30px;
+	margin-bottom: 8px;
+	border-radius: 4px;
+}
+
+.outlier_languages_themselves {
+	background: rgba(0,0,0,0.2);
+	padding: 12px;
 	border-radius: 4px;
 }
 
@@ -3396,18 +3402,29 @@ body.v6 h2.morelike_section_divider
 .review_language_outliers_group_languages > .languages {
 	flex: 1;
 	flex-wrap: wrap;
-	display: none;
+	display: flex;
 	color: #acb2b8;
 	gap: 4px;
 	justify-content: flex-end;
 }
-.review_language_outliers_group_languages > .languages.expanded {
-	display: flex;
+.review_language_outliers_group_languages > .languages :nth-child(3) ~ * {
+	display: none;
+}
+.review_language_outliers_group_languages.expand_languages > .languages :nth-child(3) ~ * {
+	display: inline;
 }
 .review_language_outliers_group_languages > .expand_languages_btn {
 	display: flex;
-	flex: 1;
-	justify-content: flex-end;
+	margin-left: 4px;
+}
+.review_language_outliers_group_languages > .expand_languages_btn .btn_small_thin > span {
+	line-height: 23px;
+	}
+.review_language_outliers_group_languages > .expand_languages_btn .btn_small_thin > span, input.btn_small_thin {
+	line-height: unset;
+}
+.review_language_outliers_group_languages.expand_languages > .expand_languages_btn {
+	display: none;
 }
 .review_language_outliers_group_languages > .languages span {
 	background: rgba(255,255,255,0.1);
