@@ -2367,7 +2367,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2586,8 +2585,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2886,7 +2884,6 @@
             },
             (0, _._)("#Menu_Popover_Preferences"),
           ),
-          _.createElement(_, null),
         );
       }
       function _() {
@@ -3254,41 +3251,6 @@
               },
               _,
             ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().ValveOnlyNotice,
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent:
-                "The new store menu is currently visible only to Valve accounts for testing.",
-              direction: "top",
-            },
-            _.createElement(
-              "span",
-              {
-                style: {
-                  display: "inline-block",
-                  cursor: "default",
-                },
-              },
-              "VO",
-              " - ",
-              _.createElement(
-                "a",
-                {
-                  href: "https://valve.enterprise.slack.com/archives/C08VC797WA1",
-                  target: "_blank",
-                },
-                "Feedback",
-              ),
-            ),
-          ),
         );
       }
       _.memo(function (_) {
@@ -6198,7 +6160,7 @@
           #a;
           #i;
           #s;
-          #c;
+          #o;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
@@ -6212,7 +6174,7 @@
             1 === this.listeners.size &&
               this.#a.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#o(_, _);
+                  this.#c(_, _);
                 });
               });
           }
@@ -6246,7 +6208,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#o(_, _);
+                        this.#c(_, _);
                       });
                     }),
                     this.#u()));
@@ -6282,9 +6244,9 @@
           }
           #m(_, _) {
             return _
-              ? ((this.#i && this.#t === this.#c && _ === this.#s) ||
+              ? ((this.#i && this.#t === this.#o && _ === this.#s) ||
                   ((this.#s = _),
-                  (this.#c = this.#t),
+                  (this.#o = this.#t),
                   (this.#i = (0, _._)(this.#i, _(_)))),
                 this.#i)
               : _;
@@ -6322,7 +6284,7 @@
               )
             );
           }
-          #o(_, _) {
+          #c(_, _) {
             const _ = this.#a.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {

@@ -367,28 +367,6 @@ function _(_) {
   });
 }
 function _(_) {
-  let { children: _ } = _,
-    { divProps: _, tooltipProps: _ } = _({
-      ..._,
-      toolTipContent: _.toolTipContent
-        ? (0, _.jsx)(_, {
-            children: _(_.toolTipContent),
-          })
-        : null,
-    });
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _.cloneElement(_, {
-        ..._,
-        ..._.props,
-      }),
-      (0, _.jsx)(_, {
-        ..._,
-      }),
-    ],
-  });
-}
-function _(_) {
   let {
       toolTipContent: _,
       nDelayShowMS: _ = 300,
@@ -7717,4 +7695,4 @@ function _(_) {
     }),
   });
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
+export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

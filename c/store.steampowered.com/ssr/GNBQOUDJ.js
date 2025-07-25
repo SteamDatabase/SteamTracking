@@ -22,7 +22,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -4355,44 +4354,6 @@ var _ = "HIlJVl7G7A4-";
 var _ = "mjYLRTgzt4A-";
 var _ = "EMyT87c-1ws-";
 var _ = "IOoilFOfWUQ-";
-var _ = {
-  narrowWidth: "500px",
-  "duration-app-launch": "800ms",
-  menuHeight: "46px",
-  accordionMenuScreenWidth: "730px",
-  StoreMenuLegacyWrapper: "o8xu6D1j3rk-",
-  StoreMenuNavWrapper: "ek6H33vqJUo-",
-  StoreMenuContainer: "Tz2vUyr7bng-",
-  GamepadUI: "-hQN9V25Qf8-",
-  BackdropVisible: "Hc7u2E44swk-",
-  StoreMenuBackdropContainer: "sfBlGJThi-w-",
-  Backdrop: "_6hfP8ufnkvg-",
-  Active: "WcMLzycTyxU-",
-  StoreMenu: "qxuaSNtrNvE-",
-  BackdropActive: "HqwQAoZWzIQ-",
-  Content: "v2uRRqcZpzM-",
-  MobileWebview: "-ov10mpoxq8-",
-  HideTransition: "e5dakwFkeEs-",
-  Hide: "IuDNhSMX5G0-",
-  HideMenu: "_0LVhrp9VgCU-",
-  Hidden: "yHfCsuBZw7g-",
-  Show: "ovbIJyzwQ4U-",
-  MenuButtonAndSearchContainer: "wARh8VsFUg8-",
-  MenuButtonContainer: "AlTDVvmjvUU-",
-  DynamicMenuButtons: "In8c5bkG5eM-",
-  NoSearchBarSpacer: "yzn1exHts-g-",
-  MenuButton: "_-4fVuiRLPho-",
-  ButtonFocus: "txkpZ63Lcj4-",
-  ItemCount: "ntJcAB2O7Fk-",
-  WishlistButton: "ZfTk6ryId-Y-",
-  CartButton: "HIlJVl7G7A4-",
-  FlyoutMenuButton: "egWCUcRU2LI-",
-  MenuLabel: "mjYLRTgzt4A-",
-  MenuUnderscoreCtn: "EMyT87c-1ws-",
-  MenuUnderscore: "IOoilFOfWUQ-",
-  Separator: "CKr-BZNYbas-",
-  ValveOnlyNotice: "Z2-NY-0yNhg-",
-};
 var _ = _(_()),
   _ = _(_());
 var _ = "350px";
@@ -6547,7 +6508,6 @@ function _() {
         href: `${_.STORE_BASE_URL}account/preferences/`,
         children: _("#Menu_Popover_Preferences"),
       }),
-      (0, _.jsx)(_, {}),
     ],
   });
 }
@@ -6835,31 +6795,6 @@ function _(_) {
           children: _,
         }),
     ],
-  });
-}
-function _() {
-  return (0, _.jsx)("div", {
-    className: _.ValveOnlyNotice,
-    children: (0, _.jsx)(_, {
-      toolTipContent:
-        "The new store menu is currently visible only to Valve accounts for testing.",
-      direction: "top",
-      children: (0, _.jsxs)("span", {
-        style: {
-          display: "inline-block",
-          cursor: "default",
-        },
-        children: [
-          "VO",
-          " - ",
-          (0, _.jsx)("a", {
-            href: "https://valve.enterprise.slack.com/archives/C08VC797WA1",
-            target: "_blank",
-            children: "Feedback",
-          }),
-        ],
-      }),
-    }),
   });
 }
 var _ = _.memo(function (_) {
