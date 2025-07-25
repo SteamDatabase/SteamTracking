@@ -3308,6 +3308,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1*nQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -46413,7 +46414,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenV
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -58137,7 +58138,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 24 2025 00:34:39
+steam Jul 24 2025 23:28:55
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

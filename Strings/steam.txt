@@ -1895,8 +1895,6 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:34:25
-00:34:33
 01/01/00
 0123456789
 0123456789.
@@ -2427,6 +2425,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23:28:39
+23:28:47
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2782,6 +2782,7 @@ $ffn
 = or is NULL
 =!=-=3=7=?=C=o=s=u=y={=
 ==zGdd
+=Dbb
 =Tie
 =Uec
 =VX7
@@ -8746,7 +8747,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 24 2025 00:34:33
+Startup - updater built Jul 24 2025 23:28:47
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -9481,7 +9482,6 @@ VAC beta
 VALVE_CRYPTO_dbg_free
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
-VDR{
 VERSION=
 VIDEOTEXSTRING
 VISIBLE

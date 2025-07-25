@@ -314,7 +314,6 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free 
 /usr/bin/crosdisk %s
-00:34:25
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -344,6 +343,7 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+23:28:39
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
