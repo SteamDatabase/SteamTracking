@@ -62,6 +62,7 @@ html.responsive.touch
   background: rgba(25, 29, 37, 0.6);
   opacity: 1;
   pointer-events: initial;
+  z-index: 1;
 }
 .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
   height: 100vh;
@@ -1303,6 +1304,7 @@ div._21F52O1eUPKz37HniCe3kj > div {
   max-width: 175px;
   max-height: 150px;
   min-width: 0;
+  flex: 1;
   box-shadow: 2px 2px 2px rgba(43, 43, 43, 0.1);
 }
 .BasicUI ._1-cbd4jE7Y3ZRkLFocvEDW {

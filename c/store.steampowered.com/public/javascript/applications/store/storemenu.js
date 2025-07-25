@@ -2913,71 +2913,143 @@
         const { data: _ } = (0, _._)(),
           _ = _?.get("freetoplay"),
           _ = _?.get("demos");
-        return _.createElement(
-          _,
-          {
-            className: _.TopDestinations,
-          },
-          _.createElement(_, null, (0, _._)("#Menu_Section_Browse_BrowseTop")),
-          _.createElement(
-            _._,
-            {
-              className: _.BrowseContentGrid,
-            },
-            _.createElement(
+        return (0, _._)()
+          ? _.createElement(
               _,
-              null,
-              _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _,
-              null,
+              {
+                className: _.TopDestinations,
+              },
               _.createElement(
                 _,
+                null,
+                (0, _._)("#Menu_Section_Browse_BrowseTop"),
+              ),
+              _.createElement(
+                _._,
                 {
-                  href: "explore/new/",
+                  className: _.BrowseContentGrid,
                 },
                 _.createElement(
-                  "div",
-                  {
-                    className: _.ButtonLabel,
-                  },
-                  (0, _._)("#Menu_Section_Browse_NewReleases"),
+                  _,
+                  null,
+                  _.createElement(
+                    _,
+                    {
+                      href: "",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      "Store Home",
+                    ),
+                  ),
+                  _.createElement(
+                    _,
+                    {
+                      href: "greatondeck/",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      "Great on Deck",
+                    ),
+                  ),
+                  _.createElement(
+                    _,
+                    {
+                      href: "explore/new/",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      (0, _._)("#Menu_Section_Browse_NewReleases"),
+                    ),
+                  ),
+                  _.createElement(_, null),
+                ),
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(_, null),
+                  _.createElement(_, null),
                 ),
               ),
-              _.createElement(_, null),
-              _ &&
+            )
+          : _.createElement(
+              _,
+              {
+                className: _.TopDestinations,
+              },
+              _.createElement(
+                _,
+                null,
+                (0, _._)("#Menu_Section_Browse_BrowseTop"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _.BrowseContentGrid,
+                },
                 _.createElement(
                   _,
-                  {
-                    href: _.url_path,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ButtonLabel,
-                    },
-                    (0, _._)("#Menu_Section_Browse_FreeToPlay"),
-                  ),
+                  null,
+                  _.createElement(_, null),
+                  _.createElement(_, null),
                 ),
-              _ &&
                 _.createElement(
                   _,
-                  {
-                    href: _.url_path,
-                  },
+                  null,
                   _.createElement(
-                    "div",
+                    _,
                     {
-                      className: _.ButtonLabel,
+                      href: "explore/new/",
                     },
-                    _.display_name,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      (0, _._)("#Menu_Section_Browse_NewReleases"),
+                    ),
                   ),
+                  _.createElement(_, null),
+                  _ &&
+                    _.createElement(
+                      _,
+                      {
+                        href: _.url_path,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ButtonLabel,
+                        },
+                        (0, _._)("#Menu_Section_Browse_FreeToPlay"),
+                      ),
+                    ),
+                  _ &&
+                    _.createElement(
+                      _,
+                      {
+                        href: _.url_path,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ButtonLabel,
+                        },
+                        _.display_name,
+                      ),
+                    ),
                 ),
-            ),
-          ),
-        );
+              ),
+            );
       }
       const _ = 3,
         _ = 3;
@@ -3072,16 +3144,11 @@
       }
       function _() {
         const { data: _ } = _(),
-          { data: _ } = _(
-            {
-              count: 10,
-            },
-            _,
-          );
+          _ = _ && _ > 0 ? "wishlist/?min_discount=any" : "wishlist/";
         return _.createElement(
           _,
           {
-            href: "wishlist/?min_discount=any",
+            href: _,
           },
           _.createElement(
             "div",
@@ -3817,6 +3884,9 @@
             _.createElement(_, null),
           ),
         );
+      }
+      function _() {
+        return (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(), null;
       }
       function _() {
         const { data: _ } = (0, _._)(_),
@@ -4581,6 +4651,7 @@
           case "categories":
             return _.createElement(_, null);
           case "hardware":
+            return _.createElement(_, null);
           case "waystoplay":
           case "specialsections":
           case "more":
@@ -6127,7 +6198,7 @@
           #a;
           #i;
           #s;
-          #o;
+          #c;
           constructor(_, _, _) {
             super(),
               (this.#e = _),
@@ -6141,7 +6212,7 @@
             1 === this.listeners.size &&
               this.#a.forEach((_) => {
                 _.subscribe((_) => {
-                  this.#c(_, _);
+                  this.#o(_, _);
                 });
               });
           }
@@ -6175,7 +6246,7 @@
                     }),
                     _(_, _).forEach((_) => {
                       _.subscribe((_) => {
-                        this.#c(_, _);
+                        this.#o(_, _);
                       });
                     }),
                     this.#u()));
@@ -6211,9 +6282,9 @@
           }
           #m(_, _) {
             return _
-              ? ((this.#i && this.#t === this.#o && _ === this.#s) ||
+              ? ((this.#i && this.#t === this.#c && _ === this.#s) ||
                   ((this.#s = _),
-                  (this.#o = this.#t),
+                  (this.#c = this.#t),
                   (this.#i = (0, _._)(this.#i, _(_)))),
                 this.#i)
               : _;
@@ -6251,7 +6322,7 @@
               )
             );
           }
-          #c(_, _) {
+          #o(_, _) {
             const _ = this.#a.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {

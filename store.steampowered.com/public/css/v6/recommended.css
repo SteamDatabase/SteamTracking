@@ -2736,7 +2736,7 @@ body.recommendgame #review_create h2  {
 	display: none;
 }
 
-.review_recent_events.has_events {
+#review_recent_events_container.review_recent_events.has_events {
 	display: flex;
 }
 
@@ -3396,10 +3396,18 @@ body.v6 h2.morelike_section_divider
 .review_language_outliers_group_languages > .languages {
 	flex: 1;
 	flex-wrap: wrap;
-	display: flex;
-	margin-right: 30px;
+	display: none;
 	color: #acb2b8;
 	gap: 4px;
+	justify-content: flex-end;
+}
+.review_language_outliers_group_languages > .languages.expanded {
+	display: flex;
+}
+.review_language_outliers_group_languages > .expand_languages_btn {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
 }
 .review_language_outliers_group_languages > .languages span {
 	background: rgba(255,255,255,0.1);
@@ -3413,6 +3421,7 @@ body.v6 h2.morelike_section_divider
 }
 .review_language_outliers_group_languages > .score {
 	color: #acb2b8;
+	margin-right: 30px;
 }
 
 .review_language_outliers,
@@ -3443,10 +3452,6 @@ body.v6 h2.morelike_section_divider
 }
 .review_language_outliers img {
 	margin-bottom: -10px;
-}
-.review_language_outliers.vo {
-	border: 2px solid #ff6f6f;
-	display: none;
 }
 .review_language_outliers .explanation {
 	margin-left: 10px;

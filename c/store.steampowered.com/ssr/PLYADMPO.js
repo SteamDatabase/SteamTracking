@@ -6575,50 +6575,93 @@ function _() {
   let { data: _ } = _(),
     _ = _?.get("freetoplay"),
     _ = _?.get("demos");
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      (0, _.jsx)(_, {
-        children: _("#Menu_Section_Browse_BrowseTop"),
-      }),
-      (0, _.jsxs)(_, {
+  return _()
+    ? (0, _.jsxs)(_, {
         className: _,
         children: [
-          (0, _.jsxs)(_, {
-            children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+          (0, _.jsx)(_, {
+            children: _("#Menu_Section_Browse_BrowseTop"),
           }),
           (0, _.jsxs)(_, {
+            className: _,
             children: [
-              (0, _.jsx)(_, {
-                href: "explore/new/",
-                children: (0, _.jsx)("div", {
-                  className: _,
-                  children: _("#Menu_Section_Browse_NewReleases"),
-                }),
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    href: "",
+                    children: (0, _.jsx)("div", {
+                      className: _,
+                      children: "Store Home",
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    href: "greatondeck/",
+                    children: (0, _.jsx)("div", {
+                      className: _,
+                      children: "Great on Deck",
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    href: "explore/new/",
+                    children: (0, _.jsx)("div", {
+                      className: _,
+                      children: _("#Menu_Section_Browse_NewReleases"),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {}),
+                ],
               }),
-              (0, _.jsx)(_, {}),
-              _ &&
-                (0, _.jsx)(_, {
-                  href: _.url_path,
-                  children: (0, _.jsx)("div", {
-                    className: _,
-                    children: _("#Menu_Section_Browse_FreeToPlay"),
-                  }),
-                }),
-              _ &&
-                (0, _.jsx)(_, {
-                  href: _.url_path,
-                  children: (0, _.jsx)("div", {
-                    className: _,
-                    children: _.display_name,
-                  }),
-                }),
+              (0, _.jsxs)(_, {
+                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+              }),
             ],
           }),
         ],
-      }),
-    ],
-  });
+      })
+    : (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            children: _("#Menu_Section_Browse_BrowseTop"),
+          }),
+          (0, _.jsxs)(_, {
+            className: _,
+            children: [
+              (0, _.jsxs)(_, {
+                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+              }),
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_, {
+                    href: "explore/new/",
+                    children: (0, _.jsx)("div", {
+                      className: _,
+                      children: _("#Menu_Section_Browse_NewReleases"),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {}),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      href: _.url_path,
+                      children: (0, _.jsx)("div", {
+                        className: _,
+                        children: _("#Menu_Section_Browse_FreeToPlay"),
+                      }),
+                    }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      href: _.url_path,
+                      children: (0, _.jsx)("div", {
+                        className: _,
+                        children: _.display_name,
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      });
 }
 var _ = 3,
   _ = 3;
@@ -6706,14 +6749,9 @@ function _() {
 }
 function _() {
   let { data: _ } = _(),
-    { data: _ } = _(
-      {
-        count: 10,
-      },
-      _,
-    );
+    _ = _ && _ > 0 ? "wishlist/?min_discount=any" : "wishlist/";
   return (0, _.jsx)(_, {
-    href: "wishlist/?min_discount=any",
+    href: _,
     children: (0, _.jsx)("div", {
       className: _,
       children: (0, _.jsxs)("div", {
@@ -7503,6 +7541,9 @@ function _() {
   });
 }
 function _() {
+  return _(_), _(_), _(_), _(), null;
+}
+function _() {
   let { data: _ } = _(_),
     { data: _ } = _(_),
     { data: _ } = _(_),
@@ -8229,7 +8270,7 @@ function _(_) {
     case "categories":
       return (0, _.jsx)(_, {});
     case "hardware":
-      return null;
+      return (0, _.jsx)(_, {});
     case "waystoplay":
       return null;
     case "specialsections":

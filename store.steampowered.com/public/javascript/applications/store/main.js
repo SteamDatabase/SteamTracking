@@ -4671,6 +4671,7 @@
         }
         SetDOMFocusAndScroll(e, t) {
           this.UpdateParentActiveChild(),
+            this.m_Tree.OnChildActivated(e),
             this.m_Tree.BIsActiveFocus()
               ? ((0, a.wT)(
                   !this.m_Tree.BUseVirtualFocus(),
@@ -4743,8 +4744,7 @@
                           inline: "nearest",
                         });
               }
-            })(this, t),
-            this.m_Tree.OnChildActivated(e);
+            })(this, t);
         }
       }
       (0, i.Cg)([o.o], N.prototype, "OnDOMFocus", null),

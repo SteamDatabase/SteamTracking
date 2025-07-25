@@ -3134,6 +3134,7 @@ var _ = ((_) => (
     }
     SetDOMFocusAndScroll(_, _) {
       this.UpdateParentActiveChild(),
+        this.m_Tree.OnChildActivated(_),
         this.m_Tree.BIsActiveFocus()
           ? (_(
               !this.m_Tree.BUseVirtualFocus(),
@@ -3146,8 +3147,7 @@ var _ = ((_) => (
             _(
               `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
             ),
-        _(this, _),
-        this.m_Tree.OnChildActivated(_);
+        _(this, _);
     }
   };
 _([_], _.prototype, "OnDOMFocus", 1),
