@@ -507,7 +507,7 @@
           }),
         );
       }
-      function L() {
+      function C() {
         const { currentValues: e, fnSetValue: t } = I(),
           i = a.useId();
         return a.createElement(
@@ -578,7 +578,7 @@
           }),
         );
       }
-      function C() {
+      function L() {
         return a.createElement(
           "div",
           { className: f.WizardContainer },
@@ -1020,7 +1020,7 @@
               () =>
                 e
                   ? [T]
-                  : [W, z, v, L, C, w, h, t ? N : void 0, T].filter((e) => !!e),
+                  : [W, z, v, C, L, w, h, t ? N : void 0, T].filter((e) => !!e),
               [e, t],
             );
           })(
@@ -1196,24 +1196,25 @@
       var P = i(70019),
         R = i.n(P);
       function K(e) {
-        const { isMultiplayer: t, ...i } = e,
-          s = Object.entries(i).some(
+        const { isMultiplayer: t, bWizardCompleted: i, ...s } = e,
+          n = Object.entries(s).some(
             ([e, t]) => e.startsWith("bAccessibility") && t,
           ),
-          [n, c] = a.useState(0);
+          [c, r] = a.useState(0);
         return a.createElement(
           a.Fragment,
           null,
-          0 !== n &&
+          0 !== c &&
             a.createElement(x, {
-              editMode: 2 === n,
-              close: () => c(0),
-              features: i,
+              editMode: 2 === c,
+              close: () => r(0),
+              features: s,
               isMultiplayer: t,
             }),
           a.createElement(G, {
-            bHasAnyAccessibilityFeatures: s,
-            setModalState: c,
+            bWizardCompleted: i,
+            bHasAnyAccessibilityFeatures: n,
+            setModalState: r,
             features: e,
           }),
         );
@@ -1221,16 +1222,18 @@
       function G(e) {
         const {
           bHasAnyAccessibilityFeatures: t,
-          setModalState: i,
-          features: s,
+          bWizardCompleted: i,
+          setModalState: s,
+          features: n,
         } = e;
-        return t
+        return t || i
           ? a.createElement(U, {
-              onEdit: () => i(2),
-              onStart: () => i(1),
-              features: s,
+              bHasAnyAccessibilityFeatures: t,
+              onEdit: () => s(2),
+              onStart: () => s(1),
+              features: n,
             })
-          : a.createElement(j, { onStart: () => i(1) });
+          : a.createElement(j, { onStart: () => s(1) });
       }
       function j(e) {
         return a.createElement(
@@ -1257,9 +1260,14 @@
           a.createElement(
             s.a3,
             { className: R().AccessibilityFeatureDescription },
-            (0, c.we)("#App_Landing_AccessibilityFeatures_Summary"),
+            e.bHasAnyAccessibilityFeatures
+              ? (0, c.we)("#App_Landing_AccessibilityFeatures_Summary")
+              : (0, c.we)(
+                  "#App_Landing_AccessibilityFeatures_Summary_NoFeatures",
+                ),
           ),
-          a.createElement(q, { features: e.features, onEdit: e.onEdit }),
+          e.bHasAnyAccessibilityFeatures &&
+            a.createElement(q, { features: e.features, onEdit: e.onEdit }),
           a.createElement(
             "div",
             { className: R().ButtonRow },

@@ -1750,6 +1750,7 @@
     "App_Landing_AccessibilityFeatures_WizardPrompt_StartButton": "Start Wizard",
     "App_Landing_AccessibilityFeatures_WizardPrompt_Desc": "To help players find games that meet their accessibility needs, please answer some questions about accessibility features in your game.",
     "App_Landing_AccessibilityFeatures_Summary": "Based on what you've told us about your accessibility features, Steam will show the following expandable list for customers:",
+    "App_Landing_AccessibilityFeatures_Summary_NoFeatures": "Based on what you've told us, your game doesn't have any of Steam's supported accessibility features.",
     "App_Landing_AccessibilityFeatures_Wizard_Title": "Accessibility Feature Wizard",
     "App_Landing_AccessibilityFeatures_Wizard_Gameplay": "Gameplay",
     "App_Landing_AccessibilityFeatures_Wizard_Gameplay_Instructions": "For details about gameplay accessibility features, consult the <1>Accessibility Features Steamworks Documentation</1>.",

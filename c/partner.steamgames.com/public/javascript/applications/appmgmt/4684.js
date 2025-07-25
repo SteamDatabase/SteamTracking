@@ -1325,8 +1325,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { isMultiplayer: _, ...__webpack_require__ } = _,
-          _ = Object.entries(__webpack_require__).some(
+        const {
+            isMultiplayer: _,
+            bWizardCompleted: __webpack_require__,
+            ..._
+          } = _,
+          _ = Object.entries(_).some(
             ([_, _]) => _.startsWith("bAccessibility") && _,
           ),
           [_, _] = _.useState(0);
@@ -1337,10 +1341,11 @@
             _.createElement(_, {
               editMode: 2 === _,
               close: () => _(0),
-              features: __webpack_require__,
+              features: _,
               isMultiplayer: _,
             }),
           _.createElement(_, {
+            bWizardCompleted: __webpack_require__,
             bHasAnyAccessibilityFeatures: _,
             setModalState: _,
             features: _,
@@ -1350,17 +1355,19 @@
       function _(_) {
         const {
           bHasAnyAccessibilityFeatures: _,
-          setModalState: __webpack_require__,
+          bWizardCompleted: __webpack_require__,
+          setModalState: _,
           features: _,
         } = _;
-        return _
+        return _ || __webpack_require__
           ? _.createElement(_, {
-              onEdit: () => __webpack_require__("chunkid"),
-              onStart: () => __webpack_require__("chunkid"),
+              bHasAnyAccessibilityFeatures: _,
+              onEdit: () => _(2),
+              onStart: () => _(1),
               features: _,
             })
           : _.createElement(_, {
-              onStart: () => __webpack_require__("chunkid"),
+              onStart: () => _(1),
             });
       }
       function _(_) {
@@ -1395,12 +1402,17 @@
             {
               className: _().AccessibilityFeatureDescription,
             },
-            (0, _._)("#App_Landing_AccessibilityFeatures_Summary"),
+            _.bHasAnyAccessibilityFeatures
+              ? (0, _._)("#App_Landing_AccessibilityFeatures_Summary")
+              : (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Summary_NoFeatures",
+                ),
           ),
-          _.createElement(_, {
-            features: _.features,
-            onEdit: _.onEdit,
-          }),
+          _.bHasAnyAccessibilityFeatures &&
+            _.createElement(_, {
+              features: _.features,
+              onEdit: _.onEdit,
+            }),
           _.createElement(
             "div",
             {
