@@ -12762,7 +12762,6 @@
                 _._.event_start,
               )))
           : __webpack_require__.SetEarliestAllowedStartTime(void 0),
-          __webpack_require__.SetPushSourceToCrowdInAutomatically(_),
           __webpack_require__.SetSteamAwardNomineeVoteIDs(
             _.steam_award_category_voteids,
           ),
@@ -12783,7 +12782,7 @@
           }
         }
         onCategoryChoice(_) {
-          _(this.props, _), this.props.onCategoryChosen();
+          _(this.props), this.props.onCategoryChosen();
         }
         OnMouseEnter(_) {
           _.preventDefault(),
@@ -12905,8 +12904,7 @@
             ? this.setState({
                 expanded: !this.state.expanded,
               })
-            : this.props.type &&
-              (_(this.props, _), this.props.onCategoryChosen());
+            : this.props.type && (_(this.props), this.props.onCategoryChosen());
         }
         render() {
           const _ = _(_._.GetEditModel(), this.props.type, this.props.tags),

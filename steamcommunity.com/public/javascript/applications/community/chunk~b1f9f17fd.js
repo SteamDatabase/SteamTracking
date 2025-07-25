@@ -11744,7 +11744,6 @@
               a.SetVisibilityStartTime(e.earliestAllowedStartTime),
               a.SetVisibilityPublishingSetup(i.Fl.event_start)))
           : a.SetEarliestAllowedStartTime(void 0),
-          a.SetPushSourceToCrowdInAutomatically(t),
           a.SetSteamAwardNomineeVoteIDs(e.steam_award_category_voteids),
           a.SetLatestAllowedEndTime(e.latestAllowedEndTime),
           a.SetActionEndTime(e.actionEndTime);
@@ -11763,7 +11762,7 @@
           }
         }
         onCategoryChoice(e) {
-          B(this.props, e), this.props.onCategoryChosen();
+          B(this.props), this.props.onCategoryChosen();
         }
         OnMouseEnter(e) {
           e.preventDefault(),
@@ -11868,8 +11867,7 @@
         ToggleExpand(e) {
           this.props.subCategories
             ? this.setState({ expanded: !this.state.expanded })
-            : this.props.type &&
-              (B(this.props, e), this.props.onCategoryChosen());
+            : this.props.type && (B(this.props), this.props.onCategoryChosen());
         }
         render() {
           const e = D(r.mh.GetEditModel(), this.props.type, this.props.tags),
