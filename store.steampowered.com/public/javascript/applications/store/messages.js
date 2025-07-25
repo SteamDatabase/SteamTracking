@@ -5318,7 +5318,9 @@
           )
         );
       }
-      const Ie = s.lazy(() => r.e(8287).then(r.bind(r, 79194)));
+      const Ie = s.lazy(() =>
+        Promise.all([r.e(5976), r.e(8287)]).then(r.bind(r, 79194)),
+      );
       function ke(e) {
         const { message: t, active: r, preview: n } = e,
           c = (0, a.sf)(l.TS.LANGUAGE),

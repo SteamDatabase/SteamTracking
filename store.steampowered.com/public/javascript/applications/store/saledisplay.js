@@ -234,34 +234,6 @@
         TopLevelCategory: "_2ZYjRLgkQLHW5_cstUffIp",
       };
     },
-    12447: (e, t, n) => {
-      "use strict";
-      n.d(t, { u: () => c });
-      var a = n(8871),
-        r = n(90626),
-        o = n(78327),
-        l = n(85585),
-        i = n(7445),
-        s = n(87133);
-      const c = r.forwardRef(function (e, t) {
-        const { children: n, navTreeRef: c, ...u } = e,
-          m = r.useRef(),
-          g = (0, a.Ue)(m, c),
-          d = (0, o.Qn)(),
-          p = (0, s.AO)("__nav_tree_root");
-        return r.createElement(
-          l.B2,
-          {
-            ...u,
-            navTreeRef: g,
-            ref: t,
-            parentEmbeddedNavTree: p,
-            disabledRoot: !d,
-          },
-          r.createElement(i.q, { disableFocusRing: !d }, n),
-        );
-      });
-    },
     84746: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => m });
@@ -1179,7 +1151,7 @@
           bSupportsSticky: !0,
         });
       }
-      function R(e) {
+      function O(e) {
         const { event: t, bIsPreview: n } = e;
         let a = t.jsondata.sale_background_video_webm,
           o = t.jsondata.sale_background_video_mp4;
@@ -1220,7 +1192,7 @@
             : null
         );
       }
-      function O(e) {
+      function R(e) {
         const { event: t, language: n, children: o, bIsPreview: l } = e,
           i = r.useRef(),
           s = (0, a.q3)(() => t.GetImageURLWithFallback("sale_header", n)),
@@ -1272,7 +1244,7 @@
               },
               ref: i,
             },
-            r.createElement(R, { event: t, bIsPreview: l }),
+            r.createElement(O, { event: t, bIsPreview: l }),
             r.createElement(r.Fragment, null, o),
           ),
         );
@@ -1904,8 +1876,8 @@
           (e[(e.k_eInsertVideo = 4)] = "k_eInsertVideo");
       })(xe || (xe = {}));
       var Ue = n(60746),
-        Re = n(29347),
-        Oe = n(96236),
+        Oe = n(29347),
+        Re = n(96236),
         Pe = n(53732),
         Fe = n.n(Pe),
         He = n(49460);
@@ -2031,14 +2003,14 @@
           },
           d = () => {},
           _ = t.file_name ? t.file_name : "",
-          E = (0, Re.r)(n, _, String(t.imageid), Fe().Hilight),
+          E = (0, Oe.r)(n, _, String(t.imageid), Fe().Hilight),
           v = b.z.BIsClanImageVideo(t),
           I = l && !s && !v,
           w = l && !s && !v,
           h = l && !s && v,
           S = l && !s && !v;
         return r.createElement(
-          Oe.K,
+          Re.K,
           {
             placeholderHeight: "100vh",
             className: Fe().ImageWrapperContainer,
@@ -3279,7 +3251,7 @@
                       lt().MainPreviewBlock,
                     ),
                   },
-                  r.createElement(Ot, {
+                  r.createElement(Rt, {
                     eventModel: s,
                     clanSteamID: a,
                     fnOnLanguagePreviewChange: (e) => {
@@ -3521,12 +3493,12 @@
             { className: lt().SaleHeaderPreviewContainer },
             r.createElement("img", { style: { width: "100%" }, src: e.imgURL }),
           );
-      function Rt(e, t) {
+      function Ot(e, t) {
         let n = 0;
         for (let a = 0; a < 31; ++a) t(e, a)?.length > 0 && (n += 1);
         return n;
       }
-      function Ot(e) {
+      function Rt(e) {
         const {
             langOverride: t,
             artworkType: n,
@@ -3544,7 +3516,7 @@
           E = _
             ? b.z.GenerateURLFromHashAndExtAndLang(l, _, _e.wI.full, t)
             : "",
-          [v] = (0, a.q3)(() => [Rt(n, d)]);
+          [v] = (0, a.q3)(() => [Ot(n, d)]);
         return 0 == v
           ? r.createElement(
               "div",
@@ -4717,7 +4689,7 @@
                 S.Cs,
                 { location: o ? 2 : 0 },
                 r.createElement(
-                  O,
+                  R,
                   { event: n, language: l, bIsPreview: o },
                   I && r.createElement(an.Sn, null),
                   r.createElement(bn, { eventModel: n }),
@@ -5476,8 +5448,8 @@
         M = n(7193),
         x = n(39199),
         U = n(96971),
-        R = n(53677),
-        O = n(40353);
+        O = n(53677),
+        R = n(40353);
       function P(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
           a = (0, y.fy)(n);
@@ -5573,7 +5545,7 @@
           ? r.createElement(z, { nDoorIndex: t }, e.children)
           : null;
       }
-      const W = (0, N.y)(R.H);
+      const W = (0, N.y)(O.H);
       function q(e) {
         const t = Number.parseInt((0, m.j$)(e.args)),
           { event: n, showErrorInfo: a } = e.context;
@@ -5595,8 +5567,8 @@
                 promotionName: "",
                 appVisibilityTracker: null,
                 ePreviewMode: a
-                  ? O.S.EPreviewMode_Enabled
-                  : O.S.EPreviewMode_Disabled,
+                  ? R.S.EPreviewMode_Enabled
+                  : R.S.EPreviewMode_Disabled,
               }),
             );
           }

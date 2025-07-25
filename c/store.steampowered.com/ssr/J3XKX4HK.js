@@ -8251,10 +8251,12 @@ var _ = _(_()),
       [_, _] = _.useState(() => (_.IN_MOBILE_WEBVIEW ? new Set() : void 0)),
       _ = _(),
       { bSearchVisible: _, openSearch: _, closeSearch: _ } = _(),
-      _ = _.useCallback(() => _(void 0), []),
       _ = _.useCallback(() => {
-        _(void 0), _();
-      }, [_]),
+        _(void 0);
+      }, []),
+      _ = _.useCallback(() => {
+        _(), _();
+      }, [_, _]),
       _ = _.useCallback(
         (_) => {
           _((_) => (_ == _ ? void 0 : _)), _();
@@ -8331,6 +8333,7 @@ function _(_) {
     [_, _] = _.useState("visible"),
     [_, _] = _.useState(),
     [_, _] = _.useState(_),
+    [_, _] = _.useState(!1),
     _ = _.useRef();
   _.current || (_.current = new WeakMap()),
     (0, _.useLayoutEffect)(() => {
@@ -8363,13 +8366,13 @@ function _(_) {
         [_],
       ),
     ),
-    _ = _.useCallback(
-      (_) => {
-        _ || _();
-      },
-      [_],
-    ),
-    _ = _(_, _),
+    _ = _.useCallback((_) => _(_), []);
+  (0, _.useEffect)(() => {
+    if (!_ || _ || !_) return;
+    let _ = window.setTimeout(() => _(), 1);
+    return () => window.clearTimeout(_);
+  }, [_, _, _, _]);
+  let _ = _(_, _),
     _ = _(
       _.useCallback((_) => {
         _(_.contentBoxSize[0].blockSize);

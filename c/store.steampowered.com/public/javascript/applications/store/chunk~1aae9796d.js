@@ -26,6 +26,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ProgressBar: "_3szjUMH5QeRwtXAsLRcWt9",
         AnimateProgress: "_3DjdoQj5NoknowwV5t5JPN",
         loadingBarAnim: "_2SA1xV5w3BGirkDWosGYoX",
@@ -222,163 +230,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (!_[_]) return;
-        const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-        return `${_._.STORE_ITEM_BASE_URL}${_}`;
-      }
-      function _(_, _ = "full") {
-        let _ = "";
-        switch (_) {
-          case "thumb":
-            _ = ".116x65";
-            break;
-          case "600x338":
-            _ = ".600x338";
-            break;
-          case "1920x1080":
-            _ = ".1920x1080";
-            break;
-          case "full":
-            _ = "";
-            break;
-          default:
-            (0, _._)(_, `Invalid size: ${_}`);
-        }
-        return (
-          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
-        );
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (_)
-          return [
-            ...(_.all_ages_screenshots || []),
-            ...(!_ && _.mature_content_screenshots
-              ? _.mature_content_screenshots
-              : []),
-          ].sort((_, _) => _.ordinal - _.ordinal);
-      }
-      function _(_, _ = !1) {
-        const { data: __webpack_require__ } = (0, _._)({
-          appid: _,
-        });
-        return void 0 === __webpack_require__
-          ? void 0
-          : null === __webpack_require__
-            ? null
-            : _ && __webpack_require__.library_capsule_2x
-              ? _(__webpack_require__, "library_capsule_2x")
-              : __webpack_require__.library_capsule
-                ? _(__webpack_require__, "library_capsule")
-                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_ = 0, _ = void 0) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _, !1, _));
-      }
-      function _(_, _, __webpack_require__ = !1, _ = void 0) {
-        return {
-          queryKey: ["DiscoveryQueue", _, _],
-          queryFn: () =>
-            (async function (_, _, __webpack_require__ = !1, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_queue_type(_),
-                _.Body().set_country_code(_._.COUNTRY),
-                _.Body().set_rebuild_queue(__webpack_require__),
-                _.Body().set_rebuild_queue_if_stale(!0),
-                (_?.nSaleTagID || _?.strContentHubType) &&
-                  _.Body().set_store_page_filter(_(_));
-              const _ = await _._.GetDiscoveryQueue(_, _);
-              if (!_.BSuccess())
-                throw `Error loading discovery queue: ${_.GetErrorMessage()}`;
-              return _.Body().toObject();
-            })(_, _, __webpack_require__, _),
-          enabled: _._.logged_in,
-        };
-      }
-      function _(_) {
-        const _ = _?.nSaleTagID,
-          _ = _?.strContentHubType,
-          _ = _?.strContentHubCategory,
-          _ = _?.nContentHubTagID,
-          _ = _?.bDiscountsOnly,
-          _ = _?.bPrioritizeDiscounts,
-          _ = _?.strOptInName,
-          _ = _?.nOptInTagID,
-          _ = _?.nPruneTagID,
-          _ = _?.bOptInOnly,
-          _ = new _._();
-        if (_) {
-          const _ = new _._();
-          _.set_sale_tagid(_), _.set_sale_filter(_);
-        } else if (_) {
-          const _ = new _._();
-          if (
-            (_.set_hub_type(_),
-            "category" === _
-              ? _.set_hub_category(_)
-              : "tags" === _ && _.set_hub_tagid(_),
-            _ ? _.set_discount_filter(1) : _ && _.set_discount_filter(2),
-            _)
-          ) {
-            const _ = new _._();
-            _.set_name(_),
-              _.set_optin_tagid(_),
-              _.set_prune_tagid(_),
-              _.set_optin_only(_),
-              _.set_optin(_);
-          }
-          _.set_content_hub_filter(_);
-        }
-        return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
-        return (0, _._)(_, __webpack_require__) || String(_);
-      }
-      function _(_, _ = _._.LANGUAGE) {
-        const _ = (0, _._)(_, _);
-        return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3261,6 +3112,64 @@
               this.m_Items.push(_._.Get().ReadItem(_, _));
           this.m_metadata = _.Body().metadata().toObject();
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { gidEvent: _ } = _,
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useMemo)(() => {
+            if (
+              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const _ = (0, _._)(_._.LANGUAGE),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_banner,
+                  _,
+                ),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_mobile_banner,
+                  _,
+                );
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
+            }
+            return [null, null];
+          }, [_]);
+        return _?.length > 0 && _?.length > 0
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(__webpack_require__.GetSaleURL()),
+                className: _.Link,
+              },
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Big),
+              }),
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Mobile),
+              }),
+            )
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7911],
+  [1406],
   {
     17009: (e) => {
       e.exports = {
@@ -243,14 +243,6 @@
     66661: (e) => {
       e.exports = { ReferencedApps: "_1bfuawEqNMIto67VTkwdbE" };
     },
-    15392: (e) => {
-      e.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
     12443: (e) => {
       e.exports = {
         AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
@@ -273,8 +265,8 @@
         ed: () => te,
         jT: () => re,
         np: () => se,
-        Jo: () => Q,
-        cO: () => J,
+        Jo: () => J,
+        cO: () => Q,
         Vz: () => $,
         a8: () => ce,
         $d: () => ne,
@@ -1834,7 +1826,7 @@
         );
       }
       const Y = j.createContext(null);
-      function Q(e) {
+      function J(e) {
         const t = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardDefs_${e}`],
@@ -1847,7 +1839,7 @@
           enabled: e > 0,
         });
       }
-      function J() {
+      function Q() {
         const e = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardNominations_${U.iA.accountid}`],
@@ -1861,7 +1853,7 @@
         });
       }
       function $(e) {
-        const t = J();
+        const t = Q();
         return t.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -2084,7 +2076,7 @@
               initialData: () => X()?.item_definitions,
             });
           })(e),
-          n = Q(e);
+          n = J(e);
         if (!r.data || !n.data) return null;
         const a = n.data.votes.find((e) => e.voteid == t);
         return r.data.item_definitions?.find((e) => e.item_type == a.item_type);
@@ -2095,7 +2087,7 @@
     },
     41550: (e, t, r) => {
       "use strict";
-      r.d(t, { AD: () => Y, vA: () => re, He: () => J });
+      r.d(t, { AD: () => Y, vA: () => re, He: () => Q });
       var n = r(34629),
         a = r(14947),
         i = r(75844),
@@ -2164,12 +2156,11 @@
           r.e(6597),
           r.e(2715),
           r.e(4607),
-          r.e(2358),
+          r.e(7937),
           r.e(2797),
           r.e(7436),
           r.e(7403),
           r.e(9214),
-          r.e(5487),
           r.e(3270),
           r.e(4796),
           r.e(9063),
@@ -2387,7 +2378,7 @@
             const t = e.GID == this.props.initialEvent.GID,
               r = t;
             a.push(
-              s.createElement(J, {
+              s.createElement(Q, {
                 ref: t ? this.m_refScrollAnchor : null,
                 key: e.GID,
                 event: e,
@@ -2500,7 +2491,7 @@
                         ),
                       ),
                       !t &&
-                        s.createElement(Q, {
+                        s.createElement(J, {
                           loader: this.m_loader,
                           location: "top",
                         }),
@@ -2516,7 +2507,7 @@
                         a,
                       ),
                       !t &&
-                        s.createElement(Q, {
+                        s.createElement(J, {
                           loader: this.m_loader,
                           location: "bottom",
                         }),
@@ -2543,7 +2534,7 @@
         (0, n.Cg)([z.oI], Y.prototype, "OnTouchMove", null),
         (0, n.Cg)([z.oI], Y.prototype, "OnWheel", null),
         (Y = (0, n.Cg)([i.PA], Y));
-      const Q = (0, i.PA)((e) => {
+      const J = (0, i.PA)((e) => {
           let t = e.loader.GetNewerState(),
             r = e.loader.GetOlderState();
           return t == ee.Loading && r == ee.Loading
@@ -2559,7 +2550,7 @@
                 )
               : null;
         }),
-        J = s.forwardRef(function (e, t) {
+        Q = s.forwardRef(function (e, t) {
           const r = (0, k.Qn)(),
             [n, a] = (0, P.t7)(e.event.appid, { include_assets: !0 }),
             i = (0, K.Zj)(e.event.appid);
@@ -4646,59 +4637,6 @@
           { className: c().ReferencedApps },
           i.createElement(s.fh, { text: u, event: t }),
         );
-      }
-    },
-    69409: (e, t, r) => {
-      "use strict";
-      r.d(t, { m: () => u });
-      var n = r(90626),
-        a = r(22837),
-        i = r(38390),
-        s = r(52038),
-        o = r(61859),
-        l = r(61336),
-        c = r(78327),
-        m = r(15392),
-        d = r(27666);
-      function u(e) {
-        const { gidEvent: t } = e,
-          r = (0, i.RR)(t),
-          [u, p] = (0, n.useMemo)(() => {
-            if (
-              r?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
-            ) {
-              const e = (0, a.sf)(c.TS.LANGUAGE),
-                t = o.NT.GetWithFallback(
-                  r.jsondata.localized_sale_product_banner,
-                  e,
-                ),
-                n = o.NT.GetWithFallback(
-                  r.jsondata.localized_sale_product_mobile_banner,
-                  e,
-                );
-              if (t?.length > 0 && n?.length > 0)
-                return [
-                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
-                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, n),
-                ];
-            }
-            return [null, null];
-          }, [r]);
-        return u?.length > 0 && p?.length > 0
-          ? n.createElement(
-              "a",
-              { href: (0, l.k2)(r.GetSaleURL()), className: m.Link },
-              n.createElement("img", {
-                src: u,
-                className: (0, s.A)(m.Banner, m.Big),
-              }),
-              n.createElement("img", {
-                src: p,
-                className: (0, s.A)(m.Banner, m.Mobile),
-              }),
-            )
-          : null;
       }
     },
     18663: (e, t, r) => {

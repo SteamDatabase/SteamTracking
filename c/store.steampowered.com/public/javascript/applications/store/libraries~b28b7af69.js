@@ -32825,13 +32825,13 @@
           #E;
           #O = void 0;
           #K;
-          #Y;
+          #$;
           constructor(_, _) {
             super(),
               (this.#E = _),
               this.setOptions(_),
               this.bindMethods(),
-              this.#$();
+              this.#Y();
           }
           bindMethods() {
             (this.mutate = this.mutate.bind(this)),
@@ -32857,7 +32857,7 @@
             this.hasListeners() || this.#K?.removeObserver(this);
           }
           onMutationUpdate(_) {
-            this.#$(), this.#G(_);
+            this.#Y(), this.#G(_);
           }
           getCurrentResult() {
             return this.#O;
@@ -32865,12 +32865,12 @@
           reset() {
             this.#K?.removeObserver(this),
               (this.#K = void 0),
-              this.#$(),
+              this.#Y(),
               this.#G();
           }
           mutate(_, _) {
             return (
-              (this.#Y = _),
+              (this.#$ = _),
               this.#K?.removeObserver(this),
               (this.#K = this.#E
                 .getMutationCache()
@@ -32879,7 +32879,7 @@
               this.#K.execute(_)
             );
           }
-          #$() {
+          #Y() {
             const _ = this.#K?.state ?? (0, _._)();
             this.#O = {
               ..._,
@@ -32893,15 +32893,15 @@
           }
           #G(_) {
             _._.batch(() => {
-              if (this.#Y && this.hasListeners()) {
+              if (this.#$ && this.hasListeners()) {
                 const _ = this.#O.variables,
                   _ = this.#O.context;
                 "success" === _?.type
-                  ? (this.#Y.onSuccess?.(_.data, _, _),
-                    this.#Y.onSettled?.(_.data, null, _, _))
+                  ? (this.#$.onSuccess?.(_.data, _, _),
+                    this.#$.onSettled?.(_.data, null, _, _))
                   : "error" === _?.type &&
-                    (this.#Y.onError?.(_.error, _, _),
-                    this.#Y.onSettled?.(void 0, _.error, _, _));
+                    (this.#$.onError?.(_.error, _, _),
+                    this.#$.onSettled?.(void 0, _.error, _, _));
               }
               this.listeners.forEach((_) => {
                 _(this.#O);
@@ -32935,6 +32935,239 @@
           mutate: _,
           mutateAsync: _.mutate,
         };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.filter((_) => !_.includes(_));
+      }
+      var _ = class extends _._ {
+          #E;
+          #Q;
+          #f;
+          #X;
+          #n;
+          #Z;
+          #J;
+          #ee;
+          constructor(_, _, _) {
+            super(),
+              (this.#E = _),
+              (this.#X = _),
+              (this.#f = []),
+              (this.#n = []),
+              (this.#Q = []),
+              this.setQueries(_);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#n.forEach((_) => {
+                _.subscribe((_) => {
+                  this.#te(_, _);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#n.forEach((_) => {
+                _.destroy();
+              });
+          }
+          setQueries(_, _, _) {
+            (this.#f = _),
+              (this.#X = _),
+              _._.batch(() => {
+                const _ = this.#n,
+                  _ = this.#re(this.#f);
+                _.forEach((_) =>
+                  _.observer.setOptions(_.defaultedQueryOptions, _),
+                );
+                const _ = _.map((_) => _.observer),
+                  _ = _.map((_) => _.getCurrentResult()),
+                  _ = _.some((_, _) => _ !== _[_]);
+                (_.length !== _.length || _) &&
+                  ((this.#n = _),
+                  (this.#Q = _),
+                  this.hasListeners() &&
+                    (_(_, _).forEach((_) => {
+                      _.destroy();
+                    }),
+                    _(_, _).forEach((_) => {
+                      _.subscribe((_) => {
+                        this.#te(_, _);
+                      });
+                    }),
+                    this.#G()));
+              });
+          }
+          getCurrentResult() {
+            return this.#Q;
+          }
+          getQueries() {
+            return this.#n.map((_) => _.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#n;
+          }
+          getOptimisticResult(_, _) {
+            const _ = this.#re(_).map((_) =>
+              _.observer.getOptimisticResult(_.defaultedQueryOptions),
+            );
+            return [_, (_) => this.#ne(_ ?? _, _), () => this.#oe(_, _)];
+          }
+          #oe(_, _) {
+            const _ = this.#re(_);
+            return __webpack_require__.map((_, _) => {
+              const _ = _[_];
+              return _.defaultedQueryOptions.notifyOnChangeProps
+                ? _
+                : _.observer.trackResult(_, (_) => {
+                    __webpack_require__.forEach((_) => {
+                      _.observer.trackProp(_);
+                    });
+                  });
+            });
+          }
+          #ne(_, _) {
+            return _
+              ? ((this.#Z && this.#Q === this.#ee && _ === this.#J) ||
+                  ((this.#J = _),
+                  (this.#ee = this.#Q),
+                  (this.#Z = (0, _._)(this.#Z, _(_)))),
+                this.#Z)
+              : _;
+          }
+          #re(_) {
+            const _ = new Map(this.#n.map((_) => [_.options.queryHash, _])),
+              _ = [];
+            return (
+              _.forEach((_) => {
+                const _ = this.#E.defaultQueryOptions(_),
+                  _ = _.get(_.queryHash);
+                if (_)
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _,
+                  });
+                else {
+                  const _ = this.#n.find(
+                    (_) => _.options.queryHash === _.queryHash,
+                  );
+                  __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _ ?? new _._(this.#E, _),
+                  });
+                }
+              }),
+              __webpack_require__.sort(
+                (_, _) =>
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ) -
+                  _.findIndex(
+                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
+                  ),
+              )
+            );
+          }
+          #te(_, _) {
+            const _ = this.#n.indexOf(_);
+            -1 !== _ &&
+              ((this.#Q = (function (_, _, _) {
+                const _ = _.slice(0);
+                return (_[_] = _), _;
+              })(this.#Q, _, _)),
+              this.#G());
+          }
+          #G() {
+            if (this.hasListeners()) {
+              this.#Z !==
+                this.#ne(this.#oe(this.#Q, this.#f), this.#X?.combine) &&
+                _._.batch(() => {
+                  this.listeners.forEach((_) => {
+                    _(this.#Q);
+                  });
+                });
+            }
+          }
+        },
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ queries: _, ..._ }, _) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => {
+                const _ = _.defaultQueryOptions(_);
+                return (
+                  (_._optimisticResults = _ ? "isRestoring" : "optimistic"), _
+                );
+              }),
+            [_, _, _],
+          );
+        _.forEach((_) => {
+          (0, _._)(_), (0, _._)(_, _);
+        }),
+          (0, _._)(_);
+        const [_] = _.useState(() => new _(_, _, _)),
+          [_, _, _] = _.getOptimisticResult(_, _.combine);
+        _.useSyncExternalStore(
+          _.useCallback(
+            (_) => (_ ? _._ : _.subscribe(_._.batchCalls(_))),
+            [_, _],
+          ),
+          () => _.getCurrentResult(),
+          () => _.getCurrentResult(),
+        ),
+          _.useEffect(() => {
+            _.setQueries(_, _, {
+              listeners: !1,
+            });
+          }, [_, _, _]);
+        const _ = _.some((_, _) => (0, _._)(_[_], _))
+          ? _.flatMap((_, _) => {
+              const _ = _[_];
+              if (_) {
+                const _ = new _._(_, _);
+                if ((0, _._)(_, _)) return (0, _._)(_, _, _);
+                (0, _._)(_, _) && (0, _._)(_, _, _);
+              }
+              return [];
+            })
+          : [];
+        if (_.length > 0) throw Promise.all(_);
+        const _ = _.find((_, _) => {
+          const _ = _[_];
+          return (
+            _ &&
+            (0, _._)({
+              result: _,
+              errorResetBoundary: _,
+              throwOnError: _.throwOnError,
+              query: _.getQueryCache().get(_.queryHash),
+            })
+          );
+        });
+        if (_?.error) throw _.error;
+        return _(_());
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

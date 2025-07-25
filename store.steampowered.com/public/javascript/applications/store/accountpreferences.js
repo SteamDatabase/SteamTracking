@@ -119,34 +119,6 @@
         GooglePlayStoreImg: "_273YCymOUtX4V13BJ6p2uZ",
       };
     },
-    12447: (e, t, a) => {
-      "use strict";
-      a.d(t, { u: () => l });
-      var n = a(8871),
-        c = a(90626),
-        r = a(78327),
-        s = a(85585),
-        i = a(7445),
-        o = a(87133);
-      const l = c.forwardRef(function (e, t) {
-        const { children: a, navTreeRef: l, ..._ } = e,
-          m = c.useRef(),
-          u = (0, n.Ue)(m, l),
-          d = (0, r.Qn)(),
-          p = (0, o.AO)("__nav_tree_root");
-        return c.createElement(
-          s.B2,
-          {
-            ..._,
-            navTreeRef: u,
-            ref: t,
-            parentEmbeddedNavTree: p,
-            disabledRoot: !d,
-          },
-          c.createElement(i.q, { disableFocusRing: !d }, a),
-        );
-      });
-    },
     14336: (e, t, a) => {
       "use strict";
       a.d(t, { mK: () => g, DW: () => v, js: () => p, tb: () => E });
@@ -971,8 +943,8 @@
             : null;
         });
       var G = a(6813),
-        R = a(86227),
-        L = a.n(R),
+        L = a(86227),
+        R = a.n(L),
         F = a(56545),
         z = a(75487),
         B = a(20194),
@@ -1031,7 +1003,7 @@
               "div",
               {
                 className: (0, v.A)(
-                  L().PlaytestInvites,
+                  R().PlaytestInvites,
                   "account_settings_container",
                 ),
               },
@@ -1050,12 +1022,12 @@
                 ),
                 n.createElement(
                   "p",
-                  { className: L().Description },
+                  { className: R().Description },
                   (0, _.we)("#PlaytestInvites_Desc1"),
                 ),
                 n.createElement(
                   "p",
-                  { className: L().Description },
+                  { className: R().Description },
                   (0, _.we)("#PlaytestInvites_Desc2"),
                 ),
               ),
@@ -1075,10 +1047,10 @@
         );
         return n.createElement(
           "div",
-          { className: L().PlaytestInvite },
+          { className: R().PlaytestInvite },
           n.createElement(
             "div",
-            { className: L().InviteInfo },
+            { className: R().InviteInfo },
             n.createElement(
               "span",
               null,
@@ -1088,13 +1060,13 @@
           !i.TS.IN_MOBILE_WEBVIEW &&
             n.createElement(
               "div",
-              { className: L().StatusCtn },
+              { className: R().StatusCtn },
               n.createElement(
                 f.Z,
-                { className: L().Buttons },
+                { className: R().Buttons },
                 n.createElement(
                   d.jn,
-                  { className: L().WideButton, noFocusRing: !1, onClick: s },
+                  { className: R().WideButton, noFocusRing: !1, onClick: s },
                   (0, _.we)("#PlaytestInvites_ViewLibrary"),
                 ),
               ),
@@ -1146,12 +1118,12 @@
           n.createElement(
             f.Z,
             {
-              className: L().PlaytestInvite,
+              className: R().PlaytestInvite,
               navEntryPreferPosition: Q.iU.MAINTAIN_X,
             },
             n.createElement(
               "div",
-              { className: L().InviteInfo },
+              { className: R().InviteInfo },
               n.createElement(ce, { steamIDInviter: o }),
               n.createElement(ne, {
                 appStoreItem: c,
@@ -1160,13 +1132,13 @@
               }),
               n.createElement(
                 "div",
-                { className: L().TimeInvited },
+                { className: R().TimeInvited },
                 (0, _.Nm)(t.time_created ?? a),
               ),
             ),
             n.createElement(
               "div",
-              { className: L().StatusCtn },
+              { className: R().StatusCtn },
               s.isPending
                 ? n.createElement(X.t, {
                     size: "medium",
@@ -1175,7 +1147,7 @@
                   })
                 : n.createElement(
                     "div",
-                    { className: L().Buttons },
+                    { className: R().Buttons },
                     n.createElement(
                       d.jn,
                       { noFocusRing: !1, onClick: () => i(!0) },
@@ -1198,23 +1170,23 @@
             : null,
           s = t?.GetStorePageURL(),
           i = n.createElement("img", {
-            className: L().SmallCap,
+            className: R().SmallCap,
             src: t?.GetAssets().GetSmallCapsuleURL() ?? $.A,
           });
         return (
           c == Z && (r = "Valve"),
           n.createElement(
             "div",
-            { className: L().AppInfoCtn },
+            { className: R().AppInfoCtn },
             s ? n.createElement(g.Ii, { href: s }, " ", i, " ") : i,
             n.createElement(
               "div",
-              { className: L().AppDescription },
-              n.createElement("div", { className: L().AppName }, a),
+              { className: R().AppDescription },
+              n.createElement("div", { className: R().AppName }, a),
               r &&
                 n.createElement(
                   "div",
-                  { className: L().AppDetail },
+                  { className: R().AppDetail },
                   (0, _.we)("#PlaytestInvites_AppDeveloper", r),
                 ),
             ),
@@ -1236,8 +1208,8 @@
               "div",
               {
                 className: (0, v.A)(
-                  L().AvatarAndPersona,
-                  L().InviteDescription,
+                  R().AvatarAndPersona,
+                  R().InviteDescription,
                 ),
               },
               n.createElement(V.i8, {
@@ -1263,7 +1235,7 @@
       function se(e) {
         return n.createElement(
           "div",
-          { className: L().InviteDescription },
+          { className: R().InviteDescription },
           (0, _.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
@@ -1707,14 +1679,14 @@
       function Ge(e) {
         const { device: t, bActiveNow: a, msgTwoFactorStatus: c } = e;
         return c?.state > 0
-          ? n.createElement(Re, {
+          ? n.createElement(Le, {
               msgTwoFactorUsage: c.usages?.length > 0 ? c.usages[0] : null,
             })
           : a
             ? null
-            : n.createElement(Le, { device: t });
+            : n.createElement(Re, { device: t });
       }
-      function Re(e) {
+      function Le(e) {
         const { msgTwoFactorUsage: t } = e;
         if (!t || !t.time) return null;
         const a = (0, Ne.Nm)(t.time);
@@ -1805,7 +1777,7 @@
             )
           : null;
       }
-      function Le(e) {
+      function Re(e) {
         const { device: t } = e,
           a =
             t.first_seen?.time &&

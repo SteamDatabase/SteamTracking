@@ -3356,9 +3356,6 @@ body.v6 h2.morelike_section_divider
 .review_language_outliers_groups
 {
 	margin-top: 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
 }
 .review_language_outliers_group_languages {
 	display: flex;
@@ -3366,21 +3363,27 @@ body.v6 h2.morelike_section_divider
 	background-color: #474C57;
 	padding: 10px;
 	font-size: 13px;
-	margin-bottom: 8px;
 	border-radius: 4px;
+	align-items: center;
 }
 
 .outlier_languages_themselves {
 	background: rgba(0,0,0,0.2);
 	padding: 12px;
 	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.review_language_outliers_group_header {
+	margin-top: 30px;
 }
 
 .review_language_outliers_group_category {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	text-transform: capitalize;
 	margin-bottom: 5px;
 	font-size: 20px;
 }

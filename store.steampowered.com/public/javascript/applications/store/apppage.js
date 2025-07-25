@@ -342,34 +342,6 @@
         Zombies: "_3OCIBFe-fNBm1tXmL490m4",
       };
     },
-    12447: (e, t, n) => {
-      "use strict";
-      n.d(t, { u: () => c });
-      var a = n(8871),
-        r = n(90626),
-        l = n(78327),
-        o = n(85585),
-        i = n(7445),
-        s = n(87133);
-      const c = r.forwardRef(function (e, t) {
-        const { children: n, navTreeRef: c, ...u } = e,
-          m = r.useRef(),
-          d = (0, a.Ue)(m, c),
-          p = (0, l.Qn)(),
-          h = (0, s.AO)("__nav_tree_root");
-        return r.createElement(
-          o.B2,
-          {
-            ...u,
-            navTreeRef: d,
-            ref: t,
-            parentEmbeddedNavTree: h,
-            disabledRoot: !p,
-          },
-          r.createElement(i.q, { disableFocusRing: !p }, n),
-        );
-      });
-    },
     94057: (e, t, n) => {
       "use strict";
       n.d(t, { w: () => E });
@@ -2313,7 +2285,11 @@
               if (!navigator || void 0 === navigator.sendBeacon) return;
               let a = e.GetDASHPlayerStats().GetPlayerStatsSummary(),
                 r = e.GetAndCloseWatchedIntervals();
-              if (r.reduce((e, t) => e + (t[1] - t[0]), 0) < 5) return;
+              if (
+                r.reduce((e, t) => e + (t[1] - t[0]), 0) < 5 &&
+                n == fe.N_.Invalid
+              )
+                return;
               let l = {
                   strManifest: e.IsPlayingHLS() ? e.GetHLSURL() : e.GetMPDURL(),
                   watched: r,
@@ -5438,13 +5414,12 @@
             n.e(6597),
             n.e(2715),
             n.e(4607),
-            n.e(2358),
+            n.e(7937),
             n.e(5500),
             n.e(2797),
             n.e(7436),
             n.e(7403),
             n.e(9214),
-            n.e(5487),
             n.e(3270),
             n.e(4796),
             n.e(9063),
@@ -5458,7 +5433,7 @@
             n.e(3846),
             n.e(9105),
             n.e(6850),
-            n.e(7911),
+            n.e(1406),
             n.e(3027),
           ]).then(n.bind(n, 64940)),
         ),
@@ -5471,7 +5446,6 @@
             n.e(7436),
             n.e(7403),
             n.e(9214),
-            n.e(5487),
             n.e(3270),
             n.e(4796),
             n.e(9063),
@@ -5491,12 +5465,11 @@
             n.e(6597),
             n.e(2715),
             n.e(4607),
-            n.e(2358),
+            n.e(7937),
             n.e(2797),
             n.e(7436),
             n.e(7403),
             n.e(9214),
-            n.e(5487),
             n.e(3270),
             n.e(4796),
             n.e(9063),

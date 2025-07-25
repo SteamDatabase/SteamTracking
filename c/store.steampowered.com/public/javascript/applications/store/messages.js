@@ -6040,9 +6040,10 @@
         );
       }
       const _ = _.lazy(() =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { message: _, active: __webpack_require__, preview: _ } = _,

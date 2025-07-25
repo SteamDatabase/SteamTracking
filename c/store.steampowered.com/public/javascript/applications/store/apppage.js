@@ -349,42 +349,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return _.createElement(
-          _._,
-          {
-            ..._,
-            navTreeRef: _,
-            ref: _,
-            parentEmbeddedNavTree: _,
-            disabledRoot: !_,
-          },
-          _.createElement(
-            _._,
-            {
-              disableFocusRing: !_,
-            },
-            __webpack_require__,
-          ),
-        );
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2598,7 +2562,11 @@
               if (!navigator || void 0 === navigator.sendBeacon) return;
               let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary(),
                 _ = _.GetAndCloseWatchedIntervals();
-              if (_.reduce((_, _) => _ + (_[1] - _[0]), 0) < 5) return;
+              if (
+                _.reduce((_, _) => _ + (_[1] - _[0]), 0) < 5 &&
+                _ == _._.Invalid
+              )
+                return;
               let _ = {
                   strManifest: _.IsPlayingHLS() ? _.GetHLSURL() : _.GetMPDURL(),
                   watched: _,
@@ -6633,7 +6601,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -6656,12 +6623,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

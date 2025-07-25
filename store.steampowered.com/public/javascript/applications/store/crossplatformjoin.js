@@ -19,244 +19,244 @@
         Explanation: "_1isyHy9nKabM8wUFKUu-lm",
       };
     },
-    51706: (e, t, s) => {
+    51706: (e, n, a) => {
       "use strict";
-      s.d(t, {
-        mt: () => c,
-        Qs: () => E,
+      a.d(n, {
+        mt: () => o,
+        Qs: () => N,
         o0: () => f.o0,
-        eV: () => b.eV,
+        eV: () => v.eV,
         KG: () => f.KG,
         Ee: () => f.Ee,
-        x_: () => a.x_,
-        of: () => u,
+        x_: () => r.x_,
+        of: () => m,
         pY: () => f.pY,
-        EN: () => i.E,
+        EN: () => l.E,
       });
-      var n = s(90626),
-        r = s(10981),
-        i = s(21869),
-        a = s(2654),
-        o =
-          (s(72739),
-          s(48902),
-          s(60155),
-          s(25118),
-          s(84933),
-          s(52745),
-          s(13871),
-          s(78327));
-      s(28460);
-      function l(e) {
-        const { labelledBy: t } = e || {},
-          [s, r] = n.useState(null);
+      var t = a(90626),
+        s = a(10981),
+        l = a(21869),
+        r = a(2654),
+        i =
+          (a(72739),
+          a(48902),
+          a(60155),
+          a(25118),
+          a(84933),
+          a(52745),
+          a(13871),
+          a(78327));
+      a(28460);
+      function c(e) {
+        const { labelledBy: n } = e || {},
+          [a, s] = t.useState(null);
         return {
-          headerId: t || s,
-          context: n.useMemo(() => ({ setHeaderId: r }), []),
+          headerId: n || a,
+          context: t.useMemo(() => ({ setHeaderId: s }), []),
         };
       }
-      function c(e) {
+      function o(e) {
         const {
-            active: t,
-            onDismiss: s,
-            className: o,
-            modalClassName: c,
-            children: u,
-            ...m
+            active: n,
+            onDismiss: a,
+            className: i,
+            modalClassName: o,
+            children: m,
+            ...d
           } = e,
-          { headerId: h, context: d } = l({ labelledBy: e["aria-labelledby"] });
-        return n.createElement(
-          r.t6.Provider,
-          { value: d },
-          n.createElement(
-            i.E,
-            { active: t },
-            n.createElement(
-              a.x_,
-              { onEscKeypress: s, className: c },
-              n.createElement(
-                r.UC,
-                { role: "dialog", "aria-labelledby": h, className: o, ...m },
-                u,
+          { headerId: u, context: E } = c({ labelledBy: e["aria-labelledby"] });
+        return t.createElement(
+          s.t6.Provider,
+          { value: E },
+          t.createElement(
+            l.E,
+            { active: n },
+            t.createElement(
+              r.x_,
+              { onEscKeypress: a, className: o },
+              t.createElement(
+                s.UC,
+                { role: "dialog", "aria-labelledby": u, className: i, ...d },
+                m,
               ),
             ),
           ),
         );
       }
-      function u(e) {
-        const { className: t, children: s } = e;
-        return n.createElement(
-          i.E,
+      function m(e) {
+        const { className: n, children: a } = e;
+        return t.createElement(
+          l.E,
           { active: !0 },
-          n.createElement("div", { className: t }, s),
+          t.createElement("div", { className: n }, a),
         );
       }
-      s(81194);
-      var m = s(85585),
-        h = s(7445),
-        d = s(76217),
-        p = s(88843);
-      function E(e) {
-        const { children: t, navID: s, closeModal: r } = e,
-          i = n.createRef(),
-          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, o.Qn)() && !o.TS.IN_STEAMUI
-          ? n.createElement(
-              m.B2,
+      a(81194);
+      var d = a(85585),
+        u = a(7445),
+        E = a(76217),
+        p = a(88843);
+      function N(e) {
+        const { children: n, navID: a, closeModal: s } = e,
+          l = t.createRef(),
+          r = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+        return (0, i.Qn)() && !i.TS.IN_STEAMUI
+          ? t.createElement(
+              d.B2,
               {
-                navID: s,
-                navTreeRef: i,
-                onCancelButton: r,
+                navID: a,
+                navTreeRef: l,
+                onCancelButton: s,
                 className: p.GamepadOnlyModalWrapper,
               },
-              n.createElement(
-                h.q,
+              t.createElement(
+                u.q,
                 null,
-                n.createElement(
-                  d.Z,
+                t.createElement(
+                  E.Z,
                   {
                     className: p.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: a,
+                    onGamepadDirection: r,
                     focusableIfNoChildren: !0,
                   },
-                  t,
+                  n,
                 ),
               ),
             )
-          : n.createElement(n.Fragment, null, t);
+          : t.createElement(t.Fragment, null, n);
       }
-      var f = s(78395),
-        b = s(10411);
-      s(76222);
+      var f = a(78395),
+        v = a(10411);
+      a(76222);
     },
-    40917: (e, t, s) => {
+    40917: (e, n, a) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => M });
-      var n = s(90626),
-        r = s(9054),
-        i = s.n(r),
-        a = s(92757),
-        o = s(23809),
-        l = s(41762),
-        c = s(58632),
-        u = s.n(c),
-        m = s(20194),
-        h = s(56545),
-        d = s(37403),
-        p = s(30470),
-        E = s(22837);
+      a.r(n), a.d(n, { default: () => D });
+      var t = a(90626),
+        s = a(9054),
+        l = a.n(s),
+        r = a(92757),
+        i = a(23809),
+        c = a(41762),
+        o = a(58632),
+        m = a.n(o),
+        d = a(20194),
+        u = a(56545),
+        E = a(37403),
+        p = a(30470),
+        N = a(22837);
       let f;
-      const b = 864e5;
-      function v(e) {
+      const v = 864e5;
+      function h(e) {
         return `appinfo_${e}_${p.TS.LANGUAGE}`;
       }
-      function y(e) {
-        return Boolean(e && Date.now() - e.timeCached < b);
+      function S(e) {
+        return Boolean(e && Date.now() - e.timeCached < v);
       }
-      function g(e) {
-        const t = (0, o.KV)(),
-          s = (0, o.rX)();
-        return (0, m.I)({
+      function _(e) {
+        const n = (0, i.KV)(),
+          a = (0, i.rX)();
+        return (0, d.I)({
           queryKey: ["appinfo", e],
           queryFn: async () =>
-            (function (e, t) {
+            (function (e, n) {
               return (
                 f ||
-                  (f = new (u())(
-                    async (s) => {
-                      const n = new Map();
-                      (await Promise.all(s.map((e) => t.GetObject(v(e)))))
-                        .filter(y)
-                        .forEach(({ value: e }) => n.set(e.appid, e));
-                      const r = s.slice().filter((e) => !n.has(e));
-                      if (r.length) {
-                        const s = h.w.Init(d._z);
-                        s.Body().set_language((0, E.sf)(p.TS.LANGUAGE)),
-                          s.Body().set_appids(r);
-                        const i = await d.BE.GetApps(e, s);
-                        if (1 != i.GetEResult()) throw i.GetErrorMessage();
-                        i.Body()
+                  (f = new (m())(
+                    async (a) => {
+                      const t = new Map();
+                      (await Promise.all(a.map((e) => n.GetObject(h(e)))))
+                        .filter(S)
+                        .forEach(({ value: e }) => t.set(e.appid, e));
+                      const s = a.slice().filter((e) => !t.has(e));
+                      if (s.length) {
+                        const a = u.w.Init(E._z);
+                        a.Body().set_language((0, N.sf)(p.TS.LANGUAGE)),
+                          a.Body().set_appids(s);
+                        const l = await E.BE.GetApps(e, a);
+                        if (1 != l.GetEResult()) throw l.GetErrorMessage();
+                        l.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            t.StoreObject(v(e.appid), {
+                            n.StoreObject(h(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
-                              n.set(e.appid, e);
+                              t.set(e.appid, e);
                           });
                       }
-                      return s.map((e) => n.get(e));
+                      return a.map((e) => t.get(e));
                     },
                     { cache: !1 },
                   )),
                 f
               );
-            })(t, s).load(e),
-          staleTime: b,
+            })(n, a).load(e),
+          staleTime: v,
           enabled: !!e,
         }).data;
       }
-      var N = s(79908),
-        S = s(61859),
-        C = s(82477),
-        _ = s(10981),
-        I = s(22797),
-        O = s(78327);
-      function R(e) {
+      var I = a(79908),
+        g = a(61859),
+        y = a(82477),
+        b = a(10981),
+        C = a(22797),
+        w = a(78327);
+      function A(e) {
         return `?joinsessionid=${e}`;
       }
-      function w(e) {
-        return n.createElement(
-          _.$n,
+      function G(e) {
+        return t.createElement(
+          b.$n,
           {
-            className: i().JoinSessionButton,
+            className: l().JoinSessionButton,
             onClick: () =>
               (window.location.href =
-                `steam://launch/${e.steamAppId}` + R(e.sessionID)),
+                `steam://launch/${e.steamAppId}` + A(e.sessionID)),
           },
           e.children,
         );
       }
       function L(e) {
-        const t = (0, N.Vc)(),
-          s = (0, o.KV)();
-        return t.isSuccess
-          ? t.data?.sessions?.length > 0
-            ? n.createElement(
-                n.Fragment,
+        const n = (0, I.Vc)(),
+          a = (0, i.KV)();
+        return n.isSuccess
+          ? n.data?.sessions?.length > 0
+            ? t.createElement(
+                t.Fragment,
                 null,
-                n.createElement(
-                  _.JU,
-                  { className: i().AvailableSessionsText },
+                t.createElement(
+                  b.JU,
+                  { className: l().AvailableSessionsText },
                   "Available Steam Sessions:",
                 ),
-                n.createElement(
+                t.createElement(
                   "div",
-                  { className: i().SessionList },
-                  t.data?.sessions.map((t) =>
-                    n.createElement(
+                  { className: l().SessionList },
+                  n.data?.sessions.map((n) =>
+                    t.createElement(
                       "div",
-                      { className: i().Session, key: t.client_instanceid },
-                      n.createElement(
+                      { className: l().Session, key: n.client_instanceid },
+                      t.createElement(
                         "div",
-                        { className: i().MachineName },
-                        t.machine_name,
+                        { className: l().MachineName },
+                        n.machine_name,
                       ),
-                      n.createElement(
+                      t.createElement(
                         "div",
-                        { className: i().OsName },
-                        t.os_name,
+                        { className: l().OsName },
+                        n.os_name,
                       ),
-                      n.createElement(
-                        _.$n,
+                      t.createElement(
+                        b.$n,
                         {
-                          className: i().JoinSessionButton,
+                          className: l().JoinSessionButton,
                           onClick: () =>
-                            (0, N.o6)(
-                              s,
-                              t.client_instanceid,
+                            (0, I.o6)(
+                              a,
+                              n.client_instanceid,
                               e.steamAppId,
-                              R(e.sessionID),
+                              A(e.sessionID),
                             ),
                         },
                         "Launch Game",
@@ -265,330 +265,105 @@
                   ),
                 ),
               )
-            : n.createElement(
+            : t.createElement(
                 "div",
-                { className: i().Error },
+                { className: l().Error },
                 "No logged in sessions",
               )
-          : t.isFetching || t.isRefetching
-            ? n.createElement(I.t, null)
-            : n.createElement(
+          : n.isFetching || n.isRefetching
+            ? t.createElement(C.t, null)
+            : t.createElement(
                 "div",
-                { className: i().Error },
+                { className: l().Error },
                 "Error ",
-                t.error.message,
+                n.error.message,
               );
       }
-      function q(e) {
-        const t = g(e.steamAppId);
-        return t
-          ? n.createElement(
-              n.Fragment,
+      function B(e) {
+        const n = _(e.steamAppId);
+        return n
+          ? t.createElement(
+              t.Fragment,
               null,
-              n.createElement(
+              t.createElement(
                 "div",
-                { className: i().Header },
+                { className: l().Header },
                 "Join Game Session",
               ),
-              n.createElement(
+              t.createElement(
                 "div",
-                { className: i().Explanation },
+                { className: l().Explanation },
                 "You've been invited to join a game! Click below to launch ",
-                t.friendly_name || t.name,
+                n.friendly_name || n.name,
                 " on Steam and start playing.",
               ),
-              n.createElement(
+              t.createElement(
                 "div",
-                { className: i().SessionInfoCtr },
-                n.createElement("iframe", { src: e.sessionLiveDataUrl }),
+                { className: l().SessionInfoCtr },
+                t.createElement("iframe", { src: e.sessionLiveDataUrl }),
               ),
-              O.TS.IN_CLIENT
-                ? n.createElement(
+              w.TS.IN_CLIENT
+                ? t.createElement(
                     "div",
-                    { className: i().SectionCtr },
-                    n.createElement(w, { ...e }, "Launch Game"),
+                    { className: l().SectionCtr },
+                    t.createElement(G, { ...e }, "Launch Game"),
                   )
-                : n.createElement(
-                    n.Fragment,
+                : t.createElement(
+                    t.Fragment,
                     null,
-                    n.createElement(
+                    t.createElement(
                       "div",
-                      { className: i().SectionCtr },
-                      O.iA.logged_in
-                        ? n.createElement(L, { ...e })
-                        : n.createElement(
-                            n.Fragment,
+                      { className: l().SectionCtr },
+                      w.iA.logged_in
+                        ? t.createElement(L, { ...e })
+                        : t.createElement(
+                            t.Fragment,
                             null,
-                            n.createElement(
-                              _.JU,
+                            t.createElement(
+                              b.JU,
                               null,
                               "Login to join on another device",
                             ),
-                            n.createElement(
-                              _.$n,
-                              { onClick: C.vg },
-                              (0, S.we)("#Login_SignIn"),
+                            t.createElement(
+                              b.$n,
+                              { onClick: y.vg },
+                              (0, g.we)("#Login_SignIn"),
                             ),
                           ),
                     ),
-                    !O.TS.IN_MOBILE_WEBVIEW &&
-                      n.createElement(
+                    !w.TS.IN_MOBILE_WEBVIEW &&
+                      t.createElement(
                         "div",
-                        { className: i().SectionCtr },
-                        n.createElement(_.JU, null, "Or launch on this PC"),
-                        n.createElement(w, { ...e }, "Launch Game Here"),
+                        { className: l().SectionCtr },
+                        t.createElement(b.JU, null, "Or launch on this PC"),
+                        t.createElement(G, { ...e }, "Launch Game Here"),
                       ),
                   ),
             )
-          : n.createElement(I.t, null);
+          : t.createElement(C.t, null);
       }
-      function M() {
-        const e = (0, O.Tc)("multiplayersession_join", "application_config"),
-          t = new URLSearchParams((0, a.zy)().search).get("jws"),
-          { header: s, body: r } = (0, l.I3)(t) || { header: {}, body: {} };
-        let { steamAppId: o } = r;
-        const c = r[e.jws_sessionid_key],
-          u = r[e.jws_livedata_url_key];
+      function D() {
+        const e = (0, w.Tc)("multiplayersession_join", "application_config"),
+          n = new URLSearchParams((0, r.zy)().search).get("jws"),
+          { header: a, body: s } = (0, c.I3)(n) || { header: {}, body: {} };
+        let { steamAppId: i } = s;
+        const o = s[e.jws_sessionid_key],
+          m = s[e.jws_livedata_url_key];
         return (
-          "string" == typeof o && (o = parseInt(o)),
-          n.createElement(
+          "string" == typeof i && (i = parseInt(i)),
+          t.createElement(
             "div",
-            { className: i().JoinApp },
-            o && u && u
-              ? n.createElement(q, {
-                  steamAppId: o,
-                  sessionLiveDataUrl: u,
-                  sessionID: c,
+            { className: l().JoinApp },
+            i && m && m
+              ? t.createElement(B, {
+                  steamAppId: i,
+                  sessionLiveDataUrl: m,
+                  sessionID: o,
                 })
-              : n.createElement("div", null, "Invalid session link"),
+              : t.createElement("div", null, "Invalid session link"),
             " ",
           )
         );
-      }
-    },
-    54806: (e, t, s) => {
-      "use strict";
-      s.d(t, { E: () => f });
-      var n = s(90626),
-        r = s(86709),
-        i = s(45747),
-        a = s(74500),
-        o = s(57168);
-      function l(e, t) {
-        return e.filter((e) => !t.includes(e));
-      }
-      var c = class extends a.Q {
-          #e;
-          #t;
-          #s;
-          #n;
-          #r;
-          #i;
-          #a;
-          #o;
-          constructor(e, t, s) {
-            super(),
-              (this.#e = e),
-              (this.#n = s),
-              (this.#s = []),
-              (this.#r = []),
-              (this.#t = []),
-              this.setQueries(t);
-          }
-          onSubscribe() {
-            1 === this.listeners.size &&
-              this.#r.forEach((e) => {
-                e.subscribe((t) => {
-                  this.#l(e, t);
-                });
-              });
-          }
-          onUnsubscribe() {
-            this.listeners.size || this.destroy();
-          }
-          destroy() {
-            (this.listeners = new Set()),
-              this.#r.forEach((e) => {
-                e.destroy();
-              });
-          }
-          setQueries(e, t, s) {
-            (this.#s = e),
-              (this.#n = t),
-              r.j.batch(() => {
-                const e = this.#r,
-                  t = this.#c(this.#s);
-                t.forEach((e) =>
-                  e.observer.setOptions(e.defaultedQueryOptions, s),
-                );
-                const n = t.map((e) => e.observer),
-                  r = n.map((e) => e.getCurrentResult()),
-                  i = n.some((t, s) => t !== e[s]);
-                (e.length !== n.length || i) &&
-                  ((this.#r = n),
-                  (this.#t = r),
-                  this.hasListeners() &&
-                    (l(e, n).forEach((e) => {
-                      e.destroy();
-                    }),
-                    l(n, e).forEach((e) => {
-                      e.subscribe((t) => {
-                        this.#l(e, t);
-                      });
-                    }),
-                    this.#u()));
-              });
-          }
-          getCurrentResult() {
-            return this.#t;
-          }
-          getQueries() {
-            return this.#r.map((e) => e.getCurrentQuery());
-          }
-          getObservers() {
-            return this.#r;
-          }
-          getOptimisticResult(e, t) {
-            const s = this.#c(e).map((e) =>
-              e.observer.getOptimisticResult(e.defaultedQueryOptions),
-            );
-            return [s, (e) => this.#m(e ?? s, t), () => this.#h(s, e)];
-          }
-          #h(e, t) {
-            const s = this.#c(t);
-            return s.map((t, n) => {
-              const r = e[n];
-              return t.defaultedQueryOptions.notifyOnChangeProps
-                ? r
-                : t.observer.trackResult(r, (e) => {
-                    s.forEach((t) => {
-                      t.observer.trackProp(e);
-                    });
-                  });
-            });
-          }
-          #m(e, t) {
-            return t
-              ? ((this.#i && this.#t === this.#o && t === this.#a) ||
-                  ((this.#a = t),
-                  (this.#o = this.#t),
-                  (this.#i = (0, o.BH)(this.#i, t(e)))),
-                this.#i)
-              : e;
-          }
-          #c(e) {
-            const t = new Map(this.#r.map((e) => [e.options.queryHash, e])),
-              s = [];
-            return (
-              e.forEach((e) => {
-                const n = this.#e.defaultQueryOptions(e),
-                  r = t.get(n.queryHash);
-                if (r) s.push({ defaultedQueryOptions: n, observer: r });
-                else {
-                  const e = this.#r.find(
-                    (e) => e.options.queryHash === n.queryHash,
-                  );
-                  s.push({
-                    defaultedQueryOptions: n,
-                    observer: e ?? new i.$(this.#e, n),
-                  });
-                }
-              }),
-              s.sort(
-                (t, s) =>
-                  e.findIndex(
-                    (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
-                  ) -
-                  e.findIndex(
-                    (e) => e.queryHash === s.defaultedQueryOptions.queryHash,
-                  ),
-              )
-            );
-          }
-          #l(e, t) {
-            const s = this.#r.indexOf(e);
-            -1 !== s &&
-              ((this.#t = (function (e, t, s) {
-                const n = e.slice(0);
-                return (n[t] = s), n;
-              })(this.#t, s, t)),
-              this.#u());
-          }
-          #u() {
-            if (this.hasListeners()) {
-              this.#i !==
-                this.#m(this.#h(this.#t, this.#s), this.#n?.combine) &&
-                r.j.batch(() => {
-                  this.listeners.forEach((e) => {
-                    e(this.#t);
-                  });
-                });
-            }
-          }
-        },
-        u = s(75233),
-        m = s(22730),
-        h = s(43424),
-        d = s(19086),
-        p = s(44407),
-        E = s(19866);
-      function f({ queries: e, ...t }, s) {
-        const a = (0, u.jE)(s),
-          o = (0, m.w)(),
-          l = (0, h.h)(),
-          f = n.useMemo(
-            () =>
-              e.map((e) => {
-                const t = a.defaultQueryOptions(e);
-                return (
-                  (t._optimisticResults = o ? "isRestoring" : "optimistic"), t
-                );
-              }),
-            [e, a, o],
-          );
-        f.forEach((e) => {
-          (0, p.jv)(e), (0, d.LJ)(e, l);
-        }),
-          (0, d.wZ)(l);
-        const [b] = n.useState(() => new c(a, f, t)),
-          [v, y, g] = b.getOptimisticResult(f, t.combine);
-        n.useSyncExternalStore(
-          n.useCallback(
-            (e) => (o ? E.l : b.subscribe(r.j.batchCalls(e))),
-            [b, o],
-          ),
-          () => b.getCurrentResult(),
-          () => b.getCurrentResult(),
-        ),
-          n.useEffect(() => {
-            b.setQueries(f, t, { listeners: !1 });
-          }, [f, t, b]);
-        const N = v.some((e, t) => (0, p.EU)(f[t], e))
-          ? v.flatMap((e, t) => {
-              const s = f[t];
-              if (s) {
-                const t = new i.$(a, s);
-                if ((0, p.EU)(s, e)) return (0, p.iL)(s, t, l);
-                (0, p.nE)(e, o) && (0, p.iL)(s, t, l);
-              }
-              return [];
-            })
-          : [];
-        if (N.length > 0) throw Promise.all(N);
-        const S = v.find((e, t) => {
-          const s = f[t];
-          return (
-            s &&
-            (0, d.$1)({
-              result: e,
-              errorResetBoundary: l,
-              throwOnError: s.throwOnError,
-              query: a.getQueryCache().get(s.queryHash),
-            })
-          );
-        });
-        if (S?.error) throw S.error;
-        return y(g());
       }
     },
   },

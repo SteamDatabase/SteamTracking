@@ -1400,34 +1400,6 @@
         });
       });
     },
-    12447: (e, t, r) => {
-      "use strict";
-      r.d(t, { u: () => c });
-      var i = r(8871),
-        n = r(90626),
-        a = r(78327),
-        s = r(85585),
-        o = r(7445),
-        l = r(87133);
-      const c = n.forwardRef(function (e, t) {
-        const { children: r, navTreeRef: c, ...m } = e,
-          d = n.useRef(),
-          u = (0, i.Ue)(d, c),
-          p = (0, a.Qn)(),
-          g = (0, l.AO)("__nav_tree_root");
-        return n.createElement(
-          s.B2,
-          {
-            ...m,
-            navTreeRef: u,
-            ref: t,
-            parentEmbeddedNavTree: g,
-            disabledRoot: !p,
-          },
-          n.createElement(o.q, { disableFocusRing: !p }, r),
-        );
-      });
-    },
     84746: (e, t, r) => {
       "use strict";
       r.d(t, { N: () => d });
