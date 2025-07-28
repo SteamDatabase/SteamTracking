@@ -760,7 +760,7 @@
     },
     48333: (e, t, a) => {
       "use strict";
-      a.d(t, { Zn: () => z, N_: () => W, n_: () => q, Br: () => U });
+      a.d(t, { Zn: () => q, N_: () => W, n_: () => Z, Br: () => U });
       var n,
         i = a(34629),
         r = a(41735),
@@ -2094,7 +2094,7 @@
       var N = a(84933);
       const U = 5,
         O = "auto";
-      var x, W, j;
+      var x, W, j, z;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
@@ -2111,13 +2111,21 @@
         (function (e) {
           (e[(e.Absolute = 0)] = "Absolute"),
             (e[(e.FromAvailableStart = 1)] = "FromAvailableStart");
-        })(j || (j = {}));
-      class z {
+        })(j || (j = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.Success = 1)] = "Success"),
+            (e[(e.Timeout = 2)] = "Timeout"),
+            (e[(e.Gone = 3)] = "Gone"),
+            (e[(e.PlayerClosing = 4)] = "PlayerClosing");
+        })(z || (z = {}));
+      class q {
         m_elVideo = null;
         m_strMPD = "";
         m_strHLS = "";
         m_strCDNAuthURLParameters = null;
         m_bTimeoutAfterFailedDownload = !0;
+        m_bAlwaysStartWithSubtitles = !1;
         m_schUpdateMPD = new d.LU();
         m_xhrUpdateMPD;
         m_mpd;
@@ -2151,7 +2159,7 @@
         m_schFirstFrameThrottler = new d.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new d.LU();
-        m_watchedIntervals = new Z();
+        m_watchedIntervals = new $();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -2175,144 +2183,145 @@
         SetTimeoutAfterFailedDownload(e) {
           this.m_bTimeoutAfterFailedDownload = e;
         }
-        async PlayMPD(e, t, a, n) {
-          this.m_stats.StartingPlayback(),
-            (this.m_strMPD = e),
-            (this.m_strHLS = a),
-            (this.m_strCDNAuthURLParameters = t);
-          let i = await this.DownloadMPD();
-          if (!i) return;
-          if (((this.m_mpd = new H()), !this.m_mpd.BParse(i.data, e)))
-            return void this.CloseWithError(
-              W.PlaybackError,
-              "Failed to parse MPD file",
-              this.m_strMPD,
-            );
-          let r = (function (e) {
-            let t = "",
-              a = "",
-              n = "",
-              i = e.GetMainVideoAdaption();
-            i &&
-              i.rgRepresentations.length > 0 &&
-              ((t = i.rgRepresentations[0].strMimeType),
-              (a = i.rgRepresentations[0].strCodecs));
-            (i = e.GetMainAudioAdaption()),
-              i &&
-                i.rgRepresentations.length > 0 &&
-                (n = i.rgRepresentations[0].strCodecs);
-            return t && a
-              ? n
-                ? `${t}; codecs="${a}, ${n}`
-                : `${t}; codecs="${a}`
-              : "";
-          })(this.m_mpd);
-          if (
-            !r ||
-            !(function (e) {
-              let t = !1;
-              try {
-                t = MediaSource.isTypeSupported(e);
-              } catch (e) {}
-              return t;
-            })(r)
-          ) {
-            if (
-              !a ||
-              !(function (e) {
-                let t = e.canPlayType(
-                  'application/vnd.apple.mpegurl;codecs="avc1.64001f, mp4a.40.02"',
-                );
-                return "probably" === t || "maybe" === t;
-              })(this.m_elVideo)
-            )
-              return void this.OnMediaUnsupportedError(null, r);
-            this.m_bUseHLSManifest = !0;
-          }
-          if (
-            (this.DispatchEvent("valve-metadatachanged"),
-            this.IsLiveContent() &&
-              (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
-                this.m_schUpdateMPD.Schedule(
-                  1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
-                  this.UpdateMPD,
-                ),
-              this.CalcVideoStartRelativeToSystemClock(i.headers.date)),
-            this.IsLiveContent() || this.m_watchedIntervals.Enable(),
-            this.m_bUseHLSManifest)
-          )
-            return (
-              (this.m_elVideo.src = this.m_strHLS),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "loadedmetadata",
-                this.OnLoadedMetadataForHLS,
-              ),
-              this.m_listeners.AddEventListener(
-                document,
-                "visibilitychange",
-                this.OnVisibilityChangeForHLS,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "canplay",
-                this.OnVideoCanPlayHLS,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "play",
-                this.OnVideoPlay,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "seeking",
-                this.OnVideoSeeking,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "seeked",
-                this.OnVideoSeeked,
-              ),
-              this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "pause",
-                this.OnVideoPause,
-              ),
-              void this.m_listeners.AddEventListener(
-                this.m_elVideo,
-                "ended",
-                this.OnEndedForHLS,
-              )
-            );
-          this.BCreateLoaders()
-            ? (this.InitVideoControl(), this.InitTimedText(n))
-            : this.CloseWithError(
-                W.PlaybackError,
-                "Failed to create segment loaders",
-              );
+        SetAlwaysStartWithSubtitles(e) {
+          this.m_bAlwaysStartWithSubtitles = e;
         }
-        InitTimedText(e) {
-          (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((t) => {
-              let a = (0, l.sf)(_.TS.LANGUAGE);
+        async PlayMPD(e, t, a) {
+          (e = Array.isArray(e) ? e : [e]),
+            this.m_stats.StartingPlayback(),
+            (this.m_strCDNAuthURLParameters = a);
+          let n = null;
+          for (let t of e) {
+            let [e, i] = await this.DownloadMPD(t, a);
+            if (!i) {
+              let t =
+                e == z.Gone
+                  ? "Failed to download MPD: 410 Gone"
+                  : "Timed out downloading MPD";
+              return void this.CloseWithError(W.PlaybackError, t);
+            }
+            let r = new H();
+            if (!r.BParse(i.data, t))
+              return void this.CloseWithError(
+                W.PlaybackError,
+                "Failed to parse MPD file",
+                this.m_strMPD,
+              );
+            let s = K(r),
+              o = Y(s);
+            if (
+              ((n = {
+                strMPD: t,
+                mpd: r,
+                strServerTime: i.headers.date,
+                strCanPlay: s,
+                bCanPlay: o,
+              }),
+              o)
+            )
+              break;
+          }
+          if (n) {
+            if (
+              ((this.m_strMPD = n.strMPD), (this.m_mpd = n.mpd), !n.bCanPlay)
+            ) {
               if (
-                t.rgRepresentations.length > 0 &&
-                t.rgRepresentations[0].strClosedCaptionFile &&
-                t.strLanguage in c.bi
+                !t ||
+                !(function (e) {
+                  let t = e.canPlayType(
+                    'application/vnd.apple.mpegurl;codecs="avc1.64001f, mp4a.40.02"',
+                  );
+                  return "probably" === t || "maybe" === t;
+                })(this.m_elVideo)
+              )
+                return void this.OnMediaUnsupportedError(null, n.strCanPlay);
+              (this.m_strHLS = t), (this.m_bUseHLSManifest = !0);
+            }
+            if (
+              (this.DispatchEvent("valve-metadatachanged"),
+              this.IsLiveContent() &&
+                (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
+                  this.m_schUpdateMPD.Schedule(
+                    1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
+                    this.UpdateMPD,
+                  ),
+                this.CalcVideoStartRelativeToSystemClock(n.strServerTime)),
+              this.IsLiveContent() || this.m_watchedIntervals.Enable(),
+              this.m_bUseHLSManifest)
+            )
+              return (
+                (this.m_elVideo.src = this.m_strHLS),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "loadedmetadata",
+                  this.OnLoadedMetadataForHLS,
+                ),
+                this.m_listeners.AddEventListener(
+                  document,
+                  "visibilitychange",
+                  this.OnVisibilityChangeForHLS,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "canplay",
+                  this.OnVideoCanPlayHLS,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "play",
+                  this.OnVideoPlay,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "seeking",
+                  this.OnVideoSeeking,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "seeked",
+                  this.OnVideoSeeked,
+                ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "pause",
+                  this.OnVideoPause,
+                ),
+                void this.m_listeners.AddEventListener(
+                  this.m_elVideo,
+                  "ended",
+                  this.OnEndedForHLS,
+                )
+              );
+            this.BCreateLoaders()
+              ? (this.InitVideoControl(), this.InitTimedText())
+              : this.CloseWithError(
+                  W.PlaybackError,
+                  "Failed to create segment loaders",
+                );
+          } else this.CloseWithError(W.PlaybackError, "Invalid manifest");
+        }
+        InitTimedText() {
+          (this.m_nTimedText = 0),
+            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((e) => {
+              let t = (0, l.sf)(_.TS.LANGUAGE);
+              if (
+                e.rgRepresentations.length > 0 &&
+                e.rgRepresentations[0].strClosedCaptionFile &&
+                e.strLanguage in c.bi
               ) {
-                const n = document.createElement("track");
-                (n.kind = "subtitles"),
-                  (n.label = (0, c.we)(
-                    "#Language_" + (0, l.Lg)(c.bi[t.strLanguage]),
+                const a = document.createElement("track");
+                (a.kind = "subtitles"),
+                  (a.label = (0, c.we)(
+                    "#Language_" + (0, l.Lg)(c.bi[e.strLanguage]),
                   )),
-                  (n.srclang = t.strLanguage),
-                  (n.src = t.rgRepresentations[0].strClosedCaptionFile),
+                  (a.srclang = e.strLanguage),
+                  (a.src = e.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  (!e && 0 == a) ||
-                    c.bi[t.strLanguage] != a ||
-                    ((n.default = !0),
-                    (this.m_timedTextRepSelected = t.rgRepresentations[0])),
-                  this.m_elVideo.appendChild(n);
+                  (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
+                    c.bi[e.strLanguage] != t ||
+                    ((a.default = !0),
+                    (this.m_timedTextRepSelected = e.rgRepresentations[0])),
+                  this.m_elVideo.appendChild(a);
               }
             });
         }
@@ -2413,43 +2422,40 @@
         IsLiveContent() {
           return !!this.m_mpd && this.m_mpd.IsLiveContent();
         }
-        async DownloadMPD() {
-          if (this.m_xhrUpdateMPD)
-            return (0, m.wT)(!1, "Multiple MPD download requests"), null;
-          let e = performance.now();
-          for (; performance.now() - e < 3e4; ) {
-            let e = null;
+        async DownloadMPD(e, t) {
+          if (((t = t || ""), this.m_xhrUpdateMPD))
+            return (
+              (0, m.wT)(!1, "Multiple MPD download requests"), [z.Timeout, null]
+            );
+          let a = performance.now();
+          for (; performance.now() - a < 3e4; ) {
+            let a = null;
             try {
               this.m_xhrUpdateMPD = s().CancelToken.source();
-              const t =
-                this.m_strMPD +
-                (this.m_strCDNAuthURLParameters
-                  ? this.m_strCDNAuthURLParameters
-                  : "");
-              e = await s().get(t, { cancelToken: this.m_xhrUpdateMPD.token });
+              const n = e + t;
+              a = await s().get(n, { cancelToken: this.m_xhrUpdateMPD.token });
             } catch (e) {}
-            if (((this.m_xhrUpdateMPD = null), this.m_bClosing)) return null;
-            if (e && 200 == e.status) return e;
-            if (e && 410 == e.status)
-              return (
-                this.CloseWithError(
-                  W.PlaybackError,
-                  "Failed to download MPD: 410 Gone",
-                ),
-                null
-              );
+            if (((this.m_xhrUpdateMPD = null), this.m_bClosing))
+              return [z.PlayerClosing, null];
+            if (a && 200 == a.status) return [z.Success, a];
+            if (a && 410 == a.status) return [z.Gone, null];
             (0, g.q_)("Failed to download, will retry: " + this.m_strMPD),
               await (0, h.IP)(200);
           }
-          return (0, g.q_)("Failed to download: " + this.m_strMPD), null;
+          return (
+            (0, g.q_)("Failed to download: " + this.m_strMPD), [z.Timeout, null]
+          );
         }
         async UpdateMPD() {
           (0, g.q_)("Updating MPD in player from: " + this.m_strMPD);
-          let e = await this.DownloadMPD();
-          e &&
-            (this.m_mpd.BUpdate(e.data)
+          let [e, t] = await this.DownloadMPD(
+            this.m_strMPD,
+            this.m_strCDNAuthURLParameters,
+          );
+          t
+            ? this.m_mpd.BUpdate(t.data)
               ? (this.IsLiveContent() &&
-                  this.CalcVideoStartRelativeToSystemClock(e.headers.date),
+                  this.CalcVideoStartRelativeToSystemClock(t.headers.date),
                 this.m_stats.SetAnalyticLinks(
                   this.m_mpd.GetStatsLink(),
                   this.m_mpd.GetStalledLink(),
@@ -2464,7 +2470,12 @@
               : this.CloseWithError(
                   W.PlaybackError,
                   "Failed to parse on Update the MPD file",
-                ));
+                )
+            : e == z.Gone &&
+              this.CloseWithError(
+                W.PlaybackError,
+                "Failed to download MPD: 410 Gone",
+              );
         }
         CloseWithError(e, ...t) {
           this.DispatchEvent("valve-downloadfailed", e),
@@ -3312,57 +3323,81 @@
           return { nWidth: t.nWidth, nHeight: t.nHeight };
         }
       }
-      function q(e) {
+      function Z(e) {
         return e.id == O;
       }
-      (0, i.Cg)([o.sH], z.prototype, "m_nTimedText", void 0),
-        (0, i.Cg)([o.XI], z.prototype, "InitTimedText", null),
-        (0, i.Cg)([p.o], z.prototype, "OnLoadedMetadataForHLS", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVisibilityChangeForHLS", null),
-        (0, i.Cg)([p.o], z.prototype, "OnEndedForHLS", null),
-        (0, i.Cg)([p.o], z.prototype, "UpdateMPD", null),
-        (0, i.Cg)([p.o], z.prototype, "OnPlayerResize", null),
-        (0, i.Cg)([p.o], z.prototype, "OnMediaSourceOpen", null),
-        (0, i.Cg)([p.o], z.prototype, "HandleMediaSourceError", null),
-        (0, i.Cg)([p.o], z.prototype, "OnMediaSourceEnded", null),
-        (0, i.Cg)([p.o], z.prototype, "OnMediaSourceClose", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoWaiting", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoPause", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoResize", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoError", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoCanPlay", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoCanPlayHLS", null),
-        (0, i.Cg)([p.o], z.prototype, "GetCurrentPlayTime", null),
-        (0, i.Cg)([p.o], z.prototype, "GetBufferedEndTime", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoTimeUpdate", null),
+      function K(e) {
+        let t = "",
+          a = "",
+          n = "",
+          i = e.GetMainVideoAdaption();
+        return (
+          i &&
+            i.rgRepresentations.length > 0 &&
+            ((t = i.rgRepresentations[0].strMimeType),
+            (a = i.rgRepresentations[0].strCodecs)),
+          (i = e.GetMainAudioAdaption()),
+          i &&
+            i.rgRepresentations.length > 0 &&
+            (n = i.rgRepresentations[0].strCodecs),
+          t && a ? (n ? `${t}; codecs="${a}, ${n}` : `${t}; codecs="${a}`) : ""
+        );
+      }
+      function Y(e) {
+        let t = !1;
+        try {
+          t = MediaSource.isTypeSupported(e);
+        } catch (e) {}
+        return t;
+      }
+      (0, i.Cg)([o.sH], q.prototype, "m_nTimedText", void 0),
+        (0, i.Cg)([o.XI], q.prototype, "InitTimedText", null),
+        (0, i.Cg)([p.o], q.prototype, "OnLoadedMetadataForHLS", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVisibilityChangeForHLS", null),
+        (0, i.Cg)([p.o], q.prototype, "OnEndedForHLS", null),
+        (0, i.Cg)([p.o], q.prototype, "UpdateMPD", null),
+        (0, i.Cg)([p.o], q.prototype, "OnPlayerResize", null),
+        (0, i.Cg)([p.o], q.prototype, "OnMediaSourceOpen", null),
+        (0, i.Cg)([p.o], q.prototype, "HandleMediaSourceError", null),
+        (0, i.Cg)([p.o], q.prototype, "OnMediaSourceEnded", null),
+        (0, i.Cg)([p.o], q.prototype, "OnMediaSourceClose", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoWaiting", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoPause", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoResize", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoError", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoCanPlay", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoCanPlayHLS", null),
+        (0, i.Cg)([p.o], q.prototype, "GetCurrentPlayTime", null),
+        (0, i.Cg)([p.o], q.prototype, "GetBufferedEndTime", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoTimeUpdate", null),
         (0, i.Cg)(
           [p.o],
-          z.prototype,
+          q.prototype,
           "SendUpdateToBookmarkServiceIfNeeded",
           null,
         ),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoPlay", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoSeeking", null),
-        (0, i.Cg)([p.o], z.prototype, "OnVideoSeeked", null),
-        (0, i.Cg)([p.o], z.prototype, "GetPlaybackRate", null),
-        (0, i.Cg)([p.o], z.prototype, "GetTimeoutAfterFailedDownload", null),
-        (0, i.Cg)([p.o], z.prototype, "GetCDNAuthURLParameter", null),
-        (0, i.Cg)([p.o], z.prototype, "OnSegmentDownloaded", null),
-        (0, i.Cg)([p.o], z.prototype, "OnSegmentBuffered", null),
-        (0, i.Cg)([p.o], z.prototype, "PlayOnElement", null),
-        (0, i.Cg)([p.o], z.prototype, "OnSegmentDownloadFailed", null),
-        (0, i.Cg)([p.o], z.prototype, "OnSegmentDownloadGone", null),
-        (0, i.Cg)([p.o], z.prototype, "OnMediaUnsupportedError", null),
-        (0, i.Cg)([p.o], z.prototype, "OnMediaSourceError", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoPlay", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoSeeking", null),
+        (0, i.Cg)([p.o], q.prototype, "OnVideoSeeked", null),
+        (0, i.Cg)([p.o], q.prototype, "GetPlaybackRate", null),
+        (0, i.Cg)([p.o], q.prototype, "GetTimeoutAfterFailedDownload", null),
+        (0, i.Cg)([p.o], q.prototype, "GetCDNAuthURLParameter", null),
+        (0, i.Cg)([p.o], q.prototype, "OnSegmentDownloaded", null),
+        (0, i.Cg)([p.o], q.prototype, "OnSegmentBuffered", null),
+        (0, i.Cg)([p.o], q.prototype, "PlayOnElement", null),
+        (0, i.Cg)([p.o], q.prototype, "OnSegmentDownloadFailed", null),
+        (0, i.Cg)([p.o], q.prototype, "OnSegmentDownloadGone", null),
+        (0, i.Cg)([p.o], q.prototype, "OnMediaUnsupportedError", null),
+        (0, i.Cg)([p.o], q.prototype, "OnMediaSourceError", null),
         (0, i.Cg)(
           [p.o],
-          z.prototype,
+          q.prototype,
           "VerifyFirstSegmentDownloadProgress",
           null,
         ),
-        (0, i.Cg)([p.o], z.prototype, "ReportPlayerStats", null),
-        (0, i.Cg)([o.XI.bound], z.prototype, "CaptureStatsForDisplay", null);
-      class Z {
+        (0, i.Cg)([p.o], q.prototype, "ReportPlayerStats", null),
+        (0, i.Cg)([o.XI.bound], q.prototype, "CaptureStatsForDisplay", null);
+      class $ {
         m_bEnabled = !1;
         m_rgIntervals = [];
         m_nWatchStart = void 0;
@@ -7173,7 +7208,7 @@
         constructor(e) {
           (0, s.Gn)(this), (this.m_elVideo = e);
         }
-        async PlayMPD(e) {}
+        async PlayMPD(e, t, a) {}
         async PlayWebRTC(e, t, a, n, i) {
           (this.m_strBroadcastSteamID = e),
             (this.m_ulWebRTCSessionID = a),
@@ -8336,25 +8371,25 @@
             this.Play();
         }
         StartBroadcast(e) {
-          this.InitPlayer(),
-            e.m_data.url
-              ? ((this.m_player = new p.Zn(this.m_elVideo)),
-                this.m_player.PlayMPD(
-                  e.m_data.url,
-                  e.m_strCDNAuthUrlParameters,
-                  e.m_data.hls_url,
-                  this.m_bStartWithSubtitles,
-                ))
-              : ((this.m_player = new C(this.m_elVideo)),
-                this.m_player.PlayWebRTC(
-                  this.m_steamIDBroadcast,
-                  e.m_ulViewerToken,
-                  e.m_data.webrtc_session_id,
-                  e.m_data.webrtc_turn_server,
-                  e.m_data.webrtc_offer_sdp,
-                )),
-            this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+          if ((this.InitPlayer(), e.m_data.url)) {
+            let t = new p.Zn(this.m_elVideo);
+            t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+              (this.m_player = t),
+              this.m_player.PlayMPD(
+                e.m_data.url,
+                e.m_data.hls_url,
+                e.m_strCDNAuthUrlParameters,
+              );
+          } else
+            (this.m_player = new C(this.m_elVideo)),
+              this.m_player.PlayWebRTC(
+                this.m_steamIDBroadcast,
+                e.m_ulViewerToken,
+                e.m_data.webrtc_session_id,
+                e.m_data.webrtc_turn_server,
+                e.m_data.webrtc_offer_sdp,
+              );
+          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
           let t = this.m_player.GetDASHPlayerStats();
           t &&
             t.SetBroadcasterAndViewerInfo(
@@ -8367,30 +8402,23 @@
             (this.m_BroadcastInfo = F.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(e) {
-          this.InitPlayer(),
-            (this.m_player = new p.Zn(this.m_elVideo)),
-            this.m_player.PlayMPD(
-              e.m_data.clip_url,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+          this.InitPlayer();
+          let t = new p.Zn(this.m_elVideo);
+          t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = t),
+            this.m_player.PlayMPD(e.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
         StartVOD(e) {
           this.InitPlayer();
           let t = new p.Zn(this.m_elVideo);
-          (this.m_player = t),
+          t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = t),
             _.iA.logged_in &&
               e.m_nAppIDVOD &&
               t.SetBookmarkAdapter(new I.M(e.m_nAppIDVOD)),
-            this.m_player.PlayMPD(
-              e.m_manifestURL,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+            this.m_player.PlayMPD(e.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }

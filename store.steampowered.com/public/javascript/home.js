@@ -1545,7 +1545,7 @@ GHomepage = {
 				var l = "english";
 
 				var $capsule = $J( '<a/>', {
-					"class": "content_hub_capsule_ctn",
+					"class": "content_hub_capsule_ctn responsive_scroll_snap_start",
 					"href": GStoreItemData.AddNavEventParamsToURL( "https://store.steampowered.com/" + item.strSalePageURL, strFeature, nDepth, null )
 				} );
 

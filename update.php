@@ -421,14 +421,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				file_put_contents( $File, $Data );
 
-				/*
-				// It was compiled with Hermes
-				system( 'unzip -j ".support/archives/steam-android.apk" "assets/index.android.bundle" -d "."' );
-				system( 'mv index.android.bundle Scripts/WebUI/steammobile_app.js' );
-				system( 'npm run prettier Scripts/WebUI/steammobile_app.js' );
+				system( 'unzip -jo ".support/archives/steam-android.apk" "assets/index.android.bundle" -d ".support/archives"' );
 
-				$this->DumpJavascriptFiles = true;
-				*/
+				if( file_exists( '.support/archives/index.android.bundle' ) )
+				{
+					system( './tools/hermes.py .support/archives/index.android.bundle Random/SteamApkStrings.txt' );
+					unlink( '.support/archives/index.android.bundle' );
+				}
 
 				return true;
 			}

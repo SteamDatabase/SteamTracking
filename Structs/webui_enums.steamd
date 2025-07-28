@@ -4412,6 +4412,15 @@ enum UnnamedEnumde308e0154cd3024
 	k_Confirm = 2;
 }
 
+enum UnnamedEnumdedbaeace3651faa
+{
+	Invalid = 0;
+	Success = 1;
+	Timeout = 2;
+	Gone = 3;
+	PlayerClosing = 4;
+}
+
 enum UnnamedEnumdf8b8cfc20e6db08
 {
 	Chat = 0;

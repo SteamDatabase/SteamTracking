@@ -6,3 +6,7 @@
 	path = SteamKit
 	url = https://github.com/SteamRE/SteamKit
 	shallow = true
+[submodule "tools/hermes-dec"]
+	path = tools/hermes-dec
+	url = https://github.com/P1sec/hermes-dec
+	shallow = true

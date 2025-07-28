@@ -2160,7 +2160,7 @@
             void 0 !== this.m_persistState.m_nPlayerVolume
               ? this.m_persistState.m_nPlayerVolume
               : 1;
-          this.SetVolume(l, !0), this.m_player.PlayMPD(t, null, n, !1);
+          this.SetVolume(l, !0), this.m_player.PlayMPD(t, n);
         }
         Stop() {
           this.SendStats(),
@@ -3504,7 +3504,7 @@
       const qt = 500;
       function jt(e) {
         let {
-          dashManifest: t,
+          dashManifests: t,
           hlsManifest: n,
           screenshot: r,
           forcePause: l,
@@ -3709,7 +3709,7 @@
       function Qt(e) {
         let {
             id: t,
-            dashManifest: n,
+            dashManifests: n,
             hlsManifest: r,
             screenshot: l,
             title: o,
@@ -3752,7 +3752,7 @@
                 setAudioMuted: c.GetSetAudioMuted(),
               },
               a.createElement(jt, {
-                dashManifest: n,
+                dashManifests: n,
                 hlsManifest: r,
                 screenshot: l,
                 forcePause: u,
@@ -5255,7 +5255,7 @@
       }
       function sa(e) {
         let { trailer: t } = e;
-        return t.dashManifest
+        return t.dashManifests
           ? a.createElement(ua, { trailer: t })
           : a.createElement(ca, { trailer: t });
       }
@@ -5394,7 +5394,7 @@
             ra.K,
             { mode: "JustLoad", bHorizontal: !0 },
             a.createElement(jt, {
-              dashManifest: t.dashManifest,
+              dashManifests: t.dashManifests,
               hlsManifest: t.hlsManifest,
               screenshot: t.poster,
               altText: t.title,

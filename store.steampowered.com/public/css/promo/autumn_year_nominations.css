@@ -5,7 +5,7 @@ body.SteamAwardsNominations {
 }
 
 body.SteamAwardsNominations .responsive_page_frame {
-    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2) no-repeat;
+    background: url(https://cdn.fastly.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2) no-repeat;
     background-position: center top;
     background-size: contain;
     background-color: #21081f;
@@ -63,7 +63,7 @@ body.SteamAwardsNominations .responsive_page_frame {
     width: 100%;
     top: 0;
     bottom: 0;
-    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2024/header_notrophy.webp);
+    background: url(https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/header_notrophy.webp);
     background-size: cover;
     background-position: center;
     background-color: #21081f;
@@ -259,7 +259,7 @@ APP PAGE BANNER SECTION
 
 .steamawards2023_app_banner_ctn {
     position: relative;
-	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
+	background: url( 'https://cdn.fastly.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
 	background-size: cover;
 	border: 2px solid rgba( 87,131,151, 0.35);
 	display: flex;
@@ -279,7 +279,7 @@ APP PAGE BANNER SECTION
 }
 
 #AwardsDefault .steamawards2023_app_square_ctn {
-	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
+	background: url( 'https://cdn.fastly.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg');
 	border: 2px solid rgba( 87,131,151, 0.35);
     background-size: cover;
     background-position: center left;

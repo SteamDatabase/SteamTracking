@@ -2437,7 +2437,7 @@
             void 0 !== this.m_persistState.m_nPlayerVolume
               ? this.m_persistState.m_nPlayerVolume
               : 1;
-          this.SetVolume(_, !0), this.m_player.PlayMPD(_, null, _, !1);
+          this.SetVolume(_, !0), this.m_player.PlayMPD(_, _);
         }
         Stop() {
           this.SendStats(),
@@ -4106,7 +4106,7 @@
       const _ = 500;
       function _(_) {
         let {
-          dashManifest: _,
+          dashManifests: _,
           hlsManifest: __webpack_require__,
           screenshot: _,
           forcePause: _,
@@ -4358,7 +4358,7 @@
       function _(_) {
         let {
             _: _,
-            dashManifest: __webpack_require__,
+            dashManifests: __webpack_require__,
             hlsManifest: _,
             screenshot: _,
             title: _,
@@ -4401,7 +4401,7 @@
                 setAudioMuted: _.GetSetAudioMuted(),
               },
               _.createElement(_, {
-                dashManifest: __webpack_require__,
+                dashManifests: __webpack_require__,
                 hlsManifest: _,
                 screenshot: _,
                 forcePause: _,
@@ -6389,7 +6389,7 @@
       }
       function _(_) {
         let { trailer: _ } = _;
-        return _.dashManifest
+        return _.dashManifests
           ? _.createElement(_, {
               trailer: _,
             })
@@ -6556,7 +6556,7 @@
               bHorizontal: !0,
             },
             _.createElement(_, {
-              dashManifest: _.dashManifest,
+              dashManifests: _.dashManifests,
               hlsManifest: _.hlsManifest,
               screenshot: _.poster,
               altText: _.title,
