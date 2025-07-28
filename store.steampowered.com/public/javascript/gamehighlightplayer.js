@@ -715,7 +715,14 @@ HighlightPlayer.prototype.OnWebPanelHidden = function()
 	this.StopCycle();
 	if ( this.m_activeItem && this.BIsMovie( this.m_activeItem ) )
 	{
-		var id = this.GetMovieId( this.m_activeItem );
+				var id = this.GetMovieId( this.m_activeItem );
+		if ( this.m_activeItem.data( 'dash-player' ) )
+		{
+			this.SendDashTrailerState( 'highlight_movie_' + id , false );
+			this.m_bPausedForHidden = true;
+			return;
+		}
+
 		var $Movie = $JFromIDOrElement('movie_' + id);
 		if ( !$Movie.prop( 'paused' ) )
 		{
@@ -731,6 +738,13 @@ HighlightPlayer.prototype.OnWebPanelShown = function()
 	if ( this.m_bPausedForHidden && this.m_activeItem && this.BIsMovie( this.m_activeItem ) )
 	{
 		var id = this.GetMovieId( this.m_activeItem );
+		if ( this.m_activeItem.data( 'dash-player' ) )
+		{
+			this.SendDashTrailerState( 'highlight_movie_' + id , true );
+			this.m_bPausedForHidden = false;
+			return;
+		}
+
 		var $Movie = $JFromIDOrElement( 'movie_' + id );
 		$Movie.trigger( 'play' );
 		this.m_bPausedForHidden = false;
