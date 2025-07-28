@@ -1941,6 +1941,7 @@ a._1g4l95V_TTLLrQ2u-hYASr {
 @media screen and (max-width: 910px) {
   ._1dKR2IPNQSHs1MAIXBvt_R {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
   ._1dKR2IPNQSHs1MAIXBvt_R ._1X3j2g29SBtsrFMgNiKi_Y {
     max-width: 100%;

@@ -2829,7 +2829,7 @@ body.recommendgame #review_create h2  {
 #review_histograms_container.has_data {
 	display: block;
 	position: relative;
-	background-color: #2a475e;
+	background-color: #3b4959;
 }
 
 #review_histograms_container.has_data.collapsed {
@@ -3393,6 +3393,7 @@ body.v6 h2.morelike_section_divider
 	color: #acb2b8;
 }
 .review_language_outliers_your_language_group {
+	position: relative;
 	display: inline-block;
 	text-transform: unset;
 	color: #474C57;
@@ -3401,6 +3402,23 @@ body.v6 h2.morelike_section_divider
 	padding: 0px 6px;
 	border-radius: 3px;
 	font-size: 12px;
+}
+.outlier_languages_themselves .review_language_outliers_your_language_group {
+	margin-bottom: -2px;
+}
+.outlier_languages_themselves .review_language_outliers_your_language_group:after {
+	top: 100%;
+	left: 30px;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #E4E6E9;
+	border-width: 10px;
+	margin-left: -10px;
 }
 .review_language_outliers_group_languages > .languages {
 	flex: 1;
@@ -3449,7 +3467,7 @@ body.v6 h2.morelike_section_divider
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			max-width: 85%;
+			max-width: 100%;
 	box-sizing: border-box;
 	margin: 0 auto 3px auto;
 	box-shadow: 0 0 5px #000;
