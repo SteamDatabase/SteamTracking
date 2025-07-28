@@ -5574,24 +5574,30 @@ function _() {}
 function _(_) {
   let [_, _] = _.useState(""),
     [_, _] = _.useState(() => _),
-    [_, _] = _.useState(!1),
+    [_, _] = _.useState(void 0),
     [_, _, _] = _(),
     _ = `searchSuggestions_${_.useId()}`,
-    _ = _.useMemo(
-      () => ({
-        term: _,
-        setTerm: _,
-        onInputKeyDown: _,
-        setInputKeyDown: (_) => _(() => _ ?? _),
-        suggestionsId: _,
-        bEverActive: _,
-        onActive: () => _(!0),
-        bSearchVisible: _,
-        openSearch: _,
-        closeSearch: _,
-      }),
-      [_, _, _, _, _, _, _],
-    );
+    _ = _ !== void 0;
+  (0, _.useEffect)(() => {
+    if (_ === void 0) return;
+    let _ = window.setTimeout(() => _(void 0), 5 * 60 * 1e3);
+    return () => window.clearTimeout(_);
+  }, [_]);
+  let _ = _.useMemo(
+    () => ({
+      term: _,
+      setTerm: _,
+      onInputKeyDown: _,
+      setInputKeyDown: (_) => _(() => _ ?? _),
+      suggestionsId: _,
+      bEverActive: _,
+      onActive: () => _(performance.now()),
+      bSearchVisible: _,
+      openSearch: _,
+      closeSearch: _,
+    }),
+    [_, _, _, _, _, _, _],
+  );
   return (0, _.jsx)(_.Provider, {
     value: _,
     children: _.children,

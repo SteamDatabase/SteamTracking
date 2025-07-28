@@ -71665,24 +71665,30 @@
       function _(_) {
         const [_, __webpack_require__] = _.useState(""),
           [_, _] = _.useState(() => _),
-          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0),
           [_, _, _] = (0, _._)(),
           _ = `searchSuggestions_${_.useId()}`,
-          _ = _.useMemo(
-            () => ({
-              term: _,
-              setTerm: __webpack_require__,
-              onInputKeyDown: _,
-              setInputKeyDown: (_) => _(() => _ ?? _),
-              suggestionsId: _,
-              bEverActive: _,
-              onActive: () => _(!0),
-              bSearchVisible: _,
-              openSearch: _,
-              closeSearch: _,
-            }),
-            [_, _, _, _, _, _, _],
-          );
+          _ = void 0 !== _;
+        (0, _.useEffect)(() => {
+          if (void 0 === _) return;
+          const _ = window.setTimeout(() => _(void 0), 3e5);
+          return () => window.clearTimeout(_);
+        }, [_]);
+        const _ = _.useMemo(
+          () => ({
+            term: _,
+            setTerm: __webpack_require__,
+            onInputKeyDown: _,
+            setInputKeyDown: (_) => _(() => _ ?? _),
+            suggestionsId: _,
+            bEverActive: _,
+            onActive: () => _(performance.now()),
+            bSearchVisible: _,
+            openSearch: _,
+            closeSearch: _,
+          }),
+          [_, _, _, _, _, _, _],
+        );
         return _.createElement(
           _.Provider,
           {

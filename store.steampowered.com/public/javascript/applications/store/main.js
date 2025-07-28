@@ -64820,25 +64820,31 @@
       function Jt(e) {
         const [t, r] = n.useState(""),
           [i, s] = n.useState(() => Xt),
-          [a, o] = n.useState(!1),
+          [a, o] = n.useState(void 0),
           [l, c, u] = (0, wt.uD)(),
           m = `searchSuggestions_${n.useId()}`,
-          d = n.useMemo(
-            () => ({
-              term: t,
-              setTerm: r,
-              onInputKeyDown: i,
-              setInputKeyDown: (e) => s(() => e ?? Xt),
-              suggestionsId: m,
-              bEverActive: a,
-              onActive: () => o(!0),
-              bSearchVisible: l,
-              openSearch: c,
-              closeSearch: u,
-            }),
-            [t, i, m, a, l, c, u],
-          );
-        return n.createElement(Yt.Provider, { value: d }, e.children);
+          d = void 0 !== a;
+        (0, n.useEffect)(() => {
+          if (void 0 === a) return;
+          const e = window.setTimeout(() => o(void 0), 3e5);
+          return () => window.clearTimeout(e);
+        }, [a]);
+        const g = n.useMemo(
+          () => ({
+            term: t,
+            setTerm: r,
+            onInputKeyDown: i,
+            setInputKeyDown: (e) => s(() => e ?? Xt),
+            suggestionsId: m,
+            bEverActive: d,
+            onActive: () => o(performance.now()),
+            bSearchVisible: l,
+            openSearch: c,
+            closeSearch: u,
+          }),
+          [t, i, m, d, l, c, u],
+        );
+        return n.createElement(Yt.Provider, { value: g }, e.children);
       }
       function er() {
         return n.useContext(Yt);
