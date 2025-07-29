@@ -375,11 +375,9 @@
         return (
           !_.data("gpFocusDisabled") &&
           !(!_._(":visible") || "hidden" == _.css("visibility")) &&
-          !(
-            _.outerWidth() > 0 &&
-            _.outerHeight() > 0 &&
-            "hidden" === _.css("overflow")
-          )
+          (0 != _.outerWidth() ||
+            0 != _.outerHeight() ||
+            "hidden" !== _.css("overflow"))
         );
       }
       function _(_) {

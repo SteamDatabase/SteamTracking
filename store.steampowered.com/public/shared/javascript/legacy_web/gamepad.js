@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    217: (e, t, n) => {
+    968: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => V });
       var o = n(669),
         a = n.n(o),
-        s = n(624),
-        i = n(524),
-        r = n(291),
-        c = n(298),
-        l = n(849),
-        u = n(643),
-        d = n(395),
-        g = n(719),
-        b = n(284),
-        h = n(706),
+        s = n(69),
+        i = n(783),
+        r = n(478),
+        c = n(171),
+        l = n(187),
+        u = n(706),
+        d = n(583),
+        g = n(878),
+        b = n(19),
+        h = n(130),
         m = n(382),
         _ = n.n(m);
       function f(e) {
@@ -96,9 +96,9 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var p = n(310),
-        S = n(937),
-        E = n(802);
+      var p = n(966),
+        S = n(358),
+        E = n(77);
       function w(e) {
         return e ? Function("event", e) : null;
       }
@@ -149,7 +149,7 @@
         }
         return !1;
       }
-      var T = n(137);
+      var T = n(894);
       const D = !1;
       function A(e) {
         const { name: t, root: n, navState: o } = e;
@@ -164,7 +164,7 @@
         const n = window.history.state;
         return { name: e, root: t, navState: n?.[e] };
       }
-      const k = new (n(810).wd)("FocusNavigation").Debug;
+      const k = new (n(749).wd)("FocusNavigation").Debug;
       var O;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
@@ -336,11 +336,9 @@
         return (
           !t.data("gpFocusDisabled") &&
           !(!t.is(":visible") || "hidden" == t.css("visibility")) &&
-          !(
-            t.outerWidth() > 0 &&
-            t.outerHeight() > 0 &&
-            "hidden" === t.css("overflow")
-          )
+          (0 != t.outerWidth() ||
+            0 != t.outerHeight() ||
+            "hidden" !== t.css("overflow"))
         );
       }
       function q(e) {
@@ -595,11 +593,11 @@
         },
       };
     },
-    260: (e, t, n) => {
+    649: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(253),
-        s = n(982);
+        a = n(848),
+        s = n(51);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -666,16 +664,16 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    507: (e, t, n) => {
+    748: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    158: (e, t, n) => {
+    531: (e, t, n) => {
       n.d(t, { Jc: () => c, LU: () => d, YX: () => u, e0: () => g });
       var o = n(629),
-        a = n(796),
-        s = n(253),
-        i = n(308);
+        a = n(769),
+        s = n(848),
+        i = n(207);
       class r {
         m_callbacks;
         m_currentValue;
@@ -778,7 +776,7 @@
       }
       (0, o.Cg)([s.o], g.prototype, "Unregister", null);
     },
-    937: (e, t, n) => {
+    358: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -848,10 +846,10 @@
         }
       }
     },
-    810: (e, t, n) => {
+    749: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(253);
+        a = n(848);
       class s {
         async GetObject(e, t) {
           try {
@@ -877,7 +875,7 @@
         }
       }
       var r,
-        c = n(308);
+        c = n(207);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1110,7 +1108,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    98: (e, t, n) => {
+    695: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1121,9 +1119,9 @@
       }
       n.d(t, { e: () => o });
     },
-    599: (e, t, n) => {
+    736: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(179);
+      var o = n(500);
       function a() {
         return !!window.document;
       }
